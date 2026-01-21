@@ -37,9 +37,10 @@ console.log('📁 Dist directory:', distDir);
   }
 })();
 
-// Error handling middleware
+// Error handling middleware (must be after routes)
 app.use((err, req, res, next) => {
   console.error('❌ Error serving:', req.path, err.message);
+  console.error('❌ Error stack:', err.stack);
   if (!res.headersSent) {
     res.status(500).send('Internal Server Error');
   }
@@ -58,6 +59,8 @@ const { router, notFound, staticFile } = createQwikCity({
 app.use((req, res, next) => {
   if (req.path.startsWith('/build/') || req.path.startsWith('/assets/')) {
     console.log('📦 Request for static file:', req.path);
+    const filePath = join(distDir, req.path);
+    console.log('📦 Full file path:', filePath);
   }
   next();
 });
@@ -65,11 +68,23 @@ app.use((req, res, next) => {
 // Use Express static middleware first for build/ and assets/ files
 app.use(express.static(distDir, {
   maxAge: '1y',
-  immutable: true
+  immutable: true,
+  dotfiles: 'ignore',
+  index: false
 }));
 
 // Then use Qwik City staticFile middleware
-app.use(staticFile);
+app.use((req, res, next) => {
+  if (req.path.startsWith('/build/') || req.path.startsWith('/assets/')) {
+    console.log('📦 Trying Qwik City staticFile for:', req.path);
+  }
+  staticFile(req, res, (err) => {
+    if (err && (req.path.startsWith('/build/') || req.path.startsWith('/assets/'))) {
+      console.error('❌ Qwik City staticFile error for:', req.path, err.message);
+    }
+    next(err);
+  });
+});
 
 // Then handle Qwik routes
 app.use(router);

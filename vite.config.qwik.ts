@@ -22,6 +22,7 @@ export default defineConfig(() => ({
       '~/': resolve(__dirname, './src-qwik/'),
       '@/': resolve(__dirname, './src-qwik/'),
     },
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
   },
   build: {
     chunkSizeWarningLimit: 1000,

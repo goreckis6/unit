@@ -18,15 +18,16 @@
     "dev:qwik": "vite --config vite.config.qwik.ts",
     "preview": "vite preview",
     "preview:qwik": "vite preview --config vite.config.qwik.ts",
-    "serve": "vite preview --config vite.config.qwik.ts --host 0.0.0.0 --port 3000",
-    "start": "vite preview --config vite.config.qwik.ts --host 0.0.0.0 --port 3000",
+    "serve": "serve dist -l 3000 --no-port-switching",
+    "start": "serve dist -l 3000 --no-port-switching",
     "qwik": "qwik",
     "migrate:qwik": "node scripts/migrate-to-qwik.js",
     "migrate:qwik:single": "node scripts/migrate-to-qwik.js"
   },
   "dependencies": {
     "@builder.io/qwik": "^1.18.0",
-    "@builder.io/qwik-city": "^1.18.0"
+    "@builder.io/qwik-city": "^1.18.0",
+    "serve": "^14.2.1"
   },
   "devDependencies": {
     "@builder.io/qwik-react": "^0.5.8",

@@ -22,6 +22,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Qwik application
+        run: |
+          npm run build.client
+          node node_modules/vite/bin/vite.js build -c adapters/express/vite.config.ts
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 

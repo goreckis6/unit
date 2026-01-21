@@ -1,37 +1,15 @@
-# Build stage
-FROM node:20 AS builder
+# Runtime stage - NO BUILD, app is pre-built in CI
+FROM node:20-slim
 WORKDIR /app
 
 # Copy package files
 COPY package.json package-lock.json ./
 
-# Install all dependencies (including dev for build)
-RUN npm ci
-
-# Fix esbuild binary permissions for Docker buildx (CRITICAL)
-RUN chmod +x node_modules/@esbuild/*/bin/esbuild
-
-# Copy source code
-COPY . .
-
-# Build client
-RUN npm run build.client
-
-# Build server (SSR) with Express adapter
-RUN node node_modules/vite/bin/vite.js build -c adapters/express/vite.config.ts
-
-# Production stage
-FROM node:20
-WORKDIR /app
-
-# Copy package files and lock from builder
-COPY --from=builder /app/package.json /app/package-lock.json ./
-
-# Install production dependencies
+# Install ONLY production dependencies
 RUN npm ci --omit=dev
 
-# Copy built files from builder
-COPY --from=builder /app/dist ./dist
+# Copy pre-built application from CI
+COPY dist ./dist
 
 # Set environment
 ENV NODE_ENV=production

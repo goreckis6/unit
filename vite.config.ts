@@ -15,7 +15,10 @@ export default defineConfig(({ mode }) => {
       ssr: !isClient ? 'src/entry.express.ts' : false
     },
     ssr: {
-      noExternal: true
+      noExternal: [/^@builder\.io\/qwik/]
+    },
+    optimizeDeps: {
+      exclude: ['node:sqlite']
     }
   };
 });

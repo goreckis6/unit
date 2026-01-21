@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import FactorialCalculator from '../../components/FactorialCalculator';
+import FactorialCalculator from "../../components/factorial-calculator";
 
 export default component$(() => {
   return <FactorialCalculator />;

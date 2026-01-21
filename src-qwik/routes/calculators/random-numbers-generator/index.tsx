@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import RandomNumbersGenerator from '../../components/RandomNumbersGenerator';
+import RandomNumbersGenerator from "../../components/random-numbers-generator";
 
 export default component$(() => {
   return <RandomNumbersGenerator />;

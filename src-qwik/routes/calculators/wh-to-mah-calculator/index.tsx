@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import WhToMahCalculator from '../../components/WhToMahCalculator';
+import WhToMahCalculator from "../../components/wh-to-mah-calculator";
 
 export default component$(() => {
   return <WhToMahCalculator />;

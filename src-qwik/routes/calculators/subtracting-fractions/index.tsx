@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import SubtractingFractions from '../../components/SubtractingFractions';
+import SubtractingFractions from "../../components/subtracting-fractions";
 
 export default component$(() => {
   return <SubtractingFractions />;

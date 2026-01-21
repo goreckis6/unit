@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import SinCalculator from '../../components/SinCalculator';
+import SinCalculator from "../../components/sin-calculator";
 
 export default component$(() => {
   return <SinCalculator />;

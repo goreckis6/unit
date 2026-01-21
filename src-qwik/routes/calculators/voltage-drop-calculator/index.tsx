@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import VoltageDropCalculator from '../../components/VoltageDropCalculator';
+import VoltageDropCalculator from "../../components/voltage-drop-calculator";
 
 export default component$(() => {
   return <VoltageDropCalculator />;

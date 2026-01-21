@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import TanCalculator from '../../components/TanCalculator';
+import TanCalculator from "../../components/tan-calculator";
 
 export default component$(() => {
   return <TanCalculator />;

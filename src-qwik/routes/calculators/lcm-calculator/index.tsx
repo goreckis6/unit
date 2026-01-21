@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import LcmCalculator from '../../components/LcmCalculator';
+import LcmCalculator from "../../components/lcm-calculator";
 
 export default component$(() => {
   return <LcmCalculator />;

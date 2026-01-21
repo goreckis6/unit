@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import VoltsToEvCalculator from '../../components/VoltsToEvCalculator';
+import VoltsToEvCalculator from "../../components/volts-to-ev-calculator";
 
 export default component$(() => {
   return <VoltsToEvCalculator />;

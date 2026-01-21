@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import KwToVaCalculator from '../../components/KwToVaCalculator';
+import KwToVaCalculator from "../../components/kw-to-va-calculator";
 
 export default component$(() => {
   return <KwToVaCalculator />;

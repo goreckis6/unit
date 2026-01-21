@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import PythagoreanTheoremCalculator from '../../components/PythagoreanTheoremCalculator';
+import PythagoreanTheoremCalculator from "../../components/pythagorean-theorem-calculator";
 
 export default component$(() => {
   return <PythagoreanTheoremCalculator />;

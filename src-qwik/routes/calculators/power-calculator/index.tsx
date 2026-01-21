@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import PowerCalculator from '../../components/PowerCalculator';
+import PowerCalculator from "../../components/power-calculator";
 
 export default component$(() => {
   return <PowerCalculator />;

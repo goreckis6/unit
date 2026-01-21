@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import RootsCalculator from '../../components/RootsCalculator';
+import RootsCalculator from "../../components/roots-calculator";
 
 export default component$(() => {
   return <RootsCalculator />;

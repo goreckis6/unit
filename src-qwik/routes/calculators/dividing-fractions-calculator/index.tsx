@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import DividingFractionsCalculator from '../../components/DividingFractionsCalculator';
+import DividingFractionsCalculator from "../../components/dividing-fractions-calculator";
 
 export default component$(() => {
   return <DividingFractionsCalculator />;

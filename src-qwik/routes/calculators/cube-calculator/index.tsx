@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import CubeCalculator from '../../components/CubeCalculator';
+import CubeCalculator from "../../components/cube-calculator";
 
 export default component$(() => {
   return <CubeCalculator />;

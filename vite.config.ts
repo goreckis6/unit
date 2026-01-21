@@ -24,8 +24,9 @@ export default defineConfig(({ mode }) => {
       }
     ],
     build: {
-      outDir: 'dist',
-      ssr: !isClient ? 'src/entry.express.ts' : false
+      outDir: isClient ? 'dist' : 'dist-server',
+      ssr: !isClient ? 'src/entry.express.ts' : false,
+      emptyOutDir: isClient // Only empty outDir for client build, not SSR
     },
     ssr: {
       noExternal: [/^@builder\.io\/qwik/],

@@ -11,8 +11,9 @@ RUN npm ci
 # Copy source code
 COPY . .
 
-# Fix Alpine Linux binary permissions (CRITICAL for vite/npx)
-RUN chmod -R 755 node_modules/.bin
+# Fix Alpine Linux binary permissions (CRITICAL for vite/npx/esbuild)
+RUN chmod -R 755 node_modules/.bin \
+ && chmod -R 755 node_modules/@esbuild
 
 # Build client
 RUN npm run build.client

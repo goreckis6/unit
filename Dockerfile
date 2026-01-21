@@ -11,8 +11,9 @@ RUN npm ci
 # Copy source code
 COPY . .
 
-# Fix permissions for node_modules binaries
-RUN chmod -R +x node_modules/.bin || true
+# Fix permissions for node_modules binaries (for Alpine Linux)
+RUN chmod -R +x node_modules/.bin || true && \
+    find node_modules/@esbuild -type f -name "esbuild" -exec chmod +x {} \; || true
 
 # Create symlink for Qwik build (src -> src-qwik)
 # This is required because Qwik expects src/ directory

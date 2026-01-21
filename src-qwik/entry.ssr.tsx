@@ -1,10 +1,10 @@
-import { renderToStream, type RenderOptions } from '@builder.io/qwik/server';
-import qwikCityPlan from '@qwik-city-plan';
+import { renderToStream, type RenderToStreamOptions } from '@builder.io/qwik/server';
+import { manifest } from '@qwik-client-manifest';
 import Root from './root';
 
-export default function (opts: RenderOptions) {
+export default function (opts: RenderToStreamOptions) {
   return renderToStream(<Root />, {
-    manifest: qwikCityPlan, // ⭐ KLUCZOWE - SSR musi mieć manifest z @qwik-city-plan
+    manifest,
     ...opts,
     containerAttributes: {
       lang: 'en',

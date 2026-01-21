@@ -1,52 +1,47 @@
-# Stage 1: Build
-FROM node:20-alpine AS builder
-
+# Build stage
+FROM node:20 AS builder
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
+# Copy package files (including lock file for reproducible builds)
+COPY package.json package-lock.json ./
 
-# Install dependencies
+# Install dependencies using lock file for stability
 RUN npm ci
 
 # Copy source code
 COPY . .
 
-# Create symlink for Qwik build (src -> src-qwik)
-RUN ln -sf src-qwik src
+# Build arguments for Vite environment variables
+ARG VITE_API_BASE_URL
+ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
 
 # Build the application
-RUN npm run build:qwik:internal
+RUN npm run build
 
-# Remove symlink after build
-RUN rm -f src
+# DEBUG – zobacz co faktycznie powstało
+RUN echo "=== Client build (dist/) ===" && ls -la dist/ || echo "dist/ not found"
+RUN echo "=== Server build (server/) ===" && ls -la server/ || echo "server/ not found"
+RUN echo "=== Looking for entry.node-server.js ===" && ls -la server/entry.node-server.js 2>/dev/null || echo "entry.node-server.js NOT FOUND"
 
-# Stage 2: Production
-FROM node:20-alpine
-
+# Production stage with Node.js
+FROM node:20
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
-
-# Install production dependencies only
-RUN npm ci --production
-
-# Copy built files from builder
+# Copy built files (client: dist/, server: server/)
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/src-qwik ./src-qwik
+COPY --from=builder /app/server ./server
+COPY --from=builder /app/package*.json ./
 
-# Create symlink for runtime (needed for imports)
-RUN ln -sf src-qwik src
+# Install only production dependencies
+RUN npm install --omit=dev
 
-# Expose port
-EXPOSE 3000
-
-# Set environment
+# Set environment variable
 ENV NODE_ENV=production
-ENV HOST=0.0.0.0
 ENV PORT=3000
 
-# Start the server using Vite preview (Qwik SSR)
-CMD ["npm", "run", "preview:qwik", "--", "--host", "0.0.0.0", "--port", "3000"]
+# Expose port 3000
+EXPOSE 3000
+
+# Start the SSR server
+# Qwik generates entry.node-server.js in server/ directory
+CMD ["node", "server/entry.node-server.js"]

@@ -2,6 +2,9 @@
 FROM node:20 AS builder
 WORKDIR /app
 
+# Force esbuild to use JS implementation (not binary) - fixes buildx noexec
+ENV ESBUILD_BINARY_PATH=""
+
 # Copy package files
 COPY package.json package-lock.json ./
 

@@ -21,54 +21,41 @@ RUN cp src/style.css src-qwik/style.css 2>/dev/null || true
 # Then replace src/ with src-qwik/
 RUN rm -rf src && cp -r src-qwik src
 
-# DEBUG - Check what's in src/ after copy (v2 - force rebuild)
-RUN echo "=== src/ structure ===" && \
-    ls -la src/ && \
-    echo "=== src/components/ exists? ===" && \
-    ls src/components/AddingFractionsCalculator.tsx && \
-    echo "=== File exists! ===" && \
-    echo "=== tsconfig check ===" && \
-    cat tsconfig.qwik.json
-
-# Build ONLY client (SSR build has issues, use vite preview instead)
+# Build client
 RUN npm run build.client
 
-# Keep src/ for vite preview (it needs source files)
-# Don't remove it!
+# Build server (SSR) with Express adapter
+RUN npx vite build -c adapters/express/vite.config.ts
 
 # DEBUG - Show what was built
 RUN echo "=== Build output ===" && \
     ls -la dist/ && \
     echo "=== Client files ===" && \
-    ls -la dist/client/ || echo "No client dir" && \
+    ls -la dist/client/ && \
     echo "=== Server files ===" && \
-    ls -la dist/server/ || echo "No server dir"
+    ls -la dist/server/
 
 # Production stage
 FROM node:20-alpine
 WORKDIR /app
 
-# Copy package files
-COPY package.json package-lock.json ./
+# Copy package files and lock from builder
+COPY --from=builder /app/package.json /app/package-lock.json ./
 
-# Install dependencies (including vite for preview server)
-RUN npm ci
+# Install production dependencies
+RUN npm ci --omit=dev
 
-# Copy built files and source (vite preview needs src/)
+# Copy built files from builder
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/src ./src
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/vite.config.qwik.ts ./vite.config.qwik.ts
-COPY --from=builder /app/tsconfig.json ./tsconfig.json
-COPY --from=builder /app/tsconfig.qwik.json ./tsconfig.qwik.json
 
 # Set environment
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0
 ENV PORT=3000
+ENV ORIGIN=https://unitconverterhub.com
 
 # Expose port
 EXPOSE 3000
 
-# Start Node.js production server
-CMD ["npm", "start"]
+# Start Express SSR server
+CMD ["node", "dist/server/entry.express.mjs"]

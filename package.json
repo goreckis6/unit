@@ -11,7 +11,7 @@
     "build": "NO_COLOR= FORCE_COLOR=1 qwik build",
     "postbuild": "cp public/sitemap.xml dist/sitemap.xml 2>/dev/null || true",
     "build.client": "vite build",
-    "build.server": "qwik check-client src dist && vite build -c adapters/node-server/vite.config.ts",
+    "build.server": "vite build --ssr src/entry.preview.tsx --outDir dist/server",
     "build:qwik": "bash scripts/build-qwik.sh",
     "build:qwik:internal": "vite build --config vite.config.qwik.ts",
     "dev": "vite --mode ssr",

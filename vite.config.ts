@@ -7,6 +7,10 @@ export default defineConfig({
   plugins: [
     qwikCity({
       routesDir: './src-qwik/routes',
+      serviceWorker: {
+        // ❌ DISABLE Service Worker - it causes Code(31) serialization issues
+        register: false,
+      },
     }),
     qwikVite(),
   ],

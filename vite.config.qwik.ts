@@ -25,10 +25,6 @@ export default defineConfig(() => ({
   },
   build: {
     chunkSizeWarningLimit: 1000,
-    ssr: true,
-    rollupOptions: {
-      input: ['src-qwik/entry.preview.tsx'],
-    },
   },
 }));
 

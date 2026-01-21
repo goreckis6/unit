@@ -11,6 +11,9 @@ RUN npm ci
 # Copy source code
 COPY . .
 
+# Fix permissions for node_modules binaries
+RUN chmod -R +x node_modules/.bin || true
+
 # Create symlink for Qwik build (src -> src-qwik)
 # This is required because Qwik expects src/ directory
 RUN ln -sf src-qwik src

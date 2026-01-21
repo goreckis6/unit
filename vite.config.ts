@@ -1,14 +1,19 @@
 import { defineConfig } from 'vite';
 import { qwikCity } from '@builder.io/qwik-city/vite';
 import { qwikVite } from '@builder.io/qwik/optimizer';
+import { staticAdapter } from '@builder.io/qwik-city/adapters/static/vite';
 
-export default defineConfig(({ mode }) => {
-  const isClient = mode === 'client';
-  
+export default defineConfig(() => {
   return {
     plugins: [
-      qwikCity(),
+      qwikCity({
+        basePathname: '/',
+        trailingSlash: true,
+      }),
       qwikVite(),
+      staticAdapter({
+        origin: 'https://unitconverterhub.com',
+      }),
       {
         name: 'stub-node-sqlite',
         resolveId(id) {
@@ -24,9 +29,12 @@ export default defineConfig(({ mode }) => {
       }
     ],
     build: {
-      outDir: isClient ? 'dist' : 'dist-server',
-      ssr: !isClient ? 'src/entry.express.ts' : false,
-      emptyOutDir: isClient // Only empty outDir for client build, not SSR
+      ssr: true,
+      outDir: 'dist',
+      emptyOutDir: true,
+      rollupOptions: {
+        input: ['@qwik-city-plan'],
+      },
     },
     ssr: {
       noExternal: [/^@builder\.io\/qwik/],

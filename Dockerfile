@@ -19,8 +19,9 @@ RUN chmod -R +x node_modules/.bin || true && \
 # This is required because Qwik expects src/ directory
 RUN rm -rf src && cp -r src-qwik src
 
-# Build the Qwik application
-RUN npm run build:qwik:internal
+# Build the Qwik application using official qwik build command
+# This builds both client and SSR automatically
+RUN npm run build
 
 # Remove symlink/directory after build
 RUN unlink src 2>/dev/null || rm -rf src || true

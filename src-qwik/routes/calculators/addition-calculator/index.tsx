@@ -119,26 +119,36 @@ export default component$(() => {
     }
   `);
 
-  const calculate = $(() => {
-    error.value = '';
-    const a = parseFloat(firstNumber.value);
-    const b = parseFloat(secondNumber.value);
-    
-    if (isNaN(a) || isNaN(b)) {
-      error.value = 'Please enter valid numbers';
-      result.value = null;
-      return;
-    }
-    
-    result.value = a + b;
-  });
+  // ❌ TEMPORARILY DISABLED FOR SSR DEBUG - QRL serialization test
+  // const calculate = $(() => {
+  //   error.value = '';
+  //   const a = parseFloat(firstNumber.value);
+  //   const b = parseFloat(secondNumber.value);
+  //   
+  //   if (isNaN(a) || isNaN(b)) {
+  //     error.value = 'Please enter valid numbers';
+  //     result.value = null;
+  //     return;
+  //   }
+  //   
+  //   result.value = a + b;
+  // });
 
-  const clear = $(() => {
-    firstNumber.value = '';
-    secondNumber.value = '';
-    result.value = null;
-    error.value = '';
-  });
+  // const clear = $(() => {
+  //   firstNumber.value = '';
+  //   secondNumber.value = '';
+  //   result.value = null;
+  //   error.value = '';
+  // });
+  
+  // ✅ TEST: Plain functions (no QRL)
+  const calculate = () => {
+    // Disabled for SSR test
+  };
+  
+  const clear = () => {
+    // Disabled for SSR test
+  };
 
   return (
     <div class="container">
@@ -153,7 +163,7 @@ export default component$(() => {
             class="number-input"
             placeholder="First number"
             value={firstNumber.value}
-            onInput$={(e) => firstNumber.value = (e.target as HTMLInputElement).value}
+            // ❌ DISABLED: onInput$={(e) => firstNumber.value = (e.target as HTMLInputElement).value}
           />
           <span class="operator">+</span>
           <input
@@ -161,7 +171,7 @@ export default component$(() => {
             class="number-input"
             placeholder="Second number"
             value={secondNumber.value}
-            onInput$={(e) => secondNumber.value = (e.target as HTMLInputElement).value}
+            // ❌ DISABLED: onInput$={(e) => secondNumber.value = (e.target as HTMLInputElement).value}
           />
         </div>
 
@@ -170,8 +180,8 @@ export default component$(() => {
         )}
 
         <div class="buttons">
-          <button onClick$={calculate} class="btn btn-primary">Calculate</button>
-          <button onClick$={clear} class="btn btn-secondary">Clear</button>
+          <button /* onClick$={calculate} */ class="btn btn-primary">Calculate</button>
+          <button /* onClick$={clear} */ class="btn btn-secondary">Clear</button>
         </div>
 
         {result.value !== null && !error.value && (

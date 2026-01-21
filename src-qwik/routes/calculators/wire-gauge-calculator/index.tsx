@@ -99,45 +99,55 @@ export default component$(() => {
     }
   `);
 
-  const calculate = $(() => {
-    error.value = '';
-    const curr = parseFloat(current.value);
-    const len = parseFloat(length.value);
-    
-    if (isNaN(curr) || isNaN(len)) {
-      error.value = 'Please enter valid numbers';
-      result.value = '';
-      return;
-    }
-    
-    if (curr <= 0 || len <= 0) {
-      error.value = 'Values must be greater than 0';
-      result.value = '';
-      return;
-    }
-    
-    // Simple wire gauge calculation (AWG)
-    let gauge = '';
-    if (curr <= 0.5) gauge = 'AWG 20';
-    else if (curr <= 1) gauge = 'AWG 18';
-    else if (curr <= 2) gauge = 'AWG 16';
-    else if (curr <= 3.5) gauge = 'AWG 14';
-    else if (curr <= 5) gauge = 'AWG 12';
-    else if (curr <= 10) gauge = 'AWG 10';
-    else if (curr <= 15) gauge = 'AWG 8';
-    else if (curr <= 20) gauge = 'AWG 6';
-    else gauge = 'AWG 4 or larger';
-    
-    result.value = gauge;
-  });
+  // ❌ TEMPORARILY DISABLED FOR SSR DEBUG - QRL serialization test
+  // const calculate = $(() => {
+  //   error.value = '';
+  //   const curr = parseFloat(current.value);
+  //   const len = parseFloat(length.value);
+  //   
+  //   if (isNaN(curr) || isNaN(len)) {
+  //     error.value = 'Please enter valid numbers';
+  //     result.value = '';
+  //     return;
+  //   }
+  //   
+  //   if (curr <= 0 || len <= 0) {
+  //     error.value = 'Values must be greater than 0';
+  //     result.value = '';
+  //     return;
+  //   }
+  //   
+  //   // Simple wire gauge calculation (AWG)
+  //   let gauge = '';
+  //   if (curr <= 0.5) gauge = 'AWG 20';
+  //   else if (curr <= 1) gauge = 'AWG 18';
+  //   else if (curr <= 2) gauge = 'AWG 16';
+  //   else if (curr <= 3.5) gauge = 'AWG 14';
+  //   else if (curr <= 5) gauge = 'AWG 12';
+  //   else if (curr <= 10) gauge = 'AWG 10';
+  //   else if (curr <= 15) gauge = 'AWG 8';
+  //   else if (curr <= 20) gauge = 'AWG 6';
+  //   else gauge = 'AWG 4 or larger';
+  //   
+  //   result.value = gauge;
+  // });
 
-  const clear = $(() => {
-    current.value = '';
-    length.value = '';
-    voltage.value = '230';
-    result.value = '';
-    error.value = '';
-  });
+  // const clear = $(() => {
+  //   current.value = '';
+  //   length.value = '';
+  //   voltage.value = '230';
+  //   result.value = '';
+  //   error.value = '';
+  // });
+  
+  // ✅ TEST: Plain functions (no QRL)
+  const calculate = () => {
+    // Disabled for SSR test
+  };
+  
+  const clear = () => {
+    // Disabled for SSR test
+  };
 
   return (
     <div class="container">
@@ -153,7 +163,7 @@ export default component$(() => {
             class="input"
             placeholder="Enter current in amps"
             value={current.value}
-            onInput$={(e) => current.value = (e.target as HTMLInputElement).value}
+            // ❌ DISABLED: onInput$={(e) => current.value = (e.target as HTMLInputElement).value}
           />
         </div>
 
@@ -164,7 +174,7 @@ export default component$(() => {
             class="input"
             placeholder="Enter wire length"
             value={length.value}
-            onInput$={(e) => length.value = (e.target as HTMLInputElement).value}
+            // ❌ DISABLED: onInput$={(e) => length.value = (e.target as HTMLInputElement).value}
           />
         </div>
 
@@ -174,7 +184,7 @@ export default component$(() => {
             type="number"
             class="input"
             value={voltage.value}
-            onInput$={(e) => voltage.value = (e.target as HTMLInputElement).value}
+            // ❌ DISABLED: onInput$={(e) => voltage.value = (e.target as HTMLInputElement).value}
           />
         </div>
 
@@ -183,8 +193,8 @@ export default component$(() => {
         )}
 
         <div class="buttons">
-          <button onClick$={calculate} class="btn btn-primary">Calculate</button>
-          <button onClick$={clear} class="btn btn-secondary">Clear</button>
+          <button /* onClick$={calculate} */ class="btn btn-primary">Calculate</button>
+          <button /* onClick$={clear} */ class="btn btn-secondary">Clear</button>
         </div>
 
         {result.value && !error.value && (

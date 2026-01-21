@@ -22,8 +22,33 @@ app.use(compression());
 app.use(`/build`, express.static(buildDir, { immutable: true, maxAge: '1y' }));
 app.use(express.static(distDir, { redirect: false }));
 
-app.use(router);
+// ✅ SSR-safe router with error handling
+app.use((req, res, next) => {
+  try {
+    router(req, res, next);
+  } catch (err) {
+    // If headers already sent, just end the response
+    if (res.headersSent) {
+      res.end();
+      return;
+    }
+    next(err);
+  }
+});
+
 app.use(notFound);
+
+// ✅ Error handler - prevent double response
+app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  // If headers already sent, don't try to send error response
+  if (res.headersSent) {
+    res.end();
+    return;
+  }
+  
+  console.error('SSR Error:', err);
+  res.status(500).send('Internal Server Error');
+});
 
 const PORT = process.env.PORT || 3000;
 

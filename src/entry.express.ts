@@ -3,7 +3,7 @@ import { createQwikCity } from '@builder.io/qwik-city/middleware/node';
 import { render } from './entry.ssr';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { existsSync, readdirSync } from 'fs';
+import { readdir, access, constants } from 'fs/promises';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -18,17 +18,31 @@ import qwikCityPlan from '@qwik-city-plan';
 const distDir = __dirname;
 
 console.log('📁 Dist directory:', distDir);
-console.log('📁 Checking if build/ exists:', existsSync(join(distDir, 'build')));
-if (existsSync(join(distDir, 'build'))) {
-  const buildFiles = readdirSync(join(distDir, 'build')).slice(0, 5);
-  console.log('📁 Sample build files:', buildFiles);
-  console.log('📁 preloader.js exists:', existsSync(join(distDir, 'build', 'preloader.js')));
-}
+
+// Check build directory asynchronously
+(async () => {
+  try {
+    await access(join(distDir, 'build'), constants.F_OK);
+    const buildFiles = await readdir(join(distDir, 'build'));
+    console.log('✅ Build directory exists with', buildFiles.length, 'files');
+    console.log('📁 Sample files:', buildFiles.slice(0, 5));
+    try {
+      await access(join(distDir, 'build', 'preloader.js'), constants.F_OK);
+      console.log('✅ preloader.js exists');
+    } catch {
+      console.log('❌ preloader.js NOT found');
+    }
+  } catch {
+    console.log('❌ Build directory NOT found');
+  }
+})();
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error('❌ Error serving:', req.path, err);
-  res.status(500).send('Internal Server Error');
+  console.error('❌ Error serving:', req.path, err.message);
+  if (!res.headersSent) {
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 const { router, notFound, staticFile } = createQwikCity({
@@ -40,19 +54,19 @@ const { router, notFound, staticFile } = createQwikCity({
   }
 });
 
+// Log all requests for debugging
+app.use((req, res, next) => {
+  if (req.path.startsWith('/build/') || req.path.startsWith('/assets/')) {
+    console.log('📦 Request for static file:', req.path);
+  }
+  next();
+});
+
 // Use Express static middleware first for build/ and assets/ files
 app.use(express.static(distDir, {
   maxAge: '1y',
   immutable: true
 }));
-
-// Log requests to build/ for debugging
-app.use((req, res, next) => {
-  if (req.path.startsWith('/build/')) {
-    console.log('📦 Request for build file:', req.path);
-  }
-  next();
-});
 
 // Then use Qwik City staticFile middleware
 app.use(staticFile);

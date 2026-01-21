@@ -33,8 +33,8 @@ RUN echo "=== src/ structure ===" && \
 # Build ONLY client (SSR build has issues, use vite preview instead)
 RUN npm run build.client
 
-# Remove symlink/directory after build
-RUN unlink src 2>/dev/null || rm -rf src || true
+# Keep src/ for vite preview (it needs source files)
+# Don't remove it!
 
 # DEBUG - Show what was built
 RUN echo "=== Build output ===" && \
@@ -54,8 +54,9 @@ COPY package.json package-lock.json ./
 # Install dependencies (including vite for preview server)
 RUN npm ci
 
-# Copy built files from builder
+# Copy built files and source (vite preview needs src/)
 COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/src ./src
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/vite.config.qwik.ts ./vite.config.qwik.ts
 COPY --from=builder /app/tsconfig.json ./tsconfig.json

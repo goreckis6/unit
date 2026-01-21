@@ -3,7 +3,8 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "@builder.io/qwik",
-    "types": ["vite/client", "@builder.io/qwik"]
+    "types": ["vite/client", "@builder.io/qwik"],
+    "outDir": "tmp-qwik"
   },
   "include": ["."],
   "references": [{ "path": "../" }]

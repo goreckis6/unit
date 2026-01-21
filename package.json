@@ -1,31 +1,42 @@
 {
   "name": "unitconverterhub",
-  "version": "1.0.0",
   "description": "Unit Converter Hub - Calculator tools for various conversions",
+  "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "dev:qwik": "vite --config vite.config.qwik.ts",
-    "build": "vite build",
+    "build": "NO_COLOR= FORCE_COLOR=1 qwik build",
+    "postbuild": "cp public/sitemap.xml dist/sitemap.xml 2>/dev/null || true",
+    "build.client": "vite build",
+    "build.server": "qwik check-client src dist && vite build -c adapters/node-server/vite.config.ts",
     "build:qwik": "bash scripts/build-qwik.sh",
     "build:qwik:internal": "vite build --config vite.config.qwik.ts",
+    "dev": "vite --mode ssr",
+    "dev:qwik": "vite --config vite.config.qwik.ts",
     "preview": "vite preview",
     "preview:qwik": "vite preview --config vite.config.qwik.ts",
+    "serve": "node server/entry.node-server",
+    "start": "vite --open --mode ssr",
+    "qwik": "qwik",
     "migrate:qwik": "node scripts/migrate-to-qwik.js",
     "migrate:qwik:single": "node scripts/migrate-to-qwik.js"
   },
   "dependencies": {
-    "vue": "^3.4.0",
-    "vue-i18n": "^9.8.0",
-    "vue-router": "^4.2.5"
+    "@builder.io/qwik": "^1.18.0",
+    "@builder.io/qwik-city": "^1.18.0"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^1.18.0",
-    "@builder.io/qwik-city": "^1.18.0",
     "@builder.io/qwik-react": "^0.5.8",
+    "@types/node": "^20.14.11",
     "@vitejs/plugin-vue": "^5.0.0",
     "ignore": "^7.0.5",
+    "typescript": "^5.5.3",
+    "undici": "^6.19.2",
     "vite": "^5.0.0",
-    "vite-plugin-static-copy": "^3.1.4"
+    "vite-plugin-static-copy": "^3.1.4",
+    "vite-tsconfig-paths": "^5.0.1"
   }
 }

@@ -1,1 +1,0 @@
-import{_ as t}from"./q-DoNi8vyY.js";import{D as o,q as r}from"./q-69wmZ9eV.js";const n=o(r(()=>t(()=>import("./q-BZCEeWa3.js"),[]),"s_H00V4oR904U")),c={title:"ArctanCalculator - Unit Converter Hub",meta:[{name:"description",content:"ArctanCalculator calculator"}]};export{n as default,c as head};

@@ -1,1 +1,0 @@
-import{d as l}from"./q-69wmZ9eV.js";import{c as f}from"./q-69wmZ9eV.js";const n=({track:a})=>{const[e,s]=l();a(()=>e.url.pathname);const t=e.url.pathname.split("/").filter(o=>o)[0];["en","pl","de","es","fr","it","nl","pt","sv","vi","tr","ru","fa","th","ja","zh"].includes(t)?s.value=t:s.value="en"};export{f as _hW,n as s_I0m3HTf3T8U};

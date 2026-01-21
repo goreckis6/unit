@@ -1,0 +1,1 @@
+import{_ as t}from"./q-DoNi8vyY.js";import{G as o,q as n}from"./q-BMru2EbG.js";const a=o(n(()=>t(()=>import("./q-DIoI6Xy5.js"),[]),"s_WGSR90nEUG0")),i={title:"EnergyConsumptionCalculator - Unit Converter Hub",meta:[{name:"description",content:"EnergyConsumptionCalculator calculator"}]};export{a as default,i as head};

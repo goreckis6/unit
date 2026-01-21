@@ -1,1 +1,0 @@
-import{_ as t}from"./q-DoNi8vyY.js";import{D as o,q as a}from"./q-69wmZ9eV.js";const l=o(a(()=>t(()=>import("./q-ClX2OyrY.js"),[]),"s_prJGSHhw2YU")),n={title:"OhmsLawCalculator - Unit Converter Hub",meta:[{name:"description",content:"OhmsLawCalculator calculator"}]};export{l as default,n as head};

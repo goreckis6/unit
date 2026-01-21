@@ -1,1 +1,0 @@
-import{_ as t}from"./q-DoNi8vyY.js";import{D as e,q as o}from"./q-69wmZ9eV.js";const l=e(o(()=>t(()=>import("./q-ClX-m6Ue.js"),[]),"s_O00e7fFk0cU")),n={title:"AverageCalculator - Unit Converter Hub",meta:[{name:"description",content:"AverageCalculator calculator"}]};export{l as default,n as head};

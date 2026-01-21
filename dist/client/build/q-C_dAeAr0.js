@@ -1,1 +1,0 @@
-import{_ as t}from"./q-DoNi8vyY.js";import{D as o,q as r}from"./q-69wmZ9eV.js";const l=o(r(()=>t(()=>import("./q-BRskkGSF.js"),[]),"s_SLqmIv7w9lc")),n={title:"VoltageDropCalculator - Unit Converter Hub",meta:[{name:"description",content:"VoltageDropCalculator calculator"}]};export{l as default,n as head};

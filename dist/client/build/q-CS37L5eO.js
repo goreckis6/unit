@@ -1,0 +1,1 @@
+import{_ as t}from"./q-DoNi8vyY.js";import{G as o,q as r}from"./q-BMru2EbG.js";const l=o(r(()=>t(()=>import("./q-B1N1Diqg.js"),[]),"s_YTv0rnFF7bY")),n={title:"AmpsToVoltsCalculator - Unit Converter Hub",meta:[{name:"description",content:"AmpsToVoltsCalculator calculator"}]};export{l as default,n as head};

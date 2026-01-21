@@ -1,1 +1,0 @@
-import{_ as t}from"./q-DoNi8vyY.js";import{D as o,q as i}from"./q-69wmZ9eV.js";const n=o(i(()=>t(()=>import("./q-DrlWuBZa.js"),[]),"s_iFtdvCDZwhs")),a={title:"MultiplyingFractions - Unit Converter Hub",meta:[{name:"description",content:"MultiplyingFractions calculator"}]};export{n as default,a as head};

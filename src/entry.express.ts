@@ -27,11 +27,14 @@ const { router, notFound, staticFile } = createQwikCity({
   }
 });
 
-// Serve static files first (includes build/, assets/, etc.)
-app.use(staticFile);
+// Use Express static middleware first for build/ and assets/ files
+app.use(express.static(distDir, {
+  maxAge: '1y',
+  immutable: true
+}));
 
-// Also use Express static middleware as fallback for additional files
-app.use(express.static(distDir));
+// Then use Qwik City staticFile middleware
+app.use(staticFile);
 
 // Then handle Qwik routes
 app.use(router);

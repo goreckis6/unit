@@ -7,8 +7,11 @@ RUN npm ci
 
 COPY . .
 RUN npm run build.client
+RUN ls -la dist/build/ | head -5 || echo "No build/ directory after client build"
 RUN npm run build
 RUN ls -la dist/ && test -f dist/entry.express.js && echo "✅ entry.express.js found" || echo "❌ entry.express.js NOT found"
+RUN test -f dist/build/preloader.js && echo "✅ preloader.js found" || echo "❌ preloader.js NOT found"
+RUN ls -la dist/build/ | head -5 || echo "No build/ directory after server build"
 
 # ---------- RUNTIME ----------
 FROM node:20-alpine

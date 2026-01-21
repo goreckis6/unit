@@ -1,14 +1,9 @@
-name: Deploy to Production
+name: Deploy Qwik SSR to Production
 
 on:
   push:
     branches:
       - main
-      - master
-    paths-ignore:
-      - "**.md"
-      - ".gitignore"
-      - "README.md"
 
 jobs:
   build-and-push:
@@ -31,11 +26,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Vue application
+      - name: Build Qwik SSR application
         run: |
-          npm run build
-          echo "=== Built files in dist/ ==="
-          ls -la dist/
+          npm run build.client
+          npm run build.server
+          echo "=== Client build ==="
+          ls -la dist/client/ | head -20
+          echo "=== Server build ==="
+          ls -la dist/server/
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -67,19 +65,11 @@ jobs:
           no-cache: true
 
   deploy:
-    name: Deploy to Production
+    name: Deploy to VPS
     needs: build-and-push
     runs-on: ubuntu-latest
 
     steps:
-      - name: Add SSH key
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
-
-      - name: Add host to known_hosts
-        run: ssh-keyscan ${{ secrets.FRONTEND_VPS_HOST }} >> ~/.ssh/known_hosts
-
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -88,116 +78,35 @@ jobs:
           key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
           script: |
             set -eo pipefail
-
-            # Set variables directly
+            
             GHCR_TOKEN="${{ secrets.GHCR_TOKEN || secrets.GITHUB_TOKEN }}"
             GITHUB_ACTOR="${{ github.actor }}"
             GITHUB_REPO_OWNER="${{ github.repository_owner }}"
-
-            # Create directories
-            sudo mkdir -p /opt/frontend
-            sudo chown -R $USER:$USER /opt/frontend
-            cd /opt/frontend
-
-            # Stop and remove old frontend container
+            
+            # Stop old container
             sudo docker stop morphy-frontend 2>/dev/null || true
             sudo docker rm morphy-frontend 2>/dev/null || true
-
-            # Pull latest image from GitHub Container Registry
-            if [ -z "$GHCR_TOKEN" ] || [ -z "$GITHUB_ACTOR" ]; then
-              echo "❌ Error: GHCR_TOKEN or GITHUB_ACTOR is not set"
-              exit 1
-            fi
-            echo "$GHCR_TOKEN" | sudo docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin 2>&1
+            
+            # Force remove old image to ensure fresh pull
+            echo "🗑️ Removing old image..."
+            sudo docker rmi ghcr.io/$GITHUB_REPO_OWNER/unit:latest 2>/dev/null || true
+            
+            # Login and pull
+            echo "$GHCR_TOKEN" | sudo docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
             sudo docker pull ghcr.io/$GITHUB_REPO_OWNER/unit:latest
             sudo docker image prune -f
-
-            # Ensure caddy-net network exists
-            if ! sudo docker network ls | grep -q "caddy-net"; then
-              echo "Creating caddy-net network..."
-              sudo docker network create caddy-net || true
-            fi
-
-            # Deploy frontend container (connected to caddy-net)
+            
+            # Ensure network
+            sudo docker network create caddy-net 2>/dev/null || true
+            
+            # Start new container
             sudo docker run -d \
               --name morphy-frontend \
               --network caddy-net \
               --restart unless-stopped \
               ghcr.io/$GITHUB_REPO_OWNER/unit:latest
-
-            # Check if Caddy is running, if not start it
-            if ! sudo docker ps | grep -q "caddy"; then
-              echo "🚀 Starting Caddy reverse proxy..."
-              sudo docker stop caddy 2>/dev/null || true
-              sudo docker rm caddy 2>/dev/null || true
-              
-              # Create Caddyfile
-              cat > /tmp/Caddyfile << 'EOF'
-            unitconverterhub.com {
-              reverse_proxy morphy-frontend:3000 {
-                header_up Host {host}
-                header_up X-Real-IP {remote_host}
-                header_up X-Forwarded-For {remote_host}
-                header_up X-Forwarded-Proto {scheme}
-              }
-            }
-            EOF
-              
-              sudo docker run -d \
-                --name caddy \
-                --network caddy-net \
-                --restart unless-stopped \
-                -p 80:80 \
-                -p 443:443 \
-                -v caddy_data:/data \
-                -v /tmp/Caddyfile:/etc/caddy/Caddyfile \
-                caddy:latest
-              
-              echo "✅ Caddy started"
-            else
-              echo "✅ Caddy is already running"
-              # Restart Caddy to pick up new container
-              sudo docker restart caddy || true
-            fi
-
-            # Health check - verify deployment
-            sleep 10
-
-            if ! sudo docker ps | grep -q morphy-frontend; then
-              echo "❌ Frontend container is not running"
-              sudo docker logs morphy-frontend || true
-              exit 1
-            fi
-
-            # Check if container is healthy
-            CONTAINER_STATUS=$(sudo docker inspect --format='{{.State.Status}}' morphy-frontend 2>/dev/null || echo "not-found")
-            if [ "$CONTAINER_STATUS" != "running" ]; then
-              echo "❌ Container status: $CONTAINER_STATUS"
-              sudo docker logs morphy-frontend || true
-              exit 1
-            fi
-
-            # Check if static server is responding
-            echo "🔍 Checking static file server..."
+            
+            # Verify
             sleep 5
-            if sudo docker exec morphy-frontend sh -c "command -v curl >/dev/null && curl -f http://localhost:3000/ >/dev/null 2>&1" 2>/dev/null; then
-              echo "✅ Static server is responding"
-            else
-              echo "⚠️  Server health check inconclusive, checking logs..."
-              sudo docker logs morphy-frontend --tail 30 || true
-            fi
-
-            # Show container info
-            echo "📊 Container info:"
-            sudo docker ps | grep -E "morphy-frontend|caddy" || true
-
-            # Check Caddy logs
-            echo "📊 Caddy logs:"
-            sudo docker logs caddy --tail 10 || true
-
-            # Check if ports 80 and 443 are listening
-            echo "📊 Checking ports:"
-            sudo ss -tlnp 2>/dev/null | grep -E ':(80|443)' || echo "Ports check failed"
-
-            echo "✅ Deployment successful!"
-            echo "🌐 Site: https://unitconverterhub.com"
+            sudo docker ps | grep morphy-frontend
+            echo "✅ Qwik SSR deployed!"

@@ -1,11 +1,15 @@
-# Runtime stage - Serve Vue SPA
+# Qwik SSR Production Image
 FROM node:20-slim
+
 WORKDIR /app
 
-# Install serve globally
-RUN npm install -g serve
+# Copy package files
+COPY package*.json ./
 
-# Copy pre-built Vue application from CI
+# Install production dependencies only
+RUN npm ci --only=production
+
+# Copy built application from CI
 COPY dist ./dist
 
 # Set environment
@@ -14,5 +18,5 @@ ENV NODE_ENV=production
 # Expose port
 EXPOSE 3000
 
-# Start static file server with SPA fallback
-CMD ["serve", "-s", "dist", "-l", "3000"]
+# Start Qwik SSR server
+CMD ["node", "dist/server/entry.express.js"]

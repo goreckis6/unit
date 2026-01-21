@@ -30,9 +30,8 @@ RUN echo "=== src/ structure ===" && \
     echo "=== tsconfig check ===" && \
     cat tsconfig.qwik.json
 
-# Build the Qwik application using official qwik build command
-# This builds both client and SSR automatically
-RUN npm run build
+# Build ONLY client (SSR build has issues, use vite preview instead)
+RUN npm run build.client
 
 # Remove symlink/directory after build
 RUN unlink src 2>/dev/null || rm -rf src || true
@@ -58,7 +57,9 @@ RUN npm ci
 # Copy built files from builder
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/server.js ./server.js
+COPY --from=builder /app/vite.config.qwik.ts ./vite.config.qwik.ts
+COPY --from=builder /app/tsconfig.json ./tsconfig.json
+COPY --from=builder /app/tsconfig.qwik.json ./tsconfig.qwik.json
 
 # Set environment
 ENV NODE_ENV=production

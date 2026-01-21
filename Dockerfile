@@ -2,19 +2,17 @@
 FROM node:20 AS builder
 WORKDIR /app
 
-# Force esbuild to use JS implementation (not binary) - fixes buildx noexec
-ENV ESBUILD_BINARY_PATH=""
-
 # Copy package files
 COPY package.json package-lock.json ./
 
 # Install all dependencies (including dev for build)
 RUN npm ci
 
+# Fix esbuild binary permissions for Docker buildx (CRITICAL)
+RUN chmod +x node_modules/@esbuild/*/bin/esbuild
+
 # Copy source code
 COPY . .
-
-# Note: No chmod needed with node:20 (Debian-based)
 
 # Build client
 RUN npm run build.client

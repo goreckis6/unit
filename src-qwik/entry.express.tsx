@@ -7,7 +7,8 @@ import compression from 'compression';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 
-const distDir = join(fileURLToPath(import.meta.url), '..', '..', 'client');
+// ✅ FIX: entry.express.js is in dist/server/, so we go up ONE level to dist/, then to client/
+const distDir = join(fileURLToPath(import.meta.url), '..', 'client');
 const buildDir = join(distDir, 'build');
 
 const { router, notFound } = createQwikCity({

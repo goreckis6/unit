@@ -1,0 +1,176 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths-ignore:
+      - "**.md"
+      - ".gitignore"
+      - "README.md"
+
+jobs:
+  build-and-push:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository_owner }}/formi-qwik
+          tags: |
+            type=raw,value=latest
+            type=sha,prefix=sha-
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          no-cache: true
+
+  deploy:
+    name: Deploy to Production
+    needs: build-and-push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add SSH key
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+
+      - name: Add host to known_hosts
+        run: ssh-keyscan ${{ secrets.FRONTEND_VPS_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.FRONTEND_VPS_HOST }}
+          username: ${{ secrets.FRONTEND_VPS_USERNAME }}
+          key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          script: |
+            set -eo pipefail
+
+            # Set variables directly
+            GHCR_TOKEN="${{ secrets.GHCR_TOKEN || secrets.GITHUB_TOKEN }}"
+            GITHUB_ACTOR="${{ github.actor }}"
+            GITHUB_REPO_OWNER="${{ github.repository_owner }}"
+
+            # Create directories
+            sudo mkdir -p /opt/frontend
+            sudo chown -R $USER:$USER /opt/frontend
+            cd /opt/frontend
+
+            # Stop and remove old frontend container
+            docker stop morphy-frontend 2>/dev/null || true
+            docker rm morphy-frontend 2>/dev/null || true
+
+            # Pull latest image from GitHub Container Registry
+            if [ -z "$GHCR_TOKEN" ] || [ -z "$GITHUB_ACTOR" ]; then
+              echo "❌ Error: GHCR_TOKEN or GITHUB_ACTOR is not set"
+              exit 1
+            fi
+            echo "$GHCR_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin 2>&1
+            docker pull ghcr.io/$GITHUB_REPO_OWNER/formi-qwik:latest
+            docker image prune -f
+
+            # Ensure caddy-net network exists
+            if ! docker network ls | grep -q "caddy-net"; then
+              echo "Creating caddy-net network..."
+              docker network create caddy-net || true
+            fi
+
+            # Deploy frontend container (connected to caddy-net)
+            docker run -d \
+              --name morphy-frontend \
+              --network caddy-net \
+              --restart unless-stopped \
+              ghcr.io/$GITHUB_REPO_OWNER/formi-qwik:latest
+
+            # Check if Caddy is running, if not start it
+            if ! docker ps | grep -q "caddy"; then
+              echo "🚀 Starting Caddy reverse proxy..."
+              docker stop caddy 2>/dev/null || true
+              docker rm caddy 2>/dev/null || true
+              
+              docker run -d \
+                --name caddy \
+                --network caddy-net \
+                --restart unless-stopped \
+                -p 80:80 \
+                -p 443:443 \
+                -v caddy_data:/data \
+                caddy:latest \
+                caddy reverse-proxy --from unitconverterhub.com --to morphy-frontend:3000
+              
+              echo "✅ Caddy started"
+            else
+              echo "✅ Caddy is already running"
+              # Restart Caddy to pick up new container
+              docker restart caddy || true
+            fi
+
+            # Health check - verify deployment
+            sleep 10
+
+            if ! docker ps | grep -q morphy-frontend; then
+              echo "❌ Frontend container is not running"
+              docker logs morphy-frontend || true
+              exit 1
+            fi
+
+            # Check if container is healthy
+            CONTAINER_STATUS=$(docker inspect --format='{{.State.Status}}' morphy-frontend 2>/dev/null || echo "not-found")
+            if [ "$CONTAINER_STATUS" != "running" ]; then
+              echo "❌ Container status: $CONTAINER_STATUS"
+              docker logs morphy-frontend || true
+              exit 1
+            fi
+
+            # Check if Node.js SSR server is responding
+            echo "🔍 Checking Node.js SSR server..."
+            sleep 5
+            if docker exec morphy-frontend sh -c "wget -q --spider http://localhost:3000/ 2>&1" 2>/dev/null; then
+              echo "✅ Node.js SSR server is responding"
+            else
+              echo "⚠️  SSR server health check failed, checking logs..."
+              docker logs morphy-frontend --tail 30 || true
+            fi
+
+            # Show container info
+            echo "📊 Container info:"
+            docker ps | grep -E "morphy-frontend|caddy" || true
+
+            # Check Caddy logs
+            echo "📊 Caddy logs:"
+            docker logs caddy --tail 10 || true
+
+            # Check if ports 80 and 443 are listening
+            echo "📊 Checking ports:"
+            sudo ss -tlnp 2>/dev/null | grep -E ':(80|443)' || echo "Ports check failed"
+
+            echo "✅ Deployment successful!"
+            echo "🌐 Site: https://unitconverterhub.com"

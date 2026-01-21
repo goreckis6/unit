@@ -1,0 +1,61 @@
+name: Test SSH Connection
+
+on:
+  workflow_dispatch:  # Allows manual trigger from GitHub Actions tab
+  push:
+    branches:
+      - test-deploy
+
+jobs:
+  test-connection:
+    name: Test VPS Connection
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add SSH key
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+
+      - name: Add host to known_hosts
+        run: ssh-keyscan ${{ secrets.FRONTEND_VPS_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Test SSH Connection
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.FRONTEND_VPS_HOST }}
+          username: ${{ secrets.FRONTEND_VPS_USERNAME }}
+          key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          script: |
+            echo "✅ SSH Connection successful!"
+            echo "📊 Server info:"
+            echo "Hostname: $(hostname)"
+            echo "User: $(whoami)"
+            echo "Current directory: $(pwd)"
+            echo ""
+            
+            echo "🐳 Docker version:"
+            docker --version || echo "❌ Docker not installed"
+            echo ""
+            
+            echo "🐳 Docker status:"
+            docker ps -a || echo "❌ Cannot access Docker"
+            echo ""
+            
+            echo "📂 Checking directories:"
+            ls -la /opt/frontend 2>/dev/null || echo "Directory /opt/frontend does not exist"
+            echo ""
+            
+            echo "🌐 Checking ports:"
+            sudo ss -tlnp 2>/dev/null | grep -E ':(80|443|3000)' || echo "No services on ports 80, 443, 3000"
+            echo ""
+            
+            echo "💾 Disk space:"
+            df -h /
+            echo ""
+            
+            echo "🧹 Docker images:"
+            docker images | grep -E "caddy|formi-qwik" || echo "No relevant Docker images found"
+            echo ""
+            
+            echo "✅ Test completed successfully!"

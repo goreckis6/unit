@@ -1,5 +1,5 @@
 # Build stage
-FROM node:20-alpine AS builder
+FROM node:20 AS builder
 WORKDIR /app
 
 # Copy package files
@@ -11,9 +11,7 @@ RUN npm ci
 # Copy source code
 COPY . .
 
-# Fix Alpine Linux binary permissions (CRITICAL for vite/npx/esbuild)
-RUN chmod -R 755 node_modules/.bin \
- && chmod -R 755 node_modules/@esbuild
+# Note: No chmod needed with node:20 (Debian-based)
 
 # Build client
 RUN npm run build.client
@@ -22,7 +20,7 @@ RUN npm run build.client
 RUN npx vite build -c adapters/express/vite.config.ts
 
 # Production stage
-FROM node:20-alpine
+FROM node:20
 WORKDIR /app
 
 # Copy package files and lock from builder

@@ -45,14 +45,9 @@ RUN npm ci
 
 # Copy built files from builder
 COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/server ./server
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/src-qwik ./src-qwik
-COPY --from=builder /app/vite.config.qwik.ts ./vite.config.qwik.ts
-COPY --from=builder /app/tsconfig.qwik.json ./tsconfig.qwik.json
-COPY --from=builder /app/tsconfig.json ./tsconfig.json
-
-# Create symlink for runtime
-RUN ln -sf src-qwik src
+COPY --from=builder /app/server.js ./server.js
 
 # Set environment
 ENV NODE_ENV=production
@@ -62,5 +57,5 @@ ENV PORT=3000
 # Expose port
 EXPOSE 3000
 
-# Start Qwik SSR server using Vite preview
-CMD ["npm", "run", "preview:qwik", "--", "--host", "0.0.0.0", "--port", "3000"]
+# Start Node.js production server
+CMD ["npm", "start"]

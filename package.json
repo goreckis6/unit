@@ -18,8 +18,8 @@
     "dev:qwik": "vite --config vite.config.qwik.ts",
     "preview": "vite preview",
     "preview:qwik": "vite preview --config vite.config.qwik.ts",
-    "serve": "node server/entry.node-server",
-    "start": "vite --open --mode ssr",
+    "serve": "node server.js",
+    "start": "node server.js",
     "qwik": "qwik",
     "migrate:qwik": "node scripts/migrate-to-qwik.js",
     "migrate:qwik:single": "node scripts/migrate-to-qwik.js"

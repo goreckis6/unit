@@ -15,9 +15,9 @@ COPY . .
 RUN chmod -R +x node_modules/.bin || true && \
     find node_modules/@esbuild -type f -name "esbuild" -exec chmod +x {} \; || true
 
-# Create symlink for Qwik build (src -> src-qwik)
+# Remove old src/ folder and create symlink for Qwik build (src -> src-qwik)
 # This is required because Qwik expects src/ directory
-RUN ln -sf src-qwik src
+RUN rm -rf src && ln -sf src-qwik src
 
 # Build the Qwik application
 RUN npm run build:qwik:internal

@@ -1,1 +1,0 @@
-import{_ as t}from"./q-DoNi8vyY.js";import{G as o,q as a}from"./q-BMru2EbG.js";const l=o(a(()=>t(()=>import("./q-DoXkiCmp.js"),[]),"s_AzEfrNAOwJw")),i={title:"AmpsToKilowattsCalculator - Unit Converter Hub",meta:[{name:"description",content:"AmpsToKilowattsCalculator calculator"}]};export{l as default,i as head};

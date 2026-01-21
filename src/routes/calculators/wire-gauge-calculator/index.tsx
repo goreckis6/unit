@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import WireGaugeCalculator from "../../../components/wire-gauge-calculator";
+import WireGaugeCalculator from '../../components-qwik/WireGaugeCalculator';
 
 export default component$(() => {
   return <WireGaugeCalculator />;

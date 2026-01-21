@@ -1,1 +1,0 @@
-import{_ as t}from"./q-DoNi8vyY.js";import{G as o,q as e}from"./q-BMru2EbG.js";const l=o(e(()=>t(()=>import("./q-DhEU49uT.js"),[]),"s_q2XllDy7dKs")),n={title:"CubeCalculator - Unit Converter Hub",meta:[{name:"description",content:"CubeCalculator calculator"}]};export{l as default,n as head};

@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import SquareCalculator from "../../../components/square-calculator";
+import SquareCalculator from '../../components-qwik/SquareCalculator';
 
 export default component$(() => {
   return <SquareCalculator />;

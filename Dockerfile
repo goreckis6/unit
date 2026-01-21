@@ -1,24 +1,18 @@
-# Runtime stage - NO BUILD, app is pre-built in CI
+# Runtime stage - Serve Vue SPA
 FROM node:20-slim
 WORKDIR /app
 
-# Copy package files
-COPY package.json package-lock.json ./
+# Install serve globally
+RUN npm install -g serve
 
-# Install ONLY production dependencies
-RUN npm ci --omit=dev
-
-# Copy pre-built application from CI
+# Copy pre-built Vue application from CI
 COPY dist ./dist
 
 # Set environment
 ENV NODE_ENV=production
-ENV HOST=0.0.0.0
-ENV PORT=3000
-ENV ORIGIN=https://unitconverterhub.com
 
 # Expose port
 EXPOSE 3000
 
-# Start Express SSR server
-CMD ["node", "dist/server/entry.express.js"]
+# Start static file server with SPA fallback
+CMD ["serve", "-s", "dist", "-l", "3000"]

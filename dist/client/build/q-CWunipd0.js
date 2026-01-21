@@ -1,1 +1,0 @@
-import{_ as t}from"./q-DoNi8vyY.js";import{G as o,q as a}from"./q-BMru2EbG.js";const l=o(a(()=>t(()=>import("./q-onbf325l.js"),[]),"s_TzHUL4yyR0Y")),s={title:"JoulesToWattsCalculator - Unit Converter Hub",meta:[{name:"description",content:"JoulesToWattsCalculator calculator"}]};export{l as default,s as head};

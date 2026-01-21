@@ -1,1 +1,0 @@
-import{_ as t}from"./q-DoNi8vyY.js";import{G as o,q as a}from"./q-BMru2EbG.js";const l=o(a(()=>t(()=>import("./q-BpaoJpzU.js"),[]),"s_u7dQMeABazg")),s={title:"WattsToVoltsCalculator - Unit Converter Hub",meta:[{name:"description",content:"WattsToVoltsCalculator calculator"}]};export{l as default,s as head};

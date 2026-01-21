@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import AmpsToWattsCalculator from "../../../components/amps-to-watts-calculator";
+import AmpsToWattsCalculator from '../../components-qwik/AmpsToWattsCalculator';
 
 export default component$(() => {
   return <AmpsToWattsCalculator />;

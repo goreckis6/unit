@@ -1,1 +1,0 @@
-import{_ as o}from"./q-DoNi8vyY.js";import{G as t,q as r}from"./q-BMru2EbG.js";const l=t(r(()=>o(()=>import("./q-BP3GJI9A.js"),[]),"s_2Soy4409oqY")),n={title:"VoltsToEvCalculator - Unit Converter Hub",meta:[{name:"description",content:"VoltsToEvCalculator calculator"}]};export{l as default,n as head};

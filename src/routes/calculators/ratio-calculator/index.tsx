@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import RatioCalculator from "../../../components/ratio-calculator";
+import RatioCalculator from '../../components-qwik/RatioCalculator';
 
 export default component$(() => {
   return <RatioCalculator />;

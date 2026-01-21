@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import ExponentCalculator from "../../../components/exponent-calculator";
+import ExponentCalculator from '../../components-qwik/ExponentCalculator';
 
 export default component$(() => {
   return <ExponentCalculator />;

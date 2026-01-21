@@ -1,1 +1,0 @@
-import{_ as t}from"./q-DoNi8vyY.js";import{G as o,q as r}from"./q-BMru2EbG.js";const l=o(r(()=>t(()=>import("./q-XhHqGcV4.js"),[]),"s_xDk0FPvLm9U")),c={title:"ElectricalCalculator - Unit Converter Hub",meta:[{name:"description",content:"ElectricalCalculator calculator"}]};export{l as default,c as head};

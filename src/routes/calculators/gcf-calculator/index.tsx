@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import GcfCalculator from "../../../components/gcf-calculator";
+import GcfCalculator from '../../components-qwik/GcfCalculator';
 
 export default component$(() => {
   return <GcfCalculator />;

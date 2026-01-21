@@ -1,45 +1,31 @@
 {
   "name": "unitconverterhub",
-  "description": "Unit Converter Hub - Calculator tools for various conversions",
   "version": "1.0.0",
+  "description": "Unit Converter Hub - Calculator tools for various conversions",
   "type": "module",
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "private": true,
   "scripts": {
-    "build": "NO_COLOR= FORCE_COLOR=1 qwik build",
-    "postbuild": "cp public/sitemap.xml dist/sitemap.xml 2>/dev/null || true",
-    "build.client": "node node_modules/vite/bin/vite.js build --config vite.config.qwik.ts",
-    "build.server": "vite build --config vite.config.qwik.ts --ssr src/entry.preview.tsx",
+    "dev": "vite",
+    "dev:qwik": "vite --config vite.config.qwik.ts",
+    "build": "vite build",
     "build:qwik": "bash scripts/build-qwik.sh",
     "build:qwik:internal": "vite build --config vite.config.qwik.ts",
-    "dev": "vite --mode ssr",
-    "dev:qwik": "vite --config vite.config.qwik.ts",
     "preview": "vite preview",
     "preview:qwik": "vite preview --config vite.config.qwik.ts",
-    "serve": "serve dist -l 3000 --no-port-switching",
-    "start": "node dist/server/entry.express.js",
-    "qwik": "qwik",
     "migrate:qwik": "node scripts/migrate-to-qwik.js",
     "migrate:qwik:single": "node scripts/migrate-to-qwik.js"
   },
   "dependencies": {
-    "@builder.io/qwik": "^1.18.0",
-    "@builder.io/qwik-city": "^1.18.0",
-    "compression": "^1.8.1",
-    "express": "^5.2.1",
-    "serve": "^14.2.1"
+    "vue": "^3.4.0",
+    "vue-i18n": "^9.8.0",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
+    "@builder.io/qwik": "^1.18.0",
+    "@builder.io/qwik-city": "^1.18.0",
     "@builder.io/qwik-react": "^0.5.8",
-    "@types/node": "^20.14.11",
     "@vitejs/plugin-vue": "^5.0.0",
     "ignore": "^7.0.5",
-    "typescript": "^5.5.3",
-    "undici": "^6.19.2",
     "vite": "^5.0.0",
-    "vite-plugin-static-copy": "^3.1.4",
-    "vite-tsconfig-paths": "^5.0.1"
+    "vite-plugin-static-copy": "^3.1.4"
   }
 }

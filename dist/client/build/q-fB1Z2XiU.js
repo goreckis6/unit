@@ -1,1 +1,0 @@
-import{_ as t}from"./q-DoNi8vyY.js";import{G as o,q as r}from"./q-BMru2EbG.js";const l=o(r(()=>t(()=>import("./q-BxSzUZh-.js"),[]),"s_s6MI03X6BDE")),n={title:"SquareCalculator - Unit Converter Hub",meta:[{name:"description",content:"SquareCalculator calculator"}]};export{l as default,n as head};

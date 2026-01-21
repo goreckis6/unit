@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import SimplifyingFractionsCalculator from "../../../components/simplifying-fractions-calculator";
+import SimplifyingFractionsCalculator from '../../components-qwik/SimplifyingFractionsCalculator';
 
 export default component$(() => {
   return <SimplifyingFractionsCalculator />;

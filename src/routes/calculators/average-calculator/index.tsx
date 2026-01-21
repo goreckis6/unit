@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import AverageCalculator from "../../../components/average-calculator";
+import AverageCalculator from '../../components-qwik/AverageCalculator';
 
 export default component$(() => {
   return <AverageCalculator />;

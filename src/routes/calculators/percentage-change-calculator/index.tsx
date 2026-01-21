@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import PercentageChangeCalculator from "../../../components/percentage-change-calculator";
+import PercentageChangeCalculator from '../../components-qwik/PercentageChangeCalculator';
 
 export default component$(() => {
   return <PercentageChangeCalculator />;

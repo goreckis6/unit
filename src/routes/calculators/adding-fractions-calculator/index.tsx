@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import AddingFractionsCalculator from "../../../components/adding-fractions-calculator";
+import AddingFractionsCalculator from '../../components-qwik/AddingFractionsCalculator';
 
 export default component$(() => {
   return <AddingFractionsCalculator />;

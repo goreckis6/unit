@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import PercentErrorCalculator from "../../../components/percent-error-calculator";
+import PercentErrorCalculator from '../../components-qwik/PercentErrorCalculator';
 
 export default component$(() => {
   return <PercentErrorCalculator />;

@@ -1,1 +1,0 @@
-import{_ as o}from"./q-DoNi8vyY.js";import{G as t,q as e}from"./q-BMru2EbG.js";const l=t(e(()=>o(()=>import("./q-Cg4rWRHp.js"),[]),"s_2AbtcR0D4kE")),s={title:"JoulesToVoltsCalculator - Unit Converter Hub",meta:[{name:"description",content:"JoulesToVoltsCalculator calculator"}]};export{l as default,s as head};

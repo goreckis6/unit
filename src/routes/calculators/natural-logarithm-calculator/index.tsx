@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import NaturalLogarithmCalculator from "../../../components/natural-logarithm-calculator";
+import NaturalLogarithmCalculator from '../../components-qwik/NaturalLogarithmCalculator';
 
 export default component$(() => {
   return <NaturalLogarithmCalculator />;

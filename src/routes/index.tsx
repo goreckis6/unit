@@ -1,230 +1,122 @@
 import { component$ } from '@builder.io/qwik';
-import { Link } from '@builder.io/qwik-city';
 import type { DocumentHead } from '@builder.io/qwik-city';
+import { Link, useLocation } from '@builder.io/qwik-city';
+import { useTranslate } from '../i18n-qwik/useTranslate';
 
 export default component$(() => {
-  const popularCalculators = [
-    { name: 'Percentage Calculator', url: '/calculators/percentage-calculator' },
-    { name: 'Fraction Calculator', url: '/calculators/adding-fractions-calculator' },
-    { name: 'Square Root Calculator', url: '/calculators/square-root-calculator' },
-    { name: 'Multiplication Calculator', url: '/calculators/multiplication-calculator' },
-    { name: 'Division Calculator', url: '/calculators/division-calculator' },
-    { name: 'Exponent Calculator', url: '/calculators/exponent-calculator' },
-    { name: 'Power Calculator', url: '/calculators/power-calculator' },
-    { name: 'Quadratic Equation', url: '/calculators/quadratic-equation-calculator' },
-    { name: 'Watts to Amps', url: '/calculators/watts-to-amps-calculator' },
-    { name: 'Volts to Watts', url: '/calculators/volts-to-watts-calculator' },
-    { name: 'Ohms Law Calculator', url: '/calculators/ohms-law-calculator' },
-    { name: 'Energy Calculator', url: '/calculators/energy-consumption-calculator' },
-  ];
+  const loc = useLocation();
+  const t = useTranslate();
+  
+  const pathParts = loc.url.pathname.split('/').filter(p => p);
+  const supportedLocales = ['en', 'pl', 'sv', 'de', 'es', 'fr', 'it', 'nl', 'pt', 'vi', 'tr', 'ru', 'fa', 'th', 'ja', 'zh'];
+  const locale = pathParts[0] && supportedLocales.includes(pathParts[0]) ? pathParts[0] : 'en';
+  
+  const mathCalcPath = locale === 'en' ? '/calculators/math-calculators' : `/${locale}/calculators/math-calculators`;
+  const electricalCalcPath = locale === 'en' ? '/calculators/electrical-calculator' : `/${locale}/calculators/electrical-calculator`;
 
   return (
     <div class="home">
       <section class="hero">
-        <h1>Unit Converter Hub</h1>
-        <p class="subtitle">Free Online Calculators & Unit Converters</p>
-        <p class="description">
-          Fast, accurate, and easy-to-use tools for all your calculation needs.
-          From math calculators to electrical converters - we've got you covered!
-        </p>
-        <div class="cta-buttons">
-          <Link href="/calculators/math-calculators" class="btn btn-primary">
-            Browse All Calculators
-          </Link>
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">{t('home.title')}</h1>
+            <p class="hero-subtitle">{t('home.subtitle')}</p>
+            <p class="hero-description">{t('home.description')}</p>
+          </div>
         </div>
       </section>
 
-      <section class="popular-tools">
-        <h2>Popular Calculators</h2>
-        <div class="calculator-grid">
-          {popularCalculators.map((calc) => (
-            <Link key={calc.url} href={calc.url} class="calculator-card">
-              <h3>{calc.name}</h3>
-              <span class="arrow">→</span>
+      <section class="categories-section">
+        <div class="container">
+          <h2 class="section-title">{t('home.categories.title')}</h2>
+          <p class="section-subtitle">{t('home.categories.subtitle')}</p>
+          <div class="categories-grid">
+            <Link href={mathCalcPath} class="category-card">
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="category-name">{t('calculators.mathCalculators.title')}</h3>
+              <p class="category-description">
+                {t('calculators.mathCalculators.description')}
+              </p>
+              <span class="category-link">{t('home.viewAll') || 'View All'}</span>
             </Link>
-          ))}
+            
+            <Link href={electricalCalcPath} class="category-card">
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="category-name">{t('calculators.electrical.title')}</h3>
+              <p class="category-description">
+                {t('calculators.electrical.description')}
+              </p>
+              <span class="category-link">{t('home.viewAll') || 'View All'}</span>
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section class="features">
-        <div class="feature">
-          <h3>⚡ Fast & Accurate</h3>
-          <p>Instant calculations with precise results</p>
-        </div>
-        <div class="feature">
-          <h3>📱 Mobile Friendly</h3>
-          <p>Works perfectly on any device</p>
-        </div>
-        <div class="feature">
-          <h3>🆓 Completely Free</h3>
-          <p>No sign-up or payment required</p>
+      <section class="features-section">
+        <div class="container">
+          <h2 class="section-title">{t('home.features.title')}</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">{t('home.features.fast.title')}</h3>
+              <p class="feature-description">{t('home.features.fast.description')}</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">{t('home.features.free.title')}</h3>
+              <p class="feature-description">{t('home.features.free.description')}</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">{t('home.features.easy.title')}</h3>
+              <p class="feature-description">{t('home.features.easy.description')}</p>
+            </div>
+          </div>
         </div>
       </section>
-
-      <style>{`
-        .home {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 2rem 1rem;
-        }
-
-        .hero {
-          text-align: center;
-          padding: 4rem 2rem;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          color: white;
-          border-radius: 20px;
-          margin-bottom: 4rem;
-        }
-
-        .hero h1 {
-          font-size: 3rem;
-          margin-bottom: 1rem;
-          font-weight: 800;
-        }
-
-        .subtitle {
-          font-size: 1.5rem;
-          margin-bottom: 1rem;
-          opacity: 0.95;
-        }
-
-        .description {
-          font-size: 1.1rem;
-          max-width: 600px;
-          margin: 0 auto 2rem;
-          opacity: 0.9;
-          line-height: 1.6;
-        }
-
-        .cta-buttons {
-          display: flex;
-          gap: 1rem;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-
-        .btn {
-          padding: 1rem 2rem;
-          border-radius: 10px;
-          text-decoration: none;
-          font-weight: 600;
-          font-size: 1.1rem;
-          transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-primary {
-          background: white;
-          color: #667eea;
-        }
-
-        .btn:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        .popular-tools {
-          margin-bottom: 4rem;
-        }
-
-        .popular-tools h2 {
-          font-size: 2rem;
-          margin-bottom: 2rem;
-          text-align: center;
-          color: #333;
-        }
-
-        .calculator-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-          gap: 1.5rem;
-        }
-
-        .calculator-card {
-          background: white;
-          padding: 1.5rem;
-          border-radius: 12px;
-          text-decoration: none;
-          color: #333;
-          border: 2px solid #e0e0e0;
-          transition: all 0.3s;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .calculator-card:hover {
-          border-color: #667eea;
-          transform: translateY(-4px);
-          box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .calculator-card h3 {
-          font-size: 1.1rem;
-          margin: 0;
-          font-weight: 600;
-        }
-
-        .calculator-card .arrow {
-          font-size: 1.5rem;
-          color: #667eea;
-          transition: transform 0.3s;
-        }
-
-        .calculator-card:hover .arrow {
-          transform: translateX(4px);
-        }
-
-        .features {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 2rem;
-          margin-top: 4rem;
-          padding: 2rem;
-          background: #f8f9fa;
-          border-radius: 16px;
-        }
-
-        .feature {
-          text-align: center;
-          padding: 1rem;
-        }
-
-        .feature h3 {
-          font-size: 1.5rem;
-          margin-bottom: 0.5rem;
-          color: #333;
-        }
-
-        .feature p {
-          color: #666;
-          line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-          .hero h1 {
-            font-size: 2rem;
-          }
-
-          .subtitle {
-            font-size: 1.2rem;
-          }
-
-          .calculator-grid {
-            grid-template-columns: 1fr;
-          }
-        }
-      `}</style>
     </div>
   );
 });
 
-export const head: DocumentHead = {
-  title: 'Unit Converter Hub - Free Online Calculators & Converters',
-  meta: [
-    {
-      name: 'description',
-      content: 'Free online calculators and unit converters for math, electrical, and more. Fast, accurate, and easy to use tools for all your calculation needs.',
-    },
-  ],
+export const head: DocumentHead = ({ resolveValue }) => {
+  // This will be resolved at runtime with proper locale
+  return {
+    title: 'Unit Converter Hub - Free Online Calculators',
+    meta: [
+      {
+        name: 'description',
+        content: 'Free online calculators and unit converters for math, electrical, and more. Fast, accurate, and easy to use.',
+      },
+      {
+        name: 'keywords',
+        content: 'calculator, unit converter, math calculator, electrical calculator, online calculator',
+      },
+    ],
+  };
 };

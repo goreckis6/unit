@@ -2,7 +2,9 @@ import { defineConfig } from 'vite';
 import { qwikCity } from '@builder.io/qwik-city/vite';
 import { qwikVite } from '@builder.io/qwik/optimizer';
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
+  const isClient = mode === 'client';
+  
   return {
     plugins: [
       qwikCity(),
@@ -10,7 +12,7 @@ export default defineConfig(() => {
     ],
     build: {
       outDir: 'dist',
-      ssr: true
+      ssr: !isClient
     }
   };
 });

@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "build.client": "vite build --mode client",
     "start": "node dist/server/entry.express.js"
   },
   "dependencies": {

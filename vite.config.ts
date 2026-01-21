@@ -8,14 +8,28 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       qwikCity(),
-      qwikVite()
+      qwikVite(),
+      {
+        name: 'stub-node-sqlite',
+        resolveId(id) {
+          if (id === 'node:sqlite') {
+            return '\0node:sqlite';
+          }
+        },
+        load(id) {
+          if (id === '\0node:sqlite') {
+            return 'export {};';
+          }
+        }
+      }
     ],
     build: {
       outDir: 'dist',
       ssr: !isClient ? 'src/entry.express.ts' : false
     },
     ssr: {
-      noExternal: [/^@builder\.io\/qwik/]
+      noExternal: [/^@builder\.io\/qwik/],
+      external: ['node:sqlite']
     },
     optimizeDeps: {
       exclude: ['node:sqlite']

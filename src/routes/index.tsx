@@ -1,16 +1,12 @@
 import { component$ } from '@builder.io/qwik';
-import type { DocumentHead, RequestEvent } from '@builder.io/qwik-city';
-import { routeLoader$ } from '@builder.io/qwik-city';
+import type { DocumentHead } from '@builder.io/qwik-city';
+import { useLocation } from '@builder.io/qwik-city';
 import Layout from '../components/layout';
 import { useTranslate } from '../i18n/useTranslate';
-import { getLocaleFromUrl } from '../i18n/i18n';
+import { getLocaleFromUrl, type Locale } from '../i18n/i18n';
 
-export const useLocale = routeLoader$(({ url }: RequestEvent) => {
-  return getLocaleFromUrl(url);
-});
-
-export const head: DocumentHead = ({ resolveValue, url }) => {
-  const locale = resolveValue(useLocale);
+export const head: DocumentHead = ({ url }) => {
+  const locale = getLocaleFromUrl(url);
   const t = useTranslate(locale);
   const baseUrl = url.origin;
   
@@ -88,8 +84,9 @@ export const head: DocumentHead = ({ resolveValue, url }) => {
 };
 
 export default component$(() => {
-  const locale = useLocale();
-  const t = useTranslate(locale.value);
+  const location = useLocation();
+  const locale: Locale = getLocaleFromUrl(location.url);
+  const t = useTranslate(locale);
 
   const converters = [
     {
@@ -119,7 +116,7 @@ export default component$(() => {
   ];
 
   return (
-    <Layout locale={locale.value}>
+    <Layout locale={locale}>
       <div class="home-page">
         <div class="hero-section">
           <div class="container">

@@ -1,0 +1,31 @@
+{
+  "name": "unitconverterhub",
+  "version": "1.0.0",
+  "description": "Unit Converter Hub - Calculator tools for various conversions",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:qwik": "vite --config vite.config.qwik.ts",
+    "build": "vite build",
+    "build:qwik": "bash scripts/build-qwik.sh",
+    "build:qwik:internal": "vite build --config vite.config.qwik.ts",
+    "preview": "vite preview",
+    "preview:qwik": "vite preview --config vite.config.qwik.ts",
+    "migrate:qwik": "node scripts/migrate-to-qwik.js",
+    "migrate:qwik:single": "node scripts/migrate-to-qwik.js"
+  },
+  "dependencies": {
+    "vue": "^3.4.0",
+    "vue-i18n": "^9.8.0",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "^1.18.0",
+    "@builder.io/qwik-city": "^1.18.0",
+    "@builder.io/qwik-react": "^0.5.8",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "ignore": "^7.0.5",
+    "vite": "^5.0.0",
+    "vite-plugin-static-copy": "^3.1.4"
+  }
+}

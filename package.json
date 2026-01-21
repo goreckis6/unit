@@ -19,7 +19,7 @@
     "preview": "vite preview",
     "preview:qwik": "vite preview --config vite.config.qwik.ts",
     "serve": "serve dist -l 3000 --no-port-switching",
-    "start": "serve dist -l 3000 --no-port-switching",
+    "start": "node dist/server/entry.express.js",
     "qwik": "qwik",
     "migrate:qwik": "node scripts/migrate-to-qwik.js",
     "migrate:qwik:single": "node scripts/migrate-to-qwik.js"

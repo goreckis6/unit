@@ -6,11 +6,18 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig(() => ({
   plugins: [
     qwikCity(),
-    qwikVite(),
+    qwikVite({
+      client: {
+        outDir: "dist/client",
+      },
+      ssr: {
+        outDir: "server",  // Zmienione z dist/server na server
+      },
+    }),
     tsconfigPaths(),
   ],
   build: {
-    chunkSizeWarningLimit: 1000, // Zwiększ limit do 1000 kB (dla plików tłumaczeń)
+    chunkSizeWarningLimit: 1000,
   },
 }));
 

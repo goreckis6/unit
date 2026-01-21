@@ -49,6 +49,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/src-qwik ./src-qwik
 COPY --from=builder /app/vite.config.qwik.ts ./vite.config.qwik.ts
 COPY --from=builder /app/tsconfig.qwik.json ./tsconfig.qwik.json
+COPY --from=builder /app/tsconfig.json ./tsconfig.json
 
 # Create symlink for runtime
 RUN ln -sf src-qwik src

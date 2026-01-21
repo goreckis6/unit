@@ -9,8 +9,14 @@ COPY package.json package-lock.json* ./
 RUN npm ci
 
 COPY . .
-RUN npm run build || true
-RUN ls -la dist/ && test -f dist/index.html && echo "✅ Build complete - HTML files generated" || (echo "❌ Build failed" && exit 1)
+RUN npm run build 2>&1 | tee /tmp/build.log; BUILD_EXIT=${PIPESTATUS[0]}; \
+    if [ -f dist/index.html ]; then \
+      echo "✅ Build complete - HTML files generated"; \
+      exit 0; \
+    else \
+      echo "❌ Build failed - no index.html found"; \
+      exit 1; \
+    fi
 
 # ---------- RUNTIME ----------
 FROM node:20-alpine

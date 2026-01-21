@@ -10,7 +10,7 @@
   "scripts": {
     "build": "NO_COLOR= FORCE_COLOR=1 qwik build",
     "postbuild": "cp public/sitemap.xml dist/sitemap.xml 2>/dev/null || true",
-    "build.client": "vite build --config vite.config.qwik.ts",
+    "build.client": "npx vite build --config vite.config.qwik.ts",
     "build.server": "vite build --config vite.config.qwik.ts --ssr src/entry.preview.tsx",
     "build:qwik": "bash scripts/build-qwik.sh",
     "build:qwik:internal": "vite build --config vite.config.qwik.ts",

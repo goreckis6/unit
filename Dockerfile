@@ -21,4 +21,4 @@ ENV ORIGIN=https://unitconverterhub.com
 EXPOSE 3000
 
 # Start Express SSR server
-CMD ["node", "dist/server/entry.express.mjs"]
+CMD ["node", "dist/server/entry.express.js"]

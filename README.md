@@ -56,18 +56,42 @@ A modern, fast unit converter website built with Qwik and Server-Side Rendering 
 Build and run with Docker:
 
 ```bash
+# Build the image
 docker build -t unitconverterhub .
-docker run -p 3000:3000 unitconverterhub
+
+# Create network (if not exists)
+docker network create caddy-net
+
+# Run the container
+docker run -d \
+  --name morphy-frontend \
+  --network caddy-net \
+  --restart unless-stopped \
+  unitconverterhub
 ```
+
+### Caddy Reverse Proxy
+
+The project includes a `Caddyfile` for production deployment with Caddy:
+
+- Reverse proxy to Qwik SSR on port 3000
+- Security headers (HSTS, X-Frame-Options, etc.)
+- No cache for HTML (important for SSR)
+- Compression (gzip, zstd)
+
+**Network setup:**
+- Both Caddy and frontend containers must be in the same Docker network (`caddy-net`)
+- Frontend container name: `morphy-frontend`
+- Frontend port: `3000`
 
 ### GitHub Actions
 
 The project includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that:
-- Builds the application
-- Creates a Docker image
-- Ready for deployment to your hosting provider
+- Builds Docker image in the container (not in CI)
+- Pushes to GitHub Container Registry
+- Deploys to VPS via SSH
 
-Configure your deployment steps in the workflow file.
+**Important:** Build happens only in Dockerfile, not in CI (prevents Code(31) and serializeQRL errors).
 
 ## Project Structure
 

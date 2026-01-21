@@ -3,9 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "vite build && vite build --ssr src/entry.express.ts --outDir dist/server",
-    "build.client": "vite build --ssr=false",
-    "build.server": "vite build --ssr",
+    "build": "vite build",
     "start": "node dist/server/entry.express.js"
   },
   "dependencies": {

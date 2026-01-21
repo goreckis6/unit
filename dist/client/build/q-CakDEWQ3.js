@@ -1,0 +1,1 @@
+import{_ as t}from"./q-DoNi8vyY.js";import{D as o,q as a}from"./q-69wmZ9eV.js";const l=o(a(()=>t(()=>import("./q-BROj3qBj.js"),[]),"s_w67G9CEvzg0")),n={title:"VaToWattsCalculator - Unit Converter Hub",meta:[{name:"description",content:"VaToWattsCalculator calculator"}]};export{l as default,n as head};

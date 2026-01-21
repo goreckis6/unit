@@ -1,0 +1,1 @@
+import{_ as t}from"./q-DoNi8vyY.js";import{D as o,q as e}from"./q-69wmZ9eV.js";const l=o(e(()=>t(()=>import("./q-C6H_asVl.js"),[]),"s_Itm2RZlIepI")),n={title:"VoltsToKwCalculator - Unit Converter Hub",meta:[{name:"description",content:"VoltsToKwCalculator calculator"}]};export{l as default,n as head};

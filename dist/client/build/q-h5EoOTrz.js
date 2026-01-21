@@ -1,0 +1,1 @@
+import{z as l}from"./q-69wmZ9eV.js";const r=()=>l("div",null,null,[l("h1",null,null,"Unit Converter Hub",3,null),l("p",null,null,"Welcome to Unit Converter Hub - Online Calculators & Unit Converters",3,null),l("a",null,{href:"/calculators/math-calculators"},"Browse Calculators →",3,null)],3,"y3_0");export{r as s_dE1C4tYG9zc};

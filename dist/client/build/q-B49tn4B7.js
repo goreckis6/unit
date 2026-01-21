@@ -1,0 +1,1 @@
+import{b as n,z as l,S as u,F as r}from"./q-69wmZ9eV.js";const t=()=>n(r,{children:[l("nav",null,null,l("h1",null,null,"Unit Converter Hub",3,null),3,null),l("main",null,null,n(u,null,3,"rD_0"),1,null)]},1,"rD_1");export{t as s_DxVcy6G0Agc};

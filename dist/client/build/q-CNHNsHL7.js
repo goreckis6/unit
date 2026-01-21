@@ -1,0 +1,1 @@
+import{_ as t}from"./q-DoNi8vyY.js";import{D as o,q as a}from"./q-69wmZ9eV.js";const e=o(a(()=>t(()=>import("./q-lnfB5dgd.js"),[]),"s_fppt2affOmU")),n={title:"SimplifyingFractionsCalculator - Unit Converter Hub",meta:[{name:"description",content:"SimplifyingFractionsCalculator calculator"}]};export{e as default,n as head};

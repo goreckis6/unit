@@ -116,6 +116,18 @@ jobs:
               sudo docker stop caddy 2>/dev/null || true
               sudo docker rm caddy 2>/dev/null || true
               
+              # Create Caddyfile
+              cat > /tmp/Caddyfile << 'EOF'
+            unitconverterhub.com {
+              reverse_proxy morphy-frontend:3000 {
+                header_up Host {host}
+                header_up X-Real-IP {remote_host}
+                header_up X-Forwarded-For {remote_host}
+                header_up X-Forwarded-Proto {scheme}
+              }
+            }
+            EOF
+              
               sudo docker run -d \
                 --name caddy \
                 --network caddy-net \
@@ -123,8 +135,8 @@ jobs:
                 -p 80:80 \
                 -p 443:443 \
                 -v caddy_data:/data \
-                caddy:latest \
-                caddy reverse-proxy --from unitconverterhub.com --to morphy-frontend:3000
+                -v /tmp/Caddyfile:/etc/caddy/Caddyfile \
+                caddy:latest
               
               echo "✅ Caddy started"
             else

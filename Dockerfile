@@ -5,35 +5,17 @@ WORKDIR /app
 # Copy package files
 COPY package.json package-lock.json ./
 
-# Install dependencies
+# Install all dependencies (including dev for build)
 RUN npm ci
 
 # Copy source code
 COPY . .
-
-# Fix permissions for node_modules binaries (for Alpine Linux)
-RUN chmod -R +x node_modules/.bin || true && \
-    find node_modules/@esbuild -type f -name "esbuild" -exec chmod +x {} \; || true
-
-# Replace src/ with src-qwik/ content for Qwik build
-# First copy style.css from old src/ to src-qwik/ if it exists
-RUN cp src/style.css src-qwik/style.css 2>/dev/null || true
-# Then replace src/ with src-qwik/
-RUN rm -rf src && cp -r src-qwik src
 
 # Build client
 RUN npm run build.client
 
 # Build server (SSR) with Express adapter
 RUN npx vite build -c adapters/express/vite.config.ts
-
-# DEBUG - Show what was built
-RUN echo "=== Build output ===" && \
-    ls -la dist/ && \
-    echo "=== Client files ===" && \
-    ls -la dist/client/ && \
-    echo "=== Server files ===" && \
-    ls -la dist/server/
 
 # Production stage
 FROM node:20-alpine

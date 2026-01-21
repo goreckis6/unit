@@ -1,0 +1,17 @@
+import { component$ } from '@builder.io/qwik';
+import type { DocumentHead } from '@builder.io/qwik-city';
+import SquareRootCalculator from '../../components-qwik/SquareRootCalculator';
+
+export default component$(() => {
+  return <SquareRootCalculator />;
+});
+
+export const head: DocumentHead = {
+  title: 'SquareRootCalculator - Unit Converter Hub',
+  meta: [
+    {
+      name: 'description',
+      content: 'SquareRootCalculator calculator',
+    },
+  ],
+};

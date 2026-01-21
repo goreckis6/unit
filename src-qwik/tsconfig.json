@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "@builder.io/qwik",
+    "types": ["vite/client", "@builder.io/qwik"]
+  },
+  "include": ["."],
+  "references": [{ "path": "../" }]
+}
+

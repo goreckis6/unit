@@ -25,4 +25,4 @@ RUN npm install -g serve
 COPY --from=builder /app/dist ./dist
 
 EXPOSE 3000
-CMD ["serve", "dist", "-l", "3000", "--no-port-switching", "--no-clipboard", "--single"]
+CMD ["serve", "dist", "-l", "3000", "--no-port-switching", "--no-clipboard"]

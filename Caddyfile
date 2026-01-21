@@ -1,7 +1,7 @@
 unitconverterhub.com {
 	encode gzip zstd
 
-	# Cloudflare → Caddy → Qwik SSR
+	# Cloudflare → Caddy → Qwik SSG (Static Site)
 	reverse_proxy morphy-frontend:3000 {
 		header_up Host {host}
 		header_up X-Real-IP {remote_host}
@@ -9,11 +9,11 @@ unitconverterhub.com {
 		header_up X-Forwarded-Proto {scheme}
 	}
 
-	# Bez cache dla HTML (ważne dla SSR)
-	header Content-Type text/html* {
-		Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate"
+	# Cache dla statycznych plików (SSG)
+	@html {
+		header Content-Type text/html*
 	}
-
+	header @html Cache-Control "public, max-age=3600"
 
 	# Security headers
 	header {

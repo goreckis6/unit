@@ -14,7 +14,7 @@ export default defineConfig(() => {
     build: {
       ssr: true,
       rollupOptions: {
-        input: ["src/entry.express.tsx", "@qwik-city-plan"],
+        input: ["src-qwik/entry.express.tsx", "@qwik-city-plan"],
       },
       outDir: join("dist", "server"),
     },

@@ -21,6 +21,17 @@ RUN cp src/style.css src-qwik/style.css 2>/dev/null || true
 # Then replace src/ with src-qwik/
 RUN rm -rf src && cp -r src-qwik src
 
+# DEBUG - Check what's in src/ after copy
+RUN echo "=== src/ structure ===" && \
+    ls -la src/ && \
+    echo "=== src/routes/ structure ===" && \
+    ls -la src/routes/ | head -20 && \
+    echo "=== src/components/ structure ===" && \
+    ls -la src/components/ | head -20 && \
+    echo "=== Checking specific file ===" && \
+    ls -la src/routes/calculators/adding-fractions-calculator/ && \
+    ls -la src/components/ | grep AddingFractions
+
 # Build the Qwik application using official qwik build command
 # This builds both client and SSR automatically
 RUN npm run build

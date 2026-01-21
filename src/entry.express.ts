@@ -4,12 +4,18 @@ import { render } from './entry.ssr';
 
 const app = express();
 
-app.use(
-  '/',
-  createQwikCity({
-    render
-  })
-);
+const { router, notFound, staticFile } = createQwikCity({
+  render
+});
+
+// Serve static files first
+app.use(staticFile);
+
+// Then handle Qwik routes
+app.use(router);
+
+// Finally handle 404
+app.use(notFound);
 
 app.listen(3000, '0.0.0.0', () => {
   console.log('✅ Qwik SSR running on http://0.0.0.0:3000');

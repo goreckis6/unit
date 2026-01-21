@@ -1,22 +1,26 @@
-# Qwik SSR Production Image
-FROM node:20-slim
-
+# ---------- BUILD ----------
+FROM node:20-alpine AS builder
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
+COPY package.json package-lock.json* ./
+RUN npm ci
 
-# Install production dependencies only
-RUN npm ci --only=production
+COPY . .
+RUN npm run build
 
-# Copy built application from CI
-COPY dist ./dist
+# ---------- RUNTIME ----------
+FROM node:20-alpine
+WORKDIR /app
 
-# Set environment
 ENV NODE_ENV=production
+ENV PORT=3000
 
-# Expose port
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/package.json ./
+COPY --from=builder /app/package-lock.json ./
+
+# ⛔ NIE --only=production
+RUN npm ci --omit=dev
+
 EXPOSE 3000
-
-# Start Qwik SSR server
 CMD ["node", "dist/server/entry.express.js"]

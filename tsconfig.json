@@ -1,24 +1,11 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "target": "ES2020",
-    "module": "ES2020",
-    "lib": ["ES2020", "DOM", "WebWorker", "DOM.Iterable"],
     "jsx": "react-jsx",
     "jsxImportSource": "@builder.io/qwik",
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "moduleResolution": "bundler",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "outDir": "tmp",
-    "types": ["node", "vite/client"],
-    "paths": {
-      "~/*": ["./src-qwik/*"]
-    }
-  },
-  "include": ["src-qwik"]
+    "skipLibCheck": true
+  }
 }

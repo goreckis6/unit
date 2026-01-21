@@ -1,15 +1,12 @@
-import { renderToStream, type RenderOptions } from '@builder.io/qwik/server';
-import { manifest } from '@qwik-city-plan';
+import { renderToStream } from '@builder.io/qwik/server';
 import Root from './root';
 
-export default function (opts: RenderOptions) {
+export function render(opts: any) {
   return renderToStream(<Root />, {
-    manifest,
-    ...opts,
+    containerTagName: 'html',
     containerAttributes: {
       lang: 'en',
-      ...opts.containerAttributes,
     },
+    ...opts
   });
 }
-

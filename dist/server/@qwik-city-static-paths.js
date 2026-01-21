@@ -1,4 +1,4 @@
-const staticPaths = new Set(["/client/assets/CovML5Jb-bundle-graph.json","/client/assets/CrBEknML-style.css","/client/build/q-BedHIPOG.js","/client/build/q-DJzYeMzz.js","/client/build/q-Dje1XItA.js","/client/build/q-DoNi8vyY.js","/client/build/q-naDMFAHy.js","/client/favicon.svg","/client/manifest.json","/client/q-manifest.json","/client/robots.txt","/client/sitemap.xml","/server/entry.express.js"]);
+const staticPaths = new Set(["/@qwik-city-not-found-paths.js","/@qwik-city-static-paths.js","/entry.ssr.js","/package.json","/server/assets/DgLgNPFT-style.css","/server/entry.express.js"]);
 function isStaticPath(method, url) {
   if (method.toUpperCase() !== 'GET') {
     return false;

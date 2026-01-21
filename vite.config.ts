@@ -13,6 +13,9 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
       ssr: !isClient
+    },
+    ssr: {
+      noExternal: true
     }
   };
 });

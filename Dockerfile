@@ -23,4 +23,4 @@ COPY --from=builder /app/package-lock.json ./
 RUN npm ci --omit=dev
 
 EXPOSE 3000
-CMD ["node", "dist/server/entry.express.js"]
+CMD ["node", "dist/entry.express.js"]

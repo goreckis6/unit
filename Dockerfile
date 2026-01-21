@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build.client
 
 # Build server (SSR) with Express adapter
-RUN npx vite build -c adapters/express/vite.config.ts
+RUN node node_modules/vite/bin/vite.js build -c adapters/express/vite.config.ts
 
 # Production stage
 FROM node:20

@@ -11,6 +11,9 @@ RUN npm ci
 # Copy source code
 COPY . .
 
+# Fix Alpine Linux binary permissions (CRITICAL for vite/npx)
+RUN chmod -R 755 node_modules/.bin
+
 # Build client
 RUN npm run build.client
 

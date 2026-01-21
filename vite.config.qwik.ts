@@ -11,7 +11,7 @@ export default defineConfig(() => ({
         outDir: "dist/client",
       },
       ssr: {
-        outDir: "server",  // Zmienione z dist/server na server
+        outDir: "dist/server",
       },
     }),
     tsconfigPaths(),

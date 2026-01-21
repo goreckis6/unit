@@ -45,7 +45,6 @@ RUN npm ci
 
 # Copy built files from builder
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/server ./server
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/server.js ./server.js
 

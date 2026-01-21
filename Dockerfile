@@ -10,7 +10,7 @@ RUN npm ci
 
 COPY . .
 RUN npm run build
-RUN ls -la dist/ && test -f dist/build/preloader.js && echo "✅ Build complete" || echo "❌ Build failed"
+RUN ls -la dist/ && test -f dist/index.html && echo "✅ Build complete" || echo "❌ Build failed"
 
 # ---------- RUNTIME ----------
 FROM node:20-alpine

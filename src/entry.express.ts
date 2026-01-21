@@ -3,6 +3,7 @@ import { createQwikCity } from '@builder.io/qwik-city/middleware/node';
 import { render } from './entry.ssr';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { existsSync, readdirSync } from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -13,10 +14,22 @@ const app = express();
 import qwikCityPlan from '@qwik-city-plan';
 
 // Path to dist directory containing static files
-// entry.express.js is in dist/, so distDir is the parent of __dirname
+// entry.express.js is in dist/, so distDir is __dirname
 const distDir = __dirname;
 
 console.log('📁 Dist directory:', distDir);
+console.log('📁 Checking if build/ exists:', existsSync(join(distDir, 'build')));
+if (existsSync(join(distDir, 'build'))) {
+  const buildFiles = readdirSync(join(distDir, 'build')).slice(0, 5);
+  console.log('📁 Sample build files:', buildFiles);
+  console.log('📁 preloader.js exists:', existsSync(join(distDir, 'build', 'preloader.js')));
+}
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error('❌ Error serving:', req.path, err);
+  res.status(500).send('Internal Server Error');
+});
 
 const { router, notFound, staticFile } = createQwikCity({
   render,
@@ -32,6 +45,14 @@ app.use(express.static(distDir, {
   maxAge: '1y',
   immutable: true
 }));
+
+// Log requests to build/ for debugging
+app.use((req, res, next) => {
+  if (req.path.startsWith('/build/')) {
+    console.log('📦 Request for build file:', req.path);
+  }
+  next();
+});
 
 // Then use Qwik City staticFile middleware
 app.use(staticFile);

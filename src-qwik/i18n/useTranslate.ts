@@ -1,21 +1,21 @@
 import { useSignal, useTask$ } from '@builder.io/qwik';
 import { useLocation } from '@builder.io/qwik-city';
-import en from '../../src/locales/en.json';
-import pl from '../../src/locales/pl.json';
-import de from '../../src/locales/de.json';
-import es from '../../src/locales/es.json';
-import fr from '../../src/locales/fr.json';
-import it from '../../src/locales/it.json';
-import nl from '../../src/locales/nl.json';
-import pt from '../../src/locales/pt.json';
-import sv from '../../src/locales/sv.json';
-import vi from '../../src/locales/vi.json';
-import tr from '../../src/locales/tr.json';
-import ru from '../../src/locales/ru.json';
-import fa from '../../src/locales/fa.json';
-import th from '../../src/locales/th.json';
-import ja from '../../src/locales/ja.json';
-import zh from '../../src/locales/zh.json';
+import en from '../locales/en.json';
+import pl from '../locales/pl.json';
+import de from '../locales/de.json';
+import es from '../locales/es.json';
+import fr from '../locales/fr.json';
+import it from '../locales/it.json';
+import nl from '../locales/nl.json';
+import pt from '../locales/pt.json';
+import sv from '../locales/sv.json';
+import vi from '../locales/vi.json';
+import tr from '../locales/tr.json';
+import ru from '../locales/ru.json';
+import fa from '../locales/fa.json';
+import th from '../locales/th.json';
+import ja from '../locales/ja.json';
+import zh from '../locales/zh.json';
 
 const translations: Record<string, any> = {
   en,

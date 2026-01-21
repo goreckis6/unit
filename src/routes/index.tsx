@@ -95,36 +95,94 @@ export default component$(() => {
     {
       href: '/length',
       key: 'length' as const,
+      icon: '📏',
+      gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     },
     {
       href: '/weight',
       key: 'weight' as const,
+      icon: '⚖️',
+      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     },
     {
       href: '/temperature',
       key: 'temperature' as const,
+      icon: '🌡️',
+      gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
     },
     {
       href: '/volume',
       key: 'volume' as const,
+      icon: '🧪',
+      gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
     },
   ];
 
   return (
     <Layout locale={locale.value}>
-      <div class="container">
-        <div class="hero">
-          <h1>{t('title')}</h1>
-          <p>{t('description')}</p>
+      <div class="home-page">
+        <div class="hero-section">
+          <div class="container">
+            <div class="hero-content">
+              <div class="hero-badge">✨ {t('badge') || 'Free & Fast'}</div>
+              <h1 class="hero-title">{t('title')}</h1>
+              <p class="hero-description">{t('description')}</p>
+              <div class="hero-stats">
+                <div class="stat-item">
+                  <div class="stat-number">4+</div>
+                  <div class="stat-label">{t('stats.converters') || 'Converters'}</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">100%</div>
+                  <div class="stat-label">{t('stats.free') || 'Free'}</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">∞</div>
+                  <div class="stat-label">{t('stats.conversions') || 'Conversions'}</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div class="converter-grid">
-          {converters.map((converter) => (
-            <a key={converter.href} href={converter.href} class="converter-link">
-              <h3>{t(`converters.${converter.key}.title`)}</h3>
-              <p>{t(`converters.${converter.key}.description`)}</p>
-            </a>
-          ))}
+
+        <div class="converters-section">
+          <div class="container">
+            <h2 class="section-title">{t('choose') || 'Choose Your Converter'}</h2>
+            <div class="converter-grid-modern">
+              {converters.map((converter) => (
+                <a key={converter.href} href={converter.href} class="converter-card-modern">
+                  <div class="card-icon" style={`background: ${converter.gradient}`}>
+                    <span class="icon-emoji">{converter.icon}</span>
+                  </div>
+                  <h3 class="card-title">{t(`converters.${converter.key}.title`)}</h3>
+                  <p class="card-description">{t(`converters.${converter.key}.description`)}</p>
+                  <div class="card-arrow">→</div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="features-section">
+          <div class="container">
+            <div class="features-grid">
+              <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <h3>{t('features.fast') || 'Lightning Fast'}</h3>
+                <p>{t('features.fastDesc') || 'Instant conversions without page reload'}</p>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🎯</div>
+                <h3>{t('features.accurate') || 'Precise & Accurate'}</h3>
+                <p>{t('features.accurateDesc') || 'Professional-grade conversion formulas'}</p>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">📱</div>
+                <h3>{t('features.responsive') || 'Mobile Friendly'}</h3>
+                <p>{t('features.responsiveDesc') || 'Works perfectly on all devices'}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

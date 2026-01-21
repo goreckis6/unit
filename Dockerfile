@@ -6,7 +6,9 @@ COPY package.json package-lock.json* ./
 RUN npm ci
 
 COPY . .
+RUN npm run build.client
 RUN npm run build
+RUN ls -la dist/ && test -f dist/entry.express.js && echo "✅ entry.express.js found" || echo "❌ entry.express.js NOT found"
 
 # ---------- RUNTIME ----------
 FROM node:20-alpine

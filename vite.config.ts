@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
     ],
     build: {
       outDir: 'dist',
-      ssr: !isClient
+      ssr: !isClient ? 'src/entry.express.ts' : false
     },
     ssr: {
       noExternal: true

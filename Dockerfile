@@ -22,8 +22,8 @@ RUN ln -sf src-qwik src
 # Build the Qwik application
 RUN npm run build:qwik:internal
 
-# Remove symlink after build
-RUN rm -f src
+# Remove symlink/directory after build
+RUN unlink src 2>/dev/null || rm -rf src || true
 
 # DEBUG - Show what was built
 RUN echo "=== Build output ===" && \

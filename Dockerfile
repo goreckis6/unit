@@ -1,47 +1,61 @@
 # Build stage
-FROM node:20 AS builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 
-# Copy package files (including lock file for reproducible builds)
+# Copy package files
 COPY package.json package-lock.json ./
 
-# Install dependencies using lock file for stability
+# Install dependencies
 RUN npm ci
 
 # Copy source code
 COPY . .
 
-# Build arguments for Vite environment variables
-ARG VITE_API_BASE_URL
-ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
+# Create symlink for Qwik build (src -> src-qwik)
+# This is required because Qwik expects src/ directory
+RUN ln -sf src-qwik src
 
-# Build the application
-RUN npm run build
+# Build the Qwik application
+RUN npm run build:qwik:internal
 
-# DEBUG – zobacz co faktycznie powstało
-RUN echo "=== Client build (dist/) ===" && ls -la dist/ || echo "dist/ not found"
-RUN echo "=== Server build (server/) ===" && ls -la server/ || echo "server/ not found"
-RUN echo "=== Looking for entry.node-server.js ===" && ls -la server/entry.node-server.js 2>/dev/null || echo "entry.node-server.js NOT FOUND"
+# Remove symlink after build
+RUN rm -f src
 
-# Production stage with Node.js
-FROM node:20
+# DEBUG - Show what was built
+RUN echo "=== Build output ===" && \
+    ls -la dist/ && \
+    echo "=== Client files ===" && \
+    ls -la dist/client/ || echo "No client dir" && \
+    echo "=== Server files ===" && \
+    ls -la dist/server/ || echo "No server dir"
+
+# Production stage
+FROM node:20-alpine
 WORKDIR /app
 
-# Copy built files (client: dist/, server: server/)
+# Copy package files
+COPY package.json package-lock.json ./
+
+# Install dependencies (including vite for preview server)
+RUN npm ci
+
+# Copy built files from builder
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/server ./server
-COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/src-qwik ./src-qwik
+COPY --from=builder /app/vite.config.qwik.ts ./vite.config.qwik.ts
+COPY --from=builder /app/tsconfig.qwik.json ./tsconfig.qwik.json
 
-# Install only production dependencies
-RUN npm install --omit=dev
+# Create symlink for runtime
+RUN ln -sf src-qwik src
 
-# Set environment variable
+# Set environment
 ENV NODE_ENV=production
+ENV HOST=0.0.0.0
 ENV PORT=3000
 
-# Expose port 3000
+# Expose port
 EXPOSE 3000
 
-# Start the SSR server
-# Qwik generates entry.node-server.js in server/ directory
-CMD ["node", "server/entry.node-server.js"]
+# Start Qwik SSR server using Vite preview
+CMD ["npm", "run", "preview:qwik", "--", "--host", "0.0.0.0", "--port", "3000"]

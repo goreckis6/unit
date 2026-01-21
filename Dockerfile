@@ -16,7 +16,9 @@ RUN chmod -R +x node_modules/.bin || true && \
     find node_modules/@esbuild -type f -name "esbuild" -exec chmod +x {} \; || true
 
 # Replace src/ with src-qwik/ content for Qwik build
-# This is required because Qwik expects src/ directory
+# First copy style.css from old src/ to src-qwik/ if it exists
+RUN cp src/style.css src-qwik/style.css 2>/dev/null || true
+# Then replace src/ with src-qwik/
 RUN rm -rf src && cp -r src-qwik src
 
 # Build the Qwik application using official qwik build command

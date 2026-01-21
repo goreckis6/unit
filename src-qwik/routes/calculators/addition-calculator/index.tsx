@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import AdditionCalculator from "../../components/addition-calculator";
+import AdditionCalculator from "../../../components/addition-calculator";
 
 export default component$(() => {
   return <AdditionCalculator />;

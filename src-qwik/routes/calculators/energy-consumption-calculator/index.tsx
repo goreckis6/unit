@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import EnergyConsumptionCalculator from "../../components/energy-consumption-calculator";
+import EnergyConsumptionCalculator from "../../../components/energy-consumption-calculator";
 
 export default component$(() => {
   return <EnergyConsumptionCalculator />;

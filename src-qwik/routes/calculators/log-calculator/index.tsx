@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import LogCalculator from "../../components/log-calculator";
+import LogCalculator from "../../../components/log-calculator";
 
 export default component$(() => {
   return <LogCalculator />;

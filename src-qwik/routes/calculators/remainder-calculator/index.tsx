@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import RemainderCalculator from "../../components/remainder-calculator";
+import RemainderCalculator from "../../../components/remainder-calculator";
 
 export default component$(() => {
   return <RemainderCalculator />;

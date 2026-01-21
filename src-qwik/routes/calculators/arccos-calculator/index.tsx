@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import ArccosCalculator from "../../components/arccos-calculator";
+import ArccosCalculator from "../../../components/arccos-calculator";
 
 export default component$(() => {
   return <ArccosCalculator />;

@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import VoltsToJoulesCalculator from "../../components/volts-to-joules-calculator";
+import VoltsToJoulesCalculator from "../../../components/volts-to-joules-calculator";
 
 export default component$(() => {
   return <VoltsToJoulesCalculator />;

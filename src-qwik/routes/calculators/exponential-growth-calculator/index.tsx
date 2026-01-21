@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import ExponentialGrowthCalculator from "../../components/exponential-growth-calculator";
+import ExponentialGrowthCalculator from "../../../components/exponential-growth-calculator";
 
 export default component$(() => {
   return <ExponentialGrowthCalculator />;

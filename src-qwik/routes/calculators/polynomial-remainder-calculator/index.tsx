@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import PolynomialRemainderCalculator from "../../components/polynomial-remainder-calculator";
+import PolynomialRemainderCalculator from "../../../components/polynomial-remainder-calculator";
 
 export default component$(() => {
   return <PolynomialRemainderCalculator />;

@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import LongMultiplicationCalculator from "../../components/long-multiplication-calculator";
+import LongMultiplicationCalculator from "../../../components/long-multiplication-calculator";
 
 export default component$(() => {
   return <LongMultiplicationCalculator />;

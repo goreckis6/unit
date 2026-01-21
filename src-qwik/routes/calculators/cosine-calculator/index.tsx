@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import CosineCalculator from "../../components/cosine-calculator";
+import CosineCalculator from "../../../components/cosine-calculator";
 
 export default component$(() => {
   return <CosineCalculator />;

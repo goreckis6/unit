@@ -1,36 +1,16 @@
-import { defineConfig } from 'vite';
-import { qwikVite } from '@builder.io/qwik/optimizer';
-import { qwikCity } from '@builder.io/qwik-city/vite';
-import { fileURLToPath } from 'node:url';
+import { defineConfig } from "vite";
+import { qwikVite } from "@builder.io/qwik/optimizer";
+import { qwikCity } from "@builder.io/qwik-city/vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
-export default defineConfig(() => {
-  return {
-    plugins: [
-      qwikCity({
-        routesDir: './src/routes',
-      }),
-      qwikVite({
-        client: {
-          outDir: 'dist/client',
-        },
-        ssr: {
-          outDir: 'dist/server',
-        },
-      }),
-    ],
-    resolve: {
-      alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url)),
-      },
-    },
-    server: {
-      host: '0.0.0.0',
-      port: 5173,
-      strictPort: false,
-    },
-    ssr: {
-      noExternal: ['@builder.io/qwik-city'],
-    },
-  };
-});
+export default defineConfig(() => ({
+  plugins: [
+    qwikCity(),
+    qwikVite(),
+    tsconfigPaths(),
+  ],
+  build: {
+    chunkSizeWarningLimit: 1000, // Zwiększ limit do 1000 kB (dla plików tłumaczeń)
+  },
+}));
 

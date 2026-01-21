@@ -26,6 +26,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Clean previous builds
+        run: |
+          rm -rf dist
+          rm -rf node_modules/.vite
+          echo "✅ Cleaned dist and cache"
+
       - name: Build Qwik SSR application
         run: |
           npm run build.client
@@ -34,6 +40,8 @@ jobs:
           ls -la dist/client/ | head -20
           echo "=== Server build ==="
           ls -la dist/server/
+          echo "=== Manifest check ==="
+          cat dist/client/q-manifest.json | head -50
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3

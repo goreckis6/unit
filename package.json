@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --mode ssr",
-    "build": "npm run build.client && npm run build.server",
+    "clean": "node -e \"require('fs').rmSync('dist', {recursive: true, force: true}); require('fs').rmSync('node_modules/.vite', {recursive: true, force: true});\"",
+    "build": "npm run clean && npm run build.client && npm run build.server",
     "build.client": "vite build",
     "build.server": "vite build --config adapters/express/vite.config.ts --ssr src-qwik/entry.express.tsx",
     "preview": "node dist/server/entry.express.js",

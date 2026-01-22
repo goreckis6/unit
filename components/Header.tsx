@@ -20,9 +20,6 @@ export async function Header() {
             <Link href="/calculators/electric" className="nav-link">
               Electric
             </Link>
-            <Link href="/blog" className="nav-link">
-              {t('blog')}
-            </Link>
             <LanguageSwitcher />
           </nav>
         </div>

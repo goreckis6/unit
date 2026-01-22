@@ -4,10 +4,20 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { CalculatorList } from './list';
 
-export const metadata = {
-  title: 'Electric Calculators',
-  description: 'Browse our collection of electric calculators for all your electrical calculation needs',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'calculators.electricCalculators' });
+  
+  return {
+    title: `${t('title')} - UnitConverterHub.com`,
+    description: t('description'),
+    openGraph: {
+      title: `${t('title')} - UnitConverterHub.com`,
+      description: t('description'),
+      type: 'website',
+    },
+  };
+}
 
 interface Calculator {
   id: string;
@@ -16,9 +26,10 @@ interface Calculator {
   path: string;
 }
 
-export default async function ElectricCalculatorsPage() {
-  const t = await getTranslations('calculators');
-  const tCommon = await getTranslations('common');
+export default async function ElectricCalculatorsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'calculators' });
+  const tCommon = await getTranslations({ locale, namespace: 'common' });
 
   const calculators: Calculator[] = [
     {

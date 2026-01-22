@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { useLocale, usePathname, useRouter } from '@/i18n/routing';
+import { useLocale } from 'next-intl';
+import { usePathname, useRouter } from '@/i18n/routing';
 import { routing } from '@/i18n/routing';
 
 const FLAGS: Record<string, JSX.Element> = {

@@ -2,18 +2,52 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { AdditionCalculator } from './calculator';
+import { FaqSchema } from '@/components/FaqSchema';
+import { routing } from '@/i18n/routing';
 
-export const metadata = {
-  title: 'Addition Calculator',
-  description: 'Add two numbers together',
-};
+interface FaqItem {
+  question: string;
+  answer: string;
+}
 
-export default async function AdditionPage() {
-  const t = await getTranslations('calculators.addition');
-  const tCommon = await getTranslations('common');
+async function getFaqItems(locale: string): Promise<FaqItem[]> {
+  try {
+    const messages = await import(`@/i18n/${locale}.json`);
+    return (messages.default?.calculators?.addition?.seo?.faq?.items as FaqItem[]) || [];
+  } catch {
+    const messages = await import('@/i18n/en.json');
+    return (messages.default?.calculators?.addition?.seo?.faq?.items as FaqItem[]) || [];
+  }
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'calculators.addition.seo' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      type: 'website',
+    },
+  };
+}
+
+export default async function AdditionPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'calculators.addition' });
+  const tCommon = await getTranslations({ locale, namespace: 'common' });
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.addition.seo.content' });
+  
+  // Get FAQ items from translations
+  const faqItems = await getFaqItems(locale);
 
   return (
     <>
+      <FaqSchema items={faqItems} />
       <Header />
 
       <div className="calculator-header">
@@ -36,6 +70,36 @@ export default async function AdditionPage() {
         <div className="container">
           <div className="calculator-card">
             <AdditionCalculator />
+          </div>
+        </div>
+      </div>
+
+      {/* SEO Content Section */}
+      <div className="seo-content-section">
+        <div className="container">
+          <div className="seo-content-card">
+            <h2 className="seo-heading">{tSeo('heading')}</h2>
+            
+            <div className="seo-paragraphs">
+              <p className="seo-paragraph">
+                {tSeo('paragraph1')}
+              </p>
+              
+              <p className="seo-paragraph">
+                {tSeo('paragraph2')}
+              </p>
+              
+              <p className="seo-paragraph">
+                {tSeo('paragraph3')}
+              </p>
+              
+              <div className="seo-example">
+                <h3 className="example-heading">{tSeo('exampleHeading')}</h3>
+                <p className="example-text">
+                  {tSeo('exampleText')}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

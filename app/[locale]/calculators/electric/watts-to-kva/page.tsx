@@ -44,6 +44,9 @@ export default async function WattsToKvaPage({ params }: { params: Promise<{ loc
   
   // Get FAQ items from translations - direct import from JSON
   const faqItems = await getFaqItems(locale);
+  
+  // Get SEO content translations
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.wattsToKva.seo.content' });
 
   return (
     <>
@@ -70,6 +73,40 @@ export default async function WattsToKvaPage({ params }: { params: Promise<{ loc
         <div className="container">
           <div className="calculator-card">
             <WattsToKvaCalculator />
+          </div>
+        </div>
+      </div>
+
+      {/* SEO Content Section */}
+      <div className="seo-content-section">
+        <div className="container">
+          <div className="seo-content-card">
+            <h2 className="seo-heading">{tSeo('heading')}</h2>
+            
+            <div className="seo-paragraphs">
+              <p className="seo-paragraph">
+                {tSeo('paragraph1')}
+              </p>
+              
+              <p className="seo-paragraph">
+                {tSeo('paragraph2')}
+              </p>
+              
+              <p className="seo-paragraph">
+                {tSeo('paragraph3')}
+              </p>
+              
+              <p className="seo-paragraph">
+                {tSeo('paragraph4')}
+              </p>
+              
+              <div className="seo-example">
+                <h3 className="example-heading">{tSeo('exampleHeading')}</h3>
+                <p className="example-text">
+                  {tSeo('exampleText')}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

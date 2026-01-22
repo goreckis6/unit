@@ -48,9 +48,6 @@ export default async function ElectricCalculatorsPage() {
             <div className="header-content">
               <div className="title-badge">{t('electricCalculators.badge') || 'Electric'}</div>
               <h1 className="page-title">{t('electricCalculators.title')}</h1>
-              <p className="page-description">
-                {t('electricCalculators.description')}
-              </p>
             </div>
           </div>
 

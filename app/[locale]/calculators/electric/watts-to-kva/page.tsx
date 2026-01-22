@@ -1,19 +1,37 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, getMessages } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { WattsToKvaCalculator } from './calculator';
+import { FaqSchema } from '@/components/FaqSchema';
 
-export const metadata = {
-  title: 'Watts to kVA Calculator - Unit Converter Hub',
-  description: 'Convert watts to kilovolt-amperes using power factor',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'calculators.wattsToKva.seo' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      type: 'website',
+    },
+  };
+}
 
-export default async function WattsToKvaPage() {
-  const t = await getTranslations('calculators.wattsToKva');
-  const tCommon = await getTranslations('common');
+export default async function WattsToKvaPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'calculators.wattsToKva' });
+  const tCommon = await getTranslations({ locale, namespace: 'common' });
+  
+  // Get FAQ items from translations - from messages object
+  const messages = await getMessages({ locale });
+  const faqItems = (messages.calculators?.wattsToKva?.seo?.faq?.items as Array<{ question: string; answer: string }>) || [];
 
   return (
     <>
+      <FaqSchema items={faqItems} />
       <Header />
 
       <div className="calculator-header">

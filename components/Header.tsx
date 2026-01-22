@@ -14,7 +14,7 @@ export async function Header() {
             <span className="logo-text">{t('siteName')}</span>
           </Link>
           <nav className="nav">
-            <Link href="/calculators/math-calculators" className="nav-link">
+            <Link href="/calculators/math" className="nav-link">
               {t('calculators')}
             </Link>
             <Link href="/blog" className="nav-link">

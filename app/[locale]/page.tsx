@@ -49,9 +49,9 @@ export default async function HomePage() {
                   <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <h3 className="category-name">Physics Calculators</h3>
+              <h3 className="category-name">Electric Calculators</h3>
               <p className="category-description">
-                Energy, force, velocity, acceleration and more
+                Voltage, current, resistance, power and more
               </p>
               <span className="category-link">View All</span>
             </Link>

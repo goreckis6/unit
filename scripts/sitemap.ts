@@ -12,7 +12,8 @@ async function generateSitemap() {
   // Home pages for all locales
   routing.locales.forEach((locale) => {
     urls.push(`${baseUrl}/${locale}`);
-    urls.push(`${baseUrl}/${locale}/calculators/addition`);
+    urls.push(`${baseUrl}/${locale}/calculators/math`);
+    urls.push(`${baseUrl}/${locale}/calculators/math/addition`);
     urls.push(`${baseUrl}/${locale}/blog`);
     
     // Blog posts

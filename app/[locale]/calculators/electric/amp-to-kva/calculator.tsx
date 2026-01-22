@@ -3,13 +3,17 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-export function ampToKva(amps: number, volts: number): number {
+export type PhaseType = 'single' | 'three';
+
+export function ampToKva(amps: number, volts: number, phase: PhaseType): number {
   if (amps <= 0 || volts <= 0) return 0;
+  if (phase === 'three') return (Math.sqrt(3) * amps * volts) / 1000;
   return (amps * volts) / 1000;
 }
 
 export function AmpToKvaCalculator() {
   const t = useTranslations('calculators.ampToKva');
+  const [phase, setPhase] = useState<PhaseType>('single');
   const [amps, setAmps] = useState<string>('');
   const [volts, setVolts] = useState<string>('');
   const [result, setResult] = useState<number | null>(null);
@@ -17,9 +21,9 @@ export function AmpToKvaCalculator() {
   const handleCalculate = () => {
     const a = parseFloat(amps);
     const v = parseFloat(volts);
-    
+
     if (!isNaN(a) && !isNaN(v) && a > 0 && v > 0) {
-      setResult(ampToKva(a, v));
+      setResult(ampToKva(a, v, phase));
     } else {
       setResult(null);
     }
@@ -34,6 +38,25 @@ export function AmpToKvaCalculator() {
   return (
     <>
       <div className="input-section">
+        <div className="phase-selector">
+          <span className="phase-label">{t('phaseType')}</span>
+          <div className="phase-toggle">
+            <button
+              type="button"
+              className={`phase-btn ${phase === 'single' ? 'phase-btn-active' : ''}`}
+              onClick={() => setPhase('single')}
+            >
+              {t('singlePhase')}
+            </button>
+            <button
+              type="button"
+              className={`phase-btn ${phase === 'three' ? 'phase-btn-active' : ''}`}
+              onClick={() => setPhase('three')}
+            >
+              {t('threePhase')}
+            </button>
+          </div>
+        </div>
         <div className="inputs-grid">
           <div className="input-card">
             <label htmlFor="amps" className="input-label">
@@ -64,7 +87,7 @@ export function AmpToKvaCalculator() {
                 onChange={(e) => setVolts(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
                 className="number-input"
-                placeholder="0"
+                placeholder={phase === 'single' ? '230' : '400'}
               />
             </div>
           </div>

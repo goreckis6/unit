@@ -195,7 +195,7 @@
       "title": "Watti kVA Laskin",
       "description": "Muunna watit (W) kilovoltiampeereiksi (kVA) heti ja tarkasti käyttämällä tehokerrointa",
       "seo": {
-        "title": "Watti kVA Laskin – muunna teho verkossa ilmaiseksi",
+        "title": "Watti kVA Laskin - Muunna Teho Verkossa Ilmaiseksi",
         "description": "Ilmainen watti kVA muunnoslaskin. Muunna watit kilovoltiampeereiksi heti tehokertoimen avulla. Täydellinen sähköisiin laskelmiin, tehojärjestelmiin ja energianhallintaan.",
         "keywords": "watti kva laskin, w kva muunnin, watti kva muunnos, tehokerroin laskin, sähkölaskin, kva laskin, ilmainen laskin",
         "content": {
@@ -233,6 +233,10 @@
     "ampToKw": {
       "title": "Ampeeri kW Laskin",
       "description": "Muunna ampeerit (A) kilowateiksi (kW) heti ja tarkasti käyttämällä jännitettä ja tehokerrointa",
+      "currentType": "Virran tyyppi",
+      "directCurrent": "Tasavirta (DC)",
+      "singlePhase": "Yksivaihe",
+      "threePhase": "Kolivaihe",
       "amps": "Ampeeri (A)",
       "volts": "Jännite (V)",
       "powerFactor": "Tehokerroin (0-1)",
@@ -240,7 +244,7 @@
       "reset": "Nollaa",
       "result": "Tulos",
       "seo": {
-        "title": "Ampeeri kW Muunnoslaskin - Ilmainen Online Sähkötyökalu",
+        "title": "Ampeeri kW Laskin - Muunna Virta Tehoksi Verkossa",
         "description": "Ilmainen Ampeeri kW muunnoslaskin. Muunna ampeerit kilowateiksi heti käyttämällä jännitettä ja tehokerrointa. Täydellinen sähköisiin laskelmiin, piirisuunnitteluun ja tehojärjestelmäanalyysiin.",
         "keywords": "ampeeri kw laskin, ampeeri kilowatti muunnin, muunnos ampeeri kw, virta teho laskin, sähkölaskin, kw laskin, ilmainen laskin",
         "content": {
@@ -282,13 +286,16 @@
     "ampToKva": {
       "title": "Ampeeri kVA Laskin",
       "description": "Muunna ampeerit (A) kilovoltampeereiksi (kVA) heti ja tarkasti käyttämällä jännitettä",
+      "phaseType": "Vaihetyyppi",
+      "singlePhase": "Yksivaihe",
+      "threePhase": "Kolivaihe",
       "amps": "Ampeeri (A)",
       "volts": "Jännite (V)",
       "calculate": "Laske",
       "reset": "Nollaa",
       "result": "Tulos",
       "seo": {
-        "title": "Ampeeri kVA Muunnoslaskin - Ilmainen Online Sähkötyökalu",
+        "title": "Ampeeri kVA Laskin - Muuntaa Virta Näennäistehoksi",
         "description": "Ilmainen Ampeeri kVA muunnoslaskin. Muunna ampeerit kilovoltampeereiksi heti käyttämällä jännitettä. Täydellinen sähköisiin laskelmiin, piirisuunnitteluun ja tehojärjestelmäanalyysiin.",
         "keywords": "ampeeri kva laskin, ampeeri kilovoltampeeri muunnin, muunnos ampeeri kva, virta näennäisteho laskin, sähkölaskin, kva laskin, ilmainen laskin",
         "content": {
@@ -343,7 +350,7 @@
       "reset": "Nollaa",
       "result": "Tulos",
       "seo": {
-        "title": "Ampeeri VA Muunnoslaskin - Ilmainen Online Sähkötyökalu",
+        "title": "Ampeeri VA Laskin - Muuntaa Virta Näennäistehoksi",
         "description": "Ilmainen Ampeeri VA muunnoslaskin. Muunna ampeerit voltampeereiksi heti käyttämällä jännitettä. Täydellinen sähköisiin laskelmiin, piirisuunnitteluun ja tehojärjestelmäanalyysiin.",
         "keywords": "ampeeri va laskin, ampeeri voltampeeri muunnin, muunnos ampeeri va, virta näennäisteho laskin, sähkölaskin, va laskin, ilmainen laskin",
         "content": {
@@ -389,13 +396,17 @@
     "ampsToVolt": {
       "title": "Ampeeri Volt -laskin",
       "description": "Laske jännite (V) virrasta ja resistanssista Ohmin lain mukaan: V = I × R",
+      "selectCalculation": "Valitse laskenta",
+      "withWatts": "Ampeeri volteiksi watteilla",
+      "withOhms": "Ampeeri volteiksi ohmeilla",
       "amps": "Ampeeri (A)",
+      "watts": "Watti (W)",
       "ohms": "Resistanssi (Ω)",
       "calculate": "Laske",
       "reset": "Nollaa",
       "result": "Tulos",
       "seo": {
-        "title": "Ampeeri Volt -laskin – Ohmin laki | Ilmainen verkkotyökalu",
+        "title": "Ampeeri Volt -laskin - Laske Jännite Ohmin Lailla",
         "description": "Ilmainen Ampeeri Volt -laskin. Laske jännite virrasta ja resistanssista (V = I × R). Välittömät, tarkat tulokset piireille ja elektroniikalle.",
         "keywords": "ampeeri volt laskin, Ohmin laki, virta jännite, resistanssi laskin, V I R, sähkölaskin, ilmainen",
         "content": {

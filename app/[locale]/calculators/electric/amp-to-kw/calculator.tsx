@@ -3,13 +3,24 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-export function ampToKw(amps: number, volts: number, powerFactor: number): number {
-  if (volts <= 0 || powerFactor <= 0 || powerFactor > 1) return 0;
+export type CurrentType = 'dc' | 'single' | 'three';
+
+export function ampToKw(
+  amps: number,
+  volts: number,
+  powerFactor: number,
+  type: CurrentType
+): number {
+  if (amps <= 0 || volts <= 0) return 0;
+  if (type === 'dc') return (amps * volts) / 1000;
+  if (powerFactor <= 0 || powerFactor > 1) return 0;
+  if (type === 'three') return (Math.sqrt(3) * amps * volts * powerFactor) / 1000;
   return (amps * volts * powerFactor) / 1000;
 }
 
 export function AmpToKwCalculator() {
   const t = useTranslations('calculators.ampToKw');
+  const [type, setType] = useState<CurrentType>('single');
   const [amps, setAmps] = useState<string>('');
   const [volts, setVolts] = useState<string>('230');
   const [powerFactor, setPowerFactor] = useState<string>('0.8');
@@ -19,9 +30,15 @@ export function AmpToKwCalculator() {
     const a = parseFloat(amps);
     const v = parseFloat(volts);
     const pf = parseFloat(powerFactor);
-    
-    if (!isNaN(a) && !isNaN(v) && !isNaN(pf) && v > 0 && pf > 0 && pf <= 1) {
-      setResult(ampToKw(a, v, pf));
+
+    if (!isNaN(a) && !isNaN(v) && a > 0 && v > 0) {
+      if (type === 'dc') {
+        setResult(ampToKw(a, v, 1, 'dc'));
+      } else if (!isNaN(pf) && pf > 0 && pf <= 1) {
+        setResult(ampToKw(a, v, pf, type));
+      } else {
+        setResult(null);
+      }
     } else {
       setResult(null);
     }
@@ -34,9 +51,38 @@ export function AmpToKwCalculator() {
     setResult(null);
   };
 
+  const showPowerFactor = type !== 'dc';
+  const voltPlaceholder = type === 'three' ? '400' : '230';
+
   return (
     <>
       <div className="input-section">
+        <div className="phase-selector">
+          <span className="phase-label">{t('currentType')}</span>
+          <div className="phase-toggle">
+            <button
+              type="button"
+              className={`phase-btn ${type === 'dc' ? 'phase-btn-active' : ''}`}
+              onClick={() => setType('dc')}
+            >
+              {t('directCurrent')}
+            </button>
+            <button
+              type="button"
+              className={`phase-btn ${type === 'single' ? 'phase-btn-active' : ''}`}
+              onClick={() => setType('single')}
+            >
+              {t('singlePhase')}
+            </button>
+            <button
+              type="button"
+              className={`phase-btn ${type === 'three' ? 'phase-btn-active' : ''}`}
+              onClick={() => setType('three')}
+            >
+              {t('threePhase')}
+            </button>
+          </div>
+        </div>
         <div className="inputs-grid">
           <div className="input-card">
             <label htmlFor="amps" className="input-label">
@@ -67,30 +113,32 @@ export function AmpToKwCalculator() {
                 onChange={(e) => setVolts(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
                 className="number-input"
-                placeholder="230"
+                placeholder={voltPlaceholder}
               />
             </div>
           </div>
 
-          <div className="input-card">
-            <label htmlFor="powerFactor" className="input-label">
-              {t('powerFactor')}
-            </label>
-            <div className="input-with-unit">
-              <input
-                id="powerFactor"
-                type="number"
-                step="0.01"
-                min="0.01"
-                max="1"
-                value={powerFactor}
-                onChange={(e) => setPowerFactor(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                className="number-input"
-                placeholder="0.8"
-              />
+          {showPowerFactor && (
+            <div className="input-card">
+              <label htmlFor="powerFactor" className="input-label">
+                {t('powerFactor')}
+              </label>
+              <div className="input-with-unit">
+                <input
+                  id="powerFactor"
+                  type="number"
+                  step="0.01"
+                  min="0.01"
+                  max="1"
+                  value={powerFactor}
+                  onChange={(e) => setPowerFactor(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                  className="number-input"
+                  placeholder="0.8"
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
 

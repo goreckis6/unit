@@ -2,7 +2,24 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { FaqSchema } from '@/components/FaqSchema';
+import { FaqSection } from '@/components/FaqSection';
 import { CalculatorList } from './list';
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+async function getFaqItems(locale: string): Promise<FaqItem[]> {
+  try {
+    const messages = await import(`@/i18n/${locale}.json`);
+    return (messages.default?.calculators?.mathCalculators?.faq?.items as FaqItem[]) || [];
+  } catch {
+    const messages = await import('@/i18n/en.json');
+    return (messages.default?.calculators?.mathCalculators?.faq?.items as FaqItem[]) || [];
+  }
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -23,6 +40,10 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'calculators' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
+  const tFaq = await getTranslations({ locale, namespace: 'calculators.mathCalculators.faq' });
+  
+  // Get FAQ items from translations
+  const faqItems = await getFaqItems(locale);
 
   const calculators = [
     {
@@ -35,6 +56,7 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
 
   return (
     <>
+      <FaqSchema items={faqItems} />
       <Header />
 
       <div className="calculator-page">
@@ -90,6 +112,9 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
                 </div>
               </div>
             </div>
+            
+            {/* FAQ Section */}
+            <FaqSection heading={tFaq('heading')} items={faqItems} />
           </div>
         </div>
       </div>

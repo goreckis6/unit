@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { SoftwareApplicationSchema } from '@/components/SoftwareApplicationSchema';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -19,10 +20,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
-  const t = await getTranslations('common');
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'common' });
+  const siteUrl = 'https://unitconverterhub.com';
 
   return (
     <div className="home">
+      <SoftwareApplicationSchema
+        locale={locale}
+        siteName={t('siteName')}
+        description={t('description')}
+        url={siteUrl}
+      />
       <Header />
 
       <section className="hero">

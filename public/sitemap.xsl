@@ -15,69 +15,64 @@
           }
           
           body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            background-attachment: fixed;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #ffffff;
             padding: 2rem;
-            color: #0f172a;
+            color: #333;
             line-height: 1.6;
           }
           
           .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 2rem;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.12);
-            overflow: hidden;
+            background: #ffffff;
           }
           
           .header {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-            color: white;
-            padding: 3rem 2rem;
+            background: #ffffff;
+            color: #333;
+            padding: 2rem 0;
             text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
           }
           
           .header h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
+            font-size: 2rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
           }
           
           .header p {
-            font-size: 1.125rem;
-            opacity: 0.9;
+            font-size: 1rem;
+            color: #666;
           }
           
           .stats {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin-top: 2rem;
+            margin-top: 1rem;
             flex-wrap: wrap;
           }
           
           .stat {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 1rem 2rem;
-            border-radius: 0.75rem;
-            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
           }
           
           .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: 600;
             display: block;
           }
           
           .stat-label {
             font-size: 0.875rem;
-            opacity: 0.9;
+            color: #666;
           }
           
           .content {
-            padding: 2rem;
+            padding: 0;
           }
           
           .url-list {
@@ -85,32 +80,23 @@
           }
           
           .url-item {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-          }
-          
-          .url-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
-            border-color: #6366f1;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
           }
           
           .url-link {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: #6366f1;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #0066cc;
             text-decoration: none;
             display: block;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             word-break: break-all;
           }
           
           .url-link:hover {
-            color: #4f46e5;
             text-decoration: underline;
           }
           
@@ -119,7 +105,7 @@
             gap: 1.5rem;
             flex-wrap: wrap;
             font-size: 0.875rem;
-            color: #64748b;
+            color: #666;
           }
           
           .meta-item {
@@ -129,31 +115,31 @@
           }
           
           .meta-label {
-            font-weight: 600;
-            color: #475569;
+            font-weight: 500;
+            color: #333;
           }
           
           .priority {
             display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: #e0e7ff;
-            color: #4f46e5;
-            border-radius: 0.5rem;
-            font-weight: 600;
+            padding: 0.125rem 0.5rem;
+            background: #f0f0f0;
+            color: #333;
+            border-radius: 0.25rem;
+            font-weight: 500;
             font-size: 0.875rem;
           }
           
           .footer {
             text-align: center;
-            padding: 2rem;
-            background: #f8fafc;
-            border-top: 1px solid #e2e8f0;
-            color: #64748b;
+            padding: 2rem 0;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 2rem;
+            color: #666;
             font-size: 0.875rem;
           }
           
           .footer a {
-            color: #6366f1;
+            color: #0066cc;
             text-decoration: none;
           }
           
@@ -167,32 +153,28 @@
             }
             
             .header {
-              padding: 2rem 1.5rem;
+              padding: 1.5rem 0;
             }
             
             .header h1 {
-              font-size: 2rem;
+              font-size: 1.5rem;
             }
             
             .stats {
               gap: 1rem;
             }
             
-            .stat {
-              padding: 0.75rem 1.5rem;
-            }
-            
             .content {
-              padding: 1.5rem;
+              padding: 0;
             }
             
             .url-item {
-              padding: 1rem;
+              padding: 0.75rem;
             }
             
             .url-meta {
               flex-direction: column;
-              gap: 0.5rem;
+              gap: 0.25rem;
             }
           }
         </style>
@@ -238,8 +220,7 @@
           
           <div class="footer">
             <p>
-              Generated by <a href="https://unitconverterhub.com">UnitConverterHub.com</a> |
-              <a href="/sitemap">View Visual Sitemap</a>
+              Generated by <a href="https://unitconverterhub.com">UnitConverterHub.com</a>
             </p>
           </div>
         </div>

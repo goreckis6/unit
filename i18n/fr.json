@@ -229,6 +229,55 @@
           ]
         }
       }
+    },
+    "ampToKw": {
+      "title": "Calculateur Ampères vers kW",
+      "description": "Convertissez les ampères (A) en kilowatts (kW) instantanément et précisément en utilisant la tension et le facteur de puissance",
+      "amps": "Ampères (A)",
+      "volts": "Tension (V)",
+      "powerFactor": "Facteur de Puissance (0-1)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "seo": {
+        "title": "Calculateur de Conversion Ampères vers kW - Outil Électrique en Ligne Gratuit",
+        "description": "Calculateur de conversion ampères vers kW gratuit. Convertissez les ampères en kilowatts instantanément avec la tension et le facteur de puissance. Parfait pour les calculs électriques, conception de circuits et analyse de systèmes d'alimentation.",
+        "keywords": "calculateur ampères kw, convertisseur ampères kilowatts, conversion ampères kw, calculateur courant puissance, calculateur électrique, calculateur kw, calculateur gratuit",
+        "content": {
+          "heading": "Comment convertir les Ampères en kW",
+          "paragraph1": "La conversion des ampères (A) en kilowatts (kW) est un calcul fondamental en génie électrique et dans les systèmes d'alimentation. Les ampères représentent le courant électrique, tandis que les kilowatts représentent la puissance réelle (puissance active). La conversion nécessite la connaissance à la fois de la tension (V) et du facteur de puissance (PF). Notre calculateur gratuit de conversion Ampères vers kW rend ce processus rapide et facile, fournissant des résultats instantanés et précis pour vos calculs électriques.",
+          "paragraph2": "La formule de conversion est: kW = (A × V × PF) / 1000, où A est le courant en ampères, V est la tension en volts, PF est le facteur de puissance (une valeur entre 0 et 1), et kW est la puissance en kilowatts. Le facteur de puissance indique l'efficacité avec laquelle l'énergie électrique est utilisée. Un facteur de puissance de 1.0 (ou 100%) signifie que toute la puissance est utilisée efficacement, tandis que des valeurs plus faibles indiquent qu'une partie de la puissance est gaspillée comme puissance réactive.",
+          "paragraph3": "Cette conversion est couramment utilisée dans diverses applications: dimensionnement des fusibles et disjoncteurs, calcul de la consommation d'énergie des appareils électriques, conception de circuits électriques et câblage, détermination des exigences des générateurs et transformateurs, compréhension des caractéristiques de charge électrique et travail avec des systèmes électriques résidentiels, commerciaux et industriels. Savoir comment convertir les Ampères en kW vous aide à prendre des décisions éclairées concernant la conception des systèmes électriques, la sélection des équipements et la gestion de l'énergie.",
+          "paragraph4": "Notre calculateur prend les ampères, la tension et le facteur de puissance comme entrées, applique automatiquement la formule de conversion et fournit le résultat en kilowatts. Le calculateur gère à la fois les calculs monophasés et triphasés (pour triphasé, utilisez la tension entre phases). Que vous travailliez avec des moteurs, des radiateurs, des systèmes d'éclairage ou tout équipement électrique, notre calculateur Ampères vers kW fournit des conversions précises et instantanées.",
+          "exampleHeading": "Exemple:",
+          "exampleText": "Si vous avez un appareil tirant 20 ampères à 230 volts avec un facteur de puissance de 0.8, la puissance en kW serait: kW = (20 A × 230 V × 0.8) / 1000 = 3680 / 1000 = 3.68 kW. Pour un appareil tirant 15 ampères à 120 volts avec un facteur de puissance de 0.9: kW = (15 A × 120 V × 0.9) / 1000 = 1620 / 1000 = 1.62 kW."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Quelle est la formule pour convertir les ampères en kW?",
+              "answer": "La formule pour convertir les ampères (A) en kilowatts (kW) est: kW = (A × V × PF) / 1000, où A est le courant en ampères, V est la tension en volts, PF est le facteur de puissance (une valeur entre 0 et 1), et kW est la puissance en kilowatts."
+            },
+            {
+              "question": "Dois-je connaître la tension pour convertir les ampères en kW?",
+              "answer": "Oui, la tension est requise pour la conversion. La puissance (kW) dépend à la fois du courant (ampères) et de la tension. Les tensions courantes incluent 120V, 230V, 240V, 380V et 400V selon votre emplacement et votre application."
+            },
+            {
+              "question": "Qu'est-ce que le facteur de puissance et pourquoi est-il important?",
+              "answer": "Le facteur de puissance (PF) est le rapport de la puissance réelle (watts/kW) à la puissance apparente (VA/kVA). Il indique l'efficacité avec laquelle l'énergie électrique est utilisée. Un facteur de puissance de 1.0 (ou 100%) signifie que toute la puissance est utilisée efficacement, tandis que des valeurs plus faibles indiquent qu'une partie de la puissance est gaspillée comme puissance réactive. La plupart des systèmes électriques ont un facteur de puissance entre 0.85 et 0.95."
+            },
+            {
+              "question": "Puis-je utiliser ce calculateur pour les systèmes triphasés?",
+              "answer": "Oui, vous pouvez utiliser ce calculateur pour les systèmes triphasés. Pour les calculs triphasés, utilisez la tension entre phases (pas la tension de phase). Par exemple, pour un système triphasé 400V, utilisez 400V dans le calculateur."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit?",
+              "answer": "Oui, notre calculateur Ampères vers kW est entièrement gratuit. Aucune inscription ou paiement requis. Entrez simplement vos valeurs (ampères, tension et facteur de puissance) et obtenez des résultats instantanés et précis."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

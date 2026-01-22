@@ -229,6 +229,55 @@
           ]
         }
       }
+    },
+    "ampToKw": {
+      "title": "Ampeeri kW Laskin",
+      "description": "Muunna ampeerit (A) kilowateiksi (kW) heti ja tarkasti käyttämällä jännitettä ja tehokerrointa",
+      "amps": "Ampeeri (A)",
+      "volts": "Jännite (V)",
+      "powerFactor": "Tehokerroin (0-1)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "seo": {
+        "title": "Ampeeri kW Muunnoslaskin - Ilmainen Online Sähkötyökalu",
+        "description": "Ilmainen Ampeeri kW muunnoslaskin. Muunna ampeerit kilowateiksi heti käyttämällä jännitettä ja tehokerrointa. Täydellinen sähköisiin laskelmiin, piirisuunnitteluun ja tehojärjestelmäanalyysiin.",
+        "keywords": "ampeeri kw laskin, ampeeri kilowatti muunnin, muunnos ampeeri kw, virta teho laskin, sähkölaskin, kw laskin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka muuntaa Ampeerit kW:ksi",
+          "paragraph1": "Ampeerien (A) muuntaminen kilowateiksi (kW) on peruslaskelma sähkötekniikassa ja tehojärjestelmissä. Ampeerit edustavat sähkövirtaa, kun taas kilowatit edustavat todellista tehoa (aktiivitehoa). Muunnos vaatii sekä jännitteen (V) että tehokertoimen (PF) tuntemusta. Ilmainen Ampeeri kW muunnoslaskimemme tekee tästä prosessista nopean ja helpon, tarjoten välittömiä ja tarkkoja tuloksia sähköisiin laskelmiisi.",
+          "paragraph2": "Muunnoskaava on: kW = (A × V × PF) / 1000, jossa A on virta ampeereina, V on jännite volteina, PF on tehokerroin (arvo 0 ja 1 välillä), ja kW on teho kilowatteina. Tehokerroin osoittaa, kuinka tehokkaasti sähköenergiaa käytetään. Tehokerroin 1.0 (tai 100%) tarkoittaa, että kaikki teho käytetään tehokkaasti, kun taas alhaisemmat arvot osoittavat, että osa tehosta hukataan loistehona.",
+          "paragraph3": "Tätä muunnosta käytetään yleisesti erilaisissa sovelluksissa: sulakkeiden ja katkaisijoiden mitoitus, sähköisten laitteiden energiankulutuksen laskeminen, sähköpiirien ja johdotuksen suunnittelu, generaattorien ja muuntajien vaatimusten määrittäminen, sähköisten kuormitusominaisuuksien ymmärtäminen sekä asuin-, kaupallisten ja teollisten sähköjärjestelmien kanssa työskentely. Tieto siitä, kuinka muuntaa Ampeerit kW:ksi, auttaa sinua tekemään tietoon perustuvia päätöksiä sähköjärjestelmien suunnittelusta, laitteiden valinnasta ja energianhallinnasta.",
+          "paragraph4": "Laskimemme ottaa ampeerit, jännitteen ja tehokertoimen syötteiksi, soveltaa automaattisesti muunnoskaavaa ja antaa tuloksen kilowatteina. Laskin käsittelee sekä yksivaihe- että kolmivaihelaskelmia (kolmivaiheiselle käytä linja-linja jännitettä). Työskenteletpä moottoreiden, lämmittimien, valaistusjärjestelmien vai minkä tahansa sähkölaitteiden kanssa, Ampeeri kW laskimemme tarjoaa tarkkoja, välittömiä muunnoksia.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "Jos sinulla on laite, joka kuluttaa 20 ampeeria 230 voltilla tehokertoimella 0.8, teho kW:na olisi: kW = (20 A × 230 V × 0.8) / 1000 = 3680 / 1000 = 3.68 kW. Laitteelle, jossa on 15 ampeeria 120 voltilla tehokertoimella 0.9: kW = (15 A × 120 V × 0.9) / 1000 = 1620 / 1000 = 1.62 kW."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava ampeerien muuntamiseksi kW:ksi?",
+              "answer": "Kaava ampeerien (A) muuntamiseksi kilowateiksi (kW) on: kW = (A × V × PF) / 1000, jossa A on virta ampeereina, V on jännite volteina, PF on tehokerroin (arvo 0 ja 1 välillä), ja kW on teho kilowatteina."
+            },
+            {
+              "question": "Tarvitseeko minun tietää jännite muuntaakseni ampeerit kW:ksi?",
+              "answer": "Kyllä, jännite vaaditaan muunnokseen. Teho (kW) riippuu sekä virrasta (ampeerit) että jännitteestä. Tyypilliset jännitteet sisältävät 120V, 230V, 240V, 380V ja 400V sijainnistasi ja sovelluksestasi riippuen."
+            },
+            {
+              "question": "Mikä on tehokerroin ja miksi se on tärkeä?",
+              "answer": "Tehokerroin (PF) on todellisen tehon (watit/kW) ja näennäistehon (VA/kVA) suhde. Se osoittaa, kuinka tehokkaasti sähköenergiaa käytetään. Tehokerroin 1.0 (tai 100%) tarkoittaa, että kaikki teho käytetään tehokkaasti, kun taas alhaisemmat arvot osoittavat, että osa tehosta hukataan loistehona. Useimmilla sähköjärjestelmillä on tehokerroin 0.85:n ja 0.95:n välillä."
+            },
+            {
+              "question": "Voinko käyttää tätä laskinta kolmivaihejärjestelmiin?",
+              "answer": "Kyllä, voit käyttää tätä laskinta kolmivaihejärjestelmiin. Kolmivaihelaskelmiin käytä linja-linja jännitettä (ei vaihejännitettä). Esimerkiksi 400 V kolmivaihejärjestelmälle käytä 400 V laskimessa."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, Ampeeri kW laskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Syötä yksinkertaisesti arvosi (ampeerit, jännite ja tehokerroin) ja saat välittömät, tarkat tulokset."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

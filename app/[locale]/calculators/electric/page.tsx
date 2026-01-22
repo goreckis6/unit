@@ -86,6 +86,12 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       descKey: 'wattsToKva.description',
       path: '/calculators/electric/watts-to-kva',
     },
+    {
+      id: 'amp-to-kw',
+      titleKey: 'ampToKw.title',
+      descKey: 'ampToKw.description',
+      path: '/calculators/electric/amp-to-kw',
+    },
   ];
 
   return (

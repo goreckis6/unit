@@ -229,6 +229,55 @@
           ]
         }
       }
+    },
+    "ampToKw": {
+      "title": "Kalkulator Ampery na kW",
+      "description": "Konwertuj ampery (A) na kilowaty (kW) natychmiast i dokładnie używając napięcia i współczynnika mocy",
+      "amps": "Ampery (A)",
+      "volts": "Napięcie (V)",
+      "powerFactor": "Współczynnik Mocy (0-1)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "seo": {
+        "title": "Kalkulator Konwersji Ampery na kW - Darmowe Narzędzie Elektryczne",
+        "description": "Darmowy kalkulator konwersji ampery na kW. Konwertuj ampery na kilowaty natychmiast używając napięcia i współczynnika mocy. Idealne do obliczeń elektrycznych, projektowania obwodów i analizy systemów zasilania.",
+        "keywords": "kalkulator ampery na kw, konwerter amperów na kilowaty, konwersja ampery kw, kalkulator prądu na moc, kalkulator elektryczny, kalkulator kw, darmowy kalkulator",
+        "content": {
+          "heading": "Jak konwertować Ampery na kW",
+          "paragraph1": "Konwersja ampery (A) na kilowaty (kW) jest podstawowym obliczeniem w inżynierii elektrycznej i systemach zasilania. Ampery reprezentują prąd elektryczny, podczas gdy kilowaty reprezentują moc rzeczywistą (moc czynną). Konwersja wymaga znajomości zarówno napięcia (V), jak i współczynnika mocy (PF). Nasz darmowy kalkulator konwersji Ampery na kW czyni ten proces szybkim i łatwym, zapewniając natychmiastowe i dokładne wyniki dla Twoich obliczeń elektrycznych.",
+          "paragraph2": "Wzór konwersji to: kW = (A × V × PF) / 1000, gdzie A to prąd w amperach, V to napięcie w woltach, PF to współczynnik mocy (wartość między 0 a 1), a kW to moc w kilowatach. Współczynnik mocy wskazuje, jak efektywnie wykorzystywana jest energia elektryczna. Współczynnik mocy 1.0 (lub 100%) oznacza, że cała moc jest wykorzystywana efektywnie, podczas gdy niższe wartości wskazują, że część mocy jest marnowana jako moc bierna.",
+          "paragraph3": "Ta konwersja jest powszechnie używana w różnych zastosowaniach: dobieranie bezpieczników i wyłączników, obliczanie zużycia energii przez urządzenia elektryczne, projektowanie obwodów elektrycznych i okablowania, określanie wymagań generatorów i transformatorów, zrozumienie charakterystyk obciążenia elektrycznego oraz praca z domowymi, komercyjnymi i przemysłowymi systemami elektrycznymi. Znajomość konwersji Ampery na kW pomaga w podejmowaniu świadomych decyzji dotyczących projektowania systemów elektrycznych, doboru urządzeń i zarządzania energią.",
+          "paragraph4": "Nasz kalkulator przyjmuje ampery, napięcie i współczynnik mocy jako dane wejściowe, automatycznie stosuje wzór konwersji i zapewnia wynik w kilowatach. Kalkulator obsługuje zarówno obliczenia jednofazowe, jak i trójfazowe (dla trójfazowych użyj napięcia międzyfazowego). Niezależnie od tego, czy pracujesz z silnikami, grzejnikami, systemami oświetlenia czy jakimikolwiek urządzeniami elektrycznymi, nasz kalkulator Ampery na kW zapewnia dokładne, natychmiastowe konwersje.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "Jeśli masz urządzenie pobierające 20 amperów przy napięciu 230 woltów ze współczynnikiem mocy 0.8, moc w kW wyniesie: kW = (20 A × 230 V × 0.8) / 1000 = 3680 / 1000 = 3.68 kW. Dla urządzenia pobierającego 15 amperów przy napięciu 120 woltów ze współczynnikiem mocy 0.9: kW = (15 A × 120 V × 0.9) / 1000 = 1620 / 1000 = 1.62 kW."
+        },
+        "faq": {
+          "heading": "Najczęściej zadawane pytania",
+          "items": [
+            {
+              "question": "Jaki jest wzór do konwersji ampery na kW?",
+              "answer": "Wzór do konwersji ampery (A) na kilowaty (kW) to: kW = (A × V × PF) / 1000, gdzie A to prąd w amperach, V to napięcie w woltach, PF to współczynnik mocy (wartość między 0 a 1), a kW to moc w kilowatach."
+            },
+            {
+              "question": "Czy muszę znać napięcie, aby konwertować ampery na kW?",
+              "answer": "Tak, napięcie jest wymagane do konwersji. Moc (kW) zależy zarówno od prądu (ampery), jak i napięcia. Typowe napięcia obejmują 120V, 230V, 240V, 380V i 400V w zależności od lokalizacji i zastosowania."
+            },
+            {
+              "question": "Co to jest współczynnik mocy i dlaczego jest ważny?",
+              "answer": "Współczynnik mocy (PF) to stosunek mocy rzeczywistej (watty/kW) do mocy pozornej (VA/kVA). Wskazuje, jak efektywnie wykorzystywana jest energia elektryczna. Współczynnik mocy 1.0 (lub 100%) oznacza, że cała moc jest wykorzystywana efektywnie, podczas gdy niższe wartości wskazują, że część mocy jest marnowana jako moc bierna. Większość systemów elektrycznych ma współczynnik mocy między 0.85 a 0.95."
+            },
+            {
+              "question": "Czy mogę użyć tego kalkulatora dla systemów trójfazowych?",
+              "answer": "Tak, możesz użyć tego kalkulatora dla systemów trójfazowych. W przypadku obliczeń trójfazowych użyj napięcia międzyfazowego (nie napięcia fazowego). Na przykład dla systemu trójfazowego 400V użyj 400V w kalkulatorze."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak, nasz kalkulator Ampery na kW jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Po prostu wprowadź wartości (ampery, napięcie i współczynnik mocy) i otrzymaj natychmiastowe, dokładne wyniki."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

@@ -12,6 +12,7 @@ export async function GET() {
     '/calculators/math/addition',
     '/calculators/electric',
     '/calculators/electric/watts-to-kva',
+    '/calculators/electric/amp-to-kw',
     '/blog',
   ];
 

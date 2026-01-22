@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { WattsToKvaCalculator } from './calculator';
 import { FaqSchema } from '@/components/FaqSchema';
 import { routing } from '@/i18n/routing';
@@ -110,6 +111,7 @@ export default async function WattsToKvaPage({ params }: { params: Promise<{ loc
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

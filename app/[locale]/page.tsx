@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 export default async function HomePage() {
   const t = await getTranslations('common');
@@ -98,11 +99,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <footer className="footer">
-        <div className="container">
-          <p>&copy; {new Date().getFullYear()} {t('siteName')}. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

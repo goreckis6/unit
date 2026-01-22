@@ -1,10 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { CalculatorList } from './list';
 
 export const metadata = {
-  title: 'Electric Calculators - Unit Converter Hub',
+  title: 'Electric Calculators',
   description: 'Browse our collection of electric calculators for all your electrical calculation needs',
 };
 
@@ -77,6 +78,7 @@ export default async function ElectricCalculatorsPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

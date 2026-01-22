@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { getBlogPost, getBlogPosts } from '@/lib/blog';
 import { renderBlogPost } from '@/lib/mdx-renderer';
 
@@ -25,12 +27,16 @@ export default async function BlogPostPage({
   const t = await getTranslations('blog');
 
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
-      <Link href="/blog">{t('backToBlog')}</Link>
-      <article>
-        <h1>{post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
-      </article>
-    </div>
+    <>
+      <Header />
+      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
+        <Link href="/blog">{t('backToBlog')}</Link>
+        <article>
+          <h1>{post.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: content }} />
+        </article>
+      </div>
+      <Footer />
+    </>
   );
 }

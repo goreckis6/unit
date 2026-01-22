@@ -1,10 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { CalculatorList } from './list';
 
 export const metadata = {
-  title: 'Math Calculators - Unit Converter Hub',
+  title: 'Math Calculators',
   description: 'Browse our collection of math calculators for all your calculation needs',
 };
 
@@ -81,6 +82,7 @@ export default async function MathCalculatorsPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

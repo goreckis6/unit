@@ -15,7 +15,10 @@ export async function Header() {
           </Link>
           <nav className="nav">
             <Link href="/calculators/math" className="nav-link">
-              {t('calculators')}
+              Math
+            </Link>
+            <Link href="/calculators/electric" className="nav-link">
+              Electric
             </Link>
             <Link href="/blog" className="nav-link">
               {t('blog')}

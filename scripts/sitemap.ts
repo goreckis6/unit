@@ -11,10 +11,12 @@ async function generateSitemap() {
 
   // Home pages for all locales
   routing.locales.forEach((locale) => {
-    urls.push(`${baseUrl}/${locale}`);
-    urls.push(`${baseUrl}/${locale}/calculators/math`);
-    urls.push(`${baseUrl}/${locale}/calculators/math/addition`);
-    urls.push(`${baseUrl}/${locale}/blog`);
+    const localePrefix = locale === 'en' ? '' : `/${locale}`;
+    urls.push(`${baseUrl}${localePrefix}`);
+    urls.push(`${baseUrl}${localePrefix}/calculators/math`);
+    urls.push(`${baseUrl}${localePrefix}/calculators/math/addition`);
+    urls.push(`${baseUrl}${localePrefix}/calculators/electric`);
+    urls.push(`${baseUrl}${localePrefix}/blog`);
     
     // Blog posts
     posts.forEach((post) => {

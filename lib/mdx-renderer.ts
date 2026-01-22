@@ -1,7 +1,7 @@
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 import matter from 'gray-matter';
-import remark from 'remark';
+import { remark } from 'remark';
 import remarkHtml from 'remark-html';
 
 export async function renderBlogPost(slug: string): Promise<string> {

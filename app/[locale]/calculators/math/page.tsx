@@ -41,6 +41,7 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
   const t = await getTranslations({ locale, namespace: 'calculators' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
   const tFaq = await getTranslations({ locale, namespace: 'calculators.mathCalculators.faq' });
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.mathCalculators.seoContent' });
   
   // Get FAQ items from translations
   const faqItems = await getFaqItems(locale);
@@ -84,30 +85,30 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
             {/* SEO Content Section */}
             <div className="seo-content-section">
               <div className="seo-content-card">
-                <h2 className="seo-heading">Math Calculators - Free Online Tools</h2>
+                <h2 className="seo-heading">{tSeo('heading')}</h2>
                 
                 <div className="seo-paragraphs">
                   <p className="seo-paragraph">
-                    Our collection of math calculators provides quick and accurate solutions for a wide range of mathematical problems. Whether you need to perform basic arithmetic operations, solve complex equations, or work with fractions and percentages, our calculators are designed to help you get the answers you need instantly.
+                    {tSeo('paragraph1')}
                   </p>
                   
                   <p className="seo-paragraph">
-                    All our math calculators are completely free to use and require no registration. Simply select the calculator you need, enter your values, and get instant results. Our calculators work on all devices - desktop, tablet, and mobile - so you can use them anywhere, anytime.
+                    {tSeo('paragraph2')}
                   </p>
                   
                   <p className="seo-paragraph">
-                    Each calculator is designed with user-friendliness in mind, featuring clear input fields, intuitive interfaces, and detailed result displays. We continuously add new calculators to our collection to meet your mathematical calculation needs.
+                    {tSeo('paragraph3')}
                   </p>
                   
                   <div className="seo-example">
-                    <h3 className="example-heading">Example: Addition Calculator</h3>
+                    <h3 className="example-heading">{tSeo('exampleHeading')}</h3>
                     <p className="example-text">
-                      To add two numbers, simply enter the first number and the second number in the input fields, then click calculate. The result will be displayed instantly, showing the sum of the two numbers.
+                      {tSeo('exampleText')}
                     </p>
                   </div>
                   
                   <p className="seo-paragraph">
-                    Browse through our math calculators above to find the tool you need. Each calculator includes detailed descriptions and examples to help you understand how to use it effectively.
+                    {tSeo('paragraph4')}
                   </p>
                 </div>
               </div>

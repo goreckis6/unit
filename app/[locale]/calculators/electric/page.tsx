@@ -48,6 +48,7 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
   const t = await getTranslations({ locale, namespace: 'calculators' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
   const tFaq = await getTranslations({ locale, namespace: 'calculators.electricCalculators.faq' });
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.electricCalculators.seoContent' });
   
   // Get FAQ items from translations
   const faqItems = await getFaqItems(locale);
@@ -91,19 +92,19 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
             {/* SEO Content Section */}
             <div className="seo-content-section">
               <div className="seo-content-card">
-                <h2 className="seo-heading">Electric Calculators - Free Online Tools</h2>
+                <h2 className="seo-heading">{tSeo('heading')}</h2>
                 
                 <div className="seo-paragraphs">
                   <p className="seo-paragraph">
-                    Our collection of electric calculators provides quick and accurate solutions for a wide range of electrical problems. Whether you need to calculate voltage, current, resistance, power, or work with electrical circuits, our calculators are designed to help you get the answers you need instantly.
+                    {tSeo('paragraph1')}
                   </p>
                   
                   <p className="seo-paragraph">
-                    All our electric calculators are completely free to use and require no registration. Simply select the calculator you need, enter your values, and get instant results. Our calculators work on all devices - desktop, tablet, and mobile - so you can use them anywhere, anytime.
+                    {tSeo('paragraph2')}
                   </p>
                   
                   <p className="seo-paragraph">
-                    Each calculator is designed with user-friendliness in mind, featuring clear input fields, intuitive interfaces, and detailed result displays. We continuously add new calculators to our collection to meet your electrical calculation needs.
+                    {tSeo('paragraph3')}
                   </p>
                 </div>
               </div>

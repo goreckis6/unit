@@ -8,12 +8,24 @@ export const metadata = {
   description: 'Browse our collection of electric calculators for all your electrical calculation needs',
 };
 
+interface Calculator {
+  id: string;
+  titleKey: string;
+  descKey: string;
+  path: string;
+}
+
 export default async function ElectricCalculatorsPage() {
   const t = await getTranslations('calculators');
   const tCommon = await getTranslations('common');
 
-  const calculators = [
-    // Na razie pusta lista - można dodać kalkulatory elektryczne później
+  const calculators: Calculator[] = [
+    {
+      id: 'watts-to-kva',
+      titleKey: 'wattsToKva.title',
+      descKey: 'wattsToKva.description',
+      path: '/calculators/electric/watts-to-kva',
+    },
   ];
 
   return (
@@ -36,6 +48,9 @@ export default async function ElectricCalculatorsPage() {
             <div className="header-content">
               <div className="title-badge">{t('electricCalculators.badge') || 'Electric'}</div>
               <h1 className="page-title">{t('electricCalculators.title')}</h1>
+              <p className="page-description">
+                {t('electricCalculators.description')}
+              </p>
             </div>
           </div>
 

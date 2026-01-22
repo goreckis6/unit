@@ -139,6 +139,68 @@ const FLAGS: Record<string, JSX.Element> = {
       <rect width="12" height="24" x="24" fill="#CE1126"/>
     </svg>
   ),
+  ru: (
+    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="8" y="0" fill="#FFFFFF"/>
+      <rect width="36" height="8" y="8" fill="#0039A6"/>
+      <rect width="36" height="8" y="16" fill="#D52B1E"/>
+    </svg>
+  ),
+  ja: (
+    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="24" fill="#FFFFFF"/>
+      <circle cx="18" cy="12" r="7.2" fill="#BC002D"/>
+    </svg>
+  ),
+  zh: (
+    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="24" fill="#DE2910"/>
+      <circle cx="9" cy="6" r="1.2" fill="#FFDE00"/>
+      <circle cx="11.4" cy="7.2" r="0.8" fill="#FFDE00"/>
+      <circle cx="10.2" cy="8.4" r="0.8" fill="#FFDE00"/>
+      <circle cx="8.4" cy="8.4" r="0.8" fill="#FFDE00"/>
+      <circle cx="7.2" cy="7.2" r="0.8" fill="#FFDE00"/>
+    </svg>
+  ),
+  ko: (
+    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="24" fill="#FFFFFF"/>
+      <circle cx="18" cy="12" r="6" fill="#CE1126"/>
+      <path d="M 18 6 Q 14 12 18 18 Q 22 12 18 6" fill="#003478"/>
+      <circle cx="18" cy="12" r="3" fill="#FFFFFF"/>
+      <circle cx="18" cy="12" r="2" fill="#003478"/>
+    </svg>
+  ),
+  ar: (
+    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="8" y="0" fill="#000000"/>
+      <rect width="36" height="8" y="8" fill="#FFFFFF"/>
+      <rect width="36" height="8" y="16" fill="#007A3D"/>
+      <polygon points="0,0 12,12 0,24" fill="#CE1126"/>
+    </svg>
+  ),
+  hi: (
+    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="8" y="0" fill="#FF9933"/>
+      <rect width="36" height="8" y="8" fill="#FFFFFF"/>
+      <rect width="36" height="8" y="16" fill="#138808"/>
+      <circle cx="18" cy="12" r="3" fill="#000080"/>
+    </svg>
+  ),
+  id: (
+    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="12" y="0" fill="#CE1126"/>
+      <rect width="36" height="12" y="12" fill="#FFFFFF"/>
+    </svg>
+  ),
+  tr: (
+    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="24" fill="#E30A17"/>
+      <circle cx="12" cy="12" r="5" fill="#FFFFFF"/>
+      <circle cx="13.5" cy="12" r="4" fill="#E30A17"/>
+      <circle cx="15" cy="12" r="1.5" fill="#FFFFFF"/>
+    </svg>
+  ),
 };
 
 const LANGUAGE_NAMES: Record<string, string> = {
@@ -158,6 +220,14 @@ const LANGUAGE_NAMES: Record<string, string> = {
   da: 'Dansk',
   fi: 'Suomi',
   ro: 'Română',
+  ru: 'Русский',
+  ja: '日本語',
+  zh: '中文',
+  ko: '한국어',
+  ar: 'العربية',
+  hi: 'हिन्दी',
+  id: 'Bahasa Indonesia',
+  tr: 'Türkçe',
 };
 
 export function LanguageSwitcher() {

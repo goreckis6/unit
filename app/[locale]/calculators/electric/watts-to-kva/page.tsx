@@ -1,8 +1,25 @@
-import { getTranslations, getMessages } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { WattsToKvaCalculator } from './calculator';
 import { FaqSchema } from '@/components/FaqSchema';
+import { routing } from '@/i18n/routing';
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+async function getFaqItems(locale: string): Promise<FaqItem[]> {
+  try {
+    const messages = await import(`@/i18n/${locale}.json`);
+    return (messages.default?.calculators?.wattsToKva?.seo?.faq?.items as FaqItem[]) || [];
+  } catch {
+    // Fallback to English if locale file doesn't exist
+    const messages = await import('@/i18n/en.json');
+    return (messages.default?.calculators?.wattsToKva?.seo?.faq?.items as FaqItem[]) || [];
+  }
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -25,9 +42,8 @@ export default async function WattsToKvaPage({ params }: { params: Promise<{ loc
   const t = await getTranslations({ locale, namespace: 'calculators.wattsToKva' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
   
-  // Get FAQ items from translations - from messages object
-  const messages = await getMessages({ locale });
-  const faqItems = (messages.calculators?.wattsToKva?.seo?.faq?.items as Array<{ question: string; answer: string }>) || [];
+  // Get FAQ items from translations - direct import from JSON
+  const faqItems = await getFaqItems(locale);
 
   return (
     <>

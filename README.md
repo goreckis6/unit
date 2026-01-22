@@ -8,6 +8,7 @@ Next.js application with blog and calculators, supporting 16 languages.
 - **pnpm** (package manager)
 - **next-intl** (i18n)
 - **MDX** (blog content)
+- **PM2** (process manager)
 - **Caddy** (reverse proxy + HTTPS)
 - **GitHub Actions** (CI/CD)
 
@@ -34,6 +35,7 @@ pnpm start
 
 2. **Server Setup**
    - Install Node.js 20+
+   - Install PM2: `sudo npm install -g pm2`
    - Install Caddy
    - Copy `Caddyfile` to `/etc/caddy/Caddyfile`
    - Run `sudo caddy reload`
@@ -59,6 +61,26 @@ scripts/               # Build scripts
 
 ## Production
 
-- Next.js runs on port 3000 (systemd service)
+- Next.js runs on port 3000 (PM2 process manager)
 - Caddy handles HTTPS and reverse proxy
 - Standalone output for minimal deployment
+- PM2 configuration: `ecosystem.config.js`
+
+### PM2 Commands
+
+```bash
+# Check status
+pm2 status
+
+# View logs
+pm2 logs unitconverterhub
+
+# Restart app
+pm2 restart unitconverterhub
+
+# Stop app
+pm2 stop unitconverterhub
+
+# Monitor
+pm2 monit
+```

@@ -60,7 +60,7 @@ jobs:
           host: ${{ secrets.FRONTEND_VPS_HOST }}
           username: ${{ secrets.FRONTEND_VPS_USERNAME }}
           key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
-          source: ".next/standalone,.next/static,public"
+          source: ".next/standalone,.next/static,public,ecosystem.config.js"
           target: "/var/www/unitconverterhub"
           strip_components: 0
 
@@ -125,35 +125,65 @@ jobs:
               fi
             fi
             
-            # Create systemd service file
-            sudo tee /etc/systemd/system/"$SERVICE_NAME".service > /dev/null <<EOF
-            [Unit]
-            Description=Unit Converter Hub Next.js App
-            After=network.target
-
-            [Service]
-            Type=simple
-            User=${{ secrets.FRONTEND_VPS_USERNAME }}
-            WorkingDirectory=$APP_DIR/.next/standalone
-            ExecStart=/usr/bin/node $APP_DIR/.next/standalone/server.js
-            Restart=always
-            RestartSec=10
-            Environment=NODE_ENV=production
-            Environment=PORT=3000
-
-            [Install]
-            WantedBy=multi-user.target
-            EOF
+            # Copy ecosystem.config.js to server
+            if [ -f "$APP_DIR/ecosystem.config.js" ]; then
+              echo "✅ ecosystem.config.js found"
+            else
+              echo "⚠️  ecosystem.config.js not found in app directory"
+            fi
             
-            # Reload systemd and start service
-            sudo systemctl daemon-reload
-            sudo systemctl enable "$SERVICE_NAME"
-            sudo systemctl restart "$SERVICE_NAME"
+            # Create log directory in app folder
+            mkdir -p "$APP_DIR/logs"
+            chown -R ${{ secrets.FRONTEND_VPS_USERNAME }}:${{ secrets.FRONTEND_VPS_USERNAME }} "$APP_DIR/logs"
             
-            # Verify service is running
-            sleep 5
-            echo "📊 Checking service status..."
-            sudo systemctl status "$SERVICE_NAME" --no-pager || true
+            # Install PM2 globally if not installed
+            if ! command -v pm2 >/dev/null 2>&1; then
+              echo "📦 Installing PM2..."
+              sudo npm install -g pm2 || {
+                echo "⚠️  Failed to install PM2 via npm, trying alternative method..."
+                curl -fsSL https://get.pm2.io/install.sh | sh - || {
+                  echo "⚠️  Alternative PM2 install failed, trying direct npm..."
+                  sudo npm install -g pm2@latest
+                }
+              }
+            fi
+            
+            # Stop existing PM2 process if running
+            pm2 stop "$SERVICE_NAME" 2>/dev/null || true
+            pm2 delete "$SERVICE_NAME" 2>/dev/null || true
+            
+            # Start application with PM2
+            cd "$APP_DIR"
+            if [ -f ecosystem.config.js ]; then
+              pm2 start ecosystem.config.js
+            else
+              # Fallback: start without config file
+              pm2 start .next/standalone/server.js \
+                --name "$SERVICE_NAME" \
+                --cwd "$APP_DIR" \
+                --env NODE_ENV=production \
+                --env PORT=3000 \
+                --error "$APP_DIR/logs/error.log" \
+                --output "$APP_DIR/logs/out.log" \
+                --log-date-format "YYYY-MM-DD HH:mm:ss Z" \
+                --merge-logs \
+                --autorestart \
+                --max-restarts 10 \
+                --min-uptime 10s \
+                --max-memory-restart 1G
+            fi
+            
+            # Save PM2 process list
+            pm2 save
+            
+            # Setup PM2 to start on boot
+            pm2 startup systemd -u ${{ secrets.FRONTEND_VPS_USERNAME }} --hp /home/${{ secrets.FRONTEND_VPS_USERNAME }} || true
+            
+            # Verify PM2 process is running
+            sleep 3
+            echo "📊 Checking PM2 status..."
+            pm2 status || true
+            pm2 info "$SERVICE_NAME" || true
             
             # Check if port 3000 is listening
             echo "📊 Checking if port 3000 is listening..."
@@ -163,12 +193,12 @@ jobs:
             echo "📊 Testing app response..."
             curl -f http://localhost:3000 >/dev/null 2>&1 && echo "✅ App responds on localhost:3000" || echo "❌ App does not respond on localhost:3000"
             
-            # Check service logs if failed
-            if ! sudo systemctl is-active --quiet "$SERVICE_NAME"; then
-              echo "❌ Service is not running. Last 20 lines of logs:"
-              sudo journalctl -u "$SERVICE_NAME" -n 20 --no-pager || true
+            # Check PM2 logs if failed
+            if ! pm2 list | grep -q "$SERVICE_NAME.*online"; then
+              echo "❌ PM2 process is not running. Last 20 lines of logs:"
+              pm2 logs "$SERVICE_NAME" --lines 20 --nostream || true
               exit 1
             fi
             
-            echo "✅ Next.js app deployed and running!"
+            echo "✅ Next.js app deployed and running with PM2!"
             echo "✅ Caddy configuration updated"

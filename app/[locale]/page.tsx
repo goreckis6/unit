@@ -28,8 +28,8 @@ export default async function HomePage() {
         <section className="hero">
           <div className="container">
             <div className="hero-content">
-              <h1>{t('siteName')}</h1>
-              <p>{t('description')}</p>
+              <h1 className="hero-title">{t('siteName')}</h1>
+              <p className="hero-description">{t('description')}</p>
               <Link href="/calculators/addition" className="cta-button">
                 {t('calculators')} →
               </Link>

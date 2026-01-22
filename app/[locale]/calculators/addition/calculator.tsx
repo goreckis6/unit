@@ -24,43 +24,78 @@ export function AdditionCalculator() {
     }
   };
 
+  const handleReset = () => {
+    setFirst('');
+    setSecond('');
+    setResult(null);
+  };
+
   return (
-    <div style={{ marginTop: '2rem' }}>
-      <div style={{ marginBottom: '1rem' }}>
-        <label htmlFor="first">
-          {t('firstNumber')}:
-          <input
-            id="first"
-            type="number"
-            value={first}
-            onChange={(e) => setFirst(e.target.value)}
-            style={{ marginLeft: '0.5rem', padding: '0.5rem' }}
-          />
-        </label>
+    <>
+      <div className="input-section">
+        <div className="inputs-grid">
+          <div className="input-card">
+            <label htmlFor="first" className="input-label">
+              {t('firstNumber')}
+            </label>
+            <div className="input-with-unit">
+              <input
+                id="first"
+                type="number"
+                value={first}
+                onChange={(e) => setFirst(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                className="number-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+
+          <div className="input-card">
+            <label htmlFor="second" className="input-label">
+              {t('secondNumber')}
+            </label>
+            <div className="input-with-unit">
+              <input
+                id="second"
+                type="number"
+                value={second}
+                onChange={(e) => setSecond(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                className="number-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div style={{ marginBottom: '1rem' }}>
-        <label htmlFor="second">
-          {t('secondNumber')}:
-          <input
-            id="second"
-            type="number"
-            value={second}
-            onChange={(e) => setSecond(e.target.value)}
-            style={{ marginLeft: '0.5rem', padding: '0.5rem' }}
-          />
-        </label>
+
+      <div className="action-buttons">
+        <button onClick={handleCalculate} className="btn btn-primary">
+          {t('calculate')}
+        </button>
+        <button onClick={handleReset} className="btn btn-secondary">
+          Reset
+        </button>
       </div>
-      <button
-        onClick={handleCalculate}
-        style={{ padding: '0.5rem 1rem', marginBottom: '1rem' }}
-      >
-        {t('calculate')}
-      </button>
+
       {result !== null && (
-        <div style={{ marginTop: '1rem', fontSize: '1.2rem', fontWeight: 'bold' }}>
-          {t('result')}: {result}
+        <div className="result-section">
+          <div className="result-header">
+            <div className="result-badge">
+              {t('result')}
+            </div>
+          </div>
+          <div className="result-display">
+            <div className="result-item">
+              <div className="result-label">Result</div>
+              <div className="result-value-box">
+                <span className="result-value">{result}</span>
+              </div>
+            </div>
+          </div>
         </div>
       )}
-    </div>
+    </>
   );
 }

@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import '../globals.css';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -28,8 +29,9 @@ export default async function LocaleLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Free online unit converters and calculators" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
       </head>
-      <body style={{ margin: 0, fontFamily: 'system-ui, sans-serif' }}>
+      <body>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

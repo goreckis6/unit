@@ -278,6 +278,58 @@
           ]
         }
       }
+    },
+    "ampToKva": {
+      "title": "Ampere til kVA Kalkulator",
+      "description": "Konverter ampere (A) til kilovoltampere (kVA) umiddelbart og nøyaktig med spenning",
+      "amps": "Ampere (A)",
+      "volts": "Spenning (V)",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "seo": {
+        "title": "Ampere til kVA Konverteringskalkulator - Gratis Online Elektrisk Verktøy",
+        "description": "Gratis Ampere til kVA konverteringskalkulator. Konverter ampere til kilovoltampere umiddelbart med spenning. Perfekt for elektriske beregninger, kretsdesign og kraftsystemanalyse.",
+        "keywords": "ampere kva kalkulator, ampere kilovoltampere konverter, konvertering ampere kva, strøm tilsynelatende effekt kalkulator, elektrisk kalkulator, kva kalkulator, gratis kalkulator",
+        "content": {
+          "heading": "Hvordan konvertere Ampere til kVA",
+          "paragraph1": "Å konvertere ampere (A) til kilovoltampere (kVA) er en grunnleggende beregning innen elektroteknikk og kraftsystemer. Ampere representerer elektrisk strøm, mens kVA representerer tilsynelatende effekt. Konverteringen krever kunnskap om spenning (V). I motsetning til virkelig effekt (kW) krever tilsynelatende effekt (kVA) ingen effektfaktor, noe som gjør denne konverteringen enkel. Vår gratis Ampere til kVA konverteringskalkulator gjør denne prosessen rask og enkel, og gir umiddelbare og nøyaktige resultater for dine elektriske beregninger.",
+          "paragraph2": "Konverteringsformelen er: kVA = (A × V) / 1000, hvor A er strømmen i ampere, V er spenningen i volt, og kVA er tilsynelatende effekt i kilovoltampere. Tilsynelatende effekt representerer den totale effekten i en elektrisk krets, som kombinerer både virkelig effekt (watt) og reaktiv effekt (VAR). Dette skiller seg fra virkelig effekt (kW), som bare tar hensyn til det faktiske arbeidet som utføres.",
+          "paragraph3": "Denne konverteringen brukes vanligvis i ulike applikasjoner: dimensjonering av transformatorer og generatorer, beregning av tilsynelatende effektkrav, design av elektriske distribusjonssystemer, bestemmelse av sikrings- og bryterverdier, forståelse av elektriske lastkarakteristika og arbeid med bolig-, kommersielle og industrielle elektriske systemer. Å vite hvordan man konverterer Ampere til kVA hjelper deg med å ta velinformerte beslutninger om elektrisk systemdesign, utstyrvalg og energistyring.",
+          "paragraph4": "Vår kalkulator tar ampere og spenning som inndata, bruker automatisk konverteringsformelen og gir resultatet i kilovoltampere. Kalkulatoren håndterer både enfase- og trefaseberegninger (for trefase, bruk linje-til-linje spenning). Enten du jobber med transformatorer, generatorer, motorer eller elektrisk utstyr, gir vår Ampere til kVA kalkulator nøyaktige, umiddelbare konverteringer.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "Hvis du har en enhet som trekker 20 ampere ved 230 volt, ville tilsynelatende effekt i kVA være: kVA = (20 A × 230 V) / 1000 = 4600 / 1000 = 4.6 kVA. For en enhet som trekker 15 ampere ved 120 volt: kVA = (15 A × 120 V) / 1000 = 1800 / 1000 = 1.8 kVA. For et trefasesystem med 30 ampere ved 400 volt linje-til-linje: kVA = (30 A × 400 V) / 1000 = 12000 / 1000 = 12 kVA."
+        },
+        "faq": {
+          "heading": "Ofte Stilte Spørsmål",
+          "items": [
+            {
+              "question": "Hva er formelen for å konvertere ampere til kVA?",
+              "answer": "Formelen for å konvertere ampere (A) til kilovoltampere (kVA) er: kVA = (A × V) / 1000, hvor A er strømmen i ampere, V er spenningen i volt, og kVA er tilsynelatende effekt i kilovoltampere."
+            },
+            {
+              "question": "Trenger jeg å kjenne spenningen for å konvertere ampere til kVA?",
+              "answer": "Ja, spenning kreves for konverteringen. Tilsynelatende effekt (kVA) avhenger av både strøm (ampere) og spenning. Vanlige spenninger inkluderer 120V, 230V, 240V, 380V og 400V avhengig av din plassering og applikasjon."
+            },
+            {
+              "question": "Hva er forskjellen mellom kVA og kW?",
+              "answer": "kVA (kilovoltampere) representerer tilsynelatende effekt, som er den totale effekten i en elektrisk krets. kW (kilowatt) representerer virkelig effekt (aktiv effekt), som er det faktiske arbeidet som utføres. Forholdet mellom dem er: kW = kVA × PF, hvor PF er effektfaktoren. kVA er alltid lik eller større enn kW."
+            },
+            {
+              "question": "Trenger jeg effektfaktor for å konvertere ampere til kVA?",
+              "answer": "Nei, effektfaktor er ikke påkrevd for å konvertere ampere til kVA. Formelen kVA = (A × V) / 1000 krever bare strøm (ampere) og spenning. Effektfaktor er bare nødvendig når man konverterer mellom virkelig effekt (kW) og tilsynelatende effekt (kVA)."
+            },
+            {
+              "question": "Kan jeg bruke denne kalkulatoren for trefasesystemer?",
+              "answer": "Ja, du kan bruke denne kalkulatoren for trefasesystemer. For trefaseberegninger, bruk linje-til-linje spenning (ikke fase-spenning). For eksempel, for et 400V trefasesystem, bruk 400V i kalkulatoren."
+            },
+            {
+              "question": "Er denne kalkulatoren gratis?",
+              "answer": "Ja, vår Ampere til kVA kalkulator er helt gratis. Ingen registrering eller betaling kreves. Skriv bare inn verdiene dine (ampere og spenning) og få umiddelbare, nøyaktige resultater."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

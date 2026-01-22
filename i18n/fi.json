@@ -278,6 +278,58 @@
           ]
         }
       }
+    },
+    "ampToKva": {
+      "title": "Ampeeri kVA Laskin",
+      "description": "Muunna ampeerit (A) kilovoltampeereiksi (kVA) heti ja tarkasti käyttämällä jännitettä",
+      "amps": "Ampeeri (A)",
+      "volts": "Jännite (V)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "seo": {
+        "title": "Ampeeri kVA Muunnoslaskin - Ilmainen Online Sähkötyökalu",
+        "description": "Ilmainen Ampeeri kVA muunnoslaskin. Muunna ampeerit kilovoltampeereiksi heti käyttämällä jännitettä. Täydellinen sähköisiin laskelmiin, piirisuunnitteluun ja tehojärjestelmäanalyysiin.",
+        "keywords": "ampeeri kva laskin, ampeeri kilovoltampeeri muunnin, muunnos ampeeri kva, virta näennäisteho laskin, sähkölaskin, kva laskin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka muuntaa Ampeerit kVA:ksi",
+          "paragraph1": "Ampeerien (A) muuntaminen kilovoltampeereiksi (kVA) on peruslaskelma sähkötekniikassa ja tehojärjestelmissä. Ampeerit edustavat sähkövirtaa, kun taas kVA edustaa näennäistehoa. Muunnos vaatii jännitteen (V) tuntemusta. Toisin kuin todellinen teho (kW), näennäisteho (kVA) ei vaadi tehokerrointa, mikä tekee tästä muunnoksesta yksinkertaisen. Ilmainen Ampeeri kVA muunnoslaskimemme tekee tästä prosessista nopean ja helpon, tarjoten välittömiä ja tarkkoja tuloksia sähköisiin laskelmiisi.",
+          "paragraph2": "Muunnoskaava on: kVA = (A × V) / 1000, jossa A on virta ampeereina, V on jännite volteina, ja kVA on näennäisteho kilovoltampeereina. Näennäisteho edustaa kokonaistehoa sähköpiirissä, joka yhdistää sekä todellisen tehon (watit) että loistehon (VAR). Tämä eroaa todellisesta tehosta (kW), joka ottaa huomioon vain todella suoritetun työn.",
+          "paragraph3": "Tätä muunnosta käytetään yleisesti erilaisissa sovelluksissa: muuntajien ja generaattorien mitoitus, näennäistehon vaatimusten laskeminen, sähköisten jakelujärjestelmien suunnittelu, sulakkeiden ja katkaisijoiden arvojen määrittäminen, sähköisten kuormitusominaisuuksien ymmärtäminen sekä asuin-, kaupallisten ja teollisten sähköjärjestelmien kanssa työskentely. Tieto siitä, kuinka muuntaa Ampeerit kVA:ksi, auttaa sinua tekemään tietoon perustuvia päätöksiä sähköjärjestelmien suunnittelusta, laitteiden valinnasta ja energianhallinnasta.",
+          "paragraph4": "Laskimemme ottaa ampeerit ja jännitteen syötteiksi, soveltaa automaattisesti muunnoskaavaa ja antaa tuloksen kilovoltampeereina. Laskin käsittelee sekä yksivaihe- että kolmivaihelaskelmia (kolmivaiheiselle käytä linja-linja jännitettä). Työskenteletpä muuntajien, generaattorien, moottoreiden vai minkä tahansa sähkölaitteiden kanssa, Ampeeri kVA laskimemme tarjoaa tarkkoja, välittömiä muunnoksia.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "Jos sinulla on laite, joka kuluttaa 20 ampeeria 230 voltilla, näennäisteho kVA:na olisi: kVA = (20 A × 230 V) / 1000 = 4600 / 1000 = 4.6 kVA. Laitteelle, jossa on 15 ampeeria 120 voltilla: kVA = (15 A × 120 V) / 1000 = 1800 / 1000 = 1.8 kVA. Kolmivaihejärjestelmälle 30 ampeerilla 400 voltin linja-linja jännitteellä: kVA = (30 A × 400 V) / 1000 = 12000 / 1000 = 12 kVA."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava ampeerien muuntamiseksi kVA:ksi?",
+              "answer": "Kaava ampeerien (A) muuntamiseksi kilovoltampeereiksi (kVA) on: kVA = (A × V) / 1000, jossa A on virta ampeereina, V on jännite volteina, ja kVA on näennäisteho kilovoltampeereina."
+            },
+            {
+              "question": "Tarvitseeko minun tietää jännite muuntaakseni ampeerit kVA:ksi?",
+              "answer": "Kyllä, jännite vaaditaan muunnokseen. Näennäisteho (kVA) riippuu sekä virrasta (ampeerit) että jännitteestä. Tyypilliset jännitteet sisältävät 120V, 230V, 240V, 380V ja 400V sijainnistasi ja sovelluksestasi riippuen."
+            },
+            {
+              "question": "Mikä on ero kVA:n ja kW:n välillä?",
+              "answer": "kVA (kilovoltampeeri) edustaa näennäistehoa, joka on kokonaisteho sähköpiirissä. kW (kilowatti) edustaa todellista tehoa (aktiivitehoa), joka on todella suoritettu työ. Niiden välinen suhde on: kW = kVA × PF, jossa PF on tehokerroin. kVA on aina yhtä suuri tai suurempi kuin kW."
+            },
+            {
+              "question": "Tarvitsenko tehokerrointa muuntaakseni ampeerit kVA:ksi?",
+              "answer": "Ei, tehokerrointa ei tarvita ampeerien muuntamiseen kVA:ksi. Kaava kVA = (A × V) / 1000 vaatii vain virran (ampeerit) ja jännitteen. Tehokerroin tarvitaan vain muunnettaessa todellisen tehon (kW) ja näennäistehon (kVA) välillä."
+            },
+            {
+              "question": "Voinko käyttää tätä laskinta kolmivaihejärjestelmiin?",
+              "answer": "Kyllä, voit käyttää tätä laskinta kolmivaihejärjestelmiin. Kolmivaihelaskelmiin käytä linja-linja jännitettä (ei vaihejännitettä). Esimerkiksi 400 V kolmivaihejärjestelmälle käytä 400 V laskimessa."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, Ampeeri kVA laskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Syötä yksinkertaisesti arvosi (ampeerit ja jännite) ja saat välittömät, tarkat tulokset."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

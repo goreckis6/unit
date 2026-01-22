@@ -278,6 +278,58 @@
           ]
         }
       }
+    },
+    "ampToKva": {
+      "title": "Kalkulator Ampery na kVA",
+      "description": "Konwertuj ampery (A) na kilowoltampery (kVA) natychmiast i dokładnie używając napięcia",
+      "amps": "Ampery (A)",
+      "volts": "Napięcie (V)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "seo": {
+        "title": "Kalkulator Konwersji Ampery na kVA - Darmowe Narzędzie Elektryczne",
+        "description": "Darmowy kalkulator konwersji ampery na kVA. Konwertuj ampery na kilowoltampery natychmiast używając napięcia. Idealne do obliczeń elektrycznych, projektowania obwodów i analizy systemów zasilania.",
+        "keywords": "kalkulator ampery na kva, konwerter amperów na kilowoltampery, konwersja ampery kva, kalkulator prądu na moc pozorną, kalkulator elektryczny, kalkulator kva, darmowy kalkulator",
+        "content": {
+          "heading": "Jak konwertować Ampery na kVA",
+          "paragraph1": "Konwersja ampery (A) na kilowoltampery (kVA) jest podstawowym obliczeniem w inżynierii elektrycznej i systemach zasilania. Ampery reprezentują prąd elektryczny, podczas gdy kVA reprezentuje moc pozorną. Konwersja wymaga znajomości napięcia (V). W przeciwieństwie do mocy rzeczywistej (kW), moc pozorna (kVA) nie wymaga współczynnika mocy, co czyni tę konwersję prostą. Nasz darmowy kalkulator konwersji Ampery na kVA czyni ten proces szybkim i łatwym, zapewniając natychmiastowe i dokładne wyniki dla Twoich obliczeń elektrycznych.",
+          "paragraph2": "Wzór konwersji to: kVA = (A × V) / 1000, gdzie A to prąd w amperach, V to napięcie w woltach, a kVA to moc pozorna w kilowoltamperach. Moc pozorna reprezentuje całkowitą moc w obwodzie elektrycznym, łącząc zarówno moc rzeczywistą (watty), jak i moc bierną (VAR). To różni się od mocy rzeczywistej (kW), która uwzględnia tylko faktyczną wykonywaną pracę.",
+          "paragraph3": "Ta konwersja jest powszechnie używana w różnych zastosowaniach: dobieranie transformatorów i generatorów, obliczanie wymagań mocy pozornej, projektowanie systemów dystrybucji energii elektrycznej, określanie wartości bezpieczników i wyłączników, zrozumienie charakterystyk obciążenia elektrycznego oraz praca z domowymi, komercyjnymi i przemysłowymi systemami elektrycznymi. Znajomość konwersji Ampery na kVA pomaga w podejmowaniu świadomych decyzji dotyczących projektowania systemów elektrycznych, doboru urządzeń i zarządzania energią.",
+          "paragraph4": "Nasz kalkulator przyjmuje ampery i napięcie jako dane wejściowe, automatycznie stosuje wzór konwersji i zapewnia wynik w kilowoltamperach. Kalkulator obsługuje zarówno obliczenia jednofazowe, jak i trójfazowe (dla trójfazowych użyj napięcia międzyfazowego). Niezależnie od tego, czy pracujesz z transformatorami, generatorami, silnikami czy jakimikolwiek urządzeniami elektrycznymi, nasz kalkulator Ampery na kVA zapewnia dokładne, natychmiastowe konwersje.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "Jeśli masz urządzenie pobierające 20 amperów przy napięciu 230 woltów, moc pozorna w kVA wyniesie: kVA = (20 A × 230 V) / 1000 = 4600 / 1000 = 4.6 kVA. Dla urządzenia pobierającego 15 amperów przy napięciu 120 woltów: kVA = (15 A × 120 V) / 1000 = 1800 / 1000 = 1.8 kVA. Dla systemu trójfazowego z 30 amperami przy napięciu międzyfazowym 400 woltów: kVA = (30 A × 400 V) / 1000 = 12000 / 1000 = 12 kVA."
+        },
+        "faq": {
+          "heading": "Najczęściej zadawane pytania",
+          "items": [
+            {
+              "question": "Jaki jest wzór do konwersji ampery na kVA?",
+              "answer": "Wzór do konwersji ampery (A) na kilowoltampery (kVA) to: kVA = (A × V) / 1000, gdzie A to prąd w amperach, V to napięcie w woltach, a kVA to moc pozorna w kilowoltamperach."
+            },
+            {
+              "question": "Czy muszę znać napięcie, aby konwertować ampery na kVA?",
+              "answer": "Tak, napięcie jest wymagane do konwersji. Moc pozorna (kVA) zależy zarówno od prądu (ampery), jak i napięcia. Typowe napięcia obejmują 120V, 230V, 240V, 380V i 400V w zależności od lokalizacji i zastosowania."
+            },
+            {
+              "question": "Jaka jest różnica między kVA a kW?",
+              "answer": "kVA (kilowoltampery) reprezentuje moc pozorną, która jest całkowitą mocą w obwodzie elektrycznym. kW (kilowaty) reprezentuje moc rzeczywistą (moc czynną), która jest faktyczną wykonywaną pracą. Zależność między nimi to: kW = kVA × PF, gdzie PF to współczynnik mocy. kVA jest zawsze równe lub większe niż kW."
+            },
+            {
+              "question": "Czy potrzebuję współczynnika mocy do konwersji ampery na kVA?",
+              "answer": "Nie, współczynnik mocy nie jest wymagany do konwersji ampery na kVA. Wzór kVA = (A × V) / 1000 wymaga tylko prądu (ampery) i napięcia. Współczynnik mocy jest potrzebny tylko przy konwersji między mocą rzeczywistą (kW) a mocą pozorną (kVA)."
+            },
+            {
+              "question": "Czy mogę użyć tego kalkulatora dla systemów trójfazowych?",
+              "answer": "Tak, możesz użyć tego kalkulatora dla systemów trójfazowych. W przypadku obliczeń trójfazowych użyj napięcia międzyfazowego (nie napięcia fazowego). Na przykład dla systemu trójfazowego 400V użyj 400V w kalkulatorze."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak, nasz kalkulator Ampery na kVA jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Po prostu wprowadź wartości (ampery i napięcie) i otrzymaj natychmiastowe, dokładne wyniki."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

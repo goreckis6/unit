@@ -278,6 +278,58 @@
           ]
         }
       }
+    },
+    "ampToKva": {
+      "title": "Ampere till kVA Kalkylator",
+      "description": "Konvertera ampere (A) till kilovoltampere (kVA) omedelbart och exakt med spänning",
+      "amps": "Ampere (A)",
+      "volts": "Spänning (V)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "seo": {
+        "title": "Ampere till kVA Omvandlingskalkylator - Gratis Online Elektriskt Verktyg",
+        "description": "Gratis Ampere till kVA omvandlingskalkylator. Konvertera ampere till kilovoltampere omedelbart med spänning. Perfekt för elektriska beräkningar, kretsdesign och kraftsystemanalys.",
+        "keywords": "ampere kva kalkylator, ampere kilovoltampere omvandlare, omvandling ampere kva, ström skenbar effekt kalkylator, elektrisk kalkylator, kva kalkylator, gratis kalkylator",
+        "content": {
+          "heading": "Hur man konverterar Ampere till kVA",
+          "paragraph1": "Att konvertera ampere (A) till kilovoltampere (kVA) är en grundläggande beräkning inom elektroteknik och kraftsystem. Ampere representerar elektrisk ström, medan kVA representerar skenbar effekt. Omvandlingen kräver kunskap om spänning (V). Till skillnad från verklig effekt (kW) kräver skenbar effekt (kVA) ingen effektfaktor, vilket gör denna omvandling enkel. Vår gratis Ampere till kVA omvandlingskalkylator gör denna process snabb och enkel, och ger omedelbara och exakta resultat för dina elektriska beräkningar.",
+          "paragraph2": "Omvandlingsformeln är: kVA = (A × V) / 1000, där A är strömmen i ampere, V är spänningen i volt, och kVA är skenbar effekt i kilovoltampere. Skenbar effekt representerar den totala effekten i en elektrisk krets, som kombinerar både verklig effekt (watt) och reaktiv effekt (VAR). Detta skiljer sig från verklig effekt (kW), som endast tar hänsyn till det faktiska arbetet som utförs.",
+          "paragraph3": "Denna omvandling används vanligtvis i olika tillämpningar: dimensionering av transformatorer och generatorer, beräkning av skenbar effektkrav, design av elektriska distributionssystem, bestämning av säkrings- och strömbrytarvärden, förståelse av elektriska lastkarakteristika och arbete med bostads-, kommersiella och industriella elektriska system. Att veta hur man konverterar Ampere till kVA hjälper dig att fatta välgrundade beslut om elektriskt systemdesign, utrustningsval och energihantering.",
+          "paragraph4": "Vår kalkylator tar ampere och spänning som indata, tillämpar automatiskt omvandlingsformeln och ger resultatet i kilovoltampere. Kalkylatorn hanterar både enfas- och trefasberäkningar (för trefas, använd linje-till-linje spänning). Oavsett om du arbetar med transformatorer, generatorer, motorer eller elektrisk utrustning, ger vår Ampere till kVA kalkylator exakta, omedelbara omvandlingar.",
+          "exampleHeading": "Exempel:",
+          "exampleText": "Om du har en enhet som drar 20 ampere vid 230 volt, skulle skenbar effekt i kVA vara: kVA = (20 A × 230 V) / 1000 = 4600 / 1000 = 4.6 kVA. För en enhet som drar 15 ampere vid 120 volt: kVA = (15 A × 120 V) / 1000 = 1800 / 1000 = 1.8 kVA. För ett trefassystem med 30 ampere vid 400 volt linje-till-linje: kVA = (30 A × 400 V) / 1000 = 12000 / 1000 = 12 kVA."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är formeln för att konvertera ampere till kVA?",
+              "answer": "Formeln för att konvertera ampere (A) till kilovoltampere (kVA) är: kVA = (A × V) / 1000, där A är strömmen i ampere, V är spänningen i volt, och kVA är skenbar effekt i kilovoltampere."
+            },
+            {
+              "question": "Behöver jag känna spänningen för att konvertera ampere till kVA?",
+              "answer": "Ja, spänning krävs för omvandlingen. Skenbar effekt (kVA) beror på både ström (ampere) och spänning. Vanliga spänningar inkluderar 120V, 230V, 240V, 380V och 400V beroende på din plats och tillämpning."
+            },
+            {
+              "question": "Vad är skillnaden mellan kVA och kW?",
+              "answer": "kVA (kilovoltampere) representerar skenbar effekt, vilket är den totala effekten i en elektrisk krets. kW (kilowatt) representerar verklig effekt (aktiv effekt), vilket är det faktiska arbetet som utförs. Förhållandet mellan dem är: kW = kVA × PF, där PF är effektfaktorn. kVA är alltid lika med eller större än kW."
+            },
+            {
+              "question": "Behöver jag effektfaktor för att konvertera ampere till kVA?",
+              "answer": "Nej, effektfaktor krävs inte för att konvertera ampere till kVA. Formeln kVA = (A × V) / 1000 kräver endast ström (ampere) och spänning. Effektfaktor behövs endast när man konverterar mellan verklig effekt (kW) och skenbar effekt (kVA)."
+            },
+            {
+              "question": "Kan jag använda denna kalkylator för trefassystem?",
+              "answer": "Ja, du kan använda denna kalkylator för trefassystem. För trefasberäkningar, använd linje-till-linje spänning (inte fas-spänning). Till exempel, för ett 400V trefassystem, använd 400V i kalkylatorn."
+            },
+            {
+              "question": "Är denna kalkylator gratis?",
+              "answer": "Ja, vår Ampere till kVA kalkylator är helt gratis. Ingen registrering eller betalning krävs. Ange helt enkelt dina värden (ampere och spänning) och få omedelbara, exakta resultat."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

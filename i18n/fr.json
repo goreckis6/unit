@@ -278,6 +278,58 @@
           ]
         }
       }
+    },
+    "ampToKva": {
+      "title": "Calculateur Ampères vers kVA",
+      "description": "Convertissez les ampères (A) en kilovoltampères (kVA) instantanément et précisément en utilisant la tension",
+      "amps": "Ampères (A)",
+      "volts": "Tension (V)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "seo": {
+        "title": "Calculateur de Conversion Ampères vers kVA - Outil Électrique en Ligne Gratuit",
+        "description": "Calculateur de conversion ampères vers kVA gratuit. Convertissez les ampères en kilovoltampères instantanément avec la tension. Parfait pour les calculs électriques, conception de circuits et analyse de systèmes d'alimentation.",
+        "keywords": "calculateur ampères kva, convertisseur ampères kilovoltampères, conversion ampères kva, calculateur courant puissance apparente, calculateur électrique, calculateur kva, calculateur gratuit",
+        "content": {
+          "heading": "Comment convertir les Ampères en kVA",
+          "paragraph1": "La conversion des ampères (A) en kilovoltampères (kVA) est un calcul fondamental en génie électrique et dans les systèmes d'alimentation. Les ampères représentent le courant électrique, tandis que kVA représente la puissance apparente. La conversion nécessite la connaissance de la tension (V). Contrairement à la puissance réelle (kW), la puissance apparente (kVA) ne nécessite pas de facteur de puissance, ce qui rend cette conversion simple. Notre calculateur gratuit de conversion Ampères vers kVA rend ce processus rapide et facile, fournissant des résultats instantanés et précis pour vos calculs électriques.",
+          "paragraph2": "La formule de conversion est: kVA = (A × V) / 1000, où A est le courant en ampères, V est la tension en volts, et kVA est la puissance apparente en kilovoltampères. La puissance apparente représente la puissance totale dans un circuit électrique, combinant à la fois la puissance réelle (watts) et la puissance réactive (VAR). Ceci diffère de la puissance réelle (kW), qui ne tient compte que du travail réellement effectué.",
+          "paragraph3": "Cette conversion est couramment utilisée dans diverses applications: dimensionnement des transformateurs et générateurs, calcul des exigences de puissance apparente, conception de systèmes de distribution électrique, détermination des valeurs des fusibles et disjoncteurs, compréhension des caractéristiques de charge électrique et travail avec des systèmes électriques résidentiels, commerciaux et industriels. Savoir comment convertir les Ampères en kVA vous aide à prendre des décisions éclairées concernant la conception des systèmes électriques, la sélection des équipements et la gestion de l'énergie.",
+          "paragraph4": "Notre calculateur prend les ampères et la tension comme entrées, applique automatiquement la formule de conversion et fournit le résultat en kilovoltampères. Le calculateur gère à la fois les calculs monophasés et triphasés (pour triphasé, utilisez la tension entre phases). Que vous travailliez avec des transformateurs, générateurs, moteurs ou tout équipement électrique, notre calculateur Ampères vers kVA fournit des conversions précises et instantanées.",
+          "exampleHeading": "Exemple:",
+          "exampleText": "Si vous avez un appareil tirant 20 ampères à 230 volts, la puissance apparente en kVA serait: kVA = (20 A × 230 V) / 1000 = 4600 / 1000 = 4.6 kVA. Pour un appareil tirant 15 ampères à 120 volts: kVA = (15 A × 120 V) / 1000 = 1800 / 1000 = 1.8 kVA. Pour un système triphasé avec 30 ampères à 400 volts entre phases: kVA = (30 A × 400 V) / 1000 = 12000 / 1000 = 12 kVA."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Quelle est la formule pour convertir les ampères en kVA?",
+              "answer": "La formule pour convertir les ampères (A) en kilovoltampères (kVA) est: kVA = (A × V) / 1000, où A est le courant en ampères, V est la tension en volts, et kVA est la puissance apparente en kilovoltampères."
+            },
+            {
+              "question": "Dois-je connaître la tension pour convertir les ampères en kVA?",
+              "answer": "Oui, la tension est requise pour la conversion. La puissance apparente (kVA) dépend à la fois du courant (ampères) et de la tension. Les tensions courantes incluent 120V, 230V, 240V, 380V et 400V selon votre emplacement et votre application."
+            },
+            {
+              "question": "Quelle est la différence entre kVA et kW?",
+              "answer": "kVA (kilovoltampères) représente la puissance apparente, qui est la puissance totale dans un circuit électrique. kW (kilowatts) représente la puissance réelle (puissance active), qui est le travail réellement effectué. La relation entre eux est: kW = kVA × PF, où PF est le facteur de puissance. kVA est toujours égal ou supérieur à kW."
+            },
+            {
+              "question": "Ai-je besoin du facteur de puissance pour convertir les ampères en kVA?",
+              "answer": "Non, le facteur de puissance n'est pas requis pour convertir les ampères en kVA. La formule kVA = (A × V) / 1000 ne nécessite que le courant (ampères) et la tension. Le facteur de puissance n'est nécessaire que lors de la conversion entre la puissance réelle (kW) et la puissance apparente (kVA)."
+            },
+            {
+              "question": "Puis-je utiliser ce calculateur pour les systèmes triphasés?",
+              "answer": "Oui, vous pouvez utiliser ce calculateur pour les systèmes triphasés. Pour les calculs triphasés, utilisez la tension entre phases (pas la tension de phase). Par exemple, pour un système triphasé 400V, utilisez 400V dans le calculateur."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit?",
+              "answer": "Oui, notre calculateur Ampères vers kVA est entièrement gratuit. Aucune inscription ou paiement requis. Entrez simplement vos valeurs (ampères et tension) et obtenez des résultats instantanés et précis."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

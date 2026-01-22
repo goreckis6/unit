@@ -14,19 +14,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'pnpm'
-
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 8.15.0
+          run_install: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: Build Next.js
         run: pnpm build
@@ -64,6 +64,16 @@ jobs:
           target: "/var/www/unitconverterhub"
           strip_components: 0
 
+      - name: Copy Caddyfile to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.FRONTEND_VPS_HOST }}
+          username: ${{ secrets.FRONTEND_VPS_USERNAME }}
+          key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          source: "Caddyfile"
+          target: "/tmp"
+          strip_components: 0
+
       - name: Setup systemd service and restart
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -82,6 +92,15 @@ jobs:
             # Ensure .next/static symlink exists (created during build)
             if [ ! -L "$APP_DIR/.next/standalone/.next/static" ] && [ -d "$APP_DIR/.next/static" ]; then
               sudo ln -sf "$APP_DIR/.next/static" "$APP_DIR/.next/standalone/.next/static" || true
+            fi
+            
+            # Copy Caddyfile to /etc/caddy/Caddyfile
+            if [ -f /tmp/Caddyfile ]; then
+              sudo cp /tmp/Caddyfile /etc/caddy/Caddyfile
+              sudo chown root:root /etc/caddy/Caddyfile
+              sudo chmod 644 /etc/caddy/Caddyfile
+              sudo caddy reload --config /etc/caddy/Caddyfile || sudo caddy reload
+              echo "✅ Caddyfile updated and Caddy reloaded"
             fi
             
             # Create systemd service file
@@ -114,3 +133,4 @@ jobs:
             sudo systemctl status "$SERVICE_NAME" --no-pager || exit 1
             
             echo "✅ Next.js app deployed and running!"
+            echo "✅ Caddy configuration updated"

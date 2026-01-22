@@ -39,11 +39,8 @@ export default async function MathCalculatorsPage() {
               <span>{tCommon('home')}</span>
             </Link>
             <div className="header-content">
-              <div className="title-badge">{t('mathCalculators.badge') || 'Math Calculators'}</div>
+              <div className="title-badge">{t('mathCalculators.badge') || 'Math'}</div>
               <h1 className="page-title">{t('mathCalculators.title')}</h1>
-              <p className="page-description">
-                {t('mathCalculators.description')}
-              </p>
             </div>
           </div>
 

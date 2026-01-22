@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'common' });
-  const tHome = await getTranslations({ locale, namespace: 'common.home' });
+  const tHome = await getTranslations({ locale, namespace: 'common.homePage' });
   const siteUrl = 'https://unitconverterhub.com';
 
   return (

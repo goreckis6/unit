@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { WattsToKvaCalculator } from './calculator';
 import { FaqSchema } from '@/components/FaqSchema';
+import { FaqSection } from '@/components/FaqSection';
 import { routing } from '@/i18n/routing';
 
 interface FaqItem {
@@ -48,6 +49,7 @@ export default async function WattsToKvaPage({ params }: { params: Promise<{ loc
   
   // Get SEO content translations
   const tSeo = await getTranslations({ locale, namespace: 'calculators.wattsToKva.seo.content' });
+  const tFaq = await getTranslations({ locale, namespace: 'calculators.wattsToKva.seo.faq' });
 
   return (
     <>
@@ -111,6 +113,12 @@ export default async function WattsToKvaPage({ params }: { params: Promise<{ loc
           </div>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      {faqItems.length > 0 && (
+        <FaqSection heading={tFaq('heading')} items={faqItems} />
+      )}
+
       <Footer />
     </>
   );

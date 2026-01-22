@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AdditionCalculator } from './calculator';
 import { FaqSchema } from '@/components/FaqSchema';
+import { FaqSection } from '@/components/FaqSection';
 import { routing } from '@/i18n/routing';
 
 interface FaqItem {
@@ -42,6 +43,7 @@ export default async function AdditionPage({ params }: { params: Promise<{ local
   const t = await getTranslations({ locale, namespace: 'calculators.addition' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
   const tSeo = await getTranslations({ locale, namespace: 'calculators.addition.seo.content' });
+  const tFaq = await getTranslations({ locale, namespace: 'calculators.addition.seo.faq' });
   
   // Get FAQ items from translations
   const faqItems = await getFaqItems(locale);
@@ -104,6 +106,12 @@ export default async function AdditionPage({ params }: { params: Promise<{ local
           </div>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      {faqItems.length > 0 && (
+        <FaqSection heading={tFaq('heading')} items={faqItems} />
+      )}
+
       <Footer />
     </>
   );

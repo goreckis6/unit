@@ -24,13 +24,15 @@ async function getFaqItems(locale: string): Promise<FaqItem[]> {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'calculators.electricCalculators' });
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.electricCalculators.seoMeta' });
   
   return {
-    title: `${t('title')} - UnitConverterHub.com`,
-    description: t('description'),
+    title: `${tSeo('title')} - UnitConverterHub.com`,
+    description: tSeo('description'),
+    keywords: tSeo('keywords'),
     openGraph: {
-      title: `${t('title')} - UnitConverterHub.com`,
-      description: t('description'),
+      title: `${tSeo('title')} - UnitConverterHub.com`,
+      description: tSeo('description'),
       type: 'website',
     },
   };

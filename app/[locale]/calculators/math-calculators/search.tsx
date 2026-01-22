@@ -6,9 +6,21 @@ interface SearchProps {
   searchQuery: string;
   onSearchChange: (query: string) => void;
   resultsCount: number;
+  placeholder: string;
+  resultsText: string;
+  noResultsText: string;
+  noResultsHint: string;
 }
 
-export function CalculatorSearch({ searchQuery, onSearchChange, resultsCount }: SearchProps) {
+export function CalculatorSearch({ 
+  searchQuery, 
+  onSearchChange, 
+  resultsCount,
+  placeholder,
+  resultsText,
+  noResultsText,
+  noResultsHint
+}: SearchProps) {
   return (
     <div className="search-section">
       <div className="search-wrapper">
@@ -19,7 +31,7 @@ export function CalculatorSearch({ searchQuery, onSearchChange, resultsCount }: 
           type="text" 
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          placeholder="Search calculators..."
+          placeholder={placeholder}
           className="search-input"
         />
         {searchQuery && (
@@ -36,7 +48,7 @@ export function CalculatorSearch({ searchQuery, onSearchChange, resultsCount }: 
       </div>
       {searchQuery && (
         <div className="search-results-count">
-          {resultsCount} {resultsCount === 1 ? 'result found' : 'results found'}
+          {resultsCount} {resultsText}
         </div>
       )}
     </div>

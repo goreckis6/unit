@@ -18,6 +18,7 @@ interface CalculatorListProps {
 
 export function CalculatorList({ calculators }: CalculatorListProps) {
   const t = useTranslations('calculators');
+  const tCommon = useTranslations('common');
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredCalculators = useMemo(() => {
@@ -51,6 +52,10 @@ export function CalculatorList({ calculators }: CalculatorListProps) {
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         resultsCount={filteredCalculators.length}
+        placeholder={t('mathCalculators.searchPlaceholder') || 'Search calculators...'}
+        resultsText={t('mathCalculators.resultsFound') || 'results found'}
+        noResultsText={t('mathCalculators.noResults') || 'No results found'}
+        noResultsHint={t('mathCalculators.tryDifferentSearch') || 'Try a different search term'}
       />
 
       {/* Calculators List */}
@@ -78,8 +83,8 @@ export function CalculatorList({ calculators }: CalculatorListProps) {
             <svg className="no-results-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <p className="no-results-text">No results found</p>
-            <p className="no-results-hint">Try a different search term</p>
+            <p className="no-results-text">{t('mathCalculators.noResults') || 'No results found'}</p>
+            <p className="no-results-hint">{t('mathCalculators.tryDifferentSearch') || 'Try a different search term'}</p>
           </div>
         )}
       </div>

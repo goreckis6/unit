@@ -7,6 +7,20 @@ import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
 import { routing } from '@/i18n/routing';
 
+function generateHreflangUrls(path: string) {
+  const baseUrl = 'https://unitconverterhub.com';
+  const languages: Record<string, string> = {};
+  
+  routing.locales.forEach((loc) => {
+    const url = loc === 'en' 
+      ? `${baseUrl}${path}` 
+      : `${baseUrl}/${loc}${path}`;
+    languages[loc] = url;
+  });
+  
+  return languages;
+}
+
 interface FaqItem {
   question: string;
   answer: string;
@@ -25,15 +39,24 @@ async function getFaqItems(locale: string): Promise<FaqItem[]> {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'calculators.addition.seo' });
+  const baseUrl = 'https://unitconverterhub.com';
+  const path = locale === 'en' ? '/calculators/math/addition' : `/${locale}/calculators/math/addition`;
+  const canonicalUrl = `${baseUrl}${path}`;
+  const hreflangUrls = generateHreflangUrls('/calculators/math/addition');
   
   return {
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),
+    alternates: {
+      canonical: canonicalUrl,
+      languages: hreflangUrls,
+    },
     openGraph: {
       title: t('title'),
       description: t('description'),
       type: 'website',
+      url: canonicalUrl,
     },
   };
 }

@@ -3,18 +3,41 @@ import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SoftwareApplicationSchema } from '@/components/SoftwareApplicationSchema';
+import { routing } from '@/i18n/routing';
+
+function generateHreflangUrls(path: string) {
+  const baseUrl = 'https://unitconverterhub.com';
+  const languages: Record<string, string> = {};
+  
+  routing.locales.forEach((loc) => {
+    const url = loc === 'en' 
+      ? `${baseUrl}${path}` 
+      : `${baseUrl}/${loc}${path}`;
+    languages[loc] = url;
+  });
+  
+  return languages;
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'common' });
+  const baseUrl = 'https://unitconverterhub.com';
+  const canonicalUrl = locale === 'en' ? baseUrl : `${baseUrl}/${locale}`;
+  const hreflangUrls = generateHreflangUrls('');
   
   return {
     title: `${t('siteName')} - UnitConverterHub.com`,
     description: t('description'),
+    alternates: {
+      canonical: canonicalUrl,
+      languages: hreflangUrls,
+    },
     openGraph: {
       title: `${t('siteName')} - UnitConverterHub.com`,
       description: t('description'),
       type: 'website',
+      url: canonicalUrl,
     },
   };
 }

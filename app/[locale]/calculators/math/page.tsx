@@ -5,6 +5,21 @@ import { Footer } from '@/components/Footer';
 import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
 import { CalculatorList } from './list';
+import { routing } from '@/i18n/routing';
+
+function generateHreflangUrls(path: string) {
+  const baseUrl = 'https://unitconverterhub.com';
+  const languages: Record<string, string> = {};
+  
+  routing.locales.forEach((loc) => {
+    const url = loc === 'en' 
+      ? `${baseUrl}${path}` 
+      : `${baseUrl}/${loc}${path}`;
+    languages[loc] = url;
+  });
+  
+  return languages;
+}
 
 interface FaqItem {
   question: string;
@@ -25,15 +40,24 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'calculators.mathCalculators' });
   const tSeo = await getTranslations({ locale, namespace: 'calculators.mathCalculators.seoMeta' });
+  const baseUrl = 'https://unitconverterhub.com';
+  const path = locale === 'en' ? '/calculators/math' : `/${locale}/calculators/math`;
+  const canonicalUrl = `${baseUrl}${path}`;
+  const hreflangUrls = generateHreflangUrls('/calculators/math');
   
   return {
     title: `${tSeo('title')} - UnitConverterHub.com`,
     description: tSeo('description'),
     keywords: tSeo('keywords'),
+    alternates: {
+      canonical: canonicalUrl,
+      languages: hreflangUrls,
+    },
     openGraph: {
       title: `${tSeo('title')} - UnitConverterHub.com`,
       description: tSeo('description'),
       type: 'website',
+      url: canonicalUrl,
     },
   };
 }

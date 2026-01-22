@@ -330,6 +330,58 @@
           ]
         }
       }
+    },
+    "ampToVa": {
+      "title": "Ampeeri VA Laskin",
+      "description": "Muunna ampeerit (A) voltampeereiksi (VA) heti ja tarkasti käyttämällä jännitettä",
+      "amps": "Ampeeri (A)",
+      "volts": "Jännite (V)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "seo": {
+        "title": "Ampeeri VA Muunnoslaskin - Ilmainen Online Sähkötyökalu",
+        "description": "Ilmainen Ampeeri VA muunnoslaskin. Muunna ampeerit voltampeereiksi heti käyttämällä jännitettä. Täydellinen sähköisiin laskelmiin, piirisuunnitteluun ja tehojärjestelmäanalyysiin.",
+        "keywords": "ampeeri va laskin, ampeeri voltampeeri muunnin, muunnos ampeeri va, virta näennäisteho laskin, sähkölaskin, va laskin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka muuntaa Ampeerit VA:ksi",
+          "paragraph1": "Ampeerien (A) muuntaminen voltampeereiksi (VA) on peruslaskelma sähkötekniikassa ja tehojärjestelmissä. Ampeerit edustavat sähkövirtaa, kun taas VA edustaa näennäistehoa. Muunnos vaatii jännitteen (V) tuntemusta. Toisin kuin todellinen teho (watti), näennäisteho (VA) ei vaadi tehokerrointa, mikä tekee tästä muunnoksesta yksinkertaisen. Ilmainen Ampeeri VA muunnoslaskimemme tekee tästä prosessista nopean ja helpon, tarjoten välittömiä ja tarkkoja tuloksia sähköisiin laskelmiisi.",
+          "paragraph2": "Muunnoskaava on: VA = A × V, jossa A on virta ampeereina, V on jännite volteina, ja VA on näennäisteho voltampeereina. Näennäisteho edustaa kokonaistehoa sähköpiirissä, joka yhdistää sekä todellisen tehon (watit) että loistehon (VAR). Tämä eroaa todellisesta tehosta (watti), joka ottaa huomioon vain todella suoritetun työn.",
+          "paragraph3": "Tätä muunnosta käytetään yleisesti erilaisissa sovelluksissa: muuntajien ja generaattorien mitoitus, näennäistehon vaatimusten laskeminen, sähköisten jakelujärjestelmien suunnittelu, sulakkeiden ja katkaisijoiden arvojen määrittäminen, sähköisten kuormitusominaisuuksien ymmärtäminen sekä asuin-, kaupallisten ja teollisten sähköjärjestelmien kanssa työskentely. Tieto siitä, kuinka muuntaa Ampeerit VA:ksi, auttaa sinua tekemään tietoon perustuvia päätöksiä sähköjärjestelmien suunnittelusta, laitteiden valinnasta ja energianhallinnasta.",
+          "paragraph4": "Laskimemme ottaa ampeerit ja jännitteen syötteiksi, soveltaa automaattisesti muunnoskaavaa ja antaa tuloksen voltampeereina. Laskin käsittelee sekä yksivaihe- että kolmivaihelaskelmia (kolmivaiheiselle käytä linja-linja jännitettä). Työskenteletpä muuntajien, generaattorien, moottoreiden vai minkä tahansa sähkölaitteiden kanssa, Ampeeri VA laskimemme tarjoaa tarkkoja, välittömiä muunnoksia.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "Jos sinulla on laite, joka kuluttaa 20 ampeeria 230 voltilla, näennäisteho VA:na olisi: VA = 20 A × 230 V = 4600 VA. Laitteelle, jossa on 15 ampeeria 120 voltilla: VA = 15 A × 120 V = 1800 VA. Kolmivaihejärjestelmälle 30 ampeerilla 400 voltin linja-linja jännitteellä: VA = 30 A × 400 V = 12000 VA."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava ampeerien muuntamiseksi VA:ksi?",
+              "answer": "Kaava ampeerien (A) muuntamiseksi voltampeereiksi (VA) on: VA = A × V, jossa A on virta ampeereina, V on jännite volteina, ja VA on näennäisteho voltampeereina."
+            },
+            {
+              "question": "Tarvitseeko minun tietää jännite muuntaakseni ampeerit VA:ksi?",
+              "answer": "Kyllä, jännite vaaditaan muunnokseen. Näennäisteho (VA) riippuu sekä virrasta (ampeerit) että jännitteestä. Tyypilliset jännitteet sisältävät 120V, 230V, 240V, 380V ja 400V sijainnistasi ja sovelluksestasi riippuen."
+            },
+            {
+              "question": "Mikä on ero VA:n ja watin välillä?",
+              "answer": "VA (voltampeeri) edustaa näennäistehoa, joka on kokonaisteho sähköpiirissä. Watti edustaa todellista tehoa (aktiivitehoa), joka on todella suoritettu työ. Niiden välinen suhde on: Watti = VA × PF, jossa PF on tehokerroin. VA on aina yhtä suuri tai suurempi kuin watti."
+            },
+            {
+              "question": "Tarvitsenko tehokerrointa muuntaakseni ampeerit VA:ksi?",
+              "answer": "Ei, tehokerrointa ei tarvita ampeerien muuntamiseen VA:ksi. Kaava VA = A × V vaatii vain virran (ampeerit) ja jännitteen. Tehokerroin tarvitaan vain muunnettaessa todellisen tehon (watti) ja näennäistehon (VA) välillä."
+            },
+            {
+              "question": "Voinko käyttää tätä laskinta kolmivaihejärjestelmiin?",
+              "answer": "Kyllä, voit käyttää tätä laskinta kolmivaihejärjestelmiin. Kolmivaihelaskelmiin käytä linja-linja jännitettä (ei vaihejännitettä). Esimerkiksi 400 V kolmivaihejärjestelmälle käytä 400 V laskimessa."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, Ampeeri VA laskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Syötä yksinkertaisesti arvosi (ampeerit ja jännite) ja saat välittömät, tarkat tulokset."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

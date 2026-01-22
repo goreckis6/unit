@@ -98,6 +98,12 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       descKey: 'ampToKva.description',
       path: '/calculators/electric/amp-to-kva',
     },
+    {
+      id: 'amps-to-va',
+      titleKey: 'ampToVa.title',
+      descKey: 'ampToVa.description',
+      path: '/calculators/electric/amps-to-va',
+    },
   ];
 
   return (

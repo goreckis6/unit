@@ -370,19 +370,97 @@ a {
   border-color: var(--primary-color);
 }
 
-.mobile-language-switcher {
+.mobile-language-section {
   margin-top: 1rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-color);
 }
 
-.mobile-language-switcher .language-selector {
-  width: 100%;
+.mobile-language-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  padding: 0 1.25rem;
 }
 
-.mobile-language-switcher .language-button {
+.mobile-language-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-language-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   width: 100%;
+  padding: 0.875rem 1.25rem;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  text-align: left;
+  border-radius: 0.5rem;
+  margin: 0;
+}
+
+.mobile-language-item:hover {
+  background: var(--bg-secondary);
+}
+
+.mobile-language-item.active {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.mobile-language-flag {
+  width: 24px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-language-flag svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.mobile-language-code {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  min-width: 32px;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+
+.mobile-language-item.active .mobile-language-code {
+  color: var(--primary-color);
+}
+
+.mobile-language-name {
+  flex: 1;
+}
+
+.mobile-language-check {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
 }
 
 .nav-link {
@@ -419,16 +497,38 @@ a {
   font-size: 1.5rem;
   font-weight: 700;
   transition: transform 0.2s ease;
+  text-decoration: none;
+  z-index: 101;
 }
 
 .logo:hover {
   transform: translateY(-1px);
 }
 
+.mobile-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .logo-icon {
-  font-size: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
   filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.3));
   transition: transform 0.3s ease;
+}
+
+.logo-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .logo:hover .logo-icon {
@@ -1368,7 +1468,8 @@ a {
   }
 
   .logo-icon {
-    font-size: 2rem;
+    width: 28px;
+    height: 28px;
   }
 
   .hero {
@@ -1421,7 +1522,8 @@ a {
   }
 
   .logo-icon {
-    font-size: 1.875rem;
+    width: 26px;
+    height: 26px;
   }
   .hero {
     padding: 4rem 0 3.5rem;
@@ -1634,7 +1736,8 @@ a {
   }
 
   .logo-icon {
-    font-size: 1.625rem;
+    width: 24px;
+    height: 24px;
   }
 
   .mobile-nav {

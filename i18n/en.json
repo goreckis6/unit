@@ -385,6 +385,58 @@
           ]
         }
       }
+    },
+    "ampsToVolt": {
+      "title": "Amps to Volt Calculator",
+      "description": "Calculate voltage (V) from current and resistance using Ohm's Law: V = I × R",
+      "amps": "Amperes (A)",
+      "ohms": "Resistance (Ω)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "seo": {
+        "title": "Amps to Volt Calculator - Ohm's Law Voltage Calculator | Free Online Tool",
+        "description": "Free Amps to Volt calculator. Find voltage from current and resistance using Ohm's Law (V = I × R). Instant, accurate results for circuits, electronics, and electrical engineering.",
+        "keywords": "amps to volt calculator, ohm's law calculator, current to voltage, resistance voltage calculator, V I R calculator, electrical calculator, free calculator",
+        "content": {
+          "heading": "How to Calculate Voltage from Amps and Resistance (Ohm's Law)",
+          "paragraph1": "Calculating voltage (V) from current in amperes (A) and resistance in ohms (Ω) is a fundamental application of Ohm's Law in electrical engineering and electronics. Ohm's Law states that the voltage across a conductor is equal to the current through it multiplied by its resistance: V = I × R. This relationship is essential for circuit analysis, component selection, and troubleshooting. Our free Amps to Volt calculator applies Ohm's Law instantly, giving you accurate voltage results from current and resistance.",
+          "paragraph2": "The formula is: V = I × R, where V is the voltage in volts, I is the current in amperes, and R is the resistance in ohms. Voltage represents the electrical potential difference that drives current through a circuit. Resistance opposes the flow of current. Together, these three quantities are always related by Ohm's Law in resistive circuits—whether DC or AC (using magnitude). Knowing any two, you can find the third.",
+          "paragraph3": "This calculation is used in many applications: designing and analysing DC and AC circuits, sizing conductors and load resistance, selecting fuses and protection devices, troubleshooting electrical faults, teaching electronics and electrical fundamentals, and working with resistors, heating elements, and LED circuits. Understanding how to find voltage from amps and resistance helps you design safe, efficient electrical systems and diagnose problems quickly.",
+          "paragraph4": "Our calculator accepts current (amps) and resistance (ohms) as inputs, applies V = I × R, and displays the voltage in volts. It works for any resistive load. Whether you're a student, technician, or engineer, our Amps to Volt calculator delivers precise results for your electrical calculations.",
+          "exampleHeading": "Example:",
+          "exampleText": "If a circuit has a current of 5 A through a resistance of 24 Ω, the voltage is: V = 5 A × 24 Ω = 120 V. For 0.5 A through 460 Ω: V = 0.5 A × 460 Ω = 230 V. For 10 A through 12 Ω: V = 10 A × 12 Ω = 120 V."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula for amps to volt?",
+              "answer": "The formula is Ohm's Law: V = I × R, where V is voltage in volts, I is current in amperes, and R is resistance in ohms. To find voltage from amps and resistance, multiply current by resistance."
+            },
+            {
+              "question": "Do I need resistance to convert amps to voltage?",
+              "answer": "Yes. Voltage cannot be found from current alone. Ohm's Law requires either resistance (V = I × R) or, in power calculations, voltage and power (but then you are not 'converting' amps to volts). For V = I × R, you must know both amps and ohms."
+            },
+            {
+              "question": "Does Ohm's Law apply to AC circuits?",
+              "answer": "Ohm's Law V = I × R applies to resistive AC circuits when using the magnitude of voltage, current, and resistance. For reactive components (inductors, capacitors), you need impedance (Z) instead of R: V = I × Z."
+            },
+            {
+              "question": "What units are used for resistance?",
+              "answer": "Resistance is measured in ohms (Ω). The calculator expects resistance in ohms. Common values range from milliohms (mΩ) for conductors to kilohms (kΩ) or megohms (MΩ) for resistors—use the numeric value in ohms (e.g. 1000 for 1 kΩ)."
+            },
+            {
+              "question": "Can I use this for battery or supply voltage?",
+              "answer": "Yes. If you know the current drawn by a load and its resistance, you can find the voltage across it with V = I × R. For a battery supplying a resistive load, this gives the voltage across the load (approximately the battery voltage when internal resistance is small)."
+            },
+            {
+              "question": "Is this calculator free to use?",
+              "answer": "Yes, our Amps to Volt calculator is free to use. No registration or payment is required. Enter current (amps) and resistance (ohms) to get voltage (volts) instantly."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

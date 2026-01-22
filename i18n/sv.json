@@ -385,6 +385,58 @@
           ]
         }
       }
+    },
+    "ampsToVolt": {
+      "title": "Ampere till Volt-kalkylator",
+      "description": "Beräkna spänning (V) från ström och resistans med Ohms lag: V = I × R",
+      "amps": "Ampere (A)",
+      "ohms": "Resistans (Ω)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "seo": {
+        "title": "Ampere till Volt-kalkylator – Ohms lag | Gratis onlineverktyg",
+        "description": "Gratis Ampere till Volt-kalkylator. Få spänning från ström och resistans (V = I × R). Omedelbara, exakta resultat för kretsar och elektronik.",
+        "keywords": "ampere volt kalkylator, Ohms lag, ström spänning, resistans kalkylator, V I R, elräknare, gratis",
+        "content": {
+          "heading": "Hur man beräknar spänning från ampere och resistans (Ohms lag)",
+          "paragraph1": "Att beräkna spänning (V) från ström i ampere (A) och resistans i ohm (Ω) är en grundläggande tillämpning av Ohms lag. V = I × R. Vår kalkylator tillämpar Ohms lag och ger spänningen.",
+          "paragraph2": "Formel: V = I × R. V = spänning i volt, I = ström i ampere, R = resistans i ohm. Spänningen driver strömmen, resistansen begränsar den. Dessa tre storheter är förknippade genom Ohms lag i resistiva kretsar.",
+          "paragraph3": "Användning: design av DC/AC-kretsar, dimensionering av ledare och last, skydd, felsökning, utbildning, motstånd, värmeelement, LED.",
+          "paragraph4": "Kalkylatorn tar ström (A) och resistans (Ω), tillämpar V = I × R och visar spänningen i volt.",
+          "exampleHeading": "Exempel:",
+          "exampleText": "5 A och 24 Ω: V = 5 × 24 = 120 V. 0,5 A och 460 Ω: V = 230 V. 10 A och 12 Ω: V = 120 V."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {
+              "question": "Vad är formeln för ampere till volt?",
+              "answer": "Ohms lag: V = I × R. Spänning = ström × resistans."
+            },
+            {
+              "question": "Behöver jag resistans för att omvandla ampere till spänning?",
+              "answer": "Ja. Spänning kan inte bestämmas enbart från ström. För V = I × R behövs både ström och resistans."
+            },
+            {
+              "question": "Gäller Ohms lag för växelström?",
+              "answer": "Ja, för resistiva växelströmskretsar med effektivvärden. För reaktanser (spole, kondensator) använd impedans Z: V = I × Z."
+            },
+            {
+              "question": "I vilken enhet anges resistans?",
+              "answer": "Resistans anges i ohm (Ω). Ange värdet i ohm (t.ex. 1000 för 1 kΩ)."
+            },
+            {
+              "question": "Kan jag använda detta för batteri eller nätaggregat?",
+              "answer": "Ja. Med känd ström och lastresistans ger V = I × R spänningen över lasten (nära batterispänningen vid låg inre resistans)."
+            },
+            {
+              "question": "Är denna kalkylator gratis?",
+              "answer": "Ja, Ampere till Volt-kalkylatorn är gratis. Ange ström (A) och resistans (Ω) för omedelbar spänning (V)."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

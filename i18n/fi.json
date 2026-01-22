@@ -385,6 +385,58 @@
           ]
         }
       }
+    },
+    "ampsToVolt": {
+      "title": "Ampeeri Volt -laskin",
+      "description": "Laske jännite (V) virrasta ja resistanssista Ohmin lain mukaan: V = I × R",
+      "amps": "Ampeeri (A)",
+      "ohms": "Resistanssi (Ω)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "seo": {
+        "title": "Ampeeri Volt -laskin – Ohmin laki | Ilmainen verkkotyökalu",
+        "description": "Ilmainen Ampeeri Volt -laskin. Laske jännite virrasta ja resistanssista (V = I × R). Välittömät, tarkat tulokset piireille ja elektroniikalle.",
+        "keywords": "ampeeri volt laskin, Ohmin laki, virta jännite, resistanssi laskin, V I R, sähkölaskin, ilmainen",
+        "content": {
+          "heading": "Jännitteen laskeminen ampeereista ja resistanssista (Ohmin laki)",
+          "paragraph1": "Jännitteen (V) laskeminen virrasta ampeereina (A) ja resistanssista ohmeina (Ω) on Ohmin lain perussovellus. V = I × R. Laskimemme soveltaa Ohmin lakia ja antaa jännitteen.",
+          "paragraph2": "Kaava: V = I × R. V = jännite volteina, I = virta ampeereina, R = resistanssi ohmeina. Jännite ajaa virtaa, resistanssi rajoittaa sitä. Nämä kolme suuretta liittyvät toisiinsa Ohmin lain mukaan resistiivisissä piireissä.",
+          "paragraph3": "Käyttö: DC/AC-piirien suunnittelu, johtimien ja kuorman mitoitus, suojaukset, vianmääritys, opetus, vastukset, lämmityselementit, LED.",
+          "paragraph4": "Laskin ottaa virran (A) ja resistanssin (Ω), soveltaa V = I × R ja näyttää jännitteen volteina.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "5 A ja 24 Ω: V = 5 × 24 = 120 V. 0,5 A ja 460 Ω: V = 230 V. 10 A ja 12 Ω: V = 120 V."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava ampeereista volteihin?",
+              "answer": "Ohmin laki: V = I × R. Jännite = virta × resistanssi."
+            },
+            {
+              "question": "Tarvitsenko resistanssin ampeerien muuntamiseen jännitteeksi?",
+              "answer": "Kyllä. Jännitettä ei voi määrittää pelkästään virrasta. V = I × R vaatii sekä virran että resistanssin."
+            },
+            {
+              "question": "Pitäykö Ohmin laki vaihtovirrassa?",
+              "answer": "Kyllä, resistiivisissä vaihtovirtapiireissä tehollisarvoilla. Reaktansseille (kela, kondensaattori) käytetään impedanssia Z: V = I × Z."
+            },
+            {
+              "question": "Millä yksiköllä resistanssi ilmoitetaan?",
+              "answer": "Resistanssi ilmoitetaan ohmeina (Ω). Syötä arvo ohmeina (esim. 1000 = 1 kΩ)."
+            },
+            {
+              "question": "Voinko käyttää tätä paristolle tai virtalähteelle?",
+              "answer": "Kyllä. Tunnetulla virralla ja kuorman resistanssilla V = I × R antaa jännitteen kuorman yli (lähellä pariston jännitettä, jos sisäinen resistanssi on pieni)."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, Ampeeri Volt -laskin on ilmainen. Syötä virta (A) ja resistanssi (Ω) saadaksesi jännitteen (V) välittömästi."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

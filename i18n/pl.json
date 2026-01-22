@@ -385,6 +385,58 @@
           ]
         }
       }
+    },
+    "ampsToVolt": {
+      "title": "Kalkulator Ampery na Volt",
+      "description": "Oblicz napięcie (V) z prądu i oporu według prawa Ohma: V = I × R",
+      "amps": "Ampery (A)",
+      "ohms": "Opór (Ω)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "seo": {
+        "title": "Kalkulator Ampery na Volt – prawo Ohma | Darmowe narzędzie online",
+        "description": "Darmowy kalkulator Ampery na Volt. Oblicz napięcie z prądu i oporu (V = I × R). Szybkie, dokładne wyniki dla obwodów i elektroniki.",
+        "keywords": "ampery na volt, prawo Ohma, prąd napięcie, kalkulator oporu, V I R, kalkulator elektryczny, darmowy kalkulator",
+        "content": {
+          "heading": "Jak obliczyć napięcie z amperów i oporu (prawo Ohma)",
+          "paragraph1": "Obliczanie napięcia (V) z prądu w amperach (A) i oporu w omach (Ω) to podstawowe zastosowanie prawa Ohma w elektrotechnice i elektronice. Prawo Ohma: napięcie na elemencie jest równe prądowi przez niego pomnożonemu przez opór: V = I × R. Ta zależność jest niezbędna przy analizie obwodów, doborze elementów i diagnostyce. Nasz darmowy kalkulator Ampery na Volt od razu stosuje prawo Ohma i podaje napięcie.",
+          "paragraph2": "Wzór: V = I × R, gdzie V – napięcie w voltach, I – prąd w amperach, R – opór w omach. Napięcie to różnica potencjałów powodująca przepływ prądu. Opór ogranicza prąd. Te trzy wielkości w obwodach rezystancyjnych są zawsze związane prawem Ohma (prąd stały i zmienny – wartości skuteczne). Znając dwie, obliczysz trzecią.",
+          "paragraph3": "Obliczenie stosuje się m.in. przy: projektowaniu obwodów DC i AC, doborze przewodów i obciążenia, zabezpieczeniach, diagnozowaniu usterek, nauczaniu podstaw elektroniki, pracy z rezystorami, grzałkami i diodami LED. Znajomość zależności napięcia od prądu i oporu ułatwia projektowanie i naprawy.",
+          "paragraph4": "Kalkulator przyjmuje prąd (A) i opór (Ω), stosuje V = I × R i podaje napięcie w voltach. Działa dla dowolnego obciążenia rezystancyjnego.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "Prąd 5 A i opór 24 Ω: V = 5 A × 24 Ω = 120 V. Dla 0,5 A i 460 Ω: V = 0,5 A × 460 Ω = 230 V. Dla 10 A i 12 Ω: V = 10 A × 12 Ω = 120 V."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {
+              "question": "Jaki jest wzór na ampery na volt?",
+              "answer": "Prawo Ohma: V = I × R, gdzie V – napięcie w V, I – prąd w A, R – opór w Ω. Aby uzyskać napięcie z prądu i oporu, pomnóż prąd przez opór."
+            },
+            {
+              "question": "Czy do przeliczenia amperów na napięcie potrzebny jest opór?",
+              "answer": "Tak. Napięcia nie da się wyznaczyć samymi amperami. W prawie Ohma potrzebny jest opór (V = I × R) albo, przy obliczeniach mocy, napięcie i moc – wtedy nie „przeliczasz” amperów na volty. Dla V = I × R musisz znać zarówno ampery, jak i omy."
+            },
+            {
+              "question": "Czy prawo Ohma dotyczy obwodów AC?",
+              "answer": "Prawo Ohma V = I × R stosuje się do rezystancyjnych obwodów AC przy użyciu wartości skutecznych napięcia, prądu i oporu. Dla elementów reakcyjnych (cewki, kondensatory) zamiast R używa się impedancji Z: V = I × Z."
+            },
+            {
+              "question": "W jakich jednostkach podaje się opór?",
+              "answer": "Opór podaje się w omach (Ω). Kalkulator oczekuje oporu w omach. Typowe wartości: od miliomów (mΩ) dla przewodów po kiloomów (kΩ) czy megaomów (MΩ) – wpisz wartość w omach (np. 1000 dla 1 kΩ)."
+            },
+            {
+              "question": "Czy można użyć kalkulatora do baterii lub zasilacza?",
+              "answer": "Tak. Znając prąd pobierany przez odbiornik i jego opór, możesz obliczyć napięcie na nim z V = I × R. Dla baterii zasilającej rezystancyjny odbiornik to napięcie na odbiorniku (zbliżone do napięcia baterii przy małej rezystancji wewnętrznej)."
+            },
+            {
+              "question": "Czy kalkulator jest darmowy?",
+              "answer": "Tak, kalkulator Ampery na Volt jest darmowy. Nie trzeba się rejestrować ani płacić. Wpisz prąd (A) i opór (Ω), aby od razu otrzymać napięcie (V)."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

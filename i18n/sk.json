@@ -440,6 +440,58 @@
           ]
         }
       }
+    },
+    "ampsToVolt": {
+      "title": "Kalkulačka Ampérov na Volt",
+      "description": "Vypočítajte napätie (V) z prúdu a odporu podľa Ohmovho zákona: V = I × R",
+      "amps": "Ampéry (A)",
+      "ohms": "Odpor (Ω)",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "seo": {
+        "title": "Kalkulačka Ampérov na Volt – Ohmov zákon | Bezplatný online nástroj",
+        "description": "Bezplatná kalkulačka Ampérov na Volt. Získajte napätie z prúdu a odporu (V = I × R). Okamžité, presné výsledky pre obvody a elektroniku.",
+        "keywords": "kalkulačka ampéry volt, Ohmov zákon, prúd napätie, odpor kalkulačka, V I R, elektrická kalkulačka, zadarmo",
+        "content": {
+          "heading": "Ako vypočítať napätie z ampérov a odporu (Ohmov zákon)",
+          "paragraph1": "Výpočet napätia (V) z prúdu v ampéroch (A) a odporu v omoch (Ω) je základnou aplikáciou Ohmovho zákona. V = I × R. Naša kalkulačka aplikuje Ohmov zákon a udáva napätie.",
+          "paragraph2": "Vzorec: V = I × R. V = napätie vo voltoch, I = prúd v ampéroch, R = odpor v omoch. Napätie poháňa prúd, odpor ho obmedzuje. Tieto tri veličiny sú v odporových obvodoch prepojené Ohmovým zákonom.",
+          "paragraph3": "Použitie: návrh DC/AC obvodov, dimenzovanie vodičov a záťaže, ochrany, diagnostika, výuka, rezistory, topné telesá, LED.",
+          "paragraph4": "Kalkulačka prijíma prúd (A) a odpor (Ω), aplikuje V = I × R a zobrazí napätie vo voltoch.",
+          "exampleHeading": "Príklad:",
+          "exampleText": "5 A a 24 Ω: V = 5 × 24 = 120 V. 0,5 A a 460 Ω: V = 230 V. 10 A a 12 Ω: V = 120 V."
+        },
+        "faq": {
+          "heading": "Časté otázky",
+          "items": [
+            {
+              "question": "Aký je vzorec ampéry na volt?",
+              "answer": "Ohmov zákon: V = I × R. Napätie = prúd × odpor."
+            },
+            {
+              "question": "Potrebujem odpor na prepočet ampérov na napätie?",
+              "answer": "Áno. Napätie nemožno určiť len z prúdu. Pre V = I × R sú potrebné prúd aj odpor."
+            },
+            {
+              "question": "Platí Ohmov zákon pre striedavý prúd?",
+              "answer": "Áno, pri odporových AC obvodoch s efektívnymi hodnotami. Pri reaktanciách (cievka, kondenzátor) sa používa impedancia Z: V = I × Z."
+            },
+            {
+              "question": "V akých jednotkách sa udáva odpor?",
+              "answer": "Odpor sa udáva v omoch (Ω). Zadajte hodnotu v omoch (napr. 1000 pre 1 kΩ)."
+            },
+            {
+              "question": "Môžem použiť kalkulačku pre batériu alebo zdroj?",
+              "answer": "Áno. Pri známom prúde a odpore záťaže dá V = I × R napätie na záťaži (blízke napätiu batérie pri malom vnútornom odpore)."
+            },
+            {
+              "question": "Je táto kalkulačka zadarmo?",
+              "answer": "Áno, kalkulačka Ampérov na Volt je zadarmo. Zadajte prúd (A) a odpor (Ω) pre okamžité napätie (V)."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

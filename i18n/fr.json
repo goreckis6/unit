@@ -385,6 +385,58 @@
           ]
         }
       }
+    },
+    "ampsToVolt": {
+      "title": "Calculateur Ampères vers Volt",
+      "description": "Calculez la tension (V) à partir du courant et de la résistance avec la loi d'Ohm : V = I × R",
+      "amps": "Ampères (A)",
+      "ohms": "Résistance (Ω)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "seo": {
+        "title": "Calculateur Ampères vers Volt – Loi d'Ohm | Outil en ligne gratuit",
+        "description": "Calculateur gratuit Ampères vers Volt. Obtenez la tension à partir du courant et de la résistance (V = I × R). Résultats instantanés et précis pour circuits et électronique.",
+        "keywords": "calculateur ampères volt, loi d'Ohm, courant tension, résistance calculateur, V I R, calculateur électrique, gratuit",
+        "content": {
+          "heading": "Comment calculer la tension à partir des ampères et de la résistance (loi d'Ohm)",
+          "paragraph1": "Calculer la tension (V) à partir du courant en ampères (A) et de la résistance en ohms (Ω) est une application fondamentale de la loi d'Ohm. V = I × R. Notre calculateur applique la loi d'Ohm et donne la tension.",
+          "paragraph2": "Formule : V = I × R. V = tension en volts, I = courant en ampères, R = résistance en ohms. La tension fait circuler le courant, la résistance s'y oppose. Ces trois grandeurs sont liées par la loi d'Ohm dans les circuits résistifs.",
+          "paragraph3": "Utilisations : conception de circuits DC/AC, dimensionnement de câbles et charges, protections, dépannage, enseignement, résistances, chauffages, LEDs.",
+          "paragraph4": "Le calculateur accepte le courant (A) et la résistance (Ω), applique V = I × R et affiche la tension en volts.",
+          "exampleHeading": "Exemple :",
+          "exampleText": "5 A et 24 Ω : V = 5 × 24 = 120 V. 0,5 A et 460 Ω : V = 230 V. 10 A et 12 Ω : V = 120 V."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {
+              "question": "Quelle est la formule ampères vers volt ?",
+              "answer": "Loi d'Ohm : V = I × R. Tension = courant × résistance."
+            },
+            {
+              "question": "Faut-il la résistance pour convertir les ampères en tension ?",
+              "answer": "Oui. La tension ne se déduit pas du seul courant. Pour V = I × R, il faut courant et résistance."
+            },
+            {
+              "question": "La loi d'Ohm s'applique-t-elle au courant alternatif ?",
+              "answer": "Oui, pour les circuits résistifs en AC avec les valeurs efficaces. Pour les réactances (bobine, condensateur), on utilise l'impédance Z : V = I × Z."
+            },
+            {
+              "question": "Quelle unité pour la résistance ?",
+              "answer": "La résistance se mesure en ohms (Ω). Saisir la valeur en Ω (ex. 1000 pour 1 kΩ)."
+            },
+            {
+              "question": "Puis-je l'utiliser pour batterie ou alimentation ?",
+              "answer": "Oui. Avec le courant et la résistance de la charge, V = I × R donne la tension aux bornes (proche de la tension batterie si résistance interne faible)."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit ?",
+              "answer": "Oui, le calculateur Ampères vers Volt est gratuit. Entrez courant (A) et résistance (Ω) pour obtenir la tension (V) instantanément."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

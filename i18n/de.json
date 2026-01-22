@@ -385,6 +385,58 @@
           ]
         }
       }
+    },
+    "ampsToVolt": {
+      "title": "Ampere zu Volt Rechner",
+      "description": "Spannung (V) aus Strom und Widerstand nach dem Ohmschen Gesetz: V = I × R",
+      "amps": "Ampere (A)",
+      "ohms": "Widerstand (Ω)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "seo": {
+        "title": "Ampere zu Volt Rechner – Ohmsches Gesetz | Kostenloses Onlinetool",
+        "description": "Kostenloser Ampere-zu-Volt-Rechner. Spannung aus Strom und Widerstand (V = I × R). Schnelle, genaue Ergebnisse für Schaltungen und Elektronik.",
+        "keywords": "Ampere Volt Rechner, Ohmsches Gesetz, Strom Spannung, Widerstand Rechner, V I R, Elektrorechner, kostenlos",
+        "content": {
+          "heading": "Spannung aus Ampere und Widerstand (Ohmsches Gesetz)",
+          "paragraph1": "Die Berechnung der Spannung (V) aus Strom in Ampere (A) und Widerstand in Ohm (Ω) ist eine Grundanwendung des Ohmschen Gesetzes. Es gilt: V = I × R. Unser Rechner wendet das Ohmsche Gesetz sofort an und liefert die Spannung.",
+          "paragraph2": "Formel: V = I × R. V = Spannung in Volt, I = Strom in Ampere, R = Widerstand in Ohm. Die Spannung treibt den Strom, der Widerstand begrenzt ihn. In ohmschen Kreisen sind diese drei Größen stets durch das Ohmsche Gesetz verknüpft.",
+          "paragraph3": "Einsatz z. B. bei: Schaltungsentwurf, Leitungs- und Lastdimensionierung, Absicherung, Fehlersuche, Grundlagen der Elektronik, Widerständen, Heizungen und LEDs.",
+          "paragraph4": "Der Rechner nimmt Strom (A) und Widerstand (Ω) auf, wendet V = I × R an und zeigt die Spannung in Volt an.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "5 A und 24 Ω: V = 5 A × 24 Ω = 120 V. 0,5 A und 460 Ω: V = 230 V. 10 A und 12 Ω: V = 120 V."
+        },
+        "faq": {
+          "heading": "Häufige Fragen",
+          "items": [
+            {
+              "question": "Wie lautet die Formel für Ampere zu Volt?",
+              "answer": "Ohmsches Gesetz: V = I × R. Spannung = Strom × Widerstand."
+            },
+            {
+              "question": "Brauche ich den Widerstand, um Ampere in Volt umzurechnen?",
+              "answer": "Ja. Spannung ergibt sich nicht allein aus dem Strom. Für V = I × R benötigen Sie Strom und Widerstand."
+            },
+            {
+              "question": "Gilt das Ohmsche Gesetz auch für Wechselstrom?",
+              "answer": "Ja, bei ohmschen Wechselstromkreisen mit den Effektivwerten von Spannung, Strom und Widerstand. Bei Blindwiderständen (Spule, Kondensator) gilt V = I × Z mit der Impedanz Z."
+            },
+            {
+              "question": "In welcher Einheit wird der Widerstand angegeben?",
+              "answer": "Widerstand wird in Ohm (Ω) angegeben. Geben Sie den Wert in Ohm ein (z. B. 1000 für 1 kΩ)."
+            },
+            {
+              "question": "Kann ich den Rechner für Batterie oder Netzteil nutzen?",
+              "answer": "Ja. Bei bekanntem Strom und Widerstand der Last liefert V = I × R die Spannung an der Last (bei geringem Innenwiderstand etwa die Batteriespannung)."
+            },
+            {
+              "question": "Ist der Rechner kostenlos?",
+              "answer": "Ja, der Ampere-zu-Volt-Rechner ist kostenlos. Strom (A) und Widerstand (Ω) eingeben, sofort Spannung (V) erhalten."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

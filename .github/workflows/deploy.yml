@@ -96,6 +96,8 @@ jobs:
             
             # Copy Caddyfile to /etc/caddy/Caddyfile
             if [ -f /tmp/Caddyfile ]; then
+              # Ensure /etc/caddy directory exists
+              sudo mkdir -p /etc/caddy
               sudo cp /tmp/Caddyfile /etc/caddy/Caddyfile
               sudo chown root:root /etc/caddy/Caddyfile
               sudo chmod 644 /etc/caddy/Caddyfile

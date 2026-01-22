@@ -1,30 +1,14 @@
-unitconverterhub.com {
-	encode gzip zstd
+unitconverterhub.com www.unitconverterhub.com {
+  encode gzip zstd
 
-	# Cloudflare → Caddy → Qwik SSG (Static Site)
-	reverse_proxy morphy-frontend:3000 {
-		header_up Host {host}
-		header_up X-Real-IP {remote_host}
-		header_up X-Forwarded-For {remote_host}
-		header_up X-Forwarded-Proto {scheme}
-	}
+  root * /var/www/unitconverterhub
 
-	# Cache dla statycznych plików (SSG)
-	@html {
-		header Content-Type text/html*
-	}
-	header @html Cache-Control "public, max-age=3600"
+  reverse_proxy localhost:3000
 
-	# Security headers
-	header {
-		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-		X-Content-Type-Options "nosniff"
-		X-Frame-Options "DENY"
-		Referrer-Policy "strict-origin-when-cross-origin"
-	}
-
-	log {
-		output stdout
-		format console
-	}
+  header {
+    Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options "nosniff"
+    X-Frame-Options "DENY"
+    Referrer-Policy "strict-origin-when-cross-origin"
+  }
 }

@@ -1,4 +1,4 @@
-name: Deploy Qwik SSR to Production
+name: Deploy Next.js to Production
 
 on:
   push:
@@ -6,12 +6,9 @@ on:
       - main
 
 jobs:
-  build-and-push:
-    name: Build and Push Docker Image
+  deploy:
+    name: Deploy to VPS
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
 
     steps:
       - name: Checkout code
@@ -21,43 +18,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: 'pnpm'
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          version: 8.15.0
 
-      - name: Extract metadata
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ghcr.io/${{ github.repository_owner }}/unit
-          tags: |
-            type=raw,value=latest
-            type=sha,prefix=sha-
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          no-cache: true
+      - name: Build Next.js
+        run: pnpm build
+        env:
+          NODE_ENV: production
 
-  deploy:
-    name: Deploy to VPS
-    needs: build-and-push
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -67,34 +42,75 @@ jobs:
           script: |
             set -eo pipefail
             
-            GHCR_TOKEN="${{ secrets.GHCR_TOKEN || secrets.GITHUB_TOKEN }}"
-            GITHUB_ACTOR="${{ github.actor }}"
-            GITHUB_REPO_OWNER="${{ github.repository_owner }}"
+            APP_DIR="/var/www/unitconverterhub"
+            SERVICE_NAME="unitconverterhub"
             
-            # Stop old container
-            sudo docker stop morphy-frontend 2>/dev/null || true
-            sudo docker rm morphy-frontend 2>/dev/null || true
+            # Create app directory if it doesn't exist
+            sudo mkdir -p "$APP_DIR"
+            sudo chown -R ${{ secrets.FRONTEND_VPS_USERNAME }}:${{ secrets.FRONTEND_VPS_USERNAME }} "$APP_DIR"
             
-            # Force remove old image to ensure fresh pull
-            echo "🗑️ Removing old image..."
-            sudo docker rmi ghcr.io/$GITHUB_REPO_OWNER/unit:latest 2>/dev/null || true
+            # Stop existing service
+            sudo systemctl stop "$SERVICE_NAME" 2>/dev/null || true
             
-            # Login and pull
-            echo "$GHCR_TOKEN" | sudo docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
-            sudo docker pull ghcr.io/$GITHUB_REPO_OWNER/unit:latest
-            sudo docker image prune -f
+            echo "📦 Preparing deployment..."
             
-            # Ensure network
-            sudo docker network create caddy-net 2>/dev/null || true
+      - name: Copy standalone build to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.FRONTEND_VPS_HOST }}
+          username: ${{ secrets.FRONTEND_VPS_USERNAME }}
+          key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          source: ".next/standalone,.next/static,public"
+          target: "/var/www/unitconverterhub"
+          strip_components: 0
+
+      - name: Setup systemd service and restart
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.FRONTEND_VPS_HOST }}
+          username: ${{ secrets.FRONTEND_VPS_USERNAME }}
+          key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          script: |
+            set -eo pipefail
             
-            # Start new container
-            sudo docker run -d \
-              --name morphy-frontend \
-              --network caddy-net \
-              --restart unless-stopped \
-              ghcr.io/$GITHUB_REPO_OWNER/unit:latest
+            APP_DIR="/var/www/unitconverterhub"
+            SERVICE_NAME="unitconverterhub"
             
-            # Verify
-            sleep 5
-            sudo docker ps | grep morphy-frontend
-            echo "✅ Qwik SSR deployed!"
+            # Ensure proper permissions
+            sudo chown -R ${{ secrets.FRONTEND_VPS_USERNAME }}:${{ secrets.FRONTEND_VPS_USERNAME }} "$APP_DIR"
+            
+            # Ensure .next/static symlink exists (created during build)
+            if [ ! -L "$APP_DIR/.next/standalone/.next/static" ] && [ -d "$APP_DIR/.next/static" ]; then
+              sudo ln -sf "$APP_DIR/.next/static" "$APP_DIR/.next/standalone/.next/static" || true
+            fi
+            
+            # Create systemd service file
+            sudo tee /etc/systemd/system/"$SERVICE_NAME".service > /dev/null <<EOF
+            [Unit]
+            Description=Unit Converter Hub Next.js App
+            After=network.target
+
+            [Service]
+            Type=simple
+            User=${{ secrets.FRONTEND_VPS_USERNAME }}
+            WorkingDirectory=$APP_DIR/.next/standalone
+            ExecStart=/usr/bin/node $APP_DIR/.next/standalone/server.js
+            Restart=always
+            RestartSec=10
+            Environment=NODE_ENV=production
+            Environment=PORT=3000
+
+            [Install]
+            WantedBy=multi-user.target
+            EOF
+            
+            # Reload systemd and start service
+            sudo systemctl daemon-reload
+            sudo systemctl enable "$SERVICE_NAME"
+            sudo systemctl restart "$SERVICE_NAME"
+            
+            # Verify service is running
+            sleep 3
+            sudo systemctl status "$SERVICE_NAME" --no-pager || exit 1
+            
+            echo "✅ Next.js app deployed and running!"

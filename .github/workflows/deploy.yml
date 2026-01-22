@@ -89,6 +89,14 @@ jobs:
             # Ensure proper permissions
             sudo chown -R ${{ secrets.FRONTEND_VPS_USERNAME }}:${{ secrets.FRONTEND_VPS_USERNAME }} "$APP_DIR"
             
+            # Verify files were copied
+            if [ ! -f "$APP_DIR/.next/standalone/server.js" ]; then
+              echo "❌ Error: server.js not found at $APP_DIR/.next/standalone/server.js"
+              echo "📁 Checking directory structure:"
+              ls -la "$APP_DIR/.next/standalone/" || true
+              exit 1
+            fi
+            
             # Ensure .next/static symlink exists (created during build)
             if [ ! -L "$APP_DIR/.next/standalone/.next/static" ] && [ -d "$APP_DIR/.next/static" ]; then
               sudo ln -sf "$APP_DIR/.next/static" "$APP_DIR/.next/standalone/.next/static" || true
@@ -143,8 +151,24 @@ jobs:
             sudo systemctl restart "$SERVICE_NAME"
             
             # Verify service is running
-            sleep 3
-            sudo systemctl status "$SERVICE_NAME" --no-pager || exit 1
+            sleep 5
+            echo "📊 Checking service status..."
+            sudo systemctl status "$SERVICE_NAME" --no-pager || true
+            
+            # Check if port 3000 is listening
+            echo "📊 Checking if port 3000 is listening..."
+            sudo netstat -tlnp | grep :3000 || sudo ss -tlnp | grep :3000 || echo "⚠️  Port 3000 not found"
+            
+            # Test if app responds
+            echo "📊 Testing app response..."
+            curl -f http://localhost:3000 >/dev/null 2>&1 && echo "✅ App responds on localhost:3000" || echo "❌ App does not respond on localhost:3000"
+            
+            # Check service logs if failed
+            if ! sudo systemctl is-active --quiet "$SERVICE_NAME"; then
+              echo "❌ Service is not running. Last 20 lines of logs:"
+              sudo journalctl -u "$SERVICE_NAME" -n 20 --no-pager || true
+              exit 1
+            fi
             
             echo "✅ Next.js app deployed and running!"
             echo "✅ Caddy configuration updated"

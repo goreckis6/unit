@@ -173,10 +173,10 @@ const FLAGS: Record<string, JSX.Element> = {
   ),
   ar: (
     <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="36" height="8" y="0" fill="#000000"/>
-      <rect width="36" height="8" y="8" fill="#FFFFFF"/>
-      <rect width="36" height="8" y="16" fill="#007A3D"/>
-      <polygon points="0,0 12,12 0,24" fill="#CE1126"/>
+      <rect width="36" height="24" fill="#006C35"/>
+      <path d="M 8 12 L 28 12" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round"/>
+      <path d="M 18 6 L 18 18" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round"/>
+      <path d="M 12 8 L 18 12 L 12 16" stroke="#FFFFFF" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   ),
   hi: (

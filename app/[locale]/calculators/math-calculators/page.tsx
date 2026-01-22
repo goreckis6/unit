@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
-import { CalculatorSearch } from './search';
+import { Header } from '@/components/Header';
 import { CalculatorList } from './list';
 
 export const metadata = {
@@ -23,23 +23,7 @@ export default async function MathCalculatorsPage() {
 
   return (
     <>
-      <header className="header">
-        <div className="container">
-          <div className="header-content">
-            <Link href="/" className="logo">
-              {tCommon('siteName')}
-            </Link>
-            <nav className="nav">
-              <Link href="/calculators/math-calculators" className="nav-link">
-                {tCommon('calculators')}
-              </Link>
-              <Link href="/blog" className="nav-link">
-                {tCommon('blog')}
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <div className="calculator-page">
         <div className="page-background">
@@ -55,7 +39,7 @@ export default async function MathCalculatorsPage() {
               <span>{tCommon('home')}</span>
             </Link>
             <div className="header-content">
-              <div className="title-badge">Math Calculators</div>
+              <div className="title-badge">{t('mathCalculators.badge') || 'Math Calculators'}</div>
               <h1 className="page-title">{t('mathCalculators.title')}</h1>
               <p className="page-description">
                 {t('mathCalculators.description')}

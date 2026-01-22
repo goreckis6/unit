@@ -1,28 +1,13 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
+import { Header } from '@/components/Header';
 
 export default async function HomePage() {
   const t = await getTranslations('common');
 
   return (
     <div className="home">
-      <header className="header">
-        <div className="container">
-          <div className="header-content">
-            <Link href="/" className="logo">
-              {t('siteName')}
-            </Link>
-            <nav className="nav">
-              <Link href="/calculators/addition" className="nav-link">
-                {t('calculators')}
-              </Link>
-              <Link href="/blog" className="nav-link">
-                {t('blog')}
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <section className="hero">
         <div className="container">

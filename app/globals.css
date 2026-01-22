@@ -141,6 +141,210 @@ a {
   width: 100%;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: translateY(-1px);
+}
+
+.logo-icon {
+  font-size: 2.25rem;
+  filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.logo-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+/* Language Switcher */
+.language-selector {
+  position: relative;
+}
+
+.language-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.125rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: 0.75rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  font-family: inherit;
+}
+
+.language-button:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+  background: var(--bg-secondary);
+}
+
+.language-button.active {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.current-language-flag {
+  width: 24px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.current-language-flag svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.language-button:hover .current-language-flag {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.language-text {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.language-arrow {
+  font-size: 0.625rem;
+  transition: transform 0.2s ease;
+  opacity: 0.6;
+}
+
+.language-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: var(--bg-primary);
+  border: 1.5px solid var(--border-color);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-xl);
+  min-width: 200px;
+  max-width: 250px;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1000;
+  animation: slideDown 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.875rem 1.125rem;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  text-align: left;
+}
+
+.language-option:hover {
+  background: var(--bg-secondary);
+}
+
+.language-option.active {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.language-flag {
+  width: 24px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.language-flag svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.language-code {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  min-width: 32px;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+
+.language-option.active .language-code {
+  color: var(--primary-color);
+}
+
+.language-name {
+  flex: 1;
+}
+
+.check-icon {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 /* ============================================
    HOME PAGE
    ============================================ */
@@ -544,6 +748,11 @@ a {
   text-align: center;
   padding: 3rem 0 2rem;
   position: relative;
+}
+
+.calculator-header .header-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .page-title {

@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'common' });
+  const tHome = await getTranslations({ locale, namespace: 'common.home' });
   const siteUrl = 'https://unitconverterhub.com';
 
   return (
@@ -40,7 +41,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <h1 className="hero-title">{t('siteName')}</h1>
             <p className="hero-subtitle">{t('description')}</p>
             <p className="hero-description">
-              Fast, accurate, and easy to use calculators for all your needs
+              {tHome('heroDescription')}
             </p>
           </div>
         </div>
@@ -50,7 +51,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="container">
           <h2 className="section-title">{t('calculators')}</h2>
           <p className="section-subtitle">
-            Choose from our collection of powerful calculators
+            {tHome('calculatorsSubtitle')}
           </p>
           <div className="categories-grid">
             <Link href="/calculators/math" className="category-card">
@@ -61,24 +62,24 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <h3 className="category-name">Math Calculators</h3>
+              <h3 className="category-name">{tHome('mathCalculators.title')}</h3>
               <p className="category-description">
-                Addition, subtraction, multiplication, division and more
+                {tHome('mathCalculators.description')}
               </p>
-              <span className="category-link">View All</span>
+              <span className="category-link">{tHome('mathCalculators.viewAll')}</span>
             </Link>
             
-            <Link href="/calculators/math" className="category-card">
+            <Link href="/calculators/electric" className="category-card">
               <div className="category-icon">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <h3 className="category-name">Electric Calculators</h3>
+              <h3 className="category-name">{tHome('electricCalculators.title')}</h3>
               <p className="category-description">
-                Voltage, current, resistance, power and more
+                {tHome('electricCalculators.description')}
               </p>
-              <span className="category-link">View All</span>
+              <span className="category-link">{tHome('electricCalculators.viewAll')}</span>
             </Link>
           </div>
         </div>
@@ -94,8 +95,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="currentColor"/>
                 </svg>
               </div>
-              <h3 className="feature-title">Fast</h3>
-              <p className="feature-description">Instant calculations with real-time results</p>
+              <h3 className="feature-title">{tHome('features.fast.title')}</h3>
+              <p className="feature-description">{tHome('features.fast.description')}</p>
             </div>
             
             <div className="feature-card">
@@ -104,8 +105,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="currentColor"/>
                 </svg>
               </div>
-              <h3 className="feature-title">Free</h3>
-              <p className="feature-description">100% free to use, no registration required</p>
+              <h3 className="feature-title">{tHome('features.free.title')}</h3>
+              <p className="feature-description">{tHome('features.free.description')}</p>
             </div>
             
             <div className="feature-card">
@@ -116,8 +117,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="currentColor"/>
                 </svg>
               </div>
-              <h3 className="feature-title">Easy</h3>
-              <p className="feature-description">Simple and intuitive interface for everyone</p>
+              <h3 className="feature-title">{tHome('features.easy.title')}</h3>
+              <p className="feature-description">{tHome('features.easy.description')}</p>
             </div>
           </div>
         </div>

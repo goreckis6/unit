@@ -448,6 +448,58 @@
           ]
         }
       }
+    },
+    "ampsToWatts": {
+      "title": "Ampere til Watt Lommeregner",
+      "description": "Konverter ampere (A) til watt (W) øjeblikkeligt og præcist ved hjælp af spænding",
+      "amps": "Ampere (A)",
+      "volts": "Spænding (V)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "seo": {
+        "title": "Ampere til Watt Lommeregner - Konverter Strøm til Effekt Online",
+        "description": "Gratis Ampere til Watt konverteringslommeregner. Konverter ampere til watt øjeblikkeligt ved hjælp af spænding. Perfekt til elektriske beregninger, kredsløbsdesign og effektsystemanalyse.",
+        "keywords": "ampere watt lommeregner, ampere watt omformer, ampere watt konvertering, strøm effekt lommeregner, elektrisk lommeregner, watt lommeregner, gratis",
+        "content": {
+          "heading": "Sådan Konverterer Man Ampere til Watt",
+          "paragraph1": "At konvertere ampere (A) til watt (W) er en grundlæggende beregning inden for elektroteknik og effektsystemer. Ampere repræsenterer elektrisk strøm, mens watt repræsenterer reel effekt (aktiv effekt). Konverteringen kræver kendskab til spænding (V). Dette er en af de mest grundlæggende elektriske beregninger, følger effektformlen: P = I × V, hvor P er effekten i watt, I er strømmen i ampere og V er spændingen i volt. Vores gratis Ampere til Watt konverteringslommeregner gør denne proces hurtig og nem, giver øjeblikkelige og præcise resultater til dine elektriske beregninger.",
+          "paragraph2": "Konverteringsformlen er: W = A × V, hvor W er effekten i watt, A er strømmen i ampere og V er spændingen i volt. Denne formel gælder for DC (jævnstrøm) kredsløb og resistiv AC (vekselstrøm) kredsløb. For AC-kredsløb med reaktive komponenter skal du muligvis overveje effektfaktoren, men for grundlæggende resistiv belastning giver denne enkle formel præcise resultater. Spænding repræsenterer den elektriske potentialforskel, der driver strøm gennem et kredsløb, og når den multipliceres med strøm, giver den den forbrugede eller leverede effekt.",
+          "paragraph3": "Denne konvertering bruges almindeligt i forskellige applikationer: beregning af energiforbrug for elektriske enheder, dimensionering af strømafbrydere og sikringer, design af elektriske kredsløb og ledninger, bestemmelse af effektkrav til apparater, forståelse af elektriske belastningskarakteristika og arbejde med bolig-, kommercielle og industrielle elektriske systemer. At vide, hvordan man konverterer Ampere til Watt, hjælper dig med at træffe velinformerede beslutninger om elektrisk systemdesign, udstyrvalg og energistyring.",
+          "paragraph4": "Vores lommeregner tager ampere og spænding som input, anvender automatisk konverteringsformlen og giver resultatet i watt. Lommeregneren håndterer både DC- og AC-beregninger (resistiv). Uanset om du arbejder med motorer, varmeelementer, belysningssystemer, apparater eller elektrisk udstyr, giver vores Ampere til Watt-lommeregner præcise, øjeblikkelige konverteringer.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "Hvis du har en enhed, der trækker 10 ampere ved 120 volt, ville effekten i watt være: W = 10 A × 120 V = 1200 W (1,2 kW). For en enhed, der trækker 5 ampere ved 230 volt: W = 5 A × 230 V = 1150 W (1,15 kW). For en enhed, der trækker 20 ampere ved 240 volt: W = 20 A × 240 V = 4800 W (4,8 kW)."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er formlen for at konvertere ampere til watt?",
+              "answer": "Formlen for at konvertere ampere (A) til watt (W) er: W = A × V, hvor W er effekten i watt, A er strømmen i ampere og V er spændingen i volt. Dette er den grundlæggende effektformel for DC-kredsløb og resistiv AC-kredsløb."
+            },
+            {
+              "question": "Skal jeg kende spændingen for at konvertere ampere til watt?",
+              "answer": "Ja, spænding kræves til konverteringen. Effekten (watt) afhænger af både strøm (ampere) og spænding. Almindelige spændinger inkluderer 120V, 230V, 240V, 380V og 400V afhængigt af din placering og applikation."
+            },
+            {
+              "question": "Virker denne formel for AC-kredsløb?",
+              "answer": "Ja, formlen W = A × V virker for DC-kredsløb og resistiv AC-kredsløb. For AC-kredsløb med reaktive komponenter (spoler, kondensatorer) skal du muligvis overveje effektfaktoren: W = A × V × PF, hvor PF er effektfaktoren. For grundlæggende resistiv belastning som varmeelementer og glødelamper er den enkle formel W = A × V imidlertid præcis."
+            },
+            {
+              "question": "Hvad er forskellen mellem watt og ampere?",
+              "answer": "Ampere repræsenterer elektrisk strøm - strømmen af elektrisk ladning. Watt repræsenterer effekt - hastigheden, hvormed energi forbruges eller produceres. Spænding er den elektriske potentialforskel. Forholdet er: Watt = Ampere × Volt. Du har brug for både ampere og volt for at beregne watt."
+            },
+            {
+              "question": "Kan jeg bruge denne lommeregner til trefasesystemer?",
+              "answer": "For trefasesystemer er beregningen mere kompleks. For balancerede trefasebelastninger, brug: W = √3 × A × V × PF, hvor V er linje-til-linje spænding. For enfaseberegninger eller enkle resistiv belastning giver vores lommeregner imidlertid præcise resultater ved at bruge W = A × V."
+            },
+            {
+              "question": "Er denne lommeregner gratis?",
+              "answer": "Ja, vores Ampere til Watt-lommeregner er helt gratis. Ingen registrering eller betaling kræves. Indtast bare dine værdier (ampere og spænding) og få øjeblikkelige, præcise resultater."
+            }
+          ]
+        }
+      }
     }
   },
   "blog": {

@@ -230,6 +230,61 @@
         }
       }
     },
+    "kvaToAmps": {
+      "title": "Kalkulator kVA na Ampery",
+      "description": "Konwertuj kilowolt-ampery (kVA) na ampery (A) natychmiast i dokładnie dla systemów jednofazowych i trójfazowych",
+      "phaseType": "Typ fazy",
+      "singlePhase": "Jednofazowy",
+      "threePhase": "Trójfazowy",
+      "kva": "Kilowolt-ampery (kVA)",
+      "volts": "Napięcie (V)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "seo": {
+        "title": "Kalkulator kVA na Ampery - Konwertuj Moc Pozorną na Prąd Online",
+        "description": "Darmowy kalkulator konwersji kVA na Ampery. Konwertuj kilowolt-ampery na ampery natychmiast dla systemów jednofazowych i trójfazowych. Idealne do obliczeń elektrycznych, projektowania obwodów i analizy systemów zasilania.",
+        "keywords": "kalkulator kva na ampery, konwerter kva na ampery, konwersja kva ampery, kalkulator mocy pozornej, kalkulator elektryczny, kalkulator prądu, jednofazowy, trójfazowy, darmowy kalkulator",
+        "content": {
+          "heading": "Jak konwertować kVA na Ampery",
+          "paragraph1": "Konwersja kilowolt-amperów (kVA) na ampery (A) jest niezbędna w inżynierii elektrycznej i systemach zasilania. kVA reprezentuje moc pozorną, podczas gdy ampery reprezentują prąd elektryczny. Konwersja wymaga znajomości napięcia (V) i typu fazy (jednofazowy lub trójfazowy). Nasz darmowy kalkulator konwersji kVA na Ampery czyni ten proces szybkim i łatwym, zapewniając natychmiastowe i dokładne wyniki dla systemów jednofazowych i trójfazowych.",
+          "paragraph2": "Dla systemów jednofazowych wzór konwersji to: A = (kVA × 1000) / V, gdzie A to prąd w amperach, kVA to moc pozorna w kilowolt-amperach, a V to napięcie w woltach. Dla systemów trójfazowych wzór to: A = (kVA × 1000) / (√3 × V), gdzie √3 (około 1.732) uwzględnia zależność mocy trójfazowej. Systemy jednofazowe używają jednego przebiegu napięcia, podczas gdy systemy trójfazowe używają trzech przebiegów napięcia przesuniętych względem siebie o 120 stopni.",
+          "paragraph3": "Ta konwersja jest powszechnie używana w różnych zastosowaniach: dobieranie wyłączników i bezpieczników, obliczanie wymagań dotyczących przekroju przewodów, projektowanie systemów dystrybucji energii elektrycznej, określanie prądu wtórnego transformatora, analiza charakterystyk obciążenia elektrycznego oraz praca z generatorami, silnikami i urządzeniami dystrybucji energii. Znajomość konwersji kVA na Ampery pomaga w podejmowaniu świadomych decyzji dotyczących projektowania systemów elektrycznych, doboru urządzeń i kwestii bezpieczeństwa.",
+          "paragraph4": "Nasz kalkulator przyjmuje kVA i napięcie jako dane wejściowe, automatycznie stosuje odpowiedni wzór konwersji w zależności od wybranego typu fazy (jednofazowy lub trójfazowy) i zapewnia wynik w amperach. Kalkulator obsługuje zarówno systemy jednofazowe (powszechne w zastosowaniach domowych) jak i trójfazowe (powszechne w zastosowaniach komercyjnych i przemysłowych). Niezależnie od tego, czy pracujesz z transformatorami, generatorami, silnikami, wyłącznikami czy jakimikolwiek urządzeniami elektrycznymi, nasz kalkulator kVA na Ampery zapewnia dokładne, natychmiastowe konwersje.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "Dla systemu jednofazowego z 5 kVA przy 230 woltach: A = (5 × 1000) / 230 = 5000 / 230 = 21.74 A. Dla systemu trójfazowego z 10 kVA przy 400 woltach: A = (10 × 1000) / (√3 × 400) = 10000 / (1.732 × 400) = 10000 / 692.8 = 14.43 A. Dla systemu jednofazowego z 15 kVA przy 120 woltach: A = (15 × 1000) / 120 = 15000 / 120 = 125 A. Dla systemu trójfazowego z 25 kVA przy 480 woltach: A = (25 × 1000) / (√3 × 480) = 25000 / (1.732 × 480) = 25000 / 831.36 = 30.08 A."
+        },
+        "faq": {
+          "heading": "Najczęściej zadawane pytania",
+          "items": [
+            {
+              "question": "Jaki jest wzór do konwersji kVA na ampery dla systemu jednofazowego?",
+              "answer": "Dla systemów jednofazowych wzór do konwersji kilowolt-amperów (kVA) na ampery (A) to: A = (kVA × 1000) / V, gdzie A to prąd w amperach, kVA to moc pozorna w kilowolt-amperach, a V to napięcie w woltach."
+            },
+            {
+              "question": "Jaki jest wzór do konwersji kVA na ampery dla systemu trójfazowego?",
+              "answer": "Dla systemów trójfazowych wzór do konwersji kilowolt-amperów (kVA) na ampery (A) to: A = (kVA × 1000) / (√3 × V), gdzie A to prąd w amperach, kVA to moc pozorna w kilowolt-amperach, V to napięcie w woltach, a √3 (około 1.732) uwzględnia zależność mocy trójfazowej."
+            },
+            {
+              "question": "Jaka jest różnica między systemem jednofazowym a trójfazowym?",
+              "answer": "Systemy jednofazowe używają jednego przebiegu napięcia i są powszechne w zastosowaniach domowych. Systemy trójfazowe używają trzech przebiegów napięcia przesuniętych względem siebie o 120 stopni i są powszechne w zastosowaniach komercyjnych i przemysłowych. Systemy trójfazowe są bardziej efektywne do zasilania dużych silników i urządzeń."
+            },
+            {
+              "question": "Dlaczego używa się √3 w obliczeniach trójfazowych?",
+              "answer": "Współczynnik √3 (około 1.732) uwzględnia zależność fazową między trzema przebiegami napięcia w systemie trójfazowym. W zrównoważonym systemie trójfazowym napięcie międzyfazowe jest √3 razy większe od napięcia fazowego, co wpływa na obliczenie prądu."
+            },
+            {
+              "question": "Co to jest kVA?",
+              "answer": "kVA (kilowolt-ampery) to jednostka mocy pozornej w systemach elektrycznych. Reprezentuje całkowitą moc w obwodzie prądu przemiennego, w tym zarówno moc rzeczywistą (watty) jak i moc bierną. kVA jest używane do doboru transformatorów, generatorów i innych urządzeń elektrycznych."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak, nasz kalkulator kVA na Ampery jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Po prostu wprowadź wartości kVA i napięcia, wybierz typ fazy i otrzymaj natychmiastowe, dokładne wyniki."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Kalkulator Ampery na kW",
       "description": "Konwertuj ampery (A) na kilowaty (kW) natychmiast i dokładnie używając napięcia i współczynnika mocy",

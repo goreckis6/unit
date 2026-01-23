@@ -134,6 +134,12 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       descKey: 'joulesToVolts.description',
       path: '/calculators/electric/joules-to-volts',
     },
+    {
+      id: 'kva-to-amps',
+      titleKey: 'kvaToAmps.title',
+      descKey: 'kvaToAmps.description',
+      path: '/calculators/electric/kva-to-amps',
+    },
   ];
 
   return (

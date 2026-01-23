@@ -230,6 +230,61 @@
         }
       }
     },
+    "kvaToAmps": {
+      "title": "kVA til Ampere Kalkulator",
+      "description": "Konverter kilovolt-ampere (kVA) til ampere (A) umiddelbart og nøyaktig for enfase- og trefase systemer",
+      "phaseType": "Fase type",
+      "singlePhase": "Enfase",
+      "threePhase": "Trefase",
+      "kva": "Kilovolt-ampere (kVA)",
+      "volts": "Spenning (V)",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "seo": {
+        "title": "kVA til Ampere Kalkulator - Konverter Tilsynelatende Effekt til Strøm Online",
+        "description": "Gratis kVA til Ampere konverteringskalkulator. Konverter kilovolt-ampere til ampere umiddelbart for enfase- og trefase systemer. Perfekt for elektriske beregninger, kretsdesign og kraftsystemanalyse.",
+        "keywords": "kva til ampere kalkulator, kva til ampere konverter, kva ampere konvertering, tilsynelatende effekt kalkulator, elektrisk kalkulator, strøm kalkulator, enfase, trefase, gratis kalkulator",
+        "content": {
+          "heading": "Hvordan konvertere kVA til Ampere",
+          "paragraph1": "Å konvertere kilovolt-ampere (kVA) til ampere (A) er essensielt innen elektroteknikk og kraftsystemer. kVA representerer tilsynelatende effekt, mens ampere representerer elektrisk strøm. Konverteringen krever kunnskap om spenningen (V) og fastypen (enfase eller trefase). Vår gratis kVA til Ampere konverteringskalkulator gjør denne prosessen rask og enkel, og gir umiddelbare og nøyaktige resultater for både enfase- og trefase systemer.",
+          "paragraph2": "For enfasesystemer er konverteringsformelen: A = (kVA × 1000) / V, hvor A er strømmen i ampere, kVA er tilsynelatende effekt i kilovolt-ampere og V er spenningen i volt. For trefasesystemer er formelen: A = (kVA × 1000) / (√3 × V), hvor √3 (omtrent 1.732) tar hensyn til trefase kraftforholdet. Enfasesystemer bruker én spenningsbølgeform, mens trefasesystemer bruker tre spenningsbølgeformer som er 120 grader ute av fase med hverandre.",
+          "paragraph3": "Denne konverteringen brukes ofte i ulike applikasjoner: dimensjonering av strømbrytere og sikringer, beregning av ledningstverrsnittskrav, design av elektriske distribusjonssystemer, bestemmelse av transformator sekundærstrøm, analyse av elektriske lastkarakteristikker og arbeid med generatorer, motorer og kraftdistribusjonsutstyr. Å vite hvordan man konverterer kVA til Ampere hjelper deg med å ta informerte beslutninger om elektrisk systemdesign, utstyrvalg og sikkerhetshensyn.",
+          "paragraph4": "Vår kalkulator tar kVA og spenning som innganger, bruker automatisk riktig konverteringsformel basert på valgt fastype (enfase eller trefase) og gir resultatet i ampere. Kalkulatoren håndterer både enfasesystemer (vanlige i boligapplikasjoner) og trefasesystemer (vanlige i kommersielle og industrielle applikasjoner). Enten du jobber med transformatorer, generatorer, motorer, strømbrytere eller elektrisk utstyr, gir vår kVA til Ampere kalkulator nøyaktige, umiddelbare konverteringer.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "For et enfasesystem med 5 kVA ved 230 volt: A = (5 × 1000) / 230 = 5000 / 230 = 21.74 A. For et trefasesystem med 10 kVA ved 400 volt: A = (10 × 1000) / (√3 × 400) = 10000 / (1.732 × 400) = 10000 / 692.8 = 14.43 A. For et enfasesystem med 15 kVA ved 120 volt: A = (15 × 1000) / 120 = 15000 / 120 = 125 A. For et trefasesystem med 25 kVA ved 480 volt: A = (25 × 1000) / (√3 × 480) = 25000 / (1.732 × 480) = 25000 / 831.36 = 30.08 A."
+        },
+        "faq": {
+          "heading": "Ofte Stilte Spørsmål",
+          "items": [
+            {
+              "question": "Hva er formelen for å konvertere kVA til ampere for enfase?",
+              "answer": "For enfasesystemer er formelen for å konvertere kilovolt-ampere (kVA) til ampere (A): A = (kVA × 1000) / V, hvor A er strømmen i ampere, kVA er tilsynelatende effekt i kilovolt-ampere og V er spenningen i volt."
+            },
+            {
+              "question": "Hva er formelen for å konvertere kVA til ampere for trefase?",
+              "answer": "For trefasesystemer er formelen for å konvertere kilovolt-ampere (kVA) til ampere (A): A = (kVA × 1000) / (√3 × V), hvor A er strømmen i ampere, kVA er tilsynelatende effekt i kilovolt-ampere, V er spenningen i volt og √3 (omtrent 1.732) tar hensyn til trefase kraftforholdet."
+            },
+            {
+              "question": "Hva er forskjellen mellom enfase og trefase?",
+              "answer": "Enfasesystemer bruker én spenningsbølgeform og er vanlige i boligapplikasjoner. Trefasesystemer bruker tre spenningsbølgeformer som er 120 grader ute av fase med hverandre og er vanlige i kommersielle og industrielle applikasjoner. Trefasesystemer er mer effektive for å drive store motorer og utstyr."
+            },
+            {
+              "question": "Hvorfor brukes √3 i trefaseberegninger?",
+              "answer": "Faktoren √3 (omtrent 1.732) tar hensyn til faseforholdet mellom de tre spenningsbølgeformene i et trefasesystem. I et balansert trefasesystem er linje-til-linje spenningen √3 ganger linje-til-nøytral spenningen, noe som påvirker strømberegningen."
+            },
+            {
+              "question": "Hva er kVA?",
+              "answer": "kVA (kilovolt-ampere) er en enhet for tilsynelatende effekt i elektriske systemer. Den representerer total effekt i en vekselstrømskrets, inkludert både aktiv effekt (watt) og reaktiv effekt. kVA brukes til å dimensjonere transformatorer, generatorer og annet elektrisk utstyr."
+            },
+            {
+              "question": "Er denne kalkulatoren gratis å bruke?",
+              "answer": "Ja, vår kVA til Ampere kalkulator er helt gratis å bruke. Ingen registrering eller betaling kreves. Skriv bare inn kVA- og spenningsverdiene, velg fastypen og få umiddelbare, nøyaktige resultater."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Ampere til kW Kalkulator",
       "description": "Konverter ampere (A) til kilowatt (kW) umiddelbart og nøyaktig med spenning og effektfaktor",

@@ -230,6 +230,61 @@
         }
       }
     },
+    "kvaToAmps": {
+      "title": "Kalkulačka kVA na Ampéry",
+      "description": "Převeďte kilovoltampéry (kVA) na ampéry (A) okamžitě a přesně pro jednofázové a třífázové systémy",
+      "phaseType": "Typ fáze",
+      "singlePhase": "Jednofázový",
+      "threePhase": "Třífázový",
+      "kva": "Kilovoltampéry (kVA)",
+      "volts": "Napětí (V)",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "result": "Výsledek",
+      "seo": {
+        "title": "Kalkulačka kVA na Ampéry - Převeďte Zdánlivý Výkon na Proud Online",
+        "description": "Bezplatná kalkulačka pro převod kVA na Ampéry. Převeďte kilovoltampéry na ampéry okamžitě pro jednofázové a třífázové systémy. Ideální pro elektrické výpočty, návrh obvodů a analýzu energetických systémů.",
+        "keywords": "kalkulačka kva ampéry, převodník kva ampéry, převod kva ampéry, kalkulačka zdánlivý výkon, elektrická kalkulačka, kalkulačka proudu, jednofázový, třífázový, bezplatná kalkulačka",
+        "content": {
+          "heading": "Jak převést kVA na Ampéry",
+          "paragraph1": "Převod kilovoltampérů (kVA) na ampéry (A) je nezbytný v elektrotechnice a energetických systémech. kVA představuje zdánlivý výkon, zatímco ampéry představují elektrický proud. Převod vyžaduje znalost napětí (V) a typu fáze (jednofázový nebo třífázový). Naše bezplatná kalkulačka pro převod kVA na Ampéry činí tento proces rychlým a snadným, poskytuje okamžité a přesné výsledky pro jednofázové i třífázové systémy.",
+          "paragraph2": "Pro jednofázové systémy je převodní vzorec: A = (kVA × 1000) / V, kde A je proud v ampérech, kVA je zdánlivý výkon v kilovoltampérech a V je napětí ve voltech. Pro třífázové systémy je vzorec: A = (kVA × 1000) / (√3 × V), kde √3 (přibližně 1.732) zohledňuje vztah třífázového výkonu. Jednofázové systémy používají jednu napěťovou vlnu, zatímco třífázové systémy používají tři napěťové vlny, které jsou vůči sobě fázově posunuty o 120 stupňů.",
+          "paragraph3": "Tento převod se běžně používá v různých aplikacích: dimenzování jističů a pojistek, výpočet požadavků na průřez vodiče, návrh elektrických distribučních systémů, určení sekundárního proudu transformátoru, analýza charakteristik elektrického zatížení a práce s generátory, motory a zařízeními pro distribuci energie. Znalost převodu kVA na Ampéry vám pomůže učinit informovaná rozhodnutí o návrhu elektrických systémů, výběru zařízení a bezpečnostních aspektech.",
+          "paragraph4": "Naše kalkulačka bere kVA a napětí jako vstupy, automaticky aplikuje příslušný převodní vzorec na základě vybraného typu fáze (jednofázový nebo třífázový) a poskytuje výsledek v ampérech. Kalkulačka zpracovává jak jednofázové (běžné v rezidenčních aplikacích), tak třífázové (běžné v komerčních a průmyslových aplikacích) systémy. Ať už pracujete s transformátory, generátory, motory, jističi nebo jakýmkoli elektrickým zařízením, naše kalkulačka kVA na Ampéry poskytuje přesné, okamžité převody.",
+          "exampleHeading": "Příklad:",
+          "exampleText": "Pro jednofázový systém s 5 kVA při 230 voltech: A = (5 × 1000) / 230 = 5000 / 230 = 21.74 A. Pro třífázový systém s 10 kVA při 400 voltech: A = (10 × 1000) / (√3 × 400) = 10000 / (1.732 × 400) = 10000 / 692.8 = 14.43 A. Pro jednofázový systém s 15 kVA při 120 voltech: A = (15 × 1000) / 120 = 15000 / 120 = 125 A. Pro třífázový systém s 25 kVA při 480 voltech: A = (25 × 1000) / (√3 × 480) = 25000 / (1.732 × 480) = 25000 / 831.36 = 30.08 A."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {
+              "question": "Jaký je vzorec pro převod kVA na ampéry pro jednofázový systém?",
+              "answer": "Pro jednofázové systémy je vzorec pro převod kilovoltampérů (kVA) na ampéry (A): A = (kVA × 1000) / V, kde A je proud v ampérech, kVA je zdánlivý výkon v kilovoltampérech a V je napětí ve voltech."
+            },
+            {
+              "question": "Jaký je vzorec pro převod kVA na ampéry pro třífázový systém?",
+              "answer": "Pro třífázové systémy je vzorec pro převod kilovoltampérů (kVA) na ampéry (A): A = (kVA × 1000) / (√3 × V), kde A je proud v ampérech, kVA je zdánlivý výkon v kilovoltampérech, V je napětí ve voltech a √3 (přibližně 1.732) zohledňuje vztah třífázového výkonu."
+            },
+            {
+              "question": "Jaký je rozdíl mezi jednofázovým a třífázovým systémem?",
+              "answer": "Jednofázové systémy používají jednu napěťovou vlnu a jsou běžné v rezidenčních aplikacích. Třífázové systémy používají tři napěťové vlny, které jsou vůči sobě fázově posunuty o 120 stupňů, a jsou běžné v komerčních a průmyslových aplikacích. Třífázové systémy jsou efektivnější pro napájení velkých motorů a zařízení."
+            },
+            {
+              "question": "Proč se v třífázových výpočtech používá √3?",
+              "answer": "Faktor √3 (přibližně 1.732) zohledňuje fázový vztah mezi třemi napěťovými vlnami v třífázovém systému. V vyváženém třífázovém systému je napětí mezi fázemi √3 krát větší než napětí fáze-nulový vodič, což ovlivňuje výpočet proudu."
+            },
+            {
+              "question": "Co je kVA?",
+              "answer": "kVA (kilovoltampéry) je jednotka zdánlivého výkonu v elektrických systémech. Představuje celkový výkon v obvodu střídavého proudu, včetně jak činného výkonu (watty), tak jalového výkonu. kVA se používá pro dimenzování transformátorů, generátorů a dalších elektrických zařízení."
+            },
+            {
+              "question": "Je tato kalkulačka zdarma?",
+              "answer": "Ano, naše kalkulačka kVA na Ampéry je zcela zdarma. Není vyžadována registrace ani platba. Jednoduše zadejte hodnoty kVA a napětí, vyberte typ fáze a získejte okamžité, přesné výsledky."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Kalkulačka Ampérů na kW",
       "description": "Převeďte ampéry (A) na kilowatty (kW) okamžitě a přesně pomocí napětí a účiníku",

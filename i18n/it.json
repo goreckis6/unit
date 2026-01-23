@@ -230,6 +230,61 @@
         }
       }
     },
+    "kvaToAmps": {
+      "title": "Calcolatrice kVA ad Ampere",
+      "description": "Converti chilovolt-ampere (kVA) in ampere (A) istantaneamente e accuratamente per sistemi monofase e trifase",
+      "phaseType": "Tipo di fase",
+      "singlePhase": "Monofase",
+      "threePhase": "Trifase",
+      "kva": "Chilovolt-ampere (kVA)",
+      "volts": "Tensione (V)",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "seo": {
+        "title": "Calcolatrice kVA ad Ampere - Converti Potenza Apparente in Corrente Online",
+        "description": "Calcolatrice di conversione kVA ad Ampere gratuita. Converti chilovolt-ampere in ampere istantaneamente per sistemi monofase e trifase. Perfetta per calcoli elettrici, progettazione di circuiti e analisi di sistemi di alimentazione.",
+        "keywords": "calcolatrice kva ampere, convertitore kva ampere, conversione kva ampere, calcolatrice potenza apparente, calcolatrice elettrica, calcolatrice corrente, monofase, trifase, calcolatrice gratis",
+        "content": {
+          "heading": "Come convertire kVA in Ampere",
+          "paragraph1": "Convertire chilovolt-ampere (kVA) in ampere (A) è essenziale nell'ingegneria elettrica e nei sistemi di alimentazione. kVA rappresenta la potenza apparente, mentre gli ampere rappresentano la corrente elettrica. La conversione richiede la conoscenza della tensione (V) e del tipo di fase (monofase o trifase). La nostra calcolatrice gratuita di conversione kVA ad Ampere rende questo processo veloce e facile, fornendo risultati istantanei e accurati per sistemi monofase e trifase.",
+          "paragraph2": "Per sistemi monofase, la formula di conversione è: A = (kVA × 1000) / V, dove A è la corrente in ampere, kVA è la potenza apparente in chilovolt-ampere e V è la tensione in volt. Per sistemi trifase, la formula è: A = (kVA × 1000) / (√3 × V), dove √3 (circa 1.732) tiene conto della relazione di potenza trifase. I sistemi monofase usano una forma d'onda di tensione, mentre i sistemi trifase usano tre forme d'onda di tensione sfasate di 120 gradi l'una rispetto all'altra.",
+          "paragraph3": "Questa conversione è comunemente usata in varie applicazioni: dimensionamento di interruttori e fusibili, calcolo dei requisiti di calibro del filo, progettazione di sistemi di distribuzione elettrica, determinazione della corrente secondaria del trasformatore, analisi delle caratteristiche del carico elettrico e lavoro con generatori, motori e apparecchiature di distribuzione dell'energia. Sapere come convertire kVA in Ampere ti aiuta a prendere decisioni informate sul design dei sistemi elettrici, la selezione delle apparecchiature e le considerazioni di sicurezza.",
+          "paragraph4": "La nostra calcolatrice prende kVA e tensione come input, applica automaticamente la formula di conversione appropriata basata sul tipo di fase selezionato (monofase o trifase) e fornisce il risultato in ampere. La calcolatrice gestisce sia sistemi monofase (comuni nelle applicazioni residenziali) che trifase (comuni nelle applicazioni commerciali e industriali). Che tu stia lavorando con trasformatori, generatori, motori, interruttori o qualsiasi apparecchiatura elettrica, la nostra calcolatrice kVA ad Ampere fornisce conversioni accurate e istantanee.",
+          "exampleHeading": "Esempio:",
+          "exampleText": "Per un sistema monofase con 5 kVA a 230 volt: A = (5 × 1000) / 230 = 5000 / 230 = 21.74 A. Per un sistema trifase con 10 kVA a 400 volt: A = (10 × 1000) / (√3 × 400) = 10000 / (1.732 × 400) = 10000 / 692.8 = 14.43 A. Per un sistema monofase con 15 kVA a 120 volt: A = (15 × 1000) / 120 = 15000 / 120 = 125 A. Per un sistema trifase con 25 kVA a 480 volt: A = (25 × 1000) / (√3 × 480) = 25000 / (1.732 × 480) = 25000 / 831.36 = 30.08 A."
+        },
+        "faq": {
+          "heading": "Domande Frequenti",
+          "items": [
+            {
+              "question": "Qual è la formula per convertire kVA in ampere per monofase?",
+              "answer": "Per sistemi monofase, la formula per convertire chilovolt-ampere (kVA) in ampere (A) è: A = (kVA × 1000) / V, dove A è la corrente in ampere, kVA è la potenza apparente in chilovolt-ampere e V è la tensione in volt."
+            },
+            {
+              "question": "Qual è la formula per convertire kVA in ampere per trifase?",
+              "answer": "Per sistemi trifase, la formula per convertire chilovolt-ampere (kVA) in ampere (A) è: A = (kVA × 1000) / (√3 × V), dove A è la corrente in ampere, kVA è la potenza apparente in chilovolt-ampere, V è la tensione in volt e √3 (circa 1.732) tiene conto della relazione di potenza trifase."
+            },
+            {
+              "question": "Qual è la differenza tra monofase e trifase?",
+              "answer": "I sistemi monofase usano una forma d'onda di tensione e sono comuni nelle applicazioni residenziali. I sistemi trifase usano tre forme d'onda di tensione sfasate di 120 gradi l'una rispetto all'altra e sono comuni nelle applicazioni commerciali e industriali. I sistemi trifase sono più efficienti per alimentare grandi motori e apparecchiature."
+            },
+            {
+              "question": "Perché si usa √3 nei calcoli trifase?",
+              "answer": "Il fattore √3 (circa 1.732) tiene conto della relazione di fase tra le tre forme d'onda di tensione in un sistema trifase. In un sistema trifase bilanciato, la tensione linea-linea è √3 volte la tensione linea-neutro, il che influisce sul calcolo della corrente."
+            },
+            {
+              "question": "Cos'è kVA?",
+              "answer": "kVA (chilovolt-ampere) è un'unità di potenza apparente nei sistemi elettrici. Rappresenta la potenza totale in un circuito CA, inclusa sia la potenza reale (watt) che la potenza reattiva. kVA è usato per dimensionare trasformatori, generatori e altre apparecchiature elettriche."
+            },
+            {
+              "question": "Questa calcolatrice è gratuita?",
+              "answer": "Sì, la nostra calcolatrice kVA ad Ampere è completamente gratuita. Non è richiesta registrazione o pagamento. Inserisci semplicemente i tuoi valori kVA e tensione, seleziona il tipo di fase e ottieni risultati istantanei e accurati."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Calcolatrice Ampere a kW",
       "description": "Converti ampere (A) in chilowatt (kW) istantaneamente e accuratamente usando tensione e fattore di potenza",

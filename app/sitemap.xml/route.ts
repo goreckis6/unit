@@ -20,6 +20,7 @@ export async function GET() {
     '/calculators/electric/electron-volts-to-volts',
     '/calculators/electric/joules-to-watts',
     '/calculators/electric/joules-to-volts',
+    '/calculators/electric/kva-to-amps',
     '/blog',
   ];
 

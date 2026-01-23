@@ -230,6 +230,61 @@
         }
       }
     },
+    "kvaToAmps": {
+      "title": "kVA to Amps Calculator",
+      "description": "Convert kilovolt-amperes (kVA) to amperes (A) instantly and accurately for single phase and three phase systems",
+      "phaseType": "Phase type",
+      "singlePhase": "Single Phase",
+      "threePhase": "Three Phase",
+      "kva": "Kilovolt-amperes (kVA)",
+      "volts": "Voltage (V)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "seo": {
+        "title": "kVA to Amps Calculator - Convert Apparent Power to Current Online",
+        "description": "Free kVA to Amps conversion calculator. Convert kilovolt-amperes to amperes instantly for single phase and three phase systems. Perfect for electrical calculations, circuit design, and power system analysis.",
+        "keywords": "kva to amps calculator, kva to amperes converter, kva amps conversion, apparent power calculator, electrical calculator, current calculator, single phase, three phase, free calculator",
+        "content": {
+          "heading": "How to Convert kVA to Amps",
+          "paragraph1": "Converting kilovolt-amperes (kVA) to amperes (A) is essential in electrical engineering and power systems. kVA represents apparent power, while amps represent electrical current. The conversion requires knowledge of the voltage (V) and the phase type (single phase or three phase). Our free kVA to Amps conversion calculator makes this process quick and easy, providing instant and accurate results for both single phase and three phase systems.",
+          "paragraph2": "For single phase systems, the conversion formula is: A = (kVA × 1000) / V, where A is the current in amperes, kVA is the apparent power in kilovolt-amperes, and V is the voltage in volts. For three phase systems, the formula is: A = (kVA × 1000) / (√3 × V), where √3 (approximately 1.732) accounts for the three-phase power relationship. Single phase systems use one voltage waveform, while three phase systems use three voltage waveforms that are 120 degrees out of phase with each other.",
+          "paragraph3": "This conversion is commonly used in various applications: sizing circuit breakers and fuses, calculating wire gauge requirements, designing electrical distribution systems, determining transformer secondary current, analyzing electrical load characteristics, and working with generators, motors, and power distribution equipment. Knowing how to convert kVA to Amps helps you make informed decisions about electrical system design, equipment selection, and safety considerations.",
+          "paragraph4": "Our calculator takes the kVA and voltage as inputs, automatically applies the appropriate conversion formula based on the selected phase type (single or three phase), and provides the result in amperes. The calculator handles both single phase (common in residential applications) and three phase (common in commercial and industrial applications) systems. Whether you're working with transformers, generators, motors, circuit breakers, or any electrical equipment, our kVA to Amps calculator provides accurate, instant conversions.",
+          "exampleHeading": "Example:",
+          "exampleText": "For a single phase system with 5 kVA at 230 volts: A = (5 × 1000) / 230 = 5000 / 230 = 21.74 A. For a three phase system with 10 kVA at 400 volts: A = (10 × 1000) / (√3 × 400) = 10000 / (1.732 × 400) = 10000 / 692.8 = 14.43 A. For a single phase system with 15 kVA at 120 volts: A = (15 × 1000) / 120 = 15000 / 120 = 125 A. For a three phase system with 25 kVA at 480 volts: A = (25 × 1000) / (√3 × 480) = 25000 / (1.732 × 480) = 25000 / 831.36 = 30.08 A."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert kVA to amps for single phase?",
+              "answer": "For single phase systems, the formula to convert kilovolt-amperes (kVA) to amperes (A) is: A = (kVA × 1000) / V, where A is the current in amperes, kVA is the apparent power in kilovolt-amperes, and V is the voltage in volts."
+            },
+            {
+              "question": "What is the formula to convert kVA to amps for three phase?",
+              "answer": "For three phase systems, the formula to convert kilovolt-amperes (kVA) to amperes (A) is: A = (kVA × 1000) / (√3 × V), where A is the current in amperes, kVA is the apparent power in kilovolt-amperes, V is the voltage in volts, and √3 (approximately 1.732) accounts for the three-phase power relationship."
+            },
+            {
+              "question": "What is the difference between single phase and three phase?",
+              "answer": "Single phase systems use one voltage waveform and are common in residential applications. Three phase systems use three voltage waveforms that are 120 degrees out of phase with each other and are common in commercial and industrial applications. Three phase systems are more efficient for powering large motors and equipment."
+            },
+            {
+              "question": "Why is √3 used in three phase calculations?",
+              "answer": "The √3 (approximately 1.732) factor accounts for the phase relationship between the three voltage waveforms in a three phase system. In a balanced three phase system, the line-to-line voltage is √3 times the line-to-neutral voltage, which affects the current calculation."
+            },
+            {
+              "question": "What is kVA?",
+              "answer": "kVA (kilovolt-amperes) is a unit of apparent power in electrical systems. It represents the total power in an AC circuit, including both real power (watts) and reactive power. kVA is used to size transformers, generators, and other electrical equipment."
+            },
+            {
+              "question": "Is this calculator free to use?",
+              "answer": "Yes, our kVA to Amps calculator is completely free to use. No registration or payment is required. Simply enter your kVA and voltage values, select the phase type, and get instant, accurate results."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Amps to kW Calculator",
       "description": "Convert amperes (A) to kilowatts (kW) instantly and accurately using voltage and power factor",

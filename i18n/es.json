@@ -230,6 +230,61 @@
         }
       }
     },
+    "kvaToAmps": {
+      "title": "Calculadora de kVA a Amperios",
+      "description": "Convierta kilovoltios-amperios (kVA) a amperios (A) al instante y con precisión para sistemas monofásicos y trifásicos",
+      "phaseType": "Tipo de fase",
+      "singlePhase": "Monofásico",
+      "threePhase": "Trifásico",
+      "kva": "Kilovoltios-amperios (kVA)",
+      "volts": "Voltaje (V)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "seo": {
+        "title": "Calculadora kVA a Amperios - Convierte Potencia Aparente a Corriente Online",
+        "description": "Calculadora de conversión kVA a Amperios gratuita. Convierta kilovoltios-amperios a amperios instantáneamente para sistemas monofásicos y trifásicos. Perfecta para cálculos eléctricos, diseño de circuitos y análisis de sistemas de energía.",
+        "keywords": "calculadora kva amperios, convertidor kva amperios, conversión kva amperios, calculadora potencia aparente, calculadora eléctrica, calculadora corriente, monofásico, trifásico, calculadora gratis",
+        "content": {
+          "heading": "Cómo convertir kVA a Amperios",
+          "paragraph1": "Convertir kilovoltios-amperios (kVA) a amperios (A) es esencial en ingeniería eléctrica y sistemas de energía. kVA representa la potencia aparente, mientras que los amperios representan la corriente eléctrica. La conversión requiere conocimiento del voltaje (V) y el tipo de fase (monofásico o trifásico). Nuestra calculadora gratuita de conversión kVA a Amperios hace que este proceso sea rápido y fácil, proporcionando resultados instantáneos y precisos para sistemas monofásicos y trifásicos.",
+          "paragraph2": "Para sistemas monofásicos, la fórmula de conversión es: A = (kVA × 1000) / V, donde A es la corriente en amperios, kVA es la potencia aparente en kilovoltios-amperios y V es el voltaje en voltios. Para sistemas trifásicos, la fórmula es: A = (kVA × 1000) / (√3 × V), donde √3 (aproximadamente 1.732) tiene en cuenta la relación de potencia trifásica. Los sistemas monofásicos usan una forma de onda de voltaje, mientras que los sistemas trifásicos usan tres formas de onda de voltaje que están desfasadas 120 grados entre sí.",
+          "paragraph3": "Esta conversión se usa comúnmente en varias aplicaciones: dimensionamiento de disyuntores y fusibles, cálculo de requisitos de calibre de cable, diseño de sistemas de distribución eléctrica, determinación de corriente secundaria del transformador, análisis de características de carga eléctrica y trabajo con generadores, motores y equipos de distribución de energía. Saber cómo convertir kVA a Amperios le ayuda a tomar decisiones informadas sobre el diseño de sistemas eléctricos, selección de equipos y consideraciones de seguridad.",
+          "paragraph4": "Nuestra calculadora toma kVA y voltaje como entradas, aplica automáticamente la fórmula de conversión apropiada basada en el tipo de fase seleccionado (monofásico o trifásico) y proporciona el resultado en amperios. La calculadora maneja tanto sistemas monofásicos (comunes en aplicaciones residenciales) como trifásicos (comunes en aplicaciones comerciales e industriales). Ya sea que esté trabajando con transformadores, generadores, motores, disyuntores o cualquier equipo eléctrico, nuestra calculadora kVA a Amperios proporciona conversiones precisas e instantáneas.",
+          "exampleHeading": "Ejemplo:",
+          "exampleText": "Para un sistema monofásico con 5 kVA a 230 voltios: A = (5 × 1000) / 230 = 5000 / 230 = 21.74 A. Para un sistema trifásico con 10 kVA a 400 voltios: A = (10 × 1000) / (√3 × 400) = 10000 / (1.732 × 400) = 10000 / 692.8 = 14.43 A. Para un sistema monofásico con 15 kVA a 120 voltios: A = (15 × 1000) / 120 = 15000 / 120 = 125 A. Para un sistema trifásico con 25 kVA a 480 voltios: A = (25 × 1000) / (√3 × 480) = 25000 / (1.732 × 480) = 25000 / 831.36 = 30.08 A."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Cuál es la fórmula para convertir kVA a amperios para monofásico?",
+              "answer": "Para sistemas monofásicos, la fórmula para convertir kilovoltios-amperios (kVA) a amperios (A) es: A = (kVA × 1000) / V, donde A es la corriente en amperios, kVA es la potencia aparente en kilovoltios-amperios y V es el voltaje en voltios."
+            },
+            {
+              "question": "¿Cuál es la fórmula para convertir kVA a amperios para trifásico?",
+              "answer": "Para sistemas trifásicos, la fórmula para convertir kilovoltios-amperios (kVA) a amperios (A) es: A = (kVA × 1000) / (√3 × V), donde A es la corriente en amperios, kVA es la potencia aparente en kilovoltios-amperios, V es el voltaje en voltios y √3 (aproximadamente 1.732) tiene en cuenta la relación de potencia trifásica."
+            },
+            {
+              "question": "¿Cuál es la diferencia entre monofásico y trifásico?",
+              "answer": "Los sistemas monofásicos usan una forma de onda de voltaje y son comunes en aplicaciones residenciales. Los sistemas trifásicos usan tres formas de onda de voltaje que están desfasadas 120 grados entre sí y son comunes en aplicaciones comerciales e industriales. Los sistemas trifásicos son más eficientes para alimentar motores grandes y equipos."
+            },
+            {
+              "question": "¿Por qué se usa √3 en los cálculos trifásicos?",
+              "answer": "El factor √3 (aproximadamente 1.732) tiene en cuenta la relación de fase entre las tres formas de onda de voltaje en un sistema trifásico. En un sistema trifásico equilibrado, el voltaje línea a línea es √3 veces el voltaje línea a neutro, lo que afecta el cálculo de la corriente."
+            },
+            {
+              "question": "¿Qué es kVA?",
+              "answer": "kVA (kilovoltios-amperios) es una unidad de potencia aparente en sistemas eléctricos. Representa la potencia total en un circuito de CA, incluyendo tanto la potencia real (vatios) como la potencia reactiva. kVA se usa para dimensionar transformadores, generadores y otros equipos eléctricos."
+            },
+            {
+              "question": "¿Es gratuita esta calculadora?",
+              "answer": "Sí, nuestra calculadora kVA a Amperios es completamente gratuita. No se requiere registro ni pago. Simplemente ingrese sus valores kVA y voltaje, seleccione el tipo de fase y obtenga resultados instantáneos y precisos."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Calculadora de Amperios a kW",
       "description": "Convierta amperios (A) a kilovatios (kW) al instante y con precisión usando voltaje y factor de potencia",

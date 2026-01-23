@@ -230,6 +230,61 @@
         }
       }
     },
+    "kvaToAmps": {
+      "title": "kVA till Ampere Kalkylator",
+      "description": "Konvertera kilovolt-ampere (kVA) till ampere (A) omedelbart och exakt för enfas- och trefas system",
+      "phaseType": "Fas typ",
+      "singlePhase": "Enfas",
+      "threePhase": "Trefas",
+      "kva": "Kilovolt-ampere (kVA)",
+      "volts": "Spänning (V)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "seo": {
+        "title": "kVA till Ampere Kalkylator - Konvertera Skenbar Effekt till Ström Online",
+        "description": "Gratis kVA till Ampere omvandlingskalkylator. Konvertera kilovolt-ampere till ampere omedelbart för enfas- och trefas system. Perfekt för elektriska beräkningar, kretsdesign och kraftsystemanalys.",
+        "keywords": "kva till ampere kalkylator, kva till ampere omvandlare, kva ampere omvandling, skenbar effekt kalkylator, elektrisk kalkylator, ström kalkylator, enfas, trefas, gratis kalkylator",
+        "content": {
+          "heading": "Hur man konverterar kVA till Ampere",
+          "paragraph1": "Att konvertera kilovolt-ampere (kVA) till ampere (A) är väsentligt inom elektroteknik och kraftsystem. kVA representerar skenbar effekt, medan ampere representerar elektrisk ström. Omvandlingen kräver kunskap om spänningen (V) och fastypen (enfas eller trefas). Vår gratis kVA till Ampere omvandlingskalkylator gör denna process snabb och enkel, och ger omedelbara och exakta resultat för både enfas- och trefas system.",
+          "paragraph2": "För enfassystem är omvandlingsformeln: A = (kVA × 1000) / V, där A är strömmen i ampere, kVA är skenbar effekt i kilovolt-ampere och V är spänningen i volt. För trefassystem är formeln: A = (kVA × 1000) / (√3 × V), där √3 (ungefär 1.732) tar hänsyn till trefas kraftförhållandet. Enfassystem använder en spänningsvågform, medan trefassystem använder tre spänningsvågformer som är 120 grader ur fas med varandra.",
+          "paragraph3": "Denna omvandling används ofta i olika applikationer: dimensionering av strömbrytare och säkringar, beräkning av trådtjocklekskrav, design av elektriska distributionssystem, bestämning av transformator sekundärström, analys av elektriska lastkarakteristika och arbete med generatorer, motorer och kraftdistributionsutrustning. Att veta hur man konverterar kVA till Ampere hjälper dig att fatta välgrundade beslut om elektriskt systemdesign, utrustningsval och säkerhetsöverväganden.",
+          "paragraph4": "Vår kalkylator tar kVA och spänning som ingångar, applicerar automatiskt lämplig omvandlingsformel baserat på vald fastyp (enfas eller trefas) och ger resultatet i ampere. Kalkylatorn hanterar både enfassystem (vanliga i bostadsapplikationer) och trefassystem (vanliga i kommersiella och industriella applikationer). Oavsett om du arbetar med transformatorer, generatorer, motorer, strömbrytare eller elektrisk utrustning, ger vår kVA till Ampere kalkylator exakta, omedelbara omvandlingar.",
+          "exampleHeading": "Exempel:",
+          "exampleText": "För ett enfassystem med 5 kVA vid 230 volt: A = (5 × 1000) / 230 = 5000 / 230 = 21.74 A. För ett trefassystem med 10 kVA vid 400 volt: A = (10 × 1000) / (√3 × 400) = 10000 / (1.732 × 400) = 10000 / 692.8 = 14.43 A. För ett enfassystem med 15 kVA vid 120 volt: A = (15 × 1000) / 120 = 15000 / 120 = 125 A. För ett trefassystem med 25 kVA vid 480 volt: A = (25 × 1000) / (√3 × 480) = 25000 / (1.732 × 480) = 25000 / 831.36 = 30.08 A."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är formeln för att konvertera kVA till ampere för enfas?",
+              "answer": "För enfassystem är formeln för att konvertera kilovolt-ampere (kVA) till ampere (A): A = (kVA × 1000) / V, där A är strömmen i ampere, kVA är skenbar effekt i kilovolt-ampere och V är spänningen i volt."
+            },
+            {
+              "question": "Vad är formeln för att konvertera kVA till ampere för trefas?",
+              "answer": "För trefassystem är formeln för att konvertera kilovolt-ampere (kVA) till ampere (A): A = (kVA × 1000) / (√3 × V), där A är strömmen i ampere, kVA är skenbar effekt i kilovolt-ampere, V är spänningen i volt och √3 (ungefär 1.732) tar hänsyn till trefas kraftförhållandet."
+            },
+            {
+              "question": "Vad är skillnaden mellan enfas och trefas?",
+              "answer": "Enfassystem använder en spänningsvågform och är vanliga i bostadsapplikationer. Trefassystem använder tre spänningsvågformer som är 120 grader ur fas med varandra och är vanliga i kommersiella och industriella applikationer. Trefassystem är mer effektiva för att driva stora motorer och utrustning."
+            },
+            {
+              "question": "Varför används √3 i trefasberäkningar?",
+              "answer": "Faktorn √3 (ungefär 1.732) tar hänsyn till fasförhållandet mellan de tre spänningsvågformerna i ett trefassystem. I ett balanserat trefassystem är linje-till-linje spänningen √3 gånger linje-till-neutral spänningen, vilket påverkar strömberäkningen."
+            },
+            {
+              "question": "Vad är kVA?",
+              "answer": "kVA (kilovolt-ampere) är en enhet av skenbar effekt i elektriska system. Den representerar den totala effekten i en växelströmskrets, inklusive både aktiv effekt (watt) och reaktiv effekt. kVA används för att dimensionera transformatorer, generatorer och annan elektrisk utrustning."
+            },
+            {
+              "question": "Är denna kalkylator gratis att använda?",
+              "answer": "Ja, vår kVA till Ampere kalkylator är helt gratis att använda. Ingen registrering eller betalning krävs. Ange helt enkelt dina kVA- och spänningsvärden, välj fastyp och få omedelbara, exakta resultat."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Ampere till kW Kalkylator",
       "description": "Konvertera ampere (A) till kilowatt (kW) omedelbart och exakt med spänning och effektfaktor",

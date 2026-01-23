@@ -230,6 +230,61 @@
         }
       }
     },
+    "kvaToAmps": {
+      "title": "Kalkulator kVA ke Ampere",
+      "description": "Konversi kilovolt-ampere (kVA) ke ampere (A) secara instan dan akurat untuk sistem satu fasa dan tiga fasa",
+      "phaseType": "Jenis fasa",
+      "singlePhase": "Satu Fasa",
+      "threePhase": "Tiga Fasa",
+      "kva": "Kilovolt-ampere (kVA)",
+      "volts": "Tegangan (V)",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "seo": {
+        "title": "Kalkulator kVA ke Ampere - Konversi Daya Semu ke Arus Online",
+        "description": "Kalkulator konversi kVA ke Ampere gratis. Konversi kilovolt-ampere ke ampere secara instan untuk sistem satu fasa dan tiga fasa. Sempurna untuk perhitungan listrik, desain sirkuit, dan analisis sistem tenaga.",
+        "keywords": "kalkulator kva ampere, konverter kva ampere, konversi kva ampere, kalkulator daya semu, kalkulator listrik, kalkulator arus, satu fasa, tiga fasa, kalkulator gratis",
+        "content": {
+          "heading": "Cara Mengonversi kVA ke Ampere",
+          "paragraph1": "Mengonversi kilovolt-ampere (kVA) ke ampere (A) sangat penting dalam teknik elektro dan sistem tenaga. kVA mewakili daya semu, sementara ampere mewakili arus listrik. Konversi memerlukan pengetahuan tentang tegangan (V) dan jenis fasa (satu fasa atau tiga fasa). Kalkulator konversi kVA ke Ampere gratis kami membuat proses ini cepat dan mudah, memberikan hasil instan dan akurat untuk sistem satu fasa dan tiga fasa.",
+          "paragraph2": "Untuk sistem satu fasa, rumus konversi adalah: A = (kVA × 1000) / V, di mana A adalah arus dalam ampere, kVA adalah daya semu dalam kilovolt-ampere, dan V adalah tegangan dalam volt. Untuk sistem tiga fasa, rumusnya adalah: A = (kVA × 1000) / (√3 × V), di mana √3 (sekitar 1.732) memperhitungkan hubungan daya tiga fasa. Sistem satu fasa menggunakan satu bentuk gelombang tegangan, sementara sistem tiga fasa menggunakan tiga bentuk gelombang tegangan yang berbeda fase 120 derajat satu sama lain.",
+          "paragraph3": "Konversi ini umumnya digunakan dalam berbagai aplikasi: penentuan ukuran pemutus sirkuit dan sekering, perhitungan persyaratan ukuran kawat, desain sistem distribusi listrik, penentuan arus sekunder transformator, analisis karakteristik beban listrik, dan bekerja dengan generator, motor, dan peralatan distribusi tenaga. Mengetahui cara mengonversi kVA ke Ampere membantu Anda membuat keputusan yang tepat tentang desain sistem listrik, pemilihan peralatan, dan pertimbangan keselamatan.",
+          "paragraph4": "Kalkulator kami mengambil kVA dan tegangan sebagai masukan, secara otomatis menerapkan rumus konversi yang sesuai berdasarkan jenis fasa yang dipilih (satu fasa atau tiga fasa), dan memberikan hasil dalam ampere. Kalkulator menangani sistem satu fasa (umum dalam aplikasi perumahan) dan tiga fasa (umum dalam aplikasi komersial dan industri). Baik Anda bekerja dengan transformator, generator, motor, pemutus sirkuit, atau peralatan listrik apa pun, kalkulator kVA ke Ampere kami memberikan konversi yang akurat dan instan.",
+          "exampleHeading": "Contoh:",
+          "exampleText": "Untuk sistem satu fasa dengan 5 kVA pada 230 volt: A = (5 × 1000) / 230 = 5000 / 230 = 21.74 A. Untuk sistem tiga fasa dengan 10 kVA pada 400 volt: A = (10 × 1000) / (√3 × 400) = 10000 / (1.732 × 400) = 10000 / 692.8 = 14.43 A. Untuk sistem satu fasa dengan 15 kVA pada 120 volt: A = (15 × 1000) / 120 = 15000 / 120 = 125 A. Untuk sistem tiga fasa dengan 25 kVA pada 480 volt: A = (25 × 1000) / (√3 × 480) = 25000 / (1.732 × 480) = 25000 / 831.36 = 30.08 A."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa rumus untuk mengonversi kVA ke ampere untuk satu fasa?",
+              "answer": "Untuk sistem satu fasa, rumus untuk mengonversi kilovolt-ampere (kVA) ke ampere (A) adalah: A = (kVA × 1000) / V, di mana A adalah arus dalam ampere, kVA adalah daya semu dalam kilovolt-ampere, dan V adalah tegangan dalam volt."
+            },
+            {
+              "question": "Apa rumus untuk mengonversi kVA ke ampere untuk tiga fasa?",
+              "answer": "Untuk sistem tiga fasa, rumus untuk mengonversi kilovolt-ampere (kVA) ke ampere (A) adalah: A = (kVA × 1000) / (√3 × V), di mana A adalah arus dalam ampere, kVA adalah daya semu dalam kilovolt-ampere, V adalah tegangan dalam volt, dan √3 (sekitar 1.732) memperhitungkan hubungan daya tiga fasa."
+            },
+            {
+              "question": "Apa perbedaan antara satu fasa dan tiga fasa?",
+              "answer": "Sistem satu fasa menggunakan satu bentuk gelombang tegangan dan umum dalam aplikasi perumahan. Sistem tiga fasa menggunakan tiga bentuk gelombang tegangan yang berbeda fase 120 derajat satu sama lain dan umum dalam aplikasi komersial dan industri. Sistem tiga fasa lebih efisien untuk menggerakkan motor besar dan peralatan."
+            },
+            {
+              "question": "Mengapa √3 digunakan dalam perhitungan tiga fasa?",
+              "answer": "Faktor √3 (sekitar 1.732) memperhitungkan hubungan fase antara tiga bentuk gelombang tegangan dalam sistem tiga fasa. Dalam sistem tiga fasa yang seimbang, tegangan line-to-line adalah √3 kali tegangan line-to-neutral, yang mempengaruhi perhitungan arus."
+            },
+            {
+              "question": "Apa itu kVA?",
+              "answer": "kVA (kilovolt-ampere) adalah satuan daya semu dalam sistem listrik. Ini mewakili total daya dalam sirkuit AC, termasuk daya nyata (watt) dan daya reaktif. kVA digunakan untuk menentukan ukuran transformator, generator, dan peralatan listrik lainnya."
+            },
+            {
+              "question": "Apakah kalkulator ini gratis digunakan?",
+              "answer": "Ya, kalkulator kVA ke Ampere kami sepenuhnya gratis digunakan. Tidak diperlukan pendaftaran atau pembayaran. Cukup masukkan nilai kVA dan tegangan Anda, pilih jenis fasa, dan dapatkan hasil instan dan akurat."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Kalkulator Ampere ke kW",
       "description": "Konversi ampere (A) ke kilowatt (kW) secara instan dan akurat menggunakan tegangan dan faktor daya",

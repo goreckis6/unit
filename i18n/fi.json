@@ -230,6 +230,61 @@
         }
       }
     },
+    "kvaToAmps": {
+      "title": "kVA Ampeeri Laskin",
+      "description": "Muunna kilovoltiampeerit (kVA) ampeereiksi (A) heti ja tarkasti yksivaihe- ja kolmivaihejärjestelmiä varten",
+      "phaseType": "Vaihetyyppi",
+      "singlePhase": "Yksivaihe",
+      "threePhase": "Kolmivaihe",
+      "kva": "Kilovoltiampeerit (kVA)",
+      "volts": "Jännite (V)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "seo": {
+        "title": "kVA Ampeeri Laskin - Muunna Näennäisteho Virraksi Online",
+        "description": "Ilmainen kVA Ampeeri muunnoslaskin. Muunna kilovoltiampeerit ampeereiksi heti yksivaihe- ja kolmivaihejärjestelmiä varten. Täydellinen sähköisiin laskelmiin, piirisuunnitteluun ja voimajärjestelmäanalyysiin.",
+        "keywords": "kva ampeeri laskin, kva ampeeri muunnin, kva ampeeri muunnos, näennäisteho laskin, sähköinen laskin, virta laskin, yksivaihe, kolmivaihe, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka muuntaa kVA Ampeereiksi",
+          "paragraph1": "Kilovoltiampeerien (kVA) muuntaminen ampeereiksi (A) on välttämätöntä sähkötekniikassa ja voimajärjestelmissä. kVA edustaa näennäistehoa, kun taas ampeerit edustavat sähkövirtaa. Muunnos vaatii jännitteen (V) ja vaihetyypin (yksivaihe tai kolmivaihe) tuntemisen. Ilmainen kVA Ampeeri muunnoslaskimemme tekee tästä prosessista nopean ja helpon, tarjoten hetkellisiä ja tarkkoja tuloksia sekä yksivaihe- että kolmivaihejärjestelmiä varten.",
+          "paragraph2": "Yksivaihejärjestelmissä muunnoskaava on: A = (kVA × 1000) / V, jossa A on virta ampeereina, kVA on näennäisteho kilovoltiampeereina ja V on jännite volteina. Kolmivaihejärjestelmissä kaava on: A = (kVA × 1000) / (√3 × V), jossa √3 (noin 1.732) ottaa huomioon kolmivaihetehosuhteen. Yksivaihejärjestelmät käyttävät yhtä jänniteaaltomuotoa, kun taas kolmivaihejärjestelmät käyttävät kolmea jänniteaaltomuotoa, jotka ovat 120 astetta vaihe-eroa toisiinsa nähden.",
+          "paragraph3": "Tätä muunnosta käytetään yleisesti erilaisissa sovelluksissa: katkaisijoiden ja sulakkeiden mitoitus, johtimen poikkipinta-alavaatimusten laskeminen, sähköisten jakelujärjestelmien suunnittelu, muuntajan toisiovirran määrittäminen, sähköisten kuormitusominaisuuksien analysointi sekä työskentely generaattoreiden, moottoreiden ja voimajakelulaitteiden kanssa. Tieto siitä, kuinka muuntaa kVA Ampeereiksi, auttaa sinua tekemään perusteltuja päätöksiä sähköjärjestelmän suunnittelusta, laitteiden valinnasta ja turvallisuusnäkökohdista.",
+          "paragraph4": "Laskimemme ottaa kVA:n ja jännitteen syötteiksi, soveltaa automaattisesti sopivaa muunnoskaavaa valitun vaihetyypin (yksivaihe tai kolmivaihe) perusteella ja antaa tuloksen ampeereina. Laskin käsittelee sekä yksivaihejärjestelmiä (yleisiä asuinrakennuksissa) että kolmivaihejärjestelmiä (yleisiä kaupallisissa ja teollisuussovelluksissa). Työskenteletpä sitten muuntajien, generaattoreiden, moottoreiden, katkaisijoiden tai minkä tahansa sähkölaitteiden kanssa, kVA Ampeeri laskimemme tarjoaa tarkkoja, hetkellisiä muunnoksia.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "Yksivaihejärjestelmälle, jossa on 5 kVA 230 voltilla: A = (5 × 1000) / 230 = 5000 / 230 = 21.74 A. Kolmivaihejärjestelmälle, jossa on 10 kVA 400 voltilla: A = (10 × 1000) / (√3 × 400) = 10000 / (1.732 × 400) = 10000 / 692.8 = 14.43 A. Yksivaihejärjestelmälle, jossa on 15 kVA 120 voltilla: A = (15 × 1000) / 120 = 15000 / 120 = 125 A. Kolmivaihejärjestelmälle, jossa on 25 kVA 480 voltilla: A = (25 × 1000) / (√3 × 480) = 25000 / (1.732 × 480) = 25000 / 831.36 = 30.08 A."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava muuntaa kVA ampeereiksi yksivaihejärjestelmälle?",
+              "answer": "Yksivaihejärjestelmissä kaava muuntaa kilovoltiampeerit (kVA) ampeereiksi (A) on: A = (kVA × 1000) / V, jossa A on virta ampeereina, kVA on näennäisteho kilovoltiampeereina ja V on jännite volteina."
+            },
+            {
+              "question": "Mikä on kaava muuntaa kVA ampeereiksi kolmivaihejärjestelmälle?",
+              "answer": "Kolmivaihejärjestelmissä kaava muuntaa kilovoltiampeerit (kVA) ampeereiksi (A) on: A = (kVA × 1000) / (√3 × V), jossa A on virta ampeereina, kVA on näennäisteho kilovoltiampeereina, V on jännite volteina ja √3 (noin 1.732) ottaa huomioon kolmivaihetehosuhteen."
+            },
+            {
+              "question": "Mikä on ero yksivaihe- ja kolmivaihejärjestelmien välillä?",
+              "answer": "Yksivaihejärjestelmät käyttävät yhtä jänniteaaltomuotoa ja ovat yleisiä asuinrakennuksissa. Kolmivaihejärjestelmät käyttävät kolmea jänniteaaltomuotoa, jotka ovat 120 astetta vaihe-eroa toisiinsa nähden, ja ovat yleisiä kaupallisissa ja teollisuussovelluksissa. Kolmivaihejärjestelmät ovat tehokkaampia suurten moottoreiden ja laitteiden käyttöön."
+            },
+            {
+              "question": "Miksi √3 käytetään kolmivaihelaskelmissa?",
+              "answer": "Kerroin √3 (noin 1.732) ottaa huomioon vaihesuhteen kolmen jänniteaaltomuodon välillä kolmivaihejärjestelmässä. Tasapainotetussa kolmivaihejärjestelmässä linja-linja jännite on √3 kertaa linja-neutraali jännite, mikä vaikuttaa virran laskemiseen."
+            },
+            {
+              "question": "Mikä on kVA?",
+              "answer": "kVA (kilovoltiampeerit) on näennäistehon yksikkö sähköjärjestelmissä. Se edustaa kokonaistehoa vaihtovirtapiirissä, mukaan lukien sekä aktiivinen teho (watit) että loisteho. kVA:ta käytetään muuntajien, generaattoreiden ja muiden sähkölaitteiden mitoittamiseen."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen käyttää?",
+              "answer": "Kyllä, kVA Ampeeri laskimemme on täysin ilmainen käyttää. Rekisteröitymistä tai maksua ei vaadita. Syötä vain kVA- ja jännitearvot, valitse vaihetyyppi ja saat hetkellisiä, tarkkoja tuloksia."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Ampeeri kW Laskin",
       "description": "Muunna ampeerit (A) kilowateiksi (kW) heti ja tarkasti käyttämällä jännitettä ja tehokerrointa",

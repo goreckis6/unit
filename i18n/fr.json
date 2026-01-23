@@ -230,6 +230,61 @@
         }
       }
     },
+    "kvaToAmps": {
+      "title": "Calculateur kVA vers Ampères",
+      "description": "Convertissez les kilovolt-ampères (kVA) en ampères (A) instantanément et précisément pour les systèmes monophasés et triphasés",
+      "phaseType": "Type de phase",
+      "singlePhase": "Monophasé",
+      "threePhase": "Triphasé",
+      "kva": "Kilovolt-ampères (kVA)",
+      "volts": "Tension (V)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "seo": {
+        "title": "Calculateur kVA vers Ampères - Convertir la Puissance Apparente en Courant en Ligne",
+        "description": "Calculateur de conversion kVA vers Ampères gratuit. Convertissez les kilovolt-ampères en ampères instantanément pour les systèmes monophasés et triphasés. Parfait pour les calculs électriques, la conception de circuits et l'analyse des systèmes d'alimentation.",
+        "keywords": "calculateur kva ampères, convertisseur kva ampères, conversion kva ampères, calculateur puissance apparente, calculateur électrique, calculateur courant, monophasé, triphasé, calculateur gratuit",
+        "content": {
+          "heading": "Comment convertir kVA en Ampères",
+          "paragraph1": "La conversion des kilovolt-ampères (kVA) en ampères (A) est essentielle en génie électrique et dans les systèmes d'alimentation. kVA représente la puissance apparente, tandis que les ampères représentent le courant électrique. La conversion nécessite la connaissance de la tension (V) et du type de phase (monophasé ou triphasé). Notre calculateur gratuit de conversion kVA vers Ampères rend ce processus rapide et facile, fournissant des résultats instantanés et précis pour les systèmes monophasés et triphasés.",
+          "paragraph2": "Pour les systèmes monophasés, la formule de conversion est: A = (kVA × 1000) / V, où A est le courant en ampères, kVA est la puissance apparente en kilovolt-ampères et V est la tension en volts. Pour les systèmes triphasés, la formule est: A = (kVA × 1000) / (√3 × V), où √3 (environ 1.732) tient compte de la relation de puissance triphasée. Les systèmes monophasés utilisent une forme d'onde de tension, tandis que les systèmes triphasés utilisent trois formes d'onde de tension décalées de 120 degrés les unes par rapport aux autres.",
+          "paragraph3": "Cette conversion est couramment utilisée dans diverses applications: dimensionnement des disjoncteurs et fusibles, calcul des exigences de calibre de fil, conception de systèmes de distribution électrique, détermination du courant secondaire du transformateur, analyse des caractéristiques de charge électrique et travail avec générateurs, moteurs et équipements de distribution d'énergie. Savoir comment convertir kVA en Ampères vous aide à prendre des décisions éclairées concernant la conception des systèmes électriques, la sélection des équipements et les considérations de sécurité.",
+          "paragraph4": "Notre calculateur prend kVA et tension comme entrées, applique automatiquement la formule de conversion appropriée basée sur le type de phase sélectionné (monophasé ou triphasé) et fournit le résultat en ampères. Le calculateur gère à la fois les systèmes monophasés (courants dans les applications résidentielles) et triphasés (courants dans les applications commerciales et industrielles). Que vous travailliez avec transformateurs, générateurs, moteurs, disjoncteurs ou tout équipement électrique, notre calculateur kVA vers Ampères fournit des conversions précises et instantanées.",
+          "exampleHeading": "Exemple:",
+          "exampleText": "Pour un système monophasé avec 5 kVA à 230 volts: A = (5 × 1000) / 230 = 5000 / 230 = 21.74 A. Pour un système triphasé avec 10 kVA à 400 volts: A = (10 × 1000) / (√3 × 400) = 10000 / (1.732 × 400) = 10000 / 692.8 = 14.43 A. Pour un système monophasé avec 15 kVA à 120 volts: A = (15 × 1000) / 120 = 15000 / 120 = 125 A. Pour un système triphasé avec 25 kVA à 480 volts: A = (25 × 1000) / (√3 × 480) = 25000 / (1.732 × 480) = 25000 / 831.36 = 30.08 A."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Quelle est la formule pour convertir kVA en ampères pour monophasé?",
+              "answer": "Pour les systèmes monophasés, la formule pour convertir les kilovolt-ampères (kVA) en ampères (A) est: A = (kVA × 1000) / V, où A est le courant en ampères, kVA est la puissance apparente en kilovolt-ampères et V est la tension en volts."
+            },
+            {
+              "question": "Quelle est la formule pour convertir kVA en ampères pour triphasé?",
+              "answer": "Pour les systèmes triphasés, la formule pour convertir les kilovolt-ampères (kVA) en ampères (A) est: A = (kVA × 1000) / (√3 × V), où A est le courant en ampères, kVA est la puissance apparente en kilovolt-ampères, V est la tension en volts et √3 (environ 1.732) tient compte de la relation de puissance triphasée."
+            },
+            {
+              "question": "Quelle est la différence entre monophasé et triphasé?",
+              "answer": "Les systèmes monophasés utilisent une forme d'onde de tension et sont courants dans les applications résidentielles. Les systèmes triphasés utilisent trois formes d'onde de tension décalées de 120 degrés les unes par rapport aux autres et sont courants dans les applications commerciales et industrielles. Les systèmes triphasés sont plus efficaces pour alimenter de gros moteurs et équipements."
+            },
+            {
+              "question": "Pourquoi √3 est-il utilisé dans les calculs triphasés?",
+              "answer": "Le facteur √3 (environ 1.732) tient compte de la relation de phase entre les trois formes d'onde de tension dans un système triphasé. Dans un système triphasé équilibré, la tension ligne à ligne est √3 fois la tension ligne à neutre, ce qui affecte le calcul du courant."
+            },
+            {
+              "question": "Qu'est-ce que kVA?",
+              "answer": "kVA (kilovolt-ampères) est une unité de puissance apparente dans les systèmes électriques. Il représente la puissance totale dans un circuit CA, y compris à la fois la puissance réelle (watts) et la puissance réactive. kVA est utilisé pour dimensionner les transformateurs, générateurs et autres équipements électriques."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit?",
+              "answer": "Oui, notre calculateur kVA vers Ampères est entièrement gratuit. Aucune inscription ou paiement requis. Entrez simplement vos valeurs kVA et tension, sélectionnez le type de phase et obtenez des résultats instantanés et précis."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Calculateur Ampères vers kW",
       "description": "Convertissez les ampères (A) en kilowatts (kW) instantanément et précisément en utilisant la tension et le facteur de puissance",

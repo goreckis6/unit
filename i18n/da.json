@@ -230,6 +230,61 @@
         }
       }
     },
+    "kvaToAmps": {
+      "title": "kVA til Ampere Lommeregner",
+      "description": "Konverter kilovolt-ampere (kVA) til ampere (A) med det samme og præcist for enfase- og trefase systemer",
+      "phaseType": "Fase type",
+      "singlePhase": "Enfase",
+      "threePhase": "Trefase",
+      "kva": "Kilovolt-ampere (kVA)",
+      "volts": "Spænding (V)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "seo": {
+        "title": "kVA til Ampere Lommeregner - Konverter Tilsyneladende Effekt til Strøm Online",
+        "description": "Gratis kVA til Ampere konverteringslommeregner. Konverter kilovolt-ampere til ampere med det samme for enfase- og trefase systemer. Perfekt til elektriske beregninger, kredsløbsdesign og kraftsystemanalyse.",
+        "keywords": "kva til ampere lommeregner, kva til ampere konverter, kva ampere konvertering, tilsyneladende effekt lommeregner, elektrisk lommeregner, strøm lommeregner, enfase, trefase, gratis lommeregner",
+        "content": {
+          "heading": "Sådan konverterer du kVA til Ampere",
+          "paragraph1": "At konvertere kilovolt-ampere (kVA) til ampere (A) er essentielt inden for elektroteknik og kraftsystemer. kVA repræsenterer tilsyneladende effekt, mens ampere repræsenterer elektrisk strøm. Konverteringen kræver kendskab til spændingen (V) og fastypen (enfase eller trefase). Vores gratis kVA til Ampere konverteringslommeregner gør denne proces hurtig og nem, og giver øjeblikkelige og præcise resultater for både enfase- og trefase systemer.",
+          "paragraph2": "For enfasesystemer er konverteringsformlen: A = (kVA × 1000) / V, hvor A er strømmen i ampere, kVA er tilsyneladende effekt i kilovolt-ampere og V er spændingen i volt. For trefasesystemer er formlen: A = (kVA × 1000) / (√3 × V), hvor √3 (cirka 1.732) tager højde for trefase kraftforholdet. Enfasesystemer bruger én spændingsbølgeform, mens trefasesystemer bruger tre spændingsbølgeformer, der er 120 grader ude af fase med hinanden.",
+          "paragraph3": "Denne konvertering bruges ofte i forskellige applikationer: dimensionering af strømafbrydere og sikringer, beregning af ledningstværsnitskrav, design af elektriske distributionssystemer, bestemmelse af transformator sekundærstrøm, analyse af elektriske lastkarakteristikker og arbejde med generatorer, motorer og kraftdistributionsudstyr. At vide, hvordan man konverterer kVA til Ampere, hjælper dig med at træffe informerede beslutninger om elektrisk systemdesign, udstyrvalg og sikkerhedsovervejelser.",
+          "paragraph4": "Vores lommeregner tager kVA og spænding som input, anvender automatisk den passende konverteringsformel baseret på valgt fastype (enfase eller trefase) og giver resultatet i ampere. Lommeregneren håndterer både enfasesystemer (almindelige i boligapplikationer) og trefasesystemer (almindelige i kommercielle og industrielle applikationer). Uanset om du arbejder med transformatorer, generatorer, motorer, strømafbrydere eller elektrisk udstyr, giver vores kVA til Ampere lommeregner præcise, øjeblikkelige konverteringer.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "For et enfasesystem med 5 kVA ved 230 volt: A = (5 × 1000) / 230 = 5000 / 230 = 21.74 A. For et trefasesystem med 10 kVA ved 400 volt: A = (10 × 1000) / (√3 × 400) = 10000 / (1.732 × 400) = 10000 / 692.8 = 14.43 A. For et enfasesystem med 15 kVA ved 120 volt: A = (15 × 1000) / 120 = 15000 / 120 = 125 A. For et trefasesystem med 25 kVA ved 480 volt: A = (25 × 1000) / (√3 × 480) = 25000 / (1.732 × 480) = 25000 / 831.36 = 30.08 A."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er formlen for at konvertere kVA til ampere for enfase?",
+              "answer": "For enfasesystemer er formlen for at konvertere kilovolt-ampere (kVA) til ampere (A): A = (kVA × 1000) / V, hvor A er strømmen i ampere, kVA er tilsyneladende effekt i kilovolt-ampere og V er spændingen i volt."
+            },
+            {
+              "question": "Hvad er formlen for at konvertere kVA til ampere for trefase?",
+              "answer": "For trefasesystemer er formlen for at konvertere kilovolt-ampere (kVA) til ampere (A): A = (kVA × 1000) / (√3 × V), hvor A er strømmen i ampere, kVA er tilsyneladende effekt i kilovolt-ampere, V er spændingen i volt og √3 (cirka 1.732) tager højde for trefase kraftforholdet."
+            },
+            {
+              "question": "Hvad er forskellen mellem enfase og trefase?",
+              "answer": "Enfasesystemer bruger én spændingsbølgeform og er almindelige i boligapplikationer. Trefasesystemer bruger tre spændingsbølgeformer, der er 120 grader ude af fase med hinanden, og er almindelige i kommercielle og industrielle applikationer. Trefasesystemer er mere effektive til at drive store motorer og udstyr."
+            },
+            {
+              "question": "Hvorfor bruges √3 i trefaseberegninger?",
+              "answer": "Faktoren √3 (cirka 1.732) tager højde for faseforholdet mellem de tre spændingsbølgeformer i et trefasesystem. I et balanceret trefasesystem er linje-til-linje spændingen √3 gange linje-til-neutral spændingen, hvilket påvirker strømberegningen."
+            },
+            {
+              "question": "Hvad er kVA?",
+              "answer": "kVA (kilovolt-ampere) er en enhed for tilsyneladende effekt i elektriske systemer. Den repræsenterer den samlede effekt i en vekselstrømskredsløb, inklusive både aktiv effekt (watt) og reaktiv effekt. kVA bruges til at dimensionere transformatorer, generatorer og andet elektrisk udstyr."
+            },
+            {
+              "question": "Er denne lommeregner gratis at bruge?",
+              "answer": "Ja, vores kVA til Ampere lommeregner er helt gratis at bruge. Ingen registrering eller betaling kræves. Indtast blot dine kVA- og spændingsværdier, vælg fastypen og få øjeblikkelige, præcise resultater."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Ampere til kW Lommeregner",
       "description": "Konverter ampere (A) til kilowatt (kW) med det samme og præcist med spænding og effektfaktor",

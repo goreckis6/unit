@@ -7,8 +7,7 @@
     "build": "next build && pnpm postbuild",
     "postbuild": "node scripts/postbuild.js",
     "start": "node .next/standalone/server.js",
-    "lint": "next lint",
-    "sitemap": "tsx scripts/sitemap.ts"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "^14.2.0",

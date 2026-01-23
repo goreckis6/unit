@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "Calculator kW la Amperi",
+      "description": "Convertește kilowați (kW) în amperi (A) instantaneu și precis pentru sisteme monofazate și trifazate",
+      "singlePhase": "Monofazat",
+      "threePhase": "Trifazat",
+      "kw": "Kilowați (kW)",
+      "voltage": "Tensiune (V)",
+      "powerFactor": "Factor de Putere (0-1)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "current": "Curent",
+      "seo": {
+        "title": "Calculator kW la Amperi - Convertește Kilowați în Amperi Online",
+        "description": "Calculator gratuit de conversie kW la Amperi pentru sisteme monofazate și trifazate. Convertește kilowați în amperi instantaneu folosind tensiunea și factorul de putere. Perfect pentru proiectare electrică, dimensionarea circuitelor și calcule de putere.",
+        "keywords": "calculator kw amperi, convertor kilowați amperi, conversie kw amperi, calculator putere curent, calculator electric, calculator amperi, calculator monofazat, calculator trifazat, calculator gratuit",
+        "content": {
+          "heading": "Cum să Convertești kW în Amperi",
+          "paragraph1": "Convertirea kilowați (kW) în amperi (A) este un calcul fundamental în ingineria electrică și proiectarea sistemelor de putere. Kilowații reprezintă puterea reală (puterea activă), în timp ce amperii reprezintă curentul electric. Conversia necesită cunoașterea tensiunii (V) și a factorului de putere (PF), și diferă între sistemele monofazate și trifazate. Calculatorul nostru gratuit de conversie kW la Amperi face acest proces rapid și ușor, oferind rezultate instantanee și precise pentru sistemele electrice monofazate și trifazate.",
+          "paragraph2": "Formula de conversie variază în funcție de tipul de sistem: Pentru sisteme monofazate: I(A) = P(kW) × 1000 / (PF × V), unde I este curentul în amperi, P este puterea în kilowați, PF este factorul de putere (o valoare între 0 și 1), și V este tensiunea în volți. Pentru sisteme trifazate: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), unde V(L-L) este tensiunea linie-la-linie. Factorul de putere indică cât de eficient este utilizată energia electrică, de obicei între 0,8 și 0,95 pentru majoritatea echipamentelor electrice.",
+          "paragraph3": "Această conversie este utilizată în mod obișnuit în diverse aplicații: dimensionarea întrerupătoarelor, siguranțelor și cablurilor pentru instalații electrice, determinarea cerințelor de secțiune a conductoarelor pentru flux de curent sigur, calcularea consumului de curent al motorului din puterea nominală, proiectarea sistemelor de distribuție electrică și panourilor, înțelegerea cerințelor de curent ale echipamentelor, selectarea componentelor electrice adecvate și lucrul cu generatoare, transformatoare și sisteme de distribuție a energiei. Cunoașterea modului de conversie a kW în Amperi te ajută să iei decizii informate despre proiectarea sistemelor electrice, selecția echipamentelor și conformitatea cu siguranța.",
+          "paragraph4": "Calculatorul nostru ia kilowații, tensiunea și factorul de putere ca intrări, și îți permite să selectezi între sisteme monofazate și trifazate. Aplică automat formula de conversie corespunzătoare și oferă rezultatul în amperi. Calculatorul gestionează tensiuni comune precum 120V, 230V, 240V, 400V, 480V și valori personalizate. Fie că dimensionezi cabluri pentru un motor, selectezi întrerupătoare sau proiectezi o instalație electrică, calculatorul nostru kW la Amperi oferă conversii precise și instantanee pentru calculele tale electrice.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "Pentru un sistem monofazat: Dacă ai o sarcină de 5 kW la 230V cu un factor de putere de 0,8, curentul ar fi: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. Pentru un sistem trifazat: Dacă ai o sarcină de 10 kW la 400V linie-la-linie cu un factor de putere de 0,85, curentul ar fi: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. Pentru un sistem monofazat cu 3 kW la 120V și PF de 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Care este formula pentru a converti kW în Amperi?",
+              "answer": "Pentru sisteme monofazate: I(A) = P(kW) × 1000 / (PF × V). Pentru sisteme trifazate: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), unde I este curentul în amperi, P este puterea în kilowați, PF este factorul de putere, și V este tensiunea în volți. Pentru trifazat, folosește tensiunea linie-la-linie."
+            },
+            {
+              "question": "Care este diferența între calculele monofazate și trifazate?",
+              "answer": "Sistemele monofazate folosesc formula: I = (kW × 1000) / (PF × V). Sistemele trifazate includ √3 (aproximativ 1,732) la numitor: I = (kW × 1000) / (√3 × PF × V). Acest lucru se datorează faptului că sistemele trifazate furnizează mai multă putere la același nivel de curent. Calculele trifazate folosesc, de asemenea, tensiunea linie-la-linie, nu tensiunea de fază."
+            },
+            {
+              "question": "Ce tensiune ar trebui să folosesc pentru calculele trifazate?",
+              "answer": "Pentru calculele trifazate, folosește întotdeauna tensiunea linie-la-linie (numită și tensiune de linie), nu tensiunea de fază. Tensiunile trifazate comune includ 208V, 240V, 380V, 400V, 415V și 480V. De exemplu, într-un sistem trifazat de 400V, folosește 400V în calculator."
+            },
+            {
+              "question": "Ce este factorul de putere și ce valoare ar trebui să folosesc?",
+              "answer": "Factorul de putere (PF) este raportul dintre puterea reală și puterea aparentă, indicând cât de eficient este utilizată energia electrică. Variază de la 0 la 1. Valori tipice: sarcini rezistive (încălzitoare, becuri incandescente) = 1,0, motoare cu inducție = 0,8-0,9, lămpi fluorescente = 0,85-0,95, lămpi LED = 0,9-0,95. Dacă nu este cunoscut, folosește 0,8 ca estimare conservatoare pentru sarcini de motor sau 0,9 pentru sarcini mixte generale."
+            },
+            {
+              "question": "De ce trebuie să știu curentul când am puterea în kW?",
+              "answer": "Cunoașterea curentului (amperi) este esențială pentru: selectarea secțiunii corecte a conductoarelor pentru flux de curent sigur, alegerea întrerupătoarelor și siguranțelor adecvate, asigurarea că cablurile și componentele pot gestiona curentul fără supraîncălzire, conformitatea cu codurile electrice și standardele de siguranță, și proiectarea sistemelor adecvate de protecție electrică. Curentul determină dimensionarea fizică a componentelor electrice, în timp ce puterea (kW) indică consumul de energie."
+            },
+            {
+              "question": "Este gratuit acest calculator?",
+              "answer": "Da, calculatorul nostru kW la Amperi este complet gratuit. Nu este necesară înregistrarea sau plata. Introdu pur și simplu valorile tale (kW, tensiune, factor de putere) și selectează tipul de sistem (monofazat sau trifazat) pentru a obține rezultate instantanee și precise."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculator Amperi la kVA",
       "description": "Convertește amperii (A) în kilovoltamperi (kVA) instant și precis folosind tensiunea",

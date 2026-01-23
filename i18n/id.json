@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "Kalkulator kW ke Ampere",
+      "description": "Konversi kilowatt (kW) ke ampere (A) secara instan dan akurat untuk sistem fase tunggal dan tiga fase",
+      "singlePhase": "Fase Tunggal",
+      "threePhase": "Tiga Fase",
+      "kw": "Kilowatt (kW)",
+      "voltage": "Tegangan (V)",
+      "powerFactor": "Faktor Daya (0-1)",
+      "calculate": "Hitung",
+      "reset": "Atur Ulang",
+      "result": "Hasil",
+      "current": "Arus",
+      "seo": {
+        "title": "Kalkulator kW ke Ampere - Konversi Kilowatt ke Ampere Online",
+        "description": "Kalkulator konversi kW ke Ampere gratis untuk sistem fase tunggal dan tiga fase. Konversi kilowatt ke ampere secara instan menggunakan tegangan dan faktor daya. Sempurna untuk desain listrik, ukuran sirkuit, dan perhitungan daya.",
+        "keywords": "kalkulator kw ampere, konverter kilowatt ampere, konversi kw ampere, kalkulator daya arus, kalkulator listrik, kalkulator ampere, kalkulator fase tunggal, kalkulator tiga fase, kalkulator gratis",
+        "content": {
+          "heading": "Cara Mengkonversi kW ke Ampere",
+          "paragraph1": "Mengkonversi kilowatt (kW) ke ampere (A) adalah perhitungan fundamental dalam teknik listrik dan desain sistem daya. Kilowatt mewakili daya nyata (daya aktif), sedangkan ampere mewakili arus listrik. Konversi memerlukan pengetahuan tentang tegangan (V) dan faktor daya (PF), dan berbeda antara sistem fase tunggal dan tiga fase. Kalkulator konversi kW ke Ampere gratis kami membuat proses ini cepat dan mudah, memberikan hasil instan dan akurat untuk sistem listrik fase tunggal dan tiga fase.",
+          "paragraph2": "Rumus konversi bervariasi berdasarkan jenis sistem: Untuk sistem fase tunggal: I(A) = P(kW) × 1000 / (PF × V), di mana I adalah arus dalam ampere, P adalah daya dalam kilowatt, PF adalah faktor daya (nilai antara 0 dan 1), dan V adalah tegangan dalam volt. Untuk sistem tiga fase: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), di mana V(L-L) adalah tegangan line-to-line. Faktor daya menunjukkan seberapa efisien energi listrik digunakan, biasanya antara 0,8 dan 0,95 untuk sebagian besar peralatan listrik.",
+          "paragraph3": "Konversi ini umumnya digunakan dalam berbagai aplikasi: menentukan ukuran pemutus sirkuit, sekering, dan kabel untuk instalasi listrik, menentukan persyaratan ukuran kawat untuk aliran arus yang aman, menghitung penarikan arus motor dari daya nominal, mendesain sistem distribusi listrik dan panel, memahami persyaratan arus peralatan, memilih komponen listrik yang sesuai, dan bekerja dengan generator, transformator, dan sistem distribusi daya. Mengetahui cara mengkonversi kW ke Ampere membantu Anda membuat keputusan yang tepat tentang desain sistem listrik, pemilihan peralatan, dan kepatuhan keselamatan.",
+          "paragraph4": "Kalkulator kami mengambil kilowatt, tegangan, dan faktor daya sebagai input, dan memungkinkan Anda memilih antara sistem fase tunggal dan tiga fase. Ini secara otomatis menerapkan rumus konversi yang sesuai dan memberikan hasil dalam ampere. Kalkulator menangani tegangan umum seperti 120V, 230V, 240V, 400V, 480V, dan nilai kustom. Baik Anda menentukan ukuran kabel untuk motor, memilih pemutus sirkuit, atau mendesain instalasi listrik, kalkulator kW ke Ampere kami memberikan konversi yang akurat dan instan untuk perhitungan listrik Anda.",
+          "exampleHeading": "Contoh:",
+          "exampleText": "Untuk sistem fase tunggal: Jika Anda memiliki beban 5 kW pada 230V dengan faktor daya 0,8, arus akan menjadi: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. Untuk sistem tiga fase: Jika Anda memiliki beban 10 kW pada 400V tegangan line-to-line dengan faktor daya 0,85, arus akan menjadi: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. Untuk sistem fase tunggal dengan 3 kW pada 120V dan PF 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa rumus untuk mengkonversi kW ke Ampere?",
+              "answer": "Untuk sistem fase tunggal: I(A) = P(kW) × 1000 / (PF × V). Untuk sistem tiga fase: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), di mana I adalah arus dalam ampere, P adalah daya dalam kilowatt, PF adalah faktor daya, dan V adalah tegangan dalam volt. Untuk tiga fase, gunakan tegangan line-to-line."
+            },
+            {
+              "question": "Apa perbedaan antara perhitungan fase tunggal dan tiga fase?",
+              "answer": "Sistem fase tunggal menggunakan rumus: I = (kW × 1000) / (PF × V). Sistem tiga fase menyertakan √3 (sekitar 1,732) di penyebut: I = (kW × 1000) / (√3 × PF × V). Ini karena sistem tiga fase memberikan lebih banyak daya pada tingkat arus yang sama. Perhitungan tiga fase juga menggunakan tegangan line-to-line, bukan tegangan fase."
+            },
+            {
+              "question": "Tegangan apa yang harus saya gunakan untuk perhitungan tiga fase?",
+              "answer": "Untuk perhitungan tiga fase, selalu gunakan tegangan line-to-line (juga disebut tegangan line), bukan tegangan fase. Tegangan tiga fase umum meliputi 208V, 240V, 380V, 400V, 415V, dan 480V. Misalnya, dalam sistem tiga fase 400V, gunakan 400V di kalkulator."
+            },
+            {
+              "question": "Apa itu faktor daya dan nilai apa yang harus saya gunakan?",
+              "answer": "Faktor daya (PF) adalah rasio daya nyata terhadap daya semu, yang menunjukkan seberapa efisien energi listrik digunakan. Berkisar dari 0 hingga 1. Nilai khas: beban resistif (pemanas, lampu pijar) = 1,0, motor induksi = 0,8-0,9, lampu neon = 0,85-0,95, lampu LED = 0,9-0,95. Jika tidak diketahui, gunakan 0,8 sebagai perkiraan konservatif untuk beban motor atau 0,9 untuk beban campuran umum."
+            },
+            {
+              "question": "Mengapa saya perlu mengetahui arus ketika saya memiliki daya dalam kW?",
+              "answer": "Mengetahui arus (ampere) sangat penting untuk: memilih ukuran kawat yang tepat untuk aliran arus yang aman, memilih pemutus sirkuit dan sekering yang sesuai, memastikan kabel dan komponen dapat menangani arus tanpa pemanasan berlebih, mematuhi kode listrik dan standar keselamatan, dan mendesain sistem perlindungan listrik yang tepat. Arus menentukan ukuran fisik komponen listrik, sedangkan daya (kW) menunjukkan konsumsi energi."
+            },
+            {
+              "question": "Apakah kalkulator ini gratis digunakan?",
+              "answer": "Ya, kalkulator kW ke Ampere kami sepenuhnya gratis digunakan. Tidak diperlukan registrasi atau pembayaran. Cukup masukkan nilai Anda (kW, tegangan, faktor daya) dan pilih jenis sistem Anda (fase tunggal atau tiga fase) untuk mendapatkan hasil instan dan akurat."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulator Ampere ke kVA",
       "description": "Konversi ampere (A) ke kilovolt-ampere (kVA) secara instan dan akurat menggunakan tegangan",

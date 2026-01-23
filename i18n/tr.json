@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "kW'dan Amper'e Hesap Makinesi",
+      "description": "Tek fazlı ve üç fazlı sistemler için kilowatt'ı (kW) ampere (A) anında ve doğru bir şekilde dönüştürün",
+      "singlePhase": "Tek Fazlı",
+      "threePhase": "Üç Fazlı",
+      "kw": "Kilowatt (kW)",
+      "voltage": "Voltaj (V)",
+      "powerFactor": "Güç Faktörü (0-1)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "current": "Akım",
+      "seo": {
+        "title": "kW'dan Amper'e Hesap Makinesi - Kilowatt'ı Ampere Çevrimiçi Dönüştürün",
+        "description": "Tek fazlı ve üç fazlı sistemler için ücretsiz kW'dan Amper'e dönüşüm hesap makinesi. Voltaj ve güç faktörü kullanarak kilowatt'ı ampere anında dönüştürün. Elektrik tasarımı, devre boyutlandırma ve güç hesaplamaları için mükemmeldir.",
+        "keywords": "kw amper hesap makinesi, kilowatt amper dönüştürücü, kw amper dönüşümü, güç akım hesap makinesi, elektrik hesap makinesi, amper hesap makinesi, tek fazlı hesap makinesi, üç fazlı hesap makinesi, ücretsiz hesap makinesi",
+        "content": {
+          "heading": "kW'yı Amper'e Nasıl Dönüştürülür",
+          "paragraph1": "Kilowatt'ı (kW) ampere (A) dönüştürmek, elektrik mühendisliği ve güç sistemi tasarımında temel bir hesaplamadır. Kilowatt gerçek gücü (aktif güç) temsil ederken, amper elektrik akımını temsil eder. Dönüşüm voltaj (V) ve güç faktörü (PF) bilgisi gerektirir ve tek fazlı ile üç fazlı sistemler arasında farklılık gösterir. Ücretsiz kW'dan Amper'e dönüşüm hesap makinemiz bu süreci hızlı ve kolay hale getirir, hem tek fazlı hem de üç fazlı elektrik sistemleri için anında ve doğru sonuçlar sağlar.",
+          "paragraph2": "Dönüşüm formülü sistem tipine göre değişir: Tek fazlı sistemler için: I(A) = P(kW) × 1000 / (PF × V), burada I amper cinsinden akım, P kilowatt cinsinden güç, PF güç faktörü (0 ile 1 arasında bir değer), ve V volt cinsinden voltajdır. Üç fazlı sistemler için: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), burada V(L-L) hat-hat voltajıdır. Güç faktörü, elektrik enerjisinin ne kadar verimli kullanıldığını gösterir, çoğu elektrikli ekipman için tipik olarak 0,8 ile 0,95 arasındadır.",
+          "paragraph3": "Bu dönüşüm çeşitli uygulamalarda yaygın olarak kullanılır: elektrik tesisatları için devre kesiciler, sigortalar ve kabloların boyutlandırılması, güvenli akım akışı için tel ölçüsü gereksinimlerinin belirlenmesi, anma gücünden motor akım çekişinin hesaplanması, elektrik dağıtım sistemleri ve panellerin tasarlanması, ekipman akım gereksinimlerinin anlaşılması, uygun elektrik bileşenlerinin seçilmesi ve jeneratörler, transformatörler ve güç dağıtım sistemleriyle çalışma. kW'yı Amper'e nasıl dönüştüreceğinizi bilmek, elektrik sistemi tasarımı, ekipman seçimi ve güvenlik uyumluluğu hakkında bilinçli kararlar vermenize yardımcı olur.",
+          "paragraph4": "Hesap makinemiz girdi olarak kilowatt, voltaj ve güç faktörünü alır ve tek fazlı ile üç fazlı sistemler arasında seçim yapmanıza olanak tanır. Uygun dönüşüm formülünü otomatik olarak uygular ve sonucu amper cinsinden sağlar. Hesap makinesi 120V, 230V, 240V, 400V, 480V gibi yaygın voltajları ve özel değerleri işler. Bir motor için kablo boyutlandırıyor, devre kesiciler seçiyor veya elektrik tesisatı tasarlıyor olun, kW'dan Amper'e hesap makinemiz elektrik hesaplamalarınız için doğru, anında dönüşümler sağlar.",
+          "exampleHeading": "Örnek:",
+          "exampleText": "Tek fazlı bir sistem için: 230V'de 0,8 güç faktörüyle 5 kW yükünüz varsa, akım şöyle olur: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. Üç fazlı bir sistem için: 400V hat-hat voltajında 0,85 güç faktörüyle 10 kW yükünüz varsa, akım şöyle olur: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. 120V'de ve PF 0,9 ile 3 kW'lık tek fazlı sistem için: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {
+              "question": "kW'yı Amper'e dönüştürmek için formül nedir?",
+              "answer": "Tek fazlı sistemler için: I(A) = P(kW) × 1000 / (PF × V). Üç fazlı sistemler için: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), burada I amper cinsinden akım, P kilowatt cinsinden güç, PF güç faktörü, ve V volt cinsinden voltajdır. Üç fazlı için, hat-hat voltajı kullanın."
+            },
+            {
+              "question": "Tek fazlı ve üç fazlı hesaplamalar arasındaki fark nedir?",
+              "answer": "Tek fazlı sistemler formülü kullanır: I = (kW × 1000) / (PF × V). Üç fazlı sistemler paydada √3'ü (yaklaşık 1,732) içerir: I = (kW × 1000) / (√3 × PF × V). Bunun nedeni, üç fazlı sistemlerin aynı akım seviyesinde daha fazla güç sağlamasıdır. Üç fazlı hesaplamalar ayrıca faz voltajı değil, hat-hat voltajını kullanır."
+            },
+            {
+              "question": "Üç fazlı hesaplamalar için hangi voltajı kullanmalıyım?",
+              "answer": "Üç fazlı hesaplamalar için her zaman hat-hat voltajını (hat voltajı olarak da adlandırılır) kullanın, faz voltajını değil. Yaygın üç fazlı voltajlar 208V, 240V, 380V, 400V, 415V ve 480V'yi içerir. Örneğin, 400V üç fazlı bir sistemde, hesap makinesinde 400V kullanın."
+            },
+            {
+              "question": "Güç faktörü nedir ve hangi değeri kullanmalıyım?",
+              "answer": "Güç faktörü (PF), gerçek gücün görünür güce oranıdır ve elektrik enerjisinin ne kadar verimli kullanıldığını gösterir. 0 ile 1 arasında değişir. Tipik değerler: direnç yükleri (ısıtıcılar, akkor ampuller) = 1,0, endüksiyon motorları = 0,8-0,9, floresan lambalar = 0,85-0,95, LED lambalar = 0,9-0,95. Bilinmiyorsa, motor yükleri için 0,8'i muhafazakar bir tahmin olarak veya genel karma yükler için 0,9'u kullanın."
+            },
+            {
+              "question": "kW'da gücüm varken neden akımı bilmem gerekiyor?",
+              "answer": "Akımı (amper) bilmek şunlar için gereklidir: güvenli akım akışı için doğru tel boyutunu seçmek, uygun devre kesiciler ve sigortalar seçmek, kabloların ve bileşenlerin aşırı ısınma olmadan akımı idare edebilmesini sağlamak, elektrik kodlarına ve güvenlik standartlarına uymak ve uygun elektrik koruma sistemleri tasarlamak. Akım, elektrik bileşenlerinin fiziksel boyutlandırmasını belirlerken, güç (kW) enerji tüketimini gösterir."
+            },
+            {
+              "question": "Bu hesap makinesi ücretsiz mi?",
+              "answer": "Evet, kW'dan Amper'e hesap makinemiz tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Sadece değerlerinizi (kW, voltaj, güç faktörü) girin ve sistem tipinizi (tek fazlı veya üç fazlı) seçerek anında, doğru sonuçlar alın."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Amper'den kVA'ya Hesap Makinesi",
       "description": "Voltaj kullanarak amper (A) değerini kilovolt-amper (kVA) değerine anında ve doğru bir şekilde dönüştürün",

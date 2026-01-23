@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "kW till Ampere Kalkylator",
+      "description": "Konvertera kilowatt (kW) till ampere (A) omedelbart och exakt för enfas- och trefassystem",
+      "singlePhase": "Enfas",
+      "threePhase": "Trefas",
+      "kw": "Kilowatt (kW)",
+      "voltage": "Spänning (V)",
+      "powerFactor": "Effektfaktor (0-1)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "current": "Ström",
+      "seo": {
+        "title": "kW till Ampere Kalkylator - Konvertera Kilowatt till Ampere Online",
+        "description": "Gratis kW till Ampere konverteringskalkylator för enfas- och trefassystem. Konvertera kilowatt till ampere omedelbart med spänning och effektfaktor. Perfekt för elektrisk design, kretsdimensionering och effektberäkningar.",
+        "keywords": "kw ampere kalkylator, kilowatt ampere omvandlare, kw ampere konvertering, effekt ström kalkylator, elektrisk kalkylator, ampere kalkylator, enfaskalkylator, trefaskalkylator, gratis kalkylator",
+        "content": {
+          "heading": "Hur man Konverterar kW till Ampere",
+          "paragraph1": "Att konvertera kilowatt (kW) till ampere (A) är en fundamental beräkning inom elektroteknik och kraftsystemdesign. Kilowatt representerar verklig effekt (aktiv effekt), medan ampere representerar elektrisk ström. Konverteringen kräver kunskap om spänning (V) och effektfaktor (PF), och skiljer sig mellan enfas- och trefassystem. Vår gratis kW till Ampere konverteringskalkylator gör denna process snabb och enkel, och ger omedelbara och exakta resultat för både enfas- och trefaselektriska system.",
+          "paragraph2": "Konverteringsformeln varierar beroende på systemtyp: För enfassystem: I(A) = P(kW) × 1000 / (PF × V), där I är strömmen i ampere, P är effekten i kilowatt, PF är effektfaktorn (ett värde mellan 0 och 1), och V är spänningen i volt. För trefassystem: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), där V(L-L) är linje-till-linje spänningen. Effektfaktorn indikerar hur effektivt elektrisk energi används, typiskt mellan 0,8 och 0,95 för de flesta elektriska utrustningar.",
+          "paragraph3": "Denna konvertering används vanligtvis i olika tillämpningar: dimensionering av brytare, säkringar och kablar för elektriska installationer, bestämning av ledarkrav för säkert strömflöde, beräkning av motorströmuttag från märkeffekt, design av elektriska distributionssystem och paneler, förståelse av utrustningens strömbehov, val av lämpliga elektriska komponenter och arbete med generatorer, transformatorer och kraftdistributionssystem. Att veta hur man konverterar kW till Ampere hjälper dig att fatta informerade beslut om elektrisk systemdesign, utrustningsval och säkerhetsefterlevnad.",
+          "paragraph4": "Vår kalkylator tar kilowatt, spänning och effektfaktor som indata, och låter dig välja mellan enfas- och trefassystem. Den tillämpar automatiskt lämplig konverteringsformel och ger resultatet i ampere. Kalkylatorn hanterar vanliga spänningar som 120V, 230V, 240V, 400V, 480V och anpassade värden. Oavsett om du dimensionerar kablar för en motor, väljer brytare eller designar en elektrisk installation, ger vår kW till Ampere kalkylator exakta, omedelbara konverteringar för dina elektriska beräkningar.",
+          "exampleHeading": "Exempel:",
+          "exampleText": "För ett enfassystem: Om du har en last på 5 kW vid 230V med en effektfaktor på 0,8, skulle strömmen vara: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. För ett trefassystem: Om du har en last på 10 kW vid 400V linje-till-linje med en effektfaktor på 0,85, skulle strömmen vara: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. För ett enfassystem med 3 kW vid 120V och PF på 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är formeln för att konvertera kW till Ampere?",
+              "answer": "För enfassystem: I(A) = P(kW) × 1000 / (PF × V). För trefassystem: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), där I är strömmen i ampere, P är effekten i kilowatt, PF är effektfaktorn, och V är spänningen i volt. För trefas, använd linje-till-linje spänning."
+            },
+            {
+              "question": "Vad är skillnaden mellan enfas- och trefasberäkningar?",
+              "answer": "Enfassystem använder formeln: I = (kW × 1000) / (PF × V). Trefassystem inkluderar √3 (ungefär 1,732) i nämnaren: I = (kW × 1000) / (√3 × PF × V). Detta beror på att trefassystem levererar mer effekt vid samma strömnivå. Trefasberäkningar använder också linje-till-linje spänning, inte fasspänning."
+            },
+            {
+              "question": "Vilken spänning ska jag använda för trefasberäkningar?",
+              "answer": "För trefasberäkningar, använd alltid linje-till-linje spänningen (även kallad linjespänning), inte fasspänningen. Vanliga trefasspänningar inkluderar 208V, 240V, 380V, 400V, 415V och 480V. Till exempel, i ett 400V trefassystem, använd 400V i kalkylatorn."
+            },
+            {
+              "question": "Vad är effektfaktor och vilket värde ska jag använda?",
+              "answer": "Effektfaktor (PF) är förhållandet mellan verklig effekt och skenbar effekt, som indikerar hur effektivt elektrisk energi används. Den sträcker sig från 0 till 1. Typiska värden: resistiva laster (värmare, glödlampor) = 1,0, induktionsmotorer = 0,8-0,9, lysrör = 0,85-0,95, LED-lampor = 0,9-0,95. Om okänd, använd 0,8 som en konservativ uppskattning för motorlaster eller 0,9 för allmänna blandade laster."
+            },
+            {
+              "question": "Varför behöver jag veta strömmen när jag har effekten i kW?",
+              "answer": "Att känna till strömmen (ampere) är väsentligt för: att välja rätt ledartvärs nitt för säkert strömflöde, välja lämpliga brytare och säkringar, säkerställa att kablar och komponenter kan hantera strömmen utan överhettning, följa elektriska koder och säkerhetsstandarder, och designa lämpliga elektriska skyddssystem. Ström bestämmer den fysiska dimensioneringen av elektriska komponenter, medan effekt (kW) indikerar energiförbrukning."
+            },
+            {
+              "question": "Är denna kalkylator gratis?",
+              "answer": "Ja, vår kW till Ampere kalkylator är helt gratis. Ingen registrering eller betalning krävs. Ange helt enkelt dina värden (kW, spänning, effektfaktor) och välj din systemtyp (enfas eller trefas) för att få omedelbara, exakta resultat."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere till kVA Kalkylator",
       "description": "Konvertera ampere (A) till kilovoltampere (kVA) omedelbart och exakt med spänning",

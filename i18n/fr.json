@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "Calculateur kW vers Ampères",
+      "description": "Convertissez les kilowatts (kW) en ampères (A) instantanément et précisément pour les systèmes monophasés et triphasés",
+      "singlePhase": "Monophasé",
+      "threePhase": "Triphasé",
+      "kw": "Kilowatts (kW)",
+      "voltage": "Tension (V)",
+      "powerFactor": "Facteur de Puissance (0-1)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "current": "Courant",
+      "seo": {
+        "title": "Calculateur kW vers Ampères - Convertissez les Kilowatts en Ampères en Ligne",
+        "description": "Calculateur de conversion kW vers Ampères gratuit pour les systèmes monophasés et triphasés. Convertissez les kilowatts en ampères instantanément en utilisant la tension et le facteur de puissance. Parfait pour la conception électrique, le dimensionnement des circuits et les calculs de puissance.",
+        "keywords": "calculateur kw ampères, convertisseur kilowatts ampères, conversion kw ampères, calculateur puissance courant, calculateur électrique, calculateur ampères, calculateur monophasé, calculateur triphasé, calculateur gratuit",
+        "content": {
+          "heading": "Comment convertir les kW en Ampères",
+          "paragraph1": "La conversion des kilowatts (kW) en ampères (A) est un calcul fondamental en génie électrique et dans la conception des systèmes d'alimentation. Les kilowatts représentent la puissance réelle (puissance active), tandis que les ampères représentent le courant électrique. La conversion nécessite la connaissance de la tension (V) et du facteur de puissance (PF), et diffère entre les systèmes monophasés et triphasés. Notre calculateur gratuit de conversion kW vers Ampères rend ce processus rapide et facile, fournissant des résultats instantanés et précis pour les systèmes électriques monophasés et triphasés.",
+          "paragraph2": "La formule de conversion varie selon le type de système: Pour les systèmes monophasés: I(A) = P(kW) × 1000 / (PF × V), où I est le courant en ampères, P est la puissance en kilowatts, PF est le facteur de puissance (une valeur entre 0 et 1), et V est la tension en volts. Pour les systèmes triphasés: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), où V(L-L) est la tension entre phases. Le facteur de puissance indique l'efficacité avec laquelle l'énergie électrique est utilisée, généralement entre 0,8 et 0,95 pour la plupart des équipements électriques.",
+          "paragraph3": "Cette conversion est couramment utilisée dans diverses applications: dimensionnement des disjoncteurs, fusibles et câbles pour les installations électriques, détermination des exigences de section de fil pour un flux de courant sûr, calcul du courant tiré par les moteurs à partir de la puissance nominale, conception des systèmes de distribution électrique et des tableaux, compréhension des exigences en courant des équipements, sélection des composants électriques appropriés et travail avec des générateurs, transformateurs et systèmes de distribution d'énergie. Savoir comment convertir les kW en Ampères vous aide à prendre des décisions éclairées concernant la conception des systèmes électriques, la sélection des équipements et la conformité aux normes de sécurité.",
+          "paragraph4": "Notre calculateur prend les kilowatts, la tension et le facteur de puissance comme entrées, et vous permet de sélectionner entre les systèmes monophasés et triphasés. Il applique automatiquement la formule de conversion appropriée et fournit le résultat en ampères. Le calculateur gère les tensions courantes comme 120V, 230V, 240V, 400V, 480V et les valeurs personnalisées. Que vous dimensionniez des câbles pour un moteur, sélectionniez des disjoncteurs ou conceviez une installation électrique, notre calculateur kW vers Ampères fournit des conversions précises et instantanées pour vos calculs électriques.",
+          "exampleHeading": "Exemple:",
+          "exampleText": "Pour un système monophasé: Si vous avez une charge de 5 kW à 230V avec un facteur de puissance de 0,8, le courant serait: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. Pour un système triphasé: Si vous avez une charge de 10 kW à 400V entre phases avec un facteur de puissance de 0,85, le courant serait: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. Pour un système monophasé avec 3 kW à 120V et PF de 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Quelle est la formule pour convertir les kW en Ampères?",
+              "answer": "Pour les systèmes monophasés: I(A) = P(kW) × 1000 / (PF × V). Pour les systèmes triphasés: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), où I est le courant en ampères, P est la puissance en kilowatts, PF est le facteur de puissance, et V est la tension en volts. Pour triphasé, utilisez la tension entre phases."
+            },
+            {
+              "question": "Quelle est la différence entre les calculs monophasés et triphasés?",
+              "answer": "Les systèmes monophasés utilisent la formule: I = (kW × 1000) / (PF × V). Les systèmes triphasés incluent √3 (environ 1,732) au dénominateur: I = (kW × 1000) / (√3 × PF × V). C'est parce que les systèmes triphasés délivrent plus de puissance au même niveau de courant. Les calculs triphasés utilisent également la tension entre phases, pas la tension de phase."
+            },
+            {
+              "question": "Quelle tension dois-je utiliser pour les calculs triphasés?",
+              "answer": "Pour les calculs triphasés, utilisez toujours la tension entre phases (également appelée tension de ligne), pas la tension de phase. Les tensions triphasées courantes incluent 208V, 240V, 380V, 400V, 415V et 480V. Par exemple, dans un système triphasé 400V, utilisez 400V dans le calculateur."
+            },
+            {
+              "question": "Qu'est-ce que le facteur de puissance et quelle valeur dois-je utiliser?",
+              "answer": "Le facteur de puissance (PF) est le rapport de la puissance réelle à la puissance apparente, indiquant l'efficacité avec laquelle l'énergie électrique est utilisée. Il va de 0 à 1. Valeurs typiques: charges résistives (radiateurs, lampes à incandescence) = 1,0, moteurs à induction = 0,8-0,9, lampes fluorescentes = 0,85-0,95, lampes LED = 0,9-0,95. Si inconnu, utilisez 0,8 comme estimation prudente pour les charges de moteurs ou 0,9 pour les charges mixtes générales."
+            },
+            {
+              "question": "Pourquoi dois-je connaître le courant quand j'ai la puissance en kW?",
+              "answer": "Connaître le courant (ampères) est essentiel pour: sélectionner la bonne section de fil pour un flux de courant sûr, choisir les disjoncteurs et fusibles appropriés, s'assurer que les câbles et composants peuvent gérer le courant sans surchauffe, se conformer aux codes électriques et normes de sécurité, et concevoir des systèmes de protection électrique appropriés. Le courant détermine le dimensionnement physique des composants électriques, tandis que la puissance (kW) indique la consommation d'énergie."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit?",
+              "answer": "Oui, notre calculateur kW vers Ampères est entièrement gratuit. Aucune inscription ou paiement requis. Entrez simplement vos valeurs (kW, tension, facteur de puissance) et sélectionnez votre type de système (monophasé ou triphasé) pour obtenir des résultats instantanés et précis."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculateur Ampères vers kVA",
       "description": "Convertissez les ampères (A) en kilovoltampères (kVA) instantanément et précisément en utilisant la tension",

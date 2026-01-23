@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "Kalkulačka kW na Ampéry",
+      "description": "Preverte kilowatty (kW) na ampéry (A) okamžite a presne pre jednofázové a trojfázové systémy",
+      "singlePhase": "Jednofázový",
+      "threePhase": "Trojfázový",
+      "kw": "Kilowatty (kW)",
+      "voltage": "Napätie (V)",
+      "powerFactor": "Účinník (0-1)",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "current": "Prúd",
+      "seo": {
+        "title": "Kalkulačka kW na Ampéry - Preverte Kilowatty na Ampéry Online",
+        "description": "Bezplatná kalkulačka prevodu kW na Ampéry pre jednofázové a trojfázové systémy. Preverte kilowatty na ampéry okamžite pomocou napätia a účinníka. Perfektná pre elektrický návrh, dimenzovanie obvodov a výpočty výkonu.",
+        "keywords": "kalkulačka kw ampéry, prevodník kilowatty ampéry, prevod kw ampéry, kalkulačka výkon prúd, elektrická kalkulačka, kalkulačka ampérov, jednofázová kalkulačka, trojfázová kalkulačka, bezplatná kalkulačka",
+        "content": {
+          "heading": "Ako Previesť kW na Ampéry",
+          "paragraph1": "Prevod kilowattov (kW) na ampéry (A) je základný výpočet v elektrotechnike a návrhu energetických systémov. Kilowatty predstavujú skutočný výkon (činný výkon), zatiaľ čo ampéry predstavujú elektrický prúd. Prevod vyžaduje znalosť napätia (V) a účinníka (PF) a líši sa medzi jednofázovými a trojfázovými systémami. Naša bezplatná kalkulačka prevodu kW na Ampéry robí tento proces rýchlym a jednoduchým a poskytuje okamžité a presné výsledky pre jednofázové a trojfázové elektrické systémy.",
+          "paragraph2": "Vzorec prevodu sa líši podľa typu systému: Pre jednofázové systémy: I(A) = P(kW) × 1000 / (PF × V), kde I je prúd v ampéroch, P je výkon v kilowattoch, PF je účinník (hodnota medzi 0 a 1) a V je napätie vo voltoch. Pre trojfázové systémy: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), kde V(L-L) je napätie medzi fázami. Účinník udáva, ako efektívne sa využíva elektrická energia, typicky medzi 0,8 a 0,95 pre väčšinu elektrických zariadení.",
+          "paragraph3": "Tento prevod sa bežne používa v rôznych aplikáciách: dimenzovanie ističov, poistiek a káblov pre elektrické inštalácie, určovanie požiadaviek na prierez vodiča pre bezpečný prietok prúdu, výpočet odberu prúdu motora zo menovitého výkonu, návrh elektrických rozvodných systémov a panelov, porozumenie požiadaviek na prúd zariadenia, výber vhodných elektrických komponentov a práca s generátormi, transformátormi a systémami distribúcie energie. Znalosť prevodu kW na Ampéry vám pomáha robiť informované rozhodnutia o návrhu elektrických systémov, výbere zariadení a dodržiavaní bezpečnosti.",
+          "paragraph4": "Naša kalkulačka príjíma kilowatty, napätie a účinník ako vstupy a umožňuje vám vybrať medzi jednofázovými a trojfázovými systémami. Automaticky aplikuje príslušný vzorec prevodu a poskytuje výsledok v ampéroch. Kalkulačka spracováva bežné napätia ako 120V, 230V, 240V, 400V, 480V a vlastné hodnoty. Či už dimenzujete káble pre motor, vyberáte ističe alebo navrhujete elektrickú inštaláciu, naša kalkulačka kW na Ampéry poskytuje presné, okamžité prevody pre vaše elektrické výpočty.",
+          "exampleHeading": "Príklad:",
+          "exampleText": "Pre jednofázový systém: Ak máte záťaž 5 kW pri 230V s účinníkom 0,8, prúd by bol: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. Pre trojfázový systém: Ak máte záťaž 10 kW pri 400V medzi fázami s účinníkom 0,85, prúd by bol: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. Pre jednofázový systém s 3 kW pri 120V a PF 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Aký je vzorec pre prevod kW na Ampéry?",
+              "answer": "Pre jednofázové systémy: I(A) = P(kW) × 1000 / (PF × V). Pre trojfázové systémy: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), kde I je prúd v ampéroch, P je výkon v kilowattoch, PF je účinník a V je napätie vo voltoch. Pre trojfázový systém použite napätie medzi fázami."
+            },
+            {
+              "question": "Aký je rozdiel medzi jednofázovými a trojfázovými výpočtami?",
+              "answer": "Jednofázové systémy používajú vzorec: I = (kW × 1000) / (PF × V). Trojfázové systémy zahŕňajú √3 (približne 1,732) v menovateli: I = (kW × 1000) / (√3 × PF × V). Je to preto, že trojfázové systémy dodávajú viac výkonu pri rovnakej úrovni prúdu. Trojfázové výpočty tiež používajú napätie medzi fázami, nie fázové napätie."
+            },
+            {
+              "question": "Aké napätie mám použiť pre trojfázové výpočty?",
+              "answer": "Pre trojfázové výpočty vždy použite napätie medzi fázami (tiež nazývané líniové napätie), nie fázové napätie. Bežné trojfázové napätia zahŕňajú 208V, 240V, 380V, 400V, 415V a 480V. Napríklad v trojfázovom systéme 400V použite 400V v kalkulačke."
+            },
+            {
+              "question": "Čo je účinník a akú hodnotu mám použiť?",
+              "answer": "Účinník (PF) je pomer skutočného výkonu k zdanlivému výkonu, ktorý udáva, ako efektívne sa využíva elektrická energia. Pohybuje sa od 0 do 1. Typické hodnoty: odporové záťaže (ohrievače, žiarovky) = 1,0, indukčné motory = 0,8-0,9, žiarivky = 0,85-0,95, LED svetlá = 0,9-0,95. Ak nie je známy, použite 0,8 ako konzervatívny odhad pre motorové záťaže alebo 0,9 pre obecné zmiešané záťaže."
+            },
+            {
+              "question": "Prečo potrebujem poznať prúd, keď mám výkon v kW?",
+              "answer": "Znalosť prúdu (ampérov) je nevyhnutná pre: výber správneho prierezu vodiča pre bezpečný prietok prúdu, výber vhodných ističov a poistiek, zabezpečenie, že káble a komponenty zvládnu prúd bez prehriatia, dodržiavanie elektrických predpisov a bezpečnostných štandardov a návrh vhodných systémov elektrickej ochrany. Prúd určuje fyzické rozmery elektrických komponentov, zatiaľ čo výkon (kW) indikuje spotrebu energie."
+            },
+            {
+              "question": "Je táto kalkulačka zadarmo?",
+              "answer": "Áno, naša kalkulačka kW na Ampéry je úplne zadarmo. Nie je vyžadovaná registrácia ani platba. Jednoducho zadajte svoje hodnoty (kW, napätie, účinník) a vyberte typ systému (jednofázový alebo trojfázový) pre okamžité, presné výsledky."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulačka Ampérov na kVA",
       "description": "Preveďte ampéry (A) na kilovoltampéry (kVA) okamžite a presne pomocou napätia",

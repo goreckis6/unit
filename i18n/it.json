@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "Calcolatrice kW ad Ampere",
+      "description": "Converti kilowatt (kW) in ampere (A) istantaneamente e accuratamente per sistemi monofase e trifase",
+      "singlePhase": "Monofase",
+      "threePhase": "Trifase",
+      "kw": "Kilowatt (kW)",
+      "voltage": "Tensione (V)",
+      "powerFactor": "Fattore di Potenza (0-1)",
+      "calculate": "Calcola",
+      "reset": "Ripristina",
+      "result": "Risultato",
+      "current": "Corrente",
+      "seo": {
+        "title": "Calcolatrice kW ad Ampere - Converti Kilowatt in Ampere Online",
+        "description": "Calcolatrice di conversione kW ad Ampere gratuita per sistemi monofase e trifase. Converti kilowatt in ampere istantaneamente usando tensione e fattore di potenza. Perfetta per progettazione elettrica, dimensionamento dei circuiti e calcoli di potenza.",
+        "keywords": "calcolatrice kw ampere, convertitore kilowatt ampere, conversione kw ampere, calcolatrice potenza corrente, calcolatrice elettrica, calcolatrice ampere, calcolatrice monofase, calcolatrice trifase, calcolatrice gratuita",
+        "content": {
+          "heading": "Come Convertire kW in Ampere",
+          "paragraph1": "Convertire kilowatt (kW) in ampere (A) è un calcolo fondamentale nell'ingegneria elettrica e nella progettazione di sistemi di alimentazione. I kilowatt rappresentano la potenza reale (potenza attiva), mentre gli ampere rappresentano la corrente elettrica. La conversione richiede la conoscenza della tensione (V) e del fattore di potenza (PF), e differisce tra sistemi monofase e trifase. La nostra calcolatrice gratuita di conversione kW ad Ampere rende questo processo rapido e facile, fornendo risultati istantanei e accurati per sistemi elettrici monofase e trifase.",
+          "paragraph2": "La formula di conversione varia in base al tipo di sistema: Per sistemi monofase: I(A) = P(kW) × 1000 / (PF × V), dove I è la corrente in ampere, P è la potenza in kilowatt, PF è il fattore di potenza (un valore tra 0 e 1), e V è la tensione in volt. Per sistemi trifase: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), dove V(L-L) è la tensione tra linee. Il fattore di potenza indica quanto efficientemente viene utilizzata l'energia elettrica, tipicamente tra 0,8 e 0,95 per la maggior parte delle apparecchiature elettriche.",
+          "paragraph3": "Questa conversione è comunemente utilizzata in varie applicazioni: dimensionamento di interruttori automatici, fusibili e cavi per installazioni elettriche, determinazione dei requisiti della sezione del filo per un flusso di corrente sicuro, calcolo del consumo di corrente del motore dalla potenza nominale, progettazione di sistemi di distribuzione elettrica e quadri, comprensione dei requisiti di corrente delle apparecchiature, selezione di componenti elettrici appropriati e lavoro con generatori, trasformatori e sistemi di distribuzione di energia. Sapere come convertire kW in Ampere ti aiuta a prendere decisioni informate sulla progettazione di sistemi elettrici, selezione delle apparecchiature e conformità alla sicurezza.",
+          "paragraph4": "La nostra calcolatrice prende i kilowatt, la tensione e il fattore di potenza come input, e ti permette di selezionare tra sistemi monofase e trifase. Applica automaticamente la formula di conversione appropriata e fornisce il risultato in ampere. La calcolatrice gestisce tensioni comuni come 120V, 230V, 240V, 400V, 480V e valori personalizzati. Che tu stia dimensionando cavi per un motore, selezionando interruttori automatici o progettando un'installazione elettrica, la nostra calcolatrice kW ad Ampere fornisce conversioni accurate e istantanee per i tuoi calcoli elettrici.",
+          "exampleHeading": "Esempio:",
+          "exampleText": "Per un sistema monofase: Se hai un carico di 5 kW a 230V con un fattore di potenza di 0,8, la corrente sarebbe: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. Per un sistema trifase: Se hai un carico di 10 kW a 400V tra linee con un fattore di potenza di 0,85, la corrente sarebbe: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. Per un sistema monofase con 3 kW a 120V e PF di 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Domande Frequenti",
+          "items": [
+            {
+              "question": "Qual è la formula per convertire kW in Ampere?",
+              "answer": "Per sistemi monofase: I(A) = P(kW) × 1000 / (PF × V). Per sistemi trifase: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), dove I è la corrente in ampere, P è la potenza in kilowatt, PF è il fattore di potenza, e V è la tensione in volt. Per trifase, usa la tensione tra linee."
+            },
+            {
+              "question": "Qual è la differenza tra calcoli monofase e trifase?",
+              "answer": "I sistemi monofase usano la formula: I = (kW × 1000) / (PF × V). I sistemi trifase includono √3 (circa 1,732) al denominatore: I = (kW × 1000) / (√3 × PF × V). Questo perché i sistemi trifase forniscono più potenza allo stesso livello di corrente. I calcoli trifase usano anche la tensione tra linee, non la tensione di fase."
+            },
+            {
+              "question": "Quale tensione devo usare per i calcoli trifase?",
+              "answer": "Per i calcoli trifase, usa sempre la tensione tra linee (chiamata anche tensione di linea), non la tensione di fase. Le tensioni trifase comuni includono 208V, 240V, 380V, 400V, 415V e 480V. Ad esempio, in un sistema trifase 400V, usa 400V nella calcolatrice."
+            },
+            {
+              "question": "Cos'è il fattore di potenza e quale valore devo usare?",
+              "answer": "Il fattore di potenza (PF) è il rapporto tra potenza reale e potenza apparente, che indica quanto efficientemente viene utilizzata l'energia elettrica. Va da 0 a 1. Valori tipici: carichi resistivi (riscaldatori, lampade a incandescenza) = 1,0, motori a induzione = 0,8-0,9, lampade fluorescenti = 0,85-0,95, lampade LED = 0,9-0,95. Se sconosciuto, usa 0,8 come stima conservativa per carichi motore o 0,9 per carichi misti generali."
+            },
+            {
+              "question": "Perché devo conoscere la corrente quando ho la potenza in kW?",
+              "answer": "Conoscere la corrente (ampere) è essenziale per: selezionare la sezione corretta del filo per un flusso di corrente sicuro, scegliere interruttori automatici e fusibili appropriati, assicurarsi che cavi e componenti possano gestire la corrente senza surriscaldamento, rispettare i codici elettrici e gli standard di sicurezza, e progettare sistemi di protezione elettrica appropriati. La corrente determina il dimensionamento fisico dei componenti elettrici, mentre la potenza (kW) indica il consumo di energia."
+            },
+            {
+              "question": "Questa calcolatrice è gratuita?",
+              "answer": "Sì, la nostra calcolatrice kW ad Ampere è completamente gratuita. Non è richiesta registrazione o pagamento. Inserisci semplicemente i tuoi valori (kW, tensione, fattore di potenza) e seleziona il tipo di sistema (monofase o trifase) per ottenere risultati istantanei e accurati."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calcolatrice Ampere a kVA",
       "description": "Converti ampere (A) in chilovoltampere (kVA) istantaneamente e accuratamente usando tensione",

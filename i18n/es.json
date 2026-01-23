@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "Calculadora kW a Amperios",
+      "description": "Convierta kilovatios (kW) a amperios (A) instantánea y precisamente para sistemas monofásicos y trifásicos",
+      "singlePhase": "Monofásico",
+      "threePhase": "Trifásico",
+      "kw": "Kilovatios (kW)",
+      "voltage": "Voltaje (V)",
+      "powerFactor": "Factor de Potencia (0-1)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "current": "Corriente",
+      "seo": {
+        "title": "Calculadora kW a Amperios - Convierta Kilovatios a Amperios en Línea",
+        "description": "Calculadora de conversión kW a Amperios gratuita para sistemas monofásicos y trifásicos. Convierta kilovatios a amperios instantáneamente usando voltaje y factor de potencia. Perfecta para diseño eléctrico, dimensionamiento de circuitos y cálculos de potencia.",
+        "keywords": "calculadora kw amperios, convertidor kilovatios amperios, conversión kw amperios, calculadora potencia corriente, calculadora eléctrica, calculadora amperios, calculadora monofásica, calculadora trifásica, calculadora gratuita",
+        "content": {
+          "heading": "Cómo Convertir kW a Amperios",
+          "paragraph1": "Convertir kilovatios (kW) a amperios (A) es un cálculo fundamental en ingeniería eléctrica y diseño de sistemas de energía. Los kilovatios representan la potencia real (potencia activa), mientras que los amperios representan la corriente eléctrica. La conversión requiere conocimiento del voltaje (V) y el factor de potencia (PF), y difiere entre sistemas monofásicos y trifásicos. Nuestra calculadora gratuita de conversión kW a Amperios hace que este proceso sea rápido y fácil, proporcionando resultados instantáneos y precisos para sistemas eléctricos monofásicos y trifásicos.",
+          "paragraph2": "La fórmula de conversión varía según el tipo de sistema: Para sistemas monofásicos: I(A) = P(kW) × 1000 / (PF × V), donde I es la corriente en amperios, P es la potencia en kilovatios, PF es el factor de potencia (un valor entre 0 y 1), y V es el voltaje en voltios. Para sistemas trifásicos: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), donde V(L-L) es el voltaje entre líneas. El factor de potencia indica cuán eficientemente se está utilizando la energía eléctrica, típicamente entre 0,8 y 0,95 para la mayoría de los equipos eléctricos.",
+          "paragraph3": "Esta conversión se usa comúnmente en diversas aplicaciones: dimensionamiento de interruptores automáticos, fusibles y cables para instalaciones eléctricas, determinación de requisitos de calibre de cable para flujo de corriente seguro, cálculo del consumo de corriente del motor a partir de la potencia nominal, diseño de sistemas de distribución eléctrica y paneles, comprensión de los requisitos de corriente del equipo, selección de componentes eléctricos apropiados y trabajo con generadores, transformadores y sistemas de distribución de energía. Saber cómo convertir kW a Amperios le ayuda a tomar decisiones informadas sobre el diseño de sistemas eléctricos, selección de equipos y cumplimiento de seguridad.",
+          "paragraph4": "Nuestra calculadora toma los kilovatios, voltaje y factor de potencia como entradas, y le permite seleccionar entre sistemas monofásicos y trifásicos. Aplica automáticamente la fórmula de conversión apropiada y proporciona el resultado en amperios. La calculadora maneja voltajes comunes como 120V, 230V, 240V, 400V, 480V y valores personalizados. Ya sea que esté dimensionando cables para un motor, seleccionando interruptores automáticos o diseñando una instalación eléctrica, nuestra calculadora kW a Amperios proporciona conversiones precisas e instantáneas para sus cálculos eléctricos.",
+          "exampleHeading": "Ejemplo:",
+          "exampleText": "Para un sistema monofásico: Si tiene una carga de 5 kW a 230V con un factor de potencia de 0,8, la corriente sería: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. Para un sistema trifásico: Si tiene una carga de 10 kW a 400V entre líneas con un factor de potencia de 0,85, la corriente sería: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. Para un sistema monofásico con 3 kW a 120V y PF de 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Cuál es la fórmula para convertir kW a Amperios?",
+              "answer": "Para sistemas monofásicos: I(A) = P(kW) × 1000 / (PF × V). Para sistemas trifásicos: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), donde I es la corriente en amperios, P es la potencia en kilovatios, PF es el factor de potencia, y V es el voltaje en voltios. Para trifásico, use el voltaje entre líneas."
+            },
+            {
+              "question": "¿Cuál es la diferencia entre cálculos monofásicos y trifásicos?",
+              "answer": "Los sistemas monofásicos usan la fórmula: I = (kW × 1000) / (PF × V). Los sistemas trifásicos incluyen √3 (aproximadamente 1,732) en el denominador: I = (kW × 1000) / (√3 × PF × V). Esto se debe a que los sistemas trifásicos entregan más potencia al mismo nivel de corriente. Los cálculos trifásicos también usan el voltaje entre líneas, no el voltaje de fase."
+            },
+            {
+              "question": "¿Qué voltaje debo usar para cálculos trifásicos?",
+              "answer": "Para cálculos trifásicos, siempre use el voltaje entre líneas (también llamado voltaje de línea), no el voltaje de fase. Los voltajes trifásicos comunes incluyen 208V, 240V, 380V, 400V, 415V y 480V. Por ejemplo, en un sistema trifásico de 400V, use 400V en la calculadora."
+            },
+            {
+              "question": "¿Qué es el factor de potencia y qué valor debo usar?",
+              "answer": "El factor de potencia (PF) es la relación entre la potencia real y la potencia aparente, indicando cuán eficientemente se está utilizando la energía eléctrica. Va de 0 a 1. Valores típicos: cargas resistivas (calentadores, luces incandescentes) = 1,0, motores de inducción = 0,8-0,9, luces fluorescentes = 0,85-0,95, luces LED = 0,9-0,95. Si no se conoce, use 0,8 como estimación conservadora para cargas de motor o 0,9 para cargas mixtas generales."
+            },
+            {
+              "question": "¿Por qué necesito saber la corriente cuando tengo la potencia en kW?",
+              "answer": "Conocer la corriente (amperios) es esencial para: seleccionar el tamaño de cable correcto para un flujo de corriente seguro, elegir interruptores automáticos y fusibles apropiados, asegurar que los cables y componentes puedan manejar la corriente sin sobrecalentamiento, cumplir con los códigos eléctricos y estándares de seguridad, y diseñar sistemas de protección eléctrica apropiados. La corriente determina el dimensionamiento físico de los componentes eléctricos, mientras que la potencia (kW) indica el consumo de energía."
+            },
+            {
+              "question": "¿Es gratuita esta calculadora?",
+              "answer": "Sí, nuestra calculadora kW a Amperios es completamente gratuita. No se requiere registro ni pago. Simplemente ingrese sus valores (kW, voltaje, factor de potencia) y seleccione su tipo de sistema (monofásico o trifásico) para obtener resultados instantáneos y precisos."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculadora de Amperios a kVA",
       "description": "Convierta amperios (A) a kilovoltamperios (kVA) al instante y con precisión usando voltaje",

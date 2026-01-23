@@ -93,6 +93,12 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       path: '/calculators/electric/amp-to-kw',
     },
     {
+      id: 'kw-to-amps',
+      titleKey: 'kwToAmps.title',
+      descKey: 'kwToAmps.description',
+      path: '/calculators/electric/kw-to-amps',
+    },
+    {
       id: 'amp-to-kva',
       titleKey: 'ampToKva.title',
       descKey: 'ampToKva.description',

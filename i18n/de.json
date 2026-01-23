@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "kW zu Ampere Rechner",
+      "description": "Konvertieren Sie Kilowatt (kW) sofort und genau in Ampere (A) für einphasige und dreiphasige Systeme",
+      "singlePhase": "Einphasig",
+      "threePhase": "Dreiphasig",
+      "kw": "Kilowatt (kW)",
+      "voltage": "Spannung (V)",
+      "powerFactor": "Leistungsfaktor (0-1)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "current": "Strom",
+      "seo": {
+        "title": "kW zu Ampere Rechner - Kilowatt online in Ampere umrechnen",
+        "description": "Kostenloser kW zu Ampere Umrechnungsrechner für einphasige und dreiphasige Systeme. Konvertieren Sie Kilowatt sofort in Ampere mit Spannung und Leistungsfaktor. Perfekt für elektrische Planung, Leitungsauslegung und Leistungsberechnungen.",
+        "keywords": "kw ampere rechner, kilowatt ampere umrechner, kw ampere umrechnung, leistung strom rechner, elektrischer rechner, ampere rechner, einphasen rechner, dreiphasen rechner, kostenloser rechner",
+        "content": {
+          "heading": "Wie man kW in Ampere umrechnet",
+          "paragraph1": "Die Umrechnung von Kilowatt (kW) in Ampere (A) ist eine grundlegende Berechnung in der Elektrotechnik und bei der Planung von Energiesystemen. Kilowatt repräsentieren die Wirkleistung, während Ampere den elektrischen Strom darstellen. Die Umrechnung erfordert Kenntnis der Spannung (V) und des Leistungsfaktors (PF) und unterscheidet sich zwischen einphasigen und dreiphasigen Systemen. Unser kostenloser kW zu Ampere Umrechnungsrechner macht diesen Prozess schnell und einfach und liefert sofortige und genaue Ergebnisse für einphasige und dreiphasige elektrische Systeme.",
+          "paragraph2": "Die Umrechnungsformel variiert je nach Systemtyp: Für einphasige Systeme: I(A) = P(kW) × 1000 / (PF × V), wobei I der Strom in Ampere ist, P die Leistung in Kilowatt, PF der Leistungsfaktor (ein Wert zwischen 0 und 1) und V die Spannung in Volt. Für dreiphasige Systeme: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), wobei V(L-L) die Außenleiterspannung ist. Der Leistungsfaktor gibt an, wie effizient elektrische Leistung genutzt wird, typischerweise im Bereich von 0,8 bis 0,95 für die meisten elektrischen Geräte.",
+          "paragraph3": "Diese Umrechnung wird häufig in verschiedenen Anwendungen verwendet: Auslegung von Schutzschaltern, Sicherungen und Kabeln für elektrische Installationen, Bestimmung der Leitungsquerschnitte für sicheren Stromfluss, Berechnung des Motorstroms aus der Nennleistung, Planung von elektrischen Verteilungssystemen und Schaltanlagen, Verständnis der Stromanforderungen von Geräten, Auswahl geeigneter elektrischer Komponenten sowie Arbeit mit Generatoren, Transformatoren und Energieverteilungssystemen. Die Kenntnis der Umrechnung von kW in Ampere hilft Ihnen, fundierte Entscheidungen über die Planung elektrischer Systeme, die Auswahl von Geräten und die Einhaltung von Sicherheitsvorschriften zu treffen.",
+          "paragraph4": "Unser Rechner nimmt Kilowatt, Spannung und Leistungsfaktor als Eingaben und ermöglicht die Auswahl zwischen einphasigen und dreiphasigen Systemen. Er wendet automatisch die entsprechende Umrechnungsformel an und liefert das Ergebnis in Ampere. Der Rechner behandelt gängige Spannungen wie 120V, 230V, 240V, 400V, 480V und benutzerdefinierte Werte. Ob Sie Kabel für einen Motor auslegen, Schutzschalter auswählen oder eine elektrische Installation planen, unser kW zu Ampere Rechner liefert genaue, sofortige Umrechnungen für Ihre elektrischen Berechnungen.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "Für ein einphasiges System: Wenn Sie eine Last von 5 kW bei 230V mit einem Leistungsfaktor von 0,8 haben, beträgt der Strom: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. Für ein dreiphasiges System: Wenn Sie eine Last von 10 kW bei 400V Außenleiterspannung mit einem Leistungsfaktor von 0,85 haben, beträgt der Strom: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. Für ein einphasiges System mit 3 kW bei 120V und PF von 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist die Formel zur Umrechnung von kW in Ampere?",
+              "answer": "Für einphasige Systeme: I(A) = P(kW) × 1000 / (PF × V). Für dreiphasige Systeme: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), wobei I der Strom in Ampere ist, P die Leistung in Kilowatt, PF der Leistungsfaktor und V die Spannung in Volt. Für dreiphasige Systeme verwenden Sie die Außenleiterspannung."
+            },
+            {
+              "question": "Was ist der Unterschied zwischen einphasigen und dreiphasigen Berechnungen?",
+              "answer": "Einphasige Systeme verwenden die Formel: I = (kW × 1000) / (PF × V). Dreiphasige Systeme enthalten √3 (etwa 1,732) im Nenner: I = (kW × 1000) / (√3 × PF × V). Dies liegt daran, dass dreiphasige Systeme bei gleichem Stromniveau mehr Leistung liefern. Dreiphasige Berechnungen verwenden auch die Außenleiterspannung, nicht die Phasenspannung."
+            },
+            {
+              "question": "Welche Spannung sollte ich für dreiphasige Berechnungen verwenden?",
+              "answer": "Für dreiphasige Berechnungen verwenden Sie immer die Außenleiterspannung (auch Leitungsspannung genannt), nicht die Phasenspannung. Übliche dreiphasige Spannungen sind 208V, 240V, 380V, 400V, 415V und 480V. Zum Beispiel in einem 400V-Dreiphasensystem verwenden Sie 400V im Rechner."
+            },
+            {
+              "question": "Was ist der Leistungsfaktor und welchen Wert sollte ich verwenden?",
+              "answer": "Der Leistungsfaktor (PF) ist das Verhältnis von Wirkleistung zu Scheinleistung und gibt an, wie effizient elektrische Leistung genutzt wird. Er liegt zwischen 0 und 1. Typische Werte: Ohmsche Lasten (Heizgeräte, Glühlampen) = 1,0, Induktionsmotoren = 0,8-0,9, Leuchtstofflampen = 0,85-0,95, LED-Lampen = 0,9-0,95. Falls unbekannt, verwenden Sie 0,8 als konservative Schätzung für Motorlasten oder 0,9 für allgemeine Mischlasten."
+            },
+            {
+              "question": "Warum muss ich den Strom kennen, wenn ich die Leistung in kW habe?",
+              "answer": "Die Kenntnis des Stroms (Ampere) ist wesentlich für: Auswahl des richtigen Leitungsquerschnitts für sicheren Stromfluss, Auswahl geeigneter Schutzschalter und Sicherungen, Sicherstellung, dass Kabel und Komponenten den Strom ohne Überhitzung bewältigen können, Einhaltung elektrischer Vorschriften und Sicherheitsstandards sowie Planung geeigneter elektrischer Schutzsysteme. Der Strom bestimmt die physische Dimensionierung elektrischer Komponenten, während die Leistung (kW) den Energieverbrauch anzeigt."
+            },
+            {
+              "question": "Ist dieser Rechner kostenlos?",
+              "answer": "Ja, unser kW zu Ampere Rechner ist vollständig kostenlos. Keine Registrierung oder Zahlung erforderlich. Geben Sie einfach Ihre Werte (kW, Spannung, Leistungsfaktor) ein und wählen Sie Ihren Systemtyp (einphasig oder dreiphasig), um sofortige, genaue Ergebnisse zu erhalten."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere zu kVA Rechner",
       "description": "Wandeln Sie Ampere (A) in Kilovoltampere (kVA) sofort und genau mit Spannung um",

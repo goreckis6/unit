@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "Kalkulator kW na Ampery",
+      "description": "Przelicz kilowaty (kW) na ampery (A) natychmiast i dokładnie dla systemów jednofazowych i trójfazowych",
+      "singlePhase": "Jednofazowy",
+      "threePhase": "Trójfazowy",
+      "kw": "Kilowaty (kW)",
+      "voltage": "Napięcie (V)",
+      "powerFactor": "Współczynnik mocy (0-1)",
+      "calculate": "Oblicz",
+      "reset": "Reset",
+      "result": "Wynik",
+      "current": "Prąd",
+      "seo": {
+        "title": "Kalkulator kW na Ampery - Przelicz Kilowaty na Ampery Online",
+        "description": "Darmowy kalkulator konwersji kW na Ampery dla systemów jednofazowych i trójfazowych. Przelicz kilowaty na ampery natychmiast używając napięcia i współczynnika mocy. Idealny do projektowania elektrycznego, doboru obwodów i obliczeń mocy.",
+        "keywords": "kalkulator kw na ampery, konwerter kilowatów na ampery, konwersja kw ampery, kalkulator mocy na prąd, kalkulator elektryczny, kalkulator amperów, kalkulator jednofazowy, kalkulator trójfazowy, darmowy kalkulator",
+        "content": {
+          "heading": "Jak przeliczyć kW na Ampery",
+          "paragraph1": "Przeliczanie kilowatów (kW) na ampery (A) jest podstawowym obliczeniem w inżynierii elektrycznej i projektowaniu systemów energetycznych. Kilowaty reprezentują moc rzeczywistą (moc czynną), podczas gdy ampery reprezentują prąd elektryczny. Konwersja wymaga znajomości napięcia (V) i współczynnika mocy (PF), i różni się między systemami jednofazowymi a trójfazowymi. Nasz darmowy kalkulator konwersji kW na Ampery sprawia, że ten proces jest szybki i łatwy, zapewniając natychmiastowe i dokładne wyniki dla systemów elektrycznych jednofazowych i trójfazowych.",
+          "paragraph2": "Wzór konwersji różni się w zależności od typu systemu: Dla systemów jednofazowych: I(A) = P(kW) × 1000 / (PF × V), gdzie I to prąd w amperach, P to moc w kilowatach, PF to współczynnik mocy (wartość między 0 a 1), a V to napięcie w woltach. Dla systemów trójfazowych: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), gdzie V(L-L) to napięcie międzyfazowe. Współczynnik mocy wskazuje, jak efektywnie wykorzystywana jest moc elektryczna, zazwyczaj w zakresie od 0,8 do 0,95 dla większości urządzeń elektrycznych.",
+          "paragraph3": "Ta konwersja jest powszechnie stosowana w różnych zastosowaniach: dobór wyłączników nadprądowych, bezpieczników i kabli do instalacji elektrycznych, określanie wymagań dotyczących przekroju przewodów dla bezpiecznego przepływu prądu, obliczanie poboru prądu silników z mocy znamionowej, projektowanie systemów i rozdzielnic elektrycznych, zrozumienie wymagań prądowych urządzeń, wybór odpowiednich komponentów elektrycznych oraz praca z generatorami, transformatorami i systemami dystrybucji energii. Znajomość sposobu przeliczania kW na Ampery pomaga podejmować świadome decyzje dotyczące projektowania systemów elektrycznych, wyboru sprzętu i zgodności z przepisami bezpieczeństwa.",
+          "paragraph4": "Nasz kalkulator przyjmuje kilowaty, napięcie i współczynnik mocy jako dane wejściowe i pozwala wybrać między systemami jednofazowymi a trójfazowymi. Automatycznie stosuje odpowiedni wzór konwersji i podaje wynik w amperach. Kalkulator obsługuje typowe napięcia takie jak 120V, 230V, 240V, 400V, 480V oraz wartości niestandardowe. Niezależnie od tego, czy dobie rasz kable do silnika, wybierasz wyłączniki nadprądowe, czy projektujesz instalację elektryczną, nasz kalkulator kW na Ampery zapewnia dokładne, natychmiastowe konwersje dla Twoich obliczeń elektrycznych.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "Dla systemu jednofazowego: Jeśli masz obciążenie 5 kW przy 230V ze współczynnikiem mocy 0,8, prąd wyniesie: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. Dla systemu trójfazowego: Jeśli masz obciążenie 10 kW przy 400V międzyfazowo ze współczynnikiem mocy 0,85, prąd wyniesie: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. Dla systemu jednofazowego z 3 kW przy 120V i PF 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Najczęściej Zadawane Pytania",
+          "items": [
+            {
+              "question": "Jaki jest wzór na przeliczanie kW na Ampery?",
+              "answer": "Dla systemów jednofazowych: I(A) = P(kW) × 1000 / (PF × V). Dla systemów trójfazowych: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), gdzie I to prąd w amperach, P to moc w kilowatach, PF to współczynnik mocy, a V to napięcie w woltach. Dla systemów trójfazowych używaj napięcia międzyfazowego."
+            },
+            {
+              "question": "Jaka jest różnica między obliczeniami jednofazowymi a trójfazowymi?",
+              "answer": "Systemy jednofazowe używają wzoru: I = (kW × 1000) / (PF × V). Systemy trójfazowe zawierają √3 (około 1,732) w mianowniku: I = (kW × 1000) / (√3 × PF × V). Dzieje się tak, ponieważ systemy trójfazowe dostarczają więcej mocy przy tym samym poziomie prądu. Obliczenia trójfazowe używają również napięcia międzyfazowego, a nie napięcia fazowego."
+            },
+            {
+              "question": "Jakiego napięcia powinienem użyć do obliczeń trójfazowych?",
+              "answer": "Do obliczeń trójfazowych zawsze używaj napięcia międzyfazowego (zwanego również napięciem liniowym), a nie napięcia fazowego. Typowe napięcia trójfazowe to 208V, 240V, 380V, 400V, 415V i 480V. Na przykład w systemie trójfazowym 400V użyj 400V w kalkulatorze."
+            },
+            {
+              "question": "Co to jest współczynnik mocy i jakiej wartości powinienem użyć?",
+              "answer": "Współczynnik mocy (PF) to stosunek mocy rzeczywistej do mocy pozornej, wskazujący, jak efektywnie wykorzystywana jest moc elektryczna. Mieści się w zakresie od 0 do 1. Typowe wartości: obciążenia rezystancyjne (grzałki, żarówki) = 1,0, silniki indukcyjne = 0,8-0,9, lampy fluorescencyjne = 0,85-0,95, lampy LED = 0,9-0,95. Jeśli nieznany, użyj 0,8 jako konserwatywnego oszacowania dla obciążeń silnikowych lub 0,9 dla ogólnych obciążeń mieszanych."
+            },
+            {
+              "question": "Dlaczego muszę znać prąd, skoro mam moc w kW?",
+              "answer": "Znajomość prądu (amperów) jest niezbędna do: wyboru odpowiedniego przekroju przewodu dla bezpiecznego przepływu prądu, wyboru odpowiednich wyłączników nadprądowych i bezpieczników, upewnienia się, że kable i komponenty mogą wytrzymać prąd bez przegrzewania, zgodności z przepisami elektrycznymi i normami bezpieczeństwa oraz projektowania odpowiednich systemów ochrony elektrycznej. Prąd określa fizyczny wymiar komponentów elektrycznych, podczas gdy moc (kW) wskazuje zużycie energii."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak, nasz kalkulator kW na Ampery jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Po prostu wprowadź wartości (kW, napięcie, współczynnik mocy) i wybierz typ systemu (jednofazowy lub trójfazowy), aby otrzymać natychmiastowe, dokładne wyniki."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulator Ampery na kVA",
       "description": "Konwertuj ampery (A) na kilowoltampery (kVA) natychmiast i dokładnie używając napięcia",

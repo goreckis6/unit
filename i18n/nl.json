@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "kW naar Ampère Rekenmachine",
+      "description": "Converteer kilowatt (kW) naar ampère (A) onmiddellijk en nauwkeurig voor enkelfase en driefase systemen",
+      "singlePhase": "Enkelfase",
+      "threePhase": "Driefase",
+      "kw": "Kilowatt (kW)",
+      "voltage": "Spanning (V)",
+      "powerFactor": "Arbeidsfactor (0-1)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "current": "Stroom",
+      "seo": {
+        "title": "kW naar Ampère Rekenmachine - Converteer Kilowatt naar Ampère Online",
+        "description": "Gratis kW naar Ampère conversie rekenmachine voor enkelfase en driefase systemen. Converteer kilowatt naar ampère onmiddellijk met spanning en arbeidsfactor. Perfect voor elektrisch ontwerp, schakelaargrootte en vermogensberekeningen.",
+        "keywords": "kw ampère rekenmachine, kilowatt ampère convertor, kw ampère conversie, vermogen stroom rekenmachine, elektrische rekenmachine, ampère rekenmachine, enkelfase rekenmachine, driefase rekenmachine, gratis rekenmachine",
+        "content": {
+          "heading": "Hoe kW naar Ampère te Converteren",
+          "paragraph1": "Het converteren van kilowatt (kW) naar ampère (A) is een fundamentele berekening in elektrotechniek en het ontwerp van energiesystemen. Kilowatt vertegenwoordigt het werkelijke vermogen (actief vermogen), terwijl ampère de elektrische stroom vertegenwoordigt. De conversie vereist kennis van spanning (V) en arbeidsfactor (PF), en verschilt tussen enkelfase en driefase systemen. Onze gratis kW naar Ampère conversie rekenmachine maakt dit proces snel en gemakkelijk, en levert onmiddellijke en nauwkeurige resultaten voor enkelfase en driefase elektrische systemen.",
+          "paragraph2": "De conversieformule varieert per systeemtype: Voor enkelfase systemen: I(A) = P(kW) × 1000 / (PF × V), waarbij I de stroom in ampère is, P het vermogen in kilowatt, PF de arbeidsfactor (een waarde tussen 0 en 1), en V de spanning in volt. Voor driefase systemen: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), waarbij V(L-L) de lijn-naar-lijn spanning is. De arbeidsfactor geeft aan hoe efficiënt elektrische energie wordt gebruikt, meestal tussen 0,8 en 0,95 voor de meeste elektrische apparatuur.",
+          "paragraph3": "Deze conversie wordt veel gebruikt in verschillende toepassingen: dimensioneren van schakelaars, zekeringen en kabels voor elektrische installaties, bepalen van draaddikte vereisten voor veilige stroomstroom, berekenen van motorstroomverbruik uit nominaal vermogen, ontwerpen van elektrische distributiesystemen en panelen, begrijpen van stroomvereisten van apparatuur, selecteren van geschikte elektrische componenten en werken met generatoren, transformatoren en energiedistributiesystemen. Weten hoe kW naar Ampère te converteren helpt u weloverwogen beslissingen te nemen over elektrisch systeemontwerp, apparatuurselectie en veiligheidscompliance.",
+          "paragraph4": "Onze rekenmachine neemt de kilowatt, spanning en arbeidsfactor als invoer, en stelt u in staat te kiezen tussen enkelfase en driefase systemen. Het past automatisch de juiste conversieformule toe en levert het resultaat in ampère. De rekenmachine behandelt veelvoorkomende spanningen zoals 120V, 230V, 240V, 400V, 480V en aangepaste waarden. Of u nu kabels dimensioneert voor een motor, schakelaars selecteert of een elektrische installatie ontwerpt, onze kW naar Ampère rekenmachine levert nauwkeurige, onmiddellijke conversies voor uw elektrische berekeningen.",
+          "exampleHeading": "Voorbeeld:",
+          "exampleText": "Voor een enkelfase systeem: Als u een belasting van 5 kW heeft bij 230V met een arbeidsfactor van 0,8, zou de stroom zijn: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. Voor een driefase systeem: Als u een belasting van 10 kW heeft bij 400V lijn-naar-lijn met een arbeidsfactor van 0,85, zou de stroom zijn: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. Voor een enkelfase systeem met 3 kW bij 120V en PF van 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            {
+              "question": "Wat is de formule om kW naar Ampère te converteren?",
+              "answer": "Voor enkelfase systemen: I(A) = P(kW) × 1000 / (PF × V). Voor driefase systemen: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), waarbij I de stroom in ampère is, P het vermogen in kilowatt, PF de arbeidsfactor, en V de spanning in volt. Voor driefase, gebruik lijn-naar-lijn spanning."
+            },
+            {
+              "question": "Wat is het verschil tussen enkelfase en driefase berekeningen?",
+              "answer": "Enkelfase systemen gebruiken de formule: I = (kW × 1000) / (PF × V). Driefase systemen bevatten √3 (ongeveer 1,732) in de noemer: I = (kW × 1000) / (√3 × PF × V). Dit komt omdat driefase systemen meer vermogen leveren bij hetzelfde stroompeil. Driefase berekeningen gebruiken ook lijn-naar-lijn spanning, niet fasespanning."
+            },
+            {
+              "question": "Welke spanning moet ik gebruiken voor driefase berekeningen?",
+              "answer": "Voor driefase berekeningen gebruikt u altijd de lijn-naar-lijn spanning (ook wel lijnspanning genoemd), niet de fasespanning. Veelvoorkomende driefase spanningen zijn 208V, 240V, 380V, 400V, 415V en 480V. Bijvoorbeeld, in een 400V driefase systeem gebruikt u 400V in de rekenmachine."
+            },
+            {
+              "question": "Wat is arbeidsfactor en welke waarde moet ik gebruiken?",
+              "answer": "Arbeidsfactor (PF) is de verhouding tussen werkelijk vermogen en schijnbaar vermogen, die aangeeft hoe efficiënt elektrische energie wordt gebruikt. Het varieert van 0 tot 1. Typische waarden: resistieve belastingen (verwarming, gloeilampen) = 1,0, inductiemotoren = 0,8-0,9, fluorescentielampen = 0,85-0,95, LED-lampen = 0,9-0,95. Indien onbekend, gebruik 0,8 als conservatieve schatting voor motorbelastingen of 0,9 voor algemene gemengde belastingen."
+            },
+            {
+              "question": "Waarom moet ik de stroom weten als ik het vermogen in kW heb?",
+              "answer": "Het kennen van de stroom (ampère) is essentieel voor: het selecteren van de juiste draaddikte voor veilige stroomstroom, het kiezen van geschikte schakelaars en zekeringen, ervoor zorgen dat kabels en componenten de stroom aankunnen zonder oververhitting, voldoen aan elektrische codes en veiligheidsnormen, en het ontwerpen van geschikte elektrische beschermingssystemen. Stroom bepaalt de fysieke dimensionering van elektrische componenten, terwijl vermogen (kW) het energieverbruik aangeeft."
+            },
+            {
+              "question": "Is deze rekenmachine gratis?",
+              "answer": "Ja, onze kW naar Ampère rekenmachine is volledig gratis. Geen registratie of betaling vereist. Voer eenvoudig uw waarden in (kW, spanning, arbeidsfactor) en selecteer uw systeemtype (enkelfase of driefase) om onmiddellijke, nauwkeurige resultaten te krijgen."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere naar kVA Rekenmachine",
       "description": "Converteer ampère (A) naar kilovoltampère (kVA) direct en nauwkeurig met spanning",

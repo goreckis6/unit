@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "Calculadora kW para Amperes",
+      "description": "Converta quilowatts (kW) para amperes (A) instantânea e precisamente para sistemas monofásicos e trifásicos",
+      "singlePhase": "Monofásico",
+      "threePhase": "Trifásico",
+      "kw": "Quilowatts (kW)",
+      "voltage": "Tensão (V)",
+      "powerFactor": "Fator de Potência (0-1)",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "current": "Corrente",
+      "seo": {
+        "title": "Calculadora kW para Amperes - Converta Quilowatts para Amperes Online",
+        "description": "Calculadora de conversão kW para Amperes gratuita para sistemas monofásicos e trifásicos. Converta quilowatts para amperes instantaneamente usando tensão e fator de potência. Perfeita para projeto elétrico, dimensionamento de circuitos e cálculos de potência.",
+        "keywords": "calculadora kw amperes, conversor quilowatts amperes, conversão kw amperes, calculadora potência corrente, calculadora elétrica, calculadora amperes, calculadora monofásica, calculadora trifásica, calculadora gratuita",
+        "content": {
+          "heading": "Como Converter kW para Amperes",
+          "paragraph1": "Converter quilowatts (kW) para amperes (A) é um cálculo fundamental em engenharia elétrica e projeto de sistemas de energia. Os quilowatts representam a potência real (potência ativa), enquanto os amperes representam a corrente elétrica. A conversão requer conhecimento da tensão (V) e do fator de potência (PF), e difere entre sistemas monofásicos e trifásicos. Nossa calculadora gratuita de conversão kW para Amperes torna este processo rápido e fácil, fornecendo resultados instantâneos e precisos para sistemas elétricos monofásicos e trifásicos.",
+          "paragraph2": "A fórmula de conversão varia de acordo com o tipo de sistema: Para sistemas monofásicos: I(A) = P(kW) × 1000 / (PF × V), onde I é a corrente em amperes, P é a potência em quilowatts, PF é o fator de potência (um valor entre 0 e 1), e V é a tensão em volts. Para sistemas trifásicos: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), onde V(L-L) é a tensão entre linhas. O fator de potência indica quão eficientemente a energia elétrica está sendo usada, tipicamente entre 0,8 e 0,95 para a maioria dos equipamentos elétricos.",
+          "paragraph3": "Esta conversão é comumente usada em várias aplicações: dimensionamento de disjuntores, fusíveis e cabos para instalações elétricas, determinação de requisitos de bitola de fio para fluxo de corrente seguro, cálculo do consumo de corrente do motor a partir da potência nominal, projeto de sistemas de distribuição elétrica e painéis, compreensão dos requisitos de corrente do equipamento, seleção de componentes elétricos apropriados e trabalho com geradores, transformadores e sistemas de distribuição de energia. Saber como converter kW para Amperes ajuda você a tomar decisões informadas sobre projeto de sistemas elétricos, seleção de equipamentos e conformidade de segurança.",
+          "paragraph4": "Nossa calculadora recebe os quilowatts, tensão e fator de potência como entradas, e permite que você selecione entre sistemas monofásicos e trifásicos. Ela aplica automaticamente a fórmula de conversão apropriada e fornece o resultado em amperes. A calculadora lida com tensões comuns como 120V, 230V, 240V, 400V, 480V e valores personalizados. Seja você dimensionando cabos para um motor, selecionando disjuntores ou projetando uma instalação elétrica, nossa calculadora kW para Amperes fornece conversões precisas e instantâneas para seus cálculos elétricos.",
+          "exampleHeading": "Exemplo:",
+          "exampleText": "Para um sistema monofásico: Se você tem uma carga de 5 kW a 230V com um fator de potência de 0,8, a corrente seria: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. Para um sistema trifásico: Se você tem uma carga de 10 kW a 400V entre linhas com um fator de potência de 0,85, a corrente seria: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. Para um sistema monofásico com 3 kW a 120V e PF de 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Perguntas Frequentes",
+          "items": [
+            {
+              "question": "Qual é a fórmula para converter kW para Amperes?",
+              "answer": "Para sistemas monofásicos: I(A) = P(kW) × 1000 / (PF × V). Para sistemas trifásicos: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), onde I é a corrente em amperes, P é a potência em quilowatts, PF é o fator de potência, e V é a tensão em volts. Para trifásico, use a tensão entre linhas."
+            },
+            {
+              "question": "Qual é a diferença entre cálculos monofásicos e trifásicos?",
+              "answer": "Sistemas monofásicos usam a fórmula: I = (kW × 1000) / (PF × V). Sistemas trifásicos incluem √3 (aproximadamente 1,732) no denominador: I = (kW × 1000) / (√3 × PF × V). Isso ocorre porque sistemas trifásicos fornecem mais potência no mesmo nível de corrente. Cálculos trifásicos também usam a tensão entre linhas, não a tensão de fase."
+            },
+            {
+              "question": "Qual tensão devo usar para cálculos trifásicos?",
+              "answer": "Para cálculos trifásicos, sempre use a tensão entre linhas (também chamada de tensão de linha), não a tensão de fase. Tensões trifásicas comuns incluem 208V, 240V, 380V, 400V, 415V e 480V. Por exemplo, em um sistema trifásico de 400V, use 400V na calculadora."
+            },
+            {
+              "question": "O que é fator de potência e qual valor devo usar?",
+              "answer": "O fator de potência (PF) é a razão entre potência real e potência aparente, indicando quão eficientemente a energia elétrica está sendo usada. Varia de 0 a 1. Valores típicos: cargas resistivas (aquecedores, lâmpadas incandescentes) = 1,0, motores de indução = 0,8-0,9, lâmpadas fluorescentes = 0,85-0,95, lâmpadas LED = 0,9-0,95. Se desconhecido, use 0,8 como estimativa conservadora para cargas de motor ou 0,9 para cargas mistas gerais."
+            },
+            {
+              "question": "Por que preciso saber a corrente quando tenho a potência em kW?",
+              "answer": "Conhecer a corrente (amperes) é essencial para: selecionar o tamanho correto de fio para fluxo de corrente seguro, escolher disjuntores e fusíveis apropriados, garantir que cabos e componentes possam suportar a corrente sem superaquecimento, cumprir códigos elétricos e padrões de segurança, e projetar sistemas de proteção elétrica apropriados. A corrente determina o dimensionamento físico dos componentes elétricos, enquanto a potência (kW) indica o consumo de energia."
+            },
+            {
+              "question": "Esta calculadora é gratuita?",
+              "answer": "Sim, nossa calculadora kW para Amperes é completamente gratuita. Não é necessário registro ou pagamento. Simplesmente insira seus valores (kW, tensão, fator de potência) e selecione seu tipo de sistema (monofásico ou trifásico) para obter resultados instantâneos e precisos."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculadora de Amperes para kVA",
       "description": "Converta amperes (A) para quilovoltamperes (kVA) instantaneamente e com precisão usando tensão",

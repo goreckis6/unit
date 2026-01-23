@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "kW til Ampere Kalkulator",
+      "description": "Konverter kilowatt (kW) til ampere (A) øyeblikkelig og nøyaktig for enfase- og trefasesystemer",
+      "singlePhase": "Enfase",
+      "threePhase": "Trefase",
+      "kw": "Kilowatt (kW)",
+      "voltage": "Spenning (V)",
+      "powerFactor": "Effektfaktor (0-1)",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "current": "Strøm",
+      "seo": {
+        "title": "kW til Ampere Kalkulator - Konverter Kilowatt til Ampere Online",
+        "description": "Gratis kW til Ampere konverteringskalkulator for enfase- og trefasesystemer. Konverter kilowatt til ampere øyeblikkelig ved hjelp av spenning og effektfaktor. Perfekt for elektrisk design, kretsutforming og effektberegninger.",
+        "keywords": "kw ampere kalkulator, kilowatt ampere konverter, kw ampere konvertering, effekt strøm kalkulator, elektrisk kalkulator, ampere kalkulator, enfasekalkulator, trefasekalkulator, gratis kalkulator",
+        "content": {
+          "heading": "Hvordan Konvertere kW til Ampere",
+          "paragraph1": "Å konvertere kilowatt (kW) til ampere (A) er en grunnleggende beregning innen elektroteknikk og kraftsystemdesign. Kilowatt representerer reell effekt (aktiv effekt), mens ampere representerer elektrisk strøm. Konverteringen krever kunnskap om spenning (V) og effektfaktor (PF), og varierer mellom enfase- og trefasesystemer. Vår gratis kW til Ampere konverteringskalkulator gjør denne prosessen rask og enkel, og gir umiddelbare og nøyaktige resultater for både enfase- og trefaseelektriske systemer.",
+          "paragraph2": "Konverteringsformelen varierer etter systemtype: For enfasesystemer: I(A) = P(kW) × 1000 / (PF × V), hvor I er strømmen i ampere, P er effekten i kilowatt, PF er effektfaktoren (en verdi mellom 0 og 1), og V er spenningen i volt. For trefasesystemer: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), hvor V(L-L) er linje-til-linje spenningen. Effektfaktoren indikerer hvor effektivt elektrisk energi brukes, typisk mellom 0,8 og 0,95 for det meste elektrisk utstyr.",
+          "paragraph3": "Denne konverteringen brukes vanligvis i ulike applikasjoner: dimensjonering av brytersikringer og kabler for elektriske installasjoner, bestemmelse av lederkrav for sikker strømflyt, beregning av motorstrømtrekk fra nominell effekt, design av elektriske distribusjonssystemer og paneler, forståelse av utstyrs strømkrav, valg av egnede elektriske komponenter og arbeid med generatorer, transformatorer og kraftdistribusjonssystemer. Å vite hvordan man konverterer kW til Ampere hjelper deg med å ta informerte beslutninger om elektrisk systemdesign, utstyrsvalg og sikkerhetsoverholdelse.",
+          "paragraph4": "Vår kalkulator tar kilowatt, spenning og effektfaktor som inndata, og lar deg velge mellom enfase- og trefasesystemer. Den anvender automatisk passende konverteringsformel og gir resultatet i ampere. Kalkulatoren håndterer vanlige spenninger som 120V, 230V, 240V, 400V, 480V og tilpassede verdier. Enten du dimensjonerer kabler for en motor, velger brytere eller designer en elektrisk installasjon, gir vår kW til Ampere kalkulator nøyaktige, umiddelbare konverteringer for dine elektriske beregninger.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "For et enfasesystem: Hvis du har en last på 5 kW ved 230V med en effektfaktor på 0,8, ville strømmen være: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. For et trefasesystem: Hvis du har en last på 10 kW ved 400V linje-til-linje med en effektfaktor på 0,85, ville strømmen være: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. For et enfasesystem med 3 kW ved 120V og PF på 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Ofte Stilte Spørsmål",
+          "items": [
+            {
+              "question": "Hva er formelen for å konvertere kW til Ampere?",
+              "answer": "For enfasesystemer: I(A) = P(kW) × 1000 / (PF × V). For trefasesystemer: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), hvor I er strømmen i ampere, P er effekten i kilowatt, PF er effektfaktoren, og V er spenningen i volt. For trefase, bruk linje-til-linje spenning."
+            },
+            {
+              "question": "Hva er forskjellen mellom enfase- og trefaseberegninger?",
+              "answer": "Enfasesystemer bruker formelen: I = (kW × 1000) / (PF × V). Trefasesystemer inkluderer √3 (omtrent 1,732) i nevneren: I = (kW × 1000) / (√3 × PF × V). Dette er fordi trefasesystemer leverer mer effekt ved samme strømnivå. Trefaseberegninger bruker også linje-til-linje spenning, ikke fasespenning."
+            },
+            {
+              "question": "Hvilken spenning skal jeg bruke for trefaseberegninger?",
+              "answer": "For trefaseberegninger, bruk alltid linje-til-linje spenningen (også kalt linjespenning), ikke fasespenningen. Vanlige trefasespenninger inkluderer 208V, 240V, 380V, 400V, 415V og 480V. For eksempel, i et 400V trefasesystem, bruk 400V i kalkulatoren."
+            },
+            {
+              "question": "Hva er effektfaktor og hvilken verdi skal jeg bruke?",
+              "answer": "Effektfaktor (PF) er forholdet mellom reell effekt og tilsynelatende effekt, som indikerer hvor effektivt elektrisk energi brukes. Den strekker seg fra 0 til 1. Typiske verdier: resistive laster (varmere, glødelamper) = 1,0, induksjonsmotorer = 0,8-0,9, lysstoffrør = 0,85-0,95, LED-lamper = 0,9-0,95. Hvis ukjent, bruk 0,8 som et konservativt estimat for motorlaster eller 0,9 for generelle blandede laster."
+            },
+            {
+              "question": "Hvorfor trenger jeg å vite strømmen når jeg har effekten i kW?",
+              "answer": "Å kjenne strømmen (ampere) er essensielt for: å velge riktig ledertverrsnitt for sikker strømflyt, velge egnede brytere og sikringer, sikre at kabler og komponenter kan håndtere strømmen uten overoppheting, overholde elektriske koder og sikkerhetsstandarder, og designe egnede elektriske beskyttelsessystemer. Strøm bestemmer den fysiske dimensjoneringen av elektriske komponenter, mens effekt (kW) indikerer energiforbruk."
+            },
+            {
+              "question": "Er denne kalkulatoren gratis?",
+              "answer": "Ja, vår kW til Ampere kalkulator er helt gratis. Ingen registrering eller betaling kreves. Skriv bare inn verdiene dine (kW, spenning, effektfaktor) og velg systemtype (enfase eller trefase) for å få umiddelbare, nøyaktige resultater."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere til kVA Kalkulator",
       "description": "Konverter ampere (A) til kilovoltampere (kVA) umiddelbart og nøyaktig med spenning",

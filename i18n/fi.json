@@ -285,6 +285,58 @@
         }
       }
     },
+    "kvaToWatts": {
+      "title": "kVA Watti Laskin",
+      "description": "Muunna kilovoltiampeerit (kVA) watteiksi (W) heti ja tarkasti käyttämällä tehokerrointa",
+      "kva": "Kilovoltiampeerit (kVA)",
+      "powerFactor": "Tehokerroin (0-1)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "seo": {
+        "title": "kVA Watti Laskin - Muunna Näennäisteho Todelliseksi Tehoksi Online",
+        "description": "Ilmainen kVA Watti muunnoslaskin. Muunna kilovoltiampeerit watteiksi heti tehokerrointa käyttäen. Täydellinen sähköisiin laskelmiin, voimajärjestelmiin ja energianhallintaan.",
+        "keywords": "kva watti laskin, kva watti muunnin, kva watti muunnos, näennäis todellinen teho laskin, sähköinen laskin, watti laskin, tehokerroin laskin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka muuntaa kVA Watteiksi",
+          "paragraph1": "Kilovoltiampeerien (kVA) muuntaminen watteiksi (W) on välttämätöntä sähkötekniikassa ja voimajärjestelmissä. kVA edustaa näennäistehoa, kun taas watit edustavat todellista tehoa (aktiivista tehoa). Muunnos vaatii tehokertoimen (PF) tuntemisen, joka on todellisen tehon ja näennäistehon suhde. Ilmainen kVA Watti muunnoslaskimemme tekee tästä prosessista nopean ja helpon, tarjoten hetkellisiä ja tarkkoja tuloksia.",
+          "paragraph2": "Muunnoskaava on: W = kVA × 1000 × PF, jossa kVA on näennäisteho kilovoltiampeereina, PF on tehokerroin (arvo välillä 0 ja 1), ja W on todellinen teho watteina. Tehokerroin osoittaa, kuinka tehokkaasti sähköenergiaa käytetään. Tehokerroin 1.0 (tai 100%) tarkoittaa, että kaikki teho käytetään tehokkaasti, kun taas alhaisemmat arvot osoittavat, että osa tehosta hukataan loistehona.",
+          "paragraph3": "Tätä muunnosta käytetään yleisesti erilaisissa sovelluksissa: todellisen energiankulutuksen määrittäminen näennäistehoarvoista, generaattoreiden ja muuntajien todellisen tehon tuotoksen laskeminen, sähköisten kuormitusominaisuuksien ymmärtäminen, sähköisten laitteiden mitoitus todellisen tehon vaatimusten perusteella, voimajakelujärjestelmien suunnittelu sekä työskentely teollisten ja kaupallisten sähköjärjestelmien kanssa. Tieto siitä, kuinka muuntaa kVA Watteiksi, auttaa sinua tekemään perusteltuja päätöksiä sähköjärjestelmän suunnittelusta, laitteiden valinnasta ja energianhallinnasta.",
+          "paragraph4": "Laskimemme ottaa kVA:n ja tehokertoimen syötteiksi, soveltaa automaattisesti muunnoskaavaa ja antaa tuloksen watteina. Laskin käsittelee erilaisia tehokerroinarvoja ja tarjoaa tarkkoja muunnoksia sekä asuinrakennuksissa että teollisuussovelluksissa. Työskenteletpä sitten muuntajien, generaattoreiden, moottoreiden, voimajakelujärjestelmien tai minkä tahansa sähkölaitteiden kanssa, kVA Watti laskimemme tarjoaa tarkkoja, hetkellisiä muunnoksia.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "Jos sinulla on laite, jonka teho on 5 kVA ja tehokerroin 0.8, todellinen teho watteina olisi: W = 5 kVA × 1000 × 0.8 = 5000 × 0.8 = 4000 W. Laitteelle, jonka teho on 10 kVA ja tehokerroin 0.9: W = 10 kVA × 1000 × 0.9 = 10000 × 0.9 = 9000 W. Laitteelle, jonka teho on 15 kVA ja tehokerroin 0.85: W = 15 kVA × 1000 × 0.85 = 15000 × 0.85 = 12750 W."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava muuntaa kVA watteiksi?",
+              "answer": "Kaava muuntaa kilovoltiampeerit (kVA) watteiksi (W) on: W = kVA × 1000 × PF, jossa kVA on näennäisteho kilovoltiampeereina, PF on tehokerroin (arvo välillä 0 ja 1), ja W on todellinen teho watteina."
+            },
+            {
+              "question": "Mikä on tehokerroin?",
+              "answer": "Tehokerroin (PF) on todellisen tehon (watit) ja näennäistehon (kVA) suhde. Se osoittaa, kuinka tehokkaasti sähköenergiaa käytetään. Tehokerroin 1.0 (tai 100%) tarkoittaa, että kaikki teho käytetään tehokkaasti, kun taas alhaisemmat arvot osoittavat, että osa tehosta hukataan loistehona."
+            },
+            {
+              "question": "Mikä on ero kVA:n ja wattien välillä?",
+              "answer": "kVA (kilovoltiampeerit) edustaa näennäistehoa, joka on vaihtovirtapiirin kokonaisteho, mukaan lukien sekä todellinen teho (watit) että loisteho. Watit edustavat todellista tehoa (aktiivista tehoa), joka on todella kulutettu tai tuotettu teho. Niiden välinen suhde on: Todellinen Teho (W) = Näennäisteho (kVA) × 1000 × Tehokerroin."
+            },
+            {
+              "question": "Mikä on tyypillinen tehokerroinarvo?",
+              "answer": "Tyypilliset tehokerroinarvot vaihtelevat 0.8:sta 1.0:aan. Useimmilla sähköjärjestelmillä on tehokerroin 0.85:n ja 0.95:n välillä. Asuinrakennusten kuormilla on tyypillisesti tehokerroin noin 0.9, kun taas teollisuuskuormilla voi olla alhaisempia tehokertoimia."
+            },
+            {
+              "question": "Miksi minun täytyy tietää tehokerroin muuntaa kVA watteiksi?",
+              "answer": "Tehokerroin on välttämätön, koska kVA edustaa näennäistehoa (joka sisältää sekä todellisen että loistehon), kun taas watit edustavat vain todellista tehoa. Tehokerroin kertoo, mikä osa näennäistehosta on todellisuudessa todellista tehoa. Ilman tehokerrointa et voi määrittää todellista energiankulutusta näennäistehoarvosta."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen käyttää?",
+              "answer": "Kyllä, kVA Watti laskimemme on täysin ilmainen käyttää. Rekisteröitymistä tai maksua ei vaadita. Syötä vain kVA- ja tehokerroinarvot ja saat hetkellisiä, tarkkoja tuloksia."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Ampeeri kW Laskin",
       "description": "Muunna ampeerit (A) kilowateiksi (kW) heti ja tarkasti käyttämällä jännitettä ja tehokerrointa",

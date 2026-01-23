@@ -285,6 +285,58 @@
         }
       }
     },
+    "kvaToWatts": {
+      "title": "Kalkulator kVA na Watty",
+      "description": "Konwertuj kilowolt-ampery (kVA) na watty (W) natychmiast i dokładnie używając współczynnika mocy",
+      "kva": "Kilowolt-ampery (kVA)",
+      "powerFactor": "Współczynnik mocy (0-1)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "seo": {
+        "title": "Kalkulator kVA na Watty - Konwertuj Moc Pozorną na Moc Rzeczywistą Online",
+        "description": "Darmowy kalkulator konwersji kVA na Watty. Konwertuj kilowolt-ampery na watty natychmiast używając współczynnika mocy. Idealne do obliczeń elektrycznych, systemów zasilania i zarządzania energią.",
+        "keywords": "kalkulator kva watty, konwerter kva watty, konwersja kva watty, kalkulator mocy pozornej na rzeczywistą, kalkulator elektryczny, kalkulator watów, kalkulator współczynnika mocy, darmowy kalkulator",
+        "content": {
+          "heading": "Jak konwertować kVA na Watty",
+          "paragraph1": "Konwersja kilowolt-amperów (kVA) na watty (W) jest niezbędna w inżynierii elektrycznej i systemach zasilania. kVA reprezentuje moc pozorną, podczas gdy watty reprezentują moc rzeczywistą (moc czynną). Konwersja wymaga znajomości współczynnika mocy (PF), który jest stosunkiem mocy rzeczywistej do mocy pozornej. Nasz darmowy kalkulator konwersji kVA na Watty czyni ten proces szybkim i łatwym, zapewniając natychmiastowe i dokładne wyniki.",
+          "paragraph2": "Wzór konwersji to: W = kVA × 1000 × PF, gdzie kVA to moc pozorna w kilowolt-amperach, PF to współczynnik mocy (wartość między 0 a 1), a W to moc rzeczywista w watach. Współczynnik mocy wskazuje, jak efektywnie wykorzystywana jest energia elektryczna. Współczynnik mocy 1.0 (lub 100%) oznacza, że cała moc jest wykorzystywana efektywnie, podczas gdy niższe wartości wskazują, że część mocy jest marnowana jako moc bierna.",
+          "paragraph3": "Ta konwersja jest powszechnie używana w różnych zastosowaniach: określanie rzeczywistego zużycia energii z mocy pozornej, obliczanie rzeczywistej mocy wyjściowej generatorów i transformatorów, zrozumienie charakterystyk obciążenia elektrycznego, dobieranie urządzeń elektrycznych na podstawie wymagań mocy rzeczywistej, projektowanie systemów dystrybucji energii oraz praca z przemysłowymi i komercyjnymi systemami elektrycznymi. Znajomość konwersji kVA na Watty pomaga w podejmowaniu świadomych decyzji dotyczących projektowania systemów elektrycznych, doboru urządzeń i zarządzania energią.",
+          "paragraph4": "Nasz kalkulator przyjmuje kVA i współczynnik mocy jako dane wejściowe, automatycznie stosuje wzór konwersji i zapewnia wynik w watach. Kalkulator obsługuje różne wartości współczynnika mocy i zapewnia dokładne konwersje zarówno dla zastosowań domowych, jak i przemysłowych. Niezależnie od tego, czy pracujesz z generatorami, transformatorami, silnikami, systemami dystrybucji energii czy jakimikolwiek urządzeniami elektrycznymi, nasz kalkulator kVA na Watty zapewnia dokładne, natychmiastowe konwersje.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "Jeśli masz urządzenie o mocy 5 kVA ze współczynnikiem mocy 0.8, moc rzeczywista w watach wyniesie: W = 5 kVA × 1000 × 0.8 = 5000 × 0.8 = 4000 W. Dla urządzenia o mocy 10 kVA ze współczynnikiem mocy 0.9: W = 10 kVA × 1000 × 0.9 = 10000 × 0.9 = 9000 W. Dla urządzenia o mocy 15 kVA ze współczynnikiem mocy 0.85: W = 15 kVA × 1000 × 0.85 = 15000 × 0.85 = 12750 W."
+        },
+        "faq": {
+          "heading": "Najczęściej zadawane pytania",
+          "items": [
+            {
+              "question": "Jaki jest wzór do konwersji kVA na watty?",
+              "answer": "Wzór do konwersji kilowolt-amperów (kVA) na watty (W) to: W = kVA × 1000 × PF, gdzie kVA to moc pozorna w kilowolt-amperach, PF to współczynnik mocy (wartość między 0 a 1), a W to moc rzeczywista w watach."
+            },
+            {
+              "question": "Co to jest współczynnik mocy?",
+              "answer": "Współczynnik mocy (PF) to stosunek mocy rzeczywistej (watty) do mocy pozornej (kVA). Wskazuje, jak efektywnie wykorzystywana jest energia elektryczna. Współczynnik mocy 1.0 (lub 100%) oznacza, że cała moc jest wykorzystywana efektywnie, podczas gdy niższe wartości wskazują, że część mocy jest marnowana jako moc bierna."
+            },
+            {
+              "question": "Jaka jest różnica między kVA a watami?",
+              "answer": "kVA (kilowolt-ampery) reprezentuje moc pozorną, która jest całkowitą mocą w obwodzie prądu przemiennego, w tym zarówno moc rzeczywistą (watty) jak i moc bierną. Watty reprezentują moc rzeczywistą (moc czynną), która jest rzeczywistą mocą zużywaną lub wytwarzaną. Zależność między nimi to: Moc Rzeczywista (W) = Moc Pozorna (kVA) × 1000 × Współczynnik Mocy."
+            },
+            {
+              "question": "Jaka jest typowa wartość współczynnika mocy?",
+              "answer": "Typowe wartości współczynnika mocy mieszczą się w zakresie od 0.8 do 1.0. Większość systemów elektrycznych ma współczynnik mocy między 0.85 a 0.95. Obciążenia domowe zazwyczaj mają współczynnik mocy około 0.9, podczas gdy obciążenia przemysłowe mogą mieć niższe współczynniki mocy."
+            },
+            {
+              "question": "Dlaczego muszę znać współczynnik mocy, aby konwertować kVA na watty?",
+              "answer": "Współczynnik mocy jest wymagany, ponieważ kVA reprezentuje moc pozorną (która obejmuje zarówno moc rzeczywistą, jak i bierną), podczas gdy watty reprezentują tylko moc rzeczywistą. Współczynnik mocy mówi, jaka część mocy pozornej jest faktycznie mocą rzeczywistą. Bez współczynnika mocy nie można określić rzeczywistego zużycia energii z mocy pozornej."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak, nasz kalkulator kVA na Watty jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Po prostu wprowadź wartości kVA i współczynnika mocy i otrzymaj natychmiastowe, dokładne wyniki."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Kalkulator Ampery na kW",
       "description": "Konwertuj ampery (A) na kilowaty (kW) natychmiast i dokładnie używając napięcia i współczynnika mocy",

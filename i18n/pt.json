@@ -285,6 +285,58 @@
         }
       }
     },
+    "kvaToWatts": {
+      "title": "Calculadora de kVA para Watts",
+      "description": "Converta quilovolt-amperes (kVA) para watts (W) instantaneamente e com precisão usando o fator de potência",
+      "kva": "Quilovolt-amperes (kVA)",
+      "powerFactor": "Fator de potência (0-1)",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "seo": {
+        "title": "Calculadora kVA para Watts - Converta Potência Aparente em Potência Real Online",
+        "description": "Calculadora de conversão kVA para Watts gratuita. Converta quilovolt-amperes para watts instantaneamente usando o fator de potência. Perfeita para cálculos elétricos, sistemas de energia e gestão de energia.",
+        "keywords": "calculadora kva watts, conversor kva watts, conversão kva watts, calculadora potência aparente real, calculadora elétrica, calculadora watts, calculadora fator de potência, calculadora grátis",
+        "content": {
+          "heading": "Como converter kVA para Watts",
+          "paragraph1": "Converter quilovolt-amperes (kVA) para watts (W) é essencial em engenharia elétrica e sistemas de energia. kVA representa potência aparente, enquanto watts representam potência real (potência ativa). A conversão requer conhecimento do fator de potência (FP), que é a relação entre potência real e potência aparente. Nossa calculadora gratuita de conversão kVA para Watts torna este processo rápido e fácil, fornecendo resultados instantâneos e precisos.",
+          "paragraph2": "A fórmula de conversão é: W = kVA × 1000 × FP, onde kVA é a potência aparente em quilovolt-amperes, FP é o fator de potência (um valor entre 0 e 1), e W é a potência real em watts. O fator de potência indica quão eficientemente a energia elétrica está sendo usada. Um fator de potência de 1.0 (ou 100%) significa que toda a potência está sendo usada efetivamente, enquanto valores mais baixos indicam que parte da potência está sendo desperdiçada como potência reativa.",
+          "paragraph3": "Esta conversão é comumente usada em várias aplicações: determinar o consumo real de energia a partir de valores de potência aparente, calcular a saída de potência real de geradores e transformadores, entender características de carga elétrica, dimensionar equipamentos elétricos com base em requisitos de potência real, projetar sistemas de distribuição de energia e trabalhar com sistemas elétricos industriais e comerciais. Saber como converter kVA para Watts ajuda você a tomar decisões informadas sobre design de sistemas elétricos, seleção de equipamentos e gestão de energia.",
+          "paragraph4": "Nossa calculadora toma kVA e fator de potência como entradas, aplica automaticamente a fórmula de conversão e fornece o resultado em watts. A calculadora lida com vários valores de fator de potência e fornece conversões precisas para aplicações residenciais e industriais. Seja trabalhando com transformadores, geradores, motores, sistemas de distribuição de energia ou qualquer equipamento elétrico, nossa calculadora kVA para Watts fornece conversões precisas e instantâneas.",
+          "exampleHeading": "Exemplo:",
+          "exampleText": "Se você tem um dispositivo classificado em 5 kVA com um fator de potência de 0.8, a potência real em watts seria: W = 5 kVA × 1000 × 0.8 = 5000 × 0.8 = 4000 W. Para um dispositivo classificado em 10 kVA com um fator de potência de 0.9: W = 10 kVA × 1000 × 0.9 = 10000 × 0.9 = 9000 W. Para um dispositivo classificado em 15 kVA com um fator de potência de 0.85: W = 15 kVA × 1000 × 0.85 = 15000 × 0.85 = 12750 W."
+        },
+        "faq": {
+          "heading": "Perguntas Frequentes",
+          "items": [
+            {
+              "question": "Qual é a fórmula para converter kVA para watts?",
+              "answer": "A fórmula para converter quilovolt-amperes (kVA) para watts (W) é: W = kVA × 1000 × FP, onde kVA é a potência aparente em quilovolt-amperes, FP é o fator de potência (um valor entre 0 e 1), e W é a potência real em watts."
+            },
+            {
+              "question": "O que é fator de potência?",
+              "answer": "O fator de potência (FP) é a relação entre potência real (watts) e potência aparente (kVA). Indica quão eficientemente a energia elétrica está sendo usada. Um fator de potência de 1.0 (ou 100%) significa que toda a potência está sendo usada efetivamente, enquanto valores mais baixos indicam que parte da potência está sendo desperdiçada como potência reativa."
+            },
+            {
+              "question": "Qual é a diferença entre kVA e watts?",
+              "answer": "kVA (quilovolt-amperes) representa potência aparente, que é a potência total em um circuito CA, incluindo tanto potência real (watts) quanto potência reativa. Watts representam potência real (potência ativa), que é a potência realmente consumida ou produzida. A relação entre eles é: Potência Real (W) = Potência Aparente (kVA) × 1000 × Fator de Potência."
+            },
+            {
+              "question": "Qual é um valor típico do fator de potência?",
+              "answer": "Valores típicos do fator de potência variam de 0.8 a 1.0. A maioria dos sistemas elétricos tem um fator de potência entre 0.85 e 0.95. Cargas residenciais tipicamente têm um fator de potência em torno de 0.9, enquanto cargas industriais podem ter fatores de potência mais baixos."
+            },
+            {
+              "question": "Por que preciso conhecer o fator de potência para converter kVA para watts?",
+              "answer": "O fator de potência é necessário porque kVA representa potência aparente (que inclui tanto potência real quanto reativa), enquanto watts representam apenas potência real. O fator de potência diz qual fração da potência aparente é realmente potência real. Sem o fator de potência, você não pode determinar o consumo real de energia a partir do valor de potência aparente."
+            },
+            {
+              "question": "Esta calculadora é gratuita?",
+              "answer": "Sim, nossa calculadora kVA para Watts é completamente gratuita. Não é necessário registro ou pagamento. Simplesmente insira seus valores kVA e fator de potência e obtenha resultados instantâneos e precisos."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Calculadora de Amperes para kW",
       "description": "Converta amperes (A) para quilowatts (kW) instantaneamente e com precisão usando tensão e fator de potência",

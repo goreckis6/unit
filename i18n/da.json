@@ -285,6 +285,58 @@
         }
       }
     },
+    "kvaToWatts": {
+      "title": "kVA til Watt Lommeregner",
+      "description": "Konverter kilovolt-ampere (kVA) til watt (W) med det samme og præcist med effektfaktor",
+      "kva": "Kilovolt-ampere (kVA)",
+      "powerFactor": "Effektfaktor (0-1)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "seo": {
+        "title": "kVA til Watt Lommeregner - Konverter Tilsyneladende Effekt til Faktisk Effekt Online",
+        "description": "Gratis kVA til Watt konverteringslommeregner. Konverter kilovolt-ampere til watt med det samme med effektfaktor. Perfekt til elektriske beregninger, kraftsystemer og energistyring.",
+        "keywords": "kva til watt lommeregner, kva til watt konverter, kva watt konvertering, tilsyneladende faktisk effekt lommeregner, elektrisk lommeregner, watt lommeregner, effektfaktor lommeregner, gratis lommeregner",
+        "content": {
+          "heading": "Sådan konverterer du kVA til Watt",
+          "paragraph1": "At konvertere kilovolt-ampere (kVA) til watt (W) er essentielt inden for elektroteknik og kraftsystemer. kVA repræsenterer tilsyneladende effekt, mens watt repræsenterer faktisk effekt (aktiv effekt). Konverteringen kræver kendskab til effektfaktoren (PF), som er forholdet mellem faktisk effekt og tilsyneladende effekt. Vores gratis kVA til Watt konverteringslommeregner gør denne proces hurtig og nem, og giver øjeblikkelige og præcise resultater.",
+          "paragraph2": "Konverteringsformlen er: W = kVA × 1000 × PF, hvor kVA er tilsyneladende effekt i kilovolt-ampere, PF er effektfaktoren (en værdi mellem 0 og 1), og W er faktisk effekt i watt. Effektfaktoren angiver, hvor effektivt elektrisk energi bruges. En effektfaktor på 1.0 (eller 100%) betyder, at al effekt bruges effektivt, mens lavere værdier indikerer, at noget af effekten går tabt som reaktiv effekt.",
+          "paragraph3": "Denne konvertering bruges ofte i forskellige applikationer: bestemmelse af faktisk energiforbrug fra tilsyneladende effektværdier, beregning af faktisk effektoutput fra generatorer og transformatorer, forståelse af elektriske lastkarakteristikker, dimensionering af elektrisk udstyr baseret på faktisk effektkrav, design af kraftdistributionssystemer og arbejde med industrielle og kommercielle elektriske systemer. At vide, hvordan man konverterer kVA til Watt, hjælper dig med at træffe informerede beslutninger om elektrisk systemdesign, udstyrvalg og energistyring.",
+          "paragraph4": "Vores lommeregner tager kVA og effektfaktor som input, anvender automatisk konverteringsformlen og giver resultatet i watt. Lommeregneren håndterer forskellige effektfaktorværdier og giver præcise konverteringer for både bolig- og industriaplikationer. Uanset om du arbejder med transformatorer, generatorer, motorer, kraftdistributionssystemer eller elektrisk udstyr, giver vores kVA til Watt lommeregner præcise, øjeblikkelige konverteringer.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "Hvis du har en enhed vurderet til 5 kVA med en effektfaktor på 0.8, ville faktisk effekt i watt være: W = 5 kVA × 1000 × 0.8 = 5000 × 0.8 = 4000 W. For en enhed vurderet til 10 kVA med en effektfaktor på 0.9: W = 10 kVA × 1000 × 0.9 = 10000 × 0.9 = 9000 W. For en enhed vurderet til 15 kVA med en effektfaktor på 0.85: W = 15 kVA × 1000 × 0.85 = 15000 × 0.85 = 12750 W."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er formlen for at konvertere kVA til watt?",
+              "answer": "Formlen for at konvertere kilovolt-ampere (kVA) til watt (W) er: W = kVA × 1000 × PF, hvor kVA er tilsyneladende effekt i kilovolt-ampere, PF er effektfaktoren (en værdi mellem 0 og 1), og W er faktisk effekt i watt."
+            },
+            {
+              "question": "Hvad er effektfaktor?",
+              "answer": "Effektfaktor (PF) er forholdet mellem faktisk effekt (watt) og tilsyneladende effekt (kVA). Den angiver, hvor effektivt elektrisk energi bruges. En effektfaktor på 1.0 (eller 100%) betyder, at al effekt bruges effektivt, mens lavere værdier indikerer, at noget af effekten går tabt som reaktiv effekt."
+            },
+            {
+              "question": "Hvad er forskellen mellem kVA og watt?",
+              "answer": "kVA (kilovolt-ampere) repræsenterer tilsyneladende effekt, som er den samlede effekt i et vekselstrømskredsløb, inklusive både faktisk effekt (watt) og reaktiv effekt. Watt repræsenterer faktisk effekt (aktiv effekt), som er den faktisk forbrugede eller producerede effekt. Forholdet mellem dem er: Faktisk Effekt (W) = Tilsyneladende Effekt (kVA) × 1000 × Effektfaktor."
+            },
+            {
+              "question": "Hvad er en typisk effektfaktorværdi?",
+              "answer": "Typiske effektfaktorværdier varierer fra 0.8 til 1.0. De fleste elektriske systemer har en effektfaktor mellem 0.85 og 0.95. Boliglaster har typisk en effektfaktor omkring 0.9, mens industrilaster kan have lavere effektfaktorer."
+            },
+            {
+              "question": "Hvorfor skal jeg kende effektfaktoren for at konvertere kVA til watt?",
+              "answer": "Effektfaktoren er påkrævet, fordi kVA repræsenterer tilsyneladende effekt (som inkluderer både faktisk og reaktiv effekt), mens watt kun repræsenterer faktisk effekt. Effektfaktoren fortæller dig, hvilken brøkdel af tilsyneladende effekt, der faktisk er faktisk effekt. Uden effektfaktoren kan du ikke bestemme faktisk energiforbrug fra tilsyneladende effektværdi."
+            },
+            {
+              "question": "Er denne lommeregner gratis at bruge?",
+              "answer": "Ja, vores kVA til Watt lommeregner er helt gratis at bruge. Ingen registrering eller betaling kræves. Indtast blot dine kVA- og effektfaktorværdier og få øjeblikkelige, præcise resultater."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Ampere til kW Lommeregner",
       "description": "Konverter ampere (A) til kilowatt (kW) med det samme og præcist med spænding og effektfaktor",

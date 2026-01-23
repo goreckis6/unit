@@ -285,6 +285,58 @@
         }
       }
     },
+    "kvaToWatts": {
+      "title": "Kalkulačka kVA na Watty",
+      "description": "Převeďte kilovoltampéry (kVA) na watty (W) okamžitě a přesně pomocí účiníku",
+      "kva": "Kilovoltampéry (kVA)",
+      "powerFactor": "Účiník (0-1)",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "result": "Výsledek",
+      "seo": {
+        "title": "Kalkulačka kVA na Watty - Převeďte Zdánlivý Výkon na Výkon Skutečný Online",
+        "description": "Bezplatná kalkulačka pro převod kVA na Watty. Převeďte kilovoltampéry na watty okamžitě pomocí účiníku. Ideální pro elektrické výpočty, energetické systémy a správu energie.",
+        "keywords": "kalkulačka kva watty, převodník kva watty, převod kva watty, kalkulačka zdánlivý skutečný výkon, elektrická kalkulačka, kalkulačka watů, kalkulačka účiníku, bezplatná kalkulačka",
+        "content": {
+          "heading": "Jak převést kVA na Watty",
+          "paragraph1": "Převod kilovoltampérů (kVA) na watty (W) je nezbytný v elektrotechnice a energetických systémech. kVA představuje zdánlivý výkon, zatímco watty představují skutečný výkon (činný výkon). Převod vyžaduje znalost účiníku (PF), který je poměrem skutečného výkonu k zdánlivému výkonu. Naše bezplatná kalkulačka pro převod kVA na Watty činí tento proces rychlým a snadným, poskytuje okamžité a přesné výsledky.",
+          "paragraph2": "Převodní vzorec je: W = kVA × 1000 × PF, kde kVA je zdánlivý výkon v kilovoltampérech, PF je účiník (hodnota mezi 0 a 1) a W je skutečný výkon ve wattech. Účiník ukazuje, jak efektivně se elektrická energie využívá. Účiník 1.0 (nebo 100%) znamená, že veškerý výkon je efektivně využíván, zatímco nižší hodnoty naznačují, že část výkonu je zbytečná jako jalový výkon.",
+          "paragraph3": "Tento převod se běžně používá v různých aplikacích: určení skutečné spotřeby energie z hodnot zdánlivého výkonu, výpočet skutečného výkonu generátorů a transformátorů, pochopení charakteristik elektrického zatížení, dimenzování elektrických zařízení na základě požadavků na skutečný výkon, návrh systémů distribuce energie a práce s průmyslovými a komerčními elektrickými systémy. Znalost převodu kVA na Watty vám pomůže učinit informovaná rozhodnutí o návrhu elektrických systémů, výběru zařízení a správě energie.",
+          "paragraph4": "Naše kalkulačka bere kVA a účiník jako vstupy, automaticky aplikuje převodní vzorec a poskytuje výsledek ve wattech. Kalkulačka zpracovává různé hodnoty účiníku a poskytuje přesné převody pro jak rezidenční, tak průmyslové aplikace. Ať už pracujete s transformátory, generátory, motory, systémy distribuce energie nebo jakýmkoli elektrickým zařízením, naše kalkulačka kVA na Watty poskytuje přesné, okamžité převody.",
+          "exampleHeading": "Příklad:",
+          "exampleText": "Pokud máte zařízení s výkonem 5 kVA s účiníkem 0.8, skutečný výkon ve wattech by byl: W = 5 kVA × 1000 × 0.8 = 5000 × 0.8 = 4000 W. Pro zařízení s výkonem 10 kVA s účiníkem 0.9: W = 10 kVA × 1000 × 0.9 = 10000 × 0.9 = 9000 W. Pro zařízení s výkonem 15 kVA s účiníkem 0.85: W = 15 kVA × 1000 × 0.85 = 15000 × 0.85 = 12750 W."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {
+              "question": "Jaký je vzorec pro převod kVA na watty?",
+              "answer": "Vzorec pro převod kilovoltampérů (kVA) na watty (W) je: W = kVA × 1000 × PF, kde kVA je zdánlivý výkon v kilovoltampérech, PF je účiník (hodnota mezi 0 a 1) a W je skutečný výkon ve wattech."
+            },
+            {
+              "question": "Co je účiník?",
+              "answer": "Účiník (PF) je poměr skutečného výkonu (watty) k zdánlivému výkonu (kVA). Ukazuje, jak efektivně se elektrická energie využívá. Účiník 1.0 (nebo 100%) znamená, že veškerý výkon je efektivně využíván, zatímco nižší hodnoty naznačují, že část výkonu je zbytečná jako jalový výkon."
+            },
+            {
+              "question": "Jaký je rozdíl mezi kVA a watty?",
+              "answer": "kVA (kilovoltampéry) představuje zdánlivý výkon, což je celkový výkon v obvodu střídavého proudu, včetně jak skutečného výkonu (watty), tak jalového výkonu. Watty představují skutečný výkon (činný výkon), což je skutečně spotřebovaný nebo vyrobený výkon. Vztah mezi nimi je: Skutečný Výkon (W) = Zdánlivý Výkon (kVA) × 1000 × Účiník."
+            },
+            {
+              "question": "Jaká je typická hodnota účiníku?",
+              "answer": "Typické hodnoty účiníku se pohybují od 0.8 do 1.0. Většina elektrických systémů má účiník mezi 0.85 a 0.95. Rezidenční zátěže obvykle mají účiník kolem 0.9, zatímco průmyslové zátěže mohou mít nižší účiníky."
+            },
+            {
+              "question": "Proč musím znát účiník pro převod kVA na watty?",
+              "answer": "Účiník je vyžadován, protože kVA představuje zdánlivý výkon (který zahrnuje jak skutečný, tak jalový výkon), zatímco watty představují pouze skutečný výkon. Účiník vám říká, jaká část zdánlivého výkonu je ve skutečnosti skutečný výkon. Bez účiníku nelze určit skutečnou spotřebu energie z hodnoty zdánlivého výkonu."
+            },
+            {
+              "question": "Je tato kalkulačka zdarma?",
+              "answer": "Ano, naše kalkulačka kVA na Watty je zcela zdarma. Není vyžadována registrace ani platba. Jednoduše zadejte hodnoty kVA a účiníku a získejte okamžité, přesné výsledky."
+            }
+          ]
+        }
+      }
+    },
     "ampToKw": {
       "title": "Kalkulačka Ampérů na kW",
       "description": "Převeďte ampéry (A) na kilowatty (kW) okamžitě a přesně pomocí napětí a účiníku",

@@ -493,6 +493,62 @@
         }
       }
     },
+    "kwToAmps": {
+      "title": "kW Ampeeri Laskin",
+      "description": "Muunna kilowatit (kW) ampeereiksi (A) välittömästi ja tarkasti yksivaihe- ja kolmivaihejärjestelmille",
+      "singlePhase": "Yksivaihe",
+      "threePhase": "Kolmivaihe",
+      "kw": "Kilowatit (kW)",
+      "voltage": "Jännite (V)",
+      "powerFactor": "Tehokerroin (0-1)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "current": "Virta",
+      "seo": {
+        "title": "kW Ampeeri Laskin - Muunna Kilowatit Ampeereiksi Verkossa",
+        "description": "Ilmainen kW Ampeeri muunnosl askin yksivaihe- ja kolmivaihejärjestelmille. Muunna kilowatit ampeereiksi välittömästi jännitteen ja tehokertoimen avulla. Täydellinen sähkösuunnitteluun, piirien mitoitukseen ja teholaskelmiin.",
+        "keywords": "kw ampeeri laskin, kilowatti ampeeri muunnin, kw ampeeri muunnos, teho virta laskin, sähkölaskin, ampeeri laskin, yksivaihelaskin, kolmivaihelaskin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka Muuntaa kW Ampeereiksi",
+          "paragraph1": "Kilowattien (kW) muuntaminen ampeereiksi (A) on peruslaskelma sähkötekniikassa ja sähköjärjestelmien suunnittelussa. Kilowatit edustavat todellista tehoa (aktiivista tehoa), kun taas ampeerit edustavat sähkövirtaa. Muunnos vaatii jännitteen (V) ja tehokertoimen (PF) tuntemusta, ja se eroaa yksivaihe- ja kolmivaihejärjestelmien välillä. Ilmainen kW Ampeeri muunnoslas kimemme tekee tästä prosessista nopean ja helpon, tarjoamalla välittömät ja tarkat tulokset sekä yksivaihe- että kolmivaihesähköjärjestelmille.",
+          "paragraph2": "Muunnoskaava vaihtelee järjestelmätyypin mukaan: Yksiv aihejärjestelmille: I(A) = P(kW) × 1000 / (PF × V), missä I on virta ampeereina, P on teho kilowatteina, PF on tehokerroin (arvo välillä 0 ja 1), ja V on jännite voltteina. Kolmivaihejärjestelmille: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), missä V(L-L) on linja-linja jännite. Tehokerroin ilmaisee, kuinka tehokkaasti sähköenergiaa käytetään, tyypillisesti välillä 0,8 ja 0,95 useimmille sähkölaitteille.",
+          "paragraph3": "Tätä muunnosta käytetään yleisesti eri sovelluksissa: katkaisij oiden, sulakkeiden ja kaapeleiden mitoitus sähköasennuksille, johtimen vaatimusten määrittäminen turvallista virtausta varten, moottorin virrankulutuksen laskeminen nimellistehosta, sähkönjakelujarjestelmien ja paneelien suunnittelu, laitteiden virtavaatimusten ymmärtäminen, sopivien sähkökomponenttien valitseminen ja työskentely generaattorien, muuntajien ja sähkönjakelujärjestelmien kanssa. Tietäminen, kuinka muuntaa kW Ampeereiksi, auttaa sinua tekemään perusteltuja päätöksiä sähköjärjestelmien suunnittelusta, laitteiden valinnasta ja turvallisuusstandardien noudattamisesta.",
+          "paragraph4": "Laskimemme ottaa kilowatit, jännitteen ja tehokertoimen syötteinä ja antaa sinun valita yksivaihe- ja kolmivaihejärjestelmien välillä. Se soveltaa automaattisesti sopivan muunnoskaavan ja antaa tuloksen ampeereina. Laskin käsittelee yleiset jännitteet kuten 120V, 230V, 240V, 400V, 480V ja mukautetut arvot. Mitoitatpa kaapeleita moottorille, valitsetpa katkaisijoita tai suunnitteletpa sähköasennusta, kW Ampeeri laskimemme tarjoaa tarkat, välittömät muunnokset sähkölaskelmillesi.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "Yksiva ihejärjestelmälle: Jos sinulla on 5 kW kuorma 230V:ssa tehokertoimella 0,8, virta olisi: I = (5 × 1000) / (0,8 × 230) = 5000 / 184 = 27,17 A. Kolmivaihejärjestelmälle: Jos sinulla on 10 kW kuorma 400V linja-linja jännitteellä tehokertoimella 0,85, virta olisi: I = (10 × 1000) / (√3 × 0,85 × 400) = 10000 / 588,58 = 16,99 A. Yksivaihjejärjestelmälle 3 kW:lla 120V:ssa ja PF 0,9: I = (3 × 1000) / (0,9 × 120) = 3000 / 108 = 27,78 A."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava kW:n muuntamiseen Ampeereiksi?",
+              "answer": "Yksivaihjejärjestelmille: I(A) = P(kW) × 1000 / (PF × V). Kolmivaihejärjestelmille: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), missä I on virta ampeereina, P on teho kilowatteina, PF on tehokerroin, ja V on jännite voltteina. Kolmivaiheelle, käytä linja-linja jännitettä."
+            },
+            {
+              "question": "Mikä on ero yksivaihe- ja kolmivaihelaskelmien välillä?",
+              "answer": "Yksiv aihejärjestelmät käyttävät kaavaa: I = (kW × 1000) / (PF × V). Kolmivaihejärjestelmät sisältävät √3 (noin 1,732) nimittäjässä: I = (kW × 1000) / (√3 × PF × V). Tämä johtuu siitä, että kolmivaihejärjestelmät toimittavat enemmän tehoa samalla virran tasolla. Kolmivaihlaskelmissa käytetään myös linja-linja jännitettä, ei vaihejännitettä."
+            },
+            {
+              "question": "Mitä jännitettä minun tulisi käyttää kolmivaih elaskelmiin?",
+              "answer": "Kolmivaihelaskelmiin, käytä aina linja-linja jännitettä (kutsutaan myös linjavännitteeksi), ei vaihejännitettä. Yleiset kolmivaihejännitteet sisältävät 208V, 240V, 380V, 400V, 415V ja 480V. Esimerkiksi, 400V kolmivaihejärjestelmässä, käytä 400V laskimessa."
+            },
+            {
+              "question": "Mikä on tehokerroin ja mitä arvoa minun tulisi käyttää?",
+              "answer": "Tehokerroin (PF) on todellisen tehon ja näennäistehon suhde, joka ilmaisee, kuinka tehokkaasti sähköenergiaa käytetään. Se vaihtelee välillä 0-1. Tyypilliset arvot: resistiiviset kuormat (lämmittimet, hehkulamput) = 1,0, induktiomoottorit = 0,8-0,9, loistelamput = 0,85-0,95, LED-lamput = 0,9-0,95. Jos tuntematon, käytä 0,8 varovaisena arviona moottorkuormille tai 0,9 yleisille sekakuormille."
+            },
+            {
+              "question": "Miksi minun täytyy tietää virta, kun minulla on teho kW:ina?",
+              "answer": "Virran (ampeerien) tunteminen on olennaista: oikean johtimen poikkipinnan valitsemiseen turvallista virtausta varten, sopivien katkaisijoiden ja sulakkeiden valitsemiseen, varmistaaksesi, että kaapelit ja komponentit kestävät virran ylikuumenematta, sähkökoodien ja turvallisuusstandardien noudattamiseen, ja sopivien sähkösuojausjärjestelmien suunnitteluun. Virta määrittää sähkökomponenttien fyysisen mitoituksen, kun taas teho (kW) ilmaisee energiankulutuksen."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, kW Ampeeri laskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Syötä yksinkertaisesti arvosi (kW, jännite, tehokerroin) ja valitse järjestelmätyyppi (yksivaihe tai kolmivaihe) saadaksesi välittömät, tarkat tulokset."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampeeri kVA Laskin",
       "description": "Muunna ampeerit (A) kilovoltampeereiksi (kVA) heti ja tarkasti käyttämällä jännitettä",

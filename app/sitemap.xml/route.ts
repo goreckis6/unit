@@ -22,6 +22,7 @@ export async function GET() {
     '/calculators/electric/joules-to-volts',
     '/calculators/electric/kva-to-amps',
     '/calculators/electric/kva-to-watts',
+    '/calculators/electric/kva-to-kw',
     '/blog',
   ];
 

@@ -18,6 +18,7 @@ export async function GET() {
     '/calculators/electric/amps-to-volt',
     '/calculators/electric/amps-to-watts',
     '/calculators/electric/electron-volts-to-volts',
+    '/calculators/electric/joules-to-watts',
     '/blog',
   ];
 

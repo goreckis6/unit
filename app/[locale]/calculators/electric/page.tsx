@@ -128,6 +128,12 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       descKey: 'joulesToWatts.description',
       path: '/calculators/electric/joules-to-watts',
     },
+    {
+      id: 'joules-to-volts',
+      titleKey: 'joulesToVolts.title',
+      descKey: 'joulesToVolts.description',
+      path: '/calculators/electric/joules-to-volts',
+    },
   ];
 
   return (

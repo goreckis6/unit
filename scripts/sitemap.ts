@@ -9,6 +9,16 @@ async function generateSitemap() {
   
   const urls: string[] = [];
 
+  // Electric calculators paths
+  const electricCalculators = [
+    'watts-to-kva',
+    'amp-to-kw',
+    'amp-to-kva',
+    'amps-to-va',
+    'amps-to-volt',
+    'amps-to-watts',
+  ];
+
   // Home pages for all locales
   routing.locales.forEach((locale) => {
     const localePrefix = locale === 'en' ? '' : `/${locale}`;
@@ -16,6 +26,12 @@ async function generateSitemap() {
     urls.push(`${baseUrl}${localePrefix}/calculators/math`);
     urls.push(`${baseUrl}${localePrefix}/calculators/math/addition`);
     urls.push(`${baseUrl}${localePrefix}/calculators/electric`);
+    
+    // Electric calculator pages
+    electricCalculators.forEach((calc) => {
+      urls.push(`${baseUrl}${localePrefix}/calculators/electric/${calc}`);
+    });
+    
     urls.push(`${baseUrl}${localePrefix}/blog`);
     
     // Blog posts

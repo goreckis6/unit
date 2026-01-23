@@ -7,7 +7,7 @@ import { routing } from '@/i18n/routing';
 
 const FLAGS: Record<string, JSX.Element> = {
   en: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="24" fill="#B22234"/>
       <rect width="36" height="1.85" y="2.67" fill="#FFFFFF"/>
       <rect width="36" height="1.85" y="5.33" fill="#FFFFFF"/>
@@ -34,83 +34,83 @@ const FLAGS: Record<string, JSX.Element> = {
     </svg>
   ),
   pl: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="12" y="0" fill="#FFFFFF"/>
       <rect width="36" height="12" y="12" fill="#DC143C"/>
     </svg>
   ),
   de: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="8" y="0" fill="#000000"/>
       <rect width="36" height="8" y="8" fill="#DD0000"/>
       <rect width="36" height="8" y="16" fill="#FFCE00"/>
     </svg>
   ),
   fr: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="12" height="24" x="0" fill="#002654"/>
       <rect width="12" height="24" x="12" fill="#FFFFFF"/>
       <rect width="12" height="24" x="24" fill="#ED2939"/>
     </svg>
   ),
   es: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="6" y="0" fill="#AA151B"/>
       <rect width="36" height="12" y="6" fill="#F1BF00"/>
       <rect width="36" height="6" y="18" fill="#AA151B"/>
     </svg>
   ),
   it: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="12" height="24" x="0" fill="#009246"/>
       <rect width="12" height="24" x="12" fill="#FFFFFF"/>
       <rect width="12" height="24" x="24" fill="#CE2B37"/>
     </svg>
   ),
   nl: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="8" y="0" fill="#AE1C28"/>
       <rect width="36" height="8" y="8" fill="#FFFFFF"/>
       <rect width="36" height="8" y="16" fill="#21468B"/>
     </svg>
   ),
   pt: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="18" height="24" x="0" fill="#006600"/>
       <rect width="18" height="12" x="18" y="0" fill="#FF0000"/>
       <rect width="18" height="12" x="18" y="12" fill="#FF0000"/>
     </svg>
   ),
   cs: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="12" y="0" fill="#FFFFFF"/>
       <rect width="36" height="12" y="12" fill="#D7141A"/>
       <polygon points="0,0 18,12 0,24" fill="#11457E"/>
     </svg>
   ),
   sk: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="8" y="0" fill="#FFFFFF"/>
       <rect width="36" height="8" y="8" fill="#0B4EA2"/>
       <rect width="36" height="8" y="16" fill="#EE1C25"/>
     </svg>
   ),
   hu: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="8" y="0" fill="#FFFFFF"/>
       <rect width="36" height="8" y="8" fill="#CE2939"/>
       <rect width="36" height="8" y="16" fill="#477050"/>
     </svg>
   ),
   sv: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="24" fill="#006AA7"/>
       <rect width="36" height="6" y="9" fill="#FECC00"/>
       <rect width="6" height="24" x="9" fill="#FECC00"/>
     </svg>
   ),
   no: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="24" fill="#BA0C2F"/>
       <rect width="36" height="4" y="10" fill="#FFFFFF"/>
       <rect width="4" height="24" x="10" fill="#FFFFFF"/>
@@ -119,41 +119,41 @@ const FLAGS: Record<string, JSX.Element> = {
     </svg>
   ),
   da: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="24" fill="#C8102E"/>
       <rect width="36" height="4" y="10" fill="#FFFFFF"/>
       <rect width="4" height="24" x="10" fill="#FFFFFF"/>
     </svg>
   ),
   fi: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="24" fill="#FFFFFF"/>
       <rect width="36" height="4" y="10" fill="#003580"/>
       <rect width="4" height="24" x="10" fill="#003580"/>
     </svg>
   ),
   ro: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="12" height="24" x="0" fill="#002B7F"/>
       <rect width="12" height="24" x="12" fill="#FCD116"/>
       <rect width="12" height="24" x="24" fill="#CE1126"/>
     </svg>
   ),
   ru: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="8" y="0" fill="#FFFFFF"/>
       <rect width="36" height="8" y="8" fill="#0039A6"/>
       <rect width="36" height="8" y="16" fill="#D52B1E"/>
     </svg>
   ),
   ja: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="24" fill="#FFFFFF"/>
       <circle cx="18" cy="12" r="7.2" fill="#BC002D"/>
     </svg>
   ),
   zh: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="24" fill="#DE2910"/>
       <circle cx="9" cy="6" r="1.2" fill="#FFDE00"/>
       <circle cx="11.4" cy="7.2" r="0.8" fill="#FFDE00"/>
@@ -163,7 +163,7 @@ const FLAGS: Record<string, JSX.Element> = {
     </svg>
   ),
   ko: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="24" fill="#FFFFFF"/>
       <circle cx="18" cy="12" r="6" fill="#CE1126"/>
       <path d="M 18 6 Q 14 12 18 18 Q 22 12 18 6" fill="#003478"/>
@@ -172,7 +172,7 @@ const FLAGS: Record<string, JSX.Element> = {
     </svg>
   ),
   ar: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="24" fill="#006C35"/>
       <path d="M 8 12 L 28 12" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round"/>
       <path d="M 18 6 L 18 18" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round"/>
@@ -180,7 +180,7 @@ const FLAGS: Record<string, JSX.Element> = {
     </svg>
   ),
   hi: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="8" y="0" fill="#FF9933"/>
       <rect width="36" height="8" y="8" fill="#FFFFFF"/>
       <rect width="36" height="8" y="16" fill="#138808"/>
@@ -188,13 +188,13 @@ const FLAGS: Record<string, JSX.Element> = {
     </svg>
   ),
   id: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="12" y="0" fill="#CE1126"/>
       <rect width="36" height="12" y="12" fill="#FFFFFF"/>
     </svg>
   ),
   tr: (
-    <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="24" fill="#E30A17"/>
       <circle cx="12" cy="12" r="5" fill="#FFFFFF"/>
       <circle cx="13.5" cy="12" r="4" fill="#E30A17"/>

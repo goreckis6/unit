@@ -626,6 +626,40 @@
         }
       }
     },
+    "kwToVa": {
+      "title": "kW-VA Számológép",
+      "description": "Alakítson át kilowattot (kW) voltamperekké (VA) azonnal teljesítménytényező használatával",
+      "kw": "Kilowatt (kW)",
+      "powerFactor": "Teljesítménytényező (0-1)",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "va": "Voltamper (VA)",
+      "seo": {
+        "title": "kW-VA Számológép - Valódi teljesítmény átalakítása látszólagos teljesítményre online",
+        "description": "Ingyenes kW-VA átváltó számológép. Alakítson át kilowattot voltamperekké azonnal teljesítménytényező használatával. Tökéletes elektromos számításokhoz, energiarendszerekhez és berendezések méretezéséhez.",
+        "keywords": "kw va számológép, kilowatt voltamper átalakító, kw va átváltás, valódi teljesítmény látszólagosra számológép, elektromos számológép, va számológép, teljesítménytényező számológép, ingyenes számológép",
+        "content": {
+          "heading": "Hogyan alakítsuk át kW-ot VA-ra",
+          "paragraph1": "A kilowatt (kW) voltamperekké (VA) történő átalakítása alapvető az elektrotechnikában és energiarendszerekben. A kilowatt valódi teljesítményt jelent — az elektromos terhelés által végzett tényleges munkát — míg a voltamper látszólagos teljesítményt jelent — a forrás által szolgáltatott teljes teljesítményt, beleértve a valódi és reaktív komponenseket. Az átalakításhoz szükséges a teljesítménytényező (PF), amely a valódi teljesítmény és a látszólagos teljesítmény aránya. Ingyenes kW-VA számológépünk azonnali, pontos átváltásokat biztosít berendezések, transzformátorok és generátorok méretezéséhez.",
+          "paragraph2": "A képlet: VA = (kW × 1000) / PF, ahol VA a látszólagos teljesítmény voltamperben, kW a valódi teljesítmény kilowattban, PF pedig a teljesítménytényező (0 és 1 közötti érték). Például egy 5 kW-os terhelés 0,8-as teljesítménytényezővel 5000 / 0,8 = 6250 VA látszólagos teljesítményt igényel. Alacsonyabb teljesítménytényező azt jelenti, hogy nagyobb látszólagos teljesítmény szükséges ugyanazon valódi teljesítmény biztosításához. A teljesítménytényező jelzi, hogy az elektromos rendszer milyen hatékonyan alakítja át a látszólagos teljesítményt hasznos munkává: 1,0-s PF (egységnyi) 100%-os hatékonyságú; alacsonyabb értékek reaktív teljesítményveszteségeket jeleznek.",
+          "paragraph3": "Ez az átváltás kritikus számos alkalmazásban: transzformátorok és generátorok méretezése a valódi terhelésekhez elegendő kapacitás biztosítására, elektromos elosztórendszerek és UPS egységek tervezése, megszakítók és vezetékek számítása, motorok és induktív terhelések viselkedésének megértése, valamint teljesítménykapacitás tervezése kereskedelmi és ipari létesítményekhez. A kW VA-ra történő átváltásának ismerete segít a megfelelően méretezett berendezések kiválasztásában, túlterhelés elkerülésében és az energiahatékonyság optimalizálásában.",
+          "paragraph4": "Számológépünk kilowattot és teljesítménytényezőt fogad bemenetként, alkalmazza a VA = (kW × 1000) / PF képletet, és voltamperben adja meg a látszólagos teljesítményt. Akár motorokkal, transzformátorokkal, generátorokkal, UPS rendszerekkel, vagy induktív vagy kapacitív terhelésekkel dolgozik — a kW-VA számológép pontos, azonnali eredményeket nyújt elektromos tervezéséhez és elemzéséhez.",
+          "exampleHeading": "Példa:",
+          "exampleText": "5 kW PF 0,8-nál: VA = (5 × 1000) / 0,8 = 6250 VA. 10 kW PF 0,9-nél: VA = (10 × 1000) / 0,9 = 11111 VA. 2 kW PF 1,0-nál (rezisztív terhelés): VA = (2 × 1000) / 1,0 = 2000 VA. 3,5 kW PF 0,85-nél: VA = (3,5 × 1000) / 0,85 = 4118 VA. Egy 7,5 kW-os motor PF 0,75-nél (7,5 × 1000) / 0,75 = 10000 VA látszólagos teljesítmény-ellátást igényel."
+        },
+        "faq": {
+          "heading": "Gyakran ismételt kérdések",
+          "items": [
+            { "question": "Mi a képlet a kW VA-ra való átváltásához?", "answer": "A képlet VA = (kW × 1000) / PF, ahol VA látszólagos teljesítmény voltamperben, kW valódi teljesítmény kilowattban, PF pedig teljesítménytényező (0-tól 1-ig). Valódi teljesítmény = látszólagos teljesítmény × PF, tehát látszólagos teljesítmény = valódi teljesítmény / PF." },
+            { "question": "Mi a különbség kW és VA között?", "answer": "kW (kilowatt) valódi teljesítmény — a terhelés által végzett tényleges munka (pl. mechanikus kimenet, hő, fény). VA (voltamper) látszólagos teljesítmény — a forrás által szolgáltatott teljes teljesítmény, beleértve a hasznos munkát nem végző reaktív teljesítményt. VA ≥ kW mindig; csak akkor egyenlők, ha PF = 1,0 (tisztán rezisztív terhelés)." },
+            { "question": "Mi az a teljesítménytényező és milyen értékek tipikusak?", "answer": "A teljesítménytényező (PF) a kW / VA arány, 0-tól 1-ig terjedően. Azt méri, hogy az elektromos teljesítmény milyen hatékonyan alakul át hasznos munkává. Tipikus értékek: rezisztív fűtések ~1,0, fénycsövek 0,5–0,95, indukciós motorok 0,7–0,9, tápegységek 0,6–0,95. Alacsonyabb PF azt jelenti, hogy ugyanazon kW-hoz nagyobb VA szükséges, növelve a vezetékek és transzformátorok méretét." },
+            { "question": "Miért kell a kW-ot VA-ra átváltani?", "answer": "A transzformátorok, generátorok, UPS egységek és megszakítók VA-ban (vagy kVA-ban) vannak osztályozva, nem kW-ban. Egy 10 kW-ot fogyasztó terhelés PF 0,8-nál 12,5 kVA tápkapacitást igényel. A berendezések csak kW alapján történő méretezése (PF figyelmen kívül hagyása) túlterheléshez vezethet. A kW VA-ra történő átváltása biztosítja, hogy elegendő látszólagos teljesítmény-kapacitással rendelkező berendezést válasszon." },
+            { "question": "Ez a számológép ingyenes?", "answer": "Igen, kW-VA számológépünk ingyenes. Nincs szükség regisztrációra vagy fizetésre. Adja meg a teljesítményt kW-ban és a teljesítménytényezőt (0–1), hogy azonnali, pontos eredményeket kapjon VA-ban." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Amper kVA Számológép",
       "description": "Alakítsa át az ampereket (A) kilovoltamperekké (kVA) azonnal és pontosan feszültség használatával",

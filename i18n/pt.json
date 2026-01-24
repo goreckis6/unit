@@ -626,6 +626,40 @@
         }
       }
     },
+    "kwToVa": {
+      "title": "Calculadora kW para VA",
+      "description": "Converta quilowatts (kW) em volt-amperes (VA) instantaneamente usando fator de potência",
+      "kw": "Quilowatts (kW)",
+      "powerFactor": "Fator de potência (0-1)",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "va": "Volt-amperes (VA)",
+      "seo": {
+        "title": "Calculadora kW para VA - Converter Potência Ativa em Potência Aparente Online",
+        "description": "Calculadora de conversão kW para VA gratuita. Converta quilowatts em volt-amperes instantaneamente usando fator de potência. Perfeito para cálculos elétricos, sistemas de energia e dimensionamento de equipamentos.",
+        "keywords": "calculadora kw para va, conversor quilowatts para volt-amperes, conversão kw va, calculadora potência ativa para aparente, calculadora elétrica, calculadora va, calculadora fator de potência, calculadora gratuita",
+        "content": {
+          "heading": "Como converter kW em VA",
+          "paragraph1": "A conversão de quilowatts (kW) em volt-amperes (VA) é essencial em engenharia elétrica e sistemas de energia. Quilowatts representam a potência ativa — o trabalho real realizado por uma carga elétrica — enquanto volt-amperes representam a potência aparente — a potência total fornecida pela fonte, incluindo componentes ativos e reativos. A conversão requer o fator de potência (FP), que é a razão entre potência ativa e potência aparente. Nossa calculadora kW para VA gratuita fornece conversões instantâneas e precisas para dimensionar equipamentos, transformadores e geradores.",
+          "paragraph2": "A fórmula é: VA = (kW × 1000) / FP, onde VA é a potência aparente em volt-amperes, kW é a potência ativa em quilowatts, e FP é o fator de potência (um valor entre 0 e 1). Por exemplo, uma carga de 5 kW com um fator de potência de 0,8 requer 5000 / 0,8 = 6250 VA de potência aparente. Um fator de potência mais baixo significa que é necessária maior potência aparente para fornecer a mesma potência ativa. O fator de potência indica quão eficientemente o sistema elétrico converte potência aparente em trabalho útil: um FP de 1,0 (unitário) é 100% eficiente; valores mais baixos indicam perdas de potência reativa.",
+          "paragraph3": "Esta conversão é crítica em muitas aplicações: dimensionamento de transformadores e geradores para garantir capacidade adequada para cargas ativas, projeto de sistemas de distribuição elétrica e unidades UPS, cálculo de classificações de disjuntores e condutores, compreensão do comportamento de motores e cargas indutivas, e planejamento de capacidade de energia para instalações comerciais e industriais. Saber como converter kW em VA ajuda você a selecionar equipamentos dimensionados corretamente, evitar sobrecargas e otimizar a eficiência energética.",
+          "paragraph4": "Nossa calculadora aceita quilowatts e fator de potência como entradas, aplica a fórmula VA = (kW × 1000) / FP, e fornece a potência aparente em volt-amperes. Seja você trabalhando com motores, transformadores, geradores, sistemas UPS, ou qualquer carga indutiva ou capacitiva — a calculadora kW para VA oferece resultados precisos e instantâneos para seu projeto e análise elétrica.",
+          "exampleHeading": "Exemplo:",
+          "exampleText": "5 kW a FP 0,8: VA = (5 × 1000) / 0,8 = 6250 VA. 10 kW a FP 0,9: VA = (10 × 1000) / 0,9 = 11111 VA. 2 kW a FP 1,0 (carga resistiva): VA = (2 × 1000) / 1,0 = 2000 VA. 3,5 kW a FP 0,85: VA = (3,5 × 1000) / 0,85 = 4118 VA. Um motor de 7,5 kW a FP 0,75 requer (7,5 × 1000) / 0,75 = 10000 VA de fornecimento de potência aparente."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            { "question": "Qual é a fórmula para converter kW em VA?", "answer": "A fórmula é VA = (kW × 1000) / FP, onde VA é potência aparente em volt-amperes, kW é potência ativa em quilowatts, e FP é o fator de potência (0 a 1). Potência ativa = potência aparente × FP, portanto potência aparente = potência ativa / FP." },
+            { "question": "Qual é a diferença entre kW e VA?", "answer": "kW (quilowatts) é potência ativa — o trabalho real realizado pela carga (ex. saída mecânica, calor, luz). VA (volt-amperes) é potência aparente — a potência total fornecida pela fonte, incluindo potência reativa que não realiza trabalho útil. VA ≥ kW sempre; são iguais apenas quando FP = 1,0 (carga puramente resistiva)." },
+            { "question": "O que é fator de potência e quais valores são típicos?", "answer": "O fator de potência (FP) é a razão kW / VA, variando de 0 a 1. Ele mede quão eficientemente a potência elétrica é convertida em trabalho útil. Valores típicos: aquecedores resistivos ~1,0, lâmpadas fluorescentes 0,5–0,95, motores de indução 0,7–0,9, fontes de alimentação 0,6–0,95. Um FP mais baixo significa que VA mais altos são necessários para os mesmos kW, aumentando o tamanho de condutores e transformadores." },
+            { "question": "Por que preciso converter kW em VA?", "answer": "Transformadores, geradores, unidades UPS e disjuntores são classificados em VA (ou kVA), não em kW. Uma carga consumindo 10 kW a FP 0,8 requer 12,5 kVA de capacidade de fornecimento. Dimensionar equipamentos apenas por kW (ignorando FP) pode levar a sobrecarga. Converter kW em VA garante que você selecione equipamentos com capacidade de potência aparente suficiente." },
+            { "question": "Esta calculadora é gratuita?", "answer": "Sim, nossa calculadora kW para VA é gratuita. Não é necessário registro ou pagamento. Insira potência em kW e fator de potência (0–1) para obter resultados instantâneos e precisos em VA." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculadora de Amperes para kVA",
       "description": "Converta amperes (A) para quilovoltamperes (kVA) instantaneamente e com precisão usando tensão",

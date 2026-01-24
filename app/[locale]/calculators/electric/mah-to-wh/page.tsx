@@ -137,7 +137,7 @@ export default async function MahToWhPage({ params }: { params: Promise<{ locale
 
       {/* Related Calculators Section */}
       <div className="related-calculators-section">
-        <div className="container">
+        <div className="related-content-card">
           <h2 className="related-heading">{tRelated('heading')}</h2>
           <div className="related-grid">
             <Link href="/calculators/electric/kwh-to-watts" className="related-card">

@@ -69,7 +69,7 @@ export function KvaToVaCalculator() {
           </div>
           <div className="result-display">
             <div className="result-item">
-              <div className="result-label">Volt-amperes (VA)</div>
+              <div className="result-label">{t('va')}</div>
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(2)}</span>
                 <span className="result-unit">VA</span>

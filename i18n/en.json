@@ -866,6 +866,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "VA to Amps Calculator",
+      "description": "Convert volt-amperes (VA) to amperes (A) instantly using voltage for single-phase and three-phase systems",
+      "phaseType": "Phase Type",
+      "singlePhase": "Single Phase",
+      "threePhase": "Three Phase",
+      "va": "Volt-Amperes (VA)",
+      "voltage": "Voltage (V)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "amps": "Amperes (A)",
+      "seo": {
+        "title": "VA to Amps Calculator - Convert Apparent Power to Current Online",
+        "description": "Free VA to Amps conversion calculator. Convert volt-amperes to amperes instantly using voltage. Supports single-phase and three-phase systems. Perfect for electrical calculations and circuit design.",
+        "keywords": "va to amps calculator, volt-amperes to amperes converter, va amps conversion, apparent power to current calculator, electrical calculator, circuit calculator, free calculator",
+        "content": {
+          "heading": "How to Convert VA to Amps",
+          "paragraph1": "Converting volt-amperes (VA) to amperes (A) is a fundamental calculation in electrical engineering and power distribution systems. Volt-amperes represent apparent power — the total power drawn by an electrical circuit — while amperes represent current flow. The conversion requires knowing the voltage and whether you're working with a single-phase or three-phase system. Our free VA to Amps calculator provides instant, accurate conversions for both single-phase and three-phase electrical systems, making your power calculations quick and reliable.",
+          "paragraph2": "The formulas are: For single-phase systems, I = VA / V, where I is current in amperes, VA is apparent power in volt-amperes, and V is voltage in volts. For three-phase systems, I = VA / (√3 × V), where √3 ≈ 1.732. For example, a 5000 VA single-phase load at 230V draws 5000 / 230 = 21.74 amps. The same 5000 VA load in a three-phase 400V system draws 5000 / (1.732 × 400) = 7.22 amps per phase. These calculations are essential for sizing wiring, circuit breakers, and electrical equipment.",
+          "paragraph3": "This conversion is critical in many applications: sizing electrical wiring and conductors, selecting appropriate circuit breakers and fuses, designing electrical distribution panels, calculating cable current capacity, determining voltage drop in circuits, sizing transformers and generators, understanding UPS and inverter current draw, and ensuring electrical safety compliance. For example, if a UPS is rated at 3000 VA and operates at 230V single-phase, it will draw 3000 / 230 = 13.04 amps at full load, helping you select the correct circuit breaker rating.",
+          "paragraph4": "Our calculator accepts volt-amperes and voltage as inputs, allows you to select between single-phase and three-phase systems, applies the appropriate formula (I = VA / V for single-phase or I = VA / (√3 × V) for three-phase), and provides the current in amperes. Whether you're sizing electrical panels, calculating wire ampacity, selecting circuit protection devices, designing power distribution systems, or ensuring code compliance, our VA to Amps calculator delivers accurate, instant results for your electrical engineering needs.",
+          "exampleHeading": "Example:",
+          "exampleText": "Single-phase: 5000 VA at 230V = 5000 / 230 = 21.74 A. Three-phase: 10,000 VA at 400V = 10,000 / (1.732 × 400) = 14.43 A. Single-phase: 3000 VA at 120V = 3000 / 120 = 25 A. Three-phase: 15,000 VA at 480V = 15,000 / (1.732 × 480) = 18.04 A. If an office requires 8000 VA at 230V single-phase, the current draw is 8000 / 230 = 34.78 A, requiring at least a 40A circuit breaker."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert VA to Amps?",
+              "answer": "For single-phase systems: I = VA / V. For three-phase systems: I = VA / (√3 × V), where I is current in amperes, VA is apparent power in volt-amperes, V is voltage in volts, and √3 ≈ 1.732. The three-phase formula accounts for power distribution across three phases, resulting in lower current per phase for the same total power."
+            },
+            {
+              "question": "What is the difference between VA and Amps?",
+              "answer": "VA (volt-amperes) measures apparent power — the total electrical power in a circuit, including both real and reactive components. Amps (amperes) measures current — the flow of electric charge. VA = Volts × Amps. They measure different electrical properties: VA is power, Amps is current flow. You need voltage to convert between them."
+            },
+            {
+              "question": "Why is the three-phase formula different?",
+              "answer": "In three-phase systems, power is distributed across three phases. The √3 (1.732) factor accounts for this three-phase distribution, resulting in lower current per phase compared to single-phase. For the same total VA, three-phase systems draw less current per wire, allowing smaller conductors and more efficient power transmission."
+            },
+            {
+              "question": "How do I use this for circuit breaker sizing?",
+              "answer": "Calculate the maximum current (amps) from the VA rating and voltage. Add a safety margin (typically 125% per electrical codes). Round up to the next standard breaker size. For example, 5000 VA at 230V = 21.74A. With 125% margin: 21.74 × 1.25 = 27.17A. Use a 30A or 32A breaker. Always follow local electrical codes."
+            },
+            {
+              "question": "Is this calculator free?",
+              "answer": "Yes, our VA to Amps calculator is completely free. No registration or payment required. Select your phase type, enter volt-amperes and voltage for instant, accurate current results in amperes for single-phase or three-phase systems."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "wattsToKva": "Watts to kVA Calculator",
+          "wattsToKvaDesc": "Convert watts to kilovolt-amperes with power factor",
+          "kwToKva": "kW to kVA Calculator",
+          "kwToKvaDesc": "Convert kilowatts to kilovolt-amperes instantly",
+          "mahToWh": "mAh to Wh Calculator",
+          "mahToWhDesc": "Convert battery capacity to energy with voltage",
+          "kwhToWatts": "kWh to Watts Calculator",
+          "kwhToWattsDesc": "Convert kilowatt-hours to watts using time duration"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Amps to kVA Calculator",
       "description": "Convert amperes (A) to kilovolt-amperes (kVA) instantly and accurately using voltage",

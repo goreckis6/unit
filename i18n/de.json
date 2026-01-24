@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "VA zu Ampere Rechner",
+      "description": "Konvertieren Sie Voltampere (VA) sofort in Ampere (A) unter Verwendung der Spannung für einphasige und dreiphasige Systeme",
+      "phaseType": "Phasentyp",
+      "singlePhase": "Einphasig",
+      "threePhase": "Dreiphasig",
+      "va": "Voltampere (VA)",
+      "voltage": "Spannung (V)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "VA zu Ampere Rechner - Scheinleistung in Strom Online Umrechnen",
+        "description": "Kostenloser VA zu Ampere Umrechnungsrechner. Konvertieren Sie Voltampere sofort in Ampere unter Verwendung der Spannung. Unterstützt einphasige und dreiphasige Systeme. Perfekt für elektrische Berechnungen und Schaltungsdesign.",
+        "keywords": "va zu ampere rechner, voltampere zu ampere konverter, va ampere umrechnung, scheinleistung zu strom rechner, elektrischer rechner, schaltungsrechner, kostenloser rechner",
+        "content": {
+          "heading": "Wie man VA in Ampere umrechnet",
+          "paragraph1": "Die Umrechnung von Voltampere (VA) in Ampere (A) ist eine grundlegende Berechnung in der Elektrotechnik und Energieverteilungssystemen. Voltampere repräsentieren die Scheinleistung — die Gesamtleistung, die von einem elektrischen Stromkreis aufgenommen wird — während Ampere den Stromfluss darstellen. Die Umrechnung erfordert die Kenntnis der Spannung und ob Sie mit einem einphasigen oder dreiphasigen System arbeiten. Unser kostenloser VA zu Ampere Rechner bietet sofortige, genaue Umrechnungen für einphasige und dreiphasige elektrische Systeme und macht Ihre Leistungsberechnungen schnell und zuverlässig.",
+          "paragraph2": "Die Formeln sind: Für einphasige Systeme, I = VA / V, wobei I der Strom in Ampere ist, VA die Scheinleistung in Voltampere und V die Spannung in Volt. Für dreiphasige Systeme, I = VA / (√3 × V), wobei √3 ≈ 1,732. Zum Beispiel zieht eine einphasige Last von 5000 VA bei 230V 5000 / 230 = 21,74 Ampere. Dieselbe 5000 VA Last in einem dreiphasigen 400V System zieht 5000 / (1,732 × 400) = 7,22 Ampere pro Phase. Diese Berechnungen sind unerlässlich für die Dimensionierung von Leitungen, Schutzschaltern und elektrischen Geräten.",
+          "paragraph3": "Diese Umrechnung ist in vielen Anwendungen kritisch: Dimensionierung elektrischer Leitungen und Leiter, Auswahl geeigneter Schutzschalter und Sicherungen, Gestaltung elektrischer Verteiltafeln, Berechnung der Stromtragfähigkeit von Kabeln, Bestimmung des Spannungsabfalls in Stromkreisen, Dimensionierung von Transformatoren und Generatoren, Verständnis des Stromverbrauchs von USV und Wechselrichtern sowie Gewährleistung der Einhaltung elektrischer Sicherheitsvorschriften. Zum Beispiel, wenn eine USV mit 3000 VA bewertet ist und bei 230V einphasig betrieben wird, zieht sie bei Volllast 3000 / 230 = 13,04 Ampere, was bei der Auswahl der richtigen Schutzschalternennung hilft.",
+          "paragraph4": "Unser Rechner akzeptiert Voltampere und Spannung als Eingaben, ermöglicht die Auswahl zwischen einphasigen und dreiphasigen Systemen, wendet die entsprechende Formel an (I = VA / V für einphasig oder I = VA / (√3 × V) für dreiphasig) und liefert den Strom in Ampere. Ob Sie elektrische Schalttafeln dimensionieren, Leiterquerschnitte berechnen, Stromkreisschutzgeräte auswählen, Energieverteilungssysteme entwerfen oder die Einhaltung von Vorschriften sicherstellen — unser VA zu Ampere Rechner liefert genaue, sofortige Ergebnisse für Ihre elektrotechnischen Anforderungen.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "Einphasig: 5000 VA bei 230V = 5000 / 230 = 21,74 A. Dreiphasig: 10.000 VA bei 400V = 10.000 / (1,732 × 400) = 14,43 A. Einphasig: 3000 VA bei 120V = 3000 / 120 = 25 A. Dreiphasig: 15.000 VA bei 480V = 15.000 / (1,732 × 480) = 18,04 A. Wenn ein Büro 8000 VA bei 230V einphasig benötigt, beträgt der Stromverbrauch 8000 / 230 = 34,78 A, was mindestens einen 40A Schutzschalter erfordert."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist die Formel zur Umrechnung von VA in Ampere?",
+              "answer": "Für einphasige Systeme: I = VA / V. Für dreiphasige Systeme: I = VA / (√3 × V), wobei I der Strom in Ampere ist, VA die Scheinleistung in Voltampere, V die Spannung in Volt und √3 ≈ 1,732. Die dreiphasige Formel berücksichtigt die Leistungsverteilung über drei Phasen, was zu einem geringeren Strom pro Phase bei gleicher Gesamtleistung führt."
+            },
+            {
+              "question": "Was ist der Unterschied zwischen VA und Ampere?",
+              "answer": "VA (Voltampere) misst die Scheinleistung — die gesamte elektrische Leistung in einem Stromkreis, einschließlich realer und reaktiver Komponenten. Ampere (Ampere) misst den Strom — den Fluss elektrischer Ladung. VA = Volt × Ampere. Sie messen verschiedene elektrische Eigenschaften: VA ist Leistung, Ampere ist Stromfluss. Sie benötigen die Spannung, um zwischen ihnen umzurechnen."
+            },
+            {
+              "question": "Warum ist die dreiphasige Formel anders?",
+              "answer": "In dreiphasigen Systemen wird die Leistung über drei Phasen verteilt. Der √3 (1,732) Faktor berücksichtigt diese dreiphasige Verteilung, was zu einem geringeren Strom pro Phase im Vergleich zu einphasig führt. Bei gleichen Gesamt-VA ziehen dreiphasige Systeme weniger Strom pro Leiter, was kleinere Leiterquerschnitte und eine effizientere Leistungsübertragung ermöglicht."
+            },
+            {
+              "question": "Wie verwende ich dies zur Schutzschalterdimensionierung?",
+              "answer": "Berechnen Sie den maximalen Strom (Ampere) aus der VA-Bewertung und Spannung. Fügen Sie einen Sicherheitszuschlag hinzu (typischerweise 125% gemäß elektrischen Vorschriften). Runden Sie auf die nächste Standardschutzschaltergröße auf. Zum Beispiel, 5000 VA bei 230V = 21,74A. Mit 125% Zuschlag: 21,74 × 1,25 = 27,17A. Verwenden Sie einen 30A oder 32A Schutzschalter. Befolgen Sie immer lokale elektrische Vorschriften."
+            },
+            {
+              "question": "Ist dieser Rechner kostenlos?",
+              "answer": "Ja, unser VA zu Ampere Rechner ist völlig kostenlos. Keine Registrierung oder Zahlung erforderlich. Wählen Sie Ihren Phasentyp, geben Sie Voltampere und Spannung ein für sofortige, genaue Stromergebnisse in Ampere für einphasige oder dreiphasige Systeme."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "wattsToKva": "Watt zu kVA Rechner",
+          "wattsToKvaDesc": "Konvertieren Sie Watt in Kilovoltampere mit Leistungsfaktor",
+          "kwToKva": "kW zu kVA Rechner",
+          "kwToKvaDesc": "Konvertieren Sie Kilowatt sofort in Kilovoltampere",
+          "mahToWh": "mAh zu Wh Rechner",
+          "mahToWhDesc": "Konvertieren Sie Batteriekapazität in Energie mit Spannung",
+          "kwhToWatts": "kWh zu Watt Rechner",
+          "kwhToWattsDesc": "Konvertieren Sie Kilowattstunden in Watt unter Verwendung der Zeitdauer"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere zu kVA Rechner",
       "description": "Wandeln Sie Ampere (A) in Kilovoltampere (kVA) sofort und genau mit Spannung um",

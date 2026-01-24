@@ -821,6 +821,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "Kalkulator VA na Ampery",
+      "description": "Przelicz woltoampery (VA) na ampery (A) natychmiast używając napięcia dla systemów jednofazowych i trójfazowych",
+      "phaseType": "Typ Fazy",
+      "singlePhase": "Jednofazowy",
+      "threePhase": "Trójfazowy",
+      "va": "Woltoampery (VA)",
+      "voltage": "Napięcie (V)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "amps": "Ampery (A)",
+      "seo": {
+        "title": "Kalkulator VA na Ampery - Przelicz Moc Pozorną na Prąd Online",
+        "description": "Darmowy kalkulator konwersji VA na Ampery. Przelicz woltoampery na ampery natychmiast używając napięcia. Obsługuje systemy jednofazowe i trójfazowe. Idealny do obliczeń elektrycznych i projektowania obwodów.",
+        "keywords": "kalkulator va na ampery, konwerter woltoamperów na ampery, konwersja va ampery, kalkulator mocy pozornej na prąd, kalkulator elektryczny, kalkulator obwodów, darmowy kalkulator",
+        "content": {
+          "heading": "Jak Przeliczyć VA na Ampery",
+          "paragraph1": "Przeliczanie woltoamperów (VA) na ampery (A) jest fundamentalnym obliczeniem w inżynierii elektrycznej i systemach dystrybucji energii. Woltoampery reprezentują moc pozorną — całkowitą moc pobieraną przez obwód elektryczny — podczas gdy ampery reprezentują przepływ prądu. Konwersja wymaga znajomości napięcia oraz tego, czy pracujesz z systemem jednofazowym czy trójfazowym. Nasz darmowy kalkulator VA na Ampery zapewnia natychmiastowe, dokładne konwersje dla systemów elektrycznych jednofazowych i trójfazowych, czyniąc Twoje obliczenia mocy szybkimi i niezawodnymi.",
+          "paragraph2": "Wzory to: Dla systemów jednofazowych, I = VA / V, gdzie I to prąd w amperach, VA to moc pozorna w woltoamperach, a V to napięcie w woltach. Dla systemów trójfazowych, I = VA / (√3 × V), gdzie √3 ≈ 1,732. Na przykład obciążenie jednofazowe 5000 VA przy 230V pobiera 5000 / 230 = 21,74 ampera. To samo obciążenie 5000 VA w systemie trójfazowym 400V pobiera 5000 / (1,732 × 400) = 7,22 ampera na fazę. Te obliczenia są niezbędne do doboru okablowania, wyłączników i urządzeń elektrycznych.",
+          "paragraph3": "Ta konwersja jest kluczowa w wielu zastosowaniach: dobór przewodów i kabli elektrycznych, wybór odpowiednich wyłączników i bezpieczników, projektowanie rozdzielnic elektrycznych, obliczanie zdolności prądowej kabli, określanie spadków napięcia w obwodach, dobór transformatorów i generatorów, zrozumienie poboru prądu UPS i falowników oraz zapewnienie zgodności z normami bezpieczeństwa elektrycznego. Na przykład, jeśli UPS ma moc 3000 VA i działa przy 230V jednofazowo, pobiera 3000 / 230 = 13,04 ampera przy pełnym obciążeniu, pomagając wybrać odpowiednią wartość wyłącznika.",
+          "paragraph4": "Nasz kalkulator akceptuje woltoampery i napięcie jako dane wejściowe, pozwala wybrać między systemem jednofazowym a trójfazowym, stosuje odpowiedni wzór (I = VA / V dla jednofazowego lub I = VA / (√3 × V) dla trójfazowego) i podaje prąd w amperach. Czy dobierasz rozdzielnice elektryczne, obliczasz obciążalność przewodów, wybierasz urządzenia zabezpieczające obwody, projektujesz systemy dystrybucji energii, czy zapewniasz zgodność z normami — nasz kalkulator VA na Ampery dostarcza dokładne, natychmiastowe wyniki dla Twoich potrzeb inżynierii elektrycznej.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "Jednofazowy: 5000 VA przy 230V = 5000 / 230 = 21,74 A. Trójfazowy: 10 000 VA przy 400V = 10 000 / (1,732 × 400) = 14,43 A. Jednofazowy: 3000 VA przy 120V = 3000 / 120 = 25 A. Trójfazowy: 15 000 VA przy 480V = 15 000 / (1,732 × 480) = 18,04 A. Jeśli biuro wymaga 8000 VA przy 230V jednofazowo, pobór prądu wynosi 8000 / 230 = 34,78 A, wymagając co najmniej wyłącznika 40A."
+        },
+        "faq": {
+          "heading": "Często Zadawane Pytania",
+          "items": [
+            {
+              "question": "Jaki jest wzór na przeliczenie VA na Ampery?",
+              "answer": "Dla systemów jednofazowych: I = VA / V. Dla systemów trójfazowych: I = VA / (√3 × V), gdzie I to prąd w amperach, VA to moc pozorna w woltoamperach, V to napięcie w woltach, a √3 ≈ 1,732. Wzór trójfazowy uwzględnia dystrybucję mocy w trzech fazach, co skutkuje niższym prądem na fazę przy tej samej całkowitej mocy."
+            },
+            {
+              "question": "Jaka jest różnica między VA a Amperami?",
+              "answer": "VA (woltoampery) mierzy moc pozorną — całkowitą moc elektryczną w obwodzie, włączając komponenty rzeczywiste i reaktywne. Ampery (ampery) mierzy prąd — przepływ ładunku elektrycznego. VA = Wolty × Ampery. Mierzą różne właściwości elektryczne: VA to moc, Ampery to przepływ prądu. Potrzebujesz napięcia, aby przeliczyć między nimi."
+            },
+            {
+              "question": "Dlaczego wzór trójfazowy jest inny?",
+              "answer": "W systemach trójfazowych moc jest rozprowadzana w trzech fazach. Współczynnik √3 (1,732) uwzględnia tę trójfazową dystrybucję, skutkując niższym prądem na fazę w porównaniu do jednofazowego. Przy tych samych całkowitych VA systemy trójfazowe pobierają mniej prądu na przewód, umożliwiając mniejsze przekroje przewodów i bardziej efektywną transmisję mocy."
+            },
+            {
+              "question": "Jak używać tego do doboru wyłączników?",
+              "answer": "Oblicz maksymalny prąd (ampery) z mocy VA i napięcia. Dodaj margines bezpieczeństwa (zwykle 125% według norm elektrycznych). Zaokrąglij w górę do następnej standardowej wartości wyłącznika. Na przykład, 5000 VA przy 230V = 21,74A. Z marginesem 125%: 21,74 × 1,25 = 27,17A. Użyj wyłącznika 30A lub 32A. Zawsze przestrzegaj lokalnych norm elektrycznych."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak, nasz kalkulator VA na Ampery jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Wybierz typ fazy, wprowadź woltoampery i napięcie, aby uzyskać natychmiastowe, dokładne wyniki prądu w amperach dla systemów jednofazowych lub trójfazowych."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "wattsToKva": "Kalkulator Watów na kVA",
+          "wattsToKvaDesc": "Przelicz waty na kilowoltoampery ze współczynnikiem mocy",
+          "kwToKva": "Kalkulator kW na kVA",
+          "kwToKvaDesc": "Przelicz kilowaty na kilowoltoampery natychmiast",
+          "mahToWh": "Kalkulator mAh na Wh",
+          "mahToWhDesc": "Przelicz pojemność baterii na energię z napięciem",
+          "kwhToWatts": "Kalkulator kWh na Waty",
+          "kwhToWattsDesc": "Przelicz kilowatogodziny na waty używając czasu trwania"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulator Ampery na kVA",
       "description": "Konwertuj ampery (A) na kilowoltampery (kVA) natychmiast i dokładnie używając napięcia",

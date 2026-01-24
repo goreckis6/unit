@@ -743,6 +743,66 @@
         }
       }
     },
+    "mahToWh": {
+      "title": "mAh zu Wh Rechner",
+      "description": "Konvertieren Sie Milliamperestunden (mAh) sofort in Wattstunden (Wh) unter Verwendung der Spannung",
+      "mah": "Milliamperestunden (mAh)",
+      "voltage": "Spannung (V)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "wh": "Wattstunden (Wh)",
+      "seo": {
+        "title": "mAh zu Wh Rechner - Batteriekapazität in Energie Online umrechnen",
+        "description": "Kostenloser mAh zu Wh Umrechner. Konvertieren Sie Milliamperestunden sofort in Wattstunden unter Verwendung der Spannung. Perfekt für Batteriekapazitätsberechnungen, Powerbank-Vergleiche und Energiespeicheranalysen.",
+        "keywords": "mah wh rechner, milliamperestunden wattstunden umrechner, mah wh umrechnung, batteriekapazität rechner, powerbank rechner, batterieenergie rechner, kostenloser rechner",
+        "content": {
+          "heading": "Wie man mAh in Wh umrechnet",
+          "paragraph1": "Die Umrechnung von Milliamperestunden (mAh) in Wattstunden (Wh) ist eine wesentliche Berechnung bei der Bewertung von Batteriekapazität und Energiespeicherung. Milliamperestunden repräsentieren elektrische Ladekapazität — wie viel Strom eine Batterie über die Zeit liefern kann — während Wattstunden die tatsächliche Energiespeicherung repräsentieren — die gesamte elektrische Energie, die die Batterie liefern kann. Die Umrechnung erfordert die Kenntnis der Batteriespannung, da Energie sowohl von Ladung als auch von Spannung abhängt. Unser kostenloser mAh zu Wh Rechner bietet sofortige, genaue Umrechnungen für Ihre Batterie- und Energiemanagementberechnungen.",
+          "paragraph2": "Die Formel lautet: Wh = (mAh × V) / 1000, wobei mAh die Batteriekapazität in Milliamperestunden ist, V die Spannung in Volt und Wh die Energie in Wattstunden. Zum Beispiel enthält eine 5000 mAh Batterie bei 3,7V (5000 × 3,7) / 1000 = 18,5 Wh Energie. Diese Berechnung ist wichtig zum Vergleichen von Batterien mit unterschiedlichen Spannungen, Verstehen der tatsächlichen Powerbank-Kapazität, Dimensionierung von Notstromsystemen und Berechnung der Gerätelaufzeit basierend auf dem Energieverbrauch.",
+          "paragraph3": "Diese Umrechnung ist in vielen Anwendungen kritisch: Vergleichen von Powerbanks und tragbaren Ladegeräten mit unterschiedlichen Spannungen, Berechnen der tatsächlichen Energiespeicherung in Smartphone- und Laptop-Batterien, Bestimmen der Notstromkapazität für USV-Systeme, Dimensionierung von Solarbatteriebanken, Verstehen der Drohnen- und RC-Fahrzeugbatterieleistung und Schätzen der Gerätelaufzeit aus Batteriespezifikationen. Zum Beispiel liefert eine 10.000 mAh Powerbank bei 3,7V (10.000 × 3,7) / 1000 = 37 Wh, aber dieselben 10.000 mAh bei 5V liefern 50 Wh — deutlich mehr Energie trotz derselben mAh-Bewertung.",
+          "paragraph4": "Unser Rechner akzeptiert Milliamperestunden und Spannung als Eingaben, wendet die Formel Wh = (mAh × V) / 1000 an und liefert die Energie in Wattstunden. Ob Sie Powerbanks vergleichen, Batteriekapazität für Solarsysteme berechnen, Notstromversorgung dimensionieren, Ladezeit schätzen oder Geräteenergieanforderungen verstehen — unser mAh zu Wh Rechner liefert genaue, sofortige Ergebnisse für Ihre Batteriemanagement- und Energieplanungsbedürfnisse.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "5000 mAh bei 3,7V: Wh = (5000 × 3,7) / 1000 = 18,5 Wh. 10.000 mAh bei 5V: Wh = (10.000 × 5) / 1000 = 50 Wh. 2500 mAh bei 1,5V: Wh = (2500 × 1,5) / 1000 = 3,75 Wh. 20.000 mAh bei 3,6V: Wh = (20.000 × 3,6) / 1000 = 72 Wh. Wenn eine Smartphone-Batterie mit 4000 mAh bei 3,85V bewertet ist, beträgt ihre Energiekapazität (4000 × 3,85) / 1000 = 15,4 Wh."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist die Formel zur Umrechnung von mAh in Wh?",
+              "answer": "Die Formel lautet Wh = (mAh × V) / 1000, wobei mAh die Batteriekapazität in Milliamperestunden ist, V die Spannung in Volt und Wh die Energie in Wattstunden. Dies wandelt elektrische Ladekapazität in tatsächliche Energiespeicherung um. Zum Beispiel entspricht 5000 mAh bei 3,7V (5000 × 3,7) / 1000 = 18,5 Wh."
+            },
+            {
+              "question": "Was ist der Unterschied zwischen mAh und Wh?",
+              "answer": "mAh (Milliamperestunden) misst elektrische Ladekapazität — wie viel Strom eine Batterie über die Zeit liefern kann. Wh (Wattstunden) misst tatsächliche Energie — die gesamte elektrische Arbeit, die die Batterie leisten kann. mAh berücksichtigt keine Spannung, während Wh dies tut. Eine 10.000 mAh Batterie bei 3,7V liefert 37 Wh, aber bei 5V liefert sie 50 Wh — gleiche mAh, unterschiedliche Energie."
+            },
+            {
+              "question": "Warum benötige ich Spannung für diese Umrechnung?",
+              "answer": "Energie (Wh) hängt sowohl von Ladung (mAh) als auch von Spannung (V) ab. Dieselben mAh bei unterschiedlichen Spannungen liefern unterschiedliche Energie. Leistung = Spannung × Strom, also bedeutet höhere Spannung mehr Energie bei derselben Ladekapazität. Ohne Kenntnis der Spannung kann die tatsächliche Energiespeicherung nicht bestimmt werden."
+            },
+            {
+              "question": "Wie kann ich diesen Rechner zum Vergleichen von Powerbanks verwenden?",
+              "answer": "Powerbanks listen Kapazität oft in mAh auf, können aber unterschiedliche interne Spannungen haben. Konvertieren Sie beide in Wh, um tatsächliche Energie zu vergleichen. Eine 10.000 mAh Powerbank bei 3,7V (37 Wh) liefert weniger Energie als 10.000 mAh bei 5V (50 Wh). Vergleichen Sie immer Wh, nicht nur mAh, für genauen Kapazitätsvergleich."
+            },
+            {
+              "question": "Ist dieser Rechner kostenlos?",
+              "answer": "Ja, unser mAh zu Wh Rechner ist völlig kostenlos. Keine Registrierung oder Zahlung erforderlich. Geben Sie Batteriekapazität in mAh und Spannung in Volt ein für sofortige, genaue Energieergebnisse in Wh."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "kwhToWatts": "kWh zu Watt Rechner",
+          "kwhToWattsDesc": "Konvertieren Sie Kilowattstunden in Watt unter Verwendung der Zeitdauer",
+          "wattsToKva": "Watt zu kVA Rechner",
+          "wattsToKvaDesc": "Konvertieren Sie Watt in Kilovoltampere mit Leistungsfaktor",
+          "kwToKva": "kW zu kVA Rechner",
+          "kwToKvaDesc": "Konvertieren Sie Kilowatt sofort in Kilovoltampere",
+          "kwToKwh": "kW zu kWh Rechner",
+          "kwToKwhDesc": "Konvertieren Sie Leistung in Energie unter Verwendung der Zeitdauer"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere zu kVA Rechner",
       "description": "Wandeln Sie Ampere (A) in Kilovoltampere (kVA) sofort und genau mit Spannung um",

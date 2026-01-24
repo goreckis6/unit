@@ -743,6 +743,66 @@
         }
       }
     },
+    "mahToWh": {
+      "title": "Calculateur mAh en Wh",
+      "description": "Convertir des milliampères-heures (mAh) en wattheures (Wh) instantanément en utilisant la tension",
+      "mah": "Milliampères-heures (mAh)",
+      "voltage": "Tension (V)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "wh": "Wattheures (Wh)",
+      "seo": {
+        "title": "Calculateur mAh en Wh - Convertir la Capacité de Batterie en Énergie en Ligne",
+        "description": "Calculateur de conversion mAh en Wh gratuit. Convertir des milliampères-heures en wattheures instantanément en utilisant la tension. Parfait pour les calculs de capacité de batterie, les comparaisons de batteries externes et l'analyse du stockage d'énergie.",
+        "keywords": "calculateur mah wh, convertisseur milliampères-heures wattheures, conversion mah wh, calculateur capacité batterie, calculateur batterie externe, calculateur énergie batterie, calculateur gratuit",
+        "content": {
+          "heading": "Comment Convertir mAh en Wh",
+          "paragraph1": "La conversion de milliampères-heures (mAh) en wattheures (Wh) est un calcul essentiel lors de l'évaluation de la capacité de batterie et du stockage d'énergie. Les milliampères-heures représentent la capacité de charge électrique — combien de courant une batterie peut fournir dans le temps — tandis que les wattheures représentent le stockage d'énergie réel — l'énergie électrique totale que la batterie peut fournir. La conversion nécessite de connaître la tension de la batterie, car l'énergie dépend à la fois de la charge et de la tension. Notre calculateur mAh en Wh gratuit fournit des conversions instantanées et précises pour vos calculs de batterie et de gestion de l'énergie.",
+          "paragraph2": "La formule est : Wh = (mAh × V) / 1000, où mAh est la capacité de batterie en milliampères-heures, V est la tension en volts et Wh est l'énergie en wattheures. Par exemple, une batterie de 5000 mAh à 3,7V contient (5000 × 3,7) / 1000 = 18,5 Wh d'énergie. Ce calcul est essentiel pour comparer des batteries avec différentes tensions, comprendre la capacité réelle de batterie externe, dimensionner des systèmes d'alimentation de secours et calculer le temps d'exécution de l'appareil en fonction de la consommation d'énergie.",
+          "paragraph3": "Cette conversion est critique dans de nombreuses applications : comparer les batteries externes et chargeurs portables avec différentes tensions, calculer le stockage d'énergie réel dans les batteries de smartphones et d'ordinateurs portables, déterminer la capacité d'alimentation de secours pour les systèmes UPS, dimensionner les banques de batteries solaires, comprendre les performances des batteries de drones et de véhicules RC et estimer le temps d'exécution de l'appareil à partir des spécifications de batterie. Par exemple, une batterie externe de 10 000 mAh à 3,7V fournit (10 000 × 3,7) / 1000 = 37 Wh, mais les mêmes 10 000 mAh à 5V fournissent 50 Wh — beaucoup plus d'énergie malgré la même évaluation mAh.",
+          "paragraph4": "Notre calculateur accepte les milliampères-heures et la tension comme entrées, applique la formule Wh = (mAh × V) / 1000 et fournit l'énergie en wattheures. Que vous compariez des batteries externes, calculiez la capacité de batterie pour les systèmes solaires, dimensionniez des alimentations de secours, estimiez le temps de charge ou compreniez les exigences énergétiques des appareils, notre calculateur mAh en Wh fournit des résultats précis et instantanés pour vos besoins de gestion de batterie et de planification énergétique.",
+          "exampleHeading": "Exemple :",
+          "exampleText": "5000 mAh à 3,7V : Wh = (5000 × 3,7) / 1000 = 18,5 Wh. 10 000 mAh à 5V : Wh = (10 000 × 5) / 1000 = 50 Wh. 2500 mAh à 1,5V : Wh = (2500 × 1,5) / 1000 = 3,75 Wh. 20 000 mAh à 3,6V : Wh = (20 000 × 3,6) / 1000 = 72 Wh. Si une batterie de smartphone est évaluée à 4000 mAh à 3,85V, sa capacité énergétique est (4000 × 3,85) / 1000 = 15,4 Wh."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Quelle est la formule pour convertir mAh en Wh ?",
+              "answer": "La formule est Wh = (mAh × V) / 1000, où mAh est la capacité de batterie en milliampères-heures, V est la tension en volts et Wh est l'énergie en wattheures. Cela convertit la capacité de charge électrique en stockage d'énergie réel. Par exemple, 5000 mAh à 3,7V équivaut à (5000 × 3,7) / 1000 = 18,5 Wh."
+            },
+            {
+              "question": "Quelle est la différence entre mAh et Wh ?",
+              "answer": "mAh (milliampères-heures) mesure la capacité de charge électrique — combien de courant une batterie peut fournir dans le temps. Wh (wattheures) mesure l'énergie réelle — le travail électrique total que la batterie peut effectuer. mAh ne tient pas compte de la tension, tandis que Wh le fait. Une batterie de 10 000 mAh à 3,7V fournit 37 Wh, mais à 5V fournit 50 Wh — même mAh, énergie différente."
+            },
+            {
+              "question": "Pourquoi ai-je besoin de la tension pour cette conversion ?",
+              "answer": "L'énergie (Wh) dépend à la fois de la charge (mAh) et de la tension (V). Les mêmes mAh à différentes tensions fournissent une énergie différente. Puissance = Tension × Courant, donc une tension plus élevée signifie plus d'énergie pour la même capacité de charge. Sans connaître la tension, on ne peut pas déterminer le stockage d'énergie réel."
+            },
+            {
+              "question": "Comment puis-je utiliser ce calculateur pour comparer des batteries externes ?",
+              "answer": "Les batteries externes listent souvent la capacité en mAh mais peuvent avoir différentes tensions internes. Convertissez les deux en Wh pour comparer l'énergie réelle. Une batterie externe de 10 000 mAh à 3,7V (37 Wh) fournit moins d'énergie qu'une de 10 000 mAh à 5V (50 Wh). Comparez toujours Wh, pas seulement mAh, pour une comparaison précise de la capacité."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit ?",
+              "answer": "Oui, notre calculateur mAh en Wh est totalement gratuit. Aucune inscription ou paiement requis. Entrez la capacité de batterie en mAh et la tension en volts pour des résultats d'énergie instantanés et précis en Wh."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Connexes",
+          "kwhToWatts": "Calculateur kWh en Watts",
+          "kwhToWattsDesc": "Convertir des kilowattheures en watts en utilisant la durée",
+          "wattsToKva": "Calculateur Watts en kVA",
+          "wattsToKvaDesc": "Convertir des watts en kilovoltampères avec facteur de puissance",
+          "kwToKva": "Calculateur kW en kVA",
+          "kwToKvaDesc": "Convertir des kilowatts en kilovoltampères instantanément",
+          "kwToKwh": "Calculateur kW en kWh",
+          "kwToKwhDesc": "Convertir la puissance en énergie en utilisant la durée"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculateur Ampères vers kVA",
       "description": "Convertissez les ampères (A) en kilovoltampères (kVA) instantanément et précisément en utilisant la tension",

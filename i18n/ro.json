@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "Calculator VA în Amperi",
+      "description": "Convertiți volt-amperi (VA) în amperi (A) instantaneu folosind tensiunea pentru sisteme monofazate și trifazate",
+      "phaseType": "Tip de Fază",
+      "singlePhase": "Monofazat",
+      "threePhase": "Trifazat",
+      "va": "Volt-Amperi (VA)",
+      "voltage": "Tensiune (V)",
+      "calculate": "Calculați",
+      "reset": "Resetați",
+      "result": "Rezultat",
+      "amps": "Amperi (A)",
+      "seo": {
+        "title": "Calculator VA în Amperi - Convertiți Puterea Aparentă în Curent Online",
+        "description": "Calculator gratuit de conversie VA în Amperi. Convertiți volt-amperi în amperi instantaneu folosind tensiunea. Suportă sisteme monofazate și trifazate. Perfect pentru calcule electrice și design de circuite.",
+        "keywords": "calculator va în amperi, convertor volt-amperi în amperi, conversie va amperi, calculator putere aparentă în curent, calculator electric, calculator circuit, calculator gratuit",
+        "content": {
+          "heading": "Cum să Convertiți VA în Amperi",
+          "paragraph1": "Conversia volt-amperilor (VA) în amperi (A) este un calcul fundamental în ingineria electrică și sistemele de distribuție a energiei. Volt-amperii reprezintă puterea aparentă — puterea totală consumată de un circuit electric — în timp ce amperii reprezintă fluxul de curent. Conversia necesită cunoașterea tensiunii și dacă lucrați cu un sistem monofazat sau trifazat. Calculatorul nostru gratuit VA în Amperi oferă conversii instantanee și precise pentru sisteme electrice monofazate și trifazate, făcând calculele dvs. de putere rapide și fiabile.",
+          "paragraph2": "Formulele sunt: Pentru sisteme monofazate, I = VA / V, unde I este curentul în amperi, VA este puterea aparentă în volt-amperi și V este tensiunea în volți. Pentru sisteme trifazate, I = VA / (√3 × V), unde √3 ≈ 1,732. De exemplu, o sarcină monofazată de 5000 VA la 230V consumă 5000 / 230 = 21,74 amperi. Aceeași sarcină de 5000 VA într-un sistem trifazat de 400V consumă 5000 / (1,732 × 400) = 7,22 amperi pe fază. Aceste calcule sunt esențiale pentru dimensionarea cablurilor, întrerupătoarelor și echipamentelor electrice.",
+          "paragraph3": "Această conversie este critică în multe aplicații: dimensionarea cablurilor și conductorilor electrici, selectarea întrerupătoarelor și siguranțelor adecvate, proiectarea panourilor de distribuție electrică, calcularea capacității de curent a cablurilor, determinarea căderilor de tensiune în circuite, dimensionarea transformatoarelor și generatoarelor, înțelegerea consumului de curent al UPS-urilor și invertoare lor și asigurarea conformității cu standardele de siguranță electrică. De exemplu, dacă un UPS este evaluat la 3000 VA și funcționează la 230V monofazat, consumă 3000 / 230 = 13,04 amperi la sarcină completă, ajutând la selectarea evaluării corecte a întrerupătorului.",
+          "paragraph4": "Calculatorul nostru acceptă volt-amperi și tensiune ca intrări, vă permite să alegeți între sisteme monofazate și trifazate, aplică formula corespunzătoare (I = VA / V pentru monofazat sau I = VA / (√3 × V) pentru trifazat) și oferă curentul în amperi. Indiferent dacă dimensionați panouri electrice, calculați capacitatea de curent a cablurilor, selectați dispozitive de protecție a circuitelor, proiectați sisteme de distribuție a energiei sau asigurați conformitatea cu codurile, calculatorul nostru VA în Amperi oferă rezultate precise și instantanee pentru nevoile dvs. de inginerie electrică.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "Monofazat: 5000 VA la 230V = 5000 / 230 = 21,74 A. Trifazat: 10.000 VA la 400V = 10.000 / (1,732 × 400) = 14,43 A. Monofazat: 3000 VA la 120V = 3000 / 120 = 25 A. Trifazat: 15.000 VA la 480V = 15.000 / (1,732 × 480) = 18,04 A. Dacă un birou necesită 8000 VA la 230V monofazat, consumul de curent este 8000 / 230 = 34,78 A, necesitând cel puțin un întrerupător de 40A."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Care este formula pentru conversia VA în Amperi?",
+              "answer": "Pentru sisteme monofazate: I = VA / V. Pentru sisteme trifazate: I = VA / (√3 × V), unde I este curentul în amperi, VA este puterea aparentă în volt-amperi, V este tensiunea în volți și √3 ≈ 1,732. Formula trifazată ia în considerare distribuția puterii pe trei faze, rezultând un curent mai mic pe fază pentru aceeași putere totală."
+            },
+            {
+              "question": "Care este diferența între VA și Amperi?",
+              "answer": "VA (volt-amperi) măsoară puterea aparentă — puterea electrică totală într-un circuit, incluzând componente reale și reactive. Amperii (amperi) măsoară curentul — fluxul de sarcină electrică. VA = Volți × Amperi. Ei măsoară proprietăți electrice diferite: VA este putere, Amperii sunt flux de curent. Aveți nevoie de tensiune pentru a converti între ele."
+            },
+            {
+              "question": "De ce este formula trifazată diferită?",
+              "answer": "În sistemele trifazate, puterea este distribuită pe trei faze. Factorul √3 (1,732) ia în considerare această distribuție trifazată, rezultând un curent mai mic pe fază comparativ cu monofazat. Pentru aceleași VA totale, sistemele trifazate consumă mai puțin curent pe conductor, permițând conductori mai mici și transmisie de putere mai eficientă."
+            },
+            {
+              "question": "Cum folosesc acest lucru pentru dimensionarea întrerupătoarelor?",
+              "answer": "Calculați curentul maxim (amperi) din evaluarea VA și tensiune. Adăugați o marjă de siguranță (de obicei 125% conform codurilor electrice). Rotunjiți în sus la următoarea dimensiune standard de întrerupător. De exemplu, 5000 VA la 230V = 21,74A. Cu marjă de 125%: 21,74 × 1,25 = 27,17A. Folosiți un întrerupător de 30A sau 32A. Urmați întotdeauna codurile electrice locale."
+            },
+            {
+              "question": "Este acest calculator gratuit?",
+              "answer": "Da, calculatorul nostru VA în Amperi este complet gratuit. Nu este necesară înregistrare sau plată. Selectați tipul de fază, introduceți volt-amperii și tensiunea pentru rezultate instantanee și precise ale curentului în amperi pentru sisteme monofazate sau trifazate."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Conexe",
+          "wattsToKva": "Calculator Wați în kVA",
+          "wattsToKvaDesc": "Convertiți wați în kilovolt-amperi cu factor de putere",
+          "kwToKva": "Calculator kW în kVA",
+          "kwToKvaDesc": "Convertiți kilowați în kilovolt-amperi instantaneu",
+          "mahToWh": "Calculator mAh în Wh",
+          "mahToWhDesc": "Convertiți capacitatea bateriei în energie cu tensiune",
+          "kwhToWatts": "Calculator kWh în Wați",
+          "kwhToWattsDesc": "Convertiți kilowatt-oră în wați folosind durata"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculator Amperi la kVA",
       "description": "Convertește amperii (A) în kilovoltamperi (kVA) instant și precis folosind tensiunea",

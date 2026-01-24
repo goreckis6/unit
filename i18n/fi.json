@@ -694,6 +694,55 @@
         }
       }
     },
+    "kwhToWatts": {
+      "title": "kWh Watt Laskin",
+      "description": "Muunna kilowattitunnit (kWh) wateiksi (W) välittömästi käyttämällä kestoa",
+      "kwh": "Kilowattitunnit (kWh)",
+      "hours": "Aika (tunnit)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "watts": "Watit (W)",
+      "seo": {
+        "title": "kWh Watt Laskin - Muunna Energia Tehoksi Verkossa",
+        "description": "Ilmainen kWh Watt -muunnoslasin. Muunna kilowattitunnit wateiksi välittömästi käyttämällä kestoa. Täydellinen sähköisiin laskelmiin, energiankulutusanalyysiin ja tehoarviointeihin.",
+        "keywords": "kwh watt laskin, kilowattitunnit watteihin muunnin, kwh watt muunnos, energia teho laskin, sähkölaskin, watti laskin, teho laskin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka Muuntaa kWh Wateiksi",
+          "paragraph1": "Kilowattituntien (kWh) muuntaminen wateiksi (W) on yleinen laskelma analysoitaessa energiankulutusta ja määritettäessä tehoarvioita. Kilowattitunnit edustavat energiaa — ajan kuluessa tehtyä työn kokonaismäärää — kun taas watit edustavat tehoa — nopeutta, jolla energiaa kulutetaan tai toimitetaan. Muunnos vaatii tietoa kestosta, jonka aikana energia kulutettiin tai toimitettiin. Ilmainen kWh Watt -laskimemme tarjoaa välittömiä, tarkkoja muunnoksia sähkö- ja energialaskelmiisi.",
+          "paragraph2": "Kaava on: Watit = (kWh × 1000) / tunnit, jossa kWh on energia kilowattitunteina, tunnit on kesto ja Watit on teho. Esimerkiksi, jos laite kuluttaa 2 kWh energiaa 4 tunnin aikana, keskiteho on (2 × 1000) / 4 = 500 wattia. Tämä laskelma on olennainen laitteiden tehoarvioinnin ymmärtämisessä, sähkölaskujen analysoinnissa, sähköjärjestelmien mitoituksessa ja eri laitteiden energiatehokkuuden vertailussa.",
+          "paragraph3": "Tämä muunnos on kriittinen monissa sovelluksissa: laitteiden wattimäärän määrittäminen energiankulutustiedoista, tehontarpeen laskeminen sähköpiireille, sähkönkäyttömallien analysointi, akkujen ja virtalähteiden mitoitus, energiatehokkuusarvioiden ymmärtäminen ja käyttökustannusten arviointi. Esimerkiksi, jos sähkömittarisi näyttää 5 kWh kulutettuna 10 tunnin aikana, keskimääräinen tehonkulutus oli (5 × 1000) / 10 = 500 wattia. Tämä auttaa tunnistamaan suuren kulutuksen laitteet ja optimoimaan energiankäytön.",
+          "paragraph4": "Laskimemme hyväksyy kilowattitunnit ja keston syötteinä, soveltaa kaavaa Watit = (kWh × 1000) / tunnit ja antaa tehon watteina. Analysoitpa kotitalouden energiankulutusta, mitoitat aurinkojärjestelmiä, lasket akun purkausnopeuksia tai vertailet laitteiden tehokkuutta — kWh Watt -laskimemme tarjoaa tarkat, välittömät tulokset energianhallintaan ja sähkösuunnitteluun.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "2 kWh 4 tunnin aikana: Watit = (2 × 1000) / 4 = 500 W. 5 kWh 10 tunnin aikana: Watit = (5 × 1000) / 10 = 500 W. 0,5 kWh 2 tunnin aikana: Watit = (0,5 × 1000) / 2 = 250 W. 10 kWh 24 tunnin aikana: Watit = (10 × 1000) / 24 = 416,67 W. Jos laite käyttää 3,6 kWh 12 tunnissa, keskiteho on (3,6 × 1000) / 12 = 300 W."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava kWh:n muuntamiseksi Wateiksi?",
+              "answer": "Kaava on Watit = (kWh × 1000) / tunnit, jossa kWh on energia kilowattitunteina, tunnit on kesto ja Watit on teho. Tämä muuntaa ajan kuluessa kulutetun energian keskitehoksi. Esimerkiksi, 2 kWh 4 tunnin aikana on yhtä kuin (2 × 1000) / 4 = 500 wattia."
+            },
+            {
+              "question": "Mikä on ero kWh:n ja Wattien välillä?",
+              "answer": "kWh (kilowattitunnit) on energia — ajan kuluessa tehtyä työn kokonaismäärä, mitattuna sähkölaskussasi. Watit (W) on teho — nopeus, jolla energiaa kulutetaan tai toimitetaan tietyllä hetkellä. Ajattele sitä kuten etäisyys vs nopeus: kWh on kuin ajetut kilometrit, watit ovat kuin kilometrit tunnissa. 1 kWh vastaa 1000 wattia käytettynä 1 tunti."
+            },
+            {
+              "question": "Miksi tarvitsen keston tälle muunnokselle?",
+              "answer": "Energia (kWh) ja teho (watit) liittyvät toisiinsa ajan kautta. Sama energia voidaan toimittaa eri tehota soilla riippuen ajasta: 2 kWh 1 tunnin aikana on 2000 wattia, mutta 2 kWh 4 tunnin aikana on vain 500 wattia. Ilman ajan tuntemista tehoarviota ei voida määrittää."
+            },
+            {
+              "question": "Kuinka voin käyttää tätä laskinta sähkölaskuni analysointiin?",
+              "answer": "Jos sähkölaskusi osoittaa, että kulutit 300 kWh kuukaudessa (noin 720 tuntia), keskimääräinen tehonkulutuksesi oli (300 × 1000) / 720 = 416,67 wattia. Tämä auttaa ymmärtämään perustehonkäyttösi. Voit myös laskea tehon tietyille laitteille: jos laite käyttää 1,5 kWh päivässä (24 tuntia), se kuluttaa (1,5 × 1000) / 24 = 62,5 wattia."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, kWh Watt -laskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Syötä energia kWh:na ja aika tunteina saadaksesi välittömät, tarkat tulokset watteina."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampeeri kVA Laskin",
       "description": "Muunna ampeerit (A) kilovoltampeereiksi (kVA) heti ja tarkasti käyttämällä jännitettä",

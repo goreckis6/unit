@@ -660,6 +660,40 @@
         }
       }
     },
+    "kwToKva": {
+      "title": "kW'den kVA'ya Hesaplayıcı",
+      "description": "Kilowatt'ı (kW) anında güç faktörüyle kilovolt-ampere'e (kVA) dönüştürün",
+      "kw": "Kilowatt (kW)",
+      "powerFactor": "Güç Faktörü (0-1)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "kva": "Kilovolt-amper (kVA)",
+      "seo": {
+        "title": "kW'den kVA'ya Hesaplayıcı - Aktif Gücü Görünür Güce Çevrimiçi Dönüştürün",
+        "description": "Ücretsiz kW'den kVA'ya dönüştürücü. Kilowatt'ı güç faktörüyle anında kilovolt-ampere'e dönüştürün. Elektrik hesaplamaları, enerji sistemleri ve ekipman boyutlandırma için mükemmel.",
+        "keywords": "kw kva hesaplayıcı, kilowatt kilovolt-amper dönüştürücü, kw kva dönüşüm, aktif güç görünür güç hesaplayıcı, elektrik hesaplayıcısı, kva hesaplayıcı, güç faktörü hesaplayıcı, ücretsiz hesaplayıcı",
+        "content": {
+          "heading": "kW'yi kVA'ya Nasıl Dönüştürülür",
+          "paragraph1": "Kilowatt'ı (kW) kilovolt-ampere'e (kVA) dönüştürmek elektrik mühendisliği ve enerji sistemlerinde esastır. Kilowatt aktif gücü temsil eder — elektrik yükü tarafından yapılan gerçek iş — kilovolt-amper ise görünür gücü temsil eder — kaynak tarafından sağlanan toplam güç, aktif ve reaktif bileşenleri içerir. Dönüşüm, aktif gücün görünür güce oranı olan güç faktörünü (PF) gerektirir. Ücretsiz kW'den kVA'ya hesaplayıcımız, ekipman, transformatör ve jeneratör boyutlandırma için anında, doğru dönüşümler sağlar.",
+          "paragraph2": "Formül: kVA = kW / PF, burada kVA kilovolt-amper cinsinden görünür güç, kW kilowatt cinsinden aktif güç ve PF güç faktörüdür (0 ile 1 arasında bir değer). Örneğin, 0,8 güç faktörüne sahip 5 kW'lık bir yük, 5 / 0,8 = 6,25 kVA görünür güç gerektirir. Daha düşük güç faktörü, aynı aktif gücü sağlamak için daha yüksek görünür güç gerektiği anlamına gelir. Güç faktörü, elektrik sisteminin görünür gücü faydalı işe ne kadar verimli dönüştürdüğünü gösterir: PF 1,0 (birim) %100 verimlidir; daha düşük değerler reaktif güç kayıplarını gösterir.",
+          "paragraph3": "Bu dönüşüm birçok uygulamada kritiktir: aktif yükler için yeterli kapasiteyi sağlamak için transformatör ve jeneratörlerin boyutlandırılması, elektrik dağıtım sistemlerinin ve UPS ünitelerinin tasarımı, kesiciler ve iletkenlerin hesaplanması, motorların ve endüktif yüklerin davranışının anlaşılması ve ticari ve endüstriyel tesisler için güç kapasitesi planlaması. kW'yi kVA'ya dönüştürmeyi bilmek, doğru boyutta ekipman seçmenize, aşırı yüklemeden kaçınmanıza ve enerji verimliliğini optimize etmenize yardımcı olur.",
+          "paragraph4": "Hesaplayıcımız girdi olarak kilowatt ve güç faktörünü kabul eder, kVA = kW / PF formülünü uygular ve kilovolt-amper cinsinden görünür gücü sağlar. Motorlar, transformatörler, jeneratörler, UPS sistemleri veya endüktif ya da kapasitif yüklerle çalışıyor olun — kW'den kVA'ya hesaplayıcı, elektrik tasarımınız ve analiziniz için doğru, anında sonuçlar sağlar.",
+          "exampleHeading": "Örnek:",
+          "exampleText": "PF 0,8'de 5 kW: kVA = 5 / 0,8 = 6,25 kVA. PF 0,9'da 10 kW: kVA = 10 / 0,9 = 11,11 kVA. PF 1,0'da 2 kW (dirençli yük): kVA = 2 / 1,0 = 2 kVA. PF 0,85'te 3,5 kW: kVA = 3,5 / 0,85 = 4,12 kVA. PF 0,75'te 7,5 kW'lık bir motor 7,5 / 0,75 = 10 kVA görünür güç beslemesi gerektirir."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            { "question": "kW'yi kVA'ya dönüştürme formülü nedir?", "answer": "Formül kVA = kW / PF'dir, burada kVA kilovolt-amper cinsinden görünür güç, kW kilowatt cinsinden aktif güç ve PF güç faktörüdür (0 ila 1). Aktif güç = görünür güç × PF, dolayısıyla görünür güç = aktif güç / PF." },
+            { "question": "kW ve kVA arasındaki fark nedir?", "answer": "kW (kilowatt) aktif güçtür — yük tarafından yapılan gerçek iş (örneğin mekanik çıkış, ısı, ışık). kVA (kilovolt-amper) görünür güçtür — kaynak tarafından sağlanan toplam güç, faydalı iş yapmayan reaktif gücü içerir. kVA ≥ kW her zaman; sadece PF = 1,0 (tamamen dirençli yük) olduğunda eşittirler." },
+            { "question": "Güç faktörü nedir ve tipik değerler nelerdir?", "answer": "Güç faktörü (PF) kW / kVA oranıdır, 0'dan 1'e kadardır. Elektrik gücünün faydalı işe ne kadar verimli dönüştürüldüğünü ölçer. Tipik değerler: dirençli ısıtıcılar ~1,0, floresan lambalar 0,5–0,95, endüksiyon motorları 0,7–0,9, güç kaynakları 0,6–0,95. Daha düşük PF, aynı kW için daha yüksek kVA gerektiği anlamına gelir, iletken ve transformatör boyutunu artırır." },
+            { "question": "Neden kW'yi kVA'ya dönüştürmeliyim?", "answer": "Transformatörler, jeneratörler, UPS üniteleri ve kesiciler kVA olarak derecelendirilir, kW olarak değil. PF 0,8'de 10 kW çeken bir yük 12,5 kVA besleme kapasitesi gerektirir. Ekipmanı yalnızca kW'ye göre boyutlandırmak (PF'yi göz ardı etmek) aşırı yüklemeye yol açabilir. kW'yi kVA'ya dönüştürmek, yeterli görünür güç kapasitesine sahip ekipman seçmenizi sağlar." },
+            { "question": "Bu hesaplayıcı ücretsiz mi?", "answer": "Evet, kW'den kVA'ya hesaplayıcımız ücretsizdir. Kayıt veya ödeme gerekmez. Anında, doğru kVA sonuçları için kW cinsinden güç ve güç faktörünü (0–1) girin." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Amper'den kVA'ya Hesap Makinesi",
       "description": "Voltaj kullanarak amper (A) değerini kilovolt-amper (kVA) değerine anında ve doğru bir şekilde dönüştürün",

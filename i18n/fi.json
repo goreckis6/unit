@@ -660,6 +660,40 @@
         }
       }
     },
+    "kwToKva": {
+      "title": "kW kVA Laskin",
+      "description": "Muunna kilowatit (kW) kilovolttiampeereiksi (kVA) välittömästi tehokertoimella",
+      "kw": "Kilowatit (kW)",
+      "powerFactor": "Tehokerroin (0-1)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "kva": "Kilovolttiampeerit (kVA)",
+      "seo": {
+        "title": "kW kVA Laskin - Muunna Pätöteho Näennäistehoksi Verkossa",
+        "description": "Ilmainen kW kVA -muunnin. Muunna kilowatit kilovolttiampeereiksi välittömästi tehokertoimella. Täydellinen sähköisiin laskelmiin, energiajärjestelmiin ja laitteiden mitoitukseen.",
+        "keywords": "kw kva laskin, kilowatti kilovolttiampeeriin muunnin, kw kva muunnos, pätöteho näennäistehoksi laskin, sähkölaskin, kva laskin, tehokerroin laskin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka muuntaa kW kVA:ksi",
+          "paragraph1": "Kilowattien (kW) muuntaminen kilovolttiampeereiksi (kVA) on olennaista sähkötekniikassa ja energiajärjestelmissä. Kilowatit edustavat pätötehoa — sähkökuorman tekemää todellista työtä — kun taas kilovolttiampeerit edustavat näennäistehoa — lähteen toimittamaa kokonaistehoa, mukaan lukien pätö- ja loiskomponentit. Muunnos vaatii tehokertoimea (PF), joka on pätötehon ja näennäistehon suhde. Ilmainen kW kVA -laskimemme tarjoaa välittömiä, tarkkoja muunnoksia laitteiden, muuntajien ja generaattoreiden mitoitukseen.",
+          "paragraph2": "Kaava on: kVA = kW / PF, jossa kVA on näennäisteho kilovolttiampeereina, kW on pätöteho kilowatteina ja PF on tehokerroin (arvo välillä 0 ja 1). Esimerkiksi 5 kW:n kuorma tehokertoimella 0,8 vaatii 5 / 0,8 = 6,25 kVA näennäistehoa. Alempi tehokerroin tarkoittaa, että korkeampi näennäisteho tarvitaan saman pätötehon toimittamiseen. Tehokerroin osoittaa, kuinka tehokkaasti sähköjärjestelmä muuntaa näennäistehon hyödylliseksi työksi: PF 1,0 (yksikkö) on 100 % tehokas; alemmat arvot osoittavat loistehohäviöitä.",
+          "paragraph3": "Tämä muunnos on kriittinen monissa sovelluksissa: muuntajien ja generaattoreiden mitoitus riittävän kapasiteetin varmistamiseksi pätökuormille, sähköisten jakelujärjestelmien ja UPS-yksiköiden suunnittelu, katkaisijien ja johdinten laskenta, moottoreiden ja induktiivisten kuormien käyttäytymisen ymmärtäminen sekä tehokapasiteetin suunnittelu kaupallisille ja teollisille laitoksille. Tietämys kW:n muuntamisesta kVA:ksi auttaa valitsemaan oikein mitoitetut laitteet, välttämään ylikuormituksen ja optimoimaan energiatehokkuuden.",
+          "paragraph4": "Laskimemme hyväksyy kilowatit ja tehokertoimet syötteinä, soveltaa kaavaa kVA = kW / PF ja antaa näennäistehon kilovolttiampeereina. Työskenteleepä kanssa moottoreiden, muuntajien, generaattoreiden, UPS-järjestelmien tai induktiivisten tai kapasitiivisten kuormien kanssa — kW kVA -laskin tarjoaa tarkat, välittömät tulokset sähkösuunnitteluun ja -analyysiin.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "5 kW PF 0,8:lla: kVA = 5 / 0,8 = 6,25 kVA. 10 kW PF 0,9:llä: kVA = 10 / 0,9 = 11,11 kVA. 2 kW PF 1,0:lla (resistiivinen kuorma): kVA = 2 / 1,0 = 2 kVA. 3,5 kW PF 0,85:llä: kVA = 3,5 / 0,85 = 4,12 kVA. 7,5 kW:n moottori PF 0,75:llä vaatii 7,5 / 0,75 = 10 kVA näennäistehosyötön."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            { "question": "Mikä on kaava kW:n muuntamiseksi kVA:ksi?", "answer": "Kaava on kVA = kW / PF, jossa kVA on näennäisteho kilovolttiampeereina, kW on pätöteho kilowatteina ja PF on tehokerroin (0-1). Pätöteho = näennäisteho × PF, joten näennäisteho = pätöteho / PF." },
+            { "question": "Mikä on ero kW:n ja kVA:n välillä?", "answer": "kW (kilowatti) on pätöteho — kuorman tekemä todellinen työ (esim. mekaaninen tuotto, lämpö, valo). kVA (kilovolttiampeerit) on näennäisteho — lähteen toimittama kokonaisteho, mukaan lukien loistehoa, joka ei tee hyödyllistä työtä. kVA ≥ kW aina; ne ovat yhtä suuret vain kun PF = 1,0 (puhtaasti resistiivinen kuorma)." },
+            { "question": "Mikä on tehokerroin ja mitkä arvot ovat tyypillisiä?", "answer": "Tehokerroin (PF) on suhde kW / kVA, välillä 0-1. Se mittaa, kuinka tehokkaasti sähköteho muunnetaan hyödylliseksi työksi. Tyypilliset arvot: resistiiviset lämmityselementit ~1,0, loistelamput 0,5–0,95, oikosulkumoottorit 0,7–0,9, virtalähteet 0,6–0,95. Alempi PF tarkoittaa, että korkeampi kVA vaaditaan samalle kW:lle, mikä lisää johdinten ja muuntajien kokoa." },
+            { "question": "Miksi minun täytyy muuntaa kW kVA:ksi?", "answer": "Muuntajat, generaattorit, UPS-yksiköt ja katkaisijat luokitellaan kVA:ssa, eivät kW:ssa. Kuorma, joka kuluttaa 10 kW PF 0,8:lla, vaatii 12,5 kVA tehonsyöttökapasiteetin. Laitteiden mitoitus vain kW:n mukaan (PF:n huomiotta jättäminen) voi johtaa ylikuormitukseen. kW:n muuntaminen kVA:ksi varmistaa, että valitset riittävän näennäistehon kapasiteetin omaavat laitteet." },
+            { "question": "Onko tämä laskin ilmainen?", "answer": "Kyllä, kW kVA -laskimemme on ilmainen. Rekisteröitymistä tai maksua ei vaadita. Anna teho kW:na ja tehokerroin (0–1) saadaksesi välittömät, tarkat tulokset kVA:na." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampeeri kVA Laskin",
       "description": "Muunna ampeerit (A) kilovoltampeereiksi (kVA) heti ja tarkasti käyttämällä jännitettä",

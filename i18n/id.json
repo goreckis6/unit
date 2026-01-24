@@ -660,6 +660,40 @@
         }
       }
     },
+    "kwToKva": {
+      "title": "Kalkulator kW ke kVA",
+      "description": "Konversi kilowatt (kW) ke kilovolt-ampere (kVA) secara instan dengan faktor daya",
+      "kw": "Kilowatt (kW)",
+      "powerFactor": "Faktor Daya (0-1)",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "kva": "Kilovolt-ampere (kVA)",
+      "seo": {
+        "title": "Kalkulator kW ke kVA - Konversi Daya Nyata ke Daya Semu Online",
+        "description": "Kalkulator konversi kW ke kVA gratis. Konversi kilowatt ke kilovolt-ampere secara instan dengan faktor daya. Sempurna untuk perhitungan listrik, sistem energi, dan penentuan ukuran peralatan.",
+        "keywords": "kalkulator kw ke kva, konverter kilowatt ke kilovolt-ampere, konversi kw kva, kalkulator daya nyata ke semu, kalkulator listrik, kalkulator kva, kalkulator faktor daya, kalkulator gratis",
+        "content": {
+          "heading": "Cara Mengonversi kW ke kVA",
+          "paragraph1": "Mengonversi kilowatt (kW) ke kilovolt-ampere (kVA) sangat penting dalam teknik listrik dan sistem energi. Kilowatt mewakili daya nyata — pekerjaan aktual yang dilakukan oleh beban listrik — sementara kilovolt-ampere mewakili daya semu — total daya yang disuplai oleh sumber, termasuk komponen nyata dan reaktif. Konversi memerlukan faktor daya (PF), yang merupakan rasio daya nyata terhadap daya semu. Kalkulator kW ke kVA gratis kami memberikan konversi instan dan akurat untuk penentuan ukuran peralatan, transformator, dan generator.",
+          "paragraph2": "Rumusnya adalah: kVA = kW / PF, di mana kVA adalah daya semu dalam kilovolt-ampere, kW adalah daya nyata dalam kilowatt, dan PF adalah faktor daya (nilai antara 0 dan 1). Misalnya, beban 5 kW dengan faktor daya 0,8 memerlukan 5 / 0,8 = 6,25 kVA daya semu. Faktor daya yang lebih rendah berarti daya semu yang lebih tinggi diperlukan untuk menyediakan daya nyata yang sama. Faktor daya menunjukkan seberapa efisien sistem listrik mengonversi daya semu menjadi pekerjaan yang berguna: PF 1,0 (satuan) adalah 100% efisien; nilai yang lebih rendah menunjukkan kerugian daya reaktif.",
+          "paragraph3": "Konversi ini sangat penting dalam banyak aplikasi: penentuan ukuran transformator dan generator untuk memastikan kapasitas yang memadai untuk beban nyata, desain sistem distribusi listrik dan unit UPS, perhitungan pemutus dan konduktor, memahami perilaku motor dan beban induktif, serta perencanaan kapasitas daya untuk fasilitas komersial dan industri. Mengetahui cara mengonversi kW ke kVA membantu Anda memilih peralatan berukuran tepat, menghindari kelebihan beban, dan mengoptimalkan efisiensi energi.",
+          "paragraph4": "Kalkulator kami menerima kilowatt dan faktor daya sebagai input, menerapkan rumus kVA = kW / PF, dan memberikan daya semu dalam kilovolt-ampere. Baik Anda bekerja dengan motor, transformator, generator, sistem UPS, atau beban induktif atau kapasitif — kalkulator kW ke kVA memberikan hasil yang akurat dan instan untuk desain dan analisis listrik Anda.",
+          "exampleHeading": "Contoh:",
+          "exampleText": "5 kW pada PF 0,8: kVA = 5 / 0,8 = 6,25 kVA. 10 kW pada PF 0,9: kVA = 10 / 0,9 = 11,11 kVA. 2 kW pada PF 1,0 (beban resistif): kVA = 2 / 1,0 = 2 kVA. 3,5 kW pada PF 0,85: kVA = 3,5 / 0,85 = 4,12 kVA. Motor 7,5 kW pada PF 0,75 memerlukan 7,5 / 0,75 = 10 kVA pasokan daya semu."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            { "question": "Apa rumus untuk mengonversi kW ke kVA?", "answer": "Rumusnya adalah kVA = kW / PF, di mana kVA adalah daya semu dalam kilovolt-ampere, kW adalah daya nyata dalam kilowatt, dan PF adalah faktor daya (0 hingga 1). Daya nyata = daya semu × PF, jadi daya semu = daya nyata / PF." },
+            { "question": "Apa perbedaan antara kW dan kVA?", "answer": "kW (kilowatt) adalah daya nyata — pekerjaan aktual yang dilakukan oleh beban (mis. keluaran mekanis, panas, cahaya). kVA (kilovolt-ampere) adalah daya semu — total daya yang disuplai oleh sumber, termasuk daya reaktif yang tidak melakukan pekerjaan berguna. kVA ≥ kW selalu; mereka sama hanya ketika PF = 1,0 (beban resistif murni)." },
+            { "question": "Apa itu faktor daya dan berapa nilai tipikal?", "answer": "Faktor daya (PF) adalah rasio kW / kVA, dari 0 hingga 1. Ini mengukur seberapa efisien daya listrik dikonversi menjadi pekerjaan yang berguna. Nilai tipikal: pemanas resistif ~1,0, lampu neon 0,5–0,95, motor induksi 0,7–0,9, catu daya 0,6–0,95. PF yang lebih rendah berarti kVA yang lebih tinggi diperlukan untuk kW yang sama, meningkatkan ukuran konduktor dan transformator." },
+            { "question": "Mengapa saya harus mengonversi kW ke kVA?", "answer": "Transformator, generator, unit UPS, dan pemutus diberi rating dalam kVA, bukan kW. Beban yang menarik 10 kW pada PF 0,8 memerlukan kapasitas pasokan 12,5 kVA. Menentukan ukuran peralatan hanya berdasarkan kW (mengabaikan PF) dapat menyebabkan kelebihan beban. Mengonversi kW ke kVA memastikan Anda memilih peralatan dengan kapasitas daya semu yang memadai." },
+            { "question": "Apakah kalkulator ini gratis?", "answer": "Ya, kalkulator kW ke kVA kami gratis. Tidak diperlukan pendaftaran atau pembayaran. Masukkan daya dalam kW dan faktor daya (0–1) untuk hasil instan dan akurat dalam kVA." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulator Ampere ke kVA",
       "description": "Konversi ampere (A) ke kilovolt-ampere (kVA) secara instan dan akurat menggunakan tegangan",

@@ -660,6 +660,40 @@
         }
       }
     },
+    "kwToKva": {
+      "title": "kW til kVA Beregner",
+      "description": "Konverter kilowatt (kW) til kilovoltampere (kVA) øjeblikkeligt med effektfaktor",
+      "kw": "Kilowatt (kW)",
+      "powerFactor": "Effektfaktor (0-1)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "kva": "Kilovoltampere (kVA)",
+      "seo": {
+        "title": "kW til kVA Beregner - Konverter Aktiv Effekt til Tilsyneladende Effekt Online",
+        "description": "Gratis kW til kVA omregner. Konverter kilowatt til kilovoltampere øjeblikkeligt med effektfaktor. Perfekt til elektriske beregninger, energisystemer og udstyrsdimensionering.",
+        "keywords": "kw til kva beregner, kilowatt til kilovoltampere omregner, kw kva konvertering, aktiv effekt til tilsyneladende effekt beregner, elektrisk beregner, kva beregner, effektfaktor beregner, gratis beregner",
+        "content": {
+          "heading": "Sådan konverteres kW til kVA",
+          "paragraph1": "Konvertering af kilowatt (kW) til kilovoltampere (kVA) er essentiel inden for elektroteknik og energisystemer. Kilowatt repræsenterer aktiv effekt — det faktiske arbejde udført af en elektrisk belastning — mens kilovoltampere repræsenterer tilsyneladende effekt — den samlede effekt leveret af kilden, inklusive aktive og reaktive komponenter. Konverteringen kræver effektfaktoren (PF), som er forholdet mellem aktiv effekt og tilsyneladende effekt. Vores gratis kW til kVA beregner giver øjeblikkelige, præcise konverteringer til dimensionering af udstyr, transformere og generatorer.",
+          "paragraph2": "Formlen er: kVA = kW / PF, hvor kVA er tilsyneladende effekt i kilovoltampere, kW er aktiv effekt i kilowatt, og PF er effektfaktoren (en værdi mellem 0 og 1). For eksempel kræver en belastning på 5 kW med en effektfaktor på 0,8 5 / 0,8 = 6,25 kVA tilsyneladende effekt. En lavere effektfaktor betyder, at højere tilsyneladende effekt er nødvendig for at levere samme aktive effekt. Effektfaktoren angiver, hvor effektivt det elektriske system konverterer tilsyneladende effekt til nyttigt arbejde: en PF på 1,0 (enhed) er 100% effektiv; lavere værdier indikerer tab af reaktiv effekt.",
+          "paragraph3": "Denne konvertering er kritisk i mange anvendelser: dimensionering af transformere og generatorer for at sikre tilstrækkelig kapacitet til aktive belastninger, design af elektriske distributionssystemer og UPS-enheder, beregning af afbrydere og ledere, forståelse af opførselen af motorer og induktive belastninger samt planlægning af effektkapacitet til kommercielle og industrielle anlæg. At vide, hvordan man konverterer kW til kVA, hjælper dig med at vælge korrekt dimensioneret udstyr, undgå overbelastning og optimere energieffektivitet.",
+          "paragraph4": "Vores beregner accepterer kilowatt og effektfaktor som input, anvender formlen kVA = kW / PF, og giver den tilsyneladende effekt i kilovoltampere. Uanset om du arbejder med motorer, transformere, generatorer, UPS-systemer eller induktive eller kapacitive belastninger — kW til kVA beregneren giver præcise, øjeblikkelige resultater til dit elektriske design og analyse.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "5 kW ved PF 0,8: kVA = 5 / 0,8 = 6,25 kVA. 10 kW ved PF 0,9: kVA = 10 / 0,9 = 11,11 kVA. 2 kW ved PF 1,0 (resistiv belastning): kVA = 2 / 1,0 = 2 kVA. 3,5 kW ved PF 0,85: kVA = 3,5 / 0,85 = 4,12 kVA. En 7,5 kW motor ved PF 0,75 kræver 7,5 / 0,75 = 10 kVA tilsyneladende effektforsyning."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            { "question": "Hvad er formlen for at konvertere kW til kVA?", "answer": "Formlen er kVA = kW / PF, hvor kVA er tilsyneladende effekt i kilovoltampere, kW er aktiv effekt i kilowatt, og PF er effektfaktoren (0 til 1). Aktiv effekt = tilsyneladende effekt × PF, derfor tilsyneladende effekt = aktiv effekt / PF." },
+            { "question": "Hvad er forskellen mellem kW og kVA?", "answer": "kW (kilowatt) er aktiv effekt — det faktiske arbejde udført af belastningen (f.eks. mekanisk output, varme, lys). kVA (kilovoltampere) er tilsyneladende effekt — den samlede effekt leveret af kilden, inklusive reaktiv effekt, der ikke udfører nyttigt arbejde. kVA ≥ kW altid; de er ens kun når PF = 1,0 (rent resistiv belastning)." },
+            { "question": "Hvad er effektfaktor, og hvilke værdier er typiske?", "answer": "Effektfaktor (PF) er forholdet kW / kVA, fra 0 til 1. Den måler, hvor effektivt elektrisk effekt konverteres til nyttigt arbejde. Typiske værdier: resistive varmeelementer ~1,0, lysstofrør 0,5–0,95, induktionsmotorer 0,7–0,9, strømforsyninger 0,6–0,95. Lavere PF betyder, at højere kVA kræves for samme kW, hvilket øger størrelsen af ledere og transformere." },
+            { "question": "Hvorfor skal jeg konvertere kW til kVA?", "answer": "Transformere, generatorer, UPS-enheder og afbrydere er klassificeret i kVA, ikke i kW. En belastning, der trækker 10 kW ved PF 0,8, kræver 12,5 kVA strømkapacitet. Dimensionering af udstyr kun efter kW (ignorere PF) kan føre til overbelastning. Konvertering af kW til kVA sikrer, at du vælger udstyr med tilstrækkelig tilsyneladende effektkapacitet." },
+            { "question": "Er denne beregner gratis?", "answer": "Ja, vores kW til kVA beregner er gratis. Ingen registrering eller betaling er nødvendig. Indtast effekt i kW og effektfaktor (0–1) for at få øjeblikkelige, præcise resultater i kVA." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere til kVA Lommeregner",
       "description": "Konverter ampere (A) til kilovoltampere (kVA) med det samme og præcist med spænding",

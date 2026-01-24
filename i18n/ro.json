@@ -660,6 +660,40 @@
         }
       }
     },
+    "kwToKva": {
+      "title": "Calculator kW în kVA",
+      "description": "Convertiți kilowați (kW) în kilovoltamperi (kVA) instantaneu cu factorul de putere",
+      "kw": "Kilowați (kW)",
+      "powerFactor": "Factorul de Putere (0-1)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "kva": "Kilovoltamperi (kVA)",
+      "seo": {
+        "title": "Calculator kW în kVA - Conversiți Puterea Activă în Puterea Aparentă Online",
+        "description": "Calculator gratuit de conversie kW în kVA. Convertiți kilowați în kilovoltamperi instantaneu cu factorul de putere. Perfect pentru calcule electrice, sisteme energetice și dimensionarea echipamentelor.",
+        "keywords": "calculator kw în kva, convertor kilowați în kilovoltamperi, conversie kw kva, calculator putere activă în aparentă, calculator electric, calculator kva, calculator factor de putere, calculator gratuit",
+        "content": {
+          "heading": "Cum să convertiți kW în kVA",
+          "paragraph1": "Conversia kilowați (kW) în kilovoltamperi (kVA) este esențială în ingineria electrică și sistemele energetice. Kilowații reprezintă puterea activă — lucrul real efectuat de o sarcină electrică — în timp ce kilovoltamperii reprezintă puterea aparentă — puterea totală furnizată de sursă, incluzând componentele active și reactive. Conversia necesită factorul de putere (PF), care este raportul dintre puterea activă și puterea aparentă. Calculatorul nostru gratuit kW în kVA oferă conversii instantanee și precise pentru dimensionarea echipamentelor, transformatoarelor și generatoarelor.",
+          "paragraph2": "Formula este: kVA = kW / PF, unde kVA este puterea aparentă în kilovoltamperi, kW este puterea activă în kilowați și PF este factorul de putere (o valoare între 0 și 1). De exemplu, o sarcină de 5 kW cu un factor de putere de 0,8 necesită 5 / 0,8 = 6,25 kVA putere aparentă. Un factor de putere mai scăzut înseamnă că este necesară o putere aparentă mai mare pentru a furniza aceeași putere activă. Factorul de putere indică cât de eficient sistemul electric convertește puterea aparentă în lucru util: PF 1,0 (unitate) este 100% eficient; valorile mai mici indică pierderi de putere reactivă.",
+          "paragraph3": "Această conversie este critică în multe aplicații: dimensionarea transformatoarelor și generatoarelor pentru a asigura capacitate suficientă pentru sarcinile active, proiectarea sistemelor de distribuție electrică și a unităților UPS, calculul întreruptoarelor și conductorilor, înțelegerea comportamentului motoarelor și sarcinilor inductive și planificarea capacității de putere pentru facilități comerciale și industriale. Cunoașterea convertirii kW în kVA vă ajută să selectați echipamente dimensionate corespunzător, să evitați suprasarcina și să optimizați eficiența energetică.",
+          "paragraph4": "Calculatorul nostru acceptă kilowați și factorul de putere ca intrări, aplică formula kVA = kW / PF și furnizează puterea aparentă în kilovoltamperi. Fie că lucrați cu motoare, transformatoare, generatoare, sisteme UPS sau sarcini inductive sau capacitive — calculatorul kW în kVA oferă rezultate precise și instantanee pentru proiectarea și analiza electrică.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "5 kW la PF 0,8: kVA = 5 / 0,8 = 6,25 kVA. 10 kW la PF 0,9: kVA = 10 / 0,9 = 11,11 kVA. 2 kW la PF 1,0 (sarcină rezistivă): kVA = 2 / 1,0 = 2 kVA. 3,5 kW la PF 0,85: kVA = 3,5 / 0,85 = 4,12 kVA. Un motor de 7,5 kW la PF 0,75 necesită 7,5 / 0,75 = 10 kVA alimentare cu putere aparentă."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            { "question": "Care este formula pentru conversia kW în kVA?", "answer": "Formula este kVA = kW / PF, unde kVA este puterea aparentă în kilovoltamperi, kW este puterea activă în kilowați și PF este factorul de putere (0 la 1). Putere activă = putere aparentă × PF, deci putere aparentă = putere activă / PF." },
+            { "question": "Care este diferența dintre kW și kVA?", "answer": "kW (kilowați) este puterea activă — lucrul real efectuat de sarcină (de ex. ieșire mecanică, căldură, lumină). kVA (kilovoltamperi) este puterea aparentă — puterea totală furnizată de sursă, incluzând puterea reactivă care nu efectuează lucru util. kVA ≥ kW întotdeauna; sunt egale doar când PF = 1,0 (sarcină pur rezistivă)." },
+            { "question": "Ce este factorul de putere și care sunt valorile tipice?", "answer": "Factorul de putere (PF) este raportul kW / kVA, de la 0 la 1. Măsoară cât de eficient puterea electrică este convertită în lucru util. Valori tipice: elemente de încălzire rezistive ~1,0, lămpi fluorescente 0,5–0,95, motoare de inducție 0,7–0,9, surse de alimentare 0,6–0,95. PF mai scăzut înseamnă că este necesar kVA mai mare pentru același kW, crescând dimensiunea conductorilor și transformatoarelor." },
+            { "question": "De ce trebuie să convertesc kW în kVA?", "answer": "Transformatoarele, generatoarele, unitățile UPS și întreruptoarele sunt clasificate în kVA, nu în kW. O sarcină care consumă 10 kW la PF 0,8 necesită 12,5 kVA capacitate de alimentare. Dimensionarea echipamentelor doar după kW (ignorând PF) poate duce la suprasarcină. Conversia kW în kVA asigură că selectați echipamente cu capacitate suficientă de putere aparentă." },
+            { "question": "Acest calculator este gratuit?", "answer": "Da, calculatorul nostru kW în kVA este gratuit. Nu este necesară înregistrare sau plată. Introduceți puterea în kW și factorul de putere (0–1) pentru rezultate instantanee și precise în kVA." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculator Amperi la kVA",
       "description": "Convertește amperii (A) în kilovoltamperi (kVA) instant și precis folosind tensiunea",

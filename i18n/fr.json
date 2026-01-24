@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "Calculateur VA en Ampères",
+      "description": "Convertir volt-ampères (VA) en ampères (A) instantanément en utilisant la tension pour les systèmes monophasés et triphasés",
+      "phaseType": "Type de Phase",
+      "singlePhase": "Monophasé",
+      "threePhase": "Triphasé",
+      "va": "Volt-Ampères (VA)",
+      "voltage": "Tension (V)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "amps": "Ampères (A)",
+      "seo": {
+        "title": "Calculateur VA en Ampères - Convertir Puissance Apparente en Courant En Ligne",
+        "description": "Calculateur de conversion VA en Ampères gratuit. Convertir volt-ampères en ampères instantanément en utilisant la tension. Prend en charge les systèmes monophasés et triphasés. Parfait pour les calculs électriques et la conception de circuits.",
+        "keywords": "calculateur va en ampères, convertisseur volt-ampères en ampères, conversion va ampères, calculateur puissance apparente en courant, calculateur électrique, calculateur de circuit, calculateur gratuit",
+        "content": {
+          "heading": "Comment Convertir VA en Ampères",
+          "paragraph1": "La conversion de volt-ampères (VA) en ampères (A) est un calcul fondamental en ingénierie électrique et dans les systèmes de distribution d'énergie. Les volt-ampères représentent la puissance apparente — la puissance totale consommée par un circuit électrique — tandis que les ampères représentent le flux de courant. La conversion nécessite de connaître la tension et si vous travaillez avec un système monophasé ou triphasé. Notre calculateur VA en Ampères gratuit fournit des conversions instantanées et précises pour les systèmes électriques monophasés et triphasés, rendant vos calculs de puissance rapides et fiables.",
+          "paragraph2": "Les formules sont : Pour les systèmes monophasés, I = VA / V, où I est le courant en ampères, VA est la puissance apparente en volt-ampères et V est la tension en volts. Pour les systèmes triphasés, I = VA / (√3 × V), où √3 ≈ 1,732. Par exemple, une charge monophasée de 5000 VA à 230V consomme 5000 / 230 = 21,74 ampères. La même charge de 5000 VA dans un système triphasé 400V consomme 5000 / (1,732 × 400) = 7,22 ampères par phase. Ces calculs sont essentiels pour dimensionner le câblage, les disjoncteurs et l'équipement électrique.",
+          "paragraph3": "Cette conversion est critique dans de nombreuses applications : dimensionnement des câbles et conducteurs électriques, sélection des disjoncteurs et fusibles appropriés, conception des tableaux de distribution électrique, calcul de la capacité de courant des câbles, détermination de la chute de tension dans les circuits, dimensionnement des transformateurs et générateurs, compréhension de la consommation de courant des onduleurs et UPS, et garantie de la conformité aux normes de sécurité électrique. Par exemple, si un UPS est évalué à 3000 VA et fonctionne à 230V monophasé, il consomme 3000 / 230 = 13,04 ampères à pleine charge, aidant à sélectionner la bonne valeur de disjoncteur.",
+          "paragraph4": "Notre calculateur accepte les volt-ampères et la tension comme entrées, vous permet de sélectionner entre les systèmes monophasés et triphasés, applique la formule appropriée (I = VA / V pour monophasé ou I = VA / (√3 × V) pour triphasé), et fournit le courant en ampères. Que vous dimensionniez des panneaux électriques, calculiez la capacité de courant des câbles, sélectionniez des dispositifs de protection de circuit, conceviez des systèmes de distribution d'énergie ou assuriez la conformité aux codes, notre calculateur VA en Ampères fournit des résultats précis et instantanés pour vos besoins en ingénierie électrique.",
+          "exampleHeading": "Exemple :",
+          "exampleText": "Monophasé : 5000 VA à 230V = 5000 / 230 = 21,74 A. Triphasé : 10 000 VA à 400V = 10 000 / (1,732 × 400) = 14,43 A. Monophasé : 3000 VA à 120V = 3000 / 120 = 25 A. Triphasé : 15 000 VA à 480V = 15 000 / (1,732 × 480) = 18,04 A. Si un bureau nécessite 8000 VA à 230V monophasé, la consommation de courant est de 8000 / 230 = 34,78 A, nécessitant au moins un disjoncteur de 40A."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Quelle est la formule pour convertir VA en Ampères ?",
+              "answer": "Pour les systèmes monophasés : I = VA / V. Pour les systèmes triphasés : I = VA / (√3 × V), où I est le courant en ampères, VA est la puissance apparente en volt-ampères, V est la tension en volts et √3 ≈ 1,732. La formule triphasée tient compte de la distribution de puissance sur trois phases, résultant en un courant plus faible par phase pour la même puissance totale."
+            },
+            {
+              "question": "Quelle est la différence entre VA et Ampères ?",
+              "answer": "VA (volt-ampères) mesure la puissance apparente — la puissance électrique totale dans un circuit, y compris les composantes réelles et réactives. Les ampères (ampères) mesurent le courant — le flux de charge électrique. VA = Volts × Ampères. Ils mesurent différentes propriétés électriques : VA est la puissance, les Ampères sont le flux de courant. Vous avez besoin de la tension pour convertir entre eux."
+            },
+            {
+              "question": "Pourquoi la formule triphasée est-elle différente ?",
+              "answer": "Dans les systèmes triphasés, la puissance est distribuée sur trois phases. Le facteur √3 (1,732) tient compte de cette distribution triphasée, résultant en un courant plus faible par phase par rapport au monophasé. Pour les mêmes VA totaux, les systèmes triphasés consomment moins de courant par fil, permettant des conducteurs plus petits et une transmission de puissance plus efficace."
+            },
+            {
+              "question": "Comment utiliser ceci pour dimensionner les disjoncteurs ?",
+              "answer": "Calculez le courant maximum (ampères) à partir de la puissance VA et de la tension. Ajoutez une marge de sécurité (généralement 125% selon les codes électriques). Arrondissez à la taille de disjoncteur standard suivante. Par exemple, 5000 VA à 230V = 21,74A. Avec marge de 125% : 21,74 × 1,25 = 27,17A. Utilisez un disjoncteur de 30A ou 32A. Respectez toujours les codes électriques locaux."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit ?",
+              "answer": "Oui, notre calculateur VA en Ampères est entièrement gratuit. Aucune inscription ni paiement requis. Sélectionnez votre type de phase, entrez les volt-ampères et la tension pour des résultats de courant instantanés et précis en ampères pour les systèmes monophasés ou triphasés."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Connexes",
+          "wattsToKva": "Calculateur Watts en kVA",
+          "wattsToKvaDesc": "Convertir watts en kilovolt-ampères avec facteur de puissance",
+          "kwToKva": "Calculateur kW en kVA",
+          "kwToKvaDesc": "Convertir kilowatts en kilovolt-ampères instantanément",
+          "mahToWh": "Calculateur mAh en Wh",
+          "mahToWhDesc": "Convertir capacité de batterie en énergie avec tension",
+          "kwhToWatts": "Calculateur kWh en Watts",
+          "kwhToWattsDesc": "Convertir kilowatt-heures en watts en utilisant la durée"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculateur Ampères vers kVA",
       "description": "Convertissez les ampères (A) en kilovoltampères (kVA) instantanément et précisément en utilisant la tension",

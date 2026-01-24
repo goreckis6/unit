@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "Calculadora VA a Amperios",
+      "description": "Convertir voltio-amperios (VA) a amperios (A) instantáneamente usando voltaje para sistemas monofásicos y trifásicos",
+      "phaseType": "Tipo de Fase",
+      "singlePhase": "Monofásico",
+      "threePhase": "Trifásico",
+      "va": "Voltio-Amperios (VA)",
+      "voltage": "Voltaje (V)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "amps": "Amperios (A)",
+      "seo": {
+        "title": "Calculadora VA a Amperios - Convertir Potencia Aparente a Corriente En Línea",
+        "description": "Calculadora de conversión VA a Amperios gratuita. Convertir voltio-amperios a amperios instantáneamente usando voltaje. Compatible con sistemas monofásicos y trifásicos. Perfecto para cálculos eléctricos y diseño de circuitos.",
+        "keywords": "calculadora va a amperios, convertidor voltio-amperios a amperios, conversión va amperios, calculadora potencia aparente a corriente, calculadora eléctrica, calculadora de circuitos, calculadora gratuita",
+        "content": {
+          "heading": "Cómo Convertir VA a Amperios",
+          "paragraph1": "Convertir voltio-amperios (VA) a amperios (A) es un cálculo fundamental en ingeniería eléctrica y sistemas de distribución de energía. Los voltio-amperios representan la potencia aparente — la potencia total consumida por un circuito eléctrico — mientras que los amperios representan el flujo de corriente. La conversión requiere conocer el voltaje y si está trabajando con un sistema monofásico o trifásico. Nuestra calculadora gratuita VA a Amperios proporciona conversiones instantáneas y precisas para sistemas eléctricos monofásicos y trifásicos, haciendo sus cálculos de potencia rápidos y confiables.",
+          "paragraph2": "Las fórmulas son: Para sistemas monofásicos, I = VA / V, donde I es la corriente en amperios, VA es la potencia aparente en voltio-amperios y V es el voltaje en voltios. Para sistemas trifásicos, I = VA / (√3 × V), donde √3 ≈ 1,732. Por ejemplo, una carga monofásica de 5000 VA a 230V consume 5000 / 230 = 21,74 amperios. La misma carga de 5000 VA en un sistema trifásico de 400V consume 5000 / (1,732 × 400) = 7,22 amperios por fase. Estos cálculos son esenciales para dimensionar cableado, interruptores automáticos y equipos eléctricos.",
+          "paragraph3": "Esta conversión es crítica en muchas aplicaciones: dimensionamiento de cables y conductores eléctricos, selección de interruptores automáticos y fusibles apropiados, diseño de paneles de distribución eléctrica, cálculo de capacidad de corriente de cables, determinación de caída de voltaje en circuitos, dimensionamiento de transformadores y generadores, comprensión del consumo de corriente de UPS e inversores, y garantía del cumplimiento de normas de seguridad eléctrica. Por ejemplo, si un UPS está clasificado en 3000 VA y opera a 230V monofásico, consume 3000 / 230 = 13,04 amperios a plena carga, ayudando a seleccionar la clasificación correcta del interruptor automático.",
+          "paragraph4": "Nuestra calculadora acepta voltio-amperios y voltaje como entradas, le permite seleccionar entre sistemas monofásicos y trifásicos, aplica la fórmula apropiada (I = VA / V para monofásico o I = VA / (√3 × V) para trifásico), y proporciona la corriente en amperios. Ya sea que esté dimensionando paneles eléctricos, calculando capacidad de corriente de cables, seleccionando dispositivos de protección de circuitos, diseñando sistemas de distribución de energía o asegurando el cumplimiento de códigos, nuestra calculadora VA a Amperios proporciona resultados precisos e instantáneos para sus necesidades de ingeniería eléctrica.",
+          "exampleHeading": "Ejemplo:",
+          "exampleText": "Monofásico: 5000 VA a 230V = 5000 / 230 = 21,74 A. Trifásico: 10,000 VA a 400V = 10,000 / (1,732 × 400) = 14,43 A. Monofásico: 3000 VA a 120V = 3000 / 120 = 25 A. Trifásico: 15,000 VA a 480V = 15,000 / (1,732 × 480) = 18,04 A. Si una oficina requiere 8000 VA a 230V monofásico, el consumo de corriente es 8000 / 230 = 34,78 A, requiriendo al menos un interruptor automático de 40A."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Cuál es la fórmula para convertir VA a Amperios?",
+              "answer": "Para sistemas monofásicos: I = VA / V. Para sistemas trifásicos: I = VA / (√3 × V), donde I es la corriente en amperios, VA es la potencia aparente en voltio-amperios, V es el voltaje en voltios y √3 ≈ 1,732. La fórmula trifásica tiene en cuenta la distribución de potencia en tres fases, resultando en menor corriente por fase para la misma potencia total."
+            },
+            {
+              "question": "¿Cuál es la diferencia entre VA y Amperios?",
+              "answer": "VA (voltio-amperios) mide la potencia aparente — la potencia eléctrica total en un circuito, incluyendo componentes reales y reactivos. Amperios (amperios) mide la corriente — el flujo de carga eléctrica. VA = Voltios × Amperios. Miden diferentes propiedades eléctricas: VA es potencia, Amperios es flujo de corriente. Necesita el voltaje para convertir entre ellos."
+            },
+            {
+              "question": "¿Por qué es diferente la fórmula trifásica?",
+              "answer": "En sistemas trifásicos, la potencia se distribuye en tres fases. El factor √3 (1,732) tiene en cuenta esta distribución trifásica, resultando en menor corriente por fase comparado con monofásico. Para los mismos VA totales, los sistemas trifásicos consumen menos corriente por cable, permitiendo conductores más pequeños y transmisión de potencia más eficiente."
+            },
+            {
+              "question": "¿Cómo usar esto para dimensionar interruptores automáticos?",
+              "answer": "Calcule la corriente máxima (amperios) de la clasificación VA y voltaje. Agregue un margen de seguridad (típicamente 125% según códigos eléctricos). Redondee hacia arriba al siguiente tamaño estándar de interruptor automático. Por ejemplo, 5000 VA a 230V = 21,74A. Con margen del 125%: 21,74 × 1,25 = 27,17A. Use un interruptor automático de 30A o 32A. Siempre siga los códigos eléctricos locales."
+            },
+            {
+              "question": "¿Es gratuita esta calculadora?",
+              "answer": "Sí, nuestra calculadora VA a Amperios es completamente gratuita. No se requiere registro ni pago. Seleccione su tipo de fase, ingrese voltio-amperios y voltaje para resultados de corriente instantáneos y precisos en amperios para sistemas monofásicos o trifásicos."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "wattsToKva": "Calculadora Vatios a kVA",
+          "wattsToKvaDesc": "Convertir vatios a kilovoltio-amperios con factor de potencia",
+          "kwToKva": "Calculadora kW a kVA",
+          "kwToKvaDesc": "Convertir kilovatios a kilovoltio-amperios instantáneamente",
+          "mahToWh": "Calculadora mAh a Wh",
+          "mahToWhDesc": "Convertir capacidad de batería a energía con voltaje",
+          "kwhToWatts": "Calculadora kWh a Vatios",
+          "kwhToWattsDesc": "Convertir kilovatios-hora a vatios usando duración de tiempo"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculadora de Amperios a kVA",
       "description": "Convierta amperios (A) a kilovoltamperios (kVA) al instante y con precisión usando voltaje",

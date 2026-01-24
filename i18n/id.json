@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "Kalkulator VA ke Ampere",
+      "description": "Konversi volt-ampere (VA) ke ampere (A) secara instan menggunakan tegangan untuk sistem fase tunggal dan tiga fase",
+      "phaseType": "Jenis Fase",
+      "singlePhase": "Fase Tunggal",
+      "threePhase": "Tiga Fase",
+      "va": "Volt-Ampere (VA)",
+      "voltage": "Tegangan (V)",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Kalkulator VA ke Ampere - Konversi Daya Semu ke Arus Online",
+        "description": "Kalkulator konversi VA ke Ampere gratis. Konversi volt-ampere ke ampere secara instan menggunakan tegangan. Mendukung sistem fase tunggal dan tiga fase. Sempurna untuk perhitungan listrik dan desain sirkuit.",
+        "keywords": "kalkulator va ke ampere, konverter volt-ampere ke ampere, konversi va ampere, kalkulator daya semu ke arus, kalkulator listrik, kalkulator sirkuit, kalkulator gratis",
+        "content": {
+          "heading": "Cara Mengonversi VA ke Ampere",
+          "paragraph1": "Mengonversi volt-ampere (VA) ke ampere (A) adalah perhitungan dasar dalam teknik listrik dan sistem distribusi daya. Volt-ampere mewakili daya semu — total daya yang dikonsumsi oleh sirkuit listrik — sementara ampere mewakili aliran arus. Konversi memerlukan pengetahuan tentang tegangan dan apakah Anda bekerja dengan sistem fase tunggal atau tiga fase. Kalkulator VA ke Ampere gratis kami menyediakan konversi instan dan akurat untuk sistem listrik fase tunggal dan tiga fase, membuat perhitungan daya Anda cepat dan andal.",
+          "paragraph2": "Rumusnya adalah: Untuk sistem fase tunggal, I = VA / V, di mana I adalah arus dalam ampere, VA adalah daya semu dalam volt-ampere dan V adalah tegangan dalam volt. Untuk sistem tiga fase, I = VA / (√3 × V), di mana √3 ≈ 1,732. Misalnya, beban fase tunggal 5000 VA pada 230V menarik 5000 / 230 = 21,74 ampere. Beban 5000 VA yang sama dalam sistem tiga fase 400V menarik 5000 / (1,732 × 400) = 7,22 ampere per fase. Perhitungan ini penting untuk menentukan ukuran kabel, pemutus sirkuit, dan peralatan listrik.",
+          "paragraph3": "Konversi ini penting dalam banyak aplikasi: penentuan ukuran kabel dan konduktor listrik, pemilihan pemutus sirkuit dan sekering yang sesuai, desain panel distribusi listrik, perhitungan kapasitas arus kabel, penentuan penurunan tegangan dalam sirkuit, penentuan ukuran transformator dan generator, pemahaman konsumsi arus UPS dan inverter, dan memastikan kepatuhan terhadap standar keselamatan listrik. Misalnya, jika UPS diberi nilai 3000 VA dan beroperasi pada 230V fase tunggal, ia menarik 3000 / 230 = 13,04 ampere pada beban penuh, membantu memilih peringkat pemutus sirkuit yang tepat.",
+          "paragraph4": "Kalkulator kami menerima volt-ampere dan tegangan sebagai input, memungkinkan Anda memilih antara sistem fase tunggal dan tiga fase, menerapkan rumus yang sesuai (I = VA / V untuk fase tunggal atau I = VA / (√3 × V) untuk tiga fase), dan memberikan arus dalam ampere. Baik Anda menentukan ukuran panel listrik, menghitung kapasitas arus kabel, memilih perangkat proteksi sirkuit, merancang sistem distribusi daya, atau memastikan kepatuhan kode, kalkulator VA ke Ampere kami memberikan hasil yang akurat dan instan untuk kebutuhan teknik listrik Anda.",
+          "exampleHeading": "Contoh:",
+          "exampleText": "Fase tunggal: 5000 VA pada 230V = 5000 / 230 = 21,74 A. Tiga fase: 10.000 VA pada 400V = 10.000 / (1,732 × 400) = 14,43 A. Fase tunggal: 3000 VA pada 120V = 3000 / 120 = 25 A. Tiga fase: 15.000 VA pada 480V = 15.000 / (1,732 × 480) = 18,04 A. Jika kantor memerlukan 8000 VA pada 230V fase tunggal, konsumsi arus adalah 8000 / 230 = 34,78 A, memerlukan setidaknya pemutus sirkuit 40A."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa rumus untuk mengonversi VA ke Ampere?",
+              "answer": "Untuk sistem fase tunggal: I = VA / V. Untuk sistem tiga fase: I = VA / (√3 × V), di mana I adalah arus dalam ampere, VA adalah daya semu dalam volt-ampere, V adalah tegangan dalam volt dan √3 ≈ 1,732. Rumus tiga fase memperhitungkan distribusi daya di tiga fase, menghasilkan arus yang lebih rendah per fase untuk total daya yang sama."
+            },
+            {
+              "question": "Apa perbedaan antara VA dan Ampere?",
+              "answer": "VA (volt-ampere) mengukur daya semu — total daya listrik dalam sirkuit, termasuk komponen nyata dan reaktif. Ampere (ampere) mengukur arus — aliran muatan listrik. VA = Volt × Ampere. Mereka mengukur sifat listrik yang berbeda: VA adalah daya, Ampere adalah aliran arus. Anda memerlukan tegangan untuk mengonversi di antara keduanya."
+            },
+            {
+              "question": "Mengapa rumus tiga fase berbeda?",
+              "answer": "Dalam sistem tiga fase, daya didistribusikan di tiga fase. Faktor √3 (1,732) memperhitungkan distribusi tiga fase ini, menghasilkan arus yang lebih rendah per fase dibandingkan dengan fase tunggal. Untuk VA total yang sama, sistem tiga fase menarik arus yang lebih sedikit per konduktor, memungkinkan konduktor yang lebih kecil dan transmisi daya yang lebih efisien."
+            },
+            {
+              "question": "Bagaimana cara menggunakan ini untuk ukuran pemutus sirkuit?",
+              "answer": "Hitung arus maksimum (ampere) dari peringkat VA dan tegangan. Tambahkan margin keamanan (biasanya 125% sesuai kode listrik). Bulatkan ke atas ke ukuran pemutus sirkuit standar berikutnya. Misalnya, 5000 VA pada 230V = 21,74A. Dengan margin 125%: 21,74 × 1,25 = 27,17A. Gunakan pemutus sirkuit 30A atau 32A. Selalu ikuti kode listrik lokal."
+            },
+            {
+              "question": "Apakah kalkulator ini gratis?",
+              "answer": "Ya, kalkulator VA ke Ampere kami sepenuhnya gratis. Tidak diperlukan pendaftaran atau pembayaran. Pilih jenis fase Anda, masukkan volt-ampere dan tegangan untuk hasil arus instan dan akurat dalam ampere untuk sistem fase tunggal atau tiga fase."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "wattsToKva": "Kalkulator Watt ke kVA",
+          "wattsToKvaDesc": "Konversi watt ke kilovolt-ampere dengan faktor daya",
+          "kwToKva": "Kalkulator kW ke kVA",
+          "kwToKvaDesc": "Konversi kilowatt ke kilovolt-ampere secara instan",
+          "mahToWh": "Kalkulator mAh ke Wh",
+          "mahToWhDesc": "Konversi kapasitas baterai ke energi dengan tegangan",
+          "kwhToWatts": "Kalkulator kWh ke Watt",
+          "kwhToWattsDesc": "Konversi kilowatt-jam ke watt menggunakan durasi"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulator Ampere ke kVA",
       "description": "Konversi ampere (A) ke kilovolt-ampere (kVA) secara instan dan akurat menggunakan tegangan",

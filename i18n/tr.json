@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "VA'dan Ampere Hesaplayıcı",
+      "description": "Tek fazlı ve üç fazlı sistemler için gerilim kullanarak volt-amperi (VA) anında ampere (A) dönüştürün",
+      "phaseType": "Faz Türü",
+      "singlePhase": "Tek Faz",
+      "threePhase": "Üç Faz",
+      "va": "Volt-Amper (VA)",
+      "voltage": "Gerilim (V)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "amps": "Amper (A)",
+      "seo": {
+        "title": "VA'dan Ampere Hesaplayıcı - Görünür Gücü Akıma Çevrimiçi Dönüştürün",
+        "description": "Ücretsiz VA'dan Ampere dönüştürme hesaplayıcısı. Gerilim kullanarak volt-amperi anında ampere dönüştürün. Tek fazlı ve üç fazlı sistemleri destekler. Elektrik hesaplamaları ve devre tasarımı için mükemmel.",
+        "keywords": "va'dan ampere hesaplayıcı, volt-amperden ampere dönüştürücü, va amper dönüşümü, görünür güçten akıma hesaplayıcı, elektrik hesaplayıcısı, devre hesaplayıcısı, ücretsiz hesaplayıcı",
+        "content": {
+          "heading": "VA'dan Ampere Nasıl Dönüştürülür",
+          "paragraph1": "Volt-amperi (VA) ampere (A) dönüştürmek, elektrik mühendisliğinde ve güç dağıtım sistemlerinde temel bir hesaplamadır. Volt-amper görünür gücü temsil eder — bir elektrik devresi tarafından tüketilen toplam güç — amper ise akım akışını temsil eder. Dönüştürme, gerilim bilgisi ve tek fazlı mı yoksa üç fazlı bir sistemle mi çalıştığınızı bilmeyi gerektirir. Ücretsiz VA'dan Ampere hesaplayıcımız, tek fazlı ve üç fazlı elektrik sistemleri için anında, doğru dönüşümler sağlayarak güç hesaplamalarınızı hızlı ve güvenilir hale getirir.",
+          "paragraph2": "Formüller: Tek fazlı sistemler için, I = VA / V, burada I amper cinsinden akım, VA volt-amper cinsinden görünür güç ve V volt cinsinden gerilimdir. Üç fazlı sistemler için, I = VA / (√3 × V), burada √3 ≈ 1,732'dir. Örneğin, 230V'de 5000 VA tek fazlı yük 5000 / 230 = 21,74 amper çeker. 400V üç fazlı sistemdeki aynı 5000 VA yük, faz başına 5000 / (1,732 × 400) = 7,22 amper çeker. Bu hesaplamalar, kablolama, devre kesiciler ve elektrikli ekipman boyutlandırması için esastır.",
+          "paragraph3": "Bu dönüştürme birçok uygulamada kritiktir: elektrik kablolarının ve iletkenlerin boyutlandırılması, uygun devre kesicilerin ve sigortaların seçilmesi, elektrik dağıtım panolarının tasarımı, kablo akım kapasitesinin hesaplanması, devrelerdeki gerilim düşüşünün belirlenmesi, transformatörlerin ve jeneratörlerin boyutlandırılması, UPS ve inverterlerin akım tüketiminin anlaşılması ve elektrik güvenlik standartlarına uyumun sağlanması. Örneğin, bir UPS 3000 VA olarak derecelendirilmişse ve 230V tek fazda çalışıyorsa, tam yükte 3000 / 230 = 13,04 amper çekerek doğru devre kesici derecesinin seçilmesine yardımcı olur.",
+          "paragraph4": "Hesaplayıcımız volt-amper ve gerilimi girdi olarak kabul eder, tek fazlı ve üç fazlı sistemler arasında seçim yapmanıza olanak tanır, uygun formülü uygular (tek faz için I = VA / V veya üç faz için I = VA / (√3 × V)) ve akımı amper cinsinden sağlar. Elektrik panellerini boyutlandırıyor, kablo akım kapasitesini hesaplıyor, devre koruma cihazlarını seçiyor, güç dağıtım sistemleri tasarlıyor veya kod uyumunu sağlıyor olun, VA'dan Ampere hesaplayıcımız elektrik mühendisliği ihtiyaçlarınız için doğru, anında sonuçlar sağlar.",
+          "exampleHeading": "Örnek:",
+          "exampleText": "Tek faz: 230V'de 5000 VA = 5000 / 230 = 21,74 A. Üç faz: 400V'de 10.000 VA = 10.000 / (1,732 × 400) = 14,43 A. Tek faz: 120V'de 3000 VA = 3000 / 120 = 25 A. Üç faz: 480V'de 15.000 VA = 15.000 / (1,732 × 480) = 18,04 A. Bir ofis 230V tek fazda 8000 VA gerektiriyorsa, akım tüketimi 8000 / 230 = 34,78 A'dır ve en az 40A devre kesici gerektirir."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {
+              "question": "VA'dan Ampere dönüştürme formülü nedir?",
+              "answer": "Tek fazlı sistemler için: I = VA / V. Üç fazlı sistemler için: I = VA / (√3 × V), burada I amper cinsinden akım, VA volt-amper cinsinden görünür güç, V volt cinsinden gerilim ve √3 ≈ 1,732'dir. Üç fazlı formül, üç faz boyunca güç dağılımını hesaba katarak aynı toplam güç için faz başına daha düşük akım sağlar."
+            },
+            {
+              "question": "VA ve Amper arasındaki fark nedir?",
+              "answer": "VA (volt-amper) görünür gücü ölçer — gerçek ve reaktif bileşenler dahil bir devredeki toplam elektrik gücü. Amper (amper) akımı ölçer — elektrik yükünün akışı. VA = Volt × Amper. Farklı elektriksel özellikleri ölçerler: VA güçtür, Amper akım akışıdır. Aralarında dönüştürme yapmak için gerilime ihtiyacınız vardır."
+            },
+            {
+              "question": "Üç fazlı formül neden farklıdır?",
+              "answer": "Üç fazlı sistemlerde güç üç faz boyunca dağıtılır. √3 (1,732) faktörü bu üç fazlı dağılımı hesaba katarak tek faza kıyasla faz başına daha düşük akım sağlar. Aynı toplam VA için üç fazlı sistemler iletken başına daha az akım çekerek daha küçük iletkenlere ve daha verimli güç iletimi sağlar."
+            },
+            {
+              "question": "Bunu devre kesici boyutlandırması için nasıl kullanırım?",
+              "answer": "VA derecesi ve gerilimden maksimum akımı (amper) hesaplayın. Bir güvenlik marjı ekleyin (elektrik kodlarına göre tipik olarak %125). Bir sonraki standart devre kesici boyutuna yuvarlayın. Örneğin, 230V'de 5000 VA = 21,74A. %125 marjla: 21,74 × 1,25 = 27,17A. 30A veya 32A devre kesici kullanın. Her zaman yerel elektrik kodlarını izleyin."
+            },
+            {
+              "question": "Bu hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, VA'dan Ampere hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Faz türünüzü seçin, volt-amper ve gerilimi girin; tek fazlı veya üç fazlı sistemler için amper cinsinden anında, doğru akım sonuçları alın."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "wattsToKva": "Watt'tan kVA Hesaplayıcı",
+          "wattsToKvaDesc": "Güç faktörü ile watt'ı kilovolt-ampere dönüştürün",
+          "kwToKva": "kW'dan kVA Hesaplayıcı",
+          "kwToKvaDesc": "Kilowatt'ı anında kilovolt-ampere dönüştürün",
+          "mahToWh": "mAh'dan Wh Hesaplayıcı",
+          "mahToWhDesc": "Pil kapasitesini gerilim ile enerjiye dönüştürün",
+          "kwhToWatts": "kWh'den Watt Hesaplayıcı",
+          "kwhToWattsDesc": "Süre kullanarak kilowatt-saati watt'a dönüştürün"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Amper'den kVA'ya Hesap Makinesi",
       "description": "Voltaj kullanarak amper (A) değerini kilovolt-amper (kVA) değerine anında ve doğru bir şekilde dönüştürün",

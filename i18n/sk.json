@@ -743,6 +743,66 @@
         }
       }
     },
+    "mahToWh": {
+      "title": "Kalkulačka mAh na Wh",
+      "description": "Previesť miliampérhodiny (mAh) na watthodiny (Wh) okamžite pomocou napätia",
+      "mah": "Miliampérhodiny (mAh)",
+      "voltage": "Napätie (V)",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "wh": "Watthodiny (Wh)",
+      "seo": {
+        "title": "Kalkulačka mAh na Wh - Previesť Kapacitu Batérie na Energiu Online",
+        "description": "Bezplatná kalkulačka prevodu mAh na Wh. Previesť miliampérhodiny na watthodiny okamžite pomocou napätia. Ideálne pre výpočty kapacity batérie, porovnania powerbanku a analýzu ukladania energie.",
+        "keywords": "kalkulačka mah wh, prevodník miliampérhodín watthodín, prevod mah wh, kalkulačka kapacity batérie, kalkulačka powerbanku, kalkulačka energie batérie, bezplatná kalkulačka",
+        "content": {
+          "heading": "Ako Previesť mAh na Wh",
+          "paragraph1": "Prevod miliampérhodín (mAh) na watthodiny (Wh) je zásadný výpočet pri hodnotení kapacity batérie a ukladania energie. Miliampérhodiny predstavujú kapacitu elektrického náboja — koľko prúdu môže batéria dodávať v čase — zatiaľ čo watthodiny predstavujú skutočné ukladanie energie — celkovú elektrickú energiu, ktorú môže batéria poskytnúť. Prevod vyžaduje znalosť napätia batérie, pretože energia závisí tak od náboja, ako aj od napätia. Naša bezplatná kalkulačka mAh na Wh poskytuje okamžité, presné prevody pre vaše výpočty batérie a riadenie energie.",
+          "paragraph2": "Vzorec je: Wh = (mAh × V) / 1000, kde mAh je kapacita batérie v miliampérhodinách, V je napätie vo voltoch a Wh je energia vo watthodinách. Napríklad batéria 5000 mAh pri 3,7V obsahuje (5000 × 3,7) / 1000 = 18,5 Wh energie. Tento výpočet je nevyhnutný pre porovnanie batérií s rôznymi napätiami, pochopenie skutočnej kapacity powerbanku, dimenzovanie záložných napájacích systémov a výpočet doby behu zariadenia na základe spotreby energie.",
+          "paragraph3": "Tento prevod je kritický v mnohých aplikáciách: porovnanie powerbankov a prenosných nabíjačiek s rôznymi napätiami, výpočet skutočného ukladania energie v batériách smartfónov a notebookov, určenie kapacity záložného napájania pre UPS systémy, dimenzovanie solárnych batérií, pochopenie výkonu batérií dronov a RC vozidiel a odhad doby behu zariadenia zo špecifikácií batérie. Napríklad powerbank 10 000 mAh pri 3,7V poskytuje (10 000 × 3,7) / 1000 = 37 Wh, ale rovnakých 10 000 mAh pri 5V poskytuje 50 Wh — výrazne viac energie napriek rovnakému hodnoteniu mAh.",
+          "paragraph4": "Naša kalkulačka prijíma miliampérhodiny a napätie ako vstupy, aplikuje vzorec Wh = (mAh × V) / 1000 a poskytuje energiu vo watthodinách. Či už porovnávate powerbanky, počítate kapacitu batérie pre solárne systémy, dimenzujete zálohy batérií, odhadujete dobu nabíjania alebo rozumiete požiadavkám na energiu zariadenia, naša kalkulačka mAh na Wh poskytuje presné, okamžité výsledky pre vaše potreby riadenia batérií a plánovania energie.",
+          "exampleHeading": "Príklad:",
+          "exampleText": "5000 mAh pri 3,7V: Wh = (5000 × 3,7) / 1000 = 18,5 Wh. 10 000 mAh pri 5V: Wh = (10 000 × 5) / 1000 = 50 Wh. 2500 mAh pri 1,5V: Wh = (2500 × 1,5) / 1000 = 3,75 Wh. 20 000 mAh pri 3,6V: Wh = (20 000 × 3,6) / 1000 = 72 Wh. Ak je batéria smartfónu hodnotená 4000 mAh pri 3,85V, jej energetická kapacita je (4000 × 3,85) / 1000 = 15,4 Wh."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Aký je vzorec pre prevod mAh na Wh?",
+              "answer": "Vzorec je Wh = (mAh × V) / 1000, kde mAh je kapacita batérie v miliampérhodinách, V je napätie vo voltoch a Wh je energia vo watthodinách. To prevedie kapacitu elektrického náboja na skutočné ukladanie energie. Napríklad 5000 mAh pri 3,7V sa rovná (5000 × 3,7) / 1000 = 18,5 Wh."
+            },
+            {
+              "question": "Aký je rozdiel medzi mAh a Wh?",
+              "answer": "mAh (miliampérhodiny) meria kapacitu elektrického náboja — koľko prúdu môže batéria dodávať v čase. Wh (watthodiny) meria skutočnú energiu — celkovú elektrickú prácu, ktorú môže batéria vykonať. mAh nezohľadňuje napätie, zatiaľ čo Wh áno. Batéria 10 000 mAh pri 3,7V poskytuje 37 Wh, ale pri 5V poskytuje 50 Wh — rovnaké mAh, iná energia."
+            },
+            {
+              "question": "Prečo potrebujem napätie pre tento prevod?",
+              "answer": "Energia (Wh) závisí tak od náboja (mAh), ako aj od napätia (V). Rovnaké mAh pri rôznych napätiach poskytuje rôznu energiu. Výkon = Napätie × Prúd, takže vyššie napätie znamená viac energie pri rovnakej kapacite náboja. Bez znalosti napätia nie je možné určiť skutočné ukladanie energie."
+            },
+            {
+              "question": "Ako môžem použiť túto kalkulačku na porovnanie powerbankov?",
+              "answer": "Powerbanky často uvádzajú kapacitu v mAh, ale môžu mať rôzne interné napätia. Preveďte oba na Wh pre porovnanie skutočnej energie. Powerbank 10 000 mAh pri 3,7V (37 Wh) poskytuje menej energie ako 10 000 mAh pri 5V (50 Wh). Vždy porovnávajte Wh, nie len mAh, pre presné porovnanie kapacity."
+            },
+            {
+              "question": "Je táto kalkulačka zadarmo?",
+              "answer": "Áno, naša kalkulačka mAh na Wh je úplne zadarmo. Nie je vyžadovaná žiadna registrácia ani platba. Zadajte kapacitu batérie v mAh a napätie vo voltoch pre okamžité, presné výsledky energie vo Wh."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace Kalkulačky",
+          "kwhToWatts": "Kalkulačka kWh na Watty",
+          "kwhToWattsDesc": "Previesť kilowatthodiny na watty pomocou doby trvania",
+          "wattsToKva": "Kalkulačka Wattov na kVA",
+          "wattsToKvaDesc": "Previesť watty na kilovoltampéry s účinníkom",
+          "kwToKva": "Kalkulačka kW na kVA",
+          "kwToKvaDesc": "Previesť kilowatty na kilovoltampéry okamžite",
+          "kwToKwh": "Kalkulačka kW na kWh",
+          "kwToKwhDesc": "Previesť výkon na energiu pomocou doby trvania"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulačka Ampérov na kVA",
       "description": "Preveďte ampéry (A) na kilovoltampéry (kVA) okamžite a presne pomocou napätia",

@@ -743,6 +743,66 @@
         }
       }
     },
+    "mahToWh": {
+      "title": "mAh til Wh Beregner",
+      "description": "Konverter milliampere-timer (mAh) til watt-timer (Wh) øjeblikkeligt ved hjælp af spænding",
+      "mah": "Milliampere-timer (mAh)",
+      "voltage": "Spænding (V)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "wh": "Watt-timer (Wh)",
+      "seo": {
+        "title": "mAh til Wh Beregner - Konverter Batterikapacitet til Energi Online",
+        "description": "Gratis mAh til Wh omregner. Konverter milliampere-timer til watt-timer øjeblikkeligt ved hjælp af spænding. Perfekt til batterikapacitetsberegninger, powerbank-sammenligninger og energilagringsanalyse.",
+        "keywords": "mah wh beregner, milliampere-timer watt-timer omregner, mah wh omregning, batterikapacitet beregner, powerbank beregner, batteri energi beregner, gratis beregner",
+        "content": {
+          "heading": "Sådan Konverteres mAh til Wh",
+          "paragraph1": "At konvertere milliampere-timer (mAh) til watt-timer (Wh) er en væsentlig beregning ved evaluering af batterikapacitet og energilagring. Milliampere-timer repræsenterer elektrisk ladningskapacitet — hvor meget strøm et batteri kan levere over tid — mens watt-timer repræsenterer faktisk energilagring — den samlede elektriske energi batteriet kan give. Omregningen kræver kendskab til batteriets spænding, da energi afhænger af både ladning og spænding. Vores gratis mAh til Wh beregner giver øjeblikkelige, præcise omregninger til dine batteri- og energistyringsberegninger.",
+          "paragraph2": "Formlen er: Wh = (mAh × V) / 1000, hvor mAh er batterikapaciteten i milliampere-timer, V er spændingen i volt og Wh er energien i watt-timer. For eksempel indeholder et 5000 mAh batteri ved 3,7V (5000 × 3,7) / 1000 = 18,5 Wh energi. Denne beregning er væsentlig til at sammenligne batterier med forskellige spændinger, forstå reel powerbank-kapacitet, dimensionere reservestrømsystemer og beregne enhedens driftstid baseret på energiforbrug.",
+          "paragraph3": "Denne omregning er kritisk i mange anvendelser: sammenligne powerbanks og bærbare opladere med forskellige spændinger, beregne faktisk energilagring i smartphone- og laptopbatterier, bestemme reservestrømkapacitet til UPS-systemer, dimensionere solcellebatteribanker, forstå drone- og RC-køretøjsbatteripræstation og estimere enhedens driftstid fra batterispecifikationer. For eksempel giver en 10 000 mAh powerbank ved 3,7V (10 000 × 3,7) / 1000 = 37 Wh, men samme 10 000 mAh ved 5V giver 50 Wh — betydeligt mere energi trods samme mAh-vurdering.",
+          "paragraph4": "Vores beregner accepterer milliampere-timer og spænding som input, anvender formlen Wh = (mAh × V) / 1000 og giver energien i watt-timer. Uanset om du sammenligner powerbanks, beregner batterikapacitet til solsystemer, dimensionerer batterireserver, estimerer opladningstid eller forstår enhedens energikrav — vores mAh til Wh beregner giver præcise, øjeblikkelige resultater til dine batteristyring og energiplanlægningsbehov.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "5000 mAh ved 3,7V: Wh = (5000 × 3,7) / 1000 = 18,5 Wh. 10 000 mAh ved 5V: Wh = (10 000 × 5) / 1000 = 50 Wh. 2500 mAh ved 1,5V: Wh = (2500 × 1,5) / 1000 = 3,75 Wh. 20 000 mAh ved 3,6V: Wh = (20 000 × 3,6) / 1000 = 72 Wh. Hvis et smartphone-batteri er vurderet 4000 mAh ved 3,85V, er dets energikapacitet (4000 × 3,85) / 1000 = 15,4 Wh."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er formlen for at konvertere mAh til Wh?",
+              "answer": "Formlen er Wh = (mAh × V) / 1000, hvor mAh er batterikapaciteten i milliampere-timer, V er spændingen i volt og Wh er energien i watt-timer. Dette konverterer elektrisk ladningskapacitet til faktisk energilagring. For eksempel er 5000 mAh ved 3,7V lig med (5000 × 3,7) / 1000 = 18,5 Wh."
+            },
+            {
+              "question": "Hvad er forskellen mellem mAh og Wh?",
+              "answer": "mAh (milliampere-timer) måler elektrisk ladningskapacitet — hvor meget strøm et batteri kan levere over tid. Wh (watt-timer) måler faktisk energi — det samlede elektriske arbejde batteriet kan udføre. mAh tager ikke højde for spænding, mens Wh gør. Et 10 000 mAh batteri ved 3,7V giver 37 Wh, men ved 5V giver det 50 Wh — samme mAh, forskellig energi."
+            },
+            {
+              "question": "Hvorfor har jeg brug for spænding til denne omregning?",
+              "answer": "Energi (Wh) afhænger af både ladning (mAh) og spænding (V). Samme mAh ved forskellige spændinger giver forskellig energi. Effekt = Spænding × Strøm, så højere spænding betyder mere energi for samme ladningskapacitet. Uden at kende spændingen kan faktisk energilagring ikke bestemmes."
+            },
+            {
+              "question": "Hvordan kan jeg bruge denne beregner til at sammenligne powerbanks?",
+              "answer": "Powerbanks lister ofte kapacitet i mAh, men kan have forskellige interne spændinger. Konverter begge til Wh for at sammenligne faktisk energi. En 10 000 mAh powerbank ved 3,7V (37 Wh) giver mindre energi end 10 000 mAh ved 5V (50 Wh). Sammenlign altid Wh, ikke kun mAh, for præcis kapacitetssammenligning."
+            },
+            {
+              "question": "Er denne beregner gratis?",
+              "answer": "Ja, vores mAh til Wh beregner er helt gratis. Ingen registrering eller betaling nødvendig. Indtast batterikapacitet i mAh og spænding i volt for øjeblikkelige, præcise energiresultater i Wh."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Beregnere",
+          "kwhToWatts": "kWh til Watt Beregner",
+          "kwhToWattsDesc": "Konverter kilowatt-timer til watt ved hjælp af varighed",
+          "wattsToKva": "Watt til kVA Beregner",
+          "wattsToKvaDesc": "Konverter watt til kilovolt-ampere med effektfaktor",
+          "kwToKva": "kW til kVA Beregner",
+          "kwToKvaDesc": "Konverter kilowatt til kilovolt-ampere øjeblikkeligt",
+          "kwToKwh": "kW til kWh Beregner",
+          "kwToKwhDesc": "Konverter effekt til energi ved hjælp af varighed"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere til kVA Lommeregner",
       "description": "Konverter ampere (A) til kilovoltampere (kVA) med det samme og præcist med spænding",

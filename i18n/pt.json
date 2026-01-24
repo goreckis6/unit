@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "Calculadora VA para Amperes",
+      "description": "Converter volt-amperes (VA) para amperes (A) instantaneamente usando voltagem para sistemas monofásicos e trifásicos",
+      "phaseType": "Tipo de Fase",
+      "singlePhase": "Monofásico",
+      "threePhase": "Trifásico",
+      "va": "Volt-Amperes (VA)",
+      "voltage": "Voltagem (V)",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "amps": "Amperes (A)",
+      "seo": {
+        "title": "Calculadora VA para Amperes - Converter Potência Aparente para Corrente Online",
+        "description": "Calculadora de conversão VA para Amperes gratuita. Converter volt-amperes para amperes instantaneamente usando voltagem. Suporta sistemas monofásicos e trifásicos. Perfeito para cálculos elétricos e design de circuitos.",
+        "keywords": "calculadora va para amperes, conversor volt-amperes para amperes, conversão va amperes, calculadora potência aparente para corrente, calculadora elétrica, calculadora de circuitos, calculadora gratuita",
+        "content": {
+          "heading": "Como Converter VA para Amperes",
+          "paragraph1": "Converter volt-amperes (VA) para amperes (A) é um cálculo fundamental em engenharia elétrica e sistemas de distribuição de energia. Volt-amperes representam potência aparente — a potência total consumida por um circuito elétrico — enquanto amperes representam o fluxo de corrente. A conversão requer conhecer a voltagem e se você está trabalhando com um sistema monofásico ou trifásico. Nossa calculadora VA para Amperes gratuita fornece conversões instantâneas e precisas para sistemas elétricos monofásicos e trifásicos, tornando seus cálculos de potência rápidos e confiáveis.",
+          "paragraph2": "As fórmulas são: Para sistemas monofásicos, I = VA / V, onde I é a corrente em amperes, VA é a potência aparente em volt-amperes e V é a voltagem em volts. Para sistemas trifásicos, I = VA / (√3 × V), onde √3 ≈ 1,732. Por exemplo, uma carga monofásica de 5000 VA a 230V consome 5000 / 230 = 21,74 amperes. A mesma carga de 5000 VA em um sistema trifásico de 400V consome 5000 / (1,732 × 400) = 7,22 amperes por fase. Esses cálculos são essenciais para dimensionar fiação, disjuntores e equipamentos elétricos.",
+          "paragraph3": "Esta conversão é crítica em muitas aplicações: dimensionamento de cabos e condutores elétricos, seleção de disjuntores e fusíveis apropriados, projeto de painéis de distribuição elétrica, cálculo de capacidade de corrente de cabos, determinação de queda de tensão em circuitos, dimensionamento de transformadores e geradores, compreensão do consumo de corrente de UPS e inversores, e garantia de conformidade com normas de segurança elétrica. Por exemplo, se um UPS é classificado em 3000 VA e opera a 230V monofásico, ele consome 3000 / 230 = 13,04 amperes em carga total, ajudando a selecionar a classificação correta do disjuntor.",
+          "paragraph4": "Nossa calculadora aceita volt-amperes e voltagem como entradas, permite selecionar entre sistemas monofásicos e trifásicos, aplica a fórmula apropriada (I = VA / V para monofásico ou I = VA / (√3 × V) para trifásico), e fornece a corrente em amperes. Seja dimensionando painéis elétricos, calculando capacidade de corrente de cabos, selecionando dispositivos de proteção de circuito, projetando sistemas de distribuição de energia ou garantindo conformidade com códigos, nossa calculadora VA para Amperes fornece resultados precisos e instantâneos para suas necessidades de engenharia elétrica.",
+          "exampleHeading": "Exemplo:",
+          "exampleText": "Monofásico: 5000 VA a 230V = 5000 / 230 = 21,74 A. Trifásico: 10.000 VA a 400V = 10.000 / (1,732 × 400) = 14,43 A. Monofásico: 3000 VA a 120V = 3000 / 120 = 25 A. Trifásico: 15.000 VA a 480V = 15.000 / (1,732 × 480) = 18,04 A. Se um escritório requer 8000 VA a 230V monofásico, o consumo de corrente é 8000 / 230 = 34,78 A, exigindo pelo menos um disjuntor de 40A."
+        },
+        "faq": {
+          "heading": "Perguntas Frequentes",
+          "items": [
+            {
+              "question": "Qual é a fórmula para converter VA para Amperes?",
+              "answer": "Para sistemas monofásicos: I = VA / V. Para sistemas trifásicos: I = VA / (√3 × V), onde I é a corrente em amperes, VA é a potência aparente em volt-amperes, V é a voltagem em volts e √3 ≈ 1,732. A fórmula trifásica leva em conta a distribuição de potência em três fases, resultando em menor corrente por fase para a mesma potência total."
+            },
+            {
+              "question": "Qual é a diferença entre VA e Amperes?",
+              "answer": "VA (volt-amperes) mede potência aparente — a potência elétrica total em um circuito, incluindo componentes reais e reativos. Amperes (amperes) mede corrente — o fluxo de carga elétrica. VA = Volts × Amperes. Eles medem diferentes propriedades elétricas: VA é potência, Amperes é fluxo de corrente. Você precisa da voltagem para converter entre eles."
+            },
+            {
+              "question": "Por que a fórmula trifásica é diferente?",
+              "answer": "Em sistemas trifásicos, a potência é distribuída em três fases. O fator √3 (1,732) leva em conta essa distribuição trifásica, resultando em menor corrente por fase comparado ao monofásico. Para os mesmos VA totais, sistemas trifásicos consomem menos corrente por fio, permitindo condutores menores e transmissão de potência mais eficiente."
+            },
+            {
+              "question": "Como usar isto para dimensionar disjuntores?",
+              "answer": "Calcule a corrente máxima (amperes) da classificação VA e voltagem. Adicione uma margem de segurança (tipicamente 125% conforme códigos elétricos). Arredonde para cima para o próximo tamanho padrão de disjuntor. Por exemplo, 5000 VA a 230V = 21,74A. Com margem de 125%: 21,74 × 1,25 = 27,17A. Use um disjuntor de 30A ou 32A. Sempre siga os códigos elétricos locais."
+            },
+            {
+              "question": "Esta calculadora é gratuita?",
+              "answer": "Sim, nossa calculadora VA para Amperes é completamente gratuita. Não é necessário registro ou pagamento. Selecione seu tipo de fase, insira volt-amperes e voltagem para resultados de corrente instantâneos e precisos em amperes para sistemas monofásicos ou trifásicos."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "wattsToKva": "Calculadora Watts para kVA",
+          "wattsToKvaDesc": "Converter watts para quilovolt-amperes com fator de potência",
+          "kwToKva": "Calculadora kW para kVA",
+          "kwToKvaDesc": "Converter quilowatts para quilovolt-amperes instantaneamente",
+          "mahToWh": "Calculadora mAh para Wh",
+          "mahToWhDesc": "Converter capacidade de bateria para energia com voltagem",
+          "kwhToWatts": "Calculadora kWh para Watts",
+          "kwhToWattsDesc": "Converter quilowatt-horas para watts usando duração"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculadora de Amperes para kVA",
       "description": "Converta amperes (A) para quilovoltamperes (kVA) instantaneamente e com precisão usando tensão",

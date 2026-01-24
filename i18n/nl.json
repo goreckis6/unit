@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "VA naar Ampère Calculator",
+      "description": "Converteer volt-ampère (VA) direct naar ampère (A) met spanning voor enkelfase en driefase systemen",
+      "phaseType": "Fasetype",
+      "singlePhase": "Enkelfase",
+      "threePhase": "Driefase",
+      "va": "Volt-Ampère (VA)",
+      "voltage": "Spanning (V)",
+      "calculate": "Bereken",
+      "reset": "Reset",
+      "result": "Resultaat",
+      "amps": "Ampère (A)",
+      "seo": {
+        "title": "VA naar Ampère Calculator - Converteer Schijnbaar Vermogen naar Stroom Online",
+        "description": "Gratis VA naar Ampère conversie calculator. Converteer volt-ampère direct naar ampère met spanning. Ondersteunt enkelfase en driefase systemen. Perfect voor elektrische berekeningen en schakelontwerp.",
+        "keywords": "va naar ampère calculator, volt-ampère naar ampère converter, va ampère conversie, schijnbaar vermogen naar stroom calculator, elektrische calculator, schakeling calculator, gratis calculator",
+        "content": {
+          "heading": "Hoe VA naar Ampère Converteren",
+          "paragraph1": "Het converteren van volt-ampère (VA) naar ampère (A) is een fundamentele berekening in elektrotechniek en energiedistributiesystemen. Volt-ampère vertegenwoordigt schijnbaar vermogen — het totale vermogen dat door een elektrisch circuit wordt verbruikt — terwijl ampère de stroomstroom vertegenwoordigt. De conversie vereist kennis van de spanning en of u werkt met een enkelfase of driefase systeem. Onze gratis VA naar Ampère calculator biedt directe, nauwkeurige conversies voor enkelfase en driefase elektrische systemen, waardoor uw vermogensberekeningen snel en betrouwbaar zijn.",
+          "paragraph2": "De formules zijn: Voor enkelfase systemen, I = VA / V, waarbij I de stroom in ampère is, VA het schijnbare vermogen in volt-ampère en V de spanning in volt. Voor driefase systemen, I = VA / (√3 × V), waarbij √3 ≈ 1,732. Bijvoorbeeld, een enkelfase belasting van 5000 VA bij 230V verbruikt 5000 / 230 = 21,74 ampère. Dezelfde 5000 VA belasting in een driefase 400V systeem verbruikt 5000 / (1,732 × 400) = 7,22 ampère per fase. Deze berekeningen zijn essentieel voor het dimensioneren van bedrading, stroomonderbrekers en elektrische apparatuur.",
+          "paragraph3": "Deze conversie is kritisch in veel toepassingen: dimensionering van elektrische kabels en geleiders, selectie van geschikte stroomonderbrekers en zekeringen, ontwerp van elektrische verdeelpanelen, berekening van stroomcapaciteit van kabels, bepaling van spanningsval in circuits, dimensionering van transformatoren en generatoren, begrip van stroomverbruik van UPS en omvormers, en waarborging van naleving van elektrische veiligheidsnormen. Bijvoorbeeld, als een UPS beoordeeld is op 3000 VA en werkt op 230V enkelfase, verbruikt het 3000 / 230 = 13,04 ampère bij volle belasting, wat helpt bij het selecteren van de juiste stroomonderbreker beoordeling.",
+          "paragraph4": "Onze calculator accepteert volt-ampère en spanning als invoer, stelt u in staat om te kiezen tussen enkelfase en driefase systemen, past de juiste formule toe (I = VA / V voor enkelfase of I = VA / (√3 × V) voor driefase), en levert de stroom in ampère. Of u nu elektrische panelen dimensioneert, kabelstroomcapaciteit berekent, circuitbeschermingsapparaten selecteert, energiedistributiesystemen ontwerpt of naleving van codes waarborgt, onze VA naar Ampère calculator levert nauwkeurige, directe resultaten voor uw elektrotechnische behoeften.",
+          "exampleHeading": "Voorbeeld:",
+          "exampleText": "Enkelfase: 5000 VA bij 230V = 5000 / 230 = 21,74 A. Driefase: 10.000 VA bij 400V = 10.000 / (1,732 × 400) = 14,43 A. Enkelfase: 3000 VA bij 120V = 3000 / 120 = 25 A. Driefase: 15.000 VA bij 480V = 15.000 / (1,732 × 480) = 18,04 A. Als een kantoor 8000 VA bij 230V enkelfase vereist, is het stroomverbruik 8000 / 230 = 34,78 A, wat minstens een 40A stroomonderbreker vereist."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            {
+              "question": "Wat is de formule om VA naar Ampère te converteren?",
+              "answer": "Voor enkelfase systemen: I = VA / V. Voor driefase systemen: I = VA / (√3 × V), waarbij I de stroom in ampère is, VA het schijnbare vermogen in volt-ampère, V de spanning in volt en √3 ≈ 1,732. De driefase formule houdt rekening met de vermogensdistributie over drie fasen, resulterend in lagere stroom per fase voor hetzelfde totale vermogen."
+            },
+            {
+              "question": "Wat is het verschil tussen VA en Ampère?",
+              "answer": "VA (volt-ampère) meet schijnbaar vermogen — het totale elektrische vermogen in een circuit, inclusief reële en reactieve componenten. Ampère (ampère) meet stroom — de stroom van elektrische lading. VA = Volt × Ampère. Ze meten verschillende elektrische eigenschappen: VA is vermogen, Ampère is stroomstroom. U heeft spanning nodig om tussen hen te converteren."
+            },
+            {
+              "question": "Waarom is de driefase formule anders?",
+              "answer": "In driefase systemen wordt het vermogen verdeeld over drie fasen. De √3 (1,732) factor houdt rekening met deze driefase distributie, resulterend in lagere stroom per fase vergeleken met enkelfase. Voor dezelfde totale VA verbruiken driefase systemen minder stroom per draad, waardoor kleinere geleiders en efficiëntere vermogensoverdracht mogelijk zijn."
+            },
+            {
+              "question": "Hoe gebruik ik dit voor het dimensioneren van stroomonderbrekers?",
+              "answer": "Bereken de maximale stroom (ampère) van de VA beoordeling en spanning. Voeg een veiligheidsmarge toe (typisch 125% volgens elektrische codes). Rond af naar boven naar de volgende standaard stroomonderbreker grootte. Bijvoorbeeld, 5000 VA bij 230V = 21,74A. Met 125% marge: 21,74 × 1,25 = 27,17A. Gebruik een 30A of 32A stroomonderbreker. Volg altijd lokale elektrische codes."
+            },
+            {
+              "question": "Is deze calculator gratis?",
+              "answer": "Ja, onze VA naar Ampère calculator is volledig gratis. Geen registratie of betaling vereist. Selecteer uw fasetype, voer volt-ampère en spanning in voor directe, nauwkeurige stroomresultaten in ampère voor enkelfase of driefase systemen."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde Calculators",
+          "wattsToKva": "Watt naar kVA Calculator",
+          "wattsToKvaDesc": "Converteer watt naar kilovolt-ampère met arbeidsfactor",
+          "kwToKva": "kW naar kVA Calculator",
+          "kwToKvaDesc": "Converteer kilowatt direct naar kilovolt-ampère",
+          "mahToWh": "mAh naar Wh Calculator",
+          "mahToWhDesc": "Converteer batterijcapaciteit naar energie met spanning",
+          "kwhToWatts": "kWh naar Watt Calculator",
+          "kwhToWattsDesc": "Converteer kilowattuur naar watt met tijdsduur"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere naar kVA Rekenmachine",
       "description": "Converteer ampère (A) naar kilovoltampère (kVA) direct en nauwkeurig met spanning",

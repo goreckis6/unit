@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "Calcolatore VA in Ampere",
+      "description": "Converti volt-ampere (VA) in ampere (A) istantaneamente usando la tensione per sistemi monofase e trifase",
+      "phaseType": "Tipo di Fase",
+      "singlePhase": "Monofase",
+      "threePhase": "Trifase",
+      "va": "Volt-Ampere (VA)",
+      "voltage": "Tensione (V)",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Calcolatore VA in Ampere - Convertire Potenza Apparente in Corrente Online",
+        "description": "Calcolatore di conversione VA in Ampere gratuito. Converti volt-ampere in ampere istantaneamente usando la tensione. Supporta sistemi monofase e trifase. Perfetto per calcoli elettrici e progettazione di circuiti.",
+        "keywords": "calcolatore va in ampere, convertitore volt-ampere in ampere, conversione va ampere, calcolatore potenza apparente in corrente, calcolatore elettrico, calcolatore di circuiti, calcolatore gratuito",
+        "content": {
+          "heading": "Come Convertire VA in Ampere",
+          "paragraph1": "Convertire volt-ampere (VA) in ampere (A) è un calcolo fondamentale nell'ingegneria elettrica e nei sistemi di distribuzione dell'energia. I volt-ampere rappresentano la potenza apparente — la potenza totale assorbita da un circuito elettrico — mentre gli ampere rappresentano il flusso di corrente. La conversione richiede di conoscere la tensione e se si sta lavorando con un sistema monofase o trifase. Il nostro calcolatore VA in Ampere gratuito fornisce conversioni istantanee e precise per sistemi elettrici monofase e trifase, rendendo i tuoi calcoli di potenza rapidi e affidabili.",
+          "paragraph2": "Le formule sono: Per sistemi monofase, I = VA / V, dove I è la corrente in ampere, VA è la potenza apparente in volt-ampere e V è la tensione in volt. Per sistemi trifase, I = VA / (√3 × V), dove √3 ≈ 1,732. Ad esempio, un carico monofase da 5000 VA a 230V assorbe 5000 / 230 = 21,74 ampere. Lo stesso carico da 5000 VA in un sistema trifase da 400V assorbe 5000 / (1,732 × 400) = 7,22 ampere per fase. Questi calcoli sono essenziali per dimensionare cavi, interruttori e apparecchiature elettriche.",
+          "paragraph3": "Questa conversione è critica in molte applicazioni: dimensionamento di cavi e conduttori elettrici, selezione di interruttori e fusibili appropriati, progettazione di quadri di distribuzione elettrica, calcolo della capacità di corrente dei cavi, determinazione della caduta di tensione nei circuiti, dimensionamento di trasformatori e generatori, comprensione del consumo di corrente di UPS e inverter, e garanzia della conformità alle norme di sicurezza elettrica. Ad esempio, se un UPS è valutato 3000 VA e funziona a 230V monofase, assorbe 3000 / 230 = 13,04 ampere a pieno carico, aiutando a selezionare la corretta valutazione dell'interruttore.",
+          "paragraph4": "Il nostro calcolatore accetta volt-ampere e tensione come input, ti consente di selezionare tra sistemi monofase e trifase, applica la formula appropriata (I = VA / V per monofase o I = VA / (√3 × V) per trifase), e fornisce la corrente in ampere. Sia che tu stia dimensionando pannelli elettrici, calcolando la capacità di corrente dei cavi, selezionando dispositivi di protezione del circuito, progettando sistemi di distribuzione dell'energia o garantendo la conformità ai codici, il nostro calcolatore VA in Ampere fornisce risultati precisi e istantanei per le tue esigenze di ingegneria elettrica.",
+          "exampleHeading": "Esempio:",
+          "exampleText": "Monofase: 5000 VA a 230V = 5000 / 230 = 21,74 A. Trifase: 10.000 VA a 400V = 10.000 / (1,732 × 400) = 14,43 A. Monofase: 3000 VA a 120V = 3000 / 120 = 25 A. Trifase: 15.000 VA a 480V = 15.000 / (1,732 × 480) = 18,04 A. Se un ufficio richiede 8000 VA a 230V monofase, il consumo di corrente è 8000 / 230 = 34,78 A, richiedendo almeno un interruttore da 40A."
+        },
+        "faq": {
+          "heading": "Domande Frequenti",
+          "items": [
+            {
+              "question": "Qual è la formula per convertire VA in Ampere?",
+              "answer": "Per sistemi monofase: I = VA / V. Per sistemi trifase: I = VA / (√3 × V), dove I è la corrente in ampere, VA è la potenza apparente in volt-ampere, V è la tensione in volt e √3 ≈ 1,732. La formula trifase tiene conto della distribuzione della potenza su tre fasi, risultando in corrente inferiore per fase per la stessa potenza totale."
+            },
+            {
+              "question": "Qual è la differenza tra VA e Ampere?",
+              "answer": "VA (volt-ampere) misura la potenza apparente — la potenza elettrica totale in un circuito, inclusi componenti reali e reattivi. Ampere (ampere) misura la corrente — il flusso di carica elettrica. VA = Volt × Ampere. Misurano diverse proprietà elettriche: VA è potenza, Ampere è flusso di corrente. È necessaria la tensione per convertire tra loro."
+            },
+            {
+              "question": "Perché la formula trifase è diversa?",
+              "answer": "Nei sistemi trifase, la potenza è distribuita su tre fasi. Il fattore √3 (1,732) tiene conto di questa distribuzione trifase, risultando in corrente inferiore per fase rispetto al monofase. Per gli stessi VA totali, i sistemi trifase assorbono meno corrente per cavo, consentendo conduttori più piccoli e trasmissione di potenza più efficiente."
+            },
+            {
+              "question": "Come usare questo per dimensionare gli interruttori?",
+              "answer": "Calcola la corrente massima (ampere) dalla valutazione VA e dalla tensione. Aggiungi un margine di sicurezza (tipicamente 125% secondo i codici elettrici). Arrotonda per eccesso alla dimensione standard di interruttore successiva. Ad esempio, 5000 VA a 230V = 21,74A. Con margine del 125%: 21,74 × 1,25 = 27,17A. Usa un interruttore da 30A o 32A. Segui sempre i codici elettrici locali."
+            },
+            {
+              "question": "Questo calcolatore è gratuito?",
+              "answer": "Sì, il nostro calcolatore VA in Ampere è completamente gratuito. Nessuna registrazione o pagamento richiesto. Seleziona il tuo tipo di fase, inserisci volt-ampere e tensione per risultati di corrente istantanei e precisi in ampere per sistemi monofase o trifase."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori Correlati",
+          "wattsToKva": "Calcolatore Watt in kVA",
+          "wattsToKvaDesc": "Converti watt in kilovolt-ampere con fattore di potenza",
+          "kwToKva": "Calcolatore kW in kVA",
+          "kwToKvaDesc": "Converti kilowatt in kilovolt-ampere istantaneamente",
+          "mahToWh": "Calcolatore mAh in Wh",
+          "mahToWhDesc": "Converti capacità della batteria in energia con tensione",
+          "kwhToWatts": "Calcolatore kWh in Watt",
+          "kwhToWattsDesc": "Converti kilowattora in watt usando la durata"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calcolatrice Ampere a kVA",
       "description": "Converti ampere (A) in chilovoltampere (kVA) istantaneamente e accuratamente usando tensione",

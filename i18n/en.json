@@ -496,7 +496,9 @@
     },
     "kwToAmps": {
       "title": "kW to Amps Calculator",
-      "description": "Convert kilowatts (kW) to amperes (A) instantly and accurately for single-phase and three-phase systems",
+      "description": "Convert kilowatts (kW) to amperes (A) instantly and accurately for DC, single-phase, and three-phase systems",
+      "currentType": "System type",
+      "directCurrent": "Direct Current (DC)",
       "singlePhase": "Single Phase",
       "threePhase": "Three Phase",
       "kw": "Kilowatts (kW)",
@@ -508,27 +510,31 @@
       "current": "Current",
       "seo": {
         "title": "kW to Amps Calculator - Convert Kilowatts to Amperes Online",
-        "description": "Free kW to Amps conversion calculator for single-phase and three-phase systems. Convert kilowatts to amperes instantly using voltage and power factor. Perfect for electrical design, circuit sizing, and power calculations.",
-        "keywords": "kw to amps calculator, kilowatts to amperes converter, kw amps conversion, power to current calculator, electrical calculator, amps calculator, single phase calculator, three phase calculator, free calculator",
+        "description": "Free kW to Amps conversion calculator for DC, single-phase, and three-phase systems. Convert kilowatts to amperes instantly using voltage and power factor (AC only). Perfect for electrical design, circuit sizing, and power calculations.",
+        "keywords": "kw to amps calculator, kilowatts to amperes converter, kw amps conversion, power to current calculator, electrical calculator, amps calculator, dc calculator, single phase calculator, three phase calculator, free calculator",
         "content": {
           "heading": "How to Convert kW to Amps",
-          "paragraph1": "Converting kilowatts (kW) to amperes (A) is a fundamental calculation in electrical engineering and power system design. Kilowatts represent real power (active power), while amperes represent electrical current. The conversion requires knowledge of voltage (V) and power factor (PF), and differs between single-phase and three-phase systems. Our free kW to Amps conversion calculator makes this process quick and easy, providing instant and accurate results for both single-phase and three-phase electrical systems.",
-          "paragraph2": "The conversion formula varies by system type: For single-phase systems: I(A) = P(kW) × 1000 / (PF × V), where I is the current in amperes, P is the power in kilowatts, PF is the power factor (a value between 0 and 1), and V is the voltage in volts. For three-phase systems: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), where V(L-L) is the line-to-line voltage. The power factor indicates how efficiently electrical power is being used, typically ranging from 0.8 to 0.95 for most electrical equipment.",
-          "paragraph3": "This conversion is commonly used in various applications: sizing circuit breakers, fuses, and cables for electrical installations, determining wire gauge requirements for safe current flow, calculating motor current draw from rated power, designing electrical distribution systems and panels, understanding equipment current requirements, selecting appropriate electrical components, and working with generators, transformers, and power distribution systems. Knowing how to convert kW to Amps helps you make informed decisions about electrical system design, equipment selection, and safety compliance.",
-          "paragraph4": "Our calculator takes the kilowatts, voltage, and power factor as inputs, and allows you to select between single-phase and three-phase systems. It automatically applies the appropriate conversion formula and provides the result in amperes. The calculator handles common voltages like 120V, 230V, 240V, 400V, 480V, and custom values. Whether you're sizing cables for a motor, selecting circuit breakers, or designing an electrical installation, our kW to Amps calculator provides accurate, instant conversions for your electrical calculations.",
+          "paragraph1": "Converting kilowatts (kW) to amperes (A) is a fundamental calculation in electrical engineering and power system design. Kilowatts represent real power (active power), while amperes represent electrical current. The conversion depends on the system type: for DC, only voltage (V) is needed; for AC single-phase and three-phase systems, voltage and power factor (PF) are required. Our free kW to Amps conversion calculator makes this process quick and easy, providing instant and accurate results for DC, single-phase, and three-phase electrical systems.",
+          "paragraph2": "The conversion formula varies by system type: For DC: I(A) = P(kW) × 1000 / V, where I is the current in amperes, P is the power in kilowatts, and V is the voltage in volts. No power factor is needed for DC. For single-phase AC: I(A) = P(kW) × 1000 / (PF × V). For three-phase AC: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), where V(L-L) is the line-to-line voltage. The power factor indicates how efficiently electrical power is being used in AC systems, typically ranging from 0.8 to 0.95 for most equipment.",
+          "paragraph3": "This conversion is commonly used in various applications: sizing circuit breakers, fuses, and cables for electrical installations, determining wire gauge requirements for safe current flow, calculating motor or inverter current draw from rated power, designing DC systems (solar, batteries, EVs) and AC distribution panels, understanding equipment current requirements, selecting appropriate electrical components, and working with generators, transformers, and power distribution systems. Knowing how to convert kW to Amps helps you make informed decisions about electrical system design, equipment selection, and safety compliance.",
+          "paragraph4": "Our calculator takes kilowatts and voltage as inputs, and allows you to select DC, single-phase, or three-phase. For AC modes, power factor is also required. It automatically applies the appropriate conversion formula and provides the result in amperes. The calculator handles common voltages including 12V, 24V, 48V (DC), 120V, 230V, 240V, 400V, 480V, and custom values. Whether you're sizing cables for a DC solar array, selecting circuit breakers for a motor, or designing an AC installation, our kW to Amps calculator provides accurate, instant conversions.",
           "exampleHeading": "Example:",
-          "exampleText": "For a single-phase system: If you have a 5 kW load at 230V with a power factor of 0.8, the current would be: I = (5 × 1000) / (0.8 × 230) = 5000 / 184 = 27.17 A. For a three-phase system: If you have a 10 kW load at 400V line-to-line with a power factor of 0.85, the current would be: I = (10 × 1000) / (√3 × 0.85 × 400) = 10000 / 588.58 = 16.99 A. For a single-phase system with 3 kW at 120V and PF of 0.9: I = (3 × 1000) / (0.9 × 120) = 3000 / 108 = 27.78 A."
+          "exampleText": "For DC: A 2 kW load at 24V draws I = (2 × 1000) / 24 = 83.33 A. For single-phase AC: A 5 kW load at 230V with PF 0.8 gives I = (5 × 1000) / (0.8 × 230) = 27.17 A. For three-phase AC: A 10 kW load at 400V line-to-line with PF 0.85 gives I = (10 × 1000) / (√3 × 0.85 × 400) = 16.99 A. For DC 3 kW at 48V: I = 3000 / 48 = 62.5 A."
         },
         "faq": {
           "heading": "Frequently Asked Questions",
           "items": [
             {
               "question": "What is the formula to convert kW to Amps?",
-              "answer": "For single-phase systems: I(A) = P(kW) × 1000 / (PF × V). For three-phase systems: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), where I is current in amperes, P is power in kilowatts, PF is power factor, and V is voltage in volts. For three-phase, use line-to-line voltage."
+              "answer": "For DC: I(A) = P(kW) × 1000 / V. For single-phase AC: I(A) = P(kW) × 1000 / (PF × V). For three-phase AC: I(A) = P(kW) × 1000 / (√3 × PF × V(L-L)), where I is current in amperes, P is power in kilowatts, PF is power factor, and V is voltage in volts. For three-phase, use line-to-line voltage. DC does not use power factor."
+            },
+            {
+              "question": "Do I need power factor for DC?",
+              "answer": "No. Power factor applies only to AC systems. For DC, the formula is I = (kW × 1000) / V. You only need kilowatts and voltage. Common DC voltages include 12V, 24V, 48V, and 120V for batteries, solar, and EV applications."
             },
             {
               "question": "What is the difference between single-phase and three-phase calculations?",
-              "answer": "Single-phase systems use the formula: I = (kW × 1000) / (PF × V). Three-phase systems include √3 (approximately 1.732) in the denominator: I = (kW × 1000) / (√3 × PF × V). This is because three-phase systems deliver more power at the same current level. Three-phase calculations also use line-to-line voltage, not phase voltage."
+              "answer": "Single-phase AC uses I = (kW × 1000) / (PF × V). Three-phase AC includes √3 (approximately 1.732) in the denominator: I = (kW × 1000) / (√3 × PF × V). Three-phase systems deliver more power at the same current level. Three-phase calculations use line-to-line voltage, not phase voltage."
             },
             {
               "question": "What voltage should I use for three-phase calculations?",
@@ -536,15 +542,11 @@
             },
             {
               "question": "What is power factor and what value should I use?",
-              "answer": "Power factor (PF) is the ratio of real power to apparent power, indicating how efficiently electrical power is being used. It ranges from 0 to 1. Typical values: resistive loads (heaters, incandescent lights) = 1.0, induction motors = 0.8-0.9, fluorescent lights = 0.85-0.95, LED lights = 0.9-0.95. If unknown, use 0.8 as a conservative estimate for motor loads or 0.9 for general mixed loads."
-            },
-            {
-              "question": "Why do I need to know current when I have power in kW?",
-              "answer": "Knowing current (amps) is essential for: selecting the correct wire size for safe current flow, choosing appropriate circuit breakers and fuses, ensuring cables and components can handle the current without overheating, complying with electrical codes and safety standards, and designing proper electrical protection systems. Current determines the physical sizing of electrical components, while power (kW) indicates energy consumption."
+              "answer": "Power factor (PF) is the ratio of real power to apparent power, indicating how efficiently electrical power is used in AC systems. It ranges from 0 to 1. Typical values: resistive loads (heaters, incandescent lights) = 1.0, induction motors = 0.8-0.9, fluorescent lights = 0.85-0.95, LED lights = 0.9-0.95. If unknown, use 0.8 for motor loads or 0.9 for general mixed loads. DC has no power factor."
             },
             {
               "question": "Is this calculator free to use?",
-              "answer": "Yes, our kW to Amps calculator is completely free to use. No registration or payment is required. Simply enter your values (kW, voltage, power factor) and select your system type (single-phase or three-phase) to get instant, accurate results."
+              "answer": "Yes, our kW to Amps calculator is completely free to use. No registration or payment is required. Enter kW and voltage, select system type (DC, single-phase, or three-phase), add power factor for AC, and get instant, accurate results."
             }
           ]
         }

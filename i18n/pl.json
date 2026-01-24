@@ -761,6 +761,66 @@
         }
       }
     },
+    "mahToWh": {
+      "title": "Kalkulator mAh na Wh",
+      "description": "Przelicz miliamperogodziny (mAh) na watogodziny (Wh) natychmiast używając napięcia",
+      "mah": "Miliamperogodziny (mAh)",
+      "voltage": "Napięcie (V)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "wh": "Watogodziny (Wh)",
+      "seo": {
+        "title": "Kalkulator mAh na Wh - Przelicz Pojemność Baterii na Energię Online",
+        "description": "Darmowy kalkulator konwersji mAh na Wh. Przelicz miliamperogodziny na watogodziny natychmiast używając napięcia. Idealny do obliczeń pojemności baterii, porównań powerbanków i analiz magazynowania energii.",
+        "keywords": "kalkulator mah na wh, konwerter miliamperogodzin na watogodziny, konwersja mah wh, kalkulator pojemności baterii, kalkulator powerbanku, kalkulator energii baterii, darmowy kalkulator",
+        "content": {
+          "heading": "Jak Przeliczyć mAh na Wh",
+          "paragraph1": "Przeliczanie miliamperogodzin (mAh) na watogodziny (Wh) jest niezbędnym obliczeniem podczas oceny pojemności baterii i magazynowania energii. Miliamperogodziny reprezentują pojemność ładunku elektrycznego — ile prądu bateria może dostarczyć w czasie — podczas gdy watogodziny reprezentują rzeczywiste magazynowanie energii — całkowitą energię elektryczną, którą bateria może zapewnić. Konwersja wymaga znajomości napięcia baterii, ponieważ energia zależy zarówno od ładunku, jak i napięcia. Nasz darmowy kalkulator mAh na Wh zapewnia natychmiastowe, dokładne konwersje dla Twoich obliczeń baterii i zarządzania energią.",
+          "paragraph2": "Wzór to: Wh = (mAh × V) / 1000, gdzie mAh to pojemność baterii w miliamperogodzinach, V to napięcie w woltach, a Wh to energia w watogodzinach. Na przykład bateria 5000 mAh przy 3,7V zawiera (5000 × 3,7) / 1000 = 18,5 Wh energii. To obliczenie jest niezbędne do porównywania baterii o różnych napięciach, zrozumienia rzeczywistej pojemności powerbanku, doboru systemów zasilania awaryjnego i obliczania czasu pracy urządzenia na podstawie zużycia energii.",
+          "paragraph3": "Ta konwersja jest kluczowa w wielu zastosowaniach: porównywanie powerbanków i przenośnych ładowarek o różnych napięciach, obliczanie rzeczywistego magazynowania energii w bateriach smartfonów i laptopów, określanie pojemności zasilania awaryjnego dla systemów UPS, dobór banków baterii słonecznych, zrozumienie wydajności baterii dronów i pojazdów RC oraz szacowanie czasu pracy urządzenia na podstawie specyfikacji baterii. Na przykład powerbank 10 000 mAh przy 3,7V zapewnia (10 000 × 3,7) / 1000 = 37 Wh, ale te same 10 000 mAh przy 5V zapewnia 50 Wh — znacznie więcej energii pomimo tej samej wartości mAh.",
+          "paragraph4": "Nasz kalkulator akceptuje miliamperogodziny i napięcie jako dane wejściowe, stosuje wzór Wh = (mAh × V) / 1000 i podaje energię w watogodzinach. Czy porównujesz powerbanki, obliczasz pojemność baterii dla systemów słonecznych, dobierasz zasilanie awaryjne, szacujesz czas ładowania, czy rozumiesz wymagania energetyczne urządzeń — nasz kalkulator mAh na Wh dostarcza dokładne, natychmiastowe wyniki dla Twoich potrzeb zarządzania bateriami i planowania energii.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "5000 mAh przy 3,7V: Wh = (5000 × 3,7) / 1000 = 18,5 Wh. 10 000 mAh przy 5V: Wh = (10 000 × 5) / 1000 = 50 Wh. 2500 mAh przy 1,5V: Wh = (2500 × 1,5) / 1000 = 3,75 Wh. 20 000 mAh przy 3,6V: Wh = (20 000 × 3,6) / 1000 = 72 Wh. Jeśli bateria smartfona ma pojemność 4000 mAh przy 3,85V, jej pojemność energetyczna wynosi (4000 × 3,85) / 1000 = 15,4 Wh."
+        },
+        "faq": {
+          "heading": "Często Zadawane Pytania",
+          "items": [
+            {
+              "question": "Jaki jest wzór na przeliczenie mAh na Wh?",
+              "answer": "Wzór to Wh = (mAh × V) / 1000, gdzie mAh to pojemność baterii w miliamperogodzinach, V to napięcie w woltach, a Wh to energia w watogodzinach. To przelicza pojemność ładunku elektrycznego na rzeczywiste magazynowanie energii. Na przykład 5000 mAh przy 3,7V równa się (5000 × 3,7) / 1000 = 18,5 Wh."
+            },
+            {
+              "question": "Jaka jest różnica między mAh a Wh?",
+              "answer": "mAh (miliamperogodziny) mierzy pojemność ładunku elektrycznego — ile prądu bateria może dostarczyć w czasie. Wh (watogodziny) mierzy rzeczywistą energię — całkowitą pracę elektryczną, którą bateria może wykonać. mAh nie uwzględnia napięcia, podczas gdy Wh tak. Bateria 10 000 mAh przy 3,7V zapewnia 37 Wh, ale przy 5V zapewnia 50 Wh — te same mAh, inna energia."
+            },
+            {
+              "question": "Dlaczego potrzebuję napięcia do tej konwersji?",
+              "answer": "Energia (Wh) zależy zarówno od ładunku (mAh), jak i napięcia (V). Te same mAh przy różnych napięciach zapewnia inną energię. Moc = Napięcie × Prąd, więc wyższe napięcie oznacza więcej energii przy tej samej pojemności ładunku. Bez znajomości napięcia nie można określić rzeczywistego magazynowania energii."
+            },
+            {
+              "question": "Jak mogę użyć tego kalkulatora do porównania powerbanków?",
+              "answer": "Powerbanki często podają pojemność w mAh, ale mogą mieć różne napięcia wewnętrzne. Przelicz oba na Wh, aby porównać rzeczywistą energię. Powerbank 10 000 mAh przy 3,7V (37 Wh) zapewnia mniej energii niż 10 000 mAh przy 5V (50 Wh). Zawsze porównuj Wh, a nie tylko mAh, dla dokładnego porównania pojemności."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak, nasz kalkulator mAh na Wh jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Wprowadź pojemność baterii w mAh i napięcie w woltach, aby uzyskać natychmiastowe, dokładne wyniki energii w Wh."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "kwhToWatts": "Kalkulator kWh na Waty",
+          "kwhToWattsDesc": "Przelicz kilowatogodziny na waty używając czasu trwania",
+          "wattsToKva": "Kalkulator Watów na kVA",
+          "wattsToKvaDesc": "Przelicz waty na kilowoltoampery ze współczynnikiem mocy",
+          "kwToKva": "Kalkulator kW na kVA",
+          "kwToKvaDesc": "Przelicz kilowaty na kilowoltoampery natychmiast",
+          "kwToKwh": "Kalkulator kW na kWh",
+          "kwToKwhDesc": "Przelicz moc na energię używając czasu trwania"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulator Ampery na kVA",
       "description": "Konwertuj ampery (A) na kilowoltampery (kVA) natychmiast i dokładnie używając napięcia",

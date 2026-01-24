@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "Kalkulačka VA na Ampéry",
+      "description": "Previesť volt-ampéry (VA) na ampéry (A) okamžite pomocou napätia pre jednofázové a trojfázové systémy",
+      "phaseType": "Typ Fázy",
+      "singlePhase": "Jednofázový",
+      "threePhase": "Trojfázový",
+      "va": "Volt-Ampéry (VA)",
+      "voltage": "Napätie (V)",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "amps": "Ampéry (A)",
+      "seo": {
+        "title": "Kalkulačka VA na Ampéry - Prevod Zdanlivého Výkonu na Prúd Online",
+        "description": "Bezplatná kalkulačka prevodu VA na Ampéry. Previesť volt-ampéry na ampéry okamžite pomocou napätia. Podporuje jednofázové a trojfázové systémy. Perfektné pre elektrické výpočty a návrh obvodov.",
+        "keywords": "kalkulačka va na ampéry, prevodník volt-ampérov na ampéry, prevod va ampéry, kalkulačka zdanlivého výkonu na prúd, elektrická kalkulačka, kalkulačka obvodov, bezplatná kalkulačka",
+        "content": {
+          "heading": "Ako Previesť VA na Ampéry",
+          "paragraph1": "Prevod volt-ampérov (VA) na ampéry (A) je základný výpočet v elektrotechnike a systémoch distribúcie energie. Volt-ampéry predstavujú zdanlivý výkon — celkový výkon odoberaný elektrickým obvodom — zatiaľ čo ampéry predstavujú tok prúdu. Prevod vyžaduje znalosť napätia a či pracujete s jednofázovým alebo trojfázovým systémom. Naša bezplatná kalkulačka VA na Ampéry poskytuje okamžité, presné prevody pre jednofázové a trojfázové elektrické systémy, vďaka čomu sú vaše výpočty výkonu rýchle a spoľahlivé.",
+          "paragraph2": "Vzorce sú: Pre jednofázové systémy, I = VA / V, kde I je prúd v ampéroch, VA je zdanlivý výkon vo volt-ampéroch a V je napätie vo voltoch. Pre trojfázové systémy, I = VA / (√3 × V), kde √3 ≈ 1,732. Napríklad jednofázová záťaž 5000 VA pri 230V odoberá 5000 / 230 = 21,74 ampérov. Rovnaká záťaž 5000 VA v trojfázovom systéme 400V odoberá 5000 / (1,732 × 400) = 7,22 ampérov na fázu. Tieto výpočty sú nevyhnutné pre dimenzovanie kabeláže, istiacich a elektrického zariadenia.",
+          "paragraph3": "Tento prevod je kritický v mnohých aplikáciách: dimenzovanie elektrických káblov a vodičov, výber vhodných istiacich a poistiek, návrh elektrických rozvádzačov, výpočet prúdovej kapacity káblov, určenie úbytku napätia v obvodoch, dimenzovanie transformátorov a generátorov, pochopenie odberu prúdu UPS a meničov a zabezpečenie súladu s normami elektrickej bezpečnosti. Napríklad, ak je UPS hodnotený na 3000 VA a pracuje pri 230V jednofázovo, odoberá pri plnom zaťažení 3000 / 230 = 13,04 ampérov, čo pomáha vybrať správne hodnotenie istiace.",
+          "paragraph4": "Naša kalkulačka prijíma volt-ampéry a napätie ako vstupy, umožňuje vybrať medzi jednofázovými a trojfázovými systémami, aplikuje príslušný vzorec (I = VA / V pre jednofázový alebo I = VA / (√3 × V) pre trojfázový) a poskytuje prúd v ampéroch. Či už dimenzujete elektrické panely, počítate prúdovú kapacitu káblov, vyberiete ochranné zariadenia obvodov, navrhujete systémy distribúcie energie alebo zabezpečujete súlad s predpismi, naša kalkulačka VA na Ampéry poskytuje presné, okamžité výsledky pre vaše elektrotechnické potreby.",
+          "exampleHeading": "Príklad:",
+          "exampleText": "Jednofázový: 5000 VA pri 230V = 5000 / 230 = 21,74 A. Trojfázový: 10 000 VA pri 400V = 10 000 / (1,732 × 400) = 14,43 A. Jednofázový: 3000 VA pri 120V = 3000 / 120 = 25 A. Trojfázový: 15 000 VA pri 480V = 15 000 / (1,732 × 480) = 18,04 A. Ak kancelária vyžaduje 8000 VA pri 230V jednofázovo, odber prúdu je 8000 / 230 = 34,78 A, vyžadujúci aspoň istič 40A."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Aký je vzorec pre prevod VA na Ampéry?",
+              "answer": "Pre jednofázové systémy: I = VA / V. Pre trojfázové systémy: I = VA / (√3 × V), kde I je prúd v ampéroch, VA je zdanlivý výkon vo volt-ampéroch, V je napätie vo voltoch a √3 ≈ 1,732. Trojfázový vzorec zohľadňuje rozloženie výkonu v troch fázach, čo vedie k nižšiemu prúdu na fázu pri rovnakom celkovom výkone."
+            },
+            {
+              "question": "Aký je rozdiel medzi VA a Ampéry?",
+              "answer": "VA (volt-ampéry) meria zdanlivý výkon — celkový elektrický výkon v obvode, vrátane skutočných a reaktívnych zložiek. Ampéry (ampéry) meria prúd — tok elektrického náboja. VA = Volty × Ampéry. Meria rôzne elektrické vlastnosti: VA je výkon, Ampéry je tok prúdu. Na prevod medzi nimi potrebujete napätie."
+            },
+            {
+              "question": "Prečo je trojfázový vzorec iný?",
+              "answer": "V trojfázových systémoch je výkon rozdelený do troch fáz. Faktor √3 (1,732) zohľadňuje toto trojfázové rozdelenie, čo vedie k nižšiemu prúdu na fázu v porovnaní s jednofázovým. Pre rovnaké celkové VA odoberajú trojfázové systémy menej prúdu na vodič, čo umožňuje menšie vodiče a efektívnejší prenos výkonu."
+            },
+            {
+              "question": "Ako to použiť pre dimenzovanie istiacich?",
+              "answer": "Vypočítajte maximálny prúd (ampéry) z hodnotenia VA a napätia. Pridajte bezpečnostnú rezervu (typicky 125% podľa elektrických predpisov). Zaokrúhite nahor na ďalšiu štandardnú veľkosť istiače. Napríklad, 5000 VA pri 230V = 21,74A. S rezervou 125%: 21,74 × 1,25 = 27,17A. Použite istič 30A alebo 32A. Vždy dodržiavajte miestne elektrické predpisy."
+            },
+            {
+              "question": "Je táto kalkulačka zadarmo?",
+              "answer": "Áno, naša kalkulačka VA na Ampéry je úplne zadarmo. Nie je vyžadovaná žiadna registrácia ani platba. Vyberte typ fázy, zadajte volt-ampéry a napätie pre okamžité, presné výsledky prúdu v ampéroch pre jednofázové alebo trojfázové systémy."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace Kalkulačky",
+          "wattsToKva": "Kalkulačka Wattov na kVA",
+          "wattsToKvaDesc": "Previesť watty na kilovolt-ampéry s účinníkom",
+          "kwToKva": "Kalkulačka kW na kVA",
+          "kwToKvaDesc": "Previesť kilowatty na kilovolt-ampéry okamžite",
+          "mahToWh": "Kalkulačka mAh na Wh",
+          "mahToWhDesc": "Previesť kapacitu batérie na energiu s napätím",
+          "kwhToWatts": "Kalkulačka kWh na Watty",
+          "kwhToWattsDesc": "Previesť kilowatthodiny na watty pomocou doby trvania"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulačka Ampérov na kVA",
       "description": "Preveďte ampéry (A) na kilovoltampéry (kVA) okamžite a presne pomocou napätia",

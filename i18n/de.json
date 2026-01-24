@@ -660,6 +660,40 @@
         }
       }
     },
+    "kwToKva": {
+      "title": "kW zu kVA Rechner",
+      "description": "Kilowatt (kW) sofort in Kilovoltampere (kVA) mit Leistungsfaktor umrechnen",
+      "kw": "Kilowatt (kW)",
+      "powerFactor": "Leistungsfaktor (0-1)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "kva": "Kilovoltampere (kVA)",
+      "seo": {
+        "title": "kW zu kVA Rechner - Wirkleistung in Scheinleistung Online umrechnen",
+        "description": "Kostenloser kW zu kVA Umrechner. Kilowatt sofort in Kilovoltampere umrechnen mit Leistungsfaktor. Perfekt für elektrische Berechnungen, Stromversorgungssysteme und Geräteauslegung.",
+        "keywords": "kw zu kva rechner, kilowatt zu kilovoltampere umrechner, kw kva umrechnung, wirkleistung zu scheinleistung rechner, elektrischer rechner, kva rechner, leistungsfaktor rechner, kostenloser rechner",
+        "content": {
+          "heading": "Wie man kW in kVA umrechnet",
+          "paragraph1": "Die Umrechnung von Kilowatt (kW) in Kilovoltampere (kVA) ist in der Elektrotechnik und Energieversorgung von zentraler Bedeutung. Kilowatt stellen die Wirkleistung dar — die tatsächlich von einer elektrischen Last verrichtete Arbeit — während Kilovoltampere die Scheinleistung darstellen — die gesamte von der Quelle gelieferte Leistung, einschließlich Wirk- und Blindkomponenten. Die Umrechnung erfordert den Leistungsfaktor (PF), das Verhältnis von Wirkleistung zu Scheinleistung. Unser kostenloser kW zu kVA Rechner liefert sofortige, präzise Umrechnungen zur Dimensionierung von Geräten, Transformatoren und Generatoren.",
+          "paragraph2": "Die Formel lautet: kVA = kW / PF, wobei kVA die Scheinleistung in Kilovoltampere, kW die Wirkleistung in Kilowatt und PF der Leistungsfaktor (ein Wert zwischen 0 und 1) ist. Beispiel: Eine Last von 5 kW bei PF 0,8 benötigt 5 / 0,8 = 6,25 kVA Scheinleistung. Ein niedrigerer Leistungsfaktor bedeutet, dass für dieselbe Wirkleistung eine höhere Scheinleistung erforderlich ist. Der Leistungsfaktor gibt an, wie effizient das elektrische System Scheinleistung in nutzbare Arbeit umsetzt: PF 1,0 (Einheit) ist 100 % effizient; niedrigere Werte bedeuten Blindleistungsverluste.",
+          "paragraph3": "Diese Umrechnung ist in vielen Anwendungen entscheidend: Dimensionierung von Transformatoren und Generatoren zur Sicherstellung ausreichender Kapazität für Wirklasten, Planung elektrischer Verteilsysteme und USV-Anlagen, Berechnung von Leistungsschalter- und Leiterbemessungen, Verständnis des Verhaltens von Motoren und induktiven Lasten sowie Planung der Leistungskapazität für Gewerbe- und Industrieanlagen. Die Kenntnis der Umrechnung von kW zu kVA hilft Ihnen, korrekt dimensionierte Geräte auszuwählen, Überlastungen zu vermeiden und die Energieeffizienz zu optimieren.",
+          "paragraph4": "Unser Rechner akzeptiert Kilowatt und Leistungsfaktor als Eingaben, wendet die Formel kVA = kW / PF an und gibt die Scheinleistung in Kilovoltampere aus. Ob Sie mit Motoren, Transformatoren, Generatoren, USV-Systemen oder induktiven oder kapazitiven Lasten arbeiten — der kW zu kVA Rechner liefert präzise, sofortige Ergebnisse für Ihre elektrische Planung und Analyse.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "5 kW bei PF 0,8: kVA = 5 / 0,8 = 6,25 kVA. 10 kW bei PF 0,9: kVA = 10 / 0,9 = 11,11 kVA. 2 kW bei PF 1,0 (ohmsche Last): kVA = 2 / 1,0 = 2 kVA. 3,5 kW bei PF 0,85: kVA = 3,5 / 0,85 = 4,12 kVA. Ein 7,5 kW Motor bei PF 0,75 benötigt 7,5 / 0,75 = 10 kVA Scheinleistung."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            { "question": "Was ist die Formel zur Umrechnung von kW in kVA?", "answer": "Die Formel lautet kVA = kW / PF, wobei kVA die Scheinleistung in Kilovoltampere, kW die Wirkleistung in Kilowatt und PF der Leistungsfaktor (0 bis 1) ist. Wirkleistung = Scheinleistung × PF, also Scheinleistung = Wirkleistung / PF." },
+            { "question": "Was ist der Unterschied zwischen kW und kVA?", "answer": "kW (Kilowatt) ist Wirkleistung — die tatsächlich von der Last verrichtete Arbeit (z. B. mechanische Leistung, Wärme, Licht). kVA (Kilovoltampere) ist Scheinleistung — die gesamte von der Quelle gelieferte Leistung, einschließlich Blindleistung, die keine nutzbare Arbeit verrichtet. kVA ≥ kW immer; sie sind gleich nur bei PF = 1,0 (rein ohmsche Last)." },
+            { "question": "Was ist der Leistungsfaktor und welche Werte sind typisch?", "answer": "Der Leistungsfaktor (PF) ist das Verhältnis kW / kVA im Bereich von 0 bis 1. Er misst, wie effizient elektrische Leistung in nutzbare Arbeit umgewandelt wird. Typische Werte: ohmsche Heizungen ~1,0, Leuchtstofflampen 0,5–0,95, Induktionsmotoren 0,7–0,9, Netzteile 0,6–0,95. Niedrigerer PF bedeutet, dass für dieselbe kW-Leistung höhere kVA erforderlich sind, was die Leitungs- und Transformatorgröße erhöht." },
+            { "question": "Warum muss ich kW in kVA umrechnen?", "answer": "Transformatoren, Generatoren, USV-Anlagen und Leistungsschalter sind in kVA, nicht in kW, angegeben. Eine Last mit 10 kW bei PF 0,8 benötigt 12,5 kVA Versorgungskapazität. Die Dimensionierung von Geräten nur nach kW (unter Ignorierung von PF) kann zu Überlastung führen. Die Umrechnung von kW zu kVA stellt sicher, dass Sie Geräte mit ausreichender Scheinleistungskapazität wählen." },
+            { "question": "Ist dieser Rechner kostenlos?", "answer": "Ja, unser kW zu kVA Rechner ist kostenlos. Keine Registrierung oder Zahlung erforderlich. Geben Sie Leistung in kW und Leistungsfaktor (0–1) ein, um sofortige, präzise Scheinleistungsergebnisse in kVA zu erhalten." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere zu kVA Rechner",
       "description": "Wandeln Sie Ampere (A) in Kilovoltampere (kVA) sofort und genau mit Spannung um",

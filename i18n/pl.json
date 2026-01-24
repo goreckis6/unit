@@ -678,6 +678,40 @@
         }
       }
     },
+    "kwToKva": {
+      "title": "Kalkulator kW na kVA",
+      "description": "Przelicz kilowaty (kW) na kilowoltoampery (kVA) natychmiast, używając współczynnika mocy",
+      "kw": "Kilowaty (kW)",
+      "powerFactor": "Współczynnik mocy (0-1)",
+      "calculate": "Oblicz",
+      "reset": "Reset",
+      "result": "Wynik",
+      "kva": "Kilowoltoampery (kVA)",
+      "seo": {
+        "title": "Kalkulator kW na kVA - Przelicz Moc Czynną na Moc Pozorną Online",
+        "description": "Darmowy kalkulator konwersji kW na kVA. Przelicz kilowaty na kilowoltoampery natychmiast, używając współczynnika mocy. Idealny do obliczeń elektrycznych, systemów zasilania i doboru urządzeń.",
+        "keywords": "kalkulator kw na kva, konwerter kilowatów na kilowoltoampery, konwersja kw kva, kalkulator mocy czynnej na pozorną, kalkulator elektryczny, kalkulator kva, kalkulator współczynnika mocy, darmowy kalkulator",
+        "content": {
+          "heading": "Jak przeliczyć kW na kVA",
+          "paragraph1": "Przeliczanie kilowatów (kW) na kilowoltoampery (kVA) jest kluczowe w energetyce i systemach elektrycznych. Kilowaty oznaczają moc czynną — rzeczywistą pracę wykonywaną przez odbiornik — a kilowoltoampery oznaczają moc pozorną — całkowitą moc dostarczaną przez źródło, obejmującą składową czynną i bierną. Konwersja wymaga współczynnika mocy (PF), czyli stosunku mocy czynnej do pozornej. Nasz darmowy kalkulator kW na kVA daje natychmiastowe, dokładne konwersje do doboru urządzeń, transformatorów i generatorów.",
+          "paragraph2": "Wzór: kVA = kW / PF, gdzie kVA — moc pozorna w kilowoltoamperach, kW — moc czynna w kilowatach, PF — współczynnik mocy (wartość od 0 do 1). Np. obciążenie 5 kW przy PF 0,8 wymaga 5 / 0,8 = 6,25 kVA mocy pozornej. Niższy współczynnik mocy oznacza wyższą moc pozorną potrzebną do dostarczenia tej samej mocy czynnej. PF wskazuje, jak efektywnie system zamienia moc pozorną w użyteczną pracę: PF 1,0 (jedynkowy) to 100% sprawności; niższe wartości oznaczają straty mocy biernej.",
+          "paragraph3": "Konwersja jest kluczowa w wielu zastosowaniach: dobór transformatorów i generatorów zapewniający wystarczającą pojemność dla obciążeń czynnych, projektowanie systemów dystrybucji i UPS-ów, obliczanie znamionów wyłączników i przewodów, analiza zachowania silników i obciążeń indukcyjnych, planowanie pojemności zasilania obiektów komercyjnych i przemysłowych. Znajomość przeliczania kW na kVA pomaga wybrać urządzenia o odpowiednich rozmiarach, uniknąć przeciążeń i zoptymalizować efektywność energetyczną.",
+          "paragraph4": "Kalkulator przyjmuje kilowaty i współczynnik mocy, stosuje wzór kVA = kW / PF i podaje moc pozorną w kilowoltoamperach. Niezależnie od silników, transformatorów, generatorów, UPS-ów czy obciążeń indukcyjnych lub pojemnościowych — kalkulator kW na kVA zapewnia dokładne, natychmiastowe wyniki dla Twoich projektów i analiz elektrycznych.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "5 kW przy PF 0,8: kVA = 5 / 0,8 = 6,25 kVA. 10 kW przy PF 0,9: kVA = 10 / 0,9 = 11,11 kVA. 2 kW przy PF 1,0 (odbiornik rezystancyjny): kVA = 2 / 1,0 = 2 kVA. 3,5 kW przy PF 0,85: kVA = 3,5 / 0,85 = 4,12 kVA. Silnik 7,5 kW przy PF 0,75 wymaga 7,5 / 0,75 = 10 kVA zasilania pozornego."
+        },
+        "faq": {
+          "heading": "Najczęściej zadawane pytania",
+          "items": [
+            { "question": "Jaki jest wzór na przeliczanie kW na kVA?", "answer": "Wzór: kVA = kW / PF, gdzie kVA to moc pozorna w kilowoltoamperach, kW — moc czynna w kilowatach, PF — współczynnik mocy (0–1). Moc czynna = moc pozorna × PF, więc moc pozorna = moc czynna / PF." },
+            { "question": "Jaka jest różnica między kW a kVA?", "answer": "kW (kilowaty) to moc czynna — rzeczywista praca wykonywana przez obciążenie (np. wyjście mechaniczne, ciepło, światło). kVA (kilowoltoampery) to moc pozorna — całkowita moc dostarczana przez źródło, zawierająca moc bierną nierealizującą użytecznej pracy. Zawsze kVA ≥ kW; są równe tylko przy PF = 1,0 (obciążenie czysto rezystancyjne)." },
+            { "question": "Czym jest współczynnik mocy i jakie są typowe wartości?", "answer": "Współczynnik mocy (PF) to stosunek kW / kVA, od 0 do 1. Mierzy, jak efektywnie moc elektryczna jest zamieniana w użyteczną pracę. Typowe wartości: grzejniki rezystancyjne ~1,0, świetlówki 0,5–0,95, silniki indukcyjne 0,7–0,9, zasilacze 0,6–0,95. Niższy PF oznacza, że do dostarczenia takiej samej mocy kW potrzeba wyższej mocy kVA, co zwiększa wymiary przewodów i transformatorów." },
+            { "question": "Dlaczego muszę przeliczać kW na kVA?", "answer": "Transformatory, generatory, UPS-y i wyłączniki są znamionowane w kVA, a nie w kW. Obciążenie pobierające 10 kW przy PF 0,8 wymaga 12,5 kVA pojemności zasilania. Dobór urządzeń tylko według kW (z pominięciem PF) może prowadzić do przeciążenia. Przeliczanie kW na kVA zapewnia wybór urządzeń o wystarczającej pojemności mocy pozornej." },
+            { "question": "Czy kalkulator jest darmowy?", "answer": "Tak, kalkulator kW na kVA jest darmowy. Bez rejestracji i płatności. Wpisz moc w kW i współczynnik mocy (0–1), aby uzyskać natychmiastowy wynik mocy pozornej w kVA." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulator Ampery na kVA",
       "description": "Konwertuj ampery (A) na kilowoltampery (kVA) natychmiast i dokładnie używając napięcia",

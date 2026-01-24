@@ -660,6 +660,40 @@
         }
       }
     },
+    "kwToKva": {
+      "title": "kW naar kVA Rekenmachine",
+      "description": "Converteer kilowatt (kW) direct naar kilovoltampère (kVA) met vermogensfactor",
+      "kw": "Kilowatt (kW)",
+      "powerFactor": "Vermogensfactor (0-1)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "kva": "Kilovoltampère (kVA)",
+      "seo": {
+        "title": "kW naar kVA Rekenmachine - Werkelijk Vermogen naar Schijnbaar Vermogen Online Converteren",
+        "description": "Gratis kW naar kVA conversie rekenmachine. Converteer kilowatt direct naar kilovoltampère met vermogensfactor. Perfect voor elektrische berekeningen, energiesystemen en apparatuur dimensionering.",
+        "keywords": "kw naar kva rekenmachine, kilowatt naar kilovoltampère converter, kw kva conversie, werkelijk vermogen naar schijnbaar vermogen rekenmachine, elektrische rekenmachine, kva rekenmachine, vermogensfactor rekenmachine, gratis rekenmachine",
+        "content": {
+          "heading": "Hoe kW naar kVA converteren",
+          "paragraph1": "Het converteren van kilowatt (kW) naar kilovoltampère (kVA) is essentieel in elektrotechniek en energiesystemen. Kilowatt vertegenwoordigen werkelijk vermogen — het daadwerkelijke werk verricht door een elektrische belasting — terwijl kilovoltampère het schijnbare vermogen vertegenwoordigen — het totale vermogen geleverd door de bron, inclusief werkelijke en reactieve componenten. De conversie vereist de vermogensfactor (PF), dat is de verhouding tussen werkelijk vermogen en schijnbaar vermogen. Onze gratis kW naar kVA rekenmachine biedt directe, nauwkeurige conversies voor het dimensioneren van apparatuur, transformatoren en generatoren.",
+          "paragraph2": "De formule is: kVA = kW / PF, waarbij kVA het schijnbare vermogen in kilovoltampère is, kW het werkelijke vermogen in kilowatt, en PF de vermogensfactor (een waarde tussen 0 en 1). Bijvoorbeeld, een belasting van 5 kW met een vermogensfactor van 0,8 vereist 5 / 0,8 = 6,25 kVA schijnbaar vermogen. Een lagere vermogensfactor betekent dat er meer schijnbaar vermogen nodig is om hetzelfde werkelijke vermogen te leveren. De vermogensfactor geeft aan hoe efficiënt het elektrische systeem schijnbaar vermogen omzet in nuttig werk: een PF van 1,0 (eenheid) is 100% efficiënt; lagere waarden duiden op verliezen aan reactief vermogen.",
+          "paragraph3": "Deze conversie is cruciaal in veel toepassingen: dimensionering van transformatoren en generatoren om voldoende capaciteit voor werkelijke belastingen te garanderen, ontwerp van elektrische distributiesystemen en UPS-units, berekening van stroomonderbrekers en geleiders, begrip van het gedrag van motoren en inductieve belastingen, en planning van energiecapaciteit voor commerciële en industriële faciliteiten. Weten hoe kW naar kVA te converteren helpt u correct gedimensioneerde apparatuur te selecteren, overbelasting te voorkomen en energie-efficiëntie te optimaliseren.",
+          "paragraph4": "Onze rekenmachine accepteert kilowatt en vermogensfactor als invoer, past de formule kVA = kW / PF toe, en levert het schijnbare vermogen in kilovoltampère. Of u nu werkt met motoren, transformatoren, generatoren, UPS-systemen, of inductieve of capacitieve belastingen — de kW naar kVA rekenmachine biedt nauwkeurige, directe resultaten voor uw elektrisch ontwerp en analyse.",
+          "exampleHeading": "Voorbeeld:",
+          "exampleText": "5 kW bij PF 0,8: kVA = 5 / 0,8 = 6,25 kVA. 10 kW bij PF 0,9: kVA = 10 / 0,9 = 11,11 kVA. 2 kW bij PF 1,0 (resistieve belasting): kVA = 2 / 1,0 = 2 kVA. 3,5 kW bij PF 0,85: kVA = 3,5 / 0,85 = 4,12 kVA. Een 7,5 kW motor bij PF 0,75 vereist 7,5 / 0,75 = 10 kVA schijnbaar vermogen voeding."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            { "question": "Wat is de formule om kW naar kVA te converteren?", "answer": "De formule is kVA = kW / PF, waarbij kVA schijnbaar vermogen in kilovoltampère is, kW werkelijk vermogen in kilowatt, en PF de vermogensfactor (0 tot 1). Werkelijk vermogen = schijnbaar vermogen × PF, dus schijnbaar vermogen = werkelijk vermogen / PF." },
+            { "question": "Wat is het verschil tussen kW en kVA?", "answer": "kW (kilowatt) is werkelijk vermogen — het daadwerkelijke werk verricht door de belasting (bijv. mechanische output, warmte, licht). kVA (kilovoltampère) is schijnbaar vermogen — het totale vermogen geleverd door de bron, inclusief reactief vermogen dat geen nuttig werk verricht. kVA ≥ kW altijd; ze zijn gelijk alleen wanneer PF = 1,0 (puur resistieve belasting)." },
+            { "question": "Wat is vermogensfactor en welke waarden zijn typisch?", "answer": "Vermogensfactor (PF) is de verhouding kW / kVA, variërend van 0 tot 1. Het meet hoe efficiënt elektrisch vermogen wordt omgezet in nuttig werk. Typische waarden: resistieve verwarming ~1,0, fluorescentielampen 0,5–0,95, inductiemotoren 0,7–0,9, voedingen 0,6–0,95. Lagere PF betekent dat hogere kVA nodig zijn voor dezelfde kW, wat de grootte van geleiders en transformatoren verhoogt." },
+            { "question": "Waarom moet ik kW naar kVA converteren?", "answer": "Transformatoren, generatoren, UPS-units en stroomonderbrekers zijn geclassificeerd in kVA, niet in kW. Een belasting van 10 kW bij PF 0,8 vereist 12,5 kVA voedingscapaciteit. Apparatuur dimensioneren op alleen kW (PF negeren) kan leiden tot overbelasting. kW naar kVA converteren zorgt ervoor dat u apparatuur selecteert met voldoende schijnbaar vermogen capaciteit." },
+            { "question": "Is deze rekenmachine gratis?", "answer": "Ja, onze kW naar kVA rekenmachine is gratis. Geen registratie of betaling vereist. Voer vermogen in kW en vermogensfactor (0–1) in om directe, nauwkeurige resultaten in kVA te krijgen." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere naar kVA Rekenmachine",
       "description": "Converteer ampère (A) naar kilovoltampère (kVA) direct en nauwkeurig met spanning",

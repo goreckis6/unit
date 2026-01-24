@@ -660,6 +660,40 @@
         }
       }
     },
+    "kwToKva": {
+      "title": "Calculateur kW vers kVA",
+      "description": "Convertir kilowatts (kW) en kilovoltampères (kVA) instantanément en utilisant le facteur de puissance",
+      "kw": "Kilowatts (kW)",
+      "powerFactor": "Facteur de puissance (0-1)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "kva": "Kilovoltampères (kVA)",
+      "seo": {
+        "title": "Calculateur kW vers kVA - Convertir Puissance Active en Puissance Apparente en Ligne",
+        "description": "Calculateur de conversion kW vers kVA gratuit. Convertir kilowatts en kilovoltampères instantanément en utilisant le facteur de puissance. Parfait pour les calculs électriques, les systèmes d'alimentation et le dimensionnement d'équipement.",
+        "keywords": "calculateur kw vers kva, convertisseur kilowatts vers kilovoltampères, conversion kw kva, calculateur puissance active vers apparente, calculateur électrique, calculateur kva, calculateur facteur de puissance, calculateur gratuit",
+        "content": {
+          "heading": "Comment convertir kW en kVA",
+          "paragraph1": "La conversion de kilowatts (kW) en kilovoltampères (kVA) est essentielle en ingénierie électrique et systèmes d'alimentation. Les kilowatts représentent la puissance active — le travail réel effectué par une charge électrique — tandis que les kilovoltampères représentent la puissance apparente — la puissance totale fournie par la source, comprenant les composantes actives et réactives. La conversion nécessite le facteur de puissance (FP), qui est le rapport de la puissance active à la puissance apparente. Notre calculateur kW vers kVA gratuit fournit des conversions instantanées et précises pour dimensionner équipements, transformateurs et générateurs.",
+          "paragraph2": "La formule est : kVA = kW / FP, où kVA est la puissance apparente en kilovoltampères, kW est la puissance active en kilowatts, et FP est le facteur de puissance (une valeur entre 0 et 1). Par exemple, une charge de 5 kW avec un facteur de puissance de 0,8 nécessite 5 / 0,8 = 6,25 kVA de puissance apparente. Un facteur de puissance inférieur signifie qu'une puissance apparente plus élevée est nécessaire pour fournir la même puissance active. Le facteur de puissance indique l'efficacité avec laquelle le système électrique convertit la puissance apparente en travail utile : un FP de 1,0 (unité) est efficace à 100 % ; des valeurs inférieures indiquent des pertes de puissance réactive.",
+          "paragraph3": "Cette conversion est critique dans de nombreuses applications : dimensionnement de transformateurs et générateurs pour garantir une capacité adéquate pour les charges actives, conception de systèmes de distribution électrique et d'onduleurs, calcul des caractéristiques de disjoncteurs et conducteurs, compréhension du comportement des moteurs et charges inductives, et planification de la capacité d'alimentation pour installations commerciales et industrielles. Savoir convertir kW en kVA vous aide à sélectionner des équipements de taille correcte, éviter les surcharges et optimiser l'efficacité énergétique.",
+          "paragraph4": "Notre calculateur accepte kilowatts et facteur de puissance comme entrées, applique la formule kVA = kW / FP, et fournit la puissance apparente en kilovoltampères. Que vous travailliez avec moteurs, transformateurs, générateurs, systèmes UPS, ou charges inductives ou capacitives — le calculateur kW vers kVA fournit des résultats précis et instantanés pour votre conception et analyse électrique.",
+          "exampleHeading": "Exemple :",
+          "exampleText": "5 kW à FP 0,8 : kVA = 5 / 0,8 = 6,25 kVA. 10 kW à FP 0,9 : kVA = 10 / 0,9 = 11,11 kVA. 2 kW à FP 1,0 (charge résistive) : kVA = 2 / 1,0 = 2 kVA. 3,5 kW à FP 0,85 : kVA = 3,5 / 0,85 = 4,12 kVA. Un moteur de 7,5 kW à FP 0,75 nécessite 7,5 / 0,75 = 10 kVA d'alimentation en puissance apparente."
+        },
+        "faq": {
+          "heading": "Questions fréquemment posées",
+          "items": [
+            { "question": "Quelle est la formule pour convertir kW en kVA ?", "answer": "La formule est kVA = kW / FP, où kVA est la puissance apparente en kilovoltampères, kW est la puissance active en kilowatts, et FP est le facteur de puissance (0 à 1). Puissance active = puissance apparente × FP, donc puissance apparente = puissance active / FP." },
+            { "question": "Quelle est la différence entre kW et kVA ?", "answer": "kW (kilowatts) est la puissance active — le travail réel effectué par la charge (par ex. puissance mécanique, chaleur, lumière). kVA (kilovoltampères) est la puissance apparente — la puissance totale fournie par la source, y compris puissance réactive qui ne fait pas de travail utile. kVA ≥ kW toujours ; ils sont égaux seulement quand FP = 1,0 (charge purement résistive)." },
+            { "question": "Qu'est-ce que le facteur de puissance et quelles valeurs sont typiques ?", "answer": "Le facteur de puissance (FP) est le rapport kW / kVA, allant de 0 à 1. Il mesure l'efficacité avec laquelle la puissance électrique est convertie en travail utile. Valeurs typiques : chauffages résistifs ~1,0, lampes fluorescentes 0,5–0,95, moteurs à induction 0,7–0,9, alimentations 0,6–0,95. Un FP inférieur signifie que des kVA plus élevés sont nécessaires pour les mêmes kW, augmentant la taille des conducteurs et transformateurs." },
+            { "question": "Pourquoi dois-je convertir kW en kVA ?", "answer": "Les transformateurs, générateurs, onduleurs et disjoncteurs sont classés en kVA, pas en kW. Une charge tirant 10 kW à FP 0,8 nécessite 12,5 kVA de capacité d'alimentation. Dimensionner l'équipement uniquement par kW (en ignorant FP) peut entraîner une surcharge. Convertir kW en kVA garantit que vous sélectionnez des équipements avec une capacité de puissance apparente suffisante." },
+            { "question": "Ce calculateur est-il gratuit ?", "answer": "Oui, notre calculateur kW vers kVA est gratuit. Aucune inscription ni paiement requis. Entrez la puissance en kW et le facteur de puissance (0–1) pour obtenir des résultats instantanés et précis en kVA." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculateur Ampères vers kVA",
       "description": "Convertissez les ampères (A) en kilovoltampères (kVA) instantanément et précisément en utilisant la tension",

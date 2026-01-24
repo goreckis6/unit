@@ -708,6 +708,55 @@
         }
       }
     },
+    "kwToKva": {
+      "title": "kW to kVA Calculator",
+      "description": "Convert kilowatts (kW) to kilovolt-amperes (kVA) instantly using power factor",
+      "kw": "Kilowatts (kW)",
+      "powerFactor": "Power Factor (0-1)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "kva": "Kilovolt-amperes (kVA)",
+      "seo": {
+        "title": "kW to kVA Calculator - Convert Real Power to Apparent Power Online",
+        "description": "Free kW to kVA conversion calculator. Convert kilowatts to kilovolt-amperes instantly using power factor. Perfect for electrical calculations, power systems, and equipment sizing.",
+        "keywords": "kw to kva calculator, kilowatts to kilovolt-amperes converter, kw kva conversion, real power to apparent power calculator, electrical calculator, kva calculator, power factor calculator, free calculator",
+        "content": {
+          "heading": "How to Convert kW to kVA",
+          "paragraph1": "Converting kilowatts (kW) to kilovolt-amperes (kVA) is essential in electrical engineering and power systems. Kilowatts represent real power—the actual work done by an electrical load—while kilovolt-amperes represent apparent power—the total power delivered by the source, including both real and reactive components. The conversion requires the power factor (PF), which is the ratio of real power to apparent power. Our free kW to kVA calculator provides instant, accurate conversions for sizing equipment, transformers, and generators.",
+          "paragraph2": "The formula is: kVA = kW / PF, where kVA is apparent power in kilovolt-amperes, kW is real power in kilowatts, and PF is the power factor (a value between 0 and 1). For example, a 5 kW load with a power factor of 0.8 requires 5 / 0.8 = 6.25 kVA of apparent power. A lower power factor means higher apparent power is needed to deliver the same real power. The power factor indicates how efficiently the electrical system converts apparent power to useful work: a PF of 1.0 (unity) is 100% efficient; lower values indicate reactive power losses.",
+          "paragraph3": "This conversion is critical in many applications: sizing transformers and generators to ensure adequate capacity for real loads, designing electrical distribution systems and UPS units, calculating circuit breaker and conductor ratings, understanding motor and inductive load behavior, and planning power capacity for commercial and industrial facilities. Knowing how to convert kW to kVA helps you select correctly sized equipment, avoid overloading, and optimize energy efficiency.",
+          "paragraph4": "Our calculator accepts kilowatts and power factor as inputs, applies the formula kVA = kW / PF, and outputs apparent power in kilovolt-amperes. Whether you are working with motors, transformers, generators, UPS systems, or any inductive or capacitive load, the kW to kVA calculator delivers accurate, instant results for your electrical design and analysis.",
+          "exampleHeading": "Example:",
+          "exampleText": "5 kW at PF 0.8: kVA = 5 / 0.8 = 6.25 kVA. 10 kW at PF 0.9: kVA = 10 / 0.9 = 11.11 kVA. 2 kW at PF 1.0 (resistive load): kVA = 2 / 1.0 = 2 kVA. 3.5 kW at PF 0.85: kVA = 3.5 / 0.85 = 4.12 kVA. A 7.5 kW motor at PF 0.75 requires 7.5 / 0.75 = 10 kVA apparent power supply."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert kW to kVA?",
+              "answer": "The formula is kVA = kW / PF, where kVA is apparent power in kilovolt-amperes, kW is real power in kilowatts, and PF is the power factor (0 to 1). Real power equals apparent power times power factor, so apparent power is real power divided by power factor."
+            },
+            {
+              "question": "What is the difference between kW and kVA?",
+              "answer": "kW (kilowatts) is real power—the actual work done by the load (e.g. mechanical output, heat, light). kVA (kilovolt-amperes) is apparent power—the total power delivered by the source, including reactive power that does not do useful work. kVA ≥ kW always; they are equal only when power factor is 1.0 (purely resistive load)."
+            },
+            {
+              "question": "What is power factor and what values are typical?",
+              "answer": "Power factor (PF) is the ratio kW / kVA, ranging from 0 to 1. It measures how efficiently electrical power is converted to useful work. Typical values: resistive heaters ~1.0, fluorescent lights 0.5–0.95, induction motors 0.7–0.9, power supplies 0.6–0.95. Lower PF means higher kVA is required for the same kW, increasing conductor and transformer size."
+            },
+            {
+              "question": "Why do I need to convert kW to kVA?",
+              "answer": "Transformers, generators, UPS units, and circuit breakers are rated in kVA, not kW. A load drawing 10 kW at PF 0.8 requires 12.5 kVA of supply capacity. Sizing equipment by kW alone (ignoring PF) can lead to overload. Converting kW to kVA ensures you select equipment with sufficient apparent power capacity."
+            },
+            {
+              "question": "Is this calculator free to use?",
+              "answer": "Yes, our kW to kVA calculator is free. No registration or payment required. Enter power in kW and power factor (0–1) to get instant, accurate apparent power results in kVA."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Amps to kVA Calculator",
       "description": "Convert amperes (A) to kilovolt-amperes (kVA) instantly and accurately using voltage",

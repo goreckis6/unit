@@ -660,6 +660,40 @@
         }
       }
     },
+    "kwToKva": {
+      "title": "Kalkulačka kW na kVA",
+      "description": "Preveďte kilowatty (kW) na kilovoltampéry (kVA) okamžite pomocou účinníka",
+      "kw": "Kilowatty (kW)",
+      "powerFactor": "Účinník (0-1)",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "kva": "Kilovoltampéry (kVA)",
+      "seo": {
+        "title": "Kalkulačka kW na kVA - Prevod činného výkonu na zdanlivý výkon online",
+        "description": "Bezplatná kalkulačka prevodu kW na kVA. Preveďte kilowatty na kilovoltampéry okamžite pomocou účinníka. Ideálne pre elektrické výpočty, energetické systémy a dimenzovanie zariadení.",
+        "keywords": "kalkulačka kw na kva, prevodník kilowattov na kilovoltampéry, prevod kw kva, kalkulačka činného výkonu na zdanlivý, elektrická kalkulačka, kalkulačka kva, kalkulačka účinníka, zadarmo kalkulačka",
+        "content": {
+          "heading": "Ako previesť kW na kVA",
+          "paragraph1": "Prevod kilowattov (kW) na kilovoltampéry (kVA) je zásadný v elektrotechnike a energetických systémoch. Kilowatty predstavujú činný výkon — skutočnú prácu vykonanú elektrickou záťažou — zatiaľ čo kilovoltampéry predstavujú zdanlivý výkon — celkový výkon dodaný zdrojom, vrátane činných a jalových zložiek. Prevod vyžaduje účinník (PF), ktorý je pomerom činného výkonu k zdanlivému výkonu. Naša bezplatná kalkulačka kW na kVA poskytuje okamžité, presné prevody na dimenzovanie zariadení, transformátorov a generátorov.",
+          "paragraph2": "Vzorec je: kVA = kW / PF, kde kVA je zdanlivý výkon v kilovoltampéroch, kW je činný výkon v kilowattoch a PF je účinník (hodnota medzi 0 a 1). Napríklad záťaž 5 kW s účinníkom 0,8 vyžaduje 5 / 0,8 = 6,25 kVA zdanlivého výkonu. Nižší účinník znamená, že je potrebný vyšší zdanlivý výkon na dodanie rovnakého činného výkonu. Účinník udáva, ako efektívne elektrický systém premieňa zdanlivý výkon na užitočnú prácu: PF 1,0 (jednotkový) je 100% účinný; nižšie hodnoty znamenajú straty jalového výkonu.",
+          "paragraph3": "Tento prevod je zásadný v mnohých aplikáciách: dimenzovanie transformátorov a generátorov na zabezpečenie dostatočnej kapacity pre činné záťaže, návrh elektrických distribučných systémov a UPS jednotiek, výpočet ističov a vodičov, pochopenie správania motorov a indukčných záťaží a plánovanie energetickej kapacity pre komerčné a priemyselné objekty. Znalosť prevodu kW na kVA vám pomôže vybrať správne dimenzované zariadenie, vyhnúť sa preťaženiu a optimalizovať energetickú účinnosť.",
+          "paragraph4": "Naša kalkulačka prijíma kilowatty a účinník ako vstupy, aplikuje vzorec kVA = kW / PF a poskytuje zdanlivý výkon v kilovoltampéroch. Či už pracujete s motormi, transformátormi, generátormi, UPS systémami alebo indukčnými či kapacitívnymi záťažami — kalkulačka kW na kVA poskytuje presné, okamžité výsledky pre vaše elektrické návrhy a analýzy.",
+          "exampleHeading": "Príklad:",
+          "exampleText": "5 kW pri PF 0,8: kVA = 5 / 0,8 = 6,25 kVA. 10 kW pri PF 0,9: kVA = 10 / 0,9 = 11,11 kVA. 2 kW pri PF 1,0 (odporová záťaž): kVA = 2 / 1,0 = 2 kVA. 3,5 kW pri PF 0,85: kVA = 3,5 / 0,85 = 4,12 kVA. Motor 7,5 kW pri PF 0,75 vyžaduje 7,5 / 0,75 = 10 kVA zdanlivého výkonu napájania."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            { "question": "Aký je vzorec na prevod kW na kVA?", "answer": "Vzorec je kVA = kW / PF, kde kVA je zdanlivý výkon v kilovoltampéroch, kW je činný výkon v kilowattoch a PF je účinník (0 až 1). Činný výkon = zdanlivý výkon × PF, teda zdanlivý výkon = činný výkon / PF." },
+            { "question": "Aký je rozdiel medzi kW a kVA?", "answer": "kW (kilowatty) je činný výkon — skutočná práca vykonaná záťažou (napr. mechanický výstup, teplo, svetlo). kVA (kilovoltampéry) je zdanlivý výkon — celkový výkon dodaný zdrojom, vrátane jalového výkonu, ktorý nevykonáva užitočnú prácu. kVA ≥ kW vždy; sú si rovné len keď PF = 1,0 (čisto odporová záťaž)." },
+            { "question": "Čo je účinník a aké hodnoty sú typické?", "answer": "Účinník (PF) je pomer kW / kVA, v rozmedzí od 0 do 1. Meria, ako efektívne je elektrický výkon premieňaný na užitočnú prácu. Typické hodnoty: odporové kúrenie ~1,0, žiarivky 0,5–0,95, indukčné motory 0,7–0,9, zdroje 0,6–0,95. Nižší PF znamená, že je pre rovnaké kW potrebné vyššie kVA, čo zvyšuje rozmery vodičov a transformátorov." },
+            { "question": "Prečo musím previesť kW na kVA?", "answer": "Transformátory, generátory, UPS jednotky a ističe sú klasifikované v kVA, nie v kW. Záťaž spotrebúvajúca 10 kW pri PF 0,8 vyžaduje 12,5 kVA kapacitu napájania. Dimenzovanie zariadení iba podľa kW (ignorovanie PF) môže viesť k preťaženiu. Prevod kW na kVA zabezpečí, že vyberiete zariadenie s dostatočnou kapacitou zdanlivého výkonu." },
+            { "question": "Je táto kalkulačka zadarmo?", "answer": "Áno, naša kalkulačka kW na kVA je zadarmo. Nie je vyžadovaná registrácia ani platba. Zadajte výkon v kW a účinník (0–1) pre okamžité, presné výsledky v kVA." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulačka Ampérov na kVA",
       "description": "Preveďte ampéry (A) na kilovoltampéry (kVA) okamžite a presne pomocou napätia",

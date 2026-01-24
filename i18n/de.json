@@ -552,6 +552,46 @@
         }
       }
     },
+    "kwToVolts": {
+      "title": "kW zu Volt Rechner",
+      "description": "Konvertieren Sie Kilowatt (kW) sofort und genau in Volt (V) für Gleichstrom-, einphasige und dreiphasige Systeme",
+      "currentType": "Systemtyp",
+      "directCurrent": "Gleichstrom (DC)",
+      "singlePhase": "Einphasig",
+      "threePhase": "Dreiphasig",
+      "kw": "Kilowatt (kW)",
+      "amps": "Ampere (A)",
+      "powerFactor": "Leistungsfaktor (0-1)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "voltage": "Spannung",
+      "seo": {
+        "title": "kW zu Volt Rechner - Kilowatt online in Volt umrechnen",
+        "description": "Kostenloser kW zu Volt Umrechnungsrechner für Gleichstrom-, einphasige und dreiphasige Systeme. Konvertieren Sie Kilowatt sofort in Volt mit Strom und Leistungsfaktor (nur AC). Perfekt für elektrische Planung, Leitungsauslegung und Spannungsberechnungen.",
+        "keywords": "kw volt rechner, kilowatt volt umrechner, kw volt umrechnung, leistung spannung rechner, elektrischer rechner, volt rechner, gleichstrom rechner, einphasen rechner, dreiphasen rechner, kostenloser rechner",
+        "content": {
+          "heading": "Wie man kW in Volt umrechnet",
+          "paragraph1": "Die Umrechnung von Kilowatt (kW) in Volt (V) ist eine grundlegende Berechnung in der Elektrotechnik. Kilowatt ist die Wirkleistung, Volt die Spannung. Für die Umrechnung brauchen Sie den Strom (Ampere) und bei Wechselstrom den Leistungsfaktor (PF). Bei Gleichstrom genügt der Strom. Unser kostenloser kW zu Volt Rechner liefert sofortige, genaue Ergebnisse für DC-, einphasige und dreiphasige Systeme.",
+          "paragraph2": "Die Formel hängt vom Systemtyp ab: Gleichstrom: V = P / I = (kW × 1000) / I. Einphasig Wechselstrom: V = (kW × 1000) / (I × PF). Dreiphasig: V = (kW × 1000) / (√3 × I × PF); das Ergebnis ist die Außenleiterspannung. Der Leistungsfaktor gilt nur für AC, typisch 0,8–0,95.",
+          "paragraph3": "Verwendet u. a. für: erforderliche Spannung bei gegebener Leistung und Strom, Dimensionierung von Transformatoren und Verteilern, Prüfung von Kreisen (Kabel, Schalter), Spannungsabfall, DC-Systeme (Solar, Batterien, E-Auto) sowie ein- und dreiphasige AC-Anlagen. Die Umrechnung kW in Volt unterstützt Planung, Geräteauswahl und Normenkonformität.",
+          "paragraph4": "Der Rechner nimmt Kilowatt und Strom (Ampere) auf. Wählen Sie DC, einphasig oder dreiphasig; bei AC den Leistungsfaktor. Er wendet die passende Formel an und gibt die Spannung in Volt aus. Typische Werte: 12V, 24V, 48V (DC), 120V, 230V, 240V, 400V, 480V.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "DC: 2 kW bei 80 A → V = (2 × 1000) / 80 = 25 V. Einphasig AC: 5 kW bei 20 A, PF 0,8 → V = (5 × 1000) / (20 × 0,8) = 312,5 V. Dreiphasig: 10 kW bei 15 A, PF 0,85 → V = (10 × 1000) / (√3 × 15 × 0,85) ≈ 453,4 V (Außenleiter). DC 1 kW bei 10 A: V = 1000 / 10 = 100 V."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            { "question": "Wie lautet die Formel für kW in Volt?", "answer": "DC: V = (kW × 1000) / I. Einphasig AC: V = (kW × 1000) / (I × PF). Dreiphasig AC: V = (kW × 1000) / (√3 × I × PF). V in Volt, kW Leistung, I Strom in A, PF Leistungsfaktor. Dreiphasig-Ergebnis = Außenleiterspannung. DC verwendet keinen Leistungsfaktor." },
+            { "question": "Brauche ich bei DC einen Leistungsfaktor?", "answer": "Nein. Der Leistungsfaktor gilt nur für AC. Bei DC: V = (kW × 1000) / I. Sie brauchen nur kW und Strom. Typische DC-Anwendungen: Batterien, Solar, E-Auto bei 12V, 24V, 48V oder höher." },
+            { "question": "Unterschied einphasig vs. dreiphasig?", "answer": "Einphasig: V = (kW × 1000) / (I × PF). Dreiphasig: V = (kW × 1000) / (√3 × I × PF), Ergebnis = Außenleiterspannung. Bei gleichem kW und Strom liefert Dreiphasig eine höhere Spannung." },
+            { "question": "Was bedeutet die Dreiphasig-Spannung?", "answer": "Die Dreiphasig-Formel liefert die Außenleiterspannung (Leiter–Leiter), nicht die Phasenspannung. Typisch: 208V, 240V, 380V, 400V, 415V, 480V. Relevant für Geräteauslegung und Netzspannung." },
+            { "question": "Was ist der Leistungsfaktor?", "answer": "Der Leistungsfaktor (PF) ist das Verhältnis Wirk- zu Scheinleistung bei AC, Werte 0–1. Typisch: ohmsch = 1,0, Induktionsmotoren = 0,8–0,9, Leuchtstoff = 0,85–0,95, LED = 0,9–0,95. Unbekannt: 0,8 für Motoren, 0,9 für Mischlast. DC hat keinen PF." },
+            { "question": "Ist der Rechner kostenlos?", "answer": "Ja, der kW zu Volt Rechner ist kostenlos. Keine Anmeldung oder Zahlung. Geben Sie kW und Strom ein, wählen Sie DC, einphasig oder dreiphasig, bei AC den Leistungsfaktor – Sie erhalten sofort genaue Ergebnisse." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere zu kVA Rechner",
       "description": "Wandeln Sie Ampere (A) in Kilovoltampere (kVA) sofort und genau mit Spannung um",

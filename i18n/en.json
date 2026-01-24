@@ -552,6 +552,64 @@
         }
       }
     },
+    "kwToVolts": {
+      "title": "kW to Volts Calculator",
+      "description": "Convert kilowatts (kW) to volts (V) instantly and accurately for DC, single-phase, and three-phase systems",
+      "currentType": "System type",
+      "directCurrent": "Direct Current (DC)",
+      "singlePhase": "Single Phase",
+      "threePhase": "Three Phase",
+      "kw": "Kilowatts (kW)",
+      "amps": "Amperes (A)",
+      "powerFactor": "Power Factor (0-1)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "voltage": "Voltage",
+      "seo": {
+        "title": "kW to Volts Calculator - Convert Kilowatts to Volts Online",
+        "description": "Free kW to Volts conversion calculator for DC, single-phase, and three-phase systems. Convert kilowatts to volts instantly using current and power factor (AC only). Perfect for electrical design, circuit sizing, and voltage calculations.",
+        "keywords": "kw to volts calculator, kilowatts to volts converter, kw volts conversion, power to voltage calculator, electrical calculator, volts calculator, dc calculator, single phase calculator, three phase calculator, free calculator",
+        "content": {
+          "heading": "How to Convert kW to Volts",
+          "paragraph1": "Converting kilowatts (kW) to volts (V) is a fundamental calculation in electrical engineering and power system design. Kilowatts represent real power (active power), while volts represent electrical voltage. The conversion requires knowledge of current (amperes) and, for AC systems, power factor (PF). For DC, only current is needed. Our free kW to Volts conversion calculator provides instant, accurate results for DC, single-phase, and three-phase electrical systems.",
+          "paragraph2": "The conversion formula varies by system type: For DC: V = P / I = (kW × 1000) / I, where V is voltage in volts, P is power in kilowatts, and I is current in amperes. For single-phase AC: V = (kW × 1000) / (I × PF). For three-phase AC: V = (kW × 1000) / (√3 × I × PF), where the result is line-to-line voltage. Power factor applies only to AC; it indicates how efficiently electrical power is used, typically 0.8–0.95 for most equipment.",
+          "paragraph3": "This conversion is used in many applications: determining required voltage for a given power and current, sizing transformers and distribution systems, verifying circuit design (cables, breakers), calculating voltage drop, working with DC systems (solar, batteries, EVs) and AC single-phase or three-phase installations. Knowing how to convert kW to Volts helps with electrical system design, equipment selection, and safety compliance.",
+          "paragraph4": "Our calculator accepts kilowatts and current (amperes) as inputs. Select DC, single-phase, or three-phase; for AC, enter power factor. It applies the correct formula and outputs voltage in volts. Common scenarios include 12V, 24V, 48V (DC), 120V, 230V, 240V, 400V, 480V. Whether you are designing DC or AC systems, our kW to Volts calculator delivers accurate, instant conversions.",
+          "exampleHeading": "Example:",
+          "exampleText": "DC: 2 kW at 80 A gives V = (2 × 1000) / 80 = 25 V. Single-phase AC: 5 kW at 20 A with PF 0.8 gives V = (5 × 1000) / (20 × 0.8) = 312.5 V. Three-phase AC: 10 kW at 15 A with PF 0.85 gives V = (10 × 1000) / (√3 × 15 × 0.85) ≈ 453.4 V (line-to-line). DC 1 kW at 10 A: V = 1000 / 10 = 100 V."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert kW to Volts?",
+              "answer": "For DC: V = (kW × 1000) / I. For single-phase AC: V = (kW × 1000) / (I × PF). For three-phase AC: V = (kW × 1000) / (√3 × I × PF), where V is voltage in volts, kW is power, I is current in amperes, and PF is power factor. The three-phase result is line-to-line voltage. DC does not use power factor."
+            },
+            {
+              "question": "Do I need power factor for DC?",
+              "answer": "No. Power factor applies only to AC. For DC, V = (kW × 1000) / I. You need only kilowatts and current. Common DC applications include batteries, solar, and EV systems at 12V, 24V, 48V, or higher."
+            },
+            {
+              "question": "What is the difference between single-phase and three-phase voltage results?",
+              "answer": "Single-phase uses V = (kW × 1000) / (I × PF). Three-phase uses V = (kW × 1000) / (√3 × I × PF); the result is line-to-line voltage. Three-phase delivers more power at lower current, so for the same kW and amps, three-phase voltage is higher than single-phase."
+            },
+            {
+              "question": "What voltage does the three-phase result represent?",
+              "answer": "The three-phase formula gives line-to-line (phase-to-phase) voltage, not phase-to-neutral. Common line-to-line values are 208V, 240V, 380V, 400V, 415V, 480V. Use this value when sizing equipment or checking distribution voltage."
+            },
+            {
+              "question": "What is power factor and what value should I use?",
+              "answer": "Power factor (PF) is the ratio of real power to apparent power in AC systems, from 0 to 1. Typical values: resistive loads (heaters, incandescent) = 1.0, induction motors = 0.8–0.9, fluorescent = 0.85–0.95, LED = 0.9–0.95. If unknown, use 0.8 for motor loads or 0.9 for general mixed loads. DC has no power factor."
+            },
+            {
+              "question": "Is this calculator free to use?",
+              "answer": "Yes, our kW to Volts calculator is free. No registration or payment required. Enter kW and current, choose system type (DC, single-phase, or three-phase), add power factor for AC, and get instant, accurate results."
+            }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Amps to kVA Calculator",
       "description": "Convert amperes (A) to kilovolt-amperes (kVA) instantly and accurately using voltage",

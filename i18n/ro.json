@@ -552,6 +552,46 @@
         }
       }
     },
+    "kwToVolts": {
+      "title": "Calculator kW la Volți",
+      "description": "Convertește kilowații (kW) în volți (V) instantaneu și precis pentru sisteme DC, monofazate și trifazate",
+      "currentType": "Tip sistem",
+      "directCurrent": "Curent continuu (DC)",
+      "singlePhase": "Monofazat",
+      "threePhase": "Trifazat",
+      "kw": "Kilowați (kW)",
+      "amps": "Amperi (A)",
+      "powerFactor": "Factor de putere (0-1)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "voltage": "Tensiune",
+      "seo": {
+        "title": "Calculator kW la Volți - Convertește Kilowați în Volți Online",
+        "description": "Calculator gratuit de conversie kW la Volți pentru sisteme DC, monofazate și trifazate. Convertește kilowații în volți instantaneu cu curent și factor de putere (doar AC). Perfect pentru proiectare electrică și calcule de tensiune.",
+        "keywords": "calculator kw volți, convertor kilowați volți, conversie kw volți, putere tensiune calculator, calculator electric, calculator volți, dc calculator, monofazat trifazat, gratuit",
+        "content": {
+          "heading": "Cum să convertești kW în Volți",
+          "paragraph1": "Convertirea kilowaților (kW) în volți (V) este un calcul fundamental în inginerie electrică. kW reprezintă puterea activă, volții tensiunea. Conversia necesită curentul (amperi) și, pentru AC, factorul de putere (PF). La DC e suficient curentul. Calculatorul nostru gratuit kW la Volți oferă rezultate instantanee și precise pentru sisteme DC, monofazate și trifazate.",
+          "paragraph2": "Formula depinde de tipul de sistem: DC: V = P / I = (kW × 1000) / I. AC monofazat: V = (kW × 1000) / (I × PF). AC trifazat: V = (kW × 1000) / (√3 × I × PF); rezultatul e tensiunea între faze. Factorul de putere se aplică doar la AC, tipic 0,8–0,95.",
+          "paragraph3": "Folosit pentru: determinarea tensiunii necesare pentru o putere și curent date, dimensionarea transformatoarelor și tablourilor, verificarea circuitelor (cabluri, întrerupătoare), cădere de tensiune, sisteme DC (solar, baterii, EV) și instalații AC monofazate sau trifazate.",
+          "paragraph4": "Calculatorul acceptă kilowați și curent (amperi). Alege DC, monofazat sau trifazat; la AC introdu factorul de putere. Aplică formula corectă și returnează tensiunea în volți. Valori comune: 12V, 24V, 48V (DC), 120V, 230V, 240V, 400V, 480V.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "DC: 2 kW la 80 A → V = (2 × 1000) / 80 = 25 V. AC monofazat: 5 kW la 20 A, PF 0,8 → V = (5 × 1000) / (20 × 0,8) = 312,5 V. AC trifazat: 10 kW la 15 A, PF 0,85 → V = (10 × 1000) / (√3 × 15 × 0,85) ≈ 453,4 V (între faze). DC 1 kW la 10 A: V = 100 V."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            { "question": "Care e formula pentru kW în Volți?", "answer": "DC: V = (kW × 1000) / I. AC monofazat: V = (kW × 1000) / (I × PF). AC trifazat: V = (kW × 1000) / (√3 × I × PF). V în volți, kW putere, I curent în A, PF factor de putere. Rezultatul trifazat = tensiune între faze. DC nu folosește factor de putere." },
+            { "question": "Am nevoie de factor de putere la DC?", "answer": "Nu. Factorul de putere se aplică doar la AC. La DC: V = (kW × 1000) / I. Ai nevoie doar de kW și curent. Aplicații DC tipice: baterii, solar, EV la 12V, 24V, 48V sau mai mult." },
+            { "question": "Diferență monofazat și trifazat?", "answer": "Monofazat: V = (kW × 1000) / (I × PF). Trifazat: V = (kW × 1000) / (√3 × I × PF), rezultat = tensiune între faze. La același kW și curent, trifazat dă o tensiune mai mare." },
+            { "question": "Ce tensiune reprezintă rezultatul trifazat?", "answer": "Formula trifazată dă tensiunea între faze (compusă), nu fază–neutru. Valori comune: 208V, 240V, 380V, 400V, 415V, 480V. Folosește-o pentru dimensionare și tensiunea rețelei." },
+            { "question": "Ce este factorul de putere?", "answer": "Factorul de putere (PF) e raportul putere activă/aparentă la AC, 0–1. Tipic: rezistiv = 1,0, motoare cu inducție = 0,8–0,9, fluorescent = 0,85–0,95, LED = 0,9–0,95. Necunoscut: 0,8 pentru motoare, 0,9 pentru sarcini mixte. DC nu are factor de putere." },
+            { "question": "Calculatorul e gratuit?", "answer": "Da, calculatorul kW la Volți e gratuit. Fără înregistrare sau plată. Introdu kW și curent, alege DC, monofazat sau trifazat, adaugă factorul de putere pentru AC și obține rezultate instantanee și precise." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculator Amperi la kVA",
       "description": "Convertește amperii (A) în kilovoltamperi (kVA) instant și precis folosind tensiunea",

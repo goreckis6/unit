@@ -552,6 +552,46 @@
         }
       }
     },
+    "kwToVolts": {
+      "title": "Calculadora kW para Volts",
+      "description": "Converta quilowatts (kW) em volts (V) instantaneamente e com precisão para sistemas DC, monofásicos e trifásicos",
+      "currentType": "Tipo de sistema",
+      "directCurrent": "Corrente contínua (DC)",
+      "singlePhase": "Monofásico",
+      "threePhase": "Trifásico",
+      "kw": "Quilowatts (kW)",
+      "amps": "Amperes (A)",
+      "powerFactor": "Fator de potência (0-1)",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "voltage": "Tensão",
+      "seo": {
+        "title": "Calculadora kW para Volts - Converter Quilowatts em Volts online",
+        "description": "Calculadora gratuita de conversão kW para Volts para sistemas DC, monofásicos e trifásicos. Converta quilowatts em volts instantaneamente com corrente e fator de potência (apenas AC). Ideal para projeto elétrico e cálculos de tensão.",
+        "keywords": "calculadora kw volts, conversor quilowatts volts, conversão kw volts, potência tensão calculadora, calculadora elétrica, calculadora volts, dc calculadora, monofásico trifásico, gratuita",
+        "content": {
+          "heading": "Como converter kW em Volts",
+          "paragraph1": "Converter quilowatts (kW) em volts (V) é um cálculo fundamental em engenharia elétrica. Os kW representam a potência ativa e os volts a tensão. A conversão requer a corrente (amperes) e, em AC, o fator de potência (PF). Em DC basta a corrente. Nossa calculadora kW para Volts fornece resultados instantâneos e precisos para sistemas DC, monofásicos e trifásicos.",
+          "paragraph2": "A fórmula varia com o tipo de sistema: DC: V = P / I = (kW × 1000) / I. AC monofásico: V = (kW × 1000) / (I × PF). AC trifásico: V = (kW × 1000) / (√3 × I × PF); o resultado é a tensão entre fases. O fator de potência aplica-se apenas a AC, tipicamente 0,8–0,95.",
+          "paragraph3": "Usado para: determinar a tensão necessária para determinada potência e corrente, dimensionar transformadores e quadros, verificar circuitos (cabos, disjuntores), queda de tensão, sistemas DC (solar, baterias, VE) e instalações AC monofásicas ou trifásicas.",
+          "paragraph4": "A calculadora aceita quilowatts e corrente (amperes). Escolha DC, monofásico ou trifásico; em AC, insira o fator de potência. Aplica a fórmula correta e retorna a tensão em volts. Valores comuns: 12V, 24V, 48V (DC), 120V, 230V, 240V, 400V, 480V.",
+          "exampleHeading": "Exemplo:",
+          "exampleText": "DC: 2 kW a 80 A → V = (2 × 1000) / 80 = 25 V. AC monofásico: 5 kW a 20 A, PF 0,8 → V = (5 × 1000) / (20 × 0,8) = 312,5 V. AC trifásico: 10 kW a 15 A, PF 0,85 → V = (10 × 1000) / (√3 × 15 × 0,85) ≈ 453,4 V (entre fases). DC 1 kW a 10 A: V = 100 V."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            { "question": "Qual é a fórmula para converter kW em Volts?", "answer": "DC: V = (kW × 1000) / I. AC monofásico: V = (kW × 1000) / (I × PF). AC trifásico: V = (kW × 1000) / (√3 × I × PF). V em volts, kW potência, I corrente em A, PF fator de potência. O resultado trifásico é a tensão entre fases. DC não usa fator de potência." },
+            { "question": "Preciso de fator de potência em DC?", "answer": "Não. O fator de potência aplica-se apenas a AC. Em DC: V = (kW × 1000) / I. Só são necessários kW e corrente. Aplicações DC típicas: baterias, solar, VE em 12V, 24V, 48V ou mais." },
+            { "question": "Diferença entre monofásico e trifásico?", "answer": "Monofásico: V = (kW × 1000) / (I × PF). Trifásico: V = (kW × 1000) / (√3 × I × PF), resultado = tensão entre fases. Para os mesmos kW e corrente, o trifásico dá maior tensão." },
+            { "question": "O que representa a tensão trifásica?", "answer": "A fórmula trifásica dá a tensão entre fases (composta), não fase–neutro. Valores comuns: 208V, 240V, 380V, 400V, 415V, 480V. Use para dimensionar equipamentos e verificar a tensão da rede." },
+            { "question": "O que é o fator de potência?", "answer": "O fator de potência (PF) é a razão entre potência ativa e aparente em AC, de 0 a 1. Típico: resistivo = 1,0, motores de indução = 0,8–0,9, fluorescente = 0,85–0,95, LED = 0,9–0,95. Se desconhecido: 0,8 para motores, 0,9 para cargas mistas. DC não tem fator de potência." },
+            { "question": "A calculadora é gratuita?", "answer": "Sim, a calculadora kW para Volts é gratuita. Sem registro ou pagamento. Insira kW e corrente, escolha DC, monofásico ou trifásico, adicione o fator de potência para AC e obtenha resultados instantâneos e precisos." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculadora de Amperes para kVA",
       "description": "Converta amperes (A) para quilovoltamperes (kVA) instantaneamente e com precisão usando tensão",

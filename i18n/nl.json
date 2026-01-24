@@ -552,6 +552,46 @@
         }
       }
     },
+    "kwToVolts": {
+      "title": "kW naar Volt Rekenmachine",
+      "description": "Converteer kilowatt (kW) naar volt (V) direct en nauwkeurig voor DC-, enkelfase- en driefasesystemen",
+      "currentType": "Systeemtype",
+      "directCurrent": "Gelijkstroom (DC)",
+      "singlePhase": "Enkelfase",
+      "threePhase": "Driefase",
+      "kw": "Kilowatt (kW)",
+      "amps": "Ampère (A)",
+      "powerFactor": "Arbeidsfactor (0-1)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "voltage": "Spanning",
+      "seo": {
+        "title": "kW naar Volt Rekenmachine - Converteer Kilowatt naar Volt online",
+        "description": "Gratis kW naar Volt conversierekenmachine voor DC-, enkelfase- en driefasesystemen. Converteer kilowatt naar volt direct met stroom en arbeidsfactor (alleen AC). Ideaal voor elektrisch ontwerp en spanningsberekeningen.",
+        "keywords": "kw volt rekenmachine, kilowatt volt converter, kw volt conversie, vermogen spanning rekenmachine, elektrische rekenmachine, volt rekenmachine, dc rekenmachine, enkelfase driefase, gratis",
+        "content": {
+          "heading": "Kilowatt naar Volt omrekenen",
+          "paragraph1": "Kilowatt (kW) naar volt (V) omrekenen is een basisberekening in de elektrotechniek. kW is het actief vermogen, volt de spanning. De omrekening vereist stroom (ampère) en bij AC de arbeidsfactor (PF). Bij DC volstaat stroom. Onze gratis kW naar Volt rekenmachine levert directe, nauwkeurige resultaten voor DC-, enkelfase- en driefasesystemen.",
+          "paragraph2": "De formule hangt af van het systeem: DC: V = P / I = (kW × 1000) / I. Enkelfase AC: V = (kW × 1000) / (I × PF). Driefase AC: V = (kW × 1000) / (√3 × I × PF); het resultaat is de lijnd spanning. De arbeidsfactor geldt alleen voor AC, typisch 0,8–0,95.",
+          "paragraph3": "Gebruikt voor: benodigde spanning bij gegeven vermogen en stroom, dimensioneren van transformatoren en verdeelkasten, controleren van circuits (kabels, automaten), spanningsval, DC-systemen (zonne-energie, accu's, EV) en enkelfase- of driefase-AC-installaties.",
+          "paragraph4": "De rekenmachine accepteert kilowatt en stroom (ampère). Kies DC, enkelfase of driefase; bij AC voert u de arbeidsfactor in. Past de juiste formule toe en geeft de spanning in volt. Veelvoorkomende waarden: 12V, 24V, 48V (DC), 120V, 230V, 240V, 400V, 480V.",
+          "exampleHeading": "Voorbeeld:",
+          "exampleText": "DC: 2 kW bij 80 A → V = (2 × 1000) / 80 = 25 V. Enkelfase AC: 5 kW bij 20 A, PF 0,8 → V = (5 × 1000) / (20 × 0,8) = 312,5 V. Driefase AC: 10 kW bij 15 A, PF 0,85 → V = (10 × 1000) / (√3 × 15 × 0,85) ≈ 453,4 V (lijn). DC 1 kW bij 10 A: V = 100 V."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            { "question": "Wat is de formule voor kW naar Volt?", "answer": "DC: V = (kW × 1000) / I. Enkelfase AC: V = (kW × 1000) / (I × PF). Driefase AC: V = (kW × 1000) / (√3 × I × PF). V in volt, kW vermogen, I stroom in A, PF arbeidsfactor. Driefase-resultaat = lijnd spanning. DC gebruikt geen arbeidsfactor." },
+            { "question": "Is arbeidsfactor nodig bij DC?", "answer": "Nee. Arbeidsfactor geldt alleen voor AC. Bij DC: V = (kW × 1000) / I. Alleen kW en stroom zijn nodig. Typische DC-toepassingen: accu's, zonne-energie, EV bij 12V, 24V, 48V of hoger." },
+            { "question": "Verschil enkelfase en driefase?", "answer": "Enkelfase: V = (kW × 1000) / (I × PF). Driefase: V = (kW × 1000) / (√3 × I × PF), resultaat = lijnd spanning. Bij gelijk kW en stroom levert driefase een hogere spanning." },
+            { "question": "Welke spanning is het driefase-resultaat?", "answer": "De driefase-formule geeft de lijnd spanning (tussen fasen), niet fase–nul. Veelvoorkomend: 208V, 240V, 380V, 400V, 415V, 480V. Gebruik voor dimensionering en netspanning." },
+            { "question": "Wat is arbeidsfactor?", "answer": "De arbeidsfactor (PF) is de verhouding actief/schijnbaar vermogen bij AC, tussen 0 en 1. Typisch: resistief = 1,0, inductiemotoren = 0,8–0,9, fluorescent = 0,85–0,95, LED = 0,9–0,95. Onbekend: 0,8 voor motoren, 0,9 voor gemengde belasting. DC heeft geen arbeidsfactor." },
+            { "question": "Is de rekenmachine gratis?", "answer": "Ja, de kW naar Volt rekenmachine is gratis. Geen registratie of betaling. Voer kW en stroom in, kies DC, enkelfase of driefase, voeg arbeidsfactor toe voor AC en krijg directe, nauwkeurige resultaten." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere naar kVA Rekenmachine",
       "description": "Converteer ampère (A) naar kilovoltampère (kVA) direct en nauwkeurig met spanning",

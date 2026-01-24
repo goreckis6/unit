@@ -552,6 +552,46 @@
         }
       }
     },
+    "kwToVolts": {
+      "title": "kW Voltti Laskin",
+      "description": "Muunna kilowatit (kW) volteiksi (V) välittömästi ja tarkasti DC-, yksivaihe- ja kolmivaihejärjestelmille",
+      "currentType": "Järjestelmätyyppi",
+      "directCurrent": "Tasavirta (DC)",
+      "singlePhase": "Yksivaihe",
+      "threePhase": "Kolmivaihe",
+      "kw": "Kilowatit (kW)",
+      "amps": "Ampeerit (A)",
+      "powerFactor": "Tehokerroin (0-1)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "voltage": "Jännite",
+      "seo": {
+        "title": "kW Voltti Laskin - Muunna Kilowatit Voltiksi Online",
+        "description": "Ilmainen kW Voltti muunnoslaskin DC-, yksivaihe- ja kolmivaihejärjestelmille. Muunna kilowatit volteiksi välittömästi virran ja tehokertoimen (vain AC) avulla. Sopii sähkösuunnitteluun ja jännitelaskelmiin.",
+        "keywords": "kw voltti laskin, kilowatti voltti muunnin, kw voltti muunnos, teho jännite laskin, sähkölaskin, voltti laskin, dc laskin, yksivaihe kolmivaihe, ilmainen",
+        "content": {
+          "heading": "Kuinka muuntaa kW voltteiksi",
+          "paragraph1": "Kilowattien (kW) muuntaminen volteiksi (V) on peruslaskelma sähkötekniikassa. kW on pätöteho, V jännite. Muunnos vaatii virran (ampeerit) ja AC-järjestelmissä tehokertoimen (PF). DC:ssä riittää virta. Ilmainen kW Voltti laskimemme antaa välittömät, tarkat tulokset DC-, yksivaihe- ja kolmivaihejärjestelmille.",
+          "paragraph2": "Kaava riippuu järjestelmätyypistä: DC: V = P / I = (kW × 1000) / I. Yksivaihe AC: V = (kW × 1000) / (I × PF). Kolmivaihe AC: V = (kW × 1000) / (√3 × I × PF); tulos on vaihejännite. Tehokerroin vain AC:lle, tyypillisesti 0,8–0,95.",
+          "paragraph3": "Käytetään: tarvittavan jännitteen määrittämiseen annetulla teholla ja virralla, muuntimien ja jakelutablojen mitoitukseen, piirien tarkistukseen (kaapelit, katkaisijat), jännitehäviöön, DC-järjestelmiin (aurinko, akut, sähköauto) sekä yksivaihe- tai kolmivaihe-AC-asennuksiin.",
+          "paragraph4": "Laskin ottaa vastaan kilowatit ja virran (ampeerit). Valitse DC, yksivaihe tai kolmivaihe; AC:lla syötä tehokerroin. Soveltaa oikeaa kaavaa ja palauttaa jännitteen voltteina. Tyypilliset arvot: 12V, 24V, 48V (DC), 120V, 230V, 240V, 400V, 480V.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "DC: 2 kW / 80 A → V = (2 × 1000) / 80 = 25 V. Yksivaihe AC: 5 kW / 20 A, PF 0,8 → V = (5 × 1000) / (20 × 0,8) = 312,5 V. Kolmivaihe AC: 10 kW / 15 A, PF 0,85 → V = (10 × 1000) / (√3 × 15 × 0,85) ≈ 453,4 V (vaihe). DC 1 kW / 10 A: V = 100 V."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            { "question": "Mikä on kaava kW voltteiksi?", "answer": "DC: V = (kW × 1000) / I. Yksivaihe AC: V = (kW × 1000) / (I × PF). Kolmivaihe AC: V = (kW × 1000) / (√3 × I × PF). V voltteina, kW teho, I virta A, PF tehokerroin. Kolmivaihe-tulos = vaihejännite. DC ei käytä tehokerrointa." },
+            { "question": "Tarvitaanko tehokerroin DC:llä?", "answer": "Ei. Tehokerroin koskee vain AC:ta. DC: V = (kW × 1000) / I. Tarvitaan vain kW ja virta. Tyypillisiä DC-sovelluksia: akut, aurinko, sähköauto 12V, 24V, 48V tai ylemmällä jännitteellä." },
+            { "question": "Ero yksivaihe ja kolmivaihe?", "answer": "Yksivaihe: V = (kW × 1000) / (I × PF). Kolmivaihe: V = (kW × 1000) / (√3 × I × PF), tulos = vaihejännite. Samalla kW ja virralla kolmivaihe antaa korkeamman jännitteen." },
+            { "question": "Mitä kolmivaihejännite tarkoittaa?", "answer": "Kolmivaihekaava antaa vaihejännitteen (vaihe–vaihe), ei vaihe–nolla. Tyypilliset: 208V, 240V, 380V, 400V, 415V, 480V. Käytä laitteiden mitoitukseen ja verkkojännitteeseen." },
+            { "question": "Mikä on tehokerroin?", "answer": "Tehokerroin (PF) on pätötehon ja näennäistehon suhde AC:ssa, 0–1. Tyypillinen: resistiivinen = 1,0, induktiomoottorit = 0,8–0,9, loisteputket = 0,85–0,95, LED = 0,9–0,95. Tuntematon: 0,8 mootoreille, 0,9 sekakuormille. DC:llä ei ole tehokerrointa." },
+            { "question": "Onko laskin ilmainen?", "answer": "Kyllä, kW Voltti laskin on ilmainen. Ei rekisteröintiä eikä maksua. Syötä kW ja virta, valitse DC, yksivaihe tai kolmivaihe, lisää tehokerroin AC:lle ja saat välittömät, tarkat tulokset." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampeeri kVA Laskin",
       "description": "Muunna ampeerit (A) kilovoltampeereiksi (kVA) heti ja tarkasti käyttämällä jännitettä",

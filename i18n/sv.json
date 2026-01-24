@@ -552,6 +552,46 @@
         }
       }
     },
+    "kwToVolts": {
+      "title": "kW till Volt Kalkylator",
+      "description": "Konvertera kilowatt (kW) till volt (V) omedelbart och exakt för DC-, enfas- och trefassystem",
+      "currentType": "Systemtyp",
+      "directCurrent": "Likström (DC)",
+      "singlePhase": "Enfas",
+      "threePhase": "Trefas",
+      "kw": "Kilowatt (kW)",
+      "amps": "Ampere (A)",
+      "powerFactor": "Effektfaktor (0-1)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "voltage": "Spänning",
+      "seo": {
+        "title": "kW till Volt Kalkylator - Konvertera Kilowatt till Volt Online",
+        "description": "Gratis kW till Volt konverteringskalkylator för DC-, enfas- och trefassystem. Konvertera kilowatt till volt omedelbart med ström och effektfaktor (endast AC). Perfekt för elektrisk design och spänningsberäkningar.",
+        "keywords": "kw volt kalkylator, kilowatt volt konverter, kw volt konvertering, effekt spänning kalkylator, elektrisk kalkylator, volt kalkylator, dc kalkylator, enfas trefas, gratis",
+        "content": {
+          "heading": "Så konverterar du kW till Volt",
+          "paragraph1": "Att konvertera kilowatt (kW) till volt (V) är en grundläggande beräkning inom elkraft. kW representerar aktiv effekt, volt spänning. Konverteringen kräver ström (ampere) och vid AC effektfaktor (PF). Vid DC räcker ström. Vår gratis kW till Volt kalkylator ger omedelbara, exakta resultat för DC-, enfas- och trefassystem.",
+          "paragraph2": "Formeln beror på systemtyp: DC: V = P / I = (kW × 1000) / I. Enfas AC: V = (kW × 1000) / (I × PF). Trefas AC: V = (kW × 1000) / (√3 × I × PF); resultatet är linjespänning. Effektfaktor gäller endast AC, typiskt 0,8–0,95.",
+          "paragraph3": "Används för: att bestämma nödvändig spänning för given effekt och ström, dimensionering av transformatorer och fördelning, kontroll av kretsar (kablar, brytare), spänningsfall, DC-system (sol, batterier, EV) och enfas- eller trefas AC-installationer.",
+          "paragraph4": "Kalkylatorn accepterar kilowatt och ström (ampere). Välj DC, enfas eller trefas; vid AC ange effektfaktor. Den tillämpar rätt formel och returnerar spänning i volt. Vanliga värden: 12V, 24V, 48V (DC), 120V, 230V, 240V, 400V, 480V.",
+          "exampleHeading": "Exempel:",
+          "exampleText": "DC: 2 kW vid 80 A → V = (2 × 1000) / 80 = 25 V. Enfas AC: 5 kW vid 20 A, PF 0,8 → V = (5 × 1000) / (20 × 0,8) = 312,5 V. Trefas AC: 10 kW vid 15 A, PF 0,85 → V = (10 × 1000) / (√3 × 15 × 0,85) ≈ 453,4 V (linje). DC 1 kW vid 10 A: V = 100 V."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            { "question": "Vad är formeln för kW till Volt?", "answer": "DC: V = (kW × 1000) / I. Enfas AC: V = (kW × 1000) / (I × PF). Trefas AC: V = (kW × 1000) / (√3 × I × PF). V i volt, kW effekt, I ström i A, PF effektfaktor. Trefas-resultat = linjespänning. DC använder inte effektfaktor." },
+            { "question": "Behövs effektfaktor vid DC?", "answer": "Nej. Effektfaktor gäller endast AC. Vid DC: V = (kW × 1000) / I. Endast kW och ström behövs. Vanliga DC-tillämpningar: batterier, sol, EV vid 12V, 24V, 48V eller högre." },
+            { "question": "Skillnad enfas och trefas?", "answer": "Enfas: V = (kW × 1000) / (I × PF). Trefas: V = (kW × 1000) / (√3 × I × PF), resultat = linjespänning. Vid samma kW och ström ger trefas högre spänning." },
+            { "question": "Vad betyder trefasspänningen?", "answer": "Trefas-formeln ger linjespänning (fas–fas), inte fas-spänning. Vanliga: 208V, 240V, 380V, 400V, 415V, 480V. Använd för dimensionering och nätspänning." },
+            { "question": "Vad är effektfaktor?", "answer": "Effektfaktor (PF) är förhållandet aktivt till uppenbart effekt vid AC, 0–1. Typiskt: resistiv = 1,0, induktionsmotorer = 0,8–0,9, lysrör = 0,85–0,95, LED = 0,9–0,95. Okänd: 0,8 för motorer, 0,9 för blandad last. DC har ingen effektfaktor." },
+            { "question": "Är kalkylatorn gratis?", "answer": "Ja, kW till Volt kalkylatorn är gratis. Ingen registrering eller betalning. Ange kW och ström, välj DC, enfas eller trefas, lägg till effektfaktor för AC och få omedelbara, exakta resultat." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere till kVA Kalkylator",
       "description": "Konvertera ampere (A) till kilovoltampere (kVA) omedelbart och exakt med spänning",

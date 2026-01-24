@@ -552,6 +552,46 @@
         }
       }
     },
+    "kwToVolts": {
+      "title": "Calculateur kW vers Volts",
+      "description": "Convertissez les kilowatts (kW) en volts (V) instantanément et précisément pour les systèmes DC, monophasés et triphasés",
+      "currentType": "Type de système",
+      "directCurrent": "Courant continu (DC)",
+      "singlePhase": "Monophasé",
+      "threePhase": "Triphasé",
+      "kw": "Kilowatts (kW)",
+      "amps": "Ampères (A)",
+      "powerFactor": "Facteur de puissance (0-1)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "voltage": "Tension",
+      "seo": {
+        "title": "Calculateur kW vers Volts - Convertir Kilowatts en Volts en ligne",
+        "description": "Calculateur gratuit de conversion kW vers Volts pour systèmes DC, monophasés et triphasés. Convertissez les kilowatts en volts instantanément avec courant et facteur de puissance (AC uniquement). Idéal pour la conception électrique et les calculs de tension.",
+        "keywords": "calculateur kw volts, convertisseur kilowatts volts, conversion kw volts, puissance tension calculateur, calculateur électrique, calculateur volts, dc calculateur, monophasé triphasé, gratuit",
+        "content": {
+          "heading": "Comment convertir kW en Volts",
+          "paragraph1": "Convertir les kilowatts (kW) en volts (V) est un calcul fondamental en génie électrique. Les kW représentent la puissance active, les volts la tension. La conversion nécessite le courant (ampères) et, en AC, le facteur de puissance (PF). En DC, seul le courant suffit. Notre calculateur kW vers Volts fournit des résultats instantanés et précis pour les systèmes DC, monophasés et triphasés.",
+          "paragraph2": "Formule selon le type de système : DC : V = P / I = (kW × 1000) / I. AC monophasé : V = (kW × 1000) / (I × PF). AC triphasé : V = (kW × 1000) / (√3 × I × PF) ; le résultat est la tension entre phases. Le facteur de puissance ne s'applique qu'au AC, typiquement 0,8–0,95.",
+          "paragraph3": "Utilisé pour : déterminer la tension requise pour une puissance et un courant donnés, dimensionner transformateurs et tableaux, vérifier les circuits (câbles, disjoncteurs), chute de tension, systèmes DC (solaire, batteries, VE) et installations AC monophasées ou triphasées.",
+          "paragraph4": "Le calculateur accepte les kW et le courant (ampères). Choisissez DC, monophasé ou triphasé ; en AC, saisissez le facteur de puissance. Il applique la formule adaptée et affiche la tension en volts. Valeurs courantes : 12V, 24V, 48V (DC), 120V, 230V, 240V, 400V, 480V.",
+          "exampleHeading": "Exemple :",
+          "exampleText": "DC : 2 kW sous 80 A → V = (2 × 1000) / 80 = 25 V. AC monophasé : 5 kW sous 20 A, PF 0,8 → V = (5 × 1000) / (20 × 0,8) = 312,5 V. AC triphasé : 10 kW sous 15 A, PF 0,85 → V = (10 × 1000) / (√3 × 15 × 0,85) ≈ 453,4 V (entre phases). DC 1 kW sous 10 A : V = 100 V."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            { "question": "Quelle est la formule kW vers Volts ?", "answer": "DC : V = (kW × 1000) / I. AC monophasé : V = (kW × 1000) / (I × PF). AC triphasé : V = (kW × 1000) / (√3 × I × PF). V en volts, kW puissance, I courant en A, PF facteur de puissance. Résultat triphasé = tension entre phases. Le DC n'utilise pas le facteur de puissance." },
+            { "question": "Faut-il un facteur de puissance en DC ?", "answer": "Non. Le facteur de puissance concerne uniquement le AC. En DC : V = (kW × 1000) / I. Il suffit des kW et du courant. Applications DC courantes : batteries, solaire, VE en 12V, 24V, 48V ou plus." },
+            { "question": "Différence monophasé et triphasé ?", "answer": "Monophasé : V = (kW × 1000) / (I × PF). Triphasé : V = (kW × 1000) / (√3 × I × PF), résultat = tension entre phases. À même kW et courant, le triphasé donne une tension plus élevée." },
+            { "question": "Que représente la tension triphasée ?", "answer": "La formule triphasée donne la tension entre phases (composée), pas la tension phase–neutre. Valeurs courantes : 208V, 240V, 380V, 400V, 415V, 480V. À utiliser pour le dimensionnement et la tension du réseau." },
+            { "question": "Qu'est-ce que le facteur de puissance ?", "answer": "Le facteur de puissance (PF) est le rapport puissance active / apparente en AC, entre 0 et 1. Typique : résistif = 1,0, moteurs asynchrones = 0,8–0,9, fluorescent = 0,85–0,95, LED = 0,9–0,95. Inconnu : 0,8 pour moteurs, 0,9 pour charges mixtes. Le DC n'a pas de facteur de puissance." },
+            { "question": "Le calculateur est-il gratuit ?", "answer": "Oui, le calculateur kW vers Volts est gratuit. Aucune inscription ni paiement. Saisissez kW et courant, choisissez DC, monophasé ou triphasé, ajoutez le facteur de puissance pour l'AC, et obtenez des résultats instantanés et précis." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculateur Ampères vers kVA",
       "description": "Convertissez les ampères (A) en kilovoltampères (kVA) instantanément et précisément en utilisant la tension",

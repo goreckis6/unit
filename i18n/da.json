@@ -552,6 +552,46 @@
         }
       }
     },
+    "kwToVolts": {
+      "title": "kW til Volt Lommeregner",
+      "description": "Konverter kilowatt (kW) til volt (V) øjeblikkeligt og præcist for DC-, enfase- og trefasesystemer",
+      "currentType": "Systemtype",
+      "directCurrent": "Jævnstrøm (DC)",
+      "singlePhase": "Enfase",
+      "threePhase": "Trefase",
+      "kw": "Kilowatt (kW)",
+      "amps": "Ampere (A)",
+      "powerFactor": "Effektfaktor (0-1)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "voltage": "Spenning",
+      "seo": {
+        "title": "kW til Volt Lommeregner - Konverter Kilowatt til Volt Online",
+        "description": "Gratis kW til Volt konverteringslommeregner for DC-, enfase- og trefasesystemer. Konverter kilowatt til volt øjeblikkeligt med strøm og effektfaktor (kun AC). Perfekt til elektrisk design og spændingsberegninger.",
+        "keywords": "kw volt lommeregner, kilowatt volt konverter, kw volt konvertering, effekt spænding lommeregner, elektrisk lommeregner, volt lommeregner, dc lommeregner, enfase trefase, gratis",
+        "content": {
+          "heading": "Sådan konverteres kW til Volt",
+          "paragraph1": "At konvertere kilowatt (kW) til volt (V) er en grundlæggende beregning inden for elektroteknik. kW repræsenterer aktiv effekt, volt spænding. Konverteringen kræver strøm (ampere) og for AC effektfaktor (PF). For DC er strøm nok. Vores gratis kW til Volt lommeregner giver øjeblikkelige, præcise resultater for DC-, enfase- og trefasesystemer.",
+          "paragraph2": "Formlen afhænger af systemtype: DC: V = P / I = (kW × 1000) / I. Enfase AC: V = (kW × 1000) / (I × PF). Trefase AC: V = (kW × 1000) / (√3 × I × PF); resultatet er linjespænding. Effektfaktor gælder kun for AC, typisk 0,8–0,95.",
+          "paragraph3": "Bruges til: at bestemme nødvendig spænding for given effekt og strøm, dimensionering af transformatorer og distribution, tjek af kredsløb (kabler, afbrydere), spændingsfald, DC-systemer (sol, batterier, EV) og enfase- eller trefase AC-installationer.",
+          "paragraph4": "Lommeregneren accepterer kilowatt og strøm (ampere). Vælg DC, enfase eller trefase; for AC angiv effektfaktor. Den anvender den rigtige formel og returnerer spænding i volt. Almindelige værdier: 12V, 24V, 48V (DC), 120V, 230V, 240V, 400V, 480V.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "DC: 2 kW ved 80 A → V = (2 × 1000) / 80 = 25 V. Enfase AC: 5 kW ved 20 A, PF 0,8 → V = (5 × 1000) / (20 × 0,8) = 312,5 V. Trefase AC: 10 kW ved 15 A, PF 0,85 → V = (10 × 1000) / (√3 × 15 × 0,85) ≈ 453,4 V (linje). DC 1 kW ved 10 A: V = 100 V."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            { "question": "Hvad er formlen for kW til Volt?", "answer": "DC: V = (kW × 1000) / I. Enfase AC: V = (kW × 1000) / (I × PF). Trefase AC: V = (kW × 1000) / (√3 × I × PF). V i volt, kW effekt, I strøm i A, PF effektfaktor. Trefase-resultat = linjespænding. DC bruger ikke effektfaktor." },
+            { "question": "Skal jeg bruge effektfaktor for DC?", "answer": "Nej. Effektfaktor gælder kun for AC. For DC: V = (kW × 1000) / I. Du behøver kun kW og strøm. Almindelige DC-applikationer: batterier, sol, EV ved 12V, 24V, 48V eller højere." },
+            { "question": "Forskel enfase og trefase?", "answer": "Enfase: V = (kW × 1000) / (I × PF). Trefase: V = (kW × 1000) / (√3 × I × PF), resultat = linjespænding. Ved samme kW og strøm giver trefase højere spænding." },
+            { "question": "Hvad repræsenterer trefase-resultatet?", "answer": "Trefase-formlen giver linjespænding (fas-fas), ikke fasespænding. Almindelige: 208V, 240V, 380V, 400V, 415V, 480V. Brug til dimensionering og netspænding." },
+            { "question": "Hvad er effektfaktor?", "answer": "Effektfaktor (PF) er forholdet mellem aktiv og tilsyneladende effekt i AC, 0–1. Typisk: resistiv = 1,0, induktionsmotorer = 0,8–0,9, lysrør = 0,85–0,95, LED = 0,9–0,95. Ukendt: 0,8 for motorer, 0,9 for blandet last. DC har ikke effektfaktor." },
+            { "question": "Er lommeregneren gratis?", "answer": "Ja, kW til Volt lommeregneren er gratis. Ingen registrering eller betaling. Indtast kW og strøm, vælg DC, enfase eller trefase, tilføj effektfaktor for AC og få øjeblikkelige, præcise resultater." }
+          ]
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere til kVA Lommeregner",
       "description": "Konverter ampere (A) til kilovoltampere (kVA) med det samme og præcist med spænding",

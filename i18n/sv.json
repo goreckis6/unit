@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "VA till Ampere Kalkylator",
+      "description": "Konvertera voltampere (VA) till ampere (A) omedelbart med spänning för enfas- och trefassystem",
+      "phaseType": "Fastyp",
+      "singlePhase": "Enfas",
+      "threePhase": "Trefas",
+      "va": "Voltampere (VA)",
+      "voltage": "Spänning (V)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "VA till Ampere Kalkylator - Konvertera Skenbar Effekt till Ström Online",
+        "description": "Gratis VA till Ampere konverteringskalkylator. Konvertera voltampere till ampere omedelbart med spänning. Stöder enfas- och trefassystem. Perfekt för elektriska beräkningar och kretsdesign.",
+        "keywords": "va till ampere kalkylator, voltampere till ampere konverterare, va ampere konvertering, skenbar effekt till ström kalkylator, elektrisk kalkylator, krets kalkylator, gratis kalkylator",
+        "content": {
+          "heading": "Hur Man Konverterar VA till Ampere",
+          "paragraph1": "Att konvertera voltampere (VA) till ampere (A) är en grundläggande beräkning inom elektroteknik och energidistributionssystem. Voltampere representerar skenbar effekt — den totala effekten som dras av en elektrisk krets — medan ampere representerar strömflödet. Konverteringen kräver kunskap om spänningen och om du arbetar med ett enfas- eller trefassystem. Vår gratis VA till Ampere kalkylator ger omedelbara, exakta konverteringar för enfas- och trefaselektriska system, vilket gör dina effektberäkningar snabba och pålitliga.",
+          "paragraph2": "Formlerna är: För enfassystem, I = VA / V, där I är strömmen i ampere, VA är skenbar effekt i voltampere och V är spänningen i volt. För trefassystem, I = VA / (√3 × V), där √3 ≈ 1,732. Till exempel drar en enfaslast på 5000 VA vid 230V 5000 / 230 = 21,74 ampere. Samma 5000 VA last i ett trefassystem på 400V drar 5000 / (1,732 × 400) = 7,22 ampere per fas. Dessa beräkningar är väsentliga för dimensionering av kablar, brytare och elektrisk utrustning.",
+          "paragraph3": "Denna konvertering är kritisk i många tillämpningar: dimensionering av elektriska kablar och ledare, val av lämpliga brytare och säkringar, design av elektriska fördelningstavlor, beräkning av kablarnas strömkapacitet, bestämning av spänningsfall i kretsar, dimensionering av transformatorer och generatorer, förståelse av UPS och inverters strömförbrukning och säkerställande av efterlevnad av elektriska säkerhetsstandarder. Till exempel, om en UPS är märkt på 3000 VA och arbetar vid 230V enfas, drar den 3000 / 230 = 13,04 ampere vid full belastning, vilket hjälper till att välja rätt brytarmärkning.",
+          "paragraph4": "Vår kalkylator accepterar voltampere och spänning som inmatningar, låter dig välja mellan enfas- och trefassystem, tillämpar lämplig formel (I = VA / V för enfas eller I = VA / (√3 × V) för trefas) och ger strömmen i ampere. Oavsett om du dimensionerar elektriska paneler, beräknar kabelströmkapacitet, väljer kretsskyddsanordningar, designar energidistributionssystem eller säkerställer efterlevnad av koder, ger vår VA till Ampere kalkylator exakta, omedelbara resultat för dina elektroteknikbehov.",
+          "exampleHeading": "Exempel:",
+          "exampleText": "Enfas: 5000 VA vid 230V = 5000 / 230 = 21,74 A. Trefas: 10 000 VA vid 400V = 10 000 / (1,732 × 400) = 14,43 A. Enfas: 3000 VA vid 120V = 3000 / 120 = 25 A. Trefas: 15 000 VA vid 480V = 15 000 / (1,732 × 480) = 18,04 A. Om ett kontor kräver 8000 VA vid 230V enfas, är strömförbrukningen 8000 / 230 = 34,78 A, vilket kräver minst en 40A brytare."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är formeln för att konvertera VA till Ampere?",
+              "answer": "För enfassystem: I = VA / V. För trefassystem: I = VA / (√3 × V), där I är strömmen i ampere, VA är skenbar effekt i voltampere, V är spänningen i volt och √3 ≈ 1,732. Trefasformeln tar hänsyn till effektfördelningen över tre faser, vilket resulterar i lägre ström per fas för samma totala effekt."
+            },
+            {
+              "question": "Vad är skillnaden mellan VA och Ampere?",
+              "answer": "VA (voltampere) mäter skenbar effekt — den totala elektriska effekten i en krets, inklusive verkliga och reaktiva komponenter. Ampere (ampere) mäter ström — flödet av elektrisk laddning. VA = Volt × Ampere. De mäter olika elektriska egenskaper: VA är effekt, Ampere är strömflöde. Du behöver spänning för att konvertera mellan dem."
+            },
+            {
+              "question": "Varför är trefasformeln annorlunda?",
+              "answer": "I trefassystem fördelas effekten över tre faser. √3 (1,732) faktorn tar hänsyn till denna trefasfördelning, vilket resulterar i lägre ström per fas jämfört med enfas. För samma totala VA drar trefassystem mindre ström per ledare, vilket möjliggör mindre ledare och mer effektiv effektöverföring."
+            },
+            {
+              "question": "Hur använder jag detta för brytardimensionering?",
+              "answer": "Beräkna maximal ström (ampere) från VA-märkningen och spänningen. Lägg till en säkerhetsmarginal (typiskt 125% enligt elektriska koder). Runda upp till nästa standardbrytstorlek. Till exempel, 5000 VA vid 230V = 21,74A. Med 125% marginal: 21,74 × 1,25 = 27,17A. Använd en 30A eller 32A brytare. Följ alltid lokala elektriska koder."
+            },
+            {
+              "question": "Är denna kalkylator gratis?",
+              "answer": "Ja, vår VA till Ampere kalkylator är helt gratis. Ingen registrering eller betalning krävs. Välj din fastyp, ange voltampere och spänning för omedelbara, exakta strömresultat i ampere för enfas- eller trefassystem."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "wattsToKva": "Watt till kVA Kalkylator",
+          "wattsToKvaDesc": "Konvertera watt till kilovoltampere med effektfaktor",
+          "kwToKva": "kW till kVA Kalkylator",
+          "kwToKvaDesc": "Konvertera kilowatt till kilovoltampere omedelbart",
+          "mahToWh": "mAh till Wh Kalkylator",
+          "mahToWhDesc": "Konvertera batterikapacitet till energi med spänning",
+          "kwhToWatts": "kWh till Watt Kalkylator",
+          "kwhToWattsDesc": "Konvertera kilowattimmar till watt med tidslängd"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere till kVA Kalkylator",
       "description": "Konvertera ampere (A) till kilovoltampere (kVA) omedelbart och exakt med spänning",

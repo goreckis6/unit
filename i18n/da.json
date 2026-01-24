@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "VA til Ampere Beregner",
+      "description": "Konverter voltampere (VA) til ampere (A) øjeblikkeligt ved hjælp af spænding til enfase- og trefasesystemer",
+      "phaseType": "Fasetype",
+      "singlePhase": "Enfase",
+      "threePhase": "Trefase",
+      "va": "Voltampere (VA)",
+      "voltage": "Spænding (V)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "VA til Ampere Beregner - Konverter Tilsyneladende Effekt til Strøm Online",
+        "description": "Gratis VA til Ampere konverteringsberegner. Konverter voltampere til ampere øjeblikkeligt ved hjælp af spænding. Understøtter enfase- og trefasesystemer. Perfekt til elektriske beregninger og kredsløbsdesign.",
+        "keywords": "va til ampere beregner, voltampere til ampere konverter, va ampere konvertering, tilsyneladende effekt til strøm beregner, elektrisk beregner, kredsløb beregner, gratis beregner",
+        "content": {
+          "heading": "Hvordan Man Konverterer VA til Ampere",
+          "paragraph1": "At konvertere voltampere (VA) til ampere (A) er en grundlæggende beregning inden for elektroteknik og energidistributionssystemer. Voltampere repræsenterer tilsyneladende effekt — den samlede effekt, der trækkes af et elektrisk kredsløb — mens ampere repræsenterer strømflowet. Konverteringen kræver kendskab til spændingen og om du arbejder med et enfase- eller trefasesystem. Vores gratis VA til Ampere beregner giver øjeblikkelige, nøjagtige konverteringer til enfase- og trefaseelektriske systemer, hvilket gør dine effektberegninger hurtige og pålidelige.",
+          "paragraph2": "Formlerne er: For enfasesystemer, I = VA / V, hvor I er strømmen i ampere, VA er tilsyneladende effekt i voltampere og V er spændingen i volt. For trefasesystemer, I = VA / (√3 × V), hvor √3 ≈ 1,732. For eksempel trækker en enfasebelastning på 5000 VA ved 230V 5000 / 230 = 21,74 ampere. Samme 5000 VA belastning i et trefasesystem på 400V trækker 5000 / (1,732 × 400) = 7,22 ampere pr. fase. Disse beregninger er væsentlige for dimensionering af kabler, afbrydere og elektrisk udstyr.",
+          "paragraph3": "Denne konvertering er kritisk i mange anvendelser: dimensionering af elektriske kabler og ledere, valg af passende afbrydere og sikringer, design af elektriske fordelingstavler, beregning af kabelstrømkapacitet, bestemmelse af spændingsfald i kredsløb, dimensionering af transformere og generatorer, forståelse af UPS og inverteres strømforbrug og sikring af overholdelse af elektriske sikkerhedsstandarder. For eksempel, hvis en UPS er vurderet til 3000 VA og opererer ved 230V enfase, trækker den 3000 / 230 = 13,04 ampere ved fuld belastning, hvilket hjælper med at vælge den rette afbrydervurdering.",
+          "paragraph4": "Vores beregner accepterer voltampere og spænding som input, lader dig vælge mellem enfase- og trefasesystemer, anvender passende formel (I = VA / V for enfase eller I = VA / (√3 × V) for trefase) og giver strømmen i ampere. Uanset om du dimensionerer elektriske paneler, beregner kabelstrømkapacitet, vælger kredsløbsbeskyttelsesenheder, designer energidistributionssystemer eller sikrer overholdelse af koder, giver vores VA til Ampere beregner nøjagtige, øjeblikkelige resultater til dine elektroteknikbehov.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "Enfase: 5000 VA ved 230V = 5000 / 230 = 21,74 A. Trefase: 10 000 VA ved 400V = 10 000 / (1,732 × 400) = 14,43 A. Enfase: 3000 VA ved 120V = 3000 / 120 = 25 A. Trefase: 15 000 VA ved 480V = 15 000 / (1,732 × 480) = 18,04 A. Hvis et kontor kræver 8000 VA ved 230V enfase, er strømforbruget 8000 / 230 = 34,78 A, hvilket kræver mindst en 40A afbryder."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er formlen for at konvertere VA til Ampere?",
+              "answer": "For enfasesystemer: I = VA / V. For trefasesystemer: I = VA / (√3 × V), hvor I er strømmen i ampere, VA er tilsyneladende effekt i voltampere, V er spændingen i volt og √3 ≈ 1,732. Trefaseformlen tager højde for effektfordelingen over tre faser, hvilket resulterer i lavere strøm pr. fase for samme samlede effekt."
+            },
+            {
+              "question": "Hvad er forskellen mellem VA og Ampere?",
+              "answer": "VA (voltampere) måler tilsyneladende effekt — den samlede elektriske effekt i et kredsløb, inklusive virkelige og reaktive komponenter. Ampere (ampere) måler strøm — flowet af elektrisk ladning. VA = Volt × Ampere. De måler forskellige elektriske egenskaber: VA er effekt, Ampere er strømflow. Du har brug for spænding for at konvertere mellem dem."
+            },
+            {
+              "question": "Hvorfor er trefaseformlen anderledes?",
+              "answer": "I trefasesystemer fordeles effekten over tre faser. √3 (1,732) faktoren tager højde for denne trefasefordeling, hvilket resulterer i lavere strøm pr. fase sammenlignet med enfase. For samme samlede VA trækker trefasesystemer mindre strøm pr. leder, hvilket muliggør mindre ledere og mere effektiv effektoverførsel."
+            },
+            {
+              "question": "Hvordan bruger jeg dette til afbryderdimensionering?",
+              "answer": "Beregn maksimal strøm (ampere) fra VA-vurderingen og spændingen. Tilføj en sikkerhedsmargin (typisk 125% ifølge elektriske koder). Rund op til næste standard afbryderstørrelse. For eksempel, 5000 VA ved 230V = 21,74A. Med 125% margin: 21,74 × 1,25 = 27,17A. Brug en 30A eller 32A afbryder. Følg altid lokale elektriske koder."
+            },
+            {
+              "question": "Er denne beregner gratis?",
+              "answer": "Ja, vores VA til Ampere beregner er helt gratis. Ingen registrering eller betaling kræves. Vælg din fasetype, angiv voltampere og spænding for øjeblikkelige, nøjagtige strømresultater i ampere til enfase- eller trefasesystemer."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Beregnere",
+          "wattsToKva": "Watt til kVA Beregner",
+          "wattsToKvaDesc": "Konverter watt til kilovoltampere med effektfaktor",
+          "kwToKva": "kW til kVA Beregner",
+          "kwToKvaDesc": "Konverter kilowatt til kilovoltampere øjeblikkeligt",
+          "mahToWh": "mAh til Wh Beregner",
+          "mahToWhDesc": "Konverter batterikapacitet til energi med spænding",
+          "kwhToWatts": "kWh til Watt Beregner",
+          "kwhToWattsDesc": "Konverter kilowattimer til watt ved hjælp af varighed"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere til kVA Lommeregner",
       "description": "Konverter ampere (A) til kilovoltampere (kVA) med det samme og præcist med spænding",

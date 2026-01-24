@@ -803,6 +803,69 @@
         }
       }
     },
+    "vaToAmps": {
+      "title": "VA Ampeereihin Laskin",
+      "description": "Muunna voltti-ampeerit (VA) ampeereiksi (A) välittömästi jännitteen avulla yksivaihe- ja kolmivaiheisille järjestelmille",
+      "phaseType": "Vaihetyyppi",
+      "singlePhase": "Yksivaihe",
+      "threePhase": "Kolmivaihe",
+      "va": "Voltti-Ampeerit (VA)",
+      "voltage": "Jännite (V)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "amps": "Ampeerit (A)",
+      "seo": {
+        "title": "VA Ampeereihin Laskin - Muunna Näennäisteho Virraksi Verkossa",
+        "description": "Ilmainen VA ampeereihin muunnoslas kin. Muunna voltti-ampeerit ampeereiksi välittömästi jännitteen avulla. Tukee yksivaihe- ja kolmivaiheisia järjestelmiä. Täydellinen sähköisille laskelmille ja virtapiirien suunnittelulle.",
+        "keywords": "va ampeereihin laskin, voltti-ampeerit ampeereihin muunnin, va ampeerit muunnos, näennäisteho virraksi laskin, sähköinen laskin, virtapiiri laskin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka Muuntaa VA Ampeereiksi",
+          "paragraph1": "Voltti-ampeerien (VA) muuntaminen ampeereiksi (A) on peruslaskelma sähkötekniikassa ja energianjakelujärjestelmissä. Voltti-ampeerit edustavat näennäistehoa — sähköpiirin kuluttamaa kokonaistehoa — kun taas ampeerit edustavat virran virtausta. Muunnos vaatii jännitteen tuntemista ja tietoa siitä, työskenteletkö yksivaihe- vai kolmivaiheisen järjestelmän kanssa. Ilmainen VA Ampeereihin laskimemme tarjoaa välittömät, tarkat muunnokset yksivaihe- ja kolmivaiheisille sähköjärjestelmille, tehden teholasku istasi nopeat ja luotettavat.",
+          "paragraph2": "Kaavat ovat: Yksivaiheisille järjestelmille, I = VA / V, missä I on virta ampeereina, VA on näennäisteho voltti-ampeereina ja V on jännite voltteina. Kolmivaiheisille järjestelmille, I = VA / (√3 × V), missä √3 ≈ 1,732. Esimerkiksi 5000 VA yksivaiheinen kuorma 230V:lla kuluttaa 5000 / 230 = 21,74 ampeeria. Sama 5000 VA kuorma kolmivaiheisessa 400V järjestelmässä kuluttaa 5000 / (1,732 × 400) = 7,22 ampeeria vaihetta kohti. Nämä laskelmat ovat olennaisia kaapelien, katkaisijoiden ja sähkölaitteiden mitoitukselle.",
+          "paragraph3": "Tämä muunnos on kriittinen monissa sovelluksissa: sähkökaapelien ja johtimien mitoitus, sopivien katkaisijoiden ja sulakkeiden valinta, sähköisten jakelukeskusten suunnittelu, kaapelien virtakapasiteetin laskeminen, jännitehäviön määrittäminen virtapiireissä, muuntajien ja generaattoreiden mitoitus, UPS-laitteiden ja invertterien virrankulutuksen ymmärtäminen ja sähköturvallisuusstandardien noudattamisen varmistaminen. Esimerkiksi, jos UPS on luokiteltu 3000 VA:ksi ja toimii 230V yksivaiheella, se kuluttaa täydellä kuormalla 3000 / 230 = 13,04 ampeeria, mikä auttaa valitsemaan oikean katkaisijan luokituksen.",
+          "paragraph4": "Laskimemme hyväksyy voltti-ampeerit ja jännitteen syötteinä, antaa sinun valita yksivaihe- ja kolmivaiheisten järjestelmien välillä, soveltaa sopivaa kaavaa (I = VA / V yksivaiheiselle tai I = VA / (√3 × V) kolmivaiheiselle) ja antaa virran ampeereina. Olipa kyse sähköpaneelien mitoituksesta, kaapelien virtakapasiteetin laskemisesta, virtapiirien suojalaitteiden valinnasta, energianjakelujärjestelmien suunnittelusta tai säännösten noudattamisen varmistamisesta, VA Ampeereihin laskimemme tarjoaa tarkat, välittömät tulokset sähkötekniikan tarpeisiisi.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "Yksivaihe: 5000 VA 230V:lla = 5000 / 230 = 21,74 A. Kolmivaihe: 10 000 VA 400V:lla = 10 000 / (1,732 × 400) = 14,43 A. Yksivaihe: 3000 VA 120V:lla = 3000 / 120 = 25 A. Kolmivaihe: 15 000 VA 480V:lla = 15 000 / (1,732 × 480) = 18,04 A. Jos toimisto vaatii 8000 VA 230V yksivaiheella, virrankulutus on 8000 / 230 = 34,78 A, mikä vaatii vähintään 40A katkaisijan."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava VA:n muuntamiseen Ampeereiksi?",
+              "answer": "Yksivaiheisille järjestelmille: I = VA / V. Kolmivaiheisille järjestelmille: I = VA / (√3 × V), missä I on virta ampeereina, VA on näennäisteho voltti-ampeereina, V on jännite voltteina ja √3 ≈ 1,732. Kolmivaiheinenkaava ottaa huomioon tehon jakauman kolmeen vaiheeseen, mikä johtaa pienempään virtaan vaihetta kohti samalla kokonaisteholla."
+            },
+            {
+              "question": "Mikä on ero VA:n ja Ampeerien välillä?",
+              "answer": "VA (voltti-ampeerit) mittaa näennäistehoa — kokonaissähkötehoa virtapiirissä, mukaan lukien todelliset ja reaktiiviset komponentit. Ampeerit (ampeerit) mittaavat virtaa — sähkövarauksen virtausta. VA = Voltit × Ampeerit. Ne mittaavat eri sähköisiä ominaisuuksia: VA on teho, Ampeerit on virran virtaus. Tarvitset jännitteen muuntaaksesi niiden välillä."
+            },
+            {
+              "question": "Miksi kolmivaiheinen kaava on erilainen?",
+              "answer": "Kolmivaiheisissa järjestelmissä teho jaetaan kolmeen vaiheeseen. √3 (1,732) kerroin ottaa huomioon tämän kolmivaiheisen jakauman, mikä johtaa pienempään virtaan vaihetta kohti verrattuna yksivaiheeseen. Samalla kokonais-VA:lla kolmivaihejarjestelmät kuluttavat vähemmän virtaa johdinta kohti, mikä mahdollistaa pienemmät johtimet ja tehokkaamman tehonsiirron."
+            },
+            {
+              "question": "Kuinka käytän tätä katkaisijoiden mitoitukseen?",
+              "answer": "Laske maksimi virta (ampeerit) VA-luokituksesta ja jännitteestä. Lisää turvamarginaali (tyypillisesti 125% sähkökoodien mukaan). Pyöristä ylöspäin seuraavaan standardikatkaisijan kokoon. Esimerkiksi, 5000 VA 230V:lla = 21,74A. 125% marginaalilla: 21,74 × 1,25 = 27,17A. Käytä 30A tai 32A katkaisijaa. Noudata aina paikallisia sähkökoodeja."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, VA Ampeereihin laskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Valitse vaihetyyppi, syötä voltti-ampeerit ja jännite saadaksesi välittömät, tarkat virtatulokset ampeereina yksivaihe- tai kolmivaiheisille järjestelmille."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "wattsToKva": "Watti kVA Laskin",
+          "wattsToKvaDesc": "Muunna wattit kilovoltti-ampeereiksi tehokertoimella",
+          "kwToKva": "kW kVA Laskin",
+          "kwToKvaDesc": "Muunna kilowatit kilovoltti-ampeereiksi välittömästi",
+          "mahToWh": "mAh Wh Laskin",
+          "mahToWhDesc": "Muunna akun kapasiteetti energiaksi jännitteen avulla",
+          "kwhToWatts": "kWh Watti Laskin",
+          "kwhToWattsDesc": "Muunna kilowattitunnit wateiksi käyttämällä kestoa"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampeeri kVA Laskin",
       "description": "Muunna ampeerit (A) kilovoltampeereiksi (kVA) heti ja tarkasti käyttämällä jännitettä",

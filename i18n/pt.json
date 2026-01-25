@@ -1413,6 +1413,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Calculadora Watts para Amperes",
+      "description": "Converta potência (W) em corrente (A) para DC, monofásico e trifásico com tensão e fator de potência",
+      "currentType": "Tipo de corrente",
+      "directCurrent": "Corrente contínua (DC)",
+      "singlePhase": "Monofásico",
+      "threePhase": "Trifásico",
+      "watts": "Watts (W)",
+      "volts": "Tensão (V)",
+      "powerFactor": "Fator de potência (0–1)",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "amps": "Amperes (A)",
+      "seo": {
+        "title": "Calculadora Watts para Amperes – DC, Monofásico e Trifásico | Potência em Corrente",
+        "description": "Calculadora gratuita Watts para Amperes. Converta potência (W) em corrente (A) para DC, monofásico e trifásico. Tensão e fator de potência. Ideal para dimensionar circuitos, disjuntores e projeto elétrico.",
+        "keywords": "calculadora watts amperes, conversor potência corrente, W A, DC monofásico trifásico, calculadora elétrica, dimensionamento disjuntores, calculadora gratuita",
+        "content": {
+          "heading": "Como converter watts em amperes",
+          "paragraph1": "Converter potência em watts (W) em corrente em amperes (A) é um cálculo elétrico fundamental. A fórmula depende do tipo de sistema: DC, monofásico ou trifásico. Para DC: I = P / V. Para monofásico: I = P / (V × PF), onde PF é o fator de potência. Para trifásico: I = P / (√3 × V × PF), com V em tensão entre fases. A nossa calculadora gratuita Watts para Amperes suporta os três modos e dá resultados instantâneos e precisos para dimensionar circuitos, escolher disjuntores e analisar cargas.",
+          "paragraph2": "A corrente contínua (DC) não tem fator de potência; a corrente é potência dividida pela tensão. Sistemas monofásico e trifásico têm muitas vezes cargas reativas (motores, balastros), por isso a corrente aparente é superior à ativa. O fator de potência (0 a 1) representa a relação entre potência ativa e aparente. No trifásico, o fator √3 (≈ 1,732) traduz a relação de fase entre tensão entre fases e grandezas de fase. Tensões comuns: 120 V, 230 V, 240 V (monofásico); 400 V, 480 V (trifásico entre fases).",
+          "paragraph3": "Esta conversão usa-se para: dimensionar disjuntores e fusíveis, escolher secção de cabos para uma carga, calcular a corrente a partir da potência do aparelho, projetar redes de distribuição e auditorias energéticas. Seja em cargas DC (baterias, solar), residencial monofásico ou industrial trifásico, converter watts em amperes é essencial para um projeto elétrico seguro e conforme.",
+          "paragraph4": "A nossa calculadora permite escolher DC, monofásico ou trifásico. Introduza watts e tensão; para AC, fator de potência (predefinido 0,8). O resultado está em amperes (A). Sem registo. Para estudantes, eletricistas e engenheiros, a calculadora Watts para Amperes fornece resultados precisos para todos os tipos de sistemas comuns.",
+          "exampleHeading": "Exemplo:",
+          "exampleText": "DC: 1200 W a 120 V → I = 1200 / 120 = 10 A. Monofásico: 1840 W a 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Trifásico: 8,83 kW a 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            { "question": "Qual é a fórmula watts para amperes (DC)?", "answer": "Para DC: I = P / V, onde I é corrente em A, P potência em W e V tensão em V. Dividir potência pela tensão dá a corrente. Ex.: 1200 W a 120 V → I = 10 A." },
+            { "question": "Qual é a fórmula para monofásico?", "answer": "Para monofásico: I = P / (V × PF). V tensão (V), P potência (W), PF fator de potência (0 a 1). Ex.: 1840 W a 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "Qual é a fórmula para trifásico?", "answer": "Para trifásico: I = P / (√3 × V × PF). V tensão entre fases (V), P potência (W), PF fator de potência. √3 ≈ 1,732. Ex.: 8,83 kW a 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "Quando usar DC, monofásico ou trifásico?", "answer": "DC para baterias, circuitos solares DC e cargas DC. Monofásico para residencial (120 V, 230 V, 240 V). Trifásico para distribuição industrial e comercial (400 V, 480 V entre fases) e motores." },
+            { "question": "Como se relaciona com amperes para watts?", "answer": "Watts para amperes (I = P / V) e amperes para watts (P = I × V) são operações inversas. Use watts→amperes quando conhece potência e tensão; amperes→watts quando conhece corrente e tensão." },
+            { "question": "Esta calculadora é gratuita?", "answer": "Sim. A calculadora Watts para Amperes é gratuita. Sem registo. Escolha DC, monofásico ou trifásico, introduza watts e tensão (e fator de potência para AC), obtenha amperes imediatamente." }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "ampsToWatts": "Calculadora Amperes para Watts",
+          "ampsToWattsDesc": "Converter corrente em potência com tensão",
+          "voltsToWatts": "Calculadora Volts para Watts",
+          "voltsToWattsDesc": "Converter tensão e corrente em potência",
+          "kwToAmps": "Calculadora kW para Amperes",
+          "kwToAmpsDesc": "Converter quilowatts em amperes com tensão",
+          "voltsToAmps": "Calculadora Volts para Amperes",
+          "voltsToAmpsDesc": "Converter tensão em corrente com watts ou resistência"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Calculadora Elétron-volts para Volts",
       "description": "Converta elétron-volts (eV) para volts (V) instantaneamente e com precisão",
@@ -1461,6 +1512,65 @@
               "answer": "Sim, nossa calculadora Elétron-volts para Volts é completamente gratuita. Não é necessário registro ou pagamento. Simplesmente insira seu valor de elétron-volt e obtenha resultados de conversão de tensão instantâneos e precisos."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Calculadora Volts para Elétron-volts",
+      "description": "Converta tensão (V) em energia em elétron-volts (eV); 1:1 para um elétron",
+      "volts": "Tensão (V)",
+      "calculate": "Calcular",
+      "reset": "Repor",
+      "result": "Resultado",
+      "electronVolts": "Elétron-volts (eV)",
+      "seo": {
+        "title": "Calculadora Volts para Elétron-volts - Converter Tensão em Energia",
+        "description": "Calculadora gratuita Volts para Elétron-volts. Converta tensão (V) em eV. 1 V = 1 eV para um elétron. Física de partículas, atômica, semicondutores.",
+        "keywords": "calculadora volts eletron volts, V eV conversor, tensão elétron-volt, calculadora física, calculadora grátis",
+        "content": {
+          "heading": "Como converter volts em elétron-volts",
+          "paragraph1": "Converter tensão (V) em energia em elétron-volts (eV) é uma conversão básica em física, em especial em física de partículas, atômica e eletrónica. Para um elétron a relação é 1:1: um elétron acelerado por 1 V ganha 1 eV. Logo eV = V. A nossa calculadora Volts para Elétron-volts dá resultados instantâneos e precisos.",
+          "paragraph2": "Fórmula: eV = V, onde eV é a energia em elétron-volts e V a tensão em volts. A relação 1:1 vem da definição do elétron-volt como a energia ganha por um elétron ao atravessar 1 V. O eV é uma unidade prática para energias atómicas e subatómicas.",
+          "paragraph3": "Esta conversão usa-se em física de aceleradores, semicondutores, atómica e molecular, medições de raios X e gama, microscopia eletrónica, física do plasma e cálculos quânticos. Conhecer a relação V–eV ajuda a trabalhar com escalas de energia desde transições atómicas até colisões de partículas.",
+          "paragraph4": "A calculadora recebe tensão (V) e devolve energia em eV. Aceita valores pequenos e grandes. Sem registo. Quer trabalhe com bandas proibidas, aceleradores ou energias de fotões, a calculadora Volts para Elétron-volts oferece conversões precisas e instantâneas.",
+          "exampleHeading": "Exemplo:",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1.000.000 V (1 MV) → 1.000.000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {
+              "question": "Fórmula volts para elétron-volts?",
+              "answer": "Para um elétron: eV = V. A energia em eV é igual à tensão em V. Conversão 1:1 porque o elétron-volt é definido como a energia ganha por um elétron sob 1 V."
+            },
+            {
+              "question": "Por que a conversão é 1:1?",
+              "answer": "O elétron-volt é definido como a energia cinética ganha por um elétron ao atravessar 1 V. Por isso 1 V corresponde exatamente a 1 eV para um elétron."
+            },
+            {
+              "question": "O que é um elétron-volt?",
+              "answer": "Um elétron-volt (eV) é uma unidade de energia ≈ 1,602 × 10^-19 J. É a energia cinética de um elétron acelerado por 1 V. Usado em física atómica, nuclear e de partículas."
+            },
+            {
+              "question": "Relação com elétron-volts para volts?",
+              "answer": "Volts para eV (eV = V) e eV para volts (V = eV) são operações inversas. Ambas 1:1 para um elétron. Use V→eV para tensão, eV→V para energia em eV."
+            },
+            {
+              "question": "A calculadora é gratuita?",
+              "answer": "Sim. A calculadora Volts para Elétron-volts é gratuita. Sem registo. Introduza tensão (V) para obter energia em eV."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "electronVoltsToVolts": "Calculadora Elétron-volts para Volts",
+          "electronVoltsToVoltsDesc": "Converter energia em eV em tensão",
+          "joulesToVolts": "Calculadora Joules para Volts",
+          "joulesToVoltsDesc": "Converter energia e carga em tensão",
+          "voltsToJoules": "Calculadora Volts para Joules",
+          "voltsToJoulesDesc": "Converter tensão e carga em energia",
+          "voltsToWatts": "Calculadora Volts para Watts",
+          "voltsToWattsDesc": "Converter tensão e corrente em potência"
         }
       }
     },

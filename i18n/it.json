@@ -1413,6 +1413,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Calcolatrice Watt ad Ampere",
+      "description": "Converti potenza (W) in corrente (A) per DC, monofase e trifase con tensione e fattore di potenza",
+      "currentType": "Tipo di corrente",
+      "directCurrent": "Corrente continua (DC)",
+      "singlePhase": "Monofase",
+      "threePhase": "Trifase",
+      "watts": "Watt (W)",
+      "volts": "Tensione (V)",
+      "powerFactor": "Fattore di potenza (0–1)",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Calcolatrice Watt ad Ampere – DC, Monofase e Trifase | Potenza in Corrente",
+        "description": "Calcolatrice gratuita Watt ad Ampere. Converti potenza (W) in corrente (A) per DC, monofase e trifase. Tensione e fattore di potenza. Ideale per dimensionamento circuiti, interruttori e progettazione elettrica.",
+        "keywords": "calcolatrice watt ampere, convertitore potenza corrente, W A, DC monofase trifase, calcolatrice elettrica, dimensionamento interruttori, calcolatrice gratuita",
+        "content": {
+          "heading": "Come convertire i watt in ampere",
+          "paragraph1": "Convertire la potenza in watt (W) in corrente in ampere (A) è un calcolo elettrico fondamentale. La formula dipende dal tipo di sistema: DC, monofase o trifase. Per DC: I = P / V. Per monofase: I = P / (V × PF), dove PF è il fattore di potenza. Per trifase: I = P / (√3 × V × PF), con V tensione concatenata. La nostra calcolatrice gratuita Watt ad Ampere supporta tutti e tre i modi e fornisce risultati istantanei e precisi per dimensionamento circuiti, scelta interruttori e analisi dei carichi.",
+          "paragraph2": "La corrente continua (DC) non ha fattore di potenza; la corrente è potenza divisa per tensione. I sistemi monofase e trifase hanno spesso carichi reattivi (motori, ballast), quindi la corrente apparente è superiore a quella attiva. Il fattore di potenza (0–1) rappresenta il rapporto tra potenza attiva e apparente. In trifase, il fattore √3 (≈ 1,732) tiene conto della relazione di fase tra tensione concatenata e grandezze di fase. Tensioni comuni: 120 V, 230 V, 240 V (monofase); 400 V, 480 V (trifase concatenata).",
+          "paragraph3": "Questa conversione si usa per: dimensionare interruttori e fusibili, scegliere la sezione dei cavi per un dato carico, calcolare la corrente dalla potenza dell'apparecchio, progettare reti di distribuzione e audit energetici. Che si tratti di carichi DC (batterie, solare), residenziale monofase o industriale trifase, convertire i watt in ampere è essenziale per una progettazione elettrica sicura e conforme.",
+          "paragraph4": "La nostra calcolatrice permette di scegliere DC, monofase o trifase. Inserisci watt e tensione; per AC, fattore di potenza (default 0,8). Il risultato è in ampere (A). Nessuna registrazione. Per studenti, elettricisti e ingegneri, la calcolatrice Watt ad Ampere fornisce risultati accurati per tutti i tipi di sistemi comuni.",
+          "exampleHeading": "Esempio:",
+          "exampleText": "DC: 1200 W a 120 V → I = 1200 / 120 = 10 A. Monofase: 1840 W a 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Trifase: 8,83 kW a 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            { "question": "Qual è la formula watt ad ampere (DC)?", "answer": "Per DC: I = P / V, dove I è corrente in A, P potenza in W e V tensione in V. Dividere potenza per tensione dà la corrente. Es.: 1200 W a 120 V → I = 10 A." },
+            { "question": "Qual è la formula per monofase?", "answer": "Per monofase: I = P / (V × PF). V tensione (V), P potenza (W), PF fattore di potenza (0–1). Es.: 1840 W a 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "Qual è la formula per trifase?", "answer": "Per trifase: I = P / (√3 × V × PF). V tensione concatenata (V), P potenza (W), PF fattore di potenza. √3 ≈ 1,732. Es.: 8,83 kW a 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "Quando usare DC, monofase o trifase?", "answer": "DC per batterie, circuiti solari DC e carichi DC. Monofase per residenziale (120 V, 230 V, 240 V). Trifase per distribuzione industriale e commerciale (400 V, 480 V concatenata) e motori." },
+            { "question": "Come si collega ad ampere a watt?", "answer": "Watt ad ampere (I = P / V) e ampere a watt (P = I × V) sono operazioni inverse. Usare watt→ampere quando si conoscono potenza e tensione; ampere→watt quando si conoscono corrente e tensione." },
+            { "question": "Questa calcolatrice è gratuita?", "answer": "Sì. La calcolatrice Watt ad Ampere è gratuita. Nessuna registrazione. Scegli DC, monofase o trifase, inserisci watt e tensione (e fattore di potenza per AC), ottieni gli ampere all'istante." }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatrici correlate",
+          "ampsToWatts": "Calcolatrice Ampere a Watt",
+          "ampsToWattsDesc": "Converti corrente in potenza con tensione",
+          "voltsToWatts": "Calcolatrice Volt a Watt",
+          "voltsToWattsDesc": "Converti tensione e corrente in potenza",
+          "kwToAmps": "Calcolatrice kW ad Ampere",
+          "kwToAmpsDesc": "Converti kilowatt in ampere con tensione",
+          "voltsToAmps": "Calcolatrice Volt ad Ampere",
+          "voltsToAmpsDesc": "Converti tensione in corrente con watt o resistenza"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Calcolatrice Elettronvolt a Volt",
       "description": "Converti elettronvolt (eV) in volt (V) istantaneamente e accuratamente",
@@ -1461,6 +1512,65 @@
               "answer": "Sì, la nostra calcolatrice Elettronvolt a Volt è completamente gratuita. Non è richiesta registrazione o pagamento. Inserisci semplicemente il tuo valore di elettronvolt e ottieni risultati di conversione della tensione istantanei e accurati."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Calcolatrice Volt a Elettronvolt",
+      "description": "Converti tensione (V) in energia in elettronvolt (eV); 1:1 per un elettrone",
+      "volts": "Tensione (V)",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "electronVolts": "Elettronvolt (eV)",
+      "seo": {
+        "title": "Calcolatrice Volt a Elettronvolt - Converti Tensione in Energia",
+        "description": "Calcolatrice gratuita Volt a Elettronvolt. Converti tensione (V) in eV. 1 V = 1 eV per un elettrone. Fisica delle particelle, atomica, semiconduttori.",
+        "keywords": "calcolatrice volt elettronvolt, V eV convertitore, tensione elettronvolt, calcolatrice fisica, calcolatrice gratuita",
+        "content": {
+          "heading": "Come convertire i volt in elettronvolt",
+          "paragraph1": "Convertire la tensione (V) in energia in elettronvolt (eV) è una conversione di base in fisica, in particolare in fisica delle particelle, atomica ed elettronica. Per un elettrone la relazione è 1:1: un elettrone accelerato da 1 V guadagna 1 eV. Quindi eV = V. La nostra calcolatrice Volt a Elettronvolt fornisce risultati istantanei e accurati.",
+          "paragraph2": "Formula: eV = V, dove eV è l'energia in elettronvolt e V la tensione in volt. La relazione 1:1 deriva dalla definizione dell'elettronvolt come energia guadagnata da un elettrone che attraversa 1 V. L'eV è un'unità comoda per energie atomiche e subatomiche.",
+          "paragraph3": "Questa conversione si usa in fisica degli acceleratori, dei semiconduttori, atomica e molecolare, misure a raggi X e gamma, microscopia elettronica, fisica del plasma e calcoli quantistici. Conoscere il legame V–eV aiuta a lavorare con scale energetiche dalle transizioni atomiche alle collisioni di particelle.",
+          "paragraph4": "La calcolatrice prende la tensione (V) e restituisce l'energia in eV. Gestisce valori piccoli e grandi. Senza registrazione. Che lavoriate su bande proibite, acceleratori o energie di fotoni, la calcolatrice Volt a Elettronvolt offre conversioni precise e istantanee.",
+          "exampleHeading": "Esempio:",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1.000.000 V (1 MV) → 1.000.000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {
+              "question": "Formula volt a elettronvolt?",
+              "answer": "Per un elettrone: eV = V. L'energia in eV equivale alla tensione in V. Conversione 1:1 perché l'elettronvolt è definito come l'energia guadagnata da un elettrone sotto 1 V."
+            },
+            {
+              "question": "Perché la conversione è 1:1?",
+              "answer": "L'elettronvolt è definito come l'energia cinetica guadagnata da un elettrone attraversando 1 V. Quindi 1 V corrisponde esattamente a 1 eV per un elettrone."
+            },
+            {
+              "question": "Cos'è un elettronvolt?",
+              "answer": "Un elettronvolt (eV) è un'unità di energia ≈ 1,602 × 10^-19 J. È l'energia cinetica guadagnata da un elettrone accelerato da 1 V. Usato in fisica atomica, nucleare e delle particelle."
+            },
+            {
+              "question": "Relazione con elettronvolt a volt?",
+              "answer": "Volt a eV (eV = V) ed eV a volt (V = eV) sono operazioni inverse. Entrambe 1:1 per un elettrone. Usa V→eV per la tensione, eV→V per l'energia in eV."
+            },
+            {
+              "question": "La calcolatrice è gratuita?",
+              "answer": "Sì. La calcolatrice Volt a Elettronvolt è gratuita. Senza registrazione. Inserisci la tensione (V) per ottenere l'energia in eV."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatrici correlate",
+          "electronVoltsToVolts": "Calcolatrice Elettronvolt a Volt",
+          "electronVoltsToVoltsDesc": "Converti energia in eV in tensione",
+          "joulesToVolts": "Calcolatrice Joule a Volt",
+          "joulesToVoltsDesc": "Converti energia e carica in tensione",
+          "voltsToJoules": "Calcolatrice Volt a Joule",
+          "voltsToJoulesDesc": "Converti tensione e carica in energia",
+          "voltsToWatts": "Calcolatrice Volt a Watt",
+          "voltsToWattsDesc": "Converti tensione e corrente in potenza"
         }
       }
     },

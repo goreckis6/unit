@@ -1413,6 +1413,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Calculateur Watts vers Ampères",
+      "description": "Convertir la puissance (W) en courant (A) pour DC, monophasé et triphasé avec tension et facteur de puissance",
+      "currentType": "Type de courant",
+      "directCurrent": "Courant continu (DC)",
+      "singlePhase": "Monophasé",
+      "threePhase": "Triphasé",
+      "watts": "Watts (W)",
+      "volts": "Tension (V)",
+      "powerFactor": "Facteur de puissance (0–1)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "amps": "Ampères (A)",
+      "seo": {
+        "title": "Calculateur Watts vers Ampères – DC, Monophasé & Triphasé | Puissance en Courant",
+        "description": "Calculateur gratuit Watts vers Ampères. Convertissez la puissance (W) en courant (A) pour DC, monophasé et triphasé. Tension et facteur de puissance. Idéal pour le dimensionnement des circuits, disjoncteurs et conception électrique.",
+        "keywords": "calculateur watts ampères, convertisseur puissance courant, W A, DC monophasé triphasé, calculateur électrique, dimensionnement disjoncteurs, calculateur gratuit",
+        "content": {
+          "heading": "Comment convertir les watts en ampères",
+          "paragraph1": "Convertir la puissance en watts (W) en courant en ampères (A) est un calcul électrique fondamental. La formule dépend du type de système : DC, monophasé ou triphasé. Pour le DC : I = P / V. Pour le monophasé : I = P / (V × PF), où PF est le facteur de puissance. Pour le triphasé : I = P / (√3 × V × PF), avec V en tension entre phases. Notre calculateur gratuit Watts vers Ampères prend en charge les trois modes et donne des résultats instantanés et précis pour le dimensionnement des circuits, le choix des disjoncteurs et l'analyse des charges.",
+          "paragraph2": "Le courant continu (DC) n'a pas de facteur de puissance ; le courant est la puissance divisée par la tension. Les systèmes monophasés et triphasés ont souvent des charges réactives (moteurs, ballasts), donc le courant apparent est supérieur au courant actif. Le facteur de puissance (0 à 1) représente le rapport entre puissance active et apparente. Pour le triphasé, le facteur √3 (≈ 1,732) tient compte de la relation de phase entre tension entre phases et grandeurs de phase. Tensions courantes : 120 V, 230 V, 240 V (monophasé) ; 400 V, 480 V (triphasé entre phases).",
+          "paragraph3": "Cette conversion sert à : dimensionner disjoncteurs et fusibles, choisir la section des câbles pour une charge donnée, calculer le courant à partir de la puissance des appareils, concevoir les réseaux de distribution et les audits énergétiques. Que ce soit pour des charges DC (batteries, solaire), du résidentiel monophasé ou de l'industriel triphasé, convertir les watts en ampères est indispensable pour une conception électrique sûre et conforme.",
+          "paragraph4": "Notre calculateur permet de choisir DC, monophasé ou triphasé. Saisissez watts et tension ; pour le AC, le facteur de puissance (défaut 0,8). Le résultat est en ampères (A). Aucune inscription. Pour étudiants, électriciens et ingénieurs, le calculateur Watts vers Ampères fournit des résultats précis pour tous les types de systèmes courants.",
+          "exampleHeading": "Exemple :",
+          "exampleText": "DC : 1200 W sous 120 V → I = 1200 / 120 = 10 A. Monophasé : 1840 W sous 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Triphasé : 8,83 kW sous 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            { "question": "Quelle est la formule watts vers ampères (DC) ?", "answer": "Pour le DC : I = P / V, où I est le courant en A, P la puissance en W et V la tension en V. Diviser la puissance par la tension donne le courant. Ex. : 1200 W sous 120 V → I = 10 A." },
+            { "question": "Quelle est la formule pour le monophasé ?", "answer": "Pour le monophasé : I = P / (V × PF). V tension (V), P puissance (W), PF facteur de puissance (0 à 1). Ex. : 1840 W sous 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "Quelle est la formule pour le triphasé ?", "answer": "Pour le triphasé : I = P / (√3 × V × PF). V tension entre phases (V), P puissance (W), PF facteur de puissance. √3 ≈ 1,732. Ex. : 8,83 kW sous 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "Quand utiliser DC, monophasé ou triphasé ?", "answer": "DC pour batteries, circuits solaire DC et charges DC. Monophasé pour le résidentiel (120 V, 230 V, 240 V). Triphasé pour la distribution industrielle et commerciale (400 V, 480 V entre phases) et les moteurs." },
+            { "question": "Comment ça se relie à ampères vers watts ?", "answer": "Watts vers ampères (I = P / V) et ampères vers watts (P = I × V) sont des opérations inverses. Utiliser watts→ampères quand on connaît puissance et tension ; ampères→watts quand on connaît courant et tension." },
+            { "question": "Ce calculateur est-il gratuit ?", "answer": "Oui. Le calculateur Watts vers Ampères est gratuit. Aucune inscription. Choisir DC, monophasé ou triphasé, saisir watts et tension (et facteur de puissance pour AC), obtenir les ampères instantanément." }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs associés",
+          "ampsToWatts": "Calculateur Ampères vers Watts",
+          "ampsToWattsDesc": "Convertir le courant en puissance avec la tension",
+          "voltsToWatts": "Calculateur Volts vers Watts",
+          "voltsToWattsDesc": "Convertir tension et courant en puissance",
+          "kwToAmps": "Calculateur kW vers Ampères",
+          "kwToAmpsDesc": "Convertir les kilowatts en ampères avec la tension",
+          "voltsToAmps": "Calculateur Volts vers Ampères",
+          "voltsToAmpsDesc": "Convertir la tension en courant avec watts ou résistance"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Calculateur Électron-volts vers Volts",
       "description": "Convertissez les électron-volts (eV) en volts (V) instantanément et précisément",
@@ -1461,6 +1512,65 @@
               "answer": "Oui, notre calculateur Électron-volts vers Volts est entièrement gratuit. Aucune inscription ni paiement n'est requis. Entrez simplement votre valeur d'électron-volt et obtenez des résultats de conversion de tension instantanés et précis."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Calculateur Volts vers Électron-volts",
+      "description": "Convertissez la tension (V) en énergie en électron-volts (eV) ; 1:1 pour un électron",
+      "volts": "Tension (V)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "electronVolts": "Électron-volts (eV)",
+      "seo": {
+        "title": "Calculateur Volts vers Électron-volts - Convertir Tension en Énergie",
+        "description": "Calculateur gratuit Volts vers Électron-volts. Convertissez la tension (V) en eV. 1 V = 1 eV pour un électron. Physique des particules, atomique, semiconducteurs.",
+        "keywords": "calculateur volts electron volts, V eV convertisseur, tension electron volt, calculateur physique, calculateur gratuit",
+        "content": {
+          "heading": "Comment convertir les volts en électron-volts",
+          "paragraph1": "Convertir la tension (V) en énergie en électron-volts (eV) est une conversion de base en physique, notamment en physique des particules, atomique et électronique. Pour un électron, la relation est 1:1 : un électron accéléré par 1 V gagne 1 eV. Donc eV = V. Notre calculateur Volts vers Électron-volts donne des résultats instantanés et précis.",
+          "paragraph2": "Formule : eV = V, où eV est l'énergie en électron-volts et V la tension en volts. La relation 1:1 vient de la définition de l'électron-volt comme énergie gagnée par un électron traversant 1 V. L'eV est une unité pratique pour les énergies atomiques et subatomiques.",
+          "paragraph3": "Cette conversion sert en physique des accélérateurs, des semi-conducteurs, atomique et moléculaire, mesures X et gamma, microscopie électronique, physique des plasmas et calculs quantiques. Connaître le lien V–eV aide à travailler avec les échelles d'énergie, des transitions atomiques aux collisions de particules.",
+          "paragraph4": "Le calculateur prend la tension (V) et renvoie l'énergie en eV. Il gère petites et grandes valeurs. Sans inscription. Que vous travailliez sur bandes interdites, accélérateurs ou énergies de photons, le calculateur Volts vers Électron-volts fournit des conversions précises et instantanées.",
+          "exampleHeading": "Exemple :",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1 000 000 V (1 MV) → 1 000 000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {
+              "question": "Formule volts vers électron-volts ?",
+              "answer": "Pour un électron : eV = V. L'énergie en eV égale la tension en V. Conversion 1:1 car l'électron-volt est défini comme l'énergie gagnée par un électron sous 1 V."
+            },
+            {
+              "question": "Pourquoi la conversion est-elle 1:1 ?",
+              "answer": "L'électron-volt est défini comme l'énergie cinétique gagnée par un électron en traversant 1 V. Donc 1 V correspond exactement à 1 eV pour un électron."
+            },
+            {
+              "question": "Qu'est-ce qu'un électron-volt ?",
+              "answer": "Un électron-volt (eV) est une unité d'énergie ≈ 1,602 × 10^-19 J. C'est l'énergie cinétique gagnée par un électron accéléré par 1 V. Utilisé en physique atomique, nucléaire et des particules."
+            },
+            {
+              "question": "Lien avec électron-volts vers volts ?",
+              "answer": "Volts vers eV (eV = V) et eV vers volts (V = eV) sont des opérations inverses. Les deux sont 1:1 pour un électron. Utilisez V→eV pour la tension, eV→V pour l'énergie en eV."
+            },
+            {
+              "question": "Le calculateur est-il gratuit ?",
+              "answer": "Oui. Le calculateur Volts vers Électron-volts est gratuit. Sans inscription. Entrez la tension (V) pour obtenir l'énergie en eV."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs associés",
+          "electronVoltsToVolts": "Calculateur Électron-volts vers Volts",
+          "electronVoltsToVoltsDesc": "Convertir l'énergie en eV en tension",
+          "joulesToVolts": "Calculateur Joules vers Volts",
+          "joulesToVoltsDesc": "Convertir énergie et charge en tension",
+          "voltsToJoules": "Calculateur Volts vers Joules",
+          "voltsToJoulesDesc": "Convertir tension et charge en énergie",
+          "voltsToWatts": "Calculateur Volts vers Watts",
+          "voltsToWattsDesc": "Convertir tension et courant en puissance"
         }
       }
     },

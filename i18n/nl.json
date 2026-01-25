@@ -1413,6 +1413,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Watt naar Ampere Rekenmachine",
+      "description": "Zet vermogen (W) om naar stroom (A) voor DC, enkelfasig en driefasig met spanning en arbeidsfactor",
+      "currentType": "Stroomtype",
+      "directCurrent": "Gelijkstroom (DC)",
+      "singlePhase": "Enkelfasig",
+      "threePhase": "Driefasig",
+      "watts": "Watt (W)",
+      "volts": "Spanning (V)",
+      "powerFactor": "Arbeidsfactor (0–1)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "amps": "Ampère (A)",
+      "seo": {
+        "title": "Watt naar Ampere Rekenmachine – DC, Enkelfasig en Driefasig | Vermogen naar Stroom",
+        "description": "Gratis Watt naar Ampere rekenmachine. Zet vermogen (W) om naar stroom (A) voor DC, enkelfasig en driefasig. Spanning en arbeidsfactor. Ideaal voor dimensionering van circuits, zekeringen en elektrisch ontwerp.",
+        "keywords": "watt ampère rekenmachine, vermogen stroom omzetter, W A, DC enkelfasig driefasig, elektrische rekenmachine, zekering dimensionering, gratis rekenmachine",
+        "content": {
+          "heading": "Hoe watt naar ampère omzetten",
+          "paragraph1": "Vermogen in watt (W) omzetten naar stroom in ampère (A) is een fundamentele elektrische berekening. De formule hangt af van het systeemtype: DC, enkelfasig of driefasig. Voor DC: I = P / V. Voor enkelfasig: I = P / (V × PF), waarbij PF de arbeidsfactor is. Voor driefasig: I = P / (√3 × V × PF), met V als lijn-naar-lijnspanning. Onze gratis Watt naar Ampere rekenmachine ondersteunt alle drie de modi en geeft directe, nauwkeurige resultaten voor dimensionering van circuits, keuze van zekeringen en belastingsanalyse.",
+          "paragraph2": "Gelijkstroom (DC) heeft geen arbeidsfactor; stroom is vermogen gedeeld door spanning. Enkelfasige en driefasige systemen hebben vaak reactieve belastingen (motoren, voorschakelapparaten), dus de schijnbare stroom is hoger dan de actieve. De arbeidsfactor (0 tot 1) geeft de verhouding tussen actief en schijnbaar vermogen. Bij driefasig houdt de factor √3 (≈ 1,732) rekening met de faseverhouding tussen lijn-naar-lijnspanning en fasegrootheden. Gebruikelijke spanningen: 120 V, 230 V, 240 V (enkelfasig); 400 V, 480 V (driefasig lijn-naar-lijn).",
+          "paragraph3": "Deze omzetting wordt gebruikt voor: dimensionering van zekeringen en smeltzekeringen, keuze van kabeldoorsnede voor een belasting, berekening van stroom uit apparaatvermogen, ontwerp van distributienetten en energie-audits. Of het nu om DC-belastingen (batterijen, zonnepanelen), enkelfasig residentieel of driefasig industrieel gaat, watt naar ampère omzetten is essentieel voor veilig en conform elektrisch ontwerp.",
+          "paragraph4": "Onze rekenmachine laat u DC, enkelfasig of driefasig kiezen. Voer watt en spanning in; voor AC de arbeidsfactor (standaard 0,8). Het resultaat is in ampère (A). Geen registratie. Voor studenten, elektriciens en ingenieurs levert de Watt naar Ampere rekenmachine nauwkeurige resultaten voor alle gangbare systeemtypen.",
+          "exampleHeading": "Voorbeeld:",
+          "exampleText": "DC: 1200 W bij 120 V → I = 1200 / 120 = 10 A. Enkelfasig: 1840 W bij 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Driefasig: 8,83 kW bij 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            { "question": "Wat is de formule watt naar ampère (DC)?", "answer": "Voor DC: I = P / V, waarbij I stroom in A is, P vermogen in W en V spanning in V. Deel vermogen door spanning voor de stroom. Voorb.: 1200 W bij 120 V → I = 10 A." },
+            { "question": "Wat is de formule voor enkelfasig?", "answer": "Voor enkelfasig: I = P / (V × PF). V spanning (V), P vermogen (W), PF arbeidsfactor (0 tot 1). Voorb.: 1840 W bij 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "Wat is de formule voor driefasig?", "answer": "Voor driefasig: I = P / (√3 × V × PF). V lijn-naar-lijnspanning (V), P vermogen (W), PF arbeidsfactor. √3 ≈ 1,732. Voorb.: 8,83 kW bij 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "Wanneer DC, enkelfasig of driefasig gebruiken?", "answer": "DC voor batterijen, DC-zonnepanelen en DC-belastingen. Enkelfasig voor typisch residentieel (120 V, 230 V, 240 V). Driefasig voor industriële en commerciële distributie (400 V, 480 V lijn-naar-lijn) en motoren." },
+            { "question": "Hoe verhoudt dit zich tot ampère naar watt?", "answer": "Watt naar ampère (I = P / V) en ampère naar watt (P = I × V) zijn inverse bewerkingen. Gebruik watt→ampère als u vermogen en spanning kent; ampère→watt als u stroom en spanning kent." },
+            { "question": "Is deze rekenmachine gratis?", "answer": "Ja. De Watt naar Ampere rekenmachine is gratis. Geen registratie. Kies DC, enkelfasig of driefasig, voer watt en spanning in (en arbeidsfactor voor AC), krijg direct ampère." }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde rekenmachines",
+          "ampsToWatts": "Ampere naar Watt Rekenmachine",
+          "ampsToWattsDesc": "Zet stroom om naar vermogen met spanning",
+          "voltsToWatts": "Volt naar Watt Rekenmachine",
+          "voltsToWattsDesc": "Zet spanning en stroom om naar vermogen",
+          "kwToAmps": "kW naar Ampere Rekenmachine",
+          "kwToAmpsDesc": "Zet kilowatt om naar ampère met spanning",
+          "voltsToAmps": "Volt naar Ampere Rekenmachine",
+          "voltsToAmpsDesc": "Zet spanning om naar stroom met watt of weerstand"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Elektronvolt naar Volt Rekenmachine",
       "description": "Converteer elektronvolt (eV) naar volt (V) direct en nauwkeurig",
@@ -1461,6 +1512,65 @@
               "answer": "Ja, onze Elektronvolt naar Volt rekenmachine is volledig gratis. Geen registratie of betaling vereist. Voer gewoon uw elektronvolt-waarde in en krijg directe, nauwkeurige spanningsconversieresultaten."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Volt naar Elektronvolt Rekenmachine",
+      "description": "Zet spanning (V) om naar energie in electronvolt (eV); 1:1 voor één elektron",
+      "volts": "Spanning (V)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "electronVolts": "Elektronvolt (eV)",
+      "seo": {
+        "title": "Volt naar Elektronvolt Rekenmachine - Spanning naar Energie",
+        "description": "Gratis Volt naar Elektronvolt rekenmachine. Zet spanning (V) om naar eV. 1 V = 1 eV voor één elektron. Deeltjes-, atoom- en halfgeleiderfysica.",
+        "keywords": "volt elektronvolt rekenmachine, V eV omzetter, spanning elektronvolt, natuurkunde rekenmachine, gratis rekenmachine",
+        "content": {
+          "heading": "Volt naar electronvolt omrekenen",
+          "paragraph1": "Spanning (V) omzetten naar energie in electronvolt (eV) is een basisomrekening in de natuurkunde, vooral in deeltjes-, atoom- en elektronica. Voor één elektron is de relatie 1:1: een elektron dat door 1 V wordt versneld, wint 1 eV. Dus eV = V. Onze gratis Volt–Elektronvolt rekenmachine levert directe, nauwkeurige resultaten.",
+          "paragraph2": "Formule: eV = V, waarbij eV de energie in electronvolt is en V de spanning in volt. De 1:1-relatie volgt uit de definitie van de electronvolt als de energie die één elektron wint bij het doorlopen van 1 V. De eV is een handige eenheid voor atomaire en subatomaire energieën.",
+          "paragraph3": "Deze omrekening wordt gebruikt in versnellerfysica, halfgeleiderfysica, atoom- en molecuulfysica, röntgen- en gammametingen, elektronenmicroscopie, plasmafysica en kwantummechanica. Het verband tussen V en eV kennen helpt bij energieschalen van atomaire overgangen tot botsingen van deeltjes.",
+          "paragraph4": "De rekenmachine neemt spanning (V) en geeft energie in eV. Zij verwerkt kleine en grote waarden. Geen registratie. Of u nu met bandgaten, versnellers of fotonenergieën werkt – de Volt–Elektronvolt rekenmachine levert nauwkeurige, directe omrekeningen.",
+          "exampleHeading": "Voorbeeld:",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1.000.000 V (1 MV) → 1.000.000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            {
+              "question": "Formule volt naar electronvolt?",
+              "answer": "Voor één elektron: eV = V. Energie in eV is gelijk aan spanning in V. 1:1-omrekening omdat de electronvolt gedefinieerd is als de energie van één elektron bij 1 V."
+            },
+            {
+              "question": "Waarom is de omrekening 1:1?",
+              "answer": "De electronvolt is gedefinieerd als de kinetische energie die één elektron wint bij het doorlopen van 1 V. Daarom komt 1 V exact overeen met 1 eV voor één elektron."
+            },
+            {
+              "question": "Wat is een electronvolt?",
+              "answer": "Een electronvolt (eV) is een energie-eenheid ≈ 1,602 × 10^-19 J. Het is de kinetische energie van één elektron versneld door 1 V. Gebruikt in atoom-, kern- en deeltjesfysica."
+            },
+            {
+              "question": "Relatie met electronvolt naar volt?",
+              "answer": "Volt naar eV (eV = V) en eV naar volt (V = eV) zijn inverse bewerkingen. Beide 1:1 voor één elektron. Gebruik V→eV voor spanning, eV→V voor energie in eV."
+            },
+            {
+              "question": "Is de rekenmachine gratis?",
+              "answer": "Ja. De Volt–Elektronvolt rekenmachine is gratis. Geen registratie. Voer spanning (V) in om energie in eV te krijgen."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde rekenmachines",
+          "electronVoltsToVolts": "Elektronvolt naar Volt Rekenmachine",
+          "electronVoltsToVoltsDesc": "Zet energie in eV om naar spanning",
+          "joulesToVolts": "Joule naar Volt Rekenmachine",
+          "joulesToVoltsDesc": "Zet energie en lading om naar spanning",
+          "voltsToJoules": "Volt naar Joule Rekenmachine",
+          "voltsToJoulesDesc": "Zet spanning en lading om naar energie",
+          "voltsToWatts": "Volt naar Watt Rekenmachine",
+          "voltsToWattsDesc": "Zet spanning en stroom om naar vermogen"
         }
       }
     },

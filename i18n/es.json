@@ -1413,6 +1413,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Calculadora Vatios a Amperios",
+      "description": "Convierte potencia (W) en corriente (A) para DC, monofásico y trifásico con tensión y factor de potencia",
+      "currentType": "Tipo de corriente",
+      "directCurrent": "Corriente continua (DC)",
+      "singlePhase": "Monofásico",
+      "threePhase": "Trifásico",
+      "watts": "Vatios (W)",
+      "volts": "Tensión (V)",
+      "powerFactor": "Factor de potencia (0–1)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "amps": "Amperios (A)",
+      "seo": {
+        "title": "Calculadora Vatios a Amperios – DC, Monofásico y Trifásico | Potencia a Corriente",
+        "description": "Calculadora gratuita Vatios a Amperios. Convierte potencia (W) en corriente (A) para DC, monofásico y trifásico. Tensión y factor de potencia. Ideal para dimensionar circuitos, disyuntores y diseño eléctrico.",
+        "keywords": "calculadora vatios amperios, convertidor potencia corriente, W A, DC monofásico trifásico, calculadora eléctrica, dimensionamiento disyuntores, calculadora gratuita",
+        "content": {
+          "heading": "Cómo convertir vatios a amperios",
+          "paragraph1": "Convertir potencia en vatios (W) a corriente en amperios (A) es un cálculo eléctrico fundamental. La fórmula depende del tipo de sistema: DC, monofásico o trifásico. Para DC: I = P / V. Para monofásico: I = P / (V × PF), donde PF es el factor de potencia. Para trifásico: I = P / (√3 × V × PF), con V en tensión entre fases. Nuestra calculadora gratuita Vatios a Amperios soporta los tres modos y da resultados instantáneos y precisos para dimensionar circuitos, elegir disyuntores y analizar cargas.",
+          "paragraph2": "La corriente continua (DC) no tiene factor de potencia; la corriente es potencia entre tensión. Los sistemas monofásico y trifásico suelen tener cargas reactivas (motores, balastos), por lo que la corriente aparente es mayor que la activa. El factor de potencia (0 a 1) representa la relación entre potencia activa y aparente. En trifásico, el factor √3 (≈ 1,732) tiene en cuenta la relación de fase entre tensión entre fases y magnitudes de fase. Tensiones habituales: 120 V, 230 V, 240 V (monofásico); 400 V, 480 V (trifásico entre fases).",
+          "paragraph3": "Esta conversión se usa para: dimensionar disyuntores y fusibles, elegir sección de cables para una carga, calcular la corriente a partir de la potencia del aparato, diseñar redes de distribución y auditorías energéticas. Ya sea en cargas DC (baterías, solar), residencial monofásico o industrial trifásico, convertir vatios a amperios es esencial para un diseño eléctrico seguro y conforme.",
+          "paragraph4": "Nuestra calculadora permite elegir DC, monofásico o trifásico. Introduce vatios y tensión; para AC, el factor de potencia (por defecto 0,8). El resultado está en amperios (A). Sin registro. Para estudiantes, electricistas e ingenieros, la calculadora Vatios a Amperios ofrece resultados precisos para todos los tipos de sistemas habituales.",
+          "exampleHeading": "Ejemplo:",
+          "exampleText": "DC: 1200 W a 120 V → I = 1200 / 120 = 10 A. Monofásico: 1840 W a 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Trifásico: 8,83 kW a 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            { "question": "¿Cuál es la fórmula vatios a amperios (DC)?", "answer": "Para DC: I = P / V, donde I es corriente en A, P potencia en W y V tensión en V. Dividir potencia entre tensión da la corriente. Ej.: 1200 W a 120 V → I = 10 A." },
+            { "question": "¿Cuál es la fórmula para monofásico?", "answer": "Para monofásico: I = P / (V × PF). V tensión (V), P potencia (W), PF factor de potencia (0 a 1). Ej.: 1840 W a 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "¿Cuál es la fórmula para trifásico?", "answer": "Para trifásico: I = P / (√3 × V × PF). V tensión entre fases (V), P potencia (W), PF factor de potencia. √3 ≈ 1,732. Ej.: 8,83 kW a 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "¿Cuándo usar DC, monofásico o trifásico?", "answer": "DC para baterías, circuitos solares DC y cargas DC. Monofásico para residencial (120 V, 230 V, 240 V). Trifásico para distribución industrial y comercial (400 V, 480 V entre fases) y motores." },
+            { "question": "¿Cómo se relaciona con amperios a vatios?", "answer": "Vatios a amperios (I = P / V) y amperios a vatios (P = I × V) son operaciones inversas. Usar vatios→amperios cuando se conocen potencia y tensión; amperios→vatios cuando se conocen corriente y tensión." },
+            { "question": "¿Esta calculadora es gratuita?", "answer": "Sí. La calculadora Vatios a Amperios es gratuita. Sin registro. Elige DC, monofásico o trifásico, introduce vatios y tensión (y factor de potencia para AC), y obtén amperios al instante." }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "ampsToWatts": "Calculadora Amperios a Vatios",
+          "ampsToWattsDesc": "Convertir corriente en potencia con tensión",
+          "voltsToWatts": "Calculadora Voltios a Vatios",
+          "voltsToWattsDesc": "Convertir tensión y corriente en potencia",
+          "kwToAmps": "Calculadora kW a Amperios",
+          "kwToAmpsDesc": "Convertir kilovatios en amperios con tensión",
+          "voltsToAmps": "Calculadora Voltios a Amperios",
+          "voltsToAmpsDesc": "Convertir tensión en corriente con vatios o resistencia"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Calculadora Electronvoltios a Voltios",
       "description": "Convierta electronvoltios (eV) a voltios (V) instantáneamente y con precisión",
@@ -1461,6 +1512,65 @@
               "answer": "Sí, nuestra calculadora Electronvoltios a Voltios es completamente gratuita. No se requiere registro ni pago. Simplemente ingrese su valor de electronvoltio y obtenga resultados de conversión de voltaje instantáneos y precisos."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Calculadora Voltios a Electronvoltios",
+      "description": "Convierte tensión (V) en energía en electronvoltios (eV); 1:1 para un electrón",
+      "volts": "Tensión (V)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "electronVolts": "Electronvoltios (eV)",
+      "seo": {
+        "title": "Calculadora Voltios a Electronvoltios - Convertir Tensión en Energía",
+        "description": "Calculadora gratuita Voltios a Electronvoltios. Convierte tensión (V) en eV. 1 V = 1 eV para un electrón. Física de partículas, atómica, semiconductores.",
+        "keywords": "calculadora voltios electronvoltios, V eV convertidor, tensión electronvoltio, calculadora física, calculadora gratis",
+        "content": {
+          "heading": "Cómo convertir voltios en electronvoltios",
+          "paragraph1": "Convertir tensión (V) en energía en electronvoltios (eV) es una conversión básica en física, sobre todo en física de partículas, atómica y electrónica. Para un electrón la relación es 1:1: un electrón acelerado por 1 V gana 1 eV. Por tanto eV = V. Nuestra calculadora Voltios a Electronvoltios da resultados instantáneos y precisos.",
+          "paragraph2": "Fórmula: eV = V, donde eV es la energía en electronvoltios y V la tensión en voltios. La relación 1:1 viene de la definición del electronvoltio como energía ganada por un electrón al atravesar 1 V. El eV es una unidad cómoda para energías atómicas y subatómicas.",
+          "paragraph3": "Esta conversión se usa en física de aceleradores, semiconductores, atómica y molecular, medición de rayos X y gamma, microscopía electrónica, física de plasmas y cálculos cuánticos. Conocer la relación V–eV ayuda a trabajar con escalas de energía desde transiciones atómicas hasta colisiones de partículas.",
+          "paragraph4": "La calculadora toma tensión (V) y devuelve energía en eV. Acepta valores pequeños y grandes. Sin registro. Tanto para bandas prohibidas, aceleradores o energías de fotones, la calculadora Voltios a Electronvoltios ofrece conversiones precisas e instantáneas.",
+          "exampleHeading": "Ejemplo:",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1 000 000 V (1 MV) → 1 000 000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            {
+              "question": "¿Fórmula voltios a electronvoltios?",
+              "answer": "Para un electrón: eV = V. La energía en eV es igual a la tensión en V. Conversión 1:1 porque el electronvoltio se define como la energía ganada por un electrón bajo 1 V."
+            },
+            {
+              "question": "¿Por qué la conversión es 1:1?",
+              "answer": "El electronvoltio es la energía cinética ganada por un electrón al atravesar 1 V. Por tanto 1 V corresponde exactamente a 1 eV para un electrón."
+            },
+            {
+              "question": "¿Qué es un electronvoltio?",
+              "answer": "Un electronvoltio (eV) es una unidad de energía ≈ 1,602 × 10^-19 J. Es la energía cinética de un electrón acelerado por 1 V. Se usa en física atómica, nuclear y de partículas."
+            },
+            {
+              "question": "¿Relación con electronvoltios a voltios?",
+              "answer": "Voltios a eV (eV = V) y eV a voltios (V = eV) son operaciones inversas. Ambas 1:1 para un electrón. Use V→eV para tensión, eV→V para energía en eV."
+            },
+            {
+              "question": "¿La calculadora es gratuita?",
+              "answer": "Sí. La calculadora Voltios a Electronvoltios es gratuita. Sin registro. Introduzca tensión (V) para obtener energía en eV."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "electronVoltsToVolts": "Calculadora Electronvoltios a Voltios",
+          "electronVoltsToVoltsDesc": "Convertir energía en eV en tensión",
+          "joulesToVolts": "Calculadora Julios a Voltios",
+          "joulesToVoltsDesc": "Convertir energía y carga en tensión",
+          "voltsToJoules": "Calculadora Voltios a Julios",
+          "voltsToJoulesDesc": "Convertir tensión y carga en energía",
+          "voltsToWatts": "Calculadora Voltios a Vatios",
+          "voltsToWattsDesc": "Convertir tensión y corriente en potencia"
         }
       }
     },

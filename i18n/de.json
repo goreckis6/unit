@@ -1428,6 +1428,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Watt zu Ampere Rechner",
+      "description": "Leistung (W) in Strom (A) für DC, Einphasen- und Dreiphasenwechselstrom mit Spannung und Leistungsfaktor umrechnen",
+      "currentType": "Stromart",
+      "directCurrent": "Gleichstrom (DC)",
+      "singlePhase": "Einphasig",
+      "threePhase": "Dreiphasig",
+      "watts": "Watt (W)",
+      "volts": "Spannung (V)",
+      "powerFactor": "Leistungsfaktor (0–1)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Watt zu Ampere Rechner – DC, Einphasen- & Dreiphasen | Leistung in Strom",
+        "description": "Kostenloser Watt-zu-Ampere-Rechner. Leistung (W) in Strom (A) für DC, Einphasen- und Dreiphasenwechselstrom. Mit Spannung und Leistungsfaktor. Ideal für Stromkreisdimensionierung, Leitungsschutz und Elektroplanung.",
+        "keywords": "watt ampère rechner, leistung strom umrechner, W A, DC einphasen dreiphasig, elektrorechner, sicherungsberechnung, kostenloser rechner",
+        "content": {
+          "heading": "Wie man Watt in Ampere umrechnet",
+          "paragraph1": "Die Umrechnung von Leistung in Watt (W) in Strom in Ampere (A) ist eine grundlegende elektrische Berechnung. Die Formel hängt vom Systemtyp ab: DC, Einphasen- oder Dreiphasenwechselstrom. Für DC: I = P / V. Für Einphasen-Wechselstrom: I = P / (V × PF), wobei PF der Leistungsfaktor ist. Für Dreiphasen-Wechselstrom: I = P / (√3 × V × PF), mit V als verketteter Spannung. Unser kostenloser Watt-zu-Ampere-Rechner unterstützt alle drei Modi und liefert sofortige, genaue Ergebnisse für Stromkreisdimensionierung, Leitungsschutz und Lastanalyse.",
+          "paragraph2": "Gleichstrom (DC) hat keinen Leistungsfaktor; Strom ist Leistung geteilt durch Spannung. Ein- und Dreiphasen-Wechselstromsysteme haben oft Blindlasten (Motoren, Vorschaltgeräte), daher ist der Scheinstrom höher als der Wirkstrom. Der Leistungsfaktor (0 bis 1) gibt das Verhältnis von Wirk- zu Scheinleistung an. Bei Dreiphasen berücksichtigt der Faktor √3 (ca. 1,732) die Phasenbeziehung zwischen verketteter Spannung und Phasengrößen. Typische Spannungen: 120 V, 230 V, 240 V (einphasig); 400 V, 480 V (dreiphasig, verkettet).",
+          "paragraph3": "Diese Umrechnung wird verwendet für: Dimensionierung von Leitungsschutzschaltern und Sicherungen, Wahl der Leiterquerschnitte für eine gegebene Last, Berechnung der Stromaufnahme aus der Geräteleistung, Planung von Verteilnetzen und Energieaudits. Ob Gleichstromlasten (Batterien, Solar), einphasiger Wohnbereich oder dreiphasige Industrie – die Umrechnung von Watt in Ampere ist für sichere und normgerechte Elektroplanung unerlässlich.",
+          "paragraph4": "Unser Rechner lässt Sie DC, Einphasen- oder Dreiphasen wählen. Geben Sie Watt und Spannung ein; für Wechselstrom den Leistungsfaktor (Standard 0,8). Das Ergebnis ist in Ampere (A). Keine Registrierung nötig. Für Lernende, Elektriker und Ingenieure liefert der Watt-zu-Ampere-Rechner zuverlässige Ergebnisse für alle gängigen Systemtypen.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "DC: 1200 W bei 120 V → I = 1200 / 120 = 10 A. Einphasig: 1840 W bei 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Dreiphasig: 8,83 kW bei 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            { "question": "Wie lautet die Formel für Watt zu Ampere (DC)?", "answer": "Für DC: I = P / V, wobei I Strom in Ampere, P Leistung in Watt und V Spannung in Volt ist. Leistung durch Spannung teilen ergibt den Strom. Beispiel: 1200 W bei 120 V → I = 10 A." },
+            { "question": "Wie lautet die Formel für Einphasen-Wechselstrom?", "answer": "Für Einphasen-Wechselstrom: I = P / (V × PF). V Spannung (Volt), P Leistung (Watt), PF Leistungsfaktor (0 bis 1). Beispiel: 1840 W bei 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "Wie lautet die Formel für Dreiphasen-Wechselstrom?", "answer": "Für Dreiphasen-Wechselstrom: I = P / (√3 × V × PF). V verkettete Spannung (Volt), P Leistung (Watt), PF Leistungsfaktor. √3 ≈ 1,732. Beispiel: 8,83 kW bei 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "Wann DC, einphasig oder dreiphasig?", "answer": "DC für Batterien, Solar-Gleichstrom und DC-Lasten. Einphasig für typische Haushalte (120 V, 230 V, 240 V). Dreiphasig für industrielle und gewerbliche Verteilung (400 V, 480 V verkettet) und Motoren." },
+            { "question": "Wie hängt das mit Ampere zu Watt zusammen?", "answer": "Watt zu Ampere (I = P / V) und Ampere zu Watt (P = I × V) sind Umkehrrechnungen. Watt-zu-Ampere verwenden, wenn Leistung und Spannung bekannt und Strom gesucht; Ampere-zu-Watt, wenn Strom und Spannung bekannt und Leistung gesucht." },
+            { "question": "Ist dieser Rechner kostenlos?", "answer": "Ja. Der Watt-zu-Ampere-Rechner ist kostenlos. Keine Registrierung nötig. DC, Einphasen oder Dreiphasen wählen, Watt und Spannung (und bei Wechselstrom Leistungsfaktor) eingeben, Ampere sofort erhalten." }
+          ]
+        },
+        "related": {
+          "heading": "Ähnliche Rechner",
+          "ampsToWatts": "Ampere zu Watt Rechner",
+          "ampsToWattsDesc": "Strom in Leistung mit Spannung umrechnen",
+          "voltsToWatts": "Volt zu Watt Rechner",
+          "voltsToWattsDesc": "Spannung und Strom in Leistung umrechnen",
+          "kwToAmps": "kW zu Ampere Rechner",
+          "kwToAmpsDesc": "Kilowatt in Ampere mit Spannung umrechnen",
+          "voltsToAmps": "Volt zu Ampere Rechner",
+          "voltsToAmpsDesc": "Spannung in Strom mit Watt oder Widerstand umrechnen"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Elektronenvolt zu Volt Rechner",
       "description": "Konvertieren Sie Elektronenvolt (eV) sofort und genau in Volt (V)",
@@ -1476,6 +1527,65 @@
               "answer": "Ja, unser Elektronenvolt zu Volt Rechner ist völlig kostenlos. Keine Registrierung oder Zahlung erforderlich. Geben Sie einfach Ihren Elektronenvolt-Wert ein und erhalten Sie sofortige, genaue Spannungsumwandlungsergebnisse."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Volt zu Elektronenvolt Rechner",
+      "description": "Spannung (V) in Elektronenvolt (eV) umrechnen; 1:1 für ein Elektron",
+      "volts": "Spannung (V)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "electronVolts": "Elektronenvolt (eV)",
+      "seo": {
+        "title": "Volt zu Elektronenvolt Rechner - Spannung in Energie umrechnen",
+        "description": "Kostenloser Volt–Elektronenvolt-Rechner. Spannung (V) in eV umrechnen. 1 V = 1 eV für ein Elektron. Für Teilchen-, Atom- und Halbleiterphysik.",
+        "keywords": "volt elektronenvolt rechner, V eV umrechner, spannung elektronenvolt, physik rechner, kostenloser rechner",
+        "content": {
+          "heading": "Volt in Elektronenvolt umrechnen",
+          "paragraph1": "Spannung (V) in Elektronenvolt (eV) umzurechnen ist in der Physik grundlegend, besonders in Teilchen-, Atom- und Halbleiterphysik. Für ein Elektron gilt 1:1: ein durch 1 V beschleunigtes Elektron gewinnt 1 eV. Also eV = V. Unser kostenloser Volt–Elektronenvolt-Rechner liefert sofortige, genaue Ergebnisse.",
+          "paragraph2": "Formel: eV = V. eV = Energie in Elektronenvolt, V = Spannung in Volt. Die 1:1-Beziehung folgt aus der Definition des Elektronenvolts als Energie, die ein Elektron beim Durchlaufen von 1 V gewinnt. Das eV ist eine gängige Einheit für atomare und subatomare Energien.",
+          "paragraph3": "Die Umrechnung wird genutzt in: Beschleunigerphysik, Halbleiterphysik, atomarer und molekularer Physik, Röntgen- und Gammamessungen, Elektronenmikroskopie, Plasmaphysik und Quantenmechanik. Den Zusammenhang zwischen Volt und eV zu kennen hilft bei Energieskalen von atomaren Übergängen bis zu hochenergetischen Teilchenkollisionen.",
+          "paragraph4": "Der Rechner nimmt Spannung (V) und gibt Energie in eV aus. Er verarbeitet kleine und große Werte. Keine Registrierung. Ob Bandlücken, Beschleuniger oder Photonenenergien – der Volt–Elektronenvolt-Rechner liefert genaue, sofortige Umrechnungen.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1.000.000 V (1 MV) → 1.000.000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Formel Volt zu Elektronenvolt?",
+              "answer": "Für ein Elektron: eV = V. Energie in eV entspricht Spannung in V. Direkte 1:1-Umrechnung, weil das eV als Energie eines Elektrons bei 1 V definiert ist."
+            },
+            {
+              "question": "Warum ist die Umrechnung 1:1?",
+              "answer": "Das Elektronenvolt ist definiert als die kinetische Energie, die ein Elektron beim Durchlaufen von 1 V gewinnt. Daher entspricht 1 V genau 1 eV für ein Elektron."
+            },
+            {
+              "question": "Was ist ein Elektronenvolt?",
+              "answer": "Ein Elektronenvolt (eV) ist eine Energieeinheit ≈ 1,602 × 10^-19 J. Es ist die kinetische Energie, die ein Elektron bei 1 V gewinnt. Üblich in Atom-, Kern- und Teilchenphysik."
+            },
+            {
+              "question": "Verhältnis zu Elektronenvolt zu Volt?",
+              "answer": "Volt zu eV (eV = V) und eV zu Volt (V = eV) sind zueinander inverse Umrechnungen. Beide 1:1 für ein Elektron. V→eV bei Spannung, eV→V bei Energie in eV."
+            },
+            {
+              "question": "Ist der Rechner kostenlos?",
+              "answer": "Ja. Der Volt–Elektronenvolt-Rechner ist kostenlos. Keine Registrierung. Spannung (V) eingeben, um Energie in eV zu erhalten."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Ähnliche Rechner",
+          "electronVoltsToVolts": "Elektronenvolt zu Volt Rechner",
+          "electronVoltsToVoltsDesc": "Energie in eV in Spannung umrechnen",
+          "joulesToVolts": "Joule zu Volt Rechner",
+          "joulesToVoltsDesc": "Energie und Ladung in Spannung umrechnen",
+          "voltsToJoules": "Volt zu Joule Rechner",
+          "voltsToJoulesDesc": "Spannung und Ladung in Energie umrechnen",
+          "voltsToWatts": "Volt zu Watt Rechner",
+          "voltsToWattsDesc": "Spannung und Strom in Leistung umrechnen"
         }
       }
     },

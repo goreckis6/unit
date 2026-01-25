@@ -1413,6 +1413,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Watt til Ampere Lommeregner",
+      "description": "Konverter effekt (W) til strøm (A) for DC, enfase og trefase med spænding og effektfaktor",
+      "currentType": "Strømtype",
+      "directCurrent": "Glikstrøm (DC)",
+      "singlePhase": "Enfase",
+      "threePhase": "Trefase",
+      "watts": "Watt (W)",
+      "volts": "Spænding (V)",
+      "powerFactor": "Effektfaktor (0–1)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Watt til Ampere Lommeregner – DC, Enfase og Trefase | Effekt til Strøm",
+        "description": "Gratis Watt til Ampere lommeregner. Konverter effekt (W) til strøm (A) for DC, enfase og trefase. Spænding og effektfaktor. Ideel til kredsløbsdimensionering, sikringer og elprojektering.",
+        "keywords": "watt ampere lommeregner, effekt strøm konverter, W A, DC enfase trefase, el-lommeregner, sikringsdimensionering, gratis lommeregner",
+        "content": {
+          "heading": "Sådan konverteres watt til ampere",
+          "paragraph1": "At konvertere effekt i watt (W) til strøm i ampere (A) er en grundlæggende elberegning. Formlen afhænger af systemtype: DC, enfase eller trefase. For DC: I = P / V. For enfase: I = P / (V × PF), hvor PF er effektfaktoren. For trefase: I = P / (√3 × V × PF), med V som linjespænding. Vores gratis Watt til Ampere lommeregner understøtter alle tre tilstande og giver øjeblikkelige, præcise resultater til kredsløbsdimensionering, sikringsvalg og lastanalyse.",
+          "paragraph2": "Glikstrøm (DC) har ingen effektfaktor; strøm er effekt divideret med spænding. Enfase- og trefasesystemer har ofte reaktive belastninger (motorer, ballaster), så tilsyneladende strøm > aktiv strøm. Effektfaktoren (0–1) repræsenterer forholdet mellem aktiv og tilsyneladende effekt. For trefase afspejler faktoren √3 (≈1,732) faserelationen mellem linjespænding og fasestørrelser. Almindelige spændinger: 120 V, 230 V, 240 V (enfase); 400 V, 480 V (trefase linje).",
+          "paragraph3": "Denne konvertering bruges til: dimensionering af sikringer og propper, valg af kabeltværsnit til given last, beregning af strøm fra apparatets effekt, design af distributionsnet og energirevisioner. Uanset DC-belastninger (batterier, sol), enfase bolig eller trefase industri er konvertering af watt til ampere nødvendig for sikker og regelkonform elprojektering.",
+          "paragraph4": "Vores lommeregner lader dig vælge DC, enfase eller trefase. Indtast watt og spænding; for AC effektfaktor (standard 0,8). Resultatet er i ampere (A). Ingen registrering. For studerende, elektrikere og ingeniører leverer Watt til Ampere lommeregneren præcise resultater for alle almindelige systemtyper.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "DC: 1200 W ved 120 V → I = 1200 / 120 = 10 A. Enfase: 1840 W ved 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Trefase: 8,83 kW ved 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            { "question": "Hvad er formlen watt til ampere (DC)?", "answer": "For DC: I = P / V, hvor I er strøm (A), P effekt (W), V spænding (V). Divider effekt med spænding for strøm. Eks.: 1200 W ved 120 V → I = 10 A." },
+            { "question": "Hvad er formlen for enfase?", "answer": "For enfase: I = P / (V × PF). V spænding (V), P effekt (W), PF effektfaktor (0–1). Eks.: 1840 W ved 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "Hvad er formlen for trefase?", "answer": "For trefase: I = P / (√3 × V × PF). V linjespænding (V), P effekt (W), PF effektfaktor. √3 ≈ 1,732. Eks.: 8,83 kW ved 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "Hvornår bruger jeg DC, enfase eller trefase?", "answer": "DC til batterier, sol DC-kredsløb og DC-belastninger. Enfase til typisk bolig (120 V, 230 V, 240 V). Trefase til industriel og kommerciel distribution (400 V, 480 V linje) og motorer." },
+            { "question": "Hvordan hænger dette sammen med ampere til watt?", "answer": "Watt til ampere (I = P / V) og ampere til watt (P = I × V) er inverse operationer. Brug watt→ampere når du kender effekt og spænding; ampere→watt når du kender strøm og spænding." },
+            { "question": "Er denne lommeregner gratis?", "answer": "Ja. Watt til Ampere lommeregneren er gratis. Ingen registrering. Vælg DC, enfase eller trefase, indtast watt og spænding (og effektfaktor for AC), få ampere med det samme." }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede lommeregnere",
+          "ampsToWatts": "Ampere til Watt Lommeregner",
+          "ampsToWattsDesc": "Konverter strøm til effekt med spænding",
+          "voltsToWatts": "Volt til Watt Lommeregner",
+          "voltsToWattsDesc": "Konverter spænding og strøm til effekt",
+          "kwToAmps": "kW til Ampere Lommeregner",
+          "kwToAmpsDesc": "Konverter kilowatt til ampere med spænding",
+          "voltsToAmps": "Volt til Ampere Lommeregner",
+          "voltsToAmpsDesc": "Konverter spænding til strøm med watt eller modstand"
+        }
+      }
+    },
     "joulesToWatts": {
       "title": "Joule til Watt Lommeregner",
       "description": "Konverter joule (J) til watt (W) øjeblikkeligt og præcist med tid",
@@ -1629,6 +1680,65 @@
               "answer": "Ja, vores Elektronvolt til Volt-lommeregner er helt gratis. Ingen registrering eller betalning kræves. Indtast bare din elektronvolt-værdi og få øjeblikkelige, præcise spændingskonverteringsresultater."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Volt til Elektronvolt Lommeregner",
+      "description": "Konverter spænding (V) til energi i elektronvolt (eV); 1:1 for et elektron",
+      "volts": "Spænding (V)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "electronVolts": "Elektronvolt (eV)",
+      "seo": {
+        "title": "Volt til Elektronvolt Lommeregner - Konverter Spænding til Energi",
+        "description": "Gratis Volt til Elektronvolt lommeregner. Konverter spænding (V) til eV. 1 V = 1 eV for et elektron. Partikelfysik, atomfysik, halvlederfysik.",
+        "keywords": "volt elektronvolt lommeregner, V eV omformer, spænding elektronvolt, fysik lommeregner, gratis lommeregner",
+        "content": {
+          "heading": "Sådan konverteres volt til elektronvolt",
+          "paragraph1": "At konvertere spænding (V) til energi i elektronvolt (eV) er grundlæggende i fysik, især partikel-, atom- og elektronik. For et elektron er forholdet 1:1: et elektron accelereret gennem 1 V vinder 1 eV. Så eV = V. Vores gratis Volt–Elektronvolt lommeregner giver øjeblikkelige, præcise resultater.",
+          "paragraph2": "Formel: eV = V, hvor eV er energi i elektronvolt og V spænding i volt. 1:1-forholdet følger af, at elektronvolt defineres som den energi et elektron vinder, når det passerer 1 V. eV er en praktisk enhed for atomare og subatomare energier.",
+          "paragraph3": "Konverteringen bruges i partikelacceleratorfysik, halvlederfysik, atom- og molekylfysik, røntgen- og gammamålinger, elektronmikroskopi, plasmafysik og kvantemekanik. At kende forholdet V–eV hjælper med energiskalaer fra atomare overgange til partikelkollisioner.",
+          "paragraph4": "Lommeregneren tager spænding (V) og returnerer energi i eV. Den håndterer små og store værdier. Ingen tilmelding. Uanset bandgap, acceleratorer eller fotonenergier – Volt–Elektronvolt lommeregneren giver præcise, øjeblikkelige konverteringer.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1.000.000 V (1 MV) → 1.000.000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {
+              "question": "Formel volt til elektronvolt?",
+              "answer": "For et elektron: eV = V. Energi i eV er lig spænding i V. 1:1-konvertering fordi elektronvolt defineres som den energi et elektron vinder ved 1 V."
+            },
+            {
+              "question": "Hvorfor er konverteringen 1:1?",
+              "answer": "Elektronvolt defineres som den kinetiske energi et elektron vinder, når det passerer 1 V. Derfor svarer 1 V nøjagtigt til 1 eV for et elektron."
+            },
+            {
+              "question": "Hvad er en elektronvolt?",
+              "answer": "En elektronvolt (eV) er en energienhed ≈ 1,602 × 10^-19 joule. Det er den kinetiske energi et elektron vinder ved acceleration gennem 1 V. Bruges i atom-, kerne- og partikelfysik."
+            },
+            {
+              "question": "Forhold til elektronvolt til volt?",
+              "answer": "Volt til eV (eV = V) og eV til volt (V = eV) er inverse konverteringer. Begge 1:1 for et elektron. Brug V→eV for spænding, eV→V for energi i eV."
+            },
+            {
+              "question": "Er lommeregneren gratis?",
+              "answer": "Ja. Volt–Elektronvolt lommeregneren er gratis. Ingen tilmelding. Indtast spænding (V) for energi i eV."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede lommeregnere",
+          "electronVoltsToVolts": "Elektronvolt til Volt Lommeregner",
+          "electronVoltsToVoltsDesc": "Konverter energi i eV til spænding",
+          "joulesToVolts": "Joule til Volt Lommeregner",
+          "joulesToVoltsDesc": "Konverter energi og ladning til spænding",
+          "voltsToJoules": "Volt til Joule Lommeregner",
+          "voltsToJoulesDesc": "Konverter spænding og ladning til energi",
+          "voltsToWatts": "Volt til Watt Lommeregner",
+          "voltsToWattsDesc": "Konverter spænding og strøm til effekt"
         }
       }
     }

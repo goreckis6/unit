@@ -1523,6 +1523,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Kalkulačka Wattů na Ampéry",
+      "description": "Převeďte výkon (W) na proud (A) pro DC, jednofázový a třífázový s napětím a účiníkem",
+      "currentType": "Typ proudu",
+      "directCurrent": "Stejnosměrný proud (DC)",
+      "singlePhase": "Jednofázový",
+      "threePhase": "Třífázový",
+      "watts": "Watty (W)",
+      "volts": "Napětí (V)",
+      "powerFactor": "Účiník (0–1)",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "result": "Výsledek",
+      "amps": "Ampéry (A)",
+      "seo": {
+        "title": "Kalkulačka Wattů na Ampéry – DC, Jednofázový a Třífázový | Výkon na Proud",
+        "description": "Bezplatná kalkulačka Wattů na Ampéry. Převeďte výkon (W) na proud (A) pro DC, jednofázový a třífázový. Napětí a účiník. Ideální pro dimenzování obvodů, jističů a elektroprojektů.",
+        "keywords": "kalkulačka wattů ampéry, převodník výkon proud, W A, DC jednofázový třífázový, elektrická kalkulačka, dimenzování jističů, bezplatná kalkulačka",
+        "content": {
+          "heading": "Jak převést watty na ampéry",
+          "paragraph1": "Převod výkonu ve wattech (W) na proud v ampérech (A) je základní elektrický výpočet. Vzorec závisí na typu systému: DC, jednofázový nebo třífázový. Pro DC: I = P / V. Pro jednofázový: I = P / (V × PF), kde PF je účiník. Pro třífázový: I = P / (√3 × V × PF), s V jako meziřádkovým napětím. Naše bezplatná kalkulačka Wattů na Ampéry podporuje všechny tři režimy a poskytuje okamžité, přesné výsledky pro dimenzování obvodů, výběr jističů a analýzu zatížení.",
+          "paragraph2": "Stejnosměrný proud (DC) nemá účiník; proud je výkon dělený napětím. Jednofázové a třífázové systémy mívají reaktivní zátěže (motory, předřadníky), takže zdánlivý proud je vyšší než činný. Účiník (0 až 1) představuje poměr činného a zdánlivého výkonu. U třífázového faktor √3 (≈ 1,732) zohledňuje fázový vztah mezi meziřádkovým napětím a fázovými veličinami. Běžná napětí: 120 V, 230 V, 240 V (jednofázové); 400 V, 480 V (třífázové meziřádkové).",
+          "paragraph3": "Tento převod se používá pro: dimenzování jističů a pojistek, výběr průřezu kabelů pro dané zatížení, výpočet proudu z výkonu spotřebiče, návrh rozvodných sítí a energetické audity. Ať jde o DC zátěže (baterie, solár), jednofázové bytové nebo třífázové průmyslové, převod wattů na ampéry je zásadní pro bezpečný a souladný elektroprojekt.",
+          "paragraph4": "Naše kalkulačka umožňuje zvolit DC, jednofázový nebo třífázový. Zadejte watty a napětí; pro AC účiník (výchozí 0,8). Výsledek je v ampérech (A). Bez registrace. Pro studenty, elektrikáře a inženýry poskytuje kalkulačka Wattů na Ampéry přesné výsledky pro všechny běžné typy systémů.",
+          "exampleHeading": "Příklad:",
+          "exampleText": "DC: 1200 W při 120 V → I = 1200 / 120 = 10 A. Jednofázový: 1840 W při 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Třífázový: 8,83 kW při 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            { "question": "Jaký je vzorec watty na ampéry (DC)?", "answer": "Pro DC: I = P / V, kde I je proud v A, P výkon ve W a V napětí ve V. Dělte výkon napětím pro proud. Např.: 1200 W při 120 V → I = 10 A." },
+            { "question": "Jaký je vzorec pro jednofázový?", "answer": "Pro jednofázový: I = P / (V × PF). V napětí (V), P výkon (W), PF účiník (0–1). Např.: 1840 W při 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "Jaký je vzorec pro třífázový?", "answer": "Pro třífázový: I = P / (√3 × V × PF). V meziřádkové napětí (V), P výkon (W), PF účiník. √3 ≈ 1,732. Např.: 8,83 kW při 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "Kdy použít DC, jednofázový nebo třífázový?", "answer": "DC pro baterie, DC solární obvody a DC zátěže. Jednofázový pro typické bytové (120 V, 230 V, 240 V). Třífázový pro průmyslovou a komerční distribuci (400 V, 480 V meziřádkové) a motory." },
+            { "question": "Jak to souvisí s ampéry na watty?", "answer": "Watty na ampéry (I = P / V) a ampéry na watty (P = I × V) jsou inverzní operace. Použijte watty→ampéry, když znáte výkon a napětí; ampéry→watty, když znáte proud a napětí." },
+            { "question": "Je tato kalkulačka zdarma?", "answer": "Ano. Kalkulačka Wattů na Ampéry je zdarma. Bez registrace. Zvolte DC, jednofázový nebo třífázový, zadejte watty a napětí (a účiník pro AC), získejte ampéry okamžitě." }
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "ampsToWatts": "Kalkulačka Ampérů na Watty",
+          "ampsToWattsDesc": "Převest proud na výkon s napětím",
+          "voltsToWatts": "Kalkulačka Voltů na Watty",
+          "voltsToWattsDesc": "Převest napětí a proud na výkon",
+          "kwToAmps": "Kalkulačka kW na Ampéry",
+          "kwToAmpsDesc": "Převest kilowatty na ampéry s napětím",
+          "voltsToAmps": "Kalkulačka Voltů na Ampéry",
+          "voltsToAmpsDesc": "Převest napětí na proud s watty nebo odporem"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Kalkulačka Elektronvoltů na Volty",
       "description": "Převeďte elektronvolty (eV) na volty (V) okamžitě a přesně",
@@ -1571,6 +1622,65 @@
               "answer": "Ano, naše kalkulačka Elektronvoltů na Volty je zcela zdarma. Není vyžadována registrace ani platba. Jednoduše zadejte svou hodnotu elektronvoltu a získejte okamžité, přesné výsledky převodu napětí."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Kalkulačka Voltů na Elektronvolty",
+      "description": "Převeďte napětí (V) na energii v elektronvoltech (eV); 1:1 pro jeden elektron",
+      "volts": "Napětí (V)",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "result": "Výsledek",
+      "electronVolts": "Elektronvolty (eV)",
+      "seo": {
+        "title": "Kalkulačka Voltů na Elektronvolty - Převést Napětí na Energii",
+        "description": "Zdarma kalkulačka Voltů na Elektronvolty. Převeďte napětí (V) na eV. 1 V = 1 eV pro jeden elektron. Fyzika částic, atomová, polovodičů.",
+        "keywords": "kalkulačka voltů elektronvolty, V eV převodník, napětí elektronvolt, fyzikální kalkulačka, zdarma kalkulačka",
+        "content": {
+          "heading": "Jak převést volty na elektronvolty",
+          "paragraph1": "Převod napětí (V) na energii v elektronvoltech (eV) je základní převod ve fyzice, zejména ve fyzice částic, atomové a elektronice. Pro jeden elektron platí 1:1: elektron urychlený 1 V získá 1 eV. Tedy eV = V. Naše kalkulačka Voltů na Elektronvolty poskytuje rychlé a přesné výsledky.",
+          "paragraph2": "Vzorec: eV = V, kde eV je energie v elektronvoltech a V napětí ve voltech. Vztah 1:1 vyplývá z definice elektronvoltu jako energie zisku jednoho elektronu při průchodu 1 V. eV je vhodná jednotka pro atomové a subatomové energie.",
+          "paragraph3": "Tento převod se používá ve fyzice urychlovačů, polovodičů, atomové a molekulární fyzice, měření rentgenu a gama, elektronové mikroskopii, fyzice plazmatu a kvantové mechanice. Znalost vztahu V–eV pomáhá pracovat s energiemi od atomových přechodů po srážky částic.",
+          "paragraph4": "Kalkulačka bere napětí (V) a vrací energii v eV. Zvládne malé i velké hodnoty. Bez registrace. Ať pracujete s zakázanými pásy, urychlovači či energiemi fotonů, kalkulačka Voltů na Elektronvolty poskytuje přesné, okamžité převody.",
+          "exampleHeading": "Příklad:",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1 000 000 V (1 MV) → 1 000 000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Časté dotazy",
+          "items": [
+            {
+              "question": "Vzorec voltů na elektronvolty?",
+              "answer": "Pro jeden elektron: eV = V. Energie v eV se rovná napětí ve V. Převod 1:1, protože elektronvolt je definován jako energie zisku jednoho elektronu při 1 V."
+            },
+            {
+              "question": "Proč je převod 1:1?",
+              "answer": "Elektronvolt je definován jako kinetická energie zisku jednoho elektronu při průchodu 1 V. Proto 1 V přesně odpovídá 1 eV pro jeden elektron."
+            },
+            {
+              "question": "Co je elektronvolt?",
+              "answer": "Elektronvolt (eV) je jednotka energie ≈ 1,602 × 10^-19 J. Je to kinetická energie jednoho elektronu urychleného 1 V. Užívá se v atomové, jaderné a částicové fyzice."
+            },
+            {
+              "question": "Souvislost s elektronvolty na volty?",
+              "answer": "Volty na eV (eV = V) a eV na volty (V = eV) jsou inverzní převody. Oba 1:1 pro jeden elektron. Použijte V→eV pro napětí, eV→V pro energii v eV."
+            },
+            {
+              "question": "Je kalkulačka zdarma?",
+              "answer": "Ano. Kalkulačka Voltů na Elektronvolty je zdarma. Bez registrace. Zadejte napětí (V) pro energii v eV."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "electronVoltsToVolts": "Kalkulačka Elektronvoltů na Volty",
+          "electronVoltsToVoltsDesc": "Převest energii v eV na napětí",
+          "joulesToVolts": "Kalkulačka Joulů na Volty",
+          "joulesToVoltsDesc": "Převest energii a náboj na napětí",
+          "voltsToJoules": "Kalkulačka Voltů na Jouly",
+          "voltsToJoulesDesc": "Převest napětí a náboj na energii",
+          "voltsToWatts": "Kalkulačka Voltů na Watty",
+          "voltsToWattsDesc": "Převest napětí a proud na výkon"
         }
       }
     },

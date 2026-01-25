@@ -1520,6 +1520,75 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Watts to Amps Calculator",
+      "description": "Convert power (W) to current (A) for DC, single phase, and three phase using voltage and power factor",
+      "currentType": "Current type",
+      "directCurrent": "Direct Current (DC)",
+      "singlePhase": "Single Phase",
+      "threePhase": "Three Phase",
+      "watts": "Watts (W)",
+      "volts": "Voltage (V)",
+      "powerFactor": "Power Factor (0-1)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "amps": "Amperes (A)",
+      "seo": {
+        "title": "Watts to Amps Calculator - DC, Single & Three Phase | Convert Power to Current",
+        "description": "Free Watts to Amps calculator. Convert power (W) to current (A) for DC, single phase, and three phase. Uses voltage and power factor. Perfect for circuit sizing, breakers, and electrical design.",
+        "keywords": "watts to amps calculator, power to current converter, W to A, DC single three phase, electrical calculator, circuit breaker sizing, free calculator",
+        "content": {
+          "heading": "How to Convert Watts to Amps",
+          "paragraph1": "Converting power in watts (W) to current in amperes (A) is a fundamental electrical calculation. The formula depends on the system type: DC, single phase AC, or three phase AC. For DC: I = P / V. For single phase AC: I = P / (V × PF), where PF is the power factor. For three phase AC: I = P / (√3 × V × PF), with V as line-to-line voltage. Our free Watts to Amps calculator supports all three modes and gives instant, accurate results for circuit sizing, breaker selection, and load analysis.",
+          "paragraph2": "DC (direct current) has no power factor; current equals power divided by voltage. Single and three phase AC systems often have reactive loads (motors, ballasts), so apparent current is higher than real-power current. The power factor (0 to 1) represents the ratio of real power to apparent power. For three phase, the √3 factor (about 1.732) accounts for the phase relationship between line-to-line voltage and phase quantities. Common voltages: 120V, 230V, 240V (single phase); 400V, 480V (three phase line-to-line).",
+          "paragraph3": "This conversion is used for: sizing circuit breakers and fuses, selecting wire gauge for a given load, calculating current draw from appliance wattage, designing distribution systems, and energy audits. Whether you work with DC loads (batteries, solar), residential single phase, or industrial three phase, converting watts to amps is essential for safe and compliant electrical design.",
+          "paragraph4": "Our calculator lets you choose DC, single phase, or three phase. Enter watts and voltage; for AC, enter power factor (default 0.8). The result is in amperes (A). No registration required. For students, electricians, and engineers, the Watts to Amps calculator delivers accurate results across all common system types.",
+          "exampleHeading": "Example:",
+          "exampleText": "DC: 1200 W at 120 V → I = 1200 / 120 = 10 A. Single phase: 1840 W at 230 V, PF 0.8 → I = 1840 / (230 × 0.8) = 10 A. Three phase: 8.83 kW at 400 V, PF 0.85 → I = 8830 / (√3 × 400 × 0.85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula for watts to amps (DC)?",
+              "answer": "For DC: I = P / V, where I is current in amperes, P is power in watts, and V is voltage in volts. Divide power by voltage to get current. Example: 1200 W at 120 V → I = 10 A."
+            },
+            {
+              "question": "What is the formula for single phase AC?",
+              "answer": "For single phase AC: I = P / (V × PF). V is voltage (volts), P is power (watts), PF is power factor (0 to 1). Example: 1840 W at 230 V, PF 0.8 → I = 1840 / (230 × 0.8) = 10 A."
+            },
+            {
+              "question": "What is the formula for three phase AC?",
+              "answer": "For three phase AC: I = P / (√3 × V × PF). V is line-to-line voltage (volts), P is power (watts), PF is power factor. √3 ≈ 1.732. Example: 8.83 kW at 400 V, PF 0.85 → I = 8830 / (√3 × 400 × 0.85) ≈ 15 A."
+            },
+            {
+              "question": "When do I use DC vs single vs three phase?",
+              "answer": "Use DC for batteries, solar DC circuits, and DC loads. Use single phase for typical residential (120V, 230V, 240V). Use three phase for industrial and commercial distribution (400V, 480V line-to-line) and motors."
+            },
+            {
+              "question": "How does this relate to amps to watts?",
+              "answer": "Watts to amps (I = P / V) and amps to watts (P = I × V) are inverse operations. Use watts-to-amps when you know power and voltage and need current; use amps-to-watts when you know current and voltage and need power."
+            },
+            {
+              "question": "Is this calculator free?",
+              "answer": "Yes. The Watts to Amps calculator is free. No registration required. Select DC, single, or three phase, enter watts and voltage (and power factor for AC), and get amperes instantly."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "ampsToWatts": "Amps to Watts Calculator",
+          "ampsToWattsDesc": "Convert current to power using voltage",
+          "voltsToWatts": "Volts to Watts Calculator",
+          "voltsToWattsDesc": "Convert voltage and current to power",
+          "kwToAmps": "kW to Amps Calculator",
+          "kwToAmpsDesc": "Convert kilowatts to amperes with voltage",
+          "voltsToAmps": "Volts to Amps Calculator",
+          "voltsToAmpsDesc": "Convert voltage to current using watts or resistance"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Electron-volts to Volts Calculator",
       "description": "Convert electron-volts (eV) to volts (V) instantly and accurately",
@@ -1568,6 +1637,65 @@
               "answer": "Yes, our Electron-volts to Volts calculator is completely free to use. No registration or payment is required. Simply enter your electron-volt value and get instant, accurate voltage conversion results."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Volts to Electron-Volts Calculator",
+      "description": "Convert voltage (V) to energy in electron-volts (eV) instantly; 1:1 for a single electron",
+      "volts": "Voltage (V)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "electronVolts": "Electron-volts (eV)",
+      "seo": {
+        "title": "Volts to Electron-Volts Calculator - Convert Voltage to Energy Online",
+        "description": "Free Volts to Electron-Volts calculator. Convert voltage (V) to energy in electron-volts (eV) instantly. 1 V = 1 eV for a single electron. Perfect for particle physics, atomic physics, and semiconductor physics.",
+        "keywords": "volts to electron volts calculator, V to eV converter, voltage electron volt conversion, physics calculator, particle physics, free calculator",
+        "content": {
+          "heading": "How to Convert Volts to Electron-Volts",
+          "paragraph1": "Converting voltage (V) to energy in electron-volts (eV) is a fundamental conversion in physics, especially in particle physics, atomic physics, and electronics. For a single electron, the relationship is 1:1: an electron accelerated through a potential difference of 1 volt gains 1 electron-volt of kinetic energy. Thus eV = V for one electron. Our free Volts to Electron-Volts calculator provides instant, accurate results for your physics calculations.",
+          "paragraph2": "The conversion formula is: eV = V, where eV is the energy in electron-volts and V is the voltage in volts. This direct 1:1 relationship holds because the electron-volt is defined as the energy gained by one electron when it moves through a potential difference of one volt. The electron-volt is a convenient unit for atomic and subatomic energy scales, commonly used in particle physics, atomic physics, and semiconductor physics.",
+          "paragraph3": "This conversion is used in: particle accelerator physics, semiconductor device physics, atomic and molecular physics, X-ray and gamma-ray energy measurements, electron microscopy, plasma physics, and quantum mechanics. Understanding the link between volts and electron-volts helps physicists and engineers work with energy scales from atomic transitions to high-energy particle collisions.",
+          "paragraph4": "Our calculator takes voltage (V) as input and returns the equivalent energy in electron-volts (eV). It handles both small values (atomic physics) and large values (particle physics). No registration required. Whether you work with band gaps, accelerators, or photon energies, the Volts to Electron-Volts calculator delivers accurate, instant conversions.",
+          "exampleHeading": "Example:",
+          "exampleText": "1 V → eV = 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1,000,000 V (1 MV) → 1,000,000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula for converting volts to electron-volts?",
+              "answer": "For a single electron: eV = V. The energy in electron-volts equals the voltage in volts. This is a direct 1:1 conversion because the electron-volt is defined as the energy gained by one electron when accelerated through 1 volt."
+            },
+            {
+              "question": "Why is the conversion 1:1?",
+              "answer": "The electron-volt is defined as the kinetic energy gained by one electron when it moves through a potential difference of one volt. So 1 V corresponds exactly to 1 eV for a single electron."
+            },
+            {
+              "question": "What is an electron-volt?",
+              "answer": "An electron-volt (eV) is a unit of energy equal to about 1.602 × 10^-19 joules. It is the kinetic energy gained by one electron when accelerated through 1 volt. Commonly used in atomic, nuclear, and particle physics."
+            },
+            {
+              "question": "How does this relate to electron-volts to volts?",
+              "answer": "Volts to electron-volts (eV = V) and electron-volts to volts (V = eV) are inverse operations. Both are 1:1 for a single electron. Use volts-to-eV when you have voltage; use eV-to-volts when you have energy in eV."
+            },
+            {
+              "question": "Is this calculator free?",
+              "answer": "Yes. The Volts to Electron-Volts calculator is free. No registration required. Enter voltage (V) to get energy in electron-volts (eV) instantly."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "electronVoltsToVolts": "Electron-Volts to Volts Calculator",
+          "electronVoltsToVoltsDesc": "Convert energy in eV to voltage",
+          "joulesToVolts": "Joules to Volts Calculator",
+          "joulesToVoltsDesc": "Convert energy and charge to voltage",
+          "voltsToJoules": "Volts to Joules Calculator",
+          "voltsToJoulesDesc": "Convert voltage and charge to energy",
+          "voltsToWatts": "Volts to Watts Calculator",
+          "voltsToWattsDesc": "Convert voltage and current to power"
         }
       }
     },

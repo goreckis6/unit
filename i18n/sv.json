@@ -1413,6 +1413,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Watt till Ampere-kalkylator",
+      "description": "Konvertera effekt (W) till ström (A) för DC, enfas och trefas med spänning och effektfaktor",
+      "currentType": "Strömtyp",
+      "directCurrent": "Likström (DC)",
+      "singlePhase": "Enfas",
+      "threePhase": "Trefas",
+      "watts": "Watt (W)",
+      "volts": "Spänning (V)",
+      "powerFactor": "Effektfaktor (0–1)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Watt till Ampere-kalkylator – DC, Enfas och Trefas | Effekt till Ström",
+        "description": "Gratis Watt till Ampere-kalkylator. Konvertera effekt (W) till ström (A) för DC, enfas och trefas. Spänning och effektfaktor. Idealiskt för kretsdimensionering, proppar och elprojektering.",
+        "keywords": "watt ampere kalkylator, effekt ström omvandlare, W A, DC enfas trefas, el-kalkylator, proppdimensionering, gratis kalkylator",
+        "content": {
+          "heading": "Hur man konverterar watt till ampere",
+          "paragraph1": "Att konvertera effekt i watt (W) till ström i ampere (A) är en grundläggande elberäkning. Formeln beror på systemtyp: DC, enfas eller trefas. För DC: I = P / V. För enfas: I = P / (V × PF), där PF är effektfaktorn. För trefas: I = P / (√3 × V × PF), med V som linjespänning. Vår gratis Watt till Ampere-kalkylator stöder alla tre lägen och ger omedelbara, exakta resultat för kretsdimensionering, proppval och lastanalys.",
+          "paragraph2": "Likström (DC) har ingen effektfaktor; ström är effekt dividerat med spänning. Enfas- och trefassystem har ofta reaktiva laster (motorer, ballaster), så skenbar ström > aktiv ström. Effektfaktorn (0–1) representerar förhållandet mellan aktiv och skenbar effekt. För trefas återspeglar faktorn √3 (≈1,732) fasrelationen mellan linjespänning och fasstorheter. Vanliga spänningar: 120 V, 230 V, 240 V (enfas); 400 V, 480 V (trefas linje).",
+          "paragraph3": "Denna konvertering används för: dimensionering av proppar och säkringar, val av kabeltvärsnitt för given last, beräkning av ström från apparatens effekt, design av distributionsnät och energirevisioner. Oavsett DC-laster (batterier, sol), enfas bostad eller trefas industri är konvertering av watt till ampere nödvändig för säker och regelkonform elprojektering.",
+          "paragraph4": "Vår kalkylator låter dig välja DC, enfas eller trefas. Ange watt och spänning; för AC effektfaktor (standard 0,8). Resultatet är i ampere (A). Ingen registrering. För studenter, eltekniker och ingenjörer ger Watt till Ampere-kalkylatorn exakta resultat för alla vanliga systemtyper.",
+          "exampleHeading": "Exempel:",
+          "exampleText": "DC: 1200 W vid 120 V → I = 1200 / 120 = 10 A. Enfas: 1840 W vid 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Trefas: 8,83 kW vid 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            { "question": "Vad är formeln watt till ampere (DC)?", "answer": "För DC: I = P / V, där I är ström (A), P effekt (W), V spänning (V). Dividera effekt med spänning för ström. Ex.: 1200 W vid 120 V → I = 10 A." },
+            { "question": "Vad är formeln för enfas?", "answer": "För enfas: I = P / (V × PF). V spänning (V), P effekt (W), PF effektfaktor (0–1). Ex.: 1840 W vid 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "Vad är formeln för trefas?", "answer": "För trefas: I = P / (√3 × V × PF). V linjespänning (V), P effekt (W), PF effektfaktor. √3 ≈ 1,732. Ex.: 8,83 kW vid 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "När använder jag DC, enfas eller trefas?", "answer": "DC för batterier, sol DC-kretsar och DC-laster. Enfas för typisk bostad (120 V, 230 V, 240 V). Trefas för industriell och kommersiell distribution (400 V, 480 V linje) och motorer." },
+            { "question": "Hur hänger detta ihop med ampere till watt?", "answer": "Watt till ampere (I = P / V) och ampere till watt (P = I × V) är inversa operationer. Använd watt→ampere när du känner effekt och spänning; ampere→watt när du känner ström och spänning." },
+            { "question": "Är denna kalkylator gratis?", "answer": "Ja. Watt till Ampere-kalkylatorn är gratis. Ingen registrering. Välj DC, enfas eller trefas, ange watt och spänning (och effektfaktor för AC), få ampere direkt." }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "ampsToWatts": "Ampere till Watt-kalkylator",
+          "ampsToWattsDesc": "Konvertera ström till effekt med spänning",
+          "voltsToWatts": "Volt till Watt-kalkylator",
+          "voltsToWattsDesc": "Konvertera spänning och ström till effekt",
+          "kwToAmps": "kW till Ampere-kalkylator",
+          "kwToAmpsDesc": "Konvertera kilowatt till ampere med spänning",
+          "voltsToAmps": "Volt till Ampere-kalkylator",
+          "voltsToAmpsDesc": "Konvertera spänning till ström med watt eller resistans"
+        }
+      }
+    },
     "joulesToWatts": {
       "title": "Joule till Watt-kalkylator",
       "description": "Konvertera joule (J) till watt (W) omedelbart och exakt med tid",
@@ -1629,6 +1680,65 @@
               "answer": "Ja, vår Elektronvolt till Volt-kalkylator är helt gratis. Ingen registrering eller betalning krävs. Ange bara ditt elektronvolt-värde och få omedelbara, exakta spänningskonverteringsresultat."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Volt till Elektronvolt-kalkylator",
+      "description": "Konvertera spänning (V) till energi i elektronvolt (eV); 1:1 för ett elektron",
+      "volts": "Spänning (V)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "electronVolts": "Elektronvolt (eV)",
+      "seo": {
+        "title": "Volt till Elektronvolt-kalkylator - Konvertera Spänning till Energi",
+        "description": "Gratis Volt till Elektronvolt-kalkylator. Konvertera spänning (V) till eV. 1 V = 1 eV för ett elektron. Partikelfysik, atomfysik, halvledarfysik.",
+        "keywords": "volt elektronvolt kalkylator, V eV omvandlare, spänning elektronvolt, fysik kalkylator, gratis kalkylator",
+        "content": {
+          "heading": "Så konverterar du volt till elektronvolt",
+          "paragraph1": "Att konvertera spänning (V) till energi i elektronvolt (eV) är en grundläggande konvertering i fysik, särskilt partikel-, atom- och elektronik. För ett elektron gäller 1:1: ett elektron accelererat genom 1 V vinner 1 eV. Så eV = V. Vår gratis Volt–Elektronvolt-kalkylator ger omedelbara, exakta resultat.",
+          "paragraph2": "Formeln: eV = V, där eV är energi i elektronvolt och V spänning i volt. 1:1-sambandet följer av att elektronvolt definieras som energin ett elektron vinner när det passerar 1 V. eV är en bekväm enhet för atomära och subatomära energier.",
+          "paragraph3": "Konverteringen används i partikelacceleratorfysik, halvledarfysik, atom- och molekylfysik, röntgen- och gammamätningar, elektronmikroskopi, plasmafysik och kvantmekanik. Att känna sambandet V–eV hjälper vid energiskalor från atomövergångar till partikelkollisioner.",
+          "paragraph4": "Kalkylatorn tar spänning (V) och returnerar energi i eV. Den hanterar små och stora värden. Ingen registrering. Oavsett bandgap, acceleratorer eller fotonenergier ger Volt–Elektronvolt-kalkylatorn exakta, omedelbara konverteringar.",
+          "exampleHeading": "Exempel:",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1 000 000 V (1 MV) → 1 000 000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {
+              "question": "Formel volt till elektronvolt?",
+              "answer": "För ett elektron: eV = V. Energi i eV lika med spänning i V. 1:1-konvertering eftersom elektronvolt definieras som energin ett elektron vinner vid 1 V."
+            },
+            {
+              "question": "Varför är konverteringen 1:1?",
+              "answer": "Elektronvolt definieras som den kinetiska energi ett elektron vinner när det passerar 1 V. Därför motsvarar 1 V exakt 1 eV för ett elektron."
+            },
+            {
+              "question": "Vad är en elektronvolt?",
+              "answer": "En elektronvolt (eV) är en energienhet ≈ 1,602 × 10^-19 joule. Det är den kinetiska energi ett elektron vinner vid acceleration genom 1 V. Används i atom-, kärn- och partikelfysik."
+            },
+            {
+              "question": "Samband med elektronvolt till volt?",
+              "answer": "Volt till eV (eV = V) och eV till volt (V = eV) är inverse operationer. Båda 1:1 för ett elektron. Använd V→eV för spänning, eV→V för energi i eV."
+            },
+            {
+              "question": "Är kalkylatorn gratis?",
+              "answer": "Ja. Volt–Elektronvolt-kalkylatorn är gratis. Ingen registrering. Ange spänning (V) för energi i eV."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "electronVoltsToVolts": "Elektronvolt till Volt-kalkylator",
+          "electronVoltsToVoltsDesc": "Konvertera energi i eV till spänning",
+          "joulesToVolts": "Joule till Volt-kalkylator",
+          "joulesToVoltsDesc": "Konvertera energi och laddning till spänning",
+          "voltsToJoules": "Volt till Joule-kalkylator",
+          "voltsToJoulesDesc": "Konvertera spänning och laddning till energi",
+          "voltsToWatts": "Volt till Watt-kalkylator",
+          "voltsToWattsDesc": "Konvertera spänning och ström till effekt"
         }
       }
     }

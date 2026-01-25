@@ -1521,6 +1521,66 @@
         }
       }
     },
+    "voltsToJoules": {
+      "title": "伏特转焦耳计算器",
+      "description": "将电压（V）和电荷（C）转换为焦耳（J）能量，公式 J = V × C",
+      "volts": "电压（V）",
+      "coulombs": "电荷（库仑）",
+      "calculate": "计算",
+      "reset": "重置",
+      "result": "结果",
+      "joules": "焦耳（J）",
+      "seo": {
+        "title": "伏特转焦耳计算器 - 电压和电荷转能量",
+        "description": "免费伏特转焦耳计算器。将电压（V）和电荷（C）转换为焦耳（J）能量。公式：J = V × C。适用于电容、电池和物理计算。",
+        "keywords": "伏特焦耳计算器, 电压焦耳, V J转换, 能量公式, 库仑焦耳, 能量计算器, 免费计算器",
+        "content": {
+          "heading": "如何将伏特转换为焦耳",
+          "paragraph1": "将电压（V）和电荷（C）转换为焦耳（J）能量是物理学与电工学中的基本计算。关系式：J = V × C。1 伏 = 1 焦/库仑（1 V = 1 J/C），故能量 = 电压 × 电荷。免费伏特–焦耳计算器可快速、准确地给出结果。",
+          "paragraph2": "公式 J = V × C 表示电荷 Q 穿过电位差 V 时储存的能量。适用于电容、电池和储能系统。12 V 电池提供 10 C 时释放 12 × 10 = 120 J。电荷（库仑）= 电流 × 时间（C = I × t），因此 J = V × I × t。",
+          "paragraph3": "该换算用于电容与电池能量、电池容量、储能系统和物理习题。无论电子学还是电化学，将 V 和 C 换为焦耳都很重要。",
+          "paragraph4": "计算器输入电压和电荷（库仑），应用 J = V × C，显示焦耳结果。无需注册。",
+          "exampleHeading": "示例：",
+          "exampleText": "12 V 和 5 C → J = 12 × 5 = 60 J。230 V 和 0.1 C → J = 23 J。1.5 V 和 2 C → J = 3 J。400 V、0.01 C 电容储存 4 J。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {
+              "question": "伏特转焦耳的公式？",
+              "answer": "J = V × C。J = 能量（J），V = 电压（V），C = 电荷（C）。电压 × 电荷 = 能量。例：10 V × 3 C = 30 J。"
+            },
+            {
+              "question": "需要电压和电荷两者吗？",
+              "answer": "是的。能量（焦耳）取决于两者。不能仅从电压或仅从电荷得到焦耳。J = V × C。"
+            },
+            {
+              "question": "什么是库仑？",
+              "answer": "库仑（C）是电荷的 SI 单位。1 A 电流在 1 秒内输送的电荷。1 C ≈ 6.242 × 10^18 基本电荷。"
+            },
+            {
+              "question": "与焦耳转伏特的关系？",
+              "answer": "焦耳转伏特：V = J / C。伏特转焦耳：J = V × C。二者互为逆运算。"
+            },
+            {
+              "question": "计算器免费吗？",
+              "answer": "是的。伏特–焦耳计算器免费。无需注册。输入电压和电荷（库仑）即可得到焦耳。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "joulesToVolts": "焦耳到伏特计算器",
+          "joulesToVoltsDesc": "将能量和电荷转换为电压",
+          "joulesToWatts": "焦耳到瓦特计算器",
+          "joulesToWattsDesc": "将能量按时间转换为功率",
+          "electronVoltsToVolts": "电子伏特到伏特计算器",
+          "electronVoltsToVoltsDesc": "将电子伏特转换为伏特",
+          "voltsToWatts": "伏特到瓦特计算器",
+          "voltsToWattsDesc": "将电压和电流转换为功率"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "电子伏特到伏特计算器",
       "description": "使用电压即时准确地将电子伏特（eV）转换为伏特（V）",

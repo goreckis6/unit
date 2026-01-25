@@ -219,6 +219,12 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       path: '/calculators/electric/joules-to-volts',
     },
     {
+      id: 'volts-to-joules',
+      titleKey: 'voltsToJoules.title',
+      descKey: 'voltsToJoules.description',
+      path: '/calculators/electric/volts-to-joules',
+    },
+    {
       id: 'kva-to-amps',
       titleKey: 'kvaToAmps.title',
       descKey: 'kvaToAmps.description',

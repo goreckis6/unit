@@ -1678,6 +1678,66 @@
           ]
         }
       }
+    },
+    "voltsToJoules": {
+      "title": "Volts to Joules Calculator",
+      "description": "Convert voltage (V) and charge (C) to energy in joules (J) instantly using J = V × C",
+      "volts": "Voltage (V)",
+      "coulombs": "Charge (Coulombs)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "joules": "Joules (J)",
+      "seo": {
+        "title": "Volts to Joules Calculator - Convert Voltage and Charge to Energy Online",
+        "description": "Free Volts to Joules calculator. Convert voltage (V) and electric charge (C) to energy in joules (J) instantly. Formula: J = V × C. Perfect for capacitors, batteries, and physics calculations.",
+        "keywords": "volts to joules calculator, voltage to joules, V to J converter, energy formula calculator, coulombs joules, electrical energy calculator, free calculator",
+        "content": {
+          "heading": "How to Convert Volts to Joules",
+          "paragraph1": "Converting voltage (V) and electric charge (C) to energy in joules (J) is a fundamental calculation in physics and electrical engineering. The relationship is given by J = V × C, where J is energy in joules, V is voltage in volts, and C is charge in coulombs. One volt is one joule per coulomb (1 V = 1 J/C), so energy equals voltage times charge. Our free Volts to Joules calculator makes this conversion quick and easy, providing instant and accurate results.",
+          "paragraph2": "The formula J = V × C expresses the energy stored when charge Q is moved through a potential difference V. It applies to capacitors (E = ½CV² uses a related form), batteries, and any system where electrical potential energy is stored or released. A 12 V battery supplying 10 C of charge delivers 12 × 10 = 120 J of energy. Charge in coulombs is current × time (C = I × t), so you can also think of J = V × I × t (energy = power × time).",
+          "paragraph3": "This conversion is used for: calculating energy stored in capacitors and batteries, understanding electrochemical cell capacity, designing energy storage systems, physics problems involving potential energy, and electrical engineering calculations. Whether you work with electronics, electrochemistry, or general physics, converting volts and coulombs to joules is essential for energy analysis.",
+          "paragraph4": "Our calculator takes voltage and charge (coulombs) as inputs, applies J = V × C, and displays the result in joules. No registration required. Whether you're a student, engineer, or researcher, the Volts to Joules calculator delivers accurate results for your energy calculations.",
+          "exampleHeading": "Example:",
+          "exampleText": "12 V and 5 C gives J = 12 × 5 = 60 J. 230 V and 0.1 C gives J = 23 J. 1.5 V and 2 C (e.g. a small battery) gives J = 3 J. A capacitor charged to 400 V with 0.01 C stores 400 × 0.01 = 4 J."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert volts to joules?",
+              "answer": "J = V × C, where J is energy in joules, V is voltage in volts, and C is electric charge in coulombs. Multiply voltage by charge to get energy. Example: 10 V × 3 C = 30 J."
+            },
+            {
+              "question": "Do I need both voltage and charge?",
+              "answer": "Yes. Energy (joules) depends on both voltage and charge. You cannot find joules from voltage alone or charge alone; you need both. The relationship is J = V × C."
+            },
+            {
+              "question": "What is a coulomb?",
+              "answer": "A coulomb (C) is the SI unit of electric charge. It is the charge transported by a current of one ampere in one second. One coulomb ≈ 6.242 × 10^18 elementary charges (electrons)."
+            },
+            {
+              "question": "How does this relate to joules to volts?",
+              "answer": "Joules to volts uses V = J / C (voltage = energy ÷ charge). Volts to joules uses J = V × C (energy = voltage × charge). They are inverse operations. Use joules-to-volts when you have energy and charge; use volts-to-joules when you have voltage and charge."
+            },
+            {
+              "question": "Is this calculator free?",
+              "answer": "Yes. The Volts to Joules calculator is free. No registration required. Enter voltage and charge in coulombs to get energy in joules instantly."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "joulesToVolts": "Joules to Volts Calculator",
+          "joulesToVoltsDesc": "Convert energy and charge to voltage",
+          "joulesToWatts": "Joules to Watts Calculator",
+          "joulesToWattsDesc": "Convert energy to power using time",
+          "electronVoltsToVolts": "Electron-Volts to Volts Calculator",
+          "electronVoltsToVoltsDesc": "Convert electron-volts to volts",
+          "voltsToWatts": "Volts to Watts Calculator",
+          "voltsToWattsDesc": "Convert voltage and current to power"
+        }
+      }
     }
   },
   "blog": {

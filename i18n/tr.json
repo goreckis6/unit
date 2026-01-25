@@ -1521,6 +1521,66 @@
         }
       }
     },
+    "voltsToJoules": {
+      "title": "Volt Joule Hesap Makinesi",
+      "description": "Gerilim (V) ve yük (C) değerini J = V × C ile joule (J) enerjiye dönüştürün",
+      "volts": "Gerilim (V)",
+      "coulombs": "Yük (coulomb)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "joules": "Joule (J)",
+      "seo": {
+        "title": "Volt Joule Hesap Makinesi - Gerilim ve Yükten Enerji",
+        "description": "Ücretsiz Volt–Joule hesap makinesi. Gerilim (V) ve yük (C) değerini joule (J) enerjiye dönüştürün. Formül: J = V × C. Kondansatör, pil ve fizik için.",
+        "keywords": "volt joule hesap makinesi, gerilim joule, V J dönüştürücü, enerji formülü, coulomb joule, enerji hesap makinesi, ücretsiz hesap makinesi",
+        "content": {
+          "heading": "Volt'u joule'a nasıl dönüştürülür",
+          "paragraph1": "Gerilim (V) ve elektrik yükünü (C) joule (J) enerjiye dönüştürmek fizik ve elektrik mühendisliğinde temel bir hesaplamadır. İlişki: J = V × C. Bir volt = bir joule bölü coulomb (1 V = 1 J/C), yani enerji = gerilim × yük. Ücretsiz Volt–Joule hesap makinemiz hızlı, doğru sonuç verir.",
+          "paragraph2": "J = V × C formülü, Q yükünün V potansiyel farkından geçerken depolanan enerjiyi ifade eder. Kondansatör, pil ve depolama sistemlerine uygulanır. 12 V pil 10 C sağlarsa 12 × 10 = 120 J. Yük (coulomb) = akım × zaman (C = I × t), dolayısıyla J = V × I × t.",
+          "paragraph3": "Bu dönüşüm kondansatör ve pil enerjisi, hücre kapasitesi, depolama sistemleri ve fizik problemleri için kullanılır. Elektronik veya elektrokimya olsun, V ve C'yi joule'a dönüştürmek önemlidir.",
+          "paragraph4": "Hesap makinesi gerilim ve yükü (coulomb) alır, J = V × C uygular ve sonucu joule cinsinden gösterir. Kayıt gerekmez.",
+          "exampleHeading": "Örnek:",
+          "exampleText": "12 V ve 5 C → J = 12 × 5 = 60 J. 230 V ve 0,1 C → J = 23 J. 1,5 V ve 2 C → J = 3 J. 400 V, 0,01 C kondansatör 4 J depolar."
+        },
+        "faq": {
+          "heading": "Sıkça sorulan sorular",
+          "items": [
+            {
+              "question": "Volt joule formülü?",
+              "answer": "J = V × C. J = enerji (J), V = gerilim (V), C = yük (C). Gerilim × yük = enerji. Örn. 10 V × 3 C = 30 J."
+            },
+            {
+              "question": "Hem gerilim hem yük gerekli mi?",
+              "answer": "Evet. Enerji (joule) ikisine de bağlıdır. Sadece gerilimden veya sadece yükten joule bulunamaz. J = V × C."
+            },
+            {
+              "question": "Coulomb nedir?",
+              "answer": "Coulomb (C) elektrik yükünün SI birimidir. 1 A akımın 1 s'de taşıdığı yük. 1 C ≈ 6,242 × 10^18 temel yük."
+            },
+            {
+              "question": "Joule volta ilişkisi?",
+              "answer": "Joule volta: V = J / C. Volt joule: J = V × C. Ters işlemler."
+            },
+            {
+              "question": "Hesap makinesi ücretsiz mi?",
+              "answer": "Evet. Volt–Joule hesap makinesi ücretsiz. Kayıt gerekmez. Gerilim ve yükü (coulomb) girin, joule alın."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili hesaplar",
+          "joulesToVolts": "Joule Volt Hesap Makinesi",
+          "joulesToVoltsDesc": "Enerji ve yükü gerilime dönüştürün",
+          "joulesToWatts": "Joule Watt Hesap Makinesi",
+          "joulesToWattsDesc": "Enerjiyi zamana göre güce dönüştürün",
+          "electronVoltsToVolts": "Elektronvolt Volt Hesap Makinesi",
+          "electronVoltsToVoltsDesc": "Elektronvoltu volta dönüştürün",
+          "voltsToWatts": "Volt Watt Hesap Makinesi",
+          "voltsToWattsDesc": "Gerilim ve akımı güce dönüştürün"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Elektronvolt Volt Hesap Makinesi",
       "description": "Elektronvolt (eV) değerini volt (V) değerine anında ve doğru bir şekilde dönüştürün",

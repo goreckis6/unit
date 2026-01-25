@@ -1521,6 +1521,66 @@
         }
       }
     },
+    "voltsToJoules": {
+      "title": "Voltti Joule Laskin",
+      "description": "Muunna jännite (V) ja varaus (C) energiaksi jouleina (J) kaavalla J = V × C",
+      "volts": "Jännite (V)",
+      "coulombs": "Varaus (coulomb)",
+      "calculate": "Laske",
+      "reset": "Tyhjennä",
+      "result": "Tulos",
+      "joules": "Joule (J)",
+      "seo": {
+        "title": "Voltti Joule Laskin - Jännite ja Varaus Energiaksi",
+        "description": "Ilmainen Voltti Joule -laskin. Muunna jännite (V) ja varaus (C) energiaksi jouleina (J). Kaava: J = V × C. Kondensaatoreille, akkuille ja fysiikalle.",
+        "keywords": "voltti joule laskin, jännite joule, V J muunnin, energia kaava, coulomb joule, energia laskin, ilmainen laskin",
+        "content": {
+          "heading": "Voltin muuntaminen jouleiksi",
+          "paragraph1": "Jännitteen (V) ja sähkövarauksen (C) muuntaminen energiaksi jouleina (J) on peruslaskenta fysiikassa ja sähkötekniikassa. Relaatio: J = V × C. Yksi voltti = yksi joule per coulomb (1 V = 1 J/C), joten energia = jännite × varaus. Ilmainen Voltti Joule -laskimemme antaa nopeat, tarkat tulokset.",
+          "paragraph2": "Kaava J = V × C kuvaa varastoidun energian, kun varaus Q siirretään potentiaalieron V läpi. Se pätee kondensaatoreille, akkuille ja varastointijärjestelmille. 12 V aku, joka toimittaa 10 C, toimittaa 12 × 10 = 120 J. Varaus coulombeina = virta × aika (C = I × t), joten J = V × I × t.",
+          "paragraph3": "Tätä muunnosta käytetään energiaan kondensaatoreissa ja akuissa, sellikapasiteettiin, varastointijärjestelmiin ja fysiikan tehtäviin. Elektroniikassa tai elektrokemiassa V:n ja C:n muuntaminen jouleiksi on tärkeää.",
+          "paragraph4": "Laskin ottaa jännitteen ja varauksen (coulomb), soveltaa J = V × C ja näyttää tuloksen jouleina. Ei rekisteröintiä.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "12 V ja 5 C → J = 12 × 5 = 60 J. 230 V ja 0,1 C → J = 23 J. 1,5 V ja 2 C → J = 3 J. Kondensaatiori 400 V, 0,01 C varastoi 4 J."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Kaava voltti jouleiksi?",
+              "answer": "J = V × C. J = energia (J), V = jännite (V), C = varaus (C). Jännite × varaus = energia. Esim. 10 V × 3 C = 30 J."
+            },
+            {
+              "question": "Tarvitsenko sekä jännitteen että varauksen?",
+              "answer": "Kyllä. Energia (joule) riippuu molemmista. Et voi saada joulea pelkästä jännitteestä tai varauksesta. J = V × C."
+            },
+            {
+              "question": "Mikä on coulomb?",
+              "answer": "Coulomb (C) on sähkövarauksen SI-yksikkö. 1 A virta kuljettaa 1 s. 1 C ≈ 6,242 × 10^18 alkeisvarausta."
+            },
+            {
+              "question": "Yhteys joule volttiin?",
+              "answer": "Joule volttiin: V = J / C. Voltti jouleiksi: J = V × C. Ne ovat käänteisiä muunnoksia."
+            },
+            {
+              "question": "Onko laskin ilmainen?",
+              "answer": "Kyllä. Voltti Joule -laskin on ilmainen. Ei rekisteröintiä. Syötä jännite ja varaus coulombeina saadaksesi joulet."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "joulesToVolts": "Joule Voltti Laskin",
+          "joulesToVoltsDesc": "Muunna energia ja varaus jännitteeksi",
+          "joulesToWatts": "Joule Watt Laskin",
+          "joulesToWattsDesc": "Muunna energia tehoksi ajalla",
+          "electronVoltsToVolts": "Elektronivoltti Voltti Laskin",
+          "electronVoltsToVoltsDesc": "Muunna elektronivoltti volteiksi",
+          "voltsToWatts": "Voltti Watt Laskin",
+          "voltsToWattsDesc": "Muunna jännite ja virta tehoksi"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Elektronivoltti Voltti Laskin",
       "description": "Muunna elektronivoltti (eV) volteiksi (V) välittömästi ja tarkasti",

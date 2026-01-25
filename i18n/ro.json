@@ -1581,6 +1581,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Calculator Wați în Amperi",
+      "description": "Convertește puterea (W) în curent (A) pentru DC, monofazat și trifazat cu tensiune și factor de putere",
+      "currentType": "Tip de curent",
+      "directCurrent": "Curent continuu (DC)",
+      "singlePhase": "Monofazat",
+      "threePhase": "Trifazat",
+      "watts": "Wați (W)",
+      "volts": "Tensiune (V)",
+      "powerFactor": "Factor de putere (0–1)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "amps": "Amperi (A)",
+      "seo": {
+        "title": "Calculator Wați în Amperi – DC, Monofazat și Trifazat | Putere în Curent",
+        "description": "Calculator gratuit Wați în Amperi. Convertește puterea (W) în curent (A) pentru DC, monofazat și trifazat. Tensiune și factor de putere. Ideal pentru dimensionarea circuitelor, întreruptoarelor și proiectarea electrică.",
+        "keywords": "calculator wați amperi, convertor putere curent, W A, DC monofazat trifazat, calculator electric, dimensionare întreruptoare, calculator gratuit",
+        "content": {
+          "heading": "Cum se convertesc wații în amperi",
+          "paragraph1": "Convertirea puterii în wați (W) în curent în amperi (A) este un calcul electric fundamental. Formula depinde de tipul de sistem: DC, monofazat sau trifazat. Pentru DC: I = P / V. Pentru monofazat: I = P / (V × PF), unde PF este factorul de putere. Pentru trifazat: I = P / (√3 × V × PF), cu V tensiunea linie-linie. Calculatorul nostru gratuit Wați în Amperi suportă toate cele trei moduri și oferă rezultate instantanee, precise pentru dimensionarea circuitelor, alegerea întreruptoarelor și analiza sarcinilor.",
+          "paragraph2": "Curentul continuu (DC) nu are factor de putere; curentul este puterea împărțită la tensiune. Sistemele monofazate și trifazate au adesea sarcini reactive (motoare, balasturi), astfel încât curentul aparent este mai mare decât cel activ. Factorul de putere (0–1) reprezintă raportul dintre puterea activă și cea aparentă. La trifazat, factorul √3 (≈ 1,732) ține cont de relația de fază dintre tensiunea linie-linie și mărimile de fază. Tensiuni tipice: 120 V, 230 V, 240 V (monofazat); 400 V, 480 V (trifazat linie-linie).",
+          "paragraph3": "Această conversie se folosește pentru: dimensionarea întreruptoarelor și siguranțelor, alegerea secțiunii cablurilor pentru o sarcină dată, calcularea curentului din puterea aparatului, proiectarea rețelelor de distribuție și audituri energetice. Fie că este vorba de sarcini DC (baterii, solar), monofazat rezidențial sau trifazat industrial, convertirea waților în amperi este esențială pentru o proiectare electrică sigură și conformă.",
+          "paragraph4": "Calculatorul nostru permite alegerea DC, monofazat sau trifazat. Introduceți wați și tensiune; pentru AC, factorul de putere (implicit 0,8). Rezultatul este în amperi (A). Fără înregistrare. Pentru studenți, electricieni și ingineri, calculatorul Wați în Amperi oferă rezultate precise pentru toate tipurile obișnuite de sisteme.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "DC: 1200 W la 120 V → I = 1200 / 120 = 10 A. Monofazat: 1840 W la 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Trifazat: 8,83 kW la 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            { "question": "Care este formula wați în amperi (DC)?", "answer": "Pentru DC: I = P / V, unde I este curentul în A, P puterea în W și V tensiunea în V. Împărțind puterea la tensiune se obține curentul. Ex.: 1200 W la 120 V → I = 10 A." },
+            { "question": "Care este formula pentru monofazat?", "answer": "Pentru monofazat: I = P / (V × PF). V tensiune (V), P putere (W), PF factor de putere (0–1). Ex.: 1840 W la 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "Care este formula pentru trifazat?", "answer": "Pentru trifazat: I = P / (√3 × V × PF). V tensiune linie-linie (V), P putere (W), PF factor de putere. √3 ≈ 1,732. Ex.: 8,83 kW la 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "Când folosim DC, monofazat sau trifazat?", "answer": "DC pentru baterii, circuite solare DC și sarcini DC. Monofazat pentru rezidențial tipic (120 V, 230 V, 240 V). Trifazat pentru distribuție industrială și comercială (400 V, 480 V linie-linie) și motoare." },
+            { "question": "Cum se leagă de amperi în wați?", "answer": "Wați în amperi (I = P / V) și amperi în wați (P = I × V) sunt operații inverse. Folosiți wați→amperi când cunoașteți puterea și tensiunea; amperi→wați când cunoașteți curentul și tensiunea." },
+            { "question": "Este acest calculator gratuit?", "answer": "Da. Calculatorul Wați în Amperi este gratuit. Fără înregistrare. Alegeți DC, monofazat sau trifazat, introduceți wați și tensiune (și factor de putere pentru AC), obțineți amperi instantaneu." }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare asociate",
+          "ampsToWatts": "Calculator Amperi în Wați",
+          "ampsToWattsDesc": "Convertește curentul în putere cu tensiune",
+          "voltsToWatts": "Calculator Volți în Wați",
+          "voltsToWattsDesc": "Convertește tensiunea și curentul în putere",
+          "kwToAmps": "Calculator kW în Amperi",
+          "kwToAmpsDesc": "Convertește kilowați în amperi cu tensiune",
+          "voltsToAmps": "Calculator Volți în Amperi",
+          "voltsToAmpsDesc": "Convertește tensiunea în curent cu wați sau rezistență"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Calculator Electronvolți la Volți",
       "description": "Convertește electronvolții (eV) în volți (V) instant și precis",
@@ -1629,6 +1680,65 @@
               "answer": "Da, calculatorul nostru Electronvolți la Volți este complet gratuit. Nu este necesară înregistrarea sau plata. Introduceți pur și simplu valoarea dvs. de electronvolt și obțineți rezultate de conversie a tensiunii instantanee și precise."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Calculator Volți în Electronvolți",
+      "description": "Convertește tensiunea (V) în energie în electronvolți (eV); 1:1 pentru un electron",
+      "volts": "Tensiune (V)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "electronVolts": "Electronvolți (eV)",
+      "seo": {
+        "title": "Calculator Volți în Electronvolți - Convertește Tensiunea în Energie",
+        "description": "Calculator gratuit Volți în Electronvolți. Convertește tensiunea (V) în eV. 1 V = 1 eV pentru un electron. Fizică particule, atomică, semiconductori.",
+        "keywords": "calculator volți electronvolți, V eV convertor, tensiune electronvolt, calculator fizică, calculator gratuit",
+        "content": {
+          "heading": "Cum să convertești volții în electronvolți",
+          "paragraph1": "Convertirea tensiunii (V) în energie în electronvolți (eV) este o conversie de bază în fizică, în special în fizica particulelor, atomică și electronică. Pentru un electron relația e 1:1: un electron accelerat prin 1 V câștigă 1 eV. Deci eV = V. Calculatorul nostru Volți în Electronvolți oferă rezultate instantanee și precise.",
+          "paragraph2": "Formula: eV = V, unde eV e energia în electronvolți și V tensiunea în volți. Relația 1:1 vine din definiția electronvoltului ca energie câștigată de un electron care trece prin 1 V. eV e o unitate comodă pentru energiile atomice și subatomice.",
+          "paragraph3": "Această conversie se folosește în fizica acceleratoarelor, a semiconductoarelor, atomică și moleculară, măsurători cu raze X și gamma, microscopie electronică, fizica plasmei și calculul cuantic. Cunoașterea legăturii V–eV ajută la lucrul cu scară de energie de la tranziții atomice la coliziuni de particule.",
+          "paragraph4": "Calculatorul ia tensiunea (V) și returnează energia în eV. Gestionează valori mici și mari. Fără înregistrare. Fie că lucrați cu bande interzise, acceleratoare sau energii de fotoni, calculatorul Volți în Electronvolți oferă conversii precise și instantanee.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1 000 000 V (1 MV) → 1 000 000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            {
+              "question": "Formula volți în electronvolți?",
+              "answer": "Pentru un electron: eV = V. Energia în eV e egală cu tensiunea în V. Conversie 1:1 pentru că electronvoltul e definit ca energia câștigată de un electron la 1 V."
+            },
+            {
+              "question": "De ce conversia e 1:1?",
+              "answer": "Electronvoltul e definit ca energia cinetică câștigată de un electron trecând prin 1 V. De aceea 1 V corespunde exact la 1 eV pentru un electron."
+            },
+            {
+              "question": "Ce este un electronvolt?",
+              "answer": "Un electronvolt (eV) e o unitate de energie ≈ 1,602 × 10^-19 jouli. E energia cinetică a unui electron accelerat de 1 V. Folosit în fizica atomică, nucleară și a particulelor."
+            },
+            {
+              "question": "Relația cu electronvolți în volți?",
+              "answer": "Volți în eV (eV = V) și eV în volți (V = eV) sunt operații inverse. Ambele 1:1 pentru un electron. Folosiți V→eV pentru tensiune, eV→V pentru energie în eV."
+            },
+            {
+              "question": "Calculatorul e gratuit?",
+              "answer": "Da. Calculatorul Volți în Electronvolți e gratuit. Fără înregistrare. Introduceți tensiunea (V) pentru energia în eV."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare înrudite",
+          "electronVoltsToVolts": "Calculator Electronvolți în Volți",
+          "electronVoltsToVoltsDesc": "Convertește energia în eV în tensiune",
+          "joulesToVolts": "Calculator Jouli în Volți",
+          "joulesToVoltsDesc": "Convertește energia și sarcina în tensiune",
+          "voltsToJoules": "Calculator Volți în Jouli",
+          "voltsToJoulesDesc": "Convertește tensiunea și sarcina în energie",
+          "voltsToWatts": "Calculator Volți în Wați",
+          "voltsToWattsDesc": "Convertește tensiunea și curentul în putere"
         }
       }
     }

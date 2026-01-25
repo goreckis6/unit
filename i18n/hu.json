@@ -1636,6 +1636,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Watt-Amper Kalkulátor",
+      "description": "Teljesítmény (W) átváltása áramra (A) DC, egyfázisú és háromfázisú rendszerekhez feszültséggel és teljesítménytényezővel",
+      "currentType": "Áram típusa",
+      "directCurrent": "Egyenáram (DC)",
+      "singlePhase": "Egyfázisú",
+      "threePhase": "Háromfázisú",
+      "watts": "Watt (W)",
+      "volts": "Feszültség (V)",
+      "powerFactor": "Teljesítménytényező (0–1)",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "amps": "Amper (A)",
+      "seo": {
+        "title": "Watt-Amper Kalkulátor – DC, Egyfázisú és Háromfázisú | Teljesítmény-Áram",
+        "description": "Ingyenes Watt-Amper kalkulátor. Teljesítmény (W) átváltása áramra (A) DC, egyfázisú és háromfázisú rendszerekhez. Feszültség és teljesítménytényező. Ideális áramkör-méretezéshez, megszakítókhoz és villamos tervezéshez.",
+        "keywords": "watt amper kalkulátor, teljesítmény áram átváltó, W A, DC egyfázisú háromfázisú, villamos kalkulátor, megszakító méretezés, ingyenes kalkulátor",
+        "content": {
+          "heading": "Watt átváltása amperre",
+          "paragraph1": "A teljesítmény wattban (W) történő átváltása áramra amperben (A) alapvető villamos számítás. A képlet a rendszer típusától függ: DC, egyfázisú vagy háromfázisú. DC esetén: I = P / V. Egyfázisú esetén: I = P / (V × PF), ahol PF a teljesítménytényező. Háromfázisú esetén: I = P / (√3 × V × PF), V mint vonali feszültség. Ingyenes Watt-Amper kalkulátorunk mind a három módot támogatja és azonnali, pontos eredményeket ad áramkör-méretezéshez, megszakító-választáshoz és terhelés-elemzéshez.",
+          "paragraph2": "Az egyenáramnak (DC) nincs teljesítménytényezője; az áram a teljesítmény osztva a feszültséggel. Az egy- és háromfázisú rendszerek gyakran reaktív terheléssel (motorok, előtétek) rendelkeznek, így a látszólagos áram nagyobb, mint a hatásos. A teljesítménytényező (0–1) a hatásos és látszólagos teljesítmény arányát jelenti. Háromfázisú esetén a √3 tényező (≈ 1,732) figyelembe veszi a fázisviszonyt a vonali feszültség és a fázismennyiségek között. Tipikus feszültségek: 120 V, 230 V, 240 V (egyfázisú); 400 V, 480 V (háromfázisú vonali).",
+          "paragraph3": "Ez az átváltás a következőkre használatos: megszakítók és biztosítékok méretezése, vezeték-keresztmetszet választása adott terheléshez, áram kiszámítása készülék teljesítményéből, elosztóhálózatok tervezése és energetikai auditok. Akár DC terhelésről (akkumulátorok, napenergia), egyfázisú lakossági vagy háromfázisú ipari rendszerről van szó, a wattok amperre való átváltása elengedhetetlen a biztonságos és szabályos villamos tervezéshez.",
+          "paragraph4": "Kalkulátorunk lehetővé teszi DC, egyfázisú vagy háromfázisú választását. Adja meg a wattot és a feszültséget; AC esetén a teljesítménytényezőt (alapértelmezett 0,8). Az eredmény amperben (A) jelenik meg. Regisztráció nélkül. Diákoknak, villanyszerelőknek és mérnököknek a Watt-Amper kalkulátor pontos eredményeket biztosít minden gyakori rendszertípushoz.",
+          "exampleHeading": "Példa:",
+          "exampleText": "DC: 1200 W 120 V-on → I = 1200 / 120 = 10 A. Egyfázisú: 1840 W 230 V-on, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Háromfázisú: 8,83 kW 400 V-on, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Gyakran ismételt kérdések",
+          "items": [
+            { "question": "Mi a watt-amper képlet (DC)?", "answer": "DC esetén: I = P / V, ahol I az áram A-ben, P a teljesítmény W-ban és V a feszültség V-ban. Osztva a teljesítményt a feszültséggel megkapjuk az áramot. Pl.: 1200 W 120 V-on → I = 10 A." },
+            { "question": "Mi a képlet egyfázisúra?", "answer": "Egyfázisú esetén: I = P / (V × PF). V feszültség (V), P teljesítmény (W), PF teljesítménytényező (0–1). Pl.: 1840 W 230 V-on, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "Mi a képlet háromfázisúra?", "answer": "Háromfázisú esetén: I = P / (√3 × V × PF). V vonali feszültség (V), P teljesítmény (W), PF teljesítménytényező. √3 ≈ 1,732. Pl.: 8,83 kW 400 V-on, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "Mikor használjunk DC-t, egyfázisút vagy háromfázisút?", "answer": "DC akkumulátorokhoz, DC napelemes áramkörökhöz és DC terhelésekhez. Egyfázisú tipikus lakossági használatra (120 V, 230 V, 240 V). Háromfázisú ipari és kereskedelmi elosztáshoz (400 V, 480 V vonali) és motorokhoz." },
+            { "question": "Hogyan kapcsolódik az amper-watthoz?", "answer": "A watt-amper (I = P / V) és az amper-watt (P = I × V) inverz műveletek. Használja a watt→amper átváltást, ha ismeri a teljesítményt és a feszültséget; amper→watt, ha ismeri az áramot és a feszültséget." },
+            { "question": "Ingyenes ez a kalkulátor?", "answer": "Igen. A Watt-Amper kalkulátor ingyenes. Regisztráció nélkül. Válasszon DC-t, egyfázisút vagy háromfázisút, adja meg a wattot és a feszültséget (és teljesítménytényezőt AC-hez), azonnal kapja meg az ampert." }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó kalkulátorok",
+          "ampsToWatts": "Amper-Watt Kalkulátor",
+          "ampsToWattsDesc": "Áram átváltása teljesítményre feszültséggel",
+          "voltsToWatts": "Volt-Watt Kalkulátor",
+          "voltsToWattsDesc": "Feszültség és áram átváltása teljesítményre",
+          "kwToAmps": "kW-Amper Kalkulátor",
+          "kwToAmpsDesc": "Kilowatt átváltása amperre feszültséggel",
+          "voltsToAmps": "Volt-Amper Kalkulátor",
+          "voltsToAmpsDesc": "Feszültség átváltása áramra watttal vagy ellenállással"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Elektronvolt Volt Számológép",
       "description": "Alakítsa át az elektronvolteket (eV) volttá (V) azonnal és pontosan",
@@ -1684,6 +1735,65 @@
               "answer": "Igen, Elektronvolt Volt számológépünk teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Egyszerűen adja meg az elektronvolt értékét és kapjon azonnali, pontos feszültségátváltási eredményeket."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Volt Elektronvolt Számológép",
+      "description": "Alakítsa át a feszültséget (V) elektronvolt energiává (eV); 1:1 egy elektronra",
+      "volts": "Feszültség (V)",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "electronVolts": "Elektronvolt (eV)",
+      "seo": {
+        "title": "Volt Elektronvolt Számológép - Feszültség Energiává",
+        "description": "Ingyenes Volt–Elektronvolt számológép. Alakítsa át a feszültséget (V) eV-vé. 1 V = 1 eV egy elektronra. Részecske-, atom- és félvezetőfizika.",
+        "keywords": "volt elektronvolt számológép, V eV átváltó, feszültség elektronvolt, fizika számológép, ingyenes számológép",
+        "content": {
+          "heading": "Volt elektronvolttá alakítása",
+          "paragraph1": "A feszültség (V) elektronvolt (eV) energiává alakítása alapvető átváltás a fizikában, különösen a részecske-, atom- és elektronikában. Egy elektronra 1:1: egy 1 V-tal gyorsított elektron 1 eV-t nyer. Tehát eV = V. Ingyenes Volt–Elektronvolt számológépünk azonnali, pontos eredményt ad.",
+          "paragraph2": "Képlet: eV = V, ahol eV az energia elektronvoltban, V a feszültség voltban. A 1:1 kapcsolat abból adódik, hogy az elektronvolt az egy elektron által nyert energia 1 V potenciálkülönbségen át Haladva. Az eV kényelmes egység atomi és szubatom energiákhoz.",
+          "paragraph3": "Az átváltást gyorsító-, félvezető-, atom- és molekulafizikában, röntgen- és gammamérésekben, elektronmikroszkópiában, plazmafizikában és kvantummechanikában használják. A V–eV kapcsolat ismerete segít energiaszintekkel dolgozni atomi átmenetektől részecskeütközésekig.",
+          "paragraph4": "A számológép feszültséget (V) vesz, energiát eV-ban ad. Kis és nagy értékeket is kezel. Regisztráció nélkül. Akár tiltott sávok, gyorsítók vagy fotonenergiák – a Volt–Elektronvolt számológép pontos, azonnali átváltást nyújt.",
+          "exampleHeading": "Példa:",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1.000.000 V (1 MV) → 1.000.000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Gyakori kérdések",
+          "items": [
+            {
+              "question": "Volt elektronvolt képlet?",
+              "answer": "Egy elektronra: eV = V. Az energia eV-ban egyenlő a feszültséggel V-ban. 1:1 átváltás, mert az elektronvolt egy elektron 1 V alatti energia nyereségét definiálja."
+            },
+            {
+              "question": "Miért 1:1 az átváltás?",
+              "answer": "Az elektronvolt az egy elektron által nyert kinetikus energia 1 V potenciálkülönbségen való áthaladáskor. Ezért 1 V pontosan 1 eV-nak felel meg egy elektronra."
+            },
+            {
+              "question": "Mi az elektronvolt?",
+              "answer": "Az elektronvolt (eV) energiaegység ≈ 1,602 × 10^-19 J. Egy 1 V-tal gyorsított elektron kinetikus energiája. Atom-, nukleáris és részecskefizikában használják."
+            },
+            {
+              "question": "Kapcsolat az elektronvolt volttal?",
+              "answer": "Volt eV: eV = V. Elektronvolt volt: V = eV. Inverz műveletek. Mindkettő 1:1 egy elektronra. V→eV feszültségre, eV→V energia eV-ban."
+            },
+            {
+              "question": "A számológép ingyenes?",
+              "answer": "Igen. A Volt–Elektronvolt számológép ingyenes. Regisztráció nélkül. Adja meg a feszültséget (V) az eV energiaért."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó számológépek",
+          "electronVoltsToVolts": "Elektronvolt Volt Számológép",
+          "electronVoltsToVoltsDesc": "Energia eV-ból feszültségre",
+          "joulesToVolts": "Joule Volt Számológép",
+          "joulesToVoltsDesc": "Energia és töltés feszültségre",
+          "voltsToJoules": "Volt Joule Számológép",
+          "voltsToJoulesDesc": "Feszültség és töltés energiára",
+          "voltsToWatts": "Volt Watt Számológép",
+          "voltsToWattsDesc": "Feszültség és áram teljesítményre"
         }
       }
     }

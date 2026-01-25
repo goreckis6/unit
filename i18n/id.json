@@ -1581,6 +1581,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Kalkulator Watt ke Ampere",
+      "description": "Ubah daya (W) menjadi arus (A) untuk DC, fase tunggal, dan tiga fase dengan tegangan dan faktor daya",
+      "currentType": "Jenis arus",
+      "directCurrent": "Arus Searah (DC)",
+      "singlePhase": "Fase Tunggal",
+      "threePhase": "Tiga Fase",
+      "watts": "Watt (W)",
+      "volts": "Tegangan (V)",
+      "powerFactor": "Faktor Daya (0–1)",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Kalkulator Watt ke Ampere – DC, Fase Tunggal & Tiga Fase | Daya ke Arus",
+        "description": "Kalkulator Watt ke Ampere gratis. Ubah daya (W) menjadi arus (A) untuk DC, fase tunggal, dan tiga fase. Tegangan dan faktor daya. Ideal untuk ukuran sirkuit, pemutus, dan desain listrik.",
+        "keywords": "kalkulator watt ampere, konverter daya arus, W A, DC fase tunggal tiga fase, kalkulator listrik, ukuran pemutus, kalkulator gratis",
+        "content": {
+          "heading": "Cara mengubah watt menjadi ampere",
+          "paragraph1": "Mengubah daya dalam watt (W) menjadi arus dalam ampere (A) adalah perhitungan listrik dasar. Rumusnya tergantung pada jenis sistem: DC, fase tunggal, atau tiga fase. Untuk DC: I = P / V. Untuk fase tunggal: I = P / (V × PF), di mana PF adalah faktor daya. Untuk tiga fase: I = P / (√3 × V × PF), dengan V sebagai tegangan line-to-line. Kalkulator Watt ke Ampere gratis kami mendukung ketiga mode dan memberikan hasil instan dan akurat untuk ukuran sirkuit, pemilihan pemutus, dan analisis beban.",
+          "paragraph2": "Arus searah (DC) tidak memiliki faktor daya; arus adalah daya dibagi tegangan. Sistem fase tunggal dan tiga fase sering memiliki beban reaktif (motor, balast), sehingga arus semu lebih tinggi dari arus aktif. Faktor daya (0–1) mewakili rasio daya aktif terhadap semu. Pada tiga fase, faktor √3 (≈ 1,732) memperhitungkan hubungan fase antara tegangan line-to-line dan besaran fase. Tegangan umum: 120 V, 230 V, 240 V (fase tunggal); 400 V, 480 V (tiga fase line-to-line).",
+          "paragraph3": "Konversi ini digunakan untuk: ukuran pemutus sirkuit dan sekring, pemilihan ukuran kabel untuk beban tertentu, penghitungan arus dari daya perangkat, desain jaringan distribusi, dan audit energi. Baik untuk beban DC (baterai, solar), fase tunggal perumahan, atau tiga fase industri, mengubah watt menjadi ampere sangat penting untuk desain listrik yang aman dan sesuai.",
+          "paragraph4": "Kalkulator kami memungkinkan Anda memilih DC, fase tunggal, atau tiga fase. Masukkan watt dan tegangan; untuk AC, faktor daya (default 0,8). Hasilnya dalam ampere (A). Tanpa registrasi. Untuk siswa, teknisi listrik, dan insinyur, kalkulator Watt ke Ampere memberikan hasil akurat untuk semua jenis sistem umum.",
+          "exampleHeading": "Contoh:",
+          "exampleText": "DC: 1200 W pada 120 V → I = 1200 / 120 = 10 A. Fase tunggal: 1840 W pada 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Tiga fase: 8,83 kW pada 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            { "question": "Apa rumus watt ke ampere (DC)?", "answer": "Untuk DC: I = P / V, di mana I adalah arus dalam A, P adalah daya dalam W, dan V adalah tegangan dalam V. Membagi daya dengan tegangan menghasilkan arus. Contoh: 1200 W pada 120 V → I = 10 A." },
+            { "question": "Apa rumus untuk fase tunggal?", "answer": "Untuk fase tunggal: I = P / (V × PF). V tegangan (V), P daya (W), PF faktor daya (0–1). Contoh: 1840 W pada 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "Apa rumus untuk tiga fase?", "answer": "Untuk tiga fase: I = P / (√3 × V × PF). V tegangan line-to-line (V), P daya (W), PF faktor daya. √3 ≈ 1,732. Contoh: 8,83 kW pada 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "Kapan menggunakan DC, fase tunggal, atau tiga fase?", "answer": "DC untuk baterai, sirkuit solar DC, dan beban DC. Fase tunggal untuk perumahan tipikal (120 V, 230 V, 240 V). Tiga fase untuk distribusi industri dan komersial (400 V, 480 V line-to-line) dan motor." },
+            { "question": "Bagaimana hubungannya dengan ampere ke watt?", "answer": "Watt ke ampere (I = P / V) dan ampere ke watt (P = I × V) adalah operasi terbalik. Gunakan watt→ampere saat Anda tahu daya dan tegangan; ampere→watt saat Anda tahu arus dan tegangan." },
+            { "question": "Apakah kalkulator ini gratis?", "answer": "Ya. Kalkulator Watt ke Ampere gratis. Tanpa registrasi. Pilih DC, fase tunggal, atau tiga fase, masukkan watt dan tegangan (dan faktor daya untuk AC), dapatkan ampere secara instan." }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator terkait",
+          "ampsToWatts": "Kalkulator Ampere ke Watt",
+          "ampsToWattsDesc": "Ubah arus menjadi daya dengan tegangan",
+          "voltsToWatts": "Kalkulator Volt ke Watt",
+          "voltsToWattsDesc": "Ubah tegangan dan arus menjadi daya",
+          "kwToAmps": "Kalkulator kW ke Ampere",
+          "kwToAmpsDesc": "Ubah kilowatt menjadi ampere dengan tegangan",
+          "voltsToAmps": "Kalkulator Volt ke Ampere",
+          "voltsToAmpsDesc": "Ubah tegangan menjadi arus dengan watt atau resistansi"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Kalkulator Elektronvolt ke Volt",
       "description": "Konversi elektronvolt (eV) ke volt (V) secara instan dan akurat",
@@ -1629,6 +1680,65 @@
               "answer": "Ya, kalkulator Elektronvolt ke Volt kami sepenuhnya gratis. Tidak diperlukan registrasi atau pembayaran. Cukup masukkan nilai elektronvolt Anda dan dapatkan hasil konversi tegangan instan dan akurat."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Kalkulator Volt ke Elektronvolt",
+      "description": "Konversi tegangan (V) ke energi dalam elektronvolt (eV); 1:1 untuk satu elektron",
+      "volts": "Tegangan (V)",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "electronVolts": "Elektronvolt (eV)",
+      "seo": {
+        "title": "Kalkulator Volt ke Elektronvolt - Konversi Tegangan ke Energi",
+        "description": "Kalkulator gratis Volt ke Elektronvolt. Konversi tegangan (V) ke eV. 1 V = 1 eV untuk satu elektron. Fisika partikel, atom, semikonduktor.",
+        "keywords": "kalkulator volt elektronvolt, V eV konverter, tegangan elektronvolt, kalkulator fisika, kalkulator gratis",
+        "content": {
+          "heading": "Cara mengonversi volt ke elektronvolt",
+          "paragraph1": "Mengonversi tegangan (V) ke energi dalam elektronvolt (eV) adalah konversi dasar dalam fisika, terutama fisika partikel, atom, dan elektronika. Untuk satu elektron 1:1: elektron yang dipercepat 1 V memperoleh 1 eV. Jadi eV = V. Kalkulator Volt–Elektronvolt gratis kami memberi hasil instan dan akurat.",
+          "paragraph2": "Rumus: eV = V, dengan eV energi dalam elektronvolt dan V tegangan dalam volt. Relasi 1:1 karena elektronvolt didefinisikan sebagai energi yang diperoleh satu elektron saat melewati 1 V. eV satuan praktis untuk energi atom dan subatom.",
+          "paragraph3": "Konversi ini dipakai dalam fisika akselerator, semikonduktor, atom dan molekuler, pengukuran sinar-X dan gamma, mikroskopi elektron, fisika plasma, dan mekanika kuantum. Memahami relasi V–eV membantu bekerja dengan skala energi dari transisi atom hingga tumbukan partikel.",
+          "paragraph4": "Kalkulator mengambil tegangan (V) dan mengembalikan energi dalam eV. Menangani nilai kecil dan besar. Tanpa registrasi. Apakah celah pita, akselerator, atau energi foton—kalkulator Volt–Elektronvolt memberi konversi akurat dan instan.",
+          "exampleHeading": "Contoh:",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1.000.000 V (1 MV) → 1.000.000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang sering diajukan",
+          "items": [
+            {
+              "question": "Rumus volt ke elektronvolt?",
+              "answer": "Untuk satu elektron: eV = V. Energi dalam eV sama dengan tegangan dalam V. Konversi 1:1 karena elektronvolt didefinisikan sebagai energi yang diperoleh satu elektron pada 1 V."
+            },
+            {
+              "question": "Mengapa konversi 1:1?",
+              "answer": "Elektronvolt didefinisikan sebagai energi kinetik yang diperoleh satu elektron saat melewati 1 V. Jadi 1 V tepat bersesuaian dengan 1 eV untuk satu elektron."
+            },
+            {
+              "question": "Apa itu elektronvolt?",
+              "answer": "Elektronvolt (eV) satuan energi ≈ 1,602×10^-19 joule. Energi kinetik satu elektron yang dipercepat 1 V. Dipakai dalam fisika atom, nuklir, dan partikel."
+            },
+            {
+              "question": "Hubungan dengan elektronvolt ke volt?",
+              "answer": "Volt ke eV (eV = V) dan eV ke volt (V = eV) operasi invers. Keduanya 1:1 untuk satu elektron. Gunakan V→eV untuk tegangan, eV→V untuk energi dalam eV."
+            },
+            {
+              "question": "Kalkulator gratis?",
+              "answer": "Ya. Kalkulator Volt–Elektronvolt gratis. Tanpa registrasi. Masukkan tegangan (V) untuk energi dalam eV."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator terkait",
+          "electronVoltsToVolts": "Kalkulator Elektronvolt ke Volt",
+          "electronVoltsToVoltsDesc": "Konversi energi dalam eV ke tegangan",
+          "joulesToVolts": "Kalkulator Joule ke Volt",
+          "joulesToVoltsDesc": "Konversi energi dan muatan ke tegangan",
+          "voltsToJoules": "Kalkulator Volt ke Joule",
+          "voltsToJoulesDesc": "Konversi tegangan dan muatan ke energi",
+          "voltsToWatts": "Kalkulator Volt ke Watt",
+          "voltsToWattsDesc": "Konversi tegangan dan arus ke daya"
         }
       }
     }

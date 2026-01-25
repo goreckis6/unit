@@ -1581,6 +1581,57 @@
         }
       }
     },
+    "wattsToAmps": {
+      "title": "Watti-Ampeeri Laskin",
+      "description": "Muunna teho (W) virraksi (A) tasavirralle, yksivaiheelle ja kolmivaiheelle jännitteellä ja tehokertoimella",
+      "currentType": "Virran tyyppi",
+      "directCurrent": "Tasavirta (DC)",
+      "singlePhase": "Yksivaihe",
+      "threePhase": "Kolmivaihe",
+      "watts": "Watti (W)",
+      "volts": "Jännite (V)",
+      "powerFactor": "Tehokerroin (0–1)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "amps": "Ampeeri (A)",
+      "seo": {
+        "title": "Watti-Ampeeri Laskin – DC, Yksivaihe ja Kolmivaihe | Teho Virraks",
+        "description": "Ilmainen Watti-Ampeeri laskin. Muunna teho (W) virraksi (A) tasavirralle, yksivaiheelle ja kolmivaiheelle. Jännite ja tehokerroin. Ihanteellinen piirimitoitukseen, sulakkeisiin ja sähkösuunnitteluun.",
+        "keywords": "watti ampeeri laskin, teho virta muunnin, W A, DC yksivaihe kolmivaihe, sähkölaskin, sulakkeen mitoitus, ilmainen laskin",
+        "content": {
+          "heading": "Wattien muuntaminen ampeeriksi",
+          "paragraph1": "Tehon muuntaminen wateista (W) virraksi ampereiksi (A) on perus sähkölaskenta. Kaava riippuu järjestelmätyypistä: DC, yksivaihe tai kolmivaihe. DC:lle: I = P / V. Yksivaiheelle: I = P / (V × PF), jossa PF on tehokerroin. Kolmivaiheelle: I = P / (√3 × V × PF), V pääjännitteenä. Ilmainen Watti-Ampeeri laskimemme tukee kaikkia kolmea tilaa ja antaa välittömät, tarkat tulokset piirimitoitukseen, sulakkeiden valintaan ja kuorma-analyysiin.",
+          "paragraph2": "Tasavirralla (DC) ei ole tehokerrointa; virta on teho jaettuna jännitteellä. Yksi- ja kolmivaihejärjestelmissä on usein reaktiivista kuormaa (moottorit, kuristimet), joten näennäisvirta on suurempi kuin pätövirta. Tehokerroin (0–1) edustaa pätö- ja näennäistehon suhdetta. Kolmivaiheessa √3-kerroin (≈ 1,732) ottaa huomioon vaihesuhteen pääjännitteen ja vaihesuureiden välillä. Tyypilliset jännitteet: 120 V, 230 V, 240 V (yksivaihe); 400 V, 480 V (kolmivaihe pääjännite).",
+          "paragraph3": "Tätä muunnosta käytetään: sulakkeiden ja varokkeiden mitoitukseen, kaapelipoikkipinnan valintaan annetulle kuormalle, virran laskemiseen laitteen tehosta, jakeluverkkojen suunnitteluun ja energiakatelmuksiin. Olipa kyse DC-kuormista (akut, aurinko), yksivaiheisesta asuinkäytöstä tai kolmivaiheisesta teollisuuskäytöstä, wattien muuntaminen ampeeriksi on välttämätöntä turvalliselle ja määräystenmukaiselle sähkösuunnittelulle.",
+          "paragraph4": "Laskimemme mahdollistaa DC:n, yksiv aihen tai kolmivaiheen valinnan. Syötä wattia ja jännite; AC:lle tehokerroin (oletus 0,8). Tulos on ampereissa (A). Ei rekisteröintiä. Opiskelijoille, sähköasentajille ja insinööreille Watti-Ampeeri laskin tarjoaa tarkkoja tuloksia kaikille yleisille järjestelmätyypeille.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "DC: 1200 W 120 V:ssa → I = 1200 / 120 = 10 A. Yksivaihe: 1840 W 230 V:ssa, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A. Kolmivaihe: 8,83 kW 400 V:ssa, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            { "question": "Mikä on watti-ampeeri kaava (DC)?", "answer": "DC:lle: I = P / V, jossa I on virta A:ssa, P teho W:ssa ja V jännite V:ssa. Jakamalla teho jännitteellä saadaan virta. Esim.: 1200 W 120 V:ssa → I = 10 A." },
+            { "question": "Mikä on kaava yksivaiheelle?", "answer": "Yksivaiheelle: I = P / (V × PF). V jännite (V), P teho (W), PF tehokerroin (0–1). Esim.: 1840 W 230 V:ssa, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
+            { "question": "Mikä on kaava kolmivaiheelle?", "answer": "Kolmivaiheelle: I = P / (√3 × V × PF). V pääjännite (V), P teho (W), PF tehokerroin. √3 ≈ 1,732. Esim.: 8,83 kW 400 V:ssa, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
+            { "question": "Milloin käyttää DC:tä, yksiv aihetta tai kolmiv aihetta?", "answer": "DC akuille, DC-aurinkopiireille ja DC-kuormille. Yksivaihe tyypilliseen asuinkäyttöön (120 V, 230 V, 240 V). Kolmivaihe teollisuus- ja kaupalliseen jakeluun (400 V, 480 V pääjännite) ja moottoreille." },
+            { "question": "Miten tämä liittyy ampeeri-wattiin?", "answer": "Watti-ampeeri (I = P / V) ja ampeeri-watti (P = I × V) ovat käänteisiä toimintoja. Käytä watti→ampeeri, kun tiedät tehon ja jännitteen; ampeeri→watti, kun tiedät virran ja jännitteen." },
+            { "question": "Onko tämä laskin ilmainen?", "answer": "Kyllä. Watti-Ampeeri laskin on ilmainen. Ei rekisteröintiä. Valitse DC, yksivaihe tai kolmivaihe, syötä wattia ja jännite (ja tehokerroin AC:lle), saat ampeerit välittömästi." }
+          ]
+        },
+        "related": {
+          "heading": "Aiheeseen liittyvät laskimet",
+          "ampsToWatts": "Ampeeri-Watti Laskin",
+          "ampsToWattsDesc": "Muunna virta tehoksi jännitteellä",
+          "voltsToWatts": "Voltti-Watti Laskin",
+          "voltsToWattsDesc": "Muunna jännite ja virta tehoksi",
+          "kwToAmps": "kW-Ampeeri Laskin",
+          "kwToAmpsDesc": "Muunna kilowattia ampeeriksi jännitteellä",
+          "voltsToAmps": "Voltti-Ampeeri Laskin",
+          "voltsToAmpsDesc": "Muunna jännite virraksi watilla tai resistanssilla"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Elektronivoltti Voltti Laskin",
       "description": "Muunna elektronivoltti (eV) volteiksi (V) välittömästi ja tarkasti",
@@ -1629,6 +1680,65 @@
               "answer": "Kyllä, Elektronivoltti Voltti laskimemme on täysin ilmainen. Rekisteröintiä tai maksua ei vaadita. Syötä vain elektronivolttiarvosi ja saat välittömät, tarkat jännitemuunnostulokset."
             }
           ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "Voltti Elektronivoltti Laskin",
+      "description": "Muunna jännite (V) energiaksi elektronivolteina (eV); 1:1 yhdelle elektronille",
+      "volts": "Jännite (V)",
+      "calculate": "Laske",
+      "reset": "Tyhjennä",
+      "result": "Tulos",
+      "electronVolts": "Elektronivoltti (eV)",
+      "seo": {
+        "title": "Voltti Elektronivoltti Laskin - Jännite Energiaksi",
+        "description": "Ilmainen Voltti–Elektronivoltti -laskin. Muunna jännite (V) eV:ksi. 1 V = 1 eV yhdelle elektronille. Hiukkas-, atomi- ja puolijohdefysiikka.",
+        "keywords": "voltti elektronivoltti laskin, V eV muunnin, jännite elektronivoltti, fysiikka laskin, ilmainen laskin",
+        "content": {
+          "heading": "Voltin muuntaminen elektronivolteiksi",
+          "paragraph1": "Jännitteen (V) muuntaminen energiaksi elektronivolteina (eV) on perusmuunnos fysiikassa, erityisesti hiukkas-, atomi- ja elektroniikassa. Yhdelle elektronille 1:1: yhden voltin kautta kiihdytetty elektroni voittaa 1 eV. Siis eV = V. Ilmainen Voltti–Elektronivoltti -laskimemme antaa välittömät, tarkat tulokset.",
+          "paragraph2": "Kaava: eV = V, jossa eV on energia elektronivolteina ja V jännite volteina. 1:1-suhde johtuu siitä, että elektronivoltti määritellään yhden elektronin voittamaksi energiaksi 1 V:n läpi kulkiessa. eV on kätevä yksikkö atomi- ja subatomenergioille.",
+          "paragraph3": "Muunnosta käytetään hiukkaskiihdyttimen, puolijohde-, atomi- ja molekyylifysiikassa, röntgen- ja gammamittauksissa, elektronimikroskopiassa, plasmafysiikassa ja kvanttimekaniikassa. V–eV-suhteen tunteminen auttaa energiasteikkojen kanssa atomisiirtymistä hiukkastörmäyksiin.",
+          "paragraph4": "Laskin ottaa jännitteen (V) ja palauttaa energian eV:ssa. Se käsittelee pieniä ja suuria arvoja. Ei rekisteröintiä. Olipa kyseessä kielletty vyö, kiihdyttimet vai fotonienergiat – Voltti–Elektronivoltti -laskin antaa tarkat, välittömät muunnokset.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "1 V → 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1 000 000 V (1 MV) → 1 000 000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Kaava voltti elektronivoltti?",
+              "answer": "Yhdelle elektronille: eV = V. Energia eV:ssa on yhtä suuri kuin jännite V:ssa. 1:1-muunnos, koska elektronivoltti määritellään yhden elektronin voittamaksi energiaksi 1 V:ssa."
+            },
+            {
+              "question": "Miksi muunnos on 1:1?",
+              "answer": "Elektronivoltti määritellään yhden elektronin voittamaksi kineettiseksi energiaksi 1 V:n läpi kulkiessa. Siksi 1 V vastaa täsmälleen 1 eV:ta yhdelle elektronille."
+            },
+            {
+              "question": "Mikä on elektronivoltti?",
+              "answer": "Elektronivoltti (eV) on energia-yksikkö ≈ 1,602 × 10^-19 joulea. Se on yhden elektronin 1 V:lla kiihdytettynä voittama kineettinen energia. Käytetään atomi-, ydin- ja hiukkasfysiikassa."
+            },
+            {
+              "question": "Yhteys elektronivoltti volttiin?",
+              "answer": "Voltti eV:hen (eV = V) ja eV voltteihin (V = eV) ovat käänteismuunnoksia. Molemmat 1:1 yhdelle elektronille. Käytä V→eV jännitteelle, eV→V energialle eV:ssa."
+            },
+            {
+              "question": "Onko laskin ilmainen?",
+              "answer": "Kyllä. Voltti–Elektronivoltti -laskin on ilmainen. Ei rekisteröintiä. Syötä jännite (V) energian eV:na saamiseksi."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "electronVoltsToVolts": "Elektronivoltti Voltti Laskin",
+          "electronVoltsToVoltsDesc": "Muunna energia eV:stä jännitteeksi",
+          "joulesToVolts": "Joule Voltti Laskin",
+          "joulesToVoltsDesc": "Muunna energia ja varaus jännitteeksi",
+          "voltsToJoules": "Voltti Joule Laskin",
+          "voltsToJoulesDesc": "Muunna jännite ja varaus energiaksi",
+          "voltsToWatts": "Voltti Watt Laskin",
+          "voltsToWattsDesc": "Muunna jännite ja virta tehoksi"
         }
       }
     }

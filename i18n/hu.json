@@ -1285,6 +1285,66 @@
         }
       }
     },
+    "voltsToWatts": {
+      "title": "Volt Watt Számológép",
+      "description": "Feszültséget (V) és áramerősséget (A) azonnal wattba (W) alakítja a P = V × I képlettel",
+      "volts": "Feszültség (V)",
+      "amps": "Amper (A)",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "watts": "Watt (W)",
+      "seo": {
+        "title": "Volt Watt Számológép - Feszültség és Áram Wattra",
+        "description": "Ingyenes Volt Watt számológép. Feszültséget (V) és áramerősséget (A) azonnal wattra (W). Képlet: P = V × I. Elektromos számításokhoz, áramkörtervezéshez és terhelésméretezéshez.",
+        "keywords": "volt watt számológép, feszültség watt, V W átváltó, teljesítmény képlet, elektromos számológép, P V I, ingyenes számológép",
+        "content": {
+          "heading": "Volt wattra alakítása",
+          "paragraph1": "A feszültség (V) és áram (A) wattra (W) alakítása alapvető elektromos számítás. A összefüggés P = V × I (P wattban, V voltban, I amperben), egyenáramú és ohmos váltakozóáramú áramköröknél. Ingyenes Volt Watt számológépünk gyors, pontos eredményt ad.",
+          "paragraph2": "A P = V × I az elektrotechnikában az egyik legegyszerűbb képlet. A feszültség hajtja az áramot; az áram a töltésáramlás. A szorzat a teljesítmény wattban. Pl. 230 V és 10 A → P = 230 × 10 = 2300 W (2,3 kW). Váltakozóáramnál reaktív elemeknél a teljesítménytényező kellhet; ohmos terhelésnél elég P = V × I.",
+          "paragraph3": "Az átváltást használják: készülékek teljesítményfelvételére, megszakítók és kábelek méretezésére, áramkörtervezésre, terhelés meghatározására és villamos rendszerek elemzésére. Lakossági és ipari rendszereknél egyaránt a volt és amper wattra alakítása elengedhetetlen a biztonságos és hatékony méretezéshez.",
+          "paragraph4": "A számológép feszültséget és áramerősséget vesz, alkalmazza P = V × I-t, és wattban mutatja az eredményt. Regisztráció nélkül. Diákoknak, villanyszerelőknek és mérnököknek a Volt Watt számológép megbízható eredményt ad.",
+          "exampleHeading": "Példa:",
+          "exampleText": "230 V és 5 A → P = 230 × 5 = 1150 W. 120 V és 10 A → P = 1200 W. 24 V és 2 A → P = 48 W. Egy 230 V-os készülék 4,35 A-nál kb. 1000 W (1 kW) fogyaszt."
+        },
+        "faq": {
+          "heading": "Gyakori kérdések",
+          "items": [
+            {
+              "question": "Mi a képlet a volt wattra alakításához?",
+              "answer": "P = V × I: P wattban, V voltban, I amperben. Feszültséget szorozzuk áramerősséggel a teljesítményhez. Pl. 230 V × 10 A = 2300 W."
+            },
+            {
+              "question": "Kell mind a feszültség, mind az áram?",
+              "answer": "Igen. A teljesítmény (watt) mindkettőtől függ. Wattot nem lehet csak feszültségből vagy csak áramból meghatározni."
+            },
+            {
+              "question": "Váltakozóáramra is jó?",
+              "answer": "Igen, P = V × I egyenáramra és ohmos váltakozóáramú áramkörökre érvényes. Váltakozóáramnál reaktanciáknál (tekercsek, kondenzátorok) használjuk P = V × I × PF-et (PF = teljesítménytényező). Fűtőtesteknél, izzólámpánál és ohmos terhelésnél P = V × I helyes."
+            },
+            {
+              "question": "Mi a különbség volt, amper és watt között?",
+              "answer": "Volt (V) = feszültség, amper (A) = áram, watt (W) = teljesítmény. Összefüggés: Watt = Volt × Amper."
+            },
+            {
+              "question": "A számológép ingyenes?",
+              "answer": "Igen. A Volt Watt számológép ingyenes. Regisztráció nélkül. Adja meg a feszültséget és az áramerősséget a watt eredményhez."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó számológépek",
+          "ampsToWatts": "Amper Watt Számológép",
+          "ampsToWattsDesc": "Ampert wattra feszültséggel",
+          "voltsToAmps": "Volt Amper Számológép",
+          "voltsToAmpsDesc": "Feszültséget áramra (watt vagy Ohm-törvény)",
+          "wattsToKva": "Watt kVA Számológép",
+          "wattsToKvaDesc": "Wattot kilovoltamperre teljesítménytényezővel",
+          "kvaToWatts": "kVA Watt Számológép",
+          "kvaToWattsDesc": "Kilovoltampert wattra teljesítménytényezővel"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Amper Watt Számológép",
       "description": "Alakítsa át az ampereket (A) watttá (W) azonnal és pontosan feszültség használatával",

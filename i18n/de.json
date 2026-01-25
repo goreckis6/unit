@@ -1245,6 +1245,66 @@
         }
       }
     },
+    "voltsToWatts": {
+      "title": "Volt zu Watt Rechner",
+      "description": "Spannung (V) und Strom (A) mit P = V × I sofort in Leistung in Watt (W) umrechnen",
+      "volts": "Spannung (V)",
+      "amps": "Ampere (A)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "watts": "Watt (W)",
+      "seo": {
+        "title": "Volt zu Watt Rechner - Spannung und Strom in Leistung umrechnen",
+        "description": "Kostenloser Volt-Watt-Rechner. Spannung (V) und Strom (A) sofort in Watt (W) umrechnen. Formel: P = V × I. Ideal für Elektroberechnungen, Schaltungsdesign und Lastauslegung.",
+        "keywords": "volt watt rechner, spannung watt, V W umrechner, leistungsformel rechner, elektrorechner, P V I rechner, kostenloser rechner",
+        "content": {
+          "heading": "Volt in Watt umrechnen",
+          "paragraph1": "Spannung (V) und Strom (A) in Leistung in Watt (W) umzurechnen ist eine grundlegende elektrische Berechnung. Es gilt die Leistungsformel P = V × I (P in Watt, V in Volt, I in Ampere) für Gleichstrom und ohmsche Wechselstromkreise. Unser kostenloser Volt-Watt-Rechner liefert schnelle, genaue Ergebnisse.",
+          "paragraph2": "P = V × I ist eine der einfachsten Formeln der Elektrotechnik. Spannung treibt den Strom; Strom ist der Ladungsfluss. Das Produkt ergibt die Leistung in Watt. Z. B. 230 V und 10 A: P = 230 × 10 = 2300 W (2,3 kW). Bei Wechselstrom mit Blindanteilen kann der Leistungsfaktor nötig sein; bei ohmschen Lasten genügt P = V × I.",
+          "paragraph3": "Die Umrechnung wird u. a. genutzt für: Leistungsaufnahme von Geräten, Dimensionierung von Leitungen und Schutzeinrichtungen, Schaltungsentwurf, Lastplanung und Verständnis elektrischer Systeme. Ob Haushalt oder Industrie – Volt und Ampere in Watt umzurechnen ist für sicheres und effizientes Design unerlässlich.",
+          "paragraph4": "Der Rechner nimmt Spannung und Strom auf, wendet P = V × I an und zeigt das Ergebnis in Watt. Ohne Anmeldung. Für Schüler, Elektriker und Ingenieure liefert der Volt-Watt-Rechner zuverlässige Ergebnisse.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "230 V und 5 A → P = 230 × 5 = 1150 W. 120 V und 10 A → P = 1200 W. 24 V und 2 A → P = 48 W. Ein 230-V-Gerät mit 4,35 A zieht etwa 1000 W (1 kW)."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Wie lautet die Formel für Volt zu Watt?",
+              "answer": "P = V × I: P Leistung in Watt, V Spannung in Volt, I Strom in Ampere. Spannung mal Strom ergibt die Leistung. Beispiel: 230 V × 10 A = 2300 W."
+            },
+            {
+              "question": "Brauche ich Spannung und Strom?",
+              "answer": "Ja. Die Leistung (Watt) hängt von beidem ab. Aus nur Spannung oder nur Strom lassen sich die Watt nicht bestimmen."
+            },
+            {
+              "question": "Gilt das für Wechselstrom?",
+              "answer": "Ja, P = V × I gilt für Gleichstrom und ohmsche Wechselstromkreise. Bei AC mit Blindanteilen (Spulen, Kondensatoren) gilt P = V × I × PF (PF = Leistungsfaktor). Bei Heizungen, Glühlampen und ohmschen Lasten ist P = V × I ausreichend."
+            },
+            {
+              "question": "Was ist der Unterschied zwischen Volt, Ampere und Watt?",
+              "answer": "Volt (V) = Spannung, Ampere (A) = Strom, Watt (W) = Leistung. Es gilt: Watt = Volt × Ampere."
+            },
+            {
+              "question": "Ist der Rechner kostenlos?",
+              "answer": "Ja. Der Volt-Watt-Rechner ist kostenlos. Keine Anmeldung. Spannung und Strom eingeben – sofort die Leistung in Watt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Ähnliche Rechner",
+          "ampsToWatts": "Ampere zu Watt Rechner",
+          "ampsToWattsDesc": "Ampere in Watt mit Spannung umrechnen",
+          "voltsToAmps": "Volt zu Ampere Rechner",
+          "voltsToAmpsDesc": "Spannung in Strom mit Watt oder Ohmschem Gesetz umrechnen",
+          "wattsToKva": "Watt zu kVA Rechner",
+          "wattsToKvaDesc": "Watt in Kilovoltampere mit Leistungsfaktor umrechnen",
+          "kvaToWatts": "kVA zu Watt Rechner",
+          "kvaToWattsDesc": "Kilovoltampere in Watt mit Leistungsfaktor umrechnen"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampere zu Watt Rechner",
       "description": "Konvertieren Sie Ampere (A) sofort und genau in Watt (W) mit Spannung",

@@ -1230,6 +1230,66 @@
         }
       }
     },
+    "voltsToWatts": {
+      "title": "Calculateur Volts vers Watts",
+      "description": "Convertissez tension (V) et courant (A) en puissance en watts (W) instantanément avec P = V × I",
+      "volts": "Tension (V)",
+      "amps": "Ampères (A)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "watts": "Watts (W)",
+      "seo": {
+        "title": "Calculateur Volts vers Watts - Convertir Tension et Courant en Puissance",
+        "description": "Calculateur gratuit Volts vers Watts. Convertissez tension (V) et courant (A) en watts (W) instantanément. Formule : P = V × I. Idéal pour les calculs électriques, conception de circuits et dimensionnement des charges.",
+        "keywords": "calculateur volts watts, tension watts, convertisseur V W, calculateur formule puissance, calculateur électrique, P V I, calculateur gratuit",
+        "content": {
+          "heading": "Comment convertir les volts en watts",
+          "paragraph1": "Convertir tension (V) et courant (A) en puissance en watts (W) est un calcul électrique fondamental. La relation est P = V × I (P en watts, V en volts, I en ampères), pour circuits DC et AC résistifs. Notre calculateur gratuit Volts vers Watts fournit des résultats rapides et précis.",
+          "paragraph2": "La formule P = V × I est l'une des plus simples en électrotechnique. La tension est la différence de potentiel qui entraîne le courant ; le courant est le flux de charge. Leur produit donne la puissance en watts. Ex. : 230 V et 10 A donnent P = 230 × 10 = 2300 W (2,3 kW). En AC avec composants réactifs, le facteur de puissance peut être nécessaire ; pour charges résistives, P = V × I suffit.",
+          "paragraph3": "Cette conversion sert à : calculer la puissance absorbée des appareils, dimensionner disjoncteurs et câbles, concevoir des circuits, définir les charges et analyser les systèmes électriques. En résidentiel comme en industriel, convertir volts et ampères en watts est essentiel pour un dimensionnement sûr et efficace.",
+          "paragraph4": "Le calculateur prend tension et courant, applique P = V × I et affiche le résultat en watts. Sans inscription. Pour élèves, électriciens et ingénieurs, le calculateur Volts vers Watts donne des résultats précis.",
+          "exampleHeading": "Exemple :",
+          "exampleText": "230 V et 5 A → P = 230 × 5 = 1150 W. 120 V et 10 A → P = 1200 W. 24 V et 2 A → P = 48 W. Un appareil 230 V à 4,35 A consomme environ 1000 W (1 kW)."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {
+              "question": "Quelle est la formule pour convertir les volts en watts ?",
+              "answer": "P = V × I : P en watts, V en volts, I en ampères. Multiplier tension par courant donne la puissance. Ex. : 230 V × 10 A = 2300 W."
+            },
+            {
+              "question": "Faut-il tension et courant ?",
+              "answer": "Oui. La puissance (watts) dépend des deux. On ne peut pas obtenir les watts à partir de la tension ou du courant seuls."
+            },
+            {
+              "question": "Ça marche en courant alternatif ?",
+              "answer": "Oui, P = V × I s'applique au DC et aux circuits AC résistifs. Pour AC avec composants réactifs (inductances, condensateurs), utiliser P = V × I × PF (PF = facteur de puissance). Pour radiateurs, lampes à incandescence et charges résistives, P = V × I est correct."
+            },
+            {
+              "question": "Différence entre volts, ampères et watts ?",
+              "answer": "Volts (V) = tension, ampères (A) = courant, watts (W) = puissance. Relation : Watts = Volts × Ampères."
+            },
+            {
+              "question": "Le calculateur est-il gratuit ?",
+              "answer": "Oui. Le calculateur Volts vers Watts est gratuit. Sans inscription. Saisir tension et courant pour obtenir la puissance en watts."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs associés",
+          "ampsToWatts": "Calculateur Ampères vers Watts",
+          "ampsToWattsDesc": "Convertir ampères en watts avec la tension",
+          "voltsToAmps": "Calculateur Volts vers Ampères",
+          "voltsToAmpsDesc": "Convertir tension en courant (watts ou loi d'Ohm)",
+          "wattsToKva": "Calculateur Watts vers kVA",
+          "wattsToKvaDesc": "Convertir watts en kilovoltampères avec facteur de puissance",
+          "kvaToWatts": "Calculateur kVA vers Watts",
+          "kvaToWattsDesc": "Convertir kilovoltampères en watts avec facteur de puissance"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Calculateur Ampères vers Watt",
       "description": "Convertissez les ampères (A) en watts (W) instantanément et précisément en utilisant la tension",

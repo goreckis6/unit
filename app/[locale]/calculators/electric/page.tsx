@@ -183,6 +183,12 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       path: '/calculators/electric/volts-to-amps',
     },
     {
+      id: 'volts-to-watts',
+      titleKey: 'voltsToWatts.title',
+      descKey: 'voltsToWatts.description',
+      path: '/calculators/electric/volts-to-watts',
+    },
+    {
       id: 'amps-to-watts',
       titleKey: 'ampsToWatts.title',
       descKey: 'ampsToWatts.description',

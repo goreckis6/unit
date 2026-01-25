@@ -1230,6 +1230,66 @@
         }
       }
     },
+    "voltsToWatts": {
+      "title": "Volt til Watt Kalkulator",
+      "description": "Konverter spenning (V) og strøm (A) til effekt i watt (W) øyeblikkelig med P = V × I",
+      "volts": "Spenning (V)",
+      "amps": "Ampere (A)",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "watts": "Watt (W)",
+      "seo": {
+        "title": "Volt til Watt Kalkulator - Konverter Spenning og Strøm til Effekt",
+        "description": "Gratis Volt til Watt kalkulator. Konverter spenning (V) og strøm (A) til watt (W) øyeblikkelig. Formel: P = V × I. For elektriske beregninger, kretsdesign og lasting.",
+        "keywords": "volt watt kalkulator, spenning watt, V W konverter, effektformel, elektrisk kalkulator, P V I, gratis kalkulator",
+        "content": {
+          "heading": "Slik konverterer du volt til watt",
+          "paragraph1": "Å konvertere spenning (V) og strøm (A) til effekt i watt (W) er en grunnleggende elektrisk beregning. Sammhenget er P = V × I (P i watt, V i volt, I i ampere) for likestrøm og resistiv vekselstrøm. Vår gratis Volt-Watt kalkulator gir raske, nøyaktige resultater.",
+          "paragraph2": "Formelen P = V × I er en av de enkleste i elektroteknikk. Spenning driver strømmen; strøm er ladningsflyt. Produktet er effekten i watt. F.eks. 230 V og 10 A → P = 230 × 10 = 2300 W (2,3 kW). Ved AC med reaktive komponenter kan effektfaktor trenges; for resistive laster holder P = V × I.",
+          "paragraph3": "Konverteringen brukes til: effektbehov for apparater, dimensjonering av sikringer og kabler, kretsdesign, lastkrav og analyse av elsystemer. Både hjemme og i industri er konvertering av volt og ampere til watt nødvendig for trygg og effektiv dimensjonering.",
+          "paragraph4": "Kalkulatoren tar spenning og strøm, bruker P = V × I og viser resultatet i watt. Ingen registrering. For elever, elektrikere og ingeniører gir Volt-Watt kalkulatoren pålitelige resultater.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "230 V og 5 A → P = 230 × 5 = 1150 W. 120 V og 10 A → P = 1200 W. 24 V og 2 A → P = 48 W. En 230 V-apparat ved 4,35 A trekker omtrent 1000 W (1 kW)."
+        },
+        "faq": {
+          "heading": "Vanlige spørsmål",
+          "items": [
+            {
+              "question": "Hva er formelen for volt til watt?",
+              "answer": "P = V × I: P i watt, V i volt, I i ampere. Multipliser spenning med strøm for effekten. F.eks. 230 V × 10 A = 2300 W."
+            },
+            {
+              "question": "Trenger jeg både spenning og strøm?",
+              "answer": "Ja. Effekten (watt) avhenger av begge. Du kan ikke få watt fra kun spenning eller kun strøm."
+            },
+            {
+              "question": "Fungerer det for vekselstrøm?",
+              "answer": "Ja, P = V × I gjelder for DC og resistiv AC. For AC med reaktanser (spoler, kondensatorer) bruk P = V × I × PF (PF = effektfaktor). For varmeovner, glødelamper og resistive laster er P = V × I korrekt."
+            },
+            {
+              "question": "Forskjell på volt, ampere og watt?",
+              "answer": "Volt (V) = spenning, ampere (A) = strøm, watt (W) = effekt. Sammheng: Watt = Volt × Ampere."
+            },
+            {
+              "question": "Er kalkulatoren gratis?",
+              "answer": "Ja. Volt-Watt kalkulatoren er gratis. Ingen registrering. Skriv inn spenning og strøm for effekt i watt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte kalkulatorer",
+          "ampsToWatts": "Ampere til Watt Kalkulator",
+          "ampsToWattsDesc": "Konverter ampere til watt med spenning",
+          "voltsToAmps": "Volt til Ampere Kalkulator",
+          "voltsToAmpsDesc": "Konverter spenning til strøm (watt eller Ohms lov)",
+          "wattsToKva": "Watt til kVA Kalkulator",
+          "wattsToKvaDesc": "Konverter watt til kilovoltampere med effektfaktor",
+          "kvaToWatts": "kVA til Watt Kalkulator",
+          "kvaToWattsDesc": "Konverter kilovoltampere til watt med effektfaktor"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampere til Watt Kalkulator",
       "description": "Konverter ampere (A) til watt (W) umiddelbart og nøyaktig ved hjelp av spenning",

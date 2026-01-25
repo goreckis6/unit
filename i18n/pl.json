@@ -1263,6 +1263,66 @@
         }
       }
     },
+    "voltsToWatts": {
+      "title": "Kalkulator Volty na Waty",
+      "description": "Przelicz napięcie (V) i prąd (A) na moc w watach (W) natychmiast, używając P = V × I",
+      "volts": "Napięcie (V)",
+      "amps": "Ampery (A)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "watts": "Waty (W)",
+      "seo": {
+        "title": "Kalkulator Volty na Waty - Konwertuj Napięcie i Prąd na Moc Online",
+        "description": "Darmowy kalkulator Volty na Waty. Konwertuj napięcie (V) i prąd (A) na moc w watach (W) natychmiast. Wzór: P = V × I. Idealny do obliczeń elektrycznych, projektowania obwodów i doboru obciążeń.",
+        "keywords": "volty na waty kalkulator, napięcie na waty, V na W konwerter, kalkulator wzoru mocy, kalkulator elektryczny, kalkulator P V I, darmowy kalkulator",
+        "content": {
+          "heading": "Jak konwertować volty na waty",
+          "paragraph1": "Konwersja napięcia (V) i prądu (A) na moc w watach (W) to podstawowe obliczenie elektryczne. Zależność wyraża wzór mocy: P = V × I, gdzie P to moc w watach, V – napięcie w voltach, I – prąd w amperach. Wzór stosuje się do obwodów DC i rezystancyjnych AC. Nasz darmowy kalkulator Volty na Waty wykonuje tę konwersję szybko i dokładnie.",
+          "paragraph2": "Wzór P = V × I należy do najprostszych w elektrotechnice. Napięcie to różnica potencjałów napędzająca prąd; prąd to przepływ ładunku. Ich iloczyn to moc w watach. Np. 230 V i 10 A dają P = 230 × 10 = 2300 W (2,3 kW). W AC z elementami reakcyjnymi może być potrzebny współczynnik mocy; dla obciążeń rezystancyjnych P = V × I wystarczy.",
+          "paragraph3": "Konwersja służy m.in. do: obliczania poboru mocy urządzeń, doboru wyłączników i przewodów, projektowania obwodów, ustalania wymagań obciążenia oraz analizy systemów elektrycznych. Zarówno w układach domowych, jak i przemysłowych przeliczanie V i A na waty jest niezbędne do bezpiecznego i efektywnego projektowania.",
+          "paragraph4": "Kalkulator przyjmuje napięcie i prąd, stosuje P = V × I i podaje wynik w watach. Bez rejestracji. Dla uczniów, elektryków i inżynierów kalkulator Volty na Waty daje dokładne wyniki.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "230 V i 5 A → P = 230 × 5 = 1150 W. 120 V i 10 A → P = 1200 W. 24 V i 2 A → P = 48 W. Urządzenie 230 V przy 4,35 A pobiera 230 × 4,35 ≈ 1000 W (1 kW)."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {
+              "question": "Jaki jest wzór na przeliczanie voltów na waty?",
+              "answer": "Wzór: P = V × I, gdzie P – moc w watach, V – napięcie w voltach, I – prąd w amperach. Mnożysz napięcie przez prąd. Np. 230 V × 10 A = 2300 W."
+            },
+            {
+              "question": "Czy potrzebuję i napięcia, i prądu?",
+              "answer": "Tak. Moc (waty) zależy od obu. Nie da się wyznaczyć watów tylko z napięcia ani tylko z prądu."
+            },
+            {
+              "question": "Czy to działa dla obwodów AC?",
+              "answer": "Tak, P = V × I stosuje się do DC i rezystancyjnych AC. Dla AC z elementami reakcyjnymi (cewki, kondensatory) użyj P = V × I × PF (PF – współczynnik mocy). Dla grzejników, żarówek i prostych obciążeń rezystancyjnych P = V × I jest poprawne."
+            },
+            {
+              "question": "Jaka jest różnica między voltami, amperami i watami?",
+              "answer": "Volty (V) to napięcie – różnica potencjałów. Ampery (A) to prąd – przepływ ładunku. Waty (W) to moc – tempo zużycia energii. Zachodzi: Waty = Volty × Ampery."
+            },
+            {
+              "question": "Czy kalkulator jest darmowy?",
+              "answer": "Tak. Kalkulator Volty na Waty jest darmowy. Bez rejestracji. Wpisz napięcie i prąd, by od razu otrzymać moc w watach."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "ampsToWatts": "Kalkulator Ampery na Waty",
+          "ampsToWattsDesc": "Przelicz ampery na waty z napięciem",
+          "voltsToAmps": "Kalkulator Volty na Ampery",
+          "voltsToAmpsDesc": "Przelicz napięcie na prąd (waty lub prawo Ohma)",
+          "wattsToKva": "Kalkulator Waty na kVA",
+          "wattsToKvaDesc": "Przelicz waty na kilowolt-ampery z współczynnikiem mocy",
+          "kvaToWatts": "Kalkulator kVA na Waty",
+          "kvaToWattsDesc": "Przelicz kilowolt-ampery na waty z współczynnikiem mocy"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Kalkulator Ampery na Waty",
       "description": "Konwertuj ampery (A) na waty (W) natychmiast i dokładnie używając napięcia",

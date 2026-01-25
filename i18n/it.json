@@ -1230,6 +1230,66 @@
         }
       }
     },
+    "voltsToWatts": {
+      "title": "Calcolatore Volt a Watt",
+      "description": "Converti tensione (V) e corrente (A) in potenza in watt (W) istantaneamente con P = V × I",
+      "volts": "Tensione (V)",
+      "amps": "Ampere (A)",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "watts": "Watt (W)",
+      "seo": {
+        "title": "Calcolatore Volt a Watt - Converti Tensione e Corrente in Potenza",
+        "description": "Calcolatore gratuito Volt a Watt. Converti tensione (V) e corrente (A) in watt (W) all'istante. Formula: P = V × I. Perfetto per calcoli elettrici, progettazione circuiti e dimensionamento carichi.",
+        "keywords": "calcolatore volt watt, tensione watt, convertitore V W, formula potenza, calcolatore elettrico, P V I, calcolatore gratuito",
+        "content": {
+          "heading": "Come convertire i volt in watt",
+          "paragraph1": "Convertire tensione (V) e corrente (A) in potenza in watt (W) è un calcolo elettrico di base. La relazione è P = V × I (P in watt, V in volt, I in ampere), per circuiti DC e AC resistivi. Il nostro calcolatore gratuito Volt a Watt fornisce risultati rapidi e precisi.",
+          "paragraph2": "La formula P = V × I è tra le più semplici in elettrotecnica. La tensione è la differenza di potenziale che muove la corrente; la corrente è il flusso di carica. Il loro prodotto è la potenza in watt. Es.: 230 V e 10 A → P = 230 × 10 = 2300 W (2,3 kW). In AC con componenti reattivi può servire il fattore di potenza; per carichi resistivi basta P = V × I.",
+          "paragraph3": "La conversione si usa per: calcolare l'assorbimento degli apparecchi, dimensionare interruttori e cavi, progettare circuiti, definire i carichi e analizzare i sistemi elettrici. In ambito domestico o industriale, convertire volt e ampere in watt è fondamentale per un progetto sicuro ed efficiente.",
+          "paragraph4": "Il calcolatore accetta tensione e corrente, applica P = V × I e mostra il risultato in watt. Senza registrazione. Per studenti, elettricisti e ingegneri, il calcolatore Volt a Watt offre risultati accurati.",
+          "exampleHeading": "Esempio:",
+          "exampleText": "230 V e 5 A → P = 230 × 5 = 1150 W. 120 V e 10 A → P = 1200 W. 24 V e 2 A → P = 48 W. Un apparecchio 230 V a 4,35 A assorbe circa 1000 W (1 kW)."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {
+              "question": "Qual è la formula per convertire i volt in watt?",
+              "answer": "P = V × I: P in watt, V in volt, I in ampere. Moltiplica tensione per corrente per ottenere la potenza. Es.: 230 V × 10 A = 2300 W."
+            },
+            {
+              "question": "Servono sia tensione che corrente?",
+              "answer": "Sì. La potenza (watt) dipende da entrambe. Non si possono ricavare i watt solo da tensione o solo da corrente."
+            },
+            {
+              "question": "Va bene per la corrente alternata?",
+              "answer": "Sì, P = V × I vale per DC e circuiti AC resistivi. Per AC con reattanze (induttori, condensatori) usare P = V × I × PF (PF = fattore di potenza). Per riscaldatori, lampade a incandescenza e carichi resistivi, P = V × I è corretto."
+            },
+            {
+              "question": "Differenza tra volt, ampere e watt?",
+              "answer": "Volt (V) = tensione, ampere (A) = corrente, watt (W) = potenza. Relazione: Watt = Volt × Ampere."
+            },
+            {
+              "question": "Il calcolatore è gratuito?",
+              "answer": "Sì. Il calcolatore Volt a Watt è gratuito. Senza registrazione. Inserisci tensione e corrente per avere la potenza in watt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori correlati",
+          "ampsToWatts": "Calcolatore Ampere a Watt",
+          "ampsToWattsDesc": "Converti ampere in watt con la tensione",
+          "voltsToAmps": "Calcolatore Volt a Ampere",
+          "voltsToAmpsDesc": "Converti tensione in corrente (watt o legge di Ohm)",
+          "wattsToKva": "Calcolatore Watt a kVA",
+          "wattsToKvaDesc": "Converti watt in kilovoltampere con fattore di potenza",
+          "kvaToWatts": "Calcolatore kVA a Watt",
+          "kvaToWattsDesc": "Converti kilovoltampere in watt con fattore di potenza"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Calcolatrice Ampere a Watt",
       "description": "Converti ampere (A) in watt (W) istantaneamente e accuratamente usando la tensione",

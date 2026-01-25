@@ -1230,6 +1230,66 @@
         }
       }
     },
+    "voltsToWatts": {
+      "title": "Volt Watt Hesaplayıcı",
+      "description": "Gerilimi (V) ve akımı (A) P = V × I ile anında watt (W) cinsinden güce çevirin",
+      "volts": "Gerilim (V)",
+      "amps": "Amper (A)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "watts": "Watt (W)",
+      "seo": {
+        "title": "Volt Watt Hesaplayıcı - Gerilim ve Akımı Güce Çevir",
+        "description": "Ücretsiz Volt Watt hesaplayıcı. Gerilimi (V) ve akımı (A) anında watt (W) cinsine çevirin. Formül: P = V × I. Elektrik hesaplamaları, devre tasarımı ve yük boyutlandırma için.",
+        "keywords": "volt watt hesaplayıcı, gerilim watt, V W dönüştürücü, güç formülü, elektrik hesaplayıcı, P V I, ücretsiz hesaplayıcı",
+        "content": {
+          "heading": "Voltu watta nasıl çevirirsiniz",
+          "paragraph1": "Gerilimi (V) ve akımı (A) watt (W) cinsinden güce çevirmek temel bir elektrik hesabıdır. İlişki P = V × I'dir (P watt, V volt, I amper); DC ve dirençli AC devreler için. Ücretsiz Volt–Watt hesaplayıcımız hızlı ve doğru sonuç verir.",
+          "paragraph2": "P = V × I formülü elektrik mühendisliğinde en basitlerinden biridir. Gerilim akımı sürer; akım yük akışıdır. Çarpımları watt cinsinden güçtür. Örn. 230 V ve 10 A → P = 230 × 10 = 2300 W (2,3 kW). Reaktif elemanlı AC'de güç faktörü gerekebilir; dirençli yüklerde P = V × I yeterlidir.",
+          "paragraph3": "Dönüşüm cihaz güç tüketimi, sigorta ve kablo boyutlandırma, devre tasarımı, yük gereksinimleri ve elektrik sistem analizi için kullanılır. Hem konut hem sanayide volt ve amperi watta çevirmek güvenli ve verimli tasarım için gereklidir.",
+          "paragraph4": "Hesaplayıcı gerilim ve akımı alır, P = V × I uygular ve sonucu watt olarak gösterir. Kayıt yok. Öğrenciler, elektrikçiler ve mühendisler için Volt–Watt hesaplayıcı güvenilir sonuç verir.",
+          "exampleHeading": "Örnek:",
+          "exampleText": "230 V ve 5 A → P = 230 × 5 = 1150 W. 120 V ve 10 A → P = 1200 W. 24 V ve 2 A → P = 48 W. 230 V cihaz 4,35 A'da yaklaşık 1000 W (1 kW) çeker."
+        },
+        "faq": {
+          "heading": "Sık sorulan sorular",
+          "items": [
+            {
+              "question": "Voltu watta çevirme formülü nedir?",
+              "answer": "P = V × I: P watt, V volt, I amper. Güç için gerilimi akımla çarpın. Örn. 230 V × 10 A = 2300 W."
+            },
+            {
+              "question": "Hem gerilim hem akım gerekli mi?",
+              "answer": "Evet. Güç (watt) ikisine de bağlıdır. Sadece gerilimden veya sadece akımdan watt bulunamaz."
+            },
+            {
+              "question": "Alternatif akımda geçerli mi?",
+              "answer": "Evet, P = V × I DC ve dirençli AC devrelerde geçerlidir. Reaktanslı (bobin, kondansatör) AC için P = V × I × GF (GF = güç faktörü) kullanın. Isıtıcı, ampul ve dirençli yüklerde P = V × I doğrudur."
+            },
+            {
+              "question": "Volt, amper ve watt farkı nedir?",
+              "answer": "Volt (V) = gerilim, amper (A) = akım, watt (W) = güç. İlişki: Watt = Volt × Amper."
+            },
+            {
+              "question": "Hesaplayıcı ücretsiz mi?",
+              "answer": "Evet. Volt–Watt hesaplayıcı ücretsizdir. Kayıt yok. Gerilim ve akımı girin, watt cinsinden güç alın."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili hesaplayıcılar",
+          "ampsToWatts": "Amper Watt Hesaplayıcı",
+          "ampsToWattsDesc": "Gerilimle amperi watta çevir",
+          "voltsToAmps": "Volt Amper Hesaplayıcı",
+          "voltsToAmpsDesc": "Gerilimi akıma çevir (watt veya Ohm yasası)",
+          "wattsToKva": "Watt kVA Hesaplayıcı",
+          "wattsToKvaDesc": "Güç faktörüyle wattı kilovolt-ampere çevir",
+          "kvaToWatts": "kVA Watt Hesaplayıcı",
+          "kvaToWattsDesc": "Güç faktörüyle kilovolt-amperi watta çevir"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Amper Watt Hesap Makinesi",
       "description": "Gerilim kullanarak amper (A) değerini watt (W) değerine anında ve doğru bir şekilde dönüştürün",

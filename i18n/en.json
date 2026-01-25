@@ -1338,6 +1338,66 @@
         }
       }
     },
+    "voltsToWatts": {
+      "title": "Volts to Watts Calculator",
+      "description": "Convert voltage (V) and current (A) to power in watts (W) instantly using P = V × I",
+      "volts": "Voltage (V)",
+      "amps": "Amperes (A)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "watts": "Watts (W)",
+      "seo": {
+        "title": "Volts to Watts Calculator - Convert Voltage and Current to Power Online",
+        "description": "Free Volts to Watts calculator. Convert voltage (V) and current (A) to power in watts (W) instantly. Formula: P = V × I. Perfect for electrical calculations, circuit design, and load sizing.",
+        "keywords": "volts to watts calculator, voltage to watts, V to W converter, power formula calculator, electrical calculator, P V I calculator, free calculator",
+        "content": {
+          "heading": "How to Convert Volts to Watts",
+          "paragraph1": "Converting voltage (V) and current (A) to power in watts (W) is a fundamental electrical calculation. The relationship is given by the power formula: P = V × I, where P is power in watts, V is voltage in volts, and I is current in amperes. This formula applies to DC circuits and resistive AC circuits. Our free Volts to Watts calculator makes this conversion quick and easy, providing instant and accurate results.",
+          "paragraph2": "The formula P = V × I is one of the most basic in electrical engineering. Voltage represents the electrical potential difference that drives current through a circuit; current is the flow of electric charge. Multiplying them gives the rate at which energy is consumed or delivered—power in watts. For example, 230 V and 10 A give P = 230 × 10 = 2300 W (2.3 kW). For AC circuits with reactive components, power factor may be needed; for simple resistive loads, P = V × I is sufficient.",
+          "paragraph3": "This conversion is used in many applications: calculating power consumption of devices, sizing circuit breakers and wiring, designing electrical circuits, determining load requirements, and understanding electrical system behavior. Whether you work with residential, commercial, or industrial systems, converting volts and amps to watts is essential for safe and efficient electrical design.",
+          "paragraph4": "Our calculator takes voltage and current as inputs, applies P = V × I, and displays the result in watts. No registration required. Whether you're a student, electrician, or engineer, the Volts to Watts calculator delivers accurate results for your electrical calculations.",
+          "exampleHeading": "Example:",
+          "exampleText": "230 V and 5 A gives P = 230 × 5 = 1150 W. 120 V and 10 A gives P = 1200 W. 24 V and 2 A gives P = 48 W. A 230 V appliance drawing 4.35 A consumes 230 × 4.35 ≈ 1000 W (1 kW)."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert volts to watts?",
+              "answer": "The formula is P = V × I, where P is power in watts, V is voltage in volts, and I is current in amperes. Multiply voltage by current to get power. Example: 230 V × 10 A = 2300 W."
+            },
+            {
+              "question": "Do I need both voltage and current?",
+              "answer": "Yes. Power (watts) depends on both voltage and current. You cannot find watts from voltage alone or current alone; you need both."
+            },
+            {
+              "question": "Does this work for AC circuits?",
+              "answer": "Yes, P = V × I applies to DC circuits and resistive AC circuits. For AC with reactive components (inductors, capacitors), use P = V × I × PF where PF is the power factor. For heaters, incandescent lights, and simple resistive loads, P = V × I is accurate."
+            },
+            {
+              "question": "What is the difference between volts, amps, and watts?",
+              "answer": "Volts (V) measure voltage—electrical potential difference. Amps (A) measure current—flow of electric charge. Watts (W) measure power—rate of energy use. The relationship is Watts = Volts × Amps."
+            },
+            {
+              "question": "Is this calculator free?",
+              "answer": "Yes. The Volts to Watts calculator is free. No registration required. Enter voltage and current to get power in watts instantly."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "ampsToWatts": "Amps to Watts Calculator",
+          "ampsToWattsDesc": "Convert amperes to watts using voltage",
+          "voltsToAmps": "Volts to Amps Calculator",
+          "voltsToAmpsDesc": "Convert voltage to current using watts or Ohm's Law",
+          "wattsToKva": "Watts to kVA Calculator",
+          "wattsToKvaDesc": "Convert watts to kilovolt-amperes with power factor",
+          "kvaToWatts": "kVA to Watts Calculator",
+          "kvaToWattsDesc": "Convert kilovolt-amperes to watts with power factor"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Amps to Watts Calculator",
       "description": "Convert amperes (A) to watts (W) instantly and accurately using voltage",

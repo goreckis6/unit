@@ -1230,6 +1230,66 @@
         }
       }
     },
+    "voltsToWatts": {
+      "title": "Volt til Watt Lommeregner",
+      "description": "Konverter spænding (V) og strøm (A) til effekt i watt (W) øjeblikkeligt med P = V × I",
+      "volts": "Spænding (V)",
+      "amps": "Ampere (A)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "watts": "Watt (W)",
+      "seo": {
+        "title": "Volt til Watt Lommeregner - Konverter Spænding og Strøm til Effekt",
+        "description": "Gratis Volt til Watt lommeregner. Konverter spænding (V) og strøm (A) til watt (W) øjeblikkeligt. Formel: P = V × I. Til elberegninger, kredsløbsdesign og lastdimensionering.",
+        "keywords": "volt watt lommeregner, spænding watt, V W konverter, effektformel, elektrisk lommeregner, P V I, gratis lommeregner",
+        "content": {
+          "heading": "Sådan konverteres volt til watt",
+          "paragraph1": "At konvertere spænding (V) og strøm (A) til effekt i watt (W) er en grundlæggende elberegning. Sammenhængen er P = V × I (P i watt, V i volt, I i ampere) for jævnstrøm og resistiv vekselstrøm. Vores gratis Volt-Watt lommeregner giver hurtige, præcise resultater.",
+          "paragraph2": "Formlen P = V × I er en af de enkleste i elektroteknik. Spænding driver strømmen; strøm er ladningsstrømmen. Produktet er effekten i watt. F.eks. 230 V og 10 A → P = 230 × 10 = 2300 W (2,3 kW). Ved AC med reaktive komponenter kan effektfaktor være nødvendig; for resistive belastninger er P = V × I nok.",
+          "paragraph3": "Konverteringen bruges til: effektbehov for apparater, dimensionering af sikringer og kabler, kredsløbsdesign, lastkrav og analyse af elsystemer. Både hjemme og industri kræver konvertering af volt og ampere til watt for sikker og effektiv dimensionering.",
+          "paragraph4": "Lommeregneren tager spænding og strøm, anvender P = V × I og viser resultatet i watt. Ingen tilmelding. For elever, elektrikere og ingeniører giver Volt-Watt lommeregneren pålidelige resultater.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "230 V og 5 A → P = 230 × 5 = 1150 W. 120 V og 10 A → P = 1200 W. 24 V og 2 A → P = 48 W. Et 230 V-apparat ved 4,35 A trækker omkring 1000 W (1 kW)."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er formlen for volt til watt?",
+              "answer": "P = V × I: P i watt, V i volt, I i ampere. Gang spænding med strøm for effekten. F.eks. 230 V × 10 A = 2300 W."
+            },
+            {
+              "question": "Skal jeg bruge både spænding og strøm?",
+              "answer": "Ja. Effekten (watt) afhænger af begge. Du kan ikke få watt fra kun spænding eller kun strøm."
+            },
+            {
+              "question": "Virker det til vekselstrøm?",
+              "answer": "Ja, P = V × I gælder for DC og resistiv AC. For AC med reaktanser (spoler, kondensatorer) brug P = V × I × PF (PF = effektfaktor). For varmeapparater, glødelamper og resistive belastninger er P = V × I korrekt."
+            },
+            {
+              "question": "Forskel på volt, ampere og watt?",
+              "answer": "Volt (V) = spænding, ampere (A) = strøm, watt (W) = effekt. Sammenhæng: Watt = Volt × Ampere."
+            },
+            {
+              "question": "Er lommeregneren gratis?",
+              "answer": "Ja. Volt-Watt lommeregneren er gratis. Ingen tilmelding. Indtast spænding og strøm for effekt i watt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede lommeregnere",
+          "ampsToWatts": "Ampere til Watt Lommeregner",
+          "ampsToWattsDesc": "Konverter ampere til watt med spænding",
+          "voltsToAmps": "Volt til Ampere Lommeregner",
+          "voltsToAmpsDesc": "Konverter spænding til strøm (watt eller Ohms lov)",
+          "wattsToKva": "Watt til kVA Lommeregner",
+          "wattsToKvaDesc": "Konverter watt til kilovoltampere med effektfaktor",
+          "kvaToWatts": "kVA til Watt Lommeregner",
+          "kvaToWattsDesc": "Konverter kilovoltampere til watt med effektfaktor"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampere til Watt Lommeregner",
       "description": "Konverter ampere (A) til watt (W) øjeblikkeligt og præcist ved hjælp af spænding",

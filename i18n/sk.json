@@ -1285,6 +1285,66 @@
         }
       }
     },
+    "voltsToWatts": {
+      "title": "Kalkulačka Voltov na Watty",
+      "description": "Preveďte napätie (V) a prúd (A) na výkon vo wattoch (W) okamžite pomocou P = V × I",
+      "volts": "Napätie (V)",
+      "amps": "Ampéry (A)",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "watts": "Watty (W)",
+      "seo": {
+        "title": "Kalkulačka Voltov na Watty - Prevod Napätia a Prúdu na Výkon",
+        "description": "Zadarmo kalkulačka Voltov na Watty. Preveďte napätie (V) a prúd (A) na watty (W) okamžite. Vzorec: P = V × I. Pre elektrické výpočty, návrh obvodov a dimenzovanie záťaží.",
+        "keywords": "volty watty kalkulačka, napätie watty, V W prevodník, vzorec výkonu, elektrická kalkulačka, P V I, zadarmo kalkulačka",
+        "content": {
+          "heading": "Ako previesť volty na watty",
+          "paragraph1": "Prevod napätia (V) a prúdu (A) na výkon vo wattoch (W) je základný elektrický výpočet. Vzťah je P = V × I (P vo wattoch, V vo voltoch, I v ampéroch) pre jednosmerné a odporové striedavé obvody. Naša kalkulačka Voltov na Watty poskytuje rýchle a presné výsledky.",
+          "paragraph2": "Vzorec P = V × I patrí k najjednoduchším v elektrotechnike. Napätie je rozdiel potenciálov, ktorý poháňa prúd; prúd je tok náboja. Ich súčin je výkon vo wattoch. Napr. 230 V a 10 A → P = 230 × 10 = 2300 W (2,3 kW). Pri striedavom prúde s reaktívnymi prvkami môže byť potrebný účinník; pri odporových záťažiach stačí P = V × I.",
+          "paragraph3": "Prevod sa používa na: výpočet príkonu spotrebičov, dimenzovanie ističov a káblov, návrh obvodov, stanovenie záťaží a analýzu elektrických systémov. V domácnosti aj priemysle je prevod voltov a ampérov na watty kľúčový pre bezpečné a účinné riešenie.",
+          "paragraph4": "Kalkulačka prijme napätie a prúd, aplikuje P = V × I a zobrazí výsledok vo wattoch. Bez registrácie. Pre žiakov, elektrikárov aj inžinierov poskytuje kalkulačka Voltov na Watty presné výsledky.",
+          "exampleHeading": "Príklad:",
+          "exampleText": "230 V a 5 A → P = 230 × 5 = 1150 W. 120 V a 10 A → P = 1200 W. 24 V a 2 A → P = 48 W. Spotrebič 230 V pri 4,35 A odoberá asi 1000 W (1 kW)."
+        },
+        "faq": {
+          "heading": "Časté otázky",
+          "items": [
+            {
+              "question": "Aký je vzorec pre prevod voltov na watty?",
+              "answer": "P = V × I: P výkon vo wattoch, V napätie vo voltoch, I prúd v ampéroch. Vynásobte napätie prúdom pre výkon. Napr. 230 V × 10 A = 2300 W."
+            },
+            {
+              "question": "Potrebujem napätie aj prúd?",
+              "answer": "Áno. Výkon (watty) závisí od oboch. Watty nemožno určiť len z napätia alebo len z prúdu."
+            },
+            {
+              "question": "Platí to pre striedavý prúd?",
+              "answer": "Áno, P = V × I platí pre DC a odporové AC obvody. Pri AC s reaktancami (cievky, kondenzátory) použite P = V × I × PF (PF = účinník). Pri ohrievačoch, žiarovkách a odporových záťažiach je P = V × I správne."
+            },
+            {
+              "question": "Aký je rozdiel medzi voltmi, ampérmi a wattmi?",
+              "answer": "Volty (V) = napätie, ampéry (A) = prúd, watty (W) = výkon. Vzťah: Watty = Volty × Ampéry."
+            },
+            {
+              "question": "Je kalkulačka zadarmo?",
+              "answer": "Áno. Kalkulačka Voltov na Watty je zadarmo. Bez registrácie. Zadajte napätie a prúd pre okamžitý výkon vo wattoch."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace kalkulačky",
+          "ampsToWatts": "Kalkulačka Ampérov na Watty",
+          "ampsToWattsDesc": "Previesť ampéry na watty s napätím",
+          "voltsToAmps": "Kalkulačka Voltov na Ampéry",
+          "voltsToAmpsDesc": "Previesť napätie na prúd (watty alebo Ohmov zákon)",
+          "wattsToKva": "Kalkulačka Wattov na kVA",
+          "wattsToKvaDesc": "Previesť watty na kilovoltampéry s účinníkom",
+          "kvaToWatts": "Kalkulačka kVA na Watty",
+          "kvaToWattsDesc": "Previesť kilovoltampéry na watty s účinníkom"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Kalkulačka Ampérov na Watty",
       "description": "Preveďte ampéry (A) na watty (W) okamžite a presne pomocou napätia",

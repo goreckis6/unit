@@ -1230,6 +1230,66 @@
         }
       }
     },
+    "voltsToWatts": {
+      "title": "Voltti Watt Laskin",
+      "description": "Muunna jännite (V) ja virta (A) tehoksi watteina (W) välittömästi kaavalla P = V × I",
+      "volts": "Jännite (V)",
+      "amps": "Ampeerit (A)",
+      "calculate": "Laske",
+      "reset": "Tyhjennä",
+      "result": "Tulos",
+      "watts": "Watit (W)",
+      "seo": {
+        "title": "Voltti Watt Laskin - Muunna Jännite ja Virta Tehöksi",
+        "description": "Ilmainen Voltti Watt -laskin. Muunna jännite (V) ja virta (A) watteiksi (W) välittömästi. Kaava: P = V × I. Sähkölaskentaan, piirisuunnitteluun ja kuormituksen mitoitukseen.",
+        "keywords": "voltti watt laskin, jännite watt, V W muunnin, teho kaava, sähkölaskin, P V I, ilmainen laskin",
+        "content": {
+          "heading": "Muunna volttia watteiksi",
+          "paragraph1": "Jännitteen (V) ja virran (A) muuntaminen tehoksi watteina (W) on perussähkötehtävä. Yhtälö on P = V × I (P watteina, V voltteina, I ampeereina) tasavirta- ja resistiivisille vaihtovirtapiireille. Ilmainen Voltti Watt -laskimemme antaa nopeat, tarkat tulokset.",
+          "paragraph2": "Kaava P = V × I on yksi yksinkertaisimmista sähkötekniikassa. Jännite ajaa virran; virta on varausvirta. Niiden tulo on teho watteina. Esim. 230 V ja 10 A → P = 230 × 10 = 2300 W (2,3 kW). Vaihtovirrassa reaktiivisille komponenteille tarvitaan tehokerroin; resistiivisille kuormille P = V × I riittää.",
+          "paragraph3": "Muunnosta käytetään: laitteiden tehon laskemiseen, sulakkeiden ja kaapelien mitoitukseen, piirisuunnitteluun, kuormitusvaatimuksiin ja sähköjärjestelmien analyysiin. Kotona ja teollisuudessa volttien ja ampeerien muuntaminen watteiksi on välttämätöntä turvalliseen ja tehokkaaseen mitoitukseen.",
+          "paragraph4": "Laskin ottaa jännitteen ja virran, soveltaa P = V × I ja näyttää tuloksen watteina. Ei rekisteröintiä. Opiskelijoille, sähköasentajille ja insinööreille Voltti Watt -laskin tarjoaa luotettavat tulokset.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "230 V ja 5 A → P = 230 × 5 = 1150 W. 120 V ja 10 A → P = 1200 W. 24 V ja 2 A → P = 48 W. 230 V laite 4,35 A:lla kuluttaa noin 1000 W (1 kW)."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava volttien muuntamiseksi watteiksi?",
+              "answer": "P = V × I: P watteina, V voltteina, I ampeereina. Kerro jännite virralla tehon saamiseksi. Esim. 230 V × 10 A = 2300 W."
+            },
+            {
+              "question": "Tarvitsenko sekä jännitteen että virran?",
+              "answer": "Kyllä. Teho (watt) riippuu molemmista. Wattia ei voi saada pelkästä jännitteestä tai virrasta."
+            },
+            {
+              "question": "Toimiiko vaihtovirralla?",
+              "answer": "Kyllä, P = V × I pätee tasavirralle ja resistiivisille vaihtovirtapiireille. Vaihtovirrassa reaktansseille (käämit, kondensaattorit) käytä P = V × I × PF (PF = tehokerroin). Lämmittimille, hehkulampuille ja resistiivisille kuormille P = V × I on oikein."
+            },
+            {
+              "question": "Ero voltin, ampeerin ja watin välillä?",
+              "answer": "Voltti (V) = jännite, ampeeri (A) = virta, watti (W) = teho. Yhteys: Watt = Voltti × Ampeeri."
+            },
+            {
+              "question": "Onko laskin ilmainen?",
+              "answer": "Kyllä. Voltti Watt -laskin on ilmainen. Ei rekisteröintiä. Syötä jännite ja virta tehon saamiseksi watteina."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "ampsToWatts": "Ampeeri Watt Laskin",
+          "ampsToWattsDesc": "Muunna ampeerit watteiksi jännitteellä",
+          "voltsToAmps": "Voltti Ampeeri Laskin",
+          "voltsToAmpsDesc": "Muunna jännite virraksi (watti tai Ohmin laki)",
+          "wattsToKva": "Watti kVA Laskin",
+          "wattsToKvaDesc": "Muunna watit kilovoltiampeereiksi tehokertoimella",
+          "kvaToWatts": "kVA Watti Laskin",
+          "kvaToWattsDesc": "Muunna kilovoltiampeerit watteiksi tehokertoimella"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampeeri Watt Laskin",
       "description": "Muunna ampeerit (A) watteiksi (W) välittömästi ja tarkasti käyttämällä jännitettä",

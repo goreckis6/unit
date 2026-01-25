@@ -971,6 +971,50 @@
         }
       }
     },
+    "vaToKva": {
+      "title": "VA转kVA计算器",
+      "description": "将伏安（VA）即时转换为千伏安（kVA）— 简单单位换算",
+      "va": "伏安（VA）",
+      "calculate": "计算",
+      "reset": "重置",
+      "result": "结果",
+      "kva": "千伏安（kVA）",
+      "seo": {
+        "title": "VA转kVA计算器 - 伏安转千伏安在线",
+        "description": "免费VA转kVA计算器。将伏安即时转换为千伏安。均为视在功率；无需功率因数。适合UPS、变压器与电气选型。",
+        "keywords": "va转kva计算器、伏安千伏安转换、va kva换算、视在功率、电气计算器、kva、免费计算器",
+        "content": {
+          "heading": "如何将VA转换为kVA",
+          "paragraph1": "将伏安（VA）转换为千伏安（kVA）是简单的单位换算。VA与kVA均为视在功率。1 kVA = 1000 VA。无需功率因数。本计算器提供即时、准确结果。",
+          "paragraph2": "公式：kVA = VA / 1000。例：5000 VA = 5 kVA，10,000 VA = 10 kVA。视在功率 = 电压×电流。铭牌常标VA或kVA — 换算便于比较与负荷选型。",
+          "paragraph3": "可用于UPS、变压器、发电机选型；VA与kVA值比较；文档统一。15,000 VA UPS = 15 kVA。",
+          "paragraph4": "输入VA；计算器应用kVA = VA / 1000并显示kVA结果。免费，无需注册。",
+          "exampleHeading": "示例：",
+          "exampleText": "5000 VA = 5 kVA。10,000 VA = 10 kVA。2500 VA = 2.5 kVA。20,000 VA = 20 kVA。7500 VA = 7.5 kVA。12,000 VA = 12 kVA — 用于UPS、变压器或负荷。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {"question": "VA转kVA的公式？", "answer": "kVA = VA / 1000。均为视在功率；除以1000即可。无需功率因数。"},
+            {"question": "VA与kVA有何区别？", "answer": "VA与kVA均表示视在功率。1 kVA = 1000 VA。同一物理量不同单位 — 如米与千米。"},
+            {"question": "需要功率因数吗？", "answer": "不需要。仅在做视在功率↔有功（W/kW）换算时需要。VA→kVA只需除以1000。"},
+            {"question": "何时用VA、何时用kVA？", "answer": "较小设备常标VA，大型（UPS、变压器）多标kVA。换算便于比较与叠加容量。"},
+            {"question": "计算器免费吗？", "answer": "是。无需注册。输入VA即可得到kVA结果。"}
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "wattsToKva": "瓦特转kVA计算器",
+          "wattsToKvaDesc": "用功率因数将瓦特转换为千伏安",
+          "kvaToWatts": "kVA转瓦特计算器",
+          "kvaToWattsDesc": "用功率因数将千伏安转换为瓦特",
+          "vaToWatts": "VA转瓦特计算器",
+          "vaToWattsDesc": "用功率因数将伏安转换为瓦特",
+          "kvaToVa": "kVA转VA计算器",
+          "kvaToVaDesc": "将千伏安即时转换为伏安"
+        }
+      }
+    },
     "ampToKva": {
       "title": "安培到kVA计算器",
       "description": "使用电压即时准确地转换安培（A）为千伏安（kVA）",

@@ -1004,6 +1004,50 @@
         }
       }
     },
+    "vaToKva": {
+      "title": "Kalkulator VA na kVA",
+      "description": "Konwertuj woltoampery (VA) na kilowoltoampery (kVA) natychmiast — prosta zamiana jednostek",
+      "va": "Woltoampery (VA)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "kva": "Kilowoltoampery (kVA)",
+      "seo": {
+        "title": "Kalkulator VA na kVA - Przelicz woltoampery na kilowoltoampery online",
+        "description": "Darmowy kalkulator VA na kVA. Przelicz woltoampery na kilowoltoampery natychmiast. Obie to moc pozorna; współczynnik mocy nie jest potrzebny. Idealny do UPS, transformatorów i doboru elektrycznego.",
+        "keywords": "kalkulator va kva, woltoampery kilowoltoampery konwerter, przelicznik va kva, moc pozorna, kalkulator elektryczny, kva, darmowy kalkulator",
+        "content": {
+          "heading": "Jak przeliczyć VA na kVA",
+          "paragraph1": "Przeliczanie woltoamperów (VA) na kilowoltoampery (kVA) to prosta zamiana jednostek. VA i kVA to moc pozorna — całkowita moc w obwodzie AC. Różnica tylko w skali: 1 kVA = 1000 VA. Współczynnik mocy nie jest potrzebny. Nasz kalkulator daje natychmiastowe, dokładne wyniki.",
+          "paragraph2": "Wzór: kVA = VA / 1000. Np. 5000 VA = 5 kVA, 10 000 VA = 10 kVA. Moc pozorna (VA lub kVA) to iloczyn napięcia i prądu. Tabliczki znamionowe często podają VA lub kVA — przeliczanie jest niezbędne do porównań i doboru obciążeń.",
+          "paragraph3": "Stosuje się przy doborze UPS, transformatorów i generatorów; porównywaniu danych z tabliczek w VA i kVA; ujednolicaniu dokumentacji i schematów. Np. UPS 15 000 VA = 15 kVA.",
+          "paragraph4": "Wprowadź VA; kalkulator stosuje kVA = VA / 1000 i podaje wynik w kVA. Bez rejestracji i opłat.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "5000 VA = 5 kVA. 10 000 VA = 10 kVA. 2500 VA = 2,5 kVA. 20 000 VA = 20 kVA. 7500 VA = 7,5 kVA. Urządzenie 12 000 VA ma moc pozorną 12 kVA — do doboru UPS, transformatorów lub obciążeń."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {"question": "Jaki jest wzór VA na kVA?", "answer": "kVA = VA / 1000. Obie wielkości to moc pozorna; dzielisz przez 1000. Współczynnik mocy nie jest potrzebny."},
+            {"question": "Różnica między VA a kVA?", "answer": "VA i kVA to moc pozorna. 1 kVA = 1000 VA. Ta sama wielkość, inne jednostki — jak metry i kilometry."},
+            {"question": "Czy potrzebny jest współczynnik mocy?", "answer": "Nie. Współczynnik mocy jest potrzebny tylko przy przejściu moc pozorna ↔ moc czynna (W/kW). VA → kVA to tylko ÷ 1000."},
+            {"question": "Kiedy VA, kiedy kVA?", "answer": "Mniejsze urządzenia często w VA, większe (UPS, transformatory) w kVA. Przeliczanie pozwala porównywać i sumować ratingi."},
+            {"question": "Czy kalkulator jest darmowy?", "answer": "Tak. Bez rejestracji. Wprowadź VA, otrzymasz kVA."}
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "wattsToKva": "Kalkulator Watów na kVA",
+          "wattsToKvaDesc": "Przelicz waty na kilowoltoampery ze współczynnikiem mocy",
+          "kvaToWatts": "Kalkulator kVA na Waty",
+          "kvaToWattsDesc": "Przelicz kilowoltoampery na waty ze współczynnikiem mocy",
+          "vaToWatts": "Kalkulator VA na Waty",
+          "vaToWattsDesc": "Przelicz woltoampery na waty ze współczynnikiem mocy",
+          "kvaToVa": "Kalkulator kVA na VA",
+          "kvaToVaDesc": "Przelicz kilowoltoampery na woltoampery natychmiast"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulator Ampery na kVA",
       "description": "Konwertuj ampery (A) na kilowoltampery (kVA) natychmiast i dokładnie używając napięcia",

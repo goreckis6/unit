@@ -1049,6 +1049,65 @@
         }
       }
     },
+    "vaToKva": {
+      "title": "VA to kVA Calculator",
+      "description": "Convert volt-amperes (VA) to kilovolt-amperes (kVA) instantly — simple unit conversion",
+      "va": "Volt-Amperes (VA)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "kva": "Kilovolt-Amperes (kVA)",
+      "seo": {
+        "title": "VA to kVA Calculator - Convert Volt-Amperes to Kilovolt-Amperes Online",
+        "description": "Free VA to kVA conversion calculator. Convert volt-amperes to kilovolt-amperes instantly. Both measure apparent power; no power factor needed. Perfect for UPS, transformers, and electrical sizing.",
+        "keywords": "va to kva calculator, volt-amperes to kilovolt-amperes converter, va kva conversion, apparent power calculator, electrical calculator, kva calculator, free calculator",
+        "content": {
+          "heading": "How to Convert VA to kVA",
+          "paragraph1": "Converting volt-amperes (VA) to kilovolt-amperes (kVA) is a straightforward unit conversion. VA and kVA both measure apparent power — the total power in an AC circuit. The only difference is scale: 1 kVA = 1000 VA. No power factor is required, since we are converting between two units of the same quantity. Our free VA to kVA calculator gives instant, accurate results for sizing UPS systems, transformers, and electrical equipment.",
+          "paragraph2": "The formula is: kVA = VA / 1000. For example, 5000 VA = 5 kVA, 10,000 VA = 10 kVA, and 2500 VA = 2.5 kVA. Apparent power (VA or kVA) is the product of voltage and current; it includes both real power (watts) and reactive power (VAR). Equipment nameplates often list capacity in VA or kVA — converting between them is essential for comparing ratings and ensuring proper load matching.",
+          "paragraph3": "This conversion is used when sizing uninterruptible power supplies (UPS), transformers, and generators; comparing nameplate ratings given in VA vs kVA; simplifying calculations where large apparent-power values are easier to work with in kVA; and ensuring consistency in electrical drawings, specs, and load schedules. For instance, a 15,000 VA UPS is equivalent to 15 kVA; both describe the same apparent power capacity.",
+          "paragraph4": "Our calculator accepts VA as input, applies kVA = VA / 1000, and outputs the result in kilovolt-amperes. Whether you are evaluating UPS capacity, checking transformer ratings, or preparing electrical documentation, the VA to kVA calculator provides fast, reliable conversions with no sign-up or cost.",
+          "exampleHeading": "Example:",
+          "exampleText": "5000 VA = 5 kVA. 10,000 VA = 10 kVA. 2500 VA = 2.5 kVA. 20,000 VA = 20 kVA. 7500 VA = 7.5 kVA. A device rated 12,000 VA has an apparent power of 12 kVA — use this for UPS selection, transformer sizing, or panel load calculations."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert VA to kVA?",
+              "answer": "The formula is kVA = VA / 1000. Since both VA and kVA measure apparent power, you simply divide volt-amperes by 1000 to get kilovolt-amperes. No power factor or other inputs are needed."
+            },
+            {
+              "question": "What is the difference between VA and kVA?",
+              "answer": "VA (volt-amperes) and kVA (kilovolt-amperes) both measure apparent power. The difference is scale: 1 kVA = 1000 VA. It is the same physical quantity, just expressed in different units, like meters vs kilometers."
+            },
+            {
+              "question": "Do I need power factor to convert VA to kVA?",
+              "answer": "No. Power factor is only needed when converting between apparent power (VA/kVA) and real power (watts/kW). Since VA and kVA are the same type of quantity, the conversion is simply divide by 1000."
+            },
+            {
+              "question": "When would I use VA vs kVA?",
+              "answer": "Smaller equipment and circuits are often rated in VA (e.g. hundreds or low thousands). Larger systems — UPS, transformers, generators — are typically rated in kVA. Converting VA to kVA lets you compare or add ratings given in different units."
+            },
+            {
+              "question": "Is this calculator free?",
+              "answer": "Yes. Our VA to kVA calculator is free with no registration. Enter volt-amperes for instant kVA results."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "wattsToKva": "Watts to kVA Calculator",
+          "wattsToKvaDesc": "Convert watts to kilovolt-amperes with power factor",
+          "kvaToWatts": "kVA to Watts Calculator",
+          "kvaToWattsDesc": "Convert kilovolt-amperes to watts using power factor",
+          "vaToWatts": "VA to Watts Calculator",
+          "vaToWattsDesc": "Convert volt-amperes to watts with power factor",
+          "kvaToVa": "kVA to VA Calculator",
+          "kvaToVaDesc": "Convert kilovolt-amperes to volt-amperes instantly"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Amps to kVA Calculator",
       "description": "Convert amperes (A) to kilovolt-amperes (kVA) instantly and accurately using voltage",

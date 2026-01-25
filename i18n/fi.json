@@ -971,6 +971,50 @@
         }
       }
     },
+    "vaToKva": {
+      "title": "VA kVA Laskin",
+      "description": "Muunna voltti-ampeerit (VA) kilovoltti-ampeereiksi (kVA) välittömästi — yksinkertainen yksikkömuunnos",
+      "va": "Voltti-Ampeerit (VA)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "kva": "Kilovoltti-Ampeerit (kVA)",
+      "seo": {
+        "title": "VA kVA Laskin - Muunna voltinampeerit kilovolttiampeereiksi online",
+        "description": "Ilmainen VA kVA laskin. Muunna voltti-ampeerit kilovoltti-ampeereiksi välittömästi. Molemmat näennäisteho; tehokerrointa ei tarvita. Ideaalinen UPS:lle, muuntajille ja sähköiselle mitoitukselle.",
+        "keywords": "va kva laskin, voltti-ampeeri kilovolttiampeeri muunnin, va kva muunnos, näennäisteho, sähkölaskin, kva, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka muuntaa VA kilovolttiampeereiksi",
+          "paragraph1": "Voltti-ampeerien (VA) muuntaminen kilovoltti-ampeereiksi (kVA) on yksinkertainen yksikkömuunnos. VA ja kVA ovat näennäistehoa. 1 kVA = 1000 VA. Tehokerrointa ei tarvita. Laskimemme antaa välittömät, tarkat tulokset.",
+          "paragraph2": "Kaava: kVA = VA / 1000. Esim. 5000 VA = 5 kVA, 10 000 VA = 10 kVA. Näennäisteho = jännite × virta. Typpilaatat usein VA tai kVA — muunnos vertailuun ja kuorman mitoitukseen.",
+          "paragraph3": "Hyödyllinen UPS-, muuntaja- ja generattorimitoitukseen; VA- ja kVA-arvojen vertailuun; yhtenäiseen dokumentaatioon. 15 000 VA UPS = 15 kVA.",
+          "paragraph4": "Syötä VA; laskin käyttää kVA = VA / 1000 ja näyttää tuloksen kVA:nä. Ilmainen, ei rekisteröintiä.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "5000 VA = 5 kVA. 10 000 VA = 10 kVA. 2500 VA = 2,5 kVA. 20 000 VA = 20 kVA. 7500 VA = 7,5 kVA. 12 000 VA = 12 kVA — UPS:lle, muuntajille tai kuormille."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Kaava VA kVA:ksi?", "answer": "kVA = VA / 1000. Molemmat näennäisteho; jaa 1000:lla. Tehokerrointa ei tarvita."},
+            {"question": "Ero VA:n ja kVA:n välillä?", "answer": "VA ja kVA mittaavat näennäistehoa. 1 kVA = 1000 VA. Sama suure, toinen yksikkö — kuten metri ja kilometri."},
+            {"question": "Tarvitaanko tehokerroin?", "answer": "Ei. Vain näennäis- ↔ todellinen teho (W/kW). VA → kVA = jako 1000:lla."},
+            {"question": "Milloin VA, milloin kVA?", "answer": "Pienempi laite usein VA, suuremmat (UPS, muuntajat) kVA. Muunnos vertailuun ja tehojen summaukseen."},
+            {"question": "Onko laskin ilmainen?", "answer": "Kyllä. Ei rekisteröintiä. Syötä VA tuloksiksi kVA:nä."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "wattsToKva": "Watti kVA Laskin",
+          "wattsToKvaDesc": "Muunna watit kilovoltti-ampeereiksi tehokertoimella",
+          "kvaToWatts": "kVA Watti Laskin",
+          "kvaToWattsDesc": "Muunna kilovoltti-ampeerit wateiksi tehokertoimella",
+          "vaToWatts": "VA Watti Laskin",
+          "vaToWattsDesc": "Muunna voltti-ampeerit wateiksi tehokertoimella",
+          "kvaToVa": "kVA VA Laskin",
+          "kvaToVaDesc": "Muunna kilovoltti-ampeerit voltinampeereiksi välittömästi"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampeeri kVA Laskin",
       "description": "Muunna ampeerit (A) kilovoltampeereiksi (kVA) heti ja tarkasti käyttämällä jännitettä",

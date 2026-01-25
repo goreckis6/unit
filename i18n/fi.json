@@ -926,6 +926,51 @@
         }
       }
     },
+    "vaToKw": {
+      "title": "VA kW Laskin",
+      "description": "Muunna voltti-ampeerit (VA) kilowateiksi (kW) välittömästi tehokertoimella",
+      "va": "Voltti-Ampeerit (VA)",
+      "powerFactor": "Tehokerroin (0-1)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "kw": "Kilowatit (kW)",
+      "seo": {
+        "title": "VA kW Laskin - Muunna näennäisteho kilowateiksi",
+        "description": "Ilmainen VA kW laskin. Muunna voltti-ampeerit kilowateiksi tehokertoimella. Täydellinen sähköisille laskelmille, kuorman mitoitukselle ja energiahallinnalle.",
+        "keywords": "va kw laskin, voltti-ampeeri kilowatti muunnin, va kw muunnos, näennäisteho todellinen, sähköinen laskin, tehokerroin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka muuntaa VA kilowateiksi",
+          "paragraph1": "Voltti-ampeerien (VA) muuntaminen kilowateiksi (kW) on peruslaskelma sähkötekniikassa. VA on näennäisteho, kW on todellinen teho. Tehokerroin (PF) tarvitaan. Laskimemme antaa välittömät, tarkat tulokset.",
+          "paragraph2": "Kaava: kW = (VA × PF) / 1000. Esimerkki: 10 000 VA PF 0,8:lla = 8 kW. PF 0,9:llä 10 000 VA antaa 9 kW. Resistiiivisillä kuormilla PF usein ≈ 1,0; moottoreilla tyypillisesti 0,7–0,9.",
+          "paragraph3": "Hyödyllinen UPS-, invertteri- ja generaattorimitoitukseen, todellisen kulutuksen arviointiin VA:sta kW:nä, katkaisijoiden ja kaapelien valintaan, varajärjestelmien suunnitteluun.",
+          "paragraph4": "Syötä VA ja tehokerroin; laskin näyttää todellisen tehon kilowatteina. Olipa kyse UPS:stä, hyötysuhteesta tai säädöksistä — tulokset ovat luotettavia.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "10 000 VA PF 0,8:lla = 8 kW. 20 000 VA PF 0,9:llä = 18 kW. 5000 VA PF 0,85:llä = 4,25 kW. 25 000 VA PF 1,0:lla = 25 kW. 12 000 VA PF 0,9:llä = 10,8 kW — kuorman ja katkaisijoiden mitoitukseen."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Mikä on kaava VA kilowateiksi?", "answer": "kW = (VA × PF) / 1000. PF tarvitaan; vain osa näennäistehosta on todellista. Jaetaan 1000:lla kilowateiksi."},
+            {"question": "Ero VA:n ja kW:n välillä?", "answer": "VA mittaa näennäistehoa (kokonaisteho, mukaan lukien loisteho), kW mittaa todellista tehoa. kW = (VA × PF) / 1000. Ne vastaavat vain, kun PF = 1,0 ja kerroin 1000."},
+            {"question": "Miksi tehokerroin tarvitaan?", "answer": "Näennäisteho sisältää loistehon. Tehokerroin ilmaisee todellisen osuuden. Ilman PF:tä VA:sta ei voi määrittää todellista tehoa."},
+            {"question": "Tyypillisiä tehokertoimia?", "answer": "Resistiiiviset kuormat usein ≈ 1,0. Moottorit ja induktiiviset 0,7–0,9. Epävarmuuden tapauksessa usein 0,8."},
+            {"question": "Onko laskin ilmainen?", "answer": "Kyllä. Ei rekisteröintiä. Syötä VA ja tehokerroin saat tulokset kilowatteina."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "wattsToKva": "Watti kVA Laskin",
+          "wattsToKvaDesc": "Muunna watit kilovoltti-ampeereiksi tehokertoimella",
+          "kvaToKw": "kVA kW Laskin",
+          "kvaToKwDesc": "Muunna kilovoltti-ampeerit kilowateiksi tehokertoimella",
+          "vaToWatts": "VA Watti Laskin",
+          "vaToWattsDesc": "Muunna voltti-ampeerit wateiksi tehokertoimella",
+          "kwToKva": "kW kVA Laskin",
+          "kwToKvaDesc": "Muunna kilowatit kilovoltti-ampeereiksi välittömästi"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampeeri kVA Laskin",
       "description": "Muunna ampeerit (A) kilovoltampeereiksi (kVA) heti ja tarkasti käyttämällä jännitettä",

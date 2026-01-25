@@ -926,6 +926,51 @@
         }
       }
     },
+    "vaToKw": {
+      "title": "Kalkulačka VA na kW",
+      "description": "Převeďte voltampéry (VA) na kilowatty (kW) okamžitě pomocí účiníku",
+      "va": "Voltampéry (VA)",
+      "powerFactor": "Účiník (0-1)",
+      "calculate": "Vypočítat",
+      "reset": "Reset",
+      "result": "Výsledek",
+      "kw": "Kilowatty (kW)",
+      "seo": {
+        "title": "Kalkulačka VA na kW - Převod jalového výkonu na kilowatty online",
+        "description": "Zdarma kalkulačka VA na kW. Převeďte voltampéry na kilowatty pomocí účiníku. Ideální pro elektrické výpočty, dimenzování zátěže a energetický management.",
+        "keywords": "kalkulačka va kw, převodník voltampér kilowatt, převod va kw, jalový činný výkon, elektrická kalkulačka, účiník, zdarma kalkulačka",
+        "content": {
+          "heading": "Jak převést VA na kW",
+          "paragraph1": "Převod voltampérů (VA) na kilowatty (kW) je základní výpočet v elektrotechnice. VA je zdánlivý výkon, kW činný. Je třeba účiník (PF). Naše kalkulačka poskytuje okamžité, přesné výsledky.",
+          "paragraph2": "Vzorec: kW = (VA × PF) / 1000. Příklad: 10 000 VA při PF 0,8 = 8 kW. Při PF 0,9 dává 10 000 VA 9 kW. Odporové zátěže mívají PF ≈ 1,0; motory typicky 0,7–0,9.",
+          "paragraph3": "Užitečné pro dimenzování UPS, měničů a generátorů, odhad skutečné spotřeby z VA v kW, výběr jističů a kabelů, návrh záložních systémů.",
+          "paragraph4": "Zadejte VA a účiník; kalkulačka zobrazí činný výkon v kilowattech. Ať jde o UPS, účinnost či předpisy, výsledky jsou spolehlivé.",
+          "exampleHeading": "Příklad:",
+          "exampleText": "10 000 VA při PF 0,8 = 8 kW. 20 000 VA při PF 0,9 = 18 kW. 5000 VA při PF 0,85 = 4,25 kW. 25 000 VA při PF 1,0 = 25 kW. 12 000 VA při PF 0,9 = 10,8 kW — pro dimenzování zátěže a jističů."
+        },
+        "faq": {
+          "heading": "Časté dotazy",
+          "items": [
+            {"question": "Jaký je vzorec VA na kW?", "answer": "kW = (VA × PF) / 1000. PF nutný; jen část zdánlivého výkonu je činná. Dělíme 1000 pro kilowatty."},
+            {"question": "Rozdíl mezi VA a kW?", "answer": "VA měří zdánlivý výkon (celkový, včetně jalového), kW činný. kW = (VA × PF) / 1000. Shodují se jen při PF = 1,0 a faktoru 1000."},
+            {"question": "Proč je potřebný účiník?", "answer": "Zdánlivý výkon zahrnuje jalový. Účiník udává podíl činného. Bez PF nelze z VA určit činný výkon."},
+            {"question": "Typické účiníky?", "answer": "Odporové zátěže často ≈ 1,0. Motory a indukční 0,7–0,9. Při nejistotě se často používá 0,8."},
+            {"question": "Je kalkulačka zdarma?", "answer": "Ano. Bez registrace. Zadejte VA a účiník pro výsledky v kilowattech."}
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "wattsToKva": "Kalkulačka Wattů na kVA",
+          "wattsToKvaDesc": "Převeďte watty na kilovoltampéry s účiníkem",
+          "kvaToKw": "Kalkulačka kVA na kW",
+          "kvaToKwDesc": "Převeďte kilovoltampéry na kilowatty s účiníkem",
+          "vaToWatts": "Kalkulačka VA na Watty",
+          "vaToWattsDesc": "Převeďte voltampéry na watty s účiníkem",
+          "kwToKva": "Kalkulačka kW na kVA",
+          "kwToKvaDesc": "Převeďte kilowatty na kilovoltampéry okamžitě"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulačka Ampérů na kVA",
       "description": "Převeďte ampéry (A) na kilovoltampéry (kVA) okamžitě a přesně pomocí napětí",

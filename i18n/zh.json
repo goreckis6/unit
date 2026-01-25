@@ -926,6 +926,51 @@
         }
       }
     },
+    "vaToKw": {
+      "title": "VA转千瓦计算器",
+      "description": "使用功率因数将伏安（VA）即时转换为千瓦（kW）",
+      "va": "伏安（VA）",
+      "powerFactor": "功率因数（0-1）",
+      "calculate": "计算",
+      "reset": "重置",
+      "result": "结果",
+      "kw": "千瓦（kW）",
+      "seo": {
+        "title": "VA转千瓦计算器 - 视在功率转千瓦在线",
+        "description": "免费VA转千瓦计算器。用功率因数将伏安转换为千瓦。适合电气计算、负载选型与能源管理。",
+        "keywords": "va转千瓦计算器、伏安千瓦转换、va千瓦换算、视在有功功率、电气计算器、功率因数、免费计算器",
+        "content": {
+          "heading": "如何将VA转换为千瓦",
+          "paragraph1": "将伏安（VA）转换为千瓦（kW）是电气工程中的基本计算。VA表示视在功率，千瓦表示有功功率。需要功率因数（PF）。本计算器提供即时、准确的结果。",
+          "paragraph2": "公式：kW = (VA × PF) / 1000。例：10,000 VA、PF 0.8 = 8 kW。PF 0.9 时 10,000 VA 为 9 kW。阻性负载常为 PF≈1.0；电机通常 0.7–0.9。",
+          "paragraph3": "可用于UPS、逆变器、发电机选型，从VA估算实际功耗（kW），选择断路器与电缆，设计后备系统。",
+          "paragraph4": "输入VA和功率因数，计算器显示有功功率（千瓦）。无论UPS、能效还是规范，结果均可靠。",
+          "exampleHeading": "示例：",
+          "exampleText": "10,000 VA、PF 0.8 = 8 kW。20,000 VA、PF 0.9 = 18 kW。5000 VA、PF 0.85 = 4.25 kW。25,000 VA、PF 1.0 = 25 kW。12,000 VA、PF 0.9 = 10.8 kW — 用于负载与断路器选型。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {"question": "VA转千瓦的公式？", "answer": "kW = (VA × PF) / 1000。视在功率仅部分为有功，故需PF。除以1000得千瓦。"},
+            {"question": "VA与千瓦有何区别？", "answer": "VA度量视在功率（含无功总量），千瓦度量有功功率。kW = (VA × PF) / 1000。仅当PF = 1.0且因子1000时相等。"},
+            {"question": "为什么需要功率因数？", "answer": "视在功率包含无功功率。功率因数表示有功所占比例。无PF无法从VA得到有功功率。"},
+            {"question": "常见负载的典型功率因数？", "answer": "阻性负载常≈1.0。电机、感性负载0.7–0.9。不确定时常用0.8。"},
+            {"question": "计算器免费吗？", "answer": "是。无需注册。输入VA和功率因数即可得到千瓦结果。"}
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "wattsToKva": "瓦特转kVA计算器",
+          "wattsToKvaDesc": "用功率因数将瓦特转换为千伏安",
+          "kvaToKw": "kVA转千瓦计算器",
+          "kvaToKwDesc": "用功率因数将千伏安转换为千瓦",
+          "vaToWatts": "VA转瓦特计算器",
+          "vaToWattsDesc": "用功率因数将伏安转换为瓦特",
+          "kwToKva": "kW转kVA计算器",
+          "kwToKvaDesc": "将千瓦即时转换为千伏安"
+        }
+      }
+    },
     "ampToKva": {
       "title": "安培到kVA计算器",
       "description": "使用电压即时准确地转换安培（A）为千伏安（kVA）",

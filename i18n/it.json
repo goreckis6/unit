@@ -926,6 +926,51 @@
         }
       }
     },
+    "vaToKw": {
+      "title": "Calcolatore VA in kW",
+      "description": "Converti voltampere (VA) in kilowatt (kW) all'istante con il fattore di potenza",
+      "va": "Voltampere (VA)",
+      "powerFactor": "Fattore di potenza (0-1)",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "kw": "Kilowatt (kW)",
+      "seo": {
+        "title": "Calcolatore VA in kW - Converti potenza apparente in kilowatt online",
+        "description": "Calcolatore gratuito VA in kW. Converti voltampere in kilowatt con fattore di potenza. Ideale per calcoli elettrici, dimensionamento carichi e gestione energia.",
+        "keywords": "calcolatore va kw, convertitore voltampere kilowatt, conversione va kw, potenza apparente kilowatt, calcolatore elettrico, fattore potenza, calcolatore gratuito",
+        "content": {
+          "heading": "Come convertire VA in kW",
+          "paragraph1": "Convertire voltampere (VA) in kilowatt (kW) è un calcolo fondamentale in elettrotecnica. VA è potenza apparente, kW potenza attiva. Serve il fattore di potenza (PF). Il nostro calcolatore fornisce risultati immediati e precisi.",
+          "paragraph2": "Formula: kW = (VA × PF) / 1000. Esempio: 10.000 VA con PF 0,8 = 8 kW. Con PF 0,9, 10.000 VA danno 9 kW. Carichi resistivi spesso PF ≈ 1,0; motori tipicamente 0,7–0,9.",
+          "paragraph3": "Utile per dimensionare UPS, inverter e generatori, stimare consumo reale dai VA in kW, scegliere interruttori e cavi, progettare sistemi di backup.",
+          "paragraph4": "Inserisci VA e fattore di potenza; il calcolatore mostra la potenza attiva in kilowatt. Che sia per UPS, efficienza o normativa, i risultati sono affidabili.",
+          "exampleHeading": "Esempio:",
+          "exampleText": "10.000 VA con PF 0,8 = 8 kW. 20.000 VA con PF 0,9 = 18 kW. 5000 VA con PF 0,85 = 4,25 kW. 25.000 VA con PF 1,0 = 25 kW. 12.000 VA con PF 0,9 = 10,8 kW — per dimensionare carichi e interruttori."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {"question": "Qual è la formula VA in kW?", "answer": "kW = (VA × PF) / 1000. PF serve perché solo una parte della potenza apparente è attiva; dividere per 1000 per i kilowatt."},
+            {"question": "Differenza tra VA e kW?", "answer": "VA misura potenza apparente (totale, incl. reattiva), kW potenza attiva. kW = (VA × PF) / 1000. Coincidono solo se PF = 1,0 e fattore 1000."},
+            {"question": "Perché serve il fattore di potenza?", "answer": "La potenza apparente include quella reattiva. Il fattore di potenza indica la parte attiva. Senza PF non si ricava la potenza attiva dai VA."},
+            {"question": "Fattori di potenza tipici?", "answer": "Carichi resistivi spesso ≈ 1,0. Motori e induttivi 0,7–0,9. In dubbio si usa spesso 0,8."},
+            {"question": "Il calcolatore è gratuito?", "answer": "Sì. Nessuna registrazione. Inserisci VA e fattore di potenza per risultati in kilowatt."}
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori correlati",
+          "wattsToKva": "Calcolatore Watt in kVA",
+          "wattsToKvaDesc": "Converti watt in chilovoltampere con fattore di potenza",
+          "kvaToKw": "Calcolatore kVA in kW",
+          "kvaToKwDesc": "Converti chilovoltampere in kilowatt con fattore di potenza",
+          "vaToWatts": "Calcolatore VA in Watt",
+          "vaToWattsDesc": "Converti voltampere in watt con fattore di potenza",
+          "kwToKva": "Calcolatore kW in kVA",
+          "kwToKvaDesc": "Converti kilowatt in chilovoltampere istantaneamente"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calcolatrice Ampere a kVA",
       "description": "Converti ampere (A) in chilovoltampere (kVA) istantaneamente e accuratamente usando tensione",

@@ -926,6 +926,51 @@
         }
       }
     },
+    "vaToKw": {
+      "title": "VA'dan kW Hesaplayıcı",
+      "description": "Güç faktörü ile volt-amperi (VA) anında kilowatt (kW) ye dönüştürün",
+      "va": "Volt-Amper (VA)",
+      "powerFactor": "Güç Faktörü (0-1)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "kw": "Kilowatt (kW)",
+      "seo": {
+        "title": "VA'dan kW Hesaplayıcı - Görünür gücü kilowatta çevrimiçi dönüştürün",
+        "description": "Ücretsiz VA'dan kW dönüştürme hesaplayıcısı. Volt-amperi güç faktörü ile kilowatt'a dönüştürün. Elektrik hesaplamaları, yük boyutlandırma ve enerji yönetimi için uygun.",
+        "keywords": "va kw hesaplayıcı, volt-amper kilowatt dönüştürücü, va kw dönüşümü, görünür aktif güç, elektrik hesaplayıcı, güç faktörü, ücretsiz hesaplayıcı",
+        "content": {
+          "heading": "VA'dan kW'a Nasıl Dönüştürülür",
+          "paragraph1": "Volt-amperi (VA) kilowatt (kW) a dönüştürmek elektrik mühendisliğinde temel bir hesaplamadır. VA görünür güç, kW aktif güçtür. Güç faktörü (GF) gerekir. Hesaplayıcımız anında doğru sonuç verir.",
+          "paragraph2": "Formül: kW = (VA × GF) / 1000. Örnek: 10.000 VA, GF 0,8 = 8 kW. GF 0,9'da 10.000 VA 9 kW verir. Dirençli yüklerde sıklıkla GF ≈ 1,0; motorlarda genelde 0,7–0,9.",
+          "paragraph3": "UPS, evirici, jeneratör boyutlandırma, VA'dan gerçek tüketim (kW) tahmini, devre kesici ve kablo seçimi, yedek sistem tasarımı için faydalı.",
+          "paragraph4": "VA ve güç faktörünü girin; hesaplayıcı kilowatt cinsinden aktif gücü gösterir. UPS, verimlilik veya yönetmelik — sonuçlar güvenilir.",
+          "exampleHeading": "Örnek:",
+          "exampleText": "10.000 VA, GF 0,8 = 8 kW. 20.000 VA, GF 0,9 = 18 kW. 5000 VA, GF 0,85 = 4,25 kW. 25.000 VA, GF 1,0 = 25 kW. 12.000 VA, GF 0,9 = 10,8 kW — yük ve devre kesici boyutlandırma için."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {"question": "VA'dan kW formülü nedir?", "answer": "kW = (VA × GF) / 1000. GF gerekir; görünür gücün yalnızca bir kısmı aktif. Kilowatt için 1000'e bölün."},
+            {"question": "VA ile kW arasındaki fark?", "answer": "VA görünür gücü (reaktif dahil toplam) ölçer, kW aktif gücü ölçer. kW = (VA × GF) / 1000. Yalnızca GF = 1,0 ve 1000 faktörü iken eşitler."},
+            {"question": "Neden güç faktörü gerekli?", "answer": "Görünür güç reaktif gücü içerir. Güç faktörü aktif payı verir. GF olmadan VA'dan aktif güç bulunamaz."},
+            {"question": "Tipik güç faktörleri?", "answer": "Dirençli yükler sıklıkla ≈ 1,0. Motorlar ve endüktif 0,7–0,9. Şüphede genelde 0,8 kullanılır."},
+            {"question": "Hesaplayıcı ücretsiz mi?", "answer": "Evet. Kayıt yok. VA ve güç faktörünü girin, kilowatt cinsinden sonuç alın."}
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "wattsToKva": "Watt'tan kVA Hesaplayıcı",
+          "wattsToKvaDesc": "Güç faktörü ile watt'ı kilovolt-ampere dönüştürün",
+          "kvaToKw": "kVA'dan kW Hesaplayıcı",
+          "kvaToKwDesc": "Güç faktörü ile kilovolt-amperi kilowatt'a dönüştürün",
+          "vaToWatts": "VA'dan Watt Hesaplayıcı",
+          "vaToWattsDesc": "Güç faktörü ile volt-amperi watt'a dönüştürün",
+          "kwToKva": "kW'dan kVA Hesaplayıcı",
+          "kwToKvaDesc": "Kilowatt'ı anında kilovolt-ampere dönüştürün"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Amper'den kVA'ya Hesap Makinesi",
       "description": "Voltaj kullanarak amper (A) değerini kilovolt-amper (kVA) değerine anında ve doğru bir şekilde dönüştürün",

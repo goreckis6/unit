@@ -989,6 +989,66 @@
         }
       }
     },
+    "vaToKw": {
+      "title": "VA to kW Calculator",
+      "description": "Convert volt-amperes (VA) to kilowatts (kW) instantly using power factor for real power",
+      "va": "Volt-Amperes (VA)",
+      "powerFactor": "Power Factor (0-1)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "kw": "Kilowatts (kW)",
+      "seo": {
+        "title": "VA to kW Calculator - Convert Apparent Power to Kilowatts Online",
+        "description": "Free VA to kW conversion calculator. Convert volt-amperes to kilowatts instantly using power factor. Perfect for electrical calculations, load sizing, and energy management.",
+        "keywords": "va to kw calculator, volt-amperes to kilowatts converter, va kw conversion, apparent power to real power calculator, electrical calculator, power factor calculator, free calculator",
+        "content": {
+          "heading": "How to Convert VA to kW",
+          "paragraph1": "Converting volt-amperes (VA) to kilowatts (kW) is a fundamental calculation in electrical engineering and power systems. VA represents apparent power — the total power in an AC circuit — while kW represents real (active) power in kilowatts, the actual work performed. The conversion requires the power factor (PF), the ratio of real power to apparent power. Our free VA to kW calculator provides instant, accurate conversions, making load sizing and energy assessments quick and reliable.",
+          "paragraph2": "The formula is: kW = (VA × PF) / 1000, where kW is real power in kilowatts, VA is apparent power in volt-amperes, and PF is the power factor (0 to 1). For example, 10,000 VA at PF 0.8 gives (10,000 × 0.8) / 1000 = 8 kW. At PF 0.9, the same 10,000 VA yields 9 kW. Power factor reflects how efficiently equipment uses electricity; resistive loads often approach 1.0, while motors and inductive loads typically range from 0.7 to 0.9.",
+          "paragraph3": "This conversion is essential for sizing UPS systems, inverters, and generators, estimating actual power consumption from nameplate VA ratings in kW, calculating real power for billing and efficiency studies, selecting circuit breakers and wiring based on real power, and designing backup power and renewable energy systems. For instance, a 15,000 VA UPS at 0.8 PF delivers up to 12 kW of real power; knowing this helps match loads and avoid overloading.",
+          "paragraph4": "Our calculator accepts VA and power factor as inputs, applies kW = (VA × PF) / 1000, and outputs real power in kilowatts. Whether you are evaluating UPS capacity, comparing equipment efficiency, designing electrical distribution, or ensuring code compliance, the VA to kW calculator delivers accurate, instant results for your electrical engineering needs.",
+          "exampleHeading": "Example:",
+          "exampleText": "10,000 VA at PF 0.8 = (10,000 × 0.8) / 1000 = 8 kW. 20,000 VA at PF 0.9 = 18 kW. 5000 VA at PF 0.85 = 4.25 kW. 25,000 VA at PF 1.0 = 25 kW. If an office device is rated 12,000 VA at 0.9 PF, real power is (12,000 × 0.9) / 1000 = 10.8 kW — use this for load calculations and breaker sizing."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert VA to kW?",
+              "answer": "The formula is kW = (VA × PF) / 1000, where kW is real power in kilowatts, VA is apparent power in volt-amperes, and PF is the power factor (0 to 1). Power factor is required because VA is apparent power; only the fraction given by PF is real power, and we divide by 1000 to get kilowatts."
+            },
+            {
+              "question": "What is the difference between VA and kW?",
+              "answer": "VA (volt-amperes) measures apparent power — total power in an AC circuit, including real and reactive components. kW (kilowatts) measures real (active) power — the power that does actual work. VA = Volts × Amps; kW = (VA × Power Factor) / 1000. They differ unless the power factor is 1.0 and you account for the 1000 factor."
+            },
+            {
+              "question": "Why is power factor needed for VA to kW?",
+              "answer": "Apparent power (VA) includes reactive power that does not perform useful work. The power factor indicates what fraction of VA is real power. Without PF, you cannot determine real power from a VA rating. Typical PF values range from about 0.7 to 1.0 depending on the load."
+            },
+            {
+              "question": "What is a typical power factor for common loads?",
+              "answer": "Resistive loads (heaters, incandescent lighting) often have PF near 1.0. Motors and inductive loads typically range from 0.7 to 0.9. Computers and SMPS often sit around 0.6–0.9. When unsure, 0.8 is a common assumption for mixed loads."
+            },
+            {
+              "question": "Is this calculator free?",
+              "answer": "Yes, our VA to kW calculator is free. No registration or payment required. Enter volt-amperes and power factor for instant, accurate real power results in kilowatts."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "wattsToKva": "Watts to kVA Calculator",
+          "wattsToKvaDesc": "Convert watts to kilovolt-amperes with power factor",
+          "kvaToKw": "kVA to kW Calculator",
+          "kvaToKwDesc": "Convert kilovolt-amperes to kilowatts using power factor",
+          "vaToWatts": "VA to Watts Calculator",
+          "vaToWattsDesc": "Convert volt-amperes to watts with power factor",
+          "kwToKva": "kW to kVA Calculator",
+          "kwToKvaDesc": "Convert kilowatts to kilovolt-amperes instantly"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Amps to kVA Calculator",
       "description": "Convert amperes (A) to kilovolt-amperes (kVA) instantly and accurately using voltage",

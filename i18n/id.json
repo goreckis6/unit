@@ -926,6 +926,51 @@
         }
       }
     },
+    "vaToKw": {
+      "title": "Kalkulator VA ke kW",
+      "description": "Konversi volt-ampere (VA) ke kilowatt (kW) secara instan dengan faktor daya",
+      "va": "Volt-Ampere (VA)",
+      "powerFactor": "Faktor Daya (0-1)",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "kw": "Kilowatt (kW)",
+      "seo": {
+        "title": "Kalkulator VA ke kW - Konversi Daya Semu ke Kilowatt Online",
+        "description": "Kalkulator konversi VA ke kW gratis. Konversi volt-ampere ke kilowatt dengan faktor daya. Cocok untuk perhitungan listrik, ukuran beban, dan manajemen energi.",
+        "keywords": "kalkulator va kw, konverter volt-ampere kilowatt, konversi va kw, daya semu nyata, kalkulator listrik, faktor daya, kalkulator gratis",
+        "content": {
+          "heading": "Cara Mengonversi VA ke kW",
+          "paragraph1": "Mengonversi volt-ampere (VA) ke kilowatt (kW) adalah perhitungan dasar dalam teknik listrik. VA adalah daya semu, kW adalah daya nyata. Faktor daya (FP) diperlukan. Kalkulator kami memberi hasil instan dan akurat.",
+          "paragraph2": "Rumus: kW = (VA × FP) / 1000. Contoh: 10.000 VA pada FP 0,8 = 8 kW. Pada FP 0,9, 10.000 VA memberi 9 kW. Beban resistif sering FP ≈ 1,0; motor biasanya 0,7–0,9.",
+          "paragraph3": "Berguna untuk ukuran UPS, inverter, generator, perkiraan konsumsi nyata dari VA dalam kW, pilihan pemutus dan kabel, desain sistem cadangan.",
+          "paragraph4": "Masukkan VA dan faktor daya; kalkulator menampilkan daya nyata dalam kilowatt. Baik UPS, efisiensi, atau peraturan — hasilnya andal.",
+          "exampleHeading": "Contoh:",
+          "exampleText": "10.000 VA pada FP 0,8 = 8 kW. 20.000 VA pada FP 0,9 = 18 kW. 5000 VA pada FP 0,85 = 4,25 kW. 25.000 VA pada FP 1,0 = 25 kW. 12.000 VA pada FP 0,9 = 10,8 kW — untuk ukuran beban dan pemutus."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {"question": "Apa rumus VA ke kW?", "answer": "kW = (VA × FP) / 1000. FP diperlukan karena hanya sebagian daya semu yang nyata; bagi 1000 untuk kilowatt."},
+            {"question": "Perbedaan VA dan kW?", "answer": "VA mengukur daya semu (total, termasuk reaktif), kW mengukur daya nyata. kW = (VA × FP) / 1000. Hanya sama saat FP = 1,0 dan faktor 1000."},
+            {"question": "Mengapa faktor daya diperlukan?", "answer": "Daya semu mencakup daya reaktif. Faktor daya menunjukkan porsi nyata. Tanpa FP tidak bisa tentukan daya nyata dari VA."},
+            {"question": "Faktor daya khas?", "answer": "Beban resistif sering ≈ 1,0. Motor dan induktif 0,7–0,9. Jika ragu sering dipakai 0,8."},
+            {"question": "Kalkulator gratis?", "answer": "Ya. Tanpa registrasi. Masukkan VA dan faktor daya untuk hasil dalam kilowatt."}
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "wattsToKva": "Kalkulator Watt ke kVA",
+          "wattsToKvaDesc": "Konversi watt ke kilovolt-ampere dengan faktor daya",
+          "kvaToKw": "Kalkulator kVA ke kW",
+          "kvaToKwDesc": "Konversi kilovolt-ampere ke kilowatt dengan faktor daya",
+          "vaToWatts": "Kalkulator VA ke Watt",
+          "vaToWattsDesc": "Konversi volt-ampere ke watt dengan faktor daya",
+          "kwToKva": "Kalkulator kW ke kVA",
+          "kwToKvaDesc": "Konversi kilowatt ke kilovolt-ampere secara instan"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulator Ampere ke kVA",
       "description": "Konversi ampere (A) ke kilovolt-ampere (kVA) secara instan dan akurat menggunakan tegangan",

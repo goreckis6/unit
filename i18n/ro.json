@@ -926,6 +926,51 @@
         }
       }
     },
+    "vaToKw": {
+      "title": "Calculator VA în kW",
+      "description": "Convertiți volt-amperii (VA) în kilowați (kW) instant cu factorul de putere",
+      "va": "Volt-Amperi (VA)",
+      "powerFactor": "Factor de putere (0-1)",
+      "calculate": "Calculați",
+      "reset": "Resetați",
+      "result": "Rezultat",
+      "kw": "Kilowați (kW)",
+      "seo": {
+        "title": "Calculator VA în kW - Convertiți puterea aparentă în kilowați online",
+        "description": "Calculator gratuit VA în kW. Convertiți volt-amperii în kilowați cu factor de putere. Ideal pentru calcule electrice, dimensionare sarcină și management energetic.",
+        "keywords": "calculator va kw, convertor volt-amperi kilowați, conversie va kw, putere aparentă activă, calculator electric, factor putere, calculator gratuit",
+        "content": {
+          "heading": "Cum să convertiți VA în kW",
+          "paragraph1": "Conversia volt-amperilor (VA) în kilowați (kW) este un calcul fundamental în inginerie electrică. VA este puterea aparentă, kW puterea activă. Este necesar factorul de putere (FP). Calculatorul nostru oferă rezultate instantanee și precise.",
+          "paragraph2": "Formula: kW = (VA × FP) / 1000. Exemplu: 10.000 VA la FP 0,8 = 8 kW. La FP 0,9, 10.000 VA dau 9 kW. Sarcinile rezistive au adesea FP ≈ 1,0; motoarele tipic 0,7–0,9.",
+          "paragraph3": "Util pentru dimensionarea UPS, invertorilor și generatoarelor, estimarea consumului real din VA în kW, alegerea întrerupătoarelor și cablurilor, proiectarea sistemelor de rezervă.",
+          "paragraph4": "Introduceți VA și factorul de putere; calculatorul afișează puterea activă în kilowați. Fie UPS, eficiență sau conformitate — rezultatele sunt fiabile.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "10.000 VA la FP 0,8 = 8 kW. 20.000 VA la FP 0,9 = 18 kW. 5000 VA la FP 0,85 = 4,25 kW. 25.000 VA la FP 1,0 = 25 kW. 12.000 VA la FP 0,9 = 10,8 kW — pentru dimensionarea sarcinii și întrerupătoarelor."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            {"question": "Care este formula VA în kW?", "answer": "kW = (VA × FP) / 1000. FP este necesar; doar o parte din puterea aparentă este activă. Împărțiți la 1000 pentru kilowați."},
+            {"question": "Diferența între VA și kW?", "answer": "VA măsoară puterea aparentă (totală, incl. reactivă), kW puterea activă. kW = (VA × FP) / 1000. Coincid doar când FP = 1,0 și factor 1000."},
+            {"question": "De ce e necesar factorul de putere?", "answer": "Puterea aparentă include cea reactivă. Factorul de putere indică ponderea activă. Fără FP nu se poate determina puterea activă din VA."},
+            {"question": "Factori de putere tipici?", "answer": "Sarcini rezistive adesea ≈ 1,0. Motoare și inductive 0,7–0,9. La îndoială se folosește adesea 0,8."},
+            {"question": "Calculatorul e gratuit?", "answer": "Da. Fără înregistrare. Introduceți VA și factorul de putere pentru rezultate în kilowați."}
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare conexe",
+          "wattsToKva": "Calculator Wați în kVA",
+          "wattsToKvaDesc": "Convertiți wații în kilovolt-amperi cu factor de putere",
+          "kvaToKw": "Calculator kVA în kW",
+          "kvaToKwDesc": "Convertiți kilovolt-amperii în kilowați cu factor de putere",
+          "vaToWatts": "Calculator VA în Wați",
+          "vaToWattsDesc": "Convertiți volt-amperii în wați cu factor de putere",
+          "kwToKva": "Calculator kW în kVA",
+          "kwToKvaDesc": "Convertiți kilowații în kilovolt-amperi instant"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculator Amperi la kVA",
       "description": "Convertește amperii (A) în kilovoltamperi (kVA) instant și precis folosind tensiunea",

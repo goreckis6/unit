@@ -22,6 +22,7 @@ export async function GET() {
     '/calculators/electric/mah-to-wh',
     '/calculators/electric/va-to-amps',
     '/calculators/electric/va-to-watts',
+    '/calculators/electric/va-to-kw',
     '/calculators/electric/amp-to-kva',
     '/calculators/electric/amps-to-va',
     '/calculators/electric/amps-to-volt',

@@ -926,6 +926,66 @@
         }
       }
     },
+    "vaToKw": {
+      "title": "VA zu kW Rechner",
+      "description": "Konvertieren Sie Voltampere (VA) mit Leistungsfaktor sofort in Kilowatt (kW)",
+      "va": "Voltampere (VA)",
+      "powerFactor": "Leistungsfaktor (0-1)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "kw": "Kilowatt (kW)",
+      "seo": {
+        "title": "VA zu kW Rechner - Scheinleistung in Kilowatt online umrechnen",
+        "description": "Kostenloser VA zu kW Umrechner. Voltampere mit Leistungsfaktor in Kilowatt umrechnen. Ideal für elektrische Berechnungen, Lastdimensionierung und Energiemanagement.",
+        "keywords": "va zu kw rechner, voltampere kilowatt umrechner, va kw umrechnung, scheinleistung wirkleistung, elektro rechner, leistungsfaktor, kostenloser rechner",
+        "content": {
+          "heading": "VA in kW umrechnen",
+          "paragraph1": "Die Umrechnung von Voltampere (VA) in Kilowatt (kW) ist eine grundlegende Berechnung in der Elektrotechnik. VA ist Scheinleistung, kW ist Wirkleistung. Dafür wird der Leistungsfaktor (PF) benötigt. Unser Rechner liefert sofortige, genaue Ergebnisse.",
+          "paragraph2": "Formel: kW = (VA × PF) / 1000. Beispiel: 10.000 VA bei PF 0,8 = 8 kW. Bei PF 0,9 ergeben 10.000 VA 9 kW. Resistive Lasten haben oft PF ≈ 1,0, Motoren typischerweise 0,7–0,9.",
+          "paragraph3": "Wichtig u. a. für USV-, Wechselrichter- und Generatorauslegung, Abschätzung des realen Verbrauchs aus VA-Nennwerten in kW, Auslegung von Leitungen und Schutzschaltern.",
+          "paragraph4": "Eingaben: VA und Leistungsfaktor. Ausgabe: Wirkleistung in Kilowatt. Ob USV-Auslegung, Effizienzvergleich oder Normenkonformität — der VA-zu-kW-Rechner liefert zuverlässige Ergebnisse.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "10.000 VA bei PF 0,8 = 8 kW. 20.000 VA bei PF 0,9 = 18 kW. 5000 VA bei PF 0,85 = 4,25 kW. 25.000 VA bei PF 1,0 = 25 kW. 12.000 VA bei PF 0,9 = 10,8 kW — für Last- und Schalterdimensionierung."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Wie lautet die Formel für VA zu kW?",
+              "answer": "kW = (VA × PF) / 1000. PF ist nötig, weil nur ein Teil der Scheinleistung Wirkleistung ist; durch 1000 teilen für Kilowatt."
+            },
+            {
+              "question": "Was ist der Unterschied zwischen VA und kW?",
+              "answer": "VA misst Scheinleistung (Gesamtleistung inkl. Blindleistung), kW misst Wirkleistung. kW = (VA × PF) / 1000. Sie stimmen nur bei PF = 1,0 und Faktor 1000 überein."
+            },
+            {
+              "question": "Warum braucht man den Leistungsfaktor?",
+              "answer": "Scheinleistung enthält Blindleistung. Der Leistungsfaktor gibt den Anteil der Wirkleistung an. Ohne PF kann aus einer VA-Angabe keine Wirkleistung bestimmt werden."
+            },
+            {
+              "question": "Typische Leistungsfaktoren?",
+              "answer": "Resistive Lasten oft ≈ 1,0. Motoren/induktive Lasten meist 0,7–0,9. Bei Unklarheit wird oft 0,8 angenommen."
+            },
+            {
+              "question": "Ist der Rechner kostenlos?",
+              "answer": "Ja. Keine Anmeldung nötig. VA und Leistungsfaktor eingeben für sofortige Kilowatt-Ergebnisse."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "wattsToKva": "Watt zu kVA Rechner",
+          "wattsToKvaDesc": "Watt in Kilovoltampere mit Leistungsfaktor umrechnen",
+          "kvaToKw": "kVA zu kW Rechner",
+          "kvaToKwDesc": "Kilovoltampere in Kilowatt mit Leistungsfaktor umrechnen",
+          "vaToWatts": "VA zu Watt Rechner",
+          "vaToWattsDesc": "Voltampere in Watt mit Leistungsfaktor umrechnen",
+          "kwToKva": "kW zu kVA Rechner",
+          "kwToKvaDesc": "Kilowatt sofort in Kilovoltampere umrechnen"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere zu kVA Rechner",
       "description": "Wandeln Sie Ampere (A) in Kilovoltampere (kVA) sofort und genau mit Spannung um",

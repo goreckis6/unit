@@ -929,6 +929,66 @@
         }
       }
     },
+    "vaToWatts": {
+      "title": "VA to Watts Calculator",
+      "description": "Convert volt-amperes (VA) to watts (W) instantly using power factor for real power calculation",
+      "va": "Volt-Amperes (VA)",
+      "powerFactor": "Power Factor (0-1)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "watts": "Watts (W)",
+      "seo": {
+        "title": "VA to Watts Calculator - Convert Apparent Power to Real Power Online",
+        "description": "Free VA to Watts conversion calculator. Convert volt-amperes to watts instantly using power factor. Perfect for electrical calculations, load sizing, and energy management.",
+        "keywords": "va to watts calculator, volt-amperes to watts converter, va watts conversion, apparent power to real power calculator, electrical calculator, power factor calculator, free calculator",
+        "content": {
+          "heading": "How to Convert VA to Watts",
+          "paragraph1": "Converting volt-amperes (VA) to watts (W) is a fundamental calculation in electrical engineering and power systems. VA represents apparent power — the total power in an AC circuit — while watts represent real (active) power, the actual work performed. The conversion requires the power factor (PF), the ratio of real power to apparent power. Our free VA to Watts calculator provides instant, accurate conversions, making load sizing and energy assessments quick and reliable.",
+          "paragraph2": "The formula is: W = VA × PF, where W is real power in watts, VA is apparent power in volt-amperes, and PF is the power factor (0 to 1). For example, 5000 VA at PF 0.8 gives 5000 × 0.8 = 4000 W. At PF 0.9, the same 5000 VA yields 4500 W. Power factor reflects how efficiently equipment uses electricity; resistive loads (heaters, incandescent lamps) often approach 1.0, while motors and inductive loads typically range from 0.7 to 0.9.",
+          "paragraph3": "This conversion is essential for sizing UPS systems, inverters, and generators, estimating actual power consumption from nameplate VA ratings, calculating real power for billing and efficiency studies, selecting circuit breakers and wiring based on real power, and designing backup power and renewable energy systems. For instance, a 3000 VA UPS at 0.8 PF delivers up to 2400 W of real power; knowing this helps match loads and avoid overloading.",
+          "paragraph4": "Our calculator accepts VA and power factor as inputs, applies W = VA × PF, and outputs real power in watts. Whether you are evaluating UPS capacity, comparing equipment efficiency, designing electrical distribution, or ensuring code compliance, the VA to Watts calculator delivers accurate, instant results for your electrical engineering needs.",
+          "exampleHeading": "Example:",
+          "exampleText": "5000 VA at PF 0.8 = 5000 × 0.8 = 4000 W. 10,000 VA at PF 0.9 = 10,000 × 0.9 = 9000 W. 3000 VA at PF 0.85 = 3000 × 0.85 = 2550 W. 8000 VA at PF 1.0 = 8000 W. If an office device is rated 6000 VA at 0.9 PF, real power is 6000 × 0.9 = 5400 W — use this for load calculations and breaker sizing."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert VA to Watts?",
+              "answer": "The formula is W = VA × PF, where W is real power in watts, VA is apparent power in volt-amperes, and PF is the power factor (0 to 1). Power factor is required because VA is apparent power; only the fraction given by PF is real power."
+            },
+            {
+              "question": "What is the difference between VA and Watts?",
+              "answer": "VA (volt-amperes) measures apparent power — total power in an AC circuit, including real and reactive components. Watts measure real (active) power — the power that does actual work. VA = Volts × Amps; Watts = VA × Power Factor. They differ unless the power factor is 1.0."
+            },
+            {
+              "question": "Why is power factor needed for VA to Watts?",
+              "answer": "Apparent power (VA) includes reactive power that does not perform useful work. The power factor indicates what fraction of VA is real power. Without PF, you cannot determine real power from a VA rating. Typical PF values range from about 0.7 to 1.0 depending on the load."
+            },
+            {
+              "question": "What is a typical power factor for common loads?",
+              "answer": "Resistive loads (heaters, incandescent lighting) often have PF near 1.0. Motors and inductive loads typically range from 0.7 to 0.9. Computers and SMPS often sit around 0.6–0.9. When unsure, 0.8 is a common assumption for mixed loads."
+            },
+            {
+              "question": "Is this calculator free?",
+              "answer": "Yes, our VA to Watts calculator is free. No registration or payment required. Enter volt-amperes and power factor for instant, accurate real power results in watts."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "wattsToKva": "Watts to kVA Calculator",
+          "wattsToKvaDesc": "Convert watts to kilovolt-amperes with power factor",
+          "kvaToWatts": "kVA to Watts Calculator",
+          "kvaToWattsDesc": "Convert kilovolt-amperes to watts using power factor",
+          "vaToAmps": "VA to Amps Calculator",
+          "vaToAmpsDesc": "Convert volt-amperes to amperes with voltage",
+          "kwhToWatts": "kWh to Watts Calculator",
+          "kwhToWattsDesc": "Convert kilowatt-hours to watts using time duration"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Amps to kVA Calculator",
       "description": "Convert amperes (A) to kilovolt-amperes (kVA) instantly and accurately using voltage",

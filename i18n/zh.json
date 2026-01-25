@@ -866,6 +866,66 @@
         }
       }
     },
+    "vaToWatts": {
+      "title": "VA转瓦特计算器",
+      "description": "使用功率因数将伏安（VA）即时转换为瓦特（W）",
+      "va": "伏安（VA）",
+      "powerFactor": "功率因数（0-1）",
+      "calculate": "计算",
+      "reset": "重置",
+      "result": "结果",
+      "watts": "瓦特（W）",
+      "seo": {
+        "title": "VA转瓦特计算器 - 视在功率转有功功率在线",
+        "description": "免费VA转瓦特计算器。用功率因数将伏安转换为瓦特。适合电气计算、负载选型与能源管理。",
+        "keywords": "va转瓦特计算器、伏安瓦特转换、va瓦特换算、视在有功功率、电气计算器、功率因数、免费计算器",
+        "content": {
+          "heading": "如何将VA转换为瓦特",
+          "paragraph1": "将伏安（VA）转换为瓦特（W）是电气工程中的基本计算。VA表示视在功率，瓦特表示有功功率。需要功率因数（PF）。本计算器提供即时、准确的结果。",
+          "paragraph2": "公式：W = VA × PF。例：5000 VA、PF 0.8 = 4000 W。PF 0.9 时 5000 VA 为 4500 W。阻性负载常为 PF≈1.0；电机通常 0.7–0.9。",
+          "paragraph3": "可用于UPS、逆变器、发电机选型，从VA估算实际功耗，选择断路器与电缆，设计后备系统。",
+          "paragraph4": "输入VA和功率因数，计算器显示有功功率（瓦特）。无论UPS、能效还是规范，结果均可靠。",
+          "exampleHeading": "示例：",
+          "exampleText": "5000 VA、PF 0.8 = 4000 W。10,000 VA、PF 0.9 = 9000 W。3000 VA、PF 0.85 = 2550 W。8000 VA、PF 1.0 = 8000 W。6000 VA、PF 0.9 = 5400 W — 用于负载与断路器选型。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {
+              "question": "VA转瓦特的公式？",
+              "answer": "W = VA × PF。W：有功功率（瓦特），VA：视在功率（伏安），PF：功率因数（0–1）。视在功率仅部分为有功，故需PF。"
+            },
+            {
+              "question": "VA与瓦特有何区别？",
+              "answer": "VA度量视在功率（含无功总量），瓦特度量有功功率。VA = V × A；瓦特 = VA × PF。仅当PF = 1.0时相等。"
+            },
+            {
+              "question": "为什么需要功率因数？",
+              "answer": "视在功率包含无功功率。功率因数表示有功所占比例。无PF无法从VA得到有功功率。典型PF：0.7–1.0。"
+            },
+            {
+              "question": "常见负载的典型功率因数？",
+              "answer": "阻性负载常≈1.0。电机、感性负载0.7–0.9。电脑、开关电源0.6–0.9。不确定时常用0.8。"
+            },
+            {
+              "question": "计算器免费吗？",
+              "answer": "是。无需注册。输入VA和功率因数即可得到瓦特结果。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "wattsToKva": "瓦特转kVA计算器",
+          "wattsToKvaDesc": "用功率因数将瓦特转换为千伏安",
+          "kvaToWatts": "kVA转瓦特计算器",
+          "kvaToWattsDesc": "用功率因数将千伏安转换为瓦特",
+          "vaToAmps": "VA转安培计算器",
+          "vaToAmpsDesc": "用电压将伏安转换为安培",
+          "kwhToWatts": "kWh转瓦特计算器",
+          "kwhToWattsDesc": "使用时将千瓦时转换为瓦特"
+        }
+      }
+    },
     "ampToKva": {
       "title": "安培到kVA计算器",
       "description": "使用电压即时准确地转换安培（A）为千伏安（kVA）",

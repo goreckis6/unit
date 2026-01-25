@@ -866,6 +866,66 @@
         }
       }
     },
+    "vaToWatts": {
+      "title": "Calculadora VA para Watts",
+      "description": "Converta voltamperes (VA) em watts (W) instantaneamente usando o fator de potência",
+      "va": "Voltamperes (VA)",
+      "powerFactor": "Fator de potência (0-1)",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "watts": "Watts (W)",
+      "seo": {
+        "title": "Calculadora VA para Watts - Converter potência aparente em ativa online",
+        "description": "Calculadora gratuita VA para Watts. Converta voltamperes em watts com fator de potência. Ideal para cálculos elétricos, dimensionamento de cargas e gestão de energia.",
+        "keywords": "calculadora va watts, conversor voltamperes watts, conversão va watts, potência aparente ativa, calculadora elétrica, fator potência, calculadora grátis",
+        "content": {
+          "heading": "Como converter VA em Watts",
+          "paragraph1": "Converter voltamperes (VA) em watts (W) é um cálculo fundamental em engenharia elétrica. VA é potência aparente, W é potência ativa. É necessário o fator de potência (FP). Nossa calculadora fornece resultados instantâneos e precisos.",
+          "paragraph2": "Fórmula: W = VA × FP. Exemplo: 5000 VA com FP 0,8 = 4000 W. Com FP 0,9, 5000 VA dão 4500 W. Cargas resistivas costumam ter FP ≈ 1,0; motores tipicamente 0,7–0,9.",
+          "paragraph3": "Útil para dimensionar no-breaks, inversores e geradores, estimar consumo real a partir dos VA, escolher disjuntores e cabos, projetar sistemas de backup.",
+          "paragraph4": "Informe VA e fator de potência; a calculadora exibe a potência ativa em watts. Seja para no-break, eficiência ou conformidade, os resultados são confiáveis.",
+          "exampleHeading": "Exemplo:",
+          "exampleText": "5000 VA com FP 0,8 = 4000 W. 10.000 VA com FP 0,9 = 9000 W. 3000 VA com FP 0,85 = 2550 W. 8000 VA com FP 1,0 = 8000 W. 6000 VA com FP 0,9 = 5400 W — para dimensionar cargas e disjuntores."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {
+              "question": "Qual a fórmula VA para Watts?",
+              "answer": "W = VA × FP. W: potência ativa (watts), VA: potência aparente (voltamperes), FP: fator de potência (0–1). O FP é necessário porque só parte da potência aparente é ativa."
+            },
+            {
+              "question": "Diferença entre VA e Watts?",
+              "answer": "VA mede potência aparente (total, incl. reativa), watts mede potência ativa. VA = V × A; Watts = VA × FP. Só coincidem se FP = 1,0."
+            },
+            {
+              "question": "Por que o fator de potência é necessário?",
+              "answer": "A potência aparente inclui a reativa. O fator de potência indica a parte ativa. Sem FP não se obtém a potência ativa a partir dos VA. FP típico: 0,7–1,0."
+            },
+            {
+              "question": "Fatores de potência típicos?",
+              "answer": "Cargas resistivas frequentemente ≈ 1,0. Motores e indutivas 0,7–0,9. PCs e fontes 0,6–0,9. Em dúvida, costuma-se usar 0,8."
+            },
+            {
+              "question": "A calculadora é gratuita?",
+              "answer": "Sim. Sem cadastro. Informe VA e fator de potência para resultados em watts."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "wattsToKva": "Calculadora Watts para kVA",
+          "wattsToKvaDesc": "Converter watts em quilovolt-amperes com fator de potência",
+          "kvaToWatts": "Calculadora kVA para Watts",
+          "kvaToWattsDesc": "Converter quilovolt-amperes em watts com fator de potência",
+          "vaToAmps": "Calculadora VA para Amperes",
+          "vaToAmpsDesc": "Converter voltamperes em amperes com tensão",
+          "kwhToWatts": "Calculadora kWh para Watts",
+          "kwhToWattsDesc": "Converter quilowatt-horas em watts usando duração"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculadora de Amperes para kVA",
       "description": "Converta amperes (A) para quilovoltamperes (kVA) instantaneamente e com precisão usando tensão",

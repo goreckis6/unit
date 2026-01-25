@@ -866,6 +866,66 @@
         }
       }
     },
+    "vaToWatts": {
+      "title": "VA naar Watt Calculator",
+      "description": "Converteer voltampère (VA) direct naar watt (W) met vermogensfactor",
+      "va": "Voltampère (VA)",
+      "powerFactor": "Vermogensfactor (0-1)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "watts": "Watt (W)",
+      "seo": {
+        "title": "VA naar Watt Calculator - Schijnbaar naar actief vermogen omrekenen",
+        "description": "Gratis VA naar Watt calculator. Converteer voltampère naar watt met vermogensfactor. Ideaal voor elektrische berekeningen, belastingsdimensionering en energiemanagement.",
+        "keywords": "va naar watt calculator, voltampère watt omzetter, va watt conversie, schijnbaar actief vermogen, elektrische calculator, vermogensfactor, gratis calculator",
+        "content": {
+          "heading": "VA naar Watt omrekenen",
+          "paragraph1": "Voltampère (VA) naar watt (W) omrekenen is een basisberekening in de elektrotechniek. VA is schijnbaar vermogen, watt is actief vermogen. De vermogensfactor (PF) is nodig. Onze calculator geeft directe, nauwkeurige resultaten.",
+          "paragraph2": "Formule: W = VA × PF. Voorbeeld: 5000 VA bij PF 0,8 = 4000 W. Bij PF 0,9 geven 5000 VA 4500 W. Resistieve belastingen hebben vaak PF ≈ 1,0; motoren typisch 0,7–0,9.",
+          "paragraph3": "Handig voor dimensionering van UPS, omvormers en aggregaten, schatten van werkelijk verbruik uit VA, keuze van automaten en kabels, ontwerp van back-upsystemen.",
+          "paragraph4": "Voer VA en vermogensfactor in; de calculator toont het actief vermogen in watt. Of het nu om UPS, rendement of regelgeving gaat, de resultaten zijn betrouwbaar.",
+          "exampleHeading": "Voorbeeld:",
+          "exampleText": "5000 VA bij PF 0,8 = 4000 W. 10.000 VA bij PF 0,9 = 9000 W. 3000 VA bij PF 0,85 = 2550 W. 8000 VA bij PF 1,0 = 8000 W. 6000 VA bij PF 0,9 = 5400 W — voor belasting- en automaatdimensionering."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            {
+              "question": "Wat is de formule VA naar Watt?",
+              "answer": "W = VA × PF. W: actief vermogen (watt), VA: schijnbaar vermogen (voltampère), PF: vermogensfactor (0–1). De PF is nodig omdat slechts een deel van het schijnbare vermogen actief is."
+            },
+            {
+              "question": "Verschil tussen VA en Watt?",
+              "answer": "VA meet schijnbaar vermogen (totaal, incl. reactief), watt meet actief vermogen. VA = V × A; Watt = VA × PF. Ze komen alleen overeen bij PF = 1,0."
+            },
+            {
+              "question": "Waarom is de vermogensfactor nodig?",
+              "answer": "Schijnbaar vermogen omvat reactief vermogen. De vermogensfactor geeft het actieve deel. Zonder PF kun je uit VA het actief vermogen niet bepalen. Typische PF: 0,7–1,0."
+            },
+            {
+              "question": "Typische vermogensfactoren?",
+              "answer": "Resistieve belastingen vaak ≈ 1,0. Motoren en inductief 0,7–0,9. PC's en voedingen 0,6–0,9. Bij twijfel wordt vaak 0,8 gebruikt."
+            },
+            {
+              "question": "Is de calculator gratis?",
+              "answer": "Ja. Geen registratie. Voer VA en vermogensfactor in voor resultaten in watt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde calculators",
+          "wattsToKva": "Watt naar kVA Calculator",
+          "wattsToKvaDesc": "Watt naar kilovoltampère met vermogensfactor",
+          "kvaToWatts": "kVA naar Watt Calculator",
+          "kvaToWattsDesc": "Kilovoltampère naar watt met vermogensfactor",
+          "vaToAmps": "VA naar Ampère Calculator",
+          "vaToAmpsDesc": "Voltampère naar ampère met spanning",
+          "kwhToWatts": "kWh naar Watt Calculator",
+          "kwhToWattsDesc": "Kilowattuur naar watt met tijdsduur"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere naar kVA Rekenmachine",
       "description": "Converteer ampère (A) naar kilovoltampère (kVA) direct en nauwkeurig met spanning",

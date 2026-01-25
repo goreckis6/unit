@@ -866,6 +866,66 @@
         }
       }
     },
+    "vaToWatts": {
+      "title": "VA til Watt Beregner",
+      "description": "Konverter voltampere (VA) til watt (W) øjeblikkeligt med effektfaktor",
+      "va": "Voltampere (VA)",
+      "powerFactor": "Effektfaktor (0-1)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "watts": "Watt (W)",
+      "seo": {
+        "title": "VA til Watt Beregner - Konverter tilsyneladende til aktiv effekt",
+        "description": "Gratis VA til Watt beregner. Konverter voltampere til watt med effektfaktor. Perfekt til elektriske beregninger, belastningsdimensionering og energistyring.",
+        "keywords": "va til watt beregner, voltampere watt konverter, va watt konvertering, tilsyneladende aktiv effekt, elektrisk beregner, effektfaktor, gratis beregner",
+        "content": {
+          "heading": "Sådan konverteres VA til Watt",
+          "paragraph1": "At konvertere voltampere (VA) til watt (W) er en grundlæggende beregning inden for elektroteknik. VA er tilsyneladende effekt, watt er aktiv effekt. Effektfaktoren (PF) kræves. Vores beregner giver øjeblikkelige, nøjagtige resultater.",
+          "paragraph2": "Formel: W = VA × PF. Eksempel: 5000 VA ved PF 0,8 = 4000 W. Ved PF 0,9 giver 5000 VA 4500 W. Resistive belastninger har ofte PF ≈ 1,0; motorer typisk 0,7–0,9.",
+          "paragraph3": "Nyttig til dimensionering af UPS, omformere og generatorer, estimat af reel forbrug fra VA, valg af afbrydere og kabler, design af reservesystemer.",
+          "paragraph4": "Indtast VA og effektfaktor; beregneren viser aktiv effekt i watt. Uanset UPS, effektivitet eller forskrifter — resultaterne er pålidelige.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "5000 VA ved PF 0,8 = 4000 W. 10.000 VA ved PF 0,9 = 9000 W. 3000 VA ved PF 0,85 = 2550 W. 8000 VA ved PF 1,0 = 8000 W. 6000 VA ved PF 0,9 = 5400 W — til belastnings- og afbryderdimensionering."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er formlen VA til Watt?",
+              "answer": "W = VA × PF. W: aktiv effekt (watt), VA: tilsyneladende effekt (voltampere), PF: effektfaktor (0–1). PF kræves, fordi kun en del af tilsyneladende effekt er aktiv."
+            },
+            {
+              "question": "Forskel mellem VA og Watt?",
+              "answer": "VA måler tilsyneladende effekt (total, inkl. reaktiv), watt måler aktiv effekt. VA = V × A; Watt = VA × PF. De falder sammen kun ved PF = 1,0."
+            },
+            {
+              "question": "Hvorfor kræves effektfaktoren?",
+              "answer": "Tilsyneladende effekt inkluderer reaktiv effekt. Effektfaktoren angiver den aktive andel. Uden PF kan man ikke fra VA bestemme aktiv effekt. Typisk PF: 0,7–1,0."
+            },
+            {
+              "question": "Typiske effektfaktorer?",
+              "answer": "Resistive belastninger ofte ≈ 1,0. Motorer og induktive 0,7–0,9. PC'er og strømforsyninger 0,6–0,9. Ved usikkerhed bruges ofte 0,8."
+            },
+            {
+              "question": "Er beregneren gratis?",
+              "answer": "Ja. Ingen registrering. Indtast VA og effektfaktor for resultater i watt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede beregnere",
+          "wattsToKva": "Watt til kVA Beregner",
+          "wattsToKvaDesc": "Konverter watt til kilovoltampere med effektfaktor",
+          "kvaToWatts": "kVA til Watt Beregner",
+          "kvaToWattsDesc": "Konverter kilovoltampere til watt med effektfaktor",
+          "vaToAmps": "VA til Ampere Beregner",
+          "vaToAmpsDesc": "Konverter voltampere til ampere med spænding",
+          "kwhToWatts": "kWh til Watt Beregner",
+          "kwhToWattsDesc": "Konverter kilowattimer til watt med varighed"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere til kVA Lommeregner",
       "description": "Konverter ampere (A) til kilovoltampere (kVA) med det samme og præcist med spænding",

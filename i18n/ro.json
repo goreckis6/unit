@@ -866,6 +866,66 @@
         }
       }
     },
+    "vaToWatts": {
+      "title": "Calculator VA în Wați",
+      "description": "Convertiți volt-amperii (VA) în wați (W) instant folosind factorul de putere",
+      "va": "Volt-Amperi (VA)",
+      "powerFactor": "Factor de putere (0-1)",
+      "calculate": "Calculați",
+      "reset": "Resetați",
+      "result": "Rezultat",
+      "watts": "Wați (W)",
+      "seo": {
+        "title": "Calculator VA în Wați - Convertiți puterea aparentă în activă online",
+        "description": "Calculator gratuit VA în Wați. Convertiți volt-amperii în wați cu factor de putere. Ideal pentru calcule electrice, dimensionare sarcină și management energetic.",
+        "keywords": "calculator va wați, convertor volt-amperi wați, conversie va wați, putere aparentă activă, calculator electric, factor putere, calculator gratuit",
+        "content": {
+          "heading": "Cum să convertiți VA în Wați",
+          "paragraph1": "Conversia volt-amperilor (VA) în wați (W) este un calcul fundamental în inginerie electrică. VA este puterea aparentă, wații puterea activă. Este necesar factorul de putere (FP). Calculatorul nostru oferă rezultate instantanee și precise.",
+          "paragraph2": "Formula: W = VA × FP. Exemplu: 5000 VA la FP 0,8 = 4000 W. La FP 0,9, 5000 VA dau 4500 W. Sarcinile rezistive au adesea FP ≈ 1,0; motoarele tipic 0,7–0,9.",
+          "paragraph3": "Util pentru dimensionarea UPS, invertorilor și generatoarelor, estimarea consumului real din VA, alegerea întrerupătoarelor și cablurilor, proiectarea sistemelor de rezervă.",
+          "paragraph4": "Introduceți VA și factorul de putere; calculatorul afișează puterea activă în wați. Fie UPS, eficiență sau conformitate — rezultatele sunt fiabile.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "5000 VA la FP 0,8 = 4000 W. 10.000 VA la FP 0,9 = 9000 W. 3000 VA la FP 0,85 = 2550 W. 8000 VA la FP 1,0 = 8000 W. 6000 VA la FP 0,9 = 5400 W — pentru dimensionarea sarcinii și întrerupătoarelor."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            {
+              "question": "Care este formula VA în Wați?",
+              "answer": "W = VA × FP. W: putere activă (wați), VA: putere aparentă (volt-amperi), FP: factor de putere (0–1). FP este necesar deoarece doar o parte din puterea aparentă este activă."
+            },
+            {
+              "question": "Diferența între VA și Wați?",
+              "answer": "VA măsoară puterea aparentă (totală, incl. reactivă), wații puterea activă. VA = V × A; Wați = VA × FP. Coincid doar când FP = 1,0."
+            },
+            {
+              "question": "De ce e necesar factorul de putere?",
+              "answer": "Puterea aparentă include cea reactivă. Factorul de putere indică ponderea activă. Fără FP nu se poate determina puterea activă din VA. FP tipic: 0,7–1,0."
+            },
+            {
+              "question": "Factori de putere tipici?",
+              "answer": "Sarcini rezistive adesea ≈ 1,0. Motoare și inductive 0,7–0,9. PC-uri și surse 0,6–0,9. La îndoială se folosește adesea 0,8."
+            },
+            {
+              "question": "Calculatorul e gratuit?",
+              "answer": "Da. Fără înregistrare. Introduceți VA și factorul de putere pentru rezultate în wați."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare conexe",
+          "wattsToKva": "Calculator Wați în kVA",
+          "wattsToKvaDesc": "Convertiți wații în kilovolt-amperi cu factor de putere",
+          "kvaToWatts": "Calculator kVA în Wați",
+          "kvaToWattsDesc": "Convertiți kilovolt-amperii în wați cu factor de putere",
+          "vaToAmps": "Calculator VA în Amperi",
+          "vaToAmpsDesc": "Convertiți volt-amperii în amperi cu tensiune",
+          "kwhToWatts": "Calculator kWh în Wați",
+          "kwhToWattsDesc": "Convertiți kilowatt-oră în wați folosind durata"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Calculator Amperi la kVA",
       "description": "Convertește amperii (A) în kilovoltamperi (kVA) instant și precis folosind tensiunea",

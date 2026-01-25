@@ -866,6 +866,66 @@
         }
       }
     },
+    "vaToWatts": {
+      "title": "VA till Watt Kalkylator",
+      "description": "Konvertera voltampere (VA) till watt (W) direkt med effektfaktor",
+      "va": "Voltampere (VA)",
+      "powerFactor": "Effektfaktor (0-1)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "watts": "Watt (W)",
+      "seo": {
+        "title": "VA till Watt Kalkylator - Konvertera skenbar effekt till aktiv effekt",
+        "description": "Gratis VA till Watt kalkylator. Konvertera voltampere till watt med effektfaktor. Perfekt för elberäkningar, lastdimensionering och energihantering.",
+        "keywords": "va till watt kalkylator, voltampere watt omvandlare, va watt konvertering, skenbar aktiv effekt, elräknare, effektfaktor, gratis kalkylator",
+        "content": {
+          "heading": "Så konverterar du VA till Watt",
+          "paragraph1": "Att konvertera voltampere (VA) till watt (W) är en grundläggande beräkning inom elteknik. VA är skenbar effekt, watt är aktiv effekt. Effektfaktorn (PF) behövs. Vår kalkylator ger omedelbara, exakta resultat.",
+          "paragraph2": "Formel: W = VA × PF. Exempel: 5000 VA vid PF 0,8 = 4000 W. Vid PF 0,9 ger 5000 VA 4500 W. Resistiva laster har oftast PF ≈ 1,0; motorer typiskt 0,7–0,9.",
+          "paragraph3": "Användbart för dimensionering av nätaggregat, omvandlare och generatorer, uppskattning av verklig förbrukning från VA, val av säkringar och kablar, design av reservsystem.",
+          "paragraph4": "Ange VA och effektfaktor; kalkylatorn visar aktiv effekt i watt. Oavsett UPS, verkningsgrad eller regelverk — resultaten är tillförlitliga.",
+          "exampleHeading": "Exempel:",
+          "exampleText": "5000 VA vid PF 0,8 = 4000 W. 10 000 VA vid PF 0,9 = 9000 W. 3000 VA vid PF 0,85 = 2550 W. 8000 VA vid PF 1,0 = 8000 W. 6000 VA vid PF 0,9 = 5400 W — för last- och säkringsdimensionering."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {
+              "question": "Vad är formeln VA till Watt?",
+              "answer": "W = VA × PF. W: aktiv effekt (watt), VA: skenbar effekt (voltampere), PF: effektfaktor (0–1). PF behövs eftersom bara en del av skenbar effekt är aktiv."
+            },
+            {
+              "question": "Skillnad mellan VA och Watt?",
+              "answer": "VA mäter skenbar effekt (total, inkl. reaktiv), watt mäter aktiv effekt. VA = V × A; Watt = VA × PF. De sammanfaller endast vid PF = 1,0."
+            },
+            {
+              "question": "Varför behövs effektfaktorn?",
+              "answer": "Skenbar effekt inkluderar reaktiv effekt. Effektfaktorn anger den aktiva andelen. Utan PF kan man inte från VA bestämma aktiv effekt. Typiskt PF: 0,7–1,0."
+            },
+            {
+              "question": "Typiska effektfaktorer?",
+              "answer": "Resistiva laster ofta ≈ 1,0. Motorer och induktiva 0,7–0,9. Datorer och nätaggregat 0,6–0,9. Vid osäkerhet används ofta 0,8."
+            },
+            {
+              "question": "Är kalkylatorn gratis?",
+              "answer": "Ja. Ingen registrering. Ange VA och effektfaktor för resultat i watt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "wattsToKva": "Watt till kVA Kalkylator",
+          "wattsToKvaDesc": "Konvertera watt till kilovoltampere med effektfaktor",
+          "kvaToWatts": "kVA till Watt Kalkylator",
+          "kvaToWattsDesc": "Konvertera kilovoltampere till watt med effektfaktor",
+          "vaToAmps": "VA till Ampere Kalkylator",
+          "vaToAmpsDesc": "Konvertera voltampere till ampere med spänning",
+          "kwhToWatts": "kWh till Watt Kalkylator",
+          "kwhToWattsDesc": "Konvertera kilowattimmar till watt med tidslängd"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampere till kVA Kalkylator",
       "description": "Konvertera ampere (A) till kilovoltampere (kVA) omedelbart och exakt med spänning",

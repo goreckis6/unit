@@ -866,6 +866,66 @@
         }
       }
     },
+    "vaToWatts": {
+      "title": "VA Watteihin Laskin",
+      "description": "Muunna voltti-ampeerit (VA) wateiksi (W) välittömästi tehokertoimella",
+      "va": "Voltti-Ampeerit (VA)",
+      "powerFactor": "Tehokerroin (0-1)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "watts": "Watit (W)",
+      "seo": {
+        "title": "VA Watteihin Laskin - Muunna näennäisteho todelliseksi",
+        "description": "Ilmainen VA Watteihin laskin. Muunna voltti-ampeerit wateiksi tehokertoimella. Täydellinen sähköisille laskelmille, kuorman mitoitukselle ja energiahallinnalle.",
+        "keywords": "va watteihin laskin, voltti-ampeerit watti muunnin, va watti muunnos, näennäisteho todellinen, sähköinen laskin, tehokerroin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka muuntaa VA watteiksi",
+          "paragraph1": "Voltti-ampeerien (VA) muuntaminen wateiksi (W) on peruslaskelma sähkötekniikassa. VA on näennäisteho, watti on todellinen teho. Tehokerroin (PF) tarvitaan. Laskimemme antaa välittömät, tarkat tulokset.",
+          "paragraph2": "Kaava: W = VA × PF. Esimerkki: 5000 VA PF 0,8:lla = 4000 W. PF 0,9:llä 5000 VA antaa 4500 W. Resistiiivisillä kuormilla PF usein ≈ 1,0; moottoreilla tyypillisesti 0,7–0,9.",
+          "paragraph3": "Hyödyllinen UPS-, invertteri- ja generaattorimitoitukseen, todellisen kulutuksen arviointiin VA:sta, katkaisijien ja kaapelien valintaan, varajärjestelmien suunnitteluun.",
+          "paragraph4": "Syötä VA ja tehokerroin; laskin näyttää todellisen tehon watteina. Olipa kyse UPS:stä, hyötysuhteesta tai säädöksistä — tulokset ovat luotettavia.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "5000 VA PF 0,8:lla = 4000 W. 10 000 VA PF 0,9:llä = 9000 W. 3000 VA PF 0,85:llä = 2550 W. 8000 VA PF 1,0:lla = 8000 W. 6000 VA PF 0,9:llä = 5400 W — kuorman ja katkaisijoiden mitoitukseen."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava VA watteiksi?",
+              "answer": "W = VA × PF. W: todellinen teho (watti), VA: näennäisteho (voltti-ampeeri), PF: tehokerroin (0–1). PF tarvitaan, koska vain osa näennäistehosta on todellista."
+            },
+            {
+              "question": "Ero VA:n ja watin välillä?",
+              "answer": "VA mittaa näennäistehoa (kokonaisteho, mukaan lukien loisteho), watti mittaa todellista tehoa. VA = V × A; Watti = VA × PF. Ne vastaavat vain, kun PF = 1,0."
+            },
+            {
+              "question": "Miksi tehokerroin tarvitaan?",
+              "answer": "Näennäisteho sisältää loistehon. Tehokerroin ilmaisee todellisen osuuden. Ilman PF:tä VA:sta ei voi määrittää todellista tehoa. Tyypillinen PF: 0,7–1,0."
+            },
+            {
+              "question": "Tyypillisiä tehokertoimia?",
+              "answer": "Resistiiiviset kuormat usein ≈ 1,0. Moottorit ja induktiiviset 0,7–0,9. Tietokoneet ja virtalähteet 0,6–0,9. Epävarmuuden tapauksessa usein 0,8."
+            },
+            {
+              "question": "Onko laskin ilmainen?",
+              "answer": "Kyllä. Ei rekisteröintiä. Syötä VA ja tehokerroin saat tulokset watteina."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "wattsToKva": "Watti kVA Laskin",
+          "wattsToKvaDesc": "Muunna watit kilovoltti-ampeereiksi tehokertoimella",
+          "kvaToWatts": "kVA Watti Laskin",
+          "kvaToWattsDesc": "Muunna kilovoltti-ampeerit wateiksi tehokertoimella",
+          "vaToAmps": "VA Ampeereihin Laskin",
+          "vaToAmpsDesc": "Muunna voltti-ampeerit ampeereiksi jännitteellä",
+          "kwhToWatts": "kWh Watti Laskin",
+          "kwhToWattsDesc": "Muunna kilowattitunnit wateiksi käyttämällä kestoa"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Ampeeri kVA Laskin",
       "description": "Muunna ampeerit (A) kilovoltampeereiksi (kVA) heti ja tarkasti käyttämällä jännitettä",

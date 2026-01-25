@@ -866,6 +866,66 @@
         }
       }
     },
+    "vaToWatts": {
+      "title": "Kalkulator VA ke Watt",
+      "description": "Konversi volt-ampere (VA) ke watt (W) secara instan dengan faktor daya",
+      "va": "Volt-Ampere (VA)",
+      "powerFactor": "Faktor Daya (0-1)",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "watts": "Watt (W)",
+      "seo": {
+        "title": "Kalkulator VA ke Watt - Konversi Daya Semu ke Nyata Online",
+        "description": "Kalkulator konversi VA ke Watt gratis. Konversi volt-ampere ke watt dengan faktor daya. Cocok untuk perhitungan listrik, ukuran beban, dan manajemen energi.",
+        "keywords": "kalkulator va watt, konverter volt-ampere watt, konversi va watt, daya semu nyata, kalkulator listrik, faktor daya, kalkulator gratis",
+        "content": {
+          "heading": "Cara Mengonversi VA ke Watt",
+          "paragraph1": "Mengonversi volt-ampere (VA) ke watt (W) adalah perhitungan dasar dalam teknik listrik. VA adalah daya semu, watt adalah daya nyata. Faktor daya (FP) diperlukan. Kalkulator kami memberi hasil instan dan akurat.",
+          "paragraph2": "Rumus: W = VA × FP. Contoh: 5000 VA pada FP 0,8 = 4000 W. Pada FP 0,9, 5000 VA memberi 4500 W. Beban resistif sering FP ≈ 1,0; motor biasanya 0,7–0,9.",
+          "paragraph3": "Berguna untuk ukuran UPS, inverter, generator, perkiraan konsumsi nyata dari VA, pilihan pemutus dan kabel, desain sistem cadangan.",
+          "paragraph4": "Masukkan VA dan faktor daya; kalkulator menampilkan daya nyata dalam watt. Baik UPS, efisiensi, atau peraturan — hasilnya andal.",
+          "exampleHeading": "Contoh:",
+          "exampleText": "5000 VA pada FP 0,8 = 4000 W. 10.000 VA pada FP 0,9 = 9000 W. 3000 VA pada FP 0,85 = 2550 W. 8000 VA pada FP 1,0 = 8000 W. 6000 VA pada FP 0,9 = 5400 W — untuk ukuran beban dan pemutus."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa rumus VA ke Watt?",
+              "answer": "W = VA × FP. W: daya nyata (watt), VA: daya semu (volt-ampere), FP: faktor daya (0–1). FP diperlukan karena hanya sebagian daya semu yang nyata."
+            },
+            {
+              "question": "Perbedaan VA dan Watt?",
+              "answer": "VA mengukur daya semu (total, termasuk reaktif), watt mengukur daya nyata. VA = V × A; Watt = VA × FP. Hanya sama saat FP = 1,0."
+            },
+            {
+              "question": "Mengapa faktor daya diperlukan?",
+              "answer": "Daya semu mencakup daya reaktif. Faktor daya menunjukkan porsi nyata. Tanpa FP tidak bisa tentukan daya nyata dari VA. FP khas: 0,7–1,0."
+            },
+            {
+              "question": "Faktor daya khas?",
+              "answer": "Beban resistif sering ≈ 1,0. Motor dan induktif 0,7–0,9. PC dan catu daya 0,6–0,9. Jika ragu sering dipakai 0,8."
+            },
+            {
+              "question": "Kalkulator gratis?",
+              "answer": "Ya. Tanpa registrasi. Masukkan VA dan faktor daya untuk hasil dalam watt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "wattsToKva": "Kalkulator Watt ke kVA",
+          "wattsToKvaDesc": "Konversi watt ke kilovolt-ampere dengan faktor daya",
+          "kvaToWatts": "Kalkulator kVA ke Watt",
+          "kvaToWattsDesc": "Konversi kilovolt-ampere ke watt dengan faktor daya",
+          "vaToAmps": "Kalkulator VA ke Ampere",
+          "vaToAmpsDesc": "Konversi volt-ampere ke ampere dengan tegangan",
+          "kwhToWatts": "Kalkulator kWh ke Watt",
+          "kwhToWattsDesc": "Konversi kilowatt-jam ke watt menggunakan durasi"
+        }
+      }
+    },
     "ampToKva": {
       "title": "Kalkulator Ampere ke kVA",
       "description": "Konversi ampere (A) ke kilovolt-ampere (kVA) secara instan dan akurat menggunakan tegangan",

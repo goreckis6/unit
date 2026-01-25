@@ -1181,6 +1181,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Calculadora Voltios a Amperios",
+      "description": "Convierta tensión (V) en corriente (A) con vatios (I = P/V) o ley de Ohm (I = V/R). Elija el modo.",
+      "selectCalculation": "Tipo de cálculo",
+      "withWatts": "Voltios a amperios con vatios",
+      "withOhms": "Voltios a amperios con ohmios",
+      "volts": "Tensión (V)",
+      "watts": "Vatios (W)",
+      "ohms": "Resistencia (Ω)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "amps": "Amperios (A)",
+      "seo": {
+        "title": "Calculadora Voltios a Amperios - Tensión a corriente (vatios u ohmios)",
+        "description": "Calculadora gratuita Voltios a Amperios. Obtenga la corriente desde tensión y potencia (I = P/V) o tensión y resistencia (I = V/R). Dos modos: con vatios, con ohmios. Resultados al instante.",
+        "keywords": "voltios amperios calculadora, tensión corriente, I P V, ley de Ohm, voltio amperio vatio, calculadora eléctrica, gratuita",
+        "content": {
+          "heading": "Cómo convertir voltios a amperios",
+          "paragraph1": "Convertir tensión (V) en corriente (A) es un cálculo eléctrico básico. Dos formas: (1) Voltios a amperios con vatios: si conoce la potencia P (W) y la tensión V, use I = P / V. (2) Con ohmios: si conoce V y la resistencia R (Ω), use I = V / R (ley de Ohm). Nuestra calculadora ofrece ambos modos.",
+          "paragraph2": "Con vatios: I = P / V. Ej. 2300 W a 230 V → I = 10 A. Con ohmios: I = V / R. Ej. 12 V en 24 Ω → I = 0,5 A. La corriente es el flujo de carga; la tensión, la diferencia de potencial. En circuitos resistivos, V = I × R, así que I = V / R.",
+          "paragraph3": "Modo vatios: cuando tiene la potencia de un equipo (p. ej. bombilla 100 W a 230 V) y quiere la corriente. Modo ohmios: tensión en una resistencia y su valor (LED, calefacción, circuitos resistivos). Ambos ayudan a dimensionar fusibles y cables.",
+          "paragraph4": "Elija «Voltios a amperios con vatios» o «con ohmios», introduzca tensión y vatios u ohmios y calcule. Resultado en amperios. Gratis, sin registro.",
+          "exampleHeading": "Ejemplo:",
+          "exampleText": "Con vatios: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Con ohmios: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. Bombilla 60 W a 120 V: I = 0,5 A. Batería 12 V, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            {"question": "¿Fórmula voltios a amperios con vatios?", "answer": "I = P / V. Corriente (A) = potencia (W) / tensión (V). Ej. 2300 W, 230 V → I = 10 A."},
+            {"question": "¿Fórmula voltios a amperios con ohmios?", "answer": "I = V / R (ley de Ohm). Corriente = tensión / resistencia. Ej. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "¿Cuándo vatios, cuándo ohmios?", "answer": "Vatios: cuando conoce la potencia (p. ej. placa) y la tensión. Ohmios: tensión en una resistencia y su valor (resistencias, calefacción, circuitos DC)."},
+            {"question": "¿La ley de Ohm aplica a AC?", "answer": "I = V / R aplica a circuitos AC resistivos en valores eficaces. Para reactancias use impedancia Z: I = V / Z."},
+            {"question": "¿La calculadora es gratuita?", "answer": "Sí. Elija vatios u ohmios, introduzca tensión y vatios/ohmios, obtenga la corriente en amperios."}
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "ampsToVolt": "Calculadora Amperios a Voltios",
+          "ampsToVoltDesc": "Tensión a partir de corriente y resistencia o potencia",
+          "ampsToWatts": "Calculadora Amperios a Vatios",
+          "ampsToWattsDesc": "Convertir amperios a vatios con tensión",
+          "kwToAmps": "Calculadora kW a Amperios",
+          "kwToAmpsDesc": "Convertir kilovatios a amperios con tensión",
+          "vaToAmps": "Calculadora VA a Amperios",
+          "vaToAmpsDesc": "Convertir voltamperios a amperios con tensión"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Calculadora Amperios a Vatios",
       "description": "Convierta amperios (A) a vatios (W) instantáneamente y con precisión usando voltaje",

@@ -1236,6 +1236,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Volt Amper Számológép",
+      "description": "Feszültség (V) árammá (A) wattal (I = P/V) vagy Ohm törvénnyel (I = V/R). Válassza a számítást.",
+      "selectCalculation": "Számítás típusa",
+      "withWatts": "Volt amperre wattal",
+      "withOhms": "Volt amperre ohmmal",
+      "volts": "Feszültség (V)",
+      "watts": "Watt (W)",
+      "ohms": "Ellenállás (Ω)",
+      "calculate": "Számolás",
+      "reset": "Törlés",
+      "result": "Eredmény",
+      "amps": "Amper (A)",
+      "seo": {
+        "title": "Volt Amper Számológép - Feszültség árammá (watt vagy ohm)",
+        "description": "Ingyenes Volt Amper számológép. Áram feszültségből és teljesítményből (I = P/V) vagy feszültségből és ellenállásból (I = V/R). Két mód: wattal, ohmmal. Azonnali eredmények.",
+        "keywords": "volt amper számológép, feszültség áram, I P V, Ohm törvény, volt amp watt, elektromos számológép, ingyenes",
+        "content": {
+          "heading": "Volt árammá alakítása",
+          "paragraph1": "A feszültség (V) árammá (A) alakítása alapvető elektromos számítás. Két módszer: (1) Wattal: ismert P (W) és V esetén I = P / V. (2) Ohmmal: ismert V és R (Ω) esetén I = V / R (Ohm törvény). Számológépünk mindkét módot támogatja.",
+          "paragraph2": "Wattal: I = P / V. Pl. 2300 W, 230 V → I = 10 A. Ohmmal: I = V / R. Pl. 12 V, 24 Ω → I = 0,5 A. Az áram a töltésáramlás; a feszültség a hajtó potenciálkülönbség. Ohmos áramkörökben V = I × R, tehát I = V / R.",
+          "paragraph3": "Watt mód: készülék teljesítménye (pl. 100 W izzó 230 V-n) és áram ismeretében. Ohm mód: feszültség ellenálláson és értéke (LED, fűtés, ohmos terhelések). Mindkettő biztosíték és kábelméretezéshez.",
+          "paragraph4": "Válassza „Volt amperre wattal” vagy „ohmmal”, adja meg a feszültséget és wattot/ohmot, számoljon. Eredmény amperben. Ingyenes, regisztráció nélkül.",
+          "exampleHeading": "Példa:",
+          "exampleText": "Wattal: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Ohmmal: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. 60 W izzó 120 V-n: I = 0,5 A. 12 V elem, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Gyakori kérdések",
+          "items": [
+            {"question": "Volt–amper képlet wattal?", "answer": "I = P / V. Áram (A) = teljesítmény (W) / feszültség (V). Pl. 2300 W, 230 V → I = 10 A."},
+            {"question": "Volt–amper képlet ohmmal?", "answer": "I = V / R (Ohm törvény). Áram = feszültség / ellenállás. Pl. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Mikor watt, mikor ohm?", "answer": "Watt: ismert teljesítmény (pl. típusjelölés) és feszültség. Ohm: feszültség ellenálláson és értéke (ellenállások, fűtés, DC áramkörök)."},
+            {"question": "Ohm törvény AC-re érvényes?", "answer": "I = V / R ohmos AC áramköröknél effektív értékekkel. Reaktanciánál impedancia Z: I = V / Z."},
+            {"question": "A számológép ingyenes?", "answer": "Igen. Válasszon watt vagy ohm módot, adja meg feszültséget és wattot/ohmot, kapja az áramot amperben."}
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó számológépek",
+          "ampsToVolt": "Amper Volt Számológép",
+          "ampsToVoltDesc": "Feszültség áramból és ellenállásból vagy teljesítményből",
+          "ampsToWatts": "Amper Watt Számológép",
+          "ampsToWattsDesc": "Ampert wattra feszültséggel",
+          "kwToAmps": "kW Amper Számológép",
+          "kwToAmpsDesc": "Kilowattot amperre feszültséggel",
+          "vaToAmps": "VA Amper Számológép",
+          "vaToAmpsDesc": "Voltampert amperre feszültséggel"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Amper Watt Számológép",
       "description": "Alakítsa át az ampereket (A) watttá (W) azonnal és pontosan feszültség használatával",

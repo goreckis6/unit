@@ -1274,6 +1274,70 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Volts to Amps Calculator",
+      "description": "Convert voltage (V) to current (A) using watts (I = P/V) or Ohm's Law (I = V/R). Select calculation mode.",
+      "selectCalculation": "Select calculation",
+      "withWatts": "Volts to amps with watts",
+      "withOhms": "Volts to amps with ohms",
+      "volts": "Voltage (V)",
+      "watts": "Watts (W)",
+      "ohms": "Resistance (Ω)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "amps": "Amperes (A)",
+      "seo": {
+        "title": "Volts to Amps Calculator - Convert Voltage to Current (Watts or Ohms)",
+        "description": "Free Volts to Amps calculator. Find current from voltage and power (I = P/V) or voltage and resistance (I = V/R). Two modes: volts to amps with watts, volts to amps with ohms. Instant results for circuits and electrical engineering.",
+        "keywords": "volts to amps calculator, voltage to current calculator, I P V calculator, ohm's law calculator, volts amps watts, electrical calculator, free calculator",
+        "content": {
+          "heading": "How to Convert Volts to Amps",
+          "paragraph1": "Converting voltage (V) to current in amperes (A) is a fundamental electrical calculation. You can do it in two ways: (1) Volts to amps with watts: if you know power P in watts and voltage V, use I = P / V. (2) Volts to amps with ohms: if you know voltage V and resistance R in ohms, use Ohm's Law I = V / R. Both formulas are widely used in circuit design, load sizing, and troubleshooting. Our free Volts to Amps calculator supports both modes — select your calculation, enter the values, and get instant results.",
+          "paragraph2": "With watts: I = P / V. Example: 2300 W at 230 V gives I = 2300 / 230 = 10 A. With ohms: I = V / R (Ohm's Law). Example: 12 V across 24 Ω gives I = 12 / 24 = 0.5 A. Current is the flow of electric charge; voltage is the potential difference that drives it. Resistance opposes current. In resistive DC or AC (magnitude) circuits, these three quantities are related by V = I × R, so I = V / R when you know V and R.",
+          "paragraph3": "Use volts-to-amps with watts when you have a device's power rating (e.g. 100 W bulb at 230 V) and want to know the current draw. Use volts-to-amps with ohms when you know the voltage across a resistor and its resistance, or when designing LED circuits, heating elements, or series/parallel resistive loads. Both methods help size fuses, wires, and power supplies, and are essential for safe electrical design.",
+          "paragraph4": "Our calculator lets you choose \"Volts to amps with watts\" or \"Volts to amps with ohms.\" Enter voltage (and either watts or ohms), then calculate. Results are in amperes (A). No sign-up required. Whether you're a student, technician, or engineer, the Volts to Amps calculator delivers accurate current values for your electrical calculations.",
+          "exampleHeading": "Example:",
+          "exampleText": "With watts: 230 V, 1150 W → I = 1150 / 230 = 5 A. 120 V, 1440 W → I = 12 A. With ohms: 24 V, 48 Ω → I = 24 / 48 = 0.5 A. 230 V, 46 Ω → I = 5 A. A 60 W lamp at 120 V draws 60 / 120 = 0.5 A. A 12 V battery across 6 Ω draws 12 / 6 = 2 A."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula for volts to amps with watts?",
+              "answer": "I = P / V, where I is current in amperes, P is power in watts, and V is voltage in volts. Divide power by voltage to get current. Example: 2300 W at 230 V → I = 10 A."
+            },
+            {
+              "question": "What is the formula for volts to amps with ohms?",
+              "answer": "I = V / R (Ohm's Law). I is current in amperes, V is voltage in volts, R is resistance in ohms. Divide voltage by resistance to get current. Example: 12 V across 24 Ω → I = 0.5 A."
+            },
+            {
+              "question": "When should I use watts vs ohms?",
+              "answer": "Use watts when you know the power (e.g. appliance rating) and voltage. Use ohms when you know the voltage across a resistive load and its resistance, e.g. resistors, heating elements, or simple DC circuits."
+            },
+            {
+              "question": "Does Ohm's Law apply to AC?",
+              "answer": "I = V / R applies to resistive AC circuits when using the magnitudes of voltage, current, and resistance. For reactive components (inductors, capacitors), use impedance Z: I = V / Z."
+            },
+            {
+              "question": "Is this calculator free?",
+              "answer": "Yes. The Volts to Amps calculator is free. No registration required. Choose watts or ohms mode, enter voltage and watts or ohms, and get current in amperes instantly."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "ampsToVolt": "Amps to Volt Calculator",
+          "ampsToVoltDesc": "Calculate voltage from current and resistance or power",
+          "ampsToWatts": "Amps to Watts Calculator",
+          "ampsToWattsDesc": "Convert amperes to watts using voltage",
+          "kwToAmps": "kW to Amps Calculator",
+          "kwToAmpsDesc": "Convert kilowatts to amperes with voltage",
+          "vaToAmps": "VA to Amps Calculator",
+          "vaToAmpsDesc": "Convert volt-amperes to amperes with voltage"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Amps to Watts Calculator",
       "description": "Convert amperes (A) to watts (W) instantly and accurately using voltage",

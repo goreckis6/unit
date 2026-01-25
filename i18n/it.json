@@ -1181,6 +1181,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Calcolatore Volt in Ampere",
+      "description": "Converti tensione (V) in corrente (A) con watt (I = P/V) o legge di Ohm (I = V/R). Scegli il tipo di calcolo.",
+      "selectCalculation": "Tipo di calcolo",
+      "withWatts": "Volt in ampere con watt",
+      "withOhms": "Volt in ampere con ohm",
+      "volts": "Tensione (V)",
+      "watts": "Watt (W)",
+      "ohms": "Resistenza (Ω)",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Calcolatore Volt in Ampere - Tensione in corrente (watt o ohm)",
+        "description": "Calcolatore gratuito Volt in Ampere. Calcola la corrente da tensione e potenza (I = P/V) o tensione e resistenza (I = V/R). Due modalità: con watt, con ohm. Risultati istantanei.",
+        "keywords": "volt ampere calcolatore, tensione corrente, I P V, legge di Ohm, volt amp watt, calcolatore elettrico, gratuito",
+        "content": {
+          "heading": "Come convertire volt in ampere",
+          "paragraph1": "Convertire la tensione (V) in corrente (A) è un calcolo elettrico di base. Due modi: (1) Volt in ampere con watt: se conosci potenza P (W) e tensione V, usa I = P / V. (2) Con ohm: se conosci V e resistenza R (Ω), usa I = V / R (legge di Ohm). Il nostro calcolatore supporta entrambe le modalità.",
+          "paragraph2": "Con watt: I = P / V. Es. 2300 W a 230 V → I = 10 A. Con ohm: I = V / R. Es. 12 V su 24 Ω → I = 0,5 A. La corrente è il flusso di carica; la tensione la differenza di potenziale. Nei circuiti resistivi V = I × R, quindi I = V / R.",
+          "paragraph3": "Modalità watt: quando hai la potenza di un apparecchio (es. lampada 100 W a 230 V) e vuoi la corrente. Modalità ohm: tensione ai capi di una resistenza e il suo valore (LED, riscaldatori, circuiti resistivi). Entrambe aiutano a dimensionare fusibili e cavi.",
+          "paragraph4": "Scegli «Volt in ampere con watt» o «con ohm», inserisci tensione e watt o ohm e calcola. Risultato in ampere. Gratuito, senza registrazione.",
+          "exampleHeading": "Esempio:",
+          "exampleText": "Con watt: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Con ohm: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. Lampada 60 W a 120 V: I = 0,5 A. Batteria 12 V, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {"question": "Formula volt in ampere con watt?", "answer": "I = P / V. Corrente (A) = potenza (W) / tensione (V). Es. 2300 W, 230 V → I = 10 A."},
+            {"question": "Formula volt in ampere con ohm?", "answer": "I = V / R (legge di Ohm). Corrente = tensione / resistenza. Es. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Quando watt, quando ohm?", "answer": "Watt: quando conosci potenza (es. targhetta) e tensione. Ohm: tensione ai capi di una resistenza e suo valore (resistenze, riscaldamento, circuiti DC)."},
+            {"question": "La legge di Ohm vale in AC?", "answer": "I = V / R vale per circuiti AC resistivi in valori efficaci. Per reattanze usare impedenza Z: I = V / Z."},
+            {"question": "Il calcolatore è gratuito?", "answer": "Sì. Scegli watt o ohm, inserisci tensione e watt/ohm, ottieni la corrente in ampere."}
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori correlati",
+          "ampsToVolt": "Calcolatore Ampere in Volt",
+          "ampsToVoltDesc": "Tensione da corrente e resistenza o potenza",
+          "ampsToWatts": "Calcolatore Ampere in Watt",
+          "ampsToWattsDesc": "Converti ampere in watt con tensione",
+          "kwToAmps": "Calcolatore kW in Ampere",
+          "kwToAmpsDesc": "Converti kilowatt in ampere con tensione",
+          "vaToAmps": "Calcolatore VA in Ampere",
+          "vaToAmpsDesc": "Converti voltampere in ampere con tensione"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Calcolatrice Ampere a Watt",
       "description": "Converti ampere (A) in watt (W) istantaneamente e accuratamente usando la tensione",

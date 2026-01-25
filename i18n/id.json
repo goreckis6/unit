@@ -1181,6 +1181,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Kalkulator Volt ke Ampere",
+      "description": "Konversi tegangan (V) ke arus (A) dengan watt (I = P/V) atau hukum Ohm (I = V/R). Pilih perhitungan.",
+      "selectCalculation": "Pilih perhitungan",
+      "withWatts": "Volt ke ampere dengan watt",
+      "withOhms": "Volt ke ampere dengan ohm",
+      "volts": "Tegangan (V)",
+      "watts": "Watt (W)",
+      "ohms": "Resistansi (Ω)",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Kalkulator Volt ke Ampere - Tegangan ke arus (watt atau ohm)",
+        "description": "Kalkulator gratis Volt ke Ampere. Dapatkan arus dari tegangan dan daya (I = P/V) atau tegangan dan resistansi (I = V/R). Dua mode: watt, ohm. Hasil instan.",
+        "keywords": "volt ampere kalkulator, tegangan arus, I P V, hukum Ohm, volt amp watt, kalkulator listrik, gratis",
+        "content": {
+          "heading": "Cara mengonversi volt ke ampere",
+          "paragraph1": "Mengonversi tegangan (V) ke arus (A) adalah perhitungan listrik dasar. Dua cara: (1) Volt ke ampere dengan watt: jika daya P (W) dan tegangan V diketahui, gunakan I = P / V. (2) Dengan ohm: jika V dan resistansi R (Ω) diketahui, gunakan I = V / R (hukum Ohm). Kalkulator kami mendukung kedua mode.",
+          "paragraph2": "Dengan watt: I = P / V. Mis. 2300 W pada 230 V → I = 10 A. Dengan ohm: I = V / R. Mis. 12 V pada 24 Ω → I = 0,5 A. Arus adalah aliran muatan; tegangan beda potensial. Dalam rangkaian resistif V = I × R, jadi I = V / R.",
+          "paragraph3": "Mode watt: ketika daya perangkat (mis. lampu 100 W pada 230 V) diketahui dan arus dibutuhkan. Mode ohm: tegangan pada resistor dan nilainya (LED, pemanas, rangkaian resistif). Keduanya membantu memilih sekring dan kabel.",
+          "paragraph4": "Pilih «Volt ke ampere dengan watt» atau «dengan ohm», masukkan tegangan dan watt atau ohm, hitung. Hasil dalam ampere. Gratis, tanpa registrasi.",
+          "exampleHeading": "Contoh:",
+          "exampleText": "Dengan watt: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Dengan ohm: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. Lampu 60 W pada 120 V: I = 0,5 A. Baterai 12 V, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang sering diajukan",
+          "items": [
+            {"question": "Rumus volt ke ampere dengan watt?", "answer": "I = P / V. Arus (A) = daya (W) / tegangan (V). Mis. 2300 W, 230 V → I = 10 A."},
+            {"question": "Rumus volt ke ampere dengan ohm?", "answer": "I = V / R (hukum Ohm). Arus = tegangan / resistansi. Mis. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Kapan watt, kapan ohm?", "answer": "Watt: ketika daya (mis. nameplate) dan tegangan diketahui. Ohm: tegangan pada resistor dan nilainya (resistor, pemanas, rangkaian DC)."},
+            {"question": "Apakah hukum Ohm berlaku untuk AC?", "answer": "I = V / R berlaku untuk rangkaian AC resistif pada nilai efektif. Untuk reaktansi gunakan impedansi Z: I = V / Z."},
+            {"question": "Apakah kalkulator gratis?", "answer": "Ya. Pilih watt atau ohm, masukkan tegangan dan watt/ohm, dapatkan arus dalam ampere."}
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator terkait",
+          "ampsToVolt": "Kalkulator Ampere ke Volt",
+          "ampsToVoltDesc": "Tegangan dari arus dan resistansi atau daya",
+          "ampsToWatts": "Kalkulator Ampere ke Watt",
+          "ampsToWattsDesc": "Konversi ampere ke watt dengan tegangan",
+          "kwToAmps": "Kalkulator kW ke Ampere",
+          "kwToAmpsDesc": "Konversi kilowatt ke ampere dengan tegangan",
+          "vaToAmps": "Kalkulator VA ke Ampere",
+          "vaToAmpsDesc": "Konversi volt-ampere ke ampere dengan tegangan"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Kalkulator Ampere ke Watt",
       "description": "Konversi ampere (A) ke watt (W) secara instan dan akurat menggunakan tegangan",

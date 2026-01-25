@@ -1181,6 +1181,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Volt naar Ampere Rekenmachine",
+      "description": "Converteer spanning (V) naar stroom (A) met watt (I = P/V) of wet van Ohm (I = V/R). Kies de berekening.",
+      "selectCalculation": "Berekening",
+      "withWatts": "Volt naar ampère met watt",
+      "withOhms": "Volt naar ampère met ohm",
+      "volts": "Spanning (V)",
+      "watts": "Watt (W)",
+      "ohms": "Weerstand (Ω)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Volt naar Ampere Rekenmachine - Spanning naar stroom (watt of ohm)",
+        "description": "Gratis Volt naar Ampere rekenmachine. Bereken stroom uit spanning en vermogen (I = P/V) of spanning en weerstand (I = V/R). Twee modi: met watt, met ohm. Directe resultaten.",
+        "keywords": "volt ampère rekenmachine, spanning stroom, I P V, wet van Ohm, volt amp watt, elektrische rekenmachine, gratis",
+        "content": {
+          "heading": "Hoe voltage naar ampère omrekenen",
+          "paragraph1": "Spanning (V) naar stroom (A) omrekenen is een basisberekening. Twee manieren: (1) Volt naar ampère met watt: bij vermogen P (W) en spanning V gebruik I = P / V. (2) Met ohm: bij V en weerstand R (Ω) gebruik I = V / R (wet van Ohm). Onze rekenmachine ondersteunt beide modi.",
+          "paragraph2": "Met watt: I = P / V. Bijv. 2300 W bij 230 V → I = 10 A. Met ohm: I = V / R. Bijv. 12 V over 24 Ω → I = 0,5 A. Stroom is ladingstroming; spanning de drijvende potentiaal. In resistieve ketens V = I × R, dus I = V / R.",
+          "paragraph3": "Modus watt: als u het vermogen van een apparaat kent (bijv. lamp 100 W bij 230 V) en de stroom wilt. Modus ohm: spanning over een weerstand en waarde (LED, verwarming, resistieve circuits). Beide helpen bij zekeringen en kabels.",
+          "paragraph4": "Kies «Volt naar ampère met watt» of «met ohm», voer spanning en watt of ohm in en bereken. Resultaat in ampère. Gratis, geen registratie.",
+          "exampleHeading": "Voorbeeld:",
+          "exampleText": "Met watt: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Met ohm: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. Lamp 60 W bij 120 V: I = 0,5 A. Batterij 12 V, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            {"question": "Formule volt naar ampère met watt?", "answer": "I = P / V. Stroom (A) = vermogen (W) / spanning (V). Bijv. 2300 W, 230 V → I = 10 A."},
+            {"question": "Formule volt naar ampère met ohm?", "answer": "I = V / R (wet van Ohm). Stroom = spanning / weerstand. Bijv. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Wanneer watt, wanneer ohm?", "answer": "Watt: als vermogen (bijv. typeplaat) en spanning bekend zijn. Ohm: spanning over een weerstand en waarde (weerstanden, verwarming, DC-circuits)."},
+            {"question": "Geldt de wet van Ohm voor AC?", "answer": "I = V / R geldt voor resistieve AC-circuits bij effectieve waarden. Voor reactantie impedantie Z: I = V / Z."},
+            {"question": "Is de rekenmachine gratis?", "answer": "Ja. Kies watt of ohm, voer spanning en watt/ohm in, krijg stroom in ampère."}
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde rekenmachines",
+          "ampsToVolt": "Ampere naar Volt Rekenmachine",
+          "ampsToVoltDesc": "Spanning uit stroom en weerstand of vermogen",
+          "ampsToWatts": "Ampere naar Watt Rekenmachine",
+          "ampsToWattsDesc": "Ampere naar watt met spanning",
+          "kwToAmps": "kW naar Ampere Rekenmachine",
+          "kwToAmpsDesc": "Kilowatt naar ampère met spanning",
+          "vaToAmps": "VA naar Ampere Rekenmachine",
+          "vaToAmpsDesc": "Voltampère naar ampère met spanning"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampere naar Watt Rekenmachine",
       "description": "Converteer ampère (A) naar watt (W) direct en nauwkeurig met spanning",

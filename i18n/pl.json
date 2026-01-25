@@ -1214,6 +1214,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Kalkulator V na Ampery",
+      "description": "Przelicz napięcie (V) na prąd (A) używając watów (I = P/V) lub prawa Ohma (I = V/R). Wybierz tryb obliczeń.",
+      "selectCalculation": "Wybierz obliczenie",
+      "withWatts": "Volty na ampery z watami",
+      "withOhms": "Volty na ampery z omami",
+      "volts": "Napięcie (V)",
+      "watts": "Waty (W)",
+      "ohms": "Opór (Ω)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "amps": "Ampery (A)",
+      "seo": {
+        "title": "Kalkulator V na Ampery - Przelicz napięcie na prąd (waty lub omy)",
+        "description": "Darmowy kalkulator V na A. Oblicz prąd z napięcia i mocy (I = P/V) lub napięcia i oporu (I = V/R). Dwa tryby: V na A z watami, V na A z omami. Szybkie wyniki dla obwodów i elektrotechniki.",
+        "keywords": "volty na ampery, napięcie prąd, I P V, prawo Ohma, V A W, kalkulator elektryczny, darmowy kalkulator",
+        "content": {
+          "heading": "Jak przeliczyć volty na ampery",
+          "paragraph1": "Przeliczanie napięcia (V) na prąd w amperach (A) to podstawowe obliczenie elektryczne. Są dwa sposoby: (1) Volty na ampery z watami: znając moc P w watach i napięcie V, użyj I = P / V. (2) Volty na ampery z omami: znając V i opór R w omach, użyj prawa Ohma I = V / R. Oba wzory stosuje się w projektowaniu obwodów, doborze obciążeń i diagnostyce. Nasz kalkulator obsługuje oba tryby.",
+          "paragraph2": "Z watami: I = P / V. Np. 2300 W przy 230 V daje I = 10 A. Z omami: I = V / R. Np. 12 V na 24 Ω daje I = 0,5 A. Prąd to przepływ ładunku; napięcie — różnica potencjałów. W obwodach rezystancyjnych V = I × R, więc I = V / R przy znanych V i R.",
+          "paragraph3": "Tryb „z watami” — gdy znasz moc urządzenia (np. żarówka 100 W przy 230 V) i chcesz znać prąd. Tryb „z omami” — gdy znasz napięcie na rezystorze i opór (LED, grzałki, obwody rezystancyjne). Obie metody pomagają dobrać zabezpieczenia i przewody.",
+          "paragraph4": "Wybierz „Volty na ampery z watami” lub „z omami”, podaj napięcie oraz waty lub omy i oblicz. Wynik w amperach. Bez rejestracji.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "Z watami: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Z omami: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. Żarówka 60 W przy 120 V: I = 0,5 A. Bateria 12 V, opór 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {"question": "Wzór na volty na ampery z watami?", "answer": "I = P / V. Prąd (A) = moc (W) / napięcie (V). Np. 2300 W, 230 V → I = 10 A."},
+            {"question": "Wzór na volty na ampery z omami?", "answer": "I = V / R (prawo Ohma). Prąd = napięcie / opór. Np. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Kiedy waty, kiedy omy?", "answer": "Waty — gdy znasz moc (np. tabliczka znamionowa) i napięcie. Omy — gdy znasz napięcie na rezystorze i opór (rezystory, grzałki, obwody DC)."},
+            {"question": "Czy prawo Ohma dotyczy AC?", "answer": "I = V / R stosuje się do rezystancyjnych obwodów AC przy wartościach skutecznych. Dla elementów reakcyjnych użyj impedancji Z: I = V / Z."},
+            {"question": "Czy kalkulator jest darmowy?", "answer": "Tak. Wybierz tryb waty lub omy, podaj napięcie i waty/omy, uzyskasz prąd w amperach."}
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "ampsToVolt": "Kalkulator Ampery na Volt",
+          "ampsToVoltDesc": "Oblicz napięcie z prądu i oporu lub mocy",
+          "ampsToWatts": "Kalkulator Ampery na Waty",
+          "ampsToWattsDesc": "Przelicz ampery na waty z napięciem",
+          "kwToAmps": "Kalkulator kW na Ampery",
+          "kwToAmpsDesc": "Przelicz kilowaty na ampery z napięciem",
+          "vaToAmps": "Kalkulator VA na Ampery",
+          "vaToAmpsDesc": "Przelicz woltoampery na ampery z napięciem"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Kalkulator Ampery na Waty",
       "description": "Konwertuj ampery (A) na waty (W) natychmiast i dokładnie używając napięcia",

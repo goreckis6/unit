@@ -1291,6 +1291,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Kalkulačka Volt na Ampéry",
+      "description": "Převeďte napětí (V) na proud (A) pomocí wattů (I = P/V) nebo Ohmova zákona (I = V/R). Vyberte výpočet.",
+      "selectCalculation": "Vyberte výpočet",
+      "withWatts": "Volt na ampéry s watty",
+      "withOhms": "Volt na ampéry s omy",
+      "volts": "Napětí (V)",
+      "watts": "Waty (W)",
+      "ohms": "Odpor (Ω)",
+      "calculate": "Vypočítat",
+      "reset": "Reset",
+      "result": "Výsledek",
+      "amps": "Ampéry (A)",
+      "seo": {
+        "title": "Kalkulačka Volt na Ampéry - Napětí na proud (waty nebo omy)",
+        "description": "Zdarma kalkulačka Volt na Ampéry. Získejte proud z napětí a výkonu (I = P/V) nebo napětí a odporu (I = V/R). Dva režimy: s watty, s omy. Okamžité výsledky.",
+        "keywords": "volt ampér kalkulačka, napětí proud, I P V, Ohmův zákon, volt amp watt, elektrická kalkulačka, zdarma",
+        "content": {
+          "heading": "Jak převést volty na ampéry",
+          "paragraph1": "Převod napětí (V) na proud (A) je základní elektrický výpočet. Dva způsoby: (1) Volt na ampéry s watty: znáte-li výkon P (W) a napětí V, použijte I = P / V. (2) S omy: znáte-li V a odpor R (Ω), použijte I = V / R (Ohmův zákon). Naše kalkulačka podporuje oba režimy.",
+          "paragraph2": "S watty: I = P / V. Např. 2300 W při 230 V → I = 10 A. S omy: I = V / R. Např. 12 V na 24 Ω → I = 0,5 A. Proud je tok náboje; napětí rozdíl potenciálů. V odporových obvodech V = I × R, tedy I = V / R.",
+          "paragraph3": "Režim watty: když znáte výkon spotřebiče (např. žárovka 100 W při 230 V) a chcete proud. Režim omy: napětí na rezistoru a jeho hodnota (LED, topení, odporové obvody). Oba pomáhají dimenzovat pojistky a kabely.",
+          "paragraph4": "Zvolte „Volt na ampéry s watty“ nebo „s omy“, zadejte napětí a watty nebo omy a vypočítejte. Výsledek v ampérech. Zdarma, bez registrace.",
+          "exampleHeading": "Příklad:",
+          "exampleText": "S watty: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. S omy: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. Žárovka 60 W při 120 V: I = 0,5 A. Baterie 12 V, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Časté dotazy",
+          "items": [
+            {"question": "Vzorec volt na ampér s watty?", "answer": "I = P / V. Proud (A) = výkon (W) / napětí (V). Např. 2300 W, 230 V → I = 10 A."},
+            {"question": "Vzorec volt na ampér s omy?", "answer": "I = V / R (Ohmův zákon). Proud = napětí / odpor. Např. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Kdy watty, kdy omy?", "answer": "Waty: když znáte výkon (např. štítek) a napětí. Omy: napětí na rezistoru a jeho hodnota (rezistory, topení, DC obvody)."},
+            {"question": "Platí Ohmův zákon pro AC?", "answer": "I = V / R platí pro odporové AC obvody při efektivních hodnotách. Pro reaktance použijte impedanci Z: I = V / Z."},
+            {"question": "Je kalkulačka zdarma?", "answer": "Ano. Zvolte watty nebo omy, zadejte napětí a watty/omy, získáte proud v ampérech."}
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "ampsToVolt": "Kalkulačka Ampérů na Volt",
+          "ampsToVoltDesc": "Napětí z proudu a odporu nebo výkonu",
+          "ampsToWatts": "Kalkulačka Ampérů na Watty",
+          "ampsToWattsDesc": "Převest ampéry na watty s napětím",
+          "kwToAmps": "Kalkulačka kW na Ampéry",
+          "kwToAmpsDesc": "Převest kilowatty na ampéry s napětím",
+          "vaToAmps": "Kalkulačka VA na Ampéry",
+          "vaToAmpsDesc": "Převest voltampéry na ampéry s napětím"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Kalkulačka Ampérů na Watty",
       "description": "Převeďte ampéry (A) na watty (W) okamžitě a přesně pomocí napětí",

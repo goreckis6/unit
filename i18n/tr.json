@@ -1181,6 +1181,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Volt Amper Hesap Makinesi",
+      "description": "Gerilimi (V) akıma (A) watt (I = P/V) veya Ohm yasası (I = V/R) ile dönüştürün. Hesaplama seçin.",
+      "selectCalculation": "Hesaplama seçin",
+      "withWatts": "Volt ampere (watt ile)",
+      "withOhms": "Volt ampere (ohm ile)",
+      "volts": "Gerilim (V)",
+      "watts": "Watt (W)",
+      "ohms": "Direnç (Ω)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "amps": "Amper (A)",
+      "seo": {
+        "title": "Volt Amper Hesap Makinesi - Gerilim akıma (watt veya ohm)",
+        "description": "Ücretsiz Volt Amper hesap makinesi. Gerilim ve güçten (I = P/V) veya gerilim ve dirençten (I = V/R) akımı hesaplayın. Watt modu, ohm modu. Anında sonuç.",
+        "keywords": "volt amper hesap makinesi, gerilim akım, I P V, Ohm yasası, volt amper watt, elektrik hesap makinesi, ücretsiz",
+        "content": {
+          "heading": "Voltu ampere nasıl çevirilir",
+          "paragraph1": "Gerilimi (V) akıma (A) çevirmek temel elektrik hesabıdır. İki yol: (1) Watt ile: güç P (W) ve gerilim V biliniyorsa I = P / V. (2) Ohm ile: V ve direnç R (Ω) biliniyorsa I = V / R (Ohm yasası). Hesap makinemiz her iki modu destekler.",
+          "paragraph2": "Watt: I = P / V. Örn. 2300 W, 230 V → I = 10 A. Ohm: I = V / R. Örn. 12 V, 24 Ω → I = 0,5 A. Akım yük akışıdır; gerilim potansiyel farkıdır. Dirençli devrelerde V = I × R, dolayısıyla I = V / R.",
+          "paragraph3": "Watt modu: cihaz gücü (örn. 100 W ampul 230 V’ta) bilindiğinde ve akım isteniyorsa. Ohm modu: direnç üzerindeki gerilim ve değeri (LED, ısıtıcı, dirençli devreler). İkisi de sigorta ve kablo seçiminde yardımcı.",
+          "paragraph4": "「Volt ampere (watt ile)」 veya 「(ohm ile)」 seçin, gerilim ve watt veya ohm girin, hesaplayın. Sonuç amper. Ücretsiz, kayıt yok.",
+          "exampleHeading": "Örnek:",
+          "exampleText": "Watt: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Ohm: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. 60 W ampul 120 V: I = 0,5 A. 12 V pil, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Sık sorulan sorular",
+          "items": [
+            {"question": "Watt modu volt→amper formülü?", "answer": "I = P / V. Akım (A) = güç (W) / gerilim (V). Örn. 2300 W, 230 V → I = 10 A."},
+            {"question": "Ohm modu volt→amper formülü?", "answer": "I = V / R (Ohm yasası). Akım = gerilim / direnç. Örn. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Ne zaman watt, ne zaman ohm?", "answer": "Watt: güç (örn. tip plakası) ve gerilim bilindiğinde. Ohm: direnç üzerindeki gerilim ve değeri (dirençler, ısıtıcı, DC devreler)."},
+            {"question": "Ohm yasası AC’de geçerli mi?", "answer": "I = V / R dirençli AC devrelerde etkin değerlerle geçerlidir. Reaktans için empedans Z: I = V / Z."},
+            {"question": "Hesap makinesi ücretsiz mi?", "answer": "Evet. Watt veya ohm seçin, gerilim ve watt/ohm girin, akımı (A) alın."}
+          ]
+        },
+        "related": {
+          "heading": "İlgili hesaplayıcılar",
+          "ampsToVolt": "Amper Volt Hesap Makinesi",
+          "ampsToVoltDesc": "Akım ve direnç veya güçten gerilim",
+          "ampsToWatts": "Amper Watt Hesap Makinesi",
+          "ampsToWattsDesc": "Gerilimle amperi watta çevir",
+          "kwToAmps": "kW Amper Hesap Makinesi",
+          "kwToAmpsDesc": "Gerilimle kilowattı ampere çevir",
+          "vaToAmps": "VA Amper Hesap Makinesi",
+          "vaToAmpsDesc": "Gerilimle volt-amperi ampere çevir"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Amper Watt Hesap Makinesi",
       "description": "Gerilim kullanarak amper (A) değerini watt (W) değerine anında ve doğru bir şekilde dönüştürün",

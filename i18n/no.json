@@ -1181,6 +1181,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Volt til Ampere Kalkulator",
+      "description": "Konverter spenning (V) til strøm (A) med watt (I = P/V) eller Ohms lov (I = V/R). Velg beregning.",
+      "selectCalculation": "Velg beregning",
+      "withWatts": "Volt til ampere med watt",
+      "withOhms": "Volt til ampere med ohm",
+      "volts": "Spenning (V)",
+      "watts": "Watt (W)",
+      "ohms": "Motstand (Ω)",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Volt til Ampere Kalkulator - Spenning til strøm (watt eller ohm)",
+        "description": "Gratis Volt til Ampere kalkulator. Beregn strøm fra spenning og effekt (I = P/V) eller spenning og motstand (I = V/R). To modi: med watt, med ohm. Umiddelbare resultater.",
+        "keywords": "volt ampere kalkulator, spenning strøm, I P V, Ohms lov, volt amp watt, elektrisk kalkulator, gratis",
+        "content": {
+          "heading": "Slik konverterer du volt til ampere",
+          "paragraph1": "Å konvertere spenning (V) til strøm (A) er en grunnleggende elberegning. To måter: (1) Volt til ampere med watt: ved kjent effekt P (W) og spenning V, bruk I = P / V. (2) Med ohm: ved V og motstand R (Ω), bruk I = V / R (Ohms lov). Kalkulatoren vår støtter begge modi.",
+          "paragraph2": "Med watt: I = P / V. F.eks. 2300 W ved 230 V → I = 10 A. Med ohm: I = V / R. F.eks. 12 V over 24 Ω → I = 0,5 A. Strøm er ladningsflyt; spenning potensialforskjellen. I resistive kretser V = I × R, så I = V / R.",
+          "paragraph3": "Watt-modus: når du vet apparatets effekt (f.eks. 100 W pære ved 230 V) og vil ha strømmen. Ohm-modus: spenning over en resistans og verdien (LED, varmere, resistive kretser). Begge hjelper ved dimensjonering av sikringer og kabler.",
+          "paragraph4": "Velg «Volt til ampere med watt» eller «med ohm», skriv inn spenning og watt eller ohm, beregn. Resultat i ampere. Gratis, ingen registrering.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "Med watt: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Med ohm: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. 60 W pære ved 120 V: I = 0,5 A. 12 V batteri, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Ofte stilte spørsmål",
+          "items": [
+            {"question": "Formel volt til ampere med watt?", "answer": "I = P / V. Strøm (A) = effekt (W) / spenning (V). F.eks. 2300 W, 230 V → I = 10 A."},
+            {"question": "Formel volt til ampere med ohm?", "answer": "I = V / R (Ohms lov). Strøm = spenning / motstand. F.eks. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Når watt, når ohm?", "answer": "Watt: når du vet effekt (f.eks. typeplate) og spenning. Ohm: spenning over motstand og verdi (motstander, varmere, DC-kretser)."},
+            {"question": "Gjelder Ohms lov for AC?", "answer": "I = V / R gjelder resistive AC-kretser med effektivverdier. For reaktans bruk impedans Z: I = V / Z."},
+            {"question": "Er kalkulatoren gratis?", "answer": "Ja. Velg watt eller ohm, skriv inn spenning og watt/ohm, få strøm i ampere."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterte kalkulatorer",
+          "ampsToVolt": "Ampere til Volt Kalkulator",
+          "ampsToVoltDesc": "Spenning fra strøm og motstand eller effekt",
+          "ampsToWatts": "Ampere til Watt Kalkulator",
+          "ampsToWattsDesc": "Konverter ampere til watt med spenning",
+          "kwToAmps": "kW til Ampere Kalkulator",
+          "kwToAmpsDesc": "Konverter kilowatt til ampere med spenning",
+          "vaToAmps": "VA til Ampere Kalkulator",
+          "vaToAmpsDesc": "Konverter voltampere til ampere med spenning"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampere til Watt Kalkulator",
       "description": "Konverter ampere (A) til watt (W) umiddelbart og nøyaktig ved hjelp av spenning",

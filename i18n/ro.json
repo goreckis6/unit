@@ -1181,6 +1181,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Calculator Volți la Amperi",
+      "description": "Convertește tensiunea (V) în curent (A) cu wați (I = P/V) sau legea lui Ohm (I = V/R). Alege calculul.",
+      "selectCalculation": "Alege calculul",
+      "withWatts": "Volți la amperi cu wați",
+      "withOhms": "Volți la amperi cu ohmi",
+      "volts": "Tensiune (V)",
+      "watts": "Wați (W)",
+      "ohms": "Rezistență (Ω)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "amps": "Amperi (A)",
+      "seo": {
+        "title": "Calculator Volți la Amperi - Tensiune în curent (wați sau ohmi)",
+        "description": "Calculator gratuit Volți la Amperi. Obține curentul din tensiune și putere (I = P/V) sau tensiune și rezistență (I = V/R). Două moduri: cu wați, cu ohmi. Rezultate instantanee.",
+        "keywords": "volți amperi calculator, tensiune curent, I P V, legea lui Ohm, volt amp watt, calculator electric, gratuit",
+        "content": {
+          "heading": "Cum să convertiți volții în amperi",
+          "paragraph1": "Convertirea tensiunii (V) în curent (A) este un calcul electric de bază. Două moduri: (1) Volți la amperi cu wați: dacă cunoști puterea P (W) și tensiunea V, folosește I = P / V. (2) Cu ohmi: dacă cunoști V și rezistența R (Ω), folosește I = V / R (legea lui Ohm). Calculatorul nostru suportă ambele moduri.",
+          "paragraph2": "Cu wați: I = P / V. Ex. 2300 W la 230 V → I = 10 A. Cu ohmi: I = V / R. Ex. 12 V pe 24 Ω → I = 0,5 A. Curentul este fluxul de sarcină; tensiunea diferența de potențial. În circuite rezistive V = I × R, deci I = V / R.",
+          "paragraph3": "Mod wați: când ai puterea unui aparat (ex. bec 100 W la 230 V) și vrei curentul. Mod ohmi: tensiune la bornele unei rezistențe și valoarea ei (LED, încălzire, circuite rezistive). Ambele ajută la dimensionarea siguranțelor și cablurilor.",
+          "paragraph4": "Alege «Volți la amperi cu wați» sau «cu ohmi», introdu tensiunea și wații sau ohmii, calculează. Rezultat în amperi. Gratuit, fără înregistrare.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "Cu wați: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Cu ohmi: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. Bec 60 W la 120 V: I = 0,5 A. Baterie 12 V, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            {"question": "Formula volți la amperi cu wați?", "answer": "I = P / V. Curent (A) = putere (W) / tensiune (V). Ex. 2300 W, 230 V → I = 10 A."},
+            {"question": "Formula volți la amperi cu ohmi?", "answer": "I = V / R (legea lui Ohm). Curent = tensiune / rezistență. Ex. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Când wați, când ohmi?", "answer": "Wați: când cunoști puterea (ex. plăcuță) și tensiunea. Ohmi: tensiune la o rezistență și valoarea ei (rezistoare, încălzire, circuite DC)."},
+            {"question": "Legea lui Ohm se aplică la AC?", "answer": "I = V / R se aplică circuitelor AC rezistive la valori efective. Pentru reactanțe folosește impedanța Z: I = V / Z."},
+            {"question": "Calculatorul e gratuit?", "answer": "Da. Alege mod wați sau ohmi, introdu tensiunea și wații/ohmii, obține curentul în amperi."}
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare conexe",
+          "ampsToVolt": "Calculator Amperi la Volt",
+          "ampsToVoltDesc": "Tensiune din curent și rezistență sau putere",
+          "ampsToWatts": "Calculator Amperi la Watt",
+          "ampsToWattsDesc": "Convertește amperii în wați cu tensiune",
+          "kwToAmps": "Calculator kW la Amperi",
+          "kwToAmpsDesc": "Convertește kilowații în amperi cu tensiune",
+          "vaToAmps": "Calculator VA la Amperi",
+          "vaToAmpsDesc": "Convertește voltamperii în amperi cu tensiune"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Calculator Amperi la Watt",
       "description": "Convertește amperii (A) în wați (W) instant și precis folosind tensiunea",

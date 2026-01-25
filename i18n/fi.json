@@ -1181,6 +1181,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Voltti Ampeeri Laskin",
+      "description": "Muunna jännite (V) virraksi (A) watteilla (I = P/V) tai Ohmin lailla (I = V/R). Valitse laskenta.",
+      "selectCalculation": "Valitse laskenta",
+      "withWatts": "Voltti ampeereiksi watteilla",
+      "withOhms": "Voltti ampeereiksi ohmeilla",
+      "volts": "Jännite (V)",
+      "watts": "Watti (W)",
+      "ohms": "Resistanssi (Ω)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "amps": "Ampeeri (A)",
+      "seo": {
+        "title": "Voltti Ampeeri Laskin - Jännite virraksi (watti tai ohmi)",
+        "description": "Ilmainen Voltti Ampeeri -laskin. Laske virta jännitteestä ja tehosta (I = P/V) tai jännitteestä ja resistanssista (I = V/R). Kaksi tilaa: watteilla, ohmeilla. Välittömät tulokset.",
+        "keywords": "voltti ampeeri laskin, jännite virta, I P V, Ohmin laki, volt ampeeri watti, sähkölaskin, ilmainen",
+        "content": {
+          "heading": "Voltien muuntaminen ampeereiksi",
+          "paragraph1": "Jännitteen (V) muuntaminen virraksi (A) on perus sähköberekemä. Kaksi tapaa: (1) Voltti ampeereiksi watteilla: tunnetulla teolla P (W) ja jännitteellä V käytä I = P / V. (2) Ohmeilla: tunnetulla V ja resistanssilla R (Ω) käytä I = V / R (Ohmin laki). Laskimemme tukee molempia.",
+          "paragraph2": "Watteilla: I = P / V. Esim. 2300 W 230 V:lla → I = 10 A. Ohmeilla: I = V / R. Esim. 12 V 24 Ω:lla → I = 0,5 A. Virta on varausvirta; jännite potentiaaliero. Resistiivisissä piireissä V = I × R, joten I = V / R.",
+          "paragraph3": "Watti-tila: kun tiedät laitteen tehon (esim. 100 W hehkulamppu 230 V:lla) ja haluat virran. Ohmi-tila: jännite vastuksen yli ja sen arvo (LED, lämmitys, resistiiviset piirit). Molemmat auttavat sulakkeiden ja kaapelien mitoituksessa.",
+          "paragraph4": "Valitse «Voltti ampeereiksi watteilla» tai «ohmeilla», syötä jännite ja watit tai ohmit, laske. Tulos ampeereina. Ilmainen, ei rekisteröintiä.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "Watteilla: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Ohmeilla: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. 60 W lamppu 120 V:lla: I = 0,5 A. 12 V paristo, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Kaava voltti ampeeri watteilla?", "answer": "I = P / V. Virta (A) = teho (W) / jännite (V). Esim. 2300 W, 230 V → I = 10 A."},
+            {"question": "Kaava voltti ampeeri ohmeilla?", "answer": "I = V / R (Ohmin laki). Virta = jännite / resistanssi. Esim. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Milloin watti, milloin ohmi?", "answer": "Watti: kun tiedät tehon (esim. tyyppikilpi) ja jännitteen. Ohmi: jännite vastuksen yli ja arvo (vastukset, lämmitys, DC-piirit)."},
+            {"question": "Sovelletko Ohmin lakia AC:hen?", "answer": "I = V / R pätee resistiivisissä AC-piireissä tehollisarvoilla. Reaktanssille impedanssi Z: I = V / Z."},
+            {"question": "Onko laskin ilmainen?", "answer": "Kyllä. Valitse watti tai ohmi, syötä jännite ja watit/ohmit, saat virran ampeereina."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "ampsToVolt": "Ampeeri Voltti Laskin",
+          "ampsToVoltDesc": "Jännite virrasta ja resistanssista tai tehosta",
+          "ampsToWatts": "Ampeeri Watti Laskin",
+          "ampsToWattsDesc": "Muunna ampeerit wateiksi jännitteellä",
+          "kwToAmps": "kW Ampeeri Laskin",
+          "kwToAmpsDesc": "Muunna kilowatit ampeereiksi jännitteellä",
+          "vaToAmps": "VA Ampeeri Laskin",
+          "vaToAmpsDesc": "Muunna voltiampeerit ampeereiksi jännitteellä"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampeeri Watt Laskin",
       "description": "Muunna ampeerit (A) watteiksi (W) välittömästi ja tarkasti käyttämällä jännitettä",

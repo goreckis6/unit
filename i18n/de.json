@@ -1196,6 +1196,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Volt zu Ampere Rechner",
+      "description": "Spannung (V) in Strom (A) umrechnen mit Watt (I = P/V) oder Ohm (I = V/R). Berechnungsart wählen.",
+      "selectCalculation": "Berechnungsart",
+      "withWatts": "Volt zu Ampere mit Watt",
+      "withOhms": "Volt zu Ampere mit Ohm",
+      "volts": "Spannung (V)",
+      "watts": "Watt (W)",
+      "ohms": "Widerstand (Ω)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Volt zu Ampere Rechner - Spannung in Strom (Watt oder Ohm)",
+        "description": "Kostenloser Volt-zu-Ampere-Rechner. Strom aus Spannung und Leistung (I = P/V) oder Spannung und Widerstand (I = V/R). Zwei Modi: mit Watt, mit Ohm. Schnelle Ergebnisse für Schaltungen und Elektrotechnik.",
+        "keywords": "volt ampere rechner, spannung strom, I P V, ohmsches gesetz, volt amp watt, elektro rechner, kostenloser rechner",
+        "content": {
+          "heading": "Volt in Ampere umrechnen",
+          "paragraph1": "Spannung (V) in Strom (A) umzurechnen ist eine Grundberechnung. Zwei Wege: (1) Mit Watt: Bei gegebener Leistung P (W) und Spannung V gilt I = P / V. (2) Mit Ohm: Bei V und Widerstand R (Ω) gilt I = V / R (Ohmsches Gesetz). Beide Formeln dienen Schaltungsentwurf, Lastdimensionierung und Fehlersuche. Unser Rechner unterstützt beide Modi.",
+          "paragraph2": "Mit Watt: I = P / V. Z. B. 2300 W bei 230 V → I = 10 A. Mit Ohm: I = V / R. Z. B. 12 V an 24 Ω → I = 0,5 A. Strom ist der Ladungsfluss; Spannung die treibende Potentialdifferenz. In resistiven DC-/AC-Kreisen gilt V = I × R, also I = V / R bei bekanntem V und R.",
+          "paragraph3": "Mit Watt: wenn Geräteleistung (z. B. 100-W-Glühlampe bei 230 V) und Strombedarf bekannt. Mit Ohm: wenn Spannung an einem Widerstand und Widerstandswert bekannt (LED, Heizungen, resistive Lasten). Beides hilft bei Sicherungen und Leitungsdimensionierung.",
+          "paragraph4": "Modus „Mit Watt“ oder „Mit Ohm“ wählen, Spannung und Watt bzw. Ohm eingeben, berechnen. Ergebnis in Ampere. Keine Anmeldung.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "Mit Watt: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Mit Ohm: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. 60-W-Lampe bei 120 V: I = 0,5 A. 12-V-Batterie, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {"question": "Formel Volt zu Ampere mit Watt?", "answer": "I = P / V. Strom (A) = Leistung (W) / Spannung (V). Z. B. 2300 W, 230 V → I = 10 A."},
+            {"question": "Formel Volt zu Ampere mit Ohm?", "answer": "I = V / R (Ohmsches Gesetz). Strom = Spannung / Widerstand. Z. B. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Wann Watt, wann Ohm?", "answer": "Watt: wenn Leistung (z. B. Typenschild) und Spannung bekannt. Ohm: wenn Spannung am Widerstand und Widerstand bekannt (Resistoren, Heizung, DC-Schaltungen)."},
+            {"question": "Gilt das Ohmsche Gesetz für Wechselstrom?", "answer": "I = V / R gilt für resistive AC-Kreise bei Effektivwerten. Bei Blindwiderständen Impedanz Z verwenden: I = V / Z."},
+            {"question": "Ist der Rechner kostenlos?", "answer": "Ja. Modus Watt oder Ohm wählen, Spannung und Watt/Ohm eingeben, Strom in Ampere erhalten."}
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "ampsToVolt": "Ampere zu Volt Rechner",
+          "ampsToVoltDesc": "Spannung aus Strom und Widerstand oder Leistung",
+          "ampsToWatts": "Ampere zu Watt Rechner",
+          "ampsToWattsDesc": "Ampere in Watt mit Spannung umrechnen",
+          "kwToAmps": "kW zu Ampere Rechner",
+          "kwToAmpsDesc": "Kilowatt in Ampere mit Spannung umrechnen",
+          "vaToAmps": "VA zu Ampere Rechner",
+          "vaToAmpsDesc": "Voltampere in Ampere mit Spannung umrechnen"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampere zu Watt Rechner",
       "description": "Konvertieren Sie Ampere (A) sofort und genau in Watt (W) mit Spannung",

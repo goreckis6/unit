@@ -1181,6 +1181,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Calculateur Volts vers Ampères",
+      "description": "Convertissez tension (V) en courant (A) avec watts (I = P/V) ou loi d'Ohm (I = V/R). Choisissez le mode.",
+      "selectCalculation": "Type de calcul",
+      "withWatts": "Volts vers ampères avec watts",
+      "withOhms": "Volts vers ampères avec ohms",
+      "volts": "Tension (V)",
+      "watts": "Watts (W)",
+      "ohms": "Résistance (Ω)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "amps": "Ampères (A)",
+      "seo": {
+        "title": "Calculateur Volts vers Ampères - Tension en courant (watts ou ohms)",
+        "description": "Calculateur gratuit Volts vers Ampères. Obtenez le courant à partir de tension et puissance (I = P/V) ou tension et résistance (I = V/R). Deux modes : avec watts, avec ohms. Résultats instantanés.",
+        "keywords": "volts ampères calculateur, tension courant, I P V, loi d'Ohm, volt ampère watt, calculateur électrique, gratuit",
+        "content": {
+          "heading": "Comment convertir les volts en ampères",
+          "paragraph1": "Convertir la tension (V) en courant (A) est un calcul électrique de base. Deux méthodes : (1) Volts vers ampères avec watts : si vous connaissez la puissance P (W) et la tension V, utilisez I = P / V. (2) Avec ohms : si vous connaissez V et la résistance R (Ω), utilisez I = V / R (loi d'Ohm). Notre calculateur propose les deux modes.",
+          "paragraph2": "Avec watts : I = P / V. Ex. 2300 W sous 230 V → I = 10 A. Avec ohms : I = V / R. Ex. 12 V aux bornes de 24 Ω → I = 0,5 A. Le courant est le flux de charge ; la tension est la différence de potentiel. En régime résistif, V = I × R donc I = V / R.",
+          "paragraph3": "Mode watts : lorsque vous avez la puissance d'un appareil (ex. lampe 100 W sous 230 V) et voulez le courant. Mode ohms : tension aux bornes d'une résistance et sa valeur (LED, chauffage, circuits résistifs). Les deux aident à dimensionner fusibles et câbles.",
+          "paragraph4": "Choisissez « Volts vers ampères avec watts » ou « avec ohms », saisissez tension et watts ou ohms, puis calculez. Résultat en ampères. Gratuit, sans inscription.",
+          "exampleHeading": "Exemple :",
+          "exampleText": "Avec watts : 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Avec ohms : 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. Lampe 60 W sous 120 V : I = 0,5 A. Pile 12 V, 6 Ω : I = 2 A."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {"question": "Formule volts vers ampères avec watts ?", "answer": "I = P / V. Courant (A) = puissance (W) / tension (V). Ex. 2300 W, 230 V → I = 10 A."},
+            {"question": "Formule volts vers ampères avec ohms ?", "answer": "I = V / R (loi d'Ohm). Courant = tension / résistance. Ex. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Quand watts, quand ohms ?", "answer": "Watts : quand vous connaissez la puissance (ex. plaque signalétique) et la tension. Ohms : tension aux bornes d'une résistance et sa valeur (résistances, chauffage, circuits DC)."},
+            {"question": "La loi d'Ohm s'applique-t-elle au AC ?", "answer": "I = V / R s'applique aux circuits AC résistifs en valeurs efficaces. Pour les réactances, utiliser l'impédance Z : I = V / Z."},
+            {"question": "Le calculateur est-il gratuit ?", "answer": "Oui. Choisissez watts ou ohms, saisissez tension et watts/ohms, obtenez le courant en ampères."}
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs connexes",
+          "ampsToVolt": "Calculateur Ampères vers Volt",
+          "ampsToVoltDesc": "Tension à partir du courant et résistance ou puissance",
+          "ampsToWatts": "Calculateur Ampères vers Watt",
+          "ampsToWattsDesc": "Convertir ampères en watts avec tension",
+          "kwToAmps": "Calculateur kW vers Ampères",
+          "kwToAmpsDesc": "Convertir kilowatts en ampères avec tension",
+          "vaToAmps": "Calculateur VA vers Ampères",
+          "vaToAmpsDesc": "Convertir voltampères en ampères avec tension"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Calculateur Ampères vers Watt",
       "description": "Convertissez les ampères (A) en watts (W) instantanément et précisément en utilisant la tension",

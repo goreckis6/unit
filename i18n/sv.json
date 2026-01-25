@@ -1181,6 +1181,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Volt till Ampere-kalkylator",
+      "description": "Konvertera spänning (V) till ström (A) med watt (I = P/V) eller Ohms lag (I = V/R). Välj beräkning.",
+      "selectCalculation": "Välj beräkning",
+      "withWatts": "Volt till ampere med watt",
+      "withOhms": "Volt till ampere med ohm",
+      "volts": "Spänning (V)",
+      "watts": "Watt (W)",
+      "ohms": "Resistans (Ω)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Volt till Ampere-kalkylator - Spänning till ström (watt eller ohm)",
+        "description": "Gratis Volt till Ampere-kalkylator. Beräkna ström från spänning och effekt (I = P/V) eller spänning och resistans (I = V/R). Två lägen: med watt, med ohm. Omedelbara resultat.",
+        "keywords": "volt ampere kalkylator, spänning ström, I P V, Ohms lag, volt amp watt, elräknare, gratis",
+        "content": {
+          "heading": "Så konverterar du volt till ampere",
+          "paragraph1": "Att konvertera spänning (V) till ström (A) är en grundläggande elberäkning. Två sätt: (1) Volt till ampere med watt: vid känd effekt P (W) och spänning V, använd I = P / V. (2) Med ohm: vid V och resistans R (Ω), använd I = V / R (Ohms lag). Vår kalkylator stöder båda lägena.",
+          "paragraph2": "Med watt: I = P / V. T.ex. 2300 W vid 230 V → I = 10 A. Med ohm: I = V / R. T.ex. 12 V över 24 Ω → I = 0,5 A. Ström är laddningsflöde; spänning potentialskillnaden. I resistiva kretsar V = I × R, så I = V / R.",
+          "paragraph3": "Watt-läge: när du vet apparatens effekt (t.ex. 100 W glödlampa vid 230 V) och vill ha strömmen. Ohm-läge: spänning över en resistans och dess värde (LED, värmare, resistiva kretsar). Båda hjälper vid dimensionering av säkringar och kablar.",
+          "paragraph4": "Välj \"Volt till ampere med watt\" eller \"med ohm\", ange spänning och watt eller ohm, beräkna. Resultat i ampere. Gratis, ingen registrering.",
+          "exampleHeading": "Exempel:",
+          "exampleText": "Med watt: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Med ohm: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. 60 W lampa vid 120 V: I = 0,5 A. 12 V batteri, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {"question": "Formel volt till ampere med watt?", "answer": "I = P / V. Ström (A) = effekt (W) / spänning (V). T.ex. 2300 W, 230 V → I = 10 A."},
+            {"question": "Formel volt till ampere med ohm?", "answer": "I = V / R (Ohms lag). Ström = spänning / resistans. T.ex. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "När watt, när ohm?", "answer": "Watt: när du vet effekt (t.ex. typdatabord) och spänning. Ohm: spänning över resistans och värde (resistorer, värmare, DC-kretsar)."},
+            {"question": "Gäller Ohms lag för AC?", "answer": "I = V / R gäller resistiva AC-kretsar med effektivvärden. För reaktans använd impedans Z: I = V / Z."},
+            {"question": "Är kalkylatorn gratis?", "answer": "Ja. Välj watt eller ohm, ange spänning och watt/ohm, få ström i ampere."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "ampsToVolt": "Ampere till Volt-kalkylator",
+          "ampsToVoltDesc": "Spänning från ström och resistans eller effekt",
+          "ampsToWatts": "Ampere till Watt-kalkylator",
+          "ampsToWattsDesc": "Konvertera ampere till watt med spänning",
+          "kwToAmps": "kW till Ampere-kalkylator",
+          "kwToAmpsDesc": "Konvertera kilowatt till ampere med spänning",
+          "vaToAmps": "VA till Ampere-kalkylator",
+          "vaToAmpsDesc": "Konvertera voltampere till ampere med spänning"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampere till Watt-kalkylator",
       "description": "Konvertera ampere (A) till watt (W) omedelbart och exakt med spänning",

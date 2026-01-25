@@ -1181,6 +1181,55 @@
         }
       }
     },
+    "voltsToAmps": {
+      "title": "Volt til Ampere Lommeregner",
+      "description": "Konverter spænding (V) til strøm (A) med watt (I = P/V) eller Ohms lov (I = V/R). Vælg beregning.",
+      "selectCalculation": "Vælg beregning",
+      "withWatts": "Volt til ampere med watt",
+      "withOhms": "Volt til ampere med ohm",
+      "volts": "Spænding (V)",
+      "watts": "Watt (W)",
+      "ohms": "Modstand (Ω)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "amps": "Ampere (A)",
+      "seo": {
+        "title": "Volt til Ampere Lommeregner - Spænding til strøm (watt eller ohm)",
+        "description": "Gratis Volt til Ampere lommeregner. Beregn strøm fra spænding og effekt (I = P/V) eller spænding og modstand (I = V/R). To tilstande: med watt, med ohm. Øjeblikkelige resultater.",
+        "keywords": "volt ampere lommeregner, spænding strøm, I P V, Ohms lov, volt amp watt, elektrisk lommeregner, gratis",
+        "content": {
+          "heading": "Sådan konverteres volt til ampere",
+          "paragraph1": "At konvertere spænding (V) til strøm (A) er en grundlæggende elberegning. To måder: (1) Volt til ampere med watt: ved kendt effekt P (W) og spænding V, brug I = P / V. (2) Med ohm: ved V og modstand R (Ω), brug I = V / R (Ohms lov). Vores lommeregner understøtter begge tilstande.",
+          "paragraph2": "Med watt: I = P / V. F.eks. 2300 W ved 230 V → I = 10 A. Med ohm: I = V / R. F.eks. 12 V over 24 Ω → I = 0,5 A. Strøm er ladningsstrøm; spænding potentialforskellen. I resistive kredsløb V = I × R, så I = V / R.",
+          "paragraph3": "Watt-tilstand: når du kender apparatets effekt (f.eks. 100 W pære ved 230 V) og vil have strømmen. Ohm-tilstand: spænding over en modstand og værdien (LED, varmere, resistive kredsløb). Begge hjælper ved dimensionering af sikringer og kabler.",
+          "paragraph4": "Vælg «Volt til ampere med watt» eller «med ohm», indtast spænding og watt eller ohm, beregn. Resultat i ampere. Gratis, ingen registrering.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "Med watt: 230 V, 1150 W → I = 5 A. 120 V, 1440 W → I = 12 A. Med ohm: 24 V, 48 Ω → I = 0,5 A. 230 V, 46 Ω → I = 5 A. 60 W pære ved 120 V: I = 0,5 A. 12 V batteri, 6 Ω: I = 2 A."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {"question": "Formel volt til ampere med watt?", "answer": "I = P / V. Strøm (A) = effekt (W) / spænding (V). F.eks. 2300 W, 230 V → I = 10 A."},
+            {"question": "Formel volt til ampere med ohm?", "answer": "I = V / R (Ohms lov). Strøm = spænding / modstand. F.eks. 12 V, 24 Ω → I = 0,5 A."},
+            {"question": "Hvornår watt, hvornår ohm?", "answer": "Watt: når du kender effekt (f.eks. typeplate) og spænding. Ohm: spænding over modstand og værdi (modstande, varmere, DC-kredsløb)."},
+            {"question": "Gælder Ohms lov for AC?", "answer": "I = V / R gælder resistive AC-kredsløb med effektivværdier. For reaktans brug impedans Z: I = V / Z."},
+            {"question": "Er lommeregneren gratis?", "answer": "Ja. Vælg watt eller ohm, indtast spænding og watt/ohm, få strøm i ampere."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterede lommeregnere",
+          "ampsToVolt": "Ampere til Volt Lommeregner",
+          "ampsToVoltDesc": "Spænding fra strøm og modstand eller effekt",
+          "ampsToWatts": "Ampere til Watt Lommeregner",
+          "ampsToWattsDesc": "Konverter ampere til watt med spænding",
+          "kwToAmps": "kW til Ampere Lommeregner",
+          "kwToAmpsDesc": "Konverter kilowatt til ampere med spænding",
+          "vaToAmps": "VA til Ampere Lommeregner",
+          "vaToAmpsDesc": "Konverter voltampere til ampere med spænding"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampere til Watt Lommeregner",
       "description": "Konverter ampere (A) til watt (W) øjeblikkeligt og præcist ved hjælp af spænding",

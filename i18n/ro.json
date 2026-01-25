@@ -1290,6 +1290,71 @@
         }
       }
     },
+    "voltsToKw": {
+      "title": "Calculator Volți în Kilowați",
+      "description": "Convertește tensiunea (V) și curentul (A) în putere în kilowați (kW) pentru DC, monofazat și trifazat",
+      "phaseType": "Tip sistem",
+      "directCurrent": "Curent continuu (DC)",
+      "singlePhase": "Monofazat",
+      "threePhase": "Trifazat",
+      "volts": "Tensiune (V)",
+      "amps": "Amperi (A)",
+      "powerFactor": "Factor de putere (0-1)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "kw": "Kilowați (kW)",
+      "seo": {
+        "title": "Calculator Volți în Kilowați - DC, Monofazat și Trifazat | V și A în kW",
+        "description": "Calculator gratuit Volți în kW. Convertește tensiunea (V) și curentul (A) în kilowați (kW) pentru DC, monofazat și trifazat. Factor de putere pentru AC. Pentru proiectare electrică și dimensionare încărcări.",
+        "keywords": "calculator volți kilowați, tensiune kW, convertor V kW, DC monofazat trifazat, factor putere, calculator electric, calculator gratuit",
+        "content": {
+          "heading": "Cum convertiți volții în kilowați",
+          "paragraph1": "Convertirea tensiunii (V) și curentului (A) în putere în kilowați (kW) este esențială în electrotehnică. Formula depinde de tip: DC, AC monofazat sau trifazat. DC: kW = V × I / 1000. Monofazat: kW = V × I × PF / 1000 (PF = factor de putere). Trifazat: kW = √3 × V × I × PF / 1000, V = tensiune între faze. Calculatorul nostru gratuit Volți în kW suportă toate cele trei moduri.",
+          "paragraph2": "DC nu are factor de putere; puterea activă = tensiune × curent. Sistemele AC monofazat și trifazat au adesea sarcini reactive (motoare, ballaste), deci doar o parte din puterea aparentă (VA) este activă (kW). Factorul de putere (0–1) reprezintă această parte. La trifazat, √3 (≈1,732) ține cont de relația dintre tensiunea între faze și mărimile de fază. Tensiuni comune: 120 V, 230 V, 240 V (monofazat); 400 V, 480 V (trifazat între faze).",
+          "paragraph3": "Această conversie se folosește pentru dimensionarea generatoarelor și invertorilor, calculul sarcinii în kW din V și A măsurați, proiectarea rețelelor, alegerea întrerupătoarelor și cablurilor și audituri energetice. Fie că lucrați cu baterii și sarcini DC, instalație rezidențială monofazată sau industrie trifazată, convertirea volților și amperilor în kilowați este fundamentală pentru proiectare electrică sigură și eficientă.",
+          "paragraph4": "Calculatorul vă permite alegeți DC, monofazat sau trifazat. Introduceți tensiunea și curentul; pentru AC, factorul de putere (implicit 0,8). Rezultatul în kilowați (kW). Fără înregistrare.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "DC: 48 V, 20 A → kW = 48 × 20 / 1000 = 0,96 kW. Monofazat: 230 V, 10 A, PF 0,8 → kW = 230 × 10 × 0,8 / 1000 = 1,84 kW. Trifazat: 400 V, 15 A, PF 0,85 → kW = √3 × 400 × 15 × 0,85 / 1000 ≈ 8,83 kW."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            {
+              "question": "Formula volți în kW (DC)?",
+              "answer": "DC: kW = V × I / 1000. V în volți, I în amperi. Împărțiți produsul la 1000. Ex.: 24 V × 50 A = 1200 W = 1,2 kW."
+            },
+            {
+              "question": "Formula pentru AC monofazat?",
+              "answer": "AC monofazat: kW = V × I × PF / 1000. V (volți), I (amperi), PF factor de putere (0–1). Ex.: 230 V, 10 A, PF 0,8 → 1,84 kW."
+            },
+            {
+              "question": "Formula pentru AC trifazat?",
+              "answer": "AC trifazat: kW = √3 × V × I × PF / 1000. V = tensiune între faze (volți), I = curent de linie (amperi), PF = factor de putere. √3 ≈ 1,732. Ex.: 400 V, 20 A, PF 0,9 → ≈ 12,47 kW."
+            },
+            {
+              "question": "Când DC, monofazat sau trifazat?",
+              "answer": "DC: baterii, circuite PV DC, sarcini DC. Monofazat: rezidențial (120 V, 230 V, 240 V). Trifazat: distribuție industrială și comercială (400 V, 480 V între faze), motoare."
+            },
+            {
+              "question": "Calculatorul e gratuit?",
+              "answer": "Da. Calculatorul Volți în kW e gratuit. Fără înregistrare. Selectați DC, monofazat sau trifazat, introduceți tensiunea și curentul (și PF pentru AC) pentru kW instant."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare înrudite",
+          "voltsToWatts": "Calculator Volți în Wați",
+          "voltsToWattsDesc": "Convertește tensiunea și curentul în wați (W)",
+          "ampsToWatts": "Calculator Amperi în Wați",
+          "ampsToWattsDesc": "Convertește amperii în wați cu tensiunea",
+          "kwToAmps": "Calculator kW în Amperi",
+          "kwToAmpsDesc": "Convertește kilowații în amperi cu tensiunea",
+          "kwToVolts": "Calculator kW în Volți",
+          "kwToVoltsDesc": "Convertește kilowații în tensiune cu curentul"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Calculator Amperi la Watt",
       "description": "Convertește amperii (A) în wați (W) instant și precis folosind tensiunea",

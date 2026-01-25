@@ -1290,6 +1290,71 @@
         }
       }
     },
+    "voltsToKw": {
+      "title": "Kalkulator Volt ke Kilowatt",
+      "description": "Konversi tegangan (V) dan arus (A) ke daya dalam kilowatt (kW) untuk DC, satu fasa, dan tiga fasa",
+      "phaseType": "Tipe sistem",
+      "directCurrent": "Arus searah (DC)",
+      "singlePhase": "Satu Fasa",
+      "threePhase": "Tiga Fasa",
+      "volts": "Tegangan (V)",
+      "amps": "Ampere (A)",
+      "powerFactor": "Faktor daya (0-1)",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "kw": "Kilowatt (kW)",
+      "seo": {
+        "title": "Kalkulator Volt ke Kilowatt - DC, Satu Fasa & Tiga Fasa | V dan A ke kW",
+        "description": "Kalkulator gratis Volt ke kW. Konversi tegangan (V) dan arus (A) ke kilowatt (kW) untuk DC, satu fasa, dan tiga fasa. Faktor daya untuk AC. Untuk desain listrik dan penentuan beban.",
+        "keywords": "kalkulator volt kilowatt, tegangan kW, konverter V kW, DC satu fasa tiga fasa, faktor daya, kalkulator listrik, kalkulator gratis",
+        "content": {
+          "heading": "Cara mengonversi volt ke kilowatt",
+          "paragraph1": "Mengonversi tegangan (V) dan arus (A) ke daya dalam kilowatt (kW) penting dalam teknik listrik. Rumus bergantung pada tipe: DC, AC satu fasa, atau tiga fasa. DC: kW = V × I / 1000. Satu fasa: kW = V × I × PF / 1000 (PF = faktor daya). Tiga fasa: kW = √3 × V × I × PF / 1000, V = tegangan antarfasa. Kalkulator gratis Volt–kW kami mendukung ketiga mode.",
+          "paragraph2": "DC tidak punya faktor daya; daya nyata = tegangan × arus. AC satu fasa dan tiga fasa sering punya beban reaktif (motor, ballast), jadi hanya sebagian daya semu (VA) yang nyata (kW). Faktor daya (0–1) adalah proporsi itu. Untuk tiga fasa, √3 (≈1,732) mencerminkan hubungan antara tegangan antarfasa dan besaran fasa. Tegangan umum: 120 V, 230 V, 240 V (satu fasa); 400 V, 480 V (tiga fasa antarfasa).",
+          "paragraph3": "Konversi ini dipakai untuk: menentukan ukuran generator dan inverter, menghitung beban dalam kW dari V dan A terukur, merancang jaringan, memilih pemutus dan kabel, serta audit energi. Baik bekerja dengan baterai dan beban DC, instalasi rumah satu fasa, maupun industri tiga fasa, mengonversi volt dan ampere ke kilowatt mendasar untuk desain listrik yang aman dan efisien.",
+          "paragraph4": "Kalkulator memungkinkan pilih DC, satu fasa, atau tiga fasa. Masukkan tegangan dan arus; untuk AC, faktor daya (bawaan 0,8). Hasil dalam kilowatt (kW). Tanpa pendaftaran.",
+          "exampleHeading": "Contoh:",
+          "exampleText": "DC: 48 V, 20 A → kW = 48 × 20 / 1000 = 0,96 kW. Satu fasa: 230 V, 10 A, PF 0,8 → kW = 230 × 10 × 0,8 / 1000 = 1,84 kW. Tiga fasa: 400 V, 15 A, PF 0,85 → kW = √3 × 400 × 15 × 0,85 / 1000 ≈ 8,83 kW."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang sering diajukan",
+          "items": [
+            {
+              "question": "Rumus volt ke kW (DC)?",
+              "answer": "DC: kW = V × I / 1000. V dalam volt, I dalam ampere. Bagi hasil kali dengan 1000. Mis. 24 V × 50 A = 1200 W = 1,2 kW."
+            },
+            {
+              "question": "Rumus untuk AC satu fasa?",
+              "answer": "AC satu fasa: kW = V × I × PF / 1000. V (volt), I (ampere), PF faktor daya (0–1). Mis. 230 V, 10 A, PF 0,8 → 1,84 kW."
+            },
+            {
+              "question": "Rumus untuk AC tiga fasa?",
+              "answer": "AC tiga fasa: kW = √3 × V × I × PF / 1000. V = tegangan antarfasa (volt), I = arus saluran (ampere), PF = faktor daya. √3 ≈ 1,732. Mis. 400 V, 20 A, PF 0,9 → ≈ 12,47 kW."
+            },
+            {
+              "question": "Kapan DC, satu fasa, atau tiga fasa?",
+              "answer": "DC: baterai, sirkuit PV DC, beban DC. Satu fasa: rumah tangga umum (120 V, 230 V, 240 V). Tiga fasa: distribusi industri dan komersial (400 V, 480 V antarfasa), motor."
+            },
+            {
+              "question": "Apakah kalkulator gratis?",
+              "answer": "Ya. Kalkulator Volt–kW gratis. Tanpa pendaftaran. Pilih DC, satu fasa, atau tiga fasa, masukkan tegangan dan arus (dan PF untuk AC) untuk kW instan."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator terkait",
+          "voltsToWatts": "Kalkulator Volt ke Watt",
+          "voltsToWattsDesc": "Konversi tegangan dan arus ke watt (W)",
+          "ampsToWatts": "Kalkulator Ampere ke Watt",
+          "ampsToWattsDesc": "Konversi ampere ke watt dengan tegangan",
+          "kwToAmps": "Kalkulator kW ke Ampere",
+          "kwToAmpsDesc": "Konversi kilowatt ke ampere dengan tegangan",
+          "kwToVolts": "Kalkulator kW ke Volt",
+          "kwToVoltsDesc": "Konversi kilowatt ke tegangan dengan arus"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Kalkulator Ampere ke Watt",
       "description": "Konversi ampere (A) ke watt (W) secara instan dan akurat menggunakan tegangan",

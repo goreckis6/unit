@@ -189,6 +189,12 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       path: '/calculators/electric/volts-to-watts',
     },
     {
+      id: 'volts-to-kw',
+      titleKey: 'voltsToKw.title',
+      descKey: 'voltsToKw.description',
+      path: '/calculators/electric/volts-to-kw',
+    },
+    {
       id: 'amps-to-watts',
       titleKey: 'ampsToWatts.title',
       descKey: 'ampsToWatts.description',

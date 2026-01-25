@@ -1290,6 +1290,71 @@
         }
       }
     },
+    "voltsToKw": {
+      "title": "Calculadora Volts para Quilowatts",
+      "description": "Converta tensão (V) e corrente (A) em potência em quilowatts (kW) para DC, monofásico e trifásico",
+      "phaseType": "Tipo de sistema",
+      "directCurrent": "Corrente contínua (DC)",
+      "singlePhase": "Monofásico",
+      "threePhase": "Trifásico",
+      "volts": "Tensão (V)",
+      "amps": "Amperes (A)",
+      "powerFactor": "Fator de potência (0-1)",
+      "calculate": "Calcular",
+      "reset": "Repor",
+      "result": "Resultado",
+      "kw": "Quilowatts (kW)",
+      "seo": {
+        "title": "Calculadora Volts para Quilowatts - DC, Monofásico e Trifásico | V e A para kW",
+        "description": "Calculadora gratuita Volts para kW. Converta tensão (V) e corrente (A) em quilowatts (kW) para DC, monofásico e trifásico. Fator de potência para AC. Para dimensionamento elétrico e de cargas.",
+        "keywords": "calculadora volts quilowatts, tensão kW, conversor V kW, DC monofásico trifásico, fator de potência, calculadora elétrica, calculadora grátis",
+        "content": {
+          "heading": "Como converter volts em quilowatts",
+          "paragraph1": "Converter tensão (V) e corrente (A) em potência em quilowatts (kW) é essencial em eletrotecnia. A fórmula depende do tipo: DC, AC monofásico ou trifásico. DC: kW = V × I / 1000. Monofásico: kW = V × I × FP / 1000 (FP = fator de potência). Trifásico: kW = √3 × V × I × FP / 1000, V = tensão entre fases. A nossa calculadora gratuita Volts para kW suporta os três modos.",
+          "paragraph2": "O DC não tem fator de potência; potência ativa = tensão × corrente. Em monofásico e trifásico AC, as cargas reativas (motores, balastros) fazem com que apenas parte da potência aparente (VA) seja ativa (kW). O fator de potência (0–1) representa essa parte. Em trifásico, √3 (≈1,732) reflete a relação entre tensão entre fases e grandezas de fase. Tensões comuns: 120 V, 230 V, 240 V (monofásico); 400 V, 480 V (trifásico entre fases).",
+          "paragraph3": "Esta conversão usa-se para dimensionar geradores e inversores, calcular carga em kW a partir de V e A medidos, projetar redes, escolher disjuntores e cabos e fazer auditorias energéticas. Quer em baterias e cargas DC, instalação residencial monofásica ou indústria trifásica, converter volts e amperes em quilowatts é fundamental para um dimensionamento seguro e eficiente.",
+          "paragraph4": "A calculadora permite escolher DC, monofásico ou trifásico. Introduza tensão e corrente; para AC, fator de potência (predefinido 0,8). Resultado em quilowatts (kW). Sem registo.",
+          "exampleHeading": "Exemplo:",
+          "exampleText": "DC: 48 V, 20 A → kW = 48 × 20 / 1000 = 0,96 kW. Monofásico: 230 V, 10 A, FP 0,8 → kW = 230 × 10 × 0,8 / 1000 = 1,84 kW. Trifásico: 400 V, 15 A, FP 0,85 → kW = √3 × 400 × 15 × 0,85 / 1000 ≈ 8,83 kW."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {
+              "question": "Fórmula volts para kW (DC)?",
+              "answer": "DC: kW = V × I / 1000. V em volts, I em amperes. Dividir o produto por 1000. Ex.: 24 V × 50 A = 1200 W = 1,2 kW."
+            },
+            {
+              "question": "Fórmula para AC monofásico?",
+              "answer": "AC monofásico: kW = V × I × FP / 1000. V (volts), I (amperes), FP fator de potência (0–1). Ex.: 230 V, 10 A, FP 0,8 → 1,84 kW."
+            },
+            {
+              "question": "Fórmula para AC trifásico?",
+              "answer": "AC trifásico: kW = √3 × V × I × FP / 1000. V = tensão entre fases (volts), I = corrente de linha (amperes), FP = fator de potência. √3 ≈ 1,732. Ex.: 400 V, 20 A, FP 0,9 → ≈ 12,47 kW."
+            },
+            {
+              "question": "Quando usar DC, monofásico ou trifásico?",
+              "answer": "DC: baterias, circuitos PV DC, cargas DC. Monofásico: residencial (120 V, 230 V, 240 V). Trifásico: distribuição industrial e comercial (400 V, 480 V entre fases), motores."
+            },
+            {
+              "question": "A calculadora é gratuita?",
+              "answer": "Sim. A calculadora Volts para kW é gratuita. Sem registo. Selecione DC, monofásico ou trifásico, introduza tensão e corrente (e FP para AC) para obter kW."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "voltsToWatts": "Calculadora Volts para Watts",
+          "voltsToWattsDesc": "Converter tensão e corrente em watts (W)",
+          "ampsToWatts": "Calculadora Amperes para Watts",
+          "ampsToWattsDesc": "Converter amperes em watts com tensão",
+          "kwToAmps": "Calculadora kW para Amperes",
+          "kwToAmpsDesc": "Converter quilowatts em amperes com tensão",
+          "kwToVolts": "Calculadora kW para Volts",
+          "kwToVoltsDesc": "Converter quilowatts em tensão com corrente"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Calculadora Amperes para Watt",
       "description": "Converta amperes (A) para watts (W) instantaneamente e com precisão usando tensão",

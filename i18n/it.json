@@ -1290,6 +1290,71 @@
         }
       }
     },
+    "voltsToKw": {
+      "title": "Calcolatore Volt a Kilowatt",
+      "description": "Converte tensione (V) e corrente (A) in potenza in kilowatt (kW) per DC, monofase e trifase",
+      "phaseType": "Tipo di sistema",
+      "directCurrent": "Corrente continua (DC)",
+      "singlePhase": "Monofase",
+      "threePhase": "Trifase",
+      "volts": "Tensione (V)",
+      "amps": "Ampere (A)",
+      "powerFactor": "Fattore di potenza (0-1)",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "kw": "Kilowatt (kW)",
+      "seo": {
+        "title": "Calcolatore Volt a Kilowatt - DC, Monofase e Trifase | V e A in kW",
+        "description": "Calcolatore gratuito Volt a kW. Converte tensione (V) e corrente (A) in kilowatt (kW) per DC, monofase e trifase. Fattore di potenza per AC. Per progettazione elettrica e dimensionamento carichi.",
+        "keywords": "calcolatore volt kilowatt, tensione kW, convertitore V kW, DC monofase trifase, fattore di potenza, calcolatore elettrico, calcolatore gratuito",
+        "content": {
+          "heading": "Come convertire i volt in kilowatt",
+          "paragraph1": "Convertire tensione (V) e corrente (A) in potenza in kilowatt (kW) è essenziale in elettrotecnica. La formula dipende dal tipo: DC, AC monofase o trifase. DC: kW = V × I / 1000. Monofase: kW = V × I × PF / 1000 (PF = fattore di potenza). Trifase: kW = √3 × V × I × PF / 1000, V = tensione concatenata. Il nostro calcolatore gratuito Volt a kW supporta tutti e tre i modi.",
+          "paragraph2": "La DC non ha fattore di potenza; potenza attiva = tensione × corrente. In monofase e trifase AC, i carichi reattivi (motori, reattori) fanno sì che solo una parte della potenza apparente (VA) sia attiva (kW). Il fattore di potenza (0–1) rappresenta questa parte. In trifase, √3 (≈1,732) tiene conto della relazione tra tensione concatenata e grandezze di fase. Tensioni comuni: 120 V, 230 V, 240 V (monofase); 400 V, 480 V (trifase concatenata).",
+          "paragraph3": "Questa conversione si usa per dimensionare generatori e inverter, calcolare il carico in kW da V e A misurati, progettare reti, scegliere interruttori e cavi e per audit energetici. Sia che si lavori con batterie e carichi DC, impianto residenziale monofase o industria trifase, convertire volt e ampere in kilowatt è fondamentale per una progettazione sicura ed efficiente.",
+          "paragraph4": "Il calcolatore permette di scegliere DC, monofase o trifase. Inserire tensione e corrente; per AC, fattore di potenza (default 0,8). Risultato in kilowatt (kW). Senza registrazione.",
+          "exampleHeading": "Esempio:",
+          "exampleText": "DC: 48 V, 20 A → kW = 48 × 20 / 1000 = 0,96 kW. Monofase: 230 V, 10 A, PF 0,8 → kW = 230 × 10 × 0,8 / 1000 = 1,84 kW. Trifase: 400 V, 15 A, PF 0,85 → kW = √3 × 400 × 15 × 0,85 / 1000 ≈ 8,83 kW."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {
+              "question": "Formula volt a kW (DC)?",
+              "answer": "DC: kW = V × I / 1000. V in volt, I in ampere. Dividere il prodotto per 1000. Es.: 24 V × 50 A = 1200 W = 1,2 kW."
+            },
+            {
+              "question": "Formula per AC monofase?",
+              "answer": "AC monofase: kW = V × I × PF / 1000. V (volt), I (ampere), PF fattore di potenza (0–1). Es.: 230 V, 10 A, PF 0,8 → 1,84 kW."
+            },
+            {
+              "question": "Formula per AC trifase?",
+              "answer": "AC trifase: kW = √3 × V × I × PF / 1000. V = tensione concatenata (volt), I = corrente di linea (ampere), PF = fattore di potenza. √3 ≈ 1,732. Es.: 400 V, 20 A, PF 0,9 → ≈ 12,47 kW."
+            },
+            {
+              "question": "Quando usare DC, monofase o trifase?",
+              "answer": "DC: batterie, circuiti PV DC, carichi DC. Monofase: residenziale (120 V, 230 V, 240 V). Trifase: distribuzione industriale e commerciale (400 V, 480 V concatenata), motori."
+            },
+            {
+              "question": "Il calcolatore è gratuito?",
+              "answer": "Sì. Il calcolatore Volt a kW è gratuito. Senza registrazione. Selezionare DC, monofase o trifase, inserire tensione e corrente (e PF per AC) per ottenere kW."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori correlati",
+          "voltsToWatts": "Calcolatore Volt a Watt",
+          "voltsToWattsDesc": "Converti tensione e corrente in watt (W)",
+          "ampsToWatts": "Calcolatore Ampere a Watt",
+          "ampsToWattsDesc": "Converti ampere in watt con la tensione",
+          "kwToAmps": "Calcolatore kW a Ampere",
+          "kwToAmpsDesc": "Converti kilowatt in ampere con la tensione",
+          "kwToVolts": "Calcolatore kW a Volt",
+          "kwToVoltsDesc": "Converti kilowatt in tensione con la corrente"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Calcolatrice Ampere a Watt",
       "description": "Converti ampere (A) in watt (W) istantaneamente e accuratamente usando la tensione",

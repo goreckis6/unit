@@ -1290,6 +1290,71 @@
         }
       }
     },
+    "voltsToKw": {
+      "title": "Calculateur Volts vers Kilowatts",
+      "description": "Convertissez tension (V) et courant (A) en puissance en kilowatts (kW) pour DC, monophasé et triphasé",
+      "phaseType": "Type de système",
+      "directCurrent": "Courant continu (DC)",
+      "singlePhase": "Monophasé",
+      "threePhase": "Triphasé",
+      "volts": "Tension (V)",
+      "amps": "Ampères (A)",
+      "powerFactor": "Facteur de puissance (0-1)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "kw": "Kilowatts (kW)",
+      "seo": {
+        "title": "Calculateur Volts vers Kilowatts - DC, Monophasé et Triphasé | V et A en kW",
+        "description": "Calculateur gratuit Volts vers kW. Convertissez tension (V) et courant (A) en kilowatts (kW) pour DC, monophasé et triphasé. Facteur de puissance pour AC. Pour conception électrique et dimensionnement des charges.",
+        "keywords": "calculateur volts kilowatts, tension kW, convertisseur V kW, DC monophasé triphasé, facteur de puissance, calculateur électrique, calculateur gratuit",
+        "content": {
+          "heading": "Comment convertir les volts en kilowatts",
+          "paragraph1": "Convertir tension (V) et courant (A) en puissance en kilowatts (kW) est essentiel en électrotechnique. La formule dépend du type : DC, AC monophasé ou triphasé. DC : kW = V × I / 1000. Monophasé : kW = V × I × PF / 1000 (PF = facteur de puissance). Triphasé : kW = √3 × V × I × PF / 1000, V = tension entre phases. Notre calculateur gratuit Volts vers kW prend en charge les trois modes.",
+          "paragraph2": "Le DC n'a pas de facteur de puissance ; la puissance active = tension × courant. En monophasé et triphasé AC, les charges réactives (moteurs, ballasts) font qu'une partie seulement de la puissance apparente (VA) est puissance active (kW). Le facteur de puissance (0 à 1) représente cette part. En triphasé, √3 (≈1,732) traduit la relation entre tension entre phases et grandeurs de phase. Tensions courantes : 120 V, 230 V, 240 V (monophasé) ; 400 V, 480 V (triphasé entre phases).",
+          "paragraph3": "Cette conversion sert à dimensionner générateurs et onduleurs, calculer la charge en kW à partir de V et A mesurés, concevoir les réseaux, choisir disjoncteurs et câbles, et réaliser des audits énergétiques. Que vous travailliez sur batteries et charges DC, installation résidentielle monophasée ou industrie triphasée, convertir volts et ampères en kilowatts est fondamental pour un dimensionnement sûr et efficace.",
+          "paragraph4": "Le calculateur permet de choisir DC, monophasé ou triphasé. Saisir tension et courant ; pour AC, facteur de puissance (par défaut 0,8). Résultat en kilowatts (kW). Sans inscription.",
+          "exampleHeading": "Exemple :",
+          "exampleText": "DC : 48 V, 20 A → kW = 48 × 20 / 1000 = 0,96 kW. Monophasé : 230 V, 10 A, PF 0,8 → kW = 230 × 10 × 0,8 / 1000 = 1,84 kW. Triphasé : 400 V, 15 A, PF 0,85 → kW = √3 × 400 × 15 × 0,85 / 1000 ≈ 8,83 kW."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {
+              "question": "Formule volts vers kW (DC) ?",
+              "answer": "DC : kW = V × I / 1000. V en volts, I en ampères. Diviser le produit par 1000. Ex. : 24 V × 50 A = 1200 W = 1,2 kW."
+            },
+            {
+              "question": "Formule pour AC monophasé ?",
+              "answer": "AC monophasé : kW = V × I × PF / 1000. V (volts), I (ampères), PF facteur de puissance (0–1). Ex. : 230 V, 10 A, PF 0,8 → 1,84 kW."
+            },
+            {
+              "question": "Formule pour AC triphasé ?",
+              "answer": "AC triphasé : kW = √3 × V × I × PF / 1000. V = tension entre phases (volts), I = courant de ligne (ampères), PF = facteur de puissance. √3 ≈ 1,732. Ex. : 400 V, 20 A, PF 0,9 → ≈ 12,47 kW."
+            },
+            {
+              "question": "Quand utiliser DC, monophasé ou triphasé ?",
+              "answer": "DC : batteries, circuits PV DC, charges DC. Monophasé : résidentiel (120 V, 230 V, 240 V). Triphasé : distribution industrielle et tertiaire (400 V, 480 V entre phases), moteurs."
+            },
+            {
+              "question": "Le calculateur est-il gratuit ?",
+              "answer": "Oui. Le calculateur Volts vers kW est gratuit. Sans inscription. Choisir DC, monophasé ou triphasé, saisir tension et courant (et PF pour AC) pour obtenir kW."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs associés",
+          "voltsToWatts": "Calculateur Volts vers Watts",
+          "voltsToWattsDesc": "Convertir tension et courant en watts (W)",
+          "ampsToWatts": "Calculateur Ampères vers Watts",
+          "ampsToWattsDesc": "Convertir ampères en watts avec la tension",
+          "kwToAmps": "Calculateur kW vers Ampères",
+          "kwToAmpsDesc": "Convertir kilowatts en ampères avec la tension",
+          "kwToVolts": "Calculateur kW vers Volts",
+          "kwToVoltsDesc": "Convertir kilowatts en tension avec le courant"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Calculateur Ampères vers Watt",
       "description": "Convertissez les ampères (A) en watts (W) instantanément et précisément en utilisant la tension",

@@ -1290,6 +1290,71 @@
         }
       }
     },
+    "voltsToKw": {
+      "title": "Volt naar Kilowatt Rekenmachine",
+      "description": "Zet spanning (V) en stroom (A) om naar vermogen in kilowatt (kW) voor DC, enkelfasig en driefasig",
+      "phaseType": "Systeemtype",
+      "directCurrent": "Gelijkstroom (DC)",
+      "singlePhase": "Enkelfasig",
+      "threePhase": "Driefasig",
+      "volts": "Spanning (V)",
+      "amps": "Ampere (A)",
+      "powerFactor": "Arbeidsfactor (0-1)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "kw": "Kilowatt (kW)",
+      "seo": {
+        "title": "Volt naar Kilowatt Rekenmachine - DC, Enkelfasig en Driefasig | V en A naar kW",
+        "description": "Gratis Volt naar kW rekenmachine. Zet spanning (V) en stroom (A) om naar kilowatt (kW) voor DC, enkelfasig en driefasig. Arbeidsfactor voor AC. Voor elektrisch ontwerp en belastingsbepaling.",
+        "keywords": "volt kilowatt rekenmachine, spanning kW, V kW omzetter, DC enkelfasig driefasig, arbeidsfactor, elektrische rekenmachine, gratis rekenmachine",
+        "content": {
+          "heading": "Volt naar kilowatt omrekenen",
+          "paragraph1": "Spanning (V) en stroom (A) omzetten naar vermogen in kilowatt (kW) is essentieel in de elektrotechniek. De formule hangt af van het type: DC, enkelfasige of driefasige AC. DC: kW = V × I / 1000. Enkelfasig: kW = V × I × PF / 1000 (PF = arbeidsfactor). Driefasig: kW = √3 × V × I × PF / 1000, V = lijn-lijnspanning. Onze gratis Volt–kW rekenmachine ondersteunt alle drie de modi.",
+          "paragraph2": "DC heeft geen arbeidsfactor; werkelijk vermogen = spanning × stroom. Enkelfasige en driefasige AC hebben vaak reactieve belastingen (motoren, voorschakelapparaten), dus slechts een deel van het schijnbaar vermogen (VA) is werkelijk vermogen (kW). De arbeidsfactor (0–1) is dat deel. Bij driefasig staat √3 (≈1,732) voor de faserelatie tussen lijn-lijnspanning en fasegrootheden. Gebruikelijke spanningen: 120 V, 230 V, 240 V (enkelfasig); 400 V, 480 V (driefasig lijn-lijn).",
+          "paragraph3": "Deze omrekening wordt gebruikt voor: dimensionering van generatoren en omvormers, berekening van belasting in kW uit gemeten V en A, ontwerp van distributienetten, keuze van automaten en kabels, en energie-audits. Of u nu werkt met batterijen en DC-belastingen, residentieel enkelfasig of industrieel driefasig – volt en ampère naar kilowatt omrekenen is fundamenteel voor veilig en efficiënt elektrisch ontwerp.",
+          "paragraph4": "De rekenmachine laat u DC, enkelfasig of driefasig kiezen. Voer spanning en stroom in; voor AC de arbeidsfactor (standaard 0,8). Resultaat in kilowatt (kW). Geen registratie.",
+          "exampleHeading": "Voorbeeld:",
+          "exampleText": "DC: 48 V, 20 A → kW = 48 × 20 / 1000 = 0,96 kW. Enkelfasig: 230 V, 10 A, PF 0,8 → kW = 230 × 10 × 0,8 / 1000 = 1,84 kW. Driefasig: 400 V, 15 A, PF 0,85 → kW = √3 × 400 × 15 × 0,85 / 1000 ≈ 8,83 kW."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            {
+              "question": "Formule volt naar kW (DC)?",
+              "answer": "DC: kW = V × I / 1000. V in volt, I in ampère. Deel het product door 1000. Bijv. 24 V × 50 A = 1200 W = 1,2 kW."
+            },
+            {
+              "question": "Formule voor enkelfasige AC?",
+              "answer": "Enkelfasige AC: kW = V × I × PF / 1000. V (volt), I (ampère), PF arbeidsfactor (0–1). Bijv. 230 V, 10 A, PF 0,8 → 1,84 kW."
+            },
+            {
+              "question": "Formule voor driefasige AC?",
+              "answer": "Driefasige AC: kW = √3 × V × I × PF / 1000. V = lijn-lijnspanning (volt), I = lijstroom (ampère), PF = arbeidsfactor. √3 ≈ 1,732. Bijv. 400 V, 20 A, PF 0,9 → ≈ 12,47 kW."
+            },
+            {
+              "question": "Wanneer DC, enkelfasig of driefasig?",
+              "answer": "DC: batterijen, PV DC-circuits, DC-belastingen. Enkelfasig: typisch residentieel (120 V, 230 V, 240 V). Driefasig: industriële en commerciële distributie (400 V, 480 V lijn-lijn), motoren."
+            },
+            {
+              "question": "Is de rekenmachine gratis?",
+              "answer": "Ja. De Volt–kW rekenmachine is gratis. Geen registratie. Kies DC, enkelfasig of driefasig, voer spanning en stroom in (en PF voor AC) voor direct kW."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde rekenmachines",
+          "voltsToWatts": "Volt naar Watt Rekenmachine",
+          "voltsToWattsDesc": "Spanning en stroom omrekenen naar watt (W)",
+          "ampsToWatts": "Ampere naar Watt Rekenmachine",
+          "ampsToWattsDesc": "Ampere naar watt omrekenen met spanning",
+          "kwToAmps": "kW naar Ampere Rekenmachine",
+          "kwToAmpsDesc": "Kilowatt naar ampère omrekenen met spanning",
+          "kwToVolts": "kW naar Volt Rekenmachine",
+          "kwToVoltsDesc": "Kilowatt naar spanning omrekenen met stroom"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampere naar Watt Rekenmachine",
       "description": "Converteer ampère (A) naar watt (W) direct en nauwkeurig met spanning",

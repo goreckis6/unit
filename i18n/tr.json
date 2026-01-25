@@ -1290,6 +1290,71 @@
         }
       }
     },
+    "voltsToKw": {
+      "title": "Volt Kilowatt Hesaplayıcı",
+      "description": "Gerilimi (V) ve akımı (A) kilowatta (kW) çevirin. DC, tek faz ve üç faz",
+      "phaseType": "Sistem tipi",
+      "directCurrent": "Doğru akım (DC)",
+      "singlePhase": "Tek Faz",
+      "threePhase": "Üç Faz",
+      "volts": "Gerilim (V)",
+      "amps": "Amper (A)",
+      "powerFactor": "Güç faktörü (0-1)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "kw": "Kilowatt (kW)",
+      "seo": {
+        "title": "Volt Kilowatt Hesaplayıcı - DC, Tek Faz ve Üç Faz | V ve A kW'ye",
+        "description": "Ücretsiz Volt–kW hesaplayıcı. Gerilimi (V) ve akımı (A) kilowatta (kW) çevirin. DC, tek faz ve üç faz. AC için güç faktörü. Elektrik tasarımı ve yük boyutlandırma için.",
+        "keywords": "volt kilowatt hesaplayıcı, gerilim kW, V kW dönüştürücü, DC tek faz üç faz, güç faktörü, elektrik hesaplayıcı, ücretsiz hesaplayıcı",
+        "content": {
+          "heading": "Voltu kilowatta nasıl çevirirsiniz",
+          "paragraph1": "Gerilimi (V) ve akımı (A) kilowatta (kW) çevirmek elektrik mühendisliğinde temeldir. Formül tipe bağlıdır: DC, tek faz veya üç faz AC. DC: kW = V × I / 1000. Tek faz: kW = V × I × GF / 1000 (GF = güç faktörü). Üç faz: kW = √3 × V × I × GF / 1000, V = hat gerilimi. Ücretsiz Volt–kW hesaplayıcımız üç modu da destekler.",
+          "paragraph2": "DC'nin güç faktörü yoktur; aktif güç = gerilim × akım. Tek faz ve üç faz AC'de sıklıkla reaktif yükler (motorlar, balastlar) vardır, bu yüzden görünür gücün (VA) yalnızca bir kısmı aktif (kW) olur. Güç faktörü (0–1) bu oranı temsil eder. Üç fazda √3 (≈1,732) hat gerilimi ile faz büyüklükleri arasındaki ilişkiyi yansıtır. Yaygın gerilimler: 120 V, 230 V, 240 V (tek faz); 400 V, 480 V (üç faz hat).",
+          "paragraph3": "Bu dönüşüm jeneratör ve invertör boyutlandırma, ölçülen V ve A'dan yük kW hesaplama, dağıtım tasarımı, kesici ve kablo seçimi ile enerji denetimleri için kullanılır. İster batarya ve DC yük, ister konut tek faz, ister endüstriyel üç faz olsun – volt ve amperi kilowatta çevirmek güvenli ve verimli elektrik tasarımı için temeldir.",
+          "paragraph4": "Hesaplayıcı DC, tek faz veya üç faz seçmenize izin verir. Gerilim ve akımı girin; AC için güç faktörü (varsayılan 0,8). Sonuç kilowatt (kW) cinsinden. Kayıt yok.",
+          "exampleHeading": "Örnek:",
+          "exampleText": "DC: 48 V, 20 A → kW = 48 × 20 / 1000 = 0,96 kW. Tek faz: 230 V, 10 A, GF 0,8 → kW = 230 × 10 × 0,8 / 1000 = 1,84 kW. Üç faz: 400 V, 15 A, GF 0,85 → kW = √3 × 400 × 15 × 0,85 / 1000 ≈ 8,83 kW."
+        },
+        "faq": {
+          "heading": "Sık sorulan sorular",
+          "items": [
+            {
+              "question": "Volt kW formülü (DC)?",
+              "answer": "DC: kW = V × I / 1000. V volt, I amper. Çarpımı 1000'e bölün. Örn. 24 V × 50 A = 1200 W = 1,2 kW."
+            },
+            {
+              "question": "Tek faz AC formülü?",
+              "answer": "Tek faz AC: kW = V × I × GF / 1000. V (volt), I (amper), GF güç faktörü (0–1). Örn. 230 V, 10 A, GF 0,8 → 1,84 kW."
+            },
+            {
+              "question": "Üç faz AC formülü?",
+              "answer": "Üç faz AC: kW = √3 × V × I × GF / 1000. V = hat gerilimi (volt), I = hat akımı (amper), GF = güç faktörü. √3 ≈ 1,732. Örn. 400 V, 20 A, GF 0,9 → ≈ 12,47 kW."
+            },
+            {
+              "question": "DC, tek faz mı üç faz mı ne zaman?",
+              "answer": "DC: bataryalar, PV DC devreler, DC yükler. Tek faz: tipik konut (120 V, 230 V, 240 V). Üç faz: endüstriyel ve ticari dağıtım (400 V, 480 V hat), motorlar."
+            },
+            {
+              "question": "Hesaplayıcı ücretsiz mi?",
+              "answer": "Evet. Volt–kW hesaplayıcı ücretsizdir. Kayıt yok. DC, tek faz veya üç faz seçin, gerilim ve akımı (AC için GF) girin – anında kW alın."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili hesaplayıcılar",
+          "voltsToWatts": "Volt Watt Hesaplayıcı",
+          "voltsToWattsDesc": "Gerilim ve akımı watt (W) cinsine çevir",
+          "ampsToWatts": "Amper Watt Hesaplayıcı",
+          "ampsToWattsDesc": "Gerilimle amperi watta çevir",
+          "kwToAmps": "kW Amper Hesaplayıcı",
+          "kwToAmpsDesc": "Gerilimle kilowattı ampere çevir",
+          "kwToVolts": "kW Volt Hesaplayıcı",
+          "kwToVoltsDesc": "Akımla kilowattı gerilime çevir"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Amper Watt Hesap Makinesi",
       "description": "Gerilim kullanarak amper (A) değerini watt (W) değerine anında ve doğru bir şekilde dönüştürün",

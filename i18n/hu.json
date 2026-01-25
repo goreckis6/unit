@@ -1345,6 +1345,71 @@
         }
       }
     },
+    "voltsToKw": {
+      "title": "Volt Kilowatt Számológép",
+      "description": "Feszültséget (V) és áramerősséget (A) kilowattba (kW) alakít DC, egyfázisú és háromfázisú rendszerekhez",
+      "phaseType": "Rendszertípus",
+      "directCurrent": "Egyenáram (DC)",
+      "singlePhase": "Egyfázisú",
+      "threePhase": "Háromfázisú",
+      "volts": "Feszültség (V)",
+      "amps": "Amper (A)",
+      "powerFactor": "Teljesítménytényező (0-1)",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "kw": "Kilowatt (kW)",
+      "seo": {
+        "title": "Volt Kilowatt Számológép - DC, Egyfázisú és Háromfázisú | V és A kW-ra",
+        "description": "Ingyenes Volt kW számológép. Feszültséget (V) és áramerősséget (A) kilowattra (kW) DC, egyfázisú és háromfázisú rendszerekhez. Teljesítménytényező AC-nél. Villamos tervezéshez és terhelésméretezéshez.",
+        "keywords": "volt kilowatt számológép, feszültség kW, V kW átváltó, DC egyfázis háromfázis, teljesítménytényező, villamos számológép, ingyenes számológép",
+        "content": {
+          "heading": "Volt kilowattra alakítása",
+          "paragraph1": "A feszültség (V) és áram (A) kilowattra (kW) alakítása alapvető az elektrotechnikában. A képlet a típustól függ: DC, egyfázisú vagy háromfázisú AC. DC: kW = V × I / 1000. Egyfázisú: kW = V × I × PF / 1000 (PF = teljesítménytényező). Háromfázisú: kW = √3 × V × I × PF / 1000, V = vonali feszültség. Ingyenes Volt kW számológépünk mindhárom módot támogatja.",
+          "paragraph2": "A DC-nél nincs teljesítménytényező; a hatásos teljesítmény = feszültség × áram. Egyfázisú és háromfázisú AC-nél gyakoriak a meddő terhelések (motorok, előtétek), ezért a látszólagos teljesítmény (VA) csak része hatásos (kW). A teljesítménytényező (0–1) ezt a részt jelenti. Háromfázisnál a √3 (≈1,732) a vonali feszültség és a fázismennyiségek kapcsolatából adódik. Gyakori feszültségek: 120 V, 230 V, 240 V (1-fázis); 400 V, 480 V (3-fázis vonali).",
+          "paragraph3": "Az átváltást generátorok és inverterek méretezésére, a terhelés kW-ban történő számítására V és A alapján, hálózattervezésre, megszakítók és kábelek választására és energiaauditokra használják. Akár akkumulátorokkal és DC terheléssel, lakossági egyfázisúval, akár ipari háromfázisúval dolgozol – a volt és amper kilowattra alakítása a biztonságos és hatékony villamos tervezés alapja.",
+          "paragraph4": "A számológép DC, egyfázisú vagy háromfázisú választást kínál. Add meg a feszültséget és áramerősséget; AC-nél a teljesítménytényezőt (alapértelmezett 0,8). Eredmény kilowattban (kW). Regisztráció nélkül.",
+          "exampleHeading": "Példa:",
+          "exampleText": "DC: 48 V, 20 A → kW = 48 × 20 / 1000 = 0,96 kW. Egyfázisú: 230 V, 10 A, PF 0,8 → kW = 230 × 10 × 0,8 / 1000 = 1,84 kW. Háromfázisú: 400 V, 15 A, PF 0,85 → kW = √3 × 400 × 15 × 0,85 / 1000 ≈ 8,83 kW."
+        },
+        "faq": {
+          "heading": "Gyakori kérdések",
+          "items": [
+            {
+              "question": "Képlet volt kW-ra (DC)?",
+              "answer": "DC: kW = V × I / 1000. V voltban, I amperben. A szorzatot osszuk 1000-rel. Pl. 24 V × 50 A = 1200 W = 1,2 kW."
+            },
+            {
+              "question": "Képlet egyfázisú AC-hez?",
+              "answer": "Egyfázisú AC: kW = V × I × PF / 1000. V (V), I (A), PF teljesítménytényező (0–1). Pl. 230 V, 10 A, PF 0,8 → 1,84 kW."
+            },
+            {
+              "question": "Képlet háromfázisú AC-hez?",
+              "answer": "Háromfázisú AC: kW = √3 × V × I × PF / 1000. V = vonali feszültség (V), I = vonali áram (A), PF = teljesítménytényező. √3 ≈ 1,732. Pl. 400 V, 20 A, PF 0,9 → ≈ 12,47 kW."
+            },
+            {
+              "question": "Mikor DC, egyfázis vagy háromfázis?",
+              "answer": "DC: akkumulátorok, PV DC áramkörök, DC terhelések. Egyfázis: tipikus lakossági (120 V, 230 V, 240 V). Háromfázis: ipari és kereskedelmi elosztás (400 V, 480 V vonali), motorok."
+            },
+            {
+              "question": "A számológép ingyenes?",
+              "answer": "Igen. A Volt kW számológép ingyenes. Regisztráció nélkül. Válaszd a DC, egyfázisú vagy háromfázisú opciót, add meg a feszültséget és áramerősséget (és PF-t AC-nél) az azonnali kW eredményhez."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó számológépek",
+          "voltsToWatts": "Volt Watt Számológép",
+          "voltsToWattsDesc": "Feszültséget és áramerősséget wattra (W)",
+          "ampsToWatts": "Amper Watt Számológép",
+          "ampsToWattsDesc": "Ampert wattra feszültséggel",
+          "kwToAmps": "kW Amper Számológép",
+          "kwToAmpsDesc": "Kilowattot amperre feszültséggel",
+          "kwToVolts": "kW Volt Számológép",
+          "kwToVoltsDesc": "Kilowattot feszültségre áramerősséggel"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Amper Watt Számológép",
       "description": "Alakítsa át az ampereket (A) watttá (W) azonnal és pontosan feszültség használatával",

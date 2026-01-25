@@ -1290,6 +1290,71 @@
         }
       }
     },
+    "voltsToKw": {
+      "title": "Volt til Kilowatt Lommeregner",
+      "description": "Konverter spænding (V) og strøm (A) til effekt i kilowatt (kW) for DC, enfase og trefase",
+      "phaseType": "Systemtype",
+      "directCurrent": "Jævnstrøm (DC)",
+      "singlePhase": "Enfase",
+      "threePhase": "Trefase",
+      "volts": "Spænding (V)",
+      "amps": "Ampere (A)",
+      "powerFactor": "Effektfaktor (0-1)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "kw": "Kilowatt (kW)",
+      "seo": {
+        "title": "Volt til Kilowatt Lommeregner - DC, Enfase og Trefase | V og A til kW",
+        "description": "Gratis Volt til kW lommeregner. Konverter spænding (V) og strøm (A) til kilowatt (kW) for DC, enfase og trefase. Effektfaktor for AC. Til elberegninger og lastdimensionering.",
+        "keywords": "volt kilowatt lommeregner, spænding kW, V kW konverter, DC enfase trefase, effektfaktor, elektrisk lommeregner, gratis lommeregner",
+        "content": {
+          "heading": "Sådan konverteres volt til kilowatt",
+          "paragraph1": "At konvertere spænding (V) og strøm (A) til effekt i kilowatt (kW) er grundlæggende i elkraft. Formlen afhænger af type: DC, enfase eller trefase AC. DC: kW = V × I / 1000. Enfase: kW = V × I × PF / 1000 (PF = effektfaktor). Trefase: kW = √3 × V × I × PF / 1000, V = linjespænding. Vores gratis Volt–kW lommeregner understøtter alle tre tilstande.",
+          "paragraph2": "DC har ingen effektfaktor; aktiv effekt = spænding × strøm. Enfase og trefase AC har ofte reaktive belastninger (motorer, ballaster), så kun en del af tilsyneladende effekt (VA) er aktiv (kW). Effektfaktoren (0–1) er den andel. Ved trefase står √3 (≈1,732) for faserelationen mellem linjespænding og fasestørrelser. Almindelige spændinger: 120 V, 230 V, 240 V (enfase); 400 V, 480 V (trefase linje).",
+          "paragraph3": "Konverteringen bruges til at dimensionere generatorer og omformere, beregne belastning i kW fra målte V og A, projektere net, vælge sikringer og kabler og til energieffektvurderinger. Uanset om du arbejder med batterier og DC-belastninger, bolig enfase eller industrielt trefase, er omregning af volt og ampere til kilowatt grundlæggende for sikker og effektiv eldimensionering.",
+          "paragraph4": "Lommeregneren lader dig vælge DC, enfase eller trefase. Indtast spænding og strøm; for AC effektfaktor (standard 0,8). Resultat i kilowatt (kW). Ingen tilmelding.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "DC: 48 V, 20 A → kW = 48 × 20 / 1000 = 0,96 kW. Enfase: 230 V, 10 A, PF 0,8 → kW = 230 × 10 × 0,8 / 1000 = 1,84 kW. Trefase: 400 V, 15 A, PF 0,85 → kW = √3 × 400 × 15 × 0,85 / 1000 ≈ 8,83 kW."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {
+              "question": "Formel volt til kW (DC)?",
+              "answer": "DC: kW = V × I / 1000. V i volt, I i ampere. Divider produktet med 1000. F.eks. 24 V × 50 A = 1200 W = 1,2 kW."
+            },
+            {
+              "question": "Formel for enfase AC?",
+              "answer": "Enfase AC: kW = V × I × PF / 1000. V (volt), I (ampere), PF effektfaktor (0–1). F.eks. 230 V, 10 A, PF 0,8 → 1,84 kW."
+            },
+            {
+              "question": "Formel for trefase AC?",
+              "answer": "Trefase AC: kW = √3 × V × I × PF / 1000. V = linjespænding (volt), I = linjestrøm (ampere), PF = effektfaktor. √3 ≈ 1,732. F.eks. 400 V, 20 A, PF 0,9 → ≈ 12,47 kW."
+            },
+            {
+              "question": "Hvornår DC, enfase eller trefase?",
+              "answer": "DC: batterier, PV DC-kredsløb, DC-belastninger. Enfase: typisk bolig (120 V, 230 V, 240 V). Trefase: industriel distribution (400 V, 480 V linje), motorer."
+            },
+            {
+              "question": "Er lommeregneren gratis?",
+              "answer": "Ja. Volt–kW lommeregneren er gratis. Ingen tilmelding. Vælg DC, enfase eller trefase, indtast spænding og strøm (og PF for AC) for øjeblikkelig kW."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede lommeregnere",
+          "voltsToWatts": "Volt til Watt Lommeregner",
+          "voltsToWattsDesc": "Konverter spænding og strøm til watt (W)",
+          "ampsToWatts": "Ampere til Watt Lommeregner",
+          "ampsToWattsDesc": "Konverter ampere til watt med spænding",
+          "kwToAmps": "kW til Ampere Lommeregner",
+          "kwToAmpsDesc": "Konverter kilowatt til ampere med spænding",
+          "kwToVolts": "kW til Volt Lommeregner",
+          "kwToVoltsDesc": "Konverter kilowatt til spænding med strøm"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampere til Watt Lommeregner",
       "description": "Konverter ampere (A) til watt (W) øjeblikkeligt og præcist ved hjælp af spænding",

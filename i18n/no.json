@@ -1290,6 +1290,71 @@
         }
       }
     },
+    "voltsToKw": {
+      "title": "Volt til Kilowatt Kalkulator",
+      "description": "Konverter spenning (V) og strøm (A) til effekt i kilowatt (kW) for DC, enfase og trefase",
+      "phaseType": "Systemtype",
+      "directCurrent": "Likestrøm (DC)",
+      "singlePhase": "Enfase",
+      "threePhase": "Trefase",
+      "volts": "Spenning (V)",
+      "amps": "Ampere (A)",
+      "powerFactor": "Effektfaktor (0-1)",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "kw": "Kilowatt (kW)",
+      "seo": {
+        "title": "Volt til Kilowatt Kalkulator - DC, Enfase og Trefase | V og A til kW",
+        "description": "Gratis Volt til kW kalkulator. Konverter spenning (V) og strøm (A) til kilowatt (kW) for DC, enfase og trefase. Effektfaktor for AC. For elberegninger og lasting.",
+        "keywords": "volt kilowatt kalkulator, spenning kW, V kW konverter, DC enfase trefase, effektfaktor, elektrisk kalkulator, gratis kalkulator",
+        "content": {
+          "heading": "Slik konverterer du volt til kilowatt",
+          "paragraph1": "Å konvertere spenning (V) og strøm (A) til effekt i kilowatt (kW) er grunnleggende i elkraft. Formelen avhenger av type: DC, enfase eller trefase AC. DC: kW = V × I / 1000. Enfase: kW = V × I × PF / 1000 (PF = effektfaktor). Trefase: kW = √3 × V × I × PF / 1000, V = linjespenning. Vår gratis Volt–kW kalkulator støtter alle tre moduser.",
+          "paragraph2": "DC har ikke effektfaktor; aktiv effekt = spenning × strøm. Enfase og trefase AC har ofte reaktive laster (motorer, ballaster), så bare en del av tilsynelatende effekt (VA) er aktiv (kW). Effektfaktoren (0–1) er den andelen. For trefase står √3 (≈1,732) for faserelasjonen mellom linjespenning og fasestørrelser. Vanlige spenninger: 120 V, 230 V, 240 V (enfase); 400 V, 480 V (trefase linje).",
+          "paragraph3": "Konverteringen brukes til å dimensionere generatorer og omformere, beregne last i kW fra målte V og A, prosjektere nett, velge sikringer og kabler og for energieffektvurderinger. Enten du jobber med batterier og DC-laster, bolig enfase eller industriell trefase, er omregning av volt og ampere til kilowatt grunnleggende for trygg og effektiv eldimensionering.",
+          "paragraph4": "Kalkulatoren lar deg velge DC, enfase eller trefase. Skriv inn spenning og strøm; for AC effektfaktor (standard 0,8). Resultat i kilowatt (kW). Ingen registrering.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "DC: 48 V, 20 A → kW = 48 × 20 / 1000 = 0,96 kW. Enfase: 230 V, 10 A, PF 0,8 → kW = 230 × 10 × 0,8 / 1000 = 1,84 kW. Trefase: 400 V, 15 A, PF 0,85 → kW = √3 × 400 × 15 × 0,85 / 1000 ≈ 8,83 kW."
+        },
+        "faq": {
+          "heading": "Vanlige spørsmål",
+          "items": [
+            {
+              "question": "Formel volt til kW (DC)?",
+              "answer": "DC: kW = V × I / 1000. V i volt, I i ampere. Del produktet på 1000. F.eks. 24 V × 50 A = 1200 W = 1,2 kW."
+            },
+            {
+              "question": "Formel for enfase AC?",
+              "answer": "Enfase AC: kW = V × I × PF / 1000. V (volt), I (ampere), PF effektfaktor (0–1). F.eks. 230 V, 10 A, PF 0,8 → 1,84 kW."
+            },
+            {
+              "question": "Formel for trefase AC?",
+              "answer": "Trefase AC: kW = √3 × V × I × PF / 1000. V = linjespenning (volt), I = linjestrøm (ampere), PF = effektfaktor. √3 ≈ 1,732. F.eks. 400 V, 20 A, PF 0,9 → ≈ 12,47 kW."
+            },
+            {
+              "question": "Når DC, enfase eller trefase?",
+              "answer": "DC: batterier, PV DC-kretser, DC-laster. Enfase: typisk bolig (120 V, 230 V, 240 V). Trefase: industriell fordelingsnett (400 V, 480 V linje), motorer."
+            },
+            {
+              "question": "Er kalkulatoren gratis?",
+              "answer": "Ja. Volt–kW kalkulatoren er gratis. Ingen registrering. Velg DC, enfase eller trefase, skriv inn spenning og strøm (og PF for AC) for øyeblikkelig kW."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte kalkulatorer",
+          "voltsToWatts": "Volt til Watt Kalkulator",
+          "voltsToWattsDesc": "Konverter spenning og strøm til watt (W)",
+          "ampsToWatts": "Ampere til Watt Kalkulator",
+          "ampsToWattsDesc": "Konverter ampere til watt med spenning",
+          "kwToAmps": "kW til Ampere Kalkulator",
+          "kwToAmpsDesc": "Konverter kilowatt til ampere med spenning",
+          "kwToVolts": "kW til Volt Kalkulator",
+          "kwToVoltsDesc": "Konverter kilowatt til spenning med strøm"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Ampere til Watt Kalkulator",
       "description": "Konverter ampere (A) til watt (W) umiddelbart og nøyaktig ved hjelp av spenning",

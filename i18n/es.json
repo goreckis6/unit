@@ -1290,6 +1290,71 @@
         }
       }
     },
+    "voltsToKw": {
+      "title": "Calculadora Voltios a Kilovatios",
+      "description": "Convierte tensión (V) y corriente (A) en potencia en kilovatios (kW) para DC, monofásico y trifásico",
+      "phaseType": "Tipo de sistema",
+      "directCurrent": "Corriente continua (DC)",
+      "singlePhase": "Monofásico",
+      "threePhase": "Trifásico",
+      "volts": "Tensión (V)",
+      "amps": "Amperios (A)",
+      "powerFactor": "Factor de potencia (0-1)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "kw": "Kilovatios (kW)",
+      "seo": {
+        "title": "Calculadora Voltios a Kilovatios - DC, Monofásico y Trifásico | V y A a kW",
+        "description": "Calculadora gratuita Voltios a kW. Convierte tensión (V) y corriente (A) en kilovatios (kW) para DC, monofásico y trifásico. Factor de potencia para AC. Para diseño eléctrico y dimensionado de cargas.",
+        "keywords": "calculadora voltios kilovatios, tensión kW, convertidor V kW, DC monofásico trifásico, factor de potencia, calculadora eléctrica, calculadora gratis",
+        "content": {
+          "heading": "Cómo convertir voltios a kilovatios",
+          "paragraph1": "Convertir tensión (V) y corriente (A) en potencia en kilovatios (kW) es esencial en electrotecnia. La fórmula depende del tipo: DC, AC monofásico o trifásico. DC: kW = V × I / 1000. Monofásico: kW = V × I × PF / 1000 (PF = factor de potencia). Trifásico: kW = √3 × V × I × PF / 1000, V = tensión entre fases. Nuestra calculadora gratuita Voltios a kW soporta los tres modos.",
+          "paragraph2": "El DC no tiene factor de potencia; potencia activa = tensión × corriente. En monofásico y trifásico AC, las cargas reactivas (motores, balastos) hacen que solo parte de la potencia aparente (VA) sea activa (kW). El factor de potencia (0–1) representa esa parte. En trifásico, √3 (≈1,732) refleja la relación entre tensión entre fases y magnitudes de fase. Tensiones habituales: 120 V, 230 V, 240 V (monofásico); 400 V, 480 V (trifásico entre fases).",
+          "paragraph3": "Esta conversión sirve para dimensionar generadores e inversores, calcular carga en kW a partir de V y A medidos, diseñar redes, elegir interruptores y cables y hacer auditorías energéticas. Tanto en baterías y cargas DC, instalación residencial monofásica o industria trifásica, convertir voltios y amperios en kilovatios es fundamental para un diseño seguro y eficiente.",
+          "paragraph4": "La calculadora permite elegir DC, monofásico o trifásico. Introducir tensión y corriente; para AC, factor de potencia (por defecto 0,8). Resultado en kilovatios (kW). Sin registro.",
+          "exampleHeading": "Ejemplo:",
+          "exampleText": "DC: 48 V, 20 A → kW = 48 × 20 / 1000 = 0,96 kW. Monofásico: 230 V, 10 A, PF 0,8 → kW = 230 × 10 × 0,8 / 1000 = 1,84 kW. Trifásico: 400 V, 15 A, PF 0,85 → kW = √3 × 400 × 15 × 0,85 / 1000 ≈ 8,83 kW."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            {
+              "question": "¿Fórmula voltios a kW (DC)?",
+              "answer": "DC: kW = V × I / 1000. V en voltios, I en amperios. Dividir el producto entre 1000. Ej.: 24 V × 50 A = 1200 W = 1,2 kW."
+            },
+            {
+              "question": "¿Fórmula para AC monofásico?",
+              "answer": "AC monofásico: kW = V × I × PF / 1000. V (voltios), I (amperios), PF factor de potencia (0–1). Ej.: 230 V, 10 A, PF 0,8 → 1,84 kW."
+            },
+            {
+              "question": "¿Fórmula para AC trifásico?",
+              "answer": "AC trifásico: kW = √3 × V × I × PF / 1000. V = tensión entre fases (voltios), I = corriente de línea (amperios), PF = factor de potencia. √3 ≈ 1,732. Ej.: 400 V, 20 A, PF 0,9 → ≈ 12,47 kW."
+            },
+            {
+              "question": "¿Cuándo DC, monofásico o trifásico?",
+              "answer": "DC: baterías, circuitos PV DC, cargas DC. Monofásico: residencial (120 V, 230 V, 240 V). Trifásico: distribución industrial y comercial (400 V, 480 V entre fases), motores."
+            },
+            {
+              "question": "¿La calculadora es gratuita?",
+              "answer": "Sí. La calculadora Voltios a kW es gratuita. Sin registro. Elegir DC, monofásico o trifásico, introducir tensión y corriente (y PF para AC) para obtener kW."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "voltsToWatts": "Calculadora Voltios a Vatios",
+          "voltsToWattsDesc": "Convertir tensión y corriente en vatios (W)",
+          "ampsToWatts": "Calculadora Amperios a Vatios",
+          "ampsToWattsDesc": "Convertir amperios a vatios con tensión",
+          "kwToAmps": "Calculadora kW a Amperios",
+          "kwToAmpsDesc": "Convertir kilovatios a amperios con tensión",
+          "kwToVolts": "Calculadora kW a Voltios",
+          "kwToVoltsDesc": "Convertir kilovatios a tensión con corriente"
+        }
+      }
+    },
     "ampsToWatts": {
       "title": "Calculadora Amperios a Vatios",
       "description": "Convierta amperios (A) a vatios (W) instantáneamente y con precisión usando voltaje",

@@ -201,10 +201,22 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       path: '/calculators/electric/amps-to-watts',
     },
     {
+      id: 'watts-to-amps',
+      titleKey: 'wattsToAmps.title',
+      descKey: 'wattsToAmps.description',
+      path: '/calculators/electric/watts-to-amps',
+    },
+    {
       id: 'electron-volts-to-volts',
       titleKey: 'electronVoltsToVolts.title',
       descKey: 'electronVoltsToVolts.description',
       path: '/calculators/electric/electron-volts-to-volts',
+    },
+    {
+      id: 'volts-to-electron-volts',
+      titleKey: 'voltsToElectronVolts.title',
+      descKey: 'voltsToElectronVolts.description',
+      path: '/calculators/electric/volts-to-electron-volts',
     },
     {
       id: 'joules-to-watts',

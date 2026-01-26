@@ -73,6 +73,7 @@ export default async function WattsToKvaPage({ params }: { params: Promise<{ loc
   // Get SEO content translations
   const tSeo = await getTranslations({ locale, namespace: 'calculators.wattsToKva.seo.content' });
   const tFaq = await getTranslations({ locale, namespace: 'calculators.wattsToKva.seo.faq' });
+  const tRelated = await getTranslations({ locale, namespace: 'calculators.wattsToKva.seo.related' });
 
   return (
     <>
@@ -133,6 +134,31 @@ export default async function WattsToKvaPage({ params }: { params: Promise<{ loc
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Related Calculators Section */}
+      <div className="related-calculators-section">
+        <div className="related-content-card">
+          <h2 className="related-heading">{tRelated('heading')}</h2>
+          <div className="related-grid">
+            <Link href="/calculators/electric/kva-to-watts" className="related-card">
+              <h3 className="related-title">{tRelated('kvaToWatts')}</h3>
+              <p className="related-desc">{tRelated('kvaToWattsDesc')}</p>
+            </Link>
+            <Link href="/calculators/electric/watts-to-va" className="related-card">
+              <h3 className="related-title">{tRelated('wattsToVa')}</h3>
+              <p className="related-desc">{tRelated('wattsToVaDesc')}</p>
+            </Link>
+            <Link href="/calculators/electric/kw-to-kva" className="related-card">
+              <h3 className="related-title">{tRelated('kwToKva')}</h3>
+              <p className="related-desc">{tRelated('kwToKvaDesc')}</p>
+            </Link>
+            <Link href="/calculators/electric/va-to-kva" className="related-card">
+              <h3 className="related-title">{tRelated('vaToKva')}</h3>
+              <p className="related-desc">{tRelated('vaToKvaDesc')}</p>
+            </Link>
           </div>
         </div>
       </div>

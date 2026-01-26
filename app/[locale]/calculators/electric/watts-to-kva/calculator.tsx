@@ -37,7 +37,7 @@ export function WattsToKvaCalculator() {
         <div className="inputs-grid">
           <div className="input-card">
             <label htmlFor="watts" className="input-label">
-              Watts (W)
+              {t('watts')}
             </label>
             <div className="input-with-unit">
               <input
@@ -54,7 +54,7 @@ export function WattsToKvaCalculator() {
 
           <div className="input-card">
             <label htmlFor="powerFactor" className="input-label">
-              Power Factor (0-1)
+              {t('powerFactor')}
             </label>
             <div className="input-with-unit">
               <input
@@ -76,10 +76,10 @@ export function WattsToKvaCalculator() {
 
       <div className="action-buttons">
         <button onClick={handleCalculate} className="btn btn-primary">
-          Calculate
+          {t('calculate')}
         </button>
         <button onClick={handleReset} className="btn btn-secondary">
-          Reset
+          {t('reset')}
         </button>
       </div>
 
@@ -87,12 +87,12 @@ export function WattsToKvaCalculator() {
         <div className="result-section">
           <div className="result-header">
             <div className="result-badge">
-              Result
+              {t('result')}
             </div>
           </div>
           <div className="result-display">
             <div className="result-item">
-              <div className="result-label">kVA</div>
+              <div className="result-label">{t('kva')}</div>
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">kVA</span>

@@ -6,7 +6,12 @@ import { BackButton } from '@/components/BackButton';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'notFound' });
+  let t;
+  try {
+    t = await getTranslations({ locale, namespace: 'notFound' });
+  } catch {
+    t = await getTranslations({ locale: 'en', namespace: 'notFound' });
+  }
   
   return {
     title: t('title'),
@@ -15,7 +20,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function NotFound({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'notFound' });
+  let t;
+  try {
+    t = await getTranslations({ locale, namespace: 'notFound' });
+  } catch {
+    t = await getTranslations({ locale: 'en', namespace: 'notFound' });
+  }
 
   return (
     <div className="not-found-page">

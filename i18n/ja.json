@@ -1796,10 +1796,14 @@
           "joulesToVoltsDesc": "エネルギーと電荷を電圧に変換",
           "joulesToWatts": "ジュールからワット計算機",
           "joulesToWattsDesc": "時間を使用してエネルギーを電力に変換",
+          "kwToKwh": "kWからkWh計算機",
+          "kwToKwhDesc": "時間を使用して電力からエネルギーに変換",
           "electronVoltsToVolts": "電子ボルトからボルト計算機",
           "electronVoltsToVoltsDesc": "電子ボルトをボルトに変換",
           "voltsToWatts": "ボルトからワット計算機",
-          "voltsToWattsDesc": "電圧と電流を電力に変換"
+          "voltsToWattsDesc": "電圧と電流を電力に変換",
+          "voltsToJoules": "ボルト・ジュール計算機",
+          "voltsToJoulesDesc": "電圧と電荷をエネルギーに変換"
         }
       }
     },
@@ -1864,6 +1868,174 @@
           "wattsToJoulesDesc": "時間を秒単位で使用して電力からエネルギーに変換",
           "wattsToAmps": "ワットからアンペア計算機",
           "wattsToAmpsDesc": "電圧を使用して電力から電流に変換"
+        }
+      }
+    },
+    "electronVoltsToVolts": {
+      "title": "電子ボルトからボルト計算機",
+      "description": "電子ボルト（eV）をボルト（V）に瞬時に正確に変換",
+      "electronVolts": "電子ボルト（eV）",
+      "calculate": "計算",
+      "reset": "リセット",
+      "result": "結果",
+      "seo": {
+        "title": "Electron-volts to Volts Calculator - Convert Energy to Voltage Online",
+        "description": "Free Electron-volts to Volts conversion calculator. Convert electron-volts (eV) to volts (V) instantly and accurately. Perfect for physics calculations, particle physics, and energy-to-voltage conversions.",
+        "keywords": "electron volts to volts calculator, ev to volts converter, electron volts volts conversion, energy voltage calculator, physics calculator, electron volt calculator, free calculator",
+        "content": {
+          "heading": "How to Convert Electron-volts to Volts",
+          "paragraph1": "Converting electron-volts (eV) to volts (V) is a fundamental conversion in physics, particularly in particle physics, atomic physics, and electronics. An electron-volt is a unit of energy equal to the amount of kinetic energy gained by a single electron when it accelerates through an electric potential difference of one volt. This makes the conversion straightforward: 1 eV = 1 V for a single electron. Our free Electron-volts to Volts conversion calculator makes this process quick and easy, providing instant and accurate results for your physics calculations.",
+          "paragraph2": "The conversion formula is: V = eV, where V is the voltage in volts and eV is the energy in electron-volts. This direct 1:1 relationship exists because the electron-volt is defined as the energy gained by an electron when it moves through a potential difference of one volt. The electron-volt is a convenient unit for expressing energies on the atomic and subatomic scale, commonly used in particle physics, atomic physics, and semiconductor physics.",
+          "paragraph3": "This conversion is commonly used in various applications: particle accelerator physics, semiconductor device physics, atomic and molecular physics, X-ray and gamma-ray energy measurements, electron microscopy, plasma physics, and quantum mechanics calculations. Understanding the relationship between electron-volts and volts helps physicists, engineers, and researchers work with energy scales from atomic transitions to high-energy particle collisions.",
+          "paragraph4": "Our calculator takes electron-volts as input and provides the equivalent voltage in volts. The calculator handles both small values (common in atomic physics) and large values (common in particle physics). Whether you're working with atomic energy levels, particle accelerators, semiconductor band gaps, or any physics application involving electron energies, our Electron-volts to Volts calculator provides accurate, instant conversions.",
+          "exampleHeading": "Example:",
+          "exampleText": "If you have an energy of 1 electron-volt, the equivalent voltage is: V = 1 eV = 1 V. For 10 electron-volts: V = 10 eV = 10 V. For 1000 electron-volts (1 keV): V = 1000 eV = 1000 V. For 1 million electron-volts (1 MeV): V = 1,000,000 eV = 1,000,000 V."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula for converting electron-volts to volts?",
+              "answer": "The formula for converting electron-volts (eV) to volts (V) is: V = eV. This is a direct 1:1 conversion because the electron-volt is defined as the energy gained by an electron when it accelerates through a potential difference of one volt."
+            },
+            {
+              "question": "What is an electron-volt?",
+              "answer": "An electron-volt (eV) is a unit of energy equal to approximately 1.602 × 10^-19 joules. It is defined as the amount of kinetic energy gained by a single electron when it accelerates through an electric potential difference of one volt. The electron-volt is commonly used in atomic, nuclear, and particle physics."
+            },
+            {
+              "question": "Why is the conversion from electron-volts to volts 1:1?",
+              "answer": "The conversion is 1:1 because the electron-volt is specifically defined as the energy gained by an electron when it moves through a potential difference of one volt. Therefore, 1 eV of energy corresponds exactly to 1 V of potential difference for a single electron."
+            },
+            {
+              "question": "What are common electron-volt values in physics?",
+              "answer": "Common electron-volt values range from millielectron-volts (meV) for atomic transitions, to electron-volts (eV) for chemical bonds and visible light photons, to kiloelectron-volts (keV) for X-rays, to megaelectron-volts (MeV) for nuclear reactions, to gigaelectron-volts (GeV) and teraelectron-volts (TeV) for high-energy particle physics."
+            },
+            {
+              "question": "Can I use this calculator for multiple electrons?",
+              "answer": "This calculator provides the voltage equivalent for a single electron. For multiple electrons, the total energy would be the number of electrons multiplied by the electron-volt value, but the voltage relationship remains 1 eV = 1 V per electron."
+            },
+            {
+              "question": "Is this calculator free to use?",
+              "answer": "Yes, our Electron-volts to Volts calculator is completely free to use. No registration or payment is required. Simply enter your electron-volt value and get instant, accurate voltage conversion results."
+            }
+          ]
+        }
+      }
+    },
+    "voltsToElectronVolts": {
+      "title": "ボルトから電子ボルト計算機",
+      "description": "電圧（V）を電子ボルト（eV）のエネルギーに瞬時に変換（単一電子で1:1）",
+      "volts": "電圧（V）",
+      "calculate": "計算",
+      "reset": "リセット",
+      "result": "結果",
+      "electronVolts": "電子ボルト（eV）",
+      "seo": {
+        "title": "Volts to Electron-Volts Calculator - Convert Voltage to Energy Online",
+        "description": "Free Volts to Electron-Volts calculator. Convert voltage (V) to energy in electron-volts (eV) instantly. 1 V = 1 eV for a single electron. Perfect for particle physics, atomic physics, and semiconductor physics.",
+        "keywords": "volts to electron volts calculator, V to eV converter, voltage electron volt conversion, physics calculator, particle physics, free calculator",
+        "content": {
+          "heading": "How to Convert Volts to Electron-Volts",
+          "paragraph1": "Converting voltage (V) to energy in electron-volts (eV) is a fundamental conversion in physics, especially in particle physics, atomic physics, and electronics. For a single electron, the relationship is 1:1: an electron accelerated through a potential difference of 1 volt gains 1 electron-volt of kinetic energy. Thus eV = V for one electron. Our free Volts to Electron-Volts calculator provides instant, accurate results for your physics calculations.",
+          "paragraph2": "The conversion formula is: eV = V, where eV is the energy in electron-volts and V is the voltage in volts. This direct 1:1 relationship holds because the electron-volt is defined as the energy gained by one electron when it moves through a potential difference of one volt. The electron-volt is a convenient unit for atomic and subatomic energy scales, commonly used in particle physics, atomic physics, and semiconductor physics.",
+          "paragraph3": "This conversion is used in: particle accelerator physics, semiconductor device physics, atomic and molecular physics, X-ray and gamma-ray energy measurements, electron microscopy, plasma physics, and quantum mechanics. Understanding the link between volts and electron-volts helps physicists and engineers work with energy scales from atomic transitions to high-energy particle collisions.",
+          "paragraph4": "Our calculator takes voltage (V) as input and returns the equivalent energy in electron-volts (eV). It handles both small values (atomic physics) and large values (particle physics). No registration required. Whether you work with band gaps, accelerators, or photon energies, the Volts to Electron-Volts calculator delivers accurate, instant conversions.",
+          "exampleHeading": "Example:",
+          "exampleText": "1 V → eV = 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1,000,000 V (1 MV) → 1,000,000 eV (1 MeV)."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula for converting volts to electron-volts?",
+              "answer": "For a single electron: eV = V. The energy in electron-volts equals the voltage in volts. This is a direct 1:1 conversion because the electron-volt is defined as the energy gained by one electron when accelerated through 1 volt."
+            },
+            {
+              "question": "Why is 1 V equal to 1 eV?",
+              "answer": "Because an electron-volt is defined as the energy gained by one electron when it moves through a potential difference of 1 volt. That is exactly 1 eV for 1 V, for a single electron."
+            },
+            {
+              "question": "Is this conversion valid for multiple electrons?",
+              "answer": "This conversion is for a single electron. If multiple electrons are involved, total energy equals the number of electrons times the electron-volt value, but the voltage per electron remains 1 V = 1 eV."
+            },
+            {
+              "question": "Where is this conversion used?",
+              "answer": "It is used in particle physics, atomic physics, semiconductor physics, electron microscopy, plasma physics, and anywhere energy scales are expressed in electron-volts."
+            },
+            {
+              "question": "Can I convert eV back to volts?",
+              "answer": "Yes. For a single electron, volts to electron-volts and electron-volts to volts are inverse operations, and both are 1:1 conversions."
+            },
+            {
+              "question": "Is this calculator free to use?",
+              "answer": "Yes, our Volts to Electron-Volts calculator is completely free. No registration required."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "electronVoltsToVolts": "Electron-Volts to Volts Calculator",
+          "electronVoltsToVoltsDesc": "Convert electron-volts to volts",
+          "joulesToVolts": "Joules to Volts Calculator",
+          "joulesToVoltsDesc": "Convert energy and charge to voltage",
+          "voltsToJoules": "Volts to Joules Calculator",
+          "voltsToJoulesDesc": "Convert voltage and charge to energy"
+        }
+      }
+    },
+    "joulesToVolts": {
+      "title": "ジュールからボルト計算機",
+      "description": "電荷を使用してジュール（J）をボルト（V）に瞬時に正確に変換",
+      "joules": "ジュール（J）",
+      "coulombs": "電荷（クーロン）",
+      "calculate": "計算",
+      "reset": "リセット",
+      "result": "結果",
+      "seo": {
+        "title": "Joules to Volts Calculator – Calculate Voltage from Energy and Charge",
+        "description": "Free Joules to Volts conversion calculator. Convert joules (J) to volts (V) instantly and accurately using electric charge. Perfect for physics calculations, energy-to-voltage conversions, and electrical engineering.",
+        "keywords": "joules to volts calculator, j to v converter, joules volts conversion, energy voltage calculator, physics calculator, joules calculator, free calculator",
+        "content": {
+          "heading": "How to Convert Joules to Volts",
+          "paragraph1": "Converting joules (J) to volts (V) is a fundamental calculation in physics and electrical engineering. Joules represent energy, while volts represent electric potential or voltage. The conversion requires knowledge of electric charge (in coulombs), as voltage is energy divided by charge. Our free Joules to Volts conversion calculator makes this process quick and easy, providing instant and accurate results for your physics and engineering calculations.",
+          "paragraph2": "The conversion formula is: V = J / C, where V is the voltage in volts, J is the energy in joules, and C is the electric charge in coulombs. This formula directly relates energy and voltage through electric charge. One volt is defined as one joule per coulomb (1 V = 1 J/C). This means that if 1 joule of energy is associated with 1 coulomb of charge, the voltage is 1 volt.",
+          "paragraph3": "This conversion is commonly used in various applications: calculating voltage in capacitors and batteries, understanding energy storage in electrical systems, designing electrical circuits and power systems, analyzing battery capacity and energy density, working with electrochemical systems, and performing physics calculations involving energy, charge, and voltage. Knowing how to convert Joules to Volts helps you understand the relationship between energy storage and voltage in electrical systems.",
+          "paragraph4": "Our calculator takes the joules and electric charge (in coulombs) as inputs, automatically applies the conversion formula, and provides the result in volts. The calculator handles both small values (common in electronics) and large values (common in power systems). Whether you're working with capacitors, batteries, electrochemical cells, or any device that stores electrical energy, our Joules to Volts calculator provides accurate, instant conversions.",
+          "exampleHeading": "Example:",
+          "exampleText": "If a capacitor stores 10 joules of energy with a charge of 2 coulombs, the voltage would be: V = 10 J / 2 C = 5 V. For a battery storing 100 joules with 5 coulombs of charge: V = 100 J / 5 C = 20 V. For a system with 50 joules and 10 coulombs: V = 50 J / 10 C = 5 V. For a device with 1000 joules and 100 coulombs: V = 1000 J / 100 C = 10 V."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert joules to volts?",
+              "answer": "The formula to convert joules (J) to volts (V) is: V = J / C, where V is the voltage in volts, J is the energy in joules, and C is the electric charge in coulombs. One volt is equal to one joule per coulomb (1 V = 1 J/C)."
+            },
+            {
+              "question": "What is a joule?",
+              "answer": "A joule (J) is the SI unit of energy. It is defined as the amount of work done when a force of one newton moves an object one meter in the direction of the force. One joule is also equal to one watt-second, meaning one watt of power for one second."
+            },
+            {
+              "question": "What is a volt?",
+              "answer": "A volt (V) is the SI unit of electric potential, voltage, or electromotive force. It is defined as one joule per coulomb (1 V = 1 J/C). Voltage represents the electric potential difference between two points in an electrical circuit."
+            },
+            {
+              "question": "Why do I need electric charge to convert joules to volts?",
+              "answer": "Voltage is the electric potential energy per unit charge, which means it depends on both energy and charge. To convert joules (energy) to volts (voltage), you need to know the electric charge (in coulombs) associated with that energy. The formula V = J / C shows that voltage equals energy divided by charge."
+            },
+            {
+              "question": "What is a coulomb?",
+              "answer": "A coulomb (C) is the SI unit of electric charge. It is defined as the amount of charge transported by a constant current of one ampere in one second. One coulomb is approximately equal to 6.242 × 10^18 elementary charges (electrons or protons)."
+            },
+            {
+              "question": "Can I convert volts to joules?",
+              "answer": "Yes, you can convert volts to joules using the formula: J = V × C, where J is energy in joules, V is voltage in volts, and C is charge in coulombs. This is the reverse of converting joules to volts. For example, a 12-volt battery with 10 coulombs of charge stores 12 V × 10 C = 120 joules of energy."
+            },
+            {
+              "question": "Is this calculator free to use?",
+              "answer": "Yes, our Joules to Volts calculator is completely free to use. No registration or payment is required. Simply enter your joules and charge values and get instant, accurate voltage conversion results."
+            }
+          ]
         }
       }
     },

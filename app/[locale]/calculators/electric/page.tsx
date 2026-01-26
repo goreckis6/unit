@@ -225,6 +225,12 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       path: '/calculators/electric/joules-to-watts',
     },
     {
+      id: 'watts-to-joules',
+      titleKey: 'wattsToJoules.title',
+      descKey: 'wattsToJoules.description',
+      path: '/calculators/electric/watts-to-joules',
+    },
+    {
       id: 'joules-to-volts',
       titleKey: 'joulesToVolts.title',
       descKey: 'joulesToVolts.description',

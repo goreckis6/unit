@@ -1,4 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
+import type { AbstractIntlMessages } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
@@ -15,7 +16,7 @@ export async function generateMetadata() {
 
 export default async function NotFound() {
   const t = await getTranslations({ locale: 'en', namespace: 'notFound' });
-  const messages = (await import('@/i18n/en.json')).default;
+  const messages = (await import('@/i18n/en.json')).default as AbstractIntlMessages;
 
   return (
     <NextIntlClientProvider locale="en" messages={messages}>

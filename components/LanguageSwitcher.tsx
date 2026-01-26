@@ -249,7 +249,15 @@ export function LanguageSwitcher() {
   }, []);
 
   const handleLanguageChange = (newLocale: string) => {
-    const nextPath = pathname || '/';
+    const normalizedPath = pathname || '/';
+    const matchedLocale = routing.locales.find((loc) => {
+      const prefix = `/${loc}`;
+      return normalizedPath === prefix || normalizedPath.startsWith(`${prefix}/`);
+    });
+    const basePath = matchedLocale
+      ? normalizedPath.replace(new RegExp(`^/${matchedLocale}(?=/|$)`), '')
+      : normalizedPath;
+    const nextPath = basePath || '/';
     router.replace(nextPath, { locale: newLocale });
     setIsOpen(false);
   };

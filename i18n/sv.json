@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Watt till VA-kalkylator",
+      "description": "Konvertera watt (W) till volt-ampere (VA) omedelbart och exakt med hjälp av effektfaktorn",
+      "watts": "Watt (W)",
+      "powerFactor": "Effektfaktor (0–1)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "va": "Volt-ampere (VA)",
+      "seo": {
+        "title": "Watt till VA-kalkylator - Konvertera Effekt till Skenbar Effekt Online Gratis",
+        "description": "Gratis watt till VA omvandlingskalkylator. Konvertera watt (W) till volt-ampere (VA) omedelbart och exakt med hjälp av effektfaktorn. Perfekt för elektriska beräkningar, UPS-dimensionering och effektsystemdesign.",
+        "keywords": "watt va kalkylator, w va omvandlare, watt va omvandling, effektfaktor kalkylator, elkalkylator, va kalkylator, skenbar effekt kalkylator, gratis kalkylator",
+        "content": {
+          "heading": "Hur man konverterar Watt till VA",
+          "paragraph1": "Att konvertera watt (W) till volt-ampere (VA) är väsentligt inom elektroteknik och effektsystem. Watt representerar aktiv effekt, medan VA representerar skenbar effekt. Omvandlingen kräver kunskap om effektfaktorn (PF), som är förhållandet mellan aktiv effekt och skenbar effekt. Vår gratis watt till VA omvandlingskalkylator gör denna process snabb och enkel, med omedelbara och exakta resultat för dina elektriska beräkningar.",
+          "paragraph2": "Omvandlingsformeln är: VA = W / PF, där W är effekten i watt, PF är effektfaktorn (ett värde mellan 0 och 1), och VA är skenbar effekt i volt-ampere. Effektfaktorn indikerar hur effektivt elektrisk energi används. En effektfaktor på 1.0 (eller 100%) betyder att all effekt används effektivt, medan lägre värden indikerar att en del av effekten slösas bort. Till exempel svarar 4000 watt vid en effektfaktor på 0.8 mot 5000 VA skenbar effekt.",
+          "paragraph3": "Denna omvandling används ofta i olika applikationer: dimensionering av UPS-system och omvandlare, beräkning av transformatorkrav, design av kraftdistributionssystem, förståelse av elektriska lastkarakteristika, dimensionering av backup-effektsystem och arbete med industriella och kommersiella elektriska system. Att veta hur man konverterar Watt till VA hjälper dig att fatta välgrundade beslut om design av elektriska system, utrustningsval och energihantering, särskilt när du arbetar med UPS-system och strömförsörjningar.",
+          "paragraph4": "Vår kalkylator tar watt och effektfaktor som indata, tillämpar automatiskt omvandlingsformeln och ger resultatet i volt-ampere. Kalkylatorn hanterar både små värden (vanliga i elektronik) och stora värden (vanliga i effektsystem). Oavsett om du arbetar med UPS-system, transformatorer, motorer, kraftdistributionssystem eller elektrisk utrustning, ger vår watt till VA kalkylator exakta, omedelbara omvandlingar.",
+          "exampleHeading": "Exempel:",
+          "exampleText": "Om du har en enhet som förbrukar 4000 watt med en effektfaktor på 0.8, skulle skenbar effekt i VA vara: VA = 4000 W / 0.8 = 5000 VA. För en enhet med 9000 watt vid en effektfaktor på 0.9: VA = 9000 W / 0.9 = 10.000 VA. För en enhet med 2400 watt vid en effektfaktor på 0.85: VA = 2400 W / 0.85 = 2823.53 VA. För en enhet med 5000 watt vid en effektfaktor på 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är formeln för att konvertera watt till VA?",
+              "answer": "Formeln för att konvertera watt (W) till volt-ampere (VA) är: VA = W / PF, där W är effekten i watt, PF är effektfaktorn (ett värde mellan 0 och 1), och VA är skenbar effekt i volt-ampere. Denna formel visar att skenbar effekt är lika med aktiv effekt dividerat med effektfaktor."
+            },
+            {
+              "question": "Vad är effektfaktor?",
+              "answer": "Effektfaktor (PF) är förhållandet mellan aktiv effekt (watt) och skenbar effekt (VA). Den indikerar hur effektivt elektrisk energi används. En effektfaktor på 1.0 (eller 100%) betyder att all effekt används effektivt, medan lägre värden indikerar att en del av effekten slösas bort. Typiska effektfaktorer ligger mellan 0.8 och 1.0."
+            },
+            {
+              "question": "Vad är skillnaden mellan watt och VA?",
+              "answer": "Watt (W) mäter aktiv effekt — den faktiska effekt som förbrukas och omvandlas till användbart arbete. VA (volt-ampere) mäter skenbar effekt — den totala effekten i ett AC-krets, inklusive både aktiva och reaktiva komponenter. Förhållandet är: VA = W / PF. För resistiva belastningar (som värmare) är watt och VA lika (PF = 1.0). För reaktiva belastningar (som motorer) är VA högre än watt."
+            },
+            {
+              "question": "Varför är VA viktigt för UPS-dimensionering?",
+              "answer": "UPS-system är typiskt bedömda i VA (skenbar effekt) snarare än watt (aktiv effekt). För att korrekt dimensionera en UPS måste du känna skenbar effektkravet. Om din utrustning till exempel förbrukar 4000 watt vid en effektfaktor på 0.8, behöver du en UPS bedömd till minst 5000 VA (4000 / 0.8 = 5000 VA). Detta säkerställer att UPS:en kan hantera både aktiva och reaktiva effektkomponenter."
+            },
+            {
+              "question": "Vad är ett typiskt effektfaktorvärde?",
+              "answer": "Typiska effektfaktorvärden varierar från 0.8 till 1.0. De flesta elektriska system har en effektfaktor mellan 0.85 och 0.95. Bostadslaster har vanligtvis en effektfaktor runt 0.9, medan industriella laster (särskilt de med motorer) kan ha lägre effektfaktorer, ofta mellan 0.7 och 0.85."
+            },
+            {
+              "question": "Är denna kalkylator gratis att använda?",
+              "answer": "Ja, vår watt till VA kalkylator är helt gratis. Ingen registrering eller betalning krävs. Ange helt enkelt dina watt- och effektfaktorvärden och få omedelbara, exakta VA-omvandlingsresultat."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "vaToWatts": "VA till Watt-kalkylator",
+          "vaToWattsDesc": "Konvertera volt-ampere till watt med effektfaktor",
+          "wattsToKva": "Watt till kVA-kalkylator",
+          "wattsToKvaDesc": "Konvertera watt till kilovolt-ampere med effektfaktor",
+          "kwToVa": "kW till VA-kalkylator",
+          "kwToVaDesc": "Konvertera kilowatt till volt-ampere omedelbart",
+          "vaToKva": "VA till kVA-kalkylator",
+          "vaToKvaDesc": "Konvertera volt-ampere till kilovolt-ampere omedelbart"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "kVA till Ampere Kalkylator",
       "description": "Konvertera kilovolt-ampere (kVA) till ampere (A) omedelbart och exakt för enfas- och trefas system",
@@ -567,7 +631,7 @@
       "result": "Resultat",
       "voltage": "Spänning",
       "seo": {
-        "title": "kW till Volt Kalkylator - Konvertera Kilowatt till Volt Online",
+        "title": "kW till Volt Kalkylator – Beräkna Spänning från Effekt och Ström",
         "description": "Gratis kW till Volt konverteringskalkylator för DC-, enfas- och trefassystem. Konvertera kilowatt till volt omedelbart med ström och effektfaktor (endast AC). Perfekt för elektrisk design och spänningsberäkningar.",
         "keywords": "kw volt kalkylator, kilowatt volt konverter, kw volt konvertering, effekt spänning kalkylator, elektrisk kalkylator, volt kalkylator, dc kalkylator, enfas trefas, gratis",
         "content": {

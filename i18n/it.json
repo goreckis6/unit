@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Calcolatrice Watt a VA",
+      "description": "Converti watt (W) in voltampere (VA) istantaneamente e accuratamente usando il fattore di potenza",
+      "watts": "Watt (W)",
+      "powerFactor": "Fattore di Potenza (0-1)",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "va": "Voltampere (VA)",
+      "seo": {
+        "title": "Calcolatrice Watt a VA - Converti Potenza in Potenza Apparente Online Gratis",
+        "description": "Calcolatrice gratuita di conversione Watt a VA. Converti watt (W) in voltampere (VA) istantaneamente e accuratamente usando il fattore di potenza. Perfetto per calcoli elettrici, dimensionamento UPS e progettazione di sistemi di alimentazione.",
+        "keywords": "calcolatrice watt va, convertitore w va, conversione watt va, calcolatrice fattore di potenza, calcolatrice elettrica, calcolatrice va, calcolatrice potenza apparente, calcolatrice gratuita",
+        "content": {
+          "heading": "Come Convertire Watt in VA",
+          "paragraph1": "Convertire watt (W) in voltampere (VA) è essenziale in ingegneria elettrica e sistemi di alimentazione. I watt rappresentano la potenza reale (potenza attiva), mentre VA rappresenta la potenza apparente. La conversione richiede la conoscenza del fattore di potenza (PF), che è il rapporto tra potenza reale e potenza apparente. La nostra calcolatrice gratuita di conversione Watt a VA rende questo processo veloce e facile, fornendo risultati istantanei e accurati per i tuoi calcoli elettrici.",
+          "paragraph2": "La formula di conversione è: VA = W / PF, dove W è la potenza in watt, PF è il fattore di potenza (un valore tra 0 e 1), e VA è la potenza apparente in voltampere. Il fattore di potenza indica quanto efficientemente viene utilizzata l'energia elettrica. Un fattore di potenza di 1.0 (o 100%) significa che tutta la potenza viene utilizzata efficacemente, mentre valori più bassi indicano che parte della potenza viene sprecata. Ad esempio, 4000 watt con un fattore di potenza di 0.8 equivalgono a 5000 VA di potenza apparente.",
+          "paragraph3": "Questa conversione è comunemente usata in varie applicazioni: dimensionamento di sistemi UPS e inverter, calcolo dei requisiti dei trasformatori, progettazione di sistemi di distribuzione dell'energia, comprensione delle caratteristiche del carico elettrico, dimensionamento di sistemi di alimentazione di backup, e lavoro con sistemi elettrici industriali e commerciali. Sapere come convertire Watt in VA aiuta a prendere decisioni informate sulla progettazione di sistemi elettrici, selezione delle apparecchiature e gestione dell'energia, specialmente quando si lavora con sistemi UPS e alimentatori.",
+          "paragraph4": "La nostra calcolatrice prende watt e fattore di potenza come input, applica automaticamente la formula di conversione e fornisce il risultato in voltampere. La calcolatrice gestisce sia valori piccoli (comuni in elettronica) che valori grandi (comuni nei sistemi di alimentazione). Che tu stia lavorando con sistemi UPS, trasformatori, motori, sistemi di distribuzione dell'energia o qualsiasi apparecchiatura elettrica, la nostra calcolatrice Watt a VA fornisce conversioni accurate e istantanee.",
+          "exampleHeading": "Esempio:",
+          "exampleText": "Se hai un dispositivo che consuma 4000 watt con un fattore di potenza di 0.8, la potenza apparente in VA sarebbe: VA = 4000 W / 0.8 = 5000 VA. Per un dispositivo con 9000 watt a un fattore di potenza di 0.9: VA = 9000 W / 0.9 = 10.000 VA. Per un dispositivo con 2400 watt a un fattore di potenza di 0.85: VA = 2400 W / 0.85 = 2823.53 VA. Per un dispositivo con 5000 watt a un fattore di potenza di 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Domande Frequenti",
+          "items": [
+            {
+              "question": "Qual è la formula per convertire watt in VA?",
+              "answer": "La formula per convertire watt (W) in voltampere (VA) è: VA = W / PF, dove W è la potenza in watt, PF è il fattore di potenza (un valore tra 0 e 1), e VA è la potenza apparente in voltampere. Questa formula mostra che la potenza apparente è uguale alla potenza reale divisa per il fattore di potenza."
+            },
+            {
+              "question": "Cos'è il fattore di potenza?",
+              "answer": "Il fattore di potenza (PF) è il rapporto tra potenza reale (watt) e potenza apparente (VA). Indica quanto efficientemente viene utilizzata l'energia elettrica. Un fattore di potenza di 1.0 (o 100%) significa che tutta la potenza viene utilizzata efficacemente, mentre valori più bassi indicano che parte della potenza viene sprecata. I fattori di potenza tipici vanno da 0.8 a 1.0."
+            },
+            {
+              "question": "Qual è la differenza tra watt e VA?",
+              "answer": "I watt (W) misurano la potenza reale — la potenza effettivamente consumata e convertita in lavoro utile. I VA (voltampere) misurano la potenza apparente — la potenza totale in un circuito AC, inclusi componenti sia reali che reattivi. La relazione è: VA = W / PF. Per carichi resistivi (come riscaldatori), watt e VA sono uguali (PF = 1.0). Per carichi reattivi (come motori), VA è maggiore dei watt."
+            },
+            {
+              "question": "Perché VA è importante per il dimensionamento UPS?",
+              "answer": "I sistemi UPS sono tipicamente classificati in VA (potenza apparente) piuttosto che in watt (potenza reale). Per dimensionare correttamente un UPS, è necessario conoscere il requisito di potenza apparente. Ad esempio, se la tua apparecchiatura consuma 4000 watt con un fattore di potenza di 0.8, hai bisogno di un UPS classificato almeno a 5000 VA (4000 / 0.8 = 5000 VA). Questo garantisce che l'UPS possa gestire sia i componenti di potenza reale che reattiva."
+            },
+            {
+              "question": "Qual è un valore tipico del fattore di potenza?",
+              "answer": "I valori tipici del fattore di potenza vanno da 0.8 a 1.0. La maggior parte dei sistemi elettrici ha un fattore di potenza tra 0.85 e 0.95. I carichi residenziali tipicamente hanno un fattore di potenza intorno a 0.9, mentre i carichi industriali (specialmente quelli con motori) possono avere fattori di potenza più bassi, spesso tra 0.7 e 0.85."
+            },
+            {
+              "question": "Questa calcolatrice è gratuita?",
+              "answer": "Sì, la nostra calcolatrice Watt a VA è completamente gratuita. Nessuna registrazione o pagamento richiesto. Inserisci semplicemente i tuoi valori di watt e fattore di potenza e ottieni risultati di conversione VA istantanei e accurati."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatrici Correlate",
+          "vaToWatts": "Calcolatrice VA a Watt",
+          "vaToWattsDesc": "Converti voltampere in watt con fattore di potenza",
+          "wattsToKva": "Calcolatrice Watt a kVA",
+          "wattsToKvaDesc": "Converti watt in kilovoltampere con fattore di potenza",
+          "kwToVa": "Calcolatrice kW a VA",
+          "kwToVaDesc": "Converti kilowatt in voltampere istantaneamente",
+          "vaToKva": "Calcolatrice VA a kVA",
+          "vaToKvaDesc": "Converti voltampere in kilovoltampere istantaneamente"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "Calcolatrice kVA ad Ampere",
       "description": "Converti chilovolt-ampere (kVA) in ampere (A) istantaneamente e accuratamente per sistemi monofase e trifase",
@@ -567,7 +631,7 @@
       "result": "Risultato",
       "voltage": "Tensione",
       "seo": {
-        "title": "Calcolatrice kW in Volt - Converti Chilowatt in Volt online",
+        "title": "Calcolatrice kW in Volt – Calcola la Tensione da Potenza e Corrente",
         "description": "Calcolatrice gratuita di conversione kW in Volt per sistemi DC, monofase e trifase. Converti chilowatt in volt istantaneamente con corrente e fattore di potenza (solo AC). Ideale per progettazione elettrica e calcoli di tensione.",
         "keywords": "calcolatrice kw volt, convertitore chilowatt volt, conversione kw volt, potenza tensione calcolatrice, calcolatrice elettrica, calcolatrice volt, dc calcolatrice, monofase trifase, gratuita",
         "content": {

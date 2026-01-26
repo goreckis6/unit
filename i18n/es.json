@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Calculadora Vatios a VA",
+      "description": "Convertir vatios (W) a voltiamperios (VA) instantáneamente y con precisión usando factor de potencia",
+      "watts": "Vatios (W)",
+      "powerFactor": "Factor de Potencia (0-1)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "va": "Voltiamperios (VA)",
+      "seo": {
+        "title": "Calculadora Vatios a VA - Convertir Potencia a Potencia Aparente Online Gratis",
+        "description": "Calculadora gratuita de conversión Vatios a VA. Convertir vatios (W) a voltiamperios (VA) instantáneamente y con precisión usando factor de potencia. Perfecto para cálculos eléctricos, dimensionamiento UPS y diseño de sistemas de energía.",
+        "keywords": "calculadora vatios va, convertidor w va, conversión vatios va, calculadora factor de potencia, calculadora eléctrica, calculadora va, calculadora potencia aparente, calculadora gratuita",
+        "content": {
+          "heading": "Cómo Convertir Vatios a VA",
+          "paragraph1": "Convertir vatios (W) a voltiamperios (VA) es esencial en ingeniería eléctrica y sistemas de energía. Los vatios representan potencia real (potencia activa), mientras que VA representa potencia aparente. La conversión requiere conocimiento del factor de potencia (PF), que es la relación entre potencia real y potencia aparente. Nuestra calculadora gratuita de conversión Vatios a VA hace este proceso rápido y fácil, proporcionando resultados instantáneos y precisos para sus cálculos eléctricos.",
+          "paragraph2": "La fórmula de conversión es: VA = W / PF, donde W es la potencia en vatios, PF es el factor de potencia (un valor entre 0 y 1), y VA es la potencia aparente en voltiamperios. El factor de potencia indica qué tan eficientemente se está usando la energía eléctrica. Un factor de potencia de 1.0 (o 100%) significa que toda la potencia se está usando efectivamente, mientras que valores más bajos indican que se está desperdiciando algo de potencia. Por ejemplo, 4000 vatios a un factor de potencia de 0.8 equivale a 5000 VA de potencia aparente.",
+          "paragraph3": "Esta conversión se usa comúnmente en varias aplicaciones: dimensionamiento de sistemas UPS e inversores, cálculo de requisitos de transformadores, diseño de sistemas de distribución de energía, comprensión de características de carga eléctrica, dimensionamiento de sistemas de energía de respaldo, y trabajo con sistemas eléctricos industriales y comerciales. Saber cómo convertir Vatios a VA ayuda a tomar decisiones informadas sobre diseño de sistemas eléctricos, selección de equipos y gestión de energía, especialmente al trabajar con sistemas UPS y fuentes de alimentación.",
+          "paragraph4": "Nuestra calculadora toma los vatios y el factor de potencia como entradas, aplica automáticamente la fórmula de conversión y proporciona el resultado en voltiamperios. La calculadora maneja tanto valores pequeños (comunes en electrónica) como valores grandes (comunes en sistemas de energía). Ya sea que esté trabajando con sistemas UPS, transformadores, motores, sistemas de distribución de energía o cualquier equipo eléctrico, nuestra calculadora Vatios a VA proporciona conversiones precisas e instantáneas.",
+          "exampleHeading": "Ejemplo:",
+          "exampleText": "Si tiene un dispositivo que consume 4000 vatios con un factor de potencia de 0.8, la potencia aparente en VA sería: VA = 4000 W / 0.8 = 5000 VA. Para un dispositivo con 9000 vatios a un factor de potencia de 0.9: VA = 9000 W / 0.9 = 10,000 VA. Para un dispositivo con 2400 vatios a un factor de potencia de 0.85: VA = 2400 W / 0.85 = 2823.53 VA. Para un dispositivo con 5000 vatios a un factor de potencia de 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Cuál es la fórmula para convertir vatios a VA?",
+              "answer": "La fórmula para convertir vatios (W) a voltiamperios (VA) es: VA = W / PF, donde W es la potencia en vatios, PF es el factor de potencia (un valor entre 0 y 1), y VA es la potencia aparente en voltiamperios. Esta fórmula muestra que la potencia aparente es igual a la potencia real dividida por el factor de potencia."
+            },
+            {
+              "question": "¿Qué es el factor de potencia?",
+              "answer": "El factor de potencia (PF) es la relación entre la potencia real (vatios) y la potencia aparente (VA). Indica qué tan eficientemente se está usando la energía eléctrica. Un factor de potencia de 1.0 (o 100%) significa que toda la potencia se está usando efectivamente, mientras que valores más bajos indican que se está desperdiciando algo de potencia. Los factores de potencia típicos van de 0.8 a 1.0."
+            },
+            {
+              "question": "¿Cuál es la diferencia entre vatios y VA?",
+              "answer": "Los vatios (W) miden la potencia real — la potencia real consumida y convertida en trabajo útil. Los VA (voltiamperios) miden la potencia aparente — la potencia total en un circuito AC, incluyendo componentes tanto reales como reactivos. La relación es: VA = W / PF. Para cargas resistivas (como calentadores), vatios y VA son iguales (PF = 1.0). Para cargas reactivas (como motores), VA es mayor que vatios."
+            },
+            {
+              "question": "¿Por qué es importante VA para el dimensionamiento UPS?",
+              "answer": "Los sistemas UPS típicamente se clasifican en VA (potencia aparente) en lugar de vatios (potencia real). Para dimensionar correctamente un UPS, necesita conocer el requisito de potencia aparente. Por ejemplo, si su equipo consume 4000 vatios a un factor de potencia de 0.8, necesita un UPS clasificado al menos a 5000 VA (4000 / 0.8 = 5000 VA). Esto asegura que el UPS pueda manejar tanto los componentes de potencia real como reactiva."
+            },
+            {
+              "question": "¿Cuál es un valor típico del factor de potencia?",
+              "answer": "Los valores típicos del factor de potencia van de 0.8 a 1.0. La mayoría de los sistemas eléctricos tienen un factor de potencia entre 0.85 y 0.95. Las cargas residenciales típicamente tienen un factor de potencia alrededor de 0.9, mientras que las cargas industriales (especialmente aquellas con motores) pueden tener factores de potencia más bajos, a menudo entre 0.7 y 0.85."
+            },
+            {
+              "question": "¿Esta calculadora es gratuita?",
+              "answer": "Sí, nuestra calculadora Vatios a VA es completamente gratuita. No se requiere registro ni pago. Simplemente ingrese sus valores de vatios y factor de potencia y obtenga resultados de conversión VA instantáneos y precisos."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "vaToWatts": "Calculadora VA a Vatios",
+          "vaToWattsDesc": "Convertir voltiamperios a vatios con factor de potencia",
+          "wattsToKva": "Calculadora Vatios a kVA",
+          "wattsToKvaDesc": "Convertir vatios a kilovoltiamperios con factor de potencia",
+          "kwToVa": "Calculadora kW a VA",
+          "kwToVaDesc": "Convertir kilovatios a voltiamperios instantáneamente",
+          "vaToKva": "Calculadora VA a kVA",
+          "vaToKvaDesc": "Convertir voltiamperios a kilovoltiamperios instantáneamente"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "Calculadora de kVA a Amperios",
       "description": "Convierta kilovoltios-amperios (kVA) a amperios (A) al instante y con precisión para sistemas monofásicos y trifásicos",
@@ -567,7 +631,7 @@
       "result": "Resultado",
       "voltage": "Voltaje",
       "seo": {
-        "title": "Calculadora kW a Voltios - Convertir Kilovatios a Voltios en línea",
+        "title": "Calculadora kW a Voltios – Calcular Voltaje a partir de Potencia y Corriente",
         "description": "Calculadora gratuita de conversión kW a Voltios para sistemas DC, monofásicos y trifásicos. Convierta kilovatios a voltios al instante con corriente y factor de potencia (solo AC). Ideal para diseño eléctrico y cálculos de tensión.",
         "keywords": "calculadora kw voltios, convertidor kilovatios voltios, conversión kw voltios, potencia voltaje calculadora, calculadora eléctrica, calculadora voltios, dc calculadora, monofásico trifásico, gratuita",
         "content": {

@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Kalkulator Watt ke VA",
+      "description": "Konversi watt (W) ke volt-ampere (VA) secara instan dan akurat menggunakan faktor daya",
+      "watts": "Watt (W)",
+      "powerFactor": "Faktor Daya (0-1)",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "va": "Volt-Ampere (VA)",
+      "seo": {
+        "title": "Kalkulator Watt ke VA - Konversi Daya ke Daya Semu Online Gratis",
+        "description": "Kalkulator konversi Watt ke VA gratis. Konversi watt (W) ke volt-ampere (VA) secara instan dan akurat menggunakan faktor daya. Sempurna untuk perhitungan listrik, penentuan ukuran UPS, dan desain sistem daya.",
+        "keywords": "kalkulator watt ke va, konverter w ke va, konversi watt va, kalkulator faktor daya, kalkulator listrik, kalkulator va, kalkulator daya semu, kalkulator gratis",
+        "content": {
+          "heading": "Cara Mengonversi Watt ke VA",
+          "paragraph1": "Mengonversi watt (W) ke volt-ampere (VA) sangat penting dalam teknik listrik dan sistem daya. Watt mewakili daya nyata (daya aktif), sementara VA mewakili daya semu. Konversi memerlukan pengetahuan tentang faktor daya (PF), yang merupakan rasio daya nyata terhadap daya semu. Kalkulator konversi Watt ke VA gratis kami membuat proses ini cepat dan mudah, memberikan hasil instan dan akurat untuk perhitungan listrik Anda.",
+          "paragraph2": "Rumus konversi adalah: VA = W / PF, di mana W adalah daya dalam watt, PF adalah faktor daya (nilai antara 0 dan 1), dan VA adalah daya semu dalam volt-ampere. Faktor daya menunjukkan seberapa efisien daya listrik digunakan. Faktor daya 1.0 (atau 100%) berarti semua daya digunakan secara efektif, sementara nilai yang lebih rendah menunjukkan bahwa beberapa daya terbuang. Misalnya, 4000 watt pada faktor daya 0.8 sama dengan 5000 VA daya semu.",
+          "paragraph3": "Konversi ini umumnya digunakan dalam berbagai aplikasi: menentukan ukuran sistem UPS dan inverter, menghitung persyaratan transformator, merancang sistem distribusi daya, memahami karakteristik beban listrik, menentukan ukuran sistem daya cadangan, dan bekerja dengan sistem listrik industri dan komersial. Mengetahui cara mengonversi Watt ke VA membantu Anda membuat keputusan yang tepat tentang desain sistem listrik, pemilihan peralatan, dan manajemen daya, terutama saat bekerja dengan sistem UPS dan catu daya.",
+          "paragraph4": "Kalkulator kami mengambil watt dan faktor daya sebagai input, secara otomatis menerapkan rumus konversi, dan memberikan hasil dalam volt-ampere. Kalkulator menangani nilai kecil (umum dalam elektronik) dan nilai besar (umum dalam sistem daya). Baik Anda bekerja dengan sistem UPS, transformator, motor, sistem distribusi daya, atau peralatan listrik apa pun, kalkulator Watt ke VA kami memberikan konversi yang akurat dan instan.",
+          "exampleHeading": "Contoh:",
+          "exampleText": "Jika Anda memiliki perangkat yang mengonsumsi 4000 watt dengan faktor daya 0.8, daya semu dalam VA adalah: VA = 4000 W / 0.8 = 5000 VA. Untuk perangkat dengan 9000 watt pada faktor daya 0.9: VA = 9000 W / 0.9 = 10.000 VA. Untuk perangkat dengan 2400 watt pada faktor daya 0.85: VA = 2400 W / 0.85 = 2823.53 VA. Untuk perangkat dengan 5000 watt pada faktor daya 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa rumus untuk mengonversi watt ke VA?",
+              "answer": "Rumus untuk mengonversi watt (W) ke volt-ampere (VA) adalah: VA = W / PF, di mana W adalah daya dalam watt, PF adalah faktor daya (nilai antara 0 dan 1), dan VA adalah daya semu dalam volt-ampere. Rumus ini menunjukkan bahwa daya semu sama dengan daya nyata dibagi dengan faktor daya."
+            },
+            {
+              "question": "Apa itu faktor daya?",
+              "answer": "Faktor daya (PF) adalah rasio daya nyata (watt) terhadap daya semu (VA). Ini menunjukkan seberapa efisien daya listrik digunakan. Faktor daya 1.0 (atau 100%) berarti semua daya digunakan secara efektif, sementara nilai yang lebih rendah menunjukkan bahwa beberapa daya terbuang. Faktor daya tipikal berkisar dari 0.8 hingga 1.0."
+            },
+            {
+              "question": "Apa perbedaan antara watt dan VA?",
+              "answer": "Watt (W) mengukur daya nyata — daya yang benar-benar dikonsumsi dan diubah menjadi kerja yang berguna. VA (volt-ampere) mengukur daya semu — total daya dalam sirkuit AC, termasuk komponen nyata dan reaktif. Hubungannya adalah: VA = W / PF. Untuk beban resistif (seperti pemanas), watt dan VA sama (PF = 1.0). Untuk beban reaktif (seperti motor), VA lebih tinggi daripada watt."
+            },
+            {
+              "question": "Mengapa VA penting untuk penentuan ukuran UPS?",
+              "answer": "Sistem UPS biasanya dinilai dalam VA (daya semu) daripada watt (daya nyata). Untuk menentukan ukuran UPS dengan benar, Anda perlu mengetahui persyaratan daya semu. Misalnya, jika peralatan Anda mengonsumsi 4000 watt pada faktor daya 0.8, Anda memerlukan UPS yang dinilai setidaknya 5000 VA (4000 / 0.8 = 5000 VA). Ini memastikan UPS dapat menangani komponen daya nyata dan reaktif."
+            },
+            {
+              "question": "Berapa nilai faktor daya yang khas?",
+              "answer": "Nilai faktor daya khas berkisar dari 0.8 hingga 1.0. Sebagian besar sistem listrik memiliki faktor daya antara 0.85 dan 0.95. Beban residensial biasanya memiliki faktor daya sekitar 0.9, sementara beban industri (terutama yang memiliki motor) mungkin memiliki faktor daya yang lebih rendah, seringkali antara 0.7 dan 0.85."
+            },
+            {
+              "question": "Apakah kalkulator ini gratis digunakan?",
+              "answer": "Ya, kalkulator Watt ke VA kami sepenuhnya gratis digunakan. Tidak diperlukan registrasi atau pembayaran. Cukup masukkan nilai watt dan faktor daya Anda dan dapatkan hasil konversi VA instan dan akurat."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "vaToWatts": "Kalkulator VA ke Watt",
+          "vaToWattsDesc": "Konversi volt-ampere ke watt dengan faktor daya",
+          "wattsToKva": "Kalkulator Watt ke kVA",
+          "wattsToKvaDesc": "Konversi watt ke kilovolt-ampere dengan faktor daya",
+          "kwToVa": "Kalkulator kW ke VA",
+          "kwToVaDesc": "Konversi kilowatt ke volt-ampere secara instan",
+          "vaToKva": "Kalkulator VA ke kVA",
+          "vaToKvaDesc": "Konversi volt-ampere ke kilovolt-ampere secara instan"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "Kalkulator kVA ke Ampere",
       "description": "Konversi kilovolt-ampere (kVA) ke ampere (A) secara instan dan akurat untuk sistem satu fasa dan tiga fasa",
@@ -567,7 +631,7 @@
       "result": "Hasil",
       "voltage": "Tegangan",
       "seo": {
-        "title": "Kalkulator kW ke Volt - Konversi Kilowatt ke Volt Online",
+        "title": "Kalkulator kW ke Volt – Hitung Tegangan dari Daya dan Arus",
         "description": "Kalkulator konversi kW ke Volt gratis untuk sistem DC, fase tunggal, dan tiga fase. Konversi kilowatt ke volt secara instan dengan arus dan faktor daya (AC saja). Cocok untuk desain listrik dan perhitungan tegangan.",
         "keywords": "kalkulator kw volt, konverter kilowatt volt, konversi kw volt, daya tegangan kalkulator, kalkulator listrik, kalkulator volt, dc kalkulator, fase tunggal tiga fase, gratis",
         "content": {

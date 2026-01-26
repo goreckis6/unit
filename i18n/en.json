@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Watts to VA Calculator",
+      "description": "Convert watts (W) to volt-amperes (VA) instantly and accurately using power factor",
+      "watts": "Watts (W)",
+      "powerFactor": "Power Factor (0-1)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "va": "Volt-Amperes (VA)",
+      "seo": {
+        "title": "Watts to VA Calculator - Convert Power to Apparent Power Online for Free",
+        "description": "Free Watts to VA conversion calculator. Convert watts (W) to volt-amperes (VA) instantly and accurately using power factor. Perfect for electrical calculations, UPS sizing, and power system design.",
+        "keywords": "watts to va calculator, w to va converter, watts va conversion, power factor calculator, electrical calculator, va calculator, apparent power calculator, free calculator",
+        "content": {
+          "heading": "How to Convert Watts to VA",
+          "paragraph1": "Converting watts (W) to volt-amperes (VA) is essential in electrical engineering and power systems. Watts represent real power (active power), while VA represents apparent power. The conversion requires knowledge of the power factor (PF), which is the ratio of real power to apparent power. Our free Watts to VA conversion calculator makes this process quick and easy, providing instant and accurate results for your electrical calculations.",
+          "paragraph2": "The conversion formula is: VA = W / PF, where W is the power in watts, PF is the power factor (a value between 0 and 1), and VA is the apparent power in volt-amperes. The power factor indicates how efficiently electrical power is being used. A power factor of 1.0 (or 100%) means all the power is being used effectively, while lower values indicate that some power is being wasted. For example, 4000 watts at a power factor of 0.8 equals 5000 VA of apparent power.",
+          "paragraph3": "This conversion is commonly used in various applications: sizing UPS systems and inverters, calculating transformer requirements, designing power distribution systems, understanding electrical load characteristics, sizing backup power systems, and working with industrial and commercial electrical systems. Knowing how to convert Watts to VA helps you make informed decisions about electrical system design, equipment selection, and power management, especially when working with UPS systems and power supplies.",
+          "paragraph4": "Our calculator takes the watts and power factor as inputs, automatically applies the conversion formula, and provides the result in volt-amperes. The calculator handles both small values (common in electronics) and large values (common in power systems). Whether you're working with UPS systems, transformers, motors, power distribution systems, or any electrical equipment, our Watts to VA calculator provides accurate, instant conversions.",
+          "exampleHeading": "Example:",
+          "exampleText": "If you have a device consuming 4000 watts with a power factor of 0.8, the apparent power in VA would be: VA = 4000 W / 0.8 = 5000 VA. For a device with 9000 watts at a power factor of 0.9: VA = 9000 W / 0.9 = 10,000 VA. For a device with 2400 watts at a power factor of 0.85: VA = 2400 W / 0.85 = 2823.53 VA. For a device with 5000 watts at a power factor of 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert watts to VA?",
+              "answer": "The formula to convert watts (W) to volt-amperes (VA) is: VA = W / PF, where W is the power in watts, PF is the power factor (a value between 0 and 1), and VA is the apparent power in volt-amperes. This formula shows that apparent power equals real power divided by power factor."
+            },
+            {
+              "question": "What is power factor?",
+              "answer": "Power factor (PF) is the ratio of real power (watts) to apparent power (VA). It indicates how efficiently electrical power is being used. A power factor of 1.0 (or 100%) means all the power is being used effectively, while lower values indicate that some power is being wasted. Typical power factors range from 0.8 to 1.0."
+            },
+            {
+              "question": "What is the difference between watts and VA?",
+              "answer": "Watts (W) measure real power — the actual power consumed and converted into useful work. VA (volt-amperes) measure apparent power — the total power in an AC circuit, including both real and reactive components. The relationship is: VA = W / PF. For resistive loads (like heaters), watts and VA are equal (PF = 1.0). For reactive loads (like motors), VA is higher than watts."
+            },
+            {
+              "question": "Why is VA important for UPS sizing?",
+              "answer": "UPS systems are typically rated in VA (apparent power) rather than watts (real power). To properly size a UPS, you need to know the apparent power requirement. For example, if your equipment consumes 4000 watts at 0.8 power factor, you need a UPS rated at least 5000 VA (4000 / 0.8 = 5000 VA). This ensures the UPS can handle both the real and reactive power components."
+            },
+            {
+              "question": "What is a typical power factor value?",
+              "answer": "Typical power factor values range from 0.8 to 1.0. Most electrical systems have a power factor between 0.85 and 0.95. Residential loads typically have a power factor around 0.9, while industrial loads (especially those with motors) may have lower power factors, often between 0.7 and 0.85."
+            },
+            {
+              "question": "Is this calculator free to use?",
+              "answer": "Yes, our Watts to VA calculator is completely free to use. No registration or payment is required. Simply enter your watts and power factor values and get instant, accurate VA conversion results."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "vaToWatts": "VA to Watts Calculator",
+          "vaToWattsDesc": "Convert volt-amperes to watts with power factor",
+          "wattsToKva": "Watts to kVA Calculator",
+          "wattsToKvaDesc": "Convert watts to kilovolt-amperes with power factor",
+          "kwToVa": "kW to VA Calculator",
+          "kwToVaDesc": "Convert kilowatts to volt-amperes instantly",
+          "vaToKva": "VA to kVA Calculator",
+          "vaToKvaDesc": "Convert volt-amperes to kilovolt-amperes instantly"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "kVA to Amps Calculator",
       "description": "Convert kilovolt-amperes (kVA) to amperes (A) instantly and accurately for single phase and three phase systems",
@@ -567,7 +631,7 @@
       "result": "Result",
       "voltage": "Voltage",
       "seo": {
-        "title": "kW to Volts Calculator - Convert Kilowatts to Volts Online",
+        "title": "kW to Volts Calculator – Calculate Voltage from Power and Current",
         "description": "Free kW to Volts conversion calculator for DC, single-phase, and three-phase systems. Convert kilowatts to volts instantly using current and power factor (AC only). Perfect for electrical design, circuit sizing, and voltage calculations.",
         "keywords": "kw to volts calculator, kilowatts to volts converter, kw volts conversion, power to voltage calculator, electrical calculator, volts calculator, dc calculator, single phase calculator, three phase calculator, free calculator",
         "content": {

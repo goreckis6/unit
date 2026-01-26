@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Watt naar VA Rekenmachine",
+      "description": "Zet watt (W) om naar voltampère (VA) direct en nauwkeurig met arbeidsfactor",
+      "watts": "Watt (W)",
+      "powerFactor": "Arbeidsfactor (0-1)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "va": "Voltampère (VA)",
+      "seo": {
+        "title": "Watt naar VA Rekenmachine - Vermogen naar Schijnbaar Vermogen Online Omzetten",
+        "description": "Gratis Watt naar VA omrekenmachine. Zet watt (W) om naar voltampère (VA) direct en nauwkeurig met arbeidsfactor. Perfect voor elektrische berekeningen, UPS-dimensionering en stroomvoorzieningssystemen.",
+        "keywords": "watt va rekenmachine, w va omzetter, watt va omrekening, arbeidsfactor rekenmachine, elektrische rekenmachine, va rekenmachine, schijnbaar vermogen rekenmachine, gratis rekenmachine",
+        "content": {
+          "heading": "Hoe Watt naar VA Omzetten",
+          "paragraph1": "Het omzetten van watt (W) naar voltampère (VA) is essentieel in elektrotechniek en stroomvoorzieningssystemen. Watt vertegenwoordigt werkelijk vermogen (actief vermogen), terwijl VA schijnbaar vermogen vertegenwoordigt. De conversie vereist kennis van de arbeidsfactor (PF), de verhouding tussen werkelijk vermogen en schijnbaar vermogen. Onze gratis Watt naar VA omrekenmachine maakt dit proces snel en eenvoudig en geeft directe, nauwkeurige resultaten voor uw elektrische berekeningen.",
+          "paragraph2": "De omrekenformule is: VA = W / PF, waarbij W het vermogen in watt is, PF de arbeidsfactor (een waarde tussen 0 en 1), en VA het schijnbaar vermogen in voltampère. De arbeidsfactor geeft aan hoe efficiënt elektrisch vermogen wordt gebruikt. Een arbeidsfactor van 1.0 (of 100%) betekent dat al het vermogen effectief wordt gebruikt, terwijl lagere waarden aangeven dat er vermogen wordt verspild. Bijvoorbeeld, 4000 watt bij een arbeidsfactor van 0.8 is gelijk aan 5000 VA schijnbaar vermogen.",
+          "paragraph3": "Deze conversie wordt vaak gebruikt in verschillende toepassingen: dimensionering van UPS-systemen en omvormers, berekening van transformatorvereisten, ontwerp van stroomdistributiesystemen, begrijpen van elektrische belastingskenmerken, dimensionering van back-upstroomvoorzieningssystemen, en werken met industriële en commerciële elektrische systemen. Weten hoe u Watt naar VA omzet, helpt u geïnformeerde beslissingen te nemen over elektrisch systeemontwerp, apparatuurselectie en vermogensbeheer, vooral bij het werken met UPS-systemen en voedingen.",
+          "paragraph4": "Onze rekenmachine neemt watt en arbeidsfactor als invoer, past automatisch de omrekenformule toe en geeft het resultaat in voltampère. De rekenmachine verwerkt zowel kleine waarden (gebruikelijk in elektronica) als grote waarden (gebruikelijk in stroomvoorzieningssystemen). Of u nu werkt met UPS-systemen, transformatoren, motoren, stroomdistributiesystemen of elektrische apparatuur, onze Watt naar VA rekenmachine geeft nauwkeurige, directe conversies.",
+          "exampleHeading": "Voorbeeld:",
+          "exampleText": "Als u een apparaat heeft dat 4000 watt verbruikt met een arbeidsfactor van 0.8, zou het schijnbaar vermogen in VA zijn: VA = 4000 W / 0.8 = 5000 VA. Voor een apparaat met 9000 watt bij een arbeidsfactor van 0.9: VA = 9000 W / 0.9 = 10.000 VA. Voor een apparaat met 2400 watt bij een arbeidsfactor van 0.85: VA = 2400 W / 0.85 = 2823.53 VA. Voor een apparaat met 5000 watt bij een arbeidsfactor van 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            {
+              "question": "Wat is de formule om watt naar VA om te zetten?",
+              "answer": "De formule om watt (W) naar voltampère (VA) om te zetten is: VA = W / PF, waarbij W het vermogen in watt is, PF de arbeidsfactor (een waarde tussen 0 en 1), en VA het schijnbaar vermogen in voltampère. Deze formule toont aan dat schijnbaar vermogen gelijk is aan werkelijk vermogen gedeeld door arbeidsfactor."
+            },
+            {
+              "question": "Wat is arbeidsfactor?",
+              "answer": "Arbeidsfactor (PF) is de verhouding tussen werkelijk vermogen (watt) en schijnbaar vermogen (VA). Het geeft aan hoe efficiënt elektrisch vermogen wordt gebruikt. Een arbeidsfactor van 1.0 (of 100%) betekent dat al het vermogen effectief wordt gebruikt, terwijl lagere waarden aangeven dat er vermogen wordt verspild. Typische arbeidsfactoren liggen tussen 0.8 en 1.0."
+            },
+            {
+              "question": "Wat is het verschil tussen watt en VA?",
+              "answer": "Watt (W) meet werkelijk vermogen — het daadwerkelijk verbruikte en omgezette vermogen in nuttig werk. VA (voltampère) meet schijnbaar vermogen — het totale vermogen in een AC-circuit, inclusief zowel werkelijke als reactieve componenten. De relatie is: VA = W / PF. Voor resistieve belastingen (zoals verwarmers) zijn watt en VA gelijk (PF = 1.0). Voor reactieve belastingen (zoals motoren) is VA hoger dan watt."
+            },
+            {
+              "question": "Waarom is VA belangrijk voor UPS-dimensionering?",
+              "answer": "UPS-systemen worden meestal beoordeeld in VA (schijnbaar vermogen) in plaats van watt (werkelijk vermogen). Om een UPS correct te dimensioneren, moet u de schijnbaar vermogenvereiste kennen. Als uw apparatuur bijvoorbeeld 4000 watt verbruikt bij een arbeidsfactor van 0.8, heeft u een UPS nodig die minimaal 5000 VA is (4000 / 0.8 = 5000 VA). Dit zorgt ervoor dat de UPS zowel werkelijk als reactief vermogencomponenten aankan."
+            },
+            {
+              "question": "Wat is een typische arbeidsfactorwaarde?",
+              "answer": "Typische arbeidsfactorwaarden liggen tussen 0.8 en 1.0. De meeste elektrische systemen hebben een arbeidsfactor tussen 0.85 en 0.95. Woningbelastingen hebben meestal een arbeidsfactor rond 0.9, terwijl industriële belastingen (vooral die met motoren) lagere arbeidsfactoren kunnen hebben, vaak tussen 0.7 en 0.85."
+            },
+            {
+              "question": "Is deze rekenmachine gratis?",
+              "answer": "Ja, onze Watt naar VA rekenmachine is volledig gratis. Geen registratie of betaling vereist. Voer eenvoudig uw watt- en arbeidsfactorwaarden in en krijg directe, nauwkeurige VA-conversieresultaten."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde Rekenmachines",
+          "vaToWatts": "VA naar Watt Rekenmachine",
+          "vaToWattsDesc": "Zet voltampère om naar watt met arbeidsfactor",
+          "wattsToKva": "Watt naar kVA Rekenmachine",
+          "wattsToKvaDesc": "Zet watt om naar kilovoltampère met arbeidsfactor",
+          "kwToVa": "kW naar VA Rekenmachine",
+          "kwToVaDesc": "Zet kilowatt om naar voltampère direct",
+          "vaToKva": "VA naar kVA Rekenmachine",
+          "vaToKvaDesc": "Zet voltampère om naar kilovoltampère direct"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "kVA naar Ampere Rekenmachine",
       "description": "Converteer kilovolt-ampère (kVA) naar ampère (A) direct en nauwkeurig voor eenfasige en driefasige systemen",
@@ -567,7 +631,7 @@
       "result": "Resultaat",
       "voltage": "Spanning",
       "seo": {
-        "title": "kW naar Volt Rekenmachine - Converteer Kilowatt naar Volt online",
+        "title": "kW naar Volt Rekenmachine – Bereken Spanning uit Vermogen en Stroom",
         "description": "Gratis kW naar Volt conversierekenmachine voor DC-, enkelfase- en driefasesystemen. Converteer kilowatt naar volt direct met stroom en arbeidsfactor (alleen AC). Ideaal voor elektrisch ontwerp en spanningsberekeningen.",
         "keywords": "kw volt rekenmachine, kilowatt volt converter, kw volt conversie, vermogen spanning rekenmachine, elektrische rekenmachine, volt rekenmachine, dc rekenmachine, enkelfase driefase, gratis",
         "content": {

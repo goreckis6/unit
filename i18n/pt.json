@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Calculadora Watts para VA",
+      "description": "Converter watts (W) em volt-amperes (VA) instantaneamente e com precisão usando fator de potência",
+      "watts": "Watts (W)",
+      "powerFactor": "Fator de Potência (0-1)",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "va": "Volt-Amperes (VA)",
+      "seo": {
+        "title": "Calculadora Watts para VA - Converter Potência em Potência Aparente Online Grátis",
+        "description": "Calculadora gratuita de conversão Watts para VA. Converter watts (W) em volt-amperes (VA) instantaneamente e com precisão usando fator de potência. Perfeito para cálculos elétricos, dimensionamento UPS e design de sistemas de energia.",
+        "keywords": "calculadora watts va, conversor w va, conversão watts va, calculadora fator de potência, calculadora elétrica, calculadora va, calculadora potência aparente, calculadora gratuita",
+        "content": {
+          "heading": "Como Converter Watts em VA",
+          "paragraph1": "Converter watts (W) em volt-amperes (VA) é essencial em engenharia elétrica e sistemas de energia. Watts representam potência real (potência ativa), enquanto VA representa potência aparente. A conversão requer conhecimento do fator de potência (PF), que é a razão entre potência real e potência aparente. Nossa calculadora gratuita de conversão Watts para VA torna este processo rápido e fácil, fornecendo resultados instantâneos e precisos para seus cálculos elétricos.",
+          "paragraph2": "A fórmula de conversão é: VA = W / PF, onde W é a potência em watts, PF é o fator de potência (um valor entre 0 e 1), e VA é a potência aparente em volt-amperes. O fator de potência indica quão eficientemente a energia elétrica está sendo usada. Um fator de potência de 1.0 (ou 100%) significa que toda a potência está sendo usada efetivamente, enquanto valores mais baixos indicam que alguma potência está sendo desperdiçada. Por exemplo, 4000 watts a um fator de potência de 0.8 equivale a 5000 VA de potência aparente.",
+          "paragraph3": "Esta conversão é comumente usada em várias aplicações: dimensionamento de sistemas UPS e inversores, cálculo de requisitos de transformadores, design de sistemas de distribuição de energia, compreensão de características de carga elétrica, dimensionamento de sistemas de energia de backup, e trabalho com sistemas elétricos industriais e comerciais. Saber como converter Watts em VA ajuda você a tomar decisões informadas sobre design de sistemas elétricos, seleção de equipamentos e gerenciamento de energia, especialmente ao trabalhar com sistemas UPS e fontes de alimentação.",
+          "paragraph4": "Nossa calculadora recebe watts e fator de potência como entradas, aplica automaticamente a fórmula de conversão e fornece o resultado em volt-amperes. A calculadora lida com valores pequenos (comuns em eletrônica) e valores grandes (comuns em sistemas de energia). Seja trabalhando com sistemas UPS, transformadores, motores, sistemas de distribuição de energia ou qualquer equipamento elétrico, nossa calculadora Watts para VA fornece conversões precisas e instantâneas.",
+          "exampleHeading": "Exemplo:",
+          "exampleText": "Se você tem um dispositivo consumindo 4000 watts com um fator de potência de 0.8, a potência aparente em VA seria: VA = 4000 W / 0.8 = 5000 VA. Para um dispositivo com 9000 watts a um fator de potência de 0.9: VA = 9000 W / 0.9 = 10.000 VA. Para um dispositivo com 2400 watts a um fator de potência de 0.85: VA = 2400 W / 0.85 = 2823.53 VA. Para um dispositivo com 5000 watts a um fator de potência de 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Perguntas Frequentes",
+          "items": [
+            {
+              "question": "Qual é a fórmula para converter watts em VA?",
+              "answer": "A fórmula para converter watts (W) em volt-amperes (VA) é: VA = W / PF, onde W é a potência em watts, PF é o fator de potência (um valor entre 0 e 1), e VA é a potência aparente em volt-amperes. Esta fórmula mostra que a potência aparente é igual à potência real dividida pelo fator de potência."
+            },
+            {
+              "question": "O que é fator de potência?",
+              "answer": "O fator de potência (PF) é a razão entre potência real (watts) e potência aparente (VA). Indica quão eficientemente a energia elétrica está sendo usada. Um fator de potência de 1.0 (ou 100%) significa que toda a potência está sendo usada efetivamente, enquanto valores mais baixos indicam que alguma potência está sendo desperdiçada. Fatores de potência típicos variam de 0.8 a 1.0."
+            },
+            {
+              "question": "Qual é a diferença entre watts e VA?",
+              "answer": "Watts (W) medem potência real — a potência realmente consumida e convertida em trabalho útil. VA (volt-amperes) medem potência aparente — a potência total em um circuito AC, incluindo componentes reais e reativos. A relação é: VA = W / PF. Para cargas resistivas (como aquecedores), watts e VA são iguais (PF = 1.0). Para cargas reativas (como motores), VA é maior que watts."
+            },
+            {
+              "question": "Por que VA é importante para dimensionamento UPS?",
+              "answer": "Sistemas UPS são tipicamente classificados em VA (potência aparente) em vez de watts (potência real). Para dimensionar adequadamente um UPS, você precisa conhecer o requisito de potência aparente. Por exemplo, se seu equipamento consome 4000 watts a um fator de potência de 0.8, você precisa de um UPS classificado em pelo menos 5000 VA (4000 / 0.8 = 5000 VA). Isso garante que o UPS possa lidar com componentes de potência real e reativa."
+            },
+            {
+              "question": "Qual é um valor típico de fator de potência?",
+              "answer": "Valores típicos de fator de potência variam de 0.8 a 1.0. A maioria dos sistemas elétricos tem um fator de potência entre 0.85 e 0.95. Cargas residenciais tipicamente têm um fator de potência em torno de 0.9, enquanto cargas industriais (especialmente aquelas com motores) podem ter fatores de potência mais baixos, frequentemente entre 0.7 e 0.85."
+            },
+            {
+              "question": "Esta calculadora é gratuita?",
+              "answer": "Sim, nossa calculadora Watts para VA é completamente gratuita. Nenhum registro ou pagamento necessário. Simplesmente insira seus valores de watts e fator de potência e obtenha resultados de conversão VA instantâneos e precisos."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "vaToWatts": "Calculadora VA para Watts",
+          "vaToWattsDesc": "Converter volt-amperes em watts com fator de potência",
+          "wattsToKva": "Calculadora Watts para kVA",
+          "wattsToKvaDesc": "Converter watts em kilovolt-amperes com fator de potência",
+          "kwToVa": "Calculadora kW para VA",
+          "kwToVaDesc": "Converter kilowatts em volt-amperes instantaneamente",
+          "vaToKva": "Calculadora VA para kVA",
+          "vaToKvaDesc": "Converter volt-amperes em kilovolt-amperes instantaneamente"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "Calculadora de kVA para Amperes",
       "description": "Converta quilovolt-amperes (kVA) para amperes (A) instantaneamente e com precisão para sistemas monofásicos e trifásicos",
@@ -567,7 +631,7 @@
       "result": "Resultado",
       "voltage": "Tensão",
       "seo": {
-        "title": "Calculadora kW para Volts - Converter Quilowatts em Volts online",
+        "title": "Calculadora kW para Volts – Calcular Tensão a partir de Potência e Corrente",
         "description": "Calculadora gratuita de conversão kW para Volts para sistemas DC, monofásicos e trifásicos. Converta quilowatts em volts instantaneamente com corrente e fator de potência (apenas AC). Ideal para projeto elétrico e cálculos de tensão.",
         "keywords": "calculadora kw volts, conversor quilowatts volts, conversão kw volts, potência tensão calculadora, calculadora elétrica, calculadora volts, dc calculadora, monofásico trifásico, gratuita",
         "content": {

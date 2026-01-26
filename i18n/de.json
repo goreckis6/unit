@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Watt zu VA Rechner",
+      "description": "Konvertieren Sie Watt (W) sofort und genau in Voltampere (VA) mit dem Leistungsfaktor",
+      "watts": "Watt (W)",
+      "powerFactor": "Leistungsfaktor (0-1)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "va": "Voltampere (VA)",
+      "seo": {
+        "title": "Watt zu VA Rechner - Leistung in Scheinleistung Online Umwandeln",
+        "description": "Kostenloser Watt zu VA Umrechnungsrechner. Konvertieren Sie Watt (W) sofort und genau in Voltampere (VA) mit dem Leistungsfaktor. Perfekt für elektrische Berechnungen, UPS-Dimensionierung und Stromversorgungssysteme.",
+        "keywords": "watt va rechner, w va umrechner, watt va umrechnung, leistungsfaktor rechner, elektrischer rechner, va rechner, scheinleistung rechner, kostenloser rechner",
+        "content": {
+          "heading": "Wie Man Watt in VA Umwandelt",
+          "paragraph1": "Die Umwandlung von Watt (W) in Voltampere (VA) ist in der Elektrotechnik und in Stromversorgungssystemen unerlässlich. Watt repräsentieren Wirkleistung (aktive Leistung), während VA Scheinleistung repräsentieren. Die Umwandlung erfordert Kenntnis des Leistungsfaktors (PF), der das Verhältnis von Wirkleistung zu Scheinleistung ist. Unser kostenloser Watt zu VA Umrechnungsrechner macht diesen Prozess schnell und einfach und liefert sofortige und genaue Ergebnisse für Ihre elektrischen Berechnungen.",
+          "paragraph2": "Die Umrechnungsformel lautet: VA = W / PF, wobei W die Leistung in Watt ist, PF der Leistungsfaktor (ein Wert zwischen 0 und 1) ist und VA die Scheinleistung in Voltampere ist. Der Leistungsfaktor zeigt an, wie effizient elektrische Leistung genutzt wird. Ein Leistungsfaktor von 1.0 (oder 100%) bedeutet, dass die gesamte Leistung effektiv genutzt wird, während niedrigere Werte darauf hindeuten, dass etwas Leistung verschwendet wird. Zum Beispiel entsprechen 4000 Watt bei einem Leistungsfaktor von 0.8 5000 VA Scheinleistung.",
+          "paragraph3": "Diese Umwandlung wird häufig in verschiedenen Anwendungen verwendet: Dimensionierung von UPS-Systemen und Wechselrichtern, Berechnung von Transformatoranforderungen, Entwurf von Stromverteilungssystemen, Verständnis elektrischer Lastmerkmale, Dimensionierung von Notstromsystemen und Arbeit mit industriellen und gewerblichen elektrischen Systemen. Zu wissen, wie man Watt in VA umwandelt, hilft Ihnen, fundierte Entscheidungen über elektrische Systemgestaltung, Geräteauswahl und Leistungsmanagement zu treffen, insbesondere bei der Arbeit mit UPS-Systemen und Netzteilen.",
+          "paragraph4": "Unser Rechner nimmt Watt und Leistungsfaktor als Eingaben, wendet automatisch die Umrechnungsformel an und liefert das Ergebnis in Voltampere. Der Rechner verarbeitet sowohl kleine Werte (häufig in der Elektronik) als auch große Werte (häufig in Stromversorgungssystemen). Egal, ob Sie mit UPS-Systemen, Transformatoren, Motoren, Stromverteilungssystemen oder elektrischen Geräten arbeiten, unser Watt zu VA Rechner liefert genaue, sofortige Umwandlungen.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "Wenn Sie ein Gerät mit 4000 Watt und einem Leistungsfaktor von 0.8 haben, wäre die Scheinleistung in VA: VA = 4000 W / 0.8 = 5000 VA. Für ein Gerät mit 9000 Watt bei einem Leistungsfaktor von 0.9: VA = 9000 W / 0.9 = 10.000 VA. Für ein Gerät mit 2400 Watt bei einem Leistungsfaktor von 0.85: VA = 2400 W / 0.85 = 2823.53 VA. Für ein Gerät mit 5000 Watt bei einem Leistungsfaktor von 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Häufig Gestellte Fragen",
+          "items": [
+            {
+              "question": "Wie lautet die Formel zur Umwandlung von Watt in VA?",
+              "answer": "Die Formel zur Umwandlung von Watt (W) in Voltampere (VA) lautet: VA = W / PF, wobei W die Leistung in Watt ist, PF der Leistungsfaktor (ein Wert zwischen 0 und 1) ist und VA die Scheinleistung in Voltampere ist. Diese Formel zeigt, dass Scheinleistung gleich Wirkleistung geteilt durch Leistungsfaktor ist."
+            },
+            {
+              "question": "Was ist der Leistungsfaktor?",
+              "answer": "Der Leistungsfaktor (PF) ist das Verhältnis von Wirkleistung (Watt) zu Scheinleistung (VA). Er zeigt an, wie effizient elektrische Leistung genutzt wird. Ein Leistungsfaktor von 1.0 (oder 100%) bedeutet, dass die gesamte Leistung effektiv genutzt wird, während niedrigere Werte darauf hindeuten, dass etwas Leistung verschwendet wird. Typische Leistungsfaktoren liegen zwischen 0.8 und 1.0."
+            },
+            {
+              "question": "Was ist der Unterschied zwischen Watt und VA?",
+              "answer": "Watt (W) messen Wirkleistung — die tatsächlich verbrauchte und in nützliche Arbeit umgewandelte Leistung. VA (Voltampere) messen Scheinleistung — die Gesamtleistung in einem AC-Stromkreis, einschließlich sowohl Wirk- als auch Blindleistungskomponenten. Die Beziehung ist: VA = W / PF. Für ohmsche Lasten (wie Heizgeräte) sind Watt und VA gleich (PF = 1.0). Für induktive Lasten (wie Motoren) ist VA höher als Watt."
+            },
+            {
+              "question": "Warum ist VA wichtig für die UPS-Dimensionierung?",
+              "answer": "UPS-Systeme werden typischerweise in VA (Scheinleistung) und nicht in Watt (Wirkleistung) bewertet. Um eine UPS richtig zu dimensionieren, müssen Sie den Scheinleistungsbedarf kennen. Wenn Ihre Ausrüstung beispielsweise 4000 Watt bei einem Leistungsfaktor von 0.8 verbraucht, benötigen Sie eine UPS mit mindestens 5000 VA (4000 / 0.8 = 5000 VA). Dies stellt sicher, dass die UPS sowohl Wirk- als auch Blindleistungskomponenten bewältigen kann."
+            },
+            {
+              "question": "Was ist ein typischer Leistungsfaktorwert?",
+              "answer": "Typische Leistungsfaktorwerte liegen zwischen 0.8 und 1.0. Die meisten elektrischen Systeme haben einen Leistungsfaktor zwischen 0.85 und 0.95. Wohnlasten haben typischerweise einen Leistungsfaktor von etwa 0.9, während Industrielasten (besonders solche mit Motoren) niedrigere Leistungsfaktoren haben können, oft zwischen 0.7 und 0.85."
+            },
+            {
+              "question": "Ist dieser Rechner kostenlos?",
+              "answer": "Ja, unser Watt zu VA Rechner ist völlig kostenlos. Keine Registrierung oder Zahlung erforderlich. Geben Sie einfach Ihre Watt- und Leistungsfaktorwerte ein und erhalten Sie sofortige, genaue VA-Umwandlungsergebnisse."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Ähnliche Rechner",
+          "vaToWatts": "VA zu Watt Rechner",
+          "vaToWattsDesc": "Voltampere in Watt mit Leistungsfaktor umrechnen",
+          "wattsToKva": "Watt zu kVA Rechner",
+          "wattsToKvaDesc": "Watt in Kilovoltampere mit Leistungsfaktor umrechnen",
+          "kwToVa": "kW zu VA Rechner",
+          "kwToVaDesc": "Kilowatt in Voltampere sofort umrechnen",
+          "vaToKva": "VA zu kVA Rechner",
+          "vaToKvaDesc": "Voltampere in Kilovoltampere sofort umrechnen"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "kVA zu Ampere Rechner",
       "description": "Wandeln Sie Kilovolt-Ampere (kVA) in Ampere (A) sofort und genau für Einphasen- und Dreiphasensysteme um",
@@ -567,7 +631,7 @@
       "result": "Ergebnis",
       "voltage": "Spannung",
       "seo": {
-        "title": "kW zu Volt Rechner - Kilowatt online in Volt umrechnen",
+        "title": "kW zu Volt Rechner – Berechnen Sie Spannung aus Leistung und Strom",
         "description": "Kostenloser kW zu Volt Umrechnungsrechner für Gleichstrom-, einphasige und dreiphasige Systeme. Konvertieren Sie Kilowatt sofort in Volt mit Strom und Leistungsfaktor (nur AC). Perfekt für elektrische Planung, Leitungsauslegung und Spannungsberechnungen.",
         "keywords": "kw volt rechner, kilowatt volt umrechner, kw volt umrechnung, leistung spannung rechner, elektrischer rechner, volt rechner, gleichstrom rechner, einphasen rechner, dreiphasen rechner, kostenloser rechner",
         "content": {

@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Kalkulator Watty na VA",
+      "description": "Konwertuj watty (W) na wolt-ampery (VA) natychmiast i dokładnie używając współczynnika mocy",
+      "watts": "Watty (W)",
+      "powerFactor": "Współczynnik mocy (0–1)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "va": "Wolt-ampery (VA)",
+      "seo": {
+        "title": "Kalkulator Watty na VA - Konwertuj Moc na Moc Pozorną Online za Darmo",
+        "description": "Darmowy kalkulator konwersji Watty na VA. Konwertuj watty (W) na wolt-ampery (VA) natychmiast i dokładnie używając współczynnika mocy. Idealne do obliczeń elektrycznych, doboru UPS i projektowania systemów zasilania.",
+        "keywords": "kalkulator watty na va, konwerter w na va, konwersja watty va, kalkulator współczynnika mocy, kalkulator elektryczny, kalkulator va, kalkulator mocy pozornej, darmowy kalkulator",
+        "content": {
+          "heading": "Jak konwertować Watty na VA",
+          "paragraph1": "Konwersja watty (W) na wolt-ampery (VA) jest niezbędna w inżynierii elektrycznej i systemach zasilania. Watty reprezentują moc rzeczywistą (moc czynną), podczas gdy VA reprezentuje moc pozorną. Konwersja wymaga znajomości współczynnika mocy (PF), który jest stosunkiem mocy rzeczywistej do mocy pozornej. Nasz darmowy kalkulator konwersji Watty na VA czyni ten proces szybkim i łatwym, zapewniając natychmiastowe i dokładne wyniki dla Twoich obliczeń elektrycznych.",
+          "paragraph2": "Wzór konwersji to: VA = W / PF, gdzie W to moc w watach, PF to współczynnik mocy (wartość między 0 a 1), a VA to moc pozorna w wolt-amperach. Współczynnik mocy wskazuje, jak efektywnie wykorzystywana jest energia elektryczna. Współczynnik mocy 1.0 (lub 100%) oznacza, że cała moc jest wykorzystywana efektywnie, podczas gdy niższe wartości wskazują, że część mocy jest marnowana. Na przykład 4000 watów przy współczynniku mocy 0.8 równa się 5000 VA mocy pozornej.",
+          "paragraph3": "Ta konwersja jest powszechnie używana w różnych zastosowaniach: dobieranie systemów UPS i falowników, obliczanie wymagań transformatorów, projektowanie systemów dystrybucji energii, zrozumienie charakterystyk obciążenia elektrycznego, dobieranie systemów zasilania awaryjnego oraz praca z przemysłowymi i komercyjnymi systemami elektrycznymi. Znajomość konwersji Watty na VA pomaga w podejmowaniu świadomych decyzji dotyczących projektowania systemów elektrycznych, doboru urządzeń i zarządzania energią, szczególnie przy pracy z systemami UPS i zasilaczami.",
+          "paragraph4": "Nasz kalkulator przyjmuje watty i współczynnik mocy jako dane wejściowe, automatycznie stosuje wzór konwersji i zapewnia wynik w wolt-amperach. Kalkulator obsługuje zarówno małe wartości (powszechne w elektronice), jak i duże wartości (powszechne w systemach zasilania). Niezależnie od tego, czy pracujesz z systemami UPS, transformatorami, silnikami, systemami dystrybucji energii czy jakimikolwiek urządzeniami elektrycznymi, nasz kalkulator Watty na VA zapewnia dokładne, natychmiastowe konwersje.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "Jeśli masz urządzenie zużywające 4000 watów ze współczynnikiem mocy 0.8, moc pozorna w VA wyniesie: VA = 4000 W / 0.8 = 5000 VA. Dla urządzenia z 9000 watów przy współczynniku mocy 0.9: VA = 9000 W / 0.9 = 10 000 VA. Dla urządzenia z 2400 watów przy współczynniku mocy 0.85: VA = 2400 W / 0.85 = 2823.53 VA. Dla urządzenia z 5000 watów przy współczynniku mocy 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Najczęściej zadawane pytania",
+          "items": [
+            {
+              "question": "Jaki jest wzór do konwersji watty na VA?",
+              "answer": "Wzór do konwersji watty (W) na wolt-ampery (VA) to: VA = W / PF, gdzie W to moc w watach, PF to współczynnik mocy (wartość między 0 a 1), a VA to moc pozorna w wolt-amperach. Ten wzór pokazuje, że moc pozorna równa się mocy rzeczywistej podzielonej przez współczynnik mocy."
+            },
+            {
+              "question": "Co to jest współczynnik mocy?",
+              "answer": "Współczynnik mocy (PF) to stosunek mocy rzeczywistej (watty) do mocy pozornej (VA). Wskazuje, jak efektywnie wykorzystywana jest energia elektryczna. Współczynnik mocy 1.0 (lub 100%) oznacza, że cała moc jest wykorzystywana efektywnie, podczas gdy niższe wartości wskazują, że część mocy jest marnowana. Typowe współczynniki mocy mieszczą się w zakresie od 0.8 do 1.0."
+            },
+            {
+              "question": "Jaka jest różnica między watami a VA?",
+              "answer": "Watty (W) mierzą moc rzeczywistą — rzeczywistą moc zużywaną i przekształcaną w użyteczną pracę. VA (wolt-ampery) mierzą moc pozorną — całkowitą moc w obwodzie AC, w tym zarówno składniki rzeczywiste, jak i reaktywne. Zależność to: VA = W / PF. Dla obciążeń rezystancyjnych (jak grzejniki) watty i VA są równe (PF = 1.0). Dla obciążeń reaktywnych (jak silniki) VA jest wyższe niż watty."
+            },
+            {
+              "question": "Dlaczego VA jest ważne dla doboru UPS?",
+              "answer": "Systemy UPS są zazwyczaj oceniane w VA (moc pozorna) zamiast w watach (moc rzeczywista). Aby prawidłowo dobrać UPS, musisz znać wymagania dotyczące mocy pozornej. Na przykład, jeśli Twoje urządzenie zużywa 4000 watów przy współczynniku mocy 0.8, potrzebujesz UPS o mocy co najmniej 5000 VA (4000 / 0.8 = 5000 VA). Zapewnia to, że UPS może obsłużyć zarówno składniki mocy rzeczywistej, jak i reaktywnej."
+            },
+            {
+              "question": "Jaka jest typowa wartość współczynnika mocy?",
+              "answer": "Typowe wartości współczynnika mocy mieszczą się w zakresie od 0.8 do 1.0. Większość systemów elektrycznych ma współczynnik mocy między 0.85 a 0.95. Obciążenia domowe zazwyczaj mają współczynnik mocy około 0.9, podczas gdy obciążenia przemysłowe (szczególnie te z silnikami) mogą mieć niższe współczynniki mocy, często między 0.7 a 0.85."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak, nasz kalkulator Watty na VA jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Po prostu wprowadź wartości watów i współczynnika mocy i otrzymaj natychmiastowe, dokładne wyniki konwersji VA."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "vaToWatts": "Kalkulator VA na Watty",
+          "vaToWattsDesc": "Konwertuj wolt-ampery na watty ze współczynnikiem mocy",
+          "wattsToKva": "Kalkulator Watty na kVA",
+          "wattsToKvaDesc": "Konwertuj watty na kilowolt-ampery ze współczynnikiem mocy",
+          "kwToVa": "Kalkulator kW na VA",
+          "kwToVaDesc": "Konwertuj kilowaty na wolt-ampery natychmiast",
+          "vaToKva": "Kalkulator VA na kVA",
+          "vaToKvaDesc": "Konwertuj wolt-ampery na kilowolt-ampery natychmiast"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "Kalkulator kVA na Ampery",
       "description": "Konwertuj kilowolt-ampery (kVA) na ampery (A) natychmiast i dokładnie dla systemów jednofazowych i trójfazowych",
@@ -567,7 +631,7 @@
       "result": "Wynik",
       "voltage": "Napięcie",
       "seo": {
-        "title": "Kalkulator kW na Volty - Przelicz Kilowaty na Volty Online",
+        "title": "Kalkulator kW na Volty – Oblicz Napięcie z Mocy i Prądu",
         "description": "Darmowy kalkulator konwersji kW na Volty dla systemów DC, jednofazowych i trójfazowych. Przelicz kilowaty na wolta natychmiast, używając prądu i współczynnika mocy (tylko AC). Idealny do projektowania elektrycznego, doboru obwodów i obliczeń napięcia.",
         "keywords": "kalkulator kw na volty, konwerter kilowatów na volty, konwersja kw volty, kalkulator mocy na napięcie, kalkulator elektryczny, kalkulator voltów, kalkulator dc, kalkulator jednofazowy, kalkulator trójfazowy, darmowy kalkulator",
         "content": {

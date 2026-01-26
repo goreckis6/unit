@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Watt til VA Lommeregner",
+      "description": "Konverter watt (W) til volt-ampere (VA) med det samme og præcist ved hjælp af effektfaktoren",
+      "watts": "Watt (W)",
+      "powerFactor": "Effektfaktor (0-1)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "va": "Volt-ampere (VA)",
+      "seo": {
+        "title": "Watt til VA Lommeregner - Konverter Effekt til Tilsyneladende Effekt Online Gratis",
+        "description": "Gratis watt til VA omregningslommeregner. Konverter watt (W) til volt-ampere (VA) med det samme og præcist ved hjælp af effektfaktoren. Perfekt til elektriske beregninger, UPS-dimensionering og effektsystemdesign.",
+        "keywords": "watt va lommeregner, w va omregner, watt va omregning, effektfaktor lommeregner, el lommeregner, va lommeregner, tilsyneladende effekt lommeregner, gratis lommeregner",
+        "content": {
+          "heading": "Sådan konverterer man Watt til VA",
+          "paragraph1": "At konvertere watt (W) til volt-ampere (VA) er essentielt i elektroteknik og effektsystemer. Watt repræsenterer aktiv effekt, mens VA repræsenterer tilsyneladende effekt. Omregningen kræver kendskab til effektfaktoren (PF), som er forholdet mellem aktiv effekt og tilsyneladende effekt. Vores gratis watt til VA omregningslommeregner gør denne proces hurtig og nem, med øjeblikkelige og præcise resultater til dine elektriske beregninger.",
+          "paragraph2": "Omregningsformlen er: VA = W / PF, hvor W er effekten i watt, PF er effektfaktoren (en værdi mellem 0 og 1), og VA er tilsyneladende effekt i volt-ampere. Effektfaktoren angiver, hvor effektivt elektrisk energi bruges. En effektfaktor på 1.0 (eller 100%) betyder, at al effekt bruges effektivt, mens lavere værdier angiver, at en del af effekten spildes. For eksempel svarer 4000 watt ved en effektfaktor på 0.8 til 5000 VA tilsyneladende effekt.",
+          "paragraph3": "Denne omregning bruges almindeligvis i forskellige applikationer: dimensionering af UPS-systemer og omformere, beregning af transformatorkrav, design af effektdistributionssystemer, forståelse af elektriske belastningskarakteristika, dimensionering af backup-effektsystemer og arbejde med industrielle og kommercielle elektriske systemer. At vide, hvordan man konverterer Watt til VA, hjælper dig med at træffe velinformerede beslutninger om design af elektriske systemer, udstyrvalg og energistyring, især når du arbejder med UPS-systemer og strømforsyninger.",
+          "paragraph4": "Vores lommeregner tager watt og effektfaktor som input, anvender automatisk omregningsformlen og giver resultatet i volt-ampere. Lommeregneren håndterer både små værdier (almindelige i elektronik) og store værdier (almindelige i effektsystemer). Uanset om du arbejder med UPS-systemer, transformatorer, motorer, effektdistributionssystemer eller elektrisk udstyr, giver vores watt til VA lommeregner præcise, øjeblikkelige omregninger.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "Hvis du har en enhed, der forbruger 4000 watt med en effektfaktor på 0.8, ville tilsyneladende effekt i VA være: VA = 4000 W / 0.8 = 5000 VA. For en enhed med 9000 watt ved en effektfaktor på 0.9: VA = 9000 W / 0.9 = 10.000 VA. For en enhed med 2400 watt ved en effektfaktor på 0.85: VA = 2400 W / 0.85 = 2823.53 VA. For en enhed med 5000 watt ved en effektfaktor på 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er formlen for at konvertere watt til VA?",
+              "answer": "Formlen for at konvertere watt (W) til volt-ampere (VA) er: VA = W / PF, hvor W er effekten i watt, PF er effektfaktoren (en værdi mellem 0 og 1), og VA er tilsyneladende effekt i volt-ampere. Denne formel viser, at tilsyneladende effekt er lig med aktiv effekt divideret med effektfaktor."
+            },
+            {
+              "question": "Hvad er effektfaktor?",
+              "answer": "Effektfaktor (PF) er forholdet mellem aktiv effekt (watt) og tilsyneladende effekt (VA). Den angiver, hvor effektivt elektrisk energi bruges. En effektfaktor på 1.0 (eller 100%) betyder, at al effekt bruges effektivt, mens lavere værdier angiver, at en del af effekten spildes. Typiske effektfaktorer ligger mellem 0.8 og 1.0."
+            },
+            {
+              "question": "Hvad er forskellen mellem watt og VA?",
+              "answer": "Watt (W) måler aktiv effekt — den faktiske effekt, der forbruges og omdannes til nyttigt arbejde. VA (volt-ampere) måler tilsyneladende effekt — den samlede effekt i et AC-kredsløb, inklusive både aktive og reaktive komponenter. Forholdet er: VA = W / PF. For resistive belastninger (som varmere) er watt og VA ens (PF = 1.0). For reaktive belastninger (som motorer) er VA højere end watt."
+            },
+            {
+              "question": "Hvorfor er VA vigtigt for UPS-dimensionering?",
+              "answer": "UPS-systemer er typisk vurderet i VA (tilsyneladende effekt) snarere end watt (aktiv effekt). For at dimensionere en UPS korrekt skal du kende tilsyneladende effektkravet. Hvis din udstyr for eksempel forbruger 4000 watt ved en effektfaktor på 0.8, har du brug for en UPS vurderet til mindst 5000 VA (4000 / 0.8 = 5000 VA). Dette sikrer, at UPS'en kan håndtere både aktive og reaktive effektkomponenter."
+            },
+            {
+              "question": "Hvad er en typisk effektfaktorværdi?",
+              "answer": "Typiske effektfaktorværdier varierer fra 0.8 til 1.0. De fleste elektriske systemer har en effektfaktor mellem 0.85 og 0.95. Boliglaster har typisk en effektfaktor omkring 0.9, mens industrielle laster (især dem med motorer) kan have lavere effektfaktorer, ofte mellem 0.7 og 0.85."
+            },
+            {
+              "question": "Er denne lommeregner gratis at bruge?",
+              "answer": "Ja, vores watt til VA lommeregner er helt gratis. Ingen registrering eller betalning påkrævet. Indtast blot dine watt- og effektfaktorværdier og få øjeblikkelige, præcise VA-omregningsresultater."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Lommeregnere",
+          "vaToWatts": "VA til Watt Lommeregner",
+          "vaToWattsDesc": "Konverter volt-ampere til watt med effektfaktor",
+          "wattsToKva": "Watt til kVA Lommeregner",
+          "wattsToKvaDesc": "Konverter watt til kilovolt-ampere med effektfaktor",
+          "kwToVa": "kW til VA Lommeregner",
+          "kwToVaDesc": "Konverter kilowatt til volt-ampere med det samme",
+          "vaToKva": "VA til kVA Lommeregner",
+          "vaToKvaDesc": "Konverter volt-ampere til kilovolt-ampere med det samme"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "kVA til Ampere Lommeregner",
       "description": "Konverter kilovolt-ampere (kVA) til ampere (A) med det samme og præcist for enfase- og trefase systemer",
@@ -567,7 +631,7 @@
       "result": "Resultat",
       "voltage": "Spenning",
       "seo": {
-        "title": "kW til Volt Lommeregner - Konverter Kilowatt til Volt Online",
+        "title": "kW til Volt Lommeregner – Beregn Spænding fra Effekt og Strøm",
         "description": "Gratis kW til Volt konverteringslommeregner for DC-, enfase- og trefasesystemer. Konverter kilowatt til volt øjeblikkeligt med strøm og effektfaktor (kun AC). Perfekt til elektrisk design og spændingsberegninger.",
         "keywords": "kw volt lommeregner, kilowatt volt konverter, kw volt konvertering, effekt spænding lommeregner, elektrisk lommeregner, volt lommeregner, dc lommeregner, enfase trefase, gratis",
         "content": {

@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Calculateur Watts vers VA",
+      "description": "Convertir les watts (W) en voltampères (VA) instantanément et précisément avec le facteur de puissance",
+      "watts": "Watts (W)",
+      "powerFactor": "Facteur de puissance (0-1)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "va": "Voltampères (VA)",
+      "seo": {
+        "title": "Calculateur Watts vers VA - Convertir Puissance en Puissance Apparente Online Gratuit",
+        "description": "Calculateur gratuit de conversion Watts vers VA. Convertir les watts (W) en voltampères (VA) instantanément et précisément avec le facteur de puissance. Parfait pour les calculs électriques, dimensionnement UPS et conception de systèmes d'alimentation.",
+        "keywords": "calculateur watts va, convertisseur w va, conversion watts va, calculateur facteur de puissance, calculateur électrique, calculateur va, calculateur puissance apparente, calculateur gratuit",
+        "content": {
+          "heading": "Comment Convertir Watts en VA",
+          "paragraph1": "La conversion de watts (W) en voltampères (VA) est essentielle en génie électrique et systèmes d'alimentation. Les watts représentent la puissance réelle (puissance active), tandis que VA représente la puissance apparente. La conversion nécessite la connaissance du facteur de puissance (PF), qui est le rapport de la puissance réelle à la puissance apparente. Notre calculateur gratuit de conversion Watts vers VA rend ce processus rapide et facile, fournissant des résultats instantanés et précis pour vos calculs électriques.",
+          "paragraph2": "La formule de conversion est : VA = W / PF, où W est la puissance en watts, PF est le facteur de puissance (une valeur entre 0 et 1), et VA est la puissance apparente en voltampères. Le facteur de puissance indique l'efficacité d'utilisation de l'énergie électrique. Un facteur de puissance de 1.0 (ou 100%) signifie que toute la puissance est utilisée efficacement, tandis que des valeurs plus faibles indiquent qu'une partie de la puissance est gaspillée. Par exemple, 4000 watts à un facteur de puissance de 0.8 équivaut à 5000 VA de puissance apparente.",
+          "paragraph3": "Cette conversion est couramment utilisée dans diverses applications : dimensionnement des systèmes UPS et onduleurs, calcul des exigences des transformateurs, conception des systèmes de distribution d'énergie, compréhension des caractéristiques de charge électrique, dimensionnement des systèmes d'alimentation de secours, et travail avec des systèmes électriques industriels et commerciaux. Savoir comment convertir Watts en VA vous aide à prendre des décisions éclairées concernant la conception des systèmes électriques, la sélection des équipements et la gestion de l'énergie, en particulier lors du travail avec des systèmes UPS et alimentations.",
+          "paragraph4": "Notre calculateur prend les watts et le facteur de puissance comme entrées, applique automatiquement la formule de conversion et fournit le résultat en voltampères. Le calculateur gère à la fois les petites valeurs (courantes en électronique) et les grandes valeurs (courantes dans les systèmes d'alimentation). Que vous travailliez avec des systèmes UPS, transformateurs, moteurs, systèmes de distribution d'énergie ou tout équipement électrique, notre calculateur Watts vers VA fournit des conversions précises et instantanées.",
+          "exampleHeading": "Exemple :",
+          "exampleText": "Si vous avez un appareil consommant 4000 watts avec un facteur de puissance de 0.8, la puissance apparente en VA serait : VA = 4000 W / 0.8 = 5000 VA. Pour un appareil avec 9000 watts à un facteur de puissance de 0.9 : VA = 9000 W / 0.9 = 10 000 VA. Pour un appareil avec 2400 watts à un facteur de puissance de 0.85 : VA = 2400 W / 0.85 = 2823.53 VA. Pour un appareil avec 5000 watts à un facteur de puissance de 1.0 : VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Quelle est la formule pour convertir watts en VA ?",
+              "answer": "La formule pour convertir watts (W) en voltampères (VA) est : VA = W / PF, où W est la puissance en watts, PF est le facteur de puissance (une valeur entre 0 et 1), et VA est la puissance apparente en voltampères. Cette formule montre que la puissance apparente est égale à la puissance réelle divisée par le facteur de puissance."
+            },
+            {
+              "question": "Qu'est-ce que le facteur de puissance ?",
+              "answer": "Le facteur de puissance (PF) est le rapport de la puissance réelle (watts) à la puissance apparente (VA). Il indique l'efficacité d'utilisation de l'énergie électrique. Un facteur de puissance de 1.0 (ou 100%) signifie que toute la puissance est utilisée efficacement, tandis que des valeurs plus faibles indiquent qu'une partie de la puissance est gaspillée. Les facteurs de puissance typiques vont de 0.8 à 1.0."
+            },
+            {
+              "question": "Quelle est la différence entre watts et VA ?",
+              "answer": "Les watts (W) mesurent la puissance réelle — la puissance réelle consommée et convertie en travail utile. Les VA (voltampères) mesurent la puissance apparente — la puissance totale dans un circuit AC, y compris les composantes réelles et réactives. La relation est : VA = W / PF. Pour les charges résistives (comme les radiateurs), watts et VA sont égaux (PF = 1.0). Pour les charges réactives (comme les moteurs), VA est supérieur aux watts."
+            },
+            {
+              "question": "Pourquoi VA est-il important pour le dimensionnement UPS ?",
+              "answer": "Les systèmes UPS sont généralement évalués en VA (puissance apparente) plutôt qu'en watts (puissance réelle). Pour dimensionner correctement un UPS, vous devez connaître l'exigence de puissance apparente. Par exemple, si votre équipement consomme 4000 watts à un facteur de puissance de 0.8, vous avez besoin d'un UPS évalué à au moins 5000 VA (4000 / 0.8 = 5000 VA). Cela garantit que l'UPS peut gérer à la fois les composantes de puissance réelle et réactive."
+            },
+            {
+              "question": "Quelle est une valeur typique du facteur de puissance ?",
+              "answer": "Les valeurs typiques du facteur de puissance vont de 0.8 à 1.0. La plupart des systèmes électriques ont un facteur de puissance entre 0.85 et 0.95. Les charges résidentielles ont généralement un facteur de puissance d'environ 0.9, tandis que les charges industrielles (surtout celles avec moteurs) peuvent avoir des facteurs de puissance plus faibles, souvent entre 0.7 et 0.85."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit ?",
+              "answer": "Oui, notre calculateur Watts vers VA est entièrement gratuit. Aucune inscription ni paiement requis. Entrez simplement vos valeurs de watts et facteur de puissance et obtenez des résultats de conversion VA instantanés et précis."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Associés",
+          "vaToWatts": "Calculateur VA vers Watts",
+          "vaToWattsDesc": "Convertir voltampères en watts avec facteur de puissance",
+          "wattsToKva": "Calculateur Watts vers kVA",
+          "wattsToKvaDesc": "Convertir watts en kilovoltampères avec facteur de puissance",
+          "kwToVa": "Calculateur kW vers VA",
+          "kwToVaDesc": "Convertir kilowatts en voltampères instantanément",
+          "vaToKva": "Calculateur VA vers kVA",
+          "vaToKvaDesc": "Convertir voltampères en kilovoltampères instantanément"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "Calculateur kVA vers Ampères",
       "description": "Convertissez les kilovolt-ampères (kVA) en ampères (A) instantanément et précisément pour les systèmes monophasés et triphasés",
@@ -567,7 +631,7 @@
       "result": "Résultat",
       "voltage": "Tension",
       "seo": {
-        "title": "Calculateur kW vers Volts - Convertir Kilowatts en Volts en ligne",
+        "title": "Calculateur kW vers Volts – Calculer la Tension à partir de la Puissance et du Courant",
         "description": "Calculateur gratuit de conversion kW vers Volts pour systèmes DC, monophasés et triphasés. Convertissez les kilowatts en volts instantanément avec courant et facteur de puissance (AC uniquement). Idéal pour la conception électrique et les calculs de tension.",
         "keywords": "calculateur kw volts, convertisseur kilowatts volts, conversion kw volts, puissance tension calculateur, calculateur électrique, calculateur volts, dc calculateur, monophasé triphasé, gratuit",
         "content": {

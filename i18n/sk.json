@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Kalkulačka Wattov na VA",
+      "description": "Preveďte watty (W) na voltampéry (VA) okamžite a presne pomocou účinníka",
+      "watts": "Watty (W)",
+      "powerFactor": "Účinník (0–1)",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "va": "Voltampéry (VA)",
+      "seo": {
+        "title": "Kalkulačka Wattov na VA - Preveďte Výkon na Zdanlivý Výkon Online Zadarmo",
+        "description": "Bezplatná kalkulačka prevodu Wattov na VA. Preveďte watty (W) na voltampéry (VA) okamžite a presne pomocou účinníka. Perfektné pre elektrické výpočty, dimenzovanie UPS a návrh systémov napájania.",
+        "keywords": "kalkulačka wattov va, prevodník w va, prevod wattov va, kalkulačka účinníka, elektrická kalkulačka, kalkulačka va, kalkulačka zdanlivého výkonu, bezplatná kalkulačka",
+        "content": {
+          "heading": "Ako previesť Watty na VA",
+          "paragraph1": "Prevod wattov (W) na voltampéry (VA) je nevyhnutný v elektrotechnike a systémoch napájania. Watty predstavujú skutočný výkon (činný výkon), zatiaľ čo VA predstavuje zdanlivý výkon. Prevod vyžaduje znalosť účinníka (PF), čo je pomer skutočného výkonu k zdanlivému výkonu. Naša bezplatná kalkulačka prevodu Wattov na VA robí tento proces rýchlym a jednoduchým, poskytuje okamžité a presné výsledky pre vaše elektrické výpočty.",
+          "paragraph2": "Prevádzkový vzorec je: VA = W / PF, kde W je výkon vo wattoch, PF je účinník (hodnota medzi 0 a 1), a VA je zdanlivý výkon vo voltampéroch. Účinník ukazuje, ako efektívne sa elektrická energia používa. Účinník 1.0 (alebo 100%) znamená, že celý výkon je používaný efektívne, zatiaľ čo nižšie hodnoty naznačujú, že časť výkonu je plytvaná. Napríklad 4000 wattov pri účinníku 0.8 sa rovná 5000 VA zdanlivého výkonu.",
+          "paragraph3": "Tento prevod sa bežne používa v rôznych aplikáciách: dimenzovanie systémov UPS a striedačov, výpočet požiadaviek transformátorov, návrh systémov distribúcie energie, pochopenie charakteristík elektrického zaťaženia, dimenzovanie systémov záložného napájania a práca s priemyselnými a komerčnými elektrickými systémami. Znalosť prevodu Wattov na VA vám pomáha robiť informované rozhodnutia o návrhu elektrických systémov, výbere zariadení a správe energie, najmä pri práci so systémami UPS a napájacími zdrojmi.",
+          "paragraph4": "Naša kalkulačka berie watty a účinník ako vstupy, automaticky aplikuje prevodný vzorec a poskytuje výsledok vo voltampéroch. Kalkulačka spracováva ako malé hodnoty (bežné v elektronike), tak veľké hodnoty (bežné v systémoch napájania). Či už pracujete so systémami UPS, transformátormi, motormi, systémami distribúcie energie alebo akýmkoľvek elektrickým zariadením, naša kalkulačka Wattov na VA poskytuje presné, okamžité prevody.",
+          "exampleHeading": "Príklad:",
+          "exampleText": "Ak máte zariadenie spotrebúvajúce 4000 wattov s účinníkom 0.8, zdanlivý výkon v VA by bol: VA = 4000 W / 0.8 = 5000 VA. Pre zariadenie s 9000 wattmi pri účinníku 0.9: VA = 9000 W / 0.9 = 10 000 VA. Pre zariadenie s 2400 wattmi pri účinníku 0.85: VA = 2400 W / 0.85 = 2823.53 VA. Pre zariadenie s 5000 wattmi pri účinníku 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Aký je vzorec na prevod wattov na VA?",
+              "answer": "Vzorec na prevod wattov (W) na voltampéry (VA) je: VA = W / PF, kde W je výkon vo wattoch, PF je účinník (hodnota medzi 0 a 1), a VA je zdanlivý výkon vo voltampéroch. Tento vzorec ukazuje, že zdanlivý výkon sa rovná skutočnému výkonu delenému účinníkom."
+            },
+            {
+              "question": "Čo je účinník?",
+              "answer": "Účinník (PF) je pomer skutočného výkonu (watty) k zdanlivému výkonu (VA). Ukazuje, ako efektívne sa elektrická energia používa. Účinník 1.0 (alebo 100%) znamená, že celý výkon je používaný efektívne, zatiaľ čo nižšie hodnoty naznačujú, že časť výkonu je plytvaná. Typické účinníky sa pohybujú od 0.8 do 1.0."
+            },
+            {
+              "question": "Aký je rozdiel medzi watty a VA?",
+              "answer": "Watty (W) merajú skutočný výkon — skutočnú spotrebovanú a premenenú energiu na užitočnú prácu. VA (voltampéry) merajú zdanlivý výkon — celkový výkon v obvode AC, vrátane ako skutočných, tak jalových zložiek. Vzťah je: VA = W / PF. Pre odporové záťaže (ako topidlá) sú watty a VA rovnaké (PF = 1.0). Pre jalové záťaže (ako motory) je VA vyššie ako watty."
+            },
+            {
+              "question": "Prečo je VA dôležité pre dimenzovanie UPS?",
+              "answer": "Systémy UPS sú obvykle hodnotené v VA (zdanlivý výkon) skôr ako vo wattoch (skutočný výkon). Pre správne dimenzovanie UPS potrebujete poznať požiadavku na zdanlivý výkon. Napríklad, ak vaše zariadenie spotrebúva 4000 wattov pri účinníku 0.8, potrebujete UPS hodnotený aspoň na 5000 VA (4000 / 0.8 = 5000 VA). Toto zabezpečuje, že UPS môže zvládnuť ako skutočné, tak jalové zložky výkonu."
+            },
+            {
+              "question": "Aká je typická hodnota účinníka?",
+              "answer": "Typické hodnoty účinníka sa pohybujú od 0.8 do 1.0. Väčšina elektrických systémov má účinník medzi 0.85 a 0.95. Rezidenčné záťaže zvyčajne majú účinník okolo 0.9, zatiaľ čo priemyselné záťaže (najmä tie s motormi) môžu mať nižšie účinníky, často medzi 0.7 a 0.85."
+            },
+            {
+              "question": "Je táto kalkulačka zadarmo?",
+              "answer": "Áno, naša kalkulačka Wattov na VA je úplne zadarmo. Nie je potrebná registrácia ani platba. Jednoducho zadajte hodnoty wattov a účinníka a získajte okamžité, presné výsledky prevodu VA."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace kalkulačky",
+          "vaToWatts": "Kalkulačka VA na Watty",
+          "vaToWattsDesc": "Preveďte voltampéry na watty s účinníkom",
+          "wattsToKva": "Kalkulačka Wattov na kVA",
+          "wattsToKvaDesc": "Preveďte watty na kilovoltampéry s účinníkom",
+          "kwToVa": "Kalkulačka kW na VA",
+          "kwToVaDesc": "Preveďte kilowatty na voltampéry okamžite",
+          "vaToKva": "Kalkulačka VA na kVA",
+          "vaToKvaDesc": "Preveďte voltampéry na kilovoltampéry okamžite"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "Kalkulačka kVA na Ampéry",
       "description": "Preveďte kilovoltampéry (kVA) na ampéry (A) okamžite a presne pre jednofázové a trojfázové systémy",
@@ -567,7 +631,7 @@
       "result": "Výsledok",
       "voltage": "Napätie",
       "seo": {
-        "title": "Kalkulačka kW na Volty - Preveďte Kilowatty na Volty online",
+        "title": "Kalkulačka kW na Volty – Vypočítajte Napätie z Výkonu a Prúdu",
         "description": "Bezplatná kalkulačka prevodu kW na Volty pre systémy DC, jednofázové a trojfázové. Preveďte kilowatty na volty okamžite pomocou prúdu a účinníka (len AC). Vhodné pre elektrický návrh a výpočty napätia.",
         "keywords": "kalkulačka kw volty, prevodník kilowatty volty, prevod kw volty, výkon napätie kalkulačka, elektrická kalkulačka, kalkulačka voltov, dc kalkulačka, jednofázová trojfázová, bezplatná",
         "content": {

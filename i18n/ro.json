@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Calculator Watt în VA",
+      "description": "Convertește wații (W) în volt-amperi (VA) instantaneu și precis folosind factorul de putere",
+      "watts": "Wați (W)",
+      "powerFactor": "Factor de Putere (0-1)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "va": "Volt-Amperi (VA)",
+      "seo": {
+        "title": "Calculator Watt în VA - Convertește Puterea în Putere Aparentă Online Gratuit",
+        "description": "Calculator conversie Watt în VA gratuit. Convertește wații (W) în volt-amperi (VA) instantaneu și precis folosind factorul de putere. Perfect pentru calcule electrice, dimensionarea UPS și designul sistemelor de alimentare.",
+        "keywords": "calculator watt va, convertor w va, conversie watt va, calculator factor putere, calculator electric, calculator va, calculator putere aparentă, calculator gratuit",
+        "content": {
+          "heading": "Cum se convertește Watt în VA",
+          "paragraph1": "Conversia wattilor (W) în volt-amperi (VA) este esențială în inginerie electrică și sisteme de alimentare. Wații reprezintă puterea reală (putere activă), în timp ce VA reprezintă puterea aparentă. Conversia necesită cunoașterea factorului de putere (FP), care este raportul dintre puterea reală și puterea aparentă. Calculatorul nostru gratuit de conversie Watt în VA face acest proces rapid și ușor, oferind rezultate instantanee și precise pentru calculele dvs. electrice.",
+          "paragraph2": "Formula de conversie este: VA = W / FP, unde W este puterea în wați, FP este factorul de putere (o valoare între 0 și 1), și VA este puterea aparentă în volt-amperi. Factorul de putere indică cât de eficient este utilizată energia electrică. Un factor de putere de 1.0 (sau 100%) înseamnă că toată puterea este utilizată eficient, în timp ce valorile mai mici indică faptul că o parte din putere este irosită. De exemplu, 4000 wați la un factor de putere de 0.8 este egal cu 5000 VA de putere aparentă.",
+          "paragraph3": "Această conversie este folosită frecvent în diverse aplicații: dimensionarea sistemelor UPS și invertorilor, calcularea cerințelor transformatoarelor, proiectarea sistemelor de distribuție a energiei, înțelegerea caracteristicilor sarcinii electrice, dimensionarea sistemelor de alimentare de rezervă și lucrul cu sisteme electrice industriale și comerciale. Știind cum se convertește Watt în VA vă ajută să luați decizii informate despre proiectarea sistemelor electrice, selecția echipamentelor și managementul energiei, în special când lucrați cu sisteme UPS și surse de alimentare.",
+          "paragraph4": "Calculatorul nostru ia wații și factorul de putere ca intrări, aplică automat formula de conversie și oferă rezultatul în volt-amperi. Calculatorul gestionează atât valori mici (comune în electronică) cât și valori mari (comune în sistemele de alimentare). Fie că lucrați cu sisteme UPS, transformatoare, motoare, sisteme de distribuție a energiei sau orice echipament electric, calculatorul nostru Watt în VA oferă conversii precise, instantanee.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "Dacă aveți un dispozitiv care consumă 4000 wați cu un factor de putere de 0.8, puterea aparentă în VA ar fi: VA = 4000 W / 0.8 = 5000 VA. Pentru un dispozitiv cu 9000 wați la un factor de putere de 0.9: VA = 9000 W / 0.9 = 10.000 VA. Pentru un dispozitiv cu 2400 wați la un factor de putere de 0.85: VA = 2400 W / 0.85 = 2823.53 VA. Pentru un dispozitiv cu 5000 wați la un factor de putere de 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Care este formula pentru a converti wații în VA?",
+              "answer": "Formula pentru a converti wații (W) în volt-amperi (VA) este: VA = W / FP, unde W este puterea în wați, FP este factorul de putere (o valoare între 0 și 1), și VA este puterea aparentă în volt-amperi. Această formulă arată că puterea aparentă este egală cu puterea reală împărțită la factorul de putere."
+            },
+            {
+              "question": "Ce este factorul de putere?",
+              "answer": "Factorul de putere (FP) este raportul dintre puterea reală (wați) și puterea aparentă (VA). Indică cât de eficient este utilizată energia electrică. Un factor de putere de 1.0 (sau 100%) înseamnă că toată puterea este utilizată eficient, în timp ce valorile mai mici indică faptul că o parte din putere este irosită. Factorii de putere tipici variază de la 0.8 la 1.0."
+            },
+            {
+              "question": "Care este diferența dintre wați și VA?",
+              "answer": "Wații (W) măsoară puterea reală — puterea efectiv consumată și convertită în muncă utilă. VA (volt-amperi) măsoară puterea aparentă — puterea totală într-un circuit AC, inclusiv componente atât reale cât și reactive. Relația este: VA = W / FP. Pentru sarcinile rezistive (cum ar fi încălzitoarele), wații și VA sunt egali (FP = 1.0). Pentru sarcinile reactive (cum ar fi motoarele), VA este mai mare decât wații."
+            },
+            {
+              "question": "De ce este VA important pentru dimensionarea UPS?",
+              "answer": "Sistemele UPS sunt de obicei evaluate în VA (putere aparentă) mai degrabă decât în wați (putere reală). Pentru a dimensiona corect un UPS, trebuie să cunoașteți cerința de putere aparentă. De exemplu, dacă echipamentul dvs. consumă 4000 wați la un factor de putere de 0.8, aveți nevoie de un UPS evaluat la cel puțin 5000 VA (4000 / 0.8 = 5000 VA). Acest lucru asigură că UPS-ul poate gestiona atât componentele de putere reală cât și reactive."
+            },
+            {
+              "question": "Care este o valoare tipică a factorului de putere?",
+              "answer": "Valorile tipice ale factorului de putere variază de la 0.8 la 1.0. Majoritatea sistemelor electrice au un factor de putere între 0.85 și 0.95. Sarcinile rezidențiale au de obicei un factor de putere în jur de 0.9, în timp ce sarcinile industriale (în special cele cu motoare) pot avea factori de putere mai mici, adesea între 0.7 și 0.85."
+            },
+            {
+              "question": "Este acest calculator gratuit?",
+              "answer": "Da, calculatorul nostru Watt în VA este complet gratuit. Nu este necesară înregistrarea sau plata. Introduceți pur și simplu valorile dvs. de wați și factor de putere și obțineți rezultate de conversie VA instantanee și precise."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Asociate",
+          "vaToWatts": "Calculator VA în Watt",
+          "vaToWattsDesc": "Convertește volt-amperi în wați cu factor de putere",
+          "wattsToKva": "Calculator Watt în kVA",
+          "wattsToKvaDesc": "Convertește wații în kilovolt-amperi cu factor de putere",
+          "kwToVa": "Calculator kW în VA",
+          "kwToVaDesc": "Convertește kilowații în volt-amperi instantaneu",
+          "vaToKva": "Calculator VA în kVA",
+          "vaToKvaDesc": "Convertește volt-amperi în kilovolt-amperi instantaneu"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "Calculator kVA la Amperi",
       "description": "Convertește kilovolt-amperii (kVA) în amperi (A) instant și precis pentru sisteme monofazate și trifazate",
@@ -567,7 +631,7 @@
       "result": "Rezultat",
       "voltage": "Tensiune",
       "seo": {
-        "title": "Calculator kW la Volți - Convertește Kilowați în Volți Online",
+        "title": "Calculator kW la Volți – Calculează Tensiunea din Putere și Curent",
         "description": "Calculator gratuit de conversie kW la Volți pentru sisteme DC, monofazate și trifazate. Convertește kilowații în volți instantaneu cu curent și factor de putere (doar AC). Perfect pentru proiectare electrică și calcule de tensiune.",
         "keywords": "calculator kw volți, convertor kilowați volți, conversie kw volți, putere tensiune calculator, calculator electric, calculator volți, dc calculator, monofazat trifazat, gratuit",
         "content": {

@@ -230,6 +230,70 @@
         }
       }
     },
+    "wattsToVa": {
+      "title": "Watti VA Laskin",
+      "description": "Muunna watit (W) voltiampeereiksi (VA) heti ja tarkasti käyttämällä tehokerrointa",
+      "watts": "Watti (W)",
+      "powerFactor": "Tehokerroin (0–1)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "va": "Voltiampeeri (VA)",
+      "seo": {
+        "title": "Watti VA Laskin - Muunna Teho Näennäistehoksi Verkossa Ilmaiseksi",
+        "description": "Ilmainen watti VA muunnoslaskin. Muunna watit (W) voltiampeereiksi (VA) heti ja tarkasti tehokertoimen avulla. Täydellinen sähköisiin laskelmiin, UPS-mitoitukseen ja tehojärjestelmien suunnitteluun.",
+        "keywords": "watti va laskin, w va muunnin, watti va muunnos, tehokerroin laskin, sähkölaskin, va laskin, näennäisteho laskin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka muuntaa Watit VA:ksi",
+          "paragraph1": "Wattien (W) muuntaminen voltiampeereiksi (VA) on välttämätöntä sähkötekniikassa ja tehojärjestelmissä. Watit edustavat aktiivitehoa, kun taas VA edustaa näennäistehoa. Muunnos vaatii tehokertoimen (PF) tuntemusta, joka on aktiivitehon ja näennäistehon suhde. Ilmainen watti VA muunnoslaskimemme tekee tästä prosessista nopean ja helpon, tarjoten välittömiä ja tarkkoja tuloksia sähköisiin laskelmiin.",
+          "paragraph2": "Muunnoskaava on: VA = W / PF, jossa W on teho watteina, PF on tehokerroin (arvo 0 ja 1 välillä), ja VA on näennäisteho voltiampeereina. Tehokerroin osoittaa, kuinka tehokkaasti sähköenergiaa käytetään. Tehokerroin 1.0 (tai 100%) tarkoittaa, että kaikki teho käytetään tehokkaasti, kun taas alhaisemmat arvot osoittavat, että osa tehosta hukataan. Esimerkiksi 4000 wattia tehokertoimella 0.8 vastaa 5000 VA näennäistehoa.",
+          "paragraph3": "Tätä muunnosta käytetään yleisesti erilaisissa sovelluksissa: UPS-järjestelmien ja muunninten mitoitus, muuntajavaatimusten laskeminen, tehonjakelujärjestelmien suunnittelu, sähköisten kuormitusominaisuuksien ymmärtäminen, varmuuskopiointitehojärjestelmien mitoitus sekä teollisten ja kaupallisten sähköjärjestelmien kanssa työskentely. Tieto siitä, kuinka muuntaa Watit VA:ksi, auttaa sinua tekemään tietoon perustuvia päätöksiä sähköjärjestelmien suunnittelusta, laitteiden valinnasta ja energianhallinnasta, erityisesti kun työskentelet UPS-järjestelmien ja virtalähteiden kanssa.",
+          "paragraph4": "Laskimemme ottaa watit ja tehokertoimen syötteiksi, soveltaa automaattisesti muunnoskaavaa ja antaa tuloksen voltiampeereina. Laskin käsittelee sekä pieniä arvoja (yhteisiä elektroniikassa) että suuria arvoja (yhteisiä tehojärjestelmissä). Työskenteletpä UPS-järjestelmien, muuntajien, moottoreiden, tehonjakelujärjestelmien vai minkä tahansa sähkölaitteiden kanssa, watti VA laskimemme tarjoaa tarkkoja, välittömiä muunnoksia.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "Jos sinulla on laite, joka kuluttaa 4000 wattia tehokertoimella 0.8, näennäisteho VA:na olisi: VA = 4000 W / 0.8 = 5000 VA. Laitteelle, jossa on 9000 wattia tehokertoimella 0.9: VA = 9000 W / 0.9 = 10 000 VA. Laitteelle, jossa on 2400 wattia tehokertoimella 0.85: VA = 2400 W / 0.85 = 2823.53 VA. Laitteelle, jossa on 5000 wattia tehokertoimella 1.0: VA = 5000 W / 1.0 = 5000 VA."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava wattien muuntamiseksi VA:ksi?",
+              "answer": "Kaava wattien (W) muuntamiseksi voltiampeereiksi (VA) on: VA = W / PF, jossa W on teho watteina, PF on tehokerroin (arvo 0 ja 1 välillä), ja VA on näennäisteho voltiampeereina. Tämä kaava osoittaa, että näennäisteho on yhtä suuri kuin aktiiviteho jaettuna tehokertoimella."
+            },
+            {
+              "question": "Mikä on tehokerroin?",
+              "answer": "Tehokerroin (PF) on aktiivitehon (watit) ja näennäistehon (VA) suhde. Se osoittaa, kuinka tehokkaasti sähköenergiaa käytetään. Tehokerroin 1.0 (tai 100%) tarkoittaa, että kaikki teho käytetään tehokkaasti, kun taas alhaisemmat arvot osoittavat, että osa tehosta hukataan. Tyypilliset tehokertoimet vaihtelevat 0.8:sta 1.0:aan."
+            },
+            {
+              "question": "Mikä on ero wattien ja VA:n välillä?",
+              "answer": "Watit (W) mittaavat aktiivitehoa — todellista tehoa, joka kulutetaan ja muunnetaan hyödylliseksi työksi. VA (voltiampeeri) mittaavat näennäistehoa — kokonaistehoa AC-piirissä, mukaan lukien sekä aktiiviset että reaktiiviset komponentit. Suhde on: VA = W / PF. Resistanssikuormille (kuten lämmittimille) watit ja VA ovat yhtä suuret (PF = 1.0). Reaktiivisille kuormille (kuten moottoreille) VA on korkeampi kuin watit."
+            },
+            {
+              "question": "Miksi VA on tärkeä UPS-mitoituksessa?",
+              "answer": "UPS-järjestelmät on tyypillisesti luokiteltu VA:na (näennäisteho) eikä watteina (aktiiviteho). Jotta UPS voidaan mitoittaa oikein, sinun on tiedettävä näennäistehovaatimus. Jos laitteesi esimerkiksi kuluttaa 4000 wattia tehokertoimella 0.8, tarvitset vähintään 5000 VA:n (4000 / 0.8 = 5000 VA) UPS:n. Tämä varmistaa, että UPS voi käsitellä sekä aktiivisia että reaktiivisia tehoskomponentteja."
+            },
+            {
+              "question": "Mikä on tyypillinen tehokerroinarvo?",
+              "answer": "Tyypilliset tehokerroinarvot vaihtelevat 0.8:sta 1.0:aan. Useimmilla sähköjärjestelmillä on tehokerroin 0.85:n ja 0.95:n välillä. Asuinrakennusten kuormat ovat tyypillisesti noin 0.9:n tehokertoimella, kun taas teolliset kuormat (erityisesti ne, joissa on moottoreita) voivat olla alhaisempia tehokertoimia, usein 0.7:n ja 0.85:n välillä."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, watti VA laskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Syötä yksinkertaisesti wattien ja tehokertoimen arvot ja saat välittömät, tarkat VA-muunnostulokset."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Aiheeseen liittyvät laskimet",
+          "vaToWatts": "VA Watti Laskin",
+          "vaToWattsDesc": "Muunna voltiampeeri watteiksi tehokertoimella",
+          "wattsToKva": "Watti kVA Laskin",
+          "wattsToKvaDesc": "Muunna watit kilovoltiampeereiksi tehokertoimella",
+          "kwToVa": "kW VA Laskin",
+          "kwToVaDesc": "Muunna kilowattia voltiampeereiksi heti",
+          "vaToKva": "VA kVA Laskin",
+          "vaToKvaDesc": "Muunna voltiampeeri kilovoltiampeereiksi heti"
+        }
+      }
+    },
     "kvaToAmps": {
       "title": "kVA Ampeeri Laskin",
       "description": "Muunna kilovoltiampeerit (kVA) ampeereiksi (A) heti ja tarkasti yksivaihe- ja kolmivaihejärjestelmiä varten",
@@ -567,7 +631,7 @@
       "result": "Tulos",
       "voltage": "Jännite",
       "seo": {
-        "title": "kW Voltti Laskin - Muunna Kilowatit Voltiksi Online",
+        "title": "kW Voltti Laskin – Laske Jännite Tehosta ja Virrasta",
         "description": "Ilmainen kW Voltti muunnoslaskin DC-, yksivaihe- ja kolmivaihejärjestelmille. Muunna kilowatit volteiksi välittömästi virran ja tehokertoimen (vain AC) avulla. Sopii sähkösuunnitteluun ja jännitelaskelmiin.",
         "keywords": "kw voltti laskin, kilowatti voltti muunnin, kw voltti muunnos, teho jännite laskin, sähkölaskin, voltti laskin, dc laskin, yksivaihe kolmivaihe, ilmainen",
         "content": {

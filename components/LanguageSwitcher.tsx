@@ -249,7 +249,8 @@ export function LanguageSwitcher() {
   }, []);
 
   const handleLanguageChange = (newLocale: string) => {
-    router.replace(pathname, { locale: newLocale });
+    const nextPath = pathname || '/';
+    router.replace(nextPath, { locale: newLocale });
     setIsOpen(false);
   };
 

@@ -1464,6 +1464,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Watt till Volt-kalkylator",
+      "description": "Konvertera effekt (W) till spänning (V) för DC, enfas och trefas med ström och effektfaktor",
+      "currentType": "Strömtyp",
+      "directCurrent": "Likström (DC)",
+      "singlePhase": "Enfas",
+      "threePhase": "Trefas",
+      "watts": "Watt (W)",
+      "amps": "Ström (A)",
+      "powerFactor": "Effektfaktor (0–1)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "volts": "Spänning (V)",
+      "seo": {
+        "title": "Watt till Volt-kalkylator – DC, Enfas och Trefas | Effekt till Spänning",
+        "description": "Gratis Watt till Volt-kalkylator. Konvertera effekt (W) till spänning (V) för DC, enfas och trefas. Ström och effektfaktor. Perfekt för kretsdesign, spänningsberäkningar och elektroteknik.",
+        "keywords": "watt volt kalkylator, effekt spänning omvandlare, W V, DC enfas trefas, el-kalkylator, spänningskalkylator, gratis kalkylator",
+        "content": {
+          "heading": "Hur man konverterar watt till volt",
+          "paragraph1": "Att konvertera effekt i watt (W) till spänning i volt (V) är en grundläggande elberäkning. Formeln beror på systemtyp: DC, enfas AC eller trefas AC. För DC: V = P / I. För enfas AC: V = P / (I × PF), där PF är effektfaktorn. För trefas AC: V = P / (√3 × I × PF), med I som ström per fas. Vår gratis Watt till Volt-kalkylator stöder alla tre lägen och ger omedelbara, exakta resultat för spänningsberäkningar, kretsdesign och lastanalys.",
+          "paragraph2": "Likström (DC) har ingen effektfaktor; spänning är effekt dividerat med ström. Enfas- och trefassystem har ofta reaktiva laster (motorer, ballaster), så skenbara spänningskrav skiljer sig från verklig effektspänning. Effektfaktorn (0–1) representerar förhållandet mellan verklig effekt och skenbar effekt. För trefas återspeglar faktorn √3 (≈1,732) fasrelationen mellan linjespänning och fasstorheter. Vanliga strömmar: 10 A, 20 A, 30 A (bostad); 50 A, 100 A (industri).",
+          "paragraph3": "Denna konvertering används för: bestämning av spänningskrav från känd effekt och ström, dimensionering av transformatorer och generatorer, design av distributionssystem, beräkning av spänningsfall i kretsar och energirevisioner. Oavsett DC-laster (batterier, sol), enfas bostad eller trefas industri är konvertering av watt till volt nödvändig för säker och regelkonform elprojektering.",
+          "paragraph4": "Vår kalkylator låter dig välja DC, enfas eller trefas. Ange watt och ström (ampere); för AC effektfaktor (standard 0,8). Resultatet är i volt (V). Ingen registrering. För studenter, eltekniker och ingenjörer ger Watt till Volt-kalkylatorn exakta resultat för alla vanliga systemtyper.",
+          "exampleHeading": "Exempel:",
+          "exampleText": "DC: 1200 W vid 10 A → V = 1200 / 10 = 120 V. Enfas: 1840 W vid 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Trefas: 8,83 kW vid 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            { "question": "Vad är formeln watt till volt (DC)?", "answer": "För DC: V = P / I, där V är spänning (V), P effekt (W), I ström (A). Dividera effekt med ström för spänning. Ex.: 1200 W vid 10 A → V = 120 V." },
+            { "question": "Vad är formeln för enfas AC?", "answer": "För enfas AC: V = P / (I × PF). I ström (A), P effekt (W), PF effektfaktor (0–1). Ex.: 1840 W vid 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "Vad är formeln för trefas AC?", "answer": "För trefas AC: V = P / (√3 × I × PF). I ström per fas (A), P effekt (W), PF effektfaktor. √3 ≈ 1,732. Ex.: 8,83 kW vid 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "När använder jag DC, enfas eller trefas?", "answer": "DC för batterier, sol DC-kretsar och DC-laster. Enfas för typisk bostad (120 V, 230 V, 240 V). Trefas för industriell och kommersiell distribution (400 V, 480 V linje) och motorer." },
+            { "question": "Hur hänger detta ihop med volt till watt?", "answer": "Watt till volt (V = P / I) och volt till watt (P = V × I) är inversa operationer. Använd watt→volt när du känner effekt och ström; volt→watt när du känner spänning och ström." },
+            { "question": "Är denna kalkylator gratis?", "answer": "Ja. Watt till Volt-kalkylatorn är gratis. Ingen registrering. Välj DC, enfas eller trefas, ange watt och ström (och effektfaktor för AC), få volt direkt." }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "voltsToWatts": "Volt till Watt-kalkylator",
+          "voltsToWattsDesc": "Konvertera spänning och ström till effekt",
+          "wattsToAmps": "Watt till Ampere-kalkylator",
+          "wattsToAmpsDesc": "Konvertera effekt till ström med spänning",
+          "voltsToAmps": "Volt till Ampere-kalkylator",
+          "voltsToAmpsDesc": "Konvertera spänning till ström med watt eller resistans",
+          "ampsToVolt": "Ampere till Volt-kalkylator",
+          "ampsToVoltDesc": "Konvertera ström till spänning med watt eller resistans"
+        }
+      }
+    },
     "joulesToWatts": {
       "title": "Joule till Watt-kalkylator",
       "description": "Konvertera joule (J) till watt (W) omedelbart och exakt med tid",

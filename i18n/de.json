@@ -1479,6 +1479,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Watt zu Volt Rechner",
+      "description": "Leistung (W) in Spannung (V) für DC, Einphasen- und Dreiphasenwechselstrom mit Strom und Leistungsfaktor umrechnen",
+      "currentType": "Stromtyp",
+      "directCurrent": "Gleichstrom (DC)",
+      "singlePhase": "Einphasig",
+      "threePhase": "Dreiphasig",
+      "watts": "Watt (W)",
+      "amps": "Strom (A)",
+      "powerFactor": "Leistungsfaktor (0-1)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "volts": "Spannung (V)",
+      "seo": {
+        "title": "Watt zu Volt Rechner - DC, Einphasen & Dreiphasen | Leistung in Spannung",
+        "description": "Kostenloser Watt zu Volt Rechner. Leistung (W) in Spannung (V) für DC, Einphasen- und Dreiphasenwechselstrom. Strom und Leistungsfaktor. Perfekt für Schaltungsdesign, Spannungsberechnungen und Elektrotechnik.",
+        "keywords": "watt volt rechner, leistung spannung umrechner, W V, DC einphasig dreiphasig, elektrischer rechner, spannungsrechner, kostenloser rechner",
+        "content": {
+          "heading": "Wie man Watt in Volt umrechnet",
+          "paragraph1": "Die Umrechnung von Leistung in Watt (W) in Spannung in Volt (V) ist eine grundlegende elektrische Berechnung. Die Formel hängt vom Systemtyp ab: DC, Einphasen- oder Dreiphasenwechselstrom. Für DC: V = P / I. Für Einphasen-Wechselstrom: V = P / (I × PF), wobei PF der Leistungsfaktor ist. Für Dreiphasen-Wechselstrom: V = P / (√3 × I × PF), mit I als Phasenstrom. Unser kostenloser Watt-zu-Volt-Rechner unterstützt alle drei Modi und liefert sofortige, genaue Ergebnisse für Spannungsberechnungen, Schaltungsdesign und Lastanalyse.",
+          "paragraph2": "Gleichstrom (DC) hat keinen Leistungsfaktor; Spannung ist Leistung geteilt durch Strom. Ein- und Dreiphasen-Wechselstromsysteme haben oft Blindlasten (Motoren, Vorschaltgeräte), daher unterscheiden sich die Scheinspannungsanforderungen von der Wirkleistungsspannung. Der Leistungsfaktor (0 bis 1) gibt das Verhältnis von Wirk- zu Scheinleistung an. Bei Dreiphasen berücksichtigt der Faktor √3 (ca. 1,732) die Phasenbeziehung zwischen verketteter Spannung und Phasengrößen. Typische Ströme: 10 A, 20 A, 30 A (Wohnbereich); 50 A, 100 A (Industrie).",
+          "paragraph3": "Diese Umrechnung wird verwendet für: Bestimmung der Spannungsanforderungen aus bekannter Leistung und Strom, Dimensionierung von Transformatoren und Generatoren, Planung von Verteilnetzen, Berechnung des Spannungsabfalls in Schaltungen und Energieaudits. Ob Gleichstromlasten (Batterien, Solar), einphasiger Wohnbereich oder dreiphasige Industrie – die Umrechnung von Watt in Volt ist für sichere und normgerechte Elektroplanung unerlässlich.",
+          "paragraph4": "Unser Rechner lässt Sie DC, Einphasen- oder Dreiphasen wählen. Geben Sie Watt und Strom (Ampere) ein; für Wechselstrom den Leistungsfaktor (Standard 0,8). Das Ergebnis ist in Volt (V). Keine Registrierung nötig. Für Lernende, Elektriker und Ingenieure liefert der Watt-zu-Volt-Rechner zuverlässige Ergebnisse für alle gängigen Systemtypen.",
+          "exampleHeading": "Beispiel:",
+          "exampleText": "DC: 1200 W bei 10 A → V = 1200 / 10 = 120 V. Einphasig: 1840 W bei 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Dreiphasig: 8,83 kW bei 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            { "question": "Wie lautet die Formel für Watt zu Volt (DC)?", "answer": "Für DC: V = P / I, wobei V Spannung in Volt, P Leistung in Watt und I Strom in Ampere ist. Leistung durch Strom teilen ergibt die Spannung. Beispiel: 1200 W bei 10 A → V = 120 V." },
+            { "question": "Wie lautet die Formel für Einphasen-Wechselstrom?", "answer": "Für Einphasen-Wechselstrom: V = P / (I × PF). I Strom (Ampere), P Leistung (Watt), PF Leistungsfaktor (0 bis 1). Beispiel: 1840 W bei 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "Wie lautet die Formel für Dreiphasen-Wechselstrom?", "answer": "Für Dreiphasen-Wechselstrom: V = P / (√3 × I × PF). I Phasenstrom (Ampere), P Leistung (Watt), PF Leistungsfaktor. √3 ≈ 1,732. Beispiel: 8,83 kW bei 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "Wann DC, einphasig oder dreiphasig?", "answer": "DC für Batterien, Solar-Gleichstrom und DC-Lasten. Einphasig für typische Haushalte (120 V, 230 V, 240 V). Dreiphasig für industrielle und gewerbliche Verteilung (400 V, 480 V verkettet) und Motoren." },
+            { "question": "Wie hängt das mit Volt zu Watt zusammen?", "answer": "Watt zu Volt (V = P / I) und Volt zu Watt (P = V × I) sind Umkehrrechnungen. Watt-zu-Volt verwenden, wenn Leistung und Strom bekannt und Spannung gesucht; Volt-zu-Watt, wenn Spannung und Strom bekannt und Leistung gesucht." },
+            { "question": "Ist dieser Rechner kostenlos?", "answer": "Ja. Der Watt-zu-Volt-Rechner ist kostenlos. Keine Registrierung nötig. DC, Einphasen oder Dreiphasen wählen, Watt und Strom (und bei Wechselstrom Leistungsfaktor) eingeben, Volt sofort erhalten." }
+          ]
+        },
+        "related": {
+          "heading": "Ähnliche Rechner",
+          "voltsToWatts": "Volt zu Watt Rechner",
+          "voltsToWattsDesc": "Spannung und Strom in Leistung umrechnen",
+          "wattsToAmps": "Watt zu Ampere Rechner",
+          "wattsToAmpsDesc": "Leistung in Strom mit Spannung umrechnen",
+          "voltsToAmps": "Volt zu Ampere Rechner",
+          "voltsToAmpsDesc": "Spannung in Strom mit Watt oder Widerstand umrechnen",
+          "ampsToVolt": "Ampere zu Volt Rechner",
+          "ampsToVoltDesc": "Strom in Spannung mit Watt oder Widerstand umrechnen"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Elektronenvolt zu Volt Rechner",
       "description": "Konvertieren Sie Elektronenvolt (eV) sofort und genau in Volt (V)",

@@ -237,6 +237,12 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       path: '/calculators/electric/watts-to-kwh',
     },
     {
+      id: 'watts-to-volts',
+      titleKey: 'wattsToVolts.title',
+      descKey: 'wattsToVolts.description',
+      path: '/calculators/electric/watts-to-volts',
+    },
+    {
       id: 'joules-to-volts',
       titleKey: 'joulesToVolts.title',
       descKey: 'joulesToVolts.description',

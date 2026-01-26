@@ -1760,6 +1760,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Watti-Voltti Laskin",
+      "description": "Muunna teho (W) jännitteeksi (V) tasavirralle, yksivaiheelle ja kolmivaiheelle virralla ja tehokertoimella",
+      "currentType": "Virran tyyppi",
+      "directCurrent": "Tasavirta (DC)",
+      "singlePhase": "Yksivaihe",
+      "threePhase": "Kolmivaihe",
+      "watts": "Watti (W)",
+      "amps": "Virta (A)",
+      "powerFactor": "Tehokerroin (0–1)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "volts": "Jännite (V)",
+      "seo": {
+        "title": "Watti-Voltti Laskin – DC, Yksivaihe ja Kolmivaihe | Teho Jännitteeksi",
+        "description": "Ilmainen Watti-Voltti laskin. Muunna teho (W) jännitteeksi (V) tasavirralle, yksivaiheelle ja kolmivaiheelle. Virta ja tehokerroin. Ihanteellinen piirisuunnitteluun, jännitelaskentoihin ja sähkötekniikkaan.",
+        "keywords": "watti voltti laskin, teho jännite muunnin, W V, DC yksivaihe kolmivaihe, sähkölaskin, jännitelaskin, ilmainen laskin",
+        "content": {
+          "heading": "Wattien muuntaminen volteiksi",
+          "paragraph1": "Tehon muuntaminen wateista (W) jännitteeksi volteiksi (V) on perus sähkölaskenta. Kaava riippuu järjestelmätyypistä: DC, yksivaihe AC tai kolmivaihe AC. DC:lle: V = P / I. Yksivaihe AC:lle: V = P / (I × PF), jossa PF on tehokerroin. Kolmivaihe AC:lle: V = P / (√3 × I × PF), I vaihevirta. Ilmainen Watti-Voltti laskimemme tukee kaikkia kolmea tilaa ja antaa välittömät, tarkat tulokset jännitelaskentoihin, piirisuunnitteluun ja kuorma-analyysiin.",
+          "paragraph2": "Tasavirralla (DC) ei ole tehokerrointa; jännite on teho jaettuna virralla. Yksi- ja kolmivaihejärjestelmissä on usein reaktiivista kuormaa (moottorit, kuristimet), joten näennäisjännitevaatimukset eroavat pätötehojännitteestä. Tehokerroin (0–1) edustaa pätö- ja näennäistehon suhdetta. Kolmivaiheessa √3-kerroin (≈ 1,732) ottaa huomioon vaihesuhteen pääjännitteen ja vaihesuureiden välillä. Tyypilliset virrat: 10 A, 20 A, 30 A (asuin); 50 A, 100 A (teollisuus).",
+          "paragraph3": "Tätä muunnosta käytetään: jännitevaatimusten määrittämiseen tunnetusta tehosta ja virrasta, muuntajien ja generaattoreiden mitoitukseen, jakeluverkkojen suunnitteluun, jännitehäviön laskemiseen piireissä ja energiakatelmuksiin. Olipa kyse DC-kuormista (akut, aurinko), yksivaiheisesta asuinkäytöstä tai kolmivaiheisesta teollisuuskäytöstä, wattien muuntaminen volteiksi on välttämätöntä turvalliselle ja määräystenmukaiselle sähkösuunnittelulle.",
+          "paragraph4": "Laskimemme mahdollistaa DC:n, yksivaiheen tai kolmivaiheen valinnan. Syötä wattia ja virta (ampeerit); AC:lle tehokerroin (oletus 0,8). Tulos on volteissa (V). Ei rekisteröintiä. Opiskelijoille, sähköasentajille ja insinööreille Watti-Voltti laskin tarjoaa tarkkoja tuloksia kaikille yleisille järjestelmätyypeille.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "DC: 1200 W 10 A:ssa → V = 1200 / 10 = 120 V. Yksivaihe: 1840 W 10 A:ssa, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Kolmivaihe: 8,83 kW 15 A:ssa, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            { "question": "Mikä on watti-voltti kaava (DC)?", "answer": "DC:lle: V = P / I, jossa V on jännite V:ssa, P teho W:ssa ja I virta A:ssa. Jakamalla teho virralla saadaan jännite. Esim.: 1200 W 10 A:ssa → V = 120 V." },
+            { "question": "Mikä on kaava yksivaihe AC:lle?", "answer": "Yksivaihe AC:lle: V = P / (I × PF). I virta (A), P teho (W), PF tehokerroin (0–1). Esim.: 1840 W 10 A:ssa, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "Mikä on kaava kolmivaihe AC:lle?", "answer": "Kolmivaihe AC:lle: V = P / (√3 × I × PF). I vaihevirta (A), P teho (W), PF tehokerroin. √3 ≈ 1,732. Esim.: 8,83 kW 15 A:ssa, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "Milloin käyttää DC:tä, yksivaihetta tai kolmivaihetta?", "answer": "DC akuille, DC-aurinkopiireille ja DC-kuormille. Yksivaihe tyypilliseen asuinkäyttöön (120 V, 230 V, 240 V). Kolmivaihe teollisuus- ja kaupalliseen jakeluun (400 V, 480 V pääjännite) ja moottoreille." },
+            { "question": "Miten tämä liittyy voltti-wattiin?", "answer": "Watti-voltti (V = P / I) ja voltti-watti (P = V × I) ovat käänteisiä toimintoja. Käytä watti→voltti, kun tiedät tehon ja virran; voltti→watti, kun tiedät jännitteen ja virran." },
+            { "question": "Onko tämä laskin ilmainen?", "answer": "Kyllä. Watti-Voltti laskin on ilmainen. Ei rekisteröintiä. Valitse DC, yksivaihe tai kolmivaihe, syötä wattia ja virta (ja tehokerroin AC:lle), saat voltit välittömästi." }
+          ]
+        },
+        "related": {
+          "heading": "Aiheeseen liittyvät laskimet",
+          "voltsToWatts": "Voltti-Watti Laskin",
+          "voltsToWattsDesc": "Muunna jännite ja virta tehoksi",
+          "wattsToAmps": "Watti-Ampeeri Laskin",
+          "wattsToAmpsDesc": "Muunna teho virraksi käyttäen jännitettä",
+          "voltsToAmps": "Voltti-Ampeeri Laskin",
+          "voltsToAmpsDesc": "Muunna jännite virraksi watilla tai resistanssilla",
+          "ampsToVolt": "Ampeeri-Voltti Laskin",
+          "ampsToVoltDesc": "Muunna virta jännitteeksi watilla tai resistanssilla"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Elektronivoltti Voltti Laskin",
       "description": "Muunna elektronivoltti (eV) volteiksi (V) välittömästi ja tarkasti",

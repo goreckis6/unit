@@ -1464,6 +1464,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Calculateur Watts vers Volts",
+      "description": "Convertir la puissance (W) en tension (V) pour DC, monophasé et triphasé avec courant et facteur de puissance",
+      "currentType": "Type de courant",
+      "directCurrent": "Courant continu (DC)",
+      "singlePhase": "Monophasé",
+      "threePhase": "Triphasé",
+      "watts": "Watts (W)",
+      "amps": "Courant (A)",
+      "powerFactor": "Facteur de puissance (0-1)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "volts": "Tension (V)",
+      "seo": {
+        "title": "Calculateur Watts vers Volts - DC, Monophasé & Triphasé | Puissance en Tension",
+        "description": "Calculateur gratuit Watts vers Volts. Convertir la puissance (W) en tension (V) pour DC, monophasé et triphasé. Courant et facteur de puissance. Parfait pour la conception de circuits, calculs de tension et génie électrique.",
+        "keywords": "calculateur watts volts, convertisseur puissance tension, W V, DC monophasé triphasé, calculateur électrique, calculateur tension, calculateur gratuit",
+        "content": {
+          "heading": "Comment Convertir Watts en Volts",
+          "paragraph1": "La conversion de la puissance en watts (W) en tension en volts (V) est un calcul électrique fondamental. La formule dépend du type de système : DC, monophasé AC ou triphasé AC. Pour DC : V = P / I. Pour monophasé AC : V = P / (I × PF), où PF est le facteur de puissance. Pour triphasé AC : V = P / (√3 × I × PF), avec I comme courant par phase. Notre calculateur gratuit Watts vers Volts prend en charge les trois modes et donne des résultats instantanés et précis pour les calculs de tension, la conception de circuits et l'analyse de charge.",
+          "paragraph2": "Le courant continu (DC) n'a pas de facteur de puissance ; la tension est la puissance divisée par le courant. Les systèmes monophasés et triphasés AC ont souvent des charges réactives (moteurs, ballasts), donc les exigences de tension apparente diffèrent de la tension de puissance réelle. Le facteur de puissance (0 à 1) représente le rapport de la puissance réelle à la puissance apparente. Pour triphasé, le facteur √3 (environ 1,732) tient compte de la relation de phase entre la tension ligne-ligne et les quantités de phase. Courants typiques : 10 A, 20 A, 30 A (résidentiel) ; 50 A, 100 A (industriel).",
+          "paragraph3": "Cette conversion est utilisée pour : déterminer les exigences de tension à partir de la puissance et du courant connus, dimensionner les transformateurs et générateurs, concevoir les systèmes de distribution, calculer la chute de tension dans les circuits et les audits énergétiques. Que vous travailliez avec des charges DC (batteries, solaire), monophasé résidentiel ou triphasé industriel, la conversion de watts en volts est essentielle pour une conception électrique sûre et conforme.",
+          "paragraph4": "Notre calculateur vous permet de choisir DC, monophasé ou triphasé. Entrez les watts et le courant (ampères) ; pour AC, entrez le facteur de puissance (par défaut 0,8). Le résultat est en volts (V). Aucune inscription requise. Pour les étudiants, électriciens et ingénieurs, le calculateur Watts vers Volts fournit des résultats précis pour tous les types de systèmes courants.",
+          "exampleHeading": "Exemple :",
+          "exampleText": "DC : 1200 W à 10 A → V = 1200 / 10 = 120 V. Monophasé : 1840 W à 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Triphasé : 8,83 kW à 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            { "question": "Quelle est la formule pour watts vers volts (DC) ?", "answer": "Pour DC : V = P / I, où V est la tension en volts, P la puissance en watts et I le courant en ampères. Diviser la puissance par le courant donne la tension. Exemple : 1200 W à 10 A → V = 120 V." },
+            { "question": "Quelle est la formule pour monophasé AC ?", "answer": "Pour monophasé AC : V = P / (I × PF). I est le courant (ampères), P la puissance (watts), PF le facteur de puissance (0 à 1). Exemple : 1840 W à 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "Quelle est la formule pour triphasé AC ?", "answer": "Pour triphasé AC : V = P / (√3 × I × PF). I est le courant par phase (ampères), P la puissance (watts), PF le facteur de puissance. √3 ≈ 1,732. Exemple : 8,83 kW à 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "Quand utiliser DC, monophasé ou triphasé ?", "answer": "DC pour batteries, circuits solaires DC et charges DC. Monophasé pour résidentiel typique (120 V, 230 V, 240 V). Triphasé pour distribution industrielle et commerciale (400 V, 480 V ligne-ligne) et moteurs." },
+            { "question": "Comment cela se rapporte-t-il à volts vers watts ?", "answer": "Watts vers volts (V = P / I) et volts vers watts (P = V × I) sont des opérations inverses. Utilisez watts→volts quand vous connaissez la puissance et le courant ; volts→watts quand vous connaissez la tension et le courant." },
+            { "question": "Ce calculateur est-il gratuit ?", "answer": "Oui. Le calculateur Watts vers Volts est gratuit. Aucune inscription requise. Sélectionnez DC, monophasé ou triphasé, entrez watts et courant (et facteur de puissance pour AC), obtenez volts instantanément." }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Associés",
+          "voltsToWatts": "Calculateur Volts vers Watts",
+          "voltsToWattsDesc": "Convertir tension et courant en puissance",
+          "wattsToAmps": "Calculateur Watts vers Ampères",
+          "wattsToAmpsDesc": "Convertir puissance en courant avec tension",
+          "voltsToAmps": "Calculateur Volts vers Ampères",
+          "voltsToAmpsDesc": "Convertir tension en courant avec watts ou résistance",
+          "ampsToVolt": "Calculateur Ampères vers Volt",
+          "ampsToVoltDesc": "Convertir courant en tension avec watts ou résistance"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Calculateur Électron-volts vers Volts",
       "description": "Convertissez les électron-volts (eV) en volts (V) instantanément et précisément",

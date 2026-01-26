@@ -37,6 +37,7 @@ export async function GET() {
     '/calculators/electric/joules-to-watts',
     '/calculators/electric/watts-to-joules',
     '/calculators/electric/watts-to-kwh',
+    '/calculators/electric/watts-to-volts',
     '/calculators/electric/joules-to-volts',
     '/calculators/electric/volts-to-joules',
     '/calculators/electric/kva-to-amps',

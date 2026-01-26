@@ -1815,6 +1815,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Watt-Volt Kalkulátor",
+      "description": "Teljesítmény (W) átváltása feszültségre (V) DC, egyfázisú és háromfázisú rendszerekhez árammal és teljesítménytényezővel",
+      "currentType": "Áram típusa",
+      "directCurrent": "Egyenáram (DC)",
+      "singlePhase": "Egyfázisú",
+      "threePhase": "Háromfázisú",
+      "watts": "Watt (W)",
+      "amps": "Áram (A)",
+      "powerFactor": "Teljesítménytényező (0–1)",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "volts": "Feszültség (V)",
+      "seo": {
+        "title": "Watt-Volt Kalkulátor – DC, Egyfázisú és Háromfázisú | Teljesítmény-Feszültség",
+        "description": "Ingyenes Watt-Volt kalkulátor. Teljesítmény (W) átváltása feszültségre (V) DC, egyfázisú és háromfázisú rendszerekhez. Áram és teljesítménytényező. Tökéletes áramkör-tervezéshez, feszültségszámításokhoz és villamosmérnöki munkához.",
+        "keywords": "watt volt kalkulátor, teljesítmény feszültség átváltó, W V, DC egyfázisú háromfázisú, villamos kalkulátor, feszültségszámító, ingyenes kalkulátor",
+        "content": {
+          "heading": "Watt átváltása volttá",
+          "paragraph1": "A teljesítmény wattban (W) történő átváltása feszültségre voltban (V) alapvető villamos számítás. A képlet a rendszer típusától függ: DC, egyfázisú AC vagy háromfázisú AC. DC esetén: V = P / I. Egyfázisú AC esetén: V = P / (I × PF), ahol PF a teljesítménytényező. Háromfázisú AC esetén: V = P / (√3 × I × PF), I mint fázisonkénti áram. Ingyenes Watt-Volt kalkulátorunk mind a három módot támogatja és azonnali, pontos eredményeket ad feszültségszámításokhoz, áramkör-tervezéshez és terhelés-elemzéshez.",
+          "paragraph2": "Az egyenáramnak (DC) nincs teljesítménytényezője; a feszültség a teljesítmény osztva az árammal. Az egy- és háromfázisú AC rendszerek gyakran reaktív terheléssel (motorok, előtétek) rendelkeznek, így a látszólagos feszültségkövetelmények eltérnek a valós teljesítményfeszültségtől. A teljesítménytényező (0–1) a hatásos és látszólagos teljesítmény arányát jelenti. Háromfázisú esetén a √3 tényező (≈ 1,732) figyelembe veszi a fázisviszonyt a vonali feszültség és a fázismennyiségek között. Tipikus áramok: 10 A, 20 A, 30 A (lakossági); 50 A, 100 A (ipari).",
+          "paragraph3": "Ez az átváltás a következőkre használatos: feszültségkövetelmények meghatározása ismert teljesítményből és áramból, transzformátorok és generátorok méretezése, elosztóhálózatok tervezése, feszültségesés számítása áramkörökben és energetikai auditok. Akár DC terhelésről (akkumulátorok, napenergia), egyfázisú lakossági vagy háromfázisú ipari rendszerről van szó, a wattok volttá való átváltása elengedhetetlen a biztonságos és szabályos villamos tervezéshez.",
+          "paragraph4": "Kalkulátorunk lehetővé teszi DC, egyfázisú vagy háromfázisú választását. Adja meg a wattot és az áramot (ampert); AC esetén a teljesítménytényezőt (alapértelmezett 0,8). Az eredmény voltban (V) jelenik meg. Regisztráció nélkül. Diákoknak, villanyszerelőknek és mérnököknek a Watt-Volt kalkulátor pontos eredményeket biztosít minden gyakori rendszertípushoz.",
+          "exampleHeading": "Példa:",
+          "exampleText": "DC: 1200 W 10 A-nál → V = 1200 / 10 = 120 V. Egyfázisú: 1840 W 10 A-nál, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Háromfázisú: 8,83 kW 15 A-nál, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Gyakran ismételt kérdések",
+          "items": [
+            { "question": "Mi a watt-volt képlet (DC)?", "answer": "DC esetén: V = P / I, ahol V a feszültség V-ban, P a teljesítmény W-ban és I az áram A-ban. Osztva a teljesítményt az árammal megkapjuk a feszültséget. Pl.: 1200 W 10 A-nál → V = 120 V." },
+            { "question": "Mi a képlet egyfázisú AC-re?", "answer": "Egyfázisú AC esetén: V = P / (I × PF). I áram (A), P teljesítmény (W), PF teljesítménytényező (0–1). Pl.: 1840 W 10 A-nál, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "Mi a képlet háromfázisú AC-re?", "answer": "Háromfázisú AC esetén: V = P / (√3 × I × PF). I fázisonkénti áram (A), P teljesítmény (W), PF teljesítménytényező. √3 ≈ 1,732. Pl.: 8,83 kW 15 A-nál, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "Mikor használjunk DC-t, egyfázisút vagy háromfázisút?", "answer": "DC akkumulátorokhoz, DC napelemes áramkörökhöz és DC terhelésekhez. Egyfázisú tipikus lakossági használatra (120 V, 230 V, 240 V). Háromfázisú ipari és kereskedelmi elosztáshoz (400 V, 480 V vonali) és motorokhoz." },
+            { "question": "Hogyan kapcsolódik a volt-watthoz?", "answer": "A watt-volt (V = P / I) és a volt-watt (P = V × I) inverz műveletek. Használja a watt→volt átváltást, ha ismeri a teljesítményt és az áramot; volt→watt, ha ismeri a feszültséget és az áramot." },
+            { "question": "Ingyenes ez a kalkulátor?", "answer": "Igen. A Watt-Volt kalkulátor ingyenes. Regisztráció nélkül. Válasszon DC-t, egyfázisút vagy háromfázisút, adja meg a wattot és az áramot (és teljesítménytényezőt AC-hez), azonnal kapja meg a voltot." }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó kalkulátorok",
+          "voltsToWatts": "Volt-Watt Kalkulátor",
+          "voltsToWattsDesc": "Feszültség és áram átváltása teljesítményre",
+          "wattsToAmps": "Watt-Amper Kalkulátor",
+          "wattsToAmpsDesc": "Teljesítmény átváltása áramra feszültséggel",
+          "voltsToAmps": "Volt-Amper Kalkulátor",
+          "voltsToAmpsDesc": "Feszültség átváltása áramra watttal vagy ellenállással",
+          "ampsToVolt": "Amper-Volt Kalkulátor",
+          "ampsToVoltDesc": "Áram átváltása feszültségre watttal vagy ellenállással"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Elektronvolt Volt Számológép",
       "description": "Alakítsa át az elektronvolteket (eV) volttá (V) azonnal és pontosan",

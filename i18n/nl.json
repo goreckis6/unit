@@ -1464,6 +1464,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Watt naar Volt Rekenmachine",
+      "description": "Zet vermogen (W) om naar spanning (V) voor DC, enkelfasig en driefasig met stroom en arbeidsfactor",
+      "currentType": "Stroomtype",
+      "directCurrent": "Gelijkstroom (DC)",
+      "singlePhase": "Enkelfasig",
+      "threePhase": "Driefasig",
+      "watts": "Watt (W)",
+      "amps": "Stroom (A)",
+      "powerFactor": "Arbeidsfactor (0-1)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "volts": "Spanning (V)",
+      "seo": {
+        "title": "Watt naar Volt Rekenmachine - DC, Enkelfasig & Driefasig | Vermogen naar Spanning",
+        "description": "Gratis Watt naar Volt rekenmachine. Zet vermogen (W) om naar spanning (V) voor DC, enkelfasig en driefasig. Stroom en arbeidsfactor. Perfect voor schakelingontwerp, spanningsberekeningen en elektrotechniek.",
+        "keywords": "watt volt rekenmachine, vermogen spanning omzetter, W V, DC enkelfasig driefasig, elektrische rekenmachine, spanningsrekenmachine, gratis rekenmachine",
+        "content": {
+          "heading": "Hoe Watt naar Volt Omzetten",
+          "paragraph1": "Het omzetten van vermogen in watt (W) naar spanning in volt (V) is een fundamentele elektrische berekening. De formule hangt af van het systeemtype: DC, enkelfasig AC of driefasig AC. Voor DC: V = P / I. Voor enkelfasig AC: V = P / (I × PF), waarbij PF de arbeidsfactor is. Voor driefasig AC: V = P / (√3 × I × PF), met I als stroom per fase. Onze gratis Watt naar Volt rekenmachine ondersteunt alle drie de modi en geeft directe, nauwkeurige resultaten voor spanningsberekeningen, schakelingontwerp en belastingsanalyse.",
+          "paragraph2": "Gelijkstroom (DC) heeft geen arbeidsfactor; spanning is vermogen gedeeld door stroom. Enkelfasige en driefasige AC-systemen hebben vaak reactieve belastingen (motoren, voorschakelapparaten), dus de schijnspanningseisen verschillen van de werkelijk vermogensspanning. De arbeidsfactor (0 tot 1) vertegenwoordigt de verhouding van werkelijk vermogen tot schijnbaar vermogen. Voor driefasig houdt de factor √3 (ongeveer 1,732) rekening met de fase-relatie tussen lijn-lijnspanning en fasegrootheden. Typische stromen: 10 A, 20 A, 30 A (residentieel); 50 A, 100 A (industrieel).",
+          "paragraph3": "Deze conversie wordt gebruikt voor: bepalen van spanningsvereisten uit bekende vermogen en stroom, dimensioneren van transformatoren en generatoren, ontwerpen van distributiesystemen, berekenen van spanningsval in schakelingen en energie-audits. Of u nu werkt met DC-belastingen (batterijen, zonne-energie), enkelfasig residentieel of driefasig industrieel, het omzetten van watt naar volt is essentieel voor veilig en conform elektrisch ontwerp.",
+          "paragraph4": "Onze rekenmachine laat u kiezen tussen DC, enkelfasig of driefasig. Voer watt en stroom (ampère) in; voor AC voer de arbeidsfactor in (standaard 0,8). Het resultaat is in volt (V). Geen registratie vereist. Voor studenten, elektriciens en ingenieurs levert de Watt naar Volt rekenmachine nauwkeurige resultaten voor alle gangbare systeemtypen.",
+          "exampleHeading": "Voorbeeld:",
+          "exampleText": "DC: 1200 W bij 10 A → V = 1200 / 10 = 120 V. Enkelfasig: 1840 W bij 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Driefasig: 8,83 kW bij 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            { "question": "Wat is de formule voor watt naar volt (DC)?", "answer": "Voor DC: V = P / I, waarbij V spanning in volt is, P vermogen in watt en I stroom in ampère. Deel vermogen door stroom om spanning te krijgen. Voorbeeld: 1200 W bij 10 A → V = 120 V." },
+            { "question": "Wat is de formule voor enkelfasig AC?", "answer": "Voor enkelfasig AC: V = P / (I × PF). I is stroom (ampère), P vermogen (watt), PF arbeidsfactor (0 tot 1). Voorbeeld: 1840 W bij 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "Wat is de formule voor driefasig AC?", "answer": "Voor driefasig AC: V = P / (√3 × I × PF). I is stroom per fase (ampère), P vermogen (watt), PF arbeidsfactor. √3 ≈ 1,732. Voorbeeld: 8,83 kW bij 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "Wanneer DC, enkelfasig of driefasig gebruiken?", "answer": "DC voor batterijen, zonne-DC-circuits en DC-belastingen. Enkelfasig voor typisch residentieel (120 V, 230 V, 240 V). Driefasig voor industriële en commerciële distributie (400 V, 480 V lijn-lijn) en motoren." },
+            { "question": "Hoe verhoudt dit zich tot volt naar watt?", "answer": "Watt naar volt (V = P / I) en volt naar watt (P = V × I) zijn inverse bewerkingen. Gebruik watt→volt wanneer u vermogen en stroom kent; volt→watt wanneer u spanning en stroom kent." },
+            { "question": "Is deze rekenmachine gratis?", "answer": "Ja. De Watt naar Volt rekenmachine is gratis. Geen registratie vereist. Selecteer DC, enkelfasig of driefasig, voer watt en stroom in (en arbeidsfactor voor AC), krijg volt direct." }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde Rekenmachines",
+          "voltsToWatts": "Volt naar Watt Rekenmachine",
+          "voltsToWattsDesc": "Zet spanning en stroom om naar vermogen",
+          "wattsToAmps": "Watt naar Ampere Rekenmachine",
+          "wattsToAmpsDesc": "Zet vermogen om naar stroom met spanning",
+          "voltsToAmps": "Volt naar Ampere Rekenmachine",
+          "voltsToAmpsDesc": "Zet spanning om naar stroom met watt of weerstand",
+          "ampsToVolt": "Ampere naar Volt Rekenmachine",
+          "ampsToVoltDesc": "Zet stroom om naar spanning met watt of weerstand"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Elektronvolt naar Volt Rekenmachine",
       "description": "Converteer elektronvolt (eV) naar volt (V) direct en nauwkeurig",

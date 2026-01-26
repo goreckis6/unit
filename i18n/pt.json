@@ -1464,6 +1464,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Calculadora Watts para Volts",
+      "description": "Converter potência (W) em tensão (V) para DC, monofásico e trifásico com corrente e fator de potência",
+      "currentType": "Tipo de corrente",
+      "directCurrent": "Corrente contínua (DC)",
+      "singlePhase": "Monofásico",
+      "threePhase": "Trifásico",
+      "watts": "Watts (W)",
+      "amps": "Corrente (A)",
+      "powerFactor": "Fator de potência (0-1)",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "volts": "Tensão (V)",
+      "seo": {
+        "title": "Calculadora Watts para Volts - DC, Monofásico e Trifásico | Potência para Tensão",
+        "description": "Calculadora gratuita Watts para Volts. Converter potência (W) em tensão (V) para DC, monofásico e trifásico. Corrente e fator de potência. Perfeito para design de circuitos, cálculos de tensão e engenharia elétrica.",
+        "keywords": "calculadora watts volts, conversor potência tensão, W V, DC monofásico trifásico, calculadora elétrica, calculadora tensão, calculadora gratuita",
+        "content": {
+          "heading": "Como Converter Watts em Volts",
+          "paragraph1": "A conversão de potência em watts (W) para tensão em volts (V) é um cálculo elétrico fundamental. A fórmula depende do tipo de sistema: DC, monofásico AC ou trifásico AC. Para DC: V = P / I. Para monofásico AC: V = P / (I × PF), onde PF é o fator de potência. Para trifásico AC: V = P / (√3 × I × PF), com I como corrente por fase. Nossa calculadora gratuita Watts para Volts suporta todos os três modos e fornece resultados instantâneos e precisos para cálculos de tensão, design de circuitos e análise de carga.",
+          "paragraph2": "A corrente contínua (DC) não tem fator de potência; a tensão é a potência dividida pela corrente. Sistemas monofásicos e trifásicos AC frequentemente têm cargas reativas (motores, reatores), então os requisitos de tensão aparente diferem da tensão de potência real. O fator de potência (0 a 1) representa a razão entre potência real e potência aparente. Para trifásico, o fator √3 (aproximadamente 1,732) leva em conta a relação de fase entre tensão linha-linha e quantidades de fase. Correntes típicas: 10 A, 20 A, 30 A (residencial); 50 A, 100 A (industrial).",
+          "paragraph3": "Esta conversão é usada para: determinar requisitos de tensão a partir de potência e corrente conhecidos, dimensionar transformadores e geradores, projetar sistemas de distribuição, calcular queda de tensão em circuitos e auditorias energéticas. Seja trabalhando com cargas DC (baterias, solar), monofásico residencial ou trifásico industrial, converter watts em volts é essencial para um design elétrico seguro e conforme.",
+          "paragraph4": "Nossa calculadora permite escolher DC, monofásico ou trifásico. Insira watts e corrente (ampères); para AC, insira o fator de potência (padrão 0,8). O resultado está em volts (V). Nenhum registro necessário. Para estudantes, eletricistas e engenheiros, a calculadora Watts para Volts fornece resultados precisos para todos os tipos de sistemas comuns.",
+          "exampleHeading": "Exemplo:",
+          "exampleText": "DC: 1200 W a 10 A → V = 1200 / 10 = 120 V. Monofásico: 1840 W a 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Trifásico: 8,83 kW a 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Perguntas Frequentes",
+          "items": [
+            { "question": "Qual é a fórmula para watts para volts (DC)?", "answer": "Para DC: V = P / I, onde V é a tensão em volts, P a potência em watts e I a corrente em ampères. Dividir a potência pela corrente dá a tensão. Exemplo: 1200 W a 10 A → V = 120 V." },
+            { "question": "Qual é a fórmula para monofásico AC?", "answer": "Para monofásico AC: V = P / (I × PF). I é a corrente (ampères), P a potência (watts), PF o fator de potência (0 a 1). Exemplo: 1840 W a 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "Qual é a fórmula para trifásico AC?", "answer": "Para trifásico AC: V = P / (√3 × I × PF). I é a corrente por fase (ampères), P a potência (watts), PF o fator de potência. √3 ≈ 1,732. Exemplo: 8,83 kW a 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "Quando usar DC, monofásico ou trifásico?", "answer": "DC para baterias, circuitos solares DC e cargas DC. Monofásico para residencial típico (120 V, 230 V, 240 V). Trifásico para distribuição industrial e comercial (400 V, 480 V linha-linha) e motores." },
+            { "question": "Como isso se relaciona com volts para watts?", "answer": "Watts para volts (V = P / I) e volts para watts (P = V × I) são operações inversas. Use watts→volts quando conhecer potência e corrente; volts→watts quando conhecer tensão e corrente." },
+            { "question": "Esta calculadora é gratuita?", "answer": "Sim. A calculadora Watts para Volts é gratuita. Nenhum registro necessário. Selecione DC, monofásico ou trifásico, insira watts e corrente (e fator de potência para AC), obtenha volts instantaneamente." }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "voltsToWatts": "Calculadora Volts para Watts",
+          "voltsToWattsDesc": "Converter tensão e corrente em potência",
+          "wattsToAmps": "Calculadora Watts para Ampères",
+          "wattsToAmpsDesc": "Converter potência em corrente com tensão",
+          "voltsToAmps": "Calculadora Volts para Ampères",
+          "voltsToAmpsDesc": "Converter tensão em corrente com watts ou resistência",
+          "ampsToVolt": "Calculadora Ampères para Volt",
+          "ampsToVoltDesc": "Converter corrente em tensão com watts ou resistência"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Calculadora Elétron-volts para Volts",
       "description": "Converta elétron-volts (eV) para volts (V) instantaneamente e com precisão",

@@ -1589,6 +1589,75 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Watts to Volts Calculator",
+      "description": "Convert power (W) to voltage (V) for DC, single phase, and three phase using current and power factor",
+      "currentType": "Current type",
+      "directCurrent": "Direct Current (DC)",
+      "singlePhase": "Single Phase",
+      "threePhase": "Three Phase",
+      "watts": "Watts (W)",
+      "amps": "Current (A)",
+      "powerFactor": "Power Factor (0-1)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "volts": "Voltage (V)",
+      "seo": {
+        "title": "Watts to Volts Calculator - DC, Single & Three Phase | Convert Power to Voltage",
+        "description": "Free Watts to Volts calculator. Convert power (W) to voltage (V) for DC, single phase, and three phase. Uses current and power factor. Perfect for circuit design, voltage calculations, and electrical engineering.",
+        "keywords": "watts to volts calculator, power to voltage converter, W to V, DC single three phase, electrical calculator, voltage calculator, free calculator",
+        "content": {
+          "heading": "How to Convert Watts to Volts",
+          "paragraph1": "Converting power in watts (W) to voltage in volts (V) is a fundamental electrical calculation. The formula depends on the system type: DC, single phase AC, or three phase AC. For DC: V = P / I. For single phase AC: V = P / (I × PF), where PF is the power factor. For three phase AC: V = P / (√3 × I × PF), with I as the current per phase. Our free Watts to Volts calculator supports all three modes and gives instant, accurate results for voltage calculations, circuit design, and load analysis.",
+          "paragraph2": "DC (direct current) has no power factor; voltage equals power divided by current. Single and three phase AC systems often have reactive loads (motors, ballasts), so apparent voltage requirements differ from real-power voltage. The power factor (0 to 1) represents the ratio of real power to apparent power. For three phase, the √3 factor (about 1.732) accounts for the phase relationship between line-to-line voltage and phase quantities. Common currents: 10A, 20A, 30A (residential); 50A, 100A (industrial).",
+          "paragraph3": "This conversion is used for: determining voltage requirements from known power and current, sizing transformers and generators, designing distribution systems, calculating voltage drop in circuits, and energy audits. Whether you work with DC loads (batteries, solar), residential single phase, or industrial three phase, converting watts to volts is essential for safe and compliant electrical design.",
+          "paragraph4": "Our calculator lets you choose DC, single phase, or three phase. Enter watts and current (amperes); for AC, enter power factor (default 0.8). The result is in volts (V). No registration required. For students, electricians, and engineers, the Watts to Volts calculator delivers accurate results across all common system types.",
+          "exampleHeading": "Example:",
+          "exampleText": "DC: 1200 W at 10 A → V = 1200 / 10 = 120 V. Single phase: 1840 W at 10 A, PF 0.8 → V = 1840 / (10 × 0.8) = 230 V. Three phase: 8.83 kW at 15 A, PF 0.85 → V = 8830 / (√3 × 15 × 0.85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula for watts to volts (DC)?",
+              "answer": "For DC: V = P / I, where V is voltage in volts, P is power in watts, and I is current in amperes. Divide power by current to get voltage. Example: 1200 W at 10 A → V = 120 V."
+            },
+            {
+              "question": "What is the formula for single phase AC?",
+              "answer": "For single phase AC: V = P / (I × PF). I is current (amperes), P is power (watts), PF is power factor (0 to 1). Example: 1840 W at 10 A, PF 0.8 → V = 1840 / (10 × 0.8) = 230 V."
+            },
+            {
+              "question": "What is the formula for three phase AC?",
+              "answer": "For three phase AC: V = P / (√3 × I × PF). I is current per phase (amperes), P is power (watts), PF is power factor. √3 ≈ 1.732. Example: 8.83 kW at 15 A, PF 0.85 → V = 8830 / (√3 × 15 × 0.85) ≈ 400 V."
+            },
+            {
+              "question": "When do I use DC vs single vs three phase?",
+              "answer": "Use DC for batteries, solar DC circuits, and DC loads. Use single phase for typical residential (120V, 230V, 240V). Use three phase for industrial and commercial distribution (400V, 480V line-to-line) and motors."
+            },
+            {
+              "question": "How does this relate to volts to watts?",
+              "answer": "Watts to volts (V = P / I) and volts to watts (P = V × I) are inverse operations. Use watts-to-volts when you know power and current and need voltage; use volts-to-watts when you know voltage and current and need power."
+            },
+            {
+              "question": "Is this calculator free?",
+              "answer": "Yes. The Watts to Volts calculator is free. No registration required. Select DC, single, or three phase, enter watts and current (and power factor for AC), and get voltage instantly."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "voltsToWatts": "Volts to Watts Calculator",
+          "voltsToWattsDesc": "Convert voltage and current to power",
+          "wattsToAmps": "Watts to Amps Calculator",
+          "wattsToAmpsDesc": "Convert power to current using voltage",
+          "voltsToAmps": "Volts to Amps Calculator",
+          "voltsToAmpsDesc": "Convert voltage to current using watts or resistance",
+          "ampsToVolt": "Amps to Volt Calculator",
+          "ampsToVoltDesc": "Convert current to voltage using watts or resistance"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Electron-volts to Volts Calculator",
       "description": "Convert electron-volts (eV) to volts (V) instantly and accurately",

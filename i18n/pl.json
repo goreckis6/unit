@@ -1497,6 +1497,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Kalkulator Waty na Wolty",
+      "description": "Przelicz moc (W) na napięcie (V) dla DC, jednofazowego i trójfazowego z prądem i współczynnikiem mocy",
+      "currentType": "Typ prądu",
+      "directCurrent": "Prąd stały (DC)",
+      "singlePhase": "Jednofazowy",
+      "threePhase": "Trójfazowy",
+      "watts": "Waty (W)",
+      "amps": "Prąd (A)",
+      "powerFactor": "Współczynnik mocy (0–1)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "volts": "Napięcie (V)",
+      "seo": {
+        "title": "Kalkulator Waty na Wolty – DC, Jednofazowy i Trójfazowy | Moc na Napięcie",
+        "description": "Darmowy kalkulator Waty na Wolty. Przelicz moc (W) na napięcie (V) dla DC, jednofazowego i trójfazowego. Prąd i współczynnik mocy. Idealny do projektowania obwodów, obliczeń napięcia i inżynierii elektrycznej.",
+        "keywords": "kalkulator waty wolty, konwerter moc napięcie, W V, DC jednofazowy trójfazowy, kalkulator elektryczny, kalkulator napięcia, darmowy kalkulator",
+        "content": {
+          "heading": "Jak przeliczyć waty na wolty",
+          "paragraph1": "Przeliczanie mocy w watach (W) na napięcie w woltach (V) to podstawowe obliczenie elektryczne. Wzór zależy od typu układu: DC, jednofazowy lub trójfazowy. Dla DC: V = P / I. Dla jednofazowego: V = P / (I × PF), gdzie PF to współczynnik mocy. Dla trójfazowego: V = P / (√3 × I × PF), przy I jako prądzie fazowym. Nasz darmowy kalkulator Waty na Wolty obsługuje wszystkie trzy tryby i daje natychmiastowe, dokładne wyniki do obliczeń napięcia, projektowania obwodów i analizy obciążeń.",
+          "paragraph2": "Prąd stały (DC) nie ma współczynnika mocy; napięcie to moc dzielona przez prąd. Układy jednofazowe i trójfazowe często mają obciążenia reakcyjne (silniki, stateczniki), więc wymagania napięcia pozornego różnią się od napięcia mocy czynnej. Współczynnik mocy (0–1) oznacza stosunek mocy czynnej do pozornej. W trójfazowym czynnik √3 (≈ 1,732) uwzględnia zależność fazową między napięciem międzyprzewodowym a wielkościami fazowymi. Typowe prądy: 10 A, 20 A, 30 A (mieszkaniowe); 50 A, 100 A (przemysłowe).",
+          "paragraph3": "Ta konwersja służy do: określania wymagań napięcia ze znanej mocy i prądu, doboru transformatorów i generatorów, projektowania sieci rozdzielczych, obliczania spadku napięcia w obwodach i audytów energetycznych. Niezależnie od obciążeń DC (baterie, fotowoltaika), jednofazowego mieszkaniowego czy trójfazowego przemysłowego, przeliczanie watów na wolty jest niezbędne dla bezpiecznego i zgodnego projektowania elektrycznego.",
+          "paragraph4": "Nasz kalkulator pozwala wybrać DC, jednofazowy lub trójfazowy. Wprowadź waty i prąd (ampery); dla AC – współczynnik mocy (domyślnie 0,8). Wynik w woltach (V). Bez rejestracji. Dla uczniów, elektryków i inżynierów kalkulator Waty na Wolty daje dokładne wyniki dla wszystkich typowych układów.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "DC: 1200 W przy 10 A → V = 1200 / 10 = 120 V. Jednofazowy: 1840 W przy 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Trójfazowy: 8,83 kW przy 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            { "question": "Jaki jest wzór waty na wolty (DC)?", "answer": "Dla DC: V = P / I, gdzie V to napięcie w V, P moc w W, I prąd w A. Dzieląc moc przez prąd otrzymasz napięcie. Np.: 1200 W przy 10 A → V = 120 V." },
+            { "question": "Jaki jest wzór dla jednofazowego?", "answer": "Dla jednofazowego: V = P / (I × PF). I prąd (A), P moc (W), PF współczynnik mocy (0–1). Np.: 1840 W przy 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "Jaki jest wzór dla trójfazowego?", "answer": "Dla trójfazowego: V = P / (√3 × I × PF). I prąd fazowy (A), P moc (W), PF współczynnik mocy. √3 ≈ 1,732. Np.: 8,83 kW przy 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "Kiedy używać DC, jednofazowego czy trójfazowego?", "answer": "DC dla baterii, obwodów solarnych DC i obciążeń DC. Jednofazowy dla typowego mieszkaniowego (120 V, 230 V, 240 V). Trójfazowy dla przemysłowej i komercyjnej dystrybucji (400 V, 480 V międzyprzewodowe) oraz silników." },
+            { "question": "Jak to się ma do wolty na waty?", "answer": "Waty na wolty (V = P / I) i wolty na waty (P = V × I) to operacje odwrotne. Użyj waty→wolty, gdy znasz moc i prąd; wolty→waty, gdy znasz napięcie i prąd." },
+            { "question": "Czy ten kalkulator jest darmowy?", "answer": "Tak. Kalkulator Waty na Wolty jest darmowy. Bez rejestracji. Wybierz DC, jednofazowy lub trójfazowy, wprowadź waty i prąd (oraz współczynnik mocy dla AC), uzyskaj napięcie natychmiast." }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "voltsToWatts": "Kalkulator Volty na Waty",
+          "voltsToWattsDesc": "Przelicz napięcie i prąd na moc",
+          "wattsToAmps": "Kalkulator Waty na Ampery",
+          "wattsToAmpsDesc": "Przelicz moc na prąd z napięciem",
+          "voltsToAmps": "Kalkulator Volty na Ampery",
+          "voltsToAmpsDesc": "Przelicz napięcie na prąd z watami lub rezystancją",
+          "ampsToVolt": "Kalkulator Ampery na Volt",
+          "ampsToVoltDesc": "Przelicz prąd na napięcie z watami lub rezystancją"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Kalkulator Elektronowoltów na Wolty",
       "description": "Konwertuj elektronowolty (eV) na wolty (V) natychmiast i dokładnie",

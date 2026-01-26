@@ -1760,6 +1760,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Calculator Wați în Volți",
+      "description": "Convertește puterea (W) în tensiune (V) pentru DC, monofazat și trifazat cu curent și factor de putere",
+      "currentType": "Tip de curent",
+      "directCurrent": "Curent continuu (DC)",
+      "singlePhase": "Monofazat",
+      "threePhase": "Trifazat",
+      "watts": "Wați (W)",
+      "amps": "Curent (A)",
+      "powerFactor": "Factor de putere (0–1)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "volts": "Tensiune (V)",
+      "seo": {
+        "title": "Calculator Wați în Volți – DC, Monofazat și Trifazat | Putere în Tensiune",
+        "description": "Calculator gratuit Wați în Volți. Convertește puterea (W) în tensiune (V) pentru DC, monofazat și trifazat. Curent și factor de putere. Perfect pentru proiectarea circuitelor, calcule de tensiune și inginerie electrică.",
+        "keywords": "calculator wați volți, convertor putere tensiune, W V, DC monofazat trifazat, calculator electric, calculator tensiune, calculator gratuit",
+        "content": {
+          "heading": "Cum se convertesc wații în volți",
+          "paragraph1": "Convertirea puterii în wați (W) în tensiune în volți (V) este un calcul electric fundamental. Formula depinde de tipul de sistem: DC, monofazat AC sau trifazat AC. Pentru DC: V = P / I. Pentru monofazat AC: V = P / (I × PF), unde PF este factorul de putere. Pentru trifazat AC: V = P / (√3 × I × PF), cu I curentul pe fază. Calculatorul nostru gratuit Wați în Volți suportă toate cele trei moduri și oferă rezultate instantanee, precise pentru calcule de tensiune, proiectarea circuitelor și analiza sarcinilor.",
+          "paragraph2": "Curentul continuu (DC) nu are factor de putere; tensiunea este puterea împărțită la curent. Sistemele monofazate și trifazate AC au adesea sarcini reactive (motoare, balasturi), astfel încât cerințele de tensiune aparentă diferă de tensiunea puterii reale. Factorul de putere (0–1) reprezintă raportul dintre puterea activă și cea aparentă. La trifazat, factorul √3 (≈ 1,732) ține cont de relația de fază dintre tensiunea linie-linie și mărimile de fază. Curenți tipici: 10 A, 20 A, 30 A (rezidențial); 50 A, 100 A (industrial).",
+          "paragraph3": "Această conversie se folosește pentru: determinarea cerințelor de tensiune din putere și curent cunoscute, dimensionarea transformatoarelor și generatoarelor, proiectarea sistemelor de distribuție, calcularea căderii de tensiune în circuite și audituri energetice. Fie că este vorba de sarcini DC (baterii, solar), monofazat rezidențial sau trifazat industrial, convertirea waților în volți este esențială pentru o proiectare electrică sigură și conformă.",
+          "paragraph4": "Calculatorul nostru permite alegerea DC, monofazat sau trifazat. Introduceți wați și curent (amperi); pentru AC, factorul de putere (implicit 0,8). Rezultatul este în volți (V). Fără înregistrare. Pentru studenți, electricieni și ingineri, calculatorul Wați în Volți oferă rezultate precise pentru toate tipurile obișnuite de sisteme.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "DC: 1200 W la 10 A → V = 1200 / 10 = 120 V. Monofazat: 1840 W la 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Trifazat: 8,83 kW la 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            { "question": "Care este formula wați în volți (DC)?", "answer": "Pentru DC: V = P / I, unde V este tensiunea în V, P puterea în W și I curentul în A. Împărțind puterea la curent se obține tensiunea. Ex.: 1200 W la 10 A → V = 120 V." },
+            { "question": "Care este formula pentru monofazat AC?", "answer": "Pentru monofazat AC: V = P / (I × PF). I curent (A), P putere (W), PF factor de putere (0–1). Ex.: 1840 W la 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "Care este formula pentru trifazat AC?", "answer": "Pentru trifazat AC: V = P / (√3 × I × PF). I curent pe fază (A), P putere (W), PF factor de putere. √3 ≈ 1,732. Ex.: 8,83 kW la 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "Când folosim DC, monofazat sau trifazat?", "answer": "DC pentru baterii, circuite solare DC și sarcini DC. Monofazat pentru rezidențial tipic (120 V, 230 V, 240 V). Trifazat pentru distribuție industrială și comercială (400 V, 480 V linie-linie) și motoare." },
+            { "question": "Cum se leagă de volți în wați?", "answer": "Wați în volți (V = P / I) și volți în wați (P = V × I) sunt operații inverse. Folosiți wați→volți când cunoașteți puterea și curentul; volți→wați când cunoașteți tensiunea și curentul." },
+            { "question": "Este acest calculator gratuit?", "answer": "Da. Calculatorul Wați în Volți este gratuit. Fără înregistrare. Alegeți DC, monofazat sau trifazat, introduceți wați și curent (și factor de putere pentru AC), obțineți volți instantaneu." }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare asociate",
+          "voltsToWatts": "Calculator Volți în Wați",
+          "voltsToWattsDesc": "Convertește tensiunea și curentul în putere",
+          "wattsToAmps": "Calculator Wați în Amperi",
+          "wattsToAmpsDesc": "Convertește puterea în curent cu tensiune",
+          "voltsToAmps": "Calculator Volți în Amperi",
+          "voltsToAmpsDesc": "Convertește tensiunea în curent cu wați sau rezistență",
+          "ampsToVolt": "Calculator Amperi în Volt",
+          "ampsToVoltDesc": "Convertește curentul în tensiune cu wați sau rezistență"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Calculator Electronvolți la Volți",
       "description": "Convertește electronvolții (eV) în volți (V) instant și precis",

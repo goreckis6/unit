@@ -1464,6 +1464,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Calculadora Vatios a Voltios",
+      "description": "Convertir potencia (W) a tensión (V) para DC, monofásico y trifásico con corriente y factor de potencia",
+      "currentType": "Tipo de corriente",
+      "directCurrent": "Corriente continua (DC)",
+      "singlePhase": "Monofásico",
+      "threePhase": "Trifásico",
+      "watts": "Vatios (W)",
+      "amps": "Corriente (A)",
+      "powerFactor": "Factor de potencia (0-1)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "volts": "Tensión (V)",
+      "seo": {
+        "title": "Calculadora Vatios a Voltios - DC, Monofásico y Trifásico | Potencia a Tensión",
+        "description": "Calculadora gratuita Vatios a Voltios. Convertir potencia (W) a tensión (V) para DC, monofásico y trifásico. Corriente y factor de potencia. Perfecto para diseño de circuitos, cálculos de tensión e ingeniería eléctrica.",
+        "keywords": "calculadora vatios voltios, convertidor potencia tensión, W V, DC monofásico trifásico, calculadora eléctrica, calculadora tensión, calculadora gratuita",
+        "content": {
+          "heading": "Cómo Convertir Vatios a Voltios",
+          "paragraph1": "La conversión de potencia en vatios (W) a tensión en voltios (V) es un cálculo eléctrico fundamental. La fórmula depende del tipo de sistema: DC, monofásico AC o trifásico AC. Para DC: V = P / I. Para monofásico AC: V = P / (I × PF), donde PF es el factor de potencia. Para trifásico AC: V = P / (√3 × I × PF), con I como corriente por fase. Nuestra calculadora gratuita Vatios a Voltios admite los tres modos y proporciona resultados instantáneos y precisos para cálculos de tensión, diseño de circuitos y análisis de carga.",
+          "paragraph2": "La corriente continua (DC) no tiene factor de potencia; la tensión es la potencia dividida por la corriente. Los sistemas monofásicos y trifásicos AC a menudo tienen cargas reactivas (motores, balastos), por lo que los requisitos de tensión aparente difieren de la tensión de potencia real. El factor de potencia (0 a 1) representa la relación entre la potencia real y la potencia aparente. Para trifásico, el factor √3 (aproximadamente 1,732) tiene en cuenta la relación de fase entre la tensión línea-línea y las cantidades de fase. Corrientes típicas: 10 A, 20 A, 30 A (residencial); 50 A, 100 A (industrial).",
+          "paragraph3": "Esta conversión se utiliza para: determinar los requisitos de tensión a partir de potencia y corriente conocidos, dimensionar transformadores y generadores, diseñar sistemas de distribución, calcular la caída de tensión en circuitos y auditorías energéticas. Ya sea que trabaje con cargas DC (baterías, solar), monofásico residencial o trifásico industrial, convertir vatios a voltios es esencial para un diseño eléctrico seguro y conforme.",
+          "paragraph4": "Nuestra calculadora le permite elegir DC, monofásico o trifásico. Ingrese vatios y corriente (amperios); para AC, ingrese el factor de potencia (predeterminado 0,8). El resultado está en voltios (V). No se requiere registro. Para estudiantes, electricistas e ingenieros, la calculadora Vatios a Voltios proporciona resultados precisos para todos los tipos de sistemas comunes.",
+          "exampleHeading": "Ejemplo:",
+          "exampleText": "DC: 1200 W a 10 A → V = 1200 / 10 = 120 V. Monofásico: 1840 W a 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Trifásico: 8,83 kW a 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            { "question": "¿Cuál es la fórmula para vatios a voltios (DC)?", "answer": "Para DC: V = P / I, donde V es la tensión en voltios, P la potencia en vatios e I la corriente en amperios. Dividir la potencia por la corriente da la tensión. Ejemplo: 1200 W a 10 A → V = 120 V." },
+            { "question": "¿Cuál es la fórmula para monofásico AC?", "answer": "Para monofásico AC: V = P / (I × PF). I es la corriente (amperios), P la potencia (vatios), PF el factor de potencia (0 a 1). Ejemplo: 1840 W a 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "¿Cuál es la fórmula para trifásico AC?", "answer": "Para trifásico AC: V = P / (√3 × I × PF). I es la corriente por fase (amperios), P la potencia (vatios), PF el factor de potencia. √3 ≈ 1,732. Ejemplo: 8,83 kW a 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "¿Cuándo usar DC, monofásico o trifásico?", "answer": "DC para baterías, circuitos solares DC y cargas DC. Monofásico para residencial típico (120 V, 230 V, 240 V). Trifásico para distribución industrial y comercial (400 V, 480 V línea-línea) y motores." },
+            { "question": "¿Cómo se relaciona esto con voltios a vatios?", "answer": "Vatios a voltios (V = P / I) y voltios a vatios (P = V × I) son operaciones inversas. Use vatios→voltios cuando conozca la potencia y la corriente; voltios→vatios cuando conozca la tensión y la corriente." },
+            { "question": "¿Esta calculadora es gratuita?", "answer": "Sí. La calculadora Vatios a Voltios es gratuita. No se requiere registro. Seleccione DC, monofásico o trifásico, ingrese vatios y corriente (y factor de potencia para AC), obtenga voltios instantáneamente." }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "voltsToWatts": "Calculadora Voltios a Vatios",
+          "voltsToWattsDesc": "Convertir tensión y corriente en potencia",
+          "wattsToAmps": "Calculadora Vatios a Amperios",
+          "wattsToAmpsDesc": "Convertir potencia en corriente con tensión",
+          "voltsToAmps": "Calculadora Voltios a Amperios",
+          "voltsToAmpsDesc": "Convertir tensión en corriente con vatios o resistencia",
+          "ampsToVolt": "Calculadora Amperios a Voltio",
+          "ampsToVoltDesc": "Convertir corriente en tensión con vatios o resistencia"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Calculadora Electronvoltios a Voltios",
       "description": "Convierta electronvoltios (eV) a voltios (V) instantáneamente y con precisión",

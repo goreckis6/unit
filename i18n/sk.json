@@ -1815,6 +1815,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Kalkulačka Wattov na Volty",
+      "description": "Previesť výkon (W) na napätie (V) pre DC, jednofázový a trojfázový s prúdom a účinníkom",
+      "currentType": "Typ prúdu",
+      "directCurrent": "Jednosmerný prúd (DC)",
+      "singlePhase": "Jednofázový",
+      "threePhase": "Trojfázový",
+      "watts": "Watty (W)",
+      "amps": "Prúd (A)",
+      "powerFactor": "Účinník (0–1)",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "volts": "Napätie (V)",
+      "seo": {
+        "title": "Kalkulačka Wattov na Volty – DC, Jednofázový a Trojfázový | Výkon na Napätie",
+        "description": "Bezplatná kalkulačka Wattov na Volty. Previesť výkon (W) na napätie (V) pre DC, jednofázový a trojfázový. Prúd a účinník. Ideálne na návrh obvodov, výpočty napätia a elektrotechniku.",
+        "keywords": "kalkulačka wattov volty, konvertor výkonu napätia, W V, DC jednofázový trojfázový, elektrická kalkulačka, kalkulačka napätia, bezplatná kalkulačka",
+        "content": {
+          "heading": "Ako previesť watty na volty",
+          "paragraph1": "Prevádzanie výkonu vo wattoch (W) na napätie vo voltoch (V) je základný elektrický výpočet. Vzorec závisí od typu systému: DC, jednofázový AC alebo trojfázový AC. Pre DC: V = P / I. Pre jednofázový AC: V = P / (I × PF), kde PF je účinník. Pre trojfázový AC: V = P / (√3 × I × PF), s I ako prúd na fázu. Naša bezplatná kalkulačka Wattov na Volty podporuje všetky tri režimy a poskytuje okamžité, presné výsledky na výpočty napätia, návrh obvodov a analýzu zaťaženia.",
+          "paragraph2": "Jednosmerný prúd (DC) nemá účinník; napätie je výkon delený prúdom. Jednofázové a trojfázové AC systémy často majú reaktívne zaťaženie (motory, tlmivky), takže požiadavky na zdanlivé napätie sa líšia od napätia skutočného výkonu. Účinník (0 až 1) predstavuje pomer skutočného výkonu k zdanlivému. Pri trojfázovom sa faktor √3 (≈ 1,732) zohľadňuje fázový vzťah medzi medzifázovým napätím a fázovými veličinami. Typické prúdy: 10 A, 20 A, 30 A (rezidenčné); 50 A, 100 A (priemyselné).",
+          "paragraph3": "Táto konverzia sa používa na: určenie požiadaviek na napätie zo známeho výkonu a prúdu, dimenzovanie transformátorov a generátorov, návrh distribučných systémov, výpočet poklesu napätia v obvodoch a energetické audity. Či už ide o DC zaťaženia (batérie, solárne), jednofázové rezidenčné alebo trojfázové priemyselné, prevádzanie wattov na volty je nevyhnutné pre bezpečné a vyhovujúce elektrické projektovania.",
+          "paragraph4": "Naša kalkulačka umožňuje zvoliť DC, jednofázový alebo trojfázový. Zadajte watty a prúd (ampéry); pre AC účinník (predvolené 0,8). Výsledok je vo voltoch (V). Bez registrácie. Pre študentov, elektrikárov a inžinierov kalkulačka Wattov na Volty poskytuje presné výsledky pre všetky bežné typy systémov.",
+          "exampleHeading": "Príklad:",
+          "exampleText": "DC: 1200 W pri 10 A → V = 1200 / 10 = 120 V. Jednofázový: 1840 W pri 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Trojfázový: 8,83 kW pri 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            { "question": "Aký je vzorec wattov na volty (DC)?", "answer": "Pre DC: V = P / I, kde V je napätie vo V, P výkon vo W a I prúd v A. Vydelenie výkonu prúdom dá napätie. Napr.: 1200 W pri 10 A → V = 120 V." },
+            { "question": "Aký je vzorec pre jednofázový AC?", "answer": "Pre jednofázový AC: V = P / (I × PF). I prúd (A), P výkon (W), PF účinník (0 až 1). Napr.: 1840 W pri 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "Aký je vzorec pre trojfázový AC?", "answer": "Pre trojfázový AC: V = P / (√3 × I × PF). I prúd na fázu (A), P výkon (W), PF účinník. √3 ≈ 1,732. Napr.: 8,83 kW pri 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "Kedy použiť DC, jednofázový alebo trojfázový?", "answer": "DC pre batérie, DC solárne obvody a DC zaťaženie. Jednofázový pre typické rezidenčné (120 V, 230 V, 240 V). Trojfázový pre priemyselnú a komerčnú distribúciu (400 V, 480 V medzifázové) a motory." },
+            { "question": "Ako sa to vzťahuje na volty na watty?", "answer": "Watty na volty (V = P / I) a volty na watty (P = V × I) sú inverzné operácie. Použite watty→volty, keď poznáte výkon a prúd; volty→watty, keď poznáte napätie a prúd." },
+            { "question": "Je táto kalkulačka zadarmo?", "answer": "Áno. Kalkulačka Wattov na Volty je zadarmo. Bez registrácie. Zvoľte DC, jednofázový alebo trojfázový, zadajte watty a prúd (a účinník pre AC), získajte volty okamžite." }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace kalkulačky",
+          "voltsToWatts": "Kalkulačka Voltov na Watty",
+          "voltsToWattsDesc": "Previesť napätie a prúd na výkon",
+          "wattsToAmps": "Kalkulačka Wattov na Ampéry",
+          "wattsToAmpsDesc": "Previesť výkon na prúd s napätím",
+          "voltsToAmps": "Kalkulačka Voltov na Ampéry",
+          "voltsToAmpsDesc": "Previesť napätie na prúd s wattmi alebo odporom",
+          "ampsToVolt": "Kalkulačka Ampérov na Volt",
+          "ampsToVoltDesc": "Previesť prúd na napätie s wattmi alebo odporom"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Kalkulačka Elektronvoltov na Volty",
       "description": "Preveďte elektronvolty (eV) na volty (V) okamžite a presne",

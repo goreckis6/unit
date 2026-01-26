@@ -1464,6 +1464,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Calcolatrice Watt a Volt",
+      "description": "Converti potenza (W) in tensione (V) per DC, monofase e trifase con corrente e fattore di potenza",
+      "currentType": "Tipo di corrente",
+      "directCurrent": "Corrente continua (DC)",
+      "singlePhase": "Monofase",
+      "threePhase": "Trifase",
+      "watts": "Watt (W)",
+      "amps": "Corrente (A)",
+      "powerFactor": "Fattore di potenza (0-1)",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "volts": "Tensione (V)",
+      "seo": {
+        "title": "Calcolatrice Watt a Volt - DC, Monofase e Trifase | Potenza a Tensione",
+        "description": "Calcolatrice gratuita Watt a Volt. Converti potenza (W) in tensione (V) per DC, monofase e trifase. Corrente e fattore di potenza. Perfetto per progettazione circuiti, calcoli tensione e ingegneria elettrica.",
+        "keywords": "calcolatrice watt volt, convertitore potenza tensione, W V, DC monofase trifase, calcolatrice elettrica, calcolatrice tensione, calcolatrice gratuita",
+        "content": {
+          "heading": "Come Convertire Watt in Volt",
+          "paragraph1": "La conversione di potenza in watt (W) in tensione in volt (V) è un calcolo elettrico fondamentale. La formula dipende dal tipo di sistema: DC, monofase AC o trifase AC. Per DC: V = P / I. Per monofase AC: V = P / (I × PF), dove PF è il fattore di potenza. Per trifase AC: V = P / (√3 × I × PF), con I come corrente per fase. La nostra calcolatrice gratuita Watt a Volt supporta tutte e tre le modalità e fornisce risultati istantanei e precisi per calcoli di tensione, progettazione circuiti e analisi del carico.",
+          "paragraph2": "La corrente continua (DC) non ha fattore di potenza; la tensione è la potenza divisa per la corrente. I sistemi monofase e trifase AC spesso hanno carichi reattivi (motori, reattori), quindi i requisiti di tensione apparente differiscono dalla tensione di potenza reale. Il fattore di potenza (0 a 1) rappresenta il rapporto tra potenza reale e potenza apparente. Per trifase, il fattore √3 (circa 1,732) tiene conto della relazione di fase tra tensione linea-linea e quantità di fase. Correnti tipiche: 10 A, 20 A, 30 A (residenziale); 50 A, 100 A (industriale).",
+          "paragraph3": "Questa conversione è utilizzata per: determinare i requisiti di tensione da potenza e corrente noti, dimensionare trasformatori e generatori, progettare sistemi di distribuzione, calcolare la caduta di tensione nei circuiti e audit energetici. Che tu lavori con carichi DC (batterie, solare), monofase residenziale o trifase industriale, convertire watt in volt è essenziale per una progettazione elettrica sicura e conforme.",
+          "paragraph4": "La nostra calcolatrice ti consente di scegliere DC, monofase o trifase. Inserisci watt e corrente (ampere); per AC, inserisci il fattore di potenza (predefinito 0,8). Il risultato è in volt (V). Nessuna registrazione richiesta. Per studenti, elettricisti e ingegneri, la calcolatrice Watt a Volt fornisce risultati precisi per tutti i tipi di sistemi comuni.",
+          "exampleHeading": "Esempio:",
+          "exampleText": "DC: 1200 W a 10 A → V = 1200 / 10 = 120 V. Monofase: 1840 W a 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Trifase: 8,83 kW a 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Domande Frequenti",
+          "items": [
+            { "question": "Qual è la formula per watt a volt (DC)?", "answer": "Per DC: V = P / I, dove V è la tensione in volt, P la potenza in watt e I la corrente in ampere. Dividere la potenza per la corrente dà la tensione. Esempio: 1200 W a 10 A → V = 120 V." },
+            { "question": "Qual è la formula per monofase AC?", "answer": "Per monofase AC: V = P / (I × PF). I è la corrente (ampere), P la potenza (watt), PF il fattore di potenza (0 a 1). Esempio: 1840 W a 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "Qual è la formula per trifase AC?", "answer": "Per trifase AC: V = P / (√3 × I × PF). I è la corrente per fase (ampere), P la potenza (watt), PF il fattore di potenza. √3 ≈ 1,732. Esempio: 8,83 kW a 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "Quando usare DC, monofase o trifase?", "answer": "DC per batterie, circuiti solari DC e carichi DC. Monofase per residenziale tipico (120 V, 230 V, 240 V). Trifase per distribuzione industriale e commerciale (400 V, 480 V linea-linea) e motori." },
+            { "question": "Come si relaziona questo con volt a watt?", "answer": "Watt a volt (V = P / I) e volt a watt (P = V × I) sono operazioni inverse. Usa watt→volt quando conosci potenza e corrente; volt→watt quando conosci tensione e corrente." },
+            { "question": "Questa calcolatrice è gratuita?", "answer": "Sì. La calcolatrice Watt a Volt è gratuita. Nessuna registrazione richiesta. Seleziona DC, monofase o trifase, inserisci watt e corrente (e fattore di potenza per AC), ottieni volt istantaneamente." }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatrici Correlate",
+          "voltsToWatts": "Calcolatrice Volt a Watt",
+          "voltsToWattsDesc": "Converti tensione e corrente in potenza",
+          "wattsToAmps": "Calcolatrice Watt a Ampere",
+          "wattsToAmpsDesc": "Converti potenza in corrente con tensione",
+          "voltsToAmps": "Calcolatrice Volt a Ampere",
+          "voltsToAmpsDesc": "Converti tensione in corrente con watt o resistenza",
+          "ampsToVolt": "Calcolatrice Ampere a Volt",
+          "ampsToVoltDesc": "Converti corrente in tensione con watt o resistenza"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Calcolatrice Elettronvolt a Volt",
       "description": "Converti elettronvolt (eV) in volt (V) istantaneamente e accuratamente",

@@ -1760,6 +1760,57 @@
         }
       }
     },
+    "wattsToVolts": {
+      "title": "Kalkulator Watt ke Volt",
+      "description": "Ubah daya (W) menjadi tegangan (V) untuk DC, fase tunggal, dan tiga fase dengan arus dan faktor daya",
+      "currentType": "Jenis arus",
+      "directCurrent": "Arus Searah (DC)",
+      "singlePhase": "Fase Tunggal",
+      "threePhase": "Tiga Fase",
+      "watts": "Watt (W)",
+      "amps": "Arus (A)",
+      "powerFactor": "Faktor Daya (0–1)",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "volts": "Tegangan (V)",
+      "seo": {
+        "title": "Kalkulator Watt ke Volt – DC, Fase Tunggal & Tiga Fase | Daya ke Tegangan",
+        "description": "Kalkulator Watt ke Volt gratis. Ubah daya (W) menjadi tegangan (V) untuk DC, fase tunggal, dan tiga fase. Arus dan faktor daya. Sempurna untuk desain sirkuit, perhitungan tegangan dan teknik listrik.",
+        "keywords": "kalkulator watt volt, konverter daya tegangan, W V, DC fase tunggal tiga fase, kalkulator listrik, kalkulator tegangan, kalkulator gratis",
+        "content": {
+          "heading": "Cara mengubah watt menjadi volt",
+          "paragraph1": "Mengubah daya dalam watt (W) menjadi tegangan dalam volt (V) adalah perhitungan listrik dasar. Rumusnya tergantung pada jenis sistem: DC, fase tunggal AC atau tiga fase AC. Untuk DC: V = P / I. Untuk fase tunggal AC: V = P / (I × PF), di mana PF adalah faktor daya. Untuk tiga fase AC: V = P / (√3 × I × PF), dengan I sebagai arus per fase. Kalkulator Watt ke Volt gratis kami mendukung ketiga mode dan memberikan hasil instan dan akurat untuk perhitungan tegangan, desain sirkuit dan analisis beban.",
+          "paragraph2": "Arus searah (DC) tidak memiliki faktor daya; tegangan adalah daya dibagi arus. Sistem fase tunggal dan tiga fase AC sering memiliki beban reaktif (motor, balast), sehingga persyaratan tegangan semu berbeda dari tegangan daya nyata. Faktor daya (0–1) mewakili rasio daya nyata terhadap semu. Pada tiga fase, faktor √3 (≈ 1,732) memperhitungkan hubungan fase antara tegangan line-to-line dan besaran fase. Arus umum: 10 A, 20 A, 30 A (perumahan); 50 A, 100 A (industri).",
+          "paragraph3": "Konversi ini digunakan untuk: menentukan persyaratan tegangan dari daya dan arus yang diketahui, ukuran transformator dan generator, desain sistem distribusi, perhitungan penurunan tegangan dalam sirkuit dan audit energi. Baik untuk beban DC (baterai, solar), fase tunggal perumahan atau tiga fase industri, mengubah watt menjadi volt sangat penting untuk desain listrik yang aman dan sesuai.",
+          "paragraph4": "Kalkulator kami memungkinkan Anda memilih DC, fase tunggal, atau tiga fase. Masukkan watt dan arus (ampere); untuk AC, faktor daya (default 0,8). Hasilnya dalam volt (V). Tanpa registrasi. Untuk siswa, teknisi listrik, dan insinyur, kalkulator Watt ke Volt memberikan hasil akurat untuk semua jenis sistem umum.",
+          "exampleHeading": "Contoh:",
+          "exampleText": "DC: 1200 W pada 10 A → V = 1200 / 10 = 120 V. Fase tunggal: 1840 W pada 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V. Tiga fase: 8,83 kW pada 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            { "question": "Apa rumus watt ke volt (DC)?", "answer": "Untuk DC: V = P / I, di mana V adalah tegangan dalam V, P adalah daya dalam W, dan I adalah arus dalam A. Membagi daya dengan arus menghasilkan tegangan. Contoh: 1200 W pada 10 A → V = 120 V." },
+            { "question": "Apa rumus untuk fase tunggal AC?", "answer": "Untuk fase tunggal AC: V = P / (I × PF). I arus (A), P daya (W), PF faktor daya (0–1). Contoh: 1840 W pada 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
+            { "question": "Apa rumus untuk tiga fase AC?", "answer": "Untuk tiga fase AC: V = P / (√3 × I × PF). I arus per fase (A), P daya (W), PF faktor daya. √3 ≈ 1,732. Contoh: 8,83 kW pada 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
+            { "question": "Kapan menggunakan DC, fase tunggal, atau tiga fase?", "answer": "DC untuk baterai, sirkuit solar DC, dan beban DC. Fase tunggal untuk perumahan tipikal (120 V, 230 V, 240 V). Tiga fase untuk distribusi industri dan komersial (400 V, 480 V line-to-line) dan motor." },
+            { "question": "Bagaimana hubungannya dengan volt ke watt?", "answer": "Watt ke volt (V = P / I) dan volt ke watt (P = V × I) adalah operasi terbalik. Gunakan watt→volt saat Anda tahu daya dan arus; volt→watt saat Anda tahu tegangan dan arus." },
+            { "question": "Apakah kalkulator ini gratis?", "answer": "Ya. Kalkulator Watt ke Volt gratis. Tanpa registrasi. Pilih DC, fase tunggal, atau tiga fase, masukkan watt dan arus (dan faktor daya untuk AC), dapatkan volt secara instan." }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator terkait",
+          "voltsToWatts": "Kalkulator Volt ke Watt",
+          "voltsToWattsDesc": "Ubah tegangan dan arus menjadi daya",
+          "wattsToAmps": "Kalkulator Watt ke Ampere",
+          "wattsToAmpsDesc": "Ubah daya menjadi arus dengan tegangan",
+          "voltsToAmps": "Kalkulator Volt ke Ampere",
+          "voltsToAmpsDesc": "Ubah tegangan menjadi arus dengan watt atau resistansi",
+          "ampsToVolt": "Kalkulator Ampere ke Volt",
+          "ampsToVoltDesc": "Ubah arus menjadi tegangan dengan watt atau resistansi"
+        }
+      }
+    },
     "electronVoltsToVolts": {
       "title": "Kalkulator Elektronvolt ke Volt",
       "description": "Konversi elektronvolt (eV) ke volt (V) secara instan dan akurat",

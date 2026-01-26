@@ -16,7 +16,7 @@ export async function generateMetadata() {
 
 export default async function NotFound() {
   const t = await getTranslations({ locale: 'en', namespace: 'notFound' });
-  const messages = (await import('@/i18n/en.json')).default as AbstractIntlMessages;
+  const messages = (await import('@/i18n/en.json')).default as unknown as AbstractIntlMessages;
 
   return (
     <NextIntlClientProvider locale="en" messages={messages}>

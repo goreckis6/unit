@@ -740,6 +740,70 @@
         }
       }
     },
+    "kwhToKw": {
+      "title": "kWh to kW Calculator",
+      "description": "Convert kilowatt-hours (kWh) to kilowatts (kW) instantly using time duration",
+      "kwh": "Kilowatt-hours (kWh)",
+      "hours": "Time (hours)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "kw": "Kilowatts (kW)",
+      "seo": {
+        "title": "kWh to kW Calculator – Calculate Power from Energy and Time",
+        "description": "Free kWh to kW conversion calculator. Convert kilowatt-hours to kilowatts instantly using time duration. Perfect for electrical calculations, energy consumption analysis, and power ratings.",
+        "keywords": "kwh to kw calculator, kilowatt-hours to kilowatts converter, kwh kw conversion, energy to power calculator, electrical calculator, kw calculator, power calculator, free calculator",
+        "content": {
+          "heading": "How to Convert kWh to kW",
+          "paragraph1": "Converting kilowatt-hours (kWh) to kilowatts (kW) is a common calculation when analyzing energy consumption and determining power ratings. Kilowatt-hours represent energy—the total amount of work done over time—while kilowatts represent power—the rate at which energy is consumed or delivered. The conversion requires knowledge of the time duration over which the energy was consumed or delivered. Our free kWh to kW calculator provides instant, accurate conversions for your electrical and energy calculations.",
+          "paragraph2": "The formula is: kW = kWh / hours, where kWh is energy in kilowatt-hours, hours is the time duration, and kW is power in kilowatts. For example, if a device consumes 10 kWh of energy over 5 hours, the average power is 10 / 5 = 2 kW. This calculation is essential for understanding the power rating of devices, analyzing electricity bills, sizing electrical systems, and comparing energy efficiency of different appliances.",
+          "paragraph3": "This conversion is critical in many applications: determining the power rating of appliances from energy consumption data, calculating power requirements for electrical circuits, analyzing electricity usage patterns, sizing batteries and power supplies, understanding energy efficiency ratings, and estimating operating costs. For example, if your electricity meter shows 24 kWh consumed over 12 hours, the average power draw was 24 / 12 = 2 kW. This helps identify high-consumption devices and optimize energy usage.",
+          "paragraph4": "Our calculator accepts kilowatt-hours and time duration as inputs, applies the formula kW = kWh / hours, and provides the power in kilowatts. Whether you're analyzing household energy consumption, sizing solar systems, calculating battery discharge rates, or comparing appliance efficiency, our kWh to kW calculator delivers accurate, instant results for your energy management and electrical design needs.",
+          "exampleHeading": "Example:",
+          "exampleText": "10 kWh over 5 hours: kW = 10 / 5 = 2 kW. 24 kWh over 12 hours: kW = 24 / 12 = 2 kW. 6 kWh over 4 hours: kW = 6 / 4 = 1.5 kW. 36 kWh over 24 hours: kW = 36 / 24 = 1.5 kW. If a device uses 12 kWh in 8 hours, the average power is 12 / 8 = 1.5 kW."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert kWh to kW?",
+              "answer": "The formula is kW = kWh / hours, where kWh is energy in kilowatt-hours, hours is the time duration, and kW is power in kilowatts. This converts energy consumed over time to average power. For example, 10 kWh over 5 hours equals 10 / 5 = 2 kW."
+            },
+            {
+              "question": "What is the difference between kWh and kW?",
+              "answer": "kWh (kilowatt-hours) is energy—the total amount of work done over time, measured in your electricity bill. kW (kilowatts) is power—the rate at which energy is consumed or delivered at any moment. Think of it like distance vs. speed: kWh is like miles traveled, kW is like miles per hour. 1 kWh equals 1 kilowatt used for 1 hour."
+            },
+            {
+              "question": "Why do I need the time duration for this conversion?",
+              "answer": "Energy (kWh) and power (kW) are related by time. The same energy can be delivered at different power levels depending on the time: 10 kWh over 1 hour is 10 kW, but 10 kWh over 5 hours is only 2 kW. Without knowing the time, you cannot determine the power rating."
+            },
+            {
+              "question": "How can I use this calculator to analyze my electricity bill?",
+              "answer": "If your electricity bill shows you consumed 300 kWh in a month (approximately 720 hours), your average power consumption was 300 / 720 = 0.417 kW (417 watts). This helps you understand your baseline power usage. You can also calculate power for specific appliances: if a device uses 18 kWh per day (24 hours), it draws 18 / 24 = 0.75 kW (750 watts)."
+            },
+            {
+              "question": "Can I convert kW to kWh?",
+              "answer": "Yes, you can convert kW to kWh using the formula: kWh = kW × hours, where kWh is energy in kilowatt-hours, kW is power in kilowatts, and hours is time in hours. This is the reverse of converting kWh to kW. For example, if a device operates at 2 kW for 5 hours, it consumes 2 × 5 = 10 kWh."
+            },
+            {
+              "question": "Is this calculator free to use?",
+              "answer": "Yes, our kWh to kW calculator is completely free. No registration or payment required. Enter energy in kWh and time in hours to get instant, accurate power results in kW."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "kwToKwh": "kW to kWh Calculator",
+          "kwToKwhDesc": "Convert power to energy using time duration",
+          "wattsToKwh": "Watts to kWh Calculator",
+          "wattsToKwhDesc": "Convert power to energy using time",
+          "kwhToWatts": "kWh to Watts Calculator",
+          "kwhToWattsDesc": "Convert energy to power using time duration",
+          "kwToKva": "kW to kVA Calculator",
+          "kwToKvaDesc": "Convert kilowatts to kilovolt-amperes instantly"
+        }
+      }
+    },
     "kwToVa": {
       "title": "kW to VA Calculator",
       "description": "Convert kilowatts (kW) to volt-amperes (VA) instantly using power factor",

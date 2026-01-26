@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer';
 import { BackButton } from '@/components/BackButton';
 
 export async function generateMetadata() {
-  const t = await getTranslations({ locale: 'en', namespace: 'notFound' });
+  const t = await getTranslations({ namespace: 'notFound' });
 
   return {
     title: t('title'),
@@ -13,7 +13,7 @@ export async function generateMetadata() {
 }
 
 export default async function NotFound() {
-  const t = await getTranslations({ locale: 'en', namespace: 'notFound' });
+  const t = await getTranslations({ namespace: 'notFound' });
 
   return (
     <div className="not-found-page">

@@ -785,7 +785,7 @@
       "result": "Tulos",
       "watts": "Watit (W)",
       "seo": {
-        "title": "kWh Watt Laskin - Muunna Energia Tehoksi Verkossa",
+        "title": "kWh Watt Laskin – Laske Teho Energiasta ja Ajasta",
         "description": "Ilmainen kWh Watt -muunnoslasin. Muunna kilowattitunnit wateiksi välittömästi käyttämällä kestoa. Täydellinen sähköisiin laskelmiin, energiankulutusanalyysiin ja tehoarviointeihin.",
         "keywords": "kwh watt laskin, kilowattitunnit watteihin muunnin, kwh watt muunnos, energia teho laskin, sähkölaskin, watti laskin, teho laskin, ilmainen laskin",
         "content": {
@@ -834,7 +834,7 @@
       "result": "Tulos",
       "wh": "Wattitunnit (Wh)",
       "seo": {
-        "title": "mAh Wh Laskin - Muunna Akkukapasiteetti Energiaksi Verkossa",
+        "title": "mAh Wh Laskin – Laske Akun Energia Jännitteen Avulla",
         "description": "Ilmainen mAh Wh -muunnoslasin. Muunna milliampeeritunnit wattitunneiksi välittömästi käyttämällä jännitettä. Täydellinen akkukapasiteetin laskentaan, virtalähteiden vertailuun ja energian varastointianalyysiin.",
         "keywords": "mah wh laskin, milliampeeritunnit wattitunnit muunnin, mah wh muunnos, akkukapasiteetti laskin, virtalähde laskin, akku energia laskin, ilmainen laskin",
         "content": {
@@ -881,6 +881,66 @@
           "kwToKvaDesc": "Muunna kilowatit kilovolttiampeeriksi välittömästi",
           "kwToKwh": "kW kWh Laskin",
           "kwToKwhDesc": "Muunna teho energiaksi käyttämällä kestoa"
+        }
+      }
+    },
+    "whToMah": {
+      "title": "Wh mAh Laskin",
+      "description": "Muunna watttitunnit (Wh) miliampeeritunneiksi (mAh) heti ja tarkasti käyttämällä jännitettä",
+      "wh": "Watttitunnit (Wh)",
+      "voltage": "Jännite (V)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "mah": "Miliampeeritunnit (mAh)",
+      "seo": {
+        "title": "Wh mAh Laskin - Muunna Energia Akun Kapasiteetiksi Verkossa",
+        "description": "Ilmainen Wh mAh muunnoslaskin. Muunna watttitunnit miliampeeritunneiksi heti jännitteen avulla. Täydellinen akun kapasiteettilaskelmiin, powerbankin mitoitukseen ja energian varastointianalyysiin.",
+        "keywords": "wh mah laskin, watttitunnit miliampeeritunnit muunnin, wh mah muunnos, akun kapasiteetti laskin, powerbank laskin, akun energia laskin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka muuntaa Wh mAh:ksi",
+          "paragraph1": "Watttituntien (Wh) muuntaminen miliampeeritunneiksi (mAh) on välttämätön laskelma akun kapasiteetin määrittämisessä energiaspesifikaatioista. Watttitunnit edustavat todellista energian varastointia — kokonaisenergiaa, jonka akku voi tarjota — kun taas miliampeeritunnit edustavat sähköistä varauskapasiteettia — kuinka paljon virtaa akku voi toimittaa ajan kuluessa. Muunnos vaatii akun jännitteen tuntemusta, koska varauskapasiteetti riippuu sekä energiasta että jännitteestä. Ilmainen Wh mAh muunnoslaskimemme tarjoaa välittömiä, tarkkoja muunnoksia akun ja energianhallintalaskelmiin.",
+          "paragraph2": "Muunnoskaava on: mAh = (Wh × 1000) / V, jossa Wh on energia watttitunneina, V on jännite volteina ja mAh on akun kapasiteetti miliampeeritunneina. Esimerkiksi 3,7 V:n 18,5 Wh akulla on kapasiteetti (18,5 × 1000) / 3,7 = 5000 mAh. Tämä laskelma on välttämätön akun kapasiteetin ymmärtämiseen energiaratkaisuista, eri jännitespesifikaatioiden akkujen vertaamiseen, powerbankien mitoitukseen energiatarpeiden perusteella ja laitteen käyttöajan laskemiseen energiankulutuksesta.",
+          "paragraph3": "Tätä muunnosta käytetään kriittisesti monissa sovelluksissa: akun kapasiteetin määrittäminen watttituntien energiaspesifikaatioista, powerbankien ja kannettavien laturien vertaaminen, kun vain energia on määritelty, varauskapasiteetin laskeminen aurinkoakkupankeille, akun kapasiteetin ymmärtäminen älypuhelimissa ja kannettavissa tietokoneissa energiaratkaisuista, varmuuskopiointijärjestelmien mitoitus energiatarpeiden perusteella ja laitteen käyttöajan arviointi akun energiasta. Esimerkiksi 3,7 V:n 37 Wh powerbank tarjoaa (37 × 1000) / 3,7 = 10 000 mAh, mutta sama 37 Wh 5 V:ssa tarjoaa vain 7 400 mAh — sama energia, eri kapasiteetti jännite-eron vuoksi.",
+          "paragraph4": "Laskimemme ottaa watttitunnit ja jännitteen syötteiksi, soveltaa kaavaa mAh = (Wh × 1000) / V ja antaa akun kapasiteetin miliampeeritunneina. Vertaatpa powerbankeja, lasket akun kapasiteettia aurinkojärjestelmiä varten, mitoit varmuuskopioakkuja, arvioit latausaikaa tai ymmärrät laitteiden energiatarpeita — Wh mAh laskimemme tarjoaa tarkkoja, välittömiä tuloksia akun hallintaan ja energiasuunnitteluun.",
+          "exampleHeading": "Esimerkki:",
+          "exampleText": "3,7 V:n 18,5 Wh: mAh = (18,5 × 1000) / 3,7 = 5000 mAh. 5 V:n 50 Wh: mAh = (50 × 1000) / 5 = 10 000 mAh. 1,5 V:n 3,75 Wh: mAh = (3,75 × 1000) / 1,5 = 2500 mAh. 3,6 V:n 72 Wh: mAh = (72 × 1000) / 3,6 = 20 000 mAh. Jos älypuhelimen akku on luokiteltu 15,4 Wh:ksi 3,85 V:ssa, sen kapasiteetti on (15,4 × 1000) / 3,85 = 4000 mAh."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava watttituntien muuntamiseksi miliampeeritunneiksi?",
+              "answer": "Kaava on mAh = (Wh × 1000) / V, jossa Wh on energia watttitunneina, V on jännite volteina ja mAh on akun kapasiteetti miliampeeritunneina. Tämä muuntaa todellisen energian varastoinnin sähköiseksi varauskapasiteetiksi. Esimerkiksi 3,7 V:n 18,5 Wh vastaa (18,5 × 1000) / 3,7 = 5000 mAh."
+            },
+            {
+              "question": "Mikä on ero Wh:n ja mAh:n välillä?",
+              "answer": "Wh (watttitunnit) mittaa todellista energiaa — kokonaista sähkötyötä, jonka akku voi tehdä. mAh (miliampeeritunnit) mittaa sähköistä varauskapasiteettia — kuinka paljon virtaa akku voi toimittaa ajan kuluessa. Wh ottaa huomioon jännitteen, kun taas mAh ei. 3,7 V:n 37 Wh akku tarjoaa 10 000 mAh, mutta 5 V:ssa se tarjoaa vain 7 400 mAh — sama energia, eri kapasiteetti."
+            },
+            {
+              "question": "Miksi tarvitsen jännitteen tähän muunnokseen?",
+              "answer": "Varauskapasiteetti (mAh) riippuu sekä energiasta (Wh) että jännitteestä (V). Sama energia eri jännitteillä tarjoaa eri varauskapasiteetin. Teho = Jännite × Virta, joten korkeampi jännite tarkoittaa vähemmän varauskapasiteettia samalla energialla. Ilman jännitteen tuntemusta todellista akun kapasiteettia ei voida määrittää."
+            },
+            {
+              "question": "Kuinka voin käyttää tätä laskinta powerbankien vertaamiseen?",
+              "answer": "Powerbankit listavat usein kapasiteetin Wh:ssa (energia), mutta saatat tarvita mAh:ta vertailuun. Muunna mAh:ksi käyttämällä käyttöjännitettä. 3,7 V:n 37 Wh powerbank (10 000 mAh) tarjoaa enemmän varauskapasiteettia kuin 5 V:n 37 Wh (7 400 mAh). Harkitse aina sekä Wh:ta että jännitettä tarkkaa kapasiteettivertailua varten."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, Wh mAh laskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Syötä yksinkertaisesti energia Wh:ssa ja jännite volteina saadaksesi välittömät, tarkat akun kapasiteettitulokset mAh:na."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Aiheeseen liittyvät laskimet",
+          "mahToWh": "mAh Wh Laskin",
+          "mahToWhDesc": "Muunna akun kapasiteetti energiaksi jännitteellä",
+          "kwhToWatts": "kWh Watti Laskin",
+          "kwhToWattsDesc": "Muunna kilowattitunnit wateiksi käyttämällä kestoa",
+          "kwToKwh": "kW kWh Laskin",
+          "kwToKwhDesc": "Muunna teho energiaksi käyttämällä kestoa",
+          "wattsToKwh": "Watti kWh Laskin",
+          "wattsToKwhDesc": "Muunna teho energiaksi käyttämällä kestoa"
         }
       }
     },

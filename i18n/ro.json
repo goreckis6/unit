@@ -785,7 +785,8 @@
       "result": "Rezultat",
       "watts": "Wați (W)",
       "seo": {
-        "title": "Calculator kWh în Wați - Convertiți Energia în Putere Online",
+<｜tool▁sep｜>new_string
+        "title": "Calculator kWh în Wați – Calculează Puterea din Energie și Timp",
         "description": "Calculator gratuit de conversie kWh în Wați. Convertiți kilowați-oră în wați instantaneu folosind durata de timp. Perfect pentru calcule electrice, analiza consumului de energie și evaluări de putere.",
         "keywords": "calculator kwh în wați, convertor kilowați-oră în wați, conversie kwh wați, calculator energie în putere, calculator electric, calculator wați, calculator putere, calculator gratuit",
         "content": {
@@ -834,7 +835,7 @@
       "result": "Rezultat",
       "wh": "Watt-oră (Wh)",
       "seo": {
-        "title": "Calculator mAh în Wh - Convertiți Capacitatea Bateriei în Energie Online",
+        "title": "Calculator mAh în Wh – Calculează Energia Bateriei Folosind Tensiunea",
         "description": "Calculator gratuit de conversie mAh în Wh. Convertiți miliamperi-oră în watt-oră instantaneu folosind tensiunea. Perfect pentru calcule de capacitate baterie, comparații powerbank și analiza stocării energiei.",
         "keywords": "calculator mah wh, convertor miliamperi-oră watt-oră, conversie mah wh, calculator capacitate baterie, calculator powerbank, calculator energie baterie, calculator gratuit",
         "content": {
@@ -881,6 +882,66 @@
           "kwToKvaDesc": "Convertiți kilowați în kilovolt-amperi instantaneu",
           "kwToKwh": "Calculator kW în kWh",
           "kwToKwhDesc": "Convertiți puterea în energie folosind durata"
+        }
+      }
+    },
+    "whToMah": {
+      "title": "Calculator Wh în mAh",
+      "description": "Convertește watt-oră (Wh) în miliamperi-oră (mAh) instantaneu folosind tensiunea",
+      "wh": "Watt-oră (Wh)",
+      "voltage": "Tensiune (V)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "mah": "Miliamperi-oră (mAh)",
+      "seo": {
+        "title": "Calculator Wh în mAh - Convertește Energia în Capacitate de Baterie Online",
+        "description": "Calculator conversie Wh în mAh gratuit. Convertește watt-oră în miliamperi-oră instantaneu folosind tensiunea. Perfect pentru calcule de capacitate a bateriei, dimensionarea power bank-urilor și analiza stocării energiei.",
+        "keywords": "calculator wh mah, convertor watt-oră miliamperi-oră, conversie wh mah, calculator capacitate baterie, calculator power bank, calculator energie baterie, calculator gratuit",
+        "content": {
+          "heading": "Cum se convertește Wh în mAh",
+          "paragraph1": "Conversia watt-oră (Wh) în miliamperi-oră (mAh) este un calcul esențial la determinarea capacității bateriei din specificațiile energetice. Watt-oră reprezintă stocarea reală a energiei — energia electrică totală pe care o poate furniza o baterie — în timp ce miliamperi-oră reprezintă capacitatea de încărcare electrică — cât curent poate furniza o baterie în timp. Conversia necesită cunoașterea tensiunii bateriei, deoarece capacitatea de încărcare depinde atât de energie, cât și de tensiune. Calculatorul nostru gratuit Wh în mAh oferă conversii instantanee și precise pentru calculele dvs. de baterie și gestionare a energiei.",
+          "paragraph2": "Formula este: mAh = (Wh × 1000) / V, unde Wh este energia în watt-oră, V este tensiunea în volți și mAh este capacitatea bateriei în miliamperi-oră. De exemplu, o baterie de 18,5 Wh la 3,7V are o capacitate de (18,5 × 1000) / 3,7 = 5000 mAh. Acest calcul este esențial pentru înțelegerea capacității bateriei din evaluările energetice, compararea bateriilor cu diferite specificații de tensiune, dimensionarea power bank-urilor pe baza cerințelor energetice și calcularea timpului de funcționare a dispozitivului din consumul de energie.",
+          "paragraph3": "Această conversie este critică în multe aplicații: determinarea capacității bateriei din specificațiile energetice în watt-oră, compararea power bank-urilor și încărcătoarelor portabile când este specificată doar energia, calcularea capacității de încărcare pentru băncile de baterii solare, înțelegerea capacității bateriei pentru smartphone-uri și laptop-uri din evaluările energetice, dimensionarea sistemelor de alimentare de rezervă pe baza nevoilor energetice și estimarea timpului de funcționare a dispozitivului din energia bateriei. De exemplu, un power bank de 37 Wh la 3,7V oferă (37 × 1000) / 3,7 = 10 000 mAh, dar aceleași 37 Wh la 5V oferă doar 7 400 mAh — aceeași energie, capacitate diferită din cauza diferenței de tensiune.",
+          "paragraph4": "Calculatorul nostru acceptă watt-oră și tensiune ca intrări, aplică formula mAh = (Wh × 1000) / V și oferă capacitatea bateriei în miliamperi-oră. Fie că comparați power bank-uri, calculați capacitatea bateriei pentru sisteme solare, dimensionați alimentări de rezervă, estimați timpul de încărcare sau înțelegeți cerințele energetice ale dispozitivelor, calculatorul nostru Wh în mAh oferă rezultate precise, instantanee pentru nevoile dvs. de gestionare a bateriei și planificare a energiei.",
+          "exampleHeading": "Exemplu:",
+          "exampleText": "18,5 Wh la 3,7V: mAh = (18,5 × 1000) / 3,7 = 5000 mAh. 50 Wh la 5V: mAh = (50 × 1000) / 5 = 10 000 mAh. 3,75 Wh la 1,5V: mAh = (3,75 × 1000) / 1,5 = 2500 mAh. 72 Wh la 3,6V: mAh = (72 × 1000) / 3,6 = 20 000 mAh. Dacă o baterie de smartphone este evaluată la 15,4 Wh la 3,85V, capacitatea sa este (15,4 × 1000) / 3,85 = 4000 mAh."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Care este formula pentru a converti Wh în mAh?",
+              "answer": "Formula este mAh = (Wh × 1000) / V, unde Wh este energia în watt-oră, V este tensiunea în volți și mAh este capacitatea bateriei în miliamperi-oră. Aceasta convertește stocarea reală a energiei în capacitate de încărcare electrică. De exemplu, 18,5 Wh la 3,7V este egal cu (18,5 × 1000) / 3,7 = 5000 mAh."
+            },
+            {
+              "question": "Care este diferența dintre Wh și mAh?",
+              "answer": "Wh (watt-oră) măsoară energia reală — munca electrică totală pe care o poate efectua o baterie. mAh (miliamperi-oră) măsoară capacitatea de încărcare electrică — cât curent poate furniza o baterie în timp. Wh ține cont de tensiune, în timp ce mAh nu. O baterie de 37 Wh la 3,7V oferă 10 000 mAh, dar la 5V oferă doar 7 400 mAh — aceeași energie, capacitate diferită."
+            },
+            {
+              "question": "De ce am nevoie de tensiune pentru această conversie?",
+              "answer": "Capacitatea de încărcare (mAh) depinde atât de energie (Wh), cât și de tensiune (V). Aceeași energie la diferite tensiuni oferă capacitate de încărcare diferită. Putere = Tensiune × Curent, deci tensiune mai mare înseamnă mai puțină capacitate de încărcare pentru aceeași energie. Fără cunoașterea tensiunii, nu se poate determina capacitatea reală a bateriei."
+            },
+            {
+              "question": "Cum pot folosi acest calculator pentru a compara power bank-uri?",
+              "answer": "Power bank-urile listează adesea capacitatea în Wh (energie), dar ați putea avea nevoie de mAh pentru comparație. Convertiți în mAh folosind tensiunea de funcționare. Un power bank de 37 Wh la 3,7V (10 000 mAh) oferă mai multă capacitate de încărcare decât 37 Wh la 5V (7 400 mAh). Luați în considerare întotdeauna atât Wh, cât și tensiunea pentru o comparație precisă a capacității."
+            },
+            {
+              "question": "Este acest calculator gratuit?",
+              "answer": "Da, calculatorul nostru Wh în mAh este complet gratuit. Nu este necesară înregistrarea sau plata. Introduceți pur și simplu energia în Wh și tensiunea în volți pentru rezultate instantanee și precise ale capacității bateriei în mAh."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Asociate",
+          "mahToWh": "Calculator mAh în Wh",
+          "mahToWhDesc": "Convertește capacitatea bateriei în energie cu tensiune",
+          "kwhToWatts": "Calculator kWh în Wați",
+          "kwhToWattsDesc": "Convertește kilowatt-oră în wați folosind durata",
+          "kwToKwh": "Calculator kW în kWh",
+          "kwToKwhDesc": "Convertește puterea în energie folosind durata",
+          "wattsToKwh": "Calculator Wați în kWh",
+          "wattsToKwhDesc": "Convertește puterea în energie folosind durata"
         }
       }
     },

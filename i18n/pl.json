@@ -803,7 +803,8 @@
       "result": "Wynik",
       "watts": "Waty (W)",
       "seo": {
-        "title": "Kalkulator kWh na Waty - Przelicz Energię na Moc Online",
+<｜tool▁sep｜>new_string
+        "title": "Kalkulator kWh na Waty – Oblicz Moc z Energii i Czasu",
         "description": "Darmowy kalkulator przeliczania kWh na Waty. Przelicz kilowatogodziny na waty natychmiast, używając czasu trwania. Idealny do obliczeń elektrycznych, analizy zużycia energii i określania mocy.",
         "keywords": "kalkulator kwh na waty, przelicznik kilowatogodzin na waty, konwersja kwh waty, kalkulator energii na moc, kalkulator elektryczny, kalkulator watów, kalkulator mocy, darmowy kalkulator",
         "content": {
@@ -852,7 +853,7 @@
       "result": "Wynik",
       "wh": "Watogodziny (Wh)",
       "seo": {
-        "title": "Kalkulator mAh na Wh - Przelicz Pojemność Baterii na Energię Online",
+        "title": "Kalkulator mAh na Wh – Oblicz Energię Baterii Używając Napięcia",
         "description": "Darmowy kalkulator konwersji mAh na Wh. Przelicz miliamperogodziny na watogodziny natychmiast używając napięcia. Idealny do obliczeń pojemności baterii, porównań powerbanków i analiz magazynowania energii.",
         "keywords": "kalkulator mah na wh, konwerter miliamperogodzin na watogodziny, konwersja mah wh, kalkulator pojemności baterii, kalkulator powerbanku, kalkulator energii baterii, darmowy kalkulator",
         "content": {
@@ -899,6 +900,66 @@
           "kwToKvaDesc": "Przelicz kilowaty na kilowoltoampery natychmiast",
           "kwToKwh": "Kalkulator kW na kWh",
           "kwToKwhDesc": "Przelicz moc na energię używając czasu trwania"
+        }
+      }
+    },
+    "whToMah": {
+      "title": "Kalkulator Wh na mAh",
+      "description": "Przelicz watogodziny (Wh) na miliamperogodziny (mAh) natychmiast używając napięcia",
+      "wh": "Watogodziny (Wh)",
+      "voltage": "Napięcie (V)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "mah": "Miliamperogodziny (mAh)",
+      "seo": {
+        "title": "Kalkulator Wh na mAh - Przelicz Energię na Pojemność Baterii Online",
+        "description": "Darmowy kalkulator konwersji Wh na mAh. Przelicz watogodziny na miliamperogodziny natychmiast używając napięcia. Idealny do obliczeń pojemności baterii, doboru powerbanków i analiz magazynowania energii.",
+        "keywords": "kalkulator wh na mah, konwerter watogodzin na miliamperogodziny, konwersja wh mah, kalkulator pojemności baterii, kalkulator powerbanku, kalkulator energii baterii, darmowy kalkulator",
+        "content": {
+          "heading": "Jak Przeliczyć Wh na mAh",
+          "paragraph1": "Przeliczanie watogodzin (Wh) na miliamperogodziny (mAh) jest niezbędnym obliczeniem podczas określania pojemności baterii ze specyfikacji energetycznych. Watogodziny reprezentują rzeczywiste magazynowanie energii — całkowitą energię elektryczną, którą bateria może zapewnić — podczas gdy miliamperogodziny reprezentują pojemność ładunku elektrycznego — ile prądu bateria może dostarczyć w czasie. Konwersja wymaga znajomości napięcia baterii, ponieważ pojemność ładunku zależy zarówno od energii, jak i napięcia. Nasz darmowy kalkulator Wh na mAh zapewnia natychmiastowe, dokładne konwersje dla Twoich obliczeń baterii i zarządzania energią.",
+          "paragraph2": "Wzór to: mAh = (Wh × 1000) / V, gdzie Wh to energia w watogodzinach, V to napięcie w woltach, a mAh to pojemność baterii w miliamperogodzinach. Na przykład bateria 18,5 Wh przy 3,7V ma pojemność (18,5 × 1000) / 3,7 = 5000 mAh. To obliczenie jest niezbędne do zrozumienia pojemności baterii z ocen energetycznych, porównywania baterii o różnych specyfikacjach napięcia, doboru powerbanków na podstawie wymagań energetycznych i obliczania czasu pracy urządzenia ze zużycia energii.",
+          "paragraph3": "Ta konwersja jest kluczowa w wielu zastosowaniach: określanie pojemności baterii ze specyfikacji energetycznych w watogodzinach, porównywanie powerbanków i przenośnych ładowarek, gdy podana jest tylko energia, obliczanie pojemności ładunku dla banków baterii słonecznych, zrozumienie pojemności baterii smartfonów i laptopów z ocen energetycznych, dobór systemów zasilania awaryjnego na podstawie potrzeb energetycznych oraz szacowanie czasu pracy urządzenia z energii baterii. Na przykład powerbank 37 Wh przy 3,7V zapewnia (37 × 1000) / 3,7 = 10 000 mAh, ale te same 37 Wh przy 5V zapewnia tylko 7400 mAh — ta sama energia, inna pojemność z powodu różnicy napięcia.",
+          "paragraph4": "Nasz kalkulator akceptuje watogodziny i napięcie jako dane wejściowe, stosuje wzór mAh = (Wh × 1000) / V i podaje pojemność baterii w miliamperogodzinach. Czy porównujesz powerbanki, obliczasz pojemność baterii dla systemów słonecznych, dobierasz zasilanie awaryjne, szacujesz czas ładowania, czy rozumiesz wymagania energetyczne urządzeń — nasz kalkulator Wh na mAh dostarcza dokładne, natychmiastowe wyniki dla Twoich potrzeb zarządzania bateriami i planowania energii.",
+          "exampleHeading": "Przykład:",
+          "exampleText": "18,5 Wh przy 3,7V: mAh = (18,5 × 1000) / 3,7 = 5000 mAh. 50 Wh przy 5V: mAh = (50 × 1000) / 5 = 10 000 mAh. 3,75 Wh przy 1,5V: mAh = (3,75 × 1000) / 1,5 = 2500 mAh. 72 Wh przy 3,6V: mAh = (72 × 1000) / 3,6 = 20 000 mAh. Jeśli bateria smartfona ma ocenę 15,4 Wh przy 3,85V, jej pojemność wynosi (15,4 × 1000) / 3,85 = 4000 mAh."
+        },
+        "faq": {
+          "heading": "Często Zadawane Pytania",
+          "items": [
+            {
+              "question": "Jaki jest wzór na przeliczenie Wh na mAh?",
+              "answer": "Wzór to mAh = (Wh × 1000) / V, gdzie Wh to energia w watogodzinach, V to napięcie w woltach, a mAh to pojemność baterii w miliamperogodzinach. To przelicza rzeczywiste magazynowanie energii na pojemność ładunku elektrycznego. Na przykład 18,5 Wh przy 3,7V równa się (18,5 × 1000) / 3,7 = 5000 mAh."
+            },
+            {
+              "question": "Jaka jest różnica między Wh a mAh?",
+              "answer": "Wh (watogodziny) mierzy rzeczywistą energię — całkowitą pracę elektryczną, którą bateria może wykonać. mAh (miliamperogodziny) mierzy pojemność ładunku elektrycznego — ile prądu bateria może dostarczyć w czasie. Wh uwzględnia napięcie, podczas gdy mAh nie. Bateria 37 Wh przy 3,7V zapewnia 10 000 mAh, ale przy 5V zapewnia tylko 7400 mAh — ta sama energia, inna pojemność."
+            },
+            {
+              "question": "Dlaczego potrzebuję napięcia do tej konwersji?",
+              "answer": "Pojemność ładunku (mAh) zależy zarówno od energii (Wh), jak i napięcia (V). Ta sama energia przy różnych napięciach zapewnia inną pojemność ładunku. Moc = Napięcie × Prąd, więc wyższe napięcie oznacza mniejszą pojemność ładunku przy tej samej energii. Bez znajomości napięcia nie można określić rzeczywistej pojemności baterii."
+            },
+            {
+              "question": "Jak mogę użyć tego kalkulatora do porównania powerbanków?",
+              "answer": "Powerbanki często podają pojemność w Wh (energia), ale możesz potrzebować mAh do porównania. Przelicz na mAh używając napięcia roboczego. Powerbank 37 Wh przy 3,7V (10 000 mAh) zapewnia większą pojemność ładunku niż 37 Wh przy 5V (7400 mAh). Zawsze uwzględniaj zarówno Wh, jak i napięcie dla dokładnego porównania pojemności."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak, nasz kalkulator Wh na mAh jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Wprowadź energię w Wh i napięcie w woltach, aby uzyskać natychmiastowe, dokładne wyniki pojemności baterii w mAh."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "mahToWh": "Kalkulator mAh na Wh",
+          "mahToWhDesc": "Przelicz pojemność baterii na energię z napięciem",
+          "kwhToWatts": "Kalkulator kWh na Waty",
+          "kwhToWattsDesc": "Przelicz kilowatogodziny na waty używając czasu trwania",
+          "kwToKwh": "Kalkulator kW na kWh",
+          "kwToKwhDesc": "Przelicz moc na energię używając czasu trwania",
+          "wattsToKwh": "Kalkulator Watów na kWh",
+          "wattsToKwhDesc": "Przelicz moc na energię używając czasu trwania"
         }
       }
     },

@@ -785,7 +785,7 @@
       "result": "Resultado",
       "watts": "Vatios (W)",
       "seo": {
-        "title": "Calculadora kWh a Vatios - Convertir Energía a Potencia en Línea",
+        "title": "Calculadora kWh a Vatios – Calcular Potencia a partir de Energía y Tiempo",
         "description": "Calculadora gratuita de conversión de kWh a Vatios. Convierte kilovatios-hora a vatios instantáneamente usando la duración del tiempo. Perfecto para cálculos eléctricos, análisis de consumo de energía y evaluaciones de potencia.",
         "keywords": "calculadora kwh a vatios, convertidor kilovatios-hora a vatios, conversión kwh vatios, calculadora energía a potencia, calculadora eléctrica, calculadora vatios, calculadora potencia, calculadora gratuita",
         "content": {
@@ -834,7 +834,7 @@
       "result": "Resultado",
       "wh": "Vatios-hora (Wh)",
       "seo": {
-        "title": "Calculadora mAh a Wh - Convertir Capacidad de Batería a Energía en Línea",
+        "title": "Calculadora mAh a Wh – Calcular Energía de Batería Usando Voltaje",
         "description": "Calculadora de conversión mAh a Wh gratuita. Convertir miliamperios-hora a vatios-hora instantáneamente usando voltaje. Perfecto para cálculos de capacidad de batería, comparaciones de power banks y análisis de almacenamiento de energía.",
         "keywords": "calculadora mah wh, conversor miliamperios-hora vatios-hora, conversión mah wh, calculadora capacidad batería, calculadora power bank, calculadora energía batería, calculadora gratuita",
         "content": {
@@ -944,6 +944,66 @@
           "mahToWhDesc": "Convertir capacidad de batería a energía con voltaje",
           "kwhToWatts": "Calculadora kWh a Vatios",
           "kwhToWattsDesc": "Convertir kilovatios-hora a vatios usando duración de tiempo"
+        }
+      }
+    },
+    "whToMah": {
+      "title": "Calculadora Wh a mAh",
+      "description": "Convertir vatios-hora (Wh) a miliamperios-hora (mAh) instantáneamente usando voltaje",
+      "wh": "Vatios-hora (Wh)",
+      "voltage": "Voltaje (V)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "mah": "Miliamperios-hora (mAh)",
+      "seo": {
+        "title": "Calculadora Wh a mAh - Convertir Energía a Capacidad de Batería en Línea",
+        "description": "Calculadora de conversión Wh a mAh gratuita. Convertir vatios-hora a miliamperios-hora instantáneamente usando voltaje. Perfecto para cálculos de capacidad de batería, dimensionamiento de power banks y análisis de almacenamiento de energía.",
+        "keywords": "calculadora wh mah, conversor vatios-hora miliamperios-hora, conversión wh mah, calculadora capacidad batería, calculadora power bank, calculadora energía batería, calculadora gratuita",
+        "content": {
+          "heading": "Cómo Convertir Wh a mAh",
+          "paragraph1": "Convertir vatios-hora (Wh) a miliamperios-hora (mAh) es un cálculo esencial al determinar la capacidad de batería a partir de especificaciones energéticas. Los vatios-hora representan el almacenamiento de energía real — la energía eléctrica total que puede proporcionar una batería — mientras que los miliamperios-hora representan la capacidad de carga eléctrica — cuánta corriente puede suministrar una batería en el tiempo. La conversión requiere conocer el voltaje de la batería, ya que la capacidad de carga depende tanto de la energía como del voltaje. Nuestra calculadora Wh a mAh gratuita proporciona conversiones instantáneas y precisas para sus cálculos de batería y gestión de energía.",
+          "paragraph2": "La fórmula es: mAh = (Wh × 1000) / V, donde Wh es la energía en vatios-hora, V es el voltaje en voltios y mAh es la capacidad de batería en miliamperios-hora. Por ejemplo, una batería de 18,5 Wh a 3,7V tiene una capacidad de (18,5 × 1000) / 3,7 = 5000 mAh. Este cálculo es esencial para comprender la capacidad de batería a partir de calificaciones energéticas, comparar baterías con diferentes especificaciones de voltaje, dimensionar power banks basados en requisitos energéticos y calcular el tiempo de ejecución del dispositivo a partir del consumo de energía.",
+          "paragraph3": "Esta conversión es crítica en muchas aplicaciones: determinar la capacidad de batería a partir de especificaciones energéticas en vatios-hora, comparar power banks y cargadores portátiles cuando solo se especifica la energía, calcular la capacidad de carga para bancos de baterías solares, comprender la capacidad de batería de teléfonos inteligentes y portátiles a partir de calificaciones energéticas, dimensionar sistemas de alimentación de respaldo basados en necesidades energéticas y estimar el tiempo de ejecución del dispositivo a partir de la energía de la batería. Por ejemplo, un power bank de 37 Wh a 3,7V proporciona (37 × 1000) / 3,7 = 10 000 mAh, pero los mismos 37 Wh a 5V proporcionan solo 7 400 mAh — misma energía, capacidad diferente debido a la diferencia de voltaje.",
+          "paragraph4": "Nuestra calculadora acepta vatios-hora y voltaje como entradas, aplica la fórmula mAh = (Wh × 1000) / V y proporciona la capacidad de batería en miliamperios-hora. Ya sea que esté comparando power banks, calculando capacidad de batería para sistemas solares, dimensionando respaldos de batería, estimando tiempo de carga o comprendiendo requisitos energéticos de dispositivos, nuestra calculadora Wh a mAh ofrece resultados precisos e instantáneos para sus necesidades de gestión de baterías y planificación energética.",
+          "exampleHeading": "Ejemplo:",
+          "exampleText": "18,5 Wh a 3,7V: mAh = (18,5 × 1000) / 3,7 = 5000 mAh. 50 Wh a 5V: mAh = (50 × 1000) / 5 = 10 000 mAh. 3,75 Wh a 1,5V: mAh = (3,75 × 1000) / 1,5 = 2500 mAh. 72 Wh a 3,6V: mAh = (72 × 1000) / 3,6 = 20 000 mAh. Si una batería de teléfono inteligente está clasificada en 15,4 Wh a 3,85V, su capacidad es (15,4 × 1000) / 3,85 = 4000 mAh."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Cuál es la fórmula para convertir Wh a mAh?",
+              "answer": "La fórmula es mAh = (Wh × 1000) / V, donde Wh es la energía en vatios-hora, V es el voltaje en voltios y mAh es la capacidad de batería en miliamperios-hora. Esto convierte el almacenamiento de energía real en capacidad de carga eléctrica. Por ejemplo, 18,5 Wh a 3,7V equivale a (18,5 × 1000) / 3,7 = 5000 mAh."
+            },
+            {
+              "question": "¿Cuál es la diferencia entre Wh y mAh?",
+              "answer": "Wh (vatios-hora) mide la energía real — el trabajo eléctrico total que puede realizar una batería. mAh (miliamperios-hora) mide la capacidad de carga eléctrica — cuánta corriente puede suministrar una batería en el tiempo. Wh tiene en cuenta el voltaje, mientras que mAh no. Una batería de 37 Wh a 3,7V proporciona 10 000 mAh, pero a 5V proporciona solo 7 400 mAh — misma energía, capacidad diferente."
+            },
+            {
+              "question": "¿Por qué necesito el voltaje para esta conversión?",
+              "answer": "La capacidad de carga (mAh) depende tanto de la energía (Wh) como del voltaje (V). Los mismos Wh a diferentes voltajes proporcionan diferente capacidad de carga. Potencia = Voltaje × Corriente, por lo que mayor voltaje significa menos capacidad de carga para la misma energía. Sin conocer el voltaje, no se puede determinar la capacidad de batería real."
+            },
+            {
+              "question": "¿Cómo puedo usar esta calculadora para comparar power banks?",
+              "answer": "Los power banks a menudo listan la capacidad en Wh (energía) pero puede necesitar mAh para la comparación. Convierta a mAh usando el voltaje de funcionamiento. Un power bank de 37 Wh a 3,7V (10 000 mAh) proporciona más capacidad de carga que 37 Wh a 5V (7 400 mAh). Considere siempre tanto Wh como voltaje para una comparación precisa de capacidad."
+            },
+            {
+              "question": "¿Es gratuita esta calculadora?",
+              "answer": "Sí, nuestra calculadora Wh a mAh es completamente gratuita. No se requiere registro ni pago. Ingrese la energía en Wh y el voltaje en voltios para obtener resultados de capacidad de batería instantáneos y precisos en mAh."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "mahToWh": "Calculadora mAh a Wh",
+          "mahToWhDesc": "Convertir capacidad de batería a energía con voltaje",
+          "kwhToWatts": "Calculadora kWh a Vatios",
+          "kwhToWattsDesc": "Convertir kilovatios-hora a vatios usando duración de tiempo",
+          "kwToKwh": "Calculadora kW a kWh",
+          "kwToKwhDesc": "Convertir potencia a energía usando duración de tiempo",
+          "wattsToKwh": "Calculadora Vatios a kWh",
+          "wattsToKwhDesc": "Convertir potencia a energía usando duración de tiempo"
         }
       }
     },

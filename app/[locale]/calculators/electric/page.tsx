@@ -141,6 +141,12 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       path: '/calculators/electric/mah-to-wh',
     },
     {
+      id: 'wh-to-mah',
+      titleKey: 'whToMah.title',
+      descKey: 'whToMah.description',
+      path: '/calculators/electric/wh-to-mah',
+    },
+    {
       id: 'va-to-amps',
       titleKey: 'vaToAmps.title',
       descKey: 'vaToAmps.description',

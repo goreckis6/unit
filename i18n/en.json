@@ -848,7 +848,7 @@
       "result": "Result",
       "watts": "Watts (W)",
       "seo": {
-        "title": "kWh to Watts Calculator - Convert Energy to Power Online",
+        "title": "kWh to Watts Calculator – Calculate Power from Energy and Time",
         "description": "Free kWh to Watts conversion calculator. Convert kilowatt-hours to watts instantly using time duration. Perfect for electrical calculations, energy consumption analysis, and power ratings.",
         "keywords": "kwh to watts calculator, kilowatt-hours to watts converter, kwh watts conversion, energy to power calculator, electrical calculator, watts calculator, power calculator, free calculator",
         "content": {
@@ -897,7 +897,7 @@
       "result": "Result",
       "wh": "Watt-hours (Wh)",
       "seo": {
-        "title": "mAh to Wh Calculator - Convert Battery Capacity to Energy Online",
+        "title": "mAh to Wh Calculator – Calculate Battery Energy Using Voltage",
         "description": "Free mAh to Wh conversion calculator. Convert milliampere-hours to watt-hours instantly using voltage. Perfect for battery capacity calculations, power bank comparisons, and energy storage analysis.",
         "keywords": "mah to wh calculator, milliampere-hours to watt-hours converter, mah wh conversion, battery capacity calculator, power bank calculator, battery energy calculator, free calculator",
         "content": {
@@ -944,6 +944,66 @@
           "kwToKvaDesc": "Convert kilowatts to kilovolt-amperes instantly",
           "kwToKwh": "kW to kWh Calculator",
           "kwToKwhDesc": "Convert power to energy using time duration"
+        }
+      }
+    },
+    "whToMah": {
+      "title": "Wh to mAh Calculator",
+      "description": "Convert watt-hours (Wh) to milliampere-hours (mAh) instantly using voltage",
+      "wh": "Watt-hours (Wh)",
+      "voltage": "Voltage (V)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "mah": "Milliampere-hours (mAh)",
+      "seo": {
+        "title": "Wh to mAh Calculator - Convert Energy to Battery Capacity Online",
+        "description": "Free Wh to mAh conversion calculator. Convert watt-hours to milliampere-hours instantly using voltage. Perfect for battery capacity calculations, power bank sizing, and energy storage analysis.",
+        "keywords": "wh to mah calculator, watt-hours to milliampere-hours converter, wh mah conversion, battery capacity calculator, power bank calculator, battery energy calculator, free calculator",
+        "content": {
+          "heading": "How to Convert Wh to mAh",
+          "paragraph1": "Converting watt-hours (Wh) to milliampere-hours (mAh) is an essential calculation when determining battery capacity from energy specifications. Watt-hours represent actual energy storage — the total electrical energy a battery can provide — while milliampere-hours represent electric charge capacity — how much current a battery can deliver over time. The conversion requires knowing the battery voltage, as charge capacity depends on both energy and voltage. Our free Wh to mAh calculator provides instant, accurate conversions for your battery and power management calculations.",
+          "paragraph2": "The formula is: mAh = (Wh × 1000) / V, where Wh is the energy in watt-hours, V is the voltage in volts, and mAh is the battery capacity in milliampere-hours. For example, a 18.5 Wh battery at 3.7V has a capacity of (18.5 × 1000) / 3.7 = 5000 mAh. This calculation is essential for understanding battery capacity from energy ratings, comparing batteries with different voltage specifications, sizing power banks based on energy requirements, and calculating device runtime from energy consumption.",
+          "paragraph3": "This conversion is critical in many applications: determining battery capacity from energy specifications in watt-hours, comparing power banks and portable chargers when only energy is specified, calculating charge capacity for solar battery banks, understanding smartphone and laptop battery capacity from energy ratings, sizing backup power systems based on energy needs, and estimating device runtime from battery energy. For example, a 37 Wh power bank at 3.7V provides (37 × 1000) / 3.7 = 10,000 mAh, but the same 37 Wh at 5V provides only 7,400 mAh — same energy, different capacity due to voltage difference.",
+          "paragraph4": "Our calculator accepts watt-hours and voltage as inputs, applies the formula mAh = (Wh × 1000) / V, and provides the battery capacity in milliampere-hours. Whether you're comparing power banks, calculating battery capacity for solar systems, sizing battery backups, estimating charging time, or understanding device energy requirements, our Wh to mAh calculator delivers accurate, instant results for your battery management and energy planning needs.",
+          "exampleHeading": "Example:",
+          "exampleText": "18.5 Wh at 3.7V: mAh = (18.5 × 1000) / 3.7 = 5000 mAh. 50 Wh at 5V: mAh = (50 × 1000) / 5 = 10,000 mAh. 3.75 Wh at 1.5V: mAh = (3.75 × 1000) / 1.5 = 2500 mAh. 72 Wh at 3.6V: mAh = (72 × 1000) / 3.6 = 20,000 mAh. If a smartphone battery is rated 15.4 Wh at 3.85V, its capacity is (15.4 × 1000) / 3.85 = 4000 mAh."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula to convert Wh to mAh?",
+              "answer": "The formula is mAh = (Wh × 1000) / V, where Wh is energy in watt-hours, V is voltage in volts, and mAh is battery capacity in milliampere-hours. This converts actual energy storage to electric charge capacity. For example, 18.5 Wh at 3.7V equals (18.5 × 1000) / 3.7 = 5000 mAh."
+            },
+            {
+              "question": "What is the difference between Wh and mAh?",
+              "answer": "Wh (watt-hours) measures actual energy — the total electrical work a battery can perform. mAh (milliampere-hours) measures electric charge capacity — how much current a battery can deliver over time. Wh accounts for voltage, while mAh doesn't. A 37 Wh battery at 3.7V provides 10,000 mAh, but at 5V provides only 7,400 mAh — same energy, different capacity."
+            },
+            {
+              "question": "Why do I need voltage for this conversion?",
+              "answer": "Charge capacity (mAh) depends on both energy (Wh) and voltage (V). The same energy at different voltages provides different charge capacity. Power = Voltage × Current, so higher voltage means less charge capacity for the same energy. Without knowing voltage, you cannot determine actual battery capacity."
+            },
+            {
+              "question": "How can I use this calculator to compare power banks?",
+              "answer": "Power banks often list capacity in Wh (energy) but you may need mAh for comparison. Convert to mAh using the operating voltage. A 37 Wh power bank at 3.7V (10,000 mAh) provides more charge capacity than a 37 Wh at 5V (7,400 mAh). Always consider both Wh and voltage for accurate capacity comparison."
+            },
+            {
+              "question": "Is this calculator free?",
+              "answer": "Yes, our Wh to mAh calculator is completely free. No registration or payment required. Enter energy in Wh and voltage in volts for instant, accurate battery capacity results in mAh."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "mahToWh": "mAh to Wh Calculator",
+          "mahToWhDesc": "Convert battery capacity to energy with voltage",
+          "kwhToWatts": "kWh to Watts Calculator",
+          "kwhToWattsDesc": "Convert kilowatt-hours to watts using time duration",
+          "kwToKwh": "kW to kWh Calculator",
+          "kwToKwhDesc": "Convert power to energy using time duration",
+          "wattsToKwh": "Watts to kWh Calculator",
+          "wattsToKwhDesc": "Convert power to energy using time duration"
         }
       }
     },
@@ -2145,6 +2205,19 @@
         }
       }
     }
+  },
+  "notFound": {
+    "title": "404 - Page Not Found",
+    "heading": "Oops! Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "message": "We couldn't find what you were looking for. The page might have been removed, renamed, or the URL might be incorrect.",
+    "goHome": "Go to Homepage",
+    "goBack": "Go Back",
+    "suggestions": "You might want to:",
+    "suggestion1": "Check the URL for typos",
+    "suggestion2": "Return to the homepage",
+    "suggestion3": "Browse our calculators",
+    "suggestion4": "Search for what you need"
   },
   "blog": {
     "readMore": "Read More",

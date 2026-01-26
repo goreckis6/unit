@@ -785,7 +785,7 @@
       "result": "Resultat",
       "watts": "Watt (W)",
       "seo": {
-        "title": "kWh til Watt Beregner - Konverter Energi til Effekt Online",
+        "title": "kWh til Watt Beregner – Beregn Effekt fra Energi og Tid",
         "description": "Gratis kWh til Watt omregner. Konverter kilowattimer til watt øjeblikkeligt med tidslængde. Perfekt til elektriske beregninger, energiforbrugsanalyse og effektvurderinger.",
         "keywords": "kwh til watt beregner, kilowattimer til watt omregner, kwh watt konvertering, energi til effekt beregner, elektrisk beregner, watt beregner, effekt beregner, gratis beregner",
         "content": {
@@ -834,7 +834,7 @@
       "result": "Resultat",
       "wh": "Watt-timer (Wh)",
       "seo": {
-        "title": "mAh til Wh Beregner - Konverter Batterikapacitet til Energi Online",
+        "title": "mAh til Wh Beregner – Beregn Batterienergi ved Hjælp af Spænding",
         "description": "Gratis mAh til Wh omregner. Konverter milliampere-timer til watt-timer øjeblikkeligt ved hjælp af spænding. Perfekt til batterikapacitetsberegninger, powerbank-sammenligninger og energilagringsanalyse.",
         "keywords": "mah wh beregner, milliampere-timer watt-timer omregner, mah wh omregning, batterikapacitet beregner, powerbank beregner, batteri energi beregner, gratis beregner",
         "content": {
@@ -881,6 +881,66 @@
           "kwToKvaDesc": "Konverter kilowatt til kilovolt-ampere øjeblikkeligt",
           "kwToKwh": "kW til kWh Beregner",
           "kwToKwhDesc": "Konverter effekt til energi ved hjælp af varighed"
+        }
+      }
+    },
+    "whToMah": {
+      "title": "Wh til mAh Lommeregner",
+      "description": "Konverter watt-timer (Wh) til milliampere-timer (mAh) med det samme og præcist ved hjælp af spændingen",
+      "wh": "Watt-timer (Wh)",
+      "voltage": "Spænding (V)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "mah": "Milliampere-timer (mAh)",
+      "seo": {
+        "title": "Wh til mAh Lommeregner - Konverter Energi til Batterikapacitet Online",
+        "description": "Gratis Wh til mAh omregningslommeregner. Konverter watt-timer til milliampere-timer med det samme med spændingen. Perfekt til batterikapacitetsberegninger, powerbank-dimensionering og energilagringsanalyse.",
+        "keywords": "wh mah lommeregner, watt-timer milliampere-timer omregner, wh mah omregning, batterikapacitet lommeregner, powerbank lommeregner, batterienergi lommeregner, gratis lommeregner",
+        "content": {
+          "heading": "Sådan konverterer man Wh til mAh",
+          "paragraph1": "At konvertere watt-timer (Wh) til milliampere-timer (mAh) er en essentiel beregning ved bestemmelse af batterikapacitet fra energispecifikationer. Watt-timer repræsenterer faktisk energilagring — den samlede elektriske energi, som et batteri kan levere — mens milliampere-timer repræsenterer elektrisk ladningskapacitet — hvor meget strøm et batteri kan levere over tid. Omregningen kræver kendskab til batteriets spænding, da ladningskapacitet afhænger af både energi og spænding. Vores gratis Wh til mAh omregningslommeregner giver øjeblikkelige, præcise omregninger til dine batteri- og energistyringsberegninger.",
+          "paragraph2": "Omregningsformlen er: mAh = (Wh × 1000) / V, hvor Wh er energien i watt-timer, V er spændingen i volt og mAh er batterikapaciteten i milliampere-timer. For eksempel har et batteri på 18,5 Wh ved 3,7V en kapacitet på (18,5 × 1000) / 3,7 = 5000 mAh. Denne beregning er essentiel for at forstå batterikapacitet fra energivurderinger, sammenligne batterier med forskellige spændingsspecifikationer, dimensionere powerbanks baseret på energikrav og beregne enhedens køretid fra energiforbrug.",
+          "paragraph3": "Denne omregning er kritisk i mange applikationer: bestemmelse af batterikapacitet fra energispecifikationer i watt-timer, sammenligning af powerbanks og bærbare opladere, når kun energi er specificeret, beregning af ladningskapacitet til solbatteribanker, forståelse af batterikapacitet for smartphones og laptops fra energivurderinger, dimensionering af backup-strømforsyningssystemer baseret på energibehov og estimering af enhedens køretid fra batterienergi. For eksempel leverer en powerbank på 37 Wh ved 3,7V (37 × 1000) / 3,7 = 10.000 mAh, men de samme 37 Wh ved 5V leverer kun 7.400 mAh — samme energi, forskellig kapacitet på grund af spændingsforskel.",
+          "paragraph4": "Vores lommeregner tager watt-timer og spænding som input, anvender formlen mAh = (Wh × 1000) / V og giver batterikapaciteten i milliampere-timer. Uanset om du sammenligner powerbanks, beregner batterikapacitet til solsystemer, dimensionerer batteribackups, estimerer opladningstid eller forstår enhedens energikrav, giver vores Wh til mAh lommeregner præcise, øjeblikkelige resultater til dine batteristyrings- og energiplanlægningsbehov.",
+          "exampleHeading": "Eksempel:",
+          "exampleText": "18,5 Wh ved 3,7V: mAh = (18,5 × 1000) / 3,7 = 5000 mAh. 50 Wh ved 5V: mAh = (50 × 1000) / 5 = 10.000 mAh. 3,75 Wh ved 1,5V: mAh = (3,75 × 1000) / 1,5 = 2500 mAh. 72 Wh ved 3,6V: mAh = (72 × 1000) / 3,6 = 20.000 mAh. Hvis et smartphone-batteri er vurderet til 15,4 Wh ved 3,85V, er dets kapacitet (15,4 × 1000) / 3,85 = 4000 mAh."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er formlen for at konvertere Wh til mAh?",
+              "answer": "Formlen er mAh = (Wh × 1000) / V, hvor Wh er energien i watt-timer, V er spændingen i volt og mAh er batterikapaciteten i milliampere-timer. Dette konverterer faktisk energilagring til elektrisk ladningskapacitet. For eksempel svarer 18,5 Wh ved 3,7V til (18,5 × 1000) / 3,7 = 5000 mAh."
+            },
+            {
+              "question": "Hvad er forskellen mellem Wh og mAh?",
+              "answer": "Wh (watt-timer) måler faktisk energi — det samlede elektriske arbejde, som et batteri kan udføre. mAh (milliampere-timer) måler elektrisk ladningskapacitet — hvor meget strøm et batteri kan levere over tid. Wh tager højde for spænding, mens mAh ikke gør det. Et batteri på 37 Wh ved 3,7V leverer 10.000 mAh, men ved 5V leverer det kun 7.400 mAh — samme energi, forskellig kapacitet."
+            },
+            {
+              "question": "Hvorfor har jeg brug for spænding til denne konvertering?",
+              "answer": "Ladningskapacitet (mAh) afhænger af både energi (Wh) og spænding (V). Den samme energi ved forskellige spændinger giver forskellig ladningskapacitet. Effekt = Spænding × Strøm, så højere spænding betyder mindre ladningskapacitet for den samme energi. Uden kendskab til spændingen kan den faktiske batterikapacitet ikke bestemmes."
+            },
+            {
+              "question": "Hvordan kan jeg bruge denne lommeregner til at sammenligne powerbanks?",
+              "answer": "Powerbanks angiver ofte kapacitet i Wh (energi), men du har muligvis brug for mAh til sammenligning. Konverter til mAh ved hjælp af driftsspændingen. En powerbank på 37 Wh ved 3,7V (10.000 mAh) leverer mere ladningskapacitet end 37 Wh ved 5V (7.400 mAh). Overvej altid både Wh og spænding for nøjagtig kapacitetssammenligning."
+            },
+            {
+              "question": "Er denne lommeregner gratis at bruge?",
+              "answer": "Ja, vores Wh til mAh lommeregner er helt gratis. Ingen registrering eller betaling påkrævet. Indtast blot energien i Wh og spændingen i volt for øjeblikkelige, præcise batterikapacitetsresultater i mAh."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Lommeregnere",
+          "mahToWh": "mAh til Wh Lommeregner",
+          "mahToWhDesc": "Konverter batterikapacitet til energi med spænding",
+          "kwhToWatts": "kWh til Watt Lommeregner",
+          "kwhToWattsDesc": "Konverter kilowattimer til watt ved hjælp af varighed",
+          "kwToKwh": "kW til kWh Lommeregner",
+          "kwToKwhDesc": "Konverter effekt til energi ved hjælp af varighed",
+          "wattsToKwh": "Watt til kWh Lommeregner",
+          "wattsToKwhDesc": "Konverter effekt til energi ved hjælp af varighed"
         }
       }
     },

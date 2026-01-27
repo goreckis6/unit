@@ -9,7 +9,9 @@ const withMDX = createMDX({
   },
 });
 
-const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+const withNextIntl = createNextIntlPlugin({
+  requestConfig: './i18n/request.ts'
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -18,10 +20,8 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
-  experimental: {
-    outputFileTracingIncludes: {
-      '/': ['i18n/**/*'],
-    },
+  outputFileTracingIncludes: {
+    '/': ['i18n/**/*'],
   },
 };
 

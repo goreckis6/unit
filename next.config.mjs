@@ -9,9 +9,7 @@ const withMDX = createMDX({
   },
 });
 
-const withNextIntl = createNextIntlPlugin({
-  requestConfig: './i18n/request.ts'
-});
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

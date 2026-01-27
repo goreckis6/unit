@@ -5,10 +5,9 @@ import { Link, usePathname, useRouter } from '@/i18n/routing';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useTranslations, useLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
-import type { ReactElement } from 'react';
 
 // Import flags and language names from LanguageSwitcher
-const FLAGS: Record<string, ReactElement> = {
+const FLAGS: Record<string, JSX.Element> = {
   en: (
     <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="24" fill="#B22234"/>

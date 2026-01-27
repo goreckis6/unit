@@ -18,9 +18,6 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
-  outputFileTracingIncludes: {
-    '/': ['i18n/**/*'],
-  },
 };
 
 export default withNextIntl(withMDX(nextConfig));

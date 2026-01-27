@@ -35,6 +35,40 @@ if (fs.existsSync(publicDir)) {
   console.log('✅ Copied public folder to standalone output');
 }
 
+// Copy i18n folder to standalone output
+const i18nDir = path.join(process.cwd(), 'i18n');
+const standaloneI18nDir = path.join(process.cwd(), '.next', 'standalone', 'i18n');
+
+if (fs.existsSync(i18nDir)) {
+  if (!fs.existsSync(standaloneI18nDir)) {
+    fs.mkdirSync(standaloneI18nDir, { recursive: true });
+  }
+  
+  // Copy all files from i18n to standalone/i18n
+  const copyRecursiveSync = (src, dest) => {
+    const exists = fs.existsSync(src);
+    const stats = exists && fs.statSync(src);
+    const isDirectory = exists && stats.isDirectory();
+    
+    if (isDirectory) {
+      if (!fs.existsSync(dest)) {
+        fs.mkdirSync(dest, { recursive: true });
+      }
+      fs.readdirSync(src).forEach((childItemName) => {
+        copyRecursiveSync(
+          path.join(src, childItemName),
+          path.join(dest, childItemName)
+        );
+      });
+    } else {
+      fs.copyFileSync(src, dest);
+    }
+  };
+  
+  copyRecursiveSync(i18nDir, standaloneI18nDir);
+  console.log('✅ Copied i18n folder to standalone output');
+}
+
 // Create symlink for .next/static in standalone
 const staticDir = path.join(process.cwd(), '.next', 'static');
 const standaloneStaticLink = path.join(process.cwd(), '.next', 'standalone', '.next', 'static');

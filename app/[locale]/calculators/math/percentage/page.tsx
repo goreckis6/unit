@@ -41,9 +41,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'calculators.percentage.seo' });
   const baseUrl = 'https://unitconverterhub.com';
-  const path = locale === 'en' ? '/calculators/electric/percentage' : `/${locale}/calculators/electric/percentage`;
+  const path = locale === 'en' ? '/calculators/math/percentage' : `/${locale}/calculators/math/percentage`;
   const canonicalUrl = `${baseUrl}${path}`;
-  const hreflangUrls = generateHreflangUrls('/calculators/electric/percentage');
+  const hreflangUrls = generateHreflangUrls('/calculators/math/percentage');
   
   return {
     title: t('title'),
@@ -82,14 +82,14 @@ export default async function PercentagePage({ params }: { params: Promise<{ loc
 
       <div className="calculator-header">
         <div className="container">
-          <Link href="/calculators/electric" className="back-button">
+          <Link href="/calculators/math" className="back-button">
             <svg className="back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <span>{tCommon('calculators')}</span>
           </Link>
           <div className="header-content">
-            <div className="title-badge">Electric Calculator</div>
+            <div className="title-badge">Math Calculator</div>
             <h1 className="page-title">{t('title')}</h1>
             <p className="page-description">{t('description')}</p>
           </div>
@@ -143,6 +143,10 @@ export default async function PercentagePage({ params }: { params: Promise<{ loc
         <div className="related-content-card">
           <h2 className="related-heading">{tRelated('heading')}</h2>
           <div className="related-grid">
+            <Link href="/calculators/math/addition" className="related-card">
+              <h3 className="related-title">{t('addition.title')}</h3>
+              <p className="related-desc">{t('addition.description')}</p>
+            </Link>
             <Link href="/calculators/electric/watts-to-kva" className="related-card">
               <h3 className="related-title">{tRelated('wattsToKva')}</h3>
               <p className="related-desc">{tRelated('wattsToKvaDesc')}</p>
@@ -154,10 +158,6 @@ export default async function PercentagePage({ params }: { params: Promise<{ loc
             <Link href="/calculators/electric/volts-to-watts" className="related-card">
               <h3 className="related-title">{tRelated('voltsToWatts')}</h3>
               <p className="related-desc">{tRelated('voltsToWattsDesc')}</p>
-            </Link>
-            <Link href="/calculators/electric/amps-to-watts" className="related-card">
-              <h3 className="related-title">{tRelated('ampsToWatts')}</h3>
-              <p className="related-desc">{tRelated('ampsToWattsDesc')}</p>
             </Link>
           </div>
         </div>

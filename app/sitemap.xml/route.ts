@@ -48,7 +48,7 @@ export async function GET() {
     '/calculators/electric/kva-to-watts',
     '/calculators/electric/kva-to-kw',
     '/calculators/electric/kva-to-va',
-    '/calculators/electric/percentage',
+    '/calculators/math/percentage',
     '/blog',
   ];
 

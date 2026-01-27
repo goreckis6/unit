@@ -1,11 +1,12 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import type { ReactElement } from 'react';
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/routing';
 import { routing } from '@/i18n/routing';
 
-const FLAGS: Record<string, JSX.Element> = {
+const FLAGS: Record<string, ReactElement> = {
   en: (
     <svg viewBox="0 0 36 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="24" fill="#B22234"/>

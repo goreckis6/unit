@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 export function PercentageCalculator() {
   const t = useTranslations('calculators.percentage');
@@ -11,19 +10,16 @@ export function PercentageCalculator() {
   const [section1Percent, setSection1Percent] = useState<string>('');
   const [section1Number, setSection1Number] = useState<string>('');
   const [section1Result, setSection1Result] = useState<number | null>(null);
-  const section1ResultRef = useScrollToResult(section1Result);
 
   // Section 2: X is what percentage of Y?
   const [section2Number1, setSection2Number1] = useState<string>('');
   const [section2Number2, setSection2Number2] = useState<string>('');
   const [section2Result, setSection2Result] = useState<number | null>(null);
-  const section2ResultRef = useScrollToResult(section2Result);
 
   // Section 3: Percentage increase/decrease from X to Y?
   const [section3From, setSection3From] = useState<string>('');
   const [section3To, setSection3To] = useState<string>('');
   const [section3Result, setSection3Result] = useState<number | null>(null);
-  const section3ResultRef = useScrollToResult(section3Result);
 
   const handleCalculate1 = () => {
     const percent = parseFloat(section1Percent);
@@ -85,7 +81,7 @@ export function PercentageCalculator() {
         </div>
         
         <div className="input-section">
-          <div className="inputs-grid">
+          <div className="inputs-grid inputs-grid-3">
             <div className="input-card">
               <label htmlFor="section1-percent" className="input-label">
                 {t('type1.value1')}
@@ -120,6 +116,19 @@ export function PercentageCalculator() {
                 />
               </div>
             </div>
+
+            <div className="input-card">
+              <label className="input-label">{t('result')}</label>
+              <div className="input-with-unit">
+                <div className="result-input-display">
+                  {section1Result !== null ? (
+                    <span className="result-value-inline">{section1Result.toFixed(4)}</span>
+                  ) : (
+                    <span className="result-placeholder">—</span>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -131,22 +140,6 @@ export function PercentageCalculator() {
             {t('reset')}
           </button>
         </div>
-
-        {section1Result !== null && (
-          <div ref={section1ResultRef} className="result-section">
-            <div className="result-header">
-              <div className="result-badge">{t('result')}</div>
-            </div>
-            <div className="result-display">
-              <div className="result-item">
-                <div className="result-label">{t('type1.result')}</div>
-                <div className="result-value-box">
-                  <span className="result-value">{section1Result.toFixed(4)}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Section 2: X is what percentage of Y? */}
@@ -156,7 +149,7 @@ export function PercentageCalculator() {
         </div>
         
         <div className="input-section">
-          <div className="inputs-grid">
+          <div className="inputs-grid inputs-grid-3">
             <div className="input-card">
               <label htmlFor="section2-number1" className="input-label">
                 {t('type2.value1')}
@@ -190,6 +183,22 @@ export function PercentageCalculator() {
                 />
               </div>
             </div>
+
+            <div className="input-card">
+              <label className="input-label">{t('type2.result')}</label>
+              <div className="input-with-unit">
+                <div className="result-input-display">
+                  {section2Result !== null ? (
+                    <>
+                      <span className="result-value-inline">{section2Result.toFixed(2)}</span>
+                      <span className="result-unit">%</span>
+                    </>
+                  ) : (
+                    <span className="result-placeholder">—</span>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -201,23 +210,6 @@ export function PercentageCalculator() {
             {t('reset')}
           </button>
         </div>
-
-        {section2Result !== null && (
-          <div ref={section2ResultRef} className="result-section">
-            <div className="result-header">
-              <div className="result-badge">{t('result')}</div>
-            </div>
-            <div className="result-display">
-              <div className="result-item">
-                <div className="result-label">{t('type2.result')}</div>
-                <div className="result-value-box">
-                  <span className="result-value">{section2Result.toFixed(2)}</span>
-                  <span className="result-unit">%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Section 3: Percentage increase/decrease from X to Y? */}
@@ -227,7 +219,7 @@ export function PercentageCalculator() {
         </div>
         
         <div className="input-section">
-          <div className="inputs-grid">
+          <div className="inputs-grid inputs-grid-3">
             <div className="input-card">
               <label htmlFor="section3-from" className="input-label">
                 {t('type3.value1')}
@@ -261,6 +253,28 @@ export function PercentageCalculator() {
                 />
               </div>
             </div>
+
+            <div className="input-card">
+              <label className="input-label">
+                {section3Result !== null && section3Result >= 0 
+                  ? t('type3.resultIncrease') 
+                  : section3Result !== null 
+                    ? t('type3.resultDecrease')
+                    : t('type3.resultIncrease')}
+              </label>
+              <div className="input-with-unit">
+                <div className="result-input-display">
+                  {section3Result !== null ? (
+                    <>
+                      <span className="result-value-inline">{section3Result.toFixed(2)}</span>
+                      <span className="result-unit">%</span>
+                    </>
+                  ) : (
+                    <span className="result-placeholder">—</span>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -272,25 +286,6 @@ export function PercentageCalculator() {
             {t('reset')}
           </button>
         </div>
-
-        {section3Result !== null && (
-          <div ref={section3ResultRef} className="result-section">
-            <div className="result-header">
-              <div className="result-badge">{t('result')}</div>
-            </div>
-            <div className="result-display">
-              <div className="result-item">
-                <div className="result-label">
-                  {section3Result >= 0 ? t('type3.resultIncrease') : t('type3.resultDecrease')}
-                </div>
-                <div className="result-value-box">
-                  <span className="result-value">{section3Result.toFixed(2)}</span>
-                  <span className="result-unit">%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </>
   );

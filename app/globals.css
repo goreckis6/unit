@@ -1321,6 +1321,39 @@ a {
   width: 100%;
 }
 
+.inputs-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.result-input-display {
+  flex: 1;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.875rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 60px;
+}
+
+.result-value-inline {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.result-placeholder {
+  color: var(--text-tertiary);
+  opacity: 0.4;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 .input-card {
   display: flex;
   flex-direction: column;
@@ -1533,6 +1566,14 @@ a {
   .inputs-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .inputs-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inputs-grid-3 .input-card:last-child {
+    grid-column: 1 / -1;
   }
 
   .input-with-unit {
@@ -1804,6 +1845,24 @@ a {
     margin-bottom: 2rem;
   }
 
+  .inputs-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .result-input-display {
+    padding: 1rem;
+    font-size: 1.25rem;
+    min-height: 56px;
+  }
+
+  .result-value-inline {
+    font-size: 1.25rem;
+  }
+
+  .result-placeholder {
+    font-size: 1.25rem;
+  }
+
   .input-label {
     font-size: 1rem;
     margin-bottom: 0.75rem;
@@ -1929,6 +1988,28 @@ a {
     margin-bottom: 1.5rem;
   }
 
+  .inputs-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .inputs-grid-3 .input-card:last-child {
+    grid-column: 1;
+  }
+
+  .result-input-display {
+    padding: 0.875rem;
+    font-size: 1.125rem;
+    min-height: 52px;
+  }
+
+  .result-value-inline {
+    font-size: 1.125rem;
+  }
+
+  .result-placeholder {
+    font-size: 1.125rem;
+  }
+
   .input-label {
     font-size: 0.9375rem;
     margin-bottom: 0.625rem;
@@ -1983,6 +2064,24 @@ a {
   .inputs-grid {
     gap: 2.5rem;
     margin-bottom: 3.5rem;
+  }
+
+  .inputs-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .result-input-display {
+    padding: 1.375rem;
+    font-size: 1.625rem;
+    min-height: 68px;
+  }
+
+  .result-value-inline {
+    font-size: 1.625rem;
+  }
+
+  .result-placeholder {
+    font-size: 1.625rem;
   }
 
   .input-label {

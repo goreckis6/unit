@@ -296,6 +296,12 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
       descKey: 'kvaToVa.description',
       path: '/calculators/electric/kva-to-va',
     },
+    {
+      id: 'percentage',
+      titleKey: 'percentage.title',
+      descKey: 'percentage.description',
+      path: '/calculators/electric/percentage',
+    },
   ];
 
   return (

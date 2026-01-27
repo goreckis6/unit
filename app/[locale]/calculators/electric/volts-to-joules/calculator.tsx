@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 export function voltsToJoules(volts: number, coulombs: number): number {
   if (volts < 0 || coulombs <= 0) return 0;
@@ -13,6 +14,7 @@ export function VoltsToJoulesCalculator() {
   const [volts, setVolts] = useState<string>('');
   const [coulombs, setCoulombs] = useState<string>('');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const v = parseFloat(volts);
@@ -77,7 +79,7 @@ export function VoltsToJoulesCalculator() {
         </button>
       </div>
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">{t('result')}</div>
           </div>

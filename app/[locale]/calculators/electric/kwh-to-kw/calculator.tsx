@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 /** Power (kW) = Energy (kWh) / Time (hours) */
 export function kwhToKw(kwh: number, hours: number): number {
@@ -14,6 +15,7 @@ export function KwhToKwCalculator() {
   const [kwh, setKwh] = useState<string>('');
   const [hours, setHours] = useState<string>('');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const k = parseFloat(kwh);
@@ -83,7 +85,7 @@ export function KwhToKwCalculator() {
       </div>
 
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">
               {t('result')}

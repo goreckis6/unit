@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 export type PhaseType = 'single' | 'three';
 
@@ -17,6 +18,7 @@ export function AmpToVaCalculator() {
   const [amps, setAmps] = useState<string>('');
   const [volts, setVolts] = useState<string>('');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const a = parseFloat(amps);
@@ -104,7 +106,7 @@ export function AmpToVaCalculator() {
       </div>
 
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">
               {t('result')}

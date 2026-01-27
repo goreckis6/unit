@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 export function electronVoltsToVolts(electronVolts: number): number {
   return electronVolts;
@@ -11,6 +12,7 @@ export function ElectronVoltsToVoltsCalculator() {
   const t = useTranslations('calculators.electronVoltsToVolts');
   const [electronVolts, setElectronVolts] = useState<string>('');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const ev = parseFloat(electronVolts);
@@ -60,7 +62,7 @@ export function ElectronVoltsToVoltsCalculator() {
       </div>
 
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">
               {t('result')}

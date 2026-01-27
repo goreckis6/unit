@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 /** Wh = (mAh × V) / 1000; convert battery capacity to energy */
 export function mahToWh(mah: number, voltage: number): number {
@@ -14,6 +15,7 @@ export function MahToWhCalculator() {
   const [mah, setMah] = useState<string>('');
   const [voltage, setVoltage] = useState<string>('');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const m = parseFloat(mah);
@@ -84,7 +86,7 @@ export function MahToWhCalculator() {
       </div>
 
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">
               {t('result')}

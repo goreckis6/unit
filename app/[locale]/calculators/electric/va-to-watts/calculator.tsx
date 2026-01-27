@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 /** Real power: W = VA × PF */
 export function vaToWatts(va: number, powerFactor: number): number {
@@ -14,6 +15,7 @@ export function VaToWattsCalculator() {
   const [va, setVa] = useState<string>('');
   const [powerFactor, setPowerFactor] = useState<string>('0.8');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const vaVal = parseFloat(va);
@@ -85,7 +87,7 @@ export function VaToWattsCalculator() {
       </div>
 
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">{t('result')}</div>
           </div>

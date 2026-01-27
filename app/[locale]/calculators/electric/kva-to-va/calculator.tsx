@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 export function kvaToVa(kva: number): number {
   if (kva <= 0) return 0;
@@ -12,6 +13,7 @@ export function KvaToVaCalculator() {
   const t = useTranslations('calculators.kvaToVa');
   const [kva, setKva] = useState<string>('');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const k = parseFloat(kva);
@@ -61,7 +63,7 @@ export function KvaToVaCalculator() {
       </div>
 
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">
               {t('result')}

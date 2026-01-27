@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 export function wattsToJoules(watts: number, seconds: number): number {
   if (watts < 0 || seconds < 0) return 0;
@@ -13,6 +14,7 @@ export function WattsToJoulesCalculator() {
   const [watts, setWatts] = useState<string>('');
   const [seconds, setSeconds] = useState<string>('');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const w = parseFloat(watts);
@@ -81,7 +83,7 @@ export function WattsToJoulesCalculator() {
       </div>
 
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">
               {t('result')}

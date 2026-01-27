@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 export function add(a: number, b: number): number {
   return a + b;
@@ -12,6 +13,7 @@ export function AdditionCalculator() {
   const [first, setFirst] = useState<string>('');
   const [second, setSecond] = useState<string>('');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const a = parseFloat(first);
@@ -80,7 +82,7 @@ export function AdditionCalculator() {
       </div>
 
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">
               {t('result')}

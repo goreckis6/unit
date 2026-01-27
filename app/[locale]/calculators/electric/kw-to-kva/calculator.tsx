@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 /** kVA = kW / PF; apparent power from real power and power factor */
 export function kwToKva(kw: number, powerFactor: number): number {
@@ -14,6 +15,7 @@ export function KwToKvaCalculator() {
   const [kw, setKw] = useState<string>('');
   const [powerFactor, setPowerFactor] = useState<string>('0.8');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const k = parseFloat(kw);
@@ -84,7 +86,7 @@ export function KwToKvaCalculator() {
       </div>
 
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">
               {t('result')}

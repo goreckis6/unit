@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 export type KwToAmpsType = 'dc' | 'single' | 'three';
 
@@ -27,6 +28,7 @@ export function KwToAmpsCalculator() {
   const [voltage, setVoltage] = useState<string>('230');
   const [powerFactor, setPowerFactor] = useState<string>('0.8');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const k = parseFloat(kw);
@@ -172,7 +174,7 @@ export function KwToAmpsCalculator() {
       </div>
 
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">
               {t('result')}

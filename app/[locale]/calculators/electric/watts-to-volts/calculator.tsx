@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 export type PhaseType = 'dc' | 'single' | 'three';
 
@@ -25,6 +26,7 @@ export function WattsToVoltsCalculator() {
   const [amps, setAmps] = useState<string>('');
   const [powerFactor, setPowerFactor] = useState<string>('0.8');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const w = parseFloat(watts);
@@ -147,7 +149,7 @@ export function WattsToVoltsCalculator() {
         </button>
       </div>
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">{t('result')}</div>
           </div>

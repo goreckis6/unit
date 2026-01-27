@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 /** Single Phase: I = VA / V; Three Phase: I = VA / (√3 × V) */
 export function vaToAmps(va: number, voltage: number, phase: 'single' | 'three'): number {
@@ -18,6 +19,7 @@ export function VaToAmpsCalculator() {
   const [voltage, setVoltage] = useState<string>('');
   const [phase, setPhase] = useState<'single' | 'three'>('single');
   const [result, setResult] = useState<number | null>(null);
+  const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
     const vaVal = parseFloat(va);
@@ -109,7 +111,7 @@ export function VaToAmpsCalculator() {
       </div>
 
       {result !== null && (
-        <div className="result-section">
+        <div ref={resultRef} className="result-section">
           <div className="result-header">
             <div className="result-badge">
               {t('result')}

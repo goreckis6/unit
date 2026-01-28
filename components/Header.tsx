@@ -234,6 +234,7 @@ const LANGUAGE_NAMES: Record<string, string> = {
 
 export function Header() {
   const t = useTranslations('common');
+  const tHome = useTranslations('common.homePage');
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -300,10 +301,13 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="nav desktop-nav">
             <Link href="/calculators/math" className="nav-link">
-              Math
+              {tHome('mathCalculators.title')}
             </Link>
             <Link href="/calculators/electric" className="nav-link">
-              Electric
+              {tHome('electricCalculators.title')}
+            </Link>
+            <Link href="/calculators/others" className="nav-link">
+              {tHome('otherCalculators.title')}
             </Link>
             <LanguageSwitcher />
           </nav>
@@ -348,14 +352,21 @@ export function Header() {
               className={`mobile-nav-link ${pathname.includes('/calculators/math') ? 'active' : ''}`}
               onClick={closeMenu}
             >
-              Math
+              {tHome('mathCalculators.title')}
             </Link>
             <Link 
               href="/calculators/electric" 
               className={`mobile-nav-link ${pathname.includes('/calculators/electric') ? 'active' : ''}`}
               onClick={closeMenu}
             >
-              Electric
+              {tHome('electricCalculators.title')}
+            </Link>
+            <Link 
+              href="/calculators/others" 
+              className={`mobile-nav-link ${pathname.includes('/calculators/others') ? 'active' : ''}`}
+              onClick={closeMenu}
+            >
+              {tHome('otherCalculators.title')}
             </Link>
             <div className="mobile-language-section">
               <div className="mobile-language-title">Language</div>

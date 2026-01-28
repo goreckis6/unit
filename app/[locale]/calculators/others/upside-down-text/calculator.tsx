@@ -66,14 +66,7 @@ export function UpsideDownTextGenerator() {
 
   return (
     <>
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: '1fr 1fr', 
-        gap: '2rem',
-        alignItems: 'start'
-      }}
-      className="split-view-container"
-      >
+      <div className="split-view-container">
         {/* Left Column - Input */}
         <div className="input-section" style={{ marginBottom: 0 }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -108,7 +101,18 @@ export function UpsideDownTextGenerator() {
                 value={order}
                 onChange={(e) => setOrder(e.target.value as TextOrder)}
                 className="number-input"
-                style={{ padding: '0.75rem', fontSize: '0.875rem' }}
+                style={{ 
+                  padding: '0.75rem', 
+                  fontSize: '0.875rem',
+                  minHeight: '44px',
+                  WebkitAppearance: 'none',
+                  MozAppearance: 'none',
+                  appearance: 'none',
+                  backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'12\' viewBox=\'0 0 12 12\'%3E%3Cpath fill=\'%236366f1\' d=\'M6 9L1 4h10z\'/%3E%3C/svg%3E")',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'right 0.75rem center',
+                  paddingRight: '2.5rem'
+                }}
               >
                 <option value="normal">{t('orderNormal')}</option>
                 <option value="reversed">{t('orderReversed')}</option>
@@ -116,7 +120,7 @@ export function UpsideDownTextGenerator() {
             </div>
 
             <div className="action-buttons" style={{ marginTop: '0.5rem' }}>
-              <button onClick={handleReset} className="btn btn-secondary">
+              <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>
                 {t('reset')}
               </button>
             </div>
@@ -144,10 +148,12 @@ export function UpsideDownTextGenerator() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                gap: '0.75rem',
+                flexWrap: 'wrap'
               }} onClick={handleCopy}>
-                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{result}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(); }} className="btn btn-secondary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.75rem' }}>
+                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{result}</span>
+                <button onClick={(e) => { e.stopPropagation(); handleCopy(); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
                   {t('copy')}
                 </button>
               </div>

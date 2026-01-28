@@ -124,14 +124,7 @@ export function ItalicTextGenerator() {
 
   return (
     <>
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: '1fr 1fr', 
-        gap: '2rem',
-        alignItems: 'start'
-      }}
-      className="split-view-container"
-      >
+      <div className="split-view-container">
         {/* Left Column - Input */}
         <div className="input-section" style={{ marginBottom: 0 }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -158,7 +151,7 @@ export function ItalicTextGenerator() {
             </div>
 
             <div className="action-buttons" style={{ marginTop: '0.5rem' }}>
-              <button onClick={handleReset} className="btn btn-secondary">
+              <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>
                 {t('reset')}
               </button>
             </div>
@@ -185,10 +178,12 @@ export function ItalicTextGenerator() {
                 wordWrap: 'break-word',
                 wordBreak: 'break-word',
                 overflowWrap: 'break-word',
-                whiteSpace: 'pre-wrap'
+                whiteSpace: 'pre-wrap',
+                gap: '0.75rem',
+                flexWrap: 'wrap'
               }} onClick={() => handleCopy(results['serif-1'])}>
-                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{results['serif-1'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['serif-1']); }} className="btn btn-secondary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.75rem' }}>
+                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['serif-1'] || t('textPlaceholder')}</span>
+                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['serif-1']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
                   {t('copy')}
                 </button>
               </div>
@@ -210,10 +205,12 @@ export function ItalicTextGenerator() {
                 wordWrap: 'break-word',
                 wordBreak: 'break-word',
                 overflowWrap: 'break-word',
-                whiteSpace: 'pre-wrap'
+                whiteSpace: 'pre-wrap',
+                gap: '0.75rem',
+                flexWrap: 'wrap'
               }} onClick={() => handleCopy(results['serif-2'])}>
-                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{results['serif-2'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['serif-2']); }} className="btn btn-secondary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.75rem' }}>
+                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['serif-2'] || t('textPlaceholder')}</span>
+                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['serif-2']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
                   {t('copy')}
                 </button>
               </div>
@@ -236,10 +233,12 @@ export function ItalicTextGenerator() {
                 wordWrap: 'break-word',
                 wordBreak: 'break-word',
                 overflowWrap: 'break-word',
-                whiteSpace: 'pre-wrap'
+                whiteSpace: 'pre-wrap',
+                gap: '0.75rem',
+                flexWrap: 'wrap'
               }} onClick={() => handleCopy(results['script-1'])}>
-                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{results['script-1'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['script-1']); }} className="btn btn-secondary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.75rem' }}>
+                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['script-1'] || t('textPlaceholder')}</span>
+                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['script-1']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
                   {t('copy')}
                 </button>
               </div>
@@ -261,10 +260,12 @@ export function ItalicTextGenerator() {
                 wordWrap: 'break-word',
                 wordBreak: 'break-word',
                 overflowWrap: 'break-word',
-                whiteSpace: 'pre-wrap'
+                whiteSpace: 'pre-wrap',
+                gap: '0.75rem',
+                flexWrap: 'wrap'
               }} onClick={() => handleCopy(results['script-2'])}>
-                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{results['script-2'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['script-2']); }} className="btn btn-secondary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.75rem' }}>
+                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['script-2'] || t('textPlaceholder')}</span>
+                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['script-2']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
                   {t('copy')}
                 </button>
               </div>
@@ -287,10 +288,12 @@ export function ItalicTextGenerator() {
                 wordWrap: 'break-word',
                 wordBreak: 'break-word',
                 overflowWrap: 'break-word',
-                whiteSpace: 'pre-wrap'
+                whiteSpace: 'pre-wrap',
+                gap: '0.75rem',
+                flexWrap: 'wrap'
               }} onClick={() => handleCopy(results['sans-serif-1'])}>
-                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{results['sans-serif-1'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['sans-serif-1']); }} className="btn btn-secondary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.75rem' }}>
+                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['sans-serif-1'] || t('textPlaceholder')}</span>
+                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['sans-serif-1']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
                   {t('copy')}
                 </button>
               </div>
@@ -312,10 +315,12 @@ export function ItalicTextGenerator() {
                 wordWrap: 'break-word',
                 wordBreak: 'break-word',
                 overflowWrap: 'break-word',
-                whiteSpace: 'pre-wrap'
+                whiteSpace: 'pre-wrap',
+                gap: '0.75rem',
+                flexWrap: 'wrap'
               }} onClick={() => handleCopy(results['sans-serif-2'])}>
-                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{results['sans-serif-2'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['sans-serif-2']); }} className="btn btn-secondary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.75rem' }}>
+                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['sans-serif-2'] || t('textPlaceholder')}</span>
+                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['sans-serif-2']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
                   {t('copy')}
                 </button>
               </div>

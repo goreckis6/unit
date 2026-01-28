@@ -3,39 +3,25 @@ import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SoftwareApplicationSchema } from '@/components/SoftwareApplicationSchema';
-import { routing } from '@/i18n/routing';
-
-function generateHreflangUrls(path: string) {
-  const baseUrl = 'https://unitconverterhub.com';
-  const languages: Record<string, string> = {};
-  
-  routing.locales.forEach((loc) => {
-    const url = loc === 'en' 
-      ? `${baseUrl}${path}` 
-      : `${baseUrl}/${loc}${path}`;
-    languages[loc] = url;
-  });
-  
-  return languages;
-}
+import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'common' });
-  const baseUrl = 'https://unitconverterhub.com';
-  const canonicalUrl = locale === 'en' ? baseUrl : `${baseUrl}/${locale}`;
-  const hreflangUrls = generateHreflangUrls('');
-  
+  const tHome = await getTranslations({ locale, namespace: 'common.homePage' });
+  const path = '';
+  const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
+
   return {
-    title: `${t('siteName')} - UnitConverterHub.com`,
-    description: t('description'),
+    title: tHome('seoTitle'),
+    description: tHome('seoDescription'),
     alternates: {
       canonical: canonicalUrl,
-      languages: hreflangUrls,
+      languages: generateHreflangUrls(path),
     },
     openGraph: {
-      title: `${t('siteName')} - UnitConverterHub.com`,
-      description: t('description'),
+      title: tHome('seoTitle'),
+      description: tHome('seoDescription'),
       type: 'website',
       url: canonicalUrl,
     },
@@ -46,14 +32,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'common' });
   const tHome = await getTranslations({ locale, namespace: 'common.homePage' });
-  const siteUrl = 'https://unitconverterhub.com';
+  const siteUrl = BASE_URL;
 
   return (
     <div className="home">
       <SoftwareApplicationSchema
         locale={locale}
         siteName={t('siteName')}
-        description={t('description')}
+        description={t('homePage.seoDescription')}
         url={siteUrl}
       />
       <Header />

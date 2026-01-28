@@ -1,6 +1,6 @@
 {
   "common": {
-    "siteName": "UnitConvertHub",
+    "siteName": "UnitConverterHub",
     "description": "Ücretsiz online birim dönüştürücüler ve hesap makineleri",
     "home": "Ana Sayfa",
     "calculators": "Hesap Makineleri",
@@ -15,6 +15,8 @@
     "learnMore": "Daha Fazla Bilgi",
     "readBlog": "Blogu Oku",
     "homePage": {
+      "seoTitle": "UnitConverterHub - Free Online Unit Converters & Calculators",
+      "seoDescription": "Quickly convert units and solve complex math or electrical problems with our free online calculators. Fast, mobile-friendly, and no registration required.",
       "heroDescription": "Tüm ihtiyaçlarınız için hızlı, doğru ve kullanımı kolay hesap makineleri",
       "calculatorsSubtitle": "Güçlü hesap makineleri koleksiyonumuzdan seçin",
       "mathCalculators": {
@@ -470,8 +472,8 @@
       "noResults": "Sonuç bulunamadı",
       "tryDifferentSearch": "Farklı bir arama terimi deneyin",
       "seoMeta": {
-        "title": "Ücretsiz Matematik Hesap Makineleri (Hızlı ve Doğru)",
-        "description": "Hızlı, doğru sonuçlar için ücretsiz online matematik hesap makineleri—bugün toplama ve yakında daha fazlası. Mobil ve masaüstünde çalışır. Kayıt gerekmez.",
+        "title": "Matematik hesaplayıcıları: hızlı ve doğru",
+        "description": "Matematik problemlerini anında çözün. Temel aritmetikten cebire – ücretsiz araçlarımız her cihazda hızlı sonuç verir. Mühendislerin ve öğrencilerin neden bize güvendiğini görün.",
         "keywords": "matematik hesap makineleri, matematik hesap makinesi, toplama hesap makinesi, aritmetik hesap makinesi, ücretsiz hesap makinesi"
       },
       "seoContent": {
@@ -522,8 +524,8 @@
       "noResults": "Sonuç bulunamadı",
       "tryDifferentSearch": "Farklı bir arama terimi deneyin",
       "seoMeta": {
-        "title": "Ücretsiz Elektrik Hesap Makineleri – Güç, kW, kVA, Amper, Volt ve Güç Faktörü",
-        "description": "Güç, akım, voltaj, kW, kVA, watt, amper ve güç faktörü için elektrik hesap makineleri. Elektrik tasarımı, yük boyutlandırma ve mühendislik hesaplamaları için hızlı, doğru araçlar.",
+        "title": "Elektrik hesaplayıcıları: amper, volt ve kW",
+        "description": "Güç faktörü, yük boyutlandırma ve devre tasarımı için profesyonel araçlar. Mühendisler ve elektrikçiler için doğru hesaplamalar. Hepsi bir arada.",
         "keywords": "elektrik hesap makineleri, güç hesap makinesi, watt'tan kva'ya, güç faktörü, kva hesap makinesi"
       },
       "seoContent": {
@@ -1034,12 +1036,30 @@
         "faq": {
           "heading": "Sık Sorulan Sorular",
           "items": [
-            { "question": "kW Volt'a dönüşüm formülü nedir?", "answer": "DC: V = (kW × 1000) / I. Tek fazlı AC: V = (kW × 1000) / (I × PF). Üç fazlı AC: V = (kW × 1000) / (√3 × I × PF). V volt, kW güç, I akım (A), PF güç faktörü. Üç fazlı sonuç = hat voltajı. DC güç faktörü kullanmaz." },
-            { "question": "DC için güç faktörü gerekir mi?", "answer": "Hayır. Güç faktörü yalnızca AC içindir. DC: V = (kW × 1000) / I. Yalnızca kW ve akım gerekir. Yaygın DC uygulamaları: batarya, güneş, EV 12V, 24V, 48V veya üzeri." },
-            { "question": "Tek fazlı ile üç fazlı farkı?", "answer": "Tek fazlı: V = (kW × 1000) / (I × PF). Üç fazlı: V = (kW × 1000) / (√3 × I × PF), sonuç = hat voltajı. Aynı kW ve akımda üç fazlı daha yüksek voltaj verir." },
-            { "question": "Üç fazlı sonuç hangi voltaj?", "answer": "Üç fazlı formül hat (fazlar arası) voltajı verir, faz voltajı değil. Yaygın: 208V, 240V, 380V, 400V, 415V, 480V. Ekipman boyutlandırma ve şebeke voltajı için kullanın." },
-            { "question": "Güç faktörü nedir?", "answer": "Güç faktörü (PF) AC'de aktif/görünür güç oranı, 0–1. Tipik: dirençli = 1,0, indüksiyon motorları = 0,8–0,9, floresan = 0,85–0,95, LED = 0,9–0,95. Bilinmiyorsa motor 0,8, karışık yük 0,9. DC'nin güç faktörü yoktur." },
-            { "question": "Hesap makinesi ücretsiz mi?", "answer": "Evet, kW'dan Volt'a hesap makinesi ücretsizdir. Kayıt veya ödeme yok. kW ve akım girin, DC/tek fazlı/üç fazlı seçin, AC için güç faktörü ekleyin — anında, doğru sonuç alın." }
+            {
+              "question": "kW Volt'a dönüşüm formülü nedir?",
+              "answer": "DC: V = (kW × 1000) / I. Tek fazlı AC: V = (kW × 1000) / (I × PF). Üç fazlı AC: V = (kW × 1000) / (√3 × I × PF). V volt, kW güç, I akım (A), PF güç faktörü. Üç fazlı sonuç = hat voltajı. DC güç faktörü kullanmaz."
+            },
+            {
+              "question": "DC için güç faktörü gerekir mi?",
+              "answer": "Hayır. Güç faktörü yalnızca AC içindir. DC: V = (kW × 1000) / I. Yalnızca kW ve akım gerekir. Yaygın DC uygulamaları: batarya, güneş, EV 12V, 24V, 48V veya üzeri."
+            },
+            {
+              "question": "Tek fazlı ile üç fazlı farkı?",
+              "answer": "Tek fazlı: V = (kW × 1000) / (I × PF). Üç fazlı: V = (kW × 1000) / (√3 × I × PF), sonuç = hat voltajı. Aynı kW ve akımda üç fazlı daha yüksek voltaj verir."
+            },
+            {
+              "question": "Üç fazlı sonuç hangi voltaj?",
+              "answer": "Üç fazlı formül hat (fazlar arası) voltajı verir, faz voltajı değil. Yaygın: 208V, 240V, 380V, 400V, 415V, 480V. Ekipman boyutlandırma ve şebeke voltajı için kullanın."
+            },
+            {
+              "question": "Güç faktörü nedir?",
+              "answer": "Güç faktörü (PF) AC'de aktif/görünür güç oranı, 0–1. Tipik: dirençli = 1,0, indüksiyon motorları = 0,8–0,9, floresan = 0,85–0,95, LED = 0,9–0,95. Bilinmiyorsa motor 0,8, karışık yük 0,9. DC'nin güç faktörü yoktur."
+            },
+            {
+              "question": "Hesap makinesi ücretsiz mi?",
+              "answer": "Evet, kW'dan Volt'a hesap makinesi ücretsizdir. Kayıt veya ödeme yok. kW ve akım girin, DC/tek fazlı/üç fazlı seçin, AC için güç faktörü ekleyin — anında, doğru sonuç alın."
+            }
           ]
         }
       }
@@ -1069,11 +1089,26 @@
         "faq": {
           "heading": "Sık Sorulan Sorular",
           "items": [
-            { "question": "kW kWh'e dönüşüm formülü nedir?", "answer": "kWh = kW × saat. Örn.: 2 kW 3 saat → 2 × 3 = 6 kWh." },
-            { "question": "kW ile kWh farkı?", "answer": "kW = güç. kWh = enerji (zaman içinde miktar). 1 kW × 1 saat = 1 kWh; × 10 saat = 10 kWh." },
-            { "question": "Ondalık saat (örn. 1,5 = 1 saat 30) kullanılabilir mi?", "answer": "Evet. 1,5 = 1 saat 30, 0,5 = 30 dk, 0,25 = 15 dk. 2 kW × 1,5 saat = 3 kWh." },
-            { "question": "kW ve saatten faturayı nasıl tahmin ederim?", "answer": "Önce kWh = kW × saat. Sonra kWh × birim fiyat (örn. 2 TL/kWh). Örn.: 24 kWh × 2 = 48 TL." },
-            { "question": "Hesap makinesi ücretsiz mi?", "answer": "Evet, kW kWh hesap makinesi ücretsizdir. Kayıt yok. kW ve saati girin — anında kWh sonucu alın." }
+            {
+              "question": "kW kWh'e dönüşüm formülü nedir?",
+              "answer": "kWh = kW × saat. Örn.: 2 kW 3 saat → 2 × 3 = 6 kWh."
+            },
+            {
+              "question": "kW ile kWh farkı?",
+              "answer": "kW = güç. kWh = enerji (zaman içinde miktar). 1 kW × 1 saat = 1 kWh; × 10 saat = 10 kWh."
+            },
+            {
+              "question": "Ondalık saat (örn. 1,5 = 1 saat 30) kullanılabilir mi?",
+              "answer": "Evet. 1,5 = 1 saat 30, 0,5 = 30 dk, 0,25 = 15 dk. 2 kW × 1,5 saat = 3 kWh."
+            },
+            {
+              "question": "kW ve saatten faturayı nasıl tahmin ederim?",
+              "answer": "Önce kWh = kW × saat. Sonra kWh × birim fiyat (örn. 2 TL/kWh). Örn.: 24 kWh × 2 = 48 TL."
+            },
+            {
+              "question": "Hesap makinesi ücretsiz mi?",
+              "answer": "Evet, kW kWh hesap makinesi ücretsizdir. Kayıt yok. kW ve saati girin — anında kWh sonucu alın."
+            }
           ]
         }
       }
@@ -1167,11 +1202,26 @@
         "faq": {
           "heading": "Sıkça Sorulan Sorular",
           "items": [
-            { "question": "kW'ı VA'ya dönüştürme formülü nedir?", "answer": "Formül VA = (kW × 1000) / PF'dir, burada VA volt-amper cinsinden görünür güç, kW kilowatt cinsinden aktif güç ve PF güç faktörüdür (0 ile 1 arası). Aktif güç = görünür güç × PF, dolayısıyla görünür güç = aktif güç / PF." },
-            { "question": "kW ile VA arasındaki fark nedir?", "answer": "kW (kilowatt) aktif güçtür — yükün yaptığı gerçek iş (örn. mekanik çıkış, ısı, ışık). VA (volt-amper) görünür güçtür — kaynağın sağladığı toplam güç, yararlı iş yapmayan reaktif gücü içerir. VA ≥ kW her zaman; sadece PF = 1,0 (tamamen dirençli yük) olduğunda eşittirler." },
-            { "question": "Güç faktörü nedir ve tipik değerler nelerdir?", "answer": "Güç faktörü (PF), kW / VA oranıdır, 0 ile 1 arasında değişir. Elektrik gücünün yararlı işe ne kadar verimli dönüştürüldüğünü ölçer. Tipik değerler: dirençli ısıtıcılar ~1,0, floresan lambalar 0,5-0,95, endüksiyon motorlar 0,7-0,9, güç kaynakları 0,6-0,95. Daha düşük PF, aynı kW için daha yüksek VA gerektiği anlamına gelir, iletken ve transformatör boyutunu artırır." },
-            { "question": "Neden kW'ı VA'ya dönüştürmem gerekiyor?", "answer": "Transformatörler, jeneratörler, UPS üniteleri ve devre kesiciler VA (veya kVA) olarak derecelendirilir, kW olarak değil. PF 0,8'de 10 kW çeken bir yük, 12,5 kVA tedarik kapasitesi gerektirir. Ekipmanı yalnızca kW'a göre boyutlandırmak (PF'yi göz ardı etmek) aşırı yüklemeye yol açabilir. kW'ı VA'ya dönüştürmek, yeterli görünür güç kapasitesine sahip ekipman seçmenizi sağlar." },
-            { "question": "Bu hesaplayıcı ücretsiz mi?", "answer": "Evet, kW - VA hesaplayıcımız ücretsizdir. Kayıt veya ödeme gerekmez. kW cinsinden güç ve güç faktörünü (0-1) girerek anında, doğru VA sonuçları alın." }
+            {
+              "question": "kW'ı VA'ya dönüştürme formülü nedir?",
+              "answer": "Formül VA = (kW × 1000) / PF'dir, burada VA volt-amper cinsinden görünür güç, kW kilowatt cinsinden aktif güç ve PF güç faktörüdür (0 ile 1 arası). Aktif güç = görünür güç × PF, dolayısıyla görünür güç = aktif güç / PF."
+            },
+            {
+              "question": "kW ile VA arasındaki fark nedir?",
+              "answer": "kW (kilowatt) aktif güçtür — yükün yaptığı gerçek iş (örn. mekanik çıkış, ısı, ışık). VA (volt-amper) görünür güçtür — kaynağın sağladığı toplam güç, yararlı iş yapmayan reaktif gücü içerir. VA ≥ kW her zaman; sadece PF = 1,0 (tamamen dirençli yük) olduğunda eşittirler."
+            },
+            {
+              "question": "Güç faktörü nedir ve tipik değerler nelerdir?",
+              "answer": "Güç faktörü (PF), kW / VA oranıdır, 0 ile 1 arasında değişir. Elektrik gücünün yararlı işe ne kadar verimli dönüştürüldüğünü ölçer. Tipik değerler: dirençli ısıtıcılar ~1,0, floresan lambalar 0,5-0,95, endüksiyon motorlar 0,7-0,9, güç kaynakları 0,6-0,95. Daha düşük PF, aynı kW için daha yüksek VA gerektiği anlamına gelir, iletken ve transformatör boyutunu artırır."
+            },
+            {
+              "question": "Neden kW'ı VA'ya dönüştürmem gerekiyor?",
+              "answer": "Transformatörler, jeneratörler, UPS üniteleri ve devre kesiciler VA (veya kVA) olarak derecelendirilir, kW olarak değil. PF 0,8'de 10 kW çeken bir yük, 12,5 kVA tedarik kapasitesi gerektirir. Ekipmanı yalnızca kW'a göre boyutlandırmak (PF'yi göz ardı etmek) aşırı yüklemeye yol açabilir. kW'ı VA'ya dönüştürmek, yeterli görünür güç kapasitesine sahip ekipman seçmenizi sağlar."
+            },
+            {
+              "question": "Bu hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, kW - VA hesaplayıcımız ücretsizdir. Kayıt veya ödeme gerekmez. kW cinsinden güç ve güç faktörünü (0-1) girerek anında, doğru VA sonuçları alın."
+            }
           ]
         }
       }
@@ -1201,11 +1251,26 @@
         "faq": {
           "heading": "Sık Sorulan Sorular",
           "items": [
-            { "question": "kW'yi kVA'ya dönüştürme formülü nedir?", "answer": "Formül kVA = kW / PF'dir, burada kVA kilovolt-amper cinsinden görünür güç, kW kilowatt cinsinden aktif güç ve PF güç faktörüdür (0 ila 1). Aktif güç = görünür güç × PF, dolayısıyla görünür güç = aktif güç / PF." },
-            { "question": "kW ve kVA arasındaki fark nedir?", "answer": "kW (kilowatt) aktif güçtür — yük tarafından yapılan gerçek iş (örneğin mekanik çıkış, ısı, ışık). kVA (kilovolt-amper) görünür güçtür — kaynak tarafından sağlanan toplam güç, faydalı iş yapmayan reaktif gücü içerir. kVA ≥ kW her zaman; sadece PF = 1,0 (tamamen dirençli yük) olduğunda eşittirler." },
-            { "question": "Güç faktörü nedir ve tipik değerler nelerdir?", "answer": "Güç faktörü (PF) kW / kVA oranıdır, 0'dan 1'e kadardır. Elektrik gücünün faydalı işe ne kadar verimli dönüştürüldüğünü ölçer. Tipik değerler: dirençli ısıtıcılar ~1,0, floresan lambalar 0,5–0,95, endüksiyon motorları 0,7–0,9, güç kaynakları 0,6–0,95. Daha düşük PF, aynı kW için daha yüksek kVA gerektiği anlamına gelir, iletken ve transformatör boyutunu artırır." },
-            { "question": "Neden kW'yi kVA'ya dönüştürmeliyim?", "answer": "Transformatörler, jeneratörler, UPS üniteleri ve kesiciler kVA olarak derecelendirilir, kW olarak değil. PF 0,8'de 10 kW çeken bir yük 12,5 kVA besleme kapasitesi gerektirir. Ekipmanı yalnızca kW'ye göre boyutlandırmak (PF'yi göz ardı etmek) aşırı yüklemeye yol açabilir. kW'yi kVA'ya dönüştürmek, yeterli görünür güç kapasitesine sahip ekipman seçmenizi sağlar." },
-            { "question": "Bu hesaplayıcı ücretsiz mi?", "answer": "Evet, kW'den kVA'ya hesaplayıcımız ücretsizdir. Kayıt veya ödeme gerekmez. Anında, doğru kVA sonuçları için kW cinsinden güç ve güç faktörünü (0–1) girin." }
+            {
+              "question": "kW'yi kVA'ya dönüştürme formülü nedir?",
+              "answer": "Formül kVA = kW / PF'dir, burada kVA kilovolt-amper cinsinden görünür güç, kW kilowatt cinsinden aktif güç ve PF güç faktörüdür (0 ila 1). Aktif güç = görünür güç × PF, dolayısıyla görünür güç = aktif güç / PF."
+            },
+            {
+              "question": "kW ve kVA arasındaki fark nedir?",
+              "answer": "kW (kilowatt) aktif güçtür — yük tarafından yapılan gerçek iş (örneğin mekanik çıkış, ısı, ışık). kVA (kilovolt-amper) görünür güçtür — kaynak tarafından sağlanan toplam güç, faydalı iş yapmayan reaktif gücü içerir. kVA ≥ kW her zaman; sadece PF = 1,0 (tamamen dirençli yük) olduğunda eşittirler."
+            },
+            {
+              "question": "Güç faktörü nedir ve tipik değerler nelerdir?",
+              "answer": "Güç faktörü (PF) kW / kVA oranıdır, 0'dan 1'e kadardır. Elektrik gücünün faydalı işe ne kadar verimli dönüştürüldüğünü ölçer. Tipik değerler: dirençli ısıtıcılar ~1,0, floresan lambalar 0,5–0,95, endüksiyon motorları 0,7–0,9, güç kaynakları 0,6–0,95. Daha düşük PF, aynı kW için daha yüksek kVA gerektiği anlamına gelir, iletken ve transformatör boyutunu artırır."
+            },
+            {
+              "question": "Neden kW'yi kVA'ya dönüştürmeliyim?",
+              "answer": "Transformatörler, jeneratörler, UPS üniteleri ve kesiciler kVA olarak derecelendirilir, kW olarak değil. PF 0,8'de 10 kW çeken bir yük 12,5 kVA besleme kapasitesi gerektirir. Ekipmanı yalnızca kW'ye göre boyutlandırmak (PF'yi göz ardı etmek) aşırı yüklemeye yol açabilir. kW'yi kVA'ya dönüştürmek, yeterli görünür güç kapasitesine sahip ekipman seçmenizi sağlar."
+            },
+            {
+              "question": "Bu hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, kW'den kVA'ya hesaplayıcımız ücretsizdir. Kayıt veya ödeme gerekmez. Anında, doğru kVA sonuçları için kW cinsinden güç ve güç faktörünü (0–1) girin."
+            }
           ]
         }
       }
@@ -1527,11 +1592,26 @@
         "faq": {
           "heading": "Sık Sorulan Sorular",
           "items": [
-            {"question": "VA'dan kW formülü nedir?", "answer": "kW = (VA × GF) / 1000. GF gerekir; görünür gücün yalnızca bir kısmı aktif. Kilowatt için 1000'e bölün."},
-            {"question": "VA ile kW arasındaki fark?", "answer": "VA görünür gücü (reaktif dahil toplam) ölçer, kW aktif gücü ölçer. kW = (VA × GF) / 1000. Yalnızca GF = 1,0 ve 1000 faktörü iken eşitler."},
-            {"question": "Neden güç faktörü gerekli?", "answer": "Görünür güç reaktif gücü içerir. Güç faktörü aktif payı verir. GF olmadan VA'dan aktif güç bulunamaz."},
-            {"question": "Tipik güç faktörleri?", "answer": "Dirençli yükler sıklıkla ≈ 1,0. Motorlar ve endüktif 0,7–0,9. Şüphede genelde 0,8 kullanılır."},
-            {"question": "Hesaplayıcı ücretsiz mi?", "answer": "Evet. Kayıt yok. VA ve güç faktörünü girin, kilowatt cinsinden sonuç alın."}
+            {
+              "question": "VA'dan kW formülü nedir?",
+              "answer": "kW = (VA × GF) / 1000. GF gerekir; görünür gücün yalnızca bir kısmı aktif. Kilowatt için 1000'e bölün."
+            },
+            {
+              "question": "VA ile kW arasındaki fark?",
+              "answer": "VA görünür gücü (reaktif dahil toplam) ölçer, kW aktif gücü ölçer. kW = (VA × GF) / 1000. Yalnızca GF = 1,0 ve 1000 faktörü iken eşitler."
+            },
+            {
+              "question": "Neden güç faktörü gerekli?",
+              "answer": "Görünür güç reaktif gücü içerir. Güç faktörü aktif payı verir. GF olmadan VA'dan aktif güç bulunamaz."
+            },
+            {
+              "question": "Tipik güç faktörleri?",
+              "answer": "Dirençli yükler sıklıkla ≈ 1,0. Motorlar ve endüktif 0,7–0,9. Şüphede genelde 0,8 kullanılır."
+            },
+            {
+              "question": "Hesaplayıcı ücretsiz mi?",
+              "answer": "Evet. Kayıt yok. VA ve güç faktörünü girin, kilowatt cinsinden sonuç alın."
+            }
           ]
         },
         "related": {
@@ -1571,11 +1651,26 @@
         "faq": {
           "heading": "Sık Sorulan Sorular",
           "items": [
-            {"question": "VA'dan kVA formülü?", "answer": "kVA = VA / 1000. İkisi görünür güç; 1000'e böl. Güç faktörü gerekmez."},
-            {"question": "VA ile kVA farkı?", "answer": "VA ve kVA görünür gücü ölçer. 1 kVA = 1000 VA. Aynı büyüklük, başka birim — metre ve kilometre gibi."},
-            {"question": "Güç faktörü gerekli mi?", "answer": "Hayır. Sadece görünür ↔ aktif (W/kW) dönüşümünde. VA → kVA = 1000'e bölme."},
-            {"question": "Ne zaman VA, ne zaman kVA?", "answer": "Küçük cihazlar genelde VA, büyükler (UPS, transformatörler) kVA. Karşılaştırma ve güç toplama için dönüşüm."},
-            {"question": "Hesaplayıcı ücretsiz mi?", "answer": "Evet. Kayıt yok. VA girin, kVA sonucu alın."}
+            {
+              "question": "VA'dan kVA formülü?",
+              "answer": "kVA = VA / 1000. İkisi görünür güç; 1000'e böl. Güç faktörü gerekmez."
+            },
+            {
+              "question": "VA ile kVA farkı?",
+              "answer": "VA ve kVA görünür gücü ölçer. 1 kVA = 1000 VA. Aynı büyüklük, başka birim — metre ve kilometre gibi."
+            },
+            {
+              "question": "Güç faktörü gerekli mi?",
+              "answer": "Hayır. Sadece görünür ↔ aktif (W/kW) dönüşümünde. VA → kVA = 1000'e bölme."
+            },
+            {
+              "question": "Ne zaman VA, ne zaman kVA?",
+              "answer": "Küçük cihazlar genelde VA, büyükler (UPS, transformatörler) kVA. Karşılaştırma ve güç toplama için dönüşüm."
+            },
+            {
+              "question": "Hesaplayıcı ücretsiz mi?",
+              "answer": "Evet. Kayıt yok. VA girin, kVA sonucu alın."
+            }
           ]
         },
         "related": {
@@ -1786,11 +1881,26 @@
         "faq": {
           "heading": "Sık sorulan sorular",
           "items": [
-            {"question": "Watt modu volt→amper formülü?", "answer": "I = P / V. Akım (A) = güç (W) / gerilim (V). Örn. 2300 W, 230 V → I = 10 A."},
-            {"question": "Ohm modu volt→amper formülü?", "answer": "I = V / R (Ohm yasası). Akım = gerilim / direnç. Örn. 12 V, 24 Ω → I = 0,5 A."},
-            {"question": "Ne zaman watt, ne zaman ohm?", "answer": "Watt: güç (örn. tip plakası) ve gerilim bilindiğinde. Ohm: direnç üzerindeki gerilim ve değeri (dirençler, ısıtıcı, DC devreler)."},
-            {"question": "Ohm yasası AC’de geçerli mi?", "answer": "I = V / R dirençli AC devrelerde etkin değerlerle geçerlidir. Reaktans için empedans Z: I = V / Z."},
-            {"question": "Hesap makinesi ücretsiz mi?", "answer": "Evet. Watt veya ohm seçin, gerilim ve watt/ohm girin, akımı (A) alın."}
+            {
+              "question": "Watt modu volt→amper formülü?",
+              "answer": "I = P / V. Akım (A) = güç (W) / gerilim (V). Örn. 2300 W, 230 V → I = 10 A."
+            },
+            {
+              "question": "Ohm modu volt→amper formülü?",
+              "answer": "I = V / R (Ohm yasası). Akım = gerilim / direnç. Örn. 12 V, 24 Ω → I = 0,5 A."
+            },
+            {
+              "question": "Ne zaman watt, ne zaman ohm?",
+              "answer": "Watt: güç (örn. tip plakası) ve gerilim bilindiğinde. Ohm: direnç üzerindeki gerilim ve değeri (dirençler, ısıtıcı, DC devreler)."
+            },
+            {
+              "question": "Ohm yasası AC’de geçerli mi?",
+              "answer": "I = V / R dirençli AC devrelerde etkin değerlerle geçerlidir. Reaktans için empedans Z: I = V / Z."
+            },
+            {
+              "question": "Hesap makinesi ücretsiz mi?",
+              "answer": "Evet. Watt veya ohm seçin, gerilim ve watt/ohm girin, akımı (A) alın."
+            }
           ]
         },
         "related": {
@@ -1939,9 +2049,8 @@
       "singlePhase": "Tek Faz",
       "threePhase": "Üç Faz",
       "amps": "Amper (A)",
-      "volts": "Voltaj (V)",
-      "powerFactor": "Güç Faktörü (0-1)",
       "volts": "Gerilim (V)",
+      "powerFactor": "Güç Faktörü (0-1)",
       "calculate": "Hesapla",
       "reset": "Sıfırla",
       "result": "Sonuç",
@@ -2315,12 +2424,30 @@
         "faq": {
           "heading": "Sıkça Sorulan Sorular",
           "items": [
-            { "question": "Watt'tan ampere (DC) formülü nedir?", "answer": "DC için: I = P / V, burada I amper cinsinden akım, P watt cinsinden güç ve V volt cinsinden gerilimdir. Gücü gerilime bölerek akım elde edilir. Örnek: 120 V'de 1200 W → I = 10 A." },
-            { "question": "Tek faz için formül nedir?", "answer": "Tek faz için: I = P / (V × PF). V gerilim (V), P güç (W), PF güç faktörü (0–1). Örnek: 230 V'de 1840 W, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
-            { "question": "Üç faz için formül nedir?", "answer": "Üç faz için: I = P / (√3 × V × PF). V hat-hat gerilimi (V), P güç (W), PF güç faktörü. √3 ≈ 1,732. Örnek: 400 V'de 8,83 kW, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
-            { "question": "DC, tek faz veya üç faz ne zaman kullanılır?", "answer": "Piller, DC güneş devreleri ve DC yükler için DC kullanın. Tipik konut (120 V, 230 V, 240 V) için tek faz. Endüstriyel ve ticari dağıtım (400 V, 480 V hat-hat) ve motorlar için üç faz." },
-            { "question": "Amper'den watt'a nasıl ilişkilidir?", "answer": "Watt'tan ampere (I = P / V) ve amper'den watt'a (P = I × V) ters işlemlerdir. Gücü ve gerilimi bildiğinizde watt→amper kullanın; akımı ve gerilimi bildiğinizde amper→watt kullanın." },
-            { "question": "Bu hesaplayıcı ücretsiz mi?", "answer": "Evet. Watt'tan Ampere hesaplayıcı ücretsizdir. Kayıt gerektirmez. DC, tek faz veya üç faz seçin, watt ve gerilim girin (ve AC için güç faktörü), anında amper alın." }
+            {
+              "question": "Watt'tan ampere (DC) formülü nedir?",
+              "answer": "DC için: I = P / V, burada I amper cinsinden akım, P watt cinsinden güç ve V volt cinsinden gerilimdir. Gücü gerilime bölerek akım elde edilir. Örnek: 120 V'de 1200 W → I = 10 A."
+            },
+            {
+              "question": "Tek faz için formül nedir?",
+              "answer": "Tek faz için: I = P / (V × PF). V gerilim (V), P güç (W), PF güç faktörü (0–1). Örnek: 230 V'de 1840 W, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A."
+            },
+            {
+              "question": "Üç faz için formül nedir?",
+              "answer": "Üç faz için: I = P / (√3 × V × PF). V hat-hat gerilimi (V), P güç (W), PF güç faktörü. √3 ≈ 1,732. Örnek: 400 V'de 8,83 kW, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+            },
+            {
+              "question": "DC, tek faz veya üç faz ne zaman kullanılır?",
+              "answer": "Piller, DC güneş devreleri ve DC yükler için DC kullanın. Tipik konut (120 V, 230 V, 240 V) için tek faz. Endüstriyel ve ticari dağıtım (400 V, 480 V hat-hat) ve motorlar için üç faz."
+            },
+            {
+              "question": "Amper'den watt'a nasıl ilişkilidir?",
+              "answer": "Watt'tan ampere (I = P / V) ve amper'den watt'a (P = I × V) ters işlemlerdir. Gücü ve gerilimi bildiğinizde watt→amper kullanın; akımı ve gerilimi bildiğinizde amper→watt kullanın."
+            },
+            {
+              "question": "Bu hesaplayıcı ücretsiz mi?",
+              "answer": "Evet. Watt'tan Ampere hesaplayıcı ücretsizdir. Kayıt gerektirmez. DC, tek faz veya üç faz seçin, watt ve gerilim girin (ve AC için güç faktörü), anında amper alın."
+            }
           ]
         },
         "related": {
@@ -2366,12 +2493,30 @@
         "faq": {
           "heading": "Sıkça Sorulan Sorular",
           "items": [
-            { "question": "Watt'tan volta (DC) formülü nedir?", "answer": "DC için: V = P / I, burada V volt cinsinden gerilim, P watt cinsinden güç ve I amper cinsinden akımdır. Gücü akıma bölerek gerilim elde edilir. Örnek: 10 A'de 1200 W → V = 120 V." },
-            { "question": "Tek faz AC için formül nedir?", "answer": "Tek faz AC için: V = P / (I × PF). I akım (A), P güç (W), PF güç faktörü (0–1). Örnek: 10 A'de 1840 W, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
-            { "question": "Üç faz AC için formül nedir?", "answer": "Üç faz AC için: V = P / (√3 × I × PF). I faz başına akım (A), P güç (W), PF güç faktörü. √3 ≈ 1,732. Örnek: 15 A'de 8,83 kW, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
-            { "question": "DC, tek faz veya üç faz ne zaman kullanılır?", "answer": "Piller, DC güneş devreleri ve DC yükler için DC kullanın. Tipik konut (120 V, 230 V, 240 V) için tek faz. Endüstriyel ve ticari dağıtım (400 V, 480 V hat-hat) ve motorlar için üç faz." },
-            { "question": "Volt'tan watt'a nasıl ilişkilidir?", "answer": "Watt'tan volta (V = P / I) ve volt'tan watt'a (P = V × I) ters işlemlerdir. Gücü ve akımı bildiğinizde watt→volt kullanın; gerilimi ve akımı bildiğinizde volt→watt kullanın." },
-            { "question": "Bu hesaplayıcı ücretsiz mi?", "answer": "Evet. Watt'tan Volt'a hesaplayıcı ücretsizdir. Kayıt gerektirmez. DC, tek faz veya üç faz seçin, watt ve akım girin (ve AC için güç faktörü), anında volt alın." }
+            {
+              "question": "Watt'tan volta (DC) formülü nedir?",
+              "answer": "DC için: V = P / I, burada V volt cinsinden gerilim, P watt cinsinden güç ve I amper cinsinden akımdır. Gücü akıma bölerek gerilim elde edilir. Örnek: 10 A'de 1200 W → V = 120 V."
+            },
+            {
+              "question": "Tek faz AC için formül nedir?",
+              "answer": "Tek faz AC için: V = P / (I × PF). I akım (A), P güç (W), PF güç faktörü (0–1). Örnek: 10 A'de 1840 W, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V."
+            },
+            {
+              "question": "Üç faz AC için formül nedir?",
+              "answer": "Üç faz AC için: V = P / (√3 × I × PF). I faz başına akım (A), P güç (W), PF güç faktörü. √3 ≈ 1,732. Örnek: 15 A'de 8,83 kW, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+            },
+            {
+              "question": "DC, tek faz veya üç faz ne zaman kullanılır?",
+              "answer": "Piller, DC güneş devreleri ve DC yükler için DC kullanın. Tipik konut (120 V, 230 V, 240 V) için tek faz. Endüstriyel ve ticari dağıtım (400 V, 480 V hat-hat) ve motorlar için üç faz."
+            },
+            {
+              "question": "Volt'tan watt'a nasıl ilişkilidir?",
+              "answer": "Watt'tan volta (V = P / I) ve volt'tan watt'a (P = V × I) ters işlemlerdir. Gücü ve akımı bildiğinizde watt→volt kullanın; gerilimi ve akımı bildiğinizde volt→watt kullanın."
+            },
+            {
+              "question": "Bu hesaplayıcı ücretsiz mi?",
+              "answer": "Evet. Watt'tan Volt'a hesaplayıcı ücretsizdir. Kayıt gerektirmez. DC, tek faz veya üç faz seçin, watt ve akım girin (ve AC için güç faktörü), anında volt alın."
+            }
           ]
         },
         "related": {
@@ -2437,230 +2582,227 @@
           ]
         }
       }
-    }
-  ,
+    },
     "voltsToElectronVolts": {
-    "title": "Volt'tan Elektronvolt'a Hesap Makinesi",
-    "description": "Gerilimi (V) elektronvolt (eV) cinsinden enerjiye anında dönüştürün (tek elektron için 1:1)",
-    "volts": "Gerilim (V)",
-    "calculate": "Hesapla",
-    "reset": "Sıfırla",
-    "result": "Sonuç",
-    "electronVolts": "Elektronvolt (eV)",
-    "seo": {
-      "title": "Volt'tan Elektronvolt'a Hesap Makinesi – Tek Bir Elektron İçin Enerji Hesaplayın",
-      "description": "Elektrik potansiyelinde tek bir elektron tarafından kazanılan enerjiyi hesaplamak için volt–elektronvolt hesap makinesi. 1 V = 1 eV ilişkisini kullanır. Parçacık, atom ve yarı iletken fiziği için ideal.",
-      "keywords": "volts to electron volts calculator, V to eV converter, voltage electron volt conversion, physics calculator, particle physics, free calculator",
-      "content": {
-        "heading": "How to Convert Volts to Electron-Volts",
-        "paragraph1": "Converting voltage (V) to energy in electron-volts (eV) is a fundamental conversion in physics, especially in particle physics, atomic physics, and electronics. For a single electron, the relationship is 1:1: an electron accelerated through a potential difference of 1 volt gains 1 electron-volt of kinetic energy. Thus eV = V for one electron. Our free Volts to Electron-Volts calculator provides instant, accurate results for your physics calculations.",
-        "paragraph2": "The conversion formula is: eV = V, where eV is the energy in electron-volts and V is the voltage in volts. This direct 1:1 relationship holds because the electron-volt is defined as the energy gained by one electron when it moves through a potential difference of one volt. The electron-volt is a convenient unit for atomic and subatomic energy scales, commonly used in particle physics, atomic physics, and semiconductor physics.",
-        "paragraph3": "This conversion is used in: particle accelerator physics, semiconductor device physics, atomic and molecular physics, X-ray and gamma-ray energy measurements, electron microscopy, plasma physics, and quantum mechanics. Understanding the link between volts and electron-volts helps physicists and engineers work with energy scales from atomic transitions to high-energy particle collisions.",
-        "paragraph4": "Our calculator takes voltage (V) as input and returns the equivalent energy in electron-volts (eV). It handles both small values (atomic physics) and large values (particle physics). No registration required. Whether you work with band gaps, accelerators, or photon energies, the Volts to Electron-Volts calculator delivers accurate, instant conversions.",
-        "exampleHeading": "Example:",
-        "exampleText": "1 V → eV = 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1,000,000 V (1 MV) → 1,000,000 eV (1 MeV)."
-      },
-      "faq": {
-        "heading": "Frequently Asked Questions",
-        "items": [
-          {
-            "question": "What is the formula for converting volts to electron-volts?",
-            "answer": "For a single electron: eV = V. The energy in electron-volts equals the voltage in volts. This is a direct 1:1 conversion because the electron-volt is defined as the energy gained by one electron when accelerated through 1 volt."
-          },
-          {
-            "question": "Why is 1 V equal to 1 eV?",
-            "answer": "Because an electron-volt is defined as the energy gained by one electron when it moves through a potential difference of 1 volt. That is exactly 1 eV for 1 V, for a single electron."
-          },
-          {
-            "question": "Is this conversion valid for multiple electrons?",
-            "answer": "This conversion is for a single electron. If multiple electrons are involved, total energy equals the number of electrons times the electron-volt value, but the voltage per electron remains 1 V = 1 eV."
-          },
-          {
-            "question": "Where is this conversion used?",
-            "answer": "It is used in particle physics, atomic physics, semiconductor physics, electron microscopy, plasma physics, and anywhere energy scales are expressed in electron-volts."
-          },
-          {
-            "question": "Can I convert eV back to volts?",
-            "answer": "Yes. For a single electron, volts to electron-volts and electron-volts to volts are inverse operations, and both are 1:1 conversions."
-          },
-          {
-            "question": "Is this calculator free to use?",
-            "answer": "Yes, our Volts to Electron-Volts calculator is completely free. No registration required."
-          }
-        ]
-      },
-      "related": {
-        "heading": "Related Calculators",
-        "electronVoltsToVolts": "Electron-Volts to Volts Calculator",
-        "electronVoltsToVoltsDesc": "Convert electron-volts to volts",
-        "joulesToVolts": "Joules to Volts Calculator",
-        "joulesToVoltsDesc": "Convert energy and charge to voltage",
-        "voltsToJoules": "Volts to Joules Calculator",
-        "voltsToJoulesDesc": "Convert voltage and charge to energy",
-        "voltsToWatts": "Volt'tan Watt Hesaplayıcı",
-        "voltsToWattsDesc": "Voltaj ve akımı güce dönüştür"
-      }
-    }
-  ,
-    "percentage": {
-      "title": "Yüzde Hesaplayıcı",
-      "description": "Yüzdeleri anında ve doğru bir şekilde hesaplayın. Bir sayının diğerinin yüzde kaçı olduğunu bulun, bir sayının yüzdesini hesaplayın veya yüzde artış/azalışı belirleyin.",
+      "title": "Volt'tan Elektronvolt'a Hesap Makinesi",
+      "description": "Gerilimi (V) elektronvolt (eV) cinsinden enerjiye anında dönüştürün (tek elektron için 1:1)",
+      "volts": "Gerilim (V)",
       "calculate": "Hesapla",
       "reset": "Sıfırla",
       "result": "Sonuç",
-      "addition": {
-        "title": "Toplama Hesap Makinesi",
-        "description": "İki sayıyı hızlı ve doğru bir şekilde toplayın"
-      },
-      "type1": {
-        "label": "Y'nin %X'i kaçtır?",
-        "value1": "Yüzde (%)",
-        "value2": "Sayı",
-        "result": "Sonuç"
-      },
-      "type2": {
-        "label": "X, Y'nin yüzde kaçıdır?",
-        "value1": "Sayı",
-        "value2": "Sayı",
-        "result": "Yüzde"
-      },
-      "type3": {
-        "label": "Yüzde Artış/Azalış",
-        "value1": "Başlangıç",
-        "value2": "Bitiş",
-        "resultIncrease": "Yüzde Artış",
-        "resultDecrease": "Yüzde Azalış"
-      },
+      "electronVolts": "Elektronvolt (eV)",
       "seo": {
-        "title": "Yüzde Hesaplayıcı – Yüzdeleri, Artış ve Azalışı Hesapla",
-        "description": "Bir sayının yüzdesini, yüzde artış veya azalışını ve yüzde farkını bulmak için yüzde hesaplayıcı. Hızlı, doğru ve kullanımı kolay.",
-        "keywords": "yüzde hesaplayıcı, yüzde hesap makinesi, yüzde artış hesaplayıcı, yüzde azalış hesaplayıcı, yüzde kaç hesaplayıcı, ücretsiz yüzde hesaplayıcı, çevrimiçi yüzde aracı",
+        "title": "Volt'tan Elektronvolt'a Hesap Makinesi – Tek Bir Elektron İçin Enerji Hesaplayın",
+        "description": "Elektrik potansiyelinde tek bir elektron tarafından kazanılan enerjiyi hesaplamak için volt–elektronvolt hesap makinesi. 1 V = 1 eV ilişkisini kullanır. Parçacık, atom ve yarı iletken fiziği için ideal.",
+        "keywords": "volts to electron volts calculator, V to eV converter, voltage electron volt conversion, physics calculator, particle physics, free calculator",
         "content": {
-          "heading": "Yüzdeler Nasıl Hesaplanır",
-          "paragraph1": "Yüzde hesaplayıcı, yüzdeleri içeren çeşitli matematik problemlerini çözmek için gerekli bir araçtır. Yüzdeler yüzde birini temsil eder ve matematik, finans, istatistik ve günlük yaşamda yaygın olarak kullanılır. Ücretsiz yüzde hesaplayıcımız, üç yaygın yüzde hesaplama türünü kolayca gerçekleştirmenizi sağlar: bir sayının diğerinin yüzde kaçı olduğunu bulma, bir sayının yüzdesini hesaplama ve yüzde artış veya azalışı belirleme.",
-          "paragraph2": "İlk hesaplama türü 'Y'nin %X'i kaçtır?' sorusunu yanıtlar. Formül: Sonuç = (X / 100) × Y. Örneğin, 150'nin %20'si (20 / 100) × 150 = 0.2 × 150 = 30'a eşittir. İkinci tür 'X, Y'nin yüzde kaçıdır?' sorusunu yanıtlar. Formül: Yüzde = (X / Y) × 100. Örneğin, 25, 100'ün (25 / 100) × 100 = %25'idir. Üçüncü tür, bir değerden diğerine yüzde değişimini hesaplar. Formül: Yüzde Değişim = ((Yeni Değer - Eski Değer) / Eski Değer) × 100. Pozitif sonuç artışı, negatif sonuç azalışı gösterir.",
-          "paragraph3": "Yüzde hesaplamaları sayısız uygulamada kullanılır: indirimler ve satış fiyatlarını hesaplama, vergi tutarlarını ve bahşişleri belirleme, veri ve istatistikleri analiz etme, büyüme oranlarını ve değişiklikleri anlama, faiz oranlarını ve getirileri hesaplama, test puanlarını ve notları ölçme, değerleri ve oranları karşılaştırma ve iş, finans ve bilimde gerçek dünya problemlerini çözme. İster alışveriş yapın, ister bütçe yapın, ister veri analiz edin veya çalışın, yüzdeleri anlamak bilinçli kararlar vermek için çok önemlidir.",
-          "paragraph4": "Yüzde hesaplayıcımız, tek bir kullanışlı araçta üç hesaplama modu sunar. Sadece ihtiyacınız olan hesaplama türünü seçin, değerlerinizi girin ve anında doğru sonuçlar alın. Hesaplayıcı, tam sayıları, ondalık sayıları ve negatif sayıları hassasiyetle işler. İster bir restoran faturasında %15 bahşiş hesaplıyor olun, ister test puanınızın ne yüzdeyi temsil ettiğini belirliyor olun, ister yıllık büyümeyi analiz ediyor olun, yüzde hesaplayıcımız anında doğru sonuçlar sağlar.",
-          "exampleHeading": "Örnekler:",
-          "exampleText": "200'ün %25'i kaçtır? Cevap: (25 / 100) × 200 = 50. 30, 150'nin yüzde kaçıdır? Cevap: (30 / 150) × 100 = %20. 80'den 100'e yüzde artış nedir? Cevap: ((100 - 80) / 80) × 100 = %25 artış. 200'den 150'ye yüzde azalış nedir? Cevap: ((150 - 200) / 200) × 100 = -%25 (%25 azalış)."
+          "heading": "How to Convert Volts to Electron-Volts",
+          "paragraph1": "Converting voltage (V) to energy in electron-volts (eV) is a fundamental conversion in physics, especially in particle physics, atomic physics, and electronics. For a single electron, the relationship is 1:1: an electron accelerated through a potential difference of 1 volt gains 1 electron-volt of kinetic energy. Thus eV = V for one electron. Our free Volts to Electron-Volts calculator provides instant, accurate results for your physics calculations.",
+          "paragraph2": "The conversion formula is: eV = V, where eV is the energy in electron-volts and V is the voltage in volts. This direct 1:1 relationship holds because the electron-volt is defined as the energy gained by one electron when it moves through a potential difference of one volt. The electron-volt is a convenient unit for atomic and subatomic energy scales, commonly used in particle physics, atomic physics, and semiconductor physics.",
+          "paragraph3": "This conversion is used in: particle accelerator physics, semiconductor device physics, atomic and molecular physics, X-ray and gamma-ray energy measurements, electron microscopy, plasma physics, and quantum mechanics. Understanding the link between volts and electron-volts helps physicists and engineers work with energy scales from atomic transitions to high-energy particle collisions.",
+          "paragraph4": "Our calculator takes voltage (V) as input and returns the equivalent energy in electron-volts (eV). It handles both small values (atomic physics) and large values (particle physics). No registration required. Whether you work with band gaps, accelerators, or photon energies, the Volts to Electron-Volts calculator delivers accurate, instant conversions.",
+          "exampleHeading": "Example:",
+          "exampleText": "1 V → eV = 1 eV. 10 V → 10 eV. 1000 V (1 kV) → 1000 eV (1 keV). 1,000,000 V (1 MV) → 1,000,000 eV (1 MeV)."
         },
         "faq": {
-          "heading": "Sıkça Sorulan Sorular",
+          "heading": "Frequently Asked Questions",
           "items": [
             {
-              "question": "Bir sayının diğerinin yüzde kaçı olduğunu nasıl hesaplarım?",
-              "answer": "X'in Y'nin yüzde kaçı olduğunu bulmak için formülü kullanın: Yüzde = (X / Y) × 100. Örneğin, 25'in 100'ün yüzde kaçı olduğu (25 / 100) × 100 = %25'tir. 15'in 60'ın yüzde kaçı olduğu (15 / 60) × 100 = %25'tir."
+              "question": "What is the formula for converting volts to electron-volts?",
+              "answer": "For a single electron: eV = V. The energy in electron-volts equals the voltage in volts. This is a direct 1:1 conversion because the electron-volt is defined as the energy gained by one electron when accelerated through 1 volt."
             },
             {
-              "question": "Bir sayının yüzdesini nasıl hesaplarım?",
-              "answer": "Y'nin %X'ini hesaplamak için formülü kullanın: Sonuç = (X / 100) × Y. Örneğin, 150'nin %20'si (20 / 100) × 150 = 0.2 × 150 = 30'a eşittir. 200'ün %15'i (15 / 100) × 200 = 0.15 × 200 = 30'a eşittir."
+              "question": "Why is 1 V equal to 1 eV?",
+              "answer": "Because an electron-volt is defined as the energy gained by one electron when it moves through a potential difference of 1 volt. That is exactly 1 eV for 1 V, for a single electron."
             },
             {
-              "question": "Yüzde artış veya azalışı nasıl hesaplarım?",
-              "answer": "Eski değerden yeni değere yüzde değişimini hesaplamak için kullanın: Yüzde Değişim = ((Yeni Değer - Eski Değer) / Eski Değer) × 100. Pozitif sonuç artışı, negatif sonuç azalışı gösterir. Örneğin, 80'den 100'e: ((100 - 80) / 80) × 100 = %25 artış. 200'den 150'ye: ((150 - 200) / 200) × 100 = -%25 (%25 azalış)."
+              "question": "Is this conversion valid for multiple electrons?",
+              "answer": "This conversion is for a single electron. If multiple electrons are involved, total energy equals the number of electrons times the electron-volt value, but the voltage per electron remains 1 V = 1 eV."
             },
             {
-              "question": "Yüzde hesaplamalarında ondalık sayılar kullanabilir miyim?",
-              "answer": "Evet, yüzde hesaplayıcı ondalık sayıları destekler. Hem yüzde hem de sayılar için ondalık değerler girebilirsiniz. Örneğin, 200'ün %12.5'i (12.5 / 100) × 200 = 25'e eşittir. 12.5'in 25'in yüzde kaçı olduğunu da hesaplayabilirsiniz: (12.5 / 25) × 100 = %50."
+              "question": "Where is this conversion used?",
+              "answer": "It is used in particle physics, atomic physics, semiconductor physics, electron microscopy, plasma physics, and anywhere energy scales are expressed in electron-volts."
             },
             {
-              "question": "Yüzde artış ve yüzde azalış arasındaki fark nedir?",
-              "answer": "Yüzde artış, yeni değer eski değerden büyük olduğunda meydana gelir ve pozitif yüzde ile sonuçlanır. Yüzde azalış, yeni değer eski değerden küçük olduğunda meydana gelir ve negatif yüzde ile sonuçlanır (veya bunu pozitif azalış olarak ifade edebilirsiniz). Her ikisi de aynı formülü kullanır: ((Yeni - Eski) / Eski) × 100."
+              "question": "Can I convert eV back to volts?",
+              "answer": "Yes. For a single electron, volts to electron-volts and electron-volts to volts are inverse operations, and both are 1:1 conversions."
             },
             {
-              "question": "Bu hesaplayıcı ücretsiz mi?",
-              "answer": "Evet, yüzde hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Sadece hesaplama türünü seçin, değerlerinizi girin ve anında doğru yüzde hesaplama sonuçları alın."
+              "question": "Is this calculator free to use?",
+              "answer": "Yes, our Volts to Electron-Volts calculator is completely free. No registration required."
             }
           ]
         },
         "related": {
-          "heading": "İlgili Hesaplayıcılar",
-          "wattsToKva": "Watt'tan kVA Hesaplayıcı",
-          "wattsToKvaDesc": "Güç faktörü kullanarak watt'ı kilovoltamper'e dönüştür",
-          "kwToAmps": "kW'tan Amper Hesaplayıcı",
-          "kwToAmpsDesc": "Kilowatt'ı anında amper'e dönüştür",
+          "heading": "Related Calculators",
+          "electronVoltsToVolts": "Electron-Volts to Volts Calculator",
+          "electronVoltsToVoltsDesc": "Convert electron-volts to volts",
+          "joulesToVolts": "Joules to Volts Calculator",
+          "joulesToVoltsDesc": "Convert energy and charge to voltage",
+          "voltsToJoules": "Volts to Joules Calculator",
+          "voltsToJoulesDesc": "Convert voltage and charge to energy",
           "voltsToWatts": "Volt'tan Watt Hesaplayıcı",
-          "voltsToWattsDesc": "Voltaj ve akımı güce dönüştür",
-          "ampsToWatts": "Amper'den Watt Hesaplayıcı",
-          "ampsToWattsDesc": "Akım ve voltajı güce dönüştür"
+          "voltsToWattsDesc": "Voltaj ve akımı güce dönüştür"
+        }
+      },
+      "percentage": {
+        "title": "Yüzde Hesaplayıcı",
+        "description": "Yüzdeleri anında ve doğru bir şekilde hesaplayın. Bir sayının diğerinin yüzde kaçı olduğunu bulun, bir sayının yüzdesini hesaplayın veya yüzde artış/azalışı belirleyin.",
+        "calculate": "Hesapla",
+        "reset": "Sıfırla",
+        "result": "Sonuç",
+        "addition": {
+          "title": "Toplama Hesap Makinesi",
+          "description": "İki sayıyı hızlı ve doğru bir şekilde toplayın"
+        },
+        "type1": {
+          "label": "Y'nin %X'i kaçtır?",
+          "value1": "Yüzde (%)",
+          "value2": "Sayı",
+          "result": "Sonuç"
+        },
+        "type2": {
+          "label": "X, Y'nin yüzde kaçıdır?",
+          "value1": "Sayı",
+          "value2": "Sayı",
+          "result": "Yüzde"
+        },
+        "type3": {
+          "label": "Yüzde Artış/Azalış",
+          "value1": "Başlangıç",
+          "value2": "Bitiş",
+          "resultIncrease": "Yüzde Artış",
+          "resultDecrease": "Yüzde Azalış"
+        },
+        "seo": {
+          "title": "Yüzde Hesaplayıcı – Yüzdeleri, Artış ve Azalışı Hesapla",
+          "description": "Bir sayının yüzdesini, yüzde artış veya azalışını ve yüzde farkını bulmak için yüzde hesaplayıcı. Hızlı, doğru ve kullanımı kolay.",
+          "keywords": "yüzde hesaplayıcı, yüzde hesap makinesi, yüzde artış hesaplayıcı, yüzde azalış hesaplayıcı, yüzde kaç hesaplayıcı, ücretsiz yüzde hesaplayıcı, çevrimiçi yüzde aracı",
+          "content": {
+            "heading": "Yüzdeler Nasıl Hesaplanır",
+            "paragraph1": "Yüzde hesaplayıcı, yüzdeleri içeren çeşitli matematik problemlerini çözmek için gerekli bir araçtır. Yüzdeler yüzde birini temsil eder ve matematik, finans, istatistik ve günlük yaşamda yaygın olarak kullanılır. Ücretsiz yüzde hesaplayıcımız, üç yaygın yüzde hesaplama türünü kolayca gerçekleştirmenizi sağlar: bir sayının diğerinin yüzde kaçı olduğunu bulma, bir sayının yüzdesini hesaplama ve yüzde artış veya azalışı belirleme.",
+            "paragraph2": "İlk hesaplama türü 'Y'nin %X'i kaçtır?' sorusunu yanıtlar. Formül: Sonuç = (X / 100) × Y. Örneğin, 150'nin %20'si (20 / 100) × 150 = 0.2 × 150 = 30'a eşittir. İkinci tür 'X, Y'nin yüzde kaçıdır?' sorusunu yanıtlar. Formül: Yüzde = (X / Y) × 100. Örneğin, 25, 100'ün (25 / 100) × 100 = %25'idir. Üçüncü tür, bir değerden diğerine yüzde değişimini hesaplar. Formül: Yüzde Değişim = ((Yeni Değer - Eski Değer) / Eski Değer) × 100. Pozitif sonuç artışı, negatif sonuç azalışı gösterir.",
+            "paragraph3": "Yüzde hesaplamaları sayısız uygulamada kullanılır: indirimler ve satış fiyatlarını hesaplama, vergi tutarlarını ve bahşişleri belirleme, veri ve istatistikleri analiz etme, büyüme oranlarını ve değişiklikleri anlama, faiz oranlarını ve getirileri hesaplama, test puanlarını ve notları ölçme, değerleri ve oranları karşılaştırma ve iş, finans ve bilimde gerçek dünya problemlerini çözme. İster alışveriş yapın, ister bütçe yapın, ister veri analiz edin veya çalışın, yüzdeleri anlamak bilinçli kararlar vermek için çok önemlidir.",
+            "paragraph4": "Yüzde hesaplayıcımız, tek bir kullanışlı araçta üç hesaplama modu sunar. Sadece ihtiyacınız olan hesaplama türünü seçin, değerlerinizi girin ve anında doğru sonuçlar alın. Hesaplayıcı, tam sayıları, ondalık sayıları ve negatif sayıları hassasiyetle işler. İster bir restoran faturasında %15 bahşiş hesaplıyor olun, ister test puanınızın ne yüzdeyi temsil ettiğini belirliyor olun, ister yıllık büyümeyi analiz ediyor olun, yüzde hesaplayıcımız anında doğru sonuçlar sağlar.",
+            "exampleHeading": "Örnekler:",
+            "exampleText": "200'ün %25'i kaçtır? Cevap: (25 / 100) × 200 = 50. 30, 150'nin yüzde kaçıdır? Cevap: (30 / 150) × 100 = %20. 80'den 100'e yüzde artış nedir? Cevap: ((100 - 80) / 80) × 100 = %25 artış. 200'den 150'ye yüzde azalış nedir? Cevap: ((150 - 200) / 200) × 100 = -%25 (%25 azalış)."
+          },
+          "faq": {
+            "heading": "Sıkça Sorulan Sorular",
+            "items": [
+              {
+                "question": "Bir sayının diğerinin yüzde kaçı olduğunu nasıl hesaplarım?",
+                "answer": "X'in Y'nin yüzde kaçı olduğunu bulmak için formülü kullanın: Yüzde = (X / Y) × 100. Örneğin, 25'in 100'ün yüzde kaçı olduğu (25 / 100) × 100 = %25'tir. 15'in 60'ın yüzde kaçı olduğu (15 / 60) × 100 = %25'tir."
+              },
+              {
+                "question": "Bir sayının yüzdesini nasıl hesaplarım?",
+                "answer": "Y'nin %X'ini hesaplamak için formülü kullanın: Sonuç = (X / 100) × Y. Örneğin, 150'nin %20'si (20 / 100) × 150 = 0.2 × 150 = 30'a eşittir. 200'ün %15'i (15 / 100) × 200 = 0.15 × 200 = 30'a eşittir."
+              },
+              {
+                "question": "Yüzde artış veya azalışı nasıl hesaplarım?",
+                "answer": "Eski değerden yeni değere yüzde değişimini hesaplamak için kullanın: Yüzde Değişim = ((Yeni Değer - Eski Değer) / Eski Değer) × 100. Pozitif sonuç artışı, negatif sonuç azalışı gösterir. Örneğin, 80'den 100'e: ((100 - 80) / 80) × 100 = %25 artış. 200'den 150'ye: ((150 - 200) / 200) × 100 = -%25 (%25 azalış)."
+              },
+              {
+                "question": "Yüzde hesaplamalarında ondalık sayılar kullanabilir miyim?",
+                "answer": "Evet, yüzde hesaplayıcı ondalık sayıları destekler. Hem yüzde hem de sayılar için ondalık değerler girebilirsiniz. Örneğin, 200'ün %12.5'i (12.5 / 100) × 200 = 25'e eşittir. 12.5'in 25'in yüzde kaçı olduğunu da hesaplayabilirsiniz: (12.5 / 25) × 100 = %50."
+              },
+              {
+                "question": "Yüzde artış ve yüzde azalış arasındaki fark nedir?",
+                "answer": "Yüzde artış, yeni değer eski değerden büyük olduğunda meydana gelir ve pozitif yüzde ile sonuçlanır. Yüzde azalış, yeni değer eski değerden küçük olduğunda meydana gelir ve negatif yüzde ile sonuçlanır (veya bunu pozitif azalış olarak ifade edebilirsiniz). Her ikisi de aynı formülü kullanır: ((Yeni - Eski) / Eski) × 100."
+              },
+              {
+                "question": "Bu hesaplayıcı ücretsiz mi?",
+                "answer": "Evet, yüzde hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Sadece hesaplama türünü seçin, değerlerinizi girin ve anında doğru yüzde hesaplama sonuçları alın."
+              }
+            ]
+          },
+          "related": {
+            "heading": "İlgili Hesaplayıcılar",
+            "wattsToKva": "Watt'tan kVA Hesaplayıcı",
+            "wattsToKvaDesc": "Güç faktörü kullanarak watt'ı kilovoltamper'e dönüştür",
+            "kwToAmps": "kW'tan Amper Hesaplayıcı",
+            "kwToAmpsDesc": "Kilowatt'ı anında amper'e dönüştür",
+            "voltsToWatts": "Volt'tan Watt Hesaplayıcı",
+            "voltsToWattsDesc": "Voltaj ve akımı güce dönüştür",
+            "ampsToWatts": "Amper'den Watt Hesaplayıcı",
+            "ampsToWattsDesc": "Akım ve voltajı güce dönüştür"
+          }
+        }
+      },
+      "textToBinary": {
+        "title": "Metin İkili Dönüştürücü",
+        "description": "Birden fazla karakter kodlaması (UTF-8, UTF-16, Windows-1252) ve özelleştirilebilir ayırıcılarla metni anında ikili koda dönüştürün.",
+        "textInput": "Metin Girişi",
+        "textPlaceholder": "İkiliye dönüştürmek için metin girin...",
+        "encoding": "Karakter Kodlaması",
+        "encodingUtf8": "UTF-8 Unicode (en yaygın kullanım)",
+        "encodingUtf16": "UTF-16 Unicode",
+        "encodingUtf16le": "UTF-16 (LE) Unicode",
+        "encodingUtf16be": "UTF-16 (BE) Unicode",
+        "encodingWindows1252": "Windows-1252 (genişletilmiş ASCII)",
+        "separator": "Ayırıcı",
+        "separatorSpace": "Boş Alan",
+        "separatorComma": "Virgül (ve boşluk)",
+        "separatorCustom": "Kullanıcı tanımlı",
+        "customSeparatorLabel": "Ayırıcınızı yazın",
+        "customSeparatorPlaceholder": "Ayırıcı girin (maks 10 karakter)",
+        "reset": "Sıfırla",
+        "result": "Sonuç",
+        "binaryOutput": "İkili Çıktı",
+        "seo": {
+          "title": "Metin İkili Dönüştürücü – UTF-8, UTF-16 ve ASCII Kodlama",
+          "description": "UTF-8, UTF-16 ve ASCII kodlamayı destekleyen metin ikili dönüştürücü. Programlama, kodlama ve veri temsili için özel ayırıcılarla metni ikiliye dönüştürün.",
+          "keywords": "metin ikiliye, ikili dönüştürücü, metin ikili koda, ikili kodlayıcı, UTF-8 ikiliye, UTF-16 ikiliye, metin kodlayıcı, ikili çevirmen, ASCII ikiliye, Unicode ikiliye",
+          "content": {
+            "heading": "Metni İkiliye Nasıl Dönüştürülür",
+            "paragraph1": "Metin ikili dönüştürücü, metin karakterlerini ikili temsile kodlamak için gerekli bir araçtır. İkili kod tüm verileri temsil etmek için yalnızca iki rakam (0 ve 1) kullanır, bu da onu bilgisayar sistemleri ve dijital iletişim için temel yapar. Ücretsiz metin ikili dönüştürücümüz, çeşitli karakter kodlamaları kullanarak herhangi bir metin dizisini ikili eşdeğerine dönüştürmeyi kolaylaştırır ve bilgisayarların metin verilerini nasıl depoladığını ve işlediğini anlamanıza yardımcı olur.",
+            "paragraph2": "Dönüştürme işlemi, önce metninizi seçilen bir karakter kodlaması (UTF-8, UTF-16 veya Windows-1252 gibi) kullanarak kodlayarak çalışır, bu da her karakteri bir veya daha fazla bayta dönüştürür. Her bayt daha sonra 8 bitlik ikili temsiline dönüştürülür. Örneğin, ASCII/UTF-8'deki 'A' harfi, bayt değeri 65 ile temsil edilir ve ikili olarak '01000001' olarak dönüştürülür. Dönüştürücümüz bu işlemi otomatik olarak yönetir ve özel ihtiyaçlarınıza uygun olarak birden fazla kodlama standardını destekler.",
+            "paragraph3": "Karakter kodlaması, metin karakterlerinin bayt değerlerine nasıl eşlendiğini belirler. UTF-8 en yaygın kodlamadır, karakter başına 1-4 bayt kullanır ve tüm Unicode karakterlerini destekler. UTF-16 karakter başına 2 veya 4 bayt kullanır ve Windows sistemlerinde yaygındır. UTF-16 LE (Little Endian) en az anlamlı baytı önce saklar, UTF-16 BE (Big Endian) ise en anlamlı baytı önce saklar. Windows-1252, Batı Avrupa dillerinde yaygın olarak kullanılan genişletilmiş bir ASCII kodlamasıdır. Dönüştürücümüz tüm bu kodlamaları destekler, gereksinimlerinize uyanı seçmenize olanak tanır.",
+            "paragraph4": "Ayırıcı seçeneği, ikili rakamların nasıl görüntüleneceğini kontrol etmenize olanak tanır. Kompakt çıktı için boş alanlar, okunabilirlik için virgül ve boşluklar kullanabilir veya kendi özel ayırıcınızı (10 karaktere kadar) tanımlayabilirsiniz. Bu esneklik, ikili temsil hakkında öğreniyor, kodlama sorunlarını ayıklıyor veya belirli uygulamalar için veri hazırlıyor olsanız da, farklı amaçlar için ikili çıktıyı biçimlendirmeyi kolaylaştırır. Dönüştürme yazarken otomatik olarak gerçekleşir, anında geri bildirim sağlar ve aracı hem hızlı dönüştürmeler hem de detaylı analizler için verimli hale getirir.",
+            "exampleHeading": "Örnek: Metni İkiliye Dönüştürme",
+            "exampleText": "'Merhaba' kelimesini UTF-8 kodlaması kullanarak ikiliye dönüştürmek için: M = 01001101, e = 01100101, r = 01110010, h = 01101000, a = 01100001, b = 01100010, a = 01100001. Boşluk ayırıcı ile sonuç: 01001101 01100101 01110010 01101000 01100001 01100010 01100001. Virgül ayırıcı ile şu hale gelir: 01001101, 01100101, 01110010, 01101000, 01100001, 01100010, 01100001. Her karakter bayt değerine, ardından 8 bitlik ikili bir dizgeye dönüştürülür. Dönüştürücü, emoji'ler ve özel semboller dahil tüm Unicode karakterlerini işler ve bunları seçilen kodlama standardına göre dönüştürür."
+          },
+          "faq": {
+            "heading": "Sıkça Sorulan Sorular",
+            "items": [
+              {
+                "question": "Metin ikiliye dönüştürme nedir?",
+                "answer": "Metin ikiliye dönüştürme, metin karakterlerini ikili koda (0 ve 1 dizileri) kodlama işlemidir. Her karakter önce bir karakter kodlaması (UTF-8 gibi) kullanılarak bayt temsiline dönüştürülür, ardından her bayt 8 bitlik ikili biçimine dönüştürülür. Bilgisayarlar metin verilerini bu şekilde dahili olarak depolar ve işler."
+              },
+              {
+                "question": "UTF-8 ve UTF-16 arasındaki fark nedir?",
+                "answer": "UTF-8 karakter başına 1-4 bayt kullanır ve ASCII ile geriye dönük uyumludur (ASCII karakterler 1 bayt kullanır). UTF-16 karakter başına 2 veya 4 bayt kullanır. UTF-8 Latin karakterler için daha alan verimlidir, UTF-16 ise belirli Asya dilleri için daha verimli olabilir. UTF-16 LE (Little Endian) en az anlamlı baytla baytları önce saklar, UTF-16 BE (Big Endian) ise en anlamlı baytı önce saklar."
+              },
+              {
+                "question": "Doğru karakter kodlamasını nasıl seçerim?",
+                "answer": "Çoğu modern uygulama ve web içeriği için UTF-8 kullanın, çünkü çoğu dil için en yaygın desteklenen ve alan verimli olanıdır. Windows sistemleriyle çalışıyorsanız veya belirli sistem gereksinimlerini karşılamanız gerekiyorsa UTF-16 kullanın. Yalnızca eski sistemler veya belirli Batı Avrupa karakter setleriyle uyumluluk gerekiyorsa Windows-1252 kullanın."
+              },
+              {
+                "question": "İkiliyi tekrar metne dönüştürebilir miyim?",
+                "answer": "Evet, ikiliyi tekrar metne dönüştürmek mümkündür, ancak kullanılan orijinal karakter kodlamasını bilmeniz gerekir. Dönüştürücümüz metin ikiliye dönüştürmeye odaklanır. İkiliyi tekrar metne dönüştürmek için aynı kodlama standardını destekleyen bir ikili metin dönüştürücüye ihtiyacınız olur."
+              },
+              {
+                "question": "Ayırıcı nedir ve neden önemlidir?",
+                "answer": "Ayırıcı, çıktıdaki bireysel ikili baytları ayırmak için kullanılan bir karakter veya dizgedir. Boş alanlar çıktıyı kompakt hale getirir, virgül ve boşluklar okunabilirliği artırır ve özel ayırıcılar belirli uygulamalar veya sistemler için çıktıyı biçimlendirmenize olanak tanır. Ayırıcı ikili değerleri etkilemez, yalnızca nasıl görüntülendiklerini etkiler."
+              },
+              {
+                "question": "Bu metin ikili dönüştürücü ücretsiz mi?",
+                "answer": "Evet, metin ikili dönüştürücümüz tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Sadece metninizi girin, kodlama ve ayırıcı tercihlerinizi seçin ve anında ikili dönüştürme sonuçları alın."
+              }
+            ]
+          },
+          "related": {
+            "heading": "İlgili Hesaplayıcılar",
+            "addition": "Toplama Hesaplayıcı",
+            "additionDesc": "Tam sayıları ve ondalık sayıları hızlı ve doğru bir şekilde ekleyin",
+            "percentage": "Yüzde Hesaplayıcı",
+            "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın",
+            "average": "Ortalama Hesaplayıcı",
+            "averageDesc": "Bir sayı listesinin ortalamasını, toplamını ve sayısını bulun"
+          }
         }
       }
-    }
-  ,
-    "textToBinary": {
-      "title": "Metin İkili Dönüştürücü",
-      "description": "Birden fazla karakter kodlaması (UTF-8, UTF-16, Windows-1252) ve özelleştirilebilir ayırıcılarla metni anında ikili koda dönüştürün.",
-      "textInput": "Metin Girişi",
-      "textPlaceholder": "İkiliye dönüştürmek için metin girin...",
-      "encoding": "Karakter Kodlaması",
-      "encodingUtf8": "UTF-8 Unicode (en yaygın kullanım)",
-      "encodingUtf16": "UTF-16 Unicode",
-      "encodingUtf16le": "UTF-16 (LE) Unicode",
-      "encodingUtf16be": "UTF-16 (BE) Unicode",
-      "encodingWindows1252": "Windows-1252 (genişletilmiş ASCII)",
-      "separator": "Ayırıcı",
-      "separatorSpace": "Boş Alan",
-      "separatorComma": "Virgül (ve boşluk)",
-      "separatorCustom": "Kullanıcı tanımlı",
-      "customSeparatorLabel": "Ayırıcınızı yazın",
-      "customSeparatorPlaceholder": "Ayırıcı girin (maks 10 karakter)",
-      "reset": "Sıfırla",
-      "result": "Sonuç",
-      "binaryOutput": "İkili Çıktı",
-      "seo": {
-        "title": "Metin İkili Dönüştürücü – UTF-8, UTF-16 ve ASCII Kodlama",
-        "description": "UTF-8, UTF-16 ve ASCII kodlamayı destekleyen metin ikili dönüştürücü. Programlama, kodlama ve veri temsili için özel ayırıcılarla metni ikiliye dönüştürün.",
-        "keywords": "metin ikiliye, ikili dönüştürücü, metin ikili koda, ikili kodlayıcı, UTF-8 ikiliye, UTF-16 ikiliye, metin kodlayıcı, ikili çevirmen, ASCII ikiliye, Unicode ikiliye",
-        "content": {
-          "heading": "Metni İkiliye Nasıl Dönüştürülür",
-          "paragraph1": "Metin ikili dönüştürücü, metin karakterlerini ikili temsile kodlamak için gerekli bir araçtır. İkili kod tüm verileri temsil etmek için yalnızca iki rakam (0 ve 1) kullanır, bu da onu bilgisayar sistemleri ve dijital iletişim için temel yapar. Ücretsiz metin ikili dönüştürücümüz, çeşitli karakter kodlamaları kullanarak herhangi bir metin dizisini ikili eşdeğerine dönüştürmeyi kolaylaştırır ve bilgisayarların metin verilerini nasıl depoladığını ve işlediğini anlamanıza yardımcı olur.",
-          "paragraph2": "Dönüştürme işlemi, önce metninizi seçilen bir karakter kodlaması (UTF-8, UTF-16 veya Windows-1252 gibi) kullanarak kodlayarak çalışır, bu da her karakteri bir veya daha fazla bayta dönüştürür. Her bayt daha sonra 8 bitlik ikili temsiline dönüştürülür. Örneğin, ASCII/UTF-8'deki 'A' harfi, bayt değeri 65 ile temsil edilir ve ikili olarak '01000001' olarak dönüştürülür. Dönüştürücümüz bu işlemi otomatik olarak yönetir ve özel ihtiyaçlarınıza uygun olarak birden fazla kodlama standardını destekler.",
-          "paragraph3": "Karakter kodlaması, metin karakterlerinin bayt değerlerine nasıl eşlendiğini belirler. UTF-8 en yaygın kodlamadır, karakter başına 1-4 bayt kullanır ve tüm Unicode karakterlerini destekler. UTF-16 karakter başına 2 veya 4 bayt kullanır ve Windows sistemlerinde yaygındır. UTF-16 LE (Little Endian) en az anlamlı baytı önce saklar, UTF-16 BE (Big Endian) ise en anlamlı baytı önce saklar. Windows-1252, Batı Avrupa dillerinde yaygın olarak kullanılan genişletilmiş bir ASCII kodlamasıdır. Dönüştürücümüz tüm bu kodlamaları destekler, gereksinimlerinize uyanı seçmenize olanak tanır.",
-          "paragraph4": "Ayırıcı seçeneği, ikili rakamların nasıl görüntüleneceğini kontrol etmenize olanak tanır. Kompakt çıktı için boş alanlar, okunabilirlik için virgül ve boşluklar kullanabilir veya kendi özel ayırıcınızı (10 karaktere kadar) tanımlayabilirsiniz. Bu esneklik, ikili temsil hakkında öğreniyor, kodlama sorunlarını ayıklıyor veya belirli uygulamalar için veri hazırlıyor olsanız da, farklı amaçlar için ikili çıktıyı biçimlendirmeyi kolaylaştırır. Dönüştürme yazarken otomatik olarak gerçekleşir, anında geri bildirim sağlar ve aracı hem hızlı dönüştürmeler hem de detaylı analizler için verimli hale getirir.",
-          "exampleHeading": "Örnek: Metni İkiliye Dönüştürme",
-          "exampleText": "'Merhaba' kelimesini UTF-8 kodlaması kullanarak ikiliye dönüştürmek için: M = 01001101, e = 01100101, r = 01110010, h = 01101000, a = 01100001, b = 01100010, a = 01100001. Boşluk ayırıcı ile sonuç: 01001101 01100101 01110010 01101000 01100001 01100010 01100001. Virgül ayırıcı ile şu hale gelir: 01001101, 01100101, 01110010, 01101000, 01100001, 01100010, 01100001. Her karakter bayt değerine, ardından 8 bitlik ikili bir dizgeye dönüştürülür. Dönüştürücü, emoji'ler ve özel semboller dahil tüm Unicode karakterlerini işler ve bunları seçilen kodlama standardına göre dönüştürür."
-        },
-        "faq": {
-          "heading": "Sıkça Sorulan Sorular",
-          "items": [
-            {
-              "question": "Metin ikiliye dönüştürme nedir?",
-              "answer": "Metin ikiliye dönüştürme, metin karakterlerini ikili koda (0 ve 1 dizileri) kodlama işlemidir. Her karakter önce bir karakter kodlaması (UTF-8 gibi) kullanılarak bayt temsiline dönüştürülür, ardından her bayt 8 bitlik ikili biçimine dönüştürülür. Bilgisayarlar metin verilerini bu şekilde dahili olarak depolar ve işler."
-            },
-            {
-              "question": "UTF-8 ve UTF-16 arasındaki fark nedir?",
-              "answer": "UTF-8 karakter başına 1-4 bayt kullanır ve ASCII ile geriye dönük uyumludur (ASCII karakterler 1 bayt kullanır). UTF-16 karakter başına 2 veya 4 bayt kullanır. UTF-8 Latin karakterler için daha alan verimlidir, UTF-16 ise belirli Asya dilleri için daha verimli olabilir. UTF-16 LE (Little Endian) en az anlamlı baytla baytları önce saklar, UTF-16 BE (Big Endian) ise en anlamlı baytı önce saklar."
-            },
-            {
-              "question": "Doğru karakter kodlamasını nasıl seçerim?",
-              "answer": "Çoğu modern uygulama ve web içeriği için UTF-8 kullanın, çünkü çoğu dil için en yaygın desteklenen ve alan verimli olanıdır. Windows sistemleriyle çalışıyorsanız veya belirli sistem gereksinimlerini karşılamanız gerekiyorsa UTF-16 kullanın. Yalnızca eski sistemler veya belirli Batı Avrupa karakter setleriyle uyumluluk gerekiyorsa Windows-1252 kullanın."
-            },
-            {
-              "question": "İkiliyi tekrar metne dönüştürebilir miyim?",
-              "answer": "Evet, ikiliyi tekrar metne dönüştürmek mümkündür, ancak kullanılan orijinal karakter kodlamasını bilmeniz gerekir. Dönüştürücümüz metin ikiliye dönüştürmeye odaklanır. İkiliyi tekrar metne dönüştürmek için aynı kodlama standardını destekleyen bir ikili metin dönüştürücüye ihtiyacınız olur."
-            },
-            {
-              "question": "Ayırıcı nedir ve neden önemlidir?",
-              "answer": "Ayırıcı, çıktıdaki bireysel ikili baytları ayırmak için kullanılan bir karakter veya dizgedir. Boş alanlar çıktıyı kompakt hale getirir, virgül ve boşluklar okunabilirliği artırır ve özel ayırıcılar belirli uygulamalar veya sistemler için çıktıyı biçimlendirmenize olanak tanır. Ayırıcı ikili değerleri etkilemez, yalnızca nasıl görüntülendiklerini etkiler."
-            },
-            {
-              "question": "Bu metin ikili dönüştürücü ücretsiz mi?",
-              "answer": "Evet, metin ikili dönüştürücümüz tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Sadece metninizi girin, kodlama ve ayırıcı tercihlerinizi seçin ve anında ikili dönüştürme sonuçları alın."
-            }
-          ]
-        },
-        "related": {
-          "heading": "İlgili Hesaplayıcılar",
-          "addition": "Toplama Hesaplayıcı",
-          "additionDesc": "Tam sayıları ve ondalık sayıları hızlı ve doğru bir şekilde ekleyin",
-          "percentage": "Yüzde Hesaplayıcı",
-          "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın",
-          "average": "Ortalama Hesaplayıcı",
-          "averageDesc": "Bir sayı listesinin ortalamasını, toplamını ve sayısını bulun"
-        }
-      }
-    }
-  },
+    },
     "italicText": {
       "title": "İtalik Metin Oluşturucu",
       "description": "Birden fazla Unicode stiliyle anında italik metin oluşturun: serif italik, kursif script ve sans-serif italik. Sosyal medya, tasarım ve yaratıcı yazım için mükemmel.",
@@ -2726,8 +2868,7 @@
           "additionDesc": "Tam sayıları ve ondalık sayıları hızlı ve doğru bir şekilde ekleyin"
         }
       }
-    }
-  ,
+    },
     "upsideDownText": {
       "title": "Ters Metin Oluşturucu",
       "description": "Normal veya ters sırayla anında ters metin oluşturun. Sosyal medya, eğlenceli mesajlar ve yaratıcı yazım için mükemmel.",

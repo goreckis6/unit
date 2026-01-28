@@ -5,21 +5,7 @@ import { Footer } from '@/components/Footer';
 import { WattsToVaCalculator } from './calculator';
 import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
-import { routing } from '@/i18n/routing';
-
-function generateHreflangUrls(path: string) {
-  const baseUrl = 'https://unitconverterhub.com';
-  const languages: Record<string, string> = {};
-  
-  routing.locales.forEach((loc) => {
-    const url = loc === 'en' 
-      ? `${baseUrl}${path}` 
-      : `${baseUrl}/${loc}${path}`;
-    languages[loc] = url;
-  });
-  
-  return languages;
-}
+import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 
 interface FaqItem {
   question: string;
@@ -40,18 +26,15 @@ async function getFaqItems(locale: string): Promise<FaqItem[]> {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'calculators.wattsToVa.seo' });
-  const baseUrl = 'https://unitconverterhub.com';
-  const path = locale === 'en' ? '/calculators/electric/watts-to-va' : `/${locale}/calculators/electric/watts-to-va`;
-  const canonicalUrl = `${baseUrl}${path}`;
-  const hreflangUrls = generateHreflangUrls('/calculators/electric/watts-to-va');
-  
+  const path = '/calculators/electric/watts-to-va';
+  const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
   return {
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),
     alternates: {
       canonical: canonicalUrl,
-      languages: hreflangUrls,
+      languages: generateHreflangUrls(path),
     },
     openGraph: {
       title: t('title'),

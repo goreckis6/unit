@@ -1,6 +1,6 @@
 {
   "common": {
-    "siteName": "UnitConvertHub",
+    "siteName": "UnitConverterHub",
     "description": "Darmowe konwertery jednostek i kalkulatory online",
     "home": "Strona główna",
     "calculators": "Kalkulatory",
@@ -15,6 +15,8 @@
     "learnMore": "Dowiedz się więcej",
     "readBlog": "Czytaj Blog",
     "homePage": {
+      "seoTitle": "UnitConverterHub - Free Online Unit Converters & Calculators",
+      "seoDescription": "Quickly convert units and solve complex math or electrical problems with our free online calculators. Fast, mobile-friendly, and no registration required.",
       "heroDescription": "Szybkie, dokładne i łatwe w użyciu kalkulatory dla wszystkich Twoich potrzeb",
       "calculatorsSubtitle": "Wybierz z naszej kolekcji potężnych kalkulatorów",
       "mathCalculators": {
@@ -470,8 +472,8 @@
       "noResults": "Nie znaleziono wyników",
       "tryDifferentSearch": "Spróbuj innego wyszukiwania",
       "seoMeta": {
-        "title": "Darmowe kalkulatory matematyczne (szybko i dokładnie)",
-        "description": "Darmowe kalkulatory matematyczne online: szybkie wyniki, dodawanie dziś i więcej wkrótce. Działa na telefonie i PC. Bez rejestracji.",
+        "title": "Kalkulatory matematyczne: szybkie i dokładne narzędzia",
+        "description": "Rozwiązuj zadania matematyczne od razu. Od podstawowej arytmetyki po algebrę – nasze darmowe narzędzia dają szybkie wyniki na każdym urządzeniu. Zobacz, dlaczego ufają nam inżynierowie i studenci.",
         "keywords": "kalkulatory matematyczne, kalkulator matematyczny, kalkulator dodawania, kalkulator arytmetyczny, darmowy kalkulator"
       },
       "seoContent": {
@@ -522,8 +524,8 @@
       "noResults": "Nie znaleziono wyników",
       "tryDifferentSearch": "Spróbuj innego wyszukiwania",
       "seoMeta": {
-        "title": "Darmowe Kalkulatory Elektryczne – Moc, kW, kVA, Ampery, Wolty i Współczynnik Mocy",
-        "description": "Kalkulatory elektryczne do mocy, prądu, napięcia, kW, kVA, watów, amperów i współczynnika mocy. Szybkie, precyzyjne narzędzia do projektowania elektrycznego, doboru obciążeń i obliczeń inżynierskich.",
+        "title": "Kalkulatory elektryczne: ampery, wolty i kW",
+        "description": "Profesjonalne narzędzia do współczynnika mocy, doboru obciążeń i projektowania obwodów. Dokładne obliczenia dla inżynierów i elektryków. Wszystko w jednym.",
         "keywords": "kalkulatory elektryczne, kalkulator mocy, waty na kva, współczynnik mocy, kalkulator kva"
       },
       "seoContent": {
@@ -571,8 +573,8 @@
       "noResults": "Nie znaleziono wyników",
       "tryDifferentSearch": "Spróbuj użyć innego terminu wyszukiwania",
       "seoMeta": {
-        "title": "Darmowe Inne Kalkulatory – Różne Narzędzia",
-        "description": "Darmowe kalkulatory online do różnych codziennych obliczeń. Szybkie, dokładne narzędzia do różnych potrzeb obliczeniowych.",
+        "title": "Kalkulatory na co dzień i różne narzędzia",
+        "description": "Potrzebujesz konkretnego narzędzia? Przeglądaj naszą kolekcję kalkulatorów na różne zadania. Darmowe, szybkie i stale uzupełniane o nowe funkcje.",
         "keywords": "inne kalkulatory, różne kalkulatory, darmowe kalkulatory, kalkulatory online"
       },
       "seoContent": {
@@ -1128,11 +1130,26 @@
         "faq": {
           "heading": "Najczęściej zadawane pytania",
           "items": [
-            { "question": "Jaki jest wzór na przeliczanie kW na kWh?", "answer": "Wzór: kWh = kW × godziny, gdzie kWh to energia w kWh, kW — moc w kW, godziny — czas w h. Energia = moc × czas. Np. 2 kW przez 3 h daje 2 × 3 = 6 kWh." },
-            { "question": "Jaka jest różnica między kW a kWh?", "answer": "kW (kilowaty) to moc — szybkość zużycia lub dostarczania energii. kWh (kilowatogodziny) to energia — łączna ilość zużyta w czasie. Urządzenie 1 kW przez 1 h zużywa 1 kWh; przez 10 h — 10 kWh." },
-            { "question": "Czy mogę użyć ułamków godzin (np. 1,5 = 1 h 30 min)?", "answer": "Tak. Wpisz godziny jako ułamki dziesiętne: 1,5 = 1 h 30 min, 0,5 = 30 min, 0,25 = 15 min. kwh = kW × godziny, więc 2 kW przez 1,5 h daje 3 kWh." },
-            { "question": "Jak oszacować rachunek za prąd z kW i godzin?", "answer": "Najpierw przelicz kW na kWh: kWh = kW × godziny. Pomnóż kWh przez stawkę za kWh (np. 0,60 zł/kWh), aby uzyskać koszt. Np. 24 kWh × 0,60 zł = 14,40 zł." },
-            { "question": "Czy kalkulator jest darmowy?", "answer": "Tak, kalkulator kW na kWh jest darmowy. Bez rejestracji i płatności. Wpisz moc w kW i czas w godzinach, aby uzyskać natychmiastową energię w kWh." }
+            {
+              "question": "Jaki jest wzór na przeliczanie kW na kWh?",
+              "answer": "Wzór: kWh = kW × godziny, gdzie kWh to energia w kWh, kW — moc w kW, godziny — czas w h. Energia = moc × czas. Np. 2 kW przez 3 h daje 2 × 3 = 6 kWh."
+            },
+            {
+              "question": "Jaka jest różnica między kW a kWh?",
+              "answer": "kW (kilowaty) to moc — szybkość zużycia lub dostarczania energii. kWh (kilowatogodziny) to energia — łączna ilość zużyta w czasie. Urządzenie 1 kW przez 1 h zużywa 1 kWh; przez 10 h — 10 kWh."
+            },
+            {
+              "question": "Czy mogę użyć ułamków godzin (np. 1,5 = 1 h 30 min)?",
+              "answer": "Tak. Wpisz godziny jako ułamki dziesiętne: 1,5 = 1 h 30 min, 0,5 = 30 min, 0,25 = 15 min. kwh = kW × godziny, więc 2 kW przez 1,5 h daje 3 kWh."
+            },
+            {
+              "question": "Jak oszacować rachunek za prąd z kW i godzin?",
+              "answer": "Najpierw przelicz kW na kWh: kWh = kW × godziny. Pomnóż kWh przez stawkę za kWh (np. 0,60 zł/kWh), aby uzyskać koszt. Np. 24 kWh × 0,60 zł = 14,40 zł."
+            },
+            {
+              "question": "Czy kalkulator jest darmowy?",
+              "answer": "Tak, kalkulator kW na kWh jest darmowy. Bez rejestracji i płatności. Wpisz moc w kW i czas w godzinach, aby uzyskać natychmiastową energię w kWh."
+            }
           ]
         }
       }
@@ -1226,11 +1243,26 @@
         "faq": {
           "heading": "Najczęściej zadawane pytania",
           "items": [
-            { "question": "Jaki jest wzór na przeliczanie kW na VA?", "answer": "Wzór: VA = (kW × 1000) / PF, gdzie VA to moc pozorna w woltamperach, kW — moc czynna w kilowatach, PF — współczynnik mocy (0–1). Moc czynna = moc pozorna × PF, więc moc pozorna = moc czynna / PF." },
-            { "question": "Jaka jest różnica między kW a VA?", "answer": "kW (kilowaty) to moc czynna — rzeczywista praca wykonywana przez obciążenie (np. wyjście mechaniczne, ciepło, światło). VA (woltampery) to moc pozorna — całkowita moc dostarczana przez źródło, zawierająca moc bierną nierealizującą użytecznej pracy. Zawsze VA ≥ kW; są równe tylko przy PF = 1,0 (obciążenie czysto rezystancyjne)." },
-            { "question": "Czym jest współczynnik mocy i jakie są typowe wartości?", "answer": "Współczynnik mocy (PF) to stosunek kW / VA, od 0 do 1. Mierzy, jak efektywnie moc elektryczna jest zamieniana w użyteczną pracę. Typowe wartości: grzejniki rezystancyjne ~1,0, świetlówki 0,5–0,95, silniki indukcyjne 0,7–0,9, zasilacze 0,6–0,95. Niższy PF oznacza, że do dostarczenia takiej samej mocy kW potrzeba wyższej mocy VA, co zwiększa wymiary przewodów i transformatorów." },
-            { "question": "Dlaczego muszę przeliczać kW na VA?", "answer": "Transformatory, generatory, UPS-y i wyłączniki są znamionowane w VA (lub kVA), a nie w kW. Obciążenie pobierające 10 kW przy PF 0,8 wymaga 12,5 kVA pojemności zasilania. Dobór urządzeń tylko według kW (z pominięciem PF) może prowadzić do przeciążenia. Przeliczanie kW na VA zapewnia wybór urządzeń o wystarczającej pojemności mocy pozornej." },
-            { "question": "Czy kalkulator jest darmowy?", "answer": "Tak, kalkulator kW na VA jest darmowy. Bez rejestracji i płatności. Wpisz moc w kW i współczynnik mocy (0–1), aby uzyskać natychmiastowy wynik mocy pozornej w VA." }
+            {
+              "question": "Jaki jest wzór na przeliczanie kW na VA?",
+              "answer": "Wzór: VA = (kW × 1000) / PF, gdzie VA to moc pozorna w woltamperach, kW — moc czynna w kilowatach, PF — współczynnik mocy (0–1). Moc czynna = moc pozorna × PF, więc moc pozorna = moc czynna / PF."
+            },
+            {
+              "question": "Jaka jest różnica między kW a VA?",
+              "answer": "kW (kilowaty) to moc czynna — rzeczywista praca wykonywana przez obciążenie (np. wyjście mechaniczne, ciepło, światło). VA (woltampery) to moc pozorna — całkowita moc dostarczana przez źródło, zawierająca moc bierną nierealizującą użytecznej pracy. Zawsze VA ≥ kW; są równe tylko przy PF = 1,0 (obciążenie czysto rezystancyjne)."
+            },
+            {
+              "question": "Czym jest współczynnik mocy i jakie są typowe wartości?",
+              "answer": "Współczynnik mocy (PF) to stosunek kW / VA, od 0 do 1. Mierzy, jak efektywnie moc elektryczna jest zamieniana w użyteczną pracę. Typowe wartości: grzejniki rezystancyjne ~1,0, świetlówki 0,5–0,95, silniki indukcyjne 0,7–0,9, zasilacze 0,6–0,95. Niższy PF oznacza, że do dostarczenia takiej samej mocy kW potrzeba wyższej mocy VA, co zwiększa wymiary przewodów i transformatorów."
+            },
+            {
+              "question": "Dlaczego muszę przeliczać kW na VA?",
+              "answer": "Transformatory, generatory, UPS-y i wyłączniki są znamionowane w VA (lub kVA), a nie w kW. Obciążenie pobierające 10 kW przy PF 0,8 wymaga 12,5 kVA pojemności zasilania. Dobór urządzeń tylko według kW (z pominięciem PF) może prowadzić do przeciążenia. Przeliczanie kW na VA zapewnia wybór urządzeń o wystarczającej pojemności mocy pozornej."
+            },
+            {
+              "question": "Czy kalkulator jest darmowy?",
+              "answer": "Tak, kalkulator kW na VA jest darmowy. Bez rejestracji i płatności. Wpisz moc w kW i współczynnik mocy (0–1), aby uzyskać natychmiastowy wynik mocy pozornej w VA."
+            }
           ]
         }
       }
@@ -1260,11 +1292,26 @@
         "faq": {
           "heading": "Najczęściej zadawane pytania",
           "items": [
-            { "question": "Jaki jest wzór na przeliczanie kW na kVA?", "answer": "Wzór: kVA = kW / PF, gdzie kVA to moc pozorna w kilowoltoamperach, kW — moc czynna w kilowatach, PF — współczynnik mocy (0–1). Moc czynna = moc pozorna × PF, więc moc pozorna = moc czynna / PF." },
-            { "question": "Jaka jest różnica między kW a kVA?", "answer": "kW (kilowaty) to moc czynna — rzeczywista praca wykonywana przez obciążenie (np. wyjście mechaniczne, ciepło, światło). kVA (kilowoltoampery) to moc pozorna — całkowita moc dostarczana przez źródło, zawierająca moc bierną nierealizującą użytecznej pracy. Zawsze kVA ≥ kW; są równe tylko przy PF = 1,0 (obciążenie czysto rezystancyjne)." },
-            { "question": "Czym jest współczynnik mocy i jakie są typowe wartości?", "answer": "Współczynnik mocy (PF) to stosunek kW / kVA, od 0 do 1. Mierzy, jak efektywnie moc elektryczna jest zamieniana w użyteczną pracę. Typowe wartości: grzejniki rezystancyjne ~1,0, świetlówki 0,5–0,95, silniki indukcyjne 0,7–0,9, zasilacze 0,6–0,95. Niższy PF oznacza, że do dostarczenia takiej samej mocy kW potrzeba wyższej mocy kVA, co zwiększa wymiary przewodów i transformatorów." },
-            { "question": "Dlaczego muszę przeliczać kW na kVA?", "answer": "Transformatory, generatory, UPS-y i wyłączniki są znamionowane w kVA, a nie w kW. Obciążenie pobierające 10 kW przy PF 0,8 wymaga 12,5 kVA pojemności zasilania. Dobór urządzeń tylko według kW (z pominięciem PF) może prowadzić do przeciążenia. Przeliczanie kW na kVA zapewnia wybór urządzeń o wystarczającej pojemności mocy pozornej." },
-            { "question": "Czy kalkulator jest darmowy?", "answer": "Tak, kalkulator kW na kVA jest darmowy. Bez rejestracji i płatności. Wpisz moc w kW i współczynnik mocy (0–1), aby uzyskać natychmiastowy wynik mocy pozornej w kVA." }
+            {
+              "question": "Jaki jest wzór na przeliczanie kW na kVA?",
+              "answer": "Wzór: kVA = kW / PF, gdzie kVA to moc pozorna w kilowoltoamperach, kW — moc czynna w kilowatach, PF — współczynnik mocy (0–1). Moc czynna = moc pozorna × PF, więc moc pozorna = moc czynna / PF."
+            },
+            {
+              "question": "Jaka jest różnica między kW a kVA?",
+              "answer": "kW (kilowaty) to moc czynna — rzeczywista praca wykonywana przez obciążenie (np. wyjście mechaniczne, ciepło, światło). kVA (kilowoltoampery) to moc pozorna — całkowita moc dostarczana przez źródło, zawierająca moc bierną nierealizującą użytecznej pracy. Zawsze kVA ≥ kW; są równe tylko przy PF = 1,0 (obciążenie czysto rezystancyjne)."
+            },
+            {
+              "question": "Czym jest współczynnik mocy i jakie są typowe wartości?",
+              "answer": "Współczynnik mocy (PF) to stosunek kW / kVA, od 0 do 1. Mierzy, jak efektywnie moc elektryczna jest zamieniana w użyteczną pracę. Typowe wartości: grzejniki rezystancyjne ~1,0, świetlówki 0,5–0,95, silniki indukcyjne 0,7–0,9, zasilacze 0,6–0,95. Niższy PF oznacza, że do dostarczenia takiej samej mocy kW potrzeba wyższej mocy kVA, co zwiększa wymiary przewodów i transformatorów."
+            },
+            {
+              "question": "Dlaczego muszę przeliczać kW na kVA?",
+              "answer": "Transformatory, generatory, UPS-y i wyłączniki są znamionowane w kVA, a nie w kW. Obciążenie pobierające 10 kW przy PF 0,8 wymaga 12,5 kVA pojemności zasilania. Dobór urządzeń tylko według kW (z pominięciem PF) może prowadzić do przeciążenia. Przeliczanie kW na kVA zapewnia wybór urządzeń o wystarczającej pojemności mocy pozornej."
+            },
+            {
+              "question": "Czy kalkulator jest darmowy?",
+              "answer": "Tak, kalkulator kW na kVA jest darmowy. Bez rejestracji i płatności. Wpisz moc w kW i współczynnik mocy (0–1), aby uzyskać natychmiastowy wynik mocy pozornej w kVA."
+            }
           ]
         }
       }
@@ -1279,7 +1326,6 @@
       "result": "Wynik",
       "watts": "Waty (W)",
       "seo": {
-        "title": "Kalkulator kWh na Waty – Oblicz Moc z Energii i Czasu",
         "title": "Kalkulator kWh na Waty – Oblicz Moc z Energii i Czasu",
         "description": "Darmowy kalkulator przeliczania kWh na Waty. Przelicz kilowatogodziny na waty natychmiast, używając czasu trwania. Idealny do obliczeń elektrycznych, analizy zużycia energii i określania mocy.",
         "keywords": "kalkulator kwh na waty, przelicznik kilowatogodzin na waty, konwersja kwh waty, kalkulator energii na moc, kalkulator elektryczny, kalkulator watów, kalkulator mocy, darmowy kalkulator",
@@ -1646,11 +1692,26 @@
         "faq": {
           "heading": "Często zadawane pytania",
           "items": [
-            {"question": "Jaki jest wzór VA na kVA?", "answer": "kVA = VA / 1000. Obie wielkości to moc pozorna; dzielisz przez 1000. Współczynnik mocy nie jest potrzebny."},
-            {"question": "Różnica między VA a kVA?", "answer": "VA i kVA to moc pozorna. 1 kVA = 1000 VA. Ta sama wielkość, inne jednostki — jak metry i kilometry."},
-            {"question": "Czy potrzebny jest współczynnik mocy?", "answer": "Nie. Współczynnik mocy jest potrzebny tylko przy przejściu moc pozorna ↔ moc czynna (W/kW). VA → kVA to tylko ÷ 1000."},
-            {"question": "Kiedy VA, kiedy kVA?", "answer": "Mniejsze urządzenia często w VA, większe (UPS, transformatory) w kVA. Przeliczanie pozwala porównywać i sumować ratingi."},
-            {"question": "Czy kalkulator jest darmowy?", "answer": "Tak. Bez rejestracji. Wprowadź VA, otrzymasz kVA."}
+            {
+              "question": "Jaki jest wzór VA na kVA?",
+              "answer": "kVA = VA / 1000. Obie wielkości to moc pozorna; dzielisz przez 1000. Współczynnik mocy nie jest potrzebny."
+            },
+            {
+              "question": "Różnica między VA a kVA?",
+              "answer": "VA i kVA to moc pozorna. 1 kVA = 1000 VA. Ta sama wielkość, inne jednostki — jak metry i kilometry."
+            },
+            {
+              "question": "Czy potrzebny jest współczynnik mocy?",
+              "answer": "Nie. Współczynnik mocy jest potrzebny tylko przy przejściu moc pozorna ↔ moc czynna (W/kW). VA → kVA to tylko ÷ 1000."
+            },
+            {
+              "question": "Kiedy VA, kiedy kVA?",
+              "answer": "Mniejsze urządzenia często w VA, większe (UPS, transformatory) w kVA. Przeliczanie pozwala porównywać i sumować ratingi."
+            },
+            {
+              "question": "Czy kalkulator jest darmowy?",
+              "answer": "Tak. Bez rejestracji. Wprowadź VA, otrzymasz kVA."
+            }
           ]
         },
         "related": {
@@ -1861,11 +1922,26 @@
         "faq": {
           "heading": "Często zadawane pytania",
           "items": [
-            {"question": "Wzór na volty na ampery z watami?", "answer": "I = P / V. Prąd (A) = moc (W) / napięcie (V). Np. 2300 W, 230 V → I = 10 A."},
-            {"question": "Wzór na volty na ampery z omami?", "answer": "I = V / R (prawo Ohma). Prąd = napięcie / opór. Np. 12 V, 24 Ω → I = 0,5 A."},
-            {"question": "Kiedy waty, kiedy omy?", "answer": "Waty — gdy znasz moc (np. tabliczka znamionowa) i napięcie. Omy — gdy znasz napięcie na rezystorze i opór (rezystory, grzałki, obwody DC)."},
-            {"question": "Czy prawo Ohma dotyczy AC?", "answer": "I = V / R stosuje się do rezystancyjnych obwodów AC przy wartościach skutecznych. Dla elementów reakcyjnych użyj impedancji Z: I = V / Z."},
-            {"question": "Czy kalkulator jest darmowy?", "answer": "Tak. Wybierz tryb waty lub omy, podaj napięcie i waty/omy, uzyskasz prąd w amperach."}
+            {
+              "question": "Wzór na volty na ampery z watami?",
+              "answer": "I = P / V. Prąd (A) = moc (W) / napięcie (V). Np. 2300 W, 230 V → I = 10 A."
+            },
+            {
+              "question": "Wzór na volty na ampery z omami?",
+              "answer": "I = V / R (prawo Ohma). Prąd = napięcie / opór. Np. 12 V, 24 Ω → I = 0,5 A."
+            },
+            {
+              "question": "Kiedy waty, kiedy omy?",
+              "answer": "Waty — gdy znasz moc (np. tabliczka znamionowa) i napięcie. Omy — gdy znasz napięcie na rezystorze i opór (rezystory, grzałki, obwody DC)."
+            },
+            {
+              "question": "Czy prawo Ohma dotyczy AC?",
+              "answer": "I = V / R stosuje się do rezystancyjnych obwodów AC przy wartościach skutecznych. Dla elementów reakcyjnych użyj impedancji Z: I = V / Z."
+            },
+            {
+              "question": "Czy kalkulator jest darmowy?",
+              "answer": "Tak. Wybierz tryb waty lub omy, podaj napięcie i waty/omy, uzyskasz prąd w amperach."
+            }
           ]
         },
         "related": {
@@ -2016,7 +2092,6 @@
       "amps": "Ampery (A)",
       "volts": "Napięcie (V)",
       "powerFactor": "Współczynnik mocy (0-1)",
-      "volts": "Napięcie (V)",
       "calculate": "Oblicz",
       "reset": "Resetuj",
       "result": "Wynik",
@@ -2094,12 +2169,30 @@
         "faq": {
           "heading": "Często zadawane pytania",
           "items": [
-            { "question": "Jaki jest wzór waty na ampery (DC)?", "answer": "Dla DC: I = P / V, gdzie I to prąd w A, P moc w W, V napięcie w V. Dzieląc moc przez napięcie otrzymasz prąd. Np.: 1200 W przy 120 V → I = 10 A." },
-            { "question": "Jaki jest wzór dla jednofazowego?", "answer": "Dla jednofazowego: I = P / (V × PF). V napięcie (V), P moc (W), PF współczynnik mocy (0–1). Np.: 1840 W przy 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
-            { "question": "Jaki jest wzór dla trójfazowego?", "answer": "Dla trójfazowego: I = P / (√3 × V × PF). V napięcie międzyprzewodowe (V), P moc (W), PF współczynnik mocy. √3 ≈ 1,732. Np.: 8,83 kW przy 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
-            { "question": "Kiedy używać DC, jednofazowego czy trójfazowego?", "answer": "DC dla baterii, obwodów solarnych DC i obciążeń DC. Jednofazowy dla typowego mieszkaniowego (120 V, 230 V, 240 V). Trójfazowy dla przemysłowej i komercyjnej dystrybucji (400 V, 480 V międzyprzewodowe) oraz silników." },
-            { "question": "Jak to się ma do ampery na waty?", "answer": "Waty na ampery (I = P / V) i ampery na waty (P = I × V) to operacje odwrotne. Użyj waty→ampery, gdy znasz moc i napięcie; ampery→waty, gdy znasz prąd i napięcie." },
-            { "question": "Czy ten kalkulator jest darmowy?", "answer": "Tak. Kalkulator Waty na Ampery jest darmowy. Bez rejestracji. Wybierz DC, jednofazowy lub trójfazowy, wprowadź waty i napięcie (oraz współczynnik mocy dla AC), uzyskaj ampery natychmiast." }
+            {
+              "question": "Jaki jest wzór waty na ampery (DC)?",
+              "answer": "Dla DC: I = P / V, gdzie I to prąd w A, P moc w W, V napięcie w V. Dzieląc moc przez napięcie otrzymasz prąd. Np.: 1200 W przy 120 V → I = 10 A."
+            },
+            {
+              "question": "Jaki jest wzór dla jednofazowego?",
+              "answer": "Dla jednofazowego: I = P / (V × PF). V napięcie (V), P moc (W), PF współczynnik mocy (0–1). Np.: 1840 W przy 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A."
+            },
+            {
+              "question": "Jaki jest wzór dla trójfazowego?",
+              "answer": "Dla trójfazowego: I = P / (√3 × V × PF). V napięcie międzyprzewodowe (V), P moc (W), PF współczynnik mocy. √3 ≈ 1,732. Np.: 8,83 kW przy 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+            },
+            {
+              "question": "Kiedy używać DC, jednofazowego czy trójfazowego?",
+              "answer": "DC dla baterii, obwodów solarnych DC i obciążeń DC. Jednofazowy dla typowego mieszkaniowego (120 V, 230 V, 240 V). Trójfazowy dla przemysłowej i komercyjnej dystrybucji (400 V, 480 V międzyprzewodowe) oraz silników."
+            },
+            {
+              "question": "Jak to się ma do ampery na waty?",
+              "answer": "Waty na ampery (I = P / V) i ampery na waty (P = I × V) to operacje odwrotne. Użyj waty→ampery, gdy znasz moc i napięcie; ampery→waty, gdy znasz prąd i napięcie."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak. Kalkulator Waty na Ampery jest darmowy. Bez rejestracji. Wybierz DC, jednofazowy lub trójfazowy, wprowadź waty i napięcie (oraz współczynnik mocy dla AC), uzyskaj ampery natychmiast."
+            }
           ]
         },
         "related": {
@@ -2145,12 +2238,30 @@
         "faq": {
           "heading": "Często zadawane pytania",
           "items": [
-            { "question": "Jaki jest wzór waty na wolty (DC)?", "answer": "Dla DC: V = P / I, gdzie V to napięcie w V, P moc w W, I prąd w A. Dzieląc moc przez prąd otrzymasz napięcie. Np.: 1200 W przy 10 A → V = 120 V." },
-            { "question": "Jaki jest wzór dla jednofazowego?", "answer": "Dla jednofazowego: V = P / (I × PF). I prąd (A), P moc (W), PF współczynnik mocy (0–1). Np.: 1840 W przy 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
-            { "question": "Jaki jest wzór dla trójfazowego?", "answer": "Dla trójfazowego: V = P / (√3 × I × PF). I prąd fazowy (A), P moc (W), PF współczynnik mocy. √3 ≈ 1,732. Np.: 8,83 kW przy 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
-            { "question": "Kiedy używać DC, jednofazowego czy trójfazowego?", "answer": "DC dla baterii, obwodów solarnych DC i obciążeń DC. Jednofazowy dla typowego mieszkaniowego (120 V, 230 V, 240 V). Trójfazowy dla przemysłowej i komercyjnej dystrybucji (400 V, 480 V międzyprzewodowe) oraz silników." },
-            { "question": "Jak to się ma do wolty na waty?", "answer": "Waty na wolty (V = P / I) i wolty na waty (P = V × I) to operacje odwrotne. Użyj waty→wolty, gdy znasz moc i prąd; wolty→waty, gdy znasz napięcie i prąd." },
-            { "question": "Czy ten kalkulator jest darmowy?", "answer": "Tak. Kalkulator Waty na Wolty jest darmowy. Bez rejestracji. Wybierz DC, jednofazowy lub trójfazowy, wprowadź waty i prąd (oraz współczynnik mocy dla AC), uzyskaj napięcie natychmiast." }
+            {
+              "question": "Jaki jest wzór waty na wolty (DC)?",
+              "answer": "Dla DC: V = P / I, gdzie V to napięcie w V, P moc w W, I prąd w A. Dzieląc moc przez prąd otrzymasz napięcie. Np.: 1200 W przy 10 A → V = 120 V."
+            },
+            {
+              "question": "Jaki jest wzór dla jednofazowego?",
+              "answer": "Dla jednofazowego: V = P / (I × PF). I prąd (A), P moc (W), PF współczynnik mocy (0–1). Np.: 1840 W przy 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V."
+            },
+            {
+              "question": "Jaki jest wzór dla trójfazowego?",
+              "answer": "Dla trójfazowego: V = P / (√3 × I × PF). I prąd fazowy (A), P moc (W), PF współczynnik mocy. √3 ≈ 1,732. Np.: 8,83 kW przy 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+            },
+            {
+              "question": "Kiedy używać DC, jednofazowego czy trójfazowego?",
+              "answer": "DC dla baterii, obwodów solarnych DC i obciążeń DC. Jednofazowy dla typowego mieszkaniowego (120 V, 230 V, 240 V). Trójfazowy dla przemysłowej i komercyjnej dystrybucji (400 V, 480 V międzyprzewodowe) oraz silników."
+            },
+            {
+              "question": "Jak to się ma do wolty na waty?",
+              "answer": "Waty na wolty (V = P / I) i wolty na waty (P = V × I) to operacje odwrotne. Użyj waty→wolty, gdy znasz moc i prąd; wolty→waty, gdy znasz napięcie i prąd."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak. Kalkulator Waty na Wolty jest darmowy. Bez rejestracji. Wybierz DC, jednofazowy lub trójfazowy, wprowadź waty i prąd (oraz współczynnik mocy dla AC), uzyskaj napięcie natychmiast."
+            }
           ]
         },
         "related": {

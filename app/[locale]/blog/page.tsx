@@ -3,6 +3,21 @@ import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { getBlogPosts } from '@/lib/blog';
+import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'common' });
+  const path = '/blog';
+  const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
+  const title = `${t('blog')} | ${t('siteName')}`;
+  return {
+    title,
+    description: t('blogDescription'),
+    alternates: { canonical: canonicalUrl, languages: generateHreflangUrls(path) },
+    openGraph: { title, description: t('blogDescription'), type: 'website', url: canonicalUrl },
+  };
+}
 
 export default async function BlogPage() {
   const t = await getTranslations('common');

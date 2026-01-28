@@ -140,14 +140,7 @@ export function TextToBinaryCalculator() {
 
   return (
     <>
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: '1fr 1fr', 
-        gap: '2rem',
-        alignItems: 'start'
-      }}
-      className="split-view-container"
-      >
+      <div className="split-view-container">
         {/* Left Column - Inputs */}
         <div className="input-section" style={{ marginBottom: 0 }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -173,17 +166,23 @@ export function TextToBinaryCalculator() {
               />
             </div>
 
-            <div className="options-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div className="options-grid options-grid-dropdowns">
               <div className="input-card">
-                <label htmlFor="encoding" className="input-label" style={{ fontSize: '0.875rem', marginBottom: '0.5rem' }}>
+                <label htmlFor="encoding" className="input-label">
                   {t('encoding')}
                 </label>
                 <select
                   id="encoding"
                   value={encoding}
                   onChange={(e) => setEncoding(e.target.value as EncodingType)}
-                  className="number-input"
-                  style={{ padding: '0.75rem', fontSize: '0.875rem' }}
+                  className="number-input select-dropdown"
+                  title={
+                    encoding === 'utf-8' ? t('encodingUtf8') :
+                    encoding === 'utf-16' ? t('encodingUtf16') :
+                    encoding === 'utf-16le' ? t('encodingUtf16le') :
+                    encoding === 'utf-16be' ? t('encodingUtf16be') :
+                    t('encodingWindows1252')
+                  }
                 >
                   <option value="utf-8">{t('encodingUtf8')}</option>
                   <option value="utf-16">{t('encodingUtf16')}</option>
@@ -194,15 +193,19 @@ export function TextToBinaryCalculator() {
               </div>
 
               <div className="input-card">
-                <label htmlFor="separator" className="input-label" style={{ fontSize: '0.875rem', marginBottom: '0.5rem' }}>
+                <label htmlFor="separator" className="input-label">
                   {t('separator')}
                 </label>
                 <select
                   id="separator"
                   value={separatorType}
                   onChange={(e) => setSeparatorType(e.target.value as SeparatorType)}
-                  className="number-input"
-                  style={{ padding: '0.75rem', fontSize: '0.875rem' }}
+                  className="number-input select-dropdown"
+                  title={
+                    separatorType === 'space' ? t('separatorSpace') :
+                    separatorType === 'comma' ? t('separatorComma') :
+                    t('separatorCustom')
+                  }
                 >
                   <option value="space">{t('separatorSpace')}</option>
                   <option value="comma">{t('separatorComma')}</option>
@@ -227,12 +230,13 @@ export function TextToBinaryCalculator() {
                   className="number-input"
                   placeholder={t('customSeparatorPlaceholder')}
                   maxLength={10}
+                  style={{ minHeight: '44px' }}
                 />
               </div>
             )}
 
             <div className="action-buttons" style={{ marginTop: '0.5rem' }}>
-              <button onClick={handleReset} className="btn btn-secondary">
+              <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>
                 {t('reset')}
               </button>
             </div>

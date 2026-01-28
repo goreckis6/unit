@@ -90,6 +90,65 @@
         }
       }
     },
+    "addingFractions": {
+      "title": "Murtolukujen Lisäyslaskin",
+      "description": "Lisää kaksi murtolukua ja saat yksinkertaistetun tuloksen ja desimaaliarvon.",
+      "firstNumerator": "Ensimmäisen murtoluvun osoittaja",
+      "firstDenominator": "Ensimmäisen murtoluvun nimittäjä",
+      "secondNumerator": "Toisen murtoluvun osoittaja",
+      "secondDenominator": "Toisen murtoluvun nimittäjä",
+      "result": "Tulos",
+      "resultFraction": "Tulos (yksinkertaistettu murtoluku)",
+      "resultDecimal": "Tulos (desimaaliarvo)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "seo": {
+        "title": "Murtolukujen Lisäyslaskin – Lisää ja Yksinkertaista Murtolukuja Verkossa",
+        "description": "Ilmainen murtolukujen lisäyslaskin kahden murtoluvun lisäämiseen ja yksinkertaistetun tuloksen saamiseen murtolukuna ja desimaalina. Täydellinen opiskelijoille, opettajille ja kaikille, jotka työskentelevät murtolukujen kanssa.",
+        "keywords": "murtolukujen lisäyslaskin, murtolukujen yhteenlasku laskin, lisää murtolukuja, yksinkertaista murtolukuja, murtoluku desimaaliksi, matematiikka murtolukulaskin, murtoluku apu, online murtolukulaskin",
+        "content": {
+          "heading": "Kuinka Lisätä Murtolukuja",
+          "paragraph1": "Murtolukujen lisääminen on perustaito matematiikassa, erityisesti koulussa ja arkipäiväisessä ongelmanratkaisussa. Lisätäksesi kaksi murtolukua sinun täytyy varmistaa, että niillä on yhteinen nimittäjä. Murtoluku kirjoitetaan muodossa a/b, jossa a on osoittaja (yläpuolella oleva luku) ja b on nimittäjä (alapuolella oleva luku). Kun nimittäjät ovat erilaiset, muunnat ensin murtoluvut vastaaviksi murtoluvuiksi, joilla on yhteinen nimittäjä, ennen kuin lisäät osoittajat.",
+          "paragraph2": "Vakiokaava kahden murtoluvun a/b ja c/d lisäämiseen on: a/b + c/d = (a × d + b × c) / (b × d). Tämä toimii, koska kirjoitat jokaisen murtoluvun uudelleen yhteisellä nimittäjällä b × d. Kun olet laskenut uuden osoittajan, sinun pitäisi yksinkertaistaa tulos jakamalla sekä osoittaja että nimittäjä niiden suurimmalla yhteisellä jakajalla (SYY). Esimerkiksi: 1/4 + 1/6 = (1×6 + 4×1) / (4×6) = (6 + 4) / 24 = 10/24, mikä yksinkertaistuu muotoon 5/12.",
+          "paragraph3": "Murtolukujen Lisäyslaskin automatisoi tämän prosessin. Syötät yksinkertaisesti kahden murtoluvun osoittajat ja nimittäjät, ja työkalu löytää yhteisen nimittäjän, lisää murtoluvut, yksinkertaistaa tuloksen ja näyttää sekä yksinkertaistetun murtoluvun että sen desimaaliarvon. Tämä säästää aikaa ja vähentää virheitä kotitehtävissä, kokeeseen valmistautumisessa tai käytännön murtolukuongelmissa resepteissä, mittauksissa ja taloudessa.",
+          "paragraph4": "Laskin tukee positiivisia ja negatiivisia murtolukuja, epäaitoja murtolukuja (joissa osoittaja on suurempi kuin nimittäjä) ja sekalukutyyppisiä syötteitä (kun ne muunnetaan epäaitoiksi murtoluvuiksi). Se on ihanteellinen opiskelijoille, jotka oppivat lisäämään murtolukuja, opettajille, jotka valmistavat esimerkkejä, ja kaikille, jotka tarvitsevat nopeita, tarkkoja murtolukulaskelmia.",
+          "exampleHeading": "Esimerkit:",
+          "exampleText": "1/4 + 1/6 = (1×6 + 4×1) / (4×6) = 10/24 = 5/12. 2/3 + 3/5 = (2×5 + 3×3) / (3×5) = (10 + 9) / 15 = 19/15 = 1 4/15 ≈ 1.2667. 5/8 + 7/12 = (5×12 + 7×8) / (8×12) = (60 + 56) / 96 = 116/96 = 29/24 ≈ 1.2083."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Kuinka lisään murtolukuja, joilla on eri nimittäjät?",
+              "answer": "Lisätäksesi murtolukuja, joilla on eri nimittäjät, löydä yhteinen nimittäjä (usein nimittäjien tulo tai pienin yhteinen monikerta), muunna jokainen murtoluku vastaavaksi murtoluvuksi kyseisellä nimittäjällä, ja lisää sitten osoittajat. Lopuksi yksinkertaista tulos, jos mahdollista. Laskimemme tekee tämän automaattisesti puolestasi."
+            },
+            {
+              "question": "Yksinkertaistaako laskin tuloksen?",
+              "answer": "Kyllä. Murtolukujen lisäämisen jälkeen laskin jakaa osoittajan ja nimittäjän niiden suurimmalla yhteisellä jakajalla (SYY), jotta tulos näytetään yksinkertaisimmassa muodossa. Se näyttää myös summan desimaaliarvon."
+            },
+            {
+              "question": "Voinko syöttää negatiivisia murtolukuja?",
+              "answer": "Kyllä, voit syöttää negatiivisia osoittajia tai nimittäjiä. Laskin käsittelee negatiiviset murtoluvut oikein ja palauttaa yksinkertaistetun tuloksen."
+            },
+            {
+              "question": "Voinko käyttää tätä epäaitoihin murtolukuihin?",
+              "answer": "Ehdottomasti. Voit syöttää epäaitoja murtolukuja (joissa osoittaja on suurempi kuin nimittäjä), ja laskin lisää ne ja yksinkertaistaa tuloksen. Desimaaliarvo näytetään myös."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen käyttää?",
+              "answer": "Kyllä, Murtolukujen Lisäyslaskin on täysin ilmainen käyttää. Rekisteröitymistä tai maksua ei vaadita, ja se toimii sekä työpöytä- että mobiililaitteilla."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "addition": "Yhteenlaskulaskin",
+          "additionDesc": "Lisää kokonaislukuja ja desimaaleja nopeasti ja tarkasti",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Laske prosenttiarvot, prosenttimuutos ja prosenttisuhteet"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matemaattiset Laskimet",
       "description": "Selaa kokoelmaamme matemaattisia laskimia kaikille laskentatarpeillesi",

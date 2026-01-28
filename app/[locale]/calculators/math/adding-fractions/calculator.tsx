@@ -33,46 +33,76 @@ export function addFractions(a: Fraction, b: Fraction): Fraction {
 export function AddingFractionsCalculator() {
   const t = useTranslations('calculators.addingFractions');
 
-  const [num1, setNum1] = useState<string>('');
-  const [den1, setDen1] = useState<string>('');
-  const [num2, setNum2] = useState<string>('');
-  const [den2, setDen2] = useState<string>('');
+  const [expression, setExpression] = useState<string>('');
 
   const [resultFraction, setResultFraction] = useState<Fraction | null>(null);
   const [resultDecimal, setResultDecimal] = useState<number | null>(null);
   const resultRef = useScrollToResult(resultFraction);
 
-  const handleCalculate = () => {
-    const n1 = parseFloat(num1);
-    const d1 = parseFloat(den1);
-    const n2 = parseFloat(num2);
-    const d2 = parseFloat(den2);
+  function parseTerm(term: string): Fraction | null {
+    const trimmed = term.trim();
+    if (!trimmed) return null;
 
-    if (
-      !isNaN(n1) &&
-      !isNaN(d1) &&
-      !isNaN(n2) &&
-      !isNaN(d2) &&
-      d1 !== 0 &&
-      d2 !== 0
-    ) {
-      const sum = addFractions(
-        { numerator: n1, denominator: d1 },
-        { numerator: n2, denominator: d2 }
-      );
-      setResultFraction(sum);
-      setResultDecimal(sum.numerator / sum.denominator);
-    } else {
+    // Integer only, e.g. "2" or "-3"
+    const intMatch = trimmed.match(/^([+-])?\s*(\d+)\s*$/);
+    if (intMatch) {
+      const sign = intMatch[1] === '-' ? -1 : 1;
+      const whole = parseInt(intMatch[2], 10);
+      return { numerator: sign * whole, denominator: 1 };
+    }
+
+    // Mixed number or simple fraction, e.g. "1/2", "-1/2", "2 1/2", "-2 1/2"
+    const fracMatch = trimmed.match(
+      /^([+-])?\s*(?:(\d+)\s+)?(\d+)\s*\/\s*(\d+)\s*$/
+    );
+    if (!fracMatch) return null;
+
+    const sign = fracMatch[1] === '-' ? -1 : 1;
+    const wholePart = fracMatch[2] ? parseInt(fracMatch[2], 10) : 0;
+    const numPart = parseInt(fracMatch[3], 10);
+    const denPart = parseInt(fracMatch[4], 10);
+
+    if (!denPart) return null;
+
+    const improperNumerator = wholePart * denPart + numPart;
+    return {
+      numerator: sign * improperNumerator,
+      denominator: denPart,
+    };
+  }
+
+  const handleCalculate = () => {
+    const parts = expression.split('+');
+
+    if (parts.length < 2) {
       setResultFraction(null);
       setResultDecimal(null);
+      return;
     }
+
+    const fractions: Fraction[] = [];
+
+    for (const part of parts) {
+      const parsed = parseTerm(part);
+      if (!parsed) {
+        setResultFraction(null);
+        setResultDecimal(null);
+        return;
+      }
+      fractions.push(parsed);
+    }
+
+    let sum = fractions[0];
+    for (let i = 1; i < fractions.length; i++) {
+      sum = addFractions(sum, fractions[i]);
+    }
+
+    setResultFraction(sum);
+    setResultDecimal(sum.numerator / sum.denominator);
   };
 
   const handleReset = () => {
-    setNum1('');
-    setDen1('');
-    setNum2('');
-    setDen2('');
+    setExpression('');
     setResultFraction(null);
     setResultDecimal(null);
   };
@@ -80,71 +110,23 @@ export function AddingFractionsCalculator() {
   return (
     <>
       <div className="input-section">
+        <div className="input-legend">
+          <p className="legend-text">{t('inputLegend')}</p>
+        </div>
         <div className="inputs-grid">
           <div className="input-card">
-            <label htmlFor="num1" className="input-label">
-              {t('firstNumerator')}
+            <label htmlFor="expression" className="input-label">
+              {t('title')}
             </label>
             <div className="input-with-unit">
               <input
-                id="num1"
-                type="number"
-                value={num1}
-                onChange={(e) => setNum1(e.target.value)}
+                id="expression"
+                type="text"
+                value={expression}
+                onChange={(e) => setExpression(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
                 className="number-input"
-                placeholder="1"
-              />
-            </div>
-          </div>
-
-          <div className="input-card">
-            <label htmlFor="den1" className="input-label">
-              {t('firstDenominator')}
-            </label>
-            <div className="input-with-unit">
-              <input
-                id="den1"
-                type="number"
-                value={den1}
-                onChange={(e) => setDen1(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                className="number-input"
-                placeholder="2"
-              />
-            </div>
-          </div>
-
-          <div className="input-card">
-            <label htmlFor="num2" className="input-label">
-              {t('secondNumerator')}
-            </label>
-            <div className="input-with-unit">
-              <input
-                id="num2"
-                type="number"
-                value={num2}
-                onChange={(e) => setNum2(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                className="number-input"
-                placeholder="1"
-              />
-            </div>
-          </div>
-
-          <div className="input-card">
-            <label htmlFor="den2" className="input-label">
-              {t('secondDenominator')}
-            </label>
-            <div className="input-with-unit">
-              <input
-                id="den2"
-                type="number"
-                value={den2}
-                onChange={(e) => setDen2(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                className="number-input"
-                placeholder="3"
+                placeholder="1/2 + 1/3"
               />
             </div>
           </div>

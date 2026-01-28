@@ -86,6 +86,12 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       descKey: 'textToBinary.description',
       path: '/calculators/math/text-to-binary',
     },
+    {
+      id: 'italic-text',
+      titleKey: 'italicText.title',
+      descKey: 'italicText.description',
+      path: '/calculators/math/italic-text',
+    },
   ];
 
   return (

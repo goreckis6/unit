@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { useScrollToResult } from '@/hooks/useScrollToResult';
 
 type EncodingType = 'utf-8' | 'utf-16' | 'utf-16le' | 'utf-16be' | 'windows-1252';
 type SeparatorType = 'space' | 'comma' | 'custom';
@@ -113,7 +112,6 @@ export function TextToBinaryCalculator() {
   const [separatorType, setSeparatorType] = useState<SeparatorType>('space');
   const [customSeparator, setCustomSeparator] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const resultRef = useScrollToResult(result);
 
   // Determine separator string
   const separator = separatorType === 'space' 
@@ -215,31 +213,40 @@ export function TextToBinaryCalculator() {
         </div>
       </div>
 
-      <div className="action-buttons">
-        <button onClick={handleReset} className="btn btn-secondary">
-          {t('reset')}
-        </button>
-      </div>
-
-      {result && (
-        <div ref={resultRef} className="result-section">
-          <div className="result-header">
-            <div className="result-badge">
-              {t('result')}
-            </div>
+      {/* Result section - always visible, compact layout */}
+      <div className="result-section" style={{ marginTop: '1rem' }}>
+        <div className="result-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
+          <div className="result-badge">
+            {t('result')}
           </div>
+          <button onClick={handleReset} className="btn btn-secondary" style={{ padding: '0.4rem 1rem', fontSize: '0.875rem' }}>
+            {t('reset')}
+          </button>
+        </div>
+        {result ? (
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">{t('binaryOutput')}</div>
-              <div className="result-value-box" style={{ wordBreak: 'break-all', whiteSpace: 'pre-wrap' }}>
+              <div className="result-value-box" style={{ wordBreak: 'break-all', whiteSpace: 'pre-wrap', minHeight: '60px' }}>
                 <span className="result-value" style={{ fontFamily: 'monospace', fontSize: '0.9em' }}>
                   {result}
                 </span>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        ) : (
+          <div className="result-display" style={{ opacity: 0.5 }}>
+            <div className="result-item">
+              <div className="result-label">{t('binaryOutput')}</div>
+              <div className="result-value-box" style={{ wordBreak: 'break-all', whiteSpace: 'pre-wrap', minHeight: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span style={{ fontFamily: 'monospace', fontSize: '0.9em', color: 'var(--text-secondary)' }}>
+                  {t('textPlaceholder')}
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </>
   );
 }

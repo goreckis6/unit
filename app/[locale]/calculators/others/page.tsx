@@ -80,7 +80,12 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
   const faqItems = await getFaqItems(locale);
 
   const calculators: Calculator[] = [
-    // Add calculators here as they are created
+    {
+      id: 'text-to-binary',
+      titleKey: 'textToBinary.title',
+      descKey: 'textToBinary.description',
+      path: '/calculators/math/text-to-binary',
+    },
   ];
 
   return (

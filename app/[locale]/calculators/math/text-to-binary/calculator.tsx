@@ -140,112 +140,140 @@ export function TextToBinaryCalculator() {
 
   return (
     <>
-      <div className="input-section">
-        <div className="inputs-grid">
-          <div className="input-card" style={{ gridColumn: '1 / -1' }}>
-            <label htmlFor="text" className="input-label">
-              {t('textInput')}
-            </label>
-            <textarea
-              id="text"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              className="number-input"
-              placeholder={t('textPlaceholder')}
-              rows={4}
-              style={{ resize: 'vertical', minHeight: '100px' }}
-            />
-          </div>
-
-          <div className="input-card">
-            <label htmlFor="encoding" className="input-label">
-              {t('encoding')}
-            </label>
-            <select
-              id="encoding"
-              value={encoding}
-              onChange={(e) => setEncoding(e.target.value as EncodingType)}
-              className="number-input"
-            >
-              <option value="utf-8">{t('encodingUtf8')}</option>
-              <option value="utf-16">{t('encodingUtf16')}</option>
-              <option value="utf-16le">{t('encodingUtf16le')}</option>
-              <option value="utf-16be">{t('encodingUtf16be')}</option>
-              <option value="windows-1252">{t('encodingWindows1252')}</option>
-            </select>
-          </div>
-
-          <div className="input-card">
-            <label htmlFor="separator" className="input-label">
-              {t('separator')}
-            </label>
-            <select
-              id="separator"
-              value={separatorType}
-              onChange={(e) => setSeparatorType(e.target.value as SeparatorType)}
-              className="number-input"
-            >
-              <option value="space">{t('separatorSpace')}</option>
-              <option value="comma">{t('separatorComma')}</option>
-              <option value="custom">{t('separatorCustom')}</option>
-            </select>
-          </div>
-
-          {separatorType === 'custom' && (
-            <div className="input-card" style={{ gridColumn: '1 / -1' }}>
-              <label htmlFor="customSeparator" className="input-label">
-                {t('customSeparatorLabel')}
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: '1fr 1fr', 
+        gap: '2rem',
+        alignItems: 'start'
+      }}
+      className="split-view-container"
+      >
+        {/* Left Column - Inputs */}
+        <div className="input-section" style={{ marginBottom: 0 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="input-card">
+              <label htmlFor="text" className="input-label">
+                {t('textInput')}
               </label>
-              <input
-                id="customSeparator"
-                type="text"
-                value={customSeparator}
-                onChange={(e) => {
-                  const value = e.target.value.slice(0, 10);
-                  setCustomSeparator(value);
-                }}
+              <textarea
+                id="text"
+                value={text}
+                onChange={(e) => setText(e.target.value)}
                 className="number-input"
-                placeholder={t('customSeparatorPlaceholder')}
-                maxLength={10}
+                placeholder={t('textPlaceholder')}
+                rows={8}
+                style={{ resize: 'vertical', minHeight: '200px' }}
               />
+            </div>
+
+            <div className="options-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div className="input-card">
+                <label htmlFor="encoding" className="input-label">
+                  {t('encoding')}
+                </label>
+                <select
+                  id="encoding"
+                  value={encoding}
+                  onChange={(e) => setEncoding(e.target.value as EncodingType)}
+                  className="number-input"
+                >
+                  <option value="utf-8">{t('encodingUtf8')}</option>
+                  <option value="utf-16">{t('encodingUtf16')}</option>
+                  <option value="utf-16le">{t('encodingUtf16le')}</option>
+                  <option value="utf-16be">{t('encodingUtf16be')}</option>
+                  <option value="windows-1252">{t('encodingWindows1252')}</option>
+                </select>
+              </div>
+
+              <div className="input-card">
+                <label htmlFor="separator" className="input-label">
+                  {t('separator')}
+                </label>
+                <select
+                  id="separator"
+                  value={separatorType}
+                  onChange={(e) => setSeparatorType(e.target.value as SeparatorType)}
+                  className="number-input"
+                >
+                  <option value="space">{t('separatorSpace')}</option>
+                  <option value="comma">{t('separatorComma')}</option>
+                  <option value="custom">{t('separatorCustom')}</option>
+                </select>
+              </div>
+            </div>
+
+            {separatorType === 'custom' && (
+              <div className="input-card">
+                <label htmlFor="customSeparator" className="input-label">
+                  {t('customSeparatorLabel')}
+                </label>
+                <input
+                  id="customSeparator"
+                  type="text"
+                  value={customSeparator}
+                  onChange={(e) => {
+                    const value = e.target.value.slice(0, 10);
+                    setCustomSeparator(value);
+                  }}
+                  className="number-input"
+                  placeholder={t('customSeparatorPlaceholder')}
+                  maxLength={10}
+                />
+              </div>
+            )}
+
+            <div className="action-buttons" style={{ marginTop: '0.5rem' }}>
+              <button onClick={handleReset} className="btn btn-secondary">
+                {t('reset')}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column - Output */}
+        <div className="result-section" style={{ marginTop: 0 }}>
+          <div className="result-header">
+            <div className="result-badge">
+              {t('result')}
+            </div>
+          </div>
+          {result ? (
+            <div className="result-display">
+              <div className="result-item">
+                <div className="result-label">{t('binaryOutput')}</div>
+                <div className="result-value-box" style={{ 
+                  wordBreak: 'break-all', 
+                  whiteSpace: 'pre-wrap', 
+                  minHeight: '300px',
+                  maxHeight: '500px',
+                  overflowY: 'auto'
+                }}>
+                  <span className="result-value" style={{ fontFamily: 'monospace', fontSize: '0.9em' }}>
+                    {result}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="result-display" style={{ opacity: 0.5 }}>
+              <div className="result-item">
+                <div className="result-label">{t('binaryOutput')}</div>
+                <div className="result-value-box" style={{ 
+                  wordBreak: 'break-all', 
+                  whiteSpace: 'pre-wrap', 
+                  minHeight: '300px',
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center' 
+                }}>
+                  <span style={{ fontFamily: 'monospace', fontSize: '0.9em', color: 'var(--text-secondary)' }}>
+                    {t('textPlaceholder')}
+                  </span>
+                </div>
+              </div>
             </div>
           )}
         </div>
-      </div>
-
-      {/* Result section - always visible, compact layout */}
-      <div className="result-section" style={{ marginTop: '1rem' }}>
-        <div className="result-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-          <div className="result-badge">
-            {t('result')}
-          </div>
-          <button onClick={handleReset} className="btn btn-secondary" style={{ padding: '0.4rem 1rem', fontSize: '0.875rem' }}>
-            {t('reset')}
-          </button>
-        </div>
-        {result ? (
-          <div className="result-display">
-            <div className="result-item">
-              <div className="result-label">{t('binaryOutput')}</div>
-              <div className="result-value-box" style={{ wordBreak: 'break-all', whiteSpace: 'pre-wrap', minHeight: '60px' }}>
-                <span className="result-value" style={{ fontFamily: 'monospace', fontSize: '0.9em' }}>
-                  {result}
-                </span>
-              </div>
-            </div>
-          </div>
-        ) : (
-          <div className="result-display" style={{ opacity: 0.5 }}>
-            <div className="result-item">
-              <div className="result-label">{t('binaryOutput')}</div>
-              <div className="result-value-box" style={{ wordBreak: 'break-all', whiteSpace: 'pre-wrap', minHeight: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ fontFamily: 'monospace', fontSize: '0.9em', color: 'var(--text-secondary)' }}>
-                  {t('textPlaceholder')}
-                </span>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </>
   );

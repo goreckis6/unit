@@ -1248,6 +1248,20 @@ a {
   width: 100%;
 }
 
+.split-view-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  width: 100%;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
 .input-legend {
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -1586,6 +1600,16 @@ a {
     padding: 2rem;
   }
 
+  .split-view-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .text-binary-split-view {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
   .inputs-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -1863,6 +1887,11 @@ a {
     font-size: 1.25rem;
   }
 
+  .text-binary-split-view {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
   .inputs-grid {
     gap: 1.25rem;
     margin-bottom: 2rem;
@@ -2004,6 +2033,15 @@ a {
 
   .calculator-card {
     padding: 1.5rem 1rem;
+  }
+
+  .split-view-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
   }
 
   .inputs-grid {

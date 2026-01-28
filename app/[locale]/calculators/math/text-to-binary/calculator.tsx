@@ -168,7 +168,7 @@ export function TextToBinaryCalculator() {
 
             <div className="options-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               <div className="input-card">
-                <label htmlFor="encoding" className="input-label">
+                <label htmlFor="encoding" className="input-label" style={{ fontSize: '0.875rem', marginBottom: '0.5rem' }}>
                   {t('encoding')}
                 </label>
                 <select
@@ -176,6 +176,7 @@ export function TextToBinaryCalculator() {
                   value={encoding}
                   onChange={(e) => setEncoding(e.target.value as EncodingType)}
                   className="number-input"
+                  style={{ padding: '0.75rem', fontSize: '0.875rem' }}
                 >
                   <option value="utf-8">{t('encodingUtf8')}</option>
                   <option value="utf-16">{t('encodingUtf16')}</option>
@@ -186,7 +187,7 @@ export function TextToBinaryCalculator() {
               </div>
 
               <div className="input-card">
-                <label htmlFor="separator" className="input-label">
+                <label htmlFor="separator" className="input-label" style={{ fontSize: '0.875rem', marginBottom: '0.5rem' }}>
                   {t('separator')}
                 </label>
                 <select
@@ -194,6 +195,7 @@ export function TextToBinaryCalculator() {
                   value={separatorType}
                   onChange={(e) => setSeparatorType(e.target.value as SeparatorType)}
                   className="number-input"
+                  style={{ padding: '0.75rem', fontSize: '0.875rem' }}
                 >
                   <option value="space">{t('separatorSpace')}</option>
                   <option value="comma">{t('separatorComma')}</option>
@@ -232,11 +234,6 @@ export function TextToBinaryCalculator() {
 
         {/* Right Column - Output */}
         <div className="result-section" style={{ marginTop: 0 }}>
-          <div className="result-header">
-            <div className="result-badge">
-              {t('result')}
-            </div>
-          </div>
           {result ? (
             <div className="result-display">
               <div className="result-item">

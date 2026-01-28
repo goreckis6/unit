@@ -1,3 +1,19 @@
+/**
+ * Verification script for calculator sitemap and i18n coverage.
+ * 
+ * This script verifies that:
+ * 1. All calculator directories have corresponding entries in sitemap.xml
+ * 2. All calculators have i18n translation keys
+ * 
+ * IMPORTANT: The sitemapRoutes array below must be kept in sync with
+ * app/sitemap.xml/route.ts staticRoutes array. When adding a new calculator:
+ * 1. Add the route to app/sitemap.xml/route.ts
+ * 2. Add the route to sitemapRoutes in this file
+ * 3. Run this script to verify
+ * 
+ * Usage: node verify-calculators.js
+ */
+
 const fs = require('fs');
 const path = require('path');
 
@@ -13,15 +29,23 @@ const mathDirs = fs.readdirSync(mathDir)
   .filter(f => fs.statSync(path.join(mathDir, f)).isDirectory())
   .sort();
 
-// Sitemap routes from route.ts
+// Sitemap routes from route.ts - must match app/sitemap.xml/route.ts
 const sitemapRoutes = [
   '/calculators/math/addition',
+  '/calculators/math/adding-fractions',
+  '/calculators/math/antilog',
+  '/calculators/math/arccos',
+  '/calculators/math/arcsin',
+  '/calculators/math/arctan',
+  '/calculators/math/average',
+  '/calculators/math/percentage',
   '/calculators/electric/watts-to-kva',
   '/calculators/electric/watts-to-va',
   '/calculators/electric/amp-to-kw',
   '/calculators/electric/kw-to-amps',
   '/calculators/electric/kw-to-volts',
   '/calculators/electric/kw-to-kwh',
+  '/calculators/electric/kwh-to-kw',
   '/calculators/electric/kw-to-va',
   '/calculators/electric/kw-to-kva',
   '/calculators/electric/kwh-to-watts',
@@ -141,7 +165,7 @@ if (missingInI18n.length > 0) {
 console.log('\nMATH CALCULATORS:');
 console.log(`Directories found: ${mathDirs.length}`);
 console.log(`Sitemap entries: ${sitemapMathDirs.length}`);
-console.log(`i18n entries: ${mathDirs.filter(d => d === 'addition' && i18nKeys.includes('addition')).length}\n`);
+console.log(`i18n entries: ${mathDirs.filter(d => hasI18nSupport(d)).length}\n`);
 
 // Find missing in sitemap
 const missingMathInSitemap = mathDirs.filter(d => !sitemapMathDirs.includes(d));
@@ -153,11 +177,24 @@ if (missingMathInSitemap.length > 0) {
   console.log('✅ All math calculators are in sitemap\n');
 }
 
+// Find extra in sitemap
+const extraMathInSitemap = sitemapMathDirs.filter(d => !mathDirs.includes(d));
+if (extraMathInSitemap.length > 0) {
+  console.log('⚠️  EXTRA IN SITEMAP (not in directories):');
+  extraMathInSitemap.forEach(d => console.log(`   - ${d}`));
+  console.log('');
+} else {
+  console.log('✅ No extra entries in sitemap\n');
+}
+
 // Find missing in i18n
-const missingMathInI18n = mathDirs.filter(d => d !== 'addition' || !i18nKeys.includes('addition'));
+const missingMathInI18n = mathDirs.filter(d => !hasI18nSupport(d));
 if (missingMathInI18n.length > 0) {
   console.log('❌ MISSING IN I18N:');
-  missingMathInI18n.forEach(d => console.log(`   - ${d}`));
+  missingMathInI18n.forEach(d => {
+    const camel = kebabToCamel(d);
+    console.log(`   - ${d} (expected key: ${camel} or variant)`);
+  });
   console.log('');
 } else {
   console.log('✅ All math calculators have i18n support\n');

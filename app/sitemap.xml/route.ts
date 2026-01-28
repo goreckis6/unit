@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
 import { routing } from '@/i18n/routing';
 import { getBlogPosts } from '@/lib/blog';
+import { BASE_URL } from '@/lib/hreflang';
 
 export async function GET() {
-  const baseUrl = 'https://unitconverterhub.com';
   const currentDate = new Date().toISOString();
   
   const staticRoutes = [
@@ -31,7 +31,6 @@ export async function GET() {
     '/calculators/electric/kw-to-va',
     '/calculators/electric/kw-to-kva',
     '/calculators/electric/kwh-to-watts',
-    '/calculators/electric/kwh-to-kw',
     '/calculators/electric/mah-to-wh',
     '/calculators/electric/wh-to-mah',
     '/calculators/electric/va-to-amps',
@@ -71,7 +70,7 @@ export async function GET() {
     
     // Add static routes
     staticRoutes.forEach((route) => {
-      const url = `${baseUrl}${localePrefix}${route}`;
+      const url = `${BASE_URL}${localePrefix}${route}`;
       
       let priority = '0.8';
       let changefreq = 'weekly';
@@ -97,7 +96,7 @@ export async function GET() {
 
     // Add blog posts
     blogPosts.forEach((post) => {
-      const url = `${baseUrl}${localePrefix}/blog/${post.slug}`;
+      const url = `${BASE_URL}${localePrefix}/blog/${post.slug}`;
       const lastmod = post.date ? new Date(post.date).toISOString() : currentDate;
       urls.push(`  <url>
     <loc>${url}</loc>
@@ -110,6 +109,7 @@ export async function GET() {
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<!-- <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?> -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.join('\n')}
 </urlset>`;

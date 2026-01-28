@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { ItalicTextGenerator } from './calculator';
+import { UpsideDownTextGenerator } from './calculator';
 import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
 import { routing } from '@/i18n/routing';
@@ -29,20 +29,20 @@ interface FaqItem {
 async function getFaqItems(locale: string): Promise<FaqItem[]> {
   try {
     const messages = await import(`@/i18n/${locale}.json`);
-    return (messages.default?.calculators?.italicText?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.upsideDownText?.seo?.faq?.items as FaqItem[]) || [];
   } catch {
     const messages = await import('@/i18n/en.json');
-    return (messages.default?.calculators?.italicText?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.upsideDownText?.seo?.faq?.items as FaqItem[]) || [];
   }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.italicText.seo' });
+  const t = await getTranslations({ locale, namespace: 'calculators.upsideDownText.seo' });
   const baseUrl = 'https://unitconverterhub.com';
-  const path = locale === 'en' ? '/calculators/math/italic-text' : `/${locale}/calculators/math/italic-text`;
+  const path = locale === 'en' ? '/calculators/math/upside-down-text' : `/${locale}/calculators/math/upside-down-text`;
   const canonicalUrl = `${baseUrl}${path}`;
-  const hreflangUrls = generateHreflangUrls('/calculators/math/italic-text');
+  const hreflangUrls = generateHreflangUrls('/calculators/math/upside-down-text');
   
   return {
     title: t('title'),
@@ -61,15 +61,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function ItalicTextPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function UpsideDownTextPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.italicText' });
+  const t = await getTranslations({ locale, namespace: 'calculators.upsideDownText' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
 
   const faqItems = await getFaqItems(locale);
-  const tSeo = await getTranslations({ locale, namespace: 'calculators.italicText.seo.content' });
-  const tFaq = await getTranslations({ locale, namespace: 'calculators.italicText.seo.faq' });
-  const tRelated = await getTranslations({ locale, namespace: 'calculators.italicText.seo.related' });
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.upsideDownText.seo.content' });
+  const tFaq = await getTranslations({ locale, namespace: 'calculators.upsideDownText.seo.faq' });
+  const tRelated = await getTranslations({ locale, namespace: 'calculators.upsideDownText.seo.related' });
 
   return (
     <>
@@ -95,7 +95,7 @@ export default async function ItalicTextPage({ params }: { params: Promise<{ loc
       <div className="calculator-container">
         <div className="container">
           <div className="calculator-card">
-            <ItalicTextGenerator />
+            <UpsideDownTextGenerator />
           </div>
         </div>
       </div>
@@ -139,6 +139,10 @@ export default async function ItalicTextPage({ params }: { params: Promise<{ loc
         <div className="related-content-card">
           <h2 className="related-heading">{tRelated('heading')}</h2>
           <div className="related-grid">
+            <Link href="/calculators/math/italic-text" className="related-card">
+              <h3 className="related-title">{tRelated('italicText')}</h3>
+              <p className="related-desc">{tRelated('italicTextDesc')}</p>
+            </Link>
             <Link href="/calculators/math/text-to-binary" className="related-card">
               <h3 className="related-title">{tRelated('textToBinary')}</h3>
               <p className="related-desc">{tRelated('textToBinaryDesc')}</p>
@@ -146,10 +150,6 @@ export default async function ItalicTextPage({ params }: { params: Promise<{ loc
             <Link href="/calculators/math/average" className="related-card">
               <h3 className="related-title">{tRelated('average')}</h3>
               <p className="related-desc">{tRelated('averageDesc')}</p>
-            </Link>
-            <Link href="/calculators/math/addition" className="related-card">
-              <h3 className="related-title">{tRelated('addition')}</h3>
-              <p className="related-desc">{tRelated('additionDesc')}</p>
             </Link>
           </div>
         </div>

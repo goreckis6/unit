@@ -18,6 +18,7 @@ export async function GET() {
     '/calculators/math/average',
     '/calculators/math/text-to-binary',
     '/calculators/math/italic-text',
+    '/calculators/math/upside-down-text',
     '/calculators/electric',
     '/calculators/others',
     '/calculators/electric/watts-to-kva',

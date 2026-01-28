@@ -92,6 +92,12 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       descKey: 'italicText.description',
       path: '/calculators/math/italic-text',
     },
+    {
+      id: 'upside-down-text',
+      titleKey: 'upsideDownText.title',
+      descKey: 'upsideDownText.description',
+      path: '/calculators/math/upside-down-text',
+    },
   ];
 
   return (

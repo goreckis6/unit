@@ -562,6 +562,47 @@
         ]
       }
     },
+    "otherCalculators": {
+      "title": "Andere rekenmachines",
+      "description": "Bekijk onze collectie andere rekenmachines voor diverse alledaagse berekeningen",
+      "badge": "Overige",
+      "searchPlaceholder": "Rekenmachines zoeken...",
+      "resultsFound": "resultaten gevonden",
+      "noResults": "Geen resultaten gevonden",
+      "tryDifferentSearch": "Probeer een andere zoekterm",
+      "seoMeta": {
+        "title": "Gratis andere rekenmachines – Diverse tools",
+        "description": "Gratis online rekenmachines voor diverse alledaagse berekeningen. Snelle, nauwkeurige tools voor uiteenlopende rekenbehoeften.",
+        "keywords": "andere rekenmachines, diverse rekenmachines, gratis rekenmachines, online rekenmachines"
+      },
+      "seoContent": {
+        "heading": "Andere rekenmachines – Gratis online tools",
+        "paragraph1": "Onze collectie andere rekenmachines biedt snelle en nauwkeurige oplossingen voor uiteenlopende rekenbehoeften. Of u nu alledaagse berekeningen wilt uitvoeren of met diverse tools wilt werken – onze rekenmachines geven u direct de antwoorden die u nodig hebt.",
+        "paragraph2": "Al onze rekenmachines zijn volledig gratis en vereisen geen registratie. Selecteer gewoon de benodigde rekenmachine, voer uw waarden in en krijg direct resultaten. Onze rekenmachines werken op alle apparaten – desktop, tablet en mobiel – overal en altijd te gebruiken.",
+        "paragraph3": "Elke rekenmachine is gebruiksvriendelijk ontworpen met duidelijke invoervelden, intuïtieve interfaces en gedetailleerde resultaatweergaven. We voegen voortdurend nieuwe rekenmachines toe aan onze collectie om aan uw rekenbehoeften te voldoen."
+      },
+      "faq": {
+        "heading": "Veelgestelde vragen",
+        "items": [
+          {
+            "question": "Welke soorten rekenmachines zijn beschikbaar in deze categorie?",
+            "answer": "Onze categorie andere rekenmachines omvat diverse tools voor alledaagse berekeningen. We voegen voortdurend nieuwe rekenmachines toe voor uiteenlopende rekenbehoeften."
+          },
+          {
+            "question": "Zijn deze rekenmachines gratis?",
+            "answer": "Ja, al onze rekenmachines zijn volledig gratis. Geen registratie, betaling of abonnement vereist. Selecteer gewoon de benodigde rekenmachine en begin direct met rekenen."
+          },
+          {
+            "question": "Kan ik deze rekenmachines op mobiele apparaten gebruiken?",
+            "answer": "Ja, al onze rekenmachines zijn geoptimaliseerd voor computers, tablets en smartphones. U kunt overal rekenen."
+          },
+          {
+            "question": "Hoe nauwkeurig zijn deze rekenmachines?",
+            "answer": "Onze rekenmachines gebruiken standaardformules en leveren nauwkeurige resultaten voor professioneel, educatief en alledaags gebruik."
+          }
+        ]
+      }
+    },
     "wattsToKva": {
       "title": "Watt naar kVA Rekenmachine",
       "description": "Converteer watt (W) naar kilovolt-ampère (kVA) direct en nauwkeurig met behulp van arbeidsfactor",
@@ -1034,12 +1075,30 @@
         "faq": {
           "heading": "Veelgestelde vragen",
           "items": [
-            { "question": "Wat is de formule voor kW naar Volt?", "answer": "DC: V = (kW × 1000) / I. Enkelfase AC: V = (kW × 1000) / (I × PF). Driefase AC: V = (kW × 1000) / (√3 × I × PF). V in volt, kW vermogen, I stroom in A, PF arbeidsfactor. Driefase-resultaat = lijnd spanning. DC gebruikt geen arbeidsfactor." },
-            { "question": "Is arbeidsfactor nodig bij DC?", "answer": "Nee. Arbeidsfactor geldt alleen voor AC. Bij DC: V = (kW × 1000) / I. Alleen kW en stroom zijn nodig. Typische DC-toepassingen: accu's, zonne-energie, EV bij 12V, 24V, 48V of hoger." },
-            { "question": "Verschil enkelfase en driefase?", "answer": "Enkelfase: V = (kW × 1000) / (I × PF). Driefase: V = (kW × 1000) / (√3 × I × PF), resultaat = lijnd spanning. Bij gelijk kW en stroom levert driefase een hogere spanning." },
-            { "question": "Welke spanning is het driefase-resultaat?", "answer": "De driefase-formule geeft de lijnd spanning (tussen fasen), niet fase–nul. Veelvoorkomend: 208V, 240V, 380V, 400V, 415V, 480V. Gebruik voor dimensionering en netspanning." },
-            { "question": "Wat is arbeidsfactor?", "answer": "De arbeidsfactor (PF) is de verhouding actief/schijnbaar vermogen bij AC, tussen 0 en 1. Typisch: resistief = 1,0, inductiemotoren = 0,8–0,9, fluorescent = 0,85–0,95, LED = 0,9–0,95. Onbekend: 0,8 voor motoren, 0,9 voor gemengde belasting. DC heeft geen arbeidsfactor." },
-            { "question": "Is de rekenmachine gratis?", "answer": "Ja, de kW naar Volt rekenmachine is gratis. Geen registratie of betaling. Voer kW en stroom in, kies DC, enkelfase of driefase, voeg arbeidsfactor toe voor AC en krijg directe, nauwkeurige resultaten." }
+            {
+              "question": "Wat is de formule voor kW naar Volt?",
+              "answer": "DC: V = (kW × 1000) / I. Enkelfase AC: V = (kW × 1000) / (I × PF). Driefase AC: V = (kW × 1000) / (√3 × I × PF). V in volt, kW vermogen, I stroom in A, PF arbeidsfactor. Driefase-resultaat = lijnd spanning. DC gebruikt geen arbeidsfactor."
+            },
+            {
+              "question": "Is arbeidsfactor nodig bij DC?",
+              "answer": "Nee. Arbeidsfactor geldt alleen voor AC. Bij DC: V = (kW × 1000) / I. Alleen kW en stroom zijn nodig. Typische DC-toepassingen: accu's, zonne-energie, EV bij 12V, 24V, 48V of hoger."
+            },
+            {
+              "question": "Verschil enkelfase en driefase?",
+              "answer": "Enkelfase: V = (kW × 1000) / (I × PF). Driefase: V = (kW × 1000) / (√3 × I × PF), resultaat = lijnd spanning. Bij gelijk kW en stroom levert driefase een hogere spanning."
+            },
+            {
+              "question": "Welke spanning is het driefase-resultaat?",
+              "answer": "De driefase-formule geeft de lijnd spanning (tussen fasen), niet fase–nul. Veelvoorkomend: 208V, 240V, 380V, 400V, 415V, 480V. Gebruik voor dimensionering en netspanning."
+            },
+            {
+              "question": "Wat is arbeidsfactor?",
+              "answer": "De arbeidsfactor (PF) is de verhouding actief/schijnbaar vermogen bij AC, tussen 0 en 1. Typisch: resistief = 1,0, inductiemotoren = 0,8–0,9, fluorescent = 0,85–0,95, LED = 0,9–0,95. Onbekend: 0,8 voor motoren, 0,9 voor gemengde belasting. DC heeft geen arbeidsfactor."
+            },
+            {
+              "question": "Is de rekenmachine gratis?",
+              "answer": "Ja, de kW naar Volt rekenmachine is gratis. Geen registratie of betaling. Voer kW en stroom in, kies DC, enkelfase of driefase, voeg arbeidsfactor toe voor AC en krijg directe, nauwkeurige resultaten."
+            }
           ]
         }
       }
@@ -1069,11 +1128,26 @@
         "faq": {
           "heading": "Veelgestelde vragen",
           "items": [
-            { "question": "Wat is de formule kW naar kWh?", "answer": "kWh = kW × uren. Bijv.: 2 kW gedurende 3 h → 2 × 3 = 6 kWh." },
-            { "question": "Verschil kW en kWh?", "answer": "kW = vermogen (snelheid). kWh = energie (hoeveelheid over tijd). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh." },
-            { "question": "Kan ik decimale uren gebruiken (bijv. 1,5 = 1 h 30)?", "answer": "Ja. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh." },
-            { "question": "Hoe schat ik mijn rekening uit kW en uren?", "answer": "Eerst kWh = kW × uren. Dan kWh × prijs per kWh (bijv. 0,25 €/kWh). Bijv.: 24 kWh × 0,25 € = 6 €." },
-            { "question": "Is de rekenmachine gratis?", "answer": "Ja, de kW naar kWh rekenmachine is gratis. Geen registratie. Voer kW en uren in voor direct resultaat in kWh." }
+            {
+              "question": "Wat is de formule kW naar kWh?",
+              "answer": "kWh = kW × uren. Bijv.: 2 kW gedurende 3 h → 2 × 3 = 6 kWh."
+            },
+            {
+              "question": "Verschil kW en kWh?",
+              "answer": "kW = vermogen (snelheid). kWh = energie (hoeveelheid over tijd). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh."
+            },
+            {
+              "question": "Kan ik decimale uren gebruiken (bijv. 1,5 = 1 h 30)?",
+              "answer": "Ja. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh."
+            },
+            {
+              "question": "Hoe schat ik mijn rekening uit kW en uren?",
+              "answer": "Eerst kWh = kW × uren. Dan kWh × prijs per kWh (bijv. 0,25 €/kWh). Bijv.: 24 kWh × 0,25 € = 6 €."
+            },
+            {
+              "question": "Is de rekenmachine gratis?",
+              "answer": "Ja, de kW naar kWh rekenmachine is gratis. Geen registratie. Voer kW en uren in voor direct resultaat in kWh."
+            }
           ]
         }
       }
@@ -1167,11 +1241,26 @@
         "faq": {
           "heading": "Veelgestelde vragen",
           "items": [
-            { "question": "Wat is de formule om kW naar VA te converteren?", "answer": "De formule is VA = (kW × 1000) / PF, waarbij VA schijnbaar vermogen in voltampère is, kW werkelijk vermogen in kilowatt, en PF de vermogensfactor (0 tot 1). Werkelijk vermogen = schijnbaar vermogen × PF, dus schijnbaar vermogen = werkelijk vermogen / PF." },
-            { "question": "Wat is het verschil tussen kW en VA?", "answer": "kW (kilowatt) is werkelijk vermogen — het daadwerkelijke werk verricht door de belasting (bijv. mechanische output, warmte, licht). VA (voltampère) is schijnbaar vermogen — het totale vermogen geleverd door de bron, inclusief reactief vermogen dat geen nuttig werk verricht. VA ≥ kW altijd; ze zijn gelijk alleen wanneer PF = 1,0 (puur resistieve belasting)." },
-            { "question": "Wat is vermogensfactor en welke waarden zijn typisch?", "answer": "Vermogensfactor (PF) is de verhouding kW / VA, variërend van 0 tot 1. Het meet hoe efficiënt elektrisch vermogen wordt omgezet in nuttig werk. Typische waarden: resistieve verwarming ~1,0, fluorescentielampen 0,5–0,95, inductiemotoren 0,7–0,9, voedingen 0,6–0,95. Lagere PF betekent dat hogere VA nodig zijn voor dezelfde kW, wat de grootte van geleiders en transformatoren verhoogt." },
-            { "question": "Waarom moet ik kW naar VA converteren?", "answer": "Transformatoren, generatoren, UPS-units en stroomonderbrekers zijn geclassificeerd in VA (of kVA), niet in kW. Een belasting van 10 kW bij PF 0,8 vereist 12,5 kVA voedingscapaciteit. Apparatuur dimensioneren op alleen kW (PF negeren) kan leiden tot overbelasting. kW naar VA converteren zorgt ervoor dat u apparatuur selecteert met voldoende schijnbaar vermogen capaciteit." },
-            { "question": "Is deze rekenmachine gratis?", "answer": "Ja, onze kW naar VA rekenmachine is gratis. Geen registratie of betaling vereist. Voer vermogen in kW en vermogensfactor (0–1) in om directe, nauwkeurige resultaten in VA te krijgen." }
+            {
+              "question": "Wat is de formule om kW naar VA te converteren?",
+              "answer": "De formule is VA = (kW × 1000) / PF, waarbij VA schijnbaar vermogen in voltampère is, kW werkelijk vermogen in kilowatt, en PF de vermogensfactor (0 tot 1). Werkelijk vermogen = schijnbaar vermogen × PF, dus schijnbaar vermogen = werkelijk vermogen / PF."
+            },
+            {
+              "question": "Wat is het verschil tussen kW en VA?",
+              "answer": "kW (kilowatt) is werkelijk vermogen — het daadwerkelijke werk verricht door de belasting (bijv. mechanische output, warmte, licht). VA (voltampère) is schijnbaar vermogen — het totale vermogen geleverd door de bron, inclusief reactief vermogen dat geen nuttig werk verricht. VA ≥ kW altijd; ze zijn gelijk alleen wanneer PF = 1,0 (puur resistieve belasting)."
+            },
+            {
+              "question": "Wat is vermogensfactor en welke waarden zijn typisch?",
+              "answer": "Vermogensfactor (PF) is de verhouding kW / VA, variërend van 0 tot 1. Het meet hoe efficiënt elektrisch vermogen wordt omgezet in nuttig werk. Typische waarden: resistieve verwarming ~1,0, fluorescentielampen 0,5–0,95, inductiemotoren 0,7–0,9, voedingen 0,6–0,95. Lagere PF betekent dat hogere VA nodig zijn voor dezelfde kW, wat de grootte van geleiders en transformatoren verhoogt."
+            },
+            {
+              "question": "Waarom moet ik kW naar VA converteren?",
+              "answer": "Transformatoren, generatoren, UPS-units en stroomonderbrekers zijn geclassificeerd in VA (of kVA), niet in kW. Een belasting van 10 kW bij PF 0,8 vereist 12,5 kVA voedingscapaciteit. Apparatuur dimensioneren op alleen kW (PF negeren) kan leiden tot overbelasting. kW naar VA converteren zorgt ervoor dat u apparatuur selecteert met voldoende schijnbaar vermogen capaciteit."
+            },
+            {
+              "question": "Is deze rekenmachine gratis?",
+              "answer": "Ja, onze kW naar VA rekenmachine is gratis. Geen registratie of betaling vereist. Voer vermogen in kW en vermogensfactor (0–1) in om directe, nauwkeurige resultaten in VA te krijgen."
+            }
           ]
         }
       }
@@ -1201,11 +1290,26 @@
         "faq": {
           "heading": "Veelgestelde vragen",
           "items": [
-            { "question": "Wat is de formule om kW naar kVA te converteren?", "answer": "De formule is kVA = kW / PF, waarbij kVA schijnbaar vermogen in kilovoltampère is, kW werkelijk vermogen in kilowatt, en PF de vermogensfactor (0 tot 1). Werkelijk vermogen = schijnbaar vermogen × PF, dus schijnbaar vermogen = werkelijk vermogen / PF." },
-            { "question": "Wat is het verschil tussen kW en kVA?", "answer": "kW (kilowatt) is werkelijk vermogen — het daadwerkelijke werk verricht door de belasting (bijv. mechanische output, warmte, licht). kVA (kilovoltampère) is schijnbaar vermogen — het totale vermogen geleverd door de bron, inclusief reactief vermogen dat geen nuttig werk verricht. kVA ≥ kW altijd; ze zijn gelijk alleen wanneer PF = 1,0 (puur resistieve belasting)." },
-            { "question": "Wat is vermogensfactor en welke waarden zijn typisch?", "answer": "Vermogensfactor (PF) is de verhouding kW / kVA, variërend van 0 tot 1. Het meet hoe efficiënt elektrisch vermogen wordt omgezet in nuttig werk. Typische waarden: resistieve verwarming ~1,0, fluorescentielampen 0,5–0,95, inductiemotoren 0,7–0,9, voedingen 0,6–0,95. Lagere PF betekent dat hogere kVA nodig zijn voor dezelfde kW, wat de grootte van geleiders en transformatoren verhoogt." },
-            { "question": "Waarom moet ik kW naar kVA converteren?", "answer": "Transformatoren, generatoren, UPS-units en stroomonderbrekers zijn geclassificeerd in kVA, niet in kW. Een belasting van 10 kW bij PF 0,8 vereist 12,5 kVA voedingscapaciteit. Apparatuur dimensioneren op alleen kW (PF negeren) kan leiden tot overbelasting. kW naar kVA converteren zorgt ervoor dat u apparatuur selecteert met voldoende schijnbaar vermogen capaciteit." },
-            { "question": "Is deze rekenmachine gratis?", "answer": "Ja, onze kW naar kVA rekenmachine is gratis. Geen registratie of betaling vereist. Voer vermogen in kW en vermogensfactor (0–1) in om directe, nauwkeurige resultaten in kVA te krijgen." }
+            {
+              "question": "Wat is de formule om kW naar kVA te converteren?",
+              "answer": "De formule is kVA = kW / PF, waarbij kVA schijnbaar vermogen in kilovoltampère is, kW werkelijk vermogen in kilowatt, en PF de vermogensfactor (0 tot 1). Werkelijk vermogen = schijnbaar vermogen × PF, dus schijnbaar vermogen = werkelijk vermogen / PF."
+            },
+            {
+              "question": "Wat is het verschil tussen kW en kVA?",
+              "answer": "kW (kilowatt) is werkelijk vermogen — het daadwerkelijke werk verricht door de belasting (bijv. mechanische output, warmte, licht). kVA (kilovoltampère) is schijnbaar vermogen — het totale vermogen geleverd door de bron, inclusief reactief vermogen dat geen nuttig werk verricht. kVA ≥ kW altijd; ze zijn gelijk alleen wanneer PF = 1,0 (puur resistieve belasting)."
+            },
+            {
+              "question": "Wat is vermogensfactor en welke waarden zijn typisch?",
+              "answer": "Vermogensfactor (PF) is de verhouding kW / kVA, variërend van 0 tot 1. Het meet hoe efficiënt elektrisch vermogen wordt omgezet in nuttig werk. Typische waarden: resistieve verwarming ~1,0, fluorescentielampen 0,5–0,95, inductiemotoren 0,7–0,9, voedingen 0,6–0,95. Lagere PF betekent dat hogere kVA nodig zijn voor dezelfde kW, wat de grootte van geleiders en transformatoren verhoogt."
+            },
+            {
+              "question": "Waarom moet ik kW naar kVA converteren?",
+              "answer": "Transformatoren, generatoren, UPS-units en stroomonderbrekers zijn geclassificeerd in kVA, niet in kW. Een belasting van 10 kW bij PF 0,8 vereist 12,5 kVA voedingscapaciteit. Apparatuur dimensioneren op alleen kW (PF negeren) kan leiden tot overbelasting. kW naar kVA converteren zorgt ervoor dat u apparatuur selecteert met voldoende schijnbaar vermogen capaciteit."
+            },
+            {
+              "question": "Is deze rekenmachine gratis?",
+              "answer": "Ja, onze kW naar kVA rekenmachine is gratis. Geen registratie of betaling vereist. Voer vermogen in kW en vermogensfactor (0–1) in om directe, nauwkeurige resultaten in kVA te krijgen."
+            }
           ]
         }
       }
@@ -1316,66 +1420,6 @@
           "kwToKvaDesc": "Converteer kilowatt direct naar kilovoltampère",
           "kwToKwh": "kW naar kWh Calculator",
           "kwToKwhDesc": "Converteer vermogen naar energie met tijdsduur"
-        }
-      }
-    },
-    "whToMah": {
-      "title": "Wh naar mAh Calculator",
-      "description": "Converteer wattuur (Wh) direct naar milliampère-uur (mAh) met spanning",
-      "wh": "Wattuur (Wh)",
-      "voltage": "Spanning (V)",
-      "calculate": "Berekenen",
-      "reset": "Reset",
-      "result": "Resultaat",
-      "mah": "Milliampère-uur (mAh)",
-      "seo": {
-        "title": "Wh naar mAh Calculator - Converteer Energie naar Batterijcapaciteit Online",
-        "description": "Gratis Wh naar mAh conversiecalculator. Converteer wattuur direct naar milliampère-uur met spanning. Perfect voor batterijcapaciteitsberekeningen, powerbank dimensionering en energieopslag analyse.",
-        "keywords": "wh mah calculator, wattuur milliampère-uur converter, wh mah conversie, batterijcapaciteit calculator, powerbank calculator, batterij energie calculator, gratis calculator",
-        "content": {
-          "heading": "Hoe Wh naar mAh te Converteren",
-          "paragraph1": "Het converteren van wattuur (Wh) naar milliampère-uur (mAh) is een essentiële berekening bij het bepalen van batterijcapaciteit uit energiespecificaties. Wattuur vertegenwoordigen daadwerkelijke energieopslag — de totale elektrische energie die een batterij kan leveren — terwijl milliampère-uur elektrische ladingscapaciteit vertegenwoordigen — hoeveel stroom een batterij in de tijd kan leveren. De conversie vereist kennis van de batterijspanning, aangezien ladingscapaciteit afhangt van zowel energie als spanning. Onze gratis Wh naar mAh calculator biedt directe, nauwkeurige conversies voor uw batterij- en energiemanagementberekeningen.",
-          "paragraph2": "De formule is: mAh = (Wh × 1000) / V, waarbij Wh de energie in wattuur is, V de spanning in volt en mAh de batterijcapaciteit in milliampère-uur. Bijvoorbeeld, een 18,5 Wh batterij bij 3,7V heeft een capaciteit van (18,5 × 1000) / 3,7 = 5000 mAh. Deze berekening is essentieel voor het begrijpen van batterijcapaciteit uit energiebeoordelingen, het vergelijken van batterijen met verschillende spanningsspecificaties, het dimensioneren van powerbanks op basis van energievereisten en het berekenen van apparaat looptijd uit energieverbruik.",
-          "paragraph3": "Deze conversie is kritiek in vele toepassingen: bepalen van batterijcapaciteit uit energiespecificaties in wattuur, vergelijken van powerbanks en draagbare laders wanneer alleen energie is gespecificeerd, berekenen van ladingscapaciteit voor zonne-batterijbanken, begrijpen van smartphone- en laptopbatterijcapaciteit uit energiebeoordelingen, dimensioneren van noodstroomsystemen op basis van energiebehoeften en schatten van apparaat looptijd uit batterijenergie. Bijvoorbeeld, een 37 Wh powerbank bij 3,7V levert (37 × 1000) / 3,7 = 10.000 mAh, maar dezelfde 37 Wh bij 5V levert slechts 7.400 mAh — dezelfde energie, verschillende capaciteit vanwege spanningsverschil.",
-          "paragraph4": "Onze calculator accepteert wattuur en spanning als invoer, past de formule mAh = (Wh × 1000) / V toe en geeft de batterijcapaciteit in milliampère-uur. Of u nu powerbanks vergelijkt, batterijcapaciteit voor zonnesystemen berekent, batterijbackups dimensioneert, oplaadtijd schat of apparaat energievereisten begrijpt, onze Wh naar mAh calculator levert nauwkeurige, directe resultaten voor uw batterijmanagement en energieplanningsbehoeften.",
-          "exampleHeading": "Voorbeeld:",
-          "exampleText": "18,5 Wh bij 3,7V: mAh = (18,5 × 1000) / 3,7 = 5000 mAh. 50 Wh bij 5V: mAh = (50 × 1000) / 5 = 10.000 mAh. 3,75 Wh bij 1,5V: mAh = (3,75 × 1000) / 1,5 = 2500 mAh. 72 Wh bij 3,6V: mAh = (72 × 1000) / 3,6 = 20.000 mAh. Als een smartphone-batterij geclassificeerd is op 15,4 Wh bij 3,85V, is zijn capaciteit (15,4 × 1000) / 3,85 = 4000 mAh."
-        },
-        "faq": {
-          "heading": "Veelgestelde Vragen",
-          "items": [
-            {
-              "question": "Wat is de formule om Wh naar mAh te converteren?",
-              "answer": "De formule is mAh = (Wh × 1000) / V, waarbij Wh de energie in wattuur is, V de spanning in volt en mAh de batterijcapaciteit in milliampère-uur. Dit converteert daadwerkelijke energieopslag naar elektrische ladingscapaciteit. Bijvoorbeeld, 18,5 Wh bij 3,7V is gelijk aan (18,5 × 1000) / 3,7 = 5000 mAh."
-            },
-            {
-              "question": "Wat is het verschil tussen Wh en mAh?",
-              "answer": "Wh (wattuur) meet daadwerkelijke energie — het totale elektrische werk dat een batterij kan verrichten. mAh (milliampère-uur) meet elektrische ladingscapaciteit — hoeveel stroom een batterij in de tijd kan leveren. Wh houdt rekening met spanning, terwijl mAh dat niet doet. Een 37 Wh batterij bij 3,7V levert 10.000 mAh, maar bij 5V levert het slechts 7.400 mAh — dezelfde energie, verschillende capaciteit."
-            },
-            {
-              "question": "Waarom heb ik spanning nodig voor deze conversie?",
-              "answer": "Ladingscapaciteit (mAh) hangt af van zowel energie (Wh) als spanning (V). Dezelfde Wh bij verschillende spanningen levert verschillende ladingscapaciteit. Vermogen = Spanning × Stroom, dus hogere spanning betekent minder ladingscapaciteit voor dezelfde energie. Zonder de spanning te kennen, kan werkelijke batterijcapaciteit niet worden bepaald."
-            },
-            {
-              "question": "Hoe kan ik deze calculator gebruiken om powerbanks te vergelijken?",
-              "answer": "Powerbanks vermelden capaciteit vaak in Wh (energie) maar u heeft mogelijk mAh nodig voor vergelijking. Converteer naar mAh met de bedrijfsspanning. Een 37 Wh powerbank bij 3,7V (10.000 mAh) levert meer ladingscapaciteit dan 37 Wh bij 5V (7.400 mAh). Overweeg altijd zowel Wh als spanning voor nauwkeurige capaciteitsvergelijking."
-            },
-            {
-              "question": "Is deze calculator gratis?",
-              "answer": "Ja, onze Wh naar mAh calculator is volledig gratis. Geen registratie of betaling vereist. Voer energie in Wh en spanning in volt in voor directe, nauwkeurige batterijcapaciteitsresultaten in mAh."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Gerelateerde Calculators",
-          "mahToWh": "mAh naar Wh Calculator",
-          "mahToWhDesc": "Converteer batterijcapaciteit naar energie met spanning",
-          "kwhToWatts": "kWh naar Watt Calculator",
-          "kwhToWattsDesc": "Converteer kilowattuur naar watt met tijdsduur",
-          "kwToKwh": "kW naar kWh Calculator",
-          "kwToKwhDesc": "Converteer vermogen naar energie met tijdsduur",
-          "wattsToKwh": "Watt naar kWh Calculator",
-          "wattsToKwhDesc": "Converteer vermogen naar energie met tijdsduur"
         }
       }
     },
@@ -1587,11 +1631,26 @@
         "faq": {
           "heading": "Veelgestelde vragen",
           "items": [
-            {"question": "Wat is de formule VA naar kW?", "answer": "kW = (VA × PF) / 1000. PF nodig omdat slechts een deel van het schijnbare vermogen actief is; delen door 1000 voor kilowatt."},
-            {"question": "Verschil tussen VA en kW?", "answer": "VA meet schijnbaar vermogen (totaal, incl. reactief), kW meet actief vermogen. kW = (VA × PF) / 1000. Ze komen alleen overeen bij PF = 1,0 en factor 1000."},
-            {"question": "Waarom is de vermogensfactor nodig?", "answer": "Schijnbaar vermogen omvat reactief vermogen. De vermogensfactor geeft het actieve deel. Zonder PF kun je uit VA het actief vermogen niet bepalen."},
-            {"question": "Typische vermogensfactoren?", "answer": "Resistieve belastingen vaak ≈ 1,0. Motoren en inductief 0,7–0,9. Bij twijfel wordt vaak 0,8 gebruikt."},
-            {"question": "Is de calculator gratis?", "answer": "Ja. Geen registratie. Voer VA en vermogensfactor in voor resultaten in kilowatt."}
+            {
+              "question": "Wat is de formule VA naar kW?",
+              "answer": "kW = (VA × PF) / 1000. PF nodig omdat slechts een deel van het schijnbare vermogen actief is; delen door 1000 voor kilowatt."
+            },
+            {
+              "question": "Verschil tussen VA en kW?",
+              "answer": "VA meet schijnbaar vermogen (totaal, incl. reactief), kW meet actief vermogen. kW = (VA × PF) / 1000. Ze komen alleen overeen bij PF = 1,0 en factor 1000."
+            },
+            {
+              "question": "Waarom is de vermogensfactor nodig?",
+              "answer": "Schijnbaar vermogen omvat reactief vermogen. De vermogensfactor geeft het actieve deel. Zonder PF kun je uit VA het actief vermogen niet bepalen."
+            },
+            {
+              "question": "Typische vermogensfactoren?",
+              "answer": "Resistieve belastingen vaak ≈ 1,0. Motoren en inductief 0,7–0,9. Bij twijfel wordt vaak 0,8 gebruikt."
+            },
+            {
+              "question": "Is de calculator gratis?",
+              "answer": "Ja. Geen registratie. Voer VA en vermogensfactor in voor resultaten in kilowatt."
+            }
           ]
         },
         "related": {
@@ -1631,11 +1690,26 @@
         "faq": {
           "heading": "Veelgestelde vragen",
           "items": [
-            {"question": "Formule VA naar kVA?", "answer": "kVA = VA / 1000. Beide schijnbaar vermogen; delen door 1000. Geen vermogensfactor nodig."},
-            {"question": "Verschil VA en kVA?", "answer": "VA en kVA meten schijnbaar vermogen. 1 kVA = 1000 VA. Zelfde grootheid, andere eenheid — zoals meter en kilometer."},
-            {"question": "Vermogensfactor nodig?", "answer": "Nee. Alleen bij schijnbaar ↔ actief vermogen (W/kW). VA → kVA = delen door 1000."},
-            {"question": "Wanneer VA, wanneer kVA?", "answer": "Kleinere apparaten vaak in VA, grotere (UPS, transformatoren) in kVA. Omrekenen om vermogens te vergelijken en optellen."},
-            {"question": "Is de calculator gratis?", "answer": "Ja. Geen registratie. Voer VA in voor resultaten in kVA."}
+            {
+              "question": "Formule VA naar kVA?",
+              "answer": "kVA = VA / 1000. Beide schijnbaar vermogen; delen door 1000. Geen vermogensfactor nodig."
+            },
+            {
+              "question": "Verschil VA en kVA?",
+              "answer": "VA en kVA meten schijnbaar vermogen. 1 kVA = 1000 VA. Zelfde grootheid, andere eenheid — zoals meter en kilometer."
+            },
+            {
+              "question": "Vermogensfactor nodig?",
+              "answer": "Nee. Alleen bij schijnbaar ↔ actief vermogen (W/kW). VA → kVA = delen door 1000."
+            },
+            {
+              "question": "Wanneer VA, wanneer kVA?",
+              "answer": "Kleinere apparaten vaak in VA, grotere (UPS, transformatoren) in kVA. Omrekenen om vermogens te vergelijken en optellen."
+            },
+            {
+              "question": "Is de calculator gratis?",
+              "answer": "Ja. Geen registratie. Voer VA in voor resultaten in kVA."
+            }
           ]
         },
         "related": {
@@ -1846,11 +1920,26 @@
         "faq": {
           "heading": "Veelgestelde vragen",
           "items": [
-            {"question": "Formule volt naar ampère met watt?", "answer": "I = P / V. Stroom (A) = vermogen (W) / spanning (V). Bijv. 2300 W, 230 V → I = 10 A."},
-            {"question": "Formule volt naar ampère met ohm?", "answer": "I = V / R (wet van Ohm). Stroom = spanning / weerstand. Bijv. 12 V, 24 Ω → I = 0,5 A."},
-            {"question": "Wanneer watt, wanneer ohm?", "answer": "Watt: als vermogen (bijv. typeplaat) en spanning bekend zijn. Ohm: spanning over een weerstand en waarde (weerstanden, verwarming, DC-circuits)."},
-            {"question": "Geldt de wet van Ohm voor AC?", "answer": "I = V / R geldt voor resistieve AC-circuits bij effectieve waarden. Voor reactantie impedantie Z: I = V / Z."},
-            {"question": "Is de rekenmachine gratis?", "answer": "Ja. Kies watt of ohm, voer spanning en watt/ohm in, krijg stroom in ampère."}
+            {
+              "question": "Formule volt naar ampère met watt?",
+              "answer": "I = P / V. Stroom (A) = vermogen (W) / spanning (V). Bijv. 2300 W, 230 V → I = 10 A."
+            },
+            {
+              "question": "Formule volt naar ampère met ohm?",
+              "answer": "I = V / R (wet van Ohm). Stroom = spanning / weerstand. Bijv. 12 V, 24 Ω → I = 0,5 A."
+            },
+            {
+              "question": "Wanneer watt, wanneer ohm?",
+              "answer": "Watt: als vermogen (bijv. typeplaat) en spanning bekend zijn. Ohm: spanning over een weerstand en waarde (weerstanden, verwarming, DC-circuits)."
+            },
+            {
+              "question": "Geldt de wet van Ohm voor AC?",
+              "answer": "I = V / R geldt voor resistieve AC-circuits bij effectieve waarden. Voor reactantie impedantie Z: I = V / Z."
+            },
+            {
+              "question": "Is de rekenmachine gratis?",
+              "answer": "Ja. Kies watt of ohm, voer spanning en watt/ohm in, krijg stroom in ampère."
+            }
           ]
         },
         "related": {
@@ -2001,7 +2090,6 @@
       "amps": "Ampere (A)",
       "volts": "Spanning (V)",
       "powerFactor": "Arbeidsfactor (0-1)",
-      "volts": "Spanning (V)",
       "calculate": "Berekenen",
       "reset": "Resetten",
       "result": "Resultaat",
@@ -2079,12 +2167,30 @@
         "faq": {
           "heading": "Veelgestelde vragen",
           "items": [
-            { "question": "Wat is de formule watt naar ampère (DC)?", "answer": "Voor DC: I = P / V, waarbij I stroom in A is, P vermogen in W en V spanning in V. Deel vermogen door spanning voor de stroom. Voorb.: 1200 W bij 120 V → I = 10 A." },
-            { "question": "Wat is de formule voor enkelfasig?", "answer": "Voor enkelfasig: I = P / (V × PF). V spanning (V), P vermogen (W), PF arbeidsfactor (0 tot 1). Voorb.: 1840 W bij 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
-            { "question": "Wat is de formule voor driefasig?", "answer": "Voor driefasig: I = P / (√3 × V × PF). V lijn-naar-lijnspanning (V), P vermogen (W), PF arbeidsfactor. √3 ≈ 1,732. Voorb.: 8,83 kW bij 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
-            { "question": "Wanneer DC, enkelfasig of driefasig gebruiken?", "answer": "DC voor batterijen, DC-zonnepanelen en DC-belastingen. Enkelfasig voor typisch residentieel (120 V, 230 V, 240 V). Driefasig voor industriële en commerciële distributie (400 V, 480 V lijn-naar-lijn) en motoren." },
-            { "question": "Hoe verhoudt dit zich tot ampère naar watt?", "answer": "Watt naar ampère (I = P / V) en ampère naar watt (P = I × V) zijn inverse bewerkingen. Gebruik watt→ampère als u vermogen en spanning kent; ampère→watt als u stroom en spanning kent." },
-            { "question": "Is deze rekenmachine gratis?", "answer": "Ja. De Watt naar Ampere rekenmachine is gratis. Geen registratie. Kies DC, enkelfasig of driefasig, voer watt en spanning in (en arbeidsfactor voor AC), krijg direct ampère." }
+            {
+              "question": "Wat is de formule watt naar ampère (DC)?",
+              "answer": "Voor DC: I = P / V, waarbij I stroom in A is, P vermogen in W en V spanning in V. Deel vermogen door spanning voor de stroom. Voorb.: 1200 W bij 120 V → I = 10 A."
+            },
+            {
+              "question": "Wat is de formule voor enkelfasig?",
+              "answer": "Voor enkelfasig: I = P / (V × PF). V spanning (V), P vermogen (W), PF arbeidsfactor (0 tot 1). Voorb.: 1840 W bij 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A."
+            },
+            {
+              "question": "Wat is de formule voor driefasig?",
+              "answer": "Voor driefasig: I = P / (√3 × V × PF). V lijn-naar-lijnspanning (V), P vermogen (W), PF arbeidsfactor. √3 ≈ 1,732. Voorb.: 8,83 kW bij 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+            },
+            {
+              "question": "Wanneer DC, enkelfasig of driefasig gebruiken?",
+              "answer": "DC voor batterijen, DC-zonnepanelen en DC-belastingen. Enkelfasig voor typisch residentieel (120 V, 230 V, 240 V). Driefasig voor industriële en commerciële distributie (400 V, 480 V lijn-naar-lijn) en motoren."
+            },
+            {
+              "question": "Hoe verhoudt dit zich tot ampère naar watt?",
+              "answer": "Watt naar ampère (I = P / V) en ampère naar watt (P = I × V) zijn inverse bewerkingen. Gebruik watt→ampère als u vermogen en spanning kent; ampère→watt als u stroom en spanning kent."
+            },
+            {
+              "question": "Is deze rekenmachine gratis?",
+              "answer": "Ja. De Watt naar Ampere rekenmachine is gratis. Geen registratie. Kies DC, enkelfasig of driefasig, voer watt en spanning in (en arbeidsfactor voor AC), krijg direct ampère."
+            }
           ]
         },
         "related": {
@@ -2130,12 +2236,30 @@
         "faq": {
           "heading": "Veelgestelde Vragen",
           "items": [
-            { "question": "Wat is de formule voor watt naar volt (DC)?", "answer": "Voor DC: V = P / I, waarbij V spanning in volt is, P vermogen in watt en I stroom in ampère. Deel vermogen door stroom om spanning te krijgen. Voorbeeld: 1200 W bij 10 A → V = 120 V." },
-            { "question": "Wat is de formule voor enkelfasig AC?", "answer": "Voor enkelfasig AC: V = P / (I × PF). I is stroom (ampère), P vermogen (watt), PF arbeidsfactor (0 tot 1). Voorbeeld: 1840 W bij 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
-            { "question": "Wat is de formule voor driefasig AC?", "answer": "Voor driefasig AC: V = P / (√3 × I × PF). I is stroom per fase (ampère), P vermogen (watt), PF arbeidsfactor. √3 ≈ 1,732. Voorbeeld: 8,83 kW bij 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
-            { "question": "Wanneer DC, enkelfasig of driefasig gebruiken?", "answer": "DC voor batterijen, zonne-DC-circuits en DC-belastingen. Enkelfasig voor typisch residentieel (120 V, 230 V, 240 V). Driefasig voor industriële en commerciële distributie (400 V, 480 V lijn-lijn) en motoren." },
-            { "question": "Hoe verhoudt dit zich tot volt naar watt?", "answer": "Watt naar volt (V = P / I) en volt naar watt (P = V × I) zijn inverse bewerkingen. Gebruik watt→volt wanneer u vermogen en stroom kent; volt→watt wanneer u spanning en stroom kent." },
-            { "question": "Is deze rekenmachine gratis?", "answer": "Ja. De Watt naar Volt rekenmachine is gratis. Geen registratie vereist. Selecteer DC, enkelfasig of driefasig, voer watt en stroom in (en arbeidsfactor voor AC), krijg volt direct." }
+            {
+              "question": "Wat is de formule voor watt naar volt (DC)?",
+              "answer": "Voor DC: V = P / I, waarbij V spanning in volt is, P vermogen in watt en I stroom in ampère. Deel vermogen door stroom om spanning te krijgen. Voorbeeld: 1200 W bij 10 A → V = 120 V."
+            },
+            {
+              "question": "Wat is de formule voor enkelfasig AC?",
+              "answer": "Voor enkelfasig AC: V = P / (I × PF). I is stroom (ampère), P vermogen (watt), PF arbeidsfactor (0 tot 1). Voorbeeld: 1840 W bij 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V."
+            },
+            {
+              "question": "Wat is de formule voor driefasig AC?",
+              "answer": "Voor driefasig AC: V = P / (√3 × I × PF). I is stroom per fase (ampère), P vermogen (watt), PF arbeidsfactor. √3 ≈ 1,732. Voorbeeld: 8,83 kW bij 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+            },
+            {
+              "question": "Wanneer DC, enkelfasig of driefasig gebruiken?",
+              "answer": "DC voor batterijen, zonne-DC-circuits en DC-belastingen. Enkelfasig voor typisch residentieel (120 V, 230 V, 240 V). Driefasig voor industriële en commerciële distributie (400 V, 480 V lijn-lijn) en motoren."
+            },
+            {
+              "question": "Hoe verhoudt dit zich tot volt naar watt?",
+              "answer": "Watt naar volt (V = P / I) en volt naar watt (P = V × I) zijn inverse bewerkingen. Gebruik watt→volt wanneer u vermogen en stroom kent; volt→watt wanneer u spanning en stroom kent."
+            },
+            {
+              "question": "Is deze rekenmachine gratis?",
+              "answer": "Ja. De Watt naar Volt rekenmachine is gratis. Geen registratie vereist. Selecteer DC, enkelfasig of driefasig, voer watt en stroom in (en arbeidsfactor voor AC), krijg volt direct."
+            }
           ]
         },
         "related": {
@@ -2635,6 +2759,10 @@
           "ampsToWatts": "Ampère naar Watt Rekenmachine",
           "ampsToWattsDesc": "Zet stroom en spanning om naar vermogen"
         }
+      },
+      "addition": {
+        "title": "Optelrekenmachine",
+        "description": "Twee getallen optellen"
       }
     },
     "textToBinary": {

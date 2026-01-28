@@ -1034,12 +1034,30 @@
         "faq": {
           "heading": "Pertanyaan yang Sering Diajukan",
           "items": [
-            { "question": "Apa rumus konversi kW ke Volt?", "answer": "DC: V = (kW × 1000) / I. AC fase tunggal: V = (kW × 1000) / (I × PF). AC tiga fase: V = (kW × 1000) / (√3 × I × PF). V dalam volt, kW daya, I arus (A), PF faktor daya. Hasil tiga fase = tegangan saluran. DC tidak memakai faktor daya." },
-            { "question": "Perlu faktor daya untuk DC?", "answer": "Tidak. Faktor daya hanya untuk AC. DC: V = (kW × 1000) / I. Hanya perlu kW dan arus. Aplikasi DC umum: baterai, surya, EV 12V, 24V, 48V atau lebih." },
-            { "question": "Bedanya fase tunggal dan tiga fase?", "answer": "Fase tunggal: V = (kW × 1000) / (I × PF). Tiga fase: V = (kW × 1000) / (√3 × I × PF), hasil = tegangan saluran. Pada kW dan arus sama, tiga fase memberi tegangan lebih tinggi." },
-            { "question": "Tegangan tiga fase maksudnya apa?", "answer": "Rumus tiga fase memberi tegangan saluran (antar saluran), bukan fase–netral. Nilai umum: 208V, 240V, 380V, 400V, 415V, 480V. Gunakan untuk penentuan ukuran peralatan dan tegangan jaringan." },
-            { "question": "Apa itu faktor daya?", "answer": "Faktor daya (PF) = rasio daya nyata ke semu di AC, 0–1. Khas: resistif = 1,0, motor induksi = 0,8–0,9, fluoresen = 0,85–0,95, LED = 0,9–0,95. Tidak dikenal: 0,8 motor, 0,9 beban campuran. DC tidak punya faktor daya." },
-            { "question": "Kalkulator gratis?", "answer": "Ya, kalkulator kW ke Volt gratis. Tanpa registrasi atau bayar. Masukkan kW dan arus, pilih DC/fase tunggal/tiga fase, tambah faktor daya untuk AC — dapat hasil instan dan akurat." }
+            {
+              "question": "Apa rumus konversi kW ke Volt?",
+              "answer": "DC: V = (kW × 1000) / I. AC fase tunggal: V = (kW × 1000) / (I × PF). AC tiga fase: V = (kW × 1000) / (√3 × I × PF). V dalam volt, kW daya, I arus (A), PF faktor daya. Hasil tiga fase = tegangan saluran. DC tidak memakai faktor daya."
+            },
+            {
+              "question": "Perlu faktor daya untuk DC?",
+              "answer": "Tidak. Faktor daya hanya untuk AC. DC: V = (kW × 1000) / I. Hanya perlu kW dan arus. Aplikasi DC umum: baterai, surya, EV 12V, 24V, 48V atau lebih."
+            },
+            {
+              "question": "Bedanya fase tunggal dan tiga fase?",
+              "answer": "Fase tunggal: V = (kW × 1000) / (I × PF). Tiga fase: V = (kW × 1000) / (√3 × I × PF), hasil = tegangan saluran. Pada kW dan arus sama, tiga fase memberi tegangan lebih tinggi."
+            },
+            {
+              "question": "Tegangan tiga fase maksudnya apa?",
+              "answer": "Rumus tiga fase memberi tegangan saluran (antar saluran), bukan fase–netral. Nilai umum: 208V, 240V, 380V, 400V, 415V, 480V. Gunakan untuk penentuan ukuran peralatan dan tegangan jaringan."
+            },
+            {
+              "question": "Apa itu faktor daya?",
+              "answer": "Faktor daya (PF) = rasio daya nyata ke semu di AC, 0–1. Khas: resistif = 1,0, motor induksi = 0,8–0,9, fluoresen = 0,85–0,95, LED = 0,9–0,95. Tidak dikenal: 0,8 motor, 0,9 beban campuran. DC tidak punya faktor daya."
+            },
+            {
+              "question": "Kalkulator gratis?",
+              "answer": "Ya, kalkulator kW ke Volt gratis. Tanpa registrasi atau bayar. Masukkan kW dan arus, pilih DC/fase tunggal/tiga fase, tambah faktor daya untuk AC — dapat hasil instan dan akurat."
+            }
           ]
         }
       }
@@ -1069,11 +1087,26 @@
         "faq": {
           "heading": "Pertanyaan yang Sering Diajukan",
           "items": [
-            { "question": "Apa rumus kW ke kWh?", "answer": "kWh = kW × jam. Mis.: 2 kW selama 3 jam → 2 × 3 = 6 kWh." },
-            { "question": "Bedanya kW dan kWh?", "answer": "kW = daya. kWh = energi (jumlah dalam waktu). 1 kW × 1 jam = 1 kWh; × 10 jam = 10 kWh." },
-            { "question": "Bisa pakai jam desimal (mis. 1,5 = 1 jam 30)?", "answer": "Ya. 1,5 = 1 jam 30, 0,5 = 30 menit, 0,25 = 15 menit. 2 kW × 1,5 jam = 3 kWh." },
-            { "question": "Bagaimana estimasi tagihan dari kW dan jam?", "answer": "Pertama kWh = kW × jam. Lalu kWh × tarif per kWh (mis. Rp 1.500/kWh). Mis.: 24 kWh × 1.500 = Rp 36.000." },
-            { "question": "Kalkulator gratis?", "answer": "Ya, kalkulator kW ke kWh gratis. Tanpa registrasi. Masukkan kW dan jam untuk hasil instan dalam kWh." }
+            {
+              "question": "Apa rumus kW ke kWh?",
+              "answer": "kWh = kW × jam. Mis.: 2 kW selama 3 jam → 2 × 3 = 6 kWh."
+            },
+            {
+              "question": "Bedanya kW dan kWh?",
+              "answer": "kW = daya. kWh = energi (jumlah dalam waktu). 1 kW × 1 jam = 1 kWh; × 10 jam = 10 kWh."
+            },
+            {
+              "question": "Bisa pakai jam desimal (mis. 1,5 = 1 jam 30)?",
+              "answer": "Ya. 1,5 = 1 jam 30, 0,5 = 30 menit, 0,25 = 15 menit. 2 kW × 1,5 jam = 3 kWh."
+            },
+            {
+              "question": "Bagaimana estimasi tagihan dari kW dan jam?",
+              "answer": "Pertama kWh = kW × jam. Lalu kWh × tarif per kWh (mis. Rp 1.500/kWh). Mis.: 24 kWh × 1.500 = Rp 36.000."
+            },
+            {
+              "question": "Kalkulator gratis?",
+              "answer": "Ya, kalkulator kW ke kWh gratis. Tanpa registrasi. Masukkan kW dan jam untuk hasil instan dalam kWh."
+            }
           ]
         }
       }
@@ -1167,11 +1200,26 @@
         "faq": {
           "heading": "Pertanyaan yang Sering Diajukan",
           "items": [
-            { "question": "Apa rumus untuk mengonversi kW ke VA?", "answer": "Rumusnya adalah VA = (kW × 1000) / PF, di mana VA adalah daya semu dalam volt-ampere, kW adalah daya aktif dalam kilowatt, dan PF adalah faktor daya (0 hingga 1). Daya aktif = daya semu × PF, jadi daya semu = daya aktif / PF." },
-            { "question": "Apa perbedaan antara kW dan VA?", "answer": "kW (kilowatt) adalah daya aktif — pekerjaan aktual yang dilakukan oleh beban (mis. output mekanis, panas, cahaya). VA (volt-ampere) adalah daya semu — daya total yang disediakan oleh sumber, termasuk daya reaktif yang tidak melakukan pekerjaan yang berguna. VA ≥ kW selalu; mereka sama hanya ketika PF = 1,0 (beban resistif murni)." },
-            { "question": "Apa itu faktor daya dan nilai apa yang umum?", "answer": "Faktor daya (PF) adalah rasio kW / VA, berkisar dari 0 hingga 1. Ini mengukur seberapa efisien daya listrik diubah menjadi kerja yang berguna. Nilai umum: pemanas resistif ~1,0, lampu fluoresen 0,5-0,95, motor induksi 0,7-0,9, catu daya 0,6-0,95. PF yang lebih rendah berarti VA yang lebih tinggi diperlukan untuk kW yang sama, meningkatkan ukuran konduktor dan transformator." },
-            { "question": "Mengapa saya perlu mengonversi kW ke VA?", "answer": "Transformator, generator, unit UPS, dan pemutus sirkuit dinilai dalam VA (atau kVA), bukan kW. Beban yang menarik 10 kW pada PF 0,8 memerlukan kapasitas pasokan 12,5 kVA. Menentukan ukuran peralatan hanya berdasarkan kW (mengabaikan PF) dapat menyebabkan kelebihan beban. Mengonversi kW ke VA memastikan Anda memilih peralatan dengan kapasitas daya semu yang memadai." },
-            { "question": "Apakah kalkulator ini gratis?", "answer": "Ya, kalkulator kW ke VA kami gratis. Tidak diperlukan pendaftaran atau pembayaran. Masukkan daya dalam kW dan faktor daya (0-1) untuk mendapatkan hasil instan dan akurat dalam VA." }
+            {
+              "question": "Apa rumus untuk mengonversi kW ke VA?",
+              "answer": "Rumusnya adalah VA = (kW × 1000) / PF, di mana VA adalah daya semu dalam volt-ampere, kW adalah daya aktif dalam kilowatt, dan PF adalah faktor daya (0 hingga 1). Daya aktif = daya semu × PF, jadi daya semu = daya aktif / PF."
+            },
+            {
+              "question": "Apa perbedaan antara kW dan VA?",
+              "answer": "kW (kilowatt) adalah daya aktif — pekerjaan aktual yang dilakukan oleh beban (mis. output mekanis, panas, cahaya). VA (volt-ampere) adalah daya semu — daya total yang disediakan oleh sumber, termasuk daya reaktif yang tidak melakukan pekerjaan yang berguna. VA ≥ kW selalu; mereka sama hanya ketika PF = 1,0 (beban resistif murni)."
+            },
+            {
+              "question": "Apa itu faktor daya dan nilai apa yang umum?",
+              "answer": "Faktor daya (PF) adalah rasio kW / VA, berkisar dari 0 hingga 1. Ini mengukur seberapa efisien daya listrik diubah menjadi kerja yang berguna. Nilai umum: pemanas resistif ~1,0, lampu fluoresen 0,5-0,95, motor induksi 0,7-0,9, catu daya 0,6-0,95. PF yang lebih rendah berarti VA yang lebih tinggi diperlukan untuk kW yang sama, meningkatkan ukuran konduktor dan transformator."
+            },
+            {
+              "question": "Mengapa saya perlu mengonversi kW ke VA?",
+              "answer": "Transformator, generator, unit UPS, dan pemutus sirkuit dinilai dalam VA (atau kVA), bukan kW. Beban yang menarik 10 kW pada PF 0,8 memerlukan kapasitas pasokan 12,5 kVA. Menentukan ukuran peralatan hanya berdasarkan kW (mengabaikan PF) dapat menyebabkan kelebihan beban. Mengonversi kW ke VA memastikan Anda memilih peralatan dengan kapasitas daya semu yang memadai."
+            },
+            {
+              "question": "Apakah kalkulator ini gratis?",
+              "answer": "Ya, kalkulator kW ke VA kami gratis. Tidak diperlukan pendaftaran atau pembayaran. Masukkan daya dalam kW dan faktor daya (0-1) untuk mendapatkan hasil instan dan akurat dalam VA."
+            }
           ]
         }
       }
@@ -1201,11 +1249,26 @@
         "faq": {
           "heading": "Pertanyaan yang Sering Diajukan",
           "items": [
-            { "question": "Apa rumus untuk mengonversi kW ke kVA?", "answer": "Rumusnya adalah kVA = kW / PF, di mana kVA adalah daya semu dalam kilovolt-ampere, kW adalah daya nyata dalam kilowatt, dan PF adalah faktor daya (0 hingga 1). Daya nyata = daya semu × PF, jadi daya semu = daya nyata / PF." },
-            { "question": "Apa perbedaan antara kW dan kVA?", "answer": "kW (kilowatt) adalah daya nyata — pekerjaan aktual yang dilakukan oleh beban (mis. keluaran mekanis, panas, cahaya). kVA (kilovolt-ampere) adalah daya semu — total daya yang disuplai oleh sumber, termasuk daya reaktif yang tidak melakukan pekerjaan berguna. kVA ≥ kW selalu; mereka sama hanya ketika PF = 1,0 (beban resistif murni)." },
-            { "question": "Apa itu faktor daya dan berapa nilai tipikal?", "answer": "Faktor daya (PF) adalah rasio kW / kVA, dari 0 hingga 1. Ini mengukur seberapa efisien daya listrik dikonversi menjadi pekerjaan yang berguna. Nilai tipikal: pemanas resistif ~1,0, lampu neon 0,5–0,95, motor induksi 0,7–0,9, catu daya 0,6–0,95. PF yang lebih rendah berarti kVA yang lebih tinggi diperlukan untuk kW yang sama, meningkatkan ukuran konduktor dan transformator." },
-            { "question": "Mengapa saya harus mengonversi kW ke kVA?", "answer": "Transformator, generator, unit UPS, dan pemutus diberi rating dalam kVA, bukan kW. Beban yang menarik 10 kW pada PF 0,8 memerlukan kapasitas pasokan 12,5 kVA. Menentukan ukuran peralatan hanya berdasarkan kW (mengabaikan PF) dapat menyebabkan kelebihan beban. Mengonversi kW ke kVA memastikan Anda memilih peralatan dengan kapasitas daya semu yang memadai." },
-            { "question": "Apakah kalkulator ini gratis?", "answer": "Ya, kalkulator kW ke kVA kami gratis. Tidak diperlukan pendaftaran atau pembayaran. Masukkan daya dalam kW dan faktor daya (0–1) untuk hasil instan dan akurat dalam kVA." }
+            {
+              "question": "Apa rumus untuk mengonversi kW ke kVA?",
+              "answer": "Rumusnya adalah kVA = kW / PF, di mana kVA adalah daya semu dalam kilovolt-ampere, kW adalah daya nyata dalam kilowatt, dan PF adalah faktor daya (0 hingga 1). Daya nyata = daya semu × PF, jadi daya semu = daya nyata / PF."
+            },
+            {
+              "question": "Apa perbedaan antara kW dan kVA?",
+              "answer": "kW (kilowatt) adalah daya nyata — pekerjaan aktual yang dilakukan oleh beban (mis. keluaran mekanis, panas, cahaya). kVA (kilovolt-ampere) adalah daya semu — total daya yang disuplai oleh sumber, termasuk daya reaktif yang tidak melakukan pekerjaan berguna. kVA ≥ kW selalu; mereka sama hanya ketika PF = 1,0 (beban resistif murni)."
+            },
+            {
+              "question": "Apa itu faktor daya dan berapa nilai tipikal?",
+              "answer": "Faktor daya (PF) adalah rasio kW / kVA, dari 0 hingga 1. Ini mengukur seberapa efisien daya listrik dikonversi menjadi pekerjaan yang berguna. Nilai tipikal: pemanas resistif ~1,0, lampu neon 0,5–0,95, motor induksi 0,7–0,9, catu daya 0,6–0,95. PF yang lebih rendah berarti kVA yang lebih tinggi diperlukan untuk kW yang sama, meningkatkan ukuran konduktor dan transformator."
+            },
+            {
+              "question": "Mengapa saya harus mengonversi kW ke kVA?",
+              "answer": "Transformator, generator, unit UPS, dan pemutus diberi rating dalam kVA, bukan kW. Beban yang menarik 10 kW pada PF 0,8 memerlukan kapasitas pasokan 12,5 kVA. Menentukan ukuran peralatan hanya berdasarkan kW (mengabaikan PF) dapat menyebabkan kelebihan beban. Mengonversi kW ke kVA memastikan Anda memilih peralatan dengan kapasitas daya semu yang memadai."
+            },
+            {
+              "question": "Apakah kalkulator ini gratis?",
+              "answer": "Ya, kalkulator kW ke kVA kami gratis. Tidak diperlukan pendaftaran atau pembayaran. Masukkan daya dalam kW dan faktor daya (0–1) untuk hasil instan dan akurat dalam kVA."
+            }
           ]
         }
       }
@@ -1527,11 +1590,26 @@
         "faq": {
           "heading": "Pertanyaan yang Sering Diajukan",
           "items": [
-            {"question": "Apa rumus VA ke kW?", "answer": "kW = (VA × FP) / 1000. FP diperlukan karena hanya sebagian daya semu yang nyata; bagi 1000 untuk kilowatt."},
-            {"question": "Perbedaan VA dan kW?", "answer": "VA mengukur daya semu (total, termasuk reaktif), kW mengukur daya nyata. kW = (VA × FP) / 1000. Hanya sama saat FP = 1,0 dan faktor 1000."},
-            {"question": "Mengapa faktor daya diperlukan?", "answer": "Daya semu mencakup daya reaktif. Faktor daya menunjukkan porsi nyata. Tanpa FP tidak bisa tentukan daya nyata dari VA."},
-            {"question": "Faktor daya khas?", "answer": "Beban resistif sering ≈ 1,0. Motor dan induktif 0,7–0,9. Jika ragu sering dipakai 0,8."},
-            {"question": "Kalkulator gratis?", "answer": "Ya. Tanpa registrasi. Masukkan VA dan faktor daya untuk hasil dalam kilowatt."}
+            {
+              "question": "Apa rumus VA ke kW?",
+              "answer": "kW = (VA × FP) / 1000. FP diperlukan karena hanya sebagian daya semu yang nyata; bagi 1000 untuk kilowatt."
+            },
+            {
+              "question": "Perbedaan VA dan kW?",
+              "answer": "VA mengukur daya semu (total, termasuk reaktif), kW mengukur daya nyata. kW = (VA × FP) / 1000. Hanya sama saat FP = 1,0 dan faktor 1000."
+            },
+            {
+              "question": "Mengapa faktor daya diperlukan?",
+              "answer": "Daya semu mencakup daya reaktif. Faktor daya menunjukkan porsi nyata. Tanpa FP tidak bisa tentukan daya nyata dari VA."
+            },
+            {
+              "question": "Faktor daya khas?",
+              "answer": "Beban resistif sering ≈ 1,0. Motor dan induktif 0,7–0,9. Jika ragu sering dipakai 0,8."
+            },
+            {
+              "question": "Kalkulator gratis?",
+              "answer": "Ya. Tanpa registrasi. Masukkan VA dan faktor daya untuk hasil dalam kilowatt."
+            }
           ]
         },
         "related": {
@@ -1571,11 +1649,26 @@
         "faq": {
           "heading": "Pertanyaan yang Sering Diajukan",
           "items": [
-            {"question": "Rumus VA ke kVA?", "answer": "kVA = VA / 1000. Keduanya daya semu; bagi 1000. Faktor daya tidak perlu."},
-            {"question": "Perbedaan VA dan kVA?", "answer": "VA dan kVA mengukur daya semu. 1 kVA = 1000 VA. Besaran sama, satuan lain — seperti meter dan kilometer."},
-            {"question": "Perlu faktor daya?", "answer": "Tidak. Hanya saat daya semu ↔ aktif (W/kW). VA → kVA = bagi 1000."},
-            {"question": "Kapan VA, kapan kVA?", "answer": "Perangkat kecil sering VA, besar (UPS, transformator) kVA. Konversi untuk membandingkan dan menjumlahkan daya."},
-            {"question": "Kalkulator gratis?", "answer": "Ya. Tanpa registrasi. Masukkan VA untuk hasil dalam kVA."}
+            {
+              "question": "Rumus VA ke kVA?",
+              "answer": "kVA = VA / 1000. Keduanya daya semu; bagi 1000. Faktor daya tidak perlu."
+            },
+            {
+              "question": "Perbedaan VA dan kVA?",
+              "answer": "VA dan kVA mengukur daya semu. 1 kVA = 1000 VA. Besaran sama, satuan lain — seperti meter dan kilometer."
+            },
+            {
+              "question": "Perlu faktor daya?",
+              "answer": "Tidak. Hanya saat daya semu ↔ aktif (W/kW). VA → kVA = bagi 1000."
+            },
+            {
+              "question": "Kapan VA, kapan kVA?",
+              "answer": "Perangkat kecil sering VA, besar (UPS, transformator) kVA. Konversi untuk membandingkan dan menjumlahkan daya."
+            },
+            {
+              "question": "Kalkulator gratis?",
+              "answer": "Ya. Tanpa registrasi. Masukkan VA untuk hasil dalam kVA."
+            }
           ]
         },
         "related": {
@@ -1786,11 +1879,26 @@
         "faq": {
           "heading": "Pertanyaan yang sering diajukan",
           "items": [
-            {"question": "Rumus volt ke ampere dengan watt?", "answer": "I = P / V. Arus (A) = daya (W) / tegangan (V). Mis. 2300 W, 230 V → I = 10 A."},
-            {"question": "Rumus volt ke ampere dengan ohm?", "answer": "I = V / R (hukum Ohm). Arus = tegangan / resistansi. Mis. 12 V, 24 Ω → I = 0,5 A."},
-            {"question": "Kapan watt, kapan ohm?", "answer": "Watt: ketika daya (mis. nameplate) dan tegangan diketahui. Ohm: tegangan pada resistor dan nilainya (resistor, pemanas, rangkaian DC)."},
-            {"question": "Apakah hukum Ohm berlaku untuk AC?", "answer": "I = V / R berlaku untuk rangkaian AC resistif pada nilai efektif. Untuk reaktansi gunakan impedansi Z: I = V / Z."},
-            {"question": "Apakah kalkulator gratis?", "answer": "Ya. Pilih watt atau ohm, masukkan tegangan dan watt/ohm, dapatkan arus dalam ampere."}
+            {
+              "question": "Rumus volt ke ampere dengan watt?",
+              "answer": "I = P / V. Arus (A) = daya (W) / tegangan (V). Mis. 2300 W, 230 V → I = 10 A."
+            },
+            {
+              "question": "Rumus volt ke ampere dengan ohm?",
+              "answer": "I = V / R (hukum Ohm). Arus = tegangan / resistansi. Mis. 12 V, 24 Ω → I = 0,5 A."
+            },
+            {
+              "question": "Kapan watt, kapan ohm?",
+              "answer": "Watt: ketika daya (mis. nameplate) dan tegangan diketahui. Ohm: tegangan pada resistor dan nilainya (resistor, pemanas, rangkaian DC)."
+            },
+            {
+              "question": "Apakah hukum Ohm berlaku untuk AC?",
+              "answer": "I = V / R berlaku untuk rangkaian AC resistif pada nilai efektif. Untuk reaktansi gunakan impedansi Z: I = V / Z."
+            },
+            {
+              "question": "Apakah kalkulator gratis?",
+              "answer": "Ya. Pilih watt atau ohm, masukkan tegangan dan watt/ohm, dapatkan arus dalam ampere."
+            }
           ]
         },
         "related": {
@@ -1941,7 +2049,6 @@
       "amps": "Ampere (A)",
       "volts": "Tegangan (V)",
       "powerFactor": "Faktor Daya (0-1)",
-      "volts": "Tegangan (V)",
       "calculate": "Hitung",
       "reset": "Reset",
       "result": "Hasil",
@@ -2315,12 +2422,30 @@
         "faq": {
           "heading": "Pertanyaan yang Sering Diajukan",
           "items": [
-            { "question": "Apa rumus watt ke ampere (DC)?", "answer": "Untuk DC: I = P / V, di mana I adalah arus dalam A, P adalah daya dalam W, dan V adalah tegangan dalam V. Membagi daya dengan tegangan menghasilkan arus. Contoh: 1200 W pada 120 V → I = 10 A." },
-            { "question": "Apa rumus untuk fase tunggal?", "answer": "Untuk fase tunggal: I = P / (V × PF). V tegangan (V), P daya (W), PF faktor daya (0–1). Contoh: 1840 W pada 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
-            { "question": "Apa rumus untuk tiga fase?", "answer": "Untuk tiga fase: I = P / (√3 × V × PF). V tegangan line-to-line (V), P daya (W), PF faktor daya. √3 ≈ 1,732. Contoh: 8,83 kW pada 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
-            { "question": "Kapan menggunakan DC, fase tunggal, atau tiga fase?", "answer": "DC untuk baterai, sirkuit solar DC, dan beban DC. Fase tunggal untuk perumahan tipikal (120 V, 230 V, 240 V). Tiga fase untuk distribusi industri dan komersial (400 V, 480 V line-to-line) dan motor." },
-            { "question": "Bagaimana hubungannya dengan ampere ke watt?", "answer": "Watt ke ampere (I = P / V) dan ampere ke watt (P = I × V) adalah operasi terbalik. Gunakan watt→ampere saat Anda tahu daya dan tegangan; ampere→watt saat Anda tahu arus dan tegangan." },
-            { "question": "Apakah kalkulator ini gratis?", "answer": "Ya. Kalkulator Watt ke Ampere gratis. Tanpa registrasi. Pilih DC, fase tunggal, atau tiga fase, masukkan watt dan tegangan (dan faktor daya untuk AC), dapatkan ampere secara instan." }
+            {
+              "question": "Apa rumus watt ke ampere (DC)?",
+              "answer": "Untuk DC: I = P / V, di mana I adalah arus dalam A, P adalah daya dalam W, dan V adalah tegangan dalam V. Membagi daya dengan tegangan menghasilkan arus. Contoh: 1200 W pada 120 V → I = 10 A."
+            },
+            {
+              "question": "Apa rumus untuk fase tunggal?",
+              "answer": "Untuk fase tunggal: I = P / (V × PF). V tegangan (V), P daya (W), PF faktor daya (0–1). Contoh: 1840 W pada 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A."
+            },
+            {
+              "question": "Apa rumus untuk tiga fase?",
+              "answer": "Untuk tiga fase: I = P / (√3 × V × PF). V tegangan line-to-line (V), P daya (W), PF faktor daya. √3 ≈ 1,732. Contoh: 8,83 kW pada 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+            },
+            {
+              "question": "Kapan menggunakan DC, fase tunggal, atau tiga fase?",
+              "answer": "DC untuk baterai, sirkuit solar DC, dan beban DC. Fase tunggal untuk perumahan tipikal (120 V, 230 V, 240 V). Tiga fase untuk distribusi industri dan komersial (400 V, 480 V line-to-line) dan motor."
+            },
+            {
+              "question": "Bagaimana hubungannya dengan ampere ke watt?",
+              "answer": "Watt ke ampere (I = P / V) dan ampere ke watt (P = I × V) adalah operasi terbalik. Gunakan watt→ampere saat Anda tahu daya dan tegangan; ampere→watt saat Anda tahu arus dan tegangan."
+            },
+            {
+              "question": "Apakah kalkulator ini gratis?",
+              "answer": "Ya. Kalkulator Watt ke Ampere gratis. Tanpa registrasi. Pilih DC, fase tunggal, atau tiga fase, masukkan watt dan tegangan (dan faktor daya untuk AC), dapatkan ampere secara instan."
+            }
           ]
         },
         "related": {
@@ -2366,12 +2491,30 @@
         "faq": {
           "heading": "Pertanyaan yang Sering Diajukan",
           "items": [
-            { "question": "Apa rumus watt ke volt (DC)?", "answer": "Untuk DC: V = P / I, di mana V adalah tegangan dalam V, P adalah daya dalam W, dan I adalah arus dalam A. Membagi daya dengan arus menghasilkan tegangan. Contoh: 1200 W pada 10 A → V = 120 V." },
-            { "question": "Apa rumus untuk fase tunggal AC?", "answer": "Untuk fase tunggal AC: V = P / (I × PF). I arus (A), P daya (W), PF faktor daya (0–1). Contoh: 1840 W pada 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
-            { "question": "Apa rumus untuk tiga fase AC?", "answer": "Untuk tiga fase AC: V = P / (√3 × I × PF). I arus per fase (A), P daya (W), PF faktor daya. √3 ≈ 1,732. Contoh: 8,83 kW pada 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
-            { "question": "Kapan menggunakan DC, fase tunggal, atau tiga fase?", "answer": "DC untuk baterai, sirkuit solar DC, dan beban DC. Fase tunggal untuk perumahan tipikal (120 V, 230 V, 240 V). Tiga fase untuk distribusi industri dan komersial (400 V, 480 V line-to-line) dan motor." },
-            { "question": "Bagaimana hubungannya dengan volt ke watt?", "answer": "Watt ke volt (V = P / I) dan volt ke watt (P = V × I) adalah operasi terbalik. Gunakan watt→volt saat Anda tahu daya dan arus; volt→watt saat Anda tahu tegangan dan arus." },
-            { "question": "Apakah kalkulator ini gratis?", "answer": "Ya. Kalkulator Watt ke Volt gratis. Tanpa registrasi. Pilih DC, fase tunggal, atau tiga fase, masukkan watt dan arus (dan faktor daya untuk AC), dapatkan volt secara instan." }
+            {
+              "question": "Apa rumus watt ke volt (DC)?",
+              "answer": "Untuk DC: V = P / I, di mana V adalah tegangan dalam V, P adalah daya dalam W, dan I adalah arus dalam A. Membagi daya dengan arus menghasilkan tegangan. Contoh: 1200 W pada 10 A → V = 120 V."
+            },
+            {
+              "question": "Apa rumus untuk fase tunggal AC?",
+              "answer": "Untuk fase tunggal AC: V = P / (I × PF). I arus (A), P daya (W), PF faktor daya (0–1). Contoh: 1840 W pada 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V."
+            },
+            {
+              "question": "Apa rumus untuk tiga fase AC?",
+              "answer": "Untuk tiga fase AC: V = P / (√3 × I × PF). I arus per fase (A), P daya (W), PF faktor daya. √3 ≈ 1,732. Contoh: 8,83 kW pada 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+            },
+            {
+              "question": "Kapan menggunakan DC, fase tunggal, atau tiga fase?",
+              "answer": "DC untuk baterai, sirkuit solar DC, dan beban DC. Fase tunggal untuk perumahan tipikal (120 V, 230 V, 240 V). Tiga fase untuk distribusi industri dan komersial (400 V, 480 V line-to-line) dan motor."
+            },
+            {
+              "question": "Bagaimana hubungannya dengan volt ke watt?",
+              "answer": "Watt ke volt (V = P / I) dan volt ke watt (P = V × I) adalah operasi terbalik. Gunakan watt→volt saat Anda tahu daya dan arus; volt→watt saat Anda tahu tegangan dan arus."
+            },
+            {
+              "question": "Apakah kalkulator ini gratis?",
+              "answer": "Ya. Kalkulator Watt ke Volt gratis. Tanpa registrasi. Pilih DC, fase tunggal, atau tiga fase, masukkan watt dan arus (dan faktor daya untuk AC), dapatkan volt secara instan."
+            }
           ]
         },
         "related": {
@@ -2575,6 +2718,10 @@
           "ampsToWatts": "Kalkulator Ampere ke Watt",
           "ampsToWattsDesc": "Konversi arus dan tegangan ke daya"
         }
+      },
+      "addition": {
+        "title": "Kalkulator Penjumlahan",
+        "description": "Tambahkan dua angka dengan cepat dan akurat"
       }
     },
     "textToBinary": {

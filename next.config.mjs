@@ -1,5 +1,9 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
 import createNextIntlPlugin from 'next-intl/plugin';
 import createMDX from '@next/mdx';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
@@ -9,7 +13,7 @@ const withMDX = createMDX({
   },
 });
 
-const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+const withNextIntl = createNextIntlPlugin(path.resolve(__dirname, 'i18n', 'request.ts'));
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

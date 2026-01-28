@@ -1034,12 +1034,30 @@
         "faq": {
           "heading": "Întrebări frecvente",
           "items": [
-            { "question": "Care e formula pentru kW în Volți?", "answer": "DC: V = (kW × 1000) / I. AC monofazat: V = (kW × 1000) / (I × PF). AC trifazat: V = (kW × 1000) / (√3 × I × PF). V în volți, kW putere, I curent în A, PF factor de putere. Rezultatul trifazat = tensiune între faze. DC nu folosește factor de putere." },
-            { "question": "Am nevoie de factor de putere la DC?", "answer": "Nu. Factorul de putere se aplică doar la AC. La DC: V = (kW × 1000) / I. Ai nevoie doar de kW și curent. Aplicații DC tipice: baterii, solar, EV la 12V, 24V, 48V sau mai mult." },
-            { "question": "Diferență monofazat și trifazat?", "answer": "Monofazat: V = (kW × 1000) / (I × PF). Trifazat: V = (kW × 1000) / (√3 × I × PF), rezultat = tensiune între faze. La același kW și curent, trifazat dă o tensiune mai mare." },
-            { "question": "Ce tensiune reprezintă rezultatul trifazat?", "answer": "Formula trifazată dă tensiunea între faze (compusă), nu fază–neutru. Valori comune: 208V, 240V, 380V, 400V, 415V, 480V. Folosește-o pentru dimensionare și tensiunea rețelei." },
-            { "question": "Ce este factorul de putere?", "answer": "Factorul de putere (PF) e raportul putere activă/aparentă la AC, 0–1. Tipic: rezistiv = 1,0, motoare cu inducție = 0,8–0,9, fluorescent = 0,85–0,95, LED = 0,9–0,95. Necunoscut: 0,8 pentru motoare, 0,9 pentru sarcini mixte. DC nu are factor de putere." },
-            { "question": "Calculatorul e gratuit?", "answer": "Da, calculatorul kW la Volți e gratuit. Fără înregistrare sau plată. Introdu kW și curent, alege DC, monofazat sau trifazat, adaugă factorul de putere pentru AC și obține rezultate instantanee și precise." }
+            {
+              "question": "Care e formula pentru kW în Volți?",
+              "answer": "DC: V = (kW × 1000) / I. AC monofazat: V = (kW × 1000) / (I × PF). AC trifazat: V = (kW × 1000) / (√3 × I × PF). V în volți, kW putere, I curent în A, PF factor de putere. Rezultatul trifazat = tensiune între faze. DC nu folosește factor de putere."
+            },
+            {
+              "question": "Am nevoie de factor de putere la DC?",
+              "answer": "Nu. Factorul de putere se aplică doar la AC. La DC: V = (kW × 1000) / I. Ai nevoie doar de kW și curent. Aplicații DC tipice: baterii, solar, EV la 12V, 24V, 48V sau mai mult."
+            },
+            {
+              "question": "Diferență monofazat și trifazat?",
+              "answer": "Monofazat: V = (kW × 1000) / (I × PF). Trifazat: V = (kW × 1000) / (√3 × I × PF), rezultat = tensiune între faze. La același kW și curent, trifazat dă o tensiune mai mare."
+            },
+            {
+              "question": "Ce tensiune reprezintă rezultatul trifazat?",
+              "answer": "Formula trifazată dă tensiunea între faze (compusă), nu fază–neutru. Valori comune: 208V, 240V, 380V, 400V, 415V, 480V. Folosește-o pentru dimensionare și tensiunea rețelei."
+            },
+            {
+              "question": "Ce este factorul de putere?",
+              "answer": "Factorul de putere (PF) e raportul putere activă/aparentă la AC, 0–1. Tipic: rezistiv = 1,0, motoare cu inducție = 0,8–0,9, fluorescent = 0,85–0,95, LED = 0,9–0,95. Necunoscut: 0,8 pentru motoare, 0,9 pentru sarcini mixte. DC nu are factor de putere."
+            },
+            {
+              "question": "Calculatorul e gratuit?",
+              "answer": "Da, calculatorul kW la Volți e gratuit. Fără înregistrare sau plată. Introdu kW și curent, alege DC, monofazat sau trifazat, adaugă factorul de putere pentru AC și obține rezultate instantanee și precise."
+            }
           ]
         }
       }
@@ -1069,11 +1087,26 @@
         "faq": {
           "heading": "Întrebări frecvente",
           "items": [
-            { "question": "Care e formula kW în kWh?", "answer": "kWh = kW × ore. Ex.: 2 kW 3 h → 2 × 3 = 6 kWh." },
-            { "question": "Diferență kW și kWh?", "answer": "kW = putere. kWh = energie (cantitate în timp). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh." },
-            { "question": "Pot folosi ore zecimale (ex. 1,5 = 1 h 30)?", "answer": "Da. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh." },
-            { "question": "Cum estimez factura din kW și ore?", "answer": "Mai întâi kWh = kW × ore. Apoi kWh × preț/kWh (ex. 0,50 lei/kWh). Ex.: 24 kWh × 0,50 = 12 lei." },
-            { "question": "Calculatorul e gratuit?", "answer": "Da, calculatorul kW la kWh e gratuit. Fără înregistrare. Introdu kW și ore pentru rezultat instantaneu în kWh." }
+            {
+              "question": "Care e formula kW în kWh?",
+              "answer": "kWh = kW × ore. Ex.: 2 kW 3 h → 2 × 3 = 6 kWh."
+            },
+            {
+              "question": "Diferență kW și kWh?",
+              "answer": "kW = putere. kWh = energie (cantitate în timp). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh."
+            },
+            {
+              "question": "Pot folosi ore zecimale (ex. 1,5 = 1 h 30)?",
+              "answer": "Da. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh."
+            },
+            {
+              "question": "Cum estimez factura din kW și ore?",
+              "answer": "Mai întâi kWh = kW × ore. Apoi kWh × preț/kWh (ex. 0,50 lei/kWh). Ex.: 24 kWh × 0,50 = 12 lei."
+            },
+            {
+              "question": "Calculatorul e gratuit?",
+              "answer": "Da, calculatorul kW la kWh e gratuit. Fără înregistrare. Introdu kW și ore pentru rezultat instantaneu în kWh."
+            }
           ]
         }
       }
@@ -1167,11 +1200,26 @@
         "faq": {
           "heading": "Întrebări frecvente",
           "items": [
-            { "question": "Care este formula pentru conversia kW în VA?", "answer": "Formula este VA = (kW × 1000) / PF, unde VA este puterea aparentă în voltamperi, kW este puterea activă în kilowați, iar PF este factorul de putere (0 la 1). Putere activă = putere aparentă × PF, deci putere aparentă = putere activă / PF." },
-            { "question": "Care este diferența dintre kW și VA?", "answer": "kW (kilowați) este putere activă — munca reală efectuată de sarcină (de ex. ieșire mecanică, căldură, lumină). VA (voltamperi) este putere aparentă — puterea totală furnizată de sursă, incluzând puterea reactivă care nu efectuează muncă utilă. VA ≥ kW întotdeauna; sunt egali doar când PF = 1,0 (sarcină pur rezistivă)." },
-            { "question": "Ce este factorul de putere și care sunt valorile tipice?", "answer": "Factorul de putere (PF) este raportul kW / VA, variind de la 0 la 1. Măsoară cât de eficient puterea electrică este transformată în muncă utilă. Valori tipice: încălzitoare rezistive ~1,0, lămpi fluorescente 0,5–0,95, motoare de inducție 0,7–0,9, surse de alimentare 0,6–0,95. Un PF mai scăzut înseamnă că sunt necesari VA mai mari pentru aceiași kW, crescând dimensiunea conductorilor și transformatoarelor." },
-            { "question": "De ce trebuie să convertesc kW în VA?", "answer": "Transformatoarele, generatoarele, unitățile UPS și întreruptoarele sunt clasificate în VA (sau kVA), nu în kW. O sarcină care consumă 10 kW la PF 0,8 necesită 12,5 kVA capacitate de alimentare. Dimensionarea echipamentelor doar după kW (ignorând PF) poate duce la supraîncărcare. Conversia kW în VA asigură că selectați echipamente cu capacitate suficientă de putere aparentă." },
-            { "question": "Este acest calculator gratuit?", "answer": "Da, calculatorul nostru kW în VA este gratuit. Nu este necesară înregistrare sau plată. Introduceți puterea în kW și factorul de putere (0–1) pentru a obține rezultate instantanee și precise în VA." }
+            {
+              "question": "Care este formula pentru conversia kW în VA?",
+              "answer": "Formula este VA = (kW × 1000) / PF, unde VA este puterea aparentă în voltamperi, kW este puterea activă în kilowați, iar PF este factorul de putere (0 la 1). Putere activă = putere aparentă × PF, deci putere aparentă = putere activă / PF."
+            },
+            {
+              "question": "Care este diferența dintre kW și VA?",
+              "answer": "kW (kilowați) este putere activă — munca reală efectuată de sarcină (de ex. ieșire mecanică, căldură, lumină). VA (voltamperi) este putere aparentă — puterea totală furnizată de sursă, incluzând puterea reactivă care nu efectuează muncă utilă. VA ≥ kW întotdeauna; sunt egali doar când PF = 1,0 (sarcină pur rezistivă)."
+            },
+            {
+              "question": "Ce este factorul de putere și care sunt valorile tipice?",
+              "answer": "Factorul de putere (PF) este raportul kW / VA, variind de la 0 la 1. Măsoară cât de eficient puterea electrică este transformată în muncă utilă. Valori tipice: încălzitoare rezistive ~1,0, lămpi fluorescente 0,5–0,95, motoare de inducție 0,7–0,9, surse de alimentare 0,6–0,95. Un PF mai scăzut înseamnă că sunt necesari VA mai mari pentru aceiași kW, crescând dimensiunea conductorilor și transformatoarelor."
+            },
+            {
+              "question": "De ce trebuie să convertesc kW în VA?",
+              "answer": "Transformatoarele, generatoarele, unitățile UPS și întreruptoarele sunt clasificate în VA (sau kVA), nu în kW. O sarcină care consumă 10 kW la PF 0,8 necesită 12,5 kVA capacitate de alimentare. Dimensionarea echipamentelor doar după kW (ignorând PF) poate duce la supraîncărcare. Conversia kW în VA asigură că selectați echipamente cu capacitate suficientă de putere aparentă."
+            },
+            {
+              "question": "Este acest calculator gratuit?",
+              "answer": "Da, calculatorul nostru kW în VA este gratuit. Nu este necesară înregistrare sau plată. Introduceți puterea în kW și factorul de putere (0–1) pentru a obține rezultate instantanee și precise în VA."
+            }
           ]
         }
       }
@@ -1201,11 +1249,26 @@
         "faq": {
           "heading": "Întrebări frecvente",
           "items": [
-            { "question": "Care este formula pentru conversia kW în kVA?", "answer": "Formula este kVA = kW / PF, unde kVA este puterea aparentă în kilovoltamperi, kW este puterea activă în kilowați și PF este factorul de putere (0 la 1). Putere activă = putere aparentă × PF, deci putere aparentă = putere activă / PF." },
-            { "question": "Care este diferența dintre kW și kVA?", "answer": "kW (kilowați) este puterea activă — lucrul real efectuat de sarcină (de ex. ieșire mecanică, căldură, lumină). kVA (kilovoltamperi) este puterea aparentă — puterea totală furnizată de sursă, incluzând puterea reactivă care nu efectuează lucru util. kVA ≥ kW întotdeauna; sunt egale doar când PF = 1,0 (sarcină pur rezistivă)." },
-            { "question": "Ce este factorul de putere și care sunt valorile tipice?", "answer": "Factorul de putere (PF) este raportul kW / kVA, de la 0 la 1. Măsoară cât de eficient puterea electrică este convertită în lucru util. Valori tipice: elemente de încălzire rezistive ~1,0, lămpi fluorescente 0,5–0,95, motoare de inducție 0,7–0,9, surse de alimentare 0,6–0,95. PF mai scăzut înseamnă că este necesar kVA mai mare pentru același kW, crescând dimensiunea conductorilor și transformatoarelor." },
-            { "question": "De ce trebuie să convertesc kW în kVA?", "answer": "Transformatoarele, generatoarele, unitățile UPS și întreruptoarele sunt clasificate în kVA, nu în kW. O sarcină care consumă 10 kW la PF 0,8 necesită 12,5 kVA capacitate de alimentare. Dimensionarea echipamentelor doar după kW (ignorând PF) poate duce la suprasarcină. Conversia kW în kVA asigură că selectați echipamente cu capacitate suficientă de putere aparentă." },
-            { "question": "Acest calculator este gratuit?", "answer": "Da, calculatorul nostru kW în kVA este gratuit. Nu este necesară înregistrare sau plată. Introduceți puterea în kW și factorul de putere (0–1) pentru rezultate instantanee și precise în kVA." }
+            {
+              "question": "Care este formula pentru conversia kW în kVA?",
+              "answer": "Formula este kVA = kW / PF, unde kVA este puterea aparentă în kilovoltamperi, kW este puterea activă în kilowați și PF este factorul de putere (0 la 1). Putere activă = putere aparentă × PF, deci putere aparentă = putere activă / PF."
+            },
+            {
+              "question": "Care este diferența dintre kW și kVA?",
+              "answer": "kW (kilowați) este puterea activă — lucrul real efectuat de sarcină (de ex. ieșire mecanică, căldură, lumină). kVA (kilovoltamperi) este puterea aparentă — puterea totală furnizată de sursă, incluzând puterea reactivă care nu efectuează lucru util. kVA ≥ kW întotdeauna; sunt egale doar când PF = 1,0 (sarcină pur rezistivă)."
+            },
+            {
+              "question": "Ce este factorul de putere și care sunt valorile tipice?",
+              "answer": "Factorul de putere (PF) este raportul kW / kVA, de la 0 la 1. Măsoară cât de eficient puterea electrică este convertită în lucru util. Valori tipice: elemente de încălzire rezistive ~1,0, lămpi fluorescente 0,5–0,95, motoare de inducție 0,7–0,9, surse de alimentare 0,6–0,95. PF mai scăzut înseamnă că este necesar kVA mai mare pentru același kW, crescând dimensiunea conductorilor și transformatoarelor."
+            },
+            {
+              "question": "De ce trebuie să convertesc kW în kVA?",
+              "answer": "Transformatoarele, generatoarele, unitățile UPS și întreruptoarele sunt clasificate în kVA, nu în kW. O sarcină care consumă 10 kW la PF 0,8 necesită 12,5 kVA capacitate de alimentare. Dimensionarea echipamentelor doar după kW (ignorând PF) poate duce la suprasarcină. Conversia kW în kVA asigură că selectați echipamente cu capacitate suficientă de putere aparentă."
+            },
+            {
+              "question": "Acest calculator este gratuit?",
+              "answer": "Da, calculatorul nostru kW în kVA este gratuit. Nu este necesară înregistrare sau plată. Introduceți puterea în kW și factorul de putere (0–1) pentru rezultate instantanee și precise în kVA."
+            }
           ]
         }
       }
@@ -1220,7 +1283,6 @@
       "result": "Rezultat",
       "watts": "Wați (W)",
       "seo": {
-        "title": "Calculator kWh în Wați – Calculează Puterea din Energie și Timp",
         "title": "Calculator kWh în Wați – Calculează Puterea din Energie și Timp",
         "description": "Calculator gratuit de conversie kWh în Wați. Convertiți kilowați-oră în wați instantaneu folosind durata de timp. Perfect pentru calcule electrice, analiza consumului de energie și evaluări de putere.",
         "keywords": "calculator kwh în wați, convertor kilowați-oră în wați, conversie kwh wați, calculator energie în putere, calculator electric, calculator wați, calculator putere, calculator gratuit",
@@ -1528,11 +1590,26 @@
         "faq": {
           "heading": "Întrebări frecvente",
           "items": [
-            {"question": "Care este formula VA în kW?", "answer": "kW = (VA × FP) / 1000. FP este necesar; doar o parte din puterea aparentă este activă. Împărțiți la 1000 pentru kilowați."},
-            {"question": "Diferența între VA și kW?", "answer": "VA măsoară puterea aparentă (totală, incl. reactivă), kW puterea activă. kW = (VA × FP) / 1000. Coincid doar când FP = 1,0 și factor 1000."},
-            {"question": "De ce e necesar factorul de putere?", "answer": "Puterea aparentă include cea reactivă. Factorul de putere indică ponderea activă. Fără FP nu se poate determina puterea activă din VA."},
-            {"question": "Factori de putere tipici?", "answer": "Sarcini rezistive adesea ≈ 1,0. Motoare și inductive 0,7–0,9. La îndoială se folosește adesea 0,8."},
-            {"question": "Calculatorul e gratuit?", "answer": "Da. Fără înregistrare. Introduceți VA și factorul de putere pentru rezultate în kilowați."}
+            {
+              "question": "Care este formula VA în kW?",
+              "answer": "kW = (VA × FP) / 1000. FP este necesar; doar o parte din puterea aparentă este activă. Împărțiți la 1000 pentru kilowați."
+            },
+            {
+              "question": "Diferența între VA și kW?",
+              "answer": "VA măsoară puterea aparentă (totală, incl. reactivă), kW puterea activă. kW = (VA × FP) / 1000. Coincid doar când FP = 1,0 și factor 1000."
+            },
+            {
+              "question": "De ce e necesar factorul de putere?",
+              "answer": "Puterea aparentă include cea reactivă. Factorul de putere indică ponderea activă. Fără FP nu se poate determina puterea activă din VA."
+            },
+            {
+              "question": "Factori de putere tipici?",
+              "answer": "Sarcini rezistive adesea ≈ 1,0. Motoare și inductive 0,7–0,9. La îndoială se folosește adesea 0,8."
+            },
+            {
+              "question": "Calculatorul e gratuit?",
+              "answer": "Da. Fără înregistrare. Introduceți VA și factorul de putere pentru rezultate în kilowați."
+            }
           ]
         },
         "related": {
@@ -1572,11 +1649,26 @@
         "faq": {
           "heading": "Întrebări frecvente",
           "items": [
-            {"question": "Formula VA în kVA?", "answer": "kVA = VA / 1000. Ambele putere aparentă; împărțiți la 1000. Factor de putere neesențial."},
-            {"question": "Diferența VA și kVA?", "answer": "VA și kVA măsoară puterea aparentă. 1 kVA = 1000 VA. Aceeași mărime, altă unitate — ca metri și kilometri."},
-            {"question": "E nevoie de factor de putere?", "answer": "Nu. Doar la putere aparentă ↔ activă (W/kW). VA → kVA = împărțire la 1000."},
-            {"question": "Când VA, când kVA?", "answer": "Echipamente mici adesea în VA, mari (UPS, transformatoare) în kVA. Conversie pentru comparare și sumare puteri."},
-            {"question": "Calculatorul e gratuit?", "answer": "Da. Fără înregistrare. Introduceți VA pentru rezultate în kVA."}
+            {
+              "question": "Formula VA în kVA?",
+              "answer": "kVA = VA / 1000. Ambele putere aparentă; împărțiți la 1000. Factor de putere neesențial."
+            },
+            {
+              "question": "Diferența VA și kVA?",
+              "answer": "VA și kVA măsoară puterea aparentă. 1 kVA = 1000 VA. Aceeași mărime, altă unitate — ca metri și kilometri."
+            },
+            {
+              "question": "E nevoie de factor de putere?",
+              "answer": "Nu. Doar la putere aparentă ↔ activă (W/kW). VA → kVA = împărțire la 1000."
+            },
+            {
+              "question": "Când VA, când kVA?",
+              "answer": "Echipamente mici adesea în VA, mari (UPS, transformatoare) în kVA. Conversie pentru comparare și sumare puteri."
+            },
+            {
+              "question": "Calculatorul e gratuit?",
+              "answer": "Da. Fără înregistrare. Introduceți VA pentru rezultate în kVA."
+            }
           ]
         },
         "related": {
@@ -1787,11 +1879,26 @@
         "faq": {
           "heading": "Întrebări frecvente",
           "items": [
-            {"question": "Formula volți la amperi cu wați?", "answer": "I = P / V. Curent (A) = putere (W) / tensiune (V). Ex. 2300 W, 230 V → I = 10 A."},
-            {"question": "Formula volți la amperi cu ohmi?", "answer": "I = V / R (legea lui Ohm). Curent = tensiune / rezistență. Ex. 12 V, 24 Ω → I = 0,5 A."},
-            {"question": "Când wați, când ohmi?", "answer": "Wați: când cunoști puterea (ex. plăcuță) și tensiunea. Ohmi: tensiune la o rezistență și valoarea ei (rezistoare, încălzire, circuite DC)."},
-            {"question": "Legea lui Ohm se aplică la AC?", "answer": "I = V / R se aplică circuitelor AC rezistive la valori efective. Pentru reactanțe folosește impedanța Z: I = V / Z."},
-            {"question": "Calculatorul e gratuit?", "answer": "Da. Alege mod wați sau ohmi, introdu tensiunea și wații/ohmii, obține curentul în amperi."}
+            {
+              "question": "Formula volți la amperi cu wați?",
+              "answer": "I = P / V. Curent (A) = putere (W) / tensiune (V). Ex. 2300 W, 230 V → I = 10 A."
+            },
+            {
+              "question": "Formula volți la amperi cu ohmi?",
+              "answer": "I = V / R (legea lui Ohm). Curent = tensiune / rezistență. Ex. 12 V, 24 Ω → I = 0,5 A."
+            },
+            {
+              "question": "Când wați, când ohmi?",
+              "answer": "Wați: când cunoști puterea (ex. plăcuță) și tensiunea. Ohmi: tensiune la o rezistență și valoarea ei (rezistoare, încălzire, circuite DC)."
+            },
+            {
+              "question": "Legea lui Ohm se aplică la AC?",
+              "answer": "I = V / R se aplică circuitelor AC rezistive la valori efective. Pentru reactanțe folosește impedanța Z: I = V / Z."
+            },
+            {
+              "question": "Calculatorul e gratuit?",
+              "answer": "Da. Alege mod wați sau ohmi, introdu tensiunea și wații/ohmii, obține curentul în amperi."
+            }
           ]
         },
         "related": {
@@ -1942,7 +2049,6 @@
       "amps": "Amperi (A)",
       "volts": "Tensiune (V)",
       "powerFactor": "Factor de Putere (0-1)",
-      "volts": "Tensiune (V)",
       "calculate": "Calculează",
       "reset": "Resetează",
       "result": "Rezultat",
@@ -2316,12 +2422,30 @@
         "faq": {
           "heading": "Întrebări frecvente",
           "items": [
-            { "question": "Care este formula wați în amperi (DC)?", "answer": "Pentru DC: I = P / V, unde I este curentul în A, P puterea în W și V tensiunea în V. Împărțind puterea la tensiune se obține curentul. Ex.: 1200 W la 120 V → I = 10 A." },
-            { "question": "Care este formula pentru monofazat?", "answer": "Pentru monofazat: I = P / (V × PF). V tensiune (V), P putere (W), PF factor de putere (0–1). Ex.: 1840 W la 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
-            { "question": "Care este formula pentru trifazat?", "answer": "Pentru trifazat: I = P / (√3 × V × PF). V tensiune linie-linie (V), P putere (W), PF factor de putere. √3 ≈ 1,732. Ex.: 8,83 kW la 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
-            { "question": "Când folosim DC, monofazat sau trifazat?", "answer": "DC pentru baterii, circuite solare DC și sarcini DC. Monofazat pentru rezidențial tipic (120 V, 230 V, 240 V). Trifazat pentru distribuție industrială și comercială (400 V, 480 V linie-linie) și motoare." },
-            { "question": "Cum se leagă de amperi în wați?", "answer": "Wați în amperi (I = P / V) și amperi în wați (P = I × V) sunt operații inverse. Folosiți wați→amperi când cunoașteți puterea și tensiunea; amperi→wați când cunoașteți curentul și tensiunea." },
-            { "question": "Este acest calculator gratuit?", "answer": "Da. Calculatorul Wați în Amperi este gratuit. Fără înregistrare. Alegeți DC, monofazat sau trifazat, introduceți wați și tensiune (și factor de putere pentru AC), obțineți amperi instantaneu." }
+            {
+              "question": "Care este formula wați în amperi (DC)?",
+              "answer": "Pentru DC: I = P / V, unde I este curentul în A, P puterea în W și V tensiunea în V. Împărțind puterea la tensiune se obține curentul. Ex.: 1200 W la 120 V → I = 10 A."
+            },
+            {
+              "question": "Care este formula pentru monofazat?",
+              "answer": "Pentru monofazat: I = P / (V × PF). V tensiune (V), P putere (W), PF factor de putere (0–1). Ex.: 1840 W la 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A."
+            },
+            {
+              "question": "Care este formula pentru trifazat?",
+              "answer": "Pentru trifazat: I = P / (√3 × V × PF). V tensiune linie-linie (V), P putere (W), PF factor de putere. √3 ≈ 1,732. Ex.: 8,83 kW la 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+            },
+            {
+              "question": "Când folosim DC, monofazat sau trifazat?",
+              "answer": "DC pentru baterii, circuite solare DC și sarcini DC. Monofazat pentru rezidențial tipic (120 V, 230 V, 240 V). Trifazat pentru distribuție industrială și comercială (400 V, 480 V linie-linie) și motoare."
+            },
+            {
+              "question": "Cum se leagă de amperi în wați?",
+              "answer": "Wați în amperi (I = P / V) și amperi în wați (P = I × V) sunt operații inverse. Folosiți wați→amperi când cunoașteți puterea și tensiunea; amperi→wați când cunoașteți curentul și tensiunea."
+            },
+            {
+              "question": "Este acest calculator gratuit?",
+              "answer": "Da. Calculatorul Wați în Amperi este gratuit. Fără înregistrare. Alegeți DC, monofazat sau trifazat, introduceți wați și tensiune (și factor de putere pentru AC), obțineți amperi instantaneu."
+            }
           ]
         },
         "related": {
@@ -2367,12 +2491,30 @@
         "faq": {
           "heading": "Întrebări frecvente",
           "items": [
-            { "question": "Care este formula wați în volți (DC)?", "answer": "Pentru DC: V = P / I, unde V este tensiunea în V, P puterea în W și I curentul în A. Împărțind puterea la curent se obține tensiunea. Ex.: 1200 W la 10 A → V = 120 V." },
-            { "question": "Care este formula pentru monofazat AC?", "answer": "Pentru monofazat AC: V = P / (I × PF). I curent (A), P putere (W), PF factor de putere (0–1). Ex.: 1840 W la 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
-            { "question": "Care este formula pentru trifazat AC?", "answer": "Pentru trifazat AC: V = P / (√3 × I × PF). I curent pe fază (A), P putere (W), PF factor de putere. √3 ≈ 1,732. Ex.: 8,83 kW la 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
-            { "question": "Când folosim DC, monofazat sau trifazat?", "answer": "DC pentru baterii, circuite solare DC și sarcini DC. Monofazat pentru rezidențial tipic (120 V, 230 V, 240 V). Trifazat pentru distribuție industrială și comercială (400 V, 480 V linie-linie) și motoare." },
-            { "question": "Cum se leagă de volți în wați?", "answer": "Wați în volți (V = P / I) și volți în wați (P = V × I) sunt operații inverse. Folosiți wați→volți când cunoașteți puterea și curentul; volți→wați când cunoașteți tensiunea și curentul." },
-            { "question": "Este acest calculator gratuit?", "answer": "Da. Calculatorul Wați în Volți este gratuit. Fără înregistrare. Alegeți DC, monofazat sau trifazat, introduceți wați și curent (și factor de putere pentru AC), obțineți volți instantaneu." }
+            {
+              "question": "Care este formula wați în volți (DC)?",
+              "answer": "Pentru DC: V = P / I, unde V este tensiunea în V, P puterea în W și I curentul în A. Împărțind puterea la curent se obține tensiunea. Ex.: 1200 W la 10 A → V = 120 V."
+            },
+            {
+              "question": "Care este formula pentru monofazat AC?",
+              "answer": "Pentru monofazat AC: V = P / (I × PF). I curent (A), P putere (W), PF factor de putere (0–1). Ex.: 1840 W la 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V."
+            },
+            {
+              "question": "Care este formula pentru trifazat AC?",
+              "answer": "Pentru trifazat AC: V = P / (√3 × I × PF). I curent pe fază (A), P putere (W), PF factor de putere. √3 ≈ 1,732. Ex.: 8,83 kW la 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+            },
+            {
+              "question": "Când folosim DC, monofazat sau trifazat?",
+              "answer": "DC pentru baterii, circuite solare DC și sarcini DC. Monofazat pentru rezidențial tipic (120 V, 230 V, 240 V). Trifazat pentru distribuție industrială și comercială (400 V, 480 V linie-linie) și motoare."
+            },
+            {
+              "question": "Cum se leagă de volți în wați?",
+              "answer": "Wați în volți (V = P / I) și volți în wați (P = V × I) sunt operații inverse. Folosiți wați→volți când cunoașteți puterea și curentul; volți→wați când cunoașteți tensiunea și curentul."
+            },
+            {
+              "question": "Este acest calculator gratuit?",
+              "answer": "Da. Calculatorul Wați în Volți este gratuit. Fără înregistrare. Alegeți DC, monofazat sau trifazat, introduceți wați și curent (și factor de putere pentru AC), obțineți volți instantaneu."
+            }
           ]
         },
         "related": {
@@ -2576,6 +2718,10 @@
           "ampsToWatts": "Calculator Amperi în Wați",
           "ampsToWattsDesc": "Convertește curentul și tensiunea în putere"
         }
+      },
+      "addition": {
+        "title": "Calculator Adunare",
+        "description": "Adună două numere"
       }
     },
     "textToBinary": {

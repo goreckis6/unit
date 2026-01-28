@@ -1034,12 +1034,30 @@
         "faq": {
           "heading": "Gyakori kérdések",
           "items": [
-            { "question": "Mi a kW Volt képlet?", "answer": "DC: V = (kW × 1000) / I. Egyfázisú AC: V = (kW × 1000) / (I × PF). Háromfázisú AC: V = (kW × 1000) / (√3 × I × PF). V voltban, kW teljesítmény, I áram A-ban, PF teljesítménytényező. Háromfázisú eredmény = vonali feszültség. DC nem használ teljesítménytényezőt." },
-            { "question": "Kell DC-hez teljesítménytényező?", "answer": "Nem. A teljesítménytényező csak AC-re vonatkozik. DC-nél: V = (kW × 1000) / I. Csak kW és áram kell. Gyakori DC alkalmazások: akkumulátor, napelem, EV 12V, 24V, 48V vagy magasabb feszültségnél." },
-            { "question": "Egyfázisú vs. háromfázisú különbség?", "answer": "Egyfázisú: V = (kW × 1000) / (I × PF). Háromfázisú: V = (kW × 1000) / (√3 × I × PF), eredmény = vonali feszültség. Ugyanazon kW és áram mellett a háromfázisú magasabb feszültséget ad." },
-            { "question": "Mit jelent a háromfázisú feszültség?", "answer": "A háromfázisú képlet vonali (fázis–fázis) feszültséget ad, nem fázisfeszültséget. Gyakori: 208V, 240V, 380V, 400V, 415V, 480V. Berendezések méretezéséhez és hálózati feszültséghez." },
-            { "question": "Mi a teljesítménytényező?", "answer": "A teljesítménytényező (PF) a hatásos és látszólagos teljesítmény aránya AC-nél, 0–1. Tipikus: ellenállásos = 1,0, indukciós motor = 0,8–0,9, fluoreszkáló = 0,85–0,95, LED = 0,9–0,95. Ismeretlen: 0,8 motoroknál, 0,9 vegyes terhelésnél. DC-nek nincs PF-je." },
-            { "question": "Ingyenes a számológép?", "answer": "Igen, a kW Volt számológép ingyenes. Nincs regisztráció vagy fizetés. Adja meg a kW-t és az áramot, válasszon DC-t, egyfázisút vagy háromfázisút, AC-nál a teljesítménytényezőt, és kapjon azonnali, pontos eredményt." }
+            {
+              "question": "Mi a kW Volt képlet?",
+              "answer": "DC: V = (kW × 1000) / I. Egyfázisú AC: V = (kW × 1000) / (I × PF). Háromfázisú AC: V = (kW × 1000) / (√3 × I × PF). V voltban, kW teljesítmény, I áram A-ban, PF teljesítménytényező. Háromfázisú eredmény = vonali feszültség. DC nem használ teljesítménytényezőt."
+            },
+            {
+              "question": "Kell DC-hez teljesítménytényező?",
+              "answer": "Nem. A teljesítménytényező csak AC-re vonatkozik. DC-nél: V = (kW × 1000) / I. Csak kW és áram kell. Gyakori DC alkalmazások: akkumulátor, napelem, EV 12V, 24V, 48V vagy magasabb feszültségnél."
+            },
+            {
+              "question": "Egyfázisú vs. háromfázisú különbség?",
+              "answer": "Egyfázisú: V = (kW × 1000) / (I × PF). Háromfázisú: V = (kW × 1000) / (√3 × I × PF), eredmény = vonali feszültség. Ugyanazon kW és áram mellett a háromfázisú magasabb feszültséget ad."
+            },
+            {
+              "question": "Mit jelent a háromfázisú feszültség?",
+              "answer": "A háromfázisú képlet vonali (fázis–fázis) feszültséget ad, nem fázisfeszültséget. Gyakori: 208V, 240V, 380V, 400V, 415V, 480V. Berendezések méretezéséhez és hálózati feszültséghez."
+            },
+            {
+              "question": "Mi a teljesítménytényező?",
+              "answer": "A teljesítménytényező (PF) a hatásos és látszólagos teljesítmény aránya AC-nél, 0–1. Tipikus: ellenállásos = 1,0, indukciós motor = 0,8–0,9, fluoreszkáló = 0,85–0,95, LED = 0,9–0,95. Ismeretlen: 0,8 motoroknál, 0,9 vegyes terhelésnél. DC-nek nincs PF-je."
+            },
+            {
+              "question": "Ingyenes a számológép?",
+              "answer": "Igen, a kW Volt számológép ingyenes. Nincs regisztráció vagy fizetés. Adja meg a kW-t és az áramot, válasszon DC-t, egyfázisút vagy háromfázisút, AC-nál a teljesítménytényezőt, és kapjon azonnali, pontos eredményt."
+            }
           ]
         }
       }
@@ -1069,11 +1087,26 @@
         "faq": {
           "heading": "Gyakori kérdések",
           "items": [
-            { "question": "Mi a kW kWh formula?", "answer": "kWh = kW × óra. Pl.: 2 kW 3 h → 2 × 3 = 6 kWh." },
-            { "question": "Mi a különbség kW és kWh között?", "answer": "kW = teljesítmény. kWh = energia (idő alatt). 1 kW 1 h = 1 kWh; 10 h = 10 kWh." },
-            { "question": "Használhatok tizedes órát (pl. 1,5 = 1 h 30)?", "answer": "Igen. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh." },
-            { "question": "Hogyan becsüljem a számlát kW és óra alapján?", "answer": "Először kWh = kW × óra. Majd kWh × árszabás (pl. 50 Ft/kWh). Pl.: 24 kWh × 50 = 1200 Ft." },
-            { "question": "Ingyenes a számológép?", "answer": "Igen, a kW kWh számológép ingyenes. Nincs regisztráció. Adja meg kW-t és órát az azonnali kWh eredményhez." }
+            {
+              "question": "Mi a kW kWh formula?",
+              "answer": "kWh = kW × óra. Pl.: 2 kW 3 h → 2 × 3 = 6 kWh."
+            },
+            {
+              "question": "Mi a különbség kW és kWh között?",
+              "answer": "kW = teljesítmény. kWh = energia (idő alatt). 1 kW 1 h = 1 kWh; 10 h = 10 kWh."
+            },
+            {
+              "question": "Használhatok tizedes órát (pl. 1,5 = 1 h 30)?",
+              "answer": "Igen. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh."
+            },
+            {
+              "question": "Hogyan becsüljem a számlát kW és óra alapján?",
+              "answer": "Először kWh = kW × óra. Majd kWh × árszabás (pl. 50 Ft/kWh). Pl.: 24 kWh × 50 = 1200 Ft."
+            },
+            {
+              "question": "Ingyenes a számológép?",
+              "answer": "Igen, a kW kWh számológép ingyenes. Nincs regisztráció. Adja meg kW-t és órát az azonnali kWh eredményhez."
+            }
           ]
         }
       }
@@ -1167,11 +1200,26 @@
         "faq": {
           "heading": "Gyakran ismételt kérdések",
           "items": [
-            { "question": "Mi a képlet a kW VA-ra való átváltásához?", "answer": "A képlet VA = (kW × 1000) / PF, ahol VA látszólagos teljesítmény voltamperben, kW valódi teljesítmény kilowattban, PF pedig teljesítménytényező (0-tól 1-ig). Valódi teljesítmény = látszólagos teljesítmény × PF, tehát látszólagos teljesítmény = valódi teljesítmény / PF." },
-            { "question": "Mi a különbség kW és VA között?", "answer": "kW (kilowatt) valódi teljesítmény — a terhelés által végzett tényleges munka (pl. mechanikus kimenet, hő, fény). VA (voltamper) látszólagos teljesítmény — a forrás által szolgáltatott teljes teljesítmény, beleértve a hasznos munkát nem végző reaktív teljesítményt. VA ≥ kW mindig; csak akkor egyenlők, ha PF = 1,0 (tisztán rezisztív terhelés)." },
-            { "question": "Mi az a teljesítménytényező és milyen értékek tipikusak?", "answer": "A teljesítménytényező (PF) a kW / VA arány, 0-tól 1-ig terjedően. Azt méri, hogy az elektromos teljesítmény milyen hatékonyan alakul át hasznos munkává. Tipikus értékek: rezisztív fűtések ~1,0, fénycsövek 0,5–0,95, indukciós motorok 0,7–0,9, tápegységek 0,6–0,95. Alacsonyabb PF azt jelenti, hogy ugyanazon kW-hoz nagyobb VA szükséges, növelve a vezetékek és transzformátorok méretét." },
-            { "question": "Miért kell a kW-ot VA-ra átváltani?", "answer": "A transzformátorok, generátorok, UPS egységek és megszakítók VA-ban (vagy kVA-ban) vannak osztályozva, nem kW-ban. Egy 10 kW-ot fogyasztó terhelés PF 0,8-nál 12,5 kVA tápkapacitást igényel. A berendezések csak kW alapján történő méretezése (PF figyelmen kívül hagyása) túlterheléshez vezethet. A kW VA-ra történő átváltása biztosítja, hogy elegendő látszólagos teljesítmény-kapacitással rendelkező berendezést válasszon." },
-            { "question": "Ez a számológép ingyenes?", "answer": "Igen, kW-VA számológépünk ingyenes. Nincs szükség regisztrációra vagy fizetésre. Adja meg a teljesítményt kW-ban és a teljesítménytényezőt (0–1), hogy azonnali, pontos eredményeket kapjon VA-ban." }
+            {
+              "question": "Mi a képlet a kW VA-ra való átváltásához?",
+              "answer": "A képlet VA = (kW × 1000) / PF, ahol VA látszólagos teljesítmény voltamperben, kW valódi teljesítmény kilowattban, PF pedig teljesítménytényező (0-tól 1-ig). Valódi teljesítmény = látszólagos teljesítmény × PF, tehát látszólagos teljesítmény = valódi teljesítmény / PF."
+            },
+            {
+              "question": "Mi a különbség kW és VA között?",
+              "answer": "kW (kilowatt) valódi teljesítmény — a terhelés által végzett tényleges munka (pl. mechanikus kimenet, hő, fény). VA (voltamper) látszólagos teljesítmény — a forrás által szolgáltatott teljes teljesítmény, beleértve a hasznos munkát nem végző reaktív teljesítményt. VA ≥ kW mindig; csak akkor egyenlők, ha PF = 1,0 (tisztán rezisztív terhelés)."
+            },
+            {
+              "question": "Mi az a teljesítménytényező és milyen értékek tipikusak?",
+              "answer": "A teljesítménytényező (PF) a kW / VA arány, 0-tól 1-ig terjedően. Azt méri, hogy az elektromos teljesítmény milyen hatékonyan alakul át hasznos munkává. Tipikus értékek: rezisztív fűtések ~1,0, fénycsövek 0,5–0,95, indukciós motorok 0,7–0,9, tápegységek 0,6–0,95. Alacsonyabb PF azt jelenti, hogy ugyanazon kW-hoz nagyobb VA szükséges, növelve a vezetékek és transzformátorok méretét."
+            },
+            {
+              "question": "Miért kell a kW-ot VA-ra átváltani?",
+              "answer": "A transzformátorok, generátorok, UPS egységek és megszakítók VA-ban (vagy kVA-ban) vannak osztályozva, nem kW-ban. Egy 10 kW-ot fogyasztó terhelés PF 0,8-nál 12,5 kVA tápkapacitást igényel. A berendezések csak kW alapján történő méretezése (PF figyelmen kívül hagyása) túlterheléshez vezethet. A kW VA-ra történő átváltása biztosítja, hogy elegendő látszólagos teljesítmény-kapacitással rendelkező berendezést válasszon."
+            },
+            {
+              "question": "Ez a számológép ingyenes?",
+              "answer": "Igen, kW-VA számológépünk ingyenes. Nincs szükség regisztrációra vagy fizetésre. Adja meg a teljesítményt kW-ban és a teljesítménytényezőt (0–1), hogy azonnali, pontos eredményeket kapjon VA-ban."
+            }
           ]
         }
       }
@@ -1201,11 +1249,26 @@
         "faq": {
           "heading": "Gyakran ismételt kérdések",
           "items": [
-            { "question": "Mi a képlet a kW kVA-ra való átváltásához?", "answer": "A képlet kVA = kW / PF, ahol kVA látszólagos teljesítmény kilovoltamperben, kW valódi teljesítmény kilowattban, PF pedig teljesítménytényező (0-tól 1-ig). Valódi teljesítmény = látszólagos teljesítmény × PF, tehát látszólagos teljesítmény = valódi teljesítmény / PF." },
-            { "question": "Mi a különbség kW és kVA között?", "answer": "kW (kilowatt) valódi teljesítmény — a terhelés által végzett tényleges munka (pl. mechanikus kimenet, hő, fény). kVA (kilovoltamper) látszólagos teljesítmény — a forrás által szolgáltatott teljes teljesítmény, beleértve a hasznos munkát nem végző reaktív teljesítményt. kVA ≥ kW mindig; csak akkor egyenlők, ha PF = 1,0 (tisztán rezisztív terhelés)." },
-            { "question": "Mi az a teljesítménytényező és milyen értékek tipikusak?", "answer": "A teljesítménytényező (PF) a kW / kVA arány, 0-tól 1-ig terjedően. Azt méri, hogy az elektromos teljesítmény milyen hatékonyan alakul át hasznos munkává. Tipikus értékek: rezisztív fűtések ~1,0, fénycsövek 0,5–0,95, indukciós motorok 0,7–0,9, tápegységek 0,6–0,95. Alacsonyabb PF azt jelenti, hogy ugyanazon kW-hoz nagyobb kVA szükséges, növelve a vezetékek és transzformátorok méretét." },
-            { "question": "Miért kell a kW-ot kVA-ra átváltani?", "answer": "A transzformátorok, generátorok, UPS egységek és megszakítók kVA-ban (vagy kVA-ban) vannak osztályozva, nem kW-ban. Egy 10 kW-ot fogyasztó terhelés PF 0,8-nál 12,5 kVA tápkapacitást igényel. A berendezések csak kW alapján történő méretezése (PF figyelmen kívül hagyása) túlterheléshez vezethet. A kW kVA-ra történő átváltása biztosítja, hogy elegendő látszólagos teljesítmény-kapacitással rendelkező berendezést válasszon." },
-            { "question": "Ez a számológép ingyenes?", "answer": "Igen, kW-kVA számológépünk ingyenes. Nincs szükség regisztrációra vagy fizetésre. Adja meg a teljesítményt kW-ban és a teljesítménytényezőt (0–1), hogy azonnali, pontos eredményeket kapjon kVA-ban." }
+            {
+              "question": "Mi a képlet a kW kVA-ra való átváltásához?",
+              "answer": "A képlet kVA = kW / PF, ahol kVA látszólagos teljesítmény kilovoltamperben, kW valódi teljesítmény kilowattban, PF pedig teljesítménytényező (0-tól 1-ig). Valódi teljesítmény = látszólagos teljesítmény × PF, tehát látszólagos teljesítmény = valódi teljesítmény / PF."
+            },
+            {
+              "question": "Mi a különbség kW és kVA között?",
+              "answer": "kW (kilowatt) valódi teljesítmény — a terhelés által végzett tényleges munka (pl. mechanikus kimenet, hő, fény). kVA (kilovoltamper) látszólagos teljesítmény — a forrás által szolgáltatott teljes teljesítmény, beleértve a hasznos munkát nem végző reaktív teljesítményt. kVA ≥ kW mindig; csak akkor egyenlők, ha PF = 1,0 (tisztán rezisztív terhelés)."
+            },
+            {
+              "question": "Mi az a teljesítménytényező és milyen értékek tipikusak?",
+              "answer": "A teljesítménytényező (PF) a kW / kVA arány, 0-tól 1-ig terjedően. Azt méri, hogy az elektromos teljesítmény milyen hatékonyan alakul át hasznos munkává. Tipikus értékek: rezisztív fűtések ~1,0, fénycsövek 0,5–0,95, indukciós motorok 0,7–0,9, tápegységek 0,6–0,95. Alacsonyabb PF azt jelenti, hogy ugyanazon kW-hoz nagyobb kVA szükséges, növelve a vezetékek és transzformátorok méretét."
+            },
+            {
+              "question": "Miért kell a kW-ot kVA-ra átváltani?",
+              "answer": "A transzformátorok, generátorok, UPS egységek és megszakítók kVA-ban (vagy kVA-ban) vannak osztályozva, nem kW-ban. Egy 10 kW-ot fogyasztó terhelés PF 0,8-nál 12,5 kVA tápkapacitást igényel. A berendezések csak kW alapján történő méretezése (PF figyelmen kívül hagyása) túlterheléshez vezethet. A kW kVA-ra történő átváltása biztosítja, hogy elegendő látszólagos teljesítmény-kapacitással rendelkező berendezést válasszon."
+            },
+            {
+              "question": "Ez a számológép ingyenes?",
+              "answer": "Igen, kW-kVA számológépünk ingyenes. Nincs szükség regisztrációra vagy fizetésre. Adja meg a teljesítményt kW-ban és a teljesítménytényezőt (0–1), hogy azonnali, pontos eredményeket kapjon kVA-ban."
+            }
           ]
         }
       }
@@ -1527,11 +1590,26 @@
         "faq": {
           "heading": "Gyakori kérdések",
           "items": [
-            {"question": "Mi a VA–kW képlet?", "answer": "kW = (VA × PF) / 1000. PF kell; a látszólagosnak csak egy része aktív. 1000-rel osztunk a kilowattért."},
-            {"question": "Különbség VA és kW között?", "answer": "A VA a látszólagos teljesítményt méri (összes, reaktívval együtt), a kW az aktívat. kW = (VA × PF) / 1000. Csak PF = 1,0 és 1000 faktor mellett egyeznek."},
-            {"question": "Miért kell a teljesítménytényező?", "answer": "A látszólagos magában foglalja a meddőt. A teljesítménytényező az aktív részt adja. PF nélkül a VA-ból nem határozható meg az aktív."},
-            {"question": "Tipikus teljesítménytényezők?", "answer": "Ohmos terhelés gyakran ≈ 1,0. Motorok, induktív 0,7–0,9. Bizonytalanságnál gyakran 0,8."},
-            {"question": "Ingyenes a kalkulátor?", "answer": "Igen. Regisztráció nélkül. VA és teljesítménytényező megadásával kilowattban kapja az eredményt."}
+            {
+              "question": "Mi a VA–kW képlet?",
+              "answer": "kW = (VA × PF) / 1000. PF kell; a látszólagosnak csak egy része aktív. 1000-rel osztunk a kilowattért."
+            },
+            {
+              "question": "Különbség VA és kW között?",
+              "answer": "A VA a látszólagos teljesítményt méri (összes, reaktívval együtt), a kW az aktívat. kW = (VA × PF) / 1000. Csak PF = 1,0 és 1000 faktor mellett egyeznek."
+            },
+            {
+              "question": "Miért kell a teljesítménytényező?",
+              "answer": "A látszólagos magában foglalja a meddőt. A teljesítménytényező az aktív részt adja. PF nélkül a VA-ból nem határozható meg az aktív."
+            },
+            {
+              "question": "Tipikus teljesítménytényezők?",
+              "answer": "Ohmos terhelés gyakran ≈ 1,0. Motorok, induktív 0,7–0,9. Bizonytalanságnál gyakran 0,8."
+            },
+            {
+              "question": "Ingyenes a kalkulátor?",
+              "answer": "Igen. Regisztráció nélkül. VA és teljesítménytényező megadásával kilowattban kapja az eredményt."
+            }
           ]
         },
         "related": {
@@ -1571,11 +1649,26 @@
         "faq": {
           "heading": "Gyakori kérdések",
           "items": [
-            {"question": "VA–kVA képlet?", "answer": "kVA = VA / 1000. Mindkettő látszólagos; 1000-rel osztunk. Teljesítménytényező nem kell."},
-            {"question": "VA és kVA különbség?", "answer": "VA és kVA látszólagos teljesítményt mér. 1 kVA = 1000 VA. Ugyanaz a mennyiség, másik egység — mint méter és kilométer."},
-            {"question": "Kell teljesítménytényező?", "answer": "Nem. Csak látszólagos ↔ aktív (W/kW) váltásnál. VA → kVA = 1000-rel osztás."},
-            {"question": "Mikor VA, mikor kVA?", "answer": "Kisebb berendezések gyakran VA-ban, nagyobbak (UPS, trafók) kVA-ban. Átváltás összehasonlításhoz és összeadáshoz."},
-            {"question": "Ingyenes a kalkulátor?", "answer": "Igen. Regisztráció nélkül. VA megadásával kVA eredményt kap."}
+            {
+              "question": "VA–kVA képlet?",
+              "answer": "kVA = VA / 1000. Mindkettő látszólagos; 1000-rel osztunk. Teljesítménytényező nem kell."
+            },
+            {
+              "question": "VA és kVA különbség?",
+              "answer": "VA és kVA látszólagos teljesítményt mér. 1 kVA = 1000 VA. Ugyanaz a mennyiség, másik egység — mint méter és kilométer."
+            },
+            {
+              "question": "Kell teljesítménytényező?",
+              "answer": "Nem. Csak látszólagos ↔ aktív (W/kW) váltásnál. VA → kVA = 1000-rel osztás."
+            },
+            {
+              "question": "Mikor VA, mikor kVA?",
+              "answer": "Kisebb berendezések gyakran VA-ban, nagyobbak (UPS, trafók) kVA-ban. Átváltás összehasonlításhoz és összeadáshoz."
+            },
+            {
+              "question": "Ingyenes a kalkulátor?",
+              "answer": "Igen. Regisztráció nélkül. VA megadásával kVA eredményt kap."
+            }
           ]
         },
         "related": {
@@ -1641,61 +1734,6 @@
             {
               "question": "Ez a számológép ingyenes?",
               "answer": "Igen, Amper kVA számológépünk teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Egyszerűen adja meg értékeit (amper és feszültség) és kapjon azonnali, pontos eredményeket."
-            }
-          ]
-        }
-      }
-    },
-    "ampToVa": {
-      "title": "Amper VA Számológép",
-      "description": "Alakítsa át az ampereket (A) voltamperekké (VA) azonnal és pontosan feszültség használatával",
-      "phaseType": "Fázistípus",
-      "singlePhase": "Egyfázisú",
-      "threePhase": "Háromfázisú",
-      "amps": "Amper (A)",
-      "volts": "Feszültség (V)",
-      "calculate": "Számítás",
-      "reset": "Visszaállítás",
-      "result": "Eredmény",
-      "seo": {
-        "title": "Amper VA Átváltó Számológép - Ingyenes Online Elektromos Eszköz",
-        "description": "Ingyenes amper VA átváltó számológép. Alakítsa át az ampereket voltamperekké azonnal feszültség használatával. Tökéletes elektromos számításokhoz, áramkör tervezéshez és energia rendszer elemzéshez.",
-        "keywords": "amper va számológép, amper voltamper átváltó, amper va átváltás, áram látszólagos teljesítmény számológép, elektromos számológép, va számológép, ingyenes számológép",
-        "content": {
-          "heading": "Hogyan alakítsuk át az Ampereket VA-ra",
-          "paragraph1": "Az amperek (A) voltamperekké (VA) alakítása alapvető számítás az elektrotechnikában és az energia rendszerekben. Az amperek az elektromos áramot, a VA a látszólagos teljesítményt jelenti. Az átváltás a feszültség (V) ismeretét igényli. A valós teljesítménytől (watt) eltérően a látszólagos teljesítmény (VA) nem igényel teljesítménytényezőt, ami ezt az átváltást egyszerűvé teszi. Ingyenes Amper VA átváltó számológépünk gyors és egyszerűvé teszi ezt a folyamatot, azonnali és pontos eredményeket nyújtva az elektromos számításaihoz.",
-          "paragraph2": "Az átváltási képlet: VA = A × V, ahol A az áram amperben, V a feszültség voltban, és VA a látszólagos teljesítmény voltamperben. A látszólagos teljesítmény az elektromos áramkörben lévő teljes teljesítményt jelenti, amely kombinálja mind a valós teljesítményt (watt), mind a meddő teljesítményt (VAR). Ez eltér a valós teljesítménytől (watt), amely csak a ténylegesen végzett munkát veszi figyelembe.",
-          "paragraph3": "Ezt az átváltást különféle alkalmazásokban használják: transzformátorok és generátorok méretezése, látszólagos teljesítmény követelmények számítása, elektromos elosztó rendszerek tervezése, biztosítékok és megszakítók értékeinek meghatározása, elektromos terhelési jellemzők megértése, valamint lakossági, kereskedelmi és ipari elektromos rendszerekkel való munka. Az Amper VA átváltás ismerete segít tájékozott döntéseket hozni az elektromos rendszerek tervezéséről, berendezések kiválasztásáról és energia menedzsmentről.",
-          "paragraph4": "Számológépünk az ampereket és feszültséget veszi bemenetként, automatikusan alkalmazza az átváltási képletet és voltamperben adja az eredményt. A számológép kezeli az egyfázisú és háromfázisú számításokat is (háromfázisú esetén használja a vonal-vonal feszültséget). Akár transzformátorokkal, generátorokkal, motorokkal vagy bármilyen elektromos berendezéssel dolgozik, Amper VA számológépünk pontos, azonnali átváltásokat nyújt.",
-          "exampleHeading": "Példa:",
-          "exampleText": "Ha van egy eszköz, amely 20 ampert fogyaszt 230 volton, a látszólagos teljesítmény VA-ban: VA = 20 A × 230 V = 4600 VA. Egy eszköz esetén, amely 15 ampert fogyaszt 120 volton: VA = 15 A × 120 V = 1800 VA. Háromfázisú rendszer esetén 30 amperrel 400 volt vonal-vonal feszültségnél: VA = 30 A × 400 V = 12000 VA."
-        },
-        "faq": {
-          "heading": "Gyakran Ismételt Kérdések",
-          "items": [
-            {
-              "question": "Mi a képlet az amperek VA-ra való átváltásához?",
-              "answer": "Az amperek (A) voltamperekké (VA) való átváltásának képlete: VA = A × V, ahol A az áram amperben, V a feszültség voltban, és VA a látszólagos teljesítmény voltamperben."
-            },
-            {
-              "question": "Ismernem kell a feszültséget az amperek VA-ra való átváltásához?",
-              "answer": "Igen, a feszültség szükséges az átváltáshoz. A látszólagos teljesítmény (VA) mind az áramtól (amper), mind a feszültségtől függ. A gyakori feszültségek közé tartoznak a 120V, 230V, 240V, 380V és 400V a helyszíntől és alkalmazástól függően."
-            },
-            {
-              "question": "Mi a különbség a VA és a watt között?",
-              "answer": "A VA (voltamper) a látszólagos teljesítményt jelenti, amely az elektromos áramkörben lévő teljes teljesítmény. A watt a valós teljesítményt (aktív teljesítményt) jelenti, amely a ténylegesen végzett munka. A kapcsolat közöttük: Watt = VA × PF, ahol PF a teljesítménytényező. A VA mindig egyenlő vagy nagyobb, mint a watt."
-            },
-            {
-              "question": "Szükségem van teljesítménytényezőre az amperek VA-ra való átváltásához?",
-              "answer": "Nem, a teljesítménytényező nem szükséges az amperek VA-ra való átváltásához. A VA = A × V képlet csak az áramot (amper) és a feszültséget igényli. A teljesítménytényező csak akkor szükséges, amikor a valós teljesítmény (watt) és a látszólagos teljesítmény (VA) között váltunk."
-            },
-            {
-              "question": "Használhatom ezt a számológépet háromfázisú rendszerekhez?",
-              "answer": "Igen, használhatja ezt a számológépet háromfázisú rendszerekhez. Háromfázisú számításokhoz használja a vonal-vonal feszültséget (ne a fázisfeszültséget). Például egy 400V háromfázisú rendszerhez használjon 400V-ot a számológépben."
-            },
-            {
-              "question": "Ez a számológép ingyenes?",
-              "answer": "Igen, Amper VA számológépünk teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Egyszerűen adja meg értékeit (amper és feszültség) és kapjon azonnali, pontos eredményeket."
             }
           ]
         }
@@ -1841,11 +1879,26 @@
         "faq": {
           "heading": "Gyakori kérdések",
           "items": [
-            {"question": "Volt–amper képlet wattal?", "answer": "I = P / V. Áram (A) = teljesítmény (W) / feszültség (V). Pl. 2300 W, 230 V → I = 10 A."},
-            {"question": "Volt–amper képlet ohmmal?", "answer": "I = V / R (Ohm törvény). Áram = feszültség / ellenállás. Pl. 12 V, 24 Ω → I = 0,5 A."},
-            {"question": "Mikor watt, mikor ohm?", "answer": "Watt: ismert teljesítmény (pl. típusjelölés) és feszültség. Ohm: feszültség ellenálláson és értéke (ellenállások, fűtés, DC áramkörök)."},
-            {"question": "Ohm törvény AC-re érvényes?", "answer": "I = V / R ohmos AC áramköröknél effektív értékekkel. Reaktanciánál impedancia Z: I = V / Z."},
-            {"question": "A számológép ingyenes?", "answer": "Igen. Válasszon watt vagy ohm módot, adja meg feszültséget és wattot/ohmot, kapja az áramot amperben."}
+            {
+              "question": "Volt–amper képlet wattal?",
+              "answer": "I = P / V. Áram (A) = teljesítmény (W) / feszültség (V). Pl. 2300 W, 230 V → I = 10 A."
+            },
+            {
+              "question": "Volt–amper képlet ohmmal?",
+              "answer": "I = V / R (Ohm törvény). Áram = feszültség / ellenállás. Pl. 12 V, 24 Ω → I = 0,5 A."
+            },
+            {
+              "question": "Mikor watt, mikor ohm?",
+              "answer": "Watt: ismert teljesítmény (pl. típusjelölés) és feszültség. Ohm: feszültség ellenálláson és értéke (ellenállások, fűtés, DC áramkörök)."
+            },
+            {
+              "question": "Ohm törvény AC-re érvényes?",
+              "answer": "I = V / R ohmos AC áramköröknél effektív értékekkel. Reaktanciánál impedancia Z: I = V / Z."
+            },
+            {
+              "question": "A számológép ingyenes?",
+              "answer": "Igen. Válasszon watt vagy ohm módot, adja meg feszültséget és wattot/ohmot, kapja az áramot amperben."
+            }
           ]
         },
         "related": {
@@ -1996,7 +2049,6 @@
       "amps": "Amper (A)",
       "volts": "Feszültség (V)",
       "powerFactor": "Teljesítménytényező (0-1)",
-      "volts": "Feszültség (V)",
       "calculate": "Számítás",
       "reset": "Visszaállítás",
       "result": "Eredmény",
@@ -2370,12 +2422,30 @@
         "faq": {
           "heading": "Gyakran ismételt kérdések",
           "items": [
-            { "question": "Mi a watt-amper képlet (DC)?", "answer": "DC esetén: I = P / V, ahol I az áram A-ben, P a teljesítmény W-ban és V a feszültség V-ban. Osztva a teljesítményt a feszültséggel megkapjuk az áramot. Pl.: 1200 W 120 V-on → I = 10 A." },
-            { "question": "Mi a képlet egyfázisúra?", "answer": "Egyfázisú esetén: I = P / (V × PF). V feszültség (V), P teljesítmény (W), PF teljesítménytényező (0–1). Pl.: 1840 W 230 V-on, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
-            { "question": "Mi a képlet háromfázisúra?", "answer": "Háromfázisú esetén: I = P / (√3 × V × PF). V vonali feszültség (V), P teljesítmény (W), PF teljesítménytényező. √3 ≈ 1,732. Pl.: 8,83 kW 400 V-on, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
-            { "question": "Mikor használjunk DC-t, egyfázisút vagy háromfázisút?", "answer": "DC akkumulátorokhoz, DC napelemes áramkörökhöz és DC terhelésekhez. Egyfázisú tipikus lakossági használatra (120 V, 230 V, 240 V). Háromfázisú ipari és kereskedelmi elosztáshoz (400 V, 480 V vonali) és motorokhoz." },
-            { "question": "Hogyan kapcsolódik az amper-watthoz?", "answer": "A watt-amper (I = P / V) és az amper-watt (P = I × V) inverz műveletek. Használja a watt→amper átváltást, ha ismeri a teljesítményt és a feszültséget; amper→watt, ha ismeri az áramot és a feszültséget." },
-            { "question": "Ingyenes ez a kalkulátor?", "answer": "Igen. A Watt-Amper kalkulátor ingyenes. Regisztráció nélkül. Válasszon DC-t, egyfázisút vagy háromfázisút, adja meg a wattot és a feszültséget (és teljesítménytényezőt AC-hez), azonnal kapja meg az ampert." }
+            {
+              "question": "Mi a watt-amper képlet (DC)?",
+              "answer": "DC esetén: I = P / V, ahol I az áram A-ben, P a teljesítmény W-ban és V a feszültség V-ban. Osztva a teljesítményt a feszültséggel megkapjuk az áramot. Pl.: 1200 W 120 V-on → I = 10 A."
+            },
+            {
+              "question": "Mi a képlet egyfázisúra?",
+              "answer": "Egyfázisú esetén: I = P / (V × PF). V feszültség (V), P teljesítmény (W), PF teljesítménytényező (0–1). Pl.: 1840 W 230 V-on, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A."
+            },
+            {
+              "question": "Mi a képlet háromfázisúra?",
+              "answer": "Háromfázisú esetén: I = P / (√3 × V × PF). V vonali feszültség (V), P teljesítmény (W), PF teljesítménytényező. √3 ≈ 1,732. Pl.: 8,83 kW 400 V-on, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+            },
+            {
+              "question": "Mikor használjunk DC-t, egyfázisút vagy háromfázisút?",
+              "answer": "DC akkumulátorokhoz, DC napelemes áramkörökhöz és DC terhelésekhez. Egyfázisú tipikus lakossági használatra (120 V, 230 V, 240 V). Háromfázisú ipari és kereskedelmi elosztáshoz (400 V, 480 V vonali) és motorokhoz."
+            },
+            {
+              "question": "Hogyan kapcsolódik az amper-watthoz?",
+              "answer": "A watt-amper (I = P / V) és az amper-watt (P = I × V) inverz műveletek. Használja a watt→amper átváltást, ha ismeri a teljesítményt és a feszültséget; amper→watt, ha ismeri az áramot és a feszültséget."
+            },
+            {
+              "question": "Ingyenes ez a kalkulátor?",
+              "answer": "Igen. A Watt-Amper kalkulátor ingyenes. Regisztráció nélkül. Válasszon DC-t, egyfázisút vagy háromfázisút, adja meg a wattot és a feszültséget (és teljesítménytényezőt AC-hez), azonnal kapja meg az ampert."
+            }
           ]
         },
         "related": {
@@ -2421,12 +2491,30 @@
         "faq": {
           "heading": "Gyakran ismételt kérdések",
           "items": [
-            { "question": "Mi a watt-volt képlet (DC)?", "answer": "DC esetén: V = P / I, ahol V a feszültség V-ban, P a teljesítmény W-ban és I az áram A-ban. Osztva a teljesítményt az árammal megkapjuk a feszültséget. Pl.: 1200 W 10 A-nál → V = 120 V." },
-            { "question": "Mi a képlet egyfázisú AC-re?", "answer": "Egyfázisú AC esetén: V = P / (I × PF). I áram (A), P teljesítmény (W), PF teljesítménytényező (0–1). Pl.: 1840 W 10 A-nál, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
-            { "question": "Mi a képlet háromfázisú AC-re?", "answer": "Háromfázisú AC esetén: V = P / (√3 × I × PF). I fázisonkénti áram (A), P teljesítmény (W), PF teljesítménytényező. √3 ≈ 1,732. Pl.: 8,83 kW 15 A-nál, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
-            { "question": "Mikor használjunk DC-t, egyfázisút vagy háromfázisút?", "answer": "DC akkumulátorokhoz, DC napelemes áramkörökhöz és DC terhelésekhez. Egyfázisú tipikus lakossági használatra (120 V, 230 V, 240 V). Háromfázisú ipari és kereskedelmi elosztáshoz (400 V, 480 V vonali) és motorokhoz." },
-            { "question": "Hogyan kapcsolódik a volt-watthoz?", "answer": "A watt-volt (V = P / I) és a volt-watt (P = V × I) inverz műveletek. Használja a watt→volt átváltást, ha ismeri a teljesítményt és az áramot; volt→watt, ha ismeri a feszültséget és az áramot." },
-            { "question": "Ingyenes ez a kalkulátor?", "answer": "Igen. A Watt-Volt kalkulátor ingyenes. Regisztráció nélkül. Válasszon DC-t, egyfázisút vagy háromfázisút, adja meg a wattot és az áramot (és teljesítménytényezőt AC-hez), azonnal kapja meg a voltot." }
+            {
+              "question": "Mi a watt-volt képlet (DC)?",
+              "answer": "DC esetén: V = P / I, ahol V a feszültség V-ban, P a teljesítmény W-ban és I az áram A-ban. Osztva a teljesítményt az árammal megkapjuk a feszültséget. Pl.: 1200 W 10 A-nál → V = 120 V."
+            },
+            {
+              "question": "Mi a képlet egyfázisú AC-re?",
+              "answer": "Egyfázisú AC esetén: V = P / (I × PF). I áram (A), P teljesítmény (W), PF teljesítménytényező (0–1). Pl.: 1840 W 10 A-nál, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V."
+            },
+            {
+              "question": "Mi a képlet háromfázisú AC-re?",
+              "answer": "Háromfázisú AC esetén: V = P / (√3 × I × PF). I fázisonkénti áram (A), P teljesítmény (W), PF teljesítménytényező. √3 ≈ 1,732. Pl.: 8,83 kW 15 A-nál, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+            },
+            {
+              "question": "Mikor használjunk DC-t, egyfázisút vagy háromfázisút?",
+              "answer": "DC akkumulátorokhoz, DC napelemes áramkörökhöz és DC terhelésekhez. Egyfázisú tipikus lakossági használatra (120 V, 230 V, 240 V). Háromfázisú ipari és kereskedelmi elosztáshoz (400 V, 480 V vonali) és motorokhoz."
+            },
+            {
+              "question": "Hogyan kapcsolódik a volt-watthoz?",
+              "answer": "A watt-volt (V = P / I) és a volt-watt (P = V × I) inverz műveletek. Használja a watt→volt átváltást, ha ismeri a teljesítményt és az áramot; volt→watt, ha ismeri a feszültséget és az áramot."
+            },
+            {
+              "question": "Ingyenes ez a kalkulátor?",
+              "answer": "Igen. A Watt-Volt kalkulátor ingyenes. Regisztráció nélkül. Válasszon DC-t, egyfázisút vagy háromfázisút, adja meg a wattot és az áramot (és teljesítménytényezőt AC-hez), azonnal kapja meg a voltot."
+            }
           ]
         },
         "related": {
@@ -2630,6 +2718,10 @@
           "ampsToWatts": "Amper Watt Számológép",
           "ampsToWattsDesc": "Alakítsa át az áramot és feszültséget teljesítményre"
         }
+      },
+      "addition": {
+        "title": "Összeadás Számológép",
+        "description": "Két szám összeadása"
       }
     },
     "textToBinary": {

@@ -562,6 +562,47 @@
         ]
       }
     },
+    "otherCalculators": {
+      "title": "Outras calculadoras",
+      "description": "Navegue pela nossa coleção de outras calculadoras para diversas necessidades de cálculo do dia a dia",
+      "badge": "Outras",
+      "searchPlaceholder": "Pesquisar calculadoras...",
+      "resultsFound": "resultados encontrados",
+      "noResults": "Nenhum resultado encontrado",
+      "tryDifferentSearch": "Tente um termo de pesquisa diferente",
+      "seoMeta": {
+        "title": "Outras calculadoras grátis – Ferramentas diversas",
+        "description": "Calculadoras online grátis para diversos cálculos do dia a dia. Ferramentas rápidas e precisas para necessidades de cálculo diversas.",
+        "keywords": "outras calculadoras, calculadoras diversas, calculadoras grátis, calculadoras online"
+      },
+      "seoContent": {
+        "heading": "Outras calculadoras – Ferramentas online grátis",
+        "paragraph1": "A nossa coleção de outras calculadoras oferece soluções rápidas e precisas para uma vasta gama de necessidades de cálculo. Quer precise de fazer cálculos do dia a dia ou trabalhar com várias ferramentas, as nossas calculadoras foram concebidas para dar as respostas de que precisa instantaneamente.",
+        "paragraph2": "Todas as nossas calculadoras são totalmente grátis e não exigem registo. Basta selecionar a calculadora de que precisa, introduzir os valores e obter resultados imediatos. As nossas calculadoras funcionam em todos os dispositivos – computador, tablet e telemóvel – para uso em qualquer lugar e a qualquer momento.",
+        "paragraph3": "Cada calculadora foi concebida com facilidade de utilização em mente, com campos de introdução claros, interfaces intuitivas e apresentações de resultados detalhadas. Adicionamos continuamente novas calculadoras à nossa coleção para satisfazer as suas necessidades de cálculo."
+      },
+      "faq": {
+        "heading": "Perguntas frequentes",
+        "items": [
+          {
+            "question": "Que tipos de calculadoras estão disponíveis nesta categoria?",
+            "answer": "A nossa categoria outras calculadoras inclui várias ferramentas para cálculos do dia a dia. Adicionamos continuamente novas calculadoras para satisfazer diversas necessidades de cálculo."
+          },
+          {
+            "question": "Estas calculadoras são grátis?",
+            "answer": "Sim, todas as nossas calculadoras são totalmente grátis. Não é necessário registo, pagamento ou subscrição. Basta selecionar a calculadora de que precisa e começar a calcular instantaneamente."
+          },
+          {
+            "question": "Posso usar estas calculadoras em dispositivos móveis?",
+            "answer": "Sim, todas as nossas calculadoras estão otimizadas para computadores, tablets e smartphones. Pode calcular em qualquer lugar."
+          },
+          {
+            "question": "Qual é a precisão destas calculadoras?",
+            "answer": "As nossas calculadoras usam fórmulas standard e fornecem resultados precisos para uso profissional, educativo e quotidiano."
+          }
+        ]
+      }
+    },
     "wattsToKva": {
       "title": "Calculadora de Watts para kVA",
       "description": "Converta watts (W) em quilovolt-amperes (kVA) instantaneamente e com precisão usando o fator de potência",
@@ -1034,12 +1075,30 @@
         "faq": {
           "heading": "Perguntas frequentes",
           "items": [
-            { "question": "Qual é a fórmula para converter kW em Volts?", "answer": "DC: V = (kW × 1000) / I. AC monofásico: V = (kW × 1000) / (I × PF). AC trifásico: V = (kW × 1000) / (√3 × I × PF). V em volts, kW potência, I corrente em A, PF fator de potência. O resultado trifásico é a tensão entre fases. DC não usa fator de potência." },
-            { "question": "Preciso de fator de potência em DC?", "answer": "Não. O fator de potência aplica-se apenas a AC. Em DC: V = (kW × 1000) / I. Só são necessários kW e corrente. Aplicações DC típicas: baterias, solar, VE em 12V, 24V, 48V ou mais." },
-            { "question": "Diferença entre monofásico e trifásico?", "answer": "Monofásico: V = (kW × 1000) / (I × PF). Trifásico: V = (kW × 1000) / (√3 × I × PF), resultado = tensão entre fases. Para os mesmos kW e corrente, o trifásico dá maior tensão." },
-            { "question": "O que representa a tensão trifásica?", "answer": "A fórmula trifásica dá a tensão entre fases (composta), não fase–neutro. Valores comuns: 208V, 240V, 380V, 400V, 415V, 480V. Use para dimensionar equipamentos e verificar a tensão da rede." },
-            { "question": "O que é o fator de potência?", "answer": "O fator de potência (PF) é a razão entre potência ativa e aparente em AC, de 0 a 1. Típico: resistivo = 1,0, motores de indução = 0,8–0,9, fluorescente = 0,85–0,95, LED = 0,9–0,95. Se desconhecido: 0,8 para motores, 0,9 para cargas mistas. DC não tem fator de potência." },
-            { "question": "A calculadora é gratuita?", "answer": "Sim, a calculadora kW para Volts é gratuita. Sem registro ou pagamento. Insira kW e corrente, escolha DC, monofásico ou trifásico, adicione o fator de potência para AC e obtenha resultados instantâneos e precisos." }
+            {
+              "question": "Qual é a fórmula para converter kW em Volts?",
+              "answer": "DC: V = (kW × 1000) / I. AC monofásico: V = (kW × 1000) / (I × PF). AC trifásico: V = (kW × 1000) / (√3 × I × PF). V em volts, kW potência, I corrente em A, PF fator de potência. O resultado trifásico é a tensão entre fases. DC não usa fator de potência."
+            },
+            {
+              "question": "Preciso de fator de potência em DC?",
+              "answer": "Não. O fator de potência aplica-se apenas a AC. Em DC: V = (kW × 1000) / I. Só são necessários kW e corrente. Aplicações DC típicas: baterias, solar, VE em 12V, 24V, 48V ou mais."
+            },
+            {
+              "question": "Diferença entre monofásico e trifásico?",
+              "answer": "Monofásico: V = (kW × 1000) / (I × PF). Trifásico: V = (kW × 1000) / (√3 × I × PF), resultado = tensão entre fases. Para os mesmos kW e corrente, o trifásico dá maior tensão."
+            },
+            {
+              "question": "O que representa a tensão trifásica?",
+              "answer": "A fórmula trifásica dá a tensão entre fases (composta), não fase–neutro. Valores comuns: 208V, 240V, 380V, 400V, 415V, 480V. Use para dimensionar equipamentos e verificar a tensão da rede."
+            },
+            {
+              "question": "O que é o fator de potência?",
+              "answer": "O fator de potência (PF) é a razão entre potência ativa e aparente em AC, de 0 a 1. Típico: resistivo = 1,0, motores de indução = 0,8–0,9, fluorescente = 0,85–0,95, LED = 0,9–0,95. Se desconhecido: 0,8 para motores, 0,9 para cargas mistas. DC não tem fator de potência."
+            },
+            {
+              "question": "A calculadora é gratuita?",
+              "answer": "Sim, a calculadora kW para Volts é gratuita. Sem registro ou pagamento. Insira kW e corrente, escolha DC, monofásico ou trifásico, adicione o fator de potência para AC e obtenha resultados instantâneos e precisos."
+            }
           ]
         }
       }
@@ -1069,11 +1128,26 @@
         "faq": {
           "heading": "Perguntas frequentes",
           "items": [
-            { "question": "Qual é a fórmula kW para kWh?", "answer": "kWh = kW × horas. Ex.: 2 kW durante 3 h → 2 × 3 = 6 kWh." },
-            { "question": "Diferença entre kW e kWh?", "answer": "kW = potência (taxa). kWh = energia (quantidade no tempo). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh." },
-            { "question": "Posso usar horas decimais (ex. 1,5 = 1 h 30)?", "answer": "Sim. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh." },
-            { "question": "Como estimar a fatura a partir de kW e horas?", "answer": "Primeiro kWh = kW × horas. Depois kWh × preço por kWh (ex. 0,15 €/kWh). Ex.: 24 kWh × 0,15 € = 3,60 €." },
-            { "question": "A calculadora é gratuita?", "answer": "Sim, a calculadora kW para kWh é gratuita. Sem registo. Introduza kW e horas para o resultado instantâneo em kWh." }
+            {
+              "question": "Qual é a fórmula kW para kWh?",
+              "answer": "kWh = kW × horas. Ex.: 2 kW durante 3 h → 2 × 3 = 6 kWh."
+            },
+            {
+              "question": "Diferença entre kW e kWh?",
+              "answer": "kW = potência (taxa). kWh = energia (quantidade no tempo). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh."
+            },
+            {
+              "question": "Posso usar horas decimais (ex. 1,5 = 1 h 30)?",
+              "answer": "Sim. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh."
+            },
+            {
+              "question": "Como estimar a fatura a partir de kW e horas?",
+              "answer": "Primeiro kWh = kW × horas. Depois kWh × preço por kWh (ex. 0,15 €/kWh). Ex.: 24 kWh × 0,15 € = 3,60 €."
+            },
+            {
+              "question": "A calculadora é gratuita?",
+              "answer": "Sim, a calculadora kW para kWh é gratuita. Sem registo. Introduza kW e horas para o resultado instantâneo em kWh."
+            }
           ]
         }
       }
@@ -1167,11 +1241,26 @@
         "faq": {
           "heading": "Perguntas frequentes",
           "items": [
-            { "question": "Qual é a fórmula para converter kW em VA?", "answer": "A fórmula é VA = (kW × 1000) / FP, onde VA é potência aparente em volt-amperes, kW é potência ativa em quilowatts, e FP é o fator de potência (0 a 1). Potência ativa = potência aparente × FP, portanto potência aparente = potência ativa / FP." },
-            { "question": "Qual é a diferença entre kW e VA?", "answer": "kW (quilowatts) é potência ativa — o trabalho real realizado pela carga (ex. saída mecânica, calor, luz). VA (volt-amperes) é potência aparente — a potência total fornecida pela fonte, incluindo potência reativa que não realiza trabalho útil. VA ≥ kW sempre; são iguais apenas quando FP = 1,0 (carga puramente resistiva)." },
-            { "question": "O que é fator de potência e quais valores são típicos?", "answer": "O fator de potência (FP) é a razão kW / VA, variando de 0 a 1. Ele mede quão eficientemente a potência elétrica é convertida em trabalho útil. Valores típicos: aquecedores resistivos ~1,0, lâmpadas fluorescentes 0,5–0,95, motores de indução 0,7–0,9, fontes de alimentação 0,6–0,95. Um FP mais baixo significa que VA mais altos são necessários para os mesmos kW, aumentando o tamanho de condutores e transformadores." },
-            { "question": "Por que preciso converter kW em VA?", "answer": "Transformadores, geradores, unidades UPS e disjuntores são classificados em VA (ou kVA), não em kW. Uma carga consumindo 10 kW a FP 0,8 requer 12,5 kVA de capacidade de fornecimento. Dimensionar equipamentos apenas por kW (ignorando FP) pode levar a sobrecarga. Converter kW em VA garante que você selecione equipamentos com capacidade de potência aparente suficiente." },
-            { "question": "Esta calculadora é gratuita?", "answer": "Sim, nossa calculadora kW para VA é gratuita. Não é necessário registro ou pagamento. Insira potência em kW e fator de potência (0–1) para obter resultados instantâneos e precisos em VA." }
+            {
+              "question": "Qual é a fórmula para converter kW em VA?",
+              "answer": "A fórmula é VA = (kW × 1000) / FP, onde VA é potência aparente em volt-amperes, kW é potência ativa em quilowatts, e FP é o fator de potência (0 a 1). Potência ativa = potência aparente × FP, portanto potência aparente = potência ativa / FP."
+            },
+            {
+              "question": "Qual é a diferença entre kW e VA?",
+              "answer": "kW (quilowatts) é potência ativa — o trabalho real realizado pela carga (ex. saída mecânica, calor, luz). VA (volt-amperes) é potência aparente — a potência total fornecida pela fonte, incluindo potência reativa que não realiza trabalho útil. VA ≥ kW sempre; são iguais apenas quando FP = 1,0 (carga puramente resistiva)."
+            },
+            {
+              "question": "O que é fator de potência e quais valores são típicos?",
+              "answer": "O fator de potência (FP) é a razão kW / VA, variando de 0 a 1. Ele mede quão eficientemente a potência elétrica é convertida em trabalho útil. Valores típicos: aquecedores resistivos ~1,0, lâmpadas fluorescentes 0,5–0,95, motores de indução 0,7–0,9, fontes de alimentação 0,6–0,95. Um FP mais baixo significa que VA mais altos são necessários para os mesmos kW, aumentando o tamanho de condutores e transformadores."
+            },
+            {
+              "question": "Por que preciso converter kW em VA?",
+              "answer": "Transformadores, geradores, unidades UPS e disjuntores são classificados em VA (ou kVA), não em kW. Uma carga consumindo 10 kW a FP 0,8 requer 12,5 kVA de capacidade de fornecimento. Dimensionar equipamentos apenas por kW (ignorando FP) pode levar a sobrecarga. Converter kW em VA garante que você selecione equipamentos com capacidade de potência aparente suficiente."
+            },
+            {
+              "question": "Esta calculadora é gratuita?",
+              "answer": "Sim, nossa calculadora kW para VA é gratuita. Não é necessário registro ou pagamento. Insira potência em kW e fator de potência (0–1) para obter resultados instantâneos e precisos em VA."
+            }
           ]
         }
       }
@@ -1201,11 +1290,26 @@
         "faq": {
           "heading": "Perguntas frequentes",
           "items": [
-            { "question": "Qual é a fórmula para converter kW em kVA?", "answer": "A fórmula é kVA = kW / FP, onde kVA é potência aparente em kilovolt-amperes, kW é potência ativa em kilowatts, e FP é o fator de potência (0 a 1). Potência ativa = potência aparente × FP, portanto potência aparente = potência ativa / FP." },
-            { "question": "Qual é a diferença entre kW e kVA?", "answer": "kW (kilowatts) é potência ativa — o trabalho real realizado pela carga (ex. saída mecânica, calor, luz). kVA (kilovolt-amperes) é potência aparente — a potência total fornecida pela fonte, incluindo potência reativa que não realiza trabalho útil. kVA ≥ kW sempre; são iguais apenas quando FP = 1,0 (carga puramente resistiva)." },
-            { "question": "O que é fator de potência e quais valores são típicos?", "answer": "O fator de potência (FP) é a razão kW / kVA, variando de 0 a 1. Ele mede quão eficientemente a potência elétrica é convertida em trabalho útil. Valores típicos: aquecedores resistivos ~1,0, lâmpadas fluorescentes 0,5–0,95, motores de indução 0,7–0,9, fontes de alimentação 0,6–0,95. Um FP mais baixo significa que kVA mais altos são necessários para os mesmos kW, aumentando o tamanho de condutores e transformadores." },
-            { "question": "Por que preciso converter kW em kVA?", "answer": "Transformadores, geradores, unidades UPS e disjuntores são classificados em kVA, não em kW. Uma carga consumindo 10 kW a FP 0,8 requer 12,5 kVA de capacidade de fornecimento. Dimensionar equipamentos apenas por kW (ignorando FP) pode levar a sobrecarga. Converter kW em kVA garante que você selecione equipamentos com capacidade de potência aparente suficiente." },
-            { "question": "Esta calculadora é gratuita?", "answer": "Sim, nossa calculadora kW para kVA é gratuita. Não é necessário registro ou pagamento. Insira potência em kW e fator de potência (0–1) para obter resultados instantâneos e precisos em kVA." }
+            {
+              "question": "Qual é a fórmula para converter kW em kVA?",
+              "answer": "A fórmula é kVA = kW / FP, onde kVA é potência aparente em kilovolt-amperes, kW é potência ativa em kilowatts, e FP é o fator de potência (0 a 1). Potência ativa = potência aparente × FP, portanto potência aparente = potência ativa / FP."
+            },
+            {
+              "question": "Qual é a diferença entre kW e kVA?",
+              "answer": "kW (kilowatts) é potência ativa — o trabalho real realizado pela carga (ex. saída mecânica, calor, luz). kVA (kilovolt-amperes) é potência aparente — a potência total fornecida pela fonte, incluindo potência reativa que não realiza trabalho útil. kVA ≥ kW sempre; são iguais apenas quando FP = 1,0 (carga puramente resistiva)."
+            },
+            {
+              "question": "O que é fator de potência e quais valores são típicos?",
+              "answer": "O fator de potência (FP) é a razão kW / kVA, variando de 0 a 1. Ele mede quão eficientemente a potência elétrica é convertida em trabalho útil. Valores típicos: aquecedores resistivos ~1,0, lâmpadas fluorescentes 0,5–0,95, motores de indução 0,7–0,9, fontes de alimentação 0,6–0,95. Um FP mais baixo significa que kVA mais altos são necessários para os mesmos kW, aumentando o tamanho de condutores e transformadores."
+            },
+            {
+              "question": "Por que preciso converter kW em kVA?",
+              "answer": "Transformadores, geradores, unidades UPS e disjuntores são classificados em kVA, não em kW. Uma carga consumindo 10 kW a FP 0,8 requer 12,5 kVA de capacidade de fornecimento. Dimensionar equipamentos apenas por kW (ignorando FP) pode levar a sobrecarga. Converter kW em kVA garante que você selecione equipamentos com capacidade de potência aparente suficiente."
+            },
+            {
+              "question": "Esta calculadora é gratuita?",
+              "answer": "Sim, nossa calculadora kW para kVA é gratuita. Não é necessário registro ou pagamento. Insira potência em kW e fator de potência (0–1) para obter resultados instantâneos e precisos em kVA."
+            }
           ]
         }
       }
@@ -1316,66 +1420,6 @@
           "kwToKvaDesc": "Converter quilowatts em quilovolt-amperes instantaneamente",
           "kwToKwh": "Calculadora kW para kWh",
           "kwToKwhDesc": "Converter potência em energia usando duração"
-        }
-      }
-    },
-    "whToMah": {
-      "title": "Calculadora Wh para mAh",
-      "description": "Converter watts-hora (Wh) para miliamperes-hora (mAh) instantaneamente usando tensão",
-      "wh": "Watts-hora (Wh)",
-      "voltage": "Tensão (V)",
-      "calculate": "Calcular",
-      "reset": "Redefinir",
-      "result": "Resultado",
-      "mah": "Miliamperes-hora (mAh)",
-      "seo": {
-        "title": "Calculadora Wh para mAh - Converter Energia em Capacidade de Bateria Online",
-        "description": "Calculadora de conversão Wh para mAh gratuita. Converter watts-hora para miliamperes-hora instantaneamente usando tensão. Perfeito para cálculos de capacidade de bateria, dimensionamento de power banks e análise de armazenamento de energia.",
-        "keywords": "calculadora wh mah, conversor watts-hora miliamperes-hora, conversão wh mah, calculadora capacidade bateria, calculadora power bank, calculadora energia bateria, calculadora gratuita",
-        "content": {
-          "heading": "Como Converter Wh para mAh",
-          "paragraph1": "Converter watts-hora (Wh) para miliamperes-hora (mAh) é um cálculo essencial ao determinar a capacidade de bateria a partir de especificações energéticas. Watts-hora representam armazenamento de energia real — a energia elétrica total que uma bateria pode fornecer — enquanto miliamperes-hora representam capacidade de carga elétrica — quanta corrente uma bateria pode fornecer ao longo do tempo. A conversão requer conhecer a tensão da bateria, pois a capacidade de carga depende tanto da energia quanto da tensão. Nossa calculadora Wh para mAh gratuita fornece conversões instantâneas e precisas para seus cálculos de bateria e gestão de energia.",
-          "paragraph2": "A fórmula é: mAh = (Wh × 1000) / V, onde Wh é a energia em watts-hora, V é a tensão em volts e mAh é a capacidade da bateria em miliamperes-hora. Por exemplo, uma bateria de 18,5 Wh a 3,7V tem uma capacidade de (18,5 × 1000) / 3,7 = 5000 mAh. Este cálculo é essencial para entender a capacidade da bateria a partir de classificações energéticas, comparar baterias com especificações de tensão diferentes, dimensionar power banks com base em requisitos energéticos e calcular o tempo de execução do dispositivo a partir do consumo de energia.",
-          "paragraph3": "Esta conversão é crítica em muitas aplicações: determinar a capacidade da bateria a partir de especificações energéticas em watts-hora, comparar power banks e carregadores portáteis quando apenas a energia é especificada, calcular a capacidade de carga para bancos de baterias solares, entender a capacidade da bateria de smartphones e laptops a partir de classificações energéticas, dimensionar sistemas de alimentação de backup com base em necessidades energéticas e estimar o tempo de execução do dispositivo a partir da energia da bateria. Por exemplo, um power bank de 37 Wh a 3,7V fornece (37 × 1000) / 3,7 = 10.000 mAh, mas os mesmos 37 Wh a 5V fornecem apenas 7.400 mAh — mesma energia, capacidade diferente devido à diferença de tensão.",
-          "paragraph4": "Nossa calculadora aceita watts-hora e tensão como entradas, aplica a fórmula mAh = (Wh × 1000) / V e fornece a capacidade da bateria em miliamperes-hora. Esteja você comparando power banks, calculando capacidade de bateria para sistemas solares, dimensionando backups de bateria, estimando tempo de carga ou entendendo requisitos de energia do dispositivo, nossa calculadora Wh para mAh fornece resultados precisos e instantâneos para suas necessidades de gestão de baterias e planejamento energético.",
-          "exampleHeading": "Exemplo:",
-          "exampleText": "18,5 Wh a 3,7V: mAh = (18,5 × 1000) / 3,7 = 5000 mAh. 50 Wh a 5V: mAh = (50 × 1000) / 5 = 10.000 mAh. 3,75 Wh a 1,5V: mAh = (3,75 × 1000) / 1,5 = 2500 mAh. 72 Wh a 3,6V: mAh = (72 × 1000) / 3,6 = 20.000 mAh. Se uma bateria de smartphone é classificada em 15,4 Wh a 3,85V, sua capacidade é (15,4 × 1000) / 3,85 = 4000 mAh."
-        },
-        "faq": {
-          "heading": "Perguntas Frequentes",
-          "items": [
-            {
-              "question": "Qual é a fórmula para converter Wh para mAh?",
-              "answer": "A fórmula é mAh = (Wh × 1000) / V, onde Wh é a energia em watts-hora, V é a tensão em volts e mAh é a capacidade da bateria em miliamperes-hora. Isso converte armazenamento de energia real em capacidade de carga elétrica. Por exemplo, 18,5 Wh a 3,7V equivale a (18,5 × 1000) / 3,7 = 5000 mAh."
-            },
-            {
-              "question": "Qual é a diferença entre Wh e mAh?",
-              "answer": "Wh (watts-hora) mede energia real — o trabalho elétrico total que uma bateria pode realizar. mAh (miliamperes-hora) mede capacidade de carga elétrica — quanta corrente uma bateria pode fornecer ao longo do tempo. Wh leva em conta a tensão, enquanto mAh não. Uma bateria de 37 Wh a 3,7V fornece 10.000 mAh, mas a 5V fornece apenas 7.400 mAh — mesma energia, capacidade diferente."
-            },
-            {
-              "question": "Por que preciso da tensão para esta conversão?",
-              "answer": "A capacidade de carga (mAh) depende tanto da energia (Wh) quanto da tensão (V). Os mesmos Wh em tensões diferentes fornecem capacidade de carga diferente. Potência = Tensão × Corrente, portanto, tensão mais alta significa menos capacidade de carga para a mesma energia. Sem conhecer a tensão, não é possível determinar a capacidade da bateria real."
-            },
-            {
-              "question": "Como posso usar esta calculadora para comparar power banks?",
-              "answer": "Power banks frequentemente listam capacidade em Wh (energia) mas você pode precisar de mAh para comparação. Converta para mAh usando a tensão de operação. Um power bank de 37 Wh a 3,7V (10.000 mAh) fornece mais capacidade de carga do que 37 Wh a 5V (7.400 mAh). Considere sempre tanto Wh quanto tensão para comparação precisa de capacidade."
-            },
-            {
-              "question": "Esta calculadora é gratuita?",
-              "answer": "Sim, nossa calculadora Wh para mAh é completamente gratuita. Nenhum registro ou pagamento necessário. Insira a energia em Wh e a tensão em volts para resultados de capacidade da bateria instantâneos e precisos em mAh."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Calculadoras Relacionadas",
-          "mahToWh": "Calculadora mAh para Wh",
-          "mahToWhDesc": "Converter capacidade de bateria para energia com voltagem",
-          "kwhToWatts": "Calculadora kWh para Watts",
-          "kwhToWattsDesc": "Converter quilowatts-hora em watts usando duração",
-          "kwToKwh": "Calculadora kW para kWh",
-          "kwToKwhDesc": "Converter potência em energia usando duração",
-          "wattsToKwh": "Calculadora Watts para kWh",
-          "wattsToKwhDesc": "Converter potência em energia usando duração"
         }
       }
     },
@@ -1587,11 +1631,26 @@
         "faq": {
           "heading": "Perguntas frequentes",
           "items": [
-            {"question": "Qual a fórmula VA para kW?", "answer": "kW = (VA × FP) / 1000. FP necessário porque só parte da potência aparente é ativa; dividir por 1000 para quilowatts."},
-            {"question": "Diferença entre VA e kW?", "answer": "VA mede potência aparente (total, incl. reativa), kW mede potência ativa. kW = (VA × FP) / 1000. Só coincidem se FP = 1,0 e fator 1000."},
-            {"question": "Por que o fator de potência é necessário?", "answer": "A potência aparente inclui a reativa. O fator de potência indica a parte ativa. Sem FP não se obtém a potência ativa a partir dos VA."},
-            {"question": "Fatores de potência típicos?", "answer": "Cargas resistivas frequentemente ≈ 1,0. Motores e indutivas 0,7–0,9. Em dúvida, costuma-se usar 0,8."},
-            {"question": "A calculadora é gratuita?", "answer": "Sim. Sem cadastro. Informe VA e fator de potência para resultados em quilowatts."}
+            {
+              "question": "Qual a fórmula VA para kW?",
+              "answer": "kW = (VA × FP) / 1000. FP necessário porque só parte da potência aparente é ativa; dividir por 1000 para quilowatts."
+            },
+            {
+              "question": "Diferença entre VA e kW?",
+              "answer": "VA mede potência aparente (total, incl. reativa), kW mede potência ativa. kW = (VA × FP) / 1000. Só coincidem se FP = 1,0 e fator 1000."
+            },
+            {
+              "question": "Por que o fator de potência é necessário?",
+              "answer": "A potência aparente inclui a reativa. O fator de potência indica a parte ativa. Sem FP não se obtém a potência ativa a partir dos VA."
+            },
+            {
+              "question": "Fatores de potência típicos?",
+              "answer": "Cargas resistivas frequentemente ≈ 1,0. Motores e indutivas 0,7–0,9. Em dúvida, costuma-se usar 0,8."
+            },
+            {
+              "question": "A calculadora é gratuita?",
+              "answer": "Sim. Sem cadastro. Informe VA e fator de potência para resultados em quilowatts."
+            }
           ]
         },
         "related": {
@@ -1631,11 +1690,26 @@
         "faq": {
           "heading": "Perguntas frequentes",
           "items": [
-            {"question": "Fórmula VA para kVA?", "answer": "kVA = VA / 1000. Ambos potência aparente; dividir por 1000. Fator de potência não necessário."},
-            {"question": "Diferença VA e kVA?", "answer": "VA e kVA medem potência aparente. 1 kVA = 1000 VA. Mesma grandeza, outra unidade — como metros e quilômetros."},
-            {"question": "Precisa do fator de potência?", "answer": "Não. Apenas para potência aparente ↔ ativa (W/kW). VA → kVA = divisão por 1000."},
-            {"question": "Quando VA, quando kVA?", "answer": "Equipamentos menores muitas vezes em VA, maiores (no-breaks, transformadores) em kVA. Conversão para comparar e somar potências."},
-            {"question": "A calculadora é gratuita?", "answer": "Sim. Sem registro. Informe VA para resultados em kVA."}
+            {
+              "question": "Fórmula VA para kVA?",
+              "answer": "kVA = VA / 1000. Ambos potência aparente; dividir por 1000. Fator de potência não necessário."
+            },
+            {
+              "question": "Diferença VA e kVA?",
+              "answer": "VA e kVA medem potência aparente. 1 kVA = 1000 VA. Mesma grandeza, outra unidade — como metros e quilômetros."
+            },
+            {
+              "question": "Precisa do fator de potência?",
+              "answer": "Não. Apenas para potência aparente ↔ ativa (W/kW). VA → kVA = divisão por 1000."
+            },
+            {
+              "question": "Quando VA, quando kVA?",
+              "answer": "Equipamentos menores muitas vezes em VA, maiores (no-breaks, transformadores) em kVA. Conversão para comparar e somar potências."
+            },
+            {
+              "question": "A calculadora é gratuita?",
+              "answer": "Sim. Sem registro. Informe VA para resultados em kVA."
+            }
           ]
         },
         "related": {
@@ -1846,11 +1920,26 @@
         "faq": {
           "heading": "Perguntas frequentes",
           "items": [
-            {"question": "Fórmula volts para amperes com watts?", "answer": "I = P / V. Corrente (A) = potência (W) / tensão (V). Ex. 2300 W, 230 V → I = 10 A."},
-            {"question": "Fórmula volts para amperes com ohms?", "answer": "I = V / R (lei de Ohm). Corrente = tensão / resistência. Ex. 12 V, 24 Ω → I = 0,5 A."},
-            {"question": "Quando watts, quando ohms?", "answer": "Watts: quando conhece potência (ex. placa) e tensão. Ohms: tensão nos terminais de uma resistência e valor (resistências, aquecimento, circuitos DC)."},
-            {"question": "A lei de Ohm aplica-se a AC?", "answer": "I = V / R aplica-se a circuitos AC resistivos em valores eficazes. Para reatâncias use impedância Z: I = V / Z."},
-            {"question": "A calculadora é gratuita?", "answer": "Sim. Escolha watts ou ohms, introduza tensão e watts/ohms, obtenha a corrente em amperes."}
+            {
+              "question": "Fórmula volts para amperes com watts?",
+              "answer": "I = P / V. Corrente (A) = potência (W) / tensão (V). Ex. 2300 W, 230 V → I = 10 A."
+            },
+            {
+              "question": "Fórmula volts para amperes com ohms?",
+              "answer": "I = V / R (lei de Ohm). Corrente = tensão / resistência. Ex. 12 V, 24 Ω → I = 0,5 A."
+            },
+            {
+              "question": "Quando watts, quando ohms?",
+              "answer": "Watts: quando conhece potência (ex. placa) e tensão. Ohms: tensão nos terminais de uma resistência e valor (resistências, aquecimento, circuitos DC)."
+            },
+            {
+              "question": "A lei de Ohm aplica-se a AC?",
+              "answer": "I = V / R aplica-se a circuitos AC resistivos em valores eficazes. Para reatâncias use impedância Z: I = V / Z."
+            },
+            {
+              "question": "A calculadora é gratuita?",
+              "answer": "Sim. Escolha watts ou ohms, introduza tensão e watts/ohms, obtenha a corrente em amperes."
+            }
           ]
         },
         "related": {
@@ -2001,7 +2090,6 @@
       "amps": "Amperes (A)",
       "volts": "Tensão (V)",
       "powerFactor": "Fator de Potência (0-1)",
-      "volts": "Tensão (V)",
       "calculate": "Calcular",
       "reset": "Redefinir",
       "result": "Resultado",
@@ -2079,12 +2167,30 @@
         "faq": {
           "heading": "Perguntas frequentes",
           "items": [
-            { "question": "Qual é a fórmula watts para amperes (DC)?", "answer": "Para DC: I = P / V, onde I é corrente em A, P potência em W e V tensão em V. Dividir potência pela tensão dá a corrente. Ex.: 1200 W a 120 V → I = 10 A." },
-            { "question": "Qual é a fórmula para monofásico?", "answer": "Para monofásico: I = P / (V × PF). V tensão (V), P potência (W), PF fator de potência (0 a 1). Ex.: 1840 W a 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
-            { "question": "Qual é a fórmula para trifásico?", "answer": "Para trifásico: I = P / (√3 × V × PF). V tensão entre fases (V), P potência (W), PF fator de potência. √3 ≈ 1,732. Ex.: 8,83 kW a 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
-            { "question": "Quando usar DC, monofásico ou trifásico?", "answer": "DC para baterias, circuitos solares DC e cargas DC. Monofásico para residencial (120 V, 230 V, 240 V). Trifásico para distribuição industrial e comercial (400 V, 480 V entre fases) e motores." },
-            { "question": "Como se relaciona com amperes para watts?", "answer": "Watts para amperes (I = P / V) e amperes para watts (P = I × V) são operações inversas. Use watts→amperes quando conhece potência e tensão; amperes→watts quando conhece corrente e tensão." },
-            { "question": "Esta calculadora é gratuita?", "answer": "Sim. A calculadora Watts para Amperes é gratuita. Sem registo. Escolha DC, monofásico ou trifásico, introduza watts e tensão (e fator de potência para AC), obtenha amperes imediatamente." }
+            {
+              "question": "Qual é a fórmula watts para amperes (DC)?",
+              "answer": "Para DC: I = P / V, onde I é corrente em A, P potência em W e V tensão em V. Dividir potência pela tensão dá a corrente. Ex.: 1200 W a 120 V → I = 10 A."
+            },
+            {
+              "question": "Qual é a fórmula para monofásico?",
+              "answer": "Para monofásico: I = P / (V × PF). V tensão (V), P potência (W), PF fator de potência (0 a 1). Ex.: 1840 W a 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A."
+            },
+            {
+              "question": "Qual é a fórmula para trifásico?",
+              "answer": "Para trifásico: I = P / (√3 × V × PF). V tensão entre fases (V), P potência (W), PF fator de potência. √3 ≈ 1,732. Ex.: 8,83 kW a 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+            },
+            {
+              "question": "Quando usar DC, monofásico ou trifásico?",
+              "answer": "DC para baterias, circuitos solares DC e cargas DC. Monofásico para residencial (120 V, 230 V, 240 V). Trifásico para distribuição industrial e comercial (400 V, 480 V entre fases) e motores."
+            },
+            {
+              "question": "Como se relaciona com amperes para watts?",
+              "answer": "Watts para amperes (I = P / V) e amperes para watts (P = I × V) são operações inversas. Use watts→amperes quando conhece potência e tensão; amperes→watts quando conhece corrente e tensão."
+            },
+            {
+              "question": "Esta calculadora é gratuita?",
+              "answer": "Sim. A calculadora Watts para Amperes é gratuita. Sem registo. Escolha DC, monofásico ou trifásico, introduza watts e tensão (e fator de potência para AC), obtenha amperes imediatamente."
+            }
           ]
         },
         "related": {
@@ -2130,12 +2236,30 @@
         "faq": {
           "heading": "Perguntas Frequentes",
           "items": [
-            { "question": "Qual é a fórmula para watts para volts (DC)?", "answer": "Para DC: V = P / I, onde V é a tensão em volts, P a potência em watts e I a corrente em ampères. Dividir a potência pela corrente dá a tensão. Exemplo: 1200 W a 10 A → V = 120 V." },
-            { "question": "Qual é a fórmula para monofásico AC?", "answer": "Para monofásico AC: V = P / (I × PF). I é a corrente (ampères), P a potência (watts), PF o fator de potência (0 a 1). Exemplo: 1840 W a 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
-            { "question": "Qual é a fórmula para trifásico AC?", "answer": "Para trifásico AC: V = P / (√3 × I × PF). I é a corrente por fase (ampères), P a potência (watts), PF o fator de potência. √3 ≈ 1,732. Exemplo: 8,83 kW a 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
-            { "question": "Quando usar DC, monofásico ou trifásico?", "answer": "DC para baterias, circuitos solares DC e cargas DC. Monofásico para residencial típico (120 V, 230 V, 240 V). Trifásico para distribuição industrial e comercial (400 V, 480 V linha-linha) e motores." },
-            { "question": "Como isso se relaciona com volts para watts?", "answer": "Watts para volts (V = P / I) e volts para watts (P = V × I) são operações inversas. Use watts→volts quando conhecer potência e corrente; volts→watts quando conhecer tensão e corrente." },
-            { "question": "Esta calculadora é gratuita?", "answer": "Sim. A calculadora Watts para Volts é gratuita. Nenhum registro necessário. Selecione DC, monofásico ou trifásico, insira watts e corrente (e fator de potência para AC), obtenha volts instantaneamente." }
+            {
+              "question": "Qual é a fórmula para watts para volts (DC)?",
+              "answer": "Para DC: V = P / I, onde V é a tensão em volts, P a potência em watts e I a corrente em ampères. Dividir a potência pela corrente dá a tensão. Exemplo: 1200 W a 10 A → V = 120 V."
+            },
+            {
+              "question": "Qual é a fórmula para monofásico AC?",
+              "answer": "Para monofásico AC: V = P / (I × PF). I é a corrente (ampères), P a potência (watts), PF o fator de potência (0 a 1). Exemplo: 1840 W a 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V."
+            },
+            {
+              "question": "Qual é a fórmula para trifásico AC?",
+              "answer": "Para trifásico AC: V = P / (√3 × I × PF). I é a corrente por fase (ampères), P a potência (watts), PF o fator de potência. √3 ≈ 1,732. Exemplo: 8,83 kW a 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+            },
+            {
+              "question": "Quando usar DC, monofásico ou trifásico?",
+              "answer": "DC para baterias, circuitos solares DC e cargas DC. Monofásico para residencial típico (120 V, 230 V, 240 V). Trifásico para distribuição industrial e comercial (400 V, 480 V linha-linha) e motores."
+            },
+            {
+              "question": "Como isso se relaciona com volts para watts?",
+              "answer": "Watts para volts (V = P / I) e volts para watts (P = V × I) são operações inversas. Use watts→volts quando conhecer potência e corrente; volts→watts quando conhecer tensão e corrente."
+            },
+            {
+              "question": "Esta calculadora é gratuita?",
+              "answer": "Sim. A calculadora Watts para Volts é gratuita. Nenhum registro necessário. Selecione DC, monofásico ou trifásico, insira watts e corrente (e fator de potência para AC), obtenha volts instantaneamente."
+            }
           ]
         },
         "related": {
@@ -2635,6 +2759,10 @@
           "ampsToWatts": "Calculadora Amperes para Watts",
           "ampsToWattsDesc": "Converter corrente e tensão em potência"
         }
+      },
+      "addition": {
+        "title": "Calculadora de Adição",
+        "description": "Somar dois números"
       }
     },
     "textToBinary": {
@@ -2707,72 +2835,6 @@
           "percentageDesc": "Calcule valores percentuais, mudança percentual e relações percentuais",
           "average": "Calculadora de Média",
           "averageDesc": "Encontre a média, soma e contagem de uma lista de números"
-        }
-      }
-    },
-    "italicText": {
-      "title": "Gerador de Texto em Itálico",
-      "description": "Gere texto em itálico instantaneamente com múltiplos estilos Unicode: itálico serif, script cursivo e itálico sans-serif. Perfeito para redes sociais, design e escrita criativa.",
-      "textInput": "Digite seu texto",
-      "textPlaceholder": "Digite texto para converter...",
-      "serif1": "Itálico (serif)",
-      "serif2": "Itálico (serif)",
-      "script1": "Cursivo / Script",
-      "script2": "Cursivo / Script",
-      "sansSerif1": "Itálico (sans-serif)",
-      "sansSerif2": "Itálico (sans-serif)",
-      "reset": "Redefinir",
-      "copy": "Copiar",
-      "seo": {
-        "title": "Gerador de Texto em Itálico – Crie Texto Estilizado com Fontes Unicode em Itálico",
-        "description": "Gerador gratuito de texto em itálico para criar texto estilizado usando caracteres Unicode matemáticos em itálico. Gere itálico serif, script cursivo e texto em itálico sans-serif para redes sociais, design e projetos criativos.",
-        "keywords": "gerador de texto em itálico, gerador de fonte em itálico, gerador de texto cursivo, texto estilizado, Unicode itálico, itálico matemático, conversor de itálico, gerador de texto elegante, letras em itálico, conversor de fonte em itálico",
-        "content": {
-          "heading": "Como Gerar Texto em Itálico",
-          "paragraph1": "Um gerador de texto em itálico é uma ferramenta criativa que converte texto regular em versões estilizadas em itálico usando caracteres Unicode matemáticos. Ao contrário da formatação itálica HTML ou CSS padrão, os caracteres Unicode em itálico são caracteres distintos reais que funcionam em todas as plataformas, sites de redes sociais e aplicativos. Nosso gerador gratuito de texto em itálico fornece múltiplos estilos de itálico, permitindo criar texto atraente para posts em redes sociais, projetos de design, escrita criativa e muito mais.",
-          "paragraph2": "O gerador usa alfabetos matemáticos Unicode para criar texto em itálico. Os caracteres Matemáticos em Itálico (U+1D434-1D4D3) fornecem letras em itálico estilo serif, os caracteres Matemáticos Script (U+1D49C-1D4CF e U+1D4D0-1D503) criam texto em itálico estilo cursivo ou script, e os caracteres Matemáticos Sans-Serif em Itálico (U+1D622-1D6FF) produzem letras em itálico sans-serif modernas. Cada estilo tem múltiplas variantes, dando flexibilidade para escolher a aparência itálica perfeita para seu texto.",
-          "paragraph3": "A geração de texto em itálico é útil para: criar posts e biografias estilizadas em redes sociais, projetar manchetes e títulos atraentes, adicionar ênfase na escrita criativa, fazer o texto se destacar em apresentações, e melhorar o apelo visual em conteúdo digital. Os caracteres Unicode em itálico funcionam universalmente em plataformas como Twitter, Instagram, Facebook, Discord e muito mais, tornando-os perfeitos para comunicação online e design.",
-          "paragraph4": "Nosso gerador de texto em itálico converte seu texto de entrada caractere por caractere, mapeando cada letra ao seu equivalente Unicode em itálico correspondente. A conversão acontece instantaneamente enquanto você digita, e você pode copiar qualquer um dos estilos de itálico gerados com um único clique. Nenhum registro necessário. Seja você um gerente de redes sociais, designer, escritor ou apenas queira adicionar estilo ao seu texto, nosso gerador fornece texto em itálico de qualidade profissional em segundos.",
-          "exampleHeading": "Exemplo:",
-          "exampleText": "Entrada: 'hello' gera: Itálico (serif) - 𝒽𝑒𝑙𝑙𝑜 ou 𝒉𝒆𝒍𝒍𝒐, Cursivo / Script - 𝒽ℯ𝓁𝓁ℴ ou 𝓱𝓮𝓵𝓵𝓸, Itálico (sans-serif) - 𝘩𝘦𝘭𝘭𝘰 ou 𝙝𝙚𝙡𝙡𝙤. Cada estilo fornece uma aparência visual única mantendo a legibilidade. O gerador lida com todas as letras maiúsculas e minúsculas, convertendo-as em seus equivalentes Unicode em itálico."
-        },
-        "faq": {
-          "heading": "Perguntas Frequentes",
-          "items": [
-            {
-              "question": "O que é um gerador de texto em itálico?",
-              "answer": "Um gerador de texto em itálico converte texto regular em versões estilizadas em itálico usando caracteres Unicode matemáticos. Ao contrário da formatação itálica padrão, os caracteres Unicode em itálico são caracteres distintos reais que funcionam em todas as plataformas, incluindo sites de redes sociais, aplicativos de mensagens e ferramentas de design."
-            },
-            {
-              "question": "Como funciona o gerador de texto em itálico?",
-              "answer": "O gerador mapeia cada letra em seu texto ao seu caractere Unicode em itálico correspondente. Os caracteres Matemáticos em Itálico fornecem itálico estilo serif, os caracteres Matemáticos Script criam estilo cursivo/script, e os caracteres Matemáticos Sans-Serif em Itálico produzem itálico sans-serif moderno. A conversão acontece instantaneamente enquanto você digita."
-            },
-            {
-              "question": "Onde posso usar texto em itálico?",
-              "answer": "O texto Unicode em itálico funciona na maioria das plataformas incluindo Twitter, Instagram, Facebook, Discord, Reddit, TikTok e muito mais. É perfeito para biografias em redes sociais, posts, comentários, projetos de design, apresentações e escrita criativa. No entanto, algumas plataformas podem não suportar todos os caracteres Unicode."
-            },
-            {
-              "question": "Qual é a diferença entre os diferentes estilos de itálico?",
-              "answer": "O itálico serif usa letras em itálico estilo serif tradicional, cursivo/script cria texto em itálico estilo script fluente, e o itálico sans-serif produz letras em itálico modernas e limpas. Cada estilo tem múltiplas variantes (numeradas 1 e 2) que fornecem aparências visuais ligeiramente diferentes."
-            },
-            {
-              "question": "Posso usar texto em itálico no meu nome de usuário ou perfil?",
-              "answer": "Sim, os caracteres Unicode em itálico funcionam na maioria dos nomes de usuário, nomes de perfil e biografias em plataformas de redes sociais. No entanto, o suporte das plataformas varia, então teste seu texto em itálico antes de finalizar. Algumas plataformas podem não exibir corretamente certos caracteres Unicode."
-            },
-            {
-              "question": "O gerador de texto em itálico é gratuito?",
-              "answer": "Sim, nosso gerador de texto em itálico é completamente gratuito para usar. Nenhum registro ou pagamento necessário. Simplesmente digite seu texto e copie instantaneamente qualquer um dos estilos de itálico gerados."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Calculadoras Relacionadas",
-          "textToBinary": "Conversor de Texto para Binário",
-          "textToBinaryDesc": "Converta texto em código binário com múltiplas codificações",
-          "average": "Calculadora de Média",
-          "averageDesc": "Calcule a média, soma e contagem de números",
-          "addition": "Calculadora de Adição",
-          "additionDesc": "Some números rápida e precisamente"
         }
       }
     },

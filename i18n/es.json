@@ -1075,12 +1075,30 @@
         "faq": {
           "heading": "Preguntas frecuentes",
           "items": [
-            { "question": "¿Cuál es la fórmula para convertir kW a Voltios?", "answer": "DC: V = (kW × 1000) / I. AC monofásico: V = (kW × 1000) / (I × PF). AC trifásico: V = (kW × 1000) / (√3 × I × PF). V en voltios, kW potencia, I corriente en A, PF factor de potencia. El resultado trifásico es la tensión entre fases. DC no usa factor de potencia." },
-            { "question": "¿Necesito factor de potencia en DC?", "answer": "No. El factor de potencia solo aplica a AC. En DC: V = (kW × 1000) / I. Solo se necesitan kW y corriente. Aplicaciones DC típicas: baterías, solar, VE a 12V, 24V, 48V o más." },
-            { "question": "¿Diferencia entre monofásico y trifásico?", "answer": "Monofásico: V = (kW × 1000) / (I × PF). Trifásico: V = (kW × 1000) / (√3 × I × PF), resultado = tensión entre fases. A igual kW y corriente, el trifásico da una tensión mayor." },
-            { "question": "¿Qué tensión representa el resultado trifásico?", "answer": "La fórmula trifásica da la tensión entre fases (compuesta), no fase–neutro. Valores habituales: 208V, 240V, 380V, 400V, 415V, 480V. Úsala para dimensionar equipos y comprobar la tensión de red." },
-            { "question": "¿Qué es el factor de potencia?", "answer": "El factor de potencia (PF) es la relación entre potencia activa y aparente en AC, entre 0 y 1. Típico: resistivo = 1,0, motores de inducción = 0,8–0,9, fluorescente = 0,85–0,95, LED = 0,9–0,95. Si se desconoce: 0,8 para motores, 0,9 para cargas mixtas. DC no tiene factor de potencia." },
-            { "question": "¿La calculadora es gratuita?", "answer": "Sí, la calculadora kW a Voltios es gratuita. Sin registro ni pago. Introduzca kW y corriente, elija DC, monofásico o trifásico, añada el factor de potencia para AC y obtenga resultados instantáneos y precisos." }
+            {
+              "question": "¿Cuál es la fórmula para convertir kW a Voltios?",
+              "answer": "DC: V = (kW × 1000) / I. AC monofásico: V = (kW × 1000) / (I × PF). AC trifásico: V = (kW × 1000) / (√3 × I × PF). V en voltios, kW potencia, I corriente en A, PF factor de potencia. El resultado trifásico es la tensión entre fases. DC no usa factor de potencia."
+            },
+            {
+              "question": "¿Necesito factor de potencia en DC?",
+              "answer": "No. El factor de potencia solo aplica a AC. En DC: V = (kW × 1000) / I. Solo se necesitan kW y corriente. Aplicaciones DC típicas: baterías, solar, VE a 12V, 24V, 48V o más."
+            },
+            {
+              "question": "¿Diferencia entre monofásico y trifásico?",
+              "answer": "Monofásico: V = (kW × 1000) / (I × PF). Trifásico: V = (kW × 1000) / (√3 × I × PF), resultado = tensión entre fases. A igual kW y corriente, el trifásico da una tensión mayor."
+            },
+            {
+              "question": "¿Qué tensión representa el resultado trifásico?",
+              "answer": "La fórmula trifásica da la tensión entre fases (compuesta), no fase–neutro. Valores habituales: 208V, 240V, 380V, 400V, 415V, 480V. Úsala para dimensionar equipos y comprobar la tensión de red."
+            },
+            {
+              "question": "¿Qué es el factor de potencia?",
+              "answer": "El factor de potencia (PF) es la relación entre potencia activa y aparente en AC, entre 0 y 1. Típico: resistivo = 1,0, motores de inducción = 0,8–0,9, fluorescente = 0,85–0,95, LED = 0,9–0,95. Si se desconoce: 0,8 para motores, 0,9 para cargas mixtas. DC no tiene factor de potencia."
+            },
+            {
+              "question": "¿La calculadora es gratuita?",
+              "answer": "Sí, la calculadora kW a Voltios es gratuita. Sin registro ni pago. Introduzca kW y corriente, elija DC, monofásico o trifásico, añada el factor de potencia para AC y obtenga resultados instantáneos y precisos."
+            }
           ]
         }
       }
@@ -1110,11 +1128,26 @@
         "faq": {
           "heading": "Preguntas frecuentes",
           "items": [
-            { "question": "¿Cuál es la fórmula kW a kWh?", "answer": "kWh = kW × horas. Ej.: 2 kW durante 3 h → 2 × 3 = 6 kWh." },
-            { "question": "¿Diferencia entre kW y kWh?", "answer": "kW = potencia (ritmo). kWh = energía (cantidad en el tiempo). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh." },
-            { "question": "¿Puedo usar horas decimales (ej. 1,5 = 1 h 30)?", "answer": "Sí. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh." },
-            { "question": "¿Cómo estimar mi factura a partir de kW y horas?", "answer": "Primero kWh = kW × horas. Luego kWh × precio del kWh (ej. 0,15 €/kWh). Ej.: 24 kWh × 0,15 € = 3,60 €." },
-            { "question": "¿La calculadora es gratuita?", "answer": "Sí, la calculadora kW a kWh es gratuita. Sin registro. Introduzca kW y horas para obtener el resultado al instante en kWh." }
+            {
+              "question": "¿Cuál es la fórmula kW a kWh?",
+              "answer": "kWh = kW × horas. Ej.: 2 kW durante 3 h → 2 × 3 = 6 kWh."
+            },
+            {
+              "question": "¿Diferencia entre kW y kWh?",
+              "answer": "kW = potencia (ritmo). kWh = energía (cantidad en el tiempo). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh."
+            },
+            {
+              "question": "¿Puedo usar horas decimales (ej. 1,5 = 1 h 30)?",
+              "answer": "Sí. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh."
+            },
+            {
+              "question": "¿Cómo estimar mi factura a partir de kW y horas?",
+              "answer": "Primero kWh = kW × horas. Luego kWh × precio del kWh (ej. 0,15 €/kWh). Ej.: 24 kWh × 0,15 € = 3,60 €."
+            },
+            {
+              "question": "¿La calculadora es gratuita?",
+              "answer": "Sí, la calculadora kW a kWh es gratuita. Sin registro. Introduzca kW y horas para obtener el resultado al instante en kWh."
+            }
           ]
         }
       }
@@ -1208,11 +1241,26 @@
         "faq": {
           "heading": "Preguntas frecuentes",
           "items": [
-            { "question": "¿Cuál es la fórmula para convertir kW a VA?", "answer": "La fórmula es VA = (kW × 1000) / FP, donde VA es potencia aparente en voltiamperios, kW es potencia activa en kilovatios, y FP es el factor de potencia (0 a 1). Potencia activa = potencia aparente × FP, por lo tanto potencia aparente = potencia activa / FP." },
-            { "question": "¿Cuál es la diferencia entre kW y VA?", "answer": "kW (kilovatios) es potencia activa — el trabajo real realizado por la carga (ej. salida mecánica, calor, luz). VA (voltiamperios) es potencia aparente — la potencia total entregada por la fuente, incluyendo potencia reactiva que no realiza trabajo útil. VA ≥ kW siempre; son iguales solo cuando FP = 1,0 (carga puramente resistiva)." },
-            { "question": "¿Qué es el factor de potencia y qué valores son típicos?", "answer": "El factor de potencia (FP) es la relación kW / VA, oscilando entre 0 y 1. Mide cuán eficientemente la potencia eléctrica se convierte en trabajo útil. Valores típicos: calentadores resistivos ~1,0, luces fluorescentes 0,5–0,95, motores de inducción 0,7–0,9, fuentes de alimentación 0,6–0,95. Un FP más bajo significa que se requieren VA más altos para los mismos kW, aumentando el tamaño de conductores y transformadores." },
-            { "question": "¿Por qué necesito convertir kW a VA?", "answer": "Los transformadores, generadores, unidades UPS e interruptores están clasificados en VA (o kVA), no en kW. Una carga que consume 10 kW a FP 0,8 requiere 12,5 kVA de capacidad de suministro. Dimensionar equipos solo por kW (ignorando FP) puede llevar a sobrecarga. Convertir kW a VA garantiza que seleccione equipos con suficiente capacidad de potencia aparente." },
-            { "question": "¿Es gratuita esta calculadora?", "answer": "Sí, nuestra calculadora kW a VA es gratuita. No se requiere registro ni pago. Ingrese potencia en kW y factor de potencia (0–1) para obtener resultados instantáneos y precisos en VA." }
+            {
+              "question": "¿Cuál es la fórmula para convertir kW a VA?",
+              "answer": "La fórmula es VA = (kW × 1000) / FP, donde VA es potencia aparente en voltiamperios, kW es potencia activa en kilovatios, y FP es el factor de potencia (0 a 1). Potencia activa = potencia aparente × FP, por lo tanto potencia aparente = potencia activa / FP."
+            },
+            {
+              "question": "¿Cuál es la diferencia entre kW y VA?",
+              "answer": "kW (kilovatios) es potencia activa — el trabajo real realizado por la carga (ej. salida mecánica, calor, luz). VA (voltiamperios) es potencia aparente — la potencia total entregada por la fuente, incluyendo potencia reactiva que no realiza trabajo útil. VA ≥ kW siempre; son iguales solo cuando FP = 1,0 (carga puramente resistiva)."
+            },
+            {
+              "question": "¿Qué es el factor de potencia y qué valores son típicos?",
+              "answer": "El factor de potencia (FP) es la relación kW / VA, oscilando entre 0 y 1. Mide cuán eficientemente la potencia eléctrica se convierte en trabajo útil. Valores típicos: calentadores resistivos ~1,0, luces fluorescentes 0,5–0,95, motores de inducción 0,7–0,9, fuentes de alimentación 0,6–0,95. Un FP más bajo significa que se requieren VA más altos para los mismos kW, aumentando el tamaño de conductores y transformadores."
+            },
+            {
+              "question": "¿Por qué necesito convertir kW a VA?",
+              "answer": "Los transformadores, generadores, unidades UPS e interruptores están clasificados en VA (o kVA), no en kW. Una carga que consume 10 kW a FP 0,8 requiere 12,5 kVA de capacidad de suministro. Dimensionar equipos solo por kW (ignorando FP) puede llevar a sobrecarga. Convertir kW a VA garantiza que seleccione equipos con suficiente capacidad de potencia aparente."
+            },
+            {
+              "question": "¿Es gratuita esta calculadora?",
+              "answer": "Sí, nuestra calculadora kW a VA es gratuita. No se requiere registro ni pago. Ingrese potencia en kW y factor de potencia (0–1) para obtener resultados instantáneos y precisos en VA."
+            }
           ]
         }
       }
@@ -1242,11 +1290,26 @@
         "faq": {
           "heading": "Preguntas frecuentes",
           "items": [
-            { "question": "¿Cuál es la fórmula para convertir kW a kVA?", "answer": "La fórmula es kVA = kW / FP, donde kVA es potencia aparente en kilovoltamperios, kW es potencia activa en kilovatios, y FP es el factor de potencia (0 a 1). Potencia activa = potencia aparente × FP, por lo tanto potencia aparente = potencia activa / FP." },
-            { "question": "¿Cuál es la diferencia entre kW y kVA?", "answer": "kW (kilovatios) es potencia activa — el trabajo real realizado por la carga (ej. salida mecánica, calor, luz). kVA (kilovoltamperios) es potencia aparente — la potencia total entregada por la fuente, incluyendo potencia reactiva que no realiza trabajo útil. kVA ≥ kW siempre; son iguales solo cuando FP = 1,0 (carga puramente resistiva)." },
-            { "question": "¿Qué es el factor de potencia y qué valores son típicos?", "answer": "El factor de potencia (FP) es la relación kW / kVA, oscilando entre 0 y 1. Mide cuán eficientemente la potencia eléctrica se convierte en trabajo útil. Valores típicos: calentadores resistivos ~1,0, luces fluorescentes 0,5–0,95, motores de inducción 0,7–0,9, fuentes de alimentación 0,6–0,95. Un FP más bajo significa que se requieren kVA más altos para los mismos kW, aumentando el tamaño de conductores y transformadores." },
-            { "question": "¿Por qué necesito convertir kW a kVA?", "answer": "Los transformadores, generadores, unidades UPS e interruptores están clasificados en kVA, no en kW. Una carga que consume 10 kW a FP 0,8 requiere 12,5 kVA de capacidad de suministro. Dimensionar equipos solo por kW (ignorando FP) puede llevar a sobrecarga. Convertir kW a kVA garantiza que seleccione equipos con suficiente capacidad de potencia aparente." },
-            { "question": "¿Es gratuita esta calculadora?", "answer": "Sí, nuestra calculadora kW a kVA es gratuita. No se requiere registro ni pago. Ingrese potencia en kW y factor de potencia (0–1) para obtener resultados instantáneos y precisos en kVA." }
+            {
+              "question": "¿Cuál es la fórmula para convertir kW a kVA?",
+              "answer": "La fórmula es kVA = kW / FP, donde kVA es potencia aparente en kilovoltamperios, kW es potencia activa en kilovatios, y FP es el factor de potencia (0 a 1). Potencia activa = potencia aparente × FP, por lo tanto potencia aparente = potencia activa / FP."
+            },
+            {
+              "question": "¿Cuál es la diferencia entre kW y kVA?",
+              "answer": "kW (kilovatios) es potencia activa — el trabajo real realizado por la carga (ej. salida mecánica, calor, luz). kVA (kilovoltamperios) es potencia aparente — la potencia total entregada por la fuente, incluyendo potencia reactiva que no realiza trabajo útil. kVA ≥ kW siempre; son iguales solo cuando FP = 1,0 (carga puramente resistiva)."
+            },
+            {
+              "question": "¿Qué es el factor de potencia y qué valores son típicos?",
+              "answer": "El factor de potencia (FP) es la relación kW / kVA, oscilando entre 0 y 1. Mide cuán eficientemente la potencia eléctrica se convierte en trabajo útil. Valores típicos: calentadores resistivos ~1,0, luces fluorescentes 0,5–0,95, motores de inducción 0,7–0,9, fuentes de alimentación 0,6–0,95. Un FP más bajo significa que se requieren kVA más altos para los mismos kW, aumentando el tamaño de conductores y transformadores."
+            },
+            {
+              "question": "¿Por qué necesito convertir kW a kVA?",
+              "answer": "Los transformadores, generadores, unidades UPS e interruptores están clasificados en kVA, no en kW. Una carga que consume 10 kW a FP 0,8 requiere 12,5 kVA de capacidad de suministro. Dimensionar equipos solo por kW (ignorando FP) puede llevar a sobrecarga. Convertir kW a kVA garantiza que seleccione equipos con suficiente capacidad de potencia aparente."
+            },
+            {
+              "question": "¿Es gratuita esta calculadora?",
+              "answer": "Sí, nuestra calculadora kW a kVA es gratuita. No se requiere registro ni pago. Ingrese potencia en kW y factor de potencia (0–1) para obtener resultados instantáneos y precisos en kVA."
+            }
           ]
         }
       }
@@ -1568,11 +1631,26 @@
         "faq": {
           "heading": "Preguntas frecuentes",
           "items": [
-            {"question": "¿Cuál es la fórmula VA a kW?", "answer": "kW = (VA × PF) / 1000. PF necesario porque solo parte de la potencia aparente es activa; dividir por 1000 para kilovatios."},
-            {"question": "¿Diferencia entre VA y kW?", "answer": "VA mide potencia aparente (total, incl. reactiva), kW potencia activa. kW = (VA × PF) / 1000. Solo coinciden si PF = 1,0 y factor 1000."},
-            {"question": "¿Por qué hace falta el factor de potencia?", "answer": "La potencia aparente incluye la reactiva. El factor de potencia indica la parte activa. Sin PF no se obtiene la potencia activa desde VA."},
-            {"question": "¿Factores de potencia típicos?", "answer": "Cargas resistivas a menudo ≈ 1,0. Motores e inductivas 0,7–0,9. En duda, se suele usar 0,8."},
-            {"question": "¿La calculadora es gratuita?", "answer": "Sí. Sin registro. Introduzca VA y factor de potencia para resultados en kilovatios."}
+            {
+              "question": "¿Cuál es la fórmula VA a kW?",
+              "answer": "kW = (VA × PF) / 1000. PF necesario porque solo parte de la potencia aparente es activa; dividir por 1000 para kilovatios."
+            },
+            {
+              "question": "¿Diferencia entre VA y kW?",
+              "answer": "VA mide potencia aparente (total, incl. reactiva), kW potencia activa. kW = (VA × PF) / 1000. Solo coinciden si PF = 1,0 y factor 1000."
+            },
+            {
+              "question": "¿Por qué hace falta el factor de potencia?",
+              "answer": "La potencia aparente incluye la reactiva. El factor de potencia indica la parte activa. Sin PF no se obtiene la potencia activa desde VA."
+            },
+            {
+              "question": "¿Factores de potencia típicos?",
+              "answer": "Cargas resistivas a menudo ≈ 1,0. Motores e inductivas 0,7–0,9. En duda, se suele usar 0,8."
+            },
+            {
+              "question": "¿La calculadora es gratuita?",
+              "answer": "Sí. Sin registro. Introduzca VA y factor de potencia para resultados en kilovatios."
+            }
           ]
         },
         "related": {
@@ -1612,11 +1690,26 @@
         "faq": {
           "heading": "Preguntas frecuentes",
           "items": [
-            {"question": "¿Fórmula VA a kVA?", "answer": "kVA = VA / 1000. Ambos son potencia aparente; dividir por 1000. No hace falta factor de potencia."},
-            {"question": "¿Diferencia entre VA y kVA?", "answer": "VA y kVA miden potencia aparente. 1 kVA = 1000 VA. Misma magnitud, otra unidad — como metros y kilómetros."},
-            {"question": "¿Hace falta el factor de potencia?", "answer": "No. Solo para potencia aparente ↔ activa (W/kW). VA → kVA = dividir por 1000."},
-            {"question": "¿Cuándo VA, cuándo kVA?", "answer": "Equipos pequeños suelen estar en VA, grandes (SAI, transformadores) en kVA. Conversión para comparar y sumar potencias."},
-            {"question": "¿La calculadora es gratuita?", "answer": "Sí. Sin registro. Introduzca VA para resultados en kVA."}
+            {
+              "question": "¿Fórmula VA a kVA?",
+              "answer": "kVA = VA / 1000. Ambos son potencia aparente; dividir por 1000. No hace falta factor de potencia."
+            },
+            {
+              "question": "¿Diferencia entre VA y kVA?",
+              "answer": "VA y kVA miden potencia aparente. 1 kVA = 1000 VA. Misma magnitud, otra unidad — como metros y kilómetros."
+            },
+            {
+              "question": "¿Hace falta el factor de potencia?",
+              "answer": "No. Solo para potencia aparente ↔ activa (W/kW). VA → kVA = dividir por 1000."
+            },
+            {
+              "question": "¿Cuándo VA, cuándo kVA?",
+              "answer": "Equipos pequeños suelen estar en VA, grandes (SAI, transformadores) en kVA. Conversión para comparar y sumar potencias."
+            },
+            {
+              "question": "¿La calculadora es gratuita?",
+              "answer": "Sí. Sin registro. Introduzca VA para resultados en kVA."
+            }
           ]
         },
         "related": {
@@ -1827,11 +1920,26 @@
         "faq": {
           "heading": "Preguntas frecuentes",
           "items": [
-            {"question": "¿Fórmula voltios a amperios con vatios?", "answer": "I = P / V. Corriente (A) = potencia (W) / tensión (V). Ej. 2300 W, 230 V → I = 10 A."},
-            {"question": "¿Fórmula voltios a amperios con ohmios?", "answer": "I = V / R (ley de Ohm). Corriente = tensión / resistencia. Ej. 12 V, 24 Ω → I = 0,5 A."},
-            {"question": "¿Cuándo vatios, cuándo ohmios?", "answer": "Vatios: cuando conoce la potencia (p. ej. placa) y la tensión. Ohmios: tensión en una resistencia y su valor (resistencias, calefacción, circuitos DC)."},
-            {"question": "¿La ley de Ohm aplica a AC?", "answer": "I = V / R aplica a circuitos AC resistivos en valores eficaces. Para reactancias use impedancia Z: I = V / Z."},
-            {"question": "¿La calculadora es gratuita?", "answer": "Sí. Elija vatios u ohmios, introduzca tensión y vatios/ohmios, obtenga la corriente en amperios."}
+            {
+              "question": "¿Fórmula voltios a amperios con vatios?",
+              "answer": "I = P / V. Corriente (A) = potencia (W) / tensión (V). Ej. 2300 W, 230 V → I = 10 A."
+            },
+            {
+              "question": "¿Fórmula voltios a amperios con ohmios?",
+              "answer": "I = V / R (ley de Ohm). Corriente = tensión / resistencia. Ej. 12 V, 24 Ω → I = 0,5 A."
+            },
+            {
+              "question": "¿Cuándo vatios, cuándo ohmios?",
+              "answer": "Vatios: cuando conoce la potencia (p. ej. placa) y la tensión. Ohmios: tensión en una resistencia y su valor (resistencias, calefacción, circuitos DC)."
+            },
+            {
+              "question": "¿La ley de Ohm aplica a AC?",
+              "answer": "I = V / R aplica a circuitos AC resistivos en valores eficaces. Para reactancias use impedancia Z: I = V / Z."
+            },
+            {
+              "question": "¿La calculadora es gratuita?",
+              "answer": "Sí. Elija vatios u ohmios, introduzca tensión y vatios/ohmios, obtenga la corriente en amperios."
+            }
           ]
         },
         "related": {
@@ -2059,12 +2167,30 @@
         "faq": {
           "heading": "Preguntas frecuentes",
           "items": [
-            { "question": "¿Cuál es la fórmula vatios a amperios (DC)?", "answer": "Para DC: I = P / V, donde I es corriente en A, P potencia en W y V tensión en V. Dividir potencia entre tensión da la corriente. Ej.: 1200 W a 120 V → I = 10 A." },
-            { "question": "¿Cuál es la fórmula para monofásico?", "answer": "Para monofásico: I = P / (V × PF). V tensión (V), P potencia (W), PF factor de potencia (0 a 1). Ej.: 1840 W a 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
-            { "question": "¿Cuál es la fórmula para trifásico?", "answer": "Para trifásico: I = P / (√3 × V × PF). V tensión entre fases (V), P potencia (W), PF factor de potencia. √3 ≈ 1,732. Ej.: 8,83 kW a 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
-            { "question": "¿Cuándo usar DC, monofásico o trifásico?", "answer": "DC para baterías, circuitos solares DC y cargas DC. Monofásico para residencial (120 V, 230 V, 240 V). Trifásico para distribución industrial y comercial (400 V, 480 V entre fases) y motores." },
-            { "question": "¿Cómo se relaciona con amperios a vatios?", "answer": "Vatios a amperios (I = P / V) y amperios a vatios (P = I × V) son operaciones inversas. Usar vatios→amperios cuando se conocen potencia y tensión; amperios→vatios cuando se conocen corriente y tensión." },
-            { "question": "¿Esta calculadora es gratuita?", "answer": "Sí. La calculadora Vatios a Amperios es gratuita. Sin registro. Elige DC, monofásico o trifásico, introduce vatios y tensión (y factor de potencia para AC), y obtén amperios al instante." }
+            {
+              "question": "¿Cuál es la fórmula vatios a amperios (DC)?",
+              "answer": "Para DC: I = P / V, donde I es corriente en A, P potencia en W y V tensión en V. Dividir potencia entre tensión da la corriente. Ej.: 1200 W a 120 V → I = 10 A."
+            },
+            {
+              "question": "¿Cuál es la fórmula para monofásico?",
+              "answer": "Para monofásico: I = P / (V × PF). V tensión (V), P potencia (W), PF factor de potencia (0 a 1). Ej.: 1840 W a 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A."
+            },
+            {
+              "question": "¿Cuál es la fórmula para trifásico?",
+              "answer": "Para trifásico: I = P / (√3 × V × PF). V tensión entre fases (V), P potencia (W), PF factor de potencia. √3 ≈ 1,732. Ej.: 8,83 kW a 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+            },
+            {
+              "question": "¿Cuándo usar DC, monofásico o trifásico?",
+              "answer": "DC para baterías, circuitos solares DC y cargas DC. Monofásico para residencial (120 V, 230 V, 240 V). Trifásico para distribución industrial y comercial (400 V, 480 V entre fases) y motores."
+            },
+            {
+              "question": "¿Cómo se relaciona con amperios a vatios?",
+              "answer": "Vatios a amperios (I = P / V) y amperios a vatios (P = I × V) son operaciones inversas. Usar vatios→amperios cuando se conocen potencia y tensión; amperios→vatios cuando se conocen corriente y tensión."
+            },
+            {
+              "question": "¿Esta calculadora es gratuita?",
+              "answer": "Sí. La calculadora Vatios a Amperios es gratuita. Sin registro. Elige DC, monofásico o trifásico, introduce vatios y tensión (y factor de potencia para AC), y obtén amperios al instante."
+            }
           ]
         },
         "related": {
@@ -2110,12 +2236,30 @@
         "faq": {
           "heading": "Preguntas Frecuentes",
           "items": [
-            { "question": "¿Cuál es la fórmula para vatios a voltios (DC)?", "answer": "Para DC: V = P / I, donde V es la tensión en voltios, P la potencia en vatios e I la corriente en amperios. Dividir la potencia por la corriente da la tensión. Ejemplo: 1200 W a 10 A → V = 120 V." },
-            { "question": "¿Cuál es la fórmula para monofásico AC?", "answer": "Para monofásico AC: V = P / (I × PF). I es la corriente (amperios), P la potencia (vatios), PF el factor de potencia (0 a 1). Ejemplo: 1840 W a 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
-            { "question": "¿Cuál es la fórmula para trifásico AC?", "answer": "Para trifásico AC: V = P / (√3 × I × PF). I es la corriente por fase (amperios), P la potencia (vatios), PF el factor de potencia. √3 ≈ 1,732. Ejemplo: 8,83 kW a 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
-            { "question": "¿Cuándo usar DC, monofásico o trifásico?", "answer": "DC para baterías, circuitos solares DC y cargas DC. Monofásico para residencial típico (120 V, 230 V, 240 V). Trifásico para distribución industrial y comercial (400 V, 480 V línea-línea) y motores." },
-            { "question": "¿Cómo se relaciona esto con voltios a vatios?", "answer": "Vatios a voltios (V = P / I) y voltios a vatios (P = V × I) son operaciones inversas. Use vatios→voltios cuando conozca la potencia y la corriente; voltios→vatios cuando conozca la tensión y la corriente." },
-            { "question": "¿Esta calculadora es gratuita?", "answer": "Sí. La calculadora Vatios a Voltios es gratuita. No se requiere registro. Seleccione DC, monofásico o trifásico, ingrese vatios y corriente (y factor de potencia para AC), obtenga voltios instantáneamente." }
+            {
+              "question": "¿Cuál es la fórmula para vatios a voltios (DC)?",
+              "answer": "Para DC: V = P / I, donde V es la tensión en voltios, P la potencia en vatios e I la corriente en amperios. Dividir la potencia por la corriente da la tensión. Ejemplo: 1200 W a 10 A → V = 120 V."
+            },
+            {
+              "question": "¿Cuál es la fórmula para monofásico AC?",
+              "answer": "Para monofásico AC: V = P / (I × PF). I es la corriente (amperios), P la potencia (vatios), PF el factor de potencia (0 a 1). Ejemplo: 1840 W a 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V."
+            },
+            {
+              "question": "¿Cuál es la fórmula para trifásico AC?",
+              "answer": "Para trifásico AC: V = P / (√3 × I × PF). I es la corriente por fase (amperios), P la potencia (vatios), PF el factor de potencia. √3 ≈ 1,732. Ejemplo: 8,83 kW a 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+            },
+            {
+              "question": "¿Cuándo usar DC, monofásico o trifásico?",
+              "answer": "DC para baterías, circuitos solares DC y cargas DC. Monofásico para residencial típico (120 V, 230 V, 240 V). Trifásico para distribución industrial y comercial (400 V, 480 V línea-línea) y motores."
+            },
+            {
+              "question": "¿Cómo se relaciona esto con voltios a vatios?",
+              "answer": "Vatios a voltios (V = P / I) y voltios a vatios (P = V × I) son operaciones inversas. Use vatios→voltios cuando conozca la potencia y la corriente; voltios→vatios cuando conozca la tensión y la corriente."
+            },
+            {
+              "question": "¿Esta calculadora es gratuita?",
+              "answer": "Sí. La calculadora Vatios a Voltios es gratuita. No se requiere registro. Seleccione DC, monofásico o trifásico, ingrese vatios y corriente (y factor de potencia para AC), obtenga voltios instantáneamente."
+            }
           ]
         },
         "related": {
@@ -2615,6 +2759,10 @@
           "ampsToWatts": "Calculadora Amperios a Vatios",
           "ampsToWattsDesc": "Convertir corriente y tensión en potencia"
         }
+      },
+      "addition": {
+        "title": "Calculadora de Suma",
+        "description": "Sumar dos números"
       }
     },
     "textToBinary": {
@@ -2687,72 +2835,6 @@
           "percentageDesc": "Calcula valores porcentuales, cambio porcentual y relaciones porcentuales",
           "average": "Calculadora de Promedio",
           "averageDesc": "Encuentra el promedio, suma y conteo de una lista de números"
-        }
-      }
-    },
-    "italicText": {
-      "title": "Generador de Texto en Cursiva",
-      "description": "Genera texto en cursiva al instante con múltiples estilos Unicode: cursiva serif, script cursivo y cursiva sans-serif. Perfecto para redes sociales, diseño y escritura creativa.",
-      "textInput": "Ingresa tu texto",
-      "textPlaceholder": "Ingresa texto para convertir...",
-      "serif1": "Cursiva (serif)",
-      "serif2": "Cursiva (serif)",
-      "script1": "Cursiva / Script",
-      "script2": "Cursiva / Script",
-      "sansSerif1": "Cursiva (sans-serif)",
-      "sansSerif2": "Cursiva (sans-serif)",
-      "reset": "Restablecer",
-      "copy": "Copiar",
-      "seo": {
-        "title": "Generador de Texto en Cursiva – Crea Texto Estilizado con Fuentes Unicode en Cursiva",
-        "description": "Generador gratuito de texto en cursiva para crear texto estilizado usando caracteres Unicode matemáticos en cursiva. Genera cursiva serif, script cursivo y texto en cursiva sans-serif para redes sociales, diseño y proyectos creativos.",
-        "keywords": "generador de texto en cursiva, generador de fuentes en cursiva, generador de texto cursivo, texto estilizado, Unicode cursiva, cursiva matemática, convertidor de cursiva, generador de texto elegante, letras en cursiva, convertidor de fuentes en cursiva",
-        "content": {
-          "heading": "Cómo Generar Texto en Cursiva",
-          "paragraph1": "Un generador de texto en cursiva es una herramienta creativa que convierte texto regular en versiones estilizadas en cursiva usando caracteres Unicode matemáticos. A diferencia del formato en cursiva HTML o CSS estándar, los caracteres Unicode en cursiva son caracteres distintos reales que funcionan en todas las plataformas, sitios de redes sociales y aplicaciones. Nuestro generador gratuito de texto en cursiva proporciona múltiples estilos de cursiva, permitiéndote crear texto llamativo para publicaciones en redes sociales, proyectos de diseño, escritura creativa y más.",
-          "paragraph2": "El generador usa alfabetos matemáticos Unicode para crear texto en cursiva. Los caracteres Matemáticos en Cursiva (U+1D434-1D4D3) proporcionan letras en cursiva estilo serif, los caracteres Matemáticos Script (U+1D49C-1D4CF y U+1D4D0-1D503) crean texto en cursiva estilo cursivo o script, y los caracteres Matemáticos Sans-Serif en Cursiva (U+1D622-1D6FF) producen letras en cursiva sans-serif modernas. Cada estilo tiene múltiples variantes, dándote flexibilidad para elegir el aspecto de cursiva perfecto para tu texto.",
-          "paragraph3": "La generación de texto en cursiva es útil para: crear publicaciones y biografías estilizadas en redes sociales, diseñar titulares y títulos llamativos, agregar énfasis en escritura creativa, hacer que el texto se destaque en presentaciones, y mejorar el atractivo visual en contenido digital. Los caracteres Unicode en cursiva funcionan universalmente en plataformas como Twitter, Instagram, Facebook, Discord y más, haciéndolos perfectos para comunicación en línea y diseño.",
-          "paragraph4": "Nuestro generador de texto en cursiva convierte tu texto de entrada carácter por carácter, mapeando cada letra a su equivalente Unicode en cursiva correspondiente. La conversión ocurre instantáneamente mientras escribes, y puedes copiar cualquiera de los estilos de cursiva generados con un solo clic. No se requiere registro. Ya seas un gerente de redes sociales, diseñador, escritor o solo quieras agregar estilo a tu texto, nuestro generador proporciona texto en cursiva de calidad profesional en segundos.",
-          "exampleHeading": "Ejemplo:",
-          "exampleText": "Entrada: 'hello' genera: Cursiva (serif) - 𝒽𝑒𝑙𝑙𝑜 o 𝒉𝒆𝒍𝒍𝒐, Cursiva / Script - 𝒽ℯ𝓁𝓁ℴ o 𝓱𝓮𝓵𝓵𝓸, Cursiva (sans-serif) - 𝘩𝘦𝘭𝘭𝘰 o 𝙝𝙚𝙡𝙡𝙤. Cada estilo proporciona una apariencia visual única mientras mantiene la legibilidad. El generador maneja todas las letras mayúsculas y minúsculas, convirtiéndolas a sus equivalentes Unicode en cursiva."
-        },
-        "faq": {
-          "heading": "Preguntas Frecuentes",
-          "items": [
-            {
-              "question": "¿Qué es un generador de texto en cursiva?",
-              "answer": "Un generador de texto en cursiva convierte texto regular en versiones estilizadas en cursiva usando caracteres Unicode matemáticos. A diferencia del formato en cursiva estándar, los caracteres Unicode en cursiva son caracteres distintos reales que funcionan en todas las plataformas, incluyendo sitios de redes sociales, aplicaciones de mensajería y herramientas de diseño."
-            },
-            {
-              "question": "¿Cómo funciona el generador de texto en cursiva?",
-              "answer": "El generador mapea cada letra en tu texto a su carácter Unicode en cursiva correspondiente. Los caracteres Matemáticos en Cursiva proporcionan cursiva estilo serif, los caracteres Matemáticos Script crean estilo cursivo/script, y los caracteres Matemáticos Sans-Serif en Cursiva producen cursiva sans-serif moderna. La conversión ocurre instantáneamente mientras escribes."
-            },
-            {
-              "question": "¿Dónde puedo usar texto en cursiva?",
-              "answer": "El texto Unicode en cursiva funciona en la mayoría de las plataformas incluyendo Twitter, Instagram, Facebook, Discord, Reddit, TikTok y más. Es perfecto para biografías en redes sociales, publicaciones, comentarios, proyectos de diseño, presentaciones y escritura creativa. Sin embargo, algunas plataformas pueden no admitir todos los caracteres Unicode."
-            },
-            {
-              "question": "¿Cuál es la diferencia entre los diferentes estilos de cursiva?",
-              "answer": "La cursiva serif usa letras en cursiva estilo serif tradicional, cursiva/script crea texto en cursiva estilo script fluido, y la cursiva sans-serif produce letras en cursiva modernas y limpias. Cada estilo tiene múltiples variantes (numeradas 1 y 2) que proporcionan apariencias visuales ligeramente diferentes."
-            },
-            {
-              "question": "¿Puedo usar texto en cursiva en mi nombre de usuario o perfil?",
-              "answer": "Sí, los caracteres Unicode en cursiva funcionan en la mayoría de los nombres de usuario, nombres de perfil y biografías en plataformas de redes sociales. Sin embargo, el soporte de plataformas varía, así que prueba tu texto en cursiva antes de finalizar. Algunas plataformas pueden no mostrar correctamente ciertos caracteres Unicode."
-            },
-            {
-              "question": "¿Es gratuito el generador de texto en cursiva?",
-              "answer": "Sí, nuestro generador de texto en cursiva es completamente gratuito de usar. No se requiere registro ni pago. Simplemente ingresa tu texto y copia cualquiera de los estilos de cursiva generados al instante."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Calculadoras Relacionadas",
-          "textToBinary": "Convertidor de Texto a Binario",
-          "textToBinaryDesc": "Convierte texto a código binario con múltiples codificaciones",
-          "average": "Calculadora de Promedio",
-          "averageDesc": "Calcula el promedio, suma y conteo de números",
-          "addition": "Calculadora de Suma",
-          "additionDesc": "Suma números rápida y precisamente"
         }
       }
     },

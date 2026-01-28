@@ -1034,12 +1034,30 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            { "question": "Hvad er formlen for kW til Volt?", "answer": "DC: V = (kW × 1000) / I. Enfase AC: V = (kW × 1000) / (I × PF). Trefase AC: V = (kW × 1000) / (√3 × I × PF). V i volt, kW effekt, I strøm i A, PF effektfaktor. Trefase-resultat = linjespænding. DC bruger ikke effektfaktor." },
-            { "question": "Skal jeg bruge effektfaktor for DC?", "answer": "Nej. Effektfaktor gælder kun for AC. For DC: V = (kW × 1000) / I. Du behøver kun kW og strøm. Almindelige DC-applikationer: batterier, sol, EV ved 12V, 24V, 48V eller højere." },
-            { "question": "Forskel enfase og trefase?", "answer": "Enfase: V = (kW × 1000) / (I × PF). Trefase: V = (kW × 1000) / (√3 × I × PF), resultat = linjespænding. Ved samme kW og strøm giver trefase højere spænding." },
-            { "question": "Hvad repræsenterer trefase-resultatet?", "answer": "Trefase-formlen giver linjespænding (fas-fas), ikke fasespænding. Almindelige: 208V, 240V, 380V, 400V, 415V, 480V. Brug til dimensionering og netspænding." },
-            { "question": "Hvad er effektfaktor?", "answer": "Effektfaktor (PF) er forholdet mellem aktiv og tilsyneladende effekt i AC, 0–1. Typisk: resistiv = 1,0, induktionsmotorer = 0,8–0,9, lysrør = 0,85–0,95, LED = 0,9–0,95. Ukendt: 0,8 for motorer, 0,9 for blandet last. DC har ikke effektfaktor." },
-            { "question": "Er lommeregneren gratis?", "answer": "Ja, kW til Volt lommeregneren er gratis. Ingen registrering eller betaling. Indtast kW og strøm, vælg DC, enfase eller trefase, tilføj effektfaktor for AC og få øjeblikkelige, præcise resultater." }
+            {
+              "question": "Hvad er formlen for kW til Volt?",
+              "answer": "DC: V = (kW × 1000) / I. Enfase AC: V = (kW × 1000) / (I × PF). Trefase AC: V = (kW × 1000) / (√3 × I × PF). V i volt, kW effekt, I strøm i A, PF effektfaktor. Trefase-resultat = linjespænding. DC bruger ikke effektfaktor."
+            },
+            {
+              "question": "Skal jeg bruge effektfaktor for DC?",
+              "answer": "Nej. Effektfaktor gælder kun for AC. For DC: V = (kW × 1000) / I. Du behøver kun kW og strøm. Almindelige DC-applikationer: batterier, sol, EV ved 12V, 24V, 48V eller højere."
+            },
+            {
+              "question": "Forskel enfase og trefase?",
+              "answer": "Enfase: V = (kW × 1000) / (I × PF). Trefase: V = (kW × 1000) / (√3 × I × PF), resultat = linjespænding. Ved samme kW og strøm giver trefase højere spænding."
+            },
+            {
+              "question": "Hvad repræsenterer trefase-resultatet?",
+              "answer": "Trefase-formlen giver linjespænding (fas-fas), ikke fasespænding. Almindelige: 208V, 240V, 380V, 400V, 415V, 480V. Brug til dimensionering og netspænding."
+            },
+            {
+              "question": "Hvad er effektfaktor?",
+              "answer": "Effektfaktor (PF) er forholdet mellem aktiv og tilsyneladende effekt i AC, 0–1. Typisk: resistiv = 1,0, induktionsmotorer = 0,8–0,9, lysrør = 0,85–0,95, LED = 0,9–0,95. Ukendt: 0,8 for motorer, 0,9 for blandet last. DC har ikke effektfaktor."
+            },
+            {
+              "question": "Er lommeregneren gratis?",
+              "answer": "Ja, kW til Volt lommeregneren er gratis. Ingen registrering eller betaling. Indtast kW og strøm, vælg DC, enfase eller trefase, tilføj effektfaktor for AC og få øjeblikkelige, præcise resultater."
+            }
           ]
         }
       }
@@ -1069,76 +1087,27 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            { "question": "Hvad er formlen kW til kWh?", "answer": "kWh = kW × timer. F.eks. 2 kW i 3 t → 2 × 3 = 6 kWh." },
-            { "question": "Forskel kW og kWh?", "answer": "kW = effekt. kWh = energi (mængde over tid). 1 kW × 1 t = 1 kWh; × 10 t = 10 kWh." },
-            { "question": "Kan jeg bruge decimaltimer (f.eks. 1,5 = 1 t 30)?", "answer": "Ja. 1,5 = 1 t 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 t = 3 kWh." },
-            { "question": "Hvordan estimerer jeg regningen fra kW og timer?", "answer": "Først kWh = kW × timer. Så kWh × pris per kWh (f.eks. 2 kr/kWh). F.eks. 24 kWh × 2 = 48 kr." },
-            { "question": "Er lommeregneren gratis?", "answer": "Ja, kW til kWh lommeregneren er gratis. Ingen registrering. Indtast kW og timer for øjeblikkeligt resultat i kWh." }
-          ]
-        }
-      }
-    },
-    "kwhToKw": {
-      "title": "kWh til kW Lommeregner",
-      "description": "Konverter kilowattimer (kWh) til kilowatt (kW) øjeblikkeligt med tidslængde",
-      "kwh": "Kilowattimer (kWh)",
-      "hours": "Tid (timer)",
-      "calculate": "Beregn",
-      "reset": "Nulstil",
-      "result": "Resultat",
-      "kw": "Kilowatt (kW)",
-      "seo": {
-        "title": "kWh til kW Lommeregner – Beregn Effekt fra Energi og Tid",
-        "description": "Gratis kWh til kW lommeregner. Konverter kilowattimer til kilowatt øjeblikkeligt med tidslængde. Perfekt til elektriske beregninger, forbrugsanalyse og effektklassifikationer.",
-        "keywords": "kwh kw lommeregner, kilowattimer kilowatt konverter, kwh kw konvertering, energi effekt lommeregner, elektrisk lommeregner, kw lommeregner, effekt lommeregner, gratis lommeregner",
-        "content": {
-          "heading": "Sådan konverteres kWh til kW",
-          "paragraph1": "At konvertere kilowattimer (kWh) til kilowatt (kW) er en almindelig beregning ved analyse af energiforbrug og bestemmelse af effektklassifikationer. Kilowattimer repræsenterer energi—den samlede mængde arbejde udført over tid—mens kilowatt repræsenterer effekt—hastigheden energi forbruges eller leveres. Konverteringen kræver viden om tidslængden energi blev forbruget eller leveret. Vores gratis kWh til kW lommeregner giver øjeblikkelige, præcise konverteringer til dine elektriske og energiberegninger.",
-          "paragraph2": "Formlen er: kW = kWh / timer, hvor kWh er energien i kilowattimer, timer er tidslængden, og kW er effekten i kilowatt. For eksempel, hvis en enhed forbruger 10 kWh energi over 5 timer, er gennemsnitseffekten 10 / 5 = 2 kW. Denne beregning er essentiel for at forstå effektklassifikationen af enheder, analysere elregninger, dimensionere elektriske systemer og sammenligne energieffektiviteten af forskellige apparater.",
-          "paragraph3": "Denne konvertering er kritisk i mange applikationer: bestemme effektklassifikationen af apparater fra energiforbrugsdata, beregne effektkrav for elektriske kredsløb, analysere strømforbrugsmønstre, dimensionere batterier og strømforsyninger, forstå energieffektivitetsklassifikationer og estimere driftsomkostninger. For eksempel, hvis dit elmåler viser 24 kWh forbruget over 12 timer, var gennemsnitlig effektforbrug 24 / 12 = 2 kW. Dette hjælper med at identificere enheder med højt forbrug og optimere energibrug.",
-          "paragraph4": "Lommeregneren vores accepterer kilowattimer og tidslængde som input, anvender formlen kW = kWh / timer og giver effekten i kilowatt. Uanset om du analyserer husholdningsenergiforbrug, dimensionerer solsystemer, beregner batteriudladningshastigheder eller sammenligner apparateffektivitet, giver kWh til kW lommeregneren vores præcise, øjeblikkelige resultater til dine energistyrings- og elektriske designbehov.",
-          "exampleHeading": "Eksempel:",
-          "exampleText": "10 kWh over 5 timer: kW = 10 / 5 = 2 kW. 24 kWh over 12 timer: kW = 24 / 12 = 2 kW. 6 kWh over 4 timer: kW = 6 / 4 = 1,5 kW. 36 kWh over 24 timer: kW = 36 / 24 = 1,5 kW. Hvis en enhed bruger 12 kWh over 8 timer, er gennemsnitseffekten 12 / 8 = 1,5 kW."
-        },
-        "faq": {
-          "heading": "Ofte stillede spørgsmål",
-          "items": [
             {
-              "question": "Hvad er formlen for at konvertere kWh til kW?",
-              "answer": "Formlen er: kW = kWh / timer, hvor kWh er energien i kilowattimer, timer er tidslængden, og kW er effekten i kilowatt. Dette konverterer energi forbruget over tid til gennemsnitlig effekt. For eksempel, 10 kWh over 5 timer svarer til 10 / 5 = 2 kW."
+              "question": "Hvad er formlen kW til kWh?",
+              "answer": "kWh = kW × timer. F.eks. 2 kW i 3 t → 2 × 3 = 6 kWh."
             },
             {
-              "question": "Hvad er forskellen mellem kWh og kW?",
-              "answer": "kWh (kilowattimer) er energi—den samlede mængde arbejde udført over tid, målt på din elregning. kW (kilowatt) er effekt—hastigheden energi forbruges eller leveres når som helst. Tænk på det som afstand vs. hastighed: kWh er som kørte mil, kW er som mil per time. 1 kWh svarer til 1 kilowatt brugt i 1 time."
+              "question": "Forskel kW og kWh?",
+              "answer": "kW = effekt. kWh = energi (mængde over tid). 1 kW × 1 t = 1 kWh; × 10 t = 10 kWh."
             },
             {
-              "question": "Hvorfor har jeg brug for tidslængden til denne konvertering?",
-              "answer": "Energi (kWh) og effekt (kW) er relateret gennem tid. Den samme energi kan leveres på forskellige effektniveauer afhængigt af tiden: 10 kWh over 1 time er 10 kW, men 10 kWh over 5 timer er kun 2 kW. Uden at kende tiden kan du ikke bestemme effektklassifikationen."
+              "question": "Kan jeg bruge decimaltimer (f.eks. 1,5 = 1 t 30)?",
+              "answer": "Ja. 1,5 = 1 t 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 t = 3 kWh."
             },
             {
-              "question": "Hvordan kan jeg bruge denne lommeregner til at analysere min elregning?",
-              "answer": "Hvis din elregning viser, at du forbruget 300 kWh i en måned (omtrent 720 timer), var gennemsnitlig effektforbrug 300 / 720 = 0,417 kW (417 watt). Dette hjælper dig med at forstå dit grundlæggende effektforbrug. Du kan også beregne effekt for specifikke apparater: hvis en enhed bruger 18 kWh per dag (24 timer), forbruger den 18 / 24 = 0,75 kW (750 watt)."
+              "question": "Hvordan estimerer jeg regningen fra kW og timer?",
+              "answer": "Først kWh = kW × timer. Så kWh × pris per kWh (f.eks. 2 kr/kWh). F.eks. 24 kWh × 2 = 48 kr."
             },
             {
-              "question": "Kan jeg konvertere kW til kWh?",
-              "answer": "Ja, du kan konvertere kW til kWh ved at bruge formlen: kWh = kW × timer, hvor kWh er energien i kilowattimer, kW er effekten i kilowatt, og timer er tiden i timer. Dette er det modsatte af at konvertere kWh til kW. For eksempel, hvis en enhed opererer på 2 kW i 5 timer, forbruger den 2 × 5 = 10 kWh."
-            },
-            {
-              "question": "Er denne lommeregner gratis?",
-              "answer": "Ja, vores kWh til kW lommeregner er helt gratis. Ingen registrering eller betaling påkrævet. Indtast energi i kWh og tid i timer for at få øjeblikkelige, præcise effektresultater i kW."
+              "question": "Er lommeregneren gratis?",
+              "answer": "Ja, kW til kWh lommeregneren er gratis. Ingen registrering. Indtast kW og timer for øjeblikkeligt resultat i kWh."
             }
           ]
-        },
-        "related": {
-          "heading": "Relaterede lommeregnere",
-          "kwToKwh": "kW til kWh Lommeregner",
-          "kwToKwhDesc": "Konverter effekt til energi med tidslængde",
-          "wattsToKwh": "Watt til kWh Lommeregner",
-          "wattsToKwhDesc": "Konverter effekt til energi med tid",
-          "kwhToWatts": "kWh til Watt Lommeregner",
-          "kwhToWattsDesc": "Konverter energi til effekt med tidslængde",
-          "kwToKva": "kW til kVA Lommeregner",
-          "kwToKvaDesc": "Konverter kilowatt til kilovoltampere øjeblikkeligt"
         }
       }
     },
@@ -1231,11 +1200,26 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            { "question": "Hvad er formlen for at konvertere kW til VA?", "answer": "Formlen er VA = (kW × 1000) / PF, hvor VA er tilsyneladende effekt i voltampere, kW er aktiv effekt i kilowatt, og PF er effektfaktoren (0 til 1). Aktiv effekt = tilsyneladende effekt × PF, altså tilsyneladende effekt = aktiv effekt / PF." },
-            { "question": "Hvad er forskellen mellem kW og VA?", "answer": "kW (kilowatt) er aktiv effekt — det faktiske arbejde udført af lasten (f.eks. mekanisk output, varme, lys). VA (voltampere) er tilsyneladende effekt — den samlede effekt leveret af kilden, inklusive reaktiv effekt, der ikke udfører nyttigt arbejde. VA ≥ kW altid; de er lige kun når PF = 1,0 (rent resistiv last)." },
-            { "question": "Hvad er effektfaktor, og hvilke værdier er typiske?", "answer": "Effektfaktor (PF) er forholdet kW / VA, fra 0 til 1. Den måler, hvor effektivt elektrisk effekt omdannes til nyttigt arbejde. Typiske værdier: resistive varmeelementer ~1,0, lysrør 0,5–0,95, induktionsmotorer 0,7–0,9, strømforsyninger 0,6–0,95. Lavere PF betyder, at højere VA kræves for samme kW, hvilket øger størrelsen af ledere og transformere." },
-            { "question": "Hvorfor skal jeg konvertere kW til VA?", "answer": "Transformere, generatorer, UPS-enheder og afbrydere er klassificeret i VA (eller kVA), ikke i kW. En last, der trækker 10 kW ved PF 0,8, kræver 12,5 kVA forsyningskapacitet. Dimensionering af udstyr kun efter kW (ignorerer PF) kan føre til overbelastning. Konvertering af kW til VA sikrer, at du vælger udstyr med tilstrækkelig tilsyneladende effektkapacitet." },
-            { "question": "Er denne beregner gratis?", "answer": "Ja, vores kW til VA beregner er gratis. Ingen registrering eller betaling påkrævet. Indtast effekt i kW og effektfaktor (0–1) for at få øjeblikkelige, nøjagtige resultater i VA." }
+            {
+              "question": "Hvad er formlen for at konvertere kW til VA?",
+              "answer": "Formlen er VA = (kW × 1000) / PF, hvor VA er tilsyneladende effekt i voltampere, kW er aktiv effekt i kilowatt, og PF er effektfaktoren (0 til 1). Aktiv effekt = tilsyneladende effekt × PF, altså tilsyneladende effekt = aktiv effekt / PF."
+            },
+            {
+              "question": "Hvad er forskellen mellem kW og VA?",
+              "answer": "kW (kilowatt) er aktiv effekt — det faktiske arbejde udført af lasten (f.eks. mekanisk output, varme, lys). VA (voltampere) er tilsyneladende effekt — den samlede effekt leveret af kilden, inklusive reaktiv effekt, der ikke udfører nyttigt arbejde. VA ≥ kW altid; de er lige kun når PF = 1,0 (rent resistiv last)."
+            },
+            {
+              "question": "Hvad er effektfaktor, og hvilke værdier er typiske?",
+              "answer": "Effektfaktor (PF) er forholdet kW / VA, fra 0 til 1. Den måler, hvor effektivt elektrisk effekt omdannes til nyttigt arbejde. Typiske værdier: resistive varmeelementer ~1,0, lysrør 0,5–0,95, induktionsmotorer 0,7–0,9, strømforsyninger 0,6–0,95. Lavere PF betyder, at højere VA kræves for samme kW, hvilket øger størrelsen af ledere og transformere."
+            },
+            {
+              "question": "Hvorfor skal jeg konvertere kW til VA?",
+              "answer": "Transformere, generatorer, UPS-enheder og afbrydere er klassificeret i VA (eller kVA), ikke i kW. En last, der trækker 10 kW ved PF 0,8, kræver 12,5 kVA forsyningskapacitet. Dimensionering af udstyr kun efter kW (ignorerer PF) kan føre til overbelastning. Konvertering af kW til VA sikrer, at du vælger udstyr med tilstrækkelig tilsyneladende effektkapacitet."
+            },
+            {
+              "question": "Er denne beregner gratis?",
+              "answer": "Ja, vores kW til VA beregner er gratis. Ingen registrering eller betaling påkrævet. Indtast effekt i kW og effektfaktor (0–1) for at få øjeblikkelige, nøjagtige resultater i VA."
+            }
           ]
         }
       }
@@ -1265,11 +1249,26 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            { "question": "Hvad er formlen for at konvertere kW til kVA?", "answer": "Formlen er kVA = kW / PF, hvor kVA er tilsyneladende effekt i kilovoltampere, kW er aktiv effekt i kilowatt, og PF er effektfaktoren (0 til 1). Aktiv effekt = tilsyneladende effekt × PF, derfor tilsyneladende effekt = aktiv effekt / PF." },
-            { "question": "Hvad er forskellen mellem kW og kVA?", "answer": "kW (kilowatt) er aktiv effekt — det faktiske arbejde udført af belastningen (f.eks. mekanisk output, varme, lys). kVA (kilovoltampere) er tilsyneladende effekt — den samlede effekt leveret af kilden, inklusive reaktiv effekt, der ikke udfører nyttigt arbejde. kVA ≥ kW altid; de er ens kun når PF = 1,0 (rent resistiv belastning)." },
-            { "question": "Hvad er effektfaktor, og hvilke værdier er typiske?", "answer": "Effektfaktor (PF) er forholdet kW / kVA, fra 0 til 1. Den måler, hvor effektivt elektrisk effekt konverteres til nyttigt arbejde. Typiske værdier: resistive varmeelementer ~1,0, lysstofrør 0,5–0,95, induktionsmotorer 0,7–0,9, strømforsyninger 0,6–0,95. Lavere PF betyder, at højere kVA kræves for samme kW, hvilket øger størrelsen af ledere og transformere." },
-            { "question": "Hvorfor skal jeg konvertere kW til kVA?", "answer": "Transformere, generatorer, UPS-enheder og afbrydere er klassificeret i kVA, ikke i kW. En belastning, der trækker 10 kW ved PF 0,8, kræver 12,5 kVA strømkapacitet. Dimensionering af udstyr kun efter kW (ignorere PF) kan føre til overbelastning. Konvertering af kW til kVA sikrer, at du vælger udstyr med tilstrækkelig tilsyneladende effektkapacitet." },
-            { "question": "Er denne beregner gratis?", "answer": "Ja, vores kW til kVA beregner er gratis. Ingen registrering eller betaling er nødvendig. Indtast effekt i kW og effektfaktor (0–1) for at få øjeblikkelige, præcise resultater i kVA." }
+            {
+              "question": "Hvad er formlen for at konvertere kW til kVA?",
+              "answer": "Formlen er kVA = kW / PF, hvor kVA er tilsyneladende effekt i kilovoltampere, kW er aktiv effekt i kilowatt, og PF er effektfaktoren (0 til 1). Aktiv effekt = tilsyneladende effekt × PF, derfor tilsyneladende effekt = aktiv effekt / PF."
+            },
+            {
+              "question": "Hvad er forskellen mellem kW og kVA?",
+              "answer": "kW (kilowatt) er aktiv effekt — det faktiske arbejde udført af belastningen (f.eks. mekanisk output, varme, lys). kVA (kilovoltampere) er tilsyneladende effekt — den samlede effekt leveret af kilden, inklusive reaktiv effekt, der ikke udfører nyttigt arbejde. kVA ≥ kW altid; de er ens kun når PF = 1,0 (rent resistiv belastning)."
+            },
+            {
+              "question": "Hvad er effektfaktor, og hvilke værdier er typiske?",
+              "answer": "Effektfaktor (PF) er forholdet kW / kVA, fra 0 til 1. Den måler, hvor effektivt elektrisk effekt konverteres til nyttigt arbejde. Typiske værdier: resistive varmeelementer ~1,0, lysstofrør 0,5–0,95, induktionsmotorer 0,7–0,9, strømforsyninger 0,6–0,95. Lavere PF betyder, at højere kVA kræves for samme kW, hvilket øger størrelsen af ledere og transformere."
+            },
+            {
+              "question": "Hvorfor skal jeg konvertere kW til kVA?",
+              "answer": "Transformere, generatorer, UPS-enheder og afbrydere er klassificeret i kVA, ikke i kW. En belastning, der trækker 10 kW ved PF 0,8, kræver 12,5 kVA strømkapacitet. Dimensionering af udstyr kun efter kW (ignorere PF) kan føre til overbelastning. Konvertering af kW til kVA sikrer, at du vælger udstyr med tilstrækkelig tilsyneladende effektkapacitet."
+            },
+            {
+              "question": "Er denne beregner gratis?",
+              "answer": "Ja, vores kW til kVA beregner er gratis. Ingen registrering eller betaling er nødvendig. Indtast effekt i kW og effektfaktor (0–1) for at få øjeblikkelige, præcise resultater i kVA."
+            }
           ]
         }
       }
@@ -1591,11 +1590,26 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            {"question": "Hvad er formlen VA til kW?", "answer": "kW = (VA × PF) / 1000. PF kræves, fordi kun en del af tilsyneladende effekt er aktiv; dividere med 1000 for kilowatt."},
-            {"question": "Forskel mellem VA og kW?", "answer": "VA måler tilsyneladende effekt (total, inkl. reaktiv), kW måler aktiv effekt. kW = (VA × PF) / 1000. De falder sammen kun ved PF = 1,0 og faktor 1000."},
-            {"question": "Hvorfor kræves effektfaktoren?", "answer": "Tilsyneladende effekt inkluderer reaktiv effekt. Effektfaktoren angiver den aktive andel. Uden PF kan man ikke fra VA bestemme aktiv effekt."},
-            {"question": "Typiske effektfaktorer?", "answer": "Resistive belastninger ofte ≈ 1,0. Motorer og induktive 0,7–0,9. Ved usikkerhed bruges ofte 0,8."},
-            {"question": "Er beregneren gratis?", "answer": "Ja. Ingen registrering. Indtast VA og effektfaktor for resultater i kilowatt."}
+            {
+              "question": "Hvad er formlen VA til kW?",
+              "answer": "kW = (VA × PF) / 1000. PF kræves, fordi kun en del af tilsyneladende effekt er aktiv; dividere med 1000 for kilowatt."
+            },
+            {
+              "question": "Forskel mellem VA og kW?",
+              "answer": "VA måler tilsyneladende effekt (total, inkl. reaktiv), kW måler aktiv effekt. kW = (VA × PF) / 1000. De falder sammen kun ved PF = 1,0 og faktor 1000."
+            },
+            {
+              "question": "Hvorfor kræves effektfaktoren?",
+              "answer": "Tilsyneladende effekt inkluderer reaktiv effekt. Effektfaktoren angiver den aktive andel. Uden PF kan man ikke fra VA bestemme aktiv effekt."
+            },
+            {
+              "question": "Typiske effektfaktorer?",
+              "answer": "Resistive belastninger ofte ≈ 1,0. Motorer og induktive 0,7–0,9. Ved usikkerhed bruges ofte 0,8."
+            },
+            {
+              "question": "Er beregneren gratis?",
+              "answer": "Ja. Ingen registrering. Indtast VA og effektfaktor for resultater i kilowatt."
+            }
           ]
         },
         "related": {
@@ -1635,11 +1649,26 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            {"question": "Formel VA til kVA?", "answer": "kVA = VA / 1000. Begge tilsyneladende effekt; divider med 1000. Effektfaktor ikke nødvendig."},
-            {"question": "Forskel VA og kVA?", "answer": "VA og kVA måler tilsyneladende effekt. 1 kVA = 1000 VA. Samme størrelse, anden enhed — som meter og kilometer."},
-            {"question": "Kræves effektfaktor?", "answer": "Nej. Kun ved tilsyneladende ↔ aktiv effekt (W/kW). VA → kVA = division med 1000."},
-            {"question": "Hvornår VA, hvornår kVA?", "answer": "Mindre udstyr ofte i VA, større (UPS, transformatorer) i kVA. Omregning til at sammenligne og summere effekter."},
-            {"question": "Er beregneren gratis?", "answer": "Ja. Ingen registrering. Indtast VA for resultater i kVA."}
+            {
+              "question": "Formel VA til kVA?",
+              "answer": "kVA = VA / 1000. Begge tilsyneladende effekt; divider med 1000. Effektfaktor ikke nødvendig."
+            },
+            {
+              "question": "Forskel VA og kVA?",
+              "answer": "VA og kVA måler tilsyneladende effekt. 1 kVA = 1000 VA. Samme størrelse, anden enhed — som meter og kilometer."
+            },
+            {
+              "question": "Kræves effektfaktor?",
+              "answer": "Nej. Kun ved tilsyneladende ↔ aktiv effekt (W/kW). VA → kVA = division med 1000."
+            },
+            {
+              "question": "Hvornår VA, hvornår kVA?",
+              "answer": "Mindre udstyr ofte i VA, større (UPS, transformatorer) i kVA. Omregning til at sammenligne og summere effekter."
+            },
+            {
+              "question": "Er beregneren gratis?",
+              "answer": "Ja. Ingen registrering. Indtast VA for resultater i kVA."
+            }
           ]
         },
         "related": {
@@ -1850,11 +1879,26 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            {"question": "Formel volt til ampere med watt?", "answer": "I = P / V. Strøm (A) = effekt (W) / spænding (V). F.eks. 2300 W, 230 V → I = 10 A."},
-            {"question": "Formel volt til ampere med ohm?", "answer": "I = V / R (Ohms lov). Strøm = spænding / modstand. F.eks. 12 V, 24 Ω → I = 0,5 A."},
-            {"question": "Hvornår watt, hvornår ohm?", "answer": "Watt: når du kender effekt (f.eks. typeplate) og spænding. Ohm: spænding over modstand og værdi (modstande, varmere, DC-kredsløb)."},
-            {"question": "Gælder Ohms lov for AC?", "answer": "I = V / R gælder resistive AC-kredsløb med effektivværdier. For reaktans brug impedans Z: I = V / Z."},
-            {"question": "Er lommeregneren gratis?", "answer": "Ja. Vælg watt eller ohm, indtast spænding og watt/ohm, få strøm i ampere."}
+            {
+              "question": "Formel volt til ampere med watt?",
+              "answer": "I = P / V. Strøm (A) = effekt (W) / spænding (V). F.eks. 2300 W, 230 V → I = 10 A."
+            },
+            {
+              "question": "Formel volt til ampere med ohm?",
+              "answer": "I = V / R (Ohms lov). Strøm = spænding / modstand. F.eks. 12 V, 24 Ω → I = 0,5 A."
+            },
+            {
+              "question": "Hvornår watt, hvornår ohm?",
+              "answer": "Watt: når du kender effekt (f.eks. typeplate) og spænding. Ohm: spænding over modstand og værdi (modstande, varmere, DC-kredsløb)."
+            },
+            {
+              "question": "Gælder Ohms lov for AC?",
+              "answer": "I = V / R gælder resistive AC-kredsløb med effektivværdier. For reaktans brug impedans Z: I = V / Z."
+            },
+            {
+              "question": "Er lommeregneren gratis?",
+              "answer": "Ja. Vælg watt eller ohm, indtast spænding og watt/ohm, få strøm i ampere."
+            }
           ]
         },
         "related": {
@@ -2005,7 +2049,6 @@
       "amps": "Ampere (A)",
       "volts": "Spænding (V)",
       "powerFactor": "Effektfaktor (0-1)",
-      "volts": "Spænding (V)",
       "calculate": "Beregn",
       "reset": "Nulstil",
       "result": "Resultat",
@@ -2083,12 +2126,30 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            { "question": "Hvad er formlen watt til ampere (DC)?", "answer": "For DC: I = P / V, hvor I er strøm (A), P effekt (W), V spænding (V). Divider effekt med spænding for strøm. Eks.: 1200 W ved 120 V → I = 10 A." },
-            { "question": "Hvad er formlen for enfase?", "answer": "For enfase: I = P / (V × PF). V spænding (V), P effekt (W), PF effektfaktor (0–1). Eks.: 1840 W ved 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
-            { "question": "Hvad er formlen for trefase?", "answer": "For trefase: I = P / (√3 × V × PF). V linjespænding (V), P effekt (W), PF effektfaktor. √3 ≈ 1,732. Eks.: 8,83 kW ved 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
-            { "question": "Hvornår bruger jeg DC, enfase eller trefase?", "answer": "DC til batterier, sol DC-kredsløb og DC-belastninger. Enfase til typisk bolig (120 V, 230 V, 240 V). Trefase til industriel og kommerciel distribution (400 V, 480 V linje) og motorer." },
-            { "question": "Hvordan hænger dette sammen med ampere til watt?", "answer": "Watt til ampere (I = P / V) og ampere til watt (P = I × V) er inverse operationer. Brug watt→ampere når du kender effekt og spænding; ampere→watt når du kender strøm og spænding." },
-            { "question": "Er denne lommeregner gratis?", "answer": "Ja. Watt til Ampere lommeregneren er gratis. Ingen registrering. Vælg DC, enfase eller trefase, indtast watt og spænding (og effektfaktor for AC), få ampere med det samme." }
+            {
+              "question": "Hvad er formlen watt til ampere (DC)?",
+              "answer": "For DC: I = P / V, hvor I er strøm (A), P effekt (W), V spænding (V). Divider effekt med spænding for strøm. Eks.: 1200 W ved 120 V → I = 10 A."
+            },
+            {
+              "question": "Hvad er formlen for enfase?",
+              "answer": "For enfase: I = P / (V × PF). V spænding (V), P effekt (W), PF effektfaktor (0–1). Eks.: 1840 W ved 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A."
+            },
+            {
+              "question": "Hvad er formlen for trefase?",
+              "answer": "For trefase: I = P / (√3 × V × PF). V linjespænding (V), P effekt (W), PF effektfaktor. √3 ≈ 1,732. Eks.: 8,83 kW ved 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+            },
+            {
+              "question": "Hvornår bruger jeg DC, enfase eller trefase?",
+              "answer": "DC til batterier, sol DC-kredsløb og DC-belastninger. Enfase til typisk bolig (120 V, 230 V, 240 V). Trefase til industriel og kommerciel distribution (400 V, 480 V linje) og motorer."
+            },
+            {
+              "question": "Hvordan hænger dette sammen med ampere til watt?",
+              "answer": "Watt til ampere (I = P / V) og ampere til watt (P = I × V) er inverse operationer. Brug watt→ampere når du kender effekt og spænding; ampere→watt når du kender strøm og spænding."
+            },
+            {
+              "question": "Er denne lommeregner gratis?",
+              "answer": "Ja. Watt til Ampere lommeregneren er gratis. Ingen registrering. Vælg DC, enfase eller trefase, indtast watt og spænding (og effektfaktor for AC), få ampere med det samme."
+            }
           ]
         },
         "related": {
@@ -2134,12 +2195,30 @@
         "faq": {
           "heading": "Ofte Stillede Spørgsmål",
           "items": [
-            { "question": "Hvad er formlen for watt til volt (DC)?", "answer": "For DC: V = P / I, hvor V er spænding i volt, P effekt i watt og I strøm i ampere. Divider effekt med strøm for at få spænding. Eksempel: 1200 W ved 10 A → V = 120 V." },
-            { "question": "Hvad er formlen for enfase AC?", "answer": "For enfase AC: V = P / (I × PF). I er strøm (ampere), P effekt (watt), PF effektfaktor (0 til 1). Eksempel: 1840 W ved 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
-            { "question": "Hvad er formlen for trefase AC?", "answer": "For trefase AC: V = P / (√3 × I × PF). I er strøm per fase (ampere), P effekt (watt), PF effektfaktor. √3 ≈ 1,732. Eksempel: 8,83 kW ved 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
-            { "question": "Hvornår bruger jeg DC, enfase eller trefase?", "answer": "DC til batterier, sol DC-kredsløb og DC-belastninger. Enfase til typisk bolig (120 V, 230 V, 240 V). Trefase til industriel og kommerciel distribution (400 V, 480 V linje) og motorer." },
-            { "question": "Hvordan hænger dette sammen med volt til watt?", "answer": "Watt til volt (V = P / I) og volt til watt (P = V × I) er inverse operationer. Brug watt→volt når du kender effekt og strøm; volt→watt når du kender spænding og strøm." },
-            { "question": "Er denne lommeregner gratis?", "answer": "Ja. Watt til Volt lommeregneren er gratis. Ingen registrering. Vælg DC, enfase eller trefase, indtast watt og strøm (og effektfaktor for AC), få volt med det samme." }
+            {
+              "question": "Hvad er formlen for watt til volt (DC)?",
+              "answer": "For DC: V = P / I, hvor V er spænding i volt, P effekt i watt og I strøm i ampere. Divider effekt med strøm for at få spænding. Eksempel: 1200 W ved 10 A → V = 120 V."
+            },
+            {
+              "question": "Hvad er formlen for enfase AC?",
+              "answer": "For enfase AC: V = P / (I × PF). I er strøm (ampere), P effekt (watt), PF effektfaktor (0 til 1). Eksempel: 1840 W ved 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V."
+            },
+            {
+              "question": "Hvad er formlen for trefase AC?",
+              "answer": "For trefase AC: V = P / (√3 × I × PF). I er strøm per fase (ampere), P effekt (watt), PF effektfaktor. √3 ≈ 1,732. Eksempel: 8,83 kW ved 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+            },
+            {
+              "question": "Hvornår bruger jeg DC, enfase eller trefase?",
+              "answer": "DC til batterier, sol DC-kredsløb og DC-belastninger. Enfase til typisk bolig (120 V, 230 V, 240 V). Trefase til industriel og kommerciel distribution (400 V, 480 V linje) og motorer."
+            },
+            {
+              "question": "Hvordan hænger dette sammen med volt til watt?",
+              "answer": "Watt til volt (V = P / I) og volt til watt (P = V × I) er inverse operationer. Brug watt→volt når du kender effekt og strøm; volt→watt når du kender spænding og strøm."
+            },
+            {
+              "question": "Er denne lommeregner gratis?",
+              "answer": "Ja. Watt til Volt lommeregneren er gratis. Ingen registrering. Vælg DC, enfase eller trefase, indtast watt og strøm (og effektfaktor for AC), få volt med det samme."
+            }
           ]
         },
         "related": {
@@ -2639,6 +2718,10 @@
           "ampsToWatts": "Ampere til Watt Lommeregner",
           "ampsToWattsDesc": "Konverter strøm og spænding til effekt"
         }
+      },
+      "addition": {
+        "title": "Additionslommeregner",
+        "description": "Læg to tal sammen"
       }
     },
     "textToBinary": {

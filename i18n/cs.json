@@ -1034,12 +1034,30 @@
         "faq": {
           "heading": "Časté dotazy",
           "items": [
-            { "question": "Jaký je vzorec pro převod kW na Volty?", "answer": "DC: V = (kW × 1000) / I. Jednofázový AC: V = (kW × 1000) / (I × PF). Třífázový AC: V = (kW × 1000) / (√3 × I × PF). V ve voltech, kW výkon, I proud v A, PF účiník. Třífázový výsledek = napětí mezi fázemi. DC nepoužívá účiník." },
-            { "question": "Potřebuji účiník u DC?", "answer": "Ne. Účiník platí pouze pro AC. U DC: V = (kW × 1000) / I. Stačí kilowatty a proud. Typické DC aplikace: baterie, solární, EV při 12V, 24V, 48V nebo vyšším." },
-            { "question": "Rozdíl jednofázový a třífázový?", "answer": "Jednofázový: V = (kW × 1000) / (I × PF). Třífázový: V = (kW × 1000) / (√3 × I × PF), výsledek = napětí mezi fázemi. Při stejném kW a proudu dává třífázový vyšší napětí." },
-            { "question": "Co znamená třífázové napětí?", "answer": "Třífázový vzorec dává sdružené napětí (mezi fázemi), ne fázoové. Běžné hodnoty: 208V, 240V, 380V, 400V, 415V, 480V. Používejte pro dimenzování a napětí sítě." },
-            { "question": "Co je účiník?", "answer": "Účiník (PF) je poměr činného a zdánlivého výkonu u AC, 0–1. Typické: odporové zátěže = 1,0, indukční motory = 0,8–0,9, zářivky = 0,85–0,95, LED = 0,9–0,95. Neznámý: 0,8 pro motory, 0,9 pro smíšené. DC nemá účiník." },
-            { "question": "Je kalkulačka zdarma?", "answer": "Ano, kalkulačka kW na Volty je zdarma. Bez registrace a platby. Zadejte kW a proud, zvolte DC, jednofázový nebo třífázový, přidejte účiník pro AC a získejte okamžité, přesné výsledky." }
+            {
+              "question": "Jaký je vzorec pro převod kW na Volty?",
+              "answer": "DC: V = (kW × 1000) / I. Jednofázový AC: V = (kW × 1000) / (I × PF). Třífázový AC: V = (kW × 1000) / (√3 × I × PF). V ve voltech, kW výkon, I proud v A, PF účiník. Třífázový výsledek = napětí mezi fázemi. DC nepoužívá účiník."
+            },
+            {
+              "question": "Potřebuji účiník u DC?",
+              "answer": "Ne. Účiník platí pouze pro AC. U DC: V = (kW × 1000) / I. Stačí kilowatty a proud. Typické DC aplikace: baterie, solární, EV při 12V, 24V, 48V nebo vyšším."
+            },
+            {
+              "question": "Rozdíl jednofázový a třífázový?",
+              "answer": "Jednofázový: V = (kW × 1000) / (I × PF). Třífázový: V = (kW × 1000) / (√3 × I × PF), výsledek = napětí mezi fázemi. Při stejném kW a proudu dává třífázový vyšší napětí."
+            },
+            {
+              "question": "Co znamená třífázové napětí?",
+              "answer": "Třífázový vzorec dává sdružené napětí (mezi fázemi), ne fázoové. Běžné hodnoty: 208V, 240V, 380V, 400V, 415V, 480V. Používejte pro dimenzování a napětí sítě."
+            },
+            {
+              "question": "Co je účiník?",
+              "answer": "Účiník (PF) je poměr činného a zdánlivého výkonu u AC, 0–1. Typické: odporové zátěže = 1,0, indukční motory = 0,8–0,9, zářivky = 0,85–0,95, LED = 0,9–0,95. Neznámý: 0,8 pro motory, 0,9 pro smíšené. DC nemá účiník."
+            },
+            {
+              "question": "Je kalkulačka zdarma?",
+              "answer": "Ano, kalkulačka kW na Volty je zdarma. Bez registrace a platby. Zadejte kW a proud, zvolte DC, jednofázový nebo třífázový, přidejte účiník pro AC a získejte okamžité, přesné výsledky."
+            }
           ]
         }
       }
@@ -1069,11 +1087,26 @@
         "faq": {
           "heading": "Časté dotazy",
           "items": [
-            { "question": "Jaký je vzorec kW na kWh?", "answer": "kWh = kW × hodiny. Př.: 2 kW po 3 h → 2 × 3 = 6 kWh." },
-            { "question": "Rozdíl kW a kWh?", "answer": "kW = výkon (míra). kWh = energie (množství za čas). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh." },
-            { "question": "Mohu použít desetinné hodiny (např. 1,5 = 1 h 30)?", "answer": "Ano. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh." },
-            { "question": "Jak odhadnout účet z kW a hodin?", "answer": "Nejdřív kWh = kW × hodiny. Pak kWh × cena za kWh (např. 5 Kč/kWh). Př.: 24 kWh × 5 = 120 Kč." },
-            { "question": "Je kalkulačka zdarma?", "answer": "Ano, kalkulačka kW na kWh je zdarma. Bez registrace. Zadejte kW a hodiny pro okamžitý výsledek v kWh." }
+            {
+              "question": "Jaký je vzorec kW na kWh?",
+              "answer": "kWh = kW × hodiny. Př.: 2 kW po 3 h → 2 × 3 = 6 kWh."
+            },
+            {
+              "question": "Rozdíl kW a kWh?",
+              "answer": "kW = výkon (míra). kWh = energie (množství za čas). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh."
+            },
+            {
+              "question": "Mohu použít desetinné hodiny (např. 1,5 = 1 h 30)?",
+              "answer": "Ano. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh."
+            },
+            {
+              "question": "Jak odhadnout účet z kW a hodin?",
+              "answer": "Nejdřív kWh = kW × hodiny. Pak kWh × cena za kWh (např. 5 Kč/kWh). Př.: 24 kWh × 5 = 120 Kč."
+            },
+            {
+              "question": "Je kalkulačka zdarma?",
+              "answer": "Ano, kalkulačka kW na kWh je zdarma. Bez registrace. Zadejte kW a hodiny pro okamžitý výsledek v kWh."
+            }
           ]
         }
       }
@@ -1167,11 +1200,26 @@
         "faq": {
           "heading": "Často kladené otázky",
           "items": [
-            { "question": "Jaký je vzorec pro převod kW na VA?", "answer": "Vzorec je VA = (kW × 1000) / PF, kde VA je zdánlivý výkon ve voltampérech, kW je činný výkon v kilowattech a PF je účiník (0 až 1). Činný výkon = zdánlivý výkon × PF, tedy zdánlivý výkon = činný výkon / PF." },
-            { "question": "Jaký je rozdíl mezi kW a VA?", "answer": "kW (kilowatty) je činný výkon — skutečná práce vykonaná zátěží (např. mechanický výstup, teplo, světlo). VA (voltampéry) je zdánlivý výkon — celkový výkon dodaný zdrojem, včetně jalového výkonu, který nevykonává užitečnou práci. VA ≥ kW vždy; jsou si rovny pouze když PF = 1,0 (čistě odporová zátěž)." },
-            { "question": "Co je účiník a jaké hodnoty jsou typické?", "answer": "Účiník (PF) je poměr kW / VA, v rozmezí od 0 do 1. Měří, jak efektivně je elektrický výkon přeměňován na užitečnou práci. Typické hodnoty: odporové topení ~1,0, zářivky 0,5–0,95, indukční motory 0,7–0,9, zdroje 0,6–0,95. Nižší PF znamená, že je pro stejné kW potřeba vyšší VA, což zvyšuje rozměry vodičů a transformátorů." },
-            { "question": "Proč musím převádět kW na VA?", "answer": "Transformátory, generátory, UPS jednotky a jističe jsou klasifikovány v VA (nebo kVA), ne v kW. Zátěž spotřebovávající 10 kW při PF 0,8 vyžaduje 12,5 kVA kapacitu napájení. Dimenzování zařízení pouze podle kW (ignorování PF) může vést k přetížení. Převod kW na VA zajistí, že vyberete zařízení s dostatečnou kapacitou zdánlivého výkonu." },
-            { "question": "Je tato kalkulačka zdarma?", "answer": "Ano, naše kalkulačka kW na VA je zdarma. Není vyžadována registrace ani platba. Zadejte výkon v kW a účiník (0–1) pro okamžité, přesné výsledky ve VA." }
+            {
+              "question": "Jaký je vzorec pro převod kW na VA?",
+              "answer": "Vzorec je VA = (kW × 1000) / PF, kde VA je zdánlivý výkon ve voltampérech, kW je činný výkon v kilowattech a PF je účiník (0 až 1). Činný výkon = zdánlivý výkon × PF, tedy zdánlivý výkon = činný výkon / PF."
+            },
+            {
+              "question": "Jaký je rozdíl mezi kW a VA?",
+              "answer": "kW (kilowatty) je činný výkon — skutečná práce vykonaná zátěží (např. mechanický výstup, teplo, světlo). VA (voltampéry) je zdánlivý výkon — celkový výkon dodaný zdrojem, včetně jalového výkonu, který nevykonává užitečnou práci. VA ≥ kW vždy; jsou si rovny pouze když PF = 1,0 (čistě odporová zátěž)."
+            },
+            {
+              "question": "Co je účiník a jaké hodnoty jsou typické?",
+              "answer": "Účiník (PF) je poměr kW / VA, v rozmezí od 0 do 1. Měří, jak efektivně je elektrický výkon přeměňován na užitečnou práci. Typické hodnoty: odporové topení ~1,0, zářivky 0,5–0,95, indukční motory 0,7–0,9, zdroje 0,6–0,95. Nižší PF znamená, že je pro stejné kW potřeba vyšší VA, což zvyšuje rozměry vodičů a transformátorů."
+            },
+            {
+              "question": "Proč musím převádět kW na VA?",
+              "answer": "Transformátory, generátory, UPS jednotky a jističe jsou klasifikovány v VA (nebo kVA), ne v kW. Zátěž spotřebovávající 10 kW při PF 0,8 vyžaduje 12,5 kVA kapacitu napájení. Dimenzování zařízení pouze podle kW (ignorování PF) může vést k přetížení. Převod kW na VA zajistí, že vyberete zařízení s dostatečnou kapacitou zdánlivého výkonu."
+            },
+            {
+              "question": "Je tato kalkulačka zdarma?",
+              "answer": "Ano, naše kalkulačka kW na VA je zdarma. Není vyžadována registrace ani platba. Zadejte výkon v kW a účiník (0–1) pro okamžité, přesné výsledky ve VA."
+            }
           ]
         }
       }
@@ -1201,11 +1249,26 @@
         "faq": {
           "heading": "Často kladené otázky",
           "items": [
-            { "question": "Jaký je vzorec pro převod kW na kVA?", "answer": "Vzorec je kVA = kW / PF, kde kVA je zdánlivý výkon v kilovoltampérech, kW je činný výkon v kilowattech a PF je účiník (0 až 1). Činný výkon = zdánlivý výkon × PF, tedy zdánlivý výkon = činný výkon / PF." },
-            { "question": "Jaký je rozdíl mezi kW a kVA?", "answer": "kW (kilowatty) je činný výkon — skutečná práce vykonaná zátěží (např. mechanický výstup, teplo, světlo). kVA (kilovoltampéry) je zdánlivý výkon — celkový výkon dodaný zdrojem, včetně jalového výkonu, který nevykonává užitečnou práci. kVA ≥ kW vždy; jsou si rovny pouze když PF = 1,0 (čistě odporová zátěž)." },
-            { "question": "Co je účiník a jaké hodnoty jsou typické?", "answer": "Účiník (PF) je poměr kW / kVA, v rozmezí od 0 do 1. Měří, jak efektivně je elektrický výkon přeměňován na užitečnou práci. Typické hodnoty: odporové topení ~1,0, zářivky 0,5–0,95, indukční motory 0,7–0,9, zdroje 0,6–0,95. Nižší PF znamená, že je pro stejné kW potřeba vyšší kVA, což zvyšuje rozměry vodičů a transformátorů." },
-            { "question": "Proč musím převádět kW na kVA?", "answer": "Transformátory, generátory, UPS jednotky a jističe jsou klasifikovány v kVA, ne v kW. Zátěž spotřebovávající 10 kW při PF 0,8 vyžaduje 12,5 kVA kapacitu napájení. Dimenzování zařízení pouze podle kW (ignorování PF) může vést k přetížení. Převod kW na kVA zajistí, že vyberete zařízení s dostatečnou kapacitou zdánlivého výkonu." },
-            { "question": "Je tato kalkulačka zdarma?", "answer": "Ano, naše kalkulačka kW na kVA je zdarma. Není vyžadována registrace ani platba. Zadejte výkon v kW a účiník (0–1) pro okamžité, přesné výsledky v kVA." }
+            {
+              "question": "Jaký je vzorec pro převod kW na kVA?",
+              "answer": "Vzorec je kVA = kW / PF, kde kVA je zdánlivý výkon v kilovoltampérech, kW je činný výkon v kilowattech a PF je účiník (0 až 1). Činný výkon = zdánlivý výkon × PF, tedy zdánlivý výkon = činný výkon / PF."
+            },
+            {
+              "question": "Jaký je rozdíl mezi kW a kVA?",
+              "answer": "kW (kilowatty) je činný výkon — skutečná práce vykonaná zátěží (např. mechanický výstup, teplo, světlo). kVA (kilovoltampéry) je zdánlivý výkon — celkový výkon dodaný zdrojem, včetně jalového výkonu, který nevykonává užitečnou práci. kVA ≥ kW vždy; jsou si rovny pouze když PF = 1,0 (čistě odporová zátěž)."
+            },
+            {
+              "question": "Co je účiník a jaké hodnoty jsou typické?",
+              "answer": "Účiník (PF) je poměr kW / kVA, v rozmezí od 0 do 1. Měří, jak efektivně je elektrický výkon přeměňován na užitečnou práci. Typické hodnoty: odporové topení ~1,0, zářivky 0,5–0,95, indukční motory 0,7–0,9, zdroje 0,6–0,95. Nižší PF znamená, že je pro stejné kW potřeba vyšší kVA, což zvyšuje rozměry vodičů a transformátorů."
+            },
+            {
+              "question": "Proč musím převádět kW na kVA?",
+              "answer": "Transformátory, generátory, UPS jednotky a jističe jsou klasifikovány v kVA, ne v kW. Zátěž spotřebovávající 10 kW při PF 0,8 vyžaduje 12,5 kVA kapacitu napájení. Dimenzování zařízení pouze podle kW (ignorování PF) může vést k přetížení. Převod kW na kVA zajistí, že vyberete zařízení s dostatečnou kapacitou zdánlivého výkonu."
+            },
+            {
+              "question": "Je tato kalkulačka zdarma?",
+              "answer": "Ano, naše kalkulačka kW na kVA je zdarma. Není vyžadována registrace ani platba. Zadejte výkon v kW a účiník (0–1) pro okamžité, přesné výsledky v kVA."
+            }
           ]
         }
       }
@@ -1527,11 +1590,26 @@
         "faq": {
           "heading": "Časté dotazy",
           "items": [
-            {"question": "Jaký je vzorec VA na kW?", "answer": "kW = (VA × PF) / 1000. PF nutný; jen část zdánlivého výkonu je činná. Dělíme 1000 pro kilowatty."},
-            {"question": "Rozdíl mezi VA a kW?", "answer": "VA měří zdánlivý výkon (celkový, včetně jalového), kW činný. kW = (VA × PF) / 1000. Shodují se jen při PF = 1,0 a faktoru 1000."},
-            {"question": "Proč je potřebný účiník?", "answer": "Zdánlivý výkon zahrnuje jalový. Účiník udává podíl činného. Bez PF nelze z VA určit činný výkon."},
-            {"question": "Typické účiníky?", "answer": "Odporové zátěže často ≈ 1,0. Motory a indukční 0,7–0,9. Při nejistotě se často používá 0,8."},
-            {"question": "Je kalkulačka zdarma?", "answer": "Ano. Bez registrace. Zadejte VA a účiník pro výsledky v kilowattech."}
+            {
+              "question": "Jaký je vzorec VA na kW?",
+              "answer": "kW = (VA × PF) / 1000. PF nutný; jen část zdánlivého výkonu je činná. Dělíme 1000 pro kilowatty."
+            },
+            {
+              "question": "Rozdíl mezi VA a kW?",
+              "answer": "VA měří zdánlivý výkon (celkový, včetně jalového), kW činný. kW = (VA × PF) / 1000. Shodují se jen při PF = 1,0 a faktoru 1000."
+            },
+            {
+              "question": "Proč je potřebný účiník?",
+              "answer": "Zdánlivý výkon zahrnuje jalový. Účiník udává podíl činného. Bez PF nelze z VA určit činný výkon."
+            },
+            {
+              "question": "Typické účiníky?",
+              "answer": "Odporové zátěže často ≈ 1,0. Motory a indukční 0,7–0,9. Při nejistotě se často používá 0,8."
+            },
+            {
+              "question": "Je kalkulačka zdarma?",
+              "answer": "Ano. Bez registrace. Zadejte VA a účiník pro výsledky v kilowattech."
+            }
           ]
         },
         "related": {
@@ -1571,11 +1649,26 @@
         "faq": {
           "heading": "Časté dotazy",
           "items": [
-            {"question": "Vzorec VA na kVA?", "answer": "kVA = VA / 1000. Obojí jalový výkon; dělit 1000. Účiník nepotřebný."},
-            {"question": "Rozdíl VA a kVA?", "answer": "VA a kVA měří jalový výkon. 1 kVA = 1000 VA. Stejná veličina, jiná jednotka — jako metry a kilometry."},
-            {"question": "Je třeba účiník?", "answer": "Ne. Jen u převodu jalový ↔ činný výkon (W/kW). VA → kVA = dělení 1000."},
-            {"question": "Kdy VA, kdy kVA?", "answer": "Menší zařízení často ve VA, větší (UPS, transformátory) v kVA. Převod pro srovnání a sčítání výkonů."},
-            {"question": "Je kalkulačka zdarma?", "answer": "Ano. Bez registrace. Zadejte VA pro výsledky v kVA."}
+            {
+              "question": "Vzorec VA na kVA?",
+              "answer": "kVA = VA / 1000. Obojí jalový výkon; dělit 1000. Účiník nepotřebný."
+            },
+            {
+              "question": "Rozdíl VA a kVA?",
+              "answer": "VA a kVA měří jalový výkon. 1 kVA = 1000 VA. Stejná veličina, jiná jednotka — jako metry a kilometry."
+            },
+            {
+              "question": "Je třeba účiník?",
+              "answer": "Ne. Jen u převodu jalový ↔ činný výkon (W/kW). VA → kVA = dělení 1000."
+            },
+            {
+              "question": "Kdy VA, kdy kVA?",
+              "answer": "Menší zařízení často ve VA, větší (UPS, transformátory) v kVA. Převod pro srovnání a sčítání výkonů."
+            },
+            {
+              "question": "Je kalkulačka zdarma?",
+              "answer": "Ano. Bez registrace. Zadejte VA pro výsledky v kVA."
+            }
           ]
         },
         "related": {
@@ -1641,116 +1734,6 @@
             {
               "question": "Je tato kalkulačka zdarma?",
               "answer": "Ano, naše kalkulačka Ampérů na kVA je zcela zdarma. Není vyžadována registrace ani platba. Jednoduše zadejte své hodnoty (ampéry a napětí) a získejte okamžité, přesné výsledky."
-            }
-          ]
-        }
-      }
-    },
-    "ampToVa": {
-      "title": "Kalkulačka Ampérů na VA",
-      "description": "Převeďte ampéry (A) na voltampéry (VA) okamžitě a přesně pomocí napětí",
-      "phaseType": "Typ fáze",
-      "singlePhase": "Jednofázový",
-      "threePhase": "Třífázový",
-      "amps": "Ampéry (A)",
-      "volts": "Napětí (V)",
-      "calculate": "Vypočítat",
-      "reset": "Resetovat",
-      "result": "Výsledek",
-      "seo": {
-        "title": "Kalkulačka Převodu Ampérů na VA - Bezplatný Online Elektrický Nástroj",
-        "description": "Bezplatná kalkulačka převodu ampérů na VA. Převeďte ampéry na voltampéry okamžitě pomocí napětí. Perfektní pro elektrické výpočty, návrh obvodů a analýzu energetických systémů.",
-        "keywords": "kalkulačka ampérů va, převodník ampérů voltampérů, převod ampérů va, kalkulačka proud zdánlivý výkon, elektrická kalkulačka, va kalkulačka, bezplatná kalkulačka",
-        "content": {
-          "heading": "Jak převést Ampéry na VA",
-          "paragraph1": "Převod ampérů (A) na voltampéry (VA) je základní výpočet v elektrotechnice a energetických systémech. Ampéry představují elektrický proud, zatímco VA představuje zdánlivý výkon. Převod vyžaduje znalost napětí (V). Na rozdíl od skutečného výkonu (watt) zdánlivý výkon (VA) nevyžaduje účiník, což činí tento převod jednoduchým. Naše bezplatná kalkulačka převodu Ampérů na VA činí tento proces rychlým a snadným, poskytuje okamžité a přesné výsledky pro vaše elektrické výpočty.",
-          "paragraph2": "Vzorec pro převod je: VA = A × V, kde A je proud v ampérech, V je napětí ve voltech, a VA je zdánlivý výkon v voltampérech. Zdánlivý výkon představuje celkový výkon v elektrickém obvodu, kombinující jak skutečný výkon (watty), tak jalový výkon (VAR). To se liší od skutečného výkonu (watt), který bere v úvahu pouze skutečně vykonanou práci.",
-          "paragraph3": "Tento převod se běžně používá v různých aplikacích: dimenzování transformátorů a generátorů, výpočet požadavků na zdánlivý výkon, návrh elektrických distribučních systémů, určení hodnot pojistek a jističů, pochopení charakteristik elektrického zatížení a práce s rezidenčními, komerčními a průmyslovými elektrickými systémy. Znalost převodu Ampérů na VA vám pomáhá činit informovaná rozhodnutí o návrhu elektrických systémů, výběru zařízení a řízení energie.",
-          "paragraph4": "Naše kalkulačka bere ampéry a napětí jako vstupy, automaticky aplikuje vzorec převodu a poskytuje výsledek v voltampérech. Kalkulačka zvládá jak jednofázové, tak třífázové výpočty (pro třífázové použijte napětí mezi fázemi). Ať už pracujete s transformátory, generátory, motory nebo jakýmkoli elektrickým zařízením, naše kalkulačka Ampérů na VA poskytuje přesné, okamžité převody.",
-          "exampleHeading": "Příklad:",
-          "exampleText": "Pokud máte zařízení odebírající 20 ampérů při 230 voltech, zdánlivý výkon v VA by byl: VA = 20 A × 230 V = 4600 VA. Pro zařízení odebírající 15 ampérů při 120 voltech: VA = 15 A × 120 V = 1800 VA. Pro třífázový systém s 30 ampéry při 400 voltech mezi fázemi: VA = 30 A × 400 V = 12000 VA."
-        },
-        "faq": {
-          "heading": "Často Kladené Otázky",
-          "items": [
-            {
-              "question": "Jaký je vzorec pro převod ampérů na VA?",
-              "answer": "Vzorec pro převod ampérů (A) na voltampéry (VA) je: VA = A × V, kde A je proud v ampérech, V je napětí ve voltech, a VA je zdánlivý výkon v voltampérech."
-            },
-            {
-              "question": "Musím znát napětí pro převod ampérů na VA?",
-              "answer": "Ano, napětí je vyžadováno pro převod. Zdánlivý výkon (VA) závisí jak na proudu (ampéry), tak na napětí. Běžná napětí zahrnují 120V, 230V, 240V, 380V a 400V v závislosti na vaší poloze a aplikaci."
-            },
-            {
-              "question": "Jaký je rozdíl mezi VA a watty?",
-              "answer": "VA (voltampéry) představuje zdánlivý výkon, což je celkový výkon v elektrickém obvodu. Watty představují skutečný výkon (činný výkon), což je skutečně vykonaná práce. Vztah mezi nimi je: Watty = VA × PF, kde PF je účiník. VA je vždy rovno nebo větší než watty."
-            },
-            {
-              "question": "Potřebuji účiník pro převod ampérů na VA?",
-              "answer": "Ne, účiník není vyžadován pro převod ampérů na VA. Vzorec VA = A × V vyžaduje pouze proud (ampéry) a napětí. Účiník je potřebný pouze při převodu mezi skutečným výkonem (watt) a zdánlivým výkonem (VA)."
-            },
-            {
-              "question": "Mohu použít tuto kalkulačku pro třífázové systémy?",
-              "answer": "Ano, můžete použít tuto kalkulačku pro třífázové systémy. Pro třífázové výpočty použijte napětí mezi fázemi (ne fázové napětí). Například pro třífázový systém 400V použijte 400V v kalkulačce."
-            },
-            {
-              "question": "Je tato kalkulačka zdarma?",
-              "answer": "Ano, naše kalkulačka Ampérů na VA je zcela zdarma. Není vyžadována registrace ani platba. Jednoduše zadejte své hodnoty (ampéry a napětí) a získejte okamžité, přesné výsledky."
-            }
-          ]
-        }
-      }
-    },
-    "ampToVa": {
-      "title": "Kalkulačka Ampérů na VA",
-      "description": "Převeďte ampéry (A) na voltampéry (VA) okamžitě a přesně pomocí napětí",
-      "phaseType": "Typ fáze",
-      "singlePhase": "Jednofázový",
-      "threePhase": "Třífázový",
-      "amps": "Ampéry (A)",
-      "volts": "Napětí (V)",
-      "calculate": "Vypočítat",
-      "reset": "Resetovat",
-      "result": "Výsledek",
-      "seo": {
-        "title": "Kalkulačka Převodu Ampérů na VA - Bezplatný Online Elektrický Nástroj",
-        "description": "Bezplatná kalkulačka převodu ampérů na VA. Převeďte ampéry na voltampéry okamžitě pomocí napětí. Perfektní pro elektrické výpočty, návrh obvodů a analýzu energetických systémů.",
-        "keywords": "kalkulačka ampérů va, převodník ampérů voltampérů, převod ampérů va, kalkulačka proud zdánlivý výkon, elektrická kalkulačka, va kalkulačka, bezplatná kalkulačka",
-        "content": {
-          "heading": "Jak převést Ampéry na VA",
-          "paragraph1": "Převod ampérů (A) na voltampéry (VA) je základní výpočet v elektrotechnice a energetických systémech. Ampéry představují elektrický proud, zatímco VA představuje zdánlivý výkon. Převod vyžaduje znalost napětí (V). Na rozdíl od skutečného výkonu (watty) zdánlivý výkon (VA) nevyžaduje účiník, což činí tento převod jednoduchým. Naše bezplatná kalkulačka převodu Ampérů na VA činí tento proces rychlým a snadným, poskytuje okamžité a přesné výsledky pro vaše elektrické výpočty.",
-          "paragraph2": "Vzorec pro převod je: VA = A × V, kde A je proud v ampérech, V je napětí ve voltech, a VA je zdánlivý výkon v voltampérech. Zdánlivý výkon představuje celkový výkon v elektrickém obvodu, kombinující jak skutečný výkon (watty), tak jalový výkon (VAR). To se liší od skutečného výkonu (watty), který bere v úvahu pouze skutečně vykonanou práci.",
-          "paragraph3": "Tento převod se běžně používá v různých aplikacích: dimenzování transformátorů a generátorů, výpočet požadavků na zdánlivý výkon, návrh elektrických distribučních systémů, určení hodnot pojistek a jističů, pochopení charakteristik elektrického zatížení a práce s rezidenčními, komerčními a průmyslovými elektrickými systémy. Znalost převodu Ampérů na VA vám pomáhá činit informovaná rozhodnutí o návrhu elektrických systémů, výběru zařízení a řízení energie.",
-          "paragraph4": "Naše kalkulačka bere ampéry a napětí jako vstupy, automaticky aplikuje vzorec převodu a poskytuje výsledek v voltampérech. Kalkulačka zvládá jak jednofázové, tak třífázové výpočty (pro třífázové použijte napětí mezi fázemi). Ať už pracujete s transformátory, generátory, motory nebo jakýmkoli elektrickým zařízením, naše kalkulačka Ampérů na VA poskytuje přesné, okamžité převody.",
-          "exampleHeading": "Příklad:",
-          "exampleText": "Pokud máte zařízení odebírající 20 ampérů při 230 voltech, zdánlivý výkon v VA by byl: VA = 20 A × 230 V = 4600 VA. Pro zařízení odebírající 15 ampérů při 120 voltech: VA = 15 A × 120 V = 1800 VA. Pro třífázový systém s 30 ampéry při 400 voltech mezi fázemi: VA = 30 A × 400 V = 12000 VA."
-        },
-        "faq": {
-          "heading": "Často Kladené Otázky",
-          "items": [
-            {
-              "question": "Jaký je vzorec pro převod ampérů na VA?",
-              "answer": "Vzorec pro převod ampérů (A) na voltampéry (VA) je: VA = A × V, kde A je proud v ampérech, V je napětí ve voltech, a VA je zdánlivý výkon v voltampérech."
-            },
-            {
-              "question": "Musím znát napětí pro převod ampérů na VA?",
-              "answer": "Ano, napětí je vyžadováno pro převod. Zdánlivý výkon (VA) závisí jak na proudu (ampéry), tak na napětí. Běžná napětí zahrnují 120V, 230V, 240V, 380V a 400V v závislosti na vaší poloze a aplikaci."
-            },
-            {
-              "question": "Jaký je rozdíl mezi VA a watty?",
-              "answer": "VA (voltampéry) představuje zdánlivý výkon, což je celkový výkon v elektrickém obvodu. Watty představují skutečný výkon (činný výkon), což je skutečně vykonaná práce. Vztah mezi nimi je: Watty = VA × PF, kde PF je účiník. VA je vždy rovno nebo větší než watty."
-            },
-            {
-              "question": "Potřebuji účiník pro převod ampérů na VA?",
-              "answer": "Ne, účiník není vyžadován pro převod ampérů na VA. Vzorec VA = A × V vyžaduje pouze proud (ampéry) a napětí. Účiník je potřebný pouze při převodu mezi skutečným výkonem (watty) a zdánlivým výkonem (VA)."
-            },
-            {
-              "question": "Mohu použít tuto kalkulačku pro třífázové systémy?",
-              "answer": "Ano, můžete použít tuto kalkulačku pro třífázové systémy. Pro třífázové výpočty použijte napětí mezi fázemi (ne fázové napětí). Například pro třífázový systém 400V použijte 400V v kalkulačce."
-            },
-            {
-              "question": "Je tato kalkulačka zdarma?",
-              "answer": "Ano, naše kalkulačka Ampérů na VA je zcela zdarma. Není vyžadována registrace ani platba. Jednoduše zadejte své hodnoty (ampéry a napětí) a získejte okamžité, přesné výsledky."
             }
           ]
         }
@@ -1896,11 +1879,26 @@
         "faq": {
           "heading": "Časté dotazy",
           "items": [
-            {"question": "Vzorec volt na ampér s watty?", "answer": "I = P / V. Proud (A) = výkon (W) / napětí (V). Např. 2300 W, 230 V → I = 10 A."},
-            {"question": "Vzorec volt na ampér s omy?", "answer": "I = V / R (Ohmův zákon). Proud = napětí / odpor. Např. 12 V, 24 Ω → I = 0,5 A."},
-            {"question": "Kdy watty, kdy omy?", "answer": "Waty: když znáte výkon (např. štítek) a napětí. Omy: napětí na rezistoru a jeho hodnota (rezistory, topení, DC obvody)."},
-            {"question": "Platí Ohmův zákon pro AC?", "answer": "I = V / R platí pro odporové AC obvody při efektivních hodnotách. Pro reaktance použijte impedanci Z: I = V / Z."},
-            {"question": "Je kalkulačka zdarma?", "answer": "Ano. Zvolte watty nebo omy, zadejte napětí a watty/omy, získáte proud v ampérech."}
+            {
+              "question": "Vzorec volt na ampér s watty?",
+              "answer": "I = P / V. Proud (A) = výkon (W) / napětí (V). Např. 2300 W, 230 V → I = 10 A."
+            },
+            {
+              "question": "Vzorec volt na ampér s omy?",
+              "answer": "I = V / R (Ohmův zákon). Proud = napětí / odpor. Např. 12 V, 24 Ω → I = 0,5 A."
+            },
+            {
+              "question": "Kdy watty, kdy omy?",
+              "answer": "Waty: když znáte výkon (např. štítek) a napětí. Omy: napětí na rezistoru a jeho hodnota (rezistory, topení, DC obvody)."
+            },
+            {
+              "question": "Platí Ohmův zákon pro AC?",
+              "answer": "I = V / R platí pro odporové AC obvody při efektivních hodnotách. Pro reaktance použijte impedanci Z: I = V / Z."
+            },
+            {
+              "question": "Je kalkulačka zdarma?",
+              "answer": "Ano. Zvolte watty nebo omy, zadejte napětí a watty/omy, získáte proud v ampérech."
+            }
           ]
         },
         "related": {
@@ -2051,7 +2049,6 @@
       "amps": "Ampéry (A)",
       "volts": "Napětí (V)",
       "powerFactor": "Účiník (0-1)",
-      "volts": "Napětí (V)",
       "calculate": "Vypočítat",
       "reset": "Resetovat",
       "result": "Výsledek",
@@ -2129,12 +2126,30 @@
         "faq": {
           "heading": "Často kladené otázky",
           "items": [
-            { "question": "Jaký je vzorec watty na ampéry (DC)?", "answer": "Pro DC: I = P / V, kde I je proud v A, P výkon ve W a V napětí ve V. Dělte výkon napětím pro proud. Např.: 1200 W při 120 V → I = 10 A." },
-            { "question": "Jaký je vzorec pro jednofázový?", "answer": "Pro jednofázový: I = P / (V × PF). V napětí (V), P výkon (W), PF účiník (0–1). Např.: 1840 W při 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
-            { "question": "Jaký je vzorec pro třífázový?", "answer": "Pro třífázový: I = P / (√3 × V × PF). V meziřádkové napětí (V), P výkon (W), PF účiník. √3 ≈ 1,732. Např.: 8,83 kW při 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
-            { "question": "Kdy použít DC, jednofázový nebo třífázový?", "answer": "DC pro baterie, DC solární obvody a DC zátěže. Jednofázový pro typické bytové (120 V, 230 V, 240 V). Třífázový pro průmyslovou a komerční distribuci (400 V, 480 V meziřádkové) a motory." },
-            { "question": "Jak to souvisí s ampéry na watty?", "answer": "Watty na ampéry (I = P / V) a ampéry na watty (P = I × V) jsou inverzní operace. Použijte watty→ampéry, když znáte výkon a napětí; ampéry→watty, když znáte proud a napětí." },
-            { "question": "Je tato kalkulačka zdarma?", "answer": "Ano. Kalkulačka Wattů na Ampéry je zdarma. Bez registrace. Zvolte DC, jednofázový nebo třífázový, zadejte watty a napětí (a účiník pro AC), získejte ampéry okamžitě." }
+            {
+              "question": "Jaký je vzorec watty na ampéry (DC)?",
+              "answer": "Pro DC: I = P / V, kde I je proud v A, P výkon ve W a V napětí ve V. Dělte výkon napětím pro proud. Např.: 1200 W při 120 V → I = 10 A."
+            },
+            {
+              "question": "Jaký je vzorec pro jednofázový?",
+              "answer": "Pro jednofázový: I = P / (V × PF). V napětí (V), P výkon (W), PF účiník (0–1). Např.: 1840 W při 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A."
+            },
+            {
+              "question": "Jaký je vzorec pro třífázový?",
+              "answer": "Pro třífázový: I = P / (√3 × V × PF). V meziřádkové napětí (V), P výkon (W), PF účiník. √3 ≈ 1,732. Např.: 8,83 kW při 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+            },
+            {
+              "question": "Kdy použít DC, jednofázový nebo třífázový?",
+              "answer": "DC pro baterie, DC solární obvody a DC zátěže. Jednofázový pro typické bytové (120 V, 230 V, 240 V). Třífázový pro průmyslovou a komerční distribuci (400 V, 480 V meziřádkové) a motory."
+            },
+            {
+              "question": "Jak to souvisí s ampéry na watty?",
+              "answer": "Watty na ampéry (I = P / V) a ampéry na watty (P = I × V) jsou inverzní operace. Použijte watty→ampéry, když znáte výkon a napětí; ampéry→watty, když znáte proud a napětí."
+            },
+            {
+              "question": "Je tato kalkulačka zdarma?",
+              "answer": "Ano. Kalkulačka Wattů na Ampéry je zdarma. Bez registrace. Zvolte DC, jednofázový nebo třífázový, zadejte watty a napětí (a účiník pro AC), získejte ampéry okamžitě."
+            }
           ]
         },
         "related": {
@@ -2180,12 +2195,30 @@
         "faq": {
           "heading": "Často kladené otázky",
           "items": [
-            { "question": "Jaký je vzorec watty na volty (DC)?", "answer": "Pro DC: V = P / I, kde V je napětí ve V, P výkon ve W a I proud v A. Dělte výkon proudem pro napětí. Např.: 1200 W při 10 A → V = 120 V." },
-            { "question": "Jaký je vzorec pro jednofázový AC?", "answer": "Pro jednofázový AC: V = P / (I × PF). I proud (A), P výkon (W), PF účiník (0–1). Např.: 1840 W při 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
-            { "question": "Jaký je vzorec pro třífázový AC?", "answer": "Pro třífázový AC: V = P / (√3 × I × PF). I proud na fázi (A), P výkon (W), PF účiník. √3 ≈ 1,732. Např.: 8,83 kW při 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
-            { "question": "Kdy použít DC, jednofázový nebo třífázový?", "answer": "DC pro baterie, DC solární obvody a DC zátěže. Jednofázový pro typické bytové (120 V, 230 V, 240 V). Třífázový pro průmyslovou a komerční distribuci (400 V, 480 V meziřádkové) a motory." },
-            { "question": "Jak to souvisí s volty na watty?", "answer": "Watty na volty (V = P / I) a volty na watty (P = V × I) jsou inverzní operace. Použijte watty→volty, když znáte výkon a proud; volty→watty, když znáte napětí a proud." },
-            { "question": "Je tato kalkulačka zdarma?", "answer": "Ano. Kalkulačka Wattů na Volty je zdarma. Bez registrace. Zvolte DC, jednofázový nebo třífázový, zadejte watty a proud (a účiník pro AC), získejte volty okamžitě." }
+            {
+              "question": "Jaký je vzorec watty na volty (DC)?",
+              "answer": "Pro DC: V = P / I, kde V je napětí ve V, P výkon ve W a I proud v A. Dělte výkon proudem pro napětí. Např.: 1200 W při 10 A → V = 120 V."
+            },
+            {
+              "question": "Jaký je vzorec pro jednofázový AC?",
+              "answer": "Pro jednofázový AC: V = P / (I × PF). I proud (A), P výkon (W), PF účiník (0–1). Např.: 1840 W při 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V."
+            },
+            {
+              "question": "Jaký je vzorec pro třífázový AC?",
+              "answer": "Pro třífázový AC: V = P / (√3 × I × PF). I proud na fázi (A), P výkon (W), PF účiník. √3 ≈ 1,732. Např.: 8,83 kW při 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+            },
+            {
+              "question": "Kdy použít DC, jednofázový nebo třífázový?",
+              "answer": "DC pro baterie, DC solární obvody a DC zátěže. Jednofázový pro typické bytové (120 V, 230 V, 240 V). Třífázový pro průmyslovou a komerční distribuci (400 V, 480 V meziřádkové) a motory."
+            },
+            {
+              "question": "Jak to souvisí s volty na watty?",
+              "answer": "Watty na volty (V = P / I) a volty na watty (P = V × I) jsou inverzní operace. Použijte watty→volty, když znáte výkon a proud; volty→watty, když znáte napětí a proud."
+            },
+            {
+              "question": "Je tato kalkulačka zdarma?",
+              "answer": "Ano. Kalkulačka Wattů na Volty je zdarma. Bez registrace. Zvolte DC, jednofázový nebo třífázový, zadejte watty a proud (a účiník pro AC), získejte volty okamžitě."
+            }
           ]
         },
         "related": {
@@ -2685,6 +2718,10 @@
           "ampsToWatts": "Kalkulačka Ampérů na Watty",
           "ampsToWattsDesc": "Převeďte proud a napětí na výkon"
         }
+      },
+      "addition": {
+        "title": "Kalkulačka Sčítání",
+        "description": "Sečíst dvě čísla"
       }
     },
     "textToBinary": {

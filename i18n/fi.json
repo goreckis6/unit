@@ -1034,12 +1034,30 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            { "question": "Mikä on kaava kW voltteiksi?", "answer": "DC: V = (kW × 1000) / I. Yksivaihe AC: V = (kW × 1000) / (I × PF). Kolmivaihe AC: V = (kW × 1000) / (√3 × I × PF). V voltteina, kW teho, I virta A, PF tehokerroin. Kolmivaihe-tulos = vaihejännite. DC ei käytä tehokerrointa." },
-            { "question": "Tarvitaanko tehokerroin DC:llä?", "answer": "Ei. Tehokerroin koskee vain AC:ta. DC: V = (kW × 1000) / I. Tarvitaan vain kW ja virta. Tyypillisiä DC-sovelluksia: akut, aurinko, sähköauto 12V, 24V, 48V tai ylemmällä jännitteellä." },
-            { "question": "Ero yksivaihe ja kolmivaihe?", "answer": "Yksivaihe: V = (kW × 1000) / (I × PF). Kolmivaihe: V = (kW × 1000) / (√3 × I × PF), tulos = vaihejännite. Samalla kW ja virralla kolmivaihe antaa korkeamman jännitteen." },
-            { "question": "Mitä kolmivaihejännite tarkoittaa?", "answer": "Kolmivaihekaava antaa vaihejännitteen (vaihe–vaihe), ei vaihe–nolla. Tyypilliset: 208V, 240V, 380V, 400V, 415V, 480V. Käytä laitteiden mitoitukseen ja verkkojännitteeseen." },
-            { "question": "Mikä on tehokerroin?", "answer": "Tehokerroin (PF) on pätötehon ja näennäistehon suhde AC:ssa, 0–1. Tyypillinen: resistiivinen = 1,0, induktiomoottorit = 0,8–0,9, loisteputket = 0,85–0,95, LED = 0,9–0,95. Tuntematon: 0,8 mootoreille, 0,9 sekakuormille. DC:llä ei ole tehokerrointa." },
-            { "question": "Onko laskin ilmainen?", "answer": "Kyllä, kW Voltti laskin on ilmainen. Ei rekisteröintiä eikä maksua. Syötä kW ja virta, valitse DC, yksivaihe tai kolmivaihe, lisää tehokerroin AC:lle ja saat välittömät, tarkat tulokset." }
+            {
+              "question": "Mikä on kaava kW voltteiksi?",
+              "answer": "DC: V = (kW × 1000) / I. Yksivaihe AC: V = (kW × 1000) / (I × PF). Kolmivaihe AC: V = (kW × 1000) / (√3 × I × PF). V voltteina, kW teho, I virta A, PF tehokerroin. Kolmivaihe-tulos = vaihejännite. DC ei käytä tehokerrointa."
+            },
+            {
+              "question": "Tarvitaanko tehokerroin DC:llä?",
+              "answer": "Ei. Tehokerroin koskee vain AC:ta. DC: V = (kW × 1000) / I. Tarvitaan vain kW ja virta. Tyypillisiä DC-sovelluksia: akut, aurinko, sähköauto 12V, 24V, 48V tai ylemmällä jännitteellä."
+            },
+            {
+              "question": "Ero yksivaihe ja kolmivaihe?",
+              "answer": "Yksivaihe: V = (kW × 1000) / (I × PF). Kolmivaihe: V = (kW × 1000) / (√3 × I × PF), tulos = vaihejännite. Samalla kW ja virralla kolmivaihe antaa korkeamman jännitteen."
+            },
+            {
+              "question": "Mitä kolmivaihejännite tarkoittaa?",
+              "answer": "Kolmivaihekaava antaa vaihejännitteen (vaihe–vaihe), ei vaihe–nolla. Tyypilliset: 208V, 240V, 380V, 400V, 415V, 480V. Käytä laitteiden mitoitukseen ja verkkojännitteeseen."
+            },
+            {
+              "question": "Mikä on tehokerroin?",
+              "answer": "Tehokerroin (PF) on pätötehon ja näennäistehon suhde AC:ssa, 0–1. Tyypillinen: resistiivinen = 1,0, induktiomoottorit = 0,8–0,9, loisteputket = 0,85–0,95, LED = 0,9–0,95. Tuntematon: 0,8 mootoreille, 0,9 sekakuormille. DC:llä ei ole tehokerrointa."
+            },
+            {
+              "question": "Onko laskin ilmainen?",
+              "answer": "Kyllä, kW Voltti laskin on ilmainen. Ei rekisteröintiä eikä maksua. Syötä kW ja virta, valitse DC, yksivaihe tai kolmivaihe, lisää tehokerroin AC:lle ja saat välittömät, tarkat tulokset."
+            }
           ]
         }
       }
@@ -1069,11 +1087,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            { "question": "Mikä on kaava kW kWh:ksi?", "answer": "kWh = kW × tunnit. Esim. 2 kW 3 h → 2 × 3 = 6 kWh." },
-            { "question": "Ero kW ja kWh?", "answer": "kW = teho. kWh = energia (määrä ajan kuluessa). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh." },
-            { "question": "Voinko käyttää desimaalitunteja (esim. 1,5 = 1 h 30)?", "answer": "Kyllä. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh." },
-            { "question": "Miten arvioida lasku kW:sta ja tunneista?", "answer": "Ensin kWh = kW × tunnit. Sitten kWh × hinta/kWh (esim. 0,15 €/kWh). Esim. 24 kWh × 0,15 = 3,60 €." },
-            { "question": "Onko laskin ilmainen?", "answer": "Kyllä, kW kWh laskin on ilmainen. Ei rekisteröintiä. Syötä kW ja tunnit välittömään tulokseen kWh:ssa." }
+            {
+              "question": "Mikä on kaava kW kWh:ksi?",
+              "answer": "kWh = kW × tunnit. Esim. 2 kW 3 h → 2 × 3 = 6 kWh."
+            },
+            {
+              "question": "Ero kW ja kWh?",
+              "answer": "kW = teho. kWh = energia (määrä ajan kuluessa). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh."
+            },
+            {
+              "question": "Voinko käyttää desimaalitunteja (esim. 1,5 = 1 h 30)?",
+              "answer": "Kyllä. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh."
+            },
+            {
+              "question": "Miten arvioida lasku kW:sta ja tunneista?",
+              "answer": "Ensin kWh = kW × tunnit. Sitten kWh × hinta/kWh (esim. 0,15 €/kWh). Esim. 24 kWh × 0,15 = 3,60 €."
+            },
+            {
+              "question": "Onko laskin ilmainen?",
+              "answer": "Kyllä, kW kWh laskin on ilmainen. Ei rekisteröintiä. Syötä kW ja tunnit välittömään tulokseen kWh:ssa."
+            }
           ]
         }
       }
@@ -1167,11 +1200,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            { "question": "Mikä on kaava kW:n muuntamiseksi VA:ksi?", "answer": "Kaava on VA = (kW × 1000) / PF, jossa VA on näennäisteho voltti-ampeereissa, kW on pätöteho kilowateissa ja PF on tehokerroin (0 - 1). Pätöteho = näennäisteho × PF, joten näennäisteho = pätöteho / PF." },
-            { "question": "Mikä on ero kW:n ja VA:n välillä?", "answer": "kW (kilowatit) on pätöteho — kuorman tekemä todellinen työ (esim. mekaaninen tuotto, lämpö, valo). VA (voltti-ampeeri) on näennäisteho — lähteen toimittama kokonaisteho, mukaan lukien loisteho, joka ei tee hyödyllistä työtä. VA ≥ kW aina; ne ovat yhtä suuret vain, kun PF = 1,0 (puhtaasti resistiivinen kuorma)." },
-            { "question": "Mikä on tehokerroin ja mitkä arvot ovat tyypillisiä?", "answer": "Tehokerroin (PF) on suhde kW / VA, välillä 0 - 1. Se mittaa, kuinka tehokkaasti sähköteho muunnetaan hyödylliseksi työksi. Tyypilliset arvot: resistiiviset lämmittimet ~1,0, loistelamput 0,5–0,95, oikosulkumoottorit 0,7–0,9, virtalähteet 0,6–0,95. Alempi PF tarkoittaa, että samaan kW:iin tarvitaan suuremmat VA:t, mikä kasvattaa johdinten ja muuntajien kokoa." },
-            { "question": "Miksi minun täytyy muuntaa kW VA:ksi?", "answer": "Muuntajat, generaattorit, UPS-yksiköt ja katkaisimet on luokiteltu VA:ssa (tai kVA:ssa), ei kW:ssa. 10 kW:n vetävä kuorma PF 0,8:lla vaatii 12,5 kVA:n syöttökapasiteetin. Laitteiden mitoitus pelkän kW:n mukaan (PF:n huomiotta jättäminen) voi johtaa ylikuormitukseen. kW:n muuntaminen VA:ksi varmistaa, että valitset laitteet riittävällä näennäistehon kapasiteetilla." },
-            { "question": "Onko tämä laskin ilmainen?", "answer": "Kyllä, kW - VA laskimme on ilmainen. Ei vaadi rekisteröitymistä tai maksua. Syötä teho kW:na ja tehokerroin (0–1) saadaksesi välittömiä, tarkkoja tuloksia VA:ssa." }
+            {
+              "question": "Mikä on kaava kW:n muuntamiseksi VA:ksi?",
+              "answer": "Kaava on VA = (kW × 1000) / PF, jossa VA on näennäisteho voltti-ampeereissa, kW on pätöteho kilowateissa ja PF on tehokerroin (0 - 1). Pätöteho = näennäisteho × PF, joten näennäisteho = pätöteho / PF."
+            },
+            {
+              "question": "Mikä on ero kW:n ja VA:n välillä?",
+              "answer": "kW (kilowatit) on pätöteho — kuorman tekemä todellinen työ (esim. mekaaninen tuotto, lämpö, valo). VA (voltti-ampeeri) on näennäisteho — lähteen toimittama kokonaisteho, mukaan lukien loisteho, joka ei tee hyödyllistä työtä. VA ≥ kW aina; ne ovat yhtä suuret vain, kun PF = 1,0 (puhtaasti resistiivinen kuorma)."
+            },
+            {
+              "question": "Mikä on tehokerroin ja mitkä arvot ovat tyypillisiä?",
+              "answer": "Tehokerroin (PF) on suhde kW / VA, välillä 0 - 1. Se mittaa, kuinka tehokkaasti sähköteho muunnetaan hyödylliseksi työksi. Tyypilliset arvot: resistiiviset lämmittimet ~1,0, loistelamput 0,5–0,95, oikosulkumoottorit 0,7–0,9, virtalähteet 0,6–0,95. Alempi PF tarkoittaa, että samaan kW:iin tarvitaan suuremmat VA:t, mikä kasvattaa johdinten ja muuntajien kokoa."
+            },
+            {
+              "question": "Miksi minun täytyy muuntaa kW VA:ksi?",
+              "answer": "Muuntajat, generaattorit, UPS-yksiköt ja katkaisimet on luokiteltu VA:ssa (tai kVA:ssa), ei kW:ssa. 10 kW:n vetävä kuorma PF 0,8:lla vaatii 12,5 kVA:n syöttökapasiteetin. Laitteiden mitoitus pelkän kW:n mukaan (PF:n huomiotta jättäminen) voi johtaa ylikuormitukseen. kW:n muuntaminen VA:ksi varmistaa, että valitset laitteet riittävällä näennäistehon kapasiteetilla."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, kW - VA laskimme on ilmainen. Ei vaadi rekisteröitymistä tai maksua. Syötä teho kW:na ja tehokerroin (0–1) saadaksesi välittömiä, tarkkoja tuloksia VA:ssa."
+            }
           ]
         }
       }
@@ -1201,11 +1249,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            { "question": "Mikä on kaava kW:n muuntamiseksi kVA:ksi?", "answer": "Kaava on kVA = kW / PF, jossa kVA on näennäisteho kilovolttiampeereina, kW on pätöteho kilowatteina ja PF on tehokerroin (0-1). Pätöteho = näennäisteho × PF, joten näennäisteho = pätöteho / PF." },
-            { "question": "Mikä on ero kW:n ja kVA:n välillä?", "answer": "kW (kilowatti) on pätöteho — kuorman tekemä todellinen työ (esim. mekaaninen tuotto, lämpö, valo). kVA (kilovolttiampeerit) on näennäisteho — lähteen toimittama kokonaisteho, mukaan lukien loistehoa, joka ei tee hyödyllistä työtä. kVA ≥ kW aina; ne ovat yhtä suuret vain kun PF = 1,0 (puhtaasti resistiivinen kuorma)." },
-            { "question": "Mikä on tehokerroin ja mitkä arvot ovat tyypillisiä?", "answer": "Tehokerroin (PF) on suhde kW / kVA, välillä 0-1. Se mittaa, kuinka tehokkaasti sähköteho muunnetaan hyödylliseksi työksi. Tyypilliset arvot: resistiiviset lämmityselementit ~1,0, loistelamput 0,5–0,95, oikosulkumoottorit 0,7–0,9, virtalähteet 0,6–0,95. Alempi PF tarkoittaa, että korkeampi kVA vaaditaan samalle kW:lle, mikä lisää johdinten ja muuntajien kokoa." },
-            { "question": "Miksi minun täytyy muuntaa kW kVA:ksi?", "answer": "Muuntajat, generaattorit, UPS-yksiköt ja katkaisijat luokitellaan kVA:ssa, eivät kW:ssa. Kuorma, joka kuluttaa 10 kW PF 0,8:lla, vaatii 12,5 kVA tehonsyöttökapasiteetin. Laitteiden mitoitus vain kW:n mukaan (PF:n huomiotta jättäminen) voi johtaa ylikuormitukseen. kW:n muuntaminen kVA:ksi varmistaa, että valitset riittävän näennäistehon kapasiteetin omaavat laitteet." },
-            { "question": "Onko tämä laskin ilmainen?", "answer": "Kyllä, kW kVA -laskimemme on ilmainen. Rekisteröitymistä tai maksua ei vaadita. Anna teho kW:na ja tehokerroin (0–1) saadaksesi välittömät, tarkat tulokset kVA:na." }
+            {
+              "question": "Mikä on kaava kW:n muuntamiseksi kVA:ksi?",
+              "answer": "Kaava on kVA = kW / PF, jossa kVA on näennäisteho kilovolttiampeereina, kW on pätöteho kilowatteina ja PF on tehokerroin (0-1). Pätöteho = näennäisteho × PF, joten näennäisteho = pätöteho / PF."
+            },
+            {
+              "question": "Mikä on ero kW:n ja kVA:n välillä?",
+              "answer": "kW (kilowatti) on pätöteho — kuorman tekemä todellinen työ (esim. mekaaninen tuotto, lämpö, valo). kVA (kilovolttiampeerit) on näennäisteho — lähteen toimittama kokonaisteho, mukaan lukien loistehoa, joka ei tee hyödyllistä työtä. kVA ≥ kW aina; ne ovat yhtä suuret vain kun PF = 1,0 (puhtaasti resistiivinen kuorma)."
+            },
+            {
+              "question": "Mikä on tehokerroin ja mitkä arvot ovat tyypillisiä?",
+              "answer": "Tehokerroin (PF) on suhde kW / kVA, välillä 0-1. Se mittaa, kuinka tehokkaasti sähköteho muunnetaan hyödylliseksi työksi. Tyypilliset arvot: resistiiviset lämmityselementit ~1,0, loistelamput 0,5–0,95, oikosulkumoottorit 0,7–0,9, virtalähteet 0,6–0,95. Alempi PF tarkoittaa, että korkeampi kVA vaaditaan samalle kW:lle, mikä lisää johdinten ja muuntajien kokoa."
+            },
+            {
+              "question": "Miksi minun täytyy muuntaa kW kVA:ksi?",
+              "answer": "Muuntajat, generaattorit, UPS-yksiköt ja katkaisijat luokitellaan kVA:ssa, eivät kW:ssa. Kuorma, joka kuluttaa 10 kW PF 0,8:lla, vaatii 12,5 kVA tehonsyöttökapasiteetin. Laitteiden mitoitus vain kW:n mukaan (PF:n huomiotta jättäminen) voi johtaa ylikuormitukseen. kW:n muuntaminen kVA:ksi varmistaa, että valitset riittävän näennäistehon kapasiteetin omaavat laitteet."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, kW kVA -laskimemme on ilmainen. Rekisteröitymistä tai maksua ei vaadita. Anna teho kW:na ja tehokerroin (0–1) saadaksesi välittömät, tarkat tulokset kVA:na."
+            }
           ]
         }
       }
@@ -1527,11 +1590,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            {"question": "Mikä on kaava VA kilowateiksi?", "answer": "kW = (VA × PF) / 1000. PF tarvitaan; vain osa näennäistehosta on todellista. Jaetaan 1000:lla kilowateiksi."},
-            {"question": "Ero VA:n ja kW:n välillä?", "answer": "VA mittaa näennäistehoa (kokonaisteho, mukaan lukien loisteho), kW mittaa todellista tehoa. kW = (VA × PF) / 1000. Ne vastaavat vain, kun PF = 1,0 ja kerroin 1000."},
-            {"question": "Miksi tehokerroin tarvitaan?", "answer": "Näennäisteho sisältää loistehon. Tehokerroin ilmaisee todellisen osuuden. Ilman PF:tä VA:sta ei voi määrittää todellista tehoa."},
-            {"question": "Tyypillisiä tehokertoimia?", "answer": "Resistiiiviset kuormat usein ≈ 1,0. Moottorit ja induktiiviset 0,7–0,9. Epävarmuuden tapauksessa usein 0,8."},
-            {"question": "Onko laskin ilmainen?", "answer": "Kyllä. Ei rekisteröintiä. Syötä VA ja tehokerroin saat tulokset kilowatteina."}
+            {
+              "question": "Mikä on kaava VA kilowateiksi?",
+              "answer": "kW = (VA × PF) / 1000. PF tarvitaan; vain osa näennäistehosta on todellista. Jaetaan 1000:lla kilowateiksi."
+            },
+            {
+              "question": "Ero VA:n ja kW:n välillä?",
+              "answer": "VA mittaa näennäistehoa (kokonaisteho, mukaan lukien loisteho), kW mittaa todellista tehoa. kW = (VA × PF) / 1000. Ne vastaavat vain, kun PF = 1,0 ja kerroin 1000."
+            },
+            {
+              "question": "Miksi tehokerroin tarvitaan?",
+              "answer": "Näennäisteho sisältää loistehon. Tehokerroin ilmaisee todellisen osuuden. Ilman PF:tä VA:sta ei voi määrittää todellista tehoa."
+            },
+            {
+              "question": "Tyypillisiä tehokertoimia?",
+              "answer": "Resistiiiviset kuormat usein ≈ 1,0. Moottorit ja induktiiviset 0,7–0,9. Epävarmuuden tapauksessa usein 0,8."
+            },
+            {
+              "question": "Onko laskin ilmainen?",
+              "answer": "Kyllä. Ei rekisteröintiä. Syötä VA ja tehokerroin saat tulokset kilowatteina."
+            }
           ]
         },
         "related": {
@@ -1571,11 +1649,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            {"question": "Kaava VA kVA:ksi?", "answer": "kVA = VA / 1000. Molemmat näennäisteho; jaa 1000:lla. Tehokerrointa ei tarvita."},
-            {"question": "Ero VA:n ja kVA:n välillä?", "answer": "VA ja kVA mittaavat näennäistehoa. 1 kVA = 1000 VA. Sama suure, toinen yksikkö — kuten metri ja kilometri."},
-            {"question": "Tarvitaanko tehokerroin?", "answer": "Ei. Vain näennäis- ↔ todellinen teho (W/kW). VA → kVA = jako 1000:lla."},
-            {"question": "Milloin VA, milloin kVA?", "answer": "Pienempi laite usein VA, suuremmat (UPS, muuntajat) kVA. Muunnos vertailuun ja tehojen summaukseen."},
-            {"question": "Onko laskin ilmainen?", "answer": "Kyllä. Ei rekisteröintiä. Syötä VA tuloksiksi kVA:nä."}
+            {
+              "question": "Kaava VA kVA:ksi?",
+              "answer": "kVA = VA / 1000. Molemmat näennäisteho; jaa 1000:lla. Tehokerrointa ei tarvita."
+            },
+            {
+              "question": "Ero VA:n ja kVA:n välillä?",
+              "answer": "VA ja kVA mittaavat näennäistehoa. 1 kVA = 1000 VA. Sama suure, toinen yksikkö — kuten metri ja kilometri."
+            },
+            {
+              "question": "Tarvitaanko tehokerroin?",
+              "answer": "Ei. Vain näennäis- ↔ todellinen teho (W/kW). VA → kVA = jako 1000:lla."
+            },
+            {
+              "question": "Milloin VA, milloin kVA?",
+              "answer": "Pienempi laite usein VA, suuremmat (UPS, muuntajat) kVA. Muunnos vertailuun ja tehojen summaukseen."
+            },
+            {
+              "question": "Onko laskin ilmainen?",
+              "answer": "Kyllä. Ei rekisteröintiä. Syötä VA tuloksiksi kVA:nä."
+            }
           ]
         },
         "related": {
@@ -1786,11 +1879,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            {"question": "Kaava voltti ampeeri watteilla?", "answer": "I = P / V. Virta (A) = teho (W) / jännite (V). Esim. 2300 W, 230 V → I = 10 A."},
-            {"question": "Kaava voltti ampeeri ohmeilla?", "answer": "I = V / R (Ohmin laki). Virta = jännite / resistanssi. Esim. 12 V, 24 Ω → I = 0,5 A."},
-            {"question": "Milloin watti, milloin ohmi?", "answer": "Watti: kun tiedät tehon (esim. tyyppikilpi) ja jännitteen. Ohmi: jännite vastuksen yli ja arvo (vastukset, lämmitys, DC-piirit)."},
-            {"question": "Sovelletko Ohmin lakia AC:hen?", "answer": "I = V / R pätee resistiivisissä AC-piireissä tehollisarvoilla. Reaktanssille impedanssi Z: I = V / Z."},
-            {"question": "Onko laskin ilmainen?", "answer": "Kyllä. Valitse watti tai ohmi, syötä jännite ja watit/ohmit, saat virran ampeereina."}
+            {
+              "question": "Kaava voltti ampeeri watteilla?",
+              "answer": "I = P / V. Virta (A) = teho (W) / jännite (V). Esim. 2300 W, 230 V → I = 10 A."
+            },
+            {
+              "question": "Kaava voltti ampeeri ohmeilla?",
+              "answer": "I = V / R (Ohmin laki). Virta = jännite / resistanssi. Esim. 12 V, 24 Ω → I = 0,5 A."
+            },
+            {
+              "question": "Milloin watti, milloin ohmi?",
+              "answer": "Watti: kun tiedät tehon (esim. tyyppikilpi) ja jännitteen. Ohmi: jännite vastuksen yli ja arvo (vastukset, lämmitys, DC-piirit)."
+            },
+            {
+              "question": "Sovelletko Ohmin lakia AC:hen?",
+              "answer": "I = V / R pätee resistiivisissä AC-piireissä tehollisarvoilla. Reaktanssille impedanssi Z: I = V / Z."
+            },
+            {
+              "question": "Onko laskin ilmainen?",
+              "answer": "Kyllä. Valitse watti tai ohmi, syötä jännite ja watit/ohmit, saat virran ampeereina."
+            }
           ]
         },
         "related": {
@@ -1941,7 +2049,6 @@
       "amps": "Ampeerit (A)",
       "volts": "Jännite (V)",
       "powerFactor": "Tehokerroin (0-1)",
-      "volts": "Jännite (V)",
       "calculate": "Laske",
       "reset": "Nollaa",
       "result": "Tulos",
@@ -2315,12 +2422,30 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            { "question": "Mikä on watti-ampeeri kaava (DC)?", "answer": "DC:lle: I = P / V, jossa I on virta A:ssa, P teho W:ssa ja V jännite V:ssa. Jakamalla teho jännitteellä saadaan virta. Esim.: 1200 W 120 V:ssa → I = 10 A." },
-            { "question": "Mikä on kaava yksivaiheelle?", "answer": "Yksivaiheelle: I = P / (V × PF). V jännite (V), P teho (W), PF tehokerroin (0–1). Esim.: 1840 W 230 V:ssa, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
-            { "question": "Mikä on kaava kolmivaiheelle?", "answer": "Kolmivaiheelle: I = P / (√3 × V × PF). V pääjännite (V), P teho (W), PF tehokerroin. √3 ≈ 1,732. Esim.: 8,83 kW 400 V:ssa, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
-            { "question": "Milloin käyttää DC:tä, yksiv aihetta tai kolmiv aihetta?", "answer": "DC akuille, DC-aurinkopiireille ja DC-kuormille. Yksivaihe tyypilliseen asuinkäyttöön (120 V, 230 V, 240 V). Kolmivaihe teollisuus- ja kaupalliseen jakeluun (400 V, 480 V pääjännite) ja moottoreille." },
-            { "question": "Miten tämä liittyy ampeeri-wattiin?", "answer": "Watti-ampeeri (I = P / V) ja ampeeri-watti (P = I × V) ovat käänteisiä toimintoja. Käytä watti→ampeeri, kun tiedät tehon ja jännitteen; ampeeri→watti, kun tiedät virran ja jännitteen." },
-            { "question": "Onko tämä laskin ilmainen?", "answer": "Kyllä. Watti-Ampeeri laskin on ilmainen. Ei rekisteröintiä. Valitse DC, yksivaihe tai kolmivaihe, syötä wattia ja jännite (ja tehokerroin AC:lle), saat ampeerit välittömästi." }
+            {
+              "question": "Mikä on watti-ampeeri kaava (DC)?",
+              "answer": "DC:lle: I = P / V, jossa I on virta A:ssa, P teho W:ssa ja V jännite V:ssa. Jakamalla teho jännitteellä saadaan virta. Esim.: 1200 W 120 V:ssa → I = 10 A."
+            },
+            {
+              "question": "Mikä on kaava yksivaiheelle?",
+              "answer": "Yksivaiheelle: I = P / (V × PF). V jännite (V), P teho (W), PF tehokerroin (0–1). Esim.: 1840 W 230 V:ssa, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A."
+            },
+            {
+              "question": "Mikä on kaava kolmivaiheelle?",
+              "answer": "Kolmivaiheelle: I = P / (√3 × V × PF). V pääjännite (V), P teho (W), PF tehokerroin. √3 ≈ 1,732. Esim.: 8,83 kW 400 V:ssa, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+            },
+            {
+              "question": "Milloin käyttää DC:tä, yksiv aihetta tai kolmiv aihetta?",
+              "answer": "DC akuille, DC-aurinkopiireille ja DC-kuormille. Yksivaihe tyypilliseen asuinkäyttöön (120 V, 230 V, 240 V). Kolmivaihe teollisuus- ja kaupalliseen jakeluun (400 V, 480 V pääjännite) ja moottoreille."
+            },
+            {
+              "question": "Miten tämä liittyy ampeeri-wattiin?",
+              "answer": "Watti-ampeeri (I = P / V) ja ampeeri-watti (P = I × V) ovat käänteisiä toimintoja. Käytä watti→ampeeri, kun tiedät tehon ja jännitteen; ampeeri→watti, kun tiedät virran ja jännitteen."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä. Watti-Ampeeri laskin on ilmainen. Ei rekisteröintiä. Valitse DC, yksivaihe tai kolmivaihe, syötä wattia ja jännite (ja tehokerroin AC:lle), saat ampeerit välittömästi."
+            }
           ]
         },
         "related": {
@@ -2366,12 +2491,30 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            { "question": "Mikä on watti-voltti kaava (DC)?", "answer": "DC:lle: V = P / I, jossa V on jännite V:ssa, P teho W:ssa ja I virta A:ssa. Jakamalla teho virralla saadaan jännite. Esim.: 1200 W 10 A:ssa → V = 120 V." },
-            { "question": "Mikä on kaava yksivaihe AC:lle?", "answer": "Yksivaihe AC:lle: V = P / (I × PF). I virta (A), P teho (W), PF tehokerroin (0–1). Esim.: 1840 W 10 A:ssa, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
-            { "question": "Mikä on kaava kolmivaihe AC:lle?", "answer": "Kolmivaihe AC:lle: V = P / (√3 × I × PF). I vaihevirta (A), P teho (W), PF tehokerroin. √3 ≈ 1,732. Esim.: 8,83 kW 15 A:ssa, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
-            { "question": "Milloin käyttää DC:tä, yksivaihetta tai kolmivaihetta?", "answer": "DC akuille, DC-aurinkopiireille ja DC-kuormille. Yksivaihe tyypilliseen asuinkäyttöön (120 V, 230 V, 240 V). Kolmivaihe teollisuus- ja kaupalliseen jakeluun (400 V, 480 V pääjännite) ja moottoreille." },
-            { "question": "Miten tämä liittyy voltti-wattiin?", "answer": "Watti-voltti (V = P / I) ja voltti-watti (P = V × I) ovat käänteisiä toimintoja. Käytä watti→voltti, kun tiedät tehon ja virran; voltti→watti, kun tiedät jännitteen ja virran." },
-            { "question": "Onko tämä laskin ilmainen?", "answer": "Kyllä. Watti-Voltti laskin on ilmainen. Ei rekisteröintiä. Valitse DC, yksivaihe tai kolmivaihe, syötä wattia ja virta (ja tehokerroin AC:lle), saat voltit välittömästi." }
+            {
+              "question": "Mikä on watti-voltti kaava (DC)?",
+              "answer": "DC:lle: V = P / I, jossa V on jännite V:ssa, P teho W:ssa ja I virta A:ssa. Jakamalla teho virralla saadaan jännite. Esim.: 1200 W 10 A:ssa → V = 120 V."
+            },
+            {
+              "question": "Mikä on kaava yksivaihe AC:lle?",
+              "answer": "Yksivaihe AC:lle: V = P / (I × PF). I virta (A), P teho (W), PF tehokerroin (0–1). Esim.: 1840 W 10 A:ssa, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V."
+            },
+            {
+              "question": "Mikä on kaava kolmivaihe AC:lle?",
+              "answer": "Kolmivaihe AC:lle: V = P / (√3 × I × PF). I vaihevirta (A), P teho (W), PF tehokerroin. √3 ≈ 1,732. Esim.: 8,83 kW 15 A:ssa, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+            },
+            {
+              "question": "Milloin käyttää DC:tä, yksivaihetta tai kolmivaihetta?",
+              "answer": "DC akuille, DC-aurinkopiireille ja DC-kuormille. Yksivaihe tyypilliseen asuinkäyttöön (120 V, 230 V, 240 V). Kolmivaihe teollisuus- ja kaupalliseen jakeluun (400 V, 480 V pääjännite) ja moottoreille."
+            },
+            {
+              "question": "Miten tämä liittyy voltti-wattiin?",
+              "answer": "Watti-voltti (V = P / I) ja voltti-watti (P = V × I) ovat käänteisiä toimintoja. Käytä watti→voltti, kun tiedät tehon ja virran; voltti→watti, kun tiedät jännitteen ja virran."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä. Watti-Voltti laskin on ilmainen. Ei rekisteröintiä. Valitse DC, yksivaihe tai kolmivaihe, syötä wattia ja virta (ja tehokerroin AC:lle), saat voltit välittömästi."
+            }
           ]
         },
         "related": {
@@ -2575,6 +2718,10 @@
           "ampsToWatts": "Ampeeri Watti Laskin",
           "ampsToWattsDesc": "Muunna virta ja jännite tehoksi"
         }
+      },
+      "addition": {
+        "title": "Yhteenlaskulaskin",
+        "description": "Laske kaksi lukua yhteen"
       }
     },
     "textToBinary": {

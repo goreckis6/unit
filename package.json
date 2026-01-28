@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && pnpm postbuild",
+    "build": "next build --webpack && npm run postbuild",
     "postbuild": "node scripts/postbuild.js",
     "start": "node .next/standalone/server.js",
     "lint": "next lint"

@@ -1034,12 +1034,30 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            { "question": "Vad är formeln för kW till Volt?", "answer": "DC: V = (kW × 1000) / I. Enfas AC: V = (kW × 1000) / (I × PF). Trefas AC: V = (kW × 1000) / (√3 × I × PF). V i volt, kW effekt, I ström i A, PF effektfaktor. Trefas-resultat = linjespänning. DC använder inte effektfaktor." },
-            { "question": "Behövs effektfaktor vid DC?", "answer": "Nej. Effektfaktor gäller endast AC. Vid DC: V = (kW × 1000) / I. Endast kW och ström behövs. Vanliga DC-tillämpningar: batterier, sol, EV vid 12V, 24V, 48V eller högre." },
-            { "question": "Skillnad enfas och trefas?", "answer": "Enfas: V = (kW × 1000) / (I × PF). Trefas: V = (kW × 1000) / (√3 × I × PF), resultat = linjespänning. Vid samma kW och ström ger trefas högre spänning." },
-            { "question": "Vad betyder trefasspänningen?", "answer": "Trefas-formeln ger linjespänning (fas–fas), inte fas-spänning. Vanliga: 208V, 240V, 380V, 400V, 415V, 480V. Använd för dimensionering och nätspänning." },
-            { "question": "Vad är effektfaktor?", "answer": "Effektfaktor (PF) är förhållandet aktivt till uppenbart effekt vid AC, 0–1. Typiskt: resistiv = 1,0, induktionsmotorer = 0,8–0,9, lysrör = 0,85–0,95, LED = 0,9–0,95. Okänd: 0,8 för motorer, 0,9 för blandad last. DC har ingen effektfaktor." },
-            { "question": "Är kalkylatorn gratis?", "answer": "Ja, kW till Volt kalkylatorn är gratis. Ingen registrering eller betalning. Ange kW och ström, välj DC, enfas eller trefas, lägg till effektfaktor för AC och få omedelbara, exakta resultat." }
+            {
+              "question": "Vad är formeln för kW till Volt?",
+              "answer": "DC: V = (kW × 1000) / I. Enfas AC: V = (kW × 1000) / (I × PF). Trefas AC: V = (kW × 1000) / (√3 × I × PF). V i volt, kW effekt, I ström i A, PF effektfaktor. Trefas-resultat = linjespänning. DC använder inte effektfaktor."
+            },
+            {
+              "question": "Behövs effektfaktor vid DC?",
+              "answer": "Nej. Effektfaktor gäller endast AC. Vid DC: V = (kW × 1000) / I. Endast kW och ström behövs. Vanliga DC-tillämpningar: batterier, sol, EV vid 12V, 24V, 48V eller högre."
+            },
+            {
+              "question": "Skillnad enfas och trefas?",
+              "answer": "Enfas: V = (kW × 1000) / (I × PF). Trefas: V = (kW × 1000) / (√3 × I × PF), resultat = linjespänning. Vid samma kW och ström ger trefas högre spänning."
+            },
+            {
+              "question": "Vad betyder trefasspänningen?",
+              "answer": "Trefas-formeln ger linjespänning (fas–fas), inte fas-spänning. Vanliga: 208V, 240V, 380V, 400V, 415V, 480V. Använd för dimensionering och nätspänning."
+            },
+            {
+              "question": "Vad är effektfaktor?",
+              "answer": "Effektfaktor (PF) är förhållandet aktivt till uppenbart effekt vid AC, 0–1. Typiskt: resistiv = 1,0, induktionsmotorer = 0,8–0,9, lysrör = 0,85–0,95, LED = 0,9–0,95. Okänd: 0,8 för motorer, 0,9 för blandad last. DC har ingen effektfaktor."
+            },
+            {
+              "question": "Är kalkylatorn gratis?",
+              "answer": "Ja, kW till Volt kalkylatorn är gratis. Ingen registrering eller betalning. Ange kW och ström, välj DC, enfas eller trefas, lägg till effektfaktor för AC och få omedelbara, exakta resultat."
+            }
           ]
         }
       }
@@ -1069,11 +1087,26 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            { "question": "Vad är formeln kW till kWh?", "answer": "kWh = kW × timmar. T.ex. 2 kW i 3 h → 2 × 3 = 6 kWh." },
-            { "question": "Skillnad kW och kWh?", "answer": "kW = effekt. kWh = energi (mängd över tid). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh." },
-            { "question": "Kan jag använda decimaltimmar (t.ex. 1,5 = 1 h 30)?", "answer": "Ja. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh." },
-            { "question": "Hur uppskattar jag räkningen från kW och timmar?", "answer": "Först kWh = kW × timmar. Sedan kWh × pris per kWh (t.ex. 1,50 kr/kWh). T.ex. 24 kWh × 1,50 = 36 kr." },
-            { "question": "Är kalkylatorn gratis?", "answer": "Ja, kW till kWh kalkylatorn är gratis. Ingen registrering. Ange kW och timmar för omedelbart resultat i kWh." }
+            {
+              "question": "Vad är formeln kW till kWh?",
+              "answer": "kWh = kW × timmar. T.ex. 2 kW i 3 h → 2 × 3 = 6 kWh."
+            },
+            {
+              "question": "Skillnad kW och kWh?",
+              "answer": "kW = effekt. kWh = energi (mängd över tid). 1 kW × 1 h = 1 kWh; × 10 h = 10 kWh."
+            },
+            {
+              "question": "Kan jag använda decimaltimmar (t.ex. 1,5 = 1 h 30)?",
+              "answer": "Ja. 1,5 = 1 h 30, 0,5 = 30 min, 0,25 = 15 min. 2 kW × 1,5 h = 3 kWh."
+            },
+            {
+              "question": "Hur uppskattar jag räkningen från kW och timmar?",
+              "answer": "Först kWh = kW × timmar. Sedan kWh × pris per kWh (t.ex. 1,50 kr/kWh). T.ex. 24 kWh × 1,50 = 36 kr."
+            },
+            {
+              "question": "Är kalkylatorn gratis?",
+              "answer": "Ja, kW till kWh kalkylatorn är gratis. Ingen registrering. Ange kW och timmar för omedelbart resultat i kWh."
+            }
           ]
         }
       }
@@ -1167,11 +1200,26 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            { "question": "Vad är formeln för att konvertera kW till VA?", "answer": "Formeln är VA = (kW × 1000) / PF, där VA är skenbar effekt i voltampere, kW är aktiv effekt i kilowatt, och PF är effektfaktorn (0 till 1). Aktiv effekt = skenbar effekt × PF, alltså skenbar effekt = aktiv effekt / PF." },
-            { "question": "Vad är skillnaden mellan kW och VA?", "answer": "kW (kilowatt) är aktiv effekt — det faktiska arbetet utfört av lasten (t.ex. mekanisk utgång, värme, ljus). VA (voltampere) är skenbar effekt — den totala effekten levererad av källan, inklusive reaktiv effekt som inte utför nyttigt arbete. VA ≥ kW alltid; de är lika endast när PF = 1,0 (rent resistiv last)." },
-            { "question": "Vad är effektfaktor och vilka värden är typiska?", "answer": "Effektfaktor (PF) är förhållandet kW / VA, från 0 till 1. Den mäter hur effektivt elektrisk effekt omvandlas till nyttigt arbete. Typiska värden: resistiva värmeelement ~1,0, lysrör 0,5–0,95, induktionsmotorer 0,7–0,9, nätaggregat 0,6–0,95. Lägre PF betyder att högre VA krävs för samma kW, vilket ökar storleken på ledare och transformatorer." },
-            { "question": "Varför måste jag konvertera kW till VA?", "answer": "Transformatorer, generatorer, UPS-enheter och brytare är klassificerade i VA (eller kVA), inte i kW. En last som drar 10 kW vid PF 0,8 kräver 12,5 kVA matningskapacitet. Dimensionering av utrustning endast efter kW (ignorera PF) kan leda till överbelastning. Konvertering av kW till VA säkerställer att du väljer utrustning med tillräcklig skenbar effektkapacitet." },
-            { "question": "Är denna kalkylator gratis?", "answer": "Ja, vår kW till VA kalkylator är gratis. Ingen registrering eller betalning krävs. Ange effekt i kW och effektfaktor (0–1) för att få omedelbara, exakta resultat i VA." }
+            {
+              "question": "Vad är formeln för att konvertera kW till VA?",
+              "answer": "Formeln är VA = (kW × 1000) / PF, där VA är skenbar effekt i voltampere, kW är aktiv effekt i kilowatt, och PF är effektfaktorn (0 till 1). Aktiv effekt = skenbar effekt × PF, alltså skenbar effekt = aktiv effekt / PF."
+            },
+            {
+              "question": "Vad är skillnaden mellan kW och VA?",
+              "answer": "kW (kilowatt) är aktiv effekt — det faktiska arbetet utfört av lasten (t.ex. mekanisk utgång, värme, ljus). VA (voltampere) är skenbar effekt — den totala effekten levererad av källan, inklusive reaktiv effekt som inte utför nyttigt arbete. VA ≥ kW alltid; de är lika endast när PF = 1,0 (rent resistiv last)."
+            },
+            {
+              "question": "Vad är effektfaktor och vilka värden är typiska?",
+              "answer": "Effektfaktor (PF) är förhållandet kW / VA, från 0 till 1. Den mäter hur effektivt elektrisk effekt omvandlas till nyttigt arbete. Typiska värden: resistiva värmeelement ~1,0, lysrör 0,5–0,95, induktionsmotorer 0,7–0,9, nätaggregat 0,6–0,95. Lägre PF betyder att högre VA krävs för samma kW, vilket ökar storleken på ledare och transformatorer."
+            },
+            {
+              "question": "Varför måste jag konvertera kW till VA?",
+              "answer": "Transformatorer, generatorer, UPS-enheter och brytare är klassificerade i VA (eller kVA), inte i kW. En last som drar 10 kW vid PF 0,8 kräver 12,5 kVA matningskapacitet. Dimensionering av utrustning endast efter kW (ignorera PF) kan leda till överbelastning. Konvertering av kW till VA säkerställer att du väljer utrustning med tillräcklig skenbar effektkapacitet."
+            },
+            {
+              "question": "Är denna kalkylator gratis?",
+              "answer": "Ja, vår kW till VA kalkylator är gratis. Ingen registrering eller betalning krävs. Ange effekt i kW och effektfaktor (0–1) för att få omedelbara, exakta resultat i VA."
+            }
           ]
         }
       }
@@ -1201,11 +1249,26 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            { "question": "Vad är formeln för att konvertera kW till kVA?", "answer": "Formeln är kVA = kW / PF, där kVA är skenbar effekt i kilovoltampere, kW är aktiv effekt i kilowatt, och PF är effektfaktorn (0 till 1). Aktiv effekt = skenbar effekt × PF, alltså skenbar effekt = aktiv effekt / PF." },
-            { "question": "Vad är skillnaden mellan kW och kVA?", "answer": "kW (kilowatt) är aktiv effekt — det faktiska arbetet utfört av lasten (t.ex. mekanisk utgång, värme, ljus). kVA (kilovoltampere) är skenbar effekt — den totala effekten levererad av källan, inklusive reaktiv effekt som inte utför nyttigt arbete. kVA ≥ kW alltid; de är lika endast när PF = 1,0 (rent resistiv last)." },
-            { "question": "Vad är effektfaktor och vilka värden är typiska?", "answer": "Effektfaktor (PF) är förhållandet kW / kVA, från 0 till 1. Den mäter hur effektivt elektrisk effekt omvandlas till nyttigt arbete. Typiska värden: resistiva värmeelement ~1,0, lysrör 0,5–0,95, induktionsmotorer 0,7–0,9, nätaggregat 0,6–0,95. Lägre PF betyder att högre kVA krävs för samma kW, vilket ökar storleken på ledare och transformatorer." },
-            { "question": "Varför måste jag konvertera kW till kVA?", "answer": "Transformatorer, generatorer, UPS-enheter och brytare är klassificerade i kVA, inte i kW. En last som drar 10 kW vid PF 0,8 kräver 12,5 kVA matningskapacitet. Dimensionering av utrustning endast efter kW (ignorera PF) kan leda till överbelastning. Konvertering av kW till kVA säkerställer att du väljer utrustning med tillräcklig skenbar effektkapacitet." },
-            { "question": "Är denna kalkylator gratis?", "answer": "Ja, vår kW till kVA kalkylator är gratis. Ingen registrering eller betalning krävs. Ange effekt i kW och effektfaktor (0–1) för att få omedelbara, exakta resultat i kVA." }
+            {
+              "question": "Vad är formeln för att konvertera kW till kVA?",
+              "answer": "Formeln är kVA = kW / PF, där kVA är skenbar effekt i kilovoltampere, kW är aktiv effekt i kilowatt, och PF är effektfaktorn (0 till 1). Aktiv effekt = skenbar effekt × PF, alltså skenbar effekt = aktiv effekt / PF."
+            },
+            {
+              "question": "Vad är skillnaden mellan kW och kVA?",
+              "answer": "kW (kilowatt) är aktiv effekt — det faktiska arbetet utfört av lasten (t.ex. mekanisk utgång, värme, ljus). kVA (kilovoltampere) är skenbar effekt — den totala effekten levererad av källan, inklusive reaktiv effekt som inte utför nyttigt arbete. kVA ≥ kW alltid; de är lika endast när PF = 1,0 (rent resistiv last)."
+            },
+            {
+              "question": "Vad är effektfaktor och vilka värden är typiska?",
+              "answer": "Effektfaktor (PF) är förhållandet kW / kVA, från 0 till 1. Den mäter hur effektivt elektrisk effekt omvandlas till nyttigt arbete. Typiska värden: resistiva värmeelement ~1,0, lysrör 0,5–0,95, induktionsmotorer 0,7–0,9, nätaggregat 0,6–0,95. Lägre PF betyder att högre kVA krävs för samma kW, vilket ökar storleken på ledare och transformatorer."
+            },
+            {
+              "question": "Varför måste jag konvertera kW till kVA?",
+              "answer": "Transformatorer, generatorer, UPS-enheter och brytare är klassificerade i kVA, inte i kW. En last som drar 10 kW vid PF 0,8 kräver 12,5 kVA matningskapacitet. Dimensionering av utrustning endast efter kW (ignorera PF) kan leda till överbelastning. Konvertering av kW till kVA säkerställer att du väljer utrustning med tillräcklig skenbar effektkapacitet."
+            },
+            {
+              "question": "Är denna kalkylator gratis?",
+              "answer": "Ja, vår kW till kVA kalkylator är gratis. Ingen registrering eller betalning krävs. Ange effekt i kW och effektfaktor (0–1) för att få omedelbara, exakta resultat i kVA."
+            }
           ]
         }
       }
@@ -1527,11 +1590,26 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            {"question": "Vad är formeln VA till kW?", "answer": "kW = (VA × PF) / 1000. PF behövs eftersom bara en del av skenbar effekt är aktiv; dela med 1000 för kilowatt."},
-            {"question": "Skillnad mellan VA och kW?", "answer": "VA mäter skenbar effekt (total, inkl. reaktiv), kW mäter aktiv effekt. kW = (VA × PF) / 1000. De sammanfaller endast vid PF = 1,0 och faktor 1000."},
-            {"question": "Varför behövs effektfaktorn?", "answer": "Skenbar effekt inkluderar reaktiv effekt. Effektfaktorn anger den aktiva andelen. Utan PF kan man inte från VA bestämma aktiv effekt."},
-            {"question": "Typiska effektfaktorer?", "answer": "Resistiva laster ofta ≈ 1,0. Motorer och induktiva 0,7–0,9. Vid osäkerhet används ofta 0,8."},
-            {"question": "Är kalkylatorn gratis?", "answer": "Ja. Ingen registrering. Ange VA och effektfaktor för resultat i kilowatt."}
+            {
+              "question": "Vad är formeln VA till kW?",
+              "answer": "kW = (VA × PF) / 1000. PF behövs eftersom bara en del av skenbar effekt är aktiv; dela med 1000 för kilowatt."
+            },
+            {
+              "question": "Skillnad mellan VA och kW?",
+              "answer": "VA mäter skenbar effekt (total, inkl. reaktiv), kW mäter aktiv effekt. kW = (VA × PF) / 1000. De sammanfaller endast vid PF = 1,0 och faktor 1000."
+            },
+            {
+              "question": "Varför behövs effektfaktorn?",
+              "answer": "Skenbar effekt inkluderar reaktiv effekt. Effektfaktorn anger den aktiva andelen. Utan PF kan man inte från VA bestämma aktiv effekt."
+            },
+            {
+              "question": "Typiska effektfaktorer?",
+              "answer": "Resistiva laster ofta ≈ 1,0. Motorer och induktiva 0,7–0,9. Vid osäkerhet används ofta 0,8."
+            },
+            {
+              "question": "Är kalkylatorn gratis?",
+              "answer": "Ja. Ingen registrering. Ange VA och effektfaktor för resultat i kilowatt."
+            }
           ]
         },
         "related": {
@@ -1571,11 +1649,26 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            {"question": "Formel VA till kVA?", "answer": "kVA = VA / 1000. Båda skenbar effekt; dela med 1000. Effektfaktor behövs inte."},
-            {"question": "Skillnad VA och kVA?", "answer": "VA och kVA mäter skenbar effekt. 1 kVA = 1000 VA. Samma storhet, annan enhet — som meter och kilometer."},
-            {"question": "Behövs effektfaktor?", "answer": "Nej. Endast vid skenbar ↔ aktiv effekt (W/kW). VA → kVA = division med 1000."},
-            {"question": "När VA, när kVA?", "answer": "Mindre utrustning oftast i VA, större (UPS, transformatorer) i kVA. Omvandling för att jämföra och summera effekter."},
-            {"question": "Är kalkylatorn gratis?", "answer": "Ja. Ingen registrering. Ange VA för resultat i kVA."}
+            {
+              "question": "Formel VA till kVA?",
+              "answer": "kVA = VA / 1000. Båda skenbar effekt; dela med 1000. Effektfaktor behövs inte."
+            },
+            {
+              "question": "Skillnad VA och kVA?",
+              "answer": "VA och kVA mäter skenbar effekt. 1 kVA = 1000 VA. Samma storhet, annan enhet — som meter och kilometer."
+            },
+            {
+              "question": "Behövs effektfaktor?",
+              "answer": "Nej. Endast vid skenbar ↔ aktiv effekt (W/kW). VA → kVA = division med 1000."
+            },
+            {
+              "question": "När VA, när kVA?",
+              "answer": "Mindre utrustning oftast i VA, större (UPS, transformatorer) i kVA. Omvandling för att jämföra och summera effekter."
+            },
+            {
+              "question": "Är kalkylatorn gratis?",
+              "answer": "Ja. Ingen registrering. Ange VA för resultat i kVA."
+            }
           ]
         },
         "related": {
@@ -1786,11 +1879,26 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            {"question": "Formel volt till ampere med watt?", "answer": "I = P / V. Ström (A) = effekt (W) / spänning (V). T.ex. 2300 W, 230 V → I = 10 A."},
-            {"question": "Formel volt till ampere med ohm?", "answer": "I = V / R (Ohms lag). Ström = spänning / resistans. T.ex. 12 V, 24 Ω → I = 0,5 A."},
-            {"question": "När watt, när ohm?", "answer": "Watt: när du vet effekt (t.ex. typdatabord) och spänning. Ohm: spänning över resistans och värde (resistorer, värmare, DC-kretsar)."},
-            {"question": "Gäller Ohms lag för AC?", "answer": "I = V / R gäller resistiva AC-kretsar med effektivvärden. För reaktans använd impedans Z: I = V / Z."},
-            {"question": "Är kalkylatorn gratis?", "answer": "Ja. Välj watt eller ohm, ange spänning och watt/ohm, få ström i ampere."}
+            {
+              "question": "Formel volt till ampere med watt?",
+              "answer": "I = P / V. Ström (A) = effekt (W) / spänning (V). T.ex. 2300 W, 230 V → I = 10 A."
+            },
+            {
+              "question": "Formel volt till ampere med ohm?",
+              "answer": "I = V / R (Ohms lag). Ström = spänning / resistans. T.ex. 12 V, 24 Ω → I = 0,5 A."
+            },
+            {
+              "question": "När watt, när ohm?",
+              "answer": "Watt: när du vet effekt (t.ex. typdatabord) och spänning. Ohm: spänning över resistans och värde (resistorer, värmare, DC-kretsar)."
+            },
+            {
+              "question": "Gäller Ohms lag för AC?",
+              "answer": "I = V / R gäller resistiva AC-kretsar med effektivvärden. För reaktans använd impedans Z: I = V / Z."
+            },
+            {
+              "question": "Är kalkylatorn gratis?",
+              "answer": "Ja. Välj watt eller ohm, ange spänning och watt/ohm, få ström i ampere."
+            }
           ]
         },
         "related": {
@@ -1941,7 +2049,6 @@
       "amps": "Ampere (A)",
       "volts": "Spänning (V)",
       "powerFactor": "Effektfaktor (0-1)",
-      "volts": "Spänning (V)",
       "calculate": "Beräkna",
       "reset": "Återställ",
       "result": "Resultat",
@@ -2019,12 +2126,30 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            { "question": "Vad är formeln watt till ampere (DC)?", "answer": "För DC: I = P / V, där I är ström (A), P effekt (W), V spänning (V). Dividera effekt med spänning för ström. Ex.: 1200 W vid 120 V → I = 10 A." },
-            { "question": "Vad är formeln för enfas?", "answer": "För enfas: I = P / (V × PF). V spänning (V), P effekt (W), PF effektfaktor (0–1). Ex.: 1840 W vid 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A." },
-            { "question": "Vad är formeln för trefas?", "answer": "För trefas: I = P / (√3 × V × PF). V linjespänning (V), P effekt (W), PF effektfaktor. √3 ≈ 1,732. Ex.: 8,83 kW vid 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A." },
-            { "question": "När använder jag DC, enfas eller trefas?", "answer": "DC för batterier, sol DC-kretsar och DC-laster. Enfas för typisk bostad (120 V, 230 V, 240 V). Trefas för industriell och kommersiell distribution (400 V, 480 V linje) och motorer." },
-            { "question": "Hur hänger detta ihop med ampere till watt?", "answer": "Watt till ampere (I = P / V) och ampere till watt (P = I × V) är inversa operationer. Använd watt→ampere när du känner effekt och spänning; ampere→watt när du känner ström och spänning." },
-            { "question": "Är denna kalkylator gratis?", "answer": "Ja. Watt till Ampere-kalkylatorn är gratis. Ingen registrering. Välj DC, enfas eller trefas, ange watt och spänning (och effektfaktor för AC), få ampere direkt." }
+            {
+              "question": "Vad är formeln watt till ampere (DC)?",
+              "answer": "För DC: I = P / V, där I är ström (A), P effekt (W), V spänning (V). Dividera effekt med spänning för ström. Ex.: 1200 W vid 120 V → I = 10 A."
+            },
+            {
+              "question": "Vad är formeln för enfas?",
+              "answer": "För enfas: I = P / (V × PF). V spänning (V), P effekt (W), PF effektfaktor (0–1). Ex.: 1840 W vid 230 V, PF 0,8 → I = 1840 / (230 × 0,8) = 10 A."
+            },
+            {
+              "question": "Vad är formeln för trefas?",
+              "answer": "För trefas: I = P / (√3 × V × PF). V linjespänning (V), P effekt (W), PF effektfaktor. √3 ≈ 1,732. Ex.: 8,83 kW vid 400 V, PF 0,85 → I = 8830 / (√3 × 400 × 0,85) ≈ 15 A."
+            },
+            {
+              "question": "När använder jag DC, enfas eller trefas?",
+              "answer": "DC för batterier, sol DC-kretsar och DC-laster. Enfas för typisk bostad (120 V, 230 V, 240 V). Trefas för industriell och kommersiell distribution (400 V, 480 V linje) och motorer."
+            },
+            {
+              "question": "Hur hänger detta ihop med ampere till watt?",
+              "answer": "Watt till ampere (I = P / V) och ampere till watt (P = I × V) är inversa operationer. Använd watt→ampere när du känner effekt och spänning; ampere→watt när du känner ström och spänning."
+            },
+            {
+              "question": "Är denna kalkylator gratis?",
+              "answer": "Ja. Watt till Ampere-kalkylatorn är gratis. Ingen registrering. Välj DC, enfas eller trefas, ange watt och spänning (och effektfaktor för AC), få ampere direkt."
+            }
           ]
         },
         "related": {
@@ -2070,12 +2195,30 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            { "question": "Vad är formeln watt till volt (DC)?", "answer": "För DC: V = P / I, där V är spänning (V), P effekt (W), I ström (A). Dividera effekt med ström för spänning. Ex.: 1200 W vid 10 A → V = 120 V." },
-            { "question": "Vad är formeln för enfas AC?", "answer": "För enfas AC: V = P / (I × PF). I ström (A), P effekt (W), PF effektfaktor (0–1). Ex.: 1840 W vid 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V." },
-            { "question": "Vad är formeln för trefas AC?", "answer": "För trefas AC: V = P / (√3 × I × PF). I ström per fas (A), P effekt (W), PF effektfaktor. √3 ≈ 1,732. Ex.: 8,83 kW vid 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V." },
-            { "question": "När använder jag DC, enfas eller trefas?", "answer": "DC för batterier, sol DC-kretsar och DC-laster. Enfas för typisk bostad (120 V, 230 V, 240 V). Trefas för industriell och kommersiell distribution (400 V, 480 V linje) och motorer." },
-            { "question": "Hur hänger detta ihop med volt till watt?", "answer": "Watt till volt (V = P / I) och volt till watt (P = V × I) är inversa operationer. Använd watt→volt när du känner effekt och ström; volt→watt när du känner spänning och ström." },
-            { "question": "Är denna kalkylator gratis?", "answer": "Ja. Watt till Volt-kalkylatorn är gratis. Ingen registrering. Välj DC, enfas eller trefas, ange watt och ström (och effektfaktor för AC), få volt direkt." }
+            {
+              "question": "Vad är formeln watt till volt (DC)?",
+              "answer": "För DC: V = P / I, där V är spänning (V), P effekt (W), I ström (A). Dividera effekt med ström för spänning. Ex.: 1200 W vid 10 A → V = 120 V."
+            },
+            {
+              "question": "Vad är formeln för enfas AC?",
+              "answer": "För enfas AC: V = P / (I × PF). I ström (A), P effekt (W), PF effektfaktor (0–1). Ex.: 1840 W vid 10 A, PF 0,8 → V = 1840 / (10 × 0,8) = 230 V."
+            },
+            {
+              "question": "Vad är formeln för trefas AC?",
+              "answer": "För trefas AC: V = P / (√3 × I × PF). I ström per fas (A), P effekt (W), PF effektfaktor. √3 ≈ 1,732. Ex.: 8,83 kW vid 15 A, PF 0,85 → V = 8830 / (√3 × 15 × 0,85) ≈ 400 V."
+            },
+            {
+              "question": "När använder jag DC, enfas eller trefas?",
+              "answer": "DC för batterier, sol DC-kretsar och DC-laster. Enfas för typisk bostad (120 V, 230 V, 240 V). Trefas för industriell och kommersiell distribution (400 V, 480 V linje) och motorer."
+            },
+            {
+              "question": "Hur hänger detta ihop med volt till watt?",
+              "answer": "Watt till volt (V = P / I) och volt till watt (P = V × I) är inversa operationer. Använd watt→volt när du känner effekt och ström; volt→watt när du känner spänning och ström."
+            },
+            {
+              "question": "Är denna kalkylator gratis?",
+              "answer": "Ja. Watt till Volt-kalkylatorn är gratis. Ingen registrering. Välj DC, enfas eller trefas, ange watt och ström (och effektfaktor för AC), få volt direkt."
+            }
           ]
         },
         "related": {
@@ -2575,6 +2718,10 @@
           "ampsToWatts": "Ampere till Watt Kalkylator",
           "ampsToWattsDesc": "Konvertera ström och spänning till effekt"
         }
+      },
+      "addition": {
+        "title": "Additionskalkylator",
+        "description": "Addera två tal"
       }
     },
     "textToBinary": {

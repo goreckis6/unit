@@ -80,6 +80,12 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
       path: '/calculators/math/addition',
     },
     {
+      id: 'adding-fractions',
+      titleKey: 'addingFractions.title',
+      descKey: 'addingFractions.description',
+      path: '/calculators/math/adding-fractions',
+    },
+    {
       id: 'percentage',
       titleKey: 'percentage.title',
       descKey: 'percentage.description',

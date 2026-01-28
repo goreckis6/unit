@@ -233,43 +233,44 @@ export function TextToBinaryCalculator() {
         </div>
 
         {/* Right Column - Output */}
-        <div className="result-section" style={{ marginTop: 0 }}>
-          {result ? (
-            <div className="result-display">
-              <div className="result-item">
-                <div className="result-label">{t('binaryOutput')}</div>
-                <div className="result-value-box" style={{ 
-                  wordBreak: 'break-all', 
-                  whiteSpace: 'pre-wrap', 
-                  minHeight: '300px',
-                  maxHeight: '500px',
-                  overflowY: 'auto'
-                }}>
-                  <span className="result-value" style={{ fontFamily: 'monospace', fontSize: '0.9em' }}>
-                    {result}
-                  </span>
-                </div>
+        <div className="result-section" style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}>
+          <div className="input-card">
+            <label className="input-label">
+              {t('binaryOutput')}
+            </label>
+            {result ? (
+              <div className="number-input" style={{ 
+                wordBreak: 'break-all', 
+                whiteSpace: 'pre-wrap', 
+                minHeight: '200px',
+                resize: 'vertical',
+                overflowY: 'auto',
+                fontFamily: 'monospace',
+                fontSize: '0.9em',
+                padding: '1.25rem'
+              }}>
+                {result}
               </div>
-            </div>
-          ) : (
-            <div className="result-display" style={{ opacity: 0.5 }}>
-              <div className="result-item">
-                <div className="result-label">{t('binaryOutput')}</div>
-                <div className="result-value-box" style={{ 
-                  wordBreak: 'break-all', 
-                  whiteSpace: 'pre-wrap', 
-                  minHeight: '300px',
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center' 
-                }}>
-                  <span style={{ fontFamily: 'monospace', fontSize: '0.9em', color: 'var(--text-secondary)' }}>
-                    {t('textPlaceholder')}
-                  </span>
-                </div>
+            ) : (
+              <div className="number-input" style={{ 
+                wordBreak: 'break-all', 
+                whiteSpace: 'pre-wrap', 
+                minHeight: '200px',
+                resize: 'vertical',
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                fontFamily: 'monospace',
+                fontSize: '0.9em',
+                padding: '1.25rem',
+                opacity: 0.5
+              }}>
+                <span style={{ color: 'var(--text-secondary)' }}>
+                  {t('textPlaceholder')}
+                </span>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </>

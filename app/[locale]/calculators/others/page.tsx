@@ -29,21 +29,21 @@ interface FaqItem {
 async function getFaqItems(locale: string): Promise<FaqItem[]> {
   try {
     const messages = await import(`@/i18n/${locale}.json`);
-    return (messages.default?.calculators?.mathCalculators?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.otherCalculators?.faq?.items as FaqItem[]) || [];
   } catch {
     const messages = await import('@/i18n/en.json');
-    return (messages.default?.calculators?.mathCalculators?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.otherCalculators?.faq?.items as FaqItem[]) || [];
   }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.mathCalculators' });
-  const tSeo = await getTranslations({ locale, namespace: 'calculators.mathCalculators.seoMeta' });
+  const t = await getTranslations({ locale, namespace: 'calculators.otherCalculators' });
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.otherCalculators.seoMeta' });
   const baseUrl = 'https://unitconverterhub.com';
-  const path = locale === 'en' ? '/calculators/math' : `/${locale}/calculators/math`;
+  const path = locale === 'en' ? '/calculators/others' : `/${locale}/calculators/others`;
   const canonicalUrl = `${baseUrl}${path}`;
-  const hreflangUrls = generateHreflangUrls('/calculators/math');
+  const hreflangUrls = generateHreflangUrls('/calculators/others');
   
   return {
     title: `${tSeo('title')} - UnitConverterHub.com`,
@@ -62,65 +62,25 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function MathCalculatorsPage({ params }: { params: Promise<{ locale: string }> }) {
+interface Calculator {
+  id: string;
+  titleKey: string;
+  descKey: string;
+  path: string;
+}
+
+export default async function OtherCalculatorsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'calculators' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
-  const tFaq = await getTranslations({ locale, namespace: 'calculators.mathCalculators.faq' });
-  const tSeo = await getTranslations({ locale, namespace: 'calculators.mathCalculators.seoContent' });
+  const tFaq = await getTranslations({ locale, namespace: 'calculators.otherCalculators.faq' });
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.otherCalculators.seoContent' });
   
   // Get FAQ items from translations
   const faqItems = await getFaqItems(locale);
 
-  const calculators = [
-    {
-      id: 'addition',
-      titleKey: 'addition.title',
-      descKey: 'addition.description',
-      path: '/calculators/math/addition',
-    },
-    {
-      id: 'adding-fractions',
-      titleKey: 'addingFractions.title',
-      descKey: 'addingFractions.description',
-      path: '/calculators/math/adding-fractions',
-    },
-    {
-      id: 'antilog',
-      titleKey: 'antilog.title',
-      descKey: 'antilog.description',
-      path: '/calculators/math/antilog',
-    },
-    {
-      id: 'arccos',
-      titleKey: 'arccos.title',
-      descKey: 'arccos.description',
-      path: '/calculators/math/arccos',
-    },
-    {
-      id: 'arcsin',
-      titleKey: 'arcsin.title',
-      descKey: 'arcsin.description',
-      path: '/calculators/math/arcsin',
-    },
-    {
-      id: 'arctan',
-      titleKey: 'arctan.title',
-      descKey: 'arctan.description',
-      path: '/calculators/math/arctan',
-    },
-    {
-      id: 'average',
-      titleKey: 'average.title',
-      descKey: 'average.description',
-      path: '/calculators/math/average',
-    },
-    {
-      id: 'percentage',
-      titleKey: 'percentage.title',
-      descKey: 'percentage.description',
-      path: '/calculators/math/percentage',
-    },
+  const calculators: Calculator[] = [
+    // Add calculators here as they are created
   ];
 
   return (
@@ -142,8 +102,8 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
               <span>{tCommon('home')}</span>
             </Link>
             <div className="header-content">
-              <div className="title-badge">{t('mathCalculators.badge') || 'Math'}</div>
-              <h1 className="page-title">{t('mathCalculators.title')}</h1>
+              <div className="title-badge">{t('otherCalculators.badge') || 'Others'}</div>
+              <h1 className="page-title">{t('otherCalculators.title')}</h1>
             </div>
           </div>
 
@@ -166,17 +126,6 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
                   
                   <p className="seo-paragraph">
                     {tSeo('paragraph3')}
-                  </p>
-                  
-                  <div className="seo-example">
-                    <h3 className="example-heading">{tSeo('exampleHeading')}</h3>
-                    <p className="example-text">
-                      {tSeo('exampleText')}
-                    </p>
-                  </div>
-                  
-                  <p className="seo-paragraph">
-                    {tSeo('paragraph4')}
                   </p>
                 </div>
               </div>

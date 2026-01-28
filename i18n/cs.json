@@ -331,6 +331,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Kalkulačka Arctan",
+      "description": "Kalkulačka arctan(x) pro nalezení inverzního tangens hodnoty a získání úhlu ve stupních a radiánech s obecnými řešeními.",
+      "x": "Hodnota (x, hodnota tangens)",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "result": "Výsledek",
+      "angleDegrees": "Úhel ve stupních",
+      "angleRadians": "Úhel v radiánech",
+      "calculationHeading": "Výpočet",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Kalkulačka Arctan – Inverzní Tangens (atan) ve Stupních a Radiánech",
+        "description": "Bezplatná kalkulačka arctan pro nalezení inverzního tangens (atan) hodnoty a získání úhlu jak ve stupních, tak v radiánech s obecnými řešeními. Podporuje všechny reálné vstupní hodnoty s vysvětlením krok za krokem. Ideální pro trigonometrii, geometrii a inženýrské výpočty.",
+        "keywords": "kalkulačka arctan, kalkulačka inverzního tangens, kalkulačka atan, kalkulačka inverzní tangens, arctan ve stupních, arctan v radiánech, kalkulačka trigonometrie, úhel z tangens",
+        "content": {
+          "heading": "Jak Použít Kalkulačku Arctan (Inverzní Tangens)",
+          "paragraph1": "Funkce arctan (inverzní tangens), zapsaná jako arctan(x) nebo atan(x), vám dává úhel, jehož tangens je x. Jinými slovy, pokud tan(θ) = x, pak θ = arctan(x). Tato kalkulačka vám pomůže rychle najít tento úhel jak ve stupních, tak v radiánech pro jakoukoli reálnou hodnotu x a poskytuje obecná řešení ukazující všechny možné úhly, které mají stejný tangens.",
+          "paragraph2": "Pro použití kalkulačky zadejte hodnotu pro x (hodnotu tangens). Nástroj pak vypočítá θ = arctan(x) v radiánech pomocí vestavěné funkce inverzního tangens a převede tento výsledek na stupně pomocí vzorce θ° = θ × 180 / π. Obě hodnoty jsou zobrazeny s vysokou přesností. Protože funkce tangens je periodická s periodou 180° (π radiánů), existuje nekonečně mnoho úhlů, které sdílejí stejnou hodnotu tangens.",
+          "paragraph3": "Obecné řešení pro rovnice tvaru tan(θ) = x je θ = θ₀ + k×180° ve stupních nebo θ = θ₀ + k×π v radiánech, kde θ₀ je hlavní hodnota vrácená arctan(x), a k je libovolné celé číslo. Například, pokud x = 1, pak θ₀ = arctan(1) = 45° = π/4 rad. Úplná množina řešení zahrnuje úhly jako -135°, 45°, 225°, 405° a tak dále, které mohou být zapsány kompaktně jako 45° + k×180° nebo π/4 + k×π.",
+          "paragraph4": "Naše kalkulačka arctan ověří, že váš vstup leží ve správné doméně, vypočítá jak hlavní hodnotu, tak odpovídající obecné řešovací vzorce a zobrazí úhel ve stupních a radiánech. To vám ušetří čas ve srovnání s ručními výpočty a pomůže vám pochopit periodickou povahu trigonometrických funkcí. Ať už řešíte trigonometrické rovnice, pracujete se sklony a gradienty, analyzujete vektory nebo studujete periodické jevy, tento nástroj poskytuje rychlé a spolehlivé výpočty inverzního tangens.",
+          "exampleHeading": "Příklad: Použití Kalkulačky Arctan",
+          "exampleText": "Předpokládejme, že víte, že tan(θ) = 1 a chcete najít θ. Zadejte x = 1 do kalkulačky. Kalkulačka vypočítá hlavní hodnotu θ₀ = arctan(1) = π/4 rad ≈ 1,047198 rad. Převod na stupně dává θ₀ ≈ 90°. Obecná řešení jsou: θ = 90° + k×360° a θ = π/2 + k×2π rad, kde k je libovolné celé číslo. To znamená, že úhly -135°, 45°, 225°, 405° atd. mají všechny tangens 1. Podobně, pokud tan(θ) = √3, pak θ₀ = arctan(√3) = 60° (nebo π/6 rad), s obecnými řešeními θ = 60° + k×180° a θ = π/6 + k×π."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Co je arctan?",
+              "answer": "Arctan (inverzní tangens) je inverzní funkce tangens. Pokud tan(θ) = x, pak θ = arctan(x). Vrací úhel, jehož tangens je x, obvykle uvedený v radiánech nebo stupních. Hlavní hodnota je obvykle brána v rozsahu (-90°, 90°) nebo (-π/2, π/2) radiánů."
+            },
+            {
+              "question": "Jaký je definiční obor funkce arctan?",
+              "answer": "Definiční obor arctan(x) jsou všechny reálné hodnoty (-∞ < x < ∞). Pro jakoukoli reálnou hodnotu x existuje odpovídající úhel θ takový, že tan(θ) = x, a arctan(x) vrací hlavní hodnotu tohoto úhlu."
+            },
+            {
+              "question": "Jaký je obor hodnot arctan?",
+              "answer": "Hlavní obor hodnot arctan(x) je (-π/2, π/2) v radiánech, což odpovídá (-90°, 90°) ve stupních. Protože tangens je však periodický s periodou π (180°), obecné řešení zahrnuje všechny úhly θ + k×180° (nebo θ + k×π rad), kde k je libovolné celé číslo."
+            },
+            {
+              "question": "Proč kalkulačka zobrazuje obecná řešení pro arctan?",
+              "answer": "Tangens je periodická funkce s periodou 180° (π radiánů). To znamená, že pokud tan(θ) = x, pak tan(θ + k×180°) = x pro libovolné celé číslo k. Obecné řešení ukazuje všechny možné úhly, které splňují rovnici, nejen hlavní hodnotu."
+            },
+            {
+              "question": "Je tato kalkulačka arctan zdarma?",
+              "answer": "Ano, naše kalkulačka arctan je zcela zdarma. Není vyžadována registrace ani platba. Jednoduše zadejte hodnotu pro x mezi -1 a 1 pro získání úhlu v radiánech a stupních, spolu s obecnými řešeními."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Související Kalkulačky",
+          "arcsin": "Kalkulačka Arcsin",
+          "arcsinDesc": "Najděte inverzní sinus hodnoty a získejte úhel ve stupních a radiánech s obecnými řešeními",
+          "arccos": "Kalkulačka Arccos",
+          "arccosDesc": "Najděte inverzní kosinus hodnoty a získejte úhel ve stupních a radiánech",
+          "percentage": "Kalkulačka Procent",
+          "percentageDesc": "Vypočítejte procentní hodnoty, procentní změnu a procentní vztahy"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematické Kalkulačky",
       "description": "Procházejte naši sbírku matematických kalkulaček pro všechny vaše výpočetní potřeby",

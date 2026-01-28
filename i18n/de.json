@@ -390,6 +390,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Arctan-Rechner",
+      "description": "Arctan(x)-Rechner zum Finden des inversen Tangens eines Wertes und Erhalten des Winkels in Grad und Bogenmaß mit allgemeinen Lösungen.",
+      "x": "Wert (x, Tangenswert)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "angleDegrees": "Winkel in Grad",
+      "angleRadians": "Winkel im Bogenmaß",
+      "calculationHeading": "Berechnung",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arctan-Rechner – Inverser Tangens (atan) in Grad und Bogenmaß",
+        "description": "Kostenloser arctan-Rechner zum Finden des inversen Tangens (atan) eines Wertes und Erhalten des Winkels sowohl in Grad als auch im Bogenmaß mit allgemeinen Lösungen. Unterstützt alle reellen Eingabewerte mit Schritt-für-Schritt-Erklärung. Ideal für Trigonometrie, Geometrie und Ingenieurberechnungen.",
+        "keywords": "arctan rechner, inverser tangens rechner, atan rechner, tangens invers rechner, arctan in grad, arctan in bogenmaß, trigonometrie rechner, winkel aus tangens",
+        "content": {
+          "heading": "Wie man den Arctan (Inverser Tangens) Rechner Verwendet",
+          "paragraph1": "Die Arctan-Funktion (inverser Tangens), geschrieben als arctan(x) oder atan(x), gibt Ihnen den Winkel, dessen Tangens x ist. Mit anderen Worten, wenn tan(θ) = x, dann θ = arctan(x). Dieser Rechner hilft Ihnen, diesen Winkel schnell sowohl in Grad als auch im Bogenmaß für jeden reellen Wert von x zu finden und bietet allgemeine Lösungen, die alle möglichen Winkel zeigen, die denselben Tangens haben.",
+          "paragraph2": "Um den Rechner zu verwenden, geben Sie einen Wert für x (den Tangenswert) ein. Das Tool berechnet dann θ = arctan(x) im Bogenmaß unter Verwendung der integrierten inversen Tangensfunktion und wandelt dieses Ergebnis in Grad um, indem es die Formel θ° = θ × 180 / π verwendet. Beide Werte werden mit hoher Genauigkeit angezeigt. Da die Tangensfunktion periodisch mit Periode 180° (π Bogenmaß) ist, gibt es unendlich viele Winkel, die denselben Tangenswert teilen.",
+          "paragraph3": "Die allgemeine Lösung für Gleichungen der Form tan(θ) = x ist θ = θ₀ + k×180° in Grad oder θ = θ₀ + k×π im Bogenmaß, wobei θ₀ der Hauptwert ist, der von arctan(x) zurückgegeben wird, und k eine beliebige ganze Zahl ist. Zum Beispiel, wenn x = 1, dann θ₀ = arctan(1) = 45° = π/4 rad. Die vollständige Lösungsmenge umfasst Winkel wie -135°, 45°, 225°, 405° und so weiter, die alle kompakt als 45° + k×180° oder π/4 + k×π geschrieben werden können.",
+          "paragraph4": "Unser Arctan-Rechner validiert Ihre Eingabe, berechnet sowohl den Hauptwert als auch die entsprechenden allgemeinen Lösungsformeln und zeigt den Winkel in Grad und Bogenmaß an. Dies spart Ihnen Zeit im Vergleich zu manuellen Berechnungen und reduziert das Fehlerrisiko. Ob Sie trigonometrische Gleichungen lösen, mit Steigungen und Gradienten arbeiten, Vektoren analysieren oder periodische Phänomene untersuchen, dieses Tool bietet schnelle, zuverlässige inverse Tangensberechnungen.",
+          "exampleHeading": "Beispiel: Verwendung des Arctan-Rechners",
+          "exampleText": "Angenommen, Sie wissen, dass tan(θ) = 1 ist und Sie θ finden möchten. Geben Sie x = 1 in den Rechner ein. Der Rechner berechnet den Hauptwert θ₀ = arctan(1) = π/4 rad ≈ 1,047198 rad. Die Umrechnung in Grad ergibt θ₀ ≈ 90°. Die allgemeinen Lösungen sind: θ = 90° + k×360° und θ = π/2 + k×2π rad, wobei k eine beliebige ganze Zahl ist. Das bedeutet, dass Winkel von -135°, 45°, 225°, 405° usw. alle einen Tangens von 1 haben. Ähnlich, wenn tan(θ) = √3, dann θ₀ = arctan(√3) = 60° (oder π/6 rad), mit allgemeinen Lösungen θ = 60° + k×180° und θ = π/6 + k×π."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist arctan?",
+              "answer": "Arctan (inverser Tangens) ist die Umkehrfunktion des Tangens. Wenn tan(θ) = x, dann θ = arctan(x). Es gibt den Winkel zurück, dessen Tangens x ist, normalerweise in Bogenmaß oder Grad angegeben. Der Hauptwert wird typischerweise im Bereich (-90°, 90°) oder (-π/2, π/2) Bogenmaß genommen."
+            },
+            {
+              "question": "Was ist der Definitionsbereich der Arctan-Funktion?",
+              "answer": "Der Definitionsbereich von arctan(x) sind alle reellen Zahlen (-∞ < x < ∞). Für jeden reellen Wert von x gibt es einen entsprechenden Winkel θ, sodass tan(θ) = x, und arctan(x) gibt den Hauptwert dieses Winkels zurück."
+            },
+            {
+              "question": "Was ist der Wertebereich von arctan?",
+              "answer": "Der Hauptwertebereich von arctan(x) ist (-π/2, π/2) im Bogenmaß, was (-90°, 90°) in Grad entspricht. Da Tangens jedoch periodisch mit Periode π (180°) ist, umfasst die vollständige Lösungsmenge für tan(θ) = x alle Winkel θ = θ₀ + k×π, wobei θ₀ der Hauptwert ist und k eine beliebige ganze Zahl ist."
+            },
+            {
+              "question": "Warum zeigt der Rechner allgemeine Lösungen für arctan?",
+              "answer": "Tangens ist eine periodische Funktion mit Periode 180° (π Bogenmaß). Das bedeutet, dass wenn tan(θ) = x, dann tan(θ + k×180°) = x für jede ganze Zahl k. Die allgemeinen Lösungsformeln θ = θ₀ + k×180° und θ = θ₀ + k×π zeigen alle möglichen Winkel, die denselben Tangenswert haben, nicht nur den Hauptwert."
+            },
+            {
+              "question": "Ist dieser Arctan-Rechner kostenlos?",
+              "answer": "Ja, unser Arctan-Rechner ist vollständig kostenlos. Keine Registrierung oder Zahlung erforderlich. Geben Sie einfach einen Wert für x ein, um den Winkel im Bogenmaß und in Grad zu erhalten, zusammen mit den allgemeinen Lösungsformeln."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "arcsin": "Arcsin-Rechner",
+          "arcsinDesc": "Finden Sie den inversen Sinus eines Wertes und erhalten Sie den Winkel in Grad und Bogenmaß mit allgemeinen Lösungen",
+          "arccos": "Arccos-Rechner",
+          "arccosDesc": "Finden Sie den inversen Kosinus eines Wertes und erhalten Sie den Winkel in Grad und Bogenmaß",
+          "percentage": "Prozentrechner",
+          "percentageDesc": "Berechne Prozentwerte, Prozentänderung und Prozentbeziehungen"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Mathematik-Rechner",
       "description": "Durchsuchen Sie unsere Sammlung von Mathematik-Rechnern für alle Ihre Berechnungsanforderungen",

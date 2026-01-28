@@ -331,6 +331,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Arctan Hesaplayıcı",
+      "description": "Bir değerin ters tanjantını bulmak ve genel çözümlerle açıyı derece ve radyan cinsinden almak için Arctan(x) hesaplayıcı.",
+      "x": "Değer (x, tanjant değeri)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "angleDegrees": "Açı (derece)",
+      "angleRadians": "Açı (radyan)",
+      "calculationHeading": "Hesaplama",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arctan Hesaplayıcı – Derece ve Radyan Cinsinden Ters Tanjant (atan)",
+        "description": "Bir değerin ters tanjantını (atan) bulmak ve genel çözümlerle açıyı hem derece hem de radyan cinsinden almak için ücretsiz arctan hesaplayıcı. Tüm gerçek giriş değerlerini adım adım açıklama ile destekler. Trigonometri, geometri ve mühendislik hesaplamaları için idealdir.",
+        "keywords": "arctan hesaplayıcı, ters tanjant hesaplayıcı, atan hesaplayıcı, tanjant ters hesaplayıcı, derece cinsinden arctan, radyan cinsinden arctan, trigonometri hesaplayıcı, tanjanttan açı",
+        "content": {
+          "heading": "Arctan (Ters Tanjant) Hesaplayıcısı Nasıl Kullanılır",
+          "paragraph1": "Arctan fonksiyonu (ters tanjant), arctan(x) veya atan(x) olarak yazılır ve tanjantı x olan açıyı verir. Başka bir deyişle, tan(θ) = x ise, θ = arctan(x) olur. Bu hesaplayıcı, x'in herhangi bir gerçek değeri için açıyı hem derece hem de radyan cinsinden hızlı bir şekilde bulmanıza yardımcı olur ve aynı tanjanta sahip tüm olası açıları gösteren genel çözümler sağlar.",
+          "paragraph2": "Hesaplayıcıyı kullanmak için x (tanjant değeri) için bir değer girin. Araç daha sonra yerleşik ters tanjant fonksiyonunu kullanarak radyan cinsinden θ = arctan(x) hesaplar ve bu sonucu θ° = θ × 180 / π formülünü kullanarak dereceye dönüştürür. Her iki değer de yüksek hassasiyetle gösterilir. Tanjant fonksiyonu 180° (π radyan) periyoduyla periyodik olduğundan, aynı tanjant değerini paylaşan sonsuz sayıda açı vardır.",
+          "paragraph3": "tan(θ) = x formundaki denklemler için genel çözüm, derece cinsinden θ = θ₀ + k×180° veya radyan cinsinden θ = θ₀ + k×π'dir, burada θ₀ arctan(x) tarafından döndürülen ana değerdir ve k herhangi bir tam sayıdır. Örneğin, x = 1 ise, θ₀ = arctan(1) = 45° = π/4 rad'dır. Çözümlerin tam seti -135°, 45°, 225°, 405° gibi açıları içerir ve bunların hepsi 45° + k×180° veya π/4 + k×π olarak kompakt bir şekilde yazılabilir.",
+          "paragraph4": "Arctan hesaplayıcımız girişinizi doğrular, hem ana değeri hem de karşılık gelen genel çözüm formüllerini hesaplar ve açıyı derece ve radyan cinsinden gösterir. Bu, manuel hesaplamalarla karşılaştırıldığında size zaman kazandırır ve hata riskini azaltır. İster trigonometrik denklemleri çözüyor, ister eğimler ve gradyanlarla çalışıyor, ister vektörleri analiz ediyor veya periyodik fenomenleri inceliyor olun, bu araç hızlı, güvenilir ters tanjant hesaplamaları sağlar.",
+          "exampleHeading": "Örnek: Arctan Hesaplayıcısının Kullanımı",
+          "exampleText": "tan(θ) = 1 olduğunu bildiğinizi ve θ'yi bulmak istediğinizi varsayalım. Hesaplayıcıya x = 1 girin. Hesaplayıcı ana değeri θ₀ = arctan(1) = π/4 rad ≈ 0,78539816 rad hesaplar. Dereceye dönüştürme θ₀ ≈ 45° verir. Genel çözümler: θ = 45° + k×180° ve θ = π/4 + k×π'dir, burada k herhangi bir tam sayıdır. Bu, -135°, 45°, 225°, 405° vb. açıların hepsinin tanjant 1'e sahip olduğu anlamına gelir. Benzer şekilde, tan(θ) = √3 ise, θ₀ = arctan(√3) = 60° (veya π/6 rad), genel çözümlerle θ = 60° + k×180° ve θ = π/6 + k×π."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "Arctan nedir?",
+              "answer": "Arctan (ters tanjant), tanjantın ters fonksiyonudur. tan(θ) = x ise, θ = arctan(x) olur. Tanjantı x olan açıyı döndürür, genellikle radyan veya derece cinsinden verilir. Ana değer genellikle (-90°, 90°) veya (-π/2, π/2) radyan aralığında alınır."
+            },
+            {
+              "question": "Arctan fonksiyonunun tanım kümesi nedir?",
+              "answer": "Arctan(x)'in tanım kümesi, tüm gerçek sayılardır (-∞ < x < ∞). x'in herhangi bir gerçek değeri için, tan(θ) = x olacak şekilde karşılık gelen bir açı θ vardır ve arctan(x) bu açının ana değerini döndürür."
+            },
+            {
+              "question": "Arctan'in değer aralığı nedir?",
+              "answer": "Arctan(x)'in ana değer aralığı radyan cinsinden (-π/2, π/2)'dir, bu da derece cinsinden (-90°, 90°)'ye karşılık gelir. Ancak tanjant periyodu π (180°) olan periyodik olduğundan, tan(θ) = x için tam çözüm seti, θ₀'nin ana değer olduğu ve k'nin herhangi bir tam sayı olduğu tüm açıları θ = θ₀ + k×π içerir."
+            },
+            {
+              "question": "Hesaplayıcı neden arctan için genel çözümleri gösteriyor?",
+              "answer": "Tanjant, periyodu 180° (π radyan) olan periyodik bir fonksiyondur. Bu, tan(θ) = x ise, herhangi bir k tam sayısı için tan(θ + k×180°) = x olduğu anlamına gelir. Genel çözüm formülleri θ = θ₀ + k×180° ve θ = θ₀ + k×π, yalnızca ana değeri değil, aynı tanjant değerine sahip tüm olası açıları gösterir."
+            },
+            {
+              "question": "Bu arctan hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, arctan hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Genel çözüm formülleriyle birlikte radyan ve derece cinsinden açıyı almak için x için bir değer girmeniz yeterlidir."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "arcsin": "Arcsin Hesaplayıcı",
+          "arcsinDesc": "Bir değerin ters sinüsünü bulun ve genel çözümlerle açıyı derece ve radyan cinsinden alın",
+          "arccos": "Arccos Hesaplayıcı",
+          "arccosDesc": "Bir değerin ters kosinüsünü bulun ve açıyı derece ve radyan cinsinden alın",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematik Hesap Makineleri",
       "description": "Tüm hesaplama ihtiyaçlarınız için matematik hesap makineleri koleksiyonumuzu gözden geçirin",

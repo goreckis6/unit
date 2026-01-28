@@ -14,6 +14,7 @@ export async function GET() {
     '/calculators/math/antilog',
     '/calculators/math/arccos',
     '/calculators/math/arcsin',
+    '/calculators/math/arctan',
     '/calculators/electric',
     '/calculators/electric/watts-to-kva',
     '/calculators/electric/watts-to-va',

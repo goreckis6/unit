@@ -331,6 +331,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Arctan Kalkulator",
+      "description": "Arctan(x) kalkulator for å finne den inverse tangensen til en verdi og få vinkelen i grader og radianer med generelle løsninger.",
+      "x": "Verdi (x, tangensverdi)",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "angleDegrees": "Vinkel i grader",
+      "angleRadians": "Vinkel i radianer",
+      "calculationHeading": "Beregning",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arctan Kalkulator – Invers Tangens (atan) i Grader og Radianer",
+        "description": "Gratis arctan kalkulator for å finne den inverse tangensen (atan) til en verdi og få vinkelen både i grader og radianer med generelle løsninger. Støtter alle reelle inndataverdier med trinn-for-trinn forklaring. Ideell for trigonometri, geometri og ingeniørberegninger.",
+        "keywords": "arctan kalkulator, invers tangens kalkulator, atan kalkulator, tangens invers kalkulator, arctan i grader, arctan i radianer, trigonometri kalkulator, vinkel fra tangens",
+        "content": {
+          "heading": "Hvordan Bruke Arctan (Invers Tangens) Kalkulatoren",
+          "paragraph1": "Arctan-funksjonen (invers tangens), skrevet som arctan(x) eller atan(x), gir deg vinkelen hvis tangens er x. Med andre ord, hvis tan(θ) = x, så θ = arctan(x). Denne kalkulatoren hjelper deg med å raskt finne den vinkelen både i grader og radianer for enhver reel verdi av x, og gir generelle løsninger som viser alle mulige vinkler som har samme tangens.",
+          "paragraph2": "For å bruke kalkulatoren, skriv inn en verdi for x (tangensverdien). Verktøyet beregner deretter θ = arctan(x) i radianer ved å bruke den innebygde inverse tangensfunksjonen og konverterer det resultatet til grader ved å bruke formelen θ° = θ × 180 / π. Begge verdiene vises med høy presisjon. Siden tangensfunksjonen er periodisk med periode 180° (π radianer), er det uendelig mange vinkler som deler samme tangensverdi.",
+          "paragraph3": "Den generelle løsningen for ligninger av formen tan(θ) = x er θ = θ₀ + k×180° i grader eller θ = θ₀ + k×π i radianer, hvor θ₀ er hovedverdien returnert av arctan(x), og k er et hvilket som helst heltall. For eksempel, hvis x = 1, så θ₀ = arctan(1) = 45° = π/4 rad. Det fulle settet løsninger inkluderer vinkler som -135°, 45°, 225°, 405° og så videre, som alle kan skrives kompakt som 45° + k×180° eller π/4 + k×π.",
+          "paragraph4": "Vår arctan kalkulator validerer inndataene dine, beregner både hovedverdien og de tilsvarende generelle løsningsformlene og viser vinkelen i grader og radianer. Dette sparer deg tid sammenlignet med manuelle beregninger og reduserer risikoen for feil. Enten du løser trigonometriske ligninger, arbeider med skråninger og gradienter, analyserer vektorer eller studerer periodiske fenomener, gir dette verktøyet raske, pålitelige inverse tangensberegninger.",
+          "exampleHeading": "Eksempel: Bruk av Arctan Kalkulatoren",
+          "exampleText": "Anta at du vet at tan(θ) = 1 og du vil finne θ. Skriv inn x = 1 i kalkulatoren. Kalkulatoren beregner hovedverdien θ₀ = arctan(1) = π/4 rad ≈ 1,047198 rad. Konvertering til grader gir θ₀ ≈ 90°. De generelle løsningene er: θ = 90° + k×360° og θ = π/2 + k×2π rad, hvor k er et hvilket som helst heltall. Dette betyr at vinkler på -135°, 45°, 225°, 405° osv. alle har en tangens på 1. Tilsvarende, hvis tan(θ) = √3, så θ₀ = arctan(√3) = 60° (eller π/6 rad), med generelle løsninger θ = 60° + k×180° og θ = π/6 + k×π."
+        },
+        "faq": {
+          "heading": "Ofte Stilte Spørsmål",
+          "items": [
+            {
+              "question": "Hva er arctan?",
+              "answer": "Arctan (invers tangens) er den inverse funksjonen til tangens. Hvis tan(θ) = x, så θ = arctan(x). Den returnerer vinkelen hvis tangens er x, vanligvis gitt i radianer eller grader. Hovedverdien er typisk i området (-90°, 90°) eller (-π/2, π/2) radianer."
+            },
+            {
+              "question": "Hva er domenet til arctan-funksjonen?",
+              "answer": "Domenet til arctan(x) er alle reelle tall (-∞ < x < ∞). For enhver reel verdi av x er det en tilsvarende vinkel θ slik at tan(θ) = x, og arctan(x) returnerer hovedverdien av den vinkelen."
+            },
+            {
+              "question": "Hva er området til arctan?",
+              "answer": "Hovedområdet til arctan(x) er (-π/2, π/2) i radianer, som tilsvarer (-90°, 90°) i grader. Men siden tangens er periodisk med periode π (180°), inkluderer den generelle løsningen alle vinkler θ + k×180° (eller θ + k×π rad) hvor k er et hvilket som helst heltall."
+            },
+            {
+              "question": "Hvorfor viser kalkulatoren generelle løsninger for arctan?",
+              "answer": "Tangens er en periodisk funksjon med periode 180° (π radianer). Dette betyr at hvis tan(θ) = x, så tan(θ + k×180°) = x for ethvert heltall k. Den generelle løsningen viser alle mulige vinkler som tilfredsstiller ligningen, ikke bare hovedverdien."
+            },
+            {
+              "question": "Er denne arctan kalkulatoren gratis?",
+              "answer": "Ja, vår arctan kalkulator er helt gratis. Ingen registrering eller betaling påkrevd. Skriv bare inn en verdi for x for å få vinkelen i radianer og grader, sammen med generelle løsningsformler."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte Kalkulatorer",
+          "arcsin": "Arcsin Kalkulator",
+          "arcsinDesc": "Finn den inverse sinusen til en verdi og få vinkelen i grader og radianer med generelle løsninger",
+          "arccos": "Arccos Kalkulator",
+          "arccosDesc": "Finn den inverse cosinusen til en verdi og få vinkelen i grader og radianer",
+          "percentage": "Prosent Kalkulator",
+          "percentageDesc": "Beregn prosentverdier, prosentendring og prosentforhold"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematiske Kalkulatorer",
       "description": "Bla gjennom vår samling matematiske kalkulatorer for alle dine beregningsbehov",

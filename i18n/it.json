@@ -331,6 +331,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Calcolatrice Arctan",
+      "description": "Calcolatrice arctan(x) per trovare la tangente inversa di un valore e ottenere l'angolo in gradi e radianti con soluzioni generali.",
+      "x": "Valore (x, valore della tangente)",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "angleDegrees": "Angolo in gradi",
+      "angleRadians": "Angolo in radianti",
+      "calculationHeading": "Calcolo",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Calcolatrice Arctan – Tangente Inversa (atan) in Gradi e Radianti",
+        "description": "Calcolatrice arctan gratuita per trovare la tangente inversa (atan) di un valore e ottenere l'angolo sia in gradi che in radianti con soluzioni generali. Supporta tutti i valori di input reali con spiegazione passo dopo passo. Ideale per trigonometria, geometria e calcoli ingegneristici.",
+        "keywords": "calcolatrice arctan, calcolatrice tangente inversa, calcolatrice atan, calcolatrice inversa della tangente, arctan in gradi, arctan in radianti, calcolatrice di trigonometria, angolo dalla tangente",
+        "content": {
+          "heading": "Come Usare la Calcolatrice Arctan (Tangente Inversa)",
+          "paragraph1": "La funzione arctan (tangente inversa), scritta come arctan(x) o atan(x), ti dà l'angolo la cui tangente è x. In altre parole, se tan(θ) = x, allora θ = arctan(x). Questa calcolatrice ti aiuta a trovare rapidamente quell'angolo sia in gradi che in radianti per qualsiasi valore reale di x, e fornisce soluzioni generali che mostrano tutti gli angoli possibili che hanno la stessa tangente.",
+          "paragraph2": "Per usare la calcolatrice, inserisci un valore per x (il valore della tangente). Lo strumento calcola quindi θ = arctan(x) in radianti usando la funzione tangente inversa integrata e converte quel risultato in gradi usando la formula θ° = θ × 180 / π. Entrambi i valori sono visualizzati con alta precisione. Poiché la funzione tangente è periodica con periodo 180° (π radianti), ci sono infiniti angoli che condividono lo stesso valore di tangente.",
+          "paragraph3": "La soluzione generale per equazioni della forma tan(θ) = x è θ = θ₀ + k×180° in gradi o θ = θ₀ + k×π in radianti, dove θ₀ è il valore principale restituito da arctan(x), e k è un numero intero qualsiasi. Ad esempio, se x = 1, allora θ₀ = arctan(1) = 45° = π/4 rad. L'insieme completo delle soluzioni include angoli come -135°, 45°, 225°, 405°, e così via, che possono essere scritti in modo compatto come 45° + k×180° o π/4 + k×π.",
+          "paragraph4": "La nostra calcolatrice arctan valida il tuo input, calcola sia il valore principale che le formule di soluzione generale corrispondenti e visualizza l'angolo in gradi e radianti. Questo ti fa risparmiare tempo rispetto ai calcoli manuali e riduce il rischio di errori. Che tu stia risolvendo equazioni trigonometriche, lavorando con pendenze e gradienti, analizzando vettori o studiando fenomeni periodici, questo strumento fornisce calcoli di tangente inversa rapidi e affidabili.",
+          "exampleHeading": "Esempio: Uso della Calcolatrice Arctan",
+          "exampleText": "Supponi di sapere che tan(θ) = 1 e vuoi trovare θ. Inserisci x = 1 nella calcolatrice. La calcolatrice calcola il valore principale θ₀ = arctan(1) = π/4 rad ≈ 1,047198 rad. La conversione in gradi dà θ₀ ≈ 90°. Le soluzioni generali sono: θ = 90° + k×360° e θ = π/2 + k×2π rad, dove k è un numero intero qualsiasi. Ciò significa che angoli di -135°, 45°, 225°, 405°, ecc., hanno tutti una tangente di 1. Allo stesso modo, se tan(θ) = √3, allora θ₀ = arctan(√3) = 60° (o π/6 rad), con soluzioni generali θ = 60° + k×180° e θ = π/6 + k×π."
+        },
+        "faq": {
+          "heading": "Domande Frequenti",
+          "items": [
+            {
+              "question": "Cos'è arctan?",
+              "answer": "Arctan (tangente inversa) è la funzione inversa della tangente. Se tan(θ) = x, allora θ = arctan(x). Restituisce l'angolo la cui tangente è x, solitamente dato in radianti o gradi. Il valore principale è tipicamente preso nell'intervallo (-90°, 90°) o (-π/2, π/2) radianti."
+            },
+            {
+              "question": "Qual è il dominio della funzione arctan?",
+              "answer": "Il dominio di arctan(x) sono tutti i numeri reali (-∞ < x < ∞). Per qualsiasi valore reale di x, c'è un angolo corrispondente θ tale che tan(θ) = x, e arctan(x) restituisce il valore principale di quell'angolo."
+            },
+            {
+              "question": "Qual è l'intervallo di arctan?",
+              "answer": "L'intervallo principale di arctan(x) è (-π/2, π/2) in radianti, che corrisponde a (-90°, 90°) in gradi. Tuttavia, poiché la tangente è periodica con periodo π (180°), l'insieme completo delle soluzioni per tan(θ) = x include tutti gli angoli θ = θ₀ + k×π, dove θ₀ è il valore principale e k è un numero intero qualsiasi."
+            },
+            {
+              "question": "Perché la calcolatrice mostra soluzioni generali per arctan?",
+              "answer": "La tangente è una funzione periodica con periodo 180° (π radianti). Ciò significa che se tan(θ) = x, allora tan(θ + k×180°) = x per qualsiasi numero intero k. Le formule di soluzione generale θ = θ₀ + k×180° e θ = θ₀ + k×π mostrano tutti gli angoli possibili che hanno lo stesso valore di tangente, non solo il valore principale."
+            },
+            {
+              "question": "Questa calcolatrice arctan è gratuita?",
+              "answer": "Sì, la nostra calcolatrice arctan è completamente gratuita. Non è richiesta registrazione o pagamento. Inserisci semplicemente un valore per x per ottenere l'angolo in radianti e gradi, insieme alle formule di soluzione generale."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatrici Correlate",
+          "arcsin": "Calcolatrice Arcsin",
+          "arcsinDesc": "Trova il seno inverso di un valore e ottieni l'angolo in gradi e radianti con soluzioni generali",
+          "arccos": "Calcolatrice Arccos",
+          "arccosDesc": "Trova il coseno inverso di un valore e ottieni l'angolo in gradi e radianti",
+          "percentage": "Calcolatrice Percentuali",
+          "percentageDesc": "Calcola valori percentuali, variazione percentuale e relazioni percentuali"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Calcolatrici Matematiche",
       "description": "Sfoglia la nostra collezione di calcolatrici matematiche per tutte le tue esigenze di calcolo",

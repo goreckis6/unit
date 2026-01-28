@@ -331,6 +331,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Calculator Arctan",
+      "description": "Calculator arctan(x) pentru a găsi tangenta inversă a unei valori și a obține unghiul în grade și radiani cu soluții generale.",
+      "x": "Valoare (x, valoare tangentă)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "angleDegrees": "Unghi în grade",
+      "angleRadians": "Unghi în radiani",
+      "calculationHeading": "Calcul",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Calculator Arctan – Tangenta Inversă (atan) în Grade și Radiani",
+        "description": "Calculator arctan gratuit pentru a găsi tangenta inversă (atan) a unei valori și a obține unghiul atât în grade cât și în radiani cu soluții generale. Suportă toate valorile de intrare reale cu explicație pas cu pas. Ideal pentru trigonometrie, geometrie și calcule de inginerie.",
+        "keywords": "calculator arctan, calculator tangentă inversă, calculator atan, calculator invers tangentă, arctan în grade, arctan în radiani, calculator trigonometrie, unghi din tangentă",
+        "content": {
+          "heading": "Cum să Folosești Calculatorul Arctan (Tangenta Inversă)",
+          "paragraph1": "Funcția arctan (tangenta inversă), scrisă ca arctan(x) sau atan(x), îți oferă unghiul a cărui tangentă este x. Cu alte cuvinte, dacă tan(θ) = x, atunci θ = arctan(x). Acest calculator te ajută să găsești rapid acel unghi atât în grade cât și în radiani pentru orice valoare reală a lui x și oferă soluții generale care arată toate unghiurile posibile care au aceeași tangentă.",
+          "paragraph2": "Pentru a folosi calculatorul, introdu o valoare pentru x (valoarea tangentei). Instrumentul calculează apoi θ = arctan(x) în radiani folosind funcția tangentă inversă încorporată și convertește acel rezultat în grade folosind formula θ° = θ × 180 / π. Ambele valori sunt afișate cu precizie ridicată. Deoarece funcția tangentă este periodică cu perioada 180° (π radiani), există infinit de multe unghiuri care au aceeași valoare a tangentei.",
+          "paragraph3": "Soluția generală pentru ecuații de forma tan(θ) = x este θ = θ₀ + k×180° în grade sau θ = θ₀ + k×π în radiani, unde θ₀ este valoarea principală returnată de arctan(x), iar k este orice număr întreg. De exemplu, dacă x = 1, atunci θ₀ = arctan(1) = 45° = π/4 rad. Setul complet de soluții include unghiuri precum -135°, 45°, 225°, 405° și așa mai departe, care pot fi scrise compact ca 45° + k×180° sau π/4 + k×π.",
+          "paragraph4": "Calculatorul nostru arctan validează intrarea ta, calculează atât valoarea principală cât și formulele de soluție generală corespunzătoare și afișează unghiul în grade și radiani. Acest lucru îți economisește timp comparativ cu calculele manuale și reduce riscul de erori. Fie că rezolvi ecuații trigonometrice, lucrezi cu pante și gradienți, analizezi vectori sau studiezi fenomene periodice, acest instrument oferă calcule rapide și de încredere ale tangentei inverse.",
+          "exampleHeading": "Exemplu: Folosirea Calculatorului Arctan",
+          "exampleText": "Să presupunem că știi că tan(θ) = 1 și vrei să găsești θ. Introdu x = 1 în calculator. Calculatorul calculează valoarea principală θ₀ = arctan(1) = π/4 rad ≈ 1,047198 rad. Conversia în grade dă θ₀ ≈ 90°. Soluțiile generale sunt: θ = 90° + k×360° și θ = π/2 + k×2π rad, unde k este orice număr întreg. Aceasta înseamnă că unghiurile de -135°, 45°, 225°, 405°, etc. au toate o tangentă de 1. Similar, dacă tan(θ) = √3, atunci θ₀ = arctan(√3) = 60° (sau π/6 rad), cu soluții generale θ = 60° + k×180° și θ = π/6 + k×π."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Ce este arctan?",
+              "answer": "Arctan (tangenta inversă) este funcția inversă a tangentei. Dacă tan(θ) = x, atunci θ = arctan(x). Returnează unghiul a cărui tangentă este x, de obicei dat în radiani sau grade. Valoarea principală este de obicei luată în intervalul (-90°, 90°) sau (-π/2, π/2) radiani."
+            },
+            {
+              "question": "Care este domeniul funcției arctan?",
+              "answer": "Domeniul arctan(x) este toate numerele reale (-∞ < x < ∞). Pentru orice valoare reală a lui x, există un unghi corespunzător θ astfel încât tan(θ) = x, și arctan(x) returnează valoarea principală a acelui unghi."
+            },
+            {
+              "question": "Care este intervalul arctan?",
+              "answer": "Intervalul principal al arctan(x) este (-π/2, π/2) în radiani, care corespunde cu (-90°, 90°) în grade. Cu toate acestea, deoarece tangenta este periodică cu perioada π (180°), setul complet de soluții pentru tan(θ) = x include toate unghiurile θ = θ₀ + k×π, unde θ₀ este valoarea principală și k este orice număr întreg."
+            },
+            {
+              "question": "De ce arată calculatorul soluții generale pentru arctan?",
+              "answer": "Tangenta este o funcție periodică cu perioada 180° (π radiani). Aceasta înseamnă că dacă tan(θ) = x, atunci tan(θ + k×180°) = x pentru orice număr întreg k. Formulele de soluție generală θ = θ₀ + k×180° și θ = θ₀ + k×π arată toate unghiurile posibile care au aceeași valoare a tangentei, nu doar valoarea principală."
+            },
+            {
+              "question": "Este acest calculator arctan gratuit?",
+              "answer": "Da, calculatorul nostru arctan este complet gratuit. Nu este necesară înregistrarea sau plata. Pur și simplu introdu o valoare pentru x pentru a obține unghiul în radiani și grade, împreună cu formulele de soluție generală."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Asemănătoare",
+          "arcsin": "Calculator Arcsin",
+          "arcsinDesc": "Găsește sinusul invers al unei valori și obține unghiul în grade și radiani cu soluții generale",
+          "arccos": "Calculator Arccos",
+          "arccosDesc": "Găsește cosinusul invers al unei valori și obține unghiul în grade și radiani",
+          "percentage": "Calculator Procent",
+          "percentageDesc": "Calculează valorile procentuale, schimbarea procentuală și relațiile procentuale"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Calculatoare Matematice",
       "description": "Răsfoiește colecția noastră de calculatoare matematice pentru toate nevoile tale de calcul",

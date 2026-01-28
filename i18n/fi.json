@@ -331,6 +331,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Arctan-laskin",
+      "description": "Arctan(x)-laskin käänteisen tangentin löytämiseen ja kulman saamiseen asteina ja radiaaneina yleisillä ratkaisuilla.",
+      "x": "Arvo (x, tangenttiarvo)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "angleDegrees": "Kulma asteina",
+      "angleRadians": "Kulma radiaaneina",
+      "calculationHeading": "Laskenta",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arctan-laskin – Käänteinen Tangentti (atan) Asteina ja Radiaaneina",
+        "description": "Ilmainen arctan-laskin käänteisen tangentin (atan) löytämiseen ja kulman saamiseen sekä asteina että radiaaneina yleisillä ratkaisuilla. Tukee kaikkia reaaliarvoja vaiheittaisella selityksellä. Ihanteellinen trigonometriaan, geometriaan ja tekniikan laskelmiin.",
+        "keywords": "arctan laskin, käänteinen tangentti laskin, atan laskin, tangentti käänteislaskin, arctan asteina, arctan radiaaneina, trigonometria laskin, kulma tangentista",
+        "content": {
+          "heading": "Kuinka Käyttää Arctan (Käänteinen Tangentti) Laskinta",
+          "paragraph1": "Arctan-funktio (käänteinen tangentti), kirjoitettu arctan(x) tai atan(x), antaa sinulle kulman, jonka tangentti on x. Toisin sanoen, jos tan(θ) = x, niin θ = arctan(x). Tämä laskin auttaa sinua löytämään nopeasti tuon kulman sekä asteina että radiaaneina mille tahansa reaaliarvolle x ja tarjoaa yleisiä ratkaisuja näyttäen kaikki mahdolliset kulmat, joilla on sama tangentti.",
+          "paragraph2": "Käyttääksesi laskinta, syötä arvo x:lle (tangenttiarvo). Työkalu laskee sitten θ = arctan(x) radiaaneina käyttäen sisäänrakennettua käänteistä tangenttifunktiota ja muuntaa tämän tuloksen asteiksi käyttäen kaavaa θ° = θ × 180 / π. Molemmat arvot näytetään korkealla tarkkuudella. Koska tangenttifunktio on jaksollinen jaksolla 180° (π radiaania), on äärettömän monta kulmaa, joilla on sama tangenttiarvo.",
+          "paragraph3": "Yleinen ratkaisu yhtälöille muodossa tan(θ) = x on θ = θ₀ + k×180° asteina tai θ = θ₀ + k×π radiaaneina, missä θ₀ on arctan(x):n palauttama pääarvo ja k on mikä tahansa kokonaisluku. Esimerkiksi, jos x = 1, niin θ₀ = arctan(1) = 45° = π/4 rad. Täydellinen ratkaisujoukko sisältää kulmia kuten -135°, 45°, 225°, 405° ja niin edelleen, jotka voidaan kirjoittaa kompaktisti muodossa 45° + k×180° tai π/4 + k×π.",
+          "paragraph4": "Arctan-laskimemme validoi syötteesi, laskee sekä pääarvon että vastaavat yleiset ratkaisukaavat ja näyttää kulman asteina ja radiaaneina. Tämä säästää aikaa verrattuna manuaalisiin laskelmiin ja vähentää virheiden riskiä. Olitpa ratkaisemassa trigonometrisia yhtälöitä, työskentelemässä kaltevuuksien ja gradienttien kanssa, analysoimassa vektoreita tai tutkimassa jaksollisia ilmiöitä, tämä työkalu tarjoaa nopeat, luotettavat käänteiset tangenttilaskelmat.",
+          "exampleHeading": "Esimerkki: Arctan-laskimen Käyttö",
+          "exampleText": "Oletetaan, että tiedät, että tan(θ) = 1 ja haluat löytää θ. Syötä x = 1 laskimeen. Laskin laskee pääarvon θ₀ = arctan(1) = π/4 rad ≈ 1,047198 rad. Muunnos asteiksi antaa θ₀ ≈ 90°. Yleiset ratkaisut ovat: θ = 90° + k×360° ja θ = π/2 + k×2π rad, missä k on mikä tahansa kokonaisluku. Tämä tarkoittaa, että -135°:n, 45°:n, 225°:n, 405°:n jne. kulmilla on kaikilla tangentti 1. Vastaavasti, jos tan(θ) = √3, niin θ₀ = arctan(√3) = 60° (tai π/6 rad), yleisillä ratkaisuilla θ = 60° + k×180° ja θ = π/6 + k×π."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on arctan?",
+              "answer": "Arctan (käänteinen tangentti) on tangentin käänteisfunktio. Jos tan(θ) = x, niin θ = arctan(x). Se palauttaa kulman, jonka tangentti on x, yleensä annettu radiaaneina tai asteina. Pääarvo otetaan tyypillisesti välillä (-90°, 90°) tai (-π/2, π/2) radiaania."
+            },
+            {
+              "question": "Mikä on arctan-funktion määrittelyjoukko?",
+              "answer": "Arctan(x):n määrittelyjoukko on kaikki reaaliluvut (-∞ < x < ∞). Mille tahansa reaaliarvolle x on vastaava kulma θ siten, että tan(θ) = x, ja arctan(x) palauttaa tuon kulman pääarvon."
+            },
+            {
+              "question": "Mikä on arctanin arvojoukko?",
+              "answer": "Arctan(x):n pääarvojoukko on (-π/2, π/2) radiaaneina, mikä vastaa (-90°, 90°) asteina. Koska tangentti on kuitenkin jaksollinen jaksolla π (180°), täydellinen ratkaisujoukko tan(θ) = x:lle sisältää kaikki kulmat θ = θ₀ + k×π, missä θ₀ on pääarvo ja k on mikä tahansa kokonaisluku."
+            },
+            {
+              "question": "Miksi laskin näyttää yleisiä ratkaisuja arctanille?",
+              "answer": "Tangentti on jaksollinen funktio, jonka jakso on 180° (π radiaania). Tämä tarkoittaa, että jos tan(θ) = x, niin tan(θ + k×180°) = x mille tahansa kokonaisluvulle k. Yleinen ratkaisu näyttää kaikki mahdolliset kulmat, jotka täyttävät yhtälön, ei vain pääarvon."
+            },
+            {
+              "question": "Onko tämä arctan-laskin ilmainen?",
+              "answer": "Kyllä, arctan-laskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Syötä vain arvo x:lle saadaksesi kulman radiaaneina ja asteina, yhdessä yleisten ratkaisujen kaavojen kanssa."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "arcsin": "Arcsin-laskin",
+          "arcsinDesc": "Löydä käänteinen sini arvosta ja saat kulman asteina ja radiaaneina yleisillä ratkaisuilla",
+          "arccos": "Arccos-laskin",
+          "arccosDesc": "Löydä käänteinen kosini arvosta ja saat kulman asteina ja radiaaneina",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Laske prosenttiarvot, prosenttimuutos ja prosenttisuhteet"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matemaattiset Laskimet",
       "description": "Selaa kokoelmaamme matemaattisia laskimia kaikille laskentatarpeillesi",

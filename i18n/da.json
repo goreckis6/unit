@@ -331,6 +331,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Arctan Regner",
+      "description": "Arctan(x) regner til at finde den inverse tangens af en værdi og få vinkelen i grader og radianer med generelle løsninger.",
+      "x": "Værdi (x, tangensværdi)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "angleDegrees": "Vinkel i grader",
+      "angleRadians": "Vinkel i radianer",
+      "calculationHeading": "Beregning",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arctan Regner – Invers Tangens (atan) i Grader og Radianer",
+        "description": "Gratis arctan regner til at finde den inverse tangens (atan) af en værdi og få vinkelen både i grader og radianer med generelle løsninger. Understøtter alle reelle inputværdier med trin-for-trin forklaring. Ideel til trigonometri, geometri og ingeniørberegninger.",
+        "keywords": "arctan regner, invers tangens regner, atan regner, tangens invers regner, arctan i grader, arctan i radianer, trigonometri regner, vinkel fra tangens",
+        "content": {
+          "heading": "Sådan Bruges Arctan (Invers Tangens) Regneren",
+          "paragraph1": "Arctan-funktionen (invers tangens), skrevet som arctan(x) eller atan(x), giver dig vinkelen, hvis tangens er x. Med andre ord, hvis tan(θ) = x, så θ = arctan(x). Denne regner hjælper dig med hurtigt at finde den vinkel både i grader og radianer for enhver reel værdi af x og giver generelle løsninger, der viser alle mulige vinkler, der har samme tangens.",
+          "paragraph2": "For at bruge regneren skal du indtaste en værdi for x (tangensværdien). Værktøjet beregner derefter θ = arctan(x) i radianer ved hjælp af den indbyggede inverse tangensfunktion og konverterer dette resultat til grader ved hjælp af formlen θ° = θ × 180 / π. Begge værdier vises med høj præcision. Da tangensfunktionen er periodisk med periode 180° (π radianer), er der uendeligt mange vinkler, der deler samme tangensværdi.",
+          "paragraph3": "Den generelle løsning for ligninger af formen tan(θ) = x er θ = θ₀ + k×180° i grader eller θ = θ₀ + k×π i radianer, hvor θ₀ er hovedværdien returneret af arctan(x), og k er et hvilket som helst heltal. For eksempel, hvis x = 1, så θ₀ = arctan(1) = 45° = π/4 rad. Det fulde sæt løsninger inkluderer vinkler som -135°, 45°, 225°, 405° og så videre, som alle kan skrives kompakt som 45° + k×180° eller π/4 + k×π.",
+          "paragraph4": "Vores arctan regner validerer dit input, beregner både hovedværdien og de tilsvarende generelle løsningsformler og viser vinkelen i grader og radianer. Dette sparer dig tid sammenlignet med manuelle beregninger og reducerer risikoen for fejl. Uanset om du løser trigonometriske ligninger, arbejder med skråninger og gradienter, analyserer vektorer eller studerer periodiske fænomener, giver dette værktøj hurtige, pålidelige inverse tangensberegninger.",
+          "exampleHeading": "Eksempel: Brug af Arctan Regneren",
+          "exampleText": "Antag, at du ved, at tan(θ) = 1, og du vil finde θ. Indtast x = 1 i regneren. Regneren beregner hovedværdien θ₀ = arctan(1) = π/4 rad ≈ 1,047198 rad. Konvertering til grader giver θ₀ ≈ 90°. De generelle løsninger er: θ = 90° + k×360° og θ = π/2 + k×2π rad, hvor k er et hvilket som helst heltal. Dette betyder, at vinkler på -135°, 45°, 225°, 405° osv. alle har en tangens på 1. Tilsvarende, hvis tan(θ) = √3, så θ₀ = arctan(√3) = 60° (eller π/6 rad), med generelle løsninger θ = 60° + k×180° og θ = π/6 + k×π."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er arctan?",
+              "answer": "Arctan (invers tangens) er den inverse funktion af tangens. Hvis tan(θ) = x, så θ = arctan(x). Den returnerer vinkelen, hvis tangens er x, normalt angivet i radianer eller grader. Hovedværdien er typisk i området (-90°, 90°) eller (-π/2, π/2) radianer."
+            },
+            {
+              "question": "Hvad er domænet for arctan-funktionen?",
+              "answer": "Domænet for arctan(x) er alle reelle tal (-∞ < x < ∞). For enhver reel værdi af x er der en tilsvarende vinkel θ sådan at tan(θ) = x, og arctan(x) returnerer hovedværdien af den vinkel."
+            },
+            {
+              "question": "Hvad er intervallet for arctan?",
+              "answer": "Hovedintervallet for arctan(x) er (-π/2, π/2) i radianer, hvilket svarer til (-90°, 90°) i grader. Men da tangens er periodisk med periode π (180°), inkluderer den generelle løsning alle vinkler θ + k×180° (eller θ + k×π rad), hvor k er et hvilket som helst heltal."
+            },
+            {
+              "question": "Hvorfor viser regneren generelle løsninger for arctan?",
+              "answer": "Tangens er en periodisk funktion med periode 180° (π radianer). Dette betyder, at hvis tan(θ) = x, så tan(θ + k×180°) = x for ethvert heltal k. Den generelle løsning viser alle mulige vinkler, der opfylder ligningen, ikke kun hovedværdien."
+            },
+            {
+              "question": "Er denne arctan regner gratis?",
+              "answer": "Ja, vores arctan regner er helt gratis. Ingen registrering eller betaling påkrævet. Indtast blot en værdi for x for at få vinkelen i radianer og grader, sammen med generelle løsningsformler."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Regnere",
+          "arcsin": "Arcsin Regner",
+          "arcsinDesc": "Find den inverse sinus af en værdi og få vinkelen i grader og radianer med generelle løsninger",
+          "arccos": "Arccos Regner",
+          "arccosDesc": "Find den inverse cosinus af en værdi og få vinkelen i grader og radianer",
+          "percentage": "Procentregner",
+          "percentageDesc": "Beregn procentværdier, procentændring og procentforhold"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematiske Lommeregnere",
       "description": "Gennemse vores samling matematiske lommeregnere til alle dine beregningsbehov",

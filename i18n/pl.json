@@ -331,6 +331,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Kalkulator Arctan",
+      "description": "Kalkulator arctan(x) do znajdowania odwrotnej tangensa wartości i uzyskiwania kąta w stopniach i radianach z rozwiązaniami ogólnymi.",
+      "x": "Wartość (x, wartość tangensa)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "angleDegrees": "Kąt w stopniach",
+      "angleRadians": "Kąt w radianach",
+      "calculationHeading": "Obliczenie",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Kalkulator Arctan – Odwrotny Tangens (atan) w Stopniach i Radianach",
+        "description": "Darmowy kalkulator arctan do znajdowania odwrotnej tangensa (atan) wartości i uzyskiwania kąta zarówno w stopniach, jak i radianach z rozwiązaniami ogólnymi. Obsługuje wszystkie rzeczywiste wartości wejściowe z wyjaśnieniem krok po kroku. Idealny do trygonometrii, geometrii i obliczeń inżynierskich.",
+        "keywords": "kalkulator arctan, kalkulator odwrotnej tangensa, kalkulator atan, kalkulator odwrotny tangens, arctan w stopniach, arctan w radianach, kalkulator trygonometrii, kąt z tangensa",
+        "content": {
+          "heading": "Jak Używać Kalkulatora Arctan (Odwrotny Tangens)",
+          "paragraph1": "Funkcja arctan (odwrotny tangens), zapisana jako arctan(x) lub atan(x), daje kąt, którego tangens wynosi x. Innymi słowy, jeśli tan(θ) = x, to θ = arctan(x). Ten kalkulator pomaga szybko znaleźć ten kąt zarówno w stopniach, jak i radianach dla dowolnej rzeczywistej wartości x i zapewnia rozwiązania ogólne pokazujące wszystkie możliwe kąty, które mają ten sam tangens.",
+          "paragraph2": "Aby użyć kalkulatora, wprowadź wartość dla x (wartość tangensa). Narzędzie następnie oblicza θ = arctan(x) w radianach używając wbudowanej funkcji odwrotnej tangensa i konwertuje ten wynik na stopnie używając wzoru θ° = θ × 180 / π. Obie wartości są wyświetlane z wysoką precyzją. Ponieważ funkcja tangens jest okresowa z okresem 180° (π radianów), istnieje nieskończenie wiele kątów, które mają tę samą wartość tangensa.",
+          "paragraph3": "Rozwiązanie ogólne dla równań postaci tan(θ) = x to θ = θ₀ + k×180° w stopniach lub θ = θ₀ + k×π w radianach, gdzie θ₀ jest wartością główną zwracaną przez arctan(x), a k jest dowolną liczbą całkowitą. Na przykład, jeśli x = 1, to θ₀ = arctan(1) = 45° = π/4 rad. Pełny zestaw rozwiązań obejmuje kąty takie jak -135°, 45°, 225°, 405° i tak dalej, które można zapisać zwięźle jako 45° + k×180° lub π/4 + k×π.",
+          "paragraph4": "Nasz kalkulator arctan sprawdza Twoje wejście, oblicza zarówno wartość główną, jak i odpowiadające formuły rozwiązań ogólnych oraz wyświetla kąt w stopniach i radianach. To oszczędza czas w porównaniu z obliczeniami ręcznymi i zmniejsza ryzyko błędów. Niezależnie od tego, czy rozwiązujesz równania trygonometryczne, pracujesz ze zboczami i gradientami, analizujesz wektory czy badasz zjawiska okresowe, to narzędzie zapewnia szybkie, niezawodne obliczenia odwrotnej tangensa.",
+          "exampleHeading": "Przykład: Użycie Kalkulatora Arctan",
+          "exampleText": "Załóżmy, że wiesz, że tan(θ) = 1 i chcesz znaleźć θ. Wprowadź x = 1 do kalkulatora. Kalkulator oblicza wartość główną θ₀ = arctan(1) = π/4 rad ≈ 1,047198 rad. Konwersja na stopnie daje θ₀ ≈ 90°. Rozwiązania ogólne to: θ = 90° + k×360° i θ = π/2 + k×2π rad, gdzie k jest dowolną liczbą całkowitą. Oznacza to, że kąty -135°, 45°, 225°, 405° itd. mają wszystkie tangens 1. Podobnie, jeśli tan(θ) = √3, to θ₀ = arctan(√3) = 60° (lub π/6 rad), z rozwiązaniami ogólnymi θ = 60° + k×180° i θ = π/6 + k×π."
+        },
+        "faq": {
+          "heading": "Często Zadawane Pytania",
+          "items": [
+            {
+              "question": "Co to jest arctan?",
+              "answer": "Arctan (odwrotny tangens) jest funkcją odwrotną tangensa. Jeśli tan(θ) = x, to θ = arctan(x). Zwraca kąt, którego tangens wynosi x, zwykle podany w radianach lub stopniach. Wartość główna jest zazwyczaj brana w zakresie (-90°, 90°) lub (-π/2, π/2) radianów."
+            },
+            {
+              "question": "Jaki jest dziedzina funkcji arctan?",
+              "answer": "Dziedzina arctan(x) to wszystkie liczby rzeczywiste (-∞ < x < ∞). Dla dowolnej rzeczywistej wartości x istnieje odpowiadający kąt θ taki, że tan(θ) = x, a arctan(x) zwraca wartość główną tego kąta."
+            },
+            {
+              "question": "Jaki jest zakres arctan?",
+              "answer": "Główny zakres arctan(x) to (-π/2, π/2) w radianach, co odpowiada (-90°, 90°) w stopniach. Jednak ponieważ tangens jest okresowy z okresem π (180°), pełny zestaw rozwiązań dla tan(θ) = x obejmuje wszystkie kąty θ = θ₀ + k×π, gdzie θ₀ jest wartością główną, a k jest dowolną liczbą całkowitą."
+            },
+            {
+              "question": "Dlaczego kalkulator pokazuje rozwiązania ogólne dla arctan?",
+              "answer": "Tangens jest funkcją okresową z okresem 180° (π radianów). Oznacza to, że jeśli tan(θ) = x, to tan(θ + k×180°) = x dla dowolnej liczby całkowitej k. Formuły rozwiązań ogólnych θ = θ₀ + k×180° i θ = θ₀ + k×π pokazują wszystkie możliwe kąty, które mają tę samą wartość tangensa, nie tylko wartość główną."
+            },
+            {
+              "question": "Czy ten kalkulator arctan jest darmowy?",
+              "answer": "Tak, nasz kalkulator arctan jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Po prostu wprowadź wartość x, aby uzyskać kąt w radianach i stopniach, wraz z formułami rozwiązań ogólnych."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "arcsin": "Kalkulator Arcsin",
+          "arcsinDesc": "Znajdź odwrotny sinus wartości i uzyskaj kąt w stopniach i radianach z rozwiązaniami ogólnymi",
+          "arccos": "Kalkulator Arccos",
+          "arccosDesc": "Znajdź odwrotny cosinus wartości i uzyskaj kąt w stopniach i radianach",
+          "percentage": "Kalkulator Procentów",
+          "percentageDesc": "Oblicz wartości procentowe, zmianę procentową i relacje procentowe"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Kalkulatory Matematyczne",
       "description": "Przeglądaj naszą kolekcję kalkulatorów matematycznych dla wszystkich potrzeb obliczeniowych",

@@ -331,6 +331,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Arctan Calculator",
+      "description": "Arctan(x) calculator to find the inverse tangent of a value and get the angle in degrees and radians with general solutions.",
+      "x": "Value (x, tangent value)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "angleDegrees": "Angle in degrees",
+      "angleRadians": "Angle in radians",
+      "calculationHeading": "Calculation",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arctan Calculator – Inverse Tangent (atan) in Degrees & Radians",
+        "description": "Free arctan calculator to find the inverse tangent (atan) of a value and get the angle in both degrees and radians with general solutions. Supports all real input values with step-by-step explanation. Ideal for trigonometry, geometry, and engineering calculations.",
+        "keywords": "arctan calculator, inverse tangent calculator, atan calculator, tan inverse calculator, arctan in degrees, arctan in radians, trigonometry calculator, angle from tangent",
+        "content": {
+          "heading": "How to Use the Arctan (Inverse Tangent) Calculator",
+          "paragraph1": "The arctan (inverse tangent) function, written as arctan(x) or atan(x), gives you the angle whose tangent is x. In other words, if tan(θ) = x, then θ = arctan(x). This calculator helps you quickly find that angle in both degrees and radians for any real value of x, and provides general solutions that show all possible angles that have the same tangent.",
+          "paragraph2": "To use the calculator, enter a value for x (the tangent value). The tool then computes θ = arctan(x) in radians using the built-in inverse tangent function, and converts that result to degrees using the formula θ° = θ × 180 / π. Both values are displayed with high precision. Because the tangent function is periodic with period 180° (π radians), there are infinitely many angles that share the same tangent value.",
+          "paragraph3": "The general solution for equations of the form tan(θ) = x is θ = θ₀ + k×180° in degrees or θ = θ₀ + k×π in radians, where θ₀ is the principal value returned by arctan(x), and k is any integer. For example, if x = 1, then θ₀ = arctan(1) = 45° = π/4 rad. The full set of solutions includes angles like -135°, 45°, 225°, 405°, and so on, which can all be written compactly as 45° + k×180° or π/4 + k×π.",
+          "paragraph4": "Our arctan calculator validates your input, computes both the principal value and the corresponding general solution formulas, and displays the angle in degrees and radians. This saves you time compared to manual calculations and reduces the risk of mistakes. Whether you are solving trigonometric equations, working with slopes and gradients, analyzing vectors, or studying periodic phenomena, this tool provides fast, reliable inverse tangent calculations.",
+          "exampleHeading": "Example: Using the Arctan Calculator",
+          "exampleText": "Suppose you know that tan(θ) = 1 and you want to find θ. Enter x = 1 into the calculator. The calculator computes the principal value θ₀ = arctan(1) = π/4 rad ≈ 0.78539816 rad. Converting to degrees gives θ₀ ≈ 45°. The general solutions are: θ = 45° + k×180° and θ = π/4 + k×π, where k is any integer. This means that angles of -135°, 45°, 225°, 405°, etc., all have a tangent of 1. Similarly, if tan(θ) = √3, then θ₀ = arctan(√3) = 60° (or π/3 rad), with general solutions θ = 60° + k×180° and θ = π/3 + k×π."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is arctan?",
+              "answer": "Arctan (inverse tangent) is the inverse of the tangent function. If tan(θ) = x, then θ = arctan(x). It returns the angle whose tangent is x, usually given in radians or degrees. The principal value is typically taken in the range (-90°, 90°) or (-π/2, π/2) radians."
+            },
+            {
+              "question": "What is the domain of the arctan function?",
+              "answer": "The domain of arctan(x) is all real numbers (-∞ < x < ∞). For any real value of x, there is a corresponding angle θ such that tan(θ) = x, and arctan(x) returns the principal value of that angle."
+            },
+            {
+              "question": "What is the range of arctan?",
+              "answer": "The principal range of arctan(x) is (-π/2, π/2) in radians, which corresponds to (-90°, 90°) in degrees. However, because tangent is periodic with period π (180°), the full set of solutions to tan(θ) = x includes all angles θ = θ₀ + k×π, where θ₀ is the principal value and k is any integer."
+            },
+            {
+              "question": "Why does the calculator show general solutions for arctan?",
+              "answer": "Tangent is a periodic function with period 180° (π radians). This means that if tan(θ) = x, then tan(θ + k×180°) = x for any integer k. The general solution formulas θ = θ₀ + k×180° and θ = θ₀ + k×π show all possible angles that have the same tangent value, not just the principal value."
+            },
+            {
+              "question": "Is this arctan calculator free to use?",
+              "answer": "Yes, our arctan calculator is completely free to use. No registration or payment is required. Simply enter a value for x to get the angle in radians and degrees, along with the general solution formulas."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "arcsin": "Arcsin Calculator",
+          "arcsinDesc": "Find the inverse sine of a value and get the angle in degrees and radians with general solutions",
+          "arccos": "Arccos Calculator",
+          "arccosDesc": "Find the inverse cosine of a value and get the angle in degrees and radians",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentage values, percentage change, and percentage relationships"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Math Calculators",
       "description": "Browse our collection of math calculators for all your calculation needs",

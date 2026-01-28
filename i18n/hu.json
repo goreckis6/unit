@@ -331,6 +331,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Arctan Számológép",
+      "description": "Arctan(x) számológép egy érték inverz tangensének megtalálásához és a szög megszerzéséhez fokban és radiánban általános megoldásokkal.",
+      "x": "Érték (x, tangens érték)",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "angleDegrees": "Szög fokban",
+      "angleRadians": "Szög radiánban",
+      "calculationHeading": "Számítás",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arctan Számológép – Inverz Tangens (atan) Fokban és Radiánban",
+        "description": "Ingyenes arctan számológép egy érték inverz tangensének (atan) megtalálásához és a szög megszerzéséhez fokban és radiánban általános megoldásokkal. Támogatja az összes valós bemeneti értéket lépésről lépésre magyarázattal. Ideális trigonometriához, geometriához és mérnöki számításokhoz.",
+        "keywords": "arctan számológép, inverz tangens számológép, atan számológép, tangens inverz számológép, arctan fokban, arctan radiánban, trigonometria számológép, szög tangensből",
+        "content": {
+          "heading": "Hogyan Használjuk az Arctan (Inverz Tangens) Számológépet",
+          "paragraph1": "Az arctan függvény (inverz tangens), amelyet arctan(x) vagy atan(x) formában írunk, megadja azt a szöget, amelynek tangense x. Más szavakkal, ha tan(θ) = x, akkor θ = arctan(x). Ez a számológép segít gyorsan megtalálni ezt a szöget fokban és radiánban bármely valós x értékhez, és általános megoldásokat biztosít, amelyek az összes lehetséges szöget mutatják, amelyeknek ugyanaz a tangense.",
+          "paragraph2": "A számológép használatához adjon meg egy értéket x-re (a tangens érték). Az eszköz ezután kiszámítja θ = arctan(x) értékét radiánban a beépített inverz tangens függvény használatával, és átalakítja ezt az eredményt fokokká a θ° = θ × 180 / π képlet segítségével. Mindkét érték nagy pontossággal jelenik meg. Mivel a tangens függvény periodikus 180° (π radián) periódussal, végtelenül sok szög osztozik ugyanazon tangens értéken.",
+          "paragraph3": "A tan(θ) = x alakú egyenletek általános megoldása θ = θ₀ + k×180° fokban vagy θ = θ₀ + k×π radiánban, ahol θ₀ az arctan(x) által visszaadott főérték, és k tetszőleges egész szám. Például, ha x = 1, akkor θ₀ = arctan(1) = 45° = π/4 rad. A megoldások teljes halmaza olyan szögeket tartalmaz, mint -135°, 45°, 225°, 405° és így tovább, amelyeket kompakt módon írhatunk 45° + k×180° vagy π/4 + k×π formában.",
+          "paragraph4": "Az arctan számológépünk ellenőrzi a bemeneteket, kiszámítja mind a főértéket, mind a megfelelő általános megoldási képleteket, és megjeleníti a szöget fokban és radiánban. Ez időt takarít meg a manuális számításokhoz képest és csökkenti a hibák kockázatát. Legyen Ön trigonometrikus egyenleteket megoldó diák, meredekségekkel és gradiensekkel dolgozó szakember, vektorokat elemző kutató vagy periodikus jelenségeket tanulmányozó professzionális, ez az eszköz gyors, megbízható inverz tangens számításokat biztosít.",
+          "exampleHeading": "Példa: Az Arctan Számológép Használata",
+          "exampleText": "Tegyük fel, hogy tudja, hogy tan(θ) = 1 és meg akarja találni θ-t. Adja meg x = 1 értéket a számológépbe. A számológép kiszámítja a főértéket θ₀ = arctan(1) = π/4 rad ≈ 1,047198 rad értéket. A fokokká való átalakítás θ° = 90°-ot ad. Az általános megoldások: θ = 90° + k×360° és θ = π/2 + k×2π rad, ahol k tetszőleges egész szám. Ez azt jelenti, hogy a -135°, 45°, 225°, 405° stb. szögeknek mindegyikének tangense 1. Hasonlóan, ha tan(θ) = √3, akkor θ₀ = arctan(√3) = 60° (vagy π/6 rad), általános megoldásokkal θ = 60° + k×180° és θ = π/6 + k×π."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mi az arctan?",
+              "answer": "Az arctan (inverz tangens) a tangens inverz függvénye. Ha tan(θ) = x, akkor θ = arctan(x). Visszaadja azt a szöget, amelynek tangense x, általában radiánban vagy fokban megadva. A főérték általában a (-90°, 90°) vagy (-π/2, π/2) radián tartományban van."
+            },
+            {
+              "question": "Mi az arctan függvény értelmezési tartománya?",
+              "answer": "Az arctan(x) értelmezési tartománya minden valós szám (-∞ < x < ∞). Bármely valós x értékhez létezik egy megfelelő szög θ úgy, hogy tan(θ) = x, és arctan(x) visszaadja annak a szögnek a főértékét."
+            },
+            {
+              "question": "Mi az arctan értékkészlete?",
+              "answer": "Az arctan(x) fő értékkészlete (-π/2, π/2) radiánban, ami (-90°, 90°) fokban felel meg. Mivel a tangens azonban periodikus π (180°) periódussal, a tan(θ) = x egyenlet teljes megoldáshalmaza tartalmazza az összes θ = θ₀ + k×π szöget, ahol θ₀ a főérték és k tetszőleges egész szám."
+            },
+            {
+              "question": "Miért mutatja a számológép általános megoldásokat az arctan esetében?",
+              "answer": "A tangens egy 180° (π radián) periódusú periodikus függvény. Ez azt jelenti, hogy ha tan(θ) = x, akkor tan(θ + k×180°) = x bármely k egész számra. Az általános megoldási képletek θ = θ₀ + k×180° és θ = θ₀ + k×π mutatják az összes lehetséges szöget, amelyeknek ugyanaz a tangens értéke, nem csak a főértéket."
+            },
+            {
+              "question": "Ez az arctan számológép ingyenes?",
+              "answer": "Igen, az arctan számológépünk teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Egyszerűen adjon meg egy értéket x-re, hogy megkapja a szöget radiánban és fokban, általános megoldási képletekkel együtt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Számológépek",
+          "arcsin": "Arcsin Számológép",
+          "arcsinDesc": "Keresse meg egy érték inverz szinuszát és kapja meg a szöget fokban és radiánban általános megoldásokkal",
+          "arccos": "Arccos Számológép",
+          "arccosDesc": "Keresse meg egy érték inverz koszinuszát és kapja meg a szöget fokban és radiánban",
+          "percentage": "Százalék Számológép",
+          "percentageDesc": "Számítsa ki a százalékértékeket, százalékos változást és százalékos kapcsolatokat"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematikai Számológépek",
       "description": "Böngéssze matematikai számológépeink gyűjteményét minden számítási igényére",

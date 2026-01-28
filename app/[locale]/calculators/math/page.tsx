@@ -104,6 +104,12 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
       path: '/calculators/math/arcsin',
     },
     {
+      id: 'arctan',
+      titleKey: 'arctan.title',
+      descKey: 'arctan.description',
+      path: '/calculators/math/arctan',
+    },
+    {
       id: 'percentage',
       titleKey: 'percentage.title',
       descKey: 'percentage.description',

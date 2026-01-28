@@ -331,6 +331,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Arctan Rekenmachine",
+      "description": "Arctan(x) rekenmachine om de inverse tangens van een waarde te vinden en de hoek in graden en radialen te krijgen met algemene oplossingen.",
+      "x": "Waarde (x, tangenswaarde)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "angleDegrees": "Hoek in graden",
+      "angleRadians": "Hoek in radialen",
+      "calculationHeading": "Berekening",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arctan Rekenmachine – Invers Tangens (atan) in Graden en Radialen",
+        "description": "Gratis arctan rekenmachine om de inverse tangens (atan) van een waarde te vinden en de hoek zowel in graden als radialen te krijgen met algemene oplossingen. Ondersteunt alle reële invoerwaarden met stap-voor-stap uitleg. Ideaal voor trigonometrie, geometrie en technische berekeningen.",
+        "keywords": "arctan rekenmachine, inverse tangens rekenmachine, atan rekenmachine, tangens invers rekenmachine, arctan in graden, arctan in radialen, trigonometrie rekenmachine, hoek uit tangens",
+        "content": {
+          "heading": "Hoe de Arctan (Invers Tangens) Rekenmachine te Gebruiken",
+          "paragraph1": "De arctan-functie (inverse tangens), geschreven als arctan(x) of atan(x), geeft u de hoek waarvan de tangens x is. Met andere woorden, als tan(θ) = x, dan θ = arctan(x). Deze rekenmachine helpt u snel die hoek te vinden in zowel graden als radialen voor elke reële waarde van x, en biedt algemene oplossingen die alle mogelijke hoeken tonen die dezelfde tangens hebben.",
+          "paragraph2": "Om de rekenmachine te gebruiken, voert u een waarde voor x (de tangenswaarde) in. Het hulpmiddel berekent vervolgens θ = arctan(x) in radialen met behulp van de ingebouwde inverse tangensfunctie en converteert dat resultaat naar graden met behulp van de formule θ° = θ × 180 / π. Beide waarden worden met hoge precisie weergegeven. Omdat de tangensfunctie periodiek is met periode 180° (π radialen), zijn er oneindig veel hoeken die dezelfde tangenswaarde delen.",
+          "paragraph3": "De algemene oplossing voor vergelijkingen van de vorm tan(θ) = x is θ = θ₀ + k×180° in graden of θ = θ₀ + k×π in radialen, waarbij θ₀ de hoofdwaarde is die wordt geretourneerd door arctan(x), en k een willekeurig geheel getal is. Als x bijvoorbeeld = 1, dan θ₀ = arctan(1) = 45° = π/4 rad. De volledige set oplossingen omvat hoeken zoals -135°, 45°, 225°, 405°, enzovoort, die alle compact kunnen worden geschreven als 45° + k×180° of π/4 + k×π.",
+          "paragraph4": "Onze arctan rekenmachine valideert uw invoer, berekent zowel de hoofdwaarde als de overeenkomstige algemene oplossingsformules en toont de hoek in graden en radialen. Dit bespaart u tijd in vergelijking met handmatige berekeningen en vermindert het risico op fouten. Of u nu trigonometrische vergelijkingen oplost, werkt met hellingen en gradiënten, vectoren analyseert of periodieke verschijnselen bestudeert, dit hulpmiddel biedt snelle, betrouwbare inverse tangensberekeningen.",
+          "exampleHeading": "Voorbeeld: Gebruik van de Arctan Rekenmachine",
+          "exampleText": "Stel dat u weet dat tan(θ) = 1 en u wilt θ vinden. Voer x = 1 in de rekenmachine in. De rekenmachine berekent de hoofdwaarde θ₀ = arctan(1) = π/4 rad ≈ 1,047198 rad. Conversie naar graden geeft θ₀ ≈ 90°. De algemene oplossingen zijn: θ = 90° + k×360° en θ = π/2 + k×2π rad, waarbij k een willekeurig geheel getal is. Dit betekent dat hoeken van -135°, 45°, 225°, 405°, enz. allemaal een tangens van 1 hebben. Evenzo, als tan(θ) = √3, dan θ₀ = arctan(√3) = 60° (of π/6 rad), met algemene oplossingen θ = 60° + k×180° en θ = π/6 + k×π."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            {
+              "question": "Wat is arctan?",
+              "answer": "Arctan (inverse tangens) is de inverse functie van tangens. Als tan(θ) = x, dan θ = arctan(x). Het retourneert de hoek waarvan de tangens x is, meestal gegeven in radialen of graden. De hoofdwaarde ligt meestal in het bereik (-90°, 90°) of (-π/2, π/2) radialen."
+            },
+            {
+              "question": "Wat is het domein van de arctan-functie?",
+              "answer": "Het domein van arctan(x) zijn alle reële getallen (-∞ < x < ∞). Voor elke reële waarde van x is er een overeenkomstige hoek θ zodanig dat tan(θ) = x, en arctan(x) retourneert de hoofdwaarde van die hoek."
+            },
+            {
+              "question": "Wat is het bereik van arctan?",
+              "answer": "Het hoofdbereik van arctan(x) is (-π/2, π/2) in radialen, wat overeenkomt met (-90°, 90°) in graden. Omdat tangens echter periodiek is met periode π (180°), omvat de volledige set oplossingen voor tan(θ) = x alle hoeken θ = θ₀ + k×π, waarbij θ₀ de hoofdwaarde is en k een willekeurig geheel getal is."
+            },
+            {
+              "question": "Waarom toont de rekenmachine algemene oplossingen voor arctan?",
+              "answer": "Tangens is een periodieke functie met periode 180° (π radialen). Dit betekent dat als tan(θ) = x, dan tan(θ + k×180°) = x voor elk geheel getal k. De algemene oplossingsformules θ = θ₀ + k×180° en θ = θ₀ + k×π tonen alle mogelijke hoeken die dezelfde tangenswaarde hebben, niet alleen de hoofdwaarde."
+            },
+            {
+              "question": "Is deze arctan rekenmachine gratis?",
+              "answer": "Ja, onze arctan rekenmachine is volledig gratis. Geen registratie of betaling vereist. Voer gewoon een waarde voor x in om de hoek in radialen en graden te krijgen, samen met algemene oplossingsformules."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde Rekenmachines",
+          "arcsin": "Arcsin Rekenmachine",
+          "arcsinDesc": "Vind de inverse sinus van een waarde en krijg de hoek in graden en radialen met algemene oplossingen",
+          "arccos": "Arccos Rekenmachine",
+          "arccosDesc": "Vind de inverse cosinus van een waarde en krijg de hoek in graden en radialen",
+          "percentage": "Percentage Rekenmachine",
+          "percentageDesc": "Bereken percentagewaarden, percentageverandering en percentageverhoudingen"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Wiskundige Rekenmachines",
       "description": "Blader door onze collectie wiskundige rekenmachines voor al uw rekenbehoeften",

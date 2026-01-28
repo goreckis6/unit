@@ -331,6 +331,67 @@
         }
       }
     },
+    "arctan": {
+      "title": "Arctan Kalkylator",
+      "description": "Arctan(x) kalkylator för att hitta den inversa tangensen av ett värde och få vinkeln i grader och radianer med allmänna lösningar.",
+      "x": "Värde (x, tangensvärde)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "angleDegrees": "Vinkel i grader",
+      "angleRadians": "Vinkel i radianer",
+      "calculationHeading": "Beräkning",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arctan Kalkylator – Invers Tangens (atan) i Grader och Radianer",
+        "description": "Gratis arctan kalkylator för att hitta den inversa tangensen (atan) av ett värde och få vinkeln både i grader och radianer med allmänna lösningar. Stöder alla reella indatavärden med steg-för-steg förklaring. Idealisk för trigonometri, geometri och ingenjörsberäkningar.",
+        "keywords": "arctan kalkylator, invers tangens kalkylator, atan kalkylator, tangens invers kalkylator, arctan i grader, arctan i radianer, trigonometri kalkylator, vinkel från tangens",
+        "content": {
+          "heading": "Hur man Använder Arctan (Invers Tangens) Kalkylatorn",
+          "paragraph1": "Arctan-funktionen (invers tangens), skriven som arctan(x) eller atan(x), ger dig vinkeln vars tangens är x. Med andra ord, om tan(θ) = x, då θ = arctan(x). Denna kalkylator hjälper dig snabbt hitta den vinkeln både i grader och radianer för vilket reellt värde som helst av x och ger allmänna lösningar som visar alla möjliga vinklar som har samma tangens.",
+          "paragraph2": "För att använda kalkylatorn, ange ett värde för x (tangensvärdet). Verktyget beräknar sedan θ = arctan(x) i radianer med hjälp av den inbyggda inversa tangensfunktionen och konverterar det resultatet till grader med formeln θ° = θ × 180 / π. Båda värdena visas med hög precision. Eftersom tangensfunktionen är periodisk med period 180° (π radianer), finns det oändligt många vinklar som delar samma tangensvärde.",
+          "paragraph3": "Den allmänna lösningen för ekvationer av formen tan(θ) = x är θ = θ₀ + k×180° i grader eller θ = θ₀ + k×π i radianer, där θ₀ är huvudvärdet returnerat av arctan(x), och k är ett heltal. Till exempel, om x = 1, då θ₀ = arctan(1) = 45° = π/4 rad. Den fullständiga uppsättningen lösningar inkluderar vinklar som -135°, 45°, 225°, 405° och så vidare, som alla kan skrivas kompakt som 45° + k×180° eller π/4 + k×π.",
+          "paragraph4": "Vår arctan kalkylator validerar din inmatning, beräknar både huvudvärdet och de motsvarande allmänna lösningsformlerna och visar vinkeln i grader och radianer. Detta sparar dig tid jämfört med manuella beräkningar och reducerar risken för fel. Oavsett om du löser trigonometriska ekvationer, arbetar med lutningar och gradienter, analyserar vektorer eller studerar periodiska fenomen, ger detta verktyg snabba, pålitliga inversa tangensberäkningar.",
+          "exampleHeading": "Exempel: Användning av Arctan Kalkylatorn",
+          "exampleText": "Antag att du vet att tan(θ) = 1 och du vill hitta θ. Ange x = 1 i kalkylatorn. Kalkylatorn beräknar huvudvärdet θ₀ = arctan(1) = π/4 rad ≈ 1,047198 rad. Konvertering till grader ger θ₀ ≈ 90°. De allmänna lösningarna är: θ = 90° + k×360° och θ = π/2 + k×2π rad, där k är ett heltal. Detta betyder att vinklar på -135°, 45°, 225°, 405°, etc. alla har en tangens på 1. På samma sätt, om tan(θ) = √3, då θ₀ = arctan(√3) = 60° (eller π/6 rad), med allmänna lösningar θ = 60° + k×180° och θ = π/6 + k×π."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är arctan?",
+              "answer": "Arctan (invers tangens) är den inversa funktionen av tangens. Om tan(θ) = x, då θ = arctan(x). Den returnerar vinkeln vars tangens är x, vanligtvis given i radianer eller grader. Huvudvärdet är typiskt i intervallet (-90°, 90°) eller (-π/2, π/2) radianer."
+            },
+            {
+              "question": "Vad är domänen för arctan-funktionen?",
+              "answer": "Domänen för arctan(x) är alla reella tal (-∞ < x < ∞). För vilket reellt värde som helst av x finns det en motsvarande vinkel θ sådan att tan(θ) = x, och arctan(x) returnerar huvudvärdet av den vinkeln."
+            },
+            {
+              "question": "Vad är intervallet för arctan?",
+              "answer": "Huvudintervallet för arctan(x) är (-π/2, π/2) i radianer, vilket motsvarar (-90°, 90°) i grader. Men eftersom tangens är periodisk med period π (180°), inkluderar den allmänna lösningen alla vinklar θ + k×180° (eller θ + k×π rad) där k är ett heltal."
+            },
+            {
+              "question": "Varför visar kalkylatorn allmänna lösningar för arctan?",
+              "answer": "Tangens är en periodisk funktion med period 180° (π radianer). Detta betyder att om tan(θ) = x, då tan(θ + k×180°) = x för vilket heltal k som helst. Den allmänna lösningen visar alla möjliga vinklar som uppfyller ekvationen, inte bara huvudvärdet."
+            },
+            {
+              "question": "Är denna arctan kalkylator gratis?",
+              "answer": "Ja, vår arctan kalkylator är helt gratis. Ingen registrering eller betalning krävs. Ange helt enkelt ett värde för x för att få vinkeln i radianer och grader, tillsammans med allmänna lösningsformler."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "arcsin": "Arcsin Kalkylator",
+          "arcsinDesc": "Hitta den inversa sinusen av ett värde och få vinkeln i grader och radianer med allmänna lösningar",
+          "arccos": "Arccos Kalkylator",
+          "arccosDesc": "Hitta den inversa cosinusen av ett värde och få vinkeln i grader och radianer",
+          "percentage": "Procent Kalkylator",
+          "percentageDesc": "Beräkna procentvärden, procentuell förändring och procentuella relationer"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematiska Kalkylatorer",
       "description": "Bläddra genom vår samling matematiska kalkylatorer för alla dina beräkningsbehov",

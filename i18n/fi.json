@@ -150,6 +150,64 @@
         }
       }
     },
+    "antilog": {
+      "title": "Antilogaritmilaskin",
+      "description": "Laske antilogaritmi (käänteinen logaritmi) luvusta millä tahansa kannalla heti.",
+      "value": "Arvo (logaritmi)",
+      "base": "Kanta",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "antilog": "Antilogaritmi",
+      "seo": {
+        "title": "Antilogaritmilaskin – Laske Antilogaritmit Verkossa Ilmaiseksi",
+        "description": "Ilmainen antilogaritmilaskin antilogaritmin (käänteisen logaritmin) laskemiseen millä tahansa luvulla millä tahansa kannalla. Saat hetkelliset, tarkat tulokset kannalle 10, e tai mikä tahansa mukautettu kanta. Täydellinen opiskelijoille, insinööreille ja tieteellisille laskelmille.",
+        "keywords": "antilogaritmilaskin, antilog laskin, käänteinen logaritmilaskin, logaritmi käänteislaskin, antilogaritmi kanta 10, antilogaritmi kanta e, luonnollinen antilogaritmilaskin, ilmainen laskin",
+        "content": {
+          "heading": "Kuinka Laskea Antilogaritmi",
+          "paragraph1": "Antilogaritmi (antilog) on logaritmin käänteinen operaatio. Jos log_b(x) = y, niin antilog_b(y) = x, mikä tarkoittaa x = b^y. Antilogaritmi pohjimmiltaan nostaa kannan annetun logaritmisen arvon potenssiin. Antilogaritmit ovat välttämättömiä matematiikassa, tekniikassa ja tieteellisissä laskelmissa, erityisesti kun työskennellään logaritmisilla asteikoilla, eksponentiaalisen kasvun ja tietojen analyysin kanssa.",
+          "paragraph2": "Kaava antilogin laskemiseen on: antilog_b(y) = b^y, missä b on kanta ja y on logaritmin arvo. Tavalliselle logaritmille (kanta 10): antilog₁₀(y) = 10^y. Luonnolliselle logaritmille (kanta e ≈ 2.718): antilog_e(y) = e^y. Esimerkiksi, jos log₁₀(100) = 2, niin antilog₁₀(2) = 10² = 100. Vastaavasti, jos log_e(7.389) ≈ 2, niin antilog_e(2) = e² ≈ 7.389.",
+          "paragraph3": "Antilogaritmeja käytetään lukuisissa sovelluksissa: logaritmisten arvojen muuntaminen takaisin alkuperäisiksi luvuiksi, eksponenttiyhtälöiden ratkaiseminen, eksponentiaalisen kasvun ja hajoamisen analysointi, desibeliasteikoiden käyttö akustiikassa ja elektroniikassa, pH-arvojen laskeminen kemiassa, logaritmisten tietojen käsittely tilastotieteessä ja datatieteessä, sekä logaritmisten asteikoiden muuntaminen takaisin lineaarisiksi asteikoiksi. Antilogaritmien ymmärtäminen on ratkaisevan tärkeää logaritmisten tietojen tulkitsemisessa ja käänteisten logaritmisten laskelmien suorittamisessa.",
+          "paragraph4": "Antilogaritmilaskimemme hyväksyy minkä tahansa logaritmisen arvon ja minkä tahansa kannan (suurempi kuin 0 eikä yhtä kuin 1), laskee automaattisesti antilogaritmin käyttämällä kaavaa b^y ja tarjoaa hetkelliset, tarkat tulokset. Työskenteletkö tavallisten logaritmien (kanta 10), luonnollisten logaritmien (kanta e) vai minkä tahansa mukautetun kannan kanssa, laskimemme käsittelee kaikki tapaukset tarkasti. Syötä vain logaritmin arvo ja kanta, ja saat antilogaritmin tuloksen heti.",
+          "exampleHeading": "Esimerkit:",
+          "exampleText": "Antilog₁₀(2) = 10² = 100. Antilog₁₀(3) = 10³ = 1,000. Antilog₁₀(0.3010) = 10^0.3010 ≈ 2. Antilog_e(1) = e¹ ≈ 2.718. Antilog_e(2) = e² ≈ 7.389. Antilog₂(3) = 2³ = 8. Antilog₅(2) = 5² = 25. Jos log₁₀(x) = 1.5, niin x = antilog₁₀(1.5) = 10^1.5 ≈ 31.623."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on antilogaritmi?",
+              "answer": "Antilogaritmi (antilog) on logaritmin käänteinen operaatio. Jos log_b(x) = y, niin antilog_b(y) = x, mikä tarkoittaa x = b^y. Antilogaritmi nostaa kannan annetun logaritmisen arvon potenssiin saadakseen alkuperäisen luvun takaisin."
+            },
+            {
+              "question": "Mikä on kaava antilogin laskemiseen?",
+              "answer": "Kaava on: antilog_b(y) = b^y, missä b on kanta ja y on logaritmin arvo. Kannalle 10: antilog₁₀(y) = 10^y. Kannalle e: antilog_e(y) = e^y. Mille tahansa kannalle b: antilog_b(y) = b^y."
+            },
+            {
+              "question": "Mikä on ero login ja antilogin välillä?",
+              "answer": "Logaritmi (log) löytää potenssin, johon kanta on nostettava saadakseen luvun: jos b^y = x, niin log_b(x) = y. Antilogaritmi (antilog) on käänteinen operaatio: jos log_b(x) = y, niin antilog_b(y) = x = b^y. Log muuntaa luvut potensseiksi, kun taas antilog muuntaa potenssit takaisin luvuiksi."
+            },
+            {
+              "question": "Voinko käyttää mitä tahansa kantaa antilogille?",
+              "answer": "Kyllä, voit käyttää mitä tahansa positiivista kantaa, joka on suurempi kuin 0 eikä yhtä kuin 1. Yleiset kannat sisältävät 10 (tavallinen logaritmi), e ≈ 2.718 (luonnollinen logaritmi) ja 2 (binäärilogaritmi). Laskimemme tukee mitä tahansa tarvitsemaasi mukautettua kantaa."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, antilogaritmilaskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Syötä vain logaritmin arvo ja kanta saadaksesi hetkelliset, tarkat antilogaritmitulokset."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "addition": "Yhteenlaskulaskin",
+          "additionDesc": "Lisää kokonaislukuja ja desimaaleja nopeasti ja tarkasti",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Laske prosenttiarvot, prosenttimuutos ja prosenttisuhteet",
+          "addingFractions": "Murtolukujen Lisäyslaskin",
+          "addingFractionsDesc": "Lisää ja yksinkertaista murtolukuja vaihe vaiheelta"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matemaattiset Laskimet",
       "description": "Selaa kokoelmaamme matemaattisia laskimia kaikille laskentatarpeillesi",

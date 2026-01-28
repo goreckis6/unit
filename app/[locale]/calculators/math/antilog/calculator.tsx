@@ -4,32 +4,31 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
 
-export function kvaToKw(kva: number, powerFactor: number): number {
-  if (powerFactor <= 0 || powerFactor > 1) return 0;
-  return kva * powerFactor;
+export function calculateAntilog(value: number, base: number = 10): number {
+  return Math.pow(base, value);
 }
 
-export function KvaToKwCalculator() {
-  const t = useTranslations('calculators.kvaToKw');
-  const [kva, setKva] = useState<string>('');
-  const [powerFactor, setPowerFactor] = useState<string>('0.8');
+export function AntilogCalculator() {
+  const t = useTranslations('calculators.antilog');
+  const [value, setValue] = useState<string>('');
+  const [base, setBase] = useState<string>('10');
   const [result, setResult] = useState<number | null>(null);
   const resultRef = useScrollToResult(result);
 
   const handleCalculate = () => {
-    const k = parseFloat(kva);
-    const pf = parseFloat(powerFactor);
+    const v = parseFloat(value);
+    const b = parseFloat(base);
     
-    if (!isNaN(k) && !isNaN(pf) && k > 0 && pf > 0 && pf <= 1) {
-      setResult(kvaToKw(k, pf));
+    if (!isNaN(v) && !isNaN(b) && b > 0 && b !== 1) {
+      setResult(calculateAntilog(v, b));
     } else {
       setResult(null);
     }
   };
 
   const handleReset = () => {
-    setKva('');
-    setPowerFactor('0.8');
+    setValue('');
+    setBase('10');
     setResult(null);
   };
 
@@ -38,38 +37,38 @@ export function KvaToKwCalculator() {
       <div className="input-section">
         <div className="inputs-grid">
           <div className="input-card">
-            <label htmlFor="kva" className="input-label">
-              {t('kva')}
+            <label htmlFor="value" className="input-label">
+              {t('value')}
             </label>
             <div className="input-with-unit">
               <input
-                id="kva"
+                id="value"
                 type="number"
-                value={kva}
-                onChange={(e) => setKva(e.target.value)}
+                step="any"
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
                 className="number-input"
-                placeholder="0"
+                placeholder="2"
               />
             </div>
           </div>
 
           <div className="input-card">
-            <label htmlFor="powerFactor" className="input-label">
-              {t('powerFactor')}
+            <label htmlFor="base" className="input-label">
+              {t('base')}
             </label>
             <div className="input-with-unit">
               <input
-                id="powerFactor"
+                id="base"
                 type="number"
-                step="0.01"
+                step="any"
                 min="0.01"
-                max="1"
-                value={powerFactor}
-                onChange={(e) => setPowerFactor(e.target.value)}
+                value={base}
+                onChange={(e) => setBase(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
                 className="number-input"
-                placeholder="0.8"
+                placeholder="10"
               />
             </div>
           </div>
@@ -94,10 +93,9 @@ export function KvaToKwCalculator() {
           </div>
           <div className="result-display">
             <div className="result-item">
-              <div className="result-label">Kilowatts (kW)</div>
+              <div className="result-label">{t('antilog')}</div>
               <div className="result-value-box">
-                <span className="result-value">{result.toFixed(4)}</span>
-                <span className="result-unit">kW</span>
+                <span className="result-value">{result.toFixed(6)}</span>
               </div>
             </div>
           </div>

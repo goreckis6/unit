@@ -150,6 +150,64 @@
         }
       }
     },
+    "antilog": {
+      "title": "Antilogaritme Regner",
+      "description": "Beregn antilogaritmen (invers logaritme) af et tal med enhver base øjeblikkeligt.",
+      "value": "Værdi (logaritme)",
+      "base": "Base",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "antilog": "Antilogaritme",
+      "seo": {
+        "title": "Antilogaritme Regner – Beregn Antilogaritmer Online Gratis",
+        "description": "Gratis antilogaritme regner til at beregne antilogaritmen (invers logaritme) af ethvert tal med enhver base. Få øjeblikkelige, præcise resultater for base 10, e eller enhver brugerdefineret base. Perfekt til studerende, ingeniører og videnskabelige beregninger.",
+        "keywords": "antilogaritme regner, antilog regner, invers logaritme regner, logaritme invers regner, antilogaritme base 10, antilogaritme base e, naturlig antilogaritme regner, gratis regner",
+        "content": {
+          "heading": "Sådan Beregner Man Antilogaritme",
+          "paragraph1": "Antilogaritmen (antilog) er den inverse operation af en logaritme. Hvis log_b(x) = y, så antilog_b(y) = x, hvilket betyder x = b^y. Antilogaritmen hæver i det væsentlige basen til potensen af den givne logaritmiske værdi. Antilogaritmer er essentielle i matematik, ingeniørvidenskab og videnskabelige beregninger, især når man arbejder med logaritmiske skalaer, eksponentiel vækst og dataanalyse.",
+          "paragraph2": "Formlen til beregning af antilog er: antilog_b(y) = b^y, hvor b er basen og y er logaritmeværdien. For almindelig logaritme (base 10): antilog₁₀(y) = 10^y. For naturlig logaritme (base e ≈ 2.718): antilog_e(y) = e^y. For eksempel, hvis log₁₀(100) = 2, så antilog₁₀(2) = 10² = 100. Tilsvarende, hvis log_e(7.389) ≈ 2, så antilog_e(2) = e² ≈ 7.389.",
+          "paragraph3": "Antilogaritmer bruges i talrige applikationer: konvertering af logaritmiske værdier tilbage til deres oprindelige tal, løsning af eksponentielle ligninger, analyse af eksponentiel vækst og henfald, arbejde med decibelskalaer i akustik og elektronik, beregning af pH-værdier i kemi, behandling af logaritmiske data i statistik og datavidenskab, og konvertering af logaritmiske skalaer tilbage til lineære skalaer. At forstå antilogaritmer er afgørende for at fortolke logaritmiske data og udføre inverse logaritmiske beregninger.",
+          "paragraph4": "Vores antilogaritme regner accepterer enhver logaritmisk værdi og enhver base (større end 0 og ikke lig med 1), beregner automatisk antilogaritmen ved hjælp af formlen b^y og giver øjeblikkelige, præcise resultater. Uanset om du arbejder med almindelige logaritmer (base 10), naturlige logaritmer (base e) eller enhver brugerdefineret base, håndterer vores regner alle tilfælde med præcision. Indtast blot logaritmeværdien og basen, og få antilogaritme-resultatet øjeblikkeligt.",
+          "exampleHeading": "Eksempler:",
+          "exampleText": "Antilog₁₀(2) = 10² = 100. Antilog₁₀(3) = 10³ = 1,000. Antilog₁₀(0.3010) = 10^0.3010 ≈ 2. Antilog_e(1) = e¹ ≈ 2.718. Antilog_e(2) = e² ≈ 7.389. Antilog₂(3) = 2³ = 8. Antilog₅(2) = 5² = 25. Hvis log₁₀(x) = 1.5, så x = antilog₁₀(1.5) = 10^1.5 ≈ 31.623."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er en antilogaritme?",
+              "answer": "En antilogaritme (antilog) er den inverse operation af en logaritme. Hvis log_b(x) = y, så antilog_b(y) = x, hvilket betyder x = b^y. Antilogaritmen hæver basen til potensen af den givne logaritmiske værdi for at få det oprindelige tal tilbage."
+            },
+            {
+              "question": "Hvad er formlen til at beregne antilog?",
+              "answer": "Formlen er: antilog_b(y) = b^y, hvor b er basen og y er logaritmeværdien. For base 10: antilog₁₀(y) = 10^y. For base e: antilog_e(y) = e^y. For enhver base b: antilog_b(y) = b^y."
+            },
+            {
+              "question": "Hvad er forskellen mellem log og antilog?",
+              "answer": "Logaritme (log) finder potensen, som en base skal hæves til for at få et tal: hvis b^y = x, så log_b(x) = y. Antilogaritme (antilog) er den inverse operation: hvis log_b(x) = y, så antilog_b(y) = x = b^y. Log konverterer tal til potenser, mens antilog konverterer potenser tilbage til tal."
+            },
+            {
+              "question": "Kan jeg bruge enhver base til antilog?",
+              "answer": "Ja, du kan bruge enhver positiv base større end 0 og ikke lig med 1. Almindelige baser inkluderer 10 (almindelig logaritme), e ≈ 2.718 (naturlig logaritme) og 2 (binær logaritme). Vores regner understøtter enhver brugerdefineret base, du har brug for."
+            },
+            {
+              "question": "Er denne regner gratis?",
+              "answer": "Ja, vores antilogaritme regner er helt gratis. Ingen registrering eller betaling påkrævet. Indtast blot logaritmeværdien og basen for at få øjeblikkelige, præcise antilogaritme-resultater."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Regnere",
+          "addition": "Additionsregner",
+          "additionDesc": "Læg hele tal og decimaler sammen hurtigt og præcist",
+          "percentage": "Procentregner",
+          "percentageDesc": "Beregn procentværdier, procentændring og procentforhold",
+          "addingFractions": "Brøkregner",
+          "addingFractionsDesc": "Læg brøker sammen og forenkle trin for trin"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematiske Lommeregnere",
       "description": "Gennemse vores samling matematiske lommeregnere til alle dine beregningsbehov",

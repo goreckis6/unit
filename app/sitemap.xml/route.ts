@@ -11,6 +11,7 @@ export async function GET() {
     '/calculators/math',
     '/calculators/math/addition',
     '/calculators/math/adding-fractions',
+    '/calculators/math/antilog',
     '/calculators/electric',
     '/calculators/electric/watts-to-kva',
     '/calculators/electric/watts-to-va',

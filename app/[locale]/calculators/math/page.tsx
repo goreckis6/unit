@@ -86,6 +86,12 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
       path: '/calculators/math/adding-fractions',
     },
     {
+      id: 'antilog',
+      titleKey: 'antilog.title',
+      descKey: 'antilog.description',
+      path: '/calculators/math/antilog',
+    },
+    {
       id: 'percentage',
       titleKey: 'percentage.title',
       descKey: 'percentage.description',

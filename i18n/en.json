@@ -150,6 +150,64 @@
         }
       }
     },
+    "antilog": {
+      "title": "Antilog Calculator",
+      "description": "Calculate the antilogarithm (inverse logarithm) of a number with any base instantly.",
+      "value": "Value (logarithm)",
+      "base": "Base",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "antilog": "Antilog",
+      "seo": {
+        "title": "Antilog Calculator – Calculate Antilogarithm Online for Free",
+        "description": "Free antilog calculator to calculate the antilogarithm (inverse logarithm) of any number with any base. Get instant, accurate results for base 10, e, or any custom base. Perfect for students, engineers, and scientific calculations.",
+        "keywords": "antilog calculator, antilogarithm calculator, inverse logarithm calculator, log inverse calculator, antilog base 10, antilog base e, natural antilog calculator, free calculator",
+        "content": {
+          "heading": "How to Calculate Antilog",
+          "paragraph1": "The antilogarithm (antilog) is the inverse operation of a logarithm. If log_b(x) = y, then antilog_b(y) = x, which means x = b^y. The antilogarithm essentially raises the base to the power of the given logarithm value. Antilogarithms are essential in mathematics, engineering, and scientific calculations, especially when working with logarithmic scales, exponential growth, and data analysis.",
+          "paragraph2": "The formula for calculating antilog is: antilog_b(y) = b^y, where b is the base and y is the logarithm value. For common logarithm (base 10), antilog_10(y) = 10^y. For natural logarithm (base e ≈ 2.718), antilog_e(y) = e^y. For example, if log₁₀(100) = 2, then antilog₁₀(2) = 10² = 100. Similarly, if log_e(7.389) ≈ 2, then antilog_e(2) = e² ≈ 7.389.",
+          "paragraph3": "Antilogarithms are used in numerous applications: converting logarithmic values back to their original numbers, solving exponential equations, analyzing exponential growth and decay, working with decibel scales in acoustics and electronics, calculating pH values in chemistry, processing logarithmic data in statistics and data science, and converting logarithmic scales back to linear scales. Understanding antilogarithms is crucial for interpreting logarithmic data and performing reverse logarithmic calculations.",
+          "paragraph4": "Our antilog calculator accepts any logarithm value and any base (greater than 0 and not equal to 1), automatically calculates the antilogarithm using the formula b^y, and provides instant, accurate results. Whether you're working with common logarithms (base 10), natural logarithms (base e), or any custom base, our calculator handles all cases with precision. Simply enter the logarithm value and the base, and get the antilogarithm result instantly.",
+          "exampleHeading": "Examples:",
+          "exampleText": "Antilog₁₀(2) = 10² = 100. Antilog₁₀(3) = 10³ = 1,000. Antilog₁₀(0.3010) = 10^0.3010 ≈ 2. Antilog_e(1) = e¹ ≈ 2.718. Antilog_e(2) = e² ≈ 7.389. Antilog₂(3) = 2³ = 8. Antilog₅(2) = 5² = 25. If log₁₀(x) = 1.5, then x = antilog₁₀(1.5) = 10^1.5 ≈ 31.623."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is an antilogarithm?",
+              "answer": "An antilogarithm (antilog) is the inverse operation of a logarithm. If log_b(x) = y, then antilog_b(y) = x, which means x = b^y. The antilogarithm raises the base to the power of the given logarithm value to get back the original number."
+            },
+            {
+              "question": "What is the formula for calculating antilog?",
+              "answer": "The formula is: antilog_b(y) = b^y, where b is the base and y is the logarithm value. For base 10: antilog₁₀(y) = 10^y. For base e: antilog_e(y) = e^y. For any base b: antilog_b(y) = b^y."
+            },
+            {
+              "question": "What is the difference between log and antilog?",
+              "answer": "Logarithm (log) finds the power to which a base must be raised to get a number: if b^y = x, then log_b(x) = y. Antilogarithm (antilog) is the reverse operation: if log_b(x) = y, then antilog_b(y) = x = b^y. Log converts numbers to powers, while antilog converts powers back to numbers."
+            },
+            {
+              "question": "Can I use any base for antilog?",
+              "answer": "Yes, you can use any positive base greater than 0 and not equal to 1. Common bases include 10 (common logarithm), e ≈ 2.718 (natural logarithm), and 2 (binary logarithm). Our calculator supports any custom base you need."
+            },
+            {
+              "question": "Is this calculator free to use?",
+              "answer": "Yes, our antilog calculator is completely free to use. No registration or payment is required. Simply enter the logarithm value and base to get instant, accurate antilogarithm results."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals quickly and accurately",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentage values, percentage change, and percentage relationships",
+          "addingFractions": "Adding Fractions Calculator",
+          "addingFractionsDesc": "Add and simplify fractions step by step"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Math Calculators",
       "description": "Browse our collection of math calculators for all your calculation needs",

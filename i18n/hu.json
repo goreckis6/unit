@@ -150,6 +150,64 @@
         }
       }
     },
+    "antilog": {
+      "title": "Antilogaritmus Számológép",
+      "description": "Számítsa ki egy szám antilogaritmusát (inverz logaritmusát) bármilyen alap esetén azonnal.",
+      "value": "Érték (logaritmus)",
+      "base": "Alap",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "antilog": "Antilogaritmus",
+      "seo": {
+        "title": "Antilogaritmus Számológép – Számítsa ki az Antilogaritmusokat Online Ingyenesen",
+        "description": "Ingyenes antilogaritmus számológép bármilyen szám antilogaritmusának (inverz logaritmusának) kiszámításához bármilyen alappal. Azonnali, pontos eredményeket kaphat a 10-es, e vagy bármilyen egyedi alap esetén. Tökéletes diákoknak, mérnököknek és tudományos számításokhoz.",
+        "keywords": "antilogaritmus számológép, antilog számológép, inverz logaritmus számológép, logaritmus inverz számológép, antilogaritmus alap 10, antilogaritmus alap e, természetes antilogaritmus számológép, ingyenes számológép",
+        "content": {
+          "heading": "Hogyan Számítsuk ki az Antilogaritmust",
+          "paragraph1": "Az antilogaritmus (antilog) a logaritmus inverz művelete. Ha log_b(x) = y, akkor antilog_b(y) = x, ami azt jelenti, hogy x = b^y. Az antilogaritmus lényegében az alapot a megadott logaritmikus érték hatványára emeli. Az antilogaritmusok elengedhetetlenek a matematikában, mérnöki munkában és tudományos számításokban, különösen logaritmikus skálákkal, exponenciális növekedéssel és adatelemzéssel dolgozva.",
+          "paragraph2": "Az antilog számítási képlete: antilog_b(y) = b^y, ahol b az alap és y a logaritmus értéke. A közönséges logaritmusnál (10-es alap): antilog₁₀(y) = 10^y. A természetes logaritmusnál (e ≈ 2.718 alap): antilog_e(y) = e^y. Például, ha log₁₀(100) = 2, akkor antilog₁₀(2) = 10² = 100. Hasonlóan, ha log_e(7.389) ≈ 2, akkor antilog_e(2) = e² ≈ 7.389.",
+          "paragraph3": "Az antilogaritmusokat számos alkalmazásban használják: logaritmikus értékek visszaalakítása eredeti számokká, exponenciális egyenletek megoldása, exponenciális növekedés és hanyatlás elemzése, decibel skálákkal való munka akusztikában és elektronikában, pH értékek számítása kémiában, logaritmikus adatok feldolgozása statisztikában és adattudományban, valamint logaritmikus skálák visszaalakítása lineáris skálákká. Az antilogaritmusok megértése elengedhetetlen a logaritmikus adatok értelmezéséhez és inverz logaritmikus számítások elvégzéséhez.",
+          "paragraph4": "Antilogaritmus számológépünk bármilyen logaritmikus értéket és bármilyen alapot (0-nál nagyobb és nem egyenlő 1-gyel) elfogad, automatikusan kiszámítja az antilogaritmust a b^y képlet segítségével, és azonnali, pontos eredményeket nyújt. Akár közönséges logaritmusokkal (10-es alap), természetes logaritmusokkal (e alap) vagy bármilyen egyedi alappal dolgozik, számológépünk pontosan kezeli az összes esetet. Egyszerűen adja meg a logaritmus értékét és az alapot, és azonnal megkapja az antilogaritmus eredményét.",
+          "exampleHeading": "Példák:",
+          "exampleText": "Antilog₁₀(2) = 10² = 100. Antilog₁₀(3) = 10³ = 1,000. Antilog₁₀(0.3010) = 10^0.3010 ≈ 2. Antilog_e(1) = e¹ ≈ 2.718. Antilog_e(2) = e² ≈ 7.389. Antilog₂(3) = 2³ = 8. Antilog₅(2) = 5² = 25. Ha log₁₀(x) = 1.5, akkor x = antilog₁₀(1.5) = 10^1.5 ≈ 31.623."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mi az antilogaritmus?",
+              "answer": "Az antilogaritmus (antilog) a logaritmus inverz művelete. Ha log_b(x) = y, akkor antilog_b(y) = x, ami azt jelenti, hogy x = b^y. Az antilogaritmus az alapot a megadott logaritmikus érték hatványára emeli, hogy visszakapja az eredeti számot."
+            },
+            {
+              "question": "Mi a képlet az antilog számításához?",
+              "answer": "A képlet: antilog_b(y) = b^y, ahol b az alap és y a logaritmus értéke. 10-es alapnál: antilog₁₀(y) = 10^y. e alapnál: antilog_e(y) = e^y. Bármilyen b alapnál: antilog_b(y) = b^y."
+            },
+            {
+              "question": "Mi a különbség a log és az antilog között?",
+              "answer": "A logaritmus (log) megtalálja azt a hatványt, amelyre az alapot emelni kell egy szám eléréséhez: ha b^y = x, akkor log_b(x) = y. Az antilogaritmus (antilog) az inverz művelet: ha log_b(x) = y, akkor antilog_b(y) = x = b^y. A log számokat hatványokká alakítja, míg az antilog a hatványokat visszaalakítja számokká."
+            },
+            {
+              "question": "Használhatok bármilyen alapot az antiloghoz?",
+              "answer": "Igen, bármilyen pozitív alapot használhat, amely nagyobb, mint 0 és nem egyenlő 1-gyel. A gyakori alapok közé tartozik a 10 (közönséges logaritmus), az e ≈ 2.718 (természetes logaritmus) és a 2 (bináris logaritmus). Számológépünk támogatja a szükséges egyedi alapot."
+            },
+            {
+              "question": "Ez a számológép ingyenes?",
+              "answer": "Igen, antilogaritmus számológépünk teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Egyszerűen adja meg a logaritmus értékét és az alapot azonnali, pontos antilogaritmus eredményekért."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Számológépek",
+          "addition": "Összeadás Számológép",
+          "additionDesc": "Adjon össze egész számokat és tizedeseket gyorsan és pontosan",
+          "percentage": "Százalék Számológép",
+          "percentageDesc": "Számítsa ki a százalékértékeket, százalékos változást és százalékos kapcsolatokat",
+          "addingFractions": "Törtek Összeadása Számológép",
+          "addingFractionsDesc": "Adjon össze és egyszerűsítsen törteket lépésről lépésre"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematikai Számológépek",
       "description": "Böngéssze matematikai számológépeink gyűjteményét minden számítási igényére",

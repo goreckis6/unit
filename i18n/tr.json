@@ -150,6 +150,64 @@
         }
       }
     },
+    "antilog": {
+      "title": "Antilogaritma Hesaplayıcı",
+      "description": "Herhangi bir tabanla bir sayının antilogaritmasını (ters logaritma) anında hesaplayın.",
+      "value": "Değer (logaritma)",
+      "base": "Taban",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "antilog": "Antilogaritma",
+      "seo": {
+        "title": "Antilogaritma Hesaplayıcı – Antilogaritmaları Çevrimiçi Ücretsiz Hesaplayın",
+        "description": "Herhangi bir tabanla herhangi bir sayının antilogaritmasını (ters logaritma) hesaplamak için ücretsiz antilogaritma hesaplayıcı. Taban 10, e veya herhangi bir özel taban için anında, doğru sonuçlar alın. Öğrenciler, mühendisler ve bilimsel hesaplamalar için mükemmel.",
+        "keywords": "antilogaritma hesaplayıcı, antilog hesaplayıcı, ters logaritma hesaplayıcı, logaritma ters hesaplayıcı, antilogaritma taban 10, antilogaritma taban e, doğal antilogaritma hesaplayıcı, ücretsiz hesaplayıcı",
+        "content": {
+          "heading": "Antilogaritma Nasıl Hesaplanır",
+          "paragraph1": "Antilogaritma (antilog), bir logaritmanın ters işlemidir. Eğer log_b(x) = y ise, antilog_b(y) = x, bu da x = b^y anlamına gelir. Antilogaritma, esasen tabanı verilen logaritmik değerin kuvvetine yükseltir. Antilogaritmalar matematik, mühendislik ve bilimsel hesaplamalarda, özellikle logaritmik ölçekler, üstel büyüme ve veri analizi ile çalışırken gereklidir.",
+          "paragraph2": "Antilog hesaplama formülü: antilog_b(y) = b^y, burada b taban ve y logaritma değeridir. Ortak logaritma (taban 10) için: antilog₁₀(y) = 10^y. Doğal logaritma (taban e ≈ 2.718) için: antilog_e(y) = e^y. Örneğin, eğer log₁₀(100) = 2 ise, antilog₁₀(2) = 10² = 100. Benzer şekilde, eğer log_e(7.389) ≈ 2 ise, antilog_e(2) = e² ≈ 7.389.",
+          "paragraph3": "Antilogaritmalar birçok uygulamada kullanılır: logaritmik değerleri orijinal sayılarına geri dönüştürme, üstel denklemleri çözme, üstel büyüme ve bozulmayı analiz etme, akustik ve elektronikte desibel ölçekleriyle çalışma, kimyada pH değerlerini hesaplama, istatistik ve veri biliminde logaritmik verileri işleme ve logaritmik ölçekleri doğrusal ölçeklere geri dönüştürme. Antilogaritmaları anlamak, logaritmik verileri yorumlamak ve ters logaritmik hesaplamalar yapmak için çok önemlidir.",
+          "paragraph4": "Antilogaritma hesaplayıcımız herhangi bir logaritmik değer ve herhangi bir tabanı (0'dan büyük ve 1'e eşit olmayan) kabul eder, b^y formülünü kullanarak antilogaritmayı otomatik olarak hesaplar ve anında, doğru sonuçlar sağlar. Ortak logaritmalarla (taban 10), doğal logaritmalarla (taban e) veya herhangi bir özel tabanla çalışıyor olsanız da, hesaplayıcımız tüm durumları hassasiyetle işler. Sadece logaritma değerini ve tabanı girin ve anında antilogaritma sonucunu alın.",
+          "exampleHeading": "Örnekler:",
+          "exampleText": "Antilog₁₀(2) = 10² = 100. Antilog₁₀(3) = 10³ = 1,000. Antilog₁₀(0.3010) = 10^0.3010 ≈ 2. Antilog_e(1) = e¹ ≈ 2.718. Antilog_e(2) = e² ≈ 7.389. Antilog₂(3) = 2³ = 8. Antilog₅(2) = 5² = 25. Eğer log₁₀(x) = 1.5 ise, x = antilog₁₀(1.5) = 10^1.5 ≈ 31.623."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "Antilogaritma nedir?",
+              "answer": "Antilogaritma (antilog), bir logaritmanın ters işlemidir. Eğer log_b(x) = y ise, antilog_b(y) = x, bu da x = b^y anlamına gelir. Antilogaritma, orijinal sayıyı geri almak için tabanı verilen logaritmik değerin kuvvetine yükseltir."
+            },
+            {
+              "question": "Antilog hesaplama formülü nedir?",
+              "answer": "Formül: antilog_b(y) = b^y, burada b taban ve y logaritma değeridir. Taban 10 için: antilog₁₀(y) = 10^y. Taban e için: antilog_e(y) = e^y. Herhangi bir b tabanı için: antilog_b(y) = b^y."
+            },
+            {
+              "question": "log ve antilog arasındaki fark nedir?",
+              "answer": "Logaritma (log), bir sayı elde etmek için tabanın yükseltilmesi gereken kuvveti bulur: eğer b^y = x ise, log_b(x) = y. Antilogaritma (antilog) ters işlemdir: eğer log_b(x) = y ise, antilog_b(y) = x = b^y. Log sayıları kuvvetlere dönüştürürken, antilog kuvvetleri tekrar sayılara dönüştürür."
+            },
+            {
+              "question": "Antilog için herhangi bir taban kullanabilir miyim?",
+              "answer": "Evet, 0'dan büyük ve 1'e eşit olmayan herhangi bir pozitif taban kullanabilirsiniz. Yaygın tabanlar 10 (ortak logaritma), e ≈ 2.718 (doğal logaritma) ve 2 (ikili logaritma) içerir. Hesaplayıcımız ihtiyacınız olan herhangi bir özel tabanı destekler."
+            },
+            {
+              "question": "Bu hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, antilogaritma hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Sadece logaritma değerini ve tabanı girin ve anında, doğru antilogaritma sonuçlarını alın."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "addition": "Toplama Hesaplayıcı",
+          "additionDesc": "Tam sayıları ve ondalık sayıları hızlı ve doğru bir şekilde toplayın",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın",
+          "addingFractions": "Kesir Toplama Hesaplayıcı",
+          "addingFractionsDesc": "Kesirleri adım adım toplayın ve sadeleştirin"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematik Hesap Makineleri",
       "description": "Tüm hesaplama ihtiyaçlarınız için matematik hesap makineleri koleksiyonumuzu gözden geçirin",

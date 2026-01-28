@@ -122,6 +122,12 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
       path: '/calculators/math/text-to-binary',
     },
     {
+      id: 'italic-text',
+      titleKey: 'italicText.title',
+      descKey: 'italicText.description',
+      path: '/calculators/math/italic-text',
+    },
+    {
       id: 'percentage',
       titleKey: 'percentage.title',
       descKey: 'percentage.description',

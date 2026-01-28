@@ -162,7 +162,14 @@ export function TextToBinaryCalculator() {
                 className="number-input"
                 placeholder={t('textPlaceholder')}
                 rows={8}
-                style={{ resize: 'vertical', minHeight: '200px' }}
+                style={{ 
+                  resize: 'vertical', 
+                  minHeight: '200px',
+                  wordWrap: 'break-word',
+                  wordBreak: 'break-word',
+                  overflowWrap: 'break-word',
+                  whiteSpace: 'pre-wrap'
+                }}
               />
             </div>
 
@@ -240,7 +247,9 @@ export function TextToBinaryCalculator() {
             </label>
             {result ? (
               <div className="number-input" style={{ 
-                wordBreak: 'break-all', 
+                wordWrap: 'break-word',
+                wordBreak: 'break-word',
+                overflowWrap: 'break-word',
                 whiteSpace: 'pre-wrap', 
                 minHeight: '200px',
                 resize: 'vertical',
@@ -253,7 +262,9 @@ export function TextToBinaryCalculator() {
               </div>
             ) : (
               <div className="number-input" style={{ 
-                wordBreak: 'break-all', 
+                wordWrap: 'break-word',
+                wordBreak: 'break-word',
+                overflowWrap: 'break-word',
                 whiteSpace: 'pre-wrap', 
                 minHeight: '200px',
                 resize: 'vertical',

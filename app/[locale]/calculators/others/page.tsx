@@ -84,19 +84,19 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       id: 'text-to-binary',
       titleKey: 'textToBinary.title',
       descKey: 'textToBinary.description',
-      path: '/calculators/math/text-to-binary',
+      path: '/calculators/others/text-to-binary',
     },
     {
       id: 'italic-text',
       titleKey: 'italicText.title',
       descKey: 'italicText.description',
-      path: '/calculators/math/italic-text',
+      path: '/calculators/others/italic-text',
     },
     {
       id: 'upside-down-text',
       titleKey: 'upsideDownText.title',
       descKey: 'upsideDownText.description',
-      path: '/calculators/math/upside-down-text',
+      path: '/calculators/others/upside-down-text',
     },
   ];
 

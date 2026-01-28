@@ -40,9 +40,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'calculators.textToBinary.seo' });
   const baseUrl = 'https://unitconverterhub.com';
-  const path = locale === 'en' ? '/calculators/math/text-to-binary' : `/${locale}/calculators/math/text-to-binary`;
+  const path = locale === 'en' ? '/calculators/others/text-to-binary' : `/${locale}/calculators/others/text-to-binary`;
   const canonicalUrl = `${baseUrl}${path}`;
-  const hreflangUrls = generateHreflangUrls('/calculators/math/text-to-binary');
+  const hreflangUrls = generateHreflangUrls('/calculators/others/text-to-binary');
   
   return {
     title: t('title'),

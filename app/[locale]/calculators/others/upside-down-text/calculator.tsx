@@ -88,7 +88,14 @@ export function UpsideDownTextGenerator() {
                 className="number-input"
                 placeholder={t('textPlaceholder')}
                 rows={8}
-                style={{ resize: 'vertical', minHeight: '200px' }}
+                style={{ 
+                  resize: 'vertical', 
+                  minHeight: '200px',
+                  wordWrap: 'break-word',
+                  wordBreak: 'break-word',
+                  overflowWrap: 'break-word',
+                  whiteSpace: 'pre-wrap'
+                }}
               />
             </div>
 
@@ -124,7 +131,9 @@ export function UpsideDownTextGenerator() {
             </label>
             {result ? (
               <div className="number-input" style={{ 
-                wordBreak: 'break-all', 
+                wordWrap: 'break-word',
+                wordBreak: 'break-word',
+                overflowWrap: 'break-word',
                 whiteSpace: 'pre-wrap', 
                 minHeight: '200px',
                 resize: 'vertical',
@@ -137,14 +146,16 @@ export function UpsideDownTextGenerator() {
                 justifyContent: 'space-between',
                 cursor: 'pointer'
               }} onClick={handleCopy}>
-                <span>{result}</span>
+                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{result}</span>
                 <button onClick={(e) => { e.stopPropagation(); handleCopy(); }} className="btn btn-secondary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.75rem' }}>
                   {t('copy')}
                 </button>
               </div>
             ) : (
               <div className="number-input" style={{ 
-                wordBreak: 'break-all', 
+                wordWrap: 'break-word',
+                wordBreak: 'break-word',
+                overflowWrap: 'break-word',
                 whiteSpace: 'pre-wrap', 
                 minHeight: '200px',
                 resize: 'vertical',

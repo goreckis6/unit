@@ -270,6 +270,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Arcsin-laskin",
+      "description": "Arcsin(x)-laskin käänteisen sinin löytämiseen ja kulman saamiseen asteina ja radiaaneina yleisillä ratkaisuilla.",
+      "x": "Arvo (x, siniarvo)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "angleDegrees": "Kulma asteina",
+      "angleRadians": "Kulma radiaaneina",
+      "calculationHeading": "Laskenta",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arcsin-laskin – Käänteinen Sini (asin) Asteina ja Radiaaneina",
+        "description": "Ilmainen arcsin-laskin käänteisen sinin (asin) löytämiseen ja kulman saamiseen sekä asteina että radiaaneina yleisillä ratkaisuilla. Tukee arvoja alueella [-1, 1] vaiheittaisella selityksellä. Ihanteellinen trigonometriaan, geometriaan ja tekniikan laskelmiin.",
+        "keywords": "arcsin laskin, käänteinen sini laskin, asin laskin, sini käänteislaskin, arcsin asteina, arcsin radiaaneina, trigonometria laskin, kulma sinistä",
+        "content": {
+          "heading": "Kuinka Käyttää Arcsin (Käänteinen Sini) Laskinta",
+          "paragraph1": "Arcsin-funktio (käänteinen sini), kirjoitettu arcsin(x) tai asin(x), antaa sinulle kulman, jonka sini on x. Toisin sanoen, jos sin(θ) = x, niin θ = arcsin(x). Tämä laskin auttaa sinua löytämään nopeasti tuon kulman sekä asteina että radiaaneina mille tahansa kelvolliselle siniarvolle välillä -1 ja 1 ja tarjoaa yleisiä ratkaisuja näyttäen kaikki mahdolliset kulmat.",
+          "paragraph2": "Käyttääksesi laskinta, syötä arvo x:lle välillä [-1, 1]. Työkalu laskee sitten θ = arcsin(x) radiaaneina käyttäen sisäänrakennettua käänteistä sinifunktiota ja muuntaa tämän tuloksen asteiksi käyttäen kaavaa θ° = θ × 180 / π. Molemmat arvot näytetään korkealla tarkkuudella. Koska sini on jaksollinen funktio, laskin näyttää myös yleiset ratkaisut: θ + k×360° (asteina) ja θ + k×2π (radiaaneina), missä k on mikä tahansa kokonaisluku.",
+          "paragraph3": "Arcsin-funktio on erityisen hyödyllinen, kun tiedät kulman sinin, mutta tarvitset itse kulman. Yleisiä käyttötapauksia ovat kulmien löytäminen suorakulmaisista kolmioista, trigonometristen yhtälöiden ratkaiseminen, kulmien laskeminen vektorien välillä, jaksollisten signaalien analysointi ja työskentely värähtelyliikkeen kanssa. Koska sini ei ole injektiivinen kaikille reaaliluvuille, arcsinin pääarvo määritellään välillä [-π/2, π/2] radiaania (-90°:sta 90°:een), mutta yleinen ratkaisu sisältää kaikki kulmat, jotka eroavat 360°:n (tai 2π radiaanin) monikertoina.",
+          "paragraph4": "Arcsin-laskimemme vahvistaa, että syötteesi on oikealla alueella [-1, 1], ja palauttaa sitten tarkat tulokset sekä radiaaneina että asteina, yhdessä yleisten ratkaisukaavojen kanssa. Tämä säästää aikaa verrattuna manuaalisiin laskelmiin ja auttaa sinua ymmärtämään trigonometristen funktioiden jaksollisen luonteen. Olitpa opiskelija, joka oppii trigonometriaa, opettaja, joka valmistelee esimerkkejä, tai ammattilainen, joka työskentelee kulmien kanssa, tämä työkalu tarjoaa nopeat, luotettavat käänteiset sinilaskelmat.",
+          "exampleHeading": "Esimerkki: Arcsin-laskimen Käyttö",
+          "exampleText": "Oletetaan, että tiedät, että sin(θ) = 1 ja haluat löytää θ. Syötä x = 1 laskimeen. Laskin laskee θ = arcsin(1) = π/2 rad ≈ 1,047198 rad. Muunnos asteiksi antaa θ° = 90°. Yleiset ratkaisut ovat: θ = 90° + k×360° ja θ = π/2 + k×2π rad, missä k on mikä tahansa kokonaisluku. Tämä tarkoittaa, että 90°:n, 450°:n, -270°:n jne. kulmilla on kaikilla sini 1. Vastaavasti, jos sin(θ) = 0,5, niin θ = arcsin(0,5) = 30° (tai π/6 rad), yleisillä ratkaisuilla θ = 30° + k×360° ja θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on arcsin?",
+              "answer": "Arcsin (käänteinen sini) on sinin käänteisfunktio. Jos sin(θ) = x, niin θ = arcsin(x). Se palauttaa kulman, jonka sini on x, yleensä annettu radiaaneina tai asteina. Pääarvo on välillä [-90°, 90°] tai [-π/2, π/2] radiaania."
+            },
+            {
+              "question": "Mikä on arcsin-funktion määrittelyjoukko?",
+              "answer": "Arcsin(x):n määrittelyjoukko on kaikki reaaliarvot x siten, että -1 ≤ x ≤ 1. Tämän välin ulkopuolella sinifunktio ei voi tuottaa sellaisia arvoja, joten arcsin ei ole määritelty niille reaaliluvuissa."
+            },
+            {
+              "question": "Mikä on arcsinin arvojoukko?",
+              "answer": "Arcsin(x):n pääarvojoukko on [-π/2, π/2] radiaaneina, mikä vastaa [-90°, 90°] asteina. Koska sini on kuitenkin jaksollinen, yleinen ratkaisu sisältää kaikki kulmat θ + k×360° (tai θ + k×2π rad), missä k on mikä tahansa kokonaisluku."
+            },
+            {
+              "question": "Miksi laskin näyttää yleisiä ratkaisuja?",
+              "answer": "Sini on jaksollinen funktio, jonka jakso on 360° (2π radiaania). Tämä tarkoittaa, että jos sin(θ) = x, niin sin(θ + k×360°) = x mille tahansa kokonaisluvulle k. Yleinen ratkaisu näyttää kaikki mahdolliset kulmat, jotka täyttävät yhtälön, ei vain pääarvon."
+            },
+            {
+              "question": "Onko tämä arcsin-laskin ilmainen?",
+              "answer": "Kyllä, arcsin-laskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Syötä vain arvo x:lle välillä -1 ja 1 saadaksesi kulman radiaaneina ja asteina, yhdessä yleisten ratkaisujen kanssa."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "arccos": "Arccos-laskin",
+          "arccosDesc": "Löydä käänteinen kosini arvosta ja saat kulman asteina ja radiaaneina",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Laske prosenttiarvot, prosenttimuutos ja prosenttisuhteet",
+          "antilog": "Antilogaritmilaskin",
+          "antilogDesc": "Laske luvun antilogaritmi (käänteinen logaritmi) millä tahansa kannalla"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matemaattiset Laskimet",
       "description": "Selaa kokoelmaamme matemaattisia laskimia kaikille laskentatarpeillesi",

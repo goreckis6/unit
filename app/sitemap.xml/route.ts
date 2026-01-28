@@ -13,6 +13,7 @@ export async function GET() {
     '/calculators/math/adding-fractions',
     '/calculators/math/antilog',
     '/calculators/math/arccos',
+    '/calculators/math/arcsin',
     '/calculators/electric',
     '/calculators/electric/watts-to-kva',
     '/calculators/electric/watts-to-va',

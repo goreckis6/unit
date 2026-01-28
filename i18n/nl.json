@@ -270,6 +270,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Arcsin Rekenmachine",
+      "description": "Arcsin(x) rekenmachine om de inverse sinus van een waarde te vinden en de hoek in graden en radialen te krijgen met algemene oplossingen.",
+      "x": "Waarde (x, sinuswaarde)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "angleDegrees": "Hoek in graden",
+      "angleRadians": "Hoek in radialen",
+      "calculationHeading": "Berekening",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arcsin Rekenmachine – Inverse Sinus (asin) in Graden en Radialen",
+        "description": "Gratis arcsin rekenmachine om de inverse sinus (asin) van een waarde te vinden en de hoek zowel in graden als radialen te krijgen met algemene oplossingen. Ondersteunt waarden in het domein [-1, 1] met stap-voor-stap uitleg. Ideaal voor trigonometrie, geometrie en technische berekeningen.",
+        "keywords": "arcsin rekenmachine, inverse sinus rekenmachine, asin rekenmachine, sinus invers rekenmachine, arcsin in graden, arcsin in radialen, trigonometrie rekenmachine, hoek uit sinus",
+        "content": {
+          "heading": "Hoe de Arcsin (Inverse Sinus) Rekenmachine te Gebruiken",
+          "paragraph1": "De arcsin-functie (inverse sinus), geschreven als arcsin(x) of asin(x), geeft u de hoek waarvan de sinus x is. Met andere woorden, als sin(θ) = x, dan θ = arcsin(x). Deze rekenmachine helpt u snel die hoek te vinden in zowel graden als radialen voor elke geldige sinuswaarde tussen -1 en 1, en biedt algemene oplossingen die alle mogelijke hoeken tonen.",
+          "paragraph2": "Om de rekenmachine te gebruiken, voert u een waarde voor x in binnen het bereik [-1, 1]. Het hulpmiddel berekent vervolgens θ = arcsin(x) in radialen met behulp van de ingebouwde inverse sinusfunctie en converteert dat resultaat naar graden met behulp van de formule θ° = θ × 180 / π. Beide waarden worden met hoge precisie weergegeven. Omdat sinus een periodieke functie is, toont de rekenmachine ook algemene oplossingen: θ + k×360° (in graden) en θ + k×2π (in radialen), waarbij k een willekeurig geheel getal is.",
+          "paragraph3": "De arcsin-functie is vooral nuttig wanneer u de sinus van een hoek kent maar de hoek zelf nodig heeft. Veelvoorkomende gebruikssituaties zijn het vinden van hoeken in rechthoekige driehoeken, het oplossen van trigonometrische vergelijkingen, het berekenen van hoeken tussen vectoren, het analyseren van periodieke signalen en werken met oscillerende beweging. Omdat sinus niet injectief is over alle reële getallen, wordt de hoofdwaarde van arcsin gedefinieerd in het interval [-π/2, π/2] radialen (-90° tot 90°), maar de algemene oplossing omvat alle hoeken die verschillen met veelvouden van 360° (of 2π radialen).",
+          "paragraph4": "Onze arcsin rekenmachine valideert dat uw invoer binnen het juiste domein [-1, 1] ligt en retourneert vervolgens nauwkeurige resultaten in zowel radialen als graden, samen met de algemene oplossingsformules. Dit bespaart u tijd in vergelijking met handmatige berekeningen en helpt u de periodieke aard van trigonometrische functies te begrijpen. Of u nu een student bent die trigonometrie leert, een leraar die voorbeelden voorbereidt, of een professional die met hoeken werkt, dit hulpmiddel biedt snelle, betrouwbare inverse sinusberekeningen.",
+          "exampleHeading": "Voorbeeld: Gebruik van de Arcsin Rekenmachine",
+          "exampleText": "Stel dat u weet dat sin(θ) = 1 en u wilt θ vinden. Voer x = 1 in de rekenmachine in. De rekenmachine berekent θ = arcsin(1) = π/2 rad ≈ 1,047198 rad. Conversie naar graden geeft θ° = 90°. De algemene oplossingen zijn: θ = 90° + k×360° en θ = π/2 + k×2π rad, waarbij k een willekeurig geheel getal is. Dit betekent dat hoeken van 90°, 450°, -270°, enz. allemaal een sinus van 1 hebben. Evenzo, als sin(θ) = 0,5, dan θ = arcsin(0,5) = 30° (of π/6 rad), met algemene oplossingen θ = 30° + k×360° en θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            {
+              "question": "Wat is arcsin?",
+              "answer": "Arcsin (inverse sinus) is de inverse functie van sinus. Als sin(θ) = x, dan θ = arcsin(x). Het retourneert de hoek waarvan de sinus x is, meestal gegeven in radialen of graden. De hoofdwaarde ligt in het bereik [-90°, 90°] of [-π/2, π/2] radialen."
+            },
+            {
+              "question": "Wat is het domein van de arcsin-functie?",
+              "answer": "Het domein van arcsin(x) zijn alle reële waarden x zodanig dat -1 ≤ x ≤ 1. Buiten dit interval kan de sinusfunctie dergelijke waarden niet produceren, dus arcsin is niet gedefinieerd voor hen in reële getallen."
+            },
+            {
+              "question": "Wat is het bereik van arcsin?",
+              "answer": "Het hoofdbereik van arcsin(x) is [-π/2, π/2] in radialen, wat overeenkomt met [-90°, 90°] in graden. Omdat sinus echter periodiek is, omvat de algemene oplossing alle hoeken θ + k×360° (of θ + k×2π rad) waarbij k een willekeurig geheel getal is."
+            },
+            {
+              "question": "Waarom toont de rekenmachine algemene oplossingen?",
+              "answer": "Sinus is een periodieke functie met periode 360° (2π radialen). Dit betekent dat als sin(θ) = x, dan sin(θ + k×360°) = x voor elk geheel getal k. De algemene oplossing toont alle mogelijke hoeken die aan de vergelijking voldoen, niet alleen de hoofdwaarde."
+            },
+            {
+              "question": "Is deze arcsin rekenmachine gratis?",
+              "answer": "Ja, onze arcsin rekenmachine is volledig gratis. Geen registratie of betaling vereist. Voer gewoon een waarde voor x in tussen -1 en 1 om de hoek in radialen en graden te krijgen, samen met algemene oplossingen."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde Rekenmachines",
+          "arccos": "Arccos Rekenmachine",
+          "arccosDesc": "Vind de inverse cosinus van een waarde en krijg de hoek in graden en radialen",
+          "percentage": "Percentage Rekenmachine",
+          "percentageDesc": "Bereken percentagewaarden, percentageverandering en percentageverhoudingen",
+          "antilog": "Antilogaritme Rekenmachine",
+          "antilogDesc": "Bereken de antilogaritme (inverse logaritme) van een getal met elk grondtal"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Wiskundige Rekenmachines",
       "description": "Blader door onze collectie wiskundige rekenmachines voor al uw rekenbehoeften",

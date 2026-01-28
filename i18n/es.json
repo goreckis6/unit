@@ -270,6 +270,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Calculadora de Arcsin",
+      "description": "Calculadora arcsin(x) para encontrar el seno inverso de un valor y obtener el ángulo en grados y radianes con soluciones generales.",
+      "x": "Valor (x, valor del seno)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "angleDegrees": "Ángulo en grados",
+      "angleRadians": "Ángulo en radianes",
+      "calculationHeading": "Cálculo",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Calculadora de Arcsin – Seno Inverso (asin) en Grados y Radianes",
+        "description": "Calculadora de arcsin gratuita para encontrar el seno inverso (asin) de un valor y obtener el ángulo tanto en grados como en radianes con soluciones generales. Admite valores en el dominio [-1, 1] con explicación paso a paso. Ideal para trigonometría, geometría y cálculos de ingeniería.",
+        "keywords": "calculadora arcsin, calculadora seno inverso, calculadora asin, calculadora inversa del seno, arcsin en grados, arcsin en radianes, calculadora de trigonometría, ángulo a partir del seno",
+        "content": {
+          "heading": "Cómo Usar la Calculadora de Arcsin (Seno Inverso)",
+          "paragraph1": "La función arcsin (seno inverso), escrita como arcsin(x) o asin(x), le da el ángulo cuyo seno es x. En otras palabras, si sin(θ) = x, entonces θ = arcsin(x). Esta calculadora le ayuda a encontrar rápidamente ese ángulo tanto en grados como en radianes para cualquier valor de seno válido entre -1 y 1, y proporciona soluciones generales mostrando todos los ángulos posibles.",
+          "paragraph2": "Para usar la calculadora, introduzca un valor para x en el intervalo [-1, 1]. La herramienta calcula entonces θ = arcsin(x) en radianes utilizando la función de seno inverso integrada y convierte ese resultado a grados usando la fórmula θ° = θ × 180 / π. Ambos valores se muestran con alta precisión. Dado que el seno es una función periódica, la calculadora también muestra soluciones generales: θ + k×360° (en grados) y θ + k×2π (en radianes), donde k es cualquier número entero.",
+          "paragraph3": "La función arcsin es especialmente útil cuando conoce el seno de un ángulo pero necesita el ángulo en sí. Los casos de uso comunes incluyen encontrar ángulos en triángulos rectángulos, resolver ecuaciones trigonométricas, calcular ángulos entre vectores, analizar señales periódicas y trabajar con movimiento oscilatorio. Dado que el seno no es inyectivo en todos los números reales, el valor principal de arcsin se define en el intervalo [-π/2, π/2] radianes (-90° a 90°), pero la solución general incluye todos los ángulos que difieren en múltiplos de 360° (o 2π radianes).",
+          "paragraph4": "Nuestra calculadora de arcsin valida que su entrada se encuentre dentro del dominio correcto [-1, 1] y luego devuelve resultados precisos tanto en radianes como en grados, junto con las fórmulas de solución general. Esto le ahorra tiempo en comparación con los cálculos manuales y le ayuda a comprender la naturaleza periódica de las funciones trigonométricas. Ya sea que sea un estudiante que aprende trigonometría, un profesor que prepara ejemplos o un profesional que trabaja con ángulos, esta herramienta proporciona cálculos de seno inverso rápidos y fiables.",
+          "exampleHeading": "Ejemplo: Uso de la Calculadora de Arcsin",
+          "exampleText": "Suponga que sabe que sin(θ) = 1 y desea encontrar θ. Introduzca x = 1 en la calculadora. La calculadora computa θ = arcsin(1) = π/2 rad ≈ 1,57079633 rad. Al convertir a grados obtenemos θ° = 90°. Las soluciones generales son: θ = 90° + k×360° y θ = π/2 + k×2π rad, donde k es cualquier número entero. Esto significa que los ángulos de 90°, 450°, -270°, etc., todos tienen un seno de 1. De forma similar, si sin(θ) = 0,5, entonces θ = arcsin(0,5) = 30° (o π/6 rad), con soluciones generales θ = 30° + k×360° y θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es arcsin?",
+              "answer": "Arcsin (seno inverso) es la función inversa del seno. Si sin(θ) = x, entonces θ = arcsin(x). Devuelve el ángulo cuyo seno es x, normalmente dado en radianes o grados. El valor principal está en el rango [-90°, 90°] o [-π/2, π/2] radianes."
+            },
+            {
+              "question": "¿Cuál es el dominio de la función arcsin?",
+              "answer": "El dominio de arcsin(x) son todos los valores reales x tales que -1 ≤ x ≤ 1. Fuera de este intervalo, la función seno no puede producir esos valores, por lo que arcsin no está definido para ellos en los números reales."
+            },
+            {
+              "question": "¿Cuál es el rango de arcsin?",
+              "answer": "El rango principal de arcsin(x) es [-π/2, π/2] en radianes, lo que corresponde a [-90°, 90°] en grados. Sin embargo, dado que el seno es periódico, la solución general incluye todos los ángulos θ + k×360° (o θ + k×2π rad) donde k es cualquier número entero."
+            },
+            {
+              "question": "¿Por qué la calculadora muestra soluciones generales?",
+              "answer": "El seno es una función periódica con período 360° (2π radianes). Esto significa que si sin(θ) = x, entonces sin(θ + k×360°) = x para cualquier número entero k. La solución general muestra todos los ángulos posibles que satisfacen la ecuación, no solo el valor principal."
+            },
+            {
+              "question": "¿La calculadora de arcsin es gratuita?",
+              "answer": "Sí, nuestra calculadora de arcsin es completamente gratuita. No se requiere registro ni pago. Simplemente introduzca un valor de x entre -1 y 1 para obtener el ángulo en radianes y grados, junto con soluciones generales."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "arccos": "Calculadora de Arccos",
+          "arccosDesc": "Encuentra el coseno inverso de un valor y obtén el ángulo en grados y radianes",
+          "percentage": "Calculadora de Porcentajes",
+          "percentageDesc": "Calcula valores porcentuales, cambio porcentual y relaciones porcentuales",
+          "antilog": "Calculadora de Antilogaritmo",
+          "antilogDesc": "Calcula el antilogaritmo (logaritmo inverso) de un número con cualquier base"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Calculadoras Matemáticas",
       "description": "Explore nuestra colección de calculadoras matemáticas para todas sus necesidades de cálculo",

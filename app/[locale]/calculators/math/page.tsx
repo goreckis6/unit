@@ -98,6 +98,12 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
       path: '/calculators/math/arccos',
     },
     {
+      id: 'arcsin',
+      titleKey: 'arcsin.title',
+      descKey: 'arcsin.description',
+      path: '/calculators/math/arcsin',
+    },
+    {
       id: 'percentage',
       titleKey: 'percentage.title',
       descKey: 'percentage.description',

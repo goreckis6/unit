@@ -270,6 +270,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Kalkulačka Arcsin",
+      "description": "Kalkulačka arcsin(x) na nájdenie inverzného sínusu hodnoty a získanie uhla v stupňoch a radiánoch s všeobecnými riešeniami.",
+      "x": "Hodnota (x, hodnota sínusu)",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "angleDegrees": "Uhol v stupňoch",
+      "angleRadians": "Uhol v radiánoch",
+      "calculationHeading": "Výpočet",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Kalkulačka Arcsin – Inverzný Sínus (asin) v Stupňoch a Radiánoch",
+        "description": "Bezplatná kalkulačka arcsin na nájdenie inverzného sínusu (asin) hodnoty a získanie uhla v stupňoch aj radiánoch s všeobecnými riešeniami. Podporuje hodnoty v doméne [-1, 1] s vysvetlením krok za krokom. Ideálne pre trigonometriu, geometriu a inžinierske výpočty.",
+        "keywords": "kalkulačka arcsin, kalkulačka inverzného sínusu, kalkulačka asin, kalkulačka inverzný sínus, arcsin v stupňoch, arcsin v radiánoch, kalkulačka trigonometrie, uhol zo sínusu",
+        "content": {
+          "heading": "Ako Použiť Kalkulačku Arcsin (Inverzný Sínus)",
+          "paragraph1": "Funkcia arcsin (inverzný sínus), zapísaná ako arcsin(x) alebo asin(x), vám dáva uhol, ktorého sínus je x. Inými slovami, ak sin(θ) = x, potom θ = arcsin(x). Táto kalkulačka vám pomôže rýchlo nájsť tento uhol v stupňoch aj radiánoch pre akúkoľvek platnú hodnotu sínusu medzi -1 a 1 a poskytuje všeobecné riešenia zobrazujúce všetky možné uhly.",
+          "paragraph2": "Na použitie kalkulačky zadajte hodnotu pre x v rozsahu [-1, 1]. Nástroj potom vypočíta θ = arcsin(x) v radiánoch pomocou vstavaného inverzného sínusu a prevedie tento výsledok na stupne pomocou vzorca θ° = θ × 180 / π. Obe hodnoty sú zobrazené s vysokou presnosťou. Pretože sínus je periodická funkcia, kalkulačka tiež zobrazuje všeobecné riešenia: θ + k×360° (v stupňoch) a θ + k×2π (v radiánoch), kde k je ľubovoľné celé číslo.",
+          "paragraph3": "Funkcia arcsin je obzvlášť užitočná, keď poznáte sínus uhla, ale potrebujete samotný uhol. Bežné prípady použitia zahŕňajú hľadanie uhlov v pravouhlých trojuholníkoch, riešenie trigonometrických rovníc, výpočet uhlov medzi vektormi, analýzu periodických signálov a prácu s kmitavým pohybom. Pretože sínus nie je injektívny cez všetky reálne čísla, hlavná hodnota arcsin je definovaná v intervale [-π/2, π/2] radiánov (-90° až 90°), ale všeobecné riešenie zahŕňa všetky uhly, ktoré sa líšia o násobky 360° (alebo 2π radiánov).",
+          "paragraph4": "Naša kalkulačka arcsin overuje, že váš vstup leží v správnej doméne [-1, 1], a potom vráti presné výsledky v radiánoch aj stupňoch, spolu so vzorcami všeobecného riešenia. Toto vám ušetrí čas v porovnaní s manuálnymi výpočtami a pomôže vám pochopiť periodickú povahu trigonometrických funkcií. Či už ste študent učiac sa trigonometriu, učiteľ pripravujúci príklady alebo profesionál pracujúci s uhlami, tento nástroj poskytuje rýchle, spoľahlivé výpočty inverzného sínusu.",
+          "exampleHeading": "Príklad: Použitie Kalkulačky Arcsin",
+          "exampleText": "Predpokladajme, že viete, že sin(θ) = 1 a chcete nájsť θ. Zadajte x = 1 do kalkulačky. Kalkulačka vypočíta θ = arcsin(1) = π/2 rad ≈ 1,047198 rad. Konverzia na stupne dáva θ° = 90°. Všeobecné riešenia sú: θ = 90° + k×360° a θ = π/2 + k×2π rad, kde k je ľubovoľné celé číslo. To znamená, že uhly 90°, 450°, -270° atď. majú všetky sínus 1. Podobne, ak sin(θ) = 0,5, potom θ = arcsin(0,5) = 30° (alebo π/6 rad), s všeobecnými riešeniami θ = 30° + k×360° a θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Čo je arcsin?",
+              "answer": "Arcsin (inverzný sínus) je inverzná funkcia sínusu. Ak sin(θ) = x, potom θ = arcsin(x). Vracia uhol, ktorého sínus je x, zvyčajne uvedený v radiánoch alebo stupňoch. Hlavná hodnota je v rozsahu [-90°, 90°] alebo [-π/2, π/2] radiánov."
+            },
+            {
+              "question": "Aký je definičný obor funkcie arcsin?",
+              "answer": "Definičný obor arcsin(x) sú všetky reálne hodnoty x také, že -1 ≤ x ≤ 1. Mimo tohto intervalu nemôže funkcia sínus produkovať také hodnoty, takže arcsin nie je pre ne definovaný v reálnych číslach."
+            },
+            {
+              "question": "Aký je obor hodnôt arcsin?",
+              "answer": "Hlavný obor hodnôt arcsin(x) je [-π/2, π/2] v radiánoch, čo zodpovedá [-90°, 90°] v stupňoch. Avšak, pretože sínus je periodický, všeobecné riešenie zahŕňa všetky uhly θ + k×360° (alebo θ + k×2π rad), kde k je ľubovoľné celé číslo."
+            },
+            {
+              "question": "Prečo kalkulačka zobrazuje všeobecné riešenia?",
+              "answer": "Sínus je periodická funkcia s periódou 360° (2π radiánov). To znamená, že ak sin(θ) = x, potom sin(θ + k×360°) = x pre ľubovoľné celé číslo k. Všeobecné riešenie ukazuje všetky možné uhly, ktoré spĺňajú rovnicu, nielen hlavnú hodnotu."
+            },
+            {
+              "question": "Je táto kalkulačka arcsin zadarmo?",
+              "answer": "Áno, naša kalkulačka arcsin je úplne zadarmo. Nie je potrebná registrácia ani platba. Jednoducho zadajte hodnotu pre x medzi -1 a 1 pre získanie uhla v radiánoch a stupňoch, spolu s všeobecnými riešeniami."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace Kalkulačky",
+          "arccos": "Kalkulačka Arccos",
+          "arccosDesc": "Nájdite inverzný kosínus hodnoty a získajte uhol v stupňoch a radiánoch",
+          "percentage": "Kalkulačka Percent",
+          "percentageDesc": "Vypočítajte percentuálne hodnoty, percentuálnu zmenu a percentuálne vzťahy",
+          "antilog": "Kalkulačka Antilogaritmu",
+          "antilogDesc": "Vypočítajte antilogaritmus (inverzný logaritmus) čísla s ľubovoľným základom"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematické Kalkulačky",
       "description": "Prechádzajte našou zbierkou matematických kalkulačiek pre všetky vaše výpočtové potreby",

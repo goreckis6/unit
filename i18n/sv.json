@@ -270,6 +270,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Arcsin Kalkylator",
+      "description": "Arcsin(x) kalkylator för att hitta den inversa sinusen av ett värde och få vinkeln i grader och radianer med allmänna lösningar.",
+      "x": "Värde (x, sinusvärde)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "angleDegrees": "Vinkel i grader",
+      "angleRadians": "Vinkel i radianer",
+      "calculationHeading": "Beräkning",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arcsin Kalkylator – Invers Sinus (asin) i Grader och Radianer",
+        "description": "Gratis arcsin kalkylator för att hitta den inversa sinusen (asin) av ett värde och få vinkeln både i grader och radianer med allmänna lösningar. Stöder värden i domänen [-1, 1] med steg-för-steg förklaring. Idealisk för trigonometri, geometri och ingenjörsberäkningar.",
+        "keywords": "arcsin kalkylator, invers sinus kalkylator, asin kalkylator, sinus invers kalkylator, arcsin i grader, arcsin i radianer, trigonometri kalkylator, vinkel från sinus",
+        "content": {
+          "heading": "Hur man Använder Arcsin (Invers Sinus) Kalkylatorn",
+          "paragraph1": "Arcsin-funktionen (invers sinus), skriven som arcsin(x) eller asin(x), ger dig vinkeln vars sinus är x. Med andra ord, om sin(θ) = x, då θ = arcsin(x). Denna kalkylator hjälper dig snabbt hitta den vinkeln både i grader och radianer för vilket giltigt sinusvärde som helst mellan -1 och 1 och ger allmänna lösningar som visar alla möjliga vinklar.",
+          "paragraph2": "För att använda kalkylatorn, ange ett värde för x i intervallet [-1, 1]. Verktyget beräknar sedan θ = arcsin(x) i radianer med hjälp av den inbyggda inversa sinusfunktionen och konverterar det resultatet till grader med formeln θ° = θ × 180 / π. Båda värdena visas med hög precision. Eftersom sinus är en periodisk funktion visar kalkylatorn också allmänna lösningar: θ + k×360° (i grader) och θ + k×2π (i radianer), där k är ett heltal.",
+          "paragraph3": "Arcsin-funktionen är särskilt användbar när du känner till sinusen av en vinkel men behöver själva vinkeln. Vanliga användningsfall inkluderar att hitta vinklar i rätvinkliga trianglar, lösa trigonometriska ekvationer, beräkna vinklar mellan vektorer, analysera periodiska signaler och arbeta med oscillerande rörelse. Eftersom sinus inte är injektiv över alla reella tal definieras huvudvärdet av arcsin i intervallet [-π/2, π/2] radianer (-90° till 90°), men den allmänna lösningen inkluderar alla vinklar som skiljer sig med multiplar av 360° (eller 2π radianer).",
+          "paragraph4": "Vår arcsin kalkylator validerar att din inmatning ligger inom rätt domän [-1, 1] och returnerar sedan exakta resultat både i radianer och grader, tillsammans med de allmänna lösningsformlerna. Detta sparar dig tid jämfört med manuella beräkningar och hjälper dig förstå den periodiska naturen hos trigonometriska funktioner. Oavsett om du är en student som lär sig trigonometri, en lärare som förbereder exempel eller en professionell som arbetar med vinklar, ger detta verktyg snabba, pålitliga inversa sinusberäkningar.",
+          "exampleHeading": "Exempel: Användning av Arcsin Kalkylatorn",
+          "exampleText": "Antag att du vet att sin(θ) = 1 och du vill hitta θ. Ange x = 1 i kalkylatorn. Kalkylatorn beräknar θ = arcsin(1) = π/2 rad ≈ 1,047198 rad. Konvertering till grader ger θ° = 90°. De allmänna lösningarna är: θ = 90° + k×360° och θ = π/2 + k×2π rad, där k är ett heltal. Detta betyder att vinklar på 90°, 450°, -270°, etc. alla har en sinus på 1. På samma sätt, om sin(θ) = 0,5, då θ = arcsin(0,5) = 30° (eller π/6 rad), med allmänna lösningar θ = 30° + k×360° och θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är arcsin?",
+              "answer": "Arcsin (invers sinus) är den inversa funktionen av sinus. Om sin(θ) = x, då θ = arcsin(x). Den returnerar vinkeln vars sinus är x, vanligtvis given i radianer eller grader. Huvudvärdet är i intervallet [-90°, 90°] eller [-π/2, π/2] radianer."
+            },
+            {
+              "question": "Vad är domänen för arcsin-funktionen?",
+              "answer": "Domänen för arcsin(x) är alla reella värden x sådana att -1 ≤ x ≤ 1. Utanför detta intervall kan sinusfunktionen inte producera sådana värden, så arcsin är inte definierad för dem i reella tal."
+            },
+            {
+              "question": "Vad är intervallet för arcsin?",
+              "answer": "Huvudintervallet för arcsin(x) är [-π/2, π/2] i radianer, vilket motsvarar [-90°, 90°] i grader. Men eftersom sinus är periodisk inkluderar den allmänna lösningen alla vinklar θ + k×360° (eller θ + k×2π rad) där k är ett heltal."
+            },
+            {
+              "question": "Varför visar kalkylatorn allmänna lösningar?",
+              "answer": "Sinus är en periodisk funktion med period 360° (2π radianer). Detta betyder att om sin(θ) = x, då sin(θ + k×360°) = x för vilket heltal k som helst. Den allmänna lösningen visar alla möjliga vinklar som uppfyller ekvationen, inte bara huvudvärdet."
+            },
+            {
+              "question": "Är denna arcsin kalkylator gratis?",
+              "answer": "Ja, vår arcsin kalkylator är helt gratis. Ingen registrering eller betalning krävs. Ange helt enkelt ett värde för x mellan -1 och 1 för att få vinkeln i radianer och grader, tillsammans med allmänna lösningar."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "arccos": "Arccos Kalkylator",
+          "arccosDesc": "Hitta den inversa cosinusen av ett värde och få vinkeln i grader och radianer",
+          "percentage": "Procent Kalkylator",
+          "percentageDesc": "Beräkna procentvärden, procentuell förändring och procentuella relationer",
+          "antilog": "Antilogaritm Kalkylator",
+          "antilogDesc": "Beräkna antilogaritmen (invers logaritm) av ett tal med vilken bas som helst"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematiska Kalkylatorer",
       "description": "Bläddra genom vår samling matematiska kalkylatorer för alla dina beräkningsbehov",

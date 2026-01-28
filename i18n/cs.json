@@ -270,6 +270,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Kalkulačka Arcsin",
+      "description": "Kalkulačka arcsin(x) pro nalezení inverzního sinu hodnoty a získání úhlu ve stupních a radiánech s obecnými řešeními.",
+      "x": "Hodnota (x, hodnota sinu)",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "result": "Výsledek",
+      "angleDegrees": "Úhel ve stupních",
+      "angleRadians": "Úhel v radiánech",
+      "calculationHeading": "Výpočet",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Kalkulačka Arcsin – Inverzní Sinus (asin) ve Stupních a Radiánech",
+        "description": "Bezplatná kalkulačka arcsin pro nalezení inverzního sinu (asin) hodnoty a získání úhlu jak ve stupních, tak v radiánech s obecnými řešeními. Podporuje hodnoty v doméně [-1, 1] s vysvětlením krok za krokem. Ideální pro trigonometrii, geometrii a inženýrské výpočty.",
+        "keywords": "kalkulačka arcsin, kalkulačka inverzního sinu, kalkulačka asin, kalkulačka inverzní sinus, arcsin ve stupních, arcsin v radiánech, kalkulačka trigonometrie, úhel z sinu",
+        "content": {
+          "heading": "Jak Použít Kalkulačku Arcsin (Inverzní Sinus)",
+          "paragraph1": "Funkce arcsin (inverzní sinus), zapsaná jako arcsin(x) nebo asin(x), vám dává úhel, jehož sinus je x. Jinými slovy, pokud sin(θ) = x, pak θ = arcsin(x). Tato kalkulačka vám pomůže rychle najít tento úhel jak ve stupních, tak v radiánech pro jakoukoli platnou hodnotu sinu mezi -1 a 1 a poskytuje obecná řešení ukazující všechny možné úhly.",
+          "paragraph2": "Pro použití kalkulačky zadejte hodnotu pro x v rozsahu [-1, 1]. Nástroj pak vypočítá θ = arcsin(x) v radiánech pomocí vestavěné funkce inverzního sinu a převede tento výsledek na stupně pomocí vzorce θ° = θ × 180 / π. Obě hodnoty jsou zobrazeny s vysokou přesností. Protože sinus je periodická funkce, kalkulačka také zobrazuje obecná řešení: θ + k×360° (ve stupních) a θ + k×2π (v radiánech), kde k je libovolné celé číslo.",
+          "paragraph3": "Funkce arcsin je obzvláště užitečná, když znáte sinus úhlu, ale potřebujete samotný úhel. Běžné případy použití zahrnují hledání úhlů v pravoúhlých trojúhelnících, řešení trigonometrických rovnic, výpočet úhlů mezi vektory, analýzu periodických signálů a práci s kmitavým pohybem. Protože sinus není prostý přes všechna reálná čísla, hlavní hodnota arcsin je definována v intervalu [-π/2, π/2] radiánů (-90° až 90°), ale obecné řešení zahrnuje všechny úhly, které se liší o násobky 360° (nebo 2π radiánů).",
+          "paragraph4": "Naše kalkulačka arcsin ověří, že váš vstup leží ve správné doméně [-1, 1], a pak vrátí přesné výsledky jak v radiánech, tak ve stupních, spolu s obecnými řešovacími vzorci. To vám ušetří čas ve srovnání s ručními výpočty a pomůže vám pochopit periodickou povahu trigonometrických funkcí. Ať už jste student učením trigonometrie, učitel připravující příklady nebo profesionál pracující s úhly, tento nástroj poskytuje rychlé a spolehlivé výpočty inverzního sinu.",
+          "exampleHeading": "Příklad: Použití Kalkulačky Arcsin",
+          "exampleText": "Předpokládejme, že víte, že sin(θ) = 1 a chcete najít θ. Zadejte x = 1 do kalkulačky. Kalkulačka vypočítá θ = arcsin(1) = π/2 rad ≈ 1,57079633 rad. Převod na stupně dává θ° = 90°. Obecná řešení jsou: θ = 90° + k×360° a θ = π/2 + k×2π rad, kde k je libovolné celé číslo. To znamená, že úhly 90°, 450°, -270° atd. mají všechny sinus 1. Podobně, pokud sin(θ) = 0,5, pak θ = arcsin(0,5) = 30° (nebo π/6 rad), s obecnými řešeními θ = 30° + k×360° a θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Co je arcsin?",
+              "answer": "Arcsin (inverzní sinus) je inverzní funkce sinu. Pokud sin(θ) = x, pak θ = arcsin(x). Vrací úhel, jehož sinus je x, obvykle uvedený v radiánech nebo stupních. Hlavní hodnota je v rozsahu [-90°, 90°] nebo [-π/2, π/2] radiánů."
+            },
+            {
+              "question": "Jaký je definiční obor funkce arcsin?",
+              "answer": "Definiční obor arcsin(x) jsou všechny reálné hodnoty x takové, že -1 ≤ x ≤ 1. Mimo tento interval nemůže funkce sinus produkovat takové hodnoty, takže arcsin není pro ně definován v reálných číslech."
+            },
+            {
+              "question": "Jaký je obor hodnot arcsin?",
+              "answer": "Hlavní obor hodnot arcsin(x) je [-π/2, π/2] v radiánech, což odpovídá [-90°, 90°] ve stupních. Protože sinus je však periodický, obecné řešení zahrnuje všechny úhly θ + k×360° (nebo θ + k×2π rad), kde k je libovolné celé číslo."
+            },
+            {
+              "question": "Proč kalkulačka zobrazuje obecná řešení?",
+              "answer": "Sinus je periodická funkce s periodou 360° (2π radiánů). To znamená, že pokud sin(θ) = x, pak sin(θ + k×360°) = x pro libovolné celé číslo k. Obecné řešení ukazuje všechny možné úhly, které splňují rovnici, nejen hlavní hodnotu."
+            },
+            {
+              "question": "Je tato kalkulačka arcsin zdarma?",
+              "answer": "Ano, naše kalkulačka arcsin je zcela zdarma. Není vyžadována registrace ani platba. Jednoduše zadejte hodnotu pro x mezi -1 a 1 pro získání úhlu v radiánech a stupních, spolu s obecnými řešeními."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Související Kalkulačky",
+          "arccos": "Kalkulačka Arccos",
+          "arccosDesc": "Najděte inverzní kosinus hodnoty a získejte úhel ve stupních a radiánech",
+          "percentage": "Kalkulačka Procent",
+          "percentageDesc": "Vypočítejte procentní hodnoty, procentní změnu a procentní vztahy",
+          "antilog": "Kalkulačka Antilogaritmu",
+          "antilogDesc": "Vypočítejte antilogaritmus (inverzní logaritmus) čísla s libovolným základem"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematické Kalkulačky",
       "description": "Procházejte naši sbírku matematických kalkulaček pro všechny vaše výpočetní potřeby",

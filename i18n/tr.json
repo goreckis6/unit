@@ -270,6 +270,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Arcsin Hesaplayıcı",
+      "description": "Bir değerin ters sinüsünü bulmak ve genel çözümlerle açıyı derece ve radyan cinsinden almak için Arcsin(x) hesaplayıcı.",
+      "x": "Değer (x, sinüs değeri)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "angleDegrees": "Açı (derece)",
+      "angleRadians": "Açı (radyan)",
+      "calculationHeading": "Hesaplama",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arcsin Hesaplayıcı – Derece ve Radyan Cinsinden Ters Sinüs (asin)",
+        "description": "Bir değerin ters sinüsünü (asin) bulmak ve genel çözümlerle açıyı hem derece hem de radyan cinsinden almak için ücretsiz arcsin hesaplayıcı. [-1, 1] alanındaki değerleri adım adım açıklama ile destekler. Trigonometri, geometri ve mühendislik hesaplamaları için idealdir.",
+        "keywords": "arcsin hesaplayıcı, ters sinüs hesaplayıcı, asin hesaplayıcı, sinüs ters hesaplayıcı, derece cinsinden arcsin, radyan cinsinden arcsin, trigonometri hesaplayıcı, sinüsten açı",
+        "content": {
+          "heading": "Arcsin (Ters Sinüs) Hesaplayıcısı Nasıl Kullanılır",
+          "paragraph1": "Arcsin fonksiyonu (ters sinüs), arcsin(x) veya asin(x) olarak yazılır ve sinüsü x olan açıyı verir. Başka bir deyişle, sin(θ) = x ise, θ = arcsin(x) olur. Bu hesaplayıcı, -1 ile 1 arasındaki herhangi bir geçerli sinüs değeri için açıyı hem derece hem de radyan cinsinden hızlı bir şekilde bulmanıza yardımcı olur ve tüm olası açıları gösteren genel çözümler sağlar.",
+          "paragraph2": "Hesaplayıcıyı kullanmak için [-1, 1] aralığında x için bir değer girin. Araç daha sonra yerleşik ters sinüs fonksiyonunu kullanarak radyan cinsinden θ = arcsin(x) hesaplar ve bu sonucu θ° = θ × 180 / π formülünü kullanarak dereceye dönüştürür. Her iki değer de yüksek hassasiyetle gösterilir. Sinüs periyodik bir fonksiyon olduğundan, hesaplayıcı ayrıca genel çözümleri gösterir: θ + k×360° (derece) ve θ + k×2π (radyan), burada k herhangi bir tam sayıdır.",
+          "paragraph3": "Arcsin fonksiyonu, bir açının sinüsünü bildiğinizde ancak açının kendisine ihtiyaç duyduğunuzda özellikle kullanışlıdır. Yaygın kullanım durumları arasında dik üçgenlerde açı bulma, trigonometrik denklemleri çözme, vektörler arasındaki açıları hesaplama, periyodik sinyalleri analiz etme ve salınımlı hareketle çalışma yer alır. Sinüs tüm gerçek sayılar üzerinde birebir olmadığından, arcsin'in ana değeri [-π/2, π/2] radyan (-90° ile 90°) aralığında tanımlanır, ancak genel çözüm 360° (veya 2π radyan) katları kadar farklı olan tüm açıları içerir.",
+          "paragraph4": "Arcsin hesaplayıcımız, girişinizin doğru alan [-1, 1] içinde olduğunu doğrular ve ardından genel çözüm formülleriyle birlikte hem radyan hem de derece cinsinden doğru sonuçlar döndürür. Bu, manuel hesaplamalarla karşılaştırıldığında size zaman kazandırır ve trigonometrik fonksiyonların periyodik doğasını anlamanıza yardımcı olur. İster trigonometri öğrenen bir öğrenci, ister örnekler hazırlayan bir öğretmen veya açılarla çalışan bir profesyonel olun, bu araç hızlı, güvenilir ters sinüs hesaplamaları sağlar.",
+          "exampleHeading": "Örnek: Arcsin Hesaplayıcısının Kullanımı",
+          "exampleText": "sin(θ) = 1 olduğunu bildiğinizi ve θ'yi bulmak istediğinizi varsayalım. Hesaplayıcıya x = 1 girin. Hesaplayıcı θ = arcsin(1) = π/2 rad ≈ 1,047198 rad hesaplar. Dereceye dönüştürme θ° = 90° verir. Genel çözümler: θ = 90° + k×360° ve θ = π/2 + k×2π rad'dır, burada k herhangi bir tam sayıdır. Bu, 90°, 450°, -270° vb. açıların hepsinin sinüs 1'e sahip olduğu anlamına gelir. Benzer şekilde, sin(θ) = 0,5 ise, θ = arcsin(0,5) = 30° (veya π/6 rad), genel çözümlerle θ = 30° + k×360° ve θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "Arcsin nedir?",
+              "answer": "Arcsin (ters sinüs), sinüsün ters fonksiyonudur. sin(θ) = x ise, θ = arcsin(x) olur. Sinüsü x olan açıyı döndürür, genellikle radyan veya derece cinsinden verilir. Ana değer [-90°, 90°] veya [-π/2, π/2] radyan aralığındadır."
+            },
+            {
+              "question": "Arcsin fonksiyonunun tanım kümesi nedir?",
+              "answer": "Arcsin(x)'in tanım kümesi, -1 ≤ x ≤ 1 olan tüm gerçek değerler x'dir. Bu aralığın dışında sinüs fonksiyonu bu tür değerler üretemez, bu nedenle arcsin gerçek sayılarda bunlar için tanımlı değildir."
+            },
+            {
+              "question": "Arcsin'in değer aralığı nedir?",
+              "answer": "Arcsin(x)'in ana değer aralığı radyan cinsinden [-π/2, π/2]'dir, bu da derece cinsinden [-90°, 90°]'ye karşılık gelir. Ancak sinüs periyodik olduğundan, genel çözüm k'nın herhangi bir tam sayı olduğu tüm açıları θ + k×360° (veya θ + k×2π rad) içerir."
+            },
+            {
+              "question": "Hesaplayıcı neden genel çözümleri gösteriyor?",
+              "answer": "Sinüs, periyodu 360° (2π radyan) olan periyodik bir fonksiyondur. Bu, sin(θ) = x ise, herhangi bir k tam sayısı için sin(θ + k×360°) = x olduğu anlamına gelir. Genel çözüm, yalnızca ana değeri değil, denklemi karşılayan tüm olası açıları gösterir."
+            },
+            {
+              "question": "Bu arcsin hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, arcsin hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Genel çözümlerle birlikte radyan ve derece cinsinden açıyı almak için -1 ile 1 arasında x için bir değer girmeniz yeterlidir."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "arccos": "Arccos Hesaplayıcı",
+          "arccosDesc": "Bir değerin ters kosinüsünü bulun ve açıyı derece ve radyan cinsinden alın",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın",
+          "antilog": "Antilogaritma Hesaplayıcı",
+          "antilogDesc": "Herhangi bir tabanla bir sayının antilogaritmasını (ters logaritma) hesaplayın"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematik Hesap Makineleri",
       "description": "Tüm hesaplama ihtiyaçlarınız için matematik hesap makineleri koleksiyonumuzu gözden geçirin",

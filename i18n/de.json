@@ -329,6 +329,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Arcsin-Rechner",
+      "description": "Arcsin(x)-Rechner zum Finden des inversen Sinus eines Wertes und Erhalten des Winkels in Grad und Bogenmaß mit allgemeinen Lösungen.",
+      "x": "Wert (x, Sinuswert)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "angleDegrees": "Winkel in Grad",
+      "angleRadians": "Winkel im Bogenmaß",
+      "calculationHeading": "Berechnung",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arcsin-Rechner – Inverser Sinus (asin) in Grad und Bogenmaß",
+        "description": "Kostenloser Arcsin-Rechner zum Finden des inversen Sinus (asin) eines Wertes und Erhalten des Winkels sowohl in Grad als auch im Bogenmaß mit allgemeinen Lösungen. Unterstützt Werte im Bereich [-1, 1] mit Schritt-für-Schritt-Erklärung. Ideal für Trigonometrie, Geometrie und Ingenieurberechnungen.",
+        "keywords": "arcsin rechner, inverser sinus rechner, asin rechner, sinus invers rechner, arcsin in grad, arcsin in bogenmaß, trigonometrie rechner, winkel aus sinus",
+        "content": {
+          "heading": "Wie man den Arcsin (Inverser Sinus) Rechner Verwendet",
+          "paragraph1": "Die Arcsin-Funktion (inverser Sinus), geschrieben als arcsin(x) oder asin(x), gibt Ihnen den Winkel, dessen Sinus x ist. Mit anderen Worten, wenn sin(θ) = x, dann θ = arcsin(x). Dieser Rechner hilft Ihnen, diesen Winkel schnell sowohl in Grad als auch im Bogenmaß für jeden gültigen Sinuswert zwischen -1 und 1 zu finden und bietet allgemeine Lösungen, die alle möglichen Winkel zeigen.",
+          "paragraph2": "Um den Rechner zu verwenden, geben Sie einen Wert für x im Bereich [-1, 1] ein. Das Tool berechnet dann θ = arcsin(x) im Bogenmaß unter Verwendung der integrierten inversen Sinusfunktion und wandelt dieses Ergebnis in Grad um, indem es die Formel θ° = θ × 180 / π verwendet. Beide Werte werden mit hoher Genauigkeit angezeigt. Da Sinus eine periodische Funktion ist, zeigt der Rechner auch allgemeine Lösungen: θ + k×360° (in Grad) und θ + k×2π (im Bogenmaß), wobei k eine beliebige ganze Zahl ist.",
+          "paragraph3": "Die Arcsin-Funktion ist besonders nützlich, wenn Sie den Sinus eines Winkels kennen, aber den Winkel selbst benötigen. Häufige Anwendungsfälle umfassen das Finden von Winkeln in rechtwinkligen Dreiecken, das Lösen trigonometrischer Gleichungen, das Berechnen von Winkeln zwischen Vektoren, das Analysieren periodischer Signale und das Arbeiten mit Schwingungsbewegungen. Da Sinus nicht injektiv über alle reellen Zahlen ist, ist der Hauptwert von arcsin im Intervall [-π/2, π/2] Bogenmaß (-90° bis 90°) definiert, aber die allgemeine Lösung umfasst alle Winkel, die sich um Vielfache von 360° (oder 2π Bogenmaß) unterscheiden.",
+          "paragraph4": "Unser Arcsin-Rechner validiert, dass Ihre Eingabe im korrekten Bereich [-1, 1] liegt, und gibt dann genaue Ergebnisse sowohl im Bogenmaß als auch in Grad zurück, zusammen mit den allgemeinen Lösungsformeln. Dies spart Ihnen Zeit im Vergleich zu manuellen Berechnungen und hilft Ihnen, die periodische Natur trigonometrischer Funktionen zu verstehen. Ob Sie ein Student sind, der Trigonometrie lernt, ein Lehrer, der Beispiele vorbereitet, oder ein Profi, der mit Winkeln arbeitet, dieses Tool bietet schnelle, zuverlässige inverse Sinusberechnungen.",
+          "exampleHeading": "Beispiel: Verwendung des Arcsin-Rechners",
+          "exampleText": "Angenommen, Sie wissen, dass sin(θ) = 1 ist und Sie θ finden möchten. Geben Sie x = 1 in den Rechner ein. Der Rechner berechnet θ = arcsin(1) = π/2 rad ≈ 1,57079633 rad. Die Umrechnung in Grad ergibt θ° = 90°. Die allgemeinen Lösungen sind: θ = 90° + k×360° und θ = π/2 + k×2π rad, wobei k eine beliebige ganze Zahl ist. Das bedeutet, dass Winkel von 90°, 450°, -270° usw. alle einen Sinus von 1 haben. Ähnlich, wenn sin(θ) = 0,5, dann θ = arcsin(0,5) = 30° (oder π/6 rad), mit allgemeinen Lösungen θ = 30° + k×360° und θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist arcsin?",
+              "answer": "Arcsin (inverser Sinus) ist die Umkehrfunktion des Sinus. Wenn sin(θ) = x, dann θ = arcsin(x). Es gibt den Winkel zurück, dessen Sinus x ist, normalerweise in Bogenmaß oder Grad angegeben. Der Hauptwert liegt im Bereich [-90°, 90°] oder [-π/2, π/2] Bogenmaß."
+            },
+            {
+              "question": "Was ist der Definitionsbereich der Arcsin-Funktion?",
+              "answer": "Der Definitionsbereich von arcsin(x) sind alle reellen Werte x, sodass -1 ≤ x ≤ 1. Außerhalb dieses Intervalls kann die Sinusfunktion solche Werte nicht erzeugen, daher ist arcsin für sie in reellen Zahlen nicht definiert."
+            },
+            {
+              "question": "Was ist der Wertebereich von arcsin?",
+              "answer": "Der Hauptwertebereich von arcsin(x) ist [-π/2, π/2] im Bogenmaß, was [-90°, 90°] in Grad entspricht. Da Sinus jedoch periodisch ist, umfasst die allgemeine Lösung alle Winkel θ + k×360° (oder θ + k×2π rad), wobei k eine beliebige ganze Zahl ist."
+            },
+            {
+              "question": "Warum zeigt der Rechner allgemeine Lösungen?",
+              "answer": "Sinus ist eine periodische Funktion mit Periode 360° (2π Bogenmaß). Das bedeutet, dass wenn sin(θ) = x, dann sin(θ + k×360°) = x für jede ganze Zahl k. Die allgemeine Lösung zeigt alle möglichen Winkel, die die Gleichung erfüllen, nicht nur den Hauptwert."
+            },
+            {
+              "question": "Ist dieser Arcsin-Rechner kostenlos?",
+              "answer": "Ja, unser Arcsin-Rechner ist vollständig kostenlos. Keine Registrierung oder Zahlung erforderlich. Geben Sie einfach einen Wert für x zwischen -1 und 1 ein, um den Winkel im Bogenmaß und in Grad zu erhalten, zusammen mit allgemeinen Lösungen."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "arccos": "Arccos-Rechner",
+          "arccosDesc": "Finden Sie den inversen Kosinus eines Wertes und erhalten Sie den Winkel in Grad und Bogenmaß",
+          "percentage": "Prozentrechner",
+          "percentageDesc": "Berechne Prozentwerte, Prozentänderung und Prozentbeziehungen",
+          "antilog": "Antilogarithmus-Rechner",
+          "antilogDesc": "Berechnen Sie den Antilogarithmus (inversen Logarithmus) einer Zahl mit beliebiger Basis"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Mathematik-Rechner",
       "description": "Durchsuchen Sie unsere Sammlung von Mathematik-Rechnern für alle Ihre Berechnungsanforderungen",

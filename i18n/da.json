@@ -270,6 +270,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Arcsin Regner",
+      "description": "Arcsin(x) regner til at finde den inverse sinus af en værdi og få vinklen i grader og radianer med generelle løsninger.",
+      "x": "Værdi (x, sinusværdi)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "angleDegrees": "Vinkel i grader",
+      "angleRadians": "Vinkel i radianer",
+      "calculationHeading": "Beregning",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arcsin Regner – Invers Sinus (asin) i Grader og Radianer",
+        "description": "Gratis arcsin regner til at finde den inverse sinus (asin) af en værdi og få vinklen både i grader og radianer med generelle løsninger. Understøtter værdier i domænet [-1, 1] med trin-for-trin forklaring. Ideel til trigonometri, geometri og ingeniørberegninger.",
+        "keywords": "arcsin regner, invers sinus regner, asin regner, sinus invers regner, arcsin i grader, arcsin i radianer, trigonometri regner, vinkel fra sinus",
+        "content": {
+          "heading": "Sådan Bruges Arcsin (Invers Sinus) Regneren",
+          "paragraph1": "Arcsin-funktionen (invers sinus), skrevet som arcsin(x) eller asin(x), giver dig vinklen, hvis sinus er x. Med andre ord, hvis sin(θ) = x, så θ = arcsin(x). Denne regner hjælper dig med hurtigt at finde den vinkel både i grader og radianer for enhver gyldig sinusværdi mellem -1 og 1 og giver generelle løsninger, der viser alle mulige vinkler.",
+          "paragraph2": "For at bruge regneren skal du indtaste en værdi for x i intervallet [-1, 1]. Værktøjet beregner derefter θ = arcsin(x) i radianer ved hjælp af den indbyggede inverse sinusfunktion og konverterer dette resultat til grader ved hjælp af formlen θ° = θ × 180 / π. Begge værdier vises med høj præcision. Da sinus er en periodisk funktion, viser regneren også generelle løsninger: θ + k×360° (i grader) og θ + k×2π (i radianer), hvor k er et hvilket som helst heltal.",
+          "paragraph3": "Arcsin-funktionen er særligt nyttig, når du kender sinus af en vinkel, men har brug for selve vinklen. Almindelige anvendelsestilfælde omfatter at finde vinkler i retvinklede trekanter, løse trigonometriske ligninger, beregne vinkler mellem vektorer, analysere periodiske signaler og arbejde med oscillerende bevægelse. Fordi sinus ikke er injektiv over alle reelle tal, er hovedværdien af arcsin defineret i intervallet [-π/2, π/2] radianer (-90° til 90°), men den generelle løsning inkluderer alle vinkler, der afviger med multipla af 360° (eller 2π radianer).",
+          "paragraph4": "Vores arcsin regner validerer, at dit input ligger inden for det korrekte domæne [-1, 1], og returnerer derefter præcise resultater både i radianer og grader, sammen med de generelle løsningsformler. Dette sparer dig tid sammenlignet med manuelle beregninger og hjælper dig med at forstå den periodiske karakter af trigonometriske funktioner. Uanset om du er en studerende, der lærer trigonometri, en lærer, der forbereder eksempler, eller en professionel, der arbejder med vinkler, giver dette værktøj hurtige, pålidelige inverse sinusberegninger.",
+          "exampleHeading": "Eksempel: Brug af Arcsin Regneren",
+          "exampleText": "Antag, at du ved, at sin(θ) = 1, og du vil finde θ. Indtast x = 1 i regneren. Regneren beregner θ = arcsin(1) = π/2 rad ≈ 1,047198 rad. Konvertering til grader giver θ° = 90°. De generelle løsninger er: θ = 90° + k×360° og θ = π/2 + k×2π rad, hvor k er et hvilket som helst heltal. Dette betyder, at vinkler på 90°, 450°, -270° osv. alle har en sinus på 1. Tilsvarende, hvis sin(θ) = 0,5, så θ = arcsin(0,5) = 30° (eller π/6 rad), med generelle løsninger θ = 30° + k×360° og θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er arcsin?",
+              "answer": "Arcsin (invers sinus) er den inverse funktion af sinus. Hvis sin(θ) = x, så θ = arcsin(x). Den returnerer vinklen, hvis sinus er x, normalt angivet i radianer eller grader. Hovedværdien er i området [-90°, 90°] eller [-π/2, π/2] radianer."
+            },
+            {
+              "question": "Hvad er domænet for arcsin-funktionen?",
+              "answer": "Domænet for arcsin(x) er alle reelle værdier x sådan at -1 ≤ x ≤ 1. Uden for dette interval kan sinus-funktionen ikke producere sådanne værdier, så arcsin er ikke defineret for dem i reelle tal."
+            },
+            {
+              "question": "Hvad er intervallet for arcsin?",
+              "answer": "Hovedintervallet for arcsin(x) er [-π/2, π/2] i radianer, hvilket svarer til [-90°, 90°] i grader. Men da sinus er periodisk, inkluderer den generelle løsning alle vinkler θ + k×360° (eller θ + k×2π rad), hvor k er et hvilket som helst heltal."
+            },
+            {
+              "question": "Hvorfor viser regneren generelle løsninger?",
+              "answer": "Sinus er en periodisk funktion med periode 360° (2π radianer). Dette betyder, at hvis sin(θ) = x, så sin(θ + k×360°) = x for ethvert heltal k. Den generelle løsning viser alle mulige vinkler, der opfylder ligningen, ikke kun hovedværdien."
+            },
+            {
+              "question": "Er denne arcsin regner gratis?",
+              "answer": "Ja, vores arcsin regner er helt gratis. Ingen registrering eller betaling påkrævet. Indtast blot en værdi for x mellem -1 og 1 for at få vinklen i radianer og grader, sammen med generelle løsninger."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Regnere",
+          "arccos": "Arccos Regner",
+          "arccosDesc": "Find den inverse cosinus af en værdi og få vinklen i grader og radianer",
+          "percentage": "Procentregner",
+          "percentageDesc": "Beregn procentværdier, procentændring og procentforhold",
+          "antilog": "Antilogaritme Regner",
+          "antilogDesc": "Beregn antilogaritmen (invers logaritme) af et tal med enhver base"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematiske Lommeregnere",
       "description": "Gennemse vores samling matematiske lommeregnere til alle dine beregningsbehov",

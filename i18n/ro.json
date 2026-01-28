@@ -270,6 +270,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Calculator Arcsin",
+      "description": "Calculator arcsin(x) pentru a găsi sinusul invers al unei valori și a obține unghiul în grade și radiani cu soluții generale.",
+      "x": "Valoare (x, valoare sinus)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "angleDegrees": "Unghi în grade",
+      "angleRadians": "Unghi în radiani",
+      "calculationHeading": "Calcul",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Calculator Arcsin – Sinus Invers (asin) în Grade și Radiani",
+        "description": "Calculator arcsin gratuit pentru a găsi sinusul invers (asin) al unei valori și a obține unghiul atât în grade cât și în radiani cu soluții generale. Suportă valori în domeniul [-1, 1] cu explicație pas cu pas. Ideal pentru trigonometrie, geometrie și calcule de inginerie.",
+        "keywords": "calculator arcsin, calculator sinus invers, calculator asin, calculator invers sinus, arcsin în grade, arcsin în radiani, calculator trigonometrie, unghi din sinus",
+        "content": {
+          "heading": "Cum să Folosești Calculatorul Arcsin (Sinus Invers)",
+          "paragraph1": "Funcția arcsin (sinus invers), scrisă ca arcsin(x) sau asin(x), îți oferă unghiul al cărui sinus este x. Cu alte cuvinte, dacă sin(θ) = x, atunci θ = arcsin(x). Acest calculator te ajută să găsești rapid acel unghi atât în grade cât și în radiani pentru orice valoare de sinus validă între -1 și 1 și oferă soluții generale care arată toate unghiurile posibile.",
+          "paragraph2": "Pentru a folosi calculatorul, introdu o valoare pentru x în intervalul [-1, 1]. Instrumentul calculează apoi θ = arcsin(x) în radiani folosind funcția sinus inversă încorporată și convertește acel rezultat în grade folosind formula θ° = θ × 180 / π. Ambele valori sunt afișate cu precizie ridicată. Deoarece sinusul este o funcție periodică, calculatorul arată și soluții generale: θ + k×360° (în grade) și θ + k×2π (în radiani), unde k este orice număr întreg.",
+          "paragraph3": "Funcția arcsin este deosebit de utilă când cunoști sinusul unui unghi dar ai nevoie de unghiul în sine. Cazuri de utilizare comune includ găsirea unghiurilor în triunghiuri dreptunghice, rezolvarea ecuațiilor trigonometrice, calcularea unghiurilor între vectori, analizarea semnalelor periodice și lucrul cu mișcare oscilatorie. Deoarece sinusul nu este injectiv peste toate numerele reale, valoarea principală a arcsin este definită în intervalul [-π/2, π/2] radiani (-90° la 90°), dar soluția generală include toate unghiurile care diferă cu multipli de 360° (sau 2π radiani).",
+          "paragraph4": "Calculatorul nostru arcsin validează că intrarea ta se află în domeniul corect [-1, 1] și apoi returnează rezultate precise atât în radiani cât și în grade, împreună cu formulele de soluție generală. Acest lucru îți economisește timp comparativ cu calculele manuale și te ajută să înțelegi natura periodică a funcțiilor trigonometrice. Fie că ești un student care învață trigonometria, un profesor care pregătește exemple sau un profesionist care lucrează cu unghiuri, acest instrument oferă calcule rapide și de încredere ale sinusului invers.",
+          "exampleHeading": "Exemplu: Folosirea Calculatorului Arcsin",
+          "exampleText": "Să presupunem că știi că sin(θ) = 1 și vrei să găsești θ. Introdu x = 1 în calculator. Calculatorul calculează θ = arcsin(1) = π/2 rad ≈ 1,047198 rad. Conversia în grade dă θ° = 90°. Soluțiile generale sunt: θ = 90° + k×360° și θ = π/2 + k×2π rad, unde k este orice număr întreg. Aceasta înseamnă că unghiurile de 90°, 450°, -270°, etc. au toate un sinus de 1. Similar, dacă sin(θ) = 0,5, atunci θ = arcsin(0,5) = 30° (sau π/6 rad), cu soluții generale θ = 30° + k×360° și θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Ce este arcsin?",
+              "answer": "Arcsin (sinus invers) este funcția inversă a sinusului. Dacă sin(θ) = x, atunci θ = arcsin(x). Returnează unghiul al cărui sinus este x, de obicei dat în radiani sau grade. Valoarea principală este în intervalul [-90°, 90°] sau [-π/2, π/2] radiani."
+            },
+            {
+              "question": "Care este domeniul funcției arcsin?",
+              "answer": "Domeniul arcsin(x) este toate valorile reale x astfel încât -1 ≤ x ≤ 1. În afara acestui interval, funcția sinus nu poate produce astfel de valori, deci arcsin nu este definit pentru ele în numere reale."
+            },
+            {
+              "question": "Care este intervalul arcsin?",
+              "answer": "Intervalul principal al arcsin(x) este [-π/2, π/2] în radiani, care corespunde cu [-90°, 90°] în grade. Cu toate acestea, deoarece sinusul este periodic, soluția generală include toate unghiurile θ + k×360° (sau θ + k×2π rad) unde k este orice număr întreg."
+            },
+            {
+              "question": "De ce arată calculatorul soluții generale?",
+              "answer": "Sinusul este o funcție periodică cu perioada 360° (2π radiani). Aceasta înseamnă că dacă sin(θ) = x, atunci sin(θ + k×360°) = x pentru orice număr întreg k. Soluția generală arată toate unghiurile posibile care satisfac ecuația, nu doar valoarea principală."
+            },
+            {
+              "question": "Este acest calculator arcsin gratuit?",
+              "answer": "Da, calculatorul nostru arcsin este complet gratuit. Nu este necesară înregistrarea sau plata. Pur și simplu introdu o valoare pentru x între -1 și 1 pentru a obține unghiul în radiani și grade, împreună cu soluții generale."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Asemănătoare",
+          "arccos": "Calculator Arccos",
+          "arccosDesc": "Găsește cosinusul invers al unei valori și obține unghiul în grade și radiani",
+          "percentage": "Calculator Procent",
+          "percentageDesc": "Calculează valorile procentuale, schimbarea procentuală și relațiile procentuale",
+          "antilog": "Calculator Antilogaritm",
+          "antilogDesc": "Calculează antilogaritmul (logaritmul invers) al unui număr cu orice bază"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Calculatoare Matematice",
       "description": "Răsfoiește colecția noastră de calculatoare matematice pentru toate nevoile tale de calcul",

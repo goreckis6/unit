@@ -270,6 +270,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Calculateur d'Arcsin",
+      "description": "Calculateur arcsin(x) pour trouver le sinus inverse d'une valeur et obtenir l'angle en degrés et radians avec solutions générales.",
+      "x": "Valeur (x, valeur du sinus)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "angleDegrees": "Angle en degrés",
+      "angleRadians": "Angle en radians",
+      "calculationHeading": "Calcul",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Calculateur d'Arcsin – Sinus Inverse (asin) en Degrés et Radians",
+        "description": "Calculateur d'arcsin gratuit pour trouver le sinus inverse (asin) d'une valeur et obtenir l'angle à la fois en degrés et en radians avec solutions générales. Prend en charge les valeurs dans le domaine [-1, 1] avec explication étape par étape. Idéal pour la trigonométrie, la géométrie et les calculs d'ingénierie.",
+        "keywords": "calculateur arcsin, calculateur sinus inverse, calculateur asin, calculateur inverse du sinus, arcsin en degrés, arcsin en radians, calculateur de trigonométrie, angle à partir du sinus",
+        "content": {
+          "heading": "Comment Utiliser le Calculateur d'Arcsin (Sinus Inverse)",
+          "paragraph1": "La fonction arcsin (sinus inverse), écrite comme arcsin(x) ou asin(x), vous donne l'angle dont le sinus est x. En d'autres termes, si sin(θ) = x, alors θ = arcsin(x). Ce calculateur vous aide à trouver rapidement cet angle à la fois en degrés et en radians pour toute valeur de sinus valide entre -1 et 1, et fournit des solutions générales montrant tous les angles possibles.",
+          "paragraph2": "Pour utiliser le calculateur, entrez une valeur pour x dans l'intervalle [-1, 1]. L'outil calcule ensuite θ = arcsin(x) en radians en utilisant la fonction sinus inverse intégrée et convertit ce résultat en degrés en utilisant la formule θ° = θ × 180 / π. Les deux valeurs sont affichées avec une haute précision. Comme le sinus est une fonction périodique, le calculateur montre également des solutions générales : θ + k×360° (en degrés) et θ + k×2π (en radians), où k est un entier quelconque.",
+          "paragraph3": "La fonction arcsin est particulièrement utile lorsque vous connaissez le sinus d'un angle mais avez besoin de l'angle lui-même. Les cas d'usage courants incluent trouver des angles dans des triangles rectangles, résoudre des équations trigonométriques, calculer des angles entre vecteurs, analyser des signaux périodiques et travailler avec un mouvement oscillatoire. Parce que le sinus n'est pas injectif sur tous les nombres réels, la valeur principale d'arcsin est définie dans l'intervalle [-π/2, π/2] radians (-90° à 90°), mais la solution générale inclut tous les angles qui diffèrent par des multiples de 360° (ou 2π radians).",
+          "paragraph4": "Notre calculateur d'arcsin valide que votre entrée se trouve dans le domaine correct [-1, 1] et renvoie ensuite des résultats précis à la fois en radians et en degrés, ainsi que les formules de solution générale. Cela vous fait gagner du temps par rapport aux calculs manuels et vous aide à comprendre la nature périodique des fonctions trigonométriques. Que vous soyez un étudiant apprenant la trigonométrie, un enseignant préparant des exemples ou un professionnel travaillant avec des angles, cet outil fournit des calculs de sinus inverse rapides et fiables.",
+          "exampleHeading": "Exemple : Utilisation du Calculateur d'Arcsin",
+          "exampleText": "Supposons que vous sachiez que sin(θ) = 1 et que vous souhaitiez trouver θ. Entrez x = 1 dans le calculateur. Le calculateur calcule θ = arcsin(1) = π/2 rad ≈ 1,047198 rad. La conversion en degrés donne θ° = 90°. Les solutions générales sont : θ = 90° + k×360° et θ = π/2 + k×2π rad, où k est un entier quelconque. Cela signifie que les angles de 90°, 450°, -270°, etc., ont tous un sinus de 1. De même, si sin(θ) = 0,5, alors θ = arcsin(0,5) = 30° (ou π/6 rad), avec des solutions générales θ = 30° + k×360° et θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Qu'est-ce que arcsin ?",
+              "answer": "Arcsin (sinus inverse) est la fonction inverse du sinus. Si sin(θ) = x, alors θ = arcsin(x). Il renvoie l'angle dont le sinus est x, généralement donné en radians ou en degrés. La valeur principale est dans la plage [-90°, 90°] ou [-π/2, π/2] radians."
+            },
+            {
+              "question": "Quel est le domaine de la fonction arcsin ?",
+              "answer": "Le domaine d'arcsin(x) est toutes les valeurs réelles x telles que -1 ≤ x ≤ 1. En dehors de cet intervalle, la fonction sinus ne peut pas produire de telles valeurs, donc arcsin n'est pas défini pour elles dans les nombres réels."
+            },
+            {
+              "question": "Quel est l'intervalle d'arcsin ?",
+              "answer": "L'intervalle principal d'arcsin(x) est [-π/2, π/2] en radians, ce qui correspond à [-90°, 90°] en degrés. Cependant, comme le sinus est périodique, la solution générale inclut tous les angles θ + k×360° (ou θ + k×2π rad) où k est un entier quelconque."
+            },
+            {
+              "question": "Pourquoi le calculateur montre-t-il des solutions générales ?",
+              "answer": "Le sinus est une fonction périodique de période 360° (2π radians). Cela signifie que si sin(θ) = x, alors sin(θ + k×360°) = x pour tout entier k. La solution générale montre tous les angles possibles qui satisfont l'équation, pas seulement la valeur principale."
+            },
+            {
+              "question": "Ce calculateur d'arcsin est-il gratuit ?",
+              "answer": "Oui, notre calculateur d'arcsin est entièrement gratuit. Aucune inscription ni paiement n'est requis. Entrez simplement une valeur pour x entre -1 et 1 pour obtenir l'angle en radians et en degrés, ainsi que des solutions générales."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Connexes",
+          "arccos": "Calculateur d'Arccos",
+          "arccosDesc": "Trouvez le cosinus inverse d'une valeur et obtenez l'angle en degrés et radians",
+          "percentage": "Calculateur de Pourcentages",
+          "percentageDesc": "Calculez les valeurs en pourcentage, le changement en pourcentage et les relations en pourcentage",
+          "antilog": "Calculateur d'Antilogarithme",
+          "antilogDesc": "Calculez l'antilogarithme (logarithme inverse) d'un nombre avec n'importe quelle base"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Calculatrices Mathématiques",
       "description": "Parcourez notre collection de calculatrices mathématiques pour tous vos besoins de calcul",

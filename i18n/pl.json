@@ -270,6 +270,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Kalkulator Arcsin",
+      "description": "Kalkulator arcsin(x) do znajdowania odwrotnego sinusa wartości i uzyskiwania kąta w stopniach i radianach z rozwiązaniami ogólnymi.",
+      "x": "Wartość (x, wartość sinusa)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "angleDegrees": "Kąt w stopniach",
+      "angleRadians": "Kąt w radianach",
+      "calculationHeading": "Obliczenie",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Kalkulator Arcsin – Odwrotny Sinus (asin) w Stopniach i Radianach",
+        "description": "Darmowy kalkulator arcsin do znajdowania odwrotnego sinusa (asin) wartości i uzyskiwania kąta zarówno w stopniach, jak i radianach z rozwiązaniami ogólnymi. Obsługuje wartości w dziedzinie [-1, 1] z wyjaśnieniem krok po kroku. Idealny do trygonometrii, geometrii i obliczeń inżynierskich.",
+        "keywords": "kalkulator arcsin, kalkulator odwrotnego sinusa, kalkulator asin, kalkulator odwrotny sinus, arcsin w stopniach, arcsin w radianach, kalkulator trygonometrii, kąt z sinusa",
+        "content": {
+          "heading": "Jak Używać Kalkulatora Arcsin (Odwrotny Sinus)",
+          "paragraph1": "Funkcja arcsin (odwrotny sinus), zapisana jako arcsin(x) lub asin(x), daje kąt, którego sinus wynosi x. Innymi słowy, jeśli sin(θ) = x, to θ = arcsin(x). Ten kalkulator pomaga szybko znaleźć ten kąt zarówno w stopniach, jak i radianach dla dowolnej prawidłowej wartości sinusa między -1 a 1 i zapewnia rozwiązania ogólne pokazujące wszystkie możliwe kąty.",
+          "paragraph2": "Aby użyć kalkulatora, wprowadź wartość dla x w zakresie [-1, 1]. Narzędzie następnie oblicza θ = arcsin(x) w radianach używając wbudowanej funkcji odwrotnego sinusa i konwertuje ten wynik na stopnie używając wzoru θ° = θ × 180 / π. Obie wartości są wyświetlane z wysoką precyzją. Ponieważ sinus jest funkcją okresową, kalkulator pokazuje również rozwiązania ogólne: θ + k×360° (w stopniach) i θ + k×2π (w radianach), gdzie k jest dowolną liczbą całkowitą.",
+          "paragraph3": "Funkcja arcsin jest szczególnie przydatna, gdy znasz sinus kąta, ale potrzebujesz samego kąta. Typowe zastosowania obejmują znajdowanie kątów w trójkątach prostokątnych, rozwiązywanie równań trygonometrycznych, obliczanie kątów między wektorami, analizowanie sygnałów okresowych i pracę z ruchem oscylacyjnym. Ponieważ sinus nie jest różnowartościowy dla wszystkich liczb rzeczywistych, wartość główna arcsin jest zdefiniowana w przedziale [-π/2, π/2] radianów (-90° do 90°), ale rozwiązanie ogólne obejmuje wszystkie kąty różniące się o wielokrotności 360° (lub 2π radianów).",
+          "paragraph4": "Nasz kalkulator arcsin sprawdza, czy Twoje wejście mieści się w prawidłowej dziedzinie [-1, 1], a następnie zwraca dokładne wyniki zarówno w radianach, jak i stopniach, wraz z formułami rozwiązań ogólnych. To oszczędza czas w porównaniu z obliczeniami ręcznymi i pomaga zrozumieć okresową naturę funkcji trygonometrycznych. Niezależnie od tego, czy jesteś studentem uczącym się trygonometrii, nauczycielem przygotowującym przykłady, czy profesjonalistą pracującym z kątami, to narzędzie zapewnia szybkie, niezawodne obliczenia odwrotnego sinusa.",
+          "exampleHeading": "Przykład: Użycie Kalkulatora Arcsin",
+          "exampleText": "Załóżmy, że wiesz, że sin(θ) = 1 i chcesz znaleźć θ. Wprowadź x = 1 do kalkulatora. Kalkulator oblicza θ = arcsin(1) = π/2 rad ≈ 1,57079633 rad. Konwersja na stopnie daje θ° = 90°. Rozwiązania ogólne to: θ = 90° + k×360° i θ = π/2 + k×2π rad, gdzie k jest dowolną liczbą całkowitą. Oznacza to, że kąty 90°, 450°, -270° itd. mają wszystkie sinus 1. Podobnie, jeśli sin(θ) = 0,5, to θ = arcsin(0,5) = 30° (lub π/6 rad), z rozwiązaniami ogólnymi θ = 30° + k×360° i θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Często Zadawane Pytania",
+          "items": [
+            {
+              "question": "Co to jest arcsin?",
+              "answer": "Arcsin (odwrotny sinus) jest funkcją odwrotną sinusa. Jeśli sin(θ) = x, to θ = arcsin(x). Zwraca kąt, którego sinus wynosi x, zwykle podany w radianach lub stopniach. Wartość główna jest w zakresie [-90°, 90°] lub [-π/2, π/2] radianów."
+            },
+            {
+              "question": "Jaki jest dziedzina funkcji arcsin?",
+              "answer": "Dziedzina arcsin(x) to wszystkie wartości rzeczywiste x takie, że -1 ≤ x ≤ 1. Poza tym przedziałem funkcja sinus nie może wytworzyć takich wartości, więc arcsin nie jest dla nich zdefiniowany w liczbach rzeczywistych."
+            },
+            {
+              "question": "Jaki jest zakres arcsin?",
+              "answer": "Główny zakres arcsin(x) to [-π/2, π/2] w radianach, co odpowiada [-90°, 90°] w stopniach. Jednak ponieważ sinus jest okresowy, rozwiązanie ogólne obejmuje wszystkie kąty θ + k×360° (lub θ + k×2π rad), gdzie k jest dowolną liczbą całkowitą."
+            },
+            {
+              "question": "Dlaczego kalkulator pokazuje rozwiązania ogólne?",
+              "answer": "Sinus jest funkcją okresową z okresem 360° (2π radianów). Oznacza to, że jeśli sin(θ) = x, to sin(θ + k×360°) = x dla dowolnej liczby całkowitej k. Rozwiązanie ogólne pokazuje wszystkie możliwe kąty spełniające równanie, nie tylko wartość główną."
+            },
+            {
+              "question": "Czy ten kalkulator arcsin jest darmowy?",
+              "answer": "Tak, nasz kalkulator arcsin jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Po prostu wprowadź wartość x między -1 a 1, aby uzyskać kąt w radianach i stopniach, wraz z rozwiązaniami ogólnymi."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "arccos": "Kalkulator Arccos",
+          "arccosDesc": "Znajdź odwrotny cosinus wartości i uzyskaj kąt w stopniach i radianach",
+          "percentage": "Kalkulator Procentów",
+          "percentageDesc": "Oblicz wartości procentowe, zmianę procentową i relacje procentowe",
+          "antilog": "Kalkulator Antylogarytmu",
+          "antilogDesc": "Oblicz antylogarytm (logarytm odwrotny) liczby z dowolną podstawą"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Kalkulatory Matematyczne",
       "description": "Przeglądaj naszą kolekcję kalkulatorów matematycznych dla wszystkich potrzeb obliczeniowych",

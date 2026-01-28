@@ -270,6 +270,67 @@
         }
       }
     },
+    "arcsin": {
+      "title": "Arcsin Számológép",
+      "description": "Arcsin(x) számológép egy érték inverz szinuszának megtalálásához és a szög megszerzéséhez fokban és radiánban általános megoldásokkal.",
+      "x": "Érték (x, szinusz érték)",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "angleDegrees": "Szög fokban",
+      "angleRadians": "Szög radiánban",
+      "calculationHeading": "Számítás",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arcsin Számológép – Inverz Szinusz (asin) Fokban és Radiánban",
+        "description": "Ingyenes arcsin számológép egy érték inverz szinuszának (asin) megtalálásához és a szög megszerzéséhez fokban és radiánban általános megoldásokkal. Támogatja a [-1, 1] tartományban lévő értékeket lépésről lépésre magyarázattal. Ideális trigonometriához, geometriához és mérnöki számításokhoz.",
+        "keywords": "arcsin számológép, inverz szinusz számológép, asin számológép, szinusz inverz számológép, arcsin fokban, arcsin radiánban, trigonometria számológép, szög szinuszból",
+        "content": {
+          "heading": "Hogyan Használjuk az Arcsin (Inverz Szinusz) Számológépet",
+          "paragraph1": "Az arcsin függvény (inverz szinusz), amelyet arcsin(x) vagy asin(x) formában írunk, megadja azt a szöget, amelynek szinusza x. Más szavakkal, ha sin(θ) = x, akkor θ = arcsin(x). Ez a számológép segít gyorsan megtalálni ezt a szöget fokban és radiánban bármely érvényes szinusz értékhez -1 és 1 között, és általános megoldásokat biztosít, amelyek az összes lehetséges szöget mutatják.",
+          "paragraph2": "A számológép használatához adjon meg egy értéket x-re a [-1, 1] tartományban. Az eszköz ezután kiszámítja θ = arcsin(x) értékét radiánban a beépített inverz szinusz függvény használatával, és átalakítja ezt az eredményt fokokká a θ° = θ × 180 / π képlet segítségével. Mindkét érték nagy pontossággal jelenik meg. Mivel a szinusz periodikus függvény, a számológép általános megoldásokat is mutat: θ + k×360° (fokban) és θ + k×2π (radiánban), ahol k tetszőleges egész szám.",
+          "paragraph3": "Az arcsin függvény különösen hasznos, amikor ismeri egy szög szinuszát, de magára a szögre van szüksége. A gyakori használati esetek közé tartozik a szögek megtalálása derékszögű háromszögekben, trigonometrikus egyenletek megoldása, szögek számítása vektorok között, periodikus jelek elemzése és oszcilláló mozgással való munka. Mivel a szinusz nem injektív minden valós szám felett, az arcsin főértéke a [-π/2, π/2] radián intervallumban (-90°-tól 90°-ig) van definiálva, de az általános megoldás tartalmazza az összes olyan szöget, amely 360° (vagy 2π radián) többszörösével tér el.",
+          "paragraph4": "Az arcsin számológépünk ellenőrzi, hogy a bemenet a helyes [-1, 1] tartományon belül van-e, majd pontos eredményeket ad vissza radiánban és fokban is, az általános megoldási képletekkel együtt. Ez időt takarít meg a manuális számításokhoz képest és segít megérteni a trigonometrikus függvények periodikus természetét. Legyen Ön trigonometriát tanuló diák, példákat készítő tanár vagy szögekkel dolgozó szakember, ez az eszköz gyors, megbízható inverz szinusz számításokat biztosít.",
+          "exampleHeading": "Példa: Az Arcsin Számológép Használata",
+          "exampleText": "Tegyük fel, hogy tudja, hogy sin(θ) = 1 és meg akarja találni θ-t. Adja meg x = 1 értéket a számológépbe. A számológép kiszámítja θ = arcsin(1) = π/2 rad ≈ 1,047198 rad értéket. A fokokká való átalakítás θ° = 90°-ot ad. Az általános megoldások: θ = 90° + k×360° és θ = π/2 + k×2π rad, ahol k tetszőleges egész szám. Ez azt jelenti, hogy a 90°, 450°, -270° stb. szögeknek mindegyikének szinusza 1. Hasonlóan, ha sin(θ) = 0,5, akkor θ = arcsin(0,5) = 30° (vagy π/6 rad), általános megoldásokkal θ = 30° + k×360° és θ = π/6 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mi az arcsin?",
+              "answer": "Az arcsin (inverz szinusz) a szinusz inverz függvénye. Ha sin(θ) = x, akkor θ = arcsin(x). Visszaadja azt a szöget, amelynek szinusza x, általában radiánban vagy fokban megadva. A főérték a [-90°, 90°] vagy [-π/2, π/2] radián tartományban van."
+            },
+            {
+              "question": "Mi az arcsin függvény értelmezési tartománya?",
+              "answer": "Az arcsin(x) értelmezési tartománya minden valós x érték, amelyre -1 ≤ x ≤ 1. Ezen az intervallumon kívül a szinusz függvény nem tud ilyen értékeket előállítani, ezért az arcsin nincs definiálva számukra a valós számokban."
+            },
+            {
+              "question": "Mi az arcsin értékkészlete?",
+              "answer": "Az arcsin(x) fő értékkészlete [-π/2, π/2] radiánban, ami [-90°, 90°] fokban felel meg. Mivel a szinusz azonban periodikus, az általános megoldás tartalmazza az összes θ + k×360° (vagy θ + k×2π rad) szöget, ahol k tetszőleges egész szám."
+            },
+            {
+              "question": "Miért mutatja a számológép általános megoldásokat?",
+              "answer": "A szinusz egy 360° (2π radián) periódusú periodikus függvény. Ez azt jelenti, hogy ha sin(θ) = x, akkor sin(θ + k×360°) = x bármely k egész számra. Az általános megoldás az összes lehetséges szöget mutatja, amely kielégíti az egyenletet, nem csak a főértéket."
+            },
+            {
+              "question": "Ez az arcsin számológép ingyenes?",
+              "answer": "Igen, az arcsin számológépünk teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Egyszerűen adjon meg egy értéket x-re -1 és 1 között, hogy megkapja a szöget radiánban és fokban, általános megoldásokkal együtt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Számológépek",
+          "arccos": "Arccos Számológép",
+          "arccosDesc": "Keresse meg egy érték inverz koszinuszát és kapja meg a szöget fokban és radiánban",
+          "percentage": "Százalék Számológép",
+          "percentageDesc": "Számítsa ki a százalékértékeket, százalékos változást és százalékos kapcsolatokat",
+          "antilog": "Antilogaritmus Számológép",
+          "antilogDesc": "Számítsa ki egy szám antilogaritmusát (inverz logaritmusát) bármilyen alap esetén"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematikai Számológépek",
       "description": "Böngéssze matematikai számológépeink gyűjteményét minden számítási igényére",

@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Calculator Arccos",
+      "description": "Calculator arccos(x) pentru a găsi cosinusul invers al unei valori și a obține unghiul în grade și radiani.",
+      "x": "Valoare (x, valoarea cosinusului)",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "angleDegrees": "Unghi în grade",
+      "angleRadians": "Unghi în radiani",
+      "calculationHeading": "Calcul",
+      "calculationIntro": "Pentru valoarea cosinusului dată",
+      "calculationStepRadians": "calculăm mai întâi unghiul în radiani folosind arccos(x). Rezultatul este θ = arccos(x) ≈ {radians} rad.",
+      "calculationStepDegrees": "Apoi convertim radianii în grade folosind θ° = θ × 180 / π, dând aproximativ {degrees}°.",
+      "seo": {
+        "title": "Calculator Arccos – Cosinus Invers (acos) în Grade și Radiani",
+        "description": "Calculator arccos gratuit pentru a găsi cosinusul invers (acos) al unei valori și a obține unghiul atât în grade cât și în radiani. Suportă valori în domeniul [-1, 1] cu explicație pas cu pas. Ideal pentru trigonometrie, geometrie și calcule de inginerie.",
+        "keywords": "calculator arccos, calculator cosinus invers, calculator acos, calculator invers cosinus, arccos în grade, arccos în radiani, calculator trigonometrie, unghi din cosinus",
+        "content": {
+          "heading": "Cum să Folosești Calculatorul Arccos (Cosinus Invers)",
+          "paragraph1": "Funcția arccos (cosinus invers), scrisă ca arccos(x) sau acos(x), îți oferă unghiul al cărui cosinus este x. Cu alte cuvinte, dacă cos(θ) = x, atunci θ = arccos(x). Acest calculator te ajută să găsești rapid acel unghi atât în grade cât și în radiani pentru orice valoare de cosinus validă între -1 și 1.",
+          "paragraph2": "Pentru a folosi calculatorul, introdu o valoare pentru x în intervalul [-1, 1]. Instrumentul calculează apoi θ = arccos(x) în radiani folosind funcția cosinus invers integrată și convertește acel rezultat în grade folosind formula θ° = θ × 180 / π. Ambele valori sunt afișate cu precizie ridicată astfel încât să le poți folosi în probleme de trigonometrie, geometrie, fizică sau inginerie.",
+          "paragraph3": "Funcția arccos este deosebit de utilă când cunoști cosinusul unui unghi dar ai nevoie de unghiul în sine. Cazuri de utilizare comune includ găsirea unghiurilor în triunghiuri dreptunghice, calcularea unghiurilor între vectori folosind produsul scalar, analizarea semnalelor periodice și rezolvarea ecuațiilor trigonometrice. Deoarece cosinusul nu este injectiv peste toate numerele reale, valoarea principală a arccos este definită în intervalul [0, π] radiani (0° la 180°).",
+          "paragraph4": "Calculatorul nostru arccos validează că intrarea ta se află în domeniul corect [-1, 1] și apoi returnează rezultate precise atât în radiani cât și în grade. Acest lucru îți economisește timp în comparație cu calculele manuale și reduce riscul de erori. Fie că ești un student care învață trigonometria, un profesor care pregătește exemple sau un profesionist care lucrează cu unghiuri, acest instrument oferă calcule rapide și fiabile de cosinus invers.",
+          "exampleHeading": "Exemplu: Folosirea Calculatorului Arccos",
+          "exampleText": "Să presupunem că știi că cos(θ) = 0,5 și vrei să găsești θ. Introdu x = 0,5 în calculator. Calculatorul calculează θ = arccos(0,5) ≈ 1,047198 rad. Conversia în grade dă θ° ≈ 60°. Aceasta înseamnă că un unghi de 60° are un cosinus de 0,5. Similar, dacă cos(θ) = -1, atunci θ = arccos(-1) = π rad = 180°, și dacă cos(θ) = 1, atunci θ = arccos(1) = 0 rad = 0°."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Ce este arccos?",
+              "answer": "Arccos (cosinus invers) este funcția inversă a cosinusului. Dacă cos(θ) = x, atunci θ = arccos(x). Returnează unghiul al cărui cosinus este x, de obicei dat în radiani sau grade."
+            },
+            {
+              "question": "Care este domeniul funcției arccos?",
+              "answer": "Domeniul arccos(x) este toate valorile reale x astfel încât -1 ≤ x ≤ 1. În afara acestui interval, funcția cosinus nu poate produce astfel de valori, deci arccos nu este definit pentru ele în numerele reale."
+            },
+            {
+              "question": "Care este intervalul arccos?",
+              "answer": "Intervalul principal al arccos(x) este [0, π] în radiani, care corespunde la [0°, 180°] în grade. Aceasta înseamnă că arccos returnează întotdeauna un unghi între 0 și π radiani (0° și 180°)."
+            },
+            {
+              "question": "Cum convertesc arccos din radiani în grade?",
+              "answer": "Dacă θ este în radiani, poți să-l convertești în grade folosind formula θ° = θ × 180 / π. Calculatorul nostru efectuează această conversie automat și afișează atât radianii cât și gradele."
+            },
+            {
+              "question": "Este acest calculator arccos gratuit?",
+              "answer": "Da, calculatorul nostru arccos este complet gratuit. Nu este necesară înregistrarea sau plata. Introduce pur și simplu o valoare pentru x între -1 și 1 pentru a obține unghiul în radiani și grade."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Asemănătoare",
+          "addition": "Calculator Adunare",
+          "additionDesc": "Adună numere întregi și zecimale rapid și precis",
+          "percentage": "Calculator Procente",
+          "percentageDesc": "Calculează valorile procentuale, modificarea procentuală și relațiile procentuale",
+          "antilog": "Calculator Antilogaritm",
+          "antilogDesc": "Calculează antilogaritmul (logaritmul invers) al unui număr cu orice bază"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Calculatoare Matematice",
       "description": "Răsfoiește colecția noastră de calculatoare matematice pentru toate nevoile tale de calcul",

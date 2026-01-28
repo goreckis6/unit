@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Kalkulačka Arccos",
+      "description": "Kalkulačka arccos(x) na nájdenie inverzného kosínusu hodnoty a získanie uhla v stupňoch a radiánoch.",
+      "x": "Hodnota (x, hodnota kosínusu)",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "angleDegrees": "Uhol v stupňoch",
+      "angleRadians": "Uhol v radiánoch",
+      "calculationHeading": "Výpočet",
+      "calculationIntro": "Pre danú hodnotu kosínusu",
+      "calculationStepRadians": "najprv vypočítame uhol v radiánoch pomocou arccos(x). Výsledok je θ = arccos(x) ≈ {radians} rad.",
+      "calculationStepDegrees": "Potom prevedieme radiány na stupne pomocou θ° = θ × 180 / π, čo dáva približne {degrees}°.",
+      "seo": {
+        "title": "Kalkulačka Arccos – Inverzný Kosínus (acos) v Stupňoch a Radiánoch",
+        "description": "Bezplatná kalkulačka arccos na nájdenie inverzného kosínusu (acos) hodnoty a získanie uhla v stupňoch aj radiánoch. Podporuje hodnoty v doméne [-1, 1] s vysvetlením krok za krokom. Ideálne pre trigonometriu, geometriu a inžinierske výpočty.",
+        "keywords": "kalkulačka arccos, kalkulačka inverzného kosínusu, kalkulačka acos, kalkulačka inverzný kosínus, arccos v stupňoch, arccos v radiánoch, kalkulačka trigonometrie, uhol z kosínusu",
+        "content": {
+          "heading": "Ako Použiť Kalkulačku Arccos (Inverzný Kosínus)",
+          "paragraph1": "Funkcia arccos (inverzný kosínus), zapísaná ako arccos(x) alebo acos(x), vám dáva uhol, ktorého kosínus je x. Inými slovami, ak cos(θ) = x, potom θ = arccos(x). Táto kalkulačka vám pomôže rýchlo nájsť tento uhol v stupňoch aj radiánoch pre akúkoľvek platnú hodnotu kosínusu medzi -1 a 1.",
+          "paragraph2": "Na použitie kalkulačky zadajte hodnotu pre x v rozsahu [-1, 1]. Nástroj potom vypočíta θ = arccos(x) v radiánoch pomocou vstavannej funkcie inverzného kosínusu a prevedie tento výsledok na stupne pomocou vzorca θ° = θ × 180 / π. Obe hodnoty sú zobrazené s vysokou presnosťou, takže ich môžete použiť v problémoch trigonometrie, geometrie, fyziky alebo inžinierstva.",
+          "paragraph3": "Funkcia arccos je obzvlášť užitočná, keď poznáte kosínus uhla, ale potrebujete samotný uhol. Bežné prípady použitia zahŕňajú hľadanie uhlov v pravouhlých trojuholníkoch, výpočet uhlov medzi vektormi pomocou skalárneho súčinu, analýzu periodických signálov a riešenie trigonometrických rovníc. Pretože kosínus nie je injektívny cez všetky reálne čísla, hlavná hodnota arccos je definovaná v intervale [0, π] radiánov (0° až 180°).",
+          "paragraph4": "Naša kalkulačka arccos overuje, že váš vstup leží v správnej doméne [-1, 1], a potom vracia presné výsledky v radiánoch aj stupňoch. Toto vám ušetrí čas v porovnaní s manuálnymi výpočtami a zníži riziko chýb. Či už ste študent učiac sa trigonometriu, učiteľ pripravujúci príklady alebo profesionál pracujúci s uhlami, tento nástroj poskytuje rýchle, spoľahlivé výpočty inverzného kosínusu.",
+          "exampleHeading": "Príklad: Použitie Kalkulačky Arccos",
+          "exampleText": "Predpokladajme, že viete, že cos(θ) = 0,5 a chcete nájsť θ. Zadajte x = 0,5 do kalkulačky. Kalkulačka vypočíta θ = arccos(0,5) ≈ 1,047198 rad. Konverzia na stupne dáva θ° ≈ 60°. To znamená, že uhol 60° má kosínus 0,5. Podobne, ak cos(θ) = -1, potom θ = arccos(-1) = π rad = 180°, a ak cos(θ) = 1, potom θ = arccos(1) = 0 rad = 0°."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Čo je arccos?",
+              "answer": "Arccos (inverzný kosínus) je inverzná funkcia kosínusu. Ak cos(θ) = x, potom θ = arccos(x). Vracia uhol, ktorého kosínus je x, zvyčajne uvedený v radiánoch alebo stupňoch."
+            },
+            {
+              "question": "Aký je definičný obor funkcie arccos?",
+              "answer": "Definičný obor arccos(x) sú všetky reálne hodnoty x také, že -1 ≤ x ≤ 1. Mimo tohto intervalu nemôže funkcia kosínus produkovať také hodnoty, takže arccos nie je pre ne definovaný v reálnych číslach."
+            },
+            {
+              "question": "Aký je obor hodnôt arccos?",
+              "answer": "Hlavný obor hodnôt arccos(x) je [0, π] v radiánoch, čo zodpovedá [0°, 180°] v stupňoch. To znamená, že arccos vždy vracia uhol medzi 0 a π radiánmi (0° a 180°)."
+            },
+            {
+              "question": "Ako prevediem arccos z radiánov na stupne?",
+              "answer": "Ak je θ v radiánoch, môžete ho previesť na stupne pomocou vzorca θ° = θ × 180 / π. Naša kalkulačka vykonáva tento prevod automaticky a zobrazuje radiány aj stupne."
+            },
+            {
+              "question": "Je táto kalkulačka arccos zadarmo?",
+              "answer": "Áno, naša kalkulačka arccos je úplne zadarmo. Nie je potrebná registrácia ani platba. Jednoducho zadajte hodnotu pre x medzi -1 a 1 pre získanie uhla v radiánoch a stupňoch."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace Kalkulačky",
+          "addition": "Kalkulačka Sčítania",
+          "additionDesc": "Sčítajte celé čísla a desatinné čísla rýchlo a presne",
+          "percentage": "Kalkulačka Percent",
+          "percentageDesc": "Vypočítajte percentuálne hodnoty, percentuálnu zmenu a percentuálne vzťahy",
+          "antilog": "Kalkulačka Antilogaritmu",
+          "antilogDesc": "Vypočítajte antilogaritmus (inverzný logaritmus) čísla s ľubovoľným základom"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematické Kalkulačky",
       "description": "Prechádzajte našou zbierkou matematických kalkulačiek pre všetky vaše výpočtové potreby",

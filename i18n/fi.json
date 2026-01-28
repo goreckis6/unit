@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Arccos-laskin",
+      "description": "Arccos(x)-laskin käänteisen kosinin löytämiseen ja kulman saamiseen asteina ja radiaaneina.",
+      "x": "Arvo (x, kosiniarvo)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "angleDegrees": "Kulma asteina",
+      "angleRadians": "Kulma radiaaneina",
+      "calculationHeading": "Laskenta",
+      "calculationIntro": "Annetulle kosiniarvolle",
+      "calculationStepRadians": "laskemme ensin kulman radiaaneina käyttäen arccos(x). Tulos on θ = arccos(x) ≈ {radians} rad.",
+      "calculationStepDegrees": "Sitten muunnamme radiaanit asteiksi käyttäen θ° = θ × 180 / π, mikä antaa noin {degrees}°.",
+      "seo": {
+        "title": "Arccos-laskin – Käänteinen Kosini (acos) Asteina ja Radiaaneina",
+        "description": "Ilmainen arccos-laskin käänteisen kosinin (acos) löytämiseen ja kulman saamiseen sekä asteina että radiaaneina. Tukee arvoja alueella [-1, 1] vaiheittaisella selityksellä. Ihanteellinen trigonometriaan, geometriaan ja tekniikan laskelmiin.",
+        "keywords": "arccos laskin, käänteinen kosini laskin, acos laskin, kosini käänteislaskin, arccos asteina, arccos radiaaneina, trigonometria laskin, kulma kosinista",
+        "content": {
+          "heading": "Kuinka Käyttää Arccos (Käänteinen Kosini) Laskinta",
+          "paragraph1": "Arccos-funktio (käänteinen kosini), kirjoitettu arccos(x) tai acos(x), antaa sinulle kulman, jonka kosini on x. Toisin sanoen, jos cos(θ) = x, niin θ = arccos(x). Tämä laskin auttaa sinua löytämään nopeasti tuon kulman sekä asteina että radiaaneina mille tahansa kelvolliselle kosiniarvolle välillä -1 ja 1.",
+          "paragraph2": "Käyttääksesi laskinta, syötä arvo x:lle välillä [-1, 1]. Työkalu laskee sitten θ = arccos(x) radiaaneina käyttäen sisäänrakennettua käänteistä kosinifunktiota ja muuntaa tämän tuloksen asteiksi käyttäen kaavaa θ° = θ × 180 / π. Molemmat arvot näytetään korkealla tarkkuudella, jotta voit käyttää niitä trigonometria-, geometria-, fysiikka- tai tekniikan ongelmissa.",
+          "paragraph3": "Arccos-funktio on erityisen hyödyllinen, kun tiedät kulman kosinin, mutta tarvitset itse kulman. Yleisiä käyttötapauksia ovat kulmien löytäminen suorakulmaisista kolmioista, kulmien laskeminen vektorien välillä käyttäen pistetuloa, jaksollisten signaalien analysointi ja trigonometristen yhtälöiden ratkaiseminen. Koska kosini ei ole injektiivinen kaikille reaaliluvuille, arccosin pääarvo määritellään välillä [0, π] radiaania (0°:sta 180°:een).",
+          "paragraph4": "Arccos-laskimemme vahvistaa, että syötteesi on oikealla alueella [-1, 1], ja palauttaa sitten tarkat tulokset sekä radiaaneina että asteina. Tämä säästää aikaa verrattuna manuaalisiin laskelmiin ja vähentää virheiden riskiä. Olitpa opiskelija, joka oppii trigonometriaa, opettaja, joka valmistelee esimerkkejä, tai ammattilainen, joka työskentelee kulmien kanssa, tämä työkalu tarjoaa nopeat, luotettavat käänteiset kosinilaskelmat.",
+          "exampleHeading": "Esimerkki: Arccos-laskimen Käyttö",
+          "exampleText": "Oletetaan, että tiedät, että cos(θ) = 0,5 ja haluat löytää θ. Syötä x = 0,5 laskimeen. Laskin laskee θ = arccos(0,5) ≈ 1,047198 rad. Muunnos asteiksi antaa θ° ≈ 60°. Tämä tarkoittaa, että 60°:n kulmalla on kosini 0,5. Vastaavasti, jos cos(θ) = -1, niin θ = arccos(-1) = π rad = 180°, ja jos cos(θ) = 1, niin θ = arccos(1) = 0 rad = 0°."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on arccos?",
+              "answer": "Arccos (käänteinen kosini) on kosinin käänteisfunktio. Jos cos(θ) = x, niin θ = arccos(x). Se palauttaa kulman, jonka kosini on x, yleensä annettu radiaaneina tai asteina."
+            },
+            {
+              "question": "Mikä on arccos-funktion määrittelyjoukko?",
+              "answer": "Arccos(x):n määrittelyjoukko on kaikki reaaliarvot x siten, että -1 ≤ x ≤ 1. Tämän välin ulkopuolella kosinifunktio ei voi tuottaa sellaisia arvoja, joten arccos ei ole määritelty niille reaaliluvuissa."
+            },
+            {
+              "question": "Mikä on arccosin arvojoukko?",
+              "answer": "Arccos(x):n pääarvojoukko on [0, π] radiaaneina, mikä vastaa [0°, 180°] asteina. Tämä tarkoittaa, että arccos palauttaa aina kulman välillä 0 ja π radiaania (0° ja 180°)."
+            },
+            {
+              "question": "Kuinka muunnan arccosin radiaaneista asteiksi?",
+              "answer": "Jos θ on radiaaneina, voit muuntaa sen asteiksi käyttäen kaavaa θ° = θ × 180 / π. Laskimemme tekee tämän muunnoksen automaattisesti ja näyttää sekä radiaanit että asteet."
+            },
+            {
+              "question": "Onko tämä arccos-laskin ilmainen?",
+              "answer": "Kyllä, arccos-laskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Syötä vain arvo x:lle välillä -1 ja 1 saadaksesi kulman radiaaneina ja asteina."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "addition": "Yhteenlaskulaskin",
+          "additionDesc": "Lisää kokonaislukuja ja desimaaleja nopeasti ja tarkasti",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Laske prosenttiarvot, prosenttimuutos ja prosenttisuhteet",
+          "antilog": "Antilogaritmilaskin",
+          "antilogDesc": "Laske luvun antilogaritmi (käänteinen logaritmi) millä tahansa kannalla"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matemaattiset Laskimet",
       "description": "Selaa kokoelmaamme matemaattisia laskimia kaikille laskentatarpeillesi",

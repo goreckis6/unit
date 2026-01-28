@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Arccos Számológép",
+      "description": "Arccos(x) számológép egy érték inverz koszinuszának megtalálásához és a szög megszerzéséhez fokban és radiánban.",
+      "x": "Érték (x, koszinusz érték)",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "angleDegrees": "Szög fokban",
+      "angleRadians": "Szög radiánban",
+      "calculationHeading": "Számítás",
+      "calculationIntro": "Az adott koszinusz értékhez",
+      "calculationStepRadians": "először kiszámítjuk a szöget radiánban az arccos(x) használatával. Az eredmény θ = arccos(x) ≈ {radians} rad.",
+      "calculationStepDegrees": "Ezután a radiánokat fokokká alakítjuk a θ° = θ × 180 / π képlet használatával, ami körülbelül {degrees}°-ot ad.",
+      "seo": {
+        "title": "Arccos Számológép – Inverz Koszinusz (acos) Fokban és Radiánban",
+        "description": "Ingyenes arccos számológép egy érték inverz koszinuszának (acos) megtalálásához és a szög megszerzéséhez fokban és radiánban. Támogatja a [-1, 1] tartományban lévő értékeket lépésről lépésre magyarázattal. Ideális trigonometriához, geometriához és mérnöki számításokhoz.",
+        "keywords": "arccos számológép, inverz koszinusz számológép, acos számológép, koszinusz inverz számológép, arccos fokban, arccos radiánban, trigonometria számológép, szög koszinuszból",
+        "content": {
+          "heading": "Hogyan Használjuk az Arccos (Inverz Koszinusz) Számológépet",
+          "paragraph1": "Az arccos függvény (inverz koszinusz), amelyet arccos(x) vagy acos(x) formában írunk, megadja azt a szöget, amelynek koszinusza x. Más szavakkal, ha cos(θ) = x, akkor θ = arccos(x). Ez a számológép segít gyorsan megtalálni ezt a szöget fokban és radiánban bármely érvényes koszinusz értékhez -1 és 1 között.",
+          "paragraph2": "A számológép használatához adjon meg egy értéket x-re a [-1, 1] tartományban. Az eszköz ezután kiszámítja θ = arccos(x) értékét radiánban a beépített inverz koszinusz függvény használatával, és átalakítja ezt az eredményt fokokká a θ° = θ × 180 / π képlet segítségével. Mindkét érték nagy pontossággal jelenik meg, így trigonometriai, geometriai, fizikai vagy mérnöki problémákban használhatja őket.",
+          "paragraph3": "Az arccos függvény különösen hasznos, amikor ismeri egy szög koszinuszát, de magára a szögre van szüksége. A gyakori használati esetek közé tartozik a szögek megtalálása derékszögű háromszögekben, szögek számítása vektorok között a skaláris szorzat használatával, periodikus jelek elemzése és trigonometrikus egyenletek megoldása. Mivel a koszinusz nem injektív minden valós szám felett, az arccos főértéke a [0, π] radián intervallumban (0°-tól 180°-ig) van definiálva.",
+          "paragraph4": "Az arccos számológépünk ellenőrzi, hogy a bemenet a helyes [-1, 1] tartományon belül van-e, majd pontos eredményeket ad vissza radiánban és fokban is. Ez időt takarít meg a manuális számításokhoz képest és csökkenti a hibák kockázatát. Legyen Ön trigonometriát tanuló diák, példákat készítő tanár vagy szögekkel dolgozó szakember, ez az eszköz gyors, megbízható inverz koszinusz számításokat biztosít.",
+          "exampleHeading": "Példa: Az Arccos Számológép Használata",
+          "exampleText": "Tegyük fel, hogy tudja, hogy cos(θ) = 0,5 és meg akarja találni θ-t. Adja meg x = 0,5 értéket a számológépbe. A számológép kiszámítja θ = arccos(0,5) ≈ 1,047198 rad értéket. A fokokká való átalakítás θ° ≈ 60°-ot ad. Ez azt jelenti, hogy egy 60°-os szög koszinusza 0,5. Hasonlóan, ha cos(θ) = -1, akkor θ = arccos(-1) = π rad = 180°, és ha cos(θ) = 1, akkor θ = arccos(1) = 0 rad = 0°."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mi az arccos?",
+              "answer": "Az arccos (inverz koszinusz) a koszinusz inverz függvénye. Ha cos(θ) = x, akkor θ = arccos(x). Visszaadja azt a szöget, amelynek koszinusza x, általában radiánban vagy fokban megadva."
+            },
+            {
+              "question": "Mi az arccos függvény értelmezési tartománya?",
+              "answer": "Az arccos(x) értelmezési tartománya minden valós x érték, amelyre -1 ≤ x ≤ 1. Ezen az intervallumon kívül a koszinusz függvény nem tud ilyen értékeket előállítani, ezért az arccos nincs definiálva számukra a valós számokban."
+            },
+            {
+              "question": "Mi az arccos értékkészlete?",
+              "answer": "Az arccos(x) fő értékkészlete [0, π] radiánban, ami [0°, 180°] fokban felel meg. Ez azt jelenti, hogy az arccos mindig egy 0 és π radián (0° és 180°) közötti szöget ad vissza."
+            },
+            {
+              "question": "Hogyan alakíthatom át az arccos-t radiánból fokokká?",
+              "answer": "Ha θ radiánban van, akkor a θ° = θ × 180 / π képlet segítségével fokokká alakíthatja. Számológépünk automatikusan végrehajtja ezt az átalakítást és mind a radiánt, mind a fokokat megjeleníti."
+            },
+            {
+              "question": "Ez az arccos számológép ingyenes?",
+              "answer": "Igen, az arccos számológépünk teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Egyszerűen adjon meg egy értéket x-re -1 és 1 között, hogy megkapja a szöget radiánban és fokban."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Számológépek",
+          "addition": "Összeadás Számológép",
+          "additionDesc": "Adjon össze egész számokat és tizedeseket gyorsan és pontosan",
+          "percentage": "Százalék Számológép",
+          "percentageDesc": "Számítsa ki a százalékértékeket, százalékos változást és százalékos kapcsolatokat",
+          "antilog": "Antilogaritmus Számológép",
+          "antilogDesc": "Számítsa ki egy szám antilogaritmusát (inverz logaritmusát) bármilyen alap esetén"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematikai Számológépek",
       "description": "Böngéssze matematikai számológépeink gyűjteményét minden számítási igényére",

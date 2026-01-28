@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Calculateur d'Arccos",
+      "description": "Calculateur arccos(x) pour trouver le cosinus inverse d'une valeur et obtenir l'angle en degrés et radians.",
+      "x": "Valeur (x, valeur du cosinus)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "angleDegrees": "Angle en degrés",
+      "angleRadians": "Angle en radians",
+      "calculationHeading": "Calcul",
+      "calculationIntro": "Pour la valeur de cosinus donnée",
+      "calculationStepRadians": "nous calculons d'abord l'angle en radians en utilisant arccos(x). Le résultat est θ = arccos(x) ≈ {radians} rad.",
+      "calculationStepDegrees": "Ensuite, nous convertissons les radians en degrés en utilisant θ° = θ × 180 / π, ce qui donne environ {degrees}°.",
+      "seo": {
+        "title": "Calculateur d'Arccos – Cosinus Inverse (acos) en Degrés et Radians",
+        "description": "Calculateur d'arccos gratuit pour trouver le cosinus inverse (acos) d'une valeur et obtenir l'angle à la fois en degrés et en radians. Prend en charge les valeurs dans le domaine [-1, 1] avec explication étape par étape. Idéal pour la trigonométrie, la géométrie et les calculs d'ingénierie.",
+        "keywords": "calculateur arccos, calculateur cosinus inverse, calculateur acos, calculateur inverse du cosinus, arccos en degrés, arccos en radians, calculateur de trigonométrie, angle à partir du cosinus",
+        "content": {
+          "heading": "Comment Utiliser le Calculateur d'Arccos (Cosinus Inverse)",
+          "paragraph1": "La fonction arccos (cosinus inverse), écrite comme arccos(x) ou acos(x), vous donne l'angle dont le cosinus est x. En d'autres termes, si cos(θ) = x, alors θ = arccos(x). Ce calculateur vous aide à trouver rapidement cet angle à la fois en degrés et en radians pour toute valeur de cosinus valide entre -1 et 1.",
+          "paragraph2": "Pour utiliser le calculateur, entrez une valeur pour x dans l'intervalle [-1, 1]. L'outil calcule ensuite θ = arccos(x) en radians en utilisant la fonction cosinus inverse intégrée et convertit ce résultat en degrés en utilisant la formule θ° = θ × 180 / π. Les deux valeurs sont affichées avec une haute précision afin que vous puissiez les utiliser dans des problèmes de trigonométrie, géométrie, physique ou ingénierie.",
+          "paragraph3": "La fonction arccos est particulièrement utile lorsque vous connaissez le cosinus d'un angle mais avez besoin de l'angle lui-même. Les cas d'usage courants incluent trouver des angles dans des triangles rectangles, calculer des angles entre vecteurs en utilisant le produit scalaire, analyser des signaux périodiques et résoudre des équations trigonométriques. Parce que le cosinus n'est pas injectif sur tous les nombres réels, la valeur principale d'arccos est définie dans l'intervalle [0, π] radians (0° à 180°).",
+          "paragraph4": "Notre calculateur d'arccos valide que votre entrée se trouve dans le domaine correct [-1, 1] et renvoie ensuite des résultats précis à la fois en radians et en degrés. Cela vous fait gagner du temps par rapport aux calculs manuels et réduit le risque d'erreurs. Que vous soyez un étudiant apprenant la trigonométrie, un enseignant préparant des exemples ou un professionnel travaillant avec des angles, cet outil fournit des calculs de cosinus inverse rapides et fiables.",
+          "exampleHeading": "Exemple : Utilisation du Calculateur d'Arccos",
+          "exampleText": "Supposons que vous sachiez que cos(θ) = 0,5 et que vous souhaitiez trouver θ. Entrez x = 0,5 dans le calculateur. Le calculateur calcule θ = arccos(0,5) ≈ 1,047198 rad. La conversion en degrés donne θ° ≈ 60°. Cela signifie qu'un angle de 60° a un cosinus de 0,5. De même, si cos(θ) = -1, alors θ = arccos(-1) = π rad = 180°, et si cos(θ) = 1, alors θ = arccos(1) = 0 rad = 0°."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Qu'est-ce que arccos ?",
+              "answer": "Arccos (cosinus inverse) est la fonction inverse du cosinus. Si cos(θ) = x, alors θ = arccos(x). Il renvoie l'angle dont le cosinus est x, généralement donné en radians ou en degrés."
+            },
+            {
+              "question": "Quel est le domaine de la fonction arccos ?",
+              "answer": "Le domaine d'arccos(x) est toutes les valeurs réelles x telles que -1 ≤ x ≤ 1. En dehors de cet intervalle, la fonction cosinus ne peut pas produire de telles valeurs, donc arccos n'est pas défini pour elles dans les nombres réels."
+            },
+            {
+              "question": "Quel est l'intervalle d'arccos ?",
+              "answer": "L'intervalle principal d'arccos(x) est [0, π] en radians, ce qui correspond à [0°, 180°] en degrés. Cela signifie qu'arccos renvoie toujours un angle entre 0 et π radians (0° et 180°)."
+            },
+            {
+              "question": "Comment convertir arccos de radians en degrés ?",
+              "answer": "Si θ est en radians, vous pouvez le convertir en degrés en utilisant la formule θ° = θ × 180 / π. Notre calculateur effectue cette conversion automatiquement et affiche à la fois les radians et les degrés."
+            },
+            {
+              "question": "Ce calculateur d'arccos est-il gratuit ?",
+              "answer": "Oui, notre calculateur d'arccos est entièrement gratuit. Aucune inscription ni paiement n'est requis. Entrez simplement une valeur pour x entre -1 et 1 pour obtenir l'angle en radians et en degrés."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Connexes",
+          "addition": "Calculateur d'Addition",
+          "additionDesc": "Additionnez des nombres entiers et des décimales rapidement et précisément",
+          "percentage": "Calculateur de Pourcentages",
+          "percentageDesc": "Calculez les valeurs en pourcentage, le changement en pourcentage et les relations en pourcentage",
+          "antilog": "Calculateur d'Antilogarithme",
+          "antilogDesc": "Calculez l'antilogarithme (logarithme inverse) d'un nombre avec n'importe quelle base"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Calculatrices Mathématiques",
       "description": "Parcourez notre collection de calculatrices mathématiques pour tous vos besoins de calcul",

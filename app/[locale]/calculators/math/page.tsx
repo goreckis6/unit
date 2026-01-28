@@ -92,6 +92,12 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
       path: '/calculators/math/antilog',
     },
     {
+      id: 'arccos',
+      titleKey: 'arccos.title',
+      descKey: 'arccos.description',
+      path: '/calculators/math/arccos',
+    },
+    {
       id: 'percentage',
       titleKey: 'percentage.title',
       descKey: 'percentage.description',

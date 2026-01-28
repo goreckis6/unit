@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Calculadora de Arccos",
+      "description": "Calculadora arccos(x) para encontrar el coseno inverso de un valor y obtener el ángulo en grados y radianes.",
+      "x": "Valor (x, valor del coseno)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "angleDegrees": "Ángulo en grados",
+      "angleRadians": "Ángulo en radianes",
+      "calculationHeading": "Cálculo",
+      "calculationIntro": "Para el valor de coseno dado",
+      "calculationStepRadians": "primero calculamos el ángulo en radianes usando arccos(x). El resultado es θ = arccos(x) ≈ {radians} rad.",
+      "calculationStepDegrees": "Luego convertimos los radianes a grados usando θ° = θ × 180 / π, obteniendo aproximadamente {degrees}°.",
+      "seo": {
+        "title": "Calculadora de Arccos – Coseno Inverso (acos) en Grados y Radianes",
+        "description": "Calculadora de arccos gratuita para encontrar el coseno inverso (acos) de un valor y obtener el ángulo tanto en grados como en radianes. Admite valores en el dominio [-1, 1] con explicación paso a paso. Ideal para trigonometría, geometría y cálculos de ingeniería.",
+        "keywords": "calculadora arccos, calculadora coseno inverso, calculadora acos, calculadora inversa del coseno, arccos en grados, arccos en radianes, calculadora de trigonometría, ángulo a partir del coseno",
+        "content": {
+          "heading": "Cómo Usar la Calculadora de Arccos (Coseno Inverso)",
+          "paragraph1": "La función arccos (coseno inverso), escrita como arccos(x) o acos(x), le da el ángulo cuyo coseno es x. En otras palabras, si cos(θ) = x, entonces θ = arccos(x). Esta calculadora le ayuda a encontrar rápidamente ese ángulo tanto en grados como en radianes para cualquier valor de coseno válido entre -1 y 1.",
+          "paragraph2": "Para usar la calculadora, introduzca un valor para x en el intervalo [-1, 1]. La herramienta calcula entonces θ = arccos(x) en radianes utilizando la función de coseno inverso integrada y convierte ese resultado a grados usando la fórmula θ° = θ × 180 / π. Ambos valores se muestran con alta precisión para que pueda utilizarlos en problemas de trigonometría, geometría, física o ingeniería.",
+          "paragraph3": "La función arccos es especialmente útil cuando conoce el coseno de un ángulo pero necesita el ángulo en sí. Los casos de uso comunes incluyen encontrar ángulos en triángulos rectángulos, calcular ángulos entre vectores usando el producto escalar, analizar señales periódicas y resolver ecuaciones trigonométricas. Dado que el coseno no es inyectivo en todos los números reales, el valor principal de arccos se define en el intervalo [0, π] radianes (de 0° a 180°).",
+          "paragraph4": "Nuestra calculadora de arccos valida que su entrada se encuentre dentro del dominio correcto [-1, 1] y luego devuelve resultados precisos tanto en radianes como en grados. Esto le ahorra tiempo en comparación con los cálculos manuales y reduce el riesgo de errores. Ya sea que sea un estudiante que aprende trigonometría, un profesor que prepara ejemplos o un profesional que trabaja con ángulos, esta herramienta proporciona cálculos de coseno inverso rápidos y fiables.",
+          "exampleHeading": "Ejemplo: Uso de la Calculadora de Arccos",
+          "exampleText": "Suponga que sabe que cos(θ) = 0,5 y desea encontrar θ. Introduzca x = 0,5 en la calculadora. La calculadora computa θ = arccos(0,5) ≈ 1,047198 rad. Al convertir a grados obtenemos θ° ≈ 60°. Esto significa que un ángulo de 60° tiene un coseno de 0,5. De forma similar, si cos(θ) = -1, entonces θ = arccos(-1) = π rad = 180°, y si cos(θ) = 1, entonces θ = arccos(1) = 0 rad = 0°."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es arccos?",
+              "answer": "Arccos (coseno inverso) es la función inversa del coseno. Si cos(θ) = x, entonces θ = arccos(x). Devuelve el ángulo cuyo coseno es x, normalmente dado en radianes o grados."
+            },
+            {
+              "question": "¿Cuál es el dominio de la función arccos?",
+              "answer": "El dominio de arccos(x) son todos los valores reales x tales que -1 ≤ x ≤ 1. Fuera de este intervalo, la función coseno no puede producir esos valores, por lo que arccos no está definido para ellos en los números reales."
+            },
+            {
+              "question": "¿Cuál es el rango de arccos?",
+              "answer": "El rango principal de arccos(x) es [0, π] en radianes, lo que corresponde a [0°, 180°] en grados. Esto significa que arccos siempre devuelve un ángulo entre 0 y π radianes (0° y 180°)."
+            },
+            {
+              "question": "¿Cómo convierto arccos de radianes a grados?",
+              "answer": "Si θ está en radianes, puede convertirlo a grados usando la fórmula θ° = θ × 180 / π. Nuestra calculadora realiza esta conversión automáticamente y muestra tanto radianes como grados."
+            },
+            {
+              "question": "¿La calculadora de arccos es gratuita?",
+              "answer": "Sí, nuestra calculadora de arccos es completamente gratuita. No se requiere registro ni pago. Simplemente introduzca un valor de x entre -1 y 1 para obtener el ángulo en radianes y grados."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "addition": "Calculadora de Suma",
+          "additionDesc": "Suma números enteros y decimales rápida y precisamente",
+          "percentage": "Calculadora de Porcentajes",
+          "percentageDesc": "Calcula valores porcentuales, cambio porcentual y relaciones porcentuales",
+          "antilog": "Calculadora de Antilogaritmo",
+          "antilogDesc": "Calcula el antilogaritmo (logaritmo inverso) de un número con cualquier base"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Calculadoras Matemáticas",
       "description": "Explore nuestra colección de calculadoras matemáticas para todas sus necesidades de cálculo",

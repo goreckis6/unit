@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Arccos Regner",
+      "description": "Arccos(x) regner til at finde den inverse cosinus af en værdi og få vinklen i grader og radianer.",
+      "x": "Værdi (x, cosinusværdi)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "angleDegrees": "Vinkel i grader",
+      "angleRadians": "Vinkel i radianer",
+      "calculationHeading": "Beregning",
+      "calculationIntro": "For den givne cosinusværdi",
+      "calculationStepRadians": "beregner vi først vinklen i radianer ved hjælp af arccos(x). Resultatet er θ = arccos(x) ≈ {radians} rad.",
+      "calculationStepDegrees": "Derefter konverterer vi radianer til grader ved hjælp af θ° = θ × 180 / π, hvilket giver cirka {degrees}°.",
+      "seo": {
+        "title": "Arccos Regner – Invers Cosinus (acos) i Grader og Radianer",
+        "description": "Gratis arccos regner til at finde den inverse cosinus (acos) af en værdi og få vinklen både i grader og radianer. Understøtter værdier i domænet [-1, 1] med trin-for-trin forklaring. Ideel til trigonometri, geometri og ingeniørberegninger.",
+        "keywords": "arccos regner, invers cosinus regner, acos regner, cosinus invers regner, arccos i grader, arccos i radianer, trigonometri regner, vinkel fra cosinus",
+        "content": {
+          "heading": "Sådan Bruges Arccos (Invers Cosinus) Regneren",
+          "paragraph1": "Arccos-funktionen (invers cosinus), skrevet som arccos(x) eller acos(x), giver dig vinklen, hvis cosinus er x. Med andre ord, hvis cos(θ) = x, så θ = arccos(x). Denne regner hjælper dig med hurtigt at finde den vinkel både i grader og radianer for enhver gyldig cosinusværdi mellem -1 og 1.",
+          "paragraph2": "For at bruge regneren skal du indtaste en værdi for x i intervallet [-1, 1]. Værktøjet beregner derefter θ = arccos(x) i radianer ved hjælp af den indbyggede inverse cosinusfunktion og konverterer dette resultat til grader ved hjælp af formlen θ° = θ × 180 / π. Begge værdier vises med høj præcision, så du kan bruge dem i trigonometri-, geometri-, fysik- eller ingeniørproblemer.",
+          "paragraph3": "Arccos-funktionen er særligt nyttig, når du kender cosinus af en vinkel, men har brug for selve vinklen. Almindelige anvendelsestilfælde omfatter at finde vinkler i retvinklede trekanter, beregne vinkler mellem vektorer ved hjælp af prikproduktet, analysere periodiske signaler og løse trigonometriske ligninger. Fordi cosinus ikke er injektiv over alle reelle tal, er hovedværdien af arccos defineret i intervallet [0, π] radianer (0° til 180°).",
+          "paragraph4": "Vores arccos regner validerer, at dit input ligger inden for det korrekte domæne [-1, 1], og returnerer derefter præcise resultater både i radianer og grader. Dette sparer dig tid sammenlignet med manuelle beregninger og reducerer risikoen for fejl. Uanset om du er en studerende, der lærer trigonometri, en lærer, der forbereder eksempler, eller en professionel, der arbejder med vinkler, giver dette værktøj hurtige, pålidelige inverse cosinusberegninger.",
+          "exampleHeading": "Eksempel: Brug af Arccos Regneren",
+          "exampleText": "Antag, at du ved, at cos(θ) = 0,5, og du vil finde θ. Indtast x = 0,5 i regneren. Regneren beregner θ = arccos(0,5) ≈ 1,047198 rad. Konvertering til grader giver θ° ≈ 60°. Dette betyder, at en vinkel på 60° har en cosinus på 0,5. Tilsvarende, hvis cos(θ) = -1, så θ = arccos(-1) = π rad = 180°, og hvis cos(θ) = 1, så θ = arccos(1) = 0 rad = 0°."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er arccos?",
+              "answer": "Arccos (invers cosinus) er den inverse funktion af cosinus. Hvis cos(θ) = x, så θ = arccos(x). Den returnerer vinklen, hvis cosinus er x, normalt angivet i radianer eller grader."
+            },
+            {
+              "question": "Hvad er domænet for arccos-funktionen?",
+              "answer": "Domænet for arccos(x) er alle reelle værdier x sådan at -1 ≤ x ≤ 1. Uden for dette interval kan cosinus-funktionen ikke producere sådanne værdier, så arccos er ikke defineret for dem i reelle tal."
+            },
+            {
+              "question": "Hvad er intervallet for arccos?",
+              "answer": "Hovedintervallet for arccos(x) er [0, π] i radianer, hvilket svarer til [0°, 180°] i grader. Dette betyder, at arccos altid returnerer en vinkel mellem 0 og π radianer (0° og 180°)."
+            },
+            {
+              "question": "Hvordan konverterer jeg arccos fra radianer til grader?",
+              "answer": "Hvis θ er i radianer, kan du konvertere det til grader ved hjælp af formlen θ° = θ × 180 / π. Vores regner udfører denne konvertering automatisk og viser både radianer og grader."
+            },
+            {
+              "question": "Er denne arccos regner gratis?",
+              "answer": "Ja, vores arccos regner er helt gratis. Ingen registrering eller betaling påkrævet. Indtast blot en værdi for x mellem -1 og 1 for at få vinklen i radianer og grader."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Regnere",
+          "addition": "Additionsregner",
+          "additionDesc": "Læg hele tal og decimaler sammen hurtigt og præcist",
+          "percentage": "Procentregner",
+          "percentageDesc": "Beregn procentværdier, procentændring og procentforhold",
+          "antilog": "Antilogaritme Regner",
+          "antilogDesc": "Beregn antilogaritmen (invers logaritme) af et tal med enhver base"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematiske Lommeregnere",
       "description": "Gennemse vores samling matematiske lommeregnere til alle dine beregningsbehov",

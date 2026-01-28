@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Arccos计算器",
+      "description": "Arccos(x)计算器用于查找值的反余弦并获取角度（以度和弧度为单位）。",
+      "x": "值（x，余弦值）",
+      "calculate": "计算",
+      "reset": "重置",
+      "result": "结果",
+      "angleDegrees": "角度（度）",
+      "angleRadians": "角度（弧度）",
+      "calculationHeading": "计算",
+      "calculationIntro": "对于给定的余弦值",
+      "calculationStepRadians": "我们首先使用arccos(x)计算弧度角。结果是θ = arccos(x) ≈ {radians} rad。",
+      "calculationStepDegrees": "然后我们使用θ° = θ × 180 / π将弧度转换为度，得到约{degrees}°。",
+      "seo": {
+        "title": "Arccos计算器 – 度和弧度中的反余弦（acos）",
+        "description": "免费arccos计算器，用于查找值的反余弦（acos）并以度和弧度获取角度。支持域[-1, 1]中的值，并提供分步说明。非常适合三角学、几何和工程计算。",
+        "keywords": "arccos计算器, 反余弦计算器, acos计算器, 余弦反计算器, 度中的arccos, 弧度中的arccos, 三角学计算器, 从余弦求角度",
+        "content": {
+          "heading": "如何使用Arccos（反余弦）计算器",
+          "paragraph1": "Arccos函数（反余弦），写作arccos(x)或acos(x)，给出余弦为x的角度。换句话说，如果cos(θ) = x，则θ = arccos(x)。此计算器帮助您快速找到该角度（以度和弧度为单位），适用于-1和1之间的任何有效余弦值。",
+          "paragraph2": "要使用计算器，请在范围[-1, 1]中输入x的值。然后工具使用内置的反余弦函数计算弧度中的θ = arccos(x)，并使用公式θ° = θ × 180 / π将该结果转换为度。两个值都以高精度显示，因此您可以在三角学、几何、物理或工程问题中使用它们。",
+          "paragraph3": "当您知道角度的余弦但需要角度本身时，Arccos函数特别有用。常见用例包括在直角三角形中查找角度、使用点积计算向量之间的角度、分析周期信号以及求解三角方程。由于余弦在所有实数上不是单射的，arccos的主值在区间[0, π]弧度（0°到180°）中定义。",
+          "paragraph4": "我们的arccos计算器验证您的输入是否在正确的域[-1, 1]内，然后返回弧度和度的准确结果。与手动计算相比，这可以节省您的时间并降低错误风险。无论您是学习三角学的学生、准备示例的教师还是处理角度的专业人士，此工具都提供快速、可靠的反余弦计算。",
+          "exampleHeading": "示例：使用Arccos计算器",
+          "exampleText": "假设您知道cos(θ) = 0.5并且想要找到θ。在计算器中输入x = 0.5。计算器计算θ = arccos(0.5) ≈ 1.047198 rad。转换为度得到θ° ≈ 60°。这意味着60°的角度具有0.5的余弦。类似地，如果cos(θ) = -1，则θ = arccos(-1) = π rad = 180°，如果cos(θ) = 1，则θ = arccos(1) = 0 rad = 0°。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {
+              "question": "什么是arccos？",
+              "answer": "Arccos（反余弦）是余弦的反函数。如果cos(θ) = x，则θ = arccos(x)。它返回余弦为x的角度，通常以弧度或度给出。"
+            },
+            {
+              "question": "Arccos函数的定义域是什么？",
+              "answer": "Arccos(x)的定义域是所有满足-1 ≤ x ≤ 1的实数x。在此区间之外，余弦函数无法产生这样的值，因此arccos在实数中未定义。"
+            },
+            {
+              "question": "Arccos的值域是什么？",
+              "answer": "Arccos(x)的主值域在弧度中是[0, π]，对应于度中的[0°, 180°]。这意味着arccos总是返回0和π弧度（0°和180°）之间的角度。"
+            },
+            {
+              "question": "如何将arccos从弧度转换为度？",
+              "answer": "如果θ以弧度为单位，您可以使用公式θ° = θ × 180 / π将其转换为度。我们的计算器自动执行此转换并显示弧度和度。"
+            },
+            {
+              "question": "这个Arccos计算器是免费的吗？",
+              "answer": "是的，我们的arccos计算器完全免费。无需注册或付款。只需输入-1和1之间的x值即可获得弧度和度的角度。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "addition": "加法计算器",
+          "additionDesc": "快速准确地添加整数和小数",
+          "percentage": "百分比计算器",
+          "percentageDesc": "计算百分比值、百分比变化和百分比关系",
+          "antilog": "反对数计算器",
+          "antilogDesc": "计算任意底数的数字的反对数（逆对数）"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "数学计算器",
       "description": "浏览我们的数学计算器集合，满足您的所有计算需求",

@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Kalkulator Arccos",
+      "description": "Kalkulator arccos(x) do znajdowania odwrotnego cosinusa wartości i uzyskiwania kąta w stopniach i radianach.",
+      "x": "Wartość (x, wartość cosinusa)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "angleDegrees": "Kąt w stopniach",
+      "angleRadians": "Kąt w radianach",
+      "calculationHeading": "Obliczenie",
+      "calculationIntro": "Dla podanej wartości cosinusa",
+      "calculationStepRadians": "najpierw obliczamy kąt w radianach używając arccos(x). Wynik to θ = arccos(x) ≈ {radians} rad.",
+      "calculationStepDegrees": "Następnie konwertujemy radiany na stopnie używając θ° = θ × 180 / π, co daje w przybliżeniu {degrees}°.",
+      "seo": {
+        "title": "Kalkulator Arccos – Odwrotny Cosinus (acos) w Stopniach i Radianach",
+        "description": "Darmowy kalkulator arccos do znajdowania odwrotnego cosinusa (acos) wartości i uzyskiwania kąta zarówno w stopniach, jak i radianach. Obsługuje wartości w dziedzinie [-1, 1] z wyjaśnieniem krok po kroku. Idealny do trygonometrii, geometrii i obliczeń inżynierskich.",
+        "keywords": "kalkulator arccos, kalkulator odwrotnego cosinusa, kalkulator acos, kalkulator odwrotny cosinus, arccos w stopniach, arccos w radianach, kalkulator trygonometrii, kąt z cosinusa",
+        "content": {
+          "heading": "Jak Używać Kalkulatora Arccos (Odwrotny Cosinus)",
+          "paragraph1": "Funkcja arccos (odwrotny cosinus), zapisana jako arccos(x) lub acos(x), daje kąt, którego cosinus wynosi x. Innymi słowy, jeśli cos(θ) = x, to θ = arccos(x). Ten kalkulator pomaga szybko znaleźć ten kąt zarówno w stopniach, jak i radianach dla dowolnej prawidłowej wartości cosinusa między -1 a 1.",
+          "paragraph2": "Aby użyć kalkulatora, wprowadź wartość dla x w zakresie [-1, 1]. Narzędzie następnie oblicza θ = arccos(x) w radianach używając wbudowanej funkcji odwrotnego cosinusa i konwertuje ten wynik na stopnie używając wzoru θ° = θ × 180 / π. Obie wartości są wyświetlane z wysoką precyzją, aby można było ich używać w problemach trygonometrycznych, geometrycznych, fizycznych lub inżynierskich.",
+          "paragraph3": "Funkcja arccos jest szczególnie przydatna, gdy znasz cosinus kąta, ale potrzebujesz samego kąta. Typowe zastosowania obejmują znajdowanie kątów w trójkątach prostokątnych, obliczanie kątów między wektorami używając iloczynu skalarnego, analizowanie sygnałów okresowych i rozwiązywanie równań trygonometrycznych. Ponieważ cosinus nie jest różnowartościowy dla wszystkich liczb rzeczywistych, wartość główna arccos jest zdefiniowana w przedziale [0, π] radianów (0° do 180°).",
+          "paragraph4": "Nasz kalkulator arccos sprawdza, czy Twoje wejście mieści się w prawidłowej dziedzinie [-1, 1], a następnie zwraca dokładne wyniki zarówno w radianach, jak i stopniach. To oszczędza czas w porównaniu z obliczeniami ręcznymi i zmniejsza ryzyko błędów. Niezależnie od tego, czy jesteś studentem uczącym się trygonometrii, nauczycielem przygotowującym przykłady, czy profesjonalistą pracującym z kątami, to narzędzie zapewnia szybkie, niezawodne obliczenia odwrotnego cosinusa.",
+          "exampleHeading": "Przykład: Użycie Kalkulatora Arccos",
+          "exampleText": "Załóżmy, że wiesz, że cos(θ) = 0,5 i chcesz znaleźć θ. Wprowadź x = 0,5 do kalkulatora. Kalkulator oblicza θ = arccos(0,5) ≈ 1,047198 rad. Konwersja na stopnie daje θ° ≈ 60°. Oznacza to, że kąt 60° ma cosinus 0,5. Podobnie, jeśli cos(θ) = -1, to θ = arccos(-1) = π rad = 180°, a jeśli cos(θ) = 1, to θ = arccos(1) = 0 rad = 0°."
+        },
+        "faq": {
+          "heading": "Często Zadawane Pytania",
+          "items": [
+            {
+              "question": "Co to jest arccos?",
+              "answer": "Arccos (odwrotny cosinus) jest funkcją odwrotną cosinusa. Jeśli cos(θ) = x, to θ = arccos(x). Zwraca kąt, którego cosinus wynosi x, zwykle podany w radianach lub stopniach."
+            },
+            {
+              "question": "Jaki jest dziedzina funkcji arccos?",
+              "answer": "Dziedzina arccos(x) to wszystkie wartości rzeczywiste x takie, że -1 ≤ x ≤ 1. Poza tym przedziałem funkcja cosinus nie może wytworzyć takich wartości, więc arccos nie jest dla nich zdefiniowany w liczbach rzeczywistych."
+            },
+            {
+              "question": "Jaki jest zakres arccos?",
+              "answer": "Główny zakres arccos(x) to [0, π] w radianach, co odpowiada [0°, 180°] w stopniach. Oznacza to, że arccos zawsze zwraca kąt między 0 a π radianów (0° i 180°)."
+            },
+            {
+              "question": "Jak przekonwertować arccos z radianów na stopnie?",
+              "answer": "Jeśli θ jest w radianach, możesz przekonwertować go na stopnie używając wzoru θ° = θ × 180 / π. Nasz kalkulator wykonuje tę konwersję automatycznie i wyświetla zarówno radiany, jak i stopnie."
+            },
+            {
+              "question": "Czy ten kalkulator arccos jest darmowy?",
+              "answer": "Tak, nasz kalkulator arccos jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Po prostu wprowadź wartość x między -1 a 1, aby uzyskać kąt w radianach i stopniach."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "addition": "Kalkulator Dodawania",
+          "additionDesc": "Dodaj liczby całkowite i dziesiętne szybko i dokładnie",
+          "percentage": "Kalkulator Procentów",
+          "percentageDesc": "Oblicz wartości procentowe, zmianę procentową i relacje procentowe",
+          "antilog": "Kalkulator Antylogarytmu",
+          "antilogDesc": "Oblicz antylogarytm (logarytm odwrotny) liczby z dowolną podstawą"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Kalkulatory Matematyczne",
       "description": "Przeglądaj naszą kolekcję kalkulatorów matematycznych dla wszystkich potrzeb obliczeniowych",

@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Arccos Calculator",
+      "description": "Arccos(x) calculator to find the inverse cosine of a value and get the angle in degrees and radians.",
+      "x": "Value (x, cosine value)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "angleDegrees": "Angle in degrees",
+      "angleRadians": "Angle in radians",
+      "calculationHeading": "Calculation",
+      "calculationIntro": "For the given cosine value",
+      "calculationStepRadians": "we first compute the angle in radians using arccos(x). The result is θ = arccos(x) ≈ {radians} rad.",
+      "calculationStepDegrees": "Then we convert radians to degrees using θ° = θ × 180 / π, giving approximately {degrees}°.",
+      "seo": {
+        "title": "Arccos Calculator – Inverse Cosine (acos) in Degrees & Radians",
+        "description": "Free arccos calculator to find the inverse cosine (acos) of a value and get the angle in both degrees and radians. Supports values in the domain [-1, 1] with step-by-step explanation. Ideal for trigonometry, geometry, and engineering calculations.",
+        "keywords": "arccos calculator, inverse cosine calculator, acos calculator, cos inverse calculator, arccos in degrees, arccos in radians, trigonometry calculator, angle from cosine",
+        "content": {
+          "heading": "How to Use the Arccos (Inverse Cosine) Calculator",
+          "paragraph1": "The arccos (inverse cosine) function, written as arccos(x) or acos(x), gives you the angle whose cosine is x. In other words, if cos(θ) = x, then θ = arccos(x). This calculator helps you quickly find that angle in both degrees and radians for any valid cosine value between -1 and 1.",
+          "paragraph2": "To use the calculator, enter a value for x in the range [-1, 1]. The tool then computes θ = arccos(x) in radians using the built-in inverse cosine function, and converts that result to degrees using the formula θ° = θ × 180 / π. Both values are displayed with high precision so you can use them in trigonometry, geometry, physics, or engineering problems.",
+          "paragraph3": "The arccos function is especially useful when you know the cosine of an angle but need the angle itself. Common use cases include finding angles in right triangles, computing angles between vectors using the dot product, analyzing periodic signals, and solving trigonometric equations. Because cosine is not one-to-one over all real numbers, the principal value of arccos is defined in the interval [0, π] radians (0° to 180°).",
+          "paragraph4": "Our arccos calculator validates that your input lies within the correct domain [-1, 1] and then returns accurate results for both radians and degrees. This saves you time compared to manual calculations and reduces the risk of mistakes. Whether you are a student learning trigonometry, a teacher preparing examples, or a professional working with angles, this tool provides fast, reliable inverse cosine calculations.",
+          "exampleHeading": "Example: Using the Arccos Calculator",
+          "exampleText": "Suppose you know that cos(θ) = 0.5 and you want to find θ. Enter x = 0.5 into the calculator. The calculator computes θ = arccos(0.5) ≈ 1.047198 rad. Converting to degrees gives θ° ≈ 60°. This means that an angle of 60° has a cosine of 0.5. Similarly, if cos(θ) = -1, then θ = arccos(-1) = π rad = 180°, and if cos(θ) = 1, then θ = arccos(1) = 0 rad = 0°."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is arccos?",
+              "answer": "Arccos (inverse cosine) is the inverse of the cosine function. If cos(θ) = x, then θ = arccos(x). It returns the angle whose cosine is x, usually given in radians or degrees."
+            },
+            {
+              "question": "What is the domain of the arccos function?",
+              "answer": "The domain of arccos(x) is all real values x such that -1 ≤ x ≤ 1. Outside this interval, the cosine function cannot produce such values, so arccos is not defined for them in real numbers."
+            },
+            {
+              "question": "What is the range of arccos?",
+              "answer": "The principal range of arccos(x) is [0, π] in radians, which corresponds to [0°, 180°] in degrees. This means arccos always returns an angle between 0 and π radians (0° and 180°)."
+            },
+            {
+              "question": "How do I convert arccos from radians to degrees?",
+              "answer": "If θ is in radians, you can convert it to degrees using the formula θ° = θ × 180 / π. Our calculator does this conversion automatically and displays both radians and degrees."
+            },
+            {
+              "question": "Is this arccos calculator free to use?",
+              "answer": "Yes, our arccos calculator is completely free to use. No registration or payment is required. Simply enter a value for x between -1 and 1 to get the angle in radians and degrees."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals quickly and accurately",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentage values, percentage change, and percentage relationships",
+          "antilog": "Antilog Calculator",
+          "antilogDesc": "Calculate the antilogarithm (inverse logarithm) of a number with any base"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Math Calculators",
       "description": "Browse our collection of math calculators for all your calculation needs",

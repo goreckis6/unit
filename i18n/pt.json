@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Calculadora de Arccos",
+      "description": "Calculadora arccos(x) para encontrar o cosseno inverso de um valor e obter o ângulo em graus e radianos.",
+      "x": "Valor (x, valor do cosseno)",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "angleDegrees": "Ângulo em graus",
+      "angleRadians": "Ângulo em radianos",
+      "calculationHeading": "Cálculo",
+      "calculationIntro": "Para o valor de cosseno dado",
+      "calculationStepRadians": "primeiro calculamos o ângulo em radianos usando arccos(x). O resultado é θ = arccos(x) ≈ {radians} rad.",
+      "calculationStepDegrees": "Em seguida, convertemos radianos para graus usando θ° = θ × 180 / π, dando aproximadamente {degrees}°.",
+      "seo": {
+        "title": "Calculadora de Arccos – Cosseno Inverso (acos) em Graus e Radianos",
+        "description": "Calculadora de arccos gratuita para encontrar o cosseno inverso (acos) de um valor e obter o ângulo tanto em graus quanto em radianos. Suporta valores no domínio [-1, 1] com explicação passo a passo. Ideal para trigonometria, geometria e cálculos de engenharia.",
+        "keywords": "calculadora arccos, calculadora cosseno inverso, calculadora acos, calculadora inversa do cosseno, arccos em graus, arccos em radianos, calculadora de trigonometria, ângulo a partir do cosseno",
+        "content": {
+          "heading": "Como Usar a Calculadora de Arccos (Cosseno Inverso)",
+          "paragraph1": "A função arccos (cosseno inverso), escrita como arccos(x) ou acos(x), fornece o ângulo cujo cosseno é x. Em outras palavras, se cos(θ) = x, então θ = arccos(x). Esta calculadora ajuda você a encontrar rapidamente esse ângulo tanto em graus quanto em radianos para qualquer valor de cosseno válido entre -1 e 1.",
+          "paragraph2": "Para usar a calculadora, insira um valor para x no intervalo [-1, 1]. A ferramenta então calcula θ = arccos(x) em radianos usando a função cosseno inverso integrada e converte esse resultado para graus usando a fórmula θ° = θ × 180 / π. Ambos os valores são exibidos com alta precisão para que você possa usá-los em problemas de trigonometria, geometria, física ou engenharia.",
+          "paragraph3": "A função arccos é especialmente útil quando você conhece o cosseno de um ângulo, mas precisa do ângulo em si. Casos de uso comuns incluem encontrar ângulos em triângulos retângulos, calcular ângulos entre vetores usando o produto escalar, analisar sinais periódicos e resolver equações trigonométricas. Como o cosseno não é injetivo sobre todos os números reais, o valor principal de arccos é definido no intervalo [0, π] radianos (0° a 180°).",
+          "paragraph4": "Nossa calculadora de arccos valida que sua entrada está dentro do domínio correto [-1, 1] e então retorna resultados precisos tanto em radianos quanto em graus. Isso economiza tempo em comparação com cálculos manuais e reduz o risco de erros. Seja você um estudante aprendendo trigonometria, um professor preparando exemplos ou um profissional trabalhando com ângulos, esta ferramenta fornece cálculos de cosseno inverso rápidos e confiáveis.",
+          "exampleHeading": "Exemplo: Usando a Calculadora de Arccos",
+          "exampleText": "Suponha que você saiba que cos(θ) = 0,5 e deseja encontrar θ. Insira x = 0,5 na calculadora. A calculadora calcula θ = arccos(0,5) ≈ 1,047198 rad. A conversão para graus dá θ° ≈ 60°. Isso significa que um ângulo de 60° tem um cosseno de 0,5. Da mesma forma, se cos(θ) = -1, então θ = arccos(-1) = π rad = 180°, e se cos(θ) = 1, então θ = arccos(1) = 0 rad = 0°."
+        },
+        "faq": {
+          "heading": "Perguntas Frequentes",
+          "items": [
+            {
+              "question": "O que é arccos?",
+              "answer": "Arccos (cosseno inverso) é a função inversa do cosseno. Se cos(θ) = x, então θ = arccos(x). Retorna o ângulo cujo cosseno é x, geralmente dado em radianos ou graus."
+            },
+            {
+              "question": "Qual é o domínio da função arccos?",
+              "answer": "O domínio de arccos(x) são todos os valores reais x tais que -1 ≤ x ≤ 1. Fora desse intervalo, a função cosseno não pode produzir tais valores, então arccos não está definido para eles nos números reais."
+            },
+            {
+              "question": "Qual é o intervalo de arccos?",
+              "answer": "O intervalo principal de arccos(x) é [0, π] em radianos, que corresponde a [0°, 180°] em graus. Isso significa que arccos sempre retorna um ângulo entre 0 e π radianos (0° e 180°)."
+            },
+            {
+              "question": "Como converter arccos de radianos para graus?",
+              "answer": "Se θ está em radianos, você pode convertê-lo para graus usando a fórmula θ° = θ × 180 / π. Nossa calculadora faz essa conversão automaticamente e exibe tanto radianos quanto graus."
+            },
+            {
+              "question": "Esta calculadora de arccos é gratuita?",
+              "answer": "Sim, nossa calculadora de arccos é completamente gratuita. Não é necessário registro ou pagamento. Simplesmente insira um valor para x entre -1 e 1 para obter o ângulo em radianos e graus."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "addition": "Calculadora de Adição",
+          "additionDesc": "Some números inteiros e decimais rápida e precisamente",
+          "percentage": "Calculadora de Porcentagem",
+          "percentageDesc": "Calcule valores percentuais, mudança percentual e relações percentuais",
+          "antilog": "Calculadora de Antilogaritmo",
+          "antilogDesc": "Calcule o antilogaritmo (logaritmo inverso) de um número com qualquer base"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Calculadoras Matemáticas",
       "description": "Navegue pela nossa coleção de calculadoras matemáticas para todas as suas necessidades de cálculo",

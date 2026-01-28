@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Arccos Rekenmachine",
+      "description": "Arccos(x) rekenmachine om de inverse cosinus van een waarde te vinden en de hoek in graden en radialen te krijgen.",
+      "x": "Waarde (x, cosinuswaarde)",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "angleDegrees": "Hoek in graden",
+      "angleRadians": "Hoek in radialen",
+      "calculationHeading": "Berekening",
+      "calculationIntro": "Voor de gegeven cosinuswaarde",
+      "calculationStepRadians": "berekenen we eerst de hoek in radialen met behulp van arccos(x). Het resultaat is θ = arccos(x) ≈ {radians} rad.",
+      "calculationStepDegrees": "Vervolgens converteren we radialen naar graden met behulp van θ° = θ × 180 / π, wat ongeveer {degrees}° geeft.",
+      "seo": {
+        "title": "Arccos Rekenmachine – Invers Cosinus (acos) in Graden en Radialen",
+        "description": "Gratis arccos rekenmachine om de inverse cosinus (acos) van een waarde te vinden en de hoek zowel in graden als in radialen te krijgen. Ondersteunt waarden in het domein [-1, 1] met stap-voor-stap uitleg. Ideaal voor trigonometrie, geometrie en technische berekeningen.",
+        "keywords": "arccos rekenmachine, invers cosinus rekenmachine, acos rekenmachine, cosinus invers rekenmachine, arccos in graden, arccos in radialen, trigonometrie rekenmachine, hoek uit cosinus",
+        "content": {
+          "heading": "Hoe de Arccos (Invers Cosinus) Rekenmachine te Gebruiken",
+          "paragraph1": "De arccos-functie (invers cosinus), geschreven als arccos(x) of acos(x), geeft u de hoek waarvan de cosinus x is. Met andere woorden, als cos(θ) = x, dan θ = arccos(x). Deze rekenmachine helpt u snel die hoek te vinden zowel in graden als in radialen voor elke geldige cosinuswaarde tussen -1 en 1.",
+          "paragraph2": "Om de rekenmachine te gebruiken, voert u een waarde voor x in binnen het bereik [-1, 1]. Het hulpmiddel berekent dan θ = arccos(x) in radialen met behulp van de ingebouwde inverse cosinusfunctie en converteert dat resultaat naar graden met behulp van de formule θ° = θ × 180 / π. Beide waarden worden met hoge precisie weergegeven zodat u ze kunt gebruiken in trigonometrie-, geometrie-, natuurkunde- of technische problemen.",
+          "paragraph3": "De arccos-functie is vooral nuttig wanneer u de cosinus van een hoek kent maar de hoek zelf nodig heeft. Veelvoorkomende gebruikssituaties zijn het vinden van hoeken in rechthoekige driehoeken, het berekenen van hoeken tussen vectoren met behulp van het inwendig product, het analyseren van periodieke signalen en het oplossen van trigonometrische vergelijkingen. Omdat cosinus niet injectief is over alle reële getallen, is de hoofdwaarde van arccos gedefinieerd in het interval [0, π] radialen (0° tot 180°).",
+          "paragraph4": "Onze arccos rekenmachine valideert dat uw invoer binnen het juiste domein [-1, 1] ligt en retourneert dan nauwkeurige resultaten zowel in radialen als in graden. Dit bespaart u tijd in vergelijking met handmatige berekeningen en vermindert het risico op fouten. Of u nu een student bent die trigonometrie leert, een leraar die voorbeelden voorbereidt of een professional die met hoeken werkt, deze tool biedt snelle, betrouwbare inverse cosinusberekeningen.",
+          "exampleHeading": "Voorbeeld: Gebruik van de Arccos Rekenmachine",
+          "exampleText": "Stel dat u weet dat cos(θ) = 0,5 en u wilt θ vinden. Voer x = 0,5 in de rekenmachine in. De rekenmachine berekent θ = arccos(0,5) ≈ 1,047198 rad. Conversie naar graden geeft θ° ≈ 60°. Dit betekent dat een hoek van 60° een cosinus van 0,5 heeft. Evenzo, als cos(θ) = -1, dan θ = arccos(-1) = π rad = 180°, en als cos(θ) = 1, dan θ = arccos(1) = 0 rad = 0°."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            {
+              "question": "Wat is arccos?",
+              "answer": "Arccos (invers cosinus) is de inverse functie van cosinus. Als cos(θ) = x, dan θ = arccos(x). Het retourneert de hoek waarvan de cosinus x is, meestal gegeven in radialen of graden."
+            },
+            {
+              "question": "Wat is het domein van de arccos-functie?",
+              "answer": "Het domein van arccos(x) is alle reële waarden x zodanig dat -1 ≤ x ≤ 1. Buiten dit interval kan de cosinusfunctie dergelijke waarden niet produceren, dus arccos is niet gedefinieerd voor hen in reële getallen."
+            },
+            {
+              "question": "Wat is het bereik van arccos?",
+              "answer": "Het hoofdbereik van arccos(x) is [0, π] in radialen, wat overeenkomt met [0°, 180°] in graden. Dit betekent dat arccos altijd een hoek tussen 0 en π radialen (0° en 180°) retourneert."
+            },
+            {
+              "question": "Hoe converteer ik arccos van radialen naar graden?",
+              "answer": "Als θ in radialen is, kunt u het converteren naar graden met behulp van de formule θ° = θ × 180 / π. Onze rekenmachine voert deze conversie automatisch uit en toont zowel radialen als graden."
+            },
+            {
+              "question": "Is deze arccos rekenmachine gratis?",
+              "answer": "Ja, onze arccos rekenmachine is volledig gratis. Geen registratie of betaling vereist. Voer eenvoudig een waarde voor x tussen -1 en 1 in om de hoek in radialen en graden te krijgen."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde Rekenmachines",
+          "addition": "Optelrekenmachine",
+          "additionDesc": "Tel gehele getallen en decimalen snel en nauwkeurig op",
+          "percentage": "Procentrekenmachine",
+          "percentageDesc": "Bereken procentwaarden, procentuele verandering en procentuele relaties",
+          "antilog": "Antilogaritme Rekenmachine",
+          "antilogDesc": "Bereken de antilogaritme (invers logaritme) van een getal met elke basis"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Wiskundige Rekenmachines",
       "description": "Blader door onze collectie wiskundige rekenmachines voor al uw rekenbehoeften",

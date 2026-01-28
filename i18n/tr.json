@@ -208,6 +208,68 @@
         }
       }
     },
+    "arccos": {
+      "title": "Arccos Hesaplayıcı",
+      "description": "Bir değerin ters kosinüsünü bulmak ve açıyı derece ve radyan cinsinden almak için Arccos(x) hesaplayıcı.",
+      "x": "Değer (x, kosinüs değeri)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "angleDegrees": "Derece cinsinden açı",
+      "angleRadians": "Radyan cinsinden açı",
+      "calculationHeading": "Hesaplama",
+      "calculationIntro": "Verilen kosinüs değeri için",
+      "calculationStepRadians": "önce arccos(x) kullanarak radyan cinsinden açıyı hesaplıyoruz. Sonuç θ = arccos(x) ≈ {radians} rad'dır.",
+      "calculationStepDegrees": "Sonra θ° = θ × 180 / π kullanarak radyanları dereceye dönüştürüyoruz, bu da yaklaşık {degrees}° verir.",
+      "seo": {
+        "title": "Arccos Hesaplayıcı – Derece ve Radyan Cinsinden Ters Kosinüs (acos)",
+        "description": "Bir değerin ters kosinüsünü (acos) bulmak ve açıyı hem derece hem de radyan cinsinden almak için ücretsiz arccos hesaplayıcı. [-1, 1] alanındaki değerleri adım adım açıklama ile destekler. Trigonometri, geometri ve mühendislik hesaplamaları için idealdir.",
+        "keywords": "arccos hesaplayıcı, ters kosinüs hesaplayıcı, acos hesaplayıcı, kosinüs ters hesaplayıcı, derece cinsinden arccos, radyan cinsinden arccos, trigonometri hesaplayıcı, kosinüsten açı",
+        "content": {
+          "heading": "Arccos (Ters Kosinüs) Hesaplayıcı Nasıl Kullanılır",
+          "paragraph1": "Arccos fonksiyonu (ters kosinüs), arccos(x) veya acos(x) olarak yazılır ve kosinüsü x olan açıyı verir. Başka bir deyişle, cos(θ) = x ise, θ = arccos(x)'tir. Bu hesaplayıcı, -1 ile 1 arasındaki herhangi bir geçerli kosinüs değeri için hem derece hem de radyan cinsinden bu açıyı hızlıca bulmanıza yardımcı olur.",
+          "paragraph2": "Hesaplayıcıyı kullanmak için [-1, 1] aralığında x için bir değer girin. Araç daha sonra yerleşik ters kosinüs fonksiyonunu kullanarak radyan cinsinden θ = arccos(x) hesaplar ve θ° = θ × 180 / π formülünü kullanarak bu sonucu dereceye dönüştürür. Her iki değer de trigonometri, geometri, fizik veya mühendislik problemlerinde kullanabileceğiniz şekilde yüksek hassasiyetle gösterilir.",
+          "paragraph3": "Arccos fonksiyonu, bir açının kosinüsünü bildiğiniz ancak açının kendisine ihtiyaç duyduğunuzda özellikle kullanışlıdır. Yaygın kullanım durumları arasında dik üçgenlerde açıları bulma, nokta çarpımı kullanarak vektörler arasındaki açıları hesaplama, periyodik sinyalleri analiz etme ve trigonometrik denklemleri çözme yer alır. Kosinüs tüm gerçek sayılar üzerinde birebir olmadığı için, arccos'un ana değeri [0, π] radyan (0° ile 180°) aralığında tanımlanır.",
+          "paragraph4": "Arccos hesaplayıcımız, girişinizin doğru [-1, 1] alanı içinde olduğunu doğrular ve ardından hem radyan hem de derece cinsinden doğru sonuçlar döndürür. Bu, manuel hesaplamalara kıyasla size zaman kazandırır ve hata riskini azaltır. İster trigonometri öğrenen bir öğrenci, ister örnekler hazırlayan bir öğretmen veya açılarla çalışan bir profesyonel olun, bu araç hızlı, güvenilir ters kosinüs hesaplamaları sağlar.",
+          "exampleHeading": "Örnek: Arccos Hesaplayıcının Kullanımı",
+          "exampleText": "cos(θ) = 0,5 olduğunu bildiğinizi ve θ'yi bulmak istediğinizi varsayalım. Hesaplayıcıya x = 0,5 girin. Hesaplayıcı θ = arccos(0,5) ≈ 1,047198 rad hesaplar. Dereceye dönüştürme θ° ≈ 60° verir. Bu, 60°'lik bir açının kosinüsünün 0,5 olduğu anlamına gelir. Benzer şekilde, cos(θ) = -1 ise, θ = arccos(-1) = π rad = 180° ve cos(θ) = 1 ise, θ = arccos(1) = 0 rad = 0°'dir."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "Arccos nedir?",
+              "answer": "Arccos (ters kosinüs), kosinüsün ters fonksiyonudur. cos(θ) = x ise, θ = arccos(x)'tir. Kosinüsü x olan açıyı döndürür, genellikle radyan veya derece cinsinden verilir."
+            },
+            {
+              "question": "Arccos fonksiyonunun tanım kümesi nedir?",
+              "answer": "Arccos(x)'in tanım kümesi, -1 ≤ x ≤ 1 olan tüm gerçek x değerleridir. Bu aralığın dışında, kosinüs fonksiyonu bu tür değerler üretemez, bu nedenle arccos gerçek sayılarda bunlar için tanımlı değildir."
+            },
+            {
+              "question": "Arccos'un değer kümesi nedir?",
+              "answer": "Arccos(x)'in ana değer kümesi radyan cinsinden [0, π]'dir, bu da derece cinsinden [0°, 180°]'ye karşılık gelir. Bu, arccos'un her zaman 0 ile π radyan (0° ile 180°) arasında bir açı döndürdüğü anlamına gelir."
+            },
+            {
+              "question": "Arccos'u radyandan dereceye nasıl dönüştürürüm?",
+              "answer": "θ radyan cinsindeyse, θ° = θ × 180 / π formülünü kullanarak dereceye dönüştürebilirsiniz. Hesaplayıcımız bu dönüşümü otomatik olarak yapar ve hem radyanı hem de dereceyi gösterir."
+            },
+            {
+              "question": "Bu arccos hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, arccos hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Radyan ve derece cinsinden açıyı almak için -1 ile 1 arasında x için bir değer girmeniz yeterlidir."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "addition": "Toplama Hesaplayıcı",
+          "additionDesc": "Tam sayıları ve ondalık sayıları hızlı ve doğru bir şekilde toplayın",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın",
+          "antilog": "Antilogaritma Hesaplayıcı",
+          "antilogDesc": "Herhangi bir tabanla bir sayının antilogaritmasını (ters logaritma) hesaplayın"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematik Hesap Makineleri",
       "description": "Tüm hesaplama ihtiyaçlarınız için matematik hesap makineleri koleksiyonumuzu gözden geçirin",

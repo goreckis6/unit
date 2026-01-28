@@ -2616,6 +2616,79 @@
           "ampsToWattsDesc": "Convertir corriente y tensión en potencia"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Convertidor de Texto a Binario",
+      "description": "Convierte texto a código binario al instante con múltiples codificaciones de caracteres (UTF-8, UTF-16, Windows-1252) y separadores personalizables.",
+      "textInput": "Entrada de Texto",
+      "textPlaceholder": "Ingrese texto para convertir a binario...",
+      "encoding": "Codificación de Caracteres",
+      "encodingUtf8": "UTF-8 Unicode (uso más común)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (ASCII extendido)",
+      "separator": "Separador",
+      "separatorSpace": "Espacio Vacío",
+      "separatorComma": "Coma (y espacio)",
+      "separatorCustom": "Definido por el usuario",
+      "customSeparatorLabel": "Escriba su separador",
+      "customSeparatorPlaceholder": "Ingrese separador (máx. 10 caracteres)",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "binaryOutput": "Salida Binaria",
+      "seo": {
+        "title": "Convertidor de Texto a Binario – Herramienta Gratuita en Línea",
+        "description": "Convierte texto a código binario al instante con nuestro convertidor gratuito de texto a binario. Soporta codificaciones UTF-8, UTF-16 y Windows-1252 con separadores personalizables. Rápido, preciso y fácil de usar.",
+        "keywords": "texto a binario, convertidor binario, texto a código binario, codificador binario, UTF-8 a binario, UTF-16 a binario, codificador de texto, traductor binario, ASCII a binario, Unicode a binario",
+        "content": {
+          "heading": "Cómo Convertir Texto a Binario",
+          "paragraph1": "Un convertidor de texto a binario es una herramienta esencial para codificar caracteres de texto en representación binaria. El código binario usa solo dos dígitos (0 y 1) para representar todos los datos, lo que lo hace fundamental para los sistemas informáticos y la comunicación digital. Nuestro convertidor gratuito de texto a binario facilita la conversión de cualquier cadena de texto a su equivalente binario usando varias codificaciones de caracteres, ayudándote a entender cómo las computadoras almacenan y procesan datos de texto.",
+          "paragraph2": "El proceso de conversión funciona codificando primero tu texto usando una codificación de caracteres elegida (como UTF-8, UTF-16 o Windows-1252), que convierte cada carácter en uno o más bytes. Cada byte se convierte luego a su representación binaria de 8 bits. Por ejemplo, la letra 'A' en ASCII/UTF-8 está representada por el valor de byte 65, que se convierte a binario como '01000001'. Nuestro convertidor maneja este proceso automáticamente, soportando múltiples estándares de codificación para satisfacer tus necesidades específicas.",
+          "paragraph3": "La codificación de caracteres determina cómo se mapean los caracteres de texto a valores de byte. UTF-8 es la codificación más común, usando 1-4 bytes por carácter y soportando todos los caracteres Unicode. UTF-16 usa 2 o 4 bytes por carácter y es común en sistemas Windows. UTF-16 LE (Little Endian) almacena el byte menos significativo primero, mientras que UTF-16 BE (Big Endian) almacena el byte más significativo primero. Windows-1252 es una codificación ASCII extendida comúnmente usada en idiomas de Europa Occidental. Nuestro convertidor soporta todas estas codificaciones, permitiéndote elegir la que coincida con tus requisitos.",
+          "paragraph4": "La opción de separador te permite controlar cómo se muestran los dígitos binarios. Puedes usar espacios vacíos para salida compacta, comas con espacios para legibilidad, o definir tu propio separador personalizado (hasta 10 caracteres). Esta flexibilidad facilita el formato de salida binaria para diferentes propósitos, ya sea que estés aprendiendo sobre representación binaria, depurando problemas de codificación o preparando datos para aplicaciones específicas. La conversión ocurre automáticamente mientras escribes, proporcionando retroalimentación instantánea y haciendo la herramienta eficiente tanto para conversiones rápidas como para análisis detallados.",
+          "exampleHeading": "Ejemplo: Convertir Texto a Binario",
+          "exampleText": "Para convertir la palabra 'Hola' a binario usando codificación UTF-8: H = 01001000, o = 01101111, l = 01101100, a = 01100001. Con separador de espacio, el resultado es: 01001000 01101111 01101100 01100001. Con separador de coma, se convierte en: 01001000, 01101111, 01101100, 01100001. Cada carácter se convierte a su valor de byte, luego a una cadena binaria de 8 bits. El convertidor maneja todos los caracteres Unicode, incluyendo emojis y símbolos especiales, convirtiéndolos según el estándar de codificación seleccionado."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es la conversión de texto a binario?",
+              "answer": "La conversión de texto a binario es el proceso de codificar caracteres de texto en código binario (secuencias de 0s y 1s). Cada carácter se convierte primero a su representación de byte usando una codificación de caracteres (como UTF-8), luego cada byte se convierte a su forma binaria de 8 bits. Así es como las computadoras almacenan y procesan internamente los datos de texto."
+            },
+            {
+              "question": "¿Cuál es la diferencia entre UTF-8 y UTF-16?",
+              "answer": "UTF-8 usa 1-4 bytes por carácter y es compatible hacia atrás con ASCII (los caracteres ASCII usan 1 byte). UTF-16 usa 2 o 4 bytes por carácter. UTF-8 es más eficiente en espacio para caracteres latinos, mientras que UTF-16 puede ser más eficiente para ciertos idiomas asiáticos. UTF-16 LE (Little Endian) almacena bytes con el byte menos significativo primero, mientras que UTF-16 BE (Big Endian) almacena el byte más significativo primero."
+            },
+            {
+              "question": "¿Cómo elijo la codificación de caracteres correcta?",
+              "answer": "Usa UTF-8 para la mayoría de aplicaciones modernas y contenido web, ya que es la más ampliamente soportada y eficiente en espacio para la mayoría de idiomas. Usa UTF-16 si trabajas con sistemas Windows o necesitas coincidir con requisitos de sistema específicos. Usa Windows-1252 solo si necesitas compatibilidad con sistemas heredados o conjuntos de caracteres específicos de Europa Occidental."
+            },
+            {
+              "question": "¿Puedo convertir binario de vuelta a texto?",
+              "answer": "Sí, la conversión de binario a texto es posible, pero necesitas saber la codificación de caracteres original utilizada. Nuestro convertidor se enfoca en la conversión de texto a binario. Para convertir binario de vuelta a texto, necesitarías un convertidor de binario a texto que soporte el mismo estándar de codificación."
+            },
+            {
+              "question": "¿Qué es un separador y por qué importa?",
+              "answer": "Un separador es un carácter o cadena usado para separar bytes binarios individuales en la salida. Los espacios vacíos hacen la salida compacta, las comas con espacios mejoran la legibilidad, y los separadores personalizados te permiten formatear la salida para aplicaciones o sistemas específicos. El separador no afecta los valores binarios en sí, solo cómo se muestran."
+            },
+            {
+              "question": "¿Es gratuito este convertidor de texto a binario?",
+              "answer": "Sí, nuestro convertidor de texto a binario es completamente gratuito. No se requiere registro ni pago. Simplemente ingresa tu texto, elige tus preferencias de codificación y separador, y obtén resultados de conversión binaria instantáneos."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "addition": "Calculadora de Suma",
+          "additionDesc": "Suma números enteros y decimales rápida y precisamente",
+          "percentage": "Calculadora de Porcentaje",
+          "percentageDesc": "Calcula valores porcentuales, cambio porcentual y relaciones porcentuales",
+          "average": "Calculadora de Promedio",
+          "averageDesc": "Encuentra el promedio, suma y conteo de una lista de números"
+        }
+      }
     }
   },
   "notFound": {

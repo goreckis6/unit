@@ -2635,6 +2635,79 @@
           "ampsToWattsDesc": "Konverter strøm og spænding til effekt"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Tekst til Binær Konverter",
+      "description": "Konverter tekst til binær kode øjeblikkeligt med flere tegnkodninger (UTF-8, UTF-16, Windows-1252) og tilpasselige separatorer.",
+      "textInput": "Tekstindtastning",
+      "textPlaceholder": "Indtast tekst for at konvertere til binær...",
+      "encoding": "Tegnkodning",
+      "encodingUtf8": "UTF-8 Unicode (mest almindelige brug)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (udvidet ASCII)",
+      "separator": "Separator",
+      "separatorSpace": "Tomt Mellemrum",
+      "separatorComma": "Komma (og mellemrum)",
+      "separatorCustom": "Brugerdefineret",
+      "customSeparatorLabel": "Indtast din separator",
+      "customSeparatorPlaceholder": "Indtast separator (maks 10 tegn)",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "binaryOutput": "Binær Output",
+      "seo": {
+        "title": "Tekst til Binær Konverter – Gratis Online Værktøj",
+        "description": "Konverter tekst til binær kode øjeblikkeligt med vores gratis tekst til binær konverter. Understøtter UTF-8, UTF-16 og Windows-1252 kodninger med tilpasselige separatorer. Hurtig, præcis og nem at bruge.",
+        "keywords": "tekst til binær, binær konverter, tekst til binær kode, binær encoder, UTF-8 til binær, UTF-16 til binær, tekst encoder, binær oversætter, ASCII til binær, Unicode til binær",
+        "content": {
+          "heading": "Sådan Konverterer Du Tekst til Binær",
+          "paragraph1": "En tekst til binær konverter er et vigtigt værktøj til kodning af teksttegn i binær repræsentation. Binær kode bruger kun to cifre (0 og 1) til at repræsentere alle data, hvilket gør den fundamental for computersystemer og digital kommunikation. Vores gratis tekst til binær konverter gør det nemt at konvertere enhver tekststreng til dens binære ækvivalent ved hjælp af forskellige tegnkodninger, hvilket hjælper dig med at forstå, hvordan computere lagrer og behandler tekstdata.",
+          "paragraph2": "Konverteringsprocessen virker ved først at kode din tekst ved hjælp af en valgt tegnkodning (såsom UTF-8, UTF-16 eller Windows-1252), som konverterer hvert tegn til en eller flere bytes. Hver byte konverteres derefter til dens 8-bit binære repræsentation. For eksempel er bogstavet 'A' i ASCII/UTF-8 repræsenteret af byteværdien 65, som konverteres til binær som '01000001'. Vores konverter håndterer denne proces automatisk og understøtter flere kodningsstandarder for at matche dine specifikke behov.",
+          "paragraph3": "Tegnkodning bestemmer, hvordan teksttegn kortlægges til byteværdier. UTF-8 er den mest almindelige kodning, bruger 1-4 bytes per tegn og understøtter alle Unicode-tegn. UTF-16 bruger 2 eller 4 bytes per tegn og er almindelig i Windows-systemer. UTF-16 LE (Little Endian) lagrer den mindst signifikante byte først, mens UTF-16 BE (Big Endian) lagrer den mest signifikante byte først. Windows-1252 er en udvidet ASCII-kodning almindeligt brugt i vesteuropæiske sprog. Vores konverter understøtter alle disse kodninger, hvilket giver dig mulighed for at vælge den, der matcher dine krav.",
+          "paragraph4": "Separatorindstillingen giver dig kontrol over, hvordan binære cifre vises. Du kan bruge tomme mellemrum til kompakt output, kommaer med mellemrum til læsbarhed eller definere din egen brugerdefinerede separator (op til 10 tegn). Denne fleksibilitet gør det nemt at formatere binært output til forskellige formål, uanset om du lærer om binær repræsentation, fejlsøger kodningsproblemer eller forbereder data til specifikke applikationer. Konverteringen sker automatisk, mens du skriver, hvilket giver øjeblikkelig feedback og gør værktøjet effektivt til både hurtige konverteringer og detaljerede analyser.",
+          "exampleHeading": "Eksempel: Konvertering af Tekst til Binær",
+          "exampleText": "For at konvertere ordet 'Hej' til binær ved hjælp af UTF-8-kodning: H = 01001000, e = 01100101, j = 01101010. Med mellemrumseparator er resultatet: 01001000 01100101 01101010. Med komma separator bliver det: 01001000, 01100101, 01101010. Hvert tegn konverteres til sin byteværdi, derefter til en 8-bit binær streng. Konverteren håndterer alle Unicode-tegn, inklusive emojis og specialsymboler, og konverterer dem i henhold til den valgte kodningsstandard."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er tekst til binær konvertering?",
+              "answer": "Tekst til binær konvertering er processen med at kode teksttegn i binær kode (sekvenser af 0 og 1). Hvert tegn konverteres først til sin byte-repræsentation ved hjælp af en tegnkodning (såsom UTF-8), derefter konverteres hver byte til sin 8-bit binære form. Sådan lagrer og behandler computere tekstdata internt."
+            },
+            {
+              "question": "Hvad er forskellen mellem UTF-8 og UTF-16?",
+              "answer": "UTF-8 bruger 1-4 bytes per tegn og er bagudkompatibel med ASCII (ASCII-tegn bruger 1 byte). UTF-16 bruger 2 eller 4 bytes per tegn. UTF-8 er mere pladseffektiv for latinske tegn, mens UTF-16 kan være mere effektiv for visse asiatiske sprog. UTF-16 LE (Little Endian) lagrer bytes med den mindst signifikante byte først, mens UTF-16 BE (Big Endian) lagrer den mest signifikante byte først."
+            },
+            {
+              "question": "Hvordan vælger jeg den rigtige tegnkodning?",
+              "answer": "Brug UTF-8 til de fleste moderne applikationer og webindhold, da det er det mest udbredt understøttede og pladseffektive for de fleste sprog. Brug UTF-16, hvis du arbejder med Windows-systemer eller skal matche specifikke systemkrav. Brug Windows-1252 kun, hvis du har brug for kompatibilitet med ældre systemer eller specifikke vesteuropæiske tegnsæt."
+            },
+            {
+              "question": "Kan jeg konvertere binær tilbage til tekst?",
+              "answer": "Ja, konvertering af binær tilbage til tekst er mulig, men du skal kende den oprindelige tegnkodning, der blev brugt. Vores konverter fokuserer på tekst til binær konvertering. For at konvertere binær tilbage til tekst ville du have brug for en binær til tekst konverter, der understøtter samme kodningsstandard."
+            },
+            {
+              "question": "Hvad er en separator, og hvorfor betyder det noget?",
+              "answer": "En separator er et tegn eller en streng, der bruges til at adskille individuelle binære bytes i outputtet. Tomme mellemrum gør outputtet kompakt, kommaer med mellemrum forbedrer læsbarheden, og brugerdefinerede separatorer giver dig mulighed for at formatere outputtet til specifikke applikationer eller systemer. Separatoren påvirker ikke de binære værdier selv, kun hvordan de vises."
+            },
+            {
+              "question": "Er denne tekst til binær konverter gratis?",
+              "answer": "Ja, vores tekst til binær konverter er helt gratis. Ingen registrering eller betaling påkrævet. Indtast blot din tekst, vælg dine kodnings- og separatorpræferencer, og få øjeblikkelige binære konverteringsresultater."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Lommeregnere",
+          "addition": "Additionslommeregner",
+          "additionDesc": "Tilføj hele tal og decimaler hurtigt og præcist",
+          "percentage": "Procentlommeregner",
+          "percentageDesc": "Beregn procentværdier, procentændring og procentforhold",
+          "average": "Gennemsnitslommeregner",
+          "averageDesc": "Find gennemsnittet, summen og antallet fra en liste med tal"
+        }
+      }
     }
   },
   "notFound": {

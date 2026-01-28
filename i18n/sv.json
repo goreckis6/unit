@@ -2571,6 +2571,79 @@
           "ampsToWattsDesc": "Konvertera ström och spänning till effekt"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Text till Binär Konverterare",
+      "description": "Konvertera text till binär kod omedelbart med flera teckenkodningar (UTF-8, UTF-16, Windows-1252) och anpassningsbara separatorer.",
+      "textInput": "Textinmatning",
+      "textPlaceholder": "Ange text för att konvertera till binär...",
+      "encoding": "Teckenkodning",
+      "encodingUtf8": "UTF-8 Unicode (mest vanliga användningen)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (utökad ASCII)",
+      "separator": "Separator",
+      "separatorSpace": "Tomt Mellanrum",
+      "separatorComma": "Komma (och mellanrum)",
+      "separatorCustom": "Användardefinierad",
+      "customSeparatorLabel": "Skriv din separator",
+      "customSeparatorPlaceholder": "Ange separator (max 10 tecken)",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "binaryOutput": "Binär Utdata",
+      "seo": {
+        "title": "Text till Binär Konverterare – Gratis Onlineverktyg",
+        "description": "Konvertera text till binär kod omedelbart med vår gratis text till binär konverterare. Stöder UTF-8, UTF-16 och Windows-1252 kodningar med anpassningsbara separatorer. Snabb, noggrann och lätt att använda.",
+        "keywords": "text till binär, binär konverterare, text till binär kod, binär kodare, UTF-8 till binär, UTF-16 till binär, textkodare, binär översättare, ASCII till binär, Unicode till binär",
+        "content": {
+          "heading": "Hur man Konverterar Text till Binär",
+          "paragraph1": "En text till binär konverterare är ett viktigt verktyg för att koda texttecken i binär representation. Binär kod använder endast två siffror (0 och 1) för att representera all data, vilket gör den grundläggande för datorsystem och digital kommunikation. Vår gratis text till binär konverterare gör det enkelt att konvertera vilken textsträng som helst till dess binära ekvivalent med hjälp av olika teckenkodningar, vilket hjälper dig att förstå hur datorer lagrar och bearbetar textdata.",
+          "paragraph2": "Konverteringsprocessen fungerar genom att först koda din text med en vald teckenkodning (som UTF-8, UTF-16 eller Windows-1252), som konverterar varje tecken till en eller flera bytes. Varje byte konverteras sedan till sin 8-bitars binära representation. Till exempel representeras bokstaven 'A' i ASCII/UTF-8 av bytevärdet 65, som konverteras till binär som '01000001'. Vår konverterare hanterar denna process automatiskt och stöder flera kodningsstandarder för att matcha dina specifika behov.",
+          "paragraph3": "Teckenkodning bestämmer hur texttecken mappas till bytevärden. UTF-8 är den vanligaste kodningen, använder 1-4 bytes per tecken och stöder alla Unicode-tecken. UTF-16 använder 2 eller 4 bytes per tecken och är vanligt i Windows-system. UTF-16 LE (Little Endian) lagrar den minst signifikanta byten först, medan UTF-16 BE (Big Endian) lagrar den mest signifikanta byten först. Windows-1252 är en utökad ASCII-kodning som vanligtvis används i vesteuropeiska språk. Vår konverterare stöder alla dessa kodningar, vilket gör att du kan välja den som matchar dina krav.",
+          "paragraph4": "Separatoralternativet låter dig kontrollera hur binära siffror visas. Du kan använda tomma mellanrum för kompakt utdata, kommatecken med mellanrum för läsbarhet eller definiera din egen anpassade separator (upp till 10 tecken). Denna flexibilitet gör det enkelt att formatera binär utdata för olika ändamål, oavsett om du lär dig om binär representation, felsöker kodningsproblem eller förbereder data för specifika applikationer. Konverteringen sker automatiskt när du skriver, ger omedelbar feedback och gör verktyget effektivt för både snabba konverteringar och detaljerade analyser.",
+          "exampleHeading": "Exempel: Konvertera Text till Binär",
+          "exampleText": "För att konvertera ordet 'Hej' till binär med UTF-8-kodning: H = 01001000, e = 01100101, j = 01101010. Med mellanrumsseparator är resultatet: 01001000 01100101 01101010. Med komma separator blir det: 01001000, 01100101, 01101010. Varje tecken konverteras till dess bytevärde, sedan till en 8-bitars binär sträng. Konverteraren hanterar alla Unicode-tecken, inklusive emojis och specialsymboler, och konverterar dem enligt den valda kodningsstandarden."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är text till binär konvertering?",
+              "answer": "Text till binär konvertering är processen att koda texttecken i binär kod (sekvenser av 0 och 1). Varje tecken konverteras först till dess byte-representation med en teckenkodning (som UTF-8), sedan konverteras varje byte till dess 8-bitars binära form. Så här lagrar och bearbetar datorer textdata internt."
+            },
+            {
+              "question": "Vad är skillnaden mellan UTF-8 och UTF-16?",
+              "answer": "UTF-8 använder 1-4 bytes per tecken och är bakåtkompatibel med ASCII (ASCII-tecken använder 1 byte). UTF-16 använder 2 eller 4 bytes per tecken. UTF-8 är mer utrymmeseffektiv för latinska tecken, medan UTF-16 kan vara mer effektiv för vissa asiatiska språk. UTF-16 LE (Little Endian) lagrar bytes med den minst signifikanta byten först, medan UTF-16 BE (Big Endian) lagrar den mest signifikanta byten först."
+            },
+            {
+              "question": "Hur väljer jag rätt teckenkodning?",
+              "answer": "Använd UTF-8 för de flesta moderna applikationer och webbinnehåll, eftersom det är det mest stödda och utrymmeseffektiva för de flesta språk. Använd UTF-16 om du arbetar med Windows-system eller behöver matcha specifika systemkrav. Använd Windows-1252 endast om du behöver kompatibilitet med äldre system eller specifika vesteuropeiska teckenuppsättningar."
+            },
+            {
+              "question": "Kan jag konvertera binär tillbaka till text?",
+              "answer": "Ja, konvertering av binär tillbaka till text är möjlig, men du behöver känna till den ursprungliga teckenkodningen som användes. Vår konverterare fokuserar på text till binär konvertering. För att konvertera binär tillbaka till text skulle du behöva en binär till text konverterare som stöder samma kodningsstandard."
+            },
+            {
+              "question": "Vad är en separator och varför spelar den roll?",
+              "answer": "En separator är ett tecken eller en sträng som används för att separera individuella binära bytes i utdata. Tomma mellanrum gör utdata kompakt, kommatecken med mellanrum förbättrar läsbarheten, och anpassade separatorer låter dig formatera utdata för specifika applikationer eller system. Separatorn påverkar inte de binära värdena i sig, bara hur de visas."
+            },
+            {
+              "question": "Är denna text till binär konverterare gratis?",
+              "answer": "Ja, vår text till binär konverterare är helt gratis. Ingen registrering eller betalning krävs. Ange bara din text, välj dina kodnings- och separatorinställningar och få omedelbara binära konverteringsresultat."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "addition": "Additionskalkylator",
+          "additionDesc": "Lägg till heltal och decimaler snabbt och exakt",
+          "percentage": "Procent Kalkylator",
+          "percentageDesc": "Beräkna procentvärden, procentuell förändring och procentuella relationer",
+          "average": "Genomsnitt Kalkylator",
+          "averageDesc": "Hitta genomsnittet, summan och antalet av en lista med tal"
+        }
+      }
     }
   },
   "notFound": {

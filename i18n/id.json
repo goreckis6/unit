@@ -2571,6 +2571,79 @@
           "ampsToWattsDesc": "Konversi arus dan tegangan ke daya"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Konverter Teks ke Biner",
+      "description": "Konversi teks ke kode biner secara instan dengan beberapa pengkodean karakter (UTF-8, UTF-16, Windows-1252) dan pemisah yang dapat disesuaikan.",
+      "textInput": "Input Teks",
+      "textPlaceholder": "Masukkan teks untuk dikonversi ke biner...",
+      "encoding": "Pengkodean Karakter",
+      "encodingUtf8": "UTF-8 Unicode (penggunaan paling umum)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (ASCII yang diperluas)",
+      "separator": "Pemisah",
+      "separatorSpace": "Spasi Kosong",
+      "separatorComma": "Koma (dan spasi)",
+      "separatorCustom": "Ditentukan pengguna",
+      "customSeparatorLabel": "Ketik pemisah Anda",
+      "customSeparatorPlaceholder": "Masukkan pemisah (maks 10 karakter)",
+      "reset": "Reset",
+      "result": "Hasil",
+      "binaryOutput": "Output Biner",
+      "seo": {
+        "title": "Konverter Teks ke Biner – Alat Online Gratis",
+        "description": "Konversi teks ke kode biner secara instan dengan konverter teks ke biner gratis kami. Mendukung pengkodean UTF-8, UTF-16 dan Windows-1252 dengan pemisah yang dapat disesuaikan. Cepat, akurat, dan mudah digunakan.",
+        "keywords": "teks ke biner, konverter biner, teks ke kode biner, encoder biner, UTF-8 ke biner, UTF-16 ke biner, encoder teks, penerjemah biner, ASCII ke biner, Unicode ke biner",
+        "content": {
+          "heading": "Cara Mengonversi Teks ke Biner",
+          "paragraph1": "Konverter teks ke biner adalah alat penting untuk mengkodekan karakter teks ke dalam representasi biner. Kode biner hanya menggunakan dua digit (0 dan 1) untuk mewakili semua data, menjadikannya fundamental untuk sistem komputer dan komunikasi digital. Konverter teks ke biner gratis kami memudahkan untuk mengonversi string teks apa pun ke setara binernya menggunakan berbagai pengkodean karakter, membantu Anda memahami bagaimana komputer menyimpan dan memproses data teks.",
+          "paragraph2": "Proses konversi bekerja dengan terlebih dahulu mengkodekan teks Anda menggunakan pengkodean karakter yang dipilih (seperti UTF-8, UTF-16, atau Windows-1252), yang mengonversi setiap karakter menjadi satu atau lebih byte. Setiap byte kemudian dikonversi ke representasi biner 8-bitnya. Misalnya, huruf 'A' dalam ASCII/UTF-8 diwakili oleh nilai byte 65, yang dikonversi ke biner sebagai '01000001'. Konverter kami menangani proses ini secara otomatis, mendukung beberapa standar pengkodean untuk memenuhi kebutuhan spesifik Anda.",
+          "paragraph3": "Pengkodean karakter menentukan bagaimana karakter teks dipetakan ke nilai byte. UTF-8 adalah pengkodean paling umum, menggunakan 1-4 byte per karakter dan mendukung semua karakter Unicode. UTF-16 menggunakan 2 atau 4 byte per karakter dan umum di sistem Windows. UTF-16 LE (Little Endian) menyimpan byte paling tidak signifikan terlebih dahulu, sementara UTF-16 BE (Big Endian) menyimpan byte paling signifikan terlebih dahulu. Windows-1252 adalah pengkodean ASCII yang diperluas yang umum digunakan dalam bahasa Eropa Barat. Konverter kami mendukung semua pengkodean ini, memungkinkan Anda memilih yang sesuai dengan kebutuhan Anda.",
+          "paragraph4": "Opsi pemisah memungkinkan Anda mengontrol bagaimana digit biner ditampilkan. Anda dapat menggunakan spasi kosong untuk output kompak, koma dengan spasi untuk keterbacaan, atau menentukan pemisah kustom Anda sendiri (hingga 10 karakter). Fleksibilitas ini memudahkan pemformatan output biner untuk berbagai tujuan, baik Anda mempelajari representasi biner, men-debug masalah pengkodean, atau menyiapkan data untuk aplikasi tertentu. Konversi terjadi secara otomatis saat Anda mengetik, memberikan umpan balik instan dan membuat alat efisien untuk konversi cepat dan analisis detail.",
+          "exampleHeading": "Contoh: Mengonversi Teks ke Biner",
+          "exampleText": "Untuk mengonversi kata 'Halo' ke biner menggunakan pengkodean UTF-8: H = 01001000, a = 01100001, l = 01101100, o = 01101111. Dengan pemisah spasi, hasilnya adalah: 01001000 01100001 01101100 01101111. Dengan pemisah koma, menjadi: 01001000, 01100001, 01101100, 01101111. Setiap karakter dikonversi ke nilai byte-nya, kemudian ke string biner 8-bit. Konverter menangani semua karakter Unicode, termasuk emoji dan simbol khusus, mengonversinya sesuai dengan standar pengkodean yang dipilih."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa itu konversi teks ke biner?",
+              "answer": "Konversi teks ke biner adalah proses mengkodekan karakter teks ke dalam kode biner (urutan 0 dan 1). Setiap karakter pertama-tama dikonversi ke representasi byte-nya menggunakan pengkodean karakter (seperti UTF-8), kemudian setiap byte dikonversi ke bentuk biner 8-bitnya. Beginilah cara komputer secara internal menyimpan dan memproses data teks."
+            },
+            {
+              "question": "Apa perbedaan antara UTF-8 dan UTF-16?",
+              "answer": "UTF-8 menggunakan 1-4 byte per karakter dan kompatibel mundur dengan ASCII (karakter ASCII menggunakan 1 byte). UTF-16 menggunakan 2 atau 4 byte per karakter. UTF-8 lebih efisien ruang untuk karakter Latin, sementara UTF-16 dapat lebih efisien untuk bahasa Asia tertentu. UTF-16 LE (Little Endian) menyimpan byte dengan byte paling tidak signifikan terlebih dahulu, sementara UTF-16 BE (Big Endian) menyimpan byte paling signifikan terlebih dahulu."
+            },
+            {
+              "question": "Bagaimana cara memilih pengkodean karakter yang tepat?",
+              "answer": "Gunakan UTF-8 untuk sebagian besar aplikasi modern dan konten web, karena ini adalah yang paling banyak didukung dan efisien ruang untuk sebagian besar bahasa. Gunakan UTF-16 jika Anda bekerja dengan sistem Windows atau perlu memenuhi persyaratan sistem tertentu. Gunakan Windows-1252 hanya jika Anda memerlukan kompatibilitas dengan sistem lama atau set karakter Eropa Barat tertentu."
+            },
+            {
+              "question": "Bisakah saya mengonversi biner kembali ke teks?",
+              "answer": "Ya, konversi biner kembali ke teks dimungkinkan, tetapi Anda perlu mengetahui pengkodean karakter asli yang digunakan. Konverter kami berfokus pada konversi teks ke biner. Untuk mengonversi biner kembali ke teks, Anda akan memerlukan konverter biner ke teks yang mendukung standar pengkodean yang sama."
+            },
+            {
+              "question": "Apa itu pemisah dan mengapa penting?",
+              "answer": "Pemisah adalah karakter atau string yang digunakan untuk memisahkan byte biner individual dalam output. Spasi kosong membuat output kompak, koma dengan spasi meningkatkan keterbacaan, dan pemisah kustom memungkinkan Anda memformat output untuk aplikasi atau sistem tertentu. Pemisah tidak mempengaruhi nilai biner itu sendiri, hanya cara mereka ditampilkan."
+            },
+            {
+              "question": "Apakah konverter teks ke biner ini gratis?",
+              "answer": "Ya, konverter teks ke biner kami sepenuhnya gratis. Tidak diperlukan pendaftaran atau pembayaran. Cukup masukkan teks Anda, pilih preferensi pengkodean dan pemisah Anda, dan dapatkan hasil konversi biner instan."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "addition": "Kalkulator Penjumlahan",
+          "additionDesc": "Tambahkan bilangan bulat dan desimal dengan cepat dan akurat",
+          "percentage": "Kalkulator Persentase",
+          "percentageDesc": "Hitung nilai persentase, perubahan persentase, dan hubungan persentase",
+          "average": "Kalkulator Rata-rata",
+          "averageDesc": "Temukan rata-rata, jumlah, dan jumlah dari daftar angka"
+        }
+      }
     }
   },
   "notFound": {

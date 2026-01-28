@@ -116,6 +116,12 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
       path: '/calculators/math/average',
     },
     {
+      id: 'text-to-binary',
+      titleKey: 'textToBinary.title',
+      descKey: 'textToBinary.description',
+      path: '/calculators/math/text-to-binary',
+    },
+    {
       id: 'percentage',
       titleKey: 'percentage.title',
       descKey: 'percentage.description',

@@ -2760,6 +2760,79 @@
           "ampsToWattsDesc": "Convert current and voltage to power"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Text to Binary Converter",
+      "description": "Convert text to binary code instantly with multiple character encodings (UTF-8, UTF-16, Windows-1252) and customizable separators.",
+      "textInput": "Text Input",
+      "textPlaceholder": "Enter text to convert to binary...",
+      "encoding": "Character Encoding",
+      "encodingUtf8": "UTF-8 Unicode (most common use)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (extended ASCII)",
+      "separator": "Separator",
+      "separatorSpace": "Empty Space",
+      "separatorComma": "Comma (and space)",
+      "separatorCustom": "User defined",
+      "customSeparatorLabel": "Type your separator",
+      "customSeparatorPlaceholder": "Enter separator (max 10 characters)",
+      "reset": "Reset",
+      "result": "Result",
+      "binaryOutput": "Binary Output",
+      "seo": {
+        "title": "Text to Binary Converter – Free Online Text to Binary Code Tool",
+        "description": "Convert text to binary code instantly with our free text to binary converter. Supports UTF-8, UTF-16, and Windows-1252 encodings with customizable separators. Fast, accurate, and easy to use.",
+        "keywords": "text to binary, binary converter, text to binary code, binary encoder, UTF-8 to binary, UTF-16 to binary, text encoder, binary translator, ASCII to binary, Unicode to binary",
+        "content": {
+          "heading": "How to Convert Text to Binary",
+          "paragraph1": "A text to binary converter is an essential tool for encoding text characters into binary representation. Binary code uses only two digits (0 and 1) to represent all data, making it fundamental to computer systems and digital communication. Our free text to binary converter makes it easy to convert any text string into its binary equivalent using various character encodings, helping you understand how computers store and process text data.",
+          "paragraph2": "The conversion process works by first encoding your text using a chosen character encoding (such as UTF-8, UTF-16, or Windows-1252), which converts each character into one or more bytes. Each byte is then converted to its 8-bit binary representation. For example, the letter 'A' in ASCII/UTF-8 is represented by the byte value 65, which converts to binary as '01000001'. Our converter handles this process automatically, supporting multiple encoding standards to match your specific needs.",
+          "paragraph3": "Character encoding determines how text characters are mapped to byte values. UTF-8 is the most common encoding, using 1-4 bytes per character and supporting all Unicode characters. UTF-16 uses 2 or 4 bytes per character and is common in Windows systems. UTF-16 LE (Little Endian) stores the least significant byte first, while UTF-16 BE (Big Endian) stores the most significant byte first. Windows-1252 is an extended ASCII encoding commonly used in Western European languages. Our converter supports all these encodings, allowing you to choose the one that matches your requirements.",
+          "paragraph4": "The separator option lets you control how binary digits are displayed. You can use empty spaces for compact output, commas with spaces for readability, or define your own custom separator (up to 10 characters). This flexibility makes it easy to format binary output for different purposes, whether you're learning about binary representation, debugging encoding issues, or preparing data for specific applications. The conversion happens automatically as you type, providing instant feedback and making the tool efficient for both quick conversions and detailed analysis.",
+          "exampleHeading": "Example: Converting Text to Binary",
+          "exampleText": "To convert the word 'Hello' to binary using UTF-8 encoding: H = 01001000, e = 01100101, l = 01101100, l = 01101100, o = 01101111. With space separator, the result is: 01001000 01100101 01101100 01101100 01101111. With comma separator, it becomes: 01001000, 01100101, 01101100, 01101100, 01101111. Each character is converted to its byte value, then to an 8-bit binary string. The converter handles all Unicode characters, including emojis and special symbols, converting them according to the selected encoding standard."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is text to binary conversion?",
+              "answer": "Text to binary conversion is the process of encoding text characters into binary code (sequences of 0s and 1s). Each character is first converted to its byte representation using a character encoding (like UTF-8), then each byte is converted to its 8-bit binary form. This is how computers internally store and process text data."
+            },
+            {
+              "question": "What is the difference between UTF-8 and UTF-16?",
+              "answer": "UTF-8 uses 1-4 bytes per character and is backward compatible with ASCII (ASCII characters use 1 byte). UTF-16 uses 2 or 4 bytes per character. UTF-8 is more space-efficient for Latin characters, while UTF-16 can be more efficient for certain Asian languages. UTF-16 LE (Little Endian) stores bytes with the least significant byte first, while UTF-16 BE (Big Endian) stores the most significant byte first."
+            },
+            {
+              "question": "How do I choose the right character encoding?",
+              "answer": "Use UTF-8 for most modern applications and web content, as it's the most widely supported and space-efficient for most languages. Use UTF-16 if you're working with Windows systems or need to match specific system requirements. Use Windows-1252 only if you need compatibility with legacy systems or specific Western European character sets."
+            },
+            {
+              "question": "Can I convert binary back to text?",
+              "answer": "Yes, binary to text conversion is possible, but you need to know the original character encoding used. Our converter focuses on text to binary conversion. To convert binary back to text, you would need a binary to text converter that supports the same encoding standard."
+            },
+            {
+              "question": "What is a separator and why does it matter?",
+              "answer": "A separator is a character or string used to separate individual binary bytes in the output. Empty spaces make the output compact, commas with spaces improve readability, and custom separators allow you to format output for specific applications or systems. The separator doesn't affect the binary values themselves, only how they're displayed."
+            },
+            {
+              "question": "Is this text to binary converter free?",
+              "answer": "Yes, our text to binary converter is completely free to use. No registration or payment is required. Simply enter your text, choose your encoding and separator preferences, and get instant binary conversion results."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals quickly and accurately",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentage values, percentage change, and percentage relationships",
+          "average": "Average Calculator",
+          "averageDesc": "Find the average, sum, and count of a list of numbers"
+        }
+      }
     }
   },
   "notFound": {

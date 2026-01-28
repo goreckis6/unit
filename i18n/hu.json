@@ -2626,6 +2626,79 @@
           "ampsToWattsDesc": "Alakítsa át az áramot és feszültséget teljesítményre"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Szöveg Bináris Konverter",
+      "description": "Konvertáljon szöveget bináris kódra azonnal több karakterkódolással (UTF-8, UTF-16, Windows-1252) és testreszabható elválasztókkal.",
+      "textInput": "Szöveg Bemenet",
+      "textPlaceholder": "Adja meg a szöveget binárisra konvertáláshoz...",
+      "encoding": "Karakterkódolás",
+      "encodingUtf8": "UTF-8 Unicode (leggyakoribb használat)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (kiterjesztett ASCII)",
+      "separator": "Elválasztó",
+      "separatorSpace": "Üres Szóköz",
+      "separatorComma": "Vessző (és szóköz)",
+      "separatorCustom": "Felhasználó által definiált",
+      "customSeparatorLabel": "Adja meg az elválasztóját",
+      "customSeparatorPlaceholder": "Adja meg az elválasztót (max 10 karakter)",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "binaryOutput": "Bináris Kimenet",
+      "seo": {
+        "title": "Szöveg Bináris Konverter – Ingyenes Online Eszköz",
+        "description": "Konvertáljon szöveget bináris kódra azonnal ingyenes szöveg bináris konverterünkkel. Támogatja a UTF-8, UTF-16 és Windows-1252 kódolásokat testreszabható elválasztókkal. Gyors, pontos és könnyen használható.",
+        "keywords": "szöveg binárisra, bináris konverter, szöveg bináris kódra, bináris kódoló, UTF-8 binárisra, UTF-16 binárisra, szöveg kódoló, bináris fordító, ASCII binárisra, Unicode binárisra",
+        "content": {
+          "heading": "Hogyan Konvertáljon Szöveget Binárisra",
+          "paragraph1": "A szöveg bináris konverter egy alapvető eszköz a szöveges karakterek bináris ábrázolásba való kódolásához. A bináris kód csak két számjegyet (0 és 1) használ az összes adat ábrázolásához, ami alapvetővé teszi a számítógépes rendszerek és a digitális kommunikáció számára. Ingyenes szöveg bináris konverterünk megkönnyíti bármely szöveges karakterlánc bináris megfelelőjére való konvertálását különböző karakterkódolások használatával, segítve megérteni, hogyan tárolják és dolgozzák fel a számítógépek a szöveges adatokat.",
+          "paragraph2": "A konverziós folyamat úgy működik, hogy először kódolja a szöveget egy választott karakterkódolással (például UTF-8, UTF-16 vagy Windows-1252), amely minden karaktert egy vagy több bájtba konvertál. Ezután minden bájt 8 bites bináris ábrázolásává alakul. Például az 'A' betű az ASCII/UTF-8-ban a 65 bájtértékkel van ábrázolva, amely binárisként '01000001'-ként konvertálódik. Konverterünk automatikusan kezeli ezt a folyamatot, több kódolási szabványt támogatva, hogy megfeleljen konkrét igényeinek.",
+          "paragraph3": "A karakterkódolás meghatározza, hogyan képeződnek le a szöveges karakterek bájtértékekre. A UTF-8 a leggyakoribb kódolás, karakterenként 1-4 bájtot használ és támogatja az összes Unicode karaktert. A UTF-16 karakterenként 2 vagy 4 bájtot használ és gyakori a Windows rendszerekben. A UTF-16 LE (Little Endian) először a legkevésbé jelentős bájtot tárolja, míg a UTF-16 BE (Big Endian) először a legjelentősebb bájtot tárolja. A Windows-1252 egy kiterjesztett ASCII kódolás, amelyet gyakran használnak a nyugat-európai nyelvekben. Konverterünk támogatja ezeket a kódolásokat, lehetővé téve, hogy kiválassza az igényeinek megfelelőt.",
+          "paragraph4": "Az elválasztó opció lehetővé teszi a bináris számjegyek megjelenítésének szabályozását. Használhat üres szóközöket kompakt kimenethez, vesszőket szóközökkel az olvashatóság javításához, vagy definiálhatja saját egyedi elválasztóját (legfeljebb 10 karakterig). Ez a rugalmasság megkönnyíti a bináris kimenet formázását különböző célokra, függetlenül attól, hogy bináris ábrázolásról tanul, kódolási problémákat javít ki, vagy adatokat készít elő konkrét alkalmazásokhoz. A konverzió automatikusan történik gépelés közben, azonnali visszajelzést nyújtva és hatékonysá teszve az eszközt mind a gyors konverziókhoz, mind a részletes elemzésekhez.",
+          "exampleHeading": "Példa: Szöveg Binárisra Konvertálása",
+          "exampleText": "A 'Helló' szó UTF-8 kódolással binárisra konvertálásához: H = 01001000, e = 01100101, l = 01101100, l = 01101100, ó = 11000011 10110101. Szóköz elválasztóval az eredmény: 01001000 01100101 01101100 01101100 11000011 10110101. Vessző elválasztóval ez lesz: 01001000, 01100101, 01101100, 01101100, 11000011, 10110101. Minden karakter bájtértékévé, majd 8 bites bináris karakterlánccá alakul. A konverter kezeli az összes Unicode karaktert, beleértve az emojikat és speciális szimbólumokat is, azokat a kiválasztott kódolási szabvány szerint konvertálva."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mi a szöveg binárisra konvertálás?",
+              "answer": "A szöveg binárisra konvertálás a szöveges karakterek bináris kódba (0 és 1 sorozatokba) való kódolásának folyamata. Minden karakter először bájtábrázolásává alakul egy karakterkódolás (például UTF-8) használatával, majd minden bájt 8 bites bináris formájává alakul. Így tárolják és dolgozzák fel a számítógépek belsőleg a szöveges adatokat."
+            },
+            {
+              "question": "Mi a különbség a UTF-8 és UTF-16 között?",
+              "answer": "A UTF-8 karakterenként 1-4 bájtot használ és visszafelé kompatibilis az ASCII-val (az ASCII karakterek 1 bájtot használnak). A UTF-16 karakterenként 2 vagy 4 bájtot használ. A UTF-8 térhatékonyabb a latin karakterekhez, míg a UTF-16 hatékonyabb lehet bizonyos ázsiai nyelvekhez. A UTF-16 LE (Little Endian) először a legkevésbé jelentős bájttal tárolja a bájtokat, míg a UTF-16 BE (Big Endian) először a legjelentősebb bájtot tárolja."
+            },
+            {
+              "question": "Hogyan válasszam ki a megfelelő karakterkódolást?",
+              "answer": "Használja a UTF-8-at a legtöbb modern alkalmazáshoz és webes tartalomhoz, mivel ez a legszélesebb körben támogatott és térhatékony a legtöbb nyelvhez. Használja a UTF-16-ot, ha Windows rendszerekkel dolgozik, vagy meg kell felelnie konkrét rendszerkövetelményeknek. Használja a Windows-1252-t csak akkor, ha kompatibilitásra van szüksége régi rendszerekkel vagy konkrét nyugat-európai karakterkészletekkel."
+            },
+            {
+              "question": "Konvertálhatom vissza a binárist szövegre?",
+              "answer": "Igen, a bináris szövegre való konvertálás lehetséges, de ismernie kell az eredetileg használt karakterkódolást. Konverterünk a szöveg binárisra konvertálására összpontosít. A bináris szövegre való visszakonvertáláshoz egy bináris szövegre konverterre lenne szüksége, amely támogatja ugyanazt a kódolási szabványt."
+            },
+            {
+              "question": "Mi az elválasztó és miért fontos?",
+              "answer": "Az elválasztó egy karakter vagy karakterlánc, amelyet az egyedi bináris bájtok elválasztására használnak a kimenetben. Az üres szóközök kompakt kimenetet tesznek, a vesszők szóközökkel javítják az olvashatóságot, és az egyedi elválasztók lehetővé teszik a kimenet formázását konkrét alkalmazásokhoz vagy rendszerekhez. Az elválasztó nem érinti magukat a bináris értékeket, csak azok megjelenítésének módját."
+            },
+            {
+              "question": "Ez a szöveg bináris konverter ingyenes?",
+              "answer": "Igen, szöveg bináris konverterünk teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Egyszerűen adja meg szövegét, válassza ki kódolási és elválasztó beállításait, és kapjon azonnali bináris konverziós eredményeket."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Számológépek",
+          "addition": "Összeadás Számológép",
+          "additionDesc": "Adjon hozzá egész számokat és tizedes törteket gyorsan és pontosan",
+          "percentage": "Százalék Számológép",
+          "percentageDesc": "Számítsa ki a százalékértékeket, százalékos változást és százalékos kapcsolatokat",
+          "average": "Átlag Számológép",
+          "averageDesc": "Keresse meg a számok listájának átlagát, összegét és számát"
+        }
+      }
     }
   },
   "notFound": {

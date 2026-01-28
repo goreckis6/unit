@@ -2572,6 +2572,79 @@
           "ampsToWattsDesc": "Convertește curentul și tensiunea în putere"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Convertor Text în Binar",
+      "description": "Convertește textul în cod binar instantaneu cu mai multe codificări de caractere (UTF-8, UTF-16, Windows-1252) și separatori personalizabili.",
+      "textInput": "Intrare Text",
+      "textPlaceholder": "Introduceți textul pentru conversie în binar...",
+      "encoding": "Codificare Caractere",
+      "encodingUtf8": "UTF-8 Unicode (cel mai comun utilizat)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (ASCII extins)",
+      "separator": "Separator",
+      "separatorSpace": "Spațiu Gol",
+      "separatorComma": "Virgulă (și spațiu)",
+      "separatorCustom": "Definit de utilizator",
+      "customSeparatorLabel": "Tastați separatorul dvs.",
+      "customSeparatorPlaceholder": "Introduceți separator (max 10 caractere)",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "binaryOutput": "Ieșire Binară",
+      "seo": {
+        "title": "Convertor Text în Binar – Instrument Online Gratuit",
+        "description": "Convertește textul în cod binar instantaneu cu convertorul nostru gratuit text în binar. Suportă codificări UTF-8, UTF-16 și Windows-1252 cu separatori personalizabili. Rapid, precis și ușor de folosit.",
+        "keywords": "text în binar, convertor binar, text în cod binar, encoder binar, UTF-8 în binar, UTF-16 în binar, encoder text, traducător binar, ASCII în binar, Unicode în binar",
+        "content": {
+          "heading": "Cum să Convertești Text în Binar",
+          "paragraph1": "Un convertor text în binar este un instrument esențial pentru codificarea caracterelor text în reprezentare binară. Codul binar folosește doar două cifre (0 și 1) pentru a reprezenta toate datele, făcându-l fundamental pentru sistemele informatice și comunicarea digitală. Convertorul nostru gratuit text în binar face ușor conversia oricărui șir de text în echivalentul său binar folosind diverse codificări de caractere, ajutându-vă să înțelegeți cum stochează și procesează computerele datele text.",
+          "paragraph2": "Procesul de conversie funcționează codificând mai întâi textul dvs. folosind o codificare de caractere aleasă (cum ar fi UTF-8, UTF-16 sau Windows-1252), care convertește fiecare caracter într-unul sau mai multe octeți. Fiecare octet este apoi convertit în reprezentarea sa binară pe 8 biți. De exemplu, litera 'A' în ASCII/UTF-8 este reprezentată de valoarea octetului 65, care se convertește în binar ca '01000001'. Convertorul nostru gestionează acest proces automat, suportând mai multe standarde de codificare pentru a se potrivi nevoilor dvs. specifice.",
+          "paragraph3": "Codificarea caracterelor determină modul în care caracterele text sunt mapate la valori de octeți. UTF-8 este codificarea cea mai comună, folosind 1-4 octeți per caracter și suportând toate caracterele Unicode. UTF-16 folosește 2 sau 4 octeți per caracter și este comună în sistemele Windows. UTF-16 LE (Little Endian) stochează octetul cel mai puțin semnificativ primul, în timp ce UTF-16 BE (Big Endian) stochează octetul cel mai semnificativ primul. Windows-1252 este o codificare ASCII extinsă folosită frecvent în limbile din Europa de Vest. Convertorul nostru suportă toate aceste codificări, permițându-vă să alegeți cea care se potrivește cerințelor dvs.",
+          "paragraph4": "Opțiunea separator vă permite să controlați modul în care sunt afișate cifrele binare. Puteți folosi spații goale pentru ieșire compactă, virgule cu spații pentru lizibilitate sau puteți defini propriul separator personalizat (până la 10 caractere). Această flexibilitate face ușor formatarea ieșirii binare pentru diferite scopuri, fie că învățați despre reprezentarea binară, depanați probleme de codificare sau pregătiți date pentru aplicații specifice. Conversia are loc automat pe măsură ce tastați, oferind feedback instantaneu și făcând instrumentul eficient atât pentru conversii rapide, cât și pentru analize detaliate.",
+          "exampleHeading": "Exemplu: Conversia Textului în Binar",
+          "exampleText": "Pentru a converti cuvântul 'Salut' în binar folosind codificarea UTF-8: S = 01010011, a = 01100001, l = 01101100, u = 01110101, t = 01110100. Cu separator spațiu, rezultatul este: 01010011 01100001 01101100 01110101 01110100. Cu separator virgulă, devine: 01010011, 01100001, 01101100, 01110101, 01110100. Fiecare caracter este convertit în valoarea sa de octet, apoi într-un șir binar pe 8 biți. Convertorul gestionează toate caracterele Unicode, inclusiv emoji-urile și simbolurile speciale, convertindu-le conform standardului de codificare selectat."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Ce este conversia text în binar?",
+              "answer": "Conversia text în binar este procesul de codificare a caracterelor text în cod binar (secvențe de 0 și 1). Fiecare caracter este mai întâi convertit în reprezentarea sa de octet folosind o codificare de caractere (cum ar fi UTF-8), apoi fiecare octet este convertit în forma sa binară pe 8 biți. Așa stochează și procesează computerele intern datele text."
+            },
+            {
+              "question": "Care este diferența dintre UTF-8 și UTF-16?",
+              "answer": "UTF-8 folosește 1-4 octeți per caracter și este compatibil înapoi cu ASCII (caracterele ASCII folosesc 1 octet). UTF-16 folosește 2 sau 4 octeți per caracter. UTF-8 este mai eficient din punct de vedere al spațiului pentru caracterele latine, în timp ce UTF-16 poate fi mai eficient pentru anumite limbi asiatice. UTF-16 LE (Little Endian) stochează octeții cu octetul cel mai puțin semnificativ primul, în timp ce UTF-16 BE (Big Endian) stochează octetul cel mai semnificativ primul."
+            },
+            {
+              "question": "Cum aleg codificarea corectă de caractere?",
+              "answer": "Folosiți UTF-8 pentru majoritatea aplicațiilor moderne și conținutului web, deoarece este cel mai larg suportat și eficient din punct de vedere al spațiului pentru majoritatea limbilor. Folosiți UTF-16 dacă lucrați cu sisteme Windows sau trebuie să corespundeți cerințelor specifice ale sistemului. Folosiți Windows-1252 doar dacă aveți nevoie de compatibilitate cu sistemele vechi sau seturile de caractere specifice din Europa de Vest."
+            },
+            {
+              "question": "Pot converti binarul înapoi în text?",
+              "answer": "Da, conversia binarului înapoi în text este posibilă, dar trebuie să cunoașteți codificarea originală de caractere folosită. Convertorul nostru se concentrează pe conversia text în binar. Pentru a converti binarul înapoi în text, ați avea nevoie de un convertor binar în text care suportă același standard de codificare."
+            },
+            {
+              "question": "Ce este un separator și de ce contează?",
+              "answer": "Un separator este un caracter sau un șir folosit pentru a separa octeții binari individuali în ieșire. Spațiile goale fac ieșirea compactă, virgulele cu spații îmbunătățesc lizibilitatea, iar separatorii personalizați vă permit să formatați ieșirea pentru aplicații sau sisteme specifice. Separatorul nu afectează valorile binare în sine, doar modul în care sunt afișate."
+            },
+            {
+              "question": "Este acest convertor text în binar gratuit?",
+              "answer": "Da, convertorul nostru text în binar este complet gratuit. Nu este necesară înregistrarea sau plata. Pur și simplu introduceți textul dvs., alegeți preferințele de codificare și separator și obțineți rezultate instantanee de conversie binară."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Asemănătoare",
+          "addition": "Calculator Adunare",
+          "additionDesc": "Adăugați numere întregi și zecimale rapid și precis",
+          "percentage": "Calculator Procent",
+          "percentageDesc": "Calculează valorile procentuale, schimbarea procentuală și relațiile procentuale",
+          "average": "Calculator Medie",
+          "averageDesc": "Găsiți media, suma și numărul dintr-o listă de numere"
+        }
+      }
     }
   },
   "notFound": {

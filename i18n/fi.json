@@ -2571,6 +2571,79 @@
           "ampsToWattsDesc": "Muunna virta ja jännite tehoksi"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Teksti Binääriksi Muunnin",
+      "description": "Muunna teksti binäärikoodiksi heti useilla merkkikoodauksilla (UTF-8, UTF-16, Windows-1252) ja muokattavilla erottimilla.",
+      "textInput": "Tekstinsyöttö",
+      "textPlaceholder": "Syötä teksti muunnettavaksi binääriksi...",
+      "encoding": "Merkkikoodaus",
+      "encodingUtf8": "UTF-8 Unicode (yleisin käyttö)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (laajennettu ASCII)",
+      "separator": "Erottaja",
+      "separatorSpace": "Tyhjä Välilyönti",
+      "separatorComma": "Pilkku (ja välilyönti)",
+      "separatorCustom": "Käyttäjän määrittelemä",
+      "customSeparatorLabel": "Kirjoita erottimesi",
+      "customSeparatorPlaceholder": "Syötä erotin (max 10 merkkiä)",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "binaryOutput": "Binääriulostulo",
+      "seo": {
+        "title": "Teksti Binääriksi Muunnin – Ilmainen Online-työkalu",
+        "description": "Muunna teksti binäärikoodiksi heti ilmaisella tekstistä binääriksi muuntimellamme. Tukee UTF-8, UTF-16 ja Windows-1252 koodauksia muokattavilla erottimilla. Nopea, tarkka ja helppo käyttää.",
+        "keywords": "teksti binääriksi, binäärimuunnin, teksti binäärikoodiksi, binäärikooderi, UTF-8 binääriksi, UTF-16 binääriksi, tekstikooderi, binäärikääntäjä, ASCII binääriksi, Unicode binääriksi",
+        "content": {
+          "heading": "Kuinka Muuntaa Teksti Binääriksi",
+          "paragraph1": "Teksti binääriksi muunnin on välttämätön työkalu tekstimerkkien koodaamiseen binääriesitykseksi. Binäärikoodi käyttää vain kahta numeroa (0 ja 1) edustamaan kaikkia tietoja, mikä tekee siitä perustavanlaatuisen tietokonejärjestelmiille ja digitaaliselle viestinnälle. Ilmainen tekstistä binääriksi muuntimemme helpottaa minkä tahansa tekstijonon muuntamista sen binääriksi vastineeksi käyttämällä erilaisia merkkikoodauksia, auttaen ymmärtämään, miten tietokoneet tallentavat ja käsittelevät tekstitietoja.",
+          "paragraph2": "Muunnosprosessi toimii koodaamalla ensin tekstisi valitulla merkkikoodauksella (kuten UTF-8, UTF-16 tai Windows-1252), joka muuntaa jokaisen merkin yhdeksi tai useammaksi tavuksi. Jokainen tavu muunnetaan sitten sen 8-bittiseksi binääriesitykseksi. Esimerkiksi kirjain 'A' ASCII/UTF-8:ssa on edustettuna tavuarvolla 65, joka muunnetaan binääriksi muodossa '01000001'. Muuntimemme käsittelee tämän prosessin automaattisesti, tukien useita koodausstandardeja vastaamaan erityistarpeitasi.",
+          "paragraph3": "Merkkikoodaus määrittää, miten tekstimerkit kuvataan tavuarvoiksi. UTF-8 on yleisin koodaus, käyttää 1-4 tavua per merkki ja tukee kaikkia Unicode-merkkejä. UTF-16 käyttää 2 tai 4 tavua per merkki ja on yleinen Windows-järjestelmissä. UTF-16 LE (Little Endian) tallentaa vähiten merkitsevän tavun ensin, kun taas UTF-16 BE (Big Endian) tallentaa eniten merkitsevän tavun ensin. Windows-1252 on laajennettu ASCII-koodaus, jota käytetään yleisesti länsieurooppalaisissa kielissä. Muuntimemme tukee kaikkia näitä koodauksia, jolloin voit valita sen, joka vastaa vaatimuksiasi.",
+          "paragraph4": "Erottaja-vaihtoehto antaa sinulle hallinnan siihen, miten binäärinumerot näytetään. Voit käyttää tyhjiä välilyöntejä kompaktille tulostukselle, pilkkuja välilyönneillä luettavuuden parantamiseen tai määritellä oman mukautetun erottimen (enintään 10 merkkiä). Tämä joustavuus helpottaa binääritulosteen muotoilua eri tarkoituksiin, olipa kyseessä oppiminen binääriesityksestä, koodausongelmien debuggaaminen tai tietojen valmistelu erityissovelluksia varten. Muunnos tapahtuu automaattisesti kirjoitettaessa, tarjoten välittömän palautteen ja tehden työkalusta tehokkaan sekä nopeisiin muunnoksiin että yksityiskohtaiseen analyysiin.",
+          "exampleHeading": "Esimerkki: Tekstin Muuntaminen Binääriksi",
+          "exampleText": "Muuntaaksesi sanan 'Hei' binääriksi käyttämällä UTF-8-koodausta: H = 01001000, e = 01100101, i = 01101001. Välilyöntierottimella tulos on: 01001000 01100101 01101001. Pilkkuerottimella siitä tulee: 01001000, 01100101, 01101001. Jokainen merkki muunnetaan sen tavuarvoksi, sitten 8-bittiseksi binäärijonoksi. Muunnin käsittelee kaikki Unicode-merkit, mukaan lukien emojit ja erikoismerkit, muuntaen ne valitun koodausstandardin mukaan."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on tekstin muuntaminen binääriksi?",
+              "answer": "Tekstin muuntaminen binääriksi on prosessi, jossa tekstimerkit koodataan binäärikoodiksi (0:ien ja 1:ien sekvensseiksi). Jokainen merkki muunnetaan ensin sen tavuesitykseksi käyttämällä merkkikoodausta (kuten UTF-8), sitten jokainen tavu muunnetaan sen 8-bittiseksi binäärimuodoksi. Näin tietokoneet sisäisesti tallentavat ja käsittelevät tekstitietoja."
+            },
+            {
+              "question": "Mikä on ero UTF-8:n ja UTF-16:n välillä?",
+              "answer": "UTF-8 käyttää 1-4 tavua per merkki ja on taaksepäin yhteensopiva ASCII:n kanssa (ASCII-merkit käyttävät 1 tavua). UTF-16 käyttää 2 tai 4 tavua per merkki. UTF-8 on tilatehokkaampi latinalaisille merkeille, kun taas UTF-16 voi olla tehokkaampi joillekin aasialaisille kielille. UTF-16 LE (Little Endian) tallentaa tavut vähiten merkitsevällä tavulla ensin, kun taas UTF-16 BE (Big Endian) tallentaa eniten merkitsevän tavun ensin."
+            },
+            {
+              "question": "Kuinka valita oikea merkkikoodaus?",
+              "answer": "Käytä UTF-8:aa useimpiin nykyaikaisiin sovelluksiin ja verkkosisältöön, koska se on laajimmin tuettu ja tilatehokas useimmille kielille. Käytä UTF-16:ta, jos työskentelet Windows-järjestelmien kanssa tai sinun täytyy vastata erityisiin järjestelmävaatimuksiin. Käytä Windows-1252:ta vain, jos tarvitset yhteensopivuutta legacy-järjestelmien tai erityisten länsieurooppalaisten merkkijoukkojen kanssa."
+            },
+            {
+              "question": "Voinko muuntaa binäärin takaisin tekstiksi?",
+              "answer": "Kyllä, binäärin muuntaminen takaisin tekstiksi on mahdollista, mutta sinun täytyy tietää käytetty alkuperäinen merkkikoodaus. Muuntimemme keskittyy tekstin muuntamiseen binääriksi. Muuntaaksesi binäärin takaisin tekstiksi, tarvitsisit binääristä tekstiksi muuntimen, joka tukee samaa koodausstandardia."
+            },
+            {
+              "question": "Mikä on erotin ja miksi se on tärkeä?",
+              "answer": "Erotin on merkki tai merkkijono, jota käytetään erottamaan yksittäisiä binääritavuja tulostuksessa. Tyhjät välilyönnit tekevät tulostuksen kompaktiksi, pilkut välilyönneillä parantavat luettavuutta, ja mukautetut erottimet antavat sinun muotoilla tulostuksen erityissovelluksia tai järjestelmiä varten. Erotin ei vaikuta binääriarvoihin itsessään, vain siihen, miten ne näytetään."
+            },
+            {
+              "question": "Onko tämä tekstistä binääriksi muunnin ilmainen?",
+              "answer": "Kyllä, tekstistä binääriksi muuntimemme on täysin ilmainen. Rekisteröinti tai maksu ei vaadita. Syötä vain tekstisi, valitse koodaus- ja erotinasetuksesi ja saat välittömät binäärimuunnostulokset."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "addition": "Yhteenlaskulaskin",
+          "additionDesc": "Lisää kokonaislukuja ja desimaaleja nopeasti ja tarkasti",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Laske prosenttiarvot, prosenttimuutos ja prosenttisuhteet",
+          "average": "Keskiarvon Laskin",
+          "averageDesc": "Etsi keskiarvo, summa ja määrä numerolistasta"
+        }
+      }
     }
   },
   "notFound": {

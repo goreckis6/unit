@@ -2631,6 +2631,79 @@
           "ampsToWattsDesc": "Zet stroom en spanning om naar vermogen"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Tekst naar Binair Converter",
+      "description": "Converteer tekst direct naar binaire code met meerdere tekenkoderingen (UTF-8, UTF-16, Windows-1252) en aanpasbare scheidingstekens.",
+      "textInput": "Tekst Invoer",
+      "textPlaceholder": "Voer tekst in om naar binair te converteren...",
+      "encoding": "Tekenkodering",
+      "encodingUtf8": "UTF-8 Unicode (meest gebruikelijk)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (uitgebreide ASCII)",
+      "separator": "Scheidingsteken",
+      "separatorSpace": "Lege Ruimte",
+      "separatorComma": "Komma (en spatie)",
+      "separatorCustom": "Door gebruiker gedefinieerd",
+      "customSeparatorLabel": "Typ uw scheidingsteken",
+      "customSeparatorPlaceholder": "Voer scheidingsteken in (max 10 tekens)",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "binaryOutput": "Binair Uitvoer",
+      "seo": {
+        "title": "Tekst naar Binair Converter – Gratis Online Tool",
+        "description": "Converteer tekst direct naar binaire code met onze gratis tekst naar binair converter. Ondersteunt UTF-8, UTF-16 en Windows-1252 koderingen met aanpasbare scheidingstekens. Snel, nauwkeurig en gemakkelijk te gebruiken.",
+        "keywords": "tekst naar binair, binair converter, tekst naar binaire code, binair encoder, UTF-8 naar binair, UTF-16 naar binair, tekst encoder, binair vertaler, ASCII naar binair, Unicode naar binair",
+        "content": {
+          "heading": "Hoe Tekst naar Binair te Converteren",
+          "paragraph1": "Een tekst naar binair converter is een essentieel hulpmiddel voor het coderen van teksttekens in binaire weergave. Binaire code gebruikt slechts twee cijfers (0 en 1) om alle gegevens weer te geven, wat het fundamenteel maakt voor computersystemen en digitale communicatie. Onze gratis tekst naar binair converter maakt het gemakkelijk om elke tekststring naar zijn binaire equivalent te converteren met behulp van verschillende tekenkoderingen, waardoor u begrijpt hoe computers tekstgegevens opslaan en verwerken.",
+          "paragraph2": "Het conversieproces werkt door eerst uw tekst te coderen met een gekozen tekenkodering (zoals UTF-8, UTF-16 of Windows-1252), die elk teken converteert naar een of meer bytes. Elke byte wordt vervolgens geconverteerd naar zijn 8-bit binaire weergave. De letter 'A' in ASCII/UTF-8 wordt bijvoorbeeld weergegeven door de bytewaarde 65, die wordt geconverteerd naar binair als '01000001'. Onze converter handelt dit proces automatisch af en ondersteunt meerdere coderingsstandaarden om aan uw specifieke behoeften te voldoen.",
+          "paragraph3": "Tekenkodering bepaalt hoe teksttekens worden toegewezen aan bytewaarden. UTF-8 is de meest voorkomende codering, gebruikt 1-4 bytes per teken en ondersteunt alle Unicode-tekens. UTF-16 gebruikt 2 of 4 bytes per teken en is gebruikelijk in Windows-systemen. UTF-16 LE (Little Endian) slaat de minst significante byte eerst op, terwijl UTF-16 BE (Big Endian) de meest significante byte eerst opslaat. Windows-1252 is een uitgebreide ASCII-codering die vaak wordt gebruikt in West-Europese talen. Onze converter ondersteunt al deze coderingen, zodat u degene kunt kiezen die aan uw vereisten voldoet.",
+          "paragraph4": "De scheidingstekenoptie stelt u in staat te bepalen hoe binaire cijfers worden weergegeven. U kunt lege spaties gebruiken voor compacte uitvoer, komma's met spaties voor leesbaarheid, of uw eigen aangepaste scheidingsteken definiëren (tot 10 tekens). Deze flexibiliteit maakt het gemakkelijk om binaire uitvoer te formatteren voor verschillende doeleinden, of u nu leert over binaire weergave, coderingsproblemen debugt of gegevens voorbereidt voor specifieke toepassingen. De conversie gebeurt automatisch tijdens het typen, biedt directe feedback en maakt het hulpmiddel efficiënt voor zowel snelle conversies als gedetailleerde analyses.",
+          "exampleHeading": "Voorbeeld: Tekst naar Binair Converteren",
+          "exampleText": "Om het woord 'Hallo' naar binair te converteren met UTF-8-codering: H = 01001000, a = 01100001, l = 01101100, l = 01101100, o = 01101111. Met spatie-scheidingsteken is het resultaat: 01001000 01100001 01101100 01101100 01101111. Met komma-scheidingsteken wordt het: 01001000, 01100001, 01101100, 01101100, 01101111. Elk teken wordt geconverteerd naar zijn bytewaarde, vervolgens naar een 8-bit binaire string. De converter handelt alle Unicode-tekens af, inclusief emoji's en speciale symbolen, en converteert ze volgens de geselecteerde coderingsstandaard."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            {
+              "question": "Wat is tekst naar binair conversie?",
+              "answer": "Tekst naar binair conversie is het proces van het coderen van teksttekens in binaire code (reeksen van 0 en 1). Elk teken wordt eerst geconverteerd naar zijn byteweergave met behulp van een tekenkodering (zoals UTF-8), vervolgens wordt elke byte geconverteerd naar zijn 8-bit binaire vorm. Dit is hoe computers tekstgegevens intern opslaan en verwerken."
+            },
+            {
+              "question": "Wat is het verschil tussen UTF-8 en UTF-16?",
+              "answer": "UTF-8 gebruikt 1-4 bytes per teken en is achterwaarts compatibel met ASCII (ASCII-tekens gebruiken 1 byte). UTF-16 gebruikt 2 of 4 bytes per teken. UTF-8 is ruimte-efficiënter voor Latijnse tekens, terwijl UTF-16 efficiënter kan zijn voor bepaalde Aziatische talen. UTF-16 LE (Little Endian) slaat bytes op met de minst significante byte eerst, terwijl UTF-16 BE (Big Endian) de meest significante byte eerst opslaat."
+            },
+            {
+              "question": "Hoe kies ik de juiste tekenkodering?",
+              "answer": "Gebruik UTF-8 voor de meeste moderne toepassingen en webinhoud, omdat dit het meest ondersteund en ruimte-efficiënt is voor de meeste talen. Gebruik UTF-16 als u werkt met Windows-systemen of moet voldoen aan specifieke systeemvereisten. Gebruik Windows-1252 alleen als u compatibiliteit nodig heeft met verouderde systemen of specifieke West-Europese tekensets."
+            },
+            {
+              "question": "Kan ik binair terug naar tekst converteren?",
+              "answer": "Ja, binair naar tekst conversie is mogelijk, maar u moet de originele tekenkodering kennen die werd gebruikt. Onze converter richt zich op tekst naar binair conversie. Om binair terug naar tekst te converteren, zou u een binair naar tekst converter nodig hebben die dezelfde coderingsstandaard ondersteunt."
+            },
+            {
+              "question": "Wat is een scheidingsteken en waarom is het belangrijk?",
+              "answer": "Een scheidingsteken is een teken of string die wordt gebruikt om individuele binaire bytes in de uitvoer te scheiden. Lege spaties maken de uitvoer compact, komma's met spaties verbeteren de leesbaarheid, en aangepaste scheidingstekens stellen u in staat de uitvoer te formatteren voor specifieke toepassingen of systemen. Het scheidingsteken heeft geen invloed op de binaire waarden zelf, alleen op hoe ze worden weergegeven."
+            },
+            {
+              "question": "Is deze tekst naar binair converter gratis?",
+              "answer": "Ja, onze tekst naar binair converter is volledig gratis. Geen registratie of betaling vereist. Voer gewoon uw tekst in, kies uw coderings- en scheidingstekenvoorkeuren en krijg directe binaire conversieresultaten."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde Rekenmachines",
+          "addition": "Optelrekenmachine",
+          "additionDesc": "Voeg gehele getallen en decimalen snel en nauwkeurig toe",
+          "percentage": "Percentage Rekenmachine",
+          "percentageDesc": "Bereken percentagewaarden, percentageverandering en percentageverhoudingen",
+          "average": "Gemiddelde Rekenmachine",
+          "averageDesc": "Vind het gemiddelde, de som en het aantal van een lijst met getallen"
+        }
+      }
     }
   },
   "notFound": {

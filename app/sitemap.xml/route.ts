@@ -16,6 +16,7 @@ export async function GET() {
     '/calculators/math/arcsin',
     '/calculators/math/arctan',
     '/calculators/math/average',
+    '/calculators/math/text-to-binary',
     '/calculators/electric',
     '/calculators/electric/watts-to-kva',
     '/calculators/electric/watts-to-va',

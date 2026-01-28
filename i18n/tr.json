@@ -2573,6 +2573,79 @@
           "ampsToWattsDesc": "Akım ve voltajı güce dönüştür"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Metin İkili Dönüştürücü",
+      "description": "Birden fazla karakter kodlaması (UTF-8, UTF-16, Windows-1252) ve özelleştirilebilir ayırıcılarla metni anında ikili koda dönüştürün.",
+      "textInput": "Metin Girişi",
+      "textPlaceholder": "İkiliye dönüştürmek için metin girin...",
+      "encoding": "Karakter Kodlaması",
+      "encodingUtf8": "UTF-8 Unicode (en yaygın kullanım)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (genişletilmiş ASCII)",
+      "separator": "Ayırıcı",
+      "separatorSpace": "Boş Alan",
+      "separatorComma": "Virgül (ve boşluk)",
+      "separatorCustom": "Kullanıcı tanımlı",
+      "customSeparatorLabel": "Ayırıcınızı yazın",
+      "customSeparatorPlaceholder": "Ayırıcı girin (maks 10 karakter)",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "binaryOutput": "İkili Çıktı",
+      "seo": {
+        "title": "Metin İkili Dönüştürücü – Ücretsiz Çevrimiçi Araç",
+        "description": "Ücretsiz metin ikili dönüştürücümüzle metni anında ikili koda dönüştürün. Özelleştirilebilir ayırıcılarla UTF-8, UTF-16 ve Windows-1252 kodlamalarını destekler. Hızlı, doğru ve kullanımı kolay.",
+        "keywords": "metin ikiliye, ikili dönüştürücü, metin ikili koda, ikili kodlayıcı, UTF-8 ikiliye, UTF-16 ikiliye, metin kodlayıcı, ikili çevirmen, ASCII ikiliye, Unicode ikiliye",
+        "content": {
+          "heading": "Metni İkiliye Nasıl Dönüştürülür",
+          "paragraph1": "Metin ikili dönüştürücü, metin karakterlerini ikili temsile kodlamak için gerekli bir araçtır. İkili kod tüm verileri temsil etmek için yalnızca iki rakam (0 ve 1) kullanır, bu da onu bilgisayar sistemleri ve dijital iletişim için temel yapar. Ücretsiz metin ikili dönüştürücümüz, çeşitli karakter kodlamaları kullanarak herhangi bir metin dizisini ikili eşdeğerine dönüştürmeyi kolaylaştırır ve bilgisayarların metin verilerini nasıl depoladığını ve işlediğini anlamanıza yardımcı olur.",
+          "paragraph2": "Dönüştürme işlemi, önce metninizi seçilen bir karakter kodlaması (UTF-8, UTF-16 veya Windows-1252 gibi) kullanarak kodlayarak çalışır, bu da her karakteri bir veya daha fazla bayta dönüştürür. Her bayt daha sonra 8 bitlik ikili temsiline dönüştürülür. Örneğin, ASCII/UTF-8'deki 'A' harfi, bayt değeri 65 ile temsil edilir ve ikili olarak '01000001' olarak dönüştürülür. Dönüştürücümüz bu işlemi otomatik olarak yönetir ve özel ihtiyaçlarınıza uygun olarak birden fazla kodlama standardını destekler.",
+          "paragraph3": "Karakter kodlaması, metin karakterlerinin bayt değerlerine nasıl eşlendiğini belirler. UTF-8 en yaygın kodlamadır, karakter başına 1-4 bayt kullanır ve tüm Unicode karakterlerini destekler. UTF-16 karakter başına 2 veya 4 bayt kullanır ve Windows sistemlerinde yaygındır. UTF-16 LE (Little Endian) en az anlamlı baytı önce saklar, UTF-16 BE (Big Endian) ise en anlamlı baytı önce saklar. Windows-1252, Batı Avrupa dillerinde yaygın olarak kullanılan genişletilmiş bir ASCII kodlamasıdır. Dönüştürücümüz tüm bu kodlamaları destekler, gereksinimlerinize uyanı seçmenize olanak tanır.",
+          "paragraph4": "Ayırıcı seçeneği, ikili rakamların nasıl görüntüleneceğini kontrol etmenize olanak tanır. Kompakt çıktı için boş alanlar, okunabilirlik için virgül ve boşluklar kullanabilir veya kendi özel ayırıcınızı (10 karaktere kadar) tanımlayabilirsiniz. Bu esneklik, ikili temsil hakkında öğreniyor, kodlama sorunlarını ayıklıyor veya belirli uygulamalar için veri hazırlıyor olsanız da, farklı amaçlar için ikili çıktıyı biçimlendirmeyi kolaylaştırır. Dönüştürme yazarken otomatik olarak gerçekleşir, anında geri bildirim sağlar ve aracı hem hızlı dönüştürmeler hem de detaylı analizler için verimli hale getirir.",
+          "exampleHeading": "Örnek: Metni İkiliye Dönüştürme",
+          "exampleText": "'Merhaba' kelimesini UTF-8 kodlaması kullanarak ikiliye dönüştürmek için: M = 01001101, e = 01100101, r = 01110010, h = 01101000, a = 01100001, b = 01100010, a = 01100001. Boşluk ayırıcı ile sonuç: 01001101 01100101 01110010 01101000 01100001 01100010 01100001. Virgül ayırıcı ile şu hale gelir: 01001101, 01100101, 01110010, 01101000, 01100001, 01100010, 01100001. Her karakter bayt değerine, ardından 8 bitlik ikili bir dizgeye dönüştürülür. Dönüştürücü, emoji'ler ve özel semboller dahil tüm Unicode karakterlerini işler ve bunları seçilen kodlama standardına göre dönüştürür."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "Metin ikiliye dönüştürme nedir?",
+              "answer": "Metin ikiliye dönüştürme, metin karakterlerini ikili koda (0 ve 1 dizileri) kodlama işlemidir. Her karakter önce bir karakter kodlaması (UTF-8 gibi) kullanılarak bayt temsiline dönüştürülür, ardından her bayt 8 bitlik ikili biçimine dönüştürülür. Bilgisayarlar metin verilerini bu şekilde dahili olarak depolar ve işler."
+            },
+            {
+              "question": "UTF-8 ve UTF-16 arasındaki fark nedir?",
+              "answer": "UTF-8 karakter başına 1-4 bayt kullanır ve ASCII ile geriye dönük uyumludur (ASCII karakterler 1 bayt kullanır). UTF-16 karakter başına 2 veya 4 bayt kullanır. UTF-8 Latin karakterler için daha alan verimlidir, UTF-16 ise belirli Asya dilleri için daha verimli olabilir. UTF-16 LE (Little Endian) en az anlamlı baytla baytları önce saklar, UTF-16 BE (Big Endian) ise en anlamlı baytı önce saklar."
+            },
+            {
+              "question": "Doğru karakter kodlamasını nasıl seçerim?",
+              "answer": "Çoğu modern uygulama ve web içeriği için UTF-8 kullanın, çünkü çoğu dil için en yaygın desteklenen ve alan verimli olanıdır. Windows sistemleriyle çalışıyorsanız veya belirli sistem gereksinimlerini karşılamanız gerekiyorsa UTF-16 kullanın. Yalnızca eski sistemler veya belirli Batı Avrupa karakter setleriyle uyumluluk gerekiyorsa Windows-1252 kullanın."
+            },
+            {
+              "question": "İkiliyi tekrar metne dönüştürebilir miyim?",
+              "answer": "Evet, ikiliyi tekrar metne dönüştürmek mümkündür, ancak kullanılan orijinal karakter kodlamasını bilmeniz gerekir. Dönüştürücümüz metin ikiliye dönüştürmeye odaklanır. İkiliyi tekrar metne dönüştürmek için aynı kodlama standardını destekleyen bir ikili metin dönüştürücüye ihtiyacınız olur."
+            },
+            {
+              "question": "Ayırıcı nedir ve neden önemlidir?",
+              "answer": "Ayırıcı, çıktıdaki bireysel ikili baytları ayırmak için kullanılan bir karakter veya dizgedir. Boş alanlar çıktıyı kompakt hale getirir, virgül ve boşluklar okunabilirliği artırır ve özel ayırıcılar belirli uygulamalar veya sistemler için çıktıyı biçimlendirmenize olanak tanır. Ayırıcı ikili değerleri etkilemez, yalnızca nasıl görüntülendiklerini etkiler."
+            },
+            {
+              "question": "Bu metin ikili dönüştürücü ücretsiz mi?",
+              "answer": "Evet, metin ikili dönüştürücümüz tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Sadece metninizi girin, kodlama ve ayırıcı tercihlerinizi seçin ve anında ikili dönüştürme sonuçları alın."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "addition": "Toplama Hesaplayıcı",
+          "additionDesc": "Tam sayıları ve ondalık sayıları hızlı ve doğru bir şekilde ekleyin",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın",
+          "average": "Ortalama Hesaplayıcı",
+          "averageDesc": "Bir sayı listesinin ortalamasını, toplamını ve sayısını bulun"
+        }
+      }
     }
   },
   "notFound": {

@@ -2571,6 +2571,79 @@
           "ampsToWattsDesc": "Convertir courant et tension en puissance"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Convertisseur Texte en Binaire",
+      "description": "Convertissez du texte en code binaire instantanément avec plusieurs encodages de caractères (UTF-8, UTF-16, Windows-1252) et séparateurs personnalisables.",
+      "textInput": "Saisie de Texte",
+      "textPlaceholder": "Entrez le texte à convertir en binaire...",
+      "encoding": "Encodage de Caractères",
+      "encodingUtf8": "UTF-8 Unicode (usage le plus courant)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (ASCII étendu)",
+      "separator": "Séparateur",
+      "separatorSpace": "Espace Vide",
+      "separatorComma": "Virgule (et espace)",
+      "separatorCustom": "Défini par l'utilisateur",
+      "customSeparatorLabel": "Tapez votre séparateur",
+      "customSeparatorPlaceholder": "Entrez le séparateur (max 10 caractères)",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "binaryOutput": "Sortie Binaire",
+      "seo": {
+        "title": "Convertisseur Texte en Binaire – Outil Gratuit en Ligne",
+        "description": "Convertissez du texte en code binaire instantanément avec notre convertisseur gratuit de texte en binaire. Prend en charge les encodages UTF-8, UTF-16 et Windows-1252 avec séparateurs personnalisables. Rapide, précis et facile à utiliser.",
+        "keywords": "texte en binaire, convertisseur binaire, texte en code binaire, encodeur binaire, UTF-8 en binaire, UTF-16 en binaire, encodeur de texte, traducteur binaire, ASCII en binaire, Unicode en binaire",
+        "content": {
+          "heading": "Comment Convertir du Texte en Binaire",
+          "paragraph1": "Un convertisseur de texte en binaire est un outil essentiel pour encoder des caractères de texte en représentation binaire. Le code binaire utilise uniquement deux chiffres (0 et 1) pour représenter toutes les données, ce qui le rend fondamental pour les systèmes informatiques et la communication numérique. Notre convertisseur gratuit de texte en binaire facilite la conversion de toute chaîne de texte en son équivalent binaire en utilisant divers encodages de caractères, vous aidant à comprendre comment les ordinateurs stockent et traitent les données textuelles.",
+          "paragraph2": "Le processus de conversion fonctionne en encodant d'abord votre texte à l'aide d'un encodage de caractères choisi (tel que UTF-8, UTF-16 ou Windows-1252), qui convertit chaque caractère en un ou plusieurs octets. Chaque octet est ensuite converti en sa représentation binaire de 8 bits. Par exemple, la lettre 'A' en ASCII/UTF-8 est représentée par la valeur d'octet 65, qui se convertit en binaire comme '01000001'. Notre convertisseur gère ce processus automatiquement, prenant en charge plusieurs standards d'encodage pour répondre à vos besoins spécifiques.",
+          "paragraph3": "L'encodage de caractères détermine comment les caractères de texte sont mappés aux valeurs d'octets. UTF-8 est l'encodage le plus courant, utilisant 1-4 octets par caractère et prenant en charge tous les caractères Unicode. UTF-16 utilise 2 ou 4 octets par caractère et est courant dans les systèmes Windows. UTF-16 LE (Little Endian) stocke l'octet le moins significatif en premier, tandis que UTF-16 BE (Big Endian) stocke l'octet le plus significatif en premier. Windows-1252 est un encodage ASCII étendu couramment utilisé dans les langues d'Europe occidentale. Notre convertisseur prend en charge tous ces encodages, vous permettant de choisir celui qui correspond à vos exigences.",
+          "paragraph4": "L'option de séparateur vous permet de contrôler la façon dont les chiffres binaires sont affichés. Vous pouvez utiliser des espaces vides pour une sortie compacte, des virgules avec espaces pour la lisibilité, ou définir votre propre séparateur personnalisé (jusqu'à 10 caractères). Cette flexibilité facilite le formatage de la sortie binaire pour différents usages, que vous appreniez la représentation binaire, débogiez des problèmes d'encodage ou prépariez des données pour des applications spécifiques. La conversion se produit automatiquement pendant que vous tapez, fournissant un retour instantané et rendant l'outil efficace à la fois pour les conversions rapides et les analyses détaillées.",
+          "exampleHeading": "Exemple : Convertir du Texte en Binaire",
+          "exampleText": "Pour convertir le mot 'Bonjour' en binaire en utilisant l'encodage UTF-8 : B = 01000010, o = 01101111, n = 01101110, j = 01101010, o = 01101111, u = 01110101, r = 01110010. Avec séparateur d'espace, le résultat est : 01000010 01101111 01101110 01101010 01101111 01110101 01110010. Avec séparateur de virgule, cela devient : 01000010, 01101111, 01101110, 01101010, 01101111, 01110101, 01110010. Chaque caractère est converti en sa valeur d'octet, puis en une chaîne binaire de 8 bits. Le convertisseur gère tous les caractères Unicode, y compris les emojis et symboles spéciaux, les convertissant selon le standard d'encodage sélectionné."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Qu'est-ce que la conversion de texte en binaire ?",
+              "answer": "La conversion de texte en binaire est le processus d'encodage de caractères de texte en code binaire (séquences de 0 et 1). Chaque caractère est d'abord converti en sa représentation d'octet à l'aide d'un encodage de caractères (comme UTF-8), puis chaque octet est converti en sa forme binaire de 8 bits. C'est ainsi que les ordinateurs stockent et traitent en interne les données textuelles."
+            },
+            {
+              "question": "Quelle est la différence entre UTF-8 et UTF-16 ?",
+              "answer": "UTF-8 utilise 1-4 octets par caractère et est rétrocompatible avec ASCII (les caractères ASCII utilisent 1 octet). UTF-16 utilise 2 ou 4 octets par caractère. UTF-8 est plus efficace en espace pour les caractères latins, tandis que UTF-16 peut être plus efficace pour certaines langues asiatiques. UTF-16 LE (Little Endian) stocke les octets avec l'octet le moins significatif en premier, tandis que UTF-16 BE (Big Endian) stocke l'octet le plus significatif en premier."
+            },
+            {
+              "question": "Comment choisir le bon encodage de caractères ?",
+              "answer": "Utilisez UTF-8 pour la plupart des applications modernes et du contenu web, car c'est le plus largement pris en charge et efficace en espace pour la plupart des langues. Utilisez UTF-16 si vous travaillez avec des systèmes Windows ou devez correspondre à des exigences système spécifiques. Utilisez Windows-1252 uniquement si vous avez besoin de compatibilité avec des systèmes hérités ou des jeux de caractères spécifiques d'Europe occidentale."
+            },
+            {
+              "question": "Puis-je convertir le binaire en texte ?",
+              "answer": "Oui, la conversion de binaire en texte est possible, mais vous devez connaître l'encodage de caractères original utilisé. Notre convertisseur se concentre sur la conversion de texte en binaire. Pour convertir le binaire en texte, vous auriez besoin d'un convertisseur de binaire en texte qui prend en charge le même standard d'encodage."
+            },
+            {
+              "question": "Qu'est-ce qu'un séparateur et pourquoi est-ce important ?",
+              "answer": "Un séparateur est un caractère ou une chaîne utilisé pour séparer les octets binaires individuels dans la sortie. Les espaces vides rendent la sortie compacte, les virgules avec espaces améliorent la lisibilité, et les séparateurs personnalisés vous permettent de formater la sortie pour des applications ou systèmes spécifiques. Le séparateur n'affecte pas les valeurs binaires elles-mêmes, seulement la façon dont elles sont affichées."
+            },
+            {
+              "question": "Ce convertisseur de texte en binaire est-il gratuit ?",
+              "answer": "Oui, notre convertisseur de texte en binaire est entièrement gratuit. Aucune inscription ni paiement requis. Entrez simplement votre texte, choisissez vos préférences d'encodage et de séparateur, et obtenez des résultats de conversion binaire instantanés."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Associés",
+          "addition": "Calculateur d'Addition",
+          "additionDesc": "Additionnez des nombres entiers et décimaux rapidement et précisément",
+          "percentage": "Calculateur de Pourcentage",
+          "percentageDesc": "Calculez les valeurs en pourcentage, le changement en pourcentage et les relations en pourcentage",
+          "average": "Calculateur de Moyenne",
+          "averageDesc": "Trouvez la moyenne, la somme et le nombre d'une liste de nombres"
+        }
+      }
     }
   },
   "notFound": {

@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { AddingFractionsCalculator } from './calculator';
+import { TextToBinaryCalculator } from './calculator';
 import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
 import { routing } from '@/i18n/routing';
@@ -29,20 +29,20 @@ interface FaqItem {
 async function getFaqItems(locale: string): Promise<FaqItem[]> {
   try {
     const messages = await import(`@/i18n/${locale}.json`);
-    return (messages.default?.calculators?.addingFractions?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.textToBinary?.seo?.faq?.items as FaqItem[]) || [];
   } catch {
     const messages = await import('@/i18n/en.json');
-    return (messages.default?.calculators?.addingFractions?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.textToBinary?.seo?.faq?.items as FaqItem[]) || [];
   }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.addingFractions.seo' });
+  const t = await getTranslations({ locale, namespace: 'calculators.textToBinary.seo' });
   const baseUrl = 'https://unitconverterhub.com';
-  const path = locale === 'en' ? '/calculators/math/adding-fractions' : `/${locale}/calculators/math/adding-fractions`;
+  const path = locale === 'en' ? '/calculators/math/text-to-binary' : `/${locale}/calculators/math/text-to-binary`;
   const canonicalUrl = `${baseUrl}${path}`;
-  const hreflangUrls = generateHreflangUrls('/calculators/math/adding-fractions');
+  const hreflangUrls = generateHreflangUrls('/calculators/math/text-to-binary');
   
   return {
     title: t('title'),
@@ -61,15 +61,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function AddingFractionsPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function TextToBinaryPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.addingFractions' });
+  const t = await getTranslations({ locale, namespace: 'calculators.textToBinary' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
 
   const faqItems = await getFaqItems(locale);
-  const tSeo = await getTranslations({ locale, namespace: 'calculators.addingFractions.seo.content' });
-  const tFaq = await getTranslations({ locale, namespace: 'calculators.addingFractions.seo.faq' });
-  const tRelated = await getTranslations({ locale, namespace: 'calculators.addingFractions.seo.related' });
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.textToBinary.seo.content' });
+  const tFaq = await getTranslations({ locale, namespace: 'calculators.textToBinary.seo.faq' });
+  const tRelated = await getTranslations({ locale, namespace: 'calculators.textToBinary.seo.related' });
 
   return (
     <>
@@ -80,7 +80,7 @@ export default async function AddingFractionsPage({ params }: { params: Promise<
         <div className="container">
           <Link href="/calculators/math" className="back-button">
             <svg className="back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             <span>{tCommon('calculators')}</span>
           </Link>
@@ -95,7 +95,7 @@ export default async function AddingFractionsPage({ params }: { params: Promise<
       <div className="calculator-container">
         <div className="container">
           <div className="calculator-card">
-            <AddingFractionsCalculator />
+            <TextToBinaryCalculator />
           </div>
         </div>
       </div>
@@ -147,6 +147,10 @@ export default async function AddingFractionsPage({ params }: { params: Promise<
               <h3 className="related-title">{tRelated('percentage')}</h3>
               <p className="related-desc">{tRelated('percentageDesc')}</p>
             </Link>
+            <Link href="/calculators/math/average" className="related-card">
+              <h3 className="related-title">{tRelated('average')}</h3>
+              <p className="related-desc">{tRelated('averageDesc')}</p>
+            </Link>
           </div>
         </div>
       </div>
@@ -160,4 +164,3 @@ export default async function AddingFractionsPage({ params }: { params: Promise<
     </>
   );
 }
-

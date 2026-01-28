@@ -2639,6 +2639,79 @@
           "ampsToWattsDesc": "Strom und Spannung in Leistung umrechnen"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Text zu Binär Konverter",
+      "description": "Konvertieren Sie Text sofort in Binärcode mit mehreren Zeichenkodierungen (UTF-8, UTF-16, Windows-1252) und anpassbaren Trennzeichen.",
+      "textInput": "Texteingabe",
+      "textPlaceholder": "Text eingeben, um in Binär zu konvertieren...",
+      "encoding": "Zeichenkodierung",
+      "encodingUtf8": "UTF-8 Unicode (häufigste Verwendung)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (erweiterte ASCII)",
+      "separator": "Trennzeichen",
+      "separatorSpace": "Leerzeichen",
+      "separatorComma": "Komma (und Leerzeichen)",
+      "separatorCustom": "Benutzerdefiniert",
+      "customSeparatorLabel": "Geben Sie Ihr Trennzeichen ein",
+      "customSeparatorPlaceholder": "Trennzeichen eingeben (max. 10 Zeichen)",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "binaryOutput": "Binärausgabe",
+      "seo": {
+        "title": "Text zu Binär Konverter – Kostenloses Online-Tool",
+        "description": "Konvertieren Sie Text sofort in Binärcode mit unserem kostenlosen Text-zu-Binär-Konverter. Unterstützt UTF-8, UTF-16 und Windows-1252 Kodierungen mit anpassbaren Trennzeichen. Schnell, genau und einfach zu verwenden.",
+        "keywords": "Text zu Binär, Binärkonverter, Text zu Binärcode, Binärkodierer, UTF-8 zu Binär, UTF-16 zu Binär, Textkodierer, Binärübersetzer, ASCII zu Binär, Unicode zu Binär",
+        "content": {
+          "heading": "Wie man Text in Binär konvertiert",
+          "paragraph1": "Ein Text-zu-Binär-Konverter ist ein wesentliches Tool zum Kodieren von Textzeichen in Binärdarstellung. Binärcode verwendet nur zwei Ziffern (0 und 1), um alle Daten darzustellen, was ihn für Computersysteme und digitale Kommunikation grundlegend macht. Unser kostenloser Text-zu-Binär-Konverter macht es einfach, jede Textzeichenfolge in ihr binäres Äquivalent unter Verwendung verschiedener Zeichenkodierungen zu konvertieren und hilft Ihnen zu verstehen, wie Computer Textdaten speichern und verarbeiten.",
+          "paragraph2": "Der Konvertierungsprozess funktioniert, indem zuerst Ihr Text mit einer gewählten Zeichenkodierung (wie UTF-8, UTF-16 oder Windows-1252) kodiert wird, die jedes Zeichen in ein oder mehrere Bytes umwandelt. Jedes Byte wird dann in seine 8-Bit-Binärdarstellung konvertiert. Zum Beispiel wird der Buchstabe 'A' in ASCII/UTF-8 durch den Bytewert 65 dargestellt, der in Binär als '01000001' konvertiert wird. Unser Konverter verwaltet diesen Prozess automatisch und unterstützt mehrere Kodierungsstandards, um Ihren spezifischen Anforderungen zu entsprechen.",
+          "paragraph3": "Die Zeichenkodierung bestimmt, wie Textzeichen auf Bytewerte abgebildet werden. UTF-8 ist die häufigste Kodierung und verwendet 1-4 Bytes pro Zeichen und unterstützt alle Unicode-Zeichen. UTF-16 verwendet 2 oder 4 Bytes pro Zeichen und ist in Windows-Systemen üblich. UTF-16 LE (Little Endian) speichert das niederwertigste Byte zuerst, während UTF-16 BE (Big Endian) das höchstwertige Byte zuerst speichert. Windows-1252 ist eine erweiterte ASCII-Kodierung, die häufig in westeuropäischen Sprachen verwendet wird. Unser Konverter unterstützt alle diese Kodierungen und ermöglicht es Ihnen, diejenige auszuwählen, die Ihren Anforderungen entspricht.",
+          "paragraph4": "Die Trennzeichen-Option ermöglicht es Ihnen zu steuern, wie Binärziffern angezeigt werden. Sie können Leerzeichen für kompakte Ausgabe, Kommas mit Leerzeichen für Lesbarkeit verwenden oder Ihr eigenes benutzerdefiniertes Trennzeichen definieren (bis zu 10 Zeichen). Diese Flexibilität erleichtert die Formatierung der Binärausgabe für verschiedene Zwecke, ob Sie etwas über Binärdarstellung lernen, Kodierungsprobleme debuggen oder Daten für spezifische Anwendungen vorbereiten. Die Konvertierung erfolgt automatisch während Sie tippen, bietet sofortiges Feedback und macht das Tool sowohl für schnelle Konvertierungen als auch für detaillierte Analysen effizient.",
+          "exampleHeading": "Beispiel: Text in Binär konvertieren",
+          "exampleText": "Um das Wort 'Hallo' in Binär mit UTF-8-Kodierung zu konvertieren: H = 01001000, a = 01100001, l = 01101100, l = 01101100, o = 01101111. Mit Leerzeichen-Trennzeichen ist das Ergebnis: 01001000 01100001 01101100 01101100 01101111. Mit Komma-Trennzeichen wird es zu: 01001000, 01100001, 01101100, 01101100, 01101111. Jedes Zeichen wird in seinen Bytewert konvertiert, dann in eine 8-Bit-Binärzeichenfolge. Der Konverter verwaltet alle Unicode-Zeichen, einschließlich Emojis und Sonderzeichen, und konvertiert sie gemäß dem ausgewählten Kodierungsstandard."
+        },
+        "faq": {
+          "heading": "Häufig Gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist die Text-zu-Binär-Konvertierung?",
+              "answer": "Die Text-zu-Binär-Konvertierung ist der Prozess der Kodierung von Textzeichen in Binärcode (Folgen von 0en und 1en). Jedes Zeichen wird zuerst in seine Bytedarstellung mit einer Zeichenkodierung (wie UTF-8) konvertiert, dann wird jedes Byte in seine 8-Bit-Binärform konvertiert. So speichern und verarbeiten Computer intern Textdaten."
+            },
+            {
+              "question": "Was ist der Unterschied zwischen UTF-8 und UTF-16?",
+              "answer": "UTF-8 verwendet 1-4 Bytes pro Zeichen und ist rückwärtskompatibel mit ASCII (ASCII-Zeichen verwenden 1 Byte). UTF-16 verwendet 2 oder 4 Bytes pro Zeichen. UTF-8 ist platzsparender für lateinische Zeichen, während UTF-16 für bestimmte asiatische Sprachen effizienter sein kann. UTF-16 LE (Little Endian) speichert Bytes mit dem niederwertigsten Byte zuerst, während UTF-16 BE (Big Endian) das höchstwertige Byte zuerst speichert."
+            },
+            {
+              "question": "Wie wähle ich die richtige Zeichenkodierung?",
+              "answer": "Verwenden Sie UTF-8 für die meisten modernen Anwendungen und Webinhalte, da es am weitesten unterstützt und platzsparend für die meisten Sprachen ist. Verwenden Sie UTF-16, wenn Sie mit Windows-Systemen arbeiten oder bestimmte Systemanforderungen erfüllen müssen. Verwenden Sie Windows-1252 nur, wenn Sie Kompatibilität mit Legacy-Systemen oder spezifischen westeuropäischen Zeichensätzen benötigen."
+            },
+            {
+              "question": "Kann ich Binär zurück in Text konvertieren?",
+              "answer": "Ja, die Konvertierung von Binär zu Text ist möglich, aber Sie müssen die ursprünglich verwendete Zeichenkodierung kennen. Unser Konverter konzentriert sich auf die Text-zu-Binär-Konvertierung. Um Binär zurück in Text zu konvertieren, bräuchten Sie einen Binär-zu-Text-Konverter, der denselben Kodierungsstandard unterstützt."
+            },
+            {
+              "question": "Was ist ein Trennzeichen und warum ist es wichtig?",
+              "answer": "Ein Trennzeichen ist ein Zeichen oder eine Zeichenfolge, die verwendet wird, um einzelne Binärbytes in der Ausgabe zu trennen. Leerzeichen machen die Ausgabe kompakt, Kommas mit Leerzeichen verbessern die Lesbarkeit, und benutzerdefinierte Trennzeichen ermöglichen es Ihnen, die Ausgabe für spezifische Anwendungen oder Systeme zu formatieren. Das Trennzeichen beeinflusst nicht die Binärwerte selbst, nur wie sie angezeigt werden."
+            },
+            {
+              "question": "Ist dieser Text-zu-Binär-Konverter kostenlos?",
+              "answer": "Ja, unser Text-zu-Binär-Konverter ist völlig kostenlos. Keine Registrierung oder Zahlung erforderlich. Geben Sie einfach Ihren Text ein, wählen Sie Ihre Kodierungs- und Trennzeichen-Präferenzen und erhalten Sie sofortige Binärkonvertierungsergebnisse."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Ähnliche Rechner",
+          "addition": "Additionsrechner",
+          "additionDesc": "Addieren Sie ganze Zahlen und Dezimalzahlen schnell und genau",
+          "percentage": "Prozentrechner",
+          "percentageDesc": "Berechnen Sie Prozentwerte, Prozentänderung und Prozentbeziehungen",
+          "average": "Durchschnittsrechner",
+          "averageDesc": "Finden Sie den Durchschnitt, die Summe und die Anzahl einer Zahlenliste"
+        }
+      }
     }
   },
   "notFound": {

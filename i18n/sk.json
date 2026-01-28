@@ -2626,6 +2626,79 @@
           "ampsToWattsDesc": "Prepočítajte prúd a napätie na výkon"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Konvertor Textu na Binárny",
+      "description": "Konvertujte text na binárny kód okamžite s viacerými znakovými kódovaniami (UTF-8, UTF-16, Windows-1252) a prispôsobiteľnými oddeľovačmi.",
+      "textInput": "Vstup Textu",
+      "textPlaceholder": "Zadajte text na konverziu na binárny...",
+      "encoding": "Znakové Kódovanie",
+      "encodingUtf8": "UTF-8 Unicode (najčastejšie použitie)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (rozšírené ASCII)",
+      "separator": "Oddeľovač",
+      "separatorSpace": "Prázdny Priestor",
+      "separatorComma": "Čiarka (a medzera)",
+      "separatorCustom": "Definované používateľom",
+      "customSeparatorLabel": "Zadajte svoj oddeľovač",
+      "customSeparatorPlaceholder": "Zadajte oddeľovač (max 10 znakov)",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "binaryOutput": "Binárny Výstup",
+      "seo": {
+        "title": "Konvertor Textu na Binárny – Bezplatný Online Nástroj",
+        "description": "Konvertujte text na binárny kód okamžite s naším bezplatným konvertorom textu na binárny. Podporuje kódovania UTF-8, UTF-16 a Windows-1252 s prispôsobiteľnými oddeľovačmi. Rýchly, presný a ľahko použiteľný.",
+        "keywords": "text na binárny, binárny konvertor, text na binárny kód, binárny kódovač, UTF-8 na binárny, UTF-16 na binárny, textový kódovač, binárny prekladač, ASCII na binárny, Unicode na binárny",
+        "content": {
+          "heading": "Ako Konvertovať Text na Binárny",
+          "paragraph1": "Konvertor textu na binárny je nevyhnutný nástroj na kódovanie textových znakov do binárnej reprezentácie. Binárny kód používa iba dve číslice (0 a 1) na reprezentáciu všetkých dát, čo ho robí základným pre počítačové systémy a digitálnu komunikáciu. Náš bezplatný konvertor textu na binárny uľahčuje konverziu akéhokoľvek textového reťazca na jeho binárny ekvivalent pomocou rôznych znakových kódovaní, pomáhajúc vám pochopiť, ako počítače ukladajú a spracovávajú textové dáta.",
+          "paragraph2": "Proces konverzie funguje tak, že najprv zakóduje váš text pomocou zvoleného znakového kódovania (ako je UTF-8, UTF-16 alebo Windows-1252), ktoré prevedie každý znak na jeden alebo viac bajtov. Každý bajt sa potom prevedie na jeho 8-bitovú binárnu reprezentáciu. Napríklad písmeno 'A' v ASCII/UTF-8 je reprezentované hodnotou bajtu 65, ktorá sa prevedie na binárny ako '01000001'. Náš konvertor spracováva tento proces automaticky, podporuje viacero kódovacích štandardov, aby zodpovedal vašim špecifickým potrebám.",
+          "paragraph3": "Znakové kódovanie určuje, ako sú textové znaky mapované na hodnoty bajtov. UTF-8 je najbežnejšie kódovanie, používa 1-4 bajty na znak a podporuje všetky znaky Unicode. UTF-16 používa 2 alebo 4 bajty na znak a je bežné v systémoch Windows. UTF-16 LE (Little Endian) ukladá najmenej významný bajt ako prvý, zatiaľ čo UTF-16 BE (Big Endian) ukladá najvýznamnejší bajt ako prvý. Windows-1252 je rozšírené ASCII kódovanie bežne používané v západoeurópskych jazykoch. Náš konvertor podporuje všetky tieto kódovania, umožňujúc vám vybrať to, ktoré zodpovedá vašim požiadavkám.",
+          "paragraph4": "Možnosť oddeľovača vám umožňuje ovládať spôsob zobrazenia binárnych číslic. Môžete použiť prázdne medzery pre kompaktný výstup, čiarky s medzerami pre čitateľnosť alebo definovať vlastný vlastný oddeľovač (až 10 znakov). Táto flexibilita uľahčuje formátovanie binárneho výstupu pre rôzne účely, či už sa učíte o binárnej reprezentácii, odstraňujete problémy s kódovaním alebo pripravujete dáta pre konkrétne aplikácie. Konverzia sa vyskytuje automaticky počas písania, poskytuje okamžitú spätnú väzbu a robí nástroj efektívnym pre rýchle konverzie aj podrobné analýzy.",
+          "exampleHeading": "Príklad: Konverzia Textu na Binárny",
+          "exampleText": "Na konverziu slova 'Ahoj' na binárny pomocou kódovania UTF-8: A = 01000001, h = 01101000, o = 01101111, j = 01101010. S oddeľovačom medzery je výsledok: 01000001 01101000 01101111 01101010. S oddeľovačom čiarky sa stáva: 01000001, 01101000, 01101111, 01101010. Každý znak sa prevedie na jeho hodnotu bajtu, potom na 8-bitový binárny reťazec. Konvertor spracováva všetky znaky Unicode, vrátane emoji a špeciálnych symbolov, prevedie ich podľa vybraného kódovacieho štandardu."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Čo je konverzia textu na binárny?",
+              "answer": "Konverzia textu na binárny je proces kódovania textových znakov do binárneho kódu (sekvencie 0 a 1). Každý znak sa najprv prevedie na jeho bajtovú reprezentáciu pomocou znakového kódovania (ako je UTF-8), potom sa každý bajt prevedie na jeho 8-bitovú binárnu formu. Takto počítače interně ukladajú a spracovávajú textové dáta."
+            },
+            {
+              "question": "Aký je rozdiel medzi UTF-8 a UTF-16?",
+              "answer": "UTF-8 používa 1-4 bajty na znak a je spätne kompatibilný s ASCII (znaky ASCII používajú 1 bajt). UTF-16 používa 2 alebo 4 bajty na znak. UTF-8 je priestorovo efektívnejší pre latinské znaky, zatiaľ čo UTF-16 môže byť efektívnejší pre niektoré ázijské jazyky. UTF-16 LE (Little Endian) ukladá bajty s najmenej významným bajtom ako prvým, zatiaľ čo UTF-16 BE (Big Endian) ukladá najvýznamnejší bajt ako prvý."
+            },
+            {
+              "question": "Ako vybrať správne znakové kódovanie?",
+              "answer": "Použite UTF-8 pre väčšinu moderných aplikácií a webového obsahu, pretože je najširšie podporované a priestorovo efektívne pre väčšinu jazykov. Použite UTF-16, ak pracujete so systémami Windows alebo musíte zodpovedať špecifickým systémovým požiadavkám. Použite Windows-1252 iba vtedy, ak potrebujete kompatibilitu so staršími systémami alebo špecifickými západoeurópskymi znakovými sadami."
+            },
+            {
+              "question": "Môžem previesť binárny späť na text?",
+              "answer": "Áno, konverzia binárneho späť na text je možná, ale musíte poznať pôvodné znakové kódovanie, ktoré bolo použité. Náš konvertor sa zameriava na konverziu textu na binárny. Na konverziu binárneho späť na text by ste potrebovali konvertor binárneho na text, ktorý podporuje rovnaký kódovací štandard."
+            },
+            {
+              "question": "Čo je oddeľovač a prečo na ňom záleží?",
+              "answer": "Oddeľovač je znak alebo reťazec používaný na oddelenie jednotlivých binárnych bajtov vo výstupe. Prázdne medzery robia výstup kompaktným, čiarky s medzerami zlepšujú čitateľnosť a vlastné oddeľovače vám umožňujú formátovať výstup pre špecifické aplikácie alebo systémy. Oddeľovač neovplyvňuje samotné binárne hodnoty, iba spôsob ich zobrazenia."
+            },
+            {
+              "question": "Je tento konvertor textu na binárny zadarmo?",
+              "answer": "Áno, náš konvertor textu na binárny je úplne zadarmo. Nie je potrebná registrácia ani platba. Jednoducho zadajte svoj text, vyberte svoje preferencie kódovania a oddeľovača a získajte okamžité výsledky binárnej konverzie."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace Kalkulačky",
+          "addition": "Sčítanie Kalkulačka",
+          "additionDesc": "Rýchlo a presne pridajte celé čísla a desatinné čísla",
+          "percentage": "Kalkulačka Percent",
+          "percentageDesc": "Vypočítajte percentuálne hodnoty, percentuálnu zmenu a percentuálne vzťahy",
+          "average": "Priemer Kalkulačka",
+          "averageDesc": "Nájdite priemer, súčet a počet zo zoznamu čísel"
+        }
+      }
     }
   },
   "notFound": {

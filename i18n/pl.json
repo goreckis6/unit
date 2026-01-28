@@ -2651,6 +2651,79 @@
           "ampsToWattsDesc": "Konwertuj prąd i napięcie na moc"
         }
       }
+    },
+    "textToBinary": {
+      "title": "Konwerter Tekstu na Binarny",
+      "description": "Konwertuj tekst na kod binarny natychmiast z wieloma kodowaniami znaków (UTF-8, UTF-16, Windows-1252) i konfigurowalnymi separatorami.",
+      "textInput": "Wprowadź Tekst",
+      "textPlaceholder": "Wprowadź tekst do konwersji na binarny...",
+      "encoding": "Kodowanie Znaków",
+      "encodingUtf8": "UTF-8 Unicode (najczęstsze użycie)",
+      "encodingUtf16": "UTF-16 Unicode",
+      "encodingUtf16le": "UTF-16 (LE) Unicode",
+      "encodingUtf16be": "UTF-16 (BE) Unicode",
+      "encodingWindows1252": "Windows-1252 (rozszerzone ASCII)",
+      "separator": "Separator",
+      "separatorSpace": "Pusta Spacja",
+      "separatorComma": "Przecinek (i spacja)",
+      "separatorCustom": "Zdefiniowany przez użytkownika",
+      "customSeparatorLabel": "Wpisz swój separator",
+      "customSeparatorPlaceholder": "Wprowadź separator (max 10 znaków)",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "binaryOutput": "Wynik Binarny",
+      "seo": {
+        "title": "Konwerter Tekstu na Binarny – Darmowe Narzędzie Online",
+        "description": "Konwertuj tekst na kod binarny natychmiast z naszym darmowym konwerterem tekstu na binarny. Obsługuje kodowania UTF-8, UTF-16 i Windows-1252 z konfigurowalnymi separatorami. Szybki, dokładny i łatwy w użyciu.",
+        "keywords": "tekst na binarny, konwerter binarny, tekst na kod binarny, enkoder binarny, UTF-8 na binarny, UTF-16 na binarny, enkoder tekstu, translator binarny, ASCII na binarny, Unicode na binarny",
+        "content": {
+          "heading": "Jak Konwertować Tekst na Binarny",
+          "paragraph1": "Konwerter tekstu na binarny to niezbędne narzędzie do kodowania znaków tekstowych w reprezentację binarną. Kod binarny używa tylko dwóch cyfr (0 i 1) do reprezentacji wszystkich danych, co czyni go fundamentalnym dla systemów komputerowych i komunikacji cyfrowej. Nasz darmowy konwerter tekstu na binarny ułatwia konwersję dowolnego ciągu tekstowego na jego odpowiednik binarny przy użyciu różnych kodowań znaków, pomagając zrozumieć, jak komputery przechowują i przetwarzają dane tekstowe.",
+          "paragraph2": "Proces konwersji działa poprzez najpierw kodowanie tekstu przy użyciu wybranego kodowania znaków (takiego jak UTF-8, UTF-16 lub Windows-1252), które konwertuje każdy znak na jeden lub więcej bajtów. Każdy bajt jest następnie konwertowany na jego 8-bitową reprezentację binarną. Na przykład litera 'A' w ASCII/UTF-8 jest reprezentowana przez wartość bajtu 65, która konwertuje się na binarny jako '01000001'. Nasz konwerter obsługuje ten proces automatycznie, obsługując wiele standardów kodowania, aby dopasować się do Twoich konkretnych potrzeb.",
+          "paragraph3": "Kodowanie znaków określa, jak znaki tekstowe są mapowane na wartości bajtów. UTF-8 jest najczęstszym kodowaniem, używając 1-4 bajtów na znak i obsługując wszystkie znaki Unicode. UTF-16 używa 2 lub 4 bajtów na znak i jest powszechne w systemach Windows. UTF-16 LE (Little Endian) przechowuje najmniej znaczący bajt najpierw, podczas gdy UTF-16 BE (Big Endian) przechowuje najbardziej znaczący bajt najpierw. Windows-1252 to rozszerzone kodowanie ASCII powszechnie używane w językach zachodnioeuropejskich. Nasz konwerter obsługuje wszystkie te kodowania, pozwalając wybrać to, które odpowiada Twoim wymaganiom.",
+          "paragraph4": "Opcja separatora pozwala kontrolować sposób wyświetlania cyfr binarnych. Możesz użyć pustych spacji dla zwartego wyniku, przecinków ze spacjami dla czytelności lub zdefiniować własny niestandardowy separator (do 10 znaków). Ta elastyczność ułatwia formatowanie wyniku binarnego do różnych celów, czy uczysz się reprezentacji binarnej, debugujesz problemy z kodowaniem czy przygotowujesz dane dla konkretnych aplikacji. Konwersja odbywa się automatycznie podczas pisania, zapewniając natychmiastową informację zwrotną i czyniąc narzędzie wydajnym zarówno dla szybkich konwersji, jak i szczegółowych analiz.",
+          "exampleHeading": "Przykład: Konwertowanie Tekstu na Binarny",
+          "exampleText": "Aby przekonwertować słowo 'Cześć' na binarny przy użyciu kodowania UTF-8: C = 01000011, z = 01111010, e = 01100101, ś = 11000100 10010111, ć = 11000100 10000110. Z separatorem spacji wynik to: 01000011 01111010 01100101 11000100 10010111 11000100 10000110. Z separatorem przecinka staje się: 01000011, 01111010, 01100101, 11000100, 10010111, 11000100, 10000110. Każdy znak jest konwertowany na jego wartość bajtu, a następnie na 8-bitowy ciąg binarny. Konwerter obsługuje wszystkie znaki Unicode, w tym emoji i symbole specjalne, konwertując je zgodnie z wybranym standardem kodowania."
+        },
+        "faq": {
+          "heading": "Często Zadawane Pytania",
+          "items": [
+            {
+              "question": "Co to jest konwersja tekstu na binarny?",
+              "answer": "Konwersja tekstu na binarny to proces kodowania znaków tekstowych w kod binarny (sekwencje 0 i 1). Każdy znak jest najpierw konwertowany na swoją reprezentację bajtu przy użyciu kodowania znaków (takiego jak UTF-8), a następnie każdy bajt jest konwertowany na swoją 8-bitową formę binarną. W ten sposób komputery wewnętrznie przechowują i przetwarzają dane tekstowe."
+            },
+            {
+              "question": "Jaka jest różnica między UTF-8 a UTF-16?",
+              "answer": "UTF-8 używa 1-4 bajtów na znak i jest wstecznie kompatybilne z ASCII (znaki ASCII używają 1 bajtu). UTF-16 używa 2 lub 4 bajtów na znak. UTF-8 jest bardziej efektywne przestrzennie dla znaków łacińskich, podczas gdy UTF-16 może być bardziej efektywne dla niektórych języków azjatyckich. UTF-16 LE (Little Endian) przechowuje bajty z najmniej znaczącym bajtem najpierw, podczas gdy UTF-16 BE (Big Endian) przechowuje najbardziej znaczący bajt najpierw."
+            },
+            {
+              "question": "Jak wybrać właściwe kodowanie znaków?",
+              "answer": "Użyj UTF-8 dla większości nowoczesnych aplikacji i treści internetowych, ponieważ jest najszerzej obsługiwane i efektywne przestrzennie dla większości języków. Użyj UTF-16, jeśli pracujesz z systemami Windows lub musisz dopasować się do konkretnych wymagań systemowych. Użyj Windows-1252 tylko wtedy, gdy potrzebujesz kompatybilności z systemami legacy lub konkretnymi zestawami znaków zachodnioeuropejskich."
+            },
+            {
+              "question": "Czy mogę przekonwertować binarny z powrotem na tekst?",
+              "answer": "Tak, konwersja binarnego z powrotem na tekst jest możliwa, ale musisz znać oryginalne kodowanie znaków użyte. Nasz konwerter koncentruje się na konwersji tekstu na binarny. Aby przekonwertować binarny z powrotem na tekst, potrzebowałbyś konwertera binarnego na tekst, który obsługuje ten sam standard kodowania."
+            },
+            {
+              "question": "Co to jest separator i dlaczego ma znaczenie?",
+              "answer": "Separator to znak lub ciąg używany do oddzielania pojedynczych bajtów binarnych w wyniku. Puste spacje czynią wynik zwartym, przecinki ze spacjami poprawiają czytelność, a niestandardowe separatory pozwalają formatować wynik dla konkretnych aplikacji lub systemów. Separator nie wpływa na same wartości binarne, tylko na sposób ich wyświetlania."
+            },
+            {
+              "question": "Czy ten konwerter tekstu na binarny jest darmowy?",
+              "answer": "Tak, nasz konwerter tekstu na binarny jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Po prostu wprowadź tekst, wybierz preferencje kodowania i separatora, a otrzymasz natychmiastowe wyniki konwersji binarnej."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "addition": "Kalkulator Dodawania",
+          "additionDesc": "Dodawaj liczby całkowite i dziesiętne szybko i dokładnie",
+          "percentage": "Kalkulator Procentowy",
+          "percentageDesc": "Obliczaj wartości procentowe, zmianę procentową i relacje procentowe",
+          "average": "Kalkulator Średniej",
+          "averageDesc": "Znajdź średnią, sumę i liczbę z listy liczb"
+        }
+      }
     }
   },
   "notFound": {

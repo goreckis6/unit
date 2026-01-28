@@ -1250,10 +1250,18 @@ a {
 
 .split-view-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   align-items: start;
   width: 100%;
+}
+
+/* Desktop only - 2 columns layout */
+@media (min-width: 1025px) {
+  .split-view-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
 }
 
 .options-grid {
@@ -1609,11 +1617,11 @@ a {
     gap: 1.5rem;
   }
 
-  /* Tablet optimizations (768px - 1024px) */
+  /* Tablet optimizations (768px - 1024px) - single column */
   @media (min-width: 769px) and (max-width: 1024px) {
     .split-view-container {
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
 
     .split-view-container .number-input,
@@ -1628,22 +1636,16 @@ a {
     }
 
     .split-view-container .input-section > div {
-      gap: 1.25rem;
+      gap: 1.5rem;
     }
 
     .options-grid {
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
     .split-view-container .result-section .number-input {
       font-size: 0.9em;
       padding: 1rem;
-    }
-
-    /* Keep buttons smaller on tablet */
-    .split-view-container .btn-secondary {
-      padding: 0.4rem 0.8rem;
-      font-size: 0.75rem;
     }
   }
 

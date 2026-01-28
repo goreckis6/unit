@@ -292,16 +292,7 @@ export function Header() {
         <div className="header-content">
           <Link href="/" className="logo" onClick={closeMenu}>
             <span className="logo-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="32" height="32" rx="8" fill="url(#logoGradient)"/>
-                <path d="M10 16L14 20L22 12" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <defs>
-                  <linearGradient id="logoGradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#6366F1"/>
-                    <stop offset="1" stopColor="#8B5CF6"/>
-                  </linearGradient>
-                </defs>
-              </svg>
+              <img src="/logo.png" alt={t('siteName')} className="logo-image" />
             </span>
             <span className="logo-text">{t('siteName')}</span>
           </Link>
@@ -337,16 +328,7 @@ export function Header() {
           <div className="mobile-nav-header">
             <Link href="/" className="mobile-logo" onClick={closeMenu}>
               <span className="logo-icon">
-                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="32" height="32" rx="8" fill="url(#mobileLogoGradient)"/>
-                  <path d="M10 16L14 20L22 12" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  <defs>
-                    <linearGradient id="mobileLogoGradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#6366F1"/>
-                      <stop offset="1" stopColor="#8B5CF6"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
+                <img src="/logo.png" alt={t('siteName')} className="logo-image" />
               </span>
               <span className="logo-text">{t('siteName')}</span>
             </Link>

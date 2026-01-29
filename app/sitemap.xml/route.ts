@@ -17,6 +17,7 @@ export async function GET() {
     '/calculators/math/arctan',
     '/calculators/math/average',
     '/calculators/others/text-to-binary',
+    '/calculators/others/bold-text',
     '/calculators/others/italic-text',
     '/calculators/others/upside-down-text',
     '/calculators/electric',

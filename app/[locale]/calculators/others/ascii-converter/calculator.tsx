@@ -141,24 +141,6 @@ export function AsciiConverterCalculator() {
         <div className="input-section" style={{ marginBottom: 0 }}>
           <div className="numbers-to-letters-inputs" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div className="input-card">
-              <label htmlFor="inputType" className="input-label">
-                {t('inputTypeLabel')}
-              </label>
-              <select
-                id="inputType"
-                value={inputType}
-                onChange={(e) => setInputType(e.target.value as InputType)}
-                className="number-input select-dropdown"
-                style={{ cursor: 'pointer' }}
-              >
-                <option value="ascii">{t('inputTypeAscii')}</option>
-                <option value="hex">{t('inputTypeHex')}</option>
-                <option value="binary">{t('inputTypeBinary')}</option>
-                <option value="decimal">{t('inputTypeDecimal')}</option>
-              </select>
-            </div>
-
-            <div className="input-card">
               <label htmlFor="input" className="input-label">
                 {t('inputLabel')}
               </label>
@@ -181,21 +163,41 @@ export function AsciiConverterCalculator() {
               />
             </div>
 
-            <div className="input-card numbers-to-letters-compact">
-              <label htmlFor="separator" className="input-label">
-                {t('separator')}
-              </label>
-              <select
-                id="separator"
-                value={separatorType}
-                onChange={(e) => setSeparatorType(e.target.value as SeparatorType)}
-                className="number-input select-dropdown"
-                style={{ cursor: 'pointer' }}
-              >
-                <option value="space">{t('separatorSpace')}</option>
-                <option value="comma">{t('separatorComma')}</option>
-                <option value="custom">{t('separatorCustom')}</option>
-              </select>
+            <div className="options-grid options-grid-dropdowns">
+              <div className="input-card numbers-to-letters-compact">
+                <label htmlFor="inputType" className="input-label">
+                  {t('inputTypeLabel')}
+                </label>
+                <select
+                  id="inputType"
+                  value={inputType}
+                  onChange={(e) => setInputType(e.target.value as InputType)}
+                  className="number-input select-dropdown"
+                  style={{ cursor: 'pointer' }}
+                >
+                  <option value="ascii">{t('inputTypeAscii')}</option>
+                  <option value="hex">{t('inputTypeHex')}</option>
+                  <option value="binary">{t('inputTypeBinary')}</option>
+                  <option value="decimal">{t('inputTypeDecimal')}</option>
+                </select>
+              </div>
+
+              <div className="input-card numbers-to-letters-compact">
+                <label htmlFor="separator" className="input-label">
+                  {t('separator')}
+                </label>
+                <select
+                  id="separator"
+                  value={separatorType}
+                  onChange={(e) => setSeparatorType(e.target.value as SeparatorType)}
+                  className="number-input select-dropdown"
+                  style={{ cursor: 'pointer' }}
+                >
+                  <option value="space">{t('separatorSpace')}</option>
+                  <option value="comma">{t('separatorComma')}</option>
+                  <option value="custom">{t('separatorCustom')}</option>
+                </select>
+              </div>
             </div>
 
             {separatorType === 'custom' && (

@@ -96,6 +96,12 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       path: '/calculators/others/nato-phonetic',
     },
     {
+      id: 'numbers-to-letters',
+      titleKey: 'numbersToLetters.title',
+      descKey: 'numbersToLetters.description',
+      path: '/calculators/others/numbers-to-letters',
+    },
+    {
       id: 'italic-text',
       titleKey: 'italicText.title',
       descKey: 'italicText.description',

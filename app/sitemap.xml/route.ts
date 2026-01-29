@@ -21,6 +21,7 @@ export async function GET() {
     '/calculators/others/small-caps',
     '/calculators/others/mirror-text',
     '/calculators/others/nato-phonetic',
+    '/calculators/others/numbers-to-letters',
     '/calculators/others/italic-text',
     '/calculators/others/upside-down-text',
     '/calculators/electric',

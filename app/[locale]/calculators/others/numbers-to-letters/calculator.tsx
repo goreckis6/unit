@@ -102,7 +102,7 @@ export function NumbersToLettersConverter() {
       <div className="split-view-container">
         {/* Left Column - Input */}
         <div className="input-section" style={{ marginBottom: 0 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div className="numbers-to-letters-inputs" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div className="input-card">
               <label htmlFor="numbers" className="input-label">
                 {t('numbersInput')}
@@ -139,7 +139,7 @@ export function NumbersToLettersConverter() {
                 value={method}
                 onChange={(e) => setMethod(e.target.value as DecodingMethod)}
                 className="number-input"
-                style={{ padding: '0.75rem 1rem', cursor: 'pointer' }}
+                style={{ cursor: 'pointer' }}
               >
                 <option value="a1">{t('methodA1')}</option>
                 <option value="a0">{t('methodA0')}</option>
@@ -155,7 +155,7 @@ export function NumbersToLettersConverter() {
                 value={alphabet}
                 onChange={(e) => setAlphabet(e.target.value)}
                 className="number-input"
-                style={{ padding: '0.75rem 1rem', cursor: 'pointer' }}
+                style={{ cursor: 'pointer' }}
               >
                 <option value="latin">{t('alphabetLatin')}</option>
                 <option value="arabic">{t('alphabetArabic')}</option>

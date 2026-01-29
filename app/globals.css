@@ -1264,15 +1264,31 @@ a {
   }
 
   /* Compact styling for Numbers to Letters Converter on desktop */
+  .numbers-to-letters-compact {
+    padding: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
   .numbers-to-letters-compact .input-label {
-    font-size: 0.875rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.75rem !important;
+    margin-bottom: 0.375rem !important;
+    font-weight: 500;
   }
 
   .numbers-to-letters-compact select {
-    padding: 0.5rem 0.75rem !important;
-    font-size: 0.875rem;
-    min-height: 40px;
+    padding: 0.375rem 0.625rem !important;
+    font-size: 0.8125rem !important;
+    min-height: 36px !important;
+    line-height: 1.4;
+  }
+
+  /* Reduce gap between compact sections, but keep larger gap for first section */
+  .numbers-to-letters-inputs {
+    gap: 1rem !important;
+  }
+
+  .numbers-to-letters-inputs .numbers-to-letters-compact + .numbers-to-letters-compact {
+    margin-top: -0.25rem;
   }
 }
 
@@ -2371,15 +2387,31 @@ a {
   }
 
   /* Compact styling for Numbers to Letters Converter on desktop */
+  .numbers-to-letters-compact {
+    padding: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
   .numbers-to-letters-compact .input-label {
-    font-size: 0.875rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.75rem !important;
+    margin-bottom: 0.375rem !important;
+    font-weight: 500;
   }
 
   .numbers-to-letters-compact select {
-    padding: 0.5rem 0.75rem !important;
-    font-size: 0.875rem;
-    min-height: 40px;
+    padding: 0.375rem 0.625rem !important;
+    font-size: 0.8125rem !important;
+    min-height: 36px !important;
+    line-height: 1.4;
+  }
+
+  /* Reduce gap between compact sections, but keep larger gap for first section */
+  .numbers-to-letters-inputs {
+    gap: 1rem !important;
+  }
+
+  .numbers-to-letters-inputs .numbers-to-letters-compact + .numbers-to-letters-compact {
+    margin-top: -0.25rem;
   }
 }
 

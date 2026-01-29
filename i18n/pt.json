@@ -2864,8 +2864,8 @@
       "outputDecimal": "Decimal",
       "outputPlaceholder": "Insira entrada para ver a saída",
       "seo": {
-        "title": "Conversor ASCII – Texto para Hex, Binário e Decimal",
-        "description": "Conversor ASCII gratuito. Converta texto para hex, binário e decimal e vice-versa. Suporta separadores personalizados. Essencial para codificação, depuração e programação.",
+        "title": "Conversor ASCII – Codificar texto para Hex, Binário e Decimal",
+        "description": "Conversor ASCII gratuito. Codifique e decodifique texto em códigos ASCII hex, binário e decimal. Suporta separadores personalizados. Ideal para codificação, depuração e programação.",
         "keywords": "conversor ASCII, ASCII para hex, ASCII para binário, ASCII para decimal, hex para ASCII, binário para ASCII, decimal para ASCII, conversor de códigos de caracteres, codificação de texto",
         "content": {
           "heading": "Como usar o conversor ASCII",
@@ -2892,6 +2892,60 @@
           "textToBinaryDesc": "Converta texto para binário com UTF-8, UTF-16 e separadores personalizados",
           "dnaToMrna": "Conversor DNA para mRNA",
           "dnaToMrnaDesc": "Transcreva DNA para mRNA e traduza para proteínas",
+          "lettersToNumbers": "Letras para números",
+          "lettersToNumbersDesc": "Converta letras em números (A=1, B=2, etc.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Cifra de César",
+      "titleBadge": "Texto e codificação",
+      "description": "Codifique ou decodifique texto online com a cifra de César. Escolha o alfabeto (latim, cirílico, grego, hebraico, árabe), defina o deslocamento e alterne entre codificar e decodificar.",
+      "textInput": "Digite o texto que deseja codificar ou decodificar online",
+      "textPlaceholder": "Digite o texto...",
+      "alphabet": "Alfabeto",
+      "alphabetLatin": "Latim (a, b, c...)",
+      "alphabetCyrillic": "Cirílico (а, б, в...)",
+      "alphabetGreek": "Grego (α, β, γ...)",
+      "alphabetHebrew": "Hebraico (..., ל, א)",
+      "alphabetArabic": "Árabe (ب, ا)",
+      "shiftLabel": "Digite o valor do deslocamento",
+      "mode": "Modo",
+      "modeEncode": "Codificar",
+      "modeDecode": "Decodificar",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "resultPlaceholder": "O resultado aparecerá aqui",
+      "seo": {
+        "title": "Cifra de César – Codificar e decodificar texto online",
+        "description": "Cifra de César gratuita. Codifique e decodifique texto por deslocamento. Suporta latim, cirílico, grego, hebraico e árabe. Ideal para aprender criptografia e mensagens secretas.",
+        "keywords": "cifra de César, cifra de deslocamento, codificar decodificar texto, cifra ROT, cifra de substituição, ferramenta criptografia",
+        "content": {
+          "heading": "Como usar a cifra de César",
+          "paragraph1": "A cifra de César é uma cifra de substituição clássica em que cada letra do alfabeto é deslocada um número fixo de posições. Para codificar você desloca as letras para a frente; para decodificar, para trás. Escolha o alfabeto, insira um deslocamento (0–100) e alterne entre Codificar e Decodificar. Caracteres não alfabéticos permanecem inalterados.",
+          "paragraph2": "Selecione o alfabeto conforme o idioma do seu texto. Latim para inglês e línguas europeias, cirílico para russo, grego, hebraico e árabe para esses alfabetos. O valor do deslocamento determina o número de posições. No modo Decodificar o deslocamento é invertido.",
+          "paragraph3": "A cifra de César é útil para aprender criptografia, criar mensagens secretas simples e quebra-cabeças. Não é segura para confidencialidade real mas ilustra bem cifras de substituição. Tudo roda no seu navegador.",
+          "paragraph4": "Digite seu texto, escolha o alfabeto, defina o deslocamento (ex.: 2) e selecione Codificar ou Decodificar. O resultado atualiza instantaneamente. Para decodificar use o mesmo alfabeto e o mesmo deslocamento usados na codificação.",
+          "exampleHeading": "Exemplo",
+          "exampleText": "Entrada: addasdaw. Alfabeto: Latim. Deslocamento: 2. Modo: Codificar. Resultado: cffcufcy (cada letra deslocada 2: a→c, d→f, s→u, w→y). Para decodificar cffcufcy de volta para addasdaw use as mesmas opções e modo Decodificar."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {"question": "O que é a cifra de César?", "answer": "A cifra de César é uma cifra de substituição em que cada letra é substituída por outra a um número fixo de posições no alfabeto. Nomeada em homenagem a Júlio César. Com deslocamento 2, «a» vira «c», «z» vira «b»."},
+            {"question": "Como decodificar uma cifra de César?", "answer": "Use o mesmo alfabeto e o mesmo valor de deslocamento usados na codificação e selecione o modo Decodificar. A ferramenta desloca cada letra para trás e restaura o texto original."},
+            {"question": "Quais alfabetos são suportados?", "answer": "A ferramenta suporta latim (a–z), cirílico (а–я), grego (α–ω), hebraico (א–ת) e árabe (ا–ي). Maiúsculas e minúsculas são preservadas para latim, cirílico e grego."},
+            {"question": "O que é o valor do deslocamento?", "answer": "O valor do deslocamento é o número de posições que cada letra é deslocada. Na codificação para a frente, na decodificação para trás. Deslocamento 0 deixa o texto inalterado."},
+            {"question": "A cifra de César é segura?", "answer": "Não. A cifra de César é fácil de quebrar — há tantas chaves quanto letras no alfabeto. Útil para aprender e mensagens divertidas, não para confidencialidade real."},
+            {"question": "Esta ferramenta é gratuita?", "answer": "Sim. A cifra de César é gratuita. Não é necessário registo nem pagamento. Tudo roda no seu navegador."}
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "textToBinary": "Conversor de texto para binário",
+          "textToBinaryDesc": "Converta texto para binário com UTF-8, UTF-16 e separadores personalizados",
+          "asciiConverter": "Conversor ASCII",
+          "asciiConverterDesc": "Codifique e decodifique texto em códigos ASCII hex, binário e decimal",
           "lettersToNumbers": "Letras para números",
           "lettersToNumbersDesc": "Converta letras em números (A=1, B=2, etc.)"
         }
@@ -3454,8 +3508,8 @@
       "reset": "Redefinir",
       "copy": "Copiar",
       "seo": {
-        "title": "Conversor de Letras para Números – Cifra A1Z26 e Codificação ASCII",
-        "description": "Conversor gratuito de letras para números. Codifique texto com cifra A1Z26 ou códigos ASCII. Decodifique valores numéricos de volta para texto legível.",
+        "title": "Conversor de Letras para Números – Texto para Códigos Numéricos Online",
+        "description": "Conversor gratuito online de letras para números. Transforme texto em códigos numéricos usando A=1, alfabeto invertido, teclado T9, ASCII, hex e codificação binária.",
         "keywords": "conversor letras números, conversor letra número, texto números, alfabeto números, codificador letras, codificador texto, codificador A=0, codificador A=1, codificador alfabeto invertido, conversor teclado T9, conversor ASCII, conversor hex, conversor binário, codificador alfabeto latino, codificador alfabeto árabe, codificador alfabeto hebraico, codificador alfabeto grego, codificador alfabeto cirílico, ferramenta criptografia, codificador código letras",
         "content": {
           "heading": "Como Converter Letras em Números",

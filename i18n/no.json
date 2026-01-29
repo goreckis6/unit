@@ -2864,8 +2864,8 @@
       "outputDecimal": "Desimal",
       "outputPlaceholder": "Skriv inn for å se utdata",
       "seo": {
-        "title": "ASCII-konverter – Tekst til Hex, Binær og Desimal",
-        "description": "Gratis ASCII-konverter. Konverter tekst til hex, binær og desimal og tilbake. Tilpassbare skilletegn. For koding, feilsøking og programmering.",
+        "title": "ASCII-konverter – Koder tekst til Hex, Binær og Desimal",
+        "description": "Gratis ASCII-konverter. Koder og dekoder tekst til ASCII hex-, binære og desimalkoder. Tilpassbare skilletegn. Ideell for koding, feilsøking og programmering.",
         "keywords": "ASCII-konverter, ASCII til hex, ASCII til binær, ASCII til desimal, hex til ASCII, binær til ASCII, desimal til ASCII, tegnkodekonverter, tekstkoding",
         "content": {
           "heading": "Slik bruker du ASCII-konverteren",
@@ -2892,6 +2892,60 @@
           "textToBinaryDesc": "Konverter tekst til binær med UTF-8, UTF-16 og egendefinerte skilletegn",
           "dnaToMrna": "DNA til mRNA-konverter",
           "dnaToMrnaDesc": "Transkriber DNA til mRNA og oversett til proteiner",
+          "lettersToNumbers": "Bokstaver til tall",
+          "lettersToNumbersDesc": "Konverter bokstaver til tall (A=1, B=2 osv.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Cæsarchiffer",
+      "titleBadge": "Tekst og kodning",
+      "description": "Kod eller dekod tekst online med Cæsarchifferet. Velg alfabet (latinsk, kyrillisk, gresk, hebraisk, arabisk), sett skiftverdi og bytt mellom kod og dekod.",
+      "textInput": "Skriv inn teksten du vil kode eller dekode online",
+      "textPlaceholder": "Skriv inn tekst...",
+      "alphabet": "Alfabet",
+      "alphabetLatin": "Latinsk (a, b, c...)",
+      "alphabetCyrillic": "Kyrillisk (а, б, в...)",
+      "alphabetGreek": "Gresk (α, β, γ...)",
+      "alphabetHebrew": "Hebraisk (..., ל, א)",
+      "alphabetArabic": "Arabisk (ب, ا)",
+      "shiftLabel": "Skriv inn skiftverdi",
+      "mode": "Modus",
+      "modeEncode": "Kod",
+      "modeDecode": "Dekod",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "resultPlaceholder": "Resultatet vises her",
+      "seo": {
+        "title": "Cæsarchiffer – Kod og dekod tekst online",
+        "description": "Gratis Cæsarchiffer. Kod og dekod tekst med skift. Støtte for latinsk, kyrillisk, gresk, hebraisk og arabisk. Ideelt for kryptografi og hemmelige meldinger.",
+        "keywords": "Cæsarchiffer, skiftchiffer, kod dekod tekst, ROT-chiffer, substitusjonschiffer, kryptografiverktøy",
+        "content": {
+          "heading": "Slik bruker du Cæsarchifferet",
+          "paragraph1": "Cæsarchifferet er et klassiskt substitusjonschiffer der hver bokstav i alfabetet forskjøves et fast antall posisjoner. Ved kodning forskjøves bokstaver fremover, ved dekodning bakover. Velg alfabet, skriv inn skift (0–100) og bytt mellom Kod og Dekod. Ikke-bokstavtegn forblir uendret.",
+          "paragraph2": "Velg alfabet etter tekstens språk. Latinsk for engelsk og europeiske språk, kyrillisk for russisk, gresk, hebraisk og arabisk for disse skriftsystemene. Skiftverdien bestemmer antall posisjoner. I modus Dekod snus forskjøvningen.",
+          "paragraph3": "Cæsarchifferet er nyttig for å lære kryptografi, lage enkle hemmelige meldinger og puslespill. Det er ikke sikkert for virkelig konfidensialitet men illustrerer substitusjonschiffer godt. Alt kjører i nettleseren din.",
+          "paragraph4": "Skriv inn teksten, velg alfabet, sett skift (f.eks. 2) og velg Kod eller Dekod. Resultatet oppdateres umiddelbart. For å dekode bruk samme alfabet og samme skiftverdi som ved kodning.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "Inndata: addasdaw. Alfabet: Latinsk. Skift: 2. Modus: Kod. Resultat: cffcufcy (hver bokstav forskjøvet 2: a→c, d→f, s→u, w→y). For å dekode cffcufcy tilbake til addasdaw bruk samme innstillinger og modus Dekod."
+        },
+        "faq": {
+          "heading": "Ofte stilte spørsmål",
+          "items": [
+            {"question": "Hva er Cæsarchifferet?", "answer": "Cæsarchifferet er et substitusjonschiffer der hver bokstav erstattes av en annen et fast antall posisjoner i alfabetet. Oppkalt etter Julius Cæsar. Med skift 2 blir «a» til «c», «z» blir til «b»."},
+            {"question": "Hvordan dekoder jeg et Cæsarchiffer?", "answer": "Bruk samme alfabet og samme skiftverdi som ved kodning og velg modus Dekod. Verktøyet forskjøver hver bokstav bakover og gjenoppretter originalteksten."},
+            {"question": "Hvilke alfabeter støttes?", "answer": "Verktøyet støtter latinsk (a–z), kyrillisk (а–я), gresk (α–ω), hebraisk (א–ת) og arabisk (ا–ي). Store og små bokstaver bevares for latinsk, kyrillisk og gresk."},
+            {"question": "Hva er skiftverdien?", "answer": "Skiftverdien er antall posisjoner hver bokstav forskjøves. Ved kodning fremover, ved dekodning bakover. Skift 0 endrer ikke teksten."},
+            {"question": "Er Cæsarchifferet sikkert?", "answer": "Nei. Cæsarchifferet er lett å knekke — det finnes bare like mange nøkler som bokstaver i alfabetet. Godt for læring og morsomme meldinger, ikke for virkelig konfidensialitet."},
+            {"question": "Er dette verktøyet gratis?", "answer": "Ja. Cæsarchifferet er gratis. Ingen registrering eller betaling. Alt kjører i nettleseren din."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterte kalkulatorer",
+          "textToBinary": "Tekst til binær konverter",
+          "textToBinaryDesc": "Konverter tekst til binær med UTF-8, UTF-16 og egendefinerte skilletegn",
+          "asciiConverter": "ASCII-konverter",
+          "asciiConverterDesc": "Kod og dekod tekst til ASCII hex-, binære og desimalkoder",
           "lettersToNumbers": "Bokstaver til tall",
           "lettersToNumbersDesc": "Konverter bokstaver til tall (A=1, B=2 osv.)"
         }
@@ -3454,8 +3508,8 @@
       "reset": "Tilbakestill",
       "copy": "Kopier",
       "seo": {
-        "title": "Bokstaver til Tall Konverter – A1Z26 & ASCII-koding",
-        "description": "Gratis bokstaver til tall konverter. Koder tekst med A1Z26-bokstavchiffer eller ASCII-koder. Dekoder numeriske verdier tilbake til lesbar tekst.",
+        "title": "Bokstaver til Tall Konverter – Tekst til Numeriske Koder Online",
+        "description": "Gratis online bokstaver til tall konverter. Gjør om tekst til numeriske koder ved hjelp av A=1, omvendt alfabet, T9-tastatur, ASCII, hex og binær koding.",
         "keywords": "bokstaver til tall konverter, bokstav til tall konverter, tekst til tall, alfabet til tall, bokstav kodere, tekst kodere, A=0 kodere, A=1 kodere, omvendt alfabet kodere, T9-tastatur konverter, ASCII konverter, hex konverter, binær konverter, latinsk alfabet kodere, arabisk alfabet kodere, hebraisk alfabet kodere, gresk alfabet kodere, kyrillisk alfabet kodere, kryptografi verktøy, bokstav kode kodere",
         "content": {
           "heading": "Hvordan Konvertere Bokstaver til Tall",

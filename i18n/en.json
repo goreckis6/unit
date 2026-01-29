@@ -3397,8 +3397,8 @@
       "reset": "Reset",
       "copy": "Copy",
       "seo": {
-        "title": "Letters to Numbers Converter – A1Z26 & ASCII Encoding",
-        "description": "Free letters to numbers converter. Encode text using A1Z26 letter cipher or ASCII codes. Decode numeric values back to readable text.",
+        "title": "Letters to Numbers Converter – Text to Numeric Codes Online",
+        "description": "Free online letters to numbers converter. Turn text into numeric codes using A=1, reversed alphabet, T9 keypad, ASCII, hex and binary encoding.",
         "keywords": "letters to numbers converter, letter to number converter, text to numbers, alphabet to numbers, letter encoder, text encoder, A=0 encoder, A=1 encoder, reversed alphabet encoder, T9 keypad converter, ASCII converter, hex converter, binary converter, Latin alphabet encoder, Arabic alphabet encoder, Hebrew alphabet encoder, Greek alphabet encoder, Cyrillic alphabet encoder, cryptography tool, letter code encoder",
         "content": {
           "heading": "How to Convert Letters to Numbers",
@@ -3473,8 +3473,8 @@
       "outputDecimal": "Decimal",
       "outputPlaceholder": "Enter input to see output",
       "seo": {
-        "title": "ASCII Converter – Text to Hex, Binary & Decimal",
-        "description": "Free ASCII converter. Convert text to hex, binary, and decimal and back. Supports custom separators. Essential for encoding, debugging, and programming.",
+        "title": "ASCII Converter – Encode Text to Hex, Binary & Decimal",
+        "description": "Free ASCII converter. Encode and decode text to ASCII hex, binary and decimal codes. Supports custom separators. Ideal for encoding, debugging and programming.",
         "keywords": "ASCII converter, ASCII to hex, ASCII to binary, ASCII to decimal, hex to ASCII, binary to ASCII, decimal to ASCII, character code converter, text encoding",
         "content": {
           "heading": "How to Use the ASCII Converter",
@@ -3516,6 +3516,78 @@
           "textToBinaryDesc": "Convert text to binary with UTF-8, UTF-16, and custom separators",
           "dnaToMrna": "DNA to mRNA Converter",
           "dnaToMrnaDesc": "Transcribe DNA to mRNA and translate to proteins",
+          "lettersToNumbers": "Letters to Numbers Converter",
+          "lettersToNumbersDesc": "Convert letters to numbers (A=1, B=2, etc.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Caesar Cipher Shifter",
+      "titleBadge": "Text & Encoding",
+      "description": "Encode or decode text online with the Caesar cipher. Choose alphabet (Latin, Cyrillic, Greek, Hebrew, Arabic), set shift value, and switch between encode and decode.",
+      "textInput": "Enter the text you want to encode or decode online",
+      "textPlaceholder": "Enter text...",
+      "alphabet": "Alphabet",
+      "alphabetLatin": "Latin (a, b, c...)",
+      "alphabetCyrillic": "Cyrillic (а, б, в...)",
+      "alphabetGreek": "Greek (α, β, γ...)",
+      "alphabetHebrew": "Hebrew (..., ל, א)",
+      "alphabetArabic": "Arabic (ب, ا)",
+      "shiftLabel": "Enter shift value",
+      "mode": "Mode",
+      "modeEncode": "Encode",
+      "modeDecode": "Decode",
+      "reset": "Reset",
+      "result": "Result",
+      "resultPlaceholder": "Result will appear here",
+      "seo": {
+        "title": "Caesar Cipher Shifter – Encode & Decode Text Online",
+        "description": "Free Caesar cipher shifter. Encode and decode text with shift cipher. Supports Latin, Cyrillic, Greek, Hebrew and Arabic. Ideal for learning cryptography and secret messages.",
+        "keywords": "Caesar cipher, Caesar cipher shifter, shift cipher, encode decode text, ROT cipher, substitution cipher, cipher encoder, cipher decoder, cryptography tool",
+        "content": {
+          "heading": "How to Use the Caesar Cipher Shifter",
+          "paragraph1": "The Caesar cipher is a classic substitution cipher where each letter in the alphabet is shifted by a fixed number of positions. To encode, you shift letters forward; to decode, you shift them back. Our free Caesar cipher shifter lets you choose the alphabet (Latin, Cyrillic, Greek, Hebrew, or Arabic), enter a shift value (0 to 100), and switch between Encode and Decode mode. Non-letter characters (spaces, numbers, punctuation) are left unchanged.",
+          "paragraph2": "Select your alphabet to match the language of your text. Latin is used for English and many European languages; Cyrillic for Russian and others; Greek, Hebrew, and Arabic for those scripts. The shift value determines how many positions each letter moves. For example, with Latin and shift 2, 'a' becomes 'c', 'b' becomes 'd', and 'z' wraps to 'b'. Decode mode reverses the shift, so the same shift value that encoded the text will decode it back.",
+          "paragraph3": "The Caesar cipher is useful for learning cryptography, creating simple secret messages, puzzles, and educational exercises. It is not secure for real secrecy—it can be broken by trying all possible shifts or by frequency analysis—but it is a great way to understand how substitution ciphers work. All encoding and decoding runs in your browser; no data is sent to a server.",
+          "paragraph4": "Enter your text in the input box, choose the alphabet, set the shift value (e.g. 2 for a classic Caesar shift of 2), and select Encode or Decode. The result updates instantly. To decode a message, use the same alphabet and the same shift value that was used to encode it, and select Decode mode.",
+          "exampleHeading": "Example",
+          "exampleText": "Input: addasdaw. Alphabet: Latin. Shift: 2. Mode: Encode. Result: cffcufcy (each letter shifted forward by 2: a→c, d→f, s→u, w→y). To decode cffcufcy back to addasdaw, use the same settings and select Decode."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is a Caesar cipher?",
+              "answer": "The Caesar cipher is a substitution cipher where each letter is replaced by another letter a fixed number of positions down the alphabet. It is named after Julius Caesar, who reportedly used it. For example, with a shift of 2, 'a' becomes 'c' and 'z' becomes 'b' (wrapping around)."
+            },
+            {
+              "question": "How do I decode a Caesar cipher?",
+              "answer": "Use the same alphabet and the same shift value that was used to encode the message, and select Decode mode. The shifter will shift each letter backward by the shift value, restoring the original text."
+            },
+            {
+              "question": "Which alphabets are supported?",
+              "answer": "The tool supports Latin (a–z), Cyrillic (а–я), Greek (α–ω), Hebrew (א–ת), and Arabic (ا–ي). Choose the alphabet that matches the language of your text. Case is preserved for Latin, Cyrillic, and Greek."
+            },
+            {
+              "question": "What is the shift value?",
+              "answer": "The shift value is the number of positions each letter moves in the alphabet. For encode, letters shift forward; for decode, they shift backward. For Latin with shift 2, a→c, b→d, …, z→b. Shift 0 leaves text unchanged."
+            },
+            {
+              "question": "Is the Caesar cipher secure?",
+              "answer": "No. The Caesar cipher is very easy to break—there are only as many keys as there are letters in the alphabet (e.g. 26 for Latin). It is useful for learning and fun secret messages, but not for real confidentiality."
+            },
+            {
+              "question": "Is this Caesar cipher shifter free?",
+              "answer": "Yes. The Caesar cipher shifter is free to use. No registration or payment is required. All encoding and decoding runs in your browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "textToBinary": "Text to Binary Converter",
+          "textToBinaryDesc": "Convert text to binary with UTF-8, UTF-16 and custom separators",
+          "asciiConverter": "ASCII Converter",
+          "asciiConverterDesc": "Encode and decode text to ASCII hex, binary and decimal",
           "lettersToNumbers": "Letters to Numbers Converter",
           "lettersToNumbersDesc": "Convert letters to numbers (A=1, B=2, etc.)"
         }

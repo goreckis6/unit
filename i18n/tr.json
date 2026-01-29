@@ -2868,8 +2868,8 @@
       "outputDecimal": "Ondalık",
       "outputPlaceholder": "Çıktıyı görmek için giriş yapın",
       "seo": {
-        "title": "ASCII Dönüştürücü – Metin, Hex, İkili ve Ondalık",
-        "description": "Ücretsiz ASCII dönüştürücü. Metni hex, ikili ve ondalığa dönüştürün ve geri alın. Özel ayırıcıları destekler. Kodlama, hata ayıklama ve programlama için gerekli.",
+        "title": "ASCII Dönüştürücü – Metni Hex, İkili ve Ondalığa Kodla",
+        "description": "Ücretsiz ASCII dönüştürücü. Metni ASCII hex, ikili ve ondalık kodlara kodlayın ve çözün. Özel ayırıcıları destekler. Kodlama, hata ayıklama ve programlama için ideal.",
         "keywords": "ASCII dönüştürücü, ASCII'den hex, ASCII'den ikili, ASCII'den ondalık, hex'ten ASCII, ikiliden ASCII, ondalıktan ASCII, karakter kodu dönüştürücü, metin kodlama",
         "content": {
           "heading": "ASCII Dönüştürücü Nasıl Kullanılır",
@@ -2911,6 +2911,60 @@
           "textToBinaryDesc": "Metni UTF-8, UTF-16 ve özel ayırıcılarla ikiliye dönüştürün",
           "dnaToMrna": "DNA mRNA Dönüştürücü",
           "dnaToMrnaDesc": "DNA'yı mRNA'ya transkribe edin ve proteine çevirin",
+          "lettersToNumbers": "Harflerden Sayılara Dönüştürücü",
+          "lettersToNumbersDesc": "Harfleri sayılara dönüştürün (A=1, B=2 vb.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Sezar Şifresi",
+      "titleBadge": "Metin ve kodlama",
+      "description": "Metni Sezar şifresiyle çevrimiçi kodlayın veya çözün. Alfabe seçin (Latin, Kiril, Yunan, İbrani, Arap), kaydırma değerini girin ve kodla ile çöz arasında geçiş yapın.",
+      "textInput": "Çevrimiçi kodlamak veya çözmek istediğiniz metni girin",
+      "textPlaceholder": "Metin girin...",
+      "alphabet": "Alfabe",
+      "alphabetLatin": "Latin (a, b, c...)",
+      "alphabetCyrillic": "Kiril (а, б, в...)",
+      "alphabetGreek": "Yunan (α, β, γ...)",
+      "alphabetHebrew": "İbrani (..., ל, א)",
+      "alphabetArabic": "Arap (ب, ا)",
+      "shiftLabel": "Kaydırma değerini girin",
+      "mode": "Mod",
+      "modeEncode": "Kodla",
+      "modeDecode": "Çöz",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "resultPlaceholder": "Sonuç burada görünecek",
+      "seo": {
+        "title": "Sezar Şifresi – Metni çevrimiçi kodla ve çöz",
+        "description": "Ücretsiz Sezar şifresi. Metni kaydırma ile kodlayın ve çözün. Latin, Kiril, Yunan, İbrani ve Arap desteği. Kriptografi ve gizli mesajlar için ideal.",
+        "keywords": "Sezar şifresi, kaydırma şifresi, metin kodla çöz, ROT şifresi, yerine koyma şifresi, kriptografi aracı",
+        "content": {
+          "heading": "Sezar şifresi nasıl kullanılır",
+          "paragraph1": "Sezar şifresi, alfabedeki her harfin sabit sayıda konum kaydırıldığı klasik bir yerine koyma şifresidir. Kodlarken harfleri ileri, çözerken geri kaydırırsınız. Alfabeyi seçin, kaydırma değeri girin (0–100) ve Kodla ile Çöz arasında geçiş yapın. Harf olmayan karakterler değişmez.",
+          "paragraph2": "Metninizin diline göre alfabeyi seçin. Latin İngilizce ve Avrupa dilleri için, Kiril Rusça için, Yunan, İbrani ve Arap bu yazılar için. Kaydırma değeri konum sayısını belirler. Çöz modunda kaydırma tersine çevrilir.",
+          "paragraph3": "Sezar şifresi kriptografi öğrenmek, basit gizli mesajlar ve bulmacalar oluşturmak için kullanışlıdır. Gerçek gizlilik için güvenli değildir ancak yerine koyma şifrelerini iyi gösterir. Her şey tarayıcınızda çalışır.",
+          "paragraph4": "Metninizi girin, alfabeyi seçin, kaydırma değerini ayarlayın (örn. 2) ve Kodla veya Çöz seçin. Sonuç anında güncellenir. Çözmek için kodlarken kullandığınız alfabe ve kaydırma değerini kullanın.",
+          "exampleHeading": "Örnek",
+          "exampleText": "Giriş: addasdaw. Alfabe: Latin. Kaydırma: 2. Mod: Kodla. Sonuç: cffcufcy (her harf 2 kaydırıldı: a→c, d→f, s→u, w→y). cffcufcy'yi addasdaw'ya çözmek için aynı ayarları ve Çöz modunu kullanın."
+        },
+        "faq": {
+          "heading": "Sıkça sorulan sorular",
+          "items": [
+            {"question": "Sezar şifresi nedir?", "answer": "Sezar şifresi, her harfin alfabede sabit sayıda konumdaki başka bir harfle değiştirildiği bir yerine koyma şifresidir. Jül Sezar'dan adını alır. 2 kaydırmada «a» «c», «z» «b» olur."},
+            {"question": "Sezar şifresini nasıl çözerim?", "answer": "Kodlarken kullandığınız alfabe ve kaydırma değerini kullanın ve Çöz modunu seçin. Araç her harfi geri kaydırır ve orijinal metni geri yükler."},
+            {"question": "Hangi alfabeler destekleniyor?", "answer": "Araç Latin (a–z), Kiril (а–я), Yunan (α–ω), İbrani (א–ת) ve Arap (ا–ي) destekler. Latin, Kiril ve Yunan için büyük/küçük harf korunur."},
+            {"question": "Kaydırma değeri nedir?", "answer": "Kaydırma değeri her harfin kaç konum kaydırıldığıdır. Kodlarken ileri, çözerken geri. 0 kaydırma metni değiştirmez."},
+            {"question": "Sezar şifresi güvenli mi?", "answer": "Hayır. Sezar şifresi kırmak kolaydır — alfabedeki harf sayısı kadar anahtar vardır. Öğrenme ve eğlenceli mesajlar için uygundur, gerçek gizlilik için değil."},
+            {"question": "Bu araç ücretsiz mi?", "answer": "Evet. Sezar şifresi ücretsizdir. Kayıt veya ödeme gerekmez. Her şey tarayıcınızda çalışır."}
+          ]
+        },
+        "related": {
+          "heading": "İlgili hesaplayıcılar",
+          "textToBinary": "Metin İkili Dönüştürücü",
+          "textToBinaryDesc": "Metni UTF-8, UTF-16 ve özel ayırıcılarla ikiliye dönüştürün",
+          "asciiConverter": "ASCII Dönüştürücü",
+          "asciiConverterDesc": "Metni ASCII hex, ikili ve ondalık kodlara kodlayın ve çözün",
           "lettersToNumbers": "Harflerden Sayılara Dönüştürücü",
           "lettersToNumbersDesc": "Harfleri sayılara dönüştürün (A=1, B=2 vb.)"
         }
@@ -3473,8 +3527,8 @@
       "reset": "Sıfırla",
       "copy": "Kopyala",
       "seo": {
-        "title": "Harf Sayı Dönüştürücü – A1Z26 ve ASCII Kodlama",
-        "description": "Ücretsiz harf sayı dönüştürücü. Metni A1Z26 harf şifresi veya ASCII kodlarıyla kodlayın. Sayısal değerleri tekrar okunabilir metne çevirin.",
+        "title": "Harf Sayı Dönüştürücü – Metni Sayısal Kodlara Online",
+        "description": "Ücretsiz online harf sayı dönüştürücü. A=1, ters alfabe, T9 tuş takımı, ASCII, hex ve ikili kodlama kullanarak metni sayısal kodlara dönüştürün.",
         "keywords": "harf sayı dönüştürücü, harf sayı dönüştürücü, metin sayı, alfabe sayı, harf kodlayıcı, metin kodlayıcı, A=0 kodlayıcı, A=1 kodlayıcı, ters alfabe kodlayıcı, T9 tuş takımı dönüştürücü, ASCII dönüştürücü, hex dönüştürücü, ikili dönüştürücü, Latince alfabe kodlayıcı, Arap alfabe kodlayıcı, İbrani alfabe kodlayıcı, Yunan alfabe kodlayıcı, Kiril alfabe kodlayıcı, kriptografi aracı, harf kodu kodlayıcı",
         "content": {
           "heading": "Harfleri Sayılara Nasıl Dönüştürülür",

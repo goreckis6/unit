@@ -2864,8 +2864,8 @@
       "outputDecimal": "Desimaali",
       "outputPlaceholder": "Syötä syöte nähdäksesi tulosteen",
       "seo": {
-        "title": "ASCII-muunnin – Teksti hex-, binääri- ja desimaalimuotoon",
-        "description": "Ilmainen ASCII-muunnin. Muunna teksti hex-, binääri- ja desimaalimuotoon ja takaisin. Mukautettavat erottimet. Koodaukseen, virheenkorjaukseen ja ohjelmointiin.",
+        "title": "ASCII-muunnin – Koodaa teksti hex-, binääri- ja desimaalimuotoon",
+        "description": "Ilmainen ASCII-muunnin. Koodaa ja purkaa teksti ASCII hex-, binääri- ja desimaalikoodeiksi. Mukautettavat erottimet. Ihanteellinen koodaukseen, virheenkorjaukseen ja ohjelmointiin.",
         "keywords": "ASCII-muunnin, ASCII hexiksi, ASCII binääriksi, ASCII desimaaliksi, hex ASCIIksi, binääri ASCIIksi, desimaali ASCIIksi, merkkikoodimuunnin, tekstikoodaus",
         "content": {
           "heading": "ASCII-muunnimen käyttö",
@@ -2892,6 +2892,60 @@
           "textToBinaryDesc": "Muunna teksti binääriksi UTF-8-, UTF-16- ja mukautettavilla erottimilla",
           "dnaToMrna": "DNA mRNA-muunnin",
           "dnaToMrnaDesc": "Transkriboi DNA mRNA:ksi ja käännä proteiineiksi",
+          "lettersToNumbers": "Kirjaimet numeroiksi",
+          "lettersToNumbersDesc": "Muunna kirjaimet numeroiksi (A=1, B=2 jne.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Caesarin salakirjoitus",
+      "titleBadge": "Teksti ja koodaus",
+      "description": "Koodaa tai purkaa tekstiä verkossa Caesarin salakirjoituksella. Valitse aakkosto (latinalainen, kyrillinen, kreikkalainen, heprealainen, arabialainen), aseta siirto ja vaihda koodauksen ja purkamisen välillä.",
+      "textInput": "Syötä teksti, jonka haluat koodata tai purkaa verkossa",
+      "textPlaceholder": "Syötä teksti...",
+      "alphabet": "Aakkosto",
+      "alphabetLatin": "Latinalainen (a, b, c...)",
+      "alphabetCyrillic": "Kyrillinen (а, б, в...)",
+      "alphabetGreek": "Kreikkalainen (α, β, γ...)",
+      "alphabetHebrew": "Heprealainen (..., ל, א)",
+      "alphabetArabic": "Arabialainen (ب, ا)",
+      "shiftLabel": "Syötä siirron arvo",
+      "mode": "Tila",
+      "modeEncode": "Koodaa",
+      "modeDecode": "Pura",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "resultPlaceholder": "Tulos näkyy tässä",
+      "seo": {
+        "title": "Caesarin salakirjoitus – Koodaa ja pura tekstiä verkossa",
+        "description": "Ilmainen Caesarin salakirjoitus. Koodaa ja pura tekstiä siirtokoodilla. Tuki latinalaiselle, kyrilliselle, kreikkalaiselle, heprealaiselle ja arabialaiselle. Ihanteellinen kryptografian ja salaisien viestien oppimiseen.",
+        "keywords": "Caesarin salakirjoitus, siirtokoodi, koodaa pura teksti, ROT-koodi, substituutiokoodi, kryptografityökalu",
+        "content": {
+          "heading": "Caesarin salakirjoituksen käyttö",
+          "paragraph1": "Caesarin salakirjoitus on klassinen substituutiokoodi, jossa jokainen aakkoston kirjain siirretään kiinteän määrän asemia. Koodatessa kirjaimet siirretään eteenpäin, purettaessa taaksepäin. Valitse aakkosto, syötä siirto (0–100) ja vaihda Koodaa- ja Pura-tilojen välillä. Muut merkit pysyvät ennallaan.",
+          "paragraph2": "Valitse aakkosto tekstin kielen mukaan. Latinalainen englannille ja eurooppalaisille kielille, kyrillinen venäjälle, kreikkalainen, heprealainen ja arabialainen näille kirjaimistoille. Siirron arvo määrittää asemien määrän. Purku-tilassa siirto käännetään.",
+          "paragraph3": "Caesarin salakirjoitus on hyödyllinen kryptografian oppimiseen, yksinkertaisten salaviestien ja arvoitusten luomiseen. Se ei ole turvallinen todelliseen luottamuksellisuuteen mutta havainnollistaa substituutiokoodeja hyvin. Kaikki tapahtuu selaimessasi.",
+          "paragraph4": "Syötä teksti, valitse aakkosto, aseta siirto (esim. 2) ja valitse Koodaa tai Pura. Tulos päivittyy heti. Purkaaksesi käytä samaa aakkostoa ja samaa siirtoa kuin koodatessa.",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "Syöte: addasdaw. Aakkosto: Latinalainen. Siirto: 2. Tila: Koodaa. Tulos: cffcufcy (jokainen kirjain siirretty 2: a→c, d→f, s→u, w→y). Purkaaksesi cffcufcy takaisin muotoon addasdaw käytä samoja asetuksia ja tilaa Pura."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Mikä on Caesarin salakirjoitus?", "answer": "Caesarin salakirjoitus on substituutiokoodi, jossa jokainen kirjain korvataan toisella kiinteän asemamäärän päässä aakkostossa. Nimetty Julius Caesarin mukaan. Siirrolla 2 «a» tulee «c», «z» tulee «b»."},
+            {"question": "Miten puran Caesarin salakirjoituksen?", "answer": "Käytä samaa aakkostoa ja samaa siirron arvoa kuin koodatessa ja valitse tila Pura. Työkalu siirtää jokaisen kirjaimen taaksepäin ja palauttaa alkuperäisen tekstin."},
+            {"question": "Mitä aakkostoja tuetaan?", "answer": "Työkalu tukee latinalaista (a–z), kyrillistä (а–я), kreikkalaista (α–ω), heprealaista (א–ת) ja arabialaista (ا–ي). Sama- ja pienaakkosten ero säilytetään latinalaisella, kyrillisellä ja kreikkalaisella."},
+            {"question": "Mikä on siirron arvo?", "answer": "Siirron arvo on asemien määrä, jolla jokainen kirjain siirretään. Koodatessa eteenpäin, purettaessa taaksepäin. Siirto 0 ei muuta tekstiä."},
+            {"question": "Onko Caesarin salakirjoitus turvallinen?", "answer": "Ei. Caesarin salakirjoitus on helppo murtaa — avaimia on vain yhtä monta kuin aakkoston kirjaimia. Hyvä oppimiseen ja hauskoihin viesteihin, ei todelliseen luottamuksellisuuteen."},
+            {"question": "Onko tämä työkalu ilmainen?", "answer": "Kyllä. Caesarin salakirjoitus on ilmainen. Ei rekisteröintiä tai maksua. Kaikki tapahtuu selaimessasi."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "textToBinary": "Teksti binääriksi -muunnin",
+          "textToBinaryDesc": "Muunna teksti binääriksi UTF-8-, UTF-16- ja mukautettavilla erottimilla",
+          "asciiConverter": "ASCII-muunnin",
+          "asciiConverterDesc": "Koodaa ja pura tekstiä ASCII hex-, binääri- ja desimaalikoodeiksi",
           "lettersToNumbers": "Kirjaimet numeroiksi",
           "lettersToNumbersDesc": "Muunna kirjaimet numeroiksi (A=1, B=2 jne.)"
         }
@@ -3454,8 +3508,8 @@
       "reset": "Nollaa",
       "copy": "Kopioi",
       "seo": {
-        "title": "Kirjaimet Numeroiksi Muunnin – A1Z26 & ASCII-koodaus",
-        "description": "Ilmainen kirjaimista numeroiksi muunnin. Koodaa teksti A1Z26-kirjainšifrillä tai ASCII-koodeilla. Purkaa numeeriset arvot takaisin luettavaksi tekstiksi.",
+        "title": "Kirjaimet Numeroiksi Muunnin – Teksti Numeerisiksi Koodeiksi Online",
+        "description": "Ilmainen online kirjaimista numeroiksi muunnin. Muunna teksti numeerisiksi koodeiksi käyttämällä A=1, käänteistä aakkostoa, T9-näppäimistöä, ASCII, hex ja binäärikoodausta.",
         "keywords": "kirjaimet numeroiksi muunnin, kirjain numero muunnin, teksti numeroiksi, aakkosto numeroiksi, kirjain kooderi, teksti kooderi, A=0 kooderi, A=1 kooderi, käänteinen aakkosto kooderi, T9-näppäimistö muunnin, ASCII muunnin, hex muunnin, binääri muunnin, latinalainen aakkosto kooderi, arabialainen aakkosto kooderi, heprealainen aakkosto kooderi, kreikkalainen aakkosto kooderi, kyrillinen aakkosto kooderi, kryptografia työkalu, kirjain koodi kooderi",
         "content": {
           "heading": "Kuinka Muuntaa Kirjaimet Numeroiksi",

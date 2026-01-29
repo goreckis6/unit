@@ -2864,8 +2864,8 @@
       "outputDecimal": "Decimal",
       "outputPlaceholder": "Ange indata för att se utdata",
       "seo": {
-        "title": "ASCII-konverterare – Text till Hex, Binär och Decimal",
-        "description": "Gratis ASCII-konverterare. Konvertera text till hex, binär och decimal och tillbaka. Anpassningsbara avgränsare. För kodning, felsökning och programmering.",
+        "title": "ASCII-konverterare – Koda text till Hex, Binär och Decimal",
+        "description": "Gratis ASCII-konverterare. Koda och avkoda text till ASCII hex-, binära och decimalkoder. Anpassningsbara avgränsare. Idealisk för kodning, felsökning och programmering.",
         "keywords": "ASCII-konverterare, ASCII till hex, ASCII till binär, ASCII till decimal, hex till ASCII, binär till ASCII, decimal till ASCII, teckenkodkonverterare, textkodning",
         "content": {
           "heading": "Så använder du ASCII-konverteraren",
@@ -2892,6 +2892,60 @@
           "textToBinaryDesc": "Konvertera text till binär med UTF-8, UTF-16 och anpassade avgränsare",
           "dnaToMrna": "DNA till mRNA-konverterare",
           "dnaToMrnaDesc": "Transkribera DNA till mRNA och översätt till proteiner",
+          "lettersToNumbers": "Bokstäver till tal",
+          "lettersToNumbersDesc": "Konvertera bokstäver till tal (A=1, B=2 osv.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Caesarchiffer",
+      "titleBadge": "Text och kodning",
+      "description": "Koda eller avkoda text online med Caesarchiffer. Välj alfabet (latinsk, kyrillisk, grekisk, hebreisk, arabisk), ställ in förskjutning och växla mellan koda och avkoda.",
+      "textInput": "Ange den text du vill koda eller avkoda online",
+      "textPlaceholder": "Ange text...",
+      "alphabet": "Alfabet",
+      "alphabetLatin": "Latinsk (a, b, c...)",
+      "alphabetCyrillic": "Kyrillisk (а, б, в...)",
+      "alphabetGreek": "Grekisk (α, β, γ...)",
+      "alphabetHebrew": "Hebreisk (..., ל, א)",
+      "alphabetArabic": "Arabisk (ب, ا)",
+      "shiftLabel": "Ange förskjutningsvärde",
+      "mode": "Läge",
+      "modeEncode": "Koda",
+      "modeDecode": "Avkoda",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "resultPlaceholder": "Resultatet visas här",
+      "seo": {
+        "title": "Caesarchiffer – Koda och avkoda text online",
+        "description": "Gratis Caesarchiffer. Koda och avkoda text med förskjutning. Stöd för latinsk, kyrillisk, grekisk, hebreisk och arabisk. Idealiskt för kryptografi och hemliga meddelanden.",
+        "keywords": "Caesarchiffer, förskjutningschiffer, koda avkoda text, ROT-chiffer, substitutionschiffer, kryptografiverktyg",
+        "content": {
+          "heading": "Så använder du Caesarchiffer",
+          "paragraph1": "Caesarchiffer är ett klassiskt substitutionschiffer där varje bokstav i alfabetet förskjuts ett fast antal positioner. Vid kodning förskjuts bokstäver framåt, vid avkodning bakåt. Välj alfabet, ange förskjutning (0–100) och växla mellan Koda och Avkoda. Icke-bokstavstecken förblir oförändrade.",
+          "paragraph2": "Välj alfabet enligt textens språk. Latinsk för engelska och europeiska språk, kyrillisk för ryska, grekisk, hebreisk och arabisk för dessa skrift. Förskjutningsvärdet bestämmer antalet positioner. I läget Avkoda vänds förskjutningen.",
+          "paragraph3": "Caesarchiffer är användbart för att lära sig kryptografi, skapa enkla hemliga meddelanden och pussel. Det är inte säkert för verklig konfidentialitet men illustrerar substitutionschiffer väl. Allt körs i din webbläsare.",
+          "paragraph4": "Ange din text, välj alfabet, ställ in förskjutning (t.ex. 2) och välj Koda eller Avkoda. Resultatet uppdateras direkt. För att avkoda använd samma alfabet och samma förskjutning som vid kodning.",
+          "exampleHeading": "Exempel",
+          "exampleText": "Indata: addasdaw. Alfabet: Latinsk. Förskjutning: 2. Läge: Koda. Resultat: cffcufcy (varje bokstav förskjuten 2: a→c, d→f, s→u, w→y). För att avkoda cffcufcy tillbaka till addasdaw använd samma inställningar och läge Avkoda."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {"question": "Vad är Caesarchiffer?", "answer": "Caesarchiffer är ett substitutionschiffer där varje bokstav ersätts av en annan ett fast antal positioner i alfabetet. Uppkallat efter Julius Caesar. Med förskjutning 2 blir «a» «c», «z» blir «b»."},
+            {"question": "Hur avkodar jag ett Caesarchiffer?", "answer": "Använd samma alfabet och samma förskjutningsvärde som vid kodning och välj läget Avkoda. Verktyget förskjuter varje bokstav bakåt och återställer originaltexten."},
+            {"question": "Vilka alfabet stöds?", "answer": "Verktyget stöder latinsk (a–z), kyrillisk (а–я), grekisk (α–ω), hebreisk (א–ת) och arabisk (ا–ي). Stora och små bokstäver bevaras för latinsk, kyrillisk och grekisk."},
+            {"question": "Vad är förskjutningsvärdet?", "answer": "Förskjutningsvärdet är antalet positioner varje bokstav förskjuts. Vid kodning framåt, vid avkodning bakåt. Förskjutning 0 ändrar inte texten."},
+            {"question": "Är Caesarchiffer säkert?", "answer": "Nej. Caesarchiffer är lätt att knäcka — det finns bara lika många nycklar som bokstäver i alfabetet. Bra för inlärning och roliga meddelanden, inte för verklig konfidentialitet."},
+            {"question": "Är detta verktyg gratis?", "answer": "Ja. Caesarchiffer är gratis. Ingen registrering eller betalning. Allt körs i din webbläsare."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "textToBinary": "Text till binär konverterare",
+          "textToBinaryDesc": "Konvertera text till binär med UTF-8, UTF-16 och anpassade avgränsare",
+          "asciiConverter": "ASCII-konverterare",
+          "asciiConverterDesc": "Koda och avkoda text till ASCII hex-, binära och decimalkoder",
           "lettersToNumbers": "Bokstäver till tal",
           "lettersToNumbersDesc": "Konvertera bokstäver till tal (A=1, B=2 osv.)"
         }
@@ -3454,8 +3508,8 @@
       "reset": "Återställ",
       "copy": "Kopiera",
       "seo": {
-        "title": "Bokstäver till Siffror Konverterare – A1Z26 & ASCII-kodning",
-        "description": "Gratis bokstäver till siffror konverterare. Koda text med A1Z26-bokstavschiffer eller ASCII-koder. Avkoda numeriska värden tillbaka till läsbar text.",
+        "title": "Bokstäver till Siffror Konverterare – Text till Numeriska Koder Online",
+        "description": "Gratis online bokstäver till siffror konverterare. Omvandla text till numeriska koder med A=1, omvänt alfabet, T9-tangentbord, ASCII, hex och binär kodning.",
         "keywords": "bokstäver till siffror konverterare, bokstav till siffra konverterare, text till siffror, alfabet till siffror, bokstav kodare, text kodare, A=0 kodare, A=1 kodare, omvänt alfabet kodare, T9-tangentbord konverterare, ASCII konverterare, hex konverterare, binär konverterare, latinskt alfabet kodare, arabiskt alfabet kodare, hebreiskt alfabet kodare, grekiskt alfabet kodare, kyrilliskt alfabet kodare, kryptografi verktyg, bokstav kod kodare",
         "content": {
           "heading": "Hur man Konverterar Bokstäver till Siffror",

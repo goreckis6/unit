@@ -608,6 +608,12 @@
     "wattsToKva": {
       "title": "Watt zu kVA Rechner",
       "description": "Wandeln Sie Watt (W) in Kilovolt-Ampere (kVA) sofort und genau mit dem Leistungsfaktor um",
+      "watts": "Watt (W)",
+      "powerFactor": "Leistungsfaktor (0-1)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "kva": "Kilovolt-Ampere (kVA)",
       "seo": {
         "title": "Watt zu kVA Rechner - Leistung Online Kostenlos Umrechnen",
         "description": "Kostenloser Watt zu kVA Umrechner. Wandeln Sie Watt in Kilovolt-Ampere sofort mit dem Leistungsfaktor um. Perfekt für elektrische Berechnungen, Stromversorgungssysteme und Energiemanagement.",
@@ -2858,8 +2864,8 @@
       "outputDecimal": "Dezimal",
       "outputPlaceholder": "Eingabe eingeben, um Ausgabe zu sehen",
       "seo": {
-        "title": "ASCII-Konverter – Text in Hex, Binär & Dezimal",
-        "description": "Kostenloser ASCII-Konverter. Text in Hex, Binär und Dezimal umwandeln und zurück. Eigene Trennzeichen. Wichtig für Kodierung, Debugging und Programmierung.",
+        "title": "ASCII-Konverter – Text in Hex, Binär & Dezimal kodieren",
+        "description": "Kostenloser ASCII-Konverter. Text in ASCII-Hex-, Binär- und Dezimalcodes kodieren und dekodieren. Eigene Trennzeichen. Ideal für Kodierung, Debugging und Programmierung.",
         "keywords": "ASCII-Konverter, ASCII zu Hex, ASCII zu Binär, ASCII zu Dezimal, Hex zu ASCII, Binär zu ASCII, Dezimal zu ASCII, Zeichencode-Konverter, Textkodierung",
         "content": {
           "heading": "So verwenden Sie den ASCII-Konverter",
@@ -2887,6 +2893,60 @@
           "dnaToMrna": "DNA-zu-mRNA-Konverter",
           "dnaToMrnaDesc": "DNA in mRNA transkribieren und in Proteine übersetzen",
           "lettersToNumbers": "Buchstaben in Zahlen",
+          "lettersToNumbersDesc": "Buchstaben in Zahlen umwandeln (A=1, B=2 usw.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Caesar-Verschlüsselung",
+      "titleBadge": "Text & Kodierung",
+      "description": "Text online mit der Caesar-Verschlüsselung kodieren oder dekodieren. Alphabet wählen (Lateinisch, Kyrillisch, Griechisch, Hebräisch, Arabisch), Verschiebung einstellen und zwischen Kodieren und Dekodieren wechseln.",
+      "textInput": "Geben Sie den Text ein, den Sie online kodieren oder dekodieren möchten",
+      "textPlaceholder": "Text eingeben...",
+      "alphabet": "Alphabet",
+      "alphabetLatin": "Lateinisch (a, b, c...)",
+      "alphabetCyrillic": "Kyrillisch (а, б, в...)",
+      "alphabetGreek": "Griechisch (α, β, γ...)",
+      "alphabetHebrew": "Hebräisch (..., ל, א)",
+      "alphabetArabic": "Arabisch (ب, ا)",
+      "shiftLabel": "Verschiebungswert eingeben",
+      "mode": "Modus",
+      "modeEncode": "Kodieren",
+      "modeDecode": "Dekodieren",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "resultPlaceholder": "Ergebnis erscheint hier",
+      "seo": {
+        "title": "Caesar-Verschlüsselung – Text online kodieren & dekodieren",
+        "description": "Kostenlose Caesar-Verschlüsselung. Text mit Verschiebe-Chiffre kodieren und dekodieren. Unterstützung für Lateinisch, Kyrillisch, Griechisch, Hebräisch und Arabisch. Ideal für Kryptografie und Geheimbotschaften.",
+        "keywords": "Caesar-Verschlüsselung, Verschiebe-Chiffre, Text kodieren dekodieren, ROT-Chiffre, Substitutions-Chiffre, Kryptografie-Tool",
+        "content": {
+          "heading": "So verwenden Sie die Caesar-Verschlüsselung",
+          "paragraph1": "Die Caesar-Verschlüsselung ist eine klassische Substitutions-Chiffre, bei der jeder Buchstabe im Alphabet um eine feste Anzahl von Positionen verschoben wird. Beim Kodieren verschieben Sie Buchstaben vorwärts, beim Dekodieren rückwärts. Wählen Sie das Alphabet, geben Sie einen Verschiebungswert (0–100) ein und wechseln Sie zwischen Kodieren und Dekodieren. Nicht-Buchstaben bleiben unverändert.",
+          "paragraph2": "Wählen Sie das Alphabet passend zur Sprache Ihres Textes. Lateinisch für Englisch und viele europäische Sprachen, Kyrillisch für Russisch, Griechisch, Hebräisch und Arabisch für diese Schriften. Der Verschiebungswert bestimmt die Anzahl der Positionen. Beim Dekodieren wird die Verschiebung rückgängig gemacht.",
+          "paragraph3": "Die Caesar-Verschlüsselung eignet sich zum Lernen von Kryptografie, für einfache Geheimbotschaften und Rätsel. Sie ist nicht sicher für echte Geheimhaltung, veranschaulicht aber Substitutions-Chiffren gut. Alles läuft in Ihrem Browser.",
+          "paragraph4": "Geben Sie Ihren Text ein, wählen Sie das Alphabet, setzen Sie die Verschiebung (z. B. 2) und wählen Sie Kodieren oder Dekodieren. Das Ergebnis wird sofort aktualisiert. Zum Dekodieren verwenden Sie dasselbe Alphabet und dieselbe Verschiebung wie beim Kodieren.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "Eingabe: addasdaw. Alphabet: Lateinisch. Verschiebung: 2. Modus: Kodieren. Ergebnis: cffcufcy (jeder Buchstabe um 2 verschoben: a→c, d→f, s→u, w→y). Um cffcufcy wieder zu addasdaw zu dekodieren, gleiche Einstellungen und Modus Dekodieren verwenden."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {"question": "Was ist die Caesar-Verschlüsselung?", "answer": "Die Caesar-Verschlüsselung ist eine Substitutions-Chiffre, bei der jeder Buchstabe durch einen anderen Buchstaben in fester Positionsabstand im Alphabet ersetzt wird. Benannt nach Julius Caesar. Bei Verschiebung 2 wird „a“ zu „c“, „z“ zu „b“."},
+            {"question": "Wie dekodiere ich eine Caesar-Verschlüsselung?", "answer": "Verwenden Sie dasselbe Alphabet und denselben Verschiebungswert wie beim Kodieren und wählen Sie den Modus Dekodieren. Das Tool verschiebt jeden Buchstaben rückwärts und stellt den Originaltext wieder her."},
+            {"question": "Welche Alphabete werden unterstützt?", "answer": "Das Tool unterstützt Lateinisch (a–z), Kyrillisch (а–я), Griechisch (α–ω), Hebräisch (א–ת) und Arabisch (ا–ي). Groß-/Kleinschreibung wird bei Lateinisch, Kyrillisch und Griechisch beibehalten."},
+            {"question": "Was ist der Verschiebungswert?", "answer": "Der Verschiebungswert ist die Anzahl der Positionen, um die jeder Buchstabe verschoben wird. Beim Kodieren vorwärts, beim Dekodieren rückwärts. Verschiebung 0 lässt den Text unverändert."},
+            {"question": "Ist die Caesar-Verschlüsselung sicher?", "answer": "Nein. Die Caesar-Verschlüsselung ist leicht zu brechen – es gibt nur so viele Schlüssel wie Buchstaben im Alphabet. Geeignet zum Lernen und für spaßige Geheimbotschaften, nicht für echte Vertraulichkeit."},
+            {"question": "Ist dieses Tool kostenlos?", "answer": "Ja. Die Caesar-Verschlüsselung ist kostenlos. Keine Registrierung oder Zahlung nötig. Alles läuft in Ihrem Browser."}
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "textToBinary": "Text-zu-Binär-Konverter",
+          "textToBinaryDesc": "Text mit UTF-8, UTF-16 und eigenen Trennzeichen in Binär umwandeln",
+          "asciiConverter": "ASCII-Konverter",
+          "asciiConverterDesc": "Text in ASCII-Hex-, Binär- und Dezimalcodes kodieren und dekodieren",
+          "lettersToNumbers": "Buchstaben zu Zahlen Konverter",
           "lettersToNumbersDesc": "Buchstaben in Zahlen umwandeln (A=1, B=2 usw.)"
         }
       }
@@ -3448,8 +3508,8 @@
       "reset": "Zurücksetzen",
       "copy": "Kopieren",
       "seo": {
-        "title": "Buchstaben-zu-Zahlen-Konverter – A1Z26 & ASCII-Kodierung",
-        "description": "Kostenloser Buchstaben-zu-Zahlen-Konverter. Text mit A1Z26-Buchstaben-Chiffre oder ASCII-Codes kodieren. Numerische Werte wieder in lesbaren Text dekodieren.",
+        "title": "Buchstaben-zu-Zahlen-Konverter – Text zu numerischen Codes Online",
+        "description": "Kostenloser Online-Buchstaben-zu-Zahlen-Konverter. Wandeln Sie Text in numerische Codes um mit A=1, umgekehrtem Alphabet, T9-Tastatur, ASCII, Hex und Binärkodierung.",
         "keywords": "Buchstaben zu Zahlen Konverter, Buchstabe zu Zahl Konverter, Text zu Zahlen, Alphabet zu Zahlen, Buchstaben-Encoder, Text-Encoder, A=0 Encoder, A=1 Encoder, umgekehrter Alphabet-Encoder, T9-Tastatur-Konverter, ASCII-Konverter, Hex-Konverter, Binär-Konverter, lateinischer Alphabet-Encoder, arabischer Alphabet-Encoder, hebräischer Alphabet-Encoder, griechischer Alphabet-Encoder, kyrillischer Alphabet-Encoder, Kryptographie-Tool, Buchstaben-Code-Encoder",
         "content": {
           "heading": "Wie man Buchstaben in Zahlen konvertiert",

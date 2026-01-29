@@ -2864,8 +2864,8 @@
       "outputDecimal": "Decimal",
       "outputPlaceholder": "Indtast for at se output",
       "seo": {
-        "title": "ASCII Konverter – Tekst til Hex, Binær og Decimal",
-        "description": "Gratis ASCII konverter. Konverter tekst til hex, binær og decimal og tilbage. Tilpasselige separatortegn. Til kodning, fejlsøgning og programmering.",
+        "title": "ASCII Konverter – Koder tekst til Hex, Binær og Decimal",
+        "description": "Gratis ASCII konverter. Koder og dekoder tekst til ASCII hex-, binære og decimalkoder. Tilpasselige separatortegn. Ideel til kodning, fejlsøgning og programmering.",
         "keywords": "ASCII konverter, ASCII til hex, ASCII til binær, ASCII til decimal, hex til ASCII, binær til ASCII, decimal til ASCII, tegnkodekonverter, tekstkodning",
         "content": {
           "heading": "Sådan bruges ASCII konverteren",
@@ -2892,6 +2892,60 @@
           "textToBinaryDesc": "Konverter tekst til binær med UTF-8, UTF-16 og brugerdefinerede separatortegn",
           "dnaToMrna": "DNA til mRNA konverter",
           "dnaToMrnaDesc": "Transkriber DNA til mRNA og oversæt til proteiner",
+          "lettersToNumbers": "Bogstaver til tal",
+          "lettersToNumbersDesc": "Konverter bogstaver til tal (A=1, B=2 osv.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Cæsarchiffer",
+      "titleBadge": "Tekst og kodning",
+      "description": "Kod eller dekod tekst online med Cæsarchifferet. Vælg alfabet (latinsk, kyrillisk, græsk, hebraisk, arabisk), indstil forskydning og skift mellem kod og dekod.",
+      "textInput": "Indtast den tekst, du vil kode eller dekode online",
+      "textPlaceholder": "Indtast tekst...",
+      "alphabet": "Alfabet",
+      "alphabetLatin": "Latinsk (a, b, c...)",
+      "alphabetCyrillic": "Kyrillisk (а, б, в...)",
+      "alphabetGreek": "Græsk (α, β, γ...)",
+      "alphabetHebrew": "Hebraisk (..., ל, א)",
+      "alphabetArabic": "Arabisk (ب, ا)",
+      "shiftLabel": "Indtast forskydningsværdi",
+      "mode": "Tilstand",
+      "modeEncode": "Kod",
+      "modeDecode": "Dekod",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "resultPlaceholder": "Resultatet vises her",
+      "seo": {
+        "title": "Cæsarchiffer – Kod og dekod tekst online",
+        "description": "Gratis Cæsarchiffer. Kod og dekod tekst med forskydning. Understøtter latinsk, kyrillisk, græsk, hebraisk og arabisk. Ideel til kryptografi og hemmelige beskeder.",
+        "keywords": "Cæsarchiffer, forskydningschiffer, kod dekod tekst, ROT-chiffer, substitutionschiffer, kryptografiværktøj",
+        "content": {
+          "heading": "Sådan bruger du Cæsarchifferet",
+          "paragraph1": "Cæsarchifferet er et klassisk substitutionschiffer, hvor hvert bogstav i alfabetet forskydes et fast antal positioner. Ved kodning forskydes bogstaver fremad, ved dekodning bagud. Vælg alfabet, indtast forskydning (0–100) og skift mellem Kod og Dekod. Ikke-bogstavtegn forbliver uændrede.",
+          "paragraph2": "Vælg alfabet efter tekstens sprog. Latinsk til engelsk og europæiske sprog, kyrillisk til russisk, græsk, hebraisk og arabisk til disse skrifter. Forskydningsværdien bestemmer antallet af positioner. I tilstand Dekod vendes forskydningen.",
+          "paragraph3": "Cæsarchifferet er nyttigt til at lære kryptografi, lave enkle hemmelige beskeder og puslespil. Det er ikke sikkert til reel fortrolighed men illustrerer substitutionschiffer godt. Alt kører i din browser.",
+          "paragraph4": "Indtast din tekst, vælg alfabet, indstil forskydning (f.eks. 2) og vælg Kod eller Dekod. Resultatet opdateres med det samme. For at dekode skal du bruge samme alfabet og samme forskydning som ved kodning.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "Input: addasdaw. Alfabet: Latinsk. Forskydning: 2. Tilstand: Kod. Resultat: cffcufcy (hvert bogstav forskudt 2: a→c, d→f, s→u, w→y). For at dekode cffcufcy tilbage til addasdaw brug samme indstillinger og tilstand Dekod."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {"question": "Hvad er Cæsarchifferet?", "answer": "Cæsarchifferet er et substitutionschiffer, hvor hvert bogstav erstattes af et andet et fast antal positioner inde i alfabetet. Opkaldt efter Julius Cæsar. Med forskydning 2 bliver «a» til «c», «z» bliver til «b»."},
+            {"question": "Hvordan dekoder jeg et Cæsarchiffer?", "answer": "Brug samme alfabet og samme forskydningsværdi som ved kodning og vælg tilstand Dekod. Værktøjet forskydder hvert bogstav bagud og gendanner den oprindelige tekst."},
+            {"question": "Hvilke alfabeter understøttes?", "answer": "Værktøjet understøtter latinsk (a–z), kyrillisk (а–я), græsk (α–ω), hebraisk (א–ת) og arabisk (ا–ي). Store og små bogstaver bevares for latinsk, kyrillisk og græsk."},
+            {"question": "Hvad er forskydningsværdien?", "answer": "Forskydningsværdien er antallet af positioner, hvert bogstav forskydes. Ved kodning fremad, ved dekodning bagud. Forskydning 0 ændrer ikke teksten."},
+            {"question": "Er Cæsarchifferet sikkert?", "answer": "Nej. Cæsarchifferet er let at bryde — der er kun lige så mange nøgler som bogstaver i alfabetet. Godt til læring og sjove beskeder, ikke til reel fortrolighed."},
+            {"question": "Er dette værktøj gratis?", "answer": "Ja. Cæsarchifferet er gratis. Ingen registrering eller betaling. Alt kører i din browser."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterede lommeregnere",
+          "textToBinary": "Tekst til binær konverter",
+          "textToBinaryDesc": "Konverter tekst til binær med UTF-8, UTF-16 og brugerdefinerede separatortegn",
+          "asciiConverter": "ASCII-konverter",
+          "asciiConverterDesc": "Kod og dekod tekst til ASCII hex-, binære og decimalkoder",
           "lettersToNumbers": "Bogstaver til tal",
           "lettersToNumbersDesc": "Konverter bogstaver til tal (A=1, B=2 osv.)"
         }
@@ -3454,8 +3508,8 @@
       "reset": "Nulstil",
       "copy": "Kopier",
       "seo": {
-        "title": "Bogstaver til Tal Konverter – A1Z26 & ASCII-kodning",
-        "description": "Gratis bogstaver til tal konverter. Koder tekst med A1Z26-bogstavciffer eller ASCII-koder. Dekoder numeriske værdier tilbage til læsbar tekst.",
+        "title": "Bogstaver til Tal Konverter – Tekst til Numeriske Koder Online",
+        "description": "Gratis online bogstaver til tal konverter. Omdann tekst til numeriske koder ved hjælp af A=1, omvendt alfabet, T9-tastatur, ASCII, hex og binær kodning.",
         "keywords": "bogstaver til tal konverter, bogstav til tal konverter, tekst til tal, alfabet til tal, bogstav kodere, tekst kodere, A=0 kodere, A=1 kodere, omvendt alfabet kodere, T9-tastatur konverter, ASCII konverter, hex konverter, binær konverter, latinsk alfabet kodere, arabisk alfabet kodere, hebraisk alfabet kodere, græsk alfabet kodere, kyrillisk alfabet kodere, kryptografi værktøj, bogstav kode kodere",
         "content": {
           "heading": "Sådan Konverterer du Bogstaver til Tal",

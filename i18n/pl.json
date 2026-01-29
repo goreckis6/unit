@@ -2864,8 +2864,8 @@
       "outputDecimal": "Dziesiętne",
       "outputPlaceholder": "Wprowadź dane wejściowe, aby zobaczyć wynik",
       "seo": {
-        "title": "Konwerter ASCII – Tekst na Hex, Binarnie i Dziesiętnie",
-        "description": "Darmowy konwerter ASCII. Konwertuj tekst na hex, binarnie i dziesiętnie oraz z powrotem. Obsługa własnych separatorów. Niezbędny do kodowania, debugowania i programowania.",
+        "title": "Konwerter ASCII – Zakoduj tekst na Hex, Binarnie i Dziesiętnie",
+        "description": "Darmowy konwerter ASCII. Koduj i dekoduj tekst na kody ASCII hex, binarne i dziesiętne. Obsługa własnych separatorów. Idealny do kodowania, debugowania i programowania.",
         "keywords": "konwerter ASCII, ASCII na hex, ASCII na binarnie, ASCII na dziesiętnie, hex na ASCII, binarnie na ASCII, dziesiętnie na ASCII, konwerter kodów znaków, kodowanie tekstu",
         "content": {
           "heading": "Jak używać konwertera ASCII",
@@ -2892,6 +2892,60 @@
           "textToBinaryDesc": "Konwertuj tekst na binarny z UTF-8, UTF-16 i własnymi separatorami",
           "dnaToMrna": "Konwerter DNA na mRNA",
           "dnaToMrnaDesc": "Transkrybuj DNA na mRNA i tłumacz na białka",
+          "lettersToNumbers": "Litery na liczby",
+          "lettersToNumbersDesc": "Konwertuj litery na liczby (A=1, B=2 itd.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Szyfr Cezara",
+      "titleBadge": "Tekst i kodowanie",
+      "description": "Szyfruj lub odszyfruj tekst online szyfrem Cezara. Wybierz alfabet (łaciński, cyrylica, greka, hebrajski, arabski), ustaw przesunięcie i przełączaj między szyfrowaniem a odszyfrowywaniem.",
+      "textInput": "Wprowadź tekst do zaszyfrowania lub odszyfrowania online",
+      "textPlaceholder": "Wprowadź tekst...",
+      "alphabet": "Alfabet",
+      "alphabetLatin": "Łaciński (a, b, c...)",
+      "alphabetCyrillic": "Cyrylica (а, б, в...)",
+      "alphabetGreek": "Grecki (α, β, γ...)",
+      "alphabetHebrew": "Hebrajski (..., ל, א)",
+      "alphabetArabic": "Arabski (ب, ا)",
+      "shiftLabel": "Wprowadź wartość przesunięcia",
+      "mode": "Tryb",
+      "modeEncode": "Szyfruj",
+      "modeDecode": "Odszyfruj",
+      "reset": "Reset",
+      "result": "Wynik",
+      "resultPlaceholder": "Wynik pojawi się tutaj",
+      "seo": {
+        "title": "Szyfr Cezara – Szyfruj i odszyfruj tekst online",
+        "description": "Darmowy szyfr Cezara. Szyfruj i odszyfruj tekst szyfrem przesunięcia. Wsparcie dla łaciny, cyrylicy, greki, hebrajskiego i arabskiego. Idealny do nauki kryptografii i tajnych wiadomości.",
+        "keywords": "szyfr Cezara, szyfr przesunięcia, szyfrowanie odszyfrowywanie tekstu, szyfr ROT, szyfr podstawieniowy, narzędzie kryptograficzne",
+        "content": {
+          "heading": "Jak używać szyfru Cezara",
+          "paragraph1": "Szyfr Cezara to klasyczny szyfr podstawieniowy, w którym każda litera w alfabecie jest przesuwana o stałą liczbę pozycji. Przy szyfrowaniu przesuwasz litery do przodu, przy odszyfrowywaniu do tyłu. Narzędzie pozwala wybrać alfabet, wprowadzić wartość przesunięcia (0–100) i przełączać między trybami Szyfruj i Odszyfruj. Znaki inne niż litery pozostają bez zmian.",
+          "paragraph2": "Wybierz alfabet zgodny z językiem tekstu. Łacina dla angielskiego i języków europejskich, cyrylica dla rosyjskiego, greka, hebrajski i arabski dla tych skryptów. Wartość przesunięcia określa liczbę pozycji. Np. przy łacinie i przesunięciu 2 „a” staje się „c”, „b” staje się „d”. Tryb Odszyfruj cofa przesunięcie.",
+          "paragraph3": "Szyfr Cezara jest przydatny do nauki kryptografii, tworzenia prostych tajnych wiadomości i zagadek. Nie jest bezpieczny do prawdziwej tajności, ale dobrze ilustruje działanie szyfrów podstawieniowych. Wszystko działa w przeglądarce.",
+          "paragraph4": "Wprowadź tekst, wybierz alfabet, ustaw przesunięcie (np. 2) i wybierz Szyfruj lub Odszyfruj. Wynik aktualizuje się natychmiast. Aby odszyfrować wiadomość, użyj tego samego alfabetu i tej samej wartości przesunięcia co przy szyfrowaniu.",
+          "exampleHeading": "Przykład",
+          "exampleText": "Wejście: addasdaw. Alfabet: Łaciński. Przesunięcie: 2. Tryb: Szyfruj. Wynik: cffcufcy (każda litera przesunięta o 2: a→c, d→f, s→u, w→y). Aby odszyfrować cffcufcy z powrotem na addasdaw, użyj tych samych ustawień i trybu Odszyfruj."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {"question": "Co to jest szyfr Cezara?", "answer": "Szyfr Cezara to szyfr podstawieniowy, w którym każda litera jest zastępowana literą o stałą liczbę pozycji w alfabecie. Nazwa od Juliusza Cezara. Przy przesunięciu 2 „a” staje się „c”, „z” staje się „b”."},
+            {"question": "Jak odszyfrować szyfr Cezara?", "answer": "Użyj tego samego alfabetu i tej samej wartości przesunięcia co przy szyfrowaniu i wybierz tryb Odszyfruj. Narzędzie cofa przesunięcie i przywraca oryginalny tekst."},
+            {"question": "Które alfabety są obsługiwane?", "answer": "Narzędzie obsługuje łacinę (a–z), cyrylicę (а–я), grekę (α–ω), hebrajski (א–ת) i arabski (ا–ي). Wielkość liter jest zachowana dla łaciny, cyrylicy i greki."},
+            {"question": "Co to jest wartość przesunięcia?", "answer": "Wartość przesunięcia to liczba pozycji, o którą przesuwa się każda litera. Przy szyfrowaniu w przód, przy odszyfrowywaniu w tył. Przesunięcie 0 nie zmienia tekstu."},
+            {"question": "Czy szyfr Cezara jest bezpieczny?", "answer": "Nie. Szyfr Cezara łatwo złamać – jest tylko tyle kluczy, ile liter w alfabecie. Nadaje się do nauki i zabawy, nie do prawdziwej poufności."},
+            {"question": "Czy to narzędzie jest darmowe?", "answer": "Tak. Szyfr Cezara jest darmowy. Nie wymaga rejestracji ani płatności. Wszystko działa w przeglądarce."}
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "textToBinary": "Konwerter tekstu na binarny",
+          "textToBinaryDesc": "Konwertuj tekst na binarny z UTF-8, UTF-16 i własnymi separatorami",
+          "asciiConverter": "Konwerter ASCII",
+          "asciiConverterDesc": "Koduj i dekoduj tekst do kodów ASCII hex, binarnych i dziesiętnych",
           "lettersToNumbers": "Litery na liczby",
           "lettersToNumbersDesc": "Konwertuj litery na liczby (A=1, B=2 itd.)"
         }
@@ -3454,8 +3508,8 @@
       "reset": "Resetuj",
       "copy": "Kopiuj",
       "seo": {
-        "title": "Konwerter Liter na Liczby – Szyfr A1Z26 i kodowanie ASCII",
-        "description": "Darmowy konwerter liter na liczby. Koduj tekst szyfrem A1Z26 lub kodami ASCII. Dekoduj wartości numeryczne z powrotem na czytelny tekst.",
+        "title": "Konwerter Liter na Liczby – Tekst na Kody Numeryczne Online",
+        "description": "Darmowy konwerter liter na liczby online. Zamień tekst na kody numeryczne za pomocą A=1, odwróconego alfabetu, klawiatury T9, ASCII, hex i kodowania binarnego.",
         "keywords": "konwerter liter na liczby, konwerter liter do liczb, tekst na liczby, alfabet na liczby, enkoder liter, enkoder tekstu, enkoder A=0, enkoder A=1, enkoder odwróconego alfabetu, konwerter klawiatury T9, konwerter ASCII, konwerter hex, konwerter binarny, enkoder alfabetu łacińskiego, enkoder alfabetu arabskiego, enkoder alfabetu hebrajskiego, enkoder alfabetu greckiego, enkoder alfabetu cyrylickiego, narzędzie kryptograficzne, enkoder kodu liter",
         "content": {
           "heading": "Jak Konwertować Litery na Liczby",

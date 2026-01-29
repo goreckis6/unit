@@ -2864,8 +2864,8 @@
       "outputDecimal": "Desimal",
       "outputPlaceholder": "Masukkan input untuk melihat output",
       "seo": {
-        "title": "Konverter ASCII – Teks ke Hex, Biner & Desimal",
-        "description": "Konverter ASCII gratis. Konversi teks ke hex, biner, dan desimal serta sebaliknya. Mendukung pemisah kustom. Penting untuk pengodean, debugging, dan pemrograman.",
+        "title": "Konverter ASCII – Enkode Teks ke Hex, Biner & Desimal",
+        "description": "Konverter ASCII gratis. Enkode dan dekode teks ke kode ASCII hex, biner dan desimal. Mendukung pemisah kustom. Ideal untuk pengodean, debugging, dan pemrograman.",
         "keywords": "konverter ASCII, ASCII ke hex, ASCII ke biner, ASCII ke desimal, hex ke ASCII, biner ke ASCII, desimal ke ASCII, konverter kode karakter, pengodean teks",
         "content": {
           "heading": "Cara Menggunakan Konverter ASCII",
@@ -2907,6 +2907,78 @@
           "textToBinaryDesc": "Konversi teks ke biner dengan UTF-8, UTF-16, dan pemisah kustom",
           "dnaToMrna": "Konverter DNA ke mRNA",
           "dnaToMrnaDesc": "Transkripsi DNA ke mRNA dan terjemahkan ke protein",
+          "lettersToNumbers": "Konverter Huruf ke Angka",
+          "lettersToNumbersDesc": "Konversi huruf ke angka (A=1, B=2, dll.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Penggeser Sandi Caesar",
+      "titleBadge": "Teks & Pengodean",
+      "description": "Enkode atau dekode teks daring dengan sandi Caesar. Pilih alfabet (Latin, Kiril, Yunani, Ibrani, Arab), atur nilai geser, dan beralih antara enkode dan dekode.",
+      "textInput": "Masukkan teks yang ingin Anda enkode atau dekode daring",
+      "textPlaceholder": "Masukkan teks...",
+      "alphabet": "Alfabet",
+      "alphabetLatin": "Latin (a, b, c...)",
+      "alphabetCyrillic": "Kiril (а, б, в...)",
+      "alphabetGreek": "Yunani (α, β, γ...)",
+      "alphabetHebrew": "Ibrani (..., ל, א)",
+      "alphabetArabic": "Arab (ب, ا)",
+      "shiftLabel": "Masukkan nilai geser",
+      "mode": "Mode",
+      "modeEncode": "Enkode",
+      "modeDecode": "Dekode",
+      "reset": "Reset",
+      "result": "Hasil",
+      "resultPlaceholder": "Hasil akan muncul di sini",
+      "seo": {
+        "title": "Penggeser Sandi Caesar – Enkode & Dekode Teks Daring",
+        "description": "Penggeser sandi Caesar gratis. Enkode dan dekode teks dengan sandi geser. Mendukung Latin, Kiril, Yunani, Ibrani dan Arab. Ideal untuk belajar kriptografi dan pesan rahasia.",
+        "keywords": "sandi Caesar, penggeser sandi Caesar, sandi geser, enkode dekode teks, sandi ROT, sandi substitusi, pengenkode sandi, pendekode sandi, alat kriptografi",
+        "content": {
+          "heading": "Cara Menggunakan Penggeser Sandi Caesar",
+          "paragraph1": "Sandi Caesar adalah sandi substitusi klasik di mana setiap huruf dalam alfabet digeser sejumlah posisi tetap. Untuk enkode, Anda menggeser huruf ke depan; untuk dekode, ke belakang. Penggeser sandi Caesar gratis kami memungkinkan Anda memilih alfabet (Latin, Kiril, Yunani, Ibrani, atau Arab), memasukkan nilai geser (0 hingga 100), dan beralih antara mode Enkode dan Dekode. Karakter non-huruf (spasi, angka, tanda baca) tidak diubah.",
+          "paragraph2": "Pilih alfabet Anda agar sesuai dengan bahasa teks. Latin digunakan untuk bahasa Inggris dan banyak bahasa Eropa; Kiril untuk Rusia dan lainnya; Yunani, Ibrani, dan Arab untuk skrip tersebut. Nilai geser menentukan berapa posisi setiap huruf bergerak. Misalnya, dengan Latin dan geser 2, 'a' menjadi 'c', 'b' menjadi 'd', dan 'z' berputar ke 'b'. Mode dekode membalik geseran, jadi nilai geser yang sama yang mengenkode teks akan mendekodenya kembali.",
+          "paragraph3": "Sandi Caesar berguna untuk belajar kriptografi, membuat pesan rahasia sederhana, teka-teki, dan latihan pendidikan. Ini tidak aman untuk kerahasiaan nyata—dapat dipecahkan dengan mencoba semua geseran mungkin atau analisis frekuensi—tetapi cara bagus untuk memahami cara kerja sandi substitusi. Semua pengodean dan pendekodean berjalan di peramban Anda; tidak ada data yang dikirim ke server.",
+          "paragraph4": "Masukkan teks Anda di kotak input, pilih alfabet, atur nilai geser (mis. 2 untuk geser Caesar klasik 2), dan pilih Enkode atau Dekode. Hasil diperbarui secara instan. Untuk mendekode pesan, gunakan alfabet dan nilai geser yang sama yang digunakan untuk enkode, dan pilih mode Dekode.",
+          "exampleHeading": "Contoh",
+          "exampleText": "Input: addasdaw. Alfabet: Latin. Geser: 2. Mode: Enkode. Hasil: cffcufcy (setiap huruf digeser ke depan 2: a→c, d→f, s→u, w→y). Untuk mendekode cffcufcy kembali ke addasdaw, gunakan pengaturan yang sama dan pilih Dekode."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa itu sandi Caesar?",
+              "answer": "Sandi Caesar adalah sandi substitusi di mana setiap huruf diganti dengan huruf lain sejumlah posisi tetap ke bawah dalam alfabet. Dinamai dari Julius Caesar, yang konon menggunakannya. Misalnya, dengan geser 2, 'a' menjadi 'c' dan 'z' menjadi 'b' (berputar)."
+            },
+            {
+              "question": "Bagaimana cara mendekode sandi Caesar?",
+              "answer": "Gunakan alfabet dan nilai geser yang sama yang digunakan untuk mengenkode pesan, dan pilih mode Dekode. Penggeser akan menggeser setiap huruf ke belakang sebesar nilai geser, mengembalikan teks asli."
+            },
+            {
+              "question": "Alfabet apa yang didukung?",
+              "answer": "Alat ini mendukung Latin (a–z), Kiril (а–я), Yunani (α–ω), Ibrani (א–ת), dan Arab (ا–ي). Pilih alfabet yang sesuai dengan bahasa teks Anda. Kapitalisasi dipertahankan untuk Latin, Kiril, dan Yunani."
+            },
+            {
+              "question": "Apa itu nilai geser?",
+              "answer": "Nilai geser adalah jumlah posisi setiap huruf bergerak dalam alfabet. Untuk enkode, huruf digeser ke depan; untuk dekode, ke belakang. Untuk Latin dengan geser 2: a→c, b→d, …, z→b. Geser 0 membuat teks tidak berubah."
+            },
+            {
+              "question": "Apakah sandi Caesar aman?",
+              "answer": "Tidak. Sandi Caesar sangat mudah dipecahkan—hanya ada sebanyak kunci sebanyak huruf dalam alfabet (mis. 26 untuk Latin). Berguna untuk belajar dan pesan rahasia yang menyenangkan, tetapi tidak untuk kerahasiaan nyata."
+            },
+            {
+              "question": "Apakah penggeser sandi Caesar ini gratis?",
+              "answer": "Ya. Penggeser sandi Caesar gratis digunakan. Tidak perlu pendaftaran atau pembayaran. Semua pengodean dan pendekodean berjalan di peramban Anda."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "textToBinary": "Konverter Teks ke Biner",
+          "textToBinaryDesc": "Konversi teks ke biner dengan UTF-8, UTF-16 dan pemisah kustom",
+          "asciiConverter": "Konverter ASCII",
+          "asciiConverterDesc": "Enkode dan dekode teks ke ASCII heks, biner dan desimal",
           "lettersToNumbers": "Konverter Huruf ke Angka",
           "lettersToNumbersDesc": "Konversi huruf ke angka (A=1, B=2, dll.)"
         }
@@ -3469,8 +3541,8 @@
       "reset": "Reset",
       "copy": "Salin",
       "seo": {
-        "title": "Konverter Huruf ke Angka – Sandi A1Z26 & Pengkodean ASCII",
-        "description": "Konverter huruf ke angka gratis. Enkode teks dengan sandi huruf A1Z26 atau kode ASCII. Dekode nilai numerik kembali ke teks yang dapat dibaca.",
+        "title": "Konverter Huruf ke Angka – Teks ke Kode Numerik Online",
+        "description": "Konverter huruf ke angka online gratis. Ubah teks menjadi kode numerik menggunakan A=1, alfabet terbalik, keyboard T9, ASCII, hex dan pengkodean biner.",
         "keywords": "konverter huruf angka, konverter huruf ke angka, teks angka, alfabet angka, pengkode huruf, pengkode teks, pengkode A=0, pengkode A=1, pengkode alfabet terbalik, konverter keyboard T9, konverter ASCII, konverter hex, konverter biner, pengkode alfabet Latin, pengkode alfabet Arab, pengkode alfabet Ibrani, pengkode alfabet Yunani, pengkode alfabet Sirilik, alat kriptografi, pengkode kode huruf",
         "content": {
           "heading": "Cara Mengonversi Huruf ke Angka",

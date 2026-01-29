@@ -2864,8 +2864,8 @@
       "outputDecimal": "Decimal",
       "outputPlaceholder": "Introduzca entrada para ver la salida",
       "seo": {
-        "title": "Conversor ASCII – Texto a Hex, Binario y Decimal",
-        "description": "Conversor ASCII gratuito. Convierta texto a hex, binario y decimal y viceversa. Soporta separadores personalizados. Esencial para codificación, depuración y programación.",
+        "title": "Conversor ASCII – Codificar texto a Hex, Binario y Decimal",
+        "description": "Conversor ASCII gratuito. Codifique y decodifique texto a códigos ASCII hex, binario y decimal. Soporta separadores personalizados. Ideal para codificación, depuración y programación.",
         "keywords": "conversor ASCII, ASCII a hex, ASCII a binario, ASCII a decimal, hex a ASCII, binario a ASCII, decimal a ASCII, conversor de códigos de caracteres, codificación de texto",
         "content": {
           "heading": "Cómo usar el conversor ASCII",
@@ -2892,6 +2892,60 @@
           "textToBinaryDesc": "Convertir texto a binario con UTF-8, UTF-16 y separadores personalizados",
           "dnaToMrna": "Conversor ADN a ARNm",
           "dnaToMrnaDesc": "Transcribir ADN a ARNm y traducir a proteínas",
+          "lettersToNumbers": "Letras a números",
+          "lettersToNumbersDesc": "Convertir letras a números (A=1, B=2, etc.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Cifrado César",
+      "titleBadge": "Texto y codificación",
+      "description": "Codifica o decodifica texto en línea con el cifrado César. Elige el alfabeto (latino, cirílico, griego, hebreo, árabe), establece el desplazamiento y cambia entre codificar y decodificar.",
+      "textInput": "Introduce el texto que quieres codificar o decodificar en línea",
+      "textPlaceholder": "Introduce el texto...",
+      "alphabet": "Alfabeto",
+      "alphabetLatin": "Latino (a, b, c...)",
+      "alphabetCyrillic": "Cirílico (а, б, в...)",
+      "alphabetGreek": "Griego (α, β, γ...)",
+      "alphabetHebrew": "Hebreo (..., ל, א)",
+      "alphabetArabic": "Árabe (ب, ا)",
+      "shiftLabel": "Introduce el valor de desplazamiento",
+      "mode": "Modo",
+      "modeEncode": "Codificar",
+      "modeDecode": "Decodificar",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "resultPlaceholder": "El resultado aparecerá aquí",
+      "seo": {
+        "title": "Cifrado César – Codificar y decodificar texto en línea",
+        "description": "Cifrado César gratuito. Codifica y decodifica texto por desplazamiento. Soporta latino, cirílico, griego, hebreo y árabe. Ideal para aprender criptografía y mensajes secretos.",
+        "keywords": "cifrado César, cifrado por desplazamiento, codificar decodificar texto, cifrado ROT, cifrado por sustitución, herramienta criptografía",
+        "content": {
+          "heading": "Cómo usar el cifrado César",
+          "paragraph1": "El cifrado César es un cifrado de sustitución clásico donde cada letra del alfabeto se desplaza un número fijo de posiciones. Para codificar desplazas las letras hacia adelante; para decodificar, hacia atrás. Elige el alfabeto, introduce un desplazamiento (0–100) y cambia entre Codificar y Decodificar. Los caracteres no alfabéticos no cambian.",
+          "paragraph2": "Selecciona el alfabeto según el idioma de tu texto. Latino para inglés y lenguas europeas, cirílico para ruso, griego, hebreo y árabe para esos alfabetos. El valor de desplazamiento determina el número de posiciones. En modo Decodificar se invierte el desplazamiento.",
+          "paragraph3": "El cifrado César es útil para aprender criptografía, crear mensajes secretos simples y acertijos. No es seguro para confidencialidad real pero ilustra bien los cifrados por sustitución. Todo se ejecuta en tu navegador.",
+          "paragraph4": "Introduce tu texto, elige el alfabeto, establece el desplazamiento (ej. 2) y selecciona Codificar o Decodificar. El resultado se actualiza al instante. Para decodificar, usa el mismo alfabeto y el mismo desplazamiento que al codificar.",
+          "exampleHeading": "Ejemplo",
+          "exampleText": "Entrada: addasdaw. Alfabeto: Latino. Desplazamiento: 2. Modo: Codificar. Resultado: cffcufcy (cada letra desplazada 2: a→c, d→f, s→u, w→y). Para decodificar cffcufcy de nuevo a addasdaw, usa las mismas opciones y modo Decodificar."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            {"question": "¿Qué es el cifrado César?", "answer": "El cifrado César es un cifrado de sustitución donde cada letra se sustituye por otra a un número fijo de posiciones en el alfabeto. Lleva el nombre de Julio César. Con desplazamiento 2, «a» pasa a «c», «z» a «b»."},
+            {"question": "¿Cómo decodificar un cifrado César?", "answer": "Usa el mismo alfabeto y el mismo valor de desplazamiento que al codificar y selecciona el modo Decodificar. La herramienta desplaza cada letra hacia atrás y restaura el texto original."},
+            {"question": "¿Qué alfabetos se admiten?", "answer": "La herramienta admite latino (a–z), cirílico (а–я), griego (α–ω), hebreo (א–ת) y árabe (ا–ي). Se conservan mayúsculas y minúsculas en latino, cirílico y griego."},
+            {"question": "¿Qué es el valor de desplazamiento?", "answer": "El valor de desplazamiento es el número de posiciones que se mueve cada letra. Al codificar hacia adelante, al decodificar hacia atrás. Desplazamiento 0 deja el texto igual."},
+            {"question": "¿Es seguro el cifrado César?", "answer": "No. El cifrado César es fácil de romper: solo hay tantas claves como letras en el alfabeto. Sirve para aprender y mensajes divertidos, no para confidencialidad real."},
+            {"question": "¿Esta herramienta es gratuita?", "answer": "Sí. El cifrado César es gratuito. No hace falta registrarse ni pagar. Todo se ejecuta en tu navegador."}
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "textToBinary": "Conversor de texto a binario",
+          "textToBinaryDesc": "Convertir texto a binario con UTF-8, UTF-16 y separadores personalizados",
+          "asciiConverter": "Conversor ASCII",
+          "asciiConverterDesc": "Codificar y decodificar texto a códigos ASCII hex, binario y decimal",
           "lettersToNumbers": "Letras a números",
           "lettersToNumbersDesc": "Convertir letras a números (A=1, B=2, etc.)"
         }
@@ -3454,8 +3508,8 @@
       "reset": "Restablecer",
       "copy": "Copiar",
       "seo": {
-        "title": "Convertidor de Letras a Números – Codificación A1Z26 y ASCII",
-        "description": "Convertidor gratuito de letras a números. Codifica texto con cifrado A1Z26 o códigos ASCII. Decodifica valores numéricos a texto legible.",
+        "title": "Convertidor de Letras a Números – Texto a Códigos Numéricos Online",
+        "description": "Convertidor gratuito de letras a números online. Convierte texto en códigos numéricos usando A=1, alfabeto invertido, teclado T9, ASCII, hex y codificación binaria.",
         "keywords": "convertidor letras a números, convertidor letra a número, texto a números, alfabeto a números, codificador de letras, codificador de texto, codificador A=0, codificador A=1, codificador alfabeto invertido, convertidor teclado T9, convertidor ASCII, convertidor hex, convertidor binario, codificador alfabeto latino, codificador alfabeto árabe, codificador alfabeto hebreo, codificador alfabeto griego, codificador alfabeto cirílico, herramienta criptografía, codificador código letras",
         "content": {
           "heading": "Cómo Convertir Letras en Números",

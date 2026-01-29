@@ -18,6 +18,7 @@ export async function GET() {
     '/calculators/math/average',
     '/calculators/others/text-to-binary',
     '/calculators/others/ascii-converter',
+    '/calculators/others/caesar-cipher',
     '/calculators/others/bold-text',
     '/calculators/others/small-caps',
     '/calculators/others/mirror-text',

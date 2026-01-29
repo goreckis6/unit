@@ -2864,8 +2864,8 @@
       "outputDecimal": "Décimal",
       "outputPlaceholder": "Saisissez une entrée pour voir la sortie",
       "seo": {
-        "title": "Convertisseur ASCII – Texte en Hex, Binaire et Décimal",
-        "description": "Convertisseur ASCII gratuit. Convertissez le texte en hex, binaire et décimal et inversement. Séparateurs personnalisables. Essentiel pour l'encodage, le débogage et la programmation.",
+        "title": "Convertisseur ASCII – Encoder le texte en Hex, Binaire et Décimal",
+        "description": "Convertisseur ASCII gratuit. Encodez et décodez le texte en codes ASCII hex, binaire et décimal. Séparateurs personnalisables. Idéal pour l'encodage, le débogage et la programmation.",
         "keywords": "convertisseur ASCII, ASCII vers hex, ASCII vers binaire, ASCII vers décimal, hex vers ASCII, binaire vers ASCII, décimal vers ASCII, convertisseur de codes caractères, encodage texte",
         "content": {
           "heading": "Comment utiliser le convertisseur ASCII",
@@ -2892,6 +2892,60 @@
           "textToBinaryDesc": "Convertir du texte en binaire avec UTF-8, UTF-16 et séparateurs personnalisés",
           "dnaToMrna": "Convertisseur ADN vers ARNm",
           "dnaToMrnaDesc": "Transcrire l'ADN en ARNm et traduire en protéines",
+          "lettersToNumbers": "Lettres vers nombres",
+          "lettersToNumbersDesc": "Convertir les lettres en nombres (A=1, B=2, etc.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Chiffrement de César",
+      "titleBadge": "Texte et encodage",
+      "description": "Chiffrez ou déchiffrez du texte en ligne avec le chiffrement de César. Choisissez l'alphabet (latin, cyrillique, grec, hébreu, arabe), réglez le décalage et basculez entre chiffrer et déchiffrer.",
+      "textInput": "Entrez le texte que vous souhaitez chiffrer ou déchiffrer en ligne",
+      "textPlaceholder": "Entrez le texte...",
+      "alphabet": "Alphabet",
+      "alphabetLatin": "Latin (a, b, c...)",
+      "alphabetCyrillic": "Cyrillique (а, б, в...)",
+      "alphabetGreek": "Grec (α, β, γ...)",
+      "alphabetHebrew": "Hébreu (..., ל, א)",
+      "alphabetArabic": "Arabe (ب, ا)",
+      "shiftLabel": "Entrez la valeur du décalage",
+      "mode": "Mode",
+      "modeEncode": "Chiffrer",
+      "modeDecode": "Déchiffrer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "resultPlaceholder": "Le résultat apparaîtra ici",
+      "seo": {
+        "title": "Chiffrement de César – Chiffrer et déchiffrer du texte en ligne",
+        "description": "Chiffrement de César gratuit. Chiffrez et déchiffrez du texte par décalage. Prise en charge du latin, cyrillique, grec, hébreu et arabe. Idéal pour apprendre la cryptographie et les messages secrets.",
+        "keywords": "chiffrement de César, chiffre par décalage, chiffrer déchiffrer texte, chiffre ROT, chiffre de substitution, outil cryptographie",
+        "content": {
+          "heading": "Comment utiliser le chiffrement de César",
+          "paragraph1": "Le chiffrement de César est un chiffre de substitution classique où chaque lettre de l'alphabet est décalée d'un nombre fixe de positions. Pour chiffrer, vous décalez les lettres vers l'avant ; pour déchiffrer, vers l'arrière. Choisissez l'alphabet, entrez un décalage (0 à 100) et basculez entre Chiffrer et Déchiffrer. Les caractères non alphabétiques restent inchangés.",
+          "paragraph2": "Sélectionnez l'alphabet selon la langue de votre texte. Le latin pour l'anglais et les langues européennes, le cyrillique pour le russe, le grec, l'hébreu et l'arabe pour ces écritures. Le décalage détermine le nombre de positions. En mode Déchiffrer, le décalage est inversé.",
+          "paragraph3": "Le chiffrement de César est utile pour apprendre la cryptographie, créer des messages secrets simples et des énigmes. Il n'est pas sûr pour une vraie confidentialité mais illustre bien les chiffrements par substitution. Tout s'exécute dans votre navigateur.",
+          "paragraph4": "Entrez votre texte, choisissez l'alphabet, réglez le décalage (ex. 2) et sélectionnez Chiffrer ou Déchiffrer. Le résultat se met à jour instantanément. Pour déchiffrer, utilisez le même alphabet et le même décalage que pour le chiffrement.",
+          "exampleHeading": "Exemple",
+          "exampleText": "Entrée : addasdaw. Alphabet : Latin. Décalage : 2. Mode : Chiffrer. Résultat : cffcufcy (chaque lettre décalée de 2 : a→c, d→f, s→u, w→y). Pour déchiffrer cffcufcy en addasdaw, utilisez les mêmes réglages et le mode Déchiffrer."
+        },
+        "faq": {
+          "heading": "Questions fréquemment posées",
+          "items": [
+            {"question": "Qu'est-ce que le chiffrement de César ?", "answer": "Le chiffrement de César est un chiffre de substitution où chaque lettre est remplacée par une autre à un nombre fixe de positions dans l'alphabet. Nommé d'après Jules César. Avec un décalage de 2, « a » devient « c », « z » devient « b »."},
+            {"question": "Comment déchiffrer un chiffrement de César ?", "answer": "Utilisez le même alphabet et la même valeur de décalage que pour le chiffrement et sélectionnez le mode Déchiffrer. L'outil décale chaque lettre en arrière et restaure le texte original."},
+            {"question": "Quels alphabets sont pris en charge ?", "answer": "L'outil prend en charge le latin (a–z), le cyrillique (а–я), le grec (α–ω), l'hébreu (א–ת) et l'arabe (ا–ي). La casse est préservée pour le latin, le cyrillique et le grec."},
+            {"question": "Qu'est-ce que la valeur du décalage ?", "answer": "La valeur du décalage est le nombre de positions dont chaque lettre est décalée. À l'encodage vers l'avant, au décodage vers l'arrière. Un décalage de 0 laisse le texte inchangé."},
+            {"question": "Le chiffrement de César est-il sûr ?", "answer": "Non. Le chiffrement de César est facile à casser – il n'y a qu'autant de clés que de lettres dans l'alphabet. Utile pour l'apprentissage et les messages amusants, pas pour une vraie confidentialité."},
+            {"question": "Cet outil est-il gratuit ?", "answer": "Oui. Le chiffrement de César est gratuit. Aucune inscription ni paiement. Tout s'exécute dans votre navigateur."}
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs associés",
+          "textToBinary": "Convertisseur Texte en Binaire",
+          "textToBinaryDesc": "Convertir du texte en binaire avec UTF-8, UTF-16 et séparateurs personnalisés",
+          "asciiConverter": "Convertisseur ASCII",
+          "asciiConverterDesc": "Encoder et décoder du texte en hex, binaire et décimal ASCII",
           "lettersToNumbers": "Lettres vers nombres",
           "lettersToNumbersDesc": "Convertir les lettres en nombres (A=1, B=2, etc.)"
         }
@@ -3454,8 +3508,8 @@
       "reset": "Réinitialiser",
       "copy": "Copier",
       "seo": {
-        "title": "Convertisseur Lettres en Nombres – Chiffrement A1Z26 et ASCII",
-        "description": "Convertisseur gratuit de lettres en nombres. Encodez le texte avec le chiffrement A1Z26 ou les codes ASCII. Décodez les valeurs numériques en texte lisible.",
+        "title": "Convertisseur Lettres en Nombres – Texte en Codes Numériques en Ligne",
+        "description": "Convertisseur gratuit de lettres en nombres en ligne. Transformez le texte en codes numériques en utilisant A=1, alphabet inversé, clavier T9, ASCII, hex et codage binaire.",
         "keywords": "convertisseur lettres en nombres, convertisseur lettre en nombre, texte en nombres, alphabet en nombres, encodeur de lettres, encodeur de texte, encodeur A=0, encodeur A=1, encodeur alphabet inversé, convertisseur clavier T9, convertisseur ASCII, convertisseur hex, convertisseur binaire, encodeur alphabet latin, encodeur alphabet arabe, encodeur alphabet hébreu, encodeur alphabet grec, encodeur alphabet cyrillique, outil cryptographie, encodeur code lettres",
         "content": {
           "heading": "Comment Convertir les Lettres en Nombres",

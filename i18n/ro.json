@@ -2864,8 +2864,8 @@
       "outputDecimal": "Zecimal",
       "outputPlaceholder": "Introduceți intrare pentru a vedea rezultatul",
       "seo": {
-        "title": "Convertor ASCII – Text în Hex, Binar și Zecimal",
-        "description": "Convertor ASCII gratuit. Convertește text în hex, binar și zecimal și invers. Suportă separatoare personalizate. Esențial pentru codare, depanare și programare.",
+        "title": "Convertor ASCII – Codificați text în Hex, Binar și Zecimal",
+        "description": "Convertor ASCII gratuit. Codificați și decodificați text în coduri ASCII hex, binar și zecimal. Suportă separatoare personalizate. Ideal pentru codare, depanare și programare.",
         "keywords": "convertor ASCII, ASCII în hex, ASCII în binar, ASCII în zecimal, hex în ASCII, binar în ASCII, zecimal în ASCII, convertor cod caractere, codare text",
         "content": {
           "heading": "Cum să folosiți convertorul ASCII",
@@ -2907,6 +2907,60 @@
           "textToBinaryDesc": "Convertește text în binar cu UTF-8, UTF-16 și separatoare personalizate",
           "dnaToMrna": "Convertor DNA în mRNA",
           "dnaToMrnaDesc": "Transcrie DNA în mRNA și traduce în proteine",
+          "lettersToNumbers": "Litere în numere",
+          "lettersToNumbersDesc": "Convertește literele în numere (A=1, B=2 etc.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Cifrul lui Cezar",
+      "titleBadge": "Text și codare",
+      "description": "Codificați sau decodificați text online cu cifrul lui Cezar. Alegeți alfabetul (latin, chirilic, grec, ebraic, arab), setați deplasarea și comutați între codare și decodare.",
+      "textInput": "Introduceți textul pe care doriți să îl codificați sau decodificați online",
+      "textPlaceholder": "Introduceți text...",
+      "alphabet": "Alfabet",
+      "alphabetLatin": "Latin (a, b, c...)",
+      "alphabetCyrillic": "Chirilic (а, б, в...)",
+      "alphabetGreek": "Grec (α, β, γ...)",
+      "alphabetHebrew": "Ebraic (..., ל, א)",
+      "alphabetArabic": "Arab (ب, ا)",
+      "shiftLabel": "Introduceți valoarea deplasării",
+      "mode": "Mod",
+      "modeEncode": "Codare",
+      "modeDecode": "Decodare",
+      "reset": "Resetați",
+      "result": "Rezultat",
+      "resultPlaceholder": "Rezultatul va apărea aici",
+      "seo": {
+        "title": "Cifrul lui Cezar – Codificați și decodificați text online",
+        "description": "Cifru Cezar gratuit. Codificați și decodificați text prin deplasare. Suport pentru latin, chirilic, grec, ebraic și arab. Ideal pentru criptografie și mesaje secrete.",
+        "keywords": "cifru Cezar, cifru cu deplasare, codare decodare text, cifru ROT, cifru substituție, instrument criptografie",
+        "content": {
+          "heading": "Cum să folosiți cifrul lui Cezar",
+          "paragraph1": "Cifrul lui Cezar este un cifru de substituție clasic în care fiecare literă din alfabet este deplasată cu un număr fix de poziții. La codare deplasați literele înainte, la decodare înapoi. Alegeți alfabetul, introduceți o deplasare (0–100) și comutați între Codare și Decodare. Caracterele care nu sunt litere rămân neschimbate.",
+          "paragraph2": "Selectați alfabetul în funcție de limba textului. Latinul pentru engleză și limbi europene, chirilica pentru rusă, greaca, ebraica și araba pentru aceste scripturi. Valoarea deplasării determină numărul de poziții. În modul Decodare deplasarea se inversează.",
+          "paragraph3": "Cifrul lui Cezar este util pentru învățarea criptografiei, crearea de mesaje secrete simple și puzzle-uri. Nu este sigur pentru confidențialitate reală dar ilustrează bine cifrurile de substituție. Totul rulează în browserul dvs.",
+          "paragraph4": "Introduceți textul, alegeți alfabetul, setați deplasarea (ex. 2) și selectați Codare sau Decodare. Rezultatul se actualizează instant. Pentru decodare folosiți același alfabet și aceeași deplasare ca la codare.",
+          "exampleHeading": "Exemplu",
+          "exampleText": "Intrare: addasdaw. Alfabet: Latin. Deplasare: 2. Mod: Codare. Rezultat: cffcufcy (fiecare literă deplasată cu 2: a→c, d→f, s→u, w→y). Pentru a decodifica cffcufcy înapoi la addasdaw folosiți aceleași setări și modul Decodare."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            {"question": "Ce este cifrul lui Cezar?", "answer": "Cifrul lui Cezar este un cifru de substituție în care fiecare literă este înlocuită cu alta la un număr fix de poziții în alfabet. Denumit după Iulius Cezar. Cu deplasare 2 „a\" devine „c\", „z\" devine „b\"."},
+            {"question": "Cum decodific un cifru Cezar?", "answer": "Folosiți același alfabet și aceeași valoare a deplasării ca la codare și selectați modul Decodare. Instrumentul deplasează fiecare literă înapoi și restabilește textul original."},
+            {"question": "Ce alfabete sunt acceptate?", "answer": "Instrumentul acceptă latin (a–z), chirilic (а–я), grec (α–ω), ebraic (א–ת) și arab (ا–ي). Categoria literelor se păstrează pentru latin, chirilic și grec."},
+            {"question": "Ce este valoarea deplasării?", "answer": "Valoarea deplasării este numărul de poziții cu care se deplasează fiecare literă. La codare înainte, la decodare înapoi. Deplasarea 0 nu modifică textul."},
+            {"question": "Cifrul lui Cezar este sigur?", "answer": "Nu. Cifrul lui Cezar este ușor de spart — există doar atâtea chei câte litere are alfabetul. Util pentru învățare și mesaje distractive, nu pentru confidențialitate reală."},
+            {"question": "Acest instrument este gratuit?", "answer": "Da. Cifrul lui Cezar este gratuit. Nu este nevoie de înregistrare sau plată. Totul rulează în browserul dvs."}
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare asemănătoare",
+          "textToBinary": "Convertor text în binar",
+          "textToBinaryDesc": "Convertește textul în binar cu UTF-8, UTF-16 și separatoare personalizate",
+          "asciiConverter": "Convertor ASCII",
+          "asciiConverterDesc": "Codificați și decodificați text în coduri ASCII hex, binar și zecimal",
           "lettersToNumbers": "Litere în numere",
           "lettersToNumbersDesc": "Convertește literele în numere (A=1, B=2 etc.)"
         }
@@ -3469,8 +3523,8 @@
       "reset": "Resetează",
       "copy": "Copiază",
       "seo": {
-        "title": "Convertor Litere în Numere – Cifru A1Z26 și codare ASCII",
-        "description": "Convertor gratuit de litere în numere. Codificați textul cu cifrul A1Z26 sau codurile ASCII. Decodificați valorile numerice înapoi în text lizibil.",
+        "title": "Convertor Litere în Numere – Text în Coduri Numerice Online",
+        "description": "Convertor gratuit online de litere în numere. Transformați textul în coduri numerice folosind A=1, alfabet inversat, tastatură T9, ASCII, hex și codare binară.",
         "keywords": "convertor litere numere, convertor literă număr, text numere, alfabet numere, codificator litere, codificator text, codificator A=0, codificator A=1, codificator alfabet inversat, convertor tastatură T9, convertor ASCII, convertor hex, convertor binar, codificator alfabet latin, codificator alfabet arab, codificator alfabet ebraic, codificator alfabet grec, codificator alfabet chirilic, instrument criptografie, codificator cod litere",
         "content": {
           "heading": "Cum să Convertești Literele în Numere",

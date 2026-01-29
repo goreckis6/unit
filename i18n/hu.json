@@ -2864,8 +2864,8 @@
       "outputDecimal": "Decimális",
       "outputPlaceholder": "Adja meg a bemenetet a kimenet megjelenítéséhez",
       "seo": {
-        "title": "ASCII konverter – Szöveg hex, bináris és decimális formátumba",
-        "description": "Ingyenes ASCII konverter. Konvertáljon szöveget hex, bináris és decimális formátumokba és vissza. Testreszabható elválasztók. Kódoláshoz, hibakereséshez és programozáshoz.",
+        "title": "ASCII konverter – Szöveg kódolása Hex, Bináris és Decimális formátumba",
+        "description": "Ingyenes ASCII konverter. Kódolja és dekódolja a szöveget ASCII hex, bináris és decimális kódokká. Testreszabható elválasztók. Ideális kódoláshoz, hibakereséshez és programozáshoz.",
         "keywords": "ASCII konverter, ASCII hex, ASCII bináris, ASCII decimális, hex ASCII, bináris ASCII, decimális ASCII, karakterkód konverter, szövegkódolás",
         "content": {
           "heading": "Az ASCII konverter használata",
@@ -2892,6 +2892,60 @@
           "textToBinaryDesc": "Konvertáljon szöveget binárissá UTF-8, UTF-16 és egyéni elválasztókkal",
           "dnaToMrna": "DNS mRNA konverter",
           "dnaToMrnaDesc": "Transzkribálja a DNS-t mRNA-ba és fordítsa fehérjékre",
+          "lettersToNumbers": "Betűk számokká",
+          "lettersToNumbersDesc": "Konvertálja a betűket számokká (A=1, B=2 stb.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Caesar-rejtjel",
+      "titleBadge": "Szöveg és kódolás",
+      "description": "Kódoljon vagy dekódoljon szöveget online a Caesar-rejtjellel. Válasszon ábécét (latin, cirill, görög, héber, arab), állítsa be az eltolást és váltson kódolás és dekódolás között.",
+      "textInput": "Adja meg a kódolni vagy dekódolni kívánt szöveget online",
+      "textPlaceholder": "Adja meg a szöveget...",
+      "alphabet": "Ábécé",
+      "alphabetLatin": "Latin (a, b, c...)",
+      "alphabetCyrillic": "Cirill (а, б, в...)",
+      "alphabetGreek": "Görög (α, β, γ...)",
+      "alphabetHebrew": "Héber (..., ל, א)",
+      "alphabetArabic": "Arab (ب, ا)",
+      "shiftLabel": "Adja meg az eltolás értékét",
+      "mode": "Mód",
+      "modeEncode": "Kódolás",
+      "modeDecode": "Dekódolás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "resultPlaceholder": "Az eredmény itt jelenik meg",
+      "seo": {
+        "title": "Caesar-rejtjel – Szöveg kódolása és dekódolása online",
+        "description": "Ingyenes Caesar-rejtjel. Kódoljon és dekódoljon szöveget eltolással. Támogatja a latin, cirill, görög, héber és arab ábécéket. Ideális kriptográfia és titkos üzenetek tanulásához.",
+        "keywords": "Caesar-rejtjel, eltolásos rejtjel, szöveg kódolása dekódolása, ROT rejtjel, helyettesítő rejtjel, kriptográfiai eszköz",
+        "content": {
+          "heading": "A Caesar-rejtjel használata",
+          "paragraph1": "A Caesar-rejtjel klasszikus helyettesítő rejtjel, ahol az ábécé minden betűje egy rögzített számú hellyel van eltolva. Kódoláskor a betűket előre, dekódoláskor hátra toljuk. Válasszon ábécét, adja meg az eltolást (0–100) és váltson Kódolás és Dekódolás között. A nem betű karakterek változatlanok maradnak.",
+          "paragraph2": "Válassza az ábécét a szöveg nyelve szerint. Latin az angolhoz és európai nyelvekhez, cirill az oroszához, görög, héber és arab ezekhez az írásokhoz. Az eltolás értéke határozza meg a pozíciók számát. Dekódolás módban az eltolás megfordul.",
+          "paragraph3": "A Caesar-rejtjel hasznos a kriptográfia tanulásához, egyszerű titkos üzenetek és rejtvények készítéséhez. Nem biztonságos valódi titkossághoz, de jól illusztrálja a helyettesítő rejtjeleket. Minden a böngészőjében fut.",
+          "paragraph4": "Adja meg a szöveget, válasszon ábécét, állítsa be az eltolást (pl. 2) és válassza a Kódolás vagy Dekódolás lehetőséget. Az eredmény azonnal frissül. Dekódoláshoz használja ugyanazt az ábécét és eltolást, mint kódoláskor.",
+          "exampleHeading": "Példa",
+          "exampleText": "Bemenet: addasdaw. Ábécé: Latin. Eltolás: 2. Mód: Kódolás. Eredmény: cffcufcy (minden betű 2-vel eltolva: a→c, d→f, s→u, w→y). A cffcufcy visszadekódolásához addasdaw-ra használja ugyanazokat a beállításokat és a Dekódolás módot."
+        },
+        "faq": {
+          "heading": "Gyakran ismételt kérdések",
+          "items": [
+            {"question": "Mi a Caesar-rejtjel?", "answer": "A Caesar-rejtjel helyettesítő rejtjel, ahol minden betűt egy másik helyettesít egy rögzített számú hellyel az ábécében. Julius Caesar után nevezték el. 2-es eltolásnál az „a” „c” lesz, a „z” „b” lesz."},
+            {"question": "Hogyan dekódolom a Caesar-rejtjelt?", "answer": "Használja ugyanazt az ábécét és eltolást, mint kódoláskor, és válassza a Dekódolás módot. Az eszköz minden betűt hátra tol és visszaállítja az eredeti szöveget."},
+            {"question": "Milyen ábécék támogatottak?", "answer": "Az eszköz támogatja a latint (a–z), cirillt (а–я), görögöt (α–ω), hébert (א–ת) és arabot (ا–ي). A latin, cirill és görög esetén a kis- és nagybetűk megmaradnak."},
+            {"question": "Mi az eltolás értéke?", "answer": "Az eltolás értéke az a pozíciók száma, amennyivel minden betű eltolódik. Kódoláskor előre, dekódoláskor hátra. 0 eltolás nem változtatja meg a szöveget."},
+            {"question": "A Caesar-rejtjel biztonságos?", "answer": "Nem. A Caesar-rejtjelt könnyű feltörni — csak annyi kulcs van, ahány betű az ábécében. Jó tanulásra és szórakoztató üzenetekre, nem valódi titkosságra."},
+            {"question": "Ez az eszköz ingyenes?", "answer": "Igen. A Caesar-rejtjel ingyenes. Nincs regisztráció vagy fizetés. Minden a böngészőjében fut."}
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó számológépek",
+          "textToBinary": "Szöveg bináris konverter",
+          "textToBinaryDesc": "Konvertáljon szöveget binárissá UTF-8, UTF-16 és egyéni elválasztókkal",
+          "asciiConverter": "ASCII konverter",
+          "asciiConverterDesc": "Kódoljon és dekódoljon szöveget ASCII hex, bináris és decimális kódokká",
           "lettersToNumbers": "Betűk számokká",
           "lettersToNumbersDesc": "Konvertálja a betűket számokká (A=1, B=2 stb.)"
         }
@@ -3454,8 +3508,8 @@
       "reset": "Visszaállítás",
       "copy": "Másolás",
       "seo": {
-        "title": "Betűk Számokká Konvertáló – A1Z26 és ASCII kódolás",
-        "description": "Ingyenes betűk számokká konvertáló. Kódolja a szöveget A1Z26 betűtitkosítással vagy ASCII-kódokkal. Dekódolja a numerikus értékeket vissza olvasható szöveggé.",
+        "title": "Betűk Számokká Konvertáló – Szöveg Numerikus Kódokká Online",
+        "description": "Ingyenes online betűk számokká konvertáló. Alakítson szöveget numerikus kódokká A=1, fordított ábécé, T9-billentyűzet, ASCII, hex és bináris kódolás használatával.",
         "keywords": "betűk számok konvertáló, betű szám konvertáló, szöveg számok, ábécé számok, betű kódoló, szöveg kódoló, A=0 kódoló, A=1 kódoló, fordított ábécé kódoló, T9-billentyűzet konvertáló, ASCII konvertáló, hex konvertáló, bináris konvertáló, latin ábécé kódoló, arab ábécé kódoló, héber ábécé kódoló, görög ábécé kódoló, cirill ábécé kódoló, kriptográfia eszköz, betű kód kódoló",
         "content": {
           "heading": "Hogyan Konvertáljon Betűket Számokká",

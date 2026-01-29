@@ -2864,8 +2864,8 @@
       "outputDecimal": "Desítkové",
       "outputPlaceholder": "Zadejte vstup pro zobrazení výstupu",
       "seo": {
-        "title": "Převodník ASCII – Text na Hex, Binární a Desítkové",
-        "description": "Bezplatný převodník ASCII. Převádějte text na hex, binární a desítkové a zpět. Vlastní oddělovače. Pro kódování, ladění a programování.",
+        "title": "Převodník ASCII – Zakódujte text na Hex, Binární a Desítkové",
+        "description": "Bezplatný převodník ASCII. Zakódujte a dekódujte text do ASCII hex, binárních a desítkových kódů. Vlastní oddělovače. Ideální pro kódování, ladění a programování.",
         "keywords": "převodník ASCII, ASCII na hex, ASCII na binární, ASCII na desítkové, hex na ASCII, binární na ASCII, desítkové na ASCII, převodník kódů znaků, kódování textu",
         "content": {
           "heading": "Jak používat převodník ASCII",
@@ -2892,6 +2892,60 @@
           "textToBinaryDesc": "Převádějte text na binární s UTF-8, UTF-16 a vlastními oddělovači",
           "dnaToMrna": "Převodník DNA na mRNA",
           "dnaToMrnaDesc": "Transkribujte DNA na mRNA a přeložte na bílkoviny",
+          "lettersToNumbers": "Písmena na čísla",
+          "lettersToNumbersDesc": "Převádějte písmena na čísla (A=1, B=2 atd.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Caesarova šifra",
+      "titleBadge": "Text a kódování",
+      "description": "Šifrujte nebo dešifrujte text online Caesarovou šifrou. Zvolte abecedu (latinka, cyrilice, řečtina, hebrejština, arabština), nastavte posun a přepínejte mezi šifrováním a dešifrováním.",
+      "textInput": "Zadejte text, který chcete šifrovat nebo dešifrovat online",
+      "textPlaceholder": "Zadejte text...",
+      "alphabet": "Abeceda",
+      "alphabetLatin": "Latinka (a, b, c...)",
+      "alphabetCyrillic": "Cyrilice (а, б, в...)",
+      "alphabetGreek": "Řečtina (α, β, γ...)",
+      "alphabetHebrew": "Hebrejština (..., ל, א)",
+      "alphabetArabic": "Arabština (ب, ا)",
+      "shiftLabel": "Zadejte hodnotu posunu",
+      "mode": "Režim",
+      "modeEncode": "Šifrovat",
+      "modeDecode": "Dešifrovat",
+      "reset": "Reset",
+      "result": "Výsledek",
+      "resultPlaceholder": "Výsledek se zobrazí zde",
+      "seo": {
+        "title": "Caesarova šifra – Šifrování a dešifrování textu online",
+        "description": "Caesarova šifra zdarma. Šifrujte a dešifrujte text posunovou šifrou. Podpora latinky, cyrilice, řečtiny, hebrejštiny a arabštiny. Ideální pro výuku kryptografie a tajné zprávy.",
+        "keywords": "Caesarova šifra, posunová šifra, šifrovat dešifrovat text, ROT šifra, substituční šifra, kryptografický nástroj",
+        "content": {
+          "heading": "Jak používat Caesarovu šifru",
+          "paragraph1": "Caesarova šifra je klasická substituční šifra, kde se každé písmeno v abecedě posune o pevný počet pozic. Při šifrování posouváte písmena dopředu, při dešifrování zpět. Zvolte abecedu, zadejte posun (0–100) a přepínejte mezi Šifrovat a Dešifrovat. Ostatní znaky zůstávají beze změny.",
+          "paragraph2": "Vyberte abecedu podle jazyka textu. Latinka pro angličtinu a evropské jazyky, cyrilice pro ruštinu, řečtina, hebrejština a arabština pro tyto skripty. Hodnota posunu určuje počet pozic. V režimu Dešifrovat se posun obrací.",
+          "paragraph3": "Caesarova šifra je užitečná pro výuku kryptografie, vytváření jednoduchých tajných zpráv a hádanek. Není bezpečná pro skutečné utajení, ale dobře ilustruje substituční šifry. Vše probíhá v prohlížeči.",
+          "paragraph4": "Zadejte text, zvolte abecedu, nastavte posun (např. 2) a vyberte Šifrovat nebo Dešifrovat. Výsledek se okamžitě aktualizuje. Pro dešifrování použijte stejnou abecedu a stejný posun jako při šifrování.",
+          "exampleHeading": "Příklad",
+          "exampleText": "Vstup: addasdaw. Abeceda: Latinka. Posun: 2. Režim: Šifrovat. Výsledek: cffcufcy (každé písmeno posunuto o 2: a→c, d→f, s→u, w→y). Pro dešifrování cffcufcy zpět na addasdaw použijte stejná nastavení a režim Dešifrovat."
+        },
+        "faq": {
+          "heading": "Časté dotazy",
+          "items": [
+            {"question": "Co je Caesarova šifra?", "answer": "Caesarova šifra je substituční šifra, kde se každé písmeno nahradí písmenem o pevný počet pozic v abecedě. Pojmenována po Juliu Caesarovi. Při posunu 2 se „a“ stane „c“, „z“ se stane „b\"."},
+            {"question": "Jak dešifrovat Caesarovu šifru?", "answer": "Použijte stejnou abecedu a stejnou hodnotu posunu jako při šifrování a vyberte režim Dešifrovat. Nástroj posune každé písmeno zpět a obnoví původní text."},
+            {"question": "Které abecedy jsou podporovány?", "answer": "Nástroj podporuje latinku (a–z), cyrilici (а–я), řečtinu (α–ω), hebrejštinu (א–ת) a arabštinu (ا–ي). U latinky, cyrilice a řečtiny se zachovává velikost písmen."},
+            {"question": "Co je hodnota posunu?", "answer": "Hodnota posunu je počet pozic, o které se každé písmeno posune. Při šifrování dopředu, při dešifrování dozadu. Posun 0 text nemění."},
+            {"question": "Je Caesarova šifra bezpečná?", "answer": "Ne. Caesarovu šifru lze snadno prolomit — existuje jen tolik klíčů, kolik je písmen v abecedě. Vhodná pro výuku a zábavné zprávy, ne pro skutečné utajení."},
+            {"question": "Je tento nástroj zdarma?", "answer": "Ano. Caesarova šifra je zdarma. Není potřeba registrace ani platby. Vše probíhá v prohlížeči."}
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "textToBinary": "Převodník textu na binární",
+          "textToBinaryDesc": "Převádějte text na binární s UTF-8, UTF-16 a vlastními oddělovači",
+          "asciiConverter": "Převodník ASCII",
+          "asciiConverterDesc": "Šifrujte a dešifrujte text do ASCII hex, binárních a desítkových kódů",
           "lettersToNumbers": "Písmena na čísla",
           "lettersToNumbersDesc": "Převádějte písmena na čísla (A=1, B=2 atd.)"
         }
@@ -3454,8 +3508,8 @@
       "reset": "Resetovat",
       "copy": "Kopírovat",
       "seo": {
-        "title": "Převodník Písmen na Čísla – Šifra A1Z26 a kódování ASCII",
-        "description": "Bezplatný převodník písmen na čísla. Zakódujte text šifrou A1Z26 nebo kódy ASCII. Dekódujte číselné hodnoty zpět na čitelný text.",
+        "title": "Převodník Písmen na Čísla – Text na Numerické Kódy Online",
+        "description": "Bezplatný online převodník písmen na čísla. Převeďte text na numerické kódy pomocí A=1, obrácené abecedy, klávesnice T9, ASCII, hex a binárního kódování.",
         "keywords": "převodník písmen na čísla, převodník písmeno číslo, text na čísla, abeceda na čísla, kodér písmen, kodér textu, kodér A=0, kodér A=1, kodér obrácené abecedy, převodník klávesnice T9, převodník ASCII, převodník hex, převodník binární, kodér latinské abecedy, kodér arabské abecedy, kodér hebrejské abecedy, kodér řecké abecedy, kodér cyrilské abecedy, nástroj kryptografie, kodér kódu písmen",
         "content": {
           "heading": "Jak Převest Písmena na Čísla",

@@ -2864,8 +2864,8 @@
       "outputDecimal": "Decimaal",
       "outputPlaceholder": "Voer invoer in om uitvoer te zien",
       "seo": {
-        "title": "ASCII-converter – Tekst naar Hex, Binair en Decimaal",
-        "description": "Gratis ASCII-converter. Converteer tekst naar hex, binair en decimaal en terug. Aanpasbare scheidingstekens. Voor codering, debuggen en programmeren.",
+        "title": "ASCII-converter – Codeer tekst naar Hex, Binair en Decimaal",
+        "description": "Gratis ASCII-converter. Codeer en decodeer tekst naar ASCII hex-, binaire en decimale codes. Aanpasbare scheidingstekens. Ideaal voor codering, debuggen en programmeren.",
         "keywords": "ASCII-converter, ASCII naar hex, ASCII naar binair, ASCII naar decimaal, hex naar ASCII, binair naar ASCII, decimaal naar ASCII, tekencodeconverter, tekstcodering",
         "content": {
           "heading": "De ASCII-converter gebruiken",
@@ -2892,6 +2892,60 @@
           "textToBinaryDesc": "Converteer tekst naar binair met UTF-8, UTF-16 en aangepaste scheidingstekens",
           "dnaToMrna": "DNA naar mRNA-converter",
           "dnaToMrnaDesc": "Transcribeer DNA naar mRNA en vertaal naar eiwitten",
+          "lettersToNumbers": "Letters naar getallen",
+          "lettersToNumbersDesc": "Converteer letters naar getallen (A=1, B=2, enz.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Caesarcodering",
+      "titleBadge": "Tekst en codering",
+      "description": "Codeer of decodeer tekst online met de Caesar-codering. Kies het alfabet (Latijns, Cyrillisch, Grieks, Hebreeuws, Arabisch), stel de verschuiving in en wissel tussen coderen en decoderen.",
+      "textInput": "Voer de tekst in die u online wilt coderen of decoderen",
+      "textPlaceholder": "Voer tekst in...",
+      "alphabet": "Alfabet",
+      "alphabetLatin": "Latijns (a, b, c...)",
+      "alphabetCyrillic": "Cyrillisch (а, б, в...)",
+      "alphabetGreek": "Grieks (α, β, γ...)",
+      "alphabetHebrew": "Hebreeuws (..., ל, א)",
+      "alphabetArabic": "Arabisch (ب, ا)",
+      "shiftLabel": "Voer de verschuivingswaarde in",
+      "mode": "Modus",
+      "modeEncode": "Coderen",
+      "modeDecode": "Decoderen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "resultPlaceholder": "Het resultaat verschijnt hier",
+      "seo": {
+        "title": "Caesarcodering – Tekst online coderen en decoderen",
+        "description": "Gratis Caesarcodering. Codeer en decodeer tekst met verschuiving. Ondersteuning voor Latijns, Cyrillisch, Grieks, Hebreeuws en Arabisch. Ideaal voor cryptografie en geheime berichten.",
+        "keywords": "Caesarcodering, verschuivingscodering, tekst coderen decoderen, ROT-codering, substitutiecodering, cryptografietool",
+        "content": {
+          "heading": "De Caesarcodering gebruiken",
+          "paragraph1": "De Caesar-codering is een klassieke substitutiecodering waarbij elke letter in het alfabet een vast aantal posities wordt verschoven. Bij coderen verschuift u letters vooruit, bij decoderen achteruit. Kies het alfabet, voer een verschuiving in (0–100) en wissel tussen Coderen en Decoderen. Niet-alfabettekens blijven ongewijzigd.",
+          "paragraph2": "Selecteer het alfabet dat bij de taal van uw tekst past. Latijns voor Engels en Europese talen, Cyrillisch voor Russisch, Grieks, Hebreeuws en Arabisch voor die schriften. De verschuivingswaarde bepaalt het aantal posities. In de modus Decoderen wordt de verschuiving omgekeerd.",
+          "paragraph3": "De Caesar-codering is nuttig voor het leren van cryptografie, het maken van eenvoudige geheime berichten en puzzels. Het is niet veilig voor echte vertrouwelijkheid maar illustreert substitutiecoderingen goed. Alles gebeurt in uw browser.",
+          "paragraph4": "Voer uw tekst in, kies het alfabet, stel de verschuiving in (bijv. 2) en selecteer Coderen of Decoderen. Het resultaat wordt direct bijgewerkt. Om te decoderen gebruikt u hetzelfde alfabet en dezelfde verschuiving als bij het coderen.",
+          "exampleHeading": "Voorbeeld",
+          "exampleText": "Invoer: addasdaw. Alfabet: Latijns. Verschuiving: 2. Modus: Coderen. Resultaat: cffcufcy (elke letter 2 posities verschoven: a→c, d→f, s→u, w→y). Om cffcufcy terug te decoderen naar addasdaw gebruikt u dezelfde instellingen en modus Decoderen."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            {"question": "Wat is de Caesar-codering?", "answer": "De Caesar-codering is een substitutiecodering waarbij elke letter wordt vervangen door een andere op een vast aantal posities in het alfabet. Vernoemd naar Julius Caesar. Bij verschuiving 2 wordt «a» «c», «z» wordt «b»."},
+            {"question": "Hoe decodeer ik een Caesar-codering?", "answer": "Gebruik hetzelfde alfabet en dezelfde verschuivingswaarde als bij het coderen en selecteer de modus Decoderen. De tool verschuift elke letter terug en herstelt de oorspronkelijke tekst."},
+            {"question": "Welke alfabetten worden ondersteund?", "answer": "De tool ondersteunt Latijns (a–z), Cyrillisch (а–я), Grieks (α–ω), Hebreeuws (א–ת) en Arabisch (ا–ي). Hoofdletters en kleine letters worden behouden voor Latijns, Cyrillisch en Grieks."},
+            {"question": "Wat is de verschuivingswaarde?", "answer": "De verschuivingswaarde is het aantal posities dat elke letter wordt verschoven. Bij coderen vooruit, bij decoderen achteruit. Verschuiving 0 laat de tekst ongewijzigd."},
+            {"question": "Is de Caesar-codering veilig?", "answer": "Nee. De Caesar-codering is eenvoudig te breken — er zijn slechts zoveel sleutels als letters in het alfabet. Geschikt om te leren en voor grappige berichten, niet voor echte vertrouwelijkheid."},
+            {"question": "Is deze tool gratis?", "answer": "Ja. De Caesar-codering is gratis. Geen registratie of betaling nodig. Alles gebeurt in uw browser."}
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde rekenmachines",
+          "textToBinary": "Tekst naar binair converter",
+          "textToBinaryDesc": "Converteer tekst naar binair met UTF-8, UTF-16 en aangepaste scheidingstekens",
+          "asciiConverter": "ASCII-converter",
+          "asciiConverterDesc": "Codeer en decodeer tekst naar ASCII hex-, binaire en decimale codes",
           "lettersToNumbers": "Letters naar getallen",
           "lettersToNumbersDesc": "Converteer letters naar getallen (A=1, B=2, enz.)"
         }
@@ -3454,8 +3508,8 @@
       "reset": "Resetten",
       "copy": "Kopiëren",
       "seo": {
-        "title": "Letters naar Nummers Konverter – A1Z26 & ASCII-codering",
-        "description": "Gratis letters naar nummers konverter. Codeer tekst met A1Z26-lettercijfer of ASCII-codes. Decodeer numerieke waarden terug naar leesbare tekst.",
+        "title": "Letters naar Nummers Konverter – Tekst naar Numerieke Codes Online",
+        "description": "Gratis online letters naar nummers konverter. Zet tekst om naar numerieke codes met A=1, omgekeerd alfabet, T9-toetsenbord, ASCII, hex en binaire codering.",
         "keywords": "letters naar nummers konverter, letter naar nummer konverter, tekst naar nummers, alfabet naar nummers, letter encoder, tekst encoder, A=0 encoder, A=1 encoder, omgekeerd alfabet encoder, T9-toetsenbord konverter, ASCII konverter, hex konverter, binair konverter, Latijns alfabet encoder, Arabisch alfabet encoder, Hebreeuws alfabet encoder, Grieks alfabet encoder, Cyrillisch alfabet encoder, cryptografie tool, letter code encoder",
         "content": {
           "heading": "Hoe Letters naar Nummers te Converteren",

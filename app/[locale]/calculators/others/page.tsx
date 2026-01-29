@@ -78,6 +78,12 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       path: '/calculators/others/ascii-converter',
     },
     {
+      id: 'caesar-cipher',
+      titleKey: 'caesarCipher.title',
+      descKey: 'caesarCipher.description',
+      path: '/calculators/others/caesar-cipher',
+    },
+    {
       id: 'bold-text',
       titleKey: 'boldText.title',
       descKey: 'boldText.description',

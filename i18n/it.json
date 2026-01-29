@@ -2864,8 +2864,8 @@
       "outputDecimal": "Decimale",
       "outputPlaceholder": "Inserisci input per vedere l'output",
       "seo": {
-        "title": "Convertitore ASCII – Testo in Hex, Binario e Decimale",
-        "description": "Convertitore ASCII gratuito. Converti testo in hex, binario e decimale e viceversa. Separatori personalizzabili. Essenziale per codifica, debug e programmazione.",
+        "title": "Convertitore ASCII – Codifica testo in Hex, Binario e Decimale",
+        "description": "Convertitore ASCII gratuito. Codifica e decodifica testo in codici ASCII hex, binari e decimali. Separatori personalizzabili. Ideale per codifica, debug e programmazione.",
         "keywords": "convertitore ASCII, ASCII a hex, ASCII a binario, ASCII a decimale, hex a ASCII, binario a ASCII, decimale a ASCII, convertitore codici caratteri, codifica testo",
         "content": {
           "heading": "Come usare il convertitore ASCII",
@@ -2892,6 +2892,60 @@
           "textToBinaryDesc": "Converti testo in binario con UTF-8, UTF-16 e separatori personalizzati",
           "dnaToMrna": "Convertitore DNA in mRNA",
           "dnaToMrnaDesc": "Trascrivi DNA in mRNA e traduci in proteine",
+          "lettersToNumbers": "Lettere in numeri",
+          "lettersToNumbersDesc": "Converti lettere in numeri (A=1, B=2, ecc.)"
+        }
+      }
+    },
+    "caesarCipher": {
+      "title": "Cifrario di Cesare",
+      "titleBadge": "Testo e codifica",
+      "description": "Codifica o decodifica testo online con il cifrario di Cesare. Scegli l'alfabeto (latino, cirillico, greco, ebraico, arabo), imposta lo spostamento e passa tra codifica e decodifica.",
+      "textInput": "Inserisci il testo che vuoi codificare o decodificare online",
+      "textPlaceholder": "Inserisci il testo...",
+      "alphabet": "Alfabeto",
+      "alphabetLatin": "Latino (a, b, c...)",
+      "alphabetCyrillic": "Cirillico (а, б, в...)",
+      "alphabetGreek": "Greco (α, β, γ...)",
+      "alphabetHebrew": "Ebraico (..., ל, א)",
+      "alphabetArabic": "Arabo (ب, ا)",
+      "shiftLabel": "Inserisci il valore di spostamento",
+      "mode": "Modalità",
+      "modeEncode": "Codifica",
+      "modeDecode": "Decodifica",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "resultPlaceholder": "Il risultato apparirà qui",
+      "seo": {
+        "title": "Cifrario di Cesare – Codifica e decodifica testo online",
+        "description": "Cifrario di Cesare gratuito. Codifica e decodifica testo per spostamento. Supporta latino, cirillico, greco, ebraico e arabo. Ideale per imparare la crittografia e i messaggi segreti.",
+        "keywords": "cifrario di Cesare, cifra a spostamento, codifica decodifica testo, cifra ROT, cifra a sostituzione, strumento crittografia",
+        "content": {
+          "heading": "Come usare il cifrario di Cesare",
+          "paragraph1": "Il cifrario di Cesare è una cifra a sostituzione classica in cui ogni lettera dell'alfabeto viene spostata di un numero fisso di posizioni. Per codificare si spostano le lettere in avanti, per decodificare indietro. Scegli l'alfabeto, inserisci uno spostamento (0–100) e passa tra Codifica e Decodifica. I caratteri non alfabetici restano invariati.",
+          "paragraph2": "Seleziona l'alfabeto in base alla lingua del testo. Latino per inglese e lingue europee, cirillico per russo, greco, ebraico e arabo per quegli alfabeti. Il valore di spostamento determina il numero di posizioni. In modalità Decodifica lo spostamento viene invertito.",
+          "paragraph3": "Il cifrario di Cesare è utile per imparare la crittografia, creare messaggi segreti semplici e indovinelli. Non è sicuro per la vera riservatezza ma illustra bene le cifre a sostituzione. Tutto viene eseguito nel browser.",
+          "paragraph4": "Inserisci il testo, scegli l'alfabeto, imposta lo spostamento (es. 2) e seleziona Codifica o Decodifica. Il risultato si aggiorna subito. Per decodificare usa lo stesso alfabeto e lo stesso spostamento usati per codificare.",
+          "exampleHeading": "Esempio",
+          "exampleText": "Input: addasdaw. Alfabeto: Latino. Spostamento: 2. Modalità: Codifica. Risultato: cffcufcy (ogni lettera spostata di 2: a→c, d→f, s→u, w→y). Per decodificare cffcufcy in addasdaw usa le stesse impostazioni e modalità Decodifica."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {"question": "Cos'è il cifrario di Cesare?", "answer": "Il cifrario di Cesare è una cifra a sostituzione in cui ogni lettera è sostituita da un'altra a un numero fisso di posizioni nell'alfabeto. Prende il nome da Giulio Cesare. Con spostamento 2, «a» diventa «c», «z» diventa «b»."},
+            {"question": "Come si decodifica un cifrario di Cesare?", "answer": "Usa lo stesso alfabeto e lo stesso valore di spostamento usati per codificare e seleziona la modalità Decodifica. Lo strumento sposta ogni lettera indietro e ripristina il testo originale."},
+            {"question": "Quali alfabeti sono supportati?", "answer": "Lo strumento supporta latino (a–z), cirillico (а–я), greco (α–ω), ebraico (א–ת) e arabo (ا–ي). Maiuscole e minuscole sono preservate per latino, cirillico e greco."},
+            {"question": "Cos'è il valore di spostamento?", "answer": "Il valore di spostamento è il numero di posizioni di cui viene spostata ogni lettera. In codifica in avanti, in decodifica indietro. Spostamento 0 lascia il testo invariato."},
+            {"question": "Il cifrario di Cesare è sicuro?", "answer": "No. Il cifrario di Cesare è facile da violare: ci sono tante chiavi quante lettere nell'alfabeto. Utile per imparare e messaggi divertenti, non per vera riservatezza."},
+            {"question": "Questo strumento è gratuito?", "answer": "Sì. Il cifrario di Cesare è gratuito. Nessuna registrazione o pagamento. Tutto viene eseguito nel browser."}
+          ]
+        },
+        "related": {
+          "heading": "Calcolatrici correlate",
+          "textToBinary": "Convertitore testo in binario",
+          "textToBinaryDesc": "Converti testo in binario con UTF-8, UTF-16 e separatori personalizzati",
+          "asciiConverter": "Convertitore ASCII",
+          "asciiConverterDesc": "Codifica e decodifica testo in codici ASCII hex, binari e decimali",
           "lettersToNumbers": "Lettere in numeri",
           "lettersToNumbersDesc": "Converti lettere in numeri (A=1, B=2, ecc.)"
         }
@@ -3454,8 +3508,8 @@
       "reset": "Reimposta",
       "copy": "Copia",
       "seo": {
-        "title": "Convertitore da Lettere a Numeri – Codifica A1Z26 e ASCII",
-        "description": "Convertitore gratuito da lettere a numeri. Codifica testo con cifrario A1Z26 o codici ASCII. Decodifica valori numerici in testo leggibile.",
+        "title": "Convertitore da Lettere a Numeri – Testo in Codici Numerici Online",
+        "description": "Convertitore gratuito online da lettere a numeri. Trasforma il testo in codici numerici usando A=1, alfabeto inverso, tastiera T9, ASCII, hex e codifica binaria.",
         "keywords": "convertitore lettere numeri, convertitore lettera numero, testo numeri, alfabeto numeri, codificatore lettere, codificatore testo, codificatore A=0, codificatore A=1, codificatore alfabeto invertito, convertitore tastiera T9, convertitore ASCII, convertitore hex, convertitore binario, codificatore alfabeto latino, codificatore alfabeto arabo, codificatore alfabeto ebraico, codificatore alfabeto greco, codificatore alfabeto cirillico, strumento crittografia, codificatore codice lettere",
         "content": {
           "heading": "Come Convertire Lettere in Numeri",

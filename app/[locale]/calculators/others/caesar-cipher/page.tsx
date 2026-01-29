@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { AsciiConverterCalculator } from './calculator';
+import { CaesarCipherCalculator } from './calculator';
 import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
@@ -15,17 +15,17 @@ interface FaqItem {
 async function getFaqItems(locale: string): Promise<FaqItem[]> {
   try {
     const messages = await import(`@/i18n/${locale}.json`);
-    return (messages.default?.calculators?.asciiConverter?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.caesarCipher?.seo?.faq?.items as FaqItem[]) || [];
   } catch {
     const messages = await import('@/i18n/en.json');
-    return (messages.default?.calculators?.asciiConverter?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.caesarCipher?.seo?.faq?.items as FaqItem[]) || [];
   }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.asciiConverter.seo' });
-  const path = '/calculators/others/ascii-converter';
+  const t = await getTranslations({ locale, namespace: 'calculators.caesarCipher.seo' });
+  const path = '/calculators/others/caesar-cipher';
   const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
   return {
     title: t('title'),
@@ -44,15 +44,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function AsciiConverterPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function CaesarCipherPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.asciiConverter' });
+  const t = await getTranslations({ locale, namespace: 'calculators.caesarCipher' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
 
   const faqItems = await getFaqItems(locale);
-  const tSeo = await getTranslations({ locale, namespace: 'calculators.asciiConverter.seo.content' });
-  const tFaq = await getTranslations({ locale, namespace: 'calculators.asciiConverter.seo.faq' });
-  const tRelated = await getTranslations({ locale, namespace: 'calculators.asciiConverter.seo.related' });
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.caesarCipher.seo.content' });
+  const tFaq = await getTranslations({ locale, namespace: 'calculators.caesarCipher.seo.faq' });
+  const tRelated = await getTranslations({ locale, namespace: 'calculators.caesarCipher.seo.related' });
 
   return (
     <>
@@ -78,12 +78,11 @@ export default async function AsciiConverterPage({ params }: { params: Promise<{
       <div className="calculator-container">
         <div className="container">
           <div className="calculator-card">
-            <AsciiConverterCalculator />
+            <CaesarCipherCalculator />
           </div>
         </div>
       </div>
 
-      {/* SEO Content Section */}
       <div className="seo-content-section">
         <div className="container">
           <div className="seo-content-card">
@@ -102,7 +101,6 @@ export default async function AsciiConverterPage({ params }: { params: Promise<{
         </div>
       </div>
 
-      {/* Related Calculators Section - styled like FAQ, above FAQ */}
       <div className="related-calculators-section">
         <div className="related-content-card">
           <h2 className="related-heading">{tRelated('heading')}</h2>
@@ -111,9 +109,9 @@ export default async function AsciiConverterPage({ params }: { params: Promise<{
               <h3 className="related-title">{tRelated('textToBinary')}</h3>
               <p className="related-desc">{tRelated('textToBinaryDesc')}</p>
             </Link>
-            <Link href="/calculators/others/dna-to-mrna" className="related-card">
-              <h3 className="related-title">{tRelated('dnaToMrna')}</h3>
-              <p className="related-desc">{tRelated('dnaToMrnaDesc')}</p>
+            <Link href="/calculators/others/ascii-converter" className="related-card">
+              <h3 className="related-title">{tRelated('asciiConverter')}</h3>
+              <p className="related-desc">{tRelated('asciiConverterDesc')}</p>
             </Link>
             <Link href="/calculators/others/letters-to-numbers" className="related-card">
               <h3 className="related-title">{tRelated('lettersToNumbers')}</h3>
@@ -123,7 +121,6 @@ export default async function AsciiConverterPage({ params }: { params: Promise<{
         </div>
       </div>
 
-      {/* FAQ Section */}
       {faqItems.length > 0 && (
         <FaqSection heading={tFaq('heading')} items={faqItems} />
       )}

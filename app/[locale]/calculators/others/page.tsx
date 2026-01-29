@@ -90,6 +90,12 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       path: '/calculators/others/mirror-text',
     },
     {
+      id: 'nato-phonetic',
+      titleKey: 'natoPhonetic.title',
+      descKey: 'natoPhonetic.description',
+      path: '/calculators/others/nato-phonetic',
+    },
+    {
       id: 'italic-text',
       titleKey: 'italicText.title',
       descKey: 'italicText.description',

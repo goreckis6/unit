@@ -167,8 +167,6 @@ export function DnaToMrnaConverter() {
     }
   };
 
-  const exampleSequence = direction === 'dna-to-mrna' ? 'ACGT' : 'UGC A';
-
   return (
     <>
       <div className="input-section" style={{ marginBottom: '2rem' }}>
@@ -201,8 +199,34 @@ export function DnaToMrnaConverter() {
             <label htmlFor="sequence" className="input-label">
               {direction === 'dna-to-mrna' ? t('inputDnaSequence') : t('inputMrnaSequence')}
             </label>
-            <div style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-              {t('exampleLabel')} {exampleSequence}
+            <div
+              className="number-input"
+              style={{
+                marginBottom: '1rem',
+                padding: '1rem',
+                fontSize: '0.9rem',
+                color: 'var(--text-secondary)',
+                backgroundColor: 'var(--surface-secondary, #f5f5f5)',
+                borderRadius: '8px',
+                border: '1px solid var(--border-color, #e0e0e0)',
+              }}
+            >
+              <div style={{ fontWeight: '600', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
+                {t('exampleLabel')} {t('exampleInput')}
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', fontFamily: 'monospace' }}>
+                <span>{t('dnaSequence')}: {t('exampleDna')}</span>
+                <span>{t('mrnaSequence')}: {t('exampleMrna')}</span>
+                <span>{t('proteinSequence')}: {t('exampleProtein')}</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setInputSequence('ACGT')}
+                className="btn btn-secondary"
+                style={{ marginTop: '0.75rem', minHeight: '36px' }}
+              >
+                {t('useExample')}
+              </button>
             </div>
             <textarea
               id="sequence"

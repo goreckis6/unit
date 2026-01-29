@@ -78,6 +78,12 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       path: '/calculators/others/bold-text',
     },
     {
+      id: 'small-caps',
+      titleKey: 'smallCaps.title',
+      descKey: 'smallCaps.description',
+      path: '/calculators/others/small-caps',
+    },
+    {
       id: 'italic-text',
       titleKey: 'italicText.title',
       descKey: 'italicText.description',

@@ -102,6 +102,15 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       path: '/calculators/others/numbers-to-letters',
     },
     {
+      id: 'letters-to-numbers',
+      titleKey: 'lettersToNumbers.title',
+      descKey: 'lettersToNumbers.description',
+      path: '/calculators/others/letters-to-numbers',
+    },
+      descKey: 'numbersToLetters.description',
+      path: '/calculators/others/numbers-to-letters',
+    },
+    {
       id: 'italic-text',
       titleKey: 'italicText.title',
       descKey: 'italicText.description',

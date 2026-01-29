@@ -1,4 +1,4 @@
-# Use Node.js 20 as base image
+# Stage 1: Dependencies
 FROM node:20-alpine AS base
 
 # Install pnpm
@@ -8,26 +8,26 @@ RUN npm install -g pnpm@8.15.0
 WORKDIR /app
 
 # Copy package files
-COPY package.json package-lock.json* pnpm-lock.yaml* ./
+COPY package.json pnpm-lock.yaml* ./
 
-# Install dependencies
+# Stage 2: Install dependencies
 FROM base AS deps
-RUN if [ -f pnpm-lock.yaml ]; then pnpm install --frozen-lockfile; else pnpm install; fi
+RUN pnpm install --frozen-lockfile
 
-# Build the application
+# Stage 3: Build application
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Set environment variables
+# Set environment variables for build
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
-# Build Next.js
+# Build the application
 RUN pnpm build
 
-# Production image
-FROM base AS runner
+# Stage 4: Production runtime
+FROM node:20-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
@@ -39,17 +39,17 @@ RUN adduser --system --uid 1001 nextjs
 
 # Copy necessary files from builder
 COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
 
-# Set user
+# Set correct permissions
+RUN chown -R nextjs:nodejs /app
+
 USER nextjs
 
-# Expose port
 EXPOSE 3000
 
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
-# Start the application
 CMD ["node", "server.js"]

@@ -107,9 +107,6 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       descKey: 'lettersToNumbers.description',
       path: '/calculators/others/letters-to-numbers',
     },
-      descKey: 'numbersToLetters.description',
-      path: '/calculators/others/numbers-to-letters',
-    },
     {
       id: 'italic-text',
       titleKey: 'italicText.title',

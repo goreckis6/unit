@@ -119,6 +119,12 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       descKey: 'upsideDownText.description',
       path: '/calculators/others/upside-down-text',
     },
+    {
+      id: 'dna-to-mrna',
+      titleKey: 'dnaToMrna.title',
+      descKey: 'dnaToMrna.description',
+      path: '/calculators/others/dna-to-mrna',
+    },
   ];
 
   return (

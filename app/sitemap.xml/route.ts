@@ -25,6 +25,7 @@ export async function GET() {
     '/calculators/others/letters-to-numbers',
     '/calculators/others/italic-text',
     '/calculators/others/upside-down-text',
+    '/calculators/others/dna-to-mrna',
     '/calculators/electric',
     '/calculators/others',
     '/calculators/electric/watts-to-kva',

@@ -101,14 +101,17 @@ export function SmallCapsGenerator() {
                 minHeight: '200px',
                 resize: 'vertical',
                 overflowY: 'auto',
-                fontFamily: 'monospace',
-                fontSize: '1.1em',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+                fontSize: '1.5em',
+                fontWeight: '500',
                 padding: '1.25rem',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '1rem'
+                gap: '1rem',
+                letterSpacing: '0.05em',
+                lineHeight: '1.6'
               }}>
-                <div style={{ flex: 1 }}>{result}</div>
+                <div style={{ flex: 1, color: 'var(--text-primary)' }}>{result}</div>
                 <button 
                   onClick={handleCopy} 
                   className="btn btn-primary" 
@@ -128,7 +131,7 @@ export function SmallCapsGenerator() {
                 display: 'flex', 
                 alignItems: 'center', 
                 justifyContent: 'center',
-                fontFamily: 'monospace',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
                 fontSize: '1.1em',
                 padding: '1.25rem',
                 opacity: 0.5

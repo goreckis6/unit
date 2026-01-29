@@ -130,7 +130,7 @@ export function NumbersToLettersConverter() {
               </p>
             </div>
 
-            <div className="input-card">
+            <div className="input-card numbers-to-letters-compact">
               <label htmlFor="method" className="input-label">
                 {t('decodingMethod')}
               </label>
@@ -146,7 +146,7 @@ export function NumbersToLettersConverter() {
               </select>
             </div>
 
-            <div className="input-card">
+            <div className="input-card numbers-to-letters-compact">
               <label htmlFor="alphabet" className="input-label">
                 {t('chooseAlphabet')}
               </label>

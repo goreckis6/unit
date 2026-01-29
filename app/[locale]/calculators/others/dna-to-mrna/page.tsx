@@ -106,14 +106,6 @@ export default async function DnaToMrnaPage({ params }: { params: Promise<{ loca
                 {tSeo('paragraph4')}
               </p>
               
-              <p className="seo-paragraph">
-                {tSeo('paragraph5')}
-              </p>
-              
-              <p className="seo-paragraph">
-                {tSeo('paragraph6')}
-              </p>
-              
               <div className="seo-example">
                 <h3 className="example-heading">{tSeo('exampleHeading')}</h3>
                 <p className="example-text">

@@ -86,7 +86,7 @@ export function CaesarCipherCalculator() {
     <>
       <div className="split-view-container">
         <div className="input-section" style={{ marginBottom: 0 }}>
-          <div className="numbers-to-letters-inputs" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div className="numbers-to-letters-inputs caesar-cipher-inputs" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div className="input-card">
               <label htmlFor="caesar-text" className="input-label">
                 {t('textInput')}
@@ -108,7 +108,7 @@ export function CaesarCipherCalculator() {
               />
             </div>
 
-            <div className="input-card numbers-to-letters-compact">
+            <div className="input-card caesar-alphabet-field">
               <label htmlFor="alphabet" className="input-label">
                 {t('alphabet')}
               </label>
@@ -127,7 +127,7 @@ export function CaesarCipherCalculator() {
               </select>
             </div>
 
-            <div className="input-card numbers-to-letters-compact">
+            <div className="input-card caesar-shift-field">
               <label htmlFor="shift" className="input-label">
                 {t('shiftLabel')}
               </label>

@@ -1296,6 +1296,15 @@ a {
   .options-grid .numbers-to-letters-compact {
     padding: 0.75rem !important;
   }
+
+  /* Caesar Cipher: Alphabet dropdown full width (same as text area), shift value input smaller */
+  .caesar-cipher-inputs .caesar-alphabet-field select,
+  .caesar-cipher-inputs .caesar-alphabet-field .select-dropdown {
+    width: 100%;
+  }
+  .caesar-cipher-inputs .caesar-shift-field .number-input {
+    max-width: 8rem;
+  }
 }
 
 .options-grid {

@@ -201,7 +201,7 @@ export function AsciiConverterCalculator() {
             </div>
 
             {separatorType === 'custom' && (
-              <div className="input-card">
+              <div className="input-card numbers-to-letters-compact">
                 <label htmlFor="customSeparator" className="input-label">
                   {t('customSeparatorLabel')}
                 </label>
@@ -213,7 +213,6 @@ export function AsciiConverterCalculator() {
                   className="number-input"
                   placeholder={t('customSeparatorPlaceholder')}
                   maxLength={10}
-                  style={{ minHeight: '44px' }}
                 />
               </div>
             )}

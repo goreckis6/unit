@@ -2840,6 +2840,63 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "Conversor ASCII",
+      "titleBadge": "Texto y codificación",
+      "description": "Convierta entre texto ASCII, hexadecimal, binario y decimal. Introduzca texto o códigos numéricos y obtenga conversiones instantáneas con separadores personalizables.",
+      "inputTypeLabel": "Tipo de entrada",
+      "inputTypeAscii": "Texto ASCII visible",
+      "inputTypeHex": "Hexadecimal",
+      "inputTypeBinary": "Binario",
+      "inputTypeDecimal": "Decimal",
+      "inputLabel": "Entrada",
+      "inputPlaceholder": "Introduzca texto o códigos (ej. texto, hex, binario o decimal)...",
+      "separator": "Separador",
+      "separatorSpace": "Espacio vacío",
+      "separatorComma": "Coma (y espacio)",
+      "separatorCustom": "Definido por el usuario",
+      "customSeparatorLabel": "Escriba su separador",
+      "customSeparatorPlaceholder": "Introduzca separador (máx. 10 caracteres)",
+      "reset": "Restablecer",
+      "outputAscii": "Texto ASCII visible",
+      "outputBinary": "Binario",
+      "outputHex": "Hexadecimal",
+      "outputDecimal": "Decimal",
+      "outputPlaceholder": "Introduzca entrada para ver la salida",
+      "seo": {
+        "title": "Conversor ASCII – Texto a Hex, Binario y Decimal",
+        "description": "Conversor ASCII gratuito. Convierta texto a hex, binario y decimal y viceversa. Soporta separadores personalizados. Esencial para codificación, depuración y programación.",
+        "keywords": "conversor ASCII, ASCII a hex, ASCII a binario, ASCII a decimal, hex a ASCII, binario a ASCII, decimal a ASCII, conversor de códigos de caracteres, codificación de texto",
+        "content": {
+          "heading": "Cómo usar el conversor ASCII",
+          "paragraph1": "El conversor ASCII convierte entre texto visible y códigos numéricos en hexadecimal, binario y decimal. Elija el tipo de entrada: texto ASCII visible, hexadecimal, binario o decimal. Escriba o pegue su entrada; la herramienta actualiza todas las salidas al instante.",
+          "paragraph2": "Cuando la entrada es texto ASCII, cada carácter se convierte en su valor de byte (0–255). Las salidas muestran los mismos datos en binario (8 bits), hex (dos dígitos por byte) y decimal. Cuando la entrada es hex, binario o decimal, la herramienta analiza los valores con el separador elegido y muestra el texto correspondiente y los demás formatos numéricos.",
+          "paragraph3": "Use la opción de separador para adaptar sus datos: espacio vacío para listas como «73 64 73», coma y espacio para «73, 64, 73», o un separador personalizado (hasta 10 caracteres) para otros formatos. Así la salida sigue siendo legible y compatible con scripts o manuales.",
+          "paragraph4": "El conversor es útil para codificar y decodificar mensajes, depurar conjuntos de caracteres, aprender valores ASCII/Unicode y preparar datos para APIs o sistemas embebidos. Todas las conversiones se realizan en el navegador; no se envían datos al servidor.",
+          "exampleHeading": "Ejemplo",
+          "exampleText": "Tipo de entrada: Texto ASCII visible. Entrada: sdsada. Texto ASCII visible: sdsada. Binario: 01110011 01100100 01110011 01100001 01100100 01100001. Hexadecimal: 73 64 73 61 64 61. Decimal: 115 100 115 97 100 97. Use el separador «Espacio vacío» o «Coma (y espacio)» para formatear la salida numérica."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            {"question": "¿Qué es ASCII?", "answer": "ASCII (Código Estándar Americano para Intercambio de Información) asigna códigos numéricos 0–127 a caracteres comunes (letras, dígitos, símbolos). ASCII extendido usa 0–255. Este conversor trabaja con valores de byte 0–255 y los muestra como texto, hex, binario y decimal."},
+            {"question": "¿Cómo convierto texto a hex o binario?", "answer": "Seleccione el tipo de entrada «Texto ASCII visible», introduzca su texto y elija un separador. La herramienta muestra Binario, Hexadecimal y Decimal para cada carácter. Puede copiar cualquier formato de salida."},
+            {"question": "¿Puedo convertir hex o decimal de vuelta a texto?", "answer": "Sí. Seleccione el tipo de entrada «Hexadecimal», «Binario» o «Decimal», luego introduzca valores separados por el separador elegido (ej. espacios o comas). La salida «Texto ASCII visible» muestra los caracteres correspondientes cuando es posible."},
+            {"question": "¿Para qué sirve el separador?", "answer": "El separador se usa para dividir la entrada al pegar valores hex, binarios o decimales (ej. «73 64 73») y para formatear la salida numérica (binario, hex, decimal). Puede usar espacio vacío, coma y espacio o un separador personalizado de hasta 10 caracteres."},
+            {"question": "¿Este conversor ASCII es gratuito?", "answer": "Sí. El conversor ASCII es gratuito. No requiere registro ni pago. Todas las conversiones se realizan en su navegador."}
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "textToBinary": "Conversor de texto a binario",
+          "textToBinaryDesc": "Convertir texto a binario con UTF-8, UTF-16 y separadores personalizados",
+          "dnaToMrna": "Conversor ADN a ARNm",
+          "dnaToMrnaDesc": "Transcribir ADN a ARNm y traducir a proteínas",
+          "lettersToNumbers": "Letras a números",
+          "lettersToNumbersDesc": "Convertir letras a números (A=1, B=2, etc.)"
+        }
+      }
+    },
     "italicText": {
       "title": "Generador de Texto en Cursiva",
       "description": "Genera texto en cursiva al instante con múltiples estilos Unicode: cursiva serif, script cursivo y cursiva sans-serif. Perfecto para redes sociales, diseño y escritura creativa.",

@@ -2840,6 +2840,63 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "ASCII konverter",
+      "titleBadge": "Szöveg és kódolás",
+      "description": "Konvertáljon ASCII szöveg, hexadecimális, bináris és decimális között. Adjon meg szöveget vagy numerikus kódokat, és azonnali konverziókat kap testreszabható elválasztókkal.",
+      "inputTypeLabel": "Bemenet típusa",
+      "inputTypeAscii": "Látható ASCII szöveg",
+      "inputTypeHex": "Hexadecimális",
+      "inputTypeBinary": "Bináris",
+      "inputTypeDecimal": "Decimális",
+      "inputLabel": "Bemenet",
+      "inputPlaceholder": "Adja meg a szöveget vagy kódokat (pl. szöveg, hex, bináris vagy decimális)...",
+      "separator": "Elválasztó",
+      "separatorSpace": "Szóköz",
+      "separatorComma": "Vessző (és szóköz)",
+      "separatorCustom": "Felhasználó által megadott",
+      "customSeparatorLabel": "Adja meg az elválasztót",
+      "customSeparatorPlaceholder": "Adja meg az elválasztót (max. 10 karakter)",
+      "reset": "Visszaállítás",
+      "outputAscii": "Látható ASCII szöveg",
+      "outputBinary": "Bináris",
+      "outputHex": "Hexadecimális",
+      "outputDecimal": "Decimális",
+      "outputPlaceholder": "Adja meg a bemenetet a kimenet megjelenítéséhez",
+      "seo": {
+        "title": "ASCII konverter – Szöveg hex, bináris és decimális formátumba",
+        "description": "Ingyenes ASCII konverter. Konvertáljon szöveget hex, bináris és decimális formátumokba és vissza. Testreszabható elválasztók. Kódoláshoz, hibakereséshez és programozáshoz.",
+        "keywords": "ASCII konverter, ASCII hex, ASCII bináris, ASCII decimális, hex ASCII, bináris ASCII, decimális ASCII, karakterkód konverter, szövegkódolás",
+        "content": {
+          "heading": "Az ASCII konverter használata",
+          "paragraph1": "Az ASCII konverter a látható szöveget és a numerikus kódokat konvertálja hexadecimális, bináris és decimális formátumok között. Válassza a bemenet típusát: látható ASCII szöveg, hexadecimális, bináris vagy decimális. Gépelje be vagy illessze be a bemenetet; az eszköz azonnal frissíti az összes kimenetet.",
+          "paragraph2": "Ha a bemenet ASCII szöveg, minden karakter a bájtórtékére (0–255) konvertálódik. A kimenetek ugyanazokat az adatokat mutatják bináris (8 bit), hex (két számjegy bájtonként) és decimális formátumban. Ha a bemenet hex, bináris vagy decimális, az eszköz a választott elválasztóval elemzi az értékeket és megjeleníti a megfelelő szöveget és a többi numerikus formátumot.",
+          "paragraph3": "Használja az elválasztó opciót az adatokhoz: szóköz listákhoz, mint a «73 64 73», vessző és szóköz a «73, 64, 73» formátumhoz, vagy egyéni elválasztó (legfeljebb 10 karakter). A kimenet olvasható marad és kompatibilis a szkriptekkel vagy kézikönyvekkel.",
+          "paragraph4": "A konverter hasznos üzenetek kódolásához és dekódolásához, karakterkészletek hibakereséséhez, ASCII/Unicode értékek tanulásához és adatok előkészítéséhez API-khoz vagy beágyazott rendszerekhez. Minden konverzió a böngészőben történik; nem küld adatot a szervernek.",
+          "exampleHeading": "Példa",
+          "exampleText": "Bemenet típusa: Látható ASCII szöveg. Bemenet: sdsada. Látható ASCII szöveg: sdsada. Bináris: 01110011 01100100 01110011 01100001 01100100 01100001. Hexadecimális: 73 64 73 61 64 61. Decimális: 115 100 115 97 100 97. Használja az «Szóköz» vagy «Vessző (és szóköz)» elválasztót a numerikus kimenethez."
+        },
+        "faq": {
+          "heading": "Gyakran ismételt kérdések",
+          "items": [
+            {"question": "Mi az ASCII?", "answer": "Az ASCII (American Standard Code for Information Interchange) a 0–127 numerikus kódokat rendeli a gyakori karakterekhez (betűk, számjegyek, szimbólumok). A kiterjesztett ASCII 0–255-öt használ. Ez a konverter 0–255 bájtórtékekkel dolgozik, és szövegként, hexként, binárisként és decimálisként jeleníti meg őket."},
+            {"question": "Hogyan konvertálom a szöveget hex vagy bináris formátumba?", "answer": "Válassza a «Látható ASCII szöveg» bemenet típusát, adja meg a szöveget és válasszon elválasztót. Az eszköz Bináris, Hexadecimális és Decimális kimenetet mutat minden karakterhez. Bármely kimeneti formátumot másolhat."},
+            {"question": "Konvertálhatom a hex vagy decimális értéket vissza szöveggé?", "answer": "Igen. Válassza a «Hexadecimális», «Bináris» vagy «Decimális» bemenet típusát, majd adja meg az értékeket a választott elválasztóval (pl. szóközök vagy vesszők). A «Látható ASCII szöveg» kimenet a megfelelő karaktereket mutatja, ahol lehetséges."},
+            {"question": "Mire való az elválasztó?", "answer": "Az elválasztó a bemenet felosztására szolgál hex, bináris vagy decimális értékek beillesztésekor (pl. «73 64 73») és a numerikus kimenet (bináris, hex, decimális) formázására. Használhat szóközt, vesszőt és szóközt vagy egyéni elválasztót legfeljebb 10 karakterig."},
+            {"question": "Ez az ASCII konverter ingyenes?", "answer": "Igen. Az ASCII konverter ingyenes. Nincs regisztráció vagy fizetés. Minden konverzió a böngészőben történik."}
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó számológépek",
+          "textToBinary": "Szöveg bináris konverter",
+          "textToBinaryDesc": "Konvertáljon szöveget binárissá UTF-8, UTF-16 és egyéni elválasztókkal",
+          "dnaToMrna": "DNS mRNA konverter",
+          "dnaToMrnaDesc": "Transzkribálja a DNS-t mRNA-ba és fordítsa fehérjékre",
+          "lettersToNumbers": "Betűk számokká",
+          "lettersToNumbersDesc": "Konvertálja a betűket számokká (A=1, B=2 stb.)"
+        }
+      }
+    },
     "italicText": {
       "title": "Dőlt Szöveg Generátor",
       "description": "Generáljon dőlt szöveget azonnal több Unicode stílussal: serif dőlt, kurzív szkript és sans-serif dőlt. Tökéletes közösségi médiához, tervezéshez és kreatív íráshoz.",

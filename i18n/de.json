@@ -2834,6 +2834,63 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "ASCII-Konverter",
+      "titleBadge": "Text & Kodierung",
+      "description": "Konvertieren Sie zwischen ASCII-Text, Hexadezimal, Binär und Dezimal. Geben Sie Text oder numerische Codes ein und erhalten Sie sofortige Umrechnungen mit anpassbaren Trennzeichen.",
+      "inputTypeLabel": "Eingabetyp",
+      "inputTypeAscii": "Sichtbarer ASCII-Text",
+      "inputTypeHex": "Hexadezimal",
+      "inputTypeBinary": "Binär",
+      "inputTypeDecimal": "Dezimal",
+      "inputLabel": "Eingabe",
+      "inputPlaceholder": "Text oder Codes eingeben (z. B. Text, Hex, Binär oder Dezimalwerte)...",
+      "separator": "Trennzeichen",
+      "separatorSpace": "Leerzeichen",
+      "separatorComma": "Komma (und Leerzeichen)",
+      "separatorCustom": "Benutzerdefiniert",
+      "customSeparatorLabel": "Trennzeichen eingeben",
+      "customSeparatorPlaceholder": "Trennzeichen eingeben (max. 10 Zeichen)",
+      "reset": "Zurücksetzen",
+      "outputAscii": "Sichtbarer ASCII-Text",
+      "outputBinary": "Binär",
+      "outputHex": "Hexadezimal",
+      "outputDecimal": "Dezimal",
+      "outputPlaceholder": "Eingabe eingeben, um Ausgabe zu sehen",
+      "seo": {
+        "title": "ASCII-Konverter – Text in Hex, Binär & Dezimal",
+        "description": "Kostenloser ASCII-Konverter. Text in Hex, Binär und Dezimal umwandeln und zurück. Eigene Trennzeichen. Wichtig für Kodierung, Debugging und Programmierung.",
+        "keywords": "ASCII-Konverter, ASCII zu Hex, ASCII zu Binär, ASCII zu Dezimal, Hex zu ASCII, Binär zu ASCII, Dezimal zu ASCII, Zeichencode-Konverter, Textkodierung",
+        "content": {
+          "heading": "So verwenden Sie den ASCII-Konverter",
+          "paragraph1": "Der ASCII-Konverter wandelt zwischen sichtbarem Text und numerischen Codes in Hexadezimal, Binär und Dezimal um. Wählen Sie den Eingabetyp: sichtbarer ASCII-Text, Hexadezimal, Binär oder Dezimal. Geben Sie Ihre Eingabe ein oder fügen Sie sie ein; das Tool aktualisiert alle Ausgaben sofort.",
+          "paragraph2": "Bei ASCII-Text wird jedes Zeichen in seinen Bytewert (0–255) umgewandelt. Die Ausgaben zeigen dieselben Daten als Binär (8 Bit), Hex (zwei Ziffern pro Byte) und Dezimal. Bei Hex-, Binär- oder Dezimaleingabe parst das Tool die Werte mit dem gewählten Trennzeichen und zeigt den entsprechenden Text sowie die anderen numerischen Formate.",
+          "paragraph3": "Mit der Trennzeichen-Option passen Sie Ihre Daten an: Leerzeichen für Listen wie „73 64 73“, Komma und Leerzeichen für „73, 64, 73“ oder ein benutzerdefiniertes Trennzeichen (bis 10 Zeichen) für andere Formate. So bleibt die Ausgabe lesbar und mit Skripten oder Handbüchern kompatibel.",
+          "paragraph4": "Der Konverter eignet sich zum Kodieren und Dekodieren von Nachrichten, zum Debuggen von Zeichensätzen, zum Lernen von ASCII-/Unicode-Werten und zur Vorbereitung von Daten für APIs oder eingebettete Systeme. Alle Umrechnungen laufen im Browser; keine Daten werden an einen Server gesendet.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "Eingabetyp: Sichtbarer ASCII-Text. Eingabe: sdsada. Sichtbarer ASCII-Text: sdsada. Binär: 01110011 01100100 01110011 01100001 01100100 01100001. Hexadezimal: 73 64 73 61 64 61. Dezimal: 115 100 115 97 100 97. Verwenden Sie das Trennzeichen „Leerzeichen“ oder „Komma (und Leerzeichen)“ für die numerische Ausgabe."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {"question": "Was ist ASCII?", "answer": "ASCII (American Standard Code for Information Interchange) ordnet den Codes 0–127 gängige Zeichen zu (Buchstaben, Ziffern, Symbole). Erweitertes ASCII nutzt 0–255. Dieser Konverter arbeitet mit Bytewerten 0–255 und zeigt sie als Text, Hex, Binär und Dezimal an."},
+            {"question": "Wie konvertiere ich Text in Hex oder Binär?", "answer": "Wählen Sie den Eingabetyp „Sichtbarer ASCII-Text“, geben Sie Ihren Text ein und wählen Sie ein Trennzeichen. Das Tool zeigt Binär, Hexadezimal und Dezimal für jedes Zeichen. Sie können jedes Ausgabeformat kopieren."},
+            {"question": "Kann ich Hex oder Dezimal wieder in Text umwandeln?", "answer": "Ja. Wählen Sie den Eingabetyp „Hexadezimal“, „Binär“ oder „Dezimal“ und geben Sie dann Werte ein, getrennt durch Ihr gewähltes Trennzeichen (z. B. Leerzeichen oder Kommas). Die Ausgabe „Sichtbarer ASCII-Text“ zeigt die entsprechenden Zeichen, wo möglich."},
+            {"question": "Wofür ist das Trennzeichen?", "answer": "Das Trennzeichen dient zum Aufteilen der Eingabe beim Einfügen von Hex-, Binär- oder Dezimalwerten (z. B. „73 64 73“) und zum Formatieren der numerischen Ausgabe (Binär, Hex, Dezimal). Sie können Leerzeichen, Komma und Leerzeichen oder ein benutzerdefiniertes Trennzeichen bis 10 Zeichen verwenden."},
+            {"question": "Ist dieser ASCII-Konverter kostenlos?", "answer": "Ja. Der ASCII-Konverter ist kostenlos. Keine Registrierung oder Zahlung nötig. Alle Umrechnungen laufen in Ihrem Browser."}
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "textToBinary": "Text-zu-Binär-Konverter",
+          "textToBinaryDesc": "Text in Binär mit UTF-8, UTF-16 und eigenen Trennzeichen umwandeln",
+          "dnaToMrna": "DNA-zu-mRNA-Konverter",
+          "dnaToMrnaDesc": "DNA in mRNA transkribieren und in Proteine übersetzen",
+          "lettersToNumbers": "Buchstaben in Zahlen",
+          "lettersToNumbersDesc": "Buchstaben in Zahlen umwandeln (A=1, B=2 usw.)"
+        }
+      }
+    },
     "italicText": {
       "title": "Kursivtext-Generator",
       "description": "Generieren Sie sofort kursiven Text mit mehreren Unicode-Stilen: Serif-Kursiv, Kursivschrift und Sans-Serif-Kursiv. Perfekt für soziale Medien, Design und kreatives Schreiben.",

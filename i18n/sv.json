@@ -2840,6 +2840,63 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "ASCII-konverterare",
+      "titleBadge": "Text och kodning",
+      "description": "Konvertera mellan ASCII-text, hexadecimal, binär och decimal. Ange text eller numeriska koder och få omedelbara konverteringar med anpassningsbara avgränsare.",
+      "inputTypeLabel": "Indatatyp",
+      "inputTypeAscii": "Synlig ASCII-text",
+      "inputTypeHex": "Hexadecimal",
+      "inputTypeBinary": "Binär",
+      "inputTypeDecimal": "Decimal",
+      "inputLabel": "Indata",
+      "inputPlaceholder": "Ange text eller koder (t.ex. text, hex, binär eller decimal)...",
+      "separator": "Avgränsare",
+      "separatorSpace": "Mellanslag",
+      "separatorComma": "Komma (och mellanslag)",
+      "separatorCustom": "Användardefinierad",
+      "customSeparatorLabel": "Ange avgränsare",
+      "customSeparatorPlaceholder": "Ange avgränsare (max 10 tecken)",
+      "reset": "Återställ",
+      "outputAscii": "Synlig ASCII-text",
+      "outputBinary": "Binär",
+      "outputHex": "Hexadecimal",
+      "outputDecimal": "Decimal",
+      "outputPlaceholder": "Ange indata för att se utdata",
+      "seo": {
+        "title": "ASCII-konverterare – Text till Hex, Binär och Decimal",
+        "description": "Gratis ASCII-konverterare. Konvertera text till hex, binär och decimal och tillbaka. Anpassningsbara avgränsare. För kodning, felsökning och programmering.",
+        "keywords": "ASCII-konverterare, ASCII till hex, ASCII till binär, ASCII till decimal, hex till ASCII, binär till ASCII, decimal till ASCII, teckenkodkonverterare, textkodning",
+        "content": {
+          "heading": "Så använder du ASCII-konverteraren",
+          "paragraph1": "ASCII-konverteraren konverterar mellan synlig text och numeriska koder i hexadecimal, binär och decimal. Välj indatatyp: synlig ASCII-text, hexadecimal, binär eller decimal. Skriv eller klistra in din indata; verktyget uppdaterar alla utdata omedelbart.",
+          "paragraph2": "När indata är ASCII-text konverteras varje tecken till sitt bytevärde (0–255). Utdata visar samma data som binär (8 bitar), hex (två siffror per byte) och decimal. När indata är hex, binär eller decimal parsar verktyget värden med valt avgränsare och visar motsvarande text samt andra numeriska format.",
+          "paragraph3": "Använd avgränsaralternativet för att matcha dina data: mellanslag för listor som «73 64 73», komma och mellanslag för «73, 64, 73» eller en anpassad avgränsare (upp till 10 tecken). Utdata förblir läsbar och kompatibel med skript eller manualer.",
+          "paragraph4": "Konverteraren är användbar för kodning och avkodning av meddelanden, felsökning av teckenuppsättningar, lära sig ASCII/Unicode-värden och förbereda data för API:er eller inbäddade system. Alla konverteringar sker i webbläsaren; ingen data skickas till servern.",
+          "exampleHeading": "Exempel",
+          "exampleText": "Indatatyp: Synlig ASCII-text. Indata: sdsada. Synlig ASCII-text: sdsada. Binär: 01110011 01100100 01110011 01100001 01100100 01100001. Hexadecimal: 73 64 73 61 64 61. Decimal: 115 100 115 97 100 97. Använd avgränsaren «Mellanslag» eller «Komma (och mellanslag)» för numerisk utdata."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {"question": "Vad är ASCII?", "answer": "ASCII (American Standard Code for Information Interchange) tilldelar numeriska koder 0–127 till vanliga tecken (bokstäver, siffror, symboler). Utökad ASCII använder 0–255. Denna konverterare arbetar med bytevärden 0–255 och visar dem som text, hex, binär och decimal."},
+            {"question": "Hur konverterar jag text till hex eller binär?", "answer": "Välj indatatyp «Synlig ASCII-text», ange din text och välj en avgränsare. Verktyget visar Binär, Hexadecimal och Decimal för varje tecken. Du kan kopiera vilket utdataformat som helst."},
+            {"question": "Kan jag konvertera hex eller decimal tillbaka till text?", "answer": "Ja. Välj indatatyp «Hexadecimal», «Binär» eller «Decimal», ange sedan värden separerade med vald avgränsare (t.ex. mellanslag eller kommatecken). Utdata «Synlig ASCII-text» visar motsvarande tecken där det är möjligt."},
+            {"question": "Vad används avgränsaren till?", "answer": "Avgränsaren används för att dela indata när du klistrar in hex-, binära eller decimalvärden (t.ex. «73 64 73») och för att formatera den numeriska utdata (binär, hex, decimal). Du kan använda mellanslag, komma och mellanslag eller en anpassad avgränsare på upp till 10 tecken."},
+            {"question": "Är denna ASCII-konverterare gratis?", "answer": "Ja. ASCII-konverteraren är gratis. Ingen registrering eller betaling. Alla konverteringar sker i din webbläsare."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "textToBinary": "Text till binär-konverterare",
+          "textToBinaryDesc": "Konvertera text till binär med UTF-8, UTF-16 och anpassade avgränsare",
+          "dnaToMrna": "DNA till mRNA-konverterare",
+          "dnaToMrnaDesc": "Transkribera DNA till mRNA och översätt till proteiner",
+          "lettersToNumbers": "Bokstäver till tal",
+          "lettersToNumbersDesc": "Konvertera bokstäver till tal (A=1, B=2 osv.)"
+        }
+      }
+    },
     "italicText": {
       "title": "Kursiv Text Generator",
       "description": "Generera kursiv text direkt med flera Unicode-stilar: serif kursiv, kursiv skrift och sans-serif kursiv. Perfekt för sociala medier, design och kreativt skrivande.",

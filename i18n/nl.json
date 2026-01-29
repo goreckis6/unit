@@ -2840,6 +2840,63 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "ASCII-converter",
+      "titleBadge": "Tekst en codering",
+      "description": "Converteer tussen ASCII-tekst, hexadecimaal, binair en decimaal. Voer tekst of numerieke codes in en krijg directe conversies met aanpasbare scheidingstekens.",
+      "inputTypeLabel": "Invoertype",
+      "inputTypeAscii": "Zichtbare ASCII-tekst",
+      "inputTypeHex": "Hexadecimaal",
+      "inputTypeBinary": "Binair",
+      "inputTypeDecimal": "Decimaal",
+      "inputLabel": "Invoer",
+      "inputPlaceholder": "Voer tekst of codes in (bijv. tekst, hex, binair of decimaal)...",
+      "separator": "Scheidingsteken",
+      "separatorSpace": "Spatie",
+      "separatorComma": "Komma (en spatie)",
+      "separatorCustom": "Door gebruiker gedefinieerd",
+      "customSeparatorLabel": "Voer scheidingsteken in",
+      "customSeparatorPlaceholder": "Voer scheidingsteken in (max. 10 tekens)",
+      "reset": "Reset",
+      "outputAscii": "Zichtbare ASCII-tekst",
+      "outputBinary": "Binair",
+      "outputHex": "Hexadecimaal",
+      "outputDecimal": "Decimaal",
+      "outputPlaceholder": "Voer invoer in om uitvoer te zien",
+      "seo": {
+        "title": "ASCII-converter – Tekst naar Hex, Binair en Decimaal",
+        "description": "Gratis ASCII-converter. Converteer tekst naar hex, binair en decimaal en terug. Aanpasbare scheidingstekens. Voor codering, debuggen en programmeren.",
+        "keywords": "ASCII-converter, ASCII naar hex, ASCII naar binair, ASCII naar decimaal, hex naar ASCII, binair naar ASCII, decimaal naar ASCII, tekencodeconverter, tekstcodering",
+        "content": {
+          "heading": "De ASCII-converter gebruiken",
+          "paragraph1": "De ASCII-converter zet zichtbare tekst om naar numerieke codes in hexadecimaal, binair en decimaal. Kies het invoertype: zichtbare ASCII-tekst, hexadecimaal, binair of decimaal. Typ of plak uw invoer; het hulpmiddel werkt alle uitvoer direct bij.",
+          "paragraph2": "Bij ASCII-tekst wordt elk teken omgezet naar zijn bytewaarde (0–255). De uitvoer toont dezelfde gegevens in binair (8 bits), hex (twee cijfers per byte) en decimaal. Bij hex-, binaire of decimale invoer parseert het hulpmiddel de waarden met het gekozen scheidingsteken en toont de bijbehorende tekst en de andere numerieke formaten.",
+          "paragraph3": "Gebruik de optie scheidingsteken om aan te sluiten op uw gegevens: spatie voor lijsten zoals «73 64 73», komma en spatie voor «73, 64, 73» of een aangepast scheidingsteken (tot 10 tekens). Zo blijft de uitvoer leesbaar en compatibel met scripts of handleidingen.",
+          "paragraph4": "De converter is handig voor het coderen en decoderen van berichten, het debuggen van tekensets, het leren van ASCII/Unicode-waarden en het voorbereiden van gegevens voor API's of embedded systemen. Alle conversies gebeuren in de browser; er worden geen gegevens naar een server gestuurd.",
+          "exampleHeading": "Voorbeeld",
+          "exampleText": "Invoertype: Zichtbare ASCII-tekst. Invoer: sdsada. Zichtbare ASCII-tekst: sdsada. Binair: 01110011 01100100 01110011 01100001 01100100 01100001. Hexadecimaal: 73 64 73 61 64 61. Decimaal: 115 100 115 97 100 97. Gebruik het scheidingsteken «Spatie» of «Komma (en spatie)» voor de numerieke uitvoer."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            {"question": "Wat is ASCII?", "answer": "ASCII (American Standard Code for Information Interchange) kent numerieke codes 0–127 toe aan veelvoorkomende tekens (letters, cijfers, symbolen). Uitgebreide ASCII gebruikt 0–255. Deze converter werkt met bytewaarden 0–255 en toont ze als tekst, hex, binair en decimaal."},
+            {"question": "Hoe converteer ik tekst naar hex of binair?", "answer": "Selecteer invoertype «Zichtbare ASCII-tekst», voer uw tekst in en kies een scheidingsteken. Het hulpmiddel toont Binair, Hexadecimaal en Decimaal per teken. U kunt elk uitvoerformaat kopiëren."},
+            {"question": "Kan ik hex of decimaal terug naar tekst converteren?", "answer": "Ja. Selecteer invoertype «Hexadecimaal», «Binair» of «Decimaal» en voer dan waarden in, gescheiden door het gekozen scheidingsteken (bijv. spaties of komma's). De uitvoer «Zichtbare ASCII-tekst» toont de bijbehorende tekens waar mogelijk."},
+            {"question": "Waar is het scheidingsteken voor?", "answer": "Het scheidingsteken wordt gebruikt om invoer te splitsen bij het plakken van hex-, binaire of decimale waarden (bijv. «73 64 73») en om de numerieke uitvoer (binair, hex, decimaal) te formatteren. U kunt spatie, komma en spatie of een aangepast scheidingsteken tot 10 tekens gebruiken."},
+            {"question": "Is deze ASCII-converter gratis?", "answer": "Ja. De ASCII-converter is gratis. Geen registratie of betaling nodig. Alle conversies gebeuren in uw browser."}
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde rekenmachines",
+          "textToBinary": "Tekst naar binair-converter",
+          "textToBinaryDesc": "Converteer tekst naar binair met UTF-8, UTF-16 en aangepaste scheidingstekens",
+          "dnaToMrna": "DNA naar mRNA-converter",
+          "dnaToMrnaDesc": "Transcribeer DNA naar mRNA en vertaal naar eiwitten",
+          "lettersToNumbers": "Letters naar getallen",
+          "lettersToNumbersDesc": "Converteer letters naar getallen (A=1, B=2, enz.)"
+        }
+      }
+    },
     "italicText": {
       "title": "Cursieve Tekst Generator",
       "description": "Genereer direct cursieve tekst met meerdere Unicode-stijlen: serif cursief, cursief script en sans-serif cursief. Perfect voor sociale media, ontwerp en creatief schrijven.",

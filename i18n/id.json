@@ -2840,6 +2840,78 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "Konverter ASCII",
+      "titleBadge": "Teks & Pengodean",
+      "description": "Konversi antara teks ASCII, heksadesimal, biner, dan desimal. Masukkan teks atau kode numerik dan dapatkan konversi instan dengan pemisah yang dapat disesuaikan.",
+      "inputTypeLabel": "Jenis input",
+      "inputTypeAscii": "Teks ASCII terlihat",
+      "inputTypeHex": "Heksadesimal",
+      "inputTypeBinary": "Biner",
+      "inputTypeDecimal": "Desimal",
+      "inputLabel": "Input",
+      "inputPlaceholder": "Masukkan teks atau kode (mis. teks, hex, biner, atau nilai desimal)...",
+      "separator": "Pemisah",
+      "separatorSpace": "Spasi kosong",
+      "separatorComma": "Koma (dan spasi)",
+      "separatorCustom": "Ditentukan pengguna",
+      "customSeparatorLabel": "Ketik pemisah Anda",
+      "customSeparatorPlaceholder": "Masukkan pemisah (maks 10 karakter)",
+      "reset": "Reset",
+      "outputAscii": "Teks ASCII terlihat",
+      "outputBinary": "Biner",
+      "outputHex": "Heksadesimal",
+      "outputDecimal": "Desimal",
+      "outputPlaceholder": "Masukkan input untuk melihat output",
+      "seo": {
+        "title": "Konverter ASCII – Teks ke Hex, Biner & Desimal",
+        "description": "Konverter ASCII gratis. Konversi teks ke hex, biner, dan desimal serta sebaliknya. Mendukung pemisah kustom. Penting untuk pengodean, debugging, dan pemrograman.",
+        "keywords": "konverter ASCII, ASCII ke hex, ASCII ke biner, ASCII ke desimal, hex ke ASCII, biner ke ASCII, desimal ke ASCII, konverter kode karakter, pengodean teks",
+        "content": {
+          "heading": "Cara Menggunakan Konverter ASCII",
+          "paragraph1": "Konverter ASCII mengonversi antara teks terlihat dan kode numerik dalam heksadesimal, biner, dan desimal. Pilih jenis input: teks ASCII terlihat, heksadesimal, biner, atau desimal. Ketik atau tempel input; alat memperbarui semua output secara instan.",
+          "paragraph2": "Saat input adalah teks ASCII, setiap karakter dikonversi ke nilai byte-nya (0–255). Output menampilkan data yang sama sebagai biner (8-bit), hex (dua digit per byte), dan desimal. Saat input adalah hex, biner, atau desimal, alat mengurai nilai menggunakan pemisah yang dipilih dan menampilkan teks yang sesuai plus format numerik lainnya.",
+          "paragraph3": "Gunakan opsi pemisah agar sesuai dengan data Anda: spasi kosong untuk daftar seperti \"73 64 73\", koma dan spasi untuk \"73, 64, 73\", atau pemisah kustom (hingga 10 karakter) untuk format lain. Ini membuat output tetap terbaca dan kompatibel dengan skrip atau manual.",
+          "paragraph4": "Konverter berguna untuk mengode dan mendekode pesan, debugging set karakter, mempelajari nilai ASCII/Unicode, dan menyiapkan data untuk API atau sistem tertanam. Semua konversi berjalan di browser; tidak ada data yang dikirim ke server.",
+          "exampleHeading": "Contoh",
+          "exampleText": "Jenis input: Teks ASCII terlihat. Input: sdsada. Teks ASCII terlihat: sdsada. Biner: 01110011 01100100 01110011 01100001 01100100 01100001. Heksadesimal: 73 64 73 61 64 61. Desimal: 115 100 115 97 100 97. Gunakan Pemisah \"Spasi kosong\" atau \"Koma (dan spasi)\" untuk memformat output numerik."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa itu ASCII?",
+              "answer": "ASCII (American Standard Code for Information Interchange) menetapkan kode numerik 0–127 untuk karakter umum (huruf, angka, simbol). ASCII diperluas menggunakan 0–255. Konverter ini bekerja dengan nilai byte 0–255 dan menampilkannya sebagai teks, hex, biner, dan desimal."
+            },
+            {
+              "question": "Bagaimana cara mengonversi teks ke hex atau biner?",
+              "answer": "Pilih jenis input \"Teks ASCII terlihat\", masukkan teks, dan pilih pemisah. Alat menampilkan Biner, Heksadesimal, dan Desimal untuk setiap karakter. Anda dapat menyalin format output apa pun."
+            },
+            {
+              "question": "Bisakah saya mengonversi hex atau desimal kembali ke teks?",
+              "answer": "Ya. Pilih jenis input \"Heksadesimal\", \"Biner\", atau \"Desimal\", lalu masukkan nilai yang dipisahkan oleh pemisah yang Anda pilih (mis. spasi atau koma). Output Teks ASCII terlihat menampilkan karakter yang sesuai jika memungkinkan."
+            },
+            {
+              "question": "Untuk apa pemisah digunakan?",
+              "answer": "Pemisah digunakan untuk memisahkan input saat Anda menempel nilai hex, biner, atau desimal (mis. \"73 64 73\") dan untuk memformat output numerik (biner, hex, desimal). Anda dapat menggunakan spasi kosong, koma dan spasi, atau pemisah kustom hingga 10 karakter."
+            },
+            {
+              "question": "Apakah konverter ASCII ini gratis?",
+              "answer": "Ya. Konverter ASCII gratis digunakan. Tidak perlu pendaftaran atau pembayaran. Semua konversi berjalan di browser Anda."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "textToBinary": "Konverter Teks ke Biner",
+          "textToBinaryDesc": "Konversi teks ke biner dengan UTF-8, UTF-16, dan pemisah kustom",
+          "dnaToMrna": "Konverter DNA ke mRNA",
+          "dnaToMrnaDesc": "Transkripsi DNA ke mRNA dan terjemahkan ke protein",
+          "lettersToNumbers": "Konverter Huruf ke Angka",
+          "lettersToNumbersDesc": "Konversi huruf ke angka (A=1, B=2, dll.)"
+        }
+      }
+    },
     "italicText": {
       "title": "Generator Teks Miring",
       "description": "Buat teks miring secara instan dengan beberapa gaya Unicode: miring serif, skrip kursif dan miring sans-serif. Sempurna untuk media sosial, desain, dan penulisan kreatif.",

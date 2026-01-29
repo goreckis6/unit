@@ -2840,6 +2840,63 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "Konwerter ASCII",
+      "titleBadge": "Tekst i kodowanie",
+      "description": "Konwertuj między tekstem ASCII, heksadecymalnym, binarnym i dziesiętnym. Wprowadź tekst lub kody liczbowe i uzyskaj natychmiastowe konwersje z konfigurowalnymi separatorami.",
+      "inputTypeLabel": "Typ wejścia",
+      "inputTypeAscii": "Widoczny tekst ASCII",
+      "inputTypeHex": "Heksadecymalne",
+      "inputTypeBinary": "Binarne",
+      "inputTypeDecimal": "Dziesiętne",
+      "inputLabel": "Wejście",
+      "inputPlaceholder": "Wprowadź tekst lub kody (np. tekst, hex, binarnie lub dziesiętnie)...",
+      "separator": "Separator",
+      "separatorSpace": "Pusta spacja",
+      "separatorComma": "Przecinek (i spacja)",
+      "separatorCustom": "Zdefiniowany przez użytkownika",
+      "customSeparatorLabel": "Wpisz separator",
+      "customSeparatorPlaceholder": "Wprowadź separator (maks. 10 znaków)",
+      "reset": "Reset",
+      "outputAscii": "Widoczny tekst ASCII",
+      "outputBinary": "Binarne",
+      "outputHex": "Heksadecymalne",
+      "outputDecimal": "Dziesiętne",
+      "outputPlaceholder": "Wprowadź dane wejściowe, aby zobaczyć wynik",
+      "seo": {
+        "title": "Konwerter ASCII – Tekst na Hex, Binarnie i Dziesiętnie",
+        "description": "Darmowy konwerter ASCII. Konwertuj tekst na hex, binarnie i dziesiętnie oraz z powrotem. Obsługa własnych separatorów. Niezbędny do kodowania, debugowania i programowania.",
+        "keywords": "konwerter ASCII, ASCII na hex, ASCII na binarnie, ASCII na dziesiętnie, hex na ASCII, binarnie na ASCII, dziesiętnie na ASCII, konwerter kodów znaków, kodowanie tekstu",
+        "content": {
+          "heading": "Jak używać konwertera ASCII",
+          "paragraph1": "Konwerter ASCII konwertuje między widocznym tekstem a kodami numerycznymi w formacie heksadecymalnym, binarnym i dziesiętnym. Wybierz typ wejścia: widoczny tekst ASCII, heksadecymalne, binarne lub dziesiętne. Wpisz lub wklej dane wejściowe; narzędzie natychmiast zaktualizuje wszystkie wyniki.",
+          "paragraph2": "Gdy wejściem jest tekst ASCII, każdy znak jest konwertowany na wartość bajtu (0–255). Wyniki pokazują te same dane w formacie binarnym (8 bitów), hex (dwie cyfry na bajt) i dziesiętnie. Gdy wejściem jest hex, binarnie lub dziesiętnie, narzędzie parsuje wartości używając wybranego separatora i wyświetla odpowiadający tekst oraz pozostałe formaty numeryczne.",
+          "paragraph3": "Użyj opcji separatora, aby dopasować dane: pusta spacja dla list typu „73 64 73”, przecinek i spacja dla „73, 64, 73” lub własny separator (do 10 znaków) dla innych formatów. Dzięki temu wynik pozostaje czytelny i zgodny ze skryptami lub instrukcjami.",
+          "paragraph4": "Konwerter jest przydatny do kodowania i dekodowania wiadomości, debugowania zestawów znaków, nauki wartości ASCII/Unicode oraz przygotowywania danych do API lub systemów wbudowanych. Wszystkie konwersje odbywają się w przeglądarce; żadne dane nie są wysyłane na serwer.",
+          "exampleHeading": "Przykład",
+          "exampleText": "Typ wejścia: Widoczny tekst ASCII. Wejście: sdsada. Widoczny tekst ASCII: sdsada. Binarne: 01110011 01100100 01110011 01100001 01100100 01100001. Heksadecymalne: 73 64 73 61 64 61. Dziesiętne: 115 100 115 97 100 97. Użyj separatora „Pusta spacja” lub „Przecinek (i spacja)” do formatowania wyniku liczbowego."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {"question": "Co to jest ASCII?", "answer": "ASCII (American Standard Code for Information Interchange) przypisuje kody numeryczne 0–127 typowym znakom (litery, cyfry, symbole). Rozszerzone ASCII używa 0–255. Ten konwerter działa z wartościami bajtów 0–255 i wyświetla je jako tekst, hex, binarnie i dziesiętnie."},
+            {"question": "Jak przekonwertować tekst na hex lub binarnie?", "answer": "Wybierz typ wejścia „Widoczny tekst ASCII”, wprowadź tekst i wybierz separator. Narzędzie pokaże Binarne, Heksadecymalne i Dziesiętne dla każdego znaku. Możesz skopiować dowolny format wyniku."},
+            {"question": "Czy mogę przekonwertować hex lub dziesiętnie z powrotem na tekst?", "answer": "Tak. Wybierz typ wejścia „Heksadecymalne”, „Binarne” lub „Dziesiętne”, następnie wprowadź wartości oddzielone wybranym separatorem (np. spacjami lub przecinkami). Wynik Widoczny tekst ASCII pokaże odpowiadające znaki tam, gdzie to możliwe."},
+            {"question": "Do czego służy separator?", "answer": "Separator służy do dzielenia wejścia przy wklejaniu wartości hex, binarnych lub dziesiętnych (np. „73 64 73”) oraz do formatowania wyniku liczbowego (binarnie, hex, dziesiętnie). Możesz użyć pustej spacji, przecinka i spacji lub własnego separatora do 10 znaków."},
+            {"question": "Czy ten konwerter ASCII jest darmowy?", "answer": "Tak. Konwerter ASCII jest darmowy. Nie wymaga rejestracji ani płatności. Wszystkie konwersje odbywają się w przeglądarce."}
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "textToBinary": "Konwerter tekstu na binarny",
+          "textToBinaryDesc": "Konwertuj tekst na binarny z UTF-8, UTF-16 i własnymi separatorami",
+          "dnaToMrna": "Konwerter DNA na mRNA",
+          "dnaToMrnaDesc": "Transkrybuj DNA na mRNA i tłumacz na białka",
+          "lettersToNumbers": "Litery na liczby",
+          "lettersToNumbersDesc": "Konwertuj litery na liczby (A=1, B=2 itd.)"
+        }
+      }
+    },
     "italicText": {
       "title": "Generator Tekstu Kursywą",
       "description": "Generuj tekst kursywą natychmiast z wieloma stylami Unicode: kursywa serif, skrypt kursywy i kursywa sans-serif. Idealny do mediów społecznościowych, projektowania i kreatywnego pisania.",

@@ -2840,6 +2840,78 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "ASCII 转换器",
+      "titleBadge": "文本与编码",
+      "description": "在 ASCII 文本、十六进制、二进制和十进制之间转换。输入文本或数字码，使用自定义分隔符即时转换。",
+      "inputTypeLabel": "输入类型",
+      "inputTypeAscii": "可见 ASCII 文本",
+      "inputTypeHex": "十六进制",
+      "inputTypeBinary": "二进制",
+      "inputTypeDecimal": "十进制",
+      "inputLabel": "输入",
+      "inputPlaceholder": "输入文本或代码（如文本、十六进制、二进制或十进制值）...",
+      "separator": "分隔符",
+      "separatorSpace": "空格",
+      "separatorComma": "逗号（及空格）",
+      "separatorCustom": "自定义",
+      "customSeparatorLabel": "输入分隔符",
+      "customSeparatorPlaceholder": "输入分隔符（最多 10 个字符）",
+      "reset": "重置",
+      "outputAscii": "可见 ASCII 文本",
+      "outputBinary": "二进制",
+      "outputHex": "十六进制",
+      "outputDecimal": "十进制",
+      "outputPlaceholder": "输入以查看输出",
+      "seo": {
+        "title": "ASCII 转换器 – 文本转十六进制、二进制与十进制",
+        "description": "免费 ASCII 转换器。将文本转换为十六进制、二进制和十进制并可逆转换。支持自定义分隔符。适用于编码、调试和编程。",
+        "keywords": "ASCII 转换器, ASCII 转十六进制, ASCII 转二进制, ASCII 转十进制, 十六进制转 ASCII, 二进制转 ASCII, 十进制转 ASCII, 字符码转换器, 文本编码",
+        "content": {
+          "heading": "如何使用 ASCII 转换器",
+          "paragraph1": "ASCII 转换器在可见文本与十六进制、二进制、十进制的数字码之间转换。选择输入类型：可见 ASCII 文本、十六进制、二进制或十进制。输入或粘贴后，工具会即时更新所有输出。",
+          "paragraph2": "当输入为 ASCII 文本时，每个字符会转换为字节值（0–255）。输出以二进制（8 位）、十六进制（每字节两位）和十进制显示相同数据。当输入为十六进制、二进制或十进制时，工具按所选分隔符解析数值并显示对应文本及其他数字格式。",
+          "paragraph3": "使用分隔符选项以匹配数据：如 \"73 64 73\" 用空格、\"73, 64, 73\" 用逗号和空格，其他格式可用自定义分隔符（最多 10 个字符）。这样输出易读且与脚本或手册兼容。",
+          "paragraph4": "转换器可用于消息编解码、字符集调试、学习 ASCII/Unicode 值以及为 API 或嵌入式系统准备数据。所有转换在浏览器内完成，不会向服务器发送数据。",
+          "exampleHeading": "示例",
+          "exampleText": "输入类型：可见 ASCII 文本。输入：sdsada。可见 ASCII 文本：sdsada。二进制：01110011 01100100 01110011 01100001 01100100 01100001。十六进制：73 64 73 61 64 61。十进制：115 100 115 97 100 97。使用分隔符「空格」或「逗号（及空格）」格式化数字输出。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {
+              "question": "什么是 ASCII？",
+              "answer": "ASCII（美国信息交换标准代码）为常见字符（字母、数字、符号）分配 0–127 的数字码。扩展 ASCII 使用 0–255。本转换器处理 0–255 的字节值，并以文本、十六进制、二进制和十进制显示。"
+            },
+            {
+              "question": "如何将文本转换为十六进制或二进制？",
+              "answer": "选择输入类型「可见 ASCII 文本」，输入文本并选择分隔符。工具会显示每个字符的二进制、十六进制和十进制。可复制任意输出格式。"
+            },
+            {
+              "question": "能否将十六进制或十进制转回文本？",
+              "answer": "可以。选择输入类型「十六进制」「二进制」或「十进制」，然后输入用所选分隔符（如空格或逗号）分隔的值。可见 ASCII 文本输出会在可能时显示对应字符。"
+            },
+            {
+              "question": "分隔符有什么用？",
+              "answer": "分隔符用于在粘贴十六进制、二进制或十进制值（如 \"73 64 73\"）时拆分输入，以及格式化数字输出（二进制、十六进制、十进制）。可使用空格、逗号加空格或最多 10 个字符的自定义分隔符。"
+            },
+            {
+              "question": "这个 ASCII 转换器免费吗？",
+              "answer": "是的。ASCII 转换器免费使用。无需注册或付费。所有转换均在您的浏览器中运行。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "textToBinary": "文本转二进制转换器",
+          "textToBinaryDesc": "使用 UTF-8、UTF-16 和自定义分隔符将文本转为二进制",
+          "dnaToMrna": "DNA 转 mRNA 转换器",
+          "dnaToMrnaDesc": "将 DNA 转录为 mRNA 并翻译为蛋白质",
+          "lettersToNumbers": "字母转数字转换器",
+          "lettersToNumbersDesc": "将字母转换为数字（A=1，B=2 等）"
+        }
+      }
+    },
     "italicText": {
       "title": "斜体文本生成器",
       "description": "使用多种Unicode样式即时生成斜体文本：serif斜体、草书脚本和sans-serif斜体。非常适合社交媒体、设计和创意写作。",

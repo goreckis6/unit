@@ -2844,6 +2844,78 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "ASCII Dönüştürücü",
+      "titleBadge": "Metin ve Kodlama",
+      "description": "ASCII metin, onaltılık, ikili ve ondalık arasında dönüştürün. Metin veya sayısal kodlar girin ve özelleştirilebilir ayırıcılarla anında dönüşümler alın.",
+      "inputTypeLabel": "Giriş türü",
+      "inputTypeAscii": "Görünür ASCII metin",
+      "inputTypeHex": "Onaltılık",
+      "inputTypeBinary": "İkili",
+      "inputTypeDecimal": "Ondalık",
+      "inputLabel": "Giriş",
+      "inputPlaceholder": "Metin veya kod girin (örn. metin, hex, ikili veya ondalık değerler)...",
+      "separator": "Ayırıcı",
+      "separatorSpace": "Boşluk",
+      "separatorComma": "Virgül (ve boşluk)",
+      "separatorCustom": "Kullanıcı tanımlı",
+      "customSeparatorLabel": "Ayırıcınızı yazın",
+      "customSeparatorPlaceholder": "Ayırıcı girin (en fazla 10 karakter)",
+      "reset": "Sıfırla",
+      "outputAscii": "Görünür ASCII metin",
+      "outputBinary": "İkili",
+      "outputHex": "Onaltılık",
+      "outputDecimal": "Ondalık",
+      "outputPlaceholder": "Çıktıyı görmek için giriş yapın",
+      "seo": {
+        "title": "ASCII Dönüştürücü – Metin, Hex, İkili ve Ondalık",
+        "description": "Ücretsiz ASCII dönüştürücü. Metni hex, ikili ve ondalığa dönüştürün ve geri alın. Özel ayırıcıları destekler. Kodlama, hata ayıklama ve programlama için gerekli.",
+        "keywords": "ASCII dönüştürücü, ASCII'den hex, ASCII'den ikili, ASCII'den ondalık, hex'ten ASCII, ikiliden ASCII, ondalıktan ASCII, karakter kodu dönüştürücü, metin kodlama",
+        "content": {
+          "heading": "ASCII Dönüştürücü Nasıl Kullanılır",
+          "paragraph1": "ASCII dönüştürücü, görünür metin ile onaltılık, ikili ve ondalık sayısal kodlar arasında dönüştürme yapar. Giriş türünü seçin: görünür ASCII metin, onaltılık, ikili veya ondalık. Girişi yazın veya yapıştırın; araç tüm çıktıları anında günceller.",
+          "paragraph2": "Giriş ASCII metin olduğunda her karakter bayt değerine (0–255) dönüştürülür. Çıktılar aynı veriyi ikili (8 bit), hex (bayt başına iki rakam) ve ondalık olarak gösterir. Giriş hex, ikili veya ondalık olduğunda araç seçilen ayırıcıyı kullanarak değerleri ayrıştırır ve karşılık gelen metni artı diğer sayısal biçimleri gösterir.",
+          "paragraph3": "Verilerinize uyması için ayırıcı seçeneğini kullanın: \"73 64 73\" gibi listeler için boşluk, \"73, 64, 73\" için virgül ve boşluk veya diğer biçimler için özel ayırıcı (en fazla 10 karakter). Böylece çıktı okunabilir kalır ve betikler veya kılavuzlarla uyumludur.",
+          "paragraph4": "Dönüştürücü mesaj kodlama ve çözme, karakter setlerinde hata ayıklama, ASCII/Unicode değerlerini öğrenme ve API veya gömülü sistemler için veri hazırlama için kullanışlıdır. Tüm dönüşümler tarayıcıda çalışır; hiçbir veri sunucuya gönderilmez.",
+          "exampleHeading": "Örnek",
+          "exampleText": "Giriş türü: Görünür ASCII metin. Giriş: sdsada. Görünür ASCII metin: sdsada. İkili: 01110011 01100100 01110011 01100001 01100100 01100001. Onaltılık: 73 64 73 61 64 61. Ondalık: 115 100 115 97 100 97. Sayısal çıktıyı biçimlendirmek için \"Boşluk\" veya \"Virgül (ve boşluk)\" ayırıcısını kullanın."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "ASCII nedir?",
+              "answer": "ASCII (American Standard Code for Information Interchange) yaygın karakterlere (harfler, rakamlar, semboller) 0–127 sayısal kodları atar. Genişletilmiş ASCII 0–255 kullanır. Bu dönüştürücü 0–255 bayt değerleriyle çalışır ve bunları metin, hex, ikili ve ondalık olarak gösterir."
+            },
+            {
+              "question": "Metni hex veya ikiliye nasıl dönüştürürüm?",
+              "answer": "Giriş türü olarak \"Görünür ASCII metin\" seçin, metni girin ve bir ayırıcı seçin. Araç her karakter için İkili, Onaltılık ve Ondalık gösterir. Herhangi bir çıktı biçimini kopyalayabilirsiniz."
+            },
+            {
+              "question": "Hex veya ondalığı tekrar metne dönüştürebilir miyim?",
+              "answer": "Evet. Giriş türü olarak \"Onaltılık\", \"İkili\" veya \"Ondalık\" seçin, ardından seçtiğiniz ayırıcıyla ayrılmış değerleri girin (örn. boşluk veya virgül). Görünür ASCII metin çıktısı mümkün olan yerlerde karşılık gelen karakterleri gösterir."
+            },
+            {
+              "question": "Ayırıcı ne işe yarar?",
+              "answer": "Ayırıcı, hex, ikili veya ondalık değerler yapıştırdığınızda girişi bölmek (örn. \"73 64 73\") ve sayısal çıktıyı (ikili, hex, ondalık) biçimlendirmek için kullanılır. Boşluk, virgül ve boşluk veya en fazla 10 karakterlik özel ayırıcı kullanabilirsiniz."
+            },
+            {
+              "question": "Bu ASCII dönüştürücü ücretsiz mi?",
+              "answer": "Evet. ASCII dönüştürücü ücretsizdir. Kayıt veya ödeme gerekmez. Tüm dönüşümler tarayıcınızda çalışır."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "textToBinary": "Metin İkili Dönüştürücü",
+          "textToBinaryDesc": "Metni UTF-8, UTF-16 ve özel ayırıcılarla ikiliye dönüştürün",
+          "dnaToMrna": "DNA mRNA Dönüştürücü",
+          "dnaToMrnaDesc": "DNA'yı mRNA'ya transkribe edin ve proteine çevirin",
+          "lettersToNumbers": "Harflerden Sayılara Dönüştürücü",
+          "lettersToNumbersDesc": "Harfleri sayılara dönüştürün (A=1, B=2 vb.)"
+        }
+      }
+    },
     "italicText": {
       "title": "İtalik Metin Oluşturucu",
       "description": "Birden fazla Unicode stiliyle anında italik metin oluşturun: serif italik, kursif script ve sans-serif italik. Sosyal medya, tasarım ve yaratıcı yazım için mükemmel.",

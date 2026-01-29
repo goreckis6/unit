@@ -2840,6 +2840,63 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "ASCII-muunnin",
+      "titleBadge": "Teksti ja koodaus",
+      "description": "Muunna ASCII-tekstin, heksadesimaalin, binäärin ja desimaalin välillä. Syötä teksti tai numeeriset koodit ja saat välittömät muunnokset mukautettavilla erottimilla.",
+      "inputTypeLabel": "Syötetyyppi",
+      "inputTypeAscii": "Näkyvä ASCII-teksti",
+      "inputTypeHex": "Heksadesimaali",
+      "inputTypeBinary": "Binääri",
+      "inputTypeDecimal": "Desimaali",
+      "inputLabel": "Syöte",
+      "inputPlaceholder": "Syötä teksti tai koodit (esim. teksti, hex, binääri tai desimaali)...",
+      "separator": "Erottaja",
+      "separatorSpace": "Välilyönti",
+      "separatorComma": "Pilku (ja välilyönti)",
+      "separatorCustom": "Käyttäjän määrittämä",
+      "customSeparatorLabel": "Syötä erottaja",
+      "customSeparatorPlaceholder": "Syötä erottaja (enintään 10 merkkiä)",
+      "reset": "Nollaa",
+      "outputAscii": "Näkyvä ASCII-teksti",
+      "outputBinary": "Binääri",
+      "outputHex": "Heksadesimaali",
+      "outputDecimal": "Desimaali",
+      "outputPlaceholder": "Syötä syöte nähdäksesi tulosteen",
+      "seo": {
+        "title": "ASCII-muunnin – Teksti hex-, binääri- ja desimaalimuotoon",
+        "description": "Ilmainen ASCII-muunnin. Muunna teksti hex-, binääri- ja desimaalimuotoon ja takaisin. Mukautettavat erottimet. Koodaukseen, virheenkorjaukseen ja ohjelmointiin.",
+        "keywords": "ASCII-muunnin, ASCII hexiksi, ASCII binääriksi, ASCII desimaaliksi, hex ASCIIksi, binääri ASCIIksi, desimaali ASCIIksi, merkkikoodimuunnin, tekstikoodaus",
+        "content": {
+          "heading": "ASCII-muunnimen käyttö",
+          "paragraph1": "ASCII-muunnin muuntaa näkyvän tekstin ja numeeristen koodien välillä heksadesimaalissa, binäärissä ja desimaalissa. Valitse syötetyyppi: näkyvä ASCII-teksti, heksadesimaali, binääri tai desimaali. Kirjoita tai liitä syöte; työkalu päivittää kaikki tulosteet välittömästi.",
+          "paragraph2": "Kun syöte on ASCII-tekstiä, jokainen merkki muunnetaan tavuarvoksi (0–255). Tulosteet näyttävät samat tiedot binäärinä (8 bittiä), heksana (kaksi numeroa per tavu) ja desimaalina. Kun syöte on hex, binääri tai desimaali, työkalu jäsentää arvot valitulla erottimella ja näyttää vastaavan tekstin sekä muut numeeriset muodot.",
+          "paragraph3": "Käytä erottimen vaihtoehtoa vastaamaan tietojasi: välilyönti listoille kuten «73 64 73», pilkku ja välilyönti muotoon «73, 64, 73» tai mukautettu erotin (enintään 10 merkkiä). Tuloste pysyy luettavana ja yhteensopivana skriptien tai manuaalien kanssa.",
+          "paragraph4": "Muunnin on hyödyllinen viestien koodaamiseen ja purkamiseen, merkkijoukkojen virheenkorjaukseen, ASCII/Unicode-arvojen oppimiseen ja tietojen valmisteluun API- tai sulautetuille järjestelmille. Kaikki muunnokset tapahtuvat selaimessa; tietoja ei lähetetä palvelimelle.",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "Syötetyyppi: Näkyvä ASCII-teksti. Syöte: sdsada. Näkyvä ASCII-teksti: sdsada. Binääri: 01110011 01100100 01110011 01100001 01100100 01100001. Heksadesimaali: 73 64 73 61 64 61. Desimaali: 115 100 115 97 100 97. Käytä erotinta «Välilyönti» tai «Pilku (ja välilyönti)» numeeriseen tulosteeseen."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Mikä on ASCII?", "answer": "ASCII (American Standard Code for Information Interchange) määrittää numeeriset koodit 0–127 yleisille merkeille (kirjaimet, numerot, symbolit). Laajennettu ASCII käyttää 0–255. Tämä muunnin toimii tavuarvoilla 0–255 ja näyttää ne tekstinä, heksana, binäärinä ja desimaalina."},
+            {"question": "Miten muunnan tekstin hex- tai binäärimuotoon?", "answer": "Valitse syötetyyppi «Näkyvä ASCII-teksti», syötä teksti ja valitse erotin. Työkalu näyttää Binääri, Heksadesimaali ja Desimaali jokaiselle merkkille. Voit kopioida minkä tahansa tulostemuodon."},
+            {"question": "Voinko muuntaa hex- tai desimaaliarvon takaisin tekstiksi?", "answer": "Kyllä. Valitse syötetyyppi «Heksadesimaali», «Binääri» tai «Desimaali», syötä sitten arvot valitulla erottimella erotettuna (esim. välilyönnit tai pilkut). Tuloste «Näkyvä ASCII-teksti» näyttää vastaavat merkit kun mahdollista."},
+            {"question": "Mihin erotinta käytetään?", "answer": "Erotinta käytetään syötteen jakamiseen kun liität hex-, binääri- tai desimaaliarvoja (esim. «73 64 73») ja numeerisen tulosteen (binääri, hex, desimaali) muotoiluun. Voit käyttää välilyöntiä, pilkku ja välilyöntiä tai mukautettua erotinta enintään 10 merkkiin."},
+            {"question": "Onko tämä ASCII-muunnin ilmainen?", "answer": "Kyllä. ASCII-muunnin on ilmainen. Ei rekisteröintiä tai maksua. Kaikki muunnokset tapahtuvat selaimessasi."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskurit",
+          "textToBinary": "Teksti binääri -muunnin",
+          "textToBinaryDesc": "Muunna teksti binääriksi UTF-8-, UTF-16- ja mukautettavilla erottimilla",
+          "dnaToMrna": "DNA mRNA-muunnin",
+          "dnaToMrnaDesc": "Transkriboi DNA mRNA:ksi ja käännä proteiineiksi",
+          "lettersToNumbers": "Kirjaimet numeroiksi",
+          "lettersToNumbersDesc": "Muunna kirjaimet numeroiksi (A=1, B=2 jne.)"
+        }
+      }
+    },
     "italicText": {
       "title": "Kursiivi Teksti Generaattori",
       "description": "Luo kursiivi tekstiä heti useilla Unicode-tyyleillä: serif kursiivi, kursiivi käsialakirjoitus ja sans-serif kursiivi. Täydellinen sosiaaliseen mediaan, suunnitteluun ja luovaan kirjoittamiseen.",

@@ -2840,6 +2840,63 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "Convertisseur ASCII",
+      "titleBadge": "Texte et encodage",
+      "description": "Convertissez entre texte ASCII, hexadécimal, binaire et décimal. Saisissez du texte ou des codes numériques et obtenez des conversions instantanées avec des séparateurs personnalisables.",
+      "inputTypeLabel": "Type d'entrée",
+      "inputTypeAscii": "Texte ASCII visible",
+      "inputTypeHex": "Hexadécimal",
+      "inputTypeBinary": "Binaire",
+      "inputTypeDecimal": "Décimal",
+      "inputLabel": "Entrée",
+      "inputPlaceholder": "Saisissez du texte ou des codes (ex. texte, hex, binaire ou décimal)...",
+      "separator": "Séparateur",
+      "separatorSpace": "Espace vide",
+      "separatorComma": "Virgule (et espace)",
+      "separatorCustom": "Défini par l'utilisateur",
+      "customSeparatorLabel": "Saisissez votre séparateur",
+      "customSeparatorPlaceholder": "Saisir le séparateur (max 10 caractères)",
+      "reset": "Réinitialiser",
+      "outputAscii": "Texte ASCII visible",
+      "outputBinary": "Binaire",
+      "outputHex": "Hexadécimal",
+      "outputDecimal": "Décimal",
+      "outputPlaceholder": "Saisissez une entrée pour voir la sortie",
+      "seo": {
+        "title": "Convertisseur ASCII – Texte en Hex, Binaire et Décimal",
+        "description": "Convertisseur ASCII gratuit. Convertissez le texte en hex, binaire et décimal et inversement. Séparateurs personnalisables. Essentiel pour l'encodage, le débogage et la programmation.",
+        "keywords": "convertisseur ASCII, ASCII vers hex, ASCII vers binaire, ASCII vers décimal, hex vers ASCII, binaire vers ASCII, décimal vers ASCII, convertisseur de codes caractères, encodage texte",
+        "content": {
+          "heading": "Comment utiliser le convertisseur ASCII",
+          "paragraph1": "Le convertisseur ASCII convertit entre le texte visible et les codes numériques en hexadécimal, binaire et décimal. Choisissez le type d'entrée : texte ASCII visible, hexadécimal, binaire ou décimal. Saisissez ou collez votre entrée ; l'outil met à jour toutes les sorties instantanément.",
+          "paragraph2": "Quand l'entrée est du texte ASCII, chaque caractère est converti en sa valeur d'octet (0–255). Les sorties affichent les mêmes données en binaire (8 bits), hex (deux chiffres par octet) et décimal. Quand l'entrée est hex, binaire ou décimal, l'outil analyse les valeurs avec le séparateur choisi et affiche le texte correspondant ainsi que les autres formats numériques.",
+          "paragraph3": "Utilisez l'option séparateur pour adapter vos données : espace vide pour des listes comme « 73 64 73 », virgule et espace pour « 73, 64, 73 », ou un séparateur personnalisé (jusqu'à 10 caractères) pour d'autres formats. La sortie reste lisible et compatible avec les scripts ou manuels.",
+          "paragraph4": "Le convertisseur sert à encoder et décoder des messages, déboguer des jeux de caractères, apprendre les valeurs ASCII/Unicode et préparer des données pour des API ou systèmes embarqués. Toutes les conversions s'effectuent dans le navigateur ; aucune donnée n'est envoyée au serveur.",
+          "exampleHeading": "Exemple",
+          "exampleText": "Type d'entrée : Texte ASCII visible. Entrée : sdsada. Texte ASCII visible : sdsada. Binaire : 01110011 01100100 01110011 01100001 01100100 01100001. Hexadécimal : 73 64 73 61 64 61. Décimal : 115 100 115 97 100 97. Utilisez le séparateur « Espace vide » ou « Virgule (et espace) » pour formater la sortie numérique."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {"question": "Qu'est-ce que l'ASCII ?", "answer": "L'ASCII (American Standard Code for Information Interchange) associe les codes 0–127 aux caractères courants (lettres, chiffres, symboles). L'ASCII étendu utilise 0–255. Ce convertisseur travaille avec les valeurs d'octets 0–255 et les affiche en texte, hex, binaire et décimal."},
+            {"question": "Comment convertir du texte en hex ou binaire ?", "answer": "Sélectionnez le type d'entrée « Texte ASCII visible », saisissez votre texte et choisissez un séparateur. L'outil affiche Binaire, Hexadécimal et Décimal pour chaque caractère. Vous pouvez copier n'importe quel format de sortie."},
+            {"question": "Peut-on convertir hex ou décimal en texte ?", "answer": "Oui. Sélectionnez le type d'entrée « Hexadécimal », « Binaire » ou « Décimal », puis saisissez les valeurs séparées par le séparateur choisi (ex. espaces ou virgules). La sortie « Texte ASCII visible » affiche les caractères correspondants lorsque c'est possible."},
+            {"question": "À quoi sert le séparateur ?", "answer": "Le séparateur sert à découper l'entrée lorsque vous collez des valeurs hex, binaires ou décimales (ex. « 73 64 73 ») et à formater la sortie numérique (binaire, hex, décimal). Vous pouvez utiliser l'espace vide, la virgule et l'espace, ou un séparateur personnalisé de 10 caractères maximum."},
+            {"question": "Ce convertisseur ASCII est-il gratuit ?", "answer": "Oui. Le convertisseur ASCII est gratuit. Aucune inscription ni paiement. Toutes les conversions se font dans votre navigateur."}
+          ]
+        },
+        "related": {
+          "heading": "Calculatrices associées",
+          "textToBinary": "Convertisseur Texte vers Binaire",
+          "textToBinaryDesc": "Convertir du texte en binaire avec UTF-8, UTF-16 et séparateurs personnalisés",
+          "dnaToMrna": "Convertisseur ADN vers ARNm",
+          "dnaToMrnaDesc": "Transcrire l'ADN en ARNm et traduire en protéines",
+          "lettersToNumbers": "Lettres vers nombres",
+          "lettersToNumbersDesc": "Convertir les lettres en nombres (A=1, B=2, etc.)"
+        }
+      }
+    },
     "italicText": {
       "title": "Générateur de Texte en Italique",
       "description": "Générez du texte en italique instantanément avec plusieurs styles Unicode : italique serif, script cursif et italique sans-serif. Parfait pour les réseaux sociaux, le design et l'écriture créative.",

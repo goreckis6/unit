@@ -2840,6 +2840,63 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "ASCII Konverter",
+      "titleBadge": "Tekst og kodning",
+      "description": "Konverter mellem ASCII-tekst, hexadecimal, binær og decimal. Indtast tekst eller numeriske koder og få øjeblikkelige konverteringer med tilpasselige separatortegn.",
+      "inputTypeLabel": "Indtastningstype",
+      "inputTypeAscii": "Synlig ASCII-tekst",
+      "inputTypeHex": "Hexadecimal",
+      "inputTypeBinary": "Binær",
+      "inputTypeDecimal": "Decimal",
+      "inputLabel": "Indtastning",
+      "inputPlaceholder": "Indtast tekst eller koder (f.eks. tekst, hex, binær eller decimal)...",
+      "separator": "Separatortegn",
+      "separatorSpace": "Mellemrum",
+      "separatorComma": "Komma (og mellemrum)",
+      "separatorCustom": "Brugerdefineret",
+      "customSeparatorLabel": "Indtast separatortegn",
+      "customSeparatorPlaceholder": "Indtast separatortegn (maks. 10 tegn)",
+      "reset": "Nulstil",
+      "outputAscii": "Synlig ASCII-tekst",
+      "outputBinary": "Binær",
+      "outputHex": "Hexadecimal",
+      "outputDecimal": "Decimal",
+      "outputPlaceholder": "Indtast for at se output",
+      "seo": {
+        "title": "ASCII Konverter – Tekst til Hex, Binær og Decimal",
+        "description": "Gratis ASCII konverter. Konverter tekst til hex, binær og decimal og tilbage. Tilpasselige separatortegn. Til kodning, fejlsøgning og programmering.",
+        "keywords": "ASCII konverter, ASCII til hex, ASCII til binær, ASCII til decimal, hex til ASCII, binær til ASCII, decimal til ASCII, tegnkodekonverter, tekstkodning",
+        "content": {
+          "heading": "Sådan bruges ASCII konverteren",
+          "paragraph1": "ASCII konverteren konverterer mellem synlig tekst og numeriske koder i hexadecimal, binær og decimal. Vælg indtastningstype: synlig ASCII-tekst, hexadecimal, binær eller decimal. Skriv eller indsæt din indtastning; værktøjet opdaterer alle output øjeblikkeligt.",
+          "paragraph2": "Når indtastning er ASCII-tekst, konverteres hvert tegn til sin byteværdi (0–255). Output viser de samme data som binær (8 bit), hex (to cifre per byte) og decimal. Når indtastning er hex, binær eller decimal, parser værktøjet værdier med det valgte separatortegn og viser den tilsvarende tekst samt andre numeriske formater.",
+          "paragraph3": "Brug separatortegnsvalget til at matche dine data: mellemrum til lister som «73 64 73», komma og mellemrum til «73, 64, 73» eller et brugerdefineret separatortegn (op til 10 tegn). Output forbliver læsbart og kompatibelt med scripts eller manualer.",
+          "paragraph4": "Konverteren er nyttig til kodning og dekodning af beskeder, fejlsøgning af tegnsæt, læring af ASCII/Unicode-værdier og forberedelse af data til API'er eller indlejrede systemer. Alle konverteringer kører i browseren; ingen data sendes til server.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "Indtastningstype: Synlig ASCII-tekst. Indtastning: sdsada. Synlig ASCII-tekst: sdsada. Binær: 01110011 01100100 01110011 01100001 01100100 01100001. Hexadecimal: 73 64 73 61 64 61. Decimal: 115 100 115 97 100 97. Brug separatortegnet «Mellemrum» eller «Komma (og mellemrum)» til numerisk output."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {"question": "Hvad er ASCII?", "answer": "ASCII (American Standard Code for Information Interchange) tildeler numeriske koder 0–127 til almindelige tegn (bogstaver, cifre, symboler). Udvidet ASCII bruger 0–255. Denne konverter arbejder med byteværdier 0–255 og viser dem som tekst, hex, binær og decimal."},
+            {"question": "Hvordan konverterer jeg tekst til hex eller binær?", "answer": "Vælg indtastningstype «Synlig ASCII-tekst», indtast din tekst og vælg et separatortegn. Værktøjet viser Binær, Hexadecimal og Decimal for hvert tegn. Du kan kopiere ethvert outputformat."},
+            {"question": "Kan jeg konvertere hex eller decimal tilbage til tekst?", "answer": "Ja. Vælg indtastningstype «Hexadecimal», «Binær» eller «Decimal», indtast derefter værdier adskilt af dit valgte separatortegn (f.eks. mellemrum eller kommaer). Output «Synlig ASCII-tekst» viser de tilsvarende tegn hvor muligt."},
+            {"question": "Hvad bruges separatortegnet til?", "answer": "Separatortegnet bruges til at opdele indtastning ved indsættelse af hex-, binære eller decimale værdier (f.eks. «73 64 73») og til at formatere det numeriske output (binær, hex, decimal). Du kan bruge mellemrum, komma og mellemrum eller et brugerdefineret separatortegn på op til 10 tegn."},
+            {"question": "Er denne ASCII konverter gratis?", "answer": "Ja. ASCII konverteren er gratis. Ingen registrering eller betaling. Alle konverteringer kører i din browser."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterede lommeregnere",
+          "textToBinary": "Tekst til binær konverter",
+          "textToBinaryDesc": "Konverter tekst til binær med UTF-8, UTF-16 og brugerdefinerede separatortegn",
+          "dnaToMrna": "DNA til mRNA konverter",
+          "dnaToMrnaDesc": "Transkriber DNA til mRNA og oversæt til proteiner",
+          "lettersToNumbers": "Bogstaver til tal",
+          "lettersToNumbersDesc": "Konverter bogstaver til tal (A=1, B=2 osv.)"
+        }
+      }
+    },
     "italicText": {
       "title": "Kursiv Tekst Generator",
       "description": "Generer kursiv tekst øjeblikkeligt med flere Unicode-stile: serif kursiv, kursiv skrift og sans-serif kursiv. Perfekt til sociale medier, design og kreativ skrivning.",

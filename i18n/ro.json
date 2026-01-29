@@ -2840,6 +2840,78 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "Convertor ASCII",
+      "titleBadge": "Text și codare",
+      "description": "Convertește între text ASCII, hexazecimal, binar și zecimal. Introduceți text sau coduri numerice și obțineți conversii instantanee cu separatoare personalizabile.",
+      "inputTypeLabel": "Tip intrare",
+      "inputTypeAscii": "Text ASCII vizibil",
+      "inputTypeHex": "Hexazecimal",
+      "inputTypeBinary": "Binar",
+      "inputTypeDecimal": "Zecimal",
+      "inputLabel": "Intrare",
+      "inputPlaceholder": "Introduceți text sau coduri (ex. text, hex, binar sau valori zecimale)...",
+      "separator": "Separator",
+      "separatorSpace": "Spațiu gol",
+      "separatorComma": "Virgulă (și spațiu)",
+      "separatorCustom": "Definit de utilizator",
+      "customSeparatorLabel": "Tastați separatorul",
+      "customSeparatorPlaceholder": "Introduceți separator (max 10 caractere)",
+      "reset": "Resetați",
+      "outputAscii": "Text ASCII vizibil",
+      "outputBinary": "Binar",
+      "outputHex": "Hexazecimal",
+      "outputDecimal": "Zecimal",
+      "outputPlaceholder": "Introduceți intrare pentru a vedea rezultatul",
+      "seo": {
+        "title": "Convertor ASCII – Text în Hex, Binar și Zecimal",
+        "description": "Convertor ASCII gratuit. Convertește text în hex, binar și zecimal și invers. Suportă separatoare personalizate. Esențial pentru codare, depanare și programare.",
+        "keywords": "convertor ASCII, ASCII în hex, ASCII în binar, ASCII în zecimal, hex în ASCII, binar în ASCII, zecimal în ASCII, convertor cod caractere, codare text",
+        "content": {
+          "heading": "Cum să folosiți convertorul ASCII",
+          "paragraph1": "Convertorul ASCII convertește între text vizibil și coduri numerice în hexazecimal, binar și zecimal. Alegeți tipul de intrare: text ASCII vizibil, hexazecimal, binar sau zecimal. Tastați sau lipiți intrarea; instrumentul actualizează toate ieșirile instantaneu.",
+          "paragraph2": "Când intrarea este text ASCII, fiecare caracter este convertit la valoarea sa pe octet (0–255). Ieșirile afișează aceleași date ca binar (8 biți), hex (două cifre per octet) și zecimal. Când intrarea este hex, binar sau zecimal, instrumentul analizează valorile folosind separatorul ales și afișează textul corespunzător plus celelalte formate numerice.",
+          "paragraph3": "Folosiți opțiunea separator pentru a potrivi datele: spațiu gol pentru liste precum \"73 64 73\", virgulă și spațiu pentru \"73, 64, 73\", sau un separator personalizat (până la 10 caractere) pentru alte formate. Astfel ieșirea rămâne lizibilă și compatibilă cu scripturi sau manuale.",
+          "paragraph4": "Convertorul este util pentru codarea și decodarea mesajelor, depanarea seturilor de caractere, învățarea valorilor ASCII/Unicode și pregătirea datelor pentru API-uri sau sisteme încorporate. Toate conversiile rulează în browser; nicio dată nu este trimisă pe server.",
+          "exampleHeading": "Exemplu",
+          "exampleText": "Tip intrare: Text ASCII vizibil. Intrare: sdsada. Text ASCII vizibil: sdsada. Binar: 01110011 01100100 01110011 01100001 01100100 01100001. Hexazecimal: 73 64 73 61 64 61. Zecimal: 115 100 115 97 100 97. Folosiți separatorul \"Spațiu gol\" sau \"Virgulă (și spațiu)\" pentru a formata ieșirea numerică."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            {
+              "question": "Ce este ASCII?",
+              "answer": "ASCII (American Standard Code for Information Interchange) atribuie coduri numerice 0–127 caracterelor comune (litere, cifre, simboluri). ASCII extins folosește 0–255. Acest convertor lucrează cu valori pe octet 0–255 și le afișează ca text, hex, binar și zecimal."
+            },
+            {
+              "question": "Cum convertesc text în hex sau binar?",
+              "answer": "Selectați tipul de intrare \"Text ASCII vizibil\", introduceți textul și alegeți un separator. Instrumentul afișează Binar, Hexazecimal și Zecimal pentru fiecare caracter. Puteți copia orice format de ieșire."
+            },
+            {
+              "question": "Pot converti hex sau zecimal înapoi în text?",
+              "answer": "Da. Selectați tipul de intrare \"Hexazecimal\", \"Binar\" sau \"Zecimal\", apoi introduceți valori separate de separatorul ales (ex. spații sau virgule). Ieșirea Text ASCII vizibil afișează caracterele corespunzătoare acolo unde este posibil."
+            },
+            {
+              "question": "La ce servește separatorul?",
+              "answer": "Separatorul este folosit pentru a împărți intrarea când lipiți valori hex, binare sau zecimale (ex. \"73 64 73\") și pentru a formata ieșirea numerică (binar, hex, zecimal). Puteți folosi spațiu gol, virgulă și spațiu sau un separator personalizat de până la 10 caractere."
+            },
+            {
+              "question": "Este gratuit acest convertor ASCII?",
+              "answer": "Da. Convertorul ASCII este gratuit. Nu este nevoie de înregistrare sau plată. Toate conversiunile rulează în browserul dvs."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare asemănătoare",
+          "textToBinary": "Convertor text în binar",
+          "textToBinaryDesc": "Convertește text în binar cu UTF-8, UTF-16 și separatoare personalizate",
+          "dnaToMrna": "Convertor DNA în mRNA",
+          "dnaToMrnaDesc": "Transcrie DNA în mRNA și traduce în proteine",
+          "lettersToNumbers": "Litere în numere",
+          "lettersToNumbersDesc": "Convertește literele în numere (A=1, B=2 etc.)"
+        }
+      }
+    },
     "italicText": {
       "title": "Generator Text Cursiv",
       "description": "Generați text cursiv instantaneu cu mai multe stiluri Unicode: cursiv serif, script cursiv și cursiv sans-serif. Perfect pentru rețelele sociale, design și scriere creativă.",

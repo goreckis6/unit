@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { BoldTextGenerator } from './calculator';
+import { AsciiConverterCalculator } from './calculator';
 import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
@@ -15,17 +15,17 @@ interface FaqItem {
 async function getFaqItems(locale: string): Promise<FaqItem[]> {
   try {
     const messages = await import(`@/i18n/${locale}.json`);
-    return (messages.default?.calculators?.boldText?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.asciiConverter?.seo?.faq?.items as FaqItem[]) || [];
   } catch {
     const messages = await import('@/i18n/en.json');
-    return (messages.default?.calculators?.boldText?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.asciiConverter?.seo?.faq?.items as FaqItem[]) || [];
   }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.boldText.seo' });
-  const path = '/calculators/others/bold-text';
+  const t = await getTranslations({ locale, namespace: 'calculators.asciiConverter.seo' });
+  const path = '/calculators/others/ascii-converter';
   const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
   return {
     title: t('title'),
@@ -44,15 +44,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function BoldTextPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function AsciiConverterPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.boldText' });
+  const t = await getTranslations({ locale, namespace: 'calculators.asciiConverter' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
 
   const faqItems = await getFaqItems(locale);
-  const tSeo = await getTranslations({ locale, namespace: 'calculators.boldText.seo.content' });
-  const tFaq = await getTranslations({ locale, namespace: 'calculators.boldText.seo.faq' });
-  const tRelated = await getTranslations({ locale, namespace: 'calculators.boldText.seo.related' });
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.asciiConverter.seo.content' });
+  const tFaq = await getTranslations({ locale, namespace: 'calculators.asciiConverter.seo.faq' });
+  const tRelated = await getTranslations({ locale, namespace: 'calculators.asciiConverter.seo.related' });
 
   return (
     <>
@@ -68,7 +68,7 @@ export default async function BoldTextPage({ params }: { params: Promise<{ local
             <span>{tCommon('calculators')}</span>
           </Link>
           <div className="header-content">
-            <div className="title-badge">Text Generator</div>
+            <div className="title-badge">{t('titleBadge')}</div>
             <h1 className="page-title">{t('title')}</h1>
             <p className="page-description">{t('description')}</p>
           </div>
@@ -78,7 +78,7 @@ export default async function BoldTextPage({ params }: { params: Promise<{ local
       <div className="calculator-container">
         <div className="container">
           <div className="calculator-card">
-            <BoldTextGenerator />
+            <AsciiConverterCalculator />
           </div>
         </div>
       </div>
@@ -88,51 +88,36 @@ export default async function BoldTextPage({ params }: { params: Promise<{ local
         <div className="container">
           <div className="seo-content-card">
             <h2 className="seo-heading">{tSeo('heading')}</h2>
-            
             <div className="seo-paragraphs">
-              <p className="seo-paragraph">
-                {tSeo('paragraph1')}
-              </p>
-              
-              <p className="seo-paragraph">
-                {tSeo('paragraph2')}
-              </p>
-              
-              <p className="seo-paragraph">
-                {tSeo('paragraph3')}
-              </p>
-              
-              <p className="seo-paragraph">
-                {tSeo('paragraph4')}
-              </p>
-              
+              <p className="seo-paragraph">{tSeo('paragraph1')}</p>
+              <p className="seo-paragraph">{tSeo('paragraph2')}</p>
+              <p className="seo-paragraph">{tSeo('paragraph3')}</p>
+              <p className="seo-paragraph">{tSeo('paragraph4')}</p>
               <div className="seo-example">
                 <h3 className="example-heading">{tSeo('exampleHeading')}</h3>
-                <p className="example-text">
-                  {tSeo('exampleText')}
-                </p>
+                <p className="example-text">{tSeo('exampleText')}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Related Calculators Section */}
+      {/* Related Calculators Section - styled like FAQ, above FAQ */}
       <div className="related-calculators-section">
         <div className="related-content-card">
           <h2 className="related-heading">{tRelated('heading')}</h2>
           <div className="related-grid">
-            <Link href="/calculators/others/italic-text" className="related-card">
-              <h3 className="related-title">{tRelated('italicText')}</h3>
-              <p className="related-desc">{tRelated('italicTextDesc')}</p>
-            </Link>
-            <Link href="/calculators/others/upside-down-text" className="related-card">
-              <h3 className="related-title">{tRelated('upsideDownText')}</h3>
-              <p className="related-desc">{tRelated('upsideDownTextDesc')}</p>
-            </Link>
             <Link href="/calculators/others/text-to-binary" className="related-card">
               <h3 className="related-title">{tRelated('textToBinary')}</h3>
               <p className="related-desc">{tRelated('textToBinaryDesc')}</p>
+            </Link>
+            <Link href="/calculators/others/dna-to-mrna" className="related-card">
+              <h3 className="related-title">{tRelated('dnaToMrna')}</h3>
+              <p className="related-desc">{tRelated('dnaToMrnaDesc')}</p>
+            </Link>
+            <Link href="/calculators/others/letters-to-numbers" className="related-card">
+              <h3 className="related-title">{tRelated('lettersToNumbers')}</h3>
+              <p className="related-desc">{tRelated('lettersToNumbersDesc')}</p>
             </Link>
           </div>
         </div>

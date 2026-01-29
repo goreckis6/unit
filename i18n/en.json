@@ -3448,6 +3448,78 @@
           "natoPhoneticDesc": "Convert text to NATO phonetic alphabet and vice versa"
         }
       }
+    },
+    "asciiConverter": {
+      "title": "ASCII Converter",
+      "titleBadge": "Text & Encoding",
+      "description": "Convert between ASCII text, hexadecimal, binary, and decimal. Enter text or numeric codes and get instant conversions with customizable separators.",
+      "inputTypeLabel": "Input type",
+      "inputTypeAscii": "Visible ASCII text",
+      "inputTypeHex": "Hexadecimal",
+      "inputTypeBinary": "Binary",
+      "inputTypeDecimal": "Decimal",
+      "inputLabel": "Input",
+      "inputPlaceholder": "Enter text or codes (e.g. text, hex, binary, or decimal values)...",
+      "separator": "Separator",
+      "separatorSpace": "Empty Space",
+      "separatorComma": "Comma (and space)",
+      "separatorCustom": "User defined",
+      "customSeparatorLabel": "Type your separator",
+      "customSeparatorPlaceholder": "Enter separator (max 10 characters)",
+      "reset": "Reset",
+      "outputAscii": "Visible ASCII text",
+      "outputBinary": "Binary",
+      "outputHex": "Hexadecimal",
+      "outputDecimal": "Decimal",
+      "outputPlaceholder": "Enter input to see output",
+      "seo": {
+        "title": "ASCII Converter – Text to Hex, Binary & Decimal",
+        "description": "Free ASCII converter. Convert text to hex, binary, and decimal and back. Supports custom separators. Essential for encoding, debugging, and programming.",
+        "keywords": "ASCII converter, ASCII to hex, ASCII to binary, ASCII to decimal, hex to ASCII, binary to ASCII, decimal to ASCII, character code converter, text encoding",
+        "content": {
+          "heading": "How to Use the ASCII Converter",
+          "paragraph1": "The ASCII converter converts between visible text and numeric codes in hexadecimal, binary, and decimal. Choose the input type: visible ASCII text, hexadecimal, binary, or decimal. Type or paste your input; the tool updates all outputs instantly.",
+          "paragraph2": "When input is ASCII text, each character is converted to its byte value (0–255). Outputs show the same data as binary (8-bit), hex (two digits per byte), and decimal. When input is hex, binary, or decimal, the tool parses values using the selected separator and displays the corresponding text plus the other numeric formats.",
+          "paragraph3": "Use the separator option to match your data: empty space for lists like \"73 64 73\", comma and space for \"73, 64, 73\", or a custom separator (up to 10 characters) for other formats. This keeps output readable and compatible with scripts or manuals.",
+          "paragraph4": "The converter is useful for encoding and decoding messages, debugging character sets, learning ASCII/Unicode values, and preparing data for APIs or embedded systems. All conversions run in the browser; no data is sent to a server.",
+          "exampleHeading": "Example",
+          "exampleText": "Input type: Visible ASCII text. Input: sdsada. Visible ASCII text: sdsada. Binary: 01110011 01100100 01110011 01100001 01100100 01100001. Hexadecimal: 73 64 73 61 64 61. Decimal: 115 100 115 97 100 97. Use Separator \"Empty Space\" or \"Comma (and space)\" to format numeric output."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is ASCII?",
+              "answer": "ASCII (American Standard Code for Information Interchange) assigns numeric codes 0–127 to common characters (letters, digits, symbols). Extended ASCII uses 0–255. This converter works with byte values 0–255 and displays them as text, hex, binary, and decimal."
+            },
+            {
+              "question": "How do I convert text to hex or binary?",
+              "answer": "Select input type \"Visible ASCII text\", enter your text, and choose a separator. The tool shows Binary, Hexadecimal, and Decimal for each character. You can copy any output format."
+            },
+            {
+              "question": "Can I convert hex or decimal back to text?",
+              "answer": "Yes. Select input type \"Hexadecimal\", \"Binary\", or \"Decimal\", then enter values separated by your chosen separator (e.g. spaces or commas). The Visible ASCII text output shows the corresponding characters where possible."
+            },
+            {
+              "question": "What is the separator for?",
+              "answer": "The separator is used to split input when you paste hex, binary, or decimal values (e.g. \"73 64 73\") and to format the numeric output (binary, hex, decimal). You can use empty space, comma and space, or a custom separator up to 10 characters."
+            },
+            {
+              "question": "Is this ASCII converter free?",
+              "answer": "Yes. The ASCII converter is free to use. No registration or payment is required. All conversion runs in your browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "textToBinary": "Text to Binary Converter",
+          "textToBinaryDesc": "Convert text to binary with UTF-8, UTF-16, and custom separators",
+          "dnaToMrna": "DNA to mRNA Converter",
+          "dnaToMrnaDesc": "Transcribe DNA to mRNA and translate to proteins",
+          "lettersToNumbers": "Letters to Numbers Converter",
+          "lettersToNumbersDesc": "Convert letters to numbers (A=1, B=2, etc.)"
+        }
+      }
     }
   },
   "notFound": {

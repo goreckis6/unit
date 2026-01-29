@@ -2840,6 +2840,78 @@
         }
       }
     },
+    "asciiConverter": {
+      "title": "ASCII Konvertor",
+      "titleBadge": "Text a kódovanie",
+      "description": "Konvertujte medzi ASCII textom, hexadecimálnym, binárnym a desatinným. Zadajte text alebo číselné kódy a získajte okamžité konverzie s prispôsobiteľnými oddeľovačmi.",
+      "inputTypeLabel": "Typ vstupu",
+      "inputTypeAscii": "Viditeľný ASCII text",
+      "inputTypeHex": "Hexadecimálne",
+      "inputTypeBinary": "Binárne",
+      "inputTypeDecimal": "Desatinné",
+      "inputLabel": "Vstup",
+      "inputPlaceholder": "Zadajte text alebo kódy (napr. text, hex, binárne alebo desatinné hodnoty)...",
+      "separator": "Oddeľovač",
+      "separatorSpace": "Prázdna medzera",
+      "separatorComma": "Čiarka (a medzera)",
+      "separatorCustom": "Používateľom definovaný",
+      "customSeparatorLabel": "Zadajte oddeľovač",
+      "customSeparatorPlaceholder": "Zadajte oddeľovač (max 10 znakov)",
+      "reset": "Reset",
+      "outputAscii": "Viditeľný ASCII text",
+      "outputBinary": "Binárne",
+      "outputHex": "Hexadecimálne",
+      "outputDecimal": "Desatinné",
+      "outputPlaceholder": "Zadajte vstup pre zobrazenie výstupu",
+      "seo": {
+        "title": "ASCII Konvertor – Text na Hex, Binárne a Desatinné",
+        "description": "Bezplatný ASCII konvertor. Konvertujte text na hex, binárne a desatinné a späť. Podpora vlastných oddeľovačov. Nevyhnutné pre kódovanie, ladenie a programovanie.",
+        "keywords": "ASCII konvertor, ASCII na hex, ASCII na binárne, ASCII na desatinné, hex na ASCII, binárne na ASCII, desatinné na ASCII, konvertor kódov znakov, kódovanie textu",
+        "content": {
+          "heading": "Ako použiť ASCII konvertor",
+          "paragraph1": "ASCII konvertor konvertuje medzi viditeľným textom a číselnými kódmi v hexadecimálnej, binárnej a desatinnej sústave. Vyberte typ vstupu: viditeľný ASCII text, hexadecimálne, binárne alebo desatinné. Zadajte alebo vložte vstup; nástroj okamžite aktualizuje všetky výstupy.",
+          "paragraph2": "Keď je vstupom ASCII text, každý znak sa prevedie na svoju bajtovú hodnotu (0–255). Výstupy zobrazujú rovnaké údaje ako binárne (8 bitov), hex (dve číslice na bajt) a desatinné. Keď je vstupom hex, binárne alebo desatinné, nástroj rozdelí hodnoty podľa zvoleného oddeľovača a zobrazí príslušný text a ostatné číselné formáty.",
+          "paragraph3": "Použite možnosť oddeľovača podľa svojich údajov: prázdna medzera pre zoznamy ako „73 64 73“, čiarka a medzera pre „73, 64, 73“ alebo vlastný oddeľovač (až 10 znakov) pre iné formáty. Tým zostane výstup čitateľný a kompatibilný so skriptami alebo manuálmi.",
+          "paragraph4": "Konvertor je užitočný pri kódovaní a dekódovaní správ, ladení znakových súborov, učení hodnôt ASCII/Unicode a príprave údajov pre API alebo vstavané systémy. Všetky konverzie prebiehajú v prehliadači; žiadne údaje sa neodosielajú na server.",
+          "exampleHeading": "Príklad",
+          "exampleText": "Typ vstupu: Viditeľný ASCII text. Vstup: sdsada. Viditeľný ASCII text: sdsada. Binárne: 01110011 01100100 01110011 01100001 01100100 01100001. Hexadecimálne: 73 64 73 61 64 61. Desatinné: 115 100 115 97 100 97. Použite oddeľovač „Prázdna medzera“ alebo „Čiarka (a medzera)“ na formátovanie číselného výstupu."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {
+              "question": "Čo je ASCII?",
+              "answer": "ASCII (American Standard Code for Information Interchange) priraďuje číselné kódy 0–127 bežným znakom (písmená, číslice, symboly). Rozšírené ASCII používa 0–255. Tento konvertor pracuje s bajtovými hodnotami 0–255 a zobrazuje ich ako text, hex, binárne a desatinné."
+            },
+            {
+              "question": "Ako prevediem text na hex alebo binárne?",
+              "answer": "Vyberte typ vstupu „Viditeľný ASCII text“, zadajte text a zvoľte oddeľovač. Nástroj zobrazí binárne, hexadecimálne a desatinné pre každý znak. Môžete skopírovať ľubovoľný formát výstupu."
+            },
+            {
+              "question": "Môžem previesť hex alebo desatinné späť na text?",
+              "answer": "Áno. Vyberte typ vstupu „Hexadecimálne“, „Binárne“ alebo „Desatinné“, potom zadajte hodnoty oddelené zvoleným oddeľovačom (napr. medzerami alebo čiarkami). Výstup Viditeľný ASCII text zobrazí príslušné znaky tam, kde je to možné."
+            },
+            {
+              "question": "Na čo slúži oddeľovač?",
+              "answer": "Oddeľovač sa používa na rozdelenie vstupu pri vkladaní hex, binárnych alebo desatinných hodnôt (napr. „73 64 73“) a na formátovanie číselného výstupu (binárne, hex, desatinné). Môžete použiť prázdnu medzeru, čiarku a medzeru alebo vlastný oddeľovač až 10 znakov."
+            },
+            {
+              "question": "Je tento ASCII konvertor zadarmo?",
+              "answer": "Áno. ASCII konvertor je zadarmo. Nie je potrebná registrácia ani platba. Všetky konverzie prebiehajú vo vašom prehliadači."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace kalkulačky",
+          "textToBinary": "Konvertor textu na binárne",
+          "textToBinaryDesc": "Konvertujte text na binárne s UTF-8, UTF-16 a vlastnými oddeľovačmi",
+          "dnaToMrna": "Konvertor DNA na mRNA",
+          "dnaToMrnaDesc": "Transkribujte DNA na mRNA a preložte na bielkoviny",
+          "lettersToNumbers": "Písmená na čísla",
+          "lettersToNumbersDesc": "Konvertujte písmená na čísla (A=1, B=2 atď.)"
+        }
+      }
+    },
     "italicText": {
       "title": "Generátor Kurzívneho Textu",
       "description": "Generujte kurzívny text okamžite s viacerými štýlmi Unicode: kurzíva serif, kurzívny skript a kurzíva sans-serif. Ideálne pre sociálne médiá, dizajn a kreatívne písanie.",

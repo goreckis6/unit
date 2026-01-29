@@ -72,6 +72,12 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       path: '/calculators/others/text-to-binary',
     },
     {
+      id: 'ascii-converter',
+      titleKey: 'asciiConverter.title',
+      descKey: 'asciiConverter.description',
+      path: '/calculators/others/ascii-converter',
+    },
+    {
       id: 'bold-text',
       titleKey: 'boldText.title',
       descKey: 'boldText.description',

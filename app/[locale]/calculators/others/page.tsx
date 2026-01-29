@@ -84,6 +84,12 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       path: '/calculators/others/small-caps',
     },
     {
+      id: 'mirror-text',
+      titleKey: 'mirrorText.title',
+      descKey: 'mirrorText.description',
+      path: '/calculators/others/mirror-text',
+    },
+    {
       id: 'italic-text',
       titleKey: 'italicText.title',
       descKey: 'italicText.description',

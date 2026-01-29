@@ -19,6 +19,7 @@ export async function GET() {
     '/calculators/others/text-to-binary',
     '/calculators/others/bold-text',
     '/calculators/others/small-caps',
+    '/calculators/others/mirror-text',
     '/calculators/others/italic-text',
     '/calculators/others/upside-down-text',
     '/calculators/electric',

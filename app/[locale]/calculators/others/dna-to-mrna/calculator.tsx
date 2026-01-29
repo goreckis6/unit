@@ -169,183 +169,248 @@ export function DnaToMrnaConverter() {
 
   return (
     <>
-      <div className="input-section" style={{ marginBottom: '2rem' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          <div className="input-card">
-            <label htmlFor="direction" className="input-label">
-              {t('directionLabel')}
-            </label>
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <button
-                type="button"
-                onClick={() => setDirection('dna-to-mrna')}
-                className={`btn ${direction === 'dna-to-mrna' ? 'btn-primary' : 'btn-secondary'}`}
-                style={{ flex: '1', minWidth: '200px' }}
+      <div className="split-view-container">
+        {/* Left Column - Inputs */}
+        <div className="input-section" style={{ marginBottom: 0 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="input-card">
+              <label htmlFor="direction" className="input-label">
+                {t('directionLabel')}
+              </label>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <button
+                  type="button"
+                  onClick={() => setDirection('dna-to-mrna')}
+                  className={`btn ${direction === 'dna-to-mrna' ? 'btn-primary' : 'btn-secondary'}`}
+                  style={{ flex: '1', minWidth: '200px' }}
+                >
+                  {t('dnaToMrna')}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setDirection('mrna-to-dna')}
+                  className={`btn ${direction === 'mrna-to-dna' ? 'btn-primary' : 'btn-secondary'}`}
+                  style={{ flex: '1', minWidth: '200px' }}
+                >
+                  {t('mrnaToDna')}
+                </button>
+              </div>
+            </div>
+
+            <div className="input-card">
+              <label htmlFor="sequence" className="input-label">
+                {direction === 'dna-to-mrna' ? t('inputDnaSequence') : t('inputMrnaSequence')}
+              </label>
+              <div
+                className="number-input"
+                style={{
+                  marginBottom: '1rem',
+                  padding: '1rem',
+                  fontSize: '0.9rem',
+                  color: 'var(--text-secondary)',
+                  backgroundColor: 'var(--surface-secondary, #f5f5f5)',
+                  borderRadius: '8px',
+                  border: '1px solid var(--border-color, #e0e0e0)',
+                }}
               >
-                {t('dnaToMrna')}
-              </button>
-              <button
-                type="button"
-                onClick={() => setDirection('mrna-to-dna')}
-                className={`btn ${direction === 'mrna-to-dna' ? 'btn-primary' : 'btn-secondary'}`}
-                style={{ flex: '1', minWidth: '200px' }}
-              >
-                {t('mrnaToDna')}
+                <div style={{ fontWeight: '600', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
+                  {t('exampleLabel')} {t('exampleInput')}
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', fontFamily: 'monospace' }}>
+                  <span>
+                    {t('dnaSequence')}: {t('exampleDna')}
+                  </span>
+                  <span>
+                    {t('mrnaSequence')}: {t('exampleMrna')}
+                  </span>
+                  <span>
+                    {t('proteinSequence')}: {t('exampleProtein')}
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setInputSequence('ACGT')}
+                  className="btn btn-secondary"
+                  style={{ marginTop: '0.75rem', minHeight: '36px' }}
+                >
+                  {t('useExample')}
+                </button>
+              </div>
+              <textarea
+                id="sequence"
+                value={inputSequence}
+                onChange={(e) => setInputSequence(e.target.value)}
+                className="number-input"
+                placeholder={direction === 'dna-to-mrna' ? t('dnaPlaceholder') : t('mrnaPlaceholder')}
+                rows={8}
+                style={{
+                  resize: 'vertical',
+                  minHeight: '200px',
+                  wordWrap: 'break-word',
+                  wordBreak: 'break-word',
+                  overflowWrap: 'break-word',
+                  whiteSpace: 'pre-wrap',
+                  fontFamily: 'monospace',
+                  fontSize: '1.05em',
+                  letterSpacing: '0.08em',
+                }}
+              />
+            </div>
+
+            <div className="action-buttons" style={{ marginTop: '0.5rem' }}>
+              <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>
+                {t('reset')}
               </button>
             </div>
           </div>
+        </div>
 
-          <div className="input-card">
-            <label htmlFor="sequence" className="input-label">
-              {direction === 'dna-to-mrna' ? t('inputDnaSequence') : t('inputMrnaSequence')}
-            </label>
-            <div
-              className="number-input"
-              style={{
-                marginBottom: '1rem',
-                padding: '1rem',
-                fontSize: '0.9rem',
-                color: 'var(--text-secondary)',
-                backgroundColor: 'var(--surface-secondary, #f5f5f5)',
-                borderRadius: '8px',
-                border: '1px solid var(--border-color, #e0e0e0)',
-              }}
-            >
-              <div style={{ fontWeight: '600', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
-                {t('exampleLabel')} {t('exampleInput')}
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', fontFamily: 'monospace' }}>
-                <span>{t('dnaSequence')}: {t('exampleDna')}</span>
-                <span>{t('mrnaSequence')}: {t('exampleMrna')}</span>
-                <span>{t('proteinSequence')}: {t('exampleProtein')}</span>
-              </div>
-              <button
-                type="button"
-                onClick={() => setInputSequence('ACGT')}
-                className="btn btn-secondary"
-                style={{ marginTop: '0.75rem', minHeight: '36px' }}
-              >
-                {t('useExample')}
-              </button>
+        {/* Right Column - Outputs */}
+        <div className="result-section" style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="input-card">
+              <label className="input-label">{t('dnaSequence')}</label>
+              {dnaSequence ? (
+                <div
+                  className="number-input"
+                  style={{
+                    fontFamily: 'monospace',
+                    fontSize: '1.05em',
+                    letterSpacing: '0.08em',
+                    padding: '1.25rem',
+                    minHeight: '120px',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    justifyContent: 'space-between',
+                    wordBreak: 'break-word',
+                    whiteSpace: 'pre-wrap',
+                  }}
+                >
+                  <span style={{ flex: 1 }}>{formatSequence(dnaSequence)}</span>
+                  <button
+                    onClick={() => handleCopy(dnaSequence, 'DNA')}
+                    className="btn btn-primary"
+                    style={{ minHeight: '36px', minWidth: '80px', marginLeft: '1rem' }}
+                  >
+                    {t('copy')}
+                  </button>
+                </div>
+              ) : (
+                <div
+                  className="number-input"
+                  style={{
+                    minHeight: '120px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontFamily: 'monospace',
+                    padding: '1.25rem',
+                    opacity: 0.5,
+                    textAlign: 'center',
+                  }}
+                >
+                  <span style={{ color: 'var(--text-secondary)' }}>
+                    {direction === 'dna-to-mrna' ? t('dnaPlaceholder') : t('inputDnaSequence')}
+                  </span>
+                </div>
+              )}
             </div>
-            <textarea
-              id="sequence"
-              value={inputSequence}
-              onChange={(e) => setInputSequence(e.target.value)}
-              className="number-input"
-              placeholder={direction === 'dna-to-mrna' ? t('dnaPlaceholder') : t('mrnaPlaceholder')}
-              rows={6}
-              style={{ 
-                resize: 'vertical', 
-                minHeight: '150px',
-                fontFamily: 'monospace',
-                fontSize: '1.1em',
-                letterSpacing: '0.1em'
-              }}
-            />
-          </div>
 
-          <div className="action-buttons" style={{ marginTop: '0.5rem' }}>
-            <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>
-              {t('reset')}
-            </button>
+            <div className="input-card">
+              <label className="input-label">{t('mrnaSequence')}</label>
+              {mrnaSequence ? (
+                <div
+                  className="number-input"
+                  style={{
+                    fontFamily: 'monospace',
+                    fontSize: '1.05em',
+                    letterSpacing: '0.08em',
+                    padding: '1.25rem',
+                    minHeight: '120px',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    justifyContent: 'space-between',
+                    wordBreak: 'break-word',
+                    whiteSpace: 'pre-wrap',
+                  }}
+                >
+                  <span style={{ flex: 1 }}>{formatSequence(mrnaSequence)}</span>
+                  <button
+                    onClick={() => handleCopy(mrnaSequence, 'mRNA')}
+                    className="btn btn-primary"
+                    style={{ minHeight: '36px', minWidth: '80px', marginLeft: '1rem' }}
+                  >
+                    {t('copy')}
+                  </button>
+                </div>
+              ) : (
+                <div
+                  className="number-input"
+                  style={{
+                    minHeight: '120px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontFamily: 'monospace',
+                    padding: '1.25rem',
+                    opacity: 0.5,
+                    textAlign: 'center',
+                  }}
+                >
+                  <span style={{ color: 'var(--text-secondary)' }}>
+                    {direction === 'dna-to-mrna' ? t('inputMrnaSequence') : t('mrnaPlaceholder')}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            <div className="input-card">
+              <label className="input-label">{t('proteinSequence')}</label>
+              {proteinSequence ? (
+                <div
+                  className="number-input"
+                  style={{
+                    fontFamily: 'monospace',
+                    fontSize: '1.05em',
+                    padding: '1.25rem',
+                    minHeight: '120px',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    justifyContent: 'space-between',
+                    wordBreak: 'break-word',
+                    whiteSpace: 'pre-wrap',
+                  }}
+                >
+                  <span style={{ flex: 1 }}>{proteinSequence}</span>
+                  <button
+                    onClick={() => handleCopy(proteinSequence, 'Protein')}
+                    className="btn btn-primary"
+                    style={{ minHeight: '36px', minWidth: '80px', marginLeft: '1rem' }}
+                  >
+                    {t('copy')}
+                  </button>
+                </div>
+              ) : (
+                <div
+                  className="number-input"
+                  style={{
+                    minHeight: '120px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontFamily: 'monospace',
+                    padding: '1.25rem',
+                    opacity: 0.5,
+                    textAlign: 'center',
+                  }}
+                >
+                  <span style={{ color: 'var(--text-secondary)' }}>{t('results')}</span>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Results Section */}
-      {(dnaSequence || mrnaSequence || proteinSequence) && (
-        <div className="result-section" style={{ marginTop: '2rem' }}>
-          <h3 className="result-heading" style={{ marginBottom: '1.5rem', fontSize: '1.5rem', fontWeight: '600' }}>
-            {t('results')}
-          </h3>
-          
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            {dnaSequence && (
-              <div className="input-card">
-                <label className="input-label">
-                  {t('dnaSequence')}
-                </label>
-                <div className="number-input" style={{ 
-                  fontFamily: 'monospace',
-                  fontSize: '1.1em',
-                  letterSpacing: '0.1em',
-                  padding: '1rem',
-                  minHeight: '60px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  wordBreak: 'break-word'
-                }}>
-                  <span style={{ flex: 1 }}>{formatSequence(dnaSequence)}</span>
-                  <button 
-                    onClick={() => handleCopy(dnaSequence, 'DNA')} 
-                    className="btn btn-primary" 
-                    style={{ minHeight: '36px', minWidth: '80px', marginLeft: '1rem' }}
-                  >
-                    {t('copy')}
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {mrnaSequence && (
-              <div className="input-card">
-                <label className="input-label">
-                  {t('mrnaSequence')}
-                </label>
-                <div className="number-input" style={{ 
-                  fontFamily: 'monospace',
-                  fontSize: '1.1em',
-                  letterSpacing: '0.1em',
-                  padding: '1rem',
-                  minHeight: '60px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  wordBreak: 'break-word'
-                }}>
-                  <span style={{ flex: 1 }}>{formatSequence(mrnaSequence)}</span>
-                  <button 
-                    onClick={() => handleCopy(mrnaSequence, 'mRNA')} 
-                    className="btn btn-primary" 
-                    style={{ minHeight: '36px', minWidth: '80px', marginLeft: '1rem' }}
-                  >
-                    {t('copy')}
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {proteinSequence && (
-              <div className="input-card">
-                <label className="input-label">
-                  {t('proteinSequence')}
-                </label>
-                <div className="number-input" style={{ 
-                  fontFamily: 'monospace',
-                  fontSize: '1.1em',
-                  padding: '1rem',
-                  minHeight: '60px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  wordBreak: 'break-word'
-                }}>
-                  <span style={{ flex: 1 }}>{proteinSequence}</span>
-                  <button 
-                    onClick={() => handleCopy(proteinSequence, 'Protein')} 
-                    className="btn btn-primary" 
-                    style={{ minHeight: '36px', minWidth: '80px', marginLeft: '1rem' }}
-                  >
-                    {t('copy')}
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
     </>
   );
 }

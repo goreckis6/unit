@@ -143,7 +143,7 @@ export function TextToBinaryCalculator() {
       <div className="split-view-container">
         {/* Left Column - Inputs */}
         <div className="input-section" style={{ marginBottom: 0 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div className="numbers-to-letters-inputs" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div className="input-card">
               <label htmlFor="text" className="input-label">
                 {t('textInput')}
@@ -167,7 +167,7 @@ export function TextToBinaryCalculator() {
             </div>
 
             <div className="options-grid options-grid-dropdowns">
-              <div className="input-card">
+              <div className="input-card numbers-to-letters-compact">
                 <label htmlFor="encoding" className="input-label">
                   {t('encoding')}
                 </label>
@@ -176,6 +176,7 @@ export function TextToBinaryCalculator() {
                   value={encoding}
                   onChange={(e) => setEncoding(e.target.value as EncodingType)}
                   className="number-input select-dropdown"
+                  style={{ cursor: 'pointer' }}
                   title={
                     encoding === 'utf-8' ? t('encodingUtf8') :
                     encoding === 'utf-16' ? t('encodingUtf16') :
@@ -192,7 +193,7 @@ export function TextToBinaryCalculator() {
                 </select>
               </div>
 
-              <div className="input-card">
+              <div className="input-card numbers-to-letters-compact">
                 <label htmlFor="separator" className="input-label">
                   {t('separator')}
                 </label>
@@ -201,6 +202,7 @@ export function TextToBinaryCalculator() {
                   value={separatorType}
                   onChange={(e) => setSeparatorType(e.target.value as SeparatorType)}
                   className="number-input select-dropdown"
+                  style={{ cursor: 'pointer' }}
                   title={
                     separatorType === 'space' ? t('separatorSpace') :
                     separatorType === 'comma' ? t('separatorComma') :

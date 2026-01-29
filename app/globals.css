@@ -1263,7 +1263,7 @@ a {
     gap: 2rem;
   }
 
-  /* Compact styling for Numbers to Letters Converter on desktop */
+  /* Compact styling for Numbers to Letters Converter and other calculators with selects on desktop */
   .numbers-to-letters-compact {
     padding: 0.75rem !important;
     margin-bottom: 0.5rem !important;
@@ -1275,7 +1275,8 @@ a {
     font-weight: 500;
   }
 
-  .numbers-to-letters-compact select {
+  .numbers-to-letters-compact select,
+  .numbers-to-letters-compact .select-dropdown {
     padding: 0.375rem 0.625rem !important;
     font-size: 0.8125rem !important;
     min-height: 36px !important;
@@ -1289,6 +1290,11 @@ a {
 
   .numbers-to-letters-inputs .numbers-to-letters-compact + .numbers-to-letters-compact {
     margin-top: -0.25rem;
+  }
+
+  /* Compact styling for selects in options-grid */
+  .options-grid .numbers-to-letters-compact {
+    padding: 0.75rem !important;
   }
 }
 
@@ -2386,7 +2392,7 @@ a {
     margin-bottom: 3.5rem;
   }
 
-  /* Compact styling for Numbers to Letters Converter on desktop */
+  /* Compact styling for Numbers to Letters Converter and other calculators with selects on desktop */
   .numbers-to-letters-compact {
     padding: 0.75rem !important;
     margin-bottom: 0.5rem !important;
@@ -2398,7 +2404,8 @@ a {
     font-weight: 500;
   }
 
-  .numbers-to-letters-compact select {
+  .numbers-to-letters-compact select,
+  .numbers-to-letters-compact .select-dropdown {
     padding: 0.375rem 0.625rem !important;
     font-size: 0.8125rem !important;
     min-height: 36px !important;
@@ -2412,6 +2419,11 @@ a {
 
   .numbers-to-letters-inputs .numbers-to-letters-compact + .numbers-to-letters-compact {
     margin-top: -0.25rem;
+  }
+
+  /* Compact styling for selects in options-grid */
+  .options-grid .numbers-to-letters-compact {
+    padding: 0.75rem !important;
   }
 
   .inputs-grid-3 {

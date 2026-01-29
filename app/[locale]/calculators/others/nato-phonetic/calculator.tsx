@@ -100,8 +100,8 @@ export function NatoPhoneticCalculator() {
       <div className="split-view-container">
         {/* Left Column - Input */}
         <div className="input-section" style={{ marginBottom: 0 }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <div className="input-card">
+          <div className="numbers-to-letters-inputs" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="input-card numbers-to-letters-compact">
               <label htmlFor="direction" className="input-label">
                 {t('directionLabel')}
               </label>
@@ -110,6 +110,7 @@ export function NatoPhoneticCalculator() {
                 value={direction}
                 onChange={(e) => setDirection(e.target.value as TranslationDirection)}
                 className="number-input select-dropdown"
+                style={{ cursor: 'pointer' }}
               >
                 <option value="text-to-nato">{t('textToNato')}</option>
                 <option value="nato-to-text">{t('natoToText')}</option>

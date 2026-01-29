@@ -59,28 +59,36 @@ function lettersToNumbers(
       // T9 keypad (Latin only)
       if (t9Keypad[char]) {
         result.push(t9Keypad[char]);
+      } else if (char === ' ') {
+        result.push('0'); // Space = 0 in T9
       } else {
-        result.push(char); // Keep non-letter characters as-is
+        result.push(char); // Keep other non-letter characters as-is
       }
     } else {
-      // Alphabet-based methods
+      // Alphabet-based methods (A0Z25, A1Z26, Reversed)
       const lowerChar = char.toLowerCase();
       const index = alphabetArray.indexOf(lowerChar);
       
       if (index === -1) {
-        // Character not in alphabet, keep as-is
-        result.push(char);
+        // Character not in alphabet
+        if (char === ' ') {
+          // Space is always 0 for alphabet-based methods
+          result.push('0');
+        } else {
+          // Keep other non-alphabet characters as-is (punctuation, numbers, etc.)
+          result.push(char);
+        }
       } else {
         let num: number;
         
         if (method === 'a0') {
-          // A=0, B=1, C=2, ...
+          // A=0, B=1, C=2, ... (A0Z25)
           num = index;
         } else if (method === 'a1') {
-          // A=1, B=2, C=3, ...
+          // A=1, B=2, C=3, ... (A1Z26)
           num = index + 1;
         } else if (method === 'reversed') {
-          // Reversed: A=25, B=24, ..., Z=0 (for Latin)
+          // Reversed alphabet
           num = alphabetArray.length - 1 - index;
         } else {
           num = index;
@@ -96,7 +104,7 @@ function lettersToNumbers(
 
 export function LettersToNumbersConverter() {
   const t = useTranslations('calculators.lettersToNumbers');
-  const [input, setInput] = useState<string>('F s');
+  const [input, setInput] = useState<string>('Hello world');
   const [alphabet, setAlphabet] = useState<string>('latin');
   const [method, setMethod] = useState<EncodingMethod>('a0');
   const [result, setResult] = useState<string>('');

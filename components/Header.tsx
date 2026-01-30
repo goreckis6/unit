@@ -295,7 +295,6 @@ export function Header() {
             <span className="logo-icon">
               <img src="/logo.png" alt={t('siteName')} className="logo-image" />
             </span>
-            <span className="logo-text">{t('siteName')}</span>
           </Link>
           
           {/* Desktop Navigation */}
@@ -334,7 +333,6 @@ export function Header() {
               <span className="logo-icon">
                 <img src="/logo.png" alt={t('siteName')} className="logo-image" />
               </span>
-              <span className="logo-text">{t('siteName')}</span>
             </Link>
             <button
               className="mobile-menu-close"

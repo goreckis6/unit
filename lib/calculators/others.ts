@@ -9,6 +9,13 @@ export const otherCalculators: Calculator[] = [
     category: 'others',
   },
   {
+    id: 'reverse-text-generator',
+    titleKey: 'reverseTextGenerator.title',
+    descKey: 'reverseTextGenerator.description',
+    path: '/calculators/others/reverse-text-generator',
+    category: 'others',
+  },
+  {
     id: 'ascii-converter',
     titleKey: 'asciiConverter.title',
     descKey: 'asciiConverter.description',

@@ -85,18 +85,4 @@ export const otherCalculators: Calculator[] = [
     path: '/calculators/others/upside-down-text',
     category: 'others',
   },
-  {
-    id: 'dna-to-mrna',
-    titleKey: 'dnaToMrna.title',
-    descKey: 'dnaToMrna.description',
-    path: '/calculators/others/dna-to-mrna',
-    category: 'others',
-  },
-  {
-    id: 'cat-pregnancy-calculator',
-    titleKey: 'catPregnancy.title',
-    descKey: 'catPregnancy.description',
-    path: '/calculators/others/cat-pregnancy-calculator',
-    category: 'others',
-  },
 ];

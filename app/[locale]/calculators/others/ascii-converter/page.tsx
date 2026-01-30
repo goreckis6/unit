@@ -111,7 +111,7 @@ export default async function AsciiConverterPage({ params }: { params: Promise<{
               <h3 className="related-title">{tRelated('textToBinary')}</h3>
               <p className="related-desc">{tRelated('textToBinaryDesc')}</p>
             </Link>
-            <Link href="/calculators/others/dna-to-mrna" className="related-card">
+            <Link href="/calculators/biology/dna-to-mrna" className="related-card">
               <h3 className="related-title">{tRelated('dnaToMrna')}</h3>
               <p className="related-desc">{tRelated('dnaToMrnaDesc')}</p>
             </Link>

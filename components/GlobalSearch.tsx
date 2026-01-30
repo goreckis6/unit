@@ -40,6 +40,14 @@ export function GlobalSearch() {
           categoryLabel = t('mathCalculators.badge') || 'Math';
         } else if (calc.category === 'electric') {
           categoryLabel = t('electricCalculators.badge') || 'Electric';
+        } else if (calc.category === 'biology') {
+          categoryLabel = t('biologyCalculators.badge') || 'Biology';
+        } else if (calc.category === 'conversion') {
+          categoryLabel = t('conversionCalculators.badge') || 'Conversion';
+        } else if (calc.category === 'physics') {
+          categoryLabel = t('physicsCalculators.badge') || 'Physics';
+        } else if (calc.category === 'finance') {
+          categoryLabel = t('financeCalculators.badge') || 'Finance';
         } else if (calc.category === 'others') {
           categoryLabel = t('otherCalculators.badge') || 'Others';
         }

@@ -92,6 +92,63 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </p>
               <span className="category-link">{tHome('electricCalculators.viewAll')}</span>
             </Link>
+
+            <Link href="/calculators/biology" className="category-card">
+              <div className="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="category-name">{tHome('biologyCalculators.title')}</h3>
+              <p className="category-description">
+                {tHome('biologyCalculators.description')}
+              </p>
+              <span className="category-link">{tHome('biologyCalculators.viewAll')}</span>
+            </Link>
+
+            <Link href="/calculators/conversion" className="category-card">
+              <div className="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 20L17 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M17 20L7 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M4 12H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="category-name">{tHome('conversionCalculators.title')}</h3>
+              <p className="category-description">
+                {tHome('conversionCalculators.description')}
+              </p>
+              <span className="category-link">{tHome('conversionCalculators.viewAll')}</span>
+            </Link>
+
+            <Link href="/calculators/physics" className="category-card">
+              <div className="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2V4M12 20V22M4 12H2M22 12H20M19.07 4.93L17.66 6.34M6.34 17.66L4.93 19.07M19.07 19.07L17.66 17.66M6.34 6.34L4.93 4.93" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M12 8V12L14 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="category-name">{tHome('physicsCalculators.title')}</h3>
+              <p className="category-description">
+                {tHome('physicsCalculators.description')}
+              </p>
+              <span className="category-link">{tHome('physicsCalculators.viewAll')}</span>
+            </Link>
+
+            <Link href="/calculators/finance" className="category-card">
+              <div className="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2V22M17 5H9.5C8.11929 5 7 6.11929 7 7.5C7 8.88071 8.11929 10 9.5 10H14.5C15.8807 10 17 11.1193 17 12.5C17 13.8807 15.8807 15 14.5 15H7M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="category-name">{tHome('financeCalculators.title')}</h3>
+              <p className="category-description">
+                {tHome('financeCalculators.description')}
+              </p>
+              <span className="category-link">{tHome('financeCalculators.viewAll')}</span>
+            </Link>
             
             <Link href="/calculators/others" className="category-card">
               <div className="category-icon">

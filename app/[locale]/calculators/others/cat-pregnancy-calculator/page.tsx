@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { PigLatinCalculator } from './calculator';
+import { CatPregnancyCalculator } from './calculator';
 import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
@@ -15,17 +15,17 @@ interface FaqItem {
 async function getFaqItems(locale: string): Promise<FaqItem[]> {
   try {
     const messages = await import(`@/i18n/${locale}.json`);
-    return (messages.default?.calculators?.pigLatin?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.catPregnancy?.seo?.faq?.items as FaqItem[]) || [];
   } catch {
     const messages = await import('@/i18n/en.json');
-    return (messages.default?.calculators?.pigLatin?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.catPregnancy?.seo?.faq?.items as FaqItem[]) || [];
   }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.pigLatin.seo' });
-  const path = '/calculators/others/pig-latin';
+  const t = await getTranslations({ locale, namespace: 'calculators.catPregnancy.seo' });
+  const path = '/calculators/others/cat-pregnancy-calculator';
   const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
   return {
     title: t('title'),
@@ -44,15 +44,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function PigLatinPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function CatPregnancyCalculatorPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.pigLatin' });
+  const t = await getTranslations({ locale, namespace: 'calculators.catPregnancy' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
-
+  const tCalcs = await getTranslations({ locale, namespace: 'calculators' });
   const faqItems = await getFaqItems(locale);
-  const tSeo = await getTranslations({ locale, namespace: 'calculators.pigLatin.seo.content' });
-  const tFaq = await getTranslations({ locale, namespace: 'calculators.pigLatin.seo.faq' });
-  const tRelated = await getTranslations({ locale, namespace: 'calculators.pigLatin.seo.related' });
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.catPregnancy.seo.content' });
+  const tFaq = await getTranslations({ locale, namespace: 'calculators.catPregnancy.seo.faq' });
+  const tRelated = await getTranslations({ locale, namespace: 'calculators.catPregnancy.seo.related' });
 
   return (
     <>
@@ -68,7 +68,7 @@ export default async function PigLatinPage({ params }: { params: Promise<{ local
             <span>{tCommon('calculators')}</span>
           </Link>
           <div className="header-content">
-            <div className="title-badge">{t('titleBadge')}</div>
+            <div className="title-badge">{tCalcs('otherCalculators.badge')}</div>
             <h1 className="page-title">{t('title')}</h1>
             <p className="page-description">{t('description')}</p>
           </div>
@@ -78,11 +78,12 @@ export default async function PigLatinPage({ params }: { params: Promise<{ local
       <div className="calculator-container">
         <div className="container">
           <div className="calculator-card">
-            <PigLatinCalculator />
+            <CatPregnancyCalculator />
           </div>
         </div>
       </div>
 
+      {/* SEO Content Section */}
       <div className="seo-content-section">
         <div className="container">
           <div className="seo-content-card">
@@ -91,7 +92,6 @@ export default async function PigLatinPage({ params }: { params: Promise<{ local
               <p className="seo-paragraph">{tSeo('paragraph1')}</p>
               <p className="seo-paragraph">{tSeo('paragraph2')}</p>
               <p className="seo-paragraph">{tSeo('paragraph3')}</p>
-              <p className="seo-paragraph">{tSeo('paragraph4')}</p>
               <div className="seo-example">
                 <h3 className="example-heading">{tSeo('exampleHeading')}</h3>
                 <p className="example-text">{tSeo('exampleText')}</p>
@@ -101,17 +101,18 @@ export default async function PigLatinPage({ params }: { params: Promise<{ local
         </div>
       </div>
 
+      {/* Related Calculators Section - styled like FAQ, above FAQ */}
       <div className="related-calculators-section">
         <div className="related-content-card">
           <h2 className="related-heading">{tRelated('heading')}</h2>
           <div className="related-grid">
-            <Link href="/calculators/others/text-to-binary" className="related-card">
-              <h3 className="related-title">{tRelated('textToBinary')}</h3>
-              <p className="related-desc">{tRelated('textToBinaryDesc')}</p>
+            <Link href="/calculators/others/letters-to-numbers" className="related-card">
+              <h3 className="related-title">{tRelated('lettersToNumbers')}</h3>
+              <p className="related-desc">{tRelated('lettersToNumbersDesc')}</p>
             </Link>
-            <Link href="/calculators/others/caesar-cipher" className="related-card">
-              <h3 className="related-title">{tRelated('caesarCipher')}</h3>
-              <p className="related-desc">{tRelated('caesarCipherDesc')}</p>
+            <Link href="/calculators/others/numbers-to-letters" className="related-card">
+              <h3 className="related-title">{tRelated('numbersToLetters')}</h3>
+              <p className="related-desc">{tRelated('numbersToLettersDesc')}</p>
             </Link>
             <Link href="/calculators/others/ascii-converter" className="related-card">
               <h3 className="related-title">{tRelated('asciiConverter')}</h3>
@@ -121,6 +122,7 @@ export default async function PigLatinPage({ params }: { params: Promise<{ local
         </div>
       </div>
 
+      {/* FAQ Section */}
       {faqItems.length > 0 && (
         <FaqSection heading={tFaq('heading')} items={faqItems} />
       )}

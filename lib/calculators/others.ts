@@ -92,4 +92,11 @@ export const otherCalculators: Calculator[] = [
     path: '/calculators/others/dna-to-mrna',
     category: 'others',
   },
+  {
+    id: 'cat-pregnancy-calculator',
+    titleKey: 'catPregnancy.title',
+    descKey: 'catPregnancy.description',
+    path: '/calculators/others/cat-pregnancy-calculator',
+    category: 'others',
+  },
 ];

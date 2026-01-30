@@ -3,6 +3,7 @@ import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SoftwareApplicationSchema } from '@/components/SoftwareApplicationSchema';
+import { GlobalSearch } from '@/components/GlobalSearch';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -52,6 +53,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <p className="hero-description">
               {tHome('heroDescription')}
             </p>
+            <div className="hero-search">
+              <GlobalSearch />
+            </div>
           </div>
         </div>
       </section>

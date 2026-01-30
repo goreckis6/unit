@@ -3,5 +3,5 @@ export interface Calculator {
   titleKey: string;
   descKey: string;
   path: string;
-  category: 'math' | 'electric' | 'biology' | 'conversion' | 'physics' | 'finance' | 'others';
+  category: 'math' | 'electric' | 'biology' | 'conversion' | 'physics' | 'real-life' | 'finance' | 'others';
 }

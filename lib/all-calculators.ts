@@ -4,6 +4,7 @@ import { electricCalculators } from './calculators/electric';
 import { biologyCalculators } from './calculators/biology';
 import { conversionCalculators } from './calculators/conversion';
 import { physicsCalculators } from './calculators/physics';
+import { realLifeCalculators } from './calculators/real-life';
 import { financeCalculators } from './calculators/finance';
 import { otherCalculators } from './calculators/others';
 
@@ -16,10 +17,11 @@ export function getAllCalculators(): Calculator[] {
     ...biologyCalculators,
     ...conversionCalculators,
     ...physicsCalculators,
+    ...realLifeCalculators,
     ...financeCalculators,
     ...otherCalculators,
   ];
 }
 
 // Export individual calculator arrays for use in category pages
-export { mathCalculators, electricCalculators, biologyCalculators, conversionCalculators, physicsCalculators, financeCalculators, otherCalculators };
+export { mathCalculators, electricCalculators, biologyCalculators, conversionCalculators, physicsCalculators, realLifeCalculators, financeCalculators, otherCalculators };

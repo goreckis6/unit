@@ -46,6 +46,8 @@ export function GlobalSearch() {
           categoryLabel = t('conversionCalculators.badge') || 'Conversion';
         } else if (calc.category === 'physics') {
           categoryLabel = t('physicsCalculators.badge') || 'Physics';
+        } else if (calc.category === 'real-life') {
+          categoryLabel = t('realLifeCalculators.badge') || 'Real-life';
         } else if (calc.category === 'finance') {
           categoryLabel = t('financeCalculators.badge') || 'Finance';
         } else if (calc.category === 'others') {

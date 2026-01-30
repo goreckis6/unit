@@ -137,6 +137,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <span className="category-link">{tHome('physicsCalculators.viewAll')}</span>
             </Link>
 
+            <Link href="/calculators/real-life" className="category-card">
+              <div className="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9L12 2L21 9V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V9Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9 21V12H15V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="category-name">{tHome('realLifeCalculators.title')}</h3>
+              <p className="category-description">
+                {tHome('realLifeCalculators.description')}
+              </p>
+              <span className="category-link">{tHome('realLifeCalculators.viewAll')}</span>
+            </Link>
+
             <Link href="/calculators/finance" className="category-card">
               <div className="category-icon">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

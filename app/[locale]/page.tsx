@@ -48,13 +48,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="hero">
         <div className="container">
           <div className="hero-content">
-            <div className="hero-card">
-              <h1 className="hero-title">{t('siteName')}</h1>
-              <p className="hero-subtitle">{t('description')}</p>
-              <p className="hero-description">{tHome('heroDescription')}</p>
-              <div className="hero-search">
-                <GlobalSearch />
-              </div>
+            <h1 className="hero-title">{t('siteName')}</h1>
+            <p className="hero-subtitle">{t('description')}</p>
+            <p className="hero-description">{tHome('heroDescription')}</p>
+            <div className="hero-search">
+              <GlobalSearch />
             </div>
           </div>
         </div>

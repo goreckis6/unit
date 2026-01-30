@@ -3060,6 +3060,72 @@
         }
       }
     },
+    "convolution": {
+      "title": "Konvolüsyon Hesaplayıcı",
+      "description": "İki veri dizisinin ayrık konvolüsyonunu hesaplayın. Sinyal işleme, matematik ve mühendislik uygulamaları için ücretsiz çevrimiçi araç.",
+      "firstSequence": "İlk veri dizisini girin",
+      "firstPlaceholder": "örn. 1 1 1 0 0 0",
+      "secondSequence": "İkinci veri dizisini girin",
+      "secondPlaceholder": "örn. 0.5 0.2 0.3",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "resultSequence": "Sonuç veri dizisi",
+      "resultPlaceholder": "Dizileri girin ve Hesapla'ya tıklayın",
+      "errorEmptyFirst": "Lütfen ilk veri dizisini girin",
+      "errorEmptySecond": "Lütfen ikinci veri dizisini girin",
+      "seo": {
+        "title": "Konvolüsyon Hesaplayıcı – İki Dizinin Ayrık Konvolüsyonu",
+        "description": "Ücretsiz konvolüsyon hesaplayıcı. Sinyal işleme, filtreleme ve matematiksel analiz için iki veri dizisinin ayrık konvolüsyonunu hesaplayın. Hızlı ve doğru sonuçlar.",
+        "keywords": "konvolüsyon hesaplayıcı, ayrık konvolüsyon, sinyal konvolüsyonu, dizi konvolüsyonu, doğrusal konvolüsyon, konvolüsyon toplamı, sinyal işleme hesaplayıcı, filtre konvolüsyonu, konvolüsyon aracı",
+        "content": {
+          "heading": "Ayrık Konvolüsyon Nasıl Hesaplanır",
+          "paragraph1": "Konvolüsyon, sinyal işleme, görüntü işleme, mühendislik ve istatistikte yaygın olarak kullanılan temel bir matematiksel işlemdir. Ayrık konvolüsyon, bir dizinin şeklinin diğeri tarafından nasıl değiştirildiğini temsil eden üçüncü bir dizi üretmek için iki diziyi birleştirir. Ücretsiz konvolüsyon hesaplayıcımız, iki giriş dizisinin doğrusal (ayrık) konvolüsyonunu hızlı ve doğru bir şekilde hesaplar.",
+          "paragraph2": "İki dizi a[n] ve b[n]'nin ayrık konvolüsyonu şu şekilde tanımlanır: (a * b)[n] = Σ a[k] × b[n-k], burada toplam tüm geçerli indeksler üzerinden alınır. Pratikte, a dizisinin uzunluğu M ve b dizisinin uzunluğu N ise, sonuçta elde edilen konvolüsyonun uzunluğu M + N - 1'dir. Çıktının her elemanı, bir diziyi diğerinin üzerine kaydırarak, örtüşen elemanları çarparak ve çarpımları toplayarak hesaplanır.",
+          "paragraph3": "Konvolüsyonun birçok pratik uygulaması vardır: dijital sinyal işlemede, sinyalleri filtrelemek için kullanılır (bir filtrenin dürtü yanıtı giriş sinyali ile konvolüsyon yapılır); görüntü işlemede, çekirdeklerle konvolüsyon bulanıklaştırma, keskinleştirme ve kenar algılama yapar; olasılık teorisinde, iki olasılık dağılımının konvolüsyonu bağımsız rastgele değişkenlerin toplamının dağılımını verir; mühendislikte, konvolüsyon doğrusal zamanla değişmeyen (LTI) sistemlerin çıktısını tanımlar.",
+          "paragraph4": "Hesaplayıcıyı kullanmak için veri dizilerinizi boşluklar, virgüller veya noktalı virgüllerle ayırarak girin. Ondalık değerler desteklenir. Sonucu görmek için Hesapla'ya tıklayın. Çıktı dizisi, iki girişin tam ayrık konvolüsyonunu gösterir. Bu araç, sinyal işlemeyi öğrenen öğrenciler, filtreleri analiz eden mühendisler, veri dizileriyle çalışan araştırmacılar ve hızlı konvolüsyon hesaplamalarına ihtiyaç duyan herkes için mükemmeldir.",
+          "exampleHeading": "Örnek: Konvolüsyon Hesaplama",
+          "exampleText": "İlk dizi: 1 1 1 0 0 0 (uzunluk 6). İkinci dizi: 0.5 0.2 0.3 (uzunluk 3). Konvolüsyonun uzunluğu 6 + 3 - 1 = 8'dir. Sonuç: 0.5 0.7 1 0.5 0.3 0.3 0 0. Hesaplama: Pozisyon 0: 1×0.5 = 0.5. Pozisyon 1: 1×0.2 + 1×0.5 = 0.7. Pozisyon 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. Ve her pozisyon için böyle devam eder."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {
+              "question": "Ayrık konvolüsyon nedir?",
+              "answer": "Ayrık konvolüsyon, üçüncü bir dizi üretmek için iki diziyi (veya sinyali) birleştiren matematiksel bir işlemdir. Bir dizinin şeklinin diğeri tarafından nasıl değiştirildiğini ölçer. İşlem, bir diziyi diğerinin üzerine kaydırmayı, örtüşen değerleri çarpmayı ve her pozisyonda çarpımları toplamayı içerir."
+            },
+            {
+              "question": "Veri dizilerini nasıl girerim?",
+              "answer": "Sayılarınızı boşluklar, virgüller veya noktalı virgüllerle ayırarak girin. Örneğin: '1 1 1 0 0 0' veya '1, 1, 1, 0, 0, 0' veya '0.5; 0.2; 0.3'. Hem tam sayılar hem de ondalık sayılar desteklenir. Değerlerin sırası önemlidir, çünkü ilk elemandan son elemana kadar olan diziyi temsil eder."
+            },
+            {
+              "question": "Konvolüsyon sonucunun uzunluğu nedir?",
+              "answer": "İlk dizinin uzunluğu M ve ikinci dizinin uzunluğu N ise, konvolüsyon sonucunun uzunluğu M + N - 1'dir. Örneğin, 6 elemanlı bir diziyi 3 elemanlı bir diziyle konvolüsyon yapmak 6 + 3 - 1 = 8 elemanlı bir sonuç üretir."
+            },
+            {
+              "question": "Konvolüsyonun yaygın uygulamaları nelerdir?",
+              "answer": "Konvolüsyon şunlarda kullanılır: dijital sinyal işleme (filtreleme, yumuşatma), görüntü işleme (bulanıklaştırma, keskinleştirme, kenar algılama), ses işleme (yankı, eko efektleri), olasılık teorisi (rastgele değişkenlerin toplamı), kontrol sistemleri (sistem yanıtı) ve polinom çarpımı. Doğrusal zamanla değişmeyen sistemleri anlamak için temeldir."
+            },
+            {
+              "question": "Dizilerin sırası önemli mi?",
+              "answer": "Konvolüsyon değişmelidir, yani a * b = b * a. Hangi diziyi önce girerseniz girin sonuç aynıdır. Ancak, filtreleme gibi bazı bağlamlarda, bir dizi sinyali ve diğeri filtrenin dürtü yanıtını temsil eder, bu nedenle kavramsal olarak belirli bir sırayı tercih edebilirsiniz."
+            },
+            {
+              "question": "Bu konvolüsyon hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, konvolüsyon hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Sadece iki veri dizinizi girin, Hesapla'ya tıklayın ve anında konvolüsyon sonuçları alın."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "addition": "Toplama Hesaplayıcı",
+          "additionDesc": "Tam sayıları ve ondalık sayıları hızlı ve doğru bir şekilde toplayın",
+          "average": "Ortalama Hesaplayıcı",
+          "averageDesc": "Bir sayı listesinin ortalamasını, toplamını ve sayısını bulun",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Metin İkili Dönüştürücü",
       "description": "Birden fazla karakter kodlaması (UTF-8, UTF-16, Windows-1252) ve özelleştirilebilir ayırıcılarla metni anında ikili koda dönüştürün.",

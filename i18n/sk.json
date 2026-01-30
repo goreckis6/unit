@@ -3056,6 +3056,72 @@
         "description": "Sčítať dve čísla"
       }
     },
+    "convolution": {
+      "title": "Kalkulačka Konvolúcie",
+      "description": "Vypočítajte diskrétnu konvolúciu dvoch dátových sekvencií. Bezplatný online nástroj na spracovanie signálov, matematiku a inžinierske aplikácie.",
+      "firstSequence": "Zadajte prvú dátovú sekvenciu",
+      "firstPlaceholder": "napr. 1 1 1 0 0 0",
+      "secondSequence": "Zadajte druhú dátovú sekvenciu",
+      "secondPlaceholder": "napr. 0.5 0.2 0.3",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "resultSequence": "Výsledná dátová sekvencia",
+      "resultPlaceholder": "Zadajte sekvencie a kliknite na Vypočítať",
+      "errorEmptyFirst": "Prosím zadajte prvú dátovú sekvenciu",
+      "errorEmptySecond": "Prosím zadajte druhú dátovú sekvenciu",
+      "seo": {
+        "title": "Kalkulačka Konvolúcie – Diskrétna Konvolúcia Dvoch Sekvencií",
+        "description": "Bezplatná kalkulačka konvolúcie. Vypočítajte diskrétnu konvolúciu dvoch dátových sekvencií na spracovanie signálov, filtrovanie a matematickú analýzu. Rýchle a presné výsledky.",
+        "keywords": "kalkulačka konvolúcie, diskrétna konvolúcia, konvolúcia signálov, konvolúcia sekvencií, lineárna konvolúcia, konvolučný súčet, kalkulačka spracovania signálov, konvolúcia filtra, nástroj konvolúcie",
+        "content": {
+          "heading": "Ako Vypočítať Diskrétnu Konvolúciu",
+          "paragraph1": "Konvolúcia je základná matematická operácia široko používaná v spracovaní signálov, spracovaní obrazu, inžinierstve a štatistike. Diskrétna konvolúcia kombinuje dve sekvencie a vytvára tretiu sekvenciu, ktorá reprezentuje, ako je tvar jednej sekvencie modifikovaný druhou. Naša bezplatná kalkulačka konvolúcie rýchlo a presne vypočíta lineárnu (diskrétnu) konvolúciu dvoch vstupných sekvencií.",
+          "paragraph2": "Diskrétna konvolúcia dvoch sekvencií a[n] a b[n] je definovaná ako: (a * b)[n] = Σ a[k] × b[n-k], kde súčet sa berie cez všetky platné indexy. V praxi, ak má sekvencia a dĺžku M a sekvencia b dĺžku N, výsledná konvolúcia má dĺžku M + N - 1. Každý prvok výstupu sa vypočíta posúvaním jednej sekvencie cez druhú, násobením prekrývajúcich sa prvkov a sčítaním súčinov.",
+          "paragraph3": "Konvolúcia má mnoho praktických aplikácií: v digitálnom spracovaní signálov sa používa na filtrovanie signálov (impulzná odozva filtra je konvoluovaná so vstupným signálom); v spracovaní obrazu konvolúcia s jadrami vykonáva rozmazanie, zaostrenie a detekciu hrán; v teórii pravdepodobnosti konvolúcia dvoch pravdepodobnostných rozdelení dáva rozdelenie súčtu nezávislých náhodných premenných; v inžinierstve konvolúcia popisuje výstup lineárnych časovo invariantných (LTI) systémov.",
+          "paragraph4": "Na použitie kalkulačky zadajte dátové sekvencie oddelené medzerami, čiarkami alebo bodkočiarkami. Desatinné hodnoty sú podporované. Kliknite na Vypočítať pre zobrazenie výsledku. Výstupná sekvencia zobrazuje úplnú diskrétnu konvolúciu oboch vstupov. Tento nástroj je ideálny pre študentov učiacich sa spracovanie signálov, inžinierov analyzujúcich filtre, výskumníkov pracujúcich s dátovými sekvenciami a kohokoľvek, kto potrebuje rýchle výpočty konvolúcie.",
+          "exampleHeading": "Príklad: Výpočet Konvolúcie",
+          "exampleText": "Prvá sekvencia: 1 1 1 0 0 0 (dĺžka 6). Druhá sekvencia: 0.5 0.2 0.3 (dĺžka 3). Konvolúcia má dĺžku 6 + 3 - 1 = 8. Výsledok: 0.5 0.7 1 0.5 0.3 0.3 0 0. Výpočet: Pozícia 0: 1×0.5 = 0.5. Pozícia 1: 1×0.2 + 1×0.5 = 0.7. Pozícia 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. A tak ďalej pre každú pozíciu."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Čo je diskrétna konvolúcia?",
+              "answer": "Diskrétna konvolúcia je matematická operácia, ktorá kombinuje dve sekvencie (alebo signály) a vytvára tretiu sekvenciu. Meria, ako je tvar jednej sekvencie modifikovaný druhou. Operácia zahŕňa posúvanie jednej sekvencie cez druhú, násobenie prekrývajúcich sa hodnôt a sčítanie súčinov na každej pozícii."
+            },
+            {
+              "question": "Ako zadať dátové sekvencie?",
+              "answer": "Zadajte čísla oddelené medzerami, čiarkami alebo bodkočiarkami. Napríklad: '1 1 1 0 0 0' alebo '1, 1, 1, 0, 0, 0' alebo '0.5; 0.2; 0.3'. Sú podporované celé čísla aj desatinné čísla. Na poradí hodnôt záleží, pretože reprezentuje sekvenciu od prvého po posledný prvok."
+            },
+            {
+              "question": "Aká je dĺžka výsledku konvolúcie?",
+              "answer": "Ak má prvá sekvencia dĺžku M a druhá sekvencia dĺžku N, výsledok konvolúcie má dĺžku M + N - 1. Napríklad konvolúcia sekvencie 6 prvkov so sekvenciou 3 prvkov vytvorí výsledok s 6 + 3 - 1 = 8 prvkami."
+            },
+            {
+              "question": "Aké sú bežné aplikácie konvolúcie?",
+              "answer": "Konvolúcia sa používa v: digitálnom spracovaní signálov (filtrovanie, vyhladzovanie), spracovaní obrazu (rozmazanie, zaostrenie, detekcia hrán), spracovaní zvuku (dozvuk, echo efekty), teórii pravdepodobnosti (súčet náhodných premenných), riadiacich systémoch (odozva systému) a násobení polynómov. Je základná pre pochopenie lineárnych časovo invariantných systémov."
+            },
+            {
+              "question": "Je poradie sekvencií dôležité?",
+              "answer": "Konvolúcia je komutatívna, čo znamená, že a * b = b * a. Výsledok je rovnaký bez ohľadu na to, ktorú sekvenciu zadáte prvú. Avšak v niektorých kontextoch ako filtrovanie jedna sekvencia reprezentuje signál a druhá impulznú odozvu filtra, takže konceptuálne môžete preferovať určité poradie."
+            },
+            {
+              "question": "Je táto kalkulačka konvolúcie zadarmo?",
+              "answer": "Áno, naša kalkulačka konvolúcie je úplne zadarmo. Nie je vyžadovaná registrácia ani platba. Jednoducho zadajte dve dátové sekvencie, kliknite na Vypočítať a získajte okamžité výsledky konvolúcie."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace Kalkulačky",
+          "addition": "Kalkulačka Sčítania",
+          "additionDesc": "Sčítajte celé čísla a desatinné čísla rýchlo a presne",
+          "average": "Kalkulačka Priemeru",
+          "averageDesc": "Nájdite priemer, súčet a počet zoznamu čísel",
+          "percentage": "Kalkulačka Percent",
+          "percentageDesc": "Vypočítajte percentuálne hodnoty, percentuálnu zmenu a percentuálne vzťahy"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Konvertor Textu na Binárny",
       "description": "Konvertujte text na binárny kód okamžite s viacerými znakovými kódovaniami (UTF-8, UTF-16, Windows-1252) a prispôsobiteľnými oddeľovačmi.",

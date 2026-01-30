@@ -3056,6 +3056,72 @@
         "description": "Addera två tal"
       }
     },
+    "convolution": {
+      "title": "Faltningskalkylator",
+      "description": "Beräkna den diskreta faltningen av två datasekvenser. Gratis onlineverktyg för signalbehandling, matematik och ingenjörstillämpningar.",
+      "firstSequence": "Ange första datasekvensen",
+      "firstPlaceholder": "t.ex. 1 1 1 0 0 0",
+      "secondSequence": "Ange andra datasekvensen",
+      "secondPlaceholder": "t.ex. 0.5 0.2 0.3",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "resultSequence": "Resultatdatasekvens",
+      "resultPlaceholder": "Ange sekvenser och klicka på Beräkna",
+      "errorEmptyFirst": "Vänligen ange första datasekvensen",
+      "errorEmptySecond": "Vänligen ange andra datasekvensen",
+      "seo": {
+        "title": "Faltningskalkylator – Diskret Faltning av Två Sekvenser",
+        "description": "Gratis faltningskalkylator. Beräkna den diskreta faltningen av två datasekvenser för signalbehandling, filtrering och matematisk analys. Snabba och exakta resultat.",
+        "keywords": "faltningskalkylator, diskret faltning, signalfaltning, sekvensfaltning, linjär faltning, faltningssumma, signalbehandlingskalkylator, filterfaltning, faltningsverktyg",
+        "content": {
+          "heading": "Hur Man Beräknar Diskret Faltning",
+          "paragraph1": "Faltning är en grundläggande matematisk operation som används flitigt inom signalbehandling, bildbehandling, ingenjörsvetenskap och statistik. Diskret faltning kombinerar två sekvenser för att producera en tredje sekvens som representerar hur formen av en sekvens modifieras av den andra. Vår gratis faltningskalkylator beräknar snabbt och exakt den linjära (diskreta) faltningen av två indatasekvenser.",
+          "paragraph2": "Den diskreta faltningen av två sekvenser a[n] och b[n] definieras som: (a * b)[n] = Σ a[k] × b[n-k], där summan tas över alla giltiga index. I praktiken, om sekvens a har längd M och sekvens b har längd N, har den resulterande faltningen längd M + N - 1. Varje element i utdata beräknas genom att glida en sekvens över den andra, multiplicera överlappande element och summera produkterna.",
+          "paragraph3": "Faltning har många praktiska tillämpningar: inom digital signalbehandling används den för att filtrera signaler (ett filters impulsrespons faltas med indatasignalen); inom bildbehandling utför faltning med kärnor suddighet, skärpning och kantdetektering; inom sannolikhetsteori ger faltningen av två sannolikhetsfördelningar fördelningen av summan av oberoende slumpvariabler; inom ingenjörsvetenskap beskriver faltning utgången från linjära tidsinvarianta (LTI) system.",
+          "paragraph4": "För att använda kalkylatorn, ange dina datasekvenser separerade med mellanslag, kommatecken eller semikolon. Decimalvärden stöds. Klicka på Beräkna för att se resultatet. Utdatasekvensen visar den fullständiga diskreta faltningen av de två indata. Detta verktyg är perfekt för studenter som lär sig signalbehandling, ingenjörer som analyserar filter, forskare som arbetar med datasekvenser och alla som behöver snabba faltningsberäkningar.",
+          "exampleHeading": "Exempel: Faltningsberäkning",
+          "exampleText": "Första sekvensen: 1 1 1 0 0 0 (längd 6). Andra sekvensen: 0.5 0.2 0.3 (längd 3). Faltningen har längd 6 + 3 - 1 = 8. Resultat: 0.5 0.7 1 0.5 0.3 0.3 0 0. Beräkning: Position 0: 1×0.5 = 0.5. Position 1: 1×0.2 + 1×0.5 = 0.7. Position 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. Och så vidare för varje position."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är diskret faltning?",
+              "answer": "Diskret faltning är en matematisk operation som kombinerar två sekvenser (eller signaler) för att producera en tredje sekvens. Den mäter hur formen av en sekvens modifieras av den andra. Operationen innebär att glida en sekvens över den andra, multiplicera överlappande värden och summera produkterna vid varje position."
+            },
+            {
+              "question": "Hur anger jag datasekvenser?",
+              "answer": "Ange dina siffror separerade med mellanslag, kommatecken eller semikolon. Till exempel: '1 1 1 0 0 0' eller '1, 1, 1, 0, 0, 0' eller '0.5; 0.2; 0.3'. Både heltal och decimaltal stöds. Ordningen på värdena är viktig, eftersom den representerar sekvensen från första till sista elementet."
+            },
+            {
+              "question": "Vad är längden på faltningsresultatet?",
+              "answer": "Om första sekvensen har längd M och andra sekvensen har längd N, har faltningsresultatet längd M + N - 1. Till exempel producerar faltning av en sekvens med 6 element med en sekvens med 3 element ett resultat med 6 + 3 - 1 = 8 element."
+            },
+            {
+              "question": "Vad är vanliga tillämpningar av faltning?",
+              "answer": "Faltning används inom: digital signalbehandling (filtrering, utjämning), bildbehandling (suddighet, skärpning, kantdetektering), ljudbehandling (reverb, ekoeffekter), sannolikhetsteori (summa av slumpvariabler), styrsystem (systemrespons) och polynommultiplikation. Den är grundläggande för att förstå linjära tidsinvarianta system."
+            },
+            {
+              "question": "Är ordningen på sekvenserna viktig?",
+              "answer": "Faltning är kommutativ, vilket betyder att a * b = b * a. Resultatet är detsamma oavsett vilken sekvens du anger först. I vissa sammanhang som filtrering representerar dock en sekvens signalen och den andra filtrets impulsrespons, så konceptuellt kan du föredra en specifik ordning."
+            },
+            {
+              "question": "Är denna faltningskalkylator gratis?",
+              "answer": "Ja, vår faltningskalkylator är helt gratis att använda. Ingen registrering eller betalning krävs. Ange helt enkelt dina två datasekvenser, klicka på Beräkna och få omedelbara faltningsresultat."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "addition": "Additionskalkylator",
+          "additionDesc": "Addera heltal och decimaltal snabbt och exakt",
+          "average": "Medelvärdesräknare",
+          "averageDesc": "Hitta medelvärdet, summan och antalet i en lista med tal",
+          "percentage": "Procenträknare",
+          "percentageDesc": "Beräkna procentvärden, procentuell förändring och procentuella förhållanden"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Text till Binär Konverterare",
       "description": "Konvertera text till binär kod omedelbart med flera teckenkodningar (UTF-8, UTF-16, Windows-1252) och anpassningsbara separatorer.",

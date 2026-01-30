@@ -3056,6 +3056,72 @@
         "description": "Tambahkan dua angka dengan cepat dan akurat"
       }
     },
+    "convolution": {
+      "title": "Kalkulator Konvolusi",
+      "description": "Hitung konvolusi diskrit dari dua urutan data. Alat online gratis untuk pemrosesan sinyal, matematika, dan aplikasi teknik.",
+      "firstSequence": "Masukkan urutan data pertama",
+      "firstPlaceholder": "mis. 1 1 1 0 0 0",
+      "secondSequence": "Masukkan urutan data kedua",
+      "secondPlaceholder": "mis. 0.5 0.2 0.3",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "resultSequence": "Urutan data hasil",
+      "resultPlaceholder": "Masukkan urutan dan klik Hitung",
+      "errorEmptyFirst": "Silakan masukkan urutan data pertama",
+      "errorEmptySecond": "Silakan masukkan urutan data kedua",
+      "seo": {
+        "title": "Kalkulator Konvolusi – Konvolusi Diskrit Dua Urutan",
+        "description": "Kalkulator konvolusi gratis. Hitung konvolusi diskrit dari dua urutan data untuk pemrosesan sinyal, penyaringan, dan analisis matematika. Hasil cepat dan akurat.",
+        "keywords": "kalkulator konvolusi, konvolusi diskrit, konvolusi sinyal, konvolusi urutan, konvolusi linear, jumlah konvolusi, kalkulator pemrosesan sinyal, konvolusi filter, alat konvolusi",
+        "content": {
+          "heading": "Cara Menghitung Konvolusi Diskrit",
+          "paragraph1": "Konvolusi adalah operasi matematika fundamental yang digunakan secara luas dalam pemrosesan sinyal, pemrosesan gambar, teknik, dan statistik. Konvolusi diskrit menggabungkan dua urutan untuk menghasilkan urutan ketiga yang mewakili bagaimana bentuk satu urutan dimodifikasi oleh yang lain. Kalkulator konvolusi gratis kami menghitung konvolusi linear (diskrit) dari dua urutan input dengan cepat dan akurat.",
+          "paragraph2": "Konvolusi diskrit dari dua urutan a[n] dan b[n] didefinisikan sebagai: (a * b)[n] = Σ a[k] × b[n-k], di mana penjumlahan diambil atas semua indeks yang valid. Dalam praktiknya, jika urutan a memiliki panjang M dan urutan b memiliki panjang N, konvolusi yang dihasilkan memiliki panjang M + N - 1. Setiap elemen output dihitung dengan menggeser satu urutan di atas yang lain, mengalikan elemen yang tumpang tindih, dan menjumlahkan hasilnya.",
+          "paragraph3": "Konvolusi memiliki banyak aplikasi praktis: dalam pemrosesan sinyal digital, digunakan untuk menyaring sinyal (respons impuls filter dikonvolusikan dengan sinyal input); dalam pemrosesan gambar, konvolusi dengan kernel melakukan pengaburan, penajaman, dan deteksi tepi; dalam teori probabilitas, konvolusi dua distribusi probabilitas memberikan distribusi jumlah variabel acak independen; dalam teknik, konvolusi menjelaskan output sistem linear time-invariant (LTI).",
+          "paragraph4": "Untuk menggunakan kalkulator, masukkan urutan data yang dipisahkan oleh spasi, koma, atau titik koma. Nilai desimal didukung. Klik Hitung untuk melihat hasilnya. Urutan output menunjukkan konvolusi diskrit lengkap dari dua input. Alat ini sempurna untuk siswa yang mempelajari pemrosesan sinyal, insinyur yang menganalisis filter, peneliti yang bekerja dengan urutan data, dan siapa saja yang membutuhkan perhitungan konvolusi cepat.",
+          "exampleHeading": "Contoh: Perhitungan Konvolusi",
+          "exampleText": "Urutan pertama: 1 1 1 0 0 0 (panjang 6). Urutan kedua: 0.5 0.2 0.3 (panjang 3). Konvolusi memiliki panjang 6 + 3 - 1 = 8. Hasil: 0.5 0.7 1 0.5 0.3 0.3 0 0. Perhitungan: Posisi 0: 1×0.5 = 0.5. Posisi 1: 1×0.2 + 1×0.5 = 0.7. Posisi 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. Dan seterusnya untuk setiap posisi."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa itu konvolusi diskrit?",
+              "answer": "Konvolusi diskrit adalah operasi matematika yang menggabungkan dua urutan (atau sinyal) untuk menghasilkan urutan ketiga. Ini mengukur bagaimana bentuk satu urutan dimodifikasi oleh yang lain. Operasi ini melibatkan penggeseran satu urutan di atas yang lain, mengalikan nilai yang tumpang tindih, dan menjumlahkan hasil di setiap posisi."
+            },
+            {
+              "question": "Bagaimana cara memasukkan urutan data?",
+              "answer": "Masukkan angka yang dipisahkan oleh spasi, koma, atau titik koma. Misalnya: '1 1 1 0 0 0' atau '1, 1, 1, 0, 0, 0' atau '0.5; 0.2; 0.3'. Baik bilangan bulat maupun desimal didukung. Urutan nilai penting, karena mewakili urutan dari elemen pertama hingga terakhir."
+            },
+            {
+              "question": "Berapa panjang hasil konvolusi?",
+              "answer": "Jika urutan pertama memiliki panjang M dan urutan kedua memiliki panjang N, hasil konvolusi memiliki panjang M + N - 1. Misalnya, mengkonvolusikan urutan 6 elemen dengan urutan 3 elemen menghasilkan hasil dengan 6 + 3 - 1 = 8 elemen."
+            },
+            {
+              "question": "Apa saja aplikasi umum konvolusi?",
+              "answer": "Konvolusi digunakan dalam: pemrosesan sinyal digital (penyaringan, penghalusan), pemrosesan gambar (pengaburan, penajaman, deteksi tepi), pemrosesan audio (reverb, efek gema), teori probabilitas (jumlah variabel acak), sistem kontrol (respons sistem), dan perkalian polinomial. Ini fundamental untuk memahami sistem linear time-invariant."
+            },
+            {
+              "question": "Apakah urutan penting?",
+              "answer": "Konvolusi bersifat komutatif, yang berarti a * b = b * a. Hasilnya sama terlepas dari urutan mana yang Anda masukkan terlebih dahulu. Namun, dalam beberapa konteks seperti penyaringan, satu urutan mewakili sinyal dan yang lain mewakili respons impuls filter, jadi secara konseptual Anda mungkin lebih memilih urutan tertentu."
+            },
+            {
+              "question": "Apakah kalkulator konvolusi ini gratis?",
+              "answer": "Ya, kalkulator konvolusi kami sepenuhnya gratis untuk digunakan. Tidak diperlukan pendaftaran atau pembayaran. Cukup masukkan dua urutan data Anda, klik Hitung, dan dapatkan hasil konvolusi instan."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "addition": "Kalkulator Penjumlahan",
+          "additionDesc": "Tambahkan bilangan bulat dan desimal dengan cepat dan akurat",
+          "average": "Kalkulator Rata-rata",
+          "averageDesc": "Temukan rata-rata, jumlah, dan hitungan dari daftar angka",
+          "percentage": "Kalkulator Persentase",
+          "percentageDesc": "Hitung nilai persentase, perubahan persentase, dan hubungan persentase"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Konverter Teks ke Biner",
       "description": "Konversi teks ke kode biner secara instan dengan beberapa pengkodean karakter (UTF-8, UTF-16, Windows-1252) dan pemisah yang dapat disesuaikan.",

@@ -3056,6 +3056,72 @@
         "description": "Additionner deux nombres"
       }
     },
+    "convolution": {
+      "title": "Calculateur de Convolution",
+      "description": "Calculez la convolution discrète de deux séquences de données. Outil en ligne gratuit pour le traitement du signal, les mathématiques et les applications d'ingénierie.",
+      "firstSequence": "Entrez la première séquence de données",
+      "firstPlaceholder": "ex. 1 1 1 0 0 0",
+      "secondSequence": "Entrez la deuxième séquence de données",
+      "secondPlaceholder": "ex. 0.5 0.2 0.3",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "resultSequence": "Séquence de données résultante",
+      "resultPlaceholder": "Entrez les séquences et cliquez sur Calculer",
+      "errorEmptyFirst": "Veuillez entrer la première séquence de données",
+      "errorEmptySecond": "Veuillez entrer la deuxième séquence de données",
+      "seo": {
+        "title": "Calculateur de Convolution – Convolution Discrète de Deux Séquences",
+        "description": "Calculateur de convolution gratuit. Calculez la convolution discrète de deux séquences de données pour le traitement du signal, le filtrage et l'analyse mathématique. Résultats rapides et précis.",
+        "keywords": "calculateur de convolution, convolution discrète, convolution de signal, convolution de séquences, convolution linéaire, somme de convolution, calculateur de traitement du signal, convolution de filtre, outil de convolution",
+        "content": {
+          "heading": "Comment Calculer la Convolution Discrète",
+          "paragraph1": "La convolution est une opération mathématique fondamentale largement utilisée dans le traitement du signal, le traitement d'image, l'ingénierie et les statistiques. La convolution discrète combine deux séquences pour produire une troisième séquence qui représente comment la forme d'une séquence est modifiée par l'autre. Notre calculateur de convolution gratuit calcule rapidement et avec précision la convolution linéaire (discrète) de deux séquences d'entrée.",
+          "paragraph2": "La convolution discrète de deux séquences a[n] et b[n] est définie comme : (a * b)[n] = Σ a[k] × b[n-k], où la somme est prise sur tous les indices valides. En pratique, si la séquence a a une longueur M et la séquence b a une longueur N, la convolution résultante a une longueur M + N - 1. Chaque élément de la sortie est calculé en faisant glisser une séquence sur l'autre, en multipliant les éléments qui se chevauchent et en additionnant les produits.",
+          "paragraph3": "La convolution a de nombreuses applications pratiques : dans le traitement numérique du signal, elle est utilisée pour filtrer les signaux (la réponse impulsionnelle d'un filtre est convoluée avec le signal d'entrée) ; dans le traitement d'image, la convolution avec des noyaux effectue le flou, la netteté et la détection des contours ; en théorie des probabilités, la convolution de deux distributions de probabilité donne la distribution de la somme de variables aléatoires indépendantes ; en ingénierie, la convolution décrit la sortie des systèmes linéaires invariants dans le temps (LTI).",
+          "paragraph4": "Pour utiliser le calculateur, entrez vos séquences de données séparées par des espaces, des virgules ou des points-virgules. Les valeurs décimales sont prises en charge. Cliquez sur Calculer pour voir le résultat. La séquence de sortie montre la convolution discrète complète des deux entrées. Cet outil est parfait pour les étudiants apprenant le traitement du signal, les ingénieurs analysant les filtres, les chercheurs travaillant avec des séquences de données et tous ceux qui ont besoin de calculs de convolution rapides.",
+          "exampleHeading": "Exemple : Calcul de Convolution",
+          "exampleText": "Première séquence : 1 1 1 0 0 0 (longueur 6). Deuxième séquence : 0.5 0.2 0.3 (longueur 3). La convolution a une longueur de 6 + 3 - 1 = 8. Résultat : 0.5 0.7 1 0.5 0.3 0.3 0 0. Calcul : Position 0 : 1×0.5 = 0.5. Position 1 : 1×0.2 + 1×0.5 = 0.7. Position 2 : 1×0.3 + 1×0.2 + 1×0.5 = 1. Et ainsi de suite pour chaque position."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Qu'est-ce que la convolution discrète ?",
+              "answer": "La convolution discrète est une opération mathématique qui combine deux séquences (ou signaux) pour produire une troisième séquence. Elle mesure comment la forme d'une séquence est modifiée par l'autre. L'opération consiste à faire glisser une séquence sur l'autre, à multiplier les valeurs qui se chevauchent et à additionner les produits à chaque position."
+            },
+            {
+              "question": "Comment entrer des séquences de données ?",
+              "answer": "Entrez vos nombres séparés par des espaces, des virgules ou des points-virgules. Par exemple : '1 1 1 0 0 0' ou '1, 1, 1, 0, 0, 0' ou '0.5; 0.2; 0.3'. Les nombres entiers et décimaux sont pris en charge. L'ordre des valeurs est important, car il représente la séquence du premier au dernier élément."
+            },
+            {
+              "question": "Quelle est la longueur du résultat de convolution ?",
+              "answer": "Si la première séquence a une longueur M et la deuxième séquence a une longueur N, le résultat de convolution a une longueur M + N - 1. Par exemple, la convolution d'une séquence de 6 éléments avec une séquence de 3 éléments produit un résultat avec 6 + 3 - 1 = 8 éléments."
+            },
+            {
+              "question": "Quelles sont les applications courantes de la convolution ?",
+              "answer": "La convolution est utilisée dans : le traitement numérique du signal (filtrage, lissage), le traitement d'image (flou, netteté, détection des contours), le traitement audio (réverbération, effets d'écho), la théorie des probabilités (somme de variables aléatoires), les systèmes de contrôle (réponse du système) et la multiplication de polynômes. Elle est fondamentale pour comprendre les systèmes linéaires invariants dans le temps."
+            },
+            {
+              "question": "L'ordre des séquences est-il important ?",
+              "answer": "La convolution est commutative, ce qui signifie que a * b = b * a. Le résultat est le même quelle que soit la séquence que vous entrez en premier. Cependant, dans certains contextes comme le filtrage, une séquence représente le signal et l'autre représente la réponse impulsionnelle du filtre, vous pouvez donc préférer conceptuellement un ordre spécifique."
+            },
+            {
+              "question": "Ce calculateur de convolution est-il gratuit ?",
+              "answer": "Oui, notre calculateur de convolution est entièrement gratuit. Aucune inscription ni paiement requis. Entrez simplement vos deux séquences de données, cliquez sur Calculer et obtenez des résultats de convolution instantanés."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Associés",
+          "addition": "Calculateur d'Addition",
+          "additionDesc": "Additionner des nombres entiers et décimaux rapidement et avec précision",
+          "average": "Calculateur de Moyenne",
+          "averageDesc": "Trouver la moyenne, la somme et le nombre d'une liste de nombres",
+          "percentage": "Calculateur de Pourcentage",
+          "percentageDesc": "Calculer les valeurs en pourcentage, la variation en pourcentage et les relations en pourcentage"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Convertisseur Texte en Binaire",
       "description": "Convertissez du texte en code binaire instantanément avec plusieurs encodages de caractères (UTF-8, UTF-16, Windows-1252) et séparateurs personnalisables.",

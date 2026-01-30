@@ -3056,6 +3056,72 @@
         "description": "Sečíst dvě čísla"
       }
     },
+    "convolution": {
+      "title": "Kalkulačka Konvoluce",
+      "description": "Vypočítejte diskrétní konvoluci dvou datových sekvencí. Bezplatný online nástroj pro zpracování signálů, matematiku a inženýrské aplikace.",
+      "firstSequence": "Zadejte první datovou sekvenci",
+      "firstPlaceholder": "např. 1 1 1 0 0 0",
+      "secondSequence": "Zadejte druhou datovou sekvenci",
+      "secondPlaceholder": "např. 0.5 0.2 0.3",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "resultSequence": "Výsledná datová sekvence",
+      "resultPlaceholder": "Zadejte sekvence a klikněte na Vypočítat",
+      "errorEmptyFirst": "Prosím zadejte první datovou sekvenci",
+      "errorEmptySecond": "Prosím zadejte druhou datovou sekvenci",
+      "seo": {
+        "title": "Kalkulačka Konvoluce – Diskrétní Konvoluce Dvou Sekvencí",
+        "description": "Bezplatná kalkulačka konvoluce. Vypočítejte diskrétní konvoluci dvou datových sekvencí pro zpracování signálů, filtrování a matematickou analýzu. Rychlé a přesné výsledky.",
+        "keywords": "kalkulačka konvoluce, diskrétní konvoluce, konvoluce signálů, konvoluce sekvencí, lineární konvoluce, konvoluční součet, kalkulačka zpracování signálů, konvoluce filtru, nástroj konvoluce",
+        "content": {
+          "heading": "Jak Vypočítat Diskrétní Konvoluci",
+          "paragraph1": "Konvoluce je základní matematická operace široce používaná ve zpracování signálů, zpracování obrazu, inženýrství a statistice. Diskrétní konvoluce kombinuje dvě sekvence a vytváří třetí sekvenci, která reprezentuje, jak je tvar jedné sekvence modifikován druhou. Naše bezplatná kalkulačka konvoluce rychle a přesně vypočítá lineární (diskrétní) konvoluci dvou vstupních sekvencí.",
+          "paragraph2": "Diskrétní konvoluce dvou sekvencí a[n] a b[n] je definována jako: (a * b)[n] = Σ a[k] × b[n-k], kde součet je brán přes všechny platné indexy. V praxi, pokud má sekvence a délku M a sekvence b délku N, výsledná konvoluce má délku M + N - 1. Každý prvek výstupu je vypočítán posouváním jedné sekvence přes druhou, násobením překrývajících se prvků a sčítáním součinů.",
+          "paragraph3": "Konvoluce má mnoho praktických aplikací: v digitálním zpracování signálů se používá k filtrování signálů (impulsní odezva filtru je konvoluována se vstupním signálem); ve zpracování obrazu konvoluce s jádry provádí rozmazání, zaostření a detekci hran; v teorii pravděpodobnosti konvoluce dvou pravděpodobnostních rozdělení dává rozdělení součtu nezávislých náhodných proměnných; v inženýrství konvoluce popisuje výstup lineárních časově invariantních (LTI) systémů.",
+          "paragraph4": "Pro použití kalkulačky zadejte datové sekvence oddělené mezerami, čárkami nebo středníky. Desetinné hodnoty jsou podporovány. Klikněte na Vypočítat pro zobrazení výsledku. Výstupní sekvence zobrazuje úplnou diskrétní konvoluci obou vstupů. Tento nástroj je ideální pro studenty učící se zpracování signálů, inženýry analyzující filtry, výzkumníky pracující s datovými sekvencemi a kohokoli, kdo potřebuje rychlé výpočty konvoluce.",
+          "exampleHeading": "Příklad: Výpočet Konvoluce",
+          "exampleText": "První sekvence: 1 1 1 0 0 0 (délka 6). Druhá sekvence: 0.5 0.2 0.3 (délka 3). Konvoluce má délku 6 + 3 - 1 = 8. Výsledek: 0.5 0.7 1 0.5 0.3 0.3 0 0. Výpočet: Pozice 0: 1×0.5 = 0.5. Pozice 1: 1×0.2 + 1×0.5 = 0.7. Pozice 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. A tak dále pro každou pozici."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Co je diskrétní konvoluce?",
+              "answer": "Diskrétní konvoluce je matematická operace, která kombinuje dvě sekvence (nebo signály) a vytváří třetí sekvenci. Měří, jak je tvar jedné sekvence modifikován druhou. Operace zahrnuje posouvání jedné sekvence přes druhou, násobení překrývajících se hodnot a sčítání součinů na každé pozici."
+            },
+            {
+              "question": "Jak zadat datové sekvence?",
+              "answer": "Zadejte čísla oddělená mezerami, čárkami nebo středníky. Například: '1 1 1 0 0 0' nebo '1, 1, 1, 0, 0, 0' nebo '0.5; 0.2; 0.3'. Jsou podporována celá čísla i desetinná čísla. Na pořadí hodnot záleží, protože reprezentuje sekvenci od prvního do posledního prvku."
+            },
+            {
+              "question": "Jaká je délka výsledku konvoluce?",
+              "answer": "Pokud má první sekvence délku M a druhá sekvence délku N, výsledek konvoluce má délku M + N - 1. Například konvoluce sekvence 6 prvků se sekvencí 3 prvků vytvoří výsledek s 6 + 3 - 1 = 8 prvky."
+            },
+            {
+              "question": "Jaké jsou běžné aplikace konvoluce?",
+              "answer": "Konvoluce se používá v: digitálním zpracování signálů (filtrování, vyhlazování), zpracování obrazu (rozmazání, zaostření, detekce hran), zpracování zvuku (dozvuk, echo efekty), teorii pravděpodobnosti (součet náhodných proměnných), řídicích systémech (odezva systému) a násobení polynomů. Je základní pro pochopení lineárních časově invariantních systémů."
+            },
+            {
+              "question": "Je pořadí sekvencí důležité?",
+              "answer": "Konvoluce je komutativní, což znamená, že a * b = b * a. Výsledek je stejný bez ohledu na to, kterou sekvenci zadáte první. Nicméně v některých kontextech jako filtrování jedna sekvence reprezentuje signál a druhá impulsní odezvu filtru, takže koncepčně můžete preferovat určité pořadí."
+            },
+            {
+              "question": "Je tato kalkulačka konvoluce zdarma?",
+              "answer": "Ano, naše kalkulačka konvoluce je zcela zdarma. Není vyžadována registrace ani platba. Jednoduše zadejte dvě datové sekvence, klikněte na Vypočítat a získejte okamžité výsledky konvoluce."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Související Kalkulačky",
+          "addition": "Kalkulačka Sčítání",
+          "additionDesc": "Sčítejte celá čísla a desetinná čísla rychle a přesně",
+          "average": "Kalkulačka Průměru",
+          "averageDesc": "Najděte průměr, součet a počet seznamu čísel",
+          "percentage": "Kalkulačka Procent",
+          "percentageDesc": "Vypočítejte procentuální hodnoty, procentuální změnu a procentuální vztahy"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Převodník Textu na Binární",
       "description": "Převeďte text na binární kód okamžitě s více znakovými kódováními (UTF-8, UTF-16, Windows-1252) a přizpůsobitelnými oddělovači.",

@@ -3056,6 +3056,72 @@
         "description": "Laske kaksi lukua yhteen"
       }
     },
+    "convolution": {
+      "title": "Konvoluutiolaskin",
+      "description": "Laske kahden tietosekvenssin diskreetti konvoluutio. Ilmainen online-työkalu signaalinkäsittelyyn, matematiikkaan ja insinöörisovelluksiin.",
+      "firstSequence": "Syötä ensimmäinen tietosekvenssi",
+      "firstPlaceholder": "esim. 1 1 1 0 0 0",
+      "secondSequence": "Syötä toinen tietosekvenssi",
+      "secondPlaceholder": "esim. 0.5 0.2 0.3",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "resultSequence": "Tulostietosekvenssi",
+      "resultPlaceholder": "Syötä sekvenssit ja napsauta Laske",
+      "errorEmptyFirst": "Syötä ensimmäinen tietosekvenssi",
+      "errorEmptySecond": "Syötä toinen tietosekvenssi",
+      "seo": {
+        "title": "Konvoluutiolaskin – Kahden Sekvenssin Diskreetti Konvoluutio",
+        "description": "Ilmainen konvoluutiolaskin. Laske kahden tietosekvenssin diskreetti konvoluutio signaalinkäsittelyyn, suodatukseen ja matemaattiseen analyysiin. Nopeat ja tarkat tulokset.",
+        "keywords": "konvoluutiolaskin, diskreetti konvoluutio, signaalikonvoluutio, sekvenssikonvoluutio, lineaarinen konvoluutio, konvoluutiosumma, signaalinkäsittelylaskin, suodatinkonvoluutio, konvoluutiotyökalu",
+        "content": {
+          "heading": "Kuinka Laskea Diskreetti Konvoluutio",
+          "paragraph1": "Konvoluutio on perustavanlaatuinen matemaattinen operaatio, jota käytetään laajasti signaalinkäsittelyssä, kuvankäsittelyssä, insinööritieteissä ja tilastotieteissä. Diskreetti konvoluutio yhdistää kaksi sekvenssiä tuottaen kolmannen sekvenssin, joka edustaa, kuinka yhden sekvenssin muoto muuttuu toisen vaikutuksesta. Ilmainen konvoluutiolaskimemme laskee nopeasti ja tarkasti kahden syötesekvenssin lineaarisen (diskreetin) konvoluution.",
+          "paragraph2": "Kahden sekvenssin a[n] ja b[n] diskreetti konvoluutio määritellään: (a * b)[n] = Σ a[k] × b[n-k], missä summa otetaan kaikkien kelvollisten indeksien yli. Käytännössä, jos sekvenssin a pituus on M ja sekvenssin b pituus on N, tuloksena olevan konvoluution pituus on M + N - 1. Jokainen tulosteen elementti lasketaan liu'uttamalla yhtä sekvenssiä toisen yli, kertomalla päällekkäiset elementit ja laskemalla tulot yhteen.",
+          "paragraph3": "Konvoluutiolla on monia käytännön sovelluksia: digitaalisessa signaalinkäsittelyssä sitä käytetään signaalien suodattamiseen (suodattimen impulssivaste konvoloidaan tulosignaalin kanssa); kuvankäsittelyssä konvoluutio ytimillä suorittaa sumentamista, terävöittämistä ja reunantunnistusta; todennäköisyysteoriassa kahden todennäköisyysjakauman konvoluutio antaa riippumattomien satunnaismuuttujien summan jakauman; insinööritieteissä konvoluutio kuvaa lineaaristen aikainvarianttien (LTI) järjestelmien tulosteen.",
+          "paragraph4": "Käyttääksesi laskinta, syötä tietosekvenssisi välilyönneillä, pilkuilla tai puolipisteillä erotettuna. Desimaaliarvot ovat tuettuja. Napsauta Laske nähdäksesi tuloksen. Tulossekvenssi näyttää kahden syötteen täydellisen diskreetin konvoluution. Tämä työkalu on täydellinen signaalinkäsittelyä opiskeleville, suodattimia analysoiville insinööreille, tietosekvenssien parissa työskenteleville tutkijoille ja kaikille, jotka tarvitsevat nopeita konvoluutiolaskelmia.",
+          "exampleHeading": "Esimerkki: Konvoluutiolaskenta",
+          "exampleText": "Ensimmäinen sekvenssi: 1 1 1 0 0 0 (pituus 6). Toinen sekvenssi: 0.5 0.2 0.3 (pituus 3). Konvoluution pituus on 6 + 3 - 1 = 8. Tulos: 0.5 0.7 1 0.5 0.3 0.3 0 0. Laskenta: Positio 0: 1×0.5 = 0.5. Positio 1: 1×0.2 + 1×0.5 = 0.7. Positio 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. Ja niin edelleen jokaiselle positiolle."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on diskreetti konvoluutio?",
+              "answer": "Diskreetti konvoluutio on matemaattinen operaatio, joka yhdistää kaksi sekvenssiä (tai signaalia) tuottaen kolmannen sekvenssin. Se mittaa, kuinka yhden sekvenssin muoto muuttuu toisen vaikutuksesta. Operaatio sisältää yhden sekvenssin liu'uttamisen toisen yli, päällekkäisten arvojen kertomisen ja tulojen laskemisen yhteen jokaisessa positiossa."
+            },
+            {
+              "question": "Kuinka syötän tietosekvenssit?",
+              "answer": "Syötä numerosi välilyönneillä, pilkuilla tai puolipisteillä erotettuna. Esimerkiksi: '1 1 1 0 0 0' tai '1, 1, 1, 0, 0, 0' tai '0.5; 0.2; 0.3'. Sekä kokonaisluvut että desimaaliluvut ovat tuettuja. Arvojen järjestys on tärkeä, koska se edustaa sekvenssiä ensimmäisestä viimeiseen elementtiin."
+            },
+            {
+              "question": "Mikä on konvoluutiotuloksen pituus?",
+              "answer": "Jos ensimmäisen sekvenssin pituus on M ja toisen sekvenssin pituus on N, konvoluutiotuloksen pituus on M + N - 1. Esimerkiksi 6 elementin sekvenssin konvoluutio 3 elementin sekvenssin kanssa tuottaa tuloksen, jossa on 6 + 3 - 1 = 8 elementtiä."
+            },
+            {
+              "question": "Mitkä ovat konvoluution yleisiä sovelluksia?",
+              "answer": "Konvoluutiota käytetään: digitaalisessa signaalinkäsittelyssä (suodatus, tasoitus), kuvankäsittelyssä (sumentaminen, terävöittäminen, reunantunnistus), äänenkäsittelyssä (kaiku, kaikuefektit), todennäköisyysteoriassa (satunnaismuuttujien summa), ohjausjärjestelmissä (järjestelmän vaste) ja polynomien kertolaskussa. Se on olennainen lineaaristen aikainvarianttien järjestelmien ymmärtämisessä."
+            },
+            {
+              "question": "Onko sekvenssien järjestys tärkeä?",
+              "answer": "Konvoluutio on kommutatiivinen, mikä tarkoittaa, että a * b = b * a. Tulos on sama riippumatta siitä, kumman sekvenssin syötät ensin. Joissakin yhteyksissä, kuten suodatuksessa, yksi sekvenssi edustaa signaalia ja toinen suodattimen impulssivastetta, joten käsitteellisesti saatat suosia tiettyä järjestystä."
+            },
+            {
+              "question": "Onko tämä konvoluutiolaskin ilmainen?",
+              "answer": "Kyllä, konvoluutiolaskimemme on täysin ilmainen käyttää. Rekisteröitymistä tai maksua ei vaadita. Syötä vain kaksi tietosekvenssiäsi, napsauta Laske ja saat välittömät konvoluutiotulokset."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "addition": "Yhteenlaskulaskin",
+          "additionDesc": "Laske kokonaislukuja ja desimaalilukuja nopeasti ja tarkasti yhteen",
+          "average": "Keskiarvolaskin",
+          "averageDesc": "Etsi lukulistan keskiarvo, summa ja lukumäärä",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Laske prosenttiarvot, prosenttimuutos ja prosenttisuhteet"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Teksti Binääriksi Muunnin",
       "description": "Muunna teksti binäärikoodiksi heti useilla merkkikoodauksilla (UTF-8, UTF-16, Windows-1252) ja muokattavilla erottimilla.",

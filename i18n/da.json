@@ -3056,6 +3056,72 @@
         "description": "Læg to tal sammen"
       }
     },
+    "convolution": {
+      "title": "Foldningsberegner",
+      "description": "Beregn den diskrete foldning af to datasekvenser. Gratis online værktøj til signalbehandling, matematik og ingeniørapplikationer.",
+      "firstSequence": "Indtast første datasekvens",
+      "firstPlaceholder": "f.eks. 1 1 1 0 0 0",
+      "secondSequence": "Indtast anden datasekvens",
+      "secondPlaceholder": "f.eks. 0.5 0.2 0.3",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "resultSequence": "Resultat datasekvens",
+      "resultPlaceholder": "Indtast sekvenser og klik Beregn",
+      "errorEmptyFirst": "Indtast venligst første datasekvens",
+      "errorEmptySecond": "Indtast venligst anden datasekvens",
+      "seo": {
+        "title": "Foldningsberegner – Diskret Foldning af To Sekvenser",
+        "description": "Gratis foldningsberegner. Beregn den diskrete foldning af to datasekvenser til signalbehandling, filtrering og matematisk analyse. Hurtige og præcise resultater.",
+        "keywords": "foldningsberegner, diskret foldning, signalfoldning, sekvensfoldning, lineær foldning, foldningssum, signalbehandlingsberegner, filterfoldning, foldningsværktøj",
+        "content": {
+          "heading": "Sådan Beregnes Diskret Foldning",
+          "paragraph1": "Foldning er en grundlæggende matematisk operation, der bruges bredt inden for signalbehandling, billedbehandling, ingeniørvidenskab og statistik. Diskret foldning kombinerer to sekvenser for at producere en tredje sekvens, der repræsenterer, hvordan formen af en sekvens modificeres af den anden. Vores gratis foldningsberegner beregner hurtigt og præcist den lineære (diskrete) foldning af to inputsekvenser.",
+          "paragraph2": "Den diskrete foldning af to sekvenser a[n] og b[n] er defineret som: (a * b)[n] = Σ a[k] × b[n-k], hvor summen tages over alle gyldige indekser. I praksis, hvis sekvens a har længde M og sekvens b har længde N, har den resulterende foldning længde M + N - 1. Hvert element i outputtet beregnes ved at glide en sekvens over den anden, multiplicere overlappende elementer og summere produkterne.",
+          "paragraph3": "Foldning har mange praktiske anvendelser: i digital signalbehandling bruges den til at filtrere signaler (impulsresponsen af et filter foldes med inputsignalet); i billedbehandling udfører foldning med kerner sløring, skarphed og kantdetektering; i sandsynlighedsteori giver foldningen af to sandsynlighedsfordelinger fordelingen af summen af uafhængige tilfældige variable; i ingeniørvidenskab beskriver foldning outputtet fra lineære tidsinvariante (LTI) systemer.",
+          "paragraph4": "For at bruge beregneren skal du indtaste dine datasekvenser adskilt af mellemrum, kommaer eller semikoloner. Decimalværdier understøttes. Klik på Beregn for at se resultatet. Outputsekvensen viser den fulde diskrete foldning af de to inputs. Dette værktøj er perfekt til studerende, der lærer signalbehandling, ingeniører, der analyserer filtre, forskere, der arbejder med datasekvenser, og alle, der har brug for hurtige foldningsberegninger.",
+          "exampleHeading": "Eksempel: Foldningsberegning",
+          "exampleText": "Første sekvens: 1 1 1 0 0 0 (længde 6). Anden sekvens: 0.5 0.2 0.3 (længde 3). Foldningen har længde 6 + 3 - 1 = 8. Resultat: 0.5 0.7 1 0.5 0.3 0.3 0 0. Beregning: Position 0: 1×0.5 = 0.5. Position 1: 1×0.2 + 1×0.5 = 0.7. Position 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. Og så videre for hver position."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er diskret foldning?",
+              "answer": "Diskret foldning er en matematisk operation, der kombinerer to sekvenser (eller signaler) for at producere en tredje sekvens. Den måler, hvordan formen af en sekvens modificeres af den anden. Operationen involverer at glide en sekvens over den anden, multiplicere overlappende værdier og summere produkterne ved hver position."
+            },
+            {
+              "question": "Hvordan indtaster jeg datasekvenser?",
+              "answer": "Indtast dine tal adskilt af mellemrum, kommaer eller semikoloner. For eksempel: '1 1 1 0 0 0' eller '1, 1, 1, 0, 0, 0' eller '0.5; 0.2; 0.3'. Både heltal og decimaltal understøttes. Rækkefølgen af værdier er vigtig, da den repræsenterer sekvensen fra første til sidste element."
+            },
+            {
+              "question": "Hvad er længden af foldningsresultatet?",
+              "answer": "Hvis første sekvens har længde M og anden sekvens har længde N, har foldningsresultatet længde M + N - 1. For eksempel producerer foldning af en sekvens med 6 elementer med en sekvens med 3 elementer et resultat med 6 + 3 - 1 = 8 elementer."
+            },
+            {
+              "question": "Hvad er almindelige anvendelser af foldning?",
+              "answer": "Foldning bruges i: digital signalbehandling (filtrering, udjævning), billedbehandling (sløring, skarphed, kantdetektering), lydbehandling (rumklang, ekkoeffekter), sandsynlighedsteori (sum af tilfældige variable), kontrolsystemer (systemrespons) og polynomiummultiplikation. Den er grundlæggende for at forstå lineære tidsinvariante systemer."
+            },
+            {
+              "question": "Er rækkefølgen af sekvenser vigtig?",
+              "answer": "Foldning er kommutativ, hvilket betyder, at a * b = b * a. Resultatet er det samme uanset hvilken sekvens du indtaster først. I nogle sammenhænge som filtrering repræsenterer én sekvens signalet og den anden filterets impulsrespons, så konceptuelt kan du foretrække en specifik rækkefølge."
+            },
+            {
+              "question": "Er denne foldningsberegner gratis?",
+              "answer": "Ja, vores foldningsberegner er helt gratis at bruge. Ingen registrering eller betaling kræves. Indtast blot dine to datasekvenser, klik på Beregn, og få øjeblikkelige foldningsresultater."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Beregnere",
+          "addition": "Additionslommeregner",
+          "additionDesc": "Læg heltal og decimaltal sammen hurtigt og præcist",
+          "average": "Gennemsnitsberegner",
+          "averageDesc": "Find gennemsnittet, summen og antallet af en liste med tal",
+          "percentage": "Procentberegner",
+          "percentageDesc": "Beregn procentværdier, procentændring og procentforhold"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Tekst til Binær Konverter",
       "description": "Konverter tekst til binær kode øjeblikkeligt med flere tegnkodninger (UTF-8, UTF-16, Windows-1252) og tilpasselige separatorer.",

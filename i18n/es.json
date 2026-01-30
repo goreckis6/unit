@@ -3056,6 +3056,72 @@
         "description": "Sumar dos números"
       }
     },
+    "convolution": {
+      "title": "Calculadora de Convolución",
+      "description": "Calcula la convolución discreta de dos secuencias de datos. Herramienta online gratuita para procesamiento de señales, matemáticas y aplicaciones de ingeniería.",
+      "firstSequence": "Ingrese la primera secuencia de datos",
+      "firstPlaceholder": "ej. 1 1 1 0 0 0",
+      "secondSequence": "Ingrese la segunda secuencia de datos",
+      "secondPlaceholder": "ej. 0.5 0.2 0.3",
+      "calculate": "Calcular",
+      "reset": "Reiniciar",
+      "resultSequence": "Secuencia de datos resultante",
+      "resultPlaceholder": "Ingrese las secuencias y haga clic en Calcular",
+      "errorEmptyFirst": "Por favor ingrese la primera secuencia de datos",
+      "errorEmptySecond": "Por favor ingrese la segunda secuencia de datos",
+      "seo": {
+        "title": "Calculadora de Convolución – Convolución Discreta de Dos Secuencias",
+        "description": "Calculadora de convolución gratuita. Calcula la convolución discreta de dos secuencias de datos para procesamiento de señales, filtrado y análisis matemático. Resultados rápidos y precisos.",
+        "keywords": "calculadora de convolución, convolución discreta, convolución de señales, convolución de secuencias, convolución lineal, suma de convolución, calculadora de procesamiento de señales, convolución de filtro, herramienta de convolución",
+        "content": {
+          "heading": "Cómo Calcular la Convolución Discreta",
+          "paragraph1": "La convolución es una operación matemática fundamental ampliamente utilizada en procesamiento de señales, procesamiento de imágenes, ingeniería y estadística. La convolución discreta combina dos secuencias para producir una tercera secuencia que representa cómo la forma de una secuencia es modificada por la otra. Nuestra calculadora de convolución gratuita calcula rápida y precisamente la convolución lineal (discreta) de dos secuencias de entrada.",
+          "paragraph2": "La convolución discreta de dos secuencias a[n] y b[n] se define como: (a * b)[n] = Σ a[k] × b[n-k], donde la suma se toma sobre todos los índices válidos. En la práctica, si la secuencia a tiene longitud M y la secuencia b tiene longitud N, la convolución resultante tiene longitud M + N - 1. Cada elemento de la salida se calcula deslizando una secuencia sobre la otra, multiplicando los elementos superpuestos y sumando los productos.",
+          "paragraph3": "La convolución tiene muchas aplicaciones prácticas: en el procesamiento digital de señales, se usa para filtrar señales (la respuesta al impulso de un filtro se convoluciona con la señal de entrada); en el procesamiento de imágenes, la convolución con kernels realiza desenfoque, nitidez y detección de bordes; en teoría de probabilidades, la convolución de dos distribuciones de probabilidad da la distribución de la suma de variables aleatorias independientes; en ingeniería, la convolución describe la salida de sistemas lineales invariantes en el tiempo (LTI).",
+          "paragraph4": "Para usar la calculadora, ingrese sus secuencias de datos separadas por espacios, comas o punto y coma. Se admiten valores decimales. Haga clic en Calcular para ver el resultado. La secuencia de salida muestra la convolución discreta completa de las dos entradas. Esta herramienta es perfecta para estudiantes que aprenden procesamiento de señales, ingenieros que analizan filtros, investigadores que trabajan con secuencias de datos y cualquiera que necesite cálculos de convolución rápidos.",
+          "exampleHeading": "Ejemplo: Cálculo de Convolución",
+          "exampleText": "Primera secuencia: 1 1 1 0 0 0 (longitud 6). Segunda secuencia: 0.5 0.2 0.3 (longitud 3). La convolución tiene longitud 6 + 3 - 1 = 8. Resultado: 0.5 0.7 1 0.5 0.3 0.3 0 0. Cálculo: Posición 0: 1×0.5 = 0.5. Posición 1: 1×0.2 + 1×0.5 = 0.7. Posición 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. Y así sucesivamente para cada posición."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es la convolución discreta?",
+              "answer": "La convolución discreta es una operación matemática que combina dos secuencias (o señales) para producir una tercera secuencia. Mide cómo la forma de una secuencia es modificada por la otra. La operación consiste en deslizar una secuencia sobre la otra, multiplicar los valores superpuestos y sumar los productos en cada posición."
+            },
+            {
+              "question": "¿Cómo ingreso secuencias de datos?",
+              "answer": "Ingrese sus números separados por espacios, comas o punto y coma. Por ejemplo: '1 1 1 0 0 0' o '1, 1, 1, 0, 0, 0' o '0.5; 0.2; 0.3'. Se admiten tanto números enteros como decimales. El orden de los valores importa, ya que representa la secuencia del primer al último elemento."
+            },
+            {
+              "question": "¿Cuál es la longitud del resultado de convolución?",
+              "answer": "Si la primera secuencia tiene longitud M y la segunda secuencia tiene longitud N, el resultado de convolución tiene longitud M + N - 1. Por ejemplo, convolucionar una secuencia de 6 elementos con una secuencia de 3 elementos produce un resultado con 6 + 3 - 1 = 8 elementos."
+            },
+            {
+              "question": "¿Cuáles son las aplicaciones comunes de la convolución?",
+              "answer": "La convolución se usa en: procesamiento digital de señales (filtrado, suavizado), procesamiento de imágenes (desenfoque, nitidez, detección de bordes), procesamiento de audio (reverberación, efectos de eco), teoría de probabilidades (suma de variables aleatorias), sistemas de control (respuesta del sistema) y multiplicación de polinomios. Es fundamental para entender los sistemas lineales invariantes en el tiempo."
+            },
+            {
+              "question": "¿Es importante el orden de las secuencias?",
+              "answer": "La convolución es conmutativa, lo que significa que a * b = b * a. El resultado es el mismo independientemente de qué secuencia ingrese primero. Sin embargo, en algunos contextos como el filtrado, una secuencia representa la señal y la otra representa la respuesta al impulso del filtro, por lo que conceptualmente puede preferir un orden específico."
+            },
+            {
+              "question": "¿Esta calculadora de convolución es gratuita?",
+              "answer": "Sí, nuestra calculadora de convolución es completamente gratuita. No se requiere registro ni pago. Simplemente ingrese sus dos secuencias de datos, haga clic en Calcular y obtenga resultados de convolución instantáneos."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "addition": "Calculadora de Suma",
+          "additionDesc": "Sumar números enteros y decimales rápida y precisamente",
+          "average": "Calculadora de Promedio",
+          "averageDesc": "Encontrar el promedio, la suma y la cantidad de una lista de números",
+          "percentage": "Calculadora de Porcentaje",
+          "percentageDesc": "Calcular valores porcentuales, cambio porcentual y relaciones porcentuales"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Convertidor de Texto a Binario",
       "description": "Convierte texto a código binario al instante con múltiples codificaciones de caracteres (UTF-8, UTF-16, Windows-1252) y separadores personalizables.",

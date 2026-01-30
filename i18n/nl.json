@@ -3056,6 +3056,72 @@
         "description": "Twee getallen optellen"
       }
     },
+    "convolution": {
+      "title": "Convolutiecalculator",
+      "description": "Bereken de discrete convolutie van twee gegevensreeksen. Gratis online tool voor signaalverwerking, wiskunde en technische toepassingen.",
+      "firstSequence": "Voer de eerste gegevensreeks in",
+      "firstPlaceholder": "bijv. 1 1 1 0 0 0",
+      "secondSequence": "Voer de tweede gegevensreeks in",
+      "secondPlaceholder": "bijv. 0.5 0.2 0.3",
+      "calculate": "Bereken",
+      "reset": "Reset",
+      "resultSequence": "Resultaat gegevensreeks",
+      "resultPlaceholder": "Voer reeksen in en klik op Bereken",
+      "errorEmptyFirst": "Voer de eerste gegevensreeks in",
+      "errorEmptySecond": "Voer de tweede gegevensreeks in",
+      "seo": {
+        "title": "Convolutiecalculator – Discrete Convolutie van Twee Reeksen",
+        "description": "Gratis convolutiecalculator. Bereken de discrete convolutie van twee gegevensreeksen voor signaalverwerking, filtering en wiskundige analyse. Snelle en nauwkeurige resultaten.",
+        "keywords": "convolutiecalculator, discrete convolutie, signaalconvolutie, convolutie van reeksen, lineaire convolutie, convolutiesom, signaalverwerkingscalculator, filterconvolutie, convolutietool",
+        "content": {
+          "heading": "Hoe Discrete Convolutie te Berekenen",
+          "paragraph1": "Convolutie is een fundamentele wiskundige bewerking die veel wordt gebruikt in signaalverwerking, beeldverwerking, techniek en statistiek. Discrete convolutie combineert twee reeksen om een derde reeks te produceren die weergeeft hoe de vorm van de ene reeks wordt gewijzigd door de andere. Onze gratis convolutiecalculator berekent snel en nauwkeurig de lineaire (discrete) convolutie van twee invoerreeksen.",
+          "paragraph2": "De discrete convolutie van twee reeksen a[n] en b[n] is gedefinieerd als: (a * b)[n] = Σ a[k] × b[n-k], waarbij de som wordt genomen over alle geldige indices. Als reeks a lengte M heeft en reeks b lengte N, heeft de resulterende convolutie lengte M + N - 1. Elk element van de uitvoer wordt berekend door één reeks over de andere te schuiven, overlappende elementen te vermenigvuldigen en de producten op te tellen.",
+          "paragraph3": "Convolutie heeft vele praktische toepassingen: in digitale signaalverwerking wordt het gebruikt voor het filteren van signalen (de impulsresponsie van een filter wordt geconvolueerd met het ingangssignaal); in beeldverwerking voert convolutie met kernels vervaging, verscherping en randdetectie uit; in de kansrekening geeft de convolutie van twee kansverdelingen de verdeling van de som van onafhankelijke willekeurige variabelen; in techniek beschrijft convolutie de uitgang van lineaire tijdinvariante (LTI) systemen.",
+          "paragraph4": "Om de calculator te gebruiken, voer je gegevensreeksen in gescheiden door spaties, komma's of puntkomma's. Decimale waarden worden ondersteund. Klik op Bereken om het resultaat te zien. De uitvoerreeks toont de volledige discrete convolutie van de twee ingangen. Deze tool is perfect voor studenten die signaalverwerking leren, ingenieurs die filters analyseren, onderzoekers die met gegevensreeksen werken, en iedereen die snelle convolutieberekeningen nodig heeft.",
+          "exampleHeading": "Voorbeeld: Convolutieberekening",
+          "exampleText": "Eerste reeks: 1 1 1 0 0 0 (lengte 6). Tweede reeks: 0.5 0.2 0.3 (lengte 3). De convolutie heeft lengte 6 + 3 - 1 = 8. Resultaat: 0.5 0.7 1 0.5 0.3 0.3 0 0. Berekening: Positie 0: 1×0.5 = 0.5. Positie 1: 1×0.2 + 1×0.5 = 0.7. Positie 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. En zo verder voor elke positie."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            {
+              "question": "Wat is discrete convolutie?",
+              "answer": "Discrete convolutie is een wiskundige bewerking die twee reeksen (of signalen) combineert om een derde reeks te produceren. Het meet hoe de vorm van de ene reeks wordt gewijzigd door de andere. De bewerking houdt in dat je één reeks over de andere schuift, overlappende waarden vermenigvuldigt en de producten op elke positie optelt."
+            },
+            {
+              "question": "Hoe voer ik gegevensreeksen in?",
+              "answer": "Voer je getallen in gescheiden door spaties, komma's of puntkomma's. Bijvoorbeeld: '1 1 1 0 0 0' of '1, 1, 1, 0, 0, 0' of '0.5; 0.2; 0.3'. Zowel gehele getallen als decimalen worden ondersteund. De volgorde van waarden is belangrijk, omdat het de reeks van het eerste tot het laatste element vertegenwoordigt."
+            },
+            {
+              "question": "Wat is de lengte van het convolutieresultaat?",
+              "answer": "Als de eerste reeks lengte M heeft en de tweede reeks lengte N, heeft het convolutieresultaat lengte M + N - 1. Bijvoorbeeld, het convolueren van een reeks van 6 elementen met een reeks van 3 elementen produceert een resultaat met 6 + 3 - 1 = 8 elementen."
+            },
+            {
+              "question": "Wat zijn veelvoorkomende toepassingen van convolutie?",
+              "answer": "Convolutie wordt gebruikt in: digitale signaalverwerking (filteren, gladmaken), beeldverwerking (vervagen, verscherpen, randdetectie), audioverwerking (galm, echo-effecten), kansrekening (som van willekeurige variabelen), regelsystemen (systeemrespons) en polynoomvermenigvuldiging. Het is fundamenteel voor het begrijpen van lineaire tijdinvariante systemen."
+            },
+            {
+              "question": "Is de volgorde van reeksen belangrijk?",
+              "answer": "Convolutie is commutatief, wat betekent dat a * b = b * a. Het resultaat is hetzelfde ongeacht welke reeks je eerst invoert. Echter, in sommige contexten zoals filtering, vertegenwoordigt één reeks het signaal en de andere de impulsrespons van het filter, dus conceptueel kun je een specifieke volgorde prefereren."
+            },
+            {
+              "question": "Is deze convolutiecalculator gratis?",
+              "answer": "Ja, onze convolutiecalculator is volledig gratis te gebruiken. Geen registratie of betaling vereist. Voer eenvoudig je twee gegevensreeksen in, klik op Bereken en krijg direct convolutieresultaten."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde Calculators",
+          "addition": "Optelrekenmachine",
+          "additionDesc": "Tel snel en nauwkeurig gehele getallen en decimalen op",
+          "average": "Gemiddeldecalculator",
+          "averageDesc": "Vind het gemiddelde, de som en het aantal van een lijst getallen",
+          "percentage": "Percentagecalculator",
+          "percentageDesc": "Bereken percentagewaarden, percentageverandering en percentageverhoudingen"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Tekst naar Binair Converter",
       "description": "Converteer tekst direct naar binaire code met meerdere tekenkoderingen (UTF-8, UTF-16, Windows-1252) en aanpasbare scheidingstekens.",

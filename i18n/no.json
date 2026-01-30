@@ -3056,6 +3056,72 @@
         "description": "Legg sammen to tall"
       }
     },
+    "convolution": {
+      "title": "Konvolusjonskalkulator",
+      "description": "Beregn den diskrete konvolusjonen av to datasekvenser. Gratis online verktøy for signalbehandling, matematikk og ingeniørapplikasjoner.",
+      "firstSequence": "Skriv inn første datasekvens",
+      "firstPlaceholder": "f.eks. 1 1 1 0 0 0",
+      "secondSequence": "Skriv inn andre datasekvens",
+      "secondPlaceholder": "f.eks. 0.5 0.2 0.3",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "resultSequence": "Resultat datasekvens",
+      "resultPlaceholder": "Skriv inn sekvenser og klikk Beregn",
+      "errorEmptyFirst": "Vennligst skriv inn første datasekvens",
+      "errorEmptySecond": "Vennligst skriv inn andre datasekvens",
+      "seo": {
+        "title": "Konvolusjonskalkulator – Diskret Konvolusjon av To Sekvenser",
+        "description": "Gratis konvolusjonskalkulator. Beregn den diskrete konvolusjonen av to datasekvenser for signalbehandling, filtrering og matematisk analyse. Raske og nøyaktige resultater.",
+        "keywords": "konvolusjonskalkulator, diskret konvolusjon, signalkonvolusjon, sekvenskonvolusjon, lineær konvolusjon, konvolusjonssum, signalbehandlingskalkulator, filterkonvolusjon, konvolusjonsverktøy",
+        "content": {
+          "heading": "Hvordan Beregne Diskret Konvolusjon",
+          "paragraph1": "Konvolusjon er en grunnleggende matematisk operasjon som brukes mye i signalbehandling, bildebehandling, ingeniørvitenskap og statistikk. Diskret konvolusjon kombinerer to sekvenser for å produsere en tredje sekvens som representerer hvordan formen av en sekvens modifiseres av den andre. Vår gratis konvolusjonskalkulator beregner raskt og nøyaktig den lineære (diskrete) konvolusjonen av to inndatasekvenser.",
+          "paragraph2": "Den diskrete konvolusjonen av to sekvenser a[n] og b[n] er definert som: (a * b)[n] = Σ a[k] × b[n-k], der summen tas over alle gyldige indekser. I praksis, hvis sekvens a har lengde M og sekvens b har lengde N, har den resulterende konvolusjonen lengde M + N - 1. Hvert element i utdataen beregnes ved å gli en sekvens over den andre, multiplisere overlappende elementer og summere produktene.",
+          "paragraph3": "Konvolusjon har mange praktiske anvendelser: i digital signalbehandling brukes den til å filtrere signaler (impulsresponsen til et filter konvolveres med inngangssignalet); i bildebehandling utfører konvolusjon med kjerner uskarphet, skarphet og kantdeteksjon; i sannsynlighetsteori gir konvolusjonen av to sannsynlighetsfordelinger fordelingen av summen av uavhengige tilfeldige variabler; i ingeniørvitenskap beskriver konvolusjon utgangen fra lineære tidsinvariante (LTI) systemer.",
+          "paragraph4": "For å bruke kalkulatoren, skriv inn datasekvensene dine separert med mellomrom, komma eller semikolon. Desimalverdier støttes. Klikk Beregn for å se resultatet. Utdatasekvensen viser den fullstendige diskrete konvolusjonen av de to inndataene. Dette verktøyet er perfekt for studenter som lærer signalbehandling, ingeniører som analyserer filtre, forskere som arbeider med datasekvenser, og alle som trenger raske konvolusjonsberegninger.",
+          "exampleHeading": "Eksempel: Konvolusjonsberegning",
+          "exampleText": "Første sekvens: 1 1 1 0 0 0 (lengde 6). Andre sekvens: 0.5 0.2 0.3 (lengde 3). Konvolusjonen har lengde 6 + 3 - 1 = 8. Resultat: 0.5 0.7 1 0.5 0.3 0.3 0 0. Beregning: Posisjon 0: 1×0.5 = 0.5. Posisjon 1: 1×0.2 + 1×0.5 = 0.7. Posisjon 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. Og så videre for hver posisjon."
+        },
+        "faq": {
+          "heading": "Ofte Stilte Spørsmål",
+          "items": [
+            {
+              "question": "Hva er diskret konvolusjon?",
+              "answer": "Diskret konvolusjon er en matematisk operasjon som kombinerer to sekvenser (eller signaler) for å produsere en tredje sekvens. Den måler hvordan formen av en sekvens modifiseres av den andre. Operasjonen innebærer å gli en sekvens over den andre, multiplisere overlappende verdier og summere produktene ved hver posisjon."
+            },
+            {
+              "question": "Hvordan skriver jeg inn datasekvenser?",
+              "answer": "Skriv inn tallene dine separert med mellomrom, komma eller semikolon. For eksempel: '1 1 1 0 0 0' eller '1, 1, 1, 0, 0, 0' eller '0.5; 0.2; 0.3'. Både heltall og desimaltall støttes. Rekkefølgen på verdiene er viktig, da den representerer sekvensen fra første til siste element."
+            },
+            {
+              "question": "Hva er lengden på konvolusjonsresultatet?",
+              "answer": "Hvis første sekvens har lengde M og andre sekvens har lengde N, har konvolusjonsresultatet lengde M + N - 1. For eksempel produserer konvolusjon av en sekvens med 6 elementer med en sekvens med 3 elementer et resultat med 6 + 3 - 1 = 8 elementer."
+            },
+            {
+              "question": "Hva er vanlige anvendelser av konvolusjon?",
+              "answer": "Konvolusjon brukes i: digital signalbehandling (filtrering, utjevning), bildebehandling (uskarphet, skarphet, kantdeteksjon), lydbehandling (klang, ekkoeffekter), sannsynlighetsteori (sum av tilfeldige variabler), kontrollsystemer (systemrespons) og polynommultiplikasjon. Den er grunnleggende for å forstå lineære tidsinvariante systemer."
+            },
+            {
+              "question": "Er rekkefølgen på sekvensene viktig?",
+              "answer": "Konvolusjon er kommutativ, noe som betyr at a * b = b * a. Resultatet er det samme uavhengig av hvilken sekvens du skriver inn først. I noen sammenhenger som filtrering representerer imidlertid én sekvens signalet og den andre filterets impulsrespons, så konseptuelt kan du foretrekke en spesifikk rekkefølge."
+            },
+            {
+              "question": "Er denne konvolusjonskalkulatoren gratis?",
+              "answer": "Ja, vår konvolusjonskalkulator er helt gratis å bruke. Ingen registrering eller betaling kreves. Bare skriv inn dine to datasekvenser, klikk Beregn, og få umiddelbare konvolusjonsresultater."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte Kalkulatorer",
+          "addition": "Addisjonskalkulator",
+          "additionDesc": "Legg sammen heltall og desimaltall raskt og nøyaktig",
+          "average": "Gjennomsnittskalkulator",
+          "averageDesc": "Finn gjennomsnittet, summen og antallet i en liste med tall",
+          "percentage": "Prosentkalkulator",
+          "percentageDesc": "Beregn prosentverdier, prosentendring og prosentforhold"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Tekst til Binær Konverter",
       "description": "Konverter tekst til binær kode umiddelbart med flere tegnkodinger (UTF-8, UTF-16, Windows-1252) og tilpassbare separatorer.",

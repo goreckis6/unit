@@ -3056,6 +3056,72 @@
         "description": "Zwei Zahlen addieren"
       }
     },
+    "convolution": {
+      "title": "Faltungsrechner",
+      "description": "Berechnen Sie die diskrete Faltung zweier Datenfolgen. Kostenloses Online-Tool für Signalverarbeitung, Mathematik und Ingenieursanwendungen.",
+      "firstSequence": "Erste Datenfolge eingeben",
+      "firstPlaceholder": "z.B. 1 1 1 0 0 0",
+      "secondSequence": "Zweite Datenfolge eingeben",
+      "secondPlaceholder": "z.B. 0.5 0.2 0.3",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "resultSequence": "Ergebnis-Datenfolge",
+      "resultPlaceholder": "Folgen eingeben und Berechnen klicken",
+      "errorEmptyFirst": "Bitte geben Sie die erste Datenfolge ein",
+      "errorEmptySecond": "Bitte geben Sie die zweite Datenfolge ein",
+      "seo": {
+        "title": "Faltungsrechner – Diskrete Faltung Zweier Folgen",
+        "description": "Kostenloser Faltungsrechner. Berechnen Sie die diskrete Faltung zweier Datenfolgen für Signalverarbeitung, Filterung und mathematische Analyse. Schnelle und genaue Ergebnisse.",
+        "keywords": "Faltungsrechner, diskrete Faltung, Signalfaltung, Faltung von Folgen, lineare Faltung, Faltungssumme, Signalverarbeitungsrechner, Filterfaltung, Faltungswerkzeug",
+        "content": {
+          "heading": "Wie man die Diskrete Faltung Berechnet",
+          "paragraph1": "Faltung ist eine grundlegende mathematische Operation, die in der Signalverarbeitung, Bildverarbeitung, Technik und Statistik weit verbreitet ist. Die diskrete Faltung kombiniert zwei Folgen zu einer dritten Folge, die darstellt, wie die Form einer Folge durch die andere modifiziert wird. Unser kostenloser Faltungsrechner berechnet schnell und genau die lineare (diskrete) Faltung zweier Eingabefolgen.",
+          "paragraph2": "Die diskrete Faltung zweier Folgen a[n] und b[n] ist definiert als: (a * b)[n] = Σ a[k] × b[n-k], wobei die Summe über alle gültigen Indizes genommen wird. Wenn Folge a die Länge M und Folge b die Länge N hat, hat die resultierende Faltung die Länge M + N - 1. Jedes Element der Ausgabe wird berechnet, indem eine Folge über die andere geschoben, überlappende Elemente multipliziert und die Produkte summiert werden.",
+          "paragraph3": "Faltung hat viele praktische Anwendungen: In der digitalen Signalverarbeitung wird sie zur Filterung von Signalen verwendet (die Impulsantwort eines Filters wird mit dem Eingangssignal gefaltet); in der Bildverarbeitung führt die Faltung mit Kernels Weichzeichnung, Schärfung und Kantenerkennung durch; in der Wahrscheinlichkeitstheorie ergibt die Faltung zweier Wahrscheinlichkeitsverteilungen die Verteilung der Summe unabhängiger Zufallsvariablen; in der Technik beschreibt die Faltung die Ausgabe linearer zeitinvarianter (LTI) Systeme.",
+          "paragraph4": "Um den Rechner zu verwenden, geben Sie Ihre Datenfolgen durch Leerzeichen, Kommas oder Semikolons getrennt ein. Dezimalwerte werden unterstützt. Klicken Sie auf Berechnen, um das Ergebnis zu sehen. Die Ausgabefolge zeigt die vollständige diskrete Faltung der beiden Eingaben. Dieses Tool ist perfekt für Studenten, die Signalverarbeitung lernen, Ingenieure, die Filter analysieren, Forscher, die mit Datenfolgen arbeiten, und jeden, der schnelle Faltungsberechnungen benötigt.",
+          "exampleHeading": "Beispiel: Faltungsberechnung",
+          "exampleText": "Erste Folge: 1 1 1 0 0 0 (Länge 6). Zweite Folge: 0.5 0.2 0.3 (Länge 3). Die Faltung hat die Länge 6 + 3 - 1 = 8. Ergebnis: 0.5 0.7 1 0.5 0.3 0.3 0 0. Berechnung: Position 0: 1×0.5 = 0.5. Position 1: 1×0.2 + 1×0.5 = 0.7. Position 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. Und so weiter für jede Position."
+        },
+        "faq": {
+          "heading": "Häufig Gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist diskrete Faltung?",
+              "answer": "Diskrete Faltung ist eine mathematische Operation, die zwei Folgen (oder Signale) kombiniert, um eine dritte Folge zu erzeugen. Sie misst, wie die Form einer Folge durch die andere modifiziert wird. Die Operation beinhaltet das Verschieben einer Folge über die andere, das Multiplizieren überlappender Werte und das Summieren der Produkte an jeder Position."
+            },
+            {
+              "question": "Wie gebe ich Datenfolgen ein?",
+              "answer": "Geben Sie Ihre Zahlen durch Leerzeichen, Kommas oder Semikolons getrennt ein. Zum Beispiel: '1 1 1 0 0 0' oder '1, 1, 1, 0, 0, 0' oder '0.5; 0.2; 0.3'. Sowohl ganze Zahlen als auch Dezimalzahlen werden unterstützt. Die Reihenfolge der Werte ist wichtig, da sie die Folge vom ersten bis zum letzten Element darstellt."
+            },
+            {
+              "question": "Wie lang ist das Faltungsergebnis?",
+              "answer": "Wenn die erste Folge die Länge M und die zweite Folge die Länge N hat, hat das Faltungsergebnis die Länge M + N - 1. Zum Beispiel ergibt die Faltung einer Folge mit 6 Elementen mit einer Folge mit 3 Elementen ein Ergebnis mit 6 + 3 - 1 = 8 Elementen."
+            },
+            {
+              "question": "Was sind typische Anwendungen der Faltung?",
+              "answer": "Faltung wird verwendet in: digitaler Signalverarbeitung (Filterung, Glättung), Bildverarbeitung (Weichzeichnen, Schärfen, Kantenerkennung), Audioverarbeitung (Hall, Echo-Effekte), Wahrscheinlichkeitstheorie (Summe von Zufallsvariablen), Regelungssystemen (Systemantwort) und Polynommultiplikation. Sie ist grundlegend für das Verständnis linearer zeitinvarianter Systeme."
+            },
+            {
+              "question": "Ist die Reihenfolge der Folgen wichtig?",
+              "answer": "Faltung ist kommutativ, d.h. a * b = b * a. Das Ergebnis ist dasselbe, unabhängig davon, welche Folge Sie zuerst eingeben. In einigen Kontexten wie der Filterung repräsentiert jedoch eine Folge das Signal und die andere die Impulsantwort des Filters, sodass Sie konzeptionell eine bestimmte Reihenfolge bevorzugen können."
+            },
+            {
+              "question": "Ist dieser Faltungsrechner kostenlos?",
+              "answer": "Ja, unser Faltungsrechner ist völlig kostenlos. Keine Registrierung oder Zahlung erforderlich. Geben Sie einfach Ihre beiden Datenfolgen ein, klicken Sie auf Berechnen und erhalten Sie sofortige Faltungsergebnisse."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "addition": "Additionsrechner",
+          "additionDesc": "Ganze Zahlen und Dezimalzahlen schnell und genau addieren",
+          "average": "Durchschnittsrechner",
+          "averageDesc": "Durchschnitt, Summe und Anzahl einer Zahlenliste finden",
+          "percentage": "Prozentrechner",
+          "percentageDesc": "Prozentwerte, prozentuale Änderung und Prozentbeziehungen berechnen"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Text zu Binär Konverter",
       "description": "Konvertieren Sie Text sofort in Binärcode mit mehreren Zeichenkodierungen (UTF-8, UTF-16, Windows-1252) und anpassbaren Trennzeichen.",

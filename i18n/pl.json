@@ -3056,6 +3056,72 @@
         }
       }
     },
+    "convolution": {
+      "title": "Kalkulator Splotu",
+      "description": "Oblicz dyskretny splot dwóch ciągów danych. Darmowe narzędzie online do przetwarzania sygnałów, matematyki i zastosowań inżynieryjnych.",
+      "firstSequence": "Wprowadź pierwszy ciąg danych",
+      "firstPlaceholder": "np. 1 1 1 0 0 0",
+      "secondSequence": "Wprowadź drugi ciąg danych",
+      "secondPlaceholder": "np. 0.5 0.2 0.3",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "resultSequence": "Wynikowy ciąg danych",
+      "resultPlaceholder": "Wprowadź ciągi i kliknij Oblicz",
+      "errorEmptyFirst": "Proszę wprowadzić pierwszy ciąg danych",
+      "errorEmptySecond": "Proszę wprowadzić drugi ciąg danych",
+      "seo": {
+        "title": "Kalkulator Splotu – Dyskretny Splot Dwóch Ciągów",
+        "description": "Darmowy kalkulator splotu. Oblicz dyskretny splot dwóch ciągów danych do przetwarzania sygnałów, filtrowania i analizy matematycznej. Szybkie i dokładne wyniki.",
+        "keywords": "kalkulator splotu, splot dyskretny, splot sygnałów, splot ciągów, splot liniowy, suma splotu, kalkulator przetwarzania sygnałów, splot filtra, narzędzie splotu",
+        "content": {
+          "heading": "Jak Obliczyć Dyskretny Splot",
+          "paragraph1": "Splot to podstawowa operacja matematyczna szeroko stosowana w przetwarzaniu sygnałów, przetwarzaniu obrazów, inżynierii i statystyce. Dyskretny splot łączy dwa ciągi, tworząc trzeci ciąg, który reprezentuje, jak kształt jednego ciągu jest modyfikowany przez drugi. Nasz darmowy kalkulator splotu szybko i dokładnie oblicza liniowy (dyskretny) splot dwóch ciągów wejściowych.",
+          "paragraph2": "Dyskretny splot dwóch ciągów a[n] i b[n] jest zdefiniowany jako: (a * b)[n] = Σ a[k] × b[n-k], gdzie suma jest brana po wszystkich prawidłowych indeksach. W praktyce, jeśli ciąg a ma długość M, a ciąg b ma długość N, wynikowy splot ma długość M + N - 1. Każdy element wyjścia jest obliczany przez przesuwanie jednego ciągu po drugim, mnożenie nakładających się elementów i sumowanie iloczynów.",
+          "paragraph3": "Splot ma wiele praktycznych zastosowań: w cyfrowym przetwarzaniu sygnałów służy do filtrowania sygnałów (odpowiedź impulsowa filtra jest splatana z sygnałem wejściowym); w przetwarzaniu obrazów splot z jądrami wykonuje rozmycie, wyostrzanie i wykrywanie krawędzi; w teorii prawdopodobieństwa splot dwóch rozkładów prawdopodobieństwa daje rozkład sumy niezależnych zmiennych losowych; w inżynierii splot opisuje wyjście liniowych systemów niezmienniczych w czasie (LTI).",
+          "paragraph4": "Aby użyć kalkulatora, wprowadź ciągi danych oddzielone spacjami, przecinkami lub średnikami. Obsługiwane są wartości dziesiętne. Kliknij Oblicz, aby zobaczyć wynik. Ciąg wyjściowy pokazuje pełny dyskretny splot dwóch wejść. To narzędzie jest idealne dla studentów uczących się przetwarzania sygnałów, inżynierów analizujących filtry, badaczy pracujących z ciągami danych i każdego, kto potrzebuje szybkich obliczeń splotu.",
+          "exampleHeading": "Przykład: Obliczanie Splotu",
+          "exampleText": "Pierwszy ciąg: 1 1 1 0 0 0 (długość 6). Drugi ciąg: 0.5 0.2 0.3 (długość 3). Splot ma długość 6 + 3 - 1 = 8. Wynik: 0.5 0.7 1 0.5 0.3 0.3 0 0. Obliczenie: Pozycja 0: 1×0.5 = 0.5. Pozycja 1: 1×0.2 + 1×0.5 = 0.7. Pozycja 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. I tak dalej dla każdej pozycji."
+        },
+        "faq": {
+          "heading": "Często Zadawane Pytania",
+          "items": [
+            {
+              "question": "Czym jest dyskretny splot?",
+              "answer": "Dyskretny splot to operacja matematyczna, która łączy dwa ciągi (lub sygnały), tworząc trzeci ciąg. Mierzy, jak kształt jednego ciągu jest modyfikowany przez drugi. Operacja polega na przesuwaniu jednego ciągu po drugim, mnożeniu nakładających się wartości i sumowaniu iloczynów na każdej pozycji."
+            },
+            {
+              "question": "Jak wprowadzić ciągi danych?",
+              "answer": "Wprowadź liczby oddzielone spacjami, przecinkami lub średnikami. Na przykład: '1 1 1 0 0 0' lub '1, 1, 1, 0, 0, 0' lub '0.5; 0.2; 0.3'. Obsługiwane są zarówno liczby całkowite, jak i dziesiętne. Kolejność wartości ma znaczenie, ponieważ reprezentuje ciąg od pierwszego do ostatniego elementu."
+            },
+            {
+              "question": "Jaka jest długość wyniku splotu?",
+              "answer": "Jeśli pierwszy ciąg ma długość M, a drugi ciąg ma długość N, wynik splotu ma długość M + N - 1. Na przykład splot ciągu 6 elementów z ciągiem 3 elementów daje wynik z 6 + 3 - 1 = 8 elementami."
+            },
+            {
+              "question": "Jakie są typowe zastosowania splotu?",
+              "answer": "Splot jest używany w: cyfrowym przetwarzaniu sygnałów (filtrowanie, wygładzanie), przetwarzaniu obrazów (rozmycie, wyostrzanie, wykrywanie krawędzi), przetwarzaniu dźwięku (pogłos, efekty echa), teorii prawdopodobieństwa (suma zmiennych losowych), systemach sterowania (odpowiedź systemu) i mnożeniu wielomianów. Jest fundamentalny dla zrozumienia liniowych systemów niezmienniczych w czasie."
+            },
+            {
+              "question": "Czy kolejność ciągów jest ważna?",
+              "answer": "Splot jest przemienny, co oznacza, że a * b = b * a. Wynik jest taki sam bez względu na to, który ciąg wprowadzisz pierwszy. Jednak w niektórych kontekstach, jak filtrowanie, jeden ciąg reprezentuje sygnał, a drugi odpowiedź impulsową filtra, więc koncepcyjnie możesz preferować określoną kolejność."
+            },
+            {
+              "question": "Czy ten kalkulator splotu jest darmowy?",
+              "answer": "Tak, nasz kalkulator splotu jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Po prostu wprowadź dwa ciągi danych, kliknij Oblicz i otrzymaj natychmiastowe wyniki splotu."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "addition": "Kalkulator Dodawania",
+          "additionDesc": "Szybko i dokładnie dodawaj liczby całkowite i dziesiętne",
+          "average": "Kalkulator Średniej",
+          "averageDesc": "Znajdź średnią, sumę i liczbę elementów listy liczb",
+          "percentage": "Kalkulator Procentów",
+          "percentageDesc": "Oblicz wartości procentowe, zmianę procentową i zależności procentowe"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Konwerter Tekstu na Binarny",
       "description": "Konwertuj tekst na kod binarny natychmiast z wieloma kodowaniami znaków (UTF-8, UTF-16, Windows-1252) i konfigurowalnymi separatorami.",

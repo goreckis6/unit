@@ -3056,6 +3056,72 @@
         "description": "Két szám összeadása"
       }
     },
+    "convolution": {
+      "title": "Konvolúció Számológép",
+      "description": "Számítsa ki két adatsorozat diszkrét konvolúcióját. Ingyenes online eszköz jelelfeldolgozáshoz, matematikához és mérnöki alkalmazásokhoz.",
+      "firstSequence": "Adja meg az első adatsorozatot",
+      "firstPlaceholder": "pl. 1 1 1 0 0 0",
+      "secondSequence": "Adja meg a második adatsorozatot",
+      "secondPlaceholder": "pl. 0.5 0.2 0.3",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "resultSequence": "Eredmény adatsorozat",
+      "resultPlaceholder": "Adja meg a sorozatokat és kattintson a Számításra",
+      "errorEmptyFirst": "Kérjük, adja meg az első adatsorozatot",
+      "errorEmptySecond": "Kérjük, adja meg a második adatsorozatot",
+      "seo": {
+        "title": "Konvolúció Számológép – Két Sorozat Diszkrét Konvolúciója",
+        "description": "Ingyenes konvolúció számológép. Számítsa ki két adatsorozat diszkrét konvolúcióját jelelfeldolgozáshoz, szűréshez és matematikai elemzéshez. Gyors és pontos eredmények.",
+        "keywords": "konvolúció számológép, diszkrét konvolúció, jel konvolúció, sorozat konvolúció, lineáris konvolúció, konvolúciós összeg, jelelfeldolgozás számológép, szűrő konvolúció, konvolúció eszköz",
+        "content": {
+          "heading": "Hogyan Számítsuk Ki a Diszkrét Konvolúciót",
+          "paragraph1": "A konvolúció egy alapvető matematikai művelet, amelyet széles körben használnak a jelelfeldolgozásban, képfeldolgozásban, mérnöki tudományokban és statisztikában. A diszkrét konvolúció két sorozatot kombinál, hogy egy harmadik sorozatot hozzon létre, amely azt reprezentálja, hogyan módosítja az egyik sorozat alakja a másikat. Ingyenes konvolúció számológépünk gyorsan és pontosan kiszámítja két bemeneti sorozat lineáris (diszkrét) konvolúcióját.",
+          "paragraph2": "Két sorozat, a[n] és b[n] diszkrét konvolúciója így definiálható: (a * b)[n] = Σ a[k] × b[n-k], ahol az összeg az összes érvényes indexre vonatkozik. A gyakorlatban, ha az a sorozat hossza M és a b sorozat hossza N, az eredményül kapott konvolúció hossza M + N - 1. A kimenet minden elemét úgy számítjuk ki, hogy az egyik sorozatot a másik fölé csúsztatjuk, az átfedő elemeket megszorozzuk és a szorzatokat összeadjuk.",
+          "paragraph3": "A konvolúciónak számos gyakorlati alkalmazása van: a digitális jelelfeldolgozásban jelek szűrésére használják (a szűrő impulzusválasza konvolválódik a bemeneti jellel); a képfeldolgozásban a magokkal való konvolúció elmosást, élesítést és éldetektálást végez; a valószínűségelméletben két valószínűségi eloszlás konvolúciója adja a független valószínűségi változók összegének eloszlását; a mérnöki tudományokban a konvolúció írja le a lineáris időinvariáns (LTI) rendszerek kimenetét.",
+          "paragraph4": "A számológép használatához adja meg adatsorozatait szóközökkel, vesszőkkel vagy pontosvesszőkkel elválasztva. A tizedes értékek támogatottak. Kattintson a Számításra az eredmény megtekintéséhez. A kimeneti sorozat a két bemenet teljes diszkrét konvolúcióját mutatja. Ez az eszköz tökéletes a jelelfeldolgozást tanuló diákoknak, szűrőket elemző mérnököknek, adatsorozatokkal dolgozó kutatóknak és mindenkinek, akinek gyors konvolúció számításokra van szüksége.",
+          "exampleHeading": "Példa: Konvolúció Számítás",
+          "exampleText": "Első sorozat: 1 1 1 0 0 0 (hossz 6). Második sorozat: 0.5 0.2 0.3 (hossz 3). A konvolúció hossza 6 + 3 - 1 = 8. Eredmény: 0.5 0.7 1 0.5 0.3 0.3 0 0. Számítás: 0. pozíció: 1×0.5 = 0.5. 1. pozíció: 1×0.2 + 1×0.5 = 0.7. 2. pozíció: 1×0.3 + 1×0.2 + 1×0.5 = 1. És így tovább minden pozícióra."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mi az a diszkrét konvolúció?",
+              "answer": "A diszkrét konvolúció egy matematikai művelet, amely két sorozatot (vagy jelet) kombinál, hogy egy harmadik sorozatot hozzon létre. Méri, hogyan módosítja az egyik sorozat alakja a másikat. A művelet magában foglalja az egyik sorozat csúsztatását a másik felett, az átfedő értékek szorzását és a szorzatok összegzését minden pozícióban."
+            },
+            {
+              "question": "Hogyan adjam meg az adatsorozatokat?",
+              "answer": "Adja meg számait szóközökkel, vesszőkkel vagy pontosvesszőkkel elválasztva. Például: '1 1 1 0 0 0' vagy '1, 1, 1, 0, 0, 0' vagy '0.5; 0.2; 0.3'. Mind az egész számok, mind a tizedes számok támogatottak. Az értékek sorrendje számít, mivel az első elemtől az utolsóig terjedő sorozatot reprezentálja."
+            },
+            {
+              "question": "Milyen hosszú a konvolúció eredménye?",
+              "answer": "Ha az első sorozat hossza M és a második sorozat hossza N, a konvolúció eredményének hossza M + N - 1. Például egy 6 elemű sorozat és egy 3 elemű sorozat konvolúciója 6 + 3 - 1 = 8 elemű eredményt ad."
+            },
+            {
+              "question": "Mik a konvolúció gyakori alkalmazásai?",
+              "answer": "A konvolúciót használják: digitális jelelfeldolgozásban (szűrés, simítás), képfeldolgozásban (elmosás, élesítés, éldetektálás), hangfeldolgozásban (visszhang, echo effektek), valószínűségelméletben (valószínűségi változók összege), vezérlőrendszerekben (rendszerválasz) és polinom szorzásban. Alapvető a lineáris időinvariáns rendszerek megértéséhez."
+            },
+            {
+              "question": "Fontos a sorozatok sorrendje?",
+              "answer": "A konvolúció kommutatív, ami azt jelenti, hogy a * b = b * a. Az eredmény ugyanaz, függetlenül attól, melyik sorozatot adja meg először. Azonban bizonyos kontextusokban, mint például a szűrés, az egyik sorozat a jelet reprezentálja, a másik pedig a szűrő impulzusválaszát, így koncepcionálisan előnyben részesítheti az adott sorrendet."
+            },
+            {
+              "question": "Ingyenes ez a konvolúció számológép?",
+              "answer": "Igen, konvolúció számológépünk teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Egyszerűen adja meg két adatsorozatát, kattintson a Számításra, és azonnal megkapja a konvolúció eredményeit."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Számológépek",
+          "addition": "Összeadás Számológép",
+          "additionDesc": "Adjon össze egész és tizedes számokat gyorsan és pontosan",
+          "average": "Átlag Számológép",
+          "averageDesc": "Találja meg egy számlista átlagát, összegét és számát",
+          "percentage": "Százalék Számológép",
+          "percentageDesc": "Számítsa ki a százalékos értékeket, százalékos változást és százalékos viszonyokat"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Szöveg Bináris Konverter",
       "description": "Konvertáljon szöveget bináris kódra azonnal több karakterkódolással (UTF-8, UTF-16, Windows-1252) és testreszabható elválasztókkal.",

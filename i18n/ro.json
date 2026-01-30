@@ -3056,6 +3056,72 @@
         "description": "Adună două numere"
       }
     },
+    "convolution": {
+      "title": "Calculator de Convoluție",
+      "description": "Calculați convoluția discretă a două secvențe de date. Instrument online gratuit pentru procesarea semnalelor, matematică și aplicații de inginerie.",
+      "firstSequence": "Introduceți prima secvență de date",
+      "firstPlaceholder": "ex. 1 1 1 0 0 0",
+      "secondSequence": "Introduceți a doua secvență de date",
+      "secondPlaceholder": "ex. 0.5 0.2 0.3",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "resultSequence": "Secvența de date rezultată",
+      "resultPlaceholder": "Introduceți secvențele și faceți clic pe Calculează",
+      "errorEmptyFirst": "Vă rugăm introduceți prima secvență de date",
+      "errorEmptySecond": "Vă rugăm introduceți a doua secvență de date",
+      "seo": {
+        "title": "Calculator de Convoluție – Convoluția Discretă a Două Secvențe",
+        "description": "Calculator de convoluție gratuit. Calculați convoluția discretă a două secvențe de date pentru procesarea semnalelor, filtrare și analiză matematică. Rezultate rapide și precise.",
+        "keywords": "calculator de convoluție, convoluție discretă, convoluție de semnal, convoluție de secvențe, convoluție liniară, sumă de convoluție, calculator procesare semnal, convoluție filtru, instrument de convoluție",
+        "content": {
+          "heading": "Cum Să Calculați Convoluția Discretă",
+          "paragraph1": "Convoluția este o operație matematică fundamentală utilizată pe scară largă în procesarea semnalelor, procesarea imaginilor, inginerie și statistică. Convoluția discretă combină două secvențe pentru a produce o a treia secvență care reprezintă cum forma unei secvențe este modificată de cealaltă. Calculatorul nostru gratuit de convoluție calculează rapid și precis convoluția liniară (discretă) a două secvențe de intrare.",
+          "paragraph2": "Convoluția discretă a două secvențe a[n] și b[n] este definită ca: (a * b)[n] = Σ a[k] × b[n-k], unde suma este luată peste toți indicii valizi. În practică, dacă secvența a are lungimea M și secvența b are lungimea N, convoluția rezultată are lungimea M + N - 1. Fiecare element al ieșirii este calculat prin alunecarea unei secvențe peste cealaltă, înmulțirea elementelor suprapuse și însumarea produselor.",
+          "paragraph3": "Convoluția are multe aplicații practice: în procesarea digitală a semnalelor, este folosită pentru filtrarea semnalelor (răspunsul la impuls al unui filtru este convoluat cu semnalul de intrare); în procesarea imaginilor, convoluția cu nuclee realizează estompare, ascuțire și detectarea marginilor; în teoria probabilităților, convoluția a două distribuții de probabilitate dă distribuția sumei variabilelor aleatoare independente; în inginerie, convoluția descrie ieșirea sistemelor liniare invariante în timp (LTI).",
+          "paragraph4": "Pentru a utiliza calculatorul, introduceți secvențele de date separate prin spații, virgule sau punct și virgulă. Valorile zecimale sunt acceptate. Faceți clic pe Calculează pentru a vedea rezultatul. Secvența de ieșire arată convoluția discretă completă a celor două intrări. Acest instrument este perfect pentru studenții care învață procesarea semnalelor, inginerii care analizează filtre, cercetătorii care lucrează cu secvențe de date și oricine are nevoie de calcule rapide de convoluție.",
+          "exampleHeading": "Exemplu: Calcul de Convoluție",
+          "exampleText": "Prima secvență: 1 1 1 0 0 0 (lungime 6). A doua secvență: 0.5 0.2 0.3 (lungime 3). Convoluția are lungimea 6 + 3 - 1 = 8. Rezultat: 0.5 0.7 1 0.5 0.3 0.3 0 0. Calcul: Poziția 0: 1×0.5 = 0.5. Poziția 1: 1×0.2 + 1×0.5 = 0.7. Poziția 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. Și așa mai departe pentru fiecare poziție."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Ce este convoluția discretă?",
+              "answer": "Convoluția discretă este o operație matematică care combină două secvențe (sau semnale) pentru a produce o a treia secvență. Măsoară cum forma unei secvențe este modificată de cealaltă. Operația implică alunecarea unei secvențe peste cealaltă, înmulțirea valorilor suprapuse și însumarea produselor la fiecare poziție."
+            },
+            {
+              "question": "Cum introduc secvențele de date?",
+              "answer": "Introduceți numerele separate prin spații, virgule sau punct și virgulă. De exemplu: '1 1 1 0 0 0' sau '1, 1, 1, 0, 0, 0' sau '0.5; 0.2; 0.3'. Sunt acceptate atât numere întregi, cât și zecimale. Ordinea valorilor contează, deoarece reprezintă secvența de la primul la ultimul element."
+            },
+            {
+              "question": "Care este lungimea rezultatului convoluției?",
+              "answer": "Dacă prima secvență are lungimea M și a doua secvență are lungimea N, rezultatul convoluției are lungimea M + N - 1. De exemplu, convoluția unei secvențe de 6 elemente cu o secvență de 3 elemente produce un rezultat cu 6 + 3 - 1 = 8 elemente."
+            },
+            {
+              "question": "Care sunt aplicațiile comune ale convoluției?",
+              "answer": "Convoluția este utilizată în: procesarea digitală a semnalelor (filtrare, netezire), procesarea imaginilor (estompare, ascuțire, detectarea marginilor), procesarea audio (reverberație, efecte de ecou), teoria probabilităților (suma variabilelor aleatoare), sisteme de control (răspunsul sistemului) și înmulțirea polinoamelor. Este fundamentală pentru înțelegerea sistemelor liniare invariante în timp."
+            },
+            {
+              "question": "Este importantă ordinea secvențelor?",
+              "answer": "Convoluția este comutativă, ceea ce înseamnă că a * b = b * a. Rezultatul este același indiferent de secvența pe care o introduceți prima. Cu toate acestea, în unele contexte precum filtrarea, o secvență reprezintă semnalul și cealaltă reprezintă răspunsul la impuls al filtrului, așa că conceptual puteți prefera o anumită ordine."
+            },
+            {
+              "question": "Este gratuit acest calculator de convoluție?",
+              "answer": "Da, calculatorul nostru de convoluție este complet gratuit. Nu este necesară înregistrarea sau plata. Pur și simplu introduceți cele două secvențe de date, faceți clic pe Calculează și obțineți rezultate instantanee ale convoluției."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Înrudite",
+          "addition": "Calculator Adunare",
+          "additionDesc": "Adunați numere întregi și zecimale rapid și precis",
+          "average": "Calculator Medie",
+          "averageDesc": "Găsiți media, suma și numărul unei liste de numere",
+          "percentage": "Calculator Procente",
+          "percentageDesc": "Calculați valorile procentuale, schimbarea procentuală și relațiile procentuale"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Convertor Text în Binar",
       "description": "Convertește textul în cod binar instantaneu cu mai multe codificări de caractere (UTF-8, UTF-16, Windows-1252) și separatori personalizabili.",

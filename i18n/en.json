@@ -3056,6 +3056,72 @@
         }
       }
     },
+    "convolution": {
+      "title": "Convolution Calculator",
+      "description": "Calculate the discrete convolution of two data sequences. Free online tool for signal processing, mathematics, and engineering applications.",
+      "firstSequence": "Enter first data sequence",
+      "firstPlaceholder": "e.g., 1 1 1 0 0 0",
+      "secondSequence": "Enter second data sequence",
+      "secondPlaceholder": "e.g., 0.5 0.2 0.3",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "resultSequence": "Result data sequence",
+      "resultPlaceholder": "Enter sequences and click Calculate",
+      "errorEmptyFirst": "Please enter the first data sequence",
+      "errorEmptySecond": "Please enter the second data sequence",
+      "seo": {
+        "title": "Convolution Calculator – Discrete Convolution of Two Sequences",
+        "description": "Free convolution calculator. Compute the discrete convolution of two data sequences for signal processing, filtering, and mathematical analysis. Fast and accurate results.",
+        "keywords": "convolution calculator, discrete convolution, signal convolution, convolution of sequences, linear convolution, convolution sum, signal processing calculator, filter convolution, convolution tool",
+        "content": {
+          "heading": "How to Calculate Discrete Convolution",
+          "paragraph1": "Convolution is a fundamental mathematical operation used extensively in signal processing, image processing, engineering, and statistics. Discrete convolution combines two sequences to produce a third sequence that represents how the shape of one sequence is modified by the other. Our free convolution calculator computes the linear (discrete) convolution of two input sequences quickly and accurately.",
+          "paragraph2": "The discrete convolution of two sequences a[n] and b[n] is defined as: (a * b)[n] = Σ a[k] × b[n-k], where the sum is taken over all valid indices. In practice, if sequence a has length M and sequence b has length N, the resulting convolution has length M + N - 1. Each element of the output is computed by sliding one sequence over the other, multiplying overlapping elements, and summing the products.",
+          "paragraph3": "Convolution has many practical applications: in digital signal processing, it's used for filtering signals (the impulse response of a filter is convolved with the input signal); in image processing, convolution with kernels performs blurring, sharpening, and edge detection; in probability theory, the convolution of two probability distributions gives the distribution of the sum of independent random variables; in engineering, convolution describes the output of linear time-invariant (LTI) systems.",
+          "paragraph4": "To use the calculator, enter your data sequences separated by spaces, commas, or semicolons. Decimal values are supported. Click Calculate to see the result. The output sequence shows the full discrete convolution of the two inputs. This tool is perfect for students learning signal processing, engineers analyzing filters, researchers working with data sequences, and anyone needing quick convolution computations.",
+          "exampleHeading": "Example: Convolution Calculation",
+          "exampleText": "First sequence: 1 1 1 0 0 0 (length 6). Second sequence: 0.5 0.2 0.3 (length 3). The convolution has length 6 + 3 - 1 = 8. Result: 0.5 0.7 1 0.5 0.3 0.3 0 0. Calculation: Position 0: 1×0.5 = 0.5. Position 1: 1×0.2 + 1×0.5 = 0.7. Position 2: 1×0.3 + 1×0.2 + 1×0.5 = 1. And so on for each position."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is discrete convolution?",
+              "answer": "Discrete convolution is a mathematical operation that combines two sequences (or signals) to produce a third sequence. It measures how the shape of one sequence is modified by the other. The operation involves sliding one sequence over the other, multiplying overlapping values, and summing the products at each position."
+            },
+            {
+              "question": "How do I enter data sequences?",
+              "answer": "Enter your numbers separated by spaces, commas, or semicolons. For example: '1 1 1 0 0 0' or '1, 1, 1, 0, 0, 0' or '0.5; 0.2; 0.3'. Both integers and decimal numbers are supported. The order of values matters, as it represents the sequence from first to last element."
+            },
+            {
+              "question": "What is the length of the convolution result?",
+              "answer": "If the first sequence has length M and the second sequence has length N, the convolution result has length M + N - 1. For example, convolving a sequence of 6 elements with a sequence of 3 elements produces a result with 6 + 3 - 1 = 8 elements."
+            },
+            {
+              "question": "What are common applications of convolution?",
+              "answer": "Convolution is used in: digital signal processing (filtering, smoothing), image processing (blur, sharpen, edge detection), audio processing (reverb, echo effects), probability theory (sum of random variables), control systems (system response), and polynomial multiplication. It's fundamental to understanding linear time-invariant systems."
+            },
+            {
+              "question": "Is the order of sequences important?",
+              "answer": "Convolution is commutative, meaning a * b = b * a. The result is the same regardless of which sequence you enter first. However, in some contexts like filtering, one sequence represents the signal and the other represents the filter impulse response, so conceptually you may prefer a specific order."
+            },
+            {
+              "question": "Is this convolution calculator free?",
+              "answer": "Yes, our convolution calculator is completely free to use. No registration or payment is required. Simply enter your two data sequences, click Calculate, and get instant convolution results."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals quickly and accurately",
+          "average": "Average Calculator",
+          "averageDesc": "Find the average, sum, and count of a list of numbers",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentage values, percentage change, and percentage relationships"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Text to Binary Converter",
       "description": "Convert text to binary code instantly with multiple character encodings (UTF-8, UTF-16, Windows-1252) and customizable separators.",

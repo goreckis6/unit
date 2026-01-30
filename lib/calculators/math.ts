@@ -57,4 +57,11 @@ export const mathCalculators: Calculator[] = [
     path: '/calculators/math/percentage',
     category: 'math',
   },
+  {
+    id: 'convolution',
+    titleKey: 'convolution.title',
+    descKey: 'convolution.description',
+    path: '/calculators/math/convolution',
+    category: 'math',
+  },
 ];

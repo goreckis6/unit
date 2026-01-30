@@ -75,6 +75,7 @@ export async function GET() {
     '/calculators/electric/kva-to-kw',
     '/calculators/electric/kva-to-va',
     '/calculators/math/percentage',
+    '/calculators/math/convolution',
     '/blog',
   ];
 

@@ -6,6 +6,7 @@ import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
 import { CalculatorList } from './list';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
+import { mathCalculators } from '@/lib/calculators/math';
 
 interface FaqItem {
   question: string;
@@ -57,56 +58,8 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
   // Get FAQ items from translations
   const faqItems = await getFaqItems(locale);
 
-  const calculators = [
-    {
-      id: 'addition',
-      titleKey: 'addition.title',
-      descKey: 'addition.description',
-      path: '/calculators/math/addition',
-    },
-    {
-      id: 'adding-fractions',
-      titleKey: 'addingFractions.title',
-      descKey: 'addingFractions.description',
-      path: '/calculators/math/adding-fractions',
-    },
-    {
-      id: 'antilog',
-      titleKey: 'antilog.title',
-      descKey: 'antilog.description',
-      path: '/calculators/math/antilog',
-    },
-    {
-      id: 'arccos',
-      titleKey: 'arccos.title',
-      descKey: 'arccos.description',
-      path: '/calculators/math/arccos',
-    },
-    {
-      id: 'arcsin',
-      titleKey: 'arcsin.title',
-      descKey: 'arcsin.description',
-      path: '/calculators/math/arcsin',
-    },
-    {
-      id: 'arctan',
-      titleKey: 'arctan.title',
-      descKey: 'arctan.description',
-      path: '/calculators/math/arctan',
-    },
-    {
-      id: 'average',
-      titleKey: 'average.title',
-      descKey: 'average.description',
-      path: '/calculators/math/average',
-    },
-    {
-      id: 'percentage',
-      titleKey: 'percentage.title',
-      descKey: 'percentage.description',
-      path: '/calculators/math/percentage',
-    },
-  ];
+  // Use centralized calculator data - automatically includes new calculators
+  const calculators = mathCalculators.map(({ category, ...calc }) => calc);
 
   return (
     <>

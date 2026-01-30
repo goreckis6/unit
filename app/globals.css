@@ -754,7 +754,7 @@ a {
   padding: 6rem 0 5rem;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero::before {
@@ -775,6 +775,7 @@ a {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  overflow: visible;
 }
 
 .hero-title {
@@ -812,6 +813,9 @@ a {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 10;
+  overflow: visible;
 }
 
 .categories-section,
@@ -2770,7 +2774,7 @@ a {
   box-shadow: var(--shadow-xl);
   max-height: 500px;
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 10000;
   margin-top: 0.5rem;
 }
 
@@ -2871,7 +2875,7 @@ a {
   box-shadow: var(--shadow-xl);
   padding: 3rem 1.5rem;
   text-align: center;
-  z-index: 1000;
+  z-index: 10000;
   margin-top: 0.5rem;
 }
 
@@ -3805,8 +3809,13 @@ a {
 .not-found-message {
   font-size: 1rem;
   color: var(--text-tertiary);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   line-height: 1.6;
+}
+
+.not-found-search {
+  margin: 2rem auto 3rem;
+  max-width: 600px;
 }
 
 .not-found-suggestions {

@@ -3,6 +3,7 @@ import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { BackButton } from '@/components/BackButton';
+import { GlobalSearch } from '@/components/GlobalSearch';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -53,6 +54,11 @@ export default async function NotFound({ params }: { params: Promise<{ locale: s
             
             {/* Message */}
             <p className="not-found-message">{t('message')}</p>
+
+            {/* Search Bar */}
+            <div className="not-found-search">
+              <GlobalSearch />
+            </div>
 
             {/* Suggestions */}
             <div className="not-found-suggestions">

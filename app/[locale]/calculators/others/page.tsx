@@ -6,6 +6,7 @@ import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
 import { CalculatorList } from './list';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
+import { otherCalculators } from '@/lib/calculators/others';
 
 interface FaqItem {
   question: string;
@@ -47,13 +48,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-interface Calculator {
-  id: string;
-  titleKey: string;
-  descKey: string;
-  path: string;
-}
-
 export default async function OtherCalculatorsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'calculators' });
@@ -64,86 +58,8 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
   // Get FAQ items from translations
   const faqItems = await getFaqItems(locale);
 
-  const calculators: Calculator[] = [
-    {
-      id: 'text-to-binary',
-      titleKey: 'textToBinary.title',
-      descKey: 'textToBinary.description',
-      path: '/calculators/others/text-to-binary',
-    },
-    {
-      id: 'ascii-converter',
-      titleKey: 'asciiConverter.title',
-      descKey: 'asciiConverter.description',
-      path: '/calculators/others/ascii-converter',
-    },
-    {
-      id: 'caesar-cipher',
-      titleKey: 'caesarCipher.title',
-      descKey: 'caesarCipher.description',
-      path: '/calculators/others/caesar-cipher',
-    },
-    {
-      id: 'pig-latin',
-      titleKey: 'pigLatin.title',
-      descKey: 'pigLatin.description',
-      path: '/calculators/others/pig-latin',
-    },
-    {
-      id: 'bold-text',
-      titleKey: 'boldText.title',
-      descKey: 'boldText.description',
-      path: '/calculators/others/bold-text',
-    },
-    {
-      id: 'small-caps',
-      titleKey: 'smallCaps.title',
-      descKey: 'smallCaps.description',
-      path: '/calculators/others/small-caps',
-    },
-    {
-      id: 'mirror-text',
-      titleKey: 'mirrorText.title',
-      descKey: 'mirrorText.description',
-      path: '/calculators/others/mirror-text',
-    },
-    {
-      id: 'nato-phonetic',
-      titleKey: 'natoPhonetic.title',
-      descKey: 'natoPhonetic.description',
-      path: '/calculators/others/nato-phonetic',
-    },
-    {
-      id: 'numbers-to-letters',
-      titleKey: 'numbersToLetters.title',
-      descKey: 'numbersToLetters.description',
-      path: '/calculators/others/numbers-to-letters',
-    },
-    {
-      id: 'letters-to-numbers',
-      titleKey: 'lettersToNumbers.title',
-      descKey: 'lettersToNumbers.description',
-      path: '/calculators/others/letters-to-numbers',
-    },
-    {
-      id: 'italic-text',
-      titleKey: 'italicText.title',
-      descKey: 'italicText.description',
-      path: '/calculators/others/italic-text',
-    },
-    {
-      id: 'upside-down-text',
-      titleKey: 'upsideDownText.title',
-      descKey: 'upsideDownText.description',
-      path: '/calculators/others/upside-down-text',
-    },
-    {
-      id: 'dna-to-mrna',
-      titleKey: 'dnaToMrna.title',
-      descKey: 'dnaToMrna.description',
-      path: '/calculators/others/dna-to-mrna',
-    },
-  ];
+  // Use centralized calculator data - automatically includes new calculators
+  const calculators = otherCalculators.map(({ category, ...calc }) => calc);
 
   return (
     <>

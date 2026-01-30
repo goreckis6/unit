@@ -4,6 +4,7 @@ import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { BackButton } from '@/components/BackButton';
+import { GlobalSearch } from '@/components/GlobalSearch';
 
 export async function generateMetadata() {
   const t = await getTranslations({ namespace: 'notFound' });
@@ -44,6 +45,11 @@ export default async function NotFound() {
 
               {/* Message */}
               <p className="not-found-message">{t('message')}</p>
+
+              {/* Search Bar */}
+              <div className="not-found-search">
+                <GlobalSearch />
+              </div>
 
               {/* Suggestions */}
               <div className="not-found-suggestions">

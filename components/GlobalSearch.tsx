@@ -134,7 +134,6 @@ export function GlobalSearch() {
                   <h3 className="global-search-result-title">{result.title}</h3>
                   <span className="global-search-result-badge">{result.categoryLabel}</span>
                 </div>
-                <p className="global-search-result-description">{result.description}</p>
               </div>
               <div className="global-search-result-arrow">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

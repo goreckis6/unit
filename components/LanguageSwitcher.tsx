@@ -249,16 +249,31 @@ export function LanguageSwitcher() {
   }, []);
 
   const handleLanguageChange = (newLocale: string) => {
-    const normalizedPath = pathname || '/';
-    const matchedLocale = routing.locales.find((loc) => {
-      const prefix = `/${loc}`;
-      return normalizedPath === prefix || normalizedPath.startsWith(`${prefix}/`);
-    });
-    const basePath = matchedLocale
-      ? normalizedPath.replace(new RegExp(`^/${matchedLocale}(?=/|$)`), '')
-      : normalizedPath;
-    const nextPath = basePath || '/';
-    router.replace(nextPath, { locale: newLocale });
+    try {
+      // Get current path without locale prefix
+      const normalizedPath = pathname || '/';
+      const matchedLocale = routing.locales.find((loc) => {
+        const prefix = `/${loc}`;
+        return normalizedPath === prefix || normalizedPath.startsWith(`${prefix}/`);
+      });
+      const basePath = matchedLocale
+        ? normalizedPath.replace(new RegExp(`^/${matchedLocale}(?=/|$)`), '')
+        : normalizedPath;
+      const nextPath = basePath || '/';
+      
+      // Build new URL with locale prefix
+      const newUrl = newLocale === routing.defaultLocale 
+        ? nextPath 
+        : `/${newLocale}${nextPath}`;
+      
+      // Force hard navigation to ensure page reloads properly
+      // This prevents issues with stale state after long inactivity
+      window.location.href = newUrl;
+    } catch (error) {
+      console.error('Language switch error:', error);
+      // Fallback: reload current page
+      window.location.reload();
+    }
     setIsOpen(false);
   };
 

@@ -84,6 +84,12 @@ export default async function OtherCalculatorsPage({ params }: { params: Promise
       path: '/calculators/others/caesar-cipher',
     },
     {
+      id: 'pig-latin',
+      titleKey: 'pigLatin.title',
+      descKey: 'pigLatin.description',
+      path: '/calculators/others/pig-latin',
+    },
+    {
       id: 'bold-text',
       titleKey: 'boldText.title',
       descKey: 'boldText.description',

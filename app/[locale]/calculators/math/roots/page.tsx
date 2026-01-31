@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { SineCalculator } from './calculator';
+import { RootsCalculator } from './calculator';
 import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
@@ -15,17 +15,17 @@ interface FaqItem {
 async function getFaqItems(locale: string): Promise<FaqItem[]> {
   try {
     const messages = await import(`@/i18n/${locale}.json`);
-    return (messages.default?.calculators?.sine?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.roots?.seo?.faq?.items as FaqItem[]) || [];
   } catch {
     const messages = await import('@/i18n/en.json');
-    return (messages.default?.calculators?.sine?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.roots?.seo?.faq?.items as FaqItem[]) || [];
   }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.sine.seo' });
-  const path = '/calculators/math/sine';
+  const t = await getTranslations({ locale, namespace: 'calculators.roots.seo' });
+  const path = '/calculators/math/roots';
   const canonicalUrl = locale === 'en' ? BASE_URL + path : BASE_URL + '/' + locale + path;
   return {
     title: t('title'),
@@ -44,15 +44,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function SinePage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function RootsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.sine' });
+  const t = await getTranslations({ locale, namespace: 'calculators.roots' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
 
   const faqItems = await getFaqItems(locale);
-  const tSeo = await getTranslations({ locale, namespace: 'calculators.sine.seo.content' });
-  const tFaq = await getTranslations({ locale, namespace: 'calculators.sine.seo.faq' });
-  const tRelated = await getTranslations({ locale, namespace: 'calculators.sine.seo.related' });
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.roots.seo.content' });
+  const tFaq = await getTranslations({ locale, namespace: 'calculators.roots.seo.faq' });
+  const tRelated = await getTranslations({ locale, namespace: 'calculators.roots.seo.related' });
 
   return (
     <>
@@ -78,7 +78,7 @@ export default async function SinePage({ params }: { params: Promise<{ locale: s
       <div className="calculator-container">
         <div className="container">
           <div className="calculator-card">
-            <SineCalculator />
+            <RootsCalculator />
           </div>
         </div>
       </div>
@@ -105,21 +105,21 @@ export default async function SinePage({ params }: { params: Promise<{ locale: s
         <div className="related-content-card">
           <h2 className="related-heading">{tRelated('heading')}</h2>
           <div className="related-grid">
-            <Link href="/calculators/math/cosine" className="related-card">
-              <h3 className="related-title">{tRelated('cosine')}</h3>
-              <p className="related-desc">{tRelated('cosineDesc')}</p>
+            <Link href="/calculators/math/square-root" className="related-card">
+              <h3 className="related-title">{tRelated('squareRoot')}</h3>
+              <p className="related-desc">{tRelated('squareRootDesc')}</p>
             </Link>
-            <Link href="/calculators/math/arccos" className="related-card">
-              <h3 className="related-title">{tRelated('arccos')}</h3>
-              <p className="related-desc">{tRelated('arccosDesc')}</p>
+            <Link href="/calculators/math/addition" className="related-card">
+              <h3 className="related-title">{tRelated('addition')}</h3>
+              <p className="related-desc">{tRelated('additionDesc')}</p>
             </Link>
-            <Link href="/calculators/math/arcsin" className="related-card">
-              <h3 className="related-title">{tRelated('arcsin')}</h3>
-              <p className="related-desc">{tRelated('arcsinDesc')}</p>
+            <Link href="/calculators/math/percentage" className="related-card">
+              <h3 className="related-title">{tRelated('percentage')}</h3>
+              <p className="related-desc">{tRelated('percentageDesc')}</p>
             </Link>
-            <Link href="/calculators/math/arctan" className="related-card">
-              <h3 className="related-title">{tRelated('arctan')}</h3>
-              <p className="related-desc">{tRelated('arctanDesc')}</p>
+            <Link href="/calculators/math/average" className="related-card">
+              <h3 className="related-title">{tRelated('average')}</h3>
+              <p className="related-desc">{tRelated('averageDesc')}</p>
             </Link>
           </div>
         </div>

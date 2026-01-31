@@ -92,6 +92,13 @@ const mathCalculatorsList: Calculator[] = [
     path: '/calculators/math/sine',
     category: 'math',
   },
+  {
+    id: 'roots',
+    titleKey: 'roots.title',
+    descKey: 'roots.description',
+    path: '/calculators/math/roots',
+    category: 'math',
+  },
 ];
 
 export const mathCalculators: Calculator[] = sortCalculatorsAlphabetically(mathCalculatorsList);

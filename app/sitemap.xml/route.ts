@@ -20,6 +20,7 @@ export async function GET() {
     '/calculators/math/arctan',
     '/calculators/math/average',
     '/calculators/math/square-root',
+    '/calculators/math/roots',
     '/calculators/others/text-to-binary',
     '/calculators/others/ascii-converter',
     '/calculators/others/caesar-cipher',

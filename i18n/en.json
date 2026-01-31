@@ -3644,6 +3644,75 @@
         }
       }
     },
+    "remainder": {
+      "title": "Remainder Calculator",
+      "description": "Calculate the remainder (and quotient) of integer division using Euclidean division. Enter a dividend and divisor to get a non-negative remainder instantly.",
+      "formulaHeading": "Euclidean division:",
+      "formulaText": "a = bq + r, with 0 ≤ r < |b| (b ≠ 0)",
+      "dividendLabel": "Dividend (a)",
+      "dividendPlaceholder": "e.g. 23",
+      "divisorLabel": "Divisor (b)",
+      "divisorPlaceholder": "e.g. 5",
+      "divisorHelp": "Remainder is computed using |b| so it is always non-negative.",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "resultLabel": "Result",
+      "remainderValue": "Remainder: {value}",
+      "quotientValue": "Quotient: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "copyRemainder": "Copy remainder",
+      "errorInvalidDividend": "Please enter a valid integer dividend.",
+      "errorInvalidDivisor": "Please enter a valid integer divisor.",
+      "errorDivisionByZero": "Division by zero is not allowed.",
+      "seo": {
+        "title": "Remainder Calculator – Integer Division Remainder Online",
+        "description": "Free remainder calculator. Compute the quotient and remainder of integer division (Euclidean division) with a non-negative remainder. Supports negative integers too.",
+        "keywords": "remainder calculator, modulo calculator, integer division remainder, euclidean division, quotient and remainder, mod calculator",
+        "content": {
+          "heading": "How to Use the Remainder Calculator",
+          "paragraph1": "A remainder calculator helps you compute the remainder when one integer is divided by another. The remainder is what “is left over” after dividing as many whole times as possible. For example, 23 divided by 5 gives quotient 4 and remainder 3, because 23 = 5×4 + 3.",
+          "paragraph2": "This calculator uses Euclidean division, which always returns a non-negative remainder r such that 0 ≤ r < |b| (as long as the divisor b is not zero). That is especially helpful when working with negative numbers, because different programming languages can define the sign of % differently.",
+          "paragraph3": "Enter the dividend a and divisor b as integers (you can use negative values too). Click Calculate to see both the quotient q and remainder r, along with the identity a = |b|·q + r. The remainder shown is always in the standard Euclidean range.",
+          "paragraph4": "Remainders are used in modular arithmetic, number theory, cyclic patterns (like clocks), hashing, and many programming tasks. If you need a remainder for polynomial division by (x − a), use the Polynomial Remainder Calculator instead.",
+          "exampleHeading": "Example",
+          "exampleText": "Dividend a = 23, divisor b = 5 → quotient q = 4, remainder r = 3, because 23 = 5×4 + 3. If a = -23 and b = 5, Euclidean remainder is r = 2, since -23 = 5×(-5) + 2."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is a remainder?",
+              "answer": "When you divide an integer a by a non-zero integer b, you can write a = bq + r. The remainder r is the part left over after taking q whole multiples of b. In Euclidean division, r is always non-negative and smaller than |b|."
+            },
+            {
+              "question": "What is the difference between remainder and modulo?",
+              "answer": "People often use the terms interchangeably, but in some contexts “modulo” specifically means the Euclidean remainder (0 ≤ r < |b|). Some programming languages define % in a way that can produce negative results when a is negative. This calculator shows the Euclidean (non-negative) remainder."
+            },
+            {
+              "question": "Can I divide by 0?",
+              "answer": "No. Division by zero is undefined, so the calculator will show an error if the divisor is 0."
+            },
+            {
+              "question": "Does the calculator support negative numbers?",
+              "answer": "Yes. You can enter negative integers for the dividend and/or divisor. The calculator still returns a non-negative remainder using |b| so the remainder stays in the Euclidean range."
+            },
+            {
+              "question": "Why is the remainder always non-negative here?",
+              "answer": "Because the calculator uses Euclidean division, where the remainder is defined to satisfy 0 ≤ r < |b|. This avoids ambiguity with negative inputs and matches common math definitions used in modular arithmetic."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "polynomialRemainder": "Polynomial Remainder Calculator",
+          "polynomialRemainderDesc": "Find the remainder when P(x) is divided by (x − a) using the Remainder Theorem",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals quickly and accurately",
+          "roots": "Roots Calculator",
+          "rootsDesc": "Calculate square roots, cube roots, and nth roots of numbers"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Cat Pregnancy Calculator",
       "description": "Estimate your cat's due date and delivery window from the mating date. Free, quick, and based on typical feline gestation (63–67 days).",

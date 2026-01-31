@@ -22,6 +22,7 @@ export async function GET() {
     '/calculators/math/square-root',
     '/calculators/math/roots',
     '/calculators/math/polynomial-remainder',
+    '/calculators/math/remainder',
     '/calculators/others/text-to-binary',
     '/calculators/others/ascii-converter',
     '/calculators/others/caesar-cipher',

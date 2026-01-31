@@ -72,6 +72,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'remainder',
+    titleKey: 'remainder.title',
+    descKey: 'remainder.description',
+    path: '/calculators/math/remainder',
+    category: 'math',
+  },
+  {
     id: 'polynomial-remainder',
     titleKey: 'polynomialRemainder.title',
     descKey: 'polynomialRemainder.description',

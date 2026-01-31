@@ -3796,6 +3796,75 @@
         }
       }
     },
+    "remainder": {
+      "title": "Restrechner",
+      "description": "Berechnen Sie den Rest (und den Quotienten) einer ganzzahligen Division mit euklidischer Division. Geben Sie Dividend und Divisor ein, um sofort einen nicht-negativen Rest zu erhalten.",
+      "formulaHeading": "Euklidische Division:",
+      "formulaText": "a = bq + r, mit 0 ≤ r < |b| (b ≠ 0)",
+      "dividendLabel": "Dividend (a)",
+      "dividendPlaceholder": "z. B. 23",
+      "divisorLabel": "Divisor (b)",
+      "divisorPlaceholder": "z. B. 5",
+      "divisorHelp": "Der Rest wird mit |b| berechnet und ist daher immer nicht-negativ.",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "resultLabel": "Ergebnis",
+      "remainderValue": "Rest: {value}",
+      "quotientValue": "Quotient: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "copyRemainder": "Rest kopieren",
+      "errorInvalidDividend": "Bitte geben Sie einen gültigen ganzzahligen Dividenden ein.",
+      "errorInvalidDivisor": "Bitte geben Sie einen gültigen ganzzahligen Divisor ein.",
+      "errorDivisionByZero": "Division durch 0 ist nicht erlaubt.",
+      "seo": {
+        "title": "Restrechner – Rest der Ganzzahldivision online",
+        "description": "Kostenloser Restrechner. Berechnen Sie Quotient und Rest einer Ganzzahldivision (euklidische Division) mit nicht-negativem Rest. Unterstützt auch negative Zahlen.",
+        "keywords": "Restrechner, Modulo Rechner, Ganzzahldivision Rest, euklidische Division, Quotient und Rest, mod Rechner",
+        "content": {
+          "heading": "So verwenden Sie den Restrechner",
+          "paragraph1": "Ein Restrechner hilft Ihnen, den Rest zu berechnen, wenn eine ganze Zahl durch eine andere geteilt wird. Der Rest ist das, was „übrig bleibt“, nachdem so oft wie möglich ganzzahlig geteilt wurde. Zum Beispiel ergibt 23 geteilt durch 5 den Quotienten 4 und den Rest 3, weil 23 = 5×4 + 3.",
+          "paragraph2": "Dieser Rechner verwendet die euklidische Division, die immer einen nicht-negativen Rest r liefert, sodass 0 ≤ r < |b| gilt (solange der Divisor b nicht 0 ist). Das ist besonders hilfreich bei negativen Zahlen, weil Programmiersprachen das Vorzeichen von % unterschiedlich definieren können.",
+          "paragraph3": "Geben Sie den Dividenden a und den Divisor b als ganze Zahlen ein (auch negative Werte sind möglich). Klicken Sie auf Berechnen, um sowohl den Quotienten q als auch den Rest r zu sehen, zusammen mit der Identität a = |b|·q + r. Der angezeigte Rest liegt immer im euklidischen Bereich.",
+          "paragraph4": "Reste werden in der Modulararithmetik, Zahlentheorie, bei zyklischen Mustern (z. B. Uhren), Hashing und vielen Programmieraufgaben verwendet. Wenn Sie den Rest bei der Polynomdivision durch (x − a) benötigen, verwenden Sie stattdessen den Polynom-Restrechner.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "Dividend a = 23, Divisor b = 5 → Quotient q = 4, Rest r = 3, weil 23 = 5×4 + 3. Wenn a = -23 und b = 5, ist der euklidische Rest r = 2, denn -23 = 5×(-5) + 2."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist ein Rest?",
+              "answer": "Wenn Sie eine ganze Zahl a durch eine von 0 verschiedene ganze Zahl b teilen, können Sie schreiben a = bq + r. Der Rest r ist der Teil, der nach q ganzen Vielfachen von b übrig bleibt. Bei der euklidischen Division ist r immer nicht-negativ und kleiner als |b|."
+            },
+            {
+              "question": "Was ist der Unterschied zwischen Rest und Modulo?",
+              "answer": "Oft werden die Begriffe gleich verwendet, aber „Modulo“ meint in manchen Kontexten speziell den euklidischen Rest (0 ≤ r < |b|). Einige Programmiersprachen definieren % so, dass bei negativem a auch negative Ergebnisse möglich sind. Dieser Rechner zeigt den euklidischen (nicht-negativen) Rest."
+            },
+            {
+              "question": "Kann ich durch 0 teilen?",
+              "answer": "Nein. Division durch 0 ist nicht definiert, daher zeigt der Rechner einen Fehler, wenn der Divisor 0 ist."
+            },
+            {
+              "question": "Unterstützt der Rechner negative Zahlen?",
+              "answer": "Ja. Sie können negative ganze Zahlen für Dividend und/oder Divisor eingeben. Der Rechner gibt dennoch einen nicht-negativen Rest zurück, indem |b| verwendet wird."
+            },
+            {
+              "question": "Warum ist der Rest hier immer nicht-negativ?",
+              "answer": "Weil der Rechner die euklidische Division verwendet, bei der der Rest per Definition 0 ≤ r < |b| erfüllt. Das vermeidet Mehrdeutigkeiten bei negativen Eingaben und entspricht der üblichen mathematischen Definition in der Modulararithmetik."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "polynomialRemainder": "Polynom-Restrechner",
+          "polynomialRemainderDesc": "Rest bei der Division von P(x) durch (x − a) mit dem Restwertsatz finden",
+          "addition": "Addition-Rechner",
+          "additionDesc": "Zahlen schnell und genau addieren",
+          "roots": "Wurzel-Rechner",
+          "rootsDesc": "Quadratwurzeln, Kubikwurzeln und n-te Wurzeln von Zahlen berechnen"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Katzen-Trächtigkeitsrechner",
       "description": "Schätzen Sie den Geburtstermin Ihrer Katze und das Geburtsfenster ab dem Deckdatum. Kostenlos, schnell, basierend auf typischer Trächtigkeitsdauer (63–67 Tage).",

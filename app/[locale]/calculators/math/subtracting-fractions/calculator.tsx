@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
 
@@ -111,7 +111,7 @@ export function SubtractingFractionsCalculator() {
   };
 
   return (
-    <>
+    <React.Fragment>
       <div className="input-section">
         <div className="options-grid options-grid-dropdowns" style={{ marginBottom: '1rem' }}>
           <div className="input-card numbers-to-letters-compact">
@@ -176,7 +176,7 @@ export function SubtractingFractionsCalculator() {
           <div className="input-card">
             <div className="result-badge" style={{ marginBottom: '0.75rem' }}>{t('secondFraction')}</div>
             {formType === 'mixed' && (
-              <>
+              <React.Fragment>
                 <label htmlFor="w2" className="input-label">
                   {t('wholeNumberW2')}
                 </label>
@@ -189,7 +189,7 @@ export function SubtractingFractionsCalculator() {
                   className="number-input"
                   style={{ marginBottom: '0.75rem' }}
                 />
-              </>
+              </React.Fragment>
             )}
             <label htmlFor="n2" className="input-label">
               {t('numeratorN2')}
@@ -257,6 +257,6 @@ export function SubtractingFractionsCalculator() {
           </div>
         </div>
       )}
-    </>
+    </React.Fragment>
   );
 }

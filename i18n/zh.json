@@ -379,6 +379,8 @@
       "description": "计算角度（度或弧度）的余弦。显示结果和余弦函数图像。",
       "angleAlpha": "角度 α",
       "unit": "单位",
+      "unitMrad": "毫弧度 (mrad)",
+      "unitPiRad": "π 弧度 (× π rad)",
       "cosineOfAlpha": "α 的余弦",
       "graphHeading": "余弦函数图像",
       "calculate": "计算",
@@ -409,6 +411,54 @@
         },
         "related": {
           "heading": "相关计算器",
+          "arccos": "Arccos 计算器",
+          "arccosDesc": "求数值的反余弦及度与弧度下的角度",
+          "arcsin": "Arcsin 计算器",
+          "arcsinDesc": "求数值的反正弦及度与弧度下的角度",
+          "arctan": "Arctan 计算器",
+          "arctanDesc": "求数值的反正切及度与弧度下的角度"
+        }
+      }
+    },
+    "sine": {
+      "title": "正弦计算器",
+      "description": "计算角度（度、弧度、毫弧度或 π 弧度）的正弦。显示结果及 −2π 到 2π 范围内的 sin(x) 图像。",
+      "angleAlpha": "角度 α",
+      "unit": "单位",
+      "unitMrad": "毫弧度 (mrad)",
+      "unitPiRad": "π 弧度 (× π rad)",
+      "sineOfAlpha": "α 的正弦",
+      "graphHeading": "sin(x) 图像，范围 &lt;−2π, 2π&gt;。",
+      "calculate": "计算",
+      "reset": "重置",
+      "result": "结果",
+      "seo": {
+        "title": "正弦计算器 – 度与弧度下的 sin(α) 及图像",
+        "description": "免费正弦计算器，可求任意角度（度、弧度、毫弧度或 π 弧度）的 sin(α)。高精度结果及 −2π 到 2π 的 sin(x) 图像。适合三角、几何与工程。",
+        "keywords": "正弦计算器, sin 计算器, 三角计算器, 角的正弦, sin 度, sin 弧度, 正弦图像, 数学计算器",
+        "content": {
+          "heading": "如何使用正弦计算器",
+          "paragraph1": "正弦函数 sin(α) 或 sin(θ) 表示直角三角形中角 α 的对边与斜边之比。对任意角，sin(α) 在 −1 与 1 之间。正弦以 360°（2π 弧度）为周期。",
+          "paragraph2": "输入角 α 并选择度(deg)、弧度(rad)、毫弧度(mrad)或 π 弧度(× π rad)。工具会计算 sin(α) 并以 8 位小数显示结果（按您所在地区使用小数点格式）。图像显示 −2π 到 2π 范围内的 sin(x)。",
+          "paragraph3": "正弦广泛用于三角、物理与工程。常见值：sin(0°)=0，sin(90°)=1，sin(180°)=0，sin(30°)=0.5。本计算器接受任意角度（含负值和大值）并返回正弦及图像。",
+          "paragraph4": "正弦计算器免费，支持所有语言。输入角度、选择单位即可得到 sin(α) 以及 −2π 到 2π 的 y=sin(x) 图像。",
+          "exampleHeading": "示例",
+          "exampleText": "角度 α=1°（度）：sin(1°)≈0.01745241。1 弧度的正弦约 0.84147098。图像在范围 &lt;−2π, 2π&gt; 内显示 sin(x)。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {"question": "角的正弦是什么？", "answer": "角 α 的正弦 sin(α) 是直角三角形中该角对边与斜边之比。sin(α) 在 −1 与 1 之间。也是单位圆上的 y 坐标。"},
+            {"question": "可以输入度、弧度、毫弧度或 π 弧度吗？", "answer": "可以。选择 deg、rad、mrad 或 × π rad。计算器会显示 sin(α)，保留 8 位小数。"},
+            {"question": "图像显示什么？", "answer": "图像显示 −2π 到 2π 范围内的 sin(x)（两个周期）。正弦在 0 和 π 处为 0，在 π/2 处为 1，在 3π/2 处为 −1。"},
+            {"question": "结果会按我所在地区格式显示吗？", "answer": "会。正弦值按您所在地区格式显示（小数点用逗号或点）。"},
+            {"question": "这个正弦计算器免费吗？", "answer": "是的，正弦计算器免费。输入角度、选择单位即可得到带图像的 sin(α)。"}
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "cosine": "余弦计算器",
+          "cosineDesc": "求角度的余弦（度或弧度）并显示图像",
           "arccos": "Arccos 计算器",
           "arccosDesc": "求数值的反余弦及度与弧度下的角度",
           "arcsin": "Arcsin 计算器",

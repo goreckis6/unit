@@ -1,6 +1,6 @@
-import { Calculator } from './types';
+import { Calculator, sortCalculatorsAlphabetically } from './types';
 
-export const mathCalculators: Calculator[] = [
+const mathCalculatorsList: Calculator[] = [
   {
     id: 'addition',
     titleKey: 'addition.title',
@@ -85,4 +85,13 @@ export const mathCalculators: Calculator[] = [
     path: '/calculators/math/convolution',
     category: 'math',
   },
+  {
+    id: 'sine',
+    titleKey: 'sine.title',
+    descKey: 'sine.description',
+    path: '/calculators/math/sine',
+    category: 'math',
+  },
 ];
+
+export const mathCalculators: Calculator[] = sortCalculatorsAlphabetically(mathCalculatorsList);

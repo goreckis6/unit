@@ -15,6 +15,7 @@ export async function GET() {
     '/calculators/math/antilog',
     '/calculators/math/arccos',
     '/calculators/math/cosine',
+    '/calculators/math/sine',
     '/calculators/math/arcsin',
     '/calculators/math/arctan',
     '/calculators/math/average',

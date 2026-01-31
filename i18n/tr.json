@@ -379,6 +379,8 @@
       "description": "Bir açının kosinüsünü derece veya radyan cinsinden hesaplayın. Sonuç ve kosinüs fonksiyonunun grafiğini görün.",
       "angleAlpha": "Alfa açısı",
       "unit": "Birim",
+      "unitMrad": "milieradyan (mrad)",
+      "unitPiRad": "π radyan (× π rad)",
       "cosineOfAlpha": "Alfanın kosinüsü",
       "graphHeading": "Kosinüs fonksiyonunun grafiği",
       "calculate": "Hesapla",
@@ -415,6 +417,54 @@
           "arcsinDesc": "Bir değerin ters sinüsünü bulun ve derece ile radyanda açıyı alın",
           "arctan": "Arctan Hesaplayıcı",
           "arctanDesc": "Bir değerin ters tanjantını bulun ve derece ile radyanda açıyı alın"
+        }
+      }
+    },
+    "sine": {
+      "title": "Sinüs Hesaplayıcı",
+      "description": "Bir açının sinüsünü derece, radyan, milieradyan veya π radyan cinsinden hesaplayın. Sonuç ve −2π ile 2π aralığında sin(x) grafiğini görün.",
+      "angleAlpha": "Açı α",
+      "unit": "Birim",
+      "unitMrad": "milieradyan (mrad)",
+      "unitPiRad": "π radyan (× π rad)",
+      "sineOfAlpha": "α'nın sinüsü",
+      "graphHeading": "sin(x) grafiği, &lt;−2π, 2π&gt; aralığı.",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "seo": {
+        "title": "Sinüs Hesaplayıcı – Derece ve Radyanda sin(α) Grafikle",
+        "description": "Derece, radyan, milieradyan veya π radyanda herhangi bir açı için sin(α) bulmak için ücretsiz sinüs hesaplayıcı. Yüksek hassasiyetli sonuç ve −2π ile 2π arasında sin(x) grafiği.",
+        "keywords": "sinüs hesaplayıcı, sin hesaplayıcı, trigonometri, açının sinüsü, sin derece, sin radyan, sinüs grafiği, matematik hesaplayıcı",
+        "content": {
+          "heading": "Sinüs hesaplayıcı nasıl kullanılır",
+          "paragraph1": "Sinüs fonksiyonu sin(α) veya sin(θ), dik üçgende α açısı için karşı kenarın hipotenüse oranını verir. Herhangi bir açı için sin(α) −1 ile 1 arasındadır. Sinüs 360° (2π radyan) periyotlu periyodiktir.",
+          "paragraph2": "Açı α'yı girin ve derece (deg), radyan (rad), milieradyan (mrad) veya π radyan (× π rad) seçin. Araç sin(α) hesaplar ve sonucu 8 ondalık basamakla gösterir. Grafik −2π ile 2π arasında sin(x) gösterir.",
+          "paragraph3": "Sinüs trigonometri, fizik ve mühendislikte yaygın kullanılır. Yaygın değerler: sin(0°)=0, sin(90°)=1, sin(180°)=0, sin(30°)=0,5. Hesaplayıcı herhangi bir açı kabul eder ve grafikle sinüs döndürür.",
+          "paragraph4": "Sinüs hesaplayıcı ücretsizdir ve desteklenen tüm dillerde çalışır. Açı girin, birim seçin ve sin(α) ile −2π ile 2π arasında y=sin(x) grafiğini alın.",
+          "exampleHeading": "Örnek",
+          "exampleText": "Derecede α=1° açı için: sin(1°)≈0,01745241. 1 radyanın sinüsü ≈0,84147098. Grafik &lt;−2π, 2π&gt; aralığında sin(x) gösterir."
+        },
+        "faq": {
+          "heading": "Sık sorulan sorular",
+          "items": [
+            {"question": "Bir açının sinüsü nedir?", "answer": "Açı α'nın sinüsü sin(α), dik üçgende karşı kenarın hipotenüse oranıdır. sin(α) −1 ile 1 arasındadır. Birim çemberde y koordinatıdır."},
+            {"question": "Açıları derece, radyan, milieradyan veya π radyan olarak girebilir miyim?", "answer": "Evet. deg, rad, mrad veya × π rad seçin. Hesaplayıcı sin(α) 8 ondalık basamakla gösterir."},
+            {"question": "Grafik ne gösteriyor?", "answer": "Grafik −2π ile 2π arasında sin(x) (iki periyot) gösterir. Sinüs 0 ve π'de 0, π/2'de 1, 3π/2'de −1'dir."},
+            {"question": "Sonuç bölgem formatında mı?", "answer": "Evet. Sinüs değeri bölgenize göre biçimlendirilir (virgül veya ondalık nokta)."},
+            {"question": "Bu sinüs hesaplayıcı ücretsiz mi?", "answer": "Evet, sinüs hesaplayıcı ücretsizdir. Açı girin, birim seçin ve grafikle sin(α) alın."}
+          ]
+        },
+        "related": {
+          "heading": "İlgili hesaplayıcılar",
+          "cosine": "Kosinüs Hesaplayıcı",
+          "cosineDesc": "Derece veya radyanda açının kosinüsü grafikle",
+          "arccos": "Arccos Hesaplayıcı",
+          "arccosDesc": "Değerin ters kosinüsü ve derece ile radyanda açı",
+          "arcsin": "Arcsin Hesaplayıcı",
+          "arcsinDesc": "Değerin ters sinüsü ve derece ile radyanda açı",
+          "arctan": "Arctan Hesaplayıcı",
+          "arctanDesc": "Değerin ters tanjantı ve derece ile radyanda açı"
         }
       }
     },

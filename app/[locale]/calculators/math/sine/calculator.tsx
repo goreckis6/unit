@@ -21,10 +21,18 @@ function angleToRadians(value: number, unit: AngleUnit): number {
   }
 }
 
-export function CosineCalculator() {
-  const t = useTranslations('calculators.cosine');
+function normalizeToRange(rad: number, xMin: number, xMax: number): number {
+  const period = 2 * Math.PI;
+  let r = rad;
+  while (r > xMax) r -= period;
+  while (r < xMin) r += period;
+  return r;
+}
+
+export function SineCalculator() {
+  const t = useTranslations('calculators.sine');
   const locale = useLocale();
-  const [angle, setAngle] = useState<string>('11');
+  const [angle, setAngle] = useState<string>('1');
   const [unit, setUnit] = useState<AngleUnit>('deg');
   const [result, setResult] = useState<number | null>(null);
   const resultRef = useScrollToResult(result);
@@ -36,11 +44,11 @@ export function CosineCalculator() {
       return;
     }
     const rad = angleToRadians(parsed, unit);
-    setResult(Math.cos(rad));
+    setResult(Math.sin(rad));
   };
 
   const handleReset = () => {
-    setAngle('11');
+    setAngle('1');
     setUnit('deg');
     setResult(null);
   };
@@ -58,7 +66,7 @@ export function CosineCalculator() {
     const padding = { left: 45, right: 25, top: 20, bottom: 35 };
     const plotWidth = width - padding.left - padding.right;
     const plotHeight = height - padding.top - padding.bottom;
-    const xMin = 0;
+    const xMin = -2 * Math.PI;
     const xMax = 2 * Math.PI;
     const yMin = -1;
     const yMax = 1;
@@ -66,11 +74,11 @@ export function CosineCalculator() {
     const toX = (x: number) => padding.left + ((x - xMin) / (xMax - xMin)) * plotWidth;
     const toY = (y: number) => padding.top + (1 - (y - yMin) / (yMax - yMin)) * plotHeight;
 
-    const steps = 100;
+    const steps = 150;
     let d = '';
     for (let i = 0; i <= steps; i++) {
       const x = xMin + (i / steps) * (xMax - xMin);
-      const y = Math.cos(x);
+      const y = Math.sin(x);
       const px = toX(x);
       const py = toY(y);
       d += (i === 0 ? 'M' : 'L') + px.toFixed(2) + ',' + py.toFixed(2);
@@ -83,9 +91,8 @@ export function CosineCalculator() {
     const parsed = parseFloat(angle);
     if (Number.isNaN(parsed)) return null;
     const rad = angleToRadians(parsed, unit);
-    const radNorm = ((rad % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-    if (radNorm < graphPath.xMin || radNorm > graphPath.xMax) return null;
-    const y = Math.cos(radNorm);
+    const radNorm = normalizeToRange(rad, graphPath.xMin, graphPath.xMax);
+    const y = Math.sin(radNorm);
     return { x: radNorm, y, px: graphPath.toX(radNorm), py: graphPath.toY(y) };
   }, [result, angle, unit, graphPath]);
 
@@ -106,7 +113,7 @@ export function CosineCalculator() {
                 onChange={(e) => setAngle(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
                 className="number-input"
-                placeholder="11"
+                placeholder="1"
               />
               <select
                 aria-label={t('unit')}
@@ -141,7 +148,7 @@ export function CosineCalculator() {
           </div>
           <div className="result-display">
             <div className="result-item">
-              <div className="result-label">{t('cosineOfAlpha')}</div>
+              <div className="result-label">{t('sineOfAlpha')}</div>
               <div className="result-value-box">
                 <span className="result-value">{formatResult(result)}</span>
               </div>
@@ -157,7 +164,7 @@ export function CosineCalculator() {
                 aria-hidden="true"
               >
                 <defs>
-                  <linearGradient id="cosineGradient" x1="0" y1="1" x2="0" y2="0">
+                  <linearGradient id="sineGradient" x1="0" y1="1" x2="0" y2="0">
                     <stop offset="0%" stopColor="var(--primary, #2563eb)" stopOpacity="0.3" />
                     <stop offset="100%" stopColor="var(--primary, #2563eb)" stopOpacity="0" />
                   </linearGradient>
@@ -198,7 +205,7 @@ export function CosineCalculator() {
                 />
                 <path
                   d={graphPath.d + ' L' + graphPath.toX(graphPath.xMax) + ',' + graphPath.toY(0) + ' L' + graphPath.toX(0) + ',' + graphPath.toY(0) + ' Z'}
-                  fill="url(#cosineGradient)"
+                  fill="url(#sineGradient)"
                 />
                 <path
                   d={graphPath.d}
@@ -236,51 +243,11 @@ export function CosineCalculator() {
                     />
                   </>
                 )}
-                <text
-                  x={graphPath.width - graphPath.padding.right - 15}
-                  y={graphPath.toY(0) - 6}
-                  fontSize="11"
-                  fill="var(--text-secondary, #64748b)"
-                  textAnchor="end"
-                >
-                  0
-                </text>
-                <text
-                  x={graphPath.toX(Math.PI / 2) - 4}
-                  y={graphPath.height - 8}
-                  fontSize="11"
-                  fill="var(--text-secondary, #64748b)"
-                  textAnchor="middle"
-                >
-                  pi/2
-                </text>
-                <text
-                  x={graphPath.toX(Math.PI) - 4}
-                  y={graphPath.height - 8}
-                  fontSize="11"
-                  fill="var(--text-secondary, #64748b)"
-                  textAnchor="middle"
-                >
-                  pi
-                </text>
-                <text
-                  x={graphPath.toX((3 * Math.PI) / 2) - 8}
-                  y={graphPath.height - 8}
-                  fontSize="11"
-                  fill="var(--text-secondary, #64748b)"
-                  textAnchor="middle"
-                >
-                  3pi/2
-                </text>
-                <text
-                  x={graphPath.toX(2 * Math.PI) - 8}
-                  y={graphPath.height - 8}
-                  fontSize="11"
-                  fill="var(--text-secondary, #64748b)"
-                  textAnchor="middle"
-                >
-                  2pi
-                </text>
+                <text x={graphPath.toX(0) - 4} y={graphPath.toY(0) - 6} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">0</text>
+                <text x={graphPath.toX(-Math.PI) - 8} y={graphPath.height - 8} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">-pi</text>
+                <text x={graphPath.toX(Math.PI) - 4} y={graphPath.height - 8} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">pi</text>
+                <text x={graphPath.toX(-2 * Math.PI) - 12} y={graphPath.height - 8} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">-2pi</text>
+                <text x={graphPath.toX(2 * Math.PI) - 8} y={graphPath.height - 8} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">2pi</text>
               </svg>
             </div>
           </div>

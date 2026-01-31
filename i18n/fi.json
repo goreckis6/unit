@@ -379,6 +379,8 @@
       "description": "Laske kulman kosini asteina tai radiaaneina. Näytä tulos ja kosinifunktion kuvaaja.",
       "angleAlpha": "Kulma alfa",
       "unit": "Yksikkö",
+      "unitMrad": "milliradiaanit (mrad)",
+      "unitPiRad": "π radiaanit (× π rad)",
       "cosineOfAlpha": "Kosini alfasta",
       "graphHeading": "Kosinifunktion kuvaaja",
       "calculate": "Laske",
@@ -415,6 +417,54 @@
           "arcsinDesc": "Etsi arvon käänteinen sini ja kulma asteina ja radiaaneina",
           "arctan": "Arctan-laskin",
           "arctanDesc": "Etsi arvon käänteinen tangentti ja kulma asteina ja radiaaneina"
+        }
+      }
+    },
+    "sine": {
+      "title": "Sinilaskin",
+      "description": "Laske kulman sini asteina, radiaaneina, milliradiaaneina tai π radiaaneina. Näytä tulos ja sin(x)-kuvaaja välillä −2π–2π.",
+      "angleAlpha": "Kulma α",
+      "unit": "Yksikkö",
+      "unitMrad": "milliradiaanit (mrad)",
+      "unitPiRad": "π radiaanit (× π rad)",
+      "sineOfAlpha": "Sini α:sta",
+      "graphHeading": "Kuvaaja sin(x) välillä &lt;−2π, 2π&gt;.",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "seo": {
+        "title": "Sinilaskin – sin(α) asteina ja radiaaneina kuvaajalla",
+        "description": "Ilmainen sinilaskin sin(α):n laskentaan mille tahansa kulmalle asteina, radiaaneina, milliradiaaneina tai π radiaaneina. Tarkka tulos ja sin(x)-kuvaaja välillä −2π–2π.",
+        "keywords": "sinilaskin, sin laskin, trigonometria, kulman sini, sin asteet, sin radiaanit, sinikuvaaja, matematiikkalaskin",
+        "content": {
+          "heading": "Sinilaskimen käyttö",
+          "paragraph1": "Sini funktio sin(α) tai sin(θ) antaa suorakulmaisen kolmion vastaisen kateetin ja hypotenuusan suhteen kulmalle α. Millä tahansa kulmalla sin(α) on välillä −1–1. Sini on jaksollinen jakson 360° (2π radiaania).",
+          "paragraph2": "Syötä kulma α ja valitse asteet (deg), radiaanit (rad), milliradiaanit (mrad) tai π radiaanit (× π rad). Työkalu laskee sin(α) ja näyttää tuloksen 8 desimaalilla. Kuvaaja näyttää sin(x) välillä −2π–2π.",
+          "paragraph3": "Siniä käytetään trigonometriassa, fysiikassa ja tekniikassa. Tyypillisiä arvoja: sin(0°)=0, sin(90°)=1, sin(180°)=0, sin(30°)=0,5. Laskin hyväksyy minkä tahansa kulman ja palauttaa sinin kuvaajalla.",
+          "paragraph4": "Sinilaskin on ilmainen ja toimii kaikilla tuetuilla kielillä. Syötä kulma, valitse yksikkö ja saat sin(α) sekä y=sin(x)-kuvaajan välillä −2π–2π.",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "Kulmalle α=1° asteina: sin(1°)≈0,01745241. 1 radiaanin sini ≈0,84147098. Kuvaaja näyttää sin(x) välillä &lt;−2π, 2π&gt;."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Mikä on kulman sini?", "answer": "Kulman α sini sin(α) on suorakulmaisen kolmion vastaisen kateetin ja hypotenuusan suhde. sin(α) on välillä −1–1. Se on myös y-koordinaatti yksikköympyrällä."},
+            {"question": "Voinko syöttää kulmat asteina, radiaaneina, milliradiaaneina tai π radiaaneina?", "answer": "Kyllä. Valitse deg, rad, mrad tai × π rad. Laskin näyttää sin(α) 8 desimaalilla."},
+            {"question": "Mitä kuvaaja näyttää?", "answer": "Kuvaaja näyttää sin(x) välillä −2π–2π (kaksi jaksoa). Sini on 0 kohdissa 0 ja π, 1 kohdassa π/2, −1 kohdassa 3π/2."},
+            {"question": "Onko tulos oman alueen muodossa?", "answer": "Kyllä. Sinin arvo muotoillaan alueesi mukaan (pilkku tai piste)."},
+            {"question": "Onko tämä sinilaskin ilmainen?", "answer": "Kyllä, sinilaskin on ilmainen. Syötä kulma, valitse yksikkö ja saat sin(α) kuvaajalla."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "cosine": "Kosinilaskin",
+          "cosineDesc": "Kulman kosini asteina tai radiaaneina kuvaajalla",
+          "arccos": "Arccos-laskin",
+          "arccosDesc": "Arvon arkuskosini ja kulma asteina ja radiaaneina",
+          "arcsin": "Arcsin-laskin",
+          "arcsinDesc": "Arvon arkussini ja kulma asteina ja radiaaneina",
+          "arctan": "Arctan-laskin",
+          "arctanDesc": "Arvon arkustangentti ja kulma asteina ja radiaaneina"
         }
       }
     },

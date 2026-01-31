@@ -379,6 +379,8 @@
       "description": "Számítsa ki egy szög koszinuszát fokban vagy radiánban. Eredmény és a koszinuszfüggvény grafikonja.",
       "angleAlpha": "Alfa szög",
       "unit": "Egység",
+      "unitMrad": "milliradián (mrad)",
+      "unitPiRad": "π radián (× π rad)",
       "cosineOfAlpha": "Alfa koszinusza",
       "graphHeading": "A koszinuszfüggvény grafikonja",
       "calculate": "Számolás",
@@ -415,6 +417,54 @@
           "arcsinDesc": "Keresse meg egy érték inverz szinuszát és a szöget fokban és radiánban",
           "arctan": "Arctan Számológép",
           "arctanDesc": "Keresse meg egy érték inverz tangensét és a szöget fokban és radiánban"
+        }
+      }
+    },
+    "sine": {
+      "title": "Szinusz Számológép",
+      "description": "Számítsa ki egy szög szinuszát fokban, radiánban, milliradiánban vagy π radiánban. Eredmény és sin(x) ábrázolása a −2π–2π tartományban.",
+      "angleAlpha": "α szög",
+      "unit": "Egység",
+      "unitMrad": "milliradián (mrad)",
+      "unitPiRad": "π radián (× π rad)",
+      "sineOfAlpha": "α szinusza",
+      "graphHeading": "sin(x) ábrázolása a &lt;−2π, 2π&gt; tartományban.",
+      "calculate": "Számolás",
+      "reset": "Törlés",
+      "result": "Eredmény",
+      "seo": {
+        "title": "Szinusz Számológép – sin(α) fokban és radiánban grafikonnal",
+        "description": "Ingyenes szinusz számológép sin(α) meghatározásához tetszőleges szögre fokban, radiánban, milliradiánban vagy π radiánban. Nagy pontosságú eredmény és sin(x) ábra a −2π–2π tartományban.",
+        "keywords": "szinusz számológép, sin számológép, trigonometria, szög szinusza, sin fok, sin radián, szinusz grafikon, matematikai számológép",
+        "content": {
+          "heading": "A szinusz számológép használata",
+          "paragraph1": "A szinusz függvény sin(α) vagy sin(θ) a derékszögű háromszögben az α szöghöz tartozó szemközti befogó és átfogó arányát adja. Bármely szögre sin(α) −1 és 1 között van. A szinusz 360° (2π radián) periódusú.",
+          "paragraph2": "Adja meg az α szöget és válasszon fok (deg), radián (rad), milliradián (mrad) vagy π radián (× π rad). A eszköz kiszámítja sin(α)-t és 8 tizedesjegyre kerekítve mutatja az eredményt. A grafikon sin(x)-et mutatja −2π-től 2π-ig.",
+          "paragraph3": "A szinuszot trigonometriában, fizikában és mérnöki munkában használják. Gyakori értékek: sin(0°)=0, sin(90°)=1, sin(180°)=0, sin(30°)=0,5. A számológép bármely szöget elfogad és a szinuszt grafikonnal együtt adja vissza.",
+          "paragraph4": "A szinusz számológép ingyenes és minden támogatott nyelven működik. Adjon meg egy szöget, válasszon egységet és kapja meg sin(α)-t és az y=sin(x) ábrát −2π-től 2π-ig.",
+          "exampleHeading": "Példa",
+          "exampleText": "α=1° szögre fokban: sin(1°)≈0,01745241. 1 radián szinusza ≈0,84147098. A grafikon sin(x)-et mutatja a &lt;−2π, 2π&gt; tartományban."
+        },
+        "faq": {
+          "heading": "Gyakran ismételt kérdések",
+          "items": [
+            {"question": "Mi a szög szinusza?", "answer": "Az α szög szinusza sin(α) a derékszögű háromszögben a szemközti befogó és átfogó aránya. sin(α) −1 és 1 között van. Ez az egységkör y-koordinátája is."},
+            {"question": "Megadhatók a szögek fokban, radiánban, milliradiánban vagy π radiánban?", "answer": "Igen. Válassza a deg, rad, mrad vagy × π rad lehetőséget. A számológép 8 tizedesjegyre kerekítve mutatja sin(α)-t."},
+            {"question": "Mit mutat a grafikon?", "answer": "A grafikon sin(x)-et mutatja −2π-től 2π-ig (két periódus). A szinusz 0 és π-nél 0, π/2-nél 1, 3π/2-nél −1."},
+            {"question": "Az eredmény a régióm formátumában jelenik meg?", "answer": "Igen. A szinusz érték a régió szerint formázódik (vessző vagy tizedespont)."},
+            {"question": "Ez a szinusz számológép ingyenes?", "answer": "Igen, a szinusz számológép ingyenes. Adjon meg szöget, válasszon egységet és kapja meg sin(α)-t grafikonnal."}
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó számológépek",
+          "cosine": "Koszinusz Számológép",
+          "cosineDesc": "Szög koszinusza fokban vagy radiánban grafikonnal",
+          "arccos": "Arccos Számológép",
+          "arccosDesc": "Érték arkusz koszinusza és szög fokban és radiánban",
+          "arcsin": "Arcsin Számológép",
+          "arcsinDesc": "Érték arkusz szinusza és szög fokban és radiánban",
+          "arctan": "Arctan Számológép",
+          "arctanDesc": "Érték arkusz tangense és szög fokban és radiánban"
         }
       }
     },

@@ -1,6 +1,6 @@
-import { Calculator } from './types';
+import { Calculator, sortCalculatorsAlphabetically } from './types';
 
-export const otherCalculators: Calculator[] = [
+const otherCalculatorsList: Calculator[] = [
   {
     id: 'text-to-binary',
     titleKey: 'textToBinary.title',
@@ -86,3 +86,5 @@ export const otherCalculators: Calculator[] = [
     category: 'others',
   },
 ];
+
+export const otherCalculators: Calculator[] = sortCalculatorsAlphabetically(otherCalculatorsList);

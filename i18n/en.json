@@ -379,6 +379,8 @@
       "description": "Calculate the cosine of an angle in degrees or radians. See the result and a graph of the cosine function.",
       "angleAlpha": "Angle alpha",
       "unit": "Unit",
+      "unitMrad": "milliradians (mrad)",
+      "unitPiRad": "π radians (× π rad)",
       "cosineOfAlpha": "Cosine of alpha",
       "graphHeading": "Graph of the cosine function",
       "calculate": "Calculate",
@@ -424,6 +426,69 @@
         },
         "related": {
           "heading": "Related Calculators",
+          "arccos": "Arccos Calculator",
+          "arccosDesc": "Find the inverse cosine of a value and get the angle in degrees and radians",
+          "arcsin": "Arcsin Calculator",
+          "arcsinDesc": "Find the inverse sine of a value and get the angle in degrees and radians",
+          "arctan": "Arctan Calculator",
+          "arctanDesc": "Find the inverse tangent of a value and get the angle in degrees and radians"
+        }
+      }
+    },
+    "sine": {
+      "title": "Sine Calculator",
+      "description": "Calculate the sine of an angle in degrees, radians, milliradians, or π radians. See the result and a plot of sin(x) in the −2π to 2π range.",
+      "angleAlpha": "Angle α",
+      "unit": "Unit",
+      "unitMrad": "milliradians (mrad)",
+      "unitPiRad": "π radians (× π rad)",
+      "sineOfAlpha": "Sine of α",
+      "graphHeading": "Plot of sin(x) in &lt;−2π, 2π&gt; range.",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "seo": {
+        "title": "Sine Calculator – sin(α) in Degrees & Radians with Graph",
+        "description": "Free sine calculator to find sin(α) for any angle in degrees, radians, milliradians, or π radians. Get the result with high precision and see a plot of sin(x) from −2π to 2π. Ideal for trigonometry, geometry, and engineering.",
+        "keywords": "sine calculator, sin calculator, trigonometry calculator, sine of angle, sin degrees, sin radians, sine graph, sin(x) plot, math calculator",
+        "content": {
+          "heading": "How to Use the Sine Calculator",
+          "paragraph1": "The sine function, written as sin(α) or sin(θ), gives the ratio of the opposite side to the hypotenuse in a right triangle for angle α. For any angle in degrees or radians, sin(α) is a value between −1 and 1. Sine is periodic with period 360° (2π radians), so sin(α + 360°) = sin(α).",
+          "paragraph2": "To use the calculator, enter the angle α and choose degrees (deg), radians (rad), milliradians (mrad), or π radians (× π rad). The tool computes sin(α) and displays the result with 8 decimal places, using your locale for the decimal separator (e.g. 0.01745241 or 0,01745241). The graph shows sin(x) over the range from −2π to 2π radians.",
+          "paragraph3": "Sine is widely used in trigonometry, physics, engineering, and signal processing. Common values include sin(0°) = 0, sin(90°) = 1, sin(180°) = 0, and sin(30°) = 0.5. Our calculator accepts any angle (including negative and large values) and returns the sine, with a graph to visualize the function over two full periods.",
+          "paragraph4": "The sine calculator is free and works in all supported locales. Enter an angle, pick your unit (deg, rad, mrad, or × π rad), and get sin(α) instantly plus a plot of y = sin(x) from −2π to 2π. Ideal for students, teachers, and anyone working with trigonometry.",
+          "exampleHeading": "Example",
+          "exampleText": "For angle α = 1° in degrees, sin(1°) ≈ 0.01745241. The sine of 1 radian is about 0.84147098. The graph shows sin(x) in the &lt;−2π, 2π&gt; range, with sin(0) = 0, sin(π/2) = 1, sin(π) = 0, and sin(3π/2) = −1."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the sine of an angle?",
+              "answer": "The sine of an angle α, written sin(α), is the ratio of the opposite side to the hypotenuse in a right triangle with that angle. For any angle, sin(α) is between −1 and 1. It is also the y-coordinate on the unit circle."
+            },
+            {
+              "question": "Can I enter angles in degrees, radians, milliradians, or π radians?",
+              "answer": "Yes. Choose deg for degrees (e.g. 1, 90, 180), rad for radians, mrad for milliradians, or × π rad for angles in multiples of π. The calculator computes sin(α) for your input and shows the result with 8 decimal places."
+            },
+            {
+              "question": "What does the graph show?",
+              "answer": "The graph shows sin(x) over the range from −2π to 2π radians (two full periods). It helps you see how sine varies: 0 at 0 and π, 1 at π/2, and −1 at 3π/2."
+            },
+            {
+              "question": "Is the result in my locale format?",
+              "answer": "Yes. The sine value is formatted using your locale, so the decimal separator (comma or period) matches your region, e.g. 0,01745241 or 0.01745241."
+            },
+            {
+              "question": "Is this sine calculator free?",
+              "answer": "Yes, the sine calculator is free to use. No registration or payment is required. Enter an angle, choose your unit, and get sin(α) with a graph."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "cosine": "Cosine Calculator",
+          "cosineDesc": "Find the cosine of an angle in degrees or radians with a graph",
           "arccos": "Arccos Calculator",
           "arccosDesc": "Find the inverse cosine of a value and get the angle in degrees and radians",
           "arcsin": "Arcsin Calculator",

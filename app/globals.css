@@ -1786,21 +1786,30 @@ a {
   line-height: 1;
 }
 
-.root-calc-radicand {
+.root-calc-radical-group {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   flex: 1;
-  min-width: 160px;
+  min-width: 200px;
 }
 
-.root-calc-radicand::before {
+.root-calc-radical-group::before {
   content: '';
   position: absolute;
-  left: 0;
+  left: 1.1rem; /* start near the top of the √ */
   right: 0;
   top: -8px;
   height: 3px;
   background: #5a5a5a;
   border-radius: 2px;
+}
+
+.root-calc-radicand {
+  position: relative;
+  flex: 1;
+  min-width: 160px;
 }
 
 .root-calc-radicand .number-input {

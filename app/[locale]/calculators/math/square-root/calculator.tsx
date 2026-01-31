@@ -61,19 +61,21 @@ export function SquareRootCalculator() {
   return (
     <div className="root-calc-block">
       <div className="root-calc-input-row">
-        <span className="root-calc-radical" aria-hidden>√</span>
-        <div className="root-calc-radicand">
-          <input
-            id="number"
-            type="text"
-            inputMode="decimal"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-            className="number-input"
-            placeholder={t('placeholder')}
-            aria-label={t('enterNumber')}
-          />
+        <div className="root-calc-radical-group">
+          <span className="root-calc-radical" aria-hidden>√</span>
+          <div className="root-calc-radicand">
+            <input
+              id="number"
+              type="text"
+              inputMode="decimal"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+              className="number-input"
+              placeholder={t('placeholder')}
+              aria-label={t('enterNumber')}
+            />
+          </div>
         </div>
       </div>
 

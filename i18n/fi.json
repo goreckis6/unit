@@ -402,11 +402,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            {"question": "Mikä on kulman kosini?", "answer": "Kulman α kosini cos(α) on viereisen kateetin ja hypotenuusan suhde suorakulmaisessa kolmiossa. cos(α) on välillä -1 ja 1. Se on myös x-koordinaatti yksikköympyrällä."},
-            {"question": "Voinko syöttää kulmat asteina tai radiaaneina?", "answer": "Kyllä. Valitse deg asteille (esim. 11, 90, 180) tai rad radiaaneille. Laskin laskee cos(α) ja näyttää tuloksen 8 desimaalilla."},
-            {"question": "Mitä kuvaaja näyttää?", "answer": "Kuvaaja näyttää yhden kosinifunktion y = cos(x) jakson 0:sta 2π radiaaniin: 1 kohdassa 0, 0 kohdassa π/2, -1 kohdassa π, 0 kohdassa 3π/2."},
-            {"question": "Onko tulos oman locale-formaatissani?", "answer": "Kyllä. Kosiniarvo muotoillaan locale-asetustesi mukaan (desimaalierotin pilkku tai piste)."},
-            {"question": "Onko kosinilaskin ilmainen?", "answer": "Kyllä, kosinilaskin on ilmainen. Syötä kulma, valitse deg tai rad ja saat cos(α) kuvaajalla."}
+            {
+              "question": "Mikä on kulman kosini?",
+              "answer": "Kulman α kosini cos(α) on viereisen kateetin ja hypotenuusan suhde suorakulmaisessa kolmiossa. cos(α) on välillä -1 ja 1. Se on myös x-koordinaatti yksikköympyrällä."
+            },
+            {
+              "question": "Voinko syöttää kulmat asteina tai radiaaneina?",
+              "answer": "Kyllä. Valitse deg asteille (esim. 11, 90, 180) tai rad radiaaneille. Laskin laskee cos(α) ja näyttää tuloksen 8 desimaalilla."
+            },
+            {
+              "question": "Mitä kuvaaja näyttää?",
+              "answer": "Kuvaaja näyttää yhden kosinifunktion y = cos(x) jakson 0:sta 2π radiaaniin: 1 kohdassa 0, 0 kohdassa π/2, -1 kohdassa π, 0 kohdassa 3π/2."
+            },
+            {
+              "question": "Onko tulos oman locale-formaatissani?",
+              "answer": "Kyllä. Kosiniarvo muotoillaan locale-asetustesi mukaan (desimaalierotin pilkku tai piste)."
+            },
+            {
+              "question": "Onko kosinilaskin ilmainen?",
+              "answer": "Kyllä, kosinilaskin on ilmainen. Syötä kulma, valitse deg tai rad ja saat cos(α) kuvaajalla."
+            }
           ]
         },
         "related": {
@@ -448,11 +463,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            {"question": "Mikä on kulman sini?", "answer": "Kulman α sini sin(α) on suorakulmaisen kolmion vastaisen kateetin ja hypotenuusan suhde. sin(α) on välillä −1–1. Se on myös y-koordinaatti yksikköympyrällä."},
-            {"question": "Voinko syöttää kulmat asteina, radiaaneina, milliradiaaneina tai π radiaaneina?", "answer": "Kyllä. Valitse deg, rad, mrad tai × π rad. Laskin näyttää sin(α) 8 desimaalilla."},
-            {"question": "Mitä kuvaaja näyttää?", "answer": "Kuvaaja näyttää sin(x) välillä −2π–2π (kaksi jaksoa). Sini on 0 kohdissa 0 ja π, 1 kohdassa π/2, −1 kohdassa 3π/2."},
-            {"question": "Onko tulos oman alueen muodossa?", "answer": "Kyllä. Sinin arvo muotoillaan alueesi mukaan (pilkku tai piste)."},
-            {"question": "Onko tämä sinilaskin ilmainen?", "answer": "Kyllä, sinilaskin on ilmainen. Syötä kulma, valitse yksikkö ja saat sin(α) kuvaajalla."}
+            {
+              "question": "Mikä on kulman sini?",
+              "answer": "Kulman α sini sin(α) on suorakulmaisen kolmion vastaisen kateetin ja hypotenuusan suhde. sin(α) on välillä −1–1. Se on myös y-koordinaatti yksikköympyrällä."
+            },
+            {
+              "question": "Voinko syöttää kulmat asteina, radiaaneina, milliradiaaneina tai π radiaaneina?",
+              "answer": "Kyllä. Valitse deg, rad, mrad tai × π rad. Laskin näyttää sin(α) 8 desimaalilla."
+            },
+            {
+              "question": "Mitä kuvaaja näyttää?",
+              "answer": "Kuvaaja näyttää sin(x) välillä −2π–2π (kaksi jaksoa). Sini on 0 kohdissa 0 ja π, 1 kohdassa π/2, −1 kohdassa 3π/2."
+            },
+            {
+              "question": "Onko tulos oman alueen muodossa?",
+              "answer": "Kyllä. Sinin arvo muotoillaan alueesi mukaan (pilkku tai piste)."
+            },
+            {
+              "question": "Onko tämä sinilaskin ilmainen?",
+              "answer": "Kyllä, sinilaskin on ilmainen. Syötä kulma, valitse yksikkö ja saat sin(α) kuvaajalla."
+            }
           ]
         },
         "related": {
@@ -3625,59 +3655,6 @@
       }
     },
     "roots": {
-      "title": "Juurilaskin",
-      "description": "Laske luvun n:s juuri. Syötä luku ja juuren asteluku (esim. 2 neliöjuurelle, 3 kuutiojuurelle). Ilmainen työkalu matematiikkaan ja tekniikkaan.",
-      "formulaHeading": "Luvun x n:s juuri annetaan kaavalla:",
-      "formulaText": "n:s juuri = ⁿ√x",
-      "sectionHeading": "n:nnen juuren laskin",
-      "number": "Luku",
-      "rootDegree": "Juuren asteluku (n)",
-      "calculate": "Laske",
-      "reset": "Nollaa",
-      "result": "Tulos",
-      "nthRootResult": "n:s juuri",
-      "copyResult": "Kopioi",
-      "resultPlusMinus": "±{value}",
-      "errorInvalidNumber": "Syötä kelvollinen luku.",
-      "errorInvalidDegree": "Juuren asteluvun on oltava kokonaisluku ≥ 2.",
-      "errorNoRealRoot": "Ei reaalista juurta: parillinen juuri negatiivisesta luvusta ei ole reaaliluku.",
-      "seo": {
-        "title": "Juurilaskin – luvun n:s juuri verkossa",
-        "description": "Ilmainen juurilaskin. Etsi luvun n:s juuri: neliöjuuri (n=2), kuutiojuuri (n=3) tai mikä tahansa positiivinen kokonaisluku n. Käsittelee negatiivisia lukuja parittomalla n.",
-        "keywords": "juurilaskin, n:s juuri, neliöjuuri, kuutiojuuri, luvun juuri, matematiikka juuret",
-        "content": {
-          "heading": "Juurilaskimen käyttö",
-          "paragraph1": "Juurilaskin laskee luvun n:nnen juuren. Luvun x n:s juuri on luku, joka n:nnessä potenssissa antaa x:n. Merkintä ⁿ√x tai x^(1/n). Esim. neliöjuuri (n=2) luvusta 16 on 4, koska 4²=16. Kuutiojuuri (n=3) luvusta 27 on 3, koska 3³=27.",
-          "paragraph2": "Ei-negatiivisille luvuille n:s juuri on aina olemassa ja ei-negatiivinen. Negatiivisille luvuille juuri on olemassa vain parittomalla n: esim. luvun -27 kuutiojuuri on -3. Parillinen juuri negatiivisesta luvusta ei ole reaaliluku.",
-          "paragraph3": "Juuria käytetään algebrassa, geometriassa, fysiikassa ja tekniikassa. Yleisiä tapauksia: neliöjuuri (n=2), kuutiojuuri (n=3), neljäs juuri (n=4). Tulos näytetään enintään 8 desimaalilla.",
-          "paragraph4": "Juurilaskin on ilmainen ja toimii kaikilla tuetuilla kielillä. Syötä luku ja juuren asteluku (kokonaisluku ≥ 2) ja saat n:nnen juuren heti.",
-          "exampleHeading": "Esimerkki",
-          "exampleText": "Luku 16, asteluku 2: luvun 16 neliöjuuri on 4. Luku 27, asteluku 3: luvun 27 kuutiojuuri on 3. Luku -8, asteluku 3: luvun -8 kuutiojuuri on -2. Luku -4, asteluku 2: ei reaalista neliöjuurta."
-        },
-        "faq": {
-          "heading": "Usein kysytyt kysymykset",
-          "items": [
-            {"question": "Mikä on luvun n:s juuri?", "answer": "Luvun x n:s juuri on luku, joka n:nnessä potenssissa on x. Esim. luvun 9 neliöjuuri (n=2) on 3, koska 3²=9. Luvun 8 kuutiojuuri (n=3) on 2, koska 2³=8."},
-            {"question": "Voinko käyttää negatiivisia lukuja?", "answer": "Kyllä, mutta vain parittomilla juuren asteluvuilla. Luvun -8 kuutiojuuri on -2. Parillisilla asteluvuilla (2, 4, 6, …) negatiivisen luvun juuri ei ole reaaliluku."},
-            {"question": "Mikä on juuren asteluku?", "answer": "Juuren asteluku n on juuren tyyppi: n=2 neliöjuuri, n=3 kuutiojuuri, n=4 neljäs juuri jne. On oltava kokonaisluku ≥ 2."},
-            {"question": "Kuinka monta desimaalia näytetään?", "answer": "Laskin näyttää enintään 8 desimaalia, alueesi mukaisesti."},
-            {"question": "Onko juurilaskin ilmainen?", "answer": "Kyllä. Juurilaskin on täysin ilmainen. Ei rekisteröintiä eikä maksua. Syötä luku ja asteluku ja saat n:nnen juuren heti."}
-          ]
-        },
-        "related": {
-          "heading": "Liittyvät laskimet",
-          "squareRoot": "Neliöjuurilaskin",
-          "squareRootDesc": "Ei-negatiivisen luvun neliöjuuri positiivisella ja negatiivisella tuloksella",
-          "addition": "Yhteenlaskulaskin",
-          "additionDesc": "Laske kokonais- ja desimaaliluvut nopeasti ja tarkasti",
-          "percentage": "Prosenttilaskin",
-          "percentageDesc": "Laske prosenttiarvot, muutos ja suhteet",
-          "average": "Keskiarvolaskuri",
-          "averageDesc": "Löydä keskiarvo, summa ja lukumäärä"
-        }
-      }
-    },
-    "roots": {
       "title": "Juuri Laskin",
       "description": "Laske luvun n:s juuri. Syötä luku ja juuren asteluku (esim. 2 neliöjuurelle, 3 kuutiojuurelle). Ilmainen työkalu matematiikkaan ja tekniikkaan.",
       "formulaHeading": "Luvun x n:s juuri annetaan kaavalla:",
@@ -3710,11 +3687,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            {"question": "Mikä on luvun n:s juuri?", "answer": "Luvun x n:s juuri on luku, joka n:nnessä potenssissa antaa x. Esim. 9:n neliöjuuri (n=2) on 3, koska 3²=9. 8:n kuutiojuuri (n=3) on 2, koska 2³=8."},
-            {"question": "Voinko käyttää negatiivisia lukuja?", "answer": "Kyllä, mutta vain parittomalla juuren asteluvulla. -8:n kuutiojuuri on -2. Parillisella asteluvulla (2, 4, 6, …) negatiivisen luvun juuri ei ole reaaliluku."},
-            {"question": "Mikä on juuren asteluku?", "answer": "Asteluku n on juuren tyyppi: n=2 neliöjuuri, n=3 kuutiojuuri, n=4 neljäs juuri jne. Tulee olla kokonaisluku ≥ 2."},
-            {"question": "Kuinka monta desimaalia näytetään?", "answer": "Laskin näyttää enintään 8 desimaalia alueesi mukaan."},
-            {"question": "Onko juuri laskin ilmainen?", "answer": "Kyllä. Juuri laskin on ilmainen. Syötä luku ja asteluku ja saat n:nnen juuren."}
+            {
+              "question": "Mikä on luvun n:s juuri?",
+              "answer": "Luvun x n:s juuri on luku, joka n:nnessä potenssissa antaa x. Esim. 9:n neliöjuuri (n=2) on 3, koska 3²=9. 8:n kuutiojuuri (n=3) on 2, koska 2³=8."
+            },
+            {
+              "question": "Voinko käyttää negatiivisia lukuja?",
+              "answer": "Kyllä, mutta vain parittomalla juuren asteluvulla. -8:n kuutiojuuri on -2. Parillisella asteluvulla (2, 4, 6, …) negatiivisen luvun juuri ei ole reaaliluku."
+            },
+            {
+              "question": "Mikä on juuren asteluku?",
+              "answer": "Asteluku n on juuren tyyppi: n=2 neliöjuuri, n=3 kuutiojuuri, n=4 neljäs juuri jne. Tulee olla kokonaisluku ≥ 2."
+            },
+            {
+              "question": "Kuinka monta desimaalia näytetään?",
+              "answer": "Laskin näyttää enintään 8 desimaalia alueesi mukaan."
+            },
+            {
+              "question": "Onko juuri laskin ilmainen?",
+              "answer": "Kyllä. Juuri laskin on ilmainen. Syötä luku ja asteluku ja saat n:nnen juuren."
+            }
           ]
         },
         "related": {
@@ -3801,83 +3793,88 @@
       "description": "Laske kokonaislukujen jakolaskun jakojäännös (ja osamäärä) euklidisella jaolla. Syötä jaettava ja jakaja ja saat ei-negatiivisen jakojäännöksen heti."
     },
     "longDivision": {
-      "title": "Pitkän jaon laskin",
-      "description": "Jaa kaksi kokonaislukua ja saat osamäärän ja jakojäännöksen vaihe vaiheelta.",
-      "dividendLabel": "Jaettava",
-      "dividendPlaceholder": "esim. 487",
-      "dividendHelp": "Syötä kokonaisluku (0 tai suurempi).",
-      "divisorLabel": "Jakaja",
-      "divisorPlaceholder": "esim. 32",
-      "divisorHelp": "Syötä kokonaisluku, joka on suurempi kuin 0.",
-      "calculate": "Laske",
-      "reset": "Nollaa",
-      "resultLabel": "Tulos",
-      "quotientValue": "Osamäärä: {value}",
-      "remainderValue": "Jakojäännös: {value}",
+      "title": "Long Division Calculator",
+      "description": "Divide two whole numbers and get the quotient and remainder with step-by-step long division.",
+      "dividendLabel": "Dividend",
+      "dividendPlaceholder": "e.g. 487",
+      "dividendHelp": "Enter a whole number (0 or greater).",
+      "divisorLabel": "Divisor",
+      "divisorPlaceholder": "e.g. 32",
+      "divisorHelp": "Enter a whole number greater than 0.",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "resultLabel": "Result",
+      "quotientValue": "Quotient: {value}",
+      "remainderValue": "Remainder: {value}",
       "equation": "{a} = {b} × {q} + {r}",
-      "diagramLabel": "Jako:",
+      "diagramLabel": "Division:",
+      "diagramStyleLabel": "Kaavion tyyli",
+      "diagramStyleUs": "US/UK",
+      "diagramStyleEu": "EU",
+      "showFractionToggle": "Näytä jakojäännös murtolukuna",
+      "remainderShort": "r",
       "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
-      "stepsHeading": "Pitkän jaon vaiheet",
-      "stepLabel": "Vaihe {step}",
-      "bringDown": "Laske {digit} alas → {value}",
+      "stepsHeading": "Long division steps",
+      "stepLabel": "Step {step}",
+      "bringDown": "Bring down {digit} → {value}",
       "divide": "{partial} ÷ {divisor} = {quotientDigit}",
       "multiply": "{quotientDigit} × {divisor} = {product}",
       "subtract": "{partial} − {product} = {remainder}",
-      "nextDigit": "Seuraava numero: {digit}",
-      "errorInvalidDividend": "Anna kelvollinen kokonaisluku jaettavaksi.",
-      "errorInvalidDivisor": "Anna kelvollinen kokonaisluku jakajaksi.",
-      "errorDivisionByZero": "Nollalla jakaminen ei ole sallittua.",
+      "nextDigit": "Next digit: {digit}",
+      "errorInvalidDividend": "Please enter a valid whole number dividend.",
+      "errorInvalidDivisor": "Please enter a valid whole number divisor.",
+      "errorDivisionByZero": "Division by zero is not allowed.",
       "seo": {
-        "title": "Pitkän jaon laskin – Osamäärä ja jakojäännös",
-        "description": "Ilmainen pitkän jaon laskin. Jaa kaksi kokonaislukua ja saat osamäärän jäännöksen kanssa sekä laskun vaiheet.",
-        "keywords": "pitkän jaon laskin, osamäärä ja jakojäännös, jako jäännöksellä, pitkän jaon vaiheet, jakolaskin, pitkä jako",
+        "title": "Long Division Calculator – Quotient and Remainder",
+        "description": "Free long division calculator. Divide two whole numbers and get the quotient with a remainder plus step-by-step long division.",
+        "keywords": "long division calculator, quotient and remainder, divide with remainder, long division steps, division calculator, long division with remainders",
         "content": {
-          "heading": "Näin teet pitkän jaon jäännöksellä",
-          "paragraph1": "Pitkä jako on menetelmä, jossa jaetaan luku (jaettava) toisella luvulla (jakaja) pienissä vaiheissa. Kun jako ei mene tasan, saadaan kokonaislukuosamäärä ja jakojäännös. Tämä laskin auttaa harjoittelemaan tai tarkistamaan tulokset.",
-          "paragraph2": "Pitkä jako jäännöksellä on usein helpompaa kuin desimaalituloksen käsin kirjoittaminen. Jos tarvitset desimaalisen osamäärän, käytä pitkän jaon desimaalilaskinta. Tässä jäännös kertoo, mitä jää jäljelle jakamisen jälkeen.",
-          "paragraph3": "Syötä jaettava ja jakaja, niin laskin näyttää osamäärän, jäännöksen ja koko vaiheittaisen prosessin. Vaiheet seuraavat klassista menetelmää: laske numero alas, jaa, kerro ja vähennä.",
-          "paragraph4": "Pitkä jako on hyödyllinen taito koulussa, läksyissä ja arjen laskuissa. Käytä tätä työkalua vastausten tarkistamiseen tai vaiheiden opiskeluun.",
-          "partsHeading": "Mitkä ovat jaon osat?",
-          "partsItem1": "Jaettava: luku, joka jaetaan (esim. 487).",
-          "partsItem2": "Jakaja: luku, jolla jaetaan (esim. 32).",
-          "partsItem3": "Osamäärä: kokonaislukuinen tulos (esim. 15).",
-          "partsItem4": "Jakojäännös: se, mikä jää (esim. 7).",
-          "exampleHeading": "Esimerkki",
-          "exampleText": "487 ÷ 32 = 15 R 7, koska 32 × 15 = 480 ja 487 − 480 = 7."
+          "heading": "How to Do Long Division with Remainders",
+          "paragraph1": "Long division is a method for dividing one number (the dividend) by another (the divisor) by breaking the problem into smaller steps. When the dividend is not evenly divisible by the divisor, you get a whole-number quotient and a remainder. This calculator lets you practice long division with remainders or quickly check your work.",
+          "paragraph2": "Long division with remainders is usually easier than writing a decimal answer by hand. If you specifically need a decimal result, use our Long Division with Decimals Calculator instead. Here, the remainder shows what is left after dividing as many whole times as possible.",
+          "paragraph3": "Enter your dividend and divisor, and the calculator shows the quotient, remainder, and the full step-by-step division process. The steps mirror the classic long division method: bring down digits, divide, multiply, and subtract to find the next remainder.",
+          "paragraph4": "Long division is a useful skill for math classes, homework, and real-world calculations. Use this tool to verify answers, study how each step works, or check your own long division problems quickly and accurately.",
+          "partsHeading": "What are the parts of division?",
+          "partsItem1": "Dividend: the number being divided (example: 487).",
+          "partsItem2": "Divisor: the number you divide by (example: 32).",
+          "partsItem3": "Quotient: the whole-number answer (example: 15).",
+          "partsItem4": "Remainder: what is left over (example: 7).",
+          "exampleHeading": "Example",
+          "exampleText": "487 ÷ 32 = 15 R 7, because 32 × 15 = 480 and 487 − 480 = 7."
         },
         "faq": {
-          "heading": "Usein kysytyt kysymykset",
+          "heading": "Frequently Asked Questions",
           "items": [
             {
-              "question": "Mitä pitkä jako on?",
-              "answer": "Pitkä jako on vaiheittainen menetelmä lukujen jakamiseen. Prosessi jaetaan vaiheisiin: jakaminen, kertominen, vähentäminen ja seuraavan numeron alas laskeminen."
+              "question": "What is long division?",
+              "answer": "Long division is a step-by-step method for dividing numbers. It breaks a large division problem into smaller steps: divide, multiply, subtract, and bring down the next digit."
             },
             {
-              "question": "Miksi jäännös on pienempi kuin jakaja?",
-              "answer": "Jäännös on se, mikä jää jäljelle, kun on jaettu mahdollisimman monta kertaa. Jos jäännös olisi yhtä suuri tai suurempi kuin jakaja, voitaisiin jakaa vielä kerran."
+              "question": "Why is the remainder smaller than the divisor?",
+              "answer": "In division with remainder, the remainder is what is left after dividing as many whole times as possible. If the remainder were equal to or larger than the divisor, you could divide one more time."
             },
             {
-              "question": "Mitä jos jakaja on suurempi kuin jaettava?",
-              "answer": "Osamäärä on 0 ja jäännös on jaettava. Esimerkiksi 7 ÷ 12 = 0 R 7."
+              "question": "What if the divisor is larger than the dividend?",
+              "answer": "The quotient is 0 and the remainder is the dividend. For example, 7 ÷ 12 = 0 R 7."
             },
             {
-              "question": "Voinko käyttää laskinta desimaaleille?",
-              "answer": "Tämä laskin on kokonaisluvuille ja jäännöksille. Jos tarvitset desimaalisen osamäärän, käytä pitkän jaon desimaalilaskinta."
+              "question": "Can I use this calculator for decimals?",
+              "answer": "This calculator is for whole-number long division with remainders. If you need a decimal quotient, use a long division with decimals calculator."
             },
             {
-              "question": "Toimiiko se suurilla luvuilla?",
-              "answer": "Kyllä. Voit syöttää erittäin suuria kokonaislukuja, ja laskin laskee osamäärän, jäännöksen ja vaiheet tarkasti."
+              "question": "Does it work for large numbers?",
+              "answer": "Yes. You can enter very large whole numbers, and the calculator will compute the quotient, remainder, and steps accurately."
             }
           ]
         },
         "related": {
-          "heading": "Aiheeseen liittyvät laskimet",
-          "remainder": "Jakojäännöslaskin",
-          "remainderDesc": "Etsi osamäärä ja jäännös kokonaislukujen jaossa",
-          "addition": "Yhteenlaskulaskin",
-          "additionDesc": "Laske kokonais- ja desimaalilukuja nopeasti",
-          "percentage": "Prosenttilaskin",
-          "percentageDesc": "Laske prosenttiosuuksia, muutoksia ja suhteita"
+          "heading": "Related Calculators",
+          "remainder": "Remainder Calculator",
+          "remainderDesc": "Find the quotient and remainder for integer division",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals quickly and accurately",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentage values, change, and relationships"
         }
       }
     },

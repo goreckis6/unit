@@ -402,11 +402,26 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            {"question": "Vad är cosinus för en vinkel?", "answer": "Cosinus för vinkel α, cos(α), är förhållandet mellan närliggande katet och hypotenusa i en rätvinklig triangel. cos(α) är mellan -1 och 1. Det är också x-koordinaten på enhetscirkeln."},
-            {"question": "Kan jag ange vinklar i grader eller radianer?", "answer": "Ja. Välj deg för grader (t.ex. 11, 90, 180) eller rad för radianer. Kalkylatorn beräknar cos(α) och visar resultatet med 8 decimaler."},
-            {"question": "Vad visar grafen?", "answer": "Grafen visar en period av cosinusfunktionen y=cos(x) från 0 till 2π radianer: 1 vid 0, 0 vid π/2, -1 vid π, 0 vid 3π/2."},
-            {"question": "Är resultatet i mitt locale-format?", "answer": "Ja. Cosinusvärdet formateras enligt din locale (decimalavgränsare komma eller punkt)."},
-            {"question": "Är denna cosinus kalkylator gratis?", "answer": "Ja, cosinus kalkylatorn är gratis. Ange vinkel, välj deg eller rad och få cos(α) med graf."}
+            {
+              "question": "Vad är cosinus för en vinkel?",
+              "answer": "Cosinus för vinkel α, cos(α), är förhållandet mellan närliggande katet och hypotenusa i en rätvinklig triangel. cos(α) är mellan -1 och 1. Det är också x-koordinaten på enhetscirkeln."
+            },
+            {
+              "question": "Kan jag ange vinklar i grader eller radianer?",
+              "answer": "Ja. Välj deg för grader (t.ex. 11, 90, 180) eller rad för radianer. Kalkylatorn beräknar cos(α) och visar resultatet med 8 decimaler."
+            },
+            {
+              "question": "Vad visar grafen?",
+              "answer": "Grafen visar en period av cosinusfunktionen y=cos(x) från 0 till 2π radianer: 1 vid 0, 0 vid π/2, -1 vid π, 0 vid 3π/2."
+            },
+            {
+              "question": "Är resultatet i mitt locale-format?",
+              "answer": "Ja. Cosinusvärdet formateras enligt din locale (decimalavgränsare komma eller punkt)."
+            },
+            {
+              "question": "Är denna cosinus kalkylator gratis?",
+              "answer": "Ja, cosinus kalkylatorn är gratis. Ange vinkel, välj deg eller rad och få cos(α) med graf."
+            }
           ]
         },
         "related": {
@@ -448,11 +463,26 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            {"question": "Vad är sinus för en vinkel?", "answer": "Sinus för vinkel α, sin(α), är förhållandet mellan motstående katet och hypotenusa i en rätvinklig triangel. sin(α) är mellan −1 och 1. Det är också y-koordinaten på enhetscirkeln."},
-            {"question": "Kan jag ange vinklar i grader, radianer, milliradianer eller π radianer?", "answer": "Ja. Välj deg, rad, mrad eller × π rad. Kalkylatorn visar sin(α) med 8 decimaler."},
-            {"question": "Vad visar grafen?", "answer": "Grafen visar sin(x) från −2π till 2π (två perioder). Sinus är 0 vid 0 och π, 1 vid π/2, −1 vid 3π/2."},
-            {"question": "Är resultatet i mitt regionformat?", "answer": "Ja. Sinusvärdet formateras enligt din region (komma eller decimaltecken)."},
-            {"question": "Är denna sinus kalkylator gratis?", "answer": "Ja, sinus kalkylatorn är gratis. Ange vinkel, välj enhet och få sin(α) med graf."}
+            {
+              "question": "Vad är sinus för en vinkel?",
+              "answer": "Sinus för vinkel α, sin(α), är förhållandet mellan motstående katet och hypotenusa i en rätvinklig triangel. sin(α) är mellan −1 och 1. Det är också y-koordinaten på enhetscirkeln."
+            },
+            {
+              "question": "Kan jag ange vinklar i grader, radianer, milliradianer eller π radianer?",
+              "answer": "Ja. Välj deg, rad, mrad eller × π rad. Kalkylatorn visar sin(α) med 8 decimaler."
+            },
+            {
+              "question": "Vad visar grafen?",
+              "answer": "Grafen visar sin(x) från −2π till 2π (två perioder). Sinus är 0 vid 0 och π, 1 vid π/2, −1 vid 3π/2."
+            },
+            {
+              "question": "Är resultatet i mitt regionformat?",
+              "answer": "Ja. Sinusvärdet formateras enligt din region (komma eller decimaltecken)."
+            },
+            {
+              "question": "Är denna sinus kalkylator gratis?",
+              "answer": "Ja, sinus kalkylatorn är gratis. Ange vinkel, välj enhet och få sin(α) med graf."
+            }
           ]
         },
         "related": {
@@ -3625,59 +3655,6 @@
       }
     },
     "roots": {
-      "title": "Rot-kalkylator",
-      "description": "Beräkna n:te roten av ett tal. Ange tal och rotgrad (t.ex. 2 för kvadratrot, 3 för kubikrot). Gratis verktyg för matematik och teknik.",
-      "formulaHeading": "n:te roten av x ges av formeln:",
-      "formulaText": "n:te rot = ⁿ√x",
-      "sectionHeading": "n:te rot-kalkylator",
-      "number": "Tal",
-      "rootDegree": "Rotgrad (n)",
-      "calculate": "Beräkna",
-      "reset": "Återställ",
-      "result": "Resultat",
-      "nthRootResult": "n:te roten",
-      "resultPlusMinus": "±{value}",
-      "copyResult": "Kopiera",
-      "errorInvalidNumber": "Ange ett giltigt tal.",
-      "errorInvalidDegree": "Rotgrad måste vara ett heltal ≥ 2.",
-      "errorNoRealRoot": "Ingen reell rot: jämn rot av ett negativt tal är inte ett reellt tal.",
-      "seo": {
-        "title": "Rot-kalkylator – n:te roten av ett tal online",
-        "description": "Gratis rot-kalkylator. Hitta n:te roten av ett tal: kvadratrot (n=2), kubikrot (n=3) eller vilket positivt heltal n som helst. Hanterar negativa tal för udda n.",
-        "keywords": "rot kalkylator, n:te rot, kvadratrot, kubikrot, rot av tal, matematik rötter",
-        "content": {
-          "heading": "Så använder du rot-kalkylatorn",
-          "paragraph1": "Rot-kalkylatorn hittar n:te roten av ett tal. n:te roten av x är det tal som upphöjt till n ger x. Skrivs ⁿ√x eller x^(1/n). T.ex. kvadratroten (n=2) av 16 är 4, eftersom 4²=16. Kubikroten (n=3) av 27 är 3, eftersom 3³=27.",
-          "paragraph2": "För icke-negativa tal finns n:te roten alltid och är icke-negativ. För negativa tal finns den bara när n är udda: t.ex. kubikroten av -27 är -3. Jämn rot av ett negativt tal är inte ett reellt tal.",
-          "paragraph3": "Rötter används i algebra, geometri, fysik och teknik. Vanliga fall: kvadratrot (n=2), kubikrot (n=3), fjärderot (n=4). Resultatet visas med upp till 8 decimaler.",
-          "paragraph4": "Rot-kalkylatorn är gratis och fungerar på alla språk som stöds. Ange tal och rotgrad (heltal ≥ 2) och få n:te roten direkt.",
-          "exampleHeading": "Exempel",
-          "exampleText": "Tal 16, grad 2: kvadratroten av 16 är 4. Tal 27, grad 3: kubikroten av 27 är 3. Tal -8, grad 3: kubikroten av -8 är -2. Tal -4, grad 2: ingen reell kvadratrot."
-        },
-        "faq": {
-          "heading": "Vanliga frågor",
-          "items": [
-            {"question": "Vad är n:te roten av ett tal?", "answer": "n:te roten av x är det tal som upphöjt till n är lika med x. T.ex. kvadratroten (n=2) av 9 är 3, eftersom 3²=9. Kubikroten (n=3) av 8 är 2, eftersom 2³=8."},
-            {"question": "Kan jag använda negativa tal?", "answer": "Ja, men bara för udda rotgrader. Kubikroten av -8 är -2. För jämna grader (2, 4, 6, …) är roten av ett negativt tal inte ett reellt tal."},
-            {"question": "Vad är rotgraden?", "answer": "Rotgraden n är rottypen: n=2 kvadratrot, n=3 kubikrot, n=4 fjärderot osv. Måste vara ett heltal ≥ 2."},
-            {"question": "Hur många decimaler visas?", "answer": "Kalkylatorn visar upp till 8 decimaler, formaterade enligt din region."},
-            {"question": "Är rot-kalkylatorn gratis?", "answer": "Ja. Rot-kalkylatorn är helt gratis. Ingen registrering eller betalning. Ange tal och grad och få n:te roten direkt."}
-          ]
-        },
-        "related": {
-          "heading": "Relaterade kalkylatorer",
-          "squareRoot": "Kvadratrot-kalkylator",
-          "squareRootDesc": "Kvadratrot av ett icke-negativt tal med positivt och negativt resultat",
-          "addition": "Addition-kalkylator",
-          "additionDesc": "Lägg ihop heltal och decimaler snabbt och exakt",
-          "percentage": "Procent-kalkylator",
-          "percentageDesc": "Beräkna procentvärden, förändring och förhållanden",
-          "average": "Medelkalkylator",
-          "averageDesc": "Hitta medelvärde, summa och antal tal"
-        }
-      }
-    },
-    "roots": {
       "title": "Rot Kalkylator",
       "description": "Beräkna den n:te roten av ett tal. Ange tal och rotgrad (t.ex. 2 för kvadratrot, 3 för kubikrot). Gratis verktyg för matematik och teknik.",
       "formulaHeading": "n:te roten av x ges av formeln:",
@@ -3710,11 +3687,26 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            {"question": "Vad är den n:te roten av ett tal?", "answer": "Den n:te roten av x är det tal som upphöjt till n ger x. T.ex. kvadratroten (n=2) av 9 är 3, eftersom 3²=9. Kubikroten (n=3) av 8 är 2, eftersom 2³=8."},
-            {"question": "Kan jag använda negativa tal?", "answer": "Ja, men endast för udda rotgrad. Kubikroten av -8 är -2. För jämn grad (2, 4, 6, …) är roten av ett negativt tal inte ett reellt tal."},
-            {"question": "Vad är rotgraden?", "answer": "Graden n är rottypen: n=2 kvadratrot, n=3 kubikrot, n=4 fjärde roten osv. Måste vara ett heltal ≥ 2."},
-            {"question": "Hur många decimaler visas?", "answer": "Kalkylatorn visar upp till 8 decimaler enligt din region."},
-            {"question": "Är rot kalkylatorn gratis?", "answer": "Ja. Rot kalkylatorn är gratis. Ange tal och grad och få den n:te roten."}
+            {
+              "question": "Vad är den n:te roten av ett tal?",
+              "answer": "Den n:te roten av x är det tal som upphöjt till n ger x. T.ex. kvadratroten (n=2) av 9 är 3, eftersom 3²=9. Kubikroten (n=3) av 8 är 2, eftersom 2³=8."
+            },
+            {
+              "question": "Kan jag använda negativa tal?",
+              "answer": "Ja, men endast för udda rotgrad. Kubikroten av -8 är -2. För jämn grad (2, 4, 6, …) är roten av ett negativt tal inte ett reellt tal."
+            },
+            {
+              "question": "Vad är rotgraden?",
+              "answer": "Graden n är rottypen: n=2 kvadratrot, n=3 kubikrot, n=4 fjärde roten osv. Måste vara ett heltal ≥ 2."
+            },
+            {
+              "question": "Hur många decimaler visas?",
+              "answer": "Kalkylatorn visar upp till 8 decimaler enligt din region."
+            },
+            {
+              "question": "Är rot kalkylatorn gratis?",
+              "answer": "Ja. Rot kalkylatorn är gratis. Ange tal och grad och få den n:te roten."
+            }
           ]
         },
         "related": {
@@ -3801,83 +3793,88 @@
       "description": "Beräkna resten (och kvoten) vid heltalsdivision med euklidisk division. Ange dividend och divisor för att få en icke-negativ rest direkt."
     },
     "longDivision": {
-      "title": "Kalkylator för lång division",
-      "description": "Dela två heltal och få kvot och rest med steg-för-steg lång division.",
+      "title": "Long Division Calculator",
+      "description": "Divide two whole numbers and get the quotient and remainder with step-by-step long division.",
       "dividendLabel": "Dividend",
-      "dividendPlaceholder": "t.ex. 487",
-      "dividendHelp": "Ange ett heltal (0 eller större).",
+      "dividendPlaceholder": "e.g. 487",
+      "dividendHelp": "Enter a whole number (0 or greater).",
       "divisorLabel": "Divisor",
-      "divisorPlaceholder": "t.ex. 32",
-      "divisorHelp": "Ange ett heltal större än 0.",
-      "calculate": "Beräkna",
-      "reset": "Återställ",
-      "resultLabel": "Resultat",
-      "quotientValue": "Kvot: {value}",
-      "remainderValue": "Rest: {value}",
+      "divisorPlaceholder": "e.g. 32",
+      "divisorHelp": "Enter a whole number greater than 0.",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "resultLabel": "Result",
+      "quotientValue": "Quotient: {value}",
+      "remainderValue": "Remainder: {value}",
       "equation": "{a} = {b} × {q} + {r}",
       "diagramLabel": "Division:",
+      "diagramStyleLabel": "Diagramstil",
+      "diagramStyleUs": "US/UK",
+      "diagramStyleEu": "EU",
+      "showFractionToggle": "Visa resten som bråk",
+      "remainderShort": "r",
       "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
-      "stepsHeading": "Steg i lång division",
-      "stepLabel": "Steg {step}",
-      "bringDown": "Ta ner {digit} → {value}",
+      "stepsHeading": "Long division steps",
+      "stepLabel": "Step {step}",
+      "bringDown": "Bring down {digit} → {value}",
       "divide": "{partial} ÷ {divisor} = {quotientDigit}",
       "multiply": "{quotientDigit} × {divisor} = {product}",
       "subtract": "{partial} − {product} = {remainder}",
-      "nextDigit": "Nästa siffra: {digit}",
-      "errorInvalidDividend": "Ange en giltig heltalsdividend.",
-      "errorInvalidDivisor": "Ange en giltig heltalsdivisor.",
-      "errorDivisionByZero": "Division med noll är inte tillåten.",
+      "nextDigit": "Next digit: {digit}",
+      "errorInvalidDividend": "Please enter a valid whole number dividend.",
+      "errorInvalidDivisor": "Please enter a valid whole number divisor.",
+      "errorDivisionByZero": "Division by zero is not allowed.",
       "seo": {
-        "title": "Kalkylator för lång division – Kvot och rest",
-        "description": "Gratis kalkylator för lång division. Dela två heltal och få kvoten med rest och alla steg.",
-        "keywords": "lång division kalkylator, kvot och rest, dela med rest, steg för lång division, divisionskalkylator, lång division",
+        "title": "Long Division Calculator – Quotient and Remainder",
+        "description": "Free long division calculator. Divide two whole numbers and get the quotient with a remainder plus step-by-step long division.",
+        "keywords": "long division calculator, quotient and remainder, divide with remainder, long division steps, division calculator, long division with remainders",
         "content": {
-          "heading": "Så gör du lång division med rest",
-          "paragraph1": "Lång division är en metod för att dela ett tal (dividend) med ett annat (divisor) i mindre steg. När divisionen inte går jämnt ut får du en heltalskvot och en rest. Den här kalkylatorn hjälper dig att öva eller kontrollera dina svar.",
-          "paragraph2": "Lång division med rest är ofta enklare än att skriva ett decimalt resultat för hand. Om du behöver ett decimalt resultat, använd vår kalkylator för lång division med decimaler. Här visar resten vad som blir kvar efter att ha delat så många gånger som möjligt.",
-          "paragraph3": "Skriv in dividenden och divisorn så visar kalkylatorn kvot, rest och hela processen steg för steg. Stegen följer den klassiska metoden: ta ner siffra, dela, multiplicera och subtrahera.",
-          "paragraph4": "Lång division är en användbar färdighet i skolan, läxor och vardagsberäkningar. Använd verktyget för att kontrollera svar eller studera varje steg.",
-          "partsHeading": "Vilka är delarna i en division?",
-          "partsItem1": "Dividend: talet som delas (exempel: 487).",
-          "partsItem2": "Divisor: talet du delar med (exempel: 32).",
-          "partsItem3": "Kvot: heltalssvaret (exempel: 15).",
-          "partsItem4": "Rest: det som blir över (exempel: 7).",
-          "exampleHeading": "Exempel",
-          "exampleText": "487 ÷ 32 = 15 R 7, eftersom 32 × 15 = 480 och 487 − 480 = 7."
+          "heading": "How to Do Long Division with Remainders",
+          "paragraph1": "Long division is a method for dividing one number (the dividend) by another (the divisor) by breaking the problem into smaller steps. When the dividend is not evenly divisible by the divisor, you get a whole-number quotient and a remainder. This calculator lets you practice long division with remainders or quickly check your work.",
+          "paragraph2": "Long division with remainders is usually easier than writing a decimal answer by hand. If you specifically need a decimal result, use our Long Division with Decimals Calculator instead. Here, the remainder shows what is left after dividing as many whole times as possible.",
+          "paragraph3": "Enter your dividend and divisor, and the calculator shows the quotient, remainder, and the full step-by-step division process. The steps mirror the classic long division method: bring down digits, divide, multiply, and subtract to find the next remainder.",
+          "paragraph4": "Long division is a useful skill for math classes, homework, and real-world calculations. Use this tool to verify answers, study how each step works, or check your own long division problems quickly and accurately.",
+          "partsHeading": "What are the parts of division?",
+          "partsItem1": "Dividend: the number being divided (example: 487).",
+          "partsItem2": "Divisor: the number you divide by (example: 32).",
+          "partsItem3": "Quotient: the whole-number answer (example: 15).",
+          "partsItem4": "Remainder: what is left over (example: 7).",
+          "exampleHeading": "Example",
+          "exampleText": "487 ÷ 32 = 15 R 7, because 32 × 15 = 480 and 487 − 480 = 7."
         },
         "faq": {
-          "heading": "Vanliga frågor",
+          "heading": "Frequently Asked Questions",
           "items": [
             {
-              "question": "Vad är lång division?",
-              "answer": "Lång division är en steg-för-steg-metod för att dela tal. Den delar upp beräkningen i steg: dela, multiplicera, subtrahera och ta ner nästa siffra."
+              "question": "What is long division?",
+              "answer": "Long division is a step-by-step method for dividing numbers. It breaks a large division problem into smaller steps: divide, multiply, subtract, and bring down the next digit."
             },
             {
-              "question": "Varför är resten mindre än divisorn?",
-              "answer": "Resten är det som blir kvar efter att ha delat så många gånger som möjligt. Om resten vore lika med eller större än divisorn skulle du kunna dela en gång till."
+              "question": "Why is the remainder smaller than the divisor?",
+              "answer": "In division with remainder, the remainder is what is left after dividing as many whole times as possible. If the remainder were equal to or larger than the divisor, you could divide one more time."
             },
             {
-              "question": "Vad händer om divisorn är större än dividenden?",
-              "answer": "Kvoten blir 0 och resten blir dividenden. Till exempel 7 ÷ 12 = 0 R 7."
+              "question": "What if the divisor is larger than the dividend?",
+              "answer": "The quotient is 0 and the remainder is the dividend. For example, 7 ÷ 12 = 0 R 7."
             },
             {
-              "question": "Kan jag använda denna kalkylator för decimaler?",
-              "answer": "Den här kalkylatorn är för heltal med rest. För ett decimalt resultat, använd en kalkylator för lång division med decimaler."
+              "question": "Can I use this calculator for decimals?",
+              "answer": "This calculator is for whole-number long division with remainders. If you need a decimal quotient, use a long division with decimals calculator."
             },
             {
-              "question": "Fungerar den med stora tal?",
-              "answer": "Ja. Du kan ange mycket stora heltal, och kalkylatorn beräknar kvot, rest och steg korrekt."
+              "question": "Does it work for large numbers?",
+              "answer": "Yes. You can enter very large whole numbers, and the calculator will compute the quotient, remainder, and steps accurately."
             }
           ]
         },
         "related": {
-          "heading": "Relaterade kalkylatorer",
-          "remainder": "Restkalkylator",
-          "remainderDesc": "Hitta kvot och rest vid heltalsdivision",
-          "addition": "Additionskalkylator",
-          "additionDesc": "Addera heltal och decimaler snabbt",
-          "percentage": "Procentkalkylator",
-          "percentageDesc": "Beräkna procentvärden, förändringar och relationer"
+          "heading": "Related Calculators",
+          "remainder": "Remainder Calculator",
+          "remainderDesc": "Find the quotient and remainder for integer division",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals quickly and accurately",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentage values, change, and relationships"
         }
       }
     },

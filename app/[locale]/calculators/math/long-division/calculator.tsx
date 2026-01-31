@@ -107,27 +107,25 @@ interface DiagramLine {
   key: string;
   text: string;
   tone: DiagramTone;
+  offset: number;
 }
 
-function buildStyledDivisionDiagram(result: LongDivisionResult): DiagramLine[] {
-  if (!result.steps.length) return [];
+interface DiagramLayout {
+  type: 'us' | 'eu';
+  divisor: string;
+  dividend: string;
+  quotientDisplay: string;
+  quotientOffset: number;
+  dividendStart: number;
+  baseWidth: number;
+  lines: DiagramLine[];
+}
 
-  const dividend = result.dividend;
-  const divisor = result.divisor;
-  const quotient = result.quotient.toString();
-  const remainder = result.remainder.toString();
-  const quotientDisplay = result.remainder === 0n ? quotient : `${quotient} r ${remainder}`;
-  const indent = 2;
-  const baseWidth = Math.max(dividend.length, quotientDisplay.length);
-  const quotientStart = Math.max(indent, indent + dividend.length - quotientDisplay.length);
-  const lines: DiagramLine[] = [
-    { key: 'result', text: `${' '.repeat(quotientStart)}${quotientDisplay}`, tone: 'result' },
-    { key: 'header-rule', text: `${' '.repeat(indent)}${'-'.repeat(baseWidth)}`, tone: 'default' },
-    { key: 'header', text: `${' '.repeat(indent)}${dividend} : ${divisor}`, tone: 'default' },
-  ];
+function buildDiagramLines(result: LongDivisionResult, dividendStart: number): DiagramLine[] {
+  const lines: DiagramLine[] = [];
 
   result.steps.forEach((step, index) => {
-    const rightPosition = indent + step.endIndex;
+    const rightPosition = dividendStart + step.endIndex;
     const partialValue = step.partialDividend.toString();
     const productValue = step.product.toString();
     const remainderValue = step.remainder.toString();
@@ -137,35 +135,85 @@ function buildStyledDivisionDiagram(result: LongDivisionResult): DiagramLine[] {
       const paddedPartial = partialValue.padStart(minLength, '0');
       lines.push({
         key: `partial-${step.index}`,
-        text: padNumberAt(paddedPartial, rightPosition),
+        text: paddedPartial,
         tone: 'default',
+        offset: rightPosition - (paddedPartial.length - 1),
       });
     }
 
-    const productStart = rightPosition - (productValue.length - 1);
+    const productStart = rightPosition - (productValue.length - 1) - 2;
     lines.push({
       key: `product-${step.index}`,
-      text: `${' '.repeat(Math.max(0, productStart - 2))}- ${productValue}`,
+      text: `- ${productValue}`,
       tone: 'subtract',
+      offset: Math.max(0, productStart),
     });
 
     const separatorLength = Math.max(productValue.length, partialValue.length);
     lines.push({
       key: `rule-${step.index}`,
-      text: padNumberAt('-'.repeat(separatorLength), rightPosition),
+      text: '-'.repeat(separatorLength),
       tone: 'default',
+      offset: rightPosition - (separatorLength - 1),
     });
 
     if (index === result.steps.length - 1) {
       lines.push({
         key: `remainder-${step.index}`,
-        text: padNumberAt(remainderValue, rightPosition),
+        text: remainderValue,
         tone: 'remainder',
+        offset: rightPosition - (remainderValue.length - 1),
       });
     }
   });
 
   return lines;
+}
+
+function buildUsDivisionDiagram(result: LongDivisionResult, quotientDisplay: string): DiagramLayout | null {
+  if (!result.steps.length) return null;
+
+  const dividend = result.dividend;
+  const divisor = result.divisor;
+  const bracketSideWidth = 1;
+  const bracketGap = 1;
+  const dividendStart = divisor.length + bracketSideWidth + bracketGap;
+  const baseWidth = Math.max(dividend.length, quotientDisplay.length);
+  const quotientOffset = dividendStart + Math.max(0, dividend.length - quotientDisplay.length);
+  const lines = buildDiagramLines(result, dividendStart);
+
+  return {
+    type: 'us',
+    divisor,
+    dividend,
+    quotientDisplay,
+    quotientOffset,
+    dividendStart,
+    baseWidth,
+    lines,
+  };
+}
+
+function buildEuDivisionDiagram(result: LongDivisionResult, quotientDisplay: string): DiagramLayout | null {
+  if (!result.steps.length) return null;
+
+  const dividend = result.dividend;
+  const divisor = result.divisor;
+  const dividendStart = 2;
+  const baseWidth = Math.max(dividend.length, quotientDisplay.length);
+  const quotientOffset = dividendStart + Math.max(0, dividend.length - quotientDisplay.length);
+  const lines = buildDiagramLines(result, dividendStart);
+
+  return {
+    type: 'eu',
+    divisor,
+    dividend,
+    quotientDisplay,
+    quotientOffset,
+    dividendStart,
+    baseWidth,
+    lines,
+  };
 }
 
 export function LongDivisionCalculator() {
@@ -175,6 +223,8 @@ export function LongDivisionCalculator() {
   const [divisor, setDivisor] = useState('32');
   const [result, setResult] = useState<LongDivisionResult | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [diagramStyle, setDiagramStyle] = useState<'us' | 'eu'>('us');
+  const [showFractionRemainder, setShowFractionRemainder] = useState(false);
   const parsedDividend = useMemo(() => parseNonNegativeBigInt(dividend), [dividend]);
   const parsedDivisor = useMemo(() => parseNonNegativeBigInt(divisor), [divisor]);
   const hasDividend = dividend.trim().length > 0;
@@ -255,13 +305,29 @@ export function LongDivisionCalculator() {
     setError(null);
   }, []);
 
-  const diagramLines = useMemo(() => (result ? buildStyledDivisionDiagram(result) : []), [result]);
+  const quotientDisplay = useMemo(() => {
+    if (!result) return '';
+    const quotientValue = result.quotient.toString();
+    if (result.remainder === 0n) return quotientValue;
+    if (showFractionRemainder) {
+      return `${quotientValue} ${result.remainder.toString()}/${result.divisor}`;
+    }
+    return `${quotientValue} ${t('remainderShort')} ${result.remainder.toString()}`;
+  }, [result, showFractionRemainder, t]);
+
+  const diagramLayout = useMemo(() => {
+    if (!result) return null;
+    if (diagramStyle === 'eu') return buildEuDivisionDiagram(result, quotientDisplay);
+    return buildUsDivisionDiagram(result, quotientDisplay);
+  }, [diagramStyle, quotientDisplay, result]);
   const diagramStyles: Record<DiagramTone, React.CSSProperties> = {
     default: { color: '#1e293b' },
     result: { color: '#4f46e5', fontWeight: 700 },
     subtract: { color: '#e11d48' },
     remainder: { color: '#16a34a', fontWeight: 700 },
   };
+  const diagramSecondaryColor = '#64748b';
+  const diagramRuleColor = '#334155';
 
   return (
     <>
@@ -341,30 +407,87 @@ export function LongDivisionCalculator() {
                   <div style={{ color: 'var(--text-secondary)' }}>
                     {t('equation', { a: display.dividend, b: display.divisor, q: display.quotient, r: display.remainder })}
                   </div>
-                  <div style={{ fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}>
-                    <span style={{ color: 'var(--text-secondary)' }}>{t('diagramLabel')} </span>
-                    {t('divisionDiagram', {
-                      divisor: display.divisor,
-                      dividend: display.dividend,
-                      quotient: display.quotient,
-                      remainder: display.remainder,
-                    })}
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: '"Courier New", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace',
-                      marginTop: '0.75rem',
-                      whiteSpace: 'pre',
-                      fontSize: '28px',
-                      lineHeight: 1.1,
-                    }}
-                  >
-                    {diagramLines.map((line) => (
-                      <div key={line.key}>
-                        <span style={diagramStyles[line.tone]}>{line.text}</span>
+                  {diagramLayout && (
+                    <div
+                      style={{
+                        fontFamily: '"Courier New", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace',
+                        marginTop: '0.75rem',
+                        fontSize: '28px',
+                        lineHeight: 1.1,
+                        display: 'inline-block',
+                      }}
+                    >
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center', marginBottom: '0.75rem' }}>
+                        <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{t('diagramStyleLabel')}</span>
+                        <div style={{ display: 'flex', gap: '0.5rem' }}>
+                          <button
+                            type="button"
+                            className={diagramStyle === 'us' ? 'btn btn-primary' : 'btn btn-secondary'}
+                            onClick={() => setDiagramStyle('us')}
+                            style={{ minHeight: '36px', padding: '0 14px' }}
+                          >
+                            {t('diagramStyleUs')}
+                          </button>
+                          <button
+                            type="button"
+                            className={diagramStyle === 'eu' ? 'btn btn-primary' : 'btn btn-secondary'}
+                            onClick={() => setDiagramStyle('eu')}
+                            style={{ minHeight: '36px', padding: '0 14px' }}
+                          >
+                            {t('diagramStyleEu')}
+                          </button>
+                        </div>
+                        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+                          <input
+                            type="checkbox"
+                            checked={showFractionRemainder}
+                            onChange={(event) => setShowFractionRemainder(event.target.checked)}
+                            disabled={!result || result.remainder === 0n}
+                          />
+                          {t('showFractionToggle')}
+                        </label>
                       </div>
-                    ))}
-                  </div>
+                      <div style={{ marginLeft: `${diagramLayout.quotientOffset}ch` }}>
+                        <span style={diagramStyles.result}>{diagramLayout.quotientDisplay}</span>
+                      </div>
+                      <div
+                        style={{
+                          marginLeft: `${diagramLayout.dividendStart}ch`,
+                          borderTop: `2px solid ${diagramRuleColor}`,
+                          width: `${diagramLayout.baseWidth}ch`,
+                          marginTop: '2px',
+                        }}
+                      />
+                      {diagramLayout.type === 'us' ? (
+                        <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+                          <div style={{ width: `${diagramLayout.divisor.length}ch`, textAlign: 'right', color: diagramSecondaryColor }}>
+                            {diagramLayout.divisor}
+                          </div>
+                          <div
+                            style={{
+                              borderRight: `2px solid ${diagramRuleColor}`,
+                              width: '1ch',
+                              marginRight: '1ch',
+                              borderRadius: '0 50% 50% 0',
+                              height: '1.2em',
+                            }}
+                          />
+                          <div style={{ color: diagramStyles.default.color }}>{diagramLayout.dividend}</div>
+                        </div>
+                      ) : (
+                        <div style={{ marginLeft: `${diagramLayout.dividendStart}ch`, color: diagramStyles.default.color }}>
+                          {diagramLayout.dividend} : {diagramLayout.divisor}
+                        </div>
+                      )}
+                      <div style={{ marginTop: '0.2rem' }}>
+                        {diagramLayout.lines.map((line) => (
+                          <div key={line.key} style={{ marginLeft: `${Math.max(0, line.offset)}ch` }}>
+                            <span style={diagramStyles[line.tone]}>{line.text}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </>
               ) : (
                 <span style={{ color: 'var(--text-secondary)', opacity: 0.7 }}>—</span>
@@ -372,37 +495,6 @@ export function LongDivisionCalculator() {
             </div>
           </div>
 
-          {display && (
-            <div className="input-card" style={{ marginTop: '1.25rem' }}>
-              <label className="input-label">{t('stepsHeading')}</label>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '0.75rem' }}>
-                {display.steps.map((step) => (
-                  <div key={step.index} style={{ borderBottom: '1px solid var(--border)', paddingBottom: '0.75rem' }}>
-                    <div style={{ fontWeight: 700, marginBottom: '0.35rem' }}>
-                      {t('stepLabel', { step: step.index })}
-                    </div>
-                    <div style={{ color: 'var(--text-secondary)' }}>
-                      {t('bringDown', { digit: step.digit, value: step.partialDividend.toString() })}
-                    </div>
-                    <div style={{ color: 'var(--text-secondary)' }}>
-                      {t('divide', { partial: step.partialDividend.toString(), divisor: display.divisor, quotientDigit: step.quotientDigit.toString() })}
-                    </div>
-                    <div style={{ color: 'var(--text-secondary)' }}>
-                      {t('multiply', { quotientDigit: step.quotientDigit.toString(), divisor: display.divisor, product: step.product.toString() })}
-                    </div>
-                    <div style={{ color: 'var(--text-secondary)' }}>
-                      {t('subtract', { partial: step.partialDividend.toString(), product: step.product.toString(), remainder: step.remainder.toString() })}
-                    </div>
-                    {step.nextDigit && (
-                      <div style={{ color: 'var(--text-secondary)' }}>
-                        {t('nextDigit', { digit: step.nextDigit })}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </>

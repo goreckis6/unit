@@ -374,6 +374,50 @@
         }
       }
     },
+    "cosine": {
+      "title": "Kosinilaskin",
+      "description": "Laske kulman kosini asteina tai radiaaneina. Näytä tulos ja kosinifunktion kuvaaja.",
+      "angleAlpha": "Kulma alfa",
+      "unit": "Yksikkö",
+      "cosineOfAlpha": "Kosini alfasta",
+      "graphHeading": "Kosinifunktion kuvaaja",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "seo": {
+        "title": "Kosinilaskin – cos(α) asteina ja radiaaneina kuvaajalla",
+        "description": "Ilmainen kosinilaskin cos(α):lle mille tahansa kulmalle asteina tai radiaaneina. Korkea tarkkuus ja kosinifunktion kuvaaja. Ihanteellinen trigonometriaan ja geometriaan.",
+        "keywords": "kosini laskin, cos laskin, trigonometria laskin, kulman kosini, cos astetta, cos radiaanit, kosinikuvaaja, matematiikka laskin",
+        "content": {
+          "heading": "Käyttöohje kosinilaskimeen",
+          "paragraph1": "Kosinifunktio cos(α) tai cos(θ) antaa viereisen kateetin ja hypotenuusan suhteen suorakulmaisessa kolmiossa. cos(α) on aina välillä -1 ja 1. Kosini on jaksollinen jakson 360° (2π radiaania) kanssa.",
+          "paragraph2": "Syötä kulma α ja valitse astetta (deg) tai radiaaneja (rad). Työkalu laskee cos(α) ja näyttää tuloksen 8 desimaalilla locale-asetuksesi mukaan. Kuvaaja näyttää yhden kosinikäyrän jakson 0:sta 2π radiaaniin.",
+          "paragraph3": "Kosinia käytetään trigonometriassa, fysiikassa ja tekniikassa. Tyypillisiä arvoja: cos(0°) = 1, cos(90°) = 0, cos(180°) = -1, cos(60°) = 0,5. Laskin hyväksyy minkä tahansa kulman ja palauttaa kosinin valinnaisella kuvaajalla.",
+          "paragraph4": "Kosinilaskin on ilmainen ja toimii kaikilla tuetuilla kielillä. Syötä kulma, valitse deg tai rad ja saat cos(α) kuvaajalla y = cos(x) yhdelle jaksolle.",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "Kulmalle α = 11° asteina: cos(11°) ≈ 0,98162718. Kosini 11 radiaanista on noin -0,0044257. Kuvaaja näyttää kosinikäyrän 0:sta 2π:hen."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Mikä on kulman kosini?", "answer": "Kulman α kosini cos(α) on viereisen kateetin ja hypotenuusan suhde suorakulmaisessa kolmiossa. cos(α) on välillä -1 ja 1. Se on myös x-koordinaatti yksikköympyrällä."},
+            {"question": "Voinko syöttää kulmat asteina tai radiaaneina?", "answer": "Kyllä. Valitse deg asteille (esim. 11, 90, 180) tai rad radiaaneille. Laskin laskee cos(α) ja näyttää tuloksen 8 desimaalilla."},
+            {"question": "Mitä kuvaaja näyttää?", "answer": "Kuvaaja näyttää yhden kosinifunktion y = cos(x) jakson 0:sta 2π radiaaniin: 1 kohdassa 0, 0 kohdassa π/2, -1 kohdassa π, 0 kohdassa 3π/2."},
+            {"question": "Onko tulos oman locale-formaatissani?", "answer": "Kyllä. Kosiniarvo muotoillaan locale-asetustesi mukaan (desimaalierotin pilkku tai piste)."},
+            {"question": "Onko kosinilaskin ilmainen?", "answer": "Kyllä, kosinilaskin on ilmainen. Syötä kulma, valitse deg tai rad ja saat cos(α) kuvaajalla."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "arccos": "Arccos-laskin",
+          "arccosDesc": "Etsi arvon käänteinen kosini ja kulma asteina ja radiaaneina",
+          "arcsin": "Arcsin-laskin",
+          "arcsinDesc": "Etsi arvon käänteinen sini ja kulma asteina ja radiaaneina",
+          "arctan": "Arctan-laskin",
+          "arctanDesc": "Etsi arvon käänteinen tangentti ja kulma asteina ja radiaaneina"
+        }
+      }
+    },
     "arcsin": {
       "title": "Arcsin-laskin",
       "description": "Arcsin(x)-laskin käänteisen sinin löytämiseen ja kulman saamiseen asteina ja radiaaneina yleisillä ratkaisuilla.",

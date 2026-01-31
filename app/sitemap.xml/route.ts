@@ -14,6 +14,7 @@ export async function GET() {
     '/calculators/math/subtracting-fractions',
     '/calculators/math/antilog',
     '/calculators/math/arccos',
+    '/calculators/math/cosine',
     '/calculators/math/arcsin',
     '/calculators/math/arctan',
     '/calculators/math/average',

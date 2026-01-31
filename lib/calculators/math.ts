@@ -37,6 +37,13 @@ export const mathCalculators: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'cosine',
+    titleKey: 'cosine.title',
+    descKey: 'cosine.description',
+    path: '/calculators/math/cosine',
+    category: 'math',
+  },
+  {
     id: 'arcsin',
     titleKey: 'arcsin.title',
     descKey: 'arcsin.description',

@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
 
@@ -111,7 +111,7 @@ export function SubtractingFractionsCalculator() {
   };
 
   return (
-    <Fragment>
+    <div>
       <div className="input-section">
         <div className="options-grid options-grid-dropdowns" style={{ marginBottom: '1rem' }}>
           <div className="input-card numbers-to-letters-compact">
@@ -135,18 +135,20 @@ export function SubtractingFractionsCalculator() {
           <div className="input-card">
             <div className="result-badge" style={{ marginBottom: '0.75rem' }}>{t('firstFraction')}</div>
             {formType === 'mixed' && (
-              <label htmlFor="w1" className="input-label">
-                {t('wholeNumberW1')}
-              </label>
-              <input
-                id="w1"
-                type="number"
-                min="0"
-                value={w1}
-                onChange={(e) => setW1(e.target.value)}
-                className="number-input"
-                style={{ marginBottom: '0.75rem' }}
-              />
+              <div style={{ display: 'contents' }}>
+                <label htmlFor="w1" className="input-label">
+                  {t('wholeNumberW1')}
+                </label>
+                <input
+                  id="w1"
+                  type="number"
+                  min="0"
+                  value={w1}
+                  onChange={(e) => setW1(e.target.value)}
+                  className="number-input"
+                  style={{ marginBottom: '0.75rem' }}
+                />
+              </div>
             )}
             <label htmlFor="n1" className="input-label">
               {t('numeratorN1')}
@@ -176,7 +178,7 @@ export function SubtractingFractionsCalculator() {
           <div className="input-card">
             <div className="result-badge" style={{ marginBottom: '0.75rem' }}>{t('secondFraction')}</div>
             {formType === 'mixed' && (
-              <Fragment>
+              <div style={{ display: 'contents' }}>
                 <label htmlFor="w2" className="input-label">
                   {t('wholeNumberW2')}
                 </label>
@@ -189,7 +191,7 @@ export function SubtractingFractionsCalculator() {
                   className="number-input"
                   style={{ marginBottom: '0.75rem' }}
                 />
-              </Fragment>
+              </div>
             )}
             <label htmlFor="n2" className="input-label">
               {t('numeratorN2')}
@@ -257,6 +259,6 @@ export function SubtractingFractionsCalculator() {
           </div>
         </div>
       )}
-    </Fragment>
+    </div>
   );
 }

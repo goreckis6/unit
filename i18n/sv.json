@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Polynomrest-kalkylator",
+      "description": "Hitta resten när ett polynom P(x) delas med (x − a) med hjälp av restsatsen. Ange koefficienter och värdet a för att få P(a) direkt.",
+      "formulaHeading": "Restsatsen:",
+      "formulaText": "När P(x) delas med (x − a) är resten P(a).",
+      "coefficientsLabel": "Polynomkoefficienter (från högsta grad till konstantterm)",
+      "coefficientsPlaceholder": "t.ex. 2, -3, 0, 5",
+      "coefficientsHelp": "Tips: om ditt decimaltecken är komma (t.ex. 1,5), separera koefficienterna med mellanslag eller semikolon.",
+      "aLabel": "Värde på a (divisor: x − a)",
+      "aPlaceholder": "t.ex. 2",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "remainderLabel": "Rest",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Kopiera",
+      "errorInvalidCoefficients": "Ange giltiga koefficienter (tal separerade med kommatecken, mellanslag eller semikolon).",
+      "errorInvalidA": "Ange ett giltigt värde för a.",
+      "seo": {
+        "title": "Polynomrest-kalkylator – rest för P(x) ÷ (x − a)",
+        "description": "Gratis polynomrest-kalkylator. Ange polynomkoefficienter och värdet a för att få resten när P(x) delas med (x − a) med restsatsen.",
+        "keywords": "polynomrest kalkylator, restsatsen kalkylator, syntetisk division rest, P(a) kalkylator, polynomdivision rest, matematik kalkylator",
+        "content": {
+          "heading": "Så använder du polynomrest-kalkylatorn",
+          "paragraph1": "Den här kalkylatorn hittar resten när ett polynom P(x) delas med en linjär faktor av formen (x − a). I stället för att göra full polynomdivision kan du använda restsatsen: resten är P(a). Det innebär att du bara behöver utvärdera polynomet vid x = a.",
+          "paragraph2": "Ange koefficienterna från högsta grad till konstantterm. Till exempel betyder 2, -3, 0, 5 att P(x) = 2x³ − 3x² + 0x + 5. Ange sedan värdet a från divisorn (x − a). Klicka på Beräkna för att se resten.",
+          "paragraph3": "Beräkningen görs effektivt med Horners metod (motsvarande syntetisk division). Den fungerar för alla grader och stödjer decimaler och negativa koefficienter. Se till att koefficientordningen är korrekt; använd 0 för saknade termer för tydlig gradjustering.",
+          "paragraph4": "Polynomrester är användbara för att kontrollera om (x − a) är en faktor (rest 0), för snabb polynomutvärdering och för algebrauppgifter. Om divisorn är (x + k), kom ihåg att (x + k) = (x − (−k)), så du ska ange a = −k.",
+          "exampleHeading": "Exempel",
+          "exampleText": "Låt P(x) = 2x³ − 3x² + 0x + 5 och dela med (x − 2). Resten är P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {
+              "question": "Vad är restsatsen?",
+              "answer": "Restsatsen säger att när ett polynom P(x) delas med (x − a) så är resten P(a). Du kan alltså hitta resten genom att utvärdera polynomet vid x = a."
+            },
+            {
+              "question": "Vad betyder värdet a?",
+              "answer": "Värdet a kommer från divisorn (x − a). Exempel: om divisorn är (x − 2) så är a = 2. Om divisorn är (x + 3) så är a = −3, eftersom (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Måste jag göra polynomdivision?",
+              "answer": "Nej. För division med (x − a) är resten P(a), som kan beräknas direkt. Kalkylatorn använder Horners metod (syntetisk division) för ett snabbt och exakt resultat."
+            },
+            {
+              "question": "Kan koefficienter vara decimaler eller kan termer saknas?",
+              "answer": "Ja. Du kan använda decimala och negativa koefficienter. Om en term saknas, ange 0 på den platsen (t.ex. 2x³ − 3x² + 5 anges som 2, -3, 0, 5)."
+            },
+            {
+              "question": "Vad händer om resten är 0?",
+              "answer": "Om resten är 0 så är (x − a) en faktor till P(x). Med andra ord är x = a en rot till polynomet."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "roots": "Rot-kalkylator",
+          "rootsDesc": "Hitta kvadratrötter, kubikrötter och n:te rötter",
+          "squareRoot": "Kvadratrotskalkylator",
+          "squareRootDesc": "Beräkna √x och få både positiv och negativ rot",
+          "convolution": "Konvolutionskalkylator",
+          "convolutionDesc": "Beräkna diskret konvolution av sekvenser för signaler och matematik"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kattgraviditetskalkylator",
       "description": "Uppskatta din katts förväntade förlossningsdatum och födelsefönster från parningsdatum. Gratis, snabbt, baserat på typisk dräktighet (63–67 dagar).",

@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Calculateur de reste de polynôme",
+      "description": "Trouvez le reste lorsque le polynôme P(x) est divisé par (x − a) grâce au théorème du reste. Saisissez les coefficients et la valeur a pour obtenir P(a) instantanément.",
+      "formulaHeading": "Théorème du reste :",
+      "formulaText": "Si P(x) est divisé par (x − a), le reste est P(a).",
+      "coefficientsLabel": "Coefficients du polynôme (du plus haut degré au terme constant)",
+      "coefficientsPlaceholder": "ex. 2, -3, 0, 5",
+      "coefficientsHelp": "Astuce : si votre séparateur décimal est la virgule (ex. 1,5), séparez les coefficients avec des espaces ou des points-virgules.",
+      "aLabel": "Valeur de a (diviseur : x − a)",
+      "aPlaceholder": "ex. 2",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "remainderLabel": "Reste",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Copier",
+      "errorInvalidCoefficients": "Veuillez saisir des coefficients valides (nombres séparés par des virgules, des espaces ou des points-virgules).",
+      "errorInvalidA": "Veuillez saisir une valeur valide pour a.",
+      "seo": {
+        "title": "Calculateur de reste de polynôme – Reste de P(x) ÷ (x − a)",
+        "description": "Calculateur gratuit de reste de polynôme. Entrez les coefficients et la valeur a pour obtenir le reste de la division de P(x) par (x − a) grâce au théorème du reste.",
+        "keywords": "calculateur reste polynôme, théorème du reste calculateur, reste division synthétique, calculateur P(a), reste division polynôme, calculateur math",
+        "content": {
+          "heading": "Comment utiliser le calculateur de reste de polynôme",
+          "paragraph1": "Un calculateur de reste de polynôme donne le reste lorsque le polynôme P(x) est divisé par un facteur linéaire de la forme (x − a). Plutôt que d’effectuer une division polynomiale complète, vous pouvez utiliser le théorème du reste : le reste est égal à P(a). Autrement dit, il suffit d’évaluer le polynôme en x = a.",
+          "paragraph2": "Pour utiliser l’outil, saisissez les coefficients du polynôme du plus haut degré au terme constant. Par exemple, les coefficients 2, -3, 0, 5 représentent P(x) = 2x³ − 3x² + 0x + 5. Ensuite, saisissez la valeur a du diviseur (x − a). Cliquez sur Calculer pour afficher le reste.",
+          "paragraph3": "En interne, le calcul est effectué efficacement avec la méthode de Horner (équivalente à la division synthétique). Elle fonctionne pour tout degré et accepte des coefficients décimaux et négatifs. Vérifiez bien l’ordre des coefficients ; mettre 0 pour les termes manquants permet de conserver l’alignement des degrés.",
+          "paragraph4": "Les restes de polynômes sont utiles pour vérifier si (x − a) est un facteur (reste 0), pour évaluer rapidement un polynôme et pour résoudre des exercices d’algèbre. Si votre diviseur est écrit (x + k), rappelez‑vous que (x + k) = (x − (−k)) : il faut donc entrer a = −k.",
+          "exampleHeading": "Exemple",
+          "exampleText": "Soit P(x) = 2x³ − 3x² + 0x + 5 et le diviseur (x − 2). Le reste vaut P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {
+              "question": "Qu’est-ce que le théorème du reste ?",
+              "answer": "Le théorème du reste dit que lorsque P(x) est divisé par (x − a), le reste est P(a). On obtient donc le reste en évaluant le polynôme en x = a."
+            },
+            {
+              "question": "Que signifie la valeur a ?",
+              "answer": "La valeur a provient du diviseur (x − a). Par exemple, si le diviseur est (x − 2), alors a = 2. Si le diviseur est (x + 3), alors a = −3, car (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Dois‑je faire une division polynomiale ?",
+              "answer": "Non. Pour une division par (x − a), le reste est P(a), que l’on peut calculer directement. Le calculateur utilise la méthode de Horner (division synthétique) pour un résultat rapide et précis."
+            },
+            {
+              "question": "Les coefficients peuvent‑ils être décimaux ou avoir des termes manquants ?",
+              "answer": "Oui. Les coefficients peuvent être décimaux et négatifs. Si un terme manque, mettez 0 à sa place (par exemple, 2x³ − 3x² + 5 se saisit 2, -3, 0, 5)."
+            },
+            {
+              "question": "Que se passe‑t‑il si le reste vaut 0 ?",
+              "answer": "Si le reste vaut 0, alors (x − a) est un facteur de P(x). Autrement dit, x = a est une racine du polynôme."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs associés",
+          "roots": "Calculateur de racines",
+          "rootsDesc": "Trouver des racines carrées, cubiques et n‑ièmes",
+          "squareRoot": "Calculateur de racine carrée",
+          "squareRootDesc": "Calculer √x et obtenir les racines positive et négative",
+          "convolution": "Calculateur de convolution",
+          "convolutionDesc": "Calculer la convolution discrète de suites pour les signaux et les maths"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calculateur de Grossesse du Chat",
       "description": "Estimez la date de mise bas et la fenêtre de naissance à partir de la date d'accouplement. Gratuit, rapide, basé sur une gestation typique (63–67 jours).",

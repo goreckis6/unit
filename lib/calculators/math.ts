@@ -72,6 +72,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'polynomial-remainder',
+    titleKey: 'polynomialRemainder.title',
+    descKey: 'polynomialRemainder.description',
+    path: '/calculators/math/polynomial-remainder',
+    category: 'math',
+  },
+  {
     id: 'square-root',
     titleKey: 'squareRoot.title',
     descKey: 'squareRoot.description',

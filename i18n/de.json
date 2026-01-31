@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Polynom-Restrechner",
+      "description": "Finden Sie den Rest, wenn ein Polynom P(x) durch (x − a) geteilt wird – mit dem Restwertsatz. Geben Sie Koeffizienten und den Wert a ein und erhalten Sie P(a) sofort.",
+      "formulaHeading": "Restwertsatz:",
+      "formulaText": "Wird P(x) durch (x − a) geteilt, ist der Rest P(a).",
+      "coefficientsLabel": "Polynomkoeffizienten (vom höchsten Grad bis zur Konstante)",
+      "coefficientsPlaceholder": "z.B. 2, -3, 0, 5",
+      "coefficientsHelp": "Tipp: Wenn Ihr Dezimaltrennzeichen ein Komma ist (z.B. 1,5), trennen Sie die Koeffizienten mit Leerzeichen oder Semikolon.",
+      "aLabel": "Wert a (Divisor: x − a)",
+      "aPlaceholder": "z.B. 2",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "remainderLabel": "Rest",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Kopieren",
+      "errorInvalidCoefficients": "Bitte geben Sie gültige Koeffizienten ein (Zahlen, getrennt durch Kommas, Leerzeichen oder Semikolons).",
+      "errorInvalidA": "Bitte geben Sie einen gültigen Wert für a ein.",
+      "seo": {
+        "title": "Polynom-Restrechner – Rest bei P(x) ÷ (x − a) finden",
+        "description": "Kostenloser Polynom-Restrechner. Geben Sie Polynomkoeffizienten und den Wert a ein, um den Rest bei der Division von P(x) durch (x − a) nach dem Restwertsatz zu berechnen.",
+        "keywords": "Polynom Rest Rechner, Restwertsatz Rechner, synthetische Division Rest, P(a) Rechner, Polynomdivision Rest, Mathe Rechner",
+        "content": {
+          "heading": "So verwenden Sie den Polynom-Restrechner",
+          "paragraph1": "Ein Polynom-Restrechner bestimmt den Rest, wenn ein Polynom P(x) durch einen linearen Faktor der Form (x − a) geteilt wird. Statt eine vollständige Polynomdivision durchzuführen, können Sie den Restwertsatz verwenden: Der Rest ist gleich P(a). Das bedeutet, Sie setzen einfach x = a in das Polynom ein.",
+          "paragraph2": "Geben Sie dazu die Koeffizienten Ihres Polynoms vom höchsten Grad bis zum konstanten Term ein. Zum Beispiel stehen die Koeffizienten 2, -3, 0, 5 für P(x) = 2x³ − 3x² + 0x + 5. Tragen Sie anschließend den Wert a aus dem Divisor (x − a) ein. Klicken Sie auf Berechnen, um den Rest zu erhalten.",
+          "paragraph3": "Intern wird die Auswertung effizient mit dem Horner-Schema berechnet (entspricht der synthetischen Division). Das funktioniert für beliebige Polynomgrade und unterstützt Dezimalzahlen sowie negative Koeffizienten. Achten Sie auf die richtige Reihenfolge; eine 0 für fehlende Terme hilft, die Gradzuordnung klar zu halten.",
+          "paragraph4": "Polynomreste sind nützlich, um zu prüfen, ob (x − a) ein Faktor ist (Rest 0), um Polynome schnell auszuwerten und um Aufgaben in Algebra zu lösen. Wenn Ihr Divisor als (x + k) geschrieben ist, gilt (x + k) = (x − (−k)) – geben Sie also a = −k ein.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "Sei P(x) = 2x³ − 3x² + 0x + 5 und der Divisor (x − 2). Dann ist der Rest P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist der Restwertsatz?",
+              "answer": "Der Restwertsatz besagt: Wenn ein Polynom P(x) durch (x − a) geteilt wird, ist der Rest gleich P(a). Den Rest erhält man also durch Einsetzen von x = a."
+            },
+            {
+              "question": "Was bedeutet der Wert a?",
+              "answer": "Der Wert a stammt aus dem Divisor (x − a). Beispiel: Bei (x − 2) ist a = 2. Bei (x + 3) ist a = −3, denn (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Muss ich eine Polynomdivision durchführen?",
+              "answer": "Nein. Für die Division durch (x − a) ist der Rest P(a), den man direkt berechnen kann. Der Rechner nutzt das Horner-Schema (synthetische Division), um dies schnell und genau zu berechnen."
+            },
+            {
+              "question": "Dürfen Koeffizienten Dezimalzahlen sein oder dürfen Terme fehlen?",
+              "answer": "Ja. Dezimalzahlen und negative Koeffizienten sind möglich. Wenn ein Term fehlt, setzen Sie 0 ein (z.B. 2x³ − 3x² + 5 wird als 2, -3, 0, 5 eingegeben)."
+            },
+            {
+              "question": "Was bedeutet ein Rest von 0?",
+              "answer": "Wenn der Rest 0 ist, dann ist (x − a) ein Faktor von P(x). Das heißt: x = a ist eine Nullstelle des Polynoms."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "roots": "Wurzel-Rechner",
+          "rootsDesc": "Quadratwurzeln, Kubikwurzeln und n-te Wurzeln von Zahlen finden",
+          "squareRoot": "Quadratwurzel-Rechner",
+          "squareRootDesc": "√x berechnen und positive sowie negative Wurzel erhalten",
+          "convolution": "Faltungsrechner",
+          "convolutionDesc": "Diskrete Faltung von Folgen für Signale und Mathematik berechnen"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Katzen-Trächtigkeitsrechner",
       "description": "Schätzen Sie den Geburtstermin Ihrer Katze und das Geburtsfenster ab dem Deckdatum. Kostenlos, schnell, basierend auf typischer Trächtigkeitsdauer (63–67 Tage).",

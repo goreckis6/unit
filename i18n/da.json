@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Polynom-restberegner",
+      "description": "Find resten når et polynomium P(x) divideres med (x − a) ved hjælp af restsætningen. Indtast koefficienter og værdien a for at få P(a) med det samme.",
+      "formulaHeading": "Restsætningen:",
+      "formulaText": "Når P(x) divideres med (x − a), er resten P(a).",
+      "coefficientsLabel": "Polynomiumkoefficienter (fra højeste grad til konstantled)",
+      "coefficientsPlaceholder": "f.eks. 2, -3, 0, 5",
+      "coefficientsHelp": "Tip: Hvis dit decimalseparator er komma (f.eks. 1,5), så adskil koefficienterne med mellemrum eller semikolon.",
+      "aLabel": "Værdi af a (divisor: x − a)",
+      "aPlaceholder": "f.eks. 2",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "remainderLabel": "Rest",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Kopier",
+      "errorInvalidCoefficients": "Indtast gyldige koefficienter (tal adskilt af komma, mellemrum eller semikolon).",
+      "errorInvalidA": "Indtast en gyldig værdi for a.",
+      "seo": {
+        "title": "Polynom-restberegner – Rest ved P(x) ÷ (x − a)",
+        "description": "Gratis polynom-restberegner. Indtast polynomiumkoefficienter og værdien a for at få resten ved division af P(x) med (x − a) ved hjælp af restsætningen.",
+        "keywords": "polynom rest beregner, restsætning beregner, syntetisk division rest, P(a) beregner, polynomdivision rest, matematik beregner",
+        "content": {
+          "heading": "Sådan bruger du polynom-restberegneren",
+          "paragraph1": "En polynom-restberegner finder resten, når et polynomium P(x) divideres med en lineær faktor på formen (x − a). I stedet for at lave fuld polynomiel division kan du bruge restsætningen: resten er P(a). Det betyder, at du blot evaluerer polynomiet ved x = a.",
+          "paragraph2": "Indtast koefficienterne fra højeste grad til konstantled. For eksempel repræsenterer koefficienterne 2, -3, 0, 5 polynomiet P(x) = 2x³ − 3x² + 0x + 5. Indtast derefter værdien a fra divisoren (x − a). Klik på Beregn for at se resten.",
+          "paragraph3": "Beregningen udføres effektivt med Horners metode (svarende til syntetisk division). Den virker for alle grader og understøtter decimaler og negative koefficienter. Sørg for korrekt rækkefølge; brug 0 for manglende led for at bevare grad-tilpasningen.",
+          "paragraph4": "Polynomrester er nyttige til at tjekke om (x − a) er en faktor (rest 0), til hurtig evaluering af polynomier og i algebraopgaver. Hvis din divisor er (x + k), så husk at (x + k) = (x − (−k)), så du skal indtaste a = −k.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "Lad P(x) = 2x³ − 3x² + 0x + 5 og divider med (x − 2). Resten er P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er restsætningen?",
+              "answer": "Restsætningen siger, at når et polynomium P(x) divideres med (x − a), er resten P(a). Du finder altså resten ved at evaluere polynomiet i x = a."
+            },
+            {
+              "question": "Hvad betyder værdien a?",
+              "answer": "Værdien a kommer fra divisoren (x − a). For eksempel: hvis divisoren er (x − 2), så er a = 2. Hvis divisoren er (x + 3), så er a = −3, fordi (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Skal jeg lave polynomiel division?",
+              "answer": "Nej. For division med (x − a) er resten P(a), som kan beregnes direkte. Beregneren bruger Horners metode (syntetisk division) for hurtige og præcise resultater."
+            },
+            {
+              "question": "Må koefficienter være decimaltal eller mangle led?",
+              "answer": "Ja. Du kan bruge decimale og negative koefficienter. Hvis et led mangler, indsæt 0 (f.eks. 2x³ − 3x² + 5 indtastes som 2, -3, 0, 5)."
+            },
+            {
+              "question": "Hvad hvis resten er 0?",
+              "answer": "Hvis resten er 0, er (x − a) en faktor i P(x). Med andre ord er x = a en rod i polynomiet."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede lommeregnere",
+          "roots": "Rod Lommeregner",
+          "rootsDesc": "Find kvadratrødder, kubikrødder og n'te rødder",
+          "squareRoot": "Kvadratrod Lommeregner",
+          "squareRootDesc": "Beregn √x og få både positiv og negativ rod",
+          "convolution": "Foldningsberegner",
+          "convolutionDesc": "Beregn diskret foldning af følger for signaler og matematik"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kattegraviditetsberegner",
       "description": "Estimer din kats forventede fødselsdato og fødselsvindue fra parringsdato. Gratis, hurtigt, baseret på typisk drægtighed (63–67 dage).",

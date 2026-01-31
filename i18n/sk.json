@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Kalkulačka zvyšku polynómu",
+      "description": "Zistite zvyšok pri delení polynómu P(x) výrazom (x − a) pomocou vety o zvyšku. Zadajte koeficienty a hodnotu a a okamžite získate P(a).",
+      "formulaHeading": "Veta o zvyšku:",
+      "formulaText": "Pri delení P(x) výrazom (x − a) je zvyšok P(a).",
+      "coefficientsLabel": "Koeficienty polynómu (od najvyššieho stupňa po konštantu)",
+      "coefficientsPlaceholder": "napr. 2, -3, 0, 5",
+      "coefficientsHelp": "Tip: Ak používate ako desatinný oddeľovač čiarku (napr. 1,5), oddeľte koeficienty medzerami alebo bodkočiarkou.",
+      "aLabel": "Hodnota a (deliteľ: x − a)",
+      "aPlaceholder": "napr. 2",
+      "calculate": "Vypočítaj",
+      "reset": "Resetovať",
+      "remainderLabel": "Zvyšok",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Kopírovať",
+      "errorInvalidCoefficients": "Zadajte platné koeficienty (čísla oddelené čiarkami, medzerami alebo bodkočiarkami).",
+      "errorInvalidA": "Zadajte platnú hodnotu a.",
+      "seo": {
+        "title": "Kalkulačka zvyšku polynómu – zvyšok P(x) ÷ (x − a)",
+        "description": "Bezplatná kalkulačka zvyšku polynómu. Zadajte koeficienty a hodnotu a a zistite zvyšok pri delení P(x) výrazom (x − a) pomocou vety o zvyšku.",
+        "keywords": "kalkulačka zvyšku polynómu, veta o zvyšku, syntetické delenie zvyšok, kalkulačka P(a), zvyšok delenia polynómu, matematická kalkulačka",
+        "content": {
+          "heading": "Ako používať kalkulačku zvyšku polynómu",
+          "paragraph1": "Táto kalkulačka určí zvyšok pri delení polynómu P(x) lineárnym výrazom tvaru (x − a). Namiesto celej polynomiálnej divízie môžete použiť vetu o zvyšku: zvyšok sa rovná P(a). To znamená, že stačí dosadiť x = a do polynómu.",
+          "paragraph2": "Zadajte koeficienty polynómu od najvyššieho stupňa po konštantný člen. Napríklad koeficienty 2, -3, 0, 5 zodpovedajú P(x) = 2x³ − 3x² + 0x + 5. Potom zadajte hodnotu a z deliteľa (x − a) a kliknite na Vypočítaj.",
+          "paragraph3": "Výpočet prebieha efektívne pomocou Hornerovej metódy (ekvivalent syntetického delenia). Funguje pre ľubovoľný stupeň a podporuje desatinné aj záporné koeficienty. Dôležité je správne poradie koeficientov; pre chýbajúce členy zadajte 0.",
+          "paragraph4": "Zvyšok je užitočný na overenie, či je (x − a) faktorom (zvyšok 0), na rýchle vyhodnotenie polynómov a v úlohách z algebry. Ak je deliteľ napísaný ako (x + k), platí (x + k) = (x − (−k)), takže zadáte a = −k.",
+          "exampleHeading": "Príklad",
+          "exampleText": "Nech P(x) = 2x³ − 3x² + 0x + 5 a delíme výrazom (x − 2). Zvyšok je P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {
+              "question": "Čo je veta o zvyšku?",
+              "answer": "Veta o zvyšku hovorí, že pri delení polynómu P(x) výrazom (x − a) je zvyšok rovný P(a). Zvyšok teda získate vyhodnotením polynómu pre x = a."
+            },
+            {
+              "question": "Čo znamená hodnota a?",
+              "answer": "Hodnota a pochádza z deliteľa (x − a). Napr. pre (x − 2) je a = 2. Pre (x + 3) je a = −3, pretože (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Musím robiť polynomiálne delenie?",
+              "answer": "Nie. Pre delenie výrazom (x − a) je zvyšok P(a), ktorý sa dá vypočítať priamo. Kalkulačka používa Hornerovu metódu (syntetické delenie) na rýchly a presný výsledok."
+            },
+            {
+              "question": "Môžu byť koeficienty desatinné alebo môžu chýbať členy?",
+              "answer": "Áno. Koeficienty môžu byť desatinné aj záporné. Ak niektorý člen chýba, zadajte na jeho miesto 0 (napr. 2x³ − 3x² + 5 zadáte ako 2, -3, 0, 5)."
+            },
+            {
+              "question": "Čo ak je zvyšok 0?",
+              "answer": "Ak je zvyšok 0, potom je (x − a) faktorom polynómu P(x). Inými slovami, x = a je koreň polynómu."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace kalkulačky",
+          "roots": "Kalkulačka odmocnin",
+          "rootsDesc": "Nájdite druhú, tretiu a n-tú odmocninu čísla",
+          "squareRoot": "Kalkulačka druhej odmocniny",
+          "squareRootDesc": "Vypočítajte √x a získajte kladný aj záporný výsledok",
+          "convolution": "Kalkulačka konvolúcie",
+          "convolutionDesc": "Vypočítajte diskrétnu konvolúciu postupností pre signály a matematiku"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kalkulačka gravidity mačky",
       "description": "Odhadnite termín pôrodu a pôrodné okno od dátumu párenia. Zadarmo, rýchlo, na základe typickej gravidity (63–67 dní).",

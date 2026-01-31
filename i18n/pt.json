@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Calculadora do resto de polinómios",
+      "description": "Encontre o resto quando um polinómio P(x) é dividido por (x − a) usando o Teorema do Resto. Introduza os coeficientes e o valor a para obter P(a) instantaneamente.",
+      "formulaHeading": "Teorema do Resto:",
+      "formulaText": "Se P(x) for dividido por (x − a), o resto é P(a).",
+      "coefficientsLabel": "Coeficientes do polinómio (do maior grau ao termo constante)",
+      "coefficientsPlaceholder": "ex. 2, -3, 0, 5",
+      "coefficientsHelp": "Dica: se o separador decimal for a vírgula (ex. 1,5), separe os coeficientes com espaços ou ponto e vírgula.",
+      "aLabel": "Valor de a (divisor: x − a)",
+      "aPlaceholder": "ex. 2",
+      "calculate": "Calcular",
+      "reset": "Repor",
+      "remainderLabel": "Resto",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Copiar",
+      "errorInvalidCoefficients": "Introduza coeficientes válidos (números separados por vírgulas, espaços ou ponto e vírgula).",
+      "errorInvalidA": "Introduza um valor válido para a.",
+      "seo": {
+        "title": "Calculadora do resto de polinómios – Resto de P(x) ÷ (x − a)",
+        "description": "Calculadora gratuita do resto de polinómios. Introduza os coeficientes e o valor a para obter o resto ao dividir P(x) por (x − a) usando o Teorema do Resto.",
+        "keywords": "calculadora resto polinómio, teorema do resto calculadora, resto divisão sintética, calculadora P(a), resto divisão de polinómios, calculadora matemática",
+        "content": {
+          "heading": "Como usar a calculadora do resto de polinómios",
+          "paragraph1": "Uma calculadora do resto de polinómios encontra o resto quando um polinómio P(x) é dividido por um fator linear da forma (x − a). Em vez de fazer a divisão longa de polinómios, pode usar o Teorema do Resto: o resto é igual a P(a). Ou seja, basta avaliar o polinómio em x = a.",
+          "paragraph2": "Para usar a ferramenta, introduza os coeficientes do polinómio do maior grau ao termo constante. Por exemplo, os coeficientes 2, -3, 0, 5 representam P(x) = 2x³ − 3x² + 0x + 5. Depois introduza o valor a do divisor (x − a). Clique em Calcular para ver o resto.",
+          "paragraph3": "Internamente, o cálculo é feito de forma eficiente com o método de Horner (equivalente à divisão sintética). Funciona para qualquer grau e suporta coeficientes decimais e negativos. Certifique-se de que a ordem dos coeficientes está correta; incluir 0 para termos em falta ajuda a manter o alinhamento dos graus.",
+          "paragraph4": "Restos de polinómios são úteis para verificar se (x − a) é um fator (resto 0), para avaliar polinómios rapidamente e para resolver problemas de álgebra. Se o divisor estiver escrito como (x + k), lembre-se de que (x + k) = (x − (−k)), portanto deve introduzir a = −k.",
+          "exampleHeading": "Exemplo",
+          "exampleText": "Seja P(x) = 2x³ − 3x² + 0x + 5 e divida por (x − 2). O resto é P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {
+              "question": "O que é o Teorema do Resto?",
+              "answer": "O Teorema do Resto afirma que quando um polinómio P(x) é dividido por (x − a), o resto é P(a). Assim, pode encontrar o resto avaliando o polinómio em x = a."
+            },
+            {
+              "question": "O que significa o valor a?",
+              "answer": "O valor a vem do divisor (x − a). Por exemplo, se o divisor é (x − 2), então a = 2. Se o divisor é (x + 3), então a = −3, porque (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Preciso de fazer a divisão longa de polinómios?",
+              "answer": "Não. Para divisão por (x − a), o resto é P(a), que pode ser calculado diretamente. A calculadora usa o método de Horner (divisão sintética) para calcular de forma rápida e precisa."
+            },
+            {
+              "question": "Os coeficientes podem ser decimais ou ter termos em falta?",
+              "answer": "Sim. Pode usar coeficientes decimais e negativos. Se faltar um termo, use 0 no seu lugar (por exemplo, 2x³ − 3x² + 5 deve ser introduzido como 2, -3, 0, 5)."
+            },
+            {
+              "question": "E se o resto for 0?",
+              "answer": "Se o resto for 0, então (x − a) é um fator de P(x). Em outras palavras, x = a é uma raiz do polinómio."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "roots": "Calculadora de raízes",
+          "rootsDesc": "Encontre raízes quadradas, cúbicas e n-ésimas de números",
+          "squareRoot": "Calculadora de raiz quadrada",
+          "squareRootDesc": "Calcule √x e obtenha a raiz positiva e a negativa",
+          "convolution": "Calculadora de convolução",
+          "convolutionDesc": "Calcule a convolução discreta de sequências para sinais e matemática"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calculadora de Gravidez de Gata",
       "description": "Estime a data do parto e a janela de nascimento a partir da data do acasalamento. Grátis, rápido, baseado em gestação típica (63–67 dias).",

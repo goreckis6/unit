@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Calculator rest polinom",
+      "description": "Găsiți restul când polinomul P(x) este împărțit la (x − a) folosind teorema restului. Introduceți coeficienții și valoarea a pentru a obține P(a) instant.",
+      "formulaHeading": "Teorema restului:",
+      "formulaText": "Dacă P(x) se împarte la (x − a), restul este P(a).",
+      "coefficientsLabel": "Coeficienți polinom (de la gradul cel mai mare la termenul constant)",
+      "coefficientsPlaceholder": "ex. 2, -3, 0, 5",
+      "coefficientsHelp": "Sfat: dacă separatorul zecimal este virgula (ex. 1,5), separați coeficienții cu spații sau punct și virgulă.",
+      "aLabel": "Valoarea lui a (divizor: x − a)",
+      "aPlaceholder": "ex. 2",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "remainderLabel": "Rest",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Copiază",
+      "errorInvalidCoefficients": "Introduceți coeficienți valizi (numere separate prin virgule, spații sau punct și virgulă).",
+      "errorInvalidA": "Introduceți o valoare validă pentru a.",
+      "seo": {
+        "title": "Calculator rest polinom – restul lui P(x) ÷ (x − a)",
+        "description": "Calculator gratuit de rest polinom. Introduceți coeficienții și valoarea a pentru a afla restul la împărțirea lui P(x) la (x − a) folosind teorema restului.",
+        "keywords": "calculator rest polinom, teorema restului calculator, rest împărțire sintetică, calculator P(a), rest împărțire polinom, calculator matematică",
+        "content": {
+          "heading": "Cum folosiți calculatorul de rest al polinomului",
+          "paragraph1": "Acest calculator găsește restul când un polinom P(x) este împărțit la un factor liniar de forma (x − a). În loc de împărțirea completă a polinoamelor, puteți folosi teorema restului: restul este P(a). Cu alte cuvinte, evaluați polinomul în x = a.",
+          "paragraph2": "Introduceți coeficienții polinomului de la gradul cel mai mare până la termenul constant. De exemplu, coeficienții 2, -3, 0, 5 reprezintă P(x) = 2x³ − 3x² + 0x + 5. Apoi introduceți valoarea a din divizorul (x − a). Apăsați Calculează pentru rezultat.",
+          "paragraph3": "Calculul se face eficient cu metoda lui Horner (echivalentă cu împărțirea sintetică). Funcționează pentru orice grad și acceptă coeficienți zecimali și negativi. Asigurați-vă că ordinea coeficienților este corectă; folosiți 0 pentru termenii lipsă.",
+          "paragraph4": "Resturile polinoamelor sunt utile pentru a verifica dacă (x − a) este factor (rest 0), pentru evaluări rapide și pentru probleme de algebră. Dacă divizorul este (x + k), rețineți că (x + k) = (x − (−k)), deci introduceți a = −k.",
+          "exampleHeading": "Exemplu",
+          "exampleText": "Fie P(x) = 2x³ − 3x² + 0x + 5 și împărțim la (x − 2). Restul este P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            {
+              "question": "Ce este teorema restului?",
+              "answer": "Teorema restului spune că atunci când un polinom P(x) este împărțit la (x − a), restul este P(a). Prin urmare, restul se obține evaluând polinomul în x = a."
+            },
+            {
+              "question": "Ce înseamnă valoarea a?",
+              "answer": "Valoarea a provine din divizorul (x − a). De exemplu, pentru (x − 2) avem a = 2. Pentru (x + 3) avem a = −3, deoarece (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Trebuie să fac împărțirea polinoamelor?",
+              "answer": "Nu. Pentru împărțirea la (x − a), restul este P(a) și se poate calcula direct. Calculatorul folosește metoda lui Horner (împărțire sintetică) pentru un rezultat rapid și precis."
+            },
+            {
+              "question": "Pot folosi coeficienți zecimali sau termeni lipsă?",
+              "answer": "Da. Coeficienții zecimali și negativi sunt acceptați. Dacă lipsește un termen, introduceți 0 în locul lui (de ex. 2x³ − 3x² + 5 se introduce ca 2, -3, 0, 5)."
+            },
+            {
+              "question": "Ce se întâmplă dacă restul este 0?",
+              "answer": "Dacă restul este 0, atunci (x − a) este un factor al lui P(x). Cu alte cuvinte, x = a este o rădăcină a polinomului."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare conexe",
+          "roots": "Calculator rădăcini",
+          "rootsDesc": "Găsiți rădăcini pătrate, cubice și de ordin n",
+          "squareRoot": "Calculator rădăcină pătrată",
+          "squareRootDesc": "Calculați √x și obțineți rădăcina pozitivă și negativă",
+          "convolution": "Calculator convoluție",
+          "convolutionDesc": "Calculați convoluția discretă a secvențelor pentru semnale și matematică"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calculator Sarcina Pisicii",
       "description": "Estimați data nașterii și fereastra de naștere a pisicii din data împerecherii. Gratuit, rapid, bazat pe gestație tipică (63–67 zile).",

@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Calcolatrice del resto del polinomio",
+      "description": "Trova il resto quando un polinomio P(x) viene diviso per (x − a) usando il Teorema del Resto. Inserisci i coefficienti e il valore a per ottenere P(a) subito.",
+      "formulaHeading": "Teorema del resto:",
+      "formulaText": "Se P(x) è diviso per (x − a), il resto è P(a).",
+      "coefficientsLabel": "Coefficienti del polinomio (dal grado più alto al termine costante)",
+      "coefficientsPlaceholder": "es. 2, -3, 0, 5",
+      "coefficientsHelp": "Suggerimento: se il separatore decimale è la virgola (es. 1,5), separa i coefficienti con spazi o punto e virgola.",
+      "aLabel": "Valore di a (divisore: x − a)",
+      "aPlaceholder": "es. 2",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "remainderLabel": "Resto",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Copia",
+      "errorInvalidCoefficients": "Inserisci coefficienti validi (numeri separati da virgole, spazi o punto e virgola).",
+      "errorInvalidA": "Inserisci un valore valido per a.",
+      "seo": {
+        "title": "Calcolatrice del resto del polinomio – Resto di P(x) ÷ (x − a)",
+        "description": "Calcolatrice gratuita del resto del polinomio. Inserisci i coefficienti e il valore a per ottenere il resto della divisione di P(x) per (x − a) con il Teorema del Resto.",
+        "keywords": "calcolatrice resto polinomio, teorema del resto calcolatrice, resto divisione sintetica, calcolatrice P(a), resto divisione polinomiale, calcolatrice matematica",
+        "content": {
+          "heading": "Come usare la calcolatrice del resto del polinomio",
+          "paragraph1": "Una calcolatrice del resto del polinomio trova il resto quando un polinomio P(x) è diviso per un fattore lineare della forma (x − a). Invece di fare tutta la divisione tra polinomi, puoi usare il Teorema del Resto: il resto è P(a). Quindi basta valutare il polinomio in x = a.",
+          "paragraph2": "Per usarla, inserisci i coefficienti del polinomio dal grado più alto al termine costante. Ad esempio, i coefficienti 2, -3, 0, 5 rappresentano P(x) = 2x³ − 3x² + 0x + 5. Poi inserisci il valore a del divisore (x − a). Clicca Calcola per vedere il resto.",
+          "paragraph3": "Internamente il calcolo viene eseguito in modo efficiente con il metodo di Horner (equivalente alla divisione sintetica). Funziona per qualsiasi grado e supporta coefficienti decimali e negativi. Assicurati che l’ordine dei coefficienti sia corretto; inserire 0 per i termini mancanti aiuta a mantenere chiaro l’allineamento dei gradi.",
+          "paragraph4": "I resti dei polinomi sono utili per verificare se (x − a) è un fattore (resto 0), per valutare rapidamente un polinomio e per risolvere esercizi di algebra. Se il divisore è scritto come (x + k), ricorda che (x + k) = (x − (−k)), quindi devi inserire a = −k.",
+          "exampleHeading": "Esempio",
+          "exampleText": "Sia P(x) = 2x³ − 3x² + 0x + 5 e si divida per (x − 2). Il resto è P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {
+              "question": "Cos’è il Teorema del Resto?",
+              "answer": "Il Teorema del Resto afferma che quando un polinomio P(x) è diviso per (x − a), il resto è P(a). Quindi puoi trovare il resto valutando il polinomio in x = a."
+            },
+            {
+              "question": "Cosa significa il valore a?",
+              "answer": "Il valore a proviene dal divisore (x − a). Ad esempio, se il divisore è (x − 2), allora a = 2. Se il divisore è (x + 3), allora a = −3, perché (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Devo fare la divisione tra polinomi?",
+              "answer": "No. Per la divisione per (x − a), il resto è P(a), che puoi calcolare direttamente. La calcolatrice usa il metodo di Horner (divisione sintetica) per calcolarlo in modo rapido e preciso."
+            },
+            {
+              "question": "I coefficienti possono essere decimali o con termini mancanti?",
+              "answer": "Sì. Puoi usare coefficienti decimali e negativi. Se manca un termine, usa 0 al suo posto (ad esempio 2x³ − 3x² + 5 si inserisce come 2, -3, 0, 5)."
+            },
+            {
+              "question": "Cosa succede se il resto è 0?",
+              "answer": "Se il resto è 0, allora (x − a) è un fattore di P(x). In altre parole, x = a è una radice del polinomio."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatrici correlate",
+          "roots": "Calcolatrice radici",
+          "rootsDesc": "Trova radici quadrate, cubiche e n-esime di numeri",
+          "squareRoot": "Calcolatrice radice quadrata",
+          "squareRootDesc": "Calcola √x e ottieni sia la radice positiva che quella negativa",
+          "convolution": "Calcolatrice di convoluzione",
+          "convolutionDesc": "Calcola la convoluzione discreta di sequenze per segnali e matematica"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calcolatore Gravidanza Gatta",
       "description": "Stima la data del parto e la finestra di nascita dalla data dell'accoppiamento. Gratuito, veloce, basato su gestazione tipica (63–67 giorni).",

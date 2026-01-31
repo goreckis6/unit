@@ -3728,6 +3728,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Polynomrest-kalkulator",
+      "description": "Finn resten når et polynom P(x) deles på (x − a) ved hjelp av restteoremet. Skriv inn koeffisienter og verdien a for å få P(a) med én gang.",
+      "formulaHeading": "Restteoremet:",
+      "formulaText": "Når P(x) deles på (x − a), er resten P(a).",
+      "coefficientsLabel": "Polynomkoeffisienter (fra høyeste grad til konstantledd)",
+      "coefficientsPlaceholder": "f.eks. 2, -3, 0, 5",
+      "coefficientsHelp": "Tips: Hvis desimalskilletegnet er komma (f.eks. 1,5), skill koeffisientene med mellomrom eller semikolon.",
+      "aLabel": "Verdi av a (divisor: x − a)",
+      "aPlaceholder": "f.eks. 2",
+      "calculate": "Beregn",
+      "reset": "Nullstill",
+      "remainderLabel": "Rest",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Kopier",
+      "errorInvalidCoefficients": "Skriv inn gyldige koeffisienter (tall separert med komma, mellomrom eller semikolon).",
+      "errorInvalidA": "Skriv inn en gyldig verdi for a.",
+      "seo": {
+        "title": "Polynomrest-kalkulator – rest ved P(x) ÷ (x − a)",
+        "description": "Gratis polynomrest-kalkulator. Skriv inn polynomkoeffisienter og verdien a for å finne resten når P(x) deles på (x − a) ved hjelp av restteoremet.",
+        "keywords": "polynom rest kalkulator, restteorem kalkulator, syntetisk divisjon rest, P(a) kalkulator, polynomdivisjon rest, matte kalkulator",
+        "content": {
+          "heading": "Slik bruker du polynomrest-kalkulatoren",
+          "paragraph1": "Denne kalkulatoren finner resten når et polynom P(x) deles på en lineær faktor av formen (x − a). I stedet for full polynomdivisjon kan du bruke restteoremet: resten er P(a). Det betyr at du bare evaluerer polynomet i x = a.",
+          "paragraph2": "Skriv inn koeffisientene fra høyeste grad til konstantledd. For eksempel betyr 2, -3, 0, 5 at P(x) = 2x³ − 3x² + 0x + 5. Skriv deretter inn verdien a fra divisoren (x − a). Klikk Beregn for å få resten.",
+          "paragraph3": "Beregningen gjøres effektivt med Horners metode (tilsvarer syntetisk divisjon). Den fungerer for alle grader og støtter desimaler og negative koeffisienter. Pass på rekkefølgen; bruk 0 for manglende ledd for å holde graden riktig.",
+          "paragraph4": "Polynomrester er nyttige for å sjekke om (x − a) er en faktor (rest 0), for rask evaluering av polynomer og i algebraoppgaver. Hvis divisoren er (x + k), husk at (x + k) = (x − (−k)), så du skal angi a = −k.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "La P(x) = 2x³ − 3x² + 0x + 5 og del på (x − 2). Resten er P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Vanlige spørsmål",
+          "items": [
+            {
+              "question": "Hva er restteoremet?",
+              "answer": "Restteoremet sier at når et polynom P(x) deles på (x − a), er resten P(a). Du finner altså resten ved å evaluere polynomet i x = a."
+            },
+            {
+              "question": "Hva betyr verdien a?",
+              "answer": "Verdien a kommer fra divisoren (x − a). For eksempel: (x − 2) gir a = 2. (x + 3) gir a = −3, fordi (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Må jeg gjøre polynomdivisjon?",
+              "answer": "Nei. For deling på (x − a) er resten P(a), som kan beregnes direkte. Kalkulatoren bruker Horners metode (syntetisk divisjon) for raskt og nøyaktig resultat."
+            },
+            {
+              "question": "Kan koeffisienter være desimaler eller kan ledd mangle?",
+              "answer": "Ja. Desimaler og negative koeffisienter støttes. Hvis et ledd mangler, bruk 0 på den plassen (f.eks. 2x³ − 3x² + 5 → 2, -3, 0, 5)."
+            },
+            {
+              "question": "Hva hvis resten er 0?",
+              "answer": "Hvis resten er 0, er (x − a) en faktor i P(x). Med andre ord er x = a en rot i polynomet."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte kalkulatorer",
+          "roots": "Rot-kalkulator",
+          "rootsDesc": "Finn kvadratrøtter, kubikkrøtter og n-te røtter",
+          "squareRoot": "Kvadratrotkalkulator",
+          "squareRootDesc": "Beregn √x og få både positiv og negativ rot",
+          "convolution": "Konvolusjonskalkulator",
+          "convolutionDesc": "Beregn diskret konvolusjon av sekvenser for signaler og matematikk"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kattgraviditetskalkulator",
       "description": "Estimer forventet fødseldato og fødselvindu for katten din fra paringsdato. Gratis, raskt, basert på typisk drektighet (63–67 dager).",

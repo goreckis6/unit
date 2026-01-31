@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Kalkulator reszty z wielomianu",
+      "description": "Oblicz resztę z dzielenia wielomianu P(x) przez (x − a) za pomocą twierdzenia o reszcie. Wpisz współczynniki i wartość a, aby natychmiast otrzymać P(a).",
+      "formulaHeading": "Twierdzenie o reszcie:",
+      "formulaText": "Jeśli P(x) dzielimy przez (x − a), reszta wynosi P(a).",
+      "coefficientsLabel": "Współczynniki wielomianu (od najwyższej potęgi do wyrazu wolnego)",
+      "coefficientsPlaceholder": "np. 2, -3, 0, 5",
+      "coefficientsHelp": "Wskazówka: jeśli używasz przecinka jako separatora dziesiętnego (np. 1,5), rozdziel współczynniki spacjami lub średnikami.",
+      "aLabel": "Wartość a (dzielnik: x − a)",
+      "aPlaceholder": "np. 2",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "remainderLabel": "Reszta",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Kopiuj",
+      "errorInvalidCoefficients": "Wprowadź poprawne współczynniki (liczby rozdzielone przecinkami, spacjami lub średnikami).",
+      "errorInvalidA": "Wprowadź poprawną wartość a.",
+      "seo": {
+        "title": "Kalkulator reszty z wielomianu – reszta P(x) ÷ (x − a)",
+        "description": "Darmowy kalkulator reszty z wielomianu. Wprowadź współczynniki i wartość a, aby obliczyć resztę z dzielenia P(x) przez (x − a) zgodnie z twierdzeniem o reszcie.",
+        "keywords": "kalkulator reszty wielomianu, twierdzenie o reszcie kalkulator, reszta dzielenia syntetycznego, kalkulator P(a), reszta dzielenia wielomianów, kalkulator matematyczny",
+        "content": {
+          "heading": "Jak korzystać z kalkulatora reszty z wielomianu",
+          "paragraph1": "Kalkulator reszty z wielomianu wyznacza resztę z dzielenia wielomianu P(x) przez czynnik liniowy postaci (x − a). Zamiast wykonywać pełne dzielenie wielomianów, możesz użyć twierdzenia o reszcie: reszta jest równa P(a). Oznacza to, że wystarczy obliczyć wartość wielomianu dla x = a.",
+          "paragraph2": "Wpisz współczynniki wielomianu od najwyższej potęgi do wyrazu wolnego. Na przykład współczynniki 2, -3, 0, 5 oznaczają P(x) = 2x³ − 3x² + 0x + 5. Następnie wpisz wartość a z dzielnika (x − a). Kliknij Oblicz, aby zobaczyć resztę.",
+          "paragraph3": "Wewnątrz obliczenia są wykonywane wydajnie metodą Hornera (równoważną dzieleniu syntetycznemu). Działa to dla dowolnego stopnia wielomianu i obsługuje współczynniki ujemne oraz dziesiętne. Upewnij się, że kolejność współczynników jest poprawna; wstawienie 0 dla brakujących wyrazów pomaga zachować zgodność stopni.",
+          "paragraph4": "Reszty z dzielenia wielomianów przydają się do sprawdzenia, czy (x − a) jest czynnikiem (reszta 0), do szybkiego podstawiania wartości oraz w zadaniach z algebry. Jeśli dzielnik ma postać (x + k), pamiętaj, że (x + k) = (x − (−k)), więc należy wpisać a = −k.",
+          "exampleHeading": "Przykład",
+          "exampleText": "Niech P(x) = 2x³ − 3x² + 0x + 5 i dzielimy przez (x − 2). Reszta wynosi P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {
+              "question": "Czym jest twierdzenie o reszcie?",
+              "answer": "Twierdzenie o reszcie mówi, że przy dzieleniu wielomianu P(x) przez (x − a) reszta jest równa P(a). Resztę można więc znaleźć, obliczając P(a)."
+            },
+            {
+              "question": "Co oznacza wartość a?",
+              "answer": "Wartość a pochodzi z dzielnika (x − a). Przykład: dla (x − 2) mamy a = 2. Dla (x + 3) mamy a = −3, ponieważ (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Czy muszę wykonywać dzielenie wielomianów?",
+              "answer": "Nie. Dla dzielenia przez (x − a) reszta to P(a), więc można ją policzyć bezpośrednio. Kalkulator używa metody Hornera (dzielenia syntetycznego), aby zrobić to szybko i dokładnie."
+            },
+            {
+              "question": "Czy współczynniki mogą być dziesiętne albo czy mogą brakować wyrazy?",
+              "answer": "Tak. Możesz używać współczynników dziesiętnych i ujemnych. Jeśli brakuje wyrazu, wpisz 0 w jego miejsce (np. 2x³ − 3x² + 5 wpisz jako 2, -3, 0, 5)."
+            },
+            {
+              "question": "Co jeśli reszta wynosi 0?",
+              "answer": "Jeśli reszta wynosi 0, to (x − a) jest czynnikiem wielomianu P(x). Innymi słowy, x = a jest miejscem zerowym."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "roots": "Kalkulator pierwiastków",
+          "rootsDesc": "Znajdź pierwiastek kwadratowy, sześcienny i n-ty pierwiastek liczby",
+          "squareRoot": "Kalkulator pierwiastka kwadratowego",
+          "squareRootDesc": "Oblicz √x i uzyskaj wynik dodatni oraz ujemny",
+          "convolution": "Kalkulator splotu",
+          "convolutionDesc": "Oblicz dyskretny splot ciągów dla sygnałów i matematyki"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kalkulator Ciąży Kotki",
       "description": "Oszacuj termin porodu i okno porodowe na podstawie daty krycia. Darmowo, szybko, na podstawie typowej ciąży (63–67 dni).",

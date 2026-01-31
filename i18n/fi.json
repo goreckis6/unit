@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Polynomin jakojäännöslaskin",
+      "description": "Laske jakojäännös, kun polynomi P(x) jaetaan tekijällä (x − a) jäännöslauseen avulla. Syötä kertoimet ja arvo a ja saat P(a):n heti.",
+      "formulaHeading": "Jäännöslause:",
+      "formulaText": "Kun P(x) jaetaan tekijällä (x − a), jakojäännös on P(a).",
+      "coefficientsLabel": "Polynomin kertoimet (suurimmasta asteesta vakiotermiin)",
+      "coefficientsPlaceholder": "esim. 2, -3, 0, 5",
+      "coefficientsHelp": "Vinkki: jos desimaalierotin on pilkku (esim. 1,5), erota kertoimet välilyönneillä tai puolipisteillä.",
+      "aLabel": "Arvo a (jakaja: x − a)",
+      "aPlaceholder": "esim. 2",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "remainderLabel": "Jakojäännös",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Kopioi",
+      "errorInvalidCoefficients": "Syötä kelvolliset kertoimet (luvut erotettuna pilkuilla, välilyönneillä tai puolipisteillä).",
+      "errorInvalidA": "Syötä kelvollinen arvo a:lle.",
+      "seo": {
+        "title": "Polynomin jakojäännöslaskin – jäännös P(x) ÷ (x − a)",
+        "description": "Ilmainen polynomin jakojäännöslaskin. Syötä polynomin kertoimet ja arvo a, ja saat jäännöksen, kun P(x) jaetaan tekijällä (x − a) jäännöslauseen avulla.",
+        "keywords": "polynomin jakojäännöslaskin, jäännöslause laskin, synteettinen jako jäännös, P(a) laskin, polynomijako jäännös, matematiikkalaskin",
+        "content": {
+          "heading": "Näin käytät polynomin jakojäännöslaskinta",
+          "paragraph1": "Polynomin jakojäännöslaskin laskee jäännöksen, kun polynomi P(x) jaetaan lineaarisella tekijällä muodossa (x − a). Kokonaisen polynomijaon sijaan voit käyttää jäännöslauseetta: jäännös on P(a). Tämä tarkoittaa, että polynomi arvioidaan kohdassa x = a.",
+          "paragraph2": "Syötä polynomin kertoimet suurimmasta asteesta vakiotermiin. Esimerkiksi kertoimet 2, -3, 0, 5 vastaavat polynomia P(x) = 2x³ − 3x² + 0x + 5. Syötä sitten arvo a jakajasta (x − a). Paina Laske nähdäksesi jakojäännöksen.",
+          "paragraph3": "Laskenta tehdään tehokkaasti Hornerin menetelmällä (vastaa synteettistä jakoa). Se toimii minkä tahansa asteen polynomeille ja tukee desimaaleja sekä negatiivisia kertoimia. Varmista oikea järjestys; käytä 0:aa puuttuvien termien kohdalla, jotta asteet pysyvät kohdallaan.",
+          "paragraph4": "Jakojäännökset ovat hyödyllisiä esimerkiksi sen tarkistamiseen, onko (x − a) tekijä (jäännös 0), polynomien nopeaan arviointiin ja algebran tehtäviin. Jos jakaja on muodossa (x + k), muista että (x + k) = (x − (−k)), joten syötät a = −k.",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "Olkoon P(x) = 2x³ − 3x² + 0x + 5 ja jaetaan tekijällä (x − 2). Jakojäännös on P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Mikä on jäännöslause?",
+              "answer": "Jäännöslauseen mukaan, kun polynomi P(x) jaetaan tekijällä (x − a), jakojäännös on P(a). Jäännös saadaan siis arvioimalla polynomi kohdassa x = a."
+            },
+            {
+              "question": "Mitä arvo a tarkoittaa?",
+              "answer": "Arvo a tulee jakajasta (x − a). Esimerkiksi jos jakaja on (x − 2), niin a = 2. Jos jakaja on (x + 3), niin a = −3, koska (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Tarvitseeko tehdä polynomijako?",
+              "answer": "Ei. Jaettaessa tekijällä (x − a) jäännös on P(a), joka voidaan laskea suoraan. Laskin käyttää Hornerin menetelmää (synteettinen jako) nopeaan ja tarkkaan tulokseen."
+            },
+            {
+              "question": "Voivatko kertoimet olla desimaaleja tai voiko termejä puuttua?",
+              "answer": "Kyllä. Voit käyttää desimaali- ja negatiivisia kertoimia. Jos termi puuttuu, syötä 0 sen kohdalle (esim. 2x³ − 3x² + 5 syötetään 2, -3, 0, 5)."
+            },
+            {
+              "question": "Mitä jos jäännös on 0?",
+              "answer": "Jos jäännös on 0, niin (x − a) on polynomin P(x) tekijä. Toisin sanoen x = a on polynomin nollakohta."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "roots": "Juurilaskin",
+          "rootsDesc": "Laske neliöjuuria, kuutiojuuria ja n:s juuria",
+          "squareRoot": "Neliöjuuri-laskuri",
+          "squareRootDesc": "Laske √x ja saat sekä positiivisen että negatiivisen tuloksen",
+          "convolution": "Konvoluutiolaskin",
+          "convolutionDesc": "Laske diskreetti konvoluutio jonoille signaaleissa ja matematiikassa"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kissan raskauslaskuri",
       "description": "Arvioi kissasi odotettu synnytyspäivä ja synnytysikkuna parituspäivän perusteella. Ilmainen, nopea, perustuu tyypilliseen tiineyteen (63–67 päivää).",

@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Kalkulačka zbytku polynomu",
+      "description": "Zjistěte zbytek při dělení polynomu P(x) výrazem (x − a) pomocí věty o zbytku. Zadejte koeficienty a hodnotu a a okamžitě získáte P(a).",
+      "formulaHeading": "Věta o zbytku:",
+      "formulaText": "Při dělení P(x) výrazem (x − a) je zbytek P(a).",
+      "coefficientsLabel": "Koeficienty polynomu (od nejvyšší mocniny ke konstantě)",
+      "coefficientsPlaceholder": "např. 2, -3, 0, 5",
+      "coefficientsHelp": "Tip: Pokud používáte jako desetinný oddělovač čárku (např. 1,5), oddělte koeficienty mezerami nebo středníkem.",
+      "aLabel": "Hodnota a (dělitel: x − a)",
+      "aPlaceholder": "např. 2",
+      "calculate": "Spočítat",
+      "reset": "Reset",
+      "remainderLabel": "Zbytek",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Kopírovat",
+      "errorInvalidCoefficients": "Zadejte platné koeficienty (čísla oddělená čárkami, mezerami nebo středníky).",
+      "errorInvalidA": "Zadejte platnou hodnotu a.",
+      "seo": {
+        "title": "Kalkulačka zbytku polynomu – zbytek P(x) ÷ (x − a)",
+        "description": "Bezplatná kalkulačka zbytku polynomu. Zadejte koeficienty a hodnotu a a zjistěte zbytek při dělení P(x) výrazem (x − a) pomocí věty o zbytku.",
+        "keywords": "kalkulačka zbytku polynomu, věta o zbytku kalkulačka, syntetické dělení zbytek, kalkulačka P(a), zbytek dělení polynomu, matematická kalkulačka",
+        "content": {
+          "heading": "Jak používat kalkulačku zbytku polynomu",
+          "paragraph1": "Kalkulačka zbytku polynomu určí zbytek při dělení polynomu P(x) lineárním výrazem tvaru (x − a). Místo celé polynomiální divize lze použít větu o zbytku: zbytek se rovná P(a). To znamená, že stačí dosadit x = a do polynomu.",
+          "paragraph2": "Zadejte koeficienty polynomu od nejvyšší mocniny po konstantní člen. Například koeficienty 2, -3, 0, 5 odpovídají P(x) = 2x³ − 3x² + 0x + 5. Poté zadejte hodnotu a z dělitele (x − a) a klikněte na Spočítat.",
+          "paragraph3": "Výpočet se provádí efektivně pomocí Hornerova schématu (ekvivalent syntetického dělení). Funguje pro libovolný stupeň a podporuje desetinné i záporné koeficienty. Důležité je správné pořadí koeficientů; u chybějících členů zadejte 0.",
+          "paragraph4": "Zbytek je užitečný například pro ověření, zda je (x − a) dělitelem polynomu (zbytek 0), pro rychlé vyhodnocení polynomů a v úlohách z algebry. Pokud je dělitel zapsán jako (x + k), platí (x + k) = (x − (−k)), takže zadáte a = −k.",
+          "exampleHeading": "Příklad",
+          "exampleText": "Nechť P(x) = 2x³ − 3x² + 0x + 5 a dělíme výrazem (x − 2). Zbytek je P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {
+              "question": "Co je věta o zbytku?",
+              "answer": "Věta o zbytku říká, že při dělení polynomu P(x) výrazem (x − a) je zbytek roven P(a). Zbytek tedy získáte vyhodnocením polynomu pro x = a."
+            },
+            {
+              "question": "Co znamená hodnota a?",
+              "answer": "Hodnota a pochází z dělitele (x − a). Například pro (x − 2) je a = 2. Pro (x + 3) je a = −3, protože (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Musím dělat polynomiální dělení?",
+              "answer": "Ne. Pro dělení výrazem (x − a) je zbytek P(a), což lze spočítat přímo. Kalkulačka používá Hornerovo schéma (syntetické dělení), takže výpočet je rychlý a přesný."
+            },
+            {
+              "question": "Mohou být koeficienty desetinné nebo mohou chybět členy?",
+              "answer": "Ano. Koeficienty mohou být desetinné i záporné. Pokud některý člen chybí, zadejte na jeho místo 0 (např. 2x³ − 3x² + 5 zadáte jako 2, -3, 0, 5)."
+            },
+            {
+              "question": "Co když je zbytek 0?",
+              "answer": "Pokud je zbytek 0, pak je (x − a) dělitelem polynomu P(x). Jinými slovy, x = a je kořen polynomu."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "roots": "Kalkulačka odmocnin",
+          "rootsDesc": "Najděte druhou, třetí a n-tou odmocninu čísla",
+          "squareRoot": "Kalkulačka druhé odmocniny",
+          "squareRootDesc": "Vypočítejte √x a získejte kladný i záporný výsledek",
+          "convolution": "Kalkulačka konvoluce",
+          "convolutionDesc": "Vypočítejte diskrétní konvoluci posloupností pro signály a matematiku"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kalkulačka březosti kočky",
       "description": "Odhadněte termín porodu a porodní okno od data páření. Zdarma, rychle, na základě typické březosti (63–67 dní).",

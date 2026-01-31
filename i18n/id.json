@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Kalkulator Sisa Polinom",
+      "description": "Cari sisa ketika polinom P(x) dibagi oleh (x − a) dengan Teorema Sisa. Masukkan koefisien dan nilai a untuk mendapatkan P(a) secara instan.",
+      "formulaHeading": "Teorema Sisa:",
+      "formulaText": "Jika P(x) dibagi oleh (x − a), sisanya adalah P(a).",
+      "coefficientsLabel": "Koefisien polinom (dari derajat tertinggi ke konstanta)",
+      "coefficientsPlaceholder": "mis. 2, -3, 0, 5",
+      "coefficientsHelp": "Tip: jika pemisah desimal Anda koma (mis. 1,5), pisahkan koefisien dengan spasi atau titik koma.",
+      "aLabel": "Nilai a (pembagi: x − a)",
+      "aPlaceholder": "mis. 2",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "remainderLabel": "Sisa",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Salin",
+      "errorInvalidCoefficients": "Masukkan koefisien yang valid (angka dipisahkan dengan koma, spasi, atau titik koma).",
+      "errorInvalidA": "Masukkan nilai a yang valid.",
+      "seo": {
+        "title": "Kalkulator Sisa Polinom – Sisa P(x) ÷ (x − a)",
+        "description": "Kalkulator sisa polinom gratis. Masukkan koefisien polinom dan nilai a untuk mendapatkan sisa saat membagi P(x) dengan (x − a) menggunakan Teorema Sisa.",
+        "keywords": "kalkulator sisa polinom, teorema sisa kalkulator, sisa pembagian sintetis, kalkulator P(a), sisa pembagian polinom, kalkulator matematika",
+        "content": {
+          "heading": "Cara Menggunakan Kalkulator Sisa Polinom",
+          "paragraph1": "Kalkulator sisa polinom mencari sisa ketika polinom P(x) dibagi oleh faktor linear berbentuk (x − a). Alih-alih melakukan pembagian polinom panjang, Anda dapat memakai Teorema Sisa: sisa sama dengan P(a). Artinya, Anda cukup mengevaluasi polinom pada x = a.",
+          "paragraph2": "Masukkan koefisien polinom dari derajat tertinggi hingga konstanta. Misalnya, koefisien 2, -3, 0, 5 merepresentasikan P(x) = 2x³ − 3x² + 0x + 5. Lalu masukkan nilai a dari pembagi (x − a). Klik Hitung untuk melihat sisanya.",
+          "paragraph3": "Perhitungan dilakukan secara efisien dengan metode Horner (setara dengan pembagian sintetis). Ini bekerja untuk polinom derajat berapa pun serta mendukung koefisien desimal dan negatif. Pastikan urutan koefisien benar; gunakan 0 untuk suku yang hilang agar derajat tetap selaras.",
+          "paragraph4": "Sisa polinom berguna untuk mengecek apakah (x − a) adalah faktor (jika sisa 0), mengevaluasi polinom dengan cepat, dan menyelesaikan soal aljabar. Jika pembagi ditulis (x + k), ingat bahwa (x + k) = (x − (−k)), jadi masukkan a = −k.",
+          "exampleHeading": "Contoh",
+          "exampleText": "Misalkan P(x) = 2x³ − 3x² + 0x + 5 dan dibagi oleh (x − 2). Sisanya adalah P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa itu Teorema Sisa?",
+              "answer": "Teorema Sisa menyatakan bahwa ketika polinom P(x) dibagi oleh (x − a), sisanya adalah P(a). Jadi, sisa dapat ditemukan dengan mengevaluasi polinom pada x = a."
+            },
+            {
+              "question": "Apa arti nilai a?",
+              "answer": "Nilai a berasal dari pembagi (x − a). Contoh: jika pembagi (x − 2), maka a = 2. Jika pembagi (x + 3), maka a = −3, karena (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Apakah saya perlu melakukan pembagian polinom panjang?",
+              "answer": "Tidak. Untuk pembagian oleh (x − a), sisanya adalah P(a) yang dapat dihitung langsung. Kalkulator menggunakan metode Horner (pembagian sintetis) agar cepat dan akurat."
+            },
+            {
+              "question": "Bisakah koefisien berupa desimal atau ada suku yang hilang?",
+              "answer": "Bisa. Koefisien desimal dan negatif didukung. Jika ada suku yang hilang, gunakan 0 pada posisinya (mis. 2x³ − 3x² + 5 dimasukkan sebagai 2, -3, 0, 5)."
+            },
+            {
+              "question": "Apa yang terjadi jika sisanya 0?",
+              "answer": "Jika sisa 0, maka (x − a) adalah faktor dari P(x). Dengan kata lain, x = a adalah akar (root) dari polinom."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "roots": "Kalkulator Akar",
+          "rootsDesc": "Cari akar kuadrat, akar pangkat tiga, dan akar ke-n",
+          "squareRoot": "Kalkulator Akar Kuadrat",
+          "squareRootDesc": "Hitung √x dan dapatkan akar positif serta negatif",
+          "convolution": "Kalkulator Konvolusi",
+          "convolutionDesc": "Hitung konvolusi diskret dari deret untuk sinyal dan matematika"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kalkulator Kehamilan Kucing",
       "description": "Perkirakan tanggal kelahiran dan jendela kelahiran kucing Anda dari tanggal kawin. Gratis, cepat, berdasarkan masa kehamilan khas (63–67 hari).",

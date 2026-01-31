@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Polinom maradék kalkulátor",
+      "description": "Számítsa ki a maradékot, amikor a P(x) polinomot (x − a)-val osztjuk a maradéktétel segítségével. Adja meg az együtthatókat és az a értéket, és azonnal megkapja P(a)-t.",
+      "formulaHeading": "Maradéktétel:",
+      "formulaText": "Ha P(x)-et (x − a)-val osztjuk, a maradék P(a).",
+      "coefficientsLabel": "Polinom együtthatói (legnagyobb foktól a konstans tagig)",
+      "coefficientsPlaceholder": "pl. 2, -3, 0, 5",
+      "coefficientsHelp": "Tipp: ha a tizedeselválasztó vessző (pl. 1,5), az együtthatókat szóközzel vagy pontosvesszővel válassza el.",
+      "aLabel": "a értéke (osztó: x − a)",
+      "aPlaceholder": "pl. 2",
+      "calculate": "Számolás",
+      "reset": "Törlés",
+      "remainderLabel": "Maradék",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Másolás",
+      "errorInvalidCoefficients": "Adjon meg érvényes együtthatókat (számok vesszővel, szóközzel vagy pontosvesszővel elválasztva).",
+      "errorInvalidA": "Adjon meg érvényes a értéket.",
+      "seo": {
+        "title": "Polinom maradék kalkulátor – maradék P(x) ÷ (x − a)",
+        "description": "Ingyenes polinom maradék kalkulátor. Adja meg a polinom együtthatóit és az a értéket, és kapja meg a maradékot P(x) (x − a)-val való osztásakor a maradéktétel alapján.",
+        "keywords": "polinom maradék kalkulátor, maradéktétel kalkulátor, szintetikus osztás maradék, P(a) kalkulátor, polinomosztás maradék, matematika kalkulátor",
+        "content": {
+          "heading": "Hogyan használja a polinom maradék kalkulátort",
+          "paragraph1": "A polinom maradék kalkulátor megadja a maradékot, amikor egy P(x) polinomot egy (x − a) alakú lineáris tényezővel osztunk. A teljes polinomosztás helyett használható a maradéktétel: a maradék P(a). Ez azt jelenti, hogy elég a polinomot x = a helyen kiértékelni.",
+          "paragraph2": "Írja be a polinom együtthatóit a legnagyobb foktól a konstans tagig. Például a 2, -3, 0, 5 együtthatók a P(x) = 2x³ − 3x² + 0x + 5 polinomot jelentik. Ezután adja meg az a értéket az osztóból (x − a). Kattintson a Számolás gombra a maradékhoz.",
+          "paragraph3": "A számítás hatékonyan Horner-módszerrel történik (ekvivalens a szintetikus osztással). Bármilyen fokszámnál működik, és kezeli a tizedes és negatív együtthatókat is. Ügyeljen a helyes sorrendre; a hiányzó tagoknál használjon 0-t.",
+          "paragraph4": "A maradék hasznos annak ellenőrzésére, hogy (x − a) tényező-e (ha a maradék 0), gyors polinomértékelésre és algebrai feladatokhoz. Ha az osztó (x + k) alakú, akkor (x + k) = (x − (−k)), tehát a = −k értéket kell megadni.",
+          "exampleHeading": "Példa",
+          "exampleText": "Legyen P(x) = 2x³ − 3x² + 0x + 5, és osszuk (x − 2)-vel. A maradék P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Gyakran ismételt kérdések",
+          "items": [
+            {
+              "question": "Mi a maradéktétel?",
+              "answer": "A maradéktétel szerint, ha a P(x) polinomot (x − a)-val osztjuk, akkor a maradék P(a). Vagyis a maradékot úgy kapjuk meg, hogy a polinomot x = a helyen kiértékeljük."
+            },
+            {
+              "question": "Mit jelent az a érték?",
+              "answer": "Az a érték az osztóból (x − a) származik. Például (x − 2) esetén a = 2. (x + 3) esetén a = −3, mert (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Kell polinomosztást végeznem?",
+              "answer": "Nem. (x − a)-val való osztásnál a maradék P(a), ami közvetlenül számolható. A kalkulátor Horner-módszert (szintetikus osztást) használ a gyors és pontos eredményhez."
+            },
+            {
+              "question": "Lehetnek az együtthatók tizedesek vagy hiányozhatnak tagok?",
+              "answer": "Igen. Használhat tizedes és negatív együtthatókat. Ha egy tag hiányzik, írjon 0-t a helyére (pl. 2x³ − 3x² + 5 esetén: 2, -3, 0, 5)."
+            },
+            {
+              "question": "Mit jelent, ha a maradék 0?",
+              "answer": "Ha a maradék 0, akkor (x − a) tényezője a P(x)-nek. Másképp: x = a a polinom gyöke."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó számológépek",
+          "roots": "Gyök számológép",
+          "rootsDesc": "Négyzetgyök, köbgyök és n-edik gyök számítása",
+          "squareRoot": "Négyzetgyök-kalkulátor",
+          "squareRootDesc": "√x kiszámítása pozitív és negatív eredménnyel",
+          "convolution": "Konvolúció kalkulátor",
+          "convolutionDesc": "Diszkrét konvolúció számítása sorozatokra"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Macska Vemhesség Kalkulátor",
       "description": "Becsülje meg a macska várható születési dátumát és szülési ablakát a párzás dátuma alapján. Ingyenes, gyors, tipikus vemhesség alapján (63–67 nap).",

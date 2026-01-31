@@ -3730,6 +3730,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Polynoom-restcalculator",
+      "description": "Vind de rest wanneer een polynoom P(x) wordt gedeeld door (x − a) met de reststelling. Voer coëfficiënten en de waarde a in en krijg P(a) direct.",
+      "formulaHeading": "Reststelling:",
+      "formulaText": "Als P(x) wordt gedeeld door (x − a), is de rest P(a).",
+      "coefficientsLabel": "Polynoomcoëfficiënten (van hoogste graad naar constante term)",
+      "coefficientsPlaceholder": "bijv. 2, -3, 0, 5",
+      "coefficientsHelp": "Tip: als je decimaalteken een komma is (bijv. 1,5), scheid coëfficiënten met spaties of puntkomma's.",
+      "aLabel": "Waarde van a (deler: x − a)",
+      "aPlaceholder": "bijv. 2",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "remainderLabel": "Rest",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Kopiëren",
+      "errorInvalidCoefficients": "Voer geldige coëfficiënten in (getallen gescheiden door komma's, spaties of puntkomma's).",
+      "errorInvalidA": "Voer een geldige waarde voor a in.",
+      "seo": {
+        "title": "Polynoom-restcalculator – Rest van P(x) ÷ (x − a)",
+        "description": "Gratis polynoom-restcalculator. Voer polynoomcoëfficiënten en de waarde a in om de rest te krijgen bij deling van P(x) door (x − a) met de reststelling.",
+        "keywords": "polynoom rest calculator, reststelling calculator, synthetische deling rest, P(a) calculator, polynoomdeling rest, wiskunde calculator",
+        "content": {
+          "heading": "Hoe gebruik je de polynoom-restcalculator",
+          "paragraph1": "Een polynoom-restcalculator vindt de rest wanneer een polynoom P(x) wordt gedeeld door een lineaire factor van de vorm (x − a). In plaats van volledige polynoomdeling te doen, kun je de reststelling gebruiken: de rest is P(a). Dat betekent dat je het polynoom alleen hoeft te evalueren bij x = a.",
+          "paragraph2": "Voer de coëfficiënten van je polynoom in van hoogste graad naar de constante term. Bijvoorbeeld: 2, -3, 0, 5 staat voor P(x) = 2x³ − 3x² + 0x + 5. Voer daarna de waarde a uit de deler (x − a) in. Klik op Berekenen om de rest te zien.",
+          "paragraph3": "Intern wordt de berekening efficiënt uitgevoerd met het schema van Horner (equivalent aan synthetische deling). Dit werkt voor elke graad en ondersteunt decimale en negatieve coëfficiënten. Let op de juiste volgorde; 0 invullen voor ontbrekende termen helpt om de graden correct uit te lijnen.",
+          "paragraph4": "Polynoomresten zijn handig om te controleren of (x − a) een factor is (rest 0), om polynomen snel te evalueren en om algebra-opgaven op te lossen. Als je deler (x + k) is, onthoud dan dat (x + k) = (x − (−k)), dus je moet a = −k invullen.",
+          "exampleHeading": "Voorbeeld",
+          "exampleText": "Neem P(x) = 2x³ − 3x² + 0x + 5 en deel door (x − 2). De rest is P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            {
+              "question": "Wat is de reststelling?",
+              "answer": "De reststelling zegt dat wanneer een polynoom P(x) wordt gedeeld door (x − a), de rest gelijk is aan P(a). Je vindt de rest dus door het polynoom te evalueren bij x = a."
+            },
+            {
+              "question": "Wat betekent de waarde a?",
+              "answer": "De waarde a komt uit de deler (x − a). Bijvoorbeeld: bij (x − 2) is a = 2. Bij (x + 3) is a = −3, want (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Moet ik polynoomdeling uitvoeren?",
+              "answer": "Nee. Voor deling door (x − a) is de rest P(a), wat je direct kunt berekenen. De calculator gebruikt het schema van Horner (synthetische deling) om dit snel en nauwkeurig te doen."
+            },
+            {
+              "question": "Mogen coëfficiënten decimaal zijn of mogen termen ontbreken?",
+              "answer": "Ja. Decimale en negatieve coëfficiënten zijn toegestaan. Als een term ontbreekt, gebruik dan 0 op die plek (bijv. 2x³ − 3x² + 5 voer je in als 2, -3, 0, 5)."
+            },
+            {
+              "question": "Wat als de rest 0 is?",
+              "answer": "Als de rest 0 is, dan is (x − a) een factor van P(x). Met andere woorden: x = a is een wortel van het polynoom."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde rekenmachines",
+          "roots": "Wortel Rekenmachine",
+          "rootsDesc": "Vind vierkantswortels, derdemachtswortels en n-de wortels",
+          "squareRoot": "Vierkantswortel Rekenmachine",
+          "squareRootDesc": "Bereken √x en krijg zowel de positieve als negatieve wortel",
+          "convolution": "Convolutiecalculator",
+          "convolutionDesc": "Bereken discrete convolutie van reeksen voor signalen en wiskunde"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kattenzwangerschapscalculator",
       "description": "Schat de verwachtingsdatum en het geboortemoment van uw kat op basis van de dekdatum. Gratis, snel, gebaseerd op typische dracht (63–67 dagen).",

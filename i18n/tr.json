@@ -3732,6 +3732,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Polinom Kalan Hesaplayıcı",
+      "description": "Kalan Teoremi ile P(x) polinomunun (x − a) ile bölünmesinden kalanını bulun. Katsayıları ve a değerini girerek P(a) sonucunu anında elde edin.",
+      "formulaHeading": "Kalan Teoremi:",
+      "formulaText": "P(x) (x − a) ile bölünürse kalan P(a)'dır.",
+      "coefficientsLabel": "Polinom katsayıları (en yüksek dereceden sabit terime)",
+      "coefficientsPlaceholder": "örn. 2, -3, 0, 5",
+      "coefficientsHelp": "İpucu: Ondalık ayıracınız virgül ise (örn. 1,5), katsayıları boşluk veya noktalı virgül ile ayırın.",
+      "aLabel": "a değeri (bölen: x − a)",
+      "aPlaceholder": "örn. 2",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "remainderLabel": "Kalan",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Kopyala",
+      "errorInvalidCoefficients": "Geçerli katsayılar girin (virgül, boşluk veya noktalı virgül ile ayrılmış sayılar).",
+      "errorInvalidA": "a için geçerli bir değer girin.",
+      "seo": {
+        "title": "Polinom Kalan Hesaplayıcı – P(x) ÷ (x − a) kalanını bulun",
+        "description": "Ücretsiz polinom kalan hesaplayıcı. Polinom katsayılarını ve a değerini girerek P(x)'in (x − a) ile bölümünden kalanı Kalan Teoremi ile hesaplayın.",
+        "keywords": "polinom kalan hesaplayıcı, kalan teoremi, sentetik bölme kalan, P(a) hesaplayıcı, polinom bölme kalanı, matematik hesaplayıcı",
+        "content": {
+          "heading": "Polinom Kalan Hesaplayıcı nasıl kullanılır",
+          "paragraph1": "Bu hesaplayıcı, P(x) polinomunun (x − a) biçimindeki bir doğrusal çarpanla bölünmesinden kalanı bulur. Uzun polinom bölmesi yapmak yerine Kalan Teoremi kullanılır: kalan P(a)'dır. Yani polinomu x = a noktasında değerlendirmeniz yeterlidir.",
+          "paragraph2": "Polinomun katsayılarını en yüksek dereceden sabit terime doğru girin. Örneğin 2, -3, 0, 5 katsayıları P(x) = 2x³ − 3x² + 0x + 5 anlamına gelir. Ardından bölen (x − a)'dan a değerini girin ve Hesapla'ya tıklayın.",
+          "paragraph3": "Hesaplama içeride Horner yöntemiyle (sentetik bölmeye eşdeğer) verimli şekilde yapılır. Her derece için çalışır ve ondalık/negatif katsayıları destekler. Katsayı sırası önemlidir; eksik terimler için 0 kullanın.",
+          "paragraph4": "Polinom kalanları, (x − a)'nın bir çarpan olup olmadığını kontrol etmek (kalan 0), polinomları hızlı değerlendirmek ve cebir problemleri çözmek için kullanışlıdır. Bölen (x + k) ise (x + k) = (x − (−k)) olduğundan a = −k girmelisiniz.",
+          "exampleHeading": "Örnek",
+          "exampleText": "P(x) = 2x³ − 3x² + 0x + 5 ve bölen (x − 2) olsun. Kalan P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9'dur."
+        },
+        "faq": {
+          "heading": "Sık sorulan sorular",
+          "items": [
+            {
+              "question": "Kalan Teoremi nedir?",
+              "answer": "Kalan Teoremi, P(x) polinomu (x − a) ile bölündüğünde kalanının P(a) olduğunu söyler. Yani kalan, x = a için polinomun değeridir."
+            },
+            {
+              "question": "a değeri neyi ifade eder?",
+              "answer": "a, bölen (x − a) ifadesinden gelir. Örn. bölen (x − 2) ise a = 2. Bölen (x + 3) ise a = −3'tür; çünkü (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Uzun polinom bölmesi yapmam gerekir mi?",
+              "answer": "Hayır. (x − a) ile bölmede kalan P(a) olduğundan doğrudan hesaplanabilir. Bu hesaplayıcı Horner yöntemi (sentetik bölme) ile hızlı ve doğru sonuç verir."
+            },
+            {
+              "question": "Katsayılar ondalık olabilir mi veya terimler eksik olabilir mi?",
+              "answer": "Evet. Ondalık ve negatif katsayılar kullanılabilir. Bir terim eksikse yerine 0 yazın (örn. 2x³ − 3x² + 5 için: 2, -3, 0, 5)."
+            },
+            {
+              "question": "Kalan 0 çıkarsa ne olur?",
+              "answer": "Kalan 0 ise (x − a), P(x)'in bir çarpanıdır. Başka bir deyişle x = a polinomun bir köküdür."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili hesaplayıcılar",
+          "roots": "Kök Hesaplayıcı",
+          "rootsDesc": "Karekök, küp kök ve n. kök hesaplayın",
+          "squareRoot": "Karekök Hesaplayıcı",
+          "squareRootDesc": "√x hesaplayın ve pozitif/negatif kökü görün",
+          "convolution": "Konvolüsyon Hesaplayıcı",
+          "convolutionDesc": "Sinyaller ve matematik için dizilerin ayrık konvolüsyonunu hesaplayın"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kedi Gebelik Hesaplayıcı",
       "description": "Çiftleşme tarihinden kedinizin tahmini doğum tarihini ve doğum penceresini hesaplayın. Ücretsiz, hızlı, tipik gebelik süresine (63–67 gün) dayalı.",

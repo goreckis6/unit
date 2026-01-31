@@ -3578,6 +3578,72 @@
         }
       }
     },
+    "polynomialRemainder": {
+      "title": "Polynomial Remainder Calculator",
+      "description": "Find the remainder when a polynomial P(x) is divided by (x − a) using the Remainder Theorem. Enter coefficients and a value a to get P(a) instantly.",
+      "formulaHeading": "Remainder Theorem:",
+      "formulaText": "If P(x) is divided by (x − a), the remainder is P(a).",
+      "coefficientsLabel": "Polynomial coefficients (highest degree to constant)",
+      "coefficientsPlaceholder": "e.g. 2, -3, 0, 5",
+      "coefficientsHelp": "Tip: if your decimal separator is a comma (e.g. 1,5), separate coefficients with spaces or semicolons.",
+      "aLabel": "Value of a (divisor: x − a)",
+      "aPlaceholder": "e.g. 2",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "remainderLabel": "Remainder",
+      "resultExpression": "P({a}) = {value}",
+      "copyResult": "Copy",
+      "errorInvalidCoefficients": "Please enter valid coefficients (numbers separated by commas, spaces, or semicolons).",
+      "errorInvalidA": "Please enter a valid value for a.",
+      "seo": {
+        "title": "Polynomial Remainder Calculator – Find Remainder P(x) ÷ (x − a)",
+        "description": "Free polynomial remainder calculator. Enter polynomial coefficients and a value a to get the remainder when dividing P(x) by (x − a) using the Remainder Theorem.",
+        "keywords": "polynomial remainder calculator, remainder theorem calculator, synthetic division remainder, P(a) calculator, polynomial division remainder, math calculator",
+        "content": {
+          "heading": "How to Use the Polynomial Remainder Calculator",
+          "paragraph1": "A polynomial remainder calculator finds the remainder when a polynomial P(x) is divided by a linear factor of the form (x − a). Instead of doing full polynomial long division, you can use the Remainder Theorem: the remainder equals P(a). That means you just evaluate the polynomial at x = a.",
+          "paragraph2": "To use the calculator, enter the coefficients of your polynomial from highest degree to constant term. For example, the coefficients 2, -3, 0, 5 represent P(x) = 2x³ − 3x² + 0x + 5. Then enter the value of a from the divisor (x − a). Click Calculate to see the remainder.",
+          "paragraph3": "Internally, the calculation is performed efficiently using Horner’s method (equivalent to synthetic division). This works for any polynomial degree and supports decimals and negative coefficients. Make sure the coefficient order is correct; including 0 for missing terms keeps the degree alignment clear.",
+          "paragraph4": "Polynomial remainders are useful for checking whether (x − a) is a factor (remainder 0), evaluating polynomials quickly, and solving algebra problems. If your divisor is written as (x + k), remember that (x + k) = (x − (−k)), so you should enter a = −k.",
+          "exampleHeading": "Example",
+          "exampleText": "Let P(x) = 2x³ − 3x² + 0x + 5 and divide by (x − 2). The remainder is P(2) = 2·8 − 3·4 + 0·2 + 5 = 16 − 12 + 0 + 5 = 9."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the Remainder Theorem?",
+              "answer": "The Remainder Theorem states that when a polynomial P(x) is divided by (x − a), the remainder is P(a). So you can find the remainder by evaluating the polynomial at x = a."
+            },
+            {
+              "question": "What does the value a mean?",
+              "answer": "The value a comes from the divisor (x − a). For example, if the divisor is (x − 2), then a = 2. If the divisor is (x + 3), then a = −3, because (x + 3) = (x − (−3))."
+            },
+            {
+              "question": "Do I need to do polynomial long division?",
+              "answer": "No. For division by (x − a), the remainder is P(a), which you can compute directly. The calculator uses Horner’s method (synthetic division) to compute this quickly and accurately."
+            },
+            {
+              "question": "Can coefficients be decimals or include missing terms?",
+              "answer": "Yes. You can use decimal and negative coefficients. If a term is missing, use 0 in its place (e.g. 2x³ − 3x² + 5 should be entered as 2, -3, 0, 5)."
+            },
+            {
+              "question": "What if the remainder is 0?",
+              "answer": "If the remainder is 0, then (x − a) is a factor of P(x). In other words, x = a is a root of the polynomial."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "roots": "Roots Calculator",
+          "rootsDesc": "Find square roots, cube roots, and nth roots of numbers",
+          "squareRoot": "Square Root Calculator",
+          "squareRootDesc": "Calculate √x and get both positive and negative roots",
+          "convolution": "Convolution Calculator",
+          "convolutionDesc": "Compute discrete convolution of sequences for signals and math"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Cat Pregnancy Calculator",
       "description": "Estimate your cat's due date and delivery window from the mating date. Free, quick, and based on typical feline gestation (63–67 days).",

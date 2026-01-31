@@ -200,31 +200,31 @@ export function QuadraticEquationCalculator() {
         <div className="result-section" style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}>
           {result ? (
             <div ref={resultRef}>
-              <div className="result-header">
+              <div className="result-header" style={{ display: 'none' }}>
                 <div className="result-badge">{t('result')}</div>
               </div>
               <div className="result-display">
                 {result.message && (
                   <div className="result-item">
-                    <div className="result-label">{t('status')}</div>
+                    <div className="result-label" style={{ fontSize: '0.9rem' }}>{t('status')}</div>
                     <div className="result-value-box">
-                      <span className="result-value">{result.message}</span>
+                      <span className="result-value" style={{ fontSize: '0.95rem' }}>{result.message}</span>
                     </div>
                   </div>
                 )}
                 {typeof result.discriminant === 'number' && (
                   <div className="result-item">
-                    <div className="result-label">{t('discriminant')}</div>
+                    <div className="result-label" style={{ fontSize: '0.9rem' }}>{t('discriminant')}</div>
                     <div className="result-value-box">
-                      <span className="result-value">{formatNumber(result.discriminant, locale)}</span>
+                      <span className="result-value" style={{ fontSize: '0.95rem' }}>{formatNumber(result.discriminant, locale)}</span>
                     </div>
                   </div>
                 )}
                 {result.roots?.map((root) => (
                   <div key={root.label} className="result-item">
-                    <div className="result-label">{root.label}</div>
+                    <div className="result-label" style={{ fontSize: '0.9rem' }}>{root.label}</div>
                     <div className="result-value-box">
-                      <span className="result-value">{root.value}</span>
+                      <span className="result-value" style={{ fontSize: '0.95rem' }}>{root.value}</span>
                     </div>
                   </div>
                 ))}
@@ -238,7 +238,7 @@ export function QuadraticEquationCalculator() {
               minHeight: '200px',
               opacity: 0.5
             }}>
-              <span style={{ color: 'var(--text-secondary)' }}>
+              <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                 {t('calculate')}
               </span>
             </div>

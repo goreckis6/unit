@@ -181,22 +181,22 @@ export function QuadraticEquationCalculator() {
           </div>
 
           {error && (
-            <p className="seo-paragraph" style={{ color: 'var(--error)', marginBottom: '1rem', fontSize: '0.9rem' }}>
+            <p className="seo-paragraph" style={{ color: 'var(--error)', marginTop: '1rem', marginBottom: '0', fontSize: '0.9rem' }}>
               {error}
             </p>
           )}
 
-          <div className="action-buttons">
-            <button onClick={handleCalculate} className="btn btn-primary">
+          <div className="action-buttons" style={{ marginTop: '1.5rem' }}>
+            <button onClick={handleCalculate} className="btn btn-primary" style={{ minHeight: '44px', minWidth: '44px' }}>
               {t('calculate')}
             </button>
-            <button onClick={handleReset} className="btn btn-secondary">
+            <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>
               {t('reset')}
             </button>
           </div>
         </div>
 
-        {/* Right Column - Results */}
+        {/* Right Column - Output */}
         <div className="result-section" style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}>
           {result ? (
             <div ref={resultRef}>
@@ -239,7 +239,7 @@ export function QuadraticEquationCalculator() {
               opacity: 0.5
             }}>
               <span style={{ color: 'var(--text-secondary)' }}>
-                {t('result')}
+                {t('calculate')}
               </span>
             </div>
           )}

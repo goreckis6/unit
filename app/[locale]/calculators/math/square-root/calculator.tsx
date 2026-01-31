@@ -1,8 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl';
+import { useState, useCallback } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 
 const DECIMAL_PLACES = 5;
 
@@ -16,111 +15,98 @@ function formatResult(value: number, locale: string): string {
 export function SquareRootCalculator() {
   const t = useTranslations('calculators.squareRoot');
   const locale = useLocale();
-  const [input, setInput] = useState<string>('');
-  const [positiveRoot, setPositiveRoot] = useState<string | null>(null);
-  const [negativeRoot, setNegativeRoot] = useState<string | null>(null);
-  const [summary, setSummary] = useState<string | null>(null);
+  const [input, setInput] = useState<string>('16');
+  const [result, setResult] = useState<{ positive: string; negative: string } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+  const handleCalculate = useCallback(() => {
     const trimmed = input.trim();
     if (!trimmed) {
-      setPositiveRoot(null);
-      setNegativeRoot(null);
-      setSummary(null);
+      setResult(null);
       setError(null);
       return;
     }
     const num = parseFloat(trimmed.replace(/,/g, '.'));
     if (Number.isNaN(num)) {
-      setPositiveRoot(null);
-      setNegativeRoot(null);
-      setSummary(null);
+      setResult(null);
       setError(t('errorInvalid'));
       return;
     }
     if (num < 0) {
-      setPositiveRoot(null);
-      setNegativeRoot(null);
-      setSummary(null);
+      setResult(null);
       setError(t('errorNegative'));
       return;
     }
     setError(null);
     const root = Math.sqrt(num);
-    setPositiveRoot(formatResult(root, locale));
-    setNegativeRoot(formatResult(-root, locale));
-    setSummary(`√${trimmed} ≈ ${formatResult(root, locale)}`);
+    setResult({
+      positive: formatResult(root, locale),
+      negative: formatResult(-root, locale),
+    });
   }, [input, locale, t]);
 
-  const handleReset = () => {
-    setInput('');
-    setPositiveRoot(null);
-    setNegativeRoot(null);
-    setSummary(null);
+  const handleReset = useCallback(() => {
+    setInput('16');
+    setResult(null);
     setError(null);
-  };
+  }, []);
+
+  const displayValue = result ? `±${result.positive}` : '';
+
+  const handleCopy = useCallback(() => {
+    if (!displayValue) return;
+    void navigator.clipboard.writeText(displayValue);
+  }, [displayValue]);
 
   return (
-    <>
-      <div className="split-view-container">
-        <div className="input-section" style={{ marginBottom: 0 }}>
-          <div className="numbers-to-letters-inputs" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            <div className="input-card">
-              <label htmlFor="number" className="input-label">
-                {t('enterNumber')}
-              </label>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                <span style={{ fontSize: '1.5rem', fontWeight: 700 }} aria-hidden>√</span>
-                <input
-                  id="number"
-                  type="text"
-                  inputMode="decimal"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  className="number-input"
-                  placeholder={t('placeholder')}
-                  style={{ flex: '1', minWidth: '120px', minHeight: '44px' }}
-                />
-              </div>
-              {error && (
-                <p className="seo-paragraph" style={{ color: 'var(--error)', marginTop: '0.5rem', fontSize: '0.9rem' }}>
-                  {error}
-                </p>
-              )}
-            </div>
+    <div className="root-calc-block">
+      <p className="root-calc-formula-desc">{t('formulaHeading')}</p>
+      <p className="root-calc-formula">{t('formulaText')}</p>
 
-            <div className="action-buttons" style={{ marginTop: '0.5rem' }}>
-              <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>
-                {t('reset')}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="result-section" style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}>
-          <div className="input-card" style={{ marginBottom: '1rem' }}>
-            <label className="input-label">{t('answer1')}</label>
-            <div className="number-input" style={{ minHeight: '52px', display: 'flex', alignItems: 'center', padding: '1rem 1.25rem', fontFamily: 'monospace', fontSize: '1.1rem' }}>
-              {positiveRoot ?? '—'}
-            </div>
-          </div>
-
-          <div className="input-card" style={{ marginBottom: '1rem' }}>
-            <label className="input-label">{t('answer2')}</label>
-            <div className="number-input" style={{ minHeight: '52px', display: 'flex', alignItems: 'center', padding: '1rem 1.25rem', fontFamily: 'monospace', fontSize: '1.1rem' }}>
-              {negativeRoot ?? '—'}
-            </div>
-          </div>
-
-          <div className="input-card">
-            <label className="input-label">{t('summary')}</label>
-            <div className="number-input" style={{ minHeight: '52px', display: 'flex', alignItems: 'center', padding: '1rem 1.25rem', fontFamily: 'monospace', fontSize: '1rem' }}>
-              {summary ?? '—'}
-            </div>
-          </div>
-        </div>
+      <div className="root-calc-input-row">
+        <span className="root-calc-radical" aria-hidden>√</span>
+        <input
+          id="number"
+          type="text"
+          inputMode="decimal"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+          className="number-input"
+          placeholder={t('placeholder')}
+          aria-label={t('enterNumber')}
+        />
       </div>
-    </>
+
+      {error && (
+        <p className="seo-paragraph" style={{ color: 'var(--error)', marginBottom: '1rem', fontSize: '0.9rem' }}>
+          {error}
+        </p>
+      )}
+
+      <div className="root-calc-actions">
+        <button type="button" onClick={handleCalculate} className="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
+            <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          {t('calculate')}
+        </button>
+        <button type="button" onClick={handleReset} className="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
+            <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          {t('reset')}
+        </button>
+      </div>
+
+      <div className="root-calc-output-row">
+        <output htmlFor="number" className="root-calc-output-field" aria-live="polite">
+          {displayValue || '—'}
+        </output>
+        <button type="button" onClick={handleCopy} className="root-calc-copy-btn" disabled={!displayValue}>
+          {t('copyResult')}
+        </button>
+      </div>
+    </div>
   );
 }

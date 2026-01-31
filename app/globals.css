@@ -1730,6 +1730,155 @@ a {
 }
 
 /* ============================================
+   ROOT CALCULATORS (Square Root / Nth Root) – beige block style
+   ============================================ */
+.root-calc-block {
+  background: #f5f5dc;
+  border: 1px solid #e8e8d0;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.root-calc-block:last-child {
+  margin-bottom: 0;
+}
+
+.root-calc-formula-desc {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.root-calc-formula {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.root-calc-formula .formula-label {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.root-calc-formula .formula-symbol {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+
+.root-calc-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.root-calc-input-row .number-input {
+  min-height: 44px;
+  flex: 1;
+  min-width: 100px;
+}
+
+.root-calc-radical {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.root-calc-radical-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.root-calc-radical-index {
+  width: 2.5rem;
+  min-height: 32px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.25rem 0.35rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: white;
+}
+
+.root-calc-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.root-calc-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  min-height: 44px;
+  background: #4a4a4a;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.root-calc-actions .btn:hover {
+  background: #3a3a3a;
+}
+
+.root-calc-actions .btn-secondary {
+  background: #5a5a5a;
+}
+
+.root-calc-actions .btn-secondary:hover {
+  background: #4a4a4a;
+}
+
+.root-calc-output-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.root-calc-output-field {
+  flex: 1;
+  min-width: 120px;
+  min-height: 48px;
+  padding: 0.75rem 1rem;
+  background: #f0f0e8;
+  border: 1px solid #d8d8c8;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+}
+
+.root-calc-copy-btn {
+  padding: 0.5rem 1rem;
+  min-height: 44px;
+  background: #e0e0d8;
+  color: var(--text-primary);
+  border: 1px solid #c8c8c0;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.root-calc-copy-btn:hover {
+  background: #d0d0c8;
+}
+
+.root-calc-block .section-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* ============================================
    RESPONSIVE BREAKPOINTS
    ============================================ */
 

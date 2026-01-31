@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
 
@@ -29,7 +29,7 @@ export function RootsCalculator() {
   const [error, setError] = useState<string | null>(null);
   const resultRef = useScrollToResult(result);
 
-  const handleCalculate = () => {
+  const handleCalculate = useCallback(() => {
     const x = parseFloat(numberInput.replace(/,/g, '.'));
     const n = parseInt(degreeInput, 10);
     if (Number.isNaN(x)) {
@@ -50,83 +50,138 @@ export function RootsCalculator() {
     }
     setError(null);
     setResult(root);
-  };
+  }, [numberInput, degreeInput, t]);
 
-  const handleReset = () => {
+  const handleReset = useCallback(() => {
     setNumberInput('16');
     setDegreeInput('2');
     setResult(null);
     setError(null);
-  };
+  }, []);
+
+  const displayValue =
+    result !== null
+      ? result >= 0
+        ? `±${formatResult(result, locale)}`
+        : formatResult(result, locale)
+      : '';
+
+  const handleCopy = useCallback(() => {
+    if (!displayValue) return;
+    void navigator.clipboard.writeText(displayValue);
+  }, [displayValue]);
 
   return (
-    <div>
-      <div className="input-section">
-        <div className="inputs-grid">
-          <div className="input-card">
-            <label htmlFor="number" className="input-label">
-              {t('number')}
-            </label>
-            <input
-              id="number"
-              type="text"
-              inputMode="decimal"
-              value={numberInput}
-              onChange={(e) => setNumberInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-              className="number-input"
-              placeholder="16"
-            />
-          </div>
-          <div className="input-card">
-            <label htmlFor="degree" className="input-label">
-              {t('rootDegree')}
-            </label>
-            <input
-              id="degree"
-              type="number"
-              min={2}
-              step={1}
-              value={degreeInput}
-              onChange={(e) => setDegreeInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-              className="number-input"
-              placeholder="2"
-            />
-          </div>
-        </div>
+    <div className="root-calc-block" ref={resultRef}>
+      <h2 className="section-heading">{t('sectionHeading')}</h2>
+      <p className="root-calc-formula-desc">{t('formulaHeading')}</p>
+      <p className="root-calc-formula">{t('formulaText')}</p>
+
+      <div className="root-calc-input-row root-calc-radical-wrap">
+        <input
+          id="number"
+          type="text"
+          inputMode="decimal"
+          value={numberInput}
+          onChange={(e) => setNumberInput(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+          className="number-input"
+          placeholder="16"
+          aria-label={t('number')}
+        />
+        <input
+          id="degree"
+          type="text"
+          inputMode="numeric"
+          value={degreeInput}
+          onChange={(e) => setDegreeInput(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+          className="root-calc-radical-index"
+          placeholder="2"
+          aria-label={t('rootDegree')}
+        />
+        <span className="root-calc-radical" aria-hidden>
+          √
+        </span>
       </div>
 
-      <div className="action-buttons">
-        <button onClick={handleCalculate} className="btn btn-primary">
+      {error && (
+        <p
+          className="seo-paragraph"
+          style={{
+            color: 'var(--error-color)',
+            marginBottom: '1rem',
+            fontSize: '0.9rem',
+          }}
+        >
+          {error}
+        </p>
+      )}
+
+      <div className="root-calc-actions">
+        <button
+          type="button"
+          onClick={handleCalculate}
+          className="btn btn-primary"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            aria-hidden
+          >
+            <path
+              d="M5 12h14M12 5l7 7-7 7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
           {t('calculate')}
         </button>
-        <button onClick={handleReset} className="btn btn-secondary">
+        <button
+          type="button"
+          onClick={handleReset}
+          className="btn btn-secondary"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            aria-hidden
+          >
+            <path
+              d="M18 6L6 18M6 6l12 12"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
           {t('reset')}
         </button>
       </div>
 
-      {(result !== null || error) && (
-        <div ref={resultRef} className="result-section">
-          <div className="result-header">
-            <div className="result-badge">{t('result')}</div>
-          </div>
-          <div className="result-display">
-            {error ? (
-              <p className="seo-paragraph" style={{ color: 'var(--error)', margin: 0 }}>
-                {error}
-              </p>
-            ) : (
-              <div className="result-item">
-                <div className="result-label">{t('nthRootResult')}</div>
-                <div className="result-value-box">
-                  <span className="result-value">{result !== null ? formatResult(result, locale) : '—'}</span>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
+      <div className="root-calc-output-row">
+        <output
+          htmlFor="number degree"
+          className="root-calc-output-field"
+          aria-live="polite"
+        >
+          {displayValue || '—'}
+        </output>
+        <button
+          type="button"
+          onClick={handleCopy}
+          className="root-calc-copy-btn"
+          disabled={!displayValue}
+        >
+          {t('copyResult')}
+        </button>
+      </div>
     </div>
   );
 }

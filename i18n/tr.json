@@ -654,6 +654,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "İkinci Dereceden Denklem Hesaplayıcı",
+      "description": "İkinci dereceden denklemleri çözün ve gerçek veya karmaşık kökleri anında bulun.",
+      "coefficientA": "a katsayısı",
+      "coefficientB": "b katsayısı",
+      "coefficientC": "c katsayısı",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "status": "Durum",
+      "discriminant": "Diskriminant (b² − 4ac)",
+      "root": "Kök",
+      "root1": "Kök x1",
+      "root2": "Kök x2",
+      "linearEquation": "Doğrusal denklem (a = 0)",
+      "realRoots": "Gerçek kökler",
+      "complexRoots": "Karmaşık kökler",
+      "noSolution": "Çözüm yok",
+      "infiniteSolutions": "Sonsuz çözüm",
+      "errorInvalid": "a, b ve c için geçerli sayılar girin.",
+      "seo": {
+        "title": "İkinci Dereceden Denklem Hesaplayıcı – ax² + bx + c = 0 çöz",
+        "description": "Ücretsiz ikinci dereceden denklem hesaplayıcı. Gerçek veya karmaşık kökleri bulun, diskriminantı hesaplayın ve ax² + bx + c = 0 denklemini hemen çözün.",
+        "keywords": "ikinci dereceden denklem hesaplayıcı, ikinci dereceden formül, diskriminant, kökler, ax2 bx c, karmaşık kökler, matematik hesaplayıcı",
+        "content": {
+          "heading": "İkinci dereceden denklem nasıl çözülür",
+          "paragraph1": "İkinci dereceden denklem ax² + bx + c = 0 biçimindedir; burada a, b ve c sabittir ve a ≠ 0 olmalıdır. Bu denklemler cebir, fizik, finans ve geometride sıkça karşımıza çıkar. Çözümler (kökler), parabolün x eksenini kestiği x değerleridir. Diskriminant (b² − 4ac) köklerin türünü belirler.",
+          "paragraph2": "Standart formül: x = (-b ± √(b² − 4ac)) / (2a). Diskriminant pozitifse iki gerçek kök vardır; sıfırsa bir çift kök vardır; negatifse iki karmaşık eşlenik kök vardır.",
+          "paragraph3": "a, b ve c katsayılarını girin ve Hesapla’ya tıklayın. Araç diskriminantı hesaplar ve kökleri gösterir. Ondalık değerleri destekler ve karmaşık kökleri a + bi biçiminde gösterir.",
+          "paragraph4": "a sıfırsa denklem doğrusal olur (bx + c = 0). Hesaplayıcı bu durumu otomatik olarak algılar ve doğrusal çözümü verir veya çözüm olmadığını/sonsuz çözüm olduğunu bildirir.",
+          "exampleHeading": "Örnek",
+          "exampleText": "a = 1, b = -3, c = 2 için denklem x² − 3x + 2 = 0 olur ve kökler x1 = 2 ve x2 = 1’dir. a = 1, b = 2, c = 5 için diskriminant -16’dır, bu yüzden kökler karmaşıktır: x = -1 ± 2i."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {
+              "question": "Diskriminant nedir?",
+              "answer": "Diskriminant b² − 4ac’dir. Köklerin sayısını ve türünü belirler: pozitifse iki gerçek kök, sıfırsa bir çift kök, negatifse iki karmaşık kök."
+            },
+            {
+              "question": "a = 0 olursa ne olur?",
+              "answer": "a = 0 ise denklem artık ikinci dereceden değildir, doğrusal olur (bx + c = 0). Hesaplayıcı bu durumu işler ve varsa doğrusal kökü verir."
+            },
+            {
+              "question": "Hesaplayıcı karmaşık kökleri gösteriyor mu?",
+              "answer": "Evet. Diskriminant negatif olduğunda, hesaplayıcı kökleri a + bi biçiminde verir."
+            },
+            {
+              "question": "Kesir mi, ondalık mı girmeliyim?",
+              "answer": "Tam sayı veya ondalık sayı girebilirsiniz. Hesaplayıcı sayısal kökleri verir ve makul bir basamak sayısına yuvarlar."
+            },
+            {
+              "question": "Bu hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, tamamen ücretsizdir ve kayıt gerektirmez."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "squareRoot": "Karekök Hesaplayıcı",
+          "squareRootDesc": "Karekökleri hesaplayın ve pozitif/negatif sonuçları görün",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Yüzdeleri, yüzde değişimi ve yüzde ilişkilerini hesaplayın",
+          "average": "Ortalama Hesaplayıcı",
+          "averageDesc": "Ortalama, toplam ve sayı adedini hesaplayın"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematik Hesap Makineleri",
       "description": "Tüm hesaplama ihtiyaçlarınız için matematik hesap makineleri koleksiyonumuzu gözden geçirin",

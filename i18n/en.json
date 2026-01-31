@@ -684,6 +684,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "Quadratic Equation Calculator",
+      "description": "Solve quadratic equations and get real or complex roots instantly.",
+      "coefficientA": "Coefficient a",
+      "coefficientB": "Coefficient b",
+      "coefficientC": "Coefficient c",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "status": "Status",
+      "discriminant": "Discriminant (b² − 4ac)",
+      "root": "Root",
+      "root1": "Root x1",
+      "root2": "Root x2",
+      "linearEquation": "Linear equation (a = 0)",
+      "realRoots": "Real roots",
+      "complexRoots": "Complex roots",
+      "noSolution": "No solution",
+      "infiniteSolutions": "Infinite solutions",
+      "errorInvalid": "Please enter valid numbers for a, b, and c.",
+      "seo": {
+        "title": "Quadratic Equation Calculator - Solve ax² + bx + c = 0",
+        "description": "Free quadratic equation calculator. Find real or complex roots, compute the discriminant, and solve ax² + bx + c = 0 instantly.",
+        "keywords": "quadratic equation calculator, quadratic formula, solve quadratic equations, discriminant calculator, roots of quadratic, ax2 bx c solver, complex roots, math calculator",
+        "content": {
+          "heading": "How to Solve a Quadratic Equation",
+          "paragraph1": "A quadratic equation is an equation of the form ax² + bx + c = 0, where a, b, and c are constants and a ≠ 0. Quadratics appear in algebra, physics, finance, and geometry. The solutions (roots) are the x-values where the parabola crosses the x-axis. The discriminant (b² − 4ac) tells you the type of roots you will get.",
+          "paragraph2": "The standard quadratic formula is x = (-b ± √(b² − 4ac)) / (2a). If the discriminant is positive, the equation has two real roots. If it is zero, there is one repeated real root. If it is negative, the equation has two complex conjugate roots.",
+          "paragraph3": "To use the calculator, enter the coefficients a, b, and c and click Calculate. The tool computes the discriminant and displays the roots. It supports decimal inputs and shows complex roots in a + bi form when needed.",
+          "paragraph4": "If a is zero, the equation becomes linear (bx + c = 0). The calculator detects this case automatically and returns the linear solution or reports no or infinite solutions when appropriate.",
+          "exampleHeading": "Example",
+          "exampleText": "For a = 1, b = -3, c = 2, the equation is x² − 3x + 2 = 0 and the roots are x1 = 2 and x2 = 1. For a = 1, b = 2, c = 5, the discriminant is -16, so the roots are complex: x = -1 ± 2i."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the discriminant in a quadratic equation?",
+              "answer": "The discriminant is b² − 4ac. It determines the number and type of roots: positive means two real roots, zero means one repeated real root, and negative means two complex roots."
+            },
+            {
+              "question": "What happens if a = 0?",
+              "answer": "If a = 0, the equation is no longer quadratic. It becomes linear (bx + c = 0). The calculator handles this case and returns the linear root if it exists."
+            },
+            {
+              "question": "Can this calculator show complex roots?",
+              "answer": "Yes. When the discriminant is negative, the calculator returns complex roots in a + bi form."
+            },
+            {
+              "question": "Do I need exact fractions or decimals?",
+              "answer": "You can enter integers or decimals. The calculator outputs numeric roots and rounds to a practical number of decimal places."
+            },
+            {
+              "question": "Is this quadratic equation calculator free?",
+              "answer": "Yes, it is completely free to use with no registration required."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "squareRoot": "Square Root Calculator",
+          "squareRootDesc": "Find square roots and see positive and negative results",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentages, percentage change, and percentage relationships",
+          "average": "Average Calculator",
+          "averageDesc": "Calculate the mean, sum, and count of numbers"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Math Calculators",
       "description": "Browse our collection of math calculators for all your calculation needs",

@@ -654,6 +654,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "Calculateur d'Équation Quadratique",
+      "description": "Résolvez les équations quadratiques et obtenez des racines réelles ou complexes instantanément.",
+      "coefficientA": "Coefficient a",
+      "coefficientB": "Coefficient b",
+      "coefficientC": "Coefficient c",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "status": "Statut",
+      "discriminant": "Discriminant (b² − 4ac)",
+      "root": "Racine",
+      "root1": "Racine x1",
+      "root2": "Racine x2",
+      "linearEquation": "Équation linéaire (a = 0)",
+      "realRoots": "Racines réelles",
+      "complexRoots": "Racines complexes",
+      "noSolution": "Aucune solution",
+      "infiniteSolutions": "Infinité de solutions",
+      "errorInvalid": "Veuillez entrer des nombres valides pour a, b et c.",
+      "seo": {
+        "title": "Calculateur d'Équation Quadratique – résoudre ax² + bx + c = 0",
+        "description": "Calculateur gratuit d'équations quadratiques. Trouvez des racines réelles ou complexes, calculez le discriminant et résolvez ax² + bx + c = 0 instantanément.",
+        "keywords": "calculateur équation quadratique, formule quadratique, résoudre équations quadratiques, discriminant, racines quadratiques, ax2 bx c, racines complexes, calculatrice mathématique",
+        "content": {
+          "heading": "Comment résoudre une équation quadratique",
+          "paragraph1": "Une équation quadratique a la forme ax² + bx + c = 0, où a, b et c sont des constantes et a ≠ 0. Les équations quadratiques apparaissent en algèbre, en physique, en finance et en géométrie. Les solutions (racines) sont les valeurs de x où la parabole coupe l’axe des x. Le discriminant (b² − 4ac) indique le type de racines.",
+          "paragraph2": "La formule quadratique standard est x = (-b ± √(b² − 4ac)) / (2a). Si le discriminant est positif, il y a deux racines réelles. S’il est nul, il y a une racine réelle double. S’il est négatif, il y a deux racines complexes conjuguées.",
+          "paragraph3": "Pour utiliser le calculateur, saisissez les coefficients a, b et c puis cliquez sur Calculer. L’outil calcule le discriminant et affiche les racines. Les décimales sont prises en charge et les racines complexes sont affichées sous la forme a + bi.",
+          "paragraph4": "Si a est nul, l’équation devient linéaire (bx + c = 0). Le calculateur détecte ce cas automatiquement et renvoie la solution linéaire ou indique qu’il n’y a pas de solution ou une infinité de solutions.",
+          "exampleHeading": "Exemple",
+          "exampleText": "Pour a = 1, b = -3, c = 2, l’équation est x² − 3x + 2 = 0 et les racines sont x1 = 2 et x2 = 1. Pour a = 1, b = 2, c = 5, le discriminant est -16, donc les racines sont complexes : x = -1 ± 2i."
+        },
+        "faq": {
+          "heading": "Questions Fréquentes",
+          "items": [
+            {
+              "question": "Qu’est-ce que le discriminant d’une équation quadratique ?",
+              "answer": "Le discriminant est b² − 4ac. Il détermine le nombre et le type de racines : positif donne deux racines réelles, nul donne une racine double, et négatif donne deux racines complexes."
+            },
+            {
+              "question": "Que se passe-t-il si a = 0 ?",
+              "answer": "Si a = 0, l’équation n’est plus quadratique mais linéaire (bx + c = 0). Le calculateur gère ce cas et renvoie la racine linéaire si elle existe."
+            },
+            {
+              "question": "Le calculateur affiche-t-il les racines complexes ?",
+              "answer": "Oui. Lorsque le discriminant est négatif, le calculateur renvoie des racines complexes sous la forme a + bi."
+            },
+            {
+              "question": "Dois-je entrer des fractions ou des décimales exactes ?",
+              "answer": "Vous pouvez saisir des entiers ou des décimales. Le calculateur renvoie des racines numériques et arrondit à un nombre raisonnable de décimales."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit ?",
+              "answer": "Oui, il est entièrement gratuit et ne nécessite aucune inscription."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Connexes",
+          "squareRoot": "Calculateur de Racine Carrée",
+          "squareRootDesc": "Calculez des racines carrées et voyez les résultats positifs et négatifs",
+          "percentage": "Calculateur de Pourcentage",
+          "percentageDesc": "Calculez des pourcentages, des variations et des relations en pourcentage",
+          "average": "Calculateur de Moyenne",
+          "averageDesc": "Calculez la moyenne, la somme et le nombre de valeurs"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Calculatrices Mathématiques",
       "description": "Parcourez notre collection de calculatrices mathématiques pour tous vos besoins de calcul",

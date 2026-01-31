@@ -654,6 +654,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "Kalkulator Równań Kwadratowych",
+      "description": "Rozwiązuj równania kwadratowe i otrzymuj pierwiastki rzeczywiste lub zespolone natychmiast.",
+      "coefficientA": "Współczynnik a",
+      "coefficientB": "Współczynnik b",
+      "coefficientC": "Współczynnik c",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "status": "Status",
+      "discriminant": "Wyróżnik (b² − 4ac)",
+      "root": "Pierwiastek",
+      "root1": "Pierwiastek x1",
+      "root2": "Pierwiastek x2",
+      "linearEquation": "Równanie liniowe (a = 0)",
+      "realRoots": "Pierwiastki rzeczywiste",
+      "complexRoots": "Pierwiastki zespolone",
+      "noSolution": "Brak rozwiązania",
+      "infiniteSolutions": "Nieskończenie wiele rozwiązań",
+      "errorInvalid": "Wprowadź poprawne liczby dla a, b i c.",
+      "seo": {
+        "title": "Kalkulator Równań Kwadratowych - rozwiąż ax² + bx + c = 0",
+        "description": "Darmowy kalkulator równań kwadratowych. Wyznacz pierwiastki rzeczywiste lub zespolone, oblicz wyróżnik i rozwiąż ax² + bx + c = 0 natychmiast.",
+        "keywords": "kalkulator równań kwadratowych, wzór kwadratowy, rozwiązywanie równań kwadratowych, kalkulator wyróżnika, pierwiastki równania kwadratowego, ax2 bx c, pierwiastki zespolone, kalkulator matematyczny",
+        "content": {
+          "heading": "Jak rozwiązać równanie kwadratowe",
+          "paragraph1": "Równanie kwadratowe ma postać ax² + bx + c = 0, gdzie a, b i c są stałymi oraz a ≠ 0. Równania kwadratowe pojawiają się w algebrze, fizyce, finansach i geometrii. Rozwiązania (pierwiastki) to wartości x, dla których wykres paraboli przecina oś x. Wyróżnik (b² − 4ac) informuje o typie pierwiastków.",
+          "paragraph2": "Standardowy wzór kwadratowy to x = (-b ± √(b² − 4ac)) / (2a). Gdy wyróżnik jest dodatni, równanie ma dwa pierwiastki rzeczywiste. Gdy jest równy zero, występuje jeden podwójny pierwiastek. Gdy jest ujemny, pojawiają się dwa pierwiastki zespolone sprzężone.",
+          "paragraph3": "Aby użyć kalkulatora, wpisz współczynniki a, b i c i kliknij Oblicz. Narzędzie oblicza wyróżnik i wyświetla pierwiastki. Obsługuje liczby dziesiętne i pokazuje pierwiastki zespolone w postaci a + bi.",
+          "paragraph4": "Jeśli a jest równe zero, równanie staje się liniowe (bx + c = 0). Kalkulator automatycznie wykrywa ten przypadek i zwraca rozwiązanie liniowe lub informuje o braku albo nieskończonej liczbie rozwiązań.",
+          "exampleHeading": "Przykład",
+          "exampleText": "Dla a = 1, b = -3, c = 2 równanie ma postać x² − 3x + 2 = 0, a pierwiastki to x1 = 2 i x2 = 1. Dla a = 1, b = 2, c = 5 wyróżnik wynosi -16, więc pierwiastki są zespolone: x = -1 ± 2i."
+        },
+        "faq": {
+          "heading": "Najczęściej zadawane pytania",
+          "items": [
+            {
+              "question": "Czym jest wyróżnik w równaniu kwadratowym?",
+              "answer": "Wyróżnik to b² − 4ac. Określa liczbę i typ pierwiastków: dodatni daje dwa pierwiastki rzeczywiste, zero jeden podwójny, a ujemny dwa pierwiastki zespolone."
+            },
+            {
+              "question": "Co jeśli a = 0?",
+              "answer": "Gdy a = 0, równanie nie jest już kwadratowe. Staje się liniowe (bx + c = 0). Kalkulator obsługuje ten przypadek i podaje pierwiastek liniowy, jeśli istnieje."
+            },
+            {
+              "question": "Czy kalkulator pokazuje pierwiastki zespolone?",
+              "answer": "Tak. Gdy wyróżnik jest ujemny, kalkulator zwraca pierwiastki zespolone w postaci a + bi."
+            },
+            {
+              "question": "Czy potrzebuję ułamków czy liczb dziesiętnych?",
+              "answer": "Możesz wprowadzać liczby całkowite lub dziesiętne. Kalkulator zwraca pierwiastki numeryczne i zaokrągla je do praktycznej liczby miejsc."
+            },
+            {
+              "question": "Czy ten kalkulator równań kwadratowych jest darmowy?",
+              "answer": "Tak, korzystanie z niego jest całkowicie darmowe i nie wymaga rejestracji."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "squareRoot": "Kalkulator Pierwiastka Kwadratowego",
+          "squareRootDesc": "Oblicz pierwiastek i zobacz wynik dodatni i ujemny",
+          "percentage": "Kalkulator Procentów",
+          "percentageDesc": "Oblicz wartości procentowe, zmianę i relacje procentowe",
+          "average": "Kalkulator Średniej",
+          "averageDesc": "Oblicz średnią, sumę i liczbę elementów"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Kalkulatory Matematyczne",
       "description": "Przeglądaj naszą kolekcję kalkulatorów matematycznych dla wszystkich potrzeb obliczeniowych",

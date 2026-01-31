@@ -654,6 +654,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "Kvadratisk Ligning-beregner",
+      "description": "Løs kvadratiske ligninger og få reelle eller komplekse rødder med det samme.",
+      "coefficientA": "Koefficient a",
+      "coefficientB": "Koefficient b",
+      "coefficientC": "Koefficient c",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "status": "Status",
+      "discriminant": "Diskriminant (b² − 4ac)",
+      "root": "Rod",
+      "root1": "Rod x1",
+      "root2": "Rod x2",
+      "linearEquation": "Lineær ligning (a = 0)",
+      "realRoots": "Reelle rødder",
+      "complexRoots": "Komplekse rødder",
+      "noSolution": "Ingen løsning",
+      "infiniteSolutions": "Uendeligt mange løsninger",
+      "errorInvalid": "Indtast gyldige tal for a, b og c.",
+      "seo": {
+        "title": "Kvadratisk Ligning-beregner – løs ax² + bx + c = 0",
+        "description": "Gratis beregner til kvadratiske ligninger. Find reelle eller komplekse rødder, beregn diskriminanten og løs ax² + bx + c = 0 med det samme.",
+        "keywords": "kvadratisk ligning beregner, abc-formel, løs kvadratiske ligninger, diskriminant, rødder, ax2 bx c, komplekse rødder, matematisk beregner",
+        "content": {
+          "heading": "Sådan løser du en kvadratisk ligning",
+          "paragraph1": "En kvadratisk ligning har formen ax² + bx + c = 0, hvor a, b og c er konstanter og a ≠ 0. Kvadratiske ligninger forekommer i algebra, fysik, finans og geometri. Løsningerne (rødderne) er de x‑værdier, hvor parablen skærer x-aksen. Diskriminanten (b² − 4ac) bestemmer typen af rødder.",
+          "paragraph2": "Standardformlen er x = (-b ± √(b² − 4ac)) / (2a). Hvis diskriminanten er positiv, findes to reelle rødder. Hvis den er nul, findes én dobbeltrod. Hvis den er negativ, findes to komplekse konjugerede rødder.",
+          "paragraph3": "Indtast koefficienterne a, b og c og klik på Beregn. Værktøjet beregner diskriminanten og viser rødderne. Decimaler understøttes, og komplekse rødder vises som a + bi.",
+          "paragraph4": "Hvis a er nul, bliver ligningen lineær (bx + c = 0). Beregneren registrerer dette automatisk og giver den lineære løsning eller oplyser, at der ingen eller uendeligt mange løsninger er.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "For a = 1, b = -3, c = 2 er ligningen x² − 3x + 2 = 0 og rødderne er x1 = 2 og x2 = 1. For a = 1, b = 2, c = 5 er diskriminanten -16, så rødderne er komplekse: x = -1 ± 2i."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er diskriminanten i en kvadratisk ligning?",
+              "answer": "Diskriminanten er b² − 4ac. Den bestemmer antal og type rødder: positiv giver to reelle rødder, nul giver en dobbeltrod, og negativ giver to komplekse rødder."
+            },
+            {
+              "question": "Hvad sker der hvis a = 0?",
+              "answer": "Hvis a = 0, er ligningen ikke længere kvadratisk men lineær (bx + c = 0). Beregneren håndterer dette og returnerer den lineære rod, hvis den findes."
+            },
+            {
+              "question": "Viser beregneren komplekse rødder?",
+              "answer": "Ja. Når diskriminanten er negativ, returnerer beregneren komplekse rødder i formen a + bi."
+            },
+            {
+              "question": "Skal jeg indtaste præcise brøker eller decimaler?",
+              "answer": "Du kan indtaste heltal eller decimaler. Beregneren giver numeriske rødder og afrunder til et praktisk antal decimaler."
+            },
+            {
+              "question": "Er denne beregner gratis?",
+              "answer": "Ja, den er helt gratis og kræver ingen registrering."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Regnere",
+          "squareRoot": "Kvadratrod-beregner",
+          "squareRootDesc": "Beregn kvadratrødder og se positive og negative resultater",
+          "percentage": "Procentregner",
+          "percentageDesc": "Beregn procenter, procentændring og procentforhold",
+          "average": "Gennemsnitsregner",
+          "averageDesc": "Beregn gennemsnit, sum og antal tal"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematiske Lommeregnere",
       "description": "Gennemse vores samling matematiske lommeregnere til alle dine beregningsbehov",

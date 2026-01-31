@@ -654,6 +654,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "二次方程计算器",
+      "description": "快速求解二次方程，得到实数或复数根。",
+      "coefficientA": "系数 a",
+      "coefficientB": "系数 b",
+      "coefficientC": "系数 c",
+      "calculate": "计算",
+      "reset": "重置",
+      "result": "结果",
+      "status": "状态",
+      "discriminant": "判别式 (b² − 4ac)",
+      "root": "根",
+      "root1": "根 x1",
+      "root2": "根 x2",
+      "linearEquation": "一次方程 (a = 0)",
+      "realRoots": "实数根",
+      "complexRoots": "复数根",
+      "noSolution": "无解",
+      "infiniteSolutions": "无穷多解",
+      "errorInvalid": "请输入 a、b、c 的有效数字。",
+      "seo": {
+        "title": "二次方程计算器 – 求解 ax² + bx + c = 0",
+        "description": "免费的二次方程计算器。求出实数或复数根，计算判别式，并快速解 ax² + bx + c = 0。",
+        "keywords": "二次方程计算器, 二次公式, 解二次方程, 判别式, 根, ax2 bx c, 复数根, 数学计算器",
+        "content": {
+          "heading": "如何求解二次方程",
+          "paragraph1": "二次方程的形式为 ax² + bx + c = 0，其中 a、b、c 为常数且 a ≠ 0。二次方程广泛出现在代数、物理、金融和几何中。解（根）是抛物线与 x 轴相交时的 x 值。判别式 (b² − 4ac) 用于判断根的类型。",
+          "paragraph2": "标准公式为 x = (-b ± √(b² − 4ac)) / (2a)。判别式为正时有两个实数根，为零时有一个重根，为负时有两个共轭复数根。",
+          "paragraph3": "输入系数 a、b、c 并点击“计算”。工具会计算判别式并显示根。支持小数输入，复数根以 a + bi 形式显示。",
+          "paragraph4": "当 a = 0 时，方程变为一次方程 (bx + c = 0)。计算器会自动识别并给出一次解，或提示无解/无穷多解。",
+          "exampleHeading": "示例",
+          "exampleText": "当 a = 1、b = -3、c = 2 时，方程为 x² − 3x + 2 = 0，根为 x1 = 2、x2 = 1。当 a = 1、b = 2、c = 5 时，判别式为 -16，因此根为复数：x = -1 ± 2i。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {
+              "question": "什么是判别式？",
+              "answer": "判别式为 b² − 4ac。它决定根的数量与类型：正数有两个实根，零有一个重根，负数有两个复根。"
+            },
+            {
+              "question": "如果 a = 0 会怎样？",
+              "answer": "若 a = 0，方程不再是二次方程而是一次方程 (bx + c = 0)。计算器会处理此情况并给出一次解（如果存在）。"
+            },
+            {
+              "question": "计算器会显示复数根吗？",
+              "answer": "会。当判别式为负时，计算器会以 a + bi 形式显示复数根。"
+            },
+            {
+              "question": "需要输入分数还是小数？",
+              "answer": "可以输入整数或小数。计算器会给出数值解并进行合理的小数位数四舍五入。"
+            },
+            {
+              "question": "这个计算器免费吗？",
+              "answer": "是的，完全免费，无需注册。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "squareRoot": "平方根计算器",
+          "squareRootDesc": "计算平方根并查看正负结果",
+          "percentage": "百分比计算器",
+          "percentageDesc": "计算百分比、百分比变化和百分比关系",
+          "average": "平均值计算器",
+          "averageDesc": "计算平均值、总和与数量"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "数学计算器",
       "description": "浏览我们的数学计算器集合，满足您的所有计算需求",

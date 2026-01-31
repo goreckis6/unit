@@ -654,6 +654,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "Rekenmachine voor Kwadratische Vergelijkingen",
+      "description": "Los kwadratische vergelijkingen op en krijg direct reële of complexe wortels.",
+      "coefficientA": "Coëfficiënt a",
+      "coefficientB": "Coëfficiënt b",
+      "coefficientC": "Coëfficiënt c",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "status": "Status",
+      "discriminant": "Discriminant (b² − 4ac)",
+      "root": "Wortel",
+      "root1": "Wortel x1",
+      "root2": "Wortel x2",
+      "linearEquation": "Lineaire vergelijking (a = 0)",
+      "realRoots": "Reële wortels",
+      "complexRoots": "Complexe wortels",
+      "noSolution": "Geen oplossing",
+      "infiniteSolutions": "Oneindig veel oplossingen",
+      "errorInvalid": "Voer geldige getallen in voor a, b en c.",
+      "seo": {
+        "title": "Rekenmachine voor Kwadratische Vergelijkingen – los ax² + bx + c = 0 op",
+        "description": "Gratis rekenmachine voor kwadratische vergelijkingen. Vind reële of complexe wortels, bereken de discriminant en los ax² + bx + c = 0 direct op.",
+        "keywords": "kwadratische vergelijking rekenmachine, abc-formule, kwadratische vergelijkingen oplossen, discriminant, wortels, ax2 bx c, complexe wortels, wiskunde rekenmachine",
+        "content": {
+          "heading": "Hoe een kwadratische vergelijking op te lossen",
+          "paragraph1": "Een kwadratische vergelijking heeft de vorm ax² + bx + c = 0, waarbij a, b en c constanten zijn en a ≠ 0. Kwadratische vergelijkingen komen voor in algebra, natuurkunde, financiën en geometrie. De oplossingen (wortels) zijn de x‑waarden waar de parabool de x‑as snijdt. De discriminant (b² − 4ac) bepaalt het type wortels.",
+          "paragraph2": "De standaardformule is x = (-b ± √(b² − 4ac)) / (2a). Is de discriminant positief, dan zijn er twee reële wortels. Is hij nul, dan is er één dubbele wortel. Is hij negatief, dan zijn er twee complexe geconjugeerde wortels.",
+          "paragraph3": "Voer de coëfficiënten a, b en c in en klik op Berekenen. De tool berekent de discriminant en toont de wortels. Decimalen worden ondersteund en complexe wortels worden weergegeven als a + bi.",
+          "paragraph4": "Als a nul is, wordt de vergelijking lineair (bx + c = 0). De rekenmachine herkent dit automatisch en geeft de lineaire oplossing of meldt geen of oneindig veel oplossingen.",
+          "exampleHeading": "Voorbeeld",
+          "exampleText": "Voor a = 1, b = -3, c = 2 is de vergelijking x² − 3x + 2 = 0 en zijn de wortels x1 = 2 en x2 = 1. Voor a = 1, b = 2, c = 5 is de discriminant -16, dus de wortels zijn complex: x = -1 ± 2i."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            {
+              "question": "Wat is de discriminant in een kwadratische vergelijking?",
+              "answer": "De discriminant is b² − 4ac. Die bepaalt het aantal en type wortels: positief geeft twee reële wortels, nul geeft één dubbele wortel en negatief geeft twee complexe wortels."
+            },
+            {
+              "question": "Wat gebeurt er als a = 0?",
+              "answer": "Als a = 0 is de vergelijking niet meer kwadratisch maar lineair (bx + c = 0). De rekenmachine behandelt dit en geeft de lineaire wortel als die bestaat."
+            },
+            {
+              "question": "Toont de rekenmachine complexe wortels?",
+              "answer": "Ja. Wanneer de discriminant negatief is, geeft de rekenmachine complexe wortels in de vorm a + bi."
+            },
+            {
+              "question": "Moet ik exacte breuken of decimalen invoeren?",
+              "answer": "Je kunt gehele getallen of decimalen invoeren. De rekenmachine geeft numerieke wortels en rondt af op een praktisch aantal decimalen."
+            },
+            {
+              "question": "Is deze rekenmachine gratis?",
+              "answer": "Ja, hij is volledig gratis en vereist geen registratie."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde Rekenmachines",
+          "squareRoot": "Vierkantswortel Rekenmachine",
+          "squareRootDesc": "Bereken vierkantswortels en zie positieve en negatieve resultaten",
+          "percentage": "Percentage Rekenmachine",
+          "percentageDesc": "Bereken percentages, procentuele verandering en procentuele relaties",
+          "average": "Gemiddelde Rekenmachine",
+          "averageDesc": "Bereken gemiddelde, som en aantal getallen"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Wiskundige Rekenmachines",
       "description": "Blader door onze collectie wiskundige rekenmachines voor al uw rekenbehoeften",

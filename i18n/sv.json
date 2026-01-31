@@ -684,6 +684,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "Kalkylator för Andragradsekvation",
+      "description": "Lös andragradsekvationer och få reella eller komplexa rötter direkt.",
+      "coefficientA": "Koefficient a",
+      "coefficientB": "Koefficient b",
+      "coefficientC": "Koefficient c",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "status": "Status",
+      "discriminant": "Diskriminant (b² − 4ac)",
+      "root": "Rot",
+      "root1": "Rot x1",
+      "root2": "Rot x2",
+      "linearEquation": "Linjär ekvation (a = 0)",
+      "realRoots": "Reella rötter",
+      "complexRoots": "Komplexa rötter",
+      "noSolution": "Ingen lösning",
+      "infiniteSolutions": "Oändligt många lösningar",
+      "errorInvalid": "Ange giltiga tal för a, b och c.",
+      "seo": {
+        "title": "Kalkylator för Andragradsekvation – lös ax² + bx + c = 0",
+        "description": "Gratis kalkylator för andragradsekvationer. Hitta reella eller komplexa rötter, beräkna diskriminanten och lös ax² + bx + c = 0 direkt.",
+        "keywords": "andragradsekvation kalkylator, pq-formeln, lösa andragradsekvationer, diskriminant, rötter, ax2 bx c, komplexa rötter, matematikkalkylator",
+        "content": {
+          "heading": "Så löser du en andragradsekvation",
+          "paragraph1": "En andragradsekvation har formen ax² + bx + c = 0, där a, b och c är konstanter och a ≠ 0. Andragradsekvationer förekommer i algebra, fysik, finans och geometri. Lösningarna (rötterna) är de x‑värden där parabeln skär x‑axeln. Diskriminanten (b² − 4ac) avgör typen av rötter.",
+          "paragraph2": "Standardformeln är x = (-b ± √(b² − 4ac)) / (2a). Om diskriminanten är positiv finns två reella rötter. Om den är noll finns en dubbelrot. Om den är negativ finns två komplexa konjugerade rötter.",
+          "paragraph3": "Ange koefficienterna a, b och c och klicka på Beräkna. Verktyget beräknar diskriminanten och visar rötterna. Decimaler stöds och komplexa rötter visas som a + bi.",
+          "paragraph4": "Om a är noll blir ekvationen linjär (bx + c = 0). Kalkylatorn känner automatiskt igen detta och returnerar den linjära lösningen eller meddelar att det inte finns någon eller oändligt många lösningar.",
+          "exampleHeading": "Exempel",
+          "exampleText": "För a = 1, b = -3, c = 2 är ekvationen x² − 3x + 2 = 0 och rötterna är x1 = 2 och x2 = 1. För a = 1, b = 2, c = 5 är diskriminanten -16, så rötterna är komplexa: x = -1 ± 2i."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är diskriminanten i en andragradsekvation?",
+              "answer": "Diskriminanten är b² − 4ac. Den avgör antal och typ av rötter: positiv ger två reella rötter, noll ger en dubbelrot och negativ ger två komplexa rötter."
+            },
+            {
+              "question": "Vad händer om a = 0?",
+              "answer": "Om a = 0 är ekvationen inte längre andragrad utan linjär (bx + c = 0). Kalkylatorn hanterar detta och ger den linjära roten om den finns."
+            },
+            {
+              "question": "Visar kalkylatorn komplexa rötter?",
+              "answer": "Ja. När diskriminanten är negativ returneras komplexa rötter i formen a + bi."
+            },
+            {
+              "question": "Måste jag ange exakta bråk eller decimaler?",
+              "answer": "Du kan ange heltal eller decimaler. Kalkylatorn ger numeriska rötter och avrundar till ett rimligt antal decimaler."
+            },
+            {
+              "question": "Är denna kalkylator gratis?",
+              "answer": "Ja, den är helt gratis och kräver ingen registrering."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "squareRoot": "Kvadratrot Kalkylator",
+          "squareRootDesc": "Beräkna kvadratrötter och se positiva och negativa resultat",
+          "percentage": "Procent Kalkylator",
+          "percentageDesc": "Beräkna procent, procentuell förändring och procentrelationer",
+          "average": "Genomsnitt Kalkylator",
+          "averageDesc": "Beräkna medelvärde, summa och antal tal"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematiska Kalkylatorer",
       "description": "Bläddra genom vår samling matematiska kalkylatorer för alla dina beräkningsbehov",

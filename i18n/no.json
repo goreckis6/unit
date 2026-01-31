@@ -654,6 +654,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "Kalkulator for Andregradsligning",
+      "description": "Løs andregradsligninger og få reelle eller komplekse røtter med en gang.",
+      "coefficientA": "Koefisient a",
+      "coefficientB": "Koefisient b",
+      "coefficientC": "Koefisient c",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "status": "Status",
+      "discriminant": "Diskriminant (b² − 4ac)",
+      "root": "Rot",
+      "root1": "Rot x1",
+      "root2": "Rot x2",
+      "linearEquation": "Lineær ligning (a = 0)",
+      "realRoots": "Reelle røtter",
+      "complexRoots": "Komplekse røtter",
+      "noSolution": "Ingen løsning",
+      "infiniteSolutions": "Uendelig mange løsninger",
+      "errorInvalid": "Skriv inn gyldige tall for a, b og c.",
+      "seo": {
+        "title": "Kalkulator for Andregradsligning – løs ax² + bx + c = 0",
+        "description": "Gratis kalkulator for andregradsligninger. Finn reelle eller komplekse røtter, beregn diskriminanten og løs ax² + bx + c = 0 umiddelbart.",
+        "keywords": "andregradsligning kalkulator, abc-formel, løse andregradsligninger, diskriminant, røtter, ax2 bx c, komplekse røtter, matematikk kalkulator",
+        "content": {
+          "heading": "Slik løser du en andregradsligning",
+          "paragraph1": "En andregradsligning har formen ax² + bx + c = 0, der a, b og c er konstanter og a ≠ 0. Andregradsligninger finnes i algebra, fysikk, finans og geometri. Løsningene (røttene) er x‑verdiene der parabelen krysser x-aksen. Diskriminanten (b² − 4ac) bestemmer typen røtter.",
+          "paragraph2": "Standardformelen er x = (-b ± √(b² − 4ac)) / (2a). Er diskriminanten positiv, finnes to reelle røtter. Er den null, finnes en dobbelt rot. Er den negativ, finnes to komplekse konjugerte røtter.",
+          "paragraph3": "Skriv inn koeffisientene a, b og c og klikk på Beregn. Verktøyet beregner diskriminanten og viser røttene. Desimaltall støttes, og komplekse røtter vises som a + bi.",
+          "paragraph4": "Hvis a er null, blir ligningen lineær (bx + c = 0). Kalkulatoren oppdager dette automatisk og gir den lineære løsningen eller melder om ingen eller uendelig mange løsninger.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "For a = 1, b = -3, c = 2 er ligningen x² − 3x + 2 = 0 og røttene er x1 = 2 og x2 = 1. For a = 1, b = 2, c = 5 er diskriminanten -16, så røttene er komplekse: x = -1 ± 2i."
+        },
+        "faq": {
+          "heading": "Ofte Stilte Spørsmål",
+          "items": [
+            {
+              "question": "Hva er diskriminanten i en andregradsligning?",
+              "answer": "Diskriminanten er b² − 4ac. Den bestemmer antall og type røtter: positiv gir to reelle røtter, null gir en dobbelt rot og negativ gir to komplekse røtter."
+            },
+            {
+              "question": "Hva skjer hvis a = 0?",
+              "answer": "Hvis a = 0 er ligningen ikke lenger andregrad, men lineær (bx + c = 0). Kalkulatoren håndterer dette og gir den lineære roten hvis den finnes."
+            },
+            {
+              "question": "Viser kalkulatoren komplekse røtter?",
+              "answer": "Ja. Når diskriminanten er negativ, returnerer kalkulatoren komplekse røtter i formen a + bi."
+            },
+            {
+              "question": "Må jeg bruke nøyaktige brøker eller desimaler?",
+              "answer": "Du kan bruke heltall eller desimaler. Kalkulatoren gir numeriske røtter og avrunder til et praktisk antall desimaler."
+            },
+            {
+              "question": "Er denne kalkulatoren gratis?",
+              "answer": "Ja, den er helt gratis og krever ingen registrering."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte Kalkulatorer",
+          "squareRoot": "Kvadratrot Kalkulator",
+          "squareRootDesc": "Beregn kvadratrøtter og se positive og negative resultater",
+          "percentage": "Prosent Kalkulator",
+          "percentageDesc": "Beregn prosenter, prosentendring og prosentforhold",
+          "average": "Gjennomsnitt Kalkulator",
+          "averageDesc": "Beregn gjennomsnitt, sum og antall tall"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematiske Kalkulatorer",
       "description": "Bla gjennom vår samling matematiske kalkulatorer for alle dine beregningsbehov",

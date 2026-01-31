@@ -19,6 +19,7 @@ export async function GET() {
     '/calculators/math/arcsin',
     '/calculators/math/arctan',
     '/calculators/math/average',
+    '/calculators/math/quadratic-equation',
     '/calculators/math/square-root',
     '/calculators/math/roots',
     '/calculators/math/polynomial-remainder',

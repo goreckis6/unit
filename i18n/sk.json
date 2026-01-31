@@ -654,6 +654,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "Kalkulačka Kvadratickej Rovnice",
+      "description": "Riešte kvadratické rovnice a získajte reálne alebo komplexné korene okamžite.",
+      "coefficientA": "Koeficient a",
+      "coefficientB": "Koeficient b",
+      "coefficientC": "Koeficient c",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "status": "Stav",
+      "discriminant": "Diskriminant (b² − 4ac)",
+      "root": "Koreň",
+      "root1": "Koreň x1",
+      "root2": "Koreň x2",
+      "linearEquation": "Lineárna rovnica (a = 0)",
+      "realRoots": "Reálne korene",
+      "complexRoots": "Komplexné korene",
+      "noSolution": "Žiadne riešenie",
+      "infiniteSolutions": "Nekonečne veľa riešení",
+      "errorInvalid": "Zadajte platné čísla pre a, b a c.",
+      "seo": {
+        "title": "Kalkulačka Kvadratickej Rovnice – riešte ax² + bx + c = 0",
+        "description": "Bezplatná kalkulačka kvadratických rovníc. Nájdite reálne alebo komplexné korene, vypočítajte diskriminant a riešte ax² + bx + c = 0 okamžite.",
+        "keywords": "kalkulačka kvadratickej rovnice, kvadratický vzorec, riešenie kvadratických rovníc, diskriminant, korene, ax2 bx c, komplexné korene, matematická kalkulačka",
+        "content": {
+          "heading": "Ako riešiť kvadratickú rovnicu",
+          "paragraph1": "Kvadratická rovnica má tvar ax² + bx + c = 0, kde a, b a c sú konštanty a a ≠ 0. Kvadratické rovnice sa vyskytujú v algebre, fyzike, financiách aj geometrii. Riešenia (korene) sú hodnoty x, kde parabola pretína os x. Diskriminant (b² − 4ac) určuje typ koreňov.",
+          "paragraph2": "Štandardný vzorec je x = (-b ± √(b² − 4ac)) / (2a). Ak je diskriminant kladný, rovnica má dva reálne korene. Ak je nulový, má jeden dvojnásobný koreň. Ak je záporný, má dva komplexné združené korene.",
+          "paragraph3": "Zadajte koeficienty a, b a c a kliknite na Vypočítať. Nástroj vypočíta diskriminant a zobrazí korene. Podporuje desatinné čísla a komplexné korene zobrazuje vo forme a + bi.",
+          "paragraph4": "Ak je a nulové, rovnica sa stáva lineárnou (bx + c = 0). Kalkulačka tento prípad automaticky rozpozná a vráti lineárne riešenie alebo oznámi žiadne či nekonečne veľa riešení.",
+          "exampleHeading": "Príklad",
+          "exampleText": "Pre a = 1, b = -3, c = 2 je rovnica x² − 3x + 2 = 0 a korene sú x1 = 2 a x2 = 1. Pre a = 1, b = 2, c = 5 je diskriminant -16, takže korene sú komplexné: x = -1 ± 2i."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {
+              "question": "Čo je diskriminant pri kvadratickej rovnici?",
+              "answer": "Diskriminant je b² − 4ac. Určuje počet a typ koreňov: kladný dá dva reálne korene, nulový jeden dvojnásobný koreň a záporný dva komplexné korene."
+            },
+            {
+              "question": "Čo ak a = 0?",
+              "answer": "Ak a = 0, rovnica už nie je kvadratická, ale lineárna (bx + c = 0). Kalkulačka tento prípad spracuje a vráti lineárny koreň, ak existuje."
+            },
+            {
+              "question": "Zobrazuje kalkulačka komplexné korene?",
+              "answer": "Áno. Keď je diskriminant záporný, kalkulačka vráti komplexné korene vo forme a + bi."
+            },
+            {
+              "question": "Musím zadávať presné zlomky alebo desatinné čísla?",
+              "answer": "Môžete zadávať celé alebo desatinné čísla. Kalkulačka vráti číselné korene a zaokrúhli ich na rozumný počet desatinných miest."
+            },
+            {
+              "question": "Je táto kalkulačka zdarma?",
+              "answer": "Áno, je úplne zdarma a nevyžaduje registráciu."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace Kalkulačky",
+          "squareRoot": "Kalkulačka Druhej Odmocniny",
+          "squareRootDesc": "Vypočítajte druhú odmocninu a zobrazte kladné aj záporné výsledky",
+          "percentage": "Kalkulačka Percent",
+          "percentageDesc": "Vypočítajte percentá, percentuálnu zmenu a percentuálne vzťahy",
+          "average": "Priemer Kalkulačka",
+          "averageDesc": "Vypočítajte priemer, súčet a počet čísel"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematické Kalkulačky",
       "description": "Prechádzajte našou zbierkou matematických kalkulačiek pre všetky vaše výpočtové potreby",

@@ -684,6 +684,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "Toisen Asteen Yhtälön Laskin",
+      "description": "Ratkaise toisen asteen yhtälöt ja saat reaaliset tai kompleksiset juuret heti.",
+      "coefficientA": "Kerroin a",
+      "coefficientB": "Kerroin b",
+      "coefficientC": "Kerroin c",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "status": "Tila",
+      "discriminant": "Diskriminantti (b² − 4ac)",
+      "root": "Juuri",
+      "root1": "Juuri x1",
+      "root2": "Juuri x2",
+      "linearEquation": "Lineaarinen yhtälö (a = 0)",
+      "realRoots": "Reaaliset juuret",
+      "complexRoots": "Kompleksiset juuret",
+      "noSolution": "Ei ratkaisua",
+      "infiniteSolutions": "Äärettömästi ratkaisuja",
+      "errorInvalid": "Syötä kelvolliset luvut a, b ja c.",
+      "seo": {
+        "title": "Toisen Asteen Yhtälön Laskin – ratkaise ax² + bx + c = 0",
+        "description": "Ilmainen toisen asteen yhtälön laskin. Löydä reaaliset tai kompleksiset juuret, laske diskriminantti ja ratkaise ax² + bx + c = 0 heti.",
+        "keywords": "toisen asteen yhtälön laskin, abc-kaava, ratkaise toisen asteen yhtälö, diskriminantti, juuret, ax2 bx c, kompleksiset juuret, matematiikkalaskin",
+        "content": {
+          "heading": "Näin ratkaiset toisen asteen yhtälön",
+          "paragraph1": "Toisen asteen yhtälö on muotoa ax² + bx + c = 0, missä a, b ja c ovat vakioita ja a ≠ 0. Toisen asteen yhtälöitä esiintyy algebrassa, fysiikassa, taloudessa ja geometriassa. Ratkaisut (juuret) ovat x‑arvot, joissa paraabeli leikkaa x-akselin. Diskriminantti (b² − 4ac) kertoo juurten tyypin.",
+          "paragraph2": "Vakiokaava on x = (-b ± √(b² − 4ac)) / (2a). Jos diskriminantti on positiivinen, juuria on kaksi reaalista. Jos se on nolla, on yksi kaksoisjuuri. Jos se on negatiivinen, on kaksi kompleksikonjugaattia.",
+          "paragraph3": "Syötä kertoimet a, b ja c ja klikkaa Laske. Työkalu laskee diskriminantin ja näyttää juuret. Desimaalit ovat tuettuja ja kompleksiset juuret näytetään muodossa a + bi.",
+          "paragraph4": "Jos a on nolla, yhtälöstä tulee lineaarinen (bx + c = 0). Laskin tunnistaa tämän automaattisesti ja antaa lineaarisen ratkaisun tai ilmoittaa, että ratkaisuja ei ole tai niitä on äärettömästi.",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "Kun a = 1, b = -3, c = 2, yhtälö on x² − 3x + 2 = 0 ja juuret ovat x1 = 2 ja x2 = 1. Kun a = 1, b = 2, c = 5, diskriminantti on -16, joten juuret ovat kompleksiset: x = -1 ± 2i."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on diskriminantti toisen asteen yhtälössä?",
+              "answer": "Diskriminantti on b² − 4ac. Se määrää juurten määrän ja tyypin: positiivinen antaa kaksi reaalista juurta, nolla yhden kaksoisjuuren ja negatiivinen kaksi kompleksista juurta."
+            },
+            {
+              "question": "Mitä jos a = 0?",
+              "answer": "Jos a = 0, yhtälö ei ole enää toisen asteen vaan lineaarinen (bx + c = 0). Laskin käsittelee tämän ja palauttaa lineaarisen juuren, jos se on olemassa."
+            },
+            {
+              "question": "Näyttääkö laskin kompleksiset juuret?",
+              "answer": "Kyllä. Kun diskriminantti on negatiivinen, laskin palauttaa kompleksiset juuret muodossa a + bi."
+            },
+            {
+              "question": "Pitääkö syöttää tarkkoja murtolukuja tai desimaaleja?",
+              "answer": "Voit syöttää kokonaislukuja tai desimaaleja. Laskin antaa numeeriset juuret ja pyöristää ne järkevään desimaalimäärään."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä, se on täysin ilmainen eikä vaadi rekisteröitymistä."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "squareRoot": "Neliöjuuren Laskin",
+          "squareRootDesc": "Laske neliöjuuret ja näe positiiviset ja negatiiviset tulokset",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Laske prosentit, prosenttimuutos ja prosenttisuhteet",
+          "average": "Keskiarvon Laskin",
+          "averageDesc": "Laske keskiarvo, summa ja lukumäärä"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matemaattiset Laskimet",
       "description": "Selaa kokoelmaamme matemaattisia laskimia kaikille laskentatarpeillesi",

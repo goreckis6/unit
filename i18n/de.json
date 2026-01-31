@@ -654,6 +654,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "Quadratische Gleichung Rechner",
+      "description": "Löse quadratische Gleichungen und erhalte reale oder komplexe Lösungen sofort.",
+      "coefficientA": "Koeffizient a",
+      "coefficientB": "Koeffizient b",
+      "coefficientC": "Koeffizient c",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "status": "Status",
+      "discriminant": "Diskriminante (b² − 4ac)",
+      "root": "Lösung",
+      "root1": "Lösung x1",
+      "root2": "Lösung x2",
+      "linearEquation": "Lineare Gleichung (a = 0)",
+      "realRoots": "Reelle Lösungen",
+      "complexRoots": "Komplexe Lösungen",
+      "noSolution": "Keine Lösung",
+      "infiniteSolutions": "Unendlich viele Lösungen",
+      "errorInvalid": "Bitte gültige Zahlen für a, b und c eingeben.",
+      "seo": {
+        "title": "Quadratische Gleichung Rechner – ax² + bx + c = 0 lösen",
+        "description": "Kostenloser Rechner für quadratische Gleichungen. Finde reale oder komplexe Lösungen, berechne die Diskriminante und löse ax² + bx + c = 0 sofort.",
+        "keywords": "quadratische gleichung rechner, mitternachtsformel, quadratische gleichungen lösen, diskriminante rechner, nullstellen, ax2 bx c, komplexe lösungen, mathematik rechner",
+        "content": {
+          "heading": "So löst man eine quadratische Gleichung",
+          "paragraph1": "Eine quadratische Gleichung hat die Form ax² + bx + c = 0, wobei a, b und c Konstanten sind und a ≠ 0. Quadratische Gleichungen kommen in Algebra, Physik, Finanzen und Geometrie vor. Die Lösungen (Nullstellen) sind die x‑Werte, an denen die Parabel die x‑Achse schneidet. Die Diskriminante (b² − 4ac) bestimmt den Typ der Lösungen.",
+          "paragraph2": "Die Standardformel lautet x = (-b ± √(b² − 4ac)) / (2a). Ist die Diskriminante positiv, gibt es zwei reelle Lösungen. Bei Null entsteht eine doppelte reelle Lösung. Bei negativer Diskriminante gibt es zwei komplexe konjugierte Lösungen.",
+          "paragraph3": "Gib die Koeffizienten a, b und c ein und klicke auf Berechnen. Das Tool berechnet die Diskriminante und zeigt die Lösungen an. Dezimalwerte werden unterstützt, komplexe Lösungen werden im Format a + bi ausgegeben.",
+          "paragraph4": "Wenn a = 0, ist die Gleichung nicht mehr quadratisch, sondern linear (bx + c = 0). Der Rechner erkennt diesen Fall automatisch und liefert die lineare Lösung oder meldet keine bzw. unendlich viele Lösungen.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "Für a = 1, b = -3, c = 2 lautet die Gleichung x² − 3x + 2 = 0 und die Lösungen sind x1 = 2 und x2 = 1. Für a = 1, b = 2, c = 5 ist die Diskriminante -16, daher sind die Lösungen komplex: x = -1 ± 2i."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist die Diskriminante einer quadratischen Gleichung?",
+              "answer": "Die Diskriminante ist b² − 4ac. Sie bestimmt Anzahl und Typ der Lösungen: positiv ergibt zwei reelle Lösungen, null eine doppelte Lösung und negativ zwei komplexe Lösungen."
+            },
+            {
+              "question": "Was passiert, wenn a = 0?",
+              "answer": "Dann ist die Gleichung nicht quadratisch, sondern linear (bx + c = 0). Der Rechner behandelt diesen Fall und gibt die lineare Lösung aus, falls vorhanden."
+            },
+            {
+              "question": "Zeigt der Rechner komplexe Lösungen an?",
+              "answer": "Ja. Bei negativer Diskriminante werden komplexe Lösungen im Format a + bi angezeigt."
+            },
+            {
+              "question": "Muss ich Brüche oder Dezimalzahlen eingeben?",
+              "answer": "Du kannst ganze Zahlen oder Dezimalzahlen eingeben. Der Rechner liefert numerische Lösungen und rundet auf eine sinnvolle Anzahl Dezimalstellen."
+            },
+            {
+              "question": "Ist dieser Rechner kostenlos?",
+              "answer": "Ja, er ist vollständig kostenlos und erfordert keine Registrierung."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "squareRoot": "Quadratwurzelrechner",
+          "squareRootDesc": "Berechne Quadratwurzeln und sieh positive und negative Ergebnisse",
+          "percentage": "Prozentrechner",
+          "percentageDesc": "Berechne Prozente, prozentuale Änderungen und Prozentbeziehungen",
+          "average": "Durchschnittsrechner",
+          "averageDesc": "Berechne Mittelwert, Summe und Anzahl von Zahlen"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Mathematik-Rechner",
       "description": "Durchsuchen Sie unsere Sammlung von Mathematik-Rechnern für alle Ihre Berechnungsanforderungen",

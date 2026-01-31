@@ -65,6 +65,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'quadratic-equation',
+    titleKey: 'quadraticEquation.title',
+    descKey: 'quadraticEquation.description',
+    path: '/calculators/math/quadratic-equation',
+    category: 'math',
+  },
+  {
     id: 'percentage',
     titleKey: 'percentage.title',
     descKey: 'percentage.description',

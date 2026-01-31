@@ -654,6 +654,75 @@
         }
       }
     },
+    "quadraticEquation": {
+      "title": "Másodfokú Egyenlet Kalkulátor",
+      "description": "Oldj meg másodfokú egyenleteket, és kapj valós vagy komplex gyököket azonnal.",
+      "coefficientA": "a együttható",
+      "coefficientB": "b együttható",
+      "coefficientC": "c együttható",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "status": "Állapot",
+      "discriminant": "Diszkrimináns (b² − 4ac)",
+      "root": "Gyök",
+      "root1": "Gyök x1",
+      "root2": "Gyök x2",
+      "linearEquation": "Lineáris egyenlet (a = 0)",
+      "realRoots": "Valós gyökök",
+      "complexRoots": "Komplex gyökök",
+      "noSolution": "Nincs megoldás",
+      "infiniteSolutions": "Végtelen sok megoldás",
+      "errorInvalid": "Adj meg érvényes számokat az a, b és c értékéhez.",
+      "seo": {
+        "title": "Másodfokú Egyenlet Kalkulátor – oldd meg ax² + bx + c = 0",
+        "description": "Ingyenes másodfokú egyenlet kalkulátor. Találd meg a valós vagy komplex gyököket, számítsd ki a diszkriminánst és oldd meg az ax² + bx + c = 0 egyenletet azonnal.",
+        "keywords": "másodfokú egyenlet kalkulátor, másodfokú képlet, másodfokú egyenlet megoldása, diszkrimináns, gyökök, ax2 bx c, komplex gyökök, matematikai kalkulátor",
+        "content": {
+          "heading": "Hogyan oldjunk meg egy másodfokú egyenletet",
+          "paragraph1": "A másodfokú egyenlet alakja ax² + bx + c = 0, ahol a, b és c állandók és a ≠ 0. Másodfokú egyenletek gyakran előfordulnak az algebrában, fizikában, pénzügyekben és geometriában. A megoldások (gyökök) azok az x‑értékek, ahol a parabola metszi az x-tengelyt. A diszkrimináns (b² − 4ac) a gyökök típusát mutatja.",
+          "paragraph2": "A standard képlet: x = (-b ± √(b² − 4ac)) / (2a). Ha a diszkrimináns pozitív, két valós gyök van. Ha nulla, egy kettős gyök. Ha negatív, két komplex konjugált gyök.",
+          "paragraph3": "Add meg az a, b és c együtthatókat, majd kattints a Számítás gombra. Az eszköz kiszámítja a diszkriminánst és megjeleníti a gyököket. Tizedesekkel is működik, a komplex gyököket a + bi alakban mutatja.",
+          "paragraph4": "Ha a = 0, az egyenlet lineárissá válik (bx + c = 0). A kalkulátor ezt automatikusan felismeri, és visszaadja a lineáris megoldást, vagy jelzi, hogy nincs vagy végtelen sok megoldás.",
+          "exampleHeading": "Példa",
+          "exampleText": "Ha a = 1, b = -3, c = 2, akkor az egyenlet x² − 3x + 2 = 0, a gyökök pedig x1 = 2 és x2 = 1. Ha a = 1, b = 2, c = 5, akkor a diszkrimináns -16, így a gyökök komplexek: x = -1 ± 2i."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mi a diszkrimináns a másodfokú egyenletben?",
+              "answer": "A diszkrimináns b² − 4ac. Meghatározza a gyökök számát és típusát: pozitív esetben két valós gyök, nullánál egy kettős gyök, negatívnál két komplex gyök."
+            },
+            {
+              "question": "Mi történik, ha a = 0?",
+              "answer": "Ha a = 0, az egyenlet már nem másodfokú, hanem lineáris (bx + c = 0). A kalkulátor kezeli ezt az esetet, és megadja a lineáris gyököt, ha létezik."
+            },
+            {
+              "question": "Megjeleníti a kalkulátor a komplex gyököket?",
+              "answer": "Igen. Ha a diszkrimináns negatív, a kalkulátor komplex gyököket ad a + bi alakban."
+            },
+            {
+              "question": "Pontosan kell megadnom törteket vagy tizedeseket?",
+              "answer": "Megadhatsz egész számokat vagy tizedeseket. A kalkulátor numerikus gyököket ad és ésszerű számú tizedesre kerekít."
+            },
+            {
+              "question": "Ingyenes ez a kalkulátor?",
+              "answer": "Igen, teljesen ingyenes, és nem igényel regisztrációt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Számológépek",
+          "squareRoot": "Négyzetgyök Kalkulátor",
+          "squareRootDesc": "Számolj négyzetgyököt és nézd meg a pozitív és negatív eredményeket",
+          "percentage": "Százalék Számológép",
+          "percentageDesc": "Százalékok, százalékos változás és arányok számítása",
+          "average": "Átlag Számológép",
+          "averageDesc": "Átlag, összeg és darabszám számítása"
+        }
+      }
+    },
     "mathCalculators": {
       "title": "Matematikai Számológépek",
       "description": "Böngéssze matematikai számológépeink gyűjteményét minden számítási igényére",

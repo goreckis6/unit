@@ -240,7 +240,7 @@ export function SubtractingFractionsCalculator() {
               <div className="result-label">{t('resultEquation')}</div>
               <div className="result-value-box">
                 <span className="result-value">
-                  {formatDisplayFraction(f1)} − {formatDisplayFraction(f2)} = {formatDisplayFraction(resultFraction)}
+                  {formatDisplayFraction(f1)} - {formatDisplayFraction(f2)} = {formatDisplayFraction(resultFraction)}
                 </span>
               </div>
             </div>

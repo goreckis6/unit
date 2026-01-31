@@ -9,7 +9,9 @@ interface LongDivisionStep {
   partialDividend: bigint;
   quotientDigit: bigint;
   product: bigint;
+  previousRemainder: bigint;
   remainder: bigint;
+  endIndex: number;
   nextDigit?: string;
 }
 
@@ -35,24 +37,135 @@ function parseNonNegativeBigInt(input: string): bigint | null {
 function buildLongDivisionSteps(dividend: string, divisor: bigint): LongDivisionStep[] {
   const digits = dividend.split('');
   let remainder = 0n;
+  let cursor = 0;
+  let stepIndex = 1;
+  const steps: LongDivisionStep[] = [];
 
-  return digits.map((digit, index) => {
-    const partialDividend = remainder * 10n + BigInt(digit);
-    const quotientDigit = partialDividend / divisor;
+  let partialDividend = 0n;
+  let lastDigit = digits[0] ?? '0';
+  while (cursor < digits.length && (partialDividend < divisor || cursor === 0)) {
+    const digit = digits[cursor];
+    lastDigit = digit;
+    partialDividend = partialDividend * 10n + BigInt(digit);
+    cursor += 1;
+    if (partialDividend >= divisor) break;
+  }
+
+  const firstQuotientDigit = partialDividend / divisor;
+  const firstProduct = firstQuotientDigit * divisor;
+  const firstRemainder = partialDividend - firstProduct;
+  steps.push({
+    index: stepIndex,
+    digit: lastDigit,
+    partialDividend,
+    quotientDigit: firstQuotientDigit,
+    product: firstProduct,
+    previousRemainder: remainder,
+    remainder: firstRemainder,
+    endIndex: Math.max(0, cursor - 1),
+    nextDigit: cursor < digits.length ? digits[cursor] : undefined,
+  });
+  remainder = firstRemainder;
+  stepIndex += 1;
+
+  while (cursor < digits.length) {
+    const digit = digits[cursor];
+    const previousRemainder = remainder;
+    const nextPartialDividend = remainder * 10n + BigInt(digit);
+    const quotientDigit = nextPartialDividend / divisor;
     const product = quotientDigit * divisor;
-    const newRemainder = partialDividend - product;
-    remainder = newRemainder;
+    const newRemainder = nextPartialDividend - product;
 
-    return {
-      index: index + 1,
+    steps.push({
+      index: stepIndex,
       digit,
-      partialDividend,
+      partialDividend: nextPartialDividend,
       quotientDigit,
       product,
+      previousRemainder,
       remainder: newRemainder,
-      nextDigit: index < digits.length - 1 ? digits[index + 1] : undefined,
-    };
+      endIndex: cursor,
+      nextDigit: cursor < digits.length - 1 ? digits[cursor + 1] : undefined,
+    });
+
+    remainder = newRemainder;
+    stepIndex += 1;
+    cursor += 1;
+  }
+
+  return steps;
+}
+
+function padNumberAt(value: string, rightPosition: number): string {
+  const start = Math.max(0, rightPosition - (value.length - 1));
+  return `${' '.repeat(start)}${value}`;
+}
+
+type DiagramTone = 'default' | 'result' | 'subtract' | 'remainder';
+
+interface DiagramLine {
+  key: string;
+  text: string;
+  tone: DiagramTone;
+}
+
+function buildStyledDivisionDiagram(result: LongDivisionResult): DiagramLine[] {
+  if (!result.steps.length) return [];
+
+  const dividend = result.dividend;
+  const divisor = result.divisor;
+  const quotient = result.quotient.toString();
+  const remainder = result.remainder.toString();
+  const quotientDisplay = result.remainder === 0n ? quotient : `${quotient} r ${remainder}`;
+  const indent = 2;
+  const baseWidth = Math.max(dividend.length, quotientDisplay.length);
+  const quotientStart = Math.max(indent, indent + dividend.length - quotientDisplay.length);
+  const lines: DiagramLine[] = [
+    { key: 'result', text: `${' '.repeat(quotientStart)}${quotientDisplay}`, tone: 'result' },
+    { key: 'header-rule', text: `${' '.repeat(indent)}${'-'.repeat(baseWidth)}`, tone: 'default' },
+    { key: 'header', text: `${' '.repeat(indent)}${dividend} : ${divisor}`, tone: 'default' },
+  ];
+
+  result.steps.forEach((step, index) => {
+    const rightPosition = indent + step.endIndex;
+    const partialValue = step.partialDividend.toString();
+    const productValue = step.product.toString();
+    const remainderValue = step.remainder.toString();
+
+    if (index > 0) {
+      const minLength = Math.max(1, step.previousRemainder.toString().length) + 1;
+      const paddedPartial = partialValue.padStart(minLength, '0');
+      lines.push({
+        key: `partial-${step.index}`,
+        text: padNumberAt(paddedPartial, rightPosition),
+        tone: 'default',
+      });
+    }
+
+    const productStart = rightPosition - (productValue.length - 1);
+    lines.push({
+      key: `product-${step.index}`,
+      text: `${' '.repeat(Math.max(0, productStart - 2))}- ${productValue}`,
+      tone: 'subtract',
+    });
+
+    const separatorLength = Math.max(productValue.length, partialValue.length);
+    lines.push({
+      key: `rule-${step.index}`,
+      text: padNumberAt('-'.repeat(separatorLength), rightPosition),
+      tone: 'default',
+    });
+
+    if (index === result.steps.length - 1) {
+      lines.push({
+        key: `remainder-${step.index}`,
+        text: padNumberAt(remainderValue, rightPosition),
+        tone: 'remainder',
+      });
+    }
   });
+
+  return lines;
 }
 
 export function LongDivisionCalculator() {
@@ -62,6 +175,18 @@ export function LongDivisionCalculator() {
   const [divisor, setDivisor] = useState('32');
   const [result, setResult] = useState<LongDivisionResult | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const parsedDividend = useMemo(() => parseNonNegativeBigInt(dividend), [dividend]);
+  const parsedDivisor = useMemo(() => parseNonNegativeBigInt(divisor), [divisor]);
+  const hasDividend = dividend.trim().length > 0;
+  const hasDivisor = divisor.trim().length > 0;
+  const isDividendValid = parsedDividend !== null;
+  const isDivisorValid = parsedDivisor !== null && parsedDivisor > 0n;
+  const inlineError =
+    (hasDivisor && parsedDivisor === 0n && t('errorDivisionByZero')) ||
+    (hasDivisor && parsedDivisor === null && t('errorInvalidDivisor')) ||
+    (hasDividend && parsedDividend === null && t('errorInvalidDividend')) ||
+    null;
+  const displayError = error || inlineError;
 
   const computeResult = useCallback(
     (showErrors: boolean) => {
@@ -130,6 +255,14 @@ export function LongDivisionCalculator() {
     setError(null);
   }, []);
 
+  const diagramLines = useMemo(() => (result ? buildStyledDivisionDiagram(result) : []), [result]);
+  const diagramStyles: Record<DiagramTone, React.CSSProperties> = {
+    default: { color: '#1e293b' },
+    result: { color: '#4f46e5', fontWeight: 700 },
+    subtract: { color: '#e11d48' },
+    remainder: { color: '#16a34a', fontWeight: 700 },
+  };
+
   return (
     <>
       <div className="split-view-container">
@@ -175,14 +308,19 @@ export function LongDivisionCalculator() {
               </p>
             </div>
 
-            {error && (
+            {displayError && (
               <p className="seo-paragraph" style={{ color: 'var(--error)', marginBottom: 0 }}>
-                {error}
+                {displayError}
               </p>
             )}
 
             <div className="action-buttons" style={{ marginTop: '0.5rem' }}>
-              <button onClick={() => computeResult(true)} className="btn btn-primary" style={{ minHeight: '44px' }}>
+              <button
+                onClick={() => computeResult(true)}
+                className="btn btn-primary"
+                style={{ minHeight: '44px' }}
+                disabled={!isDividendValid || !isDivisorValid}
+              >
                 {t('calculate')}
               </button>
               <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>
@@ -211,6 +349,21 @@ export function LongDivisionCalculator() {
                       quotient: display.quotient,
                       remainder: display.remainder,
                     })}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: '"Courier New", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace',
+                      marginTop: '0.75rem',
+                      whiteSpace: 'pre',
+                      fontSize: '28px',
+                      lineHeight: 1.1,
+                    }}
+                  >
+                    {diagramLines.map((line) => (
+                      <div key={line.key}>
+                        <span style={diagramStyles[line.tone]}>{line.text}</span>
+                      </div>
+                    ))}
                   </div>
                 </>
               ) : (

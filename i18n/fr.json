@@ -402,11 +402,26 @@
         "faq": {
           "heading": "Questions fréquentes",
           "items": [
-            {"question": "Qu'est-ce que le cosinus d'un angle ?", "answer": "Le cosinus d'un angle α, cos(α), est le rapport du côté adjacent à l'hypoténuse dans un triangle rectangle. cos(α) est entre -1 et 1. C'est aussi l'abscisse sur le cercle unité."},
-            {"question": "Puis-je entrer des angles en degrés ou radians ?", "answer": "Oui. Choisissez deg pour les degrés (ex. 11, 90, 180) ou rad pour les radians. Le calculateur calcule cos(α) et affiche le résultat avec 8 décimales."},
-            {"question": "Que montre le graphique ?", "answer": "Le graphique montre une période de la fonction cosinus y = cos(x) de 0 à 2π radians : 1 en 0, 0 en π/2, -1 en π, 0 en 3π/2."},
-            {"question": "Le résultat est-il au format de ma locale ?", "answer": "Oui. La valeur du cosinus est formatée selon votre locale (séparateur décimal virgule ou point)."},
-            {"question": "Ce calculateur de cosinus est-il gratuit ?", "answer": "Oui, le calculateur de cosinus est gratuit. Entrez l'angle, choisissez deg ou rad et obtenez cos(α) avec le graphique."}
+            {
+              "question": "Qu'est-ce que le cosinus d'un angle ?",
+              "answer": "Le cosinus d'un angle α, cos(α), est le rapport du côté adjacent à l'hypoténuse dans un triangle rectangle. cos(α) est entre -1 et 1. C'est aussi l'abscisse sur le cercle unité."
+            },
+            {
+              "question": "Puis-je entrer des angles en degrés ou radians ?",
+              "answer": "Oui. Choisissez deg pour les degrés (ex. 11, 90, 180) ou rad pour les radians. Le calculateur calcule cos(α) et affiche le résultat avec 8 décimales."
+            },
+            {
+              "question": "Que montre le graphique ?",
+              "answer": "Le graphique montre une période de la fonction cosinus y = cos(x) de 0 à 2π radians : 1 en 0, 0 en π/2, -1 en π, 0 en 3π/2."
+            },
+            {
+              "question": "Le résultat est-il au format de ma locale ?",
+              "answer": "Oui. La valeur du cosinus est formatée selon votre locale (séparateur décimal virgule ou point)."
+            },
+            {
+              "question": "Ce calculateur de cosinus est-il gratuit ?",
+              "answer": "Oui, le calculateur de cosinus est gratuit. Entrez l'angle, choisissez deg ou rad et obtenez cos(α) avec le graphique."
+            }
           ]
         },
         "related": {
@@ -448,11 +463,26 @@
         "faq": {
           "heading": "Questions fréquentes",
           "items": [
-            {"question": "Qu'est-ce que le sinus d'un angle ?", "answer": "Le sinus de l'angle α, sin(α), est le rapport du côté opposé à l'hypoténuse dans un triangle rectangle. sin(α) est entre −1 et 1. C'est aussi l'ordonnée sur le cercle unité."},
-            {"question": "Puis-je entrer des angles en degrés, radians, milliradians ou π radians ?", "answer": "Oui. Choisissez deg, rad, mrad ou × π rad. Le calculateur affiche sin(α) avec 8 décimales."},
-            {"question": "Que montre le graphique ?", "answer": "Le graphique montre sin(x) de −2π à 2π (deux périodes). Le sinus vaut 0 en 0 et π, 1 en π/2, −1 en 3π/2."},
-            {"question": "Le résultat est-il au format de ma région ?", "answer": "Oui. La valeur du sinus est formatée selon votre région (virgule ou point décimal)."},
-            {"question": "Ce calculateur de sinus est-il gratuit ?", "answer": "Oui, le calculateur de sinus est gratuit. Entrez un angle, choisissez l'unité et obtenez sin(α) avec graphique."}
+            {
+              "question": "Qu'est-ce que le sinus d'un angle ?",
+              "answer": "Le sinus de l'angle α, sin(α), est le rapport du côté opposé à l'hypoténuse dans un triangle rectangle. sin(α) est entre −1 et 1. C'est aussi l'ordonnée sur le cercle unité."
+            },
+            {
+              "question": "Puis-je entrer des angles en degrés, radians, milliradians ou π radians ?",
+              "answer": "Oui. Choisissez deg, rad, mrad ou × π rad. Le calculateur affiche sin(α) avec 8 décimales."
+            },
+            {
+              "question": "Que montre le graphique ?",
+              "answer": "Le graphique montre sin(x) de −2π à 2π (deux périodes). Le sinus vaut 0 en 0 et π, 1 en π/2, −1 en 3π/2."
+            },
+            {
+              "question": "Le résultat est-il au format de ma région ?",
+              "answer": "Oui. La valeur du sinus est formatée selon votre région (virgule ou point décimal)."
+            },
+            {
+              "question": "Ce calculateur de sinus est-il gratuit ?",
+              "answer": "Oui, le calculateur de sinus est gratuit. Entrez un angle, choisissez l'unité et obtenez sin(α) avec graphique."
+            }
           ]
         },
         "related": {
@@ -3694,59 +3724,6 @@
       }
     },
     "roots": {
-      "title": "Calculateur de racines",
-      "description": "Calculez la racine n-ième d'un nombre. Entrez le nombre et le degré de la racine (ex. 2 pour racine carrée, 3 pour cubique). Outil gratuit pour les mathématiques et l'ingénierie.",
-      "formulaHeading": "La racine n-ième de x est donnée par la formule :",
-      "formulaText": "racine n-ième = ⁿ√x",
-      "sectionHeading": "Calculateur de racine n-ième",
-      "number": "Nombre",
-      "rootDegree": "Degré de la racine (n)",
-      "calculate": "Calculer",
-      "reset": "Réinitialiser",
-      "result": "Résultat",
-      "nthRootResult": "Racine n-ième",
-      "copyResult": "Copier",
-      "resultPlusMinus": "±{value}",
-      "errorInvalidNumber": "Veuillez entrer un nombre valide.",
-      "errorInvalidDegree": "Le degré de la racine doit être un entier ≥ 2.",
-      "errorNoRealRoot": "Aucune racine réelle : la racine paire d'un nombre négatif n'est pas un nombre réel.",
-      "seo": {
-        "title": "Calculateur de racines – Racine n-ième d'un nombre en ligne",
-        "description": "Calculateur de racines gratuit. Trouvez la racine n-ième d'un nombre : carrée (n=2), cubique (n=3) ou tout entier positif n. Gère les nombres négatifs pour n impair.",
-        "keywords": "calculateur racines, racine n-ième, racine carrée, racine cubique, racine d'un nombre, mathématiques racines",
-        "content": {
-          "heading": "Comment utiliser le calculateur de racines",
-          "paragraph1": "Le calculateur de racines trouve la racine n-ième d'un nombre. La racine n-ième de x est le nombre qui élevé à la puissance n donne x. Notation ⁿ√x ou x^(1/n). Par ex. la racine carrée (n=2) de 16 est 4, car 4²=16. La racine cubique (n=3) de 27 est 3, car 3³=27.",
-          "paragraph2": "Pour les nombres positifs ou nuls, la racine n-ième existe toujours et est positive ou nulle. Pour les nombres négatifs, elle n'existe que si n est impair : ex. la racine cubique de -27 est -3. La racine paire d'un nombre négatif n'est pas un nombre réel.",
-          "paragraph3": "Les racines sont utilisées en algèbre, géométrie, physique et ingénierie. Cas courants : racine carrée (n=2), cubique (n=3), quatrième (n=4). Le résultat est affiché avec jusqu'à 8 décimales.",
-          "paragraph4": "Le calculateur de racines est gratuit et fonctionne dans toutes les langues prises en charge. Entrez un nombre et le degré de la racine (entier ≥ 2) et obtenez la racine n-ième instantanément.",
-          "exampleHeading": "Exemple",
-          "exampleText": "Nombre 16, degré 2 : la racine carrée de 16 est 4. Nombre 27, degré 3 : la racine cubique de 27 est 3. Nombre -8, degré 3 : la racine cubique de -8 est -2. Nombre -4, degré 2 : pas de racine carrée réelle."
-        },
-        "faq": {
-          "heading": "Questions fréquentes",
-          "items": [
-            {"question": "Qu'est-ce que la racine n-ième d'un nombre ?", "answer": "La racine n-ième de x est le nombre qui élevé à la puissance n est égal à x. Par ex. la racine carrée (n=2) de 9 est 3, car 3²=9. La racine cubique (n=3) de 8 est 2, car 2³=8."},
-            {"question": "Puis-je utiliser des nombres négatifs ?", "answer": "Oui, mais seulement pour des degrés de racine impairs. La racine cubique de -8 est -2. Pour les degrés pairs (2, 4, 6, …), la racine d'un nombre négatif n'est pas un nombre réel."},
-            {"question": "Qu'est-ce que le degré de la racine ?", "answer": "Le degré de la racine n est le type : n=2 racine carrée, n=3 cubique, n=4 quatrième, etc. Doit être un entier ≥ 2."},
-            {"question": "Combien de décimales sont affichées ?", "answer": "Le calculateur affiche jusqu'à 8 décimales, formatées selon votre région."},
-            {"question": "Le calculateur de racines est-il gratuit ?", "answer": "Oui. Le calculateur de racines est entièrement gratuit. Pas d'inscription ni de paiement. Entrez un nombre et le degré et obtenez la racine n-ième instantanément."}
-          ]
-        },
-        "related": {
-          "heading": "Calculateurs associés",
-          "squareRoot": "Calculateur de racine carrée",
-          "squareRootDesc": "Racine carrée d'un nombre positif ou nul avec résultat positif et négatif",
-          "addition": "Calculateur d'addition",
-          "additionDesc": "Additionnez des nombres entiers et décimaux rapidement et précisément",
-          "percentage": "Calculateur de pourcentage",
-          "percentageDesc": "Calculez les valeurs, variations et rapports en pourcentage",
-          "average": "Calculateur de moyenne",
-          "averageDesc": "Trouvez la moyenne, la somme et le nombre de valeurs"
-        }
-      }
-    },
-    "roots": {
       "title": "Calculateur de Racines",
       "description": "Calculez la racine n-ième d'un nombre. Entrez le nombre et le degré de la racine (ex. 2 pour racine carrée, 3 pour cubique). Outil gratuit pour les mathématiques et l'ingénierie.",
       "formulaHeading": "La racine n-ième de x est donnée par la formule :",
@@ -3779,11 +3756,26 @@
         "faq": {
           "heading": "Questions fréquentes",
           "items": [
-            {"question": "Qu'est-ce que la racine n-ième d'un nombre ?", "answer": "La racine n-ième de x est le nombre qui élevé à la puissance n donne x. Par ex. la racine carrée (n=2) de 9 est 3, car 3²=9. La racine cubique (n=3) de 8 est 2, car 2³=8."},
-            {"question": "Puis-je utiliser des nombres négatifs ?", "answer": "Oui, mais seulement pour un degré de racine impair. La racine cubique de -8 est -2. Pour un degré pair (2, 4, 6, …) la racine d'un nombre négatif n'est pas un nombre réel."},
-            {"question": "Qu'est-ce que le degré de la racine ?", "answer": "Le degré n est le type de racine : n=2 racine carrée, n=3 cubique, n=4 quatrième, etc. Doit être un entier ≥ 2."},
-            {"question": "Combien de décimales sont affichées ?", "answer": "Le calculateur affiche jusqu'à 8 décimales selon votre région."},
-            {"question": "Le calculateur de racines est-il gratuit ?", "answer": "Oui. Le calculateur de racines est gratuit. Entrez le nombre et le degré et obtenez la racine n-ième."}
+            {
+              "question": "Qu'est-ce que la racine n-ième d'un nombre ?",
+              "answer": "La racine n-ième de x est le nombre qui élevé à la puissance n donne x. Par ex. la racine carrée (n=2) de 9 est 3, car 3²=9. La racine cubique (n=3) de 8 est 2, car 2³=8."
+            },
+            {
+              "question": "Puis-je utiliser des nombres négatifs ?",
+              "answer": "Oui, mais seulement pour un degré de racine impair. La racine cubique de -8 est -2. Pour un degré pair (2, 4, 6, …) la racine d'un nombre négatif n'est pas un nombre réel."
+            },
+            {
+              "question": "Qu'est-ce que le degré de la racine ?",
+              "answer": "Le degré n est le type de racine : n=2 racine carrée, n=3 cubique, n=4 quatrième, etc. Doit être un entier ≥ 2."
+            },
+            {
+              "question": "Combien de décimales sont affichées ?",
+              "answer": "Le calculateur affiche jusqu'à 8 décimales selon votre région."
+            },
+            {
+              "question": "Le calculateur de racines est-il gratuit ?",
+              "answer": "Oui. Le calculateur de racines est gratuit. Entrez le nombre et le degré et obtenez la racine n-ième."
+            }
           ]
         },
         "related": {
@@ -3867,11 +3859,72 @@
     },
     "remainder": {
       "title": "Calculateur de reste",
-      "description": "Calculez le reste (et le quotient) d’une division euclidienne d’entiers. Saisissez le dividende et le diviseur pour obtenir instantanément un reste non négatif."
-    },
-    "remainder": {
-      "title": "Calculateur de reste",
-      "description": "Calculez le reste (et le quotient) d’une division entière via la division euclidienne. Saisissez un dividende et un diviseur pour obtenir instantanément un reste non négatif."
+      "description": "Calculez le reste (et le quotient) d’une division entière via la division euclidienne. Saisissez un dividende et un diviseur pour obtenir instantanément un reste non négatif.",
+      "formulaHeading": "Euclidean division:",
+      "formulaText": "a = bq + r, with 0 ≤ r < |b| (b ≠ 0)",
+      "dividendLabel": "Dividend (a)",
+      "dividendPlaceholder": "e.g. 23",
+      "divisorLabel": "Divisor (b)",
+      "divisorPlaceholder": "e.g. 5",
+      "divisorHelp": "Remainder is computed using |b| so it is always non-negative.",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "resultLabel": "Result",
+      "remainderValue": "Remainder: {value}",
+      "quotientValue": "Quotient: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "copyRemainder": "Copy remainder",
+      "errorInvalidDividend": "Please enter a valid integer dividend.",
+      "errorInvalidDivisor": "Please enter a valid integer divisor.",
+      "errorDivisionByZero": "Division by zero is not allowed.",
+      "seo": {
+        "title": "Remainder Calculator – Integer Division Remainder Online",
+        "description": "Free remainder calculator. Compute the quotient and remainder of integer division (Euclidean division) with a non-negative remainder. Supports negative integers too.",
+        "keywords": "remainder calculator, modulo calculator, integer division remainder, euclidean division, quotient and remainder, mod calculator",
+        "content": {
+          "heading": "How to Use the Remainder Calculator",
+          "paragraph1": "A remainder calculator helps you compute the remainder when one integer is divided by another. The remainder is what “is left over” after dividing as many whole times as possible. For example, 23 divided by 5 gives quotient 4 and remainder 3, because 23 = 5×4 + 3.",
+          "paragraph2": "This calculator uses Euclidean division, which always returns a non-negative remainder r such that 0 ≤ r < |b| (as long as the divisor b is not zero). That is especially helpful when working with negative numbers, because different programming languages can define the sign of % differently.",
+          "paragraph3": "Enter the dividend a and divisor b as integers (you can use negative values too). Click Calculate to see both the quotient q and remainder r, along with the identity a = |b|·q + r. The remainder shown is always in the standard Euclidean range.",
+          "paragraph4": "Remainders are used in modular arithmetic, number theory, cyclic patterns (like clocks), hashing, and many programming tasks. If you need a remainder for polynomial division by (x − a), use the Polynomial Remainder Calculator instead.",
+          "exampleHeading": "Example",
+          "exampleText": "Dividend a = 23, divisor b = 5 → quotient q = 4, remainder r = 3, because 23 = 5×4 + 3. If a = -23 and b = 5, Euclidean remainder is r = 2, since -23 = 5×(-5) + 2."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is a remainder?",
+              "answer": "When you divide an integer a by a non-zero integer b, you can write a = bq + r. The remainder r is the part left over after taking q whole multiples of b. In Euclidean division, r is always non-negative and smaller than |b|."
+            },
+            {
+              "question": "What is the difference between remainder and modulo?",
+              "answer": "People often use the terms interchangeably, but in some contexts “modulo” specifically means the Euclidean remainder (0 ≤ r < |b|). Some programming languages define % in a way that can produce negative results when a is negative. This calculator shows the Euclidean (non-negative) remainder."
+            },
+            {
+              "question": "Can I divide by 0?",
+              "answer": "No. Division by zero is undefined, so the calculator will show an error if the divisor is 0."
+            },
+            {
+              "question": "Does the calculator support negative numbers?",
+              "answer": "Yes. You can enter negative integers for the dividend and/or divisor. The calculator still returns a non-negative remainder using |b| so the remainder stays in the Euclidean range."
+            },
+            {
+              "question": "Why is the remainder always non-negative here?",
+              "answer": "Because the calculator uses Euclidean division, where the remainder is defined to satisfy 0 ≤ r < |b|. This avoids ambiguity with negative inputs and matches common math definitions used in modular arithmetic."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "polynomialRemainder": "Polynomial Remainder Calculator",
+          "polynomialRemainderDesc": "Find the remainder when P(x) is divided by (x − a) using the Remainder Theorem",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals quickly and accurately",
+          "roots": "Roots Calculator",
+          "rootsDesc": "Calculate square roots, cube roots, and nth roots of numbers"
+        }
+      }
     },
     "ratio": {
       "title": "Calculateur de ratios",

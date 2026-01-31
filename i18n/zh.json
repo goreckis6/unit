@@ -402,11 +402,26 @@
         "faq": {
           "heading": "常见问题",
           "items": [
-            {"question": "角度的余弦是什么？", "answer": "角度 α 的余弦 cos(α) 是直角三角形中邻边与斜边之比。cos(α) 在 -1 与 1 之间。也是单位圆上的 x 坐标。"},
-            {"question": "可以输入度或弧度吗？", "answer": "可以。选 deg 表示度（如 11、90、180），rad 表示弧度。计算器会计算 cos(α) 并显示 8 位小数结果。"},
-            {"question": "图像显示什么？", "answer": "图像显示余弦函数 y=cos(x) 从 0 到 2π 弧度的一个周期：0 处为 1，π/2 处为 0，π 处为 -1，3π/2 处为 0。"},
-            {"question": "结果是否按我的 locale 格式？", "answer": "是。余弦值会按您的 locale 格式化（小数分隔符为逗号或点）。"},
-            {"question": "这个余弦计算器免费吗？", "answer": "是，余弦计算器免费。输入角度，选择 deg 或 rad，即可得到带图像的 cos(α)。"}
+            {
+              "question": "角度的余弦是什么？",
+              "answer": "角度 α 的余弦 cos(α) 是直角三角形中邻边与斜边之比。cos(α) 在 -1 与 1 之间。也是单位圆上的 x 坐标。"
+            },
+            {
+              "question": "可以输入度或弧度吗？",
+              "answer": "可以。选 deg 表示度（如 11、90、180），rad 表示弧度。计算器会计算 cos(α) 并显示 8 位小数结果。"
+            },
+            {
+              "question": "图像显示什么？",
+              "answer": "图像显示余弦函数 y=cos(x) 从 0 到 2π 弧度的一个周期：0 处为 1，π/2 处为 0，π 处为 -1，3π/2 处为 0。"
+            },
+            {
+              "question": "结果是否按我的 locale 格式？",
+              "answer": "是。余弦值会按您的 locale 格式化（小数分隔符为逗号或点）。"
+            },
+            {
+              "question": "这个余弦计算器免费吗？",
+              "answer": "是，余弦计算器免费。输入角度，选择 deg 或 rad，即可得到带图像的 cos(α)。"
+            }
           ]
         },
         "related": {
@@ -448,11 +463,26 @@
         "faq": {
           "heading": "常见问题",
           "items": [
-            {"question": "角的正弦是什么？", "answer": "角 α 的正弦 sin(α) 是直角三角形中该角对边与斜边之比。sin(α) 在 −1 与 1 之间。也是单位圆上的 y 坐标。"},
-            {"question": "可以输入度、弧度、毫弧度或 π 弧度吗？", "answer": "可以。选择 deg、rad、mrad 或 × π rad。计算器会显示 sin(α)，保留 8 位小数。"},
-            {"question": "图像显示什么？", "answer": "图像显示 −2π 到 2π 范围内的 sin(x)（两个周期）。正弦在 0 和 π 处为 0，在 π/2 处为 1，在 3π/2 处为 −1。"},
-            {"question": "结果会按我所在地区格式显示吗？", "answer": "会。正弦值按您所在地区格式显示（小数点用逗号或点）。"},
-            {"question": "这个正弦计算器免费吗？", "answer": "是的，正弦计算器免费。输入角度、选择单位即可得到带图像的 sin(α)。"}
+            {
+              "question": "角的正弦是什么？",
+              "answer": "角 α 的正弦 sin(α) 是直角三角形中该角对边与斜边之比。sin(α) 在 −1 与 1 之间。也是单位圆上的 y 坐标。"
+            },
+            {
+              "question": "可以输入度、弧度、毫弧度或 π 弧度吗？",
+              "answer": "可以。选择 deg、rad、mrad 或 × π rad。计算器会显示 sin(α)，保留 8 位小数。"
+            },
+            {
+              "question": "图像显示什么？",
+              "answer": "图像显示 −2π 到 2π 范围内的 sin(x)（两个周期）。正弦在 0 和 π 处为 0，在 π/2 处为 1，在 3π/2 处为 −1。"
+            },
+            {
+              "question": "结果会按我所在地区格式显示吗？",
+              "answer": "会。正弦值按您所在地区格式显示（小数点用逗号或点）。"
+            },
+            {
+              "question": "这个正弦计算器免费吗？",
+              "answer": "是的，正弦计算器免费。输入角度、选择单位即可得到带图像的 sin(α)。"
+            }
           ]
         },
         "related": {
@@ -3695,59 +3725,6 @@
     },
     "roots": {
       "title": "根计算器",
-      "description": "计算任意数的 n 次方根。输入数值和根的次数（如 2 为平方根，3 为立方根）。数学与工程用免费工具。",
-      "formulaHeading": "x 的 n 次方根由以下公式给出：",
-      "formulaText": "n 次方根 = ⁿ√x",
-      "sectionHeading": "n 次方根计算器",
-      "number": "数值",
-      "rootDegree": "根的次数 (n)",
-      "calculate": "计算",
-      "reset": "重置",
-      "result": "结果",
-      "nthRootResult": "n 次方根",
-      "copyResult": "复制",
-      "resultPlusMinus": "±{value}",
-      "errorInvalidNumber": "请输入有效数值。",
-      "errorInvalidDegree": "根的次数须为 ≥ 2 的整数。",
-      "errorNoRealRoot": "无实根：负数的偶次方根不是实数。",
-      "seo": {
-        "title": "根计算器 – 数的 n 次方根在线计算",
-        "description": "免费根计算器。求任意数的 n 次方根：平方根(n=2)、立方根(n=3)或任意正整数 n。n 为奇数时支持负数。",
-        "keywords": "根计算器, n次方根, 平方根, 立方根, 数的根, 数学根",
-        "content": {
-          "heading": "如何使用根计算器",
-          "paragraph1": "根计算器用于求数的 n 次方根。x 的 n 次方根是 n 次乘方后等于 x 的数，记作 ⁿ√x 或 x^(1/n)。例如 16 的平方根(n=2)为 4，因为 4²=16。27 的立方根(n=3)为 3，因为 3³=27。",
-          "paragraph2": "对非负数，n 次方根恒存在且非负。对负数仅当 n 为奇数时存在实根：例如 -27 的立方根为 -3。负数的偶次方根不是实数。",
-          "paragraph3": "根在代数、几何、物理与工程中常用。常见情形：平方根(n=2)、立方根(n=3)、四次根(n=4)。结果最多显示 8 位小数。",
-          "paragraph4": "根计算器免费，支持所有语言。输入数值和根的次数（整数 ≥ 2）即可得到 n 次方根。",
-          "exampleHeading": "示例",
-          "exampleText": "数 16，次数 2：16 的平方根为 4。数 27，次数 3：27 的立方根为 3。数 -8，次数 3：-8 的立方根为 -2。数 -4，次数 2：无实平方根。"
-        },
-        "faq": {
-          "heading": "常见问题",
-          "items": [
-            {"question": "数的 n 次方根是什么？", "answer": "x 的 n 次方根是 n 次乘方后等于 x 的数。例如 9 的平方根(n=2)为 3，因为 3²=9。8 的立方根(n=3)为 2，因为 2³=8。"},
-            {"question": "可以使用负数吗？", "answer": "可以，但仅当根的次数为奇数时。-8 的立方根为 -2。次数为偶数(2,4,6,…)时，负数的根不是实数。"},
-            {"question": "根的次数是什么？", "answer": "根的次数 n 表示根的类型：n=2 平方根，n=3 立方根，n=4 四次根等。须为 ≥ 2 的整数。"},
-            {"question": "显示几位小数？", "answer": "计算器按您所在地区格式显示最多 8 位小数。"},
-            {"question": "根计算器免费吗？", "answer": "是的。根计算器完全免费，无需注册或付费。输入数值和次数即可得到 n 次方根。"}
-          ]
-        },
-        "related": {
-          "heading": "相关计算器",
-          "squareRoot": "平方根计算器",
-          "squareRootDesc": "非负数的平方根（正负结果均显示）",
-          "addition": "加法计算器",
-          "additionDesc": "快速准确计算整数与小数之和",
-          "percentage": "百分比计算器",
-          "percentageDesc": "计算百分比、变化与关系",
-          "average": "平均计算器",
-          "averageDesc": "求平均值、总和与个数"
-        }
-      }
-    },
-    "roots": {
-      "title": "根计算器",
       "description": "计算任意数的 n 次方根。输入数和根的次数（如 2 为平方根，3 为立方根）。数学与工程用免费工具。",
       "formulaHeading": "x 的 n 次方根由以下公式给出：",
       "formulaText": "n 次方根 = ⁿ√x",
@@ -3779,11 +3756,26 @@
         "faq": {
           "heading": "常见问题",
           "items": [
-            {"question": "数的 n 次方根是什么？", "answer": "x 的 n 次方根是 n 次幂等于 x 的数。例如 9 的平方根(n=2)为 3，因为 3²=9。8 的立方根(n=3)为 2，因为 2³=8。"},
-            {"question": "可以使用负数吗？", "answer": "可以，但仅当根的次数为奇数时。-8 的立方根为 -2。次数为偶数(2,4,6,…)时，负数的根不是实数。"},
-            {"question": "根的次数是什么？", "answer": "次数 n 表示根的类型：n=2 平方根，n=3 立方根，n=4 四次根等。必须为整数 ≥ 2。"},
-            {"question": "显示几位小数？", "answer": "计算器按您所在地区显示最多 8 位小数。"},
-            {"question": "根计算器免费吗？", "answer": "是的。根计算器完全免费。输入数与次数即可得到 n 次方根。"}
+            {
+              "question": "数的 n 次方根是什么？",
+              "answer": "x 的 n 次方根是 n 次幂等于 x 的数。例如 9 的平方根(n=2)为 3，因为 3²=9。8 的立方根(n=3)为 2，因为 2³=8。"
+            },
+            {
+              "question": "可以使用负数吗？",
+              "answer": "可以，但仅当根的次数为奇数时。-8 的立方根为 -2。次数为偶数(2,4,6,…)时，负数的根不是实数。"
+            },
+            {
+              "question": "根的次数是什么？",
+              "answer": "次数 n 表示根的类型：n=2 平方根，n=3 立方根，n=4 四次根等。必须为整数 ≥ 2。"
+            },
+            {
+              "question": "显示几位小数？",
+              "answer": "计算器按您所在地区显示最多 8 位小数。"
+            },
+            {
+              "question": "根计算器免费吗？",
+              "answer": "是的。根计算器完全免费。输入数与次数即可得到 n 次方根。"
+            }
           ]
         },
         "related": {
@@ -3867,7 +3859,72 @@
     },
     "remainder": {
       "title": "余数计算器",
-      "description": "使用欧几里得除法计算整数除法的余数（以及商）。输入被除数与除数，即可立即得到非负余数。"
+      "description": "使用欧几里得除法计算整数除法的余数（以及商）。输入被除数与除数，即可立即得到非负余数。",
+      "formulaHeading": "Euclidean division:",
+      "formulaText": "a = bq + r, with 0 ≤ r < |b| (b ≠ 0)",
+      "dividendLabel": "Dividend (a)",
+      "dividendPlaceholder": "e.g. 23",
+      "divisorLabel": "Divisor (b)",
+      "divisorPlaceholder": "e.g. 5",
+      "divisorHelp": "Remainder is computed using |b| so it is always non-negative.",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "resultLabel": "Result",
+      "remainderValue": "Remainder: {value}",
+      "quotientValue": "Quotient: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "copyRemainder": "Copy remainder",
+      "errorInvalidDividend": "Please enter a valid integer dividend.",
+      "errorInvalidDivisor": "Please enter a valid integer divisor.",
+      "errorDivisionByZero": "Division by zero is not allowed.",
+      "seo": {
+        "title": "Remainder Calculator – Integer Division Remainder Online",
+        "description": "Free remainder calculator. Compute the quotient and remainder of integer division (Euclidean division) with a non-negative remainder. Supports negative integers too.",
+        "keywords": "remainder calculator, modulo calculator, integer division remainder, euclidean division, quotient and remainder, mod calculator",
+        "content": {
+          "heading": "How to Use the Remainder Calculator",
+          "paragraph1": "A remainder calculator helps you compute the remainder when one integer is divided by another. The remainder is what “is left over” after dividing as many whole times as possible. For example, 23 divided by 5 gives quotient 4 and remainder 3, because 23 = 5×4 + 3.",
+          "paragraph2": "This calculator uses Euclidean division, which always returns a non-negative remainder r such that 0 ≤ r < |b| (as long as the divisor b is not zero). That is especially helpful when working with negative numbers, because different programming languages can define the sign of % differently.",
+          "paragraph3": "Enter the dividend a and divisor b as integers (you can use negative values too). Click Calculate to see both the quotient q and remainder r, along with the identity a = |b|·q + r. The remainder shown is always in the standard Euclidean range.",
+          "paragraph4": "Remainders are used in modular arithmetic, number theory, cyclic patterns (like clocks), hashing, and many programming tasks. If you need a remainder for polynomial division by (x − a), use the Polynomial Remainder Calculator instead.",
+          "exampleHeading": "Example",
+          "exampleText": "Dividend a = 23, divisor b = 5 → quotient q = 4, remainder r = 3, because 23 = 5×4 + 3. If a = -23 and b = 5, Euclidean remainder is r = 2, since -23 = 5×(-5) + 2."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is a remainder?",
+              "answer": "When you divide an integer a by a non-zero integer b, you can write a = bq + r. The remainder r is the part left over after taking q whole multiples of b. In Euclidean division, r is always non-negative and smaller than |b|."
+            },
+            {
+              "question": "What is the difference between remainder and modulo?",
+              "answer": "People often use the terms interchangeably, but in some contexts “modulo” specifically means the Euclidean remainder (0 ≤ r < |b|). Some programming languages define % in a way that can produce negative results when a is negative. This calculator shows the Euclidean (non-negative) remainder."
+            },
+            {
+              "question": "Can I divide by 0?",
+              "answer": "No. Division by zero is undefined, so the calculator will show an error if the divisor is 0."
+            },
+            {
+              "question": "Does the calculator support negative numbers?",
+              "answer": "Yes. You can enter negative integers for the dividend and/or divisor. The calculator still returns a non-negative remainder using |b| so the remainder stays in the Euclidean range."
+            },
+            {
+              "question": "Why is the remainder always non-negative here?",
+              "answer": "Because the calculator uses Euclidean division, where the remainder is defined to satisfy 0 ≤ r < |b|. This avoids ambiguity with negative inputs and matches common math definitions used in modular arithmetic."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "polynomialRemainder": "Polynomial Remainder Calculator",
+          "polynomialRemainderDesc": "Find the remainder when P(x) is divided by (x − a) using the Remainder Theorem",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals quickly and accurately",
+          "roots": "Roots Calculator",
+          "rootsDesc": "Calculate square roots, cube roots, and nth roots of numbers"
+        }
+      }
     },
     "ratio": {
       "title": "比例计算器",

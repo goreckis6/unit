@@ -121,112 +121,130 @@ export function QuadraticEquationCalculator() {
 
   return (
     <>
-      <div className="input-section">
-        <div className="inputs-grid">
-          <div className="input-card">
-            <label htmlFor="coefficient-a" className="input-label">
-              {t('coefficientA')}
-            </label>
-            <div className="input-with-unit">
-              <input
-                id="coefficient-a"
-                type="text"
-                inputMode="decimal"
-                value={aValue}
-                onChange={(e) => setAValue(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                className="number-input"
-                placeholder="1"
-              />
+      <div className="split-view-container">
+        {/* Left Column - Inputs */}
+        <div className="input-section" style={{ marginBottom: 0 }}>
+          <div className="inputs-grid">
+            <div className="input-card">
+              <label htmlFor="coefficient-a" className="input-label">
+                {t('coefficientA')}
+              </label>
+              <div className="input-with-unit">
+                <input
+                  id="coefficient-a"
+                  type="text"
+                  inputMode="decimal"
+                  value={aValue}
+                  onChange={(e) => setAValue(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                  className="number-input"
+                  placeholder="1"
+                />
+              </div>
+            </div>
+
+            <div className="input-card">
+              <label htmlFor="coefficient-b" className="input-label">
+                {t('coefficientB')}
+              </label>
+              <div className="input-with-unit">
+                <input
+                  id="coefficient-b"
+                  type="text"
+                  inputMode="decimal"
+                  value={bValue}
+                  onChange={(e) => setBValue(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                  className="number-input"
+                  placeholder="0"
+                />
+              </div>
+            </div>
+
+            <div className="input-card">
+              <label htmlFor="coefficient-c" className="input-label">
+                {t('coefficientC')}
+              </label>
+              <div className="input-with-unit">
+                <input
+                  id="coefficient-c"
+                  type="text"
+                  inputMode="decimal"
+                  value={cValue}
+                  onChange={(e) => setCValue(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                  className="number-input"
+                  placeholder="0"
+                />
+              </div>
             </div>
           </div>
 
-          <div className="input-card">
-            <label htmlFor="coefficient-b" className="input-label">
-              {t('coefficientB')}
-            </label>
-            <div className="input-with-unit">
-              <input
-                id="coefficient-b"
-                type="text"
-                inputMode="decimal"
-                value={bValue}
-                onChange={(e) => setBValue(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                className="number-input"
-                placeholder="0"
-              />
-            </div>
-          </div>
+          {error && (
+            <p className="seo-paragraph" style={{ color: 'var(--error)', marginBottom: '1rem', fontSize: '0.9rem' }}>
+              {error}
+            </p>
+          )}
 
-          <div className="input-card">
-            <label htmlFor="coefficient-c" className="input-label">
-              {t('coefficientC')}
-            </label>
-            <div className="input-with-unit">
-              <input
-                id="coefficient-c"
-                type="text"
-                inputMode="decimal"
-                value={cValue}
-                onChange={(e) => setCValue(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                className="number-input"
-                placeholder="0"
-              />
-            </div>
+          <div className="action-buttons">
+            <button onClick={handleCalculate} className="btn btn-primary">
+              {t('calculate')}
+            </button>
+            <button onClick={handleReset} className="btn btn-secondary">
+              {t('reset')}
+            </button>
           </div>
         </div>
-      </div>
 
-      {error && (
-        <p className="seo-paragraph" style={{ color: 'var(--error)', marginBottom: '1rem', fontSize: '0.9rem' }}>
-          {error}
-        </p>
-      )}
-
-      <div className="action-buttons">
-        <button onClick={handleCalculate} className="btn btn-primary">
-          {t('calculate')}
-        </button>
-        <button onClick={handleReset} className="btn btn-secondary">
-          {t('reset')}
-        </button>
-      </div>
-
-      {result && (
-        <div ref={resultRef} className="result-section">
-          <div className="result-header">
-            <div className="result-badge">{t('result')}</div>
-          </div>
-          <div className="result-display">
-            {result.message && (
-              <div className="result-item">
-                <div className="result-label">{t('status')}</div>
-                <div className="result-value-box">
-                  <span className="result-value">{result.message}</span>
-                </div>
+        {/* Right Column - Results */}
+        <div className="result-section" style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}>
+          {result ? (
+            <div ref={resultRef}>
+              <div className="result-header">
+                <div className="result-badge">{t('result')}</div>
               </div>
-            )}
-            {typeof result.discriminant === 'number' && (
-              <div className="result-item">
-                <div className="result-label">{t('discriminant')}</div>
-                <div className="result-value-box">
-                  <span className="result-value">{formatNumber(result.discriminant, locale)}</span>
-                </div>
+              <div className="result-display">
+                {result.message && (
+                  <div className="result-item">
+                    <div className="result-label">{t('status')}</div>
+                    <div className="result-value-box">
+                      <span className="result-value">{result.message}</span>
+                    </div>
+                  </div>
+                )}
+                {typeof result.discriminant === 'number' && (
+                  <div className="result-item">
+                    <div className="result-label">{t('discriminant')}</div>
+                    <div className="result-value-box">
+                      <span className="result-value">{formatNumber(result.discriminant, locale)}</span>
+                    </div>
+                  </div>
+                )}
+                {result.roots?.map((root) => (
+                  <div key={root.label} className="result-item">
+                    <div className="result-label">{root.label}</div>
+                    <div className="result-value-box">
+                      <span className="result-value">{root.value}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
-            )}
-            {result.roots?.map((root) => (
-              <div key={root.label} className="result-item">
-                <div className="result-label">{root.label}</div>
-                <div className="result-value-box">
-                  <span className="result-value">{root.value}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+            </div>
+          ) : (
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              minHeight: '200px',
+              opacity: 0.5
+            }}>
+              <span style={{ color: 'var(--text-secondary)' }}>
+                {t('result')}
+              </span>
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </>
   );
 }

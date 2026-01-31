@@ -3867,7 +3867,72 @@
     },
     "remainder": {
       "title": "Calculadora de resto",
-      "description": "Calcula el resto (y el cociente) de una división entera usando la división euclídea. Introduce el dividendo y el divisor para obtener un resto no negativo al instante."
+      "description": "Calcula el resto (y el cociente) de una división entera usando la división euclídea. Introduce el dividendo y el divisor para obtener un resto no negativo al instante.",
+      "formulaHeading": "División euclídea:",
+      "formulaText": "a = bq + r, con 0 ≤ r < |b| (b ≠ 0)",
+      "dividendLabel": "Dividendo (a)",
+      "dividendPlaceholder": "ej. 23",
+      "divisorLabel": "Divisor (b)",
+      "divisorPlaceholder": "ej. 5",
+      "divisorHelp": "El resto se calcula usando |b|, por lo que siempre es no negativo.",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "resultLabel": "Resultado",
+      "remainderValue": "Resto: {value}",
+      "quotientValue": "Cociente: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "copyRemainder": "Copiar resto",
+      "errorInvalidDividend": "Por favor, introduce un dividendo entero válido.",
+      "errorInvalidDivisor": "Por favor, introduce un divisor entero válido.",
+      "errorDivisionByZero": "No se permite la división por cero.",
+      "seo": {
+        "title": "Calculadora de Resto – Resto de División Entera Online",
+        "description": "Calculadora de resto gratuita. Calcula el cociente y el resto de una división entera (división euclídea) con resto no negativo. Soporta números negativos también.",
+        "keywords": "calculadora de resto, calculadora de módulo, resto de división entera, división euclídea, cociente y resto, calculadora mod",
+        "content": {
+          "heading": "Cómo usar la Calculadora de Resto",
+          "paragraph1": "Una calculadora de resto te ayuda a calcular el resto cuando un entero se divide por otro. El resto es lo que \"sobra\" después de dividir tantas veces como sea posible. Por ejemplo, 23 dividido por 5 da un cociente de 4 y un resto de 3, porque 23 = 5×4 + 3.",
+          "paragraph2": "Esta calculadora usa la división euclídea, que siempre devuelve un resto no negativo r tal que 0 ≤ r < |b| (siempre que el divisor b no sea cero). Esto es especialmente útil al trabajar con números negativos, ya que diferentes lenguajes de programación pueden definir el signo de % de manera diferente.",
+          "paragraph3": "Introduce el dividendo a y el divisor b como enteros (también puedes usar valores negativos). Haz clic en Calcular para ver tanto el cociente q como el resto r, junto con la identidad a = |b|·q + r. El resto mostrado siempre está en el rango euclídeo estándar.",
+          "paragraph4": "Los restos se usan en aritmética modular, teoría de números, patrones cíclicos (como relojes), hashing y muchas tareas de programación. Si necesitas un resto para la división polinómica por (x − a), usa la Calculadora de Resto Polinómico en su lugar.",
+          "exampleHeading": "Ejemplo",
+          "exampleText": "Dividendo a = 23, divisor b = 5 → cociente q = 4, resto r = 3, porque 23 = 5×4 + 3. Si a = -23 y b = 5, el resto euclídeo es r = 2, ya que -23 = 5×(-5) + 2."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es un resto?",
+              "answer": "Cuando divides un entero a por un entero no nulo b, puedes escribir a = bq + r. El resto r es la parte que queda después de tomar q múltiplos enteros de b. En la división euclídea, r siempre es no negativo y menor que |b|."
+            },
+            {
+              "question": "¿Cuál es la diferencia entre resto y módulo?",
+              "answer": "La gente a menudo usa los términos indistintamente, pero en algunos contextos \"módulo\" significa específicamente el resto euclídeo (0 ≤ r < |b|). Algunos lenguajes de programación definen % de manera que puede producir resultados negativos cuando a es negativo. Esta calculadora muestra el resto euclídeo (no negativo)."
+            },
+            {
+              "question": "¿Puedo dividir por 0?",
+              "answer": "No. La división por cero no está definida, por lo que la calculadora mostrará un error si el divisor es 0."
+            },
+            {
+              "question": "¿La calculadora soporta números negativos?",
+              "answer": "Sí. Puedes introducir enteros negativos para el dividendo y/o el divisor. La calculadora aún devuelve un resto no negativo usando |b|, por lo que el resto permanece en el rango euclídeo."
+            },
+            {
+              "question": "¿Por qué el resto siempre es no negativo aquí?",
+              "answer": "Porque la calculadora usa la división euclídea, donde el resto está definido para satisfacer 0 ≤ r < |b|. Esto evita ambigüedades con entradas negativas y coincide con las definiciones matemáticas comunes usadas en aritmética modular."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "polynomialRemainder": "Calculadora de Resto Polinómico",
+          "polynomialRemainderDesc": "Encuentra el resto cuando P(x) se divide por (x − a) usando el Teorema del Resto",
+          "addition": "Calculadora de Suma",
+          "additionDesc": "Suma números enteros y decimales rápidamente",
+          "roots": "Calculadora de Raíces",
+          "rootsDesc": "Calcula raíces cuadradas, cúbicas y n-ésimas de números"
+        }
+      }
     },
     "ratio": {
       "title": "Calculadora de proporciones",

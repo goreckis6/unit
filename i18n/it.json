@@ -402,11 +402,26 @@
         "faq": {
           "heading": "Domande frequenti",
           "items": [
-            {"question": "Cos'è il coseno di un angolo?", "answer": "Il coseno di un angolo α, cos(α), è il rapporto tra cateto adiacente e ipotenusa in un triangolo rettangolo. cos(α) è tra -1 e 1. È anche la coordinata x sulla circonferenza unitaria."},
-            {"question": "Posso inserire angoli in gradi o radianti?", "answer": "Sì. Scegli deg per i gradi (es. 11, 90, 180) o rad per i radianti. La calcolatrice calcola cos(α) e mostra il risultato con 8 decimali."},
-            {"question": "Cosa mostra il grafico?", "answer": "Il grafico mostra un periodo della funzione coseno y = cos(x) da 0 a 2π radianti: 1 in 0, 0 in π/2, -1 in π, 0 in 3π/2."},
-            {"question": "Il risultato è nel formato del mio locale?", "answer": "Sì. Il valore del coseno è formattato secondo il tuo locale (separatore decimale virgola o punto)."},
-            {"question": "Questa calcolatrice coseno è gratuita?", "answer": "Sì, la calcolatrice coseno è gratuita. Inserisci angolo, scegli deg o rad e ottieni cos(α) con il grafico."}
+            {
+              "question": "Cos'è il coseno di un angolo?",
+              "answer": "Il coseno di un angolo α, cos(α), è il rapporto tra cateto adiacente e ipotenusa in un triangolo rettangolo. cos(α) è tra -1 e 1. È anche la coordinata x sulla circonferenza unitaria."
+            },
+            {
+              "question": "Posso inserire angoli in gradi o radianti?",
+              "answer": "Sì. Scegli deg per i gradi (es. 11, 90, 180) o rad per i radianti. La calcolatrice calcola cos(α) e mostra il risultato con 8 decimali."
+            },
+            {
+              "question": "Cosa mostra il grafico?",
+              "answer": "Il grafico mostra un periodo della funzione coseno y = cos(x) da 0 a 2π radianti: 1 in 0, 0 in π/2, -1 in π, 0 in 3π/2."
+            },
+            {
+              "question": "Il risultato è nel formato del mio locale?",
+              "answer": "Sì. Il valore del coseno è formattato secondo il tuo locale (separatore decimale virgola o punto)."
+            },
+            {
+              "question": "Questa calcolatrice coseno è gratuita?",
+              "answer": "Sì, la calcolatrice coseno è gratuita. Inserisci angolo, scegli deg o rad e ottieni cos(α) con il grafico."
+            }
           ]
         },
         "related": {
@@ -448,11 +463,26 @@
         "faq": {
           "heading": "Domande frequenti",
           "items": [
-            {"question": "Cos'è il seno di un angolo?", "answer": "Il seno dell'angolo α, sin(α), è il rapporto tra cateto opposto e ipotenusa in un triangolo rettangolo. sin(α) è tra −1 e 1. È anche la coordinata y sulla circonferenza unitaria."},
-            {"question": "Posso inserire angoli in gradi, radianti, milliradianti o π radianti?", "answer": "Sì. Scegli deg, rad, mrad o × π rad. La calcolatrice mostra sin(α) con 8 decimali."},
-            {"question": "Cosa mostra il grafico?", "answer": "Il grafico mostra sin(x) da −2π a 2π (due periodi). Il seno è 0 in 0 e π, 1 in π/2, −1 in 3π/2."},
-            {"question": "Il risultato è nel formato della mia regione?", "answer": "Sì. Il valore del seno è formattato secondo la tua regione (virgola o punto decimale)."},
-            {"question": "Questa calcolatrice seno è gratuita?", "answer": "Sì, la calcolatrice seno è gratuita. Inserisci angolo, scegli unità e ottieni sin(α) con grafico."}
+            {
+              "question": "Cos'è il seno di un angolo?",
+              "answer": "Il seno dell'angolo α, sin(α), è il rapporto tra cateto opposto e ipotenusa in un triangolo rettangolo. sin(α) è tra −1 e 1. È anche la coordinata y sulla circonferenza unitaria."
+            },
+            {
+              "question": "Posso inserire angoli in gradi, radianti, milliradianti o π radianti?",
+              "answer": "Sì. Scegli deg, rad, mrad o × π rad. La calcolatrice mostra sin(α) con 8 decimali."
+            },
+            {
+              "question": "Cosa mostra il grafico?",
+              "answer": "Il grafico mostra sin(x) da −2π a 2π (due periodi). Il seno è 0 in 0 e π, 1 in π/2, −1 in 3π/2."
+            },
+            {
+              "question": "Il risultato è nel formato della mia regione?",
+              "answer": "Sì. Il valore del seno è formattato secondo la tua regione (virgola o punto decimale)."
+            },
+            {
+              "question": "Questa calcolatrice seno è gratuita?",
+              "answer": "Sì, la calcolatrice seno è gratuita. Inserisci angolo, scegli unità e ottieni sin(α) con grafico."
+            }
           ]
         },
         "related": {
@@ -3694,59 +3724,6 @@
       }
     },
     "roots": {
-      "title": "Calcolatrice radici",
-      "description": "Calcola la radice n-esima di un numero. Inserisci il numero e il grado della radice (es. 2 per radice quadrata, 3 per cubica). Strumento gratuito per matematica e ingegneria.",
-      "formulaHeading": "La radice n-esima di x è data dalla formula:",
-      "formulaText": "radice n-esima = ⁿ√x",
-      "sectionHeading": "Calcolatrice radice n-esima",
-      "number": "Numero",
-      "rootDegree": "Grado della radice (n)",
-      "calculate": "Calcola",
-      "reset": "Reimposta",
-      "result": "Risultato",
-      "nthRootResult": "Radice n-esima",
-      "copyResult": "Copia",
-      "resultPlusMinus": "±{value}",
-      "errorInvalidNumber": "Inserisci un numero valido.",
-      "errorInvalidDegree": "Il grado della radice deve essere un intero ≥ 2.",
-      "errorNoRealRoot": "Nessuna radice reale: la radice pari di un numero negativo non è un numero reale.",
-      "seo": {
-        "title": "Calcolatrice radici – Radice n-esima di un numero online",
-        "description": "Calcolatrice radici gratuita. Trova la radice n-esima di un numero: quadrata (n=2), cubica (n=3) o qualsiasi intero positivo n. Gestisce numeri negativi per n dispari.",
-        "keywords": "calcolatrice radici, radice n-esima, radice quadrata, radice cubica, radice di un numero, matematica radici",
-        "content": {
-          "heading": "Come usare la calcolatrice radici",
-          "paragraph1": "La calcolatrice radici trova la radice n-esima di un numero. La radice n-esima di x è il numero che elevato a n dà x. Si scrive ⁿ√x o x^(1/n). Es. la radice quadrata (n=2) di 16 è 4, perché 4²=16. La radice cubica (n=3) di 27 è 3, perché 3³=27.",
-          "paragraph2": "Per numeri non negativi la radice n-esima esiste sempre ed è non negativa. Per numeri negativi esiste solo quando n è dispari: es. la radice cubica di -27 è -3. La radice pari di un numero negativo non è un numero reale.",
-          "paragraph3": "Le radici si usano in algebra, geometria, fisica e ingegneria. Casi comuni: radice quadrata (n=2), cubica (n=3), quarta (n=4). Il risultato viene mostrato con fino a 8 decimali.",
-          "paragraph4": "La calcolatrice radici è gratuita e funziona in tutte le lingue supportate. Inserisci numero e grado della radice (intero ≥ 2) e ottieni la radice n-esima istantaneamente.",
-          "exampleHeading": "Esempio",
-          "exampleText": "Numero 16, grado 2: la radice quadrata di 16 è 4. Numero 27, grado 3: la radice cubica di 27 è 3. Numero -8, grado 3: la radice cubica di -8 è -2. Numero -4, grado 2: nessuna radice quadrata reale."
-        },
-        "faq": {
-          "heading": "Domande frequenti",
-          "items": [
-            {"question": "Cos'è la radice n-esima di un numero?", "answer": "La radice n-esima di x è il numero che elevato a n è uguale a x. Es. la radice quadrata (n=2) di 9 è 3, perché 3²=9. La radice cubica (n=3) di 8 è 2, perché 2³=8."},
-            {"question": "Posso usare numeri negativi?", "answer": "Sì, ma solo per gradi di radice dispari. La radice cubica di -8 è -2. Per gradi pari (2, 4, 6, …) la radice di un numero negativo non è un numero reale."},
-            {"question": "Cos'è il grado della radice?", "answer": "Il grado della radice n è il tipo: n=2 radice quadrata, n=3 cubica, n=4 quarta, ecc. Deve essere un intero ≥ 2."},
-            {"question": "Quante cifre decimali vengono mostrate?", "answer": "La calcolatrice mostra fino a 8 cifre decimali, formattate secondo la tua regione."},
-            {"question": "La calcolatrice radici è gratuita?", "answer": "Sì. La calcolatrice radici è completamente gratuita. Nessuna registrazione o pagamento. Inserisci numero e grado e ottieni la radice n-esima istantaneamente."}
-          ]
-        },
-        "related": {
-          "heading": "Calcolatrici correlate",
-          "squareRoot": "Calcolatrice radice quadrata",
-          "squareRootDesc": "Radice quadrata di un numero non negativo con risultato positivo e negativo",
-          "addition": "Calcolatrice addizione",
-          "additionDesc": "Somma numeri interi e decimali velocemente e con precisione",
-          "percentage": "Calcolatrice percentuale",
-          "percentageDesc": "Calcola valori, variazione e rapporti percentuali",
-          "average": "Calcolatrice media",
-          "averageDesc": "Trova media, somma e conteggio di numeri"
-        }
-      }
-    },
-    "roots": {
       "title": "Calcolatrice Radici",
       "description": "Calcola la radice n-esima di un numero. Inserisci il numero e il grado della radice (es. 2 per radice quadrata, 3 per cubica). Strumento gratuito per matematica e ingegneria.",
       "formulaHeading": "La radice n-esima di x è data dalla formula:",
@@ -3779,11 +3756,26 @@
         "faq": {
           "heading": "Domande frequenti",
           "items": [
-            {"question": "Cos'è la radice n-esima di un numero?", "answer": "La radice n-esima di x è il numero che elevato a n dà x. Es. la radice quadrata (n=2) di 9 è 3, perché 3²=9. La radice cubica (n=3) di 8 è 2, perché 2³=8."},
-            {"question": "Posso usare numeri negativi?", "answer": "Sì, ma solo per grado della radice dispari. La radice cubica di -8 è -2. Per grado pari (2, 4, 6, …) la radice di un numero negativo non è un numero reale."},
-            {"question": "Cos'è il grado della radice?", "answer": "Il grado n è il tipo di radice: n=2 radice quadrata, n=3 cubica, n=4 quarta, ecc. Deve essere un intero ≥ 2."},
-            {"question": "Quante cifre decimali vengono mostrate?", "answer": "La calcolatrice mostra fino a 8 decimali secondo la tua regione."},
-            {"question": "La calcolatrice radici è gratuita?", "answer": "Sì. La calcolatrice radici è gratuita. Inserisci numero e grado e ottieni la radice n-esima."}
+            {
+              "question": "Cos'è la radice n-esima di un numero?",
+              "answer": "La radice n-esima di x è il numero che elevato a n dà x. Es. la radice quadrata (n=2) di 9 è 3, perché 3²=9. La radice cubica (n=3) di 8 è 2, perché 2³=8."
+            },
+            {
+              "question": "Posso usare numeri negativi?",
+              "answer": "Sì, ma solo per grado della radice dispari. La radice cubica di -8 è -2. Per grado pari (2, 4, 6, …) la radice di un numero negativo non è un numero reale."
+            },
+            {
+              "question": "Cos'è il grado della radice?",
+              "answer": "Il grado n è il tipo di radice: n=2 radice quadrata, n=3 cubica, n=4 quarta, ecc. Deve essere un intero ≥ 2."
+            },
+            {
+              "question": "Quante cifre decimali vengono mostrate?",
+              "answer": "La calcolatrice mostra fino a 8 decimali secondo la tua regione."
+            },
+            {
+              "question": "La calcolatrice radici è gratuita?",
+              "answer": "Sì. La calcolatrice radici è gratuita. Inserisci numero e grado e ottieni la radice n-esima."
+            }
           ]
         },
         "related": {
@@ -3867,11 +3859,72 @@
     },
     "remainder": {
       "title": "Calcolatrice del resto",
-      "description": "Calcola il resto (e il quoziente) della divisione tra interi usando la divisione euclidea. Inserisci dividendo e divisore per ottenere subito un resto non negativo."
-    },
-    "remainder": {
-      "title": "Calcolatrice del resto",
-      "description": "Calcola il resto (e il quoziente) della divisione tra interi usando la divisione euclidea. Inserisci dividendo e divisore per ottenere subito un resto non negativo."
+      "description": "Calcola il resto (e il quoziente) della divisione tra interi usando la divisione euclidea. Inserisci dividendo e divisore per ottenere subito un resto non negativo.",
+      "formulaHeading": "Euclidean division:",
+      "formulaText": "a = bq + r, with 0 ≤ r < |b| (b ≠ 0)",
+      "dividendLabel": "Dividend (a)",
+      "dividendPlaceholder": "e.g. 23",
+      "divisorLabel": "Divisor (b)",
+      "divisorPlaceholder": "e.g. 5",
+      "divisorHelp": "Remainder is computed using |b| so it is always non-negative.",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "resultLabel": "Result",
+      "remainderValue": "Remainder: {value}",
+      "quotientValue": "Quotient: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "copyRemainder": "Copy remainder",
+      "errorInvalidDividend": "Please enter a valid integer dividend.",
+      "errorInvalidDivisor": "Please enter a valid integer divisor.",
+      "errorDivisionByZero": "Division by zero is not allowed.",
+      "seo": {
+        "title": "Remainder Calculator – Integer Division Remainder Online",
+        "description": "Free remainder calculator. Compute the quotient and remainder of integer division (Euclidean division) with a non-negative remainder. Supports negative integers too.",
+        "keywords": "remainder calculator, modulo calculator, integer division remainder, euclidean division, quotient and remainder, mod calculator",
+        "content": {
+          "heading": "How to Use the Remainder Calculator",
+          "paragraph1": "A remainder calculator helps you compute the remainder when one integer is divided by another. The remainder is what “is left over” after dividing as many whole times as possible. For example, 23 divided by 5 gives quotient 4 and remainder 3, because 23 = 5×4 + 3.",
+          "paragraph2": "This calculator uses Euclidean division, which always returns a non-negative remainder r such that 0 ≤ r < |b| (as long as the divisor b is not zero). That is especially helpful when working with negative numbers, because different programming languages can define the sign of % differently.",
+          "paragraph3": "Enter the dividend a and divisor b as integers (you can use negative values too). Click Calculate to see both the quotient q and remainder r, along with the identity a = |b|·q + r. The remainder shown is always in the standard Euclidean range.",
+          "paragraph4": "Remainders are used in modular arithmetic, number theory, cyclic patterns (like clocks), hashing, and many programming tasks. If you need a remainder for polynomial division by (x − a), use the Polynomial Remainder Calculator instead.",
+          "exampleHeading": "Example",
+          "exampleText": "Dividend a = 23, divisor b = 5 → quotient q = 4, remainder r = 3, because 23 = 5×4 + 3. If a = -23 and b = 5, Euclidean remainder is r = 2, since -23 = 5×(-5) + 2."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is a remainder?",
+              "answer": "When you divide an integer a by a non-zero integer b, you can write a = bq + r. The remainder r is the part left over after taking q whole multiples of b. In Euclidean division, r is always non-negative and smaller than |b|."
+            },
+            {
+              "question": "What is the difference between remainder and modulo?",
+              "answer": "People often use the terms interchangeably, but in some contexts “modulo” specifically means the Euclidean remainder (0 ≤ r < |b|). Some programming languages define % in a way that can produce negative results when a is negative. This calculator shows the Euclidean (non-negative) remainder."
+            },
+            {
+              "question": "Can I divide by 0?",
+              "answer": "No. Division by zero is undefined, so the calculator will show an error if the divisor is 0."
+            },
+            {
+              "question": "Does the calculator support negative numbers?",
+              "answer": "Yes. You can enter negative integers for the dividend and/or divisor. The calculator still returns a non-negative remainder using |b| so the remainder stays in the Euclidean range."
+            },
+            {
+              "question": "Why is the remainder always non-negative here?",
+              "answer": "Because the calculator uses Euclidean division, where the remainder is defined to satisfy 0 ≤ r < |b|. This avoids ambiguity with negative inputs and matches common math definitions used in modular arithmetic."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "polynomialRemainder": "Polynomial Remainder Calculator",
+          "polynomialRemainderDesc": "Find the remainder when P(x) is divided by (x − a) using the Remainder Theorem",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals quickly and accurately",
+          "roots": "Roots Calculator",
+          "rootsDesc": "Calculate square roots, cube roots, and nth roots of numbers"
+        }
+      }
     },
     "ratio": {
       "title": "Calcolatore di rapporti",

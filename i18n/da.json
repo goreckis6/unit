@@ -402,11 +402,26 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            {"question": "Hvad er cosinus af en vinkel?", "answer": "Cosinus af vinkel α, cos(α), er forholdet mellem hosliggende katete og hypotenuse i en retvinklet trekant. cos(α) er mellem -1 og 1. Det er også x-koordinaten på enhedscirklen."},
-            {"question": "Kan jeg indtaste vinkler i grader eller radianer?", "answer": "Ja. Vælg deg for grader (f.eks. 11, 90, 180) eller rad for radianer. Regneren beregner cos(α) og viser resultatet med 8 decimaler."},
-            {"question": "Hvad viser grafen?", "answer": "Grafen viser en periode af cosinusfunktionen y = cos(x) fra 0 til 2π radianer: 1 ved 0, 0 ved π/2, -1 ved π, 0 ved 3π/2."},
-            {"question": "Er resultatet i mit locale-format?", "answer": "Ja. Cosinusværdien formateres efter dit locale (decimalseparator komma eller punktum)."},
-            {"question": "Er cosinus regneren gratis?", "answer": "Ja, cosinus regneren er gratis. Indtast vinkel, vælg deg eller rad, og få cos(α) med graf."}
+            {
+              "question": "Hvad er cosinus af en vinkel?",
+              "answer": "Cosinus af vinkel α, cos(α), er forholdet mellem hosliggende katete og hypotenuse i en retvinklet trekant. cos(α) er mellem -1 og 1. Det er også x-koordinaten på enhedscirklen."
+            },
+            {
+              "question": "Kan jeg indtaste vinkler i grader eller radianer?",
+              "answer": "Ja. Vælg deg for grader (f.eks. 11, 90, 180) eller rad for radianer. Regneren beregner cos(α) og viser resultatet med 8 decimaler."
+            },
+            {
+              "question": "Hvad viser grafen?",
+              "answer": "Grafen viser en periode af cosinusfunktionen y = cos(x) fra 0 til 2π radianer: 1 ved 0, 0 ved π/2, -1 ved π, 0 ved 3π/2."
+            },
+            {
+              "question": "Er resultatet i mit locale-format?",
+              "answer": "Ja. Cosinusværdien formateres efter dit locale (decimalseparator komma eller punktum)."
+            },
+            {
+              "question": "Er cosinus regneren gratis?",
+              "answer": "Ja, cosinus regneren er gratis. Indtast vinkel, vælg deg eller rad, og få cos(α) med graf."
+            }
           ]
         },
         "related": {
@@ -448,11 +463,26 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            {"question": "Hvad er sinus af en vinkel?", "answer": "Sinus af vinkel α, sin(α), er forholdet mellem modstående side og hypotenuse i en retvinklet trekant. sin(α) er mellem −1 og 1. Det er også y-koordinaten på enhedscirklen."},
-            {"question": "Kan jeg indtaste vinkler i grader, radianer, milliradianer eller π radianer?", "answer": "Ja. Vælg deg, rad, mrad eller × π rad. Regneren viser sin(α) med 8 decimaler."},
-            {"question": "Hvad viser grafen?", "answer": "Grafen viser sin(x) fra −2π til 2π (to perioder). Sinus er 0 ved 0 og π, 1 ved π/2, −1 ved 3π/2."},
-            {"question": "Er resultatet i mit locale-format?", "answer": "Ja. Sinusværdien formateres efter dit område (komma eller punktum)."},
-            {"question": "Er denne sinus regner gratis?", "answer": "Ja, sinus regneren er gratis. Indtast vinkel, vælg enhed og få sin(α) med graf."}
+            {
+              "question": "Hvad er sinus af en vinkel?",
+              "answer": "Sinus af vinkel α, sin(α), er forholdet mellem modstående side og hypotenuse i en retvinklet trekant. sin(α) er mellem −1 og 1. Det er også y-koordinaten på enhedscirklen."
+            },
+            {
+              "question": "Kan jeg indtaste vinkler i grader, radianer, milliradianer eller π radianer?",
+              "answer": "Ja. Vælg deg, rad, mrad eller × π rad. Regneren viser sin(α) med 8 decimaler."
+            },
+            {
+              "question": "Hvad viser grafen?",
+              "answer": "Grafen viser sin(x) fra −2π til 2π (to perioder). Sinus er 0 ved 0 og π, 1 ved π/2, −1 ved 3π/2."
+            },
+            {
+              "question": "Er resultatet i mit locale-format?",
+              "answer": "Ja. Sinusværdien formateres efter dit område (komma eller punktum)."
+            },
+            {
+              "question": "Er denne sinus regner gratis?",
+              "answer": "Ja, sinus regneren er gratis. Indtast vinkel, vælg enhed og få sin(α) med graf."
+            }
           ]
         },
         "related": {
@@ -3694,59 +3724,6 @@
       }
     },
     "roots": {
-      "title": "Rod-regner",
-      "description": "Beregn den n'te rod af et tal. Indtast tal og rodeksponent (f.eks. 2 for kvadratrod, 3 for kubikrod). Gratis online værktøj til matematik og teknik.",
-      "formulaHeading": "Den n'te rod af x er givet ved formlen:",
-      "formulaText": "n'te rod = ⁿ√x",
-      "sectionHeading": "n'te rod beregner",
-      "number": "Tal",
-      "rootDegree": "Rodeksponent (n)",
-      "calculate": "Beregn",
-      "reset": "Nulstil",
-      "result": "Resultat",
-      "nthRootResult": "n'te rod",
-      "copyResult": "Kopier",
-      "resultPlusMinus": "±{value}",
-      "errorInvalidNumber": "Indtast et gyldigt tal.",
-      "errorInvalidDegree": "Rodeksponent skal være et heltal ≥ 2.",
-      "errorNoRealRoot": "Ingen reel rod: lige rod af et negativt tal er ikke et reelt tal.",
-      "seo": {
-        "title": "Rod-regner – n'te rod af et tal online",
-        "description": "Gratis rod-regner. Find den n'te rod af et tal: kvadratrod (n=2), kubikrod (n=3) eller ethvert positivt heltal n. Håndterer negative tal for ulige n.",
-        "keywords": "rod regner, n'te rod, kvadratrod, kubikrod, rod af tal, matematik rødder",
-        "content": {
-          "heading": "Sådan bruger du rod-regneren",
-          "paragraph1": "Rod-regneren finder den n'te rod af et tal. Den n'te rod af x er det tal, der opløftet til n'te potens giver x. Skrives ⁿ√x eller x^(1/n). F.eks. kvadratroden (n=2) af 16 er 4, fordi 4²=16. Kubikroden (n=3) af 27 er 3, fordi 3³=27.",
-          "paragraph2": "For ikke-negative tal findes den n'te rod altid og er ikke-negativ. For negative tal findes den n'te rod kun når n er ulige: f.eks. kubikroden af -27 er -3. Lige rod af et negativt tal er ikke et reelt tal.",
-          "paragraph3": "Rødder bruges i algebra, geometri, fysik og teknik. Almindelige tilfælde: kvadratrod (n=2), kubikrod (n=3), fjerde rod (n=4). Resultatet vises med op til 8 decimaler.",
-          "paragraph4": "Rod-regneren er gratis og virker på alle understøttede sprog. Indtast tal og rodeksponent (heltal ≥ 2) og få den n'te rod med det samme.",
-          "exampleHeading": "Eksempel",
-          "exampleText": "Tal 16, rodeksponent 2: 2. rod (kvadratrod) af 16 er 4. Tal 27, rodeksponent 3: kubikroden af 27 er 3. Tal -8, rodeksponent 3: kubikroden af -8 er -2. Tal -4, rodeksponent 2: ingen reel kvadratrod."
-        },
-        "faq": {
-          "heading": "Ofte stillede spørgsmål",
-          "items": [
-            {"question": "Hvad er den n'te rod af et tal?", "answer": "Den n'te rod af x er det tal, der opløftet til n'te potens er lig x. F.eks. kvadratroden (n=2) af 9 er 3, fordi 3²=9. Kubikroden (n=3) af 8 er 2, fordi 2³=8."},
-            {"question": "Kan jeg bruge negative tal?", "answer": "Ja, men kun for ulige rodeksponenter. Kubikroden af -8 er -2. For lige rodeksponenter (2, 4, 6, …) er roden af et negativt tal ikke et reelt tal."},
-            {"question": "Hvad er rodeksponenten?", "answer": "Rodeksponenten n er rodtypen: n=2 kvadratrod, n=3 kubikrod, n=4 fjerde rod osv. Skal være heltal ≥ 2."},
-            {"question": "Hvor mange decimaler vises?", "answer": "Regneren viser op til 8 decimaler, formateret efter din region."},
-            {"question": "Er rod-regneren gratis?", "answer": "Ja. Rod-regneren er helt gratis. Ingen registrering eller betaling. Indtast tal og rodeksponent og få den n'te rod med det samme."}
-          ]
-        },
-        "related": {
-          "heading": "Relaterede regnere",
-          "squareRoot": "Kvadratrod-regner",
-          "squareRootDesc": "Kvadratrod af et ikke-negativt tal med positivt og negativt resultat",
-          "addition": "Addition-regner",
-          "additionDesc": "Læg hele tal og decimaler sammen hurtigt og præcist",
-          "percentage": "Procent-regner",
-          "percentageDesc": "Beregn procentværdier, ændring og forhold",
-          "average": "Gennemsnit-regner",
-          "averageDesc": "Find gennemsnit, sum og antal tal"
-        }
-      }
-    },
-    "roots": {
       "title": "Rod Lommeregner",
       "description": "Beregn den n-te rod af et tal. Indtast tal og rodeksponent (f.eks. 2 for kvadratrod, 3 for kubikrod). Gratis værktøj til matematik og teknik.",
       "formulaHeading": "Den n'te rod af x er givet ved formlen:",
@@ -3779,11 +3756,26 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            {"question": "Hvad er den n-te rod af et tal?", "answer": "Den n-te rod af x er det tal, der opløftet i n giver x. F.eks. kvadratroden (n=2) af 9 er 3, fordi 3²=9. Kubikroden (n=3) af 8 er 2, fordi 2³=8."},
-            {"question": "Kan jeg bruge negative tal?", "answer": "Ja, men kun for ulige rodeksponent. Kubikroden af -8 er -2. For lige eksponent (2, 4, 6, …) er roden af et negativt tal ikke et reelt tal."},
-            {"question": "Hvad er rodeksponenten?", "answer": "Rodeksponenten n er rodtypen: n=2 kvadratrod, n=3 kubikrod, n=4 fjerde rod osv. Skal være heltal ≥ 2."},
-            {"question": "Hvor mange decimaler vises?", "answer": "Lommeregneren viser op til 8 decimaler efter din region."},
-            {"question": "Er rod lommeregneren gratis?", "answer": "Ja. Rod lommeregneren er gratis. Indtast tal og rodeksponent og få den n-te rod."}
+            {
+              "question": "Hvad er den n-te rod af et tal?",
+              "answer": "Den n-te rod af x er det tal, der opløftet i n giver x. F.eks. kvadratroden (n=2) af 9 er 3, fordi 3²=9. Kubikroden (n=3) af 8 er 2, fordi 2³=8."
+            },
+            {
+              "question": "Kan jeg bruge negative tal?",
+              "answer": "Ja, men kun for ulige rodeksponent. Kubikroden af -8 er -2. For lige eksponent (2, 4, 6, …) er roden af et negativt tal ikke et reelt tal."
+            },
+            {
+              "question": "Hvad er rodeksponenten?",
+              "answer": "Rodeksponenten n er rodtypen: n=2 kvadratrod, n=3 kubikrod, n=4 fjerde rod osv. Skal være heltal ≥ 2."
+            },
+            {
+              "question": "Hvor mange decimaler vises?",
+              "answer": "Lommeregneren viser op til 8 decimaler efter din region."
+            },
+            {
+              "question": "Er rod lommeregneren gratis?",
+              "answer": "Ja. Rod lommeregneren er gratis. Indtast tal og rodeksponent og få den n-te rod."
+            }
           ]
         },
         "related": {
@@ -3867,7 +3859,72 @@
     },
     "remainder": {
       "title": "Restberegner",
-      "description": "Beregn resten (og kvotienten) ved heltalsdivision med euklidisk division. Indtast dividend og divisor for at få en ikke-negativ rest med det samme."
+      "description": "Beregn resten (og kvotienten) ved heltalsdivision med euklidisk division. Indtast dividend og divisor for at få en ikke-negativ rest med det samme.",
+      "formulaHeading": "Euclidean division:",
+      "formulaText": "a = bq + r, with 0 ≤ r < |b| (b ≠ 0)",
+      "dividendLabel": "Dividend (a)",
+      "dividendPlaceholder": "e.g. 23",
+      "divisorLabel": "Divisor (b)",
+      "divisorPlaceholder": "e.g. 5",
+      "divisorHelp": "Remainder is computed using |b| so it is always non-negative.",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "resultLabel": "Result",
+      "remainderValue": "Remainder: {value}",
+      "quotientValue": "Quotient: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "copyRemainder": "Copy remainder",
+      "errorInvalidDividend": "Please enter a valid integer dividend.",
+      "errorInvalidDivisor": "Please enter a valid integer divisor.",
+      "errorDivisionByZero": "Division by zero is not allowed.",
+      "seo": {
+        "title": "Remainder Calculator – Integer Division Remainder Online",
+        "description": "Free remainder calculator. Compute the quotient and remainder of integer division (Euclidean division) with a non-negative remainder. Supports negative integers too.",
+        "keywords": "remainder calculator, modulo calculator, integer division remainder, euclidean division, quotient and remainder, mod calculator",
+        "content": {
+          "heading": "How to Use the Remainder Calculator",
+          "paragraph1": "A remainder calculator helps you compute the remainder when one integer is divided by another. The remainder is what “is left over” after dividing as many whole times as possible. For example, 23 divided by 5 gives quotient 4 and remainder 3, because 23 = 5×4 + 3.",
+          "paragraph2": "This calculator uses Euclidean division, which always returns a non-negative remainder r such that 0 ≤ r < |b| (as long as the divisor b is not zero). That is especially helpful when working with negative numbers, because different programming languages can define the sign of % differently.",
+          "paragraph3": "Enter the dividend a and divisor b as integers (you can use negative values too). Click Calculate to see both the quotient q and remainder r, along with the identity a = |b|·q + r. The remainder shown is always in the standard Euclidean range.",
+          "paragraph4": "Remainders are used in modular arithmetic, number theory, cyclic patterns (like clocks), hashing, and many programming tasks. If you need a remainder for polynomial division by (x − a), use the Polynomial Remainder Calculator instead.",
+          "exampleHeading": "Example",
+          "exampleText": "Dividend a = 23, divisor b = 5 → quotient q = 4, remainder r = 3, because 23 = 5×4 + 3. If a = -23 and b = 5, Euclidean remainder is r = 2, since -23 = 5×(-5) + 2."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is a remainder?",
+              "answer": "When you divide an integer a by a non-zero integer b, you can write a = bq + r. The remainder r is the part left over after taking q whole multiples of b. In Euclidean division, r is always non-negative and smaller than |b|."
+            },
+            {
+              "question": "What is the difference between remainder and modulo?",
+              "answer": "People often use the terms interchangeably, but in some contexts “modulo” specifically means the Euclidean remainder (0 ≤ r < |b|). Some programming languages define % in a way that can produce negative results when a is negative. This calculator shows the Euclidean (non-negative) remainder."
+            },
+            {
+              "question": "Can I divide by 0?",
+              "answer": "No. Division by zero is undefined, so the calculator will show an error if the divisor is 0."
+            },
+            {
+              "question": "Does the calculator support negative numbers?",
+              "answer": "Yes. You can enter negative integers for the dividend and/or divisor. The calculator still returns a non-negative remainder using |b| so the remainder stays in the Euclidean range."
+            },
+            {
+              "question": "Why is the remainder always non-negative here?",
+              "answer": "Because the calculator uses Euclidean division, where the remainder is defined to satisfy 0 ≤ r < |b|. This avoids ambiguity with negative inputs and matches common math definitions used in modular arithmetic."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "polynomialRemainder": "Polynomial Remainder Calculator",
+          "polynomialRemainderDesc": "Find the remainder when P(x) is divided by (x − a) using the Remainder Theorem",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals quickly and accurately",
+          "roots": "Roots Calculator",
+          "rootsDesc": "Calculate square roots, cube roots, and nth roots of numbers"
+        }
+      }
     },
     "ratio": {
       "title": "Forholdskalkulator",

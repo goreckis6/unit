@@ -63,6 +63,17 @@ export function CosineCalculator() {
     return { d, width, height, padding, toX, toY, xMin, xMax, yMin, yMax };
   }, []);
 
+  const graphPoint = useMemo(() => {
+    if (result === null) return null;
+    const parsed = parseFloat(angle);
+    if (Number.isNaN(parsed)) return null;
+    const rad = unit === 'deg' ? (parsed * Math.PI) / 180 : parsed;
+    const radNorm = ((rad % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+    if (radNorm < graphPath.xMin || radNorm > graphPath.xMax) return null;
+    const y = Math.cos(radNorm);
+    return { x: radNorm, y, px: graphPath.toX(radNorm), py: graphPath.toY(y) };
+  }, [result, angle, unit, graphPath]);
+
   return (
     <div>
       <div className="input-section">
@@ -152,6 +163,22 @@ export function CosineCalculator() {
                   strokeWidth="1"
                   strokeDasharray="4,2"
                 />
+                <line
+                  x1={graphPath.padding.left}
+                  y1={graphPath.toY(1)}
+                  x2={graphPath.width - graphPath.padding.right}
+                  y2={graphPath.toY(1)}
+                  stroke="rgba(148, 163, 184, 0.6)"
+                  strokeWidth="1"
+                />
+                <line
+                  x1={graphPath.padding.left}
+                  y1={graphPath.toY(-1)}
+                  x2={graphPath.width - graphPath.padding.right}
+                  y2={graphPath.toY(-1)}
+                  stroke="rgba(148, 163, 184, 0.6)"
+                  strokeWidth="1"
+                />
                 <path
                   d={graphPath.d + ' L' + graphPath.toX(graphPath.xMax) + ',' + graphPath.toY(0) + ' L' + graphPath.toX(0) + ',' + graphPath.toY(0) + ' Z'}
                   fill="url(#cosineGradient)"
@@ -164,6 +191,34 @@ export function CosineCalculator() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
+                {graphPoint && (
+                  <>
+                    <line
+                      x1={graphPoint.px}
+                      y1={graphPoint.py}
+                      x2={graphPoint.px}
+                      y2={graphPath.toY(0)}
+                      stroke="rgba(148, 163, 184, 0.85)"
+                      strokeWidth="1"
+                    />
+                    <line
+                      x1={graphPoint.px}
+                      y1={graphPoint.py}
+                      x2={graphPath.width - graphPath.padding.right}
+                      y2={graphPoint.py}
+                      stroke="rgba(148, 163, 184, 0.85)"
+                      strokeWidth="1"
+                    />
+                    <circle
+                      cx={graphPoint.px}
+                      cy={graphPoint.py}
+                      r="4"
+                      fill="var(--primary, #2563eb)"
+                      stroke="rgba(255,255,255,0.9)"
+                      strokeWidth="1.5"
+                    />
+                  </>
+                )}
                 <text
                   x={graphPath.width - graphPath.padding.right - 15}
                   y={graphPath.toY(0) - 6}

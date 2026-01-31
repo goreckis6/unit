@@ -73,22 +73,7 @@ export function RootsCalculator() {
 
   return (
     <div className="root-calc-block" ref={resultRef}>
-      <h2 className="section-heading">{t('sectionHeading')}</h2>
-      <p className="root-calc-formula-desc">{t('formulaHeading')}</p>
-      <p className="root-calc-formula">{t('formulaText')}</p>
-
-      <div className="root-calc-input-row root-calc-radical-wrap">
-        <input
-          id="number"
-          type="text"
-          inputMode="decimal"
-          value={numberInput}
-          onChange={(e) => setNumberInput(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-          className="number-input"
-          placeholder="16"
-          aria-label={t('number')}
-        />
+      <div className="root-calc-input-row">
         <input
           id="degree"
           type="text"
@@ -103,6 +88,19 @@ export function RootsCalculator() {
         <span className="root-calc-radical" aria-hidden>
           √
         </span>
+        <div className="root-calc-radicand">
+          <input
+            id="number"
+            type="text"
+            inputMode="decimal"
+            value={numberInput}
+            onChange={(e) => setNumberInput(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+            className="number-input"
+            placeholder="16"
+            aria-label={t('number')}
+          />
+        </div>
       </div>
 
       {error && (
@@ -124,21 +122,7 @@ export function RootsCalculator() {
           onClick={handleCalculate}
           className="btn btn-primary"
         >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            aria-hidden
-          >
-            <path
-              d="M5 12h14M12 5l7 7-7 7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <span aria-hidden>=</span>
           {t('calculate')}
         </button>
         <button
@@ -146,21 +130,7 @@ export function RootsCalculator() {
           onClick={handleReset}
           className="btn btn-secondary"
         >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            aria-hidden
-          >
-            <path
-              d="M18 6L6 18M6 6l12 12"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <span aria-hidden>×</span>
           {t('reset')}
         </button>
       </div>

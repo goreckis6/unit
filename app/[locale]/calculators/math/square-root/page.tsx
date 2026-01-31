@@ -78,6 +78,8 @@ export default async function SquareRootPage({ params }: { params: Promise<{ loc
       <div className="calculator-container">
         <div className="container">
           <div className="calculator-card">
+            <p className="root-calc-formula-desc">{t('formulaHeading')}</p>
+            <p className="root-calc-formula">{t('formulaText')}</p>
             <SquareRootCalculator />
           </div>
         </div>

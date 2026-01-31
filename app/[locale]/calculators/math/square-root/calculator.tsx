@@ -60,22 +60,21 @@ export function SquareRootCalculator() {
 
   return (
     <div className="root-calc-block">
-      <p className="root-calc-formula-desc">{t('formulaHeading')}</p>
-      <p className="root-calc-formula">{t('formulaText')}</p>
-
       <div className="root-calc-input-row">
         <span className="root-calc-radical" aria-hidden>√</span>
-        <input
-          id="number"
-          type="text"
-          inputMode="decimal"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-          className="number-input"
-          placeholder={t('placeholder')}
-          aria-label={t('enterNumber')}
-        />
+        <div className="root-calc-radicand">
+          <input
+            id="number"
+            type="text"
+            inputMode="decimal"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+            className="number-input"
+            placeholder={t('placeholder')}
+            aria-label={t('enterNumber')}
+          />
+        </div>
       </div>
 
       {error && (
@@ -86,15 +85,11 @@ export function SquareRootCalculator() {
 
       <div className="root-calc-actions">
         <button type="button" onClick={handleCalculate} className="btn btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
-            <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+          <span aria-hidden>=</span>
           {t('calculate')}
         </button>
         <button type="button" onClick={handleReset} className="btn btn-secondary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
-            <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+          <span aria-hidden>×</span>
           {t('reset')}
         </button>
       </div>

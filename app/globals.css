@@ -1730,11 +1730,11 @@ a {
 }
 
 /* ============================================
-   ROOT CALCULATORS (Square Root / Nth Root) – beige block style
+   ROOT CALCULATORS (Square Root / Nth Root)
    ============================================ */
 .root-calc-block {
-  background: #f5f5dc;
-  border: 1px solid #e8e8d0;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
   border-radius: 1rem;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -1786,6 +1786,27 @@ a {
   line-height: 1;
 }
 
+.root-calc-radicand {
+  position: relative;
+  flex: 1;
+  min-width: 160px;
+}
+
+.root-calc-radicand::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -8px;
+  height: 3px;
+  background: #5a5a5a;
+  border-radius: 2px;
+}
+
+.root-calc-radicand .number-input {
+  width: 100%;
+}
+
 .root-calc-radical-wrap {
   display: inline-flex;
   align-items: center;
@@ -1793,15 +1814,15 @@ a {
 }
 
 .root-calc-radical-index {
-  width: 2.5rem;
-  min-height: 32px;
+  width: 7rem;
+  min-height: 44px;
   text-align: center;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.25rem 0.35rem;
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
-  background: white;
+  background: var(--bg-primary);
 }
 
 .root-calc-actions {
@@ -1816,24 +1837,7 @@ a {
   gap: 0.5rem;
   padding: 0.75rem 1.25rem;
   min-height: 44px;
-  background: #4a4a4a;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.root-calc-actions .btn:hover {
-  background: #3a3a3a;
-}
-
-.root-calc-actions .btn-secondary {
-  background: #5a5a5a;
-}
-
-.root-calc-actions .btn-secondary:hover {
-  background: #4a4a4a;
+  font-size: 1rem;
 }
 
 .root-calc-output-row {
@@ -1848,8 +1852,8 @@ a {
   min-width: 120px;
   min-height: 48px;
   padding: 0.75rem 1rem;
-  background: #f0f0e8;
-  border: 1px solid #d8d8c8;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   font-size: 1.1rem;
   font-family: inherit;
@@ -1858,9 +1862,9 @@ a {
 .root-calc-copy-btn {
   padding: 0.5rem 1rem;
   min-height: 44px;
-  background: #e0e0d8;
+  background: var(--bg-secondary);
   color: var(--text-primary);
-  border: 1px solid #c8c8c0;
+  border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   font-weight: 600;
   cursor: pointer;
@@ -1868,7 +1872,7 @@ a {
 }
 
 .root-calc-copy-btn:hover {
-  background: #d0d0c8;
+  background: var(--bg-tertiary);
 }
 
 .root-calc-block .section-heading {

@@ -3,6 +3,7 @@ import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { RootsCalculator } from './calculator';
+import { SquareRootCalculator } from '../square-root/calculator';
 import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
@@ -47,6 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function RootsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'calculators.roots' });
+  const tSquareRoot = await getTranslations({ locale, namespace: 'calculators.squareRoot' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
 
   const faqItems = await getFaqItems(locale);
@@ -78,6 +80,15 @@ export default async function RootsPage({ params }: { params: Promise<{ locale: 
       <div className="calculator-container">
         <div className="container">
           <div className="calculator-card">
+            <p className="root-calc-formula-desc">{tSquareRoot('formulaHeading')}</p>
+            <p className="root-calc-formula">{tSquareRoot('formulaText')}</p>
+            <SquareRootCalculator />
+
+            <h2 className="seo-heading" style={{ marginTop: '2rem' }}>
+              {t('sectionHeading')}
+            </h2>
+            <p className="root-calc-formula-desc">{t('formulaHeading')}</p>
+            <p className="root-calc-formula">{t('formulaText')}</p>
             <RootsCalculator />
           </div>
         </div>

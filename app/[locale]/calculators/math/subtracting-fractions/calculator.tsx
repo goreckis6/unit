@@ -133,7 +133,7 @@ export function SubtractingFractionsCalculator() {
 
         <div className="inputs-grid">
           <div className="input-card">
-            <div className="result-badge" style={{ marginBottom: '0.75rem' }}>{t('firstFraction')}</div>
+            <div className="input-label" style={{ marginBottom: '0.75rem', fontWeight: 600, fontSize: '0.9rem' }}>{t('firstFraction')}</div>
             {formType === 'mixed' && (
               <div style={{ display: 'contents' }}>
                 <label htmlFor="w1" className="input-label">
@@ -176,7 +176,7 @@ export function SubtractingFractionsCalculator() {
           </div>
 
           <div className="input-card">
-            <div className="result-badge" style={{ marginBottom: '0.75rem' }}>{t('secondFraction')}</div>
+            <div className="input-label" style={{ marginBottom: '0.75rem', fontWeight: 600, fontSize: '0.9rem' }}>{t('secondFraction')}</div>
             {formType === 'mixed' && (
               <div style={{ display: 'contents' }}>
                 <label htmlFor="w2" className="input-label">

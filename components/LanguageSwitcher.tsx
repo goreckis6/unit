@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from '@/i18n/routing';
+import { usePathname } from '@/i18n/routing';
 import { routing } from '@/i18n/routing';
 
 const FLAGS: Record<string, JSX.Element> = {
@@ -233,7 +233,6 @@ const LANGUAGE_NAMES: Record<string, string> = {
 export function LanguageSwitcher() {
   const locale = useLocale();
   const pathname = usePathname();
-  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -250,28 +249,18 @@ export function LanguageSwitcher() {
 
   const handleLanguageChange = (newLocale: string) => {
     try {
-      // Get current path without locale prefix
-      const normalizedPath = pathname || '/';
-      const matchedLocale = routing.locales.find((loc) => {
-        const prefix = `/${loc}`;
-        return normalizedPath === prefix || normalizedPath.startsWith(`${prefix}/`);
-      });
-      const basePath = matchedLocale
-        ? normalizedPath.replace(new RegExp(`^/${matchedLocale}(?=/|$)`), '')
-        : normalizedPath;
-      const nextPath = basePath || '/';
+      // pathname from usePathname is always without locale prefix
+      const basePath = (pathname || '/').replace(/^\/+/, '/') || '/';
+      const pathWithLeadingSlash = basePath.startsWith('/') ? basePath : `/${basePath}`;
       
-      // Build new URL with locale prefix
-      const newUrl = newLocale === routing.defaultLocale 
-        ? nextPath 
-        : `/${newLocale}${nextPath}`;
+      // When switching TO default locale (en): use /en/ prefix first so middleware
+      // can update the locale cookie, then it redirects to unprefixed URL
+      // When switching to other locales: use /{locale}/ prefix
+      const newUrl = `/${newLocale}${pathWithLeadingSlash}`;
       
-      // Force hard navigation to ensure page reloads properly
-      // This prevents issues with stale state after long inactivity
       window.location.href = newUrl;
     } catch (error) {
       console.error('Language switch error:', error);
-      // Fallback: reload current page
       window.location.reload();
     }
     setIsOpen(false);

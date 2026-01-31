@@ -16,6 +16,13 @@ export const mathCalculators: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'subtracting-fractions',
+    titleKey: 'subtractingFractions.title',
+    descKey: 'subtractingFractions.description',
+    path: '/calculators/math/subtracting-fractions',
+    category: 'math',
+  },
+  {
     id: 'antilog',
     titleKey: 'antilog.title',
     descKey: 'antilog.description',
@@ -55,6 +62,13 @@ export const mathCalculators: Calculator[] = [
     titleKey: 'percentage.title',
     descKey: 'percentage.description',
     path: '/calculators/math/percentage',
+    category: 'math',
+  },
+  {
+    id: 'square-root',
+    titleKey: 'squareRoot.title',
+    descKey: 'squareRoot.description',
+    path: '/calculators/math/square-root',
     category: 'math',
   },
   {

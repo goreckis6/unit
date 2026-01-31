@@ -17,6 +17,7 @@ export async function GET() {
     '/calculators/math/arctan',
     '/calculators/math/average',
     '/calculators/others/text-to-binary',
+    '/calculators/others/square-root',
     '/calculators/others/ascii-converter',
     '/calculators/others/caesar-cipher',
     '/calculators/others/pig-latin',

@@ -9,6 +9,13 @@ export const otherCalculators: Calculator[] = [
     category: 'others',
   },
   {
+    id: 'square-root',
+    titleKey: 'squareRoot.title',
+    descKey: 'squareRoot.description',
+    path: '/calculators/others/square-root',
+    category: 'others',
+  },
+  {
     id: 'ascii-converter',
     titleKey: 'asciiConverter.title',
     descKey: 'asciiConverter.description',

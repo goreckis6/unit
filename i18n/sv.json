@@ -3800,6 +3800,87 @@
       "title": "Restkalkylator",
       "description": "Beräkna resten (och kvoten) vid heltalsdivision med euklidisk division. Ange dividend och divisor för att få en icke-negativ rest direkt."
     },
+    "longDivision": {
+      "title": "Kalkylator för lång division",
+      "description": "Dela två heltal och få kvot och rest med steg-för-steg lång division.",
+      "dividendLabel": "Dividend",
+      "dividendPlaceholder": "t.ex. 487",
+      "dividendHelp": "Ange ett heltal (0 eller större).",
+      "divisorLabel": "Divisor",
+      "divisorPlaceholder": "t.ex. 32",
+      "divisorHelp": "Ange ett heltal större än 0.",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "resultLabel": "Resultat",
+      "quotientValue": "Kvot: {value}",
+      "remainderValue": "Rest: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Division:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Steg i lång division",
+      "stepLabel": "Steg {step}",
+      "bringDown": "Ta ner {digit} → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Nästa siffra: {digit}",
+      "errorInvalidDividend": "Ange en giltig heltalsdividend.",
+      "errorInvalidDivisor": "Ange en giltig heltalsdivisor.",
+      "errorDivisionByZero": "Division med noll är inte tillåten.",
+      "seo": {
+        "title": "Kalkylator för lång division – Kvot och rest",
+        "description": "Gratis kalkylator för lång division. Dela två heltal och få kvoten med rest och alla steg.",
+        "keywords": "lång division kalkylator, kvot och rest, dela med rest, steg för lång division, divisionskalkylator, lång division",
+        "content": {
+          "heading": "Så gör du lång division med rest",
+          "paragraph1": "Lång division är en metod för att dela ett tal (dividend) med ett annat (divisor) i mindre steg. När divisionen inte går jämnt ut får du en heltalskvot och en rest. Den här kalkylatorn hjälper dig att öva eller kontrollera dina svar.",
+          "paragraph2": "Lång division med rest är ofta enklare än att skriva ett decimalt resultat för hand. Om du behöver ett decimalt resultat, använd vår kalkylator för lång division med decimaler. Här visar resten vad som blir kvar efter att ha delat så många gånger som möjligt.",
+          "paragraph3": "Skriv in dividenden och divisorn så visar kalkylatorn kvot, rest och hela processen steg för steg. Stegen följer den klassiska metoden: ta ner siffra, dela, multiplicera och subtrahera.",
+          "paragraph4": "Lång division är en användbar färdighet i skolan, läxor och vardagsberäkningar. Använd verktyget för att kontrollera svar eller studera varje steg.",
+          "partsHeading": "Vilka är delarna i en division?",
+          "partsItem1": "Dividend: talet som delas (exempel: 487).",
+          "partsItem2": "Divisor: talet du delar med (exempel: 32).",
+          "partsItem3": "Kvot: heltalssvaret (exempel: 15).",
+          "partsItem4": "Rest: det som blir över (exempel: 7).",
+          "exampleHeading": "Exempel",
+          "exampleText": "487 ÷ 32 = 15 R 7, eftersom 32 × 15 = 480 och 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {
+              "question": "Vad är lång division?",
+              "answer": "Lång division är en steg-för-steg-metod för att dela tal. Den delar upp beräkningen i steg: dela, multiplicera, subtrahera och ta ner nästa siffra."
+            },
+            {
+              "question": "Varför är resten mindre än divisorn?",
+              "answer": "Resten är det som blir kvar efter att ha delat så många gånger som möjligt. Om resten vore lika med eller större än divisorn skulle du kunna dela en gång till."
+            },
+            {
+              "question": "Vad händer om divisorn är större än dividenden?",
+              "answer": "Kvoten blir 0 och resten blir dividenden. Till exempel 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Kan jag använda denna kalkylator för decimaler?",
+              "answer": "Den här kalkylatorn är för heltal med rest. För ett decimalt resultat, använd en kalkylator för lång division med decimaler."
+            },
+            {
+              "question": "Fungerar den med stora tal?",
+              "answer": "Ja. Du kan ange mycket stora heltal, och kalkylatorn beräknar kvot, rest och steg korrekt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "remainder": "Restkalkylator",
+          "remainderDesc": "Hitta kvot och rest vid heltalsdivision",
+          "addition": "Additionskalkylator",
+          "additionDesc": "Addera heltal och decimaler snabbt",
+          "percentage": "Procentkalkylator",
+          "percentageDesc": "Beräkna procentvärden, förändringar och relationer"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kattgraviditetskalkylator",
       "description": "Uppskatta din katts förväntade förlossningsdatum och födelsefönster från parningsdatum. Gratis, snabbt, baserat på typisk dräktighet (63–67 dagar).",

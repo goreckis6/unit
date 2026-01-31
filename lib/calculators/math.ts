@@ -72,6 +72,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'long-division',
+    titleKey: 'longDivision.title',
+    descKey: 'longDivision.description',
+    path: '/calculators/math/long-division',
+    category: 'math',
+  },
+  {
     id: 'remainder',
     titleKey: 'remainder.title',
     descKey: 'remainder.description',

@@ -3865,6 +3865,87 @@
         }
       }
     },
+    "longDivision": {
+      "title": "Langdivision-Rechner",
+      "description": "Teilen Sie zwei ganze Zahlen und erhalten Sie Quotient und Rest mit Schritt-für-Schritt-Langdivision.",
+      "dividendLabel": "Dividend",
+      "dividendPlaceholder": "z. B. 487",
+      "dividendHelp": "Geben Sie eine ganze Zahl (0 oder größer) ein.",
+      "divisorLabel": "Divisor",
+      "divisorPlaceholder": "z. B. 32",
+      "divisorHelp": "Geben Sie eine ganze Zahl größer als 0 ein.",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "resultLabel": "Ergebnis",
+      "quotientValue": "Quotient: {value}",
+      "remainderValue": "Rest: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Division:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Schritte der Langdivision",
+      "stepLabel": "Schritt {step}",
+      "bringDown": "Bringe {digit} herunter → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Nächste Ziffer: {digit}",
+      "errorInvalidDividend": "Bitte geben Sie einen gültigen ganzzahligen Dividend ein.",
+      "errorInvalidDivisor": "Bitte geben Sie einen gültigen ganzzahligen Divisor ein.",
+      "errorDivisionByZero": "Division durch null ist nicht erlaubt.",
+      "seo": {
+        "title": "Langdivision-Rechner – Quotient und Rest",
+        "description": "Kostenloser Langdivision-Rechner. Teilen Sie zwei ganze Zahlen und erhalten Sie den Quotienten mit Rest und die Schritte der Langdivision.",
+        "keywords": "langdivision rechner, quotient und rest, teilen mit rest, langdivision schritte, division rechner, langdivision mit rest",
+        "content": {
+          "heading": "Langdivision mit Rest rechnen",
+          "paragraph1": "Die Langdivision ist eine Methode, um eine Zahl (Dividend) durch eine andere (Divisor) in kleinen Schritten zu teilen. Ist die Division nicht exakt, erhalten Sie einen ganzzahligen Quotienten und einen Rest. Dieser Rechner hilft Ihnen beim Üben oder beim Prüfen Ihrer Ergebnisse.",
+          "paragraph2": "Langdivision mit Rest ist oft einfacher als eine Dezimalzahl von Hand zu berechnen. Wenn Sie ein Dezimalergebnis benötigen, verwenden Sie unseren Langdivision-mit-Dezimalen-Rechner. Hier zeigt der Rest, was nach dem Teilen übrig bleibt.",
+          "paragraph3": "Geben Sie Dividend und Divisor ein, und der Rechner zeigt Quotient, Rest und den vollständigen Schritt-für-Schritt-Prozess. Die Schritte folgen der klassischen Methode: herunterholen, teilen, multiplizieren und subtrahieren.",
+          "paragraph4": "Langdivision ist eine wichtige Fertigkeit für Schule, Hausaufgaben und praktische Berechnungen. Nutzen Sie dieses Tool, um Antworten zu überprüfen oder die einzelnen Schritte zu verstehen.",
+          "partsHeading": "Was sind die Teile der Division?",
+          "partsItem1": "Dividend: die zu teilende Zahl (Beispiel: 487).",
+          "partsItem2": "Divisor: die Zahl, durch die geteilt wird (Beispiel: 32).",
+          "partsItem3": "Quotient: das ganzzahlige Ergebnis (Beispiel: 15).",
+          "partsItem4": "Rest: das, was übrig bleibt (Beispiel: 7).",
+          "exampleHeading": "Beispiel",
+          "exampleText": "487 ÷ 32 = 15 R 7, denn 32 × 15 = 480 und 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Häufige Fragen",
+          "items": [
+            {
+              "question": "Was ist Langdivision?",
+              "answer": "Langdivision ist eine Schritt-für-Schritt-Methode zum Teilen von Zahlen. Der Prozess besteht aus Teilen, Multiplizieren, Subtrahieren und dem Herunterholen der nächsten Ziffer."
+            },
+            {
+              "question": "Warum ist der Rest kleiner als der Divisor?",
+              "answer": "Der Rest ist das, was übrig bleibt, nachdem so oft wie möglich geteilt wurde. Wäre der Rest größer oder gleich dem Divisor, könnte man noch einmal teilen."
+            },
+            {
+              "question": "Was passiert, wenn der Divisor größer als der Dividend ist?",
+              "answer": "Der Quotient ist 0 und der Rest entspricht dem Dividend. Beispiel: 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Kann ich diese Rechner für Dezimalzahlen verwenden?",
+              "answer": "Dieser Rechner ist für ganze Zahlen mit Rest gedacht. Für einen Dezimalquotienten verwenden Sie bitte einen Langdivision-mit-Dezimalen-Rechner."
+            },
+            {
+              "question": "Funktioniert es mit großen Zahlen?",
+              "answer": "Ja. Sie können sehr große ganze Zahlen eingeben, und der Rechner berechnet Quotient, Rest und Schritte korrekt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "remainder": "Restrechner",
+          "remainderDesc": "Quotient und Rest bei ganzzahliger Division finden",
+          "addition": "Additionsrechner",
+          "additionDesc": "Ganze Zahlen und Dezimalzahlen schnell addieren",
+          "percentage": "Prozentrechner",
+          "percentageDesc": "Prozentwerte, Änderungen und Beziehungen berechnen"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Katzen-Trächtigkeitsrechner",
       "description": "Schätzen Sie den Geburtstermin Ihrer Katze und das Geburtsfenster ab dem Deckdatum. Kostenlos, schnell, basierend auf typischer Trächtigkeitsdauer (63–67 Tage).",

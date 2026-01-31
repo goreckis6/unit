@@ -3798,6 +3798,87 @@
       "title": "Restkalkulator",
       "description": "Beregn resten (og kvotienten) ved heltallsdivisjon med euklidsk divisjon. Skriv inn dividend og divisor for å få en ikke-negativ rest med én gang."
     },
+    "longDivision": {
+      "title": "Langdivisjonskalkulator",
+      "description": "Del to heltall og få kvotient og rest med trinnvis lang divisjon.",
+      "dividendLabel": "Dividend",
+      "dividendPlaceholder": "f.eks. 487",
+      "dividendHelp": "Skriv inn et heltall (0 eller større).",
+      "divisorLabel": "Divisor",
+      "divisorPlaceholder": "f.eks. 32",
+      "divisorHelp": "Skriv inn et heltall større enn 0.",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "resultLabel": "Resultat",
+      "quotientValue": "Kvotient: {value}",
+      "remainderValue": "Rest: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Divisjon:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Trinn i lang divisjon",
+      "stepLabel": "Trinn {step}",
+      "bringDown": "Ta ned {digit} → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Neste siffer: {digit}",
+      "errorInvalidDividend": "Skriv inn en gyldig heltallsdividend.",
+      "errorInvalidDivisor": "Skriv inn en gyldig heltallsdivisor.",
+      "errorDivisionByZero": "Deling på null er ikke tillatt.",
+      "seo": {
+        "title": "Langdivisjonskalkulator – Kvotient og rest",
+        "description": "Gratis langdivisjonskalkulator. Del to heltall og få kvotienten med rest og alle trinnene.",
+        "keywords": "langdivisjon kalkulator, kvotient og rest, dele med rest, trinn for lang divisjon, divisjonskalkulator, lang divisjon",
+        "content": {
+          "heading": "Slik gjør du lang divisjon med rest",
+          "paragraph1": "Lang divisjon er en metode for å dele et tall (dividend) med et annet (divisor) i mindre trinn. Når delingen ikke går opp, får du en heltallskvotient og en rest. Denne kalkulatoren lar deg øve eller kontrollere svarene dine.",
+          "paragraph2": "Lang divisjon med rest er ofte enklere enn å skrive et desimalresultat for hånd. Hvis du trenger et desimalresultat, bruk vår kalkulator for lang divisjon med desimaler. Her viser resten hva som blir igjen etter å ha delt så mange ganger som mulig.",
+          "paragraph3": "Skriv inn dividend og divisor, og kalkulatoren viser kvotient, rest og hele prosessen trinn for trinn. Trinnene følger den klassiske metoden: ta ned, dele, multiplisere og subtrahere.",
+          "paragraph4": "Lang divisjon er en nyttig ferdighet i skole, lekser og hverdagsberegninger. Bruk verktøyet til å kontrollere svar eller studere hvert trinn.",
+          "partsHeading": "Hva er delene i en divisjon?",
+          "partsItem1": "Dividend: tallet som deles (eksempel: 487).",
+          "partsItem2": "Divisor: tallet du deler med (eksempel: 32).",
+          "partsItem3": "Kvotient: heltallssvaret (eksempel: 15).",
+          "partsItem4": "Rest: det som blir igjen (eksempel: 7).",
+          "exampleHeading": "Eksempel",
+          "exampleText": "487 ÷ 32 = 15 R 7, fordi 32 × 15 = 480 og 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Vanlige spørsmål",
+          "items": [
+            {
+              "question": "Hva er lang divisjon?",
+              "answer": "Lang divisjon er en trinnvis metode for å dele tall. Den deler opp beregningen i trinn: dele, multiplisere, subtrahere og ta ned neste siffer."
+            },
+            {
+              "question": "Hvorfor er resten mindre enn divisoren?",
+              "answer": "Resten er det som blir igjen etter at du har delt så mange ganger som mulig. Hvis resten var lik eller større enn divisoren, kunne du delt én gang til."
+            },
+            {
+              "question": "Hva skjer hvis divisoren er større enn dividenden?",
+              "answer": "Kvotienten er 0 og resten er dividenden. For eksempel 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Kan jeg bruke denne kalkulatoren for desimaltall?",
+              "answer": "Denne kalkulatoren er for heltall med rest. For et desimalresultat, bruk en kalkulator for lang divisjon med desimaler."
+            },
+            {
+              "question": "Fungerer den med store tall?",
+              "answer": "Ja. Du kan skrive inn svært store heltall, og kalkulatoren beregner kvotient, rest og trinn korrekt."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte kalkulatorer",
+          "remainder": "Restkalkulator",
+          "remainderDesc": "Finn kvotient og rest ved heltallsdivisjon",
+          "addition": "Addisjonskalkulator",
+          "additionDesc": "Legg sammen heltall og desimaler raskt",
+          "percentage": "Prosentkalkulator",
+          "percentageDesc": "Beregn prosentverdier, endringer og forhold"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kattgraviditetskalkulator",
       "description": "Estimer forventet fødseldato og fødselvindu for katten din fra paringsdato. Gratis, raskt, basert på typisk drektighet (63–67 dager).",

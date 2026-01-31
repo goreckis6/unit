@@ -3713,6 +3713,87 @@
         }
       }
     },
+    "longDivision": {
+      "title": "Long Division Calculator",
+      "description": "Divide two whole numbers and get the quotient and remainder with step-by-step long division.",
+      "dividendLabel": "Dividend",
+      "dividendPlaceholder": "e.g. 487",
+      "dividendHelp": "Enter a whole number (0 or greater).",
+      "divisorLabel": "Divisor",
+      "divisorPlaceholder": "e.g. 32",
+      "divisorHelp": "Enter a whole number greater than 0.",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "resultLabel": "Result",
+      "quotientValue": "Quotient: {value}",
+      "remainderValue": "Remainder: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Division:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Long division steps",
+      "stepLabel": "Step {step}",
+      "bringDown": "Bring down {digit} → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Next digit: {digit}",
+      "errorInvalidDividend": "Please enter a valid whole number dividend.",
+      "errorInvalidDivisor": "Please enter a valid whole number divisor.",
+      "errorDivisionByZero": "Division by zero is not allowed.",
+      "seo": {
+        "title": "Long Division Calculator – Quotient and Remainder",
+        "description": "Free long division calculator. Divide two whole numbers and get the quotient with a remainder plus step-by-step long division.",
+        "keywords": "long division calculator, quotient and remainder, divide with remainder, long division steps, division calculator, long division with remainders",
+        "content": {
+          "heading": "How to Do Long Division with Remainders",
+          "paragraph1": "Long division is a method for dividing one number (the dividend) by another (the divisor) by breaking the problem into smaller steps. When the dividend is not evenly divisible by the divisor, you get a whole-number quotient and a remainder. This calculator lets you practice long division with remainders or quickly check your work.",
+          "paragraph2": "Long division with remainders is usually easier than writing a decimal answer by hand. If you specifically need a decimal result, use our Long Division with Decimals Calculator instead. Here, the remainder shows what is left after dividing as many whole times as possible.",
+          "paragraph3": "Enter your dividend and divisor, and the calculator shows the quotient, remainder, and the full step-by-step division process. The steps mirror the classic long division method: bring down digits, divide, multiply, and subtract to find the next remainder.",
+          "paragraph4": "Long division is a useful skill for math classes, homework, and real-world calculations. Use this tool to verify answers, study how each step works, or check your own long division problems quickly and accurately.",
+          "partsHeading": "What are the parts of division?",
+          "partsItem1": "Dividend: the number being divided (example: 487).",
+          "partsItem2": "Divisor: the number you divide by (example: 32).",
+          "partsItem3": "Quotient: the whole-number answer (example: 15).",
+          "partsItem4": "Remainder: what is left over (example: 7).",
+          "exampleHeading": "Example",
+          "exampleText": "487 ÷ 32 = 15 R 7, because 32 × 15 = 480 and 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is long division?",
+              "answer": "Long division is a step-by-step method for dividing numbers. It breaks a large division problem into smaller steps: divide, multiply, subtract, and bring down the next digit."
+            },
+            {
+              "question": "Why is the remainder smaller than the divisor?",
+              "answer": "In division with remainder, the remainder is what is left after dividing as many whole times as possible. If the remainder were equal to or larger than the divisor, you could divide one more time."
+            },
+            {
+              "question": "What if the divisor is larger than the dividend?",
+              "answer": "The quotient is 0 and the remainder is the dividend. For example, 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Can I use this calculator for decimals?",
+              "answer": "This calculator is for whole-number long division with remainders. If you need a decimal quotient, use a long division with decimals calculator."
+            },
+            {
+              "question": "Does it work for large numbers?",
+              "answer": "Yes. You can enter very large whole numbers, and the calculator will compute the quotient, remainder, and steps accurately."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "remainder": "Remainder Calculator",
+          "remainderDesc": "Find the quotient and remainder for integer division",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals quickly and accurately",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentage values, change, and relationships"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Cat Pregnancy Calculator",
       "description": "Estimate your cat's due date and delivery window from the mating date. Free, quick, and based on typical feline gestation (63–67 days).",

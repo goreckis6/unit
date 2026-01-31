@@ -3800,6 +3800,87 @@
       "title": "余数计算器",
       "description": "使用欧几里得除法计算整数除法的余数（以及商）。输入被除数与除数，即可立即得到非负余数。"
     },
+    "longDivision": {
+      "title": "长除法计算器",
+      "description": "将两个整数相除，获取商和余数，并显示逐步长除法。",
+      "dividendLabel": "被除数",
+      "dividendPlaceholder": "例如 487",
+      "dividendHelp": "输入整数（0或更大）。",
+      "divisorLabel": "除数",
+      "divisorPlaceholder": "例如 32",
+      "divisorHelp": "输入大于0的整数。",
+      "calculate": "计算",
+      "reset": "重置",
+      "resultLabel": "结果",
+      "quotientValue": "商：{value}",
+      "remainderValue": "余数：{value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "除法：",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "长除法步骤",
+      "stepLabel": "步骤 {step}",
+      "bringDown": "下移 {digit} → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "下一个数字：{digit}",
+      "errorInvalidDividend": "请输入有效的整数被除数。",
+      "errorInvalidDivisor": "请输入有效的整数除数。",
+      "errorDivisionByZero": "不能除以零。",
+      "seo": {
+        "title": "长除法计算器 – 商与余数",
+        "description": "免费的长除法计算器。将两个整数相除，获得含余数的商和完整步骤。",
+        "keywords": "长除法计算器, 商与余数, 带余数的除法, 长除法步骤, 除法计算器, 长除法",
+        "content": {
+          "heading": "如何进行带余数的长除法",
+          "paragraph1": "长除法是一种将一个数（被除数）除以另一个数（除数）的分步方法。当无法整除时，会得到整数商和余数。该计算器可帮助你练习或核对答案。",
+          "paragraph2": "带余数的长除法通常比手写小数结果更简单。如果需要小数商，请使用带小数的长除法计算器。这里的余数表示除法后剩余的值。",
+          "paragraph3": "输入被除数和除数，计算器将显示商、余数以及完整的步骤。步骤遵循经典方法：下移、相除、相乘、相减。",
+          "paragraph4": "长除法是学校学习、作业与日常计算中的重要技能。使用此工具可以检查答案或理解每一步。",
+          "partsHeading": "除法的各部分是什么？",
+          "partsItem1": "被除数：要被除的数（例如 487）。",
+          "partsItem2": "除数：用来相除的数（例如 32）。",
+          "partsItem3": "商：整数结果（例如 15）。",
+          "partsItem4": "余数：剩余的值（例如 7）。",
+          "exampleHeading": "示例",
+          "exampleText": "487 ÷ 32 = 15 R 7，因为 32 × 15 = 480，且 487 − 480 = 7。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {
+              "question": "什么是长除法？",
+              "answer": "长除法是一种逐步进行的除法方法。它将计算分为相除、相乘、相减和下移下一位等步骤。"
+            },
+            {
+              "question": "为什么余数小于除数？",
+              "answer": "余数是尽可能多次相除后的剩余值。如果余数大于或等于除数，就还能再除一次。"
+            },
+            {
+              "question": "如果除数大于被除数会怎样？",
+              "answer": "商为0，余数等于被除数。例如 7 ÷ 12 = 0 R 7。"
+            },
+            {
+              "question": "可以用于小数吗？",
+              "answer": "该计算器适用于整数并给出余数。需要小数商时，请使用带小数的长除法计算器。"
+            },
+            {
+              "question": "能处理大数字吗？",
+              "answer": "可以。你可以输入很大的整数，计算器会准确给出商、余数及步骤。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "remainder": "余数计算器",
+          "remainderDesc": "计算整数除法的商与余数",
+          "addition": "加法计算器",
+          "additionDesc": "快速相加整数和小数",
+          "percentage": "百分比计算器",
+          "percentageDesc": "计算百分比数值、变化与关系"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "猫咪孕期计算器",
       "description": "根据交配日期估算猫咪预产期和分娩窗口。免费、快速，基于典型妊娠期（63–67天）。",

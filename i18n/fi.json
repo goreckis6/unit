@@ -3800,6 +3800,87 @@
       "title": "Jakojäännöslaskin",
       "description": "Laske kokonaislukujen jakolaskun jakojäännös (ja osamäärä) euklidisella jaolla. Syötä jaettava ja jakaja ja saat ei-negatiivisen jakojäännöksen heti."
     },
+    "longDivision": {
+      "title": "Pitkän jaon laskin",
+      "description": "Jaa kaksi kokonaislukua ja saat osamäärän ja jakojäännöksen vaihe vaiheelta.",
+      "dividendLabel": "Jaettava",
+      "dividendPlaceholder": "esim. 487",
+      "dividendHelp": "Syötä kokonaisluku (0 tai suurempi).",
+      "divisorLabel": "Jakaja",
+      "divisorPlaceholder": "esim. 32",
+      "divisorHelp": "Syötä kokonaisluku, joka on suurempi kuin 0.",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "resultLabel": "Tulos",
+      "quotientValue": "Osamäärä: {value}",
+      "remainderValue": "Jakojäännös: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Jako:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Pitkän jaon vaiheet",
+      "stepLabel": "Vaihe {step}",
+      "bringDown": "Laske {digit} alas → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Seuraava numero: {digit}",
+      "errorInvalidDividend": "Anna kelvollinen kokonaisluku jaettavaksi.",
+      "errorInvalidDivisor": "Anna kelvollinen kokonaisluku jakajaksi.",
+      "errorDivisionByZero": "Nollalla jakaminen ei ole sallittua.",
+      "seo": {
+        "title": "Pitkän jaon laskin – Osamäärä ja jakojäännös",
+        "description": "Ilmainen pitkän jaon laskin. Jaa kaksi kokonaislukua ja saat osamäärän jäännöksen kanssa sekä laskun vaiheet.",
+        "keywords": "pitkän jaon laskin, osamäärä ja jakojäännös, jako jäännöksellä, pitkän jaon vaiheet, jakolaskin, pitkä jako",
+        "content": {
+          "heading": "Näin teet pitkän jaon jäännöksellä",
+          "paragraph1": "Pitkä jako on menetelmä, jossa jaetaan luku (jaettava) toisella luvulla (jakaja) pienissä vaiheissa. Kun jako ei mene tasan, saadaan kokonaislukuosamäärä ja jakojäännös. Tämä laskin auttaa harjoittelemaan tai tarkistamaan tulokset.",
+          "paragraph2": "Pitkä jako jäännöksellä on usein helpompaa kuin desimaalituloksen käsin kirjoittaminen. Jos tarvitset desimaalisen osamäärän, käytä pitkän jaon desimaalilaskinta. Tässä jäännös kertoo, mitä jää jäljelle jakamisen jälkeen.",
+          "paragraph3": "Syötä jaettava ja jakaja, niin laskin näyttää osamäärän, jäännöksen ja koko vaiheittaisen prosessin. Vaiheet seuraavat klassista menetelmää: laske numero alas, jaa, kerro ja vähennä.",
+          "paragraph4": "Pitkä jako on hyödyllinen taito koulussa, läksyissä ja arjen laskuissa. Käytä tätä työkalua vastausten tarkistamiseen tai vaiheiden opiskeluun.",
+          "partsHeading": "Mitkä ovat jaon osat?",
+          "partsItem1": "Jaettava: luku, joka jaetaan (esim. 487).",
+          "partsItem2": "Jakaja: luku, jolla jaetaan (esim. 32).",
+          "partsItem3": "Osamäärä: kokonaislukuinen tulos (esim. 15).",
+          "partsItem4": "Jakojäännös: se, mikä jää (esim. 7).",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "487 ÷ 32 = 15 R 7, koska 32 × 15 = 480 ja 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Mitä pitkä jako on?",
+              "answer": "Pitkä jako on vaiheittainen menetelmä lukujen jakamiseen. Prosessi jaetaan vaiheisiin: jakaminen, kertominen, vähentäminen ja seuraavan numeron alas laskeminen."
+            },
+            {
+              "question": "Miksi jäännös on pienempi kuin jakaja?",
+              "answer": "Jäännös on se, mikä jää jäljelle, kun on jaettu mahdollisimman monta kertaa. Jos jäännös olisi yhtä suuri tai suurempi kuin jakaja, voitaisiin jakaa vielä kerran."
+            },
+            {
+              "question": "Mitä jos jakaja on suurempi kuin jaettava?",
+              "answer": "Osamäärä on 0 ja jäännös on jaettava. Esimerkiksi 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Voinko käyttää laskinta desimaaleille?",
+              "answer": "Tämä laskin on kokonaisluvuille ja jäännöksille. Jos tarvitset desimaalisen osamäärän, käytä pitkän jaon desimaalilaskinta."
+            },
+            {
+              "question": "Toimiiko se suurilla luvuilla?",
+              "answer": "Kyllä. Voit syöttää erittäin suuria kokonaislukuja, ja laskin laskee osamäärän, jäännöksen ja vaiheet tarkasti."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Aiheeseen liittyvät laskimet",
+          "remainder": "Jakojäännöslaskin",
+          "remainderDesc": "Etsi osamäärä ja jäännös kokonaislukujen jaossa",
+          "addition": "Yhteenlaskulaskin",
+          "additionDesc": "Laske kokonais- ja desimaalilukuja nopeasti",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Laske prosenttiosuuksia, muutoksia ja suhteita"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kissan raskauslaskuri",
       "description": "Arvioi kissasi odotettu synnytyspäivä ja synnytysikkuna parituspäivän perusteella. Ilmainen, nopea, perustuu tyypilliseen tiineyteen (63–67 päivää).",

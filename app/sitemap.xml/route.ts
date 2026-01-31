@@ -23,6 +23,7 @@ export async function GET() {
     '/calculators/math/roots',
     '/calculators/math/polynomial-remainder',
     '/calculators/math/remainder',
+    '/calculators/math/long-division',
     '/calculators/others/text-to-binary',
     '/calculators/others/ascii-converter',
     '/calculators/others/caesar-cipher',

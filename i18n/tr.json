@@ -3802,6 +3802,87 @@
       "title": "Kalan Hesaplayıcı",
       "description": "Öklid bölmesi ile tam sayı bölmesinin kalanını (ve bölümünü) hesaplayın. Bölüneni ve böleni girerek anında negatif olmayan kalan elde edin."
     },
+    "longDivision": {
+      "title": "Uzun Bölme Hesaplayıcı",
+      "description": "İki tam sayıyı bölün ve adım adım uzun bölme ile bölüm ve kalanı bulun.",
+      "dividendLabel": "Bölünen",
+      "dividendPlaceholder": "örn. 487",
+      "dividendHelp": "Bir tam sayı girin (0 veya daha büyük).",
+      "divisorLabel": "Bölen",
+      "divisorPlaceholder": "örn. 32",
+      "divisorHelp": "0'dan büyük bir tam sayı girin.",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "resultLabel": "Sonuç",
+      "quotientValue": "Bölüm: {value}",
+      "remainderValue": "Kalan: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Bölme:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Uzun bölme adımları",
+      "stepLabel": "Adım {step}",
+      "bringDown": "{digit} aşağı indir → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Sonraki basamak: {digit}",
+      "errorInvalidDividend": "Lütfen geçerli bir tam sayı bölünen girin.",
+      "errorInvalidDivisor": "Lütfen geçerli bir tam sayı bölen girin.",
+      "errorDivisionByZero": "Sıfıra bölme yapılamaz.",
+      "seo": {
+        "title": "Uzun Bölme Hesaplayıcı – Bölüm ve Kalan",
+        "description": "Ücretsiz uzun bölme hesaplayıcı. İki tam sayıyı bölün ve kalanlı bölüm ile adımları görün.",
+        "keywords": "uzun bölme hesaplayıcı, bölüm ve kalan, kalanlı bölme, uzun bölme adımları, bölme hesaplayıcı, uzun bölme",
+        "content": {
+          "heading": "Kalanlı uzun bölme nasıl yapılır",
+          "paragraph1": "Uzun bölme, bir sayıyı (bölünen) başka bir sayıya (bölen) küçük adımlarla bölme yöntemidir. Bölme tam olmadığında tam sayı bölüm ve kalan elde edilir. Bu hesaplayıcı alıştırma yapmak veya sonucu kontrol etmek için idealdir.",
+          "paragraph2": "Kalanlı uzun bölme, ondalık sonucu elle yazmaktan genellikle daha kolaydır. Ondalık bölüm gerekiyorsa, Ondalıklı Uzun Bölme Hesaplayıcıyı kullanın. Burada kalan, bölme sonrası kalan miktarı gösterir.",
+          "paragraph3": "Bölünen ve böleni girin; hesaplayıcı bölüm, kalan ve adım adım süreci gösterecektir. Adımlar klasik yöntemi izler: basamağı indir, böl, çarp ve çıkar.",
+          "paragraph4": "Uzun bölme okul, ödev ve günlük hesaplamalarda faydalı bir beceridir. Bu araçla cevapları doğrulayabilir veya her adımı öğrenebilirsiniz.",
+          "partsHeading": "Bölmenin parçaları nelerdir?",
+          "partsItem1": "Bölünen: bölünen sayı (örnek: 487).",
+          "partsItem2": "Bölen: bölme yapılan sayı (örnek: 32).",
+          "partsItem3": "Bölüm: tam sayı sonuç (örnek: 15).",
+          "partsItem4": "Kalan: geriye kalan (örnek: 7).",
+          "exampleHeading": "Örnek",
+          "exampleText": "487 ÷ 32 = 15 R 7, çünkü 32 × 15 = 480 ve 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "Uzun bölme nedir?",
+              "answer": "Uzun bölme, sayıları adım adım bölme yöntemidir. İşlem; bölme, çarpma, çıkarma ve sonraki basamağı indirme adımlarından oluşur."
+            },
+            {
+              "question": "Kalan neden bölenin altında olur?",
+              "answer": "Kalan, mümkün olduğunca bölündükten sonra geride kalan değerdir. Kalan bölenle eşit veya daha büyük olsaydı, bir kez daha bölünebilirdi."
+            },
+            {
+              "question": "Bölen bölünenden büyükse ne olur?",
+              "answer": "Bölüm 0 olur ve kalan bölünene eşittir. Örneğin, 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Bu hesaplayıcıyı ondalıklar için kullanabilir miyim?",
+              "answer": "Bu hesaplayıcı tam sayılar ve kalan içindir. Ondalık bölüm gerekiyorsa, ondalıklı uzun bölme hesaplayıcıyı kullanın."
+            },
+            {
+              "question": "Büyük sayılarda çalışır mı?",
+              "answer": "Evet. Çok büyük tam sayıları girseniz bile bölüm, kalan ve adımlar doğru hesaplanır."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "remainder": "Kalan Hesaplayıcı",
+          "remainderDesc": "Tam sayı bölmesinde bölüm ve kalanı bulun",
+          "addition": "Toplama Hesaplayıcı",
+          "additionDesc": "Tam sayıları ve ondalıkları hızlıca toplayın",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Yüzde değerlerini, değişimleri ve ilişkileri hesaplayın"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kedi Gebelik Hesaplayıcı",
       "description": "Çiftleşme tarihinden kedinizin tahmini doğum tarihini ve doğum penceresini hesaplayın. Ücretsiz, hızlı, tipik gebelik süresine (63–67 gün) dayalı.",

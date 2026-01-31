@@ -3804,6 +3804,87 @@
       "title": "Calcolatrice del resto",
       "description": "Calcola il resto (e il quoziente) della divisione tra interi usando la divisione euclidea. Inserisci dividendo e divisore per ottenere subito un resto non negativo."
     },
+    "longDivision": {
+      "title": "Calcolatore di Divisione in Colonna",
+      "description": "Dividi due numeri interi e ottieni quoziente e resto con la divisione in colonna passo dopo passo.",
+      "dividendLabel": "Dividendo",
+      "dividendPlaceholder": "es. 487",
+      "dividendHelp": "Inserisci un numero intero (0 o maggiore).",
+      "divisorLabel": "Divisore",
+      "divisorPlaceholder": "es. 32",
+      "divisorHelp": "Inserisci un numero intero maggiore di 0.",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "resultLabel": "Risultato",
+      "quotientValue": "Quoziente: {value}",
+      "remainderValue": "Resto: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Divisione:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Passaggi della divisione in colonna",
+      "stepLabel": "Passo {step}",
+      "bringDown": "Abbassa {digit} → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Cifra successiva: {digit}",
+      "errorInvalidDividend": "Inserisci un dividendo intero valido.",
+      "errorInvalidDivisor": "Inserisci un divisore intero valido.",
+      "errorDivisionByZero": "La divisione per zero non è consentita.",
+      "seo": {
+        "title": "Calcolatore di Divisione in Colonna – Quoziente e Resto",
+        "description": "Calcolatore gratuito di divisione in colonna. Dividi due numeri interi e ottieni il quoziente con resto e i passaggi.",
+        "keywords": "calcolatore divisione in colonna, quoziente e resto, divisione con resto, passaggi divisione, calcolatore divisione, divisione in colonna con resto",
+        "content": {
+          "heading": "Come fare la divisione in colonna con resto",
+          "paragraph1": "La divisione in colonna è un metodo per dividere un numero (dividendo) per un altro (divisore) in piccoli passaggi. Quando il dividendo non è divisibile esattamente, ottieni un quoziente intero e un resto. Questo calcolatore ti aiuta a esercitarti o a controllare i risultati.",
+          "paragraph2": "La divisione in colonna con resto è spesso più semplice che scrivere un risultato decimale a mano. Se ti serve un quoziente decimale, usa il nostro Calcolatore di Divisione in Colonna con Decimali. Qui il resto mostra ciò che rimane dopo aver diviso il più possibile.",
+          "paragraph3": "Inserisci dividendo e divisore e il calcolatore mostrerà quoziente, resto e il procedimento completo passo dopo passo. I passaggi seguono il metodo classico: abbassa, dividi, moltiplica e sottrai.",
+          "paragraph4": "La divisione in colonna è una competenza utile per scuola, compiti e calcoli quotidiani. Usa questo strumento per verificare le risposte o studiare ogni passaggio.",
+          "partsHeading": "Quali sono le parti della divisione?",
+          "partsItem1": "Dividendo: il numero da dividere (esempio: 487).",
+          "partsItem2": "Divisore: il numero per cui si divide (esempio: 32).",
+          "partsItem3": "Quoziente: la risposta intera (esempio: 15).",
+          "partsItem4": "Resto: ciò che rimane (esempio: 7).",
+          "exampleHeading": "Esempio",
+          "exampleText": "487 ÷ 32 = 15 R 7, perché 32 × 15 = 480 e 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {
+              "question": "Cos'è la divisione in colonna?",
+              "answer": "La divisione in colonna è un metodo passo dopo passo per dividere numeri. Scompone il calcolo in fasi: dividere, moltiplicare, sottrarre e abbassare la cifra successiva."
+            },
+            {
+              "question": "Perché il resto è più piccolo del divisore?",
+              "answer": "Il resto è ciò che rimane dopo aver diviso il più possibile. Se il resto fosse uguale o maggiore del divisore, si potrebbe dividere un'altra volta."
+            },
+            {
+              "question": "Cosa succede se il divisore è più grande del dividendo?",
+              "answer": "Il quoziente è 0 e il resto è il dividendo. Esempio: 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Posso usare questa calcolatrice per i decimali?",
+              "answer": "Questa calcolatrice è per numeri interi con resto. Per un quoziente decimale, usa un calcolatore di divisione in colonna con decimali."
+            },
+            {
+              "question": "Funziona con numeri grandi?",
+              "answer": "Sì. Puoi inserire numeri interi molto grandi e il calcolatore calcolerà quoziente, resto e passaggi con precisione."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori correlati",
+          "remainder": "Calcolatore del Resto",
+          "remainderDesc": "Trova quoziente e resto nella divisione intera",
+          "addition": "Calcolatore di Addizione",
+          "additionDesc": "Somma numeri interi e decimali rapidamente",
+          "percentage": "Calcolatore di Percentuale",
+          "percentageDesc": "Calcola valori, variazioni e relazioni percentuali"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calcolatore Gravidanza Gatta",
       "description": "Stima la data del parto e la finestra di nascita dalla data dell'accoppiamento. Gratuito, veloce, basato su gestazione tipica (63–67 giorni).",

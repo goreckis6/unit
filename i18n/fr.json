@@ -3804,6 +3804,87 @@
       "title": "Calculateur de reste",
       "description": "Calculez le reste (et le quotient) d’une division entière via la division euclidienne. Saisissez un dividende et un diviseur pour obtenir instantanément un reste non négatif."
     },
+    "longDivision": {
+      "title": "Calculateur de Division Longue",
+      "description": "Divisez deux nombres entiers et obtenez le quotient et le reste avec une division longue étape par étape.",
+      "dividendLabel": "Dividende",
+      "dividendPlaceholder": "ex. 487",
+      "dividendHelp": "Entrez un nombre entier (0 ou plus).",
+      "divisorLabel": "Diviseur",
+      "divisorPlaceholder": "ex. 32",
+      "divisorHelp": "Entrez un nombre entier supérieur à 0.",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "resultLabel": "Résultat",
+      "quotientValue": "Quotient : {value}",
+      "remainderValue": "Reste : {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Division :",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Étapes de la division longue",
+      "stepLabel": "Étape {step}",
+      "bringDown": "Abaissez {digit} → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Chiffre suivant : {digit}",
+      "errorInvalidDividend": "Veuillez entrer un dividende entier valide.",
+      "errorInvalidDivisor": "Veuillez entrer un diviseur entier valide.",
+      "errorDivisionByZero": "La division par zéro n'est pas autorisée.",
+      "seo": {
+        "title": "Calculateur de Division Longue – Quotient et Reste",
+        "description": "Calculateur gratuit de division longue. Divisez deux nombres entiers et obtenez le quotient avec reste et les étapes de la division.",
+        "keywords": "calculateur de division longue, quotient et reste, division avec reste, étapes de division longue, calculateur de division, division longue avec reste",
+        "content": {
+          "heading": "Comment faire une division longue avec reste",
+          "paragraph1": "La division longue est une méthode pour diviser un nombre (le dividende) par un autre (le diviseur) en étapes simples. Lorsque le dividende n'est pas divisible exactement, vous obtenez un quotient entier et un reste. Cette calculatrice vous permet de pratiquer la division longue avec reste ou de vérifier vos résultats.",
+          "paragraph2": "La division longue avec reste est souvent plus simple que d'écrire un résultat décimal à la main. Si vous avez besoin d'un quotient décimal, utilisez notre Calculateur de Division Longue avec Décimales. Ici, le reste représente ce qu'il reste après avoir divisé autant de fois que possible.",
+          "paragraph3": "Entrez le dividende et le diviseur, et la calculatrice affichera le quotient, le reste et le processus étape par étape. Les étapes suivent la méthode classique : abaisser, diviser, multiplier et soustraire pour trouver le reste suivant.",
+          "paragraph4": "La division longue est une compétence utile pour les cours de mathématiques, les devoirs et les calculs du quotidien. Utilisez cet outil pour vérifier des réponses, étudier chaque étape ou contrôler rapidement vos exercices.",
+          "partsHeading": "Quelles sont les parties de la division ?",
+          "partsItem1": "Dividende : le nombre à diviser (exemple : 487).",
+          "partsItem2": "Diviseur : le nombre par lequel on divise (exemple : 32).",
+          "partsItem3": "Quotient : la réponse entière (exemple : 15).",
+          "partsItem4": "Reste : ce qu'il reste (exemple : 7).",
+          "exampleHeading": "Exemple",
+          "exampleText": "487 ÷ 32 = 15 R 7, car 32 × 15 = 480 et 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {
+              "question": "Qu'est-ce que la division longue ?",
+              "answer": "La division longue est une méthode étape par étape pour diviser des nombres. Elle décompose le calcul en étapes : diviser, multiplier, soustraire et abaisser le chiffre suivant."
+            },
+            {
+              "question": "Pourquoi le reste est-il plus petit que le diviseur ?",
+              "answer": "Dans une division avec reste, le reste correspond à ce qu'il reste après avoir divisé autant de fois que possible. S'il était égal ou supérieur au diviseur, on pourrait diviser une fois de plus."
+            },
+            {
+              "question": "Que se passe-t-il si le diviseur est plus grand que le dividende ?",
+              "answer": "Le quotient est 0 et le reste est le dividende. Par exemple, 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Puis-je utiliser cette calculatrice pour les décimales ?",
+              "answer": "Cette calculatrice est destinée à la division longue d'entiers avec reste. Pour un quotient décimal, utilisez une calculatrice de division longue avec décimales."
+            },
+            {
+              "question": "Fonctionne-t-elle avec de grands nombres ?",
+              "answer": "Oui. Vous pouvez entrer de très grands nombres entiers, et la calculatrice calculera le quotient, le reste et les étapes avec précision."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatrices associées",
+          "remainder": "Calculateur de reste",
+          "remainderDesc": "Trouvez le quotient et le reste d'une division entière",
+          "addition": "Calculateur d'addition",
+          "additionDesc": "Additionnez rapidement les nombres entiers et décimaux",
+          "percentage": "Calculateur de pourcentage",
+          "percentageDesc": "Calculez des valeurs, des variations et des relations en pourcentage"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calculateur de Grossesse du Chat",
       "description": "Estimez la date de mise bas et la fenêtre de naissance à partir de la date d'accouplement. Gratuit, rapide, basé sur une gestation typique (63–67 jours).",

@@ -3800,6 +3800,87 @@
       "title": "Restcalculator",
       "description": "Bereken de rest (en het quotiënt) van een gehele deling met euclidische deling. Voer een deeltal en deler in om direct een niet-negatieve rest te krijgen."
     },
+    "longDivision": {
+      "title": "Lange-delingscalculator",
+      "description": "Deel twee gehele getallen en krijg het quotiënt en de rest met stap-voor-stap lange deling.",
+      "dividendLabel": "Deeltal",
+      "dividendPlaceholder": "bijv. 487",
+      "dividendHelp": "Voer een geheel getal in (0 of hoger).",
+      "divisorLabel": "Deler",
+      "divisorPlaceholder": "bijv. 32",
+      "divisorHelp": "Voer een geheel getal groter dan 0 in.",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "resultLabel": "Resultaat",
+      "quotientValue": "Quotiënt: {value}",
+      "remainderValue": "Rest: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Deling:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Stappen van de lange deling",
+      "stepLabel": "Stap {step}",
+      "bringDown": "Haal {digit} naar beneden → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Volgend cijfer: {digit}",
+      "errorInvalidDividend": "Voer een geldig geheel deeltal in.",
+      "errorInvalidDivisor": "Voer een geldige gehele deler in.",
+      "errorDivisionByZero": "Delen door nul is niet toegestaan.",
+      "seo": {
+        "title": "Lange-delingscalculator – Quotiënt en Rest",
+        "description": "Gratis lange-delingscalculator. Deel twee gehele getallen en krijg het quotiënt met rest en de stappen.",
+        "keywords": "lange deling calculator, quotiënt en rest, delen met rest, stappen lange deling, delingscalculator, lange deling met rest",
+        "content": {
+          "heading": "Lange deling met rest",
+          "paragraph1": "Lange deling is een methode om een getal (het deeltal) door een ander (de deler) te delen in kleine stappen. Als de deling niet exact is, krijg je een geheel quotiënt en een rest. Deze calculator helpt je oefenen of je antwoorden controleren.",
+          "paragraph2": "Lange deling met rest is vaak eenvoudiger dan een decimale uitkomst met de hand uitrekenen. Als je een decimaal quotiënt nodig hebt, gebruik dan onze calculator voor lange deling met decimalen. De rest laat zien wat overblijft na zoveel mogelijk te delen.",
+          "paragraph3": "Voer het deeltal en de deler in en de calculator toont het quotiënt, de rest en het volledige stappenplan. De stappen volgen de klassieke methode: naar beneden halen, delen, vermenigvuldigen en aftrekken.",
+          "paragraph4": "Lange deling is nuttig voor school, huiswerk en dagelijkse berekeningen. Gebruik deze tool om antwoorden te controleren of elke stap te bestuderen.",
+          "partsHeading": "Wat zijn de onderdelen van een deling?",
+          "partsItem1": "Deeltal: het getal dat je deelt (bijvoorbeeld 487).",
+          "partsItem2": "Deler: het getal waarmee je deelt (bijvoorbeeld 32).",
+          "partsItem3": "Quotiënt: het gehele antwoord (bijvoorbeeld 15).",
+          "partsItem4": "Rest: wat overblijft (bijvoorbeeld 7).",
+          "exampleHeading": "Voorbeeld",
+          "exampleText": "487 ÷ 32 = 15 R 7, omdat 32 × 15 = 480 en 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            {
+              "question": "Wat is lange deling?",
+              "answer": "Lange deling is een stap-voor-stapmethode om getallen te delen. Je deelt het probleem op in stappen: delen, vermenigvuldigen, aftrekken en het volgende cijfer naar beneden halen."
+            },
+            {
+              "question": "Waarom is de rest kleiner dan de deler?",
+              "answer": "De rest is wat overblijft nadat je zo vaak mogelijk hebt gedeeld. Als de rest gelijk aan of groter dan de deler was, kon je nog een keer delen."
+            },
+            {
+              "question": "Wat als de deler groter is dan het deeltal?",
+              "answer": "Het quotiënt is 0 en de rest is het deeltal. Bijvoorbeeld: 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Kan ik deze calculator gebruiken voor decimalen?",
+              "answer": "Deze calculator is voor lange deling met gehele getallen en een rest. Voor een decimaal quotiënt gebruik je een calculator voor lange deling met decimalen."
+            },
+            {
+              "question": "Werkt het met grote getallen?",
+              "answer": "Ja. Je kunt zeer grote gehele getallen invoeren en de calculator berekent het quotiënt, de rest en de stappen nauwkeurig."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde calculators",
+          "remainder": "Restcalculator",
+          "remainderDesc": "Vind quotiënt en rest bij gehele deling",
+          "addition": "Optelcalculator",
+          "additionDesc": "Tel gehele getallen en decimalen snel op",
+          "percentage": "Percentagecalculator",
+          "percentageDesc": "Bereken percentages, veranderingen en relaties"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kattenzwangerschapscalculator",
       "description": "Schat de verwachtingsdatum en het geboortemoment van uw kat op basis van de dekdatum. Gratis, snel, gebaseerd op typische dracht (63–67 dagen).",

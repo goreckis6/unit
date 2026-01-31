@@ -3800,6 +3800,87 @@
       "title": "Kalkulačka zvyšku",
       "description": "Vypočítajte zvyšok (a podiel) celočíselného delenia pomocou euklidovského delenia. Zadajte delenec a deliteľ a okamžite získate nezáporný zvyšok."
     },
+    "longDivision": {
+      "title": "Kalkulačka dlhého delenia",
+      "description": "Vydeľte dve celé čísla a získajte podiel a zvyšok krok za krokom.",
+      "dividendLabel": "Delenec",
+      "dividendPlaceholder": "napr. 487",
+      "dividendHelp": "Zadajte celé číslo (0 alebo väčšie).",
+      "divisorLabel": "Deliteľ",
+      "divisorPlaceholder": "napr. 32",
+      "divisorHelp": "Zadajte celé číslo väčšie ako 0.",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "resultLabel": "Výsledok",
+      "quotientValue": "Podiel: {value}",
+      "remainderValue": "Zvyšok: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Delenie:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Kroky dlhého delenia",
+      "stepLabel": "Krok {step}",
+      "bringDown": "Prenes {digit} → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Ďalšia číslica: {digit}",
+      "errorInvalidDividend": "Zadajte platný celý delenec.",
+      "errorInvalidDivisor": "Zadajte platný celý deliteľ.",
+      "errorDivisionByZero": "Delenie nulou nie je povolené.",
+      "seo": {
+        "title": "Kalkulačka dlhého delenia – Podiel a zvyšok",
+        "description": "Bezplatná kalkulačka dlhého delenia. Vydeľte dve celé čísla a získajte podiel so zvyškom a postup výpočtu.",
+        "keywords": "kalkulačka dlhého delenia, podiel a zvyšok, delenie so zvyškom, kroky dlhého delenia, kalkulačka delenia, dlhé delenie",
+        "content": {
+          "heading": "Ako vykonať dlhé delenie so zvyškom",
+          "paragraph1": "Dlhé delenie je metóda delenia čísla (delenec) iným číslom (deliteľ) v menších krokoch. Ak delenie nie je presné, získate celočíselný podiel a zvyšok. Táto kalkulačka vám pomôže cvičiť alebo overiť výsledky.",
+          "paragraph2": "Dlhé delenie so zvyškom je často jednoduchšie než ručne zapisovať desatinný výsledok. Ak potrebujete desatinný podiel, použite kalkulačku dlhého delenia s desatinnými číslami. Zvyšok ukazuje, čo po delení ostane.",
+          "paragraph3": "Zadajte delenec a deliteľ a kalkulačka zobrazí podiel, zvyšok a celý postup krok za krokom. Kroky sledujú klasickú metódu: preniesť číslicu, deliť, násobiť a odčítať.",
+          "paragraph4": "Dlhé delenie je užitočná zručnosť pre školu, domáce úlohy aj bežné výpočty. Použite tento nástroj na kontrolu odpovedí alebo na štúdium jednotlivých krokov.",
+          "partsHeading": "Aké sú časti delenia?",
+          "partsItem1": "Delenec: číslo, ktoré delíme (napríklad 487).",
+          "partsItem2": "Deliteľ: číslo, ktorým delíme (napríklad 32).",
+          "partsItem3": "Podiel: celočíselný výsledok (napríklad 15).",
+          "partsItem4": "Zvyšok: to, čo zostane (napríklad 7).",
+          "exampleHeading": "Príklad",
+          "exampleText": "487 ÷ 32 = 15 R 7, pretože 32 × 15 = 480 a 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {
+              "question": "Čo je dlhé delenie?",
+              "answer": "Dlhé delenie je postupná metóda delenia čísel. Rozdeľuje výpočet na kroky: delenie, násobenie, odčítanie a prenesenie ďalšej číslice."
+            },
+            {
+              "question": "Prečo je zvyšok menší ako deliteľ?",
+              "answer": "Zvyšok je to, čo ostane po delení čo najviac krát. Ak by bol zvyšok väčší alebo rovný deliteľu, dalo by sa deliť ešte raz."
+            },
+            {
+              "question": "Čo ak je deliteľ väčší ako delenec?",
+              "answer": "Podiel je 0 a zvyšok je delenec. Napríklad 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Môžem túto kalkulačku použiť pre desatinné čísla?",
+              "answer": "Táto kalkulačka je určená pre celé čísla so zvyškom. Pre desatinný podiel použite kalkulačku dlhého delenia s desatinnými číslami."
+            },
+            {
+              "question": "Funguje s veľkými číslami?",
+              "answer": "Áno. Môžete zadať aj veľmi veľké celé čísla a kalkulačka správne vypočíta podiel, zvyšok aj kroky."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace kalkulačky",
+          "remainder": "Kalkulačka zvyšku",
+          "remainderDesc": "Nájdite podiel a zvyšok pri celočíselnom delení",
+          "addition": "Kalkulačka sčítania",
+          "additionDesc": "Rýchlo sčítajte celé aj desatinné čísla",
+          "percentage": "Kalkulačka percent",
+          "percentageDesc": "Vypočítajte percentá, zmeny a vzťahy"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kalkulačka gravidity mačky",
       "description": "Odhadnite termín pôrodu a pôrodné okno od dátumu párenia. Zadarmo, rýchlo, na základe typickej gravidity (63–67 dní).",

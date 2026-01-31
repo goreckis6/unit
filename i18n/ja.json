@@ -3804,6 +3804,87 @@
       "title": "余り計算機",
       "description": "ユークリッド除法で整数除算の余り（および商）を計算します。被除数と除数を入力すると、非負の余りをすぐに取得できます。"
     },
+    "longDivision": {
+      "title": "筆算割り算計算機",
+      "description": "2つの整数を割り、商と余りを筆算の手順で表示します。",
+      "dividendLabel": "被除数",
+      "dividendPlaceholder": "例: 487",
+      "dividendHelp": "0以上の整数を入力してください。",
+      "divisorLabel": "除数",
+      "divisorPlaceholder": "例: 32",
+      "divisorHelp": "0より大きい整数を入力してください。",
+      "calculate": "計算",
+      "reset": "リセット",
+      "resultLabel": "結果",
+      "quotientValue": "商: {value}",
+      "remainderValue": "余り: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "割り算:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "筆算の手順",
+      "stepLabel": "ステップ{step}",
+      "bringDown": "{digit}を下ろす → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "次の桁: {digit}",
+      "errorInvalidDividend": "有効な整数の被除数を入力してください。",
+      "errorInvalidDivisor": "有効な整数の除数を入力してください。",
+      "errorDivisionByZero": "0で割ることはできません。",
+      "seo": {
+        "title": "筆算割り算計算機 – 商と余り",
+        "description": "無料の筆算割り算計算機。2つの整数を割り、余り付きの商と手順を表示します。",
+        "keywords": "筆算 割り算 計算機, 商と余り, 余り付き割り算, 筆算の手順, 割り算 計算機, 筆算割り算",
+        "content": {
+          "heading": "余りのある筆算のやり方",
+          "paragraph1": "筆算は、数（被除数）を別の数（除数）で小さな手順に分けて割る方法です。割り切れない場合は、整数の商と余りが得られます。この計算機は練習や答え合わせに役立ちます。",
+          "paragraph2": "余り付きの筆算は、小数の答えを手書きするよりも簡単なことが多いです。小数の結果が必要な場合は、長除法（小数）計算機をご利用ください。ここでは、余りが割り算後に残る値を示します。",
+          "paragraph3": "被除数と除数を入力すると、商・余り・手順を段階的に表示します。手順は、数字を下ろす→割る→掛ける→引く、の古典的な方法に従います。",
+          "paragraph4": "筆算は学校の学習や日常の計算で役立つスキルです。このツールで答えを確認したり、各手順を学んだりできます。",
+          "partsHeading": "割り算の各要素",
+          "partsItem1": "被除数: 割られる数（例: 487）。",
+          "partsItem2": "除数: 割る数（例: 32）。",
+          "partsItem3": "商: 整数の答え（例: 15）。",
+          "partsItem4": "余り: 残る値（例: 7）。",
+          "exampleHeading": "例",
+          "exampleText": "487 ÷ 32 = 15 R 7（32 × 15 = 480、487 − 480 = 7）。"
+        },
+        "faq": {
+          "heading": "よくある質問",
+          "items": [
+            {
+              "question": "筆算とは何ですか？",
+              "answer": "筆算は数を段階的に割る方法です。割る、掛ける、引く、次の桁を下ろすという手順で進めます。"
+            },
+            {
+              "question": "なぜ余りは除数より小さいのですか？",
+              "answer": "余りは、できる限り割った後に残る値です。余りが除数以上なら、さらにもう一度割ることができます。"
+            },
+            {
+              "question": "除数が被除数より大きい場合はどうなりますか？",
+              "answer": "商は0、余りは被除数です。例: 7 ÷ 12 = 0 R 7。"
+            },
+            {
+              "question": "小数にも使えますか？",
+              "answer": "この計算機は整数の余り付き割り算用です。小数の商が必要な場合は、長除法（小数）計算機をご利用ください。"
+            },
+            {
+              "question": "大きな数でも計算できますか？",
+              "answer": "はい。非常に大きな整数でも、商・余り・手順を正確に計算できます。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "関連計算機",
+          "remainder": "余り計算機",
+          "remainderDesc": "整数除算の商と余りを求める",
+          "addition": "足し算計算機",
+          "additionDesc": "整数と小数を素早く加算",
+          "percentage": "パーセント計算機",
+          "percentageDesc": "割合、変化、関係を計算"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "猫の妊娠計算機",
       "description": "交配日から出産予定日と出産時期を推定。無料・即時、典型的な妊娠期間（63〜67日）に基づきます。",

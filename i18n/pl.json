@@ -3800,6 +3800,87 @@
       "title": "Kalkulator reszty",
       "description": "Oblicz resztę (i iloraz) z dzielenia całkowitego za pomocą dzielenia euklidesowego. Wpisz dzielną i dzielnik, aby natychmiast otrzymać nieujemną resztę."
     },
+    "longDivision": {
+      "title": "Kalkulator dzielenia pisemnego",
+      "description": "Podziel dwie liczby całkowite i otrzymaj iloraz oraz resztę krok po kroku.",
+      "dividendLabel": "Dzielna",
+      "dividendPlaceholder": "np. 487",
+      "dividendHelp": "Wpisz liczbę całkowitą (0 lub większą).",
+      "divisorLabel": "Dzielnik",
+      "divisorPlaceholder": "np. 32",
+      "divisorHelp": "Wpisz liczbę całkowitą większą od 0.",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "resultLabel": "Wynik",
+      "quotientValue": "Iloraz: {value}",
+      "remainderValue": "Reszta: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Dzielenie:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Kroki dzielenia pisemnego",
+      "stepLabel": "Krok {step}",
+      "bringDown": "Sprowadź {digit} → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Następna cyfra: {digit}",
+      "errorInvalidDividend": "Podaj poprawną liczbę całkowitą jako dzielną.",
+      "errorInvalidDivisor": "Podaj poprawną liczbę całkowitą jako dzielnik.",
+      "errorDivisionByZero": "Dzielenie przez zero jest niedozwolone.",
+      "seo": {
+        "title": "Kalkulator dzielenia pisemnego – Iloraz i Reszta",
+        "description": "Darmowy kalkulator dzielenia pisemnego. Podziel dwie liczby całkowite i otrzymaj iloraz z resztą oraz kroki obliczeń.",
+        "keywords": "kalkulator dzielenia pisemnego, iloraz i reszta, dzielenie z resztą, kroki dzielenia, kalkulator dzielenia, dzielenie pisemne",
+        "content": {
+          "heading": "Jak wykonać dzielenie pisemne z resztą",
+          "paragraph1": "Dzielenie pisemne to metoda dzielenia liczby (dzielnej) przez inną liczbę (dzielnik) w mniejszych krokach. Gdy dzielenie nie jest dokładne, otrzymujesz iloraz całkowity i resztę. Ten kalkulator pozwala ćwiczyć lub sprawdzać wyniki.",
+          "paragraph2": "Dzielenie z resztą jest zwykle prostsze niż zapis wyniku w postaci dziesiętnej. Jeśli potrzebujesz wyniku dziesiętnego, użyj kalkulatora dzielenia pisemnego z ułamkami dziesiętnymi. Tutaj reszta pokazuje, co pozostaje po maksymalnym podziale.",
+          "paragraph3": "Wpisz dzielną i dzielnik, a kalkulator pokaże iloraz, resztę i pełny proces krok po kroku. Kroki odzwierciedlają klasyczną metodę: sprowadź, podziel, pomnóż i odejmij.",
+          "paragraph4": "Dzielenie pisemne to przydatna umiejętność w szkole, na zadaniach domowych i w codziennych obliczeniach. Użyj tego narzędzia, aby sprawdzić odpowiedzi lub przeanalizować każdy krok.",
+          "partsHeading": "Jakie są części dzielenia?",
+          "partsItem1": "Dzielna: liczba dzielona (np. 487).",
+          "partsItem2": "Dzielnik: liczba, przez którą dzielimy (np. 32).",
+          "partsItem3": "Iloraz: wynik całkowity (np. 15).",
+          "partsItem4": "Reszta: to, co pozostaje (np. 7).",
+          "exampleHeading": "Przykład",
+          "exampleText": "487 ÷ 32 = 15 R 7, ponieważ 32 × 15 = 480, a 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Najczęściej zadawane pytania",
+          "items": [
+            {
+              "question": "Czym jest dzielenie pisemne?",
+              "answer": "Dzielenie pisemne to metoda krok po kroku do dzielenia liczb. Dzieli obliczenie na etapy: dzielenie, mnożenie, odejmowanie i sprowadzanie kolejnej cyfry."
+            },
+            {
+              "question": "Dlaczego reszta jest mniejsza od dzielnika?",
+              "answer": "Reszta to to, co pozostaje po podzieleniu maksymalnej liczby razy. Gdyby reszta była równa lub większa od dzielnika, można by podzielić jeszcze raz."
+            },
+            {
+              "question": "Co jeśli dzielnik jest większy od dzielnej?",
+              "answer": "Iloraz wynosi 0, a reszta to dzielna. Na przykład 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Czy mogę używać tego kalkulatora do liczb dziesiętnych?",
+              "answer": "Ten kalkulator jest przeznaczony do liczb całkowitych z resztą. Jeśli potrzebujesz wyniku dziesiętnego, użyj kalkulatora dzielenia pisemnego z liczbami dziesiętnymi."
+            },
+            {
+              "question": "Czy działa z dużymi liczbami?",
+              "answer": "Tak. Możesz wprowadzać bardzo duże liczby całkowite, a kalkulator obliczy iloraz, resztę i kroki poprawnie."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "remainder": "Kalkulator reszty",
+          "remainderDesc": "Znajdź iloraz i resztę w dzieleniu całkowitym",
+          "addition": "Kalkulator dodawania",
+          "additionDesc": "Szybko dodawaj liczby całkowite i dziesiętne",
+          "percentage": "Kalkulator procentów",
+          "percentageDesc": "Obliczaj wartości, zmiany i zależności procentowe"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kalkulator Ciąży Kotki",
       "description": "Oszacuj termin porodu i okno porodowe na podstawie daty krycia. Darmowo, szybko, na podstawie typowej ciąży (63–67 dni).",

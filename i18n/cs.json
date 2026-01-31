@@ -3800,6 +3800,87 @@
       "title": "Kalkulačka zbytku",
       "description": "Vypočítejte zbytek (a podíl) celočíselného dělení pomocí eukleidovského dělení. Zadejte dělenec a dělitel a okamžitě získáte nezáporný zbytek."
     },
+    "longDivision": {
+      "title": "Kalkulačka dlouhého dělení",
+      "description": "Vydělte dvě celá čísla a získejte podíl a zbytek krok za krokem.",
+      "dividendLabel": "Dělenec",
+      "dividendPlaceholder": "např. 487",
+      "dividendHelp": "Zadejte celé číslo (0 nebo větší).",
+      "divisorLabel": "Dělitel",
+      "divisorPlaceholder": "např. 32",
+      "divisorHelp": "Zadejte celé číslo větší než 0.",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "resultLabel": "Výsledek",
+      "quotientValue": "Podíl: {value}",
+      "remainderValue": "Zbytek: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Dělení:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Kroky dlouhého dělení",
+      "stepLabel": "Krok {step}",
+      "bringDown": "Přenést {digit} → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Další číslice: {digit}",
+      "errorInvalidDividend": "Zadejte platný celý dělenec.",
+      "errorInvalidDivisor": "Zadejte platný celý dělitel.",
+      "errorDivisionByZero": "Dělení nulou není povoleno.",
+      "seo": {
+        "title": "Kalkulačka dlouhého dělení – Podíl a zbytek",
+        "description": "Bezplatná kalkulačka dlouhého dělení. Vydělte dvě celá čísla a získejte podíl se zbytkem a postup výpočtu.",
+        "keywords": "kalkulačka dlouhého dělení, podíl a zbytek, dělení se zbytkem, kroky dlouhého dělení, kalkulačka dělení, dlouhé dělení",
+        "content": {
+          "heading": "Jak provést dlouhé dělení se zbytkem",
+          "paragraph1": "Dlouhé dělení je metoda dělení čísla (dělenec) jiným číslem (dělitel) v malých krocích. Pokud dělení není přesné, získáte celočíselný podíl a zbytek. Tato kalkulačka vám umožní procvičovat nebo ověřovat výsledky.",
+          "paragraph2": "Dlouhé dělení se zbytkem je často jednodušší než ruční zápis desetinného výsledku. Pokud potřebujete desetinný podíl, použijte kalkulačku dlouhého dělení s desetinnými čísly. Zbytek ukazuje, co po dělení zůstane.",
+          "paragraph3": "Zadejte dělenec a dělitel a kalkulačka zobrazí podíl, zbytek i celý postup krok za krokem. Kroky odpovídají klasické metodě: přenést číslici, dělit, násobit a odečítat.",
+          "paragraph4": "Dlouhé dělení je užitečná dovednost pro školu, domácí úkoly i běžné výpočty. Tento nástroj využijete k ověření odpovědí nebo ke studiu jednotlivých kroků.",
+          "partsHeading": "Jaké jsou části dělení?",
+          "partsItem1": "Dělenec: číslo, které dělíme (například 487).",
+          "partsItem2": "Dělitel: číslo, kterým dělíme (například 32).",
+          "partsItem3": "Podíl: celočíselný výsledek (například 15).",
+          "partsItem4": "Zbytek: to, co zůstane (například 7).",
+          "exampleHeading": "Příklad",
+          "exampleText": "487 ÷ 32 = 15 R 7, protože 32 × 15 = 480 a 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {
+              "question": "Co je dlouhé dělení?",
+              "answer": "Dlouhé dělení je postupná metoda dělení čísel. Rozdělí výpočet na kroky: dělení, násobení, odčítání a přenesení další číslice."
+            },
+            {
+              "question": "Proč je zbytek menší než dělitel?",
+              "answer": "Zbytek je to, co zbývá po maximálním dělení. Pokud by byl zbytek větší nebo roven děliteli, bylo by možné dělit ještě jednou."
+            },
+            {
+              "question": "Co když je dělitel větší než dělenec?",
+              "answer": "Podíl je 0 a zbytek je dělenec. Například 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Mohu použít tuto kalkulačku pro desetinná čísla?",
+              "answer": "Tato kalkulačka je určena pro celočíselné dělení se zbytkem. Pro desetinný podíl použijte kalkulačku dlouhého dělení s desetinnými čísly."
+            },
+            {
+              "question": "Funguje s velkými čísly?",
+              "answer": "Ano. Můžete zadat i velmi velká celá čísla a kalkulačka správně vypočítá podíl, zbytek i kroky."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "remainder": "Kalkulačka zbytku",
+          "remainderDesc": "Najděte podíl a zbytek při celočíselném dělení",
+          "addition": "Kalkulačka sčítání",
+          "additionDesc": "Rychle sčítejte celá i desetinná čísla",
+          "percentage": "Kalkulačka procent",
+          "percentageDesc": "Vypočítejte procenta, změny a vztahy"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kalkulačka březosti kočky",
       "description": "Odhadněte termín porodu a porodní okno od data páření. Zdarma, rychle, na základě typické březosti (63–67 dní).",

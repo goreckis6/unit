@@ -3800,6 +3800,87 @@
       "title": "나머지 계산기",
       "description": "유클리드 나눗셈으로 정수 나눗셈의 나머지(및 몫)를 계산합니다. 피제수와 제수를 입력해 비음수 나머지를 즉시 확인하세요."
     },
+    "longDivision": {
+      "title": "긴 나눗셈 계산기",
+      "description": "두 정수를 나누고 단계별 긴 나눗셈으로 몫과 나머지를 확인하세요.",
+      "dividendLabel": "피제수",
+      "dividendPlaceholder": "예: 487",
+      "dividendHelp": "0 이상의 정수를 입력하세요.",
+      "divisorLabel": "제수",
+      "divisorPlaceholder": "예: 32",
+      "divisorHelp": "0보다 큰 정수를 입력하세요.",
+      "calculate": "계산",
+      "reset": "초기화",
+      "resultLabel": "결과",
+      "quotientValue": "몫: {value}",
+      "remainderValue": "나머지: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "나눗셈:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "긴 나눗셈 단계",
+      "stepLabel": "단계 {step}",
+      "bringDown": "{digit} 내리기 → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "다음 숫자: {digit}",
+      "errorInvalidDividend": "유효한 정수 피제수를 입력하세요.",
+      "errorInvalidDivisor": "유효한 정수 제수를 입력하세요.",
+      "errorDivisionByZero": "0으로 나눌 수 없습니다.",
+      "seo": {
+        "title": "긴 나눗셈 계산기 – 몫과 나머지",
+        "description": "무료 긴 나눗셈 계산기. 두 정수를 나누고 나머지가 있는 몫과 단계별 과정을 확인하세요.",
+        "keywords": "긴 나눗셈 계산기, 몫과 나머지, 나머지 있는 나눗셈, 긴 나눗셈 단계, 나눗셈 계산기, 긴 나눗셈",
+        "content": {
+          "heading": "나머지가 있는 긴 나눗셈 방법",
+          "paragraph1": "긴 나눗셈은 한 수(피제수)를 다른 수(제수)로 작은 단계로 나누는 방법입니다. 정확히 나누어지지 않으면 정수 몫과 나머지를 얻습니다. 이 계산기는 연습하거나 답을 확인하는 데 도움이 됩니다.",
+          "paragraph2": "나머지가 있는 긴 나눗셈은 소수 결과를 손으로 쓰는 것보다 쉬운 경우가 많습니다. 소수 몫이 필요하다면 소수 나눗셈 계산기를 사용하세요. 여기서는 나머지가 나눗셈 후 남는 값을 보여줍니다.",
+          "paragraph3": "피제수와 제수를 입력하면 몫, 나머지, 그리고 전체 단계 과정을 표시합니다. 단계는 전통적인 방법을 따르며, 숫자를 내리고, 나누고, 곱하고, 빼는 순서입니다.",
+          "paragraph4": "긴 나눗셈은 학교 학습, 숙제, 일상 계산에 유용한 기술입니다. 이 도구로 답을 확인하거나 각 단계를 이해할 수 있습니다.",
+          "partsHeading": "나눗셈의 구성 요소",
+          "partsItem1": "피제수: 나눌 수(예: 487).",
+          "partsItem2": "제수: 나누는 수(예: 32).",
+          "partsItem3": "몫: 정수 결과(예: 15).",
+          "partsItem4": "나머지: 남는 값(예: 7).",
+          "exampleHeading": "예시",
+          "exampleText": "487 ÷ 32 = 15 R 7, 32 × 15 = 480이고 487 − 480 = 7이기 때문입니다."
+        },
+        "faq": {
+          "heading": "자주 묻는 질문",
+          "items": [
+            {
+              "question": "긴 나눗셈이란 무엇인가요?",
+              "answer": "긴 나눗셈은 숫자를 단계별로 나누는 방법입니다. 나누기, 곱하기, 빼기, 다음 자리 내리기의 단계로 진행합니다."
+            },
+            {
+              "question": "나머지는 왜 제수보다 작은가요?",
+              "answer": "나머지는 가능한 한 많이 나눈 후 남는 값입니다. 나머지가 제수보다 크거나 같다면 한 번 더 나눌 수 있습니다."
+            },
+            {
+              "question": "제수가 피제수보다 크면 어떻게 되나요?",
+              "answer": "몫은 0이고 나머지는 피제수와 같습니다. 예: 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "소수에도 사용할 수 있나요?",
+              "answer": "이 계산기는 정수 나눗셈과 나머지를 위한 것입니다. 소수 몫이 필요하면 소수 나눗셈 계산기를 사용하세요."
+            },
+            {
+              "question": "큰 숫자에도 작동하나요?",
+              "answer": "네. 매우 큰 정수를 입력해도 몫, 나머지, 단계가 정확히 계산됩니다."
+            }
+          ]
+        },
+        "related": {
+          "heading": "관련 계산기",
+          "remainder": "나머지 계산기",
+          "remainderDesc": "정수 나눗셈의 몫과 나머지를 계산",
+          "addition": "덧셈 계산기",
+          "additionDesc": "정수와 소수를 빠르게 더하기",
+          "percentage": "백분율 계산기",
+          "percentageDesc": "백분율 값, 변화, 관계를 계산"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "고양이 임신 계산기",
       "description": "교배일로부터 예상 출산일과 출산 기간을 추정합니다. 무료, 빠름, 일반적인 임신 기간(63–67일) 기준.",

@@ -3800,6 +3800,87 @@
       "title": "Calculadora do resto",
       "description": "Calcule o resto (e o quociente) da divisão inteira usando a divisão euclidiana. Introduza o dividendo e o divisor para obter instantaneamente um resto não negativo."
     },
+    "longDivision": {
+      "title": "Calculadora de Divisão Longa",
+      "description": "Divida dois números inteiros e obtenha quociente e resto com divisão longa passo a passo.",
+      "dividendLabel": "Dividendo",
+      "dividendPlaceholder": "ex. 487",
+      "dividendHelp": "Insira um número inteiro (0 ou maior).",
+      "divisorLabel": "Divisor",
+      "divisorPlaceholder": "ex. 32",
+      "divisorHelp": "Insira um número inteiro maior que 0.",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "resultLabel": "Resultado",
+      "quotientValue": "Quociente: {value}",
+      "remainderValue": "Resto: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Divisão:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Passos da divisão longa",
+      "stepLabel": "Passo {step}",
+      "bringDown": "Baixe {digit} → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Próximo dígito: {digit}",
+      "errorInvalidDividend": "Insira um dividendo inteiro válido.",
+      "errorInvalidDivisor": "Insira um divisor inteiro válido.",
+      "errorDivisionByZero": "Divisão por zero não é permitida.",
+      "seo": {
+        "title": "Calculadora de Divisão Longa – Quociente e Resto",
+        "description": "Calculadora gratuita de divisão longa. Divida dois números inteiros e obtenha o quociente com resto e os passos.",
+        "keywords": "calculadora de divisão longa, quociente e resto, dividir com resto, passos de divisão longa, calculadora de divisão, divisão longa com resto",
+        "content": {
+          "heading": "Como fazer divisão longa com resto",
+          "paragraph1": "A divisão longa é um método para dividir um número (dividendo) por outro (divisor) em passos menores. Quando a divisão não é exata, você obtém um quociente inteiro e um resto. Esta calculadora permite praticar a divisão longa com resto ou verificar seus resultados.",
+          "paragraph2": "A divisão longa com resto costuma ser mais fácil do que escrever um resultado decimal à mão. Se você precisa de um quociente decimal, use nossa Calculadora de Divisão Longa com Decimais. Aqui, o resto mostra o que sobra após dividir o máximo possível.",
+          "paragraph3": "Digite o dividendo e o divisor e a calculadora mostrará o quociente, o resto e o processo passo a passo. Os passos seguem o método clássico: baixar dígitos, dividir, multiplicar e subtrair.",
+          "paragraph4": "A divisão longa é uma habilidade útil para a escola, tarefas e cálculos do dia a dia. Use esta ferramenta para conferir respostas ou estudar cada passo.",
+          "partsHeading": "Quais são as partes da divisão?",
+          "partsItem1": "Dividendo: o número que será dividido (exemplo: 487).",
+          "partsItem2": "Divisor: o número pelo qual se divide (exemplo: 32).",
+          "partsItem3": "Quociente: a resposta inteira (exemplo: 15).",
+          "partsItem4": "Resto: o que sobra (exemplo: 7).",
+          "exampleHeading": "Exemplo",
+          "exampleText": "487 ÷ 32 = 15 R 7, porque 32 × 15 = 480 e 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {
+              "question": "O que é divisão longa?",
+              "answer": "A divisão longa é um método passo a passo para dividir números. Ele divide o cálculo em etapas: dividir, multiplicar, subtrair e baixar o próximo dígito."
+            },
+            {
+              "question": "Por que o resto é menor que o divisor?",
+              "answer": "O resto é o que sobra depois de dividir o máximo possível. Se o resto fosse igual ou maior que o divisor, seria possível dividir mais uma vez."
+            },
+            {
+              "question": "O que acontece se o divisor for maior que o dividendo?",
+              "answer": "O quociente é 0 e o resto é o dividendo. Por exemplo, 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Posso usar esta calculadora para decimais?",
+              "answer": "Esta calculadora é para divisão longa com números inteiros e resto. Para um quociente decimal, use uma calculadora de divisão longa com decimais."
+            },
+            {
+              "question": "Funciona com números grandes?",
+              "answer": "Sim. Você pode inserir números inteiros muito grandes e a calculadora calculará o quociente, o resto e os passos com precisão."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "remainder": "Calculadora de Resto",
+          "remainderDesc": "Encontre o quociente e o resto na divisão inteira",
+          "addition": "Calculadora de Adição",
+          "additionDesc": "Some números inteiros e decimais rapidamente",
+          "percentage": "Calculadora de Porcentagem",
+          "percentageDesc": "Calcule valores, variações e relações percentuais"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calculadora de Gravidez de Gata",
       "description": "Estime a data do parto e a janela de nascimento a partir da data do acasalamento. Grátis, rápido, baseado em gestação típica (63–67 dias).",

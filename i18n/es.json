@@ -3800,6 +3800,87 @@
       "title": "Calculadora de resto",
       "description": "Calcula el resto (y el cociente) de una división entera usando la división euclídea. Introduce el dividendo y el divisor para obtener un resto no negativo al instante."
     },
+    "longDivision": {
+      "title": "Calculadora de División Larga",
+      "description": "Divide dos números enteros y obtén el cociente y el resto con división larga paso a paso.",
+      "dividendLabel": "Dividendo",
+      "dividendPlaceholder": "ej. 487",
+      "dividendHelp": "Introduce un número entero (0 o mayor).",
+      "divisorLabel": "Divisor",
+      "divisorPlaceholder": "ej. 32",
+      "divisorHelp": "Introduce un número entero mayor que 0.",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "resultLabel": "Resultado",
+      "quotientValue": "Cociente: {value}",
+      "remainderValue": "Resto: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "División:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "Pasos de la división larga",
+      "stepLabel": "Paso {step}",
+      "bringDown": "Baja {digit} → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Siguiente dígito: {digit}",
+      "errorInvalidDividend": "Introduce un dividendo entero válido.",
+      "errorInvalidDivisor": "Introduce un divisor entero válido.",
+      "errorDivisionByZero": "No se permite dividir entre cero.",
+      "seo": {
+        "title": "Calculadora de División Larga – Cociente y Resto",
+        "description": "Calculadora gratuita de división larga. Divide dos números enteros y obtén el cociente con resto y los pasos de la división.",
+        "keywords": "calculadora de división larga, cociente y resto, dividir con resto, pasos de división larga, calculadora de división, división larga con restos",
+        "content": {
+          "heading": "Cómo hacer división larga con restos",
+          "paragraph1": "La división larga es un método para dividir un número (el dividendo) entre otro (el divisor) mediante pasos pequeños. Cuando el dividendo no es divisible exactamente, obtienes un cociente entero y un resto. Esta calculadora te permite practicar la división larga con restos o comprobar tus resultados.",
+          "paragraph2": "La división larga con restos suele ser más fácil que escribir un resultado decimal a mano. Si necesitas un cociente decimal, usa nuestra Calculadora de División Larga con Decimales. Aquí, el resto muestra lo que queda después de dividir el máximo de veces posibles.",
+          "paragraph3": "Introduce el dividendo y el divisor, y la calculadora mostrará el cociente, el resto y el proceso completo paso a paso. Los pasos siguen el método clásico: bajar dígitos, dividir, multiplicar y restar para hallar el siguiente resto.",
+          "paragraph4": "La división larga es una habilidad útil para clases de matemáticas, tareas y cálculos del día a día. Usa esta herramienta para verificar respuestas, estudiar cada paso o comprobar tus propios ejercicios rápidamente.",
+          "partsHeading": "¿Cuáles son las partes de la división?",
+          "partsItem1": "Dividendo: el número que se divide (ejemplo: 487).",
+          "partsItem2": "Divisor: el número por el que se divide (ejemplo: 32).",
+          "partsItem3": "Cociente: la respuesta entera (ejemplo: 15).",
+          "partsItem4": "Resto: lo que sobra (ejemplo: 7).",
+          "exampleHeading": "Ejemplo",
+          "exampleText": "487 ÷ 32 = 15 R 7, porque 32 × 15 = 480 y 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es la división larga?",
+              "answer": "La división larga es un método paso a paso para dividir números. Divide el problema en etapas: dividir, multiplicar, restar y bajar el siguiente dígito."
+            },
+            {
+              "question": "¿Por qué el resto es menor que el divisor?",
+              "answer": "En una división con resto, el resto es lo que queda después de dividir tantas veces como sea posible. Si el resto fuera igual o mayor que el divisor, se podría dividir una vez más."
+            },
+            {
+              "question": "¿Qué pasa si el divisor es mayor que el dividendo?",
+              "answer": "El cociente es 0 y el resto es el dividendo. Por ejemplo, 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "¿Puedo usar esta calculadora para decimales?",
+              "answer": "Esta calculadora es para división larga de números enteros con resto. Si necesitas un cociente decimal, usa una calculadora de división larga con decimales."
+            },
+            {
+              "question": "¿Funciona con números grandes?",
+              "answer": "Sí. Puedes introducir números enteros muy grandes y la calculadora calculará el cociente, el resto y los pasos con precisión."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "remainder": "Calculadora de Resto",
+          "remainderDesc": "Encuentra el cociente y el resto de una división entera",
+          "addition": "Calculadora de Suma",
+          "additionDesc": "Suma números enteros y decimales con precisión",
+          "percentage": "Calculadora de Porcentaje",
+          "percentageDesc": "Calcula valores, cambios y relaciones porcentuales"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calculadora de Embarazo de Gata",
       "description": "Calcula la fecha de parto y la ventana de nacimiento a partir de la fecha de apareamiento. Gratis, rápido, basado en gestación típica (63–67 días).",

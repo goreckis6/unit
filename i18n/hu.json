@@ -3804,6 +3804,87 @@
       "title": "Maradék kalkulátor",
       "description": "Számítsa ki az egész osztás maradékát (és hányadosát) euklideszi osztással. Adja meg az osztandót és az osztót, és azonnal kapjon nem negatív maradékot."
     },
+    "longDivision": {
+      "title": "Hosszú osztás kalkulátor",
+      "description": "Ossz el két egész számot, és kapd meg a hányadost és a maradékot lépésről lépésre.",
+      "dividendLabel": "Osztandó",
+      "dividendPlaceholder": "pl. 487",
+      "dividendHelp": "Adj meg egy egész számot (0 vagy nagyobb).",
+      "divisorLabel": "Osztó",
+      "divisorPlaceholder": "pl. 32",
+      "divisorHelp": "Adj meg 0-nál nagyobb egész számot.",
+      "calculate": "Számol",
+      "reset": "Visszaállítás",
+      "resultLabel": "Eredmény",
+      "quotientValue": "Hányados: {value}",
+      "remainderValue": "Maradék: {value}",
+      "equation": "{a} = {b} × {q} + {r}",
+      "diagramLabel": "Osztás:",
+      "divisionDiagram": "{divisor} ) {dividend} = {quotient} R {remainder}",
+      "stepsHeading": "A hosszú osztás lépései",
+      "stepLabel": "Lépés {step}",
+      "bringDown": "Lehozás {digit} → {value}",
+      "divide": "{partial} ÷ {divisor} = {quotientDigit}",
+      "multiply": "{quotientDigit} × {divisor} = {product}",
+      "subtract": "{partial} − {product} = {remainder}",
+      "nextDigit": "Következő számjegy: {digit}",
+      "errorInvalidDividend": "Adj meg érvényes egész osztandót.",
+      "errorInvalidDivisor": "Adj meg érvényes egész osztót.",
+      "errorDivisionByZero": "Nullával való osztás nem megengedett.",
+      "seo": {
+        "title": "Hosszú osztás kalkulátor – Hányados és maradék",
+        "description": "Ingyenes hosszú osztás kalkulátor. Ossz el két egész számot, és kapd meg a hányadost maradékkal és a lépésekkel.",
+        "keywords": "hosszú osztás kalkulátor, hányados és maradék, osztás maradékkal, hosszú osztás lépései, osztás kalkulátor, hosszú osztás",
+        "content": {
+          "heading": "Hosszú osztás maradékkal",
+          "paragraph1": "A hosszú osztás egy módszer, amellyel egy számot (osztandó) egy másikkal (osztó) kisebb lépésekben osztunk. Ha az osztás nem pontos, egész hányadost és maradékot kapunk. Ez a kalkulátor segít gyakorolni vagy ellenőrizni az eredményeket.",
+          "paragraph2": "A maradékos hosszú osztás gyakran egyszerűbb, mint a tizedes eredmény kézi leírása. Ha tizedes hányadosra van szükséged, használd a tizedes hosszú osztás kalkulátort. Itt a maradék mutatja, mi marad az osztás után.",
+          "paragraph3": "Add meg az osztandót és az osztót, és a kalkulátor megmutatja a hányadost, a maradékot és a teljes lépésről lépésre folyamatot. A lépések a klasszikus módszert követik: lehozás, osztás, szorzás és kivonás.",
+          "paragraph4": "A hosszú osztás hasznos készség az iskolában, házi feladatoknál és mindennapi számításoknál. Használd ezt az eszközt a válaszok ellenőrzésére vagy a lépések tanulmányozására.",
+          "partsHeading": "Melyek az osztás részei?",
+          "partsItem1": "Osztandó: a szám, amit osztunk (például 487).",
+          "partsItem2": "Osztó: a szám, amellyel osztunk (például 32).",
+          "partsItem3": "Hányados: az egész eredmény (például 15).",
+          "partsItem4": "Maradék: ami megmarad (például 7).",
+          "exampleHeading": "Példa",
+          "exampleText": "487 ÷ 32 = 15 R 7, mert 32 × 15 = 480 és 487 − 480 = 7."
+        },
+        "faq": {
+          "heading": "Gyakori kérdések",
+          "items": [
+            {
+              "question": "Mi az a hosszú osztás?",
+              "answer": "A hosszú osztás egy lépésről lépésre módszer a számok osztására. A folyamat: osztás, szorzás, kivonás és a következő számjegy lehozása."
+            },
+            {
+              "question": "Miért kisebb a maradék, mint az osztó?",
+              "answer": "A maradék az, ami az osztás után megmarad. Ha a maradék nagyobb vagy egyenlő lenne az osztóval, akkor még egyszer lehetne osztani."
+            },
+            {
+              "question": "Mi történik, ha az osztó nagyobb, mint az osztandó?",
+              "answer": "A hányados 0, a maradék pedig az osztandó. Például 7 ÷ 12 = 0 R 7."
+            },
+            {
+              "question": "Használhatom ezt a kalkulátort tizedesekhez?",
+              "answer": "Ez a kalkulátor egész számokhoz és maradékhoz készült. Tizedes hányadoshoz használj tizedes hosszú osztás kalkulátort."
+            },
+            {
+              "question": "Működik nagy számokkal?",
+              "answer": "Igen. Nagyon nagy egész számokat is megadhatsz, és a kalkulátor pontosan kiszámítja a hányadost, a maradékot és a lépéseket."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó kalkulátorok",
+          "remainder": "Maradék kalkulátor",
+          "remainderDesc": "Találd meg a hányadost és a maradékot egész osztásnál",
+          "addition": "Összeadás kalkulátor",
+          "additionDesc": "Egész és tizedes számok gyors összeadása",
+          "percentage": "Százalék kalkulátor",
+          "percentageDesc": "Százalékok, változások és arányok számítása"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Macska Vemhesség Kalkulátor",
       "description": "Becsülje meg a macska várható születési dátumát és szülési ablakát a párzás dátuma alapján. Ingyenes, gyors, tipikus vemhesség alapján (63–67 nap).",

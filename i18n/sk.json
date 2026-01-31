@@ -3800,6 +3800,86 @@
       "title": "Kalkulačka zvyšku",
       "description": "Vypočítajte zvyšok (a podiel) celočíselného delenia pomocou euklidovského delenia. Zadajte delenec a deliteľ a okamžite získate nezáporný zvyšok."
     },
+    "ratio": {
+      "title": "Kalkulačka pomerov",
+      "description": "Riešte pomery, nájdite chýbajúcu hodnotu v A:B = C:D a rýchlo škálujte pomery.",
+      "ratioSectionHeading": "Nájdite chýbajúcu hodnotu",
+      "ratioSectionDescription": "Zadajte tri hodnoty a vypočítajte štvrtú v pomere A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "napr. 1",
+      "bPlaceholder": "napr. 2",
+      "cPlaceholder": "nechajte prázdne",
+      "dPlaceholder": "napr. 4",
+      "calculate": "Vypočítať",
+      "clear": "Vymazať",
+      "resultHeading": "Výsledok",
+      "missingValueLabel": "Chýba {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Zadajte tri hodnoty pre náhľad pomeru.",
+      "errorNeedThree": "Zadajte presne tri hodnoty na výpočet štvrtej.",
+      "errorInvalidNumber": "Zadajte platné čísla.",
+      "errorDivisionByZero": "V pomere nemožno deliť nulou.",
+      "scaleSectionHeading": "Kalkulačka škálovania pomerov",
+      "scaleSectionDescription": "Zmenšite alebo zväčšite pomer koeficientom a zobrazte nové hodnoty.",
+      "scaleLeftLabel": "Ľavá hodnota",
+      "scaleLeftPlaceholder": "napr. 250",
+      "scaleRightLabel": "Pravá hodnota",
+      "scaleRightPlaceholder": "napr. 280",
+      "scaleFactorLabel": "Koeficient škálovania",
+      "scaleFactorPlaceholder": "napr. 2.5",
+      "scaleHint": "Vynásobte obe strany pomeru koeficientom.",
+      "scalePreviewHeading": "Náhľad škálovaného pomeru",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Výsledok: {left}:{right}",
+      "scalePreviewPlaceholder": "Zadajte pomer a koeficient na zobrazenie výsledku.",
+      "seo": {
+        "title": "Kalkulačka pomerov – riešenie a škálovanie",
+        "description": "Bezplatná kalkulačka pomerov. Nájdite chýbajúcu hodnotu v A:B = C:D a škálujte pomery.",
+        "keywords": "kalkulačka pomerov, A:B = C:D, riešenie pomerov, škálovanie, proporcie",
+        "content": {
+          "heading": "Ako používať kalkulačku pomerov",
+          "paragraph1": "Pomer vyjadruje kvantitatívny vzťah medzi dvoma číslami a často sa zapisuje ako A:B, „A ku B“ alebo ako zlomok A/B. Pomery sa používajú v receptoch, mapách, pomeroch strán, financiách a pravdepodobnosti.",
+          "paragraph2": "Táto kalkulačka vám umožní vyriešiť pomer zadaním troch hodnôt v A:B = C:D. Nástroj vypočíta chýbajúcu hodnotu pri zachovaní rovnakého vzťahu.",
+          "paragraph3": "Nástroj na škálovanie pomeru umožňuje pomer zmenšiť alebo zväčšiť zadaným koeficientom. Je to užitočné pri úprave receptov, výkresov alebo rozmerov.",
+          "paragraph4": "Napríklad pomer 1:2:3 po vynásobení 5 bude 5:10:15 pri zachovaní rovnakých proporcií.",
+          "exampleHeading": "Príklad",
+          "exampleText": "Vyriešte A:B = C:D s A=3, B=5, D=20. Chýbajúca hodnota je C=12, pretože 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {
+              "question": "Čo predstavuje pomer?",
+              "answer": "Pomer porovnáva dve veličiny a ukazuje, koľkokrát jedna obsahuje druhú. Dá sa zapísať dvojbodkou, ako „A ku B“ alebo ako zlomok."
+            },
+            {
+              "question": "Ako vyriešiť A:B = C:D?",
+              "answer": "Ak poznáte tri hodnoty, štvrtú vypočítate krížovým násobením. Napríklad C = A×D/B, ak B ≠ 0."
+            },
+            {
+              "question": "Dajú sa pomery škálovať?",
+              "answer": "Áno. Vynásobte každý člen rovnakým koeficientom, aby ste zachovali pomer."
+            },
+            {
+              "question": "Kde sa pomery používajú v praxi?",
+              "answer": "V receptoch, mapách, pomeroch strán, pravdepodobnosti, financiách a vo všetkých proporčných situáciách."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace kalkulačky",
+          "percentage": "Kalkulačka percent",
+          "percentageDesc": "Vypočítajte percentuálne hodnoty, zmeny a vzťahy",
+          "remainder": "Kalkulačka zvyšku",
+          "remainderDesc": "Nájdite podiel a zvyšok pri celočíselnom delení",
+          "longDivision": "Kalkulačka písomného delenia",
+          "longDivisionDesc": "Delenie celých čísel krok za krokom"
+        }
+      }
+    },
     "longDivision": {
       "title": "Kalkulačka dlhého delenia",
       "description": "Vydeľte dve celé čísla a získajte podiel a zvyšok krok za krokom.",

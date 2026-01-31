@@ -3800,6 +3800,86 @@
       "title": "余数计算器",
       "description": "使用欧几里得除法计算整数除法的余数（以及商）。输入被除数与除数，即可立即得到非负余数。"
     },
+    "ratio": {
+      "title": "比例计算器",
+      "description": "解比例、在 A:B = C:D 中求缺失值，并快速缩放比例。",
+      "ratioSectionHeading": "查找缺失值",
+      "ratioSectionDescription": "输入任意三个值即可计算 A:B = C:D 中的第四个值。",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "例如 1",
+      "bPlaceholder": "例如 2",
+      "cPlaceholder": "留空",
+      "dPlaceholder": "例如 4",
+      "calculate": "计算",
+      "clear": "清除",
+      "resultHeading": "结果",
+      "missingValueLabel": "缺失 {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "输入三个值即可预览比例。",
+      "errorNeedThree": "请输入正好三个值以计算第四个值。",
+      "errorInvalidNumber": "请输入有效数字。",
+      "errorDivisionByZero": "比例中不能除以 0。",
+      "scaleSectionHeading": "比例缩放计算器",
+      "scaleSectionDescription": "通过缩放因子缩小或放大比例，并查看新值。",
+      "scaleLeftLabel": "左侧值",
+      "scaleLeftPlaceholder": "例如 250",
+      "scaleRightLabel": "右侧值",
+      "scaleRightPlaceholder": "例如 280",
+      "scaleFactorLabel": "缩放因子",
+      "scaleFactorPlaceholder": "例如 2.5",
+      "scaleHint": "将比例两边同时乘以因子。",
+      "scalePreviewHeading": "缩放比例预览",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "结果：{left}:{right}",
+      "scalePreviewPlaceholder": "输入比例和因子即可查看结果。",
+      "seo": {
+        "title": "比例计算器 – 解比例与缩放",
+        "description": "免费比例计算器。求解 A:B = C:D 的缺失值，并缩放比例。",
+        "keywords": "比例计算器, A:B = C:D, 解比例, 比例缩放, 比例",
+        "content": {
+          "heading": "如何使用比例计算器",
+          "paragraph1": "比例用于描述两个数之间的数量关系，常写作 A:B、“A 对 B”或分数 A/B。比例广泛应用于食谱、地图、屏幕比例、金融与概率。",
+          "paragraph2": "本工具允许你在 A:B = C:D 中输入任意三个值，系统会计算缺失值并保持同一比例关系。",
+          "paragraph3": "比例缩放工具可将比例按因子缩小或放大，适合调整配方、图纸或尺寸。",
+          "paragraph4": "例如，1:2:3 乘以 5 后变为 5:10:15，比例关系保持不变。",
+          "exampleHeading": "示例",
+          "exampleText": "求 A:B = C:D，A=3、B=5、D=20，则缺失值 C=12，因为 3:5 = 12:20。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {
+              "question": "比例表示什么？",
+              "answer": "比例比较两个数量，表示一个量包含另一个量的倍数关系。可以用冒号或分数表示。"
+            },
+            {
+              "question": "如何求解 A:B = C:D？",
+              "answer": "已知三个值时，可用交叉相乘求第四个值。例如 B ≠ 0 时，C = A×D/B。"
+            },
+            {
+              "question": "比例可以缩放吗？",
+              "answer": "可以。将每一项都乘以同一因子即可保持比例不变。"
+            },
+            {
+              "question": "比例在日常生活中有哪些应用？",
+              "answer": "常见于食谱、地图比例尺、屏幕宽高比、概率与金融等比例关系场景。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "percentage": "百分比计算器",
+          "percentageDesc": "计算百分比数值、变化与关系",
+          "remainder": "余数计算器",
+          "remainderDesc": "求整数除法的商与余数",
+          "longDivision": "长除法计算器",
+          "longDivisionDesc": "按步骤进行整数除法"
+        }
+      }
+    },
     "longDivision": {
       "title": "长除法计算器",
       "description": "将两个整数相除，获取商和余数，并显示逐步长除法。",

@@ -3713,6 +3713,86 @@
         }
       }
     },
+    "ratio": {
+      "title": "Ratio Calculator",
+      "description": "Solve ratios, find a missing value in A:B = C:D, and scale ratios up or down instantly.",
+      "ratioSectionHeading": "Find the Missing Ratio Value",
+      "ratioSectionDescription": "Provide any three values to calculate the fourth in the ratio A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "e.g. 1",
+      "bPlaceholder": "e.g. 2",
+      "cPlaceholder": "leave blank",
+      "dPlaceholder": "e.g. 4",
+      "calculate": "Calculate",
+      "clear": "Clear",
+      "resultHeading": "Result",
+      "missingValueLabel": "Missing {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Enter any three values to preview the ratio.",
+      "errorNeedThree": "Please enter exactly three values to solve for the fourth.",
+      "errorInvalidNumber": "Please enter valid numbers only.",
+      "errorDivisionByZero": "Cannot divide by zero in the ratio.",
+      "scaleSectionHeading": "Ratio Scaling Calculator",
+      "scaleSectionDescription": "Shrink or enlarge a ratio by a scaling factor and preview the new values.",
+      "scaleLeftLabel": "Left value",
+      "scaleLeftPlaceholder": "e.g. 250",
+      "scaleRightLabel": "Right value",
+      "scaleRightPlaceholder": "e.g. 280",
+      "scaleFactorLabel": "Scale factor",
+      "scaleFactorPlaceholder": "e.g. 2.5",
+      "scaleHint": "Multiply both sides of the ratio by the factor.",
+      "scalePreviewHeading": "Scaled Ratio Preview",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Result: {left}:{right}",
+      "scalePreviewPlaceholder": "Enter a ratio and a factor to see the scaled result.",
+      "seo": {
+        "title": "Ratio Calculator – Solve and Scale Ratios",
+        "description": "Free ratio calculator. Find a missing value in A:B = C:D, simplify proportional relationships, and scale ratios up or down instantly.",
+        "keywords": "ratio calculator, solve ratio, ratio A:B = C:D, proportional calculator, scale ratio, ratio scaling",
+        "content": {
+          "heading": "How to Use the Ratio Calculator",
+          "paragraph1": "A ratio shows the quantitative relationship between two numbers and is often written as A:B, “A to B,” or a fraction A/B. Ratios are used in recipes, maps, screen sizes, finance, and probability to describe how one value compares to another.",
+          "paragraph2": "This calculator lets you solve a proportion by entering any three values in A:B = C:D. It will compute the missing value using the same proportional relationship.",
+          "paragraph3": "Use the ratio scaling tool to shrink or enlarge a ratio by a factor. This is useful for resizing recipes, scaling drawings, or adjusting measurements while keeping the same proportions.",
+          "paragraph4": "For example, if a recipe uses a 1:2:3 ratio and you scale it by 5, the new ratio becomes 5:10:15 while keeping the same balance.",
+          "exampleHeading": "Example",
+          "exampleText": "Solve A:B = C:D with A=3, B=5, D=20. The missing value is C=12, because 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What does a ratio represent?",
+              "answer": "A ratio compares two quantities and shows how many times one value contains the other. It can be written with a colon, as “A to B,” or as a fraction."
+            },
+            {
+              "question": "How do I solve A:B = C:D?",
+              "answer": "If you know three values, you can solve the fourth by cross-multiplying. For example, C = A×D/B when B is not zero."
+            },
+            {
+              "question": "Can ratios be scaled?",
+              "answer": "Yes. Multiply each term by the same factor to scale the ratio while keeping the same proportions."
+            },
+            {
+              "question": "When are ratios used in real life?",
+              "answer": "Ratios are used in recipes, maps, screen aspect ratios, odds, finance, and any situation where proportional relationships matter."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentage values, changes, and relationships",
+          "remainder": "Remainder Calculator",
+          "remainderDesc": "Find quotient and remainder for integer division",
+          "longDivision": "Long Division Calculator",
+          "longDivisionDesc": "Divide whole numbers with step-by-step long division"
+        }
+      }
+    },
     "longDivision": {
       "title": "Long Division Calculator",
       "description": "Divide two whole numbers and get the quotient and remainder with step-by-step long division.",

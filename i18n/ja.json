@@ -3804,6 +3804,86 @@
       "title": "余り計算機",
       "description": "ユークリッド除法で整数除算の余り（および商）を計算します。被除数と除数を入力すると、非負の余りをすぐに取得できます。"
     },
+    "ratio": {
+      "title": "比率計算機",
+      "description": "比率を解き、A:B = C:D の欠けた値を求め、比率をスケールします。",
+      "ratioSectionHeading": "欠けた値を求める",
+      "ratioSectionDescription": "A:B = C:D で3つの値を入力すると、4つ目を計算できます。",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "例: 1",
+      "bPlaceholder": "例: 2",
+      "cPlaceholder": "空欄にする",
+      "dPlaceholder": "例: 4",
+      "calculate": "計算",
+      "clear": "クリア",
+      "resultHeading": "結果",
+      "missingValueLabel": "不足 {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "3つの値を入力して比率を表示します。",
+      "errorNeedThree": "4つ目を計算するには、ちょうど3つの値を入力してください。",
+      "errorInvalidNumber": "有効な数値を入力してください。",
+      "errorDivisionByZero": "比率で0で割ることはできません。",
+      "scaleSectionHeading": "比率のスケーリング",
+      "scaleSectionDescription": "係数で比率を縮小・拡大し、新しい値を確認できます。",
+      "scaleLeftLabel": "左の値",
+      "scaleLeftPlaceholder": "例: 250",
+      "scaleRightLabel": "右の値",
+      "scaleRightPlaceholder": "例: 280",
+      "scaleFactorLabel": "スケール係数",
+      "scaleFactorPlaceholder": "例: 2.5",
+      "scaleHint": "比率の両側に係数を掛けます。",
+      "scalePreviewHeading": "スケール結果のプレビュー",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "結果: {left}:{right}",
+      "scalePreviewPlaceholder": "比率と係数を入力して結果を確認します。",
+      "seo": {
+        "title": "比率計算機 – 比率の解決とスケーリング",
+        "description": "無料の比率計算機。A:B = C:D の欠けた値を求め、比率をスケールします。",
+        "keywords": "比率計算機, A:B = C:D, 比率を解く, 比率のスケーリング, 比例",
+        "content": {
+          "heading": "比率計算機の使い方",
+          "paragraph1": "比率は2つの数の関係を示し、A:B、または A/B の分数で表されます。比率はレシピ、地図、画面比率、金融、確率などで使われます。",
+          "paragraph2": "この計算機では A:B = C:D に3つの値を入力すると、同じ関係を保ったまま欠けた値を計算できます。",
+          "paragraph3": "スケーリング機能を使うと、係数で比率を縮小・拡大できます。レシピや図面、寸法の調整に便利です。",
+          "paragraph4": "例えば、1:2:3 を5倍すると 5:10:15 となり、同じバランスを保てます。",
+          "exampleHeading": "例",
+          "exampleText": "A:B = C:D で A=3、B=5、D=20 のとき、欠けた値は C=12 です。3:5 = 12:20 だからです。"
+        },
+        "faq": {
+          "heading": "よくある質問",
+          "items": [
+            {
+              "question": "比率は何を表しますか？",
+              "answer": "比率は2つの量を比較し、一方が他方を何倍含むかを示します。コロンや分数で表します。"
+            },
+            {
+              "question": "A:B = C:D をどう解きますか？",
+              "answer": "3つの値が分かれば、交差乗法で4つ目を求めます。例：B ≠ 0 のとき C = A×D/B。"
+            },
+            {
+              "question": "比率はスケールできますか？",
+              "answer": "はい。同じ係数を各項に掛けると比率を保ったままスケールできます。"
+            },
+            {
+              "question": "比率はどこで使われますか？",
+              "answer": "レシピ、地図、画面比率、確率、金融など、比例関係が重要な場面で使われます。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "関連する計算機",
+          "percentage": "パーセント計算機",
+          "percentageDesc": "割合、変化、関係を計算",
+          "remainder": "余り計算機",
+          "remainderDesc": "整数除算の商と余りを求める",
+          "longDivision": "筆算の計算機",
+          "longDivisionDesc": "整数を手順に沿って割る"
+        }
+      }
+    },
     "longDivision": {
       "title": "筆算割り算計算機",
       "description": "2つの整数を割り、商と余りを筆算の手順で表示します。",

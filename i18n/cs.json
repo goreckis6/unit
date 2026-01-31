@@ -3792,6 +3792,86 @@
       "title": "Kalkulačka zbytku",
       "description": "Vypočítejte zbytek (a podíl) celočíselného dělení pomocí eukleidovského dělení. Zadejte dělenec a dělitel a okamžitě získáte nezáporný zbytek."
     },
+    "ratio": {
+      "title": "Kalkulačka poměrů",
+      "description": "Řešte poměry, dopočítejte chybějící hodnotu v A:B = C:D a snadno škálujte poměry.",
+      "ratioSectionHeading": "Najděte chybějící hodnotu poměru",
+      "ratioSectionDescription": "Zadejte libovolné tři hodnoty a vypočítejte čtvrtou v poměru A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "např. 1",
+      "bPlaceholder": "např. 2",
+      "cPlaceholder": "ponechte prázdné",
+      "dPlaceholder": "např. 4",
+      "calculate": "Vypočítat",
+      "clear": "Vymazat",
+      "resultHeading": "Výsledek",
+      "missingValueLabel": "Chybějící {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Zadejte libovolné tři hodnoty pro náhled poměru.",
+      "errorNeedThree": "Zadejte přesně tři hodnoty pro výpočet čtvrté.",
+      "errorInvalidNumber": "Zadejte pouze platná čísla.",
+      "errorDivisionByZero": "V poměru nelze dělit nulou.",
+      "scaleSectionHeading": "Kalkulačka škálování poměrů",
+      "scaleSectionDescription": "Zmenšete nebo zvětšete poměr pomocí koeficientu a zobrazte nové hodnoty.",
+      "scaleLeftLabel": "Levá hodnota",
+      "scaleLeftPlaceholder": "např. 250",
+      "scaleRightLabel": "Pravá hodnota",
+      "scaleRightPlaceholder": "např. 280",
+      "scaleFactorLabel": "Koeficient škálování",
+      "scaleFactorPlaceholder": "např. 2.5",
+      "scaleHint": "Vynásobte obě strany poměru koeficientem.",
+      "scalePreviewHeading": "Náhled škálovaného poměru",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Výsledek: {left}:{right}",
+      "scalePreviewPlaceholder": "Zadejte poměr a koeficient pro zobrazení výsledku.",
+      "seo": {
+        "title": "Kalkulačka poměrů – řešení a škálování",
+        "description": "Bezplatná kalkulačka poměrů. Najděte chybějící hodnotu v A:B = C:D, řešte proporce a škálujte poměry.",
+        "keywords": "kalkulačka poměrů, poměr A:B = C:D, řešení poměrů, škálování poměrů, proporce",
+        "content": {
+          "heading": "Jak používat kalkulačku poměrů",
+          "paragraph1": "Poměr vyjadřuje kvantitativní vztah mezi dvěma čísly a často se zapisuje jako A:B, „A ku B“ nebo jako zlomek A/B. Poměry se používají v receptech, mapách, rozměrech obrazovek, financích i pravděpodobnosti.",
+          "paragraph2": "Tato kalkulačka umožňuje dopočítat poměr tak, že zadáte tři hodnoty v A:B = C:D. Nástroj vypočítá chybějící hodnotu při zachování stejného vztahu.",
+          "paragraph3": "Nástroj pro škálování poměrů umožní poměr zmenšit nebo zvětšit o zadaný koeficient. To se hodí při úpravě receptů, měřítek nebo rozměrů.",
+          "paragraph4": "Například pokud recept používá poměr 1:2:3 a zvýšíte jej pětkrát, získáte 5:10:15 se stejným poměrem.",
+          "exampleHeading": "Příklad",
+          "exampleText": "Řešte A:B = C:D pro A=3, B=5, D=20. Chybějící hodnota je C=12, protože 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {
+              "question": "Co vyjadřuje poměr?",
+              "answer": "Poměr porovnává dvě veličiny a ukazuje, kolikrát jedna obsahuje druhou. Lze ho zapsat dvojtečkou, jako „A ku B“ nebo ve formě zlomku."
+            },
+            {
+              "question": "Jak řešit A:B = C:D?",
+              "answer": "Pokud znáte tři hodnoty, čtvrtou spočítáte křížovým násobením. Například C = A×D/B, pokud B ≠ 0."
+            },
+            {
+              "question": "Lze poměry škálovat?",
+              "answer": "Ano. Vynásobte každý člen stejným koeficientem, abyste zachovali stejný poměr."
+            },
+            {
+              "question": "Kde se poměry používají v praxi?",
+              "answer": "Poměry se používají v receptech, mapách, poměrech stran, kurzech, pravděpodobnosti a všude, kde záleží na proporcích."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "percentage": "Kalkulačka procent",
+          "percentageDesc": "Vypočítejte procentní hodnoty, změny a vztahy",
+          "remainder": "Kalkulačka zbytku",
+          "remainderDesc": "Najděte podíl a zbytek při celočíselném dělení",
+          "longDivision": "Kalkulačka písemného dělení",
+          "longDivisionDesc": "Dělte celá čísla krok za krokem"
+        }
+      }
+    },
     "longDivision": {
       "title": "Kalkulačka písemného dělení",
       "description": "Rozdělte dvě celá čísla a získejte podíl a zbytek pomocí písemného dělení krok za krokem.",

@@ -3800,6 +3800,86 @@
       "title": "Calculadora de resto",
       "description": "Calcula el resto (y el cociente) de una división entera usando la división euclídea. Introduce el dividendo y el divisor para obtener un resto no negativo al instante."
     },
+    "ratio": {
+      "title": "Calculadora de proporciones",
+      "description": "Resuelve proporciones, encuentra el valor faltante en A:B = C:D y escala proporciones al instante.",
+      "ratioSectionHeading": "Encuentra el valor faltante",
+      "ratioSectionDescription": "Introduce tres valores para calcular el cuarto en la proporción A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "p. ej., 1",
+      "bPlaceholder": "p. ej., 2",
+      "cPlaceholder": "dejar vacío",
+      "dPlaceholder": "p. ej., 4",
+      "calculate": "Calcular",
+      "clear": "Borrar",
+      "resultHeading": "Resultado",
+      "missingValueLabel": "Falta {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Introduce tres valores para ver la proporción.",
+      "errorNeedThree": "Introduce exactamente tres valores para calcular el cuarto.",
+      "errorInvalidNumber": "Introduce números válidos.",
+      "errorDivisionByZero": "No se puede dividir entre cero en la proporción.",
+      "scaleSectionHeading": "Calculadora de escalado de proporciones",
+      "scaleSectionDescription": "Reduce o amplía una proporción con un factor y ve los nuevos valores.",
+      "scaleLeftLabel": "Valor izquierdo",
+      "scaleLeftPlaceholder": "p. ej., 250",
+      "scaleRightLabel": "Valor derecho",
+      "scaleRightPlaceholder": "p. ej., 280",
+      "scaleFactorLabel": "Factor de escala",
+      "scaleFactorPlaceholder": "p. ej., 2.5",
+      "scaleHint": "Multiplica ambos lados de la proporción por el factor.",
+      "scalePreviewHeading": "Vista previa de la proporción escalada",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Resultado: {left}:{right}",
+      "scalePreviewPlaceholder": "Introduce una proporción y un factor para ver el resultado.",
+      "seo": {
+        "title": "Calculadora de proporciones – Resolver y escalar",
+        "description": "Calculadora de proporciones gratuita. Encuentra el valor faltante en A:B = C:D, entiende proporciones y escala ratios.",
+        "keywords": "calculadora de proporciones, A:B = C:D, resolver proporciones, escalar proporciones, ratios",
+        "content": {
+          "heading": "Cómo usar la calculadora de proporciones",
+          "paragraph1": "Una proporción muestra la relación cuantitativa entre dos números y suele escribirse como A:B, “A a B” o como fracción A/B. Se usa en recetas, mapas, tamaños de pantalla, finanzas y probabilidades.",
+          "paragraph2": "Esta calculadora te permite resolver una proporción introduciendo tres valores en A:B = C:D. La herramienta calcula el valor faltante manteniendo la misma relación.",
+          "paragraph3": "El escalado de proporciones sirve para reducir o ampliar una proporción mediante un factor, útil para ajustar recetas, dibujos o medidas.",
+          "paragraph4": "Por ejemplo, si una receta usa 1:2:3 y la escalas por 5, obtienes 5:10:15 manteniendo el mismo equilibrio.",
+          "exampleHeading": "Ejemplo",
+          "exampleText": "Resuelve A:B = C:D con A=3, B=5, D=20. El valor faltante es C=12, porque 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            {
+              "question": "¿Qué representa una proporción?",
+              "answer": "Una proporción compara dos cantidades y muestra cuántas veces una contiene a la otra. Se puede escribir con dos puntos, como “A a B” o como fracción."
+            },
+            {
+              "question": "¿Cómo resuelvo A:B = C:D?",
+              "answer": "Si conoces tres valores, el cuarto se calcula con multiplicación cruzada. Por ejemplo, C = A×D/B si B ≠ 0."
+            },
+            {
+              "question": "¿Se pueden escalar las proporciones?",
+              "answer": "Sí. Multiplica cada término por el mismo factor para mantener la proporción."
+            },
+            {
+              "question": "¿Dónde se usan las proporciones en la vida diaria?",
+              "answer": "En recetas, mapas, relaciones de aspecto de pantallas, probabilidades, finanzas y cualquier situación proporcional."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "percentage": "Calculadora de porcentajes",
+          "percentageDesc": "Calcula valores porcentuales, cambios y relaciones",
+          "remainder": "Calculadora de resto",
+          "remainderDesc": "Encuentra cociente y resto en división entera",
+          "longDivision": "Calculadora de división larga",
+          "longDivisionDesc": "Divide números enteros paso a paso"
+        }
+      }
+    },
     "longDivision": {
       "title": "Calculadora de División Larga",
       "description": "Divide dos números enteros y obtén el cociente y el resto con división larga paso a paso.",

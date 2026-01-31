@@ -3802,6 +3802,86 @@
       "title": "Kalan Hesaplayıcı",
       "description": "Öklid bölmesi ile tam sayı bölmesinin kalanını (ve bölümünü) hesaplayın. Bölüneni ve böleni girerek anında negatif olmayan kalan elde edin."
     },
+    "ratio": {
+      "title": "Oran Hesaplayıcı",
+      "description": "Oranları çözün, A:B = C:D içinde eksik değeri bulun ve oranları ölçekleyin.",
+      "ratioSectionHeading": "Eksik değeri bulun",
+      "ratioSectionDescription": "A:B = C:D oranında dördüncü değeri bulmak için üç değer girin.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "örn. 1",
+      "bPlaceholder": "örn. 2",
+      "cPlaceholder": "boş bırakın",
+      "dPlaceholder": "örn. 4",
+      "calculate": "Hesapla",
+      "clear": "Temizle",
+      "resultHeading": "Sonuç",
+      "missingValueLabel": "Eksik {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Oranı görmek için üç değer girin.",
+      "errorNeedThree": "Dördüncü değeri hesaplamak için tam üç değer girin.",
+      "errorInvalidNumber": "Geçerli sayılar girin.",
+      "errorDivisionByZero": "Oranda sıfıra bölme yapılamaz.",
+      "scaleSectionHeading": "Oran Ölçekleme Hesaplayıcı",
+      "scaleSectionDescription": "Bir oranı bir faktörle küçültün veya büyütün ve yeni değerleri görün.",
+      "scaleLeftLabel": "Sol değer",
+      "scaleLeftPlaceholder": "örn. 250",
+      "scaleRightLabel": "Sağ değer",
+      "scaleRightPlaceholder": "örn. 280",
+      "scaleFactorLabel": "Ölçek faktörü",
+      "scaleFactorPlaceholder": "örn. 2.5",
+      "scaleHint": "Oranın her iki tarafını faktörle çarpın.",
+      "scalePreviewHeading": "Ölçeklenmiş oran önizlemesi",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Sonuç: {left}:{right}",
+      "scalePreviewPlaceholder": "Sonucu görmek için oran ve faktör girin.",
+      "seo": {
+        "title": "Oran Hesaplayıcı – Oranları çöz ve ölçekle",
+        "description": "Ücretsiz oran hesaplayıcı. A:B = C:D oranında eksik değeri bulun ve oranları ölçekleyin.",
+        "keywords": "oran hesaplayıcı, A:B = C:D, oran çözme, oran ölçekleme, orantı",
+        "content": {
+          "heading": "Oran hesaplayıcı nasıl kullanılır",
+          "paragraph1": "Oran, iki sayının niceliksel ilişkisini gösterir ve genellikle A:B, “A’ya B” ya da A/B kesri olarak yazılır. Oranlar tariflerde, haritalarda, ekran oranlarında, finans ve olasılıkta kullanılır.",
+          "paragraph2": "Bu hesaplayıcı, A:B = C:D oranına üç değer girdiğinizde eksik değeri hesaplar ve aynı ilişkiyi korur.",
+          "paragraph3": "Oran ölçekleme aracı, oranı bir faktörle küçültmenize veya büyütmenize yardımcı olur. Tarifleri, çizimleri ve ölçüleri ölçeklemek için kullanışlıdır.",
+          "paragraph4": "Örneğin 1:2:3 oranı 5 ile çarpılırsa 5:10:15 olur ve oran aynı kalır.",
+          "exampleHeading": "Örnek",
+          "exampleText": "A:B = C:D için A=3, B=5, D=20 olsun. Eksik değer C=12’dir, çünkü 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Sık sorulan sorular",
+          "items": [
+            {
+              "question": "Oran neyi ifade eder?",
+              "answer": "Oran iki büyüklüğü karşılaştırır ve birinin diğerini kaç kez içerdiğini gösterir. İki nokta ile, “A’ya B” şeklinde veya kesir olarak yazılabilir."
+            },
+            {
+              "question": "A:B = C:D nasıl çözülür?",
+              "answer": "Üç değer biliniyorsa dördüncü değer çapraz çarpma ile bulunur. Örneğin B ≠ 0 ise C = A×D/B."
+            },
+            {
+              "question": "Oranlar ölçeklenebilir mi?",
+              "answer": "Evet. Oranı korumak için her terimi aynı faktörle çarpın."
+            },
+            {
+              "question": "Oranlar gerçek hayatta nerelerde kullanılır?",
+              "answer": "Tariflerde, haritalarda, ekran oranlarında, olasılıkta, finansta ve orantılı ilişkilerde kullanılır."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili hesaplayıcılar",
+          "percentage": "Yüzde hesaplayıcı",
+          "percentageDesc": "Yüzde değerleri, değişimler ve ilişkiler",
+          "remainder": "Kalan hesaplayıcı",
+          "remainderDesc": "Tam sayı bölmede bölüm ve kalan",
+          "longDivision": "Uzun bölme hesaplayıcı",
+          "longDivisionDesc": "Tam sayıları adım adım bölün"
+        }
+      }
+    },
     "longDivision": {
       "title": "Uzun Bölme Hesaplayıcı",
       "description": "İki tam sayıyı bölün ve adım adım uzun bölme ile bölüm ve kalanı bulun.",

@@ -3792,6 +3792,86 @@
       "title": "Jakojäännöslaskin",
       "description": "Laske kokonaislukujen jakolaskun jakojäännös (ja osamäärä) euklidisella jaolla. Syötä jaettava ja jakaja ja saat ei-negatiivisen jakojäännöksen heti."
     },
+    "ratio": {
+      "title": "Suhdelukulaskin",
+      "description": "Ratkaise suhteet, löydä puuttuva arvo A:B = C:D ja skaalaa suhteet nopeasti.",
+      "ratioSectionHeading": "Etsi puuttuva suhdeluku",
+      "ratioSectionDescription": "Anna mitkä tahansa kolme arvoa laskeaksesi neljännen suhteessa A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "esim. 1",
+      "bPlaceholder": "esim. 2",
+      "cPlaceholder": "jätä tyhjäksi",
+      "dPlaceholder": "esim. 4",
+      "calculate": "Laske",
+      "clear": "Tyhjennä",
+      "resultHeading": "Tulos",
+      "missingValueLabel": "Puuttuva {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Syötä kolme arvoa nähdäksesi suhteen esikatselun.",
+      "errorNeedThree": "Syötä täsmälleen kolme arvoa neljännen laskemiseksi.",
+      "errorInvalidNumber": "Syötä kelvollisia numeroita.",
+      "errorDivisionByZero": "Suhteessa ei voi jakaa nollalla.",
+      "scaleSectionHeading": "Suhteen skaalauslaskin",
+      "scaleSectionDescription": "Pienennä tai suurenna suhdetta skaalauskertoimella ja katso uudet arvot.",
+      "scaleLeftLabel": "Vasen arvo",
+      "scaleLeftPlaceholder": "esim. 250",
+      "scaleRightLabel": "Oikea arvo",
+      "scaleRightPlaceholder": "esim. 280",
+      "scaleFactorLabel": "Skaalauskerroin",
+      "scaleFactorPlaceholder": "esim. 2.5",
+      "scaleHint": "Kerro suhteen molemmat puolet kertoimella.",
+      "scalePreviewHeading": "Skaalatun suhteen esikatselu",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Tulos: {left}:{right}",
+      "scalePreviewPlaceholder": "Syötä suhde ja kerroin nähdäksesi tuloksen.",
+      "seo": {
+        "title": "Suhdelukulaskin – Ratkaise ja skaalaa suhteet",
+        "description": "Ilmainen suhdelukulaskin. Etsi puuttuva arvo A:B = C:D, tarkista suhteet ja skaalaa ne.",
+        "keywords": "suhdelukulaskin, suhde A:B = C:D, suhteen ratkaisu, suhteen skaalaus, suhteet",
+        "content": {
+          "heading": "Näin käytät suhdelukulaskinta",
+          "paragraph1": "Suhde kuvaa kahden luvun kvantitatiivista suhdetta ja kirjoitetaan usein muodossa A:B, “A suhteessa B” tai murtolukuna A/B. Suhteita käytetään resepteissä, kartoissa, näyttösuhteissa, taloudessa ja todennäköisyydessä.",
+          "paragraph2": "Tämän laskimen avulla voit ratkaista suhteen, kun syötät kolme arvoa A:B = C:D. Työkalu laskee puuttuvan arvon säilyttäen saman suhteen.",
+          "paragraph3": "Skaalaustyökalulla voit pienentää tai suurentaa suhdetta annetulla kertoimella. Tämä auttaa esimerkiksi reseptien, piirrosten tai mittojen skaalauksessa.",
+          "paragraph4": "Esimerkiksi jos reseptissä on suhde 1:2:3 ja skaalaat sen viisi kertaa, uusi suhde on 5:10:15 samalla tasapainolla.",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "Ratkaise A:B = C:D, kun A=3, B=5, D=20. Puuttuva arvo on C=12, koska 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Mitä suhde tarkoittaa?",
+              "answer": "Suhde vertaa kahta määrää ja kertoo, kuinka monta kertaa toinen sisältää toisen. Sen voi kirjoittaa kaksoispisteellä, sanallisesti tai murtolukuna."
+            },
+            {
+              "question": "Miten ratkaisen A:B = C:D?",
+              "answer": "Kun tunnet kolme arvoa, neljäs saadaan ristinkertolaskulla. Esimerkiksi C = A×D/B, jos B ≠ 0."
+            },
+            {
+              "question": "Voiko suhteita skaalata?",
+              "answer": "Kyllä. Kerro kaikki termit samalla kertoimella, jotta suhde säilyy."
+            },
+            {
+              "question": "Missä suhteita käytetään arjessa?",
+              "answer": "Suhteita käytetään resepteissä, kartoissa, näyttöjen kuvasuhteissa, kertoimissa ja monissa muissa tilanteissa, joissa suhteet ovat tärkeitä."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Aiheeseen liittyvät laskimet",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Laske prosenttiarvot, muutokset ja suhteet",
+          "remainder": "Jäännöslaskin",
+          "remainderDesc": "Etsi osamäärä ja jäännös kokonaislukujen jaossa",
+          "longDivision": "Pitkän jakolaskun laskin",
+          "longDivisionDesc": "Jaa kokonaisluvut vaiheittain"
+        }
+      }
+    },
     "longDivision": {
       "title": "Pitkän jakolaskun laskin",
       "description": "Jaa kaksi kokonaislukua ja saat osamäärän ja jäännöksen pitkän jakolaskun vaiheilla.",

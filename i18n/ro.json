@@ -3800,6 +3800,86 @@
       "title": "Calculator rest",
       "description": "Calculați restul (și câtul) împărțirii întregi folosind împărțirea euclidiană. Introduceți deîmpărțitul și împărțitorul pentru a obține instant un rest nenegativ."
     },
+    "ratio": {
+      "title": "Calculator de rapoarte",
+      "description": "Rezolvă rapoarte, găsește valoarea lipsă în A:B = C:D și scalează rapoarte rapid.",
+      "ratioSectionHeading": "Găsește valoarea lipsă",
+      "ratioSectionDescription": "Introdu trei valori pentru a calcula a patra în A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "ex. 1",
+      "bPlaceholder": "ex. 2",
+      "cPlaceholder": "lasă gol",
+      "dPlaceholder": "ex. 4",
+      "calculate": "Calculează",
+      "clear": "Șterge",
+      "resultHeading": "Rezultat",
+      "missingValueLabel": "Lipsește {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Introdu trei valori pentru a vedea raportul.",
+      "errorNeedThree": "Introdu exact trei valori pentru a calcula a patra.",
+      "errorInvalidNumber": "Introdu numere valide.",
+      "errorDivisionByZero": "Nu se poate împărți la zero în raport.",
+      "scaleSectionHeading": "Calculator de scalare a raportului",
+      "scaleSectionDescription": "Micșorează sau mărește un raport cu un factor și vezi noile valori.",
+      "scaleLeftLabel": "Valoare stânga",
+      "scaleLeftPlaceholder": "ex. 250",
+      "scaleRightLabel": "Valoare dreapta",
+      "scaleRightPlaceholder": "ex. 280",
+      "scaleFactorLabel": "Factor de scalare",
+      "scaleFactorPlaceholder": "ex. 2.5",
+      "scaleHint": "Înmulțește ambele părți ale raportului cu factorul.",
+      "scalePreviewHeading": "Previzualizare raport scalat",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Rezultat: {left}:{right}",
+      "scalePreviewPlaceholder": "Introdu un raport și un factor pentru a vedea rezultatul.",
+      "seo": {
+        "title": "Calculator de rapoarte – Rezolvă și scalează",
+        "description": "Calculator de rapoarte gratuit. Găsește valoarea lipsă în A:B = C:D și scalează rapoarte.",
+        "keywords": "calculator de rapoarte, A:B = C:D, rezolvă rapoarte, scalare rapoarte, proporții",
+        "content": {
+          "heading": "Cum folosești calculatorul de rapoarte",
+          "paragraph1": "Un raport descrie relația cantitativă dintre două numere și este scris adesea ca A:B, „A la B” sau ca fracție A/B. Rapoartele sunt folosite în rețete, hărți, dimensiuni de ecran, finanțe și probabilități.",
+          "paragraph2": "Acest calculator îți permite să rezolvi o proporție introducând trei valori în A:B = C:D. Instrumentul calculează valoarea lipsă păstrând aceeași relație.",
+          "paragraph3": "Funcția de scalare îți permite să micșorezi sau să mărești un raport cu un factor. Este utilă pentru rețete, desene sau dimensiuni.",
+          "paragraph4": "De exemplu, un raport 1:2:3 scalat cu 5 devine 5:10:15 păstrând același echilibru.",
+          "exampleHeading": "Exemplu",
+          "exampleText": "Rezolvă A:B = C:D cu A=3, B=5, D=20. Valoarea lipsă este C=12, deoarece 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            {
+              "question": "Ce reprezintă un raport?",
+              "answer": "Un raport compară două cantități și arată de câte ori una o conține pe cealaltă. Poate fi scris cu două puncte, ca „A la B” sau ca fracție."
+            },
+            {
+              "question": "Cum rezolv A:B = C:D?",
+              "answer": "Dacă știi trei valori, o calculezi pe a patra prin înmulțire în cruce. De exemplu, C = A×D/B dacă B ≠ 0."
+            },
+            {
+              "question": "Se pot scala rapoartele?",
+              "answer": "Da. Înmulțește fiecare termen cu același factor pentru a păstra proporția."
+            },
+            {
+              "question": "Unde se folosesc rapoartele în viața reală?",
+              "answer": "În rețete, hărți, raporturi de aspect, probabilități, finanțe și oriunde există relații proporționale."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare conexe",
+          "percentage": "Calculator de procente",
+          "percentageDesc": "Calculează valori procentuale, modificări și relații",
+          "remainder": "Calculator de rest",
+          "remainderDesc": "Găsește câtul și restul la împărțirea întreagă",
+          "longDivision": "Calculator de împărțire lungă",
+          "longDivisionDesc": "Împarte numere întregi pas cu pas"
+        }
+      }
+    },
     "longDivision": {
       "title": "Calculator de împărțire în coloană",
       "description": "Împarte două numere întregi și obține câtul și restul pas cu pas.",

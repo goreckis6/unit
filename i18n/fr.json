@@ -3804,6 +3804,86 @@
       "title": "Calculateur de reste",
       "description": "Calculez le reste (et le quotient) d’une division entière via la division euclidienne. Saisissez un dividende et un diviseur pour obtenir instantanément un reste non négatif."
     },
+    "ratio": {
+      "title": "Calculateur de ratios",
+      "description": "Résolvez des ratios, trouvez la valeur manquante dans A:B = C:D et mettez les ratios à l’échelle.",
+      "ratioSectionHeading": "Trouver la valeur manquante",
+      "ratioSectionDescription": "Saisissez trois valeurs pour calculer la quatrième dans A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "ex. 1",
+      "bPlaceholder": "ex. 2",
+      "cPlaceholder": "laisser vide",
+      "dPlaceholder": "ex. 4",
+      "calculate": "Calculer",
+      "clear": "Effacer",
+      "resultHeading": "Résultat",
+      "missingValueLabel": "Valeur manquante {key} : {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Saisissez trois valeurs pour afficher l’aperçu du ratio.",
+      "errorNeedThree": "Entrez exactement trois valeurs pour calculer la quatrième.",
+      "errorInvalidNumber": "Veuillez saisir des nombres valides.",
+      "errorDivisionByZero": "Impossible de diviser par zéro dans un ratio.",
+      "scaleSectionHeading": "Mise à l’échelle des ratios",
+      "scaleSectionDescription": "Réduisez ou agrandissez un ratio avec un facteur et voyez les nouvelles valeurs.",
+      "scaleLeftLabel": "Valeur de gauche",
+      "scaleLeftPlaceholder": "ex. 250",
+      "scaleRightLabel": "Valeur de droite",
+      "scaleRightPlaceholder": "ex. 280",
+      "scaleFactorLabel": "Facteur d’échelle",
+      "scaleFactorPlaceholder": "ex. 2.5",
+      "scaleHint": "Multipliez les deux côtés du ratio par le facteur.",
+      "scalePreviewHeading": "Aperçu du ratio mis à l’échelle",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Résultat : {left}:{right}",
+      "scalePreviewPlaceholder": "Entrez un ratio et un facteur pour voir le résultat.",
+      "seo": {
+        "title": "Calculateur de ratios – Résoudre et mettre à l’échelle",
+        "description": "Calculateur de ratios gratuit. Trouvez la valeur manquante dans A:B = C:D et mettez les ratios à l’échelle.",
+        "keywords": "calculateur de ratios, A:B = C:D, résoudre un ratio, mise à l’échelle, proportion",
+        "content": {
+          "heading": "Comment utiliser le calculateur de ratios",
+          "paragraph1": "Un ratio décrit la relation quantitative entre deux nombres et s’écrit souvent A:B, « A pour B » ou sous forme de fraction A/B. Les ratios sont utilisés dans les recettes, les cartes, les formats d’écran, la finance et les probabilités.",
+          "paragraph2": "Ce calculateur résout une proportion lorsque vous saisissez trois valeurs dans A:B = C:D. L’outil calcule la valeur manquante en conservant la même relation.",
+          "paragraph3": "La mise à l’échelle permet de réduire ou d’agrandir un ratio par un facteur. C’est utile pour adapter des recettes, des plans ou des mesures.",
+          "paragraph4": "Par exemple, un ratio 1:2:3 multiplié par 5 devient 5:10:15 tout en gardant les mêmes proportions.",
+          "exampleHeading": "Exemple",
+          "exampleText": "Résoudre A:B = C:D avec A=3, B=5, D=20. La valeur manquante est C=12, car 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {
+              "question": "Que représente un ratio ?",
+              "answer": "Un ratio compare deux quantités et montre combien de fois l’une contient l’autre. Il peut s’écrire avec deux points, « A pour B », ou comme fraction."
+            },
+            {
+              "question": "Comment résoudre A:B = C:D ?",
+              "answer": "Si vous connaissez trois valeurs, la quatrième se calcule par produit en croix. Exemple : C = A×D/B si B ≠ 0."
+            },
+            {
+              "question": "Peut-on mettre un ratio à l’échelle ?",
+              "answer": "Oui. Multipliez chaque terme par le même facteur pour conserver la proportion."
+            },
+            {
+              "question": "Où les ratios sont-ils utilisés ?",
+              "answer": "Dans les recettes, les cartes, les formats d’écran, les probabilités, la finance et toutes les situations proportionnelles."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatrices associées",
+          "percentage": "Calculateur de pourcentage",
+          "percentageDesc": "Calculer des valeurs, changements et relations en pourcentage",
+          "remainder": "Calculateur de reste",
+          "remainderDesc": "Trouver quotient et reste en division entière",
+          "longDivision": "Calculateur de division longue",
+          "longDivisionDesc": "Diviser des entiers pas à pas"
+        }
+      }
+    },
     "longDivision": {
       "title": "Calculateur de Division Longue",
       "description": "Divisez deux nombres entiers et obtenez le quotient et le reste avec une division longue étape par étape.",

@@ -3804,6 +3804,86 @@
       "title": "Calcolatrice del resto",
       "description": "Calcola il resto (e il quoziente) della divisione tra interi usando la divisione euclidea. Inserisci dividendo e divisore per ottenere subito un resto non negativo."
     },
+    "ratio": {
+      "title": "Calcolatore di rapporti",
+      "description": "Risolvi i rapporti, trova il valore mancante in A:B = C:D e scala i rapporti rapidamente.",
+      "ratioSectionHeading": "Trova il valore mancante",
+      "ratioSectionDescription": "Inserisci tre valori per calcolare il quarto in A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "es. 1",
+      "bPlaceholder": "es. 2",
+      "cPlaceholder": "lascia vuoto",
+      "dPlaceholder": "es. 4",
+      "calculate": "Calcola",
+      "clear": "Cancella",
+      "resultHeading": "Risultato",
+      "missingValueLabel": "{key} mancante: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Inserisci tre valori per vedere l’anteprima del rapporto.",
+      "errorNeedThree": "Inserisci esattamente tre valori per calcolare il quarto.",
+      "errorInvalidNumber": "Inserisci numeri validi.",
+      "errorDivisionByZero": "Non è possibile dividere per zero nel rapporto.",
+      "scaleSectionHeading": "Calcolatore di scala dei rapporti",
+      "scaleSectionDescription": "Riduci o ingrandisci un rapporto con un fattore e vedi i nuovi valori.",
+      "scaleLeftLabel": "Valore sinistro",
+      "scaleLeftPlaceholder": "es. 250",
+      "scaleRightLabel": "Valore destro",
+      "scaleRightPlaceholder": "es. 280",
+      "scaleFactorLabel": "Fattore di scala",
+      "scaleFactorPlaceholder": "es. 2.5",
+      "scaleHint": "Moltiplica entrambi i lati del rapporto per il fattore.",
+      "scalePreviewHeading": "Anteprima del rapporto scalato",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Risultato: {left}:{right}",
+      "scalePreviewPlaceholder": "Inserisci un rapporto e un fattore per vedere il risultato.",
+      "seo": {
+        "title": "Calcolatore di rapporti – Risolvi e scala",
+        "description": "Calcolatore di rapporti gratuito. Trova il valore mancante in A:B = C:D e scala i rapporti.",
+        "keywords": "calcolatore di rapporti, A:B = C:D, risolvere rapporti, scalare rapporti, proporzioni",
+        "content": {
+          "heading": "Come usare il calcolatore di rapporti",
+          "paragraph1": "Un rapporto descrive la relazione quantitativa tra due numeri e si scrive spesso come A:B, “A a B” o come frazione A/B. I rapporti sono usati in ricette, mappe, formati schermo, finanza e probabilità.",
+          "paragraph2": "Questo calcolatore risolve una proporzione quando inserisci tre valori in A:B = C:D. Lo strumento calcola il valore mancante mantenendo la stessa relazione.",
+          "paragraph3": "La funzione di scala permette di ridurre o ingrandire un rapporto con un fattore. È utile per adattare ricette, disegni o misure.",
+          "paragraph4": "Ad esempio, un rapporto 1:2:3 moltiplicato per 5 diventa 5:10:15 mantenendo le proporzioni.",
+          "exampleHeading": "Esempio",
+          "exampleText": "Risolvi A:B = C:D con A=3, B=5, D=20. Il valore mancante è C=12, perché 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {
+              "question": "Cosa rappresenta un rapporto?",
+              "answer": "Un rapporto confronta due quantità e mostra quante volte una contiene l’altra. Può essere scritto con i due punti, come “A a B” o come frazione."
+            },
+            {
+              "question": "Come risolvere A:B = C:D?",
+              "answer": "Se conosci tre valori, il quarto si calcola con il prodotto incrociato. Ad esempio, C = A×D/B se B ≠ 0."
+            },
+            {
+              "question": "Si possono scalare i rapporti?",
+              "answer": "Sì. Moltiplica ogni termine per lo stesso fattore per mantenere la proporzione."
+            },
+            {
+              "question": "Dove si usano i rapporti nella vita reale?",
+              "answer": "In ricette, mappe, rapporti di aspetto degli schermi, probabilità, finanza e situazioni proporzionali."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori correlati",
+          "percentage": "Calcolatore percentuale",
+          "percentageDesc": "Calcola valori percentuali, variazioni e relazioni",
+          "remainder": "Calcolatore del resto",
+          "remainderDesc": "Trova quoziente e resto nella divisione intera",
+          "longDivision": "Calcolatore di divisione lunga",
+          "longDivisionDesc": "Dividi numeri interi passo dopo passo"
+        }
+      }
+    },
     "longDivision": {
       "title": "Calcolatore di Divisione in Colonna",
       "description": "Dividi due numeri interi e ottieni quoziente e resto con la divisione in colonna passo dopo passo.",

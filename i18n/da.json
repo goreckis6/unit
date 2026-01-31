@@ -3800,6 +3800,86 @@
       "title": "Restberegner",
       "description": "Beregn resten (og kvotienten) ved heltalsdivision med euklidisk division. Indtast dividend og divisor for at få en ikke-negativ rest med det samme."
     },
+    "ratio": {
+      "title": "Forholdskalkulator",
+      "description": "Løs forhold, find den manglende værdi i A:B = C:D og skaler forhold hurtigt.",
+      "ratioSectionHeading": "Find den manglende værdi",
+      "ratioSectionDescription": "Indtast tre værdier for at beregne den fjerde i A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "fx 1",
+      "bPlaceholder": "fx 2",
+      "cPlaceholder": "lad stå tom",
+      "dPlaceholder": "fx 4",
+      "calculate": "Beregn",
+      "clear": "Ryd",
+      "resultHeading": "Resultat",
+      "missingValueLabel": "Manglende {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Indtast tre værdier for at se forholdet.",
+      "errorNeedThree": "Indtast præcis tre værdier for at beregne den fjerde.",
+      "errorInvalidNumber": "Indtast gyldige tal.",
+      "errorDivisionByZero": "Kan ikke dividere med nul i forholdet.",
+      "scaleSectionHeading": "Skalering af forhold",
+      "scaleSectionDescription": "Formindsk eller forstør et forhold med en faktor og se de nye værdier.",
+      "scaleLeftLabel": "Venstre værdi",
+      "scaleLeftPlaceholder": "fx 250",
+      "scaleRightLabel": "Højre værdi",
+      "scaleRightPlaceholder": "fx 280",
+      "scaleFactorLabel": "Skaleringsfaktor",
+      "scaleFactorPlaceholder": "fx 2.5",
+      "scaleHint": "Gang begge sider af forholdet med faktoren.",
+      "scalePreviewHeading": "Forhåndsvisning af skaleret forhold",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Resultat: {left}:{right}",
+      "scalePreviewPlaceholder": "Indtast et forhold og en faktor for at se resultatet.",
+      "seo": {
+        "title": "Forholdskalkulator – Løs og skaler forhold",
+        "description": "Gratis forholdskalkulator. Find den manglende værdi i A:B = C:D og skaler forhold.",
+        "keywords": "forholdskalkulator, A:B = C:D, løs forhold, skaler forhold, proportioner",
+        "content": {
+          "heading": "Sådan bruger du forholdskalkulatoren",
+          "paragraph1": "Et forhold beskriver den kvantitative relation mellem to tal og skrives ofte som A:B, “A til B” eller som brøken A/B. Forhold bruges i opskrifter, kort, skærmformater, finans og sandsynlighed.",
+          "paragraph2": "Denne kalkulator løser en proportion, når du indtaster tre værdier i A:B = C:D. Værktøjet beregner den manglende værdi og bevarer samme relation.",
+          "paragraph3": "Skaleringsværktøjet gør det muligt at formindske eller forstørre et forhold med en faktor. Det er nyttigt til opskrifter, tegninger og mål.",
+          "paragraph4": "Hvis en opskrift bruger 1:2:3 og du skalerer med 5, bliver det 5:10:15 med samme forhold.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "Løs A:B = C:D med A=3, B=5, D=20. Den manglende værdi er C=12, fordi 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {
+              "question": "Hvad repræsenterer et forhold?",
+              "answer": "Et forhold sammenligner to størrelser og viser, hvor mange gange den ene indeholder den anden. Det kan skrives med kolon, som “A til B” eller som en brøk."
+            },
+            {
+              "question": "Hvordan løser jeg A:B = C:D?",
+              "answer": "Hvis du kender tre værdier, kan du beregne den fjerde med krydsmultiplikation. Fx C = A×D/B når B ≠ 0."
+            },
+            {
+              "question": "Kan forhold skaleres?",
+              "answer": "Ja. Gang hvert led med samme faktor for at bevare proportionen."
+            },
+            {
+              "question": "Hvor bruges forhold i hverdagen?",
+              "answer": "I opskrifter, kort, skærmforhold, odds, finans og alle proportionelle sammenhænge."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede beregnere",
+          "percentage": "Procentberegner",
+          "percentageDesc": "Beregn procentværdier, ændringer og relationer",
+          "remainder": "Restberegner",
+          "remainderDesc": "Find kvotient og rest ved heltalsdivision",
+          "longDivision": "Lang divisionsberegner",
+          "longDivisionDesc": "Del heltal trin for trin"
+        }
+      }
+    },
     "longDivision": {
       "title": "Lang divisionsberegner",
       "description": "Divider to heltal og få kvotient og rest med trin-for-trin lang division.",

@@ -3800,6 +3800,86 @@
       "title": "Restcalculator",
       "description": "Bereken de rest (en het quotiënt) van een gehele deling met euclidische deling. Voer een deeltal en deler in om direct een niet-negatieve rest te krijgen."
     },
+    "ratio": {
+      "title": "Verhoudingscalculator",
+      "description": "Los verhoudingen op, vind de ontbrekende waarde in A:B = C:D en schaal verhoudingen snel.",
+      "ratioSectionHeading": "Ontbrekende waarde vinden",
+      "ratioSectionDescription": "Vul drie waarden in om de vierde te berekenen in A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "bijv. 1",
+      "bPlaceholder": "bijv. 2",
+      "cPlaceholder": "laat leeg",
+      "dPlaceholder": "bijv. 4",
+      "calculate": "Berekenen",
+      "clear": "Wissen",
+      "resultHeading": "Resultaat",
+      "missingValueLabel": "Ontbreekt {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Voer drie waarden in om de verhouding te bekijken.",
+      "errorNeedThree": "Vul precies drie waarden in om de vierde te berekenen.",
+      "errorInvalidNumber": "Vul geldige getallen in.",
+      "errorDivisionByZero": "Delen door nul is niet mogelijk in de verhouding.",
+      "scaleSectionHeading": "Verhouding schalen",
+      "scaleSectionDescription": "Verklein of vergroot een verhouding met een factor en bekijk de nieuwe waarden.",
+      "scaleLeftLabel": "Linker waarde",
+      "scaleLeftPlaceholder": "bijv. 250",
+      "scaleRightLabel": "Rechter waarde",
+      "scaleRightPlaceholder": "bijv. 280",
+      "scaleFactorLabel": "Schaalfactor",
+      "scaleFactorPlaceholder": "bijv. 2.5",
+      "scaleHint": "Vermenigvuldig beide kanten van de verhouding met de factor.",
+      "scalePreviewHeading": "Voorbeeld geschaalde verhouding",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Resultaat: {left}:{right}",
+      "scalePreviewPlaceholder": "Voer een verhouding en factor in om het resultaat te zien.",
+      "seo": {
+        "title": "Verhoudingscalculator – Verhoudingen oplossen en schalen",
+        "description": "Gratis verhoudingscalculator. Vind de ontbrekende waarde in A:B = C:D en schaal verhoudingen.",
+        "keywords": "verhoudingscalculator, A:B = C:D, verhouding oplossen, verhouding schalen, proporties",
+        "content": {
+          "heading": "Zo gebruik je de verhoudingscalculator",
+          "paragraph1": "Een verhouding beschrijft de kwantitatieve relatie tussen twee getallen en wordt vaak geschreven als A:B, “A tot B” of als breuk A/B. Verhoudingen worden gebruikt in recepten, kaarten, schermverhoudingen, financiën en kansberekening.",
+          "paragraph2": "Deze calculator laat je een verhouding oplossen door drie waarden in A:B = C:D in te vullen. De tool berekent de ontbrekende waarde met dezelfde verhouding.",
+          "paragraph3": "Met de schaalfunctie kun je een verhouding verkleinen of vergroten met een factor. Handig voor het schalen van recepten, tekeningen of afmetingen.",
+          "paragraph4": "Bijvoorbeeld: een verhouding 1:2:3 met factor 5 wordt 5:10:15 met dezelfde verhouding.",
+          "exampleHeading": "Voorbeeld",
+          "exampleText": "Los A:B = C:D op met A=3, B=5, D=20. De ontbrekende waarde is C=12, omdat 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            {
+              "question": "Wat betekent een verhouding?",
+              "answer": "Een verhouding vergelijkt twee hoeveelheden en laat zien hoe vaak de ene de andere bevat. Je kunt het schrijven met een dubbele punt, als “A tot B”, of als breuk."
+            },
+            {
+              "question": "Hoe los ik A:B = C:D op?",
+              "answer": "Als je drie waarden kent, bereken je de vierde met kruislings vermenigvuldigen. Bijvoorbeeld: C = A×D/B als B ≠ 0."
+            },
+            {
+              "question": "Kun je verhoudingen schalen?",
+              "answer": "Ja. Vermenigvuldig elke term met dezelfde factor om de verhouding te behouden."
+            },
+            {
+              "question": "Waar worden verhoudingen gebruikt?",
+              "answer": "In recepten, kaarten, beeldverhoudingen, kansen, financiën en alle situaties met proportionele relaties."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde calculators",
+          "percentage": "Procentcalculator",
+          "percentageDesc": "Bereken percentagewaarden, veranderingen en relaties",
+          "remainder": "Restcalculator",
+          "remainderDesc": "Vind quotiënt en rest bij gehele deling",
+          "longDivision": "Lange-delingscalculator",
+          "longDivisionDesc": "Deel hele getallen stap voor stap"
+        }
+      }
+    },
     "longDivision": {
       "title": "Lange-delingscalculator",
       "description": "Deel twee gehele getallen en krijg het quotiënt en de rest met stap-voor-stap lange deling.",

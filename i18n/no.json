@@ -3798,6 +3798,86 @@
       "title": "Restkalkulator",
       "description": "Beregn resten (og kvotienten) ved heltallsdivisjon med euklidsk divisjon. Skriv inn dividend og divisor for å få en ikke-negativ rest med én gang."
     },
+    "ratio": {
+      "title": "Forholdskalkulator",
+      "description": "Løs forhold, finn manglende verdi i A:B = C:D og skaler forhold raskt.",
+      "ratioSectionHeading": "Finn manglende verdi",
+      "ratioSectionDescription": "Skriv inn tre verdier for å beregne den fjerde i A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "f.eks. 1",
+      "bPlaceholder": "f.eks. 2",
+      "cPlaceholder": "la stå tomt",
+      "dPlaceholder": "f.eks. 4",
+      "calculate": "Beregn",
+      "clear": "Tøm",
+      "resultHeading": "Resultat",
+      "missingValueLabel": "Mangler {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Skriv inn tre verdier for å se forholdet.",
+      "errorNeedThree": "Skriv inn nøyaktig tre verdier for å beregne den fjerde.",
+      "errorInvalidNumber": "Skriv inn gyldige tall.",
+      "errorDivisionByZero": "Kan ikke dele på null i forholdet.",
+      "scaleSectionHeading": "Skalering av forhold",
+      "scaleSectionDescription": "Forstørr eller reduser et forhold med en faktor og se nye verdier.",
+      "scaleLeftLabel": "Venstre verdi",
+      "scaleLeftPlaceholder": "f.eks. 250",
+      "scaleRightLabel": "Høyre verdi",
+      "scaleRightPlaceholder": "f.eks. 280",
+      "scaleFactorLabel": "Skaleringsfaktor",
+      "scaleFactorPlaceholder": "f.eks. 2.5",
+      "scaleHint": "Multipliser begge sider av forholdet med faktoren.",
+      "scalePreviewHeading": "Forhåndsvisning av skalert forhold",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Resultat: {left}:{right}",
+      "scalePreviewPlaceholder": "Skriv inn forhold og faktor for å se resultatet.",
+      "seo": {
+        "title": "Forholdskalkulator – Løs og skaler forhold",
+        "description": "Gratis forholdskalkulator. Finn manglende verdi i A:B = C:D og skaler forhold.",
+        "keywords": "forholdskalkulator, A:B = C:D, løse forhold, skaler forhold, proporsjoner",
+        "content": {
+          "heading": "Slik bruker du forholdskalkulatoren",
+          "paragraph1": "Et forhold beskriver den kvantitative relasjonen mellom to tall og skrives ofte som A:B, «A til B» eller som brøken A/B. Forhold brukes i oppskrifter, kart, skjermformater, finans og sannsynlighet.",
+          "paragraph2": "Denne kalkulatoren løser en proporsjon når du skriver inn tre verdier i A:B = C:D. Verktøyet beregner den manglende verdien med samme forhold.",
+          "paragraph3": "Skaleringsverktøyet lar deg øke eller redusere et forhold med en faktor. Det er nyttig for oppskrifter, tegninger eller mål.",
+          "paragraph4": "For eksempel blir et forhold 1:2:3 til 5:10:15 når du skalerer med 5, med samme proporsjoner.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "Løs A:B = C:D med A=3, B=5, D=20. Den manglende verdien er C=12, fordi 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Ofte stilte spørsmål",
+          "items": [
+            {
+              "question": "Hva representerer et forhold?",
+              "answer": "Et forhold sammenligner to størrelser og viser hvor mange ganger den ene inneholder den andre. Det kan skrives med kolon, som «A til B», eller som brøk."
+            },
+            {
+              "question": "Hvordan løser jeg A:B = C:D?",
+              "answer": "Hvis du kjenner tre verdier, kan du beregne den fjerde med kryssmultiplikasjon. For eksempel C = A×D/B når B ≠ 0."
+            },
+            {
+              "question": "Kan forhold skaleres?",
+              "answer": "Ja. Multipliser hvert ledd med samme faktor for å beholde forholdet."
+            },
+            {
+              "question": "Hvor brukes forhold i praksis?",
+              "answer": "I oppskrifter, kart, skjermforhold, odds, finans og alle proporsjonale sammenhenger."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte kalkulatorer",
+          "percentage": "Prosentkalkulator",
+          "percentageDesc": "Beregn prosentverdier, endringer og relasjoner",
+          "remainder": "Restkalkulator",
+          "remainderDesc": "Finn kvotient og rest ved heltallsdivisjon",
+          "longDivision": "Langdivisjonskalkulator",
+          "longDivisionDesc": "Del heltall steg for steg"
+        }
+      }
+    },
     "longDivision": {
       "title": "Langdivisjonskalkulator",
       "description": "Del to heltall og få kvotient og rest med trinnvis lang divisjon.",

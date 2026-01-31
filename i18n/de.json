@@ -3865,6 +3865,86 @@
         }
       }
     },
+    "ratio": {
+      "title": "Verhältnisrechner",
+      "description": "Verhältnisse lösen, fehlenden Wert in A:B = C:D finden und Verhältnisse schnell skalieren.",
+      "ratioSectionHeading": "Fehlenden Verhältniswert berechnen",
+      "ratioSectionDescription": "Geben Sie drei Werte ein, um den vierten in A:B = C:D zu berechnen.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "z.B. 1",
+      "bPlaceholder": "z.B. 2",
+      "cPlaceholder": "leer lassen",
+      "dPlaceholder": "z.B. 4",
+      "calculate": "Berechnen",
+      "clear": "Löschen",
+      "resultHeading": "Ergebnis",
+      "missingValueLabel": "Fehlend {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Geben Sie drei Werte ein, um das Verhältnis zu sehen.",
+      "errorNeedThree": "Bitte genau drei Werte eingeben, um den vierten zu berechnen.",
+      "errorInvalidNumber": "Bitte nur gültige Zahlen eingeben.",
+      "errorDivisionByZero": "Division durch 0 im Verhältnis ist nicht möglich.",
+      "scaleSectionHeading": "Verhältnisskalierung",
+      "scaleSectionDescription": "Verhältnis mit einem Faktor verkleinern oder vergrößern und neue Werte anzeigen.",
+      "scaleLeftLabel": "Linker Wert",
+      "scaleLeftPlaceholder": "z.B. 250",
+      "scaleRightLabel": "Rechter Wert",
+      "scaleRightPlaceholder": "z.B. 280",
+      "scaleFactorLabel": "Skalierungsfaktor",
+      "scaleFactorPlaceholder": "z.B. 2.5",
+      "scaleHint": "Multiplizieren Sie beide Seiten des Verhältnisses mit dem Faktor.",
+      "scalePreviewHeading": "Vorschau des skalierten Verhältnisses",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Ergebnis: {left}:{right}",
+      "scalePreviewPlaceholder": "Verhältnis und Faktor eingeben, um das Ergebnis zu sehen.",
+      "seo": {
+        "title": "Verhältnisrechner – Verhältnisse lösen und skalieren",
+        "description": "Kostenloser Verhältnisrechner. Fehlenden Wert in A:B = C:D berechnen, Proportionen verstehen und Verhältnisse skalieren.",
+        "keywords": "Verhältnisrechner, A:B = C:D, Verhältnis lösen, Proportionen, Verhältnis skalieren",
+        "content": {
+          "heading": "So verwenden Sie den Verhältnisrechner",
+          "paragraph1": "Ein Verhältnis beschreibt die quantitative Beziehung zwischen zwei Zahlen und wird oft als A:B, „A zu B“ oder als Bruch A/B geschrieben. Verhältnisse werden in Rezepten, Karten, Bildschirmformaten, Finanzen und Wahrscheinlichkeiten genutzt.",
+          "paragraph2": "Dieser Rechner löst Proportionen, wenn Sie drei Werte in A:B = C:D eingeben. Das Tool berechnet den fehlenden Wert bei gleicher Beziehung.",
+          "paragraph3": "Mit der Skalierung können Sie ein Verhältnis vergrößern oder verkleinern, z. B. beim Anpassen von Rezepten oder Zeichnungen.",
+          "paragraph4": "Beispiel: Ein Rezept mit 1:2:3 wird bei Faktor 5 zu 5:10:15, wobei das Verhältnis gleich bleibt.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "Lösen Sie A:B = C:D mit A=3, B=5, D=20. Der fehlende Wert ist C=12, weil 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was stellt ein Verhältnis dar?",
+              "answer": "Ein Verhältnis vergleicht zwei Größen und zeigt, wie oft der eine Wert im anderen enthalten ist. Es kann mit Doppelpunkt, als „A zu B“ oder als Bruch geschrieben werden."
+            },
+            {
+              "question": "Wie löse ich A:B = C:D?",
+              "answer": "Wenn drei Werte bekannt sind, berechnen Sie den vierten durch Kreuzmultiplikation. Beispiel: C = A×D/B, sofern B ≠ 0."
+            },
+            {
+              "question": "Kann man Verhältnisse skalieren?",
+              "answer": "Ja. Multiplizieren Sie jeden Term mit demselben Faktor, um das Verhältnis beizubehalten."
+            },
+            {
+              "question": "Wo werden Verhältnisse im Alltag verwendet?",
+              "answer": "In Rezepten, Karten, Seitenverhältnissen von Bildschirmen, Quoten, Finanzen und überall dort, wo Proportionen wichtig sind."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Ähnliche Rechner",
+          "percentage": "Prozentrechner",
+          "percentageDesc": "Prozentwerte, Änderungen und Beziehungen berechnen",
+          "remainder": "Restrechner",
+          "remainderDesc": "Quotient und Rest bei ganzzahliger Division finden",
+          "longDivision": "Langdivision-Rechner",
+          "longDivisionDesc": "Ganzzahlen Schritt für Schritt teilen"
+        }
+      }
+    },
     "longDivision": {
       "title": "Langdivision-Rechner",
       "description": "Teilen Sie zwei ganze Zahlen und erhalten Sie Quotient und Rest mit Schritt-für-Schritt-Langdivision.",

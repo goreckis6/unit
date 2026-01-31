@@ -72,6 +72,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'ratio',
+    titleKey: 'ratio.title',
+    descKey: 'ratio.description',
+    path: '/calculators/math/ratio',
+    category: 'math',
+  },
+  {
     id: 'long-division',
     titleKey: 'longDivision.title',
     descKey: 'longDivision.description',

@@ -3800,6 +3800,86 @@
       "title": "나머지 계산기",
       "description": "유클리드 나눗셈으로 정수 나눗셈의 나머지(및 몫)를 계산합니다. 피제수와 제수를 입력해 비음수 나머지를 즉시 확인하세요."
     },
+    "ratio": {
+      "title": "비율 계산기",
+      "description": "비율을 풀고 A:B = C:D에서 누락된 값을 찾으며 비율을 스케일링합니다.",
+      "ratioSectionHeading": "누락된 값 찾기",
+      "ratioSectionDescription": "A:B = C:D에서 세 값을 입력하면 네 번째 값을 계산합니다.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "예: 1",
+      "bPlaceholder": "예: 2",
+      "cPlaceholder": "비워 두세요",
+      "dPlaceholder": "예: 4",
+      "calculate": "계산",
+      "clear": "지우기",
+      "resultHeading": "결과",
+      "missingValueLabel": "누락 {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "세 값을 입력하여 비율을 확인하세요.",
+      "errorNeedThree": "네 번째 값을 계산하려면 정확히 세 값을 입력하세요.",
+      "errorInvalidNumber": "유효한 숫자를 입력하세요.",
+      "errorDivisionByZero": "비율에서 0으로 나눌 수 없습니다.",
+      "scaleSectionHeading": "비율 스케일 계산기",
+      "scaleSectionDescription": "스케일 팩터로 비율을 줄이거나 늘리고 새 값을 확인합니다.",
+      "scaleLeftLabel": "왼쪽 값",
+      "scaleLeftPlaceholder": "예: 250",
+      "scaleRightLabel": "오른쪽 값",
+      "scaleRightPlaceholder": "예: 280",
+      "scaleFactorLabel": "스케일 팩터",
+      "scaleFactorPlaceholder": "예: 2.5",
+      "scaleHint": "비율의 양쪽에 같은 팩터를 곱하세요.",
+      "scalePreviewHeading": "스케일된 비율 미리보기",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "결과: {left}:{right}",
+      "scalePreviewPlaceholder": "비율과 팩터를 입력해 결과를 확인하세요.",
+      "seo": {
+        "title": "비율 계산기 – 비율 풀이 및 스케일링",
+        "description": "무료 비율 계산기. A:B = C:D에서 누락된 값을 찾고 비율을 스케일링합니다.",
+        "keywords": "비율 계산기, A:B = C:D, 비율 풀이, 비율 스케일링, 비례",
+        "content": {
+          "heading": "비율 계산기 사용법",
+          "paragraph1": "비율은 두 수의 정량적 관계를 나타내며 A:B 또는 A/B 분수로 자주 표기됩니다. 비율은 레시피, 지도, 화면 비율, 금융, 확률 등에 사용됩니다.",
+          "paragraph2": "이 계산기는 A:B = C:D에 세 값을 입력하면 같은 관계를 유지한 채 누락된 값을 계산합니다.",
+          "paragraph3": "스케일 기능으로 비율을 줄이거나 늘릴 수 있어 레시피, 도면, 치수 조정에 유용합니다.",
+          "paragraph4": "예를 들어 1:2:3 비율을 5배 하면 5:10:15가 되어 같은 비율을 유지합니다.",
+          "exampleHeading": "예시",
+          "exampleText": "A:B = C:D에서 A=3, B=5, D=20이면 누락된 값은 C=12입니다. 3:5 = 12:20이기 때문입니다."
+        },
+        "faq": {
+          "heading": "자주 묻는 질문",
+          "items": [
+            {
+              "question": "비율은 무엇을 의미하나요?",
+              "answer": "비율은 두 مقدار의 비교로 한 값이 다른 값을 몇 번 포함하는지 보여줍니다. 콜론이나 분수로 표현할 수 있습니다."
+            },
+            {
+              "question": "A:B = C:D는 어떻게 풉니까?",
+              "answer": "세 값을 알고 있으면 교차 곱으로 네 번째 값을 계산합니다. 예: B ≠ 0일 때 C = A×D/B."
+            },
+            {
+              "question": "비율을 스케일링할 수 있나요?",
+              "answer": "네. 모든 항에 같은 팩터를 곱하면 비율이 유지됩니다."
+            },
+            {
+              "question": "비율은 어디에 쓰이나요?",
+              "answer": "레시피, 지도, 화면 비율, 확률, 금융 등 비례 관계가 중요한 곳에서 사용됩니다."
+            }
+          ]
+        },
+        "related": {
+          "heading": "관련 계산기",
+          "percentage": "퍼센트 계산기",
+          "percentageDesc": "퍼센트 값, 변화, 관계 계산",
+          "remainder": "나머지 계산기",
+          "remainderDesc": "정수 나눗셈의 몫과 나머지 찾기",
+          "longDivision": "긴 나눗셈 계산기",
+          "longDivisionDesc": "정수를 단계별로 나누기"
+        }
+      }
+    },
     "longDivision": {
       "title": "긴 나눗셈 계산기",
       "description": "두 정수를 나누고 단계별 긴 나눗셈으로 몫과 나머지를 확인하세요.",

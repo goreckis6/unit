@@ -24,6 +24,7 @@ export async function GET() {
     '/calculators/math/polynomial-remainder',
     '/calculators/math/remainder',
     '/calculators/math/long-division',
+    '/calculators/math/ratio',
     '/calculators/others/text-to-binary',
     '/calculators/others/ascii-converter',
     '/calculators/others/caesar-cipher',

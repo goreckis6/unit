@@ -3792,6 +3792,86 @@
       "title": "Restkalkylator",
       "description": "Beräkna resten (och kvoten) vid heltalsdivision med euklidisk division. Ange dividend och divisor för att få en icke-negativ rest direkt."
     },
+    "ratio": {
+      "title": "Kalkylator för kvoter",
+      "description": "Lös kvoter, hitta saknat värde i A:B = C:D och skala kvoter snabbt.",
+      "ratioSectionHeading": "Hitta det saknade värdet",
+      "ratioSectionDescription": "Ange valfria tre värden för att beräkna det fjärde i A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "t.ex. 1",
+      "bPlaceholder": "t.ex. 2",
+      "cPlaceholder": "lämna tomt",
+      "dPlaceholder": "t.ex. 4",
+      "calculate": "Beräkna",
+      "clear": "Rensa",
+      "resultHeading": "Resultat",
+      "missingValueLabel": "Saknar {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Ange tre värden för att se en förhandsvisning.",
+      "errorNeedThree": "Ange exakt tre värden för att räkna ut det fjärde.",
+      "errorInvalidNumber": "Ange giltiga tal.",
+      "errorDivisionByZero": "Kan inte dividera med noll i kvoten.",
+      "scaleSectionHeading": "Kvotskala",
+      "scaleSectionDescription": "Förminska eller förstora en kvot med en skalfaktor och se de nya värdena.",
+      "scaleLeftLabel": "Vänster värde",
+      "scaleLeftPlaceholder": "t.ex. 250",
+      "scaleRightLabel": "Höger värde",
+      "scaleRightPlaceholder": "t.ex. 280",
+      "scaleFactorLabel": "Skalfaktor",
+      "scaleFactorPlaceholder": "t.ex. 2.5",
+      "scaleHint": "Multiplicera båda sidor av kvoten med faktorn.",
+      "scalePreviewHeading": "Förhandsvisning av skalad kvot",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Resultat: {left}:{right}",
+      "scalePreviewPlaceholder": "Ange kvot och faktor för att se resultatet.",
+      "seo": {
+        "title": "Kalkylator för kvoter – Lös och skala kvoter",
+        "description": "Gratis kvotkalkylator. Hitta saknat värde i A:B = C:D, lös proportioner och skala kvoter.",
+        "keywords": "kvotkalkylator, A:B = C:D, lösa kvoter, skala kvoter, proportioner",
+        "content": {
+          "heading": "Så använder du kvotkalkylatorn",
+          "paragraph1": "En kvot beskriver relationen mellan två tal och skrivs ofta som A:B, “A till B” eller som bråket A/B. Kvoter används i recept, kartor, skärmformat, ekonomi och sannolikhet.",
+          "paragraph2": "Den här kalkylatorn låter dig lösa en proportion genom att ange tre värden i A:B = C:D. Verktyget beräknar det saknade värdet och behåller samma relation.",
+          "paragraph3": "Använd skalfunktionen för att minska eller öka en kvot med en faktor. Det är användbart för att skala recept, ritningar eller mått.",
+          "paragraph4": "Till exempel, om ett recept använder 1:2:3 och du skalar fem gånger, blir den nya kvoten 5:10:15 med samma proportioner.",
+          "exampleHeading": "Exempel",
+          "exampleText": "Lös A:B = C:D med A=3, B=5, D=20. Det saknade värdet är C=12, eftersom 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {
+              "question": "Vad representerar en kvot?",
+              "answer": "En kvot jämför två mängder och visar hur många gånger en värde innehåller den andra. Den kan skrivas med kolon, som “A till B” eller som bråk."
+            },
+            {
+              "question": "Hur löser jag A:B = C:D?",
+              "answer": "Om du känner tre värden kan du beräkna det fjärde med korsmultiplikation. Exempel: C = A×D/B när B ≠ 0."
+            },
+            {
+              "question": "Kan kvoter skalas?",
+              "answer": "Ja. Multiplicera varje term med samma faktor för att behålla proportionerna."
+            },
+            {
+              "question": "Var används kvoter i praktiken?",
+              "answer": "Kvoter används i recept, kartor, bildformat, odds, ekonomi och alla situationer där proportioner är viktiga."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "percentage": "Procentkalkylator",
+          "percentageDesc": "Beräkna procentvärden, förändringar och relationer",
+          "remainder": "Restkalkylator",
+          "remainderDesc": "Hitta kvot och rest vid heltalsdivision",
+          "longDivision": "Långdivisionskalkylator",
+          "longDivisionDesc": "Dela heltal steg för steg"
+        }
+      }
+    },
     "longDivision": {
       "title": "Långdivisionskalkylator",
       "description": "Dela två heltal och få kvot och rest med lång division steg för steg.",

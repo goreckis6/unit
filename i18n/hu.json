@@ -3804,6 +3804,86 @@
       "title": "Maradék kalkulátor",
       "description": "Számítsa ki az egész osztás maradékát (és hányadosát) euklideszi osztással. Adja meg az osztandót és az osztót, és azonnal kapjon nem negatív maradékot."
     },
+    "ratio": {
+      "title": "Aránykalkulátor",
+      "description": "Arányok megoldása, hiányzó érték keresése A:B = C:D esetén, és arányok skálázása.",
+      "ratioSectionHeading": "Hiányzó érték kiszámítása",
+      "ratioSectionDescription": "Adjon meg három értéket az A:B = C:D arány negyedik elemének kiszámításához.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "pl. 1",
+      "bPlaceholder": "pl. 2",
+      "cPlaceholder": "hagyja üresen",
+      "dPlaceholder": "pl. 4",
+      "calculate": "Számítás",
+      "clear": "Törlés",
+      "resultHeading": "Eredmény",
+      "missingValueLabel": "Hiányzó {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Adjon meg három értéket az arány megtekintéséhez.",
+      "errorNeedThree": "Pontosan három értéket adjon meg a negyedik kiszámításához.",
+      "errorInvalidNumber": "Adjon meg érvényes számokat.",
+      "errorDivisionByZero": "Nem lehet nullával osztani az arányban.",
+      "scaleSectionHeading": "Arányskálázó kalkulátor",
+      "scaleSectionDescription": "Kicsinyítse vagy nagyítsa az arányt egy tényezővel, és nézze meg az új értékeket.",
+      "scaleLeftLabel": "Bal oldali érték",
+      "scaleLeftPlaceholder": "pl. 250",
+      "scaleRightLabel": "Jobb oldali érték",
+      "scaleRightPlaceholder": "pl. 280",
+      "scaleFactorLabel": "Skálázási tényező",
+      "scaleFactorPlaceholder": "pl. 2.5",
+      "scaleHint": "Szorozza meg az arány mindkét oldalát a tényezővel.",
+      "scalePreviewHeading": "Skálázott arány előnézete",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Eredmény: {left}:{right}",
+      "scalePreviewPlaceholder": "Adjon meg egy arányt és egy tényezőt az eredményhez.",
+      "seo": {
+        "title": "Aránykalkulátor – Arányok megoldása és skálázása",
+        "description": "Ingyenes aránykalkulátor. Hiányzó érték keresése A:B = C:D esetén és arányok skálázása.",
+        "keywords": "aránykalkulátor, A:B = C:D, arány megoldása, arány skálázása, arányok",
+        "content": {
+          "heading": "Hogyan használd az aránykalkulátort",
+          "paragraph1": "Az arány két szám mennyiségi kapcsolatát írja le, gyakran A:B formában, „A a B-hez” vagy A/B tört alakban. Arányokat használnak receptekben, térképeken, képarányokban, pénzügyekben és valószínűségben.",
+          "paragraph2": "Ez a kalkulátor lehetővé teszi egy arány megoldását, ha három értéket ad meg az A:B = C:D arányból. Az eszköz kiszámítja a hiányzó értéket ugyanazzal a kapcsolattal.",
+          "paragraph3": "Az arányskálázás funkcióval egy tényezővel kicsinyítheti vagy nagyíthatja az arányt. Hasznos receptek, rajzok vagy méretek átszámításához.",
+          "paragraph4": "Például egy 1:2:3 arány 5-tel szorozva 5:10:15 lesz, azonos arányok mellett.",
+          "exampleHeading": "Példa",
+          "exampleText": "Oldja meg az A:B = C:D arányt A=3, B=5, D=20 esetén. A hiányzó érték C=12, mert 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Gyakran ismételt kérdések",
+          "items": [
+            {
+              "question": "Mit jelent az arány?",
+              "answer": "Az arány két mennyiséget hasonlít össze, és megmutatja, hányszor tartalmazza az egyik a másikat. Írható kettősponttal, „A a B-hez” formában vagy tört alakban."
+            },
+            {
+              "question": "Hogyan oldom meg az A:B = C:D arányt?",
+              "answer": "Ha három értéket ismer, a negyediket kereszt-szorzással számíthatja ki. Például C = A×D/B, ha B ≠ 0."
+            },
+            {
+              "question": "Skálázhatók az arányok?",
+              "answer": "Igen. Szorozza meg minden tagot ugyanazzal a tényezővel, hogy az arány megmaradjon."
+            },
+            {
+              "question": "Hol használják az arányokat a gyakorlatban?",
+              "answer": "Receptekben, térképeken, képarányoknál, valószínűségnél, pénzügyekben és minden arányos helyzetben."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó kalkulátorok",
+          "percentage": "Százalékszámító",
+          "percentageDesc": "Százalékértékek, változások és kapcsolatok számítása",
+          "remainder": "Maradék kalkulátor",
+          "remainderDesc": "Hányados és maradék egész osztásnál",
+          "longDivision": "Hosszú osztás kalkulátor",
+          "longDivisionDesc": "Egész számok osztása lépésről lépésre"
+        }
+      }
+    },
     "longDivision": {
       "title": "Hosszú osztás kalkulátor",
       "description": "Ossz el két egész számot, és kapd meg a hányadost és a maradékot lépésről lépésre.",

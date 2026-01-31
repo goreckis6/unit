@@ -3800,6 +3800,86 @@
       "title": "Kalkulator reszty",
       "description": "Oblicz resztę (i iloraz) z dzielenia całkowitego za pomocą dzielenia euklidesowego. Wpisz dzielną i dzielnik, aby natychmiast otrzymać nieujemną resztę."
     },
+    "ratio": {
+      "title": "Kalkulator proporcji",
+      "description": "Rozwiązuj proporcje, znajdź brakującą wartość w A:B = C:D i skaluj proporcje w górę lub w dół.",
+      "ratioSectionHeading": "Wyznacz brakującą wartość proporcji",
+      "ratioSectionDescription": "Podaj dowolne trzy wartości, aby obliczyć czwartą w proporcji A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "np. 1",
+      "bPlaceholder": "np. 2",
+      "cPlaceholder": "pozostaw puste",
+      "dPlaceholder": "np. 4",
+      "calculate": "Oblicz",
+      "clear": "Wyczyść",
+      "resultHeading": "Wynik",
+      "missingValueLabel": "Brakujące {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Wpisz dowolne trzy wartości, aby zobaczyć podgląd proporcji.",
+      "errorNeedThree": "Podaj dokładnie trzy wartości, aby obliczyć czwartą.",
+      "errorInvalidNumber": "Podaj poprawne liczby.",
+      "errorDivisionByZero": "Nie można dzielić przez zero w proporcji.",
+      "scaleSectionHeading": "Kalkulator skali proporcji",
+      "scaleSectionDescription": "Zmniejsz lub powiększ proporcję przez współczynnik i zobacz nowe wartości.",
+      "scaleLeftLabel": "Wartość lewa",
+      "scaleLeftPlaceholder": "np. 250",
+      "scaleRightLabel": "Wartość prawa",
+      "scaleRightPlaceholder": "np. 280",
+      "scaleFactorLabel": "Współczynnik skali",
+      "scaleFactorPlaceholder": "np. 2.5",
+      "scaleHint": "Pomnóż obie strony proporcji przez współczynnik.",
+      "scalePreviewHeading": "Podgląd przeskalowanej proporcji",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Wynik: {left}:{right}",
+      "scalePreviewPlaceholder": "Wpisz proporcję i współczynnik, aby zobaczyć wynik.",
+      "seo": {
+        "title": "Kalkulator proporcji – Rozwiązywanie i skalowanie",
+        "description": "Darmowy kalkulator proporcji. Znajdź brakującą wartość w A:B = C:D, sprawdzaj zależności proporcjonalne i skaluj proporcje.",
+        "keywords": "kalkulator proporcji, proporcje A:B = C:D, rozwiązywanie proporcji, skalowanie proporcji, kalkulator proporcjonalności",
+        "content": {
+          "heading": "Jak korzystać z kalkulatora proporcji",
+          "paragraph1": "Proporcja opisuje relację ilościową między dwiema wartościami i najczęściej zapisuje się ją jako A:B, „A do B” lub ułamek A/B. Proporcje pojawiają się w przepisach, mapach, rozmiarach ekranów, finansach i prawdopodobieństwie.",
+          "paragraph2": "Ten kalkulator pozwala rozwiązać proporcję, gdy znasz trzy wartości w A:B = C:D. Narzędzie obliczy brakującą wartość, zachowując tę samą zależność.",
+          "paragraph3": "Kalkulator skali proporcji pozwala pomniejszyć lub powiększyć proporcję o wybrany współczynnik. To przydatne przy skalowaniu receptur, rysunków lub wymiarów.",
+          "paragraph4": "Na przykład, jeśli przepis ma proporcję 1:2:3 i zwiększysz ją pięciokrotnie, otrzymasz 5:10:15 przy zachowaniu tych samych proporcji.",
+          "exampleHeading": "Przykład",
+          "exampleText": "Rozwiąż A:B = C:D dla A=3, B=5, D=20. Brakująca wartość to C=12, ponieważ 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Najczęściej zadawane pytania",
+          "items": [
+            {
+              "question": "Co oznacza proporcja?",
+              "answer": "Proporcja porównuje dwie wielkości i pokazuje, ile razy jedna wartość zawiera drugą. Można ją zapisać dwukropkiem, jako „A do B” lub w postaci ułamka."
+            },
+            {
+              "question": "Jak rozwiązać A:B = C:D?",
+              "answer": "Gdy znasz trzy wartości, obliczysz czwartą przez „krzyżowe” mnożenie. Na przykład C = A×D/B, jeśli B ≠ 0."
+            },
+            {
+              "question": "Czy można skalować proporcje?",
+              "answer": "Tak. Wystarczy pomnożyć każdy składnik przez ten sam współczynnik, aby zachować te same proporcje."
+            },
+            {
+              "question": "Gdzie w praktyce używa się proporcji?",
+              "answer": "Proporcje są używane w przepisach, mapach, proporcjach ekranów, kursach walut, prawdopodobieństwie i wszędzie tam, gdzie liczą się relacje proporcjonalne."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "percentage": "Kalkulator procentów",
+          "percentageDesc": "Obliczaj wartości procentowe, zmiany i zależności",
+          "remainder": "Kalkulator reszty",
+          "remainderDesc": "Znajdź iloraz i resztę w dzieleniu całkowitym",
+          "longDivision": "Kalkulator dzielenia pisemnego",
+          "longDivisionDesc": "Dziel liczby całkowite krok po kroku"
+        }
+      }
+    },
     "longDivision": {
       "title": "Kalkulator dzielenia pisemnego",
       "description": "Podziel dwie liczby całkowite i otrzymaj iloraz oraz resztę krok po kroku.",

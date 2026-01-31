@@ -3800,6 +3800,86 @@
       "title": "Calculadora do resto",
       "description": "Calcule o resto (e o quociente) da divisão inteira usando a divisão euclidiana. Introduza o dividendo e o divisor para obter instantaneamente um resto não negativo."
     },
+    "ratio": {
+      "title": "Calculadora de razão",
+      "description": "Resolva razões, encontre o valor faltante em A:B = C:D e escale razões rapidamente.",
+      "ratioSectionHeading": "Encontre o valor faltante",
+      "ratioSectionDescription": "Informe três valores para calcular o quarto em A:B = C:D.",
+      "aLabel": "A",
+      "bLabel": "B",
+      "cLabel": "C",
+      "dLabel": "D",
+      "aPlaceholder": "ex.: 1",
+      "bPlaceholder": "ex.: 2",
+      "cPlaceholder": "deixe em branco",
+      "dPlaceholder": "ex.: 4",
+      "calculate": "Calcular",
+      "clear": "Limpar",
+      "resultHeading": "Resultado",
+      "missingValueLabel": "Falta {key}: {value}",
+      "ratioEquationLabel": "{a}:{b} = {c}:{d}",
+      "previewHint": "Insira três valores para ver a prévia da razão.",
+      "errorNeedThree": "Informe exatamente três valores para calcular o quarto.",
+      "errorInvalidNumber": "Insira apenas números válidos.",
+      "errorDivisionByZero": "Não é possível dividir por zero na razão.",
+      "scaleSectionHeading": "Calculadora de escala de razão",
+      "scaleSectionDescription": "Reduza ou aumente uma razão com um fator e veja os novos valores.",
+      "scaleLeftLabel": "Valor esquerdo",
+      "scaleLeftPlaceholder": "ex.: 250",
+      "scaleRightLabel": "Valor direito",
+      "scaleRightPlaceholder": "ex.: 280",
+      "scaleFactorLabel": "Fator de escala",
+      "scaleFactorPlaceholder": "ex.: 2.5",
+      "scaleHint": "Multiplique ambos os lados da razão pelo fator.",
+      "scalePreviewHeading": "Prévia da razão escalada",
+      "scalePreviewLabel": "{left}:{right} × {factor}",
+      "scalePreviewResult": "Resultado: {left}:{right}",
+      "scalePreviewPlaceholder": "Insira a razão e o fator para ver o resultado.",
+      "seo": {
+        "title": "Calculadora de razão – Resolva e escale",
+        "description": "Calculadora de razão gratuita. Encontre o valor faltante em A:B = C:D e escale razões.",
+        "keywords": "calculadora de razão, A:B = C:D, resolver razão, escalar razão, proporções",
+        "content": {
+          "heading": "Como usar a calculadora de razão",
+          "paragraph1": "Uma razão descreve a relação quantitativa entre dois números e geralmente é escrita como A:B, “A para B” ou como fração A/B. Razões são usadas em receitas, mapas, tamanhos de tela, finanças e probabilidades.",
+          "paragraph2": "Esta calculadora permite resolver uma proporção inserindo três valores em A:B = C:D. A ferramenta calcula o valor faltante mantendo a mesma relação.",
+          "paragraph3": "A escala de razão permite reduzir ou aumentar uma razão por um fator. É útil para ajustar receitas, desenhos ou medidas.",
+          "paragraph4": "Por exemplo, se uma receita usa 1:2:3 e você multiplica por 5, a nova razão será 5:10:15 com o mesmo equilíbrio.",
+          "exampleHeading": "Exemplo",
+          "exampleText": "Resolva A:B = C:D com A=3, B=5, D=20. O valor faltante é C=12, pois 3:5 = 12:20."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {
+              "question": "O que uma razão representa?",
+              "answer": "Uma razão compara duas quantidades e mostra quantas vezes uma contém a outra. Pode ser escrita com dois pontos, como “A para B”, ou como fração."
+            },
+            {
+              "question": "Como resolver A:B = C:D?",
+              "answer": "Se você conhece três valores, o quarto é calculado por multiplicação cruzada. Exemplo: C = A×D/B quando B ≠ 0."
+            },
+            {
+              "question": "Posso escalar razões?",
+              "answer": "Sim. Multiplique cada termo pelo mesmo fator para manter a proporção."
+            },
+            {
+              "question": "Onde as razões são usadas no dia a dia?",
+              "answer": "Em receitas, mapas, proporções de tela, probabilidades, finanças e outras situações proporcionais."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "percentage": "Calculadora de porcentagem",
+          "percentageDesc": "Calcule valores percentuais, mudanças e relações",
+          "remainder": "Calculadora de resto",
+          "remainderDesc": "Encontre quociente e resto na divisão inteira",
+          "longDivision": "Calculadora de divisão longa",
+          "longDivisionDesc": "Divida números inteiros passo a passo"
+        }
+      }
+    },
     "longDivision": {
       "title": "Calculadora de Divisão Longa",
       "description": "Divida dois números inteiros e obtenha quociente e resto com divisão longa passo a passo.",

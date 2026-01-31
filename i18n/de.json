@@ -402,11 +402,26 @@
         "faq": {
           "heading": "Häufig gestellte Fragen",
           "items": [
-            {"question": "Was ist der Kosinus eines Winkels?", "answer": "Der Kosinus eines Winkels α, cos(α), ist das Verhältnis von Ankathete zu Hypotenuse im rechtwinkligen Dreieck. cos(α) liegt zwischen -1 und 1. Er ist auch die x-Koordinate auf dem Einheitskreis."},
-            {"question": "Kann ich Winkel in Grad oder Radiant eingeben?", "answer": "Ja. Wählen Sie deg für Grad (z. B. 11, 90, 180) oder rad für Radiant. Der Rechner berechnet cos(α) und zeigt das Ergebnis mit 8 Nachkommastellen."},
-            {"question": "Was zeigt der Graph?", "answer": "Der Graph zeigt eine Periode der Kosinusfunktion y = cos(x) von 0 bis 2π Radiant: 1 bei 0, 0 bei π/2, -1 bei π, 0 bei 3π/2."},
-            {"question": "Ist das Ergebnis in meinem Locale-Format?", "answer": "Ja. Der Kosinuswert wird gemäß Ihrem Locale formatiert (Dezimaltrennzeichen Komma oder Punkt)."},
-            {"question": "Ist dieser Kosinus-Rechner kostenlos?", "answer": "Ja, der Kosinus-Rechner ist kostenlos. Winkel eingeben, deg oder rad wählen und cos(α) mit Graph erhalten."}
+            {
+              "question": "Was ist der Kosinus eines Winkels?",
+              "answer": "Der Kosinus eines Winkels α, cos(α), ist das Verhältnis von Ankathete zu Hypotenuse im rechtwinkligen Dreieck. cos(α) liegt zwischen -1 und 1. Er ist auch die x-Koordinate auf dem Einheitskreis."
+            },
+            {
+              "question": "Kann ich Winkel in Grad oder Radiant eingeben?",
+              "answer": "Ja. Wählen Sie deg für Grad (z. B. 11, 90, 180) oder rad für Radiant. Der Rechner berechnet cos(α) und zeigt das Ergebnis mit 8 Nachkommastellen."
+            },
+            {
+              "question": "Was zeigt der Graph?",
+              "answer": "Der Graph zeigt eine Periode der Kosinusfunktion y = cos(x) von 0 bis 2π Radiant: 1 bei 0, 0 bei π/2, -1 bei π, 0 bei 3π/2."
+            },
+            {
+              "question": "Ist das Ergebnis in meinem Locale-Format?",
+              "answer": "Ja. Der Kosinuswert wird gemäß Ihrem Locale formatiert (Dezimaltrennzeichen Komma oder Punkt)."
+            },
+            {
+              "question": "Ist dieser Kosinus-Rechner kostenlos?",
+              "answer": "Ja, der Kosinus-Rechner ist kostenlos. Winkel eingeben, deg oder rad wählen und cos(α) mit Graph erhalten."
+            }
           ]
         },
         "related": {
@@ -448,11 +463,26 @@
         "faq": {
           "heading": "Häufig gestellte Fragen",
           "items": [
-            {"question": "Was ist der Sinus eines Winkels?", "answer": "Der Sinus des Winkels α, sin(α), ist das Verhältnis von Gegenkathete zu Hypotenuse im rechtwinkligen Dreieck. sin(α) liegt zwischen −1 und 1. Es ist auch die y-Koordinate auf dem Einheitskreis."},
-            {"question": "Kann ich Winkel in Grad, Radiant, Milliradiant oder π Radiant eingeben?", "answer": "Ja. Wählen Sie deg, rad, mrad oder × π rad. Der Rechner zeigt sin(α) mit 8 Nachkommastellen."},
-            {"question": "Was zeigt der Graph?", "answer": "Der Graph zeigt sin(x) von −2π bis 2π (zwei Perioden). Sinus ist 0 bei 0 und π, 1 bei π/2, −1 bei 3π/2."},
-            {"question": "Ist das Ergebnis in meinem Gebietsformat?", "answer": "Ja. Der Sinuswert wird nach Ihrer Region formatiert (Komma oder Punkt)."},
-            {"question": "Ist dieser Sinus-Rechner kostenlos?", "answer": "Ja, der Sinus-Rechner ist kostenlos. Winkel eingeben, Einheit wählen und sin(α) mit Graph erhalten."}
+            {
+              "question": "Was ist der Sinus eines Winkels?",
+              "answer": "Der Sinus des Winkels α, sin(α), ist das Verhältnis von Gegenkathete zu Hypotenuse im rechtwinkligen Dreieck. sin(α) liegt zwischen −1 und 1. Es ist auch die y-Koordinate auf dem Einheitskreis."
+            },
+            {
+              "question": "Kann ich Winkel in Grad, Radiant, Milliradiant oder π Radiant eingeben?",
+              "answer": "Ja. Wählen Sie deg, rad, mrad oder × π rad. Der Rechner zeigt sin(α) mit 8 Nachkommastellen."
+            },
+            {
+              "question": "Was zeigt der Graph?",
+              "answer": "Der Graph zeigt sin(x) von −2π bis 2π (zwei Perioden). Sinus ist 0 bei 0 und π, 1 bei π/2, −1 bei 3π/2."
+            },
+            {
+              "question": "Ist das Ergebnis in meinem Gebietsformat?",
+              "answer": "Ja. Der Sinuswert wird nach Ihrer Region formatiert (Komma oder Punkt)."
+            },
+            {
+              "question": "Ist dieser Sinus-Rechner kostenlos?",
+              "answer": "Ja, der Sinus-Rechner ist kostenlos. Winkel eingeben, Einheit wählen und sin(α) mit Graph erhalten."
+            }
           ]
         },
         "related": {
@@ -720,6 +750,88 @@
           "percentageDesc": "Berechne Prozente, prozentuale Änderungen und Prozentbeziehungen",
           "average": "Durchschnittsrechner",
           "averageDesc": "Berechne Mittelwert, Summe und Anzahl von Zahlen"
+        }
+      }
+    },
+    "pythagoreanTheorem": {
+      "title": "Pythagorean Theorem Calculator",
+      "description": "Calculate triangle sides using the Pythagorean theorem. Find missing sides, area, and perimeter instantly.",
+      "sideA": "Side length a",
+      "sideB": "Side length b",
+      "sideC": "Side length c (hypotenuse)",
+      "optional": "Optional",
+      "unitMm": "millimeters (mm)",
+      "unitCm": "centimeters (cm)",
+      "unitM": "meters (m)",
+      "unitKm": "kilometers (km)",
+      "unitIn": "inches (in)",
+      "unitFt": "feet (ft)",
+      "unitYd": "yards (yd)",
+      "unitMi": "miles (mi)",
+      "unitNmi": "nautical miles (nmi)",
+      "unitAbbrMm": "mm",
+      "unitAbbrCm": "cm",
+      "unitAbbrM": "m",
+      "unitAbbrKm": "km",
+      "unitAbbrIn": "in",
+      "unitAbbrFt": "ft",
+      "unitAbbrYd": "yd",
+      "unitAbbrMi": "mi",
+      "unitAbbrNmi": "nmi",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "area": "Triangle Area",
+      "perimeter": "Triangle Perimeter",
+      "errorTwoEmpty": "Please enter at least two side lengths.",
+      "errorInvalidSides": "Invalid triangle: The hypotenuse must be longer than the other sides.",
+      "errorNotRightTriangle": "These sides do not form a valid right triangle.",
+      "seo": {
+        "title": "Pythagorean Theorem Calculator - Find Triangle Sides",
+        "description": "Free Pythagorean theorem calculator. Calculate missing sides of a right triangle using a² + b² = c². Get area and perimeter instantly with multiple units.",
+        "keywords": "pythagorean theorem calculator, right triangle calculator, calculate hypotenuse, triangle sides calculator, a2 b2 c2, geometry calculator",
+        "content": {
+          "heading": "How to Use the Pythagorean Theorem",
+          "paragraph1": "The Pythagorean theorem states that in a right triangle, the square of the hypotenuse (c) equals the sum of the squares of the other two sides: a² + b² = c². This fundamental geometric principle, discovered by Pythagoras, is used in construction, navigation, physics, and everyday measurements.",
+          "paragraph2": "To find a missing side, enter the two known sides and leave one blank. The calculator solves for the missing value using the theorem. If you enter all three sides, it verifies whether they form a valid right triangle. The calculator also computes the triangle's area (½ × a × b) and perimeter (a + b + c).",
+          "paragraph3": "Choose units for each side from millimeters to nautical miles. The calculator automatically converts between units and displays results in a common unit. This is useful when working with mixed measurements or different unit systems.",
+          "paragraph4": "Right triangles appear in roofs, ramps, ladders, screen dimensions, and countless real-world applications. Use this calculator for homework, construction projects, or any situation requiring precise right triangle calculations.",
+          "exampleHeading": "Example",
+          "exampleText": "If side a = 3 cm and side b = 4 cm, then the hypotenuse c = 5 cm because 3² + 4² = 9 + 16 = 25 = 5². The area is 6 cm² and the perimeter is 12 cm."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the Pythagorean theorem?",
+              "answer": "The Pythagorean theorem states that in a right triangle, a² + b² = c², where c is the hypotenuse (longest side) and a and b are the other two sides. It's one of the most important formulas in geometry."
+            },
+            {
+              "question": "How do I find the hypotenuse?",
+              "answer": "Enter the two shorter sides (a and b) and leave the hypotenuse (c) empty. The calculator computes c = √(a² + b²)."
+            },
+            {
+              "question": "Can I find a shorter side if I know the hypotenuse?",
+              "answer": "Yes. Enter the hypotenuse (c) and one other side (a or b). The calculator finds the missing side using a = √(c² − b²) or b = √(c² − a²)."
+            },
+            {
+              "question": "Can I use different units for each side?",
+              "answer": "Yes. Select any unit for each side. The calculator automatically converts and displays results in a common unit."
+            },
+            {
+              "question": "What if I enter three sides that don't form a right triangle?",
+              "answer": "The calculator checks if the sides satisfy a² + b² = c². If not, it shows an error indicating the sides don't form a valid right triangle."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "squareRoot": "Square Root Calculator",
+          "squareRootDesc": "Calculate square roots and see positive and negative results",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentages, percentage change, and percentage relationships",
+          "quadraticEquation": "Quadratic Equation Calculator",
+          "quadraticEquationDesc": "Solve quadratic equations and get real or complex roots"
         }
       }
     },
@@ -3713,59 +3825,6 @@
       "seo": {
         "title": "Wurzel-Rechner – n-te Wurzel einer Zahl online",
         "description": "Kostenloser Wurzel-Rechner. Finden Sie die n-te Wurzel einer Zahl: Quadratwurzel (n=2), Kubikwurzel (n=3) oder beliebiges positives ganzes n. Negative Zahlen für ungerades n.",
-        "keywords": "Wurzel Rechner, n-te Wurzel, Quadratwurzel, Kubikwurzel, Wurzel einer Zahl, Mathematik Wurzeln",
-        "content": {
-          "heading": "So verwenden Sie den Wurzel-Rechner",
-          "paragraph1": "Der Wurzel-Rechner ermittelt die n-te Wurzel einer Zahl. Die n-te Wurzel von x ist die Zahl, die mit n potenziert x ergibt. Schreibweise: ⁿ√x oder x^(1/n). Z. B. ist die Quadratwurzel (n=2) von 16 gleich 4, weil 4²=16. Die Kubikwurzel (n=3) von 27 ist 3, weil 3³=27.",
-          "paragraph2": "Für nicht-negative Zahlen existiert die n-te Wurzel immer und ist nicht-negativ. Für negative Zahlen existiert sie nur bei ungeradem n: z. B. ist die Kubikwurzel von -27 gleich -3. Eine gerade Wurzel aus einer negativen Zahl ist keine reelle Zahl.",
-          "paragraph3": "Wurzeln werden in Algebra, Geometrie, Physik und Technik verwendet. Übliche Fälle: Quadratwurzel (n=2), Kubikwurzel (n=3), vierte Wurzel (n=4). Das Ergebnis wird mit bis zu 8 Nachkommastellen angezeigt.",
-          "paragraph4": "Der Wurzel-Rechner ist kostenlos und funktioniert in allen unterstützten Sprachen. Geben Sie Zahl und Wurzelexponent (ganze Zahl ≥ 2) ein und erhalten Sie die n-te Wurzel sofort.",
-          "exampleHeading": "Beispiel",
-          "exampleText": "Zahl 16, Wurzelexponent 2: Die 2. Wurzel (Quadratwurzel) von 16 ist 4. Zahl 27, Wurzelexponent 3: Die Kubikwurzel von 27 ist 3. Zahl -8, Wurzelexponent 3: Die Kubikwurzel von -8 ist -2. Zahl -4, Wurzelexponent 2: Keine reelle Quadratwurzel."
-        },
-        "faq": {
-          "heading": "Häufig gestellte Fragen",
-          "items": [
-            {"question": "Was ist die n-te Wurzel einer Zahl?", "answer": "Die n-te Wurzel von x ist die Zahl, die mit n potenziert x ergibt. Z. B. ist die Quadratwurzel (n=2) von 9 gleich 3, weil 3²=9. Die Kubikwurzel (n=3) von 8 ist 2, weil 2³=8."},
-            {"question": "Kann ich negative Zahlen verwenden?", "answer": "Ja, aber nur bei ungeradem Wurzelexponenten. Die Kubikwurzel von -8 ist -2. Bei geraden Wurzelexponenten (2, 4, 6, …) ist die Wurzel einer negativen Zahl keine reelle Zahl."},
-            {"question": "Was ist der Wurzelexponent?", "answer": "Der Wurzelexponent n ist der Wurzeltyp: n=2 Quadratwurzel, n=3 Kubikwurzel, n=4 vierte Wurzel usw. Muss eine ganze Zahl ≥ 2 sein."},
-            {"question": "Wie viele Nachkommastellen werden angezeigt?", "answer": "Der Rechner zeigt bis zu 8 Nachkommastellen, formatiert nach Ihrer Region."},
-            {"question": "Ist der Wurzel-Rechner kostenlos?", "answer": "Ja. Der Wurzel-Rechner ist völlig kostenlos. Keine Registrierung oder Zahlung. Geben Sie Zahl und Wurzelexponent ein und erhalten Sie die n-te Wurzel sofort."}
-          ]
-        },
-        "related": {
-          "heading": "Verwandte Rechner",
-          "squareRoot": "Quadratwurzel-Rechner",
-          "squareRootDesc": "Quadratwurzel einer nicht-negativen Zahl mit positivem und negativem Ergebnis",
-          "addition": "Addition-Rechner",
-          "additionDesc": "Addieren Sie ganze Zahlen und Dezimalzahlen schnell und genau",
-          "percentage": "Prozent-Rechner",
-          "percentageDesc": "Prozentwerte, Änderung und Verhältnisse berechnen",
-          "average": "Durchschnitt-Rechner",
-          "averageDesc": "Durchschnitt, Summe und Anzahl finden"
-        }
-      }
-    },
-    "roots": {
-      "title": "Wurzel-Rechner",
-      "description": "Berechnen Sie die n-te Wurzel einer Zahl. Geben Sie Zahl und Wurzelexponent ein (z. B. 2 für Quadratwurzel, 3 für Kubikwurzel). Kostenloses Tool für Mathematik und Technik.",
-      "formulaHeading": "Die n-te Wurzel von x wird durch die Formel angegeben:",
-      "formulaText": "n-te Wurzel = ⁿ√x",
-      "sectionHeading": "n-te Wurzel-Rechner",
-      "number": "Zahl",
-      "rootDegree": "Wurzelexponent (n)",
-      "calculate": "Berechnen",
-      "reset": "Zurücksetzen",
-      "result": "Ergebnis",
-      "nthRootResult": "n-te Wurzel",
-      "copyResult": "Kopieren",
-      "resultPlusMinus": "±{value}",
-      "errorInvalidNumber": "Bitte geben Sie eine gültige Zahl ein.",
-      "errorInvalidDegree": "Wurzelexponent muss eine ganze Zahl ≥ 2 sein.",
-      "errorNoRealRoot": "Keine reelle Wurzel: gerade Wurzel aus negativer Zahl ist keine reelle Zahl.",
-      "seo": {
-        "title": "Wurzel-Rechner – n-te Wurzel einer Zahl online",
-        "description": "Kostenloser Wurzel-Rechner. Finden Sie die n-te Wurzel einer Zahl: Quadratwurzel (n=2), Kubikwurzel (n=3) oder beliebiges positives ganzes n. Negative Zahlen für ungerades n.",
         "keywords": "Wurzel-Rechner, n-te Wurzel, Quadratwurzel, Kubikwurzel, Mathematik Wurzel",
         "content": {
           "heading": "So verwenden Sie den Wurzel-Rechner",
@@ -3779,11 +3838,26 @@
         "faq": {
           "heading": "Häufig gestellte Fragen",
           "items": [
-            {"question": "Was ist die n-te Wurzel einer Zahl?", "answer": "Die n-te Wurzel von x ist die Zahl, die mit n potenziert x ergibt. Z. B. ist die Quadratwurzel (n=2) von 9 gleich 3, weil 3²=9. Die Kubikwurzel (n=3) von 8 ist 2, weil 2³=8."},
-            {"question": "Kann ich negative Zahlen verwenden?", "answer": "Ja, aber nur bei ungeradem Wurzelexponent. Die Kubikwurzel von -8 ist -2. Bei geradem Exponent (2, 4, 6, …) ist die Wurzel einer negativen Zahl keine reelle Zahl."},
-            {"question": "Was ist der Wurzelexponent?", "answer": "Der Wurzelexponent n ist der Wurzeltyp: n=2 Quadratwurzel, n=3 Kubikwurzel, n=4 vierte Wurzel usw. Muss eine ganze Zahl ≥ 2 sein."},
-            {"question": "Wie viele Nachkommastellen werden angezeigt?", "answer": "Der Rechner zeigt bis zu 8 Nachkommastellen nach Ihrer Region an."},
-            {"question": "Ist der Wurzel-Rechner kostenlos?", "answer": "Ja. Der Wurzel-Rechner ist kostenlos. Geben Sie Zahl und Wurzelexponent ein und erhalten Sie die n-te Wurzel."}
+            {
+              "question": "Was ist die n-te Wurzel einer Zahl?",
+              "answer": "Die n-te Wurzel von x ist die Zahl, die mit n potenziert x ergibt. Z. B. ist die Quadratwurzel (n=2) von 9 gleich 3, weil 3²=9. Die Kubikwurzel (n=3) von 8 ist 2, weil 2³=8."
+            },
+            {
+              "question": "Kann ich negative Zahlen verwenden?",
+              "answer": "Ja, aber nur bei ungeradem Wurzelexponent. Die Kubikwurzel von -8 ist -2. Bei geradem Exponent (2, 4, 6, …) ist die Wurzel einer negativen Zahl keine reelle Zahl."
+            },
+            {
+              "question": "Was ist der Wurzelexponent?",
+              "answer": "Der Wurzelexponent n ist der Wurzeltyp: n=2 Quadratwurzel, n=3 Kubikwurzel, n=4 vierte Wurzel usw. Muss eine ganze Zahl ≥ 2 sein."
+            },
+            {
+              "question": "Wie viele Nachkommastellen werden angezeigt?",
+              "answer": "Der Rechner zeigt bis zu 8 Nachkommastellen nach Ihrer Region an."
+            },
+            {
+              "question": "Ist der Wurzel-Rechner kostenlos?",
+              "answer": "Ja. Der Wurzel-Rechner ist kostenlos. Geben Sie Zahl und Wurzelexponent ein und erhalten Sie die n-te Wurzel."
+            }
           ]
         },
         "related": {

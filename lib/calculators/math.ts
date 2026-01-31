@@ -72,6 +72,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'pythagorean-theorem',
+    titleKey: 'pythagoreanTheorem.title',
+    descKey: 'pythagoreanTheorem.description',
+    path: '/calculators/math/pythagorean-theorem',
+    category: 'math',
+  },
+  {
     id: 'percentage',
     titleKey: 'percentage.title',
     descKey: 'percentage.description',

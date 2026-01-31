@@ -98,6 +98,18 @@ export function RatioCalculator() {
     };
   }, [scaleLeft, scaleRight, scaleFactor]);
 
+  const scalePreviewBars = useMemo(() => {
+    if (!scalePreview) return null;
+    const leftAbs = Math.abs(scalePreview.left);
+    const rightAbs = Math.abs(scalePreview.right);
+    const maxAbs = Math.max(leftAbs, rightAbs, 1);
+    const widthFor = (value: number) => Math.max(28, Math.round((Math.abs(value) / maxAbs) * 180));
+    return {
+      leftWidth: widthFor(scalePreview.left),
+      rightWidth: widthFor(scalePreview.right),
+    };
+  }, [scalePreview]);
+
   const handleClear = () => {
     setA('');
     setB('');
@@ -296,6 +308,45 @@ export function RatioCalculator() {
                       right: formatNumber(scalePreview.right),
                     })}
                   </div>
+                  {scalePreviewBars && (
+                    <div
+                      style={{
+                        marginTop: '0.5rem',
+                        padding: '0.75rem',
+                        border: '1px solid var(--border)',
+                        borderRadius: '12px',
+                        background: 'rgba(148, 163, 184, 0.08)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '0.5rem',
+                      }}
+                    >
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                        <div
+                          style={{
+                            height: '30px',
+                            width: `${scalePreviewBars.leftWidth}px`,
+                            minWidth: '28px',
+                            background: '#4f46e5',
+                            borderRadius: '6px',
+                          }}
+                        />
+                        <span style={{ fontWeight: 700 }}>{formatNumber(scalePreview.left)}</span>
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                        <div
+                          style={{
+                            height: '30px',
+                            width: `${scalePreviewBars.rightWidth}px`,
+                            minWidth: '28px',
+                            background: '#16a34a',
+                            borderRadius: '6px',
+                          }}
+                        />
+                        <span style={{ fontWeight: 700 }}>{formatNumber(scalePreview.right)}</span>
+                      </div>
+                    </div>
+                  )}
                 </>
               ) : (
                 <div style={{ color: 'var(--text-secondary)' }}>{t('scalePreviewPlaceholder')}</div>

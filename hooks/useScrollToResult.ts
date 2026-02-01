@@ -39,7 +39,7 @@ export function useScrollToResult<T>(
             block: 'start',
           });
         }
-      }, 700);
+      }, 120);
     }
 
     // Update previous result

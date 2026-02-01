@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Calculator înmulțire lungă",
+      "description": "Înmulțiți două numere întregi cu înmulțire lungă pas cu pas. Vezi produsele parțiale și rezultatul final.",
+      "multiplicandLabel": "Multiplicand",
+      "multiplicandPlaceholder": "ex. 123",
+      "multiplicandHelp": "Introduceți un număr întreg (0 sau mai mare).",
+      "multiplierLabel": "Multiplicator",
+      "multiplierPlaceholder": "ex. 45",
+      "multiplierHelp": "Introduceți un număr întreg (0 sau mai mare).",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "resultLabel": "Rezultat",
+      "productValue": "Produs: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Pași înmulțire lungă",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Introduceți un număr întreg valid pentru multiplicand.",
+      "errorInvalidMultiplier": "Introduceți un număr întreg valid pentru multiplicator.",
+      "seo": {
+        "title": "Calculator înmulțire lungă – Produse parțiale pas cu pas",
+        "description": "Calculator înmulțire lungă gratuit. Înmulțiți două numere întregi și vedeți produsele parțiale și rezultatul pas cu pas.",
+        "keywords": "calculator înmulțire lungă, înmulțire pas cu pas, produse parțiale, calculator înmulțire",
+        "content": {
+          "heading": "Cum se face înmulțirea lungă",
+          "paragraph1": "Înmulțirea lungă este o metodă de înmulțit două numere în pași: înmulțiți primul număr (multiplicand) cu fiecare cifră a celui de-al doilea (multiplicator), deplasați fiecare produs parțial după poziție (unități, zeci, sute) și adunați. Acest calculator afișează fiecare produs parțial și suma.",
+          "paragraph2": "Ex. 123 × 45: 123 × 5 = 615 (unități), 123 × 4 = 492, deplasare = 4920 (zeci). 615 + 4920 = 5535. Aceeași metodă funcționează pentru orice numere întregi.",
+          "paragraph3": "Introduceți multiplicandul și multiplicatorul; calculatorul afișează produsul și fiecare pas: multiplicand × fiecare cifră și produs parțial deplasat.",
+          "paragraph4": "Înmulțirea lungă este esențială în aritmetică și calcule zilnice. Instrumentul este gratuit și afișează fiecare pas.",
+          "exampleHeading": "Exemplu",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Deci 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            {"question": "Ce este înmulțirea lungă?", "answer": "Înmulțirea lungă este o metodă pas cu pas: înmulțiți primul număr cu fiecare cifră a celui de-al doilea, deplasați produsele parțiale după poziție și adunați."},
+            {"question": "Ce sunt produsele parțiale?", "answer": "Produsele parțiale sunt multiplicandul înmulțit cu fiecare cifră a multiplicatorului. Pentru 123 × 45: 123 × 5 = 615 și 123 × 4 = 492 (deplasat 4920)."},
+            {"question": "Funcționează pentru zecimale?", "answer": "Acest calculator este doar pentru numere întregi. Pentru zecimale, înmulțiți mai întâi ca întregi și plasați virgula zecimală după numărul total de zecimale din factori."},
+            {"question": "Funcționează pentru numere mari?", "answer": "Da. Puteți introduce numere întregi foarte mari; calculatorul va calcula produsul și toate produsele parțiale."},
+            {"question": "Calculatorul este gratuit?", "answer": "Da. Calculatorul nostru de înmulțire lungă este gratuit, fără înregistrare. Introduceți două numere întregi pentru produs și pași."}
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare conexe",
+          "longDivision": "Calculator împărțire lungă",
+          "longDivisionDesc": "Împărțiți numere întregi cu împărțire lungă pas cu pas",
+          "addition": "Calculator adunare",
+          "additionDesc": "Adunați numere întregi și zecimale",
+          "remainder": "Calculator rest",
+          "remainderDesc": "Cât și rest la împărțirea întreagă"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calculator Sarcina Pisicii",
       "description": "Estimați data nașterii și fereastra de naștere a pisicii din data împerecherii. Gratuit, rapid, bazat pe gestație tipică (63–67 zile).",

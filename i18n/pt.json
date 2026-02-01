@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Calculadora de multiplicação longa",
+      "description": "Multiplique dois números inteiros com multiplicação longa passo a passo. Veja produtos parciais e resultado final.",
+      "multiplicandLabel": "Multiplicando",
+      "multiplicandPlaceholder": "ex. 123",
+      "multiplicandHelp": "Digite um número inteiro (0 ou maior).",
+      "multiplierLabel": "Multiplicador",
+      "multiplierPlaceholder": "ex. 45",
+      "multiplierHelp": "Digite um número inteiro (0 ou maior).",
+      "calculate": "Calcular",
+      "reset": "Reiniciar",
+      "resultLabel": "Resultado",
+      "productValue": "Produto: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Passos da multiplicação longa",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Digite um número inteiro válido para o multiplicando.",
+      "errorInvalidMultiplier": "Digite um número inteiro válido para o multiplicador.",
+      "seo": {
+        "title": "Calculadora de multiplicação longa – Produtos parciais passo a passo",
+        "description": "Calculadora de multiplicação longa gratuita. Multiplique dois inteiros e veja produtos parciais e resultado passo a passo.",
+        "keywords": "calculadora multiplicação longa, multiplicar passo a passo, produtos parciais, calculadora multiplicação",
+        "content": {
+          "heading": "Como fazer multiplicação longa",
+          "paragraph1": "A multiplicação longa é um método para multiplicar dois números em passos: multiplica o primeiro (multiplicando) por cada algarismo do segundo (multiplicador), desloca cada produto parcial pela posição (unidades, dezenas, centenas) e soma. Esta calculadora mostra cada produto parcial e a soma.",
+          "paragraph2": "Ex. 123 × 45: 123 × 5 = 615 (unidades), 123 × 4 = 492, deslocamento = 4920 (dezenas). 615 + 4920 = 5535. O mesmo método vale para qualquer inteiro.",
+          "paragraph3": "Digite multiplicando e multiplicador; a calculadora mostra o produto e cada passo: multiplicando × cada algarismo e produto parcial deslocado.",
+          "paragraph4": "A multiplicação longa é essencial na aritmética e em cálculos do dia a dia. A ferramenta é gratuita e mostra cada passo.",
+          "exampleHeading": "Exemplo",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Logo 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {"question": "O que é multiplicação longa?", "answer": "É um método passo a passo: multiplica o primeiro número por cada algarismo do segundo, desloca os produtos parciais pela posição e soma."},
+            {"question": "O que são produtos parciais?", "answer": "São o multiplicando multiplicado por cada algarismo do multiplicador. Para 123 × 45: 123 × 5 = 615 e 123 × 4 = 492 (deslocado 4920)."},
+            {"question": "Funciona com decimais?", "answer": "Esta calculadora é só para inteiros. Para decimais, multiplique primeiro como inteiros e coloque a vírgula conforme o total de casas decimais nos fatores."},
+            {"question": "Funciona com números grandes?", "answer": "Sim. Pode digitar inteiros muito grandes; a calculadora calculará o produto e todos os produtos parciais."},
+            {"question": "A calculadora é gratuita?", "answer": "Sim. A nossa calculadora de multiplicação longa é gratuita, sem registo. Digite dois inteiros para ver produto e passos."}
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "longDivision": "Calculadora de divisão longa",
+          "longDivisionDesc": "Divida inteiros com divisão longa passo a passo",
+          "addition": "Calculadora de adição",
+          "additionDesc": "Some inteiros e decimais",
+          "remainder": "Calculadora de resto",
+          "remainderDesc": "Quociente e resto na divisão inteira"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calculadora de Gravidez de Gata",
       "description": "Estime a data do parto e a janela de nascimento a partir da data do acasalamento. Grátis, rápido, baseado em gestação típica (63–67 dias).",

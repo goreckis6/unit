@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Pitkän kertolaskun laskin",
+      "description": "Kerro kaksi kokonaislukua pitkän kertolaskun avulla askel askeleelta. Näet osatulot ja lopputuloksen.",
+      "multiplicandLabel": "Kerrottava",
+      "multiplicandPlaceholder": "esim. 123",
+      "multiplicandHelp": "Syötä kokonaisluku (0 tai suurempi).",
+      "multiplierLabel": "Kertoja",
+      "multiplierPlaceholder": "esim. 45",
+      "multiplierHelp": "Syötä kokonaisluku (0 tai suurempi).",
+      "calculate": "Laske",
+      "reset": "Tyhjennä",
+      "resultLabel": "Tulos",
+      "productValue": "Tulo: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Pitkän kertolaskun vaiheet",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Syötä kelvollinen kokonaisluku kerrottavaksi.",
+      "errorInvalidMultiplier": "Syötä kelvollinen kokonaisluku kertojaksi.",
+      "seo": {
+        "title": "Pitkän kertolaskun laskin – Osatulot askel askeleelta",
+        "description": "Ilmainen pitkän kertolaskun laskin. Kerro kaksi kokonaislukua ja näe osatulot ja tulos askel askeleelta.",
+        "keywords": "pitkän kertolaskun laskin, kerro askel askeleelta, osatulot, kertolaskulaskin",
+        "content": {
+          "heading": "Miten tehdään pitkä kertolasku",
+          "paragraph1": "Pitkä kertolasku on menetelmä kahden luvun kertomiseksi askel askeleelta: kerrot ensimmäisen luvun (kerrottava) toisen luvun (kertoja) jokaisella numerolla, siirrät jokaisen osatulon paikka-arvon mukaan (ykköset, kymmenet, sadat) ja lasket summan. Tämä laskin näyttää jokaisen osatulon ja summan.",
+          "paragraph2": "Esim. 123 × 45: 123 × 5 = 615 (ykköset), 123 × 4 = 492, siirto = 4920 (kymmenet). 615 + 4920 = 5535. Sama menetelmä pätee kaikkiin kokonaislukuihin.",
+          "paragraph3": "Syötä kerrottava ja kertoja; laskin näyttää tulon ja jokaisen vaiheen: kerrottava × jokainen numero ja siirretty osatulo.",
+          "paragraph4": "Pitkä kertolasku on aritmetiikan ja arjen laskennan perusta. Työkalu on ilmainen ja näyttää jokaisen vaiheen.",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Siis 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Mikä on pitkä kertolasku?", "answer": "Pitkä kertolasku on askel askeleelta -menetelmä: kerrot ensimmäisen luvun toisen jokaisella numerolla, siirrät osatulot paikka-arvon mukaan ja lasket summan."},
+            {"question": "Mitä ovat osatulot?", "answer": "Osatulot ovat kerrottava kerrottuna kertojan jokaisella numerolla. Kun 123 × 45: 123 × 5 = 615 ja 123 × 4 = 492 (siirrettynä 4920)."},
+            {"question": "Toimiiko se desimaaliluvuille?", "answer": "Tämä laskin on vain kokonaislukuille. Desimaaleille kerro ensin kokonaislukuina ja aseta desimaalipiste tuloksen loppujen desimaalien mukaan."},
+            {"question": "Toimiiko se suurille luvuille?", "answer": "Kyllä. Voit syöttää hyvin suuria kokonaislukuja; laskin laskee tulon ja kaikki osatulot."},
+            {"question": "Onko laskin ilmainen?", "answer": "Kyllä. Pitkän kertolaskun laskimemme on ilmainen, ilman rekisteröitymistä. Syötä kaksi kokonaislukua tuloksen ja vaiheiden näyttämiseksi."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "longDivision": "Pitkän jakolaskun laskin",
+          "longDivisionDesc": "Jaa kokonaislukuja pitkällä jakolaskulla askel askeleelta",
+          "addition": "Yhteenlaskulaskin",
+          "additionDesc": "Laske kokonaisluvut ja desimaalit",
+          "remainder": "Jäännöslaskin",
+          "remainderDesc": "Osamäärä ja jäännös kokonaislukujen jaossa"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kissan raskauslaskuri",
       "description": "Arvioi kissasi odotettu synnytyspäivä ja synnytysikkuna parituspäivän perusteella. Ilmainen, nopea, perustuu tyypilliseen tiineyteen (63–67 päivää).",

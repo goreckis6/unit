@@ -4648,6 +4648,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Uzun çarpma hesaplayıcı",
+      "description": "İki tam sayıyı adım adım uzun çarpma ile çarpın. Kısmi çarpımlar ve nihai sonucu görün.",
+      "multiplicandLabel": "Çarpılan",
+      "multiplicandPlaceholder": "örn. 123",
+      "multiplicandHelp": "Bir tam sayı girin (0 veya daha büyük).",
+      "multiplierLabel": "Çarpan",
+      "multiplierPlaceholder": "örn. 45",
+      "multiplierHelp": "Bir tam sayı girin (0 veya daha büyük).",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "resultLabel": "Sonuç",
+      "productValue": "Çarpım: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Uzun çarpma adımları",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Çarpılan için geçerli bir tam sayı girin.",
+      "errorInvalidMultiplier": "Çarpan için geçerli bir tam sayı girin.",
+      "seo": {
+        "title": "Uzun çarpma hesaplayıcı – Adım adım kısmi çarpımlar",
+        "description": "Ücretsiz uzun çarpma hesaplayıcı. İki tam sayıyı çarpın ve kısmi çarpımları ile sonucu adım adım görün.",
+        "keywords": "uzun çarpma hesaplayıcı, adım adım çarpma, kısmi çarpımlar, çarpma hesaplayıcı",
+        "content": {
+          "heading": "Uzun çarpma nasıl yapılır",
+          "paragraph1": "Uzun çarpma iki sayıyı adımlarda çarpma yöntemidir: ilk sayıyı (çarpılan) ikincinin (çarpan) her basamağıyla çarparsınız, her kısmi çarpımı basamak değerine (birler, onlar, yüzler) göre kaydırıp toplarsınız. Bu hesaplayıcı her kısmi çarpımı ve toplamı gösterir.",
+          "paragraph2": "Örn. 123 × 45: 123 × 5 = 615 (birler), 123 × 4 = 492, kayma = 4920 (onlar). 615 + 4920 = 5535. Aynı yöntem tüm tam sayılar için geçerlidir.",
+          "paragraph3": "Çarpılan ve çarpanı girin; hesaplayıcı çarpımı ve her adımı gösterir: çarpılan × her basamak ve kaydırılmış kısmi çarpım.",
+          "paragraph4": "Uzun çarpma aritmetik ve günlük hesaplamalar için temeldir. Araç ücretsizdir ve her adımı gösterir.",
+          "exampleHeading": "Örnek",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Yani 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Sıkça sorulan sorular",
+          "items": [
+            {"question": "Uzun çarpma nedir?", "answer": "Uzun çarpma adım adım bir yöntemdir: ilk sayıyı ikincinin her basamağıyla çarparsınız, kısmi çarpımları basamak değerine göre kaydırıp toplarsınız."},
+            {"question": "Kısmi çarpımlar nedir?", "answer": "Kısmi çarpımlar çarpılanın çarpanın her basamağıyla çarpılması sonucudur. 123 × 45 için: 123 × 5 = 615 ve 123 × 4 = 492 (kaydırılmış 4920)."},
+            {"question": "Ondalıklar için çalışır mı?", "answer": "Bu hesaplayıcı yalnızca tam sayılar içindir. Ondalıklar için önce tam sayı gibi çarpın, sonra çarpanlardaki ondalık basamak sayısına göre ondalık işaretini yerleştirin."},
+            {"question": "Büyük sayılar için çalışır mı?", "answer": "Evet. Çok büyük tam sayılar girebilirsiniz; hesaplayıcı çarpımı ve tüm kısmi çarpımları hesaplar."},
+            {"question": "Hesaplayıcı ücretsiz mi?", "answer": "Evet. Uzun çarpma hesaplayıcımız ücretsizdir, kayıt gerekmez. Çarpım ve adımlar için iki tam sayı girin."}
+          ]
+        },
+        "related": {
+          "heading": "İlgili hesaplayıcılar",
+          "longDivision": "Uzun bölme hesaplayıcı",
+          "longDivisionDesc": "Tam sayıları uzun bölmeyle adım adım bölün",
+          "addition": "Toplama hesaplayıcı",
+          "additionDesc": "Tam sayıları ve ondalıkları toplayın",
+          "remainder": "Kalan hesaplayıcı",
+          "remainderDesc": "Tam sayı bölmesinde bölüm ve kalan"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kedi Gebelik Hesaplayıcı",
       "description": "Çiftleşme tarihinden kedinizin tahmini doğum tarihini ve doğum penceresini hesaplayın. Ücretsiz, hızlı, tipik gebelik süresine (63–67 gün) dayalı.",

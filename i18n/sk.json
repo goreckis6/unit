@@ -4556,6 +4556,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Kalkulačka písomného násobenia",
+      "description": "Násobte dve celé čísla s postupom písomného násobenia. Zobrazia sa čiastkové súčiny a výsledok.",
+      "multiplicandLabel": "Násobenec",
+      "multiplicandPlaceholder": "napr. 123",
+      "multiplicandHelp": "Zadajte celé číslo (0 alebo väčšie).",
+      "multiplierLabel": "Násobiteľ",
+      "multiplierPlaceholder": "napr. 45",
+      "multiplierHelp": "Zadajte celé číslo (0 alebo väčšie).",
+      "calculate": "Vypočítaj",
+      "reset": "Reset",
+      "resultLabel": "Výsledok",
+      "productValue": "Súčin: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Kroky písomného násobenia",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Zadajte platné celé číslo pre násobenec.",
+      "errorInvalidMultiplier": "Zadajte platné celé číslo pre násobiteľa.",
+      "seo": {
+        "title": "Kalkulačka písomného násobenia – čiastkové súčiny krok za krokom",
+        "description": "Kalkulačka písomného násobenia zadarmo. Násobte dve celé čísla a zobrazte čiastkové súčiny a výsledok krok za krokom.",
+        "keywords": "kalkulačka písomného násobenia, násobenie krok za krokom, čiastkové súčiny, kalkulačka násobenia",
+        "content": {
+          "heading": "Ako na písomné násobenie",
+          "paragraph1": "Písomné násobenie je metóda násobenia dvoch čísel v krokoch: prvé číslo (násobenec) násobíte každou číslicou druhého (násobiteľ), každý čiastkový súčin posuniete podľa rádu (jednotky, desiatky, stovky) a sčítate. Táto kalkulačka zobrazí každý čiastkový súčin a súčet.",
+          "paragraph2": "Napr. 123 × 45: 123 × 5 = 615 (jednotky), 123 × 4 = 492, posun = 4920 (desiatky). 615 + 4920 = 5535. Rovnaká metóda platí pre ľubovoľné celé čísla.",
+          "paragraph3": "Zadajte násobenec a násobiteľ; kalkulačka zobrazí súčin a každý krok: násobenec × každá číslica a posunutý čiastkový súčin.",
+          "paragraph4": "Písomné násobenie je základ aritmetiky a každodenných výpočtov. Nástroj je zadarmo a zobrazuje každý krok.",
+          "exampleHeading": "Príklad",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Teda 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {"question": "Čo je písomné násobenie?", "answer": "Písomné násobenie je postup násobenia dvoch čísel: prvé číslo násobíte každou číslicou druhého, čiastkové súčiny posuniete podľa rádu a sčítate."},
+            {"question": "Čo sú čiastkové súčiny?", "answer": "Čiastkové súčiny sú výsledky násobenia násobenca každou číslicou násobiteľa. Pre 123 × 45: 123 × 5 = 615 a 123 × 4 = 492 (posunuté 4920)."},
+            {"question": "Funguje to pre desatinné čísla?", "answer": "Táto kalkulačka je len pre celé čísla. Pre desatinné najprv násobte ako celé čísla, potom umiestnite desatinnú čiarku podľa počtu desatinných miest vo faktoroch."},
+            {"question": "Funguje to pre veľké čísla?", "answer": "Áno. Môžete zadať veľmi veľké celé čísla; kalkulačka vypočíta súčin a všetky čiastkové súčiny."},
+            {"question": "Je kalkulačka zadarmo?", "answer": "Áno. Naša kalkulačka písomného násobenia je zadarmo, bez registrácie. Zadajte dve celé čísla pre súčin a kroky."}
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace kalkulačky",
+          "longDivision": "Kalkulačka písomného delenia",
+          "longDivisionDesc": "Delte celé čísla s postupom písomného delenia",
+          "addition": "Kalkulačka sčítania",
+          "additionDesc": "Sčítanie celých a desatinných čísel",
+          "remainder": "Kalkulačka zvyšku",
+          "remainderDesc": "Podiel a zvyšok pri celočíselnom delení"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kalkulačka gravidity mačky",
       "description": "Odhadnite termín pôrodu a pôrodné okno od dátumu párenia. Zadarmo, rýchlo, na základe typickej gravidity (63–67 dní).",

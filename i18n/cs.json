@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Kalkulačka písemného násobení",
+      "description": "Násobte dvě celá čísla s postupem písemného násobení. Zobrazí se dílčí součiny a výsledek.",
+      "multiplicandLabel": "Násobenec",
+      "multiplicandPlaceholder": "např. 123",
+      "multiplicandHelp": "Zadejte celé číslo (0 nebo větší).",
+      "multiplierLabel": "Násobitel",
+      "multiplierPlaceholder": "např. 45",
+      "multiplierHelp": "Zadejte celé číslo (0 nebo větší).",
+      "calculate": "Vypočítat",
+      "reset": "Reset",
+      "resultLabel": "Výsledek",
+      "productValue": "Součin: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Kroky písemného násobení",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Zadejte platné celé číslo pro násobenec.",
+      "errorInvalidMultiplier": "Zadejte platné celé číslo pro násobitel.",
+      "seo": {
+        "title": "Kalkulačka písemného násobení – dílčí součiny krok za krokem",
+        "description": "Kalkulačka písemného násobení zdarma. Násobte dvě celá čísla a zobrazte dílčí součiny a výsledek krok za krokem.",
+        "keywords": "kalkulačka písemného násobení, násobení krok za krokem, dílčí součiny, násobení kalkulačka",
+        "content": {
+          "heading": "Jak na písemné násobení",
+          "paragraph1": "Písemné násobení je metoda násobení dvou čísel rozepsaná do kroků. První číslo (násobenec) násobíte každou číslicí druhého čísla (násobitel), každý dílčí součin posunete podle řádu (jednotky, desítky, stovky), pak je sečtete. Tato kalkulačka zobrazí každý dílčí součin a součet.",
+          "paragraph2": "Např. 123 × 45: 123 × 5 = 615 (jednotky), 123 × 4 = 492, posun = 4920 (desítky). 615 + 4920 = 5535. Stejná metoda platí pro libovolná celá čísla.",
+          "paragraph3": "Zadejte násobenec a násobitel; kalkulačka zobrazí součin a každý krok: násobenec × každá číslice a posunutý dílčí součin.",
+          "paragraph4": "Písemné násobení je základ aritmetiky a každodenních výpočtů. Nástroj je zdarma a zobrazuje každý krok.",
+          "exampleHeading": "Příklad",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Tedy 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Časté dotazy",
+          "items": [
+            {"question": "Co je písemné násobení?", "answer": "Písemné násobení je postup násobení dvou čísel: první číslo násobíte každou číslicí druhého, dílčí součiny posunete podle řádu a sečtete."},
+            {"question": "Co jsou dílčí součiny?", "answer": "Dílčí součiny jsou výsledky násobení násobence každou číslicí násobitele. U 123 × 45 jsou to 123 × 5 = 615 a 123 × 4 = 492 (posunuto 4920)."},
+            {"question": "Funguje to pro desetinná čísla?", "answer": "Tato kalkulačka je jen pro celá čísla. U desetinných nejdříve násobte jako celá čísla, pak umístěte desetinnou čárku podle počtu desetinných míst ve faktorech."},
+            {"question": "Funguje to pro velká čísla?", "answer": "Ano. Můžete zadat velmi velká celá čísla a kalkulačka spočítá součin a všechny dílčí součiny přesně."},
+            {"question": "Je kalkulačka zdarma?", "answer": "Ano. Naše kalkulačka písemného násobení je zdarma, bez registrace. Zadejte dvě celá čísla a zobrazí se součin a kroky."}
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "longDivision": "Kalkulačka písemného dělení",
+          "longDivisionDesc": "Dělte celá čísla s postupem písemného dělení",
+          "addition": "Kalkulačka sčítání",
+          "additionDesc": "Sčítání celých a desetinných čísel",
+          "remainder": "Kalkulačka zbytku",
+          "remainderDesc": "Podíl a zbytek při celočíselném dělení"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kalkulačka březosti kočky",
       "description": "Odhadněte termín porodu a porodní okno od data páření. Zdarma, rychle, na základě typické březosti (63–67 dní).",

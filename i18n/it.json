@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Calcolatore di moltiplicazione in colonna",
+      "description": "Moltiplica due numeri interi con moltiplicazione in colonna passo a passo. Vedi prodotti parziali e risultato finale.",
+      "multiplicandLabel": "Moltiplicando",
+      "multiplicandPlaceholder": "es. 123",
+      "multiplicandHelp": "Inserisci un numero intero (0 o maggiore).",
+      "multiplierLabel": "Moltiplicatore",
+      "multiplierPlaceholder": "es. 45",
+      "multiplierHelp": "Inserisci un numero intero (0 o maggiore).",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "resultLabel": "Risultato",
+      "productValue": "Prodotto: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Passi della moltiplicazione in colonna",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Inserisci un numero intero valido per il moltiplicando.",
+      "errorInvalidMultiplier": "Inserisci un numero intero valido per il moltiplicatore.",
+      "seo": {
+        "title": "Calcolatore di moltiplicazione in colonna – Prodotti parziali passo a passo",
+        "description": "Calcolatore di moltiplicazione in colonna gratuito. Moltiplica due interi e vedi prodotti parziali e risultato passo a passo.",
+        "keywords": "calcolatore moltiplicazione in colonna, moltiplicare passo a passo, prodotti parziali, calcolatore moltiplicazione",
+        "content": {
+          "heading": "Come fare la moltiplicazione in colonna",
+          "paragraph1": "La moltiplicazione in colonna è un metodo per moltiplicare due numeri in passi: moltiplichi il primo (moltiplicando) per ogni cifra del secondo (moltiplicatore), sposti ogni prodotto parziale per posizione (unità, decine, centinaia) e sommi. Questa calcolatrice mostra ogni prodotto parziale e la somma.",
+          "paragraph2": "Es. 123 × 45: 123 × 5 = 615 (unità), 123 × 4 = 492, spostamento = 4920 (decine). 615 + 4920 = 5535. Lo stesso metodo vale per qualsiasi intero.",
+          "paragraph3": "Inserisci moltiplicando e moltiplicatore; la calcolatrice mostra il prodotto e ogni passo: moltiplicando × ogni cifra e prodotto parziale spostato.",
+          "paragraph4": "La moltiplicazione in colonna è essenziale in aritmetica e calcoli quotidiani. Lo strumento è gratuito e mostra ogni passo.",
+          "exampleHeading": "Esempio",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Quindi 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {"question": "Cos'è la moltiplicazione in colonna?", "answer": "È un metodo passo a passo: moltiplichi il primo numero per ogni cifra del secondo, sposti i prodotti parziali per posizione e sommi."},
+            {"question": "Cosa sono i prodotti parziali?", "answer": "Sono il moltiplicando moltiplicato per ogni cifra del moltiplicatore. Per 123 × 45: 123 × 5 = 615 e 123 × 4 = 492 (spostato 4920)."},
+            {"question": "Funziona con i decimali?", "answer": "Questa calcolatrice è solo per interi. Per decimali, moltiplica prima come interi e posiziona la virgola in base al numero totale di decimali nei fattori."},
+            {"question": "Funziona con numeri grandi?", "answer": "Sì. Puoi inserire interi molto grandi; la calcolatrice calcolerà prodotto e tutti i prodotti parziali."},
+            {"question": "La calcolatrice è gratuita?", "answer": "Sì. Il nostro calcolatore di moltiplicazione in colonna è gratuito, senza registrazione. Inserisci due interi per vedere prodotto e passi."}
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori correlati",
+          "longDivision": "Calcolatore di divisione in colonna",
+          "longDivisionDesc": "Dividi interi con divisione in colonna passo a passo",
+          "addition": "Calcolatore di addizione",
+          "additionDesc": "Somma interi e decimali",
+          "remainder": "Calcolatore del resto",
+          "remainderDesc": "Quoziente e resto nella divisione intera"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calcolatore Gravidanza Gatta",
       "description": "Stima la data del parto e la finestra di nascita dalla data dell'accoppiamento. Gratuito, veloce, basato su gestazione tipica (63–67 giorni).",

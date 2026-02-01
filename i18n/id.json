@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Kalkulator perkalian panjang",
+      "description": "Kalikan dua bilangan bulat dengan perkalian panjang langkah demi langkah. Lihat hasil kali sebagian dan hasil akhir.",
+      "multiplicandLabel": "Bilangan yang dikalikan",
+      "multiplicandPlaceholder": "mis. 123",
+      "multiplicandHelp": "Masukkan bilangan bulat (0 atau lebih).",
+      "multiplierLabel": "Pengali",
+      "multiplierPlaceholder": "mis. 45",
+      "multiplierHelp": "Masukkan bilangan bulat (0 atau lebih).",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "resultLabel": "Hasil",
+      "productValue": "Hasil kali: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Langkah perkalian panjang",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Masukkan bilangan bulat yang valid untuk bilangan yang dikalikan.",
+      "errorInvalidMultiplier": "Masukkan bilangan bulat yang valid untuk pengali.",
+      "seo": {
+        "title": "Kalkulator perkalian panjang – Hasil kali sebagian langkah demi langkah",
+        "description": "Kalkulator perkalian panjang gratis. Kalikan dua bilangan bulat dan lihat hasil kali sebagian serta hasil langkah demi langkah.",
+        "keywords": "kalkulator perkalian panjang, kalikan langkah demi langkah, hasil kali sebagian, kalkulator perkalian",
+        "content": {
+          "heading": "Cara melakukan perkalian panjang",
+          "paragraph1": "Perkalian panjang adalah metode mengalikan dua bilangan dalam langkah: kalikan bilangan pertama (yang dikalikan) dengan setiap digit bilangan kedua (pengali), geser setiap hasil kali sebagian menurut nilai tempat (satuan, puluhan, ratusan) lalu jumlahkan. Kalkulator ini menampilkan setiap hasil kali sebagian dan jumlahnya.",
+          "paragraph2": "Mis. 123 × 45: 123 × 5 = 615 (satuan), 123 × 4 = 492, geser = 4920 (puluhan). 615 + 4920 = 5535. Metode yang sama berlaku untuk bilangan bulat apa pun.",
+          "paragraph3": "Masukkan bilangan yang dikalikan dan pengali; kalkulator menampilkan hasil kali dan setiap langkah: bilangan yang dikalikan × setiap digit dan hasil kali sebagian yang digeser.",
+          "paragraph4": "Perkalian panjang penting dalam aritmetika dan perhitungan sehari-hari. Alat ini gratis dan menampilkan setiap langkah.",
+          "exampleHeading": "Contoh",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Jadi 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang sering diajukan",
+          "items": [
+            {"question": "Apa itu perkalian panjang?", "answer": "Perkalian panjang adalah metode langkah demi langkah: kalikan bilangan pertama dengan setiap digit bilangan kedua, geser hasil kali sebagian menurut nilai tempat dan jumlahkan."},
+            {"question": "Apa itu hasil kali sebagian?", "answer": "Hasil kali sebagian adalah bilangan yang dikalikan dikalikan dengan setiap digit pengali. Untuk 123 × 45: 123 × 5 = 615 dan 123 × 4 = 492 (geser 4920)."},
+            {"question": "Apakah berfungsi untuk desimal?", "answer": "Kalkulator ini hanya untuk bilangan bulat. Untuk desimal, kalikan dulu sebagai bilangan bulat lalu tempatkan koma desimal menurut jumlah tempat desimal dalam faktor."},
+            {"question": "Apakah berfungsi untuk bilangan besar?", "answer": "Ya. Anda dapat memasukkan bilangan bulat sangat besar; kalkulator akan menghitung hasil kali dan semua hasil kali sebagian."},
+            {"question": "Apakah kalkulator ini gratis?", "answer": "Ya. Kalkulator perkalian panjang kami gratis, tanpa registrasi. Masukkan dua bilangan bulat untuk melihat hasil kali dan langkah."}
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator terkait",
+          "longDivision": "Kalkulator pembagian panjang",
+          "longDivisionDesc": "Bagi bilangan bulat dengan pembagian panjang langkah demi langkah",
+          "addition": "Kalkulator penjumlahan",
+          "additionDesc": "Jumlahkan bilangan bulat dan desimal",
+          "remainder": "Kalkulator sisa",
+          "remainderDesc": "Hasil bagi dan sisa untuk pembagian bilangan bulat"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kalkulator Kehamilan Kucing",
       "description": "Perkirakan tanggal kelahiran dan jendela kelahiran kucing Anda dari tanggal kawin. Gratis, cepat, berdasarkan masa kehamilan khas (63–67 hari).",

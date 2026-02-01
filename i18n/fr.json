@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Calculateur de multiplication posée",
+      "description": "Multipliez deux nombres entiers avec la multiplication posée étape par étape. Voir les produits partiels et le résultat.",
+      "multiplicandLabel": "Multiplicande",
+      "multiplicandPlaceholder": "ex. 123",
+      "multiplicandHelp": "Entrez un nombre entier (0 ou plus).",
+      "multiplierLabel": "Multiplicateur",
+      "multiplierPlaceholder": "ex. 45",
+      "multiplierHelp": "Entrez un nombre entier (0 ou plus).",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "resultLabel": "Résultat",
+      "productValue": "Produit : {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Étapes de la multiplication posée",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Veuillez entrer un nombre entier valide pour le multiplicande.",
+      "errorInvalidMultiplier": "Veuillez entrer un nombre entier valide pour le multiplicateur.",
+      "seo": {
+        "title": "Calculateur de multiplication posée – Produits partiels étape par étape",
+        "description": "Calculateur de multiplication posée gratuit. Multipliez deux nombres entiers et voyez les produits partiels et le résultat étape par étape.",
+        "keywords": "calculateur multiplication posée, multiplication étape par étape, produits partiels, calculateur multiplication",
+        "content": {
+          "heading": "Comment faire une multiplication posée",
+          "paragraph1": "La multiplication posée consiste à multiplier le premier nombre (multiplicande) par chaque chiffre du second (multiplicateur), à décaler chaque produit partiel selon la position (unités, dizaines, centaines), puis à additionner. Ce calculateur affiche chaque produit partiel et la somme.",
+          "paragraph2": "Ex. 123 × 45 : 123 × 5 = 615 (unités), 123 × 4 = 492, décalage = 4920 (dizaines). 615 + 4920 = 5535. La même méthode s'applique à tous les entiers.",
+          "paragraph3": "Entrez le multiplicande et le multiplicateur ; le calculateur affiche le produit et chaque étape : multiplicande × chaque chiffre et produit partiel décalé.",
+          "paragraph4": "La multiplication posée est essentielle en arithmétique et au quotidien. L'outil est gratuit et affiche chaque étape.",
+          "exampleHeading": "Exemple",
+          "exampleText": "123 × 45 : 123 × 5 = 615 ; 123 × 4 = 492, × 10 = 4920 ; 615 + 4920 = 5535. Donc 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {"question": "Qu'est-ce que la multiplication posée ?", "answer": "La multiplication posée est une méthode en étapes : multiplier le premier nombre par chaque chiffre du second, décaler les produits partiels selon la position et additionner."},
+            {"question": "Que sont les produits partiels ?", "answer": "Les produits partiels sont le multiplicande multiplié par chaque chiffre du multiplicateur. Pour 123 × 45 : 123 × 5 = 615 et 123 × 4 = 492 (décalé 4920)."},
+            {"question": "Cela fonctionne-t-il pour les décimaux ?", "answer": "Ce calculateur est pour les entiers uniquement. Pour les décimaux, multiplier d'abord comme des entiers, puis placer la virgule selon le nombre total de décimales des facteurs."},
+            {"question": "Cela fonctionne-t-il pour les grands nombres ?", "answer": "Oui. Vous pouvez entrer de très grands entiers ; le calculateur donnera le produit et tous les produits partiels."},
+            {"question": "Ce calculateur est-il gratuit ?", "answer": "Oui. Notre calculateur de multiplication posée est gratuit, sans inscription. Entrez deux entiers pour voir le produit et les étapes."}
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs associés",
+          "longDivision": "Calculateur de division posée",
+          "longDivisionDesc": "Diviser des entiers avec la division posée étape par étape",
+          "addition": "Calculateur d'addition",
+          "additionDesc": "Additionner des entiers et décimaux",
+          "remainder": "Calculateur de reste",
+          "remainderDesc": "Quotient et reste en division entière"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calculateur de Grossesse du Chat",
       "description": "Estimez la date de mise bas et la fenêtre de naissance à partir de la date d'accouplement. Gratuit, rapide, basé sur une gestation typique (63–67 jours).",

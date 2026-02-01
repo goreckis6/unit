@@ -4448,6 +4448,74 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Long Multiplication Calculator",
+      "description": "Multiply two whole numbers with step-by-step long multiplication. See partial products and the final result.",
+      "multiplicandLabel": "Multiplicand",
+      "multiplicandPlaceholder": "e.g. 123",
+      "multiplicandHelp": "Enter a whole number (0 or greater).",
+      "multiplierLabel": "Multiplier",
+      "multiplierPlaceholder": "e.g. 45",
+      "multiplierHelp": "Enter a whole number (0 or greater).",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "resultLabel": "Result",
+      "productValue": "Product: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Long multiplication steps",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Please enter a valid whole number for the multiplicand.",
+      "errorInvalidMultiplier": "Please enter a valid whole number for the multiplier.",
+      "seo": {
+        "title": "Long Multiplication Calculator – Step-by-Step Partial Products",
+        "description": "Free long multiplication calculator. Multiply two whole numbers and see partial products and the final result step by step.",
+        "keywords": "long multiplication calculator, multiply step by step, partial products, multiplication calculator, long multiplication with steps",
+        "content": {
+          "heading": "How to Do Long Multiplication",
+          "paragraph1": "Long multiplication is a method for multiplying two numbers by breaking the problem into smaller steps. You multiply the first number (multiplicand) by each digit of the second number (multiplier), shift each partial product by place value (ones, tens, hundreds, etc.), then add them to get the final product. This calculator shows each partial product and the sum so you can follow the steps or check your work.",
+          "paragraph2": "For example, 123 × 45: multiply 123 × 5 = 615 (ones), then 123 × 4 = 492 and shift one place = 4920 (tens). Add 615 + 4920 = 5535. The same method works for any size whole numbers and is the standard pencil-and-paper algorithm taught in school.",
+          "paragraph3": "Enter your multiplicand and multiplier, and the calculator displays the product plus each step: multiplicand × each digit, and the shifted partial (when the digit is in tens, hundreds, etc.). Use it to practice long multiplication, verify homework, or multiply large numbers quickly and accurately.",
+          "paragraph4": "Long multiplication is essential for arithmetic, finance, and everyday calculations. This tool is free, works with large numbers, and shows every step so you can understand the process or double-check results.",
+          "exampleHeading": "Example",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. So 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is long multiplication?",
+              "answer": "Long multiplication is a step-by-step method for multiplying two numbers. You multiply the first number by each digit of the second number, shift partial products by place value (ones, tens, hundreds), then add them to get the final product."
+            },
+            {
+              "question": "What are partial products?",
+              "answer": "Partial products are the results of multiplying the multiplicand by each digit of the multiplier. For 123 × 45, the partials are 123 × 5 = 615 and 123 × 4 = 492 (then 4920 when shifted). Adding them gives the final product."
+            },
+            {
+              "question": "Does it work for decimals?",
+              "answer": "This calculator is for whole numbers only. For decimals, multiply as whole numbers first, then place the decimal point in the result based on the total number of decimal places in the factors."
+            },
+            {
+              "question": "Does it work for large numbers?",
+              "answer": "Yes. You can enter very large whole numbers, and the calculator will compute the product and all partial products accurately."
+            },
+            {
+              "question": "Is this calculator free?",
+              "answer": "Yes. Our long multiplication calculator is free to use with no registration. Enter two whole numbers to see the product and step-by-step partial products."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "longDivision": "Long Division Calculator",
+          "longDivisionDesc": "Divide whole numbers with step-by-step long division",
+          "addition": "Addition Calculator",
+          "additionDesc": "Add whole numbers and decimals",
+          "remainder": "Remainder Calculator",
+          "remainderDesc": "Find quotient and remainder for integer division"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Cat Pregnancy Calculator",
       "description": "Estimate your cat's due date and delivery window from the mating date. Free, quick, and based on typical feline gestation (63–67 days).",

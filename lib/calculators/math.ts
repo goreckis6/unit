@@ -142,6 +142,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'long-multiplication',
+    titleKey: 'longMultiplication.title',
+    descKey: 'longMultiplication.description',
+    path: '/calculators/math/long-multiplication',
+    category: 'math',
+  },
+  {
     id: 'remainder',
     titleKey: 'remainder.title',
     descKey: 'remainder.description',

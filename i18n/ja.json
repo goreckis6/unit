@@ -4578,6 +4578,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "筆算かけ算計算機",
+      "description": "2つの整数を筆算でかけ算。部分積と最終結果を段階表示。",
+      "multiplicandLabel": "かけられる数",
+      "multiplicandPlaceholder": "例: 123",
+      "multiplicandHelp": "0以上の整数を入力。",
+      "multiplierLabel": "かける数",
+      "multiplierPlaceholder": "例: 45",
+      "multiplierHelp": "0以上の整数を入力。",
+      "calculate": "計算",
+      "reset": "リセット",
+      "resultLabel": "結果",
+      "productValue": "積: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "筆算かけ算の手順",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "かけられる数に有効な整数を入力してください。",
+      "errorInvalidMultiplier": "かける数に有効な整数を入力してください。",
+      "seo": {
+        "title": "筆算かけ算計算機 – 部分積を段階表示",
+        "description": "無料の筆算かけ算計算機。2つの整数を入力すると部分積と結果を段階表示。",
+        "keywords": "筆算かけ算計算機, かけ算ステップ, 部分積, かけ算計算機",
+        "content": {
+          "heading": "筆算かけ算のやり方",
+          "paragraph1": "筆算かけ算は、かけられる数にかける数の各けたをかけ、部分積をけた（一の位・十の位・百の位…）に合わせてずらして足す方法です。この計算機は各部分積と合計を表示します。",
+          "paragraph2": "例: 123 × 45 → 123 × 5 = 615（一の位）、123 × 4 = 492、ずらして 4920（十の位）。615 + 4920 = 5535。同じ方法でどんな整数でも計算できます。",
+          "paragraph3": "かけられる数とかける数を入力すると、積と各ステップ（かけられる数×各けた、ずらした部分積）が表示されます。",
+          "paragraph4": "筆算かけ算は算数や日常計算の基礎です。無料で、各ステップを表示します。",
+          "exampleHeading": "例",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535。よって 123 × 45 = 5535。"
+        },
+        "faq": {
+          "heading": "よくある質問",
+          "items": [
+            {"question": "筆算かけ算とは？", "answer": "筆算かけ算は、かけられる数にかける数の各けたをかけ、部分積をけたに合わせてずらして足す段階的な方法です。"},
+            {"question": "部分積とは？", "answer": "部分積は、かけられる数にかける数の各けたをかけた結果です。123 × 45 では 123 × 5 = 615 と 123 × 4 = 492（ずらして 4920）です。"},
+            {"question": "小数でも使えますか？", "answer": "この計算機は整数専用です。小数の場合はまず整数としてかけ算し、因数の小数点以下のけた数に応じて結果に小数点を打ってください。"},
+            {"question": "大きな数でも使えますか？", "answer": "はい。非常に大きな整数を入力しても、積とすべての部分積を正確に計算します。"},
+            {"question": "無料ですか？", "answer": "はい。筆算かけ算計算機は無料で、登録不要です。2つの整数を入力すると積と手順が表示されます。"}
+          ]
+        },
+        "related": {
+          "heading": "関連計算機",
+          "longDivision": "筆算わり算計算機",
+          "longDivisionDesc": "整数の筆算わり算を段階表示",
+          "addition": "たし算計算機",
+          "additionDesc": "整数と小数のたし算",
+          "remainder": "余り計算機",
+          "remainderDesc": "整数除算の商と余り"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "猫の妊娠計算機",
       "description": "交配日から出産予定日と出産時期を推定。無料・即時、典型的な妊娠期間（63〜67日）に基づきます。",

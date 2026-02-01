@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "곱셈 계산기 (단계별)",
+      "description": "두 정수를 단계별 곱셈으로 계산합니다. 부분 곱과 최종 결과를 표시합니다.",
+      "multiplicandLabel": "피승수",
+      "multiplicandPlaceholder": "예: 123",
+      "multiplicandHelp": "0 이상의 정수를 입력하세요.",
+      "multiplierLabel": "승수",
+      "multiplierPlaceholder": "예: 45",
+      "multiplierHelp": "0 이상의 정수를 입력하세요.",
+      "calculate": "계산",
+      "reset": "초기화",
+      "resultLabel": "결과",
+      "productValue": "곱: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "곱셈 단계",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "피승수에 유효한 정수를 입력하세요.",
+      "errorInvalidMultiplier": "승수에 유효한 정수를 입력하세요.",
+      "seo": {
+        "title": "곱셈 계산기 – 단계별 부분 곱",
+        "description": "무료 곱셈 계산기. 두 정수를 입력하면 부분 곱과 결과를 단계별로 표시합니다.",
+        "keywords": "곱셈 계산기, 단계별 곱셈, 부분 곱, 곱하기 계산기",
+        "content": {
+          "heading": "곱셈 하는 방법",
+          "paragraph1": "곱셈은 첫 번째 수(피승수)에 두 번째 수(승수)의 각 자릿수를 곱하고, 부분 곱을 자릿값(일의 자리, 십의 자리, 백의 자리…)에 맞춰 밀어서 더하는 단계별 방법입니다. 이 계산기는 각 부분 곱과 합을 표시합니다.",
+          "paragraph2": "예: 123 × 45: 123 × 5 = 615(일의 자리), 123 × 4 = 492, 이동 = 4920(십의 자리). 615 + 4920 = 5535. 같은 방법으로 모든 정수에 적용됩니다.",
+          "paragraph3": "피승수와 승수를 입력하면 계산기가 곱과 각 단계(피승수 × 각 자릿수, 이동한 부분 곱)를 표시합니다.",
+          "paragraph4": "곱셈은 산술과 일상 계산의 기본입니다. 이 도구는 무료이며 각 단계를 표시합니다.",
+          "exampleHeading": "예시",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. 따라서 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "자주 묻는 질문",
+          "items": [
+            {"question": "곱셈이란?", "answer": "곱셈은 첫 번째 수에 두 번째 수의 각 자릿수를 곱하고, 부분 곱을 자릿값에 맞춰 밀어서 더하는 단계별 방법입니다."},
+            {"question": "부분 곱이란?", "answer": "부분 곱은 피승수에 승수의 각 자릿수를 곱한 결과입니다. 123 × 45: 123 × 5 = 615, 123 × 4 = 492(이동 4920)."},
+            {"question": "소수에도 사용할 수 있나요?", "answer": "이 계산기는 정수 전용입니다. 소수의 경우 먼저 정수처럼 곱한 뒤, 인수의 소수 자릿수에 맞춰 소수점을 찍으세요."},
+            {"question": "큰 수에도 사용할 수 있나요?", "answer": "네. 매우 큰 정수를 입력해도 계산기가 곱과 모든 부분 곱을 정확히 계산합니다."},
+            {"question": "무료인가요?", "answer": "네. 곱셈 계산기는 무료이며 등록이 필요 없습니다. 두 정수를 입력하면 곱과 단계가 표시됩니다."}
+          ]
+        },
+        "related": {
+          "heading": "관련 계산기",
+          "longDivision": "나눗셈 계산기",
+          "longDivisionDesc": "정수 나눗셈 단계별 표시",
+          "addition": "덧셈 계산기",
+          "additionDesc": "정수와 소수 덧셈",
+          "remainder": "나머지 계산기",
+          "remainderDesc": "정수 나눗셈의 몫과 나머지"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "고양이 임신 계산기",
       "description": "교배일로부터 예상 출산일과 출산 기간을 추정합니다. 무료, 빠름, 일반적인 임신 기간(63–67일) 기준.",

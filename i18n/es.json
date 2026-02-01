@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Calculadora de multiplicación larga",
+      "description": "Multiplica dos números enteros con multiplicación larga paso a paso. Ver productos parciales y resultado final.",
+      "multiplicandLabel": "Multiplicando",
+      "multiplicandPlaceholder": "ej. 123",
+      "multiplicandHelp": "Introduce un número entero (0 o mayor).",
+      "multiplierLabel": "Multiplicador",
+      "multiplierPlaceholder": "ej. 45",
+      "multiplierHelp": "Introduce un número entero (0 o mayor).",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "resultLabel": "Resultado",
+      "productValue": "Producto: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Pasos de la multiplicación larga",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Introduce un número entero válido para el multiplicando.",
+      "errorInvalidMultiplier": "Introduce un número entero válido para el multiplicador.",
+      "seo": {
+        "title": "Calculadora de multiplicación larga – Productos parciales paso a paso",
+        "description": "Calculadora de multiplicación larga gratuita. Multiplica dos enteros y ve productos parciales y resultado paso a paso.",
+        "keywords": "calculadora multiplicación larga, multiplicar paso a paso, productos parciales, calculadora multiplicación",
+        "content": {
+          "heading": "Cómo hacer multiplicación larga",
+          "paragraph1": "La multiplicación larga es un método para multiplicar dos números en pasos: multiplicas el primero (multiplicando) por cada cifra del segundo (multiplicador), desplazas cada producto parcial según la posición (unidades, decenas, centenas) y sumas. Esta calculadora muestra cada producto parcial y la suma.",
+          "paragraph2": "Ej. 123 × 45: 123 × 5 = 615 (unidades), 123 × 4 = 492, desplazamiento = 4920 (decenas). 615 + 4920 = 5535. El mismo método sirve para cualquier entero.",
+          "paragraph3": "Introduce multiplicando y multiplicador; la calculadora muestra el producto y cada paso: multiplicando × cada cifra y producto parcial desplazado.",
+          "paragraph4": "La multiplicación larga es esencial en aritmética y cálculos cotidianos. La herramienta es gratuita y muestra cada paso.",
+          "exampleHeading": "Ejemplo",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Así 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            {"question": "¿Qué es la multiplicación larga?", "answer": "La multiplicación larga es un método paso a paso: multiplicas el primer número por cada cifra del segundo, desplazas productos parciales según la posición y sumas."},
+            {"question": "¿Qué son los productos parciales?", "answer": "Son el multiplicando multiplicado por cada cifra del multiplicador. Para 123 × 45: 123 × 5 = 615 y 123 × 4 = 492 (desplazado 4920)."},
+            {"question": "¿Funciona con decimales?", "answer": "Esta calculadora es solo para enteros. Para decimales, multiplica primero como enteros y coloca la coma según el total de decimales en los factores."},
+            {"question": "¿Funciona con números grandes?", "answer": "Sí. Puedes introducir enteros muy grandes; la calculadora dará el producto y todos los productos parciales."},
+            {"question": "¿Es gratuita?", "answer": "Sí. Nuestra calculadora de multiplicación larga es gratuita, sin registro. Introduce dos enteros para ver producto y pasos."}
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "longDivision": "Calculadora de división larga",
+          "longDivisionDesc": "Divide enteros con división larga paso a paso",
+          "addition": "Calculadora de suma",
+          "additionDesc": "Suma enteros y decimales",
+          "remainder": "Calculadora de resto",
+          "remainderDesc": "Cociente y resto en división entera"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Calculadora de Embarazo de Gata",
       "description": "Calcula la fecha de parto y la ventana de nacimiento a partir de la fecha de apareamiento. Gratis, rápido, basado en gestación típica (63–67 días).",

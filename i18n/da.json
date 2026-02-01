@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Lommeregner til lang multiplikation",
+      "description": "Multiplicer to hele tal med lang multiplikation trin for trin. Se delprodukter og slutresultat.",
+      "multiplicandLabel": "Multiplikand",
+      "multiplicandPlaceholder": "f.eks. 123",
+      "multiplicandHelp": "Indtast et heltal (0 eller større).",
+      "multiplierLabel": "Multiplikator",
+      "multiplierPlaceholder": "f.eks. 45",
+      "multiplierHelp": "Indtast et heltal (0 eller større).",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "resultLabel": "Resultat",
+      "productValue": "Produkt: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Trin i lang multiplikation",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Indtast et gyldigt heltal for multiplikanden.",
+      "errorInvalidMultiplier": "Indtast et gyldigt heltal for multiplikatoren.",
+      "seo": {
+        "title": "Lommeregner til lang multiplikation – Delprodukter trin for trin",
+        "description": "Gratis lommeregner til lang multiplikation. Multiplicer to hele tal og se delprodukter og resultat trin for trin.",
+        "keywords": "lang multiplikation lommeregner, multiplicer trin for trin, delprodukter, multiplikationslommeregner",
+        "content": {
+          "heading": "Sådan gør du lang multiplikation",
+          "paragraph1": "Lang multiplikation er en metode til at multiplicere to tal i trin: multiplicer det første tal (multiplikand) med hvert ciffer i det andet (multiplikator), flyt hver delprodukt efter pladsværdi (enere, tiere, hundreder) og læg sammen. Denne lommeregner viser hver delprodukt og summen.",
+          "paragraph2": "F.eks. 123 × 45: 123 × 5 = 615 (enere), 123 × 4 = 492, forskydning = 4920 (tiere). 615 + 4920 = 5535. Samme metode gælder for alle heltal.",
+          "paragraph3": "Indtast multiplikand og multiplikator; lommeregneren viser produktet og hvert trin: multiplikand × hvert ciffer og forskudt delprodukt.",
+          "paragraph4": "Lang multiplikation er grundlæggende i aritmetik og hverdagsberegninger. Værktøjet er gratis og viser hvert trin.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Altså 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {"question": "Hvad er lang multiplikation?", "answer": "Lang multiplikation er en trinvis metode: multiplicer det første tal med hvert ciffer i det andet, flyt delprodukterne efter pladsværdi og læg sammen."},
+            {"question": "Hvad er delprodukter?", "answer": "Delprodukter er multiplikanden multipliceret med hvert ciffer i multiplikatoren. For 123 × 45: 123 × 5 = 615 og 123 × 4 = 492 (forskudt 4920)."},
+            {"question": "Virker det for decimaltal?", "answer": "Denne lommeregner er kun for heltal. For decimaltal, multiplicer først som heltal og placer decimaltegnet efter antal decimaler i faktorerne."},
+            {"question": "Virker det for store tal?", "answer": "Ja. Du kan indtaste meget store heltal; lommeregneren beregner produktet og alle delprodukter."},
+            {"question": "Er lommeregneren gratis?", "answer": "Ja. Vores lommeregner til lang multiplikation er gratis, uden registrering. Indtast to heltal for produkt og trin."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterede lommeregnere",
+          "longDivision": "Lommeregner til lang division",
+          "longDivisionDesc": "Divider heltal med lang division trin for trin",
+          "addition": "Additionslommeregner",
+          "additionDesc": "Læg heltal og decimaler sammen",
+          "remainder": "Restberegner",
+          "remainderDesc": "Kvotient og rest ved heltalsdivision"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kattegraviditetsberegner",
       "description": "Estimer din kats forventede fødselsdato og fødselsvindue fra parringsdato. Gratis, hurtigt, baseret på typisk drægtighed (63–67 dage).",

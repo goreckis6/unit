@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Schriftlicher Multiplikationsrechner",
+      "description": "Multipliziere zwei ganze Zahlen mit schrittweiser schriftlicher Multiplikation. Teilergebnisse und Endergebnis anzeigen.",
+      "multiplicandLabel": "Multiplikand",
+      "multiplicandPlaceholder": "z. B. 123",
+      "multiplicandHelp": "Geben Sie eine ganze Zahl (0 oder größer) ein.",
+      "multiplierLabel": "Multiplikator",
+      "multiplierPlaceholder": "z. B. 45",
+      "multiplierHelp": "Geben Sie eine ganze Zahl (0 oder größer) ein.",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "resultLabel": "Ergebnis",
+      "productValue": "Produkt: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Schritte der schriftlichen Multiplikation",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Bitte eine gültige ganze Zahl für den Multiplikanden eingeben.",
+      "errorInvalidMultiplier": "Bitte eine gültige ganze Zahl für den Multiplikator eingeben.",
+      "seo": {
+        "title": "Schriftlicher Multiplikationsrechner – Teilergebnisse Schritt für Schritt",
+        "description": "Kostenloser Rechner für schriftliche Multiplikation. Multipliziere zwei ganze Zahlen und sieh Teilergebnisse und Endergebnis Schritt für Schritt.",
+        "keywords": "schriftliche Multiplikation Rechner, Multiplikation Schritt für Schritt, Teilergebnisse, Multiplikationsrechner",
+        "content": {
+          "heading": "Schriftliche Multiplikation",
+          "paragraph1": "Schriftliche Multiplikation ist eine Methode, zwei Zahlen in Schritten zu multiplizieren: Erste Zahl (Multiplikand) mit jeder Ziffer der zweiten (Multiplikator) multiplizieren, Teilergebnisse nach Stellenwert verschieben (Einer, Zehner, Hunderter), dann addieren. Dieser Rechner zeigt jedes Teilergebnis und die Summe.",
+          "paragraph2": "Beispiel 123 × 45: 123 × 5 = 615 (Einer), 123 × 4 = 492, Verschiebung = 4920 (Zehner). 615 + 4920 = 5535. Dieselbe Methode gilt für beliebige ganze Zahlen.",
+          "paragraph3": "Multiplikand und Multiplikator eingeben; der Rechner zeigt Produkt und jeden Schritt: Multiplikand × jede Ziffer und verschobenes Teilergebnis.",
+          "paragraph4": "Schriftliche Multiplikation ist Grundlage der Arithmetik und Alltagsrechnungen. Das Tool ist kostenlos und zeigt jeden Schritt.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Also 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {"question": "Was ist schriftliche Multiplikation?", "answer": "Schriftliche Multiplikation ist eine schrittweise Methode: Erste Zahl mit jeder Ziffer der zweiten multiplizieren, Teilergebnisse nach Stellenwert verschieben und addieren."},
+            {"question": "Was sind Teilergebnisse?", "answer": "Teilergebnisse entstehen, wenn der Multiplikand mit jeder Ziffer des Multiplikators multipliziert wird. Bei 123 × 45: 123 × 5 = 615 und 123 × 4 = 492 (verschoben 4920)."},
+            {"question": "Funktioniert das für Dezimalzahlen?", "answer": "Dieser Rechner ist nur für ganze Zahlen. Bei Dezimalzahlen zuerst wie ganze Zahlen multiplizieren, dann das Komma nach der Gesamtzahl der Dezimalstellen setzen."},
+            {"question": "Funktioniert das für große Zahlen?", "answer": "Ja. Sehr große ganze Zahlen können eingegeben werden; der Rechner berechnet Produkt und alle Teilergebnisse."},
+            {"question": "Ist der Rechner kostenlos?", "answer": "Ja. Unser Rechner für schriftliche Multiplikation ist kostenlos, ohne Anmeldung. Zwei ganze Zahlen eingeben für Produkt und Schritte."}
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "longDivision": "Schriftlicher Divisionsrechner",
+          "longDivisionDesc": "Zahlen mit schrittweiser schriftlicher Division teilen",
+          "addition": "Additionsrechner",
+          "additionDesc": "Ganze und Dezimalzahlen addieren",
+          "remainder": "Restrechner",
+          "remainderDesc": "Quotient und Rest bei ganzzahliger Division"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Katzen-Trächtigkeitsrechner",
       "description": "Schätzen Sie den Geburtstermin Ihrer Katze und das Geburtsfenster ab dem Deckdatum. Kostenlos, schnell, basierend auf typischer Trächtigkeitsdauer (63–67 Tage).",

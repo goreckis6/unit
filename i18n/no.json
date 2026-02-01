@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Kalkulator for lang multiplikasjon",
+      "description": "Multipliser to heltall med lang multiplikasjon steg for steg. Se delprodukter og sluttresultat.",
+      "multiplicandLabel": "Multiplikand",
+      "multiplicandPlaceholder": "f.eks. 123",
+      "multiplicandHelp": "Skriv inn et heltall (0 eller større).",
+      "multiplierLabel": "Multiplikator",
+      "multiplierPlaceholder": "f.eks. 45",
+      "multiplierHelp": "Skriv inn et heltall (0 eller større).",
+      "calculate": "Beregn",
+      "reset": "Nullstill",
+      "resultLabel": "Resultat",
+      "productValue": "Produkt: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Steg i lang multiplikasjon",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Skriv inn et gyldig heltall for multiplikanden.",
+      "errorInvalidMultiplier": "Skriv inn et gyldig heltall for multiplikatoren.",
+      "seo": {
+        "title": "Kalkulator for lang multiplikasjon – Delprodukter steg for steg",
+        "description": "Gratis kalkulator for lang multiplikasjon. Multipliser to heltall og se delprodukter og resultat steg for steg.",
+        "keywords": "lang multiplikasjon kalkulator, multipliser steg for steg, delprodukter, multiplikasjonskalkulator",
+        "content": {
+          "heading": "Slik gjør du lang multiplikasjon",
+          "paragraph1": "Lang multiplikasjon er en metode for å multiplisere to tall i steg: multipliser det første tallet (multiplikand) med hvert siffer i det andre (multiplikator), flytt hver delprodukt etter plassverdi (enere, tiere, hundere) og adder. Denne kalkulatoren viser hver delprodukt og summen.",
+          "paragraph2": "F.eks. 123 × 45: 123 × 5 = 615 (enere), 123 × 4 = 492, forskyvning = 4920 (tiere). 615 + 4920 = 5535. Samme metode gjelder for alle heltall.",
+          "paragraph3": "Skriv inn multiplikand og multiplikator; kalkulatoren viser produktet og hvert steg: multiplikand × hvert siffer og forskyvet delprodukt.",
+          "paragraph4": "Lang multiplikasjon er grunnleggende i aritmetikk og hverdagsberegninger. Verktøyet er gratis og viser hvert steg.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Altså 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Vanlige spørsmål",
+          "items": [
+            {"question": "Hva er lang multiplikasjon?", "answer": "Lang multiplikasjon er en stegvis metode: multipliser det første tallet med hvert siffer i det andre, flytt delproduktene etter plassverdi og adder."},
+            {"question": "Hva er delprodukter?", "answer": "Delprodukter er multiplikanden multiplisert med hvert siffer i multiplikatoren. For 123 × 45: 123 × 5 = 615 og 123 × 4 = 492 (forskyvet 4920)."},
+            {"question": "Fungerer det for desimaltall?", "answer": "Denne kalkulatoren er kun for heltall. For desimaltall, multipliser først som heltall og plasser desimaltegnet etter antall desimaler i faktorene."},
+            {"question": "Fungerer det for store tall?", "answer": "Ja. Du kan skrive inn svært store heltall; kalkulatoren beregner produktet og alle delprodukter."},
+            {"question": "Er kalkulatoren gratis?", "answer": "Ja. Vår kalkulator for lang multiplikasjon er gratis, uten registrering. Skriv inn to heltall for produkt og steg."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterte kalkulatorer",
+          "longDivision": "Kalkulator for lang divisjon",
+          "longDivisionDesc": "Del heltall med lang divisjon steg for steg",
+          "addition": "Addisjonskalkulator",
+          "additionDesc": "Legg sammen heltall og desimaler",
+          "remainder": "Restkalkulator",
+          "remainderDesc": "Kvotient og rest ved heltallsdivisjon"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kattgraviditetskalkulator",
       "description": "Estimer forventet fødseldato og fødselvindu for katten din fra paringsdato. Gratis, raskt, basert på typisk drektighet (63–67 dager).",

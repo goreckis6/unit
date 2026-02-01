@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Hosszú szorzás kalkulátor",
+      "description": "Szorozzon két egész számot lépésről lépésre hosszú szorzással. Részletszorzatok és végeredmény.",
+      "multiplicandLabel": "Szorzandó",
+      "multiplicandPlaceholder": "pl. 123",
+      "multiplicandHelp": "Adjon meg egy egész számot (0 vagy nagyobb).",
+      "multiplierLabel": "Szorzó",
+      "multiplierPlaceholder": "pl. 45",
+      "multiplierHelp": "Adjon meg egy egész számot (0 vagy nagyobb).",
+      "calculate": "Számolás",
+      "reset": "Törlés",
+      "resultLabel": "Eredmény",
+      "productValue": "Szorzat: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Hosszú szorzás lépései",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Adjon meg érvényes egész számot a szorzandóhoz.",
+      "errorInvalidMultiplier": "Adjon meg érvényes egész számot a szorzóhoz.",
+      "seo": {
+        "title": "Hosszú szorzás kalkulátor – Részletszorzatok lépésről lépésre",
+        "description": "Ingyenes hosszú szorzás kalkulátor. Szorozzon két egész számot, és lássa a részletszorzatokat és az eredményt lépésről lépésre.",
+        "keywords": "hosszú szorzás kalkulátor, szorzás lépésről lépésre, részletszorzatok, szorzás kalkulátor",
+        "content": {
+          "heading": "Hosszú szorzás",
+          "paragraph1": "A hosszú szorzás két szám lépésenkénti szorzása: az első számot (szorzandó) a második (szorzó) minden számjegyével megszorozzuk, a részletszorzatokat helyiérték szerint (egyek, tízesek, százasok) eltoljuk és összeadjuk. Ez a kalkulátor minden részletszorzatot és az összeget mutatja.",
+          "paragraph2": "Pl. 123 × 45: 123 × 5 = 615 (egyek), 123 × 4 = 492, eltolás = 4920 (tízesek). 615 + 4920 = 5535. Ugyanígy működik bármilyen egész számra.",
+          "paragraph3": "Adja meg a szorzandót és a szorzót; a kalkulátor megjeleníti a szorzatot és minden lépést: szorzandó × minden számjegy és eltolt részletszorzat.",
+          "paragraph4": "A hosszú szorzás alapvető az aritmetikában és a mindennapi számításokban. A eszköz ingyenes és minden lépést mutat.",
+          "exampleHeading": "Példa",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Tehát 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Gyakori kérdések",
+          "items": [
+            {"question": "Mi a hosszú szorzás?", "answer": "A hosszú szorzás lépésenkénti módszer: az első számot a második minden számjegyével megszorozzuk, a részletszorzatokat helyiérték szerint eltoljuk és összeadjuk."},
+            {"question": "Mik a részletszorzatok?", "answer": "A részletszorzatok a szorzandó és a szorzó minden számjegyének szorzatai. 123 × 45 esetén: 123 × 5 = 615 és 123 × 4 = 492 (eltolva 4920)."},
+            {"question": "Működik tizedesjegyekkel?", "answer": "Ez a kalkulátor csak egész számokra van. Tizedeseknél először szorozzon egészként, majd a tizedesjel helyét a tényezők tizedesjegyei alapján állítsa be."},
+            {"question": "Működik nagy számokkal?", "answer": "Igen. Nagyon nagy egész számokat is megadhat; a kalkulátor pontosan kiszámolja a szorzatot és az összes részletszorzatot."},
+            {"question": "A kalkulátor ingyenes?", "answer": "Igen. A hosszú szorzás kalkulátorunk ingyenes, regisztráció nélkül. Adjon meg két egész számot a szorzat és a lépések megjelenítéséhez."}
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó kalkulátorok",
+          "longDivision": "Hosszú osztás kalkulátor",
+          "longDivisionDesc": "Osszon egész számokat hosszú osztással lépésről lépésre",
+          "addition": "Összeadás kalkulátor",
+          "additionDesc": "Egész és tizedes számok összeadása",
+          "remainder": "Maradék kalkulátor",
+          "remainderDesc": "Hányados és maradék egész osztásnál"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Macska Vemhesség Kalkulátor",
       "description": "Becsülje meg a macska várható születési dátumát és szülési ablakát a párzás dátuma alapján. Ingyenes, gyors, tipikus vemhesség alapján (63–67 nap).",

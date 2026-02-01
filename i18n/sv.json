@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Kalkylator för lång multiplikation",
+      "description": "Multiplicera två heltal med lång multiplikation steg för steg. Se delprodukter och slutresultat.",
+      "multiplicandLabel": "Multiplikand",
+      "multiplicandPlaceholder": "t.ex. 123",
+      "multiplicandHelp": "Ange ett heltal (0 eller större).",
+      "multiplierLabel": "Multiplikator",
+      "multiplierPlaceholder": "t.ex. 45",
+      "multiplierHelp": "Ange ett heltal (0 eller större).",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "resultLabel": "Resultat",
+      "productValue": "Produkt: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Steg i lång multiplikation",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Ange ett giltigt heltal för multiplikanden.",
+      "errorInvalidMultiplier": "Ange ett giltigt heltal för multiplikatorn.",
+      "seo": {
+        "title": "Kalkylator för lång multiplikation – Delprodukter steg för steg",
+        "description": "Gratis kalkylator för lång multiplikation. Multiplicera två heltal och se delprodukter och resultat steg för steg.",
+        "keywords": "lång multiplikation kalkylator, multiplicera steg för steg, delprodukter, multiplikationskalkylator",
+        "content": {
+          "heading": "Så gör du lång multiplikation",
+          "paragraph1": "Lång multiplikation är en metod för att multiplicera två tal i steg: multiplicera det första talet (multiplikand) med varje siffra i det andra (multiplikator), flytta varje delprodukt enligt platsvärde (ental, tiotal, hundratal) och addera. Denna kalkylator visar varje delprodukt och summan.",
+          "paragraph2": "T.ex. 123 × 45: 123 × 5 = 615 (ental), 123 × 4 = 492, förskjutning = 4920 (tiotal). 615 + 4920 = 5535. Samma metod gäller för alla heltal.",
+          "paragraph3": "Ange multiplikand och multiplikator; kalkylatorn visar produkten och varje steg: multiplikand × varje siffra och förskjuten delprodukt.",
+          "paragraph4": "Lång multiplikation är grundläggande i aritmetik och vardagsberäkningar. Verktyget är gratis och visar varje steg.",
+          "exampleHeading": "Exempel",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Alltså 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {"question": "Vad är lång multiplikation?", "answer": "Lång multiplikation är en stegvis metod: multiplicera det första talet med varje siffra i det andra, flytta delprodukterna enligt platsvärde och addera."},
+            {"question": "Vad är delprodukter?", "answer": "Delprodukter är multiplikanden multiplicerad med varje siffra i multiplikatorn. För 123 × 45: 123 × 5 = 615 och 123 × 4 = 492 (förskjuten 4920)."},
+            {"question": "Fungerar det för decimaltal?", "answer": "Denna kalkylator är endast för heltal. För decimaltal, multiplicera först som heltal och placera decimaltecknet enligt antalet decimaler i faktorerna."},
+            {"question": "Fungerar det för stora tal?", "answer": "Ja. Du kan ange mycket stora heltal; kalkylatorn beräknar produkten och alla delprodukter."},
+            {"question": "Är kalkylatorn gratis?", "answer": "Ja. Vår kalkylator för lång multiplikation är gratis, utan registrering. Ange två heltal för produkt och steg."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "longDivision": "Kalkylator för lång division",
+          "longDivisionDesc": "Dela heltal med lång division steg för steg",
+          "addition": "Additionskalkylator",
+          "additionDesc": "Addera heltal och decimaler",
+          "remainder": "Restkalkylator",
+          "remainderDesc": "Kvot och rest vid heltalsdivision"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kattgraviditetskalkylator",
       "description": "Uppskatta din katts förväntade förlossningsdatum och födelsefönster från parningsdatum. Gratis, snabbt, baserat på typisk dräktighet (63–67 dagar).",

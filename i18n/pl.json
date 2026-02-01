@@ -4574,6 +4574,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "Kalkulator mnożenia pisemnego",
+      "description": "Mnoż dwie liczby całkowite z krokowym mnożeniem pisemnym. Zobacz iloczyny częściowe i wynik.",
+      "multiplicandLabel": "Mnożna",
+      "multiplicandPlaceholder": "np. 123",
+      "multiplicandHelp": "Wpisz liczbę całkowitą (0 lub większą).",
+      "multiplierLabel": "Mnożnik",
+      "multiplierPlaceholder": "np. 45",
+      "multiplierHelp": "Wpisz liczbę całkowitą (0 lub większą).",
+      "calculate": "Oblicz",
+      "reset": "Reset",
+      "resultLabel": "Wynik",
+      "productValue": "Iloczyn: {value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "Kroki mnożenia pisemnego",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "Wpisz prawidłową liczbę całkowitą dla mnożnej.",
+      "errorInvalidMultiplier": "Wpisz prawidłową liczbę całkowitą dla mnożnika.",
+      "seo": {
+        "title": "Kalkulator mnożenia pisemnego – iloczyny częściowe krok po kroku",
+        "description": "Darmowy kalkulator mnożenia pisemnego. Mnoż dwie liczby całkowite i zobacz iloczyny częściowe oraz wynik krok po kroku.",
+        "keywords": "kalkulator mnożenia pisemnego, mnożenie krok po kroku, iloczyny częściowe, kalkulator mnożenia",
+        "content": {
+          "heading": "Jak wykonać mnożenie pisemne",
+          "paragraph1": "Mnożenie pisemne to metoda mnożenia dwóch liczb w krokach: mnożysz pierwszą liczbę (mnożna) przez każdą cyfrę drugiej (mnożnik), przesuwasz każdy iloczyn częściowy według pozycji (jedności, dziesiątki, setki), potem dodajesz. Kalkulator pokazuje każdy iloczyn częściowy i sumę.",
+          "paragraph2": "Np. 123 × 45: 123 × 5 = 615 (jedności), 123 × 4 = 492, przesunięcie = 4920 (dziesiątki). 615 + 4920 = 5535. Ta sama metoda działa dla dowolnych liczb całkowitych.",
+          "paragraph3": "Wpisz mnożną i mnożnik; kalkulator pokaże iloczyn i każdy krok: mnożna × każda cyfra oraz przesunięty iloczyn częściowy.",
+          "paragraph4": "Mnożenie pisemne jest podstawą arytmetyki i codziennych obliczeń. Narzędzie jest darmowe i pokazuje każdy krok.",
+          "exampleHeading": "Przykład",
+          "exampleText": "123 × 45: 123 × 5 = 615; 123 × 4 = 492, × 10 = 4920; 615 + 4920 = 5535. Zatem 123 × 45 = 5535."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {"question": "Co to jest mnożenie pisemne?", "answer": "Mnożenie pisemne to metoda mnożenia dwóch liczb w krokach: mnożysz pierwszą liczbę przez każdą cyfrę drugiej, przesuwasz iloczyny częściowe według pozycji i dodajesz."},
+            {"question": "Co to są iloczyny częściowe?", "answer": "Iloczyny częściowe to wyniki mnożenia mnożnej przez każdą cyfrę mnożnika. Dla 123 × 45: 123 × 5 = 615 i 123 × 4 = 492 (przesunięte 4920)."},
+            {"question": "Czy działa dla liczb dziesiętnych?", "answer": "Kalkulator jest tylko dla liczb całkowitych. Dla dziesiętnych najpierw mnoż jak liczby całkowite, potem ustaw przecinek według liczby miejsc dziesiętnych w czynnikach."},
+            {"question": "Czy działa dla dużych liczb?", "answer": "Tak. Możesz wpisać bardzo duże liczby całkowite; kalkulator obliczy iloczyn i wszystkie iloczyny częściowe."},
+            {"question": "Czy kalkulator jest darmowy?", "answer": "Tak. Kalkulator mnożenia pisemnego jest darmowy, bez rejestracji. Wpisz dwie liczby całkowite, by zobaczyć iloczyn i kroki."}
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "longDivision": "Kalkulator dzielenia pisemnego",
+          "longDivisionDesc": "Dziel liczby całkowite z dzieleniem pisemnym krok po kroku",
+          "addition": "Kalkulator dodawania",
+          "additionDesc": "Dodawanie liczb całkowitych i dziesiętnych",
+          "remainder": "Kalkulator reszty",
+          "remainderDesc": "Iloraz i reszta z dzielenia całkowitego"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "Kalkulator Ciąży Kotki",
       "description": "Oszacuj termin porodu i okno porodowe na podstawie daty krycia. Darmowo, szybko, na podstawie typowej ciąży (63–67 dni).",

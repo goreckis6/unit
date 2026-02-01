@@ -4644,6 +4644,59 @@
         }
       }
     },
+    "longMultiplication": {
+      "title": "竖式乘法计算器",
+      "description": "用竖式乘法逐步计算两个整数。显示部分积与最终结果。",
+      "multiplicandLabel": "被乘数",
+      "multiplicandPlaceholder": "如 123",
+      "multiplicandHelp": "输入一个非负整数（0 或更大）。",
+      "multiplierLabel": "乘数",
+      "multiplierPlaceholder": "如 45",
+      "multiplierHelp": "输入一个非负整数（0 或更大）。",
+      "calculate": "计算",
+      "reset": "重置",
+      "resultLabel": "结果",
+      "productValue": "积：{value}",
+      "equation": "{a} × {b} = {p}",
+      "stepsHeading": "竖式乘法步骤",
+      "stepLine": "{multiplicand} × {digit} = {partial}",
+      "stepLineShifted": "→ {shifted}",
+      "errorInvalidMultiplicand": "请输入有效的被乘数（整数）。",
+      "errorInvalidMultiplier": "请输入有效的乘数（整数）。",
+      "seo": {
+        "title": "竖式乘法计算器 – 部分积逐步显示",
+        "description": "免费竖式乘法计算器。输入两个整数，逐步显示部分积与结果。",
+        "keywords": "竖式乘法计算器, 乘法步骤, 部分积, 乘法计算器",
+        "content": {
+          "heading": "如何进行竖式乘法",
+          "paragraph1": "竖式乘法是将两个数相乘的逐步方法：用第一个数（被乘数）乘第二个数（乘数）的每一位，按数位（个位、十位、百位…）移位部分积后相加。本计算器显示每个部分积与总和。",
+          "paragraph2": "例：123 × 45：123 × 5 = 615（个位），123 × 4 = 492，移位 = 4920（十位）。615 + 4920 = 5535。同样方法适用于任意整数。",
+          "paragraph3": "输入被乘数和乘数；计算器会显示积与每一步：被乘数×每一位及移位后的部分积。",
+          "paragraph4": "竖式乘法是算术与日常计算的基础。本工具免费并显示每一步。",
+          "exampleHeading": "示例",
+          "exampleText": "123 × 45：123 × 5 = 615；123 × 4 = 492，× 10 = 4920；615 + 4920 = 5535。故 123 × 45 = 5535。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {"question": "什么是竖式乘法？", "answer": "竖式乘法是逐步相乘的方法：用第一个数乘第二个数的每一位，按数位移位部分积后相加。"},
+            {"question": "什么是部分积？", "answer": "部分积是被乘数乘乘数每一位的结果。如 123 × 45：123 × 5 = 615 和 123 × 4 = 492（移位 4920）。"},
+            {"question": "支持小数吗？", "answer": "本计算器仅支持整数。小数时先按整数相乘，再根据因数小数位数放置小数点。"},
+            {"question": "支持大数吗？", "answer": "支持。可输入很大的整数，计算器会准确算出积与所有部分积。"},
+            {"question": "计算器免费吗？", "answer": "是。竖式乘法计算器免费使用，无需注册。输入两个整数即可看到积与步骤。"}
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "longDivision": "竖式除法计算器",
+          "longDivisionDesc": "整数竖式除法逐步显示",
+          "addition": "加法计算器",
+          "additionDesc": "整数与小数相加",
+          "remainder": "余数计算器",
+          "remainderDesc": "整数除法的商与余数"
+        }
+      }
+    },
     "catPregnancy": {
       "title": "猫咪孕期计算器",
       "description": "根据交配日期估算猫咪预产期和分娩窗口。免费、快速，基于典型妊娠期（63–67天）。",

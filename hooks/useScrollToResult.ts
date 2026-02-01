@@ -13,6 +13,7 @@ export function useScrollToResult<T>(
 ) {
   const resultRef = useRef<HTMLDivElement>(null);
   const previousResult = useRef<T>(result);
+  const scrollTimeout = useRef<number | null>(null);
 
   useEffect(() => {
     // Only scroll if:
@@ -27,7 +28,10 @@ export function useScrollToResult<T>(
       resultRef.current
     ) {
       // Small delay to ensure the result section is rendered
-      setTimeout(() => {
+      if (scrollTimeout.current) {
+        window.clearTimeout(scrollTimeout.current);
+      }
+      scrollTimeout.current = window.setTimeout(() => {
         if (resultRef.current) {
           const elementPosition = resultRef.current.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - offset;
@@ -37,7 +41,7 @@ export function useScrollToResult<T>(
             behavior: 'smooth',
           });
         }
-      }, 350);
+      }, 600);
     }
 
     // Update previous result

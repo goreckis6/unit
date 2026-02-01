@@ -123,7 +123,7 @@ export function WattsToVaCalculator() {
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
-                  <span style={{ flex: 1, minWidth: 0, color: 'var(--primary-color)', fontWeight: 700 }}>
+                  <span style={{ flex: 1, minWidth: 0, color: 'var(--primary-color)', fontWeight: 800 }}>
                     {result.toFixed(4)} VA
                   </span>
                   <CopyButton text={`${result.toFixed(4)} VA`} />

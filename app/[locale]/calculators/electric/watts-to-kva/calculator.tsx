@@ -123,7 +123,7 @@ export function WattsToKvaCalculator() {
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
-                  <span style={{ flex: 1, minWidth: 0, color: 'var(--text-primary)' }}>
+                  <span style={{ flex: 1, minWidth: 0, color: 'var(--primary-color)' }}>
                     {result.toFixed(4)} kVA
                   </span>
                   <CopyButton text={`${result.toFixed(4)} kVA`} />

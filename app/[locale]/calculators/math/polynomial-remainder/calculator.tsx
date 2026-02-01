@@ -174,7 +174,10 @@ export function PolynomialRemainderCalculator() {
             >
               {displayRemainder ? (
                 <>
-                  <div style={{ fontSize: '1.4rem', fontWeight: 800 }}>{displayRemainder}</div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <div style={{ fontSize: '1.4rem', fontWeight: 800, flex: '1 1 auto' }}>{displayRemainder}</div>
+                    <CopyButton text={displayRemainder} />
+                  </div>
                   <div style={{ color: 'var(--text-secondary)' }}>
                     {t('resultExpression', { a: aInput.trim() || 'a', value: displayRemainder })}
                   </div>
@@ -182,10 +185,6 @@ export function PolynomialRemainderCalculator() {
               ) : (
                 <span style={{ color: 'var(--text-secondary)', opacity: 0.7 }}>—</span>
               )}
-            </div>
-
-            <div className="action-buttons" style={{ marginTop: '1rem' }}>
-              <CopyButton text={displayRemainder ?? ''} />
             </div>
           </div>
         </div>

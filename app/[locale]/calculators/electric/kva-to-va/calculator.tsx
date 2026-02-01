@@ -73,7 +73,7 @@ export function KvaToVaCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">{t('va')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result.toFixed(2)}</span>
                 <span className="result-unit">VA</span>
                 <CopyButton text={`${result.toFixed(2)} VA`} />

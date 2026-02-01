@@ -96,7 +96,7 @@ export function WhToMahCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">{t('mah')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result.toFixed(2)}</span>
                 <span className="result-unit">mAh</span>
                 <CopyButton text={`${result.toFixed(2)} mAh`} />

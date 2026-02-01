@@ -160,7 +160,10 @@ export function RemainderCalculator() {
             <div className="number-input" style={{ minHeight: '160px', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {display ? (
                 <>
-                  <div style={{ fontSize: '1.35rem', fontWeight: 800 }}>{t('remainderValue', { value: display.r })}</div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <div style={{ fontSize: '1.35rem', fontWeight: 800, flex: '1 1 auto' }}>{t('remainderValue', { value: display.r })}</div>
+                    <CopyButton text={display.r} className="btn btn-secondary" />
+                  </div>
                   <div style={{ color: 'var(--text-secondary)' }}>{t('quotientValue', { value: display.q })}</div>
                   <div style={{ color: 'var(--text-secondary)' }}>
                     {t('equation', { a: dividend.trim(), b: display.bAbs, q: display.q, r: display.r })}
@@ -169,10 +172,6 @@ export function RemainderCalculator() {
               ) : (
                 <span style={{ color: 'var(--text-secondary)', opacity: 0.7 }}>—</span>
               )}
-            </div>
-
-            <div className="action-buttons" style={{ marginTop: '1rem' }}>
-              <CopyButton text={display ? display.r : ''} className="btn btn-secondary" />
             </div>
           </div>
         </div>

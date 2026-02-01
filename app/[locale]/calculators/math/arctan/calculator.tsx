@@ -85,7 +85,7 @@ export function ArctanCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">{t('angleDegrees')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result.degrees.toFixed(4)}</span>
                 <span className="result-unit">°</span>
                 <CopyButton text={`${result.degrees.toFixed(4)} °`} />
@@ -93,7 +93,7 @@ export function ArctanCalculator() {
             </div>
             <div className="result-item">
               <div className="result-label">{t('angleRadians')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result.radians.toFixed(8)}</span>
                 <span className="result-unit">rad</span>
                 <CopyButton text={`${result.radians.toFixed(8)} rad`} />

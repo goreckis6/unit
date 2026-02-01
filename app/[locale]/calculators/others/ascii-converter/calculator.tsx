@@ -231,9 +231,11 @@ export function AsciiConverterCalculator() {
             <div className="input-card">
               <label className="input-label">{t('outputAscii')}</label>
               {asciiOut !== '' ? (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  <div className="number-input" style={outputStyle}>{asciiOut}</div>
-                  <CopyButton text={asciiOut} />
+                <div className="number-input" style={{ ...outputStyle, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <span style={{ flex: 1, minWidth: 0, wordWrap: 'break-word', wordBreak: 'break-word' }}>{asciiOut}</span>
+                    <CopyButton text={asciiOut} />
+                  </div>
                 </div>
               ) : (
                 <div className="number-input" style={placeholderStyle}>
@@ -244,9 +246,11 @@ export function AsciiConverterCalculator() {
             <div className="input-card">
               <label className="input-label">{t('outputBinary')}</label>
               {binaryOut ? (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  <div className="number-input" style={outputStyle}>{binaryOut}</div>
-                  <CopyButton text={binaryOut} />
+                <div className="number-input" style={{ ...outputStyle, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <span style={{ flex: 1, minWidth: 0, wordWrap: 'break-word', wordBreak: 'break-word' }}>{binaryOut}</span>
+                    <CopyButton text={binaryOut} />
+                  </div>
                 </div>
               ) : (
                 <div className="number-input" style={placeholderStyle}>
@@ -257,9 +261,11 @@ export function AsciiConverterCalculator() {
             <div className="input-card">
               <label className="input-label">{t('outputHex')}</label>
               {hexOut ? (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  <div className="number-input" style={outputStyle}>{hexOut}</div>
-                  <CopyButton text={hexOut} />
+                <div className="number-input" style={{ ...outputStyle, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <span style={{ flex: 1, minWidth: 0, wordWrap: 'break-word', wordBreak: 'break-word' }}>{hexOut}</span>
+                    <CopyButton text={hexOut} />
+                  </div>
                 </div>
               ) : (
                 <div className="number-input" style={placeholderStyle}>
@@ -270,9 +276,11 @@ export function AsciiConverterCalculator() {
             <div className="input-card">
               <label className="input-label">{t('outputDecimal')}</label>
               {decimalOut ? (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  <div className="number-input" style={outputStyle}>{decimalOut}</div>
-                  <CopyButton text={decimalOut} />
+                <div className="number-input" style={{ ...outputStyle, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <span style={{ flex: 1, minWidth: 0, wordWrap: 'break-word', wordBreak: 'break-word' }}>{decimalOut}</span>
+                    <CopyButton text={decimalOut} />
+                  </div>
                 </div>
               ) : (
                 <div className="number-input" style={placeholderStyle}>

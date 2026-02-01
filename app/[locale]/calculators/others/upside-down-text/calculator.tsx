@@ -141,14 +141,13 @@ export function UpsideDownTextGenerator() {
                 fontSize: '1.2em',
                 padding: '1.25rem',
                 display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                cursor: 'pointer',
-                gap: '0.75rem',
-                flexWrap: 'wrap'
+                flexDirection: 'column',
+                gap: '0.75rem'
               }}>
-                <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{result}</span>
-                <CopyButton text={result} className="btn btn-secondary" />
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <span style={{ flex: 1, minWidth: 0, wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word' }}>{result}</span>
+                  <CopyButton text={result} className="btn btn-secondary" />
+                </div>
               </div>
             ) : (
               <div className="number-input" style={{ 

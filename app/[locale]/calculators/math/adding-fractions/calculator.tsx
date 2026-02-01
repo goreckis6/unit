@@ -153,7 +153,7 @@ export function AddingFractionsCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">{t('resultFraction')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">
                   {resultFraction.numerator}/{resultFraction.denominator}
                 </span>
@@ -163,10 +163,11 @@ export function AddingFractionsCalculator() {
             {resultDecimal !== null && (
               <div className="result-item">
                 <div className="result-label">{t('resultDecimal')}</div>
-                <div className="result-value-box">
+                <div className="number-input result-value-box">
                   <span className="result-value">
                     {resultDecimal.toFixed(4)}
                   </span>
+                  <CopyButton text={resultDecimal.toFixed(4)} />
                 </div>
               </div>
             )}

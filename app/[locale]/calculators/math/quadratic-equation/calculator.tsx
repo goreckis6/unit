@@ -208,7 +208,7 @@ export function QuadraticEquationCalculator() {
                 {result.message && (
                   <div className="result-item">
                     <div className="result-label">{t('status')}</div>
-                    <div className="result-value-box">
+                    <div className="number-input result-value-box">
                 <span className="result-value">{result.message}</span>
                 <CopyButton text={String(result.message)} />
               </div>
@@ -217,7 +217,7 @@ export function QuadraticEquationCalculator() {
                 {typeof result.discriminant === 'number' && (
                   <div className="result-item">
                     <div className="result-label">{t('discriminant')}</div>
-                    <div className="result-value-box">
+                    <div className="number-input result-value-box">
                 <span className="result-value">{formatNumber(result.discriminant, locale)}</span>
                 <CopyButton text={String(formatNumber(result.discriminant, locale))} />
               </div>
@@ -226,7 +226,7 @@ export function QuadraticEquationCalculator() {
                 {result.roots?.map((root) => (
                   <div key={root.label} className="result-item">
                     <div className="result-label">{root.label}</div>
-                    <div className="result-value-box">
+                    <div className="number-input result-value-box">
                 <span className="result-value">{root.value}</span>
                 <CopyButton text={String(root.value)} />
               </div>

@@ -93,7 +93,7 @@ export function WattsToJoulesCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">{t('joules')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">J</span>
                 <CopyButton text={`${result.toFixed(4)} J`} />

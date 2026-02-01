@@ -146,22 +146,23 @@ export function ConvolutionCalculator() {
                 {error}
               </div>
             ) : result ? (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                <div className="number-input" style={{ 
-                  wordWrap: 'break-word',
-                  wordBreak: 'break-word',
-                  overflowWrap: 'break-word',
-                  whiteSpace: 'pre-wrap', 
-                  minHeight: '100px',
-                  fontFamily: 'monospace',
-                  fontSize: '1.1em',
-                  padding: '1.25rem',
-                  display: 'flex',
-                  alignItems: 'center'
-                }}>
-                  {result}
+              <div className="number-input" style={{ 
+                wordWrap: 'break-word',
+                wordBreak: 'break-word',
+                overflowWrap: 'break-word',
+                whiteSpace: 'pre-wrap', 
+                minHeight: '100px',
+                fontFamily: 'monospace',
+                fontSize: '1.1em',
+                padding: '1.25rem',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.75rem'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <span style={{ flex: 1, minWidth: 0 }}>{result}</span>
+                  <CopyButton text={result} />
                 </div>
-                <CopyButton text={result} />
               </div>
             ) : (
               <div className="number-input" style={{ 

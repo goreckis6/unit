@@ -202,10 +202,11 @@ export function MultiplyingFractionsCalculator() {
                   <div className="result-label" style={{ marginBottom: '0.5rem' }}>
                     {t('product')}
                   </div>
-                  <div className="result-value-box">
+                  <div className="number-input result-value-box">
                     <span className="result-value" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
                       {result.numerator}/{result.denominator}
                     </span>
+                    <CopyButton text={`${result.numerator}/${result.denominator}`} />
                   </div>
                 </div>
 
@@ -215,10 +216,11 @@ export function MultiplyingFractionsCalculator() {
                     <div className="result-label" style={{ marginBottom: '0.5rem' }}>
                       {t('simplified')}
                     </div>
-                    <div className="result-value-box">
+                    <div className="number-input result-value-box">
                       <span className="result-value" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
                         {result.simplified.num}/{result.simplified.den}
                       </span>
+                      <CopyButton text={`${result.simplified.num}/${result.simplified.den}`} />
                     </div>
                   </div>
                 )}
@@ -228,15 +230,12 @@ export function MultiplyingFractionsCalculator() {
                   <div className="result-label" style={{ marginBottom: '0.5rem' }}>
                     {t('decimal')}
                   </div>
-                  <div className="result-value-box">
+                  <div className="number-input result-value-box">
                     <span className="result-value">
                       {result.decimal.toLocaleString(undefined, { maximumFractionDigits: 10 })}
                     </span>
+                    <CopyButton text={result.decimal.toLocaleString(undefined, { maximumFractionDigits: 10 })} />
                   </div>
-                </div>
-
-                <div style={{ marginTop: '0.5rem' }}>
-                  <CopyButton text={`${result.numerator}/${result.denominator} = ${result.decimal.toLocaleString(undefined, { maximumFractionDigits: 10 })}`} className="btn btn-secondary" />
                 </div>
 
                 {/* Formula */}

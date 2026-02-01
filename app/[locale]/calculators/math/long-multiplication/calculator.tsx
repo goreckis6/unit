@@ -268,14 +268,14 @@ export function LongMultiplicationCalculator() {
             <div className="number-input" style={{ minHeight: '160px', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {result ? (
                 <>
-                  <div style={{ fontSize: '1.35rem', fontWeight: 800 }}>
-                    {t('productValue', { value: result.product.toString() })}
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <div style={{ fontSize: '1.35rem', fontWeight: 800, flex: '1 1 auto' }}>
+                      {t('productValue', { value: result.product.toString() })}
+                    </div>
+                    <CopyButton text={result.product.toString()} className="btn btn-secondary" />
                   </div>
                   <div style={{ color: 'var(--text-secondary)' }}>
                     {t('equation', { a: result.multiplicand, b: result.multiplier, p: result.product.toString() })}
-                  </div>
-                  <div style={{ marginTop: '0.75rem' }}>
-                    <CopyButton text={result.product.toString()} className="btn btn-secondary" />
                   </div>
                   {diagramLayout && (
                     <div

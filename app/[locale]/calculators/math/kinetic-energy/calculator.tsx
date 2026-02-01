@@ -134,23 +134,25 @@ export function KineticEnergyCalculator() {
               >
                 <div className="result-item">
                   <div className="result-label" style={{ marginBottom: '0.5rem' }}>{t('massLabel')}</div>
-                  <div className="result-value-box">
+                  <div className="number-input result-value-box">
                     <span className="result-value" style={{ fontFamily: 'monospace' }}>
                       {result.mass} kg
                     </span>
+                    <CopyButton text={`${result.mass} kg`} />
                   </div>
                 </div>
                 <div className="result-item">
                   <div className="result-label" style={{ marginBottom: '0.5rem' }}>{t('velocityLabel')}</div>
-                  <div className="result-value-box">
+                  <div className="number-input result-value-box">
                     <span className="result-value" style={{ fontFamily: 'monospace' }}>
                       {result.velocity} m/s
                     </span>
+                    <CopyButton text={`${result.velocity} m/s`} />
                   </div>
                 </div>
                 <div className="result-item">
                   <div className="result-label" style={{ marginBottom: '0.5rem' }}>{t('keResult')}</div>
-                  <div className="result-value-box">
+                  <div className="number-input result-value-box">
                     <span className="result-value" style={{ fontSize: '1.75rem', fontWeight: '600' }}>
                       {result.ke.toExponential(4)} J
                     </span>

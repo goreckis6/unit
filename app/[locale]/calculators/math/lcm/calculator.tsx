@@ -197,10 +197,11 @@ export function LCMCalculator() {
                   <div className="result-label" style={{ marginBottom: '0.5rem' }}>
                     {t('numbers')}
                   </div>
-                  <div className="result-value-box">
+                  <div className="number-input result-value-box">
                     <span className="result-value" style={{ fontFamily: 'monospace' }}>
                       {result.numbers.join(', ')}
                     </span>
+                    <CopyButton text={result.numbers.join(', ')} />
                   </div>
                 </div>
 
@@ -209,7 +210,7 @@ export function LCMCalculator() {
                   <div className="result-label" style={{ marginBottom: '0.5rem' }}>
                     {t('lcmResult')}
                   </div>
-                  <div className="result-value-box">
+                  <div className="number-input result-value-box">
                     <span className="result-value" style={{ fontSize: '1.75rem', fontWeight: '600' }}>
                       {result.lcm.toLocaleString()}
                     </span>

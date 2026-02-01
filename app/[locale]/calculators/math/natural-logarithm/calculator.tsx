@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 // Function to calculate natural logarithm
 function calculateNaturalLog(x: number): {
@@ -144,10 +145,11 @@ export function NaturalLogarithmCalculator() {
                   <div className="result-label" style={{ marginBottom: '0.5rem' }}>
                     {t('naturalLog')}
                   </div>
-                  <div className="result-value-box">
+                  <div className="number-input result-value-box">
                     <span className="result-value" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
                       {result.ln.toLocaleString(undefined, { maximumFractionDigits: 10 })}
                     </span>
+                    <CopyButton text={result.ln.toLocaleString(undefined, { maximumFractionDigits: 10 })} />
                   </div>
                 </div>
 

@@ -176,7 +176,7 @@ export function KwToVoltsCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">{t('voltage')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result.toFixed(2)}</span>
                 <span className="result-unit">V</span>
                 <CopyButton text={`${result.toFixed(2)} V`} />

@@ -241,7 +241,7 @@ export function SubtractingFractionsCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">{t('resultEquation')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">
                   {formatDisplayFraction(f1)} - {formatDisplayFraction(f2)} = {formatDisplayFraction(resultFraction)}
                 </span>
@@ -251,10 +251,11 @@ export function SubtractingFractionsCalculator() {
             {resultDecimal !== null && (
               <div className="result-item">
                 <div className="result-label">{t('resultDecimal')}</div>
-                <div className="result-value-box">
+                <div className="number-input result-value-box">
                   <span className="result-value">
                     {resultDecimal.toFixed(6).replace(/\.?0+$/, '')}
                   </span>
+                  <CopyButton text={resultDecimal.toFixed(6).replace(/\.?0+$/, '')} />
                 </div>
               </div>
             )}

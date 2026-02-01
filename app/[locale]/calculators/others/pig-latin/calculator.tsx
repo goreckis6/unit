@@ -91,20 +91,23 @@ export function PigLatinCalculator() {
           <div className="input-card">
             <label className="input-label">{t('resultLabel')}</label>
             {result ? (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                <div
-                  className="number-input"
-                  style={{
-                    wordWrap: 'break-word',
-                    wordBreak: 'break-word',
-                    whiteSpace: 'pre-wrap',
-                    minHeight: '160px',
-                    padding: '1.25rem',
-                  }}
-                >
-                  {result}
+              <div
+                className="number-input"
+                style={{
+                  wordWrap: 'break-word',
+                  wordBreak: 'break-word',
+                  whiteSpace: 'pre-wrap',
+                  minHeight: '160px',
+                  padding: '1.25rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.75rem',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <span style={{ flex: 1, minWidth: 0 }}>{result}</span>
+                  <CopyButton text={result} />
                 </div>
-                <CopyButton text={result} />
               </div>
             ) : (
               <div

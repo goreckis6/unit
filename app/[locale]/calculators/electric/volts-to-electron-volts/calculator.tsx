@@ -67,7 +67,7 @@ export function VoltsToElectronVoltsCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">{t('electronVolts')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result.toFixed(6)}</span>
                 <span className="result-unit">eV</span>
                 <CopyButton text={`${result.toFixed(6)} eV`} />

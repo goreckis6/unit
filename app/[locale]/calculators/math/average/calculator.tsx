@@ -90,21 +90,21 @@ export function AverageCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">{t('averageLabel')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result.average}</span>
                 <CopyButton text={String(result.average)} />
               </div>
             </div>
             <div className="result-item">
               <div className="result-label">{t('countLabel')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result.count}</span>
                 <CopyButton text={String(result.count)} />
               </div>
             </div>
             <div className="result-item">
               <div className="result-label">{t('sumLabel')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result.sum}</span>
                 <CopyButton text={String(result.sum)} />
               </div>

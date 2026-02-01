@@ -92,7 +92,7 @@ export function AdditionCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">Result</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result}</span>
                 <CopyButton text={String(result)} />
               </div>

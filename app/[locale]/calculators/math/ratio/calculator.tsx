@@ -272,11 +272,14 @@ export function RatioCalculator() {
                 </div>
               ) : (
                 <>
-                  <div style={{ fontSize: '1.25rem', fontWeight: 800 }}>
-                    {t('missingValueLabel', {
-                      key: ratioResult.missingKey.toUpperCase(),
-                      value: formatNumber(ratioResult.value),
-                    })}
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <div style={{ fontSize: '1.25rem', fontWeight: 800, flex: '1 1 auto' }}>
+                      {t('missingValueLabel', {
+                        key: ratioResult.missingKey.toUpperCase(),
+                        value: formatNumber(ratioResult.value),
+                      })}
+                    </div>
+                    <CopyButton text={`${ratioResult.missingKey.toUpperCase()} = ${formatNumber(ratioResult.value)}`} className="btn btn-secondary" />
                   </div>
                   <div style={{ color: 'var(--text-secondary)' }}>
                     {t('ratioEquationLabel', {
@@ -289,11 +292,6 @@ export function RatioCalculator() {
                 </>
               )}
             </div>
-            {'error' in ratioResult ? null : (
-              <div className="action-buttons" style={{ marginTop: '0.75rem' }}>
-                <CopyButton text={`${ratioResult.missingKey.toUpperCase()} = ${formatNumber(ratioResult.value)}`} className="btn btn-secondary" />
-              </div>
-            )}
           </div>
 
           <div className="input-card" style={{ marginTop: '1.25rem' }}>

@@ -131,10 +131,11 @@ export function PercentErrorCalculator() {
                   <div className="result-label" style={{ marginBottom: '0.5rem' }}>
                     {t('percentError')}
                   </div>
-                  <div className="result-value-box">
+                  <div className="number-input result-value-box">
                     <span className="result-value" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
                       {result.percentError.toFixed(2)}%
                     </span>
+                    <CopyButton text={`${result.percentError.toFixed(2)}%`} />
                   </div>
                 </div>
                 
@@ -142,15 +143,12 @@ export function PercentErrorCalculator() {
                   <div className="result-label" style={{ marginBottom: '0.5rem' }}>
                     {t('absoluteError')}
                   </div>
-<div className="result-value-box">
-                      <span className="result-value">
-                        {result.absoluteError.toLocaleString(undefined, { maximumFractionDigits: 6 })}
-                      </span>
-                    </div>
-                </div>
-
-                <div style={{ marginTop: '0.5rem' }}>
-                  <CopyButton text={`${result.percentError.toFixed(2)}% | ${result.absoluteError.toLocaleString(undefined, { maximumFractionDigits: 6 })}`} className="btn btn-secondary" />
+                  <div className="number-input result-value-box">
+                    <span className="result-value">
+                      {result.absoluteError.toLocaleString(undefined, { maximumFractionDigits: 6 })}
+                    </span>
+                    <CopyButton text={result.absoluteError.toLocaleString(undefined, { maximumFractionDigits: 6 })} />
+                  </div>
                 </div>
 
                 <div style={{

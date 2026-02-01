@@ -341,49 +341,51 @@ export function PythagoreanTheoremCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">{t('sideA')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">
                   {formatNumber(result.a, locale)} {getUnitAbbr(result.unit, t)}
                   {result.computed === 'a' && <span style={{ marginLeft: '0.5rem', color: 'var(--primary)' }}>✓</span>}
                 </span>
+                <CopyButton text={`${formatNumber(result.a, locale)} ${getUnitAbbr(result.unit, t)}`} />
               </div>
             </div>
             <div className="result-item">
               <div className="result-label">{t('sideB')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">
                   {formatNumber(result.b, locale)} {getUnitAbbr(result.unit, t)}
                   {result.computed === 'b' && <span style={{ marginLeft: '0.5rem', color: 'var(--primary)' }}>✓</span>}
                 </span>
+                <CopyButton text={`${formatNumber(result.b, locale)} ${getUnitAbbr(result.unit, t)}`} />
               </div>
             </div>
             <div className="result-item">
               <div className="result-label">{t('sideC')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">
                   {formatNumber(result.c, locale)} {getUnitAbbr(result.unit, t)}
                   {result.computed === 'c' && <span style={{ marginLeft: '0.5rem', color: 'var(--primary)' }}>✓</span>}
                 </span>
+                <CopyButton text={`${formatNumber(result.c, locale)} ${getUnitAbbr(result.unit, t)}`} />
               </div>
             </div>
             <div className="result-item">
               <div className="result-label">{t('area')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">
                   {formatNumber(result.area, locale)} {getUnitAbbr(result.unit, t)}²
                 </span>
+                <CopyButton text={`${formatNumber(result.area, locale)} ${getUnitAbbr(result.unit, t)}²`} />
               </div>
             </div>
             <div className="result-item">
               <div className="result-label">{t('perimeter')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">
                   {formatNumber(result.perimeter, locale)} {getUnitAbbr(result.unit, t)}
                 </span>
+                <CopyButton text={`${formatNumber(result.perimeter, locale)} ${getUnitAbbr(result.unit, t)}`} />
               </div>
-            </div>
-            <div style={{ marginTop: '0.75rem' }}>
-              <CopyButton text={`a=${formatNumber(result.a, locale)} ${getUnitAbbr(result.unit, t)}, b=${formatNumber(result.b, locale)} ${getUnitAbbr(result.unit, t)}, c=${formatNumber(result.c, locale)} ${getUnitAbbr(result.unit, t)}`} className="btn btn-secondary" />
             </div>
           </div>
         </div>

@@ -105,11 +105,11 @@ export function ReverseTextGeneratorCalculator() {
           <div className="input-card" style={{ marginBottom: '1rem' }}>
             <label className="input-label">{t('reverseTextLabel')}</label>
             {reverseText ? (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <div className="number-input" style={outputStyle}>
-                  {reverseText}
+              <div className="number-input" style={{ ...outputStyle, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <span style={{ flex: 1, minWidth: 0 }}>{reverseText}</span>
+                  <CopyButton text={reverseText} />
                 </div>
-                <CopyButton text={reverseText} />
               </div>
             ) : (
               <div className="number-input" style={emptyStyle}>
@@ -121,11 +121,11 @@ export function ReverseTextGeneratorCalculator() {
           <div className="input-card" style={{ marginBottom: '1rem' }}>
             <label className="input-label">{t('reverseWordingLabel')}</label>
             {reverseWording ? (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <div className="number-input" style={outputStyle}>
-                  {reverseWording}
+              <div className="number-input" style={{ ...outputStyle, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <span style={{ flex: 1, minWidth: 0 }}>{reverseWording}</span>
+                  <CopyButton text={reverseWording} />
                 </div>
-                <CopyButton text={reverseWording} />
               </div>
             ) : (
               <div className="number-input" style={emptyStyle}>
@@ -137,11 +137,11 @@ export function ReverseTextGeneratorCalculator() {
           <div className="input-card">
             <label className="input-label">{t('reverseLettersLabel')}</label>
             {reverseLetters ? (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <div className="number-input" style={outputStyle}>
-                  {reverseLetters}
+              <div className="number-input" style={{ ...outputStyle, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <span style={{ flex: 1, minWidth: 0 }}>{reverseLetters}</span>
+                  <CopyButton text={reverseLetters} />
                 </div>
-                <CopyButton text={reverseLetters} />
               </div>
             ) : (
               <div className="number-input" style={emptyStyle}>

@@ -95,7 +95,7 @@ export function AntilogCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">{t('antilog')}</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result.toFixed(6)}</span>
                 <CopyButton text={String(result.toFixed(6))} />
               </div>

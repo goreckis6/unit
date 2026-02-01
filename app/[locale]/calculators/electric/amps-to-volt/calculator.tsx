@@ -146,7 +146,7 @@ export function AmpsToVoltCalculator() {
           <div className="result-display">
             <div className="result-item">
               <div className="result-label">V</div>
-              <div className="result-value-box">
+              <div className="number-input result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">V</span>
                 <CopyButton text={`${result.toFixed(4)} V`} />

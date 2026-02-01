@@ -218,10 +218,12 @@ export function LettersToNumbersConverter() {
                 padding: '1.25rem',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '1rem'
+                gap: '0.75rem'
               }}>
-                <div style={{ flex: 1, color: 'var(--text-primary)' }}>{result}</div>
-                <CopyButton text={result} className="btn btn-primary" />
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <span style={{ flex: 1, minWidth: 0, color: 'var(--text-primary)' }}>{result}</span>
+                  <CopyButton text={result} className="btn btn-primary" />
+                </div>
               </div>
             ) : (
               <div className="number-input" style={{ 

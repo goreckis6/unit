@@ -403,13 +403,13 @@ export function LongDivisionCalculator() {
             <div className="number-input" style={{ minHeight: '160px', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {display ? (
                 <>
-                  <div style={{ fontSize: '1.35rem', fontWeight: 800 }}>{t('quotientValue', { value: display.quotient })}</div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <div style={{ fontSize: '1.35rem', fontWeight: 800, flex: '1 1 auto' }}>{t('quotientValue', { value: display.quotient })}</div>
+                    <CopyButton text={`${display.quotient} R ${display.remainder}`} className="btn btn-secondary" />
+                  </div>
                   <div style={{ color: 'var(--text-secondary)' }}>{t('remainderValue', { value: display.remainder })}</div>
                   <div style={{ color: 'var(--text-secondary)' }}>
                     {t('equation', { a: display.dividend, b: display.divisor, q: display.quotient, r: display.remainder })}
-                  </div>
-                  <div style={{ marginTop: '0.75rem' }}>
-                    <CopyButton text={`${display.quotient} R ${display.remainder}`} className="btn btn-secondary" />
                   </div>
                   {diagramLayout && (
                     <div

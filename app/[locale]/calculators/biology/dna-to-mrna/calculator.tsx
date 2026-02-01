@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 type ConversionDirection = 'dna-to-mrna' | 'mrna-to-dna';
 
@@ -161,11 +162,7 @@ export function DnaToMrnaConverter() {
     setProteinSequence('');
   };
 
-  const handleCopy = (text: string, label: string) => {
-    if (text) {
-      navigator.clipboard.writeText(text.replace(/\s+/g, ''));
-    }
-  };
+  const copyText = (text: string) => text ? text.replace(/\s+/g, '') : '';
 
   return (
     <>
@@ -287,13 +284,7 @@ export function DnaToMrnaConverter() {
                   }}
                 >
                   <span style={{ flex: 1 }}>{formatSequence(dnaSequence)}</span>
-                  <button
-                    onClick={() => handleCopy(dnaSequence, 'DNA')}
-                    className="btn btn-primary"
-                    style={{ minHeight: '36px', minWidth: '80px', marginLeft: '1rem' }}
-                  >
-                    {t('copy')}
-                  </button>
+                  <CopyButton text={copyText(dnaSequence)} className="btn btn-primary" />
                 </div>
               ) : (
                 <div
@@ -335,13 +326,7 @@ export function DnaToMrnaConverter() {
                   }}
                 >
                   <span style={{ flex: 1 }}>{formatSequence(mrnaSequence)}</span>
-                  <button
-                    onClick={() => handleCopy(mrnaSequence, 'mRNA')}
-                    className="btn btn-primary"
-                    style={{ minHeight: '36px', minWidth: '80px', marginLeft: '1rem' }}
-                  >
-                    {t('copy')}
-                  </button>
+                  <CopyButton text={copyText(mrnaSequence)} className="btn btn-primary" />
                 </div>
               ) : (
                 <div
@@ -382,13 +367,7 @@ export function DnaToMrnaConverter() {
                   }}
                 >
                   <span style={{ flex: 1 }}>{proteinSequence}</span>
-                  <button
-                    onClick={() => handleCopy(proteinSequence, 'Protein')}
-                    className="btn btn-primary"
-                    style={{ minHeight: '36px', minWidth: '80px', marginLeft: '1rem' }}
-                  >
-                    {t('copy')}
-                  </button>
+                  <CopyButton text={copyText(proteinSequence)} className="btn btn-primary" />
                 </div>
               ) : (
                 <div

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 function calculatePercentError(
   actualValue: number,
@@ -141,11 +142,15 @@ export function PercentErrorCalculator() {
                   <div className="result-label" style={{ marginBottom: '0.5rem' }}>
                     {t('absoluteError')}
                   </div>
-                  <div className="result-value-box">
-                    <span className="result-value">
-                      {result.absoluteError.toLocaleString(undefined, { maximumFractionDigits: 6 })}
-                    </span>
-                  </div>
+<div className="result-value-box">
+                      <span className="result-value">
+                        {result.absoluteError.toLocaleString(undefined, { maximumFractionDigits: 6 })}
+                      </span>
+                    </div>
+                </div>
+
+                <div style={{ marginTop: '0.5rem' }}>
+                  <CopyButton text={`${result.percentError.toFixed(2)}% | ${result.absoluteError.toLocaleString(undefined, { maximumFractionDigits: 6 })}`} className="btn btn-secondary" />
                 </div>
 
                 <div style={{

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 export function kvaToVa(kva: number): number {
   if (kva <= 0) return 0;
@@ -75,6 +76,7 @@ export function KvaToVaCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(2)}</span>
                 <span className="result-unit">VA</span>
+                <CopyButton text={`${result.toFixed(2)} VA`} />
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 interface LongDivisionStep {
   index: number;
@@ -406,6 +407,9 @@ export function LongDivisionCalculator() {
                   <div style={{ color: 'var(--text-secondary)' }}>{t('remainderValue', { value: display.remainder })}</div>
                   <div style={{ color: 'var(--text-secondary)' }}>
                     {t('equation', { a: display.dividend, b: display.divisor, q: display.quotient, r: display.remainder })}
+                  </div>
+                  <div style={{ marginTop: '0.75rem' }}>
+                    <CopyButton text={`${display.quotient} R ${display.remainder}`} className="btn btn-secondary" />
                   </div>
                   {diagramLayout && (
                     <div

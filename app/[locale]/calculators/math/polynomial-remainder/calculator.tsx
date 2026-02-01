@@ -2,6 +2,7 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 const MAX_FRACTION_DIGITS = 8;
 
@@ -84,11 +85,6 @@ export function PolynomialRemainderCalculator() {
     setRemainder(null);
     setError(null);
   }, []);
-
-  const handleCopy = useCallback(() => {
-    if (!displayRemainder) return;
-    void navigator.clipboard.writeText(displayRemainder);
-  }, [displayRemainder]);
 
   return (
     <>
@@ -189,9 +185,7 @@ export function PolynomialRemainderCalculator() {
             </div>
 
             <div className="action-buttons" style={{ marginTop: '1rem' }}>
-              <button onClick={handleCopy} className="btn btn-secondary" disabled={!displayRemainder}>
-                {t('copyResult')}
-              </button>
+              <CopyButton text={displayRemainder ?? ''} />
             </div>
           </div>
         </div>

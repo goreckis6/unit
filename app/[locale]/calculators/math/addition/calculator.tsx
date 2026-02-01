@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 export function add(a: number, b: number): number {
   return a + b;
@@ -93,6 +94,7 @@ export function AdditionCalculator() {
               <div className="result-label">Result</div>
               <div className="result-value-box">
                 <span className="result-value">{result}</span>
+                <CopyButton text={String(result)} />
               </div>
             </div>
           </div>

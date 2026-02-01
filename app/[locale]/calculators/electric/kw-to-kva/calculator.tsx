@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 /** kVA = kW / PF; apparent power from real power and power factor */
 export function kwToKva(kw: number, powerFactor: number): number {
@@ -98,6 +99,7 @@ export function KwToKvaCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">kVA</span>
+                <CopyButton text={`${result.toFixed(4)} kVA`} />
               </div>
             </div>
           </div>

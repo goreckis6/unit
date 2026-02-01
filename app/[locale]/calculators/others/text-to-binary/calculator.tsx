@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 type EncodingType = 'utf-8' | 'utf-16' | 'utf-16le' | 'utf-16be' | 'windows-1252';
 type SeparatorType = 'space' | 'comma' | 'custom';
@@ -254,19 +255,22 @@ export function TextToBinaryCalculator() {
               {t('binaryOutput')}
             </label>
             {result ? (
-              <div className="number-input" style={{ 
-                wordWrap: 'break-word',
-                wordBreak: 'break-word',
-                overflowWrap: 'break-word',
-                whiteSpace: 'pre-wrap', 
-                minHeight: '200px',
-                resize: 'vertical',
-                overflowY: 'auto',
-                fontFamily: 'monospace',
-                fontSize: '0.9em',
-                padding: '1.25rem'
-              }}>
-                {result}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <div className="number-input" style={{ 
+                  wordWrap: 'break-word',
+                  wordBreak: 'break-word',
+                  overflowWrap: 'break-word',
+                  whiteSpace: 'pre-wrap', 
+                  minHeight: '200px',
+                  resize: 'vertical',
+                  overflowY: 'auto',
+                  fontFamily: 'monospace',
+                  fontSize: '0.9em',
+                  padding: '1.25rem'
+                }}>
+                  {result}
+                </div>
+                <CopyButton text={result} />
               </div>
             ) : (
               <div className="number-input" style={{ 

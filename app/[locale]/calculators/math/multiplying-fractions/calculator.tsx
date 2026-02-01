@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 // Function to find GCD (Greatest Common Divisor)
 function gcd(a: number, b: number): number {
@@ -232,6 +233,10 @@ export function MultiplyingFractionsCalculator() {
                       {result.decimal.toLocaleString(undefined, { maximumFractionDigits: 10 })}
                     </span>
                   </div>
+                </div>
+
+                <div style={{ marginTop: '0.5rem' }}>
+                  <CopyButton text={`${result.numerator}/${result.denominator} = ${result.decimal.toLocaleString(undefined, { maximumFractionDigits: 10 })}`} className="btn btn-secondary" />
                 </div>
 
                 {/* Formula */}

@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 const GESTATION_DAYS = 64;
 const EARLIEST_DAYS = 58;
@@ -108,10 +109,12 @@ export function CatPregnancyCalculator() {
                     minHeight: '44px',
                     display: 'flex',
                     alignItems: 'center',
+                    gap: '0.75rem',
                     padding: '1rem 1.25rem',
                   }}
                 >
                   {formatDate(dueDate, locale)}
+                  <CopyButton text={formatDate(dueDate, locale)} />
                 </div>
               </div>
 

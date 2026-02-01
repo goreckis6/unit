@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 type InputType = 'ascii' | 'hex' | 'binary' | 'decimal';
 type SeparatorType = 'space' | 'comma' | 'custom';
@@ -230,7 +231,10 @@ export function AsciiConverterCalculator() {
             <div className="input-card">
               <label className="input-label">{t('outputAscii')}</label>
               {asciiOut !== '' ? (
-                <div className="number-input" style={outputStyle}>{asciiOut}</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  <div className="number-input" style={outputStyle}>{asciiOut}</div>
+                  <CopyButton text={asciiOut} />
+                </div>
               ) : (
                 <div className="number-input" style={placeholderStyle}>
                   <span style={{ color: 'var(--text-secondary)' }}>{t('outputPlaceholder')}</span>
@@ -240,7 +244,10 @@ export function AsciiConverterCalculator() {
             <div className="input-card">
               <label className="input-label">{t('outputBinary')}</label>
               {binaryOut ? (
-                <div className="number-input" style={outputStyle}>{binaryOut}</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  <div className="number-input" style={outputStyle}>{binaryOut}</div>
+                  <CopyButton text={binaryOut} />
+                </div>
               ) : (
                 <div className="number-input" style={placeholderStyle}>
                   <span style={{ color: 'var(--text-secondary)' }}>{t('outputPlaceholder')}</span>
@@ -250,7 +257,10 @@ export function AsciiConverterCalculator() {
             <div className="input-card">
               <label className="input-label">{t('outputHex')}</label>
               {hexOut ? (
-                <div className="number-input" style={outputStyle}>{hexOut}</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  <div className="number-input" style={outputStyle}>{hexOut}</div>
+                  <CopyButton text={hexOut} />
+                </div>
               ) : (
                 <div className="number-input" style={placeholderStyle}>
                   <span style={{ color: 'var(--text-secondary)' }}>{t('outputPlaceholder')}</span>
@@ -260,7 +270,10 @@ export function AsciiConverterCalculator() {
             <div className="input-card">
               <label className="input-label">{t('outputDecimal')}</label>
               {decimalOut ? (
-                <div className="number-input" style={outputStyle}>{decimalOut}</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  <div className="number-input" style={outputStyle}>{decimalOut}</div>
+                  <CopyButton text={decimalOut} />
+                </div>
               ) : (
                 <div className="number-input" style={placeholderStyle}>
                   <span style={{ color: 'var(--text-secondary)' }}>{t('outputPlaceholder')}</span>

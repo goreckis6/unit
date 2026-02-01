@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 // Unicode mappings for small caps
 const smallCapsMap: Record<string, string> = {
@@ -42,12 +43,6 @@ export function SmallCapsGenerator() {
   const handleReset = () => {
     setText('');
     setResult('');
-  };
-
-  const handleCopy = () => {
-    if (result) {
-      navigator.clipboard.writeText(result);
-    }
   };
 
   return (
@@ -112,13 +107,7 @@ export function SmallCapsGenerator() {
                 lineHeight: '1.6'
               }}>
                 <div style={{ flex: 1, color: 'var(--text-primary)' }}>{result}</div>
-                <button 
-                  onClick={handleCopy} 
-                  className="btn btn-primary" 
-                  style={{ minHeight: '44px', minWidth: '44px', alignSelf: 'flex-start' }}
-                >
-                  {t('copy')}
-                </button>
+                <CopyButton text={result} className="btn btn-primary" />
               </div>
             ) : (
               <div className="number-input" style={{ 

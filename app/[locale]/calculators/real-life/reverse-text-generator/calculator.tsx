@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 function reverseEntireText(text: string): string {
   if (!text) return '';
@@ -104,8 +105,11 @@ export function ReverseTextGeneratorCalculator() {
           <div className="input-card" style={{ marginBottom: '1rem' }}>
             <label className="input-label">{t('reverseTextLabel')}</label>
             {reverseText ? (
-              <div className="number-input" style={outputStyle}>
-                {reverseText}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <div className="number-input" style={outputStyle}>
+                  {reverseText}
+                </div>
+                <CopyButton text={reverseText} />
               </div>
             ) : (
               <div className="number-input" style={emptyStyle}>
@@ -117,8 +121,11 @@ export function ReverseTextGeneratorCalculator() {
           <div className="input-card" style={{ marginBottom: '1rem' }}>
             <label className="input-label">{t('reverseWordingLabel')}</label>
             {reverseWording ? (
-              <div className="number-input" style={outputStyle}>
-                {reverseWording}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <div className="number-input" style={outputStyle}>
+                  {reverseWording}
+                </div>
+                <CopyButton text={reverseWording} />
               </div>
             ) : (
               <div className="number-input" style={emptyStyle}>
@@ -130,8 +137,11 @@ export function ReverseTextGeneratorCalculator() {
           <div className="input-card">
             <label className="input-label">{t('reverseLettersLabel')}</label>
             {reverseLetters ? (
-              <div className="number-input" style={outputStyle}>
-                {reverseLetters}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <div className="number-input" style={outputStyle}>
+                  {reverseLetters}
+                </div>
+                <CopyButton text={reverseLetters} />
               </div>
             ) : (
               <div className="number-input" style={emptyStyle}>

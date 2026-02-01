@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 const MAX_FRACTION_DIGITS = 6;
 
@@ -380,6 +381,9 @@ export function PythagoreanTheoremCalculator() {
                   {formatNumber(result.perimeter, locale)} {getUnitAbbr(result.unit, t)}
                 </span>
               </div>
+            </div>
+            <div style={{ marginTop: '0.75rem' }}>
+              <CopyButton text={`a=${formatNumber(result.a, locale)} ${getUnitAbbr(result.unit, t)}, b=${formatNumber(result.b, locale)} ${getUnitAbbr(result.unit, t)}, c=${formatNumber(result.c, locale)} ${getUnitAbbr(result.unit, t)}`} className="btn btn-secondary" />
             </div>
           </div>
         </div>

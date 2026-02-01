@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 /** Wh = (mAh × V) / 1000; convert battery capacity to energy */
 export function mahToWh(mah: number, voltage: number): number {
@@ -98,6 +99,7 @@ export function MahToWhCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">Wh</span>
+                <CopyButton text={`${result.toFixed(4)} Wh`} />
               </div>
             </div>
           </div>

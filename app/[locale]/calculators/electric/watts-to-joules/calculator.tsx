@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 export function wattsToJoules(watts: number, seconds: number): number {
   if (watts < 0 || seconds < 0) return 0;
@@ -95,6 +96,7 @@ export function WattsToJoulesCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">J</span>
+                <CopyButton text={`${result.toFixed(4)} J`} />
               </div>
             </div>
           </div>

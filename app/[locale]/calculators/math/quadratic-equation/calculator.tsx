@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 const MAX_FRACTION_DIGITS = 6;
 const EPSILON = 1e-12;
@@ -208,24 +209,27 @@ export function QuadraticEquationCalculator() {
                   <div className="result-item">
                     <div className="result-label">{t('status')}</div>
                     <div className="result-value-box">
-                      <span className="result-value">{result.message}</span>
-                    </div>
+                <span className="result-value">{result.message}</span>
+                <CopyButton text={String(result.message)} />
+              </div>
                   </div>
                 )}
                 {typeof result.discriminant === 'number' && (
                   <div className="result-item">
                     <div className="result-label">{t('discriminant')}</div>
                     <div className="result-value-box">
-                      <span className="result-value">{formatNumber(result.discriminant, locale)}</span>
-                    </div>
+                <span className="result-value">{formatNumber(result.discriminant, locale)}</span>
+                <CopyButton text={String(formatNumber(result.discriminant, locale))} />
+              </div>
                   </div>
                 )}
                 {result.roots?.map((root) => (
                   <div key={root.label} className="result-item">
                     <div className="result-label">{root.label}</div>
                     <div className="result-value-box">
-                      <span className="result-value">{root.value}</span>
-                    </div>
+                <span className="result-value">{root.value}</span>
+                <CopyButton text={String(root.value)} />
+              </div>
                   </div>
                 ))}
               </div>

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 interface PartialProduct {
   digit: string;
@@ -272,6 +273,9 @@ export function LongMultiplicationCalculator() {
                   </div>
                   <div style={{ color: 'var(--text-secondary)' }}>
                     {t('equation', { a: result.multiplicand, b: result.multiplier, p: result.product.toString() })}
+                  </div>
+                  <div style={{ marginTop: '0.75rem' }}>
+                    <CopyButton text={result.product.toString()} className="btn btn-secondary" />
                   </div>
                   {diagramLayout && (
                     <div

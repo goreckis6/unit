@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 export type CurrentType = 'dc' | 'single' | 'three';
 
@@ -166,6 +167,7 @@ export function AmpsToWattsCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(2)}</span>
                 <span className="result-unit">W</span>
+                <CopyButton text={`${result.toFixed(2)} W`} />
               </div>
             </div>
           </div>

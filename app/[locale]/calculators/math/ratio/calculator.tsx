@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 type RatioKey = 'a' | 'b' | 'c' | 'd';
 
@@ -288,6 +289,11 @@ export function RatioCalculator() {
                 </>
               )}
             </div>
+            {'error' in ratioResult ? null : (
+              <div className="action-buttons" style={{ marginTop: '0.75rem' }}>
+                <CopyButton text={`${ratioResult.missingKey.toUpperCase()} = ${formatNumber(ratioResult.value)}`} className="btn btn-secondary" />
+              </div>
+            )}
           </div>
 
           <div className="input-card" style={{ marginTop: '1.25rem' }}>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 /** Real power in kW: kW = VA × PF / 1000 */
 export function vaToKw(va: number, powerFactor: number): number {
@@ -97,6 +98,7 @@ export function VaToKwCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">kW</span>
+                <CopyButton text={`${result.toFixed(4)} kW`} />
               </div>
             </div>
           </div>

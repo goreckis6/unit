@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 type Fraction = {
   numerator: number;
@@ -244,6 +245,7 @@ export function SubtractingFractionsCalculator() {
                 <span className="result-value">
                   {formatDisplayFraction(f1)} - {formatDisplayFraction(f2)} = {formatDisplayFraction(resultFraction)}
                 </span>
+                <CopyButton text={`${formatDisplayFraction(f1)} - ${formatDisplayFraction(f2)} = ${formatDisplayFraction(resultFraction)}${resultDecimal !== null ? ` (${resultDecimal.toFixed(6).replace(/\.?0+$/, '')})` : ''}`} />
               </div>
             </div>
             {resultDecimal !== null && (

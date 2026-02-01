@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 export type CalcType = 'watts' | 'ohms';
 
@@ -148,6 +149,7 @@ export function VoltsToAmpsCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">A</span>
+                <CopyButton text={`${result.toFixed(4)} A`} />
               </div>
             </div>
           </div>

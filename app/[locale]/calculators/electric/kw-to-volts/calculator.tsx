@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 export type KwToVoltsType = 'dc' | 'single' | 'three';
 
@@ -178,6 +179,7 @@ export function KwToVoltsCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(2)}</span>
                 <span className="result-unit">V</span>
+                <CopyButton text={`${result.toFixed(2)} V`} />
               </div>
             </div>
           </div>

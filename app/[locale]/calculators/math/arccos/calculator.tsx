@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 interface ArccosResult {
   radians: number;
@@ -87,6 +88,7 @@ export function ArccosCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.degrees.toFixed(4)}</span>
                 <span className="result-unit">°</span>
+                <CopyButton text={`${result.degrees.toFixed(4)} °`} />
               </div>
             </div>
             <div className="result-item">
@@ -94,6 +96,7 @@ export function ArccosCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.radians.toFixed(6)}</span>
                 <span className="result-unit">rad</span>
+                <CopyButton text={`${result.radians.toFixed(6)} rad`} />
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 const DECIMAL_PLACES = 8;
 
@@ -63,11 +64,6 @@ export function RootsCalculator() {
         ? `±${formatResult(result, locale)}`
         : formatResult(result, locale)
       : '';
-
-  const handleCopy = useCallback(() => {
-    if (!displayValue) return;
-    void navigator.clipboard.writeText(displayValue);
-  }, [displayValue]);
 
   return (
     <div className="root-calc-block">
@@ -143,14 +139,7 @@ export function RootsCalculator() {
         >
           {displayValue || '—'}
         </output>
-        <button
-          type="button"
-          onClick={handleCopy}
-          className="root-calc-copy-btn"
-          disabled={!displayValue}
-        >
-          {t('copyResult')}
-        </button>
+        <CopyButton text={displayValue} className="root-calc-copy-btn" />
       </div>
     </div>
   );

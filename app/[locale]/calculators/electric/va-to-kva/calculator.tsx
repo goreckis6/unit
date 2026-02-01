@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 /** Apparent power: kVA = VA / 1000 */
 export function vaToKva(va: number): number {
@@ -73,6 +74,7 @@ export function VaToKvaCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">kVA</span>
+                <CopyButton text={`${result.toFixed(4)} kVA`} />
               </div>
             </div>
           </div>

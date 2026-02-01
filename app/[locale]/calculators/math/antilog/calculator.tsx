@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 export function calculateAntilog(value: number, base: number = 10): number {
   return Math.pow(base, value);
@@ -96,6 +97,7 @@ export function AntilogCalculator() {
               <div className="result-label">{t('antilog')}</div>
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(6)}</span>
+                <CopyButton text={String(result.toFixed(6))} />
               </div>
             </div>
           </div>

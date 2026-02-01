@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 export type PhaseType = 'dc' | 'single' | 'three';
 
@@ -159,6 +160,7 @@ export function WattsToVoltsCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">V</span>
+                <CopyButton text={`${result.toFixed(4)} V`} />
               </div>
             </div>
           </div>

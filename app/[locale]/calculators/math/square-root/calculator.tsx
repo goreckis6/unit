@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 const DECIMAL_PLACES = 5;
 
@@ -53,11 +54,6 @@ export function SquareRootCalculator() {
 
   const displayValue = result ? `±${result.positive}` : '';
 
-  const handleCopy = useCallback(() => {
-    if (!displayValue) return;
-    void navigator.clipboard.writeText(displayValue);
-  }, [displayValue]);
-
   return (
     <div className="root-calc-block">
       <div className="root-calc-input-row">
@@ -100,9 +96,7 @@ export function SquareRootCalculator() {
         <output htmlFor="number" className="root-calc-output-field" aria-live="polite">
           {displayValue || '—'}
         </output>
-        <button type="button" onClick={handleCopy} className="root-calc-copy-btn" disabled={!displayValue}>
-          {t('copyResult')}
-        </button>
+        <CopyButton text={displayValue} className="root-calc-copy-btn" />
       </div>
     </div>
   );

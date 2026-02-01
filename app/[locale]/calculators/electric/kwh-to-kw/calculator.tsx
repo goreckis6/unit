@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 /** Power (kW) = Energy (kWh) / Time (hours) */
 export function kwhToKw(kwh: number, hours: number): number {
@@ -97,6 +98,7 @@ export function KwhToKwCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">kW</span>
+                <CopyButton text={`${result.toFixed(4)} kW`} />
               </div>
             </div>
           </div>

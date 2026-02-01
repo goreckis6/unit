@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 type Fraction = {
   numerator: number;
@@ -156,6 +157,7 @@ export function AddingFractionsCalculator() {
                 <span className="result-value">
                   {resultFraction.numerator}/{resultFraction.denominator}
                 </span>
+                <CopyButton text={`${resultFraction.numerator}/${resultFraction.denominator}${resultDecimal !== null ? ` = ${resultDecimal.toFixed(4)}` : ''}`} />
               </div>
             </div>
             {resultDecimal !== null && (

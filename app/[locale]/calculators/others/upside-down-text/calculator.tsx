@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 type TextOrder = 'normal' | 'reversed';
 
@@ -58,10 +59,6 @@ export function UpsideDownTextGenerator() {
     setText('');
     setOrder('normal');
     setResult('');
-  };
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(result);
   };
 
   return (
@@ -149,11 +146,9 @@ export function UpsideDownTextGenerator() {
                 cursor: 'pointer',
                 gap: '0.75rem',
                 flexWrap: 'wrap'
-              }} onClick={handleCopy}>
+              }}>
                 <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{result}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
-                  {t('copy')}
-                </button>
+                <CopyButton text={result} className="btn btn-secondary" />
               </div>
             ) : (
               <div className="number-input" style={{ 

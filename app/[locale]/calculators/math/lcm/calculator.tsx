@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 function gcd(a: number, b: number): number {
   a = Math.abs(a);
@@ -212,6 +213,7 @@ export function LCMCalculator() {
                     <span className="result-value" style={{ fontSize: '1.75rem', fontWeight: '600' }}>
                       {result.lcm.toLocaleString()}
                     </span>
+                    <CopyButton text={result.lcm.toLocaleString()} />
                   </div>
                 </div>
 

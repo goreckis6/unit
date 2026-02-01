@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 function parseNonNegativeInt(input: string): number | null {
   const trimmed = input.trim();
@@ -146,17 +147,17 @@ export function FactorialCalculator() {
                   overflowWrap: 'break-word',
                 }}
               >
-                <div style={{ fontSize: '1.35rem', fontWeight: 800 }}>
-                  {t('resultValue', { n: result.n, value: result.value.toString() })}
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <div style={{ fontSize: '1.35rem', fontWeight: 800, flex: '1 1 auto' }}>
+                    {t('resultValue', { n: result.n, value: result.value.toString() })}
+                  </div>
+                  <CopyButton text={`${result.n}! = ${result.value}`} />
                 </div>
                 {expansion && (
                   <div style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
                     {t('expansion', { expansion })}
                   </div>
                 )}
-                <div style={{ color: 'var(--text-secondary)' }}>
-                  {t('equation', { n: result.n, value: result.value.toString() })}
-                </div>
               </div>
             ) : (
               <div

@@ -1705,6 +1705,31 @@ a {
   color: var(--text-secondary);
 }
 
+.copy-result-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+}
+
+.copy-result-btn:hover:not(:disabled) {
+  color: var(--primary-color);
+  background: var(--bg-tertiary);
+  border-color: var(--primary-color);
+}
+
+.copy-result-btn:disabled {
+  cursor: default;
+  color: var(--primary-color);
+}
+
 .result-section {
   margin-top: 3rem;
   padding-top: 3rem;

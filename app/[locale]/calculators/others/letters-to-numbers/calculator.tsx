@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 // Alphabet mappings
 const alphabets: Record<string, string[]> = {
@@ -124,12 +125,6 @@ export function LettersToNumbersConverter() {
     setResult('');
   };
 
-  const handleCopy = () => {
-    if (result) {
-      navigator.clipboard.writeText(result);
-    }
-  };
-
   return (
     <>
       <div className="split-view-container">
@@ -226,13 +221,7 @@ export function LettersToNumbersConverter() {
                 gap: '1rem'
               }}>
                 <div style={{ flex: 1, color: 'var(--text-primary)' }}>{result}</div>
-                <button 
-                  onClick={handleCopy} 
-                  className="btn btn-primary" 
-                  style={{ minHeight: '44px', minWidth: '44px', alignSelf: 'flex-start' }}
-                >
-                  {t('copy')}
-                </button>
+                <CopyButton text={result} className="btn btn-primary" />
               </div>
             ) : (
               <div className="number-input" style={{ 

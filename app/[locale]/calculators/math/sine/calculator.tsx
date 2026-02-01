@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 type AngleUnit = 'deg' | 'rad' | 'mrad' | 'pi';
 
@@ -151,6 +152,7 @@ export function SineCalculator() {
               <div className="result-label">{t('sineOfAlpha')}</div>
               <div className="result-value-box">
                 <span className="result-value">{formatResult(result)}</span>
+                <CopyButton text={String(formatResult(result))} />
               </div>
             </div>
           </div>

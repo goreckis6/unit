@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 export type KwToAmpsType = 'dc' | 'single' | 'three';
 
@@ -186,6 +187,7 @@ export function KwToAmpsCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(2)}</span>
                 <span className="result-unit">A</span>
+                <CopyButton text={`${result.toFixed(2)} A`} />
               </div>
             </div>
           </div>

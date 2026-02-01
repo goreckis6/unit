@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 export function wattsToKva(watts: number, powerFactor: number): number {
   if (powerFactor <= 0 || powerFactor > 1) return 0;
@@ -98,6 +99,7 @@ export function WattsToKvaCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">kVA</span>
+                <CopyButton text={`${result.toFixed(4)} kVA`} />
               </div>
             </div>
           </div>

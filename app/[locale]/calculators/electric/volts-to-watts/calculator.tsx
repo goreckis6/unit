@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 export function voltsToWatts(volts: number, amps: number): number {
   if (volts <= 0 || amps <= 0) return 0;
@@ -89,6 +90,7 @@ export function VoltsToWattsCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">W</span>
+                <CopyButton text={`${result.toFixed(4)} W`} />
               </div>
             </div>
           </div>

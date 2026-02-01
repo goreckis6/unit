@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 // KE = (1/2) * m * v^2  (mass in kg, velocity in m/s, result in joules)
 function calculateKE(massKg: number, velocityMs: number): number {
@@ -153,6 +154,7 @@ export function KineticEnergyCalculator() {
                     <span className="result-value" style={{ fontSize: '1.75rem', fontWeight: '600' }}>
                       {result.ke.toExponential(4)} J
                     </span>
+                    <CopyButton text={`${result.ke.toExponential(4)} J`} />
                   </div>
                 </div>
                 <div

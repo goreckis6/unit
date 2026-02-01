@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 function parseSequence(input: string): number[] {
   if (!input.trim()) return [];
@@ -145,19 +146,22 @@ export function ConvolutionCalculator() {
                 {error}
               </div>
             ) : result ? (
-              <div className="number-input" style={{ 
-                wordWrap: 'break-word',
-                wordBreak: 'break-word',
-                overflowWrap: 'break-word',
-                whiteSpace: 'pre-wrap', 
-                minHeight: '100px',
-                fontFamily: 'monospace',
-                fontSize: '1.1em',
-                padding: '1.25rem',
-                display: 'flex',
-                alignItems: 'center'
-              }}>
-                {result}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <div className="number-input" style={{ 
+                  wordWrap: 'break-word',
+                  wordBreak: 'break-word',
+                  overflowWrap: 'break-word',
+                  whiteSpace: 'pre-wrap', 
+                  minHeight: '100px',
+                  fontFamily: 'monospace',
+                  fontSize: '1.1em',
+                  padding: '1.25rem',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}>
+                  {result}
+                </div>
+                <CopyButton text={result} />
               </div>
             ) : (
               <div className="number-input" style={{ 

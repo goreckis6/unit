@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 type BoldStyle = 'serif' | 'sans-serif' | 'italic-serif' | 'italic-sans-serif' | 'script' | 'fraktur' | 'double-struck' | 'monospace';
 
@@ -144,10 +145,6 @@ export function BoldTextGenerator() {
     setText('');
   };
 
-  const handleCopy = (text: string) => {
-    navigator.clipboard.writeText(text);
-  };
-
   return (
     <>
       <div className="split-view-container">
@@ -207,11 +204,9 @@ export function BoldTextGenerator() {
                 whiteSpace: 'pre-wrap',
                 gap: '0.75rem',
                 flexWrap: 'wrap'
-              }} onClick={() => handleCopy(results['serif'])}>
+              }}>
                 <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['serif'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['serif']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
-                  {t('copy')}
-                </button>
+                <CopyButton text={results['serif']} className="btn btn-secondary" />
               </div>
             </div>
 
@@ -235,11 +230,9 @@ export function BoldTextGenerator() {
                 whiteSpace: 'pre-wrap',
                 gap: '0.75rem',
                 flexWrap: 'wrap'
-              }} onClick={() => handleCopy(results['sans-serif'])}>
+              }}>
                 <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['sans-serif'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['sans-serif']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
-                  {t('copy')}
-                </button>
+                <CopyButton text={results['sans-serif']} className="btn btn-secondary" />
               </div>
             </div>
 
@@ -263,11 +256,9 @@ export function BoldTextGenerator() {
                 whiteSpace: 'pre-wrap',
                 gap: '0.75rem',
                 flexWrap: 'wrap'
-              }} onClick={() => handleCopy(results['italic-serif'])}>
+              }}>
                 <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['italic-serif'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['italic-serif']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
-                  {t('copy')}
-                </button>
+                <CopyButton text={results['italic-serif']} className="btn btn-secondary" />
               </div>
             </div>
 
@@ -291,11 +282,9 @@ export function BoldTextGenerator() {
                 whiteSpace: 'pre-wrap',
                 gap: '0.75rem',
                 flexWrap: 'wrap'
-              }} onClick={() => handleCopy(results['italic-sans-serif'])}>
+              }}>
                 <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['italic-sans-serif'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['italic-sans-serif']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
-                  {t('copy')}
-                </button>
+                <CopyButton text={results['italic-sans-serif']} className="btn btn-secondary" />
               </div>
             </div>
 
@@ -319,11 +308,9 @@ export function BoldTextGenerator() {
                 whiteSpace: 'pre-wrap',
                 gap: '0.75rem',
                 flexWrap: 'wrap'
-              }} onClick={() => handleCopy(results['script'])}>
+              }}>
                 <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['script'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['script']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
-                  {t('copy')}
-                </button>
+                <CopyButton text={results['script']} className="btn btn-secondary" />
               </div>
             </div>
 
@@ -347,11 +334,9 @@ export function BoldTextGenerator() {
                 whiteSpace: 'pre-wrap',
                 gap: '0.75rem',
                 flexWrap: 'wrap'
-              }} onClick={() => handleCopy(results['fraktur'])}>
+              }}>
                 <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['fraktur'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['fraktur']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
-                  {t('copy')}
-                </button>
+                <CopyButton text={results['fraktur']} className="btn btn-secondary" />
               </div>
             </div>
 
@@ -375,11 +360,9 @@ export function BoldTextGenerator() {
                 whiteSpace: 'pre-wrap',
                 gap: '0.75rem',
                 flexWrap: 'wrap'
-              }} onClick={() => handleCopy(results['double-struck'])}>
+              }}>
                 <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['double-struck'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['double-struck']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
-                  {t('copy')}
-                </button>
+                <CopyButton text={results['double-struck']} className="btn btn-secondary" />
               </div>
             </div>
 
@@ -403,11 +386,9 @@ export function BoldTextGenerator() {
                 whiteSpace: 'pre-wrap',
                 gap: '0.75rem',
                 flexWrap: 'wrap'
-              }} onClick={() => handleCopy(results['monospace'])}>
+              }}>
                 <span style={{ wordWrap: 'break-word', wordBreak: 'break-word', overflowWrap: 'break-word', flex: '1', minWidth: '0' }}>{results['monospace'] || t('textPlaceholder')}</span>
-                <button onClick={(e) => { e.stopPropagation(); handleCopy(results['monospace']); }} className="btn btn-secondary" style={{ padding: '0.625rem 1rem', fontSize: '0.875rem', minHeight: '44px', minWidth: '44px', flexShrink: 0 }}>
-                  {t('copy')}
-                </button>
+                <CopyButton text={results['monospace']} className="btn btn-secondary" />
               </div>
             </div>
           </div>

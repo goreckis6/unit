@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 /** Single Phase: I = VA / V; Three Phase: I = VA / (√3 × V) */
 export function vaToAmps(va: number, voltage: number, phase: 'single' | 'three'): number {
@@ -123,6 +124,7 @@ export function VaToAmpsCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">A</span>
+                <CopyButton text={`${result.toFixed(4)} A`} />
               </div>
             </div>
           </div>

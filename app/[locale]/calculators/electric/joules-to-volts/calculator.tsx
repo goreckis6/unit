@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
+import { CopyButton } from '@/components/CopyButton';
 
 export function joulesToVolts(joules: number, coulombs: number): number {
   if (coulombs <= 0) return 0;
@@ -95,6 +96,7 @@ export function JoulesToVoltsCalculator() {
               <div className="result-value-box">
                 <span className="result-value">{result.toFixed(4)}</span>
                 <span className="result-unit">V</span>
+                <CopyButton text={`${result.toFixed(4)} V`} />
               </div>
             </div>
           </div>

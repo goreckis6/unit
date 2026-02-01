@@ -2,6 +2,7 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 function parseBigIntStrict(input: string): bigint | null {
   const trimmed = input.trim();
@@ -83,11 +84,6 @@ export function RemainderCalculator() {
     setResult(null);
     setError(null);
   }, []);
-
-  const handleCopyRemainder = useCallback(() => {
-    if (!display) return;
-    void navigator.clipboard.writeText(display.r);
-  }, [display]);
 
   return (
     <>
@@ -176,9 +172,7 @@ export function RemainderCalculator() {
             </div>
 
             <div className="action-buttons" style={{ marginTop: '1rem' }}>
-              <button onClick={handleCopyRemainder} className="btn btn-secondary" disabled={!display}>
-                {t('copyRemainder')}
-              </button>
+              <CopyButton text={display ? display.r : ''} className="btn btn-secondary" />
             </div>
           </div>
         </div>

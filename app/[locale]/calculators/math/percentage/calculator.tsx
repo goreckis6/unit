@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { CopyButton } from '@/components/CopyButton';
 
 export function PercentageCalculator() {
   const t = useTranslations('calculators.percentage');
@@ -120,9 +121,12 @@ export function PercentageCalculator() {
             <div className="input-card">
               <label className="input-label">{t('result')}</label>
               <div className="input-with-unit">
-                <div className="result-input-display">
+                <div className="result-input-display" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
                   {section1Result !== null ? (
-                    <span className="result-value-inline">{section1Result.toFixed(4)}</span>
+                    <>
+                      <span className="result-value-inline">{section1Result.toFixed(4)}</span>
+                      <CopyButton text={String(section1Result.toFixed(4))} />
+                    </>
                   ) : (
                     <span className="result-placeholder">—</span>
                   )}
@@ -187,11 +191,12 @@ export function PercentageCalculator() {
             <div className="input-card">
               <label className="input-label">{t('type2.result')}</label>
               <div className="input-with-unit">
-                <div className="result-input-display">
+                <div className="result-input-display" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
                   {section2Result !== null ? (
                     <>
                       <span className="result-value-inline">{section2Result.toFixed(2)}</span>
                       <span className="result-unit">%</span>
+                      <CopyButton text={`${section2Result.toFixed(2)}%`} />
                     </>
                   ) : (
                     <span className="result-placeholder">—</span>
@@ -263,11 +268,12 @@ export function PercentageCalculator() {
                     : t('type3.resultIncrease')}
               </label>
               <div className="input-with-unit">
-                <div className="result-input-display">
+                <div className="result-input-display" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
                   {section3Result !== null ? (
                     <>
                       <span className="result-value-inline">{section3Result.toFixed(2)}</span>
                       <span className="result-unit">%</span>
+                      <CopyButton text={`${section3Result.toFixed(2)}%`} />
                     </>
                   ) : (
                     <span className="result-placeholder">—</span>

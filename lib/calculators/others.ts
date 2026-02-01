@@ -1,32 +1,16 @@
-import { Calculator, sortCalculatorsAlphabetically } from './types';
+import { Calculator, addCalculatorsSorted } from './types';
 
-const otherCalculatorsList: Calculator[] = [
-  {
-    id: 'text-to-binary',
-    titleKey: 'textToBinary.title',
-    descKey: 'textToBinary.description',
-    path: '/calculators/others/text-to-binary',
-    category: 'others',
-  },
+/**
+ * Others category calculators. When adding a new calculator, add a new entry
+ * to the array below (any position). addCalculatorsSorted() keeps the list A–Z by id.
+ */
+const otherCalculatorsList: Calculator[] = addCalculatorsSorted(
+  [
   {
     id: 'ascii-converter',
     titleKey: 'asciiConverter.title',
     descKey: 'asciiConverter.description',
     path: '/calculators/others/ascii-converter',
-    category: 'others',
-  },
-  {
-    id: 'caesar-cipher',
-    titleKey: 'caesarCipher.title',
-    descKey: 'caesarCipher.description',
-    path: '/calculators/others/caesar-cipher',
-    category: 'others',
-  },
-  {
-    id: 'pig-latin',
-    titleKey: 'pigLatin.title',
-    descKey: 'pigLatin.description',
-    path: '/calculators/others/pig-latin',
     category: 'others',
   },
   {
@@ -37,10 +21,24 @@ const otherCalculatorsList: Calculator[] = [
     category: 'others',
   },
   {
-    id: 'small-caps',
-    titleKey: 'smallCaps.title',
-    descKey: 'smallCaps.description',
-    path: '/calculators/others/small-caps',
+    id: 'caesar-cipher',
+    titleKey: 'caesarCipher.title',
+    descKey: 'caesarCipher.description',
+    path: '/calculators/others/caesar-cipher',
+    category: 'others',
+  },
+  {
+    id: 'italic-text',
+    titleKey: 'italicText.title',
+    descKey: 'italicText.description',
+    path: '/calculators/others/italic-text',
+    category: 'others',
+  },
+  {
+    id: 'letters-to-numbers',
+    titleKey: 'lettersToNumbers.title',
+    descKey: 'lettersToNumbers.description',
+    path: '/calculators/others/letters-to-numbers',
     category: 'others',
   },
   {
@@ -65,17 +63,24 @@ const otherCalculatorsList: Calculator[] = [
     category: 'others',
   },
   {
-    id: 'letters-to-numbers',
-    titleKey: 'lettersToNumbers.title',
-    descKey: 'lettersToNumbers.description',
-    path: '/calculators/others/letters-to-numbers',
+    id: 'pig-latin',
+    titleKey: 'pigLatin.title',
+    descKey: 'pigLatin.description',
+    path: '/calculators/others/pig-latin',
     category: 'others',
   },
   {
-    id: 'italic-text',
-    titleKey: 'italicText.title',
-    descKey: 'italicText.description',
-    path: '/calculators/others/italic-text',
+    id: 'small-caps',
+    titleKey: 'smallCaps.title',
+    descKey: 'smallCaps.description',
+    path: '/calculators/others/small-caps',
+    category: 'others',
+  },
+  {
+    id: 'text-to-binary',
+    titleKey: 'textToBinary.title',
+    descKey: 'textToBinary.description',
+    path: '/calculators/others/text-to-binary',
     category: 'others',
   },
   {
@@ -85,6 +90,8 @@ const otherCalculatorsList: Calculator[] = [
     path: '/calculators/others/upside-down-text',
     category: 'others',
   },
-];
+  // Add new others calculators here; list is sorted A–Z by id automatically.
+  ],
+);
 
-export const otherCalculators: Calculator[] = sortCalculatorsAlphabetically(otherCalculatorsList);
+export const otherCalculators = otherCalculatorsList;

@@ -3676,6 +3676,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "LNKO kalkulátor - Legnagyobb közös osztó",
+      "description": "Számítsa ki két vagy több szám legnagyobb közös osztóját (LNKO) azonnal. Keresse meg a legnagyobb pozitív egész számot, amely minden számot oszt. Ingyenes online LNKO kalkulátor lépésekkel.",
+      "inputLabel": "Adja meg a számokat",
+      "inputPlaceholder": "pl. 24, 36, 48",
+      "inputHint": "Adjon meg két vagy több pozitív egész számot vesszővel, szóközzel vagy pontosvesszővel elválasztva",
+      "calculate": "Számítás",
+      "reset": "Törlés",
+      "results": "Eredmények",
+      "numbers": "Számok",
+      "gcfResult": "Legnagyobb közös osztó (LNKO)",
+      "steps": "Számítási lépések",
+      "formula": "Képlet",
+      "enterNumbers": "Adjon meg legalább két számot a számításhoz",
+      "errorInvalid": "Adjon meg érvényes pozitív egész számokat",
+      "errorZero": "A nulla nem szerepelhet az LNKO számításban",
+      "errorMinTwo": "Adjon meg legalább két számot",
+      "seo": {
+        "title": "LNKO kalkulátor – Legnagyobb közös osztó online",
+        "description": "Ingyenes legnagyobb közös osztó (LNKO) kalkulátor. Számítsa ki két vagy több szám LNKO-ját azonnal lépésről lépésre megoldásokkal. Tökéletes diákoknak, tanároknak és bárkinek, aki törtekkel és számelmélettel foglalkozik.",
+        "keywords": "lnko kalkulátor, legnagyobb közös osztó, lnko kereső, gcd kalkulátor, lnko számok, közös osztó kalkulátor, lnko lépésekkel, számelmélet kalkulátor",
+        "content": {
+          "heading": "Mi a legnagyobb közös osztó (LNKO)?",
+          "paragraph1": "A legnagyobb közös osztó (LNKO), más néven legnagyobb közös osztó (GCD), a legnagyobb pozitív egész szám, amely minden megadott számot maradék nélkül oszt. Például a 24 és 36 LNKO-ja 12, mert a 12 a legnagyobb szám, amely mind a 24-et, mind a 36-ot osztja. Ingyenes LNKO kalkulátorunk segít gyorsan és pontosan megtalálni bármely pozitív egész számok halmazának legnagyobb közös osztóját lépésről lépésre megoldásokkal az Euklideszi algoritmus segítségével.",
+          "paragraph2": "Az LNKO szorosan kapcsolódik a legkisebb közös többszöröshöz (LKKT). Az alapvető összefüggés: LKKT(a, b) × LNKO(a, b) = a × b. Ez azt jelenti, hogy ha ismeri két szám LNKO-ját, könnyen kiszámíthatja LKKT-jüket. Több szám esetén az LNKO-t egymás után számítjuk: először keresse meg az első két szám LNKO-ját, majd ennek az eredménynek és a harmadik számnak az LNKO-ját stb. Az Euklideszi algoritmus hatékony: LNKO(a, b) = LNKO(b, a mod b), amíg b = 0.",
+          "paragraph3": "Az LNKO-nak számos gyakorlati alkalmazása van: törtek egyszerűsítésében (számláló és nevező osztása LNKO-jukkal a legkisebb alak érdekében), diofantoszi egyenletek megoldásában, kriptográfiában (pl. RSA), ütemtervezésben és ismétlődő mintákban, közös méretek mérésében és arányfeladatokban. Az LNKO megértése elengedhetetlen mindenki számára, aki törtekkel, arányokkal vagy oszthatósággal foglalkozik.",
+          "paragraph4": "LNKO kalkulátorunk tetszőleges számú pozitív egész számot kezel és megjeleníti a számítási lépéseket, ami tökéletessé teszi oktatási célokra. A kalkulátor az Euklideszi algoritmust használja a hatékonyság érdekében, még nagy számoknál is. Akár diák vagy, aki tényezőkről tanul, akár tanár, aki matematikaórákat készít, akár bárki, akinek gyors LNKO számításokra van szüksége, eszközünk azonnali és pontos eredményeket nyújt ingyen.",
+          "exampleHeading": "Példa: LNKO számítások",
+          "exampleText": "1. példa: LNKO(24, 36) = 12. A 24 osztói: 1, 2, 3, 4, 6, 8, 12, 24. A 36 osztói: 1, 2, 3, 4, 6, 9, 12, 18, 36. A legnagyobb közös osztó 12. 2. példa: LNKO(48, 18, 30) = 6. Először LNKO(48, 18) = 6, majd LNKO(6, 30) = 6. 3. példa: LNKO(17, 19) = 1. Ha két számnak nincs közös osztója 1-en kívül, relatív prímek és LNKO = 1."
+        },
+        "faq": {
+          "heading": "Gyakran ismételt kérdések",
+          "items": [
+            {
+              "question": "Mi a különbség az LNKO és az LKKT között?",
+              "answer": "Az LNKO (legnagyobb közös osztó) a legnagyobb szám, amely minden megadott számot oszt, míg az LKKT (legkisebb közös többszörös) a legkisebb szám, amely minden megadott számmal osztható. Összefüggésük: LKKT(a, b) × LNKO(a, b) = a × b. Például 12 és 18 esetén: LNKO = 6, LKKT = 36 és 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "Hogyan találja meg két szám LNKO-ját?",
+              "answer": "Gyakori módszerek: (1) Osztók felsorolása: sorolja fel mindkét szám osztóit és vegye a legnagyobb közöst. (2) Prímtényezős felbontás: bontsa mindkét számot prímszámokra, majd szorozza a közös prímeket a legalacsonyabb hatványon. (3) Euklideszi algoritmus: ismételten cserélje a nagyobb számot a kisebbel való osztás maradékára, amíg az egyik szám 0 nem lesz; a másik az LNKO. Kalkulátorunk az Euklideszi algoritmust használja a gyorsaságért."
+            },
+            {
+              "question": "Lehet az LNKO nagyobb a számoknál?",
+              "answer": "Nem, az LNKO mindig kisebb vagy egyenlő a megadott számok legkisebbikénél. Definíció szerint az LNKO-nak minden bemeneti számot el kell osztania, ezért nem haladhatja meg egyiket sem. A maximális LNKO akkor van, amikor minden szám egyenlő: LNKO(n, n, ..., n) = n."
+            },
+            {
+              "question": "Miért használjuk az LNKO-t törtek egyszerűsítésénél?",
+              "answer": "A tört számlálójának és nevezőjének elosztása LNKO-jukkal a tört legkisebb alakját adja. Például a 24/36 LNKO(24, 36) = 12, tehát 24÷12 / 36÷12 = 2/3. Ez a tört legegyszerűbb formája."
+            },
+            {
+              "question": "Mi a relatív prímek LNKO-ja?",
+              "answer": "Két szám relatív prím, ha egyetlen közös osztójuk az 1. Tehát LNKO(a, b) = 1. Például a 8 és a 15 relatív prímek: a 8 osztói 1, 2, 4, 8; a 15 osztói 1, 3, 5, 15; közös csak az 1."
+            },
+            {
+              "question": "Ingyenes ez az LNKO kalkulátor?",
+              "answer": "Igen, LNKO kalkulátorunk teljesen ingyenes, regisztráció, előfizetés vagy fizetés nélkül. Adjon meg tetszőleges pozitív egész számok halmazát, és kapjon azonnali, pontos eredményeket lépésről lépésre számításokkal. A kalkulátor egyszerre több számot is kezel és megjeleníti a teljes megoldási folyamatot."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó kalkulátorok",
+          "lcm": "LKKT kalkulátor",
+          "lcmDesc": "Számítsa ki két vagy több szám legkisebb közös többszörösét (LKKT) lépésről lépésre megoldásokkal",
+          "fractions": "Törtösszeadó kalkulátor",
+          "fractionsDesc": "Adjon össze törteket közös nevezőkkel; az LNKO segít egyszerűsíteni az eredményeket",
+          "remainder": "Maradék kalkulátor",
+          "remainderDesc": "Keresse meg a hányadost és a maradékot; az Euklideszi algoritmus maradékot használ az LNKO-hoz"
+        }
+      }
+    },
     "convolution": {
       "title": "Konvolúció Számológép",
       "description": "Számítsa ki két adatsorozat diszkrét konvolúcióját. Ingyenes online eszköz jelelfeldolgozáshoz, matematikához és mérnöki alkalmazásokhoz.",

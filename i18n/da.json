@@ -3676,6 +3676,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "GCF-beregner - Største fælles faktor",
+      "description": "Beregn den største fælles faktor (GCF) for to eller flere tal med det samme. Find det største positive heltal, der deler alle tal. Gratis online GCF-beregner med trin.",
+      "inputLabel": "Indtast tal",
+      "inputPlaceholder": "f.eks. 24, 36, 48",
+      "inputHint": "Indtast to eller flere positive heltal adskilt af kommaer, mellemrum eller semikolon",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "results": "Resultater",
+      "numbers": "Tal",
+      "gcfResult": "Største fælles faktor (GCF)",
+      "steps": "Beregningstrin",
+      "formula": "Formel",
+      "enterNumbers": "Indtast mindst to tal for at beregne",
+      "errorInvalid": "Indtast gyldige positive heltal",
+      "errorZero": "Nul kan ikke inkluderes i GCF-beregning",
+      "errorMinTwo": "Indtast mindst to tal",
+      "seo": {
+        "title": "GCF-beregner – Find største fælles faktor online",
+        "description": "Gratis største fælles faktor (GCF) beregner. Beregn GCF for to eller flere tal med det samme med trin-for-trin løsninger. Perfekt til elever, lærere og alle, der arbejder med brøker og talteori.",
+        "keywords": "gcf beregner, største fælles faktor, gcf finder, gcd beregner, største fælles divisor, gcf af tal, fælles faktor beregner, gcf med trin, talteori beregner",
+        "content": {
+          "heading": "Hvad er største fælles faktor (GCF)?",
+          "paragraph1": "Den største fælles faktor (GCF), også kendt som den største fælles divisor (GCD), er det største positive heltal, der deler alle givne tal uden rest. For eksempel er GCF af 24 og 36 lig 12, fordi 12 er det største tal, der deler både 24 og 36 jævnt. Vores gratis GCF-beregner hjælper dig med at finde den største fælles faktor for ethvert sæt positive heltal hurtigt og præcist med trin-for-trin løsninger ved hjælp af Euklids algoritme.",
+          "paragraph2": "GCF er tæt forbundet med det mindste fælles multiplum (LCM). Den grundlæggende relation er: LCM(a, b) × GCF(a, b) = a × b. Det betyder, at hvis du kender GCF af to tal, kan du nemt beregne deres LCM. For flere tal beregnes GCF sekventielt: find først GCF af de to første tal, derefter GCF af det resultat med det tredje tal osv. Euklids algoritme er effektiv: GCF(a, b) = GCF(b, a mod b) indtil b = 0.",
+          "paragraph3": "GCF har mange praktiske anvendelser: ved forenkling af brøker (at dividere tæller og nævner med deres GCF for at få laveste led), ved løsning af diofantiske ligninger, i kryptografi (f.eks. RSA), i planlægning og gentagne mønstre, ved måling af fælles dimensioner og i forholdsproblemer. Forståelse af GCF er afgørende for alle, der arbejder med brøker, forhold eller delelighed.",
+          "paragraph4": "Vores GCF-beregner håndterer et vilkårligt antal positive heltal og viser beregningstrinene, hvilket gør den perfekt til undervisningsformål. Beregneren bruger Euklids algoritme for effektivitet, også for store tal. Uanset om du er elev, der lærer om faktorer, lærer der forbereder mattelektioner eller enhver, der har brug for hurtige GCF-beregninger, giver vores værktøj nøjagtige resultater øjeblikkeligt og gratis.",
+          "exampleHeading": "Eksempel: GCF-beregninger",
+          "exampleText": "Eksempel 1: GCF(24, 36) = 12. Faktorer af 24: 1, 2, 3, 4, 6, 8, 12, 24. Faktorer af 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. Største fælles faktor er 12. Eksempel 2: GCF(48, 18, 30) = 6. Først GCF(48, 18) = 6, derefter GCF(6, 30) = 6. Eksempel 3: GCF(17, 19) = 1. Når to tal kun deler faktoren 1, er de indbyrdes primiske og GCF = 1."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er forskellen mellem GCF og LCM?",
+              "answer": "GCF (største fælles faktor) er det største tal, der deler alle givne tal, mens LCM (mindste fælles multiplum) er det mindste tal, der er deleligt med alle givne tal. De er forbundet med: LCM(a, b) × GCF(a, b) = a × b. For eksempel for 12 og 18: GCF = 6, LCM = 36 og 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "Hvordan finder man GCF af to tal?",
+              "answer": "Almindelige metoder: (1) Liste faktorer: list faktorer for hvert tal og tag den største fælles. (2) Primfaktoropdeling: opdel hvert tal i primtal, gang derefter de fælles primtal med den laveste potens. (3) Euklids algoritme: erstat gentagne gange det største tal med resten ved division med det mindste indtil ét tal er 0; det andet er GCF. Vores beregner bruger Euklids algoritme for hastighed."
+            },
+            {
+              "question": "Kan GCF være større end tallene?",
+              "answer": "Nej, GCF er altid mindre end eller lig med det mindste af de givne tal. Per definition skal GCF dele alle indtastede tal, så den kan ikke overstige nogen af dem. Den maksimale GCF er, når alle tal er ens: GCF(n, n, ..., n) = n."
+            },
+            {
+              "question": "Hvorfor bruger vi GCF ved forenkling af brøker?",
+              "answer": "At dividere både tæller og nævner i en brøk med deres GCF giver brøken i laveste led. For eksempel har 24/36 GCF(24, 36) = 12, så 24÷12 / 36÷12 = 2/3. Det er den enkleste form af brøken."
+            },
+            {
+              "question": "Hvad er GCF for indbyrdes primiske tal?",
+              "answer": "To tal er indbyrdes primiske, hvis deres eneste fælles faktor er 1. Så GCF(a, b) = 1. For eksempel er 8 og 15 indbyrdes primiske: faktorer af 8 er 1, 2, 4, 8; faktorer af 15 er 1, 3, 5, 15; kun 1 er fælles."
+            },
+            {
+              "question": "Er denne GCF-beregner gratis at bruge?",
+              "answer": "Ja, vores GCF-beregner er helt gratis uden registrering, abonnement eller betaling. Indtast ethvert sæt positive heltal og få øjeblikkelige, nøjagtige resultater med trin-for-trin beregninger. Beregneren kan håndtere flere tal på én gang og viser hele løsningsprocessen."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede beregnere",
+          "lcm": "LCM-beregner",
+          "lcmDesc": "Beregn det mindste fælles multiplum (LCM) af to eller flere tal med trin-for-trin løsninger",
+          "fractions": "Beregner til brøker",
+          "fractionsDesc": "Læg brøker sammen med fælles nævnere; GCF hjælper med at forenkle resultater",
+          "remainder": "Restberegner",
+          "remainderDesc": "Find kvotient og rest; Euklids algoritme bruger rest til GCF"
+        }
+      }
+    },
     "convolution": {
       "title": "Foldningsberegner",
       "description": "Beregn den diskrete foldning af to datasekvenser. Gratis online værktøj til signalbehandling, matematik og ingeniørapplikationer.",

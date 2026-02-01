@@ -3676,6 +3676,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "GCF Calculator - Greatest Common Factor",
+      "description": "Calculate the Greatest Common Factor (GCF) of two or more numbers instantly. Find the largest positive integer that divides all numbers. Free online GCF calculator with steps.",
+      "inputLabel": "Enter Numbers",
+      "inputPlaceholder": "e.g., 24, 36, 48",
+      "inputHint": "Enter two or more positive integers separated by commas, spaces, or semicolons",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "results": "Results",
+      "numbers": "Numbers",
+      "gcfResult": "Greatest Common Factor (GCF)",
+      "steps": "Calculation Steps",
+      "formula": "Formula",
+      "enterNumbers": "Enter at least two numbers to calculate",
+      "errorInvalid": "Please enter valid positive integers",
+      "errorZero": "Zero cannot be included in GCF calculation",
+      "errorMinTwo": "Please enter at least two numbers",
+      "seo": {
+        "title": "GCF Calculator – Find Greatest Common Factor Online",
+        "description": "Free Greatest Common Factor (GCF) calculator. Calculate GCF of two or more numbers instantly with step-by-step solutions. Perfect for students, teachers, and anyone working with fractions and number theory.",
+        "keywords": "gcf calculator, greatest common factor, gcf finder, gcd calculator, greatest common divisor, gcf of numbers, common factor calculator, gcf with steps, number theory calculator",
+        "content": {
+          "heading": "What is Greatest Common Factor (GCF)?",
+          "paragraph1": "The Greatest Common Factor (GCF), also known as the Greatest Common Divisor (GCD), is the largest positive integer that divides all given numbers without a remainder. For example, the GCF of 24 and 36 is 12, because 12 is the largest number that divides both 24 and 36 evenly. Our free GCF calculator helps you find the greatest common factor of any set of positive integers quickly and accurately, with step-by-step solutions using the Euclidean algorithm.",
+          "paragraph2": "GCF is closely related to the Least Common Multiple (LCM). The fundamental relationship is: LCM(a, b) × GCF(a, b) = a × b. This means if you know the GCF of two numbers, you can easily calculate their LCM. For multiple numbers, the GCF is calculated sequentially: first find GCF of the first two numbers, then find GCF of that result with the third number, and so on. The Euclidean algorithm is efficient: GCF(a, b) = GCF(b, a mod b) until b = 0.",
+          "paragraph3": "GCF has numerous practical applications: in simplifying fractions (dividing numerator and denominator by their GCF to get lowest terms), in solving Diophantine equations, in cryptography (e.g., RSA), in scheduling and repeating patterns, in measuring common dimensions, and in ratio problems. Understanding GCF is essential for anyone working with fractions, ratios, or divisibility.",
+          "paragraph4": "Our GCF calculator handles any number of positive integers and shows the calculation steps, making it perfect for educational purposes. The calculator uses the Euclidean algorithm for efficiency, even for large numbers. Whether you're a student learning factors, a teacher preparing math lessons, or anyone needing quick GCF calculations, our tool provides accurate results instantly and free.",
+          "exampleHeading": "Example: GCF Calculations",
+          "exampleText": "Example 1: GCF(24, 36) = 12. Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24. Factors of 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. Largest common factor is 12. Example 2: GCF(48, 18, 30) = 6. First GCF(48, 18) = 6, then GCF(6, 30) = 6. Example 3: GCF(17, 19) = 1. When two numbers share no common factor except 1, they are coprime and GCF = 1."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the difference between GCF and LCM?",
+              "answer": "GCF (Greatest Common Factor) is the largest number that divides all given numbers, while LCM (Least Common Multiple) is the smallest number that is divisible by all given numbers. They are related by: LCM(a, b) × GCF(a, b) = a × b. For example, for 12 and 18: GCF = 6, LCM = 36, and 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "How do you find the GCF of two numbers?",
+              "answer": "Common methods: (1) Listing factors: list factors of each number and take the largest common one. (2) Prime factorization: break each number into primes, then multiply the common primes with the lowest power. (3) Euclidean algorithm: repeatedly replace the larger number by its remainder when divided by the smaller until one number is 0; the other is the GCF. Our calculator uses the Euclidean algorithm for speed."
+            },
+            {
+              "question": "Can the GCF be larger than the numbers?",
+              "answer": "No, the GCF is always less than or equal to the smallest of the given numbers. By definition, the GCF must divide all input numbers, so it cannot exceed any of them. The maximum GCF is when all numbers are equal: GCF(n, n, ..., n) = n."
+            },
+            {
+              "question": "Why do we use GCF when simplifying fractions?",
+              "answer": "Dividing both the numerator and denominator of a fraction by their GCF gives the fraction in lowest terms. For example, 24/36 has GCF(24, 36) = 12, so 24÷12 / 36÷12 = 2/3. This is the simplest form of the fraction."
+            },
+            {
+              "question": "What is the GCF of coprime numbers?",
+              "answer": "Two numbers are coprime (relatively prime) if their only common factor is 1. So GCF(a, b) = 1. For example, 8 and 15 are coprime: factors of 8 are 1, 2, 4, 8; factors of 15 are 1, 3, 5, 15; only 1 is common."
+            },
+            {
+              "question": "Is this GCF calculator free to use?",
+              "answer": "Yes, our GCF calculator is completely free with no registration, subscription, or payment required. Enter any set of positive integers and get instant, accurate results with step-by-step calculations. The calculator can handle multiple numbers at once and shows the complete solution process."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "lcm": "LCM Calculator",
+          "lcmDesc": "Calculate the Least Common Multiple (LCM) of two or more numbers with step-by-step solutions",
+          "fractions": "Adding Fractions Calculator",
+          "fractionsDesc": "Add fractions using common denominators; GCF helps simplify results",
+          "remainder": "Remainder Calculator",
+          "remainderDesc": "Find quotient and remainder; the Euclidean algorithm uses remainders for GCF"
+        }
+      }
+    },
     "convolution": {
       "title": "Convolution Calculator",
       "description": "Calculate the discrete convolution of two data sequences. Free online tool for signal processing, mathematics, and engineering applications.",

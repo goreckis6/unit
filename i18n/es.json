@@ -3676,6 +3676,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "Calculadora MCD - Máximo común divisor",
+      "description": "Calcula el máximo común divisor (MCD) de dos o más números al instante. Encuentra el mayor entero positivo que divide a todos los números. Calculadora MCD online gratuita con pasos.",
+      "inputLabel": "Introduce los números",
+      "inputPlaceholder": "ej. 24, 36, 48",
+      "inputHint": "Introduce dos o más enteros positivos separados por comas, espacios o punto y coma",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "results": "Resultados",
+      "numbers": "Números",
+      "gcfResult": "Máximo común divisor (MCD)",
+      "steps": "Pasos del cálculo",
+      "formula": "Fórmula",
+      "enterNumbers": "Introduce al menos dos números para calcular",
+      "errorInvalid": "Introduce enteros positivos válidos",
+      "errorZero": "El cero no puede incluirse en el cálculo del MCD",
+      "errorMinTwo": "Introduce al menos dos números",
+      "seo": {
+        "title": "Calculadora MCD – Encuentra el máximo común divisor online",
+        "description": "Calculadora gratuita del máximo común divisor (MCD). Calcula el MCD de dos o más números al instante con soluciones paso a paso. Perfecta para estudiantes, profesores y cualquiera que trabaje con fracciones y teoría de números.",
+        "keywords": "calculadora mcd, máximo común divisor, buscador mcd, calculadora gcd, mcd de números, calculadora de divisor común, mcd con pasos, calculadora teoría de números",
+        "content": {
+          "heading": "¿Qué es el máximo común divisor (MCD)?",
+          "paragraph1": "El máximo común divisor (MCD), también llamado máximo común divisor (GCD), es el mayor entero positivo que divide a todos los números dados sin resto. Por ejemplo, el MCD de 24 y 36 es 12, porque 12 es el mayor número que divide a 24 y 36. Nuestra calculadora MCD gratuita te ayuda a encontrar el máximo común divisor de cualquier conjunto de enteros positivos de forma rápida y precisa, con soluciones paso a paso usando el algoritmo de Euclides.",
+          "paragraph2": "El MCD está estrechamente relacionado con el mínimo común múltiplo (mcm). La relación fundamental es: mcm(a, b) × MCD(a, b) = a × b. Si conoces el MCD de dos números, puedes calcular fácilmente su mcm. Para varios números, el MCD se calcula secuencialmente: primero el MCD de los dos primeros, luego el MCD de ese resultado con el tercero, etc. El algoritmo de Euclides es eficiente: MCD(a, b) = MCD(b, a mod b) hasta b = 0.",
+          "paragraph3": "El MCD tiene muchas aplicaciones prácticas: simplificación de fracciones (dividir numerador y denominador por su MCD para obtener la forma irreducible), resolución de ecuaciones diofánticas, criptografía (p. ej. RSA), planificación y patrones repetitivos, medición de dimensiones comunes y problemas de proporciones. Entender el MCD es esencial para quien trabaja con fracciones, proporciones o divisibilidad.",
+          "paragraph4": "Nuestra calculadora MCD maneja cualquier cantidad de enteros positivos y muestra los pasos del cálculo, ideal para fines educativos. La calculadora usa el algoritmo de Euclides para eficiencia, incluso con números grandes. Ya seas estudiante, profesor o cualquiera que necesite cálculos MCD rápidos, nuestra herramienta ofrece resultados precisos al instante y gratis.",
+          "exampleHeading": "Ejemplo: Cálculos MCD",
+          "exampleText": "Ejemplo 1: MCD(24, 36) = 12. Divisores de 24: 1, 2, 3, 4, 6, 8, 12, 24. Divisores de 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. El máximo común divisor es 12. Ejemplo 2: MCD(48, 18, 30) = 6. Primero MCD(48, 18) = 6, luego MCD(6, 30) = 6. Ejemplo 3: MCD(17, 19) = 1. Cuando dos números no comparten ningún divisor común salvo 1, son coprimos y MCD = 1."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            {
+              "question": "¿Cuál es la diferencia entre MCD y mcm?",
+              "answer": "El MCD (máximo común divisor) es el mayor número que divide a todos los números dados, mientras que el mcm (mínimo común múltiplo) es el menor número divisible por todos los números dados. Están relacionados por: mcm(a, b) × MCD(a, b) = a × b. Por ejemplo para 12 y 18: MCD = 6, mcm = 36 y 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "¿Cómo se encuentra el MCD de dos números?",
+              "answer": "Métodos comunes: (1) Listar divisores: lista los divisores de cada número y toma el mayor común. (2) Factorización prima: descompón cada número en primos y multiplica los primos comunes con la menor potencia. (3) Algoritmo de Euclides: sustituye repetidamente el mayor número por el resto de dividirlo entre el menor hasta que uno sea 0; el otro es el MCD. Nuestra calculadora usa el algoritmo de Euclides."
+            },
+            {
+              "question": "¿Puede el MCD ser mayor que los números?",
+              "answer": "No, el MCD siempre es menor o igual que el menor de los números dados. Por definición, el MCD debe dividir a todos los números de entrada, por lo que no puede superar a ninguno. El MCD máximo ocurre cuando todos los números son iguales: MCD(n, n, ..., n) = n."
+            },
+            {
+              "question": "¿Por qué usamos el MCD al simplificar fracciones?",
+              "answer": "Dividir numerador y denominador de una fracción por su MCD da la fracción en forma irreducible. Por ejemplo 24/36 tiene MCD(24, 36) = 12, así que 24÷12 / 36÷12 = 2/3. Es la forma más simple de la fracción."
+            },
+            {
+              "question": "¿Cuál es el MCD de números coprimos?",
+              "answer": "Dos números son coprimos si su único divisor común es 1. Por tanto MCD(a, b) = 1. Por ejemplo 8 y 15 son coprimos: divisores de 8: 1, 2, 4, 8; divisores de 15: 1, 3, 5, 15; solo 1 es común."
+            },
+            {
+              "question": "¿Esta calculadora MCD es gratuita?",
+              "answer": "Sí, nuestra calculadora MCD es completamente gratuita, sin registro, suscripción ni pago. Introduce cualquier conjunto de enteros positivos y obtén resultados instantáneos y precisos con los pasos del cálculo. La calculadora puede manejar varios números a la vez y muestra el proceso completo."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "lcm": "Calculadora mcm",
+          "lcmDesc": "Calcula el mínimo común múltiplo (mcm) de dos o más números con soluciones paso a paso",
+          "fractions": "Calculadora de suma de fracciones",
+          "fractionsDesc": "Suma fracciones con denominadores comunes; el MCD ayuda a simplificar resultados",
+          "remainder": "Calculadora de resto",
+          "remainderDesc": "Encuentra cociente y resto; el algoritmo de Euclides usa restos para el MCD"
+        }
+      }
+    },
     "convolution": {
       "title": "Calculadora de Convolución",
       "description": "Calcula la convolución discreta de dos secuencias de datos. Herramienta online gratuita para procesamiento de señales, matemáticas y aplicaciones de ingeniería.",

@@ -3676,6 +3676,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "Calculateur PGCD - Plus grand diviseur commun",
+      "description": "Calculez le plus grand diviseur commun (PGCD) de deux ou plusieurs nombres instantanément. Trouvez le plus grand entier positif qui divise tous les nombres. Calculateur PGCD en ligne gratuit avec étapes.",
+      "inputLabel": "Entrez les nombres",
+      "inputPlaceholder": "ex. 24, 36, 48",
+      "inputHint": "Entrez deux ou plusieurs entiers positifs séparés par des virgules, espaces ou point-virgules",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "results": "Résultats",
+      "numbers": "Nombres",
+      "gcfResult": "Plus grand diviseur commun (PGCD)",
+      "steps": "Étapes du calcul",
+      "formula": "Formule",
+      "enterNumbers": "Entrez au moins deux nombres pour calculer",
+      "errorInvalid": "Veuillez entrer des entiers positifs valides",
+      "errorZero": "Zéro ne peut pas être inclus dans le calcul du PGCD",
+      "errorMinTwo": "Veuillez entrer au moins deux nombres",
+      "seo": {
+        "title": "Calculateur PGCD – Trouvez le plus grand diviseur commun en ligne",
+        "description": "Calculateur gratuit du plus grand diviseur commun (PGCD). Calculez le PGCD de deux ou plusieurs nombres instantanément avec des solutions étape par étape. Parfait pour les élèves, enseignants et tous ceux qui travaillent avec les fractions et la théorie des nombres.",
+        "keywords": "calculateur pgcd, plus grand diviseur commun, trouveur pgcd, calculateur gcd, pgcd de nombres, calculateur de diviseur commun, pgcd avec étapes, calculateur théorie des nombres",
+        "content": {
+          "heading": "Qu'est-ce que le plus grand diviseur commun (PGCD) ?",
+          "paragraph1": "Le plus grand diviseur commun (PGCD), aussi appelé plus grand commun diviseur (GCD), est le plus grand entier positif qui divise tous les nombres donnés sans reste. Par exemple, le PGCD de 24 et 36 est 12, car 12 est le plus grand nombre qui divise à la fois 24 et 36. Notre calculateur PGCD gratuit vous aide à trouver le plus grand diviseur commun de tout ensemble d'entiers positifs, rapidement et avec des solutions étape par étape utilisant l'algorithme d'Euclide.",
+          "paragraph2": "Le PGCD est étroitement lié au plus petit commun multiple (PPCM). La relation fondamentale est : PPCM(a, b) × PGCD(a, b) = a × b. Si vous connaissez le PGCD de deux nombres, vous pouvez facilement calculer leur PPCM. Pour plusieurs nombres, le PGCD se calcule séquentiellement : d'abord le PGCD des deux premiers, puis le PGCD de ce résultat avec le troisième, etc. L'algorithme d'Euclide est efficace : PGCD(a, b) = PGCD(b, a mod b) jusqu'à b = 0.",
+          "paragraph3": "Le PGCD a de nombreuses applications : simplification de fractions (diviser numérateur et dénominateur par leur PGCD pour obtenir la forme irréductible), résolution d'équations diophantiennes, cryptographie (ex. RSA), planification et motifs répétitifs, mesures de dimensions communes et problèmes de rapports. Comprendre le PGCD est essentiel pour qui travaille avec les fractions, rapports ou divisibilité.",
+          "paragraph4": "Notre calculateur PGCD gère tout nombre d'entiers positifs et affiche les étapes du calcul, idéal pour l'enseignement. Il utilise l'algorithme d'Euclide pour l'efficacité, même avec de grands nombres. Que vous soyez élève, enseignant ou toute personne ayant besoin de calculs PGCD rapides, notre outil fournit des résultats précis instantanément et gratuitement.",
+          "exampleHeading": "Exemple : calculs PGCD",
+          "exampleText": "Exemple 1 : PGCD(24, 36) = 12. Diviseurs de 24 : 1, 2, 3, 4, 6, 8, 12, 24. Diviseurs de 36 : 1, 2, 3, 4, 6, 9, 12, 18, 36. Le plus grand diviseur commun est 12. Exemple 2 : PGCD(48, 18, 30) = 6. D'abord PGCD(48, 18) = 6, puis PGCD(6, 30) = 6. Exemple 3 : PGCD(17, 19) = 1. Quand deux nombres n'ont aucun diviseur commun sauf 1, ils sont premiers entre eux et PGCD = 1."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {
+              "question": "Quelle est la différence entre PGCD et PPCM ?",
+              "answer": "Le PGCD (plus grand diviseur commun) est le plus grand nombre qui divise tous les nombres donnés, tandis que le PPCM (plus petit commun multiple) est le plus petit nombre divisible par tous les nombres donnés. Ils sont liés par : PPCM(a, b) × PGCD(a, b) = a × b. Par exemple pour 12 et 18 : PGCD = 6, PPCM = 36 et 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "Comment trouver le PGCD de deux nombres ?",
+              "answer": "Méthodes courantes : (1) Lister les diviseurs : lister les diviseurs de chaque nombre et prendre le plus grand commun. (2) Décomposition en facteurs premiers : décomposer chaque nombre en facteurs premiers, puis multiplier les facteurs premiers communs avec la plus petite puissance. (3) Algorithme d'Euclide : remplacer répétitivement le plus grand nombre par le reste de la division par le plus petit jusqu'à ce qu'un nombre soit 0 ; l'autre est le PGCD. Notre calculateur utilise l'algorithme d'Euclide."
+            },
+            {
+              "question": "Le PGCD peut-il être plus grand que les nombres ?",
+              "answer": "Non, le PGCD est toujours inférieur ou égal au plus petit des nombres donnés. Par définition, le PGCD doit diviser tous les nombres en entrée, il ne peut donc dépasser aucun d'eux. Le PGCD maximum est quand tous les nombres sont égaux : PGCD(n, n, ..., n) = n."
+            },
+            {
+              "question": "Pourquoi utilise-t-on le PGCD pour simplifier les fractions ?",
+              "answer": "Diviser le numérateur et le dénominateur d'une fraction par leur PGCD donne la fraction sous forme irréductible. Par exemple 24/36 a PGCD(24, 36) = 12, donc 24÷12 / 36÷12 = 2/3. C'est la forme la plus simple de la fraction."
+            },
+            {
+              "question": "Quel est le PGCD de nombres premiers entre eux ?",
+              "answer": "Deux nombres sont premiers entre eux si leur seul diviseur commun est 1. Donc PGCD(a, b) = 1. Par exemple 8 et 15 sont premiers entre eux : diviseurs de 8 : 1, 2, 4, 8 ; diviseurs de 15 : 1, 3, 5, 15 ; seul 1 est commun."
+            },
+            {
+              "question": "Ce calculateur PGCD est-il gratuit ?",
+              "answer": "Oui, notre calculateur PGCD est entièrement gratuit, sans inscription, abonnement ni paiement. Entrez tout ensemble d'entiers positifs et obtenez des résultats instantanés et précis avec les étapes de calcul. Le calculateur gère plusieurs nombres à la fois et affiche le processus complet."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs associés",
+          "lcm": "Calculateur PPCM",
+          "lcmDesc": "Calculez le plus petit commun multiple (PPCM) de deux ou plusieurs nombres avec solutions étape par étape",
+          "fractions": "Calculateur d'addition de fractions",
+          "fractionsDesc": "Additionnez les fractions avec dénominateurs communs ; le PGCD aide à simplifier les résultats",
+          "remainder": "Calculateur de reste",
+          "remainderDesc": "Trouvez quotient et reste ; l'algorithme d'Euclide utilise les restes pour le PGCD"
+        }
+      }
+    },
     "convolution": {
       "title": "Calculateur de Convolution",
       "description": "Calculez la convolution discrète de deux séquences de données. Outil en ligne gratuit pour le traitement du signal, les mathématiques et les applications d'ingénierie.",

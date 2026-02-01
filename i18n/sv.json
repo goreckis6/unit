@@ -3676,6 +3676,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "GCF-kalkylator - Största gemensamma faktorn",
+      "description": "Beräkna den största gemensamma faktorn (GCF) för två eller fler tal direkt. Hitta det största positiva heltal som delar alla tal. Gratis online GCF-kalkylator med steg.",
+      "inputLabel": "Ange tal",
+      "inputPlaceholder": "t.ex. 24, 36, 48",
+      "inputHint": "Ange två eller fler positiva heltal separerade med kommatecken, mellanslag eller semikolon",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "results": "Resultat",
+      "numbers": "Tal",
+      "gcfResult": "Största gemensamma faktorn (GCF)",
+      "steps": "Beräkningssteg",
+      "formula": "Formel",
+      "enterNumbers": "Ange minst två tal för att beräkna",
+      "errorInvalid": "Ange giltiga positiva heltal",
+      "errorZero": "Noll kan inte inkluderas i GCF-beräkning",
+      "errorMinTwo": "Ange minst två tal",
+      "seo": {
+        "title": "GCF-kalkylator – Hitta största gemensamma faktorn online",
+        "description": "Gratis största gemensamma faktorn (GCF) kalkylator. Beräkna GCF för två eller fler tal direkt med steg-för-steg lösningar. Perfekt för elever, lärare och alla som arbetar med bråk och talteori.",
+        "keywords": "gcf kalkylator, största gemensamma faktorn, gcf finder, gcd kalkylator, största gemensamma divisor, gcf av tal, gemensam faktor kalkylator, gcf med steg, talteori kalkylator",
+        "content": {
+          "heading": "Vad är största gemensamma faktorn (GCF)?",
+          "paragraph1": "Den största gemensamma faktorn (GCF), även känd som största gemensamma divisorn (GCD), är det största positiva heltal som delar alla givna tal utan rest. Till exempel är GCF för 24 och 36 lika med 12, eftersom 12 är det största tal som delar både 24 och 36 jämnt. Vår gratis GCF-kalkylator hjälper dig att hitta den största gemensamma faktorn för vilken uppsättning positiva heltal som helst snabbt och exakt med steg-för-steg lösningar med Euklides algoritm.",
+          "paragraph2": "GCF är nära besläktad med minsta gemensamma multipel (LCM). Den grundläggande relationen är: LCM(a, b) × GCF(a, b) = a × b. Det betyder att om du känner till GCF för två tal kan du enkelt beräkna deras LCM. För flera tal beräknas GCF sekventiellt: hitta först GCF för de två första talen, sedan GCF för det resultatet med det tredje talet osv. Euklides algoritm är effektiv: GCF(a, b) = GCF(b, a mod b) tills b = 0.",
+          "paragraph3": "GCF har många praktiska tillämpningar: vid förenkling av bråk (dela täljare och nämnare med deras GCF för att få lägsta termer), vid lösning av diofantiska ekvationer, inom kryptografi (t.ex. RSA), i schemaläggning och upprepade mönster, vid mätning av gemensamma dimensioner och i proportionsproblem. Att förstå GCF är väsentligt för alla som arbetar med bråk, proportioner eller delbarhet.",
+          "paragraph4": "Vår GCF-kalkylator hanterar valfritt antal positiva heltal och visar beräkningsstegen, vilket gör den perfekt för utbildningsändamål. Kalkylatorn använder Euklides algoritm för effektivitet, även för stora tal. Oavsett om du är elev som lär dig om faktorer, lärare som förbereder mattelektioner eller någon som behöver snabba GCF-beräkningar ger vårt verktyg exakta resultat direkt och gratis.",
+          "exampleHeading": "Exempel: GCF-beräkningar",
+          "exampleText": "Exempel 1: GCF(24, 36) = 12. Faktorer för 24: 1, 2, 3, 4, 6, 8, 12, 24. Faktorer för 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. Största gemensamma faktorn är 12. Exempel 2: GCF(48, 18, 30) = 6. Först GCF(48, 18) = 6, sedan GCF(6, 30) = 6. Exempel 3: GCF(17, 19) = 1. När två tal bara delar faktorn 1 är de relativt prima och GCF = 1."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {
+              "question": "Vad är skillnaden mellan GCF och LCM?",
+              "answer": "GCF (största gemensamma faktorn) är det största tal som delar alla givna tal, medan LCM (minsta gemensamma multipel) är det minsta tal som är delbart med alla givna tal. De är relaterade: LCM(a, b) × GCF(a, b) = a × b. Till exempel för 12 och 18: GCF = 6, LCM = 36 och 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "Hur hittar man GCF för två tal?",
+              "answer": "Vanliga metoder: (1) Lista faktorer: lista faktorer för varje tal och ta den största gemensamma. (2) Primtalsfaktorisering: bryt ner varje tal i primtal, multiplicera sedan de gemensamma primtalen med lägsta potens. (3) Euklides algoritm: ersätt upprepade gånger det större talet med resten vid division med det mindre tills ett tal är 0; det andra är GCF. Vår kalkylator använder Euklides algoritm för hastighet."
+            },
+            {
+              "question": "Kan GCF vara större än talen?",
+              "answer": "Nej, GCF är alltid mindre än eller lika med det minsta av de givna talen. Per definition måste GCF dela alla inmatade tal, så den kan inte överstiga något av dem. Maximal GCF är när alla tal är lika: GCF(n, n, ..., n) = n."
+            },
+            {
+              "question": "Varför använder vi GCF vid förenkling av bråk?",
+              "answer": "Att dela både täljare och nämnare i en bråkdel med deras GCF ger bråket i lägsta termer. Till exempel har 24/36 GCF(24, 36) = 12, så 24÷12 / 36÷12 = 2/3. Det är den enklaste formen av bråket."
+            },
+            {
+              "question": "Vad är GCF för relativt prima tal?",
+              "answer": "Två tal är relativt prima om deras enda gemensamma faktor är 1. Så GCF(a, b) = 1. Till exempel är 8 och 15 relativt prima: faktorer för 8 är 1, 2, 4, 8; faktorer för 15 är 1, 3, 5, 15; endast 1 är gemensam."
+            },
+            {
+              "question": "Är denna GCF-kalkylator gratis?",
+              "answer": "Ja, vår GCF-kalkylator är helt gratis utan registrering, prenumeration eller betalning. Ange vilken uppsättning positiva heltal som helst och få omedelbara, exakta resultat med steg-för-steg beräkningar. Kalkylatorn kan hantera flera tal samtidigt och visar hela lösningsprocessen."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "lcm": "LCM-kalkylator",
+          "lcmDesc": "Beräkna minsta gemensamma multipel (LCM) för två eller fler tal med steg-för-steg lösningar",
+          "fractions": "Bråkräknare",
+          "fractionsDesc": "Lägg till bråk med gemensamma nämnare; GCF hjälper till att förenkla resultat",
+          "remainder": "Restkalkylator",
+          "remainderDesc": "Hitta kvot och rest; Euklides algoritm använder rester för GCF"
+        }
+      }
+    },
     "convolution": {
       "title": "Faltningskalkylator",
       "description": "Beräkna den diskreta faltningen av två datasekvenser. Gratis onlineverktyg för signalbehandling, matematik och ingenjörstillämpningar.",

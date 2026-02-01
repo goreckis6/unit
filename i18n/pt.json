@@ -3676,6 +3676,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "Calculadora MDC - Máximo divisor comum",
+      "description": "Calcule o máximo divisor comum (MDC) de dois ou mais números instantaneamente. Encontre o maior inteiro positivo que divide todos os números. Calculadora MDC online gratuita com passos.",
+      "inputLabel": "Digite os números",
+      "inputPlaceholder": "ex. 24, 36, 48",
+      "inputHint": "Digite dois ou mais inteiros positivos separados por vírgulas, espaços ou ponto e vírgula",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "results": "Resultados",
+      "numbers": "Números",
+      "gcfResult": "Máximo divisor comum (MDC)",
+      "steps": "Passos do cálculo",
+      "formula": "Fórmula",
+      "enterNumbers": "Digite pelo menos dois números para calcular",
+      "errorInvalid": "Digite inteiros positivos válidos",
+      "errorZero": "Zero não pode ser incluído no cálculo do MDC",
+      "errorMinTwo": "Digite pelo menos dois números",
+      "seo": {
+        "title": "Calculadora MDC – Encontre o máximo divisor comum online",
+        "description": "Calculadora gratuita do máximo divisor comum (MDC). Calcule o MDC de dois ou mais números instantaneamente com soluções passo a passo. Perfeita para estudantes, professores e qualquer um que trabalhe com frações e teoria dos números.",
+        "keywords": "calculadora mdc, máximo divisor comum, buscador mdc, calculadora gcd, mdc de números, calculadora de divisor comum, mdc com passos, calculadora teoria dos números",
+        "content": {
+          "heading": "O que é o máximo divisor comum (MDC)?",
+          "paragraph1": "O máximo divisor comum (MDC), também chamado de maior divisor comum (GCD), é o maior inteiro positivo que divide todos os números dados sem resto. Por exemplo, o MDC de 24 e 36 é 12, porque 12 é o maior número que divide tanto 24 quanto 36. Nossa calculadora MDC gratuita ajuda você a encontrar o máximo divisor comum de qualquer conjunto de inteiros positivos de forma rápida e precisa, com soluções passo a passo usando o algoritmo de Euclides.",
+          "paragraph2": "O MDC está intimamente relacionado ao mínimo múltiplo comum (MMC). A relação fundamental é: MMC(a, b) × MDC(a, b) = a × b. Se você conhece o MDC de dois números, pode calcular facilmente seu MMC. Para vários números, o MDC é calculado sequencialmente: primeiro o MDC dos dois primeiros, depois o MDC desse resultado com o terceiro, e assim por diante. O algoritmo de Euclides é eficiente: MDC(a, b) = MDC(b, a mod b) até b = 0.",
+          "paragraph3": "O MDC tem muitas aplicações práticas: simplificação de frações (dividir numerador e denominador pelo seu MDC para obter a forma irredutível), resolução de equações diofantinas, criptografia (ex. RSA), planejamento e padrões repetitivos, medição de dimensões comuns e problemas de proporção. Entender o MDC é essencial para quem trabalha com frações, proporções ou divisibilidade.",
+          "paragraph4": "Nossa calculadora MDC lida com qualquer quantidade de inteiros positivos e mostra os passos do cálculo, ideal para fins educacionais. A calculadora usa o algoritmo de Euclides para eficiência, mesmo com números grandes. Seja você estudante, professor ou qualquer um que precise de cálculos MDC rápidos, nossa ferramenta fornece resultados precisos instantaneamente e gratuitamente.",
+          "exampleHeading": "Exemplo: Cálculos MDC",
+          "exampleText": "Exemplo 1: MDC(24, 36) = 12. Divisores de 24: 1, 2, 3, 4, 6, 8, 12, 24. Divisores de 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. O máximo divisor comum é 12. Exemplo 2: MDC(48, 18, 30) = 6. Primeiro MDC(48, 18) = 6, depois MDC(6, 30) = 6. Exemplo 3: MDC(17, 19) = 1. Quando dois números não compartilham nenhum divisor comum exceto 1, são coprimos e MDC = 1."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {
+              "question": "Qual é a diferença entre MDC e MMC?",
+              "answer": "O MDC (máximo divisor comum) é o maior número que divide todos os números dados, enquanto o MMC (mínimo múltiplo comum) é o menor número divisível por todos os números dados. Eles estão relacionados por: MMC(a, b) × MDC(a, b) = a × b. Por exemplo para 12 e 18: MDC = 6, MMC = 36 e 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "Como encontrar o MDC de dois números?",
+              "answer": "Métodos comuns: (1) Listar divisores: liste os divisores de cada número e tome o maior comum. (2) Fatoração prima: decomponha cada número em primos e multiplique os primos comuns com a menor potência. (3) Algoritmo de Euclides: substitua repetidamente o maior número pelo resto da divisão pelo menor até um número ser 0; o outro é o MDC. Nossa calculadora usa o algoritmo de Euclides."
+            },
+            {
+              "question": "O MDC pode ser maior que os números?",
+              "answer": "Não, o MDC é sempre menor ou igual ao menor dos números dados. Por definição, o MDC deve dividir todos os números de entrada, então não pode exceder nenhum deles. O MDC máximo ocorre quando todos os números são iguais: MDC(n, n, ..., n) = n."
+            },
+            {
+              "question": "Por que usamos o MDC ao simplificar frações?",
+              "answer": "Dividir numerador e denominador de uma fração pelo seu MDC dá a fração na forma irredutível. Por exemplo 24/36 tem MDC(24, 36) = 12, então 24÷12 / 36÷12 = 2/3. Essa é a forma mais simples da fração."
+            },
+            {
+              "question": "Qual é o MDC de números coprimos?",
+              "answer": "Dois números são coprimos se seu único divisor comum é 1. Portanto MDC(a, b) = 1. Por exemplo 8 e 15 são coprimos: divisores de 8 são 1, 2, 4, 8; divisores de 15 são 1, 3, 5, 15; apenas 1 é comum."
+            },
+            {
+              "question": "Esta calculadora MDC é gratuita?",
+              "answer": "Sim, nossa calculadora MDC é totalmente gratuita, sem registro, assinatura ou pagamento. Digite qualquer conjunto de inteiros positivos e obtenha resultados instantâneos e precisos com os passos do cálculo. A calculadora pode lidar com vários números de uma vez e mostra o processo completo."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "lcm": "Calculadora MMC",
+          "lcmDesc": "Calcule o mínimo múltiplo comum (MMC) de dois ou mais números com soluções passo a passo",
+          "fractions": "Calculadora de adição de frações",
+          "fractionsDesc": "Some frações com denominadores comuns; o MDC ajuda a simplificar resultados",
+          "remainder": "Calculadora de resto",
+          "remainderDesc": "Encontre quociente e resto; o algoritmo de Euclides usa restos para o MDC"
+        }
+      }
+    },
     "convolution": {
       "title": "Calculadora de Convolução",
       "description": "Calcule a convolução discreta de duas sequências de dados. Ferramenta online gratuita para processamento de sinais, matemática e aplicações de engenharia.",

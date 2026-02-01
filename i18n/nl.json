@@ -3676,6 +3676,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "GGD Rekenmachine - Grootste gemene deler",
+      "description": "Bereken de grootste gemene deler (GGD) van twee of meer getallen direct. Vind het grootste positieve gehele getal dat alle getallen deelt. Gratis online GGD-rekenmachine met stappen.",
+      "inputLabel": "Voer getallen in",
+      "inputPlaceholder": "bijv. 24, 36, 48",
+      "inputHint": "Voer twee of meer positieve gehele getallen in, gescheiden door komma's, spaties of puntkomma's",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "results": "Resultaten",
+      "numbers": "Getallen",
+      "gcfResult": "Grootste gemene deler (GGD)",
+      "steps": "Berekeningsstappen",
+      "formula": "Formule",
+      "enterNumbers": "Voer minimaal twee getallen in om te berekenen",
+      "errorInvalid": "Voer geldige positieve gehele getallen in",
+      "errorZero": "Nul kan niet worden opgenomen in de GGD-berekening",
+      "errorMinTwo": "Voer minimaal twee getallen in",
+      "seo": {
+        "title": "GGD Rekenmachine – Vind grootste gemene deler online",
+        "description": "Gratis rekenmachine voor de grootste gemene deler (GGD). Bereken de GGD van twee of meer getallen direct met stapsgewijze oplossingen. Perfect voor studenten, docenten en iedereen die met breuken en getaltheorie werkt.",
+        "keywords": "ggd rekenmachine, grootste gemene deler, ggd zoeker, ggd rekenmachine, ggd van getallen, gemeenschappelijke deler rekenmachine, ggd met stappen, getaltheorie rekenmachine",
+        "content": {
+          "heading": "Wat is de grootste gemene deler (GGD)?",
+          "paragraph1": "De grootste gemene deler (GGD), ook wel grootste gemene deler (GCD) genoemd, is het grootste positieve gehele getal dat alle gegeven getallen zonder rest deelt. Bijvoorbeeld is de GGD van 24 en 36 gelijk aan 12, omdat 12 het grootste getal is dat zowel 24 als 36 deelt. Onze gratis GGD-rekenmachine helpt u snel en nauwkeurig de grootste gemene deler van elke set positieve gehele getallen te vinden, met stapsgewijze oplossingen met het algoritme van Euclides.",
+          "paragraph2": "De GGD hangt nauw samen met het kleinste gemene veelvoud (KGV). De fundamentele relatie is: KGV(a, b) × GGD(a, b) = a × b. Als u de GGD van twee getallen kent, kunt u eenvoudig hun KGV berekenen. Voor meerdere getallen wordt de GGD sequentieel berekend: eerst de GGD van de eerste twee, dan de GGD van dat resultaat met het derde getal, enz. Het algoritme van Euclides is efficiënt: GGD(a, b) = GGD(b, a mod b) tot b = 0.",
+          "paragraph3": "De GGD heeft veel praktische toepassingen: bij het vereenvoudigen van breuken (teller en noemer delen door hun GGD voor de eenvoudigste vorm), bij het oplossen van diofantische vergelijkingen, in cryptografie (bijv. RSA), bij planning en herhalende patronen, bij het meten van gemeenschappelijke afmetingen en bij verhoudingsproblemen. Het begrijpen van de GGD is essentieel voor iedereen die met breuken, verhoudingen of deelbaarheid werkt.",
+          "paragraph4": "Onze GGD-rekenmachine verwerkt elk aantal positieve gehele getallen en toont de berekeningsstappen, ideaal voor educatieve doeleinden. De rekenmachine gebruikt het algoritme van Euclides voor efficiëntie, ook bij grote getallen. Of u nu student, docent bent of snel GGD-berekeningen nodig heeft, onze tool levert direct nauwkeurige resultaten, gratis.",
+          "exampleHeading": "Voorbeeld: GGD-berekeningen",
+          "exampleText": "Voorbeeld 1: GGD(24, 36) = 12. Delers van 24: 1, 2, 3, 4, 6, 8, 12, 24. Delers van 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. De grootste gemene deler is 12. Voorbeeld 2: GGD(48, 18, 30) = 6. Eerst GGD(48, 18) = 6, dan GGD(6, 30) = 6. Voorbeeld 3: GGD(17, 19) = 1. Wanneer twee getallen geen gemeenschappelijke deler hebben behalve 1, zijn ze relatief priem en GGD = 1."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            {
+              "question": "Wat is het verschil tussen GGD en KGV?",
+              "answer": "De GGD (grootste gemene deler) is het grootste getal dat alle gegeven getallen deelt, terwijl het KGV (kleinste gemene veelvoud) het kleinste getal is dat deelbaar is door alle gegeven getallen. Ze zijn gerelateerd door: KGV(a, b) × GGD(a, b) = a × b. Bijvoorbeeld voor 12 en 18: GGD = 6, KGV = 36 en 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "Hoe vind je de GGD van twee getallen?",
+              "answer": "Gangbare methoden: (1) Delers opsommen: som de delers van elk getal op en neem de grootste gemeenschappelijke. (2) Priemfactorontbinding: ontbind elk getal in priemfactoren en vermenigvuldig de gemeenschappelijke priemfactoren met de laagste macht. (3) Algoritme van Euclides: vervang herhaaldelijk het grotere getal door de rest bij deling door het kleinere tot één getal 0 is; het andere is de GGD. Onze rekenmachine gebruikt het algoritme van Euclides."
+            },
+            {
+              "question": "Kan de GGD groter zijn dan de getallen?",
+              "answer": "Nee, de GGD is altijd kleiner dan of gelijk aan het kleinste van de gegeven getallen. Per definitie moet de GGD alle invoergetallen delen, dus kan deze geen enkel ervan overschrijden. De maximale GGD treedt op wanneer alle getallen gelijk zijn: GGD(n, n, ..., n) = n."
+            },
+            {
+              "question": "Waarom gebruiken we de GGD bij het vereenvoudigen van breuken?",
+              "answer": "Het delen van teller en noemer van een breuk door hun GGD geeft de breuk in eenvoudigste vorm. Bijvoorbeeld 24/36 heeft GGD(24, 36) = 12, dus 24÷12 / 36÷12 = 2/3. Dat is de eenvoudigste vorm van de breuk."
+            },
+            {
+              "question": "Wat is de GGD van relatief priem getallen?",
+              "answer": "Twee getallen zijn relatief priem als hun enige gemeenschappelijke deler 1 is. Dus GGD(a, b) = 1. Bijvoorbeeld 8 en 15 zijn relatief priem: delers van 8 zijn 1, 2, 4, 8; delers van 15 zijn 1, 3, 5, 15; alleen 1 is gemeenschappelijk."
+            },
+            {
+              "question": "Is deze GGD-rekenmachine gratis?",
+              "answer": "Ja, onze GGD-rekenmachine is volledig gratis, zonder registratie, abonnement of betaling. Voer elk aantal positieve gehele getallen in en krijg direct nauwkeurige resultaten met berekeningsstappen. De rekenmachine kan meerdere getallen tegelijk verwerken en toont het volledige oplossingsproces."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde rekenmachines",
+          "lcm": "KGV Rekenmachine",
+          "lcmDesc": "Bereken het kleinste gemene veelvoud (KGV) van twee of meer getallen met stapsgewijze oplossingen",
+          "fractions": "Breuken optellen rekenmachine",
+          "fractionsDesc": "Tel breuken op met gemeenschappelijke noemers; de GGD helpt resultaten te vereenvoudigen",
+          "remainder": "Rest rekenmachine",
+          "remainderDesc": "Vind quotiënt en rest; het algoritme van Euclides gebruikt resten voor de GGD"
+        }
+      }
+    },
     "convolution": {
       "title": "Convolutiecalculator",
       "description": "Bereken de discrete convolutie van twee gegevensreeksen. Gratis online tool voor signaalverwerking, wiskunde en technische toepassingen.",

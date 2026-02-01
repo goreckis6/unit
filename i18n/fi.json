@@ -3676,6 +3676,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "SYT-laskin - Suurin yhteinen tekijä",
+      "description": "Laske kahden tai useamman luvun suurin yhteinen tekijä (SYT) heti. Etsi suurin positiivinen kokonaisluku, joka jakaa kaikki luvut. Ilmainen online SYT-laskin vaiheineen.",
+      "inputLabel": "Syötä luvut",
+      "inputPlaceholder": "esim. 24, 36, 48",
+      "inputHint": "Syötä kaksi tai useampi positiivista kokonaislukua pilkuilla, välilyönneillä tai puolipisteillä erotettuna",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "results": "Tulokset",
+      "numbers": "Luvut",
+      "gcfResult": "Suurin yhteinen tekijä (SYT)",
+      "steps": "Laskentavaiheet",
+      "formula": "Kaava",
+      "enterNumbers": "Syötä vähintään kaksi lukua laskeaksesi",
+      "errorInvalid": "Syötä kelvollisia positiivisia kokonaislukuja",
+      "errorZero": "Nollaa ei voi sisällyttää SYT-laskentaan",
+      "errorMinTwo": "Syötä vähintään kaksi lukua",
+      "seo": {
+        "title": "SYT-laskin – Etsi suurin yhteinen tekijä online",
+        "description": "Ilmainen suurin yhteinen tekijä (SYT) -laskin. Laske kahden tai useamman luvun SYT heti vaiheittaisilla ratkaisuilla. Täydellinen opiskelijoille, opettajille ja kaikille, jotka työskentelevät murtolukujen ja lukuteorian parissa.",
+        "keywords": "syt laskin, suurin yhteinen tekijä, syt etsijä, gcd laskin, suurin yhteinen jakaja, lukujen syt, yhteinen tekijä laskin, syt vaiheineen, lukuteoria laskin",
+        "content": {
+          "heading": "Mikä on suurin yhteinen tekijä (SYT)?",
+          "paragraph1": "Suurin yhteinen tekijä (SYT), tunnetaan myös nimellä suurin yhteinen jakaja (GCD), on suurin positiivinen kokonaisluku, joka jakaa kaikki annetut luvut ilman jäännöstä. Esimerkiksi lukujen 24 ja 36 SYT on 12, koska 12 on suurin luku, joka jakaa sekä 24 että 36 tasan. Ilmainen SYT-laskimemme auttaa löytämään minkä tahansa positiivisten kokonaislukujen joukon suurimman yhteisen tekijän nopeasti ja tarkasti vaiheittaisilla ratkaisuilla Eukleideen algoritmilla.",
+          "paragraph2": "SYT on läheisesti yhteydessä pienimpään yhteiseen kerrannaiseen (PYJ). Perusyhteys on: PYJ(a, b) × SYT(a, b) = a × b. Tämä tarkoittaa, että jos tiedät kahden luvun SYT:n, voit helposti laskea niiden PYJ:n. Useille luvuille SYT lasketaan peräkkäin: ensin löydä kahden ensimmäisen luvun SYT, sitten sen tuloksen ja kolmannen luvun SYT jne. Eukleideen algoritmi on tehokas: SYT(a, b) = SYT(b, a mod b), kunnes b = 0.",
+          "paragraph3": "SYT:llä on lukuisia käytännön sovelluksia: murtolukujen sieventämisessä (osoittajan ja nimittäjän jakaminen niiden SYT:llä saadakseen supistetun muodon), diofantosten yhtälöiden ratkaisemisessa, kryptografiassa (esim. RSA), aikataulutuksessa ja toistuvissa kuvioissa, yhteisten mittojen mittauksessa sekä suhteiden tehtävissä. SYT:n ymmärtäminen on välttämätöntä kaikille, jotka työskentelevät murtolukujen, suhteiden tai jaollisuuden parissa.",
+          "paragraph4": "SYT-laskimemme käsittelee minkä tahansa määrän positiivisia kokonaislukuja ja näyttää laskentavaiheet, mikä tekee siitä täydellisen opetuskäyttöön. Laskin käyttää Eukleideen algoritmia tehokkuuden vuoksi, myös suurille luvuille. Oletpa sitten opiskelija oppimassa tekijöistä, opettaja valmistamassa matematiikan tunneja tai kuka tahansa tarvitsemassa nopeita SYT-laskelmia, työkalumme tarjoaa tarkat tulokset heti ja ilmaiseksi.",
+          "exampleHeading": "Esimerkki: SYT-laskelmat",
+          "exampleText": "Esimerkki 1: SYT(24, 36) = 12. Luvun 24 tekijät: 1, 2, 3, 4, 6, 8, 12, 24. Luvun 36 tekijät: 1, 2, 3, 4, 6, 9, 12, 18, 36. Suurin yhteinen tekijä on 12. Esimerkki 2: SYT(48, 18, 30) = 6. Ensin SYT(48, 18) = 6, sitten SYT(6, 30) = 6. Esimerkki 3: SYT(17, 19) = 1. Kun kahdella luvulla ei ole yhteistä tekijää paitsi 1, ne ovat keskenään jaottomia ja SYT = 1."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Mikä on ero SYT:n ja PYJ:n välillä?",
+              "answer": "SYT (suurin yhteinen tekijä) on suurin luku, joka jakaa kaikki annetut luvut, kun taas PYJ (pienin yhteinen kerrannainen) on pienin luku, joka on jaollinen kaikilla annetuilla luvuilla. Ne liittyvät toisiinsa: PYJ(a, b) × SYT(a, b) = a × b. Esimerkiksi luvuille 12 ja 18: SYT = 6, PYJ = 36 ja 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "Miten löydät kahden luvun SYT:n?",
+              "answer": "Yleisiä menetelmiä: (1) Tekijöiden listaus: listaa kunkin luvun tekijät ja ota suurin yhteinen. (2) Alkulukujako: jaa jokainen luku alkulukuihin, kerro sitten yhteiset alkuluvut alimmalla potenssilla. (3) Eukleideen algoritmi: korvaa toistuvasti suurempi luku jakojäännöksellä jaettuna pienemmillä, kunnes yksi luku on 0; toinen on SYT. Laskimemme käyttää Eukleideen algoritmia nopeuteen."
+            },
+            {
+              "question": "Voiko SYT olla suurempi kuin luvut?",
+              "answer": "Ei, SYT on aina pienempi tai yhtä suuri kuin annetuista luvuista pienin. Määritelmän mukaan SYT:n täytyy jakaa kaikki syöteluvut, joten se ei voi ylittää mitään niistä. Maksimaalinen SYT on, kun kaikki luvut ovat samoja: SYT(n, n, ..., n) = n."
+            },
+            {
+              "question": "Miksi käytämme SYT:ää murtolukuja sieventäessä?",
+              "answer": "Osoittajan ja nimittäjän jakaminen niiden SYT:llä antaa murtoluvun supistetussa muodossa. Esimerkiksi 24/36:lla on SYT(24, 36) = 12, joten 24÷12 / 36÷12 = 2/3. Se on murtoluvun yksinkertaisin muoto."
+            },
+            {
+              "question": "Mikä on keskenään jaottomien lukujen SYT?",
+              "answer": "Kaksi lukua on keskenään jaottomia, jos niiden ainoa yhteinen tekijä on 1. Siis SYT(a, b) = 1. Esimerkiksi 8 ja 15 ovat keskenään jaottomia: luvun 8 tekijät ovat 1, 2, 4, 8; luvun 15 tekijät ovat 1, 3, 5, 15; yhteinen on vain 1."
+            },
+            {
+              "question": "Onko tämä SYT-laskin ilmainen?",
+              "answer": "Kyllä, SYT-laskimemme on täysin ilmainen ilman rekisteröintiä, tilauksen tai maksua. Syötä mikä tahansa positiivisten kokonaislukujen joukko ja saat välittömät, tarkat tulokset vaiheittaisilla laskelmilla. Laskin käsittelee useita lukuja kerralla ja näyttää koko ratkaisuprosessin."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "lcm": "PYJ-laskin",
+          "lcmDesc": "Laske kahden tai useamman luvun pienin yhteinen kerrannainen (PYJ) vaiheittaisilla ratkaisuilla",
+          "fractions": "Murtolukulaskin",
+          "fractionsDesc": "Laske murtolukuja yhteisillä nimittäjillä; SYT auttaa sieventämään tulokset",
+          "remainder": "Jäännöslaskin",
+          "remainderDesc": "Etsi osamäärä ja jäännös; Eukleideen algoritmi käyttää jäännöksiä SYT:hen"
+        }
+      }
+    },
     "convolution": {
       "title": "Konvoluutiolaskin",
       "description": "Laske kahden tietosekvenssin diskreetti konvoluutio. Ilmainen online-työkalu signaalinkäsittelyyn, matematiikkaan ja insinöörisovelluksiin.",

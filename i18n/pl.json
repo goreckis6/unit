@@ -3676,6 +3676,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "Kalkulator NWD - Największy wspólny dzielnik",
+      "description": "Oblicz największy wspólny dzielnik (NWD) dwóch lub więcej liczb natychmiast. Znajdź największą dodatnią liczbę całkowitą dzielącą wszystkie liczby. Darmowy kalkulator NWD online z krokami.",
+      "inputLabel": "Wprowadź liczby",
+      "inputPlaceholder": "np. 24, 36, 48",
+      "inputHint": "Wprowadź dwie lub więcej dodatnich liczb całkowitych oddzielonych przecinkami, spacjami lub średnikami",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "results": "Wyniki",
+      "numbers": "Liczby",
+      "gcfResult": "Największy wspólny dzielnik (NWD)",
+      "steps": "Kroki obliczeń",
+      "formula": "Wzór",
+      "enterNumbers": "Wprowadź co najmniej dwie liczby do obliczenia",
+      "errorInvalid": "Wprowadź prawidłowe dodatnie liczby całkowite",
+      "errorZero": "Zero nie może być uwzględnione w obliczeniu NWD",
+      "errorMinTwo": "Wprowadź co najmniej dwie liczby",
+      "seo": {
+        "title": "Kalkulator NWD – Znajdź największy wspólny dzielnik online",
+        "description": "Darmowy kalkulator największego wspólnego dzielnika (NWD). Oblicz NWD dwóch lub więcej liczb natychmiast z rozwiązaniami krok po kroku. Idealny dla uczniów, nauczycieli i każdego pracującego z ułamkami i teorią liczb.",
+        "keywords": "kalkulator nwd, największy wspólny dzielnik, znajdź nwd, kalkulator gcd, nwd liczb, kalkulator wspólnych dzielników, nwd z krokami, kalkulator teorii liczb",
+        "content": {
+          "heading": "Co to jest największy wspólny dzielnik (NWD)?",
+          "paragraph1": "Największy wspólny dzielnik (NWD), znany również jako największy wspólny dzielnik (GCD), to największa dodatnia liczba całkowita dzieląca wszystkie podane liczby bez reszty. Na przykład NWD 24 i 36 to 12, ponieważ 12 jest największą liczbą dzielącą zarówno 24, jak i 36. Nasz darmowy kalkulator NWD pomaga szybko i dokładnie znaleźć największy wspólny dzielnik dowolnego zestawu liczb całkowitych dodatnich, z rozwiązaniami krok po kroku przy użyciu algorytmu Euklidesa.",
+          "paragraph2": "NWD jest ściśle związany z najmniejszą wspólną wielokrotnością (NWW). Podstawowa zależność: NWW(a, b) × NWD(a, b) = a × b. Oznacza to, że znając NWD dwóch liczb, możesz łatwo obliczyć ich NWW. Dla wielu liczb NWD oblicza się sekwencyjnie: najpierw znajdź NWD pierwszych dwóch liczb, potem NWD tego wyniku z trzecią liczbą itd. Algorytm Euklidesa jest efektywny: NWD(a, b) = NWD(b, a mod b), aż b = 0.",
+          "paragraph3": "NWD ma wiele praktycznych zastosowań: przy upraszczaniu ułamków (dzielenie licznika i mianownika przez ich NWD, aby uzyskać postać podstawową), przy rozwiązywaniu równań diofantycznych, w kryptografii (np. RSA), w planowaniu i powtarzających się wzorcach, przy mierzeniu wspólnych wymiarów oraz w zadaniach z proporcjami. Zrozumienie NWD jest niezbędne dla każdego pracującego z ułamkami, proporcjami lub podzielnością.",
+          "paragraph4": "Nasz kalkulator NWD obsługuje dowolną liczbę dodatnich liczb całkowitych i pokazuje kroki obliczeń, co czyni go idealnym do celów edukacyjnych. Kalkulator używa algorytmu Euklidesa dla efektywności, nawet dla dużych liczb. Niezależnie od tego, czy jesteś uczniem uczącym się o czynnikach, nauczycielem przygotowującym lekcje matematyki, czy kimkolwiek potrzebującym szybkich obliczeń NWD, nasze narzędzie zapewnia dokładne wyniki natychmiast i za darmo.",
+          "exampleHeading": "Przykład: Obliczenia NWD",
+          "exampleText": "Przykład 1: NWD(24, 36) = 12. Dzielniki 24: 1, 2, 3, 4, 6, 8, 12, 24. Dzielniki 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. Największy wspólny dzielnik to 12. Przykład 2: NWD(48, 18, 30) = 6. Najpierw NWD(48, 18) = 6, potem NWD(6, 30) = 6. Przykład 3: NWD(17, 19) = 1. Gdy dwie liczby nie mają wspólnego dzielnika oprócz 1, są względnie pierwsze i NWD = 1."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {
+              "question": "Jaka jest różnica między NWD a NWW?",
+              "answer": "NWD (największy wspólny dzielnik) to największa liczba dzieląca wszystkie podane liczby, podczas gdy NWW (najmniejsza wspólna wielokrotność) to najmniejsza liczba podzielna przez wszystkie podane liczby. Są powiązane: NWW(a, b) × NWD(a, b) = a × b. Na przykład dla 12 i 18: NWD = 6, NWW = 36 i 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "Jak znaleźć NWD dwóch liczb?",
+              "answer": "Typowe metody: (1) Wypisywanie dzielników: wypisz dzielniki każdej liczby i weź największy wspólny. (2) Rozkład na czynniki pierwsze: rozłóż każdą liczbę na czynniki pierwsze, następnie pomnóż wspólne czynniki pierwsze w najniższej potędze. (3) Algorytm Euklidesa: wielokrotnie zastępuj większą liczbę resztą z dzielenia przez mniejszą, aż jedna liczba będzie 0; druga to NWD. Nasz kalkulator używa algorytmu Euklidesa dla szybkości."
+            },
+            {
+              "question": "Czy NWD może być większy niż liczby?",
+              "answer": "Nie, NWD jest zawsze mniejszy lub równy najmniejszej z podanych liczb. Z definicji NWD musi dzielić wszystkie liczby wejściowe, więc nie może przekraczać żadnej z nich. Maksymalny NWD występuje, gdy wszystkie liczby są równe: NWD(n, n, ..., n) = n."
+            },
+            {
+              "question": "Dlaczego używamy NWD przy upraszczaniu ułamków?",
+              "answer": "Dzieląc licznik i mianownik ułamka przez ich NWD otrzymujemy ułamek w postaci podstawowej. Na przykład 24/36 ma NWD(24, 36) = 12, więc 24÷12 / 36÷12 = 2/3. To najprostsza postać ułamka."
+            },
+            {
+              "question": "Jaki jest NWD liczb względnie pierwszych?",
+              "answer": "Dwie liczby są względnie pierwsze, jeśli ich jedynym wspólnym dzielnikiem jest 1. Zatem NWD(a, b) = 1. Na przykład 8 i 15 są względnie pierwsze: dzielniki 8 to 1, 2, 4, 8; dzielniki 15 to 1, 3, 5, 15; wspólny jest tylko 1."
+            },
+            {
+              "question": "Czy ten kalkulator NWD jest darmowy?",
+              "answer": "Tak, nasz kalkulator NWD jest całkowicie darmowy, bez rejestracji, subskrypcji ani płatności. Wprowadź dowolny zestaw dodatnich liczb całkowitych i uzyskaj natychmiastowe, dokładne wyniki z obliczeniami krok po kroku. Kalkulator obsługuje wiele liczb naraz i pokazuje pełny proces rozwiązania."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "lcm": "Kalkulator NWW",
+          "lcmDesc": "Oblicz najmniejszą wspólną wielokrotność (NWW) dwóch lub więcej liczb z rozwiązaniami krok po kroku",
+          "fractions": "Kalkulator dodawania ułamków",
+          "fractionsDesc": "Dodawaj ułamki ze wspólnymi mianownikami; NWD pomaga uprościć wyniki",
+          "remainder": "Kalkulator reszty",
+          "remainderDesc": "Znajdź iloraz i resztę; algorytm Euklidesa używa reszt do NWD"
+        }
+      }
+    },
     "convolution": {
       "title": "Kalkulator Splotu",
       "description": "Oblicz dyskretny splot dwóch ciągów danych. Darmowe narzędzie online do przetwarzania sygnałów, matematyki i zastosowań inżynieryjnych.",

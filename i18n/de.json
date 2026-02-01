@@ -3676,6 +3676,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "ggT-Rechner - Größter gemeinsamer Teiler",
+      "description": "Berechnen Sie den größten gemeinsamen Teiler (ggT) von zwei oder mehr Zahlen sofort. Finden Sie die größte positive ganze Zahl, die alle Zahlen teilt. Kostenloser Online-ggT-Rechner mit Schritten.",
+      "inputLabel": "Zahlen eingeben",
+      "inputPlaceholder": "z.B. 24, 36, 48",
+      "inputHint": "Geben Sie zwei oder mehr positive ganze Zahlen ein, getrennt durch Kommas, Leerzeichen oder Semikolons",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "results": "Ergebnisse",
+      "numbers": "Zahlen",
+      "gcfResult": "Größter gemeinsamer Teiler (ggT)",
+      "steps": "Rechenschritte",
+      "formula": "Formel",
+      "enterNumbers": "Geben Sie mindestens zwei Zahlen zur Berechnung ein",
+      "errorInvalid": "Bitte gültige positive ganze Zahlen eingeben",
+      "errorZero": "Null kann nicht in die ggT-Berechnung einbezogen werden",
+      "errorMinTwo": "Bitte mindestens zwei Zahlen eingeben",
+      "seo": {
+        "title": "ggT-Rechner – Größten gemeinsamen Teiler online finden",
+        "description": "Kostenloser Rechner für den größten gemeinsamen Teiler (ggT). Berechnen Sie den ggT von zwei oder mehr Zahlen sofort mit Schritt-für-Schritt-Lösungen. Perfekt für Schüler, Lehrer und alle, die mit Brüchen und Zahlentheorie arbeiten.",
+        "keywords": "ggT-Rechner, größter gemeinsamer Teiler, ggT-Finder, GCD-Rechner, ggT von Zahlen, gemeinsamer Teiler Rechner, ggT mit Schritten, Zahlentheorie Rechner",
+        "content": {
+          "heading": "Was ist der größte gemeinsame Teiler (ggT)?",
+          "paragraph1": "Der größte gemeinsame Teiler (ggT), auch größter gemeinsamer Teiler (GCD) genannt, ist die größte positive ganze Zahl, die alle gegebenen Zahlen ohne Rest teilt. Zum Beispiel ist der ggT von 24 und 36 gleich 12, weil 12 die größte Zahl ist, die sowohl 24 als auch 36 teilt. Unser kostenloser ggT-Rechner hilft Ihnen, den größten gemeinsamen Teiler beliebiger positiver ganzer Zahlen schnell und genau zu finden, mit Schritt-für-Schritt-Lösungen nach dem euklidischen Algorithmus.",
+          "paragraph2": "Der ggT hängt eng mit dem kleinsten gemeinsamen Vielfachen (kgV) zusammen. Die grundlegende Beziehung ist: kgV(a, b) × ggT(a, b) = a × b. Wenn Sie also den ggT zweier Zahlen kennen, können Sie leicht ihr kgV berechnen. Bei mehreren Zahlen wird der ggT nacheinander berechnet: zuerst den ggT der ersten zwei Zahlen finden, dann den ggT dieses Ergebnisses mit der dritten Zahl usw. Der euklidische Algorithmus ist effizient: ggT(a, b) = ggT(b, a mod b), bis b = 0.",
+          "paragraph3": "Der ggT hat viele praktische Anwendungen: beim Kürzen von Brüchen (Zähler und Nenner durch ihren ggT teilen für den gekürzten Bruch), beim Lösen diophantischer Gleichungen, in der Kryptographie (z. B. RSA), bei Planung und sich wiederholenden Mustern, beim Messen gemeinsamer Maße und bei Verhältnisaufgaben. Den ggT zu verstehen ist für alle wichtig, die mit Brüchen, Verhältnissen oder Teilbarkeit arbeiten.",
+          "paragraph4": "Unser ggT-Rechner verarbeitet beliebig viele positive ganze Zahlen und zeigt die Rechenschritte – ideal für den Unterricht. Der Rechner nutzt den euklidischen Algorithmus für Effizienz, auch bei großen Zahlen. Ob Sie Schüler, Lehrer oder jemand mit schnellen ggT-Berechnungen sind: Unser Tool liefert sofort genaue Ergebnisse, kostenlos.",
+          "exampleHeading": "Beispiel: ggT-Berechnungen",
+          "exampleText": "Beispiel 1: ggT(24, 36) = 12. Teiler von 24: 1, 2, 3, 4, 6, 8, 12, 24. Teiler von 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. Größter gemeinsamer Teiler ist 12. Beispiel 2: ggT(48, 18, 30) = 6. Zuerst ggT(48, 18) = 6, dann ggT(6, 30) = 6. Beispiel 3: ggT(17, 19) = 1. Wenn zwei Zahlen außer 1 keinen gemeinsamen Teiler haben, sind sie teilerfremd und ggT = 1."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist der Unterschied zwischen ggT und kgV?",
+              "answer": "Der ggT (größter gemeinsamer Teiler) ist die größte Zahl, die alle gegebenen Zahlen teilt, während das kgV (kleinstes gemeinsames Vielfaches) die kleinste Zahl ist, die durch alle gegebenen Zahlen teilbar ist. Es gilt: kgV(a, b) × ggT(a, b) = a × b. Zum Beispiel für 12 und 18: ggT = 6, kgV = 36 und 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "Wie findet man den ggT zweier Zahlen?",
+              "answer": "Gängige Methoden: (1) Teiler auflisten: Teiler jeder Zahl auflisten und den größten gemeinsamen nehmen. (2) Primfaktorzerlegung: jede Zahl in Primfaktoren zerlegen, dann die gemeinsamen Primfaktoren mit der niedrigsten Potenz multiplizieren. (3) Euklidischer Algorithmus: die größere Zahl wiederholt durch den Rest bei Division durch die kleinere ersetzen, bis eine Zahl 0 ist; die andere ist der ggT. Unser Rechner nutzt den euklidischen Algorithmus."
+            },
+            {
+              "question": "Kann der ggT größer als die Zahlen sein?",
+              "answer": "Nein, der ggT ist immer kleiner oder gleich der kleinsten der gegebenen Zahlen. Per Definition muss der ggT alle Eingabezahlen teilen, er kann also keine davon überschreiten. Der maximale ggT tritt auf, wenn alle Zahlen gleich sind: ggT(n, n, ..., n) = n."
+            },
+            {
+              "question": "Warum verwendet man den ggT beim Kürzen von Brüchen?",
+              "answer": "Wenn man Zähler und Nenner eines Bruchs durch ihren ggT teilt, erhält man den Bruch in gekürzter Form. Zum Beispiel hat 24/36 den ggT(24, 36) = 12, also 24÷12 / 36÷12 = 2/3. Das ist die einfachste Form des Bruchs."
+            },
+            {
+              "question": "Was ist der ggT teilerfremder Zahlen?",
+              "answer": "Zwei Zahlen sind teilerfremd, wenn ihr einziger gemeinsamer Teiler 1 ist. Also ggT(a, b) = 1. Zum Beispiel sind 8 und 15 teilerfremd: Teiler von 8 sind 1, 2, 4, 8; Teiler von 15 sind 1, 3, 5, 15; gemeinsam ist nur 1."
+            },
+            {
+              "question": "Ist dieser ggT-Rechner kostenlos?",
+              "answer": "Ja, unser ggT-Rechner ist völlig kostenlos, ohne Registrierung, Abo oder Zahlung. Geben Sie beliebig viele positive ganze Zahlen ein und erhalten Sie sofort genaue Ergebnisse mit Schritt-für-Schritt-Berechnungen. Der Rechner kann mehrere Zahlen auf einmal verarbeiten und zeigt den vollständigen Lösungsweg."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "lcm": "kgV-Rechner",
+          "lcmDesc": "Berechnen Sie das kleinste gemeinsame Vielfache (kgV) von zwei oder mehr Zahlen mit Schritt-für-Schritt-Lösungen",
+          "fractions": "Bruchrechner Addition",
+          "fractionsDesc": "Brüche mit gemeinsamen Nennern addieren; der ggT hilft, Ergebnisse zu kürzen",
+          "remainder": "Rest-Rechner",
+          "remainderDesc": "Quotient und Rest finden; der euklidische Algorithmus nutzt Reste für den ggT"
+        }
+      }
+    },
     "convolution": {
       "title": "Faltungsrechner",
       "description": "Berechnen Sie die diskrete Faltung zweier Datenfolgen. Kostenloses Online-Tool für Signalverarbeitung, Mathematik und Ingenieursanwendungen.",

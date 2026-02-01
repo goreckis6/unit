@@ -44,6 +44,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'gcf',
+    titleKey: 'gcf.title',
+    descKey: 'gcf.description',
+    path: '/calculators/math/gcf',
+    category: 'math',
+  },
+  {
     id: 'antilog',
     titleKey: 'antilog.title',
     descKey: 'antilog.description',

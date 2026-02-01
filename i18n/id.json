@@ -3676,6 +3676,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "Kalkulator FPB - Faktor Persekutuan Terbesar",
+      "description": "Hitung Faktor Persekutuan Terbesar (FPB) dari dua atau lebih angka secara instan. Temukan bilangan bulat positif terbesar yang membagi semua angka. Kalkulator FPB online gratis dengan langkah.",
+      "inputLabel": "Masukkan angka",
+      "inputPlaceholder": "mis. 24, 36, 48",
+      "inputHint": "Masukkan dua atau lebih bilangan bulat positif yang dipisahkan koma, spasi, atau titik koma",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "results": "Hasil",
+      "numbers": "Angka",
+      "gcfResult": "Faktor Persekutuan Terbesar (FPB)",
+      "steps": "Langkah Perhitungan",
+      "formula": "Rumus",
+      "enterNumbers": "Masukkan setidaknya dua angka untuk menghitung",
+      "errorInvalid": "Masukkan bilangan bulat positif yang valid",
+      "errorZero": "Nol tidak dapat disertakan dalam perhitungan FPB",
+      "errorMinTwo": "Masukkan setidaknya dua angka",
+      "seo": {
+        "title": "Kalkulator FPB – Cari Faktor Persekutuan Terbesar Online",
+        "description": "Kalkulator Faktor Persekutuan Terbesar (FPB) gratis. Hitung FPB dua atau lebih angka secara instan dengan solusi langkah demi langkah. Cocok untuk siswa, guru, dan siapa pun yang bekerja dengan pecahan dan teori bilangan.",
+        "keywords": "kalkulator fpb, faktor persekutuan terbesar, pencari fpb, kalkulator gcd, fpb angka, kalkulator faktor persekutuan, fpb dengan langkah, kalkulator teori bilangan",
+        "content": {
+          "heading": "Apa itu Faktor Persekutuan Terbesar (FPB)?",
+          "paragraph1": "Faktor Persekutuan Terbesar (FPB), juga dikenal sebagai Pembagi Persekutuan Terbesar (GCD), adalah bilangan bulat positif terbesar yang membagi semua bilangan yang diberikan tanpa sisa. Misalnya FPB dari 24 dan 36 adalah 12, karena 12 adalah bilangan terbesar yang membagi 24 dan 36. Kalkulator FPB gratis kami membantu Anda menemukan faktor persekutuan terbesar dari himpunan bilangan bulat positif apa pun dengan cepat dan akurat, dengan solusi langkah demi langkah menggunakan algoritma Euclidean.",
+          "paragraph2": "FPB erat kaitannya dengan Kelipatan Persekutuan Terkecil (KPK). Hubungan dasarnya: KPK(a, b) × FPB(a, b) = a × b. Artinya jika Anda mengetahui FPB dua bilangan, Anda dapat dengan mudah menghitung KPK-nya. Untuk beberapa bilangan, FPB dihitung secara berurutan: pertama cari FPB dari dua bilangan pertama, lalu FPB dari hasil itu dengan bilangan ketiga, dan seterusnya. Algoritma Euclidean efisien: FPB(a, b) = FPB(b, a mod b) sampai b = 0.",
+          "paragraph3": "FPB memiliki banyak aplikasi praktis: dalam menyederhanakan pecahan (membagi pembilang dan penyebut dengan FPB-nya untuk bentuk paling sederhana), dalam menyelesaikan persamaan Diophantine, dalam kriptografi (mis. RSA), dalam penjadwalan dan pola berulang, dalam mengukur dimensi bersama, dan dalam masalah perbandingan. Memahami FPB penting bagi siapa pun yang bekerja dengan pecahan, perbandingan, atau keterbagian.",
+          "paragraph4": "Kalkulator FPB kami menangani sejumlah bilangan bulat positif dan menampilkan langkah perhitungan, menjadikannya cocok untuk pendidikan. Kalkulator menggunakan algoritma Euclidean untuk efisiensi, bahkan untuk bilangan besar. Baik Anda siswa yang mempelajari faktor, guru yang menyiapkan pelajaran matematika, atau siapa pun yang membutuhkan perhitungan FPB cepat, alat kami memberikan hasil akurat secara instan dan gratis.",
+          "exampleHeading": "Contoh: Perhitungan FPB",
+          "exampleText": "Contoh 1: FPB(24, 36) = 12. Faktor 24: 1, 2, 3, 4, 6, 8, 12, 24. Faktor 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. Faktor persekutuan terbesar adalah 12. Contoh 2: FPB(48, 18, 30) = 6. Pertama FPB(48, 18) = 6, lalu FPB(6, 30) = 6. Contoh 3: FPB(17, 19) = 1. Ketika dua bilangan hanya memiliki faktor bersama 1, mereka koprima dan FPB = 1."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa perbedaan FPB dan KPK?",
+              "answer": "FPB (Faktor Persekutuan Terbesar) adalah bilangan terbesar yang membagi semua bilangan yang diberikan, sedangkan KPK (Kelipatan Persekutuan Terkecil) adalah bilangan terkecil yang habis dibagi semua bilangan yang diberikan. Mereka terkait: KPK(a, b) × FPB(a, b) = a × b. Misalnya untuk 12 dan 18: FPB = 6, KPK = 36, dan 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "Bagaimana cara mencari FPB dua bilangan?",
+              "answer": "Metode umum: (1) Daftar faktor: daftar faktor setiap bilangan dan ambil yang terbesar persekutuan. (2) Faktorisasi prima: uraikan setiap bilangan menjadi faktor prima, lalu kalikan faktor prima bersama dengan pangkat terendah. (3) Algoritma Euclidean: ganti bilangan yang lebih besar dengan sisa pembagian dengan yang lebih kecil berulang sampai satu bilangan 0; yang lain adalah FPB. Kalkulator kami menggunakan algoritma Euclidean untuk kecepatan."
+            },
+            {
+              "question": "Bisakah FPB lebih besar dari bilangan-bilangannya?",
+              "answer": "Tidak. FPB selalu kurang dari atau sama dengan yang terkecil dari bilangan yang diberikan. Menurut definisi FPB harus membagi semua input, jadi tidak bisa melebihi salah satunya. FPB maksimum ketika semua bilangan sama: FPB(n, n, ..., n) = n."
+            },
+            {
+              "question": "Mengapa kita menggunakan FPB saat menyederhanakan pecahan?",
+              "answer": "Membagi pembilang dan penyebut pecahan dengan FPB-nya menghasilkan pecahan dalam bentuk paling sederhana. Misalnya 24/36 memiliki FPB(24, 36) = 12, jadi 24÷12 / 36÷12 = 2/3. Itu bentuk paling sederhana pecahan."
+            },
+            {
+              "question": "Berapa FPB bilangan koprima?",
+              "answer": "Dua bilangan koprima jika satu-satunya faktor bersama mereka adalah 1. Jadi FPB(a, b) = 1. Misalnya 8 dan 15 koprima: faktor 8 adalah 1, 2, 4, 8; faktor 15 adalah 1, 3, 5, 15; yang bersama hanya 1."
+            },
+            {
+              "question": "Apakah kalkulator FPB ini gratis?",
+              "answer": "Ya. Kalkulator FPB kami sepenuhnya gratis tanpa pendaftaran, langganan, atau pembayaran. Masukkan himpunan bilangan bulat positif apa pun dan dapatkan hasil akurat instan dengan perhitungan langkah demi langkah. Kalkulator dapat menangani beberapa bilangan sekaligus dan menampilkan seluruh proses solusi."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "lcm": "Kalkulator KPK",
+          "lcmDesc": "Hitung Kelipatan Persekutuan Terkecil (KPK) dua atau lebih angka dengan solusi langkah demi langkah",
+          "fractions": "Kalkulator Penjumlahan Pecahan",
+          "fractionsDesc": "Jumlahkan pecahan dengan penyebut bersama; FPB membantu menyederhanakan hasil",
+          "remainder": "Kalkulator Sisa",
+          "remainderDesc": "Temukan hasil bagi dan sisa; algoritma Euclidean menggunakan sisa untuk FPB"
+        }
+      }
+    },
     "convolution": {
       "title": "Kalkulator Konvolusi",
       "description": "Hitung konvolusi diskrit dari dua urutan data. Alat online gratis untuk pemrosesan sinyal, matematika, dan aplikasi teknik.",

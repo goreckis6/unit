@@ -3676,6 +3676,58 @@
         }
       }
     },
+    "gcf": {
+      "title": "Kalkulačka NSD - Najväčší spoločný deliteľ",
+      "description": "Vypočítajte najväčší spoločný deliteľ (NSD) dvoch alebo viac čísel okamžite. Nájdite najväčšie kladné celé číslo, ktoré delí všetky čísla. Bezplatná online kalkulačka NSD s krokmi.",
+      "inputLabel": "Zadajte čísla",
+      "inputPlaceholder": "napr. 24, 36, 48",
+      "inputHint": "Zadajte dve alebo viac kladných celých čísel oddelených čiarkami, medzerami alebo bodkočiarkami",
+      "calculate": "Vypočítat",
+      "reset": "Resetovať",
+      "results": "Výsledky",
+      "numbers": "Čísla",
+      "gcfResult": "Najväčší spoločný deliteľ (NSD)",
+      "steps": "Kroky výpočtu",
+      "formula": "Vzorec",
+      "enterNumbers": "Pre výpočet zadajte aspoň dve čísla",
+      "errorInvalid": "Zadajte platné kladné celé čísla",
+      "errorZero": "Nula nemôže byť zahrnutá do výpočtu NSD",
+      "errorMinTwo": "Zadajte aspoň dve čísla",
+      "seo": {
+        "title": "Kalkulačka NSD – Nájdite najväčší spoločný deliteľ online",
+        "description": "Bezplatná kalkulačka najväčšieho spoločného deliteľa (NSD). Vypočítajte NSD dvoch alebo viac čísel okamžite s riešeniami krok za krokom. Perfektné pre študentov, učiteľov a každého pracujúceho so zlomkami a teóriou čísel.",
+        "keywords": "kalkulačka nsd, najväčší spoločný deliteľ, vyhľadávač nsd, gcd kalkulačka, nsd čísel, kalkulačka spoločných deliteľov, nsd s krokmi, kalkulačka teórie čísel",
+        "content": {
+          "heading": "Čo je najväčší spoločný deliteľ (NSD)?",
+          "paragraph1": "Najväčší spoločný deliteľ (NSD), tiež známy ako najväčší spoločný deliteľ (GCD), je najväčšie kladné celé číslo, ktoré delí všetky dané čísla bezo zvyšku. Napríklad NSD 24 a 36 je 12, pretože 12 je najväčšie číslo, ktoré delí 24 aj 36. Naša bezplatná kalkulačka NSD vám pomôže rýchlo a presne nájsť najväčší spoločný deliteľ akejkoľvek sady kladných celých čísel s riešeniami krok za krokom pomocou Euklidovho algoritmu.",
+          "paragraph2": "NSD úzko súvisí s najmenším spoločným násobkom (NSN). Základný vzťah je: NSN(a, b) × NSD(a, b) = a × b. Ak poznáte NSD dvoch čísel, môžete ľahko vypočítať ich NSN. Pre viac čísel sa NSD počíta postupne: najprv nájdite NSD prvých dvoch čísel, potom NSD tohto výsledku s tretím číslom atď. Euklidov algoritmus je efektívny: NSD(a, b) = NSD(b, a mod b), kým b ≠ 0.",
+          "paragraph3": "NSD má mnoho praktických aplikácií: pri zjednodušovaní zlomkov (delenie čitateľa a menovateľa ich NSD pre základný tvar), pri riešení diofantovských rovníc, v kryptografii (napr. RSA), v plánovaní a opakujúcich sa vzorcoch, pri meraní spoločných rozmerov a v úlohách s pomerami. Pochopenie NSD je nevyhnutné pre každého pracujúceho so zlomkami, pormi alebo deliteľnosťou.",
+          "paragraph4": "Naša kalkulačka NSD spracováva ľubovoľný počet kladných celých čísel a zobrazuje kroky výpočtu, čo ju robí ideálnou pre vzdelávacie účely. Kalkulačka používa Euklidov algoritmus pre efektivitu, aj pre veľké čísla. Či už ste študent, učiteľ alebo ktokoľvek potrebujúci rýchle výpočty NSD, náš nástroj poskytuje presné výsledky okamžite a zadarmo.",
+          "exampleHeading": "Príklad: Výpočty NSD",
+          "exampleText": "Príklad 1: NSD(24, 36) = 12. Delitelia 24: 1, 2, 3, 4, 6, 8, 12, 24. Delitelia 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. Najväčší spoločný deliteľ je 12. Príklad 2: NSD(48, 18, 30) = 6. Najprv NSD(48, 18) = 6, potom NSD(6, 30) = 6. Príklad 3: NSD(17, 19) = 1. Keď dve čísla nezdieľajú žiadneho spoločného deliteľa okrem 1, sú nesúdeliteľné a NSD = 1."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {"question": "Aký je rozdiel medzi NSD a NSN?", "answer": "NSD (najväčší spoločný deliteľ) je najväčšie číslo, ktoré delí všetky dané čísla, zatiaľ čo NSN (najmenší spoločný násobok) je najmenšie číslo deliteľné všetkými danými číslami. Sú spojené vzťahom: NSN(a, b) × NSD(a, b) = a × b. Napríklad pre 12 a 18: NSD = 6, NSN = 36 a 6 × 36 = 12 × 18 = 216."},
+            {"question": "Ako nájdete NSD dvoch čísel?", "answer": "Bežné metódy: (1) Výpis deliteľov: vypíšte deliteľov každého čísla a vezmite najväčšieho spoločného. (2) Prvočíselný rozklad: rozložte každé číslo na prvočísla a vynásobte spoločné prvočísla s najnižšou mocninou. (3) Euklidov algoritmus: opakovane nahraďte väčšie číslo zvyškom po delení menším, kým jedno číslo nebude 0; druhé je NSD. Naša kalkulačka používa Euklidov algoritmus."},
+            {"question": "Môže byť NSD väčší ako čísla?", "answer": "Nie, NSD je vždy menší alebo rovný najmenšiemu z daných čísel. Podľa definície musí NSD deliť všetky vstupné čísla, takže nemôže presiahnuť žiadne z nich. Maximálny NSD je, keď sú všetky čísla rovnaké: NSD(n, n, ..., n) = n."},
+            {"question": "Prečo používame NSD pri zjednodušovaní zlomkov?", "answer": "Delenie čitateľa aj menovateľa zlomku ich NSD dáva zlomok v základnom tvare. Napríklad 24/36 má NSD(24, 36) = 12, takže 24÷12 / 36÷12 = 2/3. To je najjednoduchší tvar zlomku."},
+            {"question": "Aký je NSD nesúdeliteľných čísel?", "answer": "Dve čísla sú nesúdeliteľné (relatívne prvočísla), ak ich jediný spoločný deliteľ je 1. Teda NSD(a, b) = 1. Napríklad 8 a 15 sú nesúdeliteľné: delitelia 8 sú 1, 2, 4, 8; delitelia 15 sú 1, 3, 5, 15; spoločný je len 1."},
+            {"question": "Je táto kalkulačka NSD zadarmo?", "answer": "Áno, naša kalkulačka NSD je úplne zadarmo bez registrácie, predplatného alebo platby. Zadajte ľubovoľnú sadu kladných celých čísel a získajte okamžité, presné výsledky s výpočtami krok za krokom. Kalkulačka zvládne viac čísel naraz a zobrazí celý proces riešenia."}
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace kalkulačky",
+          "lcm": "Kalkulačka NSN",
+          "lcmDesc": "Vypočítajte najmenší spoločný násobok (NSN) dvoch alebo viac čísel s riešeniami krok za krokom",
+          "fractions": "Kalkulačka sčítania zlomkov",
+          "fractionsDesc": "Sčítavajte zlomky so spoločnými menovateľmi; NSD pomáha zjednodušiť výsledky",
+          "remainder": "Kalkulačka zvyšku",
+          "remainderDesc": "Nájdite podiel a zvyšok; Euklidov algoritmus používa zvyšky pre NSD"
+        }
+      }
+    },
     "convolution": {
       "title": "Kalkulačka Konvolúcie",
       "description": "Vypočítajte diskrétnu konvolúciu dvoch dátových sekvencií. Bezplatný online nástroj na spracovanie signálov, matematiku a inžinierske aplikácie.",

@@ -3750,6 +3750,76 @@
         }
       }
     },
+    "gcf": {
+      "title": "OBEB Hesaplayıcı - En Büyük Ortak Çarpan",
+      "description": "İki veya daha fazla sayının En Büyük Ortak Çarpanını (OBEB) anında hesaplayın. Tüm sayıları bölen en büyük pozitif tam sayıyı bulun. Adımlarla ücretsiz çevrimiçi OBEB hesaplayıcı.",
+      "inputLabel": "Sayıları girin",
+      "inputPlaceholder": "örn. 24, 36, 48",
+      "inputHint": "Virgül, boşluk veya noktalı virgülle ayrılmış iki veya daha fazla pozitif tam sayı girin",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "results": "Sonuçlar",
+      "numbers": "Sayılar",
+      "gcfResult": "En Büyük Ortak Çarpan (OBEB)",
+      "steps": "Hesaplama Adımları",
+      "formula": "Formül",
+      "enterNumbers": "Hesaplamak için en az iki sayı girin",
+      "errorInvalid": "Lütfen geçerli pozitif tam sayılar girin",
+      "errorZero": "OBEB hesaplamasına sıfır dahil edilemez",
+      "errorMinTwo": "Lütfen en az iki sayı girin",
+      "seo": {
+        "title": "OBEB Hesaplayıcı – Çevrimiçi En Büyük Ortak Çarpanı Bulun",
+        "description": "Ücretsiz En Büyük Ortak Çarpan (OBEB) hesaplayıcı. İki veya daha fazla sayının OBEB'ini adım adım çözümlerle anında hesaplayın. Kesirler ve sayılar teorisiyle çalışan öğrenciler, öğretmenler ve herkes için ideal.",
+        "keywords": "obeb hesaplayıcı, en büyük ortak çarpan, obeb bulucu, ebob hesaplayıcı, sayıların obeb'i, ortak çarpan hesaplayıcı, adımlı obeb, sayılar teorisi hesaplayıcı",
+        "content": {
+          "heading": "En Büyük Ortak Çarpan (OBEB) Nedir?",
+          "paragraph1": "En Büyük Ortak Çarpan (OBEB), En Büyük Ortak Bölen (EBOB) olarak da bilinir; verilen tüm sayıları kalan bırakmadan bölen en büyük pozitif tam sayıdır. Örneğin 24 ve 36'nın OBEB'i 12'dir, çünkü 12 hem 24'ü hem 36'yı bölen en büyük sayıdır. Ücretsiz OBEB hesaplayıcımız, Öklid algoritmasıyla adım adım çözümlerle herhangi bir pozitif tam sayı kümesinin en büyük ortak çarpanını hızlı ve doğru bulmanıza yardımcı olur.",
+          "paragraph2": "OBEB, En Küçük Ortak Kat (EKOK) ile yakından ilişkilidir. Temel ilişki: EKOK(a, b) × OBEB(a, b) = a × b. Yani iki sayının OBEB'ini biliyorsanız EKOK'larını kolayca hesaplayabilirsiniz. Birden fazla sayı için OBEB sırayla hesaplanır: önce ilk iki sayının OBEB'ini bulun, sonra bu sonucun üçüncü sayıyla OBEB'ini bulun vb. Öklid algoritması verimlidir: OBEB(a, b) = OBEB(b, a mod b), b = 0 olana kadar.",
+          "paragraph3": "OBEB'in birçok pratik uygulaması vardır: kesirleri sadeleştirmede (pay ve paydayı OBEB'lerine bölerek en sade hali elde etme), Diophantine denklemlerini çözmede, kriptografide (örn. RSA), zamanlama ve tekrarlayan desenlerde, ortak boyutları ölçmede ve oran problemlerinde. Kesirler, oranlar veya bölünebilirlikle çalışan herkes için OBEB'i anlamak gereklidir.",
+          "paragraph4": "OBEB hesaplayıcımız herhangi bir sayıda pozitif tam sayıyı işler ve hesaplama adımlarını gösterir; eğitim için idealdir. Hesaplayıcı verimlilik için Öklid algoritmasını kullanır, büyük sayılarda bile. İster çarpanları öğrenen öğrenci, ister matematik dersi hazırlayan öğretmen, ister hızlı OBEB hesaplamasına ihtiyacı olan biri olun, aracımız anında ve ücretsiz doğru sonuçlar sunar.",
+          "exampleHeading": "Örnek: OBEB Hesaplamaları",
+          "exampleText": "Örnek 1: OBEB(24, 36) = 12. 24'ün çarpanları: 1, 2, 3, 4, 6, 8, 12, 24. 36'nın çarpanları: 1, 2, 3, 4, 6, 9, 12, 18, 36. En büyük ortak çarpan 12'dir. Örnek 2: OBEB(48, 18, 30) = 6. Önce OBEB(48, 18) = 6, sonra OBEB(6, 30) = 6. Örnek 3: OBEB(17, 19) = 1. İki sayı 1 dışında ortak çarpan paylaşmıyorsa aralarında asaldır ve OBEB = 1."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {
+              "question": "OBEB ile EKOK arasındaki fark nedir?",
+              "answer": "OBEB (En Büyük Ortak Çarpan) verilen tüm sayıları bölen en büyük sayıdır, EKOK (En Küçük Ortak Kat) ise verilen tüm sayılara bölünebilen en küçük sayıdır. İlişkileri: EKOK(a, b) × OBEB(a, b) = a × b. Örneğin 12 ve 18 için: OBEB = 6, EKOK = 36 ve 6 × 36 = 12 × 18 = 216."
+            },
+            {
+              "question": "İki sayının OBEB'i nasıl bulunur?",
+              "answer": "Yaygın yöntemler: (1) Çarpanları listeleme: her sayının çarpanlarını listele ve en büyük ortak olanı al. (2) Asal çarpanlara ayırma: her sayıyı asallara ayır, sonra ortak asalları en düşük üsle çarp. (3) Öklid algoritması: büyük sayıyı küçüğe bölümünden kalanla tekrar tekrar değiştir, biri 0 olana kadar; diğeri OBEB'tir. Hesaplayıcımız hız için Öklid algoritmasını kullanır."
+            },
+            {
+              "question": "OBEB sayılardan büyük olabilir mi?",
+              "answer": "Hayır. OBEB her zaman verilen sayıların en küçüğünden küçük veya eşittir. Tanım gereği OBEB tüm girişleri bölmeli, dolayısıyla hiçbirini aşamaz. Maksimum OBEB tüm sayılar eşit olduğunda: OBEB(n, n, ..., n) = n."
+            },
+            {
+              "question": "Kesirleri sadeleştirirken neden OBEB kullanırız?",
+              "answer": "Bir kesrin pay ve paydasını OBEB'lerine bölmek kesri en sade halde verir. Örneğin 24/36'nın OBEB(24, 36) = 12, yani 24÷12 / 36÷12 = 2/3. Bu kesrin en basit biçimidir."
+            },
+            {
+              "question": "Aralarında asal sayıların OBEB'i nedir?",
+              "answer": "İki sayı tek ortak çarpanları 1 ise aralarında asaldır. Yani OBEB(a, b) = 1. Örneğin 8 ve 15 aralarında asal: 8'in çarpanları 1, 2, 4, 8; 15'in çarpanları 1, 3, 5, 15; ortak sadece 1."
+            },
+            {
+              "question": "Bu OBEB hesaplayıcı ücretsiz mi?",
+              "answer": "Evet. OBEB hesaplayıcımız kayıt, abonelik veya ödeme olmadan tamamen ücretsizdir. Herhangi bir pozitif tam sayı kümesi girin ve adım adım hesaplamalarla anında doğru sonuçlar alın. Hesaplayıcı aynı anda birden fazla sayıyı işleyebilir ve tüm çözüm sürecini gösterir."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "lcm": "EKOK Hesaplayıcı",
+          "lcmDesc": "İki veya daha fazla sayının En Küçük Ortak Katını (EKOK) adım adım çözümlerle hesaplayın",
+          "fractions": "Kesir Toplama Hesaplayıcı",
+          "fractionsDesc": "Ortak paydalarla kesir toplayın; OBEB sonuçları sadeleştirmeye yardımcı olur",
+          "remainder": "Kalan Hesaplayıcı",
+          "remainderDesc": "Bölüm ve kalanı bulun; Öklid algoritması OBEB için kalan kullanır"
+        }
+      }
+    },
     "convolution": {
       "title": "Konvolüsyon Hesaplayıcı",
       "description": "İki veri dizisinin ayrık konvolüsyonunu hesaplayın. Sinyal işleme, matematik ve mühendislik uygulamaları için ücretsiz çevrimiçi araç.",

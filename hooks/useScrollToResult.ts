@@ -27,6 +27,10 @@ export function useScrollToResult<T>(
       result !== previousResult.current &&
       resultRef.current
     ) {
+      if (window.innerWidth > 480) {
+        previousResult.current = result;
+        return;
+      }
       // Small delay to ensure the result section is rendered
       if (scrollTimeout.current) {
         window.clearTimeout(scrollTimeout.current);

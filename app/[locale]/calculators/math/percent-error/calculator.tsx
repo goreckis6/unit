@@ -23,8 +23,7 @@ export function PercentErrorCalculator() {
   const [result, setResult] = useState<{ percentError: number; absoluteError: number } | null>(null);
   const [error, setError] = useState<string>('');
 
-  // Auto-calculate when values change
-  useEffect(() => {
+  const handleCalculate = () => {
     const actual = parseFloat(actualValue.replace(',', '.'));
     const experimental = parseFloat(experimentalValue.replace(',', '.'));
 
@@ -41,7 +40,7 @@ export function PercentErrorCalculator() {
       setResult(null);
       setError('');
     }
-  }, [actualValue, experimentalValue, t]);
+  };
 
   const handleReset = () => {
     setActualValue('50');
@@ -100,7 +99,10 @@ export function PercentErrorCalculator() {
               </div>
             )}
 
-            <div className="action-buttons" style={{ marginTop: '0.5rem' }}>
+            <div className="action-buttons" style={{ marginTop: '0.5rem', display: 'flex', gap: '0.75rem' }}>
+              <button onClick={handleCalculate} className="btn btn-primary" style={{ minHeight: '44px', minWidth: '44px' }}>
+                {t('calculate')}
+              </button>
               <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>
                 {t('reset')}
               </button>

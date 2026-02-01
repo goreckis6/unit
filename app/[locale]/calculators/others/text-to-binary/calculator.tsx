@@ -120,15 +120,14 @@ export function TextToBinaryCalculator() {
     ? ', ' 
     : customSeparator;
 
-  // Auto-convert when text, encoding, or separator changes
-  useEffect(() => {
+  const handleCalculate = () => {
     if (text) {
       const binary = textToBinary(text, encoding, separator);
       setResult(binary);
     } else {
       setResult('');
     }
-  }, [text, encoding, separator]);
+  };
 
   const handleReset = () => {
     setText('');
@@ -237,7 +236,10 @@ export function TextToBinaryCalculator() {
               </div>
             )}
 
-            <div className="action-buttons" style={{ marginTop: '0.5rem' }}>
+            <div className="action-buttons" style={{ marginTop: '0.5rem', display: 'flex', gap: '0.75rem' }}>
+              <button onClick={handleCalculate} className="btn btn-primary" style={{ minHeight: '44px', minWidth: '44px' }}>
+                {t('calculate')}
+              </button>
               <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>
                 {t('reset')}
               </button>

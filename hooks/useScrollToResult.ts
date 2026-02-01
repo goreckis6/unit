@@ -37,7 +37,7 @@ export function useScrollToResult<T>(
             behavior: 'smooth',
           });
         }
-      }, 100);
+      }, 350);
     }
 
     // Update previous result

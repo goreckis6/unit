@@ -3541,6 +3541,75 @@
         }
       }
     },
+    "naturalLogarithm": {
+      "title": "Doğal Logaritma Hesaplayıcı",
+      "description": "Doğal logaritma (ln) değerini anında ve doğru sonuçlarla hesaplayın. Detaylı açıklamalarla herhangi bir pozitif sayı için ln(x) değerini bulun. Ücretsiz çevrimiçi doğal logaritma hesaplayıcısı.",
+      "inputLabel": "Değer Girin (x)",
+      "inputPlaceholder": "örn. 10",
+      "inputHint": "Doğal logaritmasını hesaplamak için pozitif bir sayı girin",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "results": "Sonuçlar",
+      "naturalLog": "Doğal Logaritma (ln)",
+      "formula": "Formül",
+      "commonValues": "Yaygın Değerler",
+      "enterValue": "Hesaplamak için pozitif bir sayı girin",
+      "errorZero": "Sıfırın doğal logaritması tanımsızdır",
+      "errorNegative": "Doğal logaritma yalnızca pozitif sayılar için tanımlanmıştır",
+      "errorInvalid": "Lütfen geçerli bir sayı girin",
+      "seo": {
+        "title": "Doğal Logaritma Hesaplayıcı – ln(x) Çevrimiçi Hesaplama",
+        "description": "Ücretsiz doğal logaritma hesaplayıcı. Adım adım açıklamalarla herhangi bir pozitif sayı için ln(x) değerini anında hesaplayın. Logaritmik fonksiyonlarla çalışan öğrenciler, bilim insanları ve mühendisler için mükemmel.",
+        "keywords": "doğal logaritma hesaplayıcı, ln hesaplayıcı, doğal logaritma, e tabanında logaritma, ln(x), euler sayısı, logaritma hesaplayıcı, logaritmik fonksiyon",
+        "content": {
+          "heading": "Doğal Logaritma Nedir?",
+          "paragraph1": "ln(x) olarak gösterilen doğal logaritma, e tabanında logaritmadır; burada e (Euler sayısı) yaklaşık olarak 2,71828'dir. Kalkülüs, bilim ve mühendislikte en önemli matematiksel fonksiyonlardan biridir. Doğal logaritma şu soruyu yanıtlar: 'x elde etmek için e hangi kuvvete yükseltilmelidir?' Örneğin, ln(e) = 1 çünkü e¹ = e ve ln(1) = 0 çünkü e⁰ = 1. Ücretsiz doğal logaritma hesaplayıcımız herhangi bir pozitif sayı için anında ve doğru sonuçlar sağlar.",
+          "paragraph2": "Doğal logaritmanın birkaç temel özelliği vardır: ln(1) = 0, ln(e) = 1, ln(ab) = ln(a) + ln(b), ln(a/b) = ln(a) - ln(b), ln(aⁿ) = n·ln(a) ve ln(eˣ) = x. Bu özellikler, doğal logaritmaları karmaşık üstel ifadeleri basitleştirmek için özellikle yararlı kılar. Fonksiyon yalnızca pozitif gerçek sayılar için tanımlanmıştır; ln(0) tanımsızdır (negatif sonsuza yaklaşır) ve negatif sayıların ln'si karmaşık sayılar gerektirir. Doğal logaritma, üstel fonksiyon eˣ'in ters fonksiyonudur.",
+          "paragraph3": "Doğal logaritmalar gerçek dünya uygulamalarında yaygın olarak görülür: bileşik faiz ve üstel büyüme/bozunmada (nüfus artışı, radyoaktif bozunma, bakteri büyümesi), bilgi teorisi ve entropi hesaplamalarında, fizik denklemlerinde (termodinamik, kuantum mekaniği), kimyada pH hesaplamaları ve reaksiyon kinetiği için, ekonomide esneklik ve büyüme oranları için ve istatistikte log-normal dağılımlar ve maksimum olabilirlik tahmini için. Doğal logaritmaları anlamak, STEM alanlarında çalışan herkes için esastır.",
+          "paragraph4": "Doğal logaritma hesaplayıcımız herhangi bir pozitif gerçek sayıyı işler ve yüksek hassasiyetle (10 ondalık basamağa kadar) sonuçlar sağlar. Hesaplayıcı, hesaplamaları doğrulamanıza yardımcı olmak için ln(1) = 0, ln(e) ≈ 1 ve ln(10) ≈ 2,302585 gibi yaygın referans değerlerini içerir. İster kalkülüs öğrenen bir öğrenci, üstel verileri analiz eden bir bilim insanı, büyüme modelleriyle çalışan bir mühendis veya hızlı logaritma hesaplamalarına ihtiyaç duyan biri olun, aracımız anında ve ücretsiz olarak doğru sonuçlar sunar.",
+          "exampleHeading": "Örnek: Doğal Logaritma Hesaplamaları",
+          "exampleText": "Örnek 1: ln(10) ≈ 2,302585. Bu, e^2,302585 ≈ 10 anlamına gelir. Örnek 2: ln(100) ≈ 4,605170. ln(a²) = 2·ln(a) özelliğini kullanarak doğrulayabiliriz: ln(100) = ln(10²) = 2·ln(10) ≈ 2 × 2,302585 = 4,605170. Örnek 3: ln(0,5) ≈ -0,693147. Negatif sonuçlar, girişin 0 ile 1 arasında olduğunu gösterir. Örnek 4: e^x = 20'yi çözmek için her iki tarafın ln'sini alın: x = ln(20) ≈ 2,995732."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "Doğal logaritma nedir ve diğer logaritmalardan nasıl farklıdır?",
+              "answer": "Doğal logaritma (ln), e tabanında logaritmadır; burada e ≈ 2,71828 (Euler sayısı). Yaygın logaritmalardan (taban 10 log) veya ikili logaritmalardan (taban 2 log) farklıdır. Doğal logaritmalar kalkülüste temeldir çünkü ln(x)'in türevi 1/x'tir, bu da onları birçok matematiksel ve bilimsel bağlamda doğal olarak ortaya çıkmasını sağlar. İlişki: ln(x) = log_e(x)."
+            },
+            {
+              "question": "Neden ln(1) 0'a eşittir?",
+              "answer": "ln(1) = 0 çünkü e⁰ = 1. Doğal logaritma 'girişi elde etmek için e hangi kuvvete yükseltilmelidir?' diye sorar. Herhangi bir sayı 0 kuvvetine yükseltildiğinde 1'e eşit olduğundan, ln(1) = 0'dır. Bu herhangi bir tabandaki logaritmalar için geçerlidir: 1'in logaritması her zaman 0'dır."
+            },
+            {
+              "question": "Negatif bir sayının doğal logaritmasını alabilir misiniz?",
+              "answer": "Hayır, negatif sayıların doğal logaritması gerçek sayı sisteminde tanımsızdır. ln(x) yalnızca pozitif gerçek sayılar (x > 0) için tanımlanmıştır. Ancak, karmaşık sayı matematiğinde, negatif sayıların logaritmaları karmaşık analiz kullanılarak hesaplanabilir, ancak bu hayali sayıları içerir."
+            },
+            {
+              "question": "ln ve e arasındaki ilişki nedir?",
+              "answer": "Doğal logaritma (ln) ve üstel fonksiyon (e^x) ters fonksiyonlardır. Bu, ln(e^x) = x ve e^(ln(x)) = x anlamına gelir. Örneğin, eğer e³ ≈ 20,086 ise, o zaman ln(20,086) ≈ 3'tür. Birbirlerini 'iptal ederler'. Bu ilişki, üstel denklemleri ve diferansiyel denklemleri çözmede temeldir."
+            },
+            {
+              "question": "Doğal logaritma ile yaygın logaritma arasında nasıl dönüşüm yapılır?",
+              "answer": "ln (doğal logaritma, taban e) ile log (yaygın logaritma, taban 10) arasında dönüşüm yapmak için formülü kullanın: ln(x) = log(x) / log(e) ≈ 2,302585 × log(x). Tersine, log(x) = ln(x) / ln(10) ≈ 0,434294 × ln(x). Bu, logaritmalar için taban değiştirme formülünden türetilmiştir."
+            },
+            {
+              "question": "Bu doğal logaritma hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, doğal logaritma hesaplayıcımız kayıt, abonelik veya ödeme gerektirmeden tamamen ücretsizdir. Herhangi bir pozitif sayı girin ve 10 ondalık basamağa kadar hassasiyetle anında, doğru sonuçlar alın. Öğrenciler, eğitimciler, bilim insanları ve mühendisler için mükemmel."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "antilog": "Antilogaritma Hesaplayıcı",
+          "antilogDesc": "Antilogaritma (ters logaritma) hesaplayın ve logaritma değerlerini orijinal sayılara geri dönüştürün",
+          "exponential": "Üstel Hesaplayıcı",
+          "exponentialDesc": "Üstel fonksiyonlar e^x ve diğer taban üstel değerleri hassasiyetle hesaplayın",
+          "scientific": "Bilimsel Hesap Makinesi",
+          "scientificDesc": "Trigonometrik, logaritmik ve üstel fonksiyonlara sahip kapsamlı bilimsel hesap makinesi"
+        }
+      }
+    },
     "convolution": {
       "title": "Konvolüsyon Hesaplayıcı",
       "description": "İki veri dizisinin ayrık konvolüsyonunu hesaplayın. Sinyal işleme, matematik ve mühendislik uygulamaları için ücretsiz çevrimiçi araç.",

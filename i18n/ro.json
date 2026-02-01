@@ -3537,6 +3537,75 @@
         }
       }
     },
+    "naturalLogarithm": {
+      "title": "Calculator Logaritm Natural",
+      "description": "Calculați logaritmul natural (ln) instantaneu cu rezultate precise. Găsiți ln(x) pentru orice număr pozitiv cu explicații detaliate. Calculator online gratuit de logaritm natural.",
+      "inputLabel": "Introduceți Valoarea (x)",
+      "inputPlaceholder": "ex: 10",
+      "inputHint": "Introduceți un număr pozitiv pentru a-i calcula logaritmul natural",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "results": "Rezultate",
+      "naturalLog": "Logaritm Natural (ln)",
+      "formula": "Formulă",
+      "commonValues": "Valori Comune",
+      "enterValue": "Introduceți un număr pozitiv pentru a calcula",
+      "errorZero": "Logaritmul natural al lui zero este nedefinit",
+      "errorNegative": "Logaritmul natural este definit doar pentru numere pozitive",
+      "errorInvalid": "Vă rugăm să introduceți un număr valid",
+      "seo": {
+        "title": "Calculator Logaritm Natural – Calculați ln(x) Online",
+        "description": "Calculator gratuit de logaritm natural. Calculați ln(x) instantaneu pentru orice număr pozitiv cu explicații pas cu pas. Perfect pentru studenți, oameni de știință și ingineri care lucrează cu funcții logaritmice.",
+        "keywords": "calculator logaritm natural, calculator ln, logaritm natural, logaritm baza e, ln(x), numărul lui euler, calculator logaritm, funcție logaritmică",
+        "content": {
+          "heading": "Ce este Logaritmul Natural?",
+          "paragraph1": "Logaritmul natural, notat ca ln(x), este logaritmul în baza e, unde e (numărul lui Euler) este aproximativ 2,71828. Este una dintre cele mai importante funcții matematice în calcul, știință și inginerie. Logaritmul natural răspunde la întrebarea: 'La ce putere trebuie ridicat e pentru a obține x?' De exemplu, ln(e) = 1 deoarece e¹ = e, și ln(1) = 0 deoarece e⁰ = 1. Calculatorul nostru gratuit de logaritm natural oferă rezultate instantanee și precise pentru orice număr pozitiv.",
+          "paragraph2": "Logaritmul natural are mai multe proprietăți cheie: ln(1) = 0, ln(e) = 1, ln(ab) = ln(a) + ln(b), ln(a/b) = ln(a) - ln(b), ln(aⁿ) = n·ln(a) și ln(eˣ) = x. Aceste proprietăți fac logaritmii naturali deosebit de utili pentru simplificarea expresiilor exponențiale complexe. Funcția este definită doar pentru numere reale pozitive; ln(0) este nedefinit (se apropie de infinit negativ), iar ln al numerelor negative necesită numere complexe. Logaritmul natural este funcția inversă a funcției exponențiale eˣ.",
+          "paragraph3": "Logaritmii naturali apar pe scară largă în aplicații din lumea reală: în dobânda compusă și creșterea/descreșterea exponențială (creșterea populației, dezintegrarea radioactivă, creșterea bacteriană), în teoria informației și calculele entropiei, în ecuațiile fizicii (termodinamică, mecanică cuantică), în chimie pentru calculele pH-ului și cinetica reacțiilor, în economie pentru elasticitate și rate de creștere, și în statistică pentru distribuții log-normale și estimarea probabilității maxime. Înțelegerea logaritmilor naturali este esențială pentru oricine lucrează în domenii STEM.",
+          "paragraph4": "Calculatorul nostru de logaritm natural gestionează orice număr real pozitiv și oferă rezultate cu precizie ridicată (până la 10 zecimale). Calculatorul include valori de referință comune precum ln(1) = 0, ln(e) ≈ 1 și ln(10) ≈ 2,302585 pentru a vă ajuta să verificați calculele. Fie că sunteți un student care învață calcul, un om de știință care analizează date exponențiale, un inginer care lucrează cu modele de creștere, sau cineva care are nevoie de calcule logaritmice rapide, instrumentul nostru oferă rezultate precise instantaneu și gratuit.",
+          "exampleHeading": "Exemplu: Calcule Logaritm Natural",
+          "exampleText": "Exemplul 1: ln(10) ≈ 2,302585. Aceasta înseamnă e^2,302585 ≈ 10. Exemplul 2: ln(100) ≈ 4,605170. Folosind proprietatea ln(a²) = 2·ln(a), putem verifica: ln(100) = ln(10²) = 2·ln(10) ≈ 2 × 2,302585 = 4,605170. Exemplul 3: ln(0,5) ≈ -0,693147. Rezultatele negative indică că intrarea este între 0 și 1. Exemplul 4: Pentru a rezolva e^x = 20, luați ln din ambele părți: x = ln(20) ≈ 2,995732."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Ce este logaritmul natural și cum diferă de alți logaritmi?",
+              "answer": "Logaritmul natural (ln) este logaritmul în baza e, unde e ≈ 2,71828 (numărul lui Euler). Diferă de logaritmii comuni (log baza 10) sau logaritmii binari (log baza 2). Logaritmii naturali sunt fundamentali în calcul deoarece derivata lui ln(x) este 1/x, făcându-i să apară natural în multe contexte matematice și științifice. Relația este: ln(x) = log_e(x)."
+            },
+            {
+              "question": "De ce ln(1) este egal cu 0?",
+              "answer": "ln(1) = 0 deoarece e⁰ = 1. Logaritmul natural întreabă 'la ce putere trebuie ridicat e pentru a obține intrarea?' Deoarece orice număr ridicat la puterea 0 este egal cu 1, ln(1) = 0. Aceasta este adevărat pentru logaritmi de orice bază: logaritmul lui 1 este întotdeauna 0."
+            },
+            {
+              "question": "Poți calcula logaritmul natural al unui număr negativ?",
+              "answer": "Nu, logaritmul natural al numerelor negative nu este definit în sistemul numerelor reale. ln(x) este definit doar pentru numere reale pozitive (x > 0). Cu toate acestea, în matematica numerelor complexe, logaritmii numerelor negative pot fi calculați folosind analiza complexă, dar aceasta implică numere imaginare."
+            },
+            {
+              "question": "Care este relația dintre ln și e?",
+              "answer": "Logaritmul natural (ln) și funcția exponențială (e^x) sunt funcții inverse. Aceasta înseamnă ln(e^x) = x și e^(ln(x)) = x. De exemplu, dacă e³ ≈ 20,086, atunci ln(20,086) ≈ 3. Se 'anulează' reciproc. Această relație este fundamentală pentru rezolvarea ecuațiilor exponențiale și ecuațiilor diferențiale."
+            },
+            {
+              "question": "Cum convertesc între logaritm natural și logaritm comun?",
+              "answer": "Pentru a converti între ln (logaritm natural, baza e) și log (logaritm comun, baza 10), folosiți formula: ln(x) = log(x) / log(e) ≈ 2,302585 × log(x). Invers, log(x) = ln(x) / ln(10) ≈ 0,434294 × ln(x). Aceasta este derivată din formula de schimbare a bazei pentru logaritmi."
+            },
+            {
+              "question": "Acest calculator de logaritm natural este gratuit?",
+              "answer": "Da, calculatorul nostru de logaritm natural este complet gratuit fără necesitatea înregistrării, abonamentului sau plății. Introduceți orice număr pozitiv și obțineți rezultate instantanee și precise cu până la 10 zecimale precizie. Perfect pentru studenți, educatori, oameni de știință și ingineri."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Conexe",
+          "antilog": "Calculator Antilogaritm",
+          "antilogDesc": "Calculați antilogaritmul (logaritm invers) și convertiți valorile logaritmice înapoi la numere originale",
+          "exponential": "Calculator Exponențial",
+          "exponentialDesc": "Calculați funcții exponențiale e^x și alte exponențiale de bază cu precizie",
+          "scientific": "Calculator Științific",
+          "scientificDesc": "Calculator științific cuprinzător cu funcții trigonometrice, logaritmice și exponențiale"
+        }
+      }
+    },
     "convolution": {
       "title": "Calculator de Convoluție",
       "description": "Calculați convoluția discretă a două secvențe de date. Instrument online gratuit pentru procesarea semnalelor, matematică și aplicații de inginerie.",

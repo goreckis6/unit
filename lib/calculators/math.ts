@@ -30,6 +30,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'natural-logarithm',
+    titleKey: 'naturalLogarithm.title',
+    descKey: 'naturalLogarithm.description',
+    path: '/calculators/math/natural-logarithm',
+    category: 'math',
+  },
+  {
     id: 'antilog',
     titleKey: 'antilog.title',
     descKey: 'antilog.description',

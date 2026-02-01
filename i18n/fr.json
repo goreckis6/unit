@@ -3537,6 +3537,75 @@
         }
       }
     },
+    "naturalLogarithm": {
+      "title": "Calculatrice de Logarithme Naturel",
+      "description": "Calculez le logarithme naturel (ln) instantanément avec des résultats précis. Trouvez ln(x) pour n'importe quel nombre positif avec des explications détaillées. Calculatrice de logarithme naturel en ligne gratuite.",
+      "inputLabel": "Entrez la Valeur (x)",
+      "inputPlaceholder": "ex. 10",
+      "inputHint": "Entrez un nombre positif pour calculer son logarithme naturel",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "results": "Résultats",
+      "naturalLog": "Logarithme Naturel (ln)",
+      "formula": "Formule",
+      "commonValues": "Valeurs Communes",
+      "enterValue": "Entrez un nombre positif pour calculer",
+      "errorZero": "Le logarithme naturel de zéro est indéfini",
+      "errorNegative": "Le logarithme naturel n'est défini que pour les nombres positifs",
+      "errorInvalid": "Veuillez entrer un nombre valide",
+      "seo": {
+        "title": "Calculatrice de Logarithme Naturel – Calculer ln(x) en Ligne",
+        "description": "Calculatrice gratuite de logarithme naturel. Calculez ln(x) instantanément pour n'importe quel nombre positif avec des explications étape par étape. Parfait pour les étudiants, scientifiques et ingénieurs travaillant avec des fonctions logarithmiques.",
+        "keywords": "calculatrice logarithme naturel, calculatrice ln, logarithme naturel, logarithme base e, ln(x), nombre d'euler, calculatrice logarithme, fonction logarithmique",
+        "content": {
+          "heading": "Qu'est-ce que le Logarithme Naturel ?",
+          "paragraph1": "Le logarithme naturel, noté ln(x), est le logarithme en base e, où e (nombre d'Euler) est approximativement 2,71828. C'est l'une des fonctions mathématiques les plus importantes en calcul, science et ingénierie. Le logarithme naturel répond à la question : 'À quelle puissance e doit-il être élevé pour obtenir x ?' Par exemple, ln(e) = 1 car e¹ = e, et ln(1) = 0 car e⁰ = 1. Notre calculatrice gratuite de logarithme naturel fournit des résultats instantanés et précis pour n'importe quel nombre positif.",
+          "paragraph2": "Le logarithme naturel a plusieurs propriétés clés : ln(1) = 0, ln(e) = 1, ln(ab) = ln(a) + ln(b), ln(a/b) = ln(a) - ln(b), ln(aⁿ) = n·ln(a) et ln(eˣ) = x. Ces propriétés rendent les logarithmes naturels particulièrement utiles pour simplifier les expressions exponentielles complexes. La fonction n'est définie que pour les nombres réels positifs ; ln(0) est indéfini (tend vers moins l'infini), et ln des nombres négatifs nécessite des nombres complexes. Le logarithme naturel est la fonction inverse de la fonction exponentielle eˣ.",
+          "paragraph3": "Les logarithmes naturels apparaissent largement dans les applications réelles : dans les intérêts composés et la croissance/décroissance exponentielle (croissance démographique, désintégration radioactive, croissance bactérienne), dans la théorie de l'information et les calculs d'entropie, dans les équations de physique (thermodynamique, mécanique quantique), en chimie pour les calculs de pH et la cinétique des réactions, en économie pour l'élasticité et les taux de croissance, et en statistiques pour les distributions log-normales et l'estimation du maximum de vraisemblance. Comprendre les logarithmes naturels est essentiel pour quiconque travaille dans les domaines STEM.",
+          "paragraph4": "Notre calculatrice de logarithme naturel traite n'importe quel nombre réel positif et fournit des résultats avec une haute précision (jusqu'à 10 décimales). La calculatrice inclut des valeurs de référence communes comme ln(1) = 0, ln(e) ≈ 1 et ln(10) ≈ 2,302585 pour vous aider à vérifier les calculs. Que vous soyez un étudiant apprenant le calcul, un scientifique analysant des données exponentielles, un ingénieur travaillant avec des modèles de croissance, ou quelqu'un ayant besoin de calculs logarithmiques rapides, notre outil fournit des résultats précis instantanément et gratuitement.",
+          "exampleHeading": "Exemple : Calculs de Logarithme Naturel",
+          "exampleText": "Exemple 1 : ln(10) ≈ 2,302585. Cela signifie e^2,302585 ≈ 10. Exemple 2 : ln(100) ≈ 4,605170. En utilisant la propriété ln(a²) = 2·ln(a), nous pouvons vérifier : ln(100) = ln(10²) = 2·ln(10) ≈ 2 × 2,302585 = 4,605170. Exemple 3 : ln(0,5) ≈ -0,693147. Les résultats négatifs indiquent que l'entrée est entre 0 et 1. Exemple 4 : Pour résoudre e^x = 20, prenez ln des deux côtés : x = ln(20) ≈ 2,995732."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Qu'est-ce que le logarithme naturel et en quoi diffère-t-il des autres logarithmes ?",
+              "answer": "Le logarithme naturel (ln) est le logarithme en base e, où e ≈ 2,71828 (nombre d'Euler). Il diffère des logarithmes communs (log base 10) ou logarithmes binaires (log base 2). Les logarithmes naturels sont fondamentaux en calcul car la dérivée de ln(x) est 1/x, ce qui les fait apparaître naturellement dans de nombreux contextes mathématiques et scientifiques. La relation est : ln(x) = log_e(x)."
+            },
+            {
+              "question": "Pourquoi ln(1) est-il égal à 0 ?",
+              "answer": "ln(1) = 0 car e⁰ = 1. Le logarithme naturel demande 'à quelle puissance e doit-il être élevé pour obtenir l'entrée ?' Puisque n'importe quel nombre élevé à la puissance 0 est égal à 1, ln(1) = 0. Cela est vrai pour les logarithmes de n'importe quelle base : le logarithme de 1 est toujours 0."
+            },
+            {
+              "question": "Peut-on prendre le logarithme naturel d'un nombre négatif ?",
+              "answer": "Non, le logarithme naturel des nombres négatifs n'est pas défini dans le système des nombres réels. ln(x) n'est défini que pour les nombres réels positifs (x > 0). Cependant, en mathématiques des nombres complexes, les logarithmes des nombres négatifs peuvent être calculés en utilisant l'analyse complexe, mais cela implique des nombres imaginaires."
+            },
+            {
+              "question": "Quelle est la relation entre ln et e ?",
+              "answer": "Le logarithme naturel (ln) et la fonction exponentielle (e^x) sont des fonctions inverses. Cela signifie ln(e^x) = x et e^(ln(x)) = x. Par exemple, si e³ ≈ 20,086, alors ln(20,086) ≈ 3. Ils 's'annulent' mutuellement. Cette relation est fondamentale pour résoudre les équations exponentielles et les équations différentielles."
+            },
+            {
+              "question": "Comment convertir entre le logarithme naturel et le logarithme commun ?",
+              "answer": "Pour convertir entre ln (logarithme naturel, base e) et log (logarithme commun, base 10), utilisez la formule : ln(x) = log(x) / log(e) ≈ 2,302585 × log(x). Inversement, log(x) = ln(x) / ln(10) ≈ 0,434294 × ln(x). Ceci est dérivé de la formule de changement de base pour les logarithmes."
+            },
+            {
+              "question": "Cette calculatrice de logarithme naturel est-elle gratuite ?",
+              "answer": "Oui, notre calculatrice de logarithme naturel est entièrement gratuite sans inscription, abonnement ou paiement requis. Entrez n'importe quel nombre positif et obtenez des résultats instantanés et précis avec jusqu'à 10 décimales de précision. Parfait pour les étudiants, éducateurs, scientifiques et ingénieurs."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatrices Connexes",
+          "antilog": "Calculatrice d'Antilogarithme",
+          "antilogDesc": "Calculez l'antilogarithme (logarithme inverse) et convertissez les valeurs logarithmiques en nombres originaux",
+          "exponential": "Calculatrice Exponentielle",
+          "exponentialDesc": "Calculez les fonctions exponentielles e^x et autres exponentielles de base avec précision",
+          "scientific": "Calculatrice Scientifique",
+          "scientificDesc": "Calculatrice scientifique complète avec fonctions trigonométriques, logarithmiques et exponentielles"
+        }
+      }
+    },
     "convolution": {
       "title": "Calculateur de Convolution",
       "description": "Calculez la convolution discrète de deux séquences de données. Outil en ligne gratuit pour le traitement du signal, les mathématiques et les applications d'ingénierie.",

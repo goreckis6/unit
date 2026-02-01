@@ -3537,6 +3537,75 @@
         }
       }
     },
+    "naturalLogarithm": {
+      "title": "Calculadora de Logaritmo Natural",
+      "description": "Calcula el logaritmo natural (ln) instantáneamente con resultados precisos. Encuentra ln(x) para cualquier número positivo con explicaciones detalladas. Calculadora de logaritmo natural en línea gratuita.",
+      "inputLabel": "Introducir Valor (x)",
+      "inputPlaceholder": "ej. 10",
+      "inputHint": "Introduzca un número positivo para calcular su logaritmo natural",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "results": "Resultados",
+      "naturalLog": "Logaritmo Natural (ln)",
+      "formula": "Fórmula",
+      "commonValues": "Valores Comunes",
+      "enterValue": "Introduzca un número positivo para calcular",
+      "errorZero": "El logaritmo natural de cero no está definido",
+      "errorNegative": "El logaritmo natural solo está definido para números positivos",
+      "errorInvalid": "Por favor, introduzca un número válido",
+      "seo": {
+        "title": "Calculadora de Logaritmo Natural – Calcular ln(x) en Línea",
+        "description": "Calculadora gratuita de logaritmo natural. Calcule ln(x) instantáneamente para cualquier número positivo con explicaciones paso a paso. Perfecta para estudiantes, científicos e ingenieros que trabajan con funciones logarítmicas.",
+        "keywords": "calculadora de logaritmo natural, calculadora ln, logaritmo natural, logaritmo base e, ln(x), número de euler, calculadora de logaritmo, función logarítmica",
+        "content": {
+          "heading": "¿Qué es el Logaritmo Natural?",
+          "paragraph1": "El logaritmo natural, denotado como ln(x), es el logaritmo en base e, donde e (número de Euler) es aproximadamente 2,71828. Es una de las funciones matemáticas más importantes en cálculo, ciencia e ingeniería. El logaritmo natural responde a la pregunta: '¿A qué potencia debe elevarse e para obtener x?' Por ejemplo, ln(e) = 1 porque e¹ = e, y ln(1) = 0 porque e⁰ = 1. Nuestra calculadora gratuita de logaritmo natural proporciona resultados instantáneos y precisos para cualquier número positivo.",
+          "paragraph2": "El logaritmo natural tiene varias propiedades clave: ln(1) = 0, ln(e) = 1, ln(ab) = ln(a) + ln(b), ln(a/b) = ln(a) - ln(b), ln(aⁿ) = n·ln(a) y ln(eˣ) = x. Estas propiedades hacen que los logaritmos naturales sean particularmente útiles para simplificar expresiones exponenciales complejas. La función solo está definida para números reales positivos; ln(0) no está definido (se acerca a menos infinito), y ln de números negativos requiere números complejos. El logaritmo natural es la función inversa de la función exponencial eˣ.",
+          "paragraph3": "Los logaritmos naturales aparecen extensamente en aplicaciones del mundo real: en interés compuesto y crecimiento/decaimiento exponencial (crecimiento poblacional, decaimiento radiactivo, crecimiento bacteriano), en teoría de la información y cálculos de entropía, en ecuaciones de física (termodinámica, mecánica cuántica), en química para cálculos de pH y cinética de reacción, en economía para elasticidad y tasas de crecimiento, y en estadística para distribuciones log-normales y estimación de máxima verosimilitud. Comprender los logaritmos naturales es esencial para cualquiera que trabaje en campos STEM.",
+          "paragraph4": "Nuestra calculadora de logaritmo natural maneja cualquier número real positivo y proporciona resultados con alta precisión (hasta 10 decimales). La calculadora incluye valores de referencia comunes como ln(1) = 0, ln(e) ≈ 1 y ln(10) ≈ 2,302585 para ayudarle a verificar los cálculos. Ya sea que sea un estudiante aprendiendo cálculo, un científico analizando datos exponenciales, un ingeniero trabajando con modelos de crecimiento, o cualquiera que necesite cálculos logarítmicos rápidos, nuestra herramienta entrega resultados precisos instantáneamente y de forma gratuita.",
+          "exampleHeading": "Ejemplo: Cálculos de Logaritmo Natural",
+          "exampleText": "Ejemplo 1: ln(10) ≈ 2,302585. Esto significa e^2,302585 ≈ 10. Ejemplo 2: ln(100) ≈ 4,605170. Usando la propiedad ln(a²) = 2·ln(a), podemos verificar: ln(100) = ln(10²) = 2·ln(10) ≈ 2 × 2,302585 = 4,605170. Ejemplo 3: ln(0,5) ≈ -0,693147. Los resultados negativos indican que la entrada está entre 0 y 1. Ejemplo 4: Para resolver e^x = 20, tome ln de ambos lados: x = ln(20) ≈ 2,995732."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es el logaritmo natural y en qué se diferencia de otros logaritmos?",
+              "answer": "El logaritmo natural (ln) es el logaritmo en base e, donde e ≈ 2,71828 (número de Euler). Se diferencia de los logaritmos comunes (log base 10) o logaritmos binarios (log base 2). Los logaritmos naturales son fundamentales en cálculo porque la derivada de ln(x) es 1/x, lo que los hace aparecer naturalmente en muchos contextos matemáticos y científicos. La relación es: ln(x) = log_e(x)."
+            },
+            {
+              "question": "¿Por qué ln(1) es igual a 0?",
+              "answer": "ln(1) = 0 porque e⁰ = 1. El logaritmo natural pregunta '¿a qué potencia debe elevarse e para obtener la entrada?' Como cualquier número elevado a la potencia de 0 es igual a 1, ln(1) = 0. Esto es cierto para logaritmos de cualquier base: el logaritmo de 1 siempre es 0."
+            },
+            {
+              "question": "¿Se puede tomar el logaritmo natural de un número negativo?",
+              "answer": "No, el logaritmo natural de números negativos no está definido en el sistema de números reales. ln(x) solo está definido para números reales positivos (x > 0). Sin embargo, en matemáticas de números complejos, los logaritmos de números negativos pueden calcularse usando análisis complejo, pero esto implica números imaginarios."
+            },
+            {
+              "question": "¿Cuál es la relación entre ln y e?",
+              "answer": "El logaritmo natural (ln) y la función exponencial (e^x) son funciones inversas. Esto significa ln(e^x) = x y e^(ln(x)) = x. Por ejemplo, si e³ ≈ 20,086, entonces ln(20,086) ≈ 3. Se 'deshacen' mutuamente. Esta relación es fundamental para resolver ecuaciones exponenciales y ecuaciones diferenciales."
+            },
+            {
+              "question": "¿Cómo convierto entre logaritmo natural y logaritmo común?",
+              "answer": "Para convertir entre ln (logaritmo natural, base e) y log (logaritmo común, base 10), use la fórmula: ln(x) = log(x) / log(e) ≈ 2,302585 × log(x). A la inversa, log(x) = ln(x) / ln(10) ≈ 0,434294 × ln(x). Esto se deriva de la fórmula de cambio de base para logaritmos."
+            },
+            {
+              "question": "¿Esta calculadora de logaritmo natural es gratuita?",
+              "answer": "Sí, nuestra calculadora de logaritmo natural es completamente gratuita sin necesidad de registro, suscripción o pago. Introduzca cualquier número positivo y obtenga resultados instantáneos y precisos con hasta 10 decimales de precisión. Perfecta para estudiantes, educadores, científicos e ingenieros."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "antilog": "Calculadora de Antilogaritmo",
+          "antilogDesc": "Calcule el antilogaritmo (logaritmo inverso) y convierta valores logarítmicos de vuelta a números originales",
+          "exponential": "Calculadora Exponencial",
+          "exponentialDesc": "Calcule funciones exponenciales e^x y otras exponenciales de base con precisión",
+          "scientific": "Calculadora Científica",
+          "scientificDesc": "Calculadora científica completa con funciones trigonométricas, logarítmicas y exponenciales"
+        }
+      }
+    },
     "convolution": {
       "title": "Calculadora de Convolución",
       "description": "Calcula la convolución discreta de dos secuencias de datos. Herramienta online gratuita para procesamiento de señales, matemáticas y aplicaciones de ingeniería.",

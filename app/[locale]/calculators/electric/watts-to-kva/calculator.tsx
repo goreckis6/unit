@@ -98,7 +98,7 @@ export function WattsToKvaCalculator() {
         >
           <div className="input-card">
             <label className="input-label">
-              {t('kva')}
+              {t('result')}
             </label>
             {result !== null ? (
               <div
@@ -126,7 +126,7 @@ export function WattsToKvaCalculator() {
                   <span style={{ flex: 1, minWidth: 0, color: 'var(--text-primary)' }}>
                     {result.toFixed(4)} kVA
                   </span>
-                  <CopyButton text={`${result.toFixed(4)} kVA`} className="btn btn-primary" />
+                  <CopyButton text={`${result.toFixed(4)} kVA`} />
                 </div>
               </div>
             ) : (

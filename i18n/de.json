@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Fakultät-Rechner",
+      "description": "Berechnen Sie die Fakultät einer nichtnegativen ganzen Zahl (n!). Kostenloser Online-Fakultätsrechner mit Ergebnis und Entwicklung.",
+      "inputLabel": "Zahl (n)",
+      "inputPlaceholder": "z. B. 5",
+      "inputHelp": "Geben Sie eine ganze Zahl von 0 bis 170 ein (0! = 1).",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "resultLabel": "Ergebnis",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Entwicklung: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Bitte eine gültige nichtnegative ganze Zahl eingeben.",
+      "errorTooLarge": "Geben Sie eine Zahl von 0 bis 170 ein (größere Werte übersteigen die Anzeige).",
+      "seo": {
+        "title": "Fakultät-Rechner – n! Online",
+        "description": "Kostenloser Fakultätsrechner. Berechnen Sie n! für jede nichtnegative ganze Zahl von 0 bis 170. Zeigt Ergebnis und Entwicklung.",
+        "keywords": "Fakultätsrechner, n Fakultät, Fakultät von n, n! Rechner, Fakultätsformel, Kombinatorik-Rechner",
+        "content": {
+          "heading": "Was ist die Fakultät?",
+          "paragraph1": "Die Fakultät einer nichtnegativen ganzen Zahl n, geschrieben n!, ist das Produkt aller positiven ganzen Zahlen von 1 bis n. Per Definition ist 0! = 1. Z. B. 5! = 1 × 2 × 3 × 4 × 5 = 120. Fakultäten wachsen sehr schnell. Unser Rechner berechnet n! für n von 0 bis 170.",
+          "paragraph2": "Fakultäten werden in der Kombinatorik (Anzahl der Anordnungen), Wahrscheinlichkeit und vielen Formeln verwendet. Die Anzahl der Möglichkeiten, n verschiedene Objekte anzuordnen, ist n!. Dieser Rechner liefert n! sofort.",
+          "paragraph3": "Geben Sie eine ganze Zahl von 0 bis 170 ein. Der Rechner zeigt n! und bei kleinem n die Entwicklung 1 × 2 × … × n. Die Eingabe ist auf 170 begrenzt, da größere Fakultäten den Anzeigebereich überschreiten.",
+          "paragraph4": "Unser Fakultätsrechner ist kostenlos und läuft im Browser. Ohne Anmeldung. Für Mathematik, Kombinatorik oder wenn Sie n! schnell brauchen.",
+          "exampleHeading": "Beispiele",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3 628 800."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {"question": "Was ist die Fakultät von 0?", "answer": "0! = 1 per Definition. Diese Konvention sorgt dafür, dass viele Formeln auch für n = 0 gelten."},
+            {"question": "Warum ist die Eingabe auf 170 begrenzt?", "answer": "Fakultäten wachsen sehr schnell. 171! hat über 300 Ziffern. Für n von 0 bis 170 zeigt der Rechner das exakte Ergebnis."},
+            {"question": "Wofür wird die Fakultät verwendet?", "answer": "Fakultäten werden in der Kombinatorik (Permutationen: n! Anordnungen von n Objekten), Kombinationen und Wahrscheinlichkeit verwendet."},
+            {"question": "Können Fakultäten negativ oder dezimal sein?", "answer": "Die Standard-Fakultät n! ist nur für nichtnegative ganze Zahlen n definiert. Die Gammafunktion Γ erweitert dies auf andere Werte."},
+            {"question": "Ist dieser Rechner kostenlos?", "answer": "Ja. Der Rechner ist kostenlos, ohne Registrierung. Geben Sie eine Zahl von 0 bis 170 ein für n! und die Entwicklung."}
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "naturalLogarithm": "Natürlicher Logarithmus",
+          "naturalLogarithmDesc": "ln(x); Logarithmen in der Stirling-Approximation für n!",
+          "percentage": "Prozentrechner",
+          "percentageDesc": "Prozente und prozentuale Änderung",
+          "squareRoot": "Quadratwurzel-Rechner",
+          "squareRootDesc": "Quadratwurzeln; nützlich mit Fakultät in Formeln"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Text zu Binär Konverter",
       "description": "Konvertieren Sie Text sofort in Binärcode mit mehreren Zeichenkodierungen (UTF-8, UTF-16, Windows-1252) und anpassbaren Trennzeichen.",

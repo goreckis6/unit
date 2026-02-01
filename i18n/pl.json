@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Kalkulator Silni",
+      "description": "Oblicz silnię nieujemnej liczby całkowitej (n!). Darmowy kalkulator silni online z wynikiem i rozpisem.",
+      "inputLabel": "Liczba (n)",
+      "inputPlaceholder": "np. 5",
+      "inputHelp": "Wpisz liczbę całkowitą od 0 do 170 (0! = 1).",
+      "calculate": "Oblicz",
+      "reset": "Reset",
+      "resultLabel": "Wynik",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Rozwinięcie: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Wpisz prawidłową nieujemną liczbę całkowitą.",
+      "errorTooLarge": "Wpisz liczbę od 0 do 170 (większe wartości przekraczają wyświetlanie).",
+      "seo": {
+        "title": "Kalkulator Silni – n! Online",
+        "description": "Darmowy kalkulator silni. Oblicz n! dla dowolnej nieujemnej liczby całkowitej od 0 do 170. Pokazuje wynik i rozwinięcie.",
+        "keywords": "kalkulator silni, n silnia, silnia n, kalkulator n!, wzór silni, kalkulator kombinatoryki",
+        "content": {
+          "heading": "Co to jest silnia?",
+          "paragraph1": "Silnia nieujemnej liczby całkowitej n, oznaczana n!, to iloczyn wszystkich dodatnich liczb całkowitych od 1 do n. Z definicji 0! = 1. Np. 5! = 1 × 2 × 3 × 4 × 5 = 120. Silnie rosną bardzo szybko. Nasz kalkulator oblicza n! dla n od 0 do 170.",
+          "paragraph2": "Silnie stosuje się w kombinatoryce (liczba ustawień), prawdopodobieństwie i wielu wzorach. Liczba sposobów ustawienia n różnych obiektów to n!. Ten kalkulator podaje n! od razu.",
+          "paragraph3": "Wpisz liczbę całkowitą od 0 do 170. Kalkulator pokaże n! oraz przy małym n rozwinięcie 1 × 2 × … × n. Ograniczamy wejście do 170, bo większe silnie przekraczają zakres wyświetlania.",
+          "paragraph4": "Nasz kalkulator silni jest darmowy i działa w przeglądarce. Bez rejestracji. Do matematyki, kombinatoryki lub gdy potrzebujesz n! szybko.",
+          "exampleHeading": "Przykłady",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3 628 800."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {"question": "Ile wynosi silnia z 0?", "answer": "0! = 1 z definicji. Ta konwencja sprawia, że wiele wzorów działa też dla n = 0."},
+            {"question": "Dlaczego wejście jest ograniczone do 170?", "answer": "Silnie rosną bardzo szybko. 171! ma ponad 300 cyfr. Dla n od 0 do 170 kalkulator pokazuje dokładny wynik."},
+            {"question": "Do czego służy silnia?", "answer": "Silnie stosuje się w kombinatoryce (permutacje: n! sposobów ustawienia n obiektów), kombinacjach, prawdopodobieństwie i matematyce."},
+            {"question": "Czy silnia może być ujemna lub ułamkowa?", "answer": "Standardowa silnia n! jest zdefiniowana tylko dla nieujemnych liczb całkowitych n. Rozszerzenie przez funkcję gamma Γ pozwala na inne wartości."},
+            {"question": "Czy ten kalkulator jest darmowy?", "answer": "Tak. Kalkulator jest darmowy, bez rejestracji. Wpisz liczbę od 0 do 170, aby uzyskać n! i rozwinięcie."}
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "naturalLogarithm": "Logarytm naturalny",
+          "naturalLogarithmDesc": "ln(x); logarytmy w aproksymacji Stirlinga dla n!",
+          "percentage": "Kalkulator procentów",
+          "percentageDesc": "Procenty i zmiana procentowa",
+          "squareRoot": "Kalkulator pierwiastka kwadratowego",
+          "squareRootDesc": "Pierwiastki kwadratowe; przydatne ze silnią we wzorach"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Konwerter Tekstu na Binarny",
       "description": "Konwertuj tekst na kod binarny natychmiast z wieloma kodowaniami znaków (UTF-8, UTF-16, Windows-1252) i konfigurowalnymi separatorami.",

@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Faktoriellräknare",
+      "description": "Beräkna faktorialen av ett icke-negativt heltal (n!). Gratis online faktoriellräknare med resultat och expansion.",
+      "inputLabel": "Tal (n)",
+      "inputPlaceholder": "t.ex. 5",
+      "inputHelp": "Ange ett heltal från 0 till 170 (0! = 1).",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "resultLabel": "Resultat",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Expansion: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Ange ett giltigt icke-negativt heltal.",
+      "errorTooLarge": "Ange ett tal från 0 till 170 (större värden överskrider visningen).",
+      "seo": {
+        "title": "Faktoriellräknare – n! Online",
+        "description": "Gratis faktoriellräknare. Beräkna n! för valfritt icke-negativt heltal från 0 till 170. Visar resultat och expansion.",
+        "keywords": "faktoriellräknare, n faktorial, n faktorialen, n! kalkylator, faktorialformel, kombinatorikkalkylator",
+        "content": {
+          "heading": "Vad är en faktorial?",
+          "paragraph1": "Faktorialen av ett icke-negativt heltal n, skrivet n!, är produkten av alla positiva heltal från 1 till n. Per definition 0! = 1. T.ex. 5! = 1 × 2 × 3 × 4 × 5 = 120. Faktorialer växer mycket snabbt. Vår kalkylator beräknar n! för n från 0 till 170.",
+          "paragraph2": "Faktorialer används inom kombinatorik (permutationer: n! sätt att ordna n objekt), kombinationer (binomialkoefficienter), sannolikhet och matematik.",
+          "paragraph3": "Ange ett heltal från 0 till 170. Kalkylatorn visar n! och, när n är tillräckligt litet, expansionen 1 × 2 × … × n. Vi begränsar inmatningen till 170 eftersom 171! och vidare överskrider standardvisningens område.",
+          "paragraph4": "Vår faktoriellräknare är gratis och fungerar i webbläsaren. Ingen registrering krävs. Använd den i matte, kombinatorik eller när du behöver n! snabbt och korrekt.",
+          "exampleHeading": "Exempel",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3 628 800."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {"question": "Vad är faktorialen av 0?", "answer": "0! = 1 per definition. Denna konvention gör att många formler (t.ex. binomialkoefficienter, Taylorserier) fungerar korrekt för n = 0."},
+            {"question": "Varför är inmatningen begränsad till 170?", "answer": "Faktorialer växer extremt snabbt. 171! är ett tal med över 300 siffror, vilket överskrider typisk visning. För n från 0 till 170 visar kalkylatorn det exakta heltalsresultatet."},
+            {"question": "Till vad används faktorial?", "answer": "Faktorialer används inom kombinatorik (permutationer: n! sätt att ordna n objekt), kombinationer (binomialkoefficienter), sannolikhet och analys (t.ex. Taylorserier för e^x)."},
+            {"question": "Kan faktorialer vara negativa eller decimaler?", "answer": "Standardfaktorialen n! definieras endast för icke-negativa heltal n. Gammafunktionen Γ(z) är en utvidgning sådan att Γ(n+1) = n! för positiva heltal n och tillåter icke-heltalsvärden."},
+            {"question": "Är denna faktoriellräknare gratis?", "answer": "Ja. Kalkylatorn är gratis att använda utan registrering. Ange ett tal från 0 till 170 för att få n! och expansion när tillämpligt."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "naturalLogarithm": "Naturlig logaritm",
+          "naturalLogarithmDesc": "ln(x); logaritmer förekommer i Stirlings approximation för n!",
+          "percentage": "Procenträknare",
+          "percentageDesc": "Procent och procentuell förändring",
+          "squareRoot": "Kvadratrotsräknare",
+          "squareRootDesc": "Kvadratrötter; användbara med faktorial i formler"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Text till Binär Konverterare",
       "description": "Konvertera text till binär kod omedelbart med flera teckenkodningar (UTF-8, UTF-16, Windows-1252) och anpassningsbara separatorer.",

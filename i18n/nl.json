@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Faculteit Rekenmachine",
+      "description": "Bereken de faculteit van een niet-negatief geheel getal (n!). Gratis online faculteit rekenmachine met resultaat en uitwerking.",
+      "inputLabel": "Getal (n)",
+      "inputPlaceholder": "bijv. 5",
+      "inputHelp": "Voer een geheel getal van 0 tot 170 in (0! = 1).",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "resultLabel": "Resultaat",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Uitwerking: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Voer een geldig niet-negatief geheel getal in.",
+      "errorTooLarge": "Voer een getal van 0 tot 170 in (grotere waarden overstijgen het display).",
+      "seo": {
+        "title": "Faculteit Rekenmachine – n! online",
+        "description": "Gratis faculteit rekenmachine. Bereken n! voor elk niet-negatief geheel getal van 0 tot 170. Toont resultaat en uitwerking.",
+        "keywords": "faculteit rekenmachine, n faculteit, faculteit van n, n! rekenmachine, faculteit formule, combinatoriek rekenmachine",
+        "content": {
+          "heading": "Wat is een faculteit?",
+          "paragraph1": "De faculteit van een niet-negatief geheel getal n, geschreven n!, is het product van alle positieve gehele getallen van 1 tot n. Per definitie is 0! = 1. Bijv. 5! = 1 × 2 × 3 × 4 × 5 = 120. Faculteiten groeien zeer snel. Onze rekenmachine berekent n! voor n van 0 tot 170.",
+          "paragraph2": "Faculteiten worden gebruikt in combinatoriek (aantal rangschikkingen), kansrekening en veel formules. Het aantal manieren om n verschillende objecten te rangschikken is n!. Deze rekenmachine geeft n! direct.",
+          "paragraph3": "Voer een geheel getal van 0 tot 170 in. De rekenmachine toont n! en bij kleine n de uitwerking 1 × 2 × … × n. We beperken de invoer tot 170 omdat grotere faculteiten het display overstijgen.",
+          "paragraph4": "Onze faculteit rekenmachine is gratis en werkt in de browser. Geen registratie. Voor wiskunde, combinatoriek of wanneer u n! snel nodig heeft.",
+          "exampleHeading": "Voorbeelden",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3.628.800."
+        },
+        "faq": {
+          "heading": "Veelgestelde vragen",
+          "items": [
+            {"question": "Wat is de faculteit van 0?", "answer": "0! = 1 per definitie. Deze afspraak zorgt ervoor dat veel formules ook voor n = 0 kloppen."},
+            {"question": "Waarom is de invoer beperkt tot 170?", "answer": "Faculteiten groeien extreem snel. 171! heeft meer dan 300 cijfers. Voor n van 0 tot 170 toont de rekenmachine het exacte resultaat."},
+            {"question": "Waar wordt faculteit voor gebruikt?", "answer": "Faculteiten worden gebruikt in combinatoriek (permutaties: n! rangschikkingen van n objecten), combinaties en kansrekening."},
+            {"question": "Kunnen faculteiten negatief of decimaal zijn?", "answer": "De standaard faculteit n! is alleen gedefinieerd voor niet-negatieve gehele getallen n. De gammafunctie Γ breidt dit uit naar andere waarden."},
+            {"question": "Is deze rekenmachine gratis?", "answer": "Ja. De rekenmachine is gratis, zonder registratie. Voer een getal van 0 tot 170 in voor n! en de uitwerking."}
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde rekenmachines",
+          "naturalLogarithm": "Natuurlijke logaritme",
+          "naturalLogarithmDesc": "ln(x); logaritmen in de Stirling-benadering voor n!",
+          "percentage": "Percentagecalculator",
+          "percentageDesc": "Percentages en procentuele verandering",
+          "squareRoot": "Wortelrekenmachine",
+          "squareRootDesc": "Vierkantswortels; handig met faculteit in formules"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Tekst naar Binair Converter",
       "description": "Converteer tekst direct naar binaire code met meerdere tekenkoderingen (UTF-8, UTF-16, Windows-1252) en aanpasbare scheidingstekens.",

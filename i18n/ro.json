@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Calculator Factorial",
+      "description": "Calculați factorialul unui număr întreg nenegativ (n!). Calculator online gratuit de factorial cu rezultat și expansiune.",
+      "inputLabel": "Număr (n)",
+      "inputPlaceholder": "ex. 5",
+      "inputHelp": "Introduceți un număr întreg de la 0 la 170 (0! = 1).",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "resultLabel": "Rezultat",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Expansiune: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Introduceți un număr întreg nenegativ valid.",
+      "errorTooLarge": "Introduceți un număr de la 0 la 170 (valorile mai mari depășesc afișarea).",
+      "seo": {
+        "title": "Calculator Factorial – n! Online",
+        "description": "Calculator factorial gratuit. Calculați n! pentru orice număr întreg nenegativ de la 0 la 170. Afișează rezultatul și expansiunea.",
+        "keywords": "calculator factorial, n factorial, factorial din n, calculator n!, formulă factorial, calculator combinatoric",
+        "content": {
+          "heading": "Ce este un factorial?",
+          "paragraph1": "Factorialul unui număr întreg nenegativ n, scris n!, este produsul tuturor numerelor întregi pozitive de la 1 la n. Prin definiție, 0! = 1. Ex.: 5! = 1 × 2 × 3 × 4 × 5 = 120. Factorialele cresc foarte repede. Calculatorul nostru calculează n! pentru n de la 0 la 170.",
+          "paragraph2": "Factorialele se folosesc în combinatorică (permutări: n! moduri de a aranja n obiecte), combinații (coeficienți binominali), probabilitate și matematică.",
+          "paragraph3": "Introduceți un număr întreg de la 0 la 170. Calculatorul afișează n! și, când n este suficient de mic, expansiunea 1 × 2 × … × n. Limităm intrarea la 170 deoarece 171! și mai mari depășesc afișarea standard.",
+          "paragraph4": "Calculatorul nostru de factorial este gratuit și funcționează în browser. Fără înregistrare. Folosiți-l la matematică, combinatorică sau oricând aveți nevoie de n! rapid și precis.",
+          "exampleHeading": "Exemple",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3 628 800."
+        },
+        "faq": {
+          "heading": "Întrebări frecvente",
+          "items": [
+            {"question": "Care este factorialul lui 0?", "answer": "0! = 1 prin definiție. Această convenție face ca multe formule (ex. coeficienți binominali, serii Taylor) să funcționeze corect pentru n = 0."},
+            {"question": "De ce intrarea este limitată la 170?", "answer": "Factorialele cresc extrem de repede. 171! este un număr cu peste 300 de cifre, dincolo de afișarea tipică. Pentru n de la 0 la 170, calculatorul afișează rezultatul întreg exact."},
+            {"question": "La ce se folosește factorialul?", "answer": "Factorialele se folosesc în combinatorică (permutări: n! moduri de a aranja n obiecte), combinații (coeficienți binominali), probabilitate și analiză (ex. serii Taylor pentru e^x)."},
+            {"question": "Pot fi factorialele negative sau zecimale?", "answer": "Factorialul standard n! este definit doar pentru numere întregi nenegative n. Funcția gamma Γ(z) este o extensie astfel încât Γ(n+1) = n! pentru n întreg pozitiv și permite valori neîntregi."},
+            {"question": "Este gratuit acest calculator de factorial?", "answer": "Da. Calculatorul este gratuit, fără înregistrare. Introduceți un număr de la 0 la 170 pentru n! și expansiune când este cazul."}
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare înrudite",
+          "naturalLogarithm": "Logaritm natural",
+          "naturalLogarithmDesc": "ln(x); logaritmii apar în aproximarea Stirling pentru n!",
+          "percentage": "Calculator procente",
+          "percentageDesc": "Procente și modificare procentuală",
+          "squareRoot": "Calculator rădăcină pătrată",
+          "squareRootDesc": "Rădăcini pătrate; utile cu factorial în formule"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Convertor Text în Binar",
       "description": "Convertește textul în cod binar instantaneu cu mai multe codificări de caractere (UTF-8, UTF-16, Windows-1252) și separatori personalizabili.",

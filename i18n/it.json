@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Calcolatore di Fattoriale",
+      "description": "Calcola il fattoriale di un intero non negativo (n!). Calcolatore di fattoriale online gratuito con risultato e sviluppo.",
+      "inputLabel": "Numero (n)",
+      "inputPlaceholder": "es. 5",
+      "inputHelp": "Inserisci un intero da 0 a 170 (0! = 1).",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "resultLabel": "Risultato",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Sviluppo: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Inserisci un intero non negativo valido.",
+      "errorTooLarge": "Inserisci un numero da 0 a 170 (valori maggiori superano la visualizzazione).",
+      "seo": {
+        "title": "Calcolatore di Fattoriale – n! online",
+        "description": "Calcolatore di fattoriale gratuito. Calcola n! per qualsiasi intero non negativo da 0 a 170. Mostra risultato e sviluppo.",
+        "keywords": "calcolatore fattoriale, n fattoriale, fattoriale di n, calcolatore n!, formula fattoriale, calcolatore combinatoria",
+        "content": {
+          "heading": "Cos'è il fattoriale?",
+          "paragraph1": "Il fattoriale di un intero n ≥ 0, scritto n!, è il prodotto di tutti gli interi positivi da 1 a n. Per definizione 0! = 1. Es. 5! = 1 × 2 × 3 × 4 × 5 = 120. I fattoriali crescono molto velocemente. La nostra calcolatrice calcola n! per n da 0 a 170.",
+          "paragraph2": "I fattoriali si usano in combinatoria (numero di disposizioni), probabilità e molte formule. Il numero di modi di ordinare n oggetti distinti è n!. Questa calcolatrice dà n! subito.",
+          "paragraph3": "Inserisci un intero da 0 a 170. La calcolatrice mostra n! e, per n piccolo, lo sviluppo 1 × 2 × … × n. Limitiamo l'ingresso a 170 perché fattoriali più grandi superano la visualizzazione.",
+          "paragraph4": "La nostra calcolatrice di fattoriale è gratuita e funziona nel browser. Senza registrazione. Per matematica, combinatoria o quando ti serve n! velocemente.",
+          "exampleHeading": "Esempi",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3.628.800."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {"question": "Quanto vale il fattoriale di 0?", "answer": "0! = 1 per definizione. Questa convenzione fa sì che molte formule valgano anche per n = 0."},
+            {"question": "Perché l'ingresso è limitato a 170?", "answer": "I fattoriali crescono molto velocemente. 171! ha oltre 300 cifre. Per n da 0 a 170 la calcolatrice mostra il risultato esatto."},
+            {"question": "A cosa serve il fattoriale?", "answer": "I fattoriali si usano in combinatoria (permutazioni: n! modi di ordinare n oggetti), combinazioni e probabilità."},
+            {"question": "I fattoriali possono essere negativi o decimali?", "answer": "Il fattoriale standard n! è definito solo per interi n ≥ 0. La funzione gamma Γ estende il concetto ad altri valori."},
+            {"question": "Questa calcolatrice è gratuita?", "answer": "Sì. La calcolatrice è gratuita, senza registrazione. Inserisci un numero da 0 a 170 per ottenere n! e lo sviluppo."}
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori correlati",
+          "naturalLogarithm": "Logaritmo naturale",
+          "naturalLogarithmDesc": "ln(x); logaritmi nell'approssimazione di Stirling per n!",
+          "percentage": "Calcolatore di percentuale",
+          "percentageDesc": "Percentuali e variazione percentuale",
+          "squareRoot": "Calcolatore di radice quadrata",
+          "squareRootDesc": "Radici quadrate; utili con il fattoriale nelle formule"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Convertitore Testo in Binario",
       "description": "Converti testo in codice binario istantaneamente con più codifiche di caratteri (UTF-8, UTF-16, Windows-1252) e separatori personalizzabili.",

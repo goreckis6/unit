@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Fakultetsberegner",
+      "description": "Beregn fakultetet af et ikke-negativt heltal (n!). Gratis online fakultetsberegner med resultat og udvidelse.",
+      "inputLabel": "Tal (n)",
+      "inputPlaceholder": "f.eks. 5",
+      "inputHelp": "Indtast et heltal fra 0 til 170 (0! = 1).",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "resultLabel": "Resultat",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Udvidelse: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Indtast et gyldigt ikke-negativt heltal.",
+      "errorTooLarge": "Indtast et tal fra 0 til 170 (større værdier overstiger visningen).",
+      "seo": {
+        "title": "Fakultetsberegner – n! Online",
+        "description": "Gratis fakultetsberegner. Beregn n! for ethvert ikke-negativt heltal fra 0 til 170. Viser resultat og udvidelse.",
+        "keywords": "fakultetsberegner, n fakultet, fakultet af n, n! beregner, fakultetsformel, kombinatorikberegner",
+        "content": {
+          "heading": "Hvad er et fakultet?",
+          "paragraph1": "Fakultetet af et ikke-negativt heltal n, skrevet n!, er produktet af alle positive heltal fra 1 til n. Per definition 0! = 1. F.eks. 5! = 1 × 2 × 3 × 4 × 5 = 120. Fakulteter vokser meget hurtigt. Vores beregner beregner n! for n fra 0 til 170.",
+          "paragraph2": "Fakulteter bruges i kombinatorik (permutationer: n! måder at ordne n objekter), kombinationer (binomialkoefficienter), sandsynlighed og matematik.",
+          "paragraph3": "Indtast et heltal fra 0 til 170. Beregneren viser n! og, når n er lille nok, udvidelsen 1 × 2 × … × n. Vi begrænser input til 170, fordi 171! og derover overstiger standardtalvisning.",
+          "paragraph4": "Vores fakultetsberegner er gratis og fungerer i browseren. Ingen tilmelding nødvendig. Brug den til matematik, kombinatorik eller når du har brug for n! hurtigt og præcist.",
+          "exampleHeading": "Eksempler",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3 628 800."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {"question": "Hvad er fakultetet af 0?", "answer": "0! = 1 per definition. Denne konvention gør, at mange formler (f.eks. binomialkoefficienter, Taylorserier) fungerer korrekt for n = 0."},
+            {"question": "Hvorfor er input begrænset til 170?", "answer": "Fakulteter vokser ekstremt hurtigt. 171! er et tal med over 300 cifre, ud over typisk visning. For n fra 0 til 170 viser beregneren det nøjagtige heltalsresultat."},
+            {"question": "Til hvad bruges fakultet?", "answer": "Fakulteter bruges i kombinatorik (permutationer: n! måder at ordne n objekter), kombinationer (binomialkoefficienter), sandsynlighed og analyse (f.eks. Taylorserier for e^x)."},
+            {"question": "Kan fakulteter være negative eller decimaler?", "answer": "Standardfakultetet n! er kun defineret for ikke-negative heltal n. Gammafunktionen Γ(z) er en udvidelse så Γ(n+1) = n! for positive heltal n og tillader ikke-heltalsværdier."},
+            {"question": "Er denne fakultetsberegner gratis?", "answer": "Ja. Beregneren er gratis at bruge uden tilmelding. Indtast et tal fra 0 til 170 for at få n! og udvidelse når relevant."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterede beregnere",
+          "naturalLogarithm": "Naturlig logaritme",
+          "naturalLogarithmDesc": "ln(x); logaritmer forekommer i Stirlings approximation for n!",
+          "percentage": "Procentberegner",
+          "percentageDesc": "Procent og procentændring",
+          "squareRoot": "Kvadratrodsberegner",
+          "squareRootDesc": "Kvadratrødder; nyttige med fakultet i formler"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Tekst til Binær Konverter",
       "description": "Konverter tekst til binær kode øjeblikkeligt med flere tegnkodninger (UTF-8, UTF-16, Windows-1252) og tilpasselige separatorer.",

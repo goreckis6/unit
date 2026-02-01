@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Calculadora de Fatorial",
+      "description": "Calcule o fatorial de um inteiro não negativo (n!). Calculadora de fatorial online gratuita com resultado e desenvolvimento.",
+      "inputLabel": "Número (n)",
+      "inputPlaceholder": "ex. 5",
+      "inputHelp": "Digite um inteiro de 0 a 170 (0! = 1).",
+      "calculate": "Calcular",
+      "reset": "Reiniciar",
+      "resultLabel": "Resultado",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Desenvolvimento: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Digite um inteiro não negativo válido.",
+      "errorTooLarge": "Digite um número de 0 a 170 (valores maiores excedem a exibição).",
+      "seo": {
+        "title": "Calculadora de Fatorial – n! online",
+        "description": "Calculadora de fatorial gratuita. Calcule n! para qualquer inteiro não negativo de 0 a 170. Mostra resultado e desenvolvimento.",
+        "keywords": "calculadora fatorial, n fatorial, fatorial de n, calculadora n!, fórmula fatorial, calculadora combinatória",
+        "content": {
+          "heading": "O que é o fatorial?",
+          "paragraph1": "O fatorial de um inteiro n ≥ 0, escrito n!, é o produto de todos os inteiros positivos de 1 a n. Por definição, 0! = 1. Ex. 5! = 1 × 2 × 3 × 4 × 5 = 120. Fatoriais crescem muito rápido. Nossa calculadora calcula n! para n de 0 a 170.",
+          "paragraph2": "Fatoriais são usados em combinatória (número de arranjos), probabilidade e muitas fórmulas. O número de formas de ordenar n objetos distintos é n!. Esta calculadora dá n! na hora.",
+          "paragraph3": "Digite um inteiro de 0 a 170. A calculadora mostra n! e, para n pequeno, o desenvolvimento 1 × 2 × … × n. Limitamos a entrada a 170 porque fatoriais maiores excedem a exibição.",
+          "paragraph4": "Nossa calculadora de fatorial é gratuita e funciona no navegador. Sem cadastro. Para matemática, combinatória ou quando precisar de n! rapidamente.",
+          "exampleHeading": "Exemplos",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3.628.800."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {"question": "Quanto vale o fatorial de 0?", "answer": "0! = 1 por definição. Essa convenção faz com que muitas fórmulas valham também para n = 0."},
+            {"question": "Por que a entrada é limitada a 170?", "answer": "Fatoriais crescem muito rápido. 171! tem mais de 300 dígitos. Para n de 0 a 170 a calculadora mostra o resultado exato."},
+            {"question": "Para que serve o fatorial?", "answer": "Fatoriais são usados em combinatória (permutações: n! formas de ordenar n objetos), combinações e probabilidade."},
+            {"question": "Fatoriais podem ser negativos ou decimais?", "answer": "O fatorial padrão n! é definido apenas para inteiros n ≥ 0. A função gama Γ estende o conceito a outros valores."},
+            {"question": "Esta calculadora é gratuita?", "answer": "Sim. A calculadora é gratuita, sem cadastro. Digite um número de 0 a 170 para obter n! e o desenvolvimento."}
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "naturalLogarithm": "Logaritmo natural",
+          "naturalLogarithmDesc": "ln(x); logaritmos na aproximação de Stirling para n!",
+          "percentage": "Calculadora de porcentagem",
+          "percentageDesc": "Porcentagens e variação percentual",
+          "squareRoot": "Calculadora de raiz quadrada",
+          "squareRootDesc": "Raízes quadradas; úteis com fatorial em fórmulas"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Conversor de Texto para Binário",
       "description": "Converta texto em código binário instantaneamente com múltiplas codificações de caracteres (UTF-8, UTF-16, Windows-1252) e separadores personalizáveis.",

@@ -3938,6 +3938,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Faktöriyel Hesaplayıcı",
+      "description": "Negatif olmayan bir tam sayının faktöriyelini (n!) hesaplayın. Sonuç ve açılımla ücretsiz çevrimiçi faktöriyel hesaplayıcı.",
+      "inputLabel": "Sayı (n)",
+      "inputPlaceholder": "örn. 5",
+      "inputHelp": "0 ile 170 arasında bir tam sayı girin (0! = 1).",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "resultLabel": "Sonuç",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Açılım: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Geçerli negatif olmayan bir tam sayı girin.",
+      "errorTooLarge": "0 ile 170 arasında bir sayı girin (daha büyük değerler görüntüyü aşar).",
+      "seo": {
+        "title": "Faktöriyel Hesaplayıcı – n! Çevrimiçi",
+        "description": "Ücretsiz faktöriyel hesaplayıcı. 0 ile 170 arasındaki herhangi bir negatif olmayan tam sayı için n! hesaplayın. Sonuç ve açılımı gösterir.",
+        "keywords": "faktöriyel hesaplayıcı, n faktöriyel, n'nin faktöriyeli, n! hesaplayıcı, faktöriyel formülü, kombinatorik hesaplayıcı",
+        "content": {
+          "heading": "Faktöriyel Nedir?",
+          "paragraph1": "Negatif olmayan tam sayı n'nin faktöriyeli, n! yazılır, 1'den n'ye kadar tüm pozitif tam sayıların çarpımıdır. Tanım gereği 0! = 1. Örn. 5! = 1 × 2 × 3 × 4 × 5 = 120. Faktöriyeller çok hızlı büyür. Hesaplayıcımız n = 0'dan 170'e kadar n! hesaplar.",
+          "paragraph2": "Faktöriyeller kombinatorikte (permütasyonlar: n nesneyi düzenlemenin n! yolu), kombinasyonlarda (binomial katsayılar), olasılıkta ve matematikte kullanılır.",
+          "paragraph3": "0 ile 170 arasında bir tam sayı girin. Hesaplayıcı n! gösterir ve n yeterince küçükse 1 × 2 × … × n açılımını gösterir. Girdiyi 170 ile sınırlıyoruz çünkü 171! ve üzeri standart sayı gösterimini aşar.",
+          "paragraph4": "Faktöriyel hesaplayıcımız ücretsizdir ve tarayıcıda çalışır. Kayıt gerekmez. Matematik, kombinatorik veya n! hızlı ve doğru gerektiğinde kullanın.",
+          "exampleHeading": "Örnekler",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3,628,800."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {"question": "0'ın faktöriyeli nedir?", "answer": "Tanım gereği 0! = 1. Bu kural, birçok formülün (örn. binomial katsayılar, Taylor serileri) n = 0 için doğru çalışmasını sağlar."},
+            {"question": "Neden girdi 170 ile sınırlı?", "answer": "Faktöriyeller aşırı hızlı büyür. 171! 300'den fazla basamağı olan bir sayıdır, tipik gösterimin ötesinde. 0 ile 170 arası n için hesaplayıcı tam tam sayı sonucunu gösterir."},
+            {"question": "Faktöriyel ne için kullanılır?", "answer": "Faktöriyeller kombinatorikte (permütasyonlar: n nesneyi düzenlemenin n! yolu), kombinasyonlarda (binomial katsayılar), olasılıkta ve analizde (örn. e^x için Taylor serisi) kullanılır."},
+            {"question": "Faktöriyeller negatif veya ondalık olabilir mi?", "answer": "Standart faktöriyel n! yalnızca negatif olmayan tam sayı n için tanımlanır. Gama fonksiyonu Γ(z), pozitif tam sayı n için Γ(n+1) = n! olacak şekilde bir genişlemedir ve tam sayı olmayan değerlere izin verir."},
+            {"question": "Bu faktöriyel hesaplayıcı ücretsiz mi?", "answer": "Evet. Hesaplayıcı kayıt olmadan ücretsiz kullanılır. n! ve uygulanabilirse açılım için 0 ile 170 arası bir sayı girin."}
+          ]
+        },
+        "related": {
+          "heading": "İlgili hesaplayıcılar",
+          "naturalLogarithm": "Doğal logaritma",
+          "naturalLogarithmDesc": "ln(x); logaritmalar n! için Stirling yaklaşımında görünür",
+          "percentage": "Yüzde hesaplayıcı",
+          "percentageDesc": "Yüzdeler ve yüzde değişimi",
+          "squareRoot": "Karekök hesaplayıcı",
+          "squareRootDesc": "Karekökler; formüllerde faktöriyel ile kullanışlı"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Metin İkili Dönüştürücü",
       "description": "Birden fazla karakter kodlaması (UTF-8, UTF-16, Windows-1252) ve özelleştirilebilir ayırıcılarla metni anında ikili koda dönüştürün.",

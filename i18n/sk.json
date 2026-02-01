@@ -3846,6 +3846,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Kalkulačka Faktoriálu",
+      "description": "Vypočítajte faktoriál nezáporného celého čísla (n!). Bezplatná online kalkulačka faktoriálu s výsledkom a rozvinutím.",
+      "inputLabel": "Číslo (n)",
+      "inputPlaceholder": "napr. 5",
+      "inputHelp": "Zadajte celé číslo od 0 do 170 (0! = 1).",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "resultLabel": "Výsledok",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Rozvinutie: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Zadajte platné nezáporné celé číslo.",
+      "errorTooLarge": "Zadajte číslo od 0 do 170 (väčšie hodnoty presahujú zobrazenie).",
+      "seo": {
+        "title": "Kalkulačka Faktoriálu – n! Online",
+        "description": "Bezplatná kalkulačka faktoriálu. Vypočítajte n! pre ľubovoľné nezáporné celé číslo od 0 do 170. Zobrazí výsledok a rozvinutie.",
+        "keywords": "kalkulačka faktoriálu, n faktoriál, faktoriál n, n! kalkulačka, vzorec faktoriálu, kombinatorická kalkulačka",
+        "content": {
+          "heading": "Čo je faktoriál?",
+          "paragraph1": "Faktoriál nezáporného celého čísla n, označený n!, je súčin všetkých kladných celých čísel od 1 do n. Podľa definície 0! = 1. Napr. 5! = 1 × 2 × 3 × 4 × 5 = 120. Faktoriály rýchlo rastú. Naša kalkulačka počíta n! pre n od 0 do 170.",
+          "paragraph2": "Faktoriály sa používajú v kombinatorike (permutácie: n! spôsobov usporiadania n objektov), kombináciách, pravdepodobnosti a v matematike.",
+          "paragraph3": "Zadajte celé číslo od 0 do 170. Kalkulačka zobrazí n! a pri malom n rozvinutie 1 × 2 × … × n. Vstup obmedzujeme na 170, pretože väčšie faktoriály presahujú rozsah zobrazenia.",
+          "paragraph4": "Naša kalkulačka faktoriálu je zadarmo a funguje v prehliadači. Bez registrácie. Pre matematiku, kombinatoriku alebo kedykoľvek potrebujete n! rýchlo.",
+          "exampleHeading": "Príklady",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3 628 800."
+        },
+        "faq": {
+          "heading": "Časté otázky",
+          "items": [
+            {"question": "Koľko je faktoriál z 0?", "answer": "0! = 1 podľa definície. Táto konvencia zaisťuje, že mnohé vzorce platia aj pre n = 0."},
+            {"question": "Prečo je vstup obmedzený na 170?", "answer": "Faktoriály veľmi rýchlo rastú. 171! má cez 300 číslic. Pre n od 0 do 170 kalkulačka zobrazí presný výsledok."},
+            {"question": "Na čo sa používa faktoriál?", "answer": "Faktoriály sa používajú v kombinatorike (permutácie), kombináciách, pravdepodobnosti a v matematike."},
+            {"question": "Môžu byť faktoriály záporné alebo desatinné?", "answer": "Štandardný faktoriál n! je definovaný len pre nezáporné celé čísla n. Rozšírenie pomocou gama funkcie Γ umožňuje aj iné hodnoty."},
+            {"question": "Je táto kalkulačka zadarmo?", "answer": "Áno. Kalkulačka je zadarmo, bez registrácie. Zadajte číslo od 0 do 170 pre n! a rozvinutie."}
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace kalkulačky",
+          "naturalLogarithm": "Prirodzený logaritmus",
+          "naturalLogarithmDesc": "ln(x); logaritmy vo Stirlingovej aproximácii pre n!",
+          "percentage": "Kalkulačka percent",
+          "percentageDesc": "Percentá a zmena percent",
+          "squareRoot": "Kalkulačka druhej odmocniny",
+          "squareRootDesc": "Druhé odmocniny; užitočné s faktoriálom vo vzorcoch"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Konvertor Textu na Binárny",
       "description": "Konvertujte text na binárny kód okamžite s viacerými znakovými kódovaniami (UTF-8, UTF-16, Windows-1252) a prispôsobiteľnými oddeľovačmi.",

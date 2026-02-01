@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Faktoriális Számológép",
+      "description": "Számítsa ki egy nemnegatív egész faktoriálisát (n!). Ingyenes online faktoriális számológép eredménnyel és kifejtéssel.",
+      "inputLabel": "Szám (n)",
+      "inputPlaceholder": "pl. 5",
+      "inputHelp": "Adjon meg 0 és 170 közötti egész számot (0! = 1).",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "resultLabel": "Eredmény",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Kifejtés: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Adjon meg érvényes nemnegatív egész számot.",
+      "errorTooLarge": "Adjon meg 0 és 170 közötti számot (nagyobb értékek túllépik a megjelenítést).",
+      "seo": {
+        "title": "Faktoriális Számológép – n! Online",
+        "description": "Ingyenes faktoriális számológép. Számítsa ki n! bármely 0 és 170 közötti nemnegatív egészre. Eredményt és kifejtést mutat.",
+        "keywords": "faktoriális számológép, n faktoriális, n faktoriálisa, n! számológép, faktoriális képlet, kombinatorikai számológép",
+        "content": {
+          "heading": "Mi a faktoriális?",
+          "paragraph1": "Egy n nemnegatív egész faktoriálisa, jelölve n!, az 1-től n-ig terjedő pozitív egészek szorzata. Definíció szerint 0! = 1. Pl. 5! = 1 × 2 × 3 × 4 × 5 = 120. A faktoriálisok nagyon gyorsan nőnek. Számológépünk n!-t számol n = 0-tól 170-ig.",
+          "paragraph2": "A faktoriálisokat kombinatorikában (permutációk: n! módon rendezhető n tárgy), kombinációkban, valószínűségben és matematikában használják.",
+          "paragraph3": "Adjon meg 0 és 170 közötti egész számot. A számológép megjeleníti n!-t és kis n esetén az 1 × 2 × … × n kifejtést. A bemenetet 170-re korlátozzuk, mert a nagyobb faktoriálisok túllépik a megjeleníthető tartományt.",
+          "paragraph4": "Faktoriális számológépünk ingyenes és a böngészőben működik. Regisztráció nem szükséges. Matematika órához, kombinatorikához vagy bármikor, amikor gyorsan és pontosan kell n!.",
+          "exampleHeading": "Példák",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3 628 800."
+        },
+        "faq": {
+          "heading": "Gyakran ismételt kérdések",
+          "items": [
+            {"question": "Mennyi 0 faktoriálisa?", "answer": "Definíció szerint 0! = 1. Ez a megállapodás biztosítja, hogy sok képlet n = 0-ra is helyes legyen."},
+            {"question": "Miért van a bemenet 170-re korlátozva?", "answer": "A faktoriálisok rendkívül gyorsan nőnek. A 171! több mint 300 számjegyű, ami túlmutat a tipikus megjelenítésen. 0–170 között a számológép a pontos egész eredményt mutatja."},
+            {"question": "Mire használják a faktoriálist?", "answer": "A faktoriálisokat kombinatorikában (permutációk: n tárgy n! rendezése), kombinációkban (binomiális együtthatók), valószínűségben és analízisben (pl. e^x Taylor-sora) használják."},
+            {"question": "Lehet negatív vagy tizedes a faktoriális?", "answer": "A standard n! csak nemnegatív egész n-re van definiálva. A gammafüggvény, Γ(z), kiterjesztésként olyan, hogy Γ(n+1) = n! pozitív egész n-re, és nem egész értékeket is megenged."},
+            {"question": "Ez a faktoriális számológép ingyenes?", "answer": "Igen. A számológép ingyenes, regisztráció nélkül. Adjon meg 0 és 170 közötti számot az n! és a kifejtés megjelenítéséhez."}
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó számológépek",
+          "naturalLogarithm": "Természetes logaritmus",
+          "naturalLogarithmDesc": "ln(x); logaritmusok a Stirling-közelítésben n!-ra",
+          "percentage": "Százalék számológép",
+          "percentageDesc": "Százalékok és százalékos változás",
+          "squareRoot": "Négyzetgyök számológép",
+          "squareRootDesc": "Négyzetgyökök; a faktoriálissal együtt hasznosak a képletekben"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Szöveg Bináris Konverter",
       "description": "Konvertáljon szöveget bináris kódra azonnal több karakterkódolással (UTF-8, UTF-16, Windows-1252) és testreszabható elválasztókkal.",

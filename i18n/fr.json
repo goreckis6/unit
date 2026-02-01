@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Calculateur de Factorielle",
+      "description": "Calculez la factorielle d'un entier positif ou nul (n!). Calculateur de factorielle en ligne gratuit avec résultat et développement.",
+      "inputLabel": "Nombre (n)",
+      "inputPlaceholder": "ex. 5",
+      "inputHelp": "Entrez un entier de 0 à 170 (0! = 1).",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "resultLabel": "Résultat",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Développement : {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Veuillez entrer un entier positif ou nul valide.",
+      "errorTooLarge": "Entrez un nombre entre 0 et 170 (au-delà, l'affichage dépasse).",
+      "seo": {
+        "title": "Calculateur de Factorielle – n! en ligne",
+        "description": "Calculateur de factorielle gratuit. Calculez n! pour tout entier positif ou nul de 0 à 170. Affiche le résultat et le développement.",
+        "keywords": "calculateur factorielle, n factorielle, factorielle de n, calculateur n!, formule factorielle, calculateur combinatoire",
+        "content": {
+          "heading": "Qu'est-ce que la factorielle ?",
+          "paragraph1": "La factorielle d'un entier positif ou nul n, notée n!, est le produit de tous les entiers de 1 à n. Par définition, 0! = 1. Ex. 5! = 1 × 2 × 3 × 4 × 5 = 120. Les factorielles croissent très vite. Notre calculateur calcule n! pour n de 0 à 170.",
+          "paragraph2": "Les factorielles servent en combinatoire (nombre d'arrangements), en probabilités et dans de nombreuses formules. Le nombre de façons d'arranger n objets distincts est n!. Ce calculateur donne n! instantanément.",
+          "paragraph3": "Entrez un entier de 0 à 170. Le calculateur affiche n! et, pour n petit, le développement 1 × 2 × … × n. L'entrée est limitée à 170 car les factorielles plus grandes dépassent l'affichage.",
+          "paragraph4": "Notre calculateur de factorielle est gratuit et fonctionne dans le navigateur. Sans inscription. Pour les maths, la combinatoire ou dès que vous avez besoin de n! rapidement.",
+          "exampleHeading": "Exemples",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3 628 800."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {"question": "Combien vaut la factorielle de 0 ?", "answer": "0! = 1 par définition. Cette convention permet à de nombreuses formules de rester valides pour n = 0."},
+            {"question": "Pourquoi l'entrée est-elle limitée à 170 ?", "answer": "Les factorielles croissent très vite. 171! dépasse 300 chiffres. Pour n de 0 à 170, le calculateur affiche le résultat exact."},
+            {"question": "À quoi sert la factorielle ?", "answer": "Les factorielles servent en combinatoire (permutations : n! arrangements de n objets), en combinaisons et en probabilités."},
+            {"question": "Les factorielles peuvent-elles être négatives ou décimales ?", "answer": "La factorielle usuelle n! n'est définie que pour les entiers n ≥ 0. La fonction gamma Γ en donne un prolongement à d'autres valeurs."},
+            {"question": "Ce calculateur est-il gratuit ?", "answer": "Oui. Le calculateur est gratuit, sans inscription. Entrez un nombre de 0 à 170 pour obtenir n! et le développement."}
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs associés",
+          "naturalLogarithm": "Logarithme naturel",
+          "naturalLogarithmDesc": "ln(x) ; logarithmes dans l'approximation de Stirling pour n!",
+          "percentage": "Calculateur de pourcentage",
+          "percentageDesc": "Pourcentages et variation en pourcentage",
+          "squareRoot": "Calculateur de racine carrée",
+          "squareRootDesc": "Racines carrées ; utile avec la factorielle dans les formules"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Convertisseur Texte en Binaire",
       "description": "Convertissez du texte en code binaire instantanément avec plusieurs encodages de caractères (UTF-8, UTF-16, Windows-1252) et séparateurs personnalisables.",

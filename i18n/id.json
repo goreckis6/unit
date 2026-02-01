@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Kalkulator Faktorial",
+      "description": "Hitung faktorial bilangan bulat non-negatif (n!). Kalkulator faktorial online gratis dengan hasil dan perluasan.",
+      "inputLabel": "Angka (n)",
+      "inputPlaceholder": "mis. 5",
+      "inputHelp": "Masukkan bilangan bulat dari 0 hingga 170 (0! = 1).",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "resultLabel": "Hasil",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Perluasan: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Masukkan bilangan bulat non-negatif yang valid.",
+      "errorTooLarge": "Masukkan angka dari 0 hingga 170 (nilai lebih besar melebihi tampilan).",
+      "seo": {
+        "title": "Kalkulator Faktorial – n! Online",
+        "description": "Kalkulator faktorial gratis. Hitung n! untuk bilangan bulat non-negatif dari 0 hingga 170. Menampilkan hasil dan perluasan.",
+        "keywords": "kalkulator faktorial, n faktorial, faktorial n, kalkulator n!, rumus faktorial, kalkulator kombinatorik",
+        "content": {
+          "heading": "Apa itu Faktorial?",
+          "paragraph1": "Faktorial bilangan bulat non-negatif n, ditulis n!, adalah hasil kali semua bilangan bulat positif dari 1 hingga n. Secara definisi 0! = 1. Mis. 5! = 1 × 2 × 3 × 4 × 5 = 120. Faktorial tumbuh sangat cepat. Kalkulator kami menghitung n! untuk n dari 0 hingga 170.",
+          "paragraph2": "Faktorial digunakan dalam kombinatorik (permutasi: n! cara mengatur n objek), kombinasi (koefisien binomial), probabilitas, dan matematika.",
+          "paragraph3": "Masukkan bilangan bulat dari 0 hingga 170. Kalkulator menampilkan n! dan, bila n cukup kecil, perluasan 1 × 2 × … × n. Kami membatasi input hingga 170 karena 171! ke atas melebihi rentang tampilan angka standar.",
+          "paragraph4": "Kalkulator faktorial kami gratis dan berjalan di browser. Tanpa pendaftaran. Gunakan untuk matematika, kombinatorik, atau kapan pun Anda butuh n! dengan cepat dan akurat.",
+          "exampleHeading": "Contoh",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3,628,800."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {"question": "Berapa faktorial dari 0?", "answer": "0! = 1 menurut definisi. Konvensi ini membuat banyak rumus (mis. koefisien binomial, deret Taylor) bekerja benar untuk n = 0."},
+            {"question": "Mengapa input dibatasi hingga 170?", "answer": "Faktorial tumbuh sangat cepat. 171! adalah bilangan dengan lebih dari 300 digit, di luar tampilan biasa. Untuk n dari 0 hingga 170, kalkulator menampilkan hasil bilangan bulat eksak."},
+            {"question": "Untuk apa faktorial digunakan?", "answer": "Faktorial digunakan dalam kombinatorik (permutasi: n! cara mengatur n objek), kombinasi (koefisien binomial), probabilitas, dan kalkulus (mis. deret Taylor untuk e^x)."},
+            {"question": "Bisakah faktorial negatif atau desimal?", "answer": "Faktorial standar n! hanya didefinisikan untuk bilangan bulat non-negatif n. Fungsi gamma Γ(z) adalah perluasan sehingga Γ(n+1) = n! untuk bilangan bulat positif n dan mengizinkan nilai non-bulat."},
+            {"question": "Apakah kalkulator faktorial ini gratis?", "answer": "Ya. Kalkulator gratis digunakan tanpa pendaftaran. Masukkan angka dari 0 hingga 170 untuk mendapatkan n! dan perluasan bila berlaku."}
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator terkait",
+          "naturalLogarithm": "Logaritma natural",
+          "naturalLogarithmDesc": "ln(x); logaritma muncul dalam pendekatan Stirling untuk n!",
+          "percentage": "Kalkulator persentase",
+          "percentageDesc": "Persentase dan perubahan persentase",
+          "squareRoot": "Kalkulator akar kuadrat",
+          "squareRootDesc": "Akar kuadrat; berguna dengan faktorial dalam rumus"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Konverter Teks ke Biner",
       "description": "Konversi teks ke kode biner secara instan dengan beberapa pengkodean karakter (UTF-8, UTF-16, Windows-1252) dan pemisah yang dapat disesuaikan.",

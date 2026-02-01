@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Faktorialkalkulator",
+      "description": "Beregn faktorialen av et ikke-negativt heltall (n!). Gratis online faktorialkalkulator med resultat og utvidelse.",
+      "inputLabel": "Tall (n)",
+      "inputPlaceholder": "f.eks. 5",
+      "inputHelp": "Skriv inn et heltall fra 0 til 170 (0! = 1).",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "resultLabel": "Resultat",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Utvidelse: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Skriv inn et gyldig ikke-negativt heltall.",
+      "errorTooLarge": "Skriv inn et tall fra 0 til 170 (større verdier overstiger visningen).",
+      "seo": {
+        "title": "Faktorialkalkulator – n! Online",
+        "description": "Gratis faktorialkalkulator. Beregn n! for ethvert ikke-negativt heltall fra 0 til 170. Viser resultat og utvidelse.",
+        "keywords": "faktorialkalkulator, n faktorial, faktorial av n, n! kalkulator, faktorialformel, kombinatorikkalkulator",
+        "content": {
+          "heading": "Hva er en faktorial?",
+          "paragraph1": "Faktorialen av et ikke-negativt heltall n, skrevet n!, er produktet av alle positive heltall fra 1 til n. Per definisjon 0! = 1. F.eks. 5! = 1 × 2 × 3 × 4 × 5 = 120. Faktorialer vokser svært raskt. Kalkulatoren vår beregner n! for n fra 0 til 170.",
+          "paragraph2": "Faktorialer brukes i kombinatorikk (permutasjoner: n! måter å ordne n objekter), kombinasjoner (binomialkoeffisienter), sannsynlighet og matematikk.",
+          "paragraph3": "Skriv inn et heltall fra 0 til 170. Kalkulatoren viser n! og, når n er lite nok, utvidelsen 1 × 2 × … × n. Vi begrenser inndata til 170 fordi 171! og utover overstiger standard tallvisning.",
+          "paragraph4": "Faktorialkalkulatoren vår er gratis og fungerer i nettleseren. Ingen registrering nødvendig. Bruk den i matte, kombinatorikk eller når du trenger n! raskt og nøyaktig.",
+          "exampleHeading": "Eksempler",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3 628 800."
+        },
+        "faq": {
+          "heading": "Vanlige spørsmål",
+          "items": [
+            {"question": "Hva er faktorialen av 0?", "answer": "0! = 1 per definisjon. Denne konvensjonen gjør at mange formler (f.eks. binomialkoeffisienter, Taylorserier) fungerer korrekt for n = 0."},
+            {"question": "Hvorfor er inndata begrenset til 170?", "answer": "Faktorialer vokser ekstremt raskt. 171! er et tall med over 300 sifre, utenfor typisk visning. For n fra 0 til 170 viser kalkulatoren det nøyaktige heltallsresultatet."},
+            {"question": "Til hva brukes faktorial?", "answer": "Faktorialer brukes i kombinatorikk (permutasjoner: n! måter å ordne n objekter), kombinasjoner (binomialkoeffisienter), sannsynlighet og analyse (f.eks. Taylorserier for e^x)."},
+            {"question": "Kan faktorialer være negative eller desimaler?", "answer": "Standardfaktorialen n! er kun definert for ikke-negative heltall n. Gammafunksjonen Γ(z) er en utvidelse slik at Γ(n+1) = n! for positive heltall n og tillater ikke-heltallsverdier."},
+            {"question": "Er denne faktorialkalkulatoren gratis?", "answer": "Ja. Kalkulatoren er gratis å bruke uten registrering. Skriv inn et tall fra 0 til 170 for å få n! og utvidelse når aktuelt."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterte kalkulatorer",
+          "naturalLogarithm": "Naturlig logaritme",
+          "naturalLogarithmDesc": "ln(x); logaritmer forekommer i Stirlings tilnærming for n!",
+          "percentage": "Prosentkalkulator",
+          "percentageDesc": "Prosent og prosentendring",
+          "squareRoot": "Kvadratrotkalkulator",
+          "squareRootDesc": "Kvadratrøtter; nyttig med faktorial i formler"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Tekst til Binær Konverter",
       "description": "Konverter tekst til binær kode umiddelbart med flere tegnkodinger (UTF-8, UTF-16, Windows-1252) og tilpassbare separatorer.",

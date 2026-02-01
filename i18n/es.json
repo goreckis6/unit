@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Calculadora de Factorial",
+      "description": "Calcula el factorial de un entero no negativo (n!). Calculadora de factorial en línea gratuita con resultado y desarrollo.",
+      "inputLabel": "Número (n)",
+      "inputPlaceholder": "ej. 5",
+      "inputHelp": "Introduce un entero de 0 a 170 (0! = 1).",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "resultLabel": "Resultado",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Desarrollo: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Introduce un entero no negativo válido.",
+      "errorTooLarge": "Introduce un número de 0 a 170 (valores mayores exceden la visualización).",
+      "seo": {
+        "title": "Calculadora de Factorial – n! en línea",
+        "description": "Calculadora de factorial gratuita. Calcula n! para cualquier entero no negativo de 0 a 170. Muestra resultado y desarrollo.",
+        "keywords": "calculadora factorial, n factorial, factorial de n, calculadora n!, fórmula factorial, calculadora combinatoria",
+        "content": {
+          "heading": "¿Qué es el factorial?",
+          "paragraph1": "El factorial de un entero n ≥ 0, escrito n!, es el producto de todos los enteros positivos de 1 a n. Por definición, 0! = 1. Ej. 5! = 1 × 2 × 3 × 4 × 5 = 120. Los factoriales crecen muy rápido. Nuestra calculadora calcula n! para n de 0 a 170.",
+          "paragraph2": "Los factoriales se usan en combinatoria (número de ordenaciones), probabilidad y muchas fórmulas. El número de formas de ordenar n objetos distintos es n!. Esta calculadora te da n! al instante.",
+          "paragraph3": "Introduce un entero de 0 a 170. La calculadora muestra n! y, para n pequeño, el desarrollo 1 × 2 × … × n. Limitamos la entrada a 170 porque factoriales mayores exceden la visualización.",
+          "paragraph4": "Nuestra calculadora de factorial es gratuita y funciona en el navegador. Sin registro. Para matemáticas, combinatoria o cuando necesites n! rápido.",
+          "exampleHeading": "Ejemplos",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3.628.800."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            {"question": "¿Cuánto es el factorial de 0?", "answer": "0! = 1 por definición. Esta convención hace que muchas fórmulas sean válidas también para n = 0."},
+            {"question": "¿Por qué la entrada está limitada a 170?", "answer": "Los factoriales crecen muy rápido. 171! tiene más de 300 cifras. Para n de 0 a 170 la calculadora muestra el resultado exacto."},
+            {"question": "¿Para qué se usa el factorial?", "answer": "Los factoriales se usan en combinatoria (permutaciones: n! formas de ordenar n objetos), combinaciones y probabilidad."},
+            {"question": "¿Pueden ser negativos o decimales?", "answer": "El factorial estándar n! está definido solo para enteros n ≥ 0. La función gamma Γ extiende el concepto a otros valores."},
+            {"question": "¿Esta calculadora es gratuita?", "answer": "Sí. La calculadora es gratuita, sin registro. Introduce un número de 0 a 170 para obtener n! y el desarrollo."}
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "naturalLogarithm": "Logaritmo natural",
+          "naturalLogarithmDesc": "ln(x); logaritmos en la aproximación de Stirling para n!",
+          "percentage": "Calculadora de porcentaje",
+          "percentageDesc": "Porcentajes y cambio porcentual",
+          "squareRoot": "Calculadora de raíz cuadrada",
+          "squareRootDesc": "Raíces cuadradas; útiles con factorial en fórmulas"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Convertidor de Texto a Binario",
       "description": "Convierte texto a código binario al instante con múltiples codificaciones de caracteres (UTF-8, UTF-16, Windows-1252) y separadores personalizables.",

@@ -177,6 +177,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'factorial',
+    titleKey: 'factorial.title',
+    descKey: 'factorial.description',
+    path: '/calculators/math/factorial',
+    category: 'math',
+  },
+  {
     id: 'sine',
     titleKey: 'sine.title',
     descKey: 'sine.description',

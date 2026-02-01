@@ -3882,6 +3882,69 @@
         }
       }
     },
+    "factorial": {
+      "title": "Factorial Calculator",
+      "description": "Calculate the factorial of a non-negative integer (n!). Free online factorial calculator with result and expansion.",
+      "inputLabel": "Number (n)",
+      "inputPlaceholder": "e.g. 5",
+      "inputHelp": "Enter a whole number from 0 to 170 (0! = 1).",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "resultLabel": "Result",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Expansion: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Please enter a valid non-negative integer.",
+      "errorTooLarge": "Enter a number from 0 to 170 (larger values exceed display).",
+      "seo": {
+        "title": "Factorial Calculator – n! Online",
+        "description": "Free factorial calculator. Compute n! for any non-negative integer from 0 to 170. Shows result and expansion. Perfect for math, combinatorics, and statistics.",
+        "keywords": "factorial calculator, n factorial, factorial of n, n! calculator, factorial formula, combinatorics calculator",
+        "content": {
+          "heading": "What is a Factorial?",
+          "paragraph1": "The factorial of a non-negative integer n, written n!, is the product of all positive integers from 1 to n. By definition, 0! = 1. For example, 5! = 1 × 2 × 3 × 4 × 5 = 120. Factorials grow very quickly: 10! = 3,628,800 and 20! is over 2 quintillion. Our calculator computes n! for n from 0 to 170 and shows the result and, for small n, the expansion.",
+          "paragraph2": "Factorials are used in combinatorics (counting arrangements and combinations), probability, calculus (Taylor series), and many formulas. The number of ways to arrange n distinct objects is n!. The binomial coefficient C(n,k) = n! / (k!(n−k)!). This calculator gives you n! instantly so you can check homework or use it in larger calculations.",
+          "paragraph3": "Enter a whole number from 0 to 170. The calculator displays n! and, when n is small enough, the expansion 1 × 2 × … × n. We limit input to 170 because 171! and beyond exceed the range of standard number display; for very large factorials you can use Stirling's approximation or specialized software.",
+          "paragraph4": "Our factorial calculator is free and works in your browser. No sign-up required. Use it for math class, combinatorics problems, or any time you need n! quickly and accurately.",
+          "exampleHeading": "Examples",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3,628,800. 20! = 2,432,902,008,176,640,000."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the factorial of 0?",
+              "answer": "0! = 1 by definition. This convention makes many formulas (e.g. binomial coefficients, Taylor series) work correctly for n = 0."
+            },
+            {
+              "question": "Why is the input limited to 170?",
+              "answer": "Factorials grow extremely fast. 171! is a number with over 300 digits, which is beyond typical display. For n from 0 to 170, the calculator shows the exact integer result."
+            },
+            {
+              "question": "What is factorial used for?",
+              "answer": "Factorials are used in combinatorics (permutations: n! ways to arrange n objects), combinations (binomial coefficients), probability, and calculus (e.g. Taylor series for e^x)."
+            },
+            {
+              "question": "Can factorials be negative or decimal?",
+              "answer": "The standard factorial n! is defined only for non-negative integers n. There is an extension called the gamma function, Γ(z), such that Γ(n+1) = n! for positive integers n, which allows non-integer and complex values."
+            },
+            {
+              "question": "Is this factorial calculator free?",
+              "answer": "Yes. The calculator is free to use with no registration. Enter a number from 0 to 170 to get n! and the expansion when applicable."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "naturalLogarithm": "Natural Logarithm",
+          "naturalLogarithmDesc": "ln(x); logarithms appear in Stirling's approximation for n!",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Percentages and percentage change",
+          "squareRoot": "Square Root Calculator",
+          "squareRootDesc": "Square roots; useful with factorial in formulas"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Text to Binary Converter",
       "description": "Convert text to binary code instantly with multiple character encodings (UTF-8, UTF-16, Windows-1252) and customizable separators.",

@@ -3864,6 +3864,54 @@
         }
       }
     },
+    "factorial": {
+      "title": "Kertomalaskin",
+      "description": "Laske ei-negatiivisen kokonaisluvun kertoma (n!). Ilmainen online kertomalaskin tuloksella ja laajennuksella.",
+      "inputLabel": "Luku (n)",
+      "inputPlaceholder": "esim. 5",
+      "inputHelp": "Syötä kokonaisluku välillä 0–170 (0! = 1).",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "resultLabel": "Tulos",
+      "resultValue": "{n}! = {value}",
+      "expansion": "Laajennus: {expansion}",
+      "equation": "{n}! = {value}",
+      "errorInvalid": "Syötä kelvollinen ei-negatiivinen kokonaisluku.",
+      "errorTooLarge": "Syötä luku välillä 0–170 (suuremmat arvot ylittävät näyttöalueen).",
+      "seo": {
+        "title": "Kertomalaskin – n! Online",
+        "description": "Ilmainen kertomalaskin. Laske n! mille tahansa ei-negatiiviselle kokonaisluvulle 0–170. Näyttää tuloksen ja laajennuksen.",
+        "keywords": "kertomalaskin, n kertoma, n:n kertoma, n! laskin, kertoman kaava, kombinatoriikkalaskin",
+        "content": {
+          "heading": "Mikä on kertoma?",
+          "paragraph1": "Ei-negatiivisen kokonaisluvun n kertoma, merkitään n!, on kaikkien positiivisten kokonaislukujen 1…n tulo. Määritelmän mukaan 0! = 1. Esim. 5! = 1 × 2 × 3 × 4 × 5 = 120. Kertomat kasvavat hyvin nopeasti. Laskimemme laskee n! arvolle n 0–170.",
+          "paragraph2": "Kertomia käytetään kombinatoriikassa (permutaatiot: n! tapaa järjestää n kohdetta), yhdistelmissä (binomikertoimet), todennäköisyyslaskennassa ja matematiikassa.",
+          "paragraph3": "Syötä kokonaisluku välillä 0–170. Laskin näyttää n! ja riittävän pienellä n laajennuksen 1 × 2 × … × n. Syötteen yläraja on 170, koska 171! ja suuremmat ylittävät tavallisen numeronäytön.",
+          "paragraph4": "Kertomalaskimemme on ilmainen ja toimii selaimessa. Rekisteröitymistä ei tarvita. Käytä matematiikassa, kombinatoriikassa tai milloin tarvitset n! nopeasti ja tarkasti.",
+          "exampleHeading": "Esimerkkejä",
+          "exampleText": "0! = 1. 1! = 1. 5! = 1 × 2 × 3 × 4 × 5 = 120. 10! = 3 628 800."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Mikä on 0:n kertoma?", "answer": "0! = 1 määritelmän mukaan. Tämä sopimus tekee monista kaavoista (esim. binomikertoimet, Taylorin sarjat) oikein toimivia arvolle n = 0."},
+            {"question": "Miksi syöte on rajoitettu 170:een?", "answer": "Kertomat kasvavat erittäin nopeasti. 171! on yli 300 numeron luku, mikä ylittää tyypillisen näyttöalueen. Arvolle n 0–170 laskin näyttää tarkan kokonaislukutuloksen."},
+            {"question": "Mihin kertomaa käytetään?", "answer": "Kertomia käytetään kombinatoriikassa (permutaatiot: n! tapaa järjestää n kohdetta), yhdistelmissä (binomikertoimet), todennäköisyyslaskennassa ja analyysissä (esim. e^x:n Taylorin sarja)."},
+            {"question": "Voivatko kertomat olla negatiivisia tai desimaalilukuja?", "answer": "Standardikertoma n! on määritelty vain ei-negatiivisille kokonaisluvuille n. Gammafunktio Γ(z) on laajennus siten, että Γ(n+1) = n! positiivisille kokonaisluvuille n ja sallii ei-kokonaislukuarvot."},
+            {"question": "Onko tämä kertomalaskin ilmainen?", "answer": "Kyllä. Laskin on ilmainen käyttää ilman rekisteröitymistä. Syötä luku 0–170 saadaksesi n! ja laajennuksen tarvittaessa."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "naturalLogarithm": "Luonnollinen logaritmi",
+          "naturalLogarithmDesc": "ln(x); logaritmit esiintyvät Stirlingin approksimaatiossa n!:lle",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Prosentit ja prosenttimuutos",
+          "squareRoot": "Neliöjuurilaskin",
+          "squareRootDesc": "Neliöjuuret; hyödyllisiä kertoman kanssa kaavoissa"
+        }
+      }
+    },
     "textToBinary": {
       "title": "Teksti Binääriksi Muunnin",
       "description": "Muunna teksti binäärikoodiksi heti useilla merkkikoodauksilla (UTF-8, UTF-16, Windows-1252) ja muokattavilla erottimilla.",

@@ -17,6 +17,19 @@ interface LongMultiplicationResult {
   partials: PartialProduct[];
 }
 
+type DiagramTone = 'default' | 'result' | 'secondary';
+
+interface DiagramLine {
+  key: string;
+  text: string;
+  tone: DiagramTone;
+}
+
+interface MultiplicationDiagramLayout {
+  baseWidth: number;
+  lines: DiagramLine[];
+}
+
 function parseNonNegativeBigInt(input: string): bigint | null {
   const trimmed = input.trim();
   if (!trimmed) return null;
@@ -54,6 +67,60 @@ function buildLongMultiplication(multiplicand: bigint, multiplierStr: string): L
     product,
     partials: partials.reverse(),
   };
+}
+
+function padRightAlign(value: string, width: number): string {
+  if (value.length >= width) return value;
+  return ' '.repeat(width - value.length) + value;
+}
+
+function buildMultiplicationDiagram(result: LongMultiplicationResult): MultiplicationDiagramLayout {
+  const productStr = result.product.toString();
+  let baseWidth = Math.max(
+    result.multiplicand.length,
+    result.multiplier.length + 2,
+    productStr.length
+  );
+  result.partials.forEach((p) => {
+    const s = p.shifted.toString();
+    if (s.length > baseWidth) baseWidth = s.length;
+  });
+
+  const lines: DiagramLine[] = [];
+  lines.push({
+    key: 'multiplicand',
+    text: padRightAlign(result.multiplicand, baseWidth),
+    tone: 'default',
+  });
+  lines.push({
+    key: 'multiplier',
+    text: padRightAlign('× ' + result.multiplier, baseWidth),
+    tone: 'secondary',
+  });
+  lines.push({
+    key: 'rule1',
+    text: '-'.repeat(baseWidth),
+    tone: 'default',
+  });
+  result.partials.forEach((p, idx) => {
+    lines.push({
+      key: `partial-${idx}`,
+      text: padRightAlign(p.shifted.toString(), baseWidth),
+      tone: 'default',
+    });
+  });
+  lines.push({
+    key: 'rule2',
+    text: '-'.repeat(baseWidth),
+    tone: 'default',
+  });
+  lines.push({
+    key: 'product',
+    text: padRightAlign(productStr, baseWidth),
+    tone: 'result',
+  });
+
+  return { baseWidth, lines };
 }
 
 export function LongMultiplicationCalculator() {
@@ -115,6 +182,17 @@ export function LongMultiplicationCalculator() {
     setResult(null);
     setError(null);
   }, []);
+
+  const diagramLayout = useMemo(() => {
+    if (!result) return null;
+    return buildMultiplicationDiagram(result);
+  }, [result]);
+
+  const diagramStyles: Record<DiagramTone, React.CSSProperties> = {
+    default: { color: '#1e293b' },
+    result: { color: '#4f46e5', fontWeight: 700 },
+    secondary: { color: '#64748b' },
+  };
 
   return (
     <>
@@ -186,10 +264,7 @@ export function LongMultiplicationCalculator() {
         <div className="result-section" style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}>
           <div className="input-card">
             <label className="input-label">{t('resultLabel')}</label>
-            <div
-              className="number-input"
-              style={{ minHeight: '160px', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}
-            >
+            <div className="number-input" style={{ minHeight: '160px', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {result ? (
                 <>
                   <div style={{ fontSize: '1.35rem', fontWeight: 800 }}>
@@ -198,24 +273,21 @@ export function LongMultiplicationCalculator() {
                   <div style={{ color: 'var(--text-secondary)' }}>
                     {t('equation', { a: result.multiplicand, b: result.multiplier, p: result.product.toString() })}
                   </div>
-                  {result.partials.length > 0 && (
-                    <div style={{ marginTop: '0.5rem' }}>
-                      <div style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '0.5rem' }}>
-                        {t('stepsHeading')}
-                      </div>
-                      <ul style={{ margin: 0, paddingLeft: '1.25rem', color: 'var(--text-secondary)', display: 'grid', gap: '0.35rem' }}>
-                        {result.partials.map((step, idx) => (
-                          <li key={idx}>
-                            {t('stepLine', {
-                              multiplicand: result.multiplicand,
-                              digit: step.digit,
-                              partial: step.partial.toString(),
-                            })}
-                            {step.placeValue > 1 &&
-                              ` ${t('stepLineShifted', { shifted: step.shifted.toString() })}`}
-                          </li>
-                        ))}
-                      </ul>
+                  {diagramLayout && (
+                    <div
+                      style={{
+                        fontFamily: '"Courier New", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace',
+                        marginTop: '0.75rem',
+                        fontSize: '28px',
+                        lineHeight: 1.1,
+                        display: 'inline-block',
+                      }}
+                    >
+                      {diagramLayout.lines.map((line) => (
+                        <div key={line.key}>
+                          <span style={diagramStyles[line.tone]}>{line.text}</span>
+                        </div>
+                      ))}
                     </div>
                   )}
                 </>

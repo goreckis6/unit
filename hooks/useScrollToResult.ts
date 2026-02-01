@@ -33,19 +33,23 @@ export function useScrollToResult<T>(
       }
       scrollTimeout.current = window.setTimeout(() => {
         if (resultRef.current) {
-          const elementPosition = resultRef.current.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-          window.scrollTo({
-            top: offsetPosition,
+          resultRef.current.style.scrollMarginTop = `${offset}px`;
+          resultRef.current.scrollIntoView({
             behavior: 'smooth',
+            block: 'start',
           });
         }
-      }, 600);
+      }, 700);
     }
 
     // Update previous result
     previousResult.current = result;
+    return () => {
+      if (scrollTimeout.current) {
+        window.clearTimeout(scrollTimeout.current);
+        scrollTimeout.current = null;
+      }
+    };
   }, [result, enabled, offset]);
 
   return resultRef;

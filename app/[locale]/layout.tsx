@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
+import { GlobalEnterToCalculate } from '@/components/GlobalEnterToCalculate';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -25,6 +26,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <GlobalEnterToCalculate />
       {children}
     </NextIntlClientProvider>
   );

@@ -23,6 +23,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'multiplying-fractions',
+    titleKey: 'multiplyingFractions.title',
+    descKey: 'multiplyingFractions.description',
+    path: '/calculators/math/multiplying-fractions',
+    category: 'math',
+  },
+  {
     id: 'antilog',
     titleKey: 'antilog.title',
     descKey: 'antilog.description',

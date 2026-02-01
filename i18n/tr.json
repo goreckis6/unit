@@ -3820,6 +3820,58 @@
         }
       }
     },
+    "kineticEnergy": {
+      "title": "Kinetik Enerji Hesaplayıcı",
+      "description": "Kütle ve hızdan kinetik enerjiyi anında hesaplayın. KE = ½ × m × v² kullanır. Formül ve joule cinsinden sonuçla ücretsiz çevrimiçi kinetik enerji hesaplayıcı.",
+      "massLabel": "Kütle (m)",
+      "massPlaceholder": "örn. 10",
+      "massHint": "Kütleyi kilogram (kg) cinsinden girin",
+      "velocityLabel": "Hız (v)",
+      "velocityPlaceholder": "örn. 5",
+      "velocityHint": "Hızı saniyede metre (m/s) cinsinden girin",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "results": "Sonuçlar",
+      "keResult": "Kinetik Enerji (KE)",
+      "formula": "Formül",
+      "enterValues": "Hesaplamak için kütle ve hız girin",
+      "errorInvalid": "Lütfen geçerli sayılar girin",
+      "errorMassPositive": "Kütle pozitif olmalıdır",
+      "seo": {
+        "title": "Kinetik Enerji Hesaplayıcı – KE = ½mv² Çevrimiçi",
+        "description": "Ücretsiz kinetik enerji hesaplayıcı. KE = ½ × m × v² ile kütle ve hızdan KE hesaplayın. Sonuç joule cinsinden. Fizik, mühendislik ve öğrenciler için.",
+        "keywords": "kinetik enerji hesaplayıcı, KE hesaplayıcı, kinetik enerji formülü, ½mv², joule hesaplayıcı, fizik hesaplayıcı",
+        "content": {
+          "heading": "Kinetik Enerji Nedir?",
+          "paragraph1": "Kinetik enerji (KE), cismin hareketi nedeniyle sahip olduğu enerjidir. Kütleye (m) ve hıza (v) bağlıdır. Formül KE = ½ × m × v²; kütle kg, hız m/s; sonuç joule (J). Hesaplayıcımız kütle ve hız girerek joule cinsinden KE anında verir.",
+          "paragraph2": "KE = ½mv² formülü klasik mekanikten gelir. Kütleyi iki katına çıkarmak KE'yi iki katına çıkarır; hızı iki katına çıkarmak dört katına çıkarır (v kare). Örn. 2 kg, 3 m/s: KE = ½ × 2 × 9 = 9 J. 6 m/s: KE = ½ × 2 × 36 = 36 J.",
+          "paragraph3": "Kinetik enerji her yerde kullanılır: fizik ve mühendislik (araçlar, mermi, makineler), güvenlik (çarpışma testi, durma mesafesi), spor, yenilenebilir enerji (rüzgar türbini), günlük hayat (fren mesafesi hızın karesine bağlı). KE'yi anlamak tasarım ve güvenlik için faydalıdır.",
+          "paragraph4": "Hesaplayıcı standart formül KE = ½ × m × v² kullanır. Kütleyi kg, hızı m/s girin; sonuç joule. Ondalık kabul eder, formülü gösterir. Öğrenci, öğretmen, mühendis için – ücretsiz ve doğru.",
+          "exampleHeading": "Örnekler",
+          "exampleText": "Kütle 10 kg, hız 5 m/s: KE = ½ × 10 × 25 = 125 J. 1 kg, 10 m/s: KE = 50 J. 1000 kg araç 20 m/s: KE = 200.000 J = 200 kJ. Hızı iki katına çıkarmak KE'yi dört katına çıkarır."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {"question": "Kinetik enerji formülü nedir?", "answer": "Formül KE = ½ × m × v², m kilogram, v m/s. Sonuç joule (J). Örn. 2 kg, 3 m/s: KE = 9 J."},
+            {"question": "Kinetik enerjide hız neden kare?", "answer": "Hız kare çünkü durgunluktan v hızına ivmelendirmek için yapılan iş v² ile orantılı. Hızı iki katına çıkarmak KE'yi dört katına çıkarır – bu yüzden hız limiti ve fren mesafesi önemli."},
+            {"question": "Hesaplayıcı hangi birimleri kullanır?", "answer": "Kütle kilogram (kg), hız m/s. Sonuç joule (J). Gram ÷ 1000 = kg. km/sa × 1000/3600 ≈ 0,278 = m/s."},
+            {"question": "Kinetik enerji negatif olabilir mi?", "answer": "Hayır. KE = ½mv²'de kütle pozitif ve v² ≥ 0, bu yüzden KE asla negatif değil. Skaler KE = ½mv², v = hızın büyüklüğü."},
+            {"question": "KE durma mesafesiyle nasıl ilişkili?", "answer": "Hareketli cismi durdurmak için gereken iş KE'ye eşittir. Fren mesafesi ∝ KE ∝ v². Aynı fren kuvveti için hızı iki katına çıkarmak durma mesafesini dört katına çıkarır."},
+            {"question": "Bu kinetik enerji hesaplayıcı ücretsiz mi?", "answer": "Evet. Hesaplayıcı ücretsiz, kayıt yok. Kütleyi kg, hızı m/s girin; joule cinsinden KE ve formül. Öğrenci, öğretmen ve profesyoneller için."}
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "pythagorean": "Pisagor Teoremi",
+          "pythagoreanDesc": "Dik açı kenarları ve hipotenüs; hız bileşenleriyle faydalı",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Yüzde ve yüzde değişimi hesaplamaları",
+          "squareRoot": "Karekök Hesaplayıcı",
+          "squareRootDesc": "Karekök; KE formülünde v² görünür"
+        }
+      }
+    },
     "convolution": {
       "title": "Konvolüsyon Hesaplayıcı",
       "description": "İki veri dizisinin ayrık konvolüsyonunu hesaplayın. Sinyal işleme, matematik ve mühendislik uygulamaları için ücretsiz çevrimiçi araç.",

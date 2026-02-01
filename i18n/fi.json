@@ -3746,6 +3746,58 @@
         }
       }
     },
+    "kineticEnergy": {
+      "title": "Kineettisen energian laskin",
+      "description": "Laske kineettinen energia massasta ja nopeudesta heti. Kaava KE = ½ × m × v². Ilmainen online kineettisen energian laskin tuloksena jouleina.",
+      "massLabel": "Massa (m)",
+      "massPlaceholder": "esim. 10",
+      "massHint": "Syötä massa kilogrammoina (kg)",
+      "velocityLabel": "Nopeus (v)",
+      "velocityPlaceholder": "esim. 5",
+      "velocityHint": "Syötä nopeus metreinä sekunnissa (m/s)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "results": "Tulokset",
+      "keResult": "Kineettinen energia (KE)",
+      "formula": "Kaava",
+      "enterValues": "Syötä massa ja nopeus laskeaksesi",
+      "errorInvalid": "Syötä kelvolliset luvut",
+      "errorMassPositive": "Massan on oltava positiivinen",
+      "seo": {
+        "title": "Kineettisen energian laskin – KE = ½mv² online",
+        "description": "Ilmainen kineettisen energian laskin. Laske KE massasta ja nopeudesta: KE = ½ × m × v². Tulos jouleina. Fysiikkaan, tekniikkaan ja opiskelijoille.",
+        "keywords": "kineettinen energia laskin, KE laskin, kineettisen energian kaava, ½mv², joule laskin, fysiikka laskin",
+        "content": {
+          "heading": "Mikä on kineettinen energia?",
+          "paragraph1": "Kineettinen energia (KE) on kappaleen liikkeen vuoksi omaava energia. Se riippuu massasta (m) ja nopeudesta (v). Kaava: KE = ½ × m × v², massa kg, nopeus m/s; tulos jouleina (J). Laskimemme antaa syötettäessä massan ja nopeuden KE:n jouleina heti.",
+          "paragraph2": "Kaava KE = ½mv² tulee klassisesta mekaniikasta. Massan kaksinkertaistaminen kaksinkertaistaa KE:n; nopeuden kaksinkertaistaminen nelinkertaistaa sen, koska nopeus on neliössä. Esim. 2 kg 3 m/s: KE = 9 J. 6 m/s: KE = 36 J.",
+          "paragraph3": "Kineettistä energiaa käytetään kaikkialla: fysiikassa ja tekniikassa (ajoneuvot, ammukset), turvallisuudessa (törmäystestit, jarrutusmatka), urheilussa, tuulenergiassa. Jarrutusmatka riippuu nopeuden neliöstä.",
+          "paragraph4": "Laskin käyttää kaavaa KE = ½ × m × v². Syötä massa kg ja nopeus m/s; tulos jouleina. Hyväksyy desimaalit ja näyttää kaavan. Opiskelijoille, opettajille ja insinööreille – heti ja ilmaiseksi.",
+          "exampleHeading": "Esimerkkejä",
+          "exampleText": "Massa 10 kg, nopeus 5 m/s: KE = ½ × 10 × 25 = 125 J. 1 kg, 10 m/s: KE = 50 J. Auto 1000 kg 20 m/s: KE = 200 000 J = 200 kJ. Nopeuden kaksinkertaistaminen 10:stä 20 m/s nelinkertaistaa KE:n."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Mikä on kineettisen energian kaava?", "answer": "Kaava: KE = ½ × m × v², m kg, v m/s. Tulos jouleina (J). Esim. 2 kg 3 m/s: KE = 9 J."},
+            {"question": "Miksi nopeus on neliössä?", "answer": "Työ, jolla kappale kiihdytetään levosta nopeuteen v, on verrannollinen v²:een. Nopeuden kaksinkertaistaminen nelinkertaistaa KE:n – siksi nopeusrajoitukset ja jarrutusmatka ovat tärkeitä."},
+            {"question": "Mitä yksiköitä laskin käyttää?", "answer": "Massa kilogrammoina (kg), nopeus m/s. Tulos jouleina (J). Grammat: jaa 1000:lla. km/h: kerro 1000/3600 ≈ 0,278 saadaksesi m/s."},
+            {"question": "Voiko kineettinen energia olla negatiivinen?", "answer": "Ei. Kaavassa KE = ½mv² massa on positiivinen ja v² aina ei-negatiivinen, joten KE ei ole koskaan negatiivinen. Skalaari KE on ½mv², jossa v on nopeuden suuruus."},
+            {"question": "Miten KE liittyy jarrutusmatkaan?", "answer": "Pysäyttämiseen tarvittava työ on yhtä suuri kuin KE. Jarrutusmatka on verrannollinen KE:hen, eli v²:een. Nopeuden kaksinkertaistaminen nelinkertaistaa jarrutusmatkan samalla jarrutusvoimalla."},
+            {"question": "Onko tämä kineettisen energian laskin ilmainen?", "answer": "Kyllä. Laskin on ilmainen ilman rekisteröintiä tai maksua. Syötä massa kg ja nopeus m/s saadaksesi KE jouleina ja kaavan. Opiskelijoille, opettajille ja ammattilaisille."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "pythagorean": "Pythagoraan lause",
+          "pythagoreanDesc": "Kateetit ja hypotenuusa; nopeuden komponentit",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Prosentit ja prosentuaalinen muutos",
+          "squareRoot": "Neliöjuuri laskin",
+          "squareRootDesc": "Neliöjuuret; KE-kaavassa esiintyy usein v²"
+        }
+      }
+    },
     "convolution": {
       "title": "Konvoluutiolaskin",
       "description": "Laske kahden tietosekvenssin diskreetti konvoluutio. Ilmainen online-työkalu signaalinkäsittelyyn, matematiikkaan ja insinöörisovelluksiin.",

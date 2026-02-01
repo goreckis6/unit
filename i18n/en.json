@@ -3746,6 +3746,76 @@
         }
       }
     },
+    "kineticEnergy": {
+      "title": "Kinetic Energy Calculator",
+      "description": "Calculate kinetic energy from mass and velocity instantly. Uses KE = ½ × m × v². Free online kinetic energy calculator with formula and result in joules.",
+      "massLabel": "Mass (m)",
+      "massPlaceholder": "e.g. 10",
+      "massHint": "Enter mass in kilograms (kg)",
+      "velocityLabel": "Velocity (v)",
+      "velocityPlaceholder": "e.g. 5",
+      "velocityHint": "Enter velocity in metres per second (m/s)",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "results": "Results",
+      "keResult": "Kinetic Energy (KE)",
+      "formula": "Formula",
+      "enterValues": "Enter mass and velocity to calculate",
+      "errorInvalid": "Please enter valid numbers",
+      "errorMassPositive": "Mass must be positive",
+      "seo": {
+        "title": "Kinetic Energy Calculator – KE = ½mv² Online",
+        "description": "Free kinetic energy calculator. Compute KE from mass and velocity using KE = ½ × m × v². Result in joules. Perfect for physics, engineering, and students.",
+        "keywords": "kinetic energy calculator, KE calculator, kinetic energy formula, ½mv², joules calculator, physics calculator, mass velocity energy",
+        "content": {
+          "heading": "What is Kinetic Energy?",
+          "paragraph1": "Kinetic energy (KE) is the energy an object has because of its motion. It depends on the object's mass (m) and its velocity (v). The formula is KE = ½ × m × v², where mass is in kilograms (kg) and velocity in metres per second (m/s); the result is in joules (J). Our free kinetic energy calculator lets you enter mass and velocity and get the kinetic energy in joules instantly.",
+          "paragraph2": "The formula KE = ½mv² comes from classical mechanics. Doubling the mass doubles the kinetic energy; doubling the speed quadruples it, because velocity is squared. So speed has a much larger effect than mass. For example, a 2 kg object at 3 m/s has KE = ½ × 2 × 9 = 9 J. The same object at 6 m/s has KE = ½ × 2 × 36 = 36 J.",
+          "paragraph3": "Kinetic energy is used everywhere: in physics and engineering (moving vehicles, projectiles, machinery), in safety (crash tests, stopping distances), in sports (running, cycling, ball speed), in renewable energy (wind turbines use kinetic energy of wind), and in everyday life (braking distance depends on speed squared). Understanding KE helps with design, safety, and energy calculations.",
+          "paragraph4": "Our calculator uses the standard formula KE = ½ × m × v². Enter mass in kg and velocity in m/s; the result is in joules. The calculator accepts decimals and shows the formula with your values. Whether you're a student doing homework, a teacher preparing lessons, or an engineer checking values, this tool gives accurate results instantly and free.",
+          "exampleHeading": "Examples",
+          "exampleText": "Mass 10 kg, velocity 5 m/s: KE = ½ × 10 × 5² = ½ × 10 × 25 = 125 J. Mass 1 kg, velocity 10 m/s: KE = ½ × 1 × 100 = 50 J. A 1000 kg car at 20 m/s: KE = ½ × 1000 × 400 = 200,000 J = 200 kJ. Note: doubling speed from 10 to 20 m/s quadruples KE from 50,000 J to 200,000 J for the same mass."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the formula for kinetic energy?",
+              "answer": "The formula is KE = ½ × m × v² (or KE = (1/2)mv²), where m is mass in kilograms and v is velocity in metres per second. The result is in joules (J). For example, 2 kg at 3 m/s gives KE = ½ × 2 × 9 = 9 J."
+            },
+            {
+              "question": "Why is velocity squared in kinetic energy?",
+              "answer": "Velocity is squared because the work done to accelerate an object from rest to speed v is proportional to v². So the energy stored as kinetic energy is ½mv². This also means doubling the speed quadruples the kinetic energy, which is why speed limits and braking distance matter so much."
+            },
+            {
+              "question": "What units does the calculator use?",
+              "answer": "Mass must be in kilograms (kg) and velocity in metres per second (m/s). The result is in joules (J). If you have mass in grams, divide by 1000 to get kg. If you have speed in km/h, multiply by 1000/3600 ≈ 0.278 to get m/s."
+            },
+            {
+              "question": "Can kinetic energy be negative?",
+              "answer": "No. In the formula KE = ½mv², mass is positive and v² is always non-negative, so kinetic energy is never negative. If you need to consider direction (e.g. in vector form), the scalar KE is still ½mv² where v is speed (magnitude of velocity)."
+            },
+            {
+              "question": "How does kinetic energy relate to stopping distance?",
+              "answer": "The work needed to stop a moving object equals its kinetic energy. So braking distance is proportional to KE, and hence to v². Doubling speed quadruples the stopping distance (for the same braking force). That is why speed limits and safe following distances are important."
+            },
+            {
+              "question": "Is this kinetic energy calculator free?",
+              "answer": "Yes. Our kinetic energy calculator is free to use with no registration or payment. Enter mass in kg and velocity in m/s to get kinetic energy in joules instantly, with the formula shown. Suitable for students, teachers, and professionals."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "pythagorean": "Pythagorean Theorem",
+          "pythagoreanDesc": "Right‑angle sides and hypotenuse; useful with velocity components",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Percentages and percentage change calculations",
+          "squareRoot": "Square Root Calculator",
+          "squareRootDesc": "Square roots; velocity often appears as v² in KE formula"
+        }
+      }
+    },
     "convolution": {
       "title": "Convolution Calculator",
       "description": "Calculate the discrete convolution of two data sequences. Free online tool for signal processing, mathematics, and engineering applications.",

@@ -3746,6 +3746,58 @@
         }
       }
     },
+    "kineticEnergy": {
+      "title": "Kalkulačka Kinetické Energie",
+      "description": "Vypočítejte kinetickou energii z hmotnosti a rychlosti okamžitě. Vzorec KE = ½ × m × v². Bezplatná online kalkulačka kinetické energie s výsledkem v joulech.",
+      "massLabel": "Hmotnost (m)",
+      "massPlaceholder": "např. 10",
+      "massHint": "Zadejte hmotnost v kilogramech (kg)",
+      "velocityLabel": "Rychlost (v)",
+      "velocityPlaceholder": "např. 5",
+      "velocityHint": "Zadejte rychlost v metrech za sekundu (m/s)",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "results": "Výsledky",
+      "keResult": "Kinetická energie (KE)",
+      "formula": "Vzorec",
+      "enterValues": "Zadejte hmotnost a rychlost pro výpočet",
+      "errorInvalid": "Zadejte platná čísla",
+      "errorMassPositive": "Hmotnost musí být kladná",
+      "seo": {
+        "title": "Kalkulačka Kinetické Energie – KE = ½mv² online",
+        "description": "Bezplatná kalkulačka kinetické energie. Vypočítejte KE z hmotnosti a rychlosti pomocí KE = ½ × m × v². Výsledek v joulech. Pro fyziku, techniku a studenty.",
+        "keywords": "kalkulačka kinetické energie, KE kalkulačka, vzorec kinetické energie, ½mv², jouly kalkulačka, fyzikální kalkulačka",
+        "content": {
+          "heading": "Co je kinetická energie?",
+          "paragraph1": "Kinetická energie (KE) je energie, kterou má těleso díky svému pohybu. Závisí na hmotnosti (m) a rychlosti (v). Vzorec je KE = ½ × m × v², kde hmotnost je v kg a rychlost v m/s; výsledek je v joulech (J). Naše kalkulačka umožňuje zadat hmotnost a rychlost a okamžitě získat kinetickou energii v joulech.",
+          "paragraph2": "Vzorec KE = ½mv² pochází z klasické mechaniky. Zdvojnásobení hmotnosti zdvojnásobí kinetickou energii; zdvojnásobení rychlosti ji zčtyřnásobí, protože rychlost je na druhou. Rychlost tedy má mnohem větší vliv než hmotnost. Např. těleso 2 kg při 3 m/s má KE = ½ × 2 × 9 = 9 J. Při 6 m/s má KE = ½ × 2 × 36 = 36 J.",
+          "paragraph3": "Kinetická energie se používá všude: ve fyzice a technice (vozidla, střely, stroje), v bezpečnosti (crash testy, brzdná dráha), ve sportu (běh, kolo, rychlost míče), v obnovitelné energii (větrné turbíny využívají kinetickou energii větru). Brzdná dráha závisí na druhé mocnině rychlosti.",
+          "paragraph4": "Kalkulačka používá vzorec KE = ½ × m × v². Zadejte hmotnost v kg a rychlost v m/s; výsledek je v joulech. Přijímá desetinná čísla a zobrazí vzorec s vašimi hodnotami. Pro studenty, učitele i inženýry – výsledky okamžitě a zdarma.",
+          "exampleHeading": "Příklady",
+          "exampleText": "Hmotnost 10 kg, rychlost 5 m/s: KE = ½ × 10 × 5² = 125 J. Hmotnost 1 kg, rychlost 10 m/s: KE = ½ × 1 × 100 = 50 J. Auto 1000 kg při 20 m/s: KE = ½ × 1000 × 400 = 200 000 J = 200 kJ. Zdvojnásobení rychlosti z 10 na 20 m/s zčtyřnásobí KE."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {"question": "Jaký je vzorec pro kinetickou energii?", "answer": "Vzorec je KE = ½ × m × v², kde m je hmotnost v kg a v rychlost v m/s. Výsledek je v joulech (J). Např. 2 kg při 3 m/s dává KE = ½ × 2 × 9 = 9 J."},
+            {"question": "Proč je rychlost ve vzorci na druhou?", "answer": "Rychlost je na druhou, protože práce potřebná k urychlení tělesa z klidu na rychlost v je úměrná v². Zdvojnásobení rychlosti tedy zčtyřnásobí kinetickou energii – proto záleží na rychlostních limitech a brzdné dráze."},
+            {"question": "Jaké jednotky kalkulačka používá?", "answer": "Hmotnost v kilogramech (kg), rychlost v m/s. Výsledek v joulech (J). Máte-li hmotnost v gramech, dělte 1000. Máte-li rychlost v km/h, násobte 1000/3600 ≈ 0,278 pro m/s."},
+            {"question": "Může být kinetická energie záporná?", "answer": "Ne. Ve vzorci KE = ½mv² je hmotnost kladná a v² je vždy nezáporné, takže KE není nikdy záporná. Skalární KE zůstává ½mv², kde v je velikost rychlosti."},
+            {"question": "Jak souvisí kinetická energie s brzdnou dráhou?", "answer": "Práce potřebná k zastavení tělesa rovná se jeho kinetické energii. Brzdná dráha je úměrná KE, tedy v². Zdvojnásobení rychlosti zčtyřnásobí brzdnou dráhu při stejné brzdné síle."},
+            {"question": "Je tato kalkulačka kinetické energie zdarma?", "answer": "Ano. Kalkulačka je zdarma, bez registrace a platby. Zadejte hmotnost v kg a rychlost v m/s a získejte KE v joulech včetně vzorce. Pro studenty, učitele i odborníky."}
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "pythagorean": "Pythagorova věta",
+          "pythagoreanDesc": "Odvěsny a přepona; užitečné pro složky rychlosti",
+          "percentage": "Kalkulačka procent",
+          "percentageDesc": "Procenta a procentuální změna",
+          "squareRoot": "Kalkulačka odmocniny",
+          "squareRootDesc": "Odmocniny; ve vzorci KE se často vyskytuje v²"
+        }
+      }
+    },
     "convolution": {
       "title": "Kalkulačka Konvoluce",
       "description": "Vypočítejte diskrétní konvoluci dvou datových sekvencí. Bezplatný online nástroj pro zpracování signálů, matematiku a inženýrské aplikace.",

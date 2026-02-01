@@ -18,7 +18,7 @@ const langFiles = fs.readdirSync(i18nDir).filter(f => f.endsWith('.json'));
 
 console.log('Verifying translation key counts for new calculators...\n');
 
-const calculators = ['quadraticEquation', 'pythagoreanTheorem'];
+const calculators = ['quadraticEquation', 'pythagoreanTheorem', 'kineticEnergy'];
 
 for (const calc of calculators) {
   console.log(`\n=== ${calc} ===`);

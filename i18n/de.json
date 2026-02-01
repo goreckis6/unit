@@ -3746,6 +3746,58 @@
         }
       }
     },
+    "kineticEnergy": {
+      "title": "Kinetic-Energie-Rechner",
+      "description": "Berechnen Sie die kinetische Energie aus Masse und Geschwindigkeit sofort. Formel KE = ½ × m × v². Kostenloser Online-Rechner mit Ergebnis in Joule.",
+      "massLabel": "Masse (m)",
+      "massPlaceholder": "z.B. 10",
+      "massHint": "Masse in Kilogramm (kg) eingeben",
+      "velocityLabel": "Geschwindigkeit (v)",
+      "velocityPlaceholder": "z.B. 5",
+      "velocityHint": "Geschwindigkeit in Metern pro Sekunde (m/s) eingeben",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "results": "Ergebnisse",
+      "keResult": "Kinetische Energie (KE)",
+      "formula": "Formel",
+      "enterValues": "Masse und Geschwindigkeit eingeben zum Berechnen",
+      "errorInvalid": "Bitte gültige Zahlen eingeben",
+      "errorMassPositive": "Masse muss positiv sein",
+      "seo": {
+        "title": "Kinetic-Energie-Rechner – KE = ½mv² online",
+        "description": "Kostenloser Rechner für kinetische Energie. KE aus Masse und Geschwindigkeit: KE = ½ × m × v². Ergebnis in Joule. Für Physik, Technik und Schüler.",
+        "keywords": "kinetische energie rechner, KE rechner, kinetische energie formel, ½mv², joule rechner, physik rechner",
+        "content": {
+          "heading": "Was ist kinetische Energie?",
+          "paragraph1": "Kinetische Energie (KE) ist die Energie der Bewegung. Sie hängt von Masse (m) und Geschwindigkeit (v) ab. Formel: KE = ½ × m × v²; Masse in kg, Geschwindigkeit in m/s; Ergebnis in Joule (J). Unser Rechner liefert KE in Joule sofort.",
+          "paragraph2": "Die Formel KE = ½mv² stammt aus der klassischen Mechanik. Doppelte Masse verdoppelt KE; doppelte Geschwindigkeit vervierfacht KE (v ist quadriert). Z.B. 2 kg bei 3 m/s: KE = ½ × 2 × 9 = 9 J. Bei 6 m/s: KE = ½ × 2 × 36 = 36 J.",
+          "paragraph3": "Kinetische Energie wird überall genutzt: in Physik und Technik (Fahrzeuge, Projektile), in der Sicherheit (Crashtests, Bremsweg), im Sport, in der Windenergie. Der Bremsweg hängt vom Quadrat der Geschwindigkeit ab.",
+          "paragraph4": "Der Rechner nutzt KE = ½ × m × v². Masse in kg, Geschwindigkeit in m/s; Ergebnis in Joule. Dezimalzahlen möglich, Formel wird angezeigt. Für Schüler, Lehrer und Ingenieure – kostenlos.",
+          "exampleHeading": "Beispiele",
+          "exampleText": "Masse 10 kg, Geschwindigkeit 5 m/s: KE = ½ × 10 × 25 = 125 J. 1 kg, 10 m/s: KE = 50 J. Auto 1000 kg bei 20 m/s: KE = 200 000 J = 200 kJ. Doppelte Geschwindigkeit vervierfacht KE."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {"question": "Wie lautet die Formel für kinetische Energie?", "answer": "KE = ½ × m × v², m in kg, v in m/s. Ergebnis in Joule (J). Z.B. 2 kg bei 3 m/s: KE = 9 J."},
+            {"question": "Warum steht die Geschwindigkeit im Quadrat?", "answer": "Die Arbeit zum Beschleunigen aus dem Stand ist proportional zu v². Doppelte Geschwindigkeit bedeutet vierfache KE – daher sind Tempolimits und Bremsweg wichtig."},
+            {"question": "Welche Einheiten verwendet der Rechner?", "answer": "Masse in Kilogramm (kg), Geschwindigkeit in m/s. Ergebnis in Joule (J). Gramm ÷ 1000 = kg. km/h × 1000/3600 ≈ 0,278 = m/s."},
+            {"question": "Kann kinetische Energie negativ sein?", "answer": "Nein. In KE = ½mv² ist die Masse positiv und v² ≥ 0, also ist KE nie negativ. Skalare KE ist ½mv² mit v als Betrag der Geschwindigkeit."},
+            {"question": "Wie hängt KE mit dem Bremsweg zusammen?", "answer": "Die Bremsarbeit entspricht der KE. Bremsweg ∝ KE ∝ v². Doppelte Geschwindigkeit vervierfacht den Bremsweg bei gleicher Bremskraft."},
+            {"question": "Ist der Rechner kostenlos?", "answer": "Ja. Der Rechner ist kostenlos, ohne Anmeldung. Masse in kg und Geschwindigkeit in m/s eingeben – sofort KE in Joule inkl. Formel. Für Schüler, Lehrer und Fachleute."}
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "pythagorean": "Satz des Pythagoras",
+          "pythagoreanDesc": "Katheten und Hypotenuse; nützlich bei Geschwindigkeitskomponenten",
+          "percentage": "Prozentrechner",
+          "percentageDesc": "Prozentwerte und prozentuale Änderung",
+          "squareRoot": "Quadratwurzel-Rechner",
+          "squareRootDesc": "Quadratwurzeln; im KE-Formel erscheint v²"
+        }
+      }
+    },
     "convolution": {
       "title": "Faltungsrechner",
       "description": "Berechnen Sie die diskrete Faltung zweier Datenfolgen. Kostenloses Online-Tool für Signalverarbeitung, Mathematik und Ingenieursanwendungen.",

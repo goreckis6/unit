@@ -51,6 +51,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'kinetic-energy',
+    titleKey: 'kineticEnergy.title',
+    descKey: 'kineticEnergy.description',
+    path: '/calculators/math/kinetic-energy',
+    category: 'math',
+  },
+  {
     id: 'antilog',
     titleKey: 'antilog.title',
     descKey: 'antilog.description',

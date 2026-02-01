@@ -3728,6 +3728,58 @@
         }
       }
     },
+    "kineticEnergy": {
+      "title": "Kalkulačka Kinetickej Energie",
+      "description": "Vypočítajte kinetickú energiu z hmotnosti a rýchlosti okamžite. Vzorec KE = ½ × m × v². Bezplatná online kalkulačka kinetickej energie s výsledkom v jouloch.",
+      "massLabel": "Hmotnosť (m)",
+      "massPlaceholder": "napr. 10",
+      "massHint": "Zadajte hmotnosť v kilogramoch (kg)",
+      "velocityLabel": "Rýchlosť (v)",
+      "velocityPlaceholder": "napr. 5",
+      "velocityHint": "Zadajte rýchlosť v metroch za sekundu (m/s)",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "results": "Výsledky",
+      "keResult": "Kinetická energia (KE)",
+      "formula": "Vzorec",
+      "enterValues": "Zadajte hmotnosť a rýchlosť pre výpočet",
+      "errorInvalid": "Zadajte platné čísla",
+      "errorMassPositive": "Hmotnosť musí byť kladná",
+      "seo": {
+        "title": "Kalkulačka Kinetickej Energie – KE = ½mv² online",
+        "description": "Bezplatná kalkulačka kinetickej energie. Vypočítajte KE z hmotnosti a rýchlosti pomocou KE = ½ × m × v². Výsledok v jouloch. Pre fyziku, techniku a študentov.",
+        "keywords": "kalkulačka kinetickej energie, KE kalkulačka, vzorec kinetickej energie, ½mv², jouly kalkulačka, fyzikálna kalkulačka",
+        "content": {
+          "heading": "Čo je kinetická energia?",
+          "paragraph1": "Kinetická energia (KE) je energia telesa v dôsledku pohybu. Závisí od hmotnosti (m) a rýchlosti (v). Vzorec: KE = ½ × m × v², hmotnosť v kg, rýchlosť v m/s; výsledok v jouloch (J). Naša kalkulačka umožňuje zadať hmotnosť a rýchlosť a okamžite získať KE v jouloch.",
+          "paragraph2": "Vzorec KE = ½mv² pochádza z klasickej mechaniky. Zdvojnásobenie hmotnosti zdvojnásobí KE; zdvojnásobenie rýchlosti ju štvornásobí, pretože rýchlosť je na druhú. Napr. 2 kg pri 3 m/s: KE = ½ × 2 × 9 = 9 J. Pri 6 m/s: KE = ½ × 2 × 36 = 36 J.",
+          "paragraph3": "Kinetická energia sa používa vo fyzike a technike (vozidlá, projekty), bezpečnosti (crash testy, brzdná dráha), športe, veternej energii. Brzdná dráha závisí od druhej mocniny rýchlosti.",
+          "paragraph4": "Kalkulačka používa KE = ½ × m × v². Zadajte hmotnosť v kg a rýchlosť v m/s; výsledok v jouloch. Prijíma desatinné čísla a zobrazí vzorec. Pre študentov, učiteľov a inžinierov – okamžite a zadarmo.",
+          "exampleHeading": "Príklady",
+          "exampleText": "Hmotnosť 10 kg, rýchlosť 5 m/s: KE = ½ × 10 × 25 = 125 J. 1 kg, 10 m/s: KE = 50 J. Auto 1000 kg pri 20 m/s: KE = 200 000 J = 200 kJ. Zdvojnásobenie rýchlosti z 10 na 20 m/s štvornásobí KE."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {"question": "Aký je vzorec pre kinetickú energiu?", "answer": "Vzorec: KE = ½ × m × v², m v kg, v v m/s. Výsledok v jouloch (J). Napr. 2 kg pri 3 m/s: KE = 9 J."},
+            {"question": "Prečo je rýchlosť na druhú?", "answer": "Práca na zrýchlenie telesa z pokoja na rýchlosť v je úmerná v². Zdvojnásobenie rýchlosti štvornásobí KE – preto záleží na rýchlostných limitoch a brzdnej dráhe."},
+            {"question": "Aké jednotky kalkulačka používa?", "answer": "Hmotnosť v kilogramoch (kg), rýchlosť v m/s. Výsledok v jouloch (J). Gramy: delte 1000. km/h: násobte 1000/3600 ≈ 0,278 pre m/s."},
+            {"question": "Môže byť kinetická energia záporná?", "answer": "Nie. Vo vzorci KE = ½mv² je hmotnosť kladná a v² vždy nezáporné, takže KE nie je nikdy záporná. Skalárne KE je ½mv², kde v je veľkosť rýchlosti."},
+            {"question": "Ako súvisí KE s brzdnou dráhou?", "answer": "Práca na zastavenie sa rovná KE. Brzdná dráha je úmerná KE, teda v². Zdvojnásobenie rýchlosti štvornásobí brzdnú dráhu pri rovnakej brzdnej sile."},
+            {"question": "Je táto kalkulačka kinetickej energie zadarmo?", "answer": "Áno. Kalkulačka je zadarmo, bez registrácie ani platby. Zadajte hmotnosť v kg a rýchlosť v m/s pre KE v jouloch a vzorec. Pre študentov, učiteľov a odborníkov."}
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace kalkulačky",
+          "pythagorean": "Pytagorova veta",
+          "pythagoreanDesc": "Odvesny a prepona; zložky rýchlosti",
+          "percentage": "Kalkulačka percent",
+          "percentageDesc": "Percentá a percentuálna zmena",
+          "squareRoot": "Kalkulačka odmocniny",
+          "squareRootDesc": "Odmocniny; vo vzorci KE sa často vyskytuje v²"
+        }
+      }
+    },
     "convolution": {
       "title": "Kalkulačka Konvolúcie",
       "description": "Vypočítajte diskrétnu konvolúciu dvoch dátových sekvencií. Bezplatný online nástroj na spracovanie signálov, matematiku a inžinierske aplikácie.",

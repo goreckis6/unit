@@ -3746,6 +3746,58 @@
         }
       }
     },
+    "kineticEnergy": {
+      "title": "Kinetisk Energi-kalkylator",
+      "description": "Beräkna kinetisk energi från massa och hastighet direkt. Formel KE = ½ × m × v². Gratis online kinetisk energi-kalkylator med resultat i joule.",
+      "massLabel": "Massa (m)",
+      "massPlaceholder": "t.ex. 10",
+      "massHint": "Ange massa i kilogram (kg)",
+      "velocityLabel": "Hastighet (v)",
+      "velocityPlaceholder": "t.ex. 5",
+      "velocityHint": "Ange hastighet i meter per sekund (m/s)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "results": "Resultat",
+      "keResult": "Kinetisk energi (KE)",
+      "formula": "Formel",
+      "enterValues": "Ange massa och hastighet för att beräkna",
+      "errorInvalid": "Ange giltiga tal",
+      "errorMassPositive": "Massa måste vara positiv",
+      "seo": {
+        "title": "Kinetisk Energi-kalkylator – KE = ½mv² online",
+        "description": "Gratis kinetisk energi-kalkylator. Beräkna KE från massa och hastighet med KE = ½ × m × v². Resultat i joule. För fysik, teknik och studenter.",
+        "keywords": "kinetisk energi kalkylator, KE kalkylator, kinetisk energi formel, ½mv², joule kalkylator, fysik kalkylator",
+        "content": {
+          "heading": "Vad är kinetisk energi?",
+          "paragraph1": "Kinetisk energi (KE) är den energi ett föremål har på grund av sin rörelse. Den beror på massa (m) och hastighet (v). Formel: KE = ½ × m × v², massa i kg, hastighet i m/s; resultat i joule (J). Vår kalkylator låter dig ange massa och hastighet och ger KE i joule direkt.",
+          "paragraph2": "Formeln KE = ½mv² kommer från klassisk mekanik. Dubbel massa ger dubbel KE; dubbel hastighet ger fyrdubbel KE eftersom hastighet är i kvadrat. T.ex. 2 kg vid 3 m/s: KE = 9 J. Vid 6 m/s: KE = 36 J.",
+          "paragraph3": "Kinetisk energi används överallt: i fysik och teknik (fordon, projektil), säkerhet (kraschtester, bromssträcka), sport, vindenergi. Bromssträckan beror på hastighetens kvadrat.",
+          "paragraph4": "Kalkylatorn använder KE = ½ × m × v². Ange massa i kg och hastighet i m/s; resultat i joule. Accepterar decimaler och visar formeln. För studenter, lärare och ingenjörer – direkt och gratis.",
+          "exampleHeading": "Exempel",
+          "exampleText": "Massa 10 kg, hastighet 5 m/s: KE = ½ × 10 × 25 = 125 J. 1 kg, 10 m/s: KE = 50 J. Bil 1000 kg vid 20 m/s: KE = 200 000 J = 200 kJ. Dubbel hastighet från 10 till 20 m/s ger fyrdubbel KE."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {"question": "Vad är formeln för kinetisk energi?", "answer": "Formel: KE = ½ × m × v², m i kg, v i m/s. Resultat i joule (J). T.ex. 2 kg vid 3 m/s: KE = 9 J."},
+            {"question": "Varför är hastighet i kvadrat?", "answer": "Arbetet för att accelerera ett föremål från vila till hastighet v är proportionellt mot v². Dubbel hastighet ger fyrdubbel KE – därför spelar hastighetsgränser och bromssträcka stor roll."},
+            {"question": "Vilka enheter använder kalkylatorn?", "answer": "Massa i kilogram (kg), hastighet i m/s. Resultat i joule (J). Gram: dividera med 1000. km/h: multiplicera med 1000/3600 ≈ 0,278 för m/s."},
+            {"question": "Kan kinetisk energi vara negativ?", "answer": "Nej. I KE = ½mv² är massa positiv och v² alltid icke-negativt, så KE är aldrig negativ. Skalär KE är ½mv² där v är hastighetens storlek."},
+            {"question": "Hur hänger KE ihop med bromssträcka?", "answer": "Arbetet för att stoppa är lika med KE. Bromssträckan är proportionell mot KE, alltså v². Dubbel hastighet ger fyrdubbel bromssträcka vid samma bromskraft."},
+            {"question": "Är denna kinetisk energi-kalkylator gratis?", "answer": "Ja. Kalkylatorn är gratis utan registrering eller betalning. Ange massa i kg och hastighet i m/s för KE i joule och formeln. För studenter, lärare och yrkesverksamma."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "pythagorean": "Pythagoras sats",
+          "pythagoreanDesc": "Kateter och hypotinusa; hastighetskomponenter",
+          "percentage": "Procentkalkylator",
+          "percentageDesc": "Procent och procentuell förändring",
+          "squareRoot": "Kvadratrotskalkylator",
+          "squareRootDesc": "Kvadratrötter; i KE-formeln förekommer ofta v²"
+        }
+      }
+    },
     "convolution": {
       "title": "Faltningskalkylator",
       "description": "Beräkna den diskreta faltningen av två datasekvenser. Gratis onlineverktyg för signalbehandling, matematik och ingenjörstillämpningar.",

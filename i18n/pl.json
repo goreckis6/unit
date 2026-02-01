@@ -3746,6 +3746,58 @@
         }
       }
     },
+    "kineticEnergy": {
+      "title": "Kalkulator Energii Kinetycznej",
+      "description": "Oblicz energię kinetyczną z masy i prędkości natychmiast. Wzór KE = ½ × m × v². Darmowy kalkulator energii kinetycznej z wynikiem w dżulach.",
+      "massLabel": "Masa (m)",
+      "massPlaceholder": "np. 10",
+      "massHint": "Podaj masę w kilogramach (kg)",
+      "velocityLabel": "Prędkość (v)",
+      "velocityPlaceholder": "np. 5",
+      "velocityHint": "Podaj prędkość w metrach na sekundę (m/s)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "results": "Wyniki",
+      "keResult": "Energia kinetyczna (KE)",
+      "formula": "Wzór",
+      "enterValues": "Wprowadź masę i prędkość do obliczenia",
+      "errorInvalid": "Wprowadź prawidłowe liczby",
+      "errorMassPositive": "Masa musi być dodatnia",
+      "seo": {
+        "title": "Kalkulator Energii Kinetycznej – KE = ½mv² online",
+        "description": "Darmowy kalkulator energii kinetycznej. Oblicz KE z masy i prędkości: KE = ½ × m × v². Wynik w dżulach. Dla fizyki, inżynierii i studentów.",
+        "keywords": "kalkulator energii kinetycznej, KE kalkulator, wzór energii kinetycznej, ½mv², dżule kalkulator, kalkulator fizyczny",
+        "content": {
+          "heading": "Co to jest energia kinetyczna?",
+          "paragraph1": "Energia kinetyczna (KE) to energia ruchu ciała. Zależy od masy (m) i prędkości (v). Wzór: KE = ½ × m × v²; masa w kg, prędkość w m/s, wynik w dżulach (J). Nasz kalkulator pozwala podać masę i prędkość i od razu otrzymać KE w dżulach.",
+          "paragraph2": "Wzór KE = ½mv² pochodzi z mechaniki klasycznej. Podwojenie masy podwaja KE; podwojenie prędkości czterokrotnie ją zwiększa (v jest do kwadratu). Np. 2 kg przy 3 m/s: KE = ½ × 2 × 9 = 9 J. Przy 6 m/s: KE = ½ × 2 × 36 = 36 J.",
+          "paragraph3": "Energia kinetyczna stosowana jest w fizyce i inżynierii (pojazdy, pociski), bezpieczeństwie (testy zderzeń, droga hamowania), sporcie, energetyce wiatrowej. Droga hamowania zależy od kwadratu prędkości.",
+          "paragraph4": "Kalkulator używa KE = ½ × m × v². Podaj masę w kg i prędkość w m/s; wynik w dżulach. Akceptuje ułamki dziesiętne i pokazuje wzór. Dla studentów, nauczycieli i inżynierów – za darmo.",
+          "exampleHeading": "Przykłady",
+          "exampleText": "Masa 10 kg, prędkość 5 m/s: KE = ½ × 10 × 25 = 125 J. 1 kg, 10 m/s: KE = 50 J. Samochód 1000 kg przy 20 m/s: KE = 200 000 J = 200 kJ. Podwojenie prędkości z 10 do 20 m/s czterokrotnie zwiększa KE."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {"question": "Jaki jest wzór na energię kinetyczną?", "answer": "Wzór: KE = ½ × m × v², gdzie m – masa w kg, v – prędkość w m/s. Wynik w dżulach (J). Np. 2 kg przy 3 m/s: KE = 9 J."},
+            {"question": "Dlaczego prędkość jest do kwadratu?", "answer": "Praca do rozpędzenia ciała z zera do v jest proporcjonalna do v². Podwojenie prędkości czterokrotnie zwiększa KE – stąd znaczenie limitów prędkości i drogi hamowania."},
+            {"question": "Jakich jednostek używa kalkulator?", "answer": "Masa w kilogramach (kg), prędkość w m/s. Wynik w dżulach (J). Gramy ÷ 1000 = kg. km/h × 1000/3600 ≈ 0,278 = m/s."},
+            {"question": "Czy energia kinetyczna może być ujemna?", "answer": "Nie. W KE = ½mv² masa jest dodatnia, v² ≥ 0, więc KE nie jest ujemna. Skalarna KE to ½mv², gdzie v to wartość prędkości."},
+            {"question": "Jak KE wiąże się z drogą hamowania?", "answer": "Praca hamowania równa jest KE. Droga hamowania ∝ KE ∝ v². Podwojenie prędkości czterokrotnie wydłuża drogę hamowania przy tej samej sile hamowania."},
+            {"question": "Czy kalkulator KE jest darmowy?", "answer": "Tak. Kalkulator jest darmowy, bez rejestracji i płatności. Podaj masę w kg i prędkość w m/s – otrzymasz KE w dżulach i wzór. Dla uczniów, nauczycieli i specjalistów."}
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "pythagorean": "Twierdzenie Pitagorasa",
+          "pythagoreanDesc": "Przyprostokątne i przeciwprostokątna; składowe prędkości",
+          "percentage": "Kalkulator procentów",
+          "percentageDesc": "Procenty i zmiana procentowa",
+          "squareRoot": "Kalkulator pierwiastka",
+          "squareRootDesc": "Pierwiastki; we wzorze KE występuje v²"
+        }
+      }
+    },
     "convolution": {
       "title": "Kalkulator Splotu",
       "description": "Oblicz dyskretny splot dwóch ciągów danych. Darmowe narzędzie online do przetwarzania sygnałów, matematyki i zastosowań inżynieryjnych.",

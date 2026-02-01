@@ -3746,6 +3746,58 @@
         }
       }
     },
+    "kineticEnergy": {
+      "title": "Calculadora de Energia Cinética",
+      "description": "Calcule a energia cinética a partir da massa e da velocidade instantaneamente. Fórmula KE = ½ × m × v². Calculadora online gratuita de energia cinética com resultado em joules.",
+      "massLabel": "Massa (m)",
+      "massPlaceholder": "ex.: 10",
+      "massHint": "Introduza a massa em quilogramas (kg)",
+      "velocityLabel": "Velocidade (v)",
+      "velocityPlaceholder": "ex.: 5",
+      "velocityHint": "Introduza a velocidade em metros por segundo (m/s)",
+      "calculate": "Calcular",
+      "reset": "Repor",
+      "results": "Resultados",
+      "keResult": "Energia Cinética (KE)",
+      "formula": "Fórmula",
+      "enterValues": "Introduza massa e velocidade para calcular",
+      "errorInvalid": "Introduza números válidos",
+      "errorMassPositive": "A massa deve ser positiva",
+      "seo": {
+        "title": "Calculadora de Energia Cinética – KE = ½mv² online",
+        "description": "Calculadora gratuita de energia cinética. Calcule KE a partir da massa e da velocidade com KE = ½ × m × v². Resultado em joules. Para física, engenharia e estudantes.",
+        "keywords": "calculadora energia cinética, calculadora KE, fórmula energia cinética, ½mv², joules calculadora, física calculadora",
+        "content": {
+          "heading": "O que é energia cinética?",
+          "paragraph1": "Energia cinética (KE) é a energia que um corpo tem devido ao seu movimento. Depende da massa (m) e da velocidade (v). Fórmula: KE = ½ × m × v², massa em kg, velocidade em m/s; resultado em joules (J). A nossa calculadora permite introduzir massa e velocidade e obter KE em joules de imediato.",
+          "paragraph2": "A fórmula KE = ½mv² vem da mecânica clássica. Duplicar a massa duplica a KE; duplicar a velocidade quadruplica-a, porque a velocidade está ao quadrado. Ex.: 2 kg a 3 m/s: KE = ½ × 2 × 9 = 9 J. A 6 m/s: KE = ½ × 2 × 36 = 36 J.",
+          "paragraph3": "A energia cinética é usada em física e engenharia (veículos, projéteis), segurança (testes de colisão, distância de travagem), desporto, energia eólica. A distância de travagem depende do quadrado da velocidade.",
+          "paragraph4": "A calculadora usa KE = ½ × m × v². Introduza massa em kg e velocidade em m/s; resultado em joules. Aceita decimais e mostra a fórmula. Para estudantes, professores e engenheiros – imediato e gratuito.",
+          "exampleHeading": "Exemplos",
+          "exampleText": "Massa 10 kg, velocidade 5 m/s: KE = ½ × 10 × 25 = 125 J. 1 kg, 10 m/s: KE = 50 J. Carro 1000 kg a 20 m/s: KE = 200 000 J = 200 kJ. Duplicar a velocidade de 10 para 20 m/s quadruplica a KE."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {"question": "Qual é a fórmula da energia cinética?", "answer": "Fórmula: KE = ½ × m × v², m em kg, v em m/s. Resultado em joules (J). Ex.: 2 kg a 3 m/s: KE = 9 J."},
+            {"question": "Por que a velocidade está ao quadrado?", "answer": "O trabalho para acelerar um corpo do repouso até v é proporcional a v². Duplicar a velocidade quadruplica a KE – daí a importância dos limites de velocidade e da distância de travagem."},
+            {"question": "Que unidades usa a calculadora?", "answer": "Massa em quilogramas (kg), velocidade em m/s. Resultado em joules (J). Gramas: divida por 1000. km/h: multiplique por 1000/3600 ≈ 0,278 para m/s."},
+            {"question": "A energia cinética pode ser negativa?", "answer": "Não. Em KE = ½mv² a massa é positiva e v² é sempre não negativo, logo KE nunca é negativa. O KE escalar é ½mv² com v como módulo da velocidade."},
+            {"question": "Como a KE se relaciona com a distância de travagem?", "answer": "O trabalho para parar é igual à KE. A distância de travagem é proporcional à KE, logo a v². Duplicar a velocidade quadruplica a distância de travagem para a mesma força de travagem."},
+            {"question": "Esta calculadora de energia cinética é gratuita?", "answer": "Sim. A calculadora é gratuita, sem registo nem pagamento. Introduza massa em kg e velocidade em m/s para obter KE em joules e a fórmula. Para estudantes, professores e profissionais."}
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "pythagorean": "Teorema de Pitágoras",
+          "pythagoreanDesc": "Catetos e hipotenusa; componentes da velocidade",
+          "percentage": "Calculadora de percentagem",
+          "percentageDesc": "Percentagens e variação percentual",
+          "squareRoot": "Calculadora de raiz quadrada",
+          "squareRootDesc": "Raízes; na fórmula KE aparece frequentemente v²"
+        }
+      }
+    },
     "convolution": {
       "title": "Calculadora de Convolução",
       "description": "Calcule a convolução discreta de duas sequências de dados. Ferramenta online gratuita para processamento de sinais, matemática e aplicações de engenharia.",

@@ -3746,6 +3746,58 @@
         }
       }
     },
+    "kineticEnergy": {
+      "title": "Calculateur d'Énergie Cinétique",
+      "description": "Calculez l'énergie cinétique à partir de la masse et de la vitesse instantanément. Formule KE = ½ × m × v². Calculateur en ligne gratuit avec résultat en joules.",
+      "massLabel": "Masse (m)",
+      "massPlaceholder": "ex. 10",
+      "massHint": "Entrez la masse en kilogrammes (kg)",
+      "velocityLabel": "Vitesse (v)",
+      "velocityPlaceholder": "ex. 5",
+      "velocityHint": "Entrez la vitesse en mètres par seconde (m/s)",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "results": "Résultats",
+      "keResult": "Énergie cinétique (KE)",
+      "formula": "Formule",
+      "enterValues": "Entrez la masse et la vitesse pour calculer",
+      "errorInvalid": "Veuillez entrer des nombres valides",
+      "errorMassPositive": "La masse doit être positive",
+      "seo": {
+        "title": "Calculateur d'Énergie Cinétique – KE = ½mv² en ligne",
+        "description": "Calculateur d'énergie cinétique gratuit. Calculez KE à partir de la masse et de la vitesse : KE = ½ × m × v². Résultat en joules. Pour la physique, l'ingénierie et les élèves.",
+        "keywords": "calculateur énergie cinétique, calculateur KE, formule énergie cinétique, ½mv², calculateur joules, calculateur physique",
+        "content": {
+          "heading": "Qu'est-ce que l'énergie cinétique ?",
+          "paragraph1": "L'énergie cinétique (KE) est l'énergie du mouvement. Elle dépend de la masse (m) et de la vitesse (v). Formule : KE = ½ × m × v² ; masse en kg, vitesse en m/s ; résultat en joules (J). Notre calculateur donne KE en joules instantanément.",
+          "paragraph2": "La formule KE = ½mv² vient de la mécanique classique. Doubler la masse double KE ; doubler la vitesse la quadruple (v est au carré). Ex. 2 kg à 3 m/s : KE = ½ × 2 × 9 = 9 J. À 6 m/s : KE = ½ × 2 × 36 = 36 J.",
+          "paragraph3": "L'énergie cinétique est utilisée partout : en physique et ingénierie (véhicules, projectiles), en sécurité (tests de choc, distance de freinage), dans le sport, dans l'énergie éolienne. La distance de freinage dépend du carré de la vitesse.",
+          "paragraph4": "Le calculateur utilise KE = ½ × m × v². Masse en kg, vitesse en m/s ; résultat en joules. Accepte les décimales et affiche la formule. Pour élèves, enseignants et ingénieurs – gratuit.",
+          "exampleHeading": "Exemples",
+          "exampleText": "Masse 10 kg, vitesse 5 m/s : KE = ½ × 10 × 25 = 125 J. 1 kg, 10 m/s : KE = 50 J. Voiture 1000 kg à 20 m/s : KE = 200 000 J = 200 kJ. Doubler la vitesse quadruple KE."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {"question": "Quelle est la formule de l'énergie cinétique ?", "answer": "KE = ½ × m × v², m en kg, v en m/s. Résultat en joules (J). Ex. 2 kg à 3 m/s : KE = 9 J."},
+            {"question": "Pourquoi la vitesse est-elle au carré ?", "answer": "Le travail pour accélérer depuis l'arrêt est proportionnel à v². Doubler la vitesse quadruple KE – d'où l'importance des limites de vitesse et de la distance de freinage."},
+            {"question": "Quelles unités utilise le calculateur ?", "answer": "Masse en kilogrammes (kg), vitesse en m/s. Résultat en joules (J). Grammes ÷ 1000 = kg. km/h × 1000/3600 ≈ 0,278 = m/s."},
+            {"question": "L'énergie cinétique peut-elle être négative ?", "answer": "Non. Dans KE = ½mv², la masse est positive et v² ≥ 0, donc KE n'est jamais négative. KE scalaire = ½mv² avec v = norme de la vitesse."},
+            {"question": "Comment KE est-elle liée à la distance de freinage ?", "answer": "Le travail de freinage égale KE. Distance de freinage ∝ KE ∝ v². Doubler la vitesse quadruple la distance de freinage à force de freinage égale."},
+            {"question": "Ce calculateur est-il gratuit ?", "answer": "Oui. Le calculateur est gratuit, sans inscription. Entrez la masse en kg et la vitesse en m/s pour obtenir KE en joules avec la formule. Pour élèves, enseignants et professionnels."}
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs associés",
+          "pythagorean": "Théorème de Pythagore",
+          "pythagoreanDesc": "Côtés de l'angle droit et hypoténuse ; utile avec les composantes de vitesse",
+          "percentage": "Calculateur de pourcentage",
+          "percentageDesc": "Pourcentages et variation en pourcentage",
+          "squareRoot": "Calculateur de racine carrée",
+          "squareRootDesc": "Racines carrées ; v² apparaît dans la formule KE"
+        }
+      }
+    },
     "convolution": {
       "title": "Calculateur de Convolution",
       "description": "Calculez la convolution discrète de deux séquences de données. Outil en ligne gratuit pour le traitement du signal, les mathématiques et les applications d'ingénierie.",

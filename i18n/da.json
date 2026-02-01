@@ -3746,6 +3746,58 @@
         }
       }
     },
+    "kineticEnergy": {
+      "title": "Kinetisk Energi Beregner",
+      "description": "Beregn kinetisk energi ud fra masse og hastighed med det samme. Formel KE = ½ × m × v². Gratis online kinetisk-energi-beregner med resultat i joule.",
+      "massLabel": "Masse (m)",
+      "massPlaceholder": "f.eks. 10",
+      "massHint": "Indtast masse i kilogram (kg)",
+      "velocityLabel": "Hastighed (v)",
+      "velocityPlaceholder": "f.eks. 5",
+      "velocityHint": "Indtast hastighed i meter per sekund (m/s)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "results": "Resultater",
+      "keResult": "Kinetisk energi (KE)",
+      "formula": "Formel",
+      "enterValues": "Indtast masse og hastighed for at beregne",
+      "errorInvalid": "Indtast gyldige tal",
+      "errorMassPositive": "Massen skal være positiv",
+      "seo": {
+        "title": "Kinetisk Energi Beregner – KE = ½mv² online",
+        "description": "Gratis kinetisk energi-beregner. Beregn KE ud fra masse og hastighed med KE = ½ × m × v². Resultat i joule. Til fysik, teknik og studerende.",
+        "keywords": "kinetisk energi beregner, KE beregner, kinetisk energi formel, ½mv², joule beregner, fysik beregner",
+        "content": {
+          "heading": "Hvad er kinetisk energi?",
+          "paragraph1": "Kinetisk energi (KE) er den energi et legeme har på grund af sin bevægelse. Den afhænger af masse (m) og hastighed (v). Formel: KE = ½ × m × v², masse i kg, hastighed i m/s; resultat i joule (J). Vores beregner lader dig indtaste masse og hastighed og giver KE i joule med det samme.",
+          "paragraph2": "Formlen KE = ½mv² kommer fra klassisk mekanik. Fordobling af massen fordobler KE; fordobling af hastigheden firdobler den, fordi hastigheden er i anden. F.eks. 2 kg ved 3 m/s: KE = ½ × 2 × 9 = 9 J. Ved 6 m/s: KE = ½ × 2 × 36 = 36 J.",
+          "paragraph3": "Kinetisk energi bruges overalt: i fysik og teknik (køretøjer, projektil), sikkerhed (crashtest, bremselængde), sport, vindenergi. Bremselængden afhænger af hastighedens kvadrat.",
+          "paragraph4": "Beregneren bruger KE = ½ × m × v². Indtast masse i kg og hastighed i m/s; resultat i joule. Accepterer decimaler og viser formlen. Til studerende, lærere og ingeniører – med det samme og gratis.",
+          "exampleHeading": "Eksempler",
+          "exampleText": "Masse 10 kg, hastighed 5 m/s: KE = ½ × 10 × 25 = 125 J. 1 kg, 10 m/s: KE = 50 J. Bil 1000 kg ved 20 m/s: KE = 200 000 J = 200 kJ. Fordobling af hastighed fra 10 til 20 m/s firdobler KE."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {"question": "Hvad er formlen for kinetisk energi?", "answer": "Formel: KE = ½ × m × v², m i kg, v i m/s. Resultat i joule (J). F.eks. 2 kg ved 3 m/s: KE = 9 J."},
+            {"question": "Hvorfor er hastigheden i anden?", "answer": "Arbejdet for at accelerere et legeme fra hvile til hastighed v er proportionalt med v². Fordobling af hastighed firdobler KE – derfor betyder hastighedsgrænser og bremselængde meget."},
+            {"question": "Hvilke enheder bruger beregneren?", "answer": "Masse i kilogram (kg), hastighed i m/s. Resultat i joule (J). Gram: divider med 1000. km/h: gang med 1000/3600 ≈ 0,278 for m/s."},
+            {"question": "Kan kinetisk energi være negativ?", "answer": "Nej. I KE = ½mv² er massen positiv og v² altid ikke-negativ, så KE er aldrig negativ. Skalær KE er ½mv², hvor v er hastighedens størrelse."},
+            {"question": "Hvordan hænger KE sammen med bremselængde?", "answer": "Arbejdet for at stoppe er lig KE. Bremselængden er proportional med KE, altså v². Fordobling af hastighed firdobler bremselængden ved samme bremsekraft."},
+            {"question": "Er denne kinetisk energi-beregner gratis?", "answer": "Ja. Beregneren er gratis uden registrering eller betaling. Indtast masse i kg og hastighed i m/s for KE i joule og formlen. Til studerende, lærere og fagfolk."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterede beregnere",
+          "pythagorean": "Pythagoras sætning",
+          "pythagoreanDesc": "Kateter og hypotenuse; hastighedskomponenter",
+          "percentage": "Procentberegner",
+          "percentageDesc": "Procenter og procentvis ændring",
+          "squareRoot": "Kvadratrodsberegner",
+          "squareRootDesc": "Kvadratrødder; i KE-formlen optræder ofte v²"
+        }
+      }
+    },
     "convolution": {
       "title": "Foldningsberegner",
       "description": "Beregn den diskrete foldning af to datasekvenser. Gratis online værktøj til signalbehandling, matematik og ingeniørapplikationer.",

@@ -3816,6 +3816,58 @@
         }
       }
     },
+    "kineticEnergy": {
+      "title": "动能计算器",
+      "description": "根据质量和速度即时计算动能。公式 KE = ½ × m × v²。免费在线动能计算器，结果以焦耳显示。",
+      "massLabel": "质量 (m)",
+      "massPlaceholder": "例如：10",
+      "massHint": "输入质量，单位千克 (kg)",
+      "velocityLabel": "速度 (v)",
+      "velocityPlaceholder": "例如：5",
+      "velocityHint": "输入速度，单位米/秒 (m/s)",
+      "calculate": "计算",
+      "reset": "重置",
+      "results": "结果",
+      "keResult": "动能 (KE)",
+      "formula": "公式",
+      "enterValues": "输入质量和速度以计算",
+      "errorInvalid": "请输入有效数字",
+      "errorMassPositive": "质量必须为正",
+      "seo": {
+        "title": "动能计算器 – KE = ½mv² 在线",
+        "description": "免费动能计算器。用 KE = ½ × m × v² 根据质量和速度计算 KE。结果以焦耳显示。适合物理、工程和学生。",
+        "keywords": "动能计算器, KE 计算器, 动能公式, ½mv², 焦耳计算器, 物理计算器",
+        "content": {
+          "heading": "什么是动能？",
+          "paragraph1": "动能 (KE) 是物体因运动而具有的能量。它取决于质量 (m) 和速度 (v)。公式为 KE = ½ × m × v²，质量单位为 kg，速度单位为 m/s；结果单位为焦耳 (J)。本计算器可输入质量和速度，立即得到以焦耳为单位的 KE。",
+          "paragraph2": "公式 KE = ½mv² 来自经典力学。质量加倍则 KE 加倍；速度加倍则 KE 变为四倍，因为速度是平方项。例如 2 kg 以 3 m/s 运动：KE = 9 J。以 6 m/s：KE = 36 J。",
+          "paragraph3": "动能在物理与工程（车辆、抛体）、安全（碰撞试验、制动距离）、体育、风能等领域都有应用。制动距离与速度的平方有关。",
+          "paragraph4": "计算器使用 KE = ½ × m × v²。输入质量（kg）和速度（m/s）；结果为焦耳。支持小数并显示公式。面向学生、教师和工程师，即时免费。",
+          "exampleHeading": "示例",
+          "exampleText": "质量 10 kg，速度 5 m/s：KE = ½ × 10 × 25 = 125 J。1 kg，10 m/s：KE = 50 J。1000 kg 汽车以 20 m/s：KE = 200 000 J = 200 kJ。速度从 10 增至 20 m/s 时 KE 变为四倍。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {"question": "动能的公式是什么？", "answer": "公式：KE = ½ × m × v²，m 单位为 kg，v 单位为 m/s。结果为焦耳 (J)。例如 2 kg 以 3 m/s：KE = 9 J。"},
+            {"question": "为什么速度要平方？", "answer": "将物体从静止加速到速度 v 所做的功与 v² 成正比。因此速度加倍会使 KE 变为四倍——这也是限速和制动距离重要的原因。"},
+            {"question": "计算器使用什么单位？", "answer": "质量单位为千克 (kg)，速度单位为 m/s。结果为焦耳 (J)。克：除以 1000。km/h：乘以 1000/3600≈0.278 得到 m/s。"},
+            {"question": "动能可以是负数吗？", "answer": "不可以。在 KE = ½mv² 中质量为正，v² 恒非负，所以 KE 不会为负。标量 KE 为 ½mv²，其中 v 为速度的大小。"},
+            {"question": "KE 与制动距离有何关系？", "answer": "使物体停止所需的功等于其 KE。制动距离与 KE 成正比，即与 v² 成正比。相同制动力下速度加倍会使制动距离变为四倍。"},
+            {"question": "本动能计算器免费吗？", "answer": "是的。本计算器免费使用，无需注册或付费。输入质量（kg）和速度（m/s）即可得到以焦耳为单位的 KE 和公式。适合学生、教师和专业人士。"}
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "pythagorean": "勾股定理",
+          "pythagoreanDesc": "直角边与斜边；与速度分量相关",
+          "percentage": "百分比计算器",
+          "percentageDesc": "百分比与变化率",
+          "squareRoot": "平方根计算器",
+          "squareRootDesc": "平方根；KE 公式中常出现 v²"
+        }
+      }
+    },
     "convolution": {
       "title": "卷积计算器",
       "description": "计算两个数据序列的离散卷积。免费在线工具，适用于信号处理、数学和工程应用。",

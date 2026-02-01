@@ -3,64 +3,113 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-// Function to calculate natural logarithm
-function calculateNaturalLog(x: number): {
-  result: number;
-  isValid: boolean;
-  errorType?: 'negative' | 'zero' | 'invalid';
-} {
-  if (isNaN(x)) {
-    return { result: 0, isValid: false, errorType: 'invalid' };
+function gcd(a: number, b: number): number {
+  a = Math.abs(a);
+  b = Math.abs(b);
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
   }
-  
-  if (x === 0) {
-    return { result: 0, isValid: false, errorType: 'zero' };
-  }
-  
-  if (x < 0) {
-    return { result: 0, isValid: false, errorType: 'negative' };
-  }
-  
-  const result = Math.log(x);
-  return { result, isValid: true };
+  return a;
 }
 
-export function NaturalLogarithmCalculator() {
-  const t = useTranslations('calculators.naturalLogarithm');
+function lcm(a: number, b: number): number {
+  if (a === 0 || b === 0) return 0;
+  return Math.abs(a * b) / gcd(a, b);
+}
+
+function calculateLCM(numbers: number[]): {
+  result: number;
+  steps: string[];
+  isValid: boolean;
+  error?: string;
+} {
+  if (numbers.length === 0) {
+    return { result: 0, steps: [], isValid: false, error: 'empty' };
+  }
+
+  if (numbers.length === 1) {
+    return { 
+      result: Math.abs(numbers[0]), 
+      steps: [`LCM(${numbers[0]}) = ${Math.abs(numbers[0])}`], 
+      isValid: true 
+    };
+  }
+
+  const steps: string[] = [];
+  let result = Math.abs(numbers[0]);
+  
+  for (let i = 1; i < numbers.length; i++) {
+    const prev = result;
+    const current = Math.abs(numbers[i]);
+    result = lcm(result, current);
+    
+    if (i === 1) {
+      steps.push(`LCM(${Math.abs(numbers[0])}, ${current}) = ${result}`);
+    } else {
+      steps.push(`LCM(${prev}, ${current}) = ${result}`);
+    }
+  }
+
+  return { result, steps, isValid: true };
+}
+
+export function LCMCalculator() {
+  const t = useTranslations('calculators.lcm');
   const [inputValue, setInputValue] = useState<string>('');
   const [result, setResult] = useState<{
-    ln: number;
-    input: number;
+    lcm: number;
+    numbers: number[];
+    steps: string[];
   } | null>(null);
   const [error, setError] = useState<string>('');
 
   const handleCalculate = () => {
-    const x = parseFloat(inputValue.replace(',', '.'));
-    
-    if (!inputValue) {
+    if (!inputValue.trim()) {
       setError('');
       setResult(null);
       return;
     }
 
-    const calculation = calculateNaturalLog(x);
+    // Parse input - support comma, space, semicolon separators
+    const parts = inputValue.split(/[,;\s]+/).filter(part => part.trim() !== '');
+    const numbers: number[] = [];
     
-    if (!calculation.isValid) {
-      if (calculation.errorType === 'zero') {
-        setError(t('errorZero'));
-      } else if (calculation.errorType === 'negative') {
-        setError(t('errorNegative'));
-      } else {
+    for (const part of parts) {
+      const num = parseInt(part.trim(), 10);
+      if (isNaN(num)) {
         setError(t('errorInvalid'));
+        setResult(null);
+        return;
       }
+      if (num === 0) {
+        setError(t('errorZero'));
+        setResult(null);
+        return;
+      }
+      numbers.push(num);
+    }
+
+    if (numbers.length < 2) {
+      setError(t('errorMinTwo'));
       setResult(null);
       return;
     }
+
+    const calculation = calculateLCM(numbers);
     
+    if (!calculation.isValid) {
+      setError(t('errorInvalid'));
+      setResult(null);
+      return;
+    }
+
     setError('');
     setResult({
-      ln: calculation.result,
-      input: x
+      lcm: calculation.result,
+      numbers: numbers,
+      steps: calculation.steps
     });
   };
 
@@ -77,18 +126,21 @@ export function NaturalLogarithmCalculator() {
         <div className="input-section" style={{ marginBottom: 0 }}>
           <div className="numbers-to-letters-inputs" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div className="input-card">
-              <label htmlFor="input-value" className="input-label">
+              <label htmlFor="numbers-input" className="input-label">
                 {t('inputLabel')}
               </label>
-              <input
-                id="input-value"
-                type="text"
-                inputMode="decimal"
+              <textarea
+                id="numbers-input"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 className="number-input"
                 placeholder={t('inputPlaceholder')}
-                style={{ minHeight: '44px' }}
+                rows={6}
+                style={{ 
+                  resize: 'vertical', 
+                  minHeight: '120px',
+                  fontFamily: 'monospace'
+                }}
               />
               <div style={{ 
                 marginTop: '0.5rem', 
@@ -133,23 +185,54 @@ export function NaturalLogarithmCalculator() {
               <div style={{ 
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '1rem',
+                gap: '1.25rem',
                 padding: '1.25rem',
                 background: 'var(--card-background)',
                 borderRadius: '8px',
                 minHeight: '200px'
               }}>
-                {/* Main Result */}
+                {/* Numbers */}
                 <div className="result-item">
                   <div className="result-label" style={{ marginBottom: '0.5rem' }}>
-                    {t('naturalLog')}
+                    {t('numbers')}
                   </div>
                   <div className="result-value-box">
-                    <span className="result-value" style={{ fontSize: '1.5rem', fontWeight: '600' }}>
-                      {result.ln.toLocaleString(undefined, { maximumFractionDigits: 10 })}
+                    <span className="result-value" style={{ fontFamily: 'monospace' }}>
+                      {result.numbers.join(', ')}
                     </span>
                   </div>
                 </div>
+
+                {/* LCM Result */}
+                <div className="result-item">
+                  <div className="result-label" style={{ marginBottom: '0.5rem' }}>
+                    {t('lcmResult')}
+                  </div>
+                  <div className="result-value-box">
+                    <span className="result-value" style={{ fontSize: '1.75rem', fontWeight: '600' }}>
+                      {result.lcm.toLocaleString()}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Calculation Steps */}
+                {result.steps.length > 0 && (
+                  <div style={{
+                    marginTop: '0.5rem',
+                    padding: '0.75rem',
+                    background: 'rgba(0, 0, 0, 0.02)',
+                    borderRadius: '6px',
+                    fontSize: '0.85rem',
+                    color: 'var(--text-secondary)'
+                  }}>
+                    <div style={{ fontWeight: '500', marginBottom: '0.5rem' }}>{t('steps')}</div>
+                    <div style={{ fontFamily: 'monospace', lineHeight: '1.8' }}>
+                      {result.steps.map((step, idx) => (
+                        <div key={idx}>{step}</div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Formula */}
                 <div style={{
@@ -160,26 +243,9 @@ export function NaturalLogarithmCalculator() {
                   fontSize: '0.85rem',
                   color: 'var(--text-secondary)'
                 }}>
-                  <div>{t('formula')}</div>
-                  <div style={{ marginTop: '0.25rem', fontFamily: 'monospace' }}>
-                    ln({result.input}) = {result.ln.toLocaleString(undefined, { maximumFractionDigits: 10 })}
-                  </div>
-                </div>
-
-                {/* Common Values Reference */}
-                <div style={{
-                  marginTop: '0.5rem',
-                  padding: '0.75rem',
-                  background: 'rgba(0, 0, 0, 0.02)',
-                  borderRadius: '6px',
-                  fontSize: '0.85rem',
-                  color: 'var(--text-secondary)'
-                }}>
-                  <div style={{ marginBottom: '0.5rem', fontWeight: '500' }}>{t('commonValues')}</div>
-                  <div style={{ fontFamily: 'monospace', lineHeight: '1.6' }}>
-                    <div>ln(1) = 0</div>
-                    <div>ln(e) ≈ 1</div>
-                    <div>ln(10) ≈ 2.302585</div>
+                  <div style={{ fontWeight: '500', marginBottom: '0.25rem' }}>{t('formula')}</div>
+                  <div style={{ fontFamily: 'monospace' }}>
+                    LCM(a, b) = |a × b| / GCD(a, b)
                   </div>
                 </div>
               </div>
@@ -193,7 +259,7 @@ export function NaturalLogarithmCalculator() {
                 opacity: 0.5
               }}>
                 <span style={{ color: 'var(--text-secondary)' }}>
-                  {t('enterValue')}
+                  {t('enterNumbers')}
                 </span>
               </div>
             )}

@@ -3610,6 +3610,146 @@
         }
       }
     },
+    "lcm": {
+      "title": "EKOK Hesaplayıcı - En Küçük Ortak Kat",
+      "description": "İki veya daha fazla sayının En Küçük Ortak Katını (EKOK) anında hesaplayın. Tüm sayılarla bölünebilen en küçük pozitif tam sayıyı bulun. Adımlı ücretsiz çevrimiçi EKOK hesaplayıcı.",
+      "inputLabel": "Sayıları Girin",
+      "inputPlaceholder": "örn. 12, 18, 24",
+      "inputHint": "Virgül, boşluk veya noktalı virgülle ayrılmış iki veya daha fazla pozitif tam sayı girin",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "results": "Sonuçlar",
+      "numbers": "Sayılar",
+      "lcmResult": "En Küçük Ortak Kat (EKOK)",
+      "steps": "Hesaplama Adımları",
+      "formula": "Formül",
+      "enterNumbers": "Hesaplamak için en az iki sayı girin",
+      "errorInvalid": "Lütfen geçerli pozitif tam sayılar girin",
+      "errorZero": "Sıfır EKOK hesaplamasına dahil edilemez",
+      "errorMinTwo": "Lütfen en az iki sayı girin",
+      "seo": {
+        "title": "EKOK Hesaplayıcı – Çevrimiçi En Küçük Ortak Katı Bulun",
+        "description": "Ücretsiz En Küçük Ortak Kat (EKOK) hesaplayıcı. Adım adım çözümlerle iki veya daha fazla sayının EKOK'unu anında hesaplayın. Kesirler ve sayı teorisi ile çalışan öğrenciler, öğretmenler ve herkes için mükemmel.",
+        "keywords": "ekok hesaplayıcı, en küçük ortak kat, ekok bulucu, en düşük ortak kat, sayıların ekoku, ortak kat hesaplayıcı, adımlı ekok, sayı teorisi hesaplayıcı",
+        "content": {
+          "heading": "En Küçük Ortak Kat (EKOK) Nedir?",
+          "paragraph1": "En Küçük Ortak Kat (EKOK), en düşük ortak kat olarak da bilinir, kalan olmadan verilen tüm sayılara bölünebilen en küçük pozitif tam sayıdır. Örneğin, 4 ve 6'nın EKOK'u 12'dir, çünkü 12, hem 4'ün hem de 6'nın eşit olarak böldüğü en küçük sayıdır. Ücretsiz EKOK hesaplayıcımız, herhangi bir pozitif tam sayı kümesinin en küçük ortak katını adım adım çözümlerle hızlı ve doğru bir şekilde bulmanıza yardımcı olur.",
+          "paragraph2": "EKOK, En Büyük Ortak Bölen (EBOB) ile yakından ilişkilidir. Temel ilişki: EKOK(a, b) × EBOB(a, b) = a × b'dir. Bu, iki sayının EBOB'unu biliyorsanız, EKOK'larını kolayca hesaplayabileceğiniz anlamına gelir. Birden fazla sayı için EKOK sırayla hesaplanır: önce ilk iki sayının EKOK'unu bulun, sonra bu sonucun üçüncü sayı ile EKOK'unu bulun, ve böyle devam edin. EKOK'un özellikleri şunları içerir: EKOK(a, b) ≥ max(a, b), EKOK(a, 1) = a ve EKOK(a, a) = a.",
+          "paragraph3": "EKOK'un günlük yaşamda ve matematikte çok sayıda pratik uygulaması vardır: kesir aritmetiğinde (kesirleri toplarken veya çıkarırken ortak paydalar bulma), zamanlama problemlerinde (olayların aynı anda ne zaman gerçekleştiğini belirleme, örneğin aynı durağa gelen otobüsler), müzik teorisinde (ritmik desenler ve vuruşlar hesaplama), dişli oranları ve mekanik sistemlerde (dönen parçaları senkronize etme), eşzamanlı denklemleri çözmede ve kriptografi ve bilgisayar biliminde. EKOK'u anlamak, kesirler, oranlar veya periyodik olaylarla çalışan herkes için gereklidir.",
+          "paragraph4": "EKOK hesaplayıcımız herhangi bir sayıda pozitif tam sayıyı işler ve hesaplama adımlarını gösterir, bu da onu eğitim amaçları için mükemmel kılar. Hesaplayıcı, büyük sayılar için bile EKOK'u hızlı bir şekilde hesaplamak için EBOB'a bölmenin verimli yöntemini kullanır. İster faktörler ve katlar hakkında öğrenen bir öğrenci, matematik dersleri hazırlayan bir öğretmen, senkronizasyon problemleri üzerinde çalışan bir mühendis veya hızlı EKOK hesaplamalarına ihtiyaç duyan biri olun, aracımız anında ve ücretsiz olarak doğru sonuçlar sağlar.",
+          "exampleHeading": "Örnek: EKOK Hesaplamaları",
+          "exampleText": "Örnek 1: EKOK(12, 18) = 36. 12'nin katları: 12, 24, 36, 48... 18'in katları: 18, 36, 54... En küçük ortak kat 36'dır. Örnek 2: EKOK(4, 6, 8) = 24. Önce, EKOK(4, 6) = 12, sonra EKOK(12, 8) = 24. Örnek 3: EKOK(15, 25) = 75. Formülü kullanarak: EBOB(15, 25) = 5, bu yüzden EKOK = (15 × 25) / 5 = 75. Örnek 4: EKOK(7, 11) = 77. İki sayı aralarında asal olduğunda (EBOB = 1), EKOK'ları çarpımlarına eşittir."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "EKOK ve EBOB arasındaki fark nedir?",
+              "answer": "EKOK (En Küçük Ortak Kat), verilen tüm sayılara bölünebilen en küçük sayıdır, EBOB (En Büyük Ortak Bölen) ise verilen tüm sayıları bölen en büyük sayıdır. EKOK ortak katları bulur; EBOB ortak çarpanları bulur. Formülle ilişkilidirler: EKOK(a, b) × EBOB(a, b) = a × b. Örneğin 12 ve 18 için: EKOK = 36, EBOB = 6 ve 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "İki sayının EKOK'unu nasıl bulursunuz?",
+              "answer": "EKOK'u bulmanın birkaç yöntemi vardır: (1) Katları listeleme yöntemi: en küçük ortağı bulana kadar her sayının katlarını listeleyin. (2) Asal çarpanlara ayırma: her sayıyı asal çarpanlara ayırın, sonra her asal çarpanın en yüksek kuvvetini çarpın. (3) EBOB kullanma: EKOK(a, b) = |a × b| / EBOB(a, b) hesaplayın. (4) Bölme yöntemi: ortak çarpanlarla tekrar tekrar bölün. Hesaplayıcımız hızlı sonuçlar için verimli EBOB yöntemini kullanır."
+            },
+            {
+              "question": "EKOK orijinal sayılardan küçük olabilir mi?",
+              "answer": "Hayır, EKOK her zaman verilen sayıların en büyüğünden daha büyük veya ona eşittir. Tanım gereği, EKOK tüm giriş sayılarına bölünebilir olmalıdır, bu nedenle bunlardan herhangi birinden küçük olamaz. Tek istisna, tek bir sayının kendisiyle EKOK'unu bulurken olur, burada EKOK(n, n) = n'dir. Örneğin, EKOK(15, 25) = 75'tir ve bu hem 15'ten hem de 25'ten büyüktür."
+            },
+            {
+              "question": "Kesirleri toplarken neden EKOK'a ihtiyacımız var?",
+              "answer": "Farklı paydaları olan kesirleri toplarken veya çıkarırken ortak bir paydaya ihtiyacımız vardır. Paydaların EKOK'u bize En Küçük Ortak Paydayı (EKOP) verir, bu her iki paydanın da böldüğü en küçük sayıdır. Bu, ortaya çıkan kesrin boyutunu en aza indirir. Örneğin, 1/4 + 1/6'yı toplamak için EKOK(4, 6) = 12 buluruz, bu bize 3/12 + 2/12 = 5/12 verir."
+            },
+            {
+              "question": "Aralarında asal sayıların EKOK'u nedir?",
+              "answer": "İki sayı, EBOB'ları 1 ise aralarında asaldır, bu da 1 dışında ortak çarpan paylaşmadıkları anlamına gelir. Aralarında asal sayılar için EKOK, çarpımlarına eşittir: EKOK(a, b) = a × b. Örneğin, 7 ve 11 aralarında asaldır (EBOB = 1), bu yüzden EKOK(7, 11) = 7 × 11 = 77. Benzer şekilde, EKOK(9, 16) = 144'tür çünkü EBOB(9, 16) = 1."
+            },
+            {
+              "question": "Bu EKOK hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, EKOK hesaplayıcımız kayıt, abonelik veya ödeme gerektirmeden tamamen ücretsizdir. Herhangi bir pozitif tam sayı kümesi girin ve adım adım hesaplamalarla anında, doğru sonuçlar alın. Hesaplayıcı aynı anda birden fazla sayıyı işleyebilir ve tam çözüm sürecini gösterir. Öğrenciler, eğitimciler, mühendisler ve hızlı EKOK hesaplamalarına ihtiyaç duyan herkes için mükemmel."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "gcd": "EBOB Hesaplayıcı",
+          "gcdDesc": "Adım adım çözümlerle iki veya daha fazla sayının En Büyük Ortak Bölenini (EBOB) hesaplayın",
+          "fractions": "Kesir Hesaplayıcı",
+          "fractionsDesc": "EKOK kullanarak ortak paydalarla kesirleri toplayın, çıkarın, çarpın ve bölün",
+          "division": "Bölme Hesaplayıcı",
+          "divisionDesc": "Ayrıntılı bölüm ve kalan hesaplamalarıyla bölme işlemleri gerçekleştirin"
+        }
+      }
+    },
+    "lcm": {
+      "title": "EKOK Hesaplayıcı - En Küçük Ortak Kat",
+      "description": "İki veya daha fazla sayının En Küçük Ortak Katını (EKOK) anında hesaplayın. Tüm sayılara bölünebilen en küçük pozitif tam sayıyı bulun. Adımlarla ücretsiz çevrimiçi EKOK hesaplayıcısı.",
+      "inputLabel": "Sayıları Girin",
+      "inputPlaceholder": "örn. 12, 18, 24",
+      "inputHint": "Virgül, boşluk veya noktalı virgülle ayrılmış iki veya daha fazla pozitif tam sayı girin",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "results": "Sonuçlar",
+      "numbers": "Sayılar",
+      "lcmResult": "En Küçük Ortak Kat (EKOK)",
+      "steps": "Hesaplama Adımları",
+      "formula": "Formül",
+      "enterNumbers": "Hesaplamak için en az iki sayı girin",
+      "errorInvalid": "Lütfen geçerli pozitif tam sayılar girin",
+      "errorZero": "Sıfır EKOK hesaplamasına dahil edilemez",
+      "errorMinTwo": "Lütfen en az iki sayı girin",
+      "seo": {
+        "title": "EKOK Hesaplayıcı – En Küçük Ortak Katı Çevrimiçi Bulun",
+        "description": "Ücretsiz En Küçük Ortak Kat (EKOK) hesaplayıcı. Adım adım çözümlerle iki veya daha fazla sayının EKOK'unu anında hesaplayın. Kesirler ve sayı teorisi ile çalışan öğrenciler, öğretmenler ve herkes için mükemmel.",
+        "keywords": "ekok hesaplayıcı, en küçük ortak kat, ekok bulucu, en düşük ortak kat, sayıların ekoku, ortak kat hesaplayıcı, adımlı ekok, sayı teorisi hesaplayıcı",
+        "content": {
+          "heading": "En Küçük Ortak Kat (EKOK) Nedir?",
+          "paragraph1": "En Küçük Ortak Kat (EKOK), en düşük ortak kat olarak da bilinir, kalan olmadan verilen tüm sayılara bölünebilen en küçük pozitif tam sayıdır. Örneğin, 4 ve 6'nın EKOK'u 12'dir, çünkü 12 hem 4 hem de 6'nın eşit olarak böldüğü en küçük sayıdır. Ücretsiz EKOK hesaplayıcımız, herhangi bir pozitif tam sayı kümesinin en küçük ortak katını adım adım çözümlerle hızlı ve doğru bir şekilde bulmanıza yardımcı olur.",
+          "paragraph2": "EKOK, En Büyük Ortak Bölen (EBOB) ile yakından ilişkilidir. Temel ilişki şudur: EKOK(a, b) × EBOB(a, b) = a × b. Bu, iki sayının EBOB'unu biliyorsanız, EKOK'larını kolayca hesaplayabileceğiniz anlamına gelir. Birden fazla sayı için, EKOK sırayla hesaplanır: önce ilk iki sayının EKOK'unu bulun, sonra bu sonucun üçüncü sayı ile EKOK'unu bulun, ve böyle devam edin. EKOK'un özellikleri şunları içerir: EKOK(a, b) ≥ max(a, b), EKOK(a, 1) = a, ve EKOK(a, a) = a.",
+          "paragraph3": "EKOK'un günlük hayatta ve matematikte çok sayıda pratik uygulaması vardır: kesir aritmetiğinde (kesirleri toplarken veya çıkarırken ortak paydalar bulma), zamanlama problemlerinde (olayların aynı anda ne zaman gerçekleştiğini belirleme, aynı durağa varan otobüsler gibi), müzik teorisinde (ritmik desenleri ve vuruşları hesaplama), dişli oranlarında ve mekanik sistemlerde (dönen parçaları senkronize etme), eşzamanlı denklemleri çözmede ve kriptografi ve bilgisayar biliminde. EKOK'u anlamak, kesirler, oranlar veya periyodik olaylarla çalışan herkes için esastır.",
+          "paragraph4": "EKOK hesaplayıcımız herhangi bir sayıda pozitif tam sayıyı işler ve hesaplama adımlarını gösterir, bu da onu eğitim amaçları için mükemmel kılar. Hesaplayıcı, büyük sayılar için bile EKOK'u hızlı bir şekilde hesaplamak için EBOB'a bölme yöntemini kullanır. İster faktörler ve katlar hakkında öğrenen bir öğrenci, ister matematik dersleri hazırlayan bir öğretmen, ister senkronizasyon problemleri üzerinde çalışan bir mühendis veya hızlı EKOK hesaplamalarına ihtiyaç duyan herhangi biri olun, aracımız anında ve ücretsiz olarak doğru sonuçlar sunar.",
+          "exampleHeading": "Örnek: EKOK Hesaplamaları",
+          "exampleText": "Örnek 1: EKOK(12, 18) = 36. 12'nin katları: 12, 24, 36, 48... 18'in katları: 18, 36, 54... En küçük ortak kat 36'dır. Örnek 2: EKOK(4, 6, 8) = 24. İlk olarak, EKOK(4, 6) = 12, sonra EKOK(12, 8) = 24. Örnek 3: EKOK(15, 25) = 75. Formülü kullanarak: EBOB(15, 25) = 5, bu yüzden EKOK = (15 × 25) / 5 = 75. Örnek 4: EKOK(7, 11) = 77. İki sayı aralarında asal olduğunda (EBOB = 1), EKOK'ları çarpımlarına eşittir."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "EKOK ve EBOB arasındaki fark nedir?",
+              "answer": "EKOK (En Küçük Ortak Kat), verilen tüm sayılara bölünebilen en küçük sayıdır, EBOB (En Büyük Ortak Bölen) ise verilen tüm sayıları bölen en büyük sayıdır. EKOK ortak katları bulur; EBOB ortak çarpanları bulur. Formül ile ilişkilidirler: EKOK(a, b) × EBOB(a, b) = a × b. Örneğin 12 ve 18 için: EKOK = 36, EBOB = 6, ve 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "İki sayının EKOK'unu nasıl bulursunuz?",
+              "answer": "EKOK'u bulmanın birkaç yöntemi vardır: (1) Katları listeleme yöntemi: en küçük ortak katı bulana kadar her sayının katlarını listeleyin. (2) Asal çarpanlara ayırma: her sayıyı asal çarpanlara ayırın, sonra her asal çarpanın en yüksek kuvvetini çarpın. (3) EBOB kullanma: EKOK(a, b) = |a × b| / EBOB(a, b) hesaplayın. (4) Bölme yöntemi: ortak çarpanlarla tekrar tekrar bölün. Hesaplayıcımız hızlı sonuçlar için verimli EBOB yöntemini kullanır."
+            },
+            {
+              "question": "EKOK orijinal sayılardan daha küçük olabilir mi?",
+              "answer": "Hayır, EKOK her zaman verilen sayıların en büyüğünden büyük veya eşittir. Tanım gereği, EKOK tüm girdi sayılarına bölünebilmelidir, bu nedenle herhangi birinden daha küçük olamaz. Tek istisna, tek bir sayının kendisiyle EKOK'unu bulurken olur, burada EKOK(n, n) = n. Örneğin, EKOK(15, 25) = 75, hem 15 hem de 25'ten büyüktür."
+            },
+            {
+              "question": "Kesirleri toplarken neden EKOK'a ihtiyacımız var?",
+              "answer": "Farklı paydalara sahip kesirleri toplarken veya çıkarırken, ortak bir paydaya ihtiyacımız vardır. Paydaların EKOK'u bize En Küçük Ortak Payda'yı (EKOP) verir, bu her iki paydanın da böldüğü en küçük sayıdır. Bu, sonuç kesrin boyutunu en aza indirir. Örneğin, 1/4 + 1/6 toplamak için, EKOK(4, 6) = 12 buluruz, bu da bize 3/12 + 2/12 = 5/12 verir."
+            },
+            {
+              "question": "Aralarında asal sayıların EKOK'u nedir?",
+              "answer": "İki sayı, EBOB'ları 1 ise aralarında asaldır, bu da 1 dışında ortak çarpan paylaşmadıkları anlamına gelir. Aralarında asal sayılar için, EKOK çarpımlarına eşittir: EKOK(a, b) = a × b. Örneğin, 7 ve 11 aralarında asaldır (EBOB = 1), bu yüzden EKOK(7, 11) = 7 × 11 = 77. Benzer şekilde, EKOK(9, 16) = 144 çünkü EBOB(9, 16) = 1."
+            },
+            {
+              "question": "Bu EKOK hesaplayıcı kullanımı ücretsiz mi?",
+              "answer": "Evet, EKOK hesaplayıcımız kayıt, abonelik veya ödeme gerektirmeden tamamen ücretsizdir. Herhangi bir pozitif tam sayı kümesi girin ve adım adım hesaplamalarla anında, doğru sonuçlar alın. Hesaplayıcı aynı anda birden fazla sayıyı işleyebilir ve tam çözüm sürecini gösterir. Öğrenciler, eğitimciler, mühendisler ve hızlı EKOK hesaplamalarına ihtiyaç duyan herkes için mükemmel."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "gcd": "EBOB Hesaplayıcı",
+          "gcdDesc": "Adım adım çözümlerle iki veya daha fazla sayının En Büyük Ortak Bölenini (EBOB) hesaplayın",
+          "fractions": "Kesir Hesaplayıcı",
+          "fractionsDesc": "EKOK kullanarak ortak paydalara sahip kesirleri toplayın, çıkarın, çarpın ve bölün",
+          "division": "Bölme Hesaplayıcı",
+          "divisionDesc": "Ayrıntılı bölüm ve kalan hesaplamalarıyla bölme işlemleri gerçekleştirin"
+        }
+      }
+    },
     "convolution": {
       "title": "Konvolüsyon Hesaplayıcı",
       "description": "İki veri dizisinin ayrık konvolüsyonunu hesaplayın. Sinyal işleme, matematik ve mühendislik uygulamaları için ücretsiz çevrimiçi araç.",

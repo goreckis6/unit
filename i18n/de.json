@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "kgV-Rechner - Kleinstes gemeinsames Vielfaches",
+      "description": "Berechnen Sie das kleinste gemeinsame Vielfache (kgV) von zwei oder mehr Zahlen sofort. Finden Sie die kleinste positive ganze Zahl, die durch alle Zahlen teilbar ist. Kostenloser Online-kgV-Rechner mit Schritten.",
+      "inputLabel": "Zahlen eingeben",
+      "inputPlaceholder": "z.B. 12, 18, 24",
+      "inputHint": "Geben Sie zwei oder mehr positive ganze Zahlen getrennt durch Kommas, Leerzeichen oder Semikolons ein",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "results": "Ergebnisse",
+      "numbers": "Zahlen",
+      "lcmResult": "Kleinstes gemeinsames Vielfaches (kgV)",
+      "steps": "Berechnungsschritte",
+      "formula": "Formel",
+      "enterNumbers": "Geben Sie mindestens zwei Zahlen ein, um zu berechnen",
+      "errorInvalid": "Bitte geben Sie gültige positive ganze Zahlen ein",
+      "errorZero": "Null kann nicht in die kgV-Berechnung einbezogen werden",
+      "errorMinTwo": "Bitte geben Sie mindestens zwei Zahlen ein",
+      "seo": {
+        "title": "kgV-Rechner – Kleinstes gemeinsames Vielfaches online finden",
+        "description": "Kostenloser Rechner für das kleinste gemeinsame Vielfache (kgV). Berechnen Sie das kgV von zwei oder mehr Zahlen sofort mit Schritt-für-Schritt-Lösungen. Perfekt für Schüler, Lehrer und alle, die mit Brüchen und Zahlentheorie arbeiten.",
+        "keywords": "kgv rechner, kleinstes gemeinsames vielfaches, kgv finder, niedrigstes gemeinsames vielfaches, kgv von zahlen, gemeinsames vielfaches rechner, kgv mit schritten, zahlentheorie rechner",
+        "content": {
+          "heading": "Was ist das kleinste gemeinsame Vielfache (kgV)?",
+          "paragraph1": "Das kleinste gemeinsame Vielfache (kgV), auch als niedrigstes gemeinsames Vielfaches bekannt, ist die kleinste positive ganze Zahl, die ohne Rest durch alle gegebenen Zahlen teilbar ist. Zum Beispiel ist das kgV von 4 und 6 gleich 12, weil 12 die kleinste Zahl ist, durch die sowohl 4 als auch 6 gleichmäßig teilbar sind. Unser kostenloser kgV-Rechner hilft Ihnen, das kleinste gemeinsame Vielfache einer beliebigen Menge positiver ganzer Zahlen schnell und genau zu finden, mit Schritt-für-Schritt-Lösungen.",
+          "paragraph2": "Das kgV ist eng mit dem größten gemeinsamen Teiler (ggT) verwandt. Die grundlegende Beziehung lautet: kgV(a, b) × ggT(a, b) = a × b. Das bedeutet, wenn Sie den ggT zweier Zahlen kennen, können Sie leicht ihr kgV berechnen. Bei mehreren Zahlen wird das kgV nacheinander berechnet: Finden Sie zuerst das kgV der ersten beiden Zahlen, dann finden Sie das kgV dieses Ergebnisses mit der dritten Zahl, und so weiter. Die Eigenschaften des kgV umfassen: kgV(a, b) ≥ max(a, b), kgV(a, 1) = a und kgV(a, a) = a.",
+          "paragraph3": "Das kgV hat zahlreiche praktische Anwendungen im Alltag und in der Mathematik: in der Bruchrechnung (Finden gemeinsamer Nenner beim Addieren oder Subtrahieren von Brüchen), bei Planungsproblemen (Bestimmen, wann Ereignisse gleichzeitig auftreten, wie Busse, die an derselben Haltestelle ankommen), in der Musiktheorie (Berechnung rhythmischer Muster und Taktschläge), bei Übersetzungsverhältnissen und mechanischen Systemen (Synchronisierung rotierender Teile), beim Lösen simultaner Gleichungen und in der Kryptographie und Informatik. Das Verständnis des kgV ist für jeden, der mit Brüchen, Verhältnissen oder periodischen Ereignissen arbeitet, unerlässlich.",
+          "paragraph4": "Unser kgV-Rechner verarbeitet eine beliebige Anzahl positiver ganzer Zahlen und zeigt die Berechnungsschritte an, was ihn perfekt für Bildungszwecke macht. Der Rechner verwendet die effiziente Methode der Division durch den ggT, um das kgV schnell zu berechnen, selbst bei großen Zahlen. Egal, ob Sie ein Schüler sind, der über Faktoren und Vielfache lernt, ein Lehrer, der Mathematikunterricht vorbereitet, ein Ingenieur, der an Synchronisationsproblemen arbeitet, oder jemand, der schnelle kgV-Berechnungen benötigt, unser Tool liefert sofort und kostenlos genaue Ergebnisse.",
+          "exampleHeading": "Beispiel: kgV-Berechnungen",
+          "exampleText": "Beispiel 1: kgV(12, 18) = 36. Die Vielfachen von 12 sind: 12, 24, 36, 48... Die Vielfachen von 18 sind: 18, 36, 54... Das kleinste gemeinsame Vielfache ist 36. Beispiel 2: kgV(4, 6, 8) = 24. Zuerst kgV(4, 6) = 12, dann kgV(12, 8) = 24. Beispiel 3: kgV(15, 25) = 75. Mit der Formel: ggT(15, 25) = 5, also kgV = (15 × 25) / 5 = 75. Beispiel 4: kgV(7, 11) = 77. Wenn zwei Zahlen teilerfremd sind (ggT = 1), entspricht ihr kgV ihrem Produkt."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist der Unterschied zwischen kgV und ggT?",
+              "answer": "kgV (kleinstes gemeinsames Vielfaches) ist die kleinste Zahl, die durch alle gegebenen Zahlen teilbar ist, während ggT (größter gemeinsamer Teiler) die größte Zahl ist, die alle gegebenen Zahlen teilt. kgV findet gemeinsame Vielfache; ggT findet gemeinsame Faktoren. Sie sind durch die Formel verbunden: kgV(a, b) × ggT(a, b) = a × b. Zum Beispiel für 12 und 18: kgV = 36, ggT = 6, und 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Wie findet man das kgV zweier Zahlen?",
+              "answer": "Es gibt mehrere Methoden, um das kgV zu finden: (1) Listenmethode für Vielfache: Listen Sie Vielfache jeder Zahl auf, bis Sie das kleinste gemeinsame finden. (2) Primfaktorzerlegung: Zerlegen Sie jede Zahl in Primfaktoren, multiplizieren Sie dann die höchste Potenz jedes Primfaktors. (3) Verwendung des ggT: Berechnen Sie kgV(a, b) = |a × b| / ggT(a, b). (4) Divisionsmethode: Teilen Sie wiederholt durch gemeinsame Faktoren. Unser Rechner verwendet die effiziente ggT-Methode für schnelle Ergebnisse."
+            },
+            {
+              "question": "Kann das kgV kleiner sein als die ursprünglichen Zahlen?",
+              "answer": "Nein, das kgV ist immer größer oder gleich der größten der gegebenen Zahlen. Per Definition muss das kgV durch alle Eingabezahlen teilbar sein, daher kann es nicht kleiner als eine von ihnen sein. Die einzige Ausnahme ist beim Finden des kgV einer einzelnen Zahl mit sich selbst, wobei kgV(n, n) = n. Zum Beispiel kgV(15, 25) = 75, was größer ist als sowohl 15 als auch 25."
+            },
+            {
+              "question": "Warum brauchen wir das kgV beim Addieren von Brüchen?",
+              "answer": "Beim Addieren oder Subtrahieren von Brüchen mit unterschiedlichen Nennern benötigen wir einen gemeinsamen Nenner. Das kgV der Nenner gibt uns den kleinsten gemeinsamen Nenner (kgN), der die kleinste Zahl ist, durch die beide Nenner teilbar sind. Dies minimiert die Größe des resultierenden Bruchs. Zum Beispiel, um 1/4 + 1/6 zu addieren, finden wir kgV(4, 6) = 12, was uns 3/12 + 2/12 = 5/12 gibt."
+            },
+            {
+              "question": "Was ist das kgV teilerfremder Zahlen?",
+              "answer": "Zwei Zahlen sind teilerfremd (oder relativ prim), wenn ihr ggT 1 ist, was bedeutet, dass sie außer 1 keine gemeinsamen Faktoren teilen. Für teilerfremde Zahlen entspricht das kgV ihrem Produkt: kgV(a, b) = a × b. Zum Beispiel sind 7 und 11 teilerfremd (ggT = 1), also kgV(7, 11) = 7 × 11 = 77. Ebenso ist kgV(9, 16) = 144, weil ggT(9, 16) = 1."
+            },
+            {
+              "question": "Ist dieser kgV-Rechner kostenlos?",
+              "answer": "Ja, unser kgV-Rechner ist völlig kostenlos ohne erforderliche Registrierung, Abonnement oder Zahlung. Geben Sie eine beliebige Menge positiver ganzer Zahlen ein und erhalten Sie sofortige, genaue Ergebnisse mit Schritt-für-Schritt-Berechnungen. Der Rechner kann mehrere Zahlen gleichzeitig verarbeiten und zeigt den vollständigen Lösungsprozess. Perfekt für Schüler, Pädagogen, Ingenieure und alle, die schnelle kgV-Berechnungen benötigen."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "gcd": "ggT-Rechner",
+          "gcdDesc": "Berechnen Sie den größten gemeinsamen Teiler (ggT) von zwei oder mehr Zahlen mit Schritt-für-Schritt-Lösungen",
+          "fractions": "Bruchrechner",
+          "fractionsDesc": "Addieren, subtrahieren, multiplizieren und dividieren Sie Brüche mit gemeinsamen Nennern unter Verwendung des kgV",
+          "division": "Divisionsrechner",
+          "divisionDesc": "Führen Sie Divisionsoperationen mit detaillierten Quotienten- und Restberechnungen durch"
+        }
+      }
+    },
     "convolution": {
       "title": "Faltungsrechner",
       "description": "Berechnen Sie die diskrete Faltung zweier Datenfolgen. Kostenloses Online-Tool für Signalverarbeitung, Mathematik und Ingenieursanwendungen.",

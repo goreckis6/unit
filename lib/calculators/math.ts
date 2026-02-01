@@ -37,6 +37,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'lcm',
+    titleKey: 'lcm.title',
+    descKey: 'lcm.description',
+    path: '/calculators/math/lcm',
+    category: 'math',
+  },
+  {
     id: 'antilog',
     titleKey: 'antilog.title',
     descKey: 'antilog.description',

@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "KGV-rekenmachine - Kleinste Gemeenschappelijke Veelvoud",
+      "description": "Bereken het Kleinste Gemeenschappelijke Veelvoud (KGV) van twee of meer getallen direct. Vind het kleinste positieve gehele getal dat door alle getallen deelbaar is. Gratis online KGV-rekenmachine met stappen.",
+      "inputLabel": "Voer getallen in",
+      "inputPlaceholder": "bijv. 12, 18, 24",
+      "inputHint": "Voer twee of meer positieve gehele getallen in, gescheiden door komma's, spaties of puntkomma's",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "results": "Resultaten",
+      "numbers": "Getallen",
+      "lcmResult": "Kleinste Gemeenschappelijke Veelvoud (KGV)",
+      "steps": "Berekeningsstappen",
+      "formula": "Formule",
+      "enterNumbers": "Voer ten minste twee getallen in om te berekenen",
+      "errorInvalid": "Voer geldige positieve gehele getallen in",
+      "errorZero": "Nul kan niet worden opgenomen in KGV-berekening",
+      "errorMinTwo": "Voer ten minste twee getallen in",
+      "seo": {
+        "title": "KGV-rekenmachine – Vind Kleinste Gemeenschappelijke Veelvoud Online",
+        "description": "Gratis Kleinste Gemeenschappelijke Veelvoud (KGV) rekenmachine. Bereken KGV van twee of meer getallen direct met stap-voor-stap oplossingen. Perfect voor studenten, docenten en iedereen die met breuken en getaltheorie werkt.",
+        "keywords": "kgv rekenmachine, kleinste gemeenschappelijke veelvoud, kgv zoeker, laagste gemeenschappelijke veelvoud, kgv van getallen, gemeenschappelijk veelvoud rekenmachine, kgv met stappen, getaltheorie rekenmachine",
+        "content": {
+          "heading": "Wat is Kleinste Gemeenschappelijke Veelvoud (KGV)?",
+          "paragraph1": "Het Kleinste Gemeenschappelijke Veelvoud (KGV), ook bekend als het laagste gemeenschappelijke veelvoud, is het kleinste positieve gehele getal dat zonder rest deelbaar is door alle gegeven getallen. Bijvoorbeeld, het KGV van 4 en 6 is 12, omdat 12 het kleinste getal is dat zowel door 4 als 6 gelijkmatig wordt gedeeld. Onze gratis KGV-rekenmachine helpt je het kleinste gemeenschappelijke veelvoud van elke set positieve gehele getallen snel en nauwkeurig te vinden, met stap-voor-stap oplossingen.",
+          "paragraph2": "KGV is nauw verbonden met de Grootste Gemeenschappelijke Deler (GGD). De fundamentele relatie is: KGV(a, b) × GGD(a, b) = a × b. Dit betekent dat als je de GGD van twee getallen kent, je gemakkelijk hun KGV kunt berekenen. Voor meerdere getallen wordt het KGV opeenvolgend berekend: vind eerst het KGV van de eerste twee getallen, vind dan het KGV van dat resultaat met het derde getal, enzovoort. De eigenschappen van KGV omvatten: KGV(a, b) ≥ max(a, b), KGV(a, 1) = a, en KGV(a, a) = a.",
+          "paragraph3": "KGV heeft tal van praktische toepassingen in het dagelijks leven en wiskunde: in breukrekenen (het vinden van gemeenschappelijke noemers bij het optellen of aftrekken van breuken), in planningsproblemen (bepalen wanneer gebeurtenissen gelijktijdig plaatsvinden, zoals bussen die bij dezelfde halte aankomen), in muziektheorie (berekenen van ritmische patronen en beats), in tandwielratio's en mechanische systemen (synchroniseren van roterende delen), bij het oplossen van simultane vergelijkingen, en in cryptografie en computerwetenschap. Het begrijpen van KGV is essentieel voor iedereen die met breuken, verhoudingen of periodieke gebeurtenissen werkt.",
+          "paragraph4": "Onze KGV-rekenmachine verwerkt elk aantal positieve gehele getallen en toont de berekeningsstappen, waardoor het perfect is voor educatieve doeleinden. De rekenmachine gebruikt de efficiënte methode van delen door de GGD om het KGV snel te berekenen, zelfs voor grote getallen. Of je nu een student bent die leert over factoren en veelvouden, een docent die wiskundelessen voorbereidt, een ingenieur die aan synchronisatieproblemen werkt, of iemand die snelle KGV-berekeningen nodig heeft, ons hulpmiddel levert direct en gratis nauwkeurige resultaten.",
+          "exampleHeading": "Voorbeeld: KGV-berekeningen",
+          "exampleText": "Voorbeeld 1: KGV(12, 18) = 36. De veelvouden van 12 zijn: 12, 24, 36, 48... De veelvouden van 18 zijn: 18, 36, 54... Het kleinste gemeenschappelijke veelvoud is 36. Voorbeeld 2: KGV(4, 6, 8) = 24. Eerst, KGV(4, 6) = 12, dan KGV(12, 8) = 24. Voorbeeld 3: KGV(15, 25) = 75. Met de formule: GGD(15, 25) = 5, dus KGV = (15 × 25) / 5 = 75. Voorbeeld 4: KGV(7, 11) = 77. Wanneer twee getallen relatief priem zijn (GGD = 1), is hun KGV gelijk aan hun product."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            {
+              "question": "Wat is het verschil tussen KGV en GGD?",
+              "answer": "KGV (Kleinste Gemeenschappelijke Veelvoud) is het kleinste getal dat deelbaar is door alle gegeven getallen, terwijl GGD (Grootste Gemeenschappelijke Deler) het grootste getal is dat alle gegeven getallen deelt. KGV vindt gemeenschappelijke veelvouden; GGD vindt gemeenschappelijke factoren. Ze zijn gerelateerd door de formule: KGV(a, b) × GGD(a, b) = a × b. Bijvoorbeeld voor 12 en 18: KGV = 36, GGD = 6, en 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Hoe vind je het KGV van twee getallen?",
+              "answer": "Er zijn verschillende methoden om het KGV te vinden: (1) Veelvouden opsommen methode: som veelvouden van elk getal op totdat je de kleinste gemeenschappelijke vindt. (2) Priemfactorisatie: breek elk getal af in priemfactoren, vermenigvuldig dan de hoogste macht van elke priemfactor. (3) GGD gebruiken: bereken KGV(a, b) = |a × b| / GGD(a, b). (4) Delingsmethode: deel herhaaldelijk door gemeenschappelijke factoren. Onze rekenmachine gebruikt de efficiënte GGD-methode voor snelle resultaten."
+            },
+            {
+              "question": "Kan het KGV kleiner zijn dan de oorspronkelijke getallen?",
+              "answer": "Nee, het KGV is altijd groter dan of gelijk aan het grootste van de gegeven getallen. Per definitie moet het KGV deelbaar zijn door alle invoergetallen, dus het kan niet kleiner zijn dan een van hen. De enige uitzondering is bij het vinden van het KGV van een enkel getal met zichzelf, waarbij KGV(n, n) = n. Bijvoorbeeld, KGV(15, 25) = 75, wat groter is dan zowel 15 als 25."
+            },
+            {
+              "question": "Waarom hebben we KGV nodig bij het optellen van breuken?",
+              "answer": "Bij het optellen of aftrekken van breuken met verschillende noemers, hebben we een gemeenschappelijke noemer nodig. Het KGV van de noemers geeft ons de Kleinste Gemeenschappelijke Noemer (KGN), wat het kleinste getal is waardoor beide noemers delen. Dit minimaliseert de grootte van de resulterende breuk. Bijvoorbeeld, om 1/4 + 1/6 op te tellen, vinden we KGV(4, 6) = 12, wat ons 3/12 + 2/12 = 5/12 geeft."
+            },
+            {
+              "question": "Wat is het KGV van relatief priemgetallen?",
+              "answer": "Twee getallen zijn relatief priem als hun GGD 1 is, wat betekent dat ze geen gemeenschappelijke factoren delen behalve 1. Voor relatief priemgetallen is het KGV gelijk aan hun product: KGV(a, b) = a × b. Bijvoorbeeld, 7 en 11 zijn relatief priem (GGD = 1), dus KGV(7, 11) = 7 × 11 = 77. Evenzo is KGV(9, 16) = 144 omdat GGD(9, 16) = 1."
+            },
+            {
+              "question": "Is deze KGV-rekenmachine gratis te gebruiken?",
+              "answer": "Ja, onze KGV-rekenmachine is volledig gratis te gebruiken zonder registratie, abonnement of betaling vereist. Voer een willekeurige set positieve gehele getallen in en krijg directe, nauwkeurige resultaten met stap-voor-stap berekeningen. De rekenmachine kan meerdere getallen tegelijk verwerken en toont het volledige oplossingproces. Perfect voor studenten, docenten, ingenieurs en iedereen die snelle KGV-berekeningen nodig heeft."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde Rekenmachines",
+          "gcd": "GGD-rekenmachine",
+          "gcdDesc": "Bereken de Grootste Gemeenschappelijke Deler (GGD) van twee of meer getallen met stap-voor-stap oplossingen",
+          "fractions": "Breukrekenmachine",
+          "fractionsDesc": "Tel op, trek af, vermenigvuldig en deel breuken met gemeenschappelijke noemers met behulp van KGV",
+          "division": "Deelrekenmachine",
+          "divisionDesc": "Voer deelbewerkingen uit met gedetailleerde quotiënt- en restberekeningen"
+        }
+      }
+    },
     "convolution": {
       "title": "Convolutiecalculator",
       "description": "Bereken de discrete convolutie van twee gegevensreeksen. Gratis online tool voor signaalverwerking, wiskunde en technische toepassingen.",

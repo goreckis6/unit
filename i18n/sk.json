@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "Kalkulačka NSN - Najmenší spoločný násobok",
+      "description": "Vypočítajte najmenší spoločný násobok (NSN) dvoch alebo viacerých čísel okamžite. Nájdite najmenšie kladné celé číslo deliteľné všetkými číslami. Bezplatná online NSN kalkulačka s krokmi.",
+      "inputLabel": "Zadajte čísla",
+      "inputPlaceholder": "napr. 12, 18, 24",
+      "inputHint": "Zadajte dve alebo viac kladných celých čísel oddelených čiarkami, medzerami alebo bodkočiarkami",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "results": "Výsledky",
+      "numbers": "Čísla",
+      "lcmResult": "Najmenší spoločný násobok (NSN)",
+      "steps": "Kroky výpočtu",
+      "formula": "Vzorec",
+      "enterNumbers": "Zadajte aspoň dve čísla na výpočet",
+      "errorInvalid": "Zadajte platné kladné celé čísla",
+      "errorZero": "Nula nemôže byť zahrnutá do výpočtu NSN",
+      "errorMinTwo": "Zadajte aspoň dve čísla",
+      "seo": {
+        "title": "Kalkulačka NSN – Nájdite najmenší spoločný násobok online",
+        "description": "Bezplatná kalkulačka najmenšieho spoločného násobku (NSN). Vypočítajte NSN dvoch alebo viacerých čísel okamžite s riešeniami krok za krokom. Ideálne pre študentov, učiteľov a každého, kto pracuje so zlomkami a teóriou čísel.",
+        "keywords": "kalkulačka nsn, najmenší spoločný násobok, vyhľadávač nsn, najnižší spoločný násobok, nsn čísel, kalkulačka spoločných násobkov, nsn s krokmi, kalkulačka teórie čísel",
+        "content": {
+          "heading": "Čo je najmenší spoločný násobok (NSN)?",
+          "paragraph1": "Najmenší spoločný násobok (NSN), známy aj ako najnižší spoločný násobok, je najmenšie kladné celé číslo, ktoré je deliteľné všetkými danými číslami bez zvyšku. Napríklad NSN čísel 4 a 6 je 12, pretože 12 je najmenšie číslo, ktorým sa 4 aj 6 rovnomerne delia. Naša bezplatná NSN kalkulačka vám pomôže rýchlo a presne nájsť najmenší spoločný násobok akejkoľvek sady kladných celých čísel s riešeniami krok za krokom.",
+          "paragraph2": "NSN úzko súvisí s najväčším spoločným deliteľom (NSD). Základný vzťah je: NSN(a, b) × NSD(a, b) = a × b. To znamená, že ak poznáte NSD dvoch čísel, môžete ľahko vypočítať ich NSN. Pre viac čísel sa NSN vypočíta postupne: najprv nájdite NSN prvých dvoch čísel, potom nájdite NSN tohto výsledku s tretím číslom, a tak ďalej. Vlastnosti NSN zahŕňajú: NSN(a, b) ≥ max(a, b), NSN(a, 1) = a a NSN(a, a) = a.",
+          "paragraph3": "NSN má množstvo praktických aplikácií v každodennom živote a matematike: v aritmetike zlomkov (hľadanie spoločných menovateľov pri sčítaní alebo odčítaní zlomkov), v problémoch plánovania (určovanie, kedy sa udalosti vyskytujú súčasne, ako autobusy prichádzajúce na rovnakú zastávku), v teórii hudby (výpočet rytmických vzorov a úderov), v prevodových pomeroch a mechanických systémoch (synchronizácia rotujúcich častí), pri riešení simultánnych rovníc a v kryptografii a informatike. Pochopenie NSN je nevyhnutné pre každého, kto pracuje so zlomkami, pomermi alebo periodickými udalosťami.",
+          "paragraph4": "Naša NSN kalkulačka spracováva ľubovoľný počet kladných celých čísel a zobrazuje kroky výpočtu, čím je ideálna na vzdelávacie účely. Kalkulačka používa efektívnu metódu delenia NSD na rýchly výpočet NSN aj pre veľké čísla. Či už ste študent učiaci sa o faktoroch a násobkoch, učiteľ pripravujúci hodiny matematiky, inžinier pracujúci na problémoch synchronizácie alebo ktokoľvek, kto potrebuje rýchle NSN výpočty, náš nástroj poskytuje presné výsledky okamžite a zadarmo.",
+          "exampleHeading": "Príklad: NSN výpočty",
+          "exampleText": "Príklad 1: NSN(12, 18) = 36. Násobky 12 sú: 12, 24, 36, 48... Násobky 18 sú: 18, 36, 54... Najmenší spoločný násobok je 36. Príklad 2: NSN(4, 6, 8) = 24. Najprv NSN(4, 6) = 12, potom NSN(12, 8) = 24. Príklad 3: NSN(15, 25) = 75. Pomocou vzorca: NSD(15, 25) = 5, takže NSN = (15 × 25) / 5 = 75. Príklad 4: NSN(7, 11) = 77. Keď sú dve čísla vzájomne prvočísla (NSD = 1), ich NSN sa rovná ich súčinu."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {
+              "question": "Aký je rozdiel medzi NSN a NSD?",
+              "answer": "NSN (najmenší spoločný násobok) je najmenšie číslo deliteľné všetkými danými číslami, zatiaľ čo NSD (najväčší spoločný deliteľ) je najväčšie číslo, ktoré delí všetky dané čísla. NSN nájde spoločné násobky; NSD nájde spoločné faktory. Sú spojené vzorcom: NSN(a, b) × NSD(a, b) = a × b. Napríklad pre 12 a 18: NSN = 36, NSD = 6 a 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Ako nájdete NSN dvoch čísel?",
+              "answer": "Existuje niekoľko metód na nájdenie NSN: (1) Metóda zoznamu násobkov: zoznam násobkov každého čísla, kým nenájdete najmenší spoločný. (2) Rozklad na prvočísla: rozložte každé číslo na prvočísla, potom vynásobte najvyššiu mocninu každého prvočísla. (3) Použitie NSD: vypočítajte NSN(a, b) = |a × b| / NSD(a, b). (4) Metóda delenia: opakovane deľte spoločnými faktormi. Naša kalkulačka používa efektívnu metódu NSD pre rýchle výsledky."
+            },
+            {
+              "question": "Môže byť NSN menší ako pôvodné čísla?",
+              "answer": "Nie, NSN je vždy väčší alebo rovný najväčšiemu z daných čísel. Podľa definície musí byť NSN deliteľný všetkými vstupnými číslami, takže nemôže byť menší ako ktorékoľvek z nich. Jedinou výnimkou je nájdenie NSN jedného čísla so sebou samým, kde NSN(n, n) = n. Napríklad NSN(15, 25) = 75, čo je väčšie ako 15 aj 25."
+            },
+            {
+              "question": "Prečo potrebujeme NSN pri sčítaní zlomkov?",
+              "answer": "Pri sčítaní alebo odčítaní zlomkov s rôznymi menovateľmi potrebujeme spoločného menovateľa. NSN menovateľov nám dáva najmenší spoločný menovateľ (NSM), ktorý je najmenšie číslo, ktorým sa delia obaja menovatelia. To minimalizuje veľkosť výsledného zlomku. Napríklad na sčítanie 1/4 + 1/6 nájdeme NSN(4, 6) = 12, čo nám dáva 3/12 + 2/12 = 5/12."
+            },
+            {
+              "question": "Aký je NSN nesúdelných čísel?",
+              "answer": "Dve čísla sú nesúdelné (alebo relatívne prvočísla), ak je ich NSD 1, čo znamená, že nezdieľajú žiadne spoločné faktory okrem 1. Pre nesúdelné čísla sa NSN rovná ich súčinu: NSN(a, b) = a × b. Napríklad 7 a 11 sú nesúdelné (NSD = 1), takže NSN(7, 11) = 7 × 11 = 77. Podobne NSN(9, 16) = 144, pretože NSD(9, 16) = 1."
+            },
+            {
+              "question": "Je táto NSN kalkulačka bezplatná?",
+              "answer": "Áno, naša NSN kalkulačka je úplne bezplatná bez požiadaviek na registráciu, predplatné alebo platbu. Zadajte akúkoľvek sadu kladných celých čísel a získajte okamžité, presné výsledky s krok za krokom výpočtami. Kalkulačka dokáže spracovať viac čísel naraz a zobrazuje kompletný proces riešenia. Ideálne pre študentov, pedagógov, inžinierov a kohokoľvek, kto potrebuje rýchle NSN výpočty."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace kalkulačky",
+          "gcd": "Kalkulačka NSD",
+          "gcdDesc": "Vypočítajte najväčší spoločný deliteľ (NSD) dvoch alebo viacerých čísel s riešeniami krok za krokom",
+          "fractions": "Kalkulačka zlomkov",
+          "fractionsDesc": "Sčítajte, odčítajte, násobte a deľte zlomky so spoločnými menovateľmi pomocou NSN",
+          "division": "Kalkulačka delenia",
+          "divisionDesc": "Vykonávajte operácie delenia s podrobnými výpočtami podielu a zvyšku"
+        }
+      }
+    },
     "convolution": {
       "title": "Kalkulačka Konvolúcie",
       "description": "Vypočítajte diskrétnu konvolúciu dvoch dátových sekvencií. Bezplatný online nástroj na spracovanie signálov, matematiku a inžinierske aplikácie.",

@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { RatioCalculator } from './calculator';
+import { LCMCalculator } from './calculator';
 import { FaqSchema } from '@/components/FaqSchema';
 import { FaqSection } from '@/components/FaqSection';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
@@ -15,18 +15,19 @@ interface FaqItem {
 async function getFaqItems(locale: string): Promise<FaqItem[]> {
   try {
     const messages = await import(`@/i18n/${locale}.json`);
-    return (messages.default?.calculators?.ratio?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.lcm?.seo?.faq?.items as FaqItem[]) || [];
   } catch {
     const messages = await import('@/i18n/en.json');
-    return (messages.default?.calculators?.ratio?.seo?.faq?.items as FaqItem[]) || [];
+    return (messages.default?.calculators?.lcm?.seo?.faq?.items as FaqItem[]) || [];
   }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.ratio.seo' });
-  const path = '/calculators/math/ratio';
+  const t = await getTranslations({ locale, namespace: 'calculators.lcm.seo' });
+  const path = '/calculators/math/lcm';
   const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
+  
   return {
     title: t('title'),
     description: t('description'),
@@ -44,15 +45,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function RatioPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function LCMPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'calculators.ratio' });
+  const t = await getTranslations({ locale, namespace: 'calculators.lcm' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
-  const tSeo = await getTranslations({ locale, namespace: 'calculators.ratio.seo.content' });
-  const tFaq = await getTranslations({ locale, namespace: 'calculators.ratio.seo.faq' });
-  const tRelated = await getTranslations({ locale, namespace: 'calculators.ratio.seo.related' });
 
   const faqItems = await getFaqItems(locale);
+  const tSeo = await getTranslations({ locale, namespace: 'calculators.lcm.seo.content' });
+  const tFaq = await getTranslations({ locale, namespace: 'calculators.lcm.seo.faq' });
+  const tRelated = await getTranslations({ locale, namespace: 'calculators.lcm.seo.related' });
 
   return (
     <>
@@ -78,49 +79,67 @@ export default async function RatioPage({ params }: { params: Promise<{ locale: 
       <div className="calculator-container">
         <div className="container">
           <div className="calculator-card">
-            <RatioCalculator />
+            <LCMCalculator />
           </div>
         </div>
       </div>
 
+      {/* SEO Content Section */}
       <div className="seo-content-section">
         <div className="container">
           <div className="seo-content-card">
             <h2 className="seo-heading">{tSeo('heading')}</h2>
+            
             <div className="seo-paragraphs">
-              <p className="seo-paragraph">{tSeo('paragraph1')}</p>
-              <p className="seo-paragraph">{tSeo('paragraph2')}</p>
-              <p className="seo-paragraph">{tSeo('paragraph3')}</p>
-              <p className="seo-paragraph">{tSeo('paragraph4')}</p>
+              <p className="seo-paragraph">
+                {tSeo('paragraph1')}
+              </p>
+              
+              <p className="seo-paragraph">
+                {tSeo('paragraph2')}
+              </p>
+              
+              <p className="seo-paragraph">
+                {tSeo('paragraph3')}
+              </p>
+              
+              <p className="seo-paragraph">
+                {tSeo('paragraph4')}
+              </p>
+              
               <div className="seo-example">
                 <h3 className="example-heading">{tSeo('exampleHeading')}</h3>
-                <p className="example-text">{tSeo('exampleText')}</p>
+                <p className="example-text">
+                  {tSeo('exampleText')}
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Related Calculators Section */}
       <div className="related-calculators-section">
         <div className="related-content-card">
           <h2 className="related-heading">{tRelated('heading')}</h2>
           <div className="related-grid">
+            <Link href="/calculators/math/addition" className="related-card">
+              <h3 className="related-title">{tRelated('gcd')}</h3>
+              <p className="related-desc">{tRelated('gcdDesc')}</p>
+            </Link>
+            <Link href="/calculators/math/adding-fractions" className="related-card">
+              <h3 className="related-title">{tRelated('fractions')}</h3>
+              <p className="related-desc">{tRelated('fractionsDesc')}</p>
+            </Link>
             <Link href="/calculators/math/percentage" className="related-card">
-              <h3 className="related-title">{tRelated('percentage')}</h3>
-              <p className="related-desc">{tRelated('percentageDesc')}</p>
-            </Link>
-            <Link href="/calculators/math/remainder" className="related-card">
-              <h3 className="related-title">{tRelated('remainder')}</h3>
-              <p className="related-desc">{tRelated('remainderDesc')}</p>
-            </Link>
-            <Link href="/calculators/math/long-division" className="related-card">
-              <h3 className="related-title">{tRelated('longDivision')}</h3>
-              <p className="related-desc">{tRelated('longDivisionDesc')}</p>
+              <h3 className="related-title">{tRelated('division')}</h3>
+              <p className="related-desc">{tRelated('divisionDesc')}</p>
             </Link>
           </div>
         </div>
       </div>
 
+      {/* FAQ Section */}
       {faqItems.length > 0 && (
         <FaqSection heading={tFaq('heading')} items={faqItems} />
       )}

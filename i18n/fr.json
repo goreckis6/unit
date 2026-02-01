@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "Calculateur PPCM - Plus Petit Commun Multiple",
+      "description": "Calculez le Plus Petit Commun Multiple (PPCM) de deux nombres ou plus instantanément. Trouvez le plus petit entier positif divisible par tous les nombres. Calculateur PPCM en ligne gratuit avec étapes.",
+      "inputLabel": "Entrer les nombres",
+      "inputPlaceholder": "ex. 12, 18, 24",
+      "inputHint": "Entrez deux entiers positifs ou plus séparés par des virgules, des espaces ou des points-virgules",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "results": "Résultats",
+      "numbers": "Nombres",
+      "lcmResult": "Plus Petit Commun Multiple (PPCM)",
+      "steps": "Étapes de calcul",
+      "formula": "Formule",
+      "enterNumbers": "Entrez au moins deux nombres pour calculer",
+      "errorInvalid": "Veuillez entrer des entiers positifs valides",
+      "errorZero": "Zéro ne peut pas être inclus dans le calcul du PPCM",
+      "errorMinTwo": "Veuillez entrer au moins deux nombres",
+      "seo": {
+        "title": "Calculateur PPCM – Trouver le Plus Petit Commun Multiple en ligne",
+        "description": "Calculateur gratuit du Plus Petit Commun Multiple (PPCM). Calculez le PPCM de deux nombres ou plus instantanément avec des solutions étape par étape. Parfait pour les étudiants, les enseignants et tous ceux qui travaillent avec les fractions et la théorie des nombres.",
+        "keywords": "calculateur ppcm, plus petit commun multiple, trouveur ppcm, plus bas commun multiple, ppcm de nombres, calculateur de multiples communs, ppcm avec étapes, calculateur théorie des nombres",
+        "content": {
+          "heading": "Qu'est-ce que le Plus Petit Commun Multiple (PPCM) ?",
+          "paragraph1": "Le Plus Petit Commun Multiple (PPCM), également connu sous le nom de plus bas commun multiple, est le plus petit entier positif divisible par tous les nombres donnés sans reste. Par exemple, le PPCM de 4 et 6 est 12, car 12 est le plus petit nombre que 4 et 6 divisent uniformément. Notre calculateur PPCM gratuit vous aide à trouver le plus petit commun multiple de n'importe quel ensemble d'entiers positifs rapidement et avec précision, avec des solutions étape par étape.",
+          "paragraph2": "Le PPCM est étroitement lié au Plus Grand Commun Diviseur (PGCD). La relation fondamentale est : PPCM(a, b) × PGCD(a, b) = a × b. Cela signifie que si vous connaissez le PGCD de deux nombres, vous pouvez facilement calculer leur PPCM. Pour plusieurs nombres, le PPCM est calculé séquentiellement : trouvez d'abord le PPCM des deux premiers nombres, puis trouvez le PPCM de ce résultat avec le troisième nombre, et ainsi de suite. Les propriétés du PPCM incluent : PPCM(a, b) ≥ max(a, b), PPCM(a, 1) = a, et PPCM(a, a) = a.",
+          "paragraph3": "Le PPCM a de nombreuses applications pratiques dans la vie quotidienne et les mathématiques : dans l'arithmétique des fractions (trouver des dénominateurs communs lors de l'addition ou de la soustraction de fractions), dans les problèmes de planification (déterminer quand les événements se produisent simultanément, comme les bus arrivant au même arrêt), dans la théorie musicale (calcul des motifs rythmiques et des temps), dans les rapports d'engrenages et les systèmes mécaniques (synchronisation des pièces rotatives), dans la résolution d'équations simultanées, et dans la cryptographie et l'informatique. Comprendre le PPCM est essentiel pour tous ceux qui travaillent avec des fractions, des rapports ou des événements périodiques.",
+          "paragraph4": "Notre calculateur PPCM gère n'importe quel nombre d'entiers positifs et affiche les étapes de calcul, ce qui le rend parfait à des fins éducatives. Le calculateur utilise la méthode efficace de division par le PGCD pour calculer le PPCM rapidement, même pour de grands nombres. Que vous soyez un étudiant apprenant sur les facteurs et les multiples, un enseignant préparant des leçons de mathématiques, un ingénieur travaillant sur des problèmes de synchronisation, ou quelqu'un ayant besoin de calculs PPCM rapides, notre outil fournit des résultats précis instantanément et gratuitement.",
+          "exampleHeading": "Exemple : Calculs PPCM",
+          "exampleText": "Exemple 1 : PPCM(12, 18) = 36. Les multiples de 12 sont : 12, 24, 36, 48... Les multiples de 18 sont : 18, 36, 54... Le plus petit multiple commun est 36. Exemple 2 : PPCM(4, 6, 8) = 24. D'abord, PPCM(4, 6) = 12, puis PPCM(12, 8) = 24. Exemple 3 : PPCM(15, 25) = 75. En utilisant la formule : PGCD(15, 25) = 5, donc PPCM = (15 × 25) / 5 = 75. Exemple 4 : PPCM(7, 11) = 77. Lorsque deux nombres sont premiers entre eux (PGCD = 1), leur PPCM est égal à leur produit."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Quelle est la différence entre PPCM et PGCD ?",
+              "answer": "PPCM (Plus Petit Commun Multiple) est le plus petit nombre divisible par tous les nombres donnés, tandis que PGCD (Plus Grand Commun Diviseur) est le plus grand nombre qui divise tous les nombres donnés. PPCM trouve des multiples communs ; PGCD trouve des facteurs communs. Ils sont liés par la formule : PPCM(a, b) × PGCD(a, b) = a × b. Par exemple, pour 12 et 18 : PPCM = 36, PGCD = 6, et 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Comment trouve-t-on le PPCM de deux nombres ?",
+              "answer": "Il existe plusieurs méthodes pour trouver le PPCM : (1) Méthode de liste des multiples : listez les multiples de chaque nombre jusqu'à trouver le plus petit commun. (2) Factorisation première : décomposez chaque nombre en facteurs premiers, puis multipliez la plus haute puissance de chaque facteur premier. (3) Utilisation du PGCD : calculez PPCM(a, b) = |a × b| / PGCD(a, b). (4) Méthode de division : divisez répétitivement par des facteurs communs. Notre calculateur utilise la méthode efficace du PGCD pour des résultats rapides."
+            },
+            {
+              "question": "Le PPCM peut-il être plus petit que les nombres d'origine ?",
+              "answer": "Non, le PPCM est toujours supérieur ou égal au plus grand des nombres donnés. Par définition, le PPCM doit être divisible par tous les nombres d'entrée, il ne peut donc pas être plus petit que l'un d'entre eux. La seule exception est lors de la recherche du PPCM d'un seul nombre avec lui-même, où PPCM(n, n) = n. Par exemple, PPCM(15, 25) = 75, qui est plus grand que 15 et 25."
+            },
+            {
+              "question": "Pourquoi avons-nous besoin du PPCM pour additionner des fractions ?",
+              "answer": "Lors de l'addition ou de la soustraction de fractions avec différents dénominateurs, nous avons besoin d'un dénominateur commun. Le PPCM des dénominateurs nous donne le Plus Petit Dénominateur Commun (PPDC), qui est le plus petit nombre par lequel les deux dénominateurs se divisent. Cela minimise la taille de la fraction résultante. Par exemple, pour additionner 1/4 + 1/6, nous trouvons PPCM(4, 6) = 12, ce qui nous donne 3/12 + 2/12 = 5/12."
+            },
+            {
+              "question": "Quel est le PPCM de nombres premiers entre eux ?",
+              "answer": "Deux nombres sont premiers entre eux (ou relativement premiers) si leur PGCD est 1, ce qui signifie qu'ils ne partagent aucun facteur commun sauf 1. Pour les nombres premiers entre eux, le PPCM est égal à leur produit : PPCM(a, b) = a × b. Par exemple, 7 et 11 sont premiers entre eux (PGCD = 1), donc PPCM(7, 11) = 7 × 11 = 77. De même, PPCM(9, 16) = 144 car PGCD(9, 16) = 1."
+            },
+            {
+              "question": "Ce calculateur PPCM est-il gratuit ?",
+              "answer": "Oui, notre calculateur PPCM est entièrement gratuit sans inscription, abonnement ou paiement requis. Entrez n'importe quel ensemble d'entiers positifs et obtenez des résultats instantanés et précis avec des calculs étape par étape. Le calculateur peut gérer plusieurs nombres à la fois et affiche le processus de solution complet. Parfait pour les étudiants, les éducateurs, les ingénieurs et tous ceux qui ont besoin de calculs PPCM rapides."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Connexes",
+          "gcd": "Calculateur PGCD",
+          "gcdDesc": "Calculez le Plus Grand Commun Diviseur (PGCD) de deux nombres ou plus avec des solutions étape par étape",
+          "fractions": "Calculateur de Fractions",
+          "fractionsDesc": "Additionnez, soustrayez, multipliez et divisez des fractions avec des dénominateurs communs en utilisant le PPCM",
+          "division": "Calculateur de Division",
+          "divisionDesc": "Effectuez des opérations de division avec des calculs détaillés de quotient et de reste"
+        }
+      }
+    },
     "convolution": {
       "title": "Calculateur de Convolution",
       "description": "Calculez la convolution discrète de deux séquences de données. Outil en ligne gratuit pour le traitement du signal, les mathématiques et les applications d'ingénierie.",

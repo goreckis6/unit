@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "LCM-beregner - Mindste fælles multiplum",
+      "description": "Beregn mindste fælles multiplum (LCM) af to eller flere tal øjeblikkelig. Find det mindste positive heltal deleligt med alle tal. Gratis online LCM-beregner med trin.",
+      "inputLabel": "Indtast tal",
+      "inputPlaceholder": "f.eks. 12, 18, 24",
+      "inputHint": "Indtast to eller flere positive heltal adskilt af kommaer, mellemrum eller semikoloner",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "results": "Resultater",
+      "numbers": "Tal",
+      "lcmResult": "Mindste fælles multiplum (LCM)",
+      "steps": "Beregningstrin",
+      "formula": "Formel",
+      "enterNumbers": "Indtast mindst to tal for at beregne",
+      "errorInvalid": "Indtast gyldige positive heltal",
+      "errorZero": "Nul kan ikke inkluderes i LCM-beregning",
+      "errorMinTwo": "Indtast mindst to tal",
+      "seo": {
+        "title": "LCM-beregner – Find mindste fælles multiplum online",
+        "description": "Gratis mindste fælles multiplum (LCM) beregner. Beregn LCM af to eller flere tal øjeblikkelig med trin-for-trin løsninger. Perfekt til studerende, lærere og alle, der arbejder med brøker og talteori.",
+        "keywords": "lcm beregner, mindste fælles multiplum, lcm finder, mindste fælles multiplum, lcm af tal, fælles multiplum beregner, lcm med trin, talteori beregner",
+        "content": {
+          "heading": "Hvad er mindste fælles multiplum (LCM)?",
+          "paragraph1": "Mindste fælles multiplum (LCM), også kendt som det laveste fælles multiplum, er det mindste positive heltal, der er deleligt med alle givne tal uden rest. For eksempel er LCM af 4 og 6 12, fordi 12 er det mindste tal, som både 4 og 6 går jævnt op i. Vores gratis LCM-beregner hjælper dig med at finde mindste fælles multiplum af ethvert sæt positive heltal hurtigt og nøjagtigt, med trin-for-trin løsninger.",
+          "paragraph2": "LCM er tæt relateret til største fælles divisor (GCD). Den grundlæggende relation er: LCM(a, b) × GCD(a, b) = a × b. Dette betyder, at hvis du kender GCD af to tal, kan du nemt beregne deres LCM. For flere tal beregnes LCM sekventielt: find først LCM af de første to tal, find derefter LCM af det resultat med det tredje tal, og så videre. Egenskaber ved LCM inkluderer: LCM(a, b) ≥ max(a, b), LCM(a, 1) = a, og LCM(a, a) = a.",
+          "paragraph3": "LCM har mange praktiske anvendelser i hverdagen og matematik: i brøkaritmetik (at finde fælles nævnere ved addition eller subtraktion af brøker), i planlægningsproblemer (at bestemme hvornår begivenheder sker samtidigt, såsom busser der ankommer til samme stop), i musikteori (at beregne rytmiske mønstre og taktslag), i gearforhold og mekaniske systemer (synkronisering af roterende dele), i løsning af simultane ligninger, og i kryptografi og datalogi. Forståelse af LCM er essentielt for alle, der arbejder med brøker, forhold eller periodiske begivenheder.",
+          "paragraph4": "Vores LCM-beregner håndterer et hvilket som helst antal positive heltal og viser beregningstrinnene, hvilket gør den perfekt til undervisningsformål. Beregneren bruger den effektive metode til at dividere med GCD for at beregne LCM hurtigt, selv for store tal. Uanset om du er en studerende, der lærer om faktorer og multipla, en lærer der forbereder matematiklektioner, en ingeniør der arbejder med synkroniseringsproblemer, eller nogen der har brug for hurtige LCM-beregninger, leverer vores værktøj nøjagtige resultater øjeblikkelig og gratis.",
+          "exampleHeading": "Eksempel: LCM-beregninger",
+          "exampleText": "Eksempel 1: LCM(12, 18) = 36. Multiplerne af 12 er: 12, 24, 36, 48... Multiplerne af 18 er: 18, 36, 54... Det mindste fælles multiplum er 36. Eksempel 2: LCM(4, 6, 8) = 24. Først, LCM(4, 6) = 12, derefter LCM(12, 8) = 24. Eksempel 3: LCM(15, 25) = 75. Ved brug af formlen: GCD(15, 25) = 5, så LCM = (15 × 25) / 5 = 75. Eksempel 4: LCM(7, 11) = 77. Når to tal er relativt primiske (GCD = 1), er deres LCM lig med deres produkt."
+        },
+        "faq": {
+          "heading": "Ofte stillede spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er forskellen mellem LCM og GCD?",
+              "answer": "LCM (mindste fælles multiplum) er det mindste tal, der er deleligt med alle givne tal, mens GCD (største fælles divisor) er det største tal, der deler alle givne tal. LCM finder fælles multipla; GCD finder fælles faktorer. De er relateret ved formlen: LCM(a, b) × GCD(a, b) = a × b. For eksempel for 12 og 18: LCM = 36, GCD = 6, og 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Hvordan finder du LCM af to tal?",
+              "answer": "Der er flere metoder til at finde LCM: (1) Listemetode for multipla: list multipla af hvert tal, indtil du finder det mindste fælles. (2) Primfaktorisering: nedbryd hvert tal i primfaktorer, multiplicér derefter den højeste potens af hver primfaktor. (3) Brug af GCD: beregn LCM(a, b) = |a × b| / GCD(a, b). (4) Divisionsmetode: divider gentagne gange med fælles faktorer. Vores beregner bruger den effektive GCD-metode til hurtige resultater."
+            },
+            {
+              "question": "Kan LCM være mindre end de oprindelige tal?",
+              "answer": "Nej, LCM er altid større end eller lig med det største af de givne tal. Per definition skal LCM være deleligt med alle inputtal, så det kan ikke være mindre end nogen af dem. Den eneste undtagelse er ved at finde LCM af et enkelt tal med sig selv, hvor LCM(n, n) = n. For eksempel LCM(15, 25) = 75, som er større end både 15 og 25."
+            },
+            {
+              "question": "Hvorfor har vi brug for LCM når vi lægger brøker sammen?",
+              "answer": "Når man lægger eller trækker brøker med forskellige nævnere sammen, har vi brug for en fælles nævner. LCM af nævnerne giver os den mindste fælles nævner (LCD), som er det mindste tal, som begge nævnere går op i. Dette minimerer størrelsen af den resulterende brøk. For eksempel for at lægge 1/4 + 1/6 sammen, finder vi LCM(4, 6) = 12, hvilket giver os 3/12 + 2/12 = 5/12."
+            },
+            {
+              "question": "Hvad er LCM af relativt primiske tal?",
+              "answer": "To tal er relativt primiske hvis deres GCD er 1, hvilket betyder, at de ikke deler nogen fælles faktorer undtagen 1. For relativt primiske tal er LCM lig med deres produkt: LCM(a, b) = a × b. For eksempel er 7 og 11 relativt primiske (GCD = 1), så LCM(7, 11) = 7 × 11 = 77. Tilsvarende er LCM(9, 16) = 144 fordi GCD(9, 16) = 1."
+            },
+            {
+              "question": "Er denne LCM-beregner gratis at bruge?",
+              "answer": "Ja, vores LCM-beregner er helt gratis uden krav om registrering, abonnement eller betaling. Indtast et hvilket som helst sæt positive heltal og få øjeblikkelige, nøjagtige resultater med trin-for-trin beregninger. Beregneren kan håndtere flere tal på én gang og viser den komplette løsningsproces. Perfekt til studerende, undervisere, ingeniører og alle, der har brug for hurtige LCM-beregninger."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede beregnere",
+          "gcd": "GCD-beregner",
+          "gcdDesc": "Beregn største fælles divisor (GCD) af to eller flere tal med trin-for-trin løsninger",
+          "fractions": "Brøkberegner",
+          "fractionsDesc": "Læg sammen, træk fra, gang og divider brøker med fælles nævnere ved hjælp af LCM",
+          "division": "Divisionsberegner",
+          "divisionDesc": "Udfør divisionsoperationer med detaljerede kvotient- og restberegninger"
+        }
+      }
+    },
     "convolution": {
       "title": "Foldningsberegner",
       "description": "Beregn den diskrete foldning af to datasekvenser. Gratis online værktøj til signalbehandling, matematik og ingeniørapplikationer.",

@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "Calculator CMMMC - Cel mai mic multiplu comun",
+      "description": "Calculați cel mai mic multiplu comun (CMMMC) a două sau mai multe numere instantaneu. Găsiți cel mai mic întreg pozitiv divizibil cu toate numerele. Calculator CMMMC online gratuit cu pași.",
+      "inputLabel": "Introduceți numerele",
+      "inputPlaceholder": "ex: 12, 18, 24",
+      "inputHint": "Introduceți două sau mai multe numere întregi pozitive separate prin virgule, spații sau punct și virgulă",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "results": "Rezultate",
+      "numbers": "Numere",
+      "lcmResult": "Cel mai mic multiplu comun (CMMMC)",
+      "steps": "Pași de calcul",
+      "formula": "Formulă",
+      "enterNumbers": "Introduceți cel puțin două numere pentru a calcula",
+      "errorInvalid": "Vă rugăm să introduceți numere întregi pozitive valide",
+      "errorZero": "Zero nu poate fi inclus în calculul CMMMC",
+      "errorMinTwo": "Vă rugăm să introduceți cel puțin două numere",
+      "seo": {
+        "title": "Calculator CMMMC – Găsiți cel mai mic multiplu comun online",
+        "description": "Calculator gratuit de cel mai mic multiplu comun (CMMMC). Calculați CMMMC a două sau mai multe numere instantaneu cu soluții pas cu pas. Perfect pentru studenți, profesori și oricine lucrează cu fracții și teoria numerelor.",
+        "keywords": "calculator cmmmc, cel mai mic multiplu comun, finder cmmmc, cel mai mic multiplu comun, cmmmc de numere, calculator multipli comuni, cmmmc cu pași, calculator teorie numere",
+        "content": {
+          "heading": "Ce este cel mai mic multiplu comun (CMMMC)?",
+          "paragraph1": "Cel mai mic multiplu comun (CMMMC), cunoscut și ca cel mai mic multiplu comun, este cel mai mic întreg pozitiv divizibil cu toate numerele date fără rest. De exemplu, CMMMC al lui 4 și 6 este 12, deoarece 12 este cel mai mic număr pe care atât 4 cât și 6 îl divid uniform. Calculatorul nostru gratuit de CMMMC vă ajută să găsiți cel mai mic multiplu comun al oricărui set de numere întregi pozitive rapid și precis, cu soluții pas cu pas.",
+          "paragraph2": "CMMMC este strâns legat de Cel Mai Mare Divizor Comun (CMMDC). Relația fundamentală este: CMMMC(a, b) × CMMDC(a, b) = a × b. Aceasta înseamnă că dacă cunoașteți CMMDC a două numere, puteți calcula cu ușurință CMMMC-ul lor. Pentru mai multe numere, CMMMC este calculat secvențial: găsiți mai întâi CMMMC primelor două numere, apoi găsiți CMMMC rezultatului cu al treilea număr, și așa mai departe. Proprietățile CMMMC includ: CMMMC(a, b) ≥ max(a, b), CMMMC(a, 1) = a, și CMMMC(a, a) = a.",
+          "paragraph3": "CMMMC are numeroase aplicații practice în viața de zi cu zi și matematică: în aritmetica fracțiilor (găsirea numitorilor comuni la adunarea sau scăderea fracțiilor), în problemele de programare (determinarea când evenimentele apar simultan, cum ar fi autobuzele care sosesc la aceeași stație), în teoria muzicii (calcularea modelelor ritmice și bătăilor), în rapoartele de angrenaje și sistemele mecanice (sincronizarea pieselor rotative), în rezolvarea ecuațiilor simultane, și în criptografie și știința computerelor. Înțelegerea CMMMC este esențială pentru oricine lucrează cu fracții, raporturi sau evenimente periodice.",
+          "paragraph4": "Calculatorul nostru de CMMMC gestionează orice număr de numere întregi pozitive și afișează pașii de calcul, făcându-l perfect pentru scopuri educaționale. Calculatorul folosește metoda eficientă de împărțire la CMMDC pentru a calcula CMMMC rapid, chiar și pentru numere mari. Fie că sunteți un student care învață despre factori și multipli, un profesor care pregătește lecții de matematică, un inginer care lucrează la probleme de sincronizare, sau cineva care are nevoie de calcule CMMMC rapide, instrumentul nostru oferă rezultate precise instantaneu și gratuit.",
+          "exampleHeading": "Exemplu: Calcule CMMMC",
+          "exampleText": "Exemplul 1: CMMMC(12, 18) = 36. Multiplii lui 12 sunt: 12, 24, 36, 48... Multiplii lui 18 sunt: 18, 36, 54... Cel mai mic multiplu comun este 36. Exemplul 2: CMMMC(4, 6, 8) = 24. Mai întâi, CMMMC(4, 6) = 12, apoi CMMMC(12, 8) = 24. Exemplul 3: CMMMC(15, 25) = 75. Folosind formula: CMMDC(15, 25) = 5, deci CMMMC = (15 × 25) / 5 = 75. Exemplul 4: CMMMC(7, 11) = 77. Când două numere sunt prime între ele (CMMDC = 1), CMMMC-ul lor este egal cu produsul lor."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Care este diferența între CMMMC și CMMDC?",
+              "answer": "CMMMC (Cel Mai Mic Multiplu Comun) este cel mai mic număr divizibil cu toate numerele date, în timp ce CMMDC (Cel Mai Mare Divizor Comun) este cel mai mare număr care divide toate numerele date. CMMMC găsește multipli comuni; CMMDC găsește factori comuni. Sunt legate prin formula: CMMMC(a, b) × CMMDC(a, b) = a × b. De exemplu pentru 12 și 18: CMMMC = 36, CMMDC = 6, și 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Cum găsiți CMMMC a două numere?",
+              "answer": "Există mai multe metode pentru a găsi CMMMC: (1) Metoda listării multiplilor: listați multiplii fiecărui număr până găsiți cel mai mic comun. (2) Factorizarea primă: descompuneți fiecare număr în factori primi, apoi înmulțiți cea mai mare putere a fiecărui factor prim. (3) Folosind CMMDC: calculați CMMMC(a, b) = |a × b| / CMMDC(a, b). (4) Metoda împărțirii: împărțiți repetat la factori comuni. Calculatorul nostru folosește metoda eficientă CMMDC pentru rezultate rapide."
+            },
+            {
+              "question": "Poate CMMMC să fie mai mic decât numerele originale?",
+              "answer": "Nu, CMMMC este întotdeauna mai mare sau egal cu cel mai mare dintre numerele date. Prin definiție, CMMMC trebuie să fie divizibil cu toate numerele de intrare, deci nu poate fi mai mic decât oricare dintre ele. Singura excepție este la găsirea CMMMC a unui singur număr cu sine însuși, unde CMMMC(n, n) = n. De exemplu, CMMMC(15, 25) = 75, care este mai mare decât atât 15 cât și 25."
+            },
+            {
+              "question": "De ce avem nevoie de CMMMC la adunarea fracțiilor?",
+              "answer": "La adunarea sau scăderea fracțiilor cu numitori diferiți, avem nevoie de un numitor comun. CMMMC numitorilor ne oferă cel mai mic numitor comun (CMMNC), care este cel mai mic număr la care ambii numitori se divid. Acest lucru minimizează dimensiunea fracției rezultante. De exemplu, pentru a aduna 1/4 + 1/6, găsim CMMMC(4, 6) = 12, ceea ce ne dă 3/12 + 2/12 = 5/12."
+            },
+            {
+              "question": "Care este CMMMC al numerelor prime între ele?",
+              "answer": "Două numere sunt prime între ele dacă CMMDC-ul lor este 1, ceea ce înseamnă că nu împart factori comuni în afară de 1. Pentru numere prime între ele, CMMMC este egal cu produsul lor: CMMMC(a, b) = a × b. De exemplu, 7 și 11 sunt prime între ele (CMMDC = 1), deci CMMMC(7, 11) = 7 × 11 = 77. La fel, CMMMC(9, 16) = 144 deoarece CMMDC(9, 16) = 1."
+            },
+            {
+              "question": "Acest calculator CMMMC este gratuit?",
+              "answer": "Da, calculatorul nostru CMMMC este complet gratuit fără necesitatea înregistrării, abonamentului sau plății. Introduceți orice set de numere întregi pozitive și obțineți rezultate instantanee și precise cu calcule pas cu pas. Calculatorul poate gestiona mai multe numere simultan și arată procesul complet de soluție. Perfect pentru studenți, educatori, ingineri și oricine are nevoie de calcule CMMMC rapide."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Conexe",
+          "gcd": "Calculator CMMDC",
+          "gcdDesc": "Calculați cel mai mare divizor comun (CMMDC) a două sau mai multe numere cu soluții pas cu pas",
+          "fractions": "Calculator Fracții",
+          "fractionsDesc": "Adunați, scădeți, înmulțiți și împărțiți fracții cu numitori comuni folosind CMMMC",
+          "division": "Calculator Împărțire",
+          "divisionDesc": "Efectuați operații de împărțire cu calcule detaliate ale câtului și restului"
+        }
+      }
+    },
     "convolution": {
       "title": "Calculator de Convoluție",
       "description": "Calculați convoluția discretă a două secvențe de date. Instrument online gratuit pentru procesarea semnalelor, matematică și aplicații de inginerie.",

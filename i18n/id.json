@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "Kalkulator KPK - Kelipatan Persekutuan Terkecil",
+      "description": "Hitung Kelipatan Persekutuan Terkecil (KPK) dari dua atau lebih angka secara instan. Temukan bilangan bulat positif terkecil yang habis dibagi semua angka. Kalkulator KPK online gratis dengan langkah-langkah.",
+      "inputLabel": "Masukkan Angka",
+      "inputPlaceholder": "mis. 12, 18, 24",
+      "inputHint": "Masukkan dua atau lebih bilangan bulat positif yang dipisahkan dengan koma, spasi, atau titik koma",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "results": "Hasil",
+      "numbers": "Angka",
+      "lcmResult": "Kelipatan Persekutuan Terkecil (KPK)",
+      "steps": "Langkah Perhitungan",
+      "formula": "Rumus",
+      "enterNumbers": "Masukkan setidaknya dua angka untuk menghitung",
+      "errorInvalid": "Harap masukkan bilangan bulat positif yang valid",
+      "errorZero": "Nol tidak dapat disertakan dalam perhitungan KPK",
+      "errorMinTwo": "Harap masukkan setidaknya dua angka",
+      "seo": {
+        "title": "Kalkulator KPK – Temukan Kelipatan Persekutuan Terkecil Online",
+        "description": "Kalkulator Kelipatan Persekutuan Terkecil (KPK) gratis. Hitung KPK dari dua atau lebih angka secara instan dengan solusi langkah demi langkah. Sempurna untuk siswa, guru, dan siapa saja yang bekerja dengan pecahan dan teori bilangan.",
+        "keywords": "kalkulator kpk, kelipatan persekutuan terkecil, pencari kpk, kelipatan terkecil, kpk dari angka, kalkulator kelipatan persekutuan, kpk dengan langkah, kalkulator teori bilangan",
+        "content": {
+          "heading": "Apa itu Kelipatan Persekutuan Terkecil (KPK)?",
+          "paragraph1": "Kelipatan Persekutuan Terkecil (KPK), juga dikenal sebagai kelipatan terendah, adalah bilangan bulat positif terkecil yang habis dibagi oleh semua angka yang diberikan tanpa sisa. Misalnya, KPK dari 4 dan 6 adalah 12, karena 12 adalah angka terkecil yang dapat dibagi habis oleh 4 dan 6. Kalkulator KPK gratis kami membantu Anda menemukan kelipatan persekutuan terkecil dari kumpulan bilangan bulat positif dengan cepat dan akurat, dengan solusi langkah demi langkah.",
+          "paragraph2": "KPK terkait erat dengan Faktor Persekutuan Terbesar (FPB). Hubungan dasarnya adalah: KPK(a, b) × FPB(a, b) = a × b. Ini berarti jika Anda mengetahui FPB dari dua angka, Anda dapat dengan mudah menghitung KPK mereka. Untuk beberapa angka, KPK dihitung secara berurutan: pertama temukan KPK dari dua angka pertama, lalu temukan KPK dari hasil tersebut dengan angka ketiga, dan seterusnya. Sifat KPK meliputi: KPK(a, b) ≥ max(a, b), KPK(a, 1) = a, dan KPK(a, a) = a.",
+          "paragraph3": "KPK memiliki banyak aplikasi praktis dalam kehidupan sehari-hari dan matematika: dalam aritmatika pecahan (menemukan penyebut umum saat menjumlahkan atau mengurangkan pecahan), dalam masalah penjadwalan (menentukan kapan peristiwa terjadi secara bersamaan, seperti bus tiba di halte yang sama), dalam teori musik (menghitung pola ritme dan ketukan), dalam rasio gigi dan sistem mekanis (sinkronisasi bagian yang berputar), dalam menyelesaikan persamaan simultan, dan dalam kriptografi dan ilmu komputer. Memahami KPK sangat penting bagi siapa saja yang bekerja dengan pecahan, rasio, atau peristiwa periodik.",
+          "paragraph4": "Kalkulator KPK kami menangani sejumlah bilangan bulat positif dan menampilkan langkah-langkah perhitungan, membuatnya sempurna untuk tujuan pendidikan. Kalkulator menggunakan metode efisien pembagian dengan FPB untuk menghitung KPK dengan cepat, bahkan untuk angka besar. Baik Anda seorang siswa yang belajar tentang faktor dan kelipatan, guru yang mempersiapkan pelajaran matematika, insinyur yang bekerja pada masalah sinkronisasi, atau siapa pun yang membutuhkan perhitungan KPK cepat, alat kami memberikan hasil akurat secara instan dan gratis.",
+          "exampleHeading": "Contoh: Perhitungan KPK",
+          "exampleText": "Contoh 1: KPK(12, 18) = 36. Kelipatan 12 adalah: 12, 24, 36, 48... Kelipatan 18 adalah: 18, 36, 54... Kelipatan persekutuan terkecil adalah 36. Contoh 2: KPK(4, 6, 8) = 24. Pertama, KPK(4, 6) = 12, kemudian KPK(12, 8) = 24. Contoh 3: KPK(15, 25) = 75. Menggunakan rumus: FPB(15, 25) = 5, jadi KPK = (15 × 25) / 5 = 75. Contoh 4: KPK(7, 11) = 77. Ketika dua angka relatif prima (FPB = 1), KPK mereka sama dengan produk mereka."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa perbedaan antara KPK dan FPB?",
+              "answer": "KPK (Kelipatan Persekutuan Terkecil) adalah angka terkecil yang habis dibagi oleh semua angka yang diberikan, sedangkan FPB (Faktor Persekutuan Terbesar) adalah angka terbesar yang membagi semua angka yang diberikan. KPK menemukan kelipatan persekutuan; FPB menemukan faktor persekutuan. Mereka terkait dengan rumus: KPK(a, b) × FPB(a, b) = a × b. Misalnya untuk 12 dan 18: KPK = 36, FPB = 6, dan 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Bagaimana Anda menemukan KPK dari dua angka?",
+              "answer": "Ada beberapa metode untuk menemukan KPK: (1) Metode daftar kelipatan: daftarkan kelipatan setiap angka hingga Anda menemukan yang terkecil yang sama. (2) Faktorisasi prima: pecah setiap angka menjadi faktor prima, lalu kalikan pangkat tertinggi dari setiap faktor prima. (3) Menggunakan FPB: hitung KPK(a, b) = |a × b| / FPB(a, b). (4) Metode pembagian: bagi berulang kali dengan faktor persekutuan. Kalkulator kami menggunakan metode FPB yang efisien untuk hasil cepat."
+            },
+            {
+              "question": "Bisakah KPK lebih kecil dari angka asli?",
+              "answer": "Tidak, KPK selalu lebih besar dari atau sama dengan yang terbesar dari angka yang diberikan. Menurut definisi, KPK harus habis dibagi oleh semua angka input, jadi tidak mungkin lebih kecil dari salah satu dari mereka. Satu-satunya pengecualian adalah saat menemukan KPK dari satu angka dengan dirinya sendiri, di mana KPK(n, n) = n. Misalnya, KPK(15, 25) = 75, yang lebih besar dari 15 dan 25."
+            },
+            {
+              "question": "Mengapa kita membutuhkan KPK saat menjumlahkan pecahan?",
+              "answer": "Saat menjumlahkan atau mengurangkan pecahan dengan penyebut berbeda, kita membutuhkan penyebut umum. KPK dari penyebut memberi kita Penyebut Umum Terkecil (LCD), yang merupakan angka terkecil yang dapat dibagi kedua penyebut. Ini meminimalkan ukuran pecahan yang dihasilkan. Misalnya, untuk menjumlahkan 1/4 + 1/6, kita temukan KPK(4, 6) = 12, yang memberi kita 3/12 + 2/12 = 5/12."
+            },
+            {
+              "question": "Apa KPK dari angka yang relatif prima?",
+              "answer": "Dua angka adalah relatif prima jika FPB mereka adalah 1, artinya mereka tidak berbagi faktor persekutuan kecuali 1. Untuk angka relatif prima, KPK sama dengan produk mereka: KPK(a, b) = a × b. Misalnya, 7 dan 11 adalah relatif prima (FPB = 1), jadi KPK(7, 11) = 7 × 11 = 77. Demikian pula, KPK(9, 16) = 144 karena FPB(9, 16) = 1."
+            },
+            {
+              "question": "Apakah kalkulator KPK ini gratis untuk digunakan?",
+              "answer": "Ya, kalkulator KPK kami sepenuhnya gratis tanpa registrasi, langganan, atau pembayaran yang diperlukan. Masukkan sejumlah bilangan bulat positif dan dapatkan hasil instan dan akurat dengan perhitungan langkah demi langkah. Kalkulator dapat menangani beberapa angka sekaligus dan menampilkan proses solusi lengkap. Sempurna untuk siswa, pendidik, insinyur, dan siapa pun yang membutuhkan perhitungan KPK cepat."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "gcd": "Kalkulator FPB",
+          "gcdDesc": "Hitung Faktor Persekutuan Terbesar (FPB) dari dua atau lebih angka dengan solusi langkah demi langkah",
+          "fractions": "Kalkulator Pecahan",
+          "fractionsDesc": "Tambah, kurang, kali, dan bagi pecahan dengan penyebut umum menggunakan KPK",
+          "division": "Kalkulator Pembagian",
+          "divisionDesc": "Lakukan operasi pembagian dengan perhitungan hasil bagi dan sisa yang terperinci"
+        }
+      }
+    },
     "convolution": {
       "title": "Kalkulator Konvolusi",
       "description": "Hitung konvolusi diskrit dari dua urutan data. Alat online gratis untuk pemrosesan sinyal, matematika, dan aplikasi teknik.",

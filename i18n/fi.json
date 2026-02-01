@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "PYT-laskin - Pienin yhteinen jaettava",
+      "description": "Laske pienin yhteinen jaettava (PYT) kahdesta tai useammasta luvusta välittömästi. Löydä pienin positiivinen kokonaisluku, joka on jaollinen kaikilla luvuilla. Ilmainen online PYT-laskin vaiheilla.",
+      "inputLabel": "Syötä luvut",
+      "inputPlaceholder": "esim. 12, 18, 24",
+      "inputHint": "Syötä kaksi tai useampia positiivisia kokonaislukuja erotettuna pilkuilla, välilyönneillä tai puolipisteillä",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "results": "Tulokset",
+      "numbers": "Luvut",
+      "lcmResult": "Pienin yhteinen jaettava (PYT)",
+      "steps": "Laskentavaiheet",
+      "formula": "Kaava",
+      "enterNumbers": "Syötä vähintään kaksi lukua laskettavaksi",
+      "errorInvalid": "Syötä kelvollisia positiivisia kokonaislukuja",
+      "errorZero": "Nollaa ei voi sisällyttää PYT-laskentaan",
+      "errorMinTwo": "Syötä vähintään kaksi lukua",
+      "seo": {
+        "title": "PYT-laskin – Löydä pienin yhteinen jaettava verkossa",
+        "description": "Ilmainen pienin yhteinen jaettava (PYT) -laskin. Laske PYT kahdesta tai useammasta luvusta välittömästi vaiheittaisilla ratkaisuilla. Täydellinen opiskelijoille, opettajille ja kaikille, jotka työskentelevät murtolukujen ja lukuteorian parissa.",
+        "keywords": "pyt laskin, pienin yhteinen jaettava, pyt etsijä, pienin yhteinen monikerta, pyt luvuista, yhteinen monikerta laskin, pyt vaiheilla, lukuteoria laskin",
+        "content": {
+          "heading": "Mikä on pienin yhteinen jaettava (PYT)?",
+          "paragraph1": "Pienin yhteinen jaettava (PYT), tunnetaan myös nimellä pienin yhteinen monikerta, on pienin positiivinen kokonaisluku, joka on jaollinen kaikilla annetuilla luvuilla ilman jakojäännöstä. Esimerkiksi lukujen 4 ja 6 PYT on 12, koska 12 on pienin luku, joka sekä 4 että 6 jakavat tasaisesti. Ilmainen PYT-laskimemme auttaa sinua löytämään pienimmän yhteisen jaettavan mistä tahansa positiivisten kokonaislukujen joukosta nopeasti ja tarkasti vaiheittaisilla ratkaisuilla.",
+          "paragraph2": "PYT liittyy läheisesti suurimpaan yhteiseen tekijään (SYT). Perusyhteys on: PYT(a, b) × SYT(a, b) = a × b. Tämä tarkoittaa, että jos tiedät kahden luvun SYT:n, voit helposti laskea niiden PYT:n. Useille luvuille PYT lasketaan peräkkäin: etsi ensin kahden ensimmäisen luvun PYT, sitten etsi tämän tuloksen ja kolmannen luvun PYT, ja niin edelleen. PYT:n ominaisuuksia ovat: PYT(a, b) ≥ max(a, b), PYT(a, 1) = a ja PYT(a, a) = a.",
+          "paragraph3": "PYT:llä on lukuisia käytännön sovelluksia jokapäiväisessä elämässä ja matematiikassa: murtolukuaritmetiikassa (yhteisten nimittäjien löytäminen murtolukuja yhteen- tai vähennyslaskettaessa), aikataulutusongelmissa (tapahtumien samanaikaisen esiintymisen määrittäminen, kuten bussit saapuvat samalle pysäkille), musiikkiteoriassa (rytmisten kuvioiden ja tahtilyöntien laskeminen), hammaspyöräsuhteissa ja mekaanisissa järjestelmissä (pyörivien osien synkronointi), yhtälöryhmien ratkaisemisessa sekä kryptografiassa ja tietojenkäsittelytieteessä. PYT:n ymmärtäminen on välttämätöntä kaikille, jotka työskentelevät murtolukujen, suhteiden tai jaksollisten tapahtumien parissa.",
+          "paragraph4": "PYT-laskimemme käsittelee minkä tahansa määrän positiivisia kokonaislukuja ja näyttää laskentavaiheet, mikä tekee siitä täydellisen opetus tarkoituksiin. Laskin käyttää tehokasta menetelmää jakamalla SYT:llä laskeakseen PYT:n nopeasti jopa suurille luvuille. Oletpa sitten opiskelija, joka oppii tekijöistä ja monikerroista, opettaja, joka valmistelee matematiikan tunteja, insinööri, joka työskentelee synkronointiongelmien parissa, tai kuka tahansa, joka tarvitsee nopeita PYT-laskelmia, työkalumme tarjoaa tarkat tulokset välittömästi ja ilmaiseksi.",
+          "exampleHeading": "Esimerkki: PYT-laskelmat",
+          "exampleText": "Esimerkki 1: PYT(12, 18) = 36. Luvun 12 monikerrat ovat: 12, 24, 36, 48... Luvun 18 monikerrat ovat: 18, 36, 54... Pienin yhteinen monikerta on 36. Esimerkki 2: PYT(4, 6, 8) = 24. Ensin PYT(4, 6) = 12, sitten PYT(12, 8) = 24. Esimerkki 3: PYT(15, 25) = 75. Kaavaa käyttäen: SYT(15, 25) = 5, joten PYT = (15 × 25) / 5 = 75. Esimerkki 4: PYT(7, 11) = 77. Kun kaksi lukua on keskenään jaottomia (SYT = 1), niiden PYT vastaa niiden tuloa."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Mikä on ero PYT:n ja SYT:n välillä?",
+              "answer": "PYT (pienin yhteinen jaettava) on pienin luku, joka on jaollinen kaikilla annetuilla luvuilla, kun taas SYT (suurin yhteinen tekijä) on suurin luku, joka jakaa kaikki annetut luvut. PYT löytää yhteiset monikerrat; SYT löytää yhteiset tekijät. Ne liittyvät kaavalla: PYT(a, b) × SYT(a, b) = a × b. Esimerkiksi luvuille 12 ja 18: PYT = 36, SYT = 6 ja 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Kuinka löydät kahden luvun PYT:n?",
+              "answer": "On useita menetelmiä PYT:n löytämiseen: (1) Monikertalistusmenetelmä: listaa kunkin luvun monikerrat, kunnes löydät pienimmän yhteisen. (2) Alkutekijöihin jako: jaa jokainen luku alkutekijöihin, kerro sitten kunkin alkutekijän korkein potenssi. (3) SYT:n käyttö: laske PYT(a, b) = |a × b| / SYT(a, b). (4) Jakomenetelmä: jaa toistuvasti yhteisillä tekijöillä. Laskimemme käyttää tehokasta SYT-menetelmää nopeisiin tuloksiin."
+            },
+            {
+              "question": "Voiko PYT olla pienempi kuin alkuperäiset luvut?",
+              "answer": "Ei, PYT on aina suurempi tai yhtä suuri kuin suurin annetuista luvuista. Määritelmän mukaan PYT:n on oltava jaollinen kaikilla syöteluvuilla, joten se ei voi olla pienempi kuin mikään niistä. Ainoa poikkeus on yhden luvun PYT:n löytäminen itsensä kanssa, jossa PYT(n, n) = n. Esimerkiksi PYT(15, 25) = 75, joka on suurempi kuin sekä 15 että 25."
+            },
+            {
+              "question": "Miksi tarvitsemme PYT:tä murtolukuja yhteenlaskettaessa?",
+              "answer": "Yhteen- tai vähennyslaskettaessa murtolukuja, joilla on eri nimittäjät, tarvitsemme yhteisen nimittäjän. Nimittäjien PYT antaa meille pienimmän yhteisen nimittäjän (PYN), joka on pienin luku, jolla molemmat nimittäjät jakautuvat. Tämä minimoi tuloksena olevan murtoluvun koon. Esimerkiksi laskettaessa 1/4 + 1/6, löydämme PYT(4, 6) = 12, mikä antaa meille 3/12 + 2/12 = 5/12."
+            },
+            {
+              "question": "Mikä on keskenään jaottomien lukujen PYT?",
+              "answer": "Kaksi lukua on keskenään jaottomia (tai suhteellisesti alkulukuja), jos niiden SYT on 1, mikä tarkoittaa, että niillä ei ole yhteisiä tekijöitä paitsi 1. Keskenään jaottomille luvuille PYT on yhtä suuri kuin niiden tulo: PYT(a, b) = a × b. Esimerkiksi 7 ja 11 ovat keskenään jaottomia (SYT = 1), joten PYT(7, 11) = 7 × 11 = 77. Vastaavasti PYT(9, 16) = 144, koska SYT(9, 16) = 1."
+            },
+            {
+              "question": "Onko tämä PYT-laskin ilmainen?",
+              "answer": "Kyllä, PYT-laskimemme on täysin ilmainen ilman rekisteröitymis-, tilaus- tai maksuvaatimusta. Syötä mikä tahansa positiivisten kokonaislukujen joukko ja saat välittömiä, tarkkoja tuloksia vaiheittaisilla laskelmilla. Laskin voi käsitellä useita lukuja kerralla ja näyttää koko ratkaisuprosessin. Täydellinen opiskelijoille, opettajille, insinööreille ja kaikille, jotka tarvitsevat nopeita PYT-laskelmia."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "gcd": "SYT-laskin",
+          "gcdDesc": "Laske suurin yhteinen tekijä (SYT) kahdesta tai useammasta luvusta vaiheittaisilla ratkaisuilla",
+          "fractions": "Murtolukujen laskin",
+          "fractionsDesc": "Yhteen-, vähennys-, kerto- ja jakolaskut murtoluvuilla yhteisillä nimittäjillä käyttäen PYT:tä",
+          "division": "Jakolaskulaskin",
+          "divisionDesc": "Suorita jakolaskuoperaatioita yksityiskohtaisilla osamäärä- ja jakojäännöslaskelmilla"
+        }
+      }
+    },
     "convolution": {
       "title": "Konvoluutiolaskin",
       "description": "Laske kahden tietosekvenssin diskreetti konvoluutio. Ilmainen online-työkalu signaalinkäsittelyyn, matematiikkaan ja insinöörisovelluksiin.",

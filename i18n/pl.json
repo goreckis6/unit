@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "Kalkulator NWW - Najmniejsza wspólna wielokrotność",
+      "description": "Oblicz najmniejszą wspólną wielokrotność (NWW) dwóch lub więcej liczb natychmiast. Znajdź najmniejszą dodatnią liczbę całkowitą podzielną przez wszystkie liczby. Darmowy kalkulator NWW online z krokami.",
+      "inputLabel": "Wprowadź liczby",
+      "inputPlaceholder": "np. 12, 18, 24",
+      "inputHint": "Wprowadź dwie lub więcej dodatnich liczb całkowitych oddzielonych przecinkami, spacjami lub średnikami",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "results": "Wyniki",
+      "numbers": "Liczby",
+      "lcmResult": "Najmniejsza wspólna wielokrotność (NWW)",
+      "steps": "Kroki obliczeń",
+      "formula": "Wzór",
+      "enterNumbers": "Wprowadź co najmniej dwie liczby do obliczenia",
+      "errorInvalid": "Proszę wprowadzić prawidłowe dodatnie liczby całkowite",
+      "errorZero": "Zero nie może być uwzględnione w obliczeniach NWW",
+      "errorMinTwo": "Proszę wprowadzić co najmniej dwie liczby",
+      "seo": {
+        "title": "Kalkulator NWW – Znajdź najmniejszą wspólną wielokrotność online",
+        "description": "Darmowy kalkulator najmniejszej wspólnej wielokrotności (NWW). Oblicz NWW dwóch lub więcej liczb natychmiast z rozwiązaniami krok po kroku. Idealny dla studentów, nauczycieli i każdego pracującego z ułamkami i teorią liczb.",
+        "keywords": "kalkulator nww, najmniejsza wspólna wielokrotność, wyszukiwacz nww, najniższa wspólna wielokrotność, nww liczb, kalkulator wspólnych wielokrotności, nww z krokami, kalkulator teorii liczb",
+        "content": {
+          "heading": "Czym jest najmniejsza wspólna wielokrotność (NWW)?",
+          "paragraph1": "Najmniejsza wspólna wielokrotność (NWW), znana również jako najniższa wspólna wielokrotność, to najmniejsza dodatnia liczba całkowita podzielna bez reszty przez wszystkie podane liczby. Na przykład NWW liczb 4 i 6 wynosi 12, ponieważ 12 to najmniejsza liczba, która dzieli się równo przez 4 i 6. Nasz darmowy kalkulator NWW pomaga szybko i dokładnie znaleźć najmniejszą wspólną wielokrotność dowolnego zbioru dodatnich liczb całkowitych, z rozwiązaniami krok po kroku.",
+          "paragraph2": "NWW jest ściśle związana z największym wspólnym dzielnikiem (NWD). Podstawowy związek to: NWW(a, b) × NWD(a, b) = a × b. Oznacza to, że jeśli znasz NWD dwóch liczb, możesz łatwo obliczyć ich NWW. Dla wielu liczb NWW jest obliczana sekwencyjnie: najpierw znajdź NWW pierwszych dwóch liczb, następnie znajdź NWW tego wyniku z trzecią liczbą i tak dalej. Właściwości NWW obejmują: NWW(a, b) ≥ max(a, b), NWW(a, 1) = a i NWW(a, a) = a.",
+          "paragraph3": "NWW ma liczne praktyczne zastosowania w życiu codziennym i matematyce: w arytmetyce ułamków (znajdowanie wspólnych mianowników przy dodawaniu lub odejmowaniu ułamków), w problemach harmonogramowania (określanie, kiedy wydarzenia zachodzą jednocześnie, jak autobusy przybywające na ten sam przystanek), w teorii muzyki (obliczanie wzorców rytmicznych i uderzeń), w przełożeniach zębatych i systemach mechanicznych (synchronizacja obracających się części), w rozwiązywaniu równań jednoczesnych oraz w kryptografii i informatyce. Zrozumienie NWW jest niezbędne dla każdego pracującego z ułamkami, proporcjami lub zdarzeniami okresowymi.",
+          "paragraph4": "Nasz kalkulator NWW obsługuje dowolną liczbę dodatnich liczb całkowitych i pokazuje kroki obliczeniowe, co czyni go idealnym do celów edukacyjnych. Kalkulator używa efektywnej metody dzielenia przez NWD do szybkiego obliczania NWW, nawet dla dużych liczb. Niezależnie od tego, czy jesteś studentem uczącym się o czynnikach i wielokrotnościach, nauczycielem przygotowującym lekcje matematyki, inżynierem pracującym nad problemami synchronizacji, czy kimkolwiek potrzebującym szybkich obliczeń NWW, nasze narzędzie dostarcza dokładne wyniki natychmiast i za darmo.",
+          "exampleHeading": "Przykład: Obliczenia NWW",
+          "exampleText": "Przykład 1: NWW(12, 18) = 36. Wielokrotności 12 to: 12, 24, 36, 48... Wielokrotności 18 to: 18, 36, 54... Najmniejsza wspólna wielokrotność to 36. Przykład 2: NWW(4, 6, 8) = 24. Najpierw NWW(4, 6) = 12, następnie NWW(12, 8) = 24. Przykład 3: NWW(15, 25) = 75. Używając wzoru: NWD(15, 25) = 5, więc NWW = (15 × 25) / 5 = 75. Przykład 4: NWW(7, 11) = 77. Gdy dwie liczby są względnie pierwsze (NWD = 1), ich NWW równa się ich iloczynowi."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {
+              "question": "Jaka jest różnica między NWW a NWD?",
+              "answer": "NWW (najmniejsza wspólna wielokrotność) to najmniejsza liczba podzielna przez wszystkie podane liczby, podczas gdy NWD (największy wspólny dzielnik) to największa liczba dzieląca wszystkie podane liczby. NWW znajduje wspólne wielokrotności; NWD znajduje wspólne czynniki. Są powiązane wzorem: NWW(a, b) × NWD(a, b) = a × b. Na przykład dla 12 i 18: NWW = 36, NWD = 6 i 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Jak znaleźć NWW dwóch liczb?",
+              "answer": "Istnieje kilka metod znajdowania NWW: (1) Metoda wypisywania wielokrotności: wypisz wielokrotności każdej liczby, aż znajdziesz najmniejszą wspólną. (2) Rozkład na czynniki pierwsze: rozłóż każdą liczbę na czynniki pierwsze, następnie pomnóż najwyższą potęgę każdego czynnika pierwszego. (3) Użycie NWD: oblicz NWW(a, b) = |a × b| / NWD(a, b). (4) Metoda dzielenia: dziel wielokrotnie przez wspólne czynniki. Nasz kalkulator używa efektywnej metody NWD dla szybkich wyników."
+            },
+            {
+              "question": "Czy NWW może być mniejsze niż oryginalne liczby?",
+              "answer": "Nie, NWW jest zawsze większe lub równe największej z podanych liczb. Z definicji NWW musi być podzielne przez wszystkie liczby wejściowe, więc nie może być mniejsze od żadnej z nich. Jedynym wyjątkiem jest znajdowanie NWW jednej liczby z samą sobą, gdzie NWW(n, n) = n. Na przykład NWW(15, 25) = 75, co jest większe niż zarówno 15, jak i 25."
+            },
+            {
+              "question": "Dlaczego potrzebujemy NWW przy dodawaniu ułamków?",
+              "answer": "Przy dodawaniu lub odejmowaniu ułamków o różnych mianownikach potrzebujemy wspólnego mianownika. NWW mianowników daje nam najmniejszy wspólny mianownik (NWM), który jest najmniejszą liczbą, przez którą dzielą się oba mianowniki. To minimalizuje rozmiar wyniku ułamka. Na przykład, aby dodać 1/4 + 1/6, znajdujemy NWW(4, 6) = 12, co daje nam 3/12 + 2/12 = 5/12."
+            },
+            {
+              "question": "Jaka jest NWW liczb względnie pierwszych?",
+              "answer": "Dwie liczby są względnie pierwsze, jeśli ich NWD wynosi 1, co oznacza, że nie dzielą żadnych wspólnych czynników oprócz 1. Dla liczb względnie pierwszych NWW jest równa ich iloczynowi: NWW(a, b) = a × b. Na przykład 7 i 11 są względnie pierwsze (NWD = 1), więc NWW(7, 11) = 7 × 11 = 77. Podobnie NWW(9, 16) = 144, ponieważ NWD(9, 16) = 1."
+            },
+            {
+              "question": "Czy ten kalkulator NWW jest darmowy?",
+              "answer": "Tak, nasz kalkulator NWW jest całkowicie darmowy bez wymagań rejestracji, subskrypcji lub płatności. Wprowadź dowolny zestaw dodatnich liczb całkowitych i otrzymaj natychmiastowe, dokładne wyniki z obliczeniami krok po kroku. Kalkulator może obsługiwać wiele liczb jednocześnie i pokazuje pełny proces rozwiązania. Idealny dla studentów, edukatorów, inżynierów i każdego, kto potrzebuje szybkich obliczeń NWW."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "gcd": "Kalkulator NWD",
+          "gcdDesc": "Oblicz największy wspólny dzielnik (NWD) dwóch lub więcej liczb z rozwiązaniami krok po kroku",
+          "fractions": "Kalkulator ułamków",
+          "fractionsDesc": "Dodawaj, odejmuj, mnóż i dziel ułamki ze wspólnymi mianownikami używając NWW",
+          "division": "Kalkulator dzielenia",
+          "divisionDesc": "Wykonuj operacje dzielenia ze szczegółowymi obliczeniami ilorazu i reszty"
+        }
+      }
+    },
     "convolution": {
       "title": "Kalkulator Splotu",
       "description": "Oblicz dyskretny splot dwóch ciągów danych. Darmowe narzędzie online do przetwarzania sygnałów, matematyki i zastosowań inżynieryjnych.",

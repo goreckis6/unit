@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "LKT Kalkulátor - Legkisebb közös többszörös",
+      "description": "Számítsa ki két vagy több szám legkisebb közös többszörösét (LKT) azonnal. Keresse meg a legkisebb pozitív egész számot, amely mindegyikkel osztható. Ingyenes online LKT kalkulátor lépésekkel.",
+      "inputLabel": "Adja meg a számokat",
+      "inputPlaceholder": "pl. 12, 18, 24",
+      "inputHint": "Adjon meg két vagy több pozitív egész számot vesszővel, szóközzel vagy pontosvesszővel elválasztva",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "results": "Eredmények",
+      "numbers": "Számok",
+      "lcmResult": "Legkisebb közös többszörös (LKT)",
+      "steps": "Számítási lépések",
+      "formula": "Képlet",
+      "enterNumbers": "Adjon meg legalább két számot a számításhoz",
+      "errorInvalid": "Kérjük, adjon meg érvényes pozitív egész számokat",
+      "errorZero": "A nulla nem szerepelhet az LKT számításban",
+      "errorMinTwo": "Kérjük, adjon meg legalább két számot",
+      "seo": {
+        "title": "LKT Kalkulátor – Keresse meg a legkisebb közös többszöröst online",
+        "description": "Ingyenes legkisebb közös többszörös (LKT) kalkulátor. Számítsa ki két vagy több szám LKT-jét azonnal lépésről lépésre megoldásokkal. Tökéletes diákoknak, tanároknak és mindenkinek, aki törtekkel és számelmélettel dolgozik.",
+        "keywords": "lkt kalkulátor, legkisebb közös többszörös, lkt kereső, legalacsonyabb közös többszörös, számok lktje, közös többszörös kalkulátor, lkt lépésekkel, számelmélet kalkulátor",
+        "content": {
+          "heading": "Mi a legkisebb közös többszörös (LKT)?",
+          "paragraph1": "A legkisebb közös többszörös (LKT), más néven legalacsonyabb közös többszörös, a legkisebb pozitív egész szám, amely maradék nélkül osztható mindegyik megadott számmal. Például a 4 és 6 LKT-je 12, mert 12 a legkisebb szám, amellyel mind a 4, mind a 6 egyenletesen osztható. Ingyenes LKT kalkulátorunk segít gyorsan és pontosan megtalálni bármely pozitív egész számok halmazának legkisebb közös többszörösét, lépésről lépésre megoldásokkal.",
+          "paragraph2": "Az LKT szorosan kapcsolódik a legnagyobb közös osztóhoz (LKO). Az alapvető összefüggés: LKT(a, b) × LKO(a, b) = a × b. Ez azt jelenti, hogy ha ismeri két szám LKO-ját, könnyen kiszámíthatja az LKT-jüket. Több szám esetén az LKT-t egymás után számítják ki: először keresse meg az első két szám LKT-jét, majd keresse meg ennek az eredménynek a harmadik számmal való LKT-jét, és így tovább. Az LKT tulajdonságai közé tartozik: LKT(a, b) ≥ max(a, b), LKT(a, 1) = a és LKT(a, a) = a.",
+          "paragraph3": "Az LKT-nek számos gyakorlati alkalmazása van a mindennapi életben és a matematikában: törtek aritmetikájában (közös nevezők keresése törtek összeadásakor vagy kivonásakor), ütemezési problémákban (annak meghatározása, hogy az események mikor következnek be egyszerre, például buszok ugyanarra a megállóra érkeznek), zeneelméletben (ritmikus minták és ütemek számítása), fogaskerék-áttételekben és mechanikai rendszerekben (forgó alkatrészek szinkronizálása), egyidejű egyenletek megoldásában, valamint kriptográfiában és számítástudományban. Az LKT megértése elengedhetetlen mindazok számára, akik törtekkel, arányokkal vagy periodikus eseményekkel dolgoznak.",
+          "paragraph4": "LKT kalkulátorunk bármilyen számú pozitív egész számot kezel, és megjeleníti a számítási lépéseket, így tökéletes oktatási célokra. A kalkulátor az LKO általi osztás hatékony módszerét használja az LKT gyors kiszámítására, még nagy számok esetén is. Akár diák vagy, aki a tényezőkről és többszörösökről tanul, akár tanár, aki matematika órákat készít elő, akár mérnök, aki szinkronizálási problémákon dolgozik, akár bárki, akinek gyors LKT számításokra van szüksége, eszközünk azonnal és ingyenesen pontos eredményeket nyújt.",
+          "exampleHeading": "Példa: LKT számítások",
+          "exampleText": "1. példa: LKT(12, 18) = 36. A 12 többszörösei: 12, 24, 36, 48... A 18 többszörösei: 18, 36, 54... A legkisebb közös többszörös 36. 2. példa: LKT(4, 6, 8) = 24. Először LKT(4, 6) = 12, majd LKT(12, 8) = 24. 3. példa: LKT(15, 25) = 75. A képlet használatával: LKO(15, 25) = 5, tehát LKT = (15 × 25) / 5 = 75. 4. példa: LKT(7, 11) = 77. Amikor két szám relatív prím (LKO = 1), LKT-jük egyenlő a szorzatukkal."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mi a különbség az LKT és az LKO között?",
+              "answer": "Az LKT (legkisebb közös többszörös) a legkisebb szám, amely osztható mindegyik megadott számmal, míg az LKO (legnagyobb közös osztó) a legnagyobb szám, amely mindegyik megadott számot osztja. Az LKT közös többszörösöket talál; az LKO közös tényezőket talál. A képlet kapcsolja össze őket: LKT(a, b) × LKO(a, b) = a × b. Például 12 és 18 esetén: LKT = 36, LKO = 6, és 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Hogyan találja meg két szám LKT-jét?",
+              "answer": "Több módszer is van az LKT megtalálására: (1) Többszörösök listázási módszere: sorolja fel minden szám többszöröseit, amíg meg nem találja a legkisebb közöset. (2) Prímtényezős felbontás: bontsa fel minden számot prímtényezőkre, majd szorozza meg minden prímtényező legmagasabb hatványát. (3) LKO használata: számítsa ki LKT(a, b) = |a × b| / LKO(a, b). (4) Osztási módszer: osszon ismételten közös tényezőkkel. Kalkulátorunk a hatékony LKO módszert használja a gyors eredményekhez."
+            },
+            {
+              "question": "Lehet az LKT kisebb, mint az eredeti számok?",
+              "answer": "Nem, az LKT mindig nagyobb vagy egyenlő, mint a megadott számok közül a legnagyobb. Definíció szerint az LKT-nek oszthatónak kell lennie minden bemeneti számmal, így nem lehet kisebb egyiknél sem. Az egyetlen kivétel, ha egy számot önmagával keresünk, ahol LKT(n, n) = n. Például LKT(15, 25) = 75, ami nagyobb mind a 15-nél, mind a 25-nél."
+            },
+            {
+              "question": "Miért van szükségünk LKT-re törtek összeadásakor?",
+              "answer": "Különböző nevezőjű törtek összeadásakor vagy kivonásakor közös nevezőre van szükség. A nevezők LKT-je megadja a legkisebb közös nevezőt (LKN), amely a legkisebb szám, amellyel mindkét nevező osztható. Ez minimalizálja az eredményül kapott tört méretét. Például 1/4 + 1/6 összeadásához megtaláljuk az LKT(4, 6) = 12-t, ami 3/12 + 2/12 = 5/12-t ad."
+            },
+            {
+              "question": "Mi a relatív prím számok LKT-je?",
+              "answer": "Két szám relatív prím, ha az LKO-juk 1, ami azt jelenti, hogy 1-en kívül nem osztanak meg közös tényezőket. Relatív prím számok esetén az LKT egyenlő a szorzatukkal: LKT(a, b) = a × b. Például 7 és 11 relatív prím (LKO = 1), tehát LKT(7, 11) = 7 × 11 = 77. Hasonlóan LKT(9, 16) = 144, mert LKO(9, 16) = 1."
+            },
+            {
+              "question": "Ez az LKT kalkulátor ingyenes?",
+              "answer": "Igen, LKT kalkulátorunk teljesen ingyenes, regisztráció, előfizetés vagy fizetés nélkül. Adjon meg bármilyen pozitív egész számokat, és kapjon azonnali, pontos eredményeket lépésről lépésre számításokkal. A kalkulátor egyszerre több számot is kezelni tud, és megjeleníti a teljes megoldási folyamatot. Tökéletes diákoknak, oktatóknak, mérnököknek és mindenkinek, akinek gyors LKT számításokra van szüksége."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó kalkulátorok",
+          "gcd": "LKO kalkulátor",
+          "gcdDesc": "Számítsa ki két vagy több szám legnagyobb közös osztóját (LKO) lépésről lépésre megoldásokkal",
+          "fractions": "Tört kalkulátor",
+          "fractionsDesc": "Adjon össze, vonjon ki, szorozzon és osszon törteket közös nevezőkkel LKT használatával",
+          "division": "Osztás kalkulátor",
+          "divisionDesc": "Végezzen osztási műveleteket részletes hányados és maradék számításokkal"
+        }
+      }
+    },
     "convolution": {
       "title": "Konvolúció Számológép",
       "description": "Számítsa ki két adatsorozat diszkrét konvolúcióját. Ingyenes online eszköz jelelfeldolgozáshoz, matematikához és mérnöki alkalmazásokhoz.",

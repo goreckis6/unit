@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "LCM Calculator - Least Common Multiple",
+      "description": "Calculate the Least Common Multiple (LCM) of two or more numbers instantly. Find the smallest positive integer divisible by all numbers. Free online LCM calculator with steps.",
+      "inputLabel": "Enter Numbers",
+      "inputPlaceholder": "e.g., 12, 18, 24",
+      "inputHint": "Enter two or more positive integers separated by commas, spaces, or semicolons",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "results": "Results",
+      "numbers": "Numbers",
+      "lcmResult": "Least Common Multiple (LCM)",
+      "steps": "Calculation Steps",
+      "formula": "Formula",
+      "enterNumbers": "Enter at least two numbers to calculate",
+      "errorInvalid": "Please enter valid positive integers",
+      "errorZero": "Zero cannot be included in LCM calculation",
+      "errorMinTwo": "Please enter at least two numbers",
+      "seo": {
+        "title": "LCM Calculator – Find Least Common Multiple Online",
+        "description": "Free Least Common Multiple (LCM) calculator. Calculate LCM of two or more numbers instantly with step-by-step solutions. Perfect for students, teachers, and anyone working with fractions and number theory.",
+        "keywords": "lcm calculator, least common multiple, lcm finder, lowest common multiple, lcm of numbers, common multiple calculator, lcm with steps, number theory calculator",
+        "content": {
+          "heading": "What is Least Common Multiple (LCM)?",
+          "paragraph1": "The Least Common Multiple (LCM), also known as the Lowest Common Multiple, is the smallest positive integer that is divisible by all given numbers without a remainder. For example, the LCM of 4 and 6 is 12, because 12 is the smallest number that both 4 and 6 divide into evenly. Our free LCM calculator helps you find the least common multiple of any set of positive integers quickly and accurately, with step-by-step solutions.",
+          "paragraph2": "LCM is closely related to the Greatest Common Divisor (GCD). The fundamental relationship is: LCM(a, b) × GCD(a, b) = a × b. This means if you know the GCD of two numbers, you can easily calculate their LCM. For multiple numbers, the LCM is calculated sequentially: first find LCM of the first two numbers, then find LCM of that result with the third number, and so on. The properties of LCM include: LCM(a, b) ≥ max(a, b), LCM(a, 1) = a, and LCM(a, a) = a.",
+          "paragraph3": "LCM has numerous practical applications in everyday life and mathematics: in fraction arithmetic (finding common denominators when adding or subtracting fractions), in scheduling problems (determining when events occur simultaneously, such as buses arriving at the same stop), in music theory (calculating rhythmic patterns and beats), in gear ratios and mechanical systems (synchronizing rotating parts), in solving simultaneous equations, and in cryptography and computer science. Understanding LCM is essential for anyone working with fractions, ratios, or periodic events.",
+          "paragraph4": "Our LCM calculator handles any number of positive integers and shows the calculation steps, making it perfect for educational purposes. The calculator uses the efficient method of dividing by the GCD to compute LCM quickly, even for large numbers. Whether you're a student learning about factors and multiples, a teacher preparing math lessons, an engineer working on synchronization problems, or anyone needing quick LCM calculations, our tool provides accurate results instantly and free.",
+          "exampleHeading": "Example: LCM Calculations",
+          "exampleText": "Example 1: LCM(12, 18) = 36. The multiples of 12 are: 12, 24, 36, 48... The multiples of 18 are: 18, 36, 54... The smallest common multiple is 36. Example 2: LCM(4, 6, 8) = 24. First, LCM(4, 6) = 12, then LCM(12, 8) = 24. Example 3: LCM(15, 25) = 75. Using the formula: GCD(15, 25) = 5, so LCM = (15 × 25) / 5 = 75. Example 4: LCM(7, 11) = 77. When two numbers are coprime (GCD = 1), their LCM equals their product."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the difference between LCM and GCD?",
+              "answer": "LCM (Least Common Multiple) is the smallest number that is divisible by all given numbers, while GCD (Greatest Common Divisor) is the largest number that divides all given numbers. LCM finds common multiples; GCD finds common factors. They are related by the formula: LCM(a, b) × GCD(a, b) = a × b. For example, for 12 and 18: LCM = 36, GCD = 6, and 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "How do you find the LCM of two numbers?",
+              "answer": "There are several methods to find LCM: (1) Listing multiples method: list multiples of each number until you find the smallest common one. (2) Prime factorization: break down each number into prime factors, then multiply the highest power of each prime. (3) Using GCD: calculate LCM(a, b) = |a × b| / GCD(a, b). (4) Division method: repeatedly divide by common factors. Our calculator uses the efficient GCD method for quick results."
+            },
+            {
+              "question": "Can LCM be smaller than the original numbers?",
+              "answer": "No, the LCM is always greater than or equal to the largest of the given numbers. By definition, the LCM must be divisible by all input numbers, so it cannot be smaller than any of them. The only exception is when finding LCM of a single number with itself, where LCM(n, n) = n. For example, LCM(15, 25) = 75, which is larger than both 15 and 25."
+            },
+            {
+              "question": "Why do we need LCM when adding fractions?",
+              "answer": "When adding or subtracting fractions with different denominators, we need a common denominator. The LCM of the denominators gives us the Least Common Denominator (LCD), which is the smallest number that both denominators divide into. This minimizes the size of the resulting fraction. For example, to add 1/4 + 1/6, we find LCM(4, 6) = 12, giving us 3/12 + 2/12 = 5/12."
+            },
+            {
+              "question": "What is the LCM of coprime numbers?",
+              "answer": "Two numbers are coprime (or relatively prime) if their GCD is 1, meaning they share no common factors except 1. For coprime numbers, the LCM equals their product: LCM(a, b) = a × b. For example, 7 and 11 are coprime (GCD = 1), so LCM(7, 11) = 7 × 11 = 77. Similarly, LCM(9, 16) = 144 because GCD(9, 16) = 1."
+            },
+            {
+              "question": "Is this LCM calculator free to use?",
+              "answer": "Yes, our LCM calculator is completely free with no registration, subscription, or payment required. Enter any set of positive integers and get instant, accurate results with step-by-step calculations. The calculator can handle multiple numbers at once and shows the complete solution process. Perfect for students, educators, engineers, and anyone needing quick LCM calculations."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "gcd": "GCD Calculator",
+          "gcdDesc": "Calculate the Greatest Common Divisor (GCD) of two or more numbers with step-by-step solutions",
+          "fractions": "Fraction Calculator",
+          "fractionsDesc": "Add, subtract, multiply, and divide fractions with common denominators using LCM",
+          "division": "Division Calculator",
+          "divisionDesc": "Perform division operations with detailed quotient and remainder calculations"
+        }
+      }
+    },
     "convolution": {
       "title": "Convolution Calculator",
       "description": "Calculate the discrete convolution of two data sequences. Free online tool for signal processing, mathematics, and engineering applications.",

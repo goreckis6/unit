@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "Calcolatore MCM - Minimo Comune Multiplo",
+      "description": "Calcola il Minimo Comune Multiplo (MCM) di due o più numeri istantaneamente. Trova il più piccolo intero positivo divisibile per tutti i numeri. Calcolatore MCM online gratuito con passaggi.",
+      "inputLabel": "Inserisci Numeri",
+      "inputPlaceholder": "es. 12, 18, 24",
+      "inputHint": "Inserisci due o più interi positivi separati da virgole, spazi o punti e virgola",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "results": "Risultati",
+      "numbers": "Numeri",
+      "lcmResult": "Minimo Comune Multiplo (MCM)",
+      "steps": "Passaggi di Calcolo",
+      "formula": "Formula",
+      "enterNumbers": "Inserisci almeno due numeri per calcolare",
+      "errorInvalid": "Inserisci interi positivi validi",
+      "errorZero": "Lo zero non può essere incluso nel calcolo del MCM",
+      "errorMinTwo": "Inserisci almeno due numeri",
+      "seo": {
+        "title": "Calcolatore MCM – Trova il Minimo Comune Multiplo Online",
+        "description": "Calcolatore gratuito del Minimo Comune Multiplo (MCM). Calcola il MCM di due o più numeri istantaneamente con soluzioni passo dopo passo. Perfetto per studenti, insegnanti e chiunque lavori con frazioni e teoria dei numeri.",
+        "keywords": "calcolatore mcm, minimo comune multiplo, ricercatore mcm, minimo multiplo comune, mcm di numeri, calcolatore multipli comuni, mcm con passaggi, calcolatore teoria dei numeri",
+        "content": {
+          "heading": "Cos'è il Minimo Comune Multiplo (MCM)?",
+          "paragraph1": "Il Minimo Comune Multiplo (MCM), noto anche come multiplo comune più basso, è il più piccolo intero positivo divisibile per tutti i numeri dati senza resto. Ad esempio, il MCM di 4 e 6 è 12, perché 12 è il numero più piccolo che sia 4 che 6 dividono uniformemente. Il nostro calcolatore MCM gratuito ti aiuta a trovare il minimo comune multiplo di qualsiasi insieme di interi positivi rapidamente e con precisione, con soluzioni passo dopo passo.",
+          "paragraph2": "Il MCM è strettamente correlato al Massimo Comun Divisore (MCD). La relazione fondamentale è: MCM(a, b) × MCD(a, b) = a × b. Questo significa che se conosci il MCD di due numeri, puoi facilmente calcolare il loro MCM. Per più numeri, il MCM viene calcolato sequenzialmente: prima trova il MCM dei primi due numeri, poi trova il MCM di quel risultato con il terzo numero, e così via. Le proprietà del MCM includono: MCM(a, b) ≥ max(a, b), MCM(a, 1) = a, e MCM(a, a) = a.",
+          "paragraph3": "Il MCM ha numerose applicazioni pratiche nella vita quotidiana e nella matematica: nell'aritmetica delle frazioni (trovare denominatori comuni quando si sommano o sottraggono frazioni), nei problemi di pianificazione (determinare quando gli eventi si verificano simultaneamente, come autobus che arrivano alla stessa fermata), nella teoria musicale (calcolare pattern ritmici e battiti), nei rapporti di trasmissione e sistemi meccanici (sincronizzare parti rotanti), nel risolvere equazioni simultanee, e nella crittografia e informatica. Comprendere il MCM è essenziale per chiunque lavori con frazioni, rapporti o eventi periodici.",
+          "paragraph4": "Il nostro calcolatore MCM gestisce qualsiasi numero di interi positivi e mostra i passaggi di calcolo, rendendolo perfetto per scopi educativi. Il calcolatore utilizza il metodo efficiente di divisione per il MCD per calcolare il MCM rapidamente, anche per numeri grandi. Che tu sia uno studente che impara su fattori e multipli, un insegnante che prepara lezioni di matematica, un ingegnere che lavora su problemi di sincronizzazione, o chiunque abbia bisogno di calcoli MCM rapidi, il nostro strumento fornisce risultati accurati istantaneamente e gratuitamente.",
+          "exampleHeading": "Esempio: Calcoli MCM",
+          "exampleText": "Esempio 1: MCM(12, 18) = 36. I multipli di 12 sono: 12, 24, 36, 48... I multipli di 18 sono: 18, 36, 54... Il multiplo comune più piccolo è 36. Esempio 2: MCM(4, 6, 8) = 24. Prima, MCM(4, 6) = 12, poi MCM(12, 8) = 24. Esempio 3: MCM(15, 25) = 75. Usando la formula: MCD(15, 25) = 5, quindi MCM = (15 × 25) / 5 = 75. Esempio 4: MCM(7, 11) = 77. Quando due numeri sono coprimi (MCD = 1), il loro MCM è uguale al loro prodotto."
+        },
+        "faq": {
+          "heading": "Domande Frequenti",
+          "items": [
+            {
+              "question": "Qual è la differenza tra MCM e MCD?",
+              "answer": "MCM (Minimo Comune Multiplo) è il numero più piccolo divisibile per tutti i numeri dati, mentre MCD (Massimo Comun Divisore) è il numero più grande che divide tutti i numeri dati. MCM trova multipli comuni; MCD trova fattori comuni. Sono correlati dalla formula: MCM(a, b) × MCD(a, b) = a × b. Ad esempio per 12 e 18: MCM = 36, MCD = 6, e 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Come si trova il MCM di due numeri?",
+              "answer": "Ci sono diversi metodi per trovare il MCM: (1) Metodo dell'elenco dei multipli: elenca i multipli di ogni numero finché non trovi il più piccolo comune. (2) Fattorizzazione in numeri primi: scomponi ogni numero in fattori primi, poi moltiplica la potenza più alta di ogni fattore primo. (3) Usando il MCD: calcola MCM(a, b) = |a × b| / MCD(a, b). (4) Metodo della divisione: dividi ripetutamente per fattori comuni. Il nostro calcolatore usa il metodo efficiente del MCD per risultati rapidi."
+            },
+            {
+              "question": "Il MCM può essere più piccolo dei numeri originali?",
+              "answer": "No, il MCM è sempre maggiore o uguale al più grande dei numeri dati. Per definizione, il MCM deve essere divisibile per tutti i numeri di input, quindi non può essere più piccolo di nessuno di essi. L'unica eccezione è quando si trova il MCM di un singolo numero con se stesso, dove MCM(n, n) = n. Ad esempio, MCM(15, 25) = 75, che è più grande sia di 15 che di 25."
+            },
+            {
+              "question": "Perché abbiamo bisogno del MCM quando sommiamo frazioni?",
+              "answer": "Quando si sommano o sottraggono frazioni con denominatori diversi, abbiamo bisogno di un denominatore comune. Il MCM dei denominatori ci dà il Minimo Comune Denominatore (MCD), che è il numero più piccolo per cui entrambi i denominatori dividono. Questo minimizza la dimensione della frazione risultante. Ad esempio, per sommare 1/4 + 1/6, troviamo MCM(4, 6) = 12, che ci dà 3/12 + 2/12 = 5/12."
+            },
+            {
+              "question": "Qual è il MCM di numeri coprimi?",
+              "answer": "Due numeri sono coprimi (o relativamente primi) se il loro MCD è 1, il che significa che non condividono fattori comuni tranne 1. Per numeri coprimi, il MCM è uguale al loro prodotto: MCM(a, b) = a × b. Ad esempio, 7 e 11 sono coprimi (MCD = 1), quindi MCM(7, 11) = 7 × 11 = 77. Similmente, MCM(9, 16) = 144 perché MCD(9, 16) = 1."
+            },
+            {
+              "question": "Questo calcolatore MCM è gratuito?",
+              "answer": "Sì, il nostro calcolatore MCM è completamente gratuito senza registrazione, abbonamento o pagamento richiesto. Inserisci qualsiasi insieme di interi positivi e ottieni risultati istantanei e accurati con calcoli passo dopo passo. Il calcolatore può gestire più numeri contemporaneamente e mostra il processo di soluzione completo. Perfetto per studenti, educatori, ingegneri e chiunque abbia bisogno di calcoli MCM rapidi."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori Correlati",
+          "gcd": "Calcolatore MCD",
+          "gcdDesc": "Calcola il Massimo Comun Divisore (MCD) di due o più numeri con soluzioni passo dopo passo",
+          "fractions": "Calcolatore di Frazioni",
+          "fractionsDesc": "Somma, sottrai, moltiplica e dividi frazioni con denominatori comuni usando il MCM",
+          "division": "Calcolatore di Divisione",
+          "divisionDesc": "Esegui operazioni di divisione con calcoli dettagliati di quoziente e resto"
+        }
+      }
+    },
     "convolution": {
       "title": "Calcolatore di Convoluzione",
       "description": "Calcola la convoluzione discreta di due sequenze di dati. Strumento online gratuito per elaborazione del segnale, matematica e applicazioni ingegneristiche.",

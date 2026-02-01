@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "Calculadora MMC - Mínimo Múltiplo Comum",
+      "description": "Calcule o Mínimo Múltiplo Comum (MMC) de dois ou mais números instantaneamente. Encontre o menor inteiro positivo divisível por todos os números. Calculadora MMC online gratuita com passos.",
+      "inputLabel": "Insira os números",
+      "inputPlaceholder": "ex: 12, 18, 24",
+      "inputHint": "Insira dois ou mais inteiros positivos separados por vírgulas, espaços ou ponto e vírgula",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "results": "Resultados",
+      "numbers": "Números",
+      "lcmResult": "Mínimo Múltiplo Comum (MMC)",
+      "steps": "Passos do Cálculo",
+      "formula": "Fórmula",
+      "enterNumbers": "Insira pelo menos dois números para calcular",
+      "errorInvalid": "Por favor, insira inteiros positivos válidos",
+      "errorZero": "Zero não pode ser incluído no cálculo do MMC",
+      "errorMinTwo": "Por favor, insira pelo menos dois números",
+      "seo": {
+        "title": "Calculadora MMC – Encontre o Mínimo Múltiplo Comum Online",
+        "description": "Calculadora gratuita de Mínimo Múltiplo Comum (MMC). Calcule o MMC de dois ou mais números instantaneamente com soluções passo a passo. Perfeito para estudantes, professores e qualquer pessoa que trabalhe com frações e teoria dos números.",
+        "keywords": "calculadora mmc, mínimo múltiplo comum, localizador mmc, menor múltiplo comum, mmc de números, calculadora múltiplos comuns, mmc com passos, calculadora teoria dos números",
+        "content": {
+          "heading": "O que é o Mínimo Múltiplo Comum (MMC)?",
+          "paragraph1": "O Mínimo Múltiplo Comum (MMC), também conhecido como menor múltiplo comum, é o menor inteiro positivo divisível por todos os números dados sem resto. Por exemplo, o MMC de 4 e 6 é 12, porque 12 é o menor número que tanto 4 quanto 6 dividem uniformemente. Nossa calculadora gratuita de MMC ajuda você a encontrar o mínimo múltiplo comum de qualquer conjunto de inteiros positivos rápida e precisamente, com soluções passo a passo.",
+          "paragraph2": "O MMC está intimamente relacionado ao Máximo Divisor Comum (MDC). A relação fundamental é: MMC(a, b) × MDC(a, b) = a × b. Isso significa que se você conhece o MDC de dois números, pode facilmente calcular seu MMC. Para vários números, o MMC é calculado sequencialmente: primeiro encontre o MMC dos dois primeiros números, depois encontre o MMC desse resultado com o terceiro número, e assim por diante. As propriedades do MMC incluem: MMC(a, b) ≥ max(a, b), MMC(a, 1) = a, e MMC(a, a) = a.",
+          "paragraph3": "O MMC tem numerosas aplicações práticas na vida cotidiana e na matemática: na aritmética de frações (encontrar denominadores comuns ao somar ou subtrair frações), em problemas de agendamento (determinar quando eventos ocorrem simultaneamente, como ônibus chegando na mesma parada), na teoria musical (calcular padrões rítmicos e batidas), em relações de engrenagem e sistemas mecânicos (sincronizar partes rotativas), na resolução de equações simultâneas, e em criptografia e ciência da computação. Entender o MMC é essencial para qualquer pessoa que trabalhe com frações, razões ou eventos periódicos.",
+          "paragraph4": "Nossa calculadora de MMC lida com qualquer número de inteiros positivos e mostra os passos de cálculo, tornando-a perfeita para fins educacionais. A calculadora usa o método eficiente de divisão pelo MDC para calcular o MMC rapidamente, mesmo para números grandes. Seja você um estudante aprendendo sobre fatores e múltiplos, um professor preparando aulas de matemática, um engenheiro trabalhando em problemas de sincronização, ou alguém que precise de cálculos rápidos de MMC, nossa ferramenta fornece resultados precisos instantaneamente e gratuitamente.",
+          "exampleHeading": "Exemplo: Cálculos de MMC",
+          "exampleText": "Exemplo 1: MMC(12, 18) = 36. Os múltiplos de 12 são: 12, 24, 36, 48... Os múltiplos de 18 são: 18, 36, 54... O menor múltiplo comum é 36. Exemplo 2: MMC(4, 6, 8) = 24. Primeiro, MMC(4, 6) = 12, depois MMC(12, 8) = 24. Exemplo 3: MMC(15, 25) = 75. Usando a fórmula: MDC(15, 25) = 5, então MMC = (15 × 25) / 5 = 75. Exemplo 4: MMC(7, 11) = 77. Quando dois números são coprimos (MDC = 1), seu MMC é igual ao seu produto."
+        },
+        "faq": {
+          "heading": "Perguntas Frequentes",
+          "items": [
+            {
+              "question": "Qual é a diferença entre MMC e MDC?",
+              "answer": "MMC (Mínimo Múltiplo Comum) é o menor número divisível por todos os números dados, enquanto MDC (Máximo Divisor Comum) é o maior número que divide todos os números dados. MMC encontra múltiplos comuns; MDC encontra fatores comuns. Eles estão relacionados pela fórmula: MMC(a, b) × MDC(a, b) = a × b. Por exemplo, para 12 e 18: MMC = 36, MDC = 6, e 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Como você encontra o MMC de dois números?",
+              "answer": "Existem vários métodos para encontrar o MMC: (1) Método de listagem de múltiplos: liste múltiplos de cada número até encontrar o menor comum. (2) Fatoração prima: decomponha cada número em fatores primos, depois multiplique a maior potência de cada fator primo. (3) Usando o MDC: calcule MMC(a, b) = |a × b| / MDC(a, b). (4) Método de divisão: divida repetidamente por fatores comuns. Nossa calculadora usa o método eficiente do MDC para resultados rápidos."
+            },
+            {
+              "question": "O MMC pode ser menor que os números originais?",
+              "answer": "Não, o MMC é sempre maior ou igual ao maior dos números dados. Por definição, o MMC deve ser divisível por todos os números de entrada, portanto não pode ser menor que qualquer um deles. A única exceção é ao encontrar o MMC de um único número consigo mesmo, onde MMC(n, n) = n. Por exemplo, MMC(15, 25) = 75, que é maior que tanto 15 quanto 25."
+            },
+            {
+              "question": "Por que precisamos do MMC ao somar frações?",
+              "answer": "Ao somar ou subtrair frações com denominadores diferentes, precisamos de um denominador comum. O MMC dos denominadores nos dá o Mínimo Denominador Comum (MDC), que é o menor número pelo qual ambos os denominadores dividem. Isso minimiza o tamanho da fração resultante. Por exemplo, para somar 1/4 + 1/6, encontramos MMC(4, 6) = 12, o que nos dá 3/12 + 2/12 = 5/12."
+            },
+            {
+              "question": "Qual é o MMC de números coprimos?",
+              "answer": "Dois números são coprimos (ou relativamente primos) se seu MDC for 1, o que significa que não compartilham fatores comuns exceto 1. Para números coprimos, o MMC é igual ao seu produto: MMC(a, b) = a × b. Por exemplo, 7 e 11 são coprimos (MDC = 1), então MMC(7, 11) = 7 × 11 = 77. Da mesma forma, MMC(9, 16) = 144 porque MDC(9, 16) = 1."
+            },
+            {
+              "question": "Esta calculadora de MMC é gratuita?",
+              "answer": "Sim, nossa calculadora de MMC é completamente gratuita sem necessidade de registro, assinatura ou pagamento. Insira qualquer conjunto de inteiros positivos e obtenha resultados instantâneos e precisos com cálculos passo a passo. A calculadora pode lidar com vários números de uma vez e mostra o processo completo de solução. Perfeito para estudantes, educadores, engenheiros e qualquer pessoa que precise de cálculos rápidos de MMC."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "gcd": "Calculadora MDC",
+          "gcdDesc": "Calcule o Máximo Divisor Comum (MDC) de dois ou mais números com soluções passo a passo",
+          "fractions": "Calculadora de Frações",
+          "fractionsDesc": "Some, subtraia, multiplique e divida frações com denominadores comuns usando MMC",
+          "division": "Calculadora de Divisão",
+          "divisionDesc": "Execute operações de divisão com cálculos detalhados de quociente e resto"
+        }
+      }
+    },
     "convolution": {
       "title": "Calculadora de Convolução",
       "description": "Calcule a convolução discreta de duas sequências de dados. Ferramenta online gratuita para processamento de sinais, matemática e aplicações de engenharia.",

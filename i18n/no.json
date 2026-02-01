@@ -3606,6 +3606,76 @@
         }
       }
     },
+    "lcm": {
+      "title": "MFM-kalkulator - Minste felles multiplum",
+      "description": "Beregn minste felles multiplum (MFM) av to eller flere tall øyeblikkelig. Finn det minste positive heltallet som er delelig med alle tall. Gratis online MFM-kalkulator med trinn.",
+      "inputLabel": "Skriv inn tall",
+      "inputPlaceholder": "f.eks. 12, 18, 24",
+      "inputHint": "Skriv inn to eller flere positive heltall adskilt med komma, mellomrom eller semikolon",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "results": "Resultater",
+      "numbers": "Tall",
+      "lcmResult": "Minste felles multiplum (MFM)",
+      "steps": "Beregningstrinn",
+      "formula": "Formel",
+      "enterNumbers": "Skriv inn minst to tall for å beregne",
+      "errorInvalid": "Vennligst skriv inn gyldige positive heltall",
+      "errorZero": "Null kan ikke inkluderes i MFM-beregning",
+      "errorMinTwo": "Vennligst skriv inn minst to tall",
+      "seo": {
+        "title": "MFM-kalkulator – Finn minste felles multiplum på nett",
+        "description": "Gratis Minste Felles Multiplum (MFM) kalkulator. Beregn MFM av to eller flere tall øyeblikkelig med trinn-for-trinn løsninger. Perfekt for studenter, lærere og alle som arbeider med brøker og tallteori.",
+        "keywords": "mfm kalkulator, minste felles multiplum, mfm søker, laveste felles multiplum, mfm av tall, felles multiplum kalkulator, mfm med trinn, tallteori kalkulator",
+        "content": {
+          "heading": "Hva er Minste Felles Multiplum (MFM)?",
+          "paragraph1": "Minste Felles Multiplum (MFM), også kjent som laveste felles multiplum, er det minste positive heltallet som er delelig med alle gitte tall uten rest. For eksempel er MFM av 4 og 6 lik 12, fordi 12 er det minste tallet som både 4 og 6 deler jevnt. Vår gratis MFM-kalkulator hjelper deg med å finne minste felles multiplum av ethvert sett med positive heltall raskt og nøyaktig, med trinn-for-trinn løsninger.",
+          "paragraph2": "MFM er nært knyttet til Største Felles Divisor (SFD). Det grunnleggende forholdet er: MFM(a, b) × SFD(a, b) = a × b. Dette betyr at hvis du kjenner SFD for to tall, kan du enkelt beregne deres MFM. For flere tall beregnes MFM sekvensielt: finn først MFM for de to første tallene, finn deretter MFM for det resultatet med det tredje tallet, og så videre. Egenskapene til MFM inkluderer: MFM(a, b) ≥ max(a, b), MFM(a, 1) = a, og MFM(a, a) = a.",
+          "paragraph3": "MFM har mange praktiske anvendelser i dagliglivet og matematikk: i brøkaritmetikk (finne felles nevnere når man legger til eller trekker fra brøker), i planleggingsproblemer (bestemme når hendelser skjer samtidig, som busser som ankommer på samme stopp), i musikkteori (beregne rytmiske mønstre og slag), i girutvekslinger og mekaniske systemer (synkronisere roterende deler), i løsning av samtidige ligninger, og i kryptografi og informatikk. Å forstå MFM er essensielt for alle som arbeider med brøker, forhold eller periodiske hendelser.",
+          "paragraph4": "Vår MFM-kalkulator håndterer et hvilket som helst antall positive heltall og viser beregningstrinnene, noe som gjør den perfekt for pedagogiske formål. Kalkulatoren bruker den effektive metoden med å dele på SFD for å beregne MFM raskt, selv for store tall. Enten du er en student som lærer om faktorer og multiplum, en lærer som forbereder matematikkleksjoner, en ingeniør som arbeider med synkroniseringsproblemer, eller noen som trenger raske MFM-beregninger, leverer vårt verktøy nøyaktige resultater øyeblikkelig og gratis.",
+          "exampleHeading": "Eksempel: MFM-beregninger",
+          "exampleText": "Eksempel 1: MFM(12, 18) = 36. Multiplene av 12 er: 12, 24, 36, 48... Multiplene av 18 er: 18, 36, 54... Det minste felles multiplumet er 36. Eksempel 2: MFM(4, 6, 8) = 24. Først, MFM(4, 6) = 12, deretter MFM(12, 8) = 24. Eksempel 3: MFM(15, 25) = 75. Ved bruk av formelen: SFD(15, 25) = 5, så MFM = (15 × 25) / 5 = 75. Eksempel 4: MFM(7, 11) = 77. Når to tall er relativt primiske (SFD = 1), er deres MFM lik deres produkt."
+        },
+        "faq": {
+          "heading": "Ofte Stilte Spørsmål",
+          "items": [
+            {
+              "question": "Hva er forskjellen mellom MFM og SFD?",
+              "answer": "MFM (Minste Felles Multiplum) er det minste tallet som er delelig med alle gitte tall, mens SFD (Største Felles Divisor) er det største tallet som deler alle gitte tall. MFM finner felles multiplum; SFD finner felles faktorer. De er relatert ved formelen: MFM(a, b) × SFD(a, b) = a × b. For eksempel for 12 og 18: MFM = 36, SFD = 6, og 36 × 6 = 12 × 18 = 216."
+            },
+            {
+              "question": "Hvordan finner du MFM av to tall?",
+              "answer": "Det er flere metoder for å finne MFM: (1) Multipler opplistingsmetode: list opp multiplene av hvert tall til du finner det minste felles. (2) Primfaktorisering: bryt ned hvert tall i primfaktorer, multipliser deretter høyeste potens av hver primfaktor. (3) Bruke SFD: beregn MFM(a, b) = |a × b| / SFD(a, b). (4) Divisjonsmetode: del gjentatte ganger med felles faktorer. Vår kalkulator bruker den effektive SFD-metoden for raske resultater."
+            },
+            {
+              "question": "Kan MFM være mindre enn de opprinnelige tallene?",
+              "answer": "Nei, MFM er alltid større enn eller lik det største av de gitte tallene. Per definisjon må MFM være delelig med alle inngangstall, så det kan ikke være mindre enn noen av dem. Det eneste unntaket er når man finner MFM av et enkelt tall med seg selv, hvor MFM(n, n) = n. For eksempel MFM(15, 25) = 75, som er større enn både 15 og 25."
+            },
+            {
+              "question": "Hvorfor trenger vi MFM når vi legger til brøker?",
+              "answer": "Når man legger til eller trekker fra brøker med forskjellige nevnere, trenger vi en felles nevner. MFM av nevnerne gir oss Minste Felles Nevner (MFN), som er det minste tallet som begge nevnerne deler. Dette minimerer størrelsen på den resulterende brøken. For eksempel, for å legge til 1/4 + 1/6, finner vi MFM(4, 6) = 12, som gir oss 3/12 + 2/12 = 5/12."
+            },
+            {
+              "question": "Hva er MFM av relativt primiske tall?",
+              "answer": "To tall er relativt primiske hvis deres SFD er 1, noe som betyr at de ikke deler noen felles faktorer bortsett fra 1. For relativt primiske tall er MFM lik deres produkt: MFM(a, b) = a × b. For eksempel er 7 og 11 relativt primiske (SFD = 1), så MFM(7, 11) = 7 × 11 = 77. Tilsvarende er MFM(9, 16) = 144 fordi SFD(9, 16) = 1."
+            },
+            {
+              "question": "Er denne MFM-kalkulatoren gratis å bruke?",
+              "answer": "Ja, vår MFM-kalkulator er helt gratis å bruke uten krav om registrering, abonnement eller betaling. Skriv inn et hvilket som helst sett med positive heltall og få øyeblikkelige, nøyaktige resultater med trinn-for-trinn beregninger. Kalkulatoren kan håndtere flere tall samtidig og viser den komplette løsningsprosessen. Perfekt for studenter, lærere, ingeniører og alle som trenger raske MFM-beregninger."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte Kalkulatorer",
+          "gcd": "SFD-kalkulator",
+          "gcdDesc": "Beregn Største Felles Divisor (SFD) av to eller flere tall med trinn-for-trinn løsninger",
+          "fractions": "Brøkkalkulator",
+          "fractionsDesc": "Legg til, trekk fra, multipliser og del brøker med felles nevnere ved bruk av MFM",
+          "division": "Divisjonskalkulator",
+          "divisionDesc": "Utfør divisjonsoperasjoner med detaljerte kvotient- og restberegninger"
+        }
+      }
+    },
     "convolution": {
       "title": "Konvolusjonskalkulator",
       "description": "Beregn den diskrete konvolusjonen av to datasekvenser. Gratis online verktøy for signalbehandling, matematikk og ingeniørapplikasjoner.",

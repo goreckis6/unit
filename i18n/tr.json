@@ -3403,6 +3403,73 @@
         }
       }
     },
+    "percentError": {
+      "title": "Yüzde Hata Hesaplayıcı",
+      "description": "Gerçek ve deneysel değerler arasındaki yüzde hatayı ve mutlak hatayı anında hesaplayın. Bilimsel ölçümler ve hata analizi için ücretsiz çevrimiçi araç.",
+      "actualValue": "Gerçek Değer (Doğru Değer)",
+      "actualPlaceholder": "Gerçek değeri girin",
+      "experimentalValue": "Deneysel Değer (Ölçülen Değer)",
+      "experimentalPlaceholder": "Deneysel değeri girin",
+      "reset": "Sıfırla",
+      "results": "Sonuçlar",
+      "percentError": "Yüzde Hata",
+      "absoluteError": "Mutlak Hata",
+      "formula": "Formül",
+      "enterValues": "Yüzde hatayı hesaplamak için değerleri girin",
+      "errorZero": "Yüzde hata hesaplaması için gerçek değer sıfır olamaz",
+      "seo": {
+        "title": "Yüzde Hata Hesaplayıcı – Yüzde Hatayı Çevrimiçi Hesaplayın",
+        "description": "Gerçek ve deneysel değerler arasındaki yüzde hatayı bulmak için ücretsiz yüzde hata hesaplayıcı. Bilimsel ölçümler ve hata analizi için mutlak ve yüzde hatayı anında hesaplayın.",
+        "keywords": "yüzde hata hesaplayıcı, hata hesaplama, mutlak hata, deneysel hata, ölçüm hatası, bilimsel hata analizi, doğruluk hesaplayıcı",
+        "content": {
+          "heading": "Yüzde Hata Nasıl Hesaplanır",
+          "paragraph1": "Yüzde hata, bilimsel ölçümler ve deneylerde temel bir kavramdır ve deneysel (ölçülen) değer ile gerçek (doğru veya kabul edilen) değer arasındaki farkı yüzde olarak ifade eder. Ölçümlerin doğruluğunu ölçmek için standartlaştırılmış bir yöntem sağlar ve bilim insanlarının, mühendislerin ve öğrencilerin deneysel sonuçlarının beklenen veya doğru değerlere ne kadar yakın olduğunu değerlendirmelerine olanak tanır. Ücretsiz yüzde hata hesaplayıcımız hem mutlak hatayı hem de yüzde hatayı anında hesaplamayı kolaylaştırır.",
+          "paragraph2": "Yüzde hata formülü şöyledir: % Hata = (|Deneysel Değer - Gerçek Değer| / |Gerçek Değer|) × 100. Mutlak hata basitçe |Deneysel Değer - Gerçek Değer|'dir ve ölçülen ve gerçek değerler arasındaki farkın büyüklüğünü temsil eder. Dikey çubuklar mutlak değeri gösterir ve yüzde hatanın her zaman pozitif bir yüzde olarak ifade edilmesini sağlar. Örneğin, gerçek değer 50 ve deneysel değer 48 ise, mutlak hata |48 - 50| = 2'dir ve yüzde hata (2 / 50) × 100 = %4'tür.",
+          "paragraph3": "Yüzde hata birçok uygulamada esastır: laboratuvar deneyleri ve bilimsel araştırma (ölçülen sonuçları bilinen değerlerle karşılaştırma), kalite kontrol ve üretim (ürün doğruluğunu değerlendirme), eğitim ortamları (öğrenci ölçümlerini değerlendirme), mühendislik projeleri (hesaplamaları ve ölçümleri doğrulama) ve veri analizi (ölçüm belirsizliğini ölçme). Daha düşük bir yüzde hata daha yüksek doğruluğu gösterirken, daha yüksek bir yüzde hata daha büyük ölçüm belirsizliğini gösterir.",
+          "paragraph4": "Yüzde hata hesaplayıcımız, değerleri girdiğinizde hem mutlak hatayı hem de yüzde hatayı otomatik olarak hesaplar. Basitçe gerçek (doğru veya kabul edilen) değeri ve deneysel (ölçülen) değeri girin ve hesaplayıcı kullanılan formülle birlikte sonuçları anında görüntüler. Araç, pozitif ve negatif sayıları, ondalık sayıları ve büyük değerleri hassasiyetle işler. İster laboratuvar raporu dolduran bir öğrenci, ister deneysel verileri analiz eden bir bilim insanı, ister ölçümleri doğrulayan bir mühendis olun, hesaplayıcımız doğru yüzde hata hesaplamalarını anında ve ücretsiz olarak sağlar.",
+          "exampleHeading": "Örnek: Yüzde Hata Hesaplama",
+          "exampleText": "Bir nesnenin uzunluğunu ölçtüğünüzü ve 48 cm (deneysel değer) elde ettiğinizi, ancak gerçek uzunluğun 50 cm (gerçek değer) olduğunu varsayalım. Mutlak Hata = |48 - 50| = 2 cm. Yüzde Hata = (2 / 50) × 100 = %4. Bu, ölçümünüzün %4 hata içerdiği anlamına gelir. Başka bir örnek: gerçek değer 100 ve deneysel değer 105 ise, o zaman Mutlak Hata = |105 - 100| = 5 ve Yüzde Hata = (5 / 100) × 100 = %5. Yüzde hata, ölçümün gerçek değerden yüzde olarak ne kadar uzak olduğunu ölçer."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {
+              "question": "Yüzde hata nedir?",
+              "answer": "Yüzde hata, bir ölçümün gerçek veya kabul edilen değere kıyasla ne kadar doğru olduğunun bir ölçüsüdür. Deneysel (ölçülen) değer ile gerçek (doğru) değer arasındaki farkı gerçek değerin yüzdesi olarak ifade eder. Formül şöyledir: % Hata = (|Deneysel - Gerçek| / |Gerçek|) × 100."
+            },
+            {
+              "question": "Mutlak hata ve yüzde hata arasındaki fark nedir?",
+              "answer": "Mutlak hata, ölçülen ve gerçek değerler arasındaki ham farktır: |Deneysel - Gerçek|. Ölçümle aynı birimlere sahiptir. Yüzde hata bu farkı gerçek değerin yüzdesi olarak ifade eder: (Mutlak Hata / |Gerçek Değer|) × 100. Yüzde hata boyutsuz olup farklı ölçekler ve birimler arasında hata karşılaştırmasına olanak tanır."
+            },
+            {
+              "question": "Yüzde hata neden her zaman pozitiftir?",
+              "answer": "Yüzde hata, sonucun her zaman pozitif olmasını sağlamak için mutlak değer (|Deneysel - Gerçek|) kullanır. Bunun nedeni, yüzde hatanın hatanın büyüklüğünü ölçmesi, yönünü değil. Bir ölçümün çok yüksek mi yoksa çok düşük mü olduğunu bilmeniz gerekiyorsa, pozitif veya negatif olabilen yüzde fark veya yüzde sapma kullanabilirsiniz."
+            },
+            {
+              "question": "Gerçek değer sıfır olabilir mi?",
+              "answer": "Hayır, yüzde hata hesaplanırken gerçek değer sıfır olamaz çünkü formül gerçek değere böler. Sıfıra bölme tanımsızdır. Gerçek değer sıfırsa, ölçüm hatasını ölçmek için bunun yerine mutlak hata kullanabilirsiniz."
+            },
+            {
+              "question": "İyi bir yüzde hata değeri nedir?",
+              "answer": "'İyi' bir yüzde hatayı oluşturan şey bağlama ve alana bağlıdır. Laboratuvar deneylerinde %5'in altındaki yüzde hatalar genellikle kabul edilebilir kabul edilir, %1'in altı mükemmeldir ve %10'un üstü ölçüm sorunlarını veya deneysel hataları gösterebilir. Bazı uygulamalarda daha da küçük hatalar (< %0,1) gereklidir, diğerlerinde ise daha büyük hatalar kabul edilebilir."
+            },
+            {
+              "question": "Bu yüzde hata hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, yüzde hata hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Sadece gerçek ve deneysel değerlerinizi girin ve hesaplama formülü gösterilerek anında yüzde hata ve mutlak hata sonuçları alın."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın",
+          "average": "Ortalama Hesaplayıcı",
+          "averageDesc": "Sayıların ortalamasını, toplamını ve sayısını hesaplayın",
+          "ratio": "Oran Hesaplayıcı",
+          "ratioDesc": "Oranları hesaplayın, oranları basitleştirin ve eşdeğer oranları bulun"
+        }
+      }
+    },
     "convolution": {
       "title": "Konvolüsyon Hesaplayıcı",
       "description": "İki veri dizisinin ayrık konvolüsyonunu hesaplayın. Sinyal işleme, matematik ve mühendislik uygulamaları için ücretsiz çevrimiçi araç.",

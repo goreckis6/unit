@@ -86,6 +86,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'percent-error',
+    titleKey: 'percentError.title',
+    descKey: 'percentError.description',
+    path: '/calculators/math/percent-error',
+    category: 'math',
+  },
+  {
     id: 'ratio',
     titleKey: 'ratio.title',
     descKey: 'ratio.description',

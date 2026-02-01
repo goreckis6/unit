@@ -3399,6 +3399,73 @@
         "description": "Sumar dos números"
       }
     },
+    "percentError": {
+      "title": "Calculadora de Error Porcentual",
+      "description": "Calcula el error porcentual y el error absoluto entre valores reales y experimentales al instante. Herramienta en línea gratuita para mediciones científicas y análisis de errores.",
+      "actualValue": "Valor Real (Valor Verdadero)",
+      "actualPlaceholder": "Ingrese el valor real",
+      "experimentalValue": "Valor Experimental (Valor Medido)",
+      "experimentalPlaceholder": "Ingrese el valor experimental",
+      "reset": "Restablecer",
+      "results": "Resultados",
+      "percentError": "Error Porcentual",
+      "absoluteError": "Error Absoluto",
+      "formula": "Fórmula",
+      "enterValues": "Ingrese valores para calcular el error porcentual",
+      "errorZero": "El valor real no puede ser cero para el cálculo del error porcentual",
+      "seo": {
+        "title": "Calculadora de Error Porcentual – Calcule el Error Porcentual en Línea",
+        "description": "Calculadora de error porcentual gratuita para encontrar el error porcentual entre valores reales y experimentales. Calcule el error absoluto y porcentual al instante para mediciones científicas y análisis de errores.",
+        "keywords": "calculadora de error porcentual, cálculo de error, error absoluto, error experimental, error de medición, análisis de error científico, calculadora de precisión",
+        "content": {
+          "heading": "Cómo Calcular el Error Porcentual",
+          "paragraph1": "El error porcentual es un concepto fundamental en mediciones y experimentos científicos, que expresa la diferencia entre un valor experimental (medido) y el valor real (verdadero o aceptado) como un porcentaje. Proporciona una forma estandarizada de cuantificar la precisión de las mediciones, permitiendo a científicos, ingenieros y estudiantes evaluar qué tan cerca están sus resultados experimentales de los valores esperados o verdaderos. Nuestra calculadora de error porcentual gratuita facilita el cálculo instantáneo tanto del error absoluto como del error porcentual.",
+          "paragraph2": "La fórmula del error porcentual es: % Error = (|Valor Experimental - Valor Real| / |Valor Real|) × 100. El error absoluto es simplemente |Valor Experimental - Valor Real|, que representa la magnitud de la diferencia entre los valores medidos y verdaderos. Las barras verticales indican valor absoluto, asegurando que el error porcentual siempre se exprese como un porcentaje positivo. Por ejemplo, si el valor real es 50 y el valor experimental es 48, el error absoluto es |48 - 50| = 2, y el error porcentual es (2 / 50) × 100 = 4%.",
+          "paragraph3": "El error porcentual es esencial en numerosas aplicaciones: experimentos de laboratorio e investigación científica (comparar resultados medidos con valores conocidos), control de calidad y fabricación (evaluar la precisión del producto), entornos educativos (evaluar mediciones de estudiantes), proyectos de ingeniería (validar cálculos y mediciones) y análisis de datos (cuantificar la incertidumbre de medición). Un error porcentual más bajo indica mayor precisión, mientras que un error porcentual más alto sugiere mayor incertidumbre de medición.",
+          "paragraph4": "Nuestra calculadora de error porcentual calcula automáticamente tanto el error absoluto como el error porcentual a medida que ingresa valores. Simplemente ingrese el valor real (verdadero o aceptado) y el valor experimental (medido), y la calculadora mostrará instantáneamente los resultados junto con la fórmula utilizada. La herramienta maneja números positivos y negativos, decimales y valores grandes con precisión. Ya sea que sea un estudiante completando un informe de laboratorio, un científico analizando datos experimentales o un ingeniero validando mediciones, nuestra calculadora proporciona cálculos precisos de error porcentual al instante y de forma gratuita.",
+          "exampleHeading": "Ejemplo: Cálculo del Error Porcentual",
+          "exampleText": "Suponga que mide la longitud de un objeto y obtiene 48 cm (valor experimental), pero la longitud real es 50 cm (valor real). Error Absoluto = |48 - 50| = 2 cm. Error Porcentual = (2 / 50) × 100 = 4%. Esto significa que su medición tiene un error del 4%. Otro ejemplo: si el valor real es 100 y el valor experimental es 105, entonces Error Absoluto = |105 - 100| = 5, y Error Porcentual = (5 / 100) × 100 = 5%. El error porcentual cuantifica qué tan lejos está la medición del valor verdadero como un porcentaje."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es el error porcentual?",
+              "answer": "El error porcentual es una medida de qué tan precisa es una medición en comparación con el valor verdadero o aceptado. Expresa la diferencia entre el valor experimental (medido) y el valor real (verdadero) como un porcentaje del valor real. La fórmula es: % Error = (|Experimental - Real| / |Real|) × 100."
+            },
+            {
+              "question": "¿Cuál es la diferencia entre error absoluto y error porcentual?",
+              "answer": "El error absoluto es la diferencia bruta entre los valores medidos y verdaderos: |Experimental - Real|. Tiene las mismas unidades que la medición. El error porcentual expresa esta diferencia como un porcentaje del valor verdadero: (Error Absoluto / |Valor Real|) × 100. El error porcentual es adimensional y permite la comparación de errores en diferentes escalas y unidades."
+            },
+            {
+              "question": "¿Por qué el error porcentual es siempre positivo?",
+              "answer": "El error porcentual usa el valor absoluto (|Experimental - Real|) para asegurar que el resultado sea siempre positivo. Esto se debe a que el error porcentual mide la magnitud del error, no su dirección. Si necesita saber si una medición es demasiado alta o demasiado baja, puede usar la diferencia porcentual o la desviación porcentual, que pueden ser positivas o negativas."
+            },
+            {
+              "question": "¿Puede el valor real ser cero?",
+              "answer": "No, el valor real no puede ser cero al calcular el error porcentual porque la fórmula divide por el valor real. La división por cero no está definida. Si el valor real es cero, puede usar el error absoluto en su lugar para cuantificar el error de medición."
+            },
+            {
+              "question": "¿Qué es un buen valor de error porcentual?",
+              "answer": "Lo que constituye un error porcentual 'bueno' depende del contexto y el campo. En experimentos de laboratorio, los errores porcentuales por debajo del 5% a menudo se consideran aceptables, por debajo del 1% es excelente, y por encima del 10% puede indicar problemas de medición o errores experimentales. En algunas aplicaciones, se requieren errores aún más pequeños (< 0,1%), mientras que en otros, pueden ser aceptables errores más grandes."
+            },
+            {
+              "question": "¿Es gratuita esta calculadora de error porcentual?",
+              "answer": "Sí, nuestra calculadora de error porcentual es completamente gratuita. No se requiere registro ni pago. Simplemente ingrese sus valores reales y experimentales, y obtenga resultados instantáneos de error porcentual y absoluto con la fórmula de cálculo mostrada."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "percentage": "Calculadora de Porcentaje",
+          "percentageDesc": "Calcule valores porcentuales, cambio porcentual y relaciones porcentuales",
+          "average": "Calculadora de Promedio",
+          "averageDesc": "Calcule el promedio, la suma y el conteo de números",
+          "ratio": "Calculadora de Razón",
+          "ratioDesc": "Calcule razones, simplifique razones y encuentre razones equivalentes"
+        }
+      }
+    },
     "convolution": {
       "title": "Calculadora de Convolución",
       "description": "Calcula la convolución discreta de dos secuencias de datos. Herramienta online gratuita para procesamiento de señales, matemáticas y aplicaciones de ingeniería.",

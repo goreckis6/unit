@@ -3399,6 +3399,73 @@
         }
       }
     },
+    "percentError": {
+      "title": "Percent Error Calculator",
+      "description": "Calculate percent error and absolute error between actual and experimental values instantly. Free online tool for scientific measurements and error analysis.",
+      "actualValue": "Actual Value (True Value)",
+      "actualPlaceholder": "Enter actual value",
+      "experimentalValue": "Experimental Value (Measured Value)",
+      "experimentalPlaceholder": "Enter experimental value",
+      "reset": "Reset",
+      "results": "Results",
+      "percentError": "Percent Error",
+      "absoluteError": "Absolute Error",
+      "formula": "Formula",
+      "enterValues": "Enter values to calculate percent error",
+      "errorZero": "Actual value cannot be zero for percent error calculation",
+      "seo": {
+        "title": "Percent Error Calculator – Calculate Percentage Error Online",
+        "description": "Free percent error calculator to find the percentage error between actual and experimental values. Calculate absolute and percent error instantly for scientific measurements and error analysis.",
+        "keywords": "percent error calculator, percentage error calculator, error calculation, absolute error, experimental error, measurement error, scientific error analysis, accuracy calculator",
+        "content": {
+          "heading": "How to Calculate Percent Error",
+          "paragraph1": "Percent error is a fundamental concept in scientific measurements and experiments, expressing the difference between an experimental (measured) value and the actual (true or accepted) value as a percentage. It provides a standardized way to quantify the accuracy of measurements, allowing scientists, engineers, and students to assess how close their experimental results are to the expected or true values. Our free percent error calculator makes it easy to compute both the absolute error and the percent error instantly.",
+          "paragraph2": "The percent error formula is: % Error = (|Experimental Value - Actual Value| / |Actual Value|) × 100. The absolute error is simply |Experimental Value - Actual Value|, representing the magnitude of the difference between the measured and true values. The vertical bars indicate absolute value, ensuring that percent error is always expressed as a positive percentage. For example, if the actual value is 50 and the experimental value is 48, the absolute error is |48 - 50| = 2, and the percent error is (2 / 50) × 100 = 4%.",
+          "paragraph3": "Percent error is essential in numerous applications: laboratory experiments and scientific research (comparing measured results to known values), quality control and manufacturing (assessing product accuracy and precision), educational settings (evaluating student measurements and experimental techniques), engineering projects (validating calculations and measurements), and data analysis (quantifying measurement uncertainty). A lower percent error indicates higher accuracy and precision, while a higher percent error suggests greater measurement uncertainty or systematic errors.",
+          "paragraph4": "Our percent error calculator automatically computes both absolute error and percent error as you enter values. Simply input the actual (true or accepted) value and the experimental (measured) value, and the calculator instantly displays the results along with the formula used. The tool handles positive and negative numbers, decimals, and large values with precision. Whether you're a student completing a lab report, a scientist analyzing experimental data, or an engineer validating measurements, our calculator provides accurate percent error calculations instantly and free of charge.",
+          "exampleHeading": "Example: Calculating Percent Error",
+          "exampleText": "Suppose you measure the length of an object and get 48 cm (experimental value), but the actual length is 50 cm (actual value). Absolute Error = |48 - 50| = 2 cm. Percent Error = (2 / 50) × 100 = 4%. This means your measurement has a 4% error. Another example: if the actual value is 100 and the experimental value is 105, then Absolute Error = |105 - 100| = 5, and Percent Error = (5 / 100) × 100 = 5%. The percent error quantifies how far off the measurement is from the true value as a percentage."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is percent error?",
+              "answer": "Percent error is a measure of how accurate a measurement is compared to the true or accepted value. It expresses the difference between the experimental (measured) value and the actual (true) value as a percentage of the actual value. The formula is: % Error = (|Experimental - Actual| / |Actual|) × 100."
+            },
+            {
+              "question": "What is the difference between absolute error and percent error?",
+              "answer": "Absolute error is the raw difference between the measured and true values: |Experimental - Actual|. It has the same units as the measurement. Percent error expresses this difference as a percentage of the true value: (Absolute Error / |Actual Value|) × 100. Percent error is dimensionless and allows comparison of errors across different scales and units."
+            },
+            {
+              "question": "Why is percent error always positive?",
+              "answer": "Percent error uses absolute value (|Experimental - Actual|) to ensure the result is always positive. This is because percent error measures the magnitude of error, not its direction. If you need to know whether a measurement is too high or too low, you can use percent difference or percent deviation, which can be positive or negative."
+            },
+            {
+              "question": "Can the actual value be zero?",
+              "answer": "No, the actual value cannot be zero when calculating percent error because the formula divides by the actual value. Division by zero is undefined. If the actual value is zero, you can use absolute error instead to quantify the measurement error."
+            },
+            {
+              "question": "What is a good percent error value?",
+              "answer": "What constitutes a 'good' percent error depends on the context and field. In laboratory experiments, percent errors below 5% are often considered acceptable, below 1% is excellent, and above 10% may indicate measurement problems or experimental errors. In some applications, even smaller errors (< 0.1%) are required, while in others, larger errors may be acceptable."
+            },
+            {
+              "question": "Is this percent error calculator free to use?",
+              "answer": "Yes, our percent error calculator is completely free to use. No registration or payment is required. Simply enter your actual and experimental values, and get instant percent error and absolute error results with the calculation formula displayed."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentage values, percentage change, and percentage relationships",
+          "average": "Average Calculator",
+          "averageDesc": "Calculate the average, sum, and count of numbers",
+          "ratio": "Ratio Calculator",
+          "ratioDesc": "Calculate ratios, simplify ratios, and find equivalent ratios"
+        }
+      }
+    },
     "convolution": {
       "title": "Convolution Calculator",
       "description": "Calculate the discrete convolution of two data sequences. Free online tool for signal processing, mathematics, and engineering applications.",

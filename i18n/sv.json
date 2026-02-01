@@ -3399,6 +3399,73 @@
         "description": "Addera två tal"
       }
     },
+    "percentError": {
+      "title": "Procentuellt Fel Kalkylator",
+      "description": "Beräkna procentuellt fel och absolut fel mellan faktiska och experimentella värden omedelbart. Gratis online-verktyg för vetenskapliga mätningar och felanalys.",
+      "actualValue": "Faktiskt Värde (Sant Värde)",
+      "actualPlaceholder": "Ange faktiskt värde",
+      "experimentalValue": "Experimentellt Värde (Mätt Värde)",
+      "experimentalPlaceholder": "Ange experimentellt värde",
+      "reset": "Återställ",
+      "results": "Resultat",
+      "percentError": "Procentuellt Fel",
+      "absoluteError": "Absolut Fel",
+      "formula": "Formel",
+      "enterValues": "Ange värden för att beräkna procentuellt fel",
+      "errorZero": "Faktiskt värde kan inte vara noll för beräkning av procentuellt fel",
+      "seo": {
+        "title": "Procentuellt Fel Kalkylator – Beräkna Procentuellt Fel Online",
+        "description": "Gratis procentuellt fel kalkylator för att hitta procentuellt fel mellan faktiska och experimentella värden. Beräkna absolut och procentuellt fel omedelbart för vetenskapliga mätningar och felanalys.",
+        "keywords": "procentuellt fel kalkylator, felberäkning, absolut fel, experimentellt fel, mätfel, vetenskaplig felanalys, noggrannhetskalkylator",
+        "content": {
+          "heading": "Hur Man Beräknar Procentuellt Fel",
+          "paragraph1": "Procentuellt fel är ett grundläggande koncept i vetenskapliga mätningar och experiment, som uttrycker skillnaden mellan ett experimentellt (mätt) värde och det faktiska (sanna eller accepterade) värdet som en procentsats. Det ger ett standardiserat sätt att kvantifiera noggrannheten hos mätningar, vilket gör det möjligt för forskare, ingenjörer och studenter att bedöma hur nära deras experimentella resultat är de förväntade eller sanna värdena. Vår gratis procentuella fel kalkylator gör det enkelt att beräkna både absolut fel och procentuellt fel omedelbart.",
+          "paragraph2": "Formeln för procentuellt fel är: % Fel = (|Experimentellt Värde - Faktiskt Värde| / |Faktiskt Värde|) × 100. Det absoluta felet är helt enkelt |Experimentellt Värde - Faktiskt Värde|, som representerar storleken på skillnaden mellan de mätta och sanna värdena. De vertikala staplarna indikerar absolut värde, vilket säkerställer att procentuellt fel alltid uttrycks som en positiv procentsats. Till exempel, om det faktiska värdet är 50 och det experimentella värdet är 48, är det absoluta felet |48 - 50| = 2, och det procentuella felet är (2 / 50) × 100 = 4%.",
+          "paragraph3": "Procentuellt fel är viktigt i många tillämpningar: laboratorieexperiment och vetenskaplig forskning (jämföra mätta resultat med kända värden), kvalitetskontroll och tillverkning (bedöma produktnoggrannhet), utbildningsmiljöer (utvärdera studentmätningar), ingenjörsprojekt (validera beräkningar och mätningar) och dataanalys (kvantifiera mätosäkerhet). Ett lägre procentuellt fel indikerar högre noggrannhet, medan ett högre procentuellt fel tyder på större mätosäkerhet.",
+          "paragraph4": "Vår procentuella fel kalkylator beräknar automatiskt både absolut fel och procentuellt fel när du anger värden. Ange helt enkelt det faktiska (sanna eller accepterade) värdet och det experimentella (mätta) värdet, så visar kalkylatorn omedelbart resultaten tillsammans med den använda formeln. Verktyget hanterar positiva och negativa tal, decimaler och stora värden med precision. Oavsett om du är en student som fyller i en laboratorieraport, en forskare som analyserar experimentella data eller en ingenjör som validerar mätningar, ger vår kalkylator korrekta procentuella felberäkningar omedelbart och gratis.",
+          "exampleHeading": "Exempel: Beräkning av Procentuellt Fel",
+          "exampleText": "Anta att du mäter längden på ett objekt och får 48 cm (experimentellt värde), men den faktiska längden är 50 cm (faktiskt värde). Absolut Fel = |48 - 50| = 2 cm. Procentuellt Fel = (2 / 50) × 100 = 4%. Detta innebär att din mätning har ett fel på 4%. Ett annat exempel: om det faktiska värdet är 100 och det experimentella värdet är 105, då Absolut Fel = |105 - 100| = 5, och Procentuellt Fel = (5 / 100) × 100 = 5%. Procentuellt fel kvantifierar hur långt mätningen är från det sanna värdet som en procentsats."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är procentuellt fel?",
+              "answer": "Procentuellt fel är ett mått på hur noggrann en mätning är jämfört med det sanna eller accepterade värdet. Det uttrycker skillnaden mellan det experimentella (mätta) värdet och det faktiska (sanna) värdet som en procentsats av det faktiska värdet. Formeln är: % Fel = (|Experimentellt - Faktiskt| / |Faktiskt|) × 100."
+            },
+            {
+              "question": "Vad är skillnaden mellan absolut fel och procentuellt fel?",
+              "answer": "Absolut fel är den råa skillnaden mellan de mätta och sanna värdena: |Experimentellt - Faktiskt|. Det har samma enheter som mätningen. Procentuellt fel uttrycker denna skillnad som en procentsats av det sanna värdet: (Absolut Fel / |Faktiskt Värde|) × 100. Procentuellt fel är dimensionslöst och möjliggör jämförelse av fel över olika skalor och enheter."
+            },
+            {
+              "question": "Varför är procentuellt fel alltid positivt?",
+              "answer": "Procentuellt fel använder absolut värde (|Experimentellt - Faktiskt|) för att säkerställa att resultatet alltid är positivt. Detta beror på att procentuellt fel mäter felets storlek, inte dess riktning. Om du behöver veta om en mätning är för hög eller för låg, kan du använda procentuell skillnad eller procentuell avvikelse, som kan vara positiv eller negativ."
+            },
+            {
+              "question": "Kan det faktiska värdet vara noll?",
+              "answer": "Nej, det faktiska värdet kan inte vara noll när man beräknar procentuellt fel eftersom formeln delar med det faktiska värdet. Division med noll är odefinierad. Om det faktiska värdet är noll kan du använda absolut fel istället för att kvantifiera mätfelet."
+            },
+            {
+              "question": "Vad är ett bra procentuellt felvärde?",
+              "answer": "Vad som utgör ett 'bra' procentuellt fel beror på sammanhang och område. I laboratorieexperiment anses procentuella fel under 5% ofta vara acceptabla, under 1% är utmärkt, och över 10% kan indikera mätproblem eller experimentella fel. I vissa tillämpningar krävs ännu mindre fel (< 0,1%), medan större fel kan vara acceptabla i andra."
+            },
+            {
+              "question": "Är denna procentuella fel kalkylator gratis att använda?",
+              "answer": "Ja, vår procentuella fel kalkylator är helt gratis att använda. Ingen registrering eller betalning krävs. Ange helt enkelt dina faktiska och experimentella värden och få omedelbara procentuella fel- och absoluta felresultat med beräkningsformeln visad."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "percentage": "Procentkalkylator",
+          "percentageDesc": "Beräkna procentvärden, procentuell förändring och procentuella förhållanden",
+          "average": "Genomsnittskalkylator",
+          "averageDesc": "Beräkna genomsnitt, summa och antal tal",
+          "ratio": "Förhållandekalkylator",
+          "ratioDesc": "Beräkna förhållanden, förenkla förhållanden och hitta ekvivalenta förhållanden"
+        }
+      }
+    },
     "convolution": {
       "title": "Faltningskalkylator",
       "description": "Beräkna den diskreta faltningen av två datasekvenser. Gratis onlineverktyg för signalbehandling, matematik och ingenjörstillämpningar.",

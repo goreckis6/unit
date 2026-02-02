@@ -110,16 +110,17 @@ export function AddingFractionsCalculator() {
 
   return (
     <>
-      <div className="input-section">
-        <div className="input-legend">
-          <p className="legend-text">{t('inputLegend')}</p>
-        </div>
-        <div className="inputs-grid">
-          <div className="input-card">
-            <label htmlFor="expression" className="input-label">
-              {t('title')}
-            </label>
-            <div className="input-with-unit">
+      <div className="split-view-container">
+        {/* Left Column - Inputs */}
+        <div className="input-section" style={{ marginBottom: 0 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="input-card">
+              <div className="input-legend">
+                <p className="legend-text">{t('inputLegend')}</p>
+              </div>
+              <label htmlFor="expression" className="input-label">
+                {t('title')}
+              </label>
               <input
                 id="expression"
                 type="text"
@@ -130,50 +131,66 @@ export function AddingFractionsCalculator() {
                 placeholder="1/2 + 1/3"
               />
             </div>
+
+            <div className="action-buttons" style={{ marginTop: '0.5rem', display: 'flex', gap: '0.75rem' }}>
+              <button onClick={handleCalculate} className="btn btn-primary" style={{ minHeight: '44px', minWidth: '44px' }}>
+                {t('calculate')}
+              </button>
+              <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>
+                {t('reset')}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="action-buttons">
-        <button onClick={handleCalculate} className="btn btn-primary">
-          {t('calculate')}
-        </button>
-        <button onClick={handleReset} className="btn btn-secondary">
-          {t('reset')}
-        </button>
-      </div>
+        {/* Right Column - Results */}
+        <div ref={resultRef} className="result-section" style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}>
+          <div className="input-card">
+            <label className="input-label">{t('result')}</label>
 
-      {resultFraction && (
-        <div ref={resultRef} className="result-section">
-          <div className="result-header">
-            <div className="result-badge">
-              {t('result')}
-            </div>
-          </div>
-          <div className="result-display">
-            <div className="result-item">
-              <div className="result-label">{t('resultFraction')}</div>
-              <div className="number-input result-value-box">
-                <span className="result-value">
-                  {resultFraction.numerator}/{resultFraction.denominator}
-                </span>
-                <CopyButton text={`${resultFraction.numerator}/${resultFraction.denominator}${resultDecimal !== null ? ` = ${resultDecimal.toFixed(4)}` : ''}`} />
+            {!resultFraction && (
+              <div className="number-input" style={{ minHeight: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.6 }}>
+                <span style={{ color: 'var(--text-secondary)' }}>{t('resultPlaceholder') || 'Enter an expression and click Calculate'}</span>
               </div>
-            </div>
-            {resultDecimal !== null && (
-              <div className="result-item">
-                <div className="result-label">{t('resultDecimal')}</div>
-                <div className="number-input result-value-box">
-                  <span className="result-value">
-                    {resultDecimal.toFixed(4)}
-                  </span>
-                  <CopyButton text={resultDecimal.toFixed(4)} />
+            )}
+
+            {resultFraction && (
+              <div
+                className="number-input"
+                style={{
+                  minHeight: '220px',
+                  padding: '1.25rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '1rem',
+                }}
+              >
+                <div className="result-item">
+                  <div className="result-label">{t('resultFraction')}</div>
+                  <div className="number-input result-value-box">
+                    <span className="result-value">
+                      {resultFraction.numerator}/{resultFraction.denominator}
+                    </span>
+                    <CopyButton text={`${resultFraction.numerator}/${resultFraction.denominator}`} />
+                  </div>
                 </div>
+
+                {resultDecimal !== null && (
+                  <div className="result-item">
+                    <div className="result-label">{t('resultDecimal')}</div>
+                    <div className="number-input result-value-box">
+                      <span className="result-value">
+                        {resultDecimal.toFixed(4)}
+                      </span>
+                      <CopyButton text={resultDecimal.toFixed(4)} />
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 }

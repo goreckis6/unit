@@ -810,6 +810,69 @@
         }
       }
     },
+    "commonFactors": {
+      "title": "Kalkulačka Spoločných Deliteľov",
+      "description": "Nájdite všetky spoločné delitele a najväčší spoločný deliteľ (NSD) dvoch čísel okamžite s vysvetlením krok za krokom",
+      "number1": "Prvé Číslo",
+      "number2": "Druhé Číslo",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "gcfLabel": "Najväčší Spoločný Deliteľ (NSD)",
+      "commonFactorsLabel": "Všetky Spoločné Delitele",
+      "seo": {
+        "title": "Kalkulačka Spoločných Deliteľov – Nájdite NSD a Všetky Spoločné Delitele Online",
+        "description": "Bezplatná online kalkulačka na nájdenie všetkých spoločných deliteľov a najväčšieho spoločného deliteľa (NSD) dvoch čísel. Získajte okamžité výsledky s jasnými vysvetleniami pre matematické úlohy.",
+        "keywords": "kalkulačka spoločných deliteľov, kalkulačka NSD, najväčší spoločný deliteľ, spoločné delitele, kalkulačka deliteľov, kalkulačka GCD, matematická kalkulačka, teória čísel",
+        "content": {
+          "heading": "Ako Nájsť Spoločné Delitele a NSD",
+          "paragraph1": "Spoločné delitele sú čísla, ktoré rovnomerne delia dve alebo viac čísel bez zvyšku. Najväčší spoločný deliteľ (NSD), známy tiež ako najväčší spoločný divisor, je najväčšie číslo, ktoré rovnomerne delí všetky dané čísla. Nájdenie spoločných deliteľov je základná zručnosť v matematike, používaná na zjednodušovanie zlomkov, riešenie rovníc a prácu s pomermi. Naša Kalkulačka Spoločných Deliteľov uľahčuje okamžité nájdenie všetkých spoločných deliteľov a NSD akýchkoľvek dvoch čísel.",
+          "paragraph2": "Ak chcete nájsť spoločné delitele manuálne, najprv vypíšte všetky delitele každého čísla. Deliteľ je akékoľvek celé číslo, ktoré rovnomerne delí dané číslo. Napríklad delitele 12 sú 1, 2, 3, 4, 6 a 12, pretože každé z týchto čísel rovnomerne delí 12. Delitele 18 sú 1, 2, 3, 6, 9 a 18. Spoločné delitele sú čísla, ktoré sa objavujú v oboch zoznamoch: 1, 2, 3 a 6. Najväčší z nich je 6, takže NSD(12, 18) = 6.",
+          "paragraph3": "NSD má mnoho praktických aplikácií v matematike a každodennom živote. Je nevyhnutný na zjednodušovanie zlomkov na ich najjednoduchšiu formu (NSD čitateľa a menovateľa sa používa na redukciu zlomku), riešenie slovných úloh zahŕňajúcich rovnaké skupiny alebo usporiadania, nájdenie najväčšej štvorcovej dlaždice, ktorá môže rovnomerne pokryť obdĺžnikovú plochu, určenie, ako rozdeliť položky do rovnakých skupín, a riešenie problémov v teórii čísel a algebre. Pochopenie spoločných deliteľov pomáha vybudovať silný základ pre pokročilejšie matematické koncepcie.",
+          "paragraph4": "Naša kalkulačka používa efektívny algoritmus na nájdenie všetkých deliteľov oboch čísel a potom identifikuje, ktoré delitele sú spoločné pre obe. NSD je jednoducho najväčšia hodnota v zozname spoločných deliteľov. Pre veľmi veľké čísla môže byť manuálne hľadanie deliteľov časovo náročné, ale naša kalkulačka spracováva akékoľvek kladné celé čísla okamžite. Či už ste študent pracujúci na domácej úlohe, učiteľ vytvárajúci príklady alebo ktokoľvek, kto potrebuje rýchlo nájsť spoločné delitele, náš nástroj poskytuje presné výsledky počas niekoľkých sekúnd.",
+          "exampleHeading": "Bežné Príklady",
+          "exampleText": "Príklad 1: Spoločné delitele 12 a 18 sú 1, 2, 3, 6. NSD = 6. Príklad 2: Spoločné delitele 24 a 36 sú 1, 2, 3, 4, 6, 12. NSD = 12. Príklad 3: Spoločné delitele 15 a 25 sú 1, 5. NSD = 5. Príklad 4: Spoločné delitele 7 a 13 sú 1. NSD = 1 (prvočísla nemajú spoločné delitele okrem 1)."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Aký je rozdiel medzi spoločnými deliteľmi a NSD?",
+              "answer": "Spoločné delitele sú všetky čísla, ktoré rovnomerne delia dve alebo viac daných čísel. NSD (Najväčší Spoločný Deliteľ) je najväčšie číslo medzi všetkými spoločnými deliteľmi. Napríklad spoločné delitele 12 a 18 sú 1, 2, 3 a 6, zatiaľ čo NSD je 6, pretože je najväčším spoločným deliteľom."
+            },
+            {
+              "question": "Ako nájsť NSD dvoch čísel?",
+              "answer": "Ak chcete nájsť NSD, vypíšte všetky delitele každého čísla a potom identifikujte delitele, ktoré sa objavujú v oboch zoznamoch. Najväčší z týchto spoločných deliteľov je NSD. Alternatívne môžete použiť Euklidov algoritmus (opakované delenie a hľadanie zvyškov) alebo metódu prvočíselného rozkladu. Naša kalkulačka nájde NSD okamžite pre akékoľvek dve kladné celé čísla."
+            },
+            {
+              "question": "Aký je NSD dvoch prvočísel?",
+              "answer": "NSD dvoch rôznych prvočísel je vždy 1. Prvočísla majú presne dva delitele: 1 a seba samé. Pretože rôzne prvočísla nezdieľajú žiadne delitele okrem 1, ich NSD je 1. Napríklad NSD(7, 13) = 1, NSD(11, 17) = 1."
+            },
+            {
+              "question": "Prečo je nájdenie NSD dôležité?",
+              "answer": "NSD sa používa v mnohých praktických aplikáciách: zjednodušovanie zlomkov na najjednoduchšiu formu (delenie čitateľa a menovateľa ich NSD), riešenie problémov zahŕňajúcich rovnaké skupiny alebo distribúcie, nájdenie najväčšej miery, ktorá sa rovnomerne hodí do rôznych dĺžok, redukcia pomerov a riešenie algebraických rovníc. Je to základný koncept v teórii čísel a aritmetike."
+            },
+            {
+              "question": "Môže byť NSD dvoch čísel väčší ako jedno z čísel?",
+              "answer": "Nie. NSD dvoch čísel nemôže byť nikdy väčší ako menšie z dvoch čísel. V skutočnosti je maximálny možný NSD menšie číslo samo o sebe, čo sa stane, keď menšie číslo rovnomerne delí väčšie číslo. Napríklad NSD(6, 18) = 6, pretože 6 rovnomerne delí 18."
+            },
+            {
+              "question": "Aký je NSD 1 a akéhokoľvek čísla?",
+              "answer": "NSD 1 a akéhokoľvek kladného celého čísla je vždy 1. Je to preto, že 1 je jediný deliteľ 1 a 1 je deliteľom každého kladného celého čísla. Preto je 1 jediným spoločným deliteľom, čo z neho robí NSD. Napríklad NSD(1, 100) = 1, NSD(1, 57) = 1."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace Kalkulačky",
+          "percentage": "Kalkulačka Percent",
+          "percentageDesc": "Vypočítajte percentuálne hodnoty, percentuálnu zmenu a percentuálne vzťahy",
+          "percentageIncrease": "Kalkulačka Percentuálneho Nárastu",
+          "percentageIncreaseDesc": "Vypočítajte percentuálny nárast medzi dvoma číslami",
+          "multiplication": "Kalkulačka Násobenia",
+          "multiplicationDesc": "Násobte čísla rýchlo a presne s podrobnými krokmi"
+        }
+      }
+    },
     "quadraticEquation": {
       "title": "Kalkulačka Kvadratickej Rovnice",
       "description": "Riešte kvadratické rovnice a získajte reálne alebo komplexné korene okamžite.",

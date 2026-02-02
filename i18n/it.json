@@ -810,6 +810,69 @@
         }
       }
     },
+    "commonFactors": {
+      "title": "Calcolatore di Fattori Comuni",
+      "description": "Trova tutti i fattori comuni e il massimo comun divisore (MCD) di due numeri istantaneamente con spiegazione passo dopo passo",
+      "number1": "Primo Numero",
+      "number2": "Secondo Numero",
+      "calculate": "Calcola",
+      "reset": "Ripristina",
+      "result": "Risultato",
+      "gcfLabel": "Massimo Comun Divisore (MCD)",
+      "commonFactorsLabel": "Tutti i Fattori Comuni",
+      "seo": {
+        "title": "Calcolatore di Fattori Comuni – Trova MCD e Tutti i Fattori Comuni Online",
+        "description": "Calcolatore online gratuito per trovare tutti i fattori comuni e il massimo comun divisore (MCD) di due numeri. Ottieni risultati istantanei con spiegazioni chiare per i compiti di matematica.",
+        "keywords": "calcolatore fattori comuni, calcolatore MCD, massimo comun divisore, divisori comuni, calcolatore di fattori, calcolatore GCD, calcolatore matematico, teoria dei numeri",
+        "content": {
+          "heading": "Come Trovare i Fattori Comuni e il MCD",
+          "paragraph1": "I fattori comuni sono numeri che dividono uniformemente due o più numeri senza lasciare resto. Il massimo comun divisore (MCD), noto anche come il maggior divisore comune, è il numero più grande che divide uniformemente tutti i numeri dati. Trovare i fattori comuni è un'abilità fondamentale in matematica, utilizzata per semplificare le frazioni, risolvere equazioni e lavorare con le proporzioni. Il nostro Calcolatore di Fattori Comuni rende facile trovare istantaneamente tutti i fattori comuni e il MCD di due numeri qualsiasi.",
+          "paragraph2": "Per trovare i fattori comuni manualmente, elenca prima tutti i fattori di ogni numero. Un fattore è qualsiasi numero intero che divide uniformemente il numero dato. Ad esempio, i fattori di 12 sono 1, 2, 3, 4, 6 e 12 perché ciascuno di questi numeri divide uniformemente 12. I fattori di 18 sono 1, 2, 3, 6, 9 e 18. I fattori comuni sono i numeri che appaiono in entrambe le liste: 1, 2, 3 e 6. Il più grande di questi è 6, quindi MCD(12, 18) = 6.",
+          "paragraph3": "Il MCD ha molte applicazioni pratiche in matematica e nella vita quotidiana. È essenziale per semplificare le frazioni alla loro forma più semplice (il MCD del numeratore e del denominatore viene utilizzato per ridurre la frazione), risolvere problemi di parole che coinvolgono gruppi uguali o disposizioni, trovare la piastrella quadrata più grande che può coprire uniformemente un'area rettangolare, determinare come dividere gli elementi in gruppi uguali e risolvere problemi nella teoria dei numeri e nell'algebra. Comprendere i fattori comuni aiuta a costruire una solida base per concetti matematici più avanzati.",
+          "paragraph4": "Il nostro calcolatore utilizza un algoritmo efficiente per trovare tutti i fattori di entrambi i numeri, quindi identifica quali fattori sono comuni ad entrambi. Il MCD è semplicemente il valore più grande nell'elenco dei fattori comuni. Per numeri molto grandi, trovare fattori manualmente può richiedere tempo, ma il nostro calcolatore gestisce qualsiasi intero positivo istantaneamente. Che tu sia uno studente che lavora sui compiti, un insegnante che crea esempi o chiunque abbia bisogno di trovare fattori comuni rapidamente, il nostro strumento fornisce risultati accurati in pochi secondi.",
+          "exampleHeading": "Esempi Comuni",
+          "exampleText": "Esempio 1: I fattori comuni di 12 e 18 sono 1, 2, 3, 6. MCD = 6. Esempio 2: I fattori comuni di 24 e 36 sono 1, 2, 3, 4, 6, 12. MCD = 12. Esempio 3: I fattori comuni di 15 e 25 sono 1, 5. MCD = 5. Esempio 4: I fattori comuni di 7 e 13 sono 1. MCD = 1 (i numeri primi non hanno fattori comuni tranne 1)."
+        },
+        "faq": {
+          "heading": "Domande Frequenti",
+          "items": [
+            {
+              "question": "Qual è la differenza tra fattori comuni e MCD?",
+              "answer": "I fattori comuni sono tutti i numeri che dividono uniformemente due o più numeri dati. Il MCD (Massimo Comun Divisore) è il numero più grande tra tutti i fattori comuni. Ad esempio, i fattori comuni di 12 e 18 sono 1, 2, 3 e 6, mentre il MCD è 6 perché è il fattore comune più grande."
+            },
+            {
+              "question": "Come si trova il MCD di due numeri?",
+              "answer": "Per trovare il MCD, elenca tutti i fattori di ogni numero, quindi identifica i fattori che appaiono in entrambe le liste. Il più grande di questi fattori comuni è il MCD. In alternativa, puoi utilizzare l'algoritmo euclideo (divisione ripetuta e ricerca dei resti) o il metodo di fattorizzazione in numeri primi. Il nostro calcolatore trova il MCD istantaneamente per qualsiasi due interi positivi."
+            },
+            {
+              "question": "Qual è il MCD di due numeri primi?",
+              "answer": "Il MCD di due numeri primi diversi è sempre 1. I numeri primi hanno esattamente due fattori: 1 e se stessi. Poiché diversi numeri primi non condividono alcun fattore oltre a 1, il loro MCD è 1. Ad esempio, MCD(7, 13) = 1, MCD(11, 17) = 1."
+            },
+            {
+              "question": "Perché trovare il MCD è importante?",
+              "answer": "Il MCD viene utilizzato in molte applicazioni pratiche: semplificare le frazioni alla forma più semplice (dividere numeratore e denominatore per il loro MCD), risolvere problemi che coinvolgono gruppi uguali o distribuzioni, trovare la misura più grande che si adatta uniformemente a diverse lunghezze, ridurre le proporzioni e risolvere equazioni algebriche. È un concetto fondamentale nella teoria dei numeri e nell'aritmetica."
+            },
+            {
+              "question": "Il MCD di due numeri può essere maggiore di uno dei numeri?",
+              "answer": "No. Il MCD di due numeri non può mai essere maggiore del più piccolo dei due numeri. In effetti, il MCD massimo possibile è il numero più piccolo stesso, il che accade quando il numero più piccolo divide uniformemente il numero più grande. Ad esempio, MCD(6, 18) = 6 perché 6 divide uniformemente 18."
+            },
+            {
+              "question": "Qual è il MCD di 1 e qualsiasi numero?",
+              "answer": "Il MCD di 1 e qualsiasi intero positivo è sempre 1. Questo perché 1 è l'unico fattore di 1, e 1 è un fattore di ogni intero positivo. Pertanto, 1 è l'unico fattore comune, rendendolo il MCD. Ad esempio, MCD(1, 100) = 1, MCD(1, 57) = 1."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori Correlati",
+          "percentage": "Calcolatore di Percentuale",
+          "percentageDesc": "Calcola valori percentuali, variazione percentuale e relazioni percentuali",
+          "percentageIncrease": "Calcolatore di Aumento Percentuale",
+          "percentageIncreaseDesc": "Calcola l'aumento percentuale tra due numeri",
+          "multiplication": "Calcolatore di Moltiplicazione",
+          "multiplicationDesc": "Moltiplica numeri rapidamente e con precisione con passaggi dettagliati"
+        }
+      }
+    },
     "quadraticEquation": {
       "title": "Calcolatrice di Equazioni Quadratiche",
       "description": "Risolvi le equazioni quadratiche e ottieni radici reali o complesse all'istante.",

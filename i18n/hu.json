@@ -810,6 +810,71 @@
         }
       }
     },
+    "commonFactors": {
+      "title": "Közös Tényezők Kalkulátor",
+      "description": "Találja meg az összes közös tényezőt és a legnagyobb közös osztót (LNKO) két szám esetében azonnal lépésről lépésre magyarázattal",
+      "number1": "Első Szám",
+      "number2": "Második Szám",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "gcfLabel": "Legnagyobb Közös Osztó (LNKO)",
+      "commonFactorsLabel": "Összes Közös Tényező",
+      "seo": {
+        "title": "Közös Tényezők Kalkulátor – Találja meg az LNKO-t és Minden Közös Tényezőt Online",
+        "description": "Ingyenes online kalkulátor az összes közös tényező és a legnagyobb közös osztó (LNKO) megtalálásához két szám esetében. Azonnali eredmények világos magyarázatokkal matematikai házi feladatokhoz.",
+        "keywords": "közös tényezők kalkulátor, LNKO kalkulátor, legnagyobb közös osztó, közös osztók, tényezők kalkulátor, GCD kalkulátor, matematikai kalkulátor, számelmélet",
+        "content": {
+          "heading": "Hogyan Találjuk meg a Közös Tényezőket és az LNKO-t",
+          "paragraph1": "A közös tényezők olyan számok, amelyek két vagy több számot maradék nélkül osztanak. A legnagyobb közös osztó (LNKO), más néven legnagyobb közös divisor, az a legnagyobb szám, amely az összes megadott számot egyenletesen osztja. A közös tényezők megtalálása alapvető készség a matematikában, amelyet törtek egyszerűsítésére, egyenletek megoldására és arányokkal való munkára használunk. Közös Tényezők Kalkulátorunk megkönnyíti az összes közös tényező és az LNKO azonnali megtalálását bármely két szám esetében.",
+          "paragraph2": "A közös tényezők kézi megtalálásához először sorolja fel az egyes számok összes tényezőjét. A tényező bármely egész szám, amely egyenletesen osztja az adott számot. Például a 12 tényezői 1, 2, 3, 4, 6 és 12, mert ezek a számok mindegyike egyenletesen osztja a 12-t. A 18 tényezői 1, 2, 3, 6, 9 és 18. A közös tényezők azok a számok, amelyek mindkét listában megjelennek: 1, 2, 3 és 6. A legnagyobb ezek közül a 6, tehát LNKO(12, 18) = 6.",
+          "paragraph3": "Az LNKO számos gyakorlati alkalmazással rendelkezik a matematikában és a mindennapi életben. Elengedhetetlen a törtek legegyszerűbb formára való egyszerűsítéséhez (a számláló és a nevező LNKO-ját használjuk a tört csökkentésére), az egyenlő csoportokat vagy elrendezéseket tartalmazó szöveges problémák megoldásához, a legnagyobb négyzetcsempe megtalálásához, amely egyenletesen lefedheti a téglalap alakú területet, az elemek egyenlő csoportokra való felosztásának meghatározásához, és a számelméleti és algebrai problémák megoldásához. A közös tényezők megértése segít erős alapot építeni fejlettebb matematikai fogalmakhoz.",
+          "paragraph4": "Kalkulátorunk hatékony algoritmussal keresi meg mindkét szám összes tényezőjét, majd azonosítja, melyek a közös tényezők. Az LNKO egyszerűen a legnagyobb érték a közös tényezők listájában. Nagyon nagy számok esetében a tényezők kézi megtalálása időigényes lehet, de kalkulátorunk azonnal kezeli a pozitív egész számokat. Akár diák vagy, aki házi feladaton dolgozik, tanár, aki példákat készít, vagy bárki, akinek gyorsan meg kell találnia a közös tényezőket, eszközünk másodpercek alatt pontos eredményeket nyújt.",
+          "exampleHeading": "Gyakori Példák",
+          "exampleText": "1. példa: A 12 és 18 közös tényezői 1, 2, 3, 6. LNKO = 6. 2. példa: A 24 és 36 közös tényezői 1, 2, 3, 4, 6, 12. LNKO = 12. 3. példa: A 15 és 25 közös tényezői 1, 5. LNKO = 5. 4. példa: A 7 és 13 közös tényezői 1. LNKO = 1 (a prímszámoknak nincs közös tényezőjük az 1-en kívül)."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mi a különbség a közös tényezők és az LNKO között?",
+              "answer": "A közös tényezők mindazok a számok, amelyek két vagy több megadott számot egyenletesen osztan
+
+ak. Az LNKO (Legnagyobb Közös Osztó) az összes közös tényező közül a legnagyobb szám. Például a 12 és 18 közös tényezői 1, 2, 3 és 6, míg az LNKO 6, mert ez a legnagyobb közös tényező."
+            },
+            {
+              "question": "Hogyan találjuk meg két szám LNKO-ját?",
+              "answer": "Az LNKO megtalálásához sorolja fel az egyes számok összes tényezőjét, majd azonosítsa a mindkét listában megjelenő tényezőket. A legnagyobb közös tényező az LNKO. Alternatív megoldásként használhatja az Eukleidészi algoritmust (ismételt osztás és maradékok keresése) vagy a prímfaktorizációs módszert. Kalkulátorunk azonnal megtalálja az LNKO-t bármely két pozitív egész szám esetében."
+            },
+            {
+              "question": "Mi két prímszám LNKO-ja?",
+              "answer": "Két különböző prímszám LNKO-ja mindig 1. A prímszámoknak pontosan két tényezőjük van: 1 és önmaguk. Mivel a különböző prímszámok nem osztanak meg semmilyen tényezőt az 1-en kívül, LNKO-juk 1. Például LNKO(7, 13) = 1, LNKO(11, 17) = 1."
+            },
+            {
+              "question": "Miért fontos az LNKO megtalálása?",
+              "answer": "Az LNKO-t számos gyakorlati alkalmazásban használják: törtek legegyszerűbb formára való egyszerűsítése (számláló és nevező osztása az LNKO-val), egyenlő csoportokat vagy elosztásokat tartalmazó problémák megoldása, a legnagyobb mérték megtalálása, amely egyenletesen illeszkedik különböző hosszúságokba, arányok csökkentése és algebrai egyenletek megoldása. Ez alapvető fogalom a számelméletben és az aritmetikában."
+            },
+            {
+              "question": "Lehet-e két szám LNKO-ja nagyobb, mint az egyik szám?",
+              "answer": "Nem. Két szám LNKO-ja soha nem lehet nagyobb, mint a két szám kisebbike. Valójában a maximális lehetséges LNKO a kisebb szám maga, ami akkor fordul elő, amikor a kisebb szám egyenletesen osztja a nagyobb számot. Például LNKO(6, 18) = 6, mert a 6 egyenletesen osztja a 18-at."
+            },
+            {
+              "question": "Mi az 1 és bármely szám LNKO-ja?",
+              "answer": "Az 1 és bármely pozitív egész szám LNKO-ja mindig 1. Ennek oka, hogy az 1 az 1 egyetlen tényezője, és az 1 minden pozitív egész szám tényezője. Ezért az 1 az egyetlen közös tényező, így ez az LNKO. Például LNKO(1, 100) = 1, LNKO(1, 57) = 1."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Kalkulátorok",
+          "percentage": "Százalék Kalkulátor",
+          "percentageDesc": "Számítson ki százalékértékeket, százalékos változásokat és százalékos kapcsolatokat",
+          "percentageIncrease": "Százalékos Növekedés Kalkulátor",
+          "percentageIncreaseDesc": "Számítsa ki a százalékos növekedést két szám között",
+          "multiplication": "Szorzás Kalkulátor",
+          "multiplicationDesc": "Számokat gyorsan és pontosan szorozzon részletes lépésekkel"
+        }
+      }
+    },
     "quadraticEquation": {
       "title": "Másodfokú Egyenlet Kalkulátor",
       "description": "Oldj meg másodfokú egyenleteket, és kapj valós vagy komplex gyököket azonnal.",

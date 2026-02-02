@@ -62,15 +62,19 @@ export default async function CommonFactorsPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('calculators.commonFactors');
+  const tCommon = await getTranslations({ locale, namespace: 'common' });
   const faqItems = await getFaqItems(locale);
+  const path = '/calculators/math/common-factors';
+  const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
 
   return (
     <>
       <FaqSchema items={faqItems} />
       <SoftwareApplicationSchema
-        name={t('title')}
+        locale={locale}
+        siteName={tCommon('siteName')}
         description={t('description')}
-        url={`/${locale}/calculators/math/common-factors`}
+        url={canonicalUrl}
       />
       <div className="calculator-container">
         <BackButton href={`/${locale}/calculators/math`} />

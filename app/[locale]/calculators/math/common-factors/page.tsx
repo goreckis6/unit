@@ -153,7 +153,8 @@ export default async function CommonFactorsPage({ params }: PageProps) {
         </div>
       </div>
 
-      <FaqSection namespace="calculators.commonFactors" />
+      {/* FAQ Section */}
+      {faqItems.length > 0 && <FaqSection heading={t('seo.faq.heading')} items={faqItems} />}
       
       <Footer />
     </>

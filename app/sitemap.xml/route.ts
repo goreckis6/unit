@@ -11,6 +11,7 @@ export async function GET() {
     '/calculators/math',
     '/calculators/math/addition',
     '/calculators/math/adding-fractions',
+    '/calculators/math/adding-subtracting-integers',
     '/calculators/math/subtracting-fractions',
     '/calculators/math/antilog',
     '/calculators/math/arccos',

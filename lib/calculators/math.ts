@@ -16,6 +16,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'adding-subtracting-integers',
+    titleKey: 'addingSubtractingIntegers.title',
+    descKey: 'addingSubtractingIntegers.description',
+    path: '/calculators/math/adding-subtracting-integers',
+    category: 'math',
+  },
+  {
     id: 'subtracting-fractions',
     titleKey: 'subtractingFractions.title',
     descKey: 'subtractingFractions.description',

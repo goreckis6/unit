@@ -1,10 +1,12 @@
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
 import { CommonFactorsCalculator } from './calculator';
-import { BackButton } from '@/components/BackButton';
 import { FaqSection } from '@/components/FaqSection';
 import { FaqSchema } from '@/components/FaqSchema';
 import { SoftwareApplicationSchema } from '@/components/SoftwareApplicationSchema';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 
 interface FaqItem {
@@ -76,49 +78,84 @@ export default async function CommonFactorsPage({ params }: PageProps) {
         description={t('description')}
         url={canonicalUrl}
       />
-      <div className="calculator-container">
-        <BackButton href={`/${locale}/calculators/math`} />
+      <Header />
 
-        <h1 className="calculator-title">{t('title')}</h1>
-        <p className="calculator-description">{t('description')}</p>
-
-        <div className="calculator-card">
-          <CommonFactorsCalculator />
-        </div>
-
-        <div className="seo-content">
-          <h2 className="seo-heading">{t('seo.content.heading')}</h2>
-          <p className="seo-paragraph">{t('seo.content.paragraph1')}</p>
-          <p className="seo-paragraph">{t('seo.content.paragraph2')}</p>
-          <p className="seo-paragraph">{t('seo.content.paragraph3')}</p>
-          <p className="seo-paragraph">{t('seo.content.paragraph4')}</p>
-
-          <div className="seo-content-card">
-            <h3 className="example-heading">{t('seo.content.exampleHeading')}</h3>
-            <p className="example-text">{t('seo.content.exampleText')}</p>
+      <div className="calculator-header">
+        <div className="container">
+          <Link href="/calculators/math" className="back-button">
+            <svg className="back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15 18L9 12L15 6"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <span>{tCommon('calculators')}</span>
+          </Link>
+          <div className="header-content">
+            <div className="title-badge">Math Calculator</div>
+            <h1 className="page-title">{t('title')}</h1>
+            <p className="page-description">{t('description')}</p>
           </div>
         </div>
+      </div>
 
-        <div className="related-calculators-section">
+      <div className="calculator-container">
+        <div className="container">
+          <div className="calculator-card">
+            <CommonFactorsCalculator />
+          </div>
+        </div>
+      </div>
+
+      {/* SEO Content Section */}
+      <div className="seo-content-section">
+        <div className="container">
+          <div className="seo-content-card">
+            <h2 className="seo-heading">{t('seo.content.heading')}</h2>
+
+            <div className="seo-paragraphs">
+              <p className="seo-paragraph">{t('seo.content.paragraph1')}</p>
+              <p className="seo-paragraph">{t('seo.content.paragraph2')}</p>
+              <p className="seo-paragraph">{t('seo.content.paragraph3')}</p>
+
+              <div className="seo-example">
+                <h3 className="example-heading">{t('seo.content.exampleHeading')}</h3>
+                <p className="example-text">{t('seo.content.exampleText')}</p>
+              </div>
+
+              <p className="seo-paragraph">{t('seo.content.paragraph4')}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Related Calculators Section */}
+      <div className="related-calculators-section">
+        <div className="container">
           <h2 className="faq-heading">{t('seo.related.heading')}</h2>
           <div className="related-calculators-grid">
-            <a href={`/${locale}/calculators/percentage`} className="related-calculator-card">
+            <Link href="/calculators/percentage" className="related-calculator-card">
               <h3 className="related-calculator-title">{t('seo.related.percentage')}</h3>
               <p className="related-calculator-description">{t('seo.related.percentageDesc')}</p>
-            </a>
-            <a href={`/${locale}/calculators/percentage-increase`} className="related-calculator-card">
+            </Link>
+            <Link href="/calculators/math/percentage-increase" className="related-calculator-card">
               <h3 className="related-calculator-title">{t('seo.related.percentageIncrease')}</h3>
               <p className="related-calculator-description">{t('seo.related.percentageIncreaseDesc')}</p>
-            </a>
-            <a href={`/${locale}/calculators/math/multiplication`} className="related-calculator-card">
+            </Link>
+            <Link href="/calculators/math/multiplication" className="related-calculator-card">
               <h3 className="related-calculator-title">{t('seo.related.multiplication')}</h3>
               <p className="related-calculator-description">{t('seo.related.multiplicationDesc')}</p>
-            </a>
+            </Link>
           </div>
         </div>
-
-        <FaqSection namespace="calculators.commonFactors" />
       </div>
+
+      <FaqSection namespace="calculators.commonFactors" />
+      
+      <Footer />
     </>
   );
 }

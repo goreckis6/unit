@@ -30,6 +30,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'decimal-to-percent',
+    titleKey: 'decimalToPercent.title',
+    descKey: 'decimalToPercent.description',
+    path: '/calculators/math/decimal-to-percent',
+    category: 'math',
+  },
+  {
     id: 'adding-subtracting-integers',
     titleKey: 'addingSubtractingIntegers.title',
     descKey: 'addingSubtractingIntegers.description',

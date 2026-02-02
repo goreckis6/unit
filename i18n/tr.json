@@ -334,6 +334,72 @@
         }
       }
     },
+    "decimalToPercent": {
+      "title": "Ondalık Sayıyı Yüzdeye Çevirme Hesap Makinesi",
+      "description": "Ondalık sayıyı anında yüzdeye çevirin. Ondalık basamak seçin ve formülü adım adım görün.",
+      "decimal": "Ondalık sayı",
+      "decimalPlaces": "Ondalık basamak",
+      "inputHint": "İpucu: Yüzde = ondalık × 100. 0–12 ondalık basamak seçin.",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "resultPlaceholder": "Bir ondalık sayı girin ve yüzdeyi görmek için Hesapla'ya tıklayın.",
+      "percentResult": "Yüzde",
+      "percentNumber": "Yüzde (sadece sayı)",
+      "stepsHeading": "Adımlar",
+      "formula": "Yüzde = ondalık × 100",
+      "errorTitle": "Girdi hatası",
+      "errorInvalid": "Lütfen geçerli bir ondalık sayı ve geçerli bir ondalık basamak sayısı girin.",
+      "errorDecimalPlaces": "Ondalık basamak sayısını 0 ile 12 arasında seçin.",
+      "seo": {
+        "title": "Ondalık Sayıyı Yüzdeye Çevirme – % Dönüştürücü",
+        "description": "Ücretsiz ondalık sayıdan yüzdeye çevirme hesap makinesi. İsteğe bağlı yuvarlama, adım adım formül ve kopyalanabilir sonuçlarla hızlı dönüşüm.",
+        "keywords": "ondalık yüzde çevirme, ondalık sayıyı yüzdeye çevir, yüzde dönüştürücü, yüzde hesap makinesi, yüzde formülü, yüzde yuvarlama",
+        "content": {
+          "heading": "Ondalık Sayı Yüzdeye Nasıl Çevrilir?",
+          "paragraph1": "Ondalık sayıyı yüzdeye çevirmek okulda, finans ve istatistikte çok yaygındır. Yüzde “yüzde yüz” yani “100 üzerinden” demektir; bu yüzden ondalık sayı 100 ile çarpılır. Örneğin 0,25 → 25% ve 1,5 → 150%.",
+          "paragraph2": "Kural: Yüzde = ondalık × 100. Sonra % işaretini ekleyin. Yuvarlamak isterseniz ondalık basamak sayısını seçin. Örneğin 0,1234 × 100 = 12,34% (1 basamakla 12,3%).",
+          "paragraph3": "Bu hesap makinesi yüzdeleri hemen hesaplar ve ayrıca % işareti olmadan sayısal değeri gösterir (tablolar için kullanışlı). Adımlar, işlemi hızlıca kontrol etmenizi sağlar.",
+          "paragraph4": "1’den büyük ondalıklar 100%’den büyük sonuç verir; bu normaldir (büyüme, oran). Negatif ondalıklar negatif yüzdelere karşılık gelir. Hızlı ve tutarlı dönüşüm için bu aracı kullanın.",
+          "exampleHeading": "Örnekler",
+          "exampleText": "0,5 = 50%. 0,075 = 7,5%. 1,2 = 120%. -0,03 = -3%. 2 basamakla 0,3333 → 33,33%."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "Ondalık sayı yüzdeye nasıl çevrilir?",
+              "answer": "Ondalık sayıyı 100 ile çarpın ve % işaretini ekleyin. Örneğin 0,4 × 100 = 40%."
+            },
+            {
+              "question": "Neden 100 ile çarpıyoruz?",
+              "answer": "Çünkü yüzde “100 üzerinden” demektir. ×100, 1’in bir kısmını 100’lük değere çevirir."
+            },
+            {
+              "question": "Yüzde 100%’den büyük olabilir mi?",
+              "answer": "Evet. Ondalık 1’den büyükse yüzde 100%’den büyük olur. Örneğin 1,25 = 125%."
+            },
+            {
+              "question": "Yüzdeyi nasıl yuvarlarım?",
+              "answer": "Dönüşümden sonra ondalık basamak sayısını seçin. Örneğin 0,1234 → 12,34% (2) veya 12,3% (1)."
+            },
+            {
+              "question": "Bu hesap makinesi ücretsiz mi?",
+              "answer": "Evet. Ücretsizdir ve tarayıcıda çalışır."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesap Makineleri",
+          "percentage": "Yüzde Hesap Makinesi",
+          "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın",
+          "percentageIncrease": "Yüzde Artış Hesap Makinesi",
+          "percentageIncreaseDesc": "İki sayı arasındaki yüzde artışı hesaplayın",
+          "percentError": "Yüzde Hata Hesap Makinesi",
+          "percentErrorDesc": "Deneysel ve kabul edilen değer arasındaki yüzde hatayı hesaplayın"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kesir Çıkarma Hesap Makinesi",
       "description": "İki kesri çıkarın ve sadeleştirilmiş sonucu ve ondalık değeri alın. Basit kesir ve karışık sayı formunu destekler.",

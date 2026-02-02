@@ -334,6 +334,72 @@
         }
       }
     },
+    "decimalToPercent": {
+      "title": "Desimaalista Prosentiksi -laskin",
+      "description": "Muunna desimaaliluku prosentiksi heti. Valitse desimaalit ja näe kaava vaihe vaiheelta.",
+      "decimal": "Desimaaliluku",
+      "decimalPlaces": "Desimaalien määrä",
+      "inputHint": "Vinkki: Prosentti = desimaali × 100. Valitse 0–12 desimaalia.",
+      "calculate": "Laske",
+      "reset": "Tyhjennä",
+      "result": "Tulos",
+      "resultPlaceholder": "Syötä desimaaliluku ja paina Laske nähdäksesi prosentit.",
+      "percentResult": "Prosentti",
+      "percentNumber": "Prosentti (vain numero)",
+      "stepsHeading": "Vaiheet",
+      "formula": "Prosentti = desimaali × 100",
+      "errorTitle": "Syötevirhe",
+      "errorInvalid": "Syötä kelvollinen desimaaliluku ja kelvollinen desimaalien määrä.",
+      "errorDecimalPlaces": "Valitse desimaalit välillä 0–12.",
+      "seo": {
+        "title": "Desimaalista Prosentiksi -laskin – Muunna desimaalit prosenteiksi",
+        "description": "Ilmainen desimaalista prosentiksi -laskin. Muunna mikä tahansa desimaali prosentiksi valinnaisella pyöristyksellä, kaavalla ja helposti kopioitavilla tuloksilla.",
+        "keywords": "desimaalista prosentiksi, muunna desimaali prosentiksi, prosenttilaskin, prosenttimuunnin, desimaali prosenttikaava, pyöristys prosentti",
+        "content": {
+          "heading": "Miten muuntaa desimaaliluku prosentiksi",
+          "paragraph1": "Desimaaliluvun muuntaminen prosentiksi on yleistä koulussa, taloudessa ja tilastoissa. Prosentti tarkoittaa “sadasta”, joten kerrot desimaaliluvun 100:lla. Esimerkiksi 0,25 on 25% ja 1,5 on 150%.",
+          "paragraph2": "Sääntö: Prosentti = desimaali × 100. Lisää lopuksi %-merkki. Jos haluat pyöristää, valitse desimaalien määrä. Esim. 0,1234 × 100 = 12,34% (tai 12,3% yhdellä desimaalilla).",
+          "paragraph3": "Tämä laskin näyttää prosentit sekä %-merkillä että pelkkänä numerona (ilman %), mikä on kätevää taulukoissa. Vaiheet auttavat tarkistamaan laskun.",
+          "paragraph4": "Desimaalit yli 1 tuottavat yli 100%:n, mikä on normaalia esimerkiksi kasvussa. Negatiiviset desimaalit antavat negatiiviset prosentit. Käytä työkalua nopeisiin ja johdonmukaisiin muunnoksiin.",
+          "exampleHeading": "Esimerkit",
+          "exampleText": "0,5 = 50%. 0,075 = 7,5%. 1,2 = 120%. -0,03 = -3%. 2 desimaalilla 0,3333 → 33,33%."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Miten desimaali muutetaan prosentiksi?",
+              "answer": "Kerro desimaali 100:lla ja lisää %. Esimerkiksi 0,4 × 100 = 40%."
+            },
+            {
+              "question": "Miksi kerrotaan sadalla?",
+              "answer": "Koska prosentti tarkoittaa “sadasta”. ×100 muuttaa osan yhdestä arvoksi sadasta."
+            },
+            {
+              "question": "Voiko prosentti olla yli 100%?",
+              "answer": "Kyllä. Jos desimaali on suurempi kuin 1, prosentti on yli 100%. Esimerkiksi 1,25 = 125%."
+            },
+            {
+              "question": "Miten pyöristän prosentit?",
+              "answer": "Valitse desimaalien määrä muunnoksen jälkeen. Esim. 0,1234 → 12,34% (2) tai 12,3% (1)."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä. Se on ilmainen ja toimii suoraan selaimessa."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Aiheeseen Liittyvät Laskimet",
+          "percentage": "Prosenttilaskin",
+          "percentageDesc": "Laske prosenttiarvot, prosenttimuutos ja prosenttisuhteet",
+          "percentageIncrease": "Prosentuaalisen Nousun Laskin",
+          "percentageIncreaseDesc": "Laske prosentuaalinen nousu kahden luvun välillä",
+          "percentError": "Prosenttivirhelaskin",
+          "percentErrorDesc": "Laske prosenttivirhe mittausarvon ja hyväksytyn arvon välillä"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Murtolukujen Vähennyslaskin",
       "description": "Vähennä kaksi murtolukua ja saat sievennetyn tuloksen ja desimaaliarvon. Tukee yksinkertaista murtolukua ja sekalukua.",

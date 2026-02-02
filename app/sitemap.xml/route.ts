@@ -15,6 +15,7 @@ export async function GET() {
     '/calculators/math/subtracting-fractions',
     '/calculators/math/complex-fractions',
     '/calculators/math/equivalent-fractions',
+    '/calculators/math/decimal-to-percent',
     '/calculators/math/antilog',
     '/calculators/math/arccos',
     '/calculators/math/cosine',

@@ -5,7 +5,7 @@ import { BackButton } from '@/components/BackButton';
 import { FaqSection } from '@/components/FaqSection';
 import { FaqSchema } from '@/components/FaqSchema';
 import { SoftwareApplicationSchema } from '@/components/SoftwareApplicationSchema';
-import { getHrefLangAlternates } from '@/lib/hreflang';
+import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -23,20 +23,22 @@ export async function generateMetadata({
   const description = t('seo.description');
   const title = t('seo.title');
   const keywords = t('seo.keywords');
+  const path = '/calculators/math/common-factors';
+  const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
 
   return {
     title,
     description,
     keywords,
     alternates: {
-      canonical: `/${locale}/calculators/math/common-factors`,
-      languages: getHrefLangAlternates('/calculators/math/common-factors'),
+      canonical: canonicalUrl,
+      languages: generateHreflangUrls(path),
     },
     openGraph: {
       title,
       description,
       type: 'website',
-      url: `/${locale}/calculators/math/common-factors`,
+      url: canonicalUrl,
     },
   };
 }

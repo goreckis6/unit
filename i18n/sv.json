@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Kalkylator för Ekvivalenta Bråk",
+      "description": "Generera ekvivalenta bråk, förkorta ett bråk och se flera ekvivalenta former med steg.",
+      "fractionLabel": "Bråk",
+      "numerator": "Täljare",
+      "denominator": "Nämnare",
+      "maxMultiplier": "Generera upp till multiplikator (k)",
+      "inputHint": "Ange endast heltal. Nämnaren får inte vara 0. Välj k mellan 2 och 50.",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "resultPlaceholder": "Ange ett bråk och klicka på Beräkna för att generera ekvivalenta bråk.",
+      "simplifiedFraction": "Förenklat bråk",
+      "mixedNumber": "Blandat tal",
+      "decimalValue": "Decimalvärde",
+      "equivalentsHeading": "Ekvivalenta bråk",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Steg",
+      "stepGcd": "1) Hitta SGD:",
+      "stepDivide": "2) Dela täljare och nämnare med SGD:",
+      "stepMultiply": "3) Multiplicera med k/k för att skapa ekvivalenter:",
+      "errorTitle": "Inmatningsfel",
+      "errorInvalid": "Ange giltiga heltal för täljare, nämnare och k.",
+      "errorZeroDenominator": "Nämnaren kan inte vara noll.",
+      "errorMaxMultiplier": "Välj k mellan 2 och 50.",
+      "seo": {
+        "title": "Kalkylator för Ekvivalenta Bråk – Generera och Förenkla",
+        "description": "Gratis kalkylator för ekvivalenta bråk: förenkla ett bråk och generera flera ekvivalenta bråk. Visar förenklad form, blandat tal, decimalvärde och tydliga steg.",
+        "keywords": "ekvivalenta bråk kalkylator, generera ekvivalenta bråk, förenkla bråk, förkorta bråk, sgd bråk, bråk till decimal, blandat tal",
+        "content": {
+          "heading": "Så hittar du ekvivalenta bråk",
+          "paragraph1": "Ekvivalenta bråk är olika bråk som representerar samma värde. Till exempel är 1/2, 2/4 och 50/100 ekvivalenta eftersom alla är 0,5. Att kunna skapa ekvivalenta bråk är viktigt när du jämför bråk och förenklar svar.",
+          "paragraph2": "Huvudregeln är enkel: om du multiplicerar (eller dividerar) både täljare och nämnare med samma tal som inte är noll får du ett ekvivalent bråk. Alltså a/b = (a×k)/(b×k). För att förenkla delar du båda med deras största gemensamma delare (SGD).",
+          "paragraph3": "Den här kalkylatorn hjälper dig med båda. Ange täljare och nämnare: verktyget hittar SGD, visar det förenklade bråket och genererar sedan en lista med ekvivalenta bråk genom att multiplicera med k/k från k = 1 till din valda gräns.",
+          "paragraph4": "Kalkylatorn visar även blandat tal (för oegentliga bråk) och ett decimalt värde. Det är praktiskt i vardagen där decimaler ofta är lättare att tolka. Med steg och flera former passar verktyget både för lärande och snabb kontroll.",
+          "exampleHeading": "Exempel: Ekvivalenta bråk för 3/4",
+          "exampleText": "Börja med 3/4. SGD för 3 och 4 är 1, så det förenklade bråket är fortfarande 3/4. Ekvivalenta bråk får du genom att multiplicera täljare och nämnare med samma tal: k=2 → 6/8, k=3 → 9/12, k=4 → 12/16 osv. Alla är 0,75."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {
+              "question": "Vad är ekvivalenta bråk?",
+              "answer": "Ekvivalenta bråk ser olika ut men har samma värde. Du skapar dem genom att multiplicera eller dividera täljare och nämnare med samma tal som inte är noll."
+            },
+            {
+              "question": "Hur skapar jag ekvivalenta bråk?",
+              "answer": "Multiplicera täljare och nämnare med samma heltal k: a/b = (a×k)/(b×k). Till exempel 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "Hur förenklar jag ett bråk helt?",
+              "answer": "Hitta SGD för täljare och nämnare och dela båda med SGD. Till exempel har 12/18 SGD 6 och förenklas till 2/3."
+            },
+            {
+              "question": "Kan ekvivalenta bråk vara negativa?",
+              "answer": "Ja. Ett bråk kan vara negativt om täljaren eller nämnaren är negativ (men inte båda för ett positivt bråk). Till exempel är -1/2 ekvivalent med 1/-2."
+            },
+            {
+              "question": "Är den här kalkylatorn gratis?",
+              "answer": "Ja. Den är helt gratis och fungerar direkt i din webbläsare."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "addingFractions": "Kalkylator för Addition av Bråk",
+          "addingFractionsDesc": "Addera bråk och förenkla steg för steg",
+          "multiplyingFractions": "Kalkylator för Multiplikation av Bråk",
+          "multiplyingFractionsDesc": "Multiplicera bråk och förenkla till enklaste form",
+          "complexFractions": "Kalkylator för Komplexa Bråk",
+          "complexFractionsDesc": "Förenkla komplexa bråk som (a/b)/(c/d)"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Bråksubtraktionsräknare",
       "description": "Subtrahera två bråk och få det förenklade resultatet och decimalvärdet. Stöder enkelt bråk och blandat tal.",

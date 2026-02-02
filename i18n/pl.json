@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Kalkulator Ułamków Równoważnych",
+      "description": "Generuj ułamki równoważne, skróć ułamek i zobacz wiele równoważnych postaci wraz z krokami.",
+      "fractionLabel": "Ułamek",
+      "numerator": "Licznik",
+      "denominator": "Mianownik",
+      "maxMultiplier": "Generuj do mnożnika (k)",
+      "inputHint": "Wpisuj tylko liczby całkowite. Mianownik nie może być 0. Wybierz k od 2 do 50.",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "resultPlaceholder": "Wpisz ułamek i kliknij Oblicz, aby wygenerować ułamki równoważne.",
+      "simplifiedFraction": "Ułamek w najprostszej postaci",
+      "mixedNumber": "Liczba mieszana",
+      "decimalValue": "Wartość dziesiętna",
+      "equivalentsHeading": "Ułamki równoważne",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Kroki",
+      "stepGcd": "1) Znajdź NWD:",
+      "stepDivide": "2) Podziel licznik i mianownik przez NWD:",
+      "stepMultiply": "3) Pomnóż przez k/k, aby uzyskać równoważne:",
+      "errorTitle": "Błąd danych",
+      "errorInvalid": "Wpisz poprawne liczby całkowite dla licznika, mianownika i k.",
+      "errorZeroDenominator": "Mianownik nie może być zerem.",
+      "errorMaxMultiplier": "Wybierz k od 2 do 50.",
+      "seo": {
+        "title": "Kalkulator Ułamków Równoważnych – Generuj i Skracaj Ułamki",
+        "description": "Darmowy kalkulator ułamków równoważnych do skracania ułamka i generowania wielu ułamków równoważnych. Pokazuje najprostszą postać, liczbę mieszaną, wartość dziesiętną oraz jasne kroki.",
+        "keywords": "kalkulator ułamków równoważnych, ułamki równoważne, skracanie ułamków, uprość ułamek, NWD ułamków, ułamek na dziesiętne, liczba mieszana",
+        "content": {
+          "heading": "Jak znaleźć ułamki równoważne",
+          "paragraph1": "Ułamki równoważne to różne ułamki, które mają tę samą wartość. Na przykład 1/2, 2/4 i 50/100 są równoważne, ponieważ wszystkie są równe 0,5. Umiejętność tworzenia ułamków równoważnych pomaga w porównywaniu ułamków i upraszczaniu wyników.",
+          "paragraph2": "Główna zasada jest prosta: jeśli pomnożysz (lub podzielisz) licznik i mianownik przez tę samą niezerową liczbę, otrzymasz ułamek równoważny. Czyli a/b = (a×k)/(b×k). Aby skrócić ułamek, dzielisz licznik i mianownik przez ich największy wspólny dzielnik (NWD).",
+          "paragraph3": "Ten kalkulator robi obie rzeczy. Wpisz licznik i mianownik: narzędzie obliczy NWD, pokaże ułamek w najprostszej postaci i wygeneruje listę ułamków równoważnych poprzez mnożenie przez k/k dla k = 1 do wybranego limitu.",
+          "paragraph4": "Kalkulator pokazuje także liczbę mieszaną (dla ułamków niewłaściwych) oraz przybliżenie dziesiętne. To przydatne w praktyce, gdy dziesiętne są łatwiejsze do interpretacji. Dzięki krokom i kilku formom narzędzie wspiera naukę i szybkie sprawdzanie.",
+          "exampleHeading": "Przykład: ułamki równoważne dla 3/4",
+          "exampleText": "Zacznij od 3/4. NWD liczb 3 i 4 wynosi 1, więc ułamek w najprostszej postaci to nadal 3/4. Ułamki równoważne powstają przez mnożenie licznika i mianownika przez to samo k: k=2 → 6/8, k=3 → 9/12, k=4 → 12/16 itd. Wszystkie są równe 0,75."
+        },
+        "faq": {
+          "heading": "Najczęściej Zadawane Pytania",
+          "items": [
+            {
+              "question": "Czym są ułamki równoważne?",
+              "answer": "To ułamki, które wyglądają inaczej, ale mają tę samą wartość. Powstają przez mnożenie lub dzielenie licznika i mianownika przez tę samą niezerową liczbę."
+            },
+            {
+              "question": "Jak tworzyć ułamki równoważne?",
+              "answer": "Pomnóż licznik i mianownik przez to samo k: a/b = (a×k)/(b×k). Na przykład 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "Jak skrócić ułamek do najprostszej postaci?",
+              "answer": "Znajdź NWD licznika i mianownika, a następnie podziel oba przez NWD. Na przykład 12/18 ma NWD 6 i skraca się do 2/3."
+            },
+            {
+              "question": "Czy ułamki równoważne mogą być ujemne?",
+              "answer": "Tak. Ułamek może być ujemny, jeśli licznik lub mianownik jest ujemny (ale nie oba jednocześnie dla dodatniego ułamka). Na przykład -1/2 jest równoważny 1/-2."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak. Jest całkowicie darmowy i działa w przeglądarce."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "addingFractions": "Kalkulator Dodawania Ułamków",
+          "addingFractionsDesc": "Dodaj ułamki i uprość wynik krok po kroku",
+          "multiplyingFractions": "Kalkulator Mnożenia Ułamków",
+          "multiplyingFractionsDesc": "Pomnóż ułamki i skróć do najprostszej postaci",
+          "complexFractions": "Kalkulator Ułamków Złożonych",
+          "complexFractionsDesc": "Uprość złożone ułamki takie jak (a/b)/(c/d)"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kalkulator Odejmowania Ułamków",
       "description": "Odejmij dwa ułamki i uzyskaj wynik uproszczony oraz wartość dziesiętną. Obsługuje ułamek zwykły i liczbę mieszaną.",

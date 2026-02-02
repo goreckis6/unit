@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Calcolatrice di Frazioni Equivalenti",
+      "description": "Genera frazioni equivalenti, semplifica una frazione e visualizza più forme equivalenti con passaggi.",
+      "fractionLabel": "Frazione",
+      "numerator": "Numeratore",
+      "denominator": "Denominatore",
+      "maxMultiplier": "Genera fino al moltiplicatore (k)",
+      "inputHint": "Inserisci solo interi. Il denominatore non può essere 0. Scegli k tra 2 e 50.",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "resultPlaceholder": "Inserisci una frazione e clicca su Calcola per generare frazioni equivalenti.",
+      "simplifiedFraction": "Frazione semplificata",
+      "mixedNumber": "Numero misto",
+      "decimalValue": "Valore decimale",
+      "equivalentsHeading": "Frazioni equivalenti",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Passaggi",
+      "stepGcd": "1) Trova l'MCD:",
+      "stepDivide": "2) Dividi numeratore e denominatore per l'MCD:",
+      "stepMultiply": "3) Moltiplica per k/k per generare equivalenti:",
+      "errorTitle": "Errore di input",
+      "errorInvalid": "Inserisci interi validi per numeratore, denominatore e k.",
+      "errorZeroDenominator": "Il denominatore non può essere zero.",
+      "errorMaxMultiplier": "Scegli k tra 2 e 50.",
+      "seo": {
+        "title": "Calcolatrice di Frazioni Equivalenti – Genera e Semplifica Frazioni",
+        "description": "Calcolatrice gratuita di frazioni equivalenti per semplificare una frazione e generare più frazioni equivalenti. Mostra forma semplificata, numero misto, valore decimale e passaggi chiari.",
+        "keywords": "calcolatrice frazioni equivalenti, generare frazioni equivalenti, semplificare frazioni, ridurre frazioni, MCD frazioni, frazione in decimale, numero misto",
+        "content": {
+          "heading": "Come Trovare Frazioni Equivalenti",
+          "paragraph1": "Le frazioni equivalenti sono frazioni diverse che rappresentano lo stesso valore. Ad esempio, 1/2, 2/4 e 50/100 sono equivalenti perché valgono tutte 0,5. Saper generare frazioni equivalenti è utile per confrontare frazioni, semplificare risultati e lavorare con rapporti e proporzioni.",
+          "paragraph2": "La regola principale è semplice: se moltiplichi (o dividi) numeratore e denominatore per lo stesso numero diverso da zero, ottieni una frazione equivalente. Quindi a/b = (a×k)/(b×k) per ogni intero k non nullo. Per semplificare una frazione, dividi entrambi per il loro massimo comune divisore (MCD) per ottenere la forma ridotta ai minimi termini.",
+          "paragraph3": "La nostra Calcolatrice di Frazioni Equivalenti ti aiuta a fare entrambe le cose. Inserisci numeratore e denominatore: lo strumento calcola l’MCD, mostra la frazione semplificata e poi genera un elenco di frazioni equivalenti moltiplicando per k/k da k = 1 fino al limite scelto.",
+          "paragraph4": "La calcolatrice mostra anche il numero misto (se la frazione è impropria) e un’approssimazione decimale. È utile in contesti reali come misure, ricette e budget, dove i decimali sono spesso più intuitivi. Con passaggi e più forme, è ideale sia per imparare sia per verificare velocemente.",
+          "exampleHeading": "Esempio: Frazioni Equivalenti di 3/4",
+          "exampleText": "Partiamo da 3/4. L’MCD di 3 e 4 è 1, quindi la frazione semplificata resta 3/4. Le frazioni equivalenti si ottengono moltiplicando numeratore e denominatore per lo stesso numero: k=2 → 6/8, k=3 → 9/12, k=4 → 12/16, e così via. Tutte valgono 0,75."
+        },
+        "faq": {
+          "heading": "Domande Frequenti",
+          "items": [
+            {
+              "question": "Cosa sono le frazioni equivalenti?",
+              "answer": "Sono frazioni che sembrano diverse ma rappresentano lo stesso valore. Si ottengono moltiplicando o dividendo numeratore e denominatore per lo stesso numero diverso da zero."
+            },
+            {
+              "question": "Come genero frazioni equivalenti?",
+              "answer": "Moltiplica numeratore e denominatore per lo stesso intero k: a/b = (a×k)/(b×k). Esempio: 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "Come semplifico una frazione ai minimi termini?",
+              "answer": "Trova l’MCD di numeratore e denominatore e dividi entrambi per l’MCD. Ad esempio, 12/18 ha MCD 6 e si semplifica in 2/3."
+            },
+            {
+              "question": "Le frazioni equivalenti possono essere negative?",
+              "answer": "Sì. Una frazione può essere negativa se numeratore o denominatore è negativo (ma non entrambi per una frazione positiva). Per esempio, -1/2 è equivalente a 1/-2."
+            },
+            {
+              "question": "Questa calcolatrice è gratuita?",
+              "answer": "Sì. È completamente gratuita e funziona direttamente nel browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatrici Correlate",
+          "addingFractions": "Calcolatrice Somma Frazioni",
+          "addingFractionsDesc": "Somma frazioni e semplifica passo dopo passo",
+          "multiplyingFractions": "Calcolatrice Moltiplicazione Frazioni",
+          "multiplyingFractionsDesc": "Moltiplica frazioni e riduci ai minimi termini",
+          "complexFractions": "Calcolatrice di Frazioni Complesse",
+          "complexFractionsDesc": "Semplifica frazioni complesse come (a/b)/(c/d)"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Calcolatrice Sottrazione Frazioni",
       "description": "Sottrai due frazioni e ottieni il risultato semplificato e il valore decimale. Supporta frazione semplice e numero misto.",

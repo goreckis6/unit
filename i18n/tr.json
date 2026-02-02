@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Eşdeğer Kesir Hesap Makinesi",
+      "description": "Eşdeğer kesirler oluşturun, bir kesri sadeleştirin ve adımlarla birden fazla eşdeğer biçimi görün.",
+      "fractionLabel": "Kesir",
+      "numerator": "Pay",
+      "denominator": "Payda",
+      "maxMultiplier": "k çarpanına kadar üret",
+      "inputHint": "Yalnızca tam sayı girin. Payda 0 olamaz. k için 2 ile 50 arasında seçin.",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "resultPlaceholder": "Bir kesir girin ve eşdeğer kesirleri üretmek için Hesapla'ya tıklayın.",
+      "simplifiedFraction": "Sadeleştirilmiş kesir",
+      "mixedNumber": "Karışık sayı",
+      "decimalValue": "Ondalık değer",
+      "equivalentsHeading": "Eşdeğer kesirler",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Adımlar",
+      "stepGcd": "1) EBOB'u bulun:",
+      "stepDivide": "2) Pay ve paydayı EBOB'a bölün:",
+      "stepMultiply": "3) Eşdeğerleri üretmek için k/k ile çarpın:",
+      "errorTitle": "Girdi hatası",
+      "errorInvalid": "Lütfen pay, payda ve k için geçerli tam sayılar girin.",
+      "errorZeroDenominator": "Payda sıfır olamaz.",
+      "errorMaxMultiplier": "Lütfen k için 2 ile 50 arasında seçin.",
+      "seo": {
+        "title": "Eşdeğer Kesir Hesap Makinesi – Kesir Üretme ve Sadeleştirme",
+        "description": "Ücretsiz eşdeğer kesir hesap makinesi: bir kesri sadeleştirin ve birden fazla eşdeğer kesir üretin. Sadeleştirilmiş biçim, karışık sayı, ondalık değer ve adım adım açıklama içerir.",
+        "keywords": "eşdeğer kesir hesap makinesi, eşdeğer kesirler, kesir sadeleştirme, kesirleri genişletme, ebob, kesirden ondalığa, karışık sayı",
+        "content": {
+          "heading": "Eşdeğer Kesirler Nasıl Bulunur?",
+          "paragraph1": "Eşdeğer kesirler, farklı görünen ama aynı değeri temsil eden kesirlerdir. Örneğin 1/2, 2/4 ve 50/100 eşdeğerdir çünkü hepsi 0.5'tir. Eşdeğer kesir üretmek, kesirleri karşılaştırmak ve sonuçları sadeleştirmek için önemlidir.",
+          "paragraph2": "Temel kural: Pay ve paydayı aynı sıfır olmayan sayı ile çarparsanız (veya bölerseniz) eşdeğer bir kesir elde edersiniz. Yani a/b = (a×k)/(b×k). Sadeleştirmek için pay ve paydayı en büyük ortak bölen (EBOB) ile bölersiniz.",
+          "paragraph3": "Bu hesap makinesi ikisini birden yapar. Pay ve paydayı girin: araç EBOB'u bulur, sadeleştirilmiş kesri gösterir ve ardından k = 1'den seçtiğiniz sınıra kadar k/k ile çarparak eşdeğer kesirler listesini üretir.",
+          "paragraph4": "Ayrıca (bileşik/uygunsuz kesirlerde) karışık sayı ve ondalık yaklaşık değer de gösterilir. Bu, ölçümler ve günlük hesaplamalarda faydalıdır. Adımlar ve farklı gösterimler hem öğrenme hem de hızlı kontrol için yardımcı olur.",
+          "exampleHeading": "Örnek: 3/4'ün Eşdeğer Kesirleri",
+          "exampleText": "3/4 ile başlayın. 3 ve 4'ün EBOB'u 1'dir, bu yüzden sadeleştirilmiş kesir 3/4 kalır. Eşdeğer kesirler için pay ve paydayı aynı sayı ile çarpın: k=2 → 6/8, k=3 → 9/12, k=4 → 12/16 vb. Hepsi 0.75'tir."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "Eşdeğer kesir nedir?",
+              "answer": "Eşdeğer kesirler farklı görünür ama aynı değeri temsil eder. Pay ve paydayı aynı sıfır olmayan sayı ile çarparak veya bölerek elde edilir."
+            },
+            {
+              "question": "Eşdeğer kesirler nasıl üretilir?",
+              "answer": "Pay ve paydayı aynı tam sayı k ile çarpın: a/b = (a×k)/(b×k). Örneğin 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "Bir kesir nasıl sadeleştirilir?",
+              "answer": "Pay ve paydanın EBOB'unu bulun ve ikisini de EBOB'a bölün. Örneğin 12/18'in EBOB'u 6'dır ve 2/3 olur."
+            },
+            {
+              "question": "Eşdeğer kesirler negatif olabilir mi?",
+              "answer": "Evet. Pay veya payda negatifse kesir negatif olabilir (pozitif kesir için ikisi birden negatif olmaz). Örneğin -1/2, 1/-2 ile eşdeğerdir."
+            },
+            {
+              "question": "Bu hesap makinesi ücretsiz mi?",
+              "answer": "Evet. Tamamen ücretsizdir ve doğrudan tarayıcıda çalışır."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesap Makineleri",
+          "addingFractions": "Kesir Toplama Hesap Makinesi",
+          "addingFractionsDesc": "Kesirleri toplayın ve adım adım sadeleştirin",
+          "multiplyingFractions": "Kesir Çarpma Hesap Makinesi",
+          "multiplyingFractionsDesc": "Kesirleri çarpın ve en sade hale getirin",
+          "complexFractions": "Bileşik Kesir Hesap Makinesi",
+          "complexFractionsDesc": "(a/b)/(c/d) gibi bileşik kesirleri sadeleştirin"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kesir Çıkarma Hesap Makinesi",
       "description": "İki kesri çıkarın ve sadeleştirilmiş sonucu ve ondalık değeri alın. Basit kesir ve karışık sayı formunu destekler.",

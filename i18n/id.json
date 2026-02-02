@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Kalkulator Pecahan Ekuivalen",
+      "description": "Buat pecahan ekuivalen, sederhanakan pecahan, dan lihat beberapa bentuk ekuivalen dengan langkah-langkahnya.",
+      "fractionLabel": "Pecahan",
+      "numerator": "Pembilang",
+      "denominator": "Penyebut",
+      "maxMultiplier": "Buat hingga pengali (k)",
+      "inputHint": "Masukkan bilangan bulat saja. Penyebut tidak boleh 0. Pilih k antara 2 dan 50.",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "resultPlaceholder": "Masukkan pecahan lalu klik Hitung untuk membuat pecahan ekuivalen.",
+      "simplifiedFraction": "Pecahan yang disederhanakan",
+      "mixedNumber": "Bilangan campuran",
+      "decimalValue": "Nilai desimal",
+      "equivalentsHeading": "Pecahan ekuivalen",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Langkah",
+      "stepGcd": "1) Cari FPB:",
+      "stepDivide": "2) Bagi pembilang dan penyebut dengan FPB:",
+      "stepMultiply": "3) Kalikan dengan k/k untuk membuat yang ekuivalen:",
+      "errorTitle": "Kesalahan input",
+      "errorInvalid": "Masukkan bilangan bulat yang valid untuk pembilang, penyebut, dan k.",
+      "errorZeroDenominator": "Penyebut tidak boleh nol.",
+      "errorMaxMultiplier": "Pilih k antara 2 dan 50.",
+      "seo": {
+        "title": "Kalkulator Pecahan Ekuivalen – Buat & Sederhanakan Pecahan",
+        "description": "Kalkulator pecahan ekuivalen gratis untuk menyederhanakan pecahan dan membuat beberapa pecahan ekuivalen. Menampilkan bentuk sederhana, bilangan campuran, nilai desimal, dan langkah yang jelas.",
+        "keywords": "kalkulator pecahan ekuivalen, pecahan ekuivalen, menyederhanakan pecahan, mengubah pecahan, FPB pecahan, pecahan ke desimal, bilangan campuran",
+        "content": {
+          "heading": "Cara Menemukan Pecahan Ekuivalen",
+          "paragraph1": "Pecahan ekuivalen adalah pecahan yang berbeda tetapi nilainya sama. Misalnya, 1/2, 2/4, dan 50/100 adalah ekuivalen karena semuanya bernilai 0.5. Membuat pecahan ekuivalen penting untuk membandingkan pecahan dan menyederhanakan jawaban.",
+          "paragraph2": "Aturan utamanya: jika Anda mengalikan (atau membagi) pembilang dan penyebut dengan bilangan yang sama dan tidak nol, Anda mendapatkan pecahan ekuivalen. Jadi a/b = (a×k)/(b×k). Untuk menyederhanakan pecahan, bagi keduanya dengan faktor persekutuan terbesar (FPB).",
+          "paragraph3": "Kalkulator ini membantu keduanya. Masukkan pembilang dan penyebut: alat menghitung FPB, menampilkan pecahan sederhana, lalu menghasilkan daftar pecahan ekuivalen dengan mengalikan k/k dari k = 1 hingga batas yang Anda pilih.",
+          "paragraph4": "Kalkulator juga menampilkan bilangan campuran (untuk pecahan tidak wajar) dan perkiraan desimal. Ini berguna dalam situasi nyata seperti pengukuran dan resep, ketika desimal lebih mudah dipahami. Dengan langkah dan beberapa bentuk, alat ini cocok untuk belajar dan pengecekan cepat.",
+          "exampleHeading": "Contoh: Pecahan Ekuivalen dari 3/4",
+          "exampleText": "Mulai dari 3/4. FPB dari 3 dan 4 adalah 1, jadi bentuk sederhananya tetap 3/4. Pecahan ekuivalen didapat dengan mengalikan pembilang dan penyebut dengan bilangan yang sama: k=2 → 6/8, k=3 → 9/12, k=4 → 12/16, dan seterusnya. Semuanya bernilai 0.75."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa itu pecahan ekuivalen?",
+              "answer": "Pecahan ekuivalen adalah pecahan yang tampak berbeda tetapi memiliki nilai yang sama. Dibuat dengan mengalikan atau membagi pembilang dan penyebut dengan bilangan yang sama dan tidak nol."
+            },
+            {
+              "question": "Bagaimana cara membuat pecahan ekuivalen?",
+              "answer": "Kalikan pembilang dan penyebut dengan bilangan bulat k yang sama: a/b = (a×k)/(b×k). Contoh: 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "Bagaimana cara menyederhanakan pecahan?",
+              "answer": "Cari FPB pembilang dan penyebut lalu bagi keduanya dengan FPB. Misalnya, 12/18 memiliki FPB 6 sehingga menjadi 2/3."
+            },
+            {
+              "question": "Apakah pecahan ekuivalen bisa negatif?",
+              "answer": "Ya. Pecahan bisa negatif jika pembilang atau penyebutnya negatif (namun tidak keduanya untuk pecahan positif). Misalnya, -1/2 ekuivalen dengan 1/-2."
+            },
+            {
+              "question": "Apakah kalkulator ini gratis?",
+              "answer": "Ya. Kalkulator ini sepenuhnya gratis dan berjalan langsung di browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "addingFractions": "Kalkulator Penjumlahan Pecahan",
+          "addingFractionsDesc": "Jumlahkan pecahan dan sederhanakan langkah demi langkah",
+          "multiplyingFractions": "Kalkulator Perkalian Pecahan",
+          "multiplyingFractionsDesc": "Kalikan pecahan dan sederhanakan ke bentuk paling sederhana",
+          "complexFractions": "Kalkulator Pecahan Kompleks",
+          "complexFractionsDesc": "Sederhanakan pecahan kompleks seperti (a/b)/(c/d)"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kalkulator Pengurangan Pecahan",
       "description": "Kurangi dua pecahan dan dapatkan hasil yang disederhanakan serta nilai desimal. Mendukung bentuk pecahan sederhana dan bilangan campuran.",

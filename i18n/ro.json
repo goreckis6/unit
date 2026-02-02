@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Calculator de Fracții Echivalente",
+      "description": "Generează fracții echivalente, simplifică o fracție și vezi mai multe forme echivalente cu pași.",
+      "fractionLabel": "Fracție",
+      "numerator": "Numărător",
+      "denominator": "Numitor",
+      "maxMultiplier": "Generează până la multiplicator (k)",
+      "inputHint": "Introdu doar numere întregi. Numitorul nu poate fi 0. Alege k între 2 și 50.",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "resultPlaceholder": "Introdu o fracție și apasă Calculează pentru a genera fracții echivalente.",
+      "simplifiedFraction": "Fracție simplificată",
+      "mixedNumber": "Număr mixt",
+      "decimalValue": "Valoare zecimală",
+      "equivalentsHeading": "Fracții echivalente",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Pași",
+      "stepGcd": "1) Găsește CMMDC:",
+      "stepDivide": "2) Împarte numărătorul și numitorul la CMMDC:",
+      "stepMultiply": "3) Înmulțește cu k/k pentru a genera echivalente:",
+      "errorTitle": "Eroare de introducere",
+      "errorInvalid": "Te rugăm să introduci numere întregi valide pentru numărător, numitor și k.",
+      "errorZeroDenominator": "Numitorul nu poate fi zero.",
+      "errorMaxMultiplier": "Alege k între 2 și 50.",
+      "seo": {
+        "title": "Calculator de Fracții Echivalente – Generează & Simplifică",
+        "description": "Calculator gratuit de fracții echivalente pentru a simplifica o fracție și a genera mai multe fracții echivalente. Include forma simplificată, număr mixt, valoare zecimală și pași clari.",
+        "keywords": "calculator fracții echivalente, generează fracții echivalente, simplifică fracții, reducere fracții, CMMDC fracții, fracție în zecimal, număr mixt",
+        "content": {
+          "heading": "Cum să Găsești Fracții Echivalente",
+          "paragraph1": "Fracțiile echivalente sunt fracții diferite care reprezintă aceeași valoare. De exemplu, 1/2, 2/4 și 50/100 sunt echivalente deoarece toate sunt 0,5. Generarea fracțiilor echivalente este utilă pentru compararea fracțiilor și simplificarea răspunsurilor.",
+          "paragraph2": "Regula principală: dacă înmulțești (sau împarți) numărătorul și numitorul cu același număr nenul, obții o fracție echivalentă. Deci a/b = (a×k)/(b×k). Pentru a simplifica, împarți ambele părți la cel mai mare divizor comun (CMMDC) pentru a obține forma ireductibilă.",
+          "paragraph3": "Acest calculator le face pe ambele. Introdu numărătorul și numitorul: instrumentul calculează CMMDC, afișează fracția simplificată și generează o listă de fracții echivalente prin înmulțirea cu k/k de la k = 1 până la limita aleasă.",
+          "paragraph4": "Calculatorul afișează și numărul mixt (pentru fracții improprii) și o aproximație zecimală. Acest lucru este util în situații practice, unde zecimalele sunt adesea mai ușor de interpretat. Pașii și formele multiple ajută atât la învățare, cât și la verificare rapidă.",
+          "exampleHeading": "Exemplu: Fracții Echivalente pentru 3/4",
+          "exampleText": "Pornim de la 3/4. CMMDC(3,4)=1, deci fracția simplificată rămâne 3/4. Fracții echivalente: k=2 → 6/8, k=3 → 9/12, k=4 → 12/16 etc. Toate sunt 0,75."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Ce sunt fracțiile echivalente?",
+              "answer": "Sunt fracții care arată diferit, dar au aceeași valoare. Se obțin înmulțind sau împărțind numărătorul și numitorul cu același număr nenul."
+            },
+            {
+              "question": "Cum generez fracții echivalente?",
+              "answer": "Înmulțește numărătorul și numitorul cu același întreg k: a/b = (a×k)/(b×k). De exemplu, 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "Cum simplific o fracție la forma ireductibilă?",
+              "answer": "Găsește CMMDC-ul numărătorului și numitorului și împarte ambele la acesta. De exemplu, 12/18 are CMMDC 6 și se simplifică la 2/3."
+            },
+            {
+              "question": "Pot fi fracțiile echivalente negative?",
+              "answer": "Da. O fracție poate fi negativă dacă numărătorul sau numitorul este negativ (dar nu ambele pentru o fracție pozitivă). De exemplu, -1/2 este echivalent cu 1/-2."
+            },
+            {
+              "question": "Este acest calculator gratuit?",
+              "answer": "Da. Este complet gratuit și funcționează direct în browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Asemănătoare",
+          "addingFractions": "Calculator Adunare Fracții",
+          "addingFractionsDesc": "Adună fracții și simplifică pas cu pas",
+          "multiplyingFractions": "Calculator Înmulțire Fracții",
+          "multiplyingFractionsDesc": "Înmulțește fracții și redu la forma cea mai simplă",
+          "complexFractions": "Calculator de Fracții Complexe",
+          "complexFractionsDesc": "Simplifică fracții complexe precum (a/b)/(c/d)"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Calculator Scădere Fracții",
       "description": "Scade două fracții și obține rezultatul simplificat și valoarea zecimală. Suportă fracție simplă și număr mixt.",

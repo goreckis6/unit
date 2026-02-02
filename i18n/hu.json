@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Egyenértékű Törtek Számológép",
+      "description": "Egyenértékű törtek generálása, tört egyszerűsítése, több egyenértékű alak lépésekkel.",
+      "fractionLabel": "Tört",
+      "numerator": "Számláló",
+      "denominator": "Nevező",
+      "maxMultiplier": "Generálás szorzóig (k)",
+      "inputHint": "Csak egész számokat adjon meg. A nevező nem lehet 0. Válasszon k-t 2 és 50 között.",
+      "calculate": "Számolás",
+      "reset": "Alaphelyzet",
+      "result": "Eredmény",
+      "resultPlaceholder": "Adjon meg egy törtet, majd kattintson a Számolás gombra az egyenértékű törtekhez.",
+      "simplifiedFraction": "Egyszerűsített tört",
+      "mixedNumber": "Vegyes szám",
+      "decimalValue": "Tizedes érték",
+      "equivalentsHeading": "Egyenértékű törtek",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Lépések",
+      "stepGcd": "1) Keresse meg az LNKO-t:",
+      "stepDivide": "2) Ossza el a számlálót és a nevezőt az LNKO-val:",
+      "stepMultiply": "3) Szorozza k/k-val az egyenértékű alakokhoz:",
+      "errorTitle": "Hibás megadás",
+      "errorInvalid": "Adjon meg érvényes egész számokat a számlálóhoz, nevezőhöz és k-hoz.",
+      "errorZeroDenominator": "A nevező nem lehet nulla.",
+      "errorMaxMultiplier": "Válasszon k-t 2 és 50 között.",
+      "seo": {
+        "title": "Egyenértékű Törtek Számológép – Generálás és Egyszerűsítés",
+        "description": "Ingyenes egyenértékű törtek számológép tört egyszerűsítéséhez és több egyenértékű tört generálásához. Egyszerűsített alak, vegyes szám, tizedes érték és lépésről lépésre magyarázat.",
+        "keywords": "egyenértékű törtek számológép, egyenértékű tört, törtek egyszerűsítése, tört rövidítése, LNKO, tört tizedesre, vegyes szám",
+        "content": {
+          "heading": "Hogyan találjunk egyenértékű törteket",
+          "paragraph1": "Az egyenértékű törtek különböző kinézetű törtek, amelyek ugyanazt az értéket jelentik. Például 1/2, 2/4 és 50/100 egyenértékű, mert mindegyik 0,5. Az egyenértékű törtek hasznosak törtek összehasonlításához és eredmények egyszerűsítéséhez.",
+          "paragraph2": "A fő szabály: ha a számlálót és a nevezőt ugyanazzal a nem nulla számmal szorozza (vagy osztja), egyenértékű törtet kap. Tehát a/b = (a×k)/(b×k). Egyszerűsítéshez ossza mindkettőt a legnagyobb közös osztóval (LNKO).",
+          "paragraph3": "Ez a számológép mindkettőt megcsinálja. Adja meg a számlálót és a nevezőt: kiszámítja az LNKO-t, megmutatja az egyszerűsített törtet, majd k/k-val szorozva k=1-től a megadott határig létrehozza az egyenértékű törteket.",
+          "paragraph4": "A számológép vegyes számot (szabálytalan törtnél) és tizedes közelítést is mutat. Ez különösen hasznos, ha a tizedes alakot könnyebb értelmezni. A lépések és a többféle alak segít a tanulásban és a gyors ellenőrzésben.",
+          "exampleHeading": "Példa: Egyenértékű törtek 3/4-re",
+          "exampleText": "Induljunk 3/4-ből. 3 és 4 LNKO-ja 1, így az egyszerűsített tört marad 3/4. Egyenértékű törtek: k=2 → 6/8, k=3 → 9/12, k=4 → 12/16, stb. Mind 0,75."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mik az egyenértékű törtek?",
+              "answer": "Olyan törtek, amelyek különbözőek, de ugyanazt az értéket adják. Úgy kapjuk őket, hogy a számlálót és a nevezőt ugyanazzal a nem nulla számmal szorozzuk vagy osztjuk."
+            },
+            {
+              "question": "Hogyan generálhatok egyenértékű törteket?",
+              "answer": "Szorozza meg a számlálót és a nevezőt ugyanazzal a k egész számmal: a/b = (a×k)/(b×k). Például 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "Hogyan egyszerűsítek egy törtet teljesen?",
+              "answer": "Keresse meg a számláló és a nevező LNKO-ját, majd ossza mindkettőt ezzel. Például 12/18 LNKO-ja 6, így 2/3."
+            },
+            {
+              "question": "Lehetnek az egyenértékű törtek negatívak?",
+              "answer": "Igen. Egy tört negatív, ha a számláló vagy a nevező negatív (de nem mindkettő egyszerre egy pozitív tört esetén). Például -1/2 egyenértékű 1/-2-vel."
+            },
+            {
+              "question": "Ingyenes ez a számológép?",
+              "answer": "Igen. Teljesen ingyenes, és közvetlenül a böngészőben működik."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Számológépek",
+          "addingFractions": "Törtek Összeadása Számológép",
+          "addingFractionsDesc": "Törtek összeadása és egyszerűsítés lépésről lépésre",
+          "multiplyingFractions": "Törtek Szorzása Számológép",
+          "multiplyingFractionsDesc": "Törtek szorzása és egyszerűsítés a legegyszerűbb alakra",
+          "complexFractions": "Összetett Törtek Számológép",
+          "complexFractionsDesc": "Összetett törtek egyszerűsítése, például (a/b)/(c/d)"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Törtek Kivonás Számológép",
       "description": "Vonjon ki két törtet, és kapja meg az egyszerűsített eredményt és a tizedes értéket. Támogatja az egyszerű tört és vegyes szám formát.",

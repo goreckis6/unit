@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Regner til Ækvivalente Brøker",
+      "description": "Lav ækvivalente brøker, forkort en brøk og se flere ækvivalente former med trin.",
+      "fractionLabel": "Brøk",
+      "numerator": "Tæller",
+      "denominator": "Nævner",
+      "maxMultiplier": "Generér op til multiplikator (k)",
+      "inputHint": "Indtast kun heltal. Nævneren må ikke være 0. Vælg k mellem 2 og 50.",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "resultPlaceholder": "Indtast en brøk og klik Beregn for at generere ækvivalente brøker.",
+      "simplifiedFraction": "Forkortet brøk",
+      "mixedNumber": "Blandet tal",
+      "decimalValue": "Decimalværdi",
+      "equivalentsHeading": "Ækvivalente brøker",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Trin",
+      "stepGcd": "1) Find SFD:",
+      "stepDivide": "2) Divider tæller og nævner med SFD:",
+      "stepMultiply": "3) Gang med k/k for at lave ækvivalenter:",
+      "errorTitle": "Inputfejl",
+      "errorInvalid": "Indtast gyldige heltal for tæller, nævner og k.",
+      "errorZeroDenominator": "Nævneren kan ikke være 0.",
+      "errorMaxMultiplier": "Vælg k mellem 2 og 50.",
+      "seo": {
+        "title": "Regner til Ækvivalente Brøker – Generér & Forkort Brøker",
+        "description": "Gratis regner til ækvivalente brøker: forkort en brøk og generér flere ækvivalente brøker. Viser forkortet form, blandet tal, decimalværdi og klare trin.",
+        "keywords": "ækvivalente brøker regner, generér ækvivalente brøker, forkort brøker, brøk forkorter, sfd brøker, brøk til decimal, blandet tal",
+        "content": {
+          "heading": "Sådan Finder du Ækvivalente Brøker",
+          "paragraph1": "Ækvivalente brøker er forskellige brøker, der repræsenterer den samme værdi. For eksempel er 1/2, 2/4 og 50/100 ækvivalente, fordi de alle er 0,5. At kunne lave ækvivalente brøker er vigtigt for at sammenligne brøker og forkorte svar.",
+          "paragraph2": "Hovedreglen er: Hvis du ganger (eller dividerer) både tæller og nævner med det samme ikke‑nul tal, får du en ækvivalent brøk. Altså a/b = (a×k)/(b×k). For at forkorte en brøk dividerer du begge tal med deres største fælles divisor (SFD).",
+          "paragraph3": "Denne regner gør begge dele. Indtast tæller og nævner: den finder SFD, viser den forkortede brøk og genererer derefter en liste af ækvivalente brøker ved at gange med k/k fra k = 1 til din grænse.",
+          "paragraph4": "Regneren viser også blandet tal (ved uægte brøker) og en decimaltilnærmelse. Det er nyttigt i praksis, hvor decimaler ofte er lettere at forstå. Med trin og flere former er værktøjet både godt til læring og hurtig kontrol.",
+          "exampleHeading": "Eksempel: Ækvivalente Brøker til 3/4",
+          "exampleText": "Start med 3/4. SFD for 3 og 4 er 1, så den forkortede brøk er stadig 3/4. Ækvivalenter fås ved at gange begge med samme tal: k=2 → 6/8, k=3 → 9/12, k=4 → 12/16 osv. Alle er 0,75."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er ækvivalente brøker?",
+              "answer": "Ækvivalente brøker ser forskellige ud, men har samme værdi. Du laver dem ved at gange eller dividere tæller og nævner med det samme ikke‑nul tal."
+            },
+            {
+              "question": "Hvordan laver jeg ækvivalente brøker?",
+              "answer": "Gang tæller og nævner med samme heltal k: a/b = (a×k)/(b×k). For eksempel 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "Hvordan forkorter jeg en brøk helt?",
+              "answer": "Find SFD for tæller og nævner og divider begge med SFD. For eksempel har 12/18 SFD 6 og forkortes til 2/3."
+            },
+            {
+              "question": "Kan ækvivalente brøker være negative?",
+              "answer": "Ja. En brøk kan være negativ, hvis tæller eller nævner er negativ (men ikke begge for en positiv brøk). For eksempel er -1/2 ækvivalent med 1/-2."
+            },
+            {
+              "question": "Er denne regner gratis?",
+              "answer": "Ja. Den er helt gratis og virker direkte i din browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Regnere",
+          "addingFractions": "Regner til Addition af Brøker",
+          "addingFractionsDesc": "Læg brøker sammen og forkort trin for trin",
+          "multiplyingFractions": "Regner til Multiplikation af Brøker",
+          "multiplyingFractionsDesc": "Gang brøker og forkort til enkleste form",
+          "complexFractions": "Regner for Komplekse Brøker",
+          "complexFractionsDesc": "Forkort komplekse brøker som (a/b)/(c/d)"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Brøksubtraktionsregner",
       "description": "Træk to brøker fra og få det forkortede resultat og decimalværdien. Understøtter simpel brøk og blandet tal.",

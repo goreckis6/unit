@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Rechner für Äquivalente Brüche",
+      "description": "Erzeuge äquivalente Brüche, kürze einen Bruch und sieh mehrere gleichwertige Formen mit Schritten.",
+      "fractionLabel": "Bruch",
+      "numerator": "Zähler",
+      "denominator": "Nenner",
+      "maxMultiplier": "Bis zu Faktor (k) erzeugen",
+      "inputHint": "Nur ganze Zahlen eingeben. Nenner darf nicht 0 sein. Wähle k zwischen 2 und 50.",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "resultPlaceholder": "Bruch eingeben und auf Berechnen klicken, um äquivalente Brüche zu erzeugen.",
+      "simplifiedFraction": "Gekürzter Bruch",
+      "mixedNumber": "Gemischte Zahl",
+      "decimalValue": "Dezimalwert",
+      "equivalentsHeading": "Äquivalente Brüche",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Schritte",
+      "stepGcd": "1) Bestimme den ggT:",
+      "stepDivide": "2) Teile Zähler und Nenner durch den ggT:",
+      "stepMultiply": "3) Multipliziere mit k/k, um Äquivalente zu erzeugen:",
+      "errorTitle": "Eingabefehler",
+      "errorInvalid": "Bitte gib gültige ganze Zahlen für Zähler, Nenner und k ein.",
+      "errorZeroDenominator": "Der Nenner darf nicht 0 sein.",
+      "errorMaxMultiplier": "Bitte wähle k zwischen 2 und 50.",
+      "seo": {
+        "title": "Äquivalente-Brüche-Rechner – Brüche erzeugen & kürzen",
+        "description": "Kostenloser Rechner für äquivalente Brüche: Bruch kürzen und mehrere äquivalente Brüche erzeugen. Mit gekürzter Form, gemischter Zahl, Dezimalwert und klarer Schritt-für-Schritt-Erklärung.",
+        "keywords": "äquivalente brüche rechner, gleichwertige brüche, brüche kürzen, bruch vereinfachen, ggT brüche, bruch in dezimalzahl, gemischte zahl",
+        "content": {
+          "heading": "So findest du äquivalente Brüche",
+          "paragraph1": "Äquivalente Brüche sind verschiedene Brüche, die denselben Wert darstellen. Zum Beispiel sind 1/2, 2/4 und 50/100 äquivalent, weil alle 0,5 ergeben. Das Erzeugen äquivalenter Brüche hilft beim Vergleichen von Brüchen, beim Kürzen von Ergebnissen und beim Arbeiten mit Verhältnissen und Proportionen.",
+          "paragraph2": "Die wichtigste Regel: Wenn du Zähler und Nenner mit derselben von 0 verschiedenen Zahl multiplizierst (oder dividierst), erhältst du einen äquivalenten Bruch. Es gilt also a/b = (a×k)/(b×k) für jedes nicht‑null ganzzahlige k. Zum Kürzen teilst du Zähler und Nenner durch ihren größten gemeinsamen Teiler (ggT).",
+          "paragraph3": "Unser Äquivalente‑Brüche‑Rechner macht beides auf einmal. Gib Zähler und Nenner ein: Der Rechner berechnet den ggT, zeigt den gekürzten Bruch und erzeugt anschließend eine Liste äquivalenter Brüche, indem er den gekürzten Bruch mit k/k für k = 1 bis zu deinem Limit multipliziert.",
+          "paragraph4": "Zusätzlich zeigt der Rechner eine gemischte Zahl (bei unechten Brüchen) und einen Dezimalwert. Das ist praktisch in Anwendungen wie Messen, Rezepten oder Budgetierung, wo Dezimalzahlen oft leichter zu interpretieren sind. Durch Schritte und mehrere Darstellungen eignet sich das Tool sowohl zum Lernen als auch zur schnellen Kontrolle.",
+          "exampleHeading": "Beispiel: Äquivalente Brüche zu 3/4",
+          "exampleText": "Starte mit 3/4. Der ggT von 3 und 4 ist 1, daher bleibt der gekürzte Bruch 3/4. Äquivalente Brüche erhältst du durch Multiplikation von Zähler und Nenner mit derselben Zahl: k=2 → 6/8, k=3 → 9/12, k=4 → 12/16 usw. Alle ergeben 0,75."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was sind äquivalente Brüche?",
+              "answer": "Äquivalente Brüche sehen unterschiedlich aus, stellen aber denselben Wert dar. Du erhältst sie, indem du Zähler und Nenner mit derselben von 0 verschiedenen Zahl multiplizierst oder dividierst."
+            },
+            {
+              "question": "Wie erzeuge ich äquivalente Brüche?",
+              "answer": "Multipliziere Zähler und Nenner mit derselben ganzen Zahl k: a/b = (a×k)/(b×k). Beispiel: 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "Wie kürze ich einen Bruch vollständig?",
+              "answer": "Finde den ggT von Zähler und Nenner und teile beide durch den ggT. Beispiel: 12/18 hat ggT 6 und kürzt sich zu 2/3."
+            },
+            {
+              "question": "Können äquivalente Brüche negativ sein?",
+              "answer": "Ja. Ein Bruch ist negativ, wenn Zähler oder Nenner negativ ist (aber nicht beide gleichzeitig für einen positiven Bruch). Beispiel: -1/2 ist äquivalent zu 1/-2."
+            },
+            {
+              "question": "Ist dieser Rechner kostenlos?",
+              "answer": "Ja. Er ist komplett kostenlos und funktioniert direkt im Browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "addingFractions": "Brüche addieren Rechner",
+          "addingFractionsDesc": "Brüche addieren und Schritt für Schritt kürzen",
+          "multiplyingFractions": "Brüche multiplizieren Rechner",
+          "multiplyingFractionsDesc": "Brüche multiplizieren und vollständig vereinfachen",
+          "complexFractions": "Komplexe-Brüche-Rechner",
+          "complexFractionsDesc": "Komplexe Brüche wie (a/b)/(c/d) vereinfachen"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Bruchsubtraktions-Rechner",
       "description": "Subtrahiere zwei Brüche und erhalte das gekürzte Ergebnis und den Dezimalwert. Unterstützt einfache Brüche und gemischte Zahlen.",

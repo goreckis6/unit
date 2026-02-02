@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Ekvivalenttien Murtolukujen Laskin",
+      "description": "Luo ekvivalentteja murtolukuja, sievennä murtoluku ja näe useita ekvivalentteja muotoja vaiheiden kanssa.",
+      "fractionLabel": "Murtoluku",
+      "numerator": "Osoittaja",
+      "denominator": "Nimittäjä",
+      "maxMultiplier": "Luo kertoimeen (k) asti",
+      "inputHint": "Syötä vain kokonaislukuja. Nimittäjä ei voi olla 0. Valitse k välillä 2–50.",
+      "calculate": "Laske",
+      "reset": "Tyhjennä",
+      "result": "Tulos",
+      "resultPlaceholder": "Syötä murtoluku ja paina Laske luodaksesi ekvivalentteja murtolukuja.",
+      "simplifiedFraction": "Sievennetty murtoluku",
+      "mixedNumber": "Sekaluku",
+      "decimalValue": "Desimaaliarvo",
+      "equivalentsHeading": "Ekvivalentit murtoluvut",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Vaiheet",
+      "stepGcd": "1) Etsi SYT:",
+      "stepDivide": "2) Jaa osoittaja ja nimittäjä SYT:llä:",
+      "stepMultiply": "3) Kerro k/k:lla ekvivalenttien luomiseksi:",
+      "errorTitle": "Syötevirhe",
+      "errorInvalid": "Syötä kelvolliset kokonaisluvut osoittajalle, nimittäjälle ja k:lle.",
+      "errorZeroDenominator": "Nimittäjä ei voi olla nolla.",
+      "errorMaxMultiplier": "Valitse k välillä 2–50.",
+      "seo": {
+        "title": "Ekvivalenttien Murtolukujen Laskin – Luo & Sievennä",
+        "description": "Ilmainen ekvivalenttien murtolukujen laskin murtoluvun sieventämiseen ja useiden ekvivalenttien murtolukujen luomiseen. Näyttää sievennetyn muodon, sekaluvun, desimaaliarvon ja selkeät vaiheet.",
+        "keywords": "ekvivalentit murtoluvut laskin, ekvivalentit murtoluvut, sievennä murtoluku, murtoluvun supistaminen, syt murtoluku, murtoluku desimaaliksi, sekaluku",
+        "content": {
+          "heading": "Miten Löydät Ekvivalentit Murtoluvut",
+          "paragraph1": "Ekvivalentit murtoluvut ovat eri murtolukuja, jotka kuvaavat samaa arvoa. Esimerkiksi 1/2, 2/4 ja 50/100 ovat ekvivalentteja, koska ne kaikki ovat 0,5. Ekvivalenttien murtolukujen muodostaminen auttaa murtolukujen vertailussa ja vastausten sieventämisessä.",
+          "paragraph2": "Pääsääntö on yksinkertainen: kun kerrot (tai jaat) sekä osoittajan että nimittäjän samalla nollasta poikkeavalla luvulla, saat ekvivalentin murtoluvun. Siis a/b = (a×k)/(b×k). Sievennys tehdään jakamalla molemmat suurimmalla yhteisellä tekijällä (SYT).",
+          "paragraph3": "Tämä laskin tekee molemmat. Syötä osoittaja ja nimittäjä: työkalu löytää SYT:n, näyttää sievennetyn murtoluvun ja luo listan ekvivalentteja murtolukuja kertomalla k/k:lla k = 1:stä valitsemaasi rajaan.",
+          "paragraph4": "Laskin näyttää myös sekaluvun (epäsäännöllisille murtoluvuille) ja desimaaliarvon. Tämä on hyödyllistä käytännössä, kun desimaalit ovat helpompia tulkita. Vaiheet ja useat esitysmuodot tukevat sekä oppimista että nopeaa tarkistusta.",
+          "exampleHeading": "Esimerkki: Ekvivalentit Murtoluvut 3/4",
+          "exampleText": "Aloita 3/4:stä. 3:n ja 4:n SYT on 1, joten sievennetty murtoluku on edelleen 3/4. Ekvivalentit murtoluvut saadaan kertomalla molemmat samalla luvulla: k=2 → 6/8, k=3 → 9/12, k=4 → 12/16 jne. Kaikki ovat 0,75."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mitä ovat ekvivalentit murtoluvut?",
+              "answer": "Ekvivalentit murtoluvut näyttävät erilaisilta, mutta edustavat samaa arvoa. Ne saadaan kertomalla tai jakamalla osoittaja ja nimittäjä samalla nollasta poikkeavalla luvulla."
+            },
+            {
+              "question": "Miten teen ekvivalentteja murtolukuja?",
+              "answer": "Kerro osoittaja ja nimittäjä samalla kokonaisluvulla k: a/b = (a×k)/(b×k). Esimerkiksi 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "Miten sievennän murtoluvun?",
+              "answer": "Etsi osoittajan ja nimittäjän SYT ja jaa molemmat sillä. Esimerkiksi 12/18:n SYT on 6, joten se sievenee muotoon 2/3."
+            },
+            {
+              "question": "Voivatko ekvivalentit murtoluvut olla negatiivisia?",
+              "answer": "Kyllä. Murtoluku on negatiivinen, jos osoittaja tai nimittäjä on negatiivinen (mutta ei molemmat positiivisen murtoluvun tapauksessa). Esimerkiksi -1/2 on ekvivalentti 1/-2:n kanssa."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä. Se on täysin ilmainen ja toimii suoraan selaimessa."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Aiheeseen Liittyvät Laskimet",
+          "addingFractions": "Murtolukujen Yhteenlaskulaskin",
+          "addingFractionsDesc": "Laske murtoluvut yhteen ja sievennä vaihe vaiheelta",
+          "multiplyingFractions": "Murtolukujen Kertolaskulaskin",
+          "multiplyingFractionsDesc": "Kerro murtoluvut ja sievennä yksinkertaisimpaan muotoon",
+          "complexFractions": "Monimutkaisten Murtolukujen Laskin",
+          "complexFractionsDesc": "Sievennä monimutkaiset murtoluvut kuten (a/b)/(c/d)"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Murtolukujen Vähennyslaskin",
       "description": "Vähennä kaksi murtolukua ja saat sievennetyn tuloksen ja desimaaliarvon. Tukee yksinkertaista murtolukua ja sekalukua.",

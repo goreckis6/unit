@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Equivalent Fractions Calculator",
+      "description": "Generate equivalent fractions, simplify a fraction, and see multiple equivalent forms with steps.",
+      "fractionLabel": "Fraction",
+      "numerator": "Numerator",
+      "denominator": "Denominator",
+      "maxMultiplier": "Generate up to multiplier (k)",
+      "inputHint": "Enter integers only. Denominator cannot be 0. Choose k between 2 and 50.",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "resultPlaceholder": "Enter a fraction and click Calculate to generate equivalent fractions.",
+      "simplifiedFraction": "Simplified fraction",
+      "mixedNumber": "Mixed number",
+      "decimalValue": "Decimal value",
+      "equivalentsHeading": "Equivalent fractions",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Steps",
+      "stepGcd": "1) Find the GCD:",
+      "stepDivide": "2) Divide numerator and denominator by the GCD:",
+      "stepMultiply": "3) Multiply by k/k to generate equivalents:",
+      "errorTitle": "Input error",
+      "errorInvalid": "Please enter valid integers for numerator, denominator, and k.",
+      "errorZeroDenominator": "Denominator cannot be zero.",
+      "errorMaxMultiplier": "Please choose k between 2 and 50.",
+      "seo": {
+        "title": "Equivalent Fractions Calculator – Generate & Simplify Fractions",
+        "description": "Free equivalent fractions calculator to simplify a fraction and generate multiple equivalent fractions. See the simplified form, mixed number, decimal value, and clear step-by-step explanation.",
+        "keywords": "equivalent fractions calculator, generate equivalent fractions, simplify fractions, fraction simplifier, fractions worksheet, reduce fraction, gcd fractions, fraction to decimal, mixed number",
+        "content": {
+          "heading": "How to Find Equivalent Fractions",
+          "paragraph1": "Equivalent fractions are different fractions that represent the same value. For example, 1/2, 2/4, and 50/100 are all equivalent because they all equal 0.5. Learning how to generate equivalent fractions is important for comparing fractions, simplifying answers, solving word problems, and working with ratios and proportions.",
+          "paragraph2": "The main rule is simple: if you multiply (or divide) the numerator and denominator by the same non-zero number, you get an equivalent fraction. That means a/b = (a×k)/(b×k) for any non-zero integer k. To simplify a fraction, you divide both parts by their greatest common divisor (GCD) to get the fraction in lowest terms.",
+          "paragraph3": "Our Equivalent Fractions Calculator helps you do both tasks at once. Enter a numerator and denominator, and the calculator finds the GCD, shows the simplified fraction, and then generates a list of equivalent fractions by multiplying the simplified fraction by k/k for k = 1 up to your chosen limit. This makes it easy to create practice examples or quickly check if two fractions could be equivalent.",
+          "paragraph4": "The calculator also displays the mixed-number form (when the fraction is improper) and a decimal approximation. This is helpful in real-life applications like measurements, recipes, and budgeting where decimals are often easier to interpret. By showing steps and multiple forms, the tool supports learning as well as quick verification.",
+          "exampleHeading": "Example: Equivalent Fractions of 3/4",
+          "exampleText": "Start with 3/4. The GCD of 3 and 4 is 1, so the simplified fraction is still 3/4. Equivalent fractions are found by multiplying numerator and denominator by the same number: k=2 gives 6/8, k=3 gives 9/12, k=4 gives 12/16, and so on. All of these fractions equal 0.75."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What are equivalent fractions?",
+              "answer": "Equivalent fractions are fractions that look different but represent the same value. You can create them by multiplying or dividing the numerator and denominator by the same non-zero number."
+            },
+            {
+              "question": "How do I generate equivalent fractions?",
+              "answer": "Multiply the numerator and denominator by the same integer k: a/b = (a×k)/(b×k). For example, 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "How do I simplify a fraction to lowest terms?",
+              "answer": "Find the greatest common divisor (GCD) of the numerator and denominator, then divide both by that GCD. For example, 12/18 has GCD 6, so it simplifies to 2/3."
+            },
+            {
+              "question": "Can equivalent fractions have negative numbers?",
+              "answer": "Yes. A fraction can be negative if the numerator or denominator is negative, but not both for a positive fraction. For example, -1/2 is equivalent to 1/-2."
+            },
+            {
+              "question": "Is this equivalent fractions calculator free to use?",
+              "answer": "Yes. It is completely free and works directly in your browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "addingFractions": "Adding Fractions Calculator",
+          "addingFractionsDesc": "Add and simplify fractions step by step",
+          "multiplyingFractions": "Multiplying Fractions Calculator",
+          "multiplyingFractionsDesc": "Multiply fractions and reduce to simplest form",
+          "complexFractions": "Complex Fractions Calculator",
+          "complexFractionsDesc": "Simplify complex fractions like (a/b)/(c/d)"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Subtracting Fractions Calculator",
       "description": "Subtract two fractions and get the simplified result and decimal value. Supports simple and mixed number form.",

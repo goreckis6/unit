@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Rekenmachine voor Gelijkwaardige Breuken",
+      "description": "Genereer gelijkwaardige breuken, vereenvoudig een breuk en bekijk meerdere equivalente vormen met stappen.",
+      "fractionLabel": "Breuk",
+      "numerator": "Teller",
+      "denominator": "Noemer",
+      "maxMultiplier": "Genereer tot vermenigvuldiger (k)",
+      "inputHint": "Voer alleen gehele getallen in. De noemer mag niet 0 zijn. Kies k tussen 2 en 50.",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "resultPlaceholder": "Voer een breuk in en klik op Berekenen om gelijkwaardige breuken te genereren.",
+      "simplifiedFraction": "Vereenvoudigde breuk",
+      "mixedNumber": "Gemengd getal",
+      "decimalValue": "Decimale waarde",
+      "equivalentsHeading": "Gelijkwaardige breuken",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Stappen",
+      "stepGcd": "1) Bepaal de GGD:",
+      "stepDivide": "2) Deel teller en noemer door de GGD:",
+      "stepMultiply": "3) Vermenigvuldig met k/k om equivalenten te maken:",
+      "errorTitle": "Invoerfout",
+      "errorInvalid": "Voer geldige gehele getallen in voor teller, noemer en k.",
+      "errorZeroDenominator": "De noemer kan niet nul zijn.",
+      "errorMaxMultiplier": "Kies k tussen 2 en 50.",
+      "seo": {
+        "title": "Rekenmachine voor Gelijkwaardige Breuken – Genereer & Vereenvoudig",
+        "description": "Gratis rekenmachine voor gelijkwaardige breuken om een breuk te vereenvoudigen en meerdere equivalente breuken te genereren. Met vereenvoudigde vorm, gemengd getal, decimale waarde en duidelijke stappen.",
+        "keywords": "gelijkwaardige breuken rekenmachine, equivalente breuken, breuken vereenvoudigen, breuk verkleinen, ggd breuken, breuk naar decimaal, gemengd getal",
+        "content": {
+          "heading": "Hoe Vind je Gelijkwaardige Breuken",
+          "paragraph1": "Gelijkwaardige (equivalente) breuken zijn verschillende breuken die dezelfde waarde voorstellen. Bijvoorbeeld 1/2, 2/4 en 50/100 zijn gelijkwaardig omdat ze allemaal 0,5 zijn. Het kunnen genereren van gelijkwaardige breuken is belangrijk voor het vergelijken van breuken, het vereenvoudigen van antwoorden en het werken met verhoudingen.",
+          "paragraph2": "De hoofdregel is eenvoudig: als je teller en noemer met hetzelfde niet-nul getal vermenigvuldigt (of deelt), krijg je een gelijkwaardige breuk. Dus a/b = (a×k)/(b×k) voor elk niet‑nul geheel k. Om te vereenvoudigen deel je beide door hun grootste gemene deler (GGD) zodat je de breuk in de eenvoudigste vorm krijgt.",
+          "paragraph3": "Onze rekenmachine helpt bij beide. Voer teller en noemer in: de tool berekent de GGD, toont de vereenvoudigde breuk en genereert daarna een lijst gelijkwaardige breuken door te vermenigvuldigen met k/k voor k = 1 tot je limiet.",
+          "paragraph4": "De rekenmachine toont ook een gemengd getal (bij onechte breuken) en een decimale benadering. Dat is handig bij toepassingen zoals meten, recepten en budgetten waar decimalen vaak makkelijker zijn. Met stappen en meerdere vormen is dit zowel leerzaam als snel te controleren.",
+          "exampleHeading": "Voorbeeld: Gelijkwaardige Breuken van 3/4",
+          "exampleText": "Begin met 3/4. De GGD van 3 en 4 is 1, dus de vereenvoudigde breuk blijft 3/4. Gelijkwaardige breuken krijg je door teller en noemer met hetzelfde getal te vermenigvuldigen: k=2 → 6/8, k=3 → 9/12, k=4 → 12/16, enz. Ze zijn allemaal 0,75."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            {
+              "question": "Wat zijn gelijkwaardige breuken?",
+              "answer": "Gelijkwaardige breuken zien er anders uit maar hebben dezelfde waarde. Je maakt ze door teller en noemer met hetzelfde niet-nul getal te vermenigvuldigen of te delen."
+            },
+            {
+              "question": "Hoe genereer ik gelijkwaardige breuken?",
+              "answer": "Vermenigvuldig teller en noemer met hetzelfde geheel getal k: a/b = (a×k)/(b×k). Bijvoorbeeld 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "Hoe vereenvoudig ik een breuk volledig?",
+              "answer": "Zoek de GGD van teller en noemer en deel beide door die GGD. Bijvoorbeeld 12/18 heeft GGD 6 en wordt 2/3."
+            },
+            {
+              "question": "Kunnen gelijkwaardige breuken negatief zijn?",
+              "answer": "Ja. Een breuk kan negatief zijn als de teller of de noemer negatief is (maar niet beide tegelijk voor een positieve breuk). Bijvoorbeeld -1/2 is gelijkwaardig aan 1/-2."
+            },
+            {
+              "question": "Is deze rekenmachine gratis?",
+              "answer": "Ja. Hij is volledig gratis en werkt direct in je browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde Rekenmachines",
+          "addingFractions": "Breuken Optellen Rekenmachine",
+          "addingFractionsDesc": "Breuken optellen en stap voor stap vereenvoudigen",
+          "multiplyingFractions": "Breuken Vermenigvuldigen Rekenmachine",
+          "multiplyingFractionsDesc": "Breuken vermenigvuldigen en volledig vereenvoudigen",
+          "complexFractions": "Rekenmachine voor Complexe Breuken",
+          "complexFractionsDesc": "Complexe breuken zoals (a/b)/(c/d) vereenvoudigen"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Breuken Aftrekken Rekenmachine",
       "description": "Trek twee breuken af en krijg het vereenvoudigde resultaat en de decimale waarde. Ondersteunt eenvoudige breuk en gemengd getal.",

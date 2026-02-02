@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "等值分数计算器",
+      "description": "生成等值分数、约分分数，并查看带步骤的多种等值形式。",
+      "fractionLabel": "分数",
+      "numerator": "分子",
+      "denominator": "分母",
+      "maxMultiplier": "生成到乘数（k）",
+      "inputHint": "仅输入整数。分母不能为 0。k 请选择 2 到 50。",
+      "calculate": "计算",
+      "reset": "重置",
+      "result": "结果",
+      "resultPlaceholder": "输入一个分数并点击“计算”，即可生成等值分数。",
+      "simplifiedFraction": "最简分数",
+      "mixedNumber": "带分数",
+      "decimalValue": "小数值",
+      "equivalentsHeading": "等值分数",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "步骤",
+      "stepGcd": "1) 求最大公约数（GCD）：",
+      "stepDivide": "2) 用 GCD 同时约分分子与分母：",
+      "stepMultiply": "3) 乘以 k/k 生成等值分数：",
+      "errorTitle": "输入错误",
+      "errorInvalid": "请输入分子、分母和 k 的有效整数。",
+      "errorZeroDenominator": "分母不能为 0。",
+      "errorMaxMultiplier": "k 请选择 2 到 50。",
+      "seo": {
+        "title": "等值分数计算器 – 生成与约分",
+        "description": "免费的等值分数计算器：约分分数并生成多组等值分数。提供最简分数、带分数、小数值，以及清晰的步骤说明。",
+        "keywords": "等值分数计算器, 等值分数, 约分, 分数化简, 最大公约数, 分数转小数, 带分数",
+        "content": {
+          "heading": "如何求等值分数",
+          "paragraph1": "等值分数是外观不同但数值相同的分数。例如 1/2、2/4、50/100 都等于 0.5，因此它们互为等值分数。掌握等值分数有助于分数比较、结果化简以及比例与比率问题。",
+          "paragraph2": "核心规则是：分子与分母同时乘以（或除以）同一个非零数，得到的分数与原分数等值。即 a/b = (a×k)/(b×k)。要把分数约到最简，通常用最大公约数（GCD）同时约分分子与分母。",
+          "paragraph3": "本计算器会同时完成约分与生成等值分数。输入分子与分母后，工具会计算 GCD 并给出最简分数，然后将最简分数乘以 k/k（k=1 到你选择的上限）生成一系列等值分数，便于练习或快速核对。",
+          "paragraph4": "此外，工具还会显示带分数形式（当分数为假分数时）以及小数近似值。在很多实际场景（如测量、配方、预算）中，小数更直观。通过步骤与多种表示方式，你可以更快理解并验证结果。",
+          "exampleHeading": "示例：3/4 的等值分数",
+          "exampleText": "从 3/4 开始。3 与 4 的 GCD 为 1，所以最简分数仍是 3/4。等值分数可以通过同时乘以同一个数得到：k=2 → 6/8，k=3 → 9/12，k=4 → 12/16……它们都等于 0.75。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {
+              "question": "什么是等值分数？",
+              "answer": "等值分数是指形式不同但数值相同的分数。通过把分子和分母同时乘以或除以同一个非零数可以得到等值分数。"
+            },
+            {
+              "question": "如何生成等值分数？",
+              "answer": "把分子和分母同时乘以同一个整数 k：a/b = (a×k)/(b×k)。例如 2/3 × 2/2 = 4/6。"
+            },
+            {
+              "question": "如何把分数约到最简？",
+              "answer": "先求分子和分母的最大公约数（GCD），再用该 GCD 同时约分分子与分母。例如 12/18 的 GCD 是 6，约分后为 2/3。"
+            },
+            {
+              "question": "等值分数可以是负数吗？",
+              "answer": "可以。若分子或分母为负数，分数可以为负（但正分数通常不写成分子和分母同时为负）。例如 -1/2 与 1/-2 等值。"
+            },
+            {
+              "question": "这个计算器是免费的吗？",
+              "answer": "是的。完全免费，直接在浏览器中使用。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "addingFractions": "分数加法计算器",
+          "addingFractionsDesc": "分数相加并逐步约分",
+          "multiplyingFractions": "分数乘法计算器",
+          "multiplyingFractionsDesc": "分数相乘并约分到最简",
+          "complexFractions": "复合分数计算器",
+          "complexFractionsDesc": "化简 (a/b)/(c/d) 这类复合分数"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "分数减法计算器",
       "description": "计算两个分数相减，得到约分结果和小数值。支持真分数和带分数形式。",

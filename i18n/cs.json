@@ -260,6 +260,80 @@
         }
       }
     },
+    "equivalentFractions": {
+      "title": "Kalkulačka Ekvivalentních Zlomků",
+      "description": "Vytvořte ekvivalentní zlomky, zjednodušte zlomek a zobrazte více ekvivalentních tvarů s postupem.",
+      "fractionLabel": "Zlomek",
+      "numerator": "Čitatel",
+      "denominator": "Jmenovatel",
+      "maxMultiplier": "Generovat do násobku (k)",
+      "inputHint": "Zadávejte pouze celá čísla. Jmenovatel nesmí být 0. Zvolte k v rozmezí 2 až 50.",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "result": "Výsledek",
+      "resultPlaceholder": "Zadejte zlomek a klikněte na Vypočítat pro generování ekvivalentních zlomků.",
+      "simplifiedFraction": "Zjednodušený zlomek",
+      "mixedNumber": "Smíšené číslo",
+      "decimalValue": "Desetinná hodnota",
+      "equivalentsHeading": "Ekvivalentní zlomky",
+      "multiplierLabel": "k = {k}",
+      "stepsHeading": "Postup",
+      "stepGcd": "1) Najděte NSD:",
+      "stepDivide": "2) Vydělte čitatel i jmenovatel NSD:",
+      "stepMultiply": "3) Násobte k/k pro vytvoření ekvivalentů:",
+      "errorTitle": "Chyba vstupu",
+      "errorInvalid": "Zadejte prosím platná celá čísla pro čitatel, jmenovatel a k.",
+      "errorZeroDenominator": "Jmenovatel nemůže být nula.",
+      "errorMaxMultiplier": "Zvolte prosím k v rozmezí 2 až 50.",
+      "seo": {
+        "title": "Kalkulačka Ekvivalentních Zlomků – Generujte a Zjednodušte Zlomky",
+        "description": "Bezplatná kalkulačka ekvivalentních zlomků pro zjednodušení zlomku a vytvoření více ekvivalentních zlomků. Zobrazí zjednodušený tvar, smíšené číslo, desetinnou hodnotu a jasný postup krok za krokem.",
+        "keywords": "kalkulačka ekvivalentních zlomků, ekvivalentní zlomky, zjednodušení zlomků, zkrácení zlomku, NSD zlomků, zlomek na desetinné, smíšené číslo",
+        "content": {
+          "heading": "Jak Najít Ekvivalentní Zlomky",
+          "paragraph1": "Ekvivalentní zlomky jsou různé zlomky, které představují stejnou hodnotu. Například 1/2, 2/4 a 50/100 jsou ekvivalentní, protože všechny se rovnají 0,5. Umět vytvářet ekvivalentní zlomky je důležité pro porovnávání zlomků, zjednodušování výsledků, řešení slovních úloh a práci s poměry a proporcemi.",
+          "paragraph2": "Hlavní pravidlo je jednoduché: pokud vynásobíte (nebo vydělíte) čitatel i jmenovatel stejným nenulovým číslem, získáte ekvivalentní zlomek. Platí tedy a/b = (a×k)/(b×k) pro libovolné nenulové celé k. Pro zjednodušení zlomku dělíte obě části jejich největším společným dělitelem (NSD), abyste dostali zlomek v základním tvaru.",
+          "paragraph3": "Naše Kalkulačka Ekvivalentních Zlomků vám pomůže obojí provést najednou. Zadáte čitatel a jmenovatel, kalkulačka najde NSD, zobrazí zjednodušený zlomek a poté vygeneruje seznam ekvivalentních zlomků násobením zjednodušeného zlomku k/k pro k = 1 až do vámi zvoleného limitu. To je užitečné pro cvičení i pro rychlou kontrolu.",
+          "paragraph4": "Kalkulačka také zobrazí smíšené číslo (když je zlomek nepravý) a desetinné přiblížení. To se hodí v praxi, například při měření, vaření nebo rozpočtech, kde jsou desetinná čísla často srozumitelnější. Díky krokům a více zápisům je nástroj vhodný jak pro učení, tak pro rychlé ověření.",
+          "exampleHeading": "Příklad: Ekvivalentní Zlomky pro 3/4",
+          "exampleText": "Začněme 3/4. NSD čísel 3 a 4 je 1, takže zjednodušený zlomek je stále 3/4. Ekvivalentní zlomky získáte násobením čitatele i jmenovatele stejným číslem: k=2 dá 6/8, k=3 dá 9/12, k=4 dá 12/16 atd. Všechny tyto zlomky se rovnají 0,75."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Co jsou ekvivalentní zlomky?",
+              "answer": "Ekvivalentní zlomky jsou zlomky, které vypadají jinak, ale představují stejnou hodnotu. Vytvoříte je násobením nebo dělením čitatele i jmenovatele stejným nenulovým číslem."
+            },
+            {
+              "question": "Jak vytvořím ekvivalentní zlomky?",
+              "answer": "Vynásobte čitatel i jmenovatel stejným celým číslem k: a/b = (a×k)/(b×k). Například 2/3 × 2/2 = 4/6."
+            },
+            {
+              "question": "Jak zjednoduším zlomek na základní tvar?",
+              "answer": "Najděte největší společný dělitel (NSD) čitatele a jmenovatele a vydělte jím obě čísla. Například 12/18 má NSD 6, takže se zjednoduší na 2/3."
+            },
+            {
+              "question": "Mohou mít ekvivalentní zlomky záporná čísla?",
+              "answer": "Ano. Zlomek je záporný, pokud je záporný čitatel nebo jmenovatel, ale ne oba současně pro kladný zlomek. Například -1/2 je ekvivalentní 1/-2."
+            },
+            {
+              "question": "Je tato kalkulačka zdarma?",
+              "answer": "Ano. Je zcela zdarma a funguje přímo ve vašem prohlížeči."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Související Kalkulačky",
+          "addingFractions": "Kalkulačka pro Sčítání Zlomků",
+          "addingFractionsDesc": "Sečtěte zlomky a zjednodušte krok za krokem",
+          "multiplyingFractions": "Kalkulačka Násobení Zlomků",
+          "multiplyingFractionsDesc": "Vynásobte zlomky a zkraťte na nejjednodušší tvar",
+          "complexFractions": "Kalkulačka Komplexních Zlomků",
+          "complexFractionsDesc": "Zjednodušte komplexní zlomky jako (a/b)/(c/d)"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kalkulačka Odečítání Zlomků",
       "description": "Odečtěte dva zlomky a získejte zjednodušený výsledek a desetinnou hodnotu. Podporuje jednoduchý zlomek a smíšené číslo.",

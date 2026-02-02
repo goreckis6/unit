@@ -23,6 +23,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'equivalent-fractions',
+    titleKey: 'equivalentFractions.title',
+    descKey: 'equivalentFractions.description',
+    path: '/calculators/math/equivalent-fractions',
+    category: 'math',
+  },
+  {
     id: 'adding-subtracting-integers',
     titleKey: 'addingSubtractingIntegers.title',
     descKey: 'addingSubtractingIntegers.description',

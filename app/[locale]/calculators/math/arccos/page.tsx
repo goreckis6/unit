@@ -122,17 +122,17 @@ export default async function ArccosPage({ params }: { params: Promise<{ locale:
         <div className="related-content-card">
           <h2 className="related-heading">{tRelated('heading')}</h2>
           <div className="related-grid">
-            <Link href="/calculators/math/addition" className="related-card">
-              <h3 className="related-title">{tRelated('addition')}</h3>
-              <p className="related-desc">{tRelated('additionDesc')}</p>
+            <Link href="/calculators/math/arcsin" className="related-card">
+              <h3 className="related-title">{tRelated('arcsin')}</h3>
+              <p className="related-desc">{tRelated('arcsinDesc')}</p>
+            </Link>
+            <Link href="/calculators/math/arctan" className="related-card">
+              <h3 className="related-title">{tRelated('arctan')}</h3>
+              <p className="related-desc">{tRelated('arctanDesc')}</p>
             </Link>
             <Link href="/calculators/math/percentage" className="related-card">
               <h3 className="related-title">{tRelated('percentage')}</h3>
               <p className="related-desc">{tRelated('percentageDesc')}</p>
-            </Link>
-            <Link href="/calculators/math/antilog" className="related-card">
-              <h3 className="related-title">{tRelated('antilog')}</h3>
-              <p className="related-desc">{tRelated('antilogDesc')}</p>
             </Link>
           </div>
         </div>
@@ -147,4 +147,3 @@ export default async function ArccosPage({ params }: { params: Promise<{ locale:
     </>
   );
 }
-

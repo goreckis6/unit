@@ -500,6 +500,67 @@
         }
       }
     },
+    "arccos": {
+      "title": "Kalkulator Arccos",
+      "description": "Kalkulator arccos(x) do znajdowania odwrotnego cosinusa wartości i uzyskania kąta w stopniach i radianach z rozwiązaniami ogólnymi.",
+      "x": "Wartość (x, wartość cosinusa)",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "angleDegrees": "Kąt w stopniach",
+      "angleRadians": "Kąt w radianach",
+      "calculationHeading": "Obliczenie",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Kalkulator Arccos – Cosinus Odwrotny (acos) w Stopniach i Radianach",
+        "description": "Darmowy kalkulator arccos do znajdowania odwrotnego cosinusa (acos) wartości i uzyskania kąta w stopniach i radianach z rozwiązaniami ogólnymi. Obsługuje wartości w dziedzinie [-1, 1] z wyjaśnieniem krok po kroku. Idealny do trygonometrii, geometrii i obliczeń inżynierskich.",
+        "keywords": "kalkulator arccos, kalkulator cosinusa odwrotnego, kalkulator acos, kalkulator cos odwrotny, arccos w stopniach, arccos w radianach, kalkulator trygonometryczny, kąt z cosinusa",
+        "content": {
+          "heading": "Jak Używać Kalkulatora Arccos (Cosinus Odwrotny)",
+          "paragraph1": "Funkcja arccos (cosinus odwrotny), zapisywana jako arccos(x) lub acos(x), podaje kąt, którego cosinus wynosi x. Innymi słowy, jeśli cos(θ) = x, to θ = arccos(x). Ten kalkulator pomaga szybko znaleźć ten kąt w stopniach i radianach dla dowolnej prawidłowej wartości cosinusa między -1 a 1 oraz podaje rozwiązania ogólne pokazujące wszystkie możliwe kąty.",
+          "paragraph2": "Aby użyć kalkulatora, wprowadź wartość x w zakresie [-1, 1]. Narzędzie oblicza θ = arccos(x) w radianach przy użyciu wbudowanej funkcji odwrotnego cosinusa i konwertuje wynik na stopnie za pomocą wzoru θ° = θ × 180 / π. Obie wartości są wyświetlane z wysoką precyzją. Ponieważ cosinus jest funkcją okresową, kalkulator pokazuje również rozwiązania ogólne: θ + k×360° (w stopniach) i θ + k×2π (w radianach), gdzie k jest dowolną liczbą całkowitą.",
+          "paragraph3": "Funkcja arccos jest szczególnie przydatna, gdy znasz cosinus kąta, ale potrzebujesz samego kąta. Typowe przypadki użycia obejmują znajdowanie kątów w trójkątach prostokątnych, rozwiązywanie równań trygonometrycznych, obliczanie kątów między wektorami, analizę funkcji falowych i pracę z ruchem obrotowym. Ponieważ cosinus nie jest funkcją wzajemnie jednoznaczną dla wszystkich liczb rzeczywistych, wartość główna arccos jest zdefiniowana w przedziale [0, π] radianów (0° do 180°), ale rozwiązanie ogólne obejmuje wszystkie kąty różniące się wielokrotnościami 360° (lub 2π radianów).",
+          "paragraph4": "Nasz kalkulator arccos sprawdza, czy wprowadzone dane mieszczą się w poprawnej dziedzinie [-1, 1], a następnie zwraca dokładne wyniki dla radianów i stopni wraz ze wzorami rozwiązań ogólnych. Oszczędza to czas w porównaniu z ręcznymi obliczeniami i pomaga zrozumieć okresowy charakter funkcji trygonometrycznych. Niezależnie od tego, czy jesteś uczniem uczącym się trygonometrii, nauczycielem przygotowującym przykłady, czy profesjonalistą pracującym z kątami, to narzędzie zapewnia szybkie, niezawodne obliczenia odwrotnego cosinusa.",
+          "exampleHeading": "Przykład: Użycie Kalkulatora Arccos",
+          "exampleText": "Załóżmy, że wiesz, że cos(θ) = 0,5 i chcesz znaleźć θ. Wprowadź x = 0,5 do kalkulatora. Kalkulator oblicza θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Konwersja na stopnie daje θ° = 60°. Rozwiązania ogólne to: θ = 60° + k×360° i θ = π/3 + k×2π rad, gdzie k jest dowolną liczbą całkowitą. Oznacza to, że kąty 60°, 420°, -300° itd. mają wszystkie cosinus równy 0,5. Podobnie, jeśli cos(θ) = 1, to θ = arccos(1) = 0° (lub 0 rad), z rozwiązaniami ogólnymi θ = 0° + k×360° i θ = 0 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Najczęściej Zadawane Pytania",
+          "items": [
+            {
+              "question": "Co to jest arccos?",
+              "answer": "Arccos (cosinus odwrotny) jest odwrotnością funkcji cosinus. Jeśli cos(θ) = x, to θ = arccos(x). Zwraca kąt, którego cosinus wynosi x, zwykle podawany w radianach lub stopniach. Wartość główna znajduje się w zakresie [0°, 180°] lub [0, π] radianów."
+            },
+            {
+              "question": "Jaka jest dziedzina funkcji arccos?",
+              "answer": "Dziedziną arccos(x) są wszystkie wartości rzeczywiste x takie, że -1 ≤ x ≤ 1. Poza tym przedziałem funkcja cosinus nie może produkować takich wartości, więc arccos nie jest dla nich zdefiniowana w liczbach rzeczywistych."
+            },
+            {
+              "question": "Jaki jest zakres arccos?",
+              "answer": "Główny zakres arccos(x) to [0, π] w radianach, co odpowiada [0°, 180°] w stopniach. Jednakże, ponieważ cosinus jest okresowy, rozwiązanie ogólne obejmuje wszystkie kąty θ + k×360° (lub θ + k×2π rad), gdzie k jest dowolną liczbą całkowitą."
+            },
+            {
+              "question": "Dlaczego kalkulator pokazuje rozwiązania ogólne?",
+              "answer": "Cosinus jest funkcją okresową z okresem 360° (2π radianów). Oznacza to, że jeśli cos(θ) = x, to cos(θ + k×360°) = x dla dowolnej liczby całkowitej k. Rozwiązanie ogólne pokazuje wszystkie możliwe kąty spełniające równanie, a nie tylko wartość główną."
+            },
+            {
+              "question": "Czy ten kalkulator arccos jest darmowy?",
+              "answer": "Tak, nasz kalkulator arccos jest całkowicie darmowy. Nie jest wymagana rejestracja ani płatność. Wystarczy wprowadzić wartość x między -1 a 1, aby uzyskać kąt w radianach i stopniach wraz z rozwiązaniami ogólnymi."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "arcsin": "Kalkulator Arcsin",
+          "arcsinDesc": "Znajdź odwrotny sinus wartości i uzyskaj kąt w stopniach i radianach",
+          "arctan": "Kalkulator Arctan",
+          "arctanDesc": "Znajdź odwrotny tangens wartości i uzyskaj kąt w stopniach i radianach",
+          "percentage": "Kalkulator Procentów",
+          "percentageDesc": "Oblicz wartości procentowe, zmiany procentowe i relacje procentowe"
+        }
+      }
+    },
     "arcsin": {
       "title": "Kalkulator Arcsin",
       "description": "Kalkulator arcsin(x) do znajdowania odwrotnego sinusa wartości i uzyskiwania kąta w stopniach i radianach z rozwiązaniami ogólnymi.",

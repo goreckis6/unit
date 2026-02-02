@@ -500,6 +500,67 @@
         }
       }
     },
+    "arccos": {
+      "title": "Calculadora de Arccos",
+      "description": "Calculadora arccos(x) para encontrar el arcocoseno de un valor y obtener el ángulo en grados y radianes con soluciones generales.",
+      "x": "Valor (x, valor del coseno)",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "angleDegrees": "Ángulo en grados",
+      "angleRadians": "Ángulo en radianes",
+      "calculationHeading": "Cálculo",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Calculadora Arccos – Arcocoseno Inverso (acos) en Grados y Radianes",
+        "description": "Calculadora arccos gratuita para encontrar el arcocoseno inverso (acos) de un valor y obtener el ángulo en grados y radianes con soluciones generales. Soporta valores en el dominio [-1, 1] con explicación paso a paso. Ideal para trigonometría, geometría y cálculos de ingeniería.",
+        "keywords": "calculadora arccos, calculadora arcocoseno inverso, calculadora acos, calculadora cos inverso, arccos en grados, arccos en radianes, calculadora trigonométrica, ángulo del coseno",
+        "content": {
+          "heading": "Cómo Usar la Calculadora Arccos (Arcocoseno Inverso)",
+          "paragraph1": "La función arccos (arcocoseno inverso), escrita como arccos(x) o acos(x), te da el ángulo cuyo coseno es x. En otras palabras, si cos(θ) = x, entonces θ = arccos(x). Esta calculadora te ayuda a encontrar rápidamente ese ángulo en grados y radianes para cualquier valor de coseno válido entre -1 y 1, y proporciona soluciones generales que muestran todos los ángulos posibles.",
+          "paragraph2": "Para usar la calculadora, ingresa un valor para x en el rango [-1, 1]. La herramienta calcula θ = arccos(x) en radianes usando la función arcocoseno inverso incorporada, y convierte ese resultado a grados usando la fórmula θ° = θ × 180 / π. Ambos valores se muestran con alta precisión. Dado que el coseno es una función periódica, la calculadora también muestra soluciones generales: θ + k×360° (en grados) y θ + k×2π (en radianes), donde k es cualquier entero.",
+          "paragraph3": "La función arccos es especialmente útil cuando conoces el coseno de un ángulo pero necesitas el ángulo en sí. Los casos de uso comunes incluyen encontrar ángulos en triángulos rectángulos, resolver ecuaciones trigonométricas, calcular ángulos entre vectores, analizar funciones de onda y trabajar con movimiento rotacional. Debido a que el coseno no es biyectivo sobre todos los números reales, el valor principal de arccos se define en el intervalo [0, π] radianes (0° a 180°), pero la solución general incluye todos los ángulos que difieren en múltiplos de 360° (o 2π radianes).",
+          "paragraph4": "Nuestra calculadora arccos valida que tu entrada esté dentro del dominio correcto [-1, 1] y luego devuelve resultados precisos para radianes y grados, junto con las fórmulas de solución general. Esto te ahorra tiempo en comparación con los cálculos manuales y te ayuda a comprender la naturaleza periódica de las funciones trigonométricas. Ya seas un estudiante aprendiendo trigonometría, un maestro preparando ejemplos o un profesional trabajando con ángulos, esta herramienta proporciona cálculos de arcocoseno inverso rápidos y confiables.",
+          "exampleHeading": "Ejemplo: Uso de la Calculadora Arccos",
+          "exampleText": "Supongamos que sabes que cos(θ) = 0,5 y quieres encontrar θ. Ingresa x = 0,5 en la calculadora. La calculadora calcula θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Convirtiendo a grados da θ° = 60°. Las soluciones generales son: θ = 60° + k×360° y θ = π/3 + k×2π rad, donde k es cualquier entero. Esto significa que los ángulos de 60°, 420°, -300°, etc., todos tienen un coseno de 0,5. De manera similar, si cos(θ) = 1, entonces θ = arccos(1) = 0° (o 0 rad), con soluciones generales θ = 0° + k×360° y θ = 0 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es arccos?",
+              "answer": "Arccos (arcocoseno inverso) es la inversa de la función coseno. Si cos(θ) = x, entonces θ = arccos(x). Devuelve el ángulo cuyo coseno es x, generalmente dado en radianes o grados. El valor principal está en el rango [0°, 180°] o [0, π] radianes."
+            },
+            {
+              "question": "¿Cuál es el dominio de la función arccos?",
+              "answer": "El dominio de arccos(x) son todos los valores reales x tales que -1 ≤ x ≤ 1. Fuera de este intervalo, la función coseno no puede producir tales valores, por lo que arccos no está definido para ellos en números reales."
+            },
+            {
+              "question": "¿Cuál es el rango de arccos?",
+              "answer": "El rango principal de arccos(x) es [0, π] en radianes, que corresponde a [0°, 180°] en grados. Sin embargo, dado que el coseno es periódico, la solución general incluye todos los ángulos θ + k×360° (o θ + k×2π rad) donde k es cualquier entero."
+            },
+            {
+              "question": "¿Por qué la calculadora muestra soluciones generales?",
+              "answer": "El coseno es una función periódica con período 360° (2π radianes). Esto significa que si cos(θ) = x, entonces cos(θ + k×360°) = x para cualquier entero k. La solución general muestra todos los ángulos posibles que satisfacen la ecuación, no solo el valor principal."
+            },
+            {
+              "question": "¿Es gratis esta calculadora arccos?",
+              "answer": "Sí, nuestra calculadora arccos es completamente gratuita. No se requiere registro ni pago. Simplemente ingresa un valor para x entre -1 y 1 para obtener el ángulo en radianes y grados, junto con soluciones generales."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "arcsin": "Calculadora Arcsin",
+          "arcsinDesc": "Encuentra el arcoseno inverso de un valor y obtén el ángulo en grados y radianes",
+          "arctan": "Calculadora Arctan",
+          "arctanDesc": "Encuentra el arcotangente inverso de un valor y obtén el ángulo en grados y radianes",
+          "percentage": "Calculadora de Porcentaje",
+          "percentageDesc": "Calcula valores de porcentaje, cambios porcentuales y relaciones porcentuales"
+        }
+      }
+    },
     "arcsin": {
       "title": "Calculadora de Arcsin",
       "description": "Calculadora arcsin(x) para encontrar el seno inverso de un valor y obtener el ángulo en grados y radianes con soluciones generales.",

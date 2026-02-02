@@ -500,6 +500,67 @@
         }
       }
     },
+    "arccos": {
+      "title": "Kalkulačka Arccos",
+      "description": "Kalkulačka arccos(x) pro výpočet arkuskosinu hodnoty a získání úhlu ve stupních a radiánech s obecnými řešeními.",
+      "x": "Hodnota (x, hodnota kosinu)",
+      "calculate": "Vypočítat",
+      "reset": "Reset",
+      "result": "Výsledek",
+      "angleDegrees": "Úhel ve stupních",
+      "angleRadians": "Úhel v radiánech",
+      "calculationHeading": "Výpočet",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Kalkulačka Arccos – Inverzní Kosinus (acos) ve Stupních a Radiánech",
+        "description": "Bezplatná kalkulačka arccos pro výpočet inverzního kosinu (acos) hodnoty a získání úhlu ve stupních a radiánech s obecnými řešeními. Podporuje hodnoty v doméně [-1, 1] s krok za krokem vysvětlením. Ideální pro trigonometrii, geometrii a inženýrské výpočty.",
+        "keywords": "kalkulačka arccos, kalkulačka inverzního kosinu, kalkulačka acos, kalkulačka inverzního cos, arccos ve stupních, arccos v radiánech, trigonometrická kalkulačka, úhel z kosinu",
+        "content": {
+          "heading": "Jak Používat Kalkulačku Arccos (Inverzní Kosinus)",
+          "paragraph1": "Funkce arccos (inverzní kosinus), zapsaná jako arccos(x) nebo acos(x), vám dává úhel, jehož kosinus je x. Jinými slovy, pokud cos(θ) = x, pak θ = arccos(x). Tato kalkulačka vám pomůže rychle najít tento úhel ve stupních a radiánech pro jakoukoli platnou hodnotu kosinu mezi -1 a 1 a poskytuje obecná řešení ukazující všechny možné úhly.",
+          "paragraph2": "Pro použití kalkulačky zadejte hodnotu pro x v rozsahu [-1, 1]. Nástroj vypočítá θ = arccos(x) v radiánech pomocí vestavěné funkce inverzního kosinu a převede tento výsledek na stupně pomocí vzorce θ° = θ × 180 / π. Obě hodnoty jsou zobrazeny s vysokou přesností. Protože kosinus je periodická funkce, kalkulačka také zobrazuje obecná řešení: θ + k×360° (ve stupních) a θ + k×2π (v radiánech), kde k je libovolné celé číslo.",
+          "paragraph3": "Funkce arccos je obzvláště užitečná, když znáte kosinus úhlu, ale potřebujete samotný úhel. Běžné případy použití zahrnují hledání úhlů v pravoúhlých trojúhelnících, řešení trigonometrických rovnic, výpočet úhlů mezi vektory, analýzu vlnových funkcí a práci s rotačním pohybem. Protože kosinus není vzájemně jednoznačný přes všechna reálná čísla, hlavní hodnota arccos je definována v intervalu [0, π] radiánů (0° až 180°), ale obecné řešení zahrnuje všechny úhly, které se liší násobky 360° (nebo 2π radiánů).",
+          "paragraph4": "Naše kalkulačka arccos ověřuje, že váš vstup leží ve správné doméně [-1, 1], a poté vrací přesné výsledky pro radiány a stupně spolu se vzorci obecných řešení. To vám ušetří čas ve srovnání s ručními výpočty a pomůže vám pochopit periodickou povahu trigonometrických funkcí. Ať už jste student učící se trigonometrii, učitel připravující příklady nebo profesionál pracující s úhly, tento nástroj poskytuje rychlé, spolehlivé výpočty inverzního kosinu.",
+          "exampleHeading": "Příklad: Použití Kalkulačky Arccos",
+          "exampleText": "Předpokládejme, že víte, že cos(θ) = 0,5 a chcete najít θ. Zadejte x = 0,5 do kalkulačky. Kalkulačka vypočítá θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Převod na stupně dává θ° = 60°. Obecná řešení jsou: θ = 60° + k×360° a θ = π/3 + k×2π rad, kde k je libovolné celé číslo. To znamená, že úhly 60°, 420°, -300° atd. mají všechny kosinus 0,5. Podobně, pokud cos(θ) = 1, pak θ = arccos(1) = 0° (nebo 0 rad), s obecnými řešeními θ = 0° + k×360° a θ = 0 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Co je arccos?",
+              "answer": "Arccos (inverzní kosinus) je inverzní funkcí k funkci kosinus. Pokud cos(θ) = x, pak θ = arccos(x). Vrací úhel, jehož kosinus je x, obvykle udávaný v radiánech nebo stupních. Hlavní hodnota je v rozsahu [0°, 180°] nebo [0, π] radiánů."
+            },
+            {
+              "question": "Jaká je doména funkce arccos?",
+              "answer": "Doména arccos(x) jsou všechny reálné hodnoty x takové, že -1 ≤ x ≤ 1. Mimo tento interval nemůže funkce kosinus produkovat takové hodnoty, takže arccos pro ně není definován v reálných číslech."
+            },
+            {
+              "question": "Jaký je obor hodnot arccos?",
+              "answer": "Hlavní obor hodnot arccos(x) je [0, π] v radiánech, což odpovídá [0°, 180°] ve stupních. Protože však kosinus je periodický, obecné řešení zahrnuje všechny úhly θ + k×360° (nebo θ + k×2π rad), kde k je libovolné celé číslo."
+            },
+            {
+              "question": "Proč kalkulačka zobrazuje obecná řešení?",
+              "answer": "Kosinus je periodická funkce s periodou 360° (2π radiánů). To znamená, že pokud cos(θ) = x, pak cos(θ + k×360°) = x pro libovolné celé číslo k. Obecné řešení ukazuje všechny možné úhly, které splňují rovnici, nejen hlavní hodnotu."
+            },
+            {
+              "question": "Je tato kalkulačka arccos zdarma?",
+              "answer": "Ano, naše kalkulačka arccos je zcela zdarma. Není vyžadována žádná registrace ani platba. Jednoduše zadejte hodnotu pro x mezi -1 a 1, abyste získali úhel v radiánech a stupních spolu s obecnými řešeními."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Související Kalkulačky",
+          "arcsin": "Kalkulačka Arcsin",
+          "arcsinDesc": "Najděte inverzní sinus hodnoty a získejte úhel ve stupních a radiánech",
+          "arctan": "Kalkulačka Arctan",
+          "arctanDesc": "Najděte inverzní tangens hodnoty a získejte úhel ve stupních a radiánech",
+          "percentage": "Kalkulačka Procent",
+          "percentageDesc": "Vypočítejte procentní hodnoty, procentní změny a procentní vztahy"
+        }
+      }
+    },
     "arcsin": {
       "title": "Kalkulačka Arcsin",
       "description": "Kalkulačka arcsin(x) pro nalezení inverzního sinu hodnoty a získání úhlu ve stupních a radiánech s obecnými řešeními.",

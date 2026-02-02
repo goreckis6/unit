@@ -500,6 +500,67 @@
         }
       }
     },
+    "arccos": {
+      "title": "Arccos-Rechner",
+      "description": "Arccos(x)-Rechner zum Berechnen des Arkuskosinus eines Wertes und zum Erhalten des Winkels in Grad und Bogenmaß mit allgemeinen Lösungen.",
+      "x": "Wert (x, Kosinuswert)",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "angleDegrees": "Winkel in Grad",
+      "angleRadians": "Winkel im Bogenmaß",
+      "calculationHeading": "Berechnung",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arccos-Rechner – Arkuskosinus (acos) in Grad & Bogenmaß",
+        "description": "Kostenloser Arccos-Rechner zum Berechnen des Arkuskosinus (acos) eines Wertes und zum Erhalten des Winkels in Grad und Bogenmaß mit allgemeinen Lösungen. Unterstützt Werte im Bereich [-1, 1] mit Schritt-für-Schritt-Erklärung. Ideal für Trigonometrie, Geometrie und technische Berechnungen.",
+        "keywords": "arccos rechner, arkuskosinus rechner, acos rechner, cos umkehrfunktion rechner, arccos in grad, arccos im bogenmaß, trigonometrie rechner, winkel aus kosinus",
+        "content": {
+          "heading": "So verwenden Sie den Arccos (Arkuskosinus) Rechner",
+          "paragraph1": "Die Arccos-Funktion (Arkuskosinus), geschrieben als arccos(x) oder acos(x), gibt Ihnen den Winkel, dessen Kosinus x ist. Mit anderen Worten, wenn cos(θ) = x, dann ist θ = arccos(x). Dieser Rechner hilft Ihnen, diesen Winkel schnell in Grad und Bogenmaß für jeden gültigen Kosinuswert zwischen -1 und 1 zu finden und liefert allgemeine Lösungen, die alle möglichen Winkel zeigen.",
+          "paragraph2": "Um den Rechner zu verwenden, geben Sie einen Wert für x im Bereich [-1, 1] ein. Das Tool berechnet dann θ = arccos(x) im Bogenmaß unter Verwendung der eingebauten Arkuskosinus-Funktion und konvertiert dieses Ergebnis in Grad mit der Formel θ° = θ × 180 / π. Beide Werte werden mit hoher Präzision angezeigt. Da der Kosinus eine periodische Funktion ist, zeigt der Rechner auch allgemeine Lösungen: θ + k×360° (in Grad) und θ + k×2π (im Bogenmaß), wobei k eine beliebige ganze Zahl ist.",
+          "paragraph3": "Die Arccos-Funktion ist besonders nützlich, wenn Sie den Kosinus eines Winkels kennen, aber den Winkel selbst benötigen. Häufige Anwendungsfälle umfassen das Finden von Winkeln in rechtwinkligen Dreiecken, das Lösen trigonometrischer Gleichungen, das Berechnen von Winkeln zwischen Vektoren, die Analyse von Wellenfunktionen und die Arbeit mit Rotationsbewegungen. Da der Kosinus nicht eineindeutig über alle reellen Zahlen ist, ist der Hauptwert von arccos im Intervall [0, π] Bogenmaß (0° bis 180°) definiert, aber die allgemeine Lösung umfasst alle Winkel, die sich um Vielfache von 360° (oder 2π Bogenmaß) unterscheiden.",
+          "paragraph4": "Unser Arccos-Rechner überprüft, ob Ihre Eingabe im korrekten Bereich [-1, 1] liegt, und gibt dann genaue Ergebnisse für Bogenmaß und Grad zusammen mit den allgemeinen Lösungsformeln zurück. Dies spart Ihnen Zeit im Vergleich zu manuellen Berechnungen und hilft Ihnen, die periodische Natur trigonometrischer Funktionen zu verstehen. Ob Sie ein Student sind, der Trigonometrie lernt, ein Lehrer, der Beispiele vorbereitet, oder ein Fachmann, der mit Winkeln arbeitet, dieses Tool bietet schnelle, zuverlässige Arkuskosinus-Berechnungen.",
+          "exampleHeading": "Beispiel: Verwendung des Arccos-Rechners",
+          "exampleText": "Angenommen, Sie wissen, dass cos(θ) = 0,5 ist und Sie θ finden möchten. Geben Sie x = 0,5 in den Rechner ein. Der Rechner berechnet θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Die Umrechnung in Grad ergibt θ° = 60°. Die allgemeinen Lösungen sind: θ = 60° + k×360° und θ = π/3 + k×2π rad, wobei k eine beliebige ganze Zahl ist. Das bedeutet, dass Winkel von 60°, 420°, -300° usw. alle einen Kosinus von 0,5 haben. Ähnlich, wenn cos(θ) = 1, dann ist θ = arccos(1) = 0° (oder 0 rad), mit allgemeinen Lösungen θ = 0° + k×360° und θ = 0 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist arccos?",
+              "answer": "Arccos (Arkuskosinus) ist die Umkehrfunktion der Kosinusfunktion. Wenn cos(θ) = x, dann ist θ = arccos(x). Es gibt den Winkel zurück, dessen Kosinus x ist, normalerweise in Bogenmaß oder Grad angegeben. Der Hauptwert liegt im Bereich [0°, 180°] oder [0, π] Bogenmaß."
+            },
+            {
+              "question": "Was ist der Definitionsbereich der Arccos-Funktion?",
+              "answer": "Der Definitionsbereich von arccos(x) sind alle reellen Werte x, so dass -1 ≤ x ≤ 1. Außerhalb dieses Intervalls kann die Kosinusfunktion keine solchen Werte erzeugen, daher ist arccos für sie in reellen Zahlen nicht definiert."
+            },
+            {
+              "question": "Was ist der Wertebereich von arccos?",
+              "answer": "Der Hauptwertebereich von arccos(x) ist [0, π] im Bogenmaß, was [0°, 180°] in Grad entspricht. Da der Kosinus jedoch periodisch ist, umfasst die allgemeine Lösung alle Winkel θ + k×360° (oder θ + k×2π rad), wobei k eine beliebige ganze Zahl ist."
+            },
+            {
+              "question": "Warum zeigt der Rechner allgemeine Lösungen?",
+              "answer": "Der Kosinus ist eine periodische Funktion mit einer Periode von 360° (2π Bogenmaß). Das bedeutet, dass wenn cos(θ) = x, dann ist cos(θ + k×360°) = x für jede ganze Zahl k. Die allgemeine Lösung zeigt alle möglichen Winkel, die die Gleichung erfüllen, nicht nur den Hauptwert."
+            },
+            {
+              "question": "Ist dieser Arccos-Rechner kostenlos?",
+              "answer": "Ja, unser Arccos-Rechner ist völlig kostenlos. Es ist keine Registrierung oder Zahlung erforderlich. Geben Sie einfach einen Wert für x zwischen -1 und 1 ein, um den Winkel in Bogenmaß und Grad zusammen mit allgemeinen Lösungen zu erhalten."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "arcsin": "Arcsin-Rechner",
+          "arcsinDesc": "Finden Sie den Arkussinus eines Wertes und erhalten Sie den Winkel in Grad und Bogenmaß",
+          "arctan": "Arctan-Rechner",
+          "arctanDesc": "Finden Sie den Arkustangens eines Wertes und erhalten Sie den Winkel in Grad und Bogenmaß",
+          "percentage": "Prozentrechner",
+          "percentageDesc": "Berechnen Sie Prozentwerte, prozentuale Veränderungen und prozentuale Beziehungen"
+        }
+      }
+    },
     "arcsin": {
       "title": "Arcsin-Rechner",
       "description": "Arcsin(x)-Rechner zum Finden des inversen Sinus eines Wertes und Erhalten des Winkels in Grad und Bogenmaß mit allgemeinen Lösungen.",

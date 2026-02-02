@@ -810,6 +810,69 @@
         }
       }
     },
+    "commonFactors": {
+      "title": "Felles Faktorer Kalkulator",
+      "description": "Finn alle felles faktorer og største felles divisor (SFD) for to tall øyeblikkelig med trinn-for-trinn forklaring",
+      "number1": "Første Tall",
+      "number2": "Andre Tall",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "gcfLabel": "Største Felles Divisor (SFD)",
+      "commonFactorsLabel": "Alle Felles Faktorer",
+      "seo": {
+        "title": "Felles Faktorer Kalkulator – Finn SFD og Alle Felles Faktorer Online",
+        "description": "Gratis online kalkulator for å finne alle felles faktorer og største felles divisor (SFD) for to tall. Få umiddelbare resultater med klare forklaringer for matematikklekser.",
+        "keywords": "felles faktorer kalkulator, SFD kalkulator, største felles divisor, felles divisorer, faktorer kalkulator, GCD kalkulator, matematikk kalkulator, tallteori",
+        "content": {
+          "heading": "Hvordan Finne Felles Faktorer og SFD",
+          "paragraph1": "Felles faktorer er tall som deler to eller flere tall jevnt uten rest. Største felles divisor (SFD), også kjent som største felles divisor, er det største tallet som deler alle gitte tall jevnt. Å finne felles faktorer er en grunnleggende ferdighet i matematikk, brukt til å forenkle brøker, løse ligninger og arbeide med forhold. Vår Felles Faktorer Kalkulator gjør det enkelt å finne alle felles faktorer og SFD for to vilkårlige tall øyeblikkelig.",
+          "paragraph2": "For å finne felles faktorer manuelt, list først opp alle faktorer for hvert tall. En faktor er ethvert heltall som deler det gitte tallet jevnt. For eksempel er faktorene til 12: 1, 2, 3, 4, 6 og 12, fordi hvert av disse tallene deler 12 jevnt. Faktorene til 18 er 1, 2, 3, 6, 9 og 18. De felles faktorene er tallene som vises i begge listene: 1, 2, 3 og 6. Den største av disse er 6, så SFD(12, 18) = 6.",
+          "paragraph3": "SFD har mange praktiske anvendelser i matematikk og hverdagen. Den er essensiell for å forenkle brøker til sin enkleste form (SFD av teller og nevner brukes til å redusere brøken), løse ordproblemer som involverer like grupper eller arrangementer, finne den største kvadratiske flisen som jevnt kan dekke et rektangulært område, bestemme hvordan man deler elementer i like grupper, og løse problemer i tallteori og algebra. Forståelse av felles faktorer hjelper med å bygge et sterkt fundament for mer avanserte matematiske konsepter.",
+          "paragraph4": "Vår kalkulator bruker en effektiv algoritme for å finne alle faktorer for begge tall, og identifiserer deretter hvilke faktorer som er felles for begge. SFD er ganske enkelt den største verdien i listen over felles faktorer. For svært store tall kan det å finne faktorer manuelt være tidkrevende, men vår kalkulator håndterer alle positive heltall øyeblikkelig. Enten du er en student som jobber med lekser, en lærer som lager eksempler, eller noen som raskt trenger å finne felles faktorer, gir vårt verktøy nøyaktige resultater på sekunder.",
+          "exampleHeading": "Vanlige Eksempler",
+          "exampleText": "Eksempel 1: Felles faktorer for 12 og 18 er 1, 2, 3, 6. SFD = 6. Eksempel 2: Felles faktorer for 24 og 36 er 1, 2, 3, 4, 6, 12. SFD = 12. Eksempel 3: Felles faktorer for 15 og 25 er 1, 5. SFD = 5. Eksempel 4: Felles faktorer for 7 og 13 er 1. SFD = 1 (primtall har ingen felles faktorer bortsett fra 1)."
+        },
+        "faq": {
+          "heading": "Ofte Stilte Spørsmål",
+          "items": [
+            {
+              "question": "Hva er forskjellen mellom felles faktorer og SFD?",
+              "answer": "Felles faktorer er alle tallene som deler to eller flere gitte tall jevnt. SFD (Største Felles Divisor) er det største tallet blant alle felles faktorer. For eksempel er de felles faktorene for 12 og 18: 1, 2, 3 og 6, mens SFD er 6 fordi det er den største felles faktoren."
+            },
+            {
+              "question": "Hvordan finner man SFD av to tall?",
+              "answer": "For å finne SFD, list opp alle faktorer for hvert tall, og identifiser deretter faktorene som vises i begge listene. Den største av disse felles faktorene er SFD. Alternativt kan du bruke den euklidiske algoritmen (gjentatt divisjon og finn rester) eller primtallfaktoriseringsmetoden. Vår kalkulator finner SFD øyeblikkelig for alle to positive heltall."
+            },
+            {
+              "question": "Hva er SFD av to primtall?",
+              "answer": "SFD av to forskjellige primtall er alltid 1. Primtall har nøyaktig to faktorer: 1 og seg selv. Siden forskjellige primtall ikke deler noen faktorer bortsett fra 1, er deres SFD 1. For eksempel SFD(7, 13) = 1, SFD(11, 17) = 1."
+            },
+            {
+              "question": "Hvorfor er det viktig å finne SFD?",
+              "answer": "SFD brukes i mange praktiske anvendelser: forenkle brøker til enkleste form (del teller og nevner med deres SFD), løse problemer som involverer like grupper eller fordelinger, finne den største målingen som passer jevnt inn i forskjellige lengder, redusere forhold og løse algebraiske likninger. Det er et grunnleggende konsept i tallteori og aritmetikk."
+            },
+            {
+              "question": "Kan SFD av to tall være større enn ett av tallene?",
+              "answer": "Nei. SFD av to tall kan aldri være større enn det minste av de to tallene. Faktisk er den maksimalt mulige SFD det minste tallet selv, som skjer når det minste tallet deler det større tallet jevnt. For eksempel SFD(6, 18) = 6 fordi 6 deler 18 jevnt."
+            },
+            {
+              "question": "Hva er SFD av 1 og et hvilket som helst tall?",
+              "answer": "SFD av 1 og ethvert positivt heltall er alltid 1. Dette er fordi 1 er den eneste faktoren til 1, og 1 er en faktor av ethvert positivt heltall. Derfor er 1 den eneste felles faktoren, noe som gjør den til SFD. For eksempel SFD(1, 100) = 1, SFD(1, 57) = 1."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte Kalkulatorer",
+          "percentage": "Prosent Kalkulator",
+          "percentageDesc": "Beregn prosentverdier, prosentendring og prosentforhold",
+          "percentageIncrease": "Prosentøkning Kalkulator",
+          "percentageIncreaseDesc": "Beregn prosentøkning mellom to tall",
+          "multiplication": "Multiplikasjon Kalkulator",
+          "multiplicationDesc": "Multipliser tall raskt og nøyaktig med detaljerte trinn"
+        }
+      }
+    },
     "quadraticEquation": {
       "title": "Kalkulator for Andregradsligning",
       "description": "Løs andregradsligninger og få reelle eller komplekse røtter med en gang.",

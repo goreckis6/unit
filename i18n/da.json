@@ -810,6 +810,69 @@
         }
       }
     },
+    "commonFactors": {
+      "title": "Fælles Faktorer Beregner",
+      "description": "Find alle fælles faktorer og den største fælles divisor (SFD) af to tal øjeblikkeligt med trin-for-trin forklaring",
+      "number1": "Første Tal",
+      "number2": "Andet Tal",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "gcfLabel": "Største Fælles Divisor (SFD)",
+      "commonFactorsLabel": "Alle Fælles Faktorer",
+      "seo": {
+        "title": "Fælles Faktorer Beregner – Find SFD og Alle Fælles Faktorer Online",
+        "description": "Gratis online beregner til at finde alle fælles faktorer og den største fælles divisor (SFD) af to tal. Få øjeblikkelige resultater med klare forklaringer til matematiklektier.",
+        "keywords": "fælles faktorer beregner, SFD beregner, største fælles divisor, fælles divisorer, faktorer beregner, GCD beregner, matematisk beregner, talfteori",
+        "content": {
+          "heading": "Sådan Finder Du Fælles Faktorer og SFD",
+          "paragraph1": "Fælles faktorer er tal, der deler to eller flere tal jævnt uden rest. Den største fælles divisor (SFD), også kendt som den største fælles divisor, er det største tal, der deler alle givne tal jævnt. At finde fælles faktorer er en grundlæggende færdighed i matematik, brugt til at forenkle brøker, løse ligninger og arbejde med forhold. Vores Fælles Faktorer Beregner gør det nemt at finde alle fælles faktorer og SFD af to vilkårlige tal øjeblikkeligt.",
+          "paragraph2": "For at finde fælles faktorer manuelt skal du først liste alle faktorer for hvert tal. En faktor er ethvert heltal, der deler det givne tal jævnt. For eksempel er faktorerne for 12: 1, 2, 3, 4, 6 og 12, fordi hvert af disse tal deler 12 jævnt. Faktorerne for 18 er 1, 2, 3, 6, 9 og 18. De fælles faktorer er de tal, der vises i begge lister: 1, 2, 3 og 6. Den største af disse er 6, så SFD(12, 18) = 6.",
+          "paragraph3": "SFD har mange praktiske anvendelser i matematik og hverdagen. Det er væsentligt for at forenkle brøker til deres simpleste form (SFD af tæller og nævner bruges til at reducere brøken), løse ordproblemer, der involverer lige grupper eller arrangementer, finde den største kvadratiske flise, der jævnt kan dække et rektangulært område, bestemme hvordan man deler genstande i lige grupper og løse problemer i talfteori og algebra. Forståelse af fælles faktorer hjælper med at opbygge et stærkt fundament for mere avancerede matematiske begreber.",
+          "paragraph4": "Vores beregner bruger en effektiv algoritme til at finde alle faktorer for begge tal og identificerer derefter, hvilke faktorer der er fælles for begge. SFD er simpelthen den største værdi på listen over fælles faktorer. For meget store tal kan det være tidskrævende at finde faktorer manuelt, men vores beregner håndterer alle positive heltal øjeblikkeligt. Uanset om du er en studerende, der arbejder med lektier, en lærer, der opretter eksempler, eller nogen, der hurtigt skal finde fælles faktorer, giver vores værktøj nøjagtige resultater på få sekunder.",
+          "exampleHeading": "Almindelige Eksempler",
+          "exampleText": "Eksempel 1: Fælles faktorer for 12 og 18 er 1, 2, 3, 6. SFD = 6. Eksempel 2: Fælles faktorer for 24 og 36 er 1, 2, 3, 4, 6, 12. SFD = 12. Eksempel 3: Fælles faktorer for 15 og 25 er 1, 5. SFD = 5. Eksempel 4: Fælles faktorer for 7 og 13 er 1. SFD = 1 (primtal har ingen fælles faktorer undtagen 1)."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er forskellen mellem fælles faktorer og SFD?",
+              "answer": "Fælles faktorer er alle de tal, der deler to eller flere givne tal jævnt. SFD (Største Fælles Divisor) er det største tal blandt alle fælles faktorer. For eksempel er de fælles faktorer for 12 og 18: 1, 2, 3 og 6, mens SFD er 6, fordi det er den største fælles faktor."
+            },
+            {
+              "question": "Hvordan finder man SFD af to tal?",
+              "answer": "For at finde SFD skal du liste alle faktorer for hvert tal og derefter identificere de faktorer, der vises i begge lister. Den største af disse fælles faktorer er SFD. Alternativt kan du bruge den euklidiske algoritme (gentagen division og finding af rester) eller primfaktoriseringsmetoden. Vores beregner finder SFD øjeblikkeligt for alle to positive heltal."
+            },
+            {
+              "question": "Hvad er SFD af to primtal?",
+              "answer": "SFD af to forskellige primtal er altid 1. Primtal har præcis to faktorer: 1 og sig selv. Da forskellige primtal ikke deler nogen faktorer undtagen 1, er deres SFD 1. For eksempel SFD(7, 13) = 1, SFD(11, 17) = 1."
+            },
+            {
+              "question": "Hvorfor er det vigtigt at finde SFD?",
+              "answer": "SFD bruges i mange praktiske anvendelser: forenkling af brøker til simpleste form (divider tæller og nævner med deres SFD), løsning af problemer, der involverer lige grupper eller fordelinger, finding af den største måling, der passer jævnt ind i forskellige længder, reduktion af forhold og løsning af algebraiske ligninger. Det er et grundlæggende begreb i talfteori og aritmetik."
+            },
+            {
+              "question": "Kan SFD af to tal være større end et af tallene?",
+              "answer": "Nej. SFD af to tal kan aldrig være større end det mindste af de to tal. Faktisk er den maksimalt mulige SFD det mindste tal selv, hvilket sker, når det mindste tal deler det større tal jævnt. For eksempel SFD(6, 18) = 6, fordi 6 deler 18 jævnt."
+            },
+            {
+              "question": "Hvad er SFD af 1 og et hvilket som helst tal?",
+              "answer": "SFD af 1 og ethvert positivt heltal er altid 1. Dette er fordi 1 er den eneste faktor af 1, og 1 er en faktor af ethvert positivt heltal. Derfor er 1 den eneste fælles faktor, hvilket gør den til SFD. For eksempel SFD(1, 100) = 1, SFD(1, 57) = 1."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Beregnere",
+          "percentage": "Procent Beregner",
+          "percentageDesc": "Beregn procentværdier, procentændring og procentforhold",
+          "percentageIncrease": "Procentstigning Beregner",
+          "percentageIncreaseDesc": "Beregn procentstigning mellem to tal",
+          "multiplication": "Multiplikations Beregner",
+          "multiplicationDesc": "Multiplicer tal hurtigt og præcist med detaljerede trin"
+        }
+      }
+    },
     "quadraticEquation": {
       "title": "Kvadratisk Ligning-beregner",
       "description": "Løs kvadratiske ligninger og få reelle eller komplekse rødder med det samme.",

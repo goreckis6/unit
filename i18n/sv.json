@@ -810,6 +810,69 @@
         }
       }
     },
+    "commonFactors": {
+      "title": "Gemensamma Faktorer Kalkylator",
+      "description": "Hitta alla gemensamma faktorer och största gemensamma delaren (SGD) för två tal omedelbart med steg-för-steg förklaring",
+      "number1": "Första Talet",
+      "number2": "Andra Talet",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "gcfLabel": "Största Gemensamma Delaren (SGD)",
+      "commonFactorsLabel": "Alla Gemensamma Faktorer",
+      "seo": {
+        "title": "Gemensamma Faktorer Kalkylator – Hitta SGD och Alla Gemensamma Faktorer Online",
+        "description": "Gratis online kalkylator för att hitta alla gemensamma faktorer och största gemensamma delaren (SGD) för två tal. Få omedelbara resultat med tydliga förklaringar för matteläxor.",
+        "keywords": "gemensamma faktorer kalkylator, SGD kalkylator, största gemensamma delaren, gemensamma divisorer, faktorer kalkylator, GCD kalkylator, matematisk kalkylator, talteori",
+        "content": {
+          "heading": "Hur Man Hittar Gemensamma Faktorer och SGD",
+          "paragraph1": "Gemensamma faktorer är tal som delar två eller flera tal jämnt utan rest. Största gemensamma delaren (SGD), även känd som största gemensamma divisor, är det största talet som delar alla givna tal jämnt. Att hitta gemensamma faktorer är en grundläggande färdighet i matematik, använd för att förenkla bråk, lösa ekvationer och arbeta med förhållanden. Vår Gemensamma Faktorer Kalkylator gör det enkelt att hitta alla gemensamma faktorer och SGD för två godtyckliga tal omedelbart.",
+          "paragraph2": "För att hitta gemensamma faktorer manuellt, lista först alla faktorer för varje tal. En faktor är vilket heltal som helst som delar det givna talet jämnt. Till exempel är faktorerna för 12: 1, 2, 3, 4, 6 och 12, eftersom vart och ett av dessa tal delar 12 jämnt. Faktorerna för 18 är 1, 2, 3, 6, 9 och 18. De gemensamma faktorerna är de tal som visas i båda listorna: 1, 2, 3 och 6. Den största av dessa är 6, så SGD(12, 18) = 6.",
+          "paragraph3": "SGD har många praktiska tillämpningar i matematik och vardagen. Den är väsentlig för att förenkla bråk till sin enklaste form (SGD för täljare och nämnare används för att reducera bråket), lösa ordproblem som involverar lika grupper eller arrangemang, hitta den största kvadratiska plattan som jämnt kan täcka ett rektangulärt område, bestämma hur man delar föremål i lika grupper och lösa problem i talteori och algebra. Förståelse av gemensamma faktorer hjälper till att bygga en stark grund för mer avancerade matematiska begrepp.",
+          "paragraph4": "Vår kalkylator använder en effektiv algoritm för att hitta alla faktorer för båda talen och identifierar sedan vilka faktorer som är gemensamma för båda. SGD är helt enkelt det största värdet i listan över gemensamma faktorer. För mycket stora tal kan det vara tidskrävande att hitta faktorer manuellt, men vår kalkylator hanterar alla positiva heltal omedelbart. Oavsett om du är en student som arbetar med läxor, en lärare som skapar exempel eller någon som snabbt behöver hitta gemensamma faktorer, ger vårt verktyg noggranna resultat på sekunder.",
+          "exampleHeading": "Vanliga Exempel",
+          "exampleText": "Exempel 1: Gemensamma faktorer för 12 och 18 är 1, 2, 3, 6. SGD = 6. Exempel 2: Gemensamma faktorer för 24 och 36 är 1, 2, 3, 4, 6, 12. SGD = 12. Exempel 3: Gemensamma faktorer för 15 och 25 är 1, 5. SGD = 5. Exempel 4: Gemensamma faktorer för 7 och 13 är 1. SGD = 1 (primtal har inga gemensamma faktorer förutom 1)."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är skillnaden mellan gemensamma faktorer och SGD?",
+              "answer": "Gemensamma faktorer är alla tal som delar två eller flera givna tal jämnt. SGD (Största Gemensamma Delaren) är det största talet bland alla gemensamma faktorer. Till exempel är de gemensamma faktorerna för 12 och 18: 1, 2, 3 och 6, medan SGD är 6 eftersom det är den största gemensamma faktorn."
+            },
+            {
+              "question": "Hur hittar man SGD för två tal?",
+              "answer": "För att hitta SGD, lista alla faktorer för varje tal och identifiera sedan de faktorer som visas i båda listorna. Den största av dessa gemensamma faktorer är SGD. Alternativt kan du använda den euklidiska algoritmen (upprepad division och hitta rester) eller primtalsfaktoriseringsmetoden. Vår kalkylator hittar SGD omedelbart för två positiva heltal."
+            },
+            {
+              "question": "Vad är SGD för två primtal?",
+              "answer": "SGD för två olika primtal är alltid 1. Primtal har exakt två faktorer: 1 och sig själva. Eftersom olika primtal inte delar några faktorer förutom 1, är deras SGD 1. Till exempel SGD(7, 13) = 1, SGD(11, 17) = 1."
+            },
+            {
+              "question": "Varför är det viktigt att hitta SGD?",
+              "answer": "SGD används i många praktiska tillämpningar: förenkla bråk till enklaste form (dela täljare och nämnare med deras SGD), lösa problem som involverar lika grupper eller fördelningar, hitta den största mätningen som passar jämnt i olika längder, reducera förhållanden och lösa algebraiska ekvationer. Det är ett grundläggande begrepp i talteori och aritmetik."
+            },
+            {
+              "question": "Kan SGD för två tal vara större än ett av talen?",
+              "answer": "Nej. SGD för två tal kan aldrig vara större än det minsta av de två talen. Faktum är att den maximalt möjliga SGD är det minsta talet självt, vilket inträffar när det minsta talet delar det större talet jämnt. Till exempel SGD(6, 18) = 6 eftersom 6 delar 18 jämnt."
+            },
+            {
+              "question": "Vad är SGD för 1 och vilket tal som helst?",
+              "answer": "SGD för 1 och vilket positivt heltal som helst är alltid 1. Detta beror på att 1 är den enda faktorn för 1, och 1 är en faktor för varje positivt heltal. Därför är 1 den enda gemensamma faktorn, vilket gör den till SGD. Till exempel SGD(1, 100) = 1, SGD(1, 57) = 1."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "percentage": "Procent Kalkylator",
+          "percentageDesc": "Beräkna procentvärden, procentförändring och procentförhållanden",
+          "percentageIncrease": "Procentökning Kalkylator",
+          "percentageIncreaseDesc": "Beräkna procentökning mellan två tal",
+          "multiplication": "Multiplikation Kalkylator",
+          "multiplicationDesc": "Multiplicera tal snabbt och noggrant med detaljerade steg"
+        }
+      }
+    },
     "quadraticEquation": {
       "title": "Kalkylator för Andragradsekvation",
       "description": "Lös andragradsekvationer och få reella eller komplexa rötter direkt.",

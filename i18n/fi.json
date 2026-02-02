@@ -810,6 +810,69 @@
         }
       }
     },
+    "commonFactors": {
+      "title": "Yhteiset Tekijät Laskin",
+      "description": "Löydä kaikki yhteiset tekijät ja suurin yhteinen tekijä (SYT) kahdelle luvulle välittömästi vaiheittaisella selityksellä",
+      "number1": "Ensimmäinen Luku",
+      "number2": "Toinen Luku",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "gcfLabel": "Suurin Yhteinen Tekijä (SYT)",
+      "commonFactorsLabel": "Kaikki Yhteiset Tekijät",
+      "seo": {
+        "title": "Yhteiset Tekijät Laskin – Löydä SYT ja Kaikki Yhteiset Tekijät Verkossa",
+        "description": "Ilmainen verkkolaskin kaikkien yhteisten tekijöiden ja suurimman yhteisen tekijän (SYT) löytämiseen kahdelle luvulle. Saa välittömät tulokset selkeillä selityksillä matematiikan kotitehtäviin.",
+        "keywords": "yhteiset tekijät laskin, SYT laskin, suurin yhteinen tekijä, yhteiset jakajat, tekijät laskin, GCD laskin, matematiikkalaskin, lukuteoria",
+        "content": {
+          "heading": "Kuinka Löytää Yhteiset Tekijät ja SYT",
+          "paragraph1": "Yhteiset tekijät ovat lukuja, jotka jakavat tasaisesti kaksi tai useampia lukuja ilman jakojäännöstä. Suurin yhteinen tekijä (SYT), joka tunnetaan myös suurimpana yhteisenä jakajana, on suurin luku, joka jakaa tasaisesti kaikki annetut luvut. Yhteisten tekijöiden löytäminen on perustaito matematiikassa, jota käytetään murtolukujen yksinkertaistamiseen, yhtälöiden ratkaisemiseen ja suhteiden käsittelyyn. Yhteiset Tekijät Laskimemme helpottaa kaikkien yhteisten tekijöiden ja SYT:n välitöntä löytämistä mille tahansa kahdelle luvulle.",
+          "paragraph2": "Löytääksesi yhteiset tekijät manuaalisesti, luettele ensin kaikki kunkin luvun tekijät. Tekijä on mikä tahansa kokonaisluku, joka jakaa annetun luvun tasaisesti. Esimerkiksi luvun 12 tekijät ovat 1, 2, 3, 4, 6 ja 12, koska jokainen näistä luvuista jakaa 12:n tasaisesti. Luvun 18 tekijät ovat 1, 2, 3, 6, 9 ja 18. Yhteiset tekijät ovat lukuja, jotka esiintyvät molemmissa luetteloissa: 1, 2, 3 ja 6. Suurin näistä on 6, joten SYT(12, 18) = 6.",
+          "paragraph3": "SYT:llä on monia käytännön sovelluksia matematiikassa ja jokapäiväisessä elämässä. Se on olennainen murtolukujen yksinkertaistamisessa yksinkertaisimpaan muotoonsa (osoittajan ja nimittäjän SYT:tä käytetään murtoluvun supistamiseen), sanaproblemien ratkaisemisessa, jotka sisältävät tasaisia ryhmiä tai järjestelyjä, suurimman neliölaatan löytämisessä, joka voi tasaisesti peittää suorakaiteen muotoisen alueen, määrittämisessä, miten esineet jaetaan tasaisiin ryhmiin, ja lukuteorian ja algebran ongelmien ratkaisemisessa. Yhteisten tekijöiden ymmärtäminen auttaa rakentamaan vahvan perustan kehittyneemmille matemaattisille käsitteille.",
+          "paragraph4": "Laskimemme käyttää tehokasta algoritmia löytääkseen kaikki molempien lukujen tekijät ja tunnistaa sitten, mitkä tekijät ovat yhteisiä molemmille. SYT on yksinkertaisesti suurin arvo yhteisten tekijöiden luettelossa. Erittäin suurille luvuille tekijöiden löytäminen manuaalisesti voi olla aikaa vievää, mutta laskimemme käsittelee kaikki positiiviset kokonaisluvut välittömästi. Oletpa opiskelija, joka tekee kotitehtäviä, opettaja, joka luo esimerkkejä, tai kuka tahansa, jonka täytyy löytää yhteisiä tekijöitä nopeasti, työkalumme tarjoaa tarkat tulokset sekunneissa.",
+          "exampleHeading": "Yleiset Esimerkit",
+          "exampleText": "Esimerkki 1: Lukujen 12 ja 18 yhteiset tekijät ovat 1, 2, 3, 6. SYT = 6. Esimerkki 2: Lukujen 24 ja 36 yhteiset tekijät ovat 1, 2, 3, 4, 6, 12. SYT = 12. Esimerkki 3: Lukujen 15 ja 25 yhteiset tekijät ovat 1, 5. SYT = 5. Esimerkki 4: Lukujen 7 ja 13 yhteiset tekijät ovat 1. SYT = 1 (alkuluvuilla ei ole yhteisiä tekijöitä paitsi 1)."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on ero yhteisten tekijöiden ja SYT:n välillä?",
+              "answer": "Yhteiset tekijät ovat kaikki luvut, jotka jakavat tasaisesti kaksi tai useampia annettuja lukuja. SYT (Suurin Yhteinen Tekijä) on suurin luku kaikkien yhteisten tekijöiden joukossa. Esimerkiksi lukujen 12 ja 18 yhteiset tekijät ovat 1, 2, 3 ja 6, kun taas SYT on 6, koska se on suurin yhteinen tekijä."
+            },
+            {
+              "question": "Miten löydetään kahden luvun SYT?",
+              "answer": "SYT:n löytämiseksi luettele kaikkien lukujen tekijät ja tunnista sitten tekijät, jotka esiintyvät molemmissa luetteloissa. Suurin näistä yhteisistä tekijöistä on SYT. Vaihtoehtoisesti voit käyttää Eukleideen algoritmia (toistuva jakaminen ja jäännösten löytäminen) tai alkulukuhajotelma-menetelmää. Laskimemme löytää SYT:n välittömästi mille tahansa kahdelle positiiviselle kokonaisluvulle."
+            },
+            {
+              "question": "Mikä on kahden alkuluvun SYT?",
+              "answer": "Kahden eri alkuluvun SYT on aina 1. Alkuluvuilla on täsmälleen kaksi tekijää: 1 ja itse. Koska eri alkuluvut eivät jaa mitään tekijöitä paitsi 1, niiden SYT on 1. Esimerkiksi SYT(7, 13) = 1, SYT(11, 17) = 1."
+            },
+            {
+              "question": "Miksi SYT:n löytäminen on tärkeää?",
+              "answer": "SYT:tä käytetään monissa käytännön sovelluksissa: murtolukujen yksinkertaistaminen yksinkertaisimpaan muotoon (jaa osoittaja ja nimittäjä niiden SYT:llä), ongelmien ratkaiseminen, jotka sisältävät tasaisia ryhmiä tai jakoja, suurimman mittauksen löytäminen, joka sopii tasaisesti eri pituuksiin, suhteiden pienentäminen ja algebrallisten yhtälöiden ratkaiseminen. Se on peruskäsite lukuteoriassa ja aritmetiikassa."
+            },
+            {
+              "question": "Voiko kahden luvun SYT olla suurempi kuin toinen luvuista?",
+              "answer": "Ei. Kahden luvun SYT ei voi koskaan olla suurempi kuin pienempi kahdesta luvusta. Itse asiassa suurin mahdollinen SYT on pienempi luku itse, mikä tapahtuu, kun pienempi luku jakaa suuremman luvun tasaisesti. Esimerkiksi SYT(6, 18) = 6, koska 6 jakaa 18:n tasaisesti."
+            },
+            {
+              "question": "Mikä on 1:n ja minkä tahansa luvun SYT?",
+              "answer": "1:n ja minkä tahansa positiivisen kokonaisluvun SYT on aina 1. Tämä johtuu siitä, että 1 on ainoa 1:n tekijä, ja 1 on jokaisen positiivisen kokonaisluvun tekijä. Siksi 1 on ainoa yhteinen tekijä, mikä tekee siitä SYT:n. Esimerkiksi SYT(1, 100) = 1, SYT(1, 57) = 1."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "percentage": "Prosentti Laskin",
+          "percentageDesc": "Laske prosenttilukuja, prosenttimuutoksia ja prosenttisuhteita",
+          "percentageIncrease": "Prosenttilisäys Laskin",
+          "percentageIncreaseDesc": "Laske prosenttilisäys kahden luvun välillä",
+          "multiplication": "Kertolaskurin",
+          "multiplicationDesc": "Kerro lukuja nopeasti ja tarkasti yksityiskohtaisilla vaiheilla"
+        }
+      }
+    },
     "quadraticEquation": {
       "title": "Toisen Asteen Yhtälön Laskin",
       "description": "Ratkaise toisen asteen yhtälöt ja saat reaaliset tai kompleksiset juuret heti.",

@@ -45,6 +45,7 @@ export async function GET() {
     '/calculators/electric',
     '/calculators/biology',
     '/calculators/conversion',
+    '/calculators/conversion/kelvin-to-celsius',
     '/calculators/physics',
     '/calculators/real-life',
     '/calculators/real-life/reverse-text-generator',

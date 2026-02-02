@@ -1,6 +1,11 @@
 import { Calculator } from './types';
 
 export const conversionCalculators: Calculator[] = [
-  // Add conversion calculators here, e.g.:
-  // { id: 'length', titleKey: 'length.title', descKey: 'length.description', path: '/calculators/conversion/length', category: 'conversion' },
+  {
+    id: 'kelvin-to-celsius',
+    titleKey: 'kelvinToCelsius.title',
+    descKey: 'kelvinToCelsius.description',
+    path: '/calculators/conversion/kelvin-to-celsius',
+    category: 'conversion',
+  },
 ];

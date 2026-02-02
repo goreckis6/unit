@@ -7,6 +7,21 @@ import { FaqSchema } from '@/components/FaqSchema';
 import { SoftwareApplicationSchema } from '@/components/SoftwareApplicationSchema';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+async function getFaqItems(locale: string): Promise<FaqItem[]> {
+  try {
+    const messages = await import(`@/i18n/${locale}.json`);
+    return (messages.default?.calculators?.commonFactors?.seo?.faq?.items as FaqItem[]) || [];
+  } catch {
+    const messages = await import('@/i18n/en.json');
+    return (messages.default?.calculators?.commonFactors?.seo?.faq?.items as FaqItem[]) || [];
+  }
+}
+
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
@@ -47,10 +62,11 @@ export default async function CommonFactorsPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('calculators.commonFactors');
+  const faqItems = await getFaqItems(locale);
 
   return (
     <>
-      <FaqSchema namespace="calculators.commonFactors" />
+      <FaqSchema items={faqItems} />
       <SoftwareApplicationSchema
         name={t('title')}
         description={t('description')}

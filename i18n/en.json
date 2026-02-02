@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Complex Fractions Calculator",
+      "description": "Simplify complex fractions like (a/b)/(c/d) and get the result as a simplified fraction, mixed number, and decimal.",
+      "complexFractionLabel": "Complex fraction",
+      "numeratorFraction": "Numerator fraction (a/b)",
+      "denominatorFraction": "Denominator fraction (c/d)",
+      "a": "a (top numerator)",
+      "b": "b (top denominator)",
+      "c": "c (bottom numerator)",
+      "d": "d (bottom denominator)",
+      "inputHint": "Tip: You can enter integers, decimals, or simple fractions like 3/4. Denominators cannot be 0.",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "resultPlaceholder": "Enter values and click Calculate to see the simplified result.",
+      "simplifiedFraction": "Simplified fraction",
+      "mixedNumber": "Mixed number",
+      "decimalValue": "Decimal value",
+      "stepsHeading": "Simplification steps",
+      "errorTitle": "Input error",
+      "errorInvalid": "Please enter valid numbers or simple fractions (like 3/4). Scientific notation is not supported.",
+      "errorZeroDenominator": "A denominator cannot be zero (b and d must not be 0).",
+      "errorDivideByZero": "You can't divide by zero. The denominator fraction (c/d) must not be 0.",
+      "seo": {
+        "title": "Complex Fractions Calculator – Simplify (a/b)/(c/d) Step by Step",
+        "description": "Free complex fractions calculator to simplify compound fractions like (a/b)/(c/d). Get the answer as a simplified fraction, mixed number, and decimal with clear step-by-step conversion.",
+        "keywords": "complex fractions calculator, simplify complex fractions, compound fraction calculator, complex fraction simplifier, divide fractions, reciprocal, fraction to decimal, mixed number, math calculator",
+        "content": {
+          "heading": "How to Simplify Complex Fractions",
+          "paragraph1": "A complex fraction (also called a compound fraction) is a fraction where the numerator, the denominator, or both are themselves fractions. A common form is (a/b)/(c/d), which means “the fraction a/b divided by the fraction c/d”. Complex fractions appear in algebra, physics formulas, rates, and unit conversions, and they are often simplified to a single fraction for easier comparison and calculation.",
+          "paragraph2": "The key rule is: dividing by a fraction is the same as multiplying by its reciprocal. That means (a/b) ÷ (c/d) = (a/b) × (d/c). Once rewritten as multiplication, you multiply numerators together and denominators together: (a×d)/(b×c). This converts the complex fraction into one simple fraction.",
+          "paragraph3": "After you form the single fraction, you typically simplify it by dividing the numerator and denominator by their greatest common divisor (GCD). If the fraction is improper (numerator larger than denominator), you can also write it as a mixed number. For practical use, many people also want the decimal value, which is the numerator divided by the denominator.",
+          "paragraph4": "This calculator simplifies complex fractions instantly. You can enter integers, decimals, or simple fractions (like 0.75 or 3/4) for a, b, c, and d. The tool checks for invalid inputs and zero denominators, converts the expression using the reciprocal rule, simplifies the final fraction, and shows the result as a simplified fraction, a mixed number, and a decimal approximation.",
+          "exampleHeading": "Example: Simplify a Complex Fraction",
+          "exampleText": "Example: (1/2)/(3/4). Convert division to multiplication by the reciprocal: (1/2) ÷ (3/4) = (1/2) × (4/3). Multiply: (1×4)/(2×3) = 4/6. Simplify: 4/6 = 2/3. Decimal value: 2/3 ≈ 0.666666…. Another example: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is a complex fraction?",
+              "answer": "A complex fraction (compound fraction) is a fraction that contains one or more fractions in the numerator or denominator. For example, (a/b)/(c/d) is a complex fraction because both the top and bottom are fractions."
+            },
+            {
+              "question": "How do you simplify (a/b)/(c/d)?",
+              "answer": "Use the reciprocal rule: (a/b) ÷ (c/d) = (a/b) × (d/c). Then multiply across to get (a×d)/(b×c), and simplify the result by reducing the fraction."
+            },
+            {
+              "question": "When is a complex fraction undefined?",
+              "answer": "A complex fraction is undefined when any denominator is zero (b = 0 or d = 0), or when you divide by zero because the denominator fraction equals 0 (c = 0 in c/d)."
+            },
+            {
+              "question": "Can I enter decimals or fractions like 3/4?",
+              "answer": "Yes. This calculator supports integers, decimals, and simple fractions in each field. For example, you can enter 0.25 or 1/4."
+            },
+            {
+              "question": "Is this complex fractions calculator free to use?",
+              "answer": "Yes. The calculator is completely free to use and works directly in your browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "addingFractions": "Adding Fractions Calculator",
+          "addingFractionsDesc": "Add and simplify fractions step by step",
+          "subtractingFractions": "Subtracting Fractions Calculator",
+          "subtractingFractionsDesc": "Subtract fractions and simplify the result",
+          "multiplyingFractions": "Multiplying Fractions Calculator",
+          "multiplyingFractionsDesc": "Multiply fractions and reduce to simplest form"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Subtracting Fractions Calculator",
       "description": "Subtract two fractions and get the simplified result and decimal value. Supports simple and mixed number form.",

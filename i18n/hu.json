@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Összetett Törtek Számológép",
+      "description": "Egyszerűsítse az összetett törteket, például (a/b)/(c/d), és kapja meg az eredményt egyszerűsített tört, vegyes szám és tizedes alakban.",
+      "complexFractionLabel": "Összetett tört",
+      "numeratorFraction": "Felső tört (a/b)",
+      "denominatorFraction": "Alsó tört (c/d)",
+      "a": "a (felső számláló)",
+      "b": "b (felső nevező)",
+      "c": "c (alsó számláló)",
+      "d": "d (alsó nevező)",
+      "inputHint": "Tipp: megadhat egész számot, tizedes számot vagy egyszerű törtet (pl. 3/4). A nevező nem lehet 0.",
+      "calculate": "Számolás",
+      "reset": "Alaphelyzet",
+      "result": "Eredmény",
+      "resultPlaceholder": "Adja meg az értékeket, majd kattintson a Számolás gombra az egyszerűsített eredmény megjelenítéséhez.",
+      "simplifiedFraction": "Egyszerűsített tört",
+      "mixedNumber": "Vegyes szám",
+      "decimalValue": "Tizedes érték",
+      "stepsHeading": "Egyszerűsítés lépései",
+      "errorTitle": "Hibás megadás",
+      "errorInvalid": "Adjon meg érvényes számokat vagy egyszerű törteket (pl. 3/4). A tudományos jelölés nem támogatott.",
+      "errorZeroDenominator": "A nevező nem lehet nulla (b és d nem lehet 0).",
+      "errorDivideByZero": "Nullával nem lehet osztani. Az alsó tört (c/d) nem lehet 0.",
+      "seo": {
+        "title": "Összetett Törtek Számológép – (a/b)/(c/d) Egyszerűsítése Lépésről Lépésre",
+        "description": "Ingyenes összetett törtek számológép az (a/b)/(c/d) típusú összetett törtek egyszerűsítéséhez. Az eredmény egyszerűsített tört, vegyes szám és tizedes alakban, világos lépésekkel.",
+        "keywords": "összetett törtek számológép, összetett törtek egyszerűsítése, összetett tört, törtek osztása, reciprok, tört egyszerűsítése, tört tizedesre, vegyes szám",
+        "content": {
+          "heading": "Hogyan Egyszerűsítsünk Összetett Törteket",
+          "paragraph1": "Az összetett tört (más néven összetett/összevont tört) olyan tört, amelynek a számlálója, a nevezője vagy mindkettő maga is tört. Gyakori alakja: (a/b)/(c/d), vagyis „az a/b tört osztva a c/d törttel”. Az összetett törtek gyakran előfordulnak algebrában, fizikai képletekben, arányoknál és átváltásoknál, és általában egyetlen egyszerű tört alakra hozzuk őket.",
+          "paragraph2": "A kulcsszabály: törtel osztani ugyanaz, mint a reciprokával szorozni. Tehát (a/b) ÷ (c/d) = (a/b) × (d/c). Miután szorzásként írjuk fel, összeszorozzuk a számlálókat és a nevezőket: (a×d)/(b×c).",
+          "paragraph3": "Ezután a törtet leegyszerűsítjük a számláló és a nevező legnagyobb közös osztójával (LNKO) való osztással. Ha a tört szabálytalan, felírható vegyes számként is. A tizedes érték pedig a számláló osztva a nevezővel.",
+          "paragraph4": "Ez a számológép azonnal egyszerűsíti az összetett törteket. Az a, b, c és d mezőkbe egész számot, tizedes számot vagy egyszerű törtet (például 0.75 vagy 3/4) is megadhat. Az eszköz ellenőrzi a hibás bemeneteket és a nulla nevezőket, alkalmazza a reciprok szabályt, egyszerűsíti az eredményt, majd megjeleníti tört, vegyes szám és tizedes közelítés formájában.",
+          "exampleHeading": "Példa: Összetett Tört Egyszerűsítése",
+          "exampleText": "Példa: (1/2)/(3/4). Az osztást írja át szorzássá a reciprok segítségével: (1/2) ÷ (3/4) = (1/2) × (4/3). Szorzás: (1×4)/(2×3) = 4/6. Egyszerűsítés: 4/6 = 2/3. Tizedes alak: 2/3 ≈ 0.666666…. Másik példa: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mi az összetett tört?",
+              "answer": "Az összetett (komplex) tört olyan tört, amely a számlálóban vagy a nevezőben egy vagy több törtet tartalmaz. Például (a/b)/(c/d) összetett tört, mert felül és alul is törtek vannak."
+            },
+            {
+              "question": "Hogyan egyszerűsíthető (a/b)/(c/d)?",
+              "answer": "Használja a reciprok szabályt: (a/b) ÷ (c/d) = (a/b) × (d/c). Ezután (a×d)/(b×c) adódik, majd egyszerűsítse a törtet."
+            },
+            {
+              "question": "Mikor nincs értelmezve egy összetett tört?",
+              "answer": "Ha valamelyik nevező 0 (b = 0 vagy d = 0), vagy ha nullával osztunk, mert az alsó tört értéke 0 (c = 0 a c/d esetén)."
+            },
+            {
+              "question": "Megadhatok tizedeseket vagy olyan törteket, mint 3/4?",
+              "answer": "Igen. A számológép minden mezőben támogatja az egész számokat, tizedeseket és egyszerű törteket (például 0.25 vagy 1/4)."
+            },
+            {
+              "question": "Ingyenes ez a számológép?",
+              "answer": "Igen. Teljesen ingyenes, és közvetlenül a böngészőben működik."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Számológépek",
+          "addingFractions": "Törtek Összeadása Számológép",
+          "addingFractionsDesc": "Törtek összeadása és egyszerűsítés lépésről lépésre",
+          "subtractingFractions": "Törtek Kivonás Számológép",
+          "subtractingFractionsDesc": "Törtek kivonása és az eredmény egyszerűsítése",
+          "multiplyingFractions": "Törtek Szorzása Számológép",
+          "multiplyingFractionsDesc": "Törtek szorzása és egyszerűsítés a legegyszerűbb alakra"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Törtek Kivonás Számológép",
       "description": "Vonjon ki két törtet, és kapja meg az egyszerűsített eredményt és a tizedes értéket. Támogatja az egyszerű tört és vegyes szám formát.",

@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Bileşik Kesir Hesap Makinesi",
+      "description": "(a/b)/(c/d) gibi bileşik (karmaşık) kesirleri sadeleştirin ve sonucu sadeleştirilmiş kesir, karışık sayı ve ondalık değer olarak alın.",
+      "complexFractionLabel": "Bileşik kesir",
+      "numeratorFraction": "Üst kesir (a/b)",
+      "denominatorFraction": "Alt kesir (c/d)",
+      "a": "a (üst pay)",
+      "b": "b (üst payda)",
+      "c": "c (alt pay)",
+      "d": "d (alt payda)",
+      "inputHint": "İpucu: Tam sayı, ondalık sayı veya 3/4 gibi basit kesirler girebilirsiniz. Paydalar 0 olamaz.",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "resultPlaceholder": "Değerleri girin ve sadeleştirilmiş sonucu görmek için Hesapla'ya tıklayın.",
+      "simplifiedFraction": "Sadeleştirilmiş kesir",
+      "mixedNumber": "Karışık sayı",
+      "decimalValue": "Ondalık değer",
+      "stepsHeading": "Sadeleştirme adımları",
+      "errorTitle": "Girdi hatası",
+      "errorInvalid": "Lütfen geçerli sayılar veya basit kesirler (örn. 3/4) girin. Bilimsel gösterim desteklenmez.",
+      "errorZeroDenominator": "Payda sıfır olamaz (b ve d 0 olamaz).",
+      "errorDivideByZero": "Sıfıra bölünemez. Alt kesir (c/d) 0 olmamalıdır.",
+      "seo": {
+        "title": "Bileşik Kesir Hesap Makinesi – (a/b)/(c/d) Adım Adım Sadeleştirin",
+        "description": "(a/b)/(c/d) gibi bileşik kesirleri sadeleştirmek için ücretsiz bileşik kesir hesap makinesi. Sonucu sadeleştirilmiş kesir, karışık sayı ve ondalık olarak net adımlarla alın.",
+        "keywords": "bileşik kesir hesap makinesi, karmaşık kesir sadeleştirme, bileşik kesir, kesir bölme, tersini alma, kesir sadeleştirici, kesirden ondalığa, karışık sayı",
+        "content": {
+          "heading": "Bileşik Kesirler Nasıl Sadeleştirilir?",
+          "paragraph1": "Bileşik kesir (karmaşık kesir olarak da bilinir), payında, paydasında veya her ikisinde de kesir bulunan ifadelerdir. Yaygın bir biçim (a/b)/(c/d) olup “a/b kesrinin c/d kesrine bölünmesi” anlamına gelir. Bu tür kesirler cebirde, fizik formüllerinde, oranlarda ve dönüşümlerde sık görülür ve genellikle tek bir kesre indirgenir.",
+          "paragraph2": "Temel kural şudur: Bir kesre bölmek, onun tersini almakla çarpmaya eşittir. Yani (a/b) ÷ (c/d) = (a/b) × (d/c). Çarpma biçimine geçince payları birbiriyle, paydaları birbiriyle çarparsınız: (a×d)/(b×c). Böylece bileşik kesir basit bir kesre dönüşür.",
+          "paragraph3": "Sonra kesri sadeleştirmek için pay ve paydayı en büyük ortak bölen (EBOB) ile bölersiniz. Kesir bileşik (bileşik/yalın olmayan) ise karışık sayı olarak da yazılabilir. Ondalık değer ise payın paydaya bölünmesidir.",
+          "paragraph4": "Bu hesap makinesi bileşik kesirleri anında sadeleştirir. a, b, c ve d alanlarına tam sayı, ondalık veya 0.75 ya da 3/4 gibi basit kesirler girebilirsiniz. Araç geçersiz girişleri ve sıfır paydaları kontrol eder, ters alma kuralını uygular, sonucu sadeleştirir ve kesir, karışık sayı ve ondalık yaklaşık değer olarak gösterir.",
+          "exampleHeading": "Örnek: Bileşik Kesir Sadeleştirme",
+          "exampleText": "Örnek: (1/2)/(3/4). Bölmeyi tersini almakla çarpmaya çevirin: (1/2) ÷ (3/4) = (1/2) × (4/3). Çarpın: (1×4)/(2×3) = 4/6. Sadeleştirin: 4/6 = 2/3. Ondalık değer: 2/3 ≈ 0.666666…. Başka bir örnek: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "Bileşik kesir nedir?",
+              "answer": "Bileşik (karmaşık) kesir, payında veya paydasında bir ya da daha fazla kesir bulunan kesirdir. Örneğin (a/b)/(c/d) bileşiktir çünkü üst ve alt kısım kesirdir."
+            },
+            {
+              "question": "(a/b)/(c/d) nasıl sadeleştirilir?",
+              "answer": "Tersini alma kuralını kullanın: (a/b) ÷ (c/d) = (a/b) × (d/c). Sonra (a×d)/(b×c) elde edilir ve kesir sadeleştirilir."
+            },
+            {
+              "question": "Bileşik kesir ne zaman tanımsız olur?",
+              "answer": "Bir payda 0 ise (b = 0 veya d = 0) ya da alt kesir 0 olduğu için sıfıra bölme oluşursa (c = 0, c/d) bileşik kesir tanımsızdır."
+            },
+            {
+              "question": "Ondalık veya 3/4 gibi kesir girebilir miyim?",
+              "answer": "Evet. Her alanda tam sayı, ondalık ve basit kesir (ör. 0.25 veya 1/4) girebilirsiniz."
+            },
+            {
+              "question": "Bu hesap makinesi ücretsiz mi?",
+              "answer": "Evet. Tamamen ücretsizdir ve doğrudan tarayıcıda çalışır."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesap Makineleri",
+          "addingFractions": "Kesir Toplama Hesap Makinesi",
+          "addingFractionsDesc": "Kesirleri toplayın ve adım adım sadeleştirin",
+          "subtractingFractions": "Kesir Çıkarma Hesap Makinesi",
+          "subtractingFractionsDesc": "Kesirleri çıkarın ve sonucu sadeleştirin",
+          "multiplyingFractions": "Kesir Çarpma Hesap Makinesi",
+          "multiplyingFractionsDesc": "Kesirleri çarpın ve en sade hale getirin"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kesir Çıkarma Hesap Makinesi",
       "description": "İki kesri çıkarın ve sadeleştirilmiş sonucu ve ondalık değeri alın. Basit kesir ve karışık sayı formunu destekler.",

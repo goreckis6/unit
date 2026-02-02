@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Calculadora de Fracciones Complejas",
+      "description": "Simplifica fracciones complejas como (a/b)/(c/d) y obtén el resultado como fracción simplificada, número mixto y valor decimal.",
+      "complexFractionLabel": "Fracción compleja",
+      "numeratorFraction": "Fracción del numerador (a/b)",
+      "denominatorFraction": "Fracción del denominador (c/d)",
+      "a": "a (numerador superior)",
+      "b": "b (denominador superior)",
+      "c": "c (numerador inferior)",
+      "d": "d (denominador inferior)",
+      "inputHint": "Consejo: puedes introducir enteros, decimales o fracciones simples como 3/4. Los denominadores no pueden ser 0.",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "resultPlaceholder": "Introduce valores y pulsa Calcular para ver el resultado simplificado.",
+      "simplifiedFraction": "Fracción simplificada",
+      "mixedNumber": "Número mixto",
+      "decimalValue": "Valor decimal",
+      "stepsHeading": "Pasos de simplificación",
+      "errorTitle": "Error de entrada",
+      "errorInvalid": "Introduce números válidos o fracciones simples (por ejemplo, 3/4). La notación científica no está admitida.",
+      "errorZeroDenominator": "Un denominador no puede ser cero (b y d no deben ser 0).",
+      "errorDivideByZero": "No se puede dividir entre cero. La fracción del denominador (c/d) no debe ser 0.",
+      "seo": {
+        "title": "Calculadora de Fracciones Complejas – Simplifica (a/b)/(c/d) Paso a Paso",
+        "description": "Calculadora gratuita de fracciones complejas para simplificar fracciones compuestas como (a/b)/(c/d). Obtén la respuesta como fracción simplificada, número mixto y decimal con pasos claros.",
+        "keywords": "calculadora de fracciones complejas, simplificar fracciones complejas, fracción compuesta, dividir fracciones, recíproco, simplificador de fracciones, fracción a decimal, número mixto",
+        "content": {
+          "heading": "Cómo Simplificar Fracciones Complejas",
+          "paragraph1": "Una fracción compleja (también llamada fracción compuesta) es una fracción en la que el numerador, el denominador o ambos son a su vez fracciones. Una forma común es (a/b)/(c/d), que significa “la fracción a/b dividida entre la fracción c/d”. Las fracciones complejas aparecen en álgebra, fórmulas de física, tasas y conversiones, y suele ser útil convertirlas en una sola fracción.",
+          "paragraph2": "La regla clave es: dividir por una fracción es lo mismo que multiplicar por su recíproco. Por eso, (a/b) ÷ (c/d) = (a/b) × (d/c). Una vez reescrito como multiplicación, multiplica numeradores entre sí y denominadores entre sí: (a×d)/(b×c). Así la fracción compleja se convierte en una fracción simple.",
+          "paragraph3": "Después, normalmente se simplifica la fracción dividiendo el numerador y el denominador por su máximo común divisor (MCD). Si la fracción es impropia, también puedes expresarla como número mixto. Además, el valor decimal es simplemente numerador dividido entre denominador.",
+          "paragraph4": "Esta calculadora simplifica fracciones complejas al instante. Puedes introducir enteros, decimales o fracciones simples (como 0.75 o 3/4) para a, b, c y d. La herramienta valida entradas y denominadores cero, aplica la regla del recíproco, simplifica el resultado final y lo muestra como fracción, número mixto y aproximación decimal.",
+          "exampleHeading": "Ejemplo: Simplificar una Fracción Compleja",
+          "exampleText": "Ejemplo: (1/2)/(3/4). Convierte la división en multiplicación por el recíproco: (1/2) ÷ (3/4) = (1/2) × (4/3). Multiplica: (1×4)/(2×3) = 4/6. Simplifica: 4/6 = 2/3. Valor decimal: 2/3 ≈ 0.666666…. Otro ejemplo: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es una fracción compleja?",
+              "answer": "Una fracción compleja (fracción compuesta) es una fracción que contiene una o más fracciones en el numerador o en el denominador. Por ejemplo, (a/b)/(c/d) es compleja porque tanto arriba como abajo hay fracciones."
+            },
+            {
+              "question": "¿Cómo se simplifica (a/b)/(c/d)?",
+              "answer": "Usa la regla del recíproco: (a/b) ÷ (c/d) = (a/b) × (d/c). Luego multiplica para obtener (a×d)/(b×c) y simplifica la fracción."
+            },
+            {
+              "question": "¿Cuándo no está definida una fracción compleja?",
+              "answer": "No está definida cuando algún denominador es 0 (b = 0 o d = 0), o cuando se divide entre cero porque la fracción del denominador vale 0 (c = 0 en c/d)."
+            },
+            {
+              "question": "¿Puedo introducir decimales o fracciones como 3/4?",
+              "answer": "Sí. La calculadora admite enteros, decimales y fracciones simples en cada campo. Por ejemplo, 0.25 o 1/4."
+            },
+            {
+              "question": "¿Esta calculadora es gratuita?",
+              "answer": "Sí. Es completamente gratuita y funciona directamente en tu navegador."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "addingFractions": "Calculadora de Suma de Fracciones",
+          "addingFractionsDesc": "Suma fracciones y simplifica paso a paso",
+          "subtractingFractions": "Calculadora de Resta de Fracciones",
+          "subtractingFractionsDesc": "Resta fracciones y simplifica el resultado",
+          "multiplyingFractions": "Calculadora de Multiplicación de Fracciones",
+          "multiplyingFractionsDesc": "Multiplica fracciones y reduce a la forma más simple"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Calculadora de Resta de Fracciones",
       "description": "Resta dos fracciones y obtén el resultado simplificado y el valor decimal. Soporta fracción simple y número mixto.",

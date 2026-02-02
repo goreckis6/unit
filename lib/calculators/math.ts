@@ -16,6 +16,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'complex-fractions',
+    titleKey: 'complexFractions.title',
+    descKey: 'complexFractions.description',
+    path: '/calculators/math/complex-fractions',
+    category: 'math',
+  },
+  {
     id: 'adding-subtracting-integers',
     titleKey: 'addingSubtractingIntegers.title',
     descKey: 'addingSubtractingIntegers.description',

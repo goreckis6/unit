@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Calculateur de Fractions Complexes",
+      "description": "Simplifiez des fractions complexes comme (a/b)/(c/d) et obtenez le résultat sous forme de fraction simplifiée, nombre mixte et valeur décimale.",
+      "complexFractionLabel": "Fraction complexe",
+      "numeratorFraction": "Fraction au numérateur (a/b)",
+      "denominatorFraction": "Fraction au dénominateur (c/d)",
+      "a": "a (numérateur du haut)",
+      "b": "b (dénominateur du haut)",
+      "c": "c (numérateur du bas)",
+      "d": "d (dénominateur du bas)",
+      "inputHint": "Astuce : vous pouvez saisir des entiers, des décimaux ou des fractions simples comme 3/4. Les dénominateurs ne peuvent pas être 0.",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "resultPlaceholder": "Saisissez des valeurs et cliquez sur Calculer pour voir le résultat simplifié.",
+      "simplifiedFraction": "Fraction simplifiée",
+      "mixedNumber": "Nombre mixte",
+      "decimalValue": "Valeur décimale",
+      "stepsHeading": "Étapes de simplification",
+      "errorTitle": "Erreur de saisie",
+      "errorInvalid": "Veuillez saisir des nombres valides ou des fractions simples (ex. 3/4). La notation scientifique n'est pas prise en charge.",
+      "errorZeroDenominator": "Un dénominateur ne peut pas être zéro (b et d ne doivent pas être 0).",
+      "errorDivideByZero": "Impossible de diviser par zéro. La fraction au dénominateur (c/d) ne doit pas être 0.",
+      "seo": {
+        "title": "Calculateur de Fractions Complexes – Simplifier (a/b)/(c/d) Étape par Étape",
+        "description": "Calculateur gratuit de fractions complexes pour simplifier des fractions composées comme (a/b)/(c/d). Obtenez la réponse sous forme de fraction simplifiée, nombre mixte et décimal avec des étapes claires.",
+        "keywords": "calculateur fractions complexes, simplifier fraction complexe, fraction composée, diviser des fractions, inverse, simplifier une fraction, fraction en décimal, nombre mixte",
+        "content": {
+          "heading": "Comment Simplifier des Fractions Complexes",
+          "paragraph1": "Une fraction complexe (ou fraction composée) est une fraction dont le numérateur, le dénominateur, ou les deux, sont eux-mêmes des fractions. Une forme courante est (a/b)/(c/d), ce qui signifie « la fraction a/b divisée par la fraction c/d ». Les fractions complexes apparaissent en algèbre, dans des formules de physique, des taux et des conversions, et on les simplifie souvent en une seule fraction pour faciliter les calculs.",
+          "paragraph2": "La règle essentielle est : diviser par une fraction revient à multiplier par son inverse. Ainsi, (a/b) ÷ (c/d) = (a/b) × (d/c). Une fois écrit sous forme de multiplication, on multiplie les numérateurs entre eux et les dénominateurs entre eux : (a×d)/(b×c). Cela transforme la fraction complexe en une fraction simple.",
+          "paragraph3": "Ensuite, on simplifie généralement la fraction en divisant le numérateur et le dénominateur par leur plus grand commun diviseur (PGCD). Si la fraction est impropre, on peut aussi l'écrire sous forme de nombre mixte. Enfin, la valeur décimale correspond au numérateur divisé par le dénominateur.",
+          "paragraph4": "Ce calculateur simplifie instantanément les fractions complexes. Vous pouvez saisir des entiers, des décimaux ou des fractions simples (comme 0.75 ou 3/4) pour a, b, c et d. L’outil vérifie les saisies invalides et les dénominateurs nuls, applique la règle de l’inverse, simplifie le résultat et l’affiche en fraction, nombre mixte et approximation décimale.",
+          "exampleHeading": "Exemple : Simplifier une Fraction Complexe",
+          "exampleText": "Exemple : (1/2)/(3/4). Transformez la division en multiplication par l’inverse : (1/2) ÷ (3/4) = (1/2) × (4/3). Multipliez : (1×4)/(2×3) = 4/6. Simplifiez : 4/6 = 2/3. Valeur décimale : 2/3 ≈ 0.666666…. Autre exemple : (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Qu'est-ce qu'une fraction complexe ?",
+              "answer": "Une fraction complexe (fraction composée) est une fraction qui contient une ou plusieurs fractions dans le numérateur ou le dénominateur. Par exemple, (a/b)/(c/d) est une fraction complexe car le haut et le bas sont des fractions."
+            },
+            {
+              "question": "Comment simplifier (a/b)/(c/d) ?",
+              "answer": "Utilisez la règle de l’inverse : (a/b) ÷ (c/d) = (a/b) × (d/c). Puis multipliez pour obtenir (a×d)/(b×c), et simplifiez la fraction."
+            },
+            {
+              "question": "Quand une fraction complexe est-elle indéfinie ?",
+              "answer": "Elle est indéfinie si un dénominateur vaut 0 (b = 0 ou d = 0) ou si vous divisez par zéro parce que la fraction au dénominateur vaut 0 (c = 0 dans c/d)."
+            },
+            {
+              "question": "Puis-je saisir des décimaux ou des fractions comme 3/4 ?",
+              "answer": "Oui. Le calculateur accepte des entiers, des décimaux et des fractions simples dans chaque champ. Par exemple, 0.25 ou 1/4."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit ?",
+              "answer": "Oui. Il est entièrement gratuit et fonctionne directement dans votre navigateur."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Connexes",
+          "addingFractions": "Calculateur d'Addition de Fractions",
+          "addingFractionsDesc": "Additionner des fractions et simplifier étape par étape",
+          "subtractingFractions": "Calculateur de Soustraction de Fractions",
+          "subtractingFractionsDesc": "Soustraire des fractions et simplifier le résultat",
+          "multiplyingFractions": "Calculateur de Multiplication de Fractions",
+          "multiplyingFractionsDesc": "Multiplier des fractions et réduire au plus simple"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Calculateur de Soustraction de Fractions",
       "description": "Soustraire deux fractions et obtenir le résultat simplifié et la valeur décimale. Prend en charge la fraction simple et le nombre mixte.",

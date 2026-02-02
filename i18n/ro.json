@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Calculator de Fracții Complexe",
+      "description": "Simplifică fracții complexe precum (a/b)/(c/d) și obține rezultatul ca fracție simplificată, număr mixt și valoare zecimală.",
+      "complexFractionLabel": "Fracție complexă",
+      "numeratorFraction": "Fracția din numărător (a/b)",
+      "denominatorFraction": "Fracția din numitor (c/d)",
+      "a": "a (numărător sus)",
+      "b": "b (numitor sus)",
+      "c": "c (numărător jos)",
+      "d": "d (numitor jos)",
+      "inputHint": "Sfat: poți introduce numere întregi, zecimale sau fracții simple precum 3/4. Numitorii nu pot fi 0.",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "resultPlaceholder": "Introdu valorile și apasă Calculează pentru a vedea rezultatul simplificat.",
+      "simplifiedFraction": "Fracție simplificată",
+      "mixedNumber": "Număr mixt",
+      "decimalValue": "Valoare zecimală",
+      "stepsHeading": "Pașii de simplificare",
+      "errorTitle": "Eroare de introducere",
+      "errorInvalid": "Te rugăm să introduci numere valide sau fracții simple (de ex. 3/4). Notația științifică nu este acceptată.",
+      "errorZeroDenominator": "Un numitor nu poate fi zero (b și d nu trebuie să fie 0).",
+      "errorDivideByZero": "Nu poți împărți la zero. Fracția din numitor (c/d) nu trebuie să fie 0.",
+      "seo": {
+        "title": "Calculator de Fracții Complexe – Simplifică (a/b)/(c/d) Pas cu Pas",
+        "description": "Calculator gratuit de fracții complexe pentru simplificarea fracțiilor compuse precum (a/b)/(c/d). Obține răspunsul ca fracție simplificată, număr mixt și zecimal cu pași clari.",
+        "keywords": "calculator fracții complexe, simplificare fracții complexe, fracție compusă, împărțire fracții, reciprocul, simplificator de fracții, fracție în zecimal, număr mixt",
+        "content": {
+          "heading": "Cum să Simplifici Fracțiile Complexe",
+          "paragraph1": "O fracție complexă (numită și fracție compusă) este o fracție în care numărătorul, numitorul sau ambele sunt la rândul lor fracții. O formă comună este (a/b)/(c/d), adică „fracția a/b împărțită la fracția c/d”. Fracțiile complexe apar în algebră, formule de fizică, rate și conversii, și de obicei sunt simplificate la o singură fracție.",
+          "paragraph2": "Regula cheie este: împărțirea la o fracție este același lucru cu înmulțirea cu reciprocul ei. Deci (a/b) ÷ (c/d) = (a/b) × (d/c). După rescriere ca înmulțire, înmulțești numărătorii între ei și numitorii între ei: (a×d)/(b×c).",
+          "paragraph3": "Apoi simplifici fracția împărțind numărătorul și numitorul la cel mai mare divizor comun (CMC). Dacă fracția este improprie, o poți scrie și ca număr mixt. Valoarea zecimală este numărătorul împărțit la numitor.",
+          "paragraph4": "Acest calculator simplifică instant fracțiile complexe. Poți introduce numere întregi, zecimale sau fracții simple (cum ar fi 0.75 sau 3/4) pentru a, b, c și d. Instrumentul verifică intrările invalide și numitorii zero, aplică regula reciprocă, simplifică rezultatul și îl afișează ca fracție, număr mixt și aproximare zecimală.",
+          "exampleHeading": "Exemplu: Simplifică o Fracție Complexă",
+          "exampleText": "Exemplu: (1/2)/(3/4). Transformă împărțirea în înmulțire cu reciprocul: (1/2) ÷ (3/4) = (1/2) × (4/3). Înmulțește: (1×4)/(2×3) = 4/6. Simplifică: 4/6 = 2/3. Valoare zecimală: 2/3 ≈ 0.666666…. Alt exemplu: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Ce este o fracție complexă?",
+              "answer": "O fracție complexă (fracție compusă) este o fracție care conține una sau mai multe fracții în numărător sau numitor. De exemplu, (a/b)/(c/d) este o fracție complexă deoarece atât sus cât și jos sunt fracții."
+            },
+            {
+              "question": "Cum simplific (a/b)/(c/d)?",
+              "answer": "Folosește regula reciprocă: (a/b) ÷ (c/d) = (a/b) × (d/c). Apoi obții (a×d)/(b×c) și simplifici fracția."
+            },
+            {
+              "question": "Când este nedefinită o fracție complexă?",
+              "answer": "Este nedefinită dacă un numitor este 0 (b = 0 sau d = 0) sau dacă împarți la zero deoarece fracția din numitor este 0 (c = 0 în c/d)."
+            },
+            {
+              "question": "Pot introduce zecimale sau fracții precum 3/4?",
+              "answer": "Da. Calculatorul acceptă numere întregi, zecimale și fracții simple în fiecare câmp, de exemplu 0.25 sau 1/4."
+            },
+            {
+              "question": "Este acest calculator gratuit?",
+              "answer": "Da. Este complet gratuit și funcționează direct în browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Asemănătoare",
+          "addingFractions": "Calculator Adunare Fracții",
+          "addingFractionsDesc": "Adună fracții și simplifică pas cu pas",
+          "subtractingFractions": "Calculator Scădere Fracții",
+          "subtractingFractionsDesc": "Scade fracții și simplifică rezultatul",
+          "multiplyingFractions": "Calculator Înmulțire Fracții",
+          "multiplyingFractionsDesc": "Înmulțește fracții și redu la forma cea mai simplă"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Calculator Scădere Fracții",
       "description": "Scade două fracții și obține rezultatul simplificat și valoarea zecimală. Suportă fracție simplă și număr mixt.",

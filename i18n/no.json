@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Kalkulator for Komplekse Brøker",
+      "description": "Forenkle komplekse brøker som (a/b)/(c/d) og få resultatet som forkortet brøk, blandet tall og desimalverdi.",
+      "complexFractionLabel": "Kompleks brøk",
+      "numeratorFraction": "Øvre brøk (a/b)",
+      "denominatorFraction": "Nedre brøk (c/d)",
+      "a": "a (øverste teller)",
+      "b": "b (øverste nevner)",
+      "c": "c (nederste teller)",
+      "d": "d (nederste nevner)",
+      "inputHint": "Tips: Du kan skrive inn heltall, desimaler eller enkle brøker som 3/4. Nevnere kan ikke være 0.",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "resultPlaceholder": "Skriv inn verdier og klikk Beregn for å se det forenklede resultatet.",
+      "simplifiedFraction": "Forkortet brøk",
+      "mixedNumber": "Blandet tall",
+      "decimalValue": "Desimalverdi",
+      "stepsHeading": "Forenklingssteg",
+      "errorTitle": "Inndatafeil",
+      "errorInvalid": "Skriv inn gyldige tall eller enkle brøker (f.eks. 3/4). Vitenskapelig notasjon støttes ikke.",
+      "errorZeroDenominator": "En nevner kan ikke være null (b og d kan ikke være 0).",
+      "errorDivideByZero": "Du kan ikke dele på null. Den nedre brøken (c/d) kan ikke være 0.",
+      "seo": {
+        "title": "Kalkulator for Komplekse Brøker – Forenkle (a/b)/(c/d) Steg for Steg",
+        "description": "Gratis kalkulator for komplekse brøker som forenkler sammensatte brøker som (a/b)/(c/d). Få svaret som forkortet brøk, blandet tall og desimal med tydelige steg.",
+        "keywords": "komplekse brøker kalkulator, forenkle komplekse brøker, sammensatt brøk, dele brøker, resiprok, forkorte brøk, brøk til desimal, blandet tall",
+        "content": {
+          "heading": "Slik Forenkler du Komplekse Brøker",
+          "paragraph1": "En kompleks brøk (også kalt sammensatt brøk) er en brøk der telleren, nevneren eller begge deler selv er brøker. En vanlig form er (a/b)/(c/d), som betyr «brøken a/b delt på brøken c/d». Slike uttrykk brukes ofte i algebra, fysikkformler, rater og konverteringer, og det er vanlig å skrive dem om til én enkel brøk.",
+          "paragraph2": "Hovedregelen er: å dele på en brøk er det samme som å multiplisere med den resiproke. Derfor er (a/b) ÷ (c/d) = (a/b) × (d/c). Når du har omskrevet til multiplikasjon, multipliserer du tellere sammen og nevnere sammen: (a×d)/(b×c).",
+          "paragraph3": "Deretter forkorter du brøken ved å dele teller og nevner på deres største felles divisor (SFD). Hvis brøken er uekte, kan den også skrives som et blandet tall. Desimalverdien er bare teller delt på nevner.",
+          "paragraph4": "Denne kalkulatoren forenkler komplekse brøker umiddelbart. Du kan skrive inn heltall, desimaler eller enkle brøker (som 0.75 eller 3/4) for a, b, c og d. Verktøyet sjekker ugyldige inndata og null-nevnere, bruker resiprokregelen, forkorter sluttresultatet og viser det som brøk, blandet tall og desimaltilnærming.",
+          "exampleHeading": "Eksempel: Forenkle en Kompleks Brøk",
+          "exampleText": "Eksempel: (1/2)/(3/4). Skriv om deling til multiplikasjon med resiprok: (1/2) ÷ (3/4) = (1/2) × (4/3). Multipliser: (1×4)/(2×3) = 4/6. Forkort: 4/6 = 2/3. Desimal: 2/3 ≈ 0.666666…. Et annet eksempel: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Ofte Stilte Spørsmål",
+          "items": [
+            {
+              "question": "Hva er en kompleks brøk?",
+              "answer": "En kompleks (sammensatt) brøk er en brøk som inneholder en eller flere brøker i telleren eller nevneren. For eksempel er (a/b)/(c/d) kompleks fordi både øverst og nederst er brøker."
+            },
+            {
+              "question": "Hvordan forenkler man (a/b)/(c/d)?",
+              "answer": "Bruk resiprokregelen: (a/b) ÷ (c/d) = (a/b) × (d/c). Da får du (a×d)/(b×c), og så forkorter du brøken."
+            },
+            {
+              "question": "Når er en kompleks brøk udefinert?",
+              "answer": "Den er udefinert når en nevner er 0 (b = 0 eller d = 0), eller når du deler på 0 fordi den nedre brøken er 0 (c = 0 i c/d)."
+            },
+            {
+              "question": "Kan jeg skrive inn desimaler eller brøker som 3/4?",
+              "answer": "Ja. Kalkulatoren støtter heltall, desimaler og enkle brøker i hvert felt, for eksempel 0.25 eller 1/4."
+            },
+            {
+              "question": "Er denne kalkulatoren gratis?",
+              "answer": "Ja. Den er helt gratis og fungerer direkte i nettleseren."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte Kalkulatorer",
+          "addingFractions": "Brøkaddisjonskalkulator",
+          "addingFractionsDesc": "Legg sammen brøker og forkort steg for steg",
+          "subtractingFractions": "Brøksubtraksjonskalkulator",
+          "subtractingFractionsDesc": "Trekk fra brøker og forenkle resultatet",
+          "multiplyingFractions": "Brøkmultiplikasjonskalkulator",
+          "multiplyingFractionsDesc": "Multipliser brøker og forkort til enkleste form"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Brøksubtraksjonskalkulator",
       "description": "Trekk fra to brøker og få det forkortede resultatet og desimalverdien. Støtter enkel brøk og blandet tall.",

@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Monimutkaisten Murtolukujen Laskin",
+      "description": "Sievennä monimutkaiset murtoluvut kuten (a/b)/(c/d) ja saat tuloksen sievennettynä murtolukuna, sekalukuna ja desimaaliarvona.",
+      "complexFractionLabel": "Monimutkainen murtoluku",
+      "numeratorFraction": "Ylempi murtoluku (a/b)",
+      "denominatorFraction": "Alempi murtoluku (c/d)",
+      "a": "a (yläosan osoittaja)",
+      "b": "b (yläosan nimittäjä)",
+      "c": "c (alaosan osoittaja)",
+      "d": "d (alaosan nimittäjä)",
+      "inputHint": "Vinkki: voit syöttää kokonaislukuja, desimaalilukuja tai yksinkertaisia murtolukuja kuten 3/4. Nimittäjä ei voi olla 0.",
+      "calculate": "Laske",
+      "reset": "Tyhjennä",
+      "result": "Tulos",
+      "resultPlaceholder": "Syötä arvot ja paina Laske nähdäksesi sievennetyn tuloksen.",
+      "simplifiedFraction": "Sievennetty murtoluku",
+      "mixedNumber": "Sekaluku",
+      "decimalValue": "Desimaaliarvo",
+      "stepsHeading": "Sievennyksen vaiheet",
+      "errorTitle": "Syötevirhe",
+      "errorInvalid": "Syötä kelvollisia lukuja tai yksinkertaisia murtolukuja (esim. 3/4). Tieteellistä merkintää ei tueta.",
+      "errorZeroDenominator": "Nimittäjä ei voi olla nolla (b ja d eivät saa olla 0).",
+      "errorDivideByZero": "Nollalla ei voi jakaa. Alempi murtoluku (c/d) ei saa olla 0.",
+      "seo": {
+        "title": "Monimutkaisten Murtolukujen Laskin – Sievennä (a/b)/(c/d) Vaihe Vaiheelta",
+        "description": "Ilmainen monimutkaisten murtolukujen laskin, jolla sievennät yhdistetyt murtoluvut kuten (a/b)/(c/d). Saat vastauksen sievennettynä murtolukuna, sekalukuna ja desimaalina selkeillä vaiheilla.",
+        "keywords": "monimutkaiset murtoluvut laskin, sievennä monimutkaiset murtoluvut, yhdistetty murtoluku, murtolukujen jako, käänteisluku, murtoluvun sievennys, murtoluku desimaaliksi, sekaluku",
+        "content": {
+          "heading": "Miten Sievennät Monimutkaiset Murtoluvut",
+          "paragraph1": "Monimutkainen murtoluku (myös yhdistetty murtoluku) on murtoluku, jonka osoittaja, nimittäjä tai molemmat ovat itsekin murtolukuja. Yleinen muoto on (a/b)/(c/d), eli “murtoluku a/b jaettuna murtoluvulla c/d”. Tällaisia lausekkeita esiintyy algebrassa, fysiikan kaavoissa, suhteissa ja muunnoksissa, ja ne sievennetään usein yhdeksi murtoluvuksi.",
+          "paragraph2": "Tärkein sääntö on: jakaminen murtoluvulla on sama kuin kertominen sen käänteisluvulla. Siksi (a/b) ÷ (c/d) = (a/b) × (d/c). Kun lauseke on kirjoitettu kertolaskuksi, kerrot osoittajat keskenään ja nimittäjät keskenään: (a×d)/(b×c).",
+          "paragraph3": "Sen jälkeen murtoluku sievennetään yleensä jakamalla osoittaja ja nimittäjä niiden suurimmalla yhteisellä tekijällä (SYT). Jos murtoluku on epäsäännöllinen (osoittaja suurempi kuin nimittäjä), sen voi kirjoittaa myös sekalukuna. Desimaaliarvo on yksinkertaisesti osoittaja jaettuna nimittäjällä.",
+          "paragraph4": "Tämä laskin sieventää monimutkaiset murtoluvut välittömästi. Voit syöttää kokonaislukuja, desimaalilukuja tai yksinkertaisia murtolukuja (kuten 0.75 tai 3/4) arvoille a, b, c ja d. Työkalu tarkistaa virheelliset syötteet ja nollanimittäjät, käyttää käänteisluku-sääntöä, sieventää lopputuloksen ja näyttää sen murtolukuna, sekalukuna ja desimaalilähteenä.",
+          "exampleHeading": "Esimerkki: Monimutkaisen Murtoluvun Sievennys",
+          "exampleText": "Esimerkki: (1/2)/(3/4). Muuta jako kertolaskuksi käänteisluvulla: (1/2) ÷ (3/4) = (1/2) × (4/3). Kerro: (1×4)/(2×3) = 4/6. Sievennä: 4/6 = 2/3. Desimaali: 2/3 ≈ 0.666666…. Toinen esimerkki: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on monimutkainen murtoluku?",
+              "answer": "Monimutkainen (yhdistetty) murtoluku on murtoluku, joka sisältää yhden tai useamman murtoluvun osoittajassa tai nimittäjässä. Esimerkiksi (a/b)/(c/d) on monimutkainen, koska sekä ylä- että alaosa ovat murtolukuja."
+            },
+            {
+              "question": "Miten sievennetään (a/b)/(c/d)?",
+              "answer": "Käytä käänteisluku-sääntöä: (a/b) ÷ (c/d) = (a/b) × (d/c). Tällöin saat (a×d)/(b×c), jonka jälkeen sievennät murtoluvun."
+            },
+            {
+              "question": "Milloin monimutkainen murtoluku ei ole määritelty?",
+              "answer": "Se ei ole määritelty, jos jokin nimittäjä on 0 (b = 0 tai d = 0) tai jos jaetaan nollalla, koska alempi murtoluku on 0 (c = 0 lausekkeessa c/d)."
+            },
+            {
+              "question": "Voinko syöttää desimaaleja tai murtolukuja kuten 3/4?",
+              "answer": "Kyllä. Laskin tukee kokonaislukuja, desimaalilukuja ja yksinkertaisia murtolukuja jokaisessa kentässä, esimerkiksi 0.25 tai 1/4."
+            },
+            {
+              "question": "Onko tämä laskin ilmainen?",
+              "answer": "Kyllä. Laskin on täysin ilmainen ja toimii suoraan selaimessa."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Aiheeseen Liittyvät Laskimet",
+          "addingFractions": "Murtolukujen Yhteenlaskulaskin",
+          "addingFractionsDesc": "Laske murtoluvut yhteen ja sievennä vaihe vaiheelta",
+          "subtractingFractions": "Murtolukujen Vähennyslaskin",
+          "subtractingFractionsDesc": "Vähennä murtoluvut ja sievennä tulos",
+          "multiplyingFractions": "Murtolukujen Kertolaskulaskin",
+          "multiplyingFractionsDesc": "Kerro murtoluvut ja sievennä yksinkertaisimpaan muotoon"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Murtolukujen Vähennyslaskin",
       "description": "Vähennä kaksi murtolukua ja saat sievennetyn tuloksen ja desimaaliarvon. Tukee yksinkertaista murtolukua ja sekalukua.",

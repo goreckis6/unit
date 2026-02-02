@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Kalkulačka Komplexných Zlomkov",
+      "description": "Zjednodušte komplexné zlomky ako (a/b)/(c/d) a získajte výsledok ako zjednodušený zlomok, zmiešané číslo a desatinnú hodnotu.",
+      "complexFractionLabel": "Komplexný zlomok",
+      "numeratorFraction": "Zlomok v čitateli (a/b)",
+      "denominatorFraction": "Zlomok v menovateli (c/d)",
+      "a": "a (horný čitateľ)",
+      "b": "b (horný menovateľ)",
+      "c": "c (dolný čitateľ)",
+      "d": "d (dolný menovateľ)",
+      "inputHint": "Tip: Môžete zadať celé čísla, desatinné čísla alebo jednoduché zlomky ako 3/4. Menovatele nemôžu byť 0.",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "resultPlaceholder": "Zadajte hodnoty a kliknite na Vypočítať, aby sa zobrazil zjednodušený výsledok.",
+      "simplifiedFraction": "Zjednodušený zlomok",
+      "mixedNumber": "Zmiešané číslo",
+      "decimalValue": "Desatinná hodnota",
+      "stepsHeading": "Kroky zjednodušenia",
+      "errorTitle": "Chyba vstupu",
+      "errorInvalid": "Zadajte platné čísla alebo jednoduché zlomky (napr. 3/4). Vedecký zápis nie je podporovaný.",
+      "errorZeroDenominator": "Menovateľ nemôže byť nula (b a d nesmú byť 0).",
+      "errorDivideByZero": "Nedá sa deliť nulou. Zlomok v menovateli (c/d) nesmie byť 0.",
+      "seo": {
+        "title": "Kalkulačka Komplexných Zlomkov – Zjednodušenie (a/b)/(c/d) Krok za Krokom",
+        "description": "Bezplatná kalkulačka komplexných zlomkov na zjednodušenie zložených zlomkov ako (a/b)/(c/d). Získajte výsledok ako zjednodušený zlomok, zmiešané číslo a desatinné číslo s jasnými krokmi.",
+        "keywords": "kalkulačka komplexných zlomkov, zjednodušenie komplexných zlomkov, zložený zlomok, delenie zlomkov, prevrátená hodnota, zjednodušenie zlomku, zlomok na desatinné, zmiešané číslo",
+        "content": {
+          "heading": "Ako Zjednodušiť Komplexné Zlomky",
+          "paragraph1": "Komplexný zlomok (nazývaný aj zložený zlomok) je zlomok, ktorého čitateľ, menovateľ alebo oboje sú samy o sebe zlomky. Bežný tvar je (a/b)/(c/d), čo znamená „zlomok a/b delený zlomkom c/d“. Komplexné zlomky sa objavujú v algebre, fyzikálnych vzorcoch, pomeroch a prevodoch a často sa zjednodušujú na jeden jednoduchý zlomok.",
+          "paragraph2": "Kľúčové pravidlo je: delenie zlomkom je to isté ako násobenie jeho prevrátenou hodnotou. Teda (a/b) ÷ (c/d) = (a/b) × (d/c). Po prepísaní na násobenie vynásobíte čitatele medzi sebou a menovatele medzi sebou: (a×d)/(b×c).",
+          "paragraph3": "Potom výsledný zlomok zjednodušíte vydelením čitateľa aj menovateľa ich najväčším spoločným deliteľom (NSD). Ak ide o nepravý zlomok, môžete ho zapísať aj ako zmiešané číslo. Desatinná hodnota je jednoducho podiel čitateľa a menovateľa.",
+          "paragraph4": "Táto kalkulačka zjednoduší komplexné zlomky okamžite. Do polí a, b, c a d môžete zadať celé čísla, desatinné čísla alebo jednoduché zlomky (napr. 0.75 alebo 3/4). Nástroj kontroluje neplatné vstupy a nulové menovatele, použije pravidlo s prevrátenou hodnotou, zjednoduší výsledok a zobrazí ho ako zlomok, zmiešané číslo a desatinné približenie.",
+          "exampleHeading": "Príklad: Zjednodušenie Komplexného Zlomku",
+          "exampleText": "Príklad: (1/2)/(3/4). Preveďte delenie na násobenie prevrátenou hodnotou: (1/2) ÷ (3/4) = (1/2) × (4/3). Vynásobte: (1×4)/(2×3) = 4/6. Zjednodušte: 4/6 = 2/3. Desatinná hodnota: 2/3 ≈ 0.666666…. Ďalší príklad: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Čo je komplexný zlomok?",
+              "answer": "Komplexný (zložený) zlomok je zlomok, ktorý obsahuje jeden alebo viac zlomkov v čitateli alebo menovateli. Napríklad (a/b)/(c/d) je komplexný zlomok, pretože horná aj dolná časť sú zlomky."
+            },
+            {
+              "question": "Ako zjednodušiť (a/b)/(c/d)?",
+              "answer": "Použite pravidlo s prevrátenou hodnotou: (a/b) ÷ (c/d) = (a/b) × (d/c). Potom dostanete (a×d)/(b×c) a zlomok zjednodušíte."
+            },
+            {
+              "question": "Kedy je komplexný zlomok nedefinovaný?",
+              "answer": "Je nedefinovaný, ak je niektorý menovateľ nulový (b = 0 alebo d = 0) alebo ak delíte nulou, pretože zlomok v menovateli je 0 (c = 0 vo výraze c/d)."
+            },
+            {
+              "question": "Môžem zadať desatinné čísla alebo zlomky ako 3/4?",
+              "answer": "Áno. Kalkulačka podporuje celé čísla, desatinné čísla aj jednoduché zlomky v každom poli, napríklad 0.25 alebo 1/4."
+            },
+            {
+              "question": "Je táto kalkulačka zadarmo?",
+              "answer": "Áno. Kalkulačka je úplne zadarmo a funguje priamo v prehliadači."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace Kalkulačky",
+          "addingFractions": "Kalkulačka Sčítania Zlomkov",
+          "addingFractionsDesc": "Sčítajte zlomky a zjednodušte výsledok krok za krokom",
+          "subtractingFractions": "Kalkulačka Odčítania Zlomkov",
+          "subtractingFractionsDesc": "Odčítajte zlomky a zjednodušte výsledok",
+          "multiplyingFractions": "Kalkulačka Násobenia Zlomkov",
+          "multiplyingFractionsDesc": "Vynásobte zlomky a zjednodušte na najjednoduchší tvar"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kalkulačka Odčítania Zlomkov",
       "description": "Odčítajte dva zlomky a získajte zjednodušený výsledok a desatinnú hodnotu. Podporuje jednoduchý zlomok a zmiešané číslo.",

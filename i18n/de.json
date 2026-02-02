@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Komplexe-Brüche-Rechner",
+      "description": "Vereinfache komplexe Brüche wie (a/b)/(c/d) und erhalte das Ergebnis als gekürzten Bruch, gemischte Zahl und Dezimalzahl.",
+      "complexFractionLabel": "Komplexer Bruch",
+      "numeratorFraction": "Zählerbruch (a/b)",
+      "denominatorFraction": "Nennerbruch (c/d)",
+      "a": "a (oberer Zähler)",
+      "b": "b (oberer Nenner)",
+      "c": "c (unterer Zähler)",
+      "d": "d (unterer Nenner)",
+      "inputHint": "Tipp: Du kannst ganze Zahlen, Dezimalzahlen oder einfache Brüche wie 3/4 eingeben. Nenner dürfen nicht 0 sein.",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "resultPlaceholder": "Werte eingeben und auf „Berechnen“ klicken, um das vereinfachte Ergebnis zu sehen.",
+      "simplifiedFraction": "Gekürzter Bruch",
+      "mixedNumber": "Gemischte Zahl",
+      "decimalValue": "Dezimalwert",
+      "stepsHeading": "Vereinfachungsschritte",
+      "errorTitle": "Eingabefehler",
+      "errorInvalid": "Bitte gib gültige Zahlen oder einfache Brüche (z. B. 3/4) ein. Wissenschaftliche Schreibweise wird nicht unterstützt.",
+      "errorZeroDenominator": "Ein Nenner darf nicht 0 sein (b und d dürfen nicht 0 sein).",
+      "errorDivideByZero": "Division durch 0 ist nicht möglich. Der Nennerbruch (c/d) darf nicht 0 sein.",
+      "seo": {
+        "title": "Komplexe-Brüche-Rechner – (a/b)/(c/d) Schritt für Schritt vereinfachen",
+        "description": "Kostenloser Komplexe-Brüche-Rechner zum Vereinfachen von zusammengesetzten Brüchen wie (a/b)/(c/d). Ergebnis als gekürzter Bruch, gemischte Zahl und Dezimalwert mit klaren Schritten.",
+        "keywords": "komplexe brüche rechner, komplexe brüche vereinfachen, zusammengesetzter bruch, brüche dividieren, kehrwert, bruch kürzen, bruch in dezimalzahl, gemischte zahl",
+        "content": {
+          "heading": "So vereinfachst du komplexe Brüche",
+          "paragraph1": "Ein komplexer Bruch (auch zusammengesetzter Bruch) ist ein Bruch, bei dem Zähler, Nenner oder beides selbst wieder Brüche sind. Eine typische Form ist (a/b)/(c/d) – also „der Bruch a/b geteilt durch den Bruch c/d“. Solche Ausdrücke kommen häufig in Algebra, Physikformeln, Raten und Umrechnungen vor und werden meist zu einem einzigen Bruch vereinfacht.",
+          "paragraph2": "Die wichtigste Regel lautet: Durch einen Bruch zu teilen ist dasselbe wie mit seinem Kehrwert zu multiplizieren. Daher gilt (a/b) ÷ (c/d) = (a/b) × (d/c). Danach multiplizierst du Zähler mit Zähler und Nenner mit Nenner: (a×d)/(b×c). So wird aus dem komplexen Bruch ein einfacher Bruch.",
+          "paragraph3": "Anschließend kürzt du den Bruch, indem du Zähler und Nenner durch ihren größten gemeinsamen Teiler (ggT) teilst. Ist der Bruch unecht (Zähler größer als Nenner), kannst du ihn auch als gemischte Zahl schreiben. Oft ist zusätzlich der Dezimalwert hilfreich – das ist einfach Zähler ÷ Nenner.",
+          "paragraph4": "Dieser Rechner vereinfacht komplexe Brüche sofort. Du kannst ganze Zahlen, Dezimalzahlen oder einfache Brüche (z. B. 0.75 oder 3/4) für a, b, c und d eingeben. Das Tool prüft ungültige Eingaben und Nullnenner, wendet die Kehrwert-Regel an, kürzt das Ergebnis und zeigt es als Bruch, gemischte Zahl und Dezimalnäherung an.",
+          "exampleHeading": "Beispiel: Komplexen Bruch vereinfachen",
+          "exampleText": "Beispiel: (1/2)/(3/4). Division in Multiplikation mit dem Kehrwert umschreiben: (1/2) ÷ (3/4) = (1/2) × (4/3). Multiplizieren: (1×4)/(2×3) = 4/6. Kürzen: 4/6 = 2/3. Dezimalwert: 2/3 ≈ 0.666666…. Weiteres Beispiel: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist ein komplexer Bruch?",
+              "answer": "Ein komplexer (zusammengesetzter) Bruch ist ein Bruch, der einen oder mehrere Brüche im Zähler oder Nenner enthält. Zum Beispiel ist (a/b)/(c/d) komplex, weil sowohl oben als auch unten Brüche stehen."
+            },
+            {
+              "question": "Wie vereinfacht man (a/b)/(c/d)?",
+              "answer": "Nutze die Kehrwert-Regel: (a/b) ÷ (c/d) = (a/b) × (d/c). Dann ergibt sich (a×d)/(b×c). Zum Schluss den Bruch kürzen."
+            },
+            {
+              "question": "Wann ist ein komplexer Bruch nicht definiert?",
+              "answer": "Nicht definiert ist er, wenn ein Nenner 0 ist (b = 0 oder d = 0) oder wenn durch 0 geteilt wird, weil der Nennerbruch 0 ist (c = 0 in c/d)."
+            },
+            {
+              "question": "Kann ich Dezimalzahlen oder Brüche wie 3/4 eingeben?",
+              "answer": "Ja. Der Rechner unterstützt ganze Zahlen, Dezimalzahlen und einfache Brüche in jedem Feld, z. B. 0.25 oder 1/4."
+            },
+            {
+              "question": "Ist dieser Rechner kostenlos?",
+              "answer": "Ja. Der Rechner ist kostenlos und funktioniert direkt im Browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "addingFractions": "Brüche addieren Rechner",
+          "addingFractionsDesc": "Brüche addieren und Schritt für Schritt kürzen",
+          "subtractingFractions": "Brüche subtrahieren Rechner",
+          "subtractingFractionsDesc": "Brüche subtrahieren und Ergebnis kürzen",
+          "multiplyingFractions": "Brüche multiplizieren Rechner",
+          "multiplyingFractionsDesc": "Brüche multiplizieren und vollständig vereinfachen"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Bruchsubtraktions-Rechner",
       "description": "Subtrahiere zwei Brüche und erhalte das gekürzte Ergebnis und den Dezimalwert. Unterstützt einfache Brüche und gemischte Zahlen.",

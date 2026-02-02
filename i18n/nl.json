@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Rekenmachine voor Complexe Breuken",
+      "description": "Vereenvoudig complexe breuken zoals (a/b)/(c/d) en krijg het resultaat als vereenvoudigde breuk, gemengd getal en decimale waarde.",
+      "complexFractionLabel": "Complexe breuk",
+      "numeratorFraction": "Bovenste breuk (a/b)",
+      "denominatorFraction": "Onderste breuk (c/d)",
+      "a": "a (bovenste teller)",
+      "b": "b (bovenste noemer)",
+      "c": "c (onderste teller)",
+      "d": "d (onderste noemer)",
+      "inputHint": "Tip: je kunt gehele getallen, decimalen of eenvoudige breuken zoals 3/4 invoeren. Noemers mogen niet 0 zijn.",
+      "calculate": "Berekenen",
+      "reset": "Resetten",
+      "result": "Resultaat",
+      "resultPlaceholder": "Voer waarden in en klik op Berekenen om het vereenvoudigde resultaat te zien.",
+      "simplifiedFraction": "Vereenvoudigde breuk",
+      "mixedNumber": "Gemengd getal",
+      "decimalValue": "Decimale waarde",
+      "stepsHeading": "Vereenvoudigingsstappen",
+      "errorTitle": "Invoerfout",
+      "errorInvalid": "Voer geldige getallen of eenvoudige breuken (bijv. 3/4) in. Wetenschappelijke notatie wordt niet ondersteund.",
+      "errorZeroDenominator": "Een noemer kan niet nul zijn (b en d mogen niet 0 zijn).",
+      "errorDivideByZero": "Delen door nul is niet mogelijk. De onderste breuk (c/d) mag niet 0 zijn.",
+      "seo": {
+        "title": "Rekenmachine voor Complexe Breuken – (a/b)/(c/d) Stap voor Stap Vereenvoudigen",
+        "description": "Gratis rekenmachine voor complexe breuken om samengestelde breuken zoals (a/b)/(c/d) te vereenvoudigen. Krijg het antwoord als vereenvoudigde breuk, gemengd getal en decimaal met duidelijke stappen.",
+        "keywords": "complexe breuken rekenmachine, complexe breuken vereenvoudigen, samengestelde breuk, breuken delen, reciproke, breuk vereenvoudigen, breuk naar decimaal, gemengd getal",
+        "content": {
+          "heading": "Hoe je Complexe Breuken Vereenvoudigt",
+          "paragraph1": "Een complexe breuk (ook wel samengestelde breuk) is een breuk waarbij de teller, de noemer of beide zelf weer breuken zijn. Een veelvoorkomende vorm is (a/b)/(c/d): “de breuk a/b gedeeld door de breuk c/d”. Complexe breuken komen voor in algebra, natuurkundeformules, verhoudingen en conversies en worden vaak omgezet naar één enkele breuk.",
+          "paragraph2": "De belangrijkste regel is: delen door een breuk is hetzelfde als vermenigvuldigen met het omgekeerde (reciproke). Dus (a/b) ÷ (c/d) = (a/b) × (d/c). Daarna vermenigvuldig je tellers met tellers en noemers met noemers: (a×d)/(b×c). Zo wordt de complexe breuk een eenvoudige breuk.",
+          "paragraph3": "Vervolgens vereenvoudig je de uitkomst door teller en noemer te delen door hun grootste gemene deler (GGD). Als de breuk oneigenlijk is, kun je die ook als gemengd getal schrijven. De decimale waarde is simpelweg teller gedeeld door noemer.",
+          "paragraph4": "Deze rekenmachine vereenvoudigt complexe breuken direct. Je kunt gehele getallen, decimalen of eenvoudige breuken (zoals 0.75 of 3/4) invullen voor a, b, c en d. De tool controleert ongeldige invoer en nulnoemers, past de reciproke-regel toe, vereenvoudigt het resultaat en toont het als breuk, gemengd getal en decimale benadering.",
+          "exampleHeading": "Voorbeeld: Een Complexe Breuk Vereenvoudigen",
+          "exampleText": "Voorbeeld: (1/2)/(3/4). Zet delen om naar vermenigvuldigen met het omgekeerde: (1/2) ÷ (3/4) = (1/2) × (4/3). Vermenigvuldig: (1×4)/(2×3) = 4/6. Vereenvoudig: 4/6 = 2/3. Decimale waarde: 2/3 ≈ 0.666666…. Nog een voorbeeld: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Veelgestelde Vragen",
+          "items": [
+            {
+              "question": "Wat is een complexe breuk?",
+              "answer": "Een complexe (samengestelde) breuk is een breuk die één of meer breuken in de teller of noemer bevat. Bijvoorbeeld (a/b)/(c/d) is complex omdat zowel boven als onder breuken staan."
+            },
+            {
+              "question": "Hoe vereenvoudig je (a/b)/(c/d)?",
+              "answer": "Gebruik de reciproke-regel: (a/b) ÷ (c/d) = (a/b) × (d/c). Daarna krijg je (a×d)/(b×c) en vereenvoudig je de breuk."
+            },
+            {
+              "question": "Wanneer is een complexe breuk niet gedefinieerd?",
+              "answer": "Hij is niet gedefinieerd als een noemer 0 is (b = 0 of d = 0) of als je door nul deelt omdat de onderste breuk 0 is (c = 0 in c/d)."
+            },
+            {
+              "question": "Kan ik decimalen of breuken zoals 3/4 invoeren?",
+              "answer": "Ja. Deze rekenmachine ondersteunt gehele getallen, decimalen en eenvoudige breuken in elk veld. Bijvoorbeeld 0.25 of 1/4."
+            },
+            {
+              "question": "Is deze rekenmachine gratis?",
+              "answer": "Ja. Hij is volledig gratis en werkt direct in je browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Gerelateerde Rekenmachines",
+          "addingFractions": "Breuken Optellen Rekenmachine",
+          "addingFractionsDesc": "Breuken optellen en stap voor stap vereenvoudigen",
+          "subtractingFractions": "Breuken Aftrekken Rekenmachine",
+          "subtractingFractionsDesc": "Breuken aftrekken en het resultaat vereenvoudigen",
+          "multiplyingFractions": "Breuken Vermenigvuldigen Rekenmachine",
+          "multiplyingFractionsDesc": "Breuken vermenigvuldigen en volledig vereenvoudigen"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Breuken Aftrekken Rekenmachine",
       "description": "Trek twee breuken af en krijg het vereenvoudigde resultaat en de decimale waarde. Ondersteunt eenvoudige breuk en gemengd getal.",

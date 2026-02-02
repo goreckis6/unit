@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Kalkylator för Komplexa Bråk",
+      "description": "Förenkla komplexa bråk som (a/b)/(c/d) och få resultatet som förenklat bråk, blandat tal och decimalvärde.",
+      "complexFractionLabel": "Komplext bråk",
+      "numeratorFraction": "Övre bråk (a/b)",
+      "denominatorFraction": "Nedre bråk (c/d)",
+      "a": "a (övre täljare)",
+      "b": "b (övre nämnare)",
+      "c": "c (nedre täljare)",
+      "d": "d (nedre nämnare)",
+      "inputHint": "Tips: Du kan ange heltal, decimaler eller enkla bråk som 3/4. Nämnare får inte vara 0.",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "resultPlaceholder": "Ange värden och klicka på Beräkna för att se det förenklade resultatet.",
+      "simplifiedFraction": "Förenklat bråk",
+      "mixedNumber": "Blandat tal",
+      "decimalValue": "Decimalvärde",
+      "stepsHeading": "Förenklingssteg",
+      "errorTitle": "Inmatningsfel",
+      "errorInvalid": "Ange giltiga tal eller enkla bråk (t.ex. 3/4). Vetenskaplig notation stöds inte.",
+      "errorZeroDenominator": "En nämnare kan inte vara noll (b och d får inte vara 0).",
+      "errorDivideByZero": "Du kan inte dividera med noll. Det nedre bråket (c/d) får inte vara 0.",
+      "seo": {
+        "title": "Kalkylator för Komplexa Bråk – Förenkla (a/b)/(c/d) Steg för Steg",
+        "description": "Gratis kalkylator för komplexa bråk som förenklar sammansatta bråk som (a/b)/(c/d). Få svaret som förenklat bråk, blandat tal och decimal med tydliga steg.",
+        "keywords": "kalkylator komplexa bråk, förenkla komplexa bråk, sammansatt bråk, dividera bråk, reciprok, förenkla bråk, bråk till decimal, blandat tal",
+        "content": {
+          "heading": "Så Förenklar du Komplexa Bråk",
+          "paragraph1": "Ett komplext bråk (även kallat sammansatt bråk) är ett bråk där täljaren, nämnaren eller båda är bråk. En vanlig form är (a/b)/(c/d), vilket betyder “bråket a/b dividerat med bråket c/d”. Komplexa bråk förekommer i algebra, fysikformler, hastigheter och omvandlingar och förenklas ofta till ett enda bråk.",
+          "paragraph2": "Den viktigaste regeln är: att dividera med ett bråk är samma sak som att multiplicera med dess reciprok. Därför gäller (a/b) ÷ (c/d) = (a/b) × (d/c). När du har skrivit om till multiplikation multiplicerar du täljare med täljare och nämnare med nämnare: (a×d)/(b×c).",
+          "paragraph3": "Sedan förenklar du bråket genom att dela täljare och nämnare med deras största gemensamma delare (SGD). Om bråket är impropert kan det också skrivas som ett blandat tal. Decimalvärdet är helt enkelt täljare dividerat med nämnare.",
+          "paragraph4": "Den här kalkylatorn förenklar komplexa bråk direkt. Du kan ange heltal, decimaler eller enkla bråk (som 0.75 eller 3/4) för a, b, c och d. Verktyget kontrollerar ogiltiga inmatningar och nämnare som är noll, använder reciprok-regeln, förenklar slutresultatet och visar det som bråk, blandat tal och decimal approximation.",
+          "exampleHeading": "Exempel: Förenkla ett Komplex Bråk",
+          "exampleText": "Exempel: (1/2)/(3/4). Skriv om division till multiplikation med reciprok: (1/2) ÷ (3/4) = (1/2) × (4/3). Multiplicera: (1×4)/(2×3) = 4/6. Förenkla: 4/6 = 2/3. Decimalvärde: 2/3 ≈ 0.666666…. Ett annat exempel: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är ett komplext bråk?",
+              "answer": "Ett komplext (sammansatt) bråk är ett bråk som innehåller ett eller flera bråk i täljaren eller nämnaren. Till exempel är (a/b)/(c/d) komplext eftersom både över och under är bråk."
+            },
+            {
+              "question": "Hur förenklar man (a/b)/(c/d)?",
+              "answer": "Använd reciprok-regeln: (a/b) ÷ (c/d) = (a/b) × (d/c). Då får du (a×d)/(b×c) och kan sedan förenkla bråket."
+            },
+            {
+              "question": "När är ett komplext bråk inte definierat?",
+              "answer": "Det är inte definierat när en nämnare är 0 (b = 0 eller d = 0), eller när du dividerar med noll eftersom det nedre bråket är 0 (c = 0 i c/d)."
+            },
+            {
+              "question": "Kan jag ange decimaler eller bråk som 3/4?",
+              "answer": "Ja. Kalkylatorn stöder heltal, decimaler och enkla bråk i varje fält, till exempel 0.25 eller 1/4."
+            },
+            {
+              "question": "Är den här kalkylatorn gratis?",
+              "answer": "Ja. Den är helt gratis och fungerar direkt i din webbläsare."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "addingFractions": "Kalkylator för Addition av Bråk",
+          "addingFractionsDesc": "Addera bråk och förenkla steg för steg",
+          "subtractingFractions": "Bråksubtraktionsräknare",
+          "subtractingFractionsDesc": "Subtrahera bråk och förenkla resultatet",
+          "multiplyingFractions": "Kalkylator för Multiplikation av Bråk",
+          "multiplyingFractionsDesc": "Multiplicera bråk och förenkla till enklaste form"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Bråksubtraktionsräknare",
       "description": "Subtrahera två bråk och få det förenklade resultatet och decimalvärdet. Stöder enkelt bråk och blandat tal.",

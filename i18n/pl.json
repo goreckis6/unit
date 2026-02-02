@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Kalkulator Ułamków Złożonych",
+      "description": "Uprość ułamki złożone takie jak (a/b)/(c/d) i otrzymaj wynik jako ułamek uproszczony, liczba mieszana oraz wartość dziesiętna.",
+      "complexFractionLabel": "Ułamek złożony",
+      "numeratorFraction": "Ułamek w liczniku (a/b)",
+      "denominatorFraction": "Ułamek w mianowniku (c/d)",
+      "a": "a (górny licznik)",
+      "b": "b (górny mianownik)",
+      "c": "c (dolny licznik)",
+      "d": "d (dolny mianownik)",
+      "inputHint": "Wskazówka: możesz wpisywać liczby całkowite, dziesiętne lub proste ułamki jak 3/4. Mianowniki nie mogą być równe 0.",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "resultPlaceholder": "Wpisz wartości i kliknij Oblicz, aby zobaczyć uproszczony wynik.",
+      "simplifiedFraction": "Ułamek uproszczony",
+      "mixedNumber": "Liczba mieszana",
+      "decimalValue": "Wartość dziesiętna",
+      "stepsHeading": "Kroki upraszczania",
+      "errorTitle": "Błąd danych",
+      "errorInvalid": "Wpisz poprawne liczby lub proste ułamki (np. 3/4). Zapis wykładniczy nie jest obsługiwany.",
+      "errorZeroDenominator": "Mianownik nie może być zerem (b i d nie mogą być równe 0).",
+      "errorDivideByZero": "Nie można dzielić przez zero. Ułamek w mianowniku (c/d) nie może być równy 0.",
+      "seo": {
+        "title": "Kalkulator Ułamków Złożonych – Uprość (a/b)/(c/d) Krok po Kroku",
+        "description": "Darmowy kalkulator ułamków złożonych do upraszczania wyrażeń typu (a/b)/(c/d). Otrzymaj wynik jako ułamek uproszczony, liczba mieszana i wartość dziesiętna z jasnymi krokami.",
+        "keywords": "kalkulator ułamków złożonych, upraszczanie ułamków złożonych, ułamek złożony, dzielenie ułamków, odwrotność, uprość ułamek, ułamek na dziesiętne, liczba mieszana",
+        "content": {
+          "heading": "Jak Uprościć Ułamki Złożone",
+          "paragraph1": "Ułamek złożony (nazywany też ułamkiem piętrowym) to ułamek, w którym licznik, mianownik lub oba są ułamkami. Częsta postać to (a/b)/(c/d), czyli „ułamek a/b podzielony przez ułamek c/d”. Ułamki złożone pojawiają się w algebrze, wzorach fizycznych, w relacjach i przeliczeniach, dlatego zwykle upraszcza się je do jednej, prostej postaci.",
+          "paragraph2": "Kluczowa zasada brzmi: dzielenie przez ułamek to to samo co mnożenie przez jego odwrotność. Zatem (a/b) ÷ (c/d) = (a/b) × (d/c). Po zapisaniu jako mnożenie mnożysz liczniki przez liczniki i mianowniki przez mianowniki: (a×d)/(b×c).",
+          "paragraph3": "Następnie upraszczasz wynik, dzieląc licznik i mianownik przez ich największy wspólny dzielnik (NWD). Jeśli ułamek jest niewłaściwy, można go zapisać jako liczbę mieszaną. Wartość dziesiętna to po prostu licznik podzielony przez mianownik.",
+          "paragraph4": "Ta kalkulator upraszcza ułamki złożone natychmiast. Możesz wpisywać liczby całkowite, dziesiętne lub proste ułamki (np. 0.75 albo 3/4) dla a, b, c i d. Narzędzie sprawdza niepoprawne dane i zerowe mianowniki, stosuje zasadę odwrotności, upraszcza wynik i pokazuje go jako ułamek, liczbę mieszaną oraz przybliżenie dziesiętne.",
+          "exampleHeading": "Przykład: Uproszczenie Ułamka Złożonego",
+          "exampleText": "Przykład: (1/2)/(3/4). Zamień dzielenie na mnożenie przez odwrotność: (1/2) ÷ (3/4) = (1/2) × (4/3). Mnożenie: (1×4)/(2×3) = 4/6. Uproszczenie: 4/6 = 2/3. Wartość dziesiętna: 2/3 ≈ 0.666666…. Inny przykład: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Najczęściej Zadawane Pytania",
+          "items": [
+            {
+              "question": "Co to jest ułamek złożony?",
+              "answer": "Ułamek złożony (ułamek piętrowy) to ułamek zawierający jeden lub więcej ułamków w liczniku lub mianowniku. Na przykład (a/b)/(c/d) jest ułamkiem złożonym, ponieważ zarówno góra, jak i dół to ułamki."
+            },
+            {
+              "question": "Jak uprościć (a/b)/(c/d)?",
+              "answer": "Zastosuj zasadę odwrotności: (a/b) ÷ (c/d) = (a/b) × (d/c). Następnie otrzymasz (a×d)/(b×c) i uprościsz ułamek."
+            },
+            {
+              "question": "Kiedy ułamek złożony jest niezdefiniowany?",
+              "answer": "Jest niezdefiniowany, gdy któryś mianownik jest równy 0 (b = 0 lub d = 0) albo gdy dzielisz przez zero, ponieważ ułamek w mianowniku jest równy 0 (c = 0 w c/d)."
+            },
+            {
+              "question": "Czy mogę wpisać liczby dziesiętne lub ułamki jak 3/4?",
+              "answer": "Tak. Kalkulator obsługuje liczby całkowite, dziesiętne i proste ułamki w każdym polu, np. 0.25 lub 1/4."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak. Kalkulator jest całkowicie darmowy i działa bezpośrednio w przeglądarce."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "addingFractions": "Kalkulator Dodawania Ułamków",
+          "addingFractionsDesc": "Dodaj ułamki i uprość wynik krok po kroku",
+          "subtractingFractions": "Kalkulator Odejmowania Ułamków",
+          "subtractingFractionsDesc": "Odejmij ułamki i uprość wynik",
+          "multiplyingFractions": "Kalkulator Mnożenia Ułamków",
+          "multiplyingFractionsDesc": "Pomnóż ułamki i skróć do najprostszej postaci"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kalkulator Odejmowania Ułamków",
       "description": "Odejmij dwa ułamki i uzyskaj wynik uproszczony oraz wartość dziesiętną. Obsługuje ułamek zwykły i liczbę mieszaną.",

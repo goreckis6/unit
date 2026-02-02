@@ -188,6 +188,78 @@
         }
       }
     },
+    "complexFractions": {
+      "title": "Kalkulator Pecahan Kompleks",
+      "description": "Sederhanakan pecahan kompleks seperti (a/b)/(c/d) dan dapatkan hasil sebagai pecahan sederhana, bilangan campuran, dan nilai desimal.",
+      "complexFractionLabel": "Pecahan kompleks",
+      "numeratorFraction": "Pecahan di pembilang (a/b)",
+      "denominatorFraction": "Pecahan di penyebut (c/d)",
+      "a": "a (pembilang atas)",
+      "b": "b (penyebut atas)",
+      "c": "c (pembilang bawah)",
+      "d": "d (penyebut bawah)",
+      "inputHint": "Tips: Anda dapat memasukkan bilangan bulat, desimal, atau pecahan sederhana seperti 3/4. Penyebut tidak boleh 0.",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "resultPlaceholder": "Masukkan nilai lalu klik Hitung untuk melihat hasil yang disederhanakan.",
+      "simplifiedFraction": "Pecahan yang disederhanakan",
+      "mixedNumber": "Bilangan campuran",
+      "decimalValue": "Nilai desimal",
+      "stepsHeading": "Langkah penyederhanaan",
+      "errorTitle": "Kesalahan input",
+      "errorInvalid": "Masukkan angka yang valid atau pecahan sederhana (mis. 3/4). Notasi ilmiah tidak didukung.",
+      "errorZeroDenominator": "Penyebut tidak boleh nol (b dan d tidak boleh 0).",
+      "errorDivideByZero": "Tidak bisa membagi dengan nol. Pecahan di penyebut (c/d) tidak boleh 0.",
+      "seo": {
+        "title": "Kalkulator Pecahan Kompleks – Sederhanakan (a/b)/(c/d) Langkah demi Langkah",
+        "description": "Kalkulator pecahan kompleks gratis untuk menyederhanakan pecahan bertingkat seperti (a/b)/(c/d). Dapatkan jawaban sebagai pecahan sederhana, bilangan campuran, dan desimal dengan langkah yang jelas.",
+        "keywords": "kalkulator pecahan kompleks, menyederhanakan pecahan kompleks, pecahan bertingkat, membagi pecahan, kebalikan, penyederhana pecahan, pecahan ke desimal, bilangan campuran",
+        "content": {
+          "heading": "Cara Menyederhanakan Pecahan Kompleks",
+          "paragraph1": "Pecahan kompleks (juga disebut pecahan bertingkat) adalah pecahan yang pembilangnya, penyebutnya, atau keduanya berupa pecahan. Bentuk yang umum adalah (a/b)/(c/d), yang berarti “pecahan a/b dibagi pecahan c/d”. Pecahan kompleks sering muncul dalam aljabar, rumus fisika, laju, dan konversi, dan biasanya disederhanakan menjadi satu pecahan agar lebih mudah dihitung.",
+          "paragraph2": "Aturan kuncinya: membagi dengan pecahan sama dengan mengalikan dengan kebalikannya. Jadi (a/b) ÷ (c/d) = (a/b) × (d/c). Setelah ditulis sebagai perkalian, kalikan pembilang dengan pembilang dan penyebut dengan penyebut: (a×d)/(b×c). Ini mengubah pecahan kompleks menjadi pecahan biasa.",
+          "paragraph3": "Selanjutnya, sederhanakan pecahan dengan membagi pembilang dan penyebut dengan FPB-nya. Jika pecahan tidak wajar, Anda juga bisa menuliskannya sebagai bilangan campuran. Nilai desimal adalah pembilang dibagi penyebut.",
+          "paragraph4": "Kalkulator ini menyederhanakan pecahan kompleks secara instan. Anda dapat memasukkan bilangan bulat, desimal, atau pecahan sederhana (seperti 0.75 atau 3/4) untuk a, b, c, dan d. Alat ini memeriksa input tidak valid dan penyebut nol, menerapkan aturan kebalikan, menyederhanakan hasil akhir, dan menampilkannya sebagai pecahan, bilangan campuran, serta perkiraan desimal.",
+          "exampleHeading": "Contoh: Menyederhanakan Pecahan Kompleks",
+          "exampleText": "Contoh: (1/2)/(3/4). Ubah pembagian menjadi perkalian dengan kebalikan: (1/2) ÷ (3/4) = (1/2) × (4/3). Kalikan: (1×4)/(2×3) = 4/6. Sederhanakan: 4/6 = 2/3. Nilai desimal: 2/3 ≈ 0.666666…. Contoh lain: (2/5)/(1/10) = (2/5) × (10/1) = 20/5 = 4."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa itu pecahan kompleks?",
+              "answer": "Pecahan kompleks (pecahan bertingkat) adalah pecahan yang berisi satu atau lebih pecahan di pembilang atau penyebut. Misalnya, (a/b)/(c/d) adalah pecahan kompleks karena bagian atas dan bawahnya adalah pecahan."
+            },
+            {
+              "question": "Bagaimana menyederhanakan (a/b)/(c/d)?",
+              "answer": "Gunakan aturan kebalikan: (a/b) ÷ (c/d) = (a/b) × (d/c). Lalu dapatkan (a×d)/(b×c) dan sederhanakan pecahannya."
+            },
+            {
+              "question": "Kapan pecahan kompleks tidak terdefinisi?",
+              "answer": "Tidak terdefinisi jika ada penyebut yang bernilai 0 (b = 0 atau d = 0), atau jika membagi dengan nol karena pecahan di penyebut bernilai 0 (c = 0 pada c/d)."
+            },
+            {
+              "question": "Bisakah saya memasukkan desimal atau pecahan seperti 3/4?",
+              "answer": "Ya. Kalkulator mendukung bilangan bulat, desimal, dan pecahan sederhana di setiap kolom. Misalnya 0.25 atau 1/4."
+            },
+            {
+              "question": "Apakah kalkulator ini gratis?",
+              "answer": "Ya. Kalkulator ini sepenuhnya gratis dan berjalan langsung di browser Anda."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "addingFractions": "Kalkulator Penjumlahan Pecahan",
+          "addingFractionsDesc": "Jumlahkan pecahan dan sederhanakan langkah demi langkah",
+          "subtractingFractions": "Kalkulator Pengurangan Pecahan",
+          "subtractingFractionsDesc": "Kurangi pecahan dan sederhanakan hasilnya",
+          "multiplyingFractions": "Kalkulator Perkalian Pecahan",
+          "multiplyingFractionsDesc": "Kalikan pecahan dan sederhanakan ke bentuk paling sederhana"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kalkulator Pengurangan Pecahan",
       "description": "Kurangi dua pecahan dan dapatkan hasil yang disederhanakan serta nilai desimal. Mendukung bentuk pecahan sederhana dan bilangan campuran.",

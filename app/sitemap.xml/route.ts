@@ -13,6 +13,7 @@ export async function GET() {
     '/calculators/math/adding-fractions',
     '/calculators/math/adding-subtracting-integers',
     '/calculators/math/subtracting-fractions',
+    '/calculators/math/complex-fractions',
     '/calculators/math/antilog',
     '/calculators/math/arccos',
     '/calculators/math/cosine',

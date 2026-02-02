@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "Calcolatrice da Frazione a Decimale",
+      "description": "Converti qualsiasi frazione in decimale all’istante. Semplifica la frazione e scegli le cifre decimali.",
+      "fractionLabel": "Frazione",
+      "numerator": "Numeratore",
+      "denominator": "Denominatore",
+      "decimalPlaces": "Cifre decimali",
+      "inputHint": "Inserisci solo interi. Il denominatore non può essere 0. Scegli 0–12 cifre decimali.",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "resultPlaceholder": "Inserisci una frazione e clicca Calcola per vedere il decimale.",
+      "decimalResult": "Valore decimale",
+      "simplifiedFraction": "Frazione semplificata",
+      "stepsHeading": "Passaggi",
+      "stepDivide": "1) Dividi il numeratore per il denominatore:",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Scrivi il valore decimale:",
+      "stepDecimalText": "{n} / {d} = decimale",
+      "errorTitle": "Errore di input",
+      "errorInvalid": "Inserisci interi validi per numeratore e denominatore.",
+      "errorZeroDenominator": "Il denominatore non può essere zero.",
+      "errorDecimalPlaces": "Scegli cifre decimali tra 0 e 12.",
+      "seo": {
+        "title": "Calcolatrice Frazione in Decimale – Converti frazioni",
+        "description": "Calcolatrice gratuita da frazione a decimale. Conversione con arrotondamento opzionale, semplificazione e passaggi chiari.",
+        "keywords": "frazione a decimale, convertire frazione in decimale, convertitore frazione decimale, semplifica frazione, valore decimale, formula frazione decimale, arrotondamento",
+        "content": {
+          "heading": "Come convertire una frazione in decimale",
+          "paragraph1": "Per convertire una frazione in decimale, dividi il numeratore per il denominatore. È comune in matematica, finanza e misure perché i decimali sono facili da confrontare.",
+          "paragraph2": "Regola: Decimale = numeratore ÷ denominatore. Esempio: 3/4 = 0,75. Alcune frazioni terminano (1/2 = 0,5), altre sono periodiche (1/3 = 0,333…).",
+          "paragraph3": "Questa calcolatrice semplifica prima la frazione e poi la converte in decimale. Puoi scegliere il numero di cifre decimali per l’arrotondamento.",
+          "paragraph4": "Se il denominatore è 0, la frazione è indefinita. Le frazioni negative danno decimali negativi. Lo strumento mostra decimale e frazione semplificata.",
+          "exampleHeading": "Esempio",
+          "exampleText": "7/8 = 0,875. 2/5 = 0,4. 1/3 = 0,333… (arrotondato a 0,3333 con 4 cifre)."
+        },
+        "faq": {
+          "heading": "Domande Frequenti",
+          "items": [
+            {
+              "question": "Come si converte una frazione in decimale?",
+              "answer": "Dividi il numeratore per il denominatore. Esempio: 3/8 = 0,375."
+            },
+            {
+              "question": "Perché alcuni decimali sono periodici?",
+              "answer": "Se il denominatore semplificato ha fattori primi diversi da 2 o 5, il decimale è periodico (es. 1/3 = 0,333…)."
+            },
+            {
+              "question": "Posso arrotondare il decimale?",
+              "answer": "Sì. Scegli il numero di cifre decimali."
+            },
+            {
+              "question": "La calcolatrice semplifica la frazione?",
+              "answer": "Sì. Semplifica la frazione prima della conversione."
+            },
+            {
+              "question": "Questa calcolatrice è gratuita?",
+              "answer": "Sì. È gratuita e funziona nel browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatrici Correlate",
+          "decimalToPercent": "Calcolatrice da Decimale a Percentuale",
+          "decimalToPercentDesc": "Converti un decimale in percentuale con passaggi e arrotondamento",
+          "percentToDecimal": "Calcolatrice da Percentuale a Decimale",
+          "percentToDecimalDesc": "Converti una percentuale in decimale rapidamente",
+          "addingFractions": "Calcolatrice di Addizione di Frazioni",
+          "addingFractionsDesc": "Somma frazioni e semplifica il risultato"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Calcolatrice Sottrazione Frazioni",
       "description": "Sottrai due frazioni e ottieni il risultato semplificato e il valore decimale. Supporta frazione semplice e numero misto.",

@@ -37,6 +37,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'fraction-to-decimal',
+    titleKey: 'fractionToDecimal.title',
+    descKey: 'fractionToDecimal.description',
+    path: '/calculators/math/fraction-to-decimal',
+    category: 'math',
+  },
+  {
     id: 'adding-subtracting-integers',
     titleKey: 'addingSubtractingIntegers.title',
     descKey: 'addingSubtractingIntegers.description',

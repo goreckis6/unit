@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "Murtoluku Desimaaliksi -laskin",
+      "description": "Muunna mikä tahansa murtoluku desimaaliksi heti. Sievennä murtoluku ja valitse desimaalit.",
+      "fractionLabel": "Murtoluku",
+      "numerator": "Osoittaja",
+      "denominator": "Nimittäjä",
+      "decimalPlaces": "Desimaalien määrä",
+      "inputHint": "Syötä vain kokonaislukuja. Nimittäjä ei voi olla 0. Valitse 0–12 desimaalia.",
+      "calculate": "Laske",
+      "reset": "Tyhjennä",
+      "result": "Tulos",
+      "resultPlaceholder": "Syötä murtoluku ja paina Laske nähdäksesi desimaalin.",
+      "decimalResult": "Desimaalinen arvo",
+      "simplifiedFraction": "Sievennetty murtoluku",
+      "stepsHeading": "Vaiheet",
+      "stepDivide": "1) Jaa osoittaja nimittäjällä:",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Kirjoita desimaalinen arvo:",
+      "stepDecimalText": "{n} / {d} = desimaali",
+      "errorTitle": "Syötevirhe",
+      "errorInvalid": "Syötä kelvolliset kokonaisluvut osoittajalle ja nimittäjälle.",
+      "errorZeroDenominator": "Nimittäjä ei voi olla nolla.",
+      "errorDecimalPlaces": "Valitse desimaalit välillä 0–12.",
+      "seo": {
+        "title": "Murtoluku Desimaaliksi – Muunna murtoluvut",
+        "description": "Ilmainen murtoluku-desimaali -laskin. Muunna murtoluku desimaaliksi valinnaisella pyöristyksellä ja selkeillä vaiheilla.",
+        "keywords": "murtoluku desimaaliksi, muunna murtoluku, murtoluku desimaalilaskin, sievennä murtoluku, desimaalinen arvo, murtoluku desimaalikaava, pyöristys",
+        "content": {
+          "heading": "Miten muuntaa murtoluku desimaaliksi",
+          "paragraph1": "Murtoluvun muuntaminen desimaaliksi tehdään jakamalla osoittaja nimittäjällä. Tämä on yleistä matematiikassa, taloudessa ja mittauksissa.",
+          "paragraph2": "Sääntö: Desimaali = osoittaja ÷ nimittäjä. Esimerkiksi 3/4 = 0,75. Osa murtoluvuista päättyy (1/2 = 0,5), osa toistuu (1/3 = 0,333…).",
+          "paragraph3": "Tämä laskin sieventää murtoluvun ensin ja muuntaa sen desimaaliksi. Voit valita desimaalien määrän pyöristystä varten.",
+          "paragraph4": "Jos nimittäjä on 0, murtoluku on määrittelemätön. Negatiiviset murtoluvut antavat negatiivisia desimaaleja. Työkalu näyttää desimaalin ja sievennetyn murtoluvun.",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "7/8 = 0,875. 2/5 = 0,4. 1/3 = 0,333… (pyöristetty 0,3333 neljällä desimaalilla)."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Miten murtoluku muutetaan desimaaliksi?",
+              "answer": "Jaa osoittaja nimittäjällä. Esimerkiksi 3/8 = 0,375."
+            },
+            {
+              "question": "Miksi osa desimaaleista toistuu?",
+              "answer": "Jos sievennetyn nimittäjän alkutekijät ovat muita kuin 2 tai 5, desimaali on jaksollinen (esim. 1/3 = 0,333…)."
+            },
+            {
+              "question": "Voinko pyöristää desimaalin?",
+              "answer": "Kyllä. Valitse desimaalien määrä."
+            },
+            {
+              "question": "Sieventääkö laskin murtoluvun?",
+              "answer": "Kyllä. Murtoluku sievennetään ensin."
+            },
+            {
+              "question": "Onko laskin ilmainen?",
+              "answer": "Kyllä. Se on ilmainen ja toimii selaimessa."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Aiheeseen Liittyvät Laskimet",
+          "decimalToPercent": "Desimaalista Prosentiksi -laskin",
+          "decimalToPercentDesc": "Muunna desimaali prosentiksi vaiheilla ja pyöristyksellä",
+          "percentToDecimal": "Prosentista Desimaaliksi -laskin",
+          "percentToDecimalDesc": "Muunna prosentti desimaaliksi nopeasti",
+          "addingFractions": "Murtolukujen Yhteenlaskulaskin",
+          "addingFractionsDesc": "Lisää murtoluvut ja sievennä tulos"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Murtolukujen Vähennyslaskin",
       "description": "Vähennä kaksi murtolukua ja saat sievennetyn tuloksen ja desimaaliarvon. Tukee yksinkertaista murtolukua ja sekalukua.",

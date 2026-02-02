@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "Calculadora de Fração para Decimal",
+      "description": "Converta qualquer fração em decimal instantaneamente. Simplifique a fração e escolha as casas decimais.",
+      "fractionLabel": "Fração",
+      "numerator": "Numerador",
+      "denominator": "Denominador",
+      "decimalPlaces": "Casas decimais",
+      "inputHint": "Introduza apenas inteiros. O denominador não pode ser 0. Escolha 0–12 casas decimais.",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "resultPlaceholder": "Introduza uma fração e clique em Calcular para ver o decimal.",
+      "decimalResult": "Valor decimal",
+      "simplifiedFraction": "Fração simplificada",
+      "stepsHeading": "Passos",
+      "stepDivide": "1) Divida o numerador pelo denominador:",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Escreva o valor decimal:",
+      "stepDecimalText": "{n} / {d} = decimal",
+      "errorTitle": "Erro de introdução",
+      "errorInvalid": "Introduza inteiros válidos para numerador e denominador.",
+      "errorZeroDenominator": "O denominador não pode ser zero.",
+      "errorDecimalPlaces": "Escolha casas decimais entre 0 e 12.",
+      "seo": {
+        "title": "Calculadora Fração para Decimal – Converter frações",
+        "description": "Calculadora gratuita de fração para decimal. Converta com arredondamento opcional, simplificação e passos claros.",
+        "keywords": "fração para decimal, converter fração em decimal, conversor fração decimal, simplificar fração, valor decimal, fórmula fração decimal, arredondamento",
+        "content": {
+          "heading": "Como converter uma fração em decimal",
+          "paragraph1": "Para converter uma fração em decimal, basta dividir o numerador pelo denominador. É comum em matemática, finanças e medições porque os decimais são fáceis de comparar.",
+          "paragraph2": "Regra: Decimal = numerador ÷ denominador. Exemplo: 3/4 = 0,75. Algumas frações terminam (1/2 = 0,5) e outras são repetidas (1/3 = 0,333…).",
+          "paragraph3": "Esta calculadora simplifica primeiro a fração e depois converte para decimal. Pode escolher o número de casas decimais para arredondar.",
+          "paragraph4": "Se o denominador for 0, a fração é indefinida. Frações negativas dão decimais negativos. A ferramenta mostra o decimal e a fração simplificada.",
+          "exampleHeading": "Exemplo",
+          "exampleText": "7/8 = 0,875. 2/5 = 0,4. 1/3 = 0,333… (arredondado para 0,3333 com 4 casas)."
+        },
+        "faq": {
+          "heading": "Perguntas Frequentes",
+          "items": [
+            {
+              "question": "Como converter uma fração em decimal?",
+              "answer": "Divida o numerador pelo denominador. Exemplo: 3/8 = 0,375."
+            },
+            {
+              "question": "Porque alguns decimais são repetidos?",
+              "answer": "Se o denominador simplificado tiver fatores primos diferentes de 2 ou 5, o decimal é periódico (ex. 1/3 = 0,333…)."
+            },
+            {
+              "question": "Posso arredondar o decimal?",
+              "answer": "Sim. Escolha o número de casas decimais."
+            },
+            {
+              "question": "A calculadora simplifica a fração?",
+              "answer": "Sim. A fração é simplificada antes da conversão."
+            },
+            {
+              "question": "Esta calculadora é gratuita?",
+              "answer": "Sim. É gratuita e funciona no navegador."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "decimalToPercent": "Calculadora de Decimal para Percentagem",
+          "decimalToPercentDesc": "Converta um decimal em percentagem com passos e arredondamento",
+          "percentToDecimal": "Calculadora de Percentagem para Decimal",
+          "percentToDecimalDesc": "Converta uma percentagem em decimal rapidamente",
+          "addingFractions": "Calculadora de Adição de Frações",
+          "addingFractionsDesc": "Some frações e simplifique o resultado"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Calculadora de Subtração de Frações",
       "description": "Subtraia duas frações e obtenha o resultado simplificado e o valor decimal. Suporta fração simples e número misto.",

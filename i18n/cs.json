@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "Kalkulačka Převodu Zlomku na Desetinné Číslo",
+      "description": "Převeďte libovolný zlomek na desetinné číslo okamžitě. Zjednodušte zlomek a zvolte počet desetinných míst.",
+      "fractionLabel": "Zlomek",
+      "numerator": "Čitatel",
+      "denominator": "Jmenovatel",
+      "decimalPlaces": "Desetinná místa",
+      "inputHint": "Zadávejte pouze celá čísla. Jmenovatel nesmí být 0. Zvolte 0–12 desetinných míst.",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "result": "Výsledek",
+      "resultPlaceholder": "Zadejte zlomek a klikněte na Vypočítat pro zobrazení desetinného čísla.",
+      "decimalResult": "Desetinná hodnota",
+      "simplifiedFraction": "Zjednodušený zlomek",
+      "stepsHeading": "Postup",
+      "stepDivide": "1) Vydělte čitatele jmenovatelem:",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Zapište desetinnou hodnotu:",
+      "stepDecimalText": "{n} / {d} = desetinné číslo",
+      "errorTitle": "Chyba vstupu",
+      "errorInvalid": "Zadejte prosím platná celá čísla pro čitatele a jmenovatele.",
+      "errorZeroDenominator": "Jmenovatel nemůže být nula.",
+      "errorDecimalPlaces": "Zvolte prosím počet desetinných míst mezi 0 a 12.",
+      "seo": {
+        "title": "Kalkulačka Zlomku na Desetinné Číslo – Převod Zlomků",
+        "description": "Bezplatná kalkulačka pro převod zlomku na desetinné číslo. Převod s volitelným zaokrouhlením, zjednodušením a jasným postupem.",
+        "keywords": "zlomek na desetinné číslo, převod zlomku, kalkulačka zlomků, desetinná hodnota, vzorec zlomek na desetinné číslo, zaokrouhlení",
+        "content": {
+          "heading": "Jak Převést Zlomek na Desetinné Číslo",
+          "paragraph1": "Převod zlomku na desetinné číslo je jednoduchý: vydělte čitatele jmenovatelem. Tento postup se používá v matematice, financích i měření, protože desetinná čísla se snadno porovnávají.",
+          "paragraph2": "Pravidlo zní: Desetinné číslo = čitatel ÷ jmenovatel. Například 3/4 = 3 ÷ 4 = 0,75. Některé zlomky končí (1/2 = 0,5), jiné jsou periodické (1/3 = 0,333…).",
+          "paragraph3": "Tato kalkulačka nejprve zjednoduší zlomek a poté jej převede na desetinné číslo. Můžete zvolit počet desetinných míst, což je užitečné pro zaokrouhlení v praxi.",
+          "paragraph4": "Pokud je jmenovatel nula, zlomek je nedefinovaný. Záporné zlomky dávají záporná desetinná čísla. Nástroj zobrazí jak desetinnou hodnotu, tak zjednodušený zlomek.",
+          "exampleHeading": "Příklad",
+          "exampleText": "Převeďte 7/8: 7 ÷ 8 = 0,875. Převeďte 2/5: 2 ÷ 5 = 0,4. Převeďte 1/3: 1 ÷ 3 = 0,333… (zaokrouhleno na 0,3333 při 4 místech)."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Jak převedu zlomek na desetinné číslo?",
+              "answer": "Vydělte čitatele jmenovatelem. Například 3/8 = 3 ÷ 8 = 0,375."
+            },
+            {
+              "question": "Proč některé zlomky tvoří periodické desetinné číslo?",
+              "answer": "Zlomek je periodický, pokud má zjednodušený jmenovatel prvočinitele jiné než 2 nebo 5. Například 1/3 = 0,333…"
+            },
+            {
+              "question": "Mohu desetinné číslo zaokrouhlit?",
+              "answer": "Ano. Zvolte počet desetinných míst pro zaokrouhlení výsledku."
+            },
+            {
+              "question": "Zjednodušuje kalkulačka zlomek?",
+              "answer": "Ano. Nejprve zlomek zjednoduší a vedle zobrazí výsledné desetinné číslo."
+            },
+            {
+              "question": "Je tato kalkulačka zdarma?",
+              "answer": "Ano. Je zdarma a funguje přímo v prohlížeči."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Související Kalkulačky",
+          "decimalToPercent": "Kalkulačka Desetinné Číslo na Procenta",
+          "decimalToPercentDesc": "Převeďte desetinné číslo na procenta s postupem a zaokrouhlením",
+          "percentToDecimal": "Kalkulačka Procenta na Desetinné Číslo",
+          "percentToDecimalDesc": "Rychlý převod procent na desetinné číslo",
+          "addingFractions": "Kalkulačka Sčítání Zlomků",
+          "addingFractionsDesc": "Sečtěte zlomky a zjednodušte výsledek"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kalkulačka Odečítání Zlomků",
       "description": "Odečtěte dva zlomky a získejte zjednodušený výsledek a desetinnou hodnotu. Podporuje jednoduchý zlomek a smíšené číslo.",

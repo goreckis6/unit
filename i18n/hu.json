@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "Törtből Tizedes Számológép",
+      "description": "Bármilyen törtet azonnal tizedessé alakít. Egyszerűsítsd a törtet és válaszd a tizedesjegyeket.",
+      "fractionLabel": "Tört",
+      "numerator": "Számláló",
+      "denominator": "Nevező",
+      "decimalPlaces": "Tizedesjegyek",
+      "inputHint": "Csak egész számokat adj meg. A nevező nem lehet 0. Válassz 0–12 tizedesjegyet.",
+      "calculate": "Számolás",
+      "reset": "Alaphelyzet",
+      "result": "Eredmény",
+      "resultPlaceholder": "Adj meg egy törtet, majd kattints a Számolás gombra a tizedeshez.",
+      "decimalResult": "Tizedes érték",
+      "simplifiedFraction": "Egyszerűsített tört",
+      "stepsHeading": "Lépések",
+      "stepDivide": "1) Oszd a számlálót a nevezővel:",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Írd fel a tizedes értéket:",
+      "stepDecimalText": "{n} / {d} = tizedes",
+      "errorTitle": "Hibás megadás",
+      "errorInvalid": "Adj meg érvényes egész számokat a számlálóhoz és a nevezőhöz.",
+      "errorZeroDenominator": "A nevező nem lehet nulla.",
+      "errorDecimalPlaces": "Válassz 0 és 12 közötti tizedesjegyet.",
+      "seo": {
+        "title": "Törtből Tizedes – Törtek átváltása",
+        "description": "Ingyenes törtből tizedes számológép. Átváltás opcionális kerekítéssel, egyszerűsítéssel és lépésekkel.",
+        "keywords": "tört tizedesre, tört átváltás tizedesre, tört tizedes számológép, egyszerűsítés, tizedes érték, tört tizedes képlet, kerekítés",
+        "content": {
+          "heading": "Hogyan alakítsunk törtet tizedessé",
+          "paragraph1": "Tört tizedessé alakításához oszd a számlálót a nevezővel. Ez gyakori matematikában, pénzügyekben és mérésekben.",
+          "paragraph2": "Szabály: Tizedes = számláló ÷ nevező. Példa: 3/4 = 0,75. Egyes törtek végesek (1/2 = 0,5), mások végtelenek (1/3 = 0,333…).",
+          "paragraph3": "Ez a számológép először egyszerűsíti a törtet, majd tizedesre alakítja. Választható tizedesjegyszám a kerekítéshez.",
+          "paragraph4": "Ha a nevező 0, a tört nem értelmezett. A negatív törtek negatív tizedeseket adnak. Az eszköz mutatja a tizedest és az egyszerűsített törtet.",
+          "exampleHeading": "Példa",
+          "exampleText": "7/8 = 0,875. 2/5 = 0,4. 1/3 = 0,333… (0,3333-ra kerekítve 4 tizedessel)."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Hogyan alakítok törtet tizedessé?",
+              "answer": "Oszd a számlálót a nevezővel. Például 3/8 = 0,375."
+            },
+            {
+              "question": "Miért végtelenek egyes tizedesek?",
+              "answer": "Ha az egyszerűsített nevezőnek 2 vagy 5-nél más prímtényezői is vannak, a tizedes periodikus (pl. 1/3 = 0,333…)."
+            },
+            {
+              "question": "Lehet kerekíteni?",
+              "answer": "Igen. Válaszd a tizedesjegyek számát."
+            },
+            {
+              "question": "Egyszerűsíti a kalkulátor a törtet?",
+              "answer": "Igen. Először egyszerűsíti a törtet."
+            },
+            {
+              "question": "Ingyenes a kalkulátor?",
+              "answer": "Igen. Ingyenes és böngészőben használható."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Számológépek",
+          "decimalToPercent": "Tizedesből Százalék Számológép",
+          "decimalToPercentDesc": "Tizedesből százalék lépésekkel és kerekítéssel",
+          "percentToDecimal": "Százalékból Tizedes Számológép",
+          "percentToDecimalDesc": "Százalék gyors átváltása tizedesre",
+          "addingFractions": "Törtek Összeadása Számológép",
+          "addingFractionsDesc": "Törtek összeadása és egyszerűsítés"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Törtek Kivonás Számológép",
       "description": "Vonjon ki két törtet, és kapja meg az egyszerűsített eredményt és a tizedes értéket. Támogatja az egyszerű tört és vegyes szám formát.",

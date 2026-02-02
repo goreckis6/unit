@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "Kalkulačka Prevodu Zlomku na Desatinné Číslo",
+      "description": "Preveďte ľubovoľný zlomok na desatinné číslo okamžite. Zjednodušte zlomok a zvoľte desatinné miesta.",
+      "fractionLabel": "Zlomok",
+      "numerator": "Čitateľ",
+      "denominator": "Menovateľ",
+      "decimalPlaces": "Desatinné miesta",
+      "inputHint": "Zadajte iba celé čísla. Menovateľ nesmie byť 0. Zvoľte 0–12 desatinných miest.",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "resultPlaceholder": "Zadajte zlomok a kliknite na Vypočítať pre zobrazenie desatinného čísla.",
+      "decimalResult": "Desatinná hodnota",
+      "simplifiedFraction": "Zjednodušený zlomok",
+      "stepsHeading": "Kroky",
+      "stepDivide": "1) Vydelte čitateľa menovateľom:",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Zapíšte desatinnú hodnotu:",
+      "stepDecimalText": "{n} / {d} = desatinné číslo",
+      "errorTitle": "Chyba vstupu",
+      "errorInvalid": "Zadajte platné celé čísla pre čitateľa a menovateľa.",
+      "errorZeroDenominator": "Menovateľ nemôže byť nula.",
+      "errorDecimalPlaces": "Zvoľte desatinné miesta medzi 0 a 12.",
+      "seo": {
+        "title": "Kalkulačka Zlomku na Desatinné Číslo – Prevod zlomkov",
+        "description": "Bezplatná kalkulačka prevodu zlomku na desatinné číslo. Prevod s voliteľným zaokrúhlením, zjednodušením a krokmi.",
+        "keywords": "zlomok na desatinné číslo, prevod zlomku, kalkulačka zlomkov, desatinná hodnota, vzorec zlomok na desatinné číslo, zaokrúhlenie",
+        "content": {
+          "heading": "Ako previesť zlomok na desatinné číslo",
+          "paragraph1": "Na prevod zlomku na desatinné číslo vydelte čitateľa menovateľom. Je to bežné v matematike, financiách a meraniach.",
+          "paragraph2": "Pravidlo: Desatinné číslo = čitateľ ÷ menovateľ. Napríklad 3/4 = 0,75. Niektoré zlomky končia (1/2 = 0,5), iné sú periodické (1/3 = 0,333…).",
+          "paragraph3": "Táto kalkulačka najprv zjednoduší zlomok a potom ho prevedie na desatinné číslo. Môžete zvoliť počet desatinných miest na zaokrúhlenie.",
+          "paragraph4": "Ak je menovateľ 0, zlomok je nedefinovaný. Záporné zlomky dávajú záporné desatinné čísla. Nástroj zobrazí desatinnú hodnotu aj zjednodušený zlomok.",
+          "exampleHeading": "Príklad",
+          "exampleText": "7/8 = 0,875. 2/5 = 0,4. 1/3 = 0,333… (zaokrúhlené na 0,3333 pri 4 miestach)."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Ako prevediem zlomok na desatinné číslo?",
+              "answer": "Vydelte čitateľa menovateľom. Napríklad 3/8 = 0,375."
+            },
+            {
+              "question": "Prečo sú niektoré desatinné čísla periodické?",
+              "answer": "Ak má zjednodušený menovateľ prvočinitele iné než 2 alebo 5, desatinné číslo je periodické (napr. 1/3 = 0,333…)."
+            },
+            {
+              "question": "Môžem zaokrúhliť výsledok?",
+              "answer": "Áno. Zvoľte počet desatinných miest."
+            },
+            {
+              "question": "Zjednodušuje kalkulačka zlomok?",
+              "answer": "Áno. Zlomok sa najprv zjednoduší."
+            },
+            {
+              "question": "Je táto kalkulačka zadarmo?",
+              "answer": "Áno. Je zadarmo a funguje v prehliadači."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace Kalkulačky",
+          "decimalToPercent": "Kalkulačka Desatinné Číslo na Percentá",
+          "decimalToPercentDesc": "Preveďte desatinné číslo na percentá s krokmi a zaokrúhlením",
+          "percentToDecimal": "Kalkulačka Percentá na Desatinné Číslo",
+          "percentToDecimalDesc": "Rýchly prevod percent na desatinné číslo",
+          "addingFractions": "Kalkulačka Sčítania Zlomkov",
+          "addingFractionsDesc": "Sčítajte zlomky a zjednodušte výsledok"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kalkulačka Odčítania Zlomkov",
       "description": "Odčítajte dva zlomky a získajte zjednodušený výsledok a desatinnú hodnotu. Podporuje jednoduchý zlomok a zmiešané číslo.",

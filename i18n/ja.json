@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "分数→小数計算機",
+      "description": "任意の分数をすぐに小数へ変換します。分数を約分し、小数点以下の桁数を選べます。",
+      "fractionLabel": "分数",
+      "numerator": "分子",
+      "denominator": "分母",
+      "decimalPlaces": "小数点以下の桁数",
+      "inputHint": "整数のみ入力してください。分母は0にできません。0〜12桁を選択できます。",
+      "calculate": "計算",
+      "reset": "リセット",
+      "result": "結果",
+      "resultPlaceholder": "分数を入力して「計算」をクリックすると小数が表示されます。",
+      "decimalResult": "小数値",
+      "simplifiedFraction": "約分した分数",
+      "stepsHeading": "手順",
+      "stepDivide": "1) 分子を分母で割る：",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) 小数値を書く：",
+      "stepDecimalText": "{n} / {d} = 小数",
+      "errorTitle": "入力エラー",
+      "errorInvalid": "分子と分母に有効な整数を入力してください。",
+      "errorZeroDenominator": "分母は0にできません。",
+      "errorDecimalPlaces": "桁数は 0〜12 の範囲で選択してください。",
+      "seo": {
+        "title": "分数→小数計算機 – 分数を小数に変換",
+        "description": "無料の分数→小数計算機。約分、任意の丸め、わかりやすい手順付きで変換できます。",
+        "keywords": "分数 小数 変換, fraction to decimal, 分数 小数 計算機, 約分, 小数値, 分数 小数 式, 丸め",
+        "content": {
+          "heading": "分数を小数に変換する方法",
+          "paragraph1": "分数を小数にするには、分子を分母で割ります。数学や金融、計測でよく使われ、比較が簡単です。",
+          "paragraph2": "ルールは「小数 = 分子 ÷ 分母」です。例：3/4 = 0.75。終わる小数（1/2 = 0.5）もあれば、循環小数（1/3 = 0.333…）もあります。",
+          "paragraph3": "この計算機は分数を先に約分し、その後小数へ変換します。丸めたい場合は桁数を選択できます。",
+          "paragraph4": "分母が0の場合は未定義です。負の分数は負の小数になります。小数値と約分した分数を表示します。",
+          "exampleHeading": "例",
+          "exampleText": "7/8 = 0.875。2/5 = 0.4。1/3 = 0.333…（4桁で 0.3333）。"
+        },
+        "faq": {
+          "heading": "よくある質問",
+          "items": [
+            {
+              "question": "分数を小数にするには？",
+              "answer": "分子を分母で割ります。例：3/8 = 0.375。"
+            },
+            {
+              "question": "なぜ循環小数になるのですか？",
+              "answer": "約分後の分母に2や5以外の素因数があると循環小数になります（例：1/3 = 0.333…）。"
+            },
+            {
+              "question": "丸めはできますか？",
+              "answer": "はい。小数点以下の桁数を選べます。"
+            },
+            {
+              "question": "分数は約分されますか？",
+              "answer": "はい。変換前に約分します。"
+            },
+            {
+              "question": "この計算機は無料ですか？",
+              "answer": "はい。無料でブラウザ上で使えます。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "関連計算機",
+          "decimalToPercent": "小数→パーセント計算機",
+          "decimalToPercentDesc": "小数をパーセントに変換（手順・丸め対応）",
+          "percentToDecimal": "パーセント→小数計算機",
+          "percentToDecimalDesc": "パーセントを小数に素早く変換",
+          "addingFractions": "分数足し算計算機",
+          "addingFractionsDesc": "分数を足して結果を約分"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "分数引き算計算機",
       "description": "2つの分数を引き算して約分された結果と小数値を得ます。仮分数と帯分数に対応。",

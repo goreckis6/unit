@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "Kesirden Ondalığa Dönüşüm Hesap Makinesi",
+      "description": "Herhangi bir kesri anında ondalığa çevirin. Kesri sadeleştirin ve ondalık basamak seçin.",
+      "fractionLabel": "Kesir",
+      "numerator": "Pay",
+      "denominator": "Payda",
+      "decimalPlaces": "Ondalık basamak",
+      "inputHint": "Sadece tam sayı girin. Payda 0 olamaz. 0–12 ondalık basamak seçin.",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "resultPlaceholder": "Bir kesir girin ve ondalığı görmek için Hesapla'ya tıklayın.",
+      "decimalResult": "Ondalık değer",
+      "simplifiedFraction": "Sadeleştirilmiş kesir",
+      "stepsHeading": "Adımlar",
+      "stepDivide": "1) Payı paydaya bölün:",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Ondalık değeri yazın:",
+      "stepDecimalText": "{n} / {d} = ondalık",
+      "errorTitle": "Girdi hatası",
+      "errorInvalid": "Pay ve payda için geçerli tam sayılar girin.",
+      "errorZeroDenominator": "Payda sıfır olamaz.",
+      "errorDecimalPlaces": "Ondalık basamak sayısını 0 ile 12 arasında seçin.",
+      "seo": {
+        "title": "Kesirden Ondalığa – Kesirleri Ondalığa Çevir",
+        "description": "Ücretsiz kesirden ondalığa hesap makinesi. İsteğe bağlı yuvarlama, sadeleştirme ve net adımlarla dönüşüm.",
+        "keywords": "kesirden ondalığa, kesir ondalık dönüşüm, kesir ondalık hesap makinesi, kesir sadeleştirme, ondalık değer, kesirden ondalığa formül, yuvarlama",
+        "content": {
+          "heading": "Kesir ondalığa nasıl çevrilir?",
+          "paragraph1": "Kesri ondalığa çevirmek için payı paydaya bölün. Bu, matematikte, finansta ve ölçümlerde sık kullanılır.",
+          "paragraph2": "Kural: Ondalık = pay ÷ payda. Örneğin 3/4 = 0,75. Bazı kesirler sonludur (1/2 = 0,5), bazıları tekrarlıdır (1/3 = 0,333…).",
+          "paragraph3": "Bu hesap makinesi önce kesri sadeleştirir, sonra ondalığa çevirir. Yuvarlama için ondalık basamak sayısını seçebilirsiniz.",
+          "paragraph4": "Payda 0 ise kesir tanımsızdır. Negatif kesirler negatif ondalık verir. Araç hem ondalık değeri hem sadeleştirilmiş kesri gösterir.",
+          "exampleHeading": "Örnek",
+          "exampleText": "7/8 = 0,875. 2/5 = 0,4. 1/3 = 0,333… (4 basamakla 0,3333)."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "Kesri ondalığa nasıl çeviririm?",
+              "answer": "Payı paydaya bölün. Örneğin 3/8 = 0,375."
+            },
+            {
+              "question": "Neden bazı ondalıklar tekrarlıdır?",
+              "answer": "Sadeleştirilmiş paydanın 2 veya 5 dışında asal çarpanları varsa, ondalık tekrar eder (ör. 1/3 = 0,333…)."
+            },
+            {
+              "question": "Yuvarlayabilir miyim?",
+              "answer": "Evet. Ondalık basamak sayısını seçin."
+            },
+            {
+              "question": "Hesap makinesi kesri sadeleştirir mi?",
+              "answer": "Evet. Önce kesri sadeleştirir."
+            },
+            {
+              "question": "Bu hesap makinesi ücretsiz mi?",
+              "answer": "Evet. Ücretsizdir ve tarayıcıda çalışır."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesap Makineleri",
+          "decimalToPercent": "Ondalık Sayıyı Yüzdeye Çevirme",
+          "decimalToPercentDesc": "Ondalık sayıyı adımlarla ve yuvarlama ile yüzdeye çevirin",
+          "percentToDecimal": "Yüzdeden Ondalığa Çevirme",
+          "percentToDecimalDesc": "Yüzdeyi hızla ondalığa çevirin",
+          "addingFractions": "Kesir Toplama Hesap Makinesi",
+          "addingFractionsDesc": "Kesirleri toplayın ve sonucu sadeleştirin"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kesir Çıkarma Hesap Makinesi",
       "description": "İki kesri çıkarın ve sadeleştirilmiş sonucu ve ondalık değeri alın. Basit kesir ve karışık sayı formunu destekler.",

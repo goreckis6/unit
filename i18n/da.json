@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "Brøk til Decimal Regner",
+      "description": "Konvertér enhver brøk til decimal med det samme. Forkort brøken og vælg decimaler.",
+      "fractionLabel": "Brøk",
+      "numerator": "Tæller",
+      "denominator": "Nævner",
+      "decimalPlaces": "Decimaler",
+      "inputHint": "Indtast kun heltal. Nævner må ikke være 0. Vælg 0–12 decimaler.",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "resultPlaceholder": "Indtast en brøk og klik Beregn for at se decimalen.",
+      "decimalResult": "Decimalværdi",
+      "simplifiedFraction": "Forkortet brøk",
+      "stepsHeading": "Trin",
+      "stepDivide": "1) Divider tæller med nævner:",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Skriv decimalværdien:",
+      "stepDecimalText": "{n} / {d} = decimal",
+      "errorTitle": "Inputfejl",
+      "errorInvalid": "Indtast gyldige heltal for tæller og nævner.",
+      "errorZeroDenominator": "Nævneren må ikke være nul.",
+      "errorDecimalPlaces": "Vælg decimaler mellem 0 og 12.",
+      "seo": {
+        "title": "Brøk til Decimal – Konvertér brøker",
+        "description": "Gratis brøk-til-decimal regner. Konvertér med valgfri afrunding, forkortning og klare trin.",
+        "keywords": "brøk til decimal, konverter brøk til decimal, brøk decimal omregner, forkort brøk, decimalværdi, brøk til decimal formel, afrunding",
+        "content": {
+          "heading": "Sådan konverterer du en brøk til decimal",
+          "paragraph1": "For at konvertere en brøk til decimal dividerer du tælleren med nævneren. Det bruges ofte i matematik, økonomi og målinger.",
+          "paragraph2": "Regel: Decimal = tæller ÷ nævner. Fx 3/4 = 0,75. Nogle brøker er endelige (1/2 = 0,5), andre er periodiske (1/3 = 0,333…).",
+          "paragraph3": "Denne regner forkorter brøken først og konverterer derefter til decimal. Du kan vælge antal decimaler til afrunding.",
+          "paragraph4": "Hvis nævneren er 0, er brøken udefineret. Negative brøker giver negative decimaler. Værktøjet viser både decimal og forkortet brøk.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "7/8 = 0,875. 2/5 = 0,4. 1/3 = 0,333… (afrundet til 0,3333 med 4 decimaler)."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvordan konverterer man en brøk til decimal?",
+              "answer": "Divider tæller med nævner. Fx 3/8 = 0,375."
+            },
+            {
+              "question": "Hvorfor bliver nogle decimaler periodiske?",
+              "answer": "Hvis den forkortede nævner har andre primfaktorer end 2 eller 5, bliver decimalen periodisk (fx 1/3 = 0,333…)."
+            },
+            {
+              "question": "Kan jeg afrunde?",
+              "answer": "Ja. Vælg antal decimaler."
+            },
+            {
+              "question": "Forkorter regneren brøken?",
+              "answer": "Ja. Brøken forkortes først."
+            },
+            {
+              "question": "Er regneren gratis?",
+              "answer": "Ja. Den er gratis og virker i browseren."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Regnere",
+          "decimalToPercent": "Decimal til Procent Regner",
+          "decimalToPercentDesc": "Konvertér decimal til procent med trin og afrunding",
+          "percentToDecimal": "Procent til Decimal Regner",
+          "percentToDecimalDesc": "Konvertér procent til decimal hurtigt",
+          "addingFractions": "Brøksummering Regner",
+          "addingFractionsDesc": "Læg brøker sammen og forkort resultatet"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Brøksubtraktionsregner",
       "description": "Træk to brøker fra og få det forkortede resultat og decimalværdien. Understøtter simpel brøk og blandet tal.",

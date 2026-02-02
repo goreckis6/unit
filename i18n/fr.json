@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "Calculateur Fraction en Décimal",
+      "description": "Convertissez n’importe quelle fraction en décimal instantanément. Simplifiez la fraction et choisissez les décimales.",
+      "fractionLabel": "Fraction",
+      "numerator": "Numérateur",
+      "denominator": "Dénominateur",
+      "decimalPlaces": "Nombre de décimales",
+      "inputHint": "Saisissez uniquement des entiers. Le dénominateur ne peut pas être 0. Choisissez 0–12 décimales.",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "resultPlaceholder": "Saisissez une fraction et cliquez sur Calculer pour voir le décimal.",
+      "decimalResult": "Valeur décimale",
+      "simplifiedFraction": "Fraction simplifiée",
+      "stepsHeading": "Étapes",
+      "stepDivide": "1) Divisez le numérateur par le dénominateur :",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Écrivez la valeur décimale :",
+      "stepDecimalText": "{n} / {d} = décimal",
+      "errorTitle": "Erreur de saisie",
+      "errorInvalid": "Veuillez saisir des entiers valides pour le numérateur et le dénominateur.",
+      "errorZeroDenominator": "Le dénominateur ne peut pas être zéro.",
+      "errorDecimalPlaces": "Veuillez choisir entre 0 et 12 décimales.",
+      "seo": {
+        "title": "Calculateur Fraction en Décimal – Convertir une fraction",
+        "description": "Calculateur gratuit fraction en décimal. Convertissez une fraction en décimal avec simplification, arrondi optionnel et étapes claires.",
+        "keywords": "fraction en décimal, convertir fraction en décimal, convertisseur fraction décimal, simplifier fraction, valeur décimale, formule fraction décimal, arrondi",
+        "content": {
+          "heading": "Comment convertir une fraction en décimal",
+          "paragraph1": "Pour convertir une fraction en décimal, il suffit de diviser le numérateur par le dénominateur. C’est utile en maths, finances et mesures, car les décimaux sont faciles à comparer.",
+          "paragraph2": "La règle : Décimal = numérateur ÷ dénominateur. Exemple : 3/4 = 0,75. Certaines fractions sont finies (1/2 = 0,5), d’autres sont périodiques (1/3 = 0,333…).",
+          "paragraph3": "Ce calculateur simplifie d’abord la fraction puis la convertit en décimal. Vous pouvez choisir le nombre de décimales pour l’arrondi.",
+          "paragraph4": "Si le dénominateur est 0, la fraction est indéfinie. Les fractions négatives donnent des décimaux négatifs. L’outil affiche le décimal et la fraction simplifiée.",
+          "exampleHeading": "Exemple",
+          "exampleText": "7/8 = 0,875. 2/5 = 0,4. 1/3 = 0,333… (arrondi à 0,3333 avec 4 décimales)."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Comment convertir une fraction en décimal ?",
+              "answer": "Divisez le numérateur par le dénominateur. Exemple : 3/8 = 0,375."
+            },
+            {
+              "question": "Pourquoi certains décimaux sont-ils périodiques ?",
+              "answer": "Si le dénominateur simplifié a des facteurs premiers autres que 2 ou 5, le décimal est périodique (ex. 1/3 = 0,333…)."
+            },
+            {
+              "question": "Puis-je arrondir le résultat ?",
+              "answer": "Oui. Choisissez le nombre de décimales."
+            },
+            {
+              "question": "Le calculateur simplifie-t-il la fraction ?",
+              "answer": "Oui. La fraction est simplifiée avant la conversion."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit ?",
+              "answer": "Oui. Il est gratuit et fonctionne dans le navigateur."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Connexes",
+          "decimalToPercent": "Calculateur Décimal en Pourcentage",
+          "decimalToPercentDesc": "Convertissez un décimal en pourcentage avec étapes et arrondi",
+          "percentToDecimal": "Calculateur Pourcentage en Décimal",
+          "percentToDecimalDesc": "Convertissez un pourcentage en décimal rapidement",
+          "addingFractions": "Calculateur d’Addition de Fractions",
+          "addingFractionsDesc": "Additionnez des fractions et simplifiez le résultat"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Calculateur de Soustraction de Fractions",
       "description": "Soustraire deux fractions et obtenir le résultat simplifié et la valeur décimale. Prend en charge la fraction simple et le nombre mixte.",

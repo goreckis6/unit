@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "Bruch-zu-Dezimal-Rechner",
+      "description": "Wandle jeden Bruch sofort in eine Dezimalzahl um. Kürze den Bruch und wähle die Dezimalstellen.",
+      "fractionLabel": "Bruch",
+      "numerator": "Zähler",
+      "denominator": "Nenner",
+      "decimalPlaces": "Dezimalstellen",
+      "inputHint": "Nur ganze Zahlen eingeben. Nenner darf nicht 0 sein. Wähle 0–12 Dezimalstellen.",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "resultPlaceholder": "Bruch eingeben und auf Berechnen klicken, um die Dezimalzahl zu sehen.",
+      "decimalResult": "Dezimalwert",
+      "simplifiedFraction": "Gekürzter Bruch",
+      "stepsHeading": "Schritte",
+      "stepDivide": "1) Zähler durch Nenner teilen:",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Dezimalwert notieren:",
+      "stepDecimalText": "{n} / {d} = Dezimalzahl",
+      "errorTitle": "Eingabefehler",
+      "errorInvalid": "Bitte gib gültige ganze Zahlen für Zähler und Nenner ein.",
+      "errorZeroDenominator": "Der Nenner darf nicht 0 sein.",
+      "errorDecimalPlaces": "Bitte wähle Dezimalstellen zwischen 0 und 12.",
+      "seo": {
+        "title": "Bruch in Dezimalzahl Rechner – Brüche umwandeln",
+        "description": "Kostenloser Bruch-zu-Dezimal-Rechner. Wandle jeden Bruch in eine Dezimalzahl um – mit Kürzung, optionaler Rundung und klaren Schritten.",
+        "keywords": "bruch zu dezimal rechner, bruch in dezimalzahl umrechnen, bruch dezimal konverter, bruch kürzen, dezimalwert, bruch zu dezimal formel, rundung",
+        "content": {
+          "heading": "So wandelst du einen Bruch in eine Dezimalzahl um",
+          "paragraph1": "Einen Bruch in eine Dezimalzahl umzuwandeln ist einfach: Teile den Zähler durch den Nenner. Das wird in Mathematik, Finanzen und Messungen häufig genutzt, weil Dezimalzahlen leicht vergleichbar sind.",
+          "paragraph2": "Die Regel lautet: Dezimalzahl = Zähler ÷ Nenner. Beispiel: 3/4 = 3 ÷ 4 = 0,75. Manche Brüche enden (1/2 = 0,5), andere sind periodisch (1/3 = 0,333…).",
+          "paragraph3": "Dieser Rechner kürzt den Bruch zuerst und wandelt ihn dann in eine Dezimalzahl um. Du kannst die Anzahl der Dezimalstellen wählen, was beim Runden in der Praxis hilfreich ist.",
+          "paragraph4": "Ist der Nenner 0, ist der Bruch undefiniert. Negative Brüche ergeben negative Dezimalzahlen. Das Tool zeigt den Dezimalwert und den gekürzten Bruch an.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "7/8 → 7 ÷ 8 = 0,875. 2/5 → 2 ÷ 5 = 0,4. 1/3 → 1 ÷ 3 = 0,333… (auf 0,3333 mit 4 Stellen gerundet)."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Wie wandelt man einen Bruch in eine Dezimalzahl um?",
+              "answer": "Teile den Zähler durch den Nenner. Beispiel: 3/8 = 3 ÷ 8 = 0,375."
+            },
+            {
+              "question": "Warum wiederholen sich manche Dezimalzahlen?",
+              "answer": "Wenn der gekürzte Nenner andere Primfaktoren als 2 oder 5 hat, entsteht eine periodische Dezimalzahl (z. B. 1/3 = 0,333…)."
+            },
+            {
+              "question": "Kann ich runden?",
+              "answer": "Ja. Wähle die gewünschte Anzahl an Dezimalstellen."
+            },
+            {
+              "question": "Kürzt der Rechner den Bruch?",
+              "answer": "Ja. Der Bruch wird zuerst gekürzt und dann die Dezimalzahl angezeigt."
+            },
+            {
+              "question": "Ist der Rechner kostenlos?",
+              "answer": "Ja. Er ist kostenlos und funktioniert direkt im Browser."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "decimalToPercent": "Dezimal-zu-Prozent-Rechner",
+          "decimalToPercentDesc": "Wandle Dezimalzahlen in Prozente mit Schritten und Rundung",
+          "percentToDecimal": "Prozent-zu-Dezimal-Rechner",
+          "percentToDecimalDesc": "Wandle Prozente schnell in Dezimalzahlen um",
+          "addingFractions": "Brüche addieren Rechner",
+          "addingFractionsDesc": "Brüche addieren und das Ergebnis kürzen"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Bruchsubtraktions-Rechner",
       "description": "Subtrahiere zwei Brüche und erhalte das gekürzte Ergebnis und den Dezimalwert. Unterstützt einfache Brüche und gemischte Zahlen.",

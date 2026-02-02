@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "Bråk till Decimal Kalkylator",
+      "description": "Konvertera valfri bråk till decimal direkt. Förenkla bråket och välj decimaler.",
+      "fractionLabel": "Bråk",
+      "numerator": "Täljare",
+      "denominator": "Nämnare",
+      "decimalPlaces": "Decimaler",
+      "inputHint": "Ange endast heltal. Nämnaren får inte vara 0. Välj 0–12 decimaler.",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "resultPlaceholder": "Ange en bråk och klicka på Beräkna för att se decimalen.",
+      "decimalResult": "Decimalvärde",
+      "simplifiedFraction": "Förenklad bråk",
+      "stepsHeading": "Steg",
+      "stepDivide": "1) Dela täljaren med nämnaren:",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Skriv decimalvärdet:",
+      "stepDecimalText": "{n} / {d} = decimal",
+      "errorTitle": "Inmatningsfel",
+      "errorInvalid": "Ange giltiga heltal för täljare och nämnare.",
+      "errorZeroDenominator": "Nämnaren får inte vara noll.",
+      "errorDecimalPlaces": "Välj decimaler mellan 0 och 12.",
+      "seo": {
+        "title": "Bråk till Decimal – Konvertera bråk",
+        "description": "Gratis bråk-till-decimal-kalkylator. Konvertera med valfri avrundning, förenkling och tydliga steg.",
+        "keywords": "bråk till decimal, konvertera bråk till decimal, bråk decimal kalkylator, förenkla bråk, decimalvärde, bråk till decimal formel, avrundning",
+        "content": {
+          "heading": "Så konverterar du bråk till decimal",
+          "paragraph1": "För att konvertera en bråk till decimal delar du täljaren med nämnaren. Det används ofta i matematik, ekonomi och mätningar.",
+          "paragraph2": "Regeln: Decimal = täljare ÷ nämnare. Exempel: 3/4 = 0,75. Vissa bråk terminerar (1/2 = 0,5), andra är periodiska (1/3 = 0,333…).",
+          "paragraph3": "Den här kalkylatorn förenklar först bråket och konverterar sedan till decimal. Du kan välja antal decimaler för avrundning.",
+          "paragraph4": "Om nämnaren är 0 är bråket odefinierat. Negativa bråk ger negativa decimaler. Verktyget visar både decimal och förenklad bråk.",
+          "exampleHeading": "Exempel",
+          "exampleText": "7/8 = 0,875. 2/5 = 0,4. 1/3 = 0,333… (avrundat till 0,3333 med 4 decimaler)."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {
+              "question": "Hur konverterar man en bråk till decimal?",
+              "answer": "Dela täljaren med nämnaren. Exempel: 3/8 = 0,375."
+            },
+            {
+              "question": "Varför upprepas vissa decimaler?",
+              "answer": "Om den förenklade nämnaren har andra primfaktorer än 2 eller 5 blir decimalen periodisk (t.ex. 1/3 = 0,333…)."
+            },
+            {
+              "question": "Kan jag avrunda?",
+              "answer": "Ja. Välj antal decimaler."
+            },
+            {
+              "question": "Förenklar kalkylatorn bråket?",
+              "answer": "Ja. Bråket förenklas först."
+            },
+            {
+              "question": "Är kalkylatorn gratis?",
+              "answer": "Ja. Den är gratis och fungerar i webbläsaren."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "decimalToPercent": "Decimal till Procent Kalkylator",
+          "decimalToPercentDesc": "Konvertera decimal till procent med steg och avrundning",
+          "percentToDecimal": "Procent till Decimal Kalkylator",
+          "percentToDecimalDesc": "Konvertera procent till decimal snabbt",
+          "addingFractions": "Bråkaddition Kalkylator",
+          "addingFractionsDesc": "Addera bråk och förenkla resultatet"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Bråksubtraktionsräknare",
       "description": "Subtrahera två bråk och få det förenklade resultatet och decimalvärdet. Stöder enkelt bråk och blandat tal.",

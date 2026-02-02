@@ -400,6 +400,78 @@
         }
       }
     },
+    "fractionToDecimal": {
+      "title": "Kalkulator Zamiany Ułamka na Liczbę Dziesiętną",
+      "description": "Zamień dowolny ułamek na liczbę dziesiętną. Uprość ułamek i wybierz liczbę miejsc po przecinku.",
+      "fractionLabel": "Ułamek",
+      "numerator": "Licznik",
+      "denominator": "Mianownik",
+      "decimalPlaces": "Miejsca po przecinku",
+      "inputHint": "Wpisuj tylko liczby całkowite. Mianownik nie może być 0. Wybierz 0–12 miejsc po przecinku.",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "resultPlaceholder": "Wpisz ułamek i kliknij Oblicz, aby zobaczyć liczbę dziesiętną.",
+      "decimalResult": "Wartość dziesiętna",
+      "simplifiedFraction": "Ułamek uproszczony",
+      "stepsHeading": "Kroki",
+      "stepDivide": "1) Podziel licznik przez mianownik:",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Zapisz wartość dziesiętną:",
+      "stepDecimalText": "{n} / {d} = liczba dziesiętna",
+      "errorTitle": "Błąd danych",
+      "errorInvalid": "Wpisz poprawne liczby całkowite dla licznika i mianownika.",
+      "errorZeroDenominator": "Mianownik nie może być zerem.",
+      "errorDecimalPlaces": "Wybierz liczbę miejsc po przecinku od 0 do 12.",
+      "seo": {
+        "title": "Kalkulator Ułamka na Liczbę Dziesiętną – Konwersja",
+        "description": "Darmowy kalkulator zamiany ułamka na liczbę dziesiętną. Konwersja z opcjonalnym zaokrągleniem, uproszczeniem i krokami.",
+        "keywords": "ułamek na liczbę dziesiętną, zamiana ułamka, konwerter ułamka, uprość ułamek, wartość dziesiętna, wzór ułamek na dziesiętną, zaokrąglenie",
+        "content": {
+          "heading": "Jak zamienić ułamek na liczbę dziesiętną",
+          "paragraph1": "Aby zamienić ułamek na liczbę dziesiętną, podziel licznik przez mianownik. To częste w matematyce, finansach i pomiarach.",
+          "paragraph2": "Zasada: Liczba dziesiętna = licznik ÷ mianownik. Przykład: 3/4 = 0,75. Niektóre ułamki kończą się (1/2 = 0,5), inne są okresowe (1/3 = 0,333…).",
+          "paragraph3": "Ten kalkulator najpierw upraszcza ułamek, a potem zamienia go na liczbę dziesiętną. Możesz wybrać liczbę miejsc po przecinku do zaokrąglenia.",
+          "paragraph4": "Jeśli mianownik to 0, ułamek jest nieokreślony. Ułamki ujemne dają ujemne liczby dziesiętne. Narzędzie pokazuje dziesiętną wartość i ułamek uproszczony.",
+          "exampleHeading": "Przykład",
+          "exampleText": "7/8 = 0,875. 2/5 = 0,4. 1/3 = 0,333… (zaokrąglone do 0,3333 przy 4 miejscach)."
+        },
+        "faq": {
+          "heading": "Najczęściej Zadawane Pytania",
+          "items": [
+            {
+              "question": "Jak zamienić ułamek na liczbę dziesiętną?",
+              "answer": "Podziel licznik przez mianownik. Na przykład 3/8 = 0,375."
+            },
+            {
+              "question": "Dlaczego niektóre dziesiętne są okresowe?",
+              "answer": "Gdy uproszczony mianownik ma inne czynniki pierwsze niż 2 lub 5, liczba dziesiętna jest okresowa (np. 1/3 = 0,333…)."
+            },
+            {
+              "question": "Czy mogę zaokrąglić wynik?",
+              "answer": "Tak. Wybierz liczbę miejsc po przecinku."
+            },
+            {
+              "question": "Czy kalkulator upraszcza ułamek?",
+              "answer": "Tak. Ułamek jest upraszczany przed konwersją."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak. Jest darmowy i działa w przeglądarce."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "decimalToPercent": "Kalkulator Dziesiętnej na Procent",
+          "decimalToPercentDesc": "Zamień liczbę dziesiętną na procent z krokami i zaokrągleniem",
+          "percentToDecimal": "Kalkulator Procentów na Dziesiętne",
+          "percentToDecimalDesc": "Szybka zamiana procentów na liczbę dziesiętną",
+          "addingFractions": "Kalkulator Dodawania Ułamków",
+          "addingFractionsDesc": "Dodaj ułamki i uprość wynik"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Kalkulator Odejmowania Ułamków",
       "description": "Odejmij dwa ułamki i uzyskaj wynik uproszczony oraz wartość dziesiętną. Obsługuje ułamek zwykły i liczbę mieszaną.",

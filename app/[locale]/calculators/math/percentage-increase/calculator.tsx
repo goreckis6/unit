@@ -250,23 +250,6 @@ export function PercentageIncreaseCalculator() {
           </div>
         </div>
       </div>
-
-      {result !== null && !Number.isNaN(from) && !Number.isNaN(to) && from !== 0 && (
-        <div className="seo-content-card" style={{ marginTop: '1.5rem' }}>
-          <h3 className="example-heading">{t('calculationHeading')}</h3>
-          <div className="example-text" style={{ lineHeight: '1.8' }}>
-            <p>
-              <strong>
-                {t('summaryLine', {
-                  from: from.toString(),
-                  to: to.toString(),
-                  percent: result.percentageChange.toFixed(4),
-                })}
-              </strong>
-            </p>
-          </div>
-        </div>
-      )}
     </>
   );
 }

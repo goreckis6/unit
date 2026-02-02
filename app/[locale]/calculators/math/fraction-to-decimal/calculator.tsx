@@ -108,7 +108,7 @@ export function FractionToDecimalCalculator() {
               <label className="input-label">{t('fractionLabel')}</label>
               <div className="fraction-inputs">
                 <div className="input-wrapper">
-                  <label htmlFor="numerator" className="fraction-label">
+                  <label htmlFor="numerator" className="fraction-label" style={{ marginBottom: '0.5rem' }}>
                     {t('numerator')}
                   </label>
                   <input
@@ -116,14 +116,14 @@ export function FractionToDecimalCalculator() {
                     value={numerator}
                     onChange={(e) => setNumerator(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                    className="fraction-input"
+                    className="number-input"
                     inputMode="numeric"
                     placeholder="1"
                   />
                 </div>
                 <div className="fraction-divider"></div>
                 <div className="input-wrapper">
-                  <label htmlFor="denominator" className="fraction-label">
+                  <label htmlFor="denominator" className="fraction-label" style={{ marginBottom: '0.5rem' }}>
                     {t('denominator')}
                   </label>
                   <input
@@ -131,7 +131,7 @@ export function FractionToDecimalCalculator() {
                     value={denominator}
                     onChange={(e) => setDenominator(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                    className="fraction-input"
+                    className="number-input"
                     inputMode="numeric"
                     placeholder="2"
                   />
@@ -225,7 +225,7 @@ export function FractionToDecimalCalculator() {
                     <p>
                       <strong>{t('stepDecimal')}</strong>
                     </p>
-                    <p>{t('stepDecimalText', { n: calc.simplified.n.toString(), d: calc.simplified.d.toString() })}</p>
+                    <p>{calc.simplified.n.toString()} / {calc.simplified.d.toString()} = {formatted.decimalString}</p>
                   </div>
                 </div>
               </div>

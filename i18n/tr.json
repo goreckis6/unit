@@ -3466,6 +3466,73 @@
         }
       }
     },
+    "percentageIncrease": {
+      "title": "Yüzde Artış Hesaplayıcı",
+      "description": "İki değer arasındaki yüzde artışı veya azalışı hesaplayın. Yüzde değişimini ve mutlak farkı elde etmek için orijinal değeri ve yeni değeri girin.",
+      "from": "Başlangıç (orijinal değer)",
+      "to": "Bitiş (yeni değer)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "percentageChangeLabel": "Yüzde değişimi",
+      "differenceLabel": "Fark (yeni − orijinal)",
+      "increaseNote": "Pozitif değer = artış",
+      "decreaseNote": "Negatif değer = azalış",
+      "calculationHeading": "Hesaplama",
+      "summaryLine": "{from}'den {to}'ye değişim, orijinal değere göre {percent}%'dir.",
+      "seo": {
+        "title": "Yüzde Artış Hesaplayıcı – İki Değer Arasındaki Yüzde Değişimi",
+        "description": "İki değer arasındaki yüzde değişimini bulmak için ücretsiz yüzde artış hesaplayıcısı. Yüzde artışını veya azalışını, mutlak farkı hesaplayın ve büyümeyi veya kaybı hızlıca anlayın.",
+        "keywords": "yüzde artış hesaplayıcı, yüzde değişimi hesaplayıcı, yüzde değişimi, yüzde farkı, artış azalış hesaplayıcı, büyüme oranı hesaplayıcı, iki değer arasındaki değişim",
+        "content": {
+          "heading": "Yüzde Artış ve Azalış Nasıl Hesaplanır",
+          "paragraph1": "Yüzde artış hesaplayıcısı, bir değerin orijinal boyutuna göre ne kadar büyüdüğünü veya küçüldüğünü ölçmenize yardımcı olur. Yüzde değişimi, değişimin boyutunu orijinal değerin yüzdesi olarak söyler. Bu, fiyatları, maaşları, yatırımları, nüfus değişikliklerini, istatistikleri, performans ölçümlerini ve daha fazlasını izlemek için yararlıdır.",
+          "paragraph2": "Yüzde değişimi formülü: Yüzde Değişimi = ((Yeni Değer − Orijinal Değer) / Orijinal Değer) × 100. Sonuç pozitifse, yüzde artışı temsil eder. Sonuç negatifse, yüzde azalışı temsil eder. Örneğin, bir fiyat 80'den 100'e yükselirse, değişim ((100 − 80) / 80) × 100 = 25%'dir, yani fiyat %25 arttı. Bir değer 200'den 150'ye düşerse, değişim ((150 − 200) / 200) × 100 = −25%'dir, bu da %25'lik bir azalmadır.",
+          "paragraph3": "Bu hesaplayıcıyı kullanmak için, 'Başlangıç' alanına orijinal değeri ve 'Bitiş' alanına yeni değeri girin. Araç anında mutlak farkı (yeni − orijinal) ve orijinal değere göre yüzde değişimini hesaplayacaktır. Kar, sıcaklık veya bakiyeler gibi verilerle çalışırken tam sayıları, ondalık sayıları ve hatta negatif değerleri kullanabilirsiniz.",
+          "paragraph4": "Yüzde değişimi, finansta getirileri tanımlamak, iş dünyasında gelir veya maliyet değişikliklerini izlemek, istatistiklerde dönemler arasında verileri karşılaştırmak ve günlük yaşamda indirimleri, satışları ve büyümeyi anlamak için yaygın olarak kullanılır. Yüzde artış hesaplayıcımız zamandan tasarruf sağlar ve manuel hataları önler, hem değişimin büyüklüğünü hem de yönünü gösteren net sonuçlar sağlar.",
+          "exampleHeading": "Örnek: Yüzde Artış ve Azalış",
+          "exampleText": "Aylık abonelik maliyetinizin 12'den 15'e çıktığını varsayalım. Mutlak fark 15 − 12 = 3'tür. Yüzde değişimi ((15 − 12) / 12) × 100 = %25'tir, yani fiyat %25 arttı. Elektrik faturanız 150'den 120'ye düşerse, fark 120 − 150 = −30'dur. Yüzde değişimi ((120 − 150) / 150) × 100 = −%20'dir, bu da faturanızın %20 azaldığı anlamına gelir."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {
+              "question": "İki sayı arasındaki yüzde artışını nasıl hesaplarım?",
+              "answer": "Orijinal değerden yeni değere yüzde artışını hesaplamak için formülü kullanın: Yüzde Artışı = ((Yeni − Orijinal) / Orijinal) × 100. Pozitif bir sonuç, değerin arttığı anlamına gelir. Örneğin, 80'den 100'e: ((100 − 80) / 80) × 100 = %25 artış."
+            },
+            {
+              "question": "Yüzde azalışını nasıl hesaplarım?",
+              "answer": "Yüzde azalışı, yüzde artışıyla aynı formülü kullanır: Yüzde Değişimi = ((Yeni − Orijinal) / Orijinal) × 100. Sonuç negatifse, azalmayı temsil eder. Örneğin, 200'den 150'ye: ((150 − 200) / 200) × 100 = −%25, bu da %25'lik bir azalmadır."
+            },
+            {
+              "question": "Yüzde değişimi ile mutlak fark arasındaki fark nedir?",
+              "answer": "Mutlak fark basitçe yeni değer eksi orijinal değerdir (Yeni − Orijinal). Yüzde değişimi bu farkı orijinal değerle karşılaştırır ve yüzde olarak ifade eder. Yüzde değişimi, değişimin başlangıç noktanıza göre ne kadar büyük olduğunu anlamanıza yardımcı olur."
+            },
+            {
+              "question": "Bu hesaplayıcıyı negatif değerler için kullanabilir miyim?",
+              "answer": "Evet. Kayıplar, sıfırın altındaki sıcaklıklar veya negatif bakiyeler gibi şeyleri temsil etmek için negatif değerleri kullanabilirsiniz. Hesaplayıcı yine de aynı formülü kullanarak mutlak farkı ve yüzde değişimini hesaplayacaktır. Sadece orijinal değerin sıfır olmadığından emin olun, çünkü sıfıra bölme tanımsızdır."
+            },
+            {
+              "question": "Yüzde artışı ne zaman yararlıdır?",
+              "answer": "Yüzde artışı, bir başlangıç noktasına göre büyümeyi veya düşüşü ölçmek istediğinizde yararlıdır. Yaygın örnekler arasında fiyat değişiklikleri, maaş artışları, gelir büyümesi, kar marjları, nüfus değişiklikleri ve performans iyileştirmeleri yer alır. Farklı ölçeklerdeki değişiklikleri tutarlı bir şekilde karşılaştırmanıza olanak tanır."
+            },
+            {
+              "question": "Bu yüzde artış hesaplayıcısı ücretsiz mi?",
+              "answer": "Evet, bu yüzde artış hesaplayıcısı tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Yüzde değişimini ve mutlak farkı anında görmek için orijinal ve yeni değerleri girmeniz yeterlidir."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Bir sayının yüzdesini, bir sayının diğerinin yüzde kaçı olduğunu ve temel yüzde değişimini hesaplayın",
+          "ratio": "Oran Hesaplayıcı",
+          "ratioDesc": "Sayıları oran olarak karşılaştırın ve basitleştirin",
+          "average": "Ortalama Hesaplayıcı",
+          "averageDesc": "Bir sayı listesinin ortalamasını (aritmetik ortalama) bulun"
+        }
+      }
+    },
     "percentError": {
       "title": "Yüzde Hata Hesaplayıcı",
       "description": "Gerçek ve deneysel değerler arasındaki yüzde hatayı ve mutlak hatayı anında hesaplayın. Bilimsel ölçümler ve hata analizi için ücretsiz çevrimiçi araç.",

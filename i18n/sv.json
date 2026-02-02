@@ -3462,6 +3462,73 @@
         "description": "Addera två tal"
       }
     },
+    "percentageIncrease": {
+      "title": "Procentuell Ökning Kalkylator",
+      "description": "Beräkna procentuell ökning eller minskning mellan två värden. Ange det ursprungliga värdet och det nya värdet för att få den procentuella förändringen och den absoluta skillnaden.",
+      "from": "Från (ursprungligt värde)",
+      "to": "Till (nytt värde)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "percentageChangeLabel": "Procentuell förändring",
+      "differenceLabel": "Skillnad (nytt − ursprungligt)",
+      "increaseNote": "Positivt värde = ökning",
+      "decreaseNote": "Negativt värde = minskning",
+      "calculationHeading": "Beräkning",
+      "summaryLine": "Förändringen från {from} till {to} är {percent}% i förhållande till det ursprungliga värdet.",
+      "seo": {
+        "title": "Procentuell Ökning Kalkylator – Procentuell Förändring Mellan Två Värden",
+        "description": "Gratis procentuell ökning kalkylator för att hitta den procentuella förändringen mellan två värden. Beräkna procentuell ökning eller minskning, absolut skillnad och förstå snabbt tillväxt eller förlust.",
+        "keywords": "procentuell ökning kalkylator, procentuell förändring kalkylator, procentuell förändring, procentskillnad, ökning minskning kalkylator, tillväxttakt kalkylator, förändring mellan två värden",
+        "content": {
+          "heading": "Hur Man Beräknar Procentuell Ökning och Minskning",
+          "paragraph1": "En procentuell ökning kalkylator hjälper dig att mäta hur mycket ett värde har vuxit eller minskat i förhållande till sin ursprungliga storlek. Procentuell förändring berättar storleken på förändringen som en procentandel av det ursprungliga värdet. Detta är användbart för att spåra priser, löner, investeringar, befolkningsförändringar, statistik, prestationsmått och mer.",
+          "paragraph2": "Formeln för procentuell förändring är: Procentuell Förändring = ((Nytt Värde − Ursprungligt Värde) / Ursprungligt Värde) × 100. Om resultatet är positivt representerar det en procentuell ökning. Om resultatet är negativt representerar det en procentuell minskning. Till exempel, om ett pris ökar från 80 till 100, är förändringen ((100 − 80) / 80) × 100 = 25%, så priset ökade med 25%. Om ett värde faller från 200 till 150, är förändringen ((150 − 200) / 200) × 100 = −25%, vilket är en minskning med 25%.",
+          "paragraph3": "För att använda denna kalkylator, ange det ursprungliga värdet i fältet 'Från' och det nya värdet i fältet 'Till'. Verktyget kommer omedelbart att beräkna den absoluta skillnaden (nytt − ursprungligt) och den procentuella förändringen i förhållande till det ursprungliga värdet. Du kan använda heltal, decimaler och till och med negativa värden när du arbetar med data som vinster, temperaturer eller saldon.",
+          "paragraph4": "Procentuell förändring används i stor utsträckning inom finans för att beskriva avkastning, i affärsverksamhet för att spåra intäkts- eller kostnadsförändringar, i statistik för att jämföra data över perioder och i vardagen för att förstå rabatter, försäljning och tillväxt. Vår procentuella ökning kalkylator sparar tid och undviker manuella fel, och ger tydliga resultat som visar både storleken och riktningen på förändringen.",
+          "exampleHeading": "Exempel: Procentuell Ökning och Minskning",
+          "exampleText": "Anta att din månatliga prenumerationskostnad ökar från 12 till 15. Den absoluta skillnaden är 15 − 12 = 3. Den procentuella förändringen är ((15 − 12) / 12) × 100 = 25%, så priset ökade med 25%. Om din elräkning faller från 150 till 120, är skillnaden 120 − 150 = −30. Den procentuella förändringen är ((120 − 150) / 150) × 100 = −20%, vilket betyder att din räkning minskade med 20%."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Hur beräknar jag procentuell ökning mellan två tal?",
+              "answer": "För att beräkna procentuell ökning från ett ursprungligt värde till ett nytt värde, använd formeln: Procentuell Ökning = ((Nytt − Ursprungligt) / Ursprungligt) × 100. Ett positivt resultat betyder att värdet ökade. Till exempel, från 80 till 100: ((100 − 80) / 80) × 100 = 25% ökning."
+            },
+            {
+              "question": "Hur beräknar jag procentuell minskning?",
+              "answer": "Procentuell minskning använder samma formel som procentuell ökning: Procentuell Förändring = ((Nytt − Ursprungligt) / Ursprungligt) × 100. Om resultatet är negativt representerar det en minskning. Till exempel, från 200 till 150: ((150 − 200) / 200) × 100 = −25%, vilket är en minskning med 25%."
+            },
+            {
+              "question": "Vad är skillnaden mellan procentuell förändring och absolut skillnad?",
+              "answer": "Absolut skillnad är helt enkelt det nya värdet minus det ursprungliga värdet (Nytt − Ursprungligt). Procentuell förändring jämför denna skillnad med det ursprungliga värdet och uttrycker det som en procentandel. Procentuell förändring hjälper dig att förstå hur stor förändringen är i förhållande till din utgångspunkt."
+            },
+            {
+              "question": "Kan jag använda denna kalkylator för negativa värden?",
+              "answer": "Ja. Du kan använda negativa värden för att representera saker som förluster, temperaturer under noll eller negativa saldon. Kalkylatorn kommer fortfarande att beräkna den absoluta skillnaden och den procentuella förändringen med samma formel. Se bara till att det ursprungliga värdet inte är noll, eftersom division med noll är odefinierad."
+            },
+            {
+              "question": "När är procentuell ökning användbar?",
+              "answer": "Procentuell ökning är användbar när du vill mäta tillväxt eller minskning i förhållande till en utgångspunkt. Vanliga exempel inkluderar prisförändringar, löneökningar, intäktstillväxt, vinstmarginaler, befolkningsförändringar och prestationsförbättringar. Det låter dig jämföra förändringar över olika skalor på ett konsekvent sätt."
+            },
+            {
+              "question": "Är denna procentuella ökning kalkylator gratis?",
+              "answer": "Ja, denna procentuella ökning kalkylator är helt gratis att använda. Ingen registrering eller betalning krävs. Ange bara de ursprungliga och nya värdena för att omedelbart se den procentuella förändringen och den absoluta skillnaden."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "percentage": "Procent Kalkylator",
+          "percentageDesc": "Beräkna procent av ett tal, vilken procent ett tal är av ett annat och grundläggande procentuell förändring",
+          "ratio": "Förhållande Kalkylator",
+          "ratioDesc": "Jämför tal som förhållanden och förenkla dem",
+          "average": "Medelvärde Kalkylator",
+          "averageDesc": "Hitta medelvärdet (aritmetiskt medelvärde) av en lista med tal"
+        }
+      }
+    },
     "percentError": {
       "title": "Procentuellt Fel Kalkylator",
       "description": "Beräkna procentuellt fel och absolut fel mellan faktiska och experimentella värden omedelbart. Gratis online-verktyg för vetenskapliga mätningar och felanalys.",

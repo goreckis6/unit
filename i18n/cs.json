@@ -3462,6 +3462,73 @@
         "description": "Sečíst dvě čísla"
       }
     },
+    "percentageIncrease": {
+      "title": "Kalkulačka Procentního Nárůstu",
+      "description": "Vypočítejte procentní nárůst nebo pokles mezi dvěma hodnotami. Zadejte původní hodnotu a novou hodnotu pro získání procentní změny a absolutního rozdílu.",
+      "from": "Od (původní hodnota)",
+      "to": "Do (nová hodnota)",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "result": "Výsledek",
+      "percentageChangeLabel": "Procentní změna",
+      "differenceLabel": "Rozdíl (nová − původní)",
+      "increaseNote": "Kladná hodnota = nárůst",
+      "decreaseNote": "Záporná hodnota = pokles",
+      "calculationHeading": "Výpočet",
+      "summaryLine": "Změna z {from} na {to} je {percent}% vzhledem k původní hodnotě.",
+      "seo": {
+        "title": "Kalkulačka Procentního Nárůstu – Procentní Změna Mezi Dvěma Hodnotami",
+        "description": "Bezplatná kalkulačka procentního nárůstu pro nalezení procentní změny mezi dvěma hodnotami. Vypočítejte procentní nárůst nebo pokles, absolutní rozdíl a rychle pochopte růst nebo ztrátu.",
+        "keywords": "kalkulačka procentního nárůstu, kalkulačka procentní změny, procentní změna, procentní rozdíl, kalkulačka nárůstu poklesu, kalkulačka míry růstu, změna mezi dvěma hodnotami",
+        "content": {
+          "heading": "Jak Vypočítat Procentní Nárůst a Pokles",
+          "paragraph1": "Kalkulačka procentního nárůstu vám pomůže změřit, jak moc hodnota vzrostla nebo poklesla vzhledem k její původní velikosti. Procentní změna vám říká velikost změny jako procento původní hodnoty. To je užitečné pro sledování cen, platů, investic, změn populace, statistik, výkonnostních metrik a dalších.",
+          "paragraph2": "Vzorec pro procentní změnu je: Procentní Změna = ((Nová Hodnota − Původní Hodnota) / Původní Hodnota) × 100. Pokud je výsledek kladný, představuje procentní nárůst. Pokud je výsledek záporný, představuje procentní pokles. Například, pokud cena vzroste z 80 na 100, změna je ((100 − 80) / 80) × 100 = 25%, takže cena vzrostla o 25%. Pokud hodnota klesne z 200 na 150, změna je ((150 − 200) / 200) × 100 = −25%, což je pokles o 25%.",
+          "paragraph3": "Pro použití této kalkulačky zadejte původní hodnotu do pole 'Od' a novou hodnotu do pole 'Do'. Nástroj okamžitě vypočítá absolutní rozdíl (nová − původní) a procentní změnu vzhledem k původní hodnotě. Můžete použít celá čísla, desetinná čísla a dokonce záporné hodnoty při práci s daty jako zisky, teploty nebo zůstatky.",
+          "paragraph4": "Procentní změna je široce používána ve financích k popisu výnosů, v podnikání ke sledování změn příjmů nebo nákladů, ve statistikách k porovnání dat v různých obdobích a v každodenním životě k pochopení slev, prodejů a růstu. Naše kalkulačka procentního nárůstu šetří čas a vyhýbá se manuálním chybám, poskytuje jasné výsledky, které ukazují jak velikost, tak směr změny.",
+          "exampleHeading": "Příklad: Procentní Nárůst a Pokles",
+          "exampleText": "Předpokládejme, že náklady na vaše měsíční předplatné vzrostou z 12 na 15. Absolutní rozdíl je 15 − 12 = 3. Procentní změna je ((15 − 12) / 12) × 100 = 25%, takže cena vzrostla o 25%. Pokud váš účet za elektřinu klesne ze 150 na 120, rozdíl je 120 − 150 = −30. Procentní změna je ((120 − 150) / 150) × 100 = −20%, což znamená, že váš účet klesl o 20%."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Jak vypočítám procentní nárůst mezi dvěma čísly?",
+              "answer": "Pro výpočet procentního nárůstu z původní hodnoty na novou hodnotu použijte vzorec: Procentní Nárůst = ((Nová − Původní) / Původní) × 100. Kladný výsledek znamená, že hodnota vzrostla. Například, z 80 na 100: ((100 − 80) / 80) × 100 = 25% nárůst."
+            },
+            {
+              "question": "Jak vypočítám procentní pokles?",
+              "answer": "Procentní pokles používá stejný vzorec jako procentní nárůst: Procentní Změna = ((Nová − Původní) / Původní) × 100. Pokud je výsledek záporný, představuje pokles. Například, z 200 na 150: ((150 − 200) / 200) × 100 = −25%, což je pokles o 25%."
+            },
+            {
+              "question": "Jaký je rozdíl mezi procentní změnou a absolutním rozdílem?",
+              "answer": "Absolutní rozdíl je jednoduše nová hodnota minus původní hodnota (Nová − Původní). Procentní změna porovnává tento rozdíl s původní hodnotou a vyjadřuje jej jako procento. Procentní změna vám pomůže pochopit, jak velká je změna vzhledem k vašemu výchozímu bodu."
+            },
+            {
+              "question": "Mohu použít tuto kalkulačku pro záporné hodnoty?",
+              "answer": "Ano. Můžete použít záporné hodnoty k reprezentaci věcí jako ztráty, teploty pod nulou nebo záporné zůstatky. Kalkulačka stále vypočítá absolutní rozdíl a procentní změnu pomocí stejného vzorce. Jen se ujistěte, že původní hodnota není nula, protože dělení nulou je nedefinováno."
+            },
+            {
+              "question": "Kdy je procentní nárůst užitečný?",
+              "answer": "Procentní nárůst je užitečný, když chcete měřit růst nebo pokles vzhledem k výchozímu bodu. Běžné příklady zahrnují změny cen, zvýšení platu, růst příjmů, ziskové marže, změny populace a zlepšení výkonu. Umožňuje vám porovnávat změny v různých měřítkách konzistentním způsobem."
+            },
+            {
+              "question": "Je tato kalkulačka procentního nárůstu zdarma?",
+              "answer": "Ano, tato kalkulačka procentního nárůstu je zcela zdarma k použití. Není vyžadována žádná registrace ani platba. Jednoduše zadejte původní a novou hodnotu pro okamžité zobrazení procentní změny a absolutního rozdílu."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Související Kalkulačky",
+          "percentage": "Kalkulačka Procent",
+          "percentageDesc": "Vypočítejte procento z čísla, jaké procento je jedno číslo z druhého a základní procentní změnu",
+          "ratio": "Kalkulačka Poměru",
+          "ratioDesc": "Porovnejte čísla jako poměry a zjednodušte je",
+          "average": "Kalkulačka Průměru",
+          "averageDesc": "Najděte průměr (aritmetický průměr) seznamu čísel"
+        }
+      }
+    },
     "percentError": {
       "title": "Kalkulačka procentuální chyby",
       "description": "Vypočítejte procentuální chybu a absolutní chybu mezi skutečnými a experimentálními hodnotami okamžitě. Bezplatný online nástroj pro vědecká měření a analýzu chyb.",

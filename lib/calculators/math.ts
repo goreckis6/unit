@@ -121,6 +121,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'percentage-increase',
+    titleKey: 'percentageIncrease.title',
+    descKey: 'percentageIncrease.description',
+    path: '/calculators/math/percentage-increase',
+    category: 'math',
+  },
+  {
     id: 'percent-error',
     titleKey: 'percentError.title',
     descKey: 'percentError.description',

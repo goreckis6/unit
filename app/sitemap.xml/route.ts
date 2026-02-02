@@ -27,6 +27,7 @@ export async function GET() {
     '/calculators/math/remainder',
     '/calculators/math/long-division',
     '/calculators/math/ratio',
+    '/calculators/math/percentage-increase',
     '/calculators/others/text-to-binary',
     '/calculators/others/ascii-converter',
     '/calculators/others/caesar-cipher',

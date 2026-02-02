@@ -3462,6 +3462,73 @@
         "description": "Laske kaksi lukua yhteen"
       }
     },
+    "percentageIncrease": {
+      "title": "Prosentuaalinen Kasvu Laskin",
+      "description": "Laske prosentuaalinen kasvu tai lasku kahden arvon välillä. Syötä alkuperäinen arvo ja uusi arvo saadaksesi prosentuaalisen muutoksen ja absoluuttisen eron.",
+      "from": "Mistä (alkuperäinen arvo)",
+      "to": "Mihin (uusi arvo)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "percentageChangeLabel": "Prosentuaalinen muutos",
+      "differenceLabel": "Ero (uusi − alkuperäinen)",
+      "increaseNote": "Positiivinen arvo = kasvu",
+      "decreaseNote": "Negatiivinen arvo = lasku",
+      "calculationHeading": "Laskenta",
+      "summaryLine": "Muutos {from}:sta {to}:een on {percent}% alkuperäiseen arvoon verrattuna.",
+      "seo": {
+        "title": "Prosentuaalinen Kasvu Laskin – Prosentuaalinen Muutos Kahden Arvon Välillä",
+        "description": "Ilmainen prosentuaalinen kasvu laskin prosentuaalisen muutoksen löytämiseen kahden arvon välillä. Laske prosentuaalinen kasvu tai lasku, absoluuttinen ero ja ymmärrä nopeasti kasvu tai tappio.",
+        "keywords": "prosentuaalinen kasvu laskin, prosentuaalinen muutos laskin, prosentuaalinen muutos, prosentuaalinen ero, kasvu lasku laskin, kasvuvauhti laskin, muutos kahden arvon välillä",
+        "content": {
+          "heading": "Kuinka Laskea Prosentuaalinen Kasvu ja Lasku",
+          "paragraph1": "Prosentuaalinen kasvu laskin auttaa sinua mittaamaan, kuinka paljon arvo on kasvanut tai laskenut suhteessa alkuperäiseen kokoonsa. Prosentuaalinen muutos kertoo muutoksen suuruuden prosentteina alkuperäisestä arvosta. Tämä on hyödyllistä hintojen, palkkojen, sijoitusten, väestömuutosten, tilastojen, suorituskykymittareiden ja muiden seurannassa.",
+          "paragraph2": "Prosentuaalisen muutoksen kaava on: Prosentuaalinen Muutos = ((Uusi Arvo − Alkuperäinen Arvo) / Alkuperäinen Arvo) × 100. Jos tulos on positiivinen, se edustaa prosentuaalista kasvua. Jos tulos on negatiivinen, se edustaa prosentuaalista laskua. Esimerkiksi, jos hinta nousee 80:sta 100:aan, muutos on ((100 − 80) / 80) × 100 = 25%, joten hinta nousi 25%. Jos arvo laskee 200:sta 150:een, muutos on ((150 − 200) / 200) × 100 = −25%, mikä on 25% lasku.",
+          "paragraph3": "Käyttääksesi tätä laskinta, syötä alkuperäinen arvo 'Mistä'-kenttään ja uusi arvo 'Mihin'-kenttään. Työkalu laskee välittömästi absoluuttisen eron (uusi − alkuperäinen) ja prosentuaalisen muutoksen suhteessa alkuperäiseen arvoon. Voit käyttää kokonaislukuja, desimaaleja ja jopa negatiivisia arvoja, kun käsittelet tietoja kuten voittoja, lämpötiloja tai saldoja.",
+          "paragraph4": "Prosentuaalista muutosta käytetään laajasti rahoituksessa tuottojen kuvaamiseen, liiketoiminnassa tulojen tai kustannusten muutosten seuraamiseen, tilastoissa tietojen vertailuun eri ajanjaksojen välillä ja jokapäiväisessä elämässä alennusten, myyntien ja kasvun ymmärtämiseen. Prosentuaalinen kasvu laskimme säästää aikaa ja välttää manuaaliset virheet, tarjoten selkeät tulokset, jotka näyttävät sekä muutoksen suuruuden että suunnan.",
+          "exampleHeading": "Esimerkki: Prosentuaalinen Kasvu ja Lasku",
+          "exampleText": "Oletetaan, että kuukausittaisen tilauksesi hinta nousee 12:sta 15:een. Absoluuttinen ero on 15 − 12 = 3. Prosentuaalinen muutos on ((15 − 12) / 12) × 100 = 25%, joten hinta nousi 25%. Jos sähkölaskusi laskee 150:stä 120:een, ero on 120 − 150 = −30. Prosentuaalinen muutos on ((120 − 150) / 150) × 100 = −20%, mikä tarkoittaa, että laskusi laski 20%."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Kuinka lasken prosentuaalisen kasvun kahden luvun välillä?",
+              "answer": "Laskeaksesi prosentuaalisen kasvun alkuperäisestä arvosta uuteen arvoon, käytä kaavaa: Prosentuaalinen Kasvu = ((Uusi − Alkuperäinen) / Alkuperäinen) × 100. Positiivinen tulos tarkoittaa, että arvo kasvoi. Esimerkiksi 80:sta 100:aan: ((100 − 80) / 80) × 100 = 25% kasvu."
+            },
+            {
+              "question": "Kuinka lasken prosentuaalisen laskun?",
+              "answer": "Prosentuaalinen lasku käyttää samaa kaavaa kuin prosentuaalinen kasvu: Prosentuaalinen Muutos = ((Uusi − Alkuperäinen) / Alkuperäinen) × 100. Jos tulos on negatiivinen, se edustaa laskua. Esimerkiksi 200:sta 150:een: ((150 − 200) / 200) × 100 = −25%, mikä on 25% lasku."
+            },
+            {
+              "question": "Mikä on ero prosentuaalisen muutoksen ja absoluuttisen eron välillä?",
+              "answer": "Absoluuttinen ero on yksinkertaisesti uusi arvo miinus alkuperäinen arvo (Uusi − Alkuperäinen). Prosentuaalinen muutos vertaa tätä eroa alkuperäiseen arvoon ja ilmaisee sen prosentteina. Prosentuaalinen muutos auttaa sinua ymmärtämään, kuinka suuri muutos on suhteessa lähtöpisteeseesi."
+            },
+            {
+              "question": "Voinko käyttää tätä laskinta negatiivisille arvoille?",
+              "answer": "Kyllä. Voit käyttää negatiivisia arvoja edustamaan asioita kuten tappiot, lämpötilat nollan alapuolella tai negatiiviset saldot. Laskin laskee silti absoluuttisen eron ja prosentuaalisen muutoksen käyttämällä samaa kaavaa. Varmista vain, että alkuperäinen arvo ei ole nolla, koska nollalla jakaminen on määrittelemätön."
+            },
+            {
+              "question": "Milloin prosentuaalinen kasvu on hyödyllinen?",
+              "answer": "Prosentuaalinen kasvu on hyödyllinen, kun haluat mitata kasvua tai laskua suhteessa lähtöpisteeseen. Yleisiä esimerkkejä ovat hinnanmuutokset, palkankorotukset, tulokasvu, voittomarginaalit, väestömuutokset ja suorituskyvyn parannukset. Se mahdollistaa muutosten vertailun eri asteikkojen välillä johdonmukaisella tavalla."
+            },
+            {
+              "question": "Onko tämä prosentuaalinen kasvu laskin ilmainen?",
+              "answer": "Kyllä, tämä prosentuaalinen kasvu laskin on täysin ilmainen käyttää. Rekisteröitymistä tai maksua ei vaadita. Syötä vain alkuperäinen ja uusi arvo nähdäksesi välittömästi prosentuaalisen muutoksen ja absoluuttisen eron."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "percentage": "Prosentti Laskin",
+          "percentageDesc": "Laske luvun prosentti, mikä prosentti yksi luku on toisesta ja perusprosentuaalinen muutos",
+          "ratio": "Suhde Laskin",
+          "ratioDesc": "Vertaa lukuja suhteina ja yksinkertaista niitä",
+          "average": "Keskiarvo Laskin",
+          "averageDesc": "Etsi lukujen listan keskiarvo (aritmeettinen keskiarvo)"
+        }
+      }
+    },
     "percentError": {
       "title": "Prosentuaalinen Virhe Laskin",
       "description": "Laske prosentuaalinen virhe ja absoluuttinen virhe todellisten ja kokeellisten arvojen välillä välittömästi. Ilmainen online-työkalu tieteellisiin mittauksiin ja virheanalyysiin.",

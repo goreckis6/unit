@@ -48,6 +48,15 @@ function formatFraction(f: Fraction): string {
   return `${nf.n.toString()}/${nf.d.toString()}`;
 }
 
+function formatRawFraction(f: Fraction): string {
+  // Keep as-is (do NOT reduce), but keep denominator positive for display.
+  if (f.d === 0n) return `${f.n.toString()}/0`;
+  const sign = f.d < 0n ? -1n : 1n;
+  const n = f.n * sign;
+  const d = f.d * sign;
+  return `${n.toString()}/${d.toString()}`;
+}
+
 function formatMixedNumber(f: Fraction): string {
   const nf = normalize(f);
   const sign = nf.n < 0n ? -1n : 1n;
@@ -122,7 +131,9 @@ export function EquivalentFractionsCalculator() {
 
     const equivalents: Array<{ k: number; frac: Fraction }> = [];
     for (let k = 1; k <= max; k++) {
-      equivalents.push({ k, frac: normalize({ n: simplified.n * BigInt(k), d: simplified.d * BigInt(k) }) });
+      // IMPORTANT: equivalent fractions should NOT be reduced back to simplest form,
+      // otherwise every entry looks the same (e.g. 2/4 becomes 1/2).
+      equivalents.push({ k, frac: { n: simplified.n * BigInt(k), d: simplified.d * BigInt(k) } });
     }
 
     setCalc({ ok: true, input, gcd: g, simplified, maxMultiplier: max, equivalents });
@@ -275,10 +286,10 @@ export function EquivalentFractionsCalculator() {
                         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'baseline', minWidth: 0 }}>
                           <span style={{ fontWeight: 800, whiteSpace: 'nowrap' }}>{t('multiplierLabel', { k })}</span>
                           <span className="result-value" style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                            {formatFraction(frac)}
+                            {formatRawFraction(frac)}
                           </span>
                         </div>
-                        <CopyButton text={formatFraction(frac)} />
+                        <CopyButton text={formatRawFraction(frac)} />
                       </div>
                     ))}
                   </div>

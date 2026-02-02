@@ -810,6 +810,69 @@
         }
       }
     },
+    "commonFactors": {
+      "title": "Ortak Çarpanlar Hesaplayıcı",
+      "description": "İki sayının tüm ortak çarpanlarını ve en büyük ortak böleni (EBOB) adım adım açıklama ile anında bulun",
+      "number1": "İlk Sayı",
+      "number2": "İkinci Sayı",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "gcfLabel": "En Büyük Ortak Bölen (EBOB)",
+      "commonFactorsLabel": "Tüm Ortak Çarpanlar",
+      "seo": {
+        "title": "Ortak Çarpanlar Hesaplayıcı – EBOB ve Tüm Ortak Çarpanları Çevrimiçi Bulun",
+        "description": "İki sayının tüm ortak çarpanlarını ve en büyük ortak böleni (EBOB) bulmak için ücretsiz çevrimiçi hesaplayıcı. Matematik ödevleri için açık açıklamalarla anında sonuçlar alın.",
+        "keywords": "ortak çarpanlar hesaplayıcı, EBOB hesaplayıcı, en büyük ortak bölen, ortak bölenler, çarpanlar hesaplayıcı, GCD hesaplayıcı, matematik hesaplayıcı, sayılar teorisi",
+        "content": {
+          "heading": "Ortak Çarpanlar ve EBOB Nasıl Bulunur",
+          "paragraph1": "Ortak çarpanlar, iki veya daha fazla sayıyı kalan bırakmadan eşit olarak bölen sayılardır. En büyük ortak bölen (EBOB), en büyük ortak bölücü olarak da bilinir, verilen tüm sayıları eşit olarak bölen en büyük sayıdır. Ortak çarpanları bulmak, kesirleri basitleştirmek, denklemleri çözmek ve oranlarla çalışmak için kullanılan matematikte temel bir beceridir. Ortak Çarpanlar Hesaplayıcımız, herhangi iki sayının tüm ortak çarpanlarını ve EBOB'unu anında bulmayı kolaylaştırır.",
+          "paragraph2": "Ortak çarpanları manuel olarak bulmak için önce her sayının tüm çarpanlarını listeleyin. Çarpan, verilen sayıyı eşit olarak bölen herhangi bir tam sayıdır. Örneğin, 12'nin çarpanları 1, 2, 3, 4, 6 ve 12'dir çünkü bu sayıların her biri 12'yi eşit olarak böler. 18'in çarpanları 1, 2, 3, 6, 9 ve 18'dir. Ortak çarpanlar, her iki listede de görünen sayılardır: 1, 2, 3 ve 6. Bunlardan en büyüğü 6'dır, yani EBOB(12, 18) = 6.",
+          "paragraph3": "EBOB'un matematik ve günlük yaşamda birçok pratik uygulaması vardır. Kesirleri en basit formlarına basitleştirmek (pay ve paydanın EBOB'u kesri azaltmak için kullanılır), eşit gruplar veya düzenlemeler içeren kelime problemlerini çözmek, dikdörtgen bir alanı eşit olarak kaplayabilen en büyük kare karoyu bulmak, öğelerin eşit gruplara nasıl bölüneceğini belirlemek ve sayılar teorisi ve cebirdeki problemleri çözmek için gereklidir. Ortak çarpanları anlamak, daha gelişmiş matematiksel kavramlar için güçlü bir temel oluşturmaya yardımcı olur.",
+          "paragraph4": "Hesaplayıcımız, her iki sayının tüm çarpanlarını bulmak için verimli bir algoritma kullanır, ardından hangi çarpanların her ikisinde de ortak olduğunu belirler. EBOB, ortak çarpanlar listesindeki en büyük değerdir. Çok büyük sayılar için çarpanları manuel olarak bulmak zaman alıcı olabilir, ancak hesaplayıcımız herhangi bir pozitif tam sayıyı anında işler. İster ödev yapan bir öğrenci, ister örnek oluşturan bir öğretmen veya hızla ortak çarpanlar bulmaya ihtiyaç duyan herhangi biri olun, aracımız saniyeler içinde doğru sonuçlar sağlar.",
+          "exampleHeading": "Yaygın Örnekler",
+          "exampleText": "Örnek 1: 12 ve 18'in ortak çarpanları 1, 2, 3, 6'dır. EBOB = 6. Örnek 2: 24 ve 36'nın ortak çarpanları 1, 2, 3, 4, 6, 12'dir. EBOB = 12. Örnek 3: 15 ve 25'in ortak çarpanları 1, 5'tir. EBOB = 5. Örnek 4: 7 ve 13'ün ortak çarpanları 1'dir. EBOB = 1 (asal sayıların 1 dışında ortak çarpanları yoktur)."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {
+              "question": "Ortak çarpanlar ve EBOB arasındaki fark nedir?",
+              "answer": "Ortak çarpanlar, iki veya daha fazla verilen sayıyı eşit olarak bölen tüm sayılardır. EBOB (En Büyük Ortak Bölen), tüm ortak çarpanlar arasındaki en büyük sayıdır. Örneğin, 12 ve 18'in ortak çarpanları 1, 2, 3 ve 6'dır, EBOB ise 6'dır çünkü en büyük ortak çarpandır."
+            },
+            {
+              "question": "İki sayının EBOB'u nasıl bulunur?",
+              "answer": "EBOB'u bulmak için her sayının tüm çarpanlarını listeleyin, ardından her iki listede de görünen çarpanları belirleyin. Bu ortak çarpanların en büyüğü EBOB'dur. Alternatif olarak, Öklid algoritmasını (tekrarlanan bölme ve kalıntıları bulma) veya asal çarpanlara ayırma yöntemini kullanabilirsiniz. Hesaplayıcımız, herhangi iki pozitif tam sayı için EBOB'u anında bulur."
+            },
+            {
+              "question": "İki asal sayının EBOB'u nedir?",
+              "answer": "İki farklı asal sayının EBOB'u her zaman 1'dir. Asal sayıların tam olarak iki çarpanı vardır: 1 ve kendisi. Farklı asal sayılar 1 dışında hiçbir çarpanı paylaşmadığından, EBOB'ları 1'dir. Örneğin, EBOB(7, 13) = 1, EBOB(11, 17) = 1."
+            },
+            {
+              "question": "EBOB bulmak neden önemlidir?",
+              "answer": "EBOB birçok pratik uygulamada kullanılır: kesirleri en basit forma basitleştirmek (pay ve paydayı EBOB'larına bölmek), eşit gruplar veya dağıtımları içeren problemleri çözmek, farklı uzunluklara eşit olarak uyan en büyük ölçümü bulmak, oranları azaltmak ve cebirsel denklemleri çözmek. Sayılar teorisi ve aritmetikte temel bir kavramdır."
+            },
+            {
+              "question": "İki sayının EBOB'u sayılardan birinden büyük olabilir mi?",
+              "answer": "Hayır. İki sayının EBOB'u, iki sayının küçüğünden asla büyük olamaz. Aslında, mümkün olan maksimum EBOB, küçük sayının kendisidir ve bu, küçük sayı büyük sayıyı eşit olarak böldüğünde gerçekleşir. Örneğin, EBOB(6, 18) = 6 çünkü 6, 18'i eşit olarak böler."
+            },
+            {
+              "question": "1 ve herhangi bir sayının EBOB'u nedir?",
+              "answer": "1 ve herhangi bir pozitif tam sayının EBOB'u her zaman 1'dir. Bunun nedeni, 1'in tek çarpanının 1 olması ve 1'in her pozitif tam sayının bir çarpanı olmasıdır. Bu nedenle, 1 tek ortak çarpandır ve bu da onu EBOB yapar. Örneğin, EBOB(1, 100) = 1, EBOB(1, 57) = 1."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın",
+          "percentageIncrease": "Yüzde Artış Hesaplayıcı",
+          "percentageIncreaseDesc": "İki sayı arasındaki yüzde artışı hesaplayın",
+          "multiplication": "Çarpma Hesaplayıcı",
+          "multiplicationDesc": "Sayıları hızlı ve doğru bir şekilde ayrıntılı adımlarla çarpın"
+        }
+      }
+    },
     "quadraticEquation": {
       "title": "İkinci Dereceden Denklem Hesaplayıcı",
       "description": "İkinci dereceden denklemleri çözün ve gerçek veya karmaşık kökleri anında bulun.",

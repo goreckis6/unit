@@ -810,6 +810,69 @@
         }
       }
     },
+    "commonFactors": {
+      "title": "Calculateur de Facteurs Communs",
+      "description": "Trouvez tous les facteurs communs et le plus grand commun diviseur (PGCD) de deux nombres instantanément avec une explication étape par étape",
+      "number1": "Premier Nombre",
+      "number2": "Deuxième Nombre",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "gcfLabel": "Plus Grand Commun Diviseur (PGCD)",
+      "commonFactorsLabel": "Tous les Facteurs Communs",
+      "seo": {
+        "title": "Calculateur de Facteurs Communs – Trouvez PGCD & Tous les Facteurs Communs en Ligne",
+        "description": "Calculateur en ligne gratuit pour trouver tous les facteurs communs et le plus grand commun diviseur (PGCD) de deux nombres. Obtenez des résultats instantanés avec des explications claires pour les devoirs de mathématiques.",
+        "keywords": "calculateur facteurs communs, calculateur PGCD, plus grand commun diviseur, diviseurs communs, calculateur de facteurs, calculateur GCD, calculateur mathématique, théorie des nombres",
+        "content": {
+          "heading": "Comment Trouver les Facteurs Communs et le PGCD",
+          "paragraph1": "Les facteurs communs sont des nombres qui divisent uniformément deux ou plusieurs nombres sans laisser de reste. Le plus grand commun diviseur (PGCD), également connu sous le nom de plus grand commun diviseur, est le plus grand nombre qui divise uniformément tous les nombres donnés. Trouver les facteurs communs est une compétence fondamentale en mathématiques, utilisée pour simplifier les fractions, résoudre des équations et travailler avec des rapports. Notre Calculateur de Facteurs Communs facilite la recherche instantanée de tous les facteurs communs et du PGCD de deux nombres quelconques.",
+          "paragraph2": "Pour trouver les facteurs communs manuellement, listez d'abord tous les facteurs de chaque nombre. Un facteur est tout nombre entier qui divise uniformément le nombre donné. Par exemple, les facteurs de 12 sont 1, 2, 3, 4, 6 et 12 car chacun de ces nombres divise uniformément 12. Les facteurs de 18 sont 1, 2, 3, 6, 9 et 18. Les facteurs communs sont les nombres qui apparaissent dans les deux listes : 1, 2, 3 et 6. Le plus grand de ceux-ci est 6, donc PGCD(12, 18) = 6.",
+          "paragraph3": "Le PGCD a de nombreuses applications pratiques en mathématiques et dans la vie quotidienne. Il est essentiel pour simplifier les fractions à leur forme la plus simple (le PGCD du numérateur et du dénominateur est utilisé pour réduire la fraction), résoudre des problèmes de mots impliquant des groupes égaux ou des arrangements, trouver le plus grand carreau carré qui peut couvrir uniformément une zone rectangulaire, déterminer comment diviser des éléments en groupes égaux et résoudre des problèmes de théorie des nombres et d'algèbre. Comprendre les facteurs communs aide à construire une base solide pour des concepts mathématiques plus avancés.",
+          "paragraph4": "Notre calculateur utilise un algorithme efficace pour trouver tous les facteurs des deux nombres, puis identifie quels facteurs sont communs aux deux. Le PGCD est simplement la plus grande valeur dans la liste des facteurs communs. Pour de très grands nombres, trouver des facteurs manuellement peut prendre du temps, mais notre calculateur gère n'importe quels entiers positifs instantanément. Que vous soyez un étudiant travaillant sur des devoirs, un enseignant créant des exemples ou toute personne ayant besoin de trouver rapidement des facteurs communs, notre outil fournit des résultats précis en quelques secondes.",
+          "exampleHeading": "Exemples Courants",
+          "exampleText": "Exemple 1 : Les facteurs communs de 12 et 18 sont 1, 2, 3, 6. PGCD = 6. Exemple 2 : Les facteurs communs de 24 et 36 sont 1, 2, 3, 4, 6, 12. PGCD = 12. Exemple 3 : Les facteurs communs de 15 et 25 sont 1, 5. PGCD = 5. Exemple 4 : Les facteurs communs de 7 et 13 sont 1. PGCD = 1 (les nombres premiers n'ont pas de facteurs communs sauf 1)."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Quelle est la différence entre les facteurs communs et le PGCD ?",
+              "answer": "Les facteurs communs sont tous les nombres qui divisent uniformément deux ou plusieurs nombres donnés. Le PGCD (Plus Grand Commun Diviseur) est le plus grand nombre parmi tous les facteurs communs. Par exemple, les facteurs communs de 12 et 18 sont 1, 2, 3 et 6, tandis que le PGCD est 6 car c'est le plus grand facteur commun."
+            },
+            {
+              "question": "Comment trouver le PGCD de deux nombres ?",
+              "answer": "Pour trouver le PGCD, listez tous les facteurs de chaque nombre, puis identifiez les facteurs qui apparaissent dans les deux listes. Le plus grand de ces facteurs communs est le PGCD. Alternativement, vous pouvez utiliser l'algorithme euclidien (division répétée et recherche de restes) ou la méthode de factorisation première. Notre calculateur trouve le PGCD instantanément pour deux entiers positifs quelconques."
+            },
+            {
+              "question": "Quel est le PGCD de deux nombres premiers ?",
+              "answer": "Le PGCD de deux nombres premiers différents est toujours 1. Les nombres premiers ont exactement deux facteurs : 1 et eux-mêmes. Comme différents nombres premiers ne partagent aucun facteur autre que 1, leur PGCD est 1. Par exemple, PGCD(7, 13) = 1, PGCD(11, 17) = 1."
+            },
+            {
+              "question": "Pourquoi trouver le PGCD est-il important ?",
+              "answer": "Le PGCD est utilisé dans de nombreuses applications pratiques : simplifier les fractions à leur forme la plus simple (diviser le numérateur et le dénominateur par leur PGCD), résoudre des problèmes impliquant des groupes égaux ou des distributions, trouver la plus grande mesure qui s'adapte uniformément à différentes longueurs, réduire les rapports et résoudre des équations algébriques. C'est un concept fondamental en théorie des nombres et en arithmétique."
+            },
+            {
+              "question": "Le PGCD de deux nombres peut-il être plus grand que l'un des nombres ?",
+              "answer": "Non. Le PGCD de deux nombres ne peut jamais être plus grand que le plus petit des deux nombres. En fait, le PGCD maximum possible est le plus petit nombre lui-même, ce qui se produit lorsque le plus petit nombre divise uniformément le plus grand nombre. Par exemple, PGCD(6, 18) = 6 car 6 divise uniformément 18."
+            },
+            {
+              "question": "Quel est le PGCD de 1 et de n'importe quel nombre ?",
+              "answer": "Le PGCD de 1 et de tout entier positif est toujours 1. C'est parce que 1 est le seul facteur de 1, et 1 est un facteur de chaque entier positif. Par conséquent, 1 est le seul facteur commun, ce qui en fait le PGCD. Par exemple, PGCD(1, 100) = 1, PGCD(1, 57) = 1."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Connexes",
+          "percentage": "Calculateur de Pourcentage",
+          "percentageDesc": "Calculez les valeurs de pourcentage, le changement de pourcentage et les relations de pourcentage",
+          "percentageIncrease": "Calculateur d'Augmentation de Pourcentage",
+          "percentageIncreaseDesc": "Calculez l'augmentation de pourcentage entre deux nombres",
+          "multiplication": "Calculateur de Multiplication",
+          "multiplicationDesc": "Multipliez les nombres rapidement et avec précision avec des étapes détaillées"
+        }
+      }
+    },
     "quadraticEquation": {
       "title": "Calculateur d'Équation Quadratique",
       "description": "Résolvez les équations quadratiques et obtenez des racines réelles ou complexes instantanément.",

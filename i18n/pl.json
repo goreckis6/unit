@@ -810,6 +810,69 @@
         }
       }
     },
+    "commonFactors": {
+      "title": "Kalkulator Wspólnych Dzielników",
+      "description": "Znajdź wszystkie wspólne dzielniki i największy wspólny dzielnik (NWD) dwóch liczb natychmiast z wyjaśnieniem krok po kroku",
+      "number1": "Pierwsza Liczba",
+      "number2": "Druga Liczba",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "gcfLabel": "Największy Wspólny Dzielnik (NWD)",
+      "commonFactorsLabel": "Wszystkie Wspólne Dzielniki",
+      "seo": {
+        "title": "Kalkulator Wspólnych Dzielników – Znajdź NWD i Wszystkie Wspólne Dzielniki Online",
+        "description": "Darmowy kalkulator online do znajdowania wszystkich wspólnych dzielników i największego wspólnego dzielnika (NWD) dwóch liczb. Uzyskaj natychmiastowe wyniki z przejrzystymi wyjaśnieniami do zadań matematycznych.",
+        "keywords": "kalkulator wspólnych dzielników, kalkulator NWD, największy wspólny dzielnik, wspólne dzielniki, kalkulator dzielników, kalkulator NWD, kalkulator matematyczny, teoria liczb",
+        "content": {
+          "heading": "Jak Znaleźć Wspólne Dzielniki i NWD",
+          "paragraph1": "Wspólne dzielniki to liczby, które dzielą równo dwie lub więcej liczb bez reszty. Największy wspólny dzielnik (NWD), znany również jako największy wspólny podzielnik, to największa liczba, która dzieli równo wszystkie podane liczby. Znajdowanie wspólnych dzielników jest podstawową umiejętnością w matematyce, używaną do upraszczania ułamków, rozwiązywania równań i pracy ze stosunkami. Nasz Kalkulator Wspólnych Dzielników ułatwia natychmiastowe znalezienie wszystkich wspólnych dzielników i NWD dowolnych dwóch liczb.",
+          "paragraph2": "Aby znaleźć wspólne dzielniki ręcznie, najpierw wypisz wszystkie dzielniki każdej liczby. Dzielnik to każda liczba całkowita, która dzieli równo daną liczbę. Na przykład, dzielniki 12 to 1, 2, 3, 4, 6 i 12, ponieważ każda z tych liczb dzieli równo 12. Dzielniki 18 to 1, 2, 3, 6, 9 i 18. Wspólne dzielniki to liczby, które pojawiają się na obu listach: 1, 2, 3 i 6. Największym z nich jest 6, więc NWD(12, 18) = 6.",
+          "paragraph3": "NWD ma wiele praktycznych zastosowań w matematyce i życiu codziennym. Jest niezbędny do upraszczania ułamków do najprostszej postaci (NWD licznika i mianownika służy do skracania ułamka), rozwiązywania zadań tekstowych dotyczących równych grup lub układów, znajdowania największego kwadratowego kafelka, który może równomiernie pokryć prostokątny obszar, określania, jak podzielić przedmioty na równe grupy, i rozwiązywania problemów w teorii liczb i algebrze. Zrozumienie wspólnych dzielników pomaga zbudować solidne podstawy dla bardziej zaawansowanych koncepcji matematycznych.",
+          "paragraph4": "Nasz kalkulator używa wydajnego algorytmu do znajdowania wszystkich dzielników obu liczb, a następnie identyfikuje, które dzielniki są wspólne dla obu. NWD jest po prostu największą wartością na liście wspólnych dzielników. Dla bardzo dużych liczb ręczne znajdowanie dzielników może być czasochłonne, ale nasz kalkulator obsługuje dowolne dodatnie liczby całkowite natychmiast. Niezależnie od tego, czy jesteś uczniem pracującym nad zadaniem domowym, nauczycielem tworzącym przykłady, czy kimkolwiek, kto potrzebuje szybko znaleźć wspólne dzielniki, nasze narzędzie dostarcza dokładnych wyników w sekundach.",
+          "exampleHeading": "Typowe Przykłady",
+          "exampleText": "Przykład 1: Wspólne dzielniki 12 i 18 to 1, 2, 3, 6. NWD = 6. Przykład 2: Wspólne dzielniki 24 i 36 to 1, 2, 3, 4, 6, 12. NWD = 12. Przykład 3: Wspólne dzielniki 15 i 25 to 1, 5. NWD = 5. Przykład 4: Wspólne dzielniki 7 i 13 to 1. NWD = 1 (liczby pierwsze nie mają wspólnych dzielników poza 1)."
+        },
+        "faq": {
+          "heading": "Najczęściej Zadawane Pytania",
+          "items": [
+            {
+              "question": "Jaka jest różnica między wspólnymi dzielnikami a NWD?",
+              "answer": "Wspólne dzielniki to wszystkie liczby, które dzielą równo dwie lub więcej podanych liczb. NWD (Największy Wspólny Dzielnik) to największa liczba spośród wszystkich wspólnych dzielników. Na przykład, wspólne dzielniki 12 i 18 to 1, 2, 3 i 6, podczas gdy NWD wynosi 6, ponieważ jest największym wspólnym dzielnikiem."
+            },
+            {
+              "question": "Jak znaleźć NWD dwóch liczb?",
+              "answer": "Aby znaleźć NWD, wypisz wszystkie dzielniki każdej liczby, a następnie zidentyfikuj dzielniki, które pojawiają się na obu listach. Największy z tych wspólnych dzielników to NWD. Alternatywnie można użyć algorytmu Euklidesa (powtarzane dzielenie i znajdowanie reszty) lub metody rozkładu na czynniki pierwsze. Nasz kalkulator znajduje NWD natychmiast dla dowolnych dwóch dodatnich liczb całkowitych."
+            },
+            {
+              "question": "Jaki jest NWD dwóch liczb pierwszych?",
+              "answer": "NWD dwóch różnych liczb pierwszych zawsze wynosi 1. Liczby pierwsze mają dokładnie dwa dzielniki: 1 i samą siebie. Ponieważ różne liczby pierwsze nie dzielą żadnych dzielników poza 1, ich NWD wynosi 1. Na przykład, NWD(7, 13) = 1, NWD(11, 17) = 1."
+            },
+            {
+              "question": "Dlaczego znajdowanie NWD jest ważne?",
+              "answer": "NWD jest używany w wielu praktycznych zastosowaniach: upraszczanie ułamków do najprostszej postaci (dziel licznik i mianownik przez ich NWD), rozwiązywanie problemów dotyczących równych grup lub dystrybucji, znajdowanie największego pomiaru, który pasuje równomiernie do różnych długości, redukowanie stosunków i rozwiązywanie równań algebraicznych. Jest to fundamentalna koncepcja w teorii liczb i arytmetyce."
+            },
+            {
+              "question": "Czy NWD dwóch liczb może być większy niż jedna z liczb?",
+              "answer": "Nie. NWD dwóch liczb nigdy nie może być większy niż mniejsza z dwóch liczb. W rzeczywistości, maksymalny możliwy NWD to mniejsza liczba sama w sobie, co zdarza się, gdy mniejsza liczba dzieli równo większą liczbę. Na przykład, NWD(6, 18) = 6, ponieważ 6 dzieli równo 18."
+            },
+            {
+              "question": "Jaki jest NWD 1 i dowolnej liczby?",
+              "answer": "NWD 1 i dowolnej dodatniej liczby całkowitej zawsze wynosi 1. Jest tak, ponieważ 1 jest jedynym dzielnikiem 1, a 1 jest dzielnikiem każdej dodatniej liczby całkowitej. Dlatego 1 jest jedynym wspólnym dzielnikiem, co czyni go NWD. Na przykład, NWD(1, 100) = 1, NWD(1, 57) = 1."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "percentage": "Kalkulator Procentów",
+          "percentageDesc": "Oblicz wartości procentowe, zmianę procentową i relacje procentowe",
+          "percentageIncrease": "Kalkulator Wzrostu Procentowego",
+          "percentageIncreaseDesc": "Oblicz wzrost procentowy między dwiema liczbami",
+          "multiplication": "Kalkulator Mnożenia",
+          "multiplicationDesc": "Mnóż liczby szybko i dokładnie ze szczegółowymi krokami"
+        }
+      }
+    },
     "quadraticEquation": {
       "title": "Kalkulator Równań Kwadratowych",
       "description": "Rozwiązuj równania kwadratowe i otrzymuj pierwiastki rzeczywiste lub zespolone natychmiast.",

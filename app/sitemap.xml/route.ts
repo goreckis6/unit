@@ -19,6 +19,7 @@ export async function GET() {
     '/calculators/math/sine',
     '/calculators/math/arcsin',
     '/calculators/math/arctan',
+    '/calculators/math/common-factors',
     '/calculators/math/average',
     '/calculators/math/quadratic-equation',
     '/calculators/math/pythagorean-theorem',

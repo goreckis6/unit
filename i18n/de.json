@@ -810,6 +810,69 @@
         }
       }
     },
+    "commonFactors": {
+      "title": "Gemeinsame Teiler Rechner",
+      "description": "Finden Sie alle gemeinsamen Teiler und den größten gemeinsamen Teiler (ggT) von zwei Zahlen sofort mit schrittweiser Erklärung",
+      "number1": "Erste Zahl",
+      "number2": "Zweite Zahl",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "gcfLabel": "Größter Gemeinsamer Teiler (ggT)",
+      "commonFactorsLabel": "Alle Gemeinsamen Teiler",
+      "seo": {
+        "title": "Gemeinsame Teiler Rechner – Finden Sie ggT & Alle Gemeinsamen Teiler Online",
+        "description": "Kostenloser Online-Rechner zum Finden aller gemeinsamen Teiler und des größten gemeinsamen Teilers (ggT) von zwei Zahlen. Erhalten Sie sofortige Ergebnisse mit klaren Erklärungen für Mathe-Hausaufgaben.",
+        "keywords": "gemeinsame Teiler Rechner, ggT Rechner, größter gemeinsamer Teiler, gemeinsame Divisoren, Teiler Rechner, GCD Rechner, Mathe Rechner, Zahlentheorie",
+        "content": {
+          "heading": "Wie man gemeinsame Teiler und ggT findet",
+          "paragraph1": "Gemeinsame Teiler sind Zahlen, die zwei oder mehr Zahlen ohne Rest teilen. Der größte gemeinsame Teiler (ggT), auch als größter gemeinsamer Divisor bekannt, ist die größte Zahl, die alle gegebenen Zahlen gleichmäßig teilt. Das Finden gemeinsamer Teiler ist eine grundlegende Fähigkeit in der Mathematik, die zum Vereinfachen von Brüchen, Lösen von Gleichungen und Arbeiten mit Verhältnissen verwendet wird. Unser Gemeinsame Teiler Rechner macht es einfach, alle gemeinsamen Teiler und den ggT zweier Zahlen sofort zu finden.",
+          "paragraph2": "Um gemeinsame Teiler manuell zu finden, listen Sie zunächst alle Teiler jeder Zahl auf. Ein Teiler ist jede ganze Zahl, die die gegebene Zahl gleichmäßig teilt. Zum Beispiel sind die Teiler von 12: 1, 2, 3, 4, 6 und 12, weil jede dieser Zahlen 12 gleichmäßig teilt. Die Teiler von 18 sind 1, 2, 3, 6, 9 und 18. Die gemeinsamen Teiler sind die Zahlen, die in beiden Listen erscheinen: 1, 2, 3 und 6. Der größte davon ist 6, also ist ggT(12, 18) = 6.",
+          "paragraph3": "Der ggT hat viele praktische Anwendungen in Mathematik und Alltag. Er ist wesentlich zum Vereinfachen von Brüchen in ihre niedrigste Form (der ggT von Zähler und Nenner wird verwendet, um den Bruch zu kürzen), zum Lösen von Textaufgaben mit gleichen Gruppen oder Anordnungen, zum Finden der größten quadratischen Fliese, die einen rechteckigen Bereich gleichmäßig bedecken kann, zum Bestimmen, wie Gegenstände in gleiche Gruppen aufgeteilt werden, und zum Lösen von Problemen in Zahlentheorie und Algebra. Das Verständnis gemeinsamer Teiler hilft, eine starke Grundlage für fortgeschrittenere mathematische Konzepte zu schaffen.",
+          "paragraph4": "Unser Rechner verwendet einen effizienten Algorithmus, um alle Teiler beider Zahlen zu finden und dann zu identifizieren, welche Teiler beiden gemeinsam sind. Der ggT ist einfach der größte Wert in der Liste der gemeinsamen Teiler. Für sehr große Zahlen kann das manuelle Finden von Teilern zeitaufwändig sein, aber unser Rechner verarbeitet beliebige positive ganze Zahlen sofort. Ob Sie ein Schüler sind, der an Hausaufgaben arbeitet, ein Lehrer, der Beispiele erstellt, oder jemand, der schnell gemeinsame Teiler finden muss, unser Tool liefert genaue Ergebnisse in Sekunden.",
+          "exampleHeading": "Häufige Beispiele",
+          "exampleText": "Beispiel 1: Gemeinsame Teiler von 12 und 18 sind 1, 2, 3, 6. ggT = 6. Beispiel 2: Gemeinsame Teiler von 24 und 36 sind 1, 2, 3, 4, 6, 12. ggT = 12. Beispiel 3: Gemeinsame Teiler von 15 und 25 sind 1, 5. ggT = 5. Beispiel 4: Gemeinsame Teiler von 7 und 13 sind 1. ggT = 1 (Primzahlen haben keine gemeinsamen Teiler außer 1)."
+        },
+        "faq": {
+          "heading": "Häufig Gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist der Unterschied zwischen gemeinsamen Teilern und ggT?",
+              "answer": "Gemeinsame Teiler sind alle Zahlen, die zwei oder mehr gegebene Zahlen gleichmäßig teilen. Der ggT (größter gemeinsamer Teiler) ist die größte Zahl unter allen gemeinsamen Teilern. Zum Beispiel sind die gemeinsamen Teiler von 12 und 18: 1, 2, 3 und 6, während der ggT 6 ist, weil er der größte gemeinsame Teiler ist."
+            },
+            {
+              "question": "Wie findet man den ggT zweier Zahlen?",
+              "answer": "Um den ggT zu finden, listen Sie alle Teiler jeder Zahl auf und identifizieren dann die Teiler, die in beiden Listen erscheinen. Der größte dieser gemeinsamen Teiler ist der ggT. Alternativ können Sie den Euklidischen Algorithmus (wiederholtes Teilen und Finden von Resten) oder die Primfaktorzerlegungsmethode verwenden. Unser Rechner findet den ggT sofort für beliebige zwei positive ganze Zahlen."
+            },
+            {
+              "question": "Was ist der ggT zweier Primzahlen?",
+              "answer": "Der ggT zweier verschiedener Primzahlen ist immer 1. Primzahlen haben genau zwei Teiler: 1 und sich selbst. Da verschiedene Primzahlen keine gemeinsamen Teiler außer 1 haben, ist ihr ggT 1. Zum Beispiel: ggT(7, 13) = 1, ggT(11, 17) = 1."
+            },
+            {
+              "question": "Warum ist das Finden des ggT wichtig?",
+              "answer": "Der ggT wird in vielen praktischen Anwendungen verwendet: Vereinfachen von Brüchen in niedrigste Form (Zähler und Nenner durch ihren ggT teilen), Lösen von Problemen mit gleichen Gruppen oder Verteilungen, Finden der größten Messung, die gleichmäßig in verschiedene Längen passt, Reduzieren von Verhältnissen und Lösen algebraischer Gleichungen. Es ist ein grundlegendes Konzept in Zahlentheorie und Arithmetik."
+            },
+            {
+              "question": "Kann der ggT zweier Zahlen größer sein als eine der Zahlen?",
+              "answer": "Nein. Der ggT zweier Zahlen kann niemals größer sein als die kleinere der beiden Zahlen. Tatsächlich ist der maximal mögliche ggT die kleinere Zahl selbst, was passiert, wenn die kleinere Zahl die größere Zahl gleichmäßig teilt. Zum Beispiel: ggT(6, 18) = 6, weil 6 gleichmäßig in 18 passt."
+            },
+            {
+              "question": "Was ist der ggT von 1 und einer beliebigen Zahl?",
+              "answer": "Der ggT von 1 und jeder positiven ganzen Zahl ist immer 1. Dies liegt daran, dass 1 der einzige Teiler von 1 ist und 1 ein Teiler jeder positiven ganzen Zahl ist. Daher ist 1 der einzige gemeinsame Teiler, was ihn zum ggT macht. Zum Beispiel: ggT(1, 100) = 1, ggT(1, 57) = 1."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "percentage": "Prozentrechner",
+          "percentageDesc": "Berechnen Sie Prozentwerte, prozentuale Änderungen und prozentuale Beziehungen",
+          "percentageIncrease": "Prozentuale Zunahme Rechner",
+          "percentageIncreaseDesc": "Berechnen Sie die prozentuale Zunahme zwischen zwei Zahlen",
+          "multiplication": "Multiplikationsrechner",
+          "multiplicationDesc": "Multiplizieren Sie Zahlen schnell und genau mit detaillierten Schritten"
+        }
+      }
+    },
     "quadraticEquation": {
       "title": "Quadratische Gleichung Rechner",
       "description": "Löse quadratische Gleichungen und erhalte reale oder komplexe Lösungen sofort.",

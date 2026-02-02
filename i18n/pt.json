@@ -810,6 +810,69 @@
         }
       }
     },
+    "commonFactors": {
+      "title": "Calculadora de Fatores Comuns",
+      "description": "Encontre todos os fatores comuns e o máximo divisor comum (MDC) de dois números instantaneamente com explicação passo a passo",
+      "number1": "Primeiro Número",
+      "number2": "Segundo Número",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "gcfLabel": "Máximo Divisor Comum (MDC)",
+      "commonFactorsLabel": "Todos os Fatores Comuns",
+      "seo": {
+        "title": "Calculadora de Fatores Comuns – Encontre MDC e Todos os Fatores Comuns Online",
+        "description": "Calculadora online gratuita para encontrar todos os fatores comuns e o máximo divisor comum (MDC) de dois números. Obtenha resultados instantâneos com explicações claras para lição de casa de matemática.",
+        "keywords": "calculadora fatores comuns, calculadora MDC, máximo divisor comum, divisores comuns, calculadora de fatores, calculadora GCD, calculadora matemática, teoria dos números",
+        "content": {
+          "heading": "Como Encontrar Fatores Comuns e MDC",
+          "paragraph1": "Fatores comuns são números que dividem uniformemente dois ou mais números sem deixar resto. O máximo divisor comum (MDC), também conhecido como o maior divisor comum, é o maior número que divide uniformemente todos os números dados. Encontrar fatores comuns é uma habilidade fundamental em matemática, usada para simplificar frações, resolver equações e trabalhar com proporções. Nossa Calculadora de Fatores Comuns facilita encontrar instantaneamente todos os fatores comuns e o MDC de quaisquer dois números.",
+          "paragraph2": "Para encontrar fatores comuns manualmente, primeiro liste todos os fatores de cada número. Um fator é qualquer número inteiro que divida uniformemente o número dado. Por exemplo, os fatores de 12 são 1, 2, 3, 4, 6 e 12 porque cada um desses números divide uniformemente 12. Os fatores de 18 são 1, 2, 3, 6, 9 e 18. Os fatores comuns são os números que aparecem em ambas as listas: 1, 2, 3 e 6. O maior destes é 6, então MDC(12, 18) = 6.",
+          "paragraph3": "O MDC tem muitas aplicações práticas em matemática e na vida cotidiana. É essencial para simplificar frações para sua forma mais simples (o MDC do numerador e denominador é usado para reduzir a fração), resolver problemas verbais envolvendo grupos iguais ou arranjos, encontrar o maior azulejo quadrado que pode cobrir uniformemente uma área retangular, determinar como dividir itens em grupos iguais e resolver problemas em teoria dos números e álgebra. Entender fatores comuns ajuda a construir uma base sólida para conceitos matemáticos mais avançados.",
+          "paragraph4": "Nossa calculadora usa um algoritmo eficiente para encontrar todos os fatores de ambos os números, depois identifica quais fatores são comuns a ambos. O MDC é simplesmente o maior valor na lista de fatores comuns. Para números muito grandes, encontrar fatores manualmente pode ser demorado, mas nossa calculadora lida com quaisquer inteiros positivos instantaneamente. Seja você um estudante trabalhando em lição de casa, um professor criando exemplos ou qualquer pessoa precisando encontrar fatores comuns rapidamente, nossa ferramenta fornece resultados precisos em segundos.",
+          "exampleHeading": "Exemplos Comuns",
+          "exampleText": "Exemplo 1: Os fatores comuns de 12 e 18 são 1, 2, 3, 6. MDC = 6. Exemplo 2: Os fatores comuns de 24 e 36 são 1, 2, 3, 4, 6, 12. MDC = 12. Exemplo 3: Os fatores comuns de 15 e 25 são 1, 5. MDC = 5. Exemplo 4: Os fatores comuns de 7 e 13 são 1. MDC = 1 (números primos não têm fatores comuns exceto 1)."
+        },
+        "faq": {
+          "heading": "Perguntas Frequentes",
+          "items": [
+            {
+              "question": "Qual é a diferença entre fatores comuns e MDC?",
+              "answer": "Fatores comuns são todos os números que dividem uniformemente dois ou mais números dados. O MDC (Máximo Divisor Comum) é o maior número entre todos os fatores comuns. Por exemplo, os fatores comuns de 12 e 18 são 1, 2, 3 e 6, enquanto o MDC é 6 porque é o maior fator comum."
+            },
+            {
+              "question": "Como encontrar o MDC de dois números?",
+              "answer": "Para encontrar o MDC, liste todos os fatores de cada número, depois identifique os fatores que aparecem em ambas as listas. O maior desses fatores comuns é o MDC. Alternativamente, você pode usar o algoritmo euclidiano (divisão repetida e busca de restos) ou o método de fatoração prima. Nossa calculadora encontra o MDC instantaneamente para quaisquer dois inteiros positivos."
+            },
+            {
+              "question": "Qual é o MDC de dois números primos?",
+              "answer": "O MDC de dois números primos diferentes é sempre 1. Números primos têm exatamente dois fatores: 1 e eles mesmos. Como diferentes números primos não compartilham nenhum fator além de 1, seu MDC é 1. Por exemplo, MDC(7, 13) = 1, MDC(11, 17) = 1."
+            },
+            {
+              "question": "Por que encontrar o MDC é importante?",
+              "answer": "O MDC é usado em muitas aplicações práticas: simplificar frações para a forma mais simples (dividir numerador e denominador pelo seu MDC), resolver problemas envolvendo grupos iguais ou distribuições, encontrar a maior medida que cabe uniformemente em diferentes comprimentos, reduzir proporções e resolver equações algébricas. É um conceito fundamental em teoria dos números e aritmética."
+            },
+            {
+              "question": "O MDC de dois números pode ser maior que um dos números?",
+              "answer": "Não. O MDC de dois números nunca pode ser maior que o menor dos dois números. Na verdade, o MDC máximo possível é o próprio número menor, o que acontece quando o número menor divide uniformemente o número maior. Por exemplo, MDC(6, 18) = 6 porque 6 divide uniformemente 18."
+            },
+            {
+              "question": "Qual é o MDC de 1 e qualquer número?",
+              "answer": "O MDC de 1 e qualquer inteiro positivo é sempre 1. Isso ocorre porque 1 é o único fator de 1, e 1 é um fator de cada inteiro positivo. Portanto, 1 é o único fator comum, tornando-o o MDC. Por exemplo, MDC(1, 100) = 1, MDC(1, 57) = 1."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "percentage": "Calculadora de Porcentagem",
+          "percentageDesc": "Calcule valores de porcentagem, mudança de porcentagem e relações de porcentagem",
+          "percentageIncrease": "Calculadora de Aumento Percentual",
+          "percentageIncreaseDesc": "Calcule o aumento percentual entre dois números",
+          "multiplication": "Calculadora de Multiplicação",
+          "multiplicationDesc": "Multiplique números de forma rápida e precisa com passos detalhados"
+        }
+      }
+    },
     "quadraticEquation": {
       "title": "Calculadora de Equação Quadrática",
       "description": "Resolva equações quadráticas e obtenha raízes reais ou complexas instantaneamente.",

@@ -100,6 +100,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'common-factors',
+    titleKey: 'commonFactors.title',
+    descKey: 'commonFactors.description',
+    path: '/calculators/math/common-factors',
+    category: 'math',
+  },
+  {
     id: 'average',
     titleKey: 'average.title',
     descKey: 'average.description',

@@ -500,6 +500,67 @@
         }
       }
     },
+    "arccos": {
+      "title": "Arccos Hesaplayıcı",
+      "description": "Bir değerin arkkosinüsünü bulmak ve açıyı derece ve radyan cinsinden genel çözümlerle almak için arccos(x) hesaplayıcı.",
+      "x": "Değer (x, kosinüs değeri)",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "angleDegrees": "Derece cinsinden açı",
+      "angleRadians": "Radyan cinsinden açı",
+      "calculationHeading": "Hesaplama",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arccos Hesaplayıcı – Ters Kosinüs (acos) Derece ve Radyan Cinsinden",
+        "description": "Bir değerin ters kosinüsünü (acos) bulmak ve açıyı derece ve radyan cinsinden genel çözümlerle almak için ücretsiz arccos hesaplayıcı. [-1, 1] alanındaki değerleri adım adım açıklamayla destekler. Trigonometri, geometri ve mühendislik hesaplamaları için idealdir.",
+        "keywords": "arccos hesaplayıcı, ters kosinüs hesaplayıcı, acos hesaplayıcı, cos ters hesaplayıcı, derece cinsinden arccos, radyan cinsinden arccos, trigonometrik hesaplayıcı, kosinüsten açı",
+        "content": {
+          "heading": "Arccos (Ters Kosinüs) Hesaplayıcı Nasıl Kullanılır",
+          "paragraph1": "Arccos (ters kosinüs) fonksiyonu, arccos(x) veya acos(x) olarak yazılır ve kosinüsü x olan açıyı verir. Başka bir deyişle, cos(θ) = x ise, o zaman θ = arccos(x)'tir. Bu hesaplayıcı, -1 ile 1 arasındaki herhangi bir geçerli kosinüs değeri için bu açıyı derece ve radyan cinsinden hızlı bir şekilde bulmanıza yardımcı olur ve tüm olası açıları gösteren genel çözümler sağlar.",
+          "paragraph2": "Hesaplayıcıyı kullanmak için, [-1, 1] aralığında bir x değeri girin. Araç, yerleşik ters kosinüs fonksiyonunu kullanarak θ = arccos(x)'i radyan cinsinden hesaplar ve θ° = θ × 180 / π formülünü kullanarak bu sonucu dereceye dönüştürür. Her iki değer de yüksek hassasiyetle gösterilir. Kosinüs periyodik bir fonksiyon olduğundan, hesaplayıcı ayrıca genel çözümleri gösterir: θ + k×360° (derece cinsinden) ve θ + k×2π (radyan cinsinden), burada k herhangi bir tam sayıdır.",
+          "paragraph3": "Arccos fonksiyonu, bir açının kosinüsünü bildiğinizde ancak açının kendisine ihtiyaç duyduğunuzda özellikle yararlıdır. Yaygın kullanım durumları arasında dik üçgenlerde açıları bulma, trigonometrik denklemleri çözme, vektörler arasındaki açıları hesaplama, dalga fonksiyonlarını analiz etme ve dönme hareketiyle çalışma bulunur. Kosinüs tüm gerçek sayılar üzerinde bire-bir olmadığından, arccos'un ana değeri [0, π] radyan aralığında (0° ile 180° arası) tanımlanmıştır, ancak genel çözüm 360°'nin (veya 2π radyanın) katları kadar farklılık gösteren tüm açıları içerir.",
+          "paragraph4": "Arccos hesaplayıcımız, girişinizin doğru [-1, 1] alanında olduğunu doğrular ve ardından genel çözüm formülleriyle birlikte radyan ve derece için kesin sonuçlar döndürür. Bu, manuel hesaplamalara kıyasla size zaman kazandırır ve trigonometrik fonksiyonların periyodik doğasını anlamanıza yardımcı olur. Trigonometri öğrenen bir öğrenci, örnek hazırlayan bir öğretmen veya açılarla çalışan bir profesyonel olun, bu araç hızlı, güvenilir ters kosinüs hesaplamaları sağlar.",
+          "exampleHeading": "Örnek: Arccos Hesaplayıcıyı Kullanma",
+          "exampleText": "Diyelim ki cos(θ) = 0,5 olduğunu biliyorsunuz ve θ'yı bulmak istiyorsunuz. Hesaplayıcıya x = 0,5 girin. Hesaplayıcı θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad hesaplar. Dereceye dönüştürmek θ° = 60° verir. Genel çözümler: θ = 60° + k×360° ve θ = π/3 + k×2π rad, burada k herhangi bir tam sayıdır. Bu, 60°, 420°, -300° vb. açıların hepsinin 0,5 kosinüsüne sahip olduğu anlamına gelir. Benzer şekilde, cos(θ) = 1 ise, o zaman θ = arccos(1) = 0° (veya 0 rad), genel çözümler θ = 0° + k×360° ve θ = 0 + k×2π rad ile."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {
+              "question": "Arccos nedir?",
+              "answer": "Arccos (ters kosinüs), kosinüs fonksiyonunun tersidir. Cos(θ) = x ise, o zaman θ = arccos(x)'tir. Kosinüsü x olan açıyı döndürür, genellikle radyan veya derece cinsinden verilir. Ana değer [0°, 180°] veya [0, π] radyan aralığındadır."
+            },
+            {
+              "question": "Arccos fonksiyonunun tanım kümesi nedir?",
+              "answer": "Arccos(x)'in tanım kümesi, -1 ≤ x ≤ 1 olacak şekilde tüm gerçek x değerleridir. Bu aralığın dışında, kosinüs fonksiyonu böyle değerler üretemez, bu nedenle arccos gerçek sayılarda bunlar için tanımlı değildir."
+            },
+            {
+              "question": "Arccos'un değer kümesi nedir?",
+              "answer": "Arccos(x)'in ana değer kümesi radyan cinsinden [0, π]'dir, bu da derece cinsinden [0°, 180°]'ye karşılık gelir. Ancak, kosinüs periyodik olduğundan, genel çözüm θ + k×360° (veya θ + k×2π rad) olan tüm açıları içerir, burada k herhangi bir tam sayıdır."
+            },
+            {
+              "question": "Hesaplayıcı neden genel çözümler gösteriyor?",
+              "answer": "Kosinüs, 360° (2π radyan) periyotlu periyodik bir fonksiyondur. Bu, cos(θ) = x ise, herhangi bir k tam sayısı için cos(θ + k×360°) = x olduğu anlamına gelir. Genel çözüm, denklemi karşılayan tüm olası açıları gösterir, sadece ana değeri değil."
+            },
+            {
+              "question": "Bu arccos hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, arccos hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Radyan ve derece cinsinden açıyı genel çözümlerle birlikte almak için -1 ile 1 arasında bir x değeri girmeniz yeterlidir."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "arcsin": "Arcsin Hesaplayıcı",
+          "arcsinDesc": "Bir değerin ters sinüsünü bulun ve açıyı derece ve radyan cinsinden alın",
+          "arctan": "Arctan Hesaplayıcı",
+          "arctanDesc": "Bir değerin ters tanjantını bulun ve açıyı derece ve radyan cinsinden alın",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Yüzde değerlerini, yüzde değişimlerini ve yüzde ilişkilerini hesaplayın"
+        }
+      }
+    },
     "arcsin": {
       "title": "Arcsin Hesaplayıcı",
       "description": "Bir değerin ters sinüsünü bulmak ve genel çözümlerle açıyı derece ve radyan cinsinden almak için Arcsin(x) hesaplayıcı.",

@@ -500,6 +500,67 @@
         }
       }
     },
+    "arccos": {
+      "title": "Arccos Regner",
+      "description": "Arccos(x) regner til at finde arcus cosinus af en værdi og få vinklen i grader og radianer med generelle løsninger.",
+      "x": "Værdi (x, cosinus værdi)",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "angleDegrees": "Vinkel i grader",
+      "angleRadians": "Vinkel i radianer",
+      "calculationHeading": "Beregning",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arccos Regner – Invers Cosinus (acos) i Grader og Radianer",
+        "description": "Gratis arccos regner til at finde invers cosinus (acos) af en værdi og få vinklen i grader og radianer med generelle løsninger. Understøtter værdier i domænet [-1, 1] med trin-for-trin forklaring. Ideel til trigonometri, geometri og ingeniørberegninger.",
+        "keywords": "arccos regner, invers cosinus regner, acos regner, cos invers regner, arccos i grader, arccos i radianer, trigonometrisk regner, vinkel fra cosinus",
+        "content": {
+          "heading": "Sådan Bruger Du Arccos (Invers Cosinus) Regneren",
+          "paragraph1": "Arccos (invers cosinus) funktionen, skrevet som arccos(x) eller acos(x), giver dig vinklen hvis cosinus er x. Med andre ord, hvis cos(θ) = x, så er θ = arccos(x). Denne regner hjælper dig med hurtigt at finde den vinkel i grader og radianer for enhver gyldig cosinus værdi mellem -1 og 1, og giver generelle løsninger der viser alle mulige vinkler.",
+          "paragraph2": "For at bruge regneren, indtast en værdi for x i området [-1, 1]. Værktøjet beregner θ = arccos(x) i radianer ved hjælp af den indbyggede invers cosinus funktion og konverterer resultatet til grader ved hjælp af formlen θ° = θ × 180 / π. Begge værdier vises med høj præcision. Da cosinus er en periodisk funktion, viser regneren også generelle løsninger: θ + k×360° (i grader) og θ + k×2π (i radianer), hvor k er et vilkårligt heltal.",
+          "paragraph3": "Arccos funktionen er især nyttig, når du kender cosinus af en vinkel, men har brug for vinklen selv. Almindelige anvendelsestilfælde inkluderer at finde vinkler i retvinklede trekanter, løse trigonometriske ligninger, beregne vinkler mellem vektorer, analysere bølgefunktioner og arbejde med rotationsbevægelse. Fordi cosinus ikke er en-til-en over alle reelle tal, er hovedværdien af arccos defineret i intervallet [0, π] radianer (0° til 180°), men den generelle løsning inkluderer alle vinkler der adskiller sig med multipla af 360° (eller 2π radianer).",
+          "paragraph4": "Vores arccos regner validerer at dit input ligger i det korrekte domæne [-1, 1] og returnerer derefter nøjagtige resultater for radianer og grader sammen med de generelle løsningsformler. Dette sparer dig tid sammenlignet med manuelle beregninger og hjælper dig med at forstå den periodiske natur af trigonometriske funktioner. Uanset om du er en studerende der lærer trigonometri, en lærer der forbereder eksempler eller en professionel der arbejder med vinkler, giver dette værktøj hurtige, pålidelige invers cosinus beregninger.",
+          "exampleHeading": "Eksempel: Brug af Arccos Regneren",
+          "exampleText": "Antag at du ved at cos(θ) = 0,5 og vil finde θ. Indtast x = 0,5 i regneren. Regneren beregner θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Konvertering til grader giver θ° = 60°. De generelle løsninger er: θ = 60° + k×360° og θ = π/3 + k×2π rad, hvor k er et vilkårligt heltal. Dette betyder at vinklerne 60°, 420°, -300° osv. alle har en cosinus på 0,5. Ligeledes, hvis cos(θ) = 1, så er θ = arccos(1) = 0° (eller 0 rad), med generelle løsninger θ = 0° + k×360° og θ = 0 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvad er arccos?",
+              "answer": "Arccos (invers cosinus) er den inverse funktion til cosinus funktionen. Hvis cos(θ) = x, så er θ = arccos(x). Den returnerer vinklen hvis cosinus er x, normalt givet i radianer eller grader. Hovedværdien er i området [0°, 180°] eller [0, π] radianer."
+            },
+            {
+              "question": "Hvad er definitionsområdet for arccos funktionen?",
+              "answer": "Definitionsområdet for arccos(x) er alle reelle værdier x sådan at -1 ≤ x ≤ 1. Uden for dette interval kan cosinus funktionen ikke producere sådanne værdier, så arccos er ikke defineret for dem i reelle tal."
+            },
+            {
+              "question": "Hvad er værdiområdet for arccos?",
+              "answer": "Hovedværdiområdet for arccos(x) er [0, π] i radianer, hvilket svarer til [0°, 180°] i grader. Da cosinus imidlertid er periodisk, inkluderer den generelle løsning alle vinkler θ + k×360° (eller θ + k×2π rad) hvor k er et vilkårligt heltal."
+            },
+            {
+              "question": "Hvorfor viser regneren generelle løsninger?",
+              "answer": "Cosinus er en periodisk funktion med periode 360° (2π radianer). Dette betyder at hvis cos(θ) = x, så er cos(θ + k×360°) = x for ethvert heltal k. Den generelle løsning viser alle mulige vinkler der opfylder ligningen, ikke kun hovedværdien."
+            },
+            {
+              "question": "Er denne arccos regner gratis?",
+              "answer": "Ja, vores arccos regner er helt gratis at bruge. Ingen registrering eller betaling er påkrævet. Indtast blot en værdi for x mellem -1 og 1 for at få vinklen i radianer og grader sammen med generelle løsninger."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Regnere",
+          "arcsin": "Arcsin Regner",
+          "arcsinDesc": "Find invers sinus af en værdi og få vinklen i grader og radianer",
+          "arctan": "Arctan Regner",
+          "arctanDesc": "Find invers tangens af en værdi og få vinklen i grader og radianer",
+          "percentage": "Procent Regner",
+          "percentageDesc": "Beregn procentværdier, procentændringer og procentforhold"
+        }
+      }
+    },
     "arcsin": {
       "title": "Arcsin Regner",
       "description": "Arcsin(x) regner til at finde den inverse sinus af en værdi og få vinklen i grader og radianer med generelle løsninger.",

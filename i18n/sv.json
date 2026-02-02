@@ -500,6 +500,67 @@
         }
       }
     },
+    "arccos": {
+      "title": "Arccos Kalkylator",
+      "description": "Arccos(x) kalkylator för att hitta arcus cosinus av ett värde och få vinkeln i grader och radianer med generella lösningar.",
+      "x": "Värde (x, cosinus värde)",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "angleDegrees": "Vinkel i grader",
+      "angleRadians": "Vinkel i radianer",
+      "calculationHeading": "Beräkning",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arccos Kalkylator – Invers Cosinus (acos) i Grader och Radianer",
+        "description": "Gratis arccos kalkylator för att hitta invers cosinus (acos) av ett värde och få vinkeln i grader och radianer med generella lösningar. Stöder värden i domänen [-1, 1] med steg-för-steg förklaring. Idealisk för trigonometri, geometri och ingenjörsberäkningar.",
+        "keywords": "arccos kalkylator, invers cosinus kalkylator, acos kalkylator, cos invers kalkylator, arccos i grader, arccos i radianer, trigonometrisk kalkylator, vinkel från cosinus",
+        "content": {
+          "heading": "Hur man Använder Arccos (Invers Cosinus) Kalkylatorn",
+          "paragraph1": "Arccos (invers cosinus) funktionen, skriven som arccos(x) eller acos(x), ger dig vinkeln vars cosinus är x. Med andra ord, om cos(θ) = x, då är θ = arccos(x). Denna kalkylator hjälper dig att snabbt hitta den vinkeln i grader och radianer för vilket giltigt cosinus värde som helst mellan -1 och 1, och ger generella lösningar som visar alla möjliga vinklar.",
+          "paragraph2": "För att använda kalkylatorn, ange ett värde för x i intervallet [-1, 1]. Verktyget beräknar θ = arccos(x) i radianer med hjälp av den inbyggda invers cosinus funktionen och konverterar resultatet till grader med formeln θ° = θ × 180 / π. Båda värdena visas med hög precision. Eftersom cosinus är en periodisk funktion visar kalkylatorn också generella lösningar: θ + k×360° (i grader) och θ + k×2π (i radianer), där k är vilket heltal som helst.",
+          "paragraph3": "Arccos funktionen är särskilt användbar när du känner cosinus av en vinkel men behöver vinkeln själv. Vanliga användningsfall inkluderar att hitta vinklar i rätvinkliga trianglar, lösa trigonometriska ekvationer, beräkna vinklar mellan vektorer, analysera vågfunktioner och arbeta med rotationsrörelse. Eftersom cosinus inte är en-till-en över alla reella tal, definieras huvudvärdet av arccos i intervallet [0, π] radianer (0° till 180°), men den generella lösningen inkluderar alla vinklar som skiljer sig med multiplar av 360° (eller 2π radianer).",
+          "paragraph4": "Vår arccos kalkylator validerar att din inmatning ligger i rätt domän [-1, 1] och returnerar sedan exakta resultat för radianer och grader tillsammans med de generella lösningsformlerna. Detta sparar dig tid jämfört med manuella beräkningar och hjälper dig att förstå den periodiska naturen hos trigonometriska funktioner. Oavsett om du är en student som lär sig trigonometri, en lärare som förbereder exempel eller en professionell som arbetar med vinklar, ger detta verktyg snabba, tillförlitliga invers cosinus beräkningar.",
+          "exampleHeading": "Exempel: Använda Arccos Kalkylatorn",
+          "exampleText": "Anta att du vet att cos(θ) = 0,5 och vill hitta θ. Ange x = 0,5 i kalkylatorn. Kalkylatorn beräknar θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Konvertering till grader ger θ° = 60°. De generella lösningarna är: θ = 60° + k×360° och θ = π/3 + k×2π rad, där k är vilket heltal som helst. Detta betyder att vinklarna 60°, 420°, -300° osv. alla har en cosinus på 0,5. På samma sätt, om cos(θ) = 1, då är θ = arccos(1) = 0° (eller 0 rad), med generella lösningar θ = 0° + k×360° och θ = 0 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {
+              "question": "Vad är arccos?",
+              "answer": "Arccos (invers cosinus) är inversen av cosinus funktionen. Om cos(θ) = x, då är θ = arccos(x). Den returnerar vinkeln vars cosinus är x, vanligtvis given i radianer eller grader. Huvudvärdet är i intervallet [0°, 180°] eller [0, π] radianer."
+            },
+            {
+              "question": "Vad är definitionsmängden för arccos funktionen?",
+              "answer": "Definitionsmängden för arccos(x) är alla reella värden x sådana att -1 ≤ x ≤ 1. Utanför detta intervall kan cosinus funktionen inte producera sådana värden, så arccos är inte definierad för dem i reella tal."
+            },
+            {
+              "question": "Vad är värdemängden för arccos?",
+              "answer": "Huvudvärdemängden för arccos(x) är [0, π] i radianer, vilket motsvarar [0°, 180°] i grader. Eftersom cosinus dock är periodisk inkluderar den generella lösningen alla vinklar θ + k×360° (eller θ + k×2π rad) där k är vilket heltal som helst."
+            },
+            {
+              "question": "Varför visar kalkylatorn generella lösningar?",
+              "answer": "Cosinus är en periodisk funktion med period 360° (2π radianer). Detta betyder att om cos(θ) = x, då är cos(θ + k×360°) = x för vilket heltal k som helst. Den generella lösningen visar alla möjliga vinklar som uppfyller ekvationen, inte bara huvudvärdet."
+            },
+            {
+              "question": "Är denna arccos kalkylator gratis?",
+              "answer": "Ja, vår arccos kalkylator är helt gratis att använda. Ingen registrering eller betalning krävs. Ange bara ett värde för x mellan -1 och 1 för att få vinkeln i radianer och grader tillsammans med generella lösningar."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "arcsin": "Arcsin Kalkylator",
+          "arcsinDesc": "Hitta invers sinus av ett värde och få vinkeln i grader och radianer",
+          "arctan": "Arctan Kalkylator",
+          "arctanDesc": "Hitta invers tangens av ett värde och få vinkeln i grader och radianer",
+          "percentage": "Procent Kalkylator",
+          "percentageDesc": "Beräkna procentvärden, procentförändringar och procentförhållanden"
+        }
+      }
+    },
     "arcsin": {
       "title": "Arcsin Kalkylator",
       "description": "Arcsin(x) kalkylator för att hitta den inversa sinusen av ett värde och få vinkeln i grader och radianer med allmänna lösningar.",

@@ -500,6 +500,67 @@
         }
       }
     },
+    "arccos": {
+      "title": "Arccos-laskin",
+      "description": "Arccos(x)-laskin arcuskosinin löytämiseen ja kulman saamiseen asteina ja radiaaneina yleisillä ratkaisuilla.",
+      "x": "Arvo (x, kosinin arvo)",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "angleDegrees": "Kulma asteina",
+      "angleRadians": "Kulma radiaaneina",
+      "calculationHeading": "Laskenta",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
+      "seo": {
+        "title": "Arccos-laskin – Käänteinen Kosini (acos) Asteina ja Radiaaneina",
+        "description": "Ilmainen arccos-laskin käänteisen kosinin (acos) löytämiseen ja kulman saamiseen asteina ja radiaaneina yleisillä ratkaisuilla. Tukee arvoja määrittelyjoukossa [-1, 1] vaiheittaisella selityksellä. Ihanteellinen trigonometriaan, geometriaan ja insinöörilaskelmiin.",
+        "keywords": "arccos laskin, käänteinen kosini laskin, acos laskin, cos käänteinen laskin, arccos asteina, arccos radiaaneina, trigonometrinen laskin, kulma kosinista",
+        "content": {
+          "heading": "Kuinka Käyttää Arccos (Käänteinen Kosini) -laskinta",
+          "paragraph1": "Arccos (käänteinen kosini) -funktio, kirjoitettu arccos(x) tai acos(x), antaa kulman, jonka kosini on x. Toisin sanoen, jos cos(θ) = x, niin θ = arccos(x). Tämä laskin auttaa löytämään nopeasti kulman asteina ja radiaaneina mille tahansa kelvolliselle kosinin arvolle välillä -1 ja 1, ja tarjoaa yleiset ratkaisut, jotka näyttävät kaikki mahdolliset kulmat.",
+          "paragraph2": "Laskimen käyttämiseksi syötä arvo x välillä [-1, 1]. Työkalu laskee θ = arccos(x) radiaaneina käyttäen sisäänrakennettua käänteistä kosini-funktiota ja muuntaa tuloksen asteiksi kaavalla θ° = θ × 180 / π. Molemmat arvot näytetään korkealla tarkkuudella. Koska kosini on jaksollinen funktio, laskin näyttää myös yleiset ratkaisut: θ + k×360° (asteina) ja θ + k×2π (radiaaneina), missä k on mikä tahansa kokonaisluku.",
+          "paragraph3": "Arccos-funktio on erityisen hyödyllinen, kun tiedät kulman kosinin mutta tarvitset itse kulman. Yleisiä käyttötapauksia ovat kulmien löytäminen suorakulmaisista kolmioista, trigonometristen yhtälöiden ratkaiseminen, kulmien laskeminen vektorien välillä, aaltofunktioiden analysointi ja pyörimisliikkeen kanssa työskentely. Koska kosini ei ole yksi yhteen kaikkien reaalilukujen yli, arccosin pääarvo on määritelty välillä [0, π] radiaania (0° - 180°), mutta yleinen ratkaisu sisältää kaikki kulmat, jotka eroavat 360° (tai 2π radiaanin) kerrannaisten verran.",
+          "paragraph4": "Arccos-laskimemme tarkistaa, että syötteesi on oikeassa määrittelyjoukossa [-1, 1], ja palauttaa sitten tarkat tulokset radiaaneille ja asteille yleisten ratkaisukaavojen kanssa. Tämä säästää aikaa verrattuna manuaalisiin laskelmiin ja auttaa ymmärtämään trigonometristen funktioiden jaksollisen luonteen. Olit sitten opiskelija oppimassa trigonometriaa, opettaja valmistamassa esimerkkejä tai ammattilainen työskentelemässä kulmien kanssa, tämä työkalu tarjoaa nopeita, luotettavia käänteisen kosinin laskelmia.",
+          "exampleHeading": "Esimerkki: Arccos-laskimen Käyttö",
+          "exampleText": "Oletetaan, että tiedät cos(θ) = 0,5 ja haluat löytää θ:n. Syötä x = 0,5 laskimeen. Laskin laskee θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Muunnos asteiksi antaa θ° = 60°. Yleiset ratkaisut ovat: θ = 60° + k×360° ja θ = π/3 + k×2π rad, missä k on mikä tahansa kokonaisluku. Tämä tarkoittaa, että kulmat 60°, 420°, -300° jne. kaikilla on kosini 0,5. Vastaavasti, jos cos(θ) = 1, niin θ = arccos(1) = 0° (tai 0 rad), yleisillä ratkaisuilla θ = 0° + k×360° ja θ = 0 + k×2π rad."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on arccos?",
+              "answer": "Arccos (käänteinen kosini) on kosini-funktion käänteisfunktio. Jos cos(θ) = x, niin θ = arccos(x). Se palauttaa kulman, jonka kosini on x, yleensä annettuna radiaaneina tai asteina. Pääarvo on välillä [0°, 180°] tai [0, π] radiaania."
+            },
+            {
+              "question": "Mikä on arccos-funktion määrittelyjoukko?",
+              "answer": "Arccos(x)-funktion määrittelyjoukko on kaikki reaaliarvot x siten, että -1 ≤ x ≤ 1. Tämän välin ulkopuolella kosini-funktio ei voi tuottaa tällaisia arvoja, joten arccos ei ole määritelty niille reaaliluvuissa."
+            },
+            {
+              "question": "Mikä on arccosin arvojoukko?",
+              "answer": "Arccos(x)-funktion pääarvojoukko on [0, π] radiaaneina, mikä vastaa [0°, 180°] asteina. Koska kosini on kuitenkin jaksollinen, yleinen ratkaisu sisältää kaikki kulmat θ + k×360° (tai θ + k×2π rad), missä k on mikä tahansa kokonaisluku."
+            },
+            {
+              "question": "Miksi laskin näyttää yleiset ratkaisut?",
+              "answer": "Kosini on jaksollinen funktio jaksolla 360° (2π radiaania). Tämä tarkoittaa, että jos cos(θ) = x, niin cos(θ + k×360°) = x kaikilla kokonaisluvuilla k. Yleinen ratkaisu näyttää kaikki mahdolliset kulmat, jotka täyttävät yhtälön, ei vain pääarvon."
+            },
+            {
+              "question": "Onko tämä arccos-laskin ilmainen?",
+              "answer": "Kyllä, arccos-laskimemme on täysin ilmainen käyttää. Rekisteröintiä tai maksua ei vaadita. Syötä vain arvo x välillä -1 ja 1 saadaksesi kulman radiaaneina ja asteina yleisten ratkaisujen kanssa."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "arcsin": "Arcsin-laskin",
+          "arcsinDesc": "Löydä käänteinen sini arvosta ja saa kulma asteina ja radiaaneina",
+          "arctan": "Arctan-laskin",
+          "arctanDesc": "Löydä käänteinen tangentti arvosta ja saa kulma asteina ja radiaaneina",
+          "percentage": "Prosentti-laskin",
+          "percentageDesc": "Laske prosenttiarvot, prosenttimuutokset ja prosenttisuhteet"
+        }
+      }
+    },
     "arcsin": {
       "title": "Arcsin-laskin",
       "description": "Arcsin(x)-laskin käänteisen sinin löytämiseen ja kulman saamiseen asteina ja radiaaneina yleisillä ratkaisuilla.",

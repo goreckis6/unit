@@ -35,13 +35,14 @@ export function AntilogCalculator() {
 
   return (
     <>
-      <div className="input-section">
-        <div className="inputs-grid">
-          <div className="input-card">
-            <label htmlFor="value" className="input-label">
-              {t('value')}
-            </label>
-            <div className="input-with-unit">
+      <div className="split-view-container">
+        {/* Left Column - Inputs */}
+        <div className="input-section" style={{ marginBottom: 0 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="input-card">
+              <label htmlFor="value" className="input-label">
+                {t('value')}
+              </label>
               <input
                 id="value"
                 type="number"
@@ -53,13 +54,11 @@ export function AntilogCalculator() {
                 placeholder="2"
               />
             </div>
-          </div>
 
-          <div className="input-card">
-            <label htmlFor="base" className="input-label">
-              {t('base')}
-            </label>
-            <div className="input-with-unit">
+            <div className="input-card">
+              <label htmlFor="base" className="input-label">
+                {t('base')}
+              </label>
               <input
                 id="base"
                 type="number"
@@ -72,37 +71,72 @@ export function AntilogCalculator() {
                 placeholder="10"
               />
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="action-buttons">
-        <button onClick={handleCalculate} className="btn btn-primary">
-          {t('calculate')}
-        </button>
-        <button onClick={handleReset} className="btn btn-secondary">
-          {t('reset')}
-        </button>
-      </div>
-
-      {result !== null && (
-        <div ref={resultRef} className="result-section">
-          <div className="result-header">
-            <div className="result-badge">
-              {t('result')}
+            <div className="action-buttons" style={{ marginTop: '0.5rem', display: 'flex', gap: '0.75rem' }}>
+              <button
+                onClick={handleCalculate}
+                className="btn btn-primary"
+                style={{ minHeight: '44px', minWidth: '44px' }}
+              >
+                {t('calculate')}
+              </button>
+              <button
+                onClick={handleReset}
+                className="btn btn-secondary"
+                style={{ minHeight: '44px', minWidth: '44px' }}
+              >
+                {t('reset')}
+              </button>
             </div>
           </div>
-          <div className="result-display">
-            <div className="result-item">
-              <div className="result-label">{t('antilog')}</div>
-              <div className="number-input result-value-box">
-                <span className="result-value">{result.toFixed(6)}</span>
+        </div>
+
+        {/* Right Column - Result */}
+        <div
+          ref={resultRef}
+          className="result-section"
+          style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}
+        >
+          <div className="input-card">
+            <label className="input-label">{t('result')}</label>
+
+            {result === null && (
+              <div
+                className="number-input"
+                style={{
+                  minHeight: '120px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  opacity: 0.6,
+                }}
+              >
+                <span style={{ color: 'var(--text-secondary)' }}>
+                  {value || base !== '10' ? t('clickCalculate') : t('enterValues')}
+                </span>
+              </div>
+            )}
+
+            {result !== null && (
+              <div
+                className="number-input"
+                style={{
+                  minHeight: '120px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '1.25rem',
+                  fontSize: '1.5rem',
+                  fontWeight: '600',
+                }}
+              >
+                <span>{result.toFixed(6)}</span>
                 <CopyButton text={String(result.toFixed(6))} />
               </div>
-            </div>
+            )}
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 }

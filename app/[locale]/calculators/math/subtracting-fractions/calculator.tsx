@@ -114,8 +114,8 @@ export function SubtractingFractionsCalculator() {
   return (
     <div>
       <div className="input-section">
-        <div className="options-grid options-grid-dropdowns" style={{ marginBottom: '1rem' }}>
-          <div className="input-card numbers-to-letters-compact">
+        <div style={{ marginBottom: '1.5rem' }}>
+          <div className="input-card">
             <label htmlFor="formType" className="input-label">
               {t('formTypeLabel')}
             </label>
@@ -124,7 +124,7 @@ export function SubtractingFractionsCalculator() {
               value={formType}
               onChange={(e) => setFormType(e.target.value as 'simple' | 'mixed')}
               className="number-input select-dropdown"
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: 'pointer', width: '100%' }}
             >
               <option value="simple">{t('simpleFractionForm')}</option>
               <option value="mixed">{t('mixedNumberForm')}</option>

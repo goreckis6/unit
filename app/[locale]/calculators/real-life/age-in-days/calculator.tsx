@@ -29,6 +29,14 @@ function formatTodayMMDDYYYY(): string {
   return `${m.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${y}`;
 }
 
+/** Format raw digits (e.g. 07161991) to MM/DD/YYYY (07/16/1991) as user types. */
+function formatDateInput(value: string): string {
+  const digits = value.replace(/\D/g, '').slice(0, 8);
+  if (digits.length <= 2) return digits;
+  if (digits.length <= 4) return `${digits.slice(0, 2)}/${digits.slice(2, 4)}`;
+  return `${digits.slice(0, 2)}/${digits.slice(2, 4)}/${digits.slice(4, 8)}`;
+}
+
 interface AgeResult {
   seconds: number;
   minutes: number;
@@ -97,7 +105,7 @@ export function AgeInDaysCalculator() {
                   id="dob"
                   type="text"
                   value={dateOfBirth}
-                  onChange={(e) => setDateOfBirth(e.target.value)}
+                  onChange={(e) => setDateOfBirth(formatDateInput(e.target.value))}
                   onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
                   className="number-input"
                   placeholder={t('placeholderDate')}
@@ -113,7 +121,7 @@ export function AgeInDaysCalculator() {
                   id="current"
                   type="text"
                   value={currentDate}
-                  onChange={(e) => setCurrentDate(e.target.value)}
+                  onChange={(e) => setCurrentDate(formatDateInput(e.target.value))}
                   onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
                   className="number-input"
                   placeholder={t('placeholderDate')}

@@ -1,6 +1,6 @@
 # Unit Converter Hub
 
-Next.js application with blog and calculators, supporting 16 languages.
+Next.js application with blog and calculators, supporting 25 languages.
 
 ## Stack
 

@@ -473,6 +473,79 @@
         }
       }
     },
+    "fractionToPercent": {
+      "title": "Tört Százalékra Számológép",
+      "description": "Alakítsa át bármely törtet százalékra azonnal. Egyszerűsítse a törtet, alakítsa tizedesre, majd szorozza meg 100-zal.",
+      "fractionLabel": "Tört",
+      "numerator": "Számláló",
+      "denominator": "Nevező",
+      "decimalPlaces": "Tizedesjegyek",
+      "inputHint": "Csak egész számokat adjon meg. A nevező nem lehet 0. Válasszon 0–12 tizedesjegyet.",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "resultPlaceholder": "Adjon meg egy törtet és kattintson a Számítás gombra a százalék megtekintéséhez.",
+      "percentResult": "Százalék",
+      "decimalResult": "Tizedes érték",
+      "simplifiedFraction": "Egyszerűsített tört",
+      "stepsHeading": "Lépések",
+      "stepDivide": "1) Ossza el a számlálót a nevezővel:",
+      "stepDivideText": "{n} ÷ {d}",
+      "stepDecimal": "2) Írja le a tizedes értéket:",
+      "stepPercent": "3) Szorozza meg 100-zal a százalékhoz:",
+      "errorTitle": "Beviteli hiba",
+      "errorInvalid": "Kérjük, adjon meg érvényes egész számokat a számlálóhoz és a nevezőhöz.",
+      "errorZeroDenominator": "A nevező nem lehet nulla.",
+      "errorDecimalPlaces": "Kérjük, válasszon tizedesjegyeket 0 és 12 között.",
+      "seo": {
+        "title": "Tört Százalékra Számológép – Törtek Százalékokká Alakítása",
+        "description": "Ingyenes tört százalékra számológép. Alakítsa át bármely törtet százalékra opcionális kerekítéssel, egyszerűsítéssel és világos lépésről lépésre útmutatással.",
+        "keywords": "tört százalék számológép, tört százalékra alakítás, tört százalék átváltó, tört egyszerűsítés, százalékérték, tört százalék képlet, százalékszámológép",
+        "content": {
+          "heading": "Hogyan Alakítsunk Törtet Százalékra",
+          "paragraph1": "A tört százalékra alakítása két lépést tartalmaz: először ossza el a számlálót a nevezővel, hogy tizedest kapjon, majd szorozza meg 100-zal, hogy százalékot kapjon. Ez hasznos sok valós helyzetben, például osztályzatoknál, kedvezményeknél és statisztikáknál.",
+          "paragraph2": "A képlet: Százalék = (számláló ÷ nevező) × 100. Például 3/4 (3 ÷ 4) × 100 = 0.75 × 100 = 75% lesz. Egyes törtek egész számokká alakulnak (mint 1/2 = 50%), míg mások tizedeseket adnak (mint 1/3 = 33.33…%).",
+          "paragraph3": "Ez a számológép először egyszerűsíti a törtet, tizedessé alakítja, majd 100-zal szorozza, hogy százalékot kapjon. Kiválaszthatja, hány tizedesjegyet tart meg, ami segít a pontos mérések, osztályzatok vagy pénzügyi számítások során.",
+          "paragraph4": "Ha a nevező nulla, a tört nincs definiálva. A negatív törtek negatív százalékokká alakulnak. Használja ezt az eszközt egy világos, formázott százalékérték eléréséhez a egyszerűsített törttel és a tizedessel együtt referenciaként.",
+          "exampleHeading": "Példa",
+          "exampleText": "Alakítsa át 1/4-et százalékra: (1 ÷ 4) × 100 = 0.25 × 100 = 25%. Alakítsa át 3/5-öt: (3 ÷ 5) × 100 = 0.6 × 100 = 60%. Alakítsa át 2/3-at: (2 ÷ 3) × 100 = 0.666… × 100 = 66.67% (2 tizedesjegyre kerekítve)."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Hogyan alakítunk át törtet százalékra?",
+              "answer": "Ossza el a számlálót a nevezővel, hogy tizedest kapjon, majd szorozza meg 100-zal. Például: 3/8 = (3 ÷ 8) × 100 = 0.375 × 100 = 37.5%."
+            },
+            {
+              "question": "Mi a képlet a tört százalékra alakításához?",
+              "answer": "Százalék = (számláló ÷ nevező) × 100. Ez először a törtet tizedessé alakítja, majd 100-zal szorozza, hogy százalékként fejezze ki."
+            },
+            {
+              "question": "Lehet kerekíteni a százalékot?",
+              "answer": "Igen. Válassza ki a tizedesjegyek számát az eredmény kerekítéséhez. Ez hasznos a százalékok megjelenítéséhez jelentésekben vagy számításokban."
+            },
+            {
+              "question": "A számológép egyszerűsíti a törtet?",
+              "answer": "Igen. Először egyszerűsíti a törtet, így láthatja a redukált formát a tizedes és százalékos értékekkel együtt."
+            },
+            {
+              "question": "Ez a tört százalékra számológép ingyenes?",
+              "answer": "Igen. Ingyenesen használható a böngészőjében regisztráció nélkül."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Számológépek",
+          "fractionToDecimal": "Tört Tizedesre Számológép",
+          "fractionToDecimalDesc": "Alakítsa át a törteket tizedesekre egyszerűsítéssel",
+          "decimalToPercent": "Tizedes Százalékra Számológép",
+          "decimalToPercentDesc": "Alakítsa át a tizedeseket százalékokká lépésekkel",
+          "percentToDecimal": "Százalék Tizedesre Számológép",
+          "percentToDecimalDesc": "Alakítsa át a százalékokat gyorsan tizedesekre"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Törtek Kivonás Számológép",
       "description": "Vonjon ki két törtet, és kapja meg az egyszerűsített eredményt és a tizedes értéket. Támogatja az egyszerű tört és vegyes szám formát.",

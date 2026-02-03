@@ -44,6 +44,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'fraction-to-percent',
+    titleKey: 'fractionToPercent.title',
+    descKey: 'fractionToPercent.description',
+    path: '/calculators/math/fraction-to-percent',
+    category: 'math',
+  },
+  {
     id: 'adding-subtracting-integers',
     titleKey: 'addingSubtractingIntegers.title',
     descKey: 'addingSubtractingIntegers.description',

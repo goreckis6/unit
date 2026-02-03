@@ -51,6 +51,13 @@ const mathCalculatorsList: Calculator[] = [
     category: 'math',
   },
   {
+    id: 'uppercase-to-lowercase',
+    titleKey: 'uppercaseToLowercase.title',
+    descKey: 'uppercaseToLowercase.description',
+    path: '/calculators/math/uppercase-to-lowercase',
+    category: 'math',
+  },
+  {
     id: 'adding-subtracting-integers',
     titleKey: 'addingSubtractingIntegers.title',
     descKey: 'addingSubtractingIntegers.description',

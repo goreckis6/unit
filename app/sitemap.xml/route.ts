@@ -18,6 +18,7 @@ export async function GET() {
     '/calculators/math/decimal-to-percent',
     '/calculators/math/fraction-to-decimal',
     '/calculators/math/fraction-to-percent',
+    '/calculators/math/uppercase-to-lowercase',
     '/calculators/math/antilog',
     '/calculators/math/arccos',
     '/calculators/math/cosine',

@@ -29,4 +29,11 @@ export const conversionCalculators: Calculator[] = [
     path: '/calculators/conversion/leet-speak-translator',
     category: 'conversion',
   },
+  {
+    id: 'roman-numerals',
+    titleKey: 'romanNumerals.title',
+    descKey: 'romanNumerals.description',
+    path: '/calculators/conversion/roman-numerals',
+    category: 'conversion',
+  },
 ];

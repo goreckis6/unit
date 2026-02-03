@@ -727,6 +727,81 @@
         }
       }
     },
+    "romanNumerals": {
+      "title": "Roman Numerals Converter",
+      "description": "Convert between Arabic numbers and Roman numerals instantly. Supports numbers from 1 to 3999 with bidirectional conversion.",
+      "conversionDirection": "Conversion Direction",
+      "arabicToRoman": "Arabic Number to Roman Numerals",
+      "romanToArabic": "Roman Numerals to Arabic Number",
+      "arabicNumber": "Arabic Number",
+      "romanNumeral": "Roman Numeral",
+      "arabicPlaceholder": "e.g., 1994",
+      "romanPlaceholder": "e.g., MCMXCIV",
+      "calculate": "Convert",
+      "reset": "Reset",
+      "result": "Result",
+      "enterValue": "Enter a number or Roman numeral to convert",
+      "clickCalculate": "Click Convert to see the result",
+      "errorInvalidNumber": "Please enter a valid number",
+      "errorOutOfRange": "Number must be between 1 and 3999",
+      "errorInvalidRoman": "Invalid Roman numeral format",
+      "seo": {
+        "title": "Roman Numerals Converter – Arabic to Roman & Roman to Arabic",
+        "description": "Free Roman numerals converter. Convert Arabic numbers to Roman numerals and Roman numerals to Arabic numbers instantly. Supports conversions from 1 to 3999 with detailed explanations and examples.",
+        "keywords": "roman numerals converter, arabic to roman, roman to arabic, roman numeral calculator, convert roman numerals, roman numbers, roman numeral translation, I V X L C D M",
+        "content": {
+          "heading": "How to Use the Roman Numerals Converter",
+          "paragraph1": "Roman numerals are a numeral system that originated in ancient Rome and remained the usual way of writing numbers throughout Europe well into the Late Middle Ages. The system uses combinations of letters from the Latin alphabet: I (1), V (5), X (10), L (50), C (100), D (500), and M (1000). Roman numerals are still used today in various contexts, including clock faces, book chapters, movie sequels, Super Bowl games, and monarchs' names.",
+          "paragraph2": "This Roman Numerals Converter offers bidirectional conversion between Arabic numbers (1, 2, 3...) and Roman numerals (I, II, III...). To convert an Arabic number to Roman numerals, select 'Arabic Number to Roman Numerals', enter any number from 1 to 3999, and click Convert. The tool will instantly display the equivalent Roman numeral. For example, 1994 becomes MCMXCIV. To convert Roman numerals to Arabic numbers, select 'Roman Numerals to Arabic Number', enter a valid Roman numeral like XLII, and get the Arabic equivalent (42).",
+          "paragraph3": "Roman numerals follow specific rules: letters are arranged from largest to smallest value reading left to right. When a smaller value appears before a larger value, it is subtracted (IV = 4, IX = 9). When a smaller or equal value appears after a larger value, it is added (VI = 6, XI = 11). The subtractive principle is used only for specific combinations: IV (4), IX (9), XL (40), XC (90), CD (400), and CM (900). A letter can be repeated up to three times consecutively (III = 3, XXX = 30, CCC = 300), but never four times.",
+          "paragraph4": "Our converter supports numbers from 1 to 3999, which covers the most common use cases for Roman numerals. The upper limit exists because standard Roman numerals don't have a universally accepted symbol for numbers 4000 and above (though historical systems used various notations). The calculator validates your input and provides instant, accurate conversions. Whether you're working on a school project, designing documents, or simply curious about Roman numeral notation, this tool provides fast, reliable conversions with proper validation.",
+          "exampleHeading": "Examples: Roman Numeral Conversions",
+          "exampleText": "Arabic to Roman: 1 = I, 4 = IV, 5 = V, 9 = IX, 10 = X, 40 = XL, 50 = L, 90 = XC, 100 = C, 400 = CD, 500 = D, 900 = CM, 1000 = M, 1984 = MCMLXXXIV, 2024 = MMXXIV, 3999 = MMMCMXCIX. Roman to Arabic: XIV = 14, XLII = 42, LXVII = 67, XCIX = 99, CDXLIV = 444, MCMXC = 1990, MMXXIII = 2023."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What are Roman numerals?",
+              "answer": "Roman numerals are a numeral system from ancient Rome using letters from the Latin alphabet: I (1), V (5), X (10), L (50), C (100), D (500), and M (1000). They combine these symbols using additive and subtractive principles to represent numbers. Roman numerals are still used in modern times for clock faces, outlines, book chapters, movie sequels, and formal numbering."
+            },
+            {
+              "question": "How do you read Roman numerals?",
+              "answer": "Read Roman numerals from left to right. Add the values together when symbols are arranged from largest to smallest (VI = 5+1 = 6). Subtract when a smaller value comes before a larger one (IV = 5-1 = 4, IX = 10-1 = 9). Common patterns include: I, II, III (1, 2, 3), IV (4), V (5), VI, VII, VIII (6, 7, 8), IX (9), X (10), XL (40), L (50), XC (90), C (100), D (500), M (1000)."
+            },
+            {
+              "question": "What is the largest number this converter supports?",
+              "answer": "This converter supports numbers from 1 to 3999. The upper limit of 3999 (MMMCMXCIX) exists because standard Roman numerals become unwieldy for larger numbers, and there's no universally accepted notation for numbers 4000 and above in the classical system. Historical Romans used various methods for larger numbers, including overlines or parentheses, but these aren't standardized."
+            },
+            {
+              "question": "Why is 4 written as IV and not IIII?",
+              "answer": "The subtractive notation IV (5-1) is the standard modern form for 4, though IIII was sometimes used historically and still appears on some clock faces. The subtractive principle (using a smaller numeral before a larger one to subtract) makes notation more compact and is the accepted standard for writing Roman numerals today. This applies to: IV (4), IX (9), XL (40), XC (90), CD (400), and CM (900)."
+            },
+            {
+              "question": "Can Roman numerals represent zero or negative numbers?",
+              "answer": "No, the Roman numeral system has no symbol for zero and was not designed to represent negative numbers or fractions. The concept of zero as a number didn't exist in ancient Rome. Roman numerals were primarily used for counting and recording quantities, not for complex mathematical calculations. For zero, negative numbers, or decimals, you need the Arabic numeral system (0, 1, 2, 3...)."
+            },
+            {
+              "question": "Where are Roman numerals still used today?",
+              "answer": "Roman numerals remain common in: clock and watch faces (especially XII for 12), book chapter numbers and preface pages, movie sequel numbering (Rocky IV, Star Wars Episode VII), Super Bowl games (Super Bowl LVIII), copyright years in film and television, formal outlines (I, II, III, A, B, C), monarchs and popes' names (Queen Elizabeth II, Pope John Paul II), building cornerstones showing construction year, and academic and legal document numbering."
+            },
+            {
+              "question": "Is this Roman numerals converter free?",
+              "answer": "Yes, this Roman numerals converter is completely free to use with no registration, payment, or download required. Convert unlimited numbers between Arabic and Roman numeral format instantly in your browser. The tool validates input and provides accurate conversions for all numbers from 1 to 3999."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "kelvinToCelsius": "Kelvin to Celsius Converter",
+          "kelvinToCelsiusDesc": "Convert temperature from Kelvin to Celsius instantly with formula explanation",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentage values, percentage change, and percentage relationships",
+          "textToBinary": "Text to Binary Converter",
+          "textToBinaryDesc": "Convert text to binary representation with multiple encoding options"
+        }
+      }
+    },
     "morseCode": {
       "title": "Morse Code Translator",
       "description": "Convert text to Morse code and Morse code to text instantly. Supports letters, numbers, and punctuation with accurate dot-dash encoding.",

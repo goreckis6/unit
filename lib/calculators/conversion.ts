@@ -8,4 +8,11 @@ export const conversionCalculators: Calculator[] = [
     path: '/calculators/conversion/kelvin-to-celsius',
     category: 'conversion',
   },
+  {
+    id: 'uppercase-to-lowercase',
+    titleKey: 'uppercaseToLowercase.title',
+    descKey: 'uppercaseToLowercase.description',
+    path: '/calculators/conversion/uppercase-to-lowercase',
+    category: 'conversion',
+  },
 ];

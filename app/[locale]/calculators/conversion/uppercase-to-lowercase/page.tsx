@@ -25,7 +25,7 @@ async function getFaqItems(locale: string): Promise<FaqItem[]> {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'calculators.uppercaseToLowercase.seo' });
-  const path = '/calculators/math/uppercase-to-lowercase';
+  const path = '/calculators/conversion/uppercase-to-lowercase';
   const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
   return {
     title: t('title'),
@@ -61,14 +61,14 @@ export default async function UppercaseToLowercasePage({ params }: { params: Pro
 
       <div className="calculator-header">
         <div className="container">
-          <Link href="/calculators/math" className="back-button">
+          <Link href="/calculators/conversion" className="back-button">
             <svg className="back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             <span>{tCommon('calculators')}</span>
           </Link>
           <div className="header-content">
-            <div className="title-badge">Math Calculator</div>
+            <div className="title-badge">Conversion Calculator</div>
             <h1 className="page-title">{t('title')}</h1>
             <p className="page-description">{t('description')}</p>
           </div>

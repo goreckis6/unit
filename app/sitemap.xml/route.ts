@@ -54,6 +54,7 @@ export async function GET() {
     '/calculators/conversion',
     '/calculators/conversion/kelvin-to-celsius',
     '/calculators/conversion/uppercase-to-lowercase',
+    '/calculators/conversion/lowercase-to-uppercase',
     '/calculators/conversion/leet-speak-translator',
     '/calculators/physics',
     '/calculators/real-life',

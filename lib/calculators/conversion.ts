@@ -15,4 +15,11 @@ export const conversionCalculators: Calculator[] = [
     path: '/calculators/conversion/uppercase-to-lowercase',
     category: 'conversion',
   },
+  {
+    id: 'leet-speak-translator',
+    titleKey: 'leetSpeak.title',
+    descKey: 'leetSpeak.description',
+    path: '/calculators/conversion/leet-speak-translator',
+    category: 'conversion',
+  },
 ];

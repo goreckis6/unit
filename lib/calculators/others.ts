@@ -90,6 +90,13 @@ const otherCalculatorsList: Calculator[] = addCalculatorsSorted(
     path: '/calculators/others/upside-down-text',
     category: 'others',
   },
+  {
+    id: 'vigenere-cipher',
+    titleKey: 'vigenereCipher.title',
+    descKey: 'vigenereCipher.description',
+    path: '/calculators/others/vigenere-cipher',
+    category: 'others',
+  },
   // Add new others calculators here; list is sorted A–Z by id automatically.
   ],
 );

@@ -6260,6 +6260,71 @@
           "asciiConverterDesc": "Visualizza e converti il testo in codici ASCII e viceversa"
         }
       }
+    },
+    "vigenereCipher": {
+      "title": "Calcolatore cifrario di Vigenère",
+      "description": "Codifica e decodifica il testo utilizzando il cifrario di Vigenère con una chiave personalizzata. Un classico cifrario di sostituzione polialfabetico per la crittografia sicura dei messaggi.",
+      "inputLabel": "Testo di input",
+      "inputPlaceholder": "Inserisci il testo da codificare o decodificare...",
+      "keyLabel": "Chiave",
+      "keyPlaceholder": "Inserisci la chiave di cifratura (solo lettere)...",
+      "modeLabel": "Modalità",
+      "encode": "Codifica",
+      "decode": "Decodifica",
+      "calculate": "Calcola",
+      "reset": "Ripristina",
+      "resultLabel": "Risultato",
+      "enterTextAndKey": "Inserisci testo e chiave per vedere il risultato",
+      "clickCalculate": "Fai clic su Calcola per vedere il risultato",
+      "howItWorks": "Dettagli crittografia",
+      "mode": "Modalità",
+      "seo": {
+        "title": "Calcolatore cifrario di Vigenère – Strumento online",
+        "description": "Codifica e decodifica il testo utilizzando il cifrario di Vigenère con una chiave personalizzata. Un classico cifrario di sostituzione polialfabetico per la crittografia sicura dei messaggi.",
+        "keywords": "vigenere cipher, cipher calculator, encryption, decryption, cryptography, chiave",
+        "content": {
+          "heading": "Dettagli crittografia",
+          "paragraph1": "Codifica e decodifica il testo utilizzando il cifrario di Vigenère con una chiave personalizzata. Un classico cifrario di sostituzione polialfabetico per la crittografia sicura dei messaggi. Il cifrario di Vigenère è un metodo di cifratura classico utilizzato da secoli.",
+          "paragraph2": "Per codificare un messaggio, allinei il tuo testo in chiaro con una chiave ripetuta. Ogni lettera viene spostata del numero di posizioni indicate dalla lettera chiave corrispondente.",
+          "paragraph3": "Per decodificare un messaggio crittografato, usi la stessa chiave ma sposti le lettere all'indietro. Questo calcolatore gestisce automaticamente la codifica e la decodifica.",
+          "exampleHeading": "Esempio",
+          "exampleText": "Plaintext: 'HELLO WORLD', Key: 'KEY' → 'RIJVS UYVJN'"
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {
+              "question": "Cos'è il cifrario di Vigenère?",
+              "answer": "Il cifrario di Vigenère è un cifrario di sostituzione polialfabetica che utilizza una parola chiave per spostare ogni lettera del testo in chiaro di quantità variabili. È stato considerato indecifrabile per secoli ed è ancora utilizzato oggi per scopi educativi e crittografia semplice."
+            },
+            {
+              "question": "Come scelgo una buona chiave?",
+              "answer": "Una buona chiave dovrebbe essere lunga, casuale e memorabile. Le chiavi più lunghe rendono il cifrario più sicuro. Evita parole del dizionario o modelli prevedibili."
+            },
+            {
+              "question": "Il cifrario di Vigenère preserva gli spazi e la punteggiatura?",
+              "answer": "Sì. Questo calcolatore preserva spazi, punteggiatura, numeri e caratteri speciali. Solo le lettere alfabetiche (A-Z, a-z) vengono crittografate o decrittografate."
+            },
+            {
+              "question": "Il cifrario di Vigenère è sicuro?",
+              "answer": "Storicamente considerato indecifrabile, il cifrario di Vigenère può ora essere decifrato con l'analisi della frequenza. È ottimo per imparare la crittografia, ma non è consigliato per la sicurezza moderna. Usa AES per le reali esigenze di sicurezza."
+            },
+            {
+              "question": "Posso decodificare un messaggio senza la chiave?",
+              "answer": "Senza la chiave, decodificare un cifrario di Vigenère è molto difficile ma possibile con tecniche crittanalitiche avanzate. Tuttavia, questo calcolatore richiede la chiave corretta per decodificare."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori correlati",
+          "caesarCipher": "Cifrario di Cesare",
+          "caesarCipherDesc": "Codifica e decodifica testo usando il cifrario di Cesare con uno spostamento semplice",
+          "textToBinary": "Convertitore testo in binario",
+          "textToBinaryDesc": "Converti il testo in rappresentazione binaria con più codifiche",
+          "asciiConverter": "Convertitore ASCII",
+          "asciiConverterDesc": "Visualizza e converti il testo in codici ASCII e viceversa"
+        }
+      }
     }
   },
   "notFound": {

@@ -6260,6 +6260,71 @@
           "asciiConverterDesc": "Affichez et convertissez le texte en codes ASCII et vice-versa"
         }
       }
+    },
+    "vigenereCipher": {
+      "title": "Calculateur de chiffre de Vigenère",
+      "description": "Encodez et décodez du texte avec le chiffre de Vigenère et une clé personnalisée. Un chiffre de substitution polyalphabétique classique pour le chiffrement sécurisé de messages.",
+      "inputLabel": "Texte d'entrée",
+      "inputPlaceholder": "Entrez le texte à encoder ou décoder...",
+      "keyLabel": "Clé",
+      "keyPlaceholder": "Entrez la clé de chiffrement (lettres uniquement)...",
+      "modeLabel": "Mode",
+      "encode": "Encoder",
+      "decode": "Décoder",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "resultLabel": "Résultat",
+      "enterTextAndKey": "Entrez le texte et la clé pour voir le résultat",
+      "clickCalculate": "Cliquez sur Calculer pour voir le résultat",
+      "howItWorks": "Détails du chiffrement",
+      "mode": "Mode",
+      "seo": {
+        "title": "Calculateur de chiffre de Vigenère – Outil en ligne",
+        "description": "Encodez et décodez du texte avec le chiffre de Vigenère et une clé personnalisée. Un chiffre de substitution polyalphabétique classique pour le chiffrement sécurisé de messages.",
+        "keywords": "vigenere cipher, cipher calculator, encryption, decryption, cryptography, clé",
+        "content": {
+          "heading": "Détails du chiffrement",
+          "paragraph1": "Encodez et décodez du texte avec le chiffre de Vigenère et une clé personnalisée. Un chiffre de substitution polyalphabétique classique pour le chiffrement sécurisé de messages. Le chiffre de Vigenère est une méthode de chiffrement classique utilisée depuis des siècles.",
+          "paragraph2": "Pour encoder un message, vous alignez votre texte brut avec une clé répétée. Chaque lettre est décalée du nombre de positions indiqué par la lettre de clé correspondante.",
+          "paragraph3": "Pour décoder un message chiffré, vous utilisez la même clé mais décalez les lettres vers l'arrière. Cette calculatrice gère automatiquement le chiffrement et le déchiffrement.",
+          "exampleHeading": "Exemple",
+          "exampleText": "Plaintext: 'HELLO WORLD', Key: 'KEY' → 'RIJVS UYVJN'"
+        },
+        "faq": {
+          "heading": "Questions fréquemment posées",
+          "items": [
+            {
+              "question": "Qu'est-ce que le chiffre de Vigenère ?",
+              "answer": "Le chiffre de Vigenère est un chiffre de substitution polyalphabétique qui utilise un mot-clé pour décaler chaque lettre du texte brut de quantités variables. Il était considéré comme impossible à déchiffrer pendant des siècles et est toujours utilisé aujourd'hui à des fins éducatives et pour un chiffrement simple."
+            },
+            {
+              "question": "Comment choisir une bonne clé ?",
+              "answer": "Une bonne clé doit être longue, aléatoire et mémorable. Les clés plus longues rendent le chiffre plus sûr. Évitez les mots du dictionnaire ou les motifs prévisibles."
+            },
+            {
+              "question": "Le chiffre de Vigenère préserve-t-il les espaces et la ponctuation ?",
+              "answer": "Oui. Cette calculatrice préserve les espaces, la ponctuation, les chiffres et les caractères spéciaux. Seules les lettres alphabétiques (A-Z, a-z) sont chiffrées ou déchiffrées."
+            },
+            {
+              "question": "Le chiffre de Vigenère est-il sûr ?",
+              "answer": "Historiquement considéré comme incassable, le chiffre de Vigenère peut maintenant être cassé avec l'analyse de fréquence. Il est excellent pour apprendre la cryptographie, mais non recommandé pour la sécurité moderne. Utilisez AES pour les besoins de sécurité réels."
+            },
+            {
+              "question": "Puis-je décoder un message sans la clé ?",
+              "answer": "Sans la clé, décoder un chiffre de Vigenère est très difficile mais possible avec des techniques cryptanalytiques avancées. Cependant, cette calculatrice nécessite la clé correcte pour décoder."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs connexes",
+          "caesarCipher": "Chiffre de César",
+          "caesarCipherDesc": "Encodez et décodez du texte avec le chiffre de César avec un décalage simple",
+          "textToBinary": "Convertisseur texte en binaire",
+          "textToBinaryDesc": "Convertir du texte en représentation binaire avec plusieurs encodages",
+          "asciiConverter": "Convertisseur ASCII",
+          "asciiConverterDesc": "Affichez et convertissez du texte en codes ASCII et vice versa"
+        }
+      }
     }
   },
   "notFound": {

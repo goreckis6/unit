@@ -6260,6 +6260,71 @@
           "asciiConverterDesc": "查看并将文本转换为 ASCII 代码及其逆向"
         }
       }
+    },
+    "vigenereCipher": {
+      "title": "维吉尼亚密码计算器",
+      "description": "使用自定义密钥通过维吉尼亚密码对文本进行编码和解码。用于安全消息加密的经典多表替换密码。",
+      "inputLabel": "输入文本",
+      "inputPlaceholder": "输入要编码或解码的文本...",
+      "keyLabel": "密钥",
+      "keyPlaceholder": "输入密码密钥（仅字母）...",
+      "modeLabel": "模式",
+      "encode": "编码",
+      "decode": "解码",
+      "calculate": "计算",
+      "reset": "重置",
+      "resultLabel": "结果",
+      "enterTextAndKey": "输入文本和密钥以查看结果",
+      "clickCalculate": "点击计算以查看结果",
+      "howItWorks": "加密详情",
+      "mode": "模式",
+      "seo": {
+        "title": "维吉尼亚密码计算器 – 在线工具",
+        "description": "使用自定义密钥通过维吉尼亚密码对文本进行编码和解码。用于安全消息加密的经典多表替换密码。",
+        "keywords": "vigenere cipher, cipher calculator, encryption, decryption, cryptography, 密钥",
+        "content": {
+          "heading": "加密详情",
+          "paragraph1": "使用自定义密钥通过维吉尼亚密码对文本进行编码和解码。用于安全消息加密的经典多表替换密码。 维吉尼亚密码是一种经典的加密方法，已使用了几个世纪。",
+          "paragraph2": "要编码消息，您将明文与重复密钥对齐。每个字母按相应密钥字母指示的位置数移位。",
+          "paragraph3": "要解码加密消息，您使用相同的密钥，但将字母向后移位。此计算器自动处理编码和解码。",
+          "exampleHeading": "示例",
+          "exampleText": "Plaintext: 'HELLO WORLD', Key: 'KEY' → 'RIJVS UYVJN'"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {
+              "question": "什么是维吉尼亚密码？",
+              "answer": "维吉尼亚密码是一种多表替换密码，它使用关键字将明文的每个字母移位不同的量。它被认为是几个世纪以来无法破解的，今天仍然用于教育目的和简单加密。"
+            },
+            {
+              "question": "如何选择一个好的密钥？",
+              "answer": "好的密钥应该长、随机且易记。较长的密钥使密码更安全。避免使用字典单词或可预测的模式。"
+            },
+            {
+              "question": "维吉尼亚密码是否保留空格和标点符号？",
+              "answer": "是的。此计算器保留空格、标点符号、数字和特殊字符。只有字母字符（A-Z，a-z）才会被加密或解密。"
+            },
+            {
+              "question": "维吉尼亚密码安全吗？",
+              "answer": "历史上被认为无法破解，维吉尼亚密码现在可以通过频率分析破解。它非常适合学习密码学，但不推荐用于现代安全。对于实际安全需求，请使用AES。"
+            },
+            {
+              "question": "我可以在没有密钥的情况下解码消息吗？",
+              "answer": "没有密钥，解码维吉尼亚密码非常困难，但可以使用高级密码分析技术实现。但是，此计算器需要正确的密钥才能解码。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "caesarCipher": "凯撒密码",
+          "caesarCipherDesc": "使用简单移位的凯撒密码编码和解码文本",
+          "textToBinary": "文本到二进制转换器",
+          "textToBinaryDesc": "使用多种编码将文本转换为二进制表示",
+          "asciiConverter": "ASCII转换器",
+          "asciiConverterDesc": "查看并将文本转换为ASCII代码并返回"
+        }
+      }
     }
   },
   "notFound": {

@@ -6260,6 +6260,71 @@
           "asciiConverterDesc": "Zobrazte a převeďte text na ASCII kódy a zpět"
         }
       }
+    },
+    "vigenereCipher": {
+      "title": "Kalkulačka Vigenèrovy šifry",
+      "description": "Šifrujte a dešifrujte text pomocí Vigenèrovy šifry s vlastním klíčem. Klasická polyalfabetická substituční šifra pro bezpečné šifrování zpráv.",
+      "inputLabel": "Vstupní text",
+      "inputPlaceholder": "Zadejte text ke šifrování nebo dešifrování...",
+      "keyLabel": "Klíč",
+      "keyPlaceholder": "Zadejte šifrovací klíč (pouze písmena)...",
+      "modeLabel": "Režim",
+      "encode": "Šifrovat",
+      "decode": "Dešifrovat",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "resultLabel": "Výsledek",
+      "enterTextAndKey": "Zadejte text a klíč pro zobrazení výsledku",
+      "clickCalculate": "Klikněte na Vypočítat pro zobrazení výsledku",
+      "howItWorks": "Detaily šifrování",
+      "mode": "Režim",
+      "seo": {
+        "title": "Kalkulačka Vigenèrovy šifry - Šifrování a dešifrování textu online",
+        "description": "Bezplatná kalkulačka Vigenèrovy šifry. Šifrujte a dešifrujte text pomocí této klasické polyalfabetické substituční šifry. Zadejte text a klíč pro bezpečné šifrování a dešifrování zpráv.",
+        "keywords": "vigenere šifra, kalkulačka vigenere šifry, šifrovač, dešifrovač, polyalfabetická šifra, klasická kryptografie, nástroj pro šifrování, šifrovací klíč, kódování dekódování textu",
+        "content": {
+          "heading": "Jak funguje Vigenèrova šifra",
+          "paragraph1": "Vigenèrova šifra je metoda šifrování textu pomocí série Caesarových šifer založených na písmenech klíčového slova. Vynalezena Giovanem Battistou Bellasem v 16. století, ale nesprávně připsána Blaise de Vigenèrovi, byla po staletí považována za nerozluštitelnou a získala název 'le chiffre indéchiffrable' (nerozluštitelná šifra). Na rozdíl od jednoduchých substitučních šifer je Vigenèrova šifra polyalfabetická, což znamená, že každé písmeno může být zašifrováno jinak v závislosti na jeho pozici a odpovídajícím písmenu v klíči.",
+          "paragraph2": "Pro zašifrování zprávy zarovnáte svůj otevřený text s opakujícím se klíčem. Pro každé písmeno v otevřeném textu ho posunete vpřed v abecedě o počet pozic uvedený odpovídajícím písmenem klíče (A=0, B=1, C=2, atd.). Například s otevřeným textem 'HELLO' a klíčem 'KEY' se H posune o K (10 pozic) na R, E se posune o E (4 pozice) na I, L se posune o Y (24 pozic) na J, a tak dále. Čísla, mezery a interpunkce zůstávají beze změny.",
+          "paragraph3": "Pro dešifrování zašifrované zprávy používáte stejný klíč, ale posunete písmena dozadu místo dopředu. Tato kalkulačka zpracovává šifrování i dešifrování automaticky. Jednoduše zadejte text, poskytněte klíč (jakýkoli sled písmen), zvolte režim a okamžitě získáte výsledek. Šifra zachovává velikost písmen a nechává nealfabetické znaky nedotčené.",
+          "exampleHeading": "Příklad",
+          "exampleText": "Otevřený text: 'HELLO WORLD', Klíč: 'KEY'. Šifrování: H+K=R, E+E=I, L+Y=J, L+K=V, O+E=S, W+Y=U, O+K=Y, R+E=V, L+Y=J, D+K=N. Výsledek: 'RIJVS UYVJN'. Dešifrování 'RIJVS UYVJN' s klíčem 'KEY' vrátí 'HELLO WORLD'."
+        },
+        "faq": {
+          "heading": "Často kladené otázky",
+          "items": [
+            {
+              "question": "Co je Vigenèrova šifra?",
+              "answer": "Vigenèrova šifra je polyalfabetická substituční šifra, která používá klíčové slovo k posunutí každého písmene otevřeného textu o různé množství. Byla po staletí považována za nerozluštitelnou a je stále dnes používána pro vzdělávací účely a jednoduché šifrování."
+            },
+            {
+              "question": "Jak vybrat dobrý klíč?",
+              "answer": "Dobrý klíč by měl být dlouhý, náhodný a zapamatovatelný. Delší klíče činí šifru bezpečnější. Vyhněte se používání slovníkových slov nebo předvídatelných vzorů. Klíč se opakuje v celé zprávě, takže klíč jako 'SECRETKEY' je lepší než 'AAA'."
+            },
+            {
+              "question": "Zachovává Vigenèrova šifra mezery a interpunkci?",
+              "answer": "Ano. Tato kalkulačka zachovává mezery, interpunkci, čísla a speciální znaky. Pouze abecední písmena (A-Z, a-z) jsou šifrována nebo dešifrována. Velikost písmen je také zachována."
+            },
+            {
+              "question": "Je Vigenèrova šifra bezpečná?",
+              "answer": "Historicky považovaná za nerozluštitelnou, Vigenèrova šifra může být nyní prolomena pomocí frekvenční analýzy a útoků se známým otevřeným textem. Je skvělá pro učení kryptografie, ale není doporučena pro zabezpečení citlivých informací v moderních aplikacích. Pro skutečné bezpečnostní potřeby použijte moderní šifrovací standardy jako AES."
+            },
+            {
+              "question": "Mohu dešifrovat zprávu bez klíče?",
+              "answer": "Bez klíče je dešifrování Vigenèrovy šifry velmi obtížné, ale možné pomocí pokročilých kryptoanalytických technik jako je Kasiskiho zkoušku nebo Friedmanův test. Tato kalkulačka však vyžaduje správný klíč pro dešifrování zpráv."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "caesarCipher": "Caesarova šifra",
+          "caesarCipherDesc": "Šifrujte a dešifrujte text pomocí Caesarovy šifry s jednoduchým posunem",
+          "textToBinary": "Převodník textu na binární",
+          "textToBinaryDesc": "Převádějte text na binární reprezentaci s více kódováními",
+          "asciiConverter": "Převodník ASCII",
+          "asciiConverterDesc": "Zobrazujte a převádějte text na ASCII kódy a zpět"
+        }
+      }
     }
   },
   "notFound": {

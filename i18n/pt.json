@@ -6260,6 +6260,71 @@
           "asciiConverterDesc": "Visualize e converta texto para códigos ASCII e vice-versa"
         }
       }
+    },
+    "vigenereCipher": {
+      "title": "Calculadora de cifra de Vigenère",
+      "description": "Codifique e decodifique texto usando a cifra de Vigenère com uma chave personalizada. Uma cifra de substituição polialfabética clássica para criptografia segura de mensagens.",
+      "inputLabel": "Texto de entrada",
+      "inputPlaceholder": "Digite o texto para codificar ou decodificar...",
+      "keyLabel": "Chave",
+      "keyPlaceholder": "Digite a chave de cifra (apenas letras)...",
+      "modeLabel": "Modo",
+      "encode": "Codificar",
+      "decode": "Decodificar",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "resultLabel": "Resultado",
+      "enterTextAndKey": "Digite texto e chave para ver o resultado",
+      "clickCalculate": "Clique em Calcular para ver o resultado",
+      "howItWorks": "Detalhes da criptografia",
+      "mode": "Modo",
+      "seo": {
+        "title": "Calculadora de cifra de Vigenère – Ferramenta online",
+        "description": "Codifique e decodifique texto usando a cifra de Vigenère com uma chave personalizada. Uma cifra de substituição polialfabética clássica para criptografia segura de mensagens.",
+        "keywords": "vigenere cipher, cipher calculator, encryption, decryption, cryptography, chave",
+        "content": {
+          "heading": "Detalhes da criptografia",
+          "paragraph1": "Codifique e decodifique texto usando a cifra de Vigenère com uma chave personalizada. Uma cifra de substituição polialfabética clássica para criptografia segura de mensagens. A cifra de Vigenère é um método clássico de criptografia usado há séculos.",
+          "paragraph2": "Para codificar uma mensagem, você alinha seu texto simples com uma chave repetida. Cada letra é deslocada pelo número de posições indicado pela letra da chave correspondente.",
+          "paragraph3": "Para decodificar uma mensagem criptografada, você usa a mesma chave, mas desloca as letras para trás. Esta calculadora lida automaticamente com codificação e decodificação.",
+          "exampleHeading": "Exemplo",
+          "exampleText": "Plaintext: 'HELLO WORLD', Key: 'KEY' → 'RIJVS UYVJN'"
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {
+              "question": "O que é a cifra de Vigenère?",
+              "answer": "A cifra de Vigenère é uma cifra de substituição polialfabética que usa uma palavra-chave para deslocar cada letra do texto simples em quantidades variáveis. Foi considerada indecifrável por séculos e ainda é usada hoje para fins educacionais e criptografia simples."
+            },
+            {
+              "question": "Como escolho uma boa chave?",
+              "answer": "Uma boa chave deve ser longa, aleatória e memorável. Chaves mais longas tornam a cifra mais segura. Evite palavras do dicionário ou padrões previsíveis."
+            },
+            {
+              "question": "A cifra de Vigenère preserva espaços e pontuação?",
+              "answer": "Sim. Esta calculadora preserva espaços, pontuação, números e caracteres especiais. Apenas letras alfabéticas (A-Z, a-z) são criptografadas ou descriptografadas."
+            },
+            {
+              "question": "A cifra de Vigenère é segura?",
+              "answer": "Historicamente considerada indecifrável, a cifra de Vigenère agora pode ser quebrada com análise de frequência. É ótima para aprender criptografia, mas não é recomendada para segurança moderna. Use AES para necessidades de segurança reais."
+            },
+            {
+              "question": "Posso decodificar uma mensagem sem a chave?",
+              "answer": "Sem a chave, decodificar uma cifra de Vigenère é muito difícil, mas possível com técnicas criptoanalíticas avançadas. No entanto, esta calculadora requer a chave correta para decodificar."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "caesarCipher": "Cifra de César",
+          "caesarCipherDesc": "Codifique e decodifique texto usando a cifra de César com um deslocamento simples",
+          "textToBinary": "Conversor de texto para binário",
+          "textToBinaryDesc": "Converta texto para representação binária com múltiplas codificações",
+          "asciiConverter": "Conversor ASCII",
+          "asciiConverterDesc": "Visualize e converta texto para códigos ASCII e vice-versa"
+        }
+      }
     }
   },
   "notFound": {

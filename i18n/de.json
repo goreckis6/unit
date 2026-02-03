@@ -6260,6 +6260,71 @@
           "asciiConverterDesc": "Anzeigen und konvertieren Sie Text in ASCII-Codes und zurück"
         }
       }
+    },
+    "vigenereCipher": {
+      "title": "Vigenère-Chiffre Rechner",
+      "description": "Verschlüsseln und entschlüsseln Sie Text mit der Vigenère-Chiffre und einem benutzerdefinierten Schlüssel. Eine klassische polyalphabetische Substitutionschiffre für sichere Nachrichtenverschlüsselung.",
+      "inputLabel": "Eingabetext",
+      "inputPlaceholder": "Geben Sie Text zum Verschlüsseln oder Entschlüsseln ein...",
+      "keyLabel": "Schlüssel",
+      "keyPlaceholder": "Geben Sie den Chiffrierschlüssel ein (nur Buchstaben)...",
+      "modeLabel": "Modus",
+      "encode": "Verschlüsseln",
+      "decode": "Entschlüsseln",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "resultLabel": "Ergebnis",
+      "enterTextAndKey": "Geben Sie Text und Schlüssel ein, um das Ergebnis zu sehen",
+      "clickCalculate": "Klicken Sie auf Berechnen, um das Ergebnis zu sehen",
+      "howItWorks": "Verschlüsselungsdetails",
+      "mode": "Modus",
+      "seo": {
+        "title": "Vigenère-Chiffre Rechner – Online Tool",
+        "description": "Verschlüsseln und entschlüsseln Sie Text mit der Vigenère-Chiffre und einem benutzerdefinierten Schlüssel. Eine klassische polyalphabetische Substitutionschiffre für sichere Nachrichtenverschlüsselung.",
+        "keywords": "vigenere cipher, cipher calculator, encryption, decryption, cryptography, schlüssel",
+        "content": {
+          "heading": "Verschlüsselungsdetails",
+          "paragraph1": "Verschlüsseln und entschlüsseln Sie Text mit der Vigenère-Chiffre und einem benutzerdefinierten Schlüssel. Eine klassische polyalphabetische Substitutionschiffre für sichere Nachrichtenverschlüsselung. Die Vigenère-Chiffre ist eine klassische Verschlüsselungsmethode, die seit Jahrhunderten verwendet wird.",
+          "paragraph2": "Um eine Nachricht zu verschlüsseln, richten Sie Ihren Klartext mit einem sich wiederholenden Schlüssel aus. Jeder Buchstabe wird um die Anzahl der Positionen verschoben, die durch den entsprechenden Schlüsselbuchstaben angegeben wird.",
+          "paragraph3": "Um eine verschlüsselte Nachricht zu entschlüsseln, verwenden Sie denselben Schlüssel, verschieben aber die Buchstaben rückwärts. Dieser Rechner verarbeitet sowohl Verschlüsselung als auch Entschlüsselung automatisch.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "Plaintext: 'HELLO WORLD', Key: 'KEY' → 'RIJVS UYVJN'"
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist die Vigenère-Chiffre?",
+              "answer": "Die Vigenère-Chiffre ist eine polyalphabetische Substitutionschiffre, die ein Schlüsselwort verwendet, um jeden Buchstaben des Klartexts um unterschiedliche Beträge zu verschieben. Sie galt jahrhundertelang als unknackbar und wird heute noch für Bildungszwecke und einfache Verschlüsselung verwendet."
+            },
+            {
+              "question": "Wie wähle ich einen guten Schlüssel?",
+              "answer": "Ein guter Schlüssel sollte lang, zufällig und einprägsam sein. Längere Schlüssel machen die Chiffre sicherer. Vermeiden Sie Wörterbuchwörter oder vorhersehbare Muster."
+            },
+            {
+              "question": "Bewahrt die Vigenère-Chiffre Leerzeichen und Interpunktion?",
+              "answer": "Ja. Dieser Rechner bewahrt Leerzeichen, Interpunktion, Zahlen und Sonderzeichen. Nur alphabetische Buchstaben (A-Z, a-z) werden verschlüsselt oder entschlüsselt."
+            },
+            {
+              "question": "Ist die Vigenère-Chiffre sicher?",
+              "answer": "Historisch als unknackbar angesehen, kann die Vigenère-Chiffre heute mit Frequenzanalyse geknackt werden. Sie ist großartig zum Lernen von Kryptografie, aber nicht für moderne Sicherheit empfohlen. Verwenden Sie AES für echte Sicherheitsbedürfnisse."
+            },
+            {
+              "question": "Kann ich eine Nachricht ohne Schlüssel entschlüsseln?",
+              "answer": "Ohne den Schlüssel ist das Entschlüsseln einer Vigenère-Chiffre sehr schwierig, aber mit fortgeschrittenen kryptanalytischen Techniken möglich. Dieser Rechner erfordert jedoch den richtigen Schlüssel zum Entschlüsseln."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "caesarCipher": "Caesar-Chiffre",
+          "caesarCipherDesc": "Verschlüsseln und entschlüsseln Sie Text mit der Caesar-Chiffre mit einer einfachen Verschiebung",
+          "textToBinary": "Text zu Binär Konverter",
+          "textToBinaryDesc": "Text in binäre Darstellung mit mehreren Codierungen konvertieren",
+          "asciiConverter": "ASCII-Konverter",
+          "asciiConverterDesc": "Text in ASCII-Codes anzeigen und konvertieren und umgekehrt"
+        }
+      }
     }
   },
   "notFound": {

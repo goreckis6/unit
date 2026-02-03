@@ -727,6 +727,71 @@
         }
       }
     },
+    "vigenereCipher": {
+      "title": "Vigenère Cipher Calculator",
+      "description": "Encode and decode text using the Vigenère cipher with a custom key. A classic polyalphabetic substitution cipher for secure message encryption.",
+      "inputLabel": "Input Text",
+      "inputPlaceholder": "Enter text to encode or decode…",
+      "keyLabel": "Key",
+      "keyPlaceholder": "Enter cipher key (letters only)…",
+      "modeLabel": "Mode",
+      "encode": "Encode",
+      "decode": "Decode",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "resultLabel": "Result",
+      "enterTextAndKey": "Enter text and key to see the result",
+      "clickCalculate": "Click Calculate to see the result",
+      "howItWorks": "Encryption Details",
+      "mode": "Mode",
+      "seo": {
+        "title": "Vigenère Cipher Calculator – Encode & Decode Text Online",
+        "description": "Free Vigenère cipher calculator. Encode and decode text using this classic polyalphabetic substitution cipher. Enter your text and key for secure message encryption and decryption.",
+        "keywords": "vigenere cipher, vigenere cipher calculator, cipher encoder, cipher decoder, polyalphabetic cipher, classical cryptography, encryption tool, cipher key, encode decode text",
+        "content": {
+          "heading": "How the Vigenère Cipher Works",
+          "paragraph1": "The Vigenère cipher is a method of encrypting text using a series of Caesar ciphers based on the letters of a keyword. Invented by Giovan Battista Bellaso in the 16th century but misattributed to Blaise de Vigenère, it was considered unbreakable for centuries and earned the name 'le chiffre indéchiffrable' (the indecipherable cipher). Unlike simple substitution ciphers, the Vigenère cipher is polyalphabetic, meaning each letter can be encrypted differently depending on its position and the corresponding letter in the key.",
+          "paragraph2": "To encode a message, you align your plaintext with a repeating key. For each letter in the plaintext, you shift it forward in the alphabet by the number of positions indicated by the corresponding key letter (A=0, B=1, C=2, etc.). For example, with plaintext 'HELLO' and key 'KEY', H shifts by K (10 positions) to become R, E shifts by E (4 positions) to become I, L shifts by Y (24 positions) to become J, and so on. Numbers, spaces, and punctuation remain unchanged.",
+          "paragraph3": "To decode an encrypted message, you use the same key but shift letters backward instead of forward. This calculator handles both encoding and decoding automatically. Simply enter your text, provide a key (any sequence of letters), choose the mode, and get your result instantly. The cipher preserves letter case and leaves non-alphabetic characters untouched.",
+          "exampleHeading": "Example",
+          "exampleText": "Plaintext: 'HELLO WORLD', Key: 'KEY'. Encoding: H+K=R, E+E=I, L+Y=J, L+K=V, O+E=S, W+Y=U, O+K=Y, R+E=V, L+Y=J, D+K=N. Result: 'RIJVS UYVJN'. Decoding 'RIJVS UYVJN' with key 'KEY' returns 'HELLO WORLD'."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the Vigenère cipher?",
+              "answer": "The Vigenère cipher is a polyalphabetic substitution cipher that uses a keyword to shift each letter of the plaintext by varying amounts. It was considered unbreakable for centuries and is still used today for educational purposes and simple encryption."
+            },
+            {
+              "question": "How do I choose a good key?",
+              "answer": "A good key should be long, random, and memorable. Longer keys make the cipher more secure. Avoid using dictionary words or predictable patterns. The key repeats throughout the message, so a key like 'SECRETKEY' is better than 'AAA'."
+            },
+            {
+              "question": "Does the Vigenère cipher preserve spaces and punctuation?",
+              "answer": "Yes. This calculator preserves spaces, punctuation, numbers, and special characters. Only alphabetic letters (A-Z, a-z) are encrypted or decrypted. Letter case is also preserved."
+            },
+            {
+              "question": "Is the Vigenère cipher secure?",
+              "answer": "Historically considered unbreakable, the Vigenère cipher can now be cracked with frequency analysis and known-plaintext attacks. It's great for learning cryptography but not recommended for securing sensitive information in modern applications. Use modern encryption standards like AES for real security needs."
+            },
+            {
+              "question": "Can I decode a message without the key?",
+              "answer": "Without the key, decoding a Vigenère cipher is very difficult but possible with advanced cryptanalysis techniques like the Kasiski examination or Friedman test. However, this calculator requires the correct key to decode messages."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "caesarCipher": "Caesar Cipher",
+          "caesarCipherDesc": "Encode and decode text using the Caesar cipher with a simple shift",
+          "textToBinary": "Text to Binary Converter",
+          "textToBinaryDesc": "Convert text to binary representation with multiple encodings",
+          "asciiConverter": "ASCII Converter",
+          "asciiConverterDesc": "View and convert text to ASCII codes and back"
+        }
+      }
+    },
     "subtractingFractions": {
       "title": "Subtracting Fractions Calculator",
       "description": "Subtract two fractions and get the simplified result and decimal value. Supports simple and mixed number form.",

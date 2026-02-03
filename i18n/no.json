@@ -6260,6 +6260,71 @@
           "asciiConverterDesc": "Vis og konverter tekst til ASCII koder og tilbake"
         }
       }
+    },
+    "vigenereCipher": {
+      "title": "Vigenère Cipher Kalkulator",
+      "description": "Kode og dekode tekst ved hjelp av Vigenère-chifferet med en tilpasset nøkkel. Et klassisk polyalfabetisk substitusjonschiffer for sikker meldingskryptering.",
+      "inputLabel": "Inndatatekst",
+      "inputPlaceholder": "Skriv inn tekst for koding eller dekoding...",
+      "keyLabel": "Nøkkel",
+      "keyPlaceholder": "Skriv inn chiffernøkkel (kun bokstaver)...",
+      "modeLabel": "Modus",
+      "encode": "Kode",
+      "decode": "Dekode",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "resultLabel": "Resultat",
+      "enterTextAndKey": "Skriv inn tekst og nøkkel for å se resultatet",
+      "clickCalculate": "Klikk på Beregn for å se resultatet",
+      "howItWorks": "Krypteringsdetaljer",
+      "mode": "Modus",
+      "seo": {
+        "title": "Vigenère Cipher Kalkulator – Online Tool",
+        "description": "Kode og dekode tekst ved hjelp av Vigenère-chifferet med en tilpasset nøkkel. Et klassisk polyalfabetisk substitusjonschiffer for sikker meldingskryptering.",
+        "keywords": "vigenere cipher, cipher calculator, encryption, decryption, cryptography, nøkkel",
+        "content": {
+          "heading": "Krypteringsdetaljer",
+          "paragraph1": "Kode og dekode tekst ved hjelp av Vigenère-chifferet med en tilpasset nøkkel. Et klassisk polyalfabetisk substitusjonschiffer for sikker meldingskryptering. The Vigenère cipher is a classic encryption method used for centuries.",
+          "paragraph2": "To encode a message, you align your plaintext with a repeating key.",
+          "paragraph3": "To decode an encrypted message, you use the same key but shift letters backward.",
+          "exampleHeading": "Example",
+          "exampleText": "Plaintext: 'HELLO WORLD', Key: 'KEY' → 'RIJVS UYVJN'"
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the Vigenère cipher?",
+              "answer": "The Vigenère cipher is a polyalphabetic substitution cipher that uses a keyword to shift each letter of the plaintext by varying amounts."
+            },
+            {
+              "question": "How do I choose a good key?",
+              "answer": "A good key should be long, random, and memorable. Longer keys make the cipher more secure."
+            },
+            {
+              "question": "Does the Vigenère cipher preserve spaces and punctuation?",
+              "answer": "Yes. This calculator preserves spaces, punctuation, numbers, and special characters."
+            },
+            {
+              "question": "Is the Vigenère cipher secure?",
+              "answer": "Historically considered unbreakable, the Vigenère cipher can now be cracked with frequency analysis."
+            },
+            {
+              "question": "Can I decode a message without the key?",
+              "answer": "Without the key, decoding a Vigenère cipher is very difficult but possible with advanced cryptanalytic techniques."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "caesarCipher": "Caesar Cipher",
+          "caesarCipherDesc": "Encode and decode text using the Caesar cipher with a simple shift",
+          "textToBinary": "Text to Binary Converter",
+          "textToBinaryDesc": "Convert text to binary representation with multiple encodings",
+          "asciiConverter": "ASCII Converter",
+          "asciiConverterDesc": "View and convert text to ASCII codes and back"
+        }
+      }
     }
   },
   "notFound": {

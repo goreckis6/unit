@@ -65,6 +65,7 @@ scripts/               # Build scripts
 - Caddy handles HTTPS and reverse proxy
 - Standalone output for minimal deployment
 - PM2 configuration: `ecosystem.config.js`
+- Auto-deployment via GitHub Actions on push to main branch
 
 ### PM2 Commands
 

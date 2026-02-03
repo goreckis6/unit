@@ -727,6 +727,79 @@
         }
       }
     },
+    "morseCode": {
+      "title": "Morse Code Translator",
+      "description": "Convert text to Morse code and Morse code to text instantly. Supports letters, numbers, and punctuation with accurate dot-dash encoding.",
+      "mode": "Mode",
+      "textToMorse": "Text to Morse Code",
+      "morseToText": "Morse Code to Text",
+      "textInput": "Text Input",
+      "textPlaceholder": "Enter text to convert to Morse code…",
+      "morseInput": "Morse Code Input",
+      "morsePlaceholder": "Enter Morse code (use dots and dashes, e.g., .... . .-.. .-.. ---)",
+      "morseOutput": "Morse Code Output",
+      "textOutput": "Text Output",
+      "calculate": "Translate",
+      "reset": "Reset",
+      "enterText": "Enter text or Morse code to see the result",
+      "clickCalculate": "Click Translate to see the result",
+      "seo": {
+        "title": "Morse Code Translator – Convert Text to Morse & Morse to Text",
+        "description": "Free Morse code translator. Convert text to Morse code and decode Morse code to text instantly. Supports letters (A-Z), numbers (0-9), and punctuation. Learn Morse code communication online.",
+        "keywords": "morse code translator, text to morse code, morse code decoder, morse code converter, morse code alphabet, dots and dashes, morse code encoder, learn morse code, morse code chart",
+        "content": {
+          "heading": "How to Use the Morse Code Translator",
+          "paragraph1": "Morse code is a method of encoding text characters as sequences of dots (·) and dashes (—), invented by Samuel Morse and Alfred Vail in the 1830s. Originally developed for telegraph communication, Morse code revolutionized long-distance messaging and remains in use today for emergency signals, amateur radio, aviation, and assistive technology. Each letter, number, and punctuation mark has a unique combination of dots and dashes, with dots representing short signals and dashes representing long signals.",
+          "paragraph2": "This Morse Code Translator provides two modes: Text to Morse Code converts your plain text into dot-dash sequences, while Morse Code to Text decodes Morse code back into readable text. The translator supports the full international Morse code alphabet including uppercase and lowercase letters (A-Z), digits (0-9), and common punctuation marks like periods, commas, question marks, and more. Spaces in text are represented by forward slashes (/) in Morse code, and individual characters are separated by spaces.",
+          "paragraph3": "To convert text to Morse code, simply enter your message in the text input field and click Translate. The tool automatically converts each character to its Morse equivalent, separating letters with spaces and words with slashes. For example, 'HELLO' becomes '.... . .-.. .-.. ---' and 'SOS' (the famous distress signal) becomes '... --- ...'. To decode Morse code, paste or type the dot-dash sequence in the Morse input field, and the translator will convert it back to plain text.",
+          "paragraph4": "Morse code is still widely used in amateur radio (ham radio), aviation navigation beacons, accessibility tools for people with disabilities, and as an educational tool for learning about communication systems. Our translator is perfect for students learning Morse code, radio enthusiasts practicing their skills, puzzle solvers decoding messages, or anyone curious about this historic communication method. The tool works entirely in your browser, ensuring your messages remain private and the translation is instant.",
+          "exampleHeading": "Example: Encoding and Decoding Morse Code",
+          "exampleText": "Text to Morse: Input 'HELLO WORLD' → Output '.... . .-.. .-.. --- / .-- --- .-. .-.. -..'. The famous distress signal SOS is encoded as '... --- ...' (three dots, three dashes, three dots). Morse to Text: Input '.... . .-.. .-.. ---' → Output 'HELLO'. Input '... --- ...' → Output 'SOS'. Numbers work too: '12345' → '.---- ..--- ...-- ....- .....'."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is Morse code?",
+              "answer": "Morse code is a communication system that encodes text characters as sequences of dots (·) and dashes (—). Invented in the 1830s by Samuel Morse and Alfred Vail for telegraph systems, it was the first digital encoding of text. Each letter, number, and punctuation mark has a unique pattern, making it possible to transmit messages using simple on-off signals, flashes of light, or sound beeps."
+            },
+            {
+              "question": "How do I read Morse code?",
+              "answer": "Morse code uses dots (short signals) and dashes (long signals). A dash is three times as long as a dot. Spaces separate individual letters, and longer pauses (represented by '/' in this translator) separate words. For example, '... --- ...' is three dots (S), three dashes (O), three dots (S), spelling the distress signal SOS."
+            },
+            {
+              "question": "What characters does this Morse code translator support?",
+              "answer": "This translator supports the full international Morse code alphabet: uppercase and lowercase letters A-Z (both converted to uppercase), digits 0-9, and common punctuation including period (.), comma (,), question mark (?), apostrophe ('), exclamation mark (!), slash (/), parentheses ( ), ampersand (&), colon (:), semicolon (;), equals (=), plus (+), hyphen (-), underscore (_), quotation mark (\"), dollar sign ($), and at sign (@)."
+            },
+            {
+              "question": "Is Morse code still used today?",
+              "answer": "Yes! While no longer used for commercial telegraphs, Morse code remains popular in amateur radio (ham radio), aviation navigation beacons (VOR and NDB), maritime communication, emergency signaling, and as an assistive technology for people with disabilities. It's also taught in scouting programs and used in puzzle games and escape rooms."
+            },
+            {
+              "question": "What is the SOS distress signal in Morse code?",
+              "answer": "The SOS distress signal in Morse code is '... --- ...' (three dots, three dashes, three dots). It was chosen because it's easy to recognize and hard to mistake for other messages. Despite popular belief, SOS doesn't stand for 'Save Our Ship' or 'Save Our Souls'—it was simply selected for its distinctive pattern."
+            },
+            {
+              "question": "Can I use this translator to learn Morse code?",
+              "answer": "Absolutely! This translator is an excellent learning tool. Try converting your name, common words, or the alphabet to see the patterns. Practice by encoding messages, then decoding them. With regular practice, you'll start recognizing common letters like E (.), T (-), A (.-), and N (-.), which are the most frequently used in English."
+            },
+            {
+              "question": "Is this Morse code translator free?",
+              "answer": "Yes, this Morse code translator is completely free to use with no registration, payment, or download required. It works entirely in your browser, so your messages remain private and secure."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "textToBinary": "Text to Binary Converter",
+          "textToBinaryDesc": "Convert text to binary representation with multiple encoding options",
+          "caesarCipher": "Caesar Cipher Calculator",
+          "caesarCipherDesc": "Encode and decode text using the classic Caesar cipher with customizable shift",
+          "natoPhonetic": "NATO Phonetic Alphabet Converter",
+          "natoPhoneticDesc": "Convert text to NATO phonetic alphabet for clear verbal communication"
+        }
+      }
+    },
     "vigenereCipher": {
       "title": "Vigenère Cipher Calculator",
       "description": "Encode and decode text using the Vigenère cipher with a custom key. A classic polyalphabetic substitution cipher for secure message encryption.",

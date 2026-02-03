@@ -6261,6 +6261,79 @@
         }
       }
     },
+    "morseCode": {
+      "title": "Morsecode-Übersetzer",
+      "description": "Konvertieren Sie Text in Morsecode und Morsecode in Text sofort. Unterstützt Buchstaben, Zahlen und Satzzeichen mit präziser Punkt-Strich-Codierung.",
+      "mode": "Modus",
+      "textToMorse": "Text zu Morsecode",
+      "morseToText": "Morsecode zu Text",
+      "textInput": "Texteingabe",
+      "textPlaceholder": "Geben Sie Text ein, um ihn in Morsecode zu konvertieren…",
+      "morseInput": "Morsecode-Eingabe",
+      "morsePlaceholder": "Geben Sie Morsecode ein (verwenden Sie Punkte und Striche, z.B., .... . .-.. .-.. ---)",
+      "morseOutput": "Morsecode-Ausgabe",
+      "textOutput": "Textausgabe",
+      "calculate": "Übersetzen",
+      "reset": "Zurücksetzen",
+      "enterText": "Geben Sie Text oder Morsecode ein, um das Ergebnis zu sehen",
+      "clickCalculate": "Klicken Sie auf Übersetzen, um das Ergebnis zu sehen",
+      "seo": {
+        "title": "Morsecode-Übersetzer – Text in Morse & Morse in Text konvertieren",
+        "description": "Kostenloser Morsecode-Übersetzer. Konvertieren Sie Text in Morsecode und dekodieren Sie Morsecode in Text sofort. Unterstützt Buchstaben (A-Z), Zahlen (0-9) und Satzzeichen. Lernen Sie Morsecode-Kommunikation online.",
+        "keywords": "morsecode übersetzer, text zu morsecode, morsecode decoder, morsecode konverter, morsecode alphabet, punkte und striche, morsecode encoder, morsecode lernen, morsecode tabelle",
+        "content": {
+          "heading": "So verwenden Sie den Morsecode-Übersetzer",
+          "paragraph1": "Morsecode ist eine Methode zur Codierung von Textzeichen als Sequenzen von Punkten (·) und Strichen (—), erfunden von Samuel Morse und Alfred Vail in den 1830er Jahren. Ursprünglich für die Telegrafenkommunikation entwickelt, revolutionierte Morsecode die Fernkommunikation und wird heute noch für Notsignale, Amateurfunk, Luftfahrt und Hilfstechnologie verwendet. Jeder Buchstabe, jede Zahl und jedes Satzzeichen hat eine einzigartige Kombination von Punkten und Strichen, wobei Punkte kurze Signale und Striche lange Signale darstellen.",
+          "paragraph2": "Dieser Morsecode-Übersetzer bietet zwei Modi: Text zu Morsecode konvertiert Ihren Klartext in Punkt-Strich-Sequenzen, während Morsecode zu Text Morsecode zurück in lesbaren Text dekodiert. Der Übersetzer unterstützt das vollständige internationale Morsecode-Alphabet, einschließlich Groß- und Kleinbuchstaben (A-Z), Ziffern (0-9) und gängige Satzzeichen wie Punkte, Kommas, Fragezeichen und mehr. Leerzeichen im Text werden durch Schrägstriche (/) im Morsecode dargestellt, und einzelne Zeichen werden durch Leerzeichen getrennt.",
+          "paragraph3": "Um Text in Morsecode zu konvertieren, geben Sie einfach Ihre Nachricht in das Texteingabefeld ein und klicken Sie auf Übersetzen. Das Tool konvertiert automatisch jedes Zeichen in sein Morse-Äquivalent, trennt Buchstaben durch Leerzeichen und Wörter durch Schrägstriche. Zum Beispiel wird 'HALLO' zu '.... .- .-.. .-.. ---' und 'SOS' (das berühmte Notsignal) wird zu '... --- ...'. Um Morsecode zu dekodieren, fügen Sie die Punkt-Strich-Sequenz in das Morse-Eingabefeld ein oder geben Sie sie ein, und der Übersetzer konvertiert sie zurück in Klartext.",
+          "paragraph4": "Morsecode wird immer noch weit verbreitet im Amateurfunk, in Luftfahrt-Navigationsbaken, Barrierefreiheits-Tools für Menschen mit Behinderungen und als Bildungswerkzeug zum Lernen über Kommunikationssysteme verwendet. Unser Übersetzer ist perfekt für Schüler, die Morsecode lernen, Funkbegeisterte, die ihre Fähigkeiten üben, Rätselliebhaber, die Nachrichten entschlüsseln, oder jeden, der neugierig auf diese historische Kommunikationsmethode ist. Das Tool funktioniert vollständig in Ihrem Browser, was sicherstellt, dass Ihre Nachrichten privat bleiben und die Übersetzung sofort erfolgt.",
+          "exampleHeading": "Beispiel: Codierung und Decodierung von Morsecode",
+          "exampleText": "Text zu Morse: Eingabe 'HALLO WELT' → Ausgabe '.... .- .-.. .-.. --- / .-- . .-.. -'. Das berühmte Notsignal SOS wird als '... --- ...' kodiert (drei Punkte, drei Striche, drei Punkte). Morse zu Text: Eingabe '.... .- .-.. .-.. ---' → Ausgabe 'HALLO'. Eingabe '... --- ...' → Ausgabe 'SOS'. Zahlen funktionieren auch: '12345' → '.---- ..--- ...-- ....- .....'."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist Morsecode?",
+              "answer": "Morsecode ist ein Kommunikationssystem, das Textzeichen als Sequenzen von Punkten (·) und Strichen (—) codiert. Erfunden in den 1830er Jahren von Samuel Morse und Alfred Vail für Telegrafensysteme, war es die erste digitale Codierung von Text. Jeder Buchstabe, jede Zahl und jedes Satzzeichen hat ein einzigartiges Muster, was es möglich macht, Nachrichten mit einfachen Ein-Aus-Signalen, Lichtblitzen oder Tonsignalen zu übertragen."
+            },
+            {
+              "question": "Wie lese ich Morsecode?",
+              "answer": "Morsecode verwendet Punkte (kurze Signale) und Striche (lange Signale). Ein Strich ist dreimal so lang wie ein Punkt. Leerzeichen trennen einzelne Buchstaben, und längere Pausen (im Übersetzer durch '/' dargestellt) trennen Wörter. Zum Beispiel ist '... --- ...' drei Punkte (S), drei Striche (O), drei Punkte (S), was das Notsignal SOS buchstabiert."
+            },
+            {
+              "question": "Welche Zeichen unterstützt dieser Morsecode-Übersetzer?",
+              "answer": "Dieser Übersetzer unterstützt das vollständige internationale Morsecode-Alphabet: Groß- und Kleinbuchstaben A-Z (beide in Großbuchstaben konvertiert), Ziffern 0-9 und gängige Satzzeichen, einschließlich Punkt (.), Komma (,), Fragezeichen (?), Apostroph ('), Ausrufezeichen (!), Schrägstrich (/), Klammern ( ), Und-Zeichen (&), Doppelpunkt (:), Semikolon (;), Gleichheitszeichen (=), Plus (+), Bindestrich (-), Unterstrich (_), Anführungszeichen (\"), Dollarzeichen ($) und At-Zeichen (@)."
+            },
+            {
+              "question": "Wird Morsecode heute noch verwendet?",
+              "answer": "Ja! Obwohl er nicht mehr für kommerzielle Telegrafen verwendet wird, bleibt Morsecode im Amateurfunk, in Luftfahrt-Navigationsbaken (VOR und NDB), in der maritimen Kommunikation, bei Notsignalen und als Hilfstechnologie für Menschen mit Behinderungen beliebt. Er wird auch in Pfadfinderprogrammen gelehrt und in Rätselspielen und Escape Rooms verwendet."
+            },
+            {
+              "question": "Was ist das SOS-Notsignal in Morsecode?",
+              "answer": "Das SOS-Notsignal in Morsecode ist '... --- ...' (drei Punkte, drei Striche, drei Punkte). Es wurde gewählt, weil es leicht zu erkennen und schwer mit anderen Nachrichten zu verwechseln ist. Entgegen der landläufigen Meinung steht SOS nicht für 'Save Our Ship' oder 'Save Our Souls'—es wurde einfach wegen seines charakteristischen Musters ausgewählt."
+            },
+            {
+              "question": "Kann ich diesen Übersetzer zum Lernen von Morsecode verwenden?",
+              "answer": "Auf jeden Fall! Dieser Übersetzer ist ein ausgezeichnetes Lernwerkzeug. Versuchen Sie, Ihren Namen, gängige Wörter oder das Alphabet zu konvertieren, um die Muster zu sehen. Üben Sie, indem Sie Nachrichten codieren und dann decodieren. Mit regelmäßiger Übung werden Sie anfangen, häufige Buchstaben wie E (.), T (-), A (.-) und N (-.) zu erkennen, die im Deutschen am häufigsten verwendet werden."
+            },
+            {
+              "question": "Ist dieser Morsecode-Übersetzer kostenlos?",
+              "answer": "Ja, dieser Morsecode-Übersetzer ist vollständig kostenlos ohne Registrierung, Zahlung oder Download erforderlich. Er funktioniert vollständig in Ihrem Browser, sodass Ihre Nachrichten privat und sicher bleiben."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "textToBinary": "Text-zu-Binär-Konverter",
+          "textToBinaryDesc": "Konvertieren Sie Text in binäre Darstellung mit mehreren Codierungsoptionen",
+          "caesarCipher": "Caesar-Verschlüsselungsrechner",
+          "caesarCipherDesc": "Codieren und decodieren Sie Text mit der klassischen Caesar-Verschlüsselung mit anpassbarer Verschiebung",
+          "natoPhonetic": "NATO-Phonetisches Alphabet Konverter",
+          "natoPhoneticDesc": "Konvertieren Sie Text in das NATO-phonetische Alphabet für klare verbale Kommunikation"
+        }
+      }
+    },
     "vigenereCipher": {
       "title": "Vigenère-Chiffre Rechner",
       "description": "Verschlüsseln und entschlüsseln Sie Text mit der Vigenère-Chiffre und einem benutzerdefinierten Schlüssel. Eine klassische polyalphabetische Substitutionschiffre für sichere Nachrichtenverschlüsselung.",

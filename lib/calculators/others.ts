@@ -49,6 +49,13 @@ const otherCalculatorsList: Calculator[] = addCalculatorsSorted(
     category: 'others',
   },
   {
+    id: 'morse-code',
+    titleKey: 'morseCode.title',
+    descKey: 'morseCode.description',
+    path: '/calculators/others/morse-code',
+    category: 'others',
+  },
+  {
     id: 'nato-phonetic',
     titleKey: 'natoPhonetic.title',
     descKey: 'natoPhonetic.description',

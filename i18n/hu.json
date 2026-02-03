@@ -6261,6 +6261,79 @@
         }
       }
     },
+    "morseCode": {
+      "title": "Morse-kód Fordító",
+      "description": "Azonnali szöveg Morse-kóddá és Morse-kód szöveggé alakítás. Támogatja a betűket, számokat és írásjeleket pontos pont-vonal kódolással.",
+      "mode": "Mód",
+      "textToMorse": "Szöveg Morse-kóddá",
+      "morseToText": "Morse-kód Szöveggé",
+      "textInput": "Szöveg Bemenet",
+      "textPlaceholder": "Írjon be szöveget a Morse-kóddá alakításhoz…",
+      "morseInput": "Morse-kód Bemenet",
+      "morsePlaceholder": "Írja be a Morse-kódot (használjon pontokat és vonásokat, pl., .... . .-.. .-.. ---)",
+      "morseOutput": "Morse-kód Kimenet",
+      "textOutput": "Szöveg Kimenet",
+      "calculate": "Fordítás",
+      "reset": "Visszaállítás",
+      "enterText": "Írjon be szöveget vagy Morse-kódot az eredmény megtekintéséhez",
+      "clickCalculate": "Kattintson a Fordítás gombra az eredmény megtekintéséhez",
+      "seo": {
+        "title": "Morse-kód Fordító – Szöveg Morse-ba és Morse Szöveggé Alakítás",
+        "description": "Ingyenes Morse-kód fordító. Szöveg azonnali Morse-kóddá alakítása és Morse-kód szöveggé dekódolása. Támogatja a betűket (A-Z), számokat (0-9) és írásjeleket. Tanulja meg a Morse-kód kommunikációt online.",
+        "keywords": "morse-kód fordító, szöveg morse-kódba, morse-kód dekódoló, morse-kód átalakító, morse-kód ábécé, pontok és vonások, morse-kód kódoló, morse-kód tanulás, morse-kód táblázat",
+        "content": {
+          "heading": "Hogyan Használja a Morse-kód Fordítót",
+          "paragraph1": "A Morse-kód egy módszer a szöveges karakterek pontok (·) és vonások (—) sorozataként történő kódolására, amelyet Samuel Morse és Alfred Vail találtak fel az 1830-as években. Eredetileg távíróommunikációhoz fejlesztették ki, a Morse-kód forradalmasította a nagy távolságú üzenetküldést, és ma is használatban van vészjelzésekhez, amatőr rádióhoz, repüléshez és segítő technológiához. Minden betűnek, számnak és írásjelnek egyedi pont- és vonáskombinációja van, ahol a pontok rövid jeleket, a vonások pedig hosszú jeleket képviselnek.",
+          "paragraph2": "Ez a Morse-kód Fordító két módot kínál: a Szöveg Morse-kóddá átalakítja az egyszerű szöveget pont-vonás sorozatokká, míg a Morse-kód Szöveggé visszafejti a Morse-kódot olvasható szöveggé. A fordító támogatja a teljes nemzetközi Morse-kód ábécét, beleértve a nagy- és kisbetűket (A-Z), a számjegyeket (0-9) és a gyakori írásjeleket, mint például pontok, vesszők, kérdőjelek és mások. A szövegben lévő szóközöket a Morse-kódban perjelek (/) jelölik, az egyes karaktereket pedig szóközök választják el.",
+          "paragraph3": "A szöveg Morse-kóddá alakításához egyszerűen írja be az üzenetét a szövegbeviteli mezőbe, és kattintson a Fordítás gombra. Az eszköz automatikusan átalakítja az egyes karaktereket Morse-megfelelőjükké, szóközökkel elválasztva a betűket és perjelekkel a szavakat. Például a 'HELLO' '.... . .-.. .-.. ---' lesz, és az 'SOS' (a híres vészjel) '... --- ...' lesz. A Morse-kód dekódolásához illessze be vagy írja be a pont-vonás sorozatot a Morse-beviteli mezőbe, és a fordító visszaalakítja egyszerű szöveggé.",
+          "paragraph4": "A Morse-kódot ma is széles körben használják amatőr rádióban (ham rádió), repülési navigációs jeladókban, akadálymentesítési eszközökben fogyatékkal élők számára, és oktatási eszközként a kommunikációs rendszerek megismeréséhez. Fordítónk tökéletes a Morse-kódot tanuló diákok, rádió-rajongók, akik gyakorolják készségeiket, rejtvényfejtők, akik üzeneteket dekódolnak, vagy bárki számára, aki kíváncsi erre a történelmi kommunikációs módszerre. Az eszköz teljesen a böngészőjében működik, biztosítva, hogy üzenetei privátak maradjanak, és a fordítás azonnali.",
+          "exampleHeading": "Példa: Morse-kód Kódolás és Dekódolás",
+          "exampleText": "Szöveg Morse-ba: Bemenet 'HELLO VILÁG' → Kimenet '.... . .-.. .-.. --- / ...- .. .-.. .- --. .'. A híres SOS vészjel '... --- ...' (három pont, három vonás, három pont) formában kódolt. Morse Szöveggé: Bemenet '.... . .-.. .-.. ---' → Kimenet 'HELLO'. Bemenet '... --- ...' → Kimenet 'SOS'. A számok is működnek: '12345' → '.---- ..--- ...-- ....- .....'."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mi az a Morse-kód?",
+              "answer": "A Morse-kód egy kommunikációs rendszer, amely a szöveges karaktereket pontok (·) és vonások (—) sorozataként kódolja. Samuel Morse és Alfred Vail találta fel az 1830-as években távírórendszerekhez, és ez volt a szöveg első digitális kódolása. Minden betűnek, számnak és írásjelnek egyedi mintája van, amely lehetővé teszi üzenetek küldését egyszerű be-ki jelekkel, fényvillanásokkal vagy hangos sípolásokkal."
+            },
+            {
+              "question": "Hogyan olvassuk a Morse-kódot?",
+              "answer": "A Morse-kód pontokat (rövid jelek) és vonásokat (hosszú jelek) használ. Egy vonás háromszor hosszabb, mint egy pont. A szóközök elválasztják az egyes betűket, és a hosszabb szünetek (ebben a fordítóban '/' jelöli) elválasztják a szavakat. Például a '... --- ...' három pont (S), három vonás (O), három pont (S), amely az SOS vészjelet betűzi."
+            },
+            {
+              "question": "Milyen karaktereket támogat ez a Morse-kód fordító?",
+              "answer": "Ez a fordító támogatja a teljes nemzetközi Morse-kód ábécét: nagy- és kisbetűk A-Z (mindkettő nagybetűvé alakul), számjegyek 0-9, és gyakori írásjelek, beleértve a pontot (.), vesszőt (,), kérdőjelet (?), aposztrófot ('), felkiáltójelet (!), perjelet (/), zárójeleket ( ), et jelet (&), kettőspontot (:), pontosvesszőt (;), egyenlőségjelet (=), pluszjelet (+), kötőjelet (-), aláhúzást (_), idézőjelet (\"), dollárjelet ($) és kukacot (@)."
+            },
+            {
+              "question": "Még mindig használják a Morse-kódot ma?",
+              "answer": "Igen! Bár már nem használják kereskedelmi távíróhoz, a Morse-kód népszerű marad az amatőr rádióban (ham rádió), repülési navigációs jeladókban (VOR és NDB), tengeri kommunikációban, vészjelzésben, és segítő technológiaként fogyatékkal élők számára. Cserkész programokban is tanítják, és rejtvényjátékokban és szabadulószobákban használják."
+            },
+            {
+              "question": "Mi az SOS vészjel Morse-kódban?",
+              "answer": "Az SOS vészjel Morse-kódban '... --- ...' (három pont, három vonás, három pont). Azért választották, mert könnyű felismerni és nehéz összekeverni más üzenetekkel. A népszerű hiedelemmel ellentétben az SOS nem jelenti azt, hogy 'Save Our Ship' vagy 'Save Our Souls'—egyszerűen jellegzetes mintázata miatt választották."
+            },
+            {
+              "question": "Használhatom ezt a fordítót a Morse-kód tanulásához?",
+              "answer": "Természetesen! Ez a fordító kiváló tanulási eszköz. Próbálja meg átváltani a nevét, gyakori szavakat vagy az ábécét, hogy lássa a mintákat. Gyakoroljon üzenetek kódolásával és dekódolásával. Rendszeres gyakorlással felismerni fogja a gyakori betűket, mint az E (.), T (-), A (.-) és N (-.), amelyek a leggyakrabban használtak magyarul."
+            },
+            {
+              "question": "Ez a Morse-kód fordító ingyenes?",
+              "answer": "Igen, ez a Morse-kód fordító teljesen ingyenes regisztráció, fizetés vagy letöltés nélkül. Teljesen a böngészőjében működik, így üzenetei privátak és biztonságosak maradnak."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Számológépek",
+          "textToBinary": "Szöveg Binárissá Alakító",
+          "textToBinaryDesc": "Szöveg bináris reprezentációvá alakítása több kódolási opcióval",
+          "caesarCipher": "Caesar-rejtjel Számológép",
+          "caesarCipherDesc": "Szöveg kódolása és dekódolása a klasszikus Caesar-rejtjellel, testreszabható eltolással",
+          "natoPhonetic": "NATO Fonetikus Ábécé Átalakító",
+          "natoPhoneticDesc": "Szöveg átalakítása NATO fonetikus ábécévé világos szóbeli kommunikációhoz"
+        }
+      }
+    },
     "vigenereCipher": {
       "title": "Vigenère rejtjel kalkulátor",
       "description": "Szöveg kódolása és dekódolása Vigenère rejtjellel egyedi kulccsal. Klasszikus polialfabetikus helyettesítő rejtjel biztonságos üzenet titkosításhoz.",

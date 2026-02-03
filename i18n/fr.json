@@ -6261,6 +6261,79 @@
         }
       }
     },
+    "morseCode": {
+      "title": "Traducteur de Code Morse",
+      "description": "Convertissez du texte en code Morse et du code Morse en texte instantanément. Prend en charge les lettres, les chiffres et la ponctuation avec un encodage précis en points et traits.",
+      "mode": "Mode",
+      "textToMorse": "Texte vers Code Morse",
+      "morseToText": "Code Morse vers Texte",
+      "textInput": "Entrée de Texte",
+      "textPlaceholder": "Entrez du texte à convertir en code Morse…",
+      "morseInput": "Entrée de Code Morse",
+      "morsePlaceholder": "Entrez du code Morse (utilisez des points et des traits, ex., .... . .-.. .-.. ---)",
+      "morseOutput": "Sortie de Code Morse",
+      "textOutput": "Sortie de Texte",
+      "calculate": "Traduire",
+      "reset": "Réinitialiser",
+      "enterText": "Entrez du texte ou du code Morse pour voir le résultat",
+      "clickCalculate": "Cliquez sur Traduire pour voir le résultat",
+      "seo": {
+        "title": "Traducteur de Code Morse – Convertir Texte en Morse et Morse en Texte",
+        "description": "Traducteur de code Morse gratuit. Convertissez du texte en code Morse et décodez du code Morse en texte instantanément. Prend en charge les lettres (A-Z), les chiffres (0-9) et la ponctuation. Apprenez la communication en code Morse en ligne.",
+        "keywords": "traducteur code morse, texte en code morse, décodeur code morse, convertisseur code morse, alphabet code morse, points et traits, encodeur code morse, apprendre code morse, tableau code morse",
+        "content": {
+          "heading": "Comment Utiliser le Traducteur de Code Morse",
+          "paragraph1": "Le code Morse est une méthode d'encodage des caractères de texte sous forme de séquences de points (·) et de traits (—), inventée par Samuel Morse et Alfred Vail dans les années 1830. Développé à l'origine pour la communication télégraphique, le code Morse a révolutionné la messagerie à longue distance et reste utilisé aujourd'hui pour les signaux d'urgence, la radio amateur, l'aviation et la technologie d'assistance. Chaque lettre, chiffre et signe de ponctuation a une combinaison unique de points et de traits, les points représentant des signaux courts et les traits représentant des signaux longs.",
+          "paragraph2": "Ce Traducteur de Code Morse propose deux modes : Texte vers Code Morse convertit votre texte brut en séquences de points et traits, tandis que Code Morse vers Texte décode le code Morse en texte lisible. Le traducteur prend en charge l'alphabet international complet du code Morse, y compris les lettres majuscules et minuscules (A-Z), les chiffres (0-9) et les signes de ponctuation courants comme les points, les virgules, les points d'interrogation et plus encore. Les espaces dans le texte sont représentés par des barres obliques (/) en code Morse, et les caractères individuels sont séparés par des espaces.",
+          "paragraph3": "Pour convertir du texte en code Morse, entrez simplement votre message dans le champ de saisie de texte et cliquez sur Traduire. L'outil convertit automatiquement chaque caractère en son équivalent Morse, en séparant les lettres par des espaces et les mots par des barres obliques. Par exemple, 'BONJOUR' devient '- --- -. .--- --- ..- .-.' et 'SOS' (le célèbre signal de détresse) devient '... --- ...'. Pour décoder du code Morse, collez ou tapez la séquence de points et traits dans le champ d'entrée Morse, et le traducteur la convertira en texte brut.",
+          "paragraph4": "Le code Morse est encore largement utilisé en radio amateur, dans les balises de navigation aérienne, les outils d'accessibilité pour les personnes handicapées et comme outil pédagogique pour l'apprentissage des systèmes de communication. Notre traducteur est parfait pour les étudiants qui apprennent le code Morse, les passionnés de radio qui pratiquent leurs compétences, les résolveurs d'énigmes qui décodent des messages, ou toute personne curieuse de cette méthode de communication historique. L'outil fonctionne entièrement dans votre navigateur, garantissant que vos messages restent privés et que la traduction soit instantanée.",
+          "exampleHeading": "Exemple : Encodage et Décodage du Code Morse",
+          "exampleText": "Texte vers Morse : Entrée 'BONJOUR MONDE' → Sortie '- --- -. .--- --- ..- .-. / -- --- -. -.. .'. Le célèbre signal de détresse SOS est encodé comme '... --- ...' (trois points, trois traits, trois points). Morse vers Texte : Entrée '- --- -. .--- --- ..- .-.' → Sortie 'BONJOUR'. Entrée '... --- ...' → Sortie 'SOS'. Les chiffres fonctionnent aussi : '12345' → '.---- ..--- ...-- ....- .....'."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Qu'est-ce que le code Morse ?",
+              "answer": "Le code Morse est un système de communication qui encode les caractères de texte sous forme de séquences de points (·) et de traits (—). Inventé dans les années 1830 par Samuel Morse et Alfred Vail pour les systèmes télégraphiques, il a été le premier encodage numérique du texte. Chaque lettre, chiffre et signe de ponctuation a un motif unique, ce qui permet de transmettre des messages en utilisant de simples signaux marche-arrêt, des flashs lumineux ou des bips sonores."
+            },
+            {
+              "question": "Comment lire le code Morse ?",
+              "answer": "Le code Morse utilise des points (signaux courts) et des traits (signaux longs). Un trait est trois fois plus long qu'un point. Les espaces séparent les lettres individuelles, et les pauses plus longues (représentées par '/' dans ce traducteur) séparent les mots. Par exemple, '... --- ...' correspond à trois points (S), trois traits (O), trois points (S), épelant le signal de détresse SOS."
+            },
+            {
+              "question": "Quels caractères ce traducteur de code Morse prend-il en charge ?",
+              "answer": "Ce traducteur prend en charge l'alphabet international complet du code Morse : les lettres majuscules et minuscules A-Z (toutes converties en majuscules), les chiffres 0-9, et la ponctuation courante, y compris le point (.), la virgule (,), le point d'interrogation (?), l'apostrophe ('), le point d'exclamation (!), la barre oblique (/), les parenthèses ( ), l'esperluette (&), les deux-points (:), le point-virgule (;), l'égal (=), le plus (+), le trait d'union (-), le trait de soulignement (_), les guillemets (\"), le signe dollar ($) et l'arobase (@)."
+            },
+            {
+              "question": "Le code Morse est-il encore utilisé aujourd'hui ?",
+              "answer": "Oui ! Bien qu'il ne soit plus utilisé pour les télégraphes commerciaux, le code Morse reste populaire en radio amateur, dans les balises de navigation aérienne (VOR et NDB), la communication maritime, la signalisation d'urgence et comme technologie d'assistance pour les personnes handicapées. Il est également enseigné dans les programmes de scoutisme et utilisé dans les jeux d'énigmes et les escape games."
+            },
+            {
+              "question": "Quel est le signal de détresse SOS en code Morse ?",
+              "answer": "Le signal de détresse SOS en code Morse est '... --- ...' (trois points, trois traits, trois points). Il a été choisi car il est facile à reconnaître et difficile à confondre avec d'autres messages. Contrairement à la croyance populaire, SOS ne signifie pas 'Save Our Ship' ou 'Save Our Souls'—il a simplement été sélectionné pour son motif distinctif."
+            },
+            {
+              "question": "Puis-je utiliser ce traducteur pour apprendre le code Morse ?",
+              "answer": "Absolument ! Ce traducteur est un excellent outil d'apprentissage. Essayez de convertir votre nom, des mots courants ou l'alphabet pour voir les motifs. Entraînez-vous en encodant des messages, puis en les décodant. Avec une pratique régulière, vous commencerez à reconnaître les lettres courantes comme E (.), T (-), A (.-) et N (-.), qui sont les plus fréquemment utilisées en français."
+            },
+            {
+              "question": "Ce traducteur de code Morse est-il gratuit ?",
+              "answer": "Oui, ce traducteur de code Morse est entièrement gratuit sans inscription, paiement ou téléchargement requis. Il fonctionne entièrement dans votre navigateur, donc vos messages restent privés et sécurisés."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatrices Connexes",
+          "textToBinary": "Convertisseur de Texte en Binaire",
+          "textToBinaryDesc": "Convertissez le texte en représentation binaire avec plusieurs options d'encodage",
+          "caesarCipher": "Calculatrice de Chiffrement de César",
+          "caesarCipherDesc": "Encodez et décodez du texte en utilisant le chiffre de César classique avec décalage personnalisable",
+          "natoPhonetic": "Convertisseur d'Alphabet Phonétique OTAN",
+          "natoPhoneticDesc": "Convertissez le texte en alphabet phonétique OTAN pour une communication verbale claire"
+        }
+      }
+    },
     "vigenereCipher": {
       "title": "Calculateur de chiffre de Vigenère",
       "description": "Encodez et décodez du texte avec le chiffre de Vigenère et une clé personnalisée. Un chiffre de substitution polyalphabétique classique pour le chiffrement sécurisé de messages.",

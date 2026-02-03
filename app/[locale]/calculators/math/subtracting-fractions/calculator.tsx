@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
 import { CopyButton } from '@/components/CopyButton';
 
+
 type Fraction = {
   numerator: number;
   denominator: number;
@@ -114,6 +115,7 @@ export function SubtractingFractionsCalculator() {
   return (
     <div>
       <div className="input-section">
+        {/* Form type selector - 50% width for compact layout */}
         <div style={{ marginBottom: '1.5rem' }}>
           <div className="input-card">
             <label htmlFor="formType" className="input-label">

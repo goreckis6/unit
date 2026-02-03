@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9">
+<xsl:stylesheet
+  version="2.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
   <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
   
   <xsl:template match="/">
@@ -107,6 +112,39 @@
             font-size: 0.875rem;
             color: #666;
           }
+
+          .alternates {
+            margin-top: 0.75rem;
+            font-size: 0.875rem;
+            color: #666;
+          }
+
+          .alternate-list {
+            margin-top: 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+          }
+
+          .alternate-chip {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.2rem 0.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 999px;
+            background: #fafafa;
+            max-width: 100%;
+          }
+
+          .alternate-chip a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+          }
+
+          .alternate-chip a:hover {
+            text-decoration: underline;
+          }
           
           .meta-item {
             display: flex;
@@ -213,6 +251,21 @@
                       <span><xsl:value-of select="sitemap:lastmod"/></span>
                     </div>
                   </div>
+
+                  <xsl:if test="xhtml:link">
+                    <div class="alternates">
+                      <span class="meta-label">Alternates (hreflang):</span>
+                      <div class="alternate-list">
+                        <xsl:for-each select="xhtml:link">
+                          <span class="alternate-chip">
+                            <a href="{@href}">
+                              <xsl:value-of select="@hreflang"/>
+                            </a>
+                          </span>
+                        </xsl:for-each>
+                      </div>
+                    </div>
+                  </xsl:if>
                 </li>
               </xsl:for-each>
             </ul>

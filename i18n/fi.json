@@ -4973,6 +4973,65 @@
         }
       }
     },
+    "ageInDays": {
+      "title": "Ikä päivinä -laskuri",
+      "description": "Laske ikäsi sekunteina, minuutteina, tunteina, päivinä, viikkoina, kuukausina ja vuosina. Syötä syntymäaika ja nykyinen päivämäärä.",
+      "dateOfBirth": "Syntymäaika",
+      "currentDate": "Nykyinen päivämäärä",
+      "placeholderDate": "PP/KK/VVVV",
+      "yourAge": "Ikäsi",
+      "seconds": "sekuntia",
+      "minutes": "minuuttia",
+      "hours": "tuntia",
+      "days": "päivää",
+      "daysUnit": "päivää",
+      "weeks": "viikkoa",
+      "months": "kuukautta",
+      "years": "vuotta",
+      "sec": "s",
+      "min": "min",
+      "hrs": "h",
+      "wks": "vk",
+      "mos": "kk",
+      "yrs": "v",
+      "calculate": "Laske",
+      "reset": "Tyhjennä",
+      "enterValue": "Syötä syntymäaika ja nykyinen päivämäärä nähdäksesi tulokset",
+      "clickCalculate": "Napsauta Laske nähdäksesi tuloksen",
+      "seo": {
+        "title": "Ikä päivinä -laskuri – Ikäsi sekunteina, minuutteina, tunteina, päivinä, viikkoina, kuukausina ja vuosina",
+        "description": "Ilmainen ikä päivinä -laskuri. Syötä syntymäaika ja nykyinen päivämäärä saadaksesi ikäsi sekunteina, minuutteina, tunteina, päivinä, viikkoina, kuukausina ja vuosina. Ei rekisteröintiä.",
+        "keywords": "ikä päivinä laskuri, ikälaskuri, kuinka vanha olen, syntymäaika laskuri, ikä sekunteina, ikä viikkoina, ikä kuukausina",
+        "content": {
+          "heading": "Kuinka laskea ikä päivinä, sekunteina ja muissa yksiköissä",
+          "paragraph1": "Ikä voidaan ilmaista monissa yksiköissä: sekunnit, minuutit, tunnit, päivät, viikot, kuukaudet ja vuodet. Syntymäajasta annettuun päivämäärään (yleensä tänään) kulunut aika on kiinteä kesto.",
+          "paragraph2": "Laskeaksesi iän päivinä, etsi ensin päivien lukumäärä syntymäajan ja nykyisen päivämäärän (tai loppupäivämäärän) välillä. Siitä saat sekunnit (päivät × 24 × 60 × 60), minuutit (sekunnit / 60), tunnit (minuutit / 60), viikot (päivät / 7), kuukaudet (päivät ÷ 30,44), vuodet (päivät ÷ 365,25 karkausvuosille). Laskurimme tekee tämän automaattisesti: syötä syntymäaika ja nykyinen päivämäärä muodossa PP/KK/VVVV ja napsauta Laske.",
+          "paragraph3": "Karkausvuodet on huomioitu (365,25 päivää vuodessa ja keskimäärin 30,436875 päivää kuukaudessa). Tulos on kokonaisluku kussakin yksikössä. Voit käyttää mitä tahansa loppupäivämäärää, ei vain tänään.",
+          "paragraph4": "Syötä syntymäaika ja nykyinen päivämäärä (tai toinen loppupäivämäärä) muodossa PP/KK/VVVV. Napsauta Laske nähdäksesi ikäsi sekunteina, minuutteina, tunteina, päivinä, viikkoina, kuukausina ja vuosina. Kaikki laskelmat tehdään selaimessa; tietoja ei lähetetä palvelimelle.",
+          "exampleHeading": "Esimerkki: ikä eri yksiköissä",
+          "exampleText": "Jos synnyit 1. tammikuuta 1990 ja nykyinen päivämäärä on 3. helmikuuta 2026, kulunut aika on 36 vuotta ja noin 33 päivää: noin 13 184 päivää, 1 881 viikkoa, 432 kuukautta, 36 vuotta ja 1 139 097 600 sekuntia, 18 984 960 minuuttia, 316 416 tuntia. Syötä 01/01/1990 ja 02/03/2026."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Miten käytän ikä päivinä -laskuria?", "answer": "Syötä syntymäaika ja nykyinen päivämäärä (tai loppupäivämäärä) muodossa PP/KK/VVVV. Napsauta Laske nähdäksesi ikäsi sekunteina, minuutteina, tunteina, päivinä, viikkoina, kuukausina ja vuosina. Voit vaihtaa loppupäivämäärän nähdäksesi iän tietyllä päivämäärällä."},
+            {"question": "Miksi kuukaudet ja vuodet ovat likimääräisiä?", "answer": "Kuukaudet vaihtelevat pituudeltaan (28–31 päivää), vuodessa 365 tai 366 päivää (karkausvuosi). Laskuri käyttää keskimäärin 30,44 päivää kuukaudessa ja 365,25 päivää vuodessa. Sekunnit, minuutit, tunnit, päivät ja viikot ovat tarkkoja."},
+            {"question": "Mitä päivämäärämuotoa käytän?", "answer": "Käytä PP/KK/VVVV: kaksinumeroinen kuukausi, kaksinumeroinen päivä, nelinumeroinen vuosi, erotettuna kauttavilla (esim. 01/15/1990 tai 02/03/2026). Etunollat kuukaudelle ja päivälle ovat valinnaisia."},
+            {"question": "Voinko käyttää tulevaa päivämäärää nykyisenä?", "answer": "Kyllä. Syötä syntymäaika ja mikä tahansa loppupäivämäärä (mukaan lukien tuleva) muodossa PP/KK/VVVV. Laskuri näyttää, kuinka vanha olet (tai olet) syntymästä kyseiseen päivämäärään. Syntymäaika on oltava ennen tai loppupäivämääränä."},
+            {"question": "Onko tämä ikä päivinä -laskuri ilmainen?", "answer": "Kyllä. Rekisteröitymistä tai maksua ei tarvita. Kaikki laskelmat tehdään selaimessa."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "reverseTextGenerator": "Käänteinen teksti -generaattori",
+          "reverseTextGeneratorDesc": "Kääntää koko teksti, sanojen järjestys tai kirjaimet kussakin sanassa",
+          "percentage": "Prosenttilaskuri",
+          "percentageDesc": "Laske luvun prosenttiosuus ja prosenttimuutos",
+          "average": "Keskiarvon laskuri",
+          "averageDesc": "Laske lukujoukon keskiarvo"
+        }
+      }
+    },
     "squareRoot": {
       "title": "Neliöjuuri-laskuri",
       "description": "Laske minkä tahansa ei-negatiivisen luvun neliöjuuri. Saat sekä positiivisen että negatiivisen juuren heti. Ilmainen työkalu matematiikkaan ja jokapäiväiseen käyttöön.",

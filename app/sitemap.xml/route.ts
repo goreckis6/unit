@@ -59,6 +59,7 @@ export async function GET() {
     '/calculators/conversion/leet-speak-translator',
     '/calculators/physics',
     '/calculators/real-life',
+    '/calculators/real-life/age-in-days',
     '/calculators/real-life/reverse-text-generator',
     '/calculators/finance',
     '/calculators/finance/real-house-price',

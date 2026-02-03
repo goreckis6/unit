@@ -4973,6 +4973,65 @@
         }
       }
     },
+    "ageInDays": {
+      "title": "Kalkulačka věku ve dnech",
+      "description": "Vypočítejte svůj věk v sekundách, minutách, hodinách, dnech, týdnech, měsících a letech. Zadejte datum narození a aktuální datum a uvidíte, jak dlouho jste žili.",
+      "dateOfBirth": "Datum narození",
+      "currentDate": "Aktuální datum",
+      "placeholderDate": "MM/DD/RRRR",
+      "yourAge": "Váš věk",
+      "seconds": "sekundy",
+      "minutes": "minuty",
+      "hours": "hodiny",
+      "days": "dny",
+      "daysUnit": "dny",
+      "weeks": "týdny",
+      "months": "měsíce",
+      "years": "roky",
+      "sec": "sek",
+      "min": "min",
+      "hrs": "h",
+      "wks": "týd",
+      "mos": "měs",
+      "yrs": "let",
+      "calculate": "Vypočítat",
+      "reset": "Resetovat",
+      "enterValue": "Zadejte datum narození a aktuální datum pro zobrazení výsledků",
+      "clickCalculate": "Klikněte na Vypočítat pro zobrazení výsledku",
+      "seo": {
+        "title": "Kalkulačka věku ve dnech – Váš věk v sekundách, minutách, hodinách, dnech, týdnech, měsících a letech",
+        "description": "Bezplatná kalkulačka věku ve dnech. Zadejte datum narození a aktuální datum a získejte svůj věk v sekundách, minutách, hodinách, dnech, týdnech, měsících a letech. Jednoduchá, přesná, bez registrace.",
+        "keywords": "kalkulačka věku ve dnech, kalkulačka věku, kolik mi je let, kalkulačka data narození, věk v sekundách, věk v týdnech, věk v měsících, život ve dnech kalkulačka",
+        "content": {
+          "heading": "Jak vypočítat svůj věk ve dnech, sekundách a dalších jednotkách",
+          "paragraph1": "Váš věk lze vyjádřit v mnoha jednotkách: sekundy, minuty, hodiny, dny, týdny, měsíce a roky. Od data narození do daného data (obvykle dnes) je uplynulý čas pevná doba. Převod této doby na různé jednotky pomáhá pochopit, jak dlouho jste v každé jednotce žili, a je užitečný pro milníky, zvědavost nebo plánování.",
+          "paragraph2": "Pro výpočet věku ve dnech nejprve zjistěte počet dní mezi datem narození a aktuálním datem (nebo koncovým datem). Z toho lze odvodit sekundy (dny × 24 × 60 × 60), minuty (sekundy / 60), hodiny (minuty / 60), týdny (dny / 7), měsíce (dny ÷ průměrné dny za měsíc, cca 30,44) a roky (dny ÷ 365,25 pro přestupné roky). Naše kalkulačka to dělá automaticky: zadejte datum narození a aktuální datum ve formátu MM/DD/RRRR a klikněte na Vypočítat.",
+          "paragraph3": "Přestupné roky jsou zohledněny použitím 365,25 dní za rok a průměrně 30,436875 dní za měsíc. Výsledkem je celé číslo v každé jednotce (např. celkové sekundy, celkové minuty, celkové dny), takže vidíte přesně, kolik sekund, minut, hodin, dní, týdnů, měsíců a let jste do daného data žili. Můžete použít libovolné koncové datum, nejen dnes, abyste viděli, kolik vám bylo nebo bude v konkrétní datum.",
+          "paragraph4": "Použijte tuto kalkulačku věku ve dnech zadáním data narození a aktuálního data (nebo jiného koncového data) ve formátu MM/DD/RRRR. Klikněte na Vypočítat pro zobrazení věku v sekundách (sek), minutách (min), hodinách (h), dnech (dny), týdnech (týd), měsících (měs) a letech (let). Všechny výpočty probíhají ve vašem prohlížeči; žádná data se neodesílají na server. Nástroj je zdarma a funguje ve všech podporovaných jazycích.",
+          "exampleHeading": "Příklad: věk v různých jednotkách",
+          "exampleText": "Pokud jste se narodili 1. ledna 1990 a aktuální datum je 3. února 2026, uplynulý čas je 36 let a asi 33 dní. V celých jednotkách: asi 13 184 dní, 1 881 týdnů, 432 měsíců, 36 let a odpovídajícím způsobem 1 139 097 600 sekund, 18 984 960 minut a 316 416 hodin. Zadejte 01/01/1990 a 02/03/2026 do kalkulačky pro zobrazení přesných hodnot."
+        },
+        "faq": {
+          "heading": "Časté dotazy",
+          "items": [
+            {"question": "Jak používat kalkulačku věku ve dnech?", "answer": "Zadejte datum narození a aktuální datum (nebo koncové datum) ve formátu MM/DD/RRRR. Klikněte na Vypočítat pro zobrazení věku v sekundách, minutách, hodinách, dnech, týdnech, měsících a letech. Koncové datum můžete změnit a zjistit, kolik vám bylo nebo bude v konkrétní datum."},
+            {"question": "Proč jsou měsíce a roky přibližné?", "answer": "Měsíce mají různou délku (28–31 dní) a roky mohou mít 365 nebo 366 dní (přestupné roky). Kalkulačka používá průměrné dny za měsíc (cca 30,44) a 365,25 dní za rok, aby byla celková doba konzistentní. „Měsíce“ a „roky“ jsou tedy přibližné celočíselné počty, zatímco sekundy, minuty, hodiny, dny a týdny jsou přesné počty."},
+            {"question": "Jaký formát data mám použít?", "answer": "Použijte MM/DD/RRRR: dvoumístný měsíc, dvoumístný den, čtyřmístný rok, oddělené lomítky (např. 01/15/1990 pro 15. leden 1990 nebo 02/03/2026 pro 3. únor 2026). Úvodní nuly u měsíce a dne jsou volitelné (např. 1/15/1990 také funguje)."},
+            {"question": "Mohu jako aktuální datum použít budoucí datum?", "answer": "Ano. Zadejte datum narození a libovolné koncové datum (včetně budoucího) ve formátu MM/DD/RRRR. Kalkulačka zobrazí, kolik vám je (nebo bude) od narození do tohoto data. Datum narození musí být stejné nebo před koncovým datem."},
+            {"question": "Je tato kalkulačka věku ve dnech zdarma?", "answer": "Ano. Kalkulačka je zdarma. Není vyžadována registrace ani platba. Zadejte datum narození a aktuální datum pro zobrazení věku v sekundách, minutách, hodinách, dnech, týdnech, měsících a letech. Všechny výpočty probíhají ve vašem prohlížeči."}
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "reverseTextGenerator": "Generátor obráceného textu",
+          "reverseTextGeneratorDesc": "Obrátit celý text, pořadí slov nebo písmena v každém slově",
+          "percentage": "Kalkulačka procent",
+          "percentageDesc": "Vypočítat procento z čísla a procentuální změnu",
+          "average": "Kalkulačka průměru",
+          "averageDesc": "Vypočítat průměr (aritmetický střed) množiny čísel"
+        }
+      }
+    },
     "squareRoot": {
       "title": "Kalkulačka druhé odmocniny",
       "description": "Vypočítejte druhou odmocninu libovolného nezáporného čísla. Získejte kladný i záporný kořen okamžitě. Bezplatný nástroj pro matematiku a každodenní použití.",

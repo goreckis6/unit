@@ -61,6 +61,7 @@ export async function GET() {
     '/calculators/real-life',
     '/calculators/real-life/reverse-text-generator',
     '/calculators/finance',
+    '/calculators/finance/real-house-price',
     '/calculators/others',
     '/calculators/electric/watts-to-kva',
     '/calculators/electric/watts-to-va',

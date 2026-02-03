@@ -5245,6 +5245,70 @@
         }
       }
     },
+    "realHousePrice": {
+      "title": "Gerçek Ev Fiyatı Hesaplayıcı",
+      "description": "Emlak komisyonunu ve mülk satışından sahibin ne kadar alacağını hesaplayın. Komisyon tutarı ve net gelir için satış fiyatı ve komisyon oranını girin.",
+      "housePrice": "Ev Fiyatı",
+      "commissionPercent": "Komisyon",
+      "currency": "USD",
+      "commissionAmount": "Komisyon Tutarı",
+      "ownerReceives": "Sahip Alır",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "enterValue": "Sonuçları görmek için ev fiyatı ve komisyon % girin",
+      "clickCalculate": "Sonucu görmek için Hesapla'ya tıklayın",
+      "errorInvalidPrice": "Geçerli bir ev fiyatı girin",
+      "errorInvalidCommission": "Geçerli bir komisyon girin (0–100 %)",
+      "seo": {
+        "title": "Gerçek Ev Fiyatı Hesaplayıcı – Emlak Komisyonu ve Sahip Net Geliri",
+        "description": "Ücretsiz emlak komisyonu hesaplayıcı. Emlak komisyonunu ve komisyon sonrası satıcının ne kadar alacağını hesaplayın. Komisyon tutarı ve sahip net geliri için satış fiyatı ve komisyon oranını (örn. %5) girin.",
+        "keywords": "gerçek ev fiyatı hesaplayıcı, emlak komisyonu hesaplayıcı, emlak komisyonu, satıcı net geliri, komisyon oranı, satış fiyatı hesaplayıcı, emlak komisyon hesaplayıcı",
+        "content": {
+          "heading": "Emlak Komisyonu ve Sahip Net Geliri Nasıl Hesaplanır",
+          "paragraph1": "Bir mülk sattığınızda emlakçı (veya emlak danışmanı) genellikle satış fiyatının yüzdesi üzerinden komisyon alır. Bu komisyonu genellikle satıcı öder, ancak para alıcının ödemesinden gelir ve satıcılar komisyonu çoğu zaman talep fiyatına yansıtır. Satıcı (sahip) olarak gerçekte ne kadar alacağınızı bilmek için satış fiyatından emlak komisyonunu çıkarmanız gerekir.",
+          "paragraph2": "Emlak komisyonunu doğru hesaplamak için: (1) Komisyon oranını belirleyin – satış fiyatının emlakçıya ödenen yüzdesi; genellikle %5 civarındadır ama değişebilir. (2) Mülkün satış fiyatını tespit edin – mülkün satıldığı nihai tutar. (3) Formülü uygulayın: emlak komisyonu = (satış fiyatı × oran) / 100. Örneğin 500.000 $'a %5 komisyonla satılan bir mülkte emlakçı ücreti (500.000 × 5) / 100 = 25.000 $'dır. Sahip satış fiyatı eksi komisyonu alır: 500.000 − 25.000 = 475.000 $.",
+          "paragraph3": "Komisyon oranları genellikle pazarlık konusudur ve mülkün konumu, piyasa koşulları ve emlakçı politikalarına göre değişebilir. Farklı danışmanların oranlarını karşılaştırıp bu bilgiyi pazarlıklarda kullanabilirsiniz. Yetkinizde emlak hizmetlerine KDV uygulanıyorsa bunu ayrıca hesaba katmanız gerekebilir. Bu hesaplayıcı komisyon tutarını ve sahip net gelirini tek adımda verir; böylece listelemeden veya satışı kapatmadan önce mali planınızı yapabilirsiniz.",
+          "paragraph4": "Bu Gerçek Ev Fiyatı Hesaplayıcıyı kullanmak için ev fiyatını (satış fiyatı) para biriminizde (örn. USD) ve komisyon yüzdesini girin. Komisyon tutarını ve komisyon düşüldükten sonra sahibin alacağı tutarı görmek için Hesapla'ya tıklayın. Sonuçlar satıcıların net gelirlerini anlamasına, alıcı veya danışmanların ücretleri hızlı tahmin etmesine yardımcı olur. Tüm hesaplamalar tarayıcınızda yapılır; veri sunucuya gönderilmez.",
+          "exampleHeading": "Örnek: Emlak Komisyonu Hesaplaması",
+          "exampleText": "Bir mülk 500.000 $'a %5 komisyon oranıyla satılıyor. Komisyon = (500.000 × 5) / 100 = 25.000 $. Sahip alır = 500.000 − 25.000 = 475.000 $. 10.000 $ satışta %5 ile komisyon = 10.000 × 0,05 = 500 $, sahip 9.500 $ alır."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "10.000 $ satış fiyatında %5 emlak komisyonu ne kadardır?",
+              "answer": "Komisyon 500 $'dır. Sonuca ulaşmak için 10.000 $'ın %5'ini hesaplayın: 10.000 × 0,05 = 500 $. Sahip 10.000 − 500 = 9.500 $ alır. Bu hesaplayıcıyı herhangi bir satış fiyatı ve komisyon oranı için kullanabilirsiniz."
+            },
+            {
+              "question": "Satışta emlak komisyonunu kim öder?",
+              "answer": "Teknik olarak komisyonu satıcı öder. Ancak para alıcının ödemesinden gelir ve satıcılar genellikle komisyonu mülk fiyatına yansıtır. Dolayısıyla pratikte alıcı emlak komisyonunu öder, dolaylı da olsa."
+            },
+            {
+              "question": "Emlak komisyonunu nasıl hesaplarım?",
+              "answer": "Üç adımda hesaplayabilirsiniz: (1) Komisyon oranını belirleyin (örn. %5). (2) Mülkün satış fiyatını not edin. (3) Formülü uygulayın: emlak komisyonu = (satış fiyatı × oran) / 100. Örneğin 500.000 × 5 / 100 = 25.000 $."
+            },
+            {
+              "question": "Emlak komisyon oranları pazarlık konusu mudur?",
+              "answer": "Evet, komisyon oranları genellikle pazarlık konusudur ve mülkün konumu, piyasa koşulları ve emlakçı politikalarına göre değişebilir. Farklı danışmanların oranlarını karşılaştırıp bu bilgiyi pazarlıklarda kullanabilirsiniz."
+            },
+            {
+              "question": "Bu gerçek ev fiyatı hesaplayıcı ücretsiz mi?",
+              "answer": "Evet, bu hesaplayıcı tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Komisyon tutarı ve sahip net geliri için ev fiyatı ve komisyon yüzdesini girin."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "percentage": "Yüzde Hesaplayıcı",
+          "percentageDesc": "Bir sayının yüzdesini, bir sayının diğerinin yüzde kaçı olduğunu ve yüzde değişimini hesaplayın",
+          "percentageIncrease": "Yüzde Artış Hesaplayıcı",
+          "percentageIncreaseDesc": "İki değer arasındaki yüzde artış veya azalışı hesaplayın",
+          "percentError": "Yüzde Hata Hesaplayıcı",
+          "percentErrorDesc": "Beklenen ve gerçek değer arasındaki yüzde hatayı hesaplayın"
+        }
+      }
+    },
     "ratio": {
       "title": "Oran Hesaplayıcı",
       "description": "Oranları çözün, A:B = C:D içinde eksik değeri bulun ve oranları ölçekleyin.",

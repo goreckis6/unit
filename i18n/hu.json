@@ -5241,6 +5241,70 @@
         }
       }
     },
+    "realHousePrice": {
+      "title": "Valós ingatlanár kalkulátor",
+      "description": "Számítsa ki az ingatlanügynök jutalékát és azt, mennyit kap az tulajdonos az ingatlan eladásából. Adja meg az eladási árat és a jutalék százalékát a jutalék összegének és nettó bevételének megtekintéséhez.",
+      "housePrice": "Ingatlan ára",
+      "commissionPercent": "Jutalék",
+      "currency": "USD",
+      "commissionAmount": "Jutalék összege",
+      "ownerReceives": "A tulajdonos kap",
+      "calculate": "Számítás",
+      "reset": "Törlés",
+      "result": "Eredmény",
+      "enterValue": "Adja meg az ingatlan árát és a jutalék %-ot az eredmények megtekintéséhez",
+      "clickCalculate": "Kattintson a Számítás gombra az eredmény megtekintéséhez",
+      "errorInvalidPrice": "Adjon meg érvényes ingatlan árat",
+      "errorInvalidCommission": "Adjon meg érvényes jutalékot (0–100 %)",
+      "seo": {
+        "title": "Valós ingatlanár kalkulátor – Ingatlanügynök jutalék és tulajdonos nettó bevétel",
+        "description": "Ingyenes ingatlanügynök jutalék kalkulátor. Számítsa ki az ingatlanügynök jutalékát és azt, mennyit kap a eladó a jutalék után. Adja meg az eladási árat és a jutalék százalékát (pl. 5 %) a jutalék összegének és a tulajdonos nettó bevételének azonnali megtekintéséhez.",
+        "keywords": "valós ingatlanár kalkulátor, ingatlanügynök jutalék kalkulátor, ingatlanügynök jutalék, eladó nettó bevétel, jutalék százalék, eladási ár kalkulátor, ingatlan jutalék kalkulátor",
+        "content": {
+          "heading": "Hogyan számítsuk ki az ingatlanügynök jutalékát és a tulajdonos nettó bevételét",
+          "paragraph1": "Amikor ingatlant ad el, az ingatlanügynök általában jutalékot kap az eladási ár százalékaként. A jutalékot általában az eladó fizeti, bár a pénz a vevő fizetéséből származik, és az eladók gyakran beleszámítják a jutalékot a kérhető árba. Annak megállapításához, hogy tulajdonosként valójában mennyit kap, ki kell vonni az ingatlanügynök jutalékát az eladási árból.",
+          "paragraph2": "Az ingatlanügynök jutalék pontos kiszámításához: (1) Határozza meg a jutalék százalékát – ez az eladási ár azon része, amelyet az ügynöknek fizetnek; gyakran körülbelül 5 % körül van, de változhat. (2) Állapítsa meg az ingatlan eladási árát – a végső összeg, amennyiért az ingatlan eladásra kerül. (3) Alkalmazza a képletet: ingatlanügynök jutalék = (eladási ár × százalék) / 100. Például ha egy ingatlant 500 000 dollárért adnak el 5 %-os jutalékkal, az ügynök díja (500 000 × 5) / 100 = 25 000 $. A tulajdonos az eladási ár mínusz jutalékot kapja: 500 000 − 25 000 = 475 000 $.",
+          "paragraph3": "A jutalék százalékok gyakran tárgyalhatók, és változhatnak az ingatlan helye, a piaci körülmények és az ügynök irányelvei szerint. Össze lehet hasonlítani különböző ügynökök százalékait, és ezt felhasználni a tárgyalásokban. Ha az Ön joghatóságában áfa vonatkozik az ingatlanügyeletekre, ezt külön kell figyelembe venni. Ez a kalkulátor egy lépésben megadja a jutalék összegét és a tulajdonos nettó bevételét, így pénzügyeit megtervezheti a hirdetés vagy az ügylet előtt.",
+          "paragraph4": "Használja ezt a valós ingatlanár kalkulátort az ingatlan árának (eladási ár) megadásával a valutájában (pl. USD) és a jutalék százalékával. Kattintson a Számítás gombra a jutalék összegének és a jutalék levonása után a tulajdonos által kapott összeg megtekintéséhez. Az eredmények segítenek az eladóknak megérteni nettó bevételüket, a vevőknek vagy ügynököknek pedig gyorsan becsülni a díjakat. Minden számítás a böngészőben történik; semmilyen adat nem kerül szerverre.",
+          "exampleHeading": "Példa: ingatlanügynök jutalék számítás",
+          "exampleText": "Egy ingatlant 500 000 dollárért adnak el 5 %-os jutalékkal. Jutalék = (500 000 × 5) / 100 = 25 000 $. A tulajdonos kap = 500 000 − 25 000 = 475 000 $. 10 000 dolláros eladásnál 5 %-kal jutalék = 10 000 × 0,05 = 500 $, a tulajdonos 9 500 $-t kap."
+        },
+        "faq": {
+          "heading": "Gyakran ismételt kérdések",
+          "items": [
+            {
+              "question": "Mennyi az 5 %-os ingatlanügynök jutalék 10 000 dolláros eladási árnál?",
+              "answer": "A jutalék 500 $. Az eredményhez számítsuk ki 10 000 5 %-át: 10 000 × 0,05 = 500 $. A tulajdonos 10 000 − 500 = 9 500 $-t kap. Használhatja ezt a kalkulátort bármilyen eladási árra és jutalék százalékra."
+            },
+            {
+              "question": "Ki felelős az ingatlanügynök jutalék fizetéséért az eladásnál?",
+              "answer": "Technikailag az eladó fizeti az ingatlanügynök jutalékot. A pénz azonban a vevő fizetéséből származik, és az eladók általában beleszámítják a jutalékot az ingatlan árává. Tehát a gyakorlatban a vevő gyakorlatilag fizeti az ingatlanügynök jutalékot, még ha közvetve is."
+            },
+            {
+              "question": "Hogyan számítsam ki az ingatlanügynök jutalékot?",
+              "answer": "Három lépésben számíthatja ki: (1) Határozza meg a jutalék százalékát (pl. 5 %). (2) Jegyezze fel az ingatlan eladási árát. (3) Alkalmazza a képletet: ingatlanügynök jutalék = (eladási ár × százalék) / 100. Például 500 000 × 5 / 100 = 25 000 $."
+            },
+            {
+              "question": "Tárgyalhatók az ingatlanügynök jutalék százalékok?",
+              "answer": "Igen, a jutalék százalékok gyakran tárgyalhatók és változhatnak az ingatlan helye, a piaci körülmények és az ügynök irányelvei szerint. Össze lehet hasonlítani különböző ügynökök százalékait és ezt felhasználni a tárgyalásokban."
+            },
+            {
+              "question": "Ingyenes ez a valós ingatlanár kalkulátor?",
+              "answer": "Igen, ez a kalkulátor teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Adja meg az ingatlan árát és a jutalék százalékát a jutalék összegének és a tulajdonos nettó bevételének azonnali megtekintéséhez."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó kalkulátorok",
+          "percentage": "Százalék kalkulátor",
+          "percentageDesc": "Számítsa ki egy szám százalékát, egy szám hány százaléka a másiknak és a százalékos változást",
+          "percentageIncrease": "Százalékos növekedés kalkulátor",
+          "percentageIncreaseDesc": "Számítsa ki a százalékos növekedést vagy csökkenést két érték között",
+          "percentError": "Százalékos hiba kalkulátor",
+          "percentErrorDesc": "Számítsa ki a százalékos hibát várható és tényleges érték között"
+        }
+      }
+    },
     "ratio": {
       "title": "Aránykalkulátor",
       "description": "Arányok megoldása, hiányzó érték keresése A:B = C:D esetén, és arányok skálázása.",

@@ -5241,6 +5241,55 @@
         }
       }
     },
+    "realHousePrice": {
+      "title": "Kalkulačka Skutečné Ceny Domu",
+      "description": "Vypočítejte provizi realitního makléře a kolik dostane vlastník z prodeje. Zadejte prodejní cenu a procento provize pro provizi a čistou částku.",
+      "housePrice": "Cena Domu",
+      "commissionPercent": "Provize",
+      "currency": "USD",
+      "commissionAmount": "Výše Provize",
+      "ownerReceives": "Obdrží Vlastník",
+      "calculate": "Vypočítat",
+      "reset": "Obnovit",
+      "result": "Výsledek",
+      "enterValue": "Zadejte cenu domu a % provize pro zobrazení výsledků",
+      "clickCalculate": "Klikněte na Vypočítat pro zobrazení výsledku",
+      "errorInvalidPrice": "Zadejte platnou cenu domu",
+      "errorInvalidCommission": "Zadejte platnou provizi (0–100 %)",
+      "seo": {
+        "title": "Kalkulačka Skutečné Ceny Domu – Provize Makléře a Čistá Částka Vlastníka",
+        "description": "Bezplatná kalkulačka realitní provize. Vypočítejte provizi makléře a kolik dostane prodávající. Zadejte prodejní cenu a procento provize (např. 5 %) pro provizi a čistou částku.",
+        "keywords": "kalkulačka skutečné ceny domu, kalkulačka provize makléře, realitní provize, čistá částka prodávajícího, procento provize, kalkulačka prodejní ceny",
+        "content": {
+          "heading": "Jak Vypočítat Provizi Makléře a Čistou Částku Vlastníka",
+          "paragraph1": "Při prodeji nemovitosti makléř obvykle dostane provizi jako procento z prodejní ceny. Tuto provizi technicky platí prodávající, peníze však pocházejí od kupujícího a prodávající často zahrnují provizi do ceny. Abyste věděli, kolik jako prodávající (vlastník) obdržíte, odečtěte provizi makléře od prodejní ceny.",
+          "paragraph2": "Pro přesný výpočet provize: (1) Zjistěte procento provize – procento z prodejní ceny vyplácené makléři; často kolem 5 %. (2) Zapište prodejní cenu nemovitosti. (3) Použijte vzorec: provize = (prodejní cena × sazba) / 100. Příklad: prodej za 500 000 $ při 5 % → provize = (500 000 × 5) / 100 = 25 000 $. Vlastník obdrží 500 000 − 25 000 = 475 000 $.",
+          "paragraph3": "Procenta provize jsou často vyjednatelná a liší se podle lokality, trhu a makléře. Můžete porovnat sazby různých makléřů. Pokud ve vaší zemi platí DPH na realitní služby, může být třeba ji zohlednit zvlášť. Tato kalkulačka vám dá provizi a čistou částku vlastníka v jednom kroku.",
+          "paragraph4": "Použijte tuto kalkulačku zadáním ceny domu (prodejní cena) ve vaší měně (např. USD) a procenta provize. Klikněte na Vypočítat pro zobrazení provize a čisté částky pro vlastníka. Výpočty probíhají v prohlížeči; žádná data se neodesílají.",
+          "exampleHeading": "Příklad: Výpočet Realitní Provize",
+          "exampleText": "Nemovitost se prodá za 500 000 $ s provizí 5 %. Provize = (500 000 × 5) / 100 = 25 000 $. Vlastník obdrží = 500 000 − 25 000 = 475 000 $. Při prodeji za 10 000 $ při 5 %: provize = 10 000 × 0,05 = 500 $, vlastník obdrží = 9 500 $."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {"question": "Jaká je 5% realitní provize pro prodejní cenu 10 000 $?", "answer": "Provize je 500 $. Výpočet: 10 000 × 0,05 = 500 $. Vlastník obdrží 10 000 − 500 = 9 500 $. Tuto kalkulačku můžete použít pro libovolnou prodejní cenu a procento provize."},
+            {"question": "Kdo platí realitní provizi při prodeji?", "answer": "Technicky provizi platí prodávající. Peníze však pocházejí od kupujícího a prodávající často zahrnují provizi do ceny. V praxi tedy provizi platí kupující, byť nepřímo."},
+            {"question": "Jak vypočítat realitní provizi?", "answer": "Ve třech krocích: (1) Určete procento provize (např. 5 %). (2) Zapište prodejní cenu. (3) Použijte vzorec: provize = (prodejní cena × sazba) / 100. Příklad: 500 000 × 5 / 100 = 25 000 $."},
+            {"question": "Jsou procenta provize makléřů vyjednatelná?", "answer": "Ano, procenta provize jsou často vyjednatelná a liší se podle lokality, trhu a makléře. Můžete porovnat sazby různých makléřů a využít to při vyjednávání."},
+            {"question": "Je tato kalkulačka skutečné ceny domu zdarma?", "answer": "Ano, tato kalkulačka je zcela zdarma. Není vyžadována registrace ani platba. Zadejte cenu domu a procento provize pro okamžité zobrazení provize a čisté částky vlastníka."}
+          ]
+        },
+        "related": {
+          "heading": "Související Kalkulačky",
+          "percentage": "Procentní Kalkulačka",
+          "percentageDesc": "Vypočítejte procento z čísla, kolik % je jedno číslo z druhého a procentuální změnu",
+          "percentageIncrease": "Kalkulačka Procentuálního Zvýšení",
+          "percentageIncreaseDesc": "Vypočítejte procentuální zvýšení nebo snížení mezi dvěma hodnotami",
+          "percentError": "Kalkulačka Procentuální Chyby",
+          "percentErrorDesc": "Vypočítejte procentuální chybu mezi očekávanou a skutečnou hodnotou"
+        }
+      }
+    },
     "ratio": {
       "title": "Kalkulačka poměrů",
       "description": "Řešte poměry, dopočítejte chybějící hodnotu v A:B = C:D a snadno škálujte poměry.",

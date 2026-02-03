@@ -5241,6 +5241,55 @@
         }
       }
     },
+    "realHousePrice": {
+      "title": "Ekte Boligpris Kalkulator",
+      "description": "Beregn meglerprovisjon og hva eieren mottar ved salg. Skriv inn salgspris og provisjonssats for provisjon og netto.",
+      "housePrice": "Boligpris",
+      "commissionPercent": "Provisjon",
+      "currency": "USD",
+      "commissionAmount": "Provisjonsbeløp",
+      "ownerReceives": "Mottar Eieren",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "enterValue": "Skriv inn boligpris og provisjons-% for å se resultater",
+      "clickCalculate": "Klikk på Beregn for å se resultatet",
+      "errorInvalidPrice": "Skriv inn en gyldig boligpris",
+      "errorInvalidCommission": "Skriv inn en gyldig provisjon (0–100 %)",
+      "seo": {
+        "title": "Ekte Boligpris Kalkulator – Meglerprovisjon og Netto til Eieren",
+        "description": "Gratis kalkulator for meglerprovisjon. Beregn provisjon og netto for selger. Skriv inn salgspris og provisjonssats (f.eks. 5 %) for provisjon og netto.",
+        "keywords": "ekte boligpris kalkulator, meglerprovisjon kalkulator, eiendomsprovisjon, netto selger, provisjonssats, salgspris kalkulator",
+        "content": {
+          "heading": "Slik Beregner du Meglerprovisjon og Netto til Eieren",
+          "paragraph1": "Når du selger en eiendom, mottar megleren vanligvis en provisjon basert på en prosent av salgsprisen. Denne provisjonen betales teknisk av selgeren, men pengene kommer fra kjøperen, og selgere inkluderer ofte provisjonen i prisen. For å vite hvor mye du mottar som selger (eier), trekk meglerprovisjonen fra salgsprisen.",
+          "paragraph2": "For nøyaktig å beregne provisjonen: (1) Identifiser provisjonssatsen – prosenten av salgsprisen som betales til megleren; ofte rundt 5 %. (2) Noter salgsprisen for eiendommen. (3) Bruk formelen: provisjon = (salgspris × sats) / 100. Eksempel: salg for 500.000 $ med 5 % → provisjon = (500.000 × 5) / 100 = 25.000 $. Eieren mottar 500.000 − 25.000 = 475.000 $.",
+          "paragraph3": "Provisjonssatser er ofte forhandlingsbare og varierer etter beliggenhet, marked og megler. Du kan sammenligne ulike megleres satser. Hvis din stat eller nasjon tar mva i betraktning på eiendomstjenester, kan det være nødvendig å inkludere det separat. Denne kalkulatoren gir provisjon og netto til eieren i ett trinn.",
+          "paragraph4": "Bruk denne kalkulatoren ved å skrive inn boligprisen (salgspris) i din valuta (f.eks. USD) og provisjonsprosenten. Klikk på Beregn for å se provisjonen og nettobeløpet til eieren. Alle beregninger gjøres i nettleseren; ingen data sendes.",
+          "exampleHeading": "Eksempel: Beregning av Eiendomsprovisjon",
+          "exampleText": "En eiendom selges for 500.000 $ med en provisjon på 5 %. Provisjon = (500.000 × 5) / 100 = 25.000 $. Eieren mottar = 500.000 − 25.000 = 475.000 $. For et salg på 10.000 $ ved 5 %: provisjon = 10.000 × 0,05 = 500 $, eieren mottar = 9.500 $."
+        },
+        "faq": {
+          "heading": "Ofte Stilte Spørsmål",
+          "items": [
+            {"question": "Hva er 5 % eiendomsprovisjon for en salgspris på 10.000 $?", "answer": "Provisjonen er 500 $. Beregning: 10.000 × 0,05 = 500 $. Eieren mottar 10.000 − 500 = 9.500 $. Du kan bruke denne kalkulatoren for enhver salgspris og provisjonssats."},
+            {"question": "Hvem betaler eiendomsprovisjonen ved et salg?", "answer": "Teknisk betaler selgeren provisjonen. Pengene kommer imidlertid fra kjøperen, og selgere inkluderer ofte provisjonen i prisen. Så i praksis betaler kjøperen provisjonen, om enn indirekte."},
+            {"question": "Hvordan beregner jeg eiendomsprovisjonen?", "answer": "I tre trinn: (1) Bestem provisjonssatsen (f.eks. 5 %). (2) Noter salgsprisen. (3) Bruk formelen: provisjon = (salgspris × sats) / 100. Eksempel: 500.000 × 5 / 100 = 25.000 $."},
+            {"question": "Er meglerprovisjonssatser forhandlingsbare?", "answer": "Ja, provisjonssatser er ofte forhandlingsbare og varierer etter beliggenhet, marked og megler. Du kan sammenligne ulike megleres satser og bruke informasjonen i forhandlinger."},
+            {"question": "Er denne ekte boligpris kalkulatoren gratis?", "answer": "Ja, denne kalkulatoren er helt gratis. Ingen registrering eller betaling. Skriv inn boligpris og provisjonsprosent for å få provisjon og netto til eieren umiddelbart."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterte Kalkulatorer",
+          "percentage": "Prosent Kalkulator",
+          "percentageDesc": "Beregn prosent av et tall, hva % et tall er av et annet, og prosentvis endring",
+          "percentageIncrease": "Prosentvis Økning Kalkulator",
+          "percentageIncreaseDesc": "Beregn prosentvis økning eller nedgang mellom to verdier",
+          "percentError": "Prosentfeil Kalkulator",
+          "percentErrorDesc": "Beregn prosentfeil mellom en forventet og faktisk verdi"
+        }
+      }
+    },
     "ratio": {
       "title": "Forholdskalkulator",
       "description": "Løs forhold, finn manglende verdi i A:B = C:D og skaler forhold raskt.",

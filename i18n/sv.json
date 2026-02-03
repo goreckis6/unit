@@ -5241,6 +5241,55 @@
         }
       }
     },
+    "realHousePrice": {
+      "title": "Verkligt Huspris Kalkylator",
+      "description": "Beräkna mäklarprovision och vad ägaren får vid försäljning. Ange försäljningspris och provisionssats för provision och netto.",
+      "housePrice": "Huspris",
+      "commissionPercent": "Provision",
+      "currency": "USD",
+      "commissionAmount": "Provisionsbelopp",
+      "ownerReceives": "Får Ägaren",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "enterValue": "Ange huspris och provisions-% för att se resultat",
+      "clickCalculate": "Klicka på Beräkna för att se resultatet",
+      "errorInvalidPrice": "Ange ett giltigt huspris",
+      "errorInvalidCommission": "Ange en giltig provision (0–100 %)",
+      "seo": {
+        "title": "Verkligt Huspris Kalkylator – Mäklarprovision och Netto till Ägaren",
+        "description": "Gratis kalkylator för mäklarprovision. Beräkna provision och netto för säljaren. Ange försäljningspris och provisionssats (t.ex. 5 %) för provision och netto.",
+        "keywords": "verkligt huspris kalkylator, mäklarprovision kalkylator, fastighetsprovision, netto säljare, provisionssats, försäljningspris kalkylator",
+        "content": {
+          "heading": "Så Beräknar du Mäklarprovision och Netto till Ägaren",
+          "paragraph1": "När du säljer en fastighet får mäklaren vanligtvis en provision baserad på en procent av försäljningspriset. Denna provision betalas tekniskt av säljaren, men pengarna kommer från köparen, och säljare inkluderar ofta provisionen i priset. För att veta hur mycket du får som säljare (ägare), dra mäklarprovisionen från försäljningspriset.",
+          "paragraph2": "För att noggrant beräkna provisionen: (1) Identifiera provisionssatsen – procenten av försäljningspriset som betalas till mäklaren; ofta runt 5 %. (2) Notera försäljningspriset för fastigheten. (3) Tillämpa formeln: provision = (försäljningspris × sats) / 100. Exempel: försäljning för 500.000 $ med 5 % → provision = (500.000 × 5) / 100 = 25.000 $. Ägaren får 500.000 − 25.000 = 475.000 $.",
+          "paragraph3": "Provisionssatser är ofta förhandlingsbara och varierar beroende på läge, marknad och mäklare. Du kan jämföra olika mäklares satser. Om din stat eller nation tar hänsyn till moms på fastighetstjänster kan det behöva inkluderas separat. Denna kalkylator ger provision och netto till ägaren i ett steg.",
+          "paragraph4": "Använd denna kalkylator genom att ange huspriset (försäljningspris) i din valuta (t.ex. USD) och provisionsprocenten. Klicka på Beräkna för att se provisionen och nettobeloppet till ägaren. Alla beräkningar görs i webbläsaren; ingen data skickas.",
+          "exampleHeading": "Exempel: Beräkning av Fastighetsprovision",
+          "exampleText": "En fastighet säljs för 500.000 $ med en provision på 5 %. Provision = (500.000 × 5) / 100 = 25.000 $. Ägaren får = 500.000 − 25.000 = 475.000 $. För en försäljning på 10.000 $ vid 5 %: provision = 10.000 × 0,05 = 500 $, ägaren får = 9.500 $."
+        },
+        "faq": {
+          "heading": "Vanliga Frågor",
+          "items": [
+            {"question": "Vad är 5 % fastighetsprovision för ett försäljningspris på 10.000 $?", "answer": "Provisionen är 500 $. Beräkning: 10.000 × 0,05 = 500 $. Ägaren får 10.000 − 500 = 9.500 $. Du kan använda denna kalkylator för vilket försäljningspris och provisionssats som helst."},
+            {"question": "Vem betalar fastighetsprovisionen vid en försäljning?", "answer": "Tekniskt betalar säljaren provisionen. Pengarna kommer dock från köparen, och säljare inkluderar ofta provisionen i priset. Så i praktiken betalar köparen provisionen, om än indirekt."},
+            {"question": "Hur beräknar jag fastighetsprovisionen?", "answer": "I tre steg: (1) Bestäm provisionssatsen (t.ex. 5 %). (2) Notera försäljningspriset. (3) Tillämpa formeln: provision = (försäljningspris × sats) / 100. Exempel: 500.000 × 5 / 100 = 25.000 $."},
+            {"question": "Är mäklarprovisionssatser förhandlingsbara?", "answer": "Ja, provisionssatser är ofta förhandlingsbara och varierar beroende på läge, marknad och mäklare. Du kan jämföra olika mäklares satser och använda informationen i förhandlingar."},
+            {"question": "Är denna verkliga huspris kalkylator gratis?", "answer": "Ja, denna kalkylator är helt gratis. Ingen registrering eller betalning. Ange huspris och provisionsprocent för att få provision och netto till ägaren omedelbart."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterade Kalkylatorer",
+          "percentage": "Procent Kalkylator",
+          "percentageDesc": "Beräkna procent av ett tal, vilken % ett tal är av ett annat, och procentuell förändring",
+          "percentageIncrease": "Procentuell Ökning Kalkylator",
+          "percentageIncreaseDesc": "Beräkna procentuell ökning eller minskning mellan två värden",
+          "percentError": "Procentfel Kalkylator",
+          "percentErrorDesc": "Beräkna procentfel mellan ett förväntat och faktiskt värde"
+        }
+      }
+    },
     "ratio": {
       "title": "Kalkylator för kvoter",
       "description": "Lös kvoter, hitta saknat värde i A:B = C:D och skala kvoter snabbt.",

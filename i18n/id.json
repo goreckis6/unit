@@ -5241,6 +5241,55 @@
         }
       }
     },
+    "realHousePrice": {
+      "title": "Kalkulator Harga Rumah Riil",
+      "description": "Hitung komisi agen properti dan jumlah yang diterima pemilik dari penjualan. Masukkan harga jual dan persentase komisi untuk mendapatkan komisi dan jumlah bersih.",
+      "housePrice": "Harga Rumah",
+      "commissionPercent": "Komisi",
+      "currency": "USD",
+      "commissionAmount": "Jumlah Komisi",
+      "ownerReceives": "Diterima Pemilik",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "enterValue": "Masukkan harga rumah dan % komisi untuk melihat hasil",
+      "clickCalculate": "Klik Hitung untuk melihat hasil",
+      "errorInvalidPrice": "Masukkan harga rumah yang valid",
+      "errorInvalidCommission": "Masukkan komisi yang valid (0–100%)",
+      "seo": {
+        "title": "Kalkulator Harga Rumah Riil – Komisi Agen dan Penerimaan Bersih Pemilik",
+        "description": "Kalkulator komisi properti gratis. Hitung komisi agen dan jumlah bersih untuk penjual. Masukkan harga jual dan persentase komisi (mis. 5%) untuk komisi dan jumlah bersih.",
+        "keywords": "kalkulator harga rumah riil, kalkulator komisi agen, komisi properti, penerimaan bersih penjual, persentase komisi, kalkulator harga jual",
+        "content": {
+          "heading": "Cara Menghitung Komisi Agen dan Penerimaan Bersih Pemilik",
+          "paragraph1": "Saat Anda menjual properti, agen properti biasanya menerima komisi berdasarkan persentase harga jual. Komisi ini secara teknis dibayar oleh penjual, tetapi uang berasal dari pembayaran pembeli, dan penjual sering memasukkan komisi ke dalam harga. Untuk mengetahui berapa yang Anda terima sebagai penjual (pemilik), kurangi komisi agen dari harga jual.",
+          "paragraph2": "Untuk menghitung komisi dengan akurat: (1) Identifikasi persentase komisi – persentase harga jual yang dibayarkan ke agen; sering sekitar 5%. (2) Tentukan harga jual properti. (3) Terapkan rumus: komisi = (harga jual × tingkat) / 100. Contoh: penjualan $500.000 dengan 5% → komisi = ($500.000 × 5) / 100 = $25.000. Pemilik menerima $500.000 − $25.000 = $475.000.",
+          "paragraph3": "Tingkat komisi sering dapat dinegosiasikan dan bervariasi menurut lokasi, pasar, dan kebijakan agen. Anda dapat membandingkan tingkat berbagai agen. Jika negara Anda mengenakan PPN pada jasa properti, mungkin perlu diperhitungkan secara terpisah. Kalkulator ini memberi komisi dan penerimaan bersih pemilik dalam satu langkah.",
+          "paragraph4": "Gunakan kalkulator ini dengan memasukkan harga rumah (harga jual) dalam mata uang Anda (mis. USD) dan persentase komisi. Klik Hitung untuk melihat jumlah komisi dan penerimaan bersih pemilik. Semua perhitungan dilakukan di browser; tidak ada data yang dikirim.",
+          "exampleHeading": "Contoh: Perhitungan Komisi Properti",
+          "exampleText": "Properti dijual seharga $500.000 dengan komisi 5%. Komisi = ($500.000 × 5) / 100 = $25.000. Pemilik menerima = $500.000 − $25.000 = $475.000. Untuk penjualan $10.000 pada 5%: komisi = $10.000 × 0,05 = $500, pemilik menerima = $9.500."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {"question": "Berapa komisi properti 5% untuk harga jual $10.000?", "answer": "Komisi adalah $500. Perhitungan: $10.000 × 0,05 = $500. Pemilik menerima $10.000 − $500 = $9.500. Anda dapat menggunakan kalkulator ini untuk harga jual dan tingkat komisi apa pun."},
+            {"question": "Siapa yang membayar komisi properti dalam penjualan?", "answer": "Secara teknis penjual yang membayar komisi agen. Namun uang berasal dari pembeli, dan penjual biasanya memasukkan komisi ke dalam harga. Jadi pada praktiknya pembeli yang membayar komisi, meskipun tidak langsung."},
+            {"question": "Bagaimana cara menghitung komisi properti?", "answer": "Dalam tiga langkah: (1) Tentukan tingkat komisi (mis. 5%). (2) Catat harga jual properti. (3) Terapkan rumus: komisi = (harga jual × tingkat) / 100. Contoh: $500.000 × 5 / 100 = $25.000."},
+            {"question": "Apakah tingkat komisi agen dapat dinegosiasikan?", "answer": "Ya, tingkat komisi sering dapat dinegosiasikan dan bervariasi menurut lokasi, pasar, dan kebijakan agen. Anda dapat membandingkan tingkat berbagai agen dan menggunakan informasi ini dalam negosiasi."},
+            {"question": "Apakah kalkulator harga rumah riil ini gratis?", "answer": "Ya, kalkulator ini sepenuhnya gratis. Tidak perlu registrasi atau pembayaran. Masukkan harga rumah dan persentase komisi untuk mendapatkan komisi dan penerimaan bersih pemilik secara instan."}
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "percentage": "Kalkulator Persentase",
+          "percentageDesc": "Hitung persentase dari angka, berapa % satu angka dari angka lain, dan perubahan persentase",
+          "percentageIncrease": "Kalkulator Kenaikan Persentase",
+          "percentageIncreaseDesc": "Hitung kenaikan atau penurunan persentase antara dua nilai",
+          "percentError": "Kalkulator Kesalahan Persen",
+          "percentErrorDesc": "Hitung kesalahan persen antara nilai yang diharapkan dan aktual"
+        }
+      }
+    },
     "ratio": {
       "title": "Kalkulator Rasio",
       "description": "Selesaikan rasio, temukan nilai yang hilang pada A:B = C:D, dan skala rasio dengan cepat.",

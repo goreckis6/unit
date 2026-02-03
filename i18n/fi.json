@@ -5241,6 +5241,70 @@
         }
       }
     },
+    "realHousePrice": {
+      "title": "Todellisen asunnon hinnan laskuri",
+      "description": "Laske kiinteistönvälittäjän provisio ja kuinka paljon omistaja saa myynnistä. Syötä myyntihinta ja provisioprosentti saadaksesi provisiosumman ja nettotulot.",
+      "housePrice": "Asunnon hinta",
+      "commissionPercent": "Provisio",
+      "currency": "USD",
+      "commissionAmount": "Provisiosumma",
+      "ownerReceives": "Omistaja saa",
+      "calculate": "Laske",
+      "reset": "Tyhjennä",
+      "result": "Tulos",
+      "enterValue": "Syötä asunnon hinta ja provisio % nähdäksesi tulokset",
+      "clickCalculate": "Napsauta Laske nähdäksesi tuloksen",
+      "errorInvalidPrice": "Syötä kelvollinen asunnon hinta",
+      "errorInvalidCommission": "Syötä kelvollinen provisio (0–100 %)",
+      "seo": {
+        "title": "Todellisen asunnon hinnan laskuri – kiinteistönvälittäjän provisio ja omistajan nettotulot",
+        "description": "Ilmainen kiinteistönvälittäjän provisiolaskuri. Laske kiinteistönvälittäjän provisio ja kuinka paljon myyjä saa provision jälkeen. Syötä myyntihinta ja provisioprosentti (esim. 5 %) saadaksesi provisiosumman ja omistajan nettotulot heti.",
+        "keywords": "todellisen asunnon hinnan laskuri, kiinteistönvälittäjän provisiolaskuri, kiinteistönvälittäjän provisio, myyjän nettotulot, provisioprosentti, myyntihinnan laskuri, kiinteistön provisiolaskuri",
+        "content": {
+          "heading": "Kuinka lasketaan kiinteistönvälittäjän provisio ja omistajan nettotulot",
+          "paragraph1": "Kun myyt kiinteistön, kiinteistönvälittäjä saa tyypillisesti provision myyntihinnan prosenttiosuutena. Provision maksaa yleensä myyjä, vaikka raha tulee ostajan maksusta, ja myyjät usein sisällyttävät provision pyyntihintaan. Tietääksesi, kuinka paljon saat myyjänä (omistajana), sinun on vähennettävä kiinteistönvälittäjän provisio myyntihinnasta.",
+          "paragraph2": "Laskeaksesi kiinteistönvälittäjän provision tarkasti: (1) Määritä provisioprosentti – se on myyntihinnan prosenttiosuus, joka maksetaan välittäjälle; se on usein noin 5 %, mutta voi vaihdella. (2) Selvitä kiinteistön myyntihinta – lopullinen summa, jolla kiinteistö myydään. (3) Käytä kaavaa: kiinteistönvälittäjän provisio = (myyntihinta × prosentti) / 100. Esimerkiksi jos kiinteistö myydään 500 000 dollarilla ja provisio on 5 %, välittäjän palkkio on (500 000 × 5) / 100 = 25 000 $. Omistaja saa myyntihinnan miinus provisio: 500 000 − 25 000 = 475 000 $.",
+          "paragraph3": "Provisioprosentit ovat usein neuvoteltavissa ja voivat vaihdella kiinteistön sijainnin, markkinaolojen ja välittäjän käytäntöjen mukaan. Voit vertailla eri välittäjien prosentteja ja käyttää tietoja neuvotteluissa. Jos lainkäyttöalueellasi sovelletaan arvonlisäveroa kiinteistöpalveluihin, saatat joutua huomioimaan sen erikseen. Tämä laskuri antaa provisiosumman ja omistajan nettotulot yhdellä kertaa, joten voit suunnitella taloutesi ennen listautumista tai kauppaa.",
+          "paragraph4": "Käytä tätä todellisen asunnon hinnan laskuria syöttämällä asunnon hinta (myyntihinta) valuutassasi (esim. USD) ja provisioprosentti. Napsauta Laske nähdäksesi provisiosumman ja summan, jonka omistaja saa provision vähentämisen jälkeen. Tulokset auttavat myyjiä ymmärtämään nettotulonsa ja ostajia tai välittäjiä arvioimaan palkkiot nopeasti. Kaikki laskelmat tehdään selaimessasi; tietoja ei lähetetä palvelimelle.",
+          "exampleHeading": "Esimerkki: kiinteistönvälittäjän provision laskenta",
+          "exampleText": "Kiinteistö myydään 500 000 dollarilla, provisio 5 %. Provisio = (500 000 × 5) / 100 = 25 000 $. Omistaja saa = 500 000 − 25 000 = 475 000 $. 10 000 dollarin myynnillä 5 %:lla provisio = 10 000 × 0,05 = 500 $, omistaja saa 9 500 $."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Mikä on 5 %:n kiinteistönvälittäjän provisio myyntihinnalla 10 000 $?",
+              "answer": "Provisio on 500 $. Tulos saadaan laskemalla 5 % luvusta 10 000: 10 000 × 0,05 = 500 $. Omistaja saa 10 000 − 500 = 9 500 $. Voit käyttää tätä laskuria mille tahansa myyntihinnalle ja provisioprosentille."
+            },
+            {
+              "question": "Kuka vastaa kiinteistönvälittäjän provisiosta myynnissä?",
+              "answer": "Teknisesti myyjä maksaa kiinteistönvälittäjän provision. Raha kuitenkin tulee ostajan maksusta, ja myyjät sisällyttävät usein provision kiinteistön hintaan. Käytännössä ostaja siis maksaa kiinteistönvälittäjän provision, vaikka epäsuorasti."
+            },
+            {
+              "question": "Kuinka lasken kiinteistönvälittäjän provision?",
+              "answer": "Voit laskea kiinteistönvälittäjän provision kolmella vaiheella: (1) Määritä provisioprosentti (esim. 5 %). (2) Merkitse kiinteistön myyntihinta. (3) Käytä kaavaa: kiinteistönvälittäjän provisio = (myyntihinta × prosentti) / 100. Esimerkiksi 500 000 × 5 / 100 = 25 000 $."
+            },
+            {
+              "question": "Ovatko kiinteistönvälittäjän provisioprosentit neuvoteltavissa?",
+              "answer": "Kyllä, provisioprosentit ovat usein neuvoteltavissa ja voivat vaihdella kiinteistön sijainnin, markkinaolojen ja välittäjän käytäntöjen mukaan. Voit vertailla eri välittäjien prosentteja ja käyttää tietoja neuvotteluissa."
+            },
+            {
+              "question": "Onko tämä todellisen asunnon hinnan laskuri ilmainen?",
+              "answer": "Kyllä, tämä laskuri on täysin ilmainen. Rekisteröitymistä tai maksua ei tarvita. Syötä asunnon hinta ja provisioprosentti saadaksesi provisiosumman ja omistajan nettotulot heti."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskimet",
+          "percentage": "Prosenttilaskuri",
+          "percentageDesc": "Laske luvun prosenttiosuus, kuinka monta prosenttia yksi luku on toisesta ja prosenttimuutos",
+          "percentageIncrease": "Prosentuaalisen nousun laskuri",
+          "percentageIncreaseDesc": "Laske prosentuaalinen nousu tai lasku kahden arvon välillä",
+          "percentError": "Prosenttivirhelaskuri",
+          "percentErrorDesc": "Laske prosenttivirhe odotetun ja todellisen arvon välillä"
+        }
+      }
+    },
     "ratio": {
       "title": "Suhdelukulaskin",
       "description": "Ratkaise suhteet, löydä puuttuva arvo A:B = C:D ja skaalaa suhteet nopeasti.",

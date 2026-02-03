@@ -5241,6 +5241,55 @@
         }
       }
     },
+    "realHousePrice": {
+      "title": "Ægte Boligpris Beregner",
+      "description": "Beregn mæglerprovision og hvad ejeren modtager ved salg. Indtast salgspris og provisionssats for provision og netto.",
+      "housePrice": "Boligpris",
+      "commissionPercent": "Provision",
+      "currency": "USD",
+      "commissionAmount": "Provisionsbeløb",
+      "ownerReceives": "Modtager Ejeren",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "enterValue": "Indtast boligpris og provisions-% for at se resultater",
+      "clickCalculate": "Klik på Beregn for at se resultatet",
+      "errorInvalidPrice": "Indtast en gyldig boligpris",
+      "errorInvalidCommission": "Indtast en gyldig provision (0–100 %)",
+      "seo": {
+        "title": "Ægte Boligpris Beregner – Mæglerprovision og Netto til Ejeren",
+        "description": "Gratis beregner af mæglerprovision. Beregn provision og netto for sælger. Indtast salgspris og provisionssats (f.eks. 5 %) for provision og netto.",
+        "keywords": "ægte boligpris beregner, mæglerprovision beregner, ejendomsprovision, netto sælger, provisionssats, salgspris beregner",
+        "content": {
+          "heading": "Sådan Beregner du Mæglerprovision og Netto til Ejeren",
+          "paragraph1": "Når du sælger en ejendom, modtager mægleren typisk en provision baseret på en procentdel af salgsprisen. Denne provision betales teknisk set af sælgeren, men pengene kommer fra køberen, og sælgere inkluderer ofte provisionen i prisen. For at vide, hvor meget du modtager som sælger (ejer), træk mæglerprovisionen fra salgsprisen.",
+          "paragraph2": "For nøjagtigt at beregne provisionen: (1) Identificer provisionssatsen – procentdelen af salgsprisen, der betales til mægleren; ofte omkring 5 %. (2) Noter salgsprisen for ejendommen. (3) Anvend formlen: provision = (salgspris × sats) / 100. Eksempel: salg for 500.000 $ med 5 % → provision = (500.000 × 5) / 100 = 25.000 $. Ejeren modtager 500.000 − 25.000 = 475.000 $.",
+          "paragraph3": "Provisionssatser er ofte forhandlingsbare og varierer efter beliggenhed, marked og mægler. Du kan sammenligne forskellige mæglere. Hvis din stat eller nation tager moms i betragtning på ejendomstjenester, kan det være nødvendigt at inkludere det separat. Denne beregner giver provision og netto til ejeren i ét trin.",
+          "paragraph4": "Brug denne beregner ved at indtaste boligprisen (salgspris) i din valuta (f.eks. USD) og provisionsprocenten. Klik på Beregn for at se provisionen og nettobeløbet til ejeren. Alle beregninger foretages i browseren; ingen data sendes.",
+          "exampleHeading": "Eksempel: Beregning af Ejendomsprovision",
+          "exampleText": "En ejendom sælges for 500.000 $ med en provision på 5 %. Provision = (500.000 × 5) / 100 = 25.000 $. Ejeren modtager = 500.000 − 25.000 = 475.000 $. For et salg på 10.000 $ ved 5 %: provision = 10.000 × 0,05 = 500 $, ejeren modtager = 9.500 $."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {"question": "Hvad er 5 % ejendomsprovision for en salgspris på 10.000 $?", "answer": "Provisionen er 500 $. Beregning: 10.000 × 0,05 = 500 $. Ejeren modtager 10.000 − 500 = 9.500 $. Du kan bruge denne beregner til enhver salgspris og provisionssats."},
+            {"question": "Hvem betaler ejendomsprovisionen ved et salg?", "answer": "Teknisk set betaler sælgeren provisionen. Pengene kommer dog fra køberen, og sælgere inkluderer ofte provisionen i prisen. Så i praksis betaler køberen provisionen, om end indirekte."},
+            {"question": "Hvordan beregner jeg ejendomsprovisionen?", "answer": "I tre trin: (1) Bestem provisionssatsen (f.eks. 5 %). (2) Noter salgsprisen. (3) Anvend formlen: provision = (salgspris × sats) / 100. Eksempel: 500.000 × 5 / 100 = 25.000 $."},
+            {"question": "Er mæglerprovisionssatser forhandlingsbare?", "answer": "Ja, provisionssatser er ofte forhandlingsbare og varierer efter beliggenhed, marked og mægler. Du kan sammenligne forskellige mæglere og bruge oplysningerne i forhandlinger."},
+            {"question": "Er denne ægte boligpris beregner gratis?", "answer": "Ja, denne beregner er helt gratis. Ingen registrering eller betaling. Indtast boligpris og provisionsprocent for at få provision og netto til ejeren med det samme."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Beregnere",
+          "percentage": "Procent Beregner",
+          "percentageDesc": "Beregn procentdel af et tal, hvad % et tal er af et andet, og procentvis ændring",
+          "percentageIncrease": "Procentvis Stigning Beregner",
+          "percentageIncreaseDesc": "Beregn procentvis stigning eller fald mellem to værdier",
+          "percentError": "Procentfejl Beregner",
+          "percentErrorDesc": "Beregn procentfejl mellem en forventet og faktisk værdi"
+        }
+      }
+    },
     "ratio": {
       "title": "Forholdskalkulator",
       "description": "Løs forhold, find den manglende værdi i A:B = C:D og skaler forhold hurtigt.",

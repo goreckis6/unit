@@ -116,18 +116,18 @@ export function LeetSpeakTranslatorCalculator() {
               </p>
             </div>
 
-            <div className="button-row" style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
+            <div className="action-buttons" style={{ marginTop: '0.5rem', display: 'flex', gap: '0.75rem' }}>
               <button
                 onClick={handleConvert}
-                className="calculate-button"
-                style={{ flex: 1 }}
+                className="btn btn-primary"
+                style={{ minHeight: '44px', minWidth: '44px' }}
               >
                 {t('convert')}
               </button>
               <button
                 onClick={handleReset}
-                className="reset-button"
-                style={{ flex: 1 }}
+                className="btn btn-secondary"
+                style={{ minHeight: '44px', minWidth: '44px' }}
               >
                 {t('reset')}
               </button>

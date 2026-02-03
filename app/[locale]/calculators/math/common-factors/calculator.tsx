@@ -68,8 +68,9 @@ export function CommonFactorsCalculator() {
   return (
     <>
       <div className="split-view-container">
-        <div className="input-section">
-          <div className="inputs-grid">
+        {/* Left Column - Inputs */}
+        <div className="input-section" style={{ marginBottom: 0 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div className="input-card">
               <label htmlFor="number1" className="input-label">
                 {t('number1')}
@@ -105,41 +106,63 @@ export function CommonFactorsCalculator() {
                 />
               </div>
             </div>
-          </div>
 
-          <div className="action-buttons">
-            <button onClick={handleCalculate} className="btn btn-primary">
-              {t('calculate')}
-            </button>
-            <button onClick={handleReset} className="btn btn-secondary">
-              {t('reset')}
-            </button>
+            <div className="action-buttons" style={{ minHeight: '44px', minWidth: '140px', gap: '0.75rem' }}>
+              <button onClick={handleCalculate} className="btn btn-primary">
+                {t('calculate')}
+              </button>
+              <button onClick={handleReset} className="btn btn-secondary">
+                {t('reset')}
+              </button>
+            </div>
           </div>
         </div>
 
-        {result !== null && (
-          <div ref={resultRef} className="result-section">
-            <div className="result-header">
-              <div className="result-badge">{t('result')}</div>
-            </div>
-
-            <div className="result-item">
-              <div className="result-label">{t('gcfLabel')}</div>
-              <div className="result-value-large">
-                {result.gcf}
-                <CopyButton text={result.gcf.toString()} />
+        {/* Right Column - Result */}
+        <div
+          ref={resultRef}
+          className="result-section"
+          style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}
+        >
+          <div className="input-card">
+            <label className="input-label">{t('result')}</label>
+            {result === null && (
+              <div
+                className="number-input"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minHeight: '52px',
+                  padding: '0.75rem 1rem',
+                }}
+              >
+                <span style={{ color: 'var(--text-secondary)' }}>
+                  {number1 || number2 ? t('clickCalculate') : t('enterNumbers')}
+                </span>
               </div>
-            </div>
+            )}
+            {result !== null && (
+              <>
+                <div className="result-item">
+                  <div className="result-label">{t('gcfLabel')}</div>
+                  <div className="result-value-large">
+                    {result.gcf}
+                    <CopyButton text={result.gcf.toString()} />
+                  </div>
+                </div>
 
-            <div className="result-item" style={{ marginTop: '1rem' }}>
-              <div className="result-label">{t('commonFactorsLabel')}</div>
-              <div className="result-value-large">
-                {result.commonFactors.join(', ')}
-                <CopyButton text={result.commonFactors.join(', ')} />
-              </div>
-            </div>
+                <div className="result-item" style={{ marginTop: '1rem' }}>
+                  <div className="result-label">{t('commonFactorsLabel')}</div>
+                  <div className="result-value-large">
+                    {result.commonFactors.join(', ')}
+                    <CopyButton text={result.commonFactors.join(', ')} />
+                  </div>
+                </div>
+              </>
+            )}
           </div>
-        )}
+        </div>
       </div>
     </>
   );

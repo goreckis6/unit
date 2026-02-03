@@ -862,63 +862,62 @@
     },
     "arccos": {
       "title": "Kalkulačka Arccos",
-      "description": "Kalkulačka arccos(x) pro nalezení inverzního kosinu hodnoty a získání úhlu ve stupních a radiánech.",
+      "description": "Kalkulačka arccos(x) pro výpočet arkuskosinu hodnoty a získání úhlu ve stupních a radiánech s obecnými řešeními.",
       "x": "Hodnota (x, hodnota kosinu)",
       "calculate": "Vypočítat",
-      "reset": "Resetovat",
+      "reset": "Reset",
       "result": "Výsledek",
       "angleDegrees": "Úhel ve stupních",
       "angleRadians": "Úhel v radiánech",
       "calculationHeading": "Výpočet",
-      "calculationIntro": "Pro danou hodnotu kosinu",
-      "calculationStepRadians": "nejprve vypočítáme úhel v radiánech pomocí arccos(x). Výsledek je θ = arccos(x) ≈ {radians} rad.",
-      "calculationStepDegrees": "Poté převedeme radiány na stupně pomocí θ° = θ × 180 / π, což dává přibližně {degrees}°.",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
       "seo": {
         "title": "Kalkulačka Arccos – Inverzní Kosinus (acos) ve Stupních a Radiánech",
-        "description": "Bezplatná kalkulačka arccos pro nalezení inverzního kosinu (acos) hodnoty a získání úhlu jak ve stupních, tak v radiánech. Podporuje hodnoty v doméně [-1, 1] s vysvětlením krok za krokem. Ideální pro trigonometrii, geometrii a inženýrské výpočty.",
-        "keywords": "kalkulačka arccos, kalkulačka inverzního kosinu, kalkulačka acos, kalkulačka inverzní kosinus, arccos ve stupních, arccos v radiánech, kalkulačka trigonometrie, úhel z kosinu",
+        "description": "Bezplatná kalkulačka arccos pro výpočet inverzního kosinu (acos) hodnoty a získání úhlu ve stupních a radiánech s obecnými řešeními. Podporuje hodnoty v doméně [-1, 1] s krok za krokem vysvětlením. Ideální pro trigonometrii, geometrii a inženýrské výpočty.",
+        "keywords": "kalkulačka arccos, kalkulačka inverzního kosinu, kalkulačka acos, kalkulačka inverzního cos, arccos ve stupních, arccos v radiánech, trigonometrická kalkulačka, úhel z kosinu",
         "content": {
-          "heading": "Jak Použít Kalkulačku Arccos (Inverzní Kosinus)",
-          "paragraph1": "Funkce arccos (inverzní kosinus), zapsaná jako arccos(x) nebo acos(x), vám dává úhel, jehož kosinus je x. Jinými slovy, pokud cos(θ) = x, pak θ = arccos(x). Tato kalkulačka vám pomůže rychle najít tento úhel jak ve stupních, tak v radiánech pro jakoukoli platnou hodnotu kosinu mezi -1 a 1.",
-          "paragraph2": "Pro použití kalkulačky zadejte hodnotu pro x v rozsahu [-1, 1]. Nástroj pak vypočítá θ = arccos(x) v radiánech pomocí vestavěné funkce inverzního kosinu a převede tento výsledek na stupně pomocí vzorce θ° = θ × 180 / π. Obě hodnoty jsou zobrazeny s vysokou přesností, takže je můžete použít v problémech trigonometrie, geometrie, fyziky nebo inženýrství.",
-          "paragraph3": "Funkce arccos je obzvláště užitečná, když znáte kosinus úhlu, ale potřebujete samotný úhel. Běžné případy použití zahrnují hledání úhlů v pravoúhlých trojúhelnících, výpočet úhlů mezi vektory pomocí skalárního součinu, analýzu periodických signálů a řešení trigonometrických rovnic. Protože kosinus není prostý přes všechna reálná čísla, hlavní hodnota arccos je definována v intervalu [0, π] radiánů (0° až 180°).",
-          "paragraph4": "Naše kalkulačka arccos ověří, že váš vstup leží ve správné doméně [-1, 1], a pak vrátí přesné výsledky jak v radiánech, tak ve stupních. To vám ušetří čas ve srovnání s ručními výpočty a sníží riziko chyb. Ať už jste student učením trigonometrie, učitel připravující příklady nebo profesionál pracující s úhly, tento nástroj poskytuje rychlé a spolehlivé výpočty inverzního kosinu.",
+          "heading": "Jak Používat Kalkulačku Arccos (Inverzní Kosinus)",
+          "paragraph1": "Funkce arccos (inverzní kosinus), zapsaná jako arccos(x) nebo acos(x), vám dává úhel, jehož kosinus je x. Jinými slovy, pokud cos(θ) = x, pak θ = arccos(x). Tato kalkulačka vám pomůže rychle najít tento úhel ve stupních a radiánech pro jakoukoli platnou hodnotu kosinu mezi -1 a 1 a poskytuje obecná řešení ukazující všechny možné úhly.",
+          "paragraph2": "Pro použití kalkulačky zadejte hodnotu pro x v rozsahu [-1, 1]. Nástroj vypočítá θ = arccos(x) v radiánech pomocí vestavěné funkce inverzního kosinu a převede tento výsledek na stupně pomocí vzorce θ° = θ × 180 / π. Obě hodnoty jsou zobrazeny s vysokou přesností. Protože kosinus je periodická funkce, kalkulačka také zobrazuje obecná řešení: θ + k×360° (ve stupních) a θ + k×2π (v radiánech), kde k je libovolné celé číslo.",
+          "paragraph3": "Funkce arccos je obzvláště užitečná, když znáte kosinus úhlu, ale potřebujete samotný úhel. Běžné případy použití zahrnují hledání úhlů v pravoúhlých trojúhelnících, řešení trigonometrických rovnic, výpočet úhlů mezi vektory, analýzu vlnových funkcí a práci s rotačním pohybem. Protože kosinus není vzájemně jednoznačný přes všechna reálná čísla, hlavní hodnota arccos je definována v intervalu [0, π] radiánů (0° až 180°), ale obecné řešení zahrnuje všechny úhly, které se liší násobky 360° (nebo 2π radiánů).",
+          "paragraph4": "Naše kalkulačka arccos ověřuje, že váš vstup leží ve správné doméně [-1, 1], a poté vrací přesné výsledky pro radiány a stupně spolu se vzorci obecných řešení. To vám ušetří čas ve srovnání s ručními výpočty a pomůže vám pochopit periodickou povahu trigonometrických funkcí. Ať už jste student učící se trigonometrii, učitel připravující příklady nebo profesionál pracující s úhly, tento nástroj poskytuje rychlé, spolehlivé výpočty inverzního kosinu.",
           "exampleHeading": "Příklad: Použití Kalkulačky Arccos",
-          "exampleText": "Předpokládejme, že víte, že cos(θ) = 0,5 a chcete najít θ. Zadejte x = 0,5 do kalkulačky. Kalkulačka vypočítá θ = arccos(0,5) ≈ 1,047198 rad. Převod na stupně dává θ° ≈ 60°. To znamená, že úhel 60° má kosinus 0,5. Podobně, pokud cos(θ) = -1, pak θ = arccos(-1) = π rad = 180°, a pokud cos(θ) = 1, pak θ = arccos(1) = 0 rad = 0°."
+          "exampleText": "Předpokládejme, že víte, že cos(θ) = 0,5 a chcete najít θ. Zadejte x = 0,5 do kalkulačky. Kalkulačka vypočítá θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Převod na stupně dává θ° = 60°. Obecná řešení jsou: θ = 60° + k×360° a θ = π/3 + k×2π rad, kde k je libovolné celé číslo. To znamená, že úhly 60°, 420°, -300° atd. mají všechny kosinus 0,5. Podobně, pokud cos(θ) = 1, pak θ = arccos(1) = 0° (nebo 0 rad), s obecnými řešeními θ = 0° + k×360° a θ = 0 + k×2π rad."
         },
         "faq": {
           "heading": "Často Kladené Otázky",
           "items": [
             {
               "question": "Co je arccos?",
-              "answer": "Arccos (inverzní kosinus) je inverzní funkce kosinu. Pokud cos(θ) = x, pak θ = arccos(x). Vrací úhel, jehož kosinus je x, obvykle uvedený v radiánech nebo stupních."
+              "answer": "Arccos (inverzní kosinus) je inverzní funkcí k funkci kosinus. Pokud cos(θ) = x, pak θ = arccos(x). Vrací úhel, jehož kosinus je x, obvykle udávaný v radiánech nebo stupních. Hlavní hodnota je v rozsahu [0°, 180°] nebo [0, π] radiánů."
             },
             {
-              "question": "Jaký je definiční obor funkce arccos?",
-              "answer": "Definiční obor arccos(x) jsou všechny reálné hodnoty x takové, že -1 ≤ x ≤ 1. Mimo tento interval nemůže funkce kosinus produkovat takové hodnoty, takže arccos není pro ně definován v reálných číslech."
+              "question": "Jaká je doména funkce arccos?",
+              "answer": "Doména arccos(x) jsou všechny reálné hodnoty x takové, že -1 ≤ x ≤ 1. Mimo tento interval nemůže funkce kosinus produkovat takové hodnoty, takže arccos pro ně není definován v reálných číslech."
             },
             {
               "question": "Jaký je obor hodnot arccos?",
-              "answer": "Hlavní obor hodnot arccos(x) je [0, π] v radiánech, což odpovídá [0°, 180°] ve stupních. To znamená, že arccos vždy vrací úhel mezi 0 a π radiány (0° a 180°)."
+              "answer": "Hlavní obor hodnot arccos(x) je [0, π] v radiánech, což odpovídá [0°, 180°] ve stupních. Protože však kosinus je periodický, obecné řešení zahrnuje všechny úhly θ + k×360° (nebo θ + k×2π rad), kde k je libovolné celé číslo."
             },
             {
-              "question": "Jak převedu arccos z radiánů na stupně?",
-              "answer": "Pokud je θ v radiánech, můžete jej převést na stupně pomocí vzorce θ° = θ × 180 / π. Naše kalkulačka provádí tento převod automaticky a zobrazuje jak radiány, tak stupně."
+              "question": "Proč kalkulačka zobrazuje obecná řešení?",
+              "answer": "Kosinus je periodická funkce s periodou 360° (2π radiánů). To znamená, že pokud cos(θ) = x, pak cos(θ + k×360°) = x pro libovolné celé číslo k. Obecné řešení ukazuje všechny možné úhly, které splňují rovnici, nejen hlavní hodnotu."
             },
             {
               "question": "Je tato kalkulačka arccos zdarma?",
-              "answer": "Ano, naše kalkulačka arccos je zcela zdarma. Není vyžadována registrace ani platba. Jednoduše zadejte hodnotu pro x mezi -1 a 1 pro získání úhlu v radiánech a stupních."
+              "answer": "Ano, naše kalkulačka arccos je zcela zdarma. Není vyžadována žádná registrace ani platba. Jednoduše zadejte hodnotu pro x mezi -1 a 1, abyste získali úhel v radiánech a stupních spolu s obecnými řešeními."
             }
           ]
         },
         "related": {
           "heading": "Související Kalkulačky",
-          "addition": "Kalkulačka Sčítání",
-          "additionDesc": "Sečtěte celá čísla a desetinná čísla rychle a přesně",
+          "arcsin": "Kalkulačka Arcsin",
+          "arcsinDesc": "Najděte inverzní sinus hodnoty a získejte úhel ve stupních a radiánech",
+          "arctan": "Kalkulačka Arctan",
+          "arctanDesc": "Najděte inverzní tangens hodnoty a získejte úhel ve stupních a radiánech",
           "percentage": "Kalkulačka Procent",
-          "percentageDesc": "Vypočítejte procentní hodnoty, procentní změnu a procentní vztahy",
-          "antilog": "Kalkulačka Antilogaritmu",
-          "antilogDesc": "Vypočítejte antilogaritmus (inverzní logaritmus) čísla s libovolným základem"
+          "percentageDesc": "Vypočítejte procentní hodnoty, procentní změny a procentní vztahy"
         }
       }
     },
@@ -981,7 +980,9 @@
           "arctan": "Kalkulačka Arctan",
           "arctanDesc": "Najděte inverzní tangens hodnoty a získejte úhel ve stupních a radiánech"
         }
-      }
+      },
+      "enterAngle": "Zadejte úhel pro zobrazení výsledku",
+      "clickCalculate": "Klikněte na Vypočítat pro zobrazení výsledku"
     },
     "sine": {
       "title": "Kalkulačka sinu",
@@ -1043,67 +1044,6 @@
           "arcsinDesc": "Inverzní sinus hodnoty a úhel ve stupních a radiánech",
           "arctan": "Kalkulačka arctan",
           "arctanDesc": "Inverzní tangens hodnoty a úhel ve stupních a radiánech"
-        }
-      }
-    },
-    "arccos": {
-      "title": "Kalkulačka Arccos",
-      "description": "Kalkulačka arccos(x) pro výpočet arkuskosinu hodnoty a získání úhlu ve stupních a radiánech s obecnými řešeními.",
-      "x": "Hodnota (x, hodnota kosinu)",
-      "calculate": "Vypočítat",
-      "reset": "Reset",
-      "result": "Výsledek",
-      "angleDegrees": "Úhel ve stupních",
-      "angleRadians": "Úhel v radiánech",
-      "calculationHeading": "Výpočet",
-      "generalSolutionDegrees": "(k=..-1,0,1,..)",
-      "generalSolutionRadians": "(k=..-1,0,1,..)",
-      "seo": {
-        "title": "Kalkulačka Arccos – Inverzní Kosinus (acos) ve Stupních a Radiánech",
-        "description": "Bezplatná kalkulačka arccos pro výpočet inverzního kosinu (acos) hodnoty a získání úhlu ve stupních a radiánech s obecnými řešeními. Podporuje hodnoty v doméně [-1, 1] s krok za krokem vysvětlením. Ideální pro trigonometrii, geometrii a inženýrské výpočty.",
-        "keywords": "kalkulačka arccos, kalkulačka inverzního kosinu, kalkulačka acos, kalkulačka inverzního cos, arccos ve stupních, arccos v radiánech, trigonometrická kalkulačka, úhel z kosinu",
-        "content": {
-          "heading": "Jak Používat Kalkulačku Arccos (Inverzní Kosinus)",
-          "paragraph1": "Funkce arccos (inverzní kosinus), zapsaná jako arccos(x) nebo acos(x), vám dává úhel, jehož kosinus je x. Jinými slovy, pokud cos(θ) = x, pak θ = arccos(x). Tato kalkulačka vám pomůže rychle najít tento úhel ve stupních a radiánech pro jakoukoli platnou hodnotu kosinu mezi -1 a 1 a poskytuje obecná řešení ukazující všechny možné úhly.",
-          "paragraph2": "Pro použití kalkulačky zadejte hodnotu pro x v rozsahu [-1, 1]. Nástroj vypočítá θ = arccos(x) v radiánech pomocí vestavěné funkce inverzního kosinu a převede tento výsledek na stupně pomocí vzorce θ° = θ × 180 / π. Obě hodnoty jsou zobrazeny s vysokou přesností. Protože kosinus je periodická funkce, kalkulačka také zobrazuje obecná řešení: θ + k×360° (ve stupních) a θ + k×2π (v radiánech), kde k je libovolné celé číslo.",
-          "paragraph3": "Funkce arccos je obzvláště užitečná, když znáte kosinus úhlu, ale potřebujete samotný úhel. Běžné případy použití zahrnují hledání úhlů v pravoúhlých trojúhelnících, řešení trigonometrických rovnic, výpočet úhlů mezi vektory, analýzu vlnových funkcí a práci s rotačním pohybem. Protože kosinus není vzájemně jednoznačný přes všechna reálná čísla, hlavní hodnota arccos je definována v intervalu [0, π] radiánů (0° až 180°), ale obecné řešení zahrnuje všechny úhly, které se liší násobky 360° (nebo 2π radiánů).",
-          "paragraph4": "Naše kalkulačka arccos ověřuje, že váš vstup leží ve správné doméně [-1, 1], a poté vrací přesné výsledky pro radiány a stupně spolu se vzorci obecných řešení. To vám ušetří čas ve srovnání s ručními výpočty a pomůže vám pochopit periodickou povahu trigonometrických funkcí. Ať už jste student učící se trigonometrii, učitel připravující příklady nebo profesionál pracující s úhly, tento nástroj poskytuje rychlé, spolehlivé výpočty inverzního kosinu.",
-          "exampleHeading": "Příklad: Použití Kalkulačky Arccos",
-          "exampleText": "Předpokládejme, že víte, že cos(θ) = 0,5 a chcete najít θ. Zadejte x = 0,5 do kalkulačky. Kalkulačka vypočítá θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Převod na stupně dává θ° = 60°. Obecná řešení jsou: θ = 60° + k×360° a θ = π/3 + k×2π rad, kde k je libovolné celé číslo. To znamená, že úhly 60°, 420°, -300° atd. mají všechny kosinus 0,5. Podobně, pokud cos(θ) = 1, pak θ = arccos(1) = 0° (nebo 0 rad), s obecnými řešeními θ = 0° + k×360° a θ = 0 + k×2π rad."
-        },
-        "faq": {
-          "heading": "Často Kladené Otázky",
-          "items": [
-            {
-              "question": "Co je arccos?",
-              "answer": "Arccos (inverzní kosinus) je inverzní funkcí k funkci kosinus. Pokud cos(θ) = x, pak θ = arccos(x). Vrací úhel, jehož kosinus je x, obvykle udávaný v radiánech nebo stupních. Hlavní hodnota je v rozsahu [0°, 180°] nebo [0, π] radiánů."
-            },
-            {
-              "question": "Jaká je doména funkce arccos?",
-              "answer": "Doména arccos(x) jsou všechny reálné hodnoty x takové, že -1 ≤ x ≤ 1. Mimo tento interval nemůže funkce kosinus produkovat takové hodnoty, takže arccos pro ně není definován v reálných číslech."
-            },
-            {
-              "question": "Jaký je obor hodnot arccos?",
-              "answer": "Hlavní obor hodnot arccos(x) je [0, π] v radiánech, což odpovídá [0°, 180°] ve stupních. Protože však kosinus je periodický, obecné řešení zahrnuje všechny úhly θ + k×360° (nebo θ + k×2π rad), kde k je libovolné celé číslo."
-            },
-            {
-              "question": "Proč kalkulačka zobrazuje obecná řešení?",
-              "answer": "Kosinus je periodická funkce s periodou 360° (2π radiánů). To znamená, že pokud cos(θ) = x, pak cos(θ + k×360°) = x pro libovolné celé číslo k. Obecné řešení ukazuje všechny možné úhly, které splňují rovnici, nejen hlavní hodnotu."
-            },
-            {
-              "question": "Je tato kalkulačka arccos zdarma?",
-              "answer": "Ano, naše kalkulačka arccos je zcela zdarma. Není vyžadována žádná registrace ani platba. Jednoduše zadejte hodnotu pro x mezi -1 a 1, abyste získali úhel v radiánech a stupních spolu s obecnými řešeními."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Související Kalkulačky",
-          "arcsin": "Kalkulačka Arcsin",
-          "arcsinDesc": "Najděte inverzní sinus hodnoty a získejte úhel ve stupních a radiánech",
-          "arctan": "Kalkulačka Arctan",
-          "arctanDesc": "Najděte inverzní tangens hodnoty a získejte úhel ve stupních a radiánech",
-          "percentage": "Kalkulačka Procent",
-          "percentageDesc": "Vypočítejte procentní hodnoty, procentní změny a procentní vztahy"
         }
       }
     },
@@ -1360,7 +1300,9 @@
           "multiplication": "Kalkulačka Násobení",
           "multiplicationDesc": "Násobte čísla rychle a přesně s podrobnými kroky"
         }
-      }
+      },
+      "enterNumbers": "Zadejte dvě čísla pro zobrazení výsledku",
+      "clickCalculate": "Klikněte na Vypočítat pro zobrazení výsledku"
     },
     "quadraticEquation": {
       "title": "Kalkulačka Kvadratické Rovnice",
@@ -4524,12 +4466,30 @@
         "faq": {
           "heading": "Často kladené otázky",
           "items": [
-            {"question": "Jaký je vzorec pro kinetickou energii?", "answer": "Vzorec je KE = ½ × m × v², kde m je hmotnost v kg a v rychlost v m/s. Výsledek je v joulech (J). Např. 2 kg při 3 m/s dává KE = ½ × 2 × 9 = 9 J."},
-            {"question": "Proč je rychlost ve vzorci na druhou?", "answer": "Rychlost je na druhou, protože práce potřebná k urychlení tělesa z klidu na rychlost v je úměrná v². Zdvojnásobení rychlosti tedy zčtyřnásobí kinetickou energii – proto záleží na rychlostních limitech a brzdné dráze."},
-            {"question": "Jaké jednotky kalkulačka používá?", "answer": "Hmotnost v kilogramech (kg), rychlost v m/s. Výsledek v joulech (J). Máte-li hmotnost v gramech, dělte 1000. Máte-li rychlost v km/h, násobte 1000/3600 ≈ 0,278 pro m/s."},
-            {"question": "Může být kinetická energie záporná?", "answer": "Ne. Ve vzorci KE = ½mv² je hmotnost kladná a v² je vždy nezáporné, takže KE není nikdy záporná. Skalární KE zůstává ½mv², kde v je velikost rychlosti."},
-            {"question": "Jak souvisí kinetická energie s brzdnou dráhou?", "answer": "Práce potřebná k zastavení tělesa rovná se jeho kinetické energii. Brzdná dráha je úměrná KE, tedy v². Zdvojnásobení rychlosti zčtyřnásobí brzdnou dráhu při stejné brzdné síle."},
-            {"question": "Je tato kalkulačka kinetické energie zdarma?", "answer": "Ano. Kalkulačka je zdarma, bez registrace a platby. Zadejte hmotnost v kg a rychlost v m/s a získejte KE v joulech včetně vzorce. Pro studenty, učitele i odborníky."}
+            {
+              "question": "Jaký je vzorec pro kinetickou energii?",
+              "answer": "Vzorec je KE = ½ × m × v², kde m je hmotnost v kg a v rychlost v m/s. Výsledek je v joulech (J). Např. 2 kg při 3 m/s dává KE = ½ × 2 × 9 = 9 J."
+            },
+            {
+              "question": "Proč je rychlost ve vzorci na druhou?",
+              "answer": "Rychlost je na druhou, protože práce potřebná k urychlení tělesa z klidu na rychlost v je úměrná v². Zdvojnásobení rychlosti tedy zčtyřnásobí kinetickou energii – proto záleží na rychlostních limitech a brzdné dráze."
+            },
+            {
+              "question": "Jaké jednotky kalkulačka používá?",
+              "answer": "Hmotnost v kilogramech (kg), rychlost v m/s. Výsledek v joulech (J). Máte-li hmotnost v gramech, dělte 1000. Máte-li rychlost v km/h, násobte 1000/3600 ≈ 0,278 pro m/s."
+            },
+            {
+              "question": "Může být kinetická energie záporná?",
+              "answer": "Ne. Ve vzorci KE = ½mv² je hmotnost kladná a v² je vždy nezáporné, takže KE není nikdy záporná. Skalární KE zůstává ½mv², kde v je velikost rychlosti."
+            },
+            {
+              "question": "Jak souvisí kinetická energie s brzdnou dráhou?",
+              "answer": "Práce potřebná k zastavení tělesa rovná se jeho kinetické energii. Brzdná dráha je úměrná KE, tedy v². Zdvojnásobení rychlosti zčtyřnásobí brzdnou dráhu při stejné brzdné síle."
+            },
+            {
+              "question": "Je tato kalkulačka kinetické energie zdarma?",
+              "answer": "Ano. Kalkulačka je zdarma, bez registrace a platby. Zadejte hmotnost v kg a rychlost v m/s a získejte KE v joulech včetně vzorce. Pro studenty, učitele i odborníky."
+            }
           ]
         },
         "related": {
@@ -4700,11 +4660,26 @@
         "faq": {
           "heading": "Časté dotazy",
           "items": [
-            {"question": "Kolik je faktoriál z 0?", "answer": "0! = 1 podle definice. Tato konvence zajišťuje, že mnoho vzorců platí i pro n = 0."},
-            {"question": "Proč je vstup omezen na 170?", "answer": "Faktoriály velmi rychle rostou. 171! má přes 300 číslic. Pro n od 0 do 170 kalkulačka zobrazí přesný výsledek."},
-            {"question": "K čemu se faktoriál používá?", "answer": "Faktoriály se používají v kombinatorice (permutace: n! způsobů uspořádání n objektů), kombinacích, pravděpodobnosti a v matematice."},
-            {"question": "Mohou být faktoriály záporné nebo desetinné?", "answer": "Standardní faktoriál n! je definován jen pro nezáporná celá čísla n. Rozšíření pomocí gama funkce Γ umožňuje i jiné hodnoty."},
-            {"question": "Je tato kalkulačka zdarma?", "answer": "Ano. Kalkulačka je zdarma, bez registrace. Zadejte číslo od 0 do 170 pro n! a rozvinutí."}
+            {
+              "question": "Kolik je faktoriál z 0?",
+              "answer": "0! = 1 podle definice. Tato konvence zajišťuje, že mnoho vzorců platí i pro n = 0."
+            },
+            {
+              "question": "Proč je vstup omezen na 170?",
+              "answer": "Faktoriály velmi rychle rostou. 171! má přes 300 číslic. Pro n od 0 do 170 kalkulačka zobrazí přesný výsledek."
+            },
+            {
+              "question": "K čemu se faktoriál používá?",
+              "answer": "Faktoriály se používají v kombinatorice (permutace: n! způsobů uspořádání n objektů), kombinacích, pravděpodobnosti a v matematice."
+            },
+            {
+              "question": "Mohou být faktoriály záporné nebo desetinné?",
+              "answer": "Standardní faktoriál n! je definován jen pro nezáporná celá čísla n. Rozšíření pomocí gama funkce Γ umožňuje i jiné hodnoty."
+            },
+            {
+              "question": "Je tato kalkulačka zdarma?",
+              "answer": "Ano. Kalkulačka je zdarma, bez registrace. Zadejte číslo od 0 do 170 pro n! a rozvinutí."
+            }
           ]
         },
         "related": {
@@ -5463,11 +5438,26 @@
         "faq": {
           "heading": "Časté dotazy",
           "items": [
-            {"question": "Co je písemné násobení?", "answer": "Písemné násobení je postup násobení dvou čísel: první číslo násobíte každou číslicí druhého, dílčí součiny posunete podle řádu a sečtete."},
-            {"question": "Co jsou dílčí součiny?", "answer": "Dílčí součiny jsou výsledky násobení násobence každou číslicí násobitele. U 123 × 45 jsou to 123 × 5 = 615 a 123 × 4 = 492 (posunuto 4920)."},
-            {"question": "Funguje to pro desetinná čísla?", "answer": "Tato kalkulačka je jen pro celá čísla. U desetinných nejdříve násobte jako celá čísla, pak umístěte desetinnou čárku podle počtu desetinných míst ve faktorech."},
-            {"question": "Funguje to pro velká čísla?", "answer": "Ano. Můžete zadat velmi velká celá čísla a kalkulačka spočítá součin a všechny dílčí součiny přesně."},
-            {"question": "Je kalkulačka zdarma?", "answer": "Ano. Naše kalkulačka písemného násobení je zdarma, bez registrace. Zadejte dvě celá čísla a zobrazí se součin a kroky."}
+            {
+              "question": "Co je písemné násobení?",
+              "answer": "Písemné násobení je postup násobení dvou čísel: první číslo násobíte každou číslicí druhého, dílčí součiny posunete podle řádu a sečtete."
+            },
+            {
+              "question": "Co jsou dílčí součiny?",
+              "answer": "Dílčí součiny jsou výsledky násobení násobence každou číslicí násobitele. U 123 × 45 jsou to 123 × 5 = 615 a 123 × 4 = 492 (posunuto 4920)."
+            },
+            {
+              "question": "Funguje to pro desetinná čísla?",
+              "answer": "Tato kalkulačka je jen pro celá čísla. U desetinných nejdříve násobte jako celá čísla, pak umístěte desetinnou čárku podle počtu desetinných míst ve faktorech."
+            },
+            {
+              "question": "Funguje to pro velká čísla?",
+              "answer": "Ano. Můžete zadat velmi velká celá čísla a kalkulačka spočítá součin a všechny dílčí součiny přesně."
+            },
+            {
+              "question": "Je kalkulačka zdarma?",
+              "answer": "Ano. Naše kalkulačka písemného násobení je zdarma, bez registrace. Zadejte dvě celá čísla a zobrazí se součin a kroky."
+            }
           ]
         },
         "related": {

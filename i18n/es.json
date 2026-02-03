@@ -862,7 +862,7 @@
     },
     "arccos": {
       "title": "Calculadora de Arccos",
-      "description": "Calculadora arccos(x) para encontrar el coseno inverso de un valor y obtener el ángulo en grados y radianes.",
+      "description": "Calculadora arccos(x) para encontrar el arcocoseno de un valor y obtener el ángulo en grados y radianes con soluciones generales.",
       "x": "Valor (x, valor del coseno)",
       "calculate": "Calcular",
       "reset": "Restablecer",
@@ -870,55 +870,54 @@
       "angleDegrees": "Ángulo en grados",
       "angleRadians": "Ángulo en radianes",
       "calculationHeading": "Cálculo",
-      "calculationIntro": "Para el valor de coseno dado",
-      "calculationStepRadians": "primero calculamos el ángulo en radianes usando arccos(x). El resultado es θ = arccos(x) ≈ {radians} rad.",
-      "calculationStepDegrees": "Luego convertimos los radianes a grados usando θ° = θ × 180 / π, obteniendo aproximadamente {degrees}°.",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
       "seo": {
-        "title": "Calculadora de Arccos – Coseno Inverso (acos) en Grados y Radianes",
-        "description": "Calculadora de arccos gratuita para encontrar el coseno inverso (acos) de un valor y obtener el ángulo tanto en grados como en radianes. Admite valores en el dominio [-1, 1] con explicación paso a paso. Ideal para trigonometría, geometría y cálculos de ingeniería.",
-        "keywords": "calculadora arccos, calculadora coseno inverso, calculadora acos, calculadora inversa del coseno, arccos en grados, arccos en radianes, calculadora de trigonometría, ángulo a partir del coseno",
+        "title": "Calculadora Arccos – Arcocoseno Inverso (acos) en Grados y Radianes",
+        "description": "Calculadora arccos gratuita para encontrar el arcocoseno inverso (acos) de un valor y obtener el ángulo en grados y radianes con soluciones generales. Soporta valores en el dominio [-1, 1] con explicación paso a paso. Ideal para trigonometría, geometría y cálculos de ingeniería.",
+        "keywords": "calculadora arccos, calculadora arcocoseno inverso, calculadora acos, calculadora cos inverso, arccos en grados, arccos en radianes, calculadora trigonométrica, ángulo del coseno",
         "content": {
-          "heading": "Cómo Usar la Calculadora de Arccos (Coseno Inverso)",
-          "paragraph1": "La función arccos (coseno inverso), escrita como arccos(x) o acos(x), le da el ángulo cuyo coseno es x. En otras palabras, si cos(θ) = x, entonces θ = arccos(x). Esta calculadora le ayuda a encontrar rápidamente ese ángulo tanto en grados como en radianes para cualquier valor de coseno válido entre -1 y 1.",
-          "paragraph2": "Para usar la calculadora, introduzca un valor para x en el intervalo [-1, 1]. La herramienta calcula entonces θ = arccos(x) en radianes utilizando la función de coseno inverso integrada y convierte ese resultado a grados usando la fórmula θ° = θ × 180 / π. Ambos valores se muestran con alta precisión para que pueda utilizarlos en problemas de trigonometría, geometría, física o ingeniería.",
-          "paragraph3": "La función arccos es especialmente útil cuando conoce el coseno de un ángulo pero necesita el ángulo en sí. Los casos de uso comunes incluyen encontrar ángulos en triángulos rectángulos, calcular ángulos entre vectores usando el producto escalar, analizar señales periódicas y resolver ecuaciones trigonométricas. Dado que el coseno no es inyectivo en todos los números reales, el valor principal de arccos se define en el intervalo [0, π] radianes (de 0° a 180°).",
-          "paragraph4": "Nuestra calculadora de arccos valida que su entrada se encuentre dentro del dominio correcto [-1, 1] y luego devuelve resultados precisos tanto en radianes como en grados. Esto le ahorra tiempo en comparación con los cálculos manuales y reduce el riesgo de errores. Ya sea que sea un estudiante que aprende trigonometría, un profesor que prepara ejemplos o un profesional que trabaja con ángulos, esta herramienta proporciona cálculos de coseno inverso rápidos y fiables.",
-          "exampleHeading": "Ejemplo: Uso de la Calculadora de Arccos",
-          "exampleText": "Suponga que sabe que cos(θ) = 0,5 y desea encontrar θ. Introduzca x = 0,5 en la calculadora. La calculadora computa θ = arccos(0,5) ≈ 1,047198 rad. Al convertir a grados obtenemos θ° ≈ 60°. Esto significa que un ángulo de 60° tiene un coseno de 0,5. De forma similar, si cos(θ) = -1, entonces θ = arccos(-1) = π rad = 180°, y si cos(θ) = 1, entonces θ = arccos(1) = 0 rad = 0°."
+          "heading": "Cómo Usar la Calculadora Arccos (Arcocoseno Inverso)",
+          "paragraph1": "La función arccos (arcocoseno inverso), escrita como arccos(x) o acos(x), te da el ángulo cuyo coseno es x. En otras palabras, si cos(θ) = x, entonces θ = arccos(x). Esta calculadora te ayuda a encontrar rápidamente ese ángulo en grados y radianes para cualquier valor de coseno válido entre -1 y 1, y proporciona soluciones generales que muestran todos los ángulos posibles.",
+          "paragraph2": "Para usar la calculadora, ingresa un valor para x en el rango [-1, 1]. La herramienta calcula θ = arccos(x) en radianes usando la función arcocoseno inverso incorporada, y convierte ese resultado a grados usando la fórmula θ° = θ × 180 / π. Ambos valores se muestran con alta precisión. Dado que el coseno es una función periódica, la calculadora también muestra soluciones generales: θ + k×360° (en grados) y θ + k×2π (en radianes), donde k es cualquier entero.",
+          "paragraph3": "La función arccos es especialmente útil cuando conoces el coseno de un ángulo pero necesitas el ángulo en sí. Los casos de uso comunes incluyen encontrar ángulos en triángulos rectángulos, resolver ecuaciones trigonométricas, calcular ángulos entre vectores, analizar funciones de onda y trabajar con movimiento rotacional. Debido a que el coseno no es biyectivo sobre todos los números reales, el valor principal de arccos se define en el intervalo [0, π] radianes (0° a 180°), pero la solución general incluye todos los ángulos que difieren en múltiplos de 360° (o 2π radianes).",
+          "paragraph4": "Nuestra calculadora arccos valida que tu entrada esté dentro del dominio correcto [-1, 1] y luego devuelve resultados precisos para radianes y grados, junto con las fórmulas de solución general. Esto te ahorra tiempo en comparación con los cálculos manuales y te ayuda a comprender la naturaleza periódica de las funciones trigonométricas. Ya seas un estudiante aprendiendo trigonometría, un maestro preparando ejemplos o un profesional trabajando con ángulos, esta herramienta proporciona cálculos de arcocoseno inverso rápidos y confiables.",
+          "exampleHeading": "Ejemplo: Uso de la Calculadora Arccos",
+          "exampleText": "Supongamos que sabes que cos(θ) = 0,5 y quieres encontrar θ. Ingresa x = 0,5 en la calculadora. La calculadora calcula θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Convirtiendo a grados da θ° = 60°. Las soluciones generales son: θ = 60° + k×360° y θ = π/3 + k×2π rad, donde k es cualquier entero. Esto significa que los ángulos de 60°, 420°, -300°, etc., todos tienen un coseno de 0,5. De manera similar, si cos(θ) = 1, entonces θ = arccos(1) = 0° (o 0 rad), con soluciones generales θ = 0° + k×360° y θ = 0 + k×2π rad."
         },
         "faq": {
           "heading": "Preguntas Frecuentes",
           "items": [
             {
               "question": "¿Qué es arccos?",
-              "answer": "Arccos (coseno inverso) es la función inversa del coseno. Si cos(θ) = x, entonces θ = arccos(x). Devuelve el ángulo cuyo coseno es x, normalmente dado en radianes o grados."
+              "answer": "Arccos (arcocoseno inverso) es la inversa de la función coseno. Si cos(θ) = x, entonces θ = arccos(x). Devuelve el ángulo cuyo coseno es x, generalmente dado en radianes o grados. El valor principal está en el rango [0°, 180°] o [0, π] radianes."
             },
             {
               "question": "¿Cuál es el dominio de la función arccos?",
-              "answer": "El dominio de arccos(x) son todos los valores reales x tales que -1 ≤ x ≤ 1. Fuera de este intervalo, la función coseno no puede producir esos valores, por lo que arccos no está definido para ellos en los números reales."
+              "answer": "El dominio de arccos(x) son todos los valores reales x tales que -1 ≤ x ≤ 1. Fuera de este intervalo, la función coseno no puede producir tales valores, por lo que arccos no está definido para ellos en números reales."
             },
             {
               "question": "¿Cuál es el rango de arccos?",
-              "answer": "El rango principal de arccos(x) es [0, π] en radianes, lo que corresponde a [0°, 180°] en grados. Esto significa que arccos siempre devuelve un ángulo entre 0 y π radianes (0° y 180°)."
+              "answer": "El rango principal de arccos(x) es [0, π] en radianes, que corresponde a [0°, 180°] en grados. Sin embargo, dado que el coseno es periódico, la solución general incluye todos los ángulos θ + k×360° (o θ + k×2π rad) donde k es cualquier entero."
             },
             {
-              "question": "¿Cómo convierto arccos de radianes a grados?",
-              "answer": "Si θ está en radianes, puede convertirlo a grados usando la fórmula θ° = θ × 180 / π. Nuestra calculadora realiza esta conversión automáticamente y muestra tanto radianes como grados."
+              "question": "¿Por qué la calculadora muestra soluciones generales?",
+              "answer": "El coseno es una función periódica con período 360° (2π radianes). Esto significa que si cos(θ) = x, entonces cos(θ + k×360°) = x para cualquier entero k. La solución general muestra todos los ángulos posibles que satisfacen la ecuación, no solo el valor principal."
             },
             {
-              "question": "¿La calculadora de arccos es gratuita?",
-              "answer": "Sí, nuestra calculadora de arccos es completamente gratuita. No se requiere registro ni pago. Simplemente introduzca un valor de x entre -1 y 1 para obtener el ángulo en radianes y grados."
+              "question": "¿Es gratis esta calculadora arccos?",
+              "answer": "Sí, nuestra calculadora arccos es completamente gratuita. No se requiere registro ni pago. Simplemente ingresa un valor para x entre -1 y 1 para obtener el ángulo en radianes y grados, junto con soluciones generales."
             }
           ]
         },
         "related": {
           "heading": "Calculadoras Relacionadas",
-          "addition": "Calculadora de Suma",
-          "additionDesc": "Suma números enteros y decimales rápida y precisamente",
-          "percentage": "Calculadora de Porcentajes",
-          "percentageDesc": "Calcula valores porcentuales, cambio porcentual y relaciones porcentuales",
-          "antilog": "Calculadora de Antilogaritmo",
-          "antilogDesc": "Calcula el antilogaritmo (logaritmo inverso) de un número con cualquier base"
+          "arcsin": "Calculadora Arcsin",
+          "arcsinDesc": "Encuentra el arcoseno inverso de un valor y obtén el ángulo en grados y radianes",
+          "arctan": "Calculadora Arctan",
+          "arctanDesc": "Encuentra el arcotangente inverso de un valor y obtén el ángulo en grados y radianes",
+          "percentage": "Calculadora de Porcentaje",
+          "percentageDesc": "Calcula valores de porcentaje, cambios porcentuales y relaciones porcentuales"
         }
       }
     },
@@ -981,7 +980,9 @@
           "arctan": "Calculadora de Arctan",
           "arctanDesc": "Encuentra la tangente inversa de un valor y obtén el ángulo en grados y radianes"
         }
-      }
+      },
+      "enterAngle": "Introduce un ángulo para ver el resultado",
+      "clickCalculate": "Haz clic en Calcular para ver el resultado"
     },
     "sine": {
       "title": "Calculadora de Seno",
@@ -1043,67 +1044,6 @@
           "arcsinDesc": "Seno inverso de un valor y ángulo en grados y radianes",
           "arctan": "Calculadora de Arctan",
           "arctanDesc": "Tangente inversa de un valor y ángulo en grados y radianes"
-        }
-      }
-    },
-    "arccos": {
-      "title": "Calculadora de Arccos",
-      "description": "Calculadora arccos(x) para encontrar el arcocoseno de un valor y obtener el ángulo en grados y radianes con soluciones generales.",
-      "x": "Valor (x, valor del coseno)",
-      "calculate": "Calcular",
-      "reset": "Restablecer",
-      "result": "Resultado",
-      "angleDegrees": "Ángulo en grados",
-      "angleRadians": "Ángulo en radianes",
-      "calculationHeading": "Cálculo",
-      "generalSolutionDegrees": "(k=..-1,0,1,..)",
-      "generalSolutionRadians": "(k=..-1,0,1,..)",
-      "seo": {
-        "title": "Calculadora Arccos – Arcocoseno Inverso (acos) en Grados y Radianes",
-        "description": "Calculadora arccos gratuita para encontrar el arcocoseno inverso (acos) de un valor y obtener el ángulo en grados y radianes con soluciones generales. Soporta valores en el dominio [-1, 1] con explicación paso a paso. Ideal para trigonometría, geometría y cálculos de ingeniería.",
-        "keywords": "calculadora arccos, calculadora arcocoseno inverso, calculadora acos, calculadora cos inverso, arccos en grados, arccos en radianes, calculadora trigonométrica, ángulo del coseno",
-        "content": {
-          "heading": "Cómo Usar la Calculadora Arccos (Arcocoseno Inverso)",
-          "paragraph1": "La función arccos (arcocoseno inverso), escrita como arccos(x) o acos(x), te da el ángulo cuyo coseno es x. En otras palabras, si cos(θ) = x, entonces θ = arccos(x). Esta calculadora te ayuda a encontrar rápidamente ese ángulo en grados y radianes para cualquier valor de coseno válido entre -1 y 1, y proporciona soluciones generales que muestran todos los ángulos posibles.",
-          "paragraph2": "Para usar la calculadora, ingresa un valor para x en el rango [-1, 1]. La herramienta calcula θ = arccos(x) en radianes usando la función arcocoseno inverso incorporada, y convierte ese resultado a grados usando la fórmula θ° = θ × 180 / π. Ambos valores se muestran con alta precisión. Dado que el coseno es una función periódica, la calculadora también muestra soluciones generales: θ + k×360° (en grados) y θ + k×2π (en radianes), donde k es cualquier entero.",
-          "paragraph3": "La función arccos es especialmente útil cuando conoces el coseno de un ángulo pero necesitas el ángulo en sí. Los casos de uso comunes incluyen encontrar ángulos en triángulos rectángulos, resolver ecuaciones trigonométricas, calcular ángulos entre vectores, analizar funciones de onda y trabajar con movimiento rotacional. Debido a que el coseno no es biyectivo sobre todos los números reales, el valor principal de arccos se define en el intervalo [0, π] radianes (0° a 180°), pero la solución general incluye todos los ángulos que difieren en múltiplos de 360° (o 2π radianes).",
-          "paragraph4": "Nuestra calculadora arccos valida que tu entrada esté dentro del dominio correcto [-1, 1] y luego devuelve resultados precisos para radianes y grados, junto con las fórmulas de solución general. Esto te ahorra tiempo en comparación con los cálculos manuales y te ayuda a comprender la naturaleza periódica de las funciones trigonométricas. Ya seas un estudiante aprendiendo trigonometría, un maestro preparando ejemplos o un profesional trabajando con ángulos, esta herramienta proporciona cálculos de arcocoseno inverso rápidos y confiables.",
-          "exampleHeading": "Ejemplo: Uso de la Calculadora Arccos",
-          "exampleText": "Supongamos que sabes que cos(θ) = 0,5 y quieres encontrar θ. Ingresa x = 0,5 en la calculadora. La calculadora calcula θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Convirtiendo a grados da θ° = 60°. Las soluciones generales son: θ = 60° + k×360° y θ = π/3 + k×2π rad, donde k es cualquier entero. Esto significa que los ángulos de 60°, 420°, -300°, etc., todos tienen un coseno de 0,5. De manera similar, si cos(θ) = 1, entonces θ = arccos(1) = 0° (o 0 rad), con soluciones generales θ = 0° + k×360° y θ = 0 + k×2π rad."
-        },
-        "faq": {
-          "heading": "Preguntas Frecuentes",
-          "items": [
-            {
-              "question": "¿Qué es arccos?",
-              "answer": "Arccos (arcocoseno inverso) es la inversa de la función coseno. Si cos(θ) = x, entonces θ = arccos(x). Devuelve el ángulo cuyo coseno es x, generalmente dado en radianes o grados. El valor principal está en el rango [0°, 180°] o [0, π] radianes."
-            },
-            {
-              "question": "¿Cuál es el dominio de la función arccos?",
-              "answer": "El dominio de arccos(x) son todos los valores reales x tales que -1 ≤ x ≤ 1. Fuera de este intervalo, la función coseno no puede producir tales valores, por lo que arccos no está definido para ellos en números reales."
-            },
-            {
-              "question": "¿Cuál es el rango de arccos?",
-              "answer": "El rango principal de arccos(x) es [0, π] en radianes, que corresponde a [0°, 180°] en grados. Sin embargo, dado que el coseno es periódico, la solución general incluye todos los ángulos θ + k×360° (o θ + k×2π rad) donde k es cualquier entero."
-            },
-            {
-              "question": "¿Por qué la calculadora muestra soluciones generales?",
-              "answer": "El coseno es una función periódica con período 360° (2π radianes). Esto significa que si cos(θ) = x, entonces cos(θ + k×360°) = x para cualquier entero k. La solución general muestra todos los ángulos posibles que satisfacen la ecuación, no solo el valor principal."
-            },
-            {
-              "question": "¿Es gratis esta calculadora arccos?",
-              "answer": "Sí, nuestra calculadora arccos es completamente gratuita. No se requiere registro ni pago. Simplemente ingresa un valor para x entre -1 y 1 para obtener el ángulo en radianes y grados, junto con soluciones generales."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Calculadoras Relacionadas",
-          "arcsin": "Calculadora Arcsin",
-          "arcsinDesc": "Encuentra el arcoseno inverso de un valor y obtén el ángulo en grados y radianes",
-          "arctan": "Calculadora Arctan",
-          "arctanDesc": "Encuentra el arcotangente inverso de un valor y obtén el ángulo en grados y radianes",
-          "percentage": "Calculadora de Porcentaje",
-          "percentageDesc": "Calcula valores de porcentaje, cambios porcentuales y relaciones porcentuales"
         }
       }
     },
@@ -1360,7 +1300,9 @@
           "multiplication": "Calculadora de Multiplicación",
           "multiplicationDesc": "Multiplica números rápida y precisamente con pasos detallados"
         }
-      }
+      },
+      "enterNumbers": "Introduce dos números para ver el resultado",
+      "clickCalculate": "Haz clic en Calcular para ver el resultado"
     },
     "quadraticEquation": {
       "title": "Calculadora de Ecuaciones Cuadráticas",
@@ -4524,12 +4466,30 @@
         "faq": {
           "heading": "Preguntas frecuentes",
           "items": [
-            {"question": "¿Cuál es la fórmula de la energía cinética?", "answer": "KE = ½ × m × v², m en kg, v en m/s. Resultado en julios (J). Ej. 2 kg a 3 m/s: KE = 9 J."},
-            {"question": "¿Por qué la velocidad está al cuadrado?", "answer": "El trabajo para acelerar desde el reposo es proporcional a v². Duplicar la velocidad cuadruplica KE – por eso importan los límites de velocidad y la distancia de frenado."},
-            {"question": "¿Qué unidades usa la calculadora?", "answer": "Masa en kilogramos (kg), velocidad en m/s. Resultado en julios (J). Gramos ÷ 1000 = kg. km/h × 1000/3600 ≈ 0,278 = m/s."},
-            {"question": "¿Puede la energía cinética ser negativa?", "answer": "No. En KE = ½mv² la masa es positiva y v² ≥ 0, así que KE nunca es negativa. KE escalar = ½mv² con v = módulo de la velocidad."},
-            {"question": "¿Cómo se relaciona KE con la distancia de frenado?", "answer": "El trabajo de frenado iguala KE. Distancia de frenado ∝ KE ∝ v². Duplicar la velocidad cuadruplica la distancia de frenado con la misma fuerza de frenado."},
-            {"question": "¿Esta calculadora es gratuita?", "answer": "Sí. La calculadora es gratuita, sin registro. Introduce masa en kg y velocidad en m/s para obtener KE en julios con la fórmula. Para estudiantes, profesores y profesionales."}
+            {
+              "question": "¿Cuál es la fórmula de la energía cinética?",
+              "answer": "KE = ½ × m × v², m en kg, v en m/s. Resultado en julios (J). Ej. 2 kg a 3 m/s: KE = 9 J."
+            },
+            {
+              "question": "¿Por qué la velocidad está al cuadrado?",
+              "answer": "El trabajo para acelerar desde el reposo es proporcional a v². Duplicar la velocidad cuadruplica KE – por eso importan los límites de velocidad y la distancia de frenado."
+            },
+            {
+              "question": "¿Qué unidades usa la calculadora?",
+              "answer": "Masa en kilogramos (kg), velocidad en m/s. Resultado en julios (J). Gramos ÷ 1000 = kg. km/h × 1000/3600 ≈ 0,278 = m/s."
+            },
+            {
+              "question": "¿Puede la energía cinética ser negativa?",
+              "answer": "No. En KE = ½mv² la masa es positiva y v² ≥ 0, así que KE nunca es negativa. KE escalar = ½mv² con v = módulo de la velocidad."
+            },
+            {
+              "question": "¿Cómo se relaciona KE con la distancia de frenado?",
+              "answer": "El trabajo de frenado iguala KE. Distancia de frenado ∝ KE ∝ v². Duplicar la velocidad cuadruplica la distancia de frenado con la misma fuerza de frenado."
+            },
+            {
+              "question": "¿Esta calculadora es gratuita?",
+              "answer": "Sí. La calculadora es gratuita, sin registro. Introduce masa en kg y velocidad en m/s para obtener KE en julios con la fórmula. Para estudiantes, profesores y profesionales."
+            }
           ]
         },
         "related": {
@@ -4700,11 +4660,26 @@
         "faq": {
           "heading": "Preguntas frecuentes",
           "items": [
-            {"question": "¿Cuánto es el factorial de 0?", "answer": "0! = 1 por definición. Esta convención hace que muchas fórmulas sean válidas también para n = 0."},
-            {"question": "¿Por qué la entrada está limitada a 170?", "answer": "Los factoriales crecen muy rápido. 171! tiene más de 300 cifras. Para n de 0 a 170 la calculadora muestra el resultado exacto."},
-            {"question": "¿Para qué se usa el factorial?", "answer": "Los factoriales se usan en combinatoria (permutaciones: n! formas de ordenar n objetos), combinaciones y probabilidad."},
-            {"question": "¿Pueden ser negativos o decimales?", "answer": "El factorial estándar n! está definido solo para enteros n ≥ 0. La función gamma Γ extiende el concepto a otros valores."},
-            {"question": "¿Esta calculadora es gratuita?", "answer": "Sí. La calculadora es gratuita, sin registro. Introduce un número de 0 a 170 para obtener n! y el desarrollo."}
+            {
+              "question": "¿Cuánto es el factorial de 0?",
+              "answer": "0! = 1 por definición. Esta convención hace que muchas fórmulas sean válidas también para n = 0."
+            },
+            {
+              "question": "¿Por qué la entrada está limitada a 170?",
+              "answer": "Los factoriales crecen muy rápido. 171! tiene más de 300 cifras. Para n de 0 a 170 la calculadora muestra el resultado exacto."
+            },
+            {
+              "question": "¿Para qué se usa el factorial?",
+              "answer": "Los factoriales se usan en combinatoria (permutaciones: n! formas de ordenar n objetos), combinaciones y probabilidad."
+            },
+            {
+              "question": "¿Pueden ser negativos o decimales?",
+              "answer": "El factorial estándar n! está definido solo para enteros n ≥ 0. La función gamma Γ extiende el concepto a otros valores."
+            },
+            {
+              "question": "¿Esta calculadora es gratuita?",
+              "answer": "Sí. La calculadora es gratuita, sin registro. Introduce un número de 0 a 170 para obtener n! y el desarrollo."
+            }
           ]
         },
         "related": {
@@ -5463,11 +5438,26 @@
         "faq": {
           "heading": "Preguntas frecuentes",
           "items": [
-            {"question": "¿Qué es la multiplicación larga?", "answer": "La multiplicación larga es un método paso a paso: multiplicas el primer número por cada cifra del segundo, desplazas productos parciales según la posición y sumas."},
-            {"question": "¿Qué son los productos parciales?", "answer": "Son el multiplicando multiplicado por cada cifra del multiplicador. Para 123 × 45: 123 × 5 = 615 y 123 × 4 = 492 (desplazado 4920)."},
-            {"question": "¿Funciona con decimales?", "answer": "Esta calculadora es solo para enteros. Para decimales, multiplica primero como enteros y coloca la coma según el total de decimales en los factores."},
-            {"question": "¿Funciona con números grandes?", "answer": "Sí. Puedes introducir enteros muy grandes; la calculadora dará el producto y todos los productos parciales."},
-            {"question": "¿Es gratuita?", "answer": "Sí. Nuestra calculadora de multiplicación larga es gratuita, sin registro. Introduce dos enteros para ver producto y pasos."}
+            {
+              "question": "¿Qué es la multiplicación larga?",
+              "answer": "La multiplicación larga es un método paso a paso: multiplicas el primer número por cada cifra del segundo, desplazas productos parciales según la posición y sumas."
+            },
+            {
+              "question": "¿Qué son los productos parciales?",
+              "answer": "Son el multiplicando multiplicado por cada cifra del multiplicador. Para 123 × 45: 123 × 5 = 615 y 123 × 4 = 492 (desplazado 4920)."
+            },
+            {
+              "question": "¿Funciona con decimales?",
+              "answer": "Esta calculadora es solo para enteros. Para decimales, multiplica primero como enteros y coloca la coma según el total de decimales en los factores."
+            },
+            {
+              "question": "¿Funciona con números grandes?",
+              "answer": "Sí. Puedes introducir enteros muy grandes; la calculadora dará el producto y todos los productos parciales."
+            },
+            {
+              "question": "¿Es gratuita?",
+              "answer": "Sí. Nuestra calculadora de multiplicación larga es gratuita, sin registro. Introduce dos enteros para ver producto y pasos."
+            }
           ]
         },
         "related": {

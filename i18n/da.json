@@ -862,63 +862,62 @@
     },
     "arccos": {
       "title": "Arccos Regner",
-      "description": "Arccos(x) regner til at finde den inverse cosinus af en værdi og få vinklen i grader og radianer.",
-      "x": "Værdi (x, cosinusværdi)",
+      "description": "Arccos(x) regner til at finde arcus cosinus af en værdi og få vinklen i grader og radianer med generelle løsninger.",
+      "x": "Værdi (x, cosinus værdi)",
       "calculate": "Beregn",
       "reset": "Nulstil",
       "result": "Resultat",
       "angleDegrees": "Vinkel i grader",
       "angleRadians": "Vinkel i radianer",
       "calculationHeading": "Beregning",
-      "calculationIntro": "For den givne cosinusværdi",
-      "calculationStepRadians": "beregner vi først vinklen i radianer ved hjælp af arccos(x). Resultatet er θ = arccos(x) ≈ {radians} rad.",
-      "calculationStepDegrees": "Derefter konverterer vi radianer til grader ved hjælp af θ° = θ × 180 / π, hvilket giver cirka {degrees}°.",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
       "seo": {
         "title": "Arccos Regner – Invers Cosinus (acos) i Grader og Radianer",
-        "description": "Gratis arccos regner til at finde den inverse cosinus (acos) af en værdi og få vinklen både i grader og radianer. Understøtter værdier i domænet [-1, 1] med trin-for-trin forklaring. Ideel til trigonometri, geometri og ingeniørberegninger.",
-        "keywords": "arccos regner, invers cosinus regner, acos regner, cosinus invers regner, arccos i grader, arccos i radianer, trigonometri regner, vinkel fra cosinus",
+        "description": "Gratis arccos regner til at finde invers cosinus (acos) af en værdi og få vinklen i grader og radianer med generelle løsninger. Understøtter værdier i domænet [-1, 1] med trin-for-trin forklaring. Ideel til trigonometri, geometri og ingeniørberegninger.",
+        "keywords": "arccos regner, invers cosinus regner, acos regner, cos invers regner, arccos i grader, arccos i radianer, trigonometrisk regner, vinkel fra cosinus",
         "content": {
-          "heading": "Sådan Bruges Arccos (Invers Cosinus) Regneren",
-          "paragraph1": "Arccos-funktionen (invers cosinus), skrevet som arccos(x) eller acos(x), giver dig vinklen, hvis cosinus er x. Med andre ord, hvis cos(θ) = x, så θ = arccos(x). Denne regner hjælper dig med hurtigt at finde den vinkel både i grader og radianer for enhver gyldig cosinusværdi mellem -1 og 1.",
-          "paragraph2": "For at bruge regneren skal du indtaste en værdi for x i intervallet [-1, 1]. Værktøjet beregner derefter θ = arccos(x) i radianer ved hjælp af den indbyggede inverse cosinusfunktion og konverterer dette resultat til grader ved hjælp af formlen θ° = θ × 180 / π. Begge værdier vises med høj præcision, så du kan bruge dem i trigonometri-, geometri-, fysik- eller ingeniørproblemer.",
-          "paragraph3": "Arccos-funktionen er særligt nyttig, når du kender cosinus af en vinkel, men har brug for selve vinklen. Almindelige anvendelsestilfælde omfatter at finde vinkler i retvinklede trekanter, beregne vinkler mellem vektorer ved hjælp af prikproduktet, analysere periodiske signaler og løse trigonometriske ligninger. Fordi cosinus ikke er injektiv over alle reelle tal, er hovedværdien af arccos defineret i intervallet [0, π] radianer (0° til 180°).",
-          "paragraph4": "Vores arccos regner validerer, at dit input ligger inden for det korrekte domæne [-1, 1], og returnerer derefter præcise resultater både i radianer og grader. Dette sparer dig tid sammenlignet med manuelle beregninger og reducerer risikoen for fejl. Uanset om du er en studerende, der lærer trigonometri, en lærer, der forbereder eksempler, eller en professionel, der arbejder med vinkler, giver dette værktøj hurtige, pålidelige inverse cosinusberegninger.",
+          "heading": "Sådan Bruger Du Arccos (Invers Cosinus) Regneren",
+          "paragraph1": "Arccos (invers cosinus) funktionen, skrevet som arccos(x) eller acos(x), giver dig vinklen hvis cosinus er x. Med andre ord, hvis cos(θ) = x, så er θ = arccos(x). Denne regner hjælper dig med hurtigt at finde den vinkel i grader og radianer for enhver gyldig cosinus værdi mellem -1 og 1, og giver generelle løsninger der viser alle mulige vinkler.",
+          "paragraph2": "For at bruge regneren, indtast en værdi for x i området [-1, 1]. Værktøjet beregner θ = arccos(x) i radianer ved hjælp af den indbyggede invers cosinus funktion og konverterer resultatet til grader ved hjælp af formlen θ° = θ × 180 / π. Begge værdier vises med høj præcision. Da cosinus er en periodisk funktion, viser regneren også generelle løsninger: θ + k×360° (i grader) og θ + k×2π (i radianer), hvor k er et vilkårligt heltal.",
+          "paragraph3": "Arccos funktionen er især nyttig, når du kender cosinus af en vinkel, men har brug for vinklen selv. Almindelige anvendelsestilfælde inkluderer at finde vinkler i retvinklede trekanter, løse trigonometriske ligninger, beregne vinkler mellem vektorer, analysere bølgefunktioner og arbejde med rotationsbevægelse. Fordi cosinus ikke er en-til-en over alle reelle tal, er hovedværdien af arccos defineret i intervallet [0, π] radianer (0° til 180°), men den generelle løsning inkluderer alle vinkler der adskiller sig med multipla af 360° (eller 2π radianer).",
+          "paragraph4": "Vores arccos regner validerer at dit input ligger i det korrekte domæne [-1, 1] og returnerer derefter nøjagtige resultater for radianer og grader sammen med de generelle løsningsformler. Dette sparer dig tid sammenlignet med manuelle beregninger og hjælper dig med at forstå den periodiske natur af trigonometriske funktioner. Uanset om du er en studerende der lærer trigonometri, en lærer der forbereder eksempler eller en professionel der arbejder med vinkler, giver dette værktøj hurtige, pålidelige invers cosinus beregninger.",
           "exampleHeading": "Eksempel: Brug af Arccos Regneren",
-          "exampleText": "Antag, at du ved, at cos(θ) = 0,5, og du vil finde θ. Indtast x = 0,5 i regneren. Regneren beregner θ = arccos(0,5) ≈ 1,047198 rad. Konvertering til grader giver θ° ≈ 60°. Dette betyder, at en vinkel på 60° har en cosinus på 0,5. Tilsvarende, hvis cos(θ) = -1, så θ = arccos(-1) = π rad = 180°, og hvis cos(θ) = 1, så θ = arccos(1) = 0 rad = 0°."
+          "exampleText": "Antag at du ved at cos(θ) = 0,5 og vil finde θ. Indtast x = 0,5 i regneren. Regneren beregner θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Konvertering til grader giver θ° = 60°. De generelle løsninger er: θ = 60° + k×360° og θ = π/3 + k×2π rad, hvor k er et vilkårligt heltal. Dette betyder at vinklerne 60°, 420°, -300° osv. alle har en cosinus på 0,5. Ligeledes, hvis cos(θ) = 1, så er θ = arccos(1) = 0° (eller 0 rad), med generelle løsninger θ = 0° + k×360° og θ = 0 + k×2π rad."
         },
         "faq": {
           "heading": "Ofte Stillede Spørgsmål",
           "items": [
             {
               "question": "Hvad er arccos?",
-              "answer": "Arccos (invers cosinus) er den inverse funktion af cosinus. Hvis cos(θ) = x, så θ = arccos(x). Den returnerer vinklen, hvis cosinus er x, normalt angivet i radianer eller grader."
+              "answer": "Arccos (invers cosinus) er den inverse funktion til cosinus funktionen. Hvis cos(θ) = x, så er θ = arccos(x). Den returnerer vinklen hvis cosinus er x, normalt givet i radianer eller grader. Hovedværdien er i området [0°, 180°] eller [0, π] radianer."
             },
             {
-              "question": "Hvad er domænet for arccos-funktionen?",
-              "answer": "Domænet for arccos(x) er alle reelle værdier x sådan at -1 ≤ x ≤ 1. Uden for dette interval kan cosinus-funktionen ikke producere sådanne værdier, så arccos er ikke defineret for dem i reelle tal."
+              "question": "Hvad er definitionsområdet for arccos funktionen?",
+              "answer": "Definitionsområdet for arccos(x) er alle reelle værdier x sådan at -1 ≤ x ≤ 1. Uden for dette interval kan cosinus funktionen ikke producere sådanne værdier, så arccos er ikke defineret for dem i reelle tal."
             },
             {
-              "question": "Hvad er intervallet for arccos?",
-              "answer": "Hovedintervallet for arccos(x) er [0, π] i radianer, hvilket svarer til [0°, 180°] i grader. Dette betyder, at arccos altid returnerer en vinkel mellem 0 og π radianer (0° og 180°)."
+              "question": "Hvad er værdiområdet for arccos?",
+              "answer": "Hovedværdiområdet for arccos(x) er [0, π] i radianer, hvilket svarer til [0°, 180°] i grader. Da cosinus imidlertid er periodisk, inkluderer den generelle løsning alle vinkler θ + k×360° (eller θ + k×2π rad) hvor k er et vilkårligt heltal."
             },
             {
-              "question": "Hvordan konverterer jeg arccos fra radianer til grader?",
-              "answer": "Hvis θ er i radianer, kan du konvertere det til grader ved hjælp af formlen θ° = θ × 180 / π. Vores regner udfører denne konvertering automatisk og viser både radianer og grader."
+              "question": "Hvorfor viser regneren generelle løsninger?",
+              "answer": "Cosinus er en periodisk funktion med periode 360° (2π radianer). Dette betyder at hvis cos(θ) = x, så er cos(θ + k×360°) = x for ethvert heltal k. Den generelle løsning viser alle mulige vinkler der opfylder ligningen, ikke kun hovedværdien."
             },
             {
               "question": "Er denne arccos regner gratis?",
-              "answer": "Ja, vores arccos regner er helt gratis. Ingen registrering eller betaling påkrævet. Indtast blot en værdi for x mellem -1 og 1 for at få vinklen i radianer og grader."
+              "answer": "Ja, vores arccos regner er helt gratis at bruge. Ingen registrering eller betaling er påkrævet. Indtast blot en værdi for x mellem -1 og 1 for at få vinklen i radianer og grader sammen med generelle løsninger."
             }
           ]
         },
         "related": {
           "heading": "Relaterede Regnere",
-          "addition": "Additionsregner",
-          "additionDesc": "Læg hele tal og decimaler sammen hurtigt og præcist",
-          "percentage": "Procentregner",
-          "percentageDesc": "Beregn procentværdier, procentændring og procentforhold",
-          "antilog": "Antilogaritme Regner",
-          "antilogDesc": "Beregn antilogaritmen (invers logaritme) af et tal med enhver base"
+          "arcsin": "Arcsin Regner",
+          "arcsinDesc": "Find invers sinus af en værdi og få vinklen i grader og radianer",
+          "arctan": "Arctan Regner",
+          "arctanDesc": "Find invers tangens af en værdi og få vinklen i grader og radianer",
+          "percentage": "Procent Regner",
+          "percentageDesc": "Beregn procentværdier, procentændringer og procentforhold"
         }
       }
     },
@@ -981,7 +980,9 @@
           "arctan": "Arctan Regner",
           "arctanDesc": "Find den inverse tangens af en værdi og få vinklen i grader og radianer"
         }
-      }
+      },
+      "enterAngle": "Indtast en vinkel for at se resultatet",
+      "clickCalculate": "Klik på Beregn for at se resultatet"
     },
     "sine": {
       "title": "Sinus Regner",
@@ -1043,67 +1044,6 @@
           "arcsinDesc": "Invers sinus af værdi og vinkel i grader og radianer",
           "arctan": "Arctan Regner",
           "arctanDesc": "Invers tangens af værdi og vinkel i grader og radianer"
-        }
-      }
-    },
-    "arccos": {
-      "title": "Arccos Regner",
-      "description": "Arccos(x) regner til at finde arcus cosinus af en værdi og få vinklen i grader og radianer med generelle løsninger.",
-      "x": "Værdi (x, cosinus værdi)",
-      "calculate": "Beregn",
-      "reset": "Nulstil",
-      "result": "Resultat",
-      "angleDegrees": "Vinkel i grader",
-      "angleRadians": "Vinkel i radianer",
-      "calculationHeading": "Beregning",
-      "generalSolutionDegrees": "(k=..-1,0,1,..)",
-      "generalSolutionRadians": "(k=..-1,0,1,..)",
-      "seo": {
-        "title": "Arccos Regner – Invers Cosinus (acos) i Grader og Radianer",
-        "description": "Gratis arccos regner til at finde invers cosinus (acos) af en værdi og få vinklen i grader og radianer med generelle løsninger. Understøtter værdier i domænet [-1, 1] med trin-for-trin forklaring. Ideel til trigonometri, geometri og ingeniørberegninger.",
-        "keywords": "arccos regner, invers cosinus regner, acos regner, cos invers regner, arccos i grader, arccos i radianer, trigonometrisk regner, vinkel fra cosinus",
-        "content": {
-          "heading": "Sådan Bruger Du Arccos (Invers Cosinus) Regneren",
-          "paragraph1": "Arccos (invers cosinus) funktionen, skrevet som arccos(x) eller acos(x), giver dig vinklen hvis cosinus er x. Med andre ord, hvis cos(θ) = x, så er θ = arccos(x). Denne regner hjælper dig med hurtigt at finde den vinkel i grader og radianer for enhver gyldig cosinus værdi mellem -1 og 1, og giver generelle løsninger der viser alle mulige vinkler.",
-          "paragraph2": "For at bruge regneren, indtast en værdi for x i området [-1, 1]. Værktøjet beregner θ = arccos(x) i radianer ved hjælp af den indbyggede invers cosinus funktion og konverterer resultatet til grader ved hjælp af formlen θ° = θ × 180 / π. Begge værdier vises med høj præcision. Da cosinus er en periodisk funktion, viser regneren også generelle løsninger: θ + k×360° (i grader) og θ + k×2π (i radianer), hvor k er et vilkårligt heltal.",
-          "paragraph3": "Arccos funktionen er især nyttig, når du kender cosinus af en vinkel, men har brug for vinklen selv. Almindelige anvendelsestilfælde inkluderer at finde vinkler i retvinklede trekanter, løse trigonometriske ligninger, beregne vinkler mellem vektorer, analysere bølgefunktioner og arbejde med rotationsbevægelse. Fordi cosinus ikke er en-til-en over alle reelle tal, er hovedværdien af arccos defineret i intervallet [0, π] radianer (0° til 180°), men den generelle løsning inkluderer alle vinkler der adskiller sig med multipla af 360° (eller 2π radianer).",
-          "paragraph4": "Vores arccos regner validerer at dit input ligger i det korrekte domæne [-1, 1] og returnerer derefter nøjagtige resultater for radianer og grader sammen med de generelle løsningsformler. Dette sparer dig tid sammenlignet med manuelle beregninger og hjælper dig med at forstå den periodiske natur af trigonometriske funktioner. Uanset om du er en studerende der lærer trigonometri, en lærer der forbereder eksempler eller en professionel der arbejder med vinkler, giver dette værktøj hurtige, pålidelige invers cosinus beregninger.",
-          "exampleHeading": "Eksempel: Brug af Arccos Regneren",
-          "exampleText": "Antag at du ved at cos(θ) = 0,5 og vil finde θ. Indtast x = 0,5 i regneren. Regneren beregner θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Konvertering til grader giver θ° = 60°. De generelle løsninger er: θ = 60° + k×360° og θ = π/3 + k×2π rad, hvor k er et vilkårligt heltal. Dette betyder at vinklerne 60°, 420°, -300° osv. alle har en cosinus på 0,5. Ligeledes, hvis cos(θ) = 1, så er θ = arccos(1) = 0° (eller 0 rad), med generelle løsninger θ = 0° + k×360° og θ = 0 + k×2π rad."
-        },
-        "faq": {
-          "heading": "Ofte Stillede Spørgsmål",
-          "items": [
-            {
-              "question": "Hvad er arccos?",
-              "answer": "Arccos (invers cosinus) er den inverse funktion til cosinus funktionen. Hvis cos(θ) = x, så er θ = arccos(x). Den returnerer vinklen hvis cosinus er x, normalt givet i radianer eller grader. Hovedværdien er i området [0°, 180°] eller [0, π] radianer."
-            },
-            {
-              "question": "Hvad er definitionsområdet for arccos funktionen?",
-              "answer": "Definitionsområdet for arccos(x) er alle reelle værdier x sådan at -1 ≤ x ≤ 1. Uden for dette interval kan cosinus funktionen ikke producere sådanne værdier, så arccos er ikke defineret for dem i reelle tal."
-            },
-            {
-              "question": "Hvad er værdiområdet for arccos?",
-              "answer": "Hovedværdiområdet for arccos(x) er [0, π] i radianer, hvilket svarer til [0°, 180°] i grader. Da cosinus imidlertid er periodisk, inkluderer den generelle løsning alle vinkler θ + k×360° (eller θ + k×2π rad) hvor k er et vilkårligt heltal."
-            },
-            {
-              "question": "Hvorfor viser regneren generelle løsninger?",
-              "answer": "Cosinus er en periodisk funktion med periode 360° (2π radianer). Dette betyder at hvis cos(θ) = x, så er cos(θ + k×360°) = x for ethvert heltal k. Den generelle løsning viser alle mulige vinkler der opfylder ligningen, ikke kun hovedværdien."
-            },
-            {
-              "question": "Er denne arccos regner gratis?",
-              "answer": "Ja, vores arccos regner er helt gratis at bruge. Ingen registrering eller betaling er påkrævet. Indtast blot en værdi for x mellem -1 og 1 for at få vinklen i radianer og grader sammen med generelle løsninger."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Relaterede Regnere",
-          "arcsin": "Arcsin Regner",
-          "arcsinDesc": "Find invers sinus af en værdi og få vinklen i grader og radianer",
-          "arctan": "Arctan Regner",
-          "arctanDesc": "Find invers tangens af en værdi og få vinklen i grader og radianer",
-          "percentage": "Procent Regner",
-          "percentageDesc": "Beregn procentværdier, procentændringer og procentforhold"
         }
       }
     },
@@ -1360,7 +1300,9 @@
           "multiplication": "Multiplikations Beregner",
           "multiplicationDesc": "Multiplicer tal hurtigt og præcist med detaljerede trin"
         }
-      }
+      },
+      "enterNumbers": "Indtast to tal for at se resultatet",
+      "clickCalculate": "Klik på Beregn for at se resultatet"
     },
     "quadraticEquation": {
       "title": "Kvadratisk Ligning-beregner",
@@ -4524,12 +4466,30 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            {"question": "Hvad er formlen for kinetisk energi?", "answer": "Formel: KE = ½ × m × v², m i kg, v i m/s. Resultat i joule (J). F.eks. 2 kg ved 3 m/s: KE = 9 J."},
-            {"question": "Hvorfor er hastigheden i anden?", "answer": "Arbejdet for at accelerere et legeme fra hvile til hastighed v er proportionalt med v². Fordobling af hastighed firdobler KE – derfor betyder hastighedsgrænser og bremselængde meget."},
-            {"question": "Hvilke enheder bruger beregneren?", "answer": "Masse i kilogram (kg), hastighed i m/s. Resultat i joule (J). Gram: divider med 1000. km/h: gang med 1000/3600 ≈ 0,278 for m/s."},
-            {"question": "Kan kinetisk energi være negativ?", "answer": "Nej. I KE = ½mv² er massen positiv og v² altid ikke-negativ, så KE er aldrig negativ. Skalær KE er ½mv², hvor v er hastighedens størrelse."},
-            {"question": "Hvordan hænger KE sammen med bremselængde?", "answer": "Arbejdet for at stoppe er lig KE. Bremselængden er proportional med KE, altså v². Fordobling af hastighed firdobler bremselængden ved samme bremsekraft."},
-            {"question": "Er denne kinetisk energi-beregner gratis?", "answer": "Ja. Beregneren er gratis uden registrering eller betaling. Indtast masse i kg og hastighed i m/s for KE i joule og formlen. Til studerende, lærere og fagfolk."}
+            {
+              "question": "Hvad er formlen for kinetisk energi?",
+              "answer": "Formel: KE = ½ × m × v², m i kg, v i m/s. Resultat i joule (J). F.eks. 2 kg ved 3 m/s: KE = 9 J."
+            },
+            {
+              "question": "Hvorfor er hastigheden i anden?",
+              "answer": "Arbejdet for at accelerere et legeme fra hvile til hastighed v er proportionalt med v². Fordobling af hastighed firdobler KE – derfor betyder hastighedsgrænser og bremselængde meget."
+            },
+            {
+              "question": "Hvilke enheder bruger beregneren?",
+              "answer": "Masse i kilogram (kg), hastighed i m/s. Resultat i joule (J). Gram: divider med 1000. km/h: gang med 1000/3600 ≈ 0,278 for m/s."
+            },
+            {
+              "question": "Kan kinetisk energi være negativ?",
+              "answer": "Nej. I KE = ½mv² er massen positiv og v² altid ikke-negativ, så KE er aldrig negativ. Skalær KE er ½mv², hvor v er hastighedens størrelse."
+            },
+            {
+              "question": "Hvordan hænger KE sammen med bremselængde?",
+              "answer": "Arbejdet for at stoppe er lig KE. Bremselængden er proportional med KE, altså v². Fordobling af hastighed firdobler bremselængden ved samme bremsekraft."
+            },
+            {
+              "question": "Er denne kinetisk energi-beregner gratis?",
+              "answer": "Ja. Beregneren er gratis uden registrering eller betaling. Indtast masse i kg og hastighed i m/s for KE i joule og formlen. Til studerende, lærere og fagfolk."
+            }
           ]
         },
         "related": {
@@ -4700,11 +4660,26 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            {"question": "Hvad er fakultetet af 0?", "answer": "0! = 1 per definition. Denne konvention gør, at mange formler (f.eks. binomialkoefficienter, Taylorserier) fungerer korrekt for n = 0."},
-            {"question": "Hvorfor er input begrænset til 170?", "answer": "Fakulteter vokser ekstremt hurtigt. 171! er et tal med over 300 cifre, ud over typisk visning. For n fra 0 til 170 viser beregneren det nøjagtige heltalsresultat."},
-            {"question": "Til hvad bruges fakultet?", "answer": "Fakulteter bruges i kombinatorik (permutationer: n! måder at ordne n objekter), kombinationer (binomialkoefficienter), sandsynlighed og analyse (f.eks. Taylorserier for e^x)."},
-            {"question": "Kan fakulteter være negative eller decimaler?", "answer": "Standardfakultetet n! er kun defineret for ikke-negative heltal n. Gammafunktionen Γ(z) er en udvidelse så Γ(n+1) = n! for positive heltal n og tillader ikke-heltalsværdier."},
-            {"question": "Er denne fakultetsberegner gratis?", "answer": "Ja. Beregneren er gratis at bruge uden tilmelding. Indtast et tal fra 0 til 170 for at få n! og udvidelse når relevant."}
+            {
+              "question": "Hvad er fakultetet af 0?",
+              "answer": "0! = 1 per definition. Denne konvention gør, at mange formler (f.eks. binomialkoefficienter, Taylorserier) fungerer korrekt for n = 0."
+            },
+            {
+              "question": "Hvorfor er input begrænset til 170?",
+              "answer": "Fakulteter vokser ekstremt hurtigt. 171! er et tal med over 300 cifre, ud over typisk visning. For n fra 0 til 170 viser beregneren det nøjagtige heltalsresultat."
+            },
+            {
+              "question": "Til hvad bruges fakultet?",
+              "answer": "Fakulteter bruges i kombinatorik (permutationer: n! måder at ordne n objekter), kombinationer (binomialkoefficienter), sandsynlighed og analyse (f.eks. Taylorserier for e^x)."
+            },
+            {
+              "question": "Kan fakulteter være negative eller decimaler?",
+              "answer": "Standardfakultetet n! er kun defineret for ikke-negative heltal n. Gammafunktionen Γ(z) er en udvidelse så Γ(n+1) = n! for positive heltal n og tillader ikke-heltalsværdier."
+            },
+            {
+              "question": "Er denne fakultetsberegner gratis?",
+              "answer": "Ja. Beregneren er gratis at bruge uden tilmelding. Indtast et tal fra 0 til 170 for at få n! og udvidelse når relevant."
+            }
           ]
         },
         "related": {
@@ -5463,11 +5438,26 @@
         "faq": {
           "heading": "Ofte stillede spørgsmål",
           "items": [
-            {"question": "Hvad er lang multiplikation?", "answer": "Lang multiplikation er en trinvis metode: multiplicer det første tal med hvert ciffer i det andet, flyt delprodukterne efter pladsværdi og læg sammen."},
-            {"question": "Hvad er delprodukter?", "answer": "Delprodukter er multiplikanden multipliceret med hvert ciffer i multiplikatoren. For 123 × 45: 123 × 5 = 615 og 123 × 4 = 492 (forskudt 4920)."},
-            {"question": "Virker det for decimaltal?", "answer": "Denne lommeregner er kun for heltal. For decimaltal, multiplicer først som heltal og placer decimaltegnet efter antal decimaler i faktorerne."},
-            {"question": "Virker det for store tal?", "answer": "Ja. Du kan indtaste meget store heltal; lommeregneren beregner produktet og alle delprodukter."},
-            {"question": "Er lommeregneren gratis?", "answer": "Ja. Vores lommeregner til lang multiplikation er gratis, uden registrering. Indtast to heltal for produkt og trin."}
+            {
+              "question": "Hvad er lang multiplikation?",
+              "answer": "Lang multiplikation er en trinvis metode: multiplicer det første tal med hvert ciffer i det andet, flyt delprodukterne efter pladsværdi og læg sammen."
+            },
+            {
+              "question": "Hvad er delprodukter?",
+              "answer": "Delprodukter er multiplikanden multipliceret med hvert ciffer i multiplikatoren. For 123 × 45: 123 × 5 = 615 og 123 × 4 = 492 (forskudt 4920)."
+            },
+            {
+              "question": "Virker det for decimaltal?",
+              "answer": "Denne lommeregner er kun for heltal. For decimaltal, multiplicer først som heltal og placer decimaltegnet efter antal decimaler i faktorerne."
+            },
+            {
+              "question": "Virker det for store tal?",
+              "answer": "Ja. Du kan indtaste meget store heltal; lommeregneren beregner produktet og alle delprodukter."
+            },
+            {
+              "question": "Er lommeregneren gratis?",
+              "answer": "Ja. Vores lommeregner til lang multiplikation er gratis, uden registrering. Indtast to heltal for produkt og trin."
+            }
           ]
         },
         "related": {

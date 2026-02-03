@@ -862,7 +862,7 @@
     },
     "arccos": {
       "title": "Arccos-Rechner",
-      "description": "Arccos(x)-Rechner zum Finden des inversen Kosinus eines Wertes und Erhalten des Winkels in Grad und Bogenmaß.",
+      "description": "Arccos(x)-Rechner zum Berechnen des Arkuskosinus eines Wertes und zum Erhalten des Winkels in Grad und Bogenmaß mit allgemeinen Lösungen.",
       "x": "Wert (x, Kosinuswert)",
       "calculate": "Berechnen",
       "reset": "Zurücksetzen",
@@ -870,55 +870,54 @@
       "angleDegrees": "Winkel in Grad",
       "angleRadians": "Winkel im Bogenmaß",
       "calculationHeading": "Berechnung",
-      "calculationIntro": "Für den gegebenen Kosinuswert",
-      "calculationStepRadians": "berechnen wir zuerst den Winkel im Bogenmaß mit arccos(x). Das Ergebnis ist θ = arccos(x) ≈ {radians} rad.",
-      "calculationStepDegrees": "Dann wandeln wir Bogenmaß in Grad um mit θ° = θ × 180 / π, was ungefähr {degrees}° ergibt.",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
       "seo": {
-        "title": "Arccos-Rechner – Inverser Kosinus (acos) in Grad und Bogenmaß",
-        "description": "Kostenloser Arccos-Rechner zum Finden des inversen Kosinus (acos) eines Wertes und Erhalten des Winkels sowohl in Grad als auch im Bogenmaß. Unterstützt Werte im Bereich [-1, 1] mit Schritt-für-Schritt-Erklärung. Ideal für Trigonometrie, Geometrie und Ingenieurberechnungen.",
-        "keywords": "arccos rechner, inverser kosinus rechner, acos rechner, kosinus invers rechner, arccos in grad, arccos in bogenmaß, trigonometrie rechner, winkel aus kosinus",
+        "title": "Arccos-Rechner – Arkuskosinus (acos) in Grad & Bogenmaß",
+        "description": "Kostenloser Arccos-Rechner zum Berechnen des Arkuskosinus (acos) eines Wertes und zum Erhalten des Winkels in Grad und Bogenmaß mit allgemeinen Lösungen. Unterstützt Werte im Bereich [-1, 1] mit Schritt-für-Schritt-Erklärung. Ideal für Trigonometrie, Geometrie und technische Berechnungen.",
+        "keywords": "arccos rechner, arkuskosinus rechner, acos rechner, cos umkehrfunktion rechner, arccos in grad, arccos im bogenmaß, trigonometrie rechner, winkel aus kosinus",
         "content": {
-          "heading": "Wie man den Arccos (Inverser Kosinus) Rechner Verwendet",
-          "paragraph1": "Die Arccos-Funktion (inverser Kosinus), geschrieben als arccos(x) oder acos(x), gibt Ihnen den Winkel, dessen Kosinus x ist. Mit anderen Worten, wenn cos(θ) = x, dann θ = arccos(x). Dieser Rechner hilft Ihnen, diesen Winkel schnell sowohl in Grad als auch im Bogenmaß für jeden gültigen Kosinuswert zwischen -1 und 1 zu finden.",
-          "paragraph2": "Um den Rechner zu verwenden, geben Sie einen Wert für x im Bereich [-1, 1] ein. Das Tool berechnet dann θ = arccos(x) im Bogenmaß unter Verwendung der integrierten inversen Kosinusfunktion und wandelt dieses Ergebnis in Grad um, indem es die Formel θ° = θ × 180 / π verwendet. Beide Werte werden mit hoher Genauigkeit angezeigt, damit Sie sie in Trigonometrie-, Geometrie-, Physik- oder Ingenieurproblemen verwenden können.",
-          "paragraph3": "Die Arccos-Funktion ist besonders nützlich, wenn Sie den Kosinus eines Winkels kennen, aber den Winkel selbst benötigen. Häufige Anwendungsfälle umfassen das Finden von Winkeln in rechtwinkligen Dreiecken, das Berechnen von Winkeln zwischen Vektoren mit dem Skalarprodukt, das Analysieren periodischer Signale und das Lösen trigonometrischer Gleichungen. Da der Kosinus nicht injektiv über alle reellen Zahlen ist, ist der Hauptwert von arccos im Intervall [0, π] Bogenmaß (0° bis 180°) definiert.",
-          "paragraph4": "Unser Arccos-Rechner validiert, dass Ihre Eingabe im korrekten Bereich [-1, 1] liegt, und gibt dann genaue Ergebnisse sowohl im Bogenmaß als auch in Grad zurück. Dies spart Ihnen Zeit im Vergleich zu manuellen Berechnungen und reduziert das Fehlerrisiko. Ob Sie ein Student sind, der Trigonometrie lernt, ein Lehrer, der Beispiele vorbereitet, oder ein Profi, der mit Winkeln arbeitet, dieses Tool bietet schnelle, zuverlässige inverse Kosinusberechnungen.",
+          "heading": "So verwenden Sie den Arccos (Arkuskosinus) Rechner",
+          "paragraph1": "Die Arccos-Funktion (Arkuskosinus), geschrieben als arccos(x) oder acos(x), gibt Ihnen den Winkel, dessen Kosinus x ist. Mit anderen Worten, wenn cos(θ) = x, dann ist θ = arccos(x). Dieser Rechner hilft Ihnen, diesen Winkel schnell in Grad und Bogenmaß für jeden gültigen Kosinuswert zwischen -1 und 1 zu finden und liefert allgemeine Lösungen, die alle möglichen Winkel zeigen.",
+          "paragraph2": "Um den Rechner zu verwenden, geben Sie einen Wert für x im Bereich [-1, 1] ein. Das Tool berechnet dann θ = arccos(x) im Bogenmaß unter Verwendung der eingebauten Arkuskosinus-Funktion und konvertiert dieses Ergebnis in Grad mit der Formel θ° = θ × 180 / π. Beide Werte werden mit hoher Präzision angezeigt. Da der Kosinus eine periodische Funktion ist, zeigt der Rechner auch allgemeine Lösungen: θ + k×360° (in Grad) und θ + k×2π (im Bogenmaß), wobei k eine beliebige ganze Zahl ist.",
+          "paragraph3": "Die Arccos-Funktion ist besonders nützlich, wenn Sie den Kosinus eines Winkels kennen, aber den Winkel selbst benötigen. Häufige Anwendungsfälle umfassen das Finden von Winkeln in rechtwinkligen Dreiecken, das Lösen trigonometrischer Gleichungen, das Berechnen von Winkeln zwischen Vektoren, die Analyse von Wellenfunktionen und die Arbeit mit Rotationsbewegungen. Da der Kosinus nicht eineindeutig über alle reellen Zahlen ist, ist der Hauptwert von arccos im Intervall [0, π] Bogenmaß (0° bis 180°) definiert, aber die allgemeine Lösung umfasst alle Winkel, die sich um Vielfache von 360° (oder 2π Bogenmaß) unterscheiden.",
+          "paragraph4": "Unser Arccos-Rechner überprüft, ob Ihre Eingabe im korrekten Bereich [-1, 1] liegt, und gibt dann genaue Ergebnisse für Bogenmaß und Grad zusammen mit den allgemeinen Lösungsformeln zurück. Dies spart Ihnen Zeit im Vergleich zu manuellen Berechnungen und hilft Ihnen, die periodische Natur trigonometrischer Funktionen zu verstehen. Ob Sie ein Student sind, der Trigonometrie lernt, ein Lehrer, der Beispiele vorbereitet, oder ein Fachmann, der mit Winkeln arbeitet, dieses Tool bietet schnelle, zuverlässige Arkuskosinus-Berechnungen.",
           "exampleHeading": "Beispiel: Verwendung des Arccos-Rechners",
-          "exampleText": "Angenommen, Sie wissen, dass cos(θ) = 0,5 ist und Sie θ finden möchten. Geben Sie x = 0,5 in den Rechner ein. Der Rechner berechnet θ = arccos(0,5) ≈ 1,047198 rad. Die Umrechnung in Grad ergibt θ° ≈ 60°. Das bedeutet, dass ein Winkel von 60° einen Kosinus von 0,5 hat. Ähnlich, wenn cos(θ) = -1, dann θ = arccos(-1) = π rad = 180°, und wenn cos(θ) = 1, dann θ = arccos(1) = 0 rad = 0°."
+          "exampleText": "Angenommen, Sie wissen, dass cos(θ) = 0,5 ist und Sie θ finden möchten. Geben Sie x = 0,5 in den Rechner ein. Der Rechner berechnet θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Die Umrechnung in Grad ergibt θ° = 60°. Die allgemeinen Lösungen sind: θ = 60° + k×360° und θ = π/3 + k×2π rad, wobei k eine beliebige ganze Zahl ist. Das bedeutet, dass Winkel von 60°, 420°, -300° usw. alle einen Kosinus von 0,5 haben. Ähnlich, wenn cos(θ) = 1, dann ist θ = arccos(1) = 0° (oder 0 rad), mit allgemeinen Lösungen θ = 0° + k×360° und θ = 0 + k×2π rad."
         },
         "faq": {
           "heading": "Häufig gestellte Fragen",
           "items": [
             {
               "question": "Was ist arccos?",
-              "answer": "Arccos (inverser Kosinus) ist die Umkehrfunktion des Kosinus. Wenn cos(θ) = x, dann θ = arccos(x). Es gibt den Winkel zurück, dessen Kosinus x ist, normalerweise in Bogenmaß oder Grad angegeben."
+              "answer": "Arccos (Arkuskosinus) ist die Umkehrfunktion der Kosinusfunktion. Wenn cos(θ) = x, dann ist θ = arccos(x). Es gibt den Winkel zurück, dessen Kosinus x ist, normalerweise in Bogenmaß oder Grad angegeben. Der Hauptwert liegt im Bereich [0°, 180°] oder [0, π] Bogenmaß."
             },
             {
               "question": "Was ist der Definitionsbereich der Arccos-Funktion?",
-              "answer": "Der Definitionsbereich von arccos(x) sind alle reellen Werte x, sodass -1 ≤ x ≤ 1. Außerhalb dieses Intervalls kann die Kosinusfunktion solche Werte nicht erzeugen, daher ist arccos für sie in reellen Zahlen nicht definiert."
+              "answer": "Der Definitionsbereich von arccos(x) sind alle reellen Werte x, so dass -1 ≤ x ≤ 1. Außerhalb dieses Intervalls kann die Kosinusfunktion keine solchen Werte erzeugen, daher ist arccos für sie in reellen Zahlen nicht definiert."
             },
             {
               "question": "Was ist der Wertebereich von arccos?",
-              "answer": "Der Hauptwertebereich von arccos(x) ist [0, π] im Bogenmaß, was [0°, 180°] in Grad entspricht. Das bedeutet, dass arccos immer einen Winkel zwischen 0 und π Bogenmaß (0° und 180°) zurückgibt."
+              "answer": "Der Hauptwertebereich von arccos(x) ist [0, π] im Bogenmaß, was [0°, 180°] in Grad entspricht. Da der Kosinus jedoch periodisch ist, umfasst die allgemeine Lösung alle Winkel θ + k×360° (oder θ + k×2π rad), wobei k eine beliebige ganze Zahl ist."
             },
             {
-              "question": "Wie konvertiere ich arccos von Bogenmaß in Grad?",
-              "answer": "Wenn θ im Bogenmaß ist, können Sie es in Grad umwandeln, indem Sie die Formel θ° = θ × 180 / π verwenden. Unser Rechner führt diese Umrechnung automatisch durch und zeigt sowohl Bogenmaß als auch Grad an."
+              "question": "Warum zeigt der Rechner allgemeine Lösungen?",
+              "answer": "Der Kosinus ist eine periodische Funktion mit einer Periode von 360° (2π Bogenmaß). Das bedeutet, dass wenn cos(θ) = x, dann ist cos(θ + k×360°) = x für jede ganze Zahl k. Die allgemeine Lösung zeigt alle möglichen Winkel, die die Gleichung erfüllen, nicht nur den Hauptwert."
             },
             {
               "question": "Ist dieser Arccos-Rechner kostenlos?",
-              "answer": "Ja, unser Arccos-Rechner ist vollständig kostenlos. Keine Registrierung oder Zahlung erforderlich. Geben Sie einfach einen Wert für x zwischen -1 und 1 ein, um den Winkel im Bogenmaß und in Grad zu erhalten."
+              "answer": "Ja, unser Arccos-Rechner ist völlig kostenlos. Es ist keine Registrierung oder Zahlung erforderlich. Geben Sie einfach einen Wert für x zwischen -1 und 1 ein, um den Winkel in Bogenmaß und Grad zusammen mit allgemeinen Lösungen zu erhalten."
             }
           ]
         },
         "related": {
           "heading": "Verwandte Rechner",
-          "addition": "Additionsrechner",
-          "additionDesc": "Addiere ganze Zahlen und Dezimalzahlen schnell und genau",
+          "arcsin": "Arcsin-Rechner",
+          "arcsinDesc": "Finden Sie den Arkussinus eines Wertes und erhalten Sie den Winkel in Grad und Bogenmaß",
+          "arctan": "Arctan-Rechner",
+          "arctanDesc": "Finden Sie den Arkustangens eines Wertes und erhalten Sie den Winkel in Grad und Bogenmaß",
           "percentage": "Prozentrechner",
-          "percentageDesc": "Berechne Prozentwerte, Prozentänderung und Prozentbeziehungen",
-          "antilog": "Antilogarithmus-Rechner",
-          "antilogDesc": "Berechnen Sie den Antilogarithmus (inversen Logarithmus) einer Zahl mit beliebiger Basis"
+          "percentageDesc": "Berechnen Sie Prozentwerte, prozentuale Veränderungen und prozentuale Beziehungen"
         }
       }
     },
@@ -981,7 +980,9 @@
           "arctan": "Arctan-Rechner",
           "arctanDesc": "Inversen Tangens einer Zahl finden, Winkel in Grad und Radiant"
         }
-      }
+      },
+      "enterAngle": "Geben Sie einen Winkel ein, um das Ergebnis zu sehen",
+      "clickCalculate": "Klicken Sie auf Berechnen, um das Ergebnis zu sehen"
     },
     "sine": {
       "title": "Sinus-Rechner",
@@ -1043,67 +1044,6 @@
           "arcsinDesc": "Inverser Sinus eines Werts und Winkel in Grad und Radiant",
           "arctan": "Arctan-Rechner",
           "arctanDesc": "Inverser Tangens eines Werts und Winkel in Grad und Radiant"
-        }
-      }
-    },
-    "arccos": {
-      "title": "Arccos-Rechner",
-      "description": "Arccos(x)-Rechner zum Berechnen des Arkuskosinus eines Wertes und zum Erhalten des Winkels in Grad und Bogenmaß mit allgemeinen Lösungen.",
-      "x": "Wert (x, Kosinuswert)",
-      "calculate": "Berechnen",
-      "reset": "Zurücksetzen",
-      "result": "Ergebnis",
-      "angleDegrees": "Winkel in Grad",
-      "angleRadians": "Winkel im Bogenmaß",
-      "calculationHeading": "Berechnung",
-      "generalSolutionDegrees": "(k=..-1,0,1,..)",
-      "generalSolutionRadians": "(k=..-1,0,1,..)",
-      "seo": {
-        "title": "Arccos-Rechner – Arkuskosinus (acos) in Grad & Bogenmaß",
-        "description": "Kostenloser Arccos-Rechner zum Berechnen des Arkuskosinus (acos) eines Wertes und zum Erhalten des Winkels in Grad und Bogenmaß mit allgemeinen Lösungen. Unterstützt Werte im Bereich [-1, 1] mit Schritt-für-Schritt-Erklärung. Ideal für Trigonometrie, Geometrie und technische Berechnungen.",
-        "keywords": "arccos rechner, arkuskosinus rechner, acos rechner, cos umkehrfunktion rechner, arccos in grad, arccos im bogenmaß, trigonometrie rechner, winkel aus kosinus",
-        "content": {
-          "heading": "So verwenden Sie den Arccos (Arkuskosinus) Rechner",
-          "paragraph1": "Die Arccos-Funktion (Arkuskosinus), geschrieben als arccos(x) oder acos(x), gibt Ihnen den Winkel, dessen Kosinus x ist. Mit anderen Worten, wenn cos(θ) = x, dann ist θ = arccos(x). Dieser Rechner hilft Ihnen, diesen Winkel schnell in Grad und Bogenmaß für jeden gültigen Kosinuswert zwischen -1 und 1 zu finden und liefert allgemeine Lösungen, die alle möglichen Winkel zeigen.",
-          "paragraph2": "Um den Rechner zu verwenden, geben Sie einen Wert für x im Bereich [-1, 1] ein. Das Tool berechnet dann θ = arccos(x) im Bogenmaß unter Verwendung der eingebauten Arkuskosinus-Funktion und konvertiert dieses Ergebnis in Grad mit der Formel θ° = θ × 180 / π. Beide Werte werden mit hoher Präzision angezeigt. Da der Kosinus eine periodische Funktion ist, zeigt der Rechner auch allgemeine Lösungen: θ + k×360° (in Grad) und θ + k×2π (im Bogenmaß), wobei k eine beliebige ganze Zahl ist.",
-          "paragraph3": "Die Arccos-Funktion ist besonders nützlich, wenn Sie den Kosinus eines Winkels kennen, aber den Winkel selbst benötigen. Häufige Anwendungsfälle umfassen das Finden von Winkeln in rechtwinkligen Dreiecken, das Lösen trigonometrischer Gleichungen, das Berechnen von Winkeln zwischen Vektoren, die Analyse von Wellenfunktionen und die Arbeit mit Rotationsbewegungen. Da der Kosinus nicht eineindeutig über alle reellen Zahlen ist, ist der Hauptwert von arccos im Intervall [0, π] Bogenmaß (0° bis 180°) definiert, aber die allgemeine Lösung umfasst alle Winkel, die sich um Vielfache von 360° (oder 2π Bogenmaß) unterscheiden.",
-          "paragraph4": "Unser Arccos-Rechner überprüft, ob Ihre Eingabe im korrekten Bereich [-1, 1] liegt, und gibt dann genaue Ergebnisse für Bogenmaß und Grad zusammen mit den allgemeinen Lösungsformeln zurück. Dies spart Ihnen Zeit im Vergleich zu manuellen Berechnungen und hilft Ihnen, die periodische Natur trigonometrischer Funktionen zu verstehen. Ob Sie ein Student sind, der Trigonometrie lernt, ein Lehrer, der Beispiele vorbereitet, oder ein Fachmann, der mit Winkeln arbeitet, dieses Tool bietet schnelle, zuverlässige Arkuskosinus-Berechnungen.",
-          "exampleHeading": "Beispiel: Verwendung des Arccos-Rechners",
-          "exampleText": "Angenommen, Sie wissen, dass cos(θ) = 0,5 ist und Sie θ finden möchten. Geben Sie x = 0,5 in den Rechner ein. Der Rechner berechnet θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Die Umrechnung in Grad ergibt θ° = 60°. Die allgemeinen Lösungen sind: θ = 60° + k×360° und θ = π/3 + k×2π rad, wobei k eine beliebige ganze Zahl ist. Das bedeutet, dass Winkel von 60°, 420°, -300° usw. alle einen Kosinus von 0,5 haben. Ähnlich, wenn cos(θ) = 1, dann ist θ = arccos(1) = 0° (oder 0 rad), mit allgemeinen Lösungen θ = 0° + k×360° und θ = 0 + k×2π rad."
-        },
-        "faq": {
-          "heading": "Häufig gestellte Fragen",
-          "items": [
-            {
-              "question": "Was ist arccos?",
-              "answer": "Arccos (Arkuskosinus) ist die Umkehrfunktion der Kosinusfunktion. Wenn cos(θ) = x, dann ist θ = arccos(x). Es gibt den Winkel zurück, dessen Kosinus x ist, normalerweise in Bogenmaß oder Grad angegeben. Der Hauptwert liegt im Bereich [0°, 180°] oder [0, π] Bogenmaß."
-            },
-            {
-              "question": "Was ist der Definitionsbereich der Arccos-Funktion?",
-              "answer": "Der Definitionsbereich von arccos(x) sind alle reellen Werte x, so dass -1 ≤ x ≤ 1. Außerhalb dieses Intervalls kann die Kosinusfunktion keine solchen Werte erzeugen, daher ist arccos für sie in reellen Zahlen nicht definiert."
-            },
-            {
-              "question": "Was ist der Wertebereich von arccos?",
-              "answer": "Der Hauptwertebereich von arccos(x) ist [0, π] im Bogenmaß, was [0°, 180°] in Grad entspricht. Da der Kosinus jedoch periodisch ist, umfasst die allgemeine Lösung alle Winkel θ + k×360° (oder θ + k×2π rad), wobei k eine beliebige ganze Zahl ist."
-            },
-            {
-              "question": "Warum zeigt der Rechner allgemeine Lösungen?",
-              "answer": "Der Kosinus ist eine periodische Funktion mit einer Periode von 360° (2π Bogenmaß). Das bedeutet, dass wenn cos(θ) = x, dann ist cos(θ + k×360°) = x für jede ganze Zahl k. Die allgemeine Lösung zeigt alle möglichen Winkel, die die Gleichung erfüllen, nicht nur den Hauptwert."
-            },
-            {
-              "question": "Ist dieser Arccos-Rechner kostenlos?",
-              "answer": "Ja, unser Arccos-Rechner ist völlig kostenlos. Es ist keine Registrierung oder Zahlung erforderlich. Geben Sie einfach einen Wert für x zwischen -1 und 1 ein, um den Winkel in Bogenmaß und Grad zusammen mit allgemeinen Lösungen zu erhalten."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Verwandte Rechner",
-          "arcsin": "Arcsin-Rechner",
-          "arcsinDesc": "Finden Sie den Arkussinus eines Wertes und erhalten Sie den Winkel in Grad und Bogenmaß",
-          "arctan": "Arctan-Rechner",
-          "arctanDesc": "Finden Sie den Arkustangens eines Wertes und erhalten Sie den Winkel in Grad und Bogenmaß",
-          "percentage": "Prozentrechner",
-          "percentageDesc": "Berechnen Sie Prozentwerte, prozentuale Veränderungen und prozentuale Beziehungen"
         }
       }
     },
@@ -1360,7 +1300,9 @@
           "multiplication": "Multiplikationsrechner",
           "multiplicationDesc": "Multiplizieren Sie Zahlen schnell und genau mit detaillierten Schritten"
         }
-      }
+      },
+      "enterNumbers": "Geben Sie zwei Zahlen ein, um das Ergebnis zu sehen",
+      "clickCalculate": "Klicken Sie auf Berechnen, um das Ergebnis zu sehen"
     },
     "quadraticEquation": {
       "title": "Quadratische Gleichung Rechner",
@@ -4524,12 +4466,30 @@
         "faq": {
           "heading": "Häufig gestellte Fragen",
           "items": [
-            {"question": "Wie lautet die Formel für kinetische Energie?", "answer": "KE = ½ × m × v², m in kg, v in m/s. Ergebnis in Joule (J). Z.B. 2 kg bei 3 m/s: KE = 9 J."},
-            {"question": "Warum steht die Geschwindigkeit im Quadrat?", "answer": "Die Arbeit zum Beschleunigen aus dem Stand ist proportional zu v². Doppelte Geschwindigkeit bedeutet vierfache KE – daher sind Tempolimits und Bremsweg wichtig."},
-            {"question": "Welche Einheiten verwendet der Rechner?", "answer": "Masse in Kilogramm (kg), Geschwindigkeit in m/s. Ergebnis in Joule (J). Gramm ÷ 1000 = kg. km/h × 1000/3600 ≈ 0,278 = m/s."},
-            {"question": "Kann kinetische Energie negativ sein?", "answer": "Nein. In KE = ½mv² ist die Masse positiv und v² ≥ 0, also ist KE nie negativ. Skalare KE ist ½mv² mit v als Betrag der Geschwindigkeit."},
-            {"question": "Wie hängt KE mit dem Bremsweg zusammen?", "answer": "Die Bremsarbeit entspricht der KE. Bremsweg ∝ KE ∝ v². Doppelte Geschwindigkeit vervierfacht den Bremsweg bei gleicher Bremskraft."},
-            {"question": "Ist der Rechner kostenlos?", "answer": "Ja. Der Rechner ist kostenlos, ohne Anmeldung. Masse in kg und Geschwindigkeit in m/s eingeben – sofort KE in Joule inkl. Formel. Für Schüler, Lehrer und Fachleute."}
+            {
+              "question": "Wie lautet die Formel für kinetische Energie?",
+              "answer": "KE = ½ × m × v², m in kg, v in m/s. Ergebnis in Joule (J). Z.B. 2 kg bei 3 m/s: KE = 9 J."
+            },
+            {
+              "question": "Warum steht die Geschwindigkeit im Quadrat?",
+              "answer": "Die Arbeit zum Beschleunigen aus dem Stand ist proportional zu v². Doppelte Geschwindigkeit bedeutet vierfache KE – daher sind Tempolimits und Bremsweg wichtig."
+            },
+            {
+              "question": "Welche Einheiten verwendet der Rechner?",
+              "answer": "Masse in Kilogramm (kg), Geschwindigkeit in m/s. Ergebnis in Joule (J). Gramm ÷ 1000 = kg. km/h × 1000/3600 ≈ 0,278 = m/s."
+            },
+            {
+              "question": "Kann kinetische Energie negativ sein?",
+              "answer": "Nein. In KE = ½mv² ist die Masse positiv und v² ≥ 0, also ist KE nie negativ. Skalare KE ist ½mv² mit v als Betrag der Geschwindigkeit."
+            },
+            {
+              "question": "Wie hängt KE mit dem Bremsweg zusammen?",
+              "answer": "Die Bremsarbeit entspricht der KE. Bremsweg ∝ KE ∝ v². Doppelte Geschwindigkeit vervierfacht den Bremsweg bei gleicher Bremskraft."
+            },
+            {
+              "question": "Ist der Rechner kostenlos?",
+              "answer": "Ja. Der Rechner ist kostenlos, ohne Anmeldung. Masse in kg und Geschwindigkeit in m/s eingeben – sofort KE in Joule inkl. Formel. Für Schüler, Lehrer und Fachleute."
+            }
           ]
         },
         "related": {
@@ -4700,11 +4660,26 @@
         "faq": {
           "heading": "Häufig gestellte Fragen",
           "items": [
-            {"question": "Was ist die Fakultät von 0?", "answer": "0! = 1 per Definition. Diese Konvention sorgt dafür, dass viele Formeln auch für n = 0 gelten."},
-            {"question": "Warum ist die Eingabe auf 170 begrenzt?", "answer": "Fakultäten wachsen sehr schnell. 171! hat über 300 Ziffern. Für n von 0 bis 170 zeigt der Rechner das exakte Ergebnis."},
-            {"question": "Wofür wird die Fakultät verwendet?", "answer": "Fakultäten werden in der Kombinatorik (Permutationen: n! Anordnungen von n Objekten), Kombinationen und Wahrscheinlichkeit verwendet."},
-            {"question": "Können Fakultäten negativ oder dezimal sein?", "answer": "Die Standard-Fakultät n! ist nur für nichtnegative ganze Zahlen n definiert. Die Gammafunktion Γ erweitert dies auf andere Werte."},
-            {"question": "Ist dieser Rechner kostenlos?", "answer": "Ja. Der Rechner ist kostenlos, ohne Registrierung. Geben Sie eine Zahl von 0 bis 170 ein für n! und die Entwicklung."}
+            {
+              "question": "Was ist die Fakultät von 0?",
+              "answer": "0! = 1 per Definition. Diese Konvention sorgt dafür, dass viele Formeln auch für n = 0 gelten."
+            },
+            {
+              "question": "Warum ist die Eingabe auf 170 begrenzt?",
+              "answer": "Fakultäten wachsen sehr schnell. 171! hat über 300 Ziffern. Für n von 0 bis 170 zeigt der Rechner das exakte Ergebnis."
+            },
+            {
+              "question": "Wofür wird die Fakultät verwendet?",
+              "answer": "Fakultäten werden in der Kombinatorik (Permutationen: n! Anordnungen von n Objekten), Kombinationen und Wahrscheinlichkeit verwendet."
+            },
+            {
+              "question": "Können Fakultäten negativ oder dezimal sein?",
+              "answer": "Die Standard-Fakultät n! ist nur für nichtnegative ganze Zahlen n definiert. Die Gammafunktion Γ erweitert dies auf andere Werte."
+            },
+            {
+              "question": "Ist dieser Rechner kostenlos?",
+              "answer": "Ja. Der Rechner ist kostenlos, ohne Registrierung. Geben Sie eine Zahl von 0 bis 170 ein für n! und die Entwicklung."
+            }
           ]
         },
         "related": {
@@ -5463,11 +5438,26 @@
         "faq": {
           "heading": "Häufig gestellte Fragen",
           "items": [
-            {"question": "Was ist schriftliche Multiplikation?", "answer": "Schriftliche Multiplikation ist eine schrittweise Methode: Erste Zahl mit jeder Ziffer der zweiten multiplizieren, Teilergebnisse nach Stellenwert verschieben und addieren."},
-            {"question": "Was sind Teilergebnisse?", "answer": "Teilergebnisse entstehen, wenn der Multiplikand mit jeder Ziffer des Multiplikators multipliziert wird. Bei 123 × 45: 123 × 5 = 615 und 123 × 4 = 492 (verschoben 4920)."},
-            {"question": "Funktioniert das für Dezimalzahlen?", "answer": "Dieser Rechner ist nur für ganze Zahlen. Bei Dezimalzahlen zuerst wie ganze Zahlen multiplizieren, dann das Komma nach der Gesamtzahl der Dezimalstellen setzen."},
-            {"question": "Funktioniert das für große Zahlen?", "answer": "Ja. Sehr große ganze Zahlen können eingegeben werden; der Rechner berechnet Produkt und alle Teilergebnisse."},
-            {"question": "Ist der Rechner kostenlos?", "answer": "Ja. Unser Rechner für schriftliche Multiplikation ist kostenlos, ohne Anmeldung. Zwei ganze Zahlen eingeben für Produkt und Schritte."}
+            {
+              "question": "Was ist schriftliche Multiplikation?",
+              "answer": "Schriftliche Multiplikation ist eine schrittweise Methode: Erste Zahl mit jeder Ziffer der zweiten multiplizieren, Teilergebnisse nach Stellenwert verschieben und addieren."
+            },
+            {
+              "question": "Was sind Teilergebnisse?",
+              "answer": "Teilergebnisse entstehen, wenn der Multiplikand mit jeder Ziffer des Multiplikators multipliziert wird. Bei 123 × 45: 123 × 5 = 615 und 123 × 4 = 492 (verschoben 4920)."
+            },
+            {
+              "question": "Funktioniert das für Dezimalzahlen?",
+              "answer": "Dieser Rechner ist nur für ganze Zahlen. Bei Dezimalzahlen zuerst wie ganze Zahlen multiplizieren, dann das Komma nach der Gesamtzahl der Dezimalstellen setzen."
+            },
+            {
+              "question": "Funktioniert das für große Zahlen?",
+              "answer": "Ja. Sehr große ganze Zahlen können eingegeben werden; der Rechner berechnet Produkt und alle Teilergebnisse."
+            },
+            {
+              "question": "Ist der Rechner kostenlos?",
+              "answer": "Ja. Unser Rechner für schriftliche Multiplikation ist kostenlos, ohne Anmeldung. Zwei ganze Zahlen eingeben für Produkt und Schritte."
+            }
           ]
         },
         "related": {

@@ -215,181 +215,207 @@ export function PythagoreanTheoremCalculator() {
 
   return (
     <>
-      <div className="input-section">
-        <div className="inputs-grid">
-          <div className="input-card">
-            <label htmlFor="side-a" className="input-label">
-              {t('sideA')}
-            </label>
-            <div className="input-with-unit">
-              <input
-                id="side-a"
-                type="text"
-                inputMode="decimal"
-                value={aValue}
-                onChange={(e) => setAValue(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                className="number-input"
-                placeholder={t('optional')}
-              />
-              <select
-                value={aUnit}
-                onChange={(e) => setAUnit(e.target.value as LengthUnit)}
-                className="unit-select"
-              >
-                <option value="mm">{t('unitMm')}</option>
-                <option value="cm">{t('unitCm')}</option>
-                <option value="m">{t('unitM')}</option>
-                <option value="km">{t('unitKm')}</option>
-                <option value="in">{t('unitIn')}</option>
-                <option value="ft">{t('unitFt')}</option>
-                <option value="yd">{t('unitYd')}</option>
-                <option value="mi">{t('unitMi')}</option>
-                <option value="nmi">{t('unitNmi')}</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="input-card">
-            <label htmlFor="side-b" className="input-label">
-              {t('sideB')}
-            </label>
-            <div className="input-with-unit">
-              <input
-                id="side-b"
-                type="text"
-                inputMode="decimal"
-                value={bValue}
-                onChange={(e) => setBValue(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                className="number-input"
-                placeholder={t('optional')}
-              />
-              <select
-                value={bUnit}
-                onChange={(e) => setBUnit(e.target.value as LengthUnit)}
-                className="unit-select"
-              >
-                <option value="mm">{t('unitMm')}</option>
-                <option value="cm">{t('unitCm')}</option>
-                <option value="m">{t('unitM')}</option>
-                <option value="km">{t('unitKm')}</option>
-                <option value="in">{t('unitIn')}</option>
-                <option value="ft">{t('unitFt')}</option>
-                <option value="yd">{t('unitYd')}</option>
-                <option value="mi">{t('unitMi')}</option>
-                <option value="nmi">{t('unitNmi')}</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="input-card">
-            <label htmlFor="side-c" className="input-label">
-              {t('sideC')}
-            </label>
-            <div className="input-with-unit">
-              <input
-                id="side-c"
-                type="text"
-                inputMode="decimal"
-                value={cValue}
-                onChange={(e) => setCValue(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                className="number-input"
-                placeholder={t('optional')}
-              />
-              <select
-                value={cUnit}
-                onChange={(e) => setCUnit(e.target.value as LengthUnit)}
-                className="unit-select"
-              >
-                <option value="mm">{t('unitMm')}</option>
-                <option value="cm">{t('unitCm')}</option>
-                <option value="m">{t('unitM')}</option>
-                <option value="km">{t('unitKm')}</option>
-                <option value="in">{t('unitIn')}</option>
-                <option value="ft">{t('unitFt')}</option>
-                <option value="yd">{t('unitYd')}</option>
-                <option value="mi">{t('unitMi')}</option>
-                <option value="nmi">{t('unitNmi')}</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {error && (
-        <p className="seo-paragraph" style={{ color: 'var(--error)', marginBottom: '1rem', fontSize: '0.9rem' }}>
-          {error}
-        </p>
-      )}
-
-      <div className="action-buttons">
-        <button onClick={handleCalculate} className="btn btn-primary">
-          {t('calculate')}
-        </button>
-        <button onClick={handleReset} className="btn btn-secondary">
-          {t('reset')}
-        </button>
-      </div>
-
-      {result && (
-        <div ref={resultRef} className="result-section">
-          <div className="result-header">
-            <div className="result-badge">{t('result')}</div>
-          </div>
-          <div className="result-display">
-            <div className="result-item">
-              <div className="result-label">{t('sideA')}</div>
-              <div className="number-input result-value-box">
-                <span className="result-value">
-                  {formatNumber(result.a, locale)} {getUnitAbbr(result.unit, t)}
-                  {result.computed === 'a' && <span style={{ marginLeft: '0.5rem', color: 'var(--primary)' }}>✓</span>}
-                </span>
-                <CopyButton text={`${formatNumber(result.a, locale)} ${getUnitAbbr(result.unit, t)}`} />
+      <div className="split-view-container">
+        {/* Left Column - Inputs */}
+        <div className="input-section" style={{ marginBottom: 0 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="input-card">
+              <label htmlFor="side-a" className="input-label">
+                {t('sideA')}
+              </label>
+              <div className="input-with-unit">
+                <input
+                  id="side-a"
+                  type="text"
+                  inputMode="decimal"
+                  value={aValue}
+                  onChange={(e) => setAValue(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                  className="number-input"
+                  placeholder={t('optional')}
+                />
+                <select
+                  value={aUnit}
+                  onChange={(e) => setAUnit(e.target.value as LengthUnit)}
+                  className="unit-select"
+                >
+                  <option value="mm">{t('unitMm')}</option>
+                  <option value="cm">{t('unitCm')}</option>
+                  <option value="m">{t('unitM')}</option>
+                  <option value="km">{t('unitKm')}</option>
+                  <option value="in">{t('unitIn')}</option>
+                  <option value="ft">{t('unitFt')}</option>
+                  <option value="yd">{t('unitYd')}</option>
+                  <option value="mi">{t('unitMi')}</option>
+                  <option value="nmi">{t('unitNmi')}</option>
+                </select>
               </div>
             </div>
-            <div className="result-item">
-              <div className="result-label">{t('sideB')}</div>
-              <div className="number-input result-value-box">
-                <span className="result-value">
-                  {formatNumber(result.b, locale)} {getUnitAbbr(result.unit, t)}
-                  {result.computed === 'b' && <span style={{ marginLeft: '0.5rem', color: 'var(--primary)' }}>✓</span>}
-                </span>
-                <CopyButton text={`${formatNumber(result.b, locale)} ${getUnitAbbr(result.unit, t)}`} />
+
+            <div className="input-card">
+              <label htmlFor="side-b" className="input-label">
+                {t('sideB')}
+              </label>
+              <div className="input-with-unit">
+                <input
+                  id="side-b"
+                  type="text"
+                  inputMode="decimal"
+                  value={bValue}
+                  onChange={(e) => setBValue(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                  className="number-input"
+                  placeholder={t('optional')}
+                />
+                <select
+                  value={bUnit}
+                  onChange={(e) => setBUnit(e.target.value as LengthUnit)}
+                  className="unit-select"
+                >
+                  <option value="mm">{t('unitMm')}</option>
+                  <option value="cm">{t('unitCm')}</option>
+                  <option value="m">{t('unitM')}</option>
+                  <option value="km">{t('unitKm')}</option>
+                  <option value="in">{t('unitIn')}</option>
+                  <option value="ft">{t('unitFt')}</option>
+                  <option value="yd">{t('unitYd')}</option>
+                  <option value="mi">{t('unitMi')}</option>
+                  <option value="nmi">{t('unitNmi')}</option>
+                </select>
               </div>
             </div>
-            <div className="result-item">
-              <div className="result-label">{t('sideC')}</div>
-              <div className="number-input result-value-box">
-                <span className="result-value">
-                  {formatNumber(result.c, locale)} {getUnitAbbr(result.unit, t)}
-                  {result.computed === 'c' && <span style={{ marginLeft: '0.5rem', color: 'var(--primary)' }}>✓</span>}
-                </span>
-                <CopyButton text={`${formatNumber(result.c, locale)} ${getUnitAbbr(result.unit, t)}`} />
+
+            <div className="input-card">
+              <label htmlFor="side-c" className="input-label">
+                {t('sideC')}
+              </label>
+              <div className="input-with-unit">
+                <input
+                  id="side-c"
+                  type="text"
+                  inputMode="decimal"
+                  value={cValue}
+                  onChange={(e) => setCValue(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                  className="number-input"
+                  placeholder={t('optional')}
+                />
+                <select
+                  value={cUnit}
+                  onChange={(e) => setCUnit(e.target.value as LengthUnit)}
+                  className="unit-select"
+                >
+                  <option value="mm">{t('unitMm')}</option>
+                  <option value="cm">{t('unitCm')}</option>
+                  <option value="m">{t('unitM')}</option>
+                  <option value="km">{t('unitKm')}</option>
+                  <option value="in">{t('unitIn')}</option>
+                  <option value="ft">{t('unitFt')}</option>
+                  <option value="yd">{t('unitYd')}</option>
+                  <option value="mi">{t('unitMi')}</option>
+                  <option value="nmi">{t('unitNmi')}</option>
+                </select>
               </div>
             </div>
-            <div className="result-item">
-              <div className="result-label">{t('area')}</div>
-              <div className="number-input result-value-box">
-                <span className="result-value">
-                  {formatNumber(result.area, locale)} {getUnitAbbr(result.unit, t)}²
-                </span>
-                <CopyButton text={`${formatNumber(result.area, locale)} ${getUnitAbbr(result.unit, t)}²`} />
-              </div>
-            </div>
-            <div className="result-item">
-              <div className="result-label">{t('perimeter')}</div>
-              <div className="number-input result-value-box">
-                <span className="result-value">
-                  {formatNumber(result.perimeter, locale)} {getUnitAbbr(result.unit, t)}
-                </span>
-                <CopyButton text={`${formatNumber(result.perimeter, locale)} ${getUnitAbbr(result.unit, t)}`} />
-              </div>
+
+            {error && (
+              <p className="seo-paragraph" style={{ color: 'var(--error)', marginBottom: 0, fontSize: '0.9rem' }}>
+                {error}
+              </p>
+            )}
+
+            <div className="action-buttons" style={{ minHeight: '44px', minWidth: '140px', gap: '0.75rem' }}>
+              <button onClick={handleCalculate} className="btn btn-primary">
+                {t('calculate')}
+              </button>
+              <button onClick={handleReset} className="btn btn-secondary">
+                {t('reset')}
+              </button>
             </div>
           </div>
         </div>
-      )}
+
+        {/* Right Column - Result */}
+        <div
+          ref={resultRef}
+          className="result-section"
+          style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}
+        >
+          <div className="input-card">
+            <label className="input-label">{t('result')}</label>
+            {!result && (
+              <div
+                className="number-input"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minHeight: '52px',
+                  padding: '0.75rem 1rem',
+                }}
+              >
+                <span style={{ color: 'var(--text-secondary)' }}>
+                  {aValue || bValue || cValue ? t('clickCalculate') : t('enterSides')}
+                </span>
+              </div>
+            )}
+            {result && (
+              <>
+                <div className="result-display">
+                  <div className="result-item">
+                    <div className="result-label">{t('sideA')}</div>
+                    <div className="number-input result-value-box">
+                      <span className="result-value">
+                        {formatNumber(result.a, locale)} {getUnitAbbr(result.unit, t)}
+                        {result.computed === 'a' && <span style={{ marginLeft: '0.5rem', color: 'var(--primary)' }}>✓</span>}
+                      </span>
+                      <CopyButton text={`${formatNumber(result.a, locale)} ${getUnitAbbr(result.unit, t)}`} />
+                    </div>
+                  </div>
+                  <div className="result-item">
+                    <div className="result-label">{t('sideB')}</div>
+                    <div className="number-input result-value-box">
+                      <span className="result-value">
+                        {formatNumber(result.b, locale)} {getUnitAbbr(result.unit, t)}
+                        {result.computed === 'b' && <span style={{ marginLeft: '0.5rem', color: 'var(--primary)' }}>✓</span>}
+                      </span>
+                      <CopyButton text={`${formatNumber(result.b, locale)} ${getUnitAbbr(result.unit, t)}`} />
+                    </div>
+                  </div>
+                  <div className="result-item">
+                    <div className="result-label">{t('sideC')}</div>
+                    <div className="number-input result-value-box">
+                      <span className="result-value">
+                        {formatNumber(result.c, locale)} {getUnitAbbr(result.unit, t)}
+                        {result.computed === 'c' && <span style={{ marginLeft: '0.5rem', color: 'var(--primary)' }}>✓</span>}
+                      </span>
+                      <CopyButton text={`${formatNumber(result.c, locale)} ${getUnitAbbr(result.unit, t)}`} />
+                    </div>
+                  </div>
+                  <div className="result-item">
+                    <div className="result-label">{t('area')}</div>
+                    <div className="number-input result-value-box">
+                      <span className="result-value">
+                        {formatNumber(result.area, locale)} {getUnitAbbr(result.unit, t)}²
+                      </span>
+                      <CopyButton text={`${formatNumber(result.area, locale)} ${getUnitAbbr(result.unit, t)}²`} />
+                    </div>
+                  </div>
+                  <div className="result-item">
+                    <div className="result-label">{t('perimeter')}</div>
+                    <div className="number-input result-value-box">
+                      <span className="result-value">
+                        {formatNumber(result.perimeter, locale)} {getUnitAbbr(result.unit, t)}
+                      </span>
+                      <CopyButton text={`${formatNumber(result.perimeter, locale)} ${getUnitAbbr(result.unit, t)}`} />
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
     </>
   );
 }

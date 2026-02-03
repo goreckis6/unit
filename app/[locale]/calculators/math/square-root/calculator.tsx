@@ -55,48 +55,54 @@ export function SquareRootCalculator() {
   const displayValue = result ? `±${result.positive}` : '';
 
   return (
-    <div className="root-calc-block">
-      <div className="root-calc-input-row">
-        <div className="root-calc-radical-group">
-          <span className="root-calc-radical" aria-hidden>√</span>
-          <div className="root-calc-radicand">
-            <input
-              id="number"
-              type="text"
-              inputMode="decimal"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-              className="number-input"
-              placeholder={t('placeholder')}
-              aria-label={t('enterNumber')}
-            />
+    <div className="split-view-container">
+      {/* Left Column - Input */}
+      <div className="root-calc-block" style={{ marginBottom: 0 }}>
+        <div className="root-calc-input-row">
+          <div className="root-calc-radical-group">
+            <span className="root-calc-radical" aria-hidden>√</span>
+            <div className="root-calc-radicand">
+              <input
+                id="number"
+                type="text"
+                inputMode="decimal"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                className="number-input"
+                placeholder={t('placeholder')}
+                aria-label={t('enterNumber')}
+              />
+            </div>
           </div>
+        </div>
+
+        {error && (
+          <p className="seo-paragraph" style={{ color: 'var(--error)', marginBottom: '1rem', fontSize: '0.9rem' }}>
+            {error}
+          </p>
+        )}
+
+        <div className="root-calc-actions">
+          <button type="button" onClick={handleCalculate} className="btn btn-primary">
+            <span aria-hidden>=</span>
+            {t('calculate')}
+          </button>
+          <button type="button" onClick={handleReset} className="btn btn-secondary">
+            <span aria-hidden>×</span>
+            {t('reset')}
+          </button>
         </div>
       </div>
 
-      {error && (
-        <p className="seo-paragraph" style={{ color: 'var(--error)', marginBottom: '1rem', fontSize: '0.9rem' }}>
-          {error}
-        </p>
-      )}
-
-      <div className="root-calc-actions">
-        <button type="button" onClick={handleCalculate} className="btn btn-primary">
-          <span aria-hidden>=</span>
-          {t('calculate')}
-        </button>
-        <button type="button" onClick={handleReset} className="btn btn-secondary">
-          <span aria-hidden>×</span>
-          {t('reset')}
-        </button>
-      </div>
-
-      <div className="root-calc-output-row">
-        <output htmlFor="number" className="root-calc-output-field" aria-live="polite">
-          {displayValue || '—'}
-        </output>
-        <CopyButton text={displayValue} className="root-calc-copy-btn" />
+      {/* Right Column - Result */}
+      <div className="root-calc-block" style={{ marginTop: 0 }}>
+        <div className="root-calc-output-row">
+          <output htmlFor="number" className="root-calc-output-field" aria-live="polite">
+            {displayValue || '—'}
+          </output>
+          <CopyButton text={displayValue} className="root-calc-copy-btn" />
+        </div>
       </div>
     </div>
   );

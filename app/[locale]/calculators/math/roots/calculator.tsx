@@ -66,80 +66,86 @@ export function RootsCalculator() {
       : '';
 
   return (
-    <div className="root-calc-block">
-      <div className="root-calc-input-row">
-        <input
-          id="degree"
-          type="text"
-          inputMode="numeric"
-          value={degreeInput}
-          onChange={(e) => setDegreeInput(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-          className="root-calc-radical-index"
-          placeholder="2"
-          aria-label={t('rootDegree')}
-        />
-        <div className="root-calc-radical-group">
-          <span className="root-calc-radical" aria-hidden>
-            √
-          </span>
-          <div className="root-calc-radicand">
-            <input
-              id="number"
-              type="text"
-              inputMode="decimal"
-              value={numberInput}
-              onChange={(e) => setNumberInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-              className="number-input"
-              placeholder="16"
-              aria-label={t('number')}
-            />
+    <div className="split-view-container">
+      {/* Left Column - Input */}
+      <div className="root-calc-block" style={{ marginBottom: 0 }}>
+        <div className="root-calc-input-row">
+          <input
+            id="degree"
+            type="text"
+            inputMode="numeric"
+            value={degreeInput}
+            onChange={(e) => setDegreeInput(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+            className="root-calc-radical-index"
+            placeholder="2"
+            aria-label={t('rootDegree')}
+          />
+          <div className="root-calc-radical-group">
+            <span className="root-calc-radical" aria-hidden>
+              √
+            </span>
+            <div className="root-calc-radicand">
+              <input
+                id="number"
+                type="text"
+                inputMode="decimal"
+                value={numberInput}
+                onChange={(e) => setNumberInput(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                className="number-input"
+                placeholder="16"
+                aria-label={t('number')}
+              />
+            </div>
           </div>
+        </div>
+
+        {error && (
+          <p
+            className="seo-paragraph"
+            style={{
+              color: 'var(--error-color)',
+              marginBottom: '1rem',
+              fontSize: '0.9rem',
+            }}
+          >
+            {error}
+          </p>
+        )}
+
+        <div className="root-calc-actions">
+          <button
+            type="button"
+            onClick={handleCalculate}
+            className="btn btn-primary"
+          >
+            <span aria-hidden>=</span>
+            {t('calculate')}
+          </button>
+          <button
+            type="button"
+            onClick={handleReset}
+            className="btn btn-secondary"
+          >
+            <span aria-hidden>×</span>
+            {t('reset')}
+          </button>
         </div>
       </div>
 
-      {error && (
-        <p
-          className="seo-paragraph"
-          style={{
-            color: 'var(--error-color)',
-            marginBottom: '1rem',
-            fontSize: '0.9rem',
-          }}
-        >
-          {error}
-        </p>
-      )}
-
-      <div className="root-calc-actions">
-        <button
-          type="button"
-          onClick={handleCalculate}
-          className="btn btn-primary"
-        >
-          <span aria-hidden>=</span>
-          {t('calculate')}
-        </button>
-        <button
-          type="button"
-          onClick={handleReset}
-          className="btn btn-secondary"
-        >
-          <span aria-hidden>×</span>
-          {t('reset')}
-        </button>
-      </div>
-
-      <div className="root-calc-output-row">
-        <output
-          htmlFor="number degree"
-          className="root-calc-output-field"
-          aria-live="polite"
-        >
-          {displayValue || '—'}
-        </output>
-        <CopyButton text={displayValue} className="root-calc-copy-btn" />
+      {/* Right Column - Result */}
+      <div className="root-calc-block" style={{ marginTop: 0 }}>
+        <div className="root-calc-output-row">
+          <output
+            htmlFor="number degree"
+            className="root-calc-output-field"
+            aria-live="polite"
+          >
+            {displayValue || '—'}
+          </output>
+          <CopyButton text={displayValue} className="root-calc-copy-btn" />
+        </div>
       </div>
     </div>
   );

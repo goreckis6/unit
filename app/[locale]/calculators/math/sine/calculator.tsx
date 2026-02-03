@@ -98,163 +98,189 @@ export function SineCalculator() {
   }, [result, angle, unit, graphPath]);
 
   return (
-    <div>
-      <div className="input-section">
-        <div className="inputs-grid">
-          <div className="input-card">
-            <label htmlFor="angle" className="input-label">
-              {t('angleAlpha')}
-            </label>
-            <div className="input-with-unit">
-              <input
-                id="angle"
-                type="number"
-                step="any"
-                value={angle}
-                onChange={(e) => setAngle(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                className="number-input"
-                placeholder="1"
-              />
-              <select
-                aria-label={t('unit')}
-                value={unit}
-                onChange={(e) => setUnit(e.target.value as AngleUnit)}
-                className="number-input select-dropdown unit-select"
-                style={{ minWidth: '8rem', cursor: 'pointer' }}
-              >
-                <option value="deg">deg</option>
-                <option value="rad">rad</option>
-                <option value="mrad">{t('unitMrad')}</option>
-                <option value="pi">{t('unitPiRad')}</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="action-buttons">
-        <button onClick={handleCalculate} className="btn btn-primary">
-          {t('calculate')}
-        </button>
-        <button onClick={handleReset} className="btn btn-secondary">
-          {t('reset')}
-        </button>
-      </div>
-
-      {result !== null && (
-        <div ref={resultRef} className="result-section">
-          <div className="result-header">
-            <div className="result-badge">{t('result')}</div>
-          </div>
-          <div className="result-display">
-            <div className="result-item">
-              <div className="result-label">{t('sineOfAlpha')}</div>
-              <div className="number-input result-value-box">
-                <span className="result-value">{formatResult(result)}</span>
-                <CopyButton text={String(formatResult(result))} />
+    <>
+      <div className="split-view-container">
+        {/* Left Column - Inputs */}
+        <div className="input-section" style={{ marginBottom: 0 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="input-card">
+              <label htmlFor="angle" className="input-label">
+                {t('angleAlpha')}
+              </label>
+              <div className="input-with-unit">
+                <input
+                  id="angle"
+                  type="number"
+                  step="any"
+                  value={angle}
+                  onChange={(e) => setAngle(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                  className="number-input"
+                  placeholder="1"
+                />
+                <select
+                  aria-label={t('unit')}
+                  value={unit}
+                  onChange={(e) => setUnit(e.target.value as AngleUnit)}
+                  className="number-input select-dropdown unit-select"
+                  style={{ minWidth: '8rem', cursor: 'pointer' }}
+                >
+                  <option value="deg">deg</option>
+                  <option value="rad">rad</option>
+                  <option value="mrad">{t('unitMrad')}</option>
+                  <option value="pi">{t('unitPiRad')}</option>
+                </select>
               </div>
             </div>
-          </div>
 
-          <div className="seo-content-card" style={{ marginTop: '1.5rem' }}>
-            <h3 className="example-heading">{t('graphHeading')}</h3>
-            <div style={{ overflow: 'auto', marginTop: '0.5rem' }}>
-              <svg
-                viewBox={'0 0 ' + graphPath.width + ' ' + graphPath.height}
-                style={{ width: '100%', maxWidth: '400px', height: 'auto', display: 'block' }}
-                aria-hidden="true"
-              >
-                <defs>
-                  <linearGradient id="sineGradient" x1="0" y1="1" x2="0" y2="0">
-                    <stop offset="0%" stopColor="var(--primary, #2563eb)" stopOpacity="0.3" />
-                    <stop offset="100%" stopColor="var(--primary, #2563eb)" stopOpacity="0" />
-                  </linearGradient>
-                </defs>
-                <line
-                  x1={graphPath.padding.left}
-                  y1={graphPath.toY(0)}
-                  x2={graphPath.width - graphPath.padding.right}
-                  y2={graphPath.toY(0)}
-                  stroke="var(--text-secondary, #64748b)"
-                  strokeWidth="1"
-                  strokeDasharray="4,2"
-                />
-                <line
-                  x1={graphPath.toX(0)}
-                  y1={graphPath.padding.top}
-                  x2={graphPath.toX(0)}
-                  y2={graphPath.height - graphPath.padding.bottom}
-                  stroke="var(--text-secondary, #64748b)"
-                  strokeWidth="1"
-                  strokeDasharray="4,2"
-                />
-                <line
-                  x1={graphPath.padding.left}
-                  y1={graphPath.toY(1)}
-                  x2={graphPath.width - graphPath.padding.right}
-                  y2={graphPath.toY(1)}
-                  stroke="rgba(148, 163, 184, 0.6)"
-                  strokeWidth="1"
-                />
-                <line
-                  x1={graphPath.padding.left}
-                  y1={graphPath.toY(-1)}
-                  x2={graphPath.width - graphPath.padding.right}
-                  y2={graphPath.toY(-1)}
-                  stroke="rgba(148, 163, 184, 0.6)"
-                  strokeWidth="1"
-                />
-                <path
-                  d={graphPath.d + ' L' + graphPath.toX(graphPath.xMax) + ',' + graphPath.toY(0) + ' L' + graphPath.toX(0) + ',' + graphPath.toY(0) + ' Z'}
-                  fill="url(#sineGradient)"
-                />
-                <path
-                  d={graphPath.d}
-                  fill="none"
-                  stroke="var(--primary, #2563eb)"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                {graphPoint && (
-                  <>
-                    <line
-                      x1={graphPoint.px}
-                      y1={graphPoint.py}
-                      x2={graphPoint.px}
-                      y2={graphPath.toY(0)}
-                      stroke="rgba(148, 163, 184, 0.85)"
-                      strokeWidth="1"
-                    />
-                    <line
-                      x1={graphPoint.px}
-                      y1={graphPoint.py}
-                      x2={graphPath.width - graphPath.padding.right}
-                      y2={graphPoint.py}
-                      stroke="rgba(148, 163, 184, 0.85)"
-                      strokeWidth="1"
-                    />
-                    <circle
-                      cx={graphPoint.px}
-                      cy={graphPoint.py}
-                      r="4"
-                      fill="var(--primary, #2563eb)"
-                      stroke="rgba(255,255,255,0.9)"
-                      strokeWidth="1.5"
-                    />
-                  </>
-                )}
-                <text x={graphPath.toX(0) - 4} y={graphPath.toY(0) - 6} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">0</text>
-                <text x={graphPath.toX(-Math.PI) - 8} y={graphPath.height - 8} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">-pi</text>
-                <text x={graphPath.toX(Math.PI) - 4} y={graphPath.height - 8} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">pi</text>
-                <text x={graphPath.toX(-2 * Math.PI) - 12} y={graphPath.height - 8} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">-2pi</text>
-                <text x={graphPath.toX(2 * Math.PI) - 8} y={graphPath.height - 8} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">2pi</text>
-              </svg>
+            <div className="action-buttons" style={{ minHeight: '44px', minWidth: '140px', gap: '0.75rem' }}>
+              <button onClick={handleCalculate} className="btn btn-primary">
+                {t('calculate')}
+              </button>
+              <button onClick={handleReset} className="btn btn-secondary">
+                {t('reset')}
+              </button>
             </div>
           </div>
         </div>
-      )}
-    </div>
+
+        {/* Right Column - Result */}
+        <div
+          ref={resultRef}
+          className="result-section"
+          style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}
+        >
+          <div className="input-card">
+            <label className="input-label">{t('result')}</label>
+            {result === null && (
+              <div
+                className="number-input"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minHeight: '52px',
+                  padding: '0.75rem 1rem',
+                }}
+              >
+                <span style={{ color: 'var(--text-secondary)' }}>
+                  {angle ? t('clickCalculate') : t('enterAngle')}
+                </span>
+              </div>
+            )}
+            {result !== null && (
+              <>
+                <div className="result-display">
+                  <div className="result-item">
+                    <div className="result-label">{t('sineOfAlpha')}</div>
+                    <div className="number-input result-value-box">
+                      <span className="result-value">{formatResult(result)}</span>
+                      <CopyButton text={String(formatResult(result))} />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="seo-content-card" style={{ marginTop: '1.5rem' }}>
+                  <h3 className="example-heading">{t('graphHeading')}</h3>
+                  <div style={{ overflow: 'auto', marginTop: '0.5rem' }}>
+                    <svg
+                      viewBox={'0 0 ' + graphPath.width + ' ' + graphPath.height}
+                      style={{ width: '100%', maxWidth: '400px', height: 'auto', display: 'block' }}
+                      aria-hidden="true"
+                    >
+                      <defs>
+                        <linearGradient id="sineGradient" x1="0" y1="1" x2="0" y2="0">
+                          <stop offset="0%" stopColor="var(--primary, #2563eb)" stopOpacity="0.3" />
+                          <stop offset="100%" stopColor="var(--primary, #2563eb)" stopOpacity="0" />
+                        </linearGradient>
+                      </defs>
+                      <line
+                        x1={graphPath.padding.left}
+                        y1={graphPath.toY(0)}
+                        x2={graphPath.width - graphPath.padding.right}
+                        y2={graphPath.toY(0)}
+                        stroke="var(--text-secondary, #64748b)"
+                        strokeWidth="1"
+                        strokeDasharray="4,2"
+                      />
+                      <line
+                        x1={graphPath.toX(0)}
+                        y1={graphPath.padding.top}
+                        x2={graphPath.toX(0)}
+                        y2={graphPath.height - graphPath.padding.bottom}
+                        stroke="var(--text-secondary, #64748b)"
+                        strokeWidth="1"
+                        strokeDasharray="4,2"
+                      />
+                      <line
+                        x1={graphPath.padding.left}
+                        y1={graphPath.toY(1)}
+                        x2={graphPath.width - graphPath.padding.right}
+                        y2={graphPath.toY(1)}
+                        stroke="rgba(148, 163, 184, 0.6)"
+                        strokeWidth="1"
+                      />
+                      <line
+                        x1={graphPath.padding.left}
+                        y1={graphPath.toY(-1)}
+                        x2={graphPath.width - graphPath.padding.right}
+                        y2={graphPath.toY(-1)}
+                        stroke="rgba(148, 163, 184, 0.6)"
+                        strokeWidth="1"
+                      />
+                      <path
+                        d={graphPath.d + ' L' + graphPath.toX(graphPath.xMax) + ',' + graphPath.toY(0) + ' L' + graphPath.toX(0) + ',' + graphPath.toY(0) + ' Z'}
+                        fill="url(#sineGradient)"
+                      />
+                      <path
+                        d={graphPath.d}
+                        fill="none"
+                        stroke="var(--primary, #2563eb)"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      {graphPoint && (
+                        <>
+                          <line
+                            x1={graphPoint.px}
+                            y1={graphPoint.py}
+                            x2={graphPoint.px}
+                            y2={graphPath.toY(0)}
+                            stroke="rgba(148, 163, 184, 0.85)"
+                            strokeWidth="1"
+                          />
+                          <line
+                            x1={graphPoint.px}
+                            y1={graphPoint.py}
+                            x2={graphPath.width - graphPath.padding.right}
+                            y2={graphPoint.py}
+                            stroke="rgba(148, 163, 184, 0.85)"
+                            strokeWidth="1"
+                          />
+                          <circle
+                            cx={graphPoint.px}
+                            cy={graphPoint.py}
+                            r="4"
+                            fill="var(--primary, #2563eb)"
+                            stroke="rgba(255,255,255,0.9)"
+                            strokeWidth="1.5"
+                          />
+                        </>
+                      )}
+                      <text x={graphPath.toX(0) - 4} y={graphPath.toY(0) - 6} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">0</text>
+                      <text x={graphPath.toX(-Math.PI) - 8} y={graphPath.height - 8} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">-pi</text>
+                      <text x={graphPath.toX(Math.PI) - 4} y={graphPath.height - 8} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">pi</text>
+                      <text x={graphPath.toX(-2 * Math.PI) - 12} y={graphPath.height - 8} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">-2pi</text>
+                      <text x={graphPath.toX(2 * Math.PI) - 8} y={graphPath.height - 8} fontSize="11" fill="var(--text-secondary, #64748b)" textAnchor="middle">2pi</text>
+                    </svg>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

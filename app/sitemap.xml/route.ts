@@ -108,13 +108,28 @@ export async function GET() {
   const urls: string[] = [];
   const blogPosts = await getBlogPosts();
 
+  const getUrlForLocale = (locale: string, route: string) => {
+    const localePrefix = locale === 'en' ? '' : `/${locale}`;
+    return `${BASE_URL}${localePrefix}${route}`;
+  };
+
+  const getAlternateLinks = (route: string) => {
+    const alternates = routing.locales
+      .map((locale) => `    <xhtml:link rel="alternate" hreflang="${locale}" href="${getUrlForLocale(locale, route)}" />`)
+      .join('\n');
+
+    // x-default should point to the default (English) version
+    const xDefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="${getUrlForLocale('en', route)}" />`;
+
+    return `${alternates}\n${xDefault}`;
+  };
+  
   // Generate URLs for all locales
   routing.locales.forEach((locale) => {
-    const localePrefix = locale === 'en' ? '' : `/${locale}`;
     
     // Add static routes
     staticRoutes.forEach((route) => {
-      const url = `${BASE_URL}${localePrefix}${route}`;
+      const url = getUrlForLocale(locale, route);
       
       let priority = '0.8';
       let changefreq = 'weekly';
@@ -132,6 +147,7 @@ export async function GET() {
 
       urls.push(`  <url>
     <loc>${url}</loc>
+${getAlternateLinks(route)}
     <lastmod>${currentDate}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
@@ -140,10 +156,12 @@ export async function GET() {
 
     // Add blog posts
     blogPosts.forEach((post) => {
-      const url = `${BASE_URL}${localePrefix}/blog/${post.slug}`;
+      const route = `/blog/${post.slug}`;
+      const url = getUrlForLocale(locale, route);
       const lastmod = post.date ? new Date(post.date).toISOString() : currentDate;
       urls.push(`  <url>
     <loc>${url}</loc>
+${getAlternateLinks(route)}
     <lastmod>${lastmod}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -152,7 +170,7 @@ export async function GET() {
   });
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.join('\n')}
 </urlset>`;
 

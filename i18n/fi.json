@@ -862,63 +862,62 @@
     },
     "arccos": {
       "title": "Arccos-laskin",
-      "description": "Arccos(x)-laskin käänteisen kosinin löytämiseen ja kulman saamiseen asteina ja radiaaneina.",
-      "x": "Arvo (x, kosiniarvo)",
+      "description": "Arccos(x)-laskin arcuskosinin löytämiseen ja kulman saamiseen asteina ja radiaaneina yleisillä ratkaisuilla.",
+      "x": "Arvo (x, kosinin arvo)",
       "calculate": "Laske",
       "reset": "Nollaa",
       "result": "Tulos",
       "angleDegrees": "Kulma asteina",
       "angleRadians": "Kulma radiaaneina",
       "calculationHeading": "Laskenta",
-      "calculationIntro": "Annetulle kosiniarvolle",
-      "calculationStepRadians": "laskemme ensin kulman radiaaneina käyttäen arccos(x). Tulos on θ = arccos(x) ≈ {radians} rad.",
-      "calculationStepDegrees": "Sitten muunnamme radiaanit asteiksi käyttäen θ° = θ × 180 / π, mikä antaa noin {degrees}°.",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
       "seo": {
         "title": "Arccos-laskin – Käänteinen Kosini (acos) Asteina ja Radiaaneina",
-        "description": "Ilmainen arccos-laskin käänteisen kosinin (acos) löytämiseen ja kulman saamiseen sekä asteina että radiaaneina. Tukee arvoja alueella [-1, 1] vaiheittaisella selityksellä. Ihanteellinen trigonometriaan, geometriaan ja tekniikan laskelmiin.",
-        "keywords": "arccos laskin, käänteinen kosini laskin, acos laskin, kosini käänteislaskin, arccos asteina, arccos radiaaneina, trigonometria laskin, kulma kosinista",
+        "description": "Ilmainen arccos-laskin käänteisen kosinin (acos) löytämiseen ja kulman saamiseen asteina ja radiaaneina yleisillä ratkaisuilla. Tukee arvoja määrittelyjoukossa [-1, 1] vaiheittaisella selityksellä. Ihanteellinen trigonometriaan, geometriaan ja insinöörilaskelmiin.",
+        "keywords": "arccos laskin, käänteinen kosini laskin, acos laskin, cos käänteinen laskin, arccos asteina, arccos radiaaneina, trigonometrinen laskin, kulma kosinista",
         "content": {
-          "heading": "Kuinka Käyttää Arccos (Käänteinen Kosini) Laskinta",
-          "paragraph1": "Arccos-funktio (käänteinen kosini), kirjoitettu arccos(x) tai acos(x), antaa sinulle kulman, jonka kosini on x. Toisin sanoen, jos cos(θ) = x, niin θ = arccos(x). Tämä laskin auttaa sinua löytämään nopeasti tuon kulman sekä asteina että radiaaneina mille tahansa kelvolliselle kosiniarvolle välillä -1 ja 1.",
-          "paragraph2": "Käyttääksesi laskinta, syötä arvo x:lle välillä [-1, 1]. Työkalu laskee sitten θ = arccos(x) radiaaneina käyttäen sisäänrakennettua käänteistä kosinifunktiota ja muuntaa tämän tuloksen asteiksi käyttäen kaavaa θ° = θ × 180 / π. Molemmat arvot näytetään korkealla tarkkuudella, jotta voit käyttää niitä trigonometria-, geometria-, fysiikka- tai tekniikan ongelmissa.",
-          "paragraph3": "Arccos-funktio on erityisen hyödyllinen, kun tiedät kulman kosinin, mutta tarvitset itse kulman. Yleisiä käyttötapauksia ovat kulmien löytäminen suorakulmaisista kolmioista, kulmien laskeminen vektorien välillä käyttäen pistetuloa, jaksollisten signaalien analysointi ja trigonometristen yhtälöiden ratkaiseminen. Koska kosini ei ole injektiivinen kaikille reaaliluvuille, arccosin pääarvo määritellään välillä [0, π] radiaania (0°:sta 180°:een).",
-          "paragraph4": "Arccos-laskimemme vahvistaa, että syötteesi on oikealla alueella [-1, 1], ja palauttaa sitten tarkat tulokset sekä radiaaneina että asteina. Tämä säästää aikaa verrattuna manuaalisiin laskelmiin ja vähentää virheiden riskiä. Olitpa opiskelija, joka oppii trigonometriaa, opettaja, joka valmistelee esimerkkejä, tai ammattilainen, joka työskentelee kulmien kanssa, tämä työkalu tarjoaa nopeat, luotettavat käänteiset kosinilaskelmat.",
+          "heading": "Kuinka Käyttää Arccos (Käänteinen Kosini) -laskinta",
+          "paragraph1": "Arccos (käänteinen kosini) -funktio, kirjoitettu arccos(x) tai acos(x), antaa kulman, jonka kosini on x. Toisin sanoen, jos cos(θ) = x, niin θ = arccos(x). Tämä laskin auttaa löytämään nopeasti kulman asteina ja radiaaneina mille tahansa kelvolliselle kosinin arvolle välillä -1 ja 1, ja tarjoaa yleiset ratkaisut, jotka näyttävät kaikki mahdolliset kulmat.",
+          "paragraph2": "Laskimen käyttämiseksi syötä arvo x välillä [-1, 1]. Työkalu laskee θ = arccos(x) radiaaneina käyttäen sisäänrakennettua käänteistä kosini-funktiota ja muuntaa tuloksen asteiksi kaavalla θ° = θ × 180 / π. Molemmat arvot näytetään korkealla tarkkuudella. Koska kosini on jaksollinen funktio, laskin näyttää myös yleiset ratkaisut: θ + k×360° (asteina) ja θ + k×2π (radiaaneina), missä k on mikä tahansa kokonaisluku.",
+          "paragraph3": "Arccos-funktio on erityisen hyödyllinen, kun tiedät kulman kosinin mutta tarvitset itse kulman. Yleisiä käyttötapauksia ovat kulmien löytäminen suorakulmaisista kolmioista, trigonometristen yhtälöiden ratkaiseminen, kulmien laskeminen vektorien välillä, aaltofunktioiden analysointi ja pyörimisliikkeen kanssa työskentely. Koska kosini ei ole yksi yhteen kaikkien reaalilukujen yli, arccosin pääarvo on määritelty välillä [0, π] radiaania (0° - 180°), mutta yleinen ratkaisu sisältää kaikki kulmat, jotka eroavat 360° (tai 2π radiaanin) kerrannaisten verran.",
+          "paragraph4": "Arccos-laskimemme tarkistaa, että syötteesi on oikeassa määrittelyjoukossa [-1, 1], ja palauttaa sitten tarkat tulokset radiaaneille ja asteille yleisten ratkaisukaavojen kanssa. Tämä säästää aikaa verrattuna manuaalisiin laskelmiin ja auttaa ymmärtämään trigonometristen funktioiden jaksollisen luonteen. Olit sitten opiskelija oppimassa trigonometriaa, opettaja valmistamassa esimerkkejä tai ammattilainen työskentelemässä kulmien kanssa, tämä työkalu tarjoaa nopeita, luotettavia käänteisen kosinin laskelmia.",
           "exampleHeading": "Esimerkki: Arccos-laskimen Käyttö",
-          "exampleText": "Oletetaan, että tiedät, että cos(θ) = 0,5 ja haluat löytää θ. Syötä x = 0,5 laskimeen. Laskin laskee θ = arccos(0,5) ≈ 1,047198 rad. Muunnos asteiksi antaa θ° ≈ 60°. Tämä tarkoittaa, että 60°:n kulmalla on kosini 0,5. Vastaavasti, jos cos(θ) = -1, niin θ = arccos(-1) = π rad = 180°, ja jos cos(θ) = 1, niin θ = arccos(1) = 0 rad = 0°."
+          "exampleText": "Oletetaan, että tiedät cos(θ) = 0,5 ja haluat löytää θ:n. Syötä x = 0,5 laskimeen. Laskin laskee θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Muunnos asteiksi antaa θ° = 60°. Yleiset ratkaisut ovat: θ = 60° + k×360° ja θ = π/3 + k×2π rad, missä k on mikä tahansa kokonaisluku. Tämä tarkoittaa, että kulmat 60°, 420°, -300° jne. kaikilla on kosini 0,5. Vastaavasti, jos cos(θ) = 1, niin θ = arccos(1) = 0° (tai 0 rad), yleisillä ratkaisuilla θ = 0° + k×360° ja θ = 0 + k×2π rad."
         },
         "faq": {
           "heading": "Usein Kysytyt Kysymykset",
           "items": [
             {
               "question": "Mikä on arccos?",
-              "answer": "Arccos (käänteinen kosini) on kosinin käänteisfunktio. Jos cos(θ) = x, niin θ = arccos(x). Se palauttaa kulman, jonka kosini on x, yleensä annettu radiaaneina tai asteina."
+              "answer": "Arccos (käänteinen kosini) on kosini-funktion käänteisfunktio. Jos cos(θ) = x, niin θ = arccos(x). Se palauttaa kulman, jonka kosini on x, yleensä annettuna radiaaneina tai asteina. Pääarvo on välillä [0°, 180°] tai [0, π] radiaania."
             },
             {
               "question": "Mikä on arccos-funktion määrittelyjoukko?",
-              "answer": "Arccos(x):n määrittelyjoukko on kaikki reaaliarvot x siten, että -1 ≤ x ≤ 1. Tämän välin ulkopuolella kosinifunktio ei voi tuottaa sellaisia arvoja, joten arccos ei ole määritelty niille reaaliluvuissa."
+              "answer": "Arccos(x)-funktion määrittelyjoukko on kaikki reaaliarvot x siten, että -1 ≤ x ≤ 1. Tämän välin ulkopuolella kosini-funktio ei voi tuottaa tällaisia arvoja, joten arccos ei ole määritelty niille reaaliluvuissa."
             },
             {
               "question": "Mikä on arccosin arvojoukko?",
-              "answer": "Arccos(x):n pääarvojoukko on [0, π] radiaaneina, mikä vastaa [0°, 180°] asteina. Tämä tarkoittaa, että arccos palauttaa aina kulman välillä 0 ja π radiaania (0° ja 180°)."
+              "answer": "Arccos(x)-funktion pääarvojoukko on [0, π] radiaaneina, mikä vastaa [0°, 180°] asteina. Koska kosini on kuitenkin jaksollinen, yleinen ratkaisu sisältää kaikki kulmat θ + k×360° (tai θ + k×2π rad), missä k on mikä tahansa kokonaisluku."
             },
             {
-              "question": "Kuinka muunnan arccosin radiaaneista asteiksi?",
-              "answer": "Jos θ on radiaaneina, voit muuntaa sen asteiksi käyttäen kaavaa θ° = θ × 180 / π. Laskimemme tekee tämän muunnoksen automaattisesti ja näyttää sekä radiaanit että asteet."
+              "question": "Miksi laskin näyttää yleiset ratkaisut?",
+              "answer": "Kosini on jaksollinen funktio jaksolla 360° (2π radiaania). Tämä tarkoittaa, että jos cos(θ) = x, niin cos(θ + k×360°) = x kaikilla kokonaisluvuilla k. Yleinen ratkaisu näyttää kaikki mahdolliset kulmat, jotka täyttävät yhtälön, ei vain pääarvon."
             },
             {
               "question": "Onko tämä arccos-laskin ilmainen?",
-              "answer": "Kyllä, arccos-laskimemme on täysin ilmainen. Rekisteröitymistä tai maksua ei vaadita. Syötä vain arvo x:lle välillä -1 ja 1 saadaksesi kulman radiaaneina ja asteina."
+              "answer": "Kyllä, arccos-laskimemme on täysin ilmainen käyttää. Rekisteröintiä tai maksua ei vaadita. Syötä vain arvo x välillä -1 ja 1 saadaksesi kulman radiaaneina ja asteina yleisten ratkaisujen kanssa."
             }
           ]
         },
         "related": {
           "heading": "Liittyvät Laskimet",
-          "addition": "Yhteenlaskulaskin",
-          "additionDesc": "Lisää kokonaislukuja ja desimaaleja nopeasti ja tarkasti",
-          "percentage": "Prosenttilaskin",
-          "percentageDesc": "Laske prosenttiarvot, prosenttimuutos ja prosenttisuhteet",
-          "antilog": "Antilogaritmilaskin",
-          "antilogDesc": "Laske luvun antilogaritmi (käänteinen logaritmi) millä tahansa kannalla"
+          "arcsin": "Arcsin-laskin",
+          "arcsinDesc": "Löydä käänteinen sini arvosta ja saa kulma asteina ja radiaaneina",
+          "arctan": "Arctan-laskin",
+          "arctanDesc": "Löydä käänteinen tangentti arvosta ja saa kulma asteina ja radiaaneina",
+          "percentage": "Prosentti-laskin",
+          "percentageDesc": "Laske prosenttiarvot, prosenttimuutokset ja prosenttisuhteet"
         }
       }
     },
@@ -1046,67 +1045,6 @@
         }
       }
     },
-    "arccos": {
-      "title": "Arccos-laskin",
-      "description": "Arccos(x)-laskin arcuskosinin löytämiseen ja kulman saamiseen asteina ja radiaaneina yleisillä ratkaisuilla.",
-      "x": "Arvo (x, kosinin arvo)",
-      "calculate": "Laske",
-      "reset": "Nollaa",
-      "result": "Tulos",
-      "angleDegrees": "Kulma asteina",
-      "angleRadians": "Kulma radiaaneina",
-      "calculationHeading": "Laskenta",
-      "generalSolutionDegrees": "(k=..-1,0,1,..)",
-      "generalSolutionRadians": "(k=..-1,0,1,..)",
-      "seo": {
-        "title": "Arccos-laskin – Käänteinen Kosini (acos) Asteina ja Radiaaneina",
-        "description": "Ilmainen arccos-laskin käänteisen kosinin (acos) löytämiseen ja kulman saamiseen asteina ja radiaaneina yleisillä ratkaisuilla. Tukee arvoja määrittelyjoukossa [-1, 1] vaiheittaisella selityksellä. Ihanteellinen trigonometriaan, geometriaan ja insinöörilaskelmiin.",
-        "keywords": "arccos laskin, käänteinen kosini laskin, acos laskin, cos käänteinen laskin, arccos asteina, arccos radiaaneina, trigonometrinen laskin, kulma kosinista",
-        "content": {
-          "heading": "Kuinka Käyttää Arccos (Käänteinen Kosini) -laskinta",
-          "paragraph1": "Arccos (käänteinen kosini) -funktio, kirjoitettu arccos(x) tai acos(x), antaa kulman, jonka kosini on x. Toisin sanoen, jos cos(θ) = x, niin θ = arccos(x). Tämä laskin auttaa löytämään nopeasti kulman asteina ja radiaaneina mille tahansa kelvolliselle kosinin arvolle välillä -1 ja 1, ja tarjoaa yleiset ratkaisut, jotka näyttävät kaikki mahdolliset kulmat.",
-          "paragraph2": "Laskimen käyttämiseksi syötä arvo x välillä [-1, 1]. Työkalu laskee θ = arccos(x) radiaaneina käyttäen sisäänrakennettua käänteistä kosini-funktiota ja muuntaa tuloksen asteiksi kaavalla θ° = θ × 180 / π. Molemmat arvot näytetään korkealla tarkkuudella. Koska kosini on jaksollinen funktio, laskin näyttää myös yleiset ratkaisut: θ + k×360° (asteina) ja θ + k×2π (radiaaneina), missä k on mikä tahansa kokonaisluku.",
-          "paragraph3": "Arccos-funktio on erityisen hyödyllinen, kun tiedät kulman kosinin mutta tarvitset itse kulman. Yleisiä käyttötapauksia ovat kulmien löytäminen suorakulmaisista kolmioista, trigonometristen yhtälöiden ratkaiseminen, kulmien laskeminen vektorien välillä, aaltofunktioiden analysointi ja pyörimisliikkeen kanssa työskentely. Koska kosini ei ole yksi yhteen kaikkien reaalilukujen yli, arccosin pääarvo on määritelty välillä [0, π] radiaania (0° - 180°), mutta yleinen ratkaisu sisältää kaikki kulmat, jotka eroavat 360° (tai 2π radiaanin) kerrannaisten verran.",
-          "paragraph4": "Arccos-laskimemme tarkistaa, että syötteesi on oikeassa määrittelyjoukossa [-1, 1], ja palauttaa sitten tarkat tulokset radiaaneille ja asteille yleisten ratkaisukaavojen kanssa. Tämä säästää aikaa verrattuna manuaalisiin laskelmiin ja auttaa ymmärtämään trigonometristen funktioiden jaksollisen luonteen. Olit sitten opiskelija oppimassa trigonometriaa, opettaja valmistamassa esimerkkejä tai ammattilainen työskentelemässä kulmien kanssa, tämä työkalu tarjoaa nopeita, luotettavia käänteisen kosinin laskelmia.",
-          "exampleHeading": "Esimerkki: Arccos-laskimen Käyttö",
-          "exampleText": "Oletetaan, että tiedät cos(θ) = 0,5 ja haluat löytää θ:n. Syötä x = 0,5 laskimeen. Laskin laskee θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Muunnos asteiksi antaa θ° = 60°. Yleiset ratkaisut ovat: θ = 60° + k×360° ja θ = π/3 + k×2π rad, missä k on mikä tahansa kokonaisluku. Tämä tarkoittaa, että kulmat 60°, 420°, -300° jne. kaikilla on kosini 0,5. Vastaavasti, jos cos(θ) = 1, niin θ = arccos(1) = 0° (tai 0 rad), yleisillä ratkaisuilla θ = 0° + k×360° ja θ = 0 + k×2π rad."
-        },
-        "faq": {
-          "heading": "Usein Kysytyt Kysymykset",
-          "items": [
-            {
-              "question": "Mikä on arccos?",
-              "answer": "Arccos (käänteinen kosini) on kosini-funktion käänteisfunktio. Jos cos(θ) = x, niin θ = arccos(x). Se palauttaa kulman, jonka kosini on x, yleensä annettuna radiaaneina tai asteina. Pääarvo on välillä [0°, 180°] tai [0, π] radiaania."
-            },
-            {
-              "question": "Mikä on arccos-funktion määrittelyjoukko?",
-              "answer": "Arccos(x)-funktion määrittelyjoukko on kaikki reaaliarvot x siten, että -1 ≤ x ≤ 1. Tämän välin ulkopuolella kosini-funktio ei voi tuottaa tällaisia arvoja, joten arccos ei ole määritelty niille reaaliluvuissa."
-            },
-            {
-              "question": "Mikä on arccosin arvojoukko?",
-              "answer": "Arccos(x)-funktion pääarvojoukko on [0, π] radiaaneina, mikä vastaa [0°, 180°] asteina. Koska kosini on kuitenkin jaksollinen, yleinen ratkaisu sisältää kaikki kulmat θ + k×360° (tai θ + k×2π rad), missä k on mikä tahansa kokonaisluku."
-            },
-            {
-              "question": "Miksi laskin näyttää yleiset ratkaisut?",
-              "answer": "Kosini on jaksollinen funktio jaksolla 360° (2π radiaania). Tämä tarkoittaa, että jos cos(θ) = x, niin cos(θ + k×360°) = x kaikilla kokonaisluvuilla k. Yleinen ratkaisu näyttää kaikki mahdolliset kulmat, jotka täyttävät yhtälön, ei vain pääarvon."
-            },
-            {
-              "question": "Onko tämä arccos-laskin ilmainen?",
-              "answer": "Kyllä, arccos-laskimemme on täysin ilmainen käyttää. Rekisteröintiä tai maksua ei vaadita. Syötä vain arvo x välillä -1 ja 1 saadaksesi kulman radiaaneina ja asteina yleisten ratkaisujen kanssa."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Liittyvät Laskimet",
-          "arcsin": "Arcsin-laskin",
-          "arcsinDesc": "Löydä käänteinen sini arvosta ja saa kulma asteina ja radiaaneina",
-          "arctan": "Arctan-laskin",
-          "arctanDesc": "Löydä käänteinen tangentti arvosta ja saa kulma asteina ja radiaaneina",
-          "percentage": "Prosentti-laskin",
-          "percentageDesc": "Laske prosenttiarvot, prosenttimuutokset ja prosenttisuhteet"
-        }
-      }
-    },
     "arcsin": {
       "title": "Arcsin-laskin",
       "description": "Arcsin(x)-laskin käänteisen sinin löytämiseen ja kulman saamiseen asteina ja radiaaneina yleisillä ratkaisuilla.",
@@ -1166,7 +1104,9 @@
           "antilog": "Antilogaritmilaskin",
           "antilogDesc": "Laske luvun antilogaritmi (käänteinen logaritmi) millä tahansa kannalla"
         }
-      }
+      },
+      "enterValue": "Syötä arvo nähdäksesi tuloksen",
+      "clickCalculate": "Napsauta Laske nähdäksesi tuloksen"
     },
     "arctan": {
       "title": "Arctan-laskin",
@@ -1227,7 +1167,9 @@
           "percentage": "Prosenttilaskin",
           "percentageDesc": "Laske prosenttiarvot, prosenttimuutos ja prosenttisuhteet"
         }
-      }
+      },
+      "enterValue": "Syötä arvo nähdäksesi tuloksen",
+      "clickCalculate": "Napsauta Laske nähdäksesi tuloksen"
     },
     "average": {
       "title": "Keskiarvon Laskin",
@@ -1291,7 +1233,9 @@
           "addingFractions": "Murtolukujen Lisäyslaskin",
           "addingFractionsDesc": "Lisää ja yksinkertaista murtolukuja vaihe vaiheelta"
         }
-      }
+      },
+      "enterNumbers": "Syötä numerot nähdäksesi tuloksen",
+      "clickCalculate": "Napsauta Laske nähdäksesi tuloksen"
     },
     "commonFactors": {
       "title": "Yhteiset Tekijät Laskin",
@@ -4518,12 +4462,30 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            {"question": "Mikä on kineettisen energian kaava?", "answer": "Kaava: KE = ½ × m × v², m kg, v m/s. Tulos jouleina (J). Esim. 2 kg 3 m/s: KE = 9 J."},
-            {"question": "Miksi nopeus on neliössä?", "answer": "Työ, jolla kappale kiihdytetään levosta nopeuteen v, on verrannollinen v²:een. Nopeuden kaksinkertaistaminen nelinkertaistaa KE:n – siksi nopeusrajoitukset ja jarrutusmatka ovat tärkeitä."},
-            {"question": "Mitä yksiköitä laskin käyttää?", "answer": "Massa kilogrammoina (kg), nopeus m/s. Tulos jouleina (J). Grammat: jaa 1000:lla. km/h: kerro 1000/3600 ≈ 0,278 saadaksesi m/s."},
-            {"question": "Voiko kineettinen energia olla negatiivinen?", "answer": "Ei. Kaavassa KE = ½mv² massa on positiivinen ja v² aina ei-negatiivinen, joten KE ei ole koskaan negatiivinen. Skalaari KE on ½mv², jossa v on nopeuden suuruus."},
-            {"question": "Miten KE liittyy jarrutusmatkaan?", "answer": "Pysäyttämiseen tarvittava työ on yhtä suuri kuin KE. Jarrutusmatka on verrannollinen KE:hen, eli v²:een. Nopeuden kaksinkertaistaminen nelinkertaistaa jarrutusmatkan samalla jarrutusvoimalla."},
-            {"question": "Onko tämä kineettisen energian laskin ilmainen?", "answer": "Kyllä. Laskin on ilmainen ilman rekisteröintiä tai maksua. Syötä massa kg ja nopeus m/s saadaksesi KE jouleina ja kaavan. Opiskelijoille, opettajille ja ammattilaisille."}
+            {
+              "question": "Mikä on kineettisen energian kaava?",
+              "answer": "Kaava: KE = ½ × m × v², m kg, v m/s. Tulos jouleina (J). Esim. 2 kg 3 m/s: KE = 9 J."
+            },
+            {
+              "question": "Miksi nopeus on neliössä?",
+              "answer": "Työ, jolla kappale kiihdytetään levosta nopeuteen v, on verrannollinen v²:een. Nopeuden kaksinkertaistaminen nelinkertaistaa KE:n – siksi nopeusrajoitukset ja jarrutusmatka ovat tärkeitä."
+            },
+            {
+              "question": "Mitä yksiköitä laskin käyttää?",
+              "answer": "Massa kilogrammoina (kg), nopeus m/s. Tulos jouleina (J). Grammat: jaa 1000:lla. km/h: kerro 1000/3600 ≈ 0,278 saadaksesi m/s."
+            },
+            {
+              "question": "Voiko kineettinen energia olla negatiivinen?",
+              "answer": "Ei. Kaavassa KE = ½mv² massa on positiivinen ja v² aina ei-negatiivinen, joten KE ei ole koskaan negatiivinen. Skalaari KE on ½mv², jossa v on nopeuden suuruus."
+            },
+            {
+              "question": "Miten KE liittyy jarrutusmatkaan?",
+              "answer": "Pysäyttämiseen tarvittava työ on yhtä suuri kuin KE. Jarrutusmatka on verrannollinen KE:hen, eli v²:een. Nopeuden kaksinkertaistaminen nelinkertaistaa jarrutusmatkan samalla jarrutusvoimalla."
+            },
+            {
+              "question": "Onko tämä kineettisen energian laskin ilmainen?",
+              "answer": "Kyllä. Laskin on ilmainen ilman rekisteröintiä tai maksua. Syötä massa kg ja nopeus m/s saadaksesi KE jouleina ja kaavan. Opiskelijoille, opettajille ja ammattilaisille."
+            }
           ]
         },
         "related": {
@@ -4694,11 +4656,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            {"question": "Mikä on 0:n kertoma?", "answer": "0! = 1 määritelmän mukaan. Tämä sopimus tekee monista kaavoista (esim. binomikertoimet, Taylorin sarjat) oikein toimivia arvolle n = 0."},
-            {"question": "Miksi syöte on rajoitettu 170:een?", "answer": "Kertomat kasvavat erittäin nopeasti. 171! on yli 300 numeron luku, mikä ylittää tyypillisen näyttöalueen. Arvolle n 0–170 laskin näyttää tarkan kokonaislukutuloksen."},
-            {"question": "Mihin kertomaa käytetään?", "answer": "Kertomia käytetään kombinatoriikassa (permutaatiot: n! tapaa järjestää n kohdetta), yhdistelmissä (binomikertoimet), todennäköisyyslaskennassa ja analyysissä (esim. e^x:n Taylorin sarja)."},
-            {"question": "Voivatko kertomat olla negatiivisia tai desimaalilukuja?", "answer": "Standardikertoma n! on määritelty vain ei-negatiivisille kokonaisluvuille n. Gammafunktio Γ(z) on laajennus siten, että Γ(n+1) = n! positiivisille kokonaisluvuille n ja sallii ei-kokonaislukuarvot."},
-            {"question": "Onko tämä kertomalaskin ilmainen?", "answer": "Kyllä. Laskin on ilmainen käyttää ilman rekisteröitymistä. Syötä luku 0–170 saadaksesi n! ja laajennuksen tarvittaessa."}
+            {
+              "question": "Mikä on 0:n kertoma?",
+              "answer": "0! = 1 määritelmän mukaan. Tämä sopimus tekee monista kaavoista (esim. binomikertoimet, Taylorin sarjat) oikein toimivia arvolle n = 0."
+            },
+            {
+              "question": "Miksi syöte on rajoitettu 170:een?",
+              "answer": "Kertomat kasvavat erittäin nopeasti. 171! on yli 300 numeron luku, mikä ylittää tyypillisen näyttöalueen. Arvolle n 0–170 laskin näyttää tarkan kokonaislukutuloksen."
+            },
+            {
+              "question": "Mihin kertomaa käytetään?",
+              "answer": "Kertomia käytetään kombinatoriikassa (permutaatiot: n! tapaa järjestää n kohdetta), yhdistelmissä (binomikertoimet), todennäköisyyslaskennassa ja analyysissä (esim. e^x:n Taylorin sarja)."
+            },
+            {
+              "question": "Voivatko kertomat olla negatiivisia tai desimaalilukuja?",
+              "answer": "Standardikertoma n! on määritelty vain ei-negatiivisille kokonaisluvuille n. Gammafunktio Γ(z) on laajennus siten, että Γ(n+1) = n! positiivisille kokonaisluvuille n ja sallii ei-kokonaislukuarvot."
+            },
+            {
+              "question": "Onko tämä kertomalaskin ilmainen?",
+              "answer": "Kyllä. Laskin on ilmainen käyttää ilman rekisteröitymistä. Syötä luku 0–170 saadaksesi n! ja laajennuksen tarvittaessa."
+            }
           ]
         },
         "related": {
@@ -5457,11 +5434,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            {"question": "Mikä on pitkä kertolasku?", "answer": "Pitkä kertolasku on askel askeleelta -menetelmä: kerrot ensimmäisen luvun toisen jokaisella numerolla, siirrät osatulot paikka-arvon mukaan ja lasket summan."},
-            {"question": "Mitä ovat osatulot?", "answer": "Osatulot ovat kerrottava kerrottuna kertojan jokaisella numerolla. Kun 123 × 45: 123 × 5 = 615 ja 123 × 4 = 492 (siirrettynä 4920)."},
-            {"question": "Toimiiko se desimaaliluvuille?", "answer": "Tämä laskin on vain kokonaislukuille. Desimaaleille kerro ensin kokonaislukuina ja aseta desimaalipiste tuloksen loppujen desimaalien mukaan."},
-            {"question": "Toimiiko se suurille luvuille?", "answer": "Kyllä. Voit syöttää hyvin suuria kokonaislukuja; laskin laskee tulon ja kaikki osatulot."},
-            {"question": "Onko laskin ilmainen?", "answer": "Kyllä. Pitkän kertolaskun laskimemme on ilmainen, ilman rekisteröitymistä. Syötä kaksi kokonaislukua tuloksen ja vaiheiden näyttämiseksi."}
+            {
+              "question": "Mikä on pitkä kertolasku?",
+              "answer": "Pitkä kertolasku on askel askeleelta -menetelmä: kerrot ensimmäisen luvun toisen jokaisella numerolla, siirrät osatulot paikka-arvon mukaan ja lasket summan."
+            },
+            {
+              "question": "Mitä ovat osatulot?",
+              "answer": "Osatulot ovat kerrottava kerrottuna kertojan jokaisella numerolla. Kun 123 × 45: 123 × 5 = 615 ja 123 × 4 = 492 (siirrettynä 4920)."
+            },
+            {
+              "question": "Toimiiko se desimaaliluvuille?",
+              "answer": "Tämä laskin on vain kokonaislukuille. Desimaaleille kerro ensin kokonaislukuina ja aseta desimaalipiste tuloksen loppujen desimaalien mukaan."
+            },
+            {
+              "question": "Toimiiko se suurille luvuille?",
+              "answer": "Kyllä. Voit syöttää hyvin suuria kokonaislukuja; laskin laskee tulon ja kaikki osatulot."
+            },
+            {
+              "question": "Onko laskin ilmainen?",
+              "answer": "Kyllä. Pitkän kertolaskun laskimemme on ilmainen, ilman rekisteröitymistä. Syötä kaksi kokonaislukua tuloksen ja vaiheiden näyttämiseksi."
+            }
           ]
         },
         "related": {

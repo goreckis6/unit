@@ -862,63 +862,62 @@
     },
     "arccos": {
       "title": "Arccos Kalkylator",
-      "description": "Arccos(x) kalkylator för att hitta den inversa cosinus av ett värde och få vinkeln i grader och radianer.",
-      "x": "Värde (x, cosinusvärde)",
+      "description": "Arccos(x) kalkylator för att hitta arcus cosinus av ett värde och få vinkeln i grader och radianer med generella lösningar.",
+      "x": "Värde (x, cosinus värde)",
       "calculate": "Beräkna",
       "reset": "Återställ",
       "result": "Resultat",
       "angleDegrees": "Vinkel i grader",
       "angleRadians": "Vinkel i radianer",
       "calculationHeading": "Beräkning",
-      "calculationIntro": "För det givna cosinusvärdet",
-      "calculationStepRadians": "beräknar vi först vinkeln i radianer med hjälp av arccos(x). Resultatet är θ = arccos(x) ≈ {radians} rad.",
-      "calculationStepDegrees": "Sedan konverterar vi radianer till grader med hjälp av θ° = θ × 180 / π, vilket ger ungefär {degrees}°.",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
       "seo": {
         "title": "Arccos Kalkylator – Invers Cosinus (acos) i Grader och Radianer",
-        "description": "Gratis arccos kalkylator för att hitta den inversa cosinus (acos) av ett värde och få vinkeln både i grader och radianer. Stöder värden i domänen [-1, 1] med steg-för-steg förklaring. Idealisk för trigonometri, geometri och tekniska beräkningar.",
-        "keywords": "arccos kalkylator, invers cosinus kalkylator, acos kalkylator, cosinus invers kalkylator, arccos i grader, arccos i radianer, trigonometri kalkylator, vinkel från cosinus",
+        "description": "Gratis arccos kalkylator för att hitta invers cosinus (acos) av ett värde och få vinkeln i grader och radianer med generella lösningar. Stöder värden i domänen [-1, 1] med steg-för-steg förklaring. Idealisk för trigonometri, geometri och ingenjörsberäkningar.",
+        "keywords": "arccos kalkylator, invers cosinus kalkylator, acos kalkylator, cos invers kalkylator, arccos i grader, arccos i radianer, trigonometrisk kalkylator, vinkel från cosinus",
         "content": {
           "heading": "Hur man Använder Arccos (Invers Cosinus) Kalkylatorn",
-          "paragraph1": "Arccos-funktionen (invers cosinus), skriven som arccos(x) eller acos(x), ger dig vinkeln vars cosinus är x. Med andra ord, om cos(θ) = x, då θ = arccos(x). Denna kalkylator hjälper dig att snabbt hitta den vinkeln både i grader och radianer för vilket giltigt cosinusvärde som helst mellan -1 och 1.",
-          "paragraph2": "För att använda kalkylatorn, ange ett värde för x i intervallet [-1, 1]. Verktyget beräknar sedan θ = arccos(x) i radianer med hjälp av den inbyggda inversa cosinusfunktionen och konverterar det resultatet till grader med hjälp av formeln θ° = θ × 180 / π. Båda värdena visas med hög precision så att du kan använda dem i trigonometri-, geometri-, fysik- eller teknikproblem.",
-          "paragraph3": "Arccos-funktionen är särskilt användbar när du känner till cosinus av en vinkel men behöver vinkeln själv. Vanliga användningsfall inkluderar att hitta vinklar i rätvinkliga trianglar, beräkna vinklar mellan vektorer med hjälp av skalärprodukten, analysera periodiska signaler och lösa trigonometriska ekvationer. Eftersom cosinus inte är injektiv över alla reella tal, är huvudvärdet av arccos definierat i intervallet [0, π] radianer (0° till 180°).",
-          "paragraph4": "Vår arccos kalkylator validerar att din inmatning ligger inom rätt domän [-1, 1] och returnerar sedan exakta resultat både i radianer och grader. Detta sparar dig tid jämfört med manuella beräkningar och minskar risken för fel. Oavsett om du är en student som lär sig trigonometri, en lärare som förbereder exempel eller en professionell som arbetar med vinklar, ger detta verktyg snabba, pålitliga inversa cosinusberäkningar.",
-          "exampleHeading": "Exempel: Användning av Arccos Kalkylatorn",
-          "exampleText": "Antag att du vet att cos(θ) = 0,5 och du vill hitta θ. Ange x = 0,5 i kalkylatorn. Kalkylatorn beräknar θ = arccos(0,5) ≈ 1,047198 rad. Konvertering till grader ger θ° ≈ 60°. Detta betyder att en vinkel på 60° har en cosinus på 0,5. På samma sätt, om cos(θ) = -1, då θ = arccos(-1) = π rad = 180°, och om cos(θ) = 1, då θ = arccos(1) = 0 rad = 0°."
+          "paragraph1": "Arccos (invers cosinus) funktionen, skriven som arccos(x) eller acos(x), ger dig vinkeln vars cosinus är x. Med andra ord, om cos(θ) = x, då är θ = arccos(x). Denna kalkylator hjälper dig att snabbt hitta den vinkeln i grader och radianer för vilket giltigt cosinus värde som helst mellan -1 och 1, och ger generella lösningar som visar alla möjliga vinklar.",
+          "paragraph2": "För att använda kalkylatorn, ange ett värde för x i intervallet [-1, 1]. Verktyget beräknar θ = arccos(x) i radianer med hjälp av den inbyggda invers cosinus funktionen och konverterar resultatet till grader med formeln θ° = θ × 180 / π. Båda värdena visas med hög precision. Eftersom cosinus är en periodisk funktion visar kalkylatorn också generella lösningar: θ + k×360° (i grader) och θ + k×2π (i radianer), där k är vilket heltal som helst.",
+          "paragraph3": "Arccos funktionen är särskilt användbar när du känner cosinus av en vinkel men behöver vinkeln själv. Vanliga användningsfall inkluderar att hitta vinklar i rätvinkliga trianglar, lösa trigonometriska ekvationer, beräkna vinklar mellan vektorer, analysera vågfunktioner och arbeta med rotationsrörelse. Eftersom cosinus inte är en-till-en över alla reella tal, definieras huvudvärdet av arccos i intervallet [0, π] radianer (0° till 180°), men den generella lösningen inkluderar alla vinklar som skiljer sig med multiplar av 360° (eller 2π radianer).",
+          "paragraph4": "Vår arccos kalkylator validerar att din inmatning ligger i rätt domän [-1, 1] och returnerar sedan exakta resultat för radianer och grader tillsammans med de generella lösningsformlerna. Detta sparar dig tid jämfört med manuella beräkningar och hjälper dig att förstå den periodiska naturen hos trigonometriska funktioner. Oavsett om du är en student som lär sig trigonometri, en lärare som förbereder exempel eller en professionell som arbetar med vinklar, ger detta verktyg snabba, tillförlitliga invers cosinus beräkningar.",
+          "exampleHeading": "Exempel: Använda Arccos Kalkylatorn",
+          "exampleText": "Anta att du vet att cos(θ) = 0,5 och vill hitta θ. Ange x = 0,5 i kalkylatorn. Kalkylatorn beräknar θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Konvertering till grader ger θ° = 60°. De generella lösningarna är: θ = 60° + k×360° och θ = π/3 + k×2π rad, där k är vilket heltal som helst. Detta betyder att vinklarna 60°, 420°, -300° osv. alla har en cosinus på 0,5. På samma sätt, om cos(θ) = 1, då är θ = arccos(1) = 0° (eller 0 rad), med generella lösningar θ = 0° + k×360° och θ = 0 + k×2π rad."
         },
         "faq": {
           "heading": "Vanliga Frågor",
           "items": [
             {
               "question": "Vad är arccos?",
-              "answer": "Arccos (invers cosinus) är den inversa funktionen av cosinus. Om cos(θ) = x, då θ = arccos(x). Den returnerar vinkeln vars cosinus är x, vanligtvis given i radianer eller grader."
+              "answer": "Arccos (invers cosinus) är inversen av cosinus funktionen. Om cos(θ) = x, då är θ = arccos(x). Den returnerar vinkeln vars cosinus är x, vanligtvis given i radianer eller grader. Huvudvärdet är i intervallet [0°, 180°] eller [0, π] radianer."
             },
             {
-              "question": "Vad är domänen för arccos-funktionen?",
-              "answer": "Domänen för arccos(x) är alla reella värden x sådana att -1 ≤ x ≤ 1. Utanför detta intervall kan cosinus-funktionen inte producera sådana värden, så arccos är inte definierad för dem i reella tal."
+              "question": "Vad är definitionsmängden för arccos funktionen?",
+              "answer": "Definitionsmängden för arccos(x) är alla reella värden x sådana att -1 ≤ x ≤ 1. Utanför detta intervall kan cosinus funktionen inte producera sådana värden, så arccos är inte definierad för dem i reella tal."
             },
             {
-              "question": "Vad är intervallet för arccos?",
-              "answer": "Huvudintervallet för arccos(x) är [0, π] i radianer, vilket motsvarar [0°, 180°] i grader. Detta betyder att arccos alltid returnerar en vinkel mellan 0 och π radianer (0° och 180°)."
+              "question": "Vad är värdemängden för arccos?",
+              "answer": "Huvudvärdemängden för arccos(x) är [0, π] i radianer, vilket motsvarar [0°, 180°] i grader. Eftersom cosinus dock är periodisk inkluderar den generella lösningen alla vinklar θ + k×360° (eller θ + k×2π rad) där k är vilket heltal som helst."
             },
             {
-              "question": "Hur konverterar jag arccos från radianer till grader?",
-              "answer": "Om θ är i radianer kan du konvertera det till grader med hjälp av formeln θ° = θ × 180 / π. Vår kalkylator gör denna konvertering automatiskt och visar både radianer och grader."
+              "question": "Varför visar kalkylatorn generella lösningar?",
+              "answer": "Cosinus är en periodisk funktion med period 360° (2π radianer). Detta betyder att om cos(θ) = x, då är cos(θ + k×360°) = x för vilket heltal k som helst. Den generella lösningen visar alla möjliga vinklar som uppfyller ekvationen, inte bara huvudvärdet."
             },
             {
               "question": "Är denna arccos kalkylator gratis?",
-              "answer": "Ja, vår arccos kalkylator är helt gratis. Ingen registrering eller betalning krävs. Ange helt enkelt ett värde för x mellan -1 och 1 för att få vinkeln i radianer och grader."
+              "answer": "Ja, vår arccos kalkylator är helt gratis att använda. Ingen registrering eller betalning krävs. Ange bara ett värde för x mellan -1 och 1 för att få vinkeln i radianer och grader tillsammans med generella lösningar."
             }
           ]
         },
         "related": {
           "heading": "Relaterade Kalkylatorer",
-          "addition": "Additionskalkylator",
-          "additionDesc": "Addera hela tal och decimaler snabbt och exakt",
-          "percentage": "Procentkalkylator",
-          "percentageDesc": "Beräkna procentvärden, procentuell förändring och procentuella relationer",
-          "antilog": "Antilogaritm Kalkylator",
-          "antilogDesc": "Beräkna antilogaritmen (invers logaritm) av ett tal med vilken bas som helst"
+          "arcsin": "Arcsin Kalkylator",
+          "arcsinDesc": "Hitta invers sinus av ett värde och få vinkeln i grader och radianer",
+          "arctan": "Arctan Kalkylator",
+          "arctanDesc": "Hitta invers tangens av ett värde och få vinkeln i grader och radianer",
+          "percentage": "Procent Kalkylator",
+          "percentageDesc": "Beräkna procentvärden, procentförändringar och procentförhållanden"
         }
       }
     },
@@ -1046,67 +1045,6 @@
         }
       }
     },
-    "arccos": {
-      "title": "Arccos Kalkylator",
-      "description": "Arccos(x) kalkylator för att hitta arcus cosinus av ett värde och få vinkeln i grader och radianer med generella lösningar.",
-      "x": "Värde (x, cosinus värde)",
-      "calculate": "Beräkna",
-      "reset": "Återställ",
-      "result": "Resultat",
-      "angleDegrees": "Vinkel i grader",
-      "angleRadians": "Vinkel i radianer",
-      "calculationHeading": "Beräkning",
-      "generalSolutionDegrees": "(k=..-1,0,1,..)",
-      "generalSolutionRadians": "(k=..-1,0,1,..)",
-      "seo": {
-        "title": "Arccos Kalkylator – Invers Cosinus (acos) i Grader och Radianer",
-        "description": "Gratis arccos kalkylator för att hitta invers cosinus (acos) av ett värde och få vinkeln i grader och radianer med generella lösningar. Stöder värden i domänen [-1, 1] med steg-för-steg förklaring. Idealisk för trigonometri, geometri och ingenjörsberäkningar.",
-        "keywords": "arccos kalkylator, invers cosinus kalkylator, acos kalkylator, cos invers kalkylator, arccos i grader, arccos i radianer, trigonometrisk kalkylator, vinkel från cosinus",
-        "content": {
-          "heading": "Hur man Använder Arccos (Invers Cosinus) Kalkylatorn",
-          "paragraph1": "Arccos (invers cosinus) funktionen, skriven som arccos(x) eller acos(x), ger dig vinkeln vars cosinus är x. Med andra ord, om cos(θ) = x, då är θ = arccos(x). Denna kalkylator hjälper dig att snabbt hitta den vinkeln i grader och radianer för vilket giltigt cosinus värde som helst mellan -1 och 1, och ger generella lösningar som visar alla möjliga vinklar.",
-          "paragraph2": "För att använda kalkylatorn, ange ett värde för x i intervallet [-1, 1]. Verktyget beräknar θ = arccos(x) i radianer med hjälp av den inbyggda invers cosinus funktionen och konverterar resultatet till grader med formeln θ° = θ × 180 / π. Båda värdena visas med hög precision. Eftersom cosinus är en periodisk funktion visar kalkylatorn också generella lösningar: θ + k×360° (i grader) och θ + k×2π (i radianer), där k är vilket heltal som helst.",
-          "paragraph3": "Arccos funktionen är särskilt användbar när du känner cosinus av en vinkel men behöver vinkeln själv. Vanliga användningsfall inkluderar att hitta vinklar i rätvinkliga trianglar, lösa trigonometriska ekvationer, beräkna vinklar mellan vektorer, analysera vågfunktioner och arbeta med rotationsrörelse. Eftersom cosinus inte är en-till-en över alla reella tal, definieras huvudvärdet av arccos i intervallet [0, π] radianer (0° till 180°), men den generella lösningen inkluderar alla vinklar som skiljer sig med multiplar av 360° (eller 2π radianer).",
-          "paragraph4": "Vår arccos kalkylator validerar att din inmatning ligger i rätt domän [-1, 1] och returnerar sedan exakta resultat för radianer och grader tillsammans med de generella lösningsformlerna. Detta sparar dig tid jämfört med manuella beräkningar och hjälper dig att förstå den periodiska naturen hos trigonometriska funktioner. Oavsett om du är en student som lär sig trigonometri, en lärare som förbereder exempel eller en professionell som arbetar med vinklar, ger detta verktyg snabba, tillförlitliga invers cosinus beräkningar.",
-          "exampleHeading": "Exempel: Använda Arccos Kalkylatorn",
-          "exampleText": "Anta att du vet att cos(θ) = 0,5 och vill hitta θ. Ange x = 0,5 i kalkylatorn. Kalkylatorn beräknar θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Konvertering till grader ger θ° = 60°. De generella lösningarna är: θ = 60° + k×360° och θ = π/3 + k×2π rad, där k är vilket heltal som helst. Detta betyder att vinklarna 60°, 420°, -300° osv. alla har en cosinus på 0,5. På samma sätt, om cos(θ) = 1, då är θ = arccos(1) = 0° (eller 0 rad), med generella lösningar θ = 0° + k×360° och θ = 0 + k×2π rad."
-        },
-        "faq": {
-          "heading": "Vanliga Frågor",
-          "items": [
-            {
-              "question": "Vad är arccos?",
-              "answer": "Arccos (invers cosinus) är inversen av cosinus funktionen. Om cos(θ) = x, då är θ = arccos(x). Den returnerar vinkeln vars cosinus är x, vanligtvis given i radianer eller grader. Huvudvärdet är i intervallet [0°, 180°] eller [0, π] radianer."
-            },
-            {
-              "question": "Vad är definitionsmängden för arccos funktionen?",
-              "answer": "Definitionsmängden för arccos(x) är alla reella värden x sådana att -1 ≤ x ≤ 1. Utanför detta intervall kan cosinus funktionen inte producera sådana värden, så arccos är inte definierad för dem i reella tal."
-            },
-            {
-              "question": "Vad är värdemängden för arccos?",
-              "answer": "Huvudvärdemängden för arccos(x) är [0, π] i radianer, vilket motsvarar [0°, 180°] i grader. Eftersom cosinus dock är periodisk inkluderar den generella lösningen alla vinklar θ + k×360° (eller θ + k×2π rad) där k är vilket heltal som helst."
-            },
-            {
-              "question": "Varför visar kalkylatorn generella lösningar?",
-              "answer": "Cosinus är en periodisk funktion med period 360° (2π radianer). Detta betyder att om cos(θ) = x, då är cos(θ + k×360°) = x för vilket heltal k som helst. Den generella lösningen visar alla möjliga vinklar som uppfyller ekvationen, inte bara huvudvärdet."
-            },
-            {
-              "question": "Är denna arccos kalkylator gratis?",
-              "answer": "Ja, vår arccos kalkylator är helt gratis att använda. Ingen registrering eller betalning krävs. Ange bara ett värde för x mellan -1 och 1 för att få vinkeln i radianer och grader tillsammans med generella lösningar."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Relaterade Kalkylatorer",
-          "arcsin": "Arcsin Kalkylator",
-          "arcsinDesc": "Hitta invers sinus av ett värde och få vinkeln i grader och radianer",
-          "arctan": "Arctan Kalkylator",
-          "arctanDesc": "Hitta invers tangens av ett värde och få vinkeln i grader och radianer",
-          "percentage": "Procent Kalkylator",
-          "percentageDesc": "Beräkna procentvärden, procentförändringar och procentförhållanden"
-        }
-      }
-    },
     "arcsin": {
       "title": "Arcsin Kalkylator",
       "description": "Arcsin(x) kalkylator för att hitta den inversa sinusen av ett värde och få vinkeln i grader och radianer med allmänna lösningar.",
@@ -1166,7 +1104,9 @@
           "antilog": "Antilogaritm Kalkylator",
           "antilogDesc": "Beräkna antilogaritmen (invers logaritm) av ett tal med vilken bas som helst"
         }
-      }
+      },
+      "enterValue": "Ange ett värde för att se resultatet",
+      "clickCalculate": "Klicka på Beräkna för att se resultatet"
     },
     "arctan": {
       "title": "Arctan Kalkylator",
@@ -1227,7 +1167,9 @@
           "percentage": "Procent Kalkylator",
           "percentageDesc": "Beräkna procentvärden, procentuell förändring och procentuella relationer"
         }
-      }
+      },
+      "enterValue": "Ange ett värde för att se resultatet",
+      "clickCalculate": "Klicka på Beräkna för att se resultatet"
     },
     "average": {
       "title": "Genomsnitt Kalkylator",
@@ -1291,7 +1233,9 @@
           "addingFractions": "Lägga Till Bråk Kalkylator",
           "addingFractionsDesc": "Lägg till och förenkla bråk steg för steg"
         }
-      }
+      },
+      "enterNumbers": "Ange siffror för att se resultatet",
+      "clickCalculate": "Klicka på Beräkna för att se resultatet"
     },
     "commonFactors": {
       "title": "Gemensamma Faktorer Kalkylator",
@@ -4518,12 +4462,30 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            {"question": "Vad är formeln för kinetisk energi?", "answer": "Formel: KE = ½ × m × v², m i kg, v i m/s. Resultat i joule (J). T.ex. 2 kg vid 3 m/s: KE = 9 J."},
-            {"question": "Varför är hastighet i kvadrat?", "answer": "Arbetet för att accelerera ett föremål från vila till hastighet v är proportionellt mot v². Dubbel hastighet ger fyrdubbel KE – därför spelar hastighetsgränser och bromssträcka stor roll."},
-            {"question": "Vilka enheter använder kalkylatorn?", "answer": "Massa i kilogram (kg), hastighet i m/s. Resultat i joule (J). Gram: dividera med 1000. km/h: multiplicera med 1000/3600 ≈ 0,278 för m/s."},
-            {"question": "Kan kinetisk energi vara negativ?", "answer": "Nej. I KE = ½mv² är massa positiv och v² alltid icke-negativt, så KE är aldrig negativ. Skalär KE är ½mv² där v är hastighetens storlek."},
-            {"question": "Hur hänger KE ihop med bromssträcka?", "answer": "Arbetet för att stoppa är lika med KE. Bromssträckan är proportionell mot KE, alltså v². Dubbel hastighet ger fyrdubbel bromssträcka vid samma bromskraft."},
-            {"question": "Är denna kinetisk energi-kalkylator gratis?", "answer": "Ja. Kalkylatorn är gratis utan registrering eller betalning. Ange massa i kg och hastighet i m/s för KE i joule och formeln. För studenter, lärare och yrkesverksamma."}
+            {
+              "question": "Vad är formeln för kinetisk energi?",
+              "answer": "Formel: KE = ½ × m × v², m i kg, v i m/s. Resultat i joule (J). T.ex. 2 kg vid 3 m/s: KE = 9 J."
+            },
+            {
+              "question": "Varför är hastighet i kvadrat?",
+              "answer": "Arbetet för att accelerera ett föremål från vila till hastighet v är proportionellt mot v². Dubbel hastighet ger fyrdubbel KE – därför spelar hastighetsgränser och bromssträcka stor roll."
+            },
+            {
+              "question": "Vilka enheter använder kalkylatorn?",
+              "answer": "Massa i kilogram (kg), hastighet i m/s. Resultat i joule (J). Gram: dividera med 1000. km/h: multiplicera med 1000/3600 ≈ 0,278 för m/s."
+            },
+            {
+              "question": "Kan kinetisk energi vara negativ?",
+              "answer": "Nej. I KE = ½mv² är massa positiv och v² alltid icke-negativt, så KE är aldrig negativ. Skalär KE är ½mv² där v är hastighetens storlek."
+            },
+            {
+              "question": "Hur hänger KE ihop med bromssträcka?",
+              "answer": "Arbetet för att stoppa är lika med KE. Bromssträckan är proportionell mot KE, alltså v². Dubbel hastighet ger fyrdubbel bromssträcka vid samma bromskraft."
+            },
+            {
+              "question": "Är denna kinetisk energi-kalkylator gratis?",
+              "answer": "Ja. Kalkylatorn är gratis utan registrering eller betalning. Ange massa i kg och hastighet i m/s för KE i joule och formeln. För studenter, lärare och yrkesverksamma."
+            }
           ]
         },
         "related": {
@@ -4694,11 +4656,26 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            {"question": "Vad är faktorialen av 0?", "answer": "0! = 1 per definition. Denna konvention gör att många formler (t.ex. binomialkoefficienter, Taylorserier) fungerar korrekt för n = 0."},
-            {"question": "Varför är inmatningen begränsad till 170?", "answer": "Faktorialer växer extremt snabbt. 171! är ett tal med över 300 siffror, vilket överskrider typisk visning. För n från 0 till 170 visar kalkylatorn det exakta heltalsresultatet."},
-            {"question": "Till vad används faktorial?", "answer": "Faktorialer används inom kombinatorik (permutationer: n! sätt att ordna n objekt), kombinationer (binomialkoefficienter), sannolikhet och analys (t.ex. Taylorserier för e^x)."},
-            {"question": "Kan faktorialer vara negativa eller decimaler?", "answer": "Standardfaktorialen n! definieras endast för icke-negativa heltal n. Gammafunktionen Γ(z) är en utvidgning sådan att Γ(n+1) = n! för positiva heltal n och tillåter icke-heltalsvärden."},
-            {"question": "Är denna faktoriellräknare gratis?", "answer": "Ja. Kalkylatorn är gratis att använda utan registrering. Ange ett tal från 0 till 170 för att få n! och expansion när tillämpligt."}
+            {
+              "question": "Vad är faktorialen av 0?",
+              "answer": "0! = 1 per definition. Denna konvention gör att många formler (t.ex. binomialkoefficienter, Taylorserier) fungerar korrekt för n = 0."
+            },
+            {
+              "question": "Varför är inmatningen begränsad till 170?",
+              "answer": "Faktorialer växer extremt snabbt. 171! är ett tal med över 300 siffror, vilket överskrider typisk visning. För n från 0 till 170 visar kalkylatorn det exakta heltalsresultatet."
+            },
+            {
+              "question": "Till vad används faktorial?",
+              "answer": "Faktorialer används inom kombinatorik (permutationer: n! sätt att ordna n objekt), kombinationer (binomialkoefficienter), sannolikhet och analys (t.ex. Taylorserier för e^x)."
+            },
+            {
+              "question": "Kan faktorialer vara negativa eller decimaler?",
+              "answer": "Standardfaktorialen n! definieras endast för icke-negativa heltal n. Gammafunktionen Γ(z) är en utvidgning sådan att Γ(n+1) = n! för positiva heltal n och tillåter icke-heltalsvärden."
+            },
+            {
+              "question": "Är denna faktoriellräknare gratis?",
+              "answer": "Ja. Kalkylatorn är gratis att använda utan registrering. Ange ett tal från 0 till 170 för att få n! och expansion när tillämpligt."
+            }
           ]
         },
         "related": {
@@ -5457,11 +5434,26 @@
         "faq": {
           "heading": "Vanliga frågor",
           "items": [
-            {"question": "Vad är lång multiplikation?", "answer": "Lång multiplikation är en stegvis metod: multiplicera det första talet med varje siffra i det andra, flytta delprodukterna enligt platsvärde och addera."},
-            {"question": "Vad är delprodukter?", "answer": "Delprodukter är multiplikanden multiplicerad med varje siffra i multiplikatorn. För 123 × 45: 123 × 5 = 615 och 123 × 4 = 492 (förskjuten 4920)."},
-            {"question": "Fungerar det för decimaltal?", "answer": "Denna kalkylator är endast för heltal. För decimaltal, multiplicera först som heltal och placera decimaltecknet enligt antalet decimaler i faktorerna."},
-            {"question": "Fungerar det för stora tal?", "answer": "Ja. Du kan ange mycket stora heltal; kalkylatorn beräknar produkten och alla delprodukter."},
-            {"question": "Är kalkylatorn gratis?", "answer": "Ja. Vår kalkylator för lång multiplikation är gratis, utan registrering. Ange två heltal för produkt och steg."}
+            {
+              "question": "Vad är lång multiplikation?",
+              "answer": "Lång multiplikation är en stegvis metod: multiplicera det första talet med varje siffra i det andra, flytta delprodukterna enligt platsvärde och addera."
+            },
+            {
+              "question": "Vad är delprodukter?",
+              "answer": "Delprodukter är multiplikanden multiplicerad med varje siffra i multiplikatorn. För 123 × 45: 123 × 5 = 615 och 123 × 4 = 492 (förskjuten 4920)."
+            },
+            {
+              "question": "Fungerar det för decimaltal?",
+              "answer": "Denna kalkylator är endast för heltal. För decimaltal, multiplicera först som heltal och placera decimaltecknet enligt antalet decimaler i faktorerna."
+            },
+            {
+              "question": "Fungerar det för stora tal?",
+              "answer": "Ja. Du kan ange mycket stora heltal; kalkylatorn beräknar produkten och alla delprodukter."
+            },
+            {
+              "question": "Är kalkylatorn gratis?",
+              "answer": "Ja. Vår kalkylator för lång multiplikation är gratis, utan registrering. Ange två heltal för produkt och steg."
+            }
           ]
         },
         "related": {

@@ -862,7 +862,7 @@
     },
     "arccos": {
       "title": "Kalkulator Arccos",
-      "description": "Kalkulator arccos(x) do znajdowania odwrotnego cosinusa wartości i uzyskiwania kąta w stopniach i radianach.",
+      "description": "Kalkulator arccos(x) do znajdowania odwrotnego cosinusa wartości i uzyskania kąta w stopniach i radianach z rozwiązaniami ogólnymi.",
       "x": "Wartość (x, wartość cosinusa)",
       "calculate": "Oblicz",
       "reset": "Resetuj",
@@ -870,55 +870,54 @@
       "angleDegrees": "Kąt w stopniach",
       "angleRadians": "Kąt w radianach",
       "calculationHeading": "Obliczenie",
-      "calculationIntro": "Dla podanej wartości cosinusa",
-      "calculationStepRadians": "najpierw obliczamy kąt w radianach używając arccos(x). Wynik to θ = arccos(x) ≈ {radians} rad.",
-      "calculationStepDegrees": "Następnie konwertujemy radiany na stopnie używając θ° = θ × 180 / π, co daje w przybliżeniu {degrees}°.",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
       "seo": {
-        "title": "Kalkulator Arccos – Odwrotny Cosinus (acos) w Stopniach i Radianach",
-        "description": "Darmowy kalkulator arccos do znajdowania odwrotnego cosinusa (acos) wartości i uzyskiwania kąta zarówno w stopniach, jak i radianach. Obsługuje wartości w dziedzinie [-1, 1] z wyjaśnieniem krok po kroku. Idealny do trygonometrii, geometrii i obliczeń inżynierskich.",
-        "keywords": "kalkulator arccos, kalkulator odwrotnego cosinusa, kalkulator acos, kalkulator odwrotny cosinus, arccos w stopniach, arccos w radianach, kalkulator trygonometrii, kąt z cosinusa",
+        "title": "Kalkulator Arccos – Cosinus Odwrotny (acos) w Stopniach i Radianach",
+        "description": "Darmowy kalkulator arccos do znajdowania odwrotnego cosinusa (acos) wartości i uzyskania kąta w stopniach i radianach z rozwiązaniami ogólnymi. Obsługuje wartości w dziedzinie [-1, 1] z wyjaśnieniem krok po kroku. Idealny do trygonometrii, geometrii i obliczeń inżynierskich.",
+        "keywords": "kalkulator arccos, kalkulator cosinusa odwrotnego, kalkulator acos, kalkulator cos odwrotny, arccos w stopniach, arccos w radianach, kalkulator trygonometryczny, kąt z cosinusa",
         "content": {
-          "heading": "Jak Używać Kalkulatora Arccos (Odwrotny Cosinus)",
-          "paragraph1": "Funkcja arccos (odwrotny cosinus), zapisana jako arccos(x) lub acos(x), daje kąt, którego cosinus wynosi x. Innymi słowy, jeśli cos(θ) = x, to θ = arccos(x). Ten kalkulator pomaga szybko znaleźć ten kąt zarówno w stopniach, jak i radianach dla dowolnej prawidłowej wartości cosinusa między -1 a 1.",
-          "paragraph2": "Aby użyć kalkulatora, wprowadź wartość dla x w zakresie [-1, 1]. Narzędzie następnie oblicza θ = arccos(x) w radianach używając wbudowanej funkcji odwrotnego cosinusa i konwertuje ten wynik na stopnie używając wzoru θ° = θ × 180 / π. Obie wartości są wyświetlane z wysoką precyzją, aby można było ich używać w problemach trygonometrycznych, geometrycznych, fizycznych lub inżynierskich.",
-          "paragraph3": "Funkcja arccos jest szczególnie przydatna, gdy znasz cosinus kąta, ale potrzebujesz samego kąta. Typowe zastosowania obejmują znajdowanie kątów w trójkątach prostokątnych, obliczanie kątów między wektorami używając iloczynu skalarnego, analizowanie sygnałów okresowych i rozwiązywanie równań trygonometrycznych. Ponieważ cosinus nie jest różnowartościowy dla wszystkich liczb rzeczywistych, wartość główna arccos jest zdefiniowana w przedziale [0, π] radianów (0° do 180°).",
-          "paragraph4": "Nasz kalkulator arccos sprawdza, czy Twoje wejście mieści się w prawidłowej dziedzinie [-1, 1], a następnie zwraca dokładne wyniki zarówno w radianach, jak i stopniach. To oszczędza czas w porównaniu z obliczeniami ręcznymi i zmniejsza ryzyko błędów. Niezależnie od tego, czy jesteś studentem uczącym się trygonometrii, nauczycielem przygotowującym przykłady, czy profesjonalistą pracującym z kątami, to narzędzie zapewnia szybkie, niezawodne obliczenia odwrotnego cosinusa.",
+          "heading": "Jak Używać Kalkulatora Arccos (Cosinus Odwrotny)",
+          "paragraph1": "Funkcja arccos (cosinus odwrotny), zapisywana jako arccos(x) lub acos(x), podaje kąt, którego cosinus wynosi x. Innymi słowy, jeśli cos(θ) = x, to θ = arccos(x). Ten kalkulator pomaga szybko znaleźć ten kąt w stopniach i radianach dla dowolnej prawidłowej wartości cosinusa między -1 a 1 oraz podaje rozwiązania ogólne pokazujące wszystkie możliwe kąty.",
+          "paragraph2": "Aby użyć kalkulatora, wprowadź wartość x w zakresie [-1, 1]. Narzędzie oblicza θ = arccos(x) w radianach przy użyciu wbudowanej funkcji odwrotnego cosinusa i konwertuje wynik na stopnie za pomocą wzoru θ° = θ × 180 / π. Obie wartości są wyświetlane z wysoką precyzją. Ponieważ cosinus jest funkcją okresową, kalkulator pokazuje również rozwiązania ogólne: θ + k×360° (w stopniach) i θ + k×2π (w radianach), gdzie k jest dowolną liczbą całkowitą.",
+          "paragraph3": "Funkcja arccos jest szczególnie przydatna, gdy znasz cosinus kąta, ale potrzebujesz samego kąta. Typowe przypadki użycia obejmują znajdowanie kątów w trójkątach prostokątnych, rozwiązywanie równań trygonometrycznych, obliczanie kątów między wektorami, analizę funkcji falowych i pracę z ruchem obrotowym. Ponieważ cosinus nie jest funkcją wzajemnie jednoznaczną dla wszystkich liczb rzeczywistych, wartość główna arccos jest zdefiniowana w przedziale [0, π] radianów (0° do 180°), ale rozwiązanie ogólne obejmuje wszystkie kąty różniące się wielokrotnościami 360° (lub 2π radianów).",
+          "paragraph4": "Nasz kalkulator arccos sprawdza, czy wprowadzone dane mieszczą się w poprawnej dziedzinie [-1, 1], a następnie zwraca dokładne wyniki dla radianów i stopni wraz ze wzorami rozwiązań ogólnych. Oszczędza to czas w porównaniu z ręcznymi obliczeniami i pomaga zrozumieć okresowy charakter funkcji trygonometrycznych. Niezależnie od tego, czy jesteś uczniem uczącym się trygonometrii, nauczycielem przygotowującym przykłady, czy profesjonalistą pracującym z kątami, to narzędzie zapewnia szybkie, niezawodne obliczenia odwrotnego cosinusa.",
           "exampleHeading": "Przykład: Użycie Kalkulatora Arccos",
-          "exampleText": "Załóżmy, że wiesz, że cos(θ) = 0,5 i chcesz znaleźć θ. Wprowadź x = 0,5 do kalkulatora. Kalkulator oblicza θ = arccos(0,5) ≈ 1,047198 rad. Konwersja na stopnie daje θ° ≈ 60°. Oznacza to, że kąt 60° ma cosinus 0,5. Podobnie, jeśli cos(θ) = -1, to θ = arccos(-1) = π rad = 180°, a jeśli cos(θ) = 1, to θ = arccos(1) = 0 rad = 0°."
+          "exampleText": "Załóżmy, że wiesz, że cos(θ) = 0,5 i chcesz znaleźć θ. Wprowadź x = 0,5 do kalkulatora. Kalkulator oblicza θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Konwersja na stopnie daje θ° = 60°. Rozwiązania ogólne to: θ = 60° + k×360° i θ = π/3 + k×2π rad, gdzie k jest dowolną liczbą całkowitą. Oznacza to, że kąty 60°, 420°, -300° itd. mają wszystkie cosinus równy 0,5. Podobnie, jeśli cos(θ) = 1, to θ = arccos(1) = 0° (lub 0 rad), z rozwiązaniami ogólnymi θ = 0° + k×360° i θ = 0 + k×2π rad."
         },
         "faq": {
-          "heading": "Często Zadawane Pytania",
+          "heading": "Najczęściej Zadawane Pytania",
           "items": [
             {
               "question": "Co to jest arccos?",
-              "answer": "Arccos (odwrotny cosinus) jest funkcją odwrotną cosinusa. Jeśli cos(θ) = x, to θ = arccos(x). Zwraca kąt, którego cosinus wynosi x, zwykle podany w radianach lub stopniach."
+              "answer": "Arccos (cosinus odwrotny) jest odwrotnością funkcji cosinus. Jeśli cos(θ) = x, to θ = arccos(x). Zwraca kąt, którego cosinus wynosi x, zwykle podawany w radianach lub stopniach. Wartość główna znajduje się w zakresie [0°, 180°] lub [0, π] radianów."
             },
             {
-              "question": "Jaki jest dziedzina funkcji arccos?",
-              "answer": "Dziedzina arccos(x) to wszystkie wartości rzeczywiste x takie, że -1 ≤ x ≤ 1. Poza tym przedziałem funkcja cosinus nie może wytworzyć takich wartości, więc arccos nie jest dla nich zdefiniowany w liczbach rzeczywistych."
+              "question": "Jaka jest dziedzina funkcji arccos?",
+              "answer": "Dziedziną arccos(x) są wszystkie wartości rzeczywiste x takie, że -1 ≤ x ≤ 1. Poza tym przedziałem funkcja cosinus nie może produkować takich wartości, więc arccos nie jest dla nich zdefiniowana w liczbach rzeczywistych."
             },
             {
               "question": "Jaki jest zakres arccos?",
-              "answer": "Główny zakres arccos(x) to [0, π] w radianach, co odpowiada [0°, 180°] w stopniach. Oznacza to, że arccos zawsze zwraca kąt między 0 a π radianów (0° i 180°)."
+              "answer": "Główny zakres arccos(x) to [0, π] w radianach, co odpowiada [0°, 180°] w stopniach. Jednakże, ponieważ cosinus jest okresowy, rozwiązanie ogólne obejmuje wszystkie kąty θ + k×360° (lub θ + k×2π rad), gdzie k jest dowolną liczbą całkowitą."
             },
             {
-              "question": "Jak przekonwertować arccos z radianów na stopnie?",
-              "answer": "Jeśli θ jest w radianach, możesz przekonwertować go na stopnie używając wzoru θ° = θ × 180 / π. Nasz kalkulator wykonuje tę konwersję automatycznie i wyświetla zarówno radiany, jak i stopnie."
+              "question": "Dlaczego kalkulator pokazuje rozwiązania ogólne?",
+              "answer": "Cosinus jest funkcją okresową z okresem 360° (2π radianów). Oznacza to, że jeśli cos(θ) = x, to cos(θ + k×360°) = x dla dowolnej liczby całkowitej k. Rozwiązanie ogólne pokazuje wszystkie możliwe kąty spełniające równanie, a nie tylko wartość główną."
             },
             {
               "question": "Czy ten kalkulator arccos jest darmowy?",
-              "answer": "Tak, nasz kalkulator arccos jest całkowicie darmowy. Nie wymaga rejestracji ani płatności. Po prostu wprowadź wartość x między -1 a 1, aby uzyskać kąt w radianach i stopniach."
+              "answer": "Tak, nasz kalkulator arccos jest całkowicie darmowy. Nie jest wymagana rejestracja ani płatność. Wystarczy wprowadzić wartość x między -1 a 1, aby uzyskać kąt w radianach i stopniach wraz z rozwiązaniami ogólnymi."
             }
           ]
         },
         "related": {
           "heading": "Powiązane Kalkulatory",
-          "addition": "Kalkulator Dodawania",
-          "additionDesc": "Dodaj liczby całkowite i dziesiętne szybko i dokładnie",
+          "arcsin": "Kalkulator Arcsin",
+          "arcsinDesc": "Znajdź odwrotny sinus wartości i uzyskaj kąt w stopniach i radianach",
+          "arctan": "Kalkulator Arctan",
+          "arctanDesc": "Znajdź odwrotny tangens wartości i uzyskaj kąt w stopniach i radianach",
           "percentage": "Kalkulator Procentów",
-          "percentageDesc": "Oblicz wartości procentowe, zmianę procentową i relacje procentowe",
-          "antilog": "Kalkulator Antylogarytmu",
-          "antilogDesc": "Oblicz antylogarytm (logarytm odwrotny) liczby z dowolną podstawą"
+          "percentageDesc": "Oblicz wartości procentowe, zmiany procentowe i relacje procentowe"
         }
       }
     },
@@ -1046,67 +1045,6 @@
         }
       }
     },
-    "arccos": {
-      "title": "Kalkulator Arccos",
-      "description": "Kalkulator arccos(x) do znajdowania odwrotnego cosinusa wartości i uzyskania kąta w stopniach i radianach z rozwiązaniami ogólnymi.",
-      "x": "Wartość (x, wartość cosinusa)",
-      "calculate": "Oblicz",
-      "reset": "Resetuj",
-      "result": "Wynik",
-      "angleDegrees": "Kąt w stopniach",
-      "angleRadians": "Kąt w radianach",
-      "calculationHeading": "Obliczenie",
-      "generalSolutionDegrees": "(k=..-1,0,1,..)",
-      "generalSolutionRadians": "(k=..-1,0,1,..)",
-      "seo": {
-        "title": "Kalkulator Arccos – Cosinus Odwrotny (acos) w Stopniach i Radianach",
-        "description": "Darmowy kalkulator arccos do znajdowania odwrotnego cosinusa (acos) wartości i uzyskania kąta w stopniach i radianach z rozwiązaniami ogólnymi. Obsługuje wartości w dziedzinie [-1, 1] z wyjaśnieniem krok po kroku. Idealny do trygonometrii, geometrii i obliczeń inżynierskich.",
-        "keywords": "kalkulator arccos, kalkulator cosinusa odwrotnego, kalkulator acos, kalkulator cos odwrotny, arccos w stopniach, arccos w radianach, kalkulator trygonometryczny, kąt z cosinusa",
-        "content": {
-          "heading": "Jak Używać Kalkulatora Arccos (Cosinus Odwrotny)",
-          "paragraph1": "Funkcja arccos (cosinus odwrotny), zapisywana jako arccos(x) lub acos(x), podaje kąt, którego cosinus wynosi x. Innymi słowy, jeśli cos(θ) = x, to θ = arccos(x). Ten kalkulator pomaga szybko znaleźć ten kąt w stopniach i radianach dla dowolnej prawidłowej wartości cosinusa między -1 a 1 oraz podaje rozwiązania ogólne pokazujące wszystkie możliwe kąty.",
-          "paragraph2": "Aby użyć kalkulatora, wprowadź wartość x w zakresie [-1, 1]. Narzędzie oblicza θ = arccos(x) w radianach przy użyciu wbudowanej funkcji odwrotnego cosinusa i konwertuje wynik na stopnie za pomocą wzoru θ° = θ × 180 / π. Obie wartości są wyświetlane z wysoką precyzją. Ponieważ cosinus jest funkcją okresową, kalkulator pokazuje również rozwiązania ogólne: θ + k×360° (w stopniach) i θ + k×2π (w radianach), gdzie k jest dowolną liczbą całkowitą.",
-          "paragraph3": "Funkcja arccos jest szczególnie przydatna, gdy znasz cosinus kąta, ale potrzebujesz samego kąta. Typowe przypadki użycia obejmują znajdowanie kątów w trójkątach prostokątnych, rozwiązywanie równań trygonometrycznych, obliczanie kątów między wektorami, analizę funkcji falowych i pracę z ruchem obrotowym. Ponieważ cosinus nie jest funkcją wzajemnie jednoznaczną dla wszystkich liczb rzeczywistych, wartość główna arccos jest zdefiniowana w przedziale [0, π] radianów (0° do 180°), ale rozwiązanie ogólne obejmuje wszystkie kąty różniące się wielokrotnościami 360° (lub 2π radianów).",
-          "paragraph4": "Nasz kalkulator arccos sprawdza, czy wprowadzone dane mieszczą się w poprawnej dziedzinie [-1, 1], a następnie zwraca dokładne wyniki dla radianów i stopni wraz ze wzorami rozwiązań ogólnych. Oszczędza to czas w porównaniu z ręcznymi obliczeniami i pomaga zrozumieć okresowy charakter funkcji trygonometrycznych. Niezależnie od tego, czy jesteś uczniem uczącym się trygonometrii, nauczycielem przygotowującym przykłady, czy profesjonalistą pracującym z kątami, to narzędzie zapewnia szybkie, niezawodne obliczenia odwrotnego cosinusa.",
-          "exampleHeading": "Przykład: Użycie Kalkulatora Arccos",
-          "exampleText": "Załóżmy, że wiesz, że cos(θ) = 0,5 i chcesz znaleźć θ. Wprowadź x = 0,5 do kalkulatora. Kalkulator oblicza θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Konwersja na stopnie daje θ° = 60°. Rozwiązania ogólne to: θ = 60° + k×360° i θ = π/3 + k×2π rad, gdzie k jest dowolną liczbą całkowitą. Oznacza to, że kąty 60°, 420°, -300° itd. mają wszystkie cosinus równy 0,5. Podobnie, jeśli cos(θ) = 1, to θ = arccos(1) = 0° (lub 0 rad), z rozwiązaniami ogólnymi θ = 0° + k×360° i θ = 0 + k×2π rad."
-        },
-        "faq": {
-          "heading": "Najczęściej Zadawane Pytania",
-          "items": [
-            {
-              "question": "Co to jest arccos?",
-              "answer": "Arccos (cosinus odwrotny) jest odwrotnością funkcji cosinus. Jeśli cos(θ) = x, to θ = arccos(x). Zwraca kąt, którego cosinus wynosi x, zwykle podawany w radianach lub stopniach. Wartość główna znajduje się w zakresie [0°, 180°] lub [0, π] radianów."
-            },
-            {
-              "question": "Jaka jest dziedzina funkcji arccos?",
-              "answer": "Dziedziną arccos(x) są wszystkie wartości rzeczywiste x takie, że -1 ≤ x ≤ 1. Poza tym przedziałem funkcja cosinus nie może produkować takich wartości, więc arccos nie jest dla nich zdefiniowana w liczbach rzeczywistych."
-            },
-            {
-              "question": "Jaki jest zakres arccos?",
-              "answer": "Główny zakres arccos(x) to [0, π] w radianach, co odpowiada [0°, 180°] w stopniach. Jednakże, ponieważ cosinus jest okresowy, rozwiązanie ogólne obejmuje wszystkie kąty θ + k×360° (lub θ + k×2π rad), gdzie k jest dowolną liczbą całkowitą."
-            },
-            {
-              "question": "Dlaczego kalkulator pokazuje rozwiązania ogólne?",
-              "answer": "Cosinus jest funkcją okresową z okresem 360° (2π radianów). Oznacza to, że jeśli cos(θ) = x, to cos(θ + k×360°) = x dla dowolnej liczby całkowitej k. Rozwiązanie ogólne pokazuje wszystkie możliwe kąty spełniające równanie, a nie tylko wartość główną."
-            },
-            {
-              "question": "Czy ten kalkulator arccos jest darmowy?",
-              "answer": "Tak, nasz kalkulator arccos jest całkowicie darmowy. Nie jest wymagana rejestracja ani płatność. Wystarczy wprowadzić wartość x między -1 a 1, aby uzyskać kąt w radianach i stopniach wraz z rozwiązaniami ogólnymi."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Powiązane Kalkulatory",
-          "arcsin": "Kalkulator Arcsin",
-          "arcsinDesc": "Znajdź odwrotny sinus wartości i uzyskaj kąt w stopniach i radianach",
-          "arctan": "Kalkulator Arctan",
-          "arctanDesc": "Znajdź odwrotny tangens wartości i uzyskaj kąt w stopniach i radianach",
-          "percentage": "Kalkulator Procentów",
-          "percentageDesc": "Oblicz wartości procentowe, zmiany procentowe i relacje procentowe"
-        }
-      }
-    },
     "arcsin": {
       "title": "Kalkulator Arcsin",
       "description": "Kalkulator arcsin(x) do znajdowania odwrotnego sinusa wartości i uzyskiwania kąta w stopniach i radianach z rozwiązaniami ogólnymi.",
@@ -1166,7 +1104,9 @@
           "antilog": "Kalkulator Antylogarytmu",
           "antilogDesc": "Oblicz antylogarytm (logarytm odwrotny) liczby z dowolną podstawą"
         }
-      }
+      },
+      "enterValue": "Wprowadź wartość, aby zobaczyć wynik",
+      "clickCalculate": "Kliknij Oblicz, aby zobaczyć wynik"
     },
     "arctan": {
       "title": "Kalkulator Arctan",
@@ -1227,7 +1167,9 @@
           "percentage": "Kalkulator Procentów",
           "percentageDesc": "Oblicz wartości procentowe, zmianę procentową i relacje procentowe"
         }
-      }
+      },
+      "enterValue": "Wprowadź wartość, aby zobaczyć wynik",
+      "clickCalculate": "Kliknij Oblicz, aby zobaczyć wynik"
     },
     "average": {
       "title": "Kalkulator Średniej",
@@ -1291,7 +1233,9 @@
           "addingFractions": "Kalkulator Dodawania Ułamków",
           "addingFractionsDesc": "Dodawaj i upraszczaj ułamki krok po kroku"
         }
-      }
+      },
+      "enterNumbers": "Wprowadź liczby, aby zobaczyć wynik",
+      "clickCalculate": "Kliknij Oblicz, aby zobaczyć wynik"
     },
     "commonFactors": {
       "title": "Kalkulator Wspólnych Dzielników",
@@ -4518,12 +4462,30 @@
         "faq": {
           "heading": "Często zadawane pytania",
           "items": [
-            {"question": "Jaki jest wzór na energię kinetyczną?", "answer": "Wzór: KE = ½ × m × v², gdzie m – masa w kg, v – prędkość w m/s. Wynik w dżulach (J). Np. 2 kg przy 3 m/s: KE = 9 J."},
-            {"question": "Dlaczego prędkość jest do kwadratu?", "answer": "Praca do rozpędzenia ciała z zera do v jest proporcjonalna do v². Podwojenie prędkości czterokrotnie zwiększa KE – stąd znaczenie limitów prędkości i drogi hamowania."},
-            {"question": "Jakich jednostek używa kalkulator?", "answer": "Masa w kilogramach (kg), prędkość w m/s. Wynik w dżulach (J). Gramy ÷ 1000 = kg. km/h × 1000/3600 ≈ 0,278 = m/s."},
-            {"question": "Czy energia kinetyczna może być ujemna?", "answer": "Nie. W KE = ½mv² masa jest dodatnia, v² ≥ 0, więc KE nie jest ujemna. Skalarna KE to ½mv², gdzie v to wartość prędkości."},
-            {"question": "Jak KE wiąże się z drogą hamowania?", "answer": "Praca hamowania równa jest KE. Droga hamowania ∝ KE ∝ v². Podwojenie prędkości czterokrotnie wydłuża drogę hamowania przy tej samej sile hamowania."},
-            {"question": "Czy kalkulator KE jest darmowy?", "answer": "Tak. Kalkulator jest darmowy, bez rejestracji i płatności. Podaj masę w kg i prędkość w m/s – otrzymasz KE w dżulach i wzór. Dla uczniów, nauczycieli i specjalistów."}
+            {
+              "question": "Jaki jest wzór na energię kinetyczną?",
+              "answer": "Wzór: KE = ½ × m × v², gdzie m – masa w kg, v – prędkość w m/s. Wynik w dżulach (J). Np. 2 kg przy 3 m/s: KE = 9 J."
+            },
+            {
+              "question": "Dlaczego prędkość jest do kwadratu?",
+              "answer": "Praca do rozpędzenia ciała z zera do v jest proporcjonalna do v². Podwojenie prędkości czterokrotnie zwiększa KE – stąd znaczenie limitów prędkości i drogi hamowania."
+            },
+            {
+              "question": "Jakich jednostek używa kalkulator?",
+              "answer": "Masa w kilogramach (kg), prędkość w m/s. Wynik w dżulach (J). Gramy ÷ 1000 = kg. km/h × 1000/3600 ≈ 0,278 = m/s."
+            },
+            {
+              "question": "Czy energia kinetyczna może być ujemna?",
+              "answer": "Nie. W KE = ½mv² masa jest dodatnia, v² ≥ 0, więc KE nie jest ujemna. Skalarna KE to ½mv², gdzie v to wartość prędkości."
+            },
+            {
+              "question": "Jak KE wiąże się z drogą hamowania?",
+              "answer": "Praca hamowania równa jest KE. Droga hamowania ∝ KE ∝ v². Podwojenie prędkości czterokrotnie wydłuża drogę hamowania przy tej samej sile hamowania."
+            },
+            {
+              "question": "Czy kalkulator KE jest darmowy?",
+              "answer": "Tak. Kalkulator jest darmowy, bez rejestracji i płatności. Podaj masę w kg i prędkość w m/s – otrzymasz KE w dżulach i wzór. Dla uczniów, nauczycieli i specjalistów."
+            }
           ]
         },
         "related": {
@@ -4694,11 +4656,26 @@
         "faq": {
           "heading": "Często zadawane pytania",
           "items": [
-            {"question": "Ile wynosi silnia z 0?", "answer": "0! = 1 z definicji. Ta konwencja sprawia, że wiele wzorów działa też dla n = 0."},
-            {"question": "Dlaczego wejście jest ograniczone do 170?", "answer": "Silnie rosną bardzo szybko. 171! ma ponad 300 cyfr. Dla n od 0 do 170 kalkulator pokazuje dokładny wynik."},
-            {"question": "Do czego służy silnia?", "answer": "Silnie stosuje się w kombinatoryce (permutacje: n! sposobów ustawienia n obiektów), kombinacjach, prawdopodobieństwie i matematyce."},
-            {"question": "Czy silnia może być ujemna lub ułamkowa?", "answer": "Standardowa silnia n! jest zdefiniowana tylko dla nieujemnych liczb całkowitych n. Rozszerzenie przez funkcję gamma Γ pozwala na inne wartości."},
-            {"question": "Czy ten kalkulator jest darmowy?", "answer": "Tak. Kalkulator jest darmowy, bez rejestracji. Wpisz liczbę od 0 do 170, aby uzyskać n! i rozwinięcie."}
+            {
+              "question": "Ile wynosi silnia z 0?",
+              "answer": "0! = 1 z definicji. Ta konwencja sprawia, że wiele wzorów działa też dla n = 0."
+            },
+            {
+              "question": "Dlaczego wejście jest ograniczone do 170?",
+              "answer": "Silnie rosną bardzo szybko. 171! ma ponad 300 cyfr. Dla n od 0 do 170 kalkulator pokazuje dokładny wynik."
+            },
+            {
+              "question": "Do czego służy silnia?",
+              "answer": "Silnie stosuje się w kombinatoryce (permutacje: n! sposobów ustawienia n obiektów), kombinacjach, prawdopodobieństwie i matematyce."
+            },
+            {
+              "question": "Czy silnia może być ujemna lub ułamkowa?",
+              "answer": "Standardowa silnia n! jest zdefiniowana tylko dla nieujemnych liczb całkowitych n. Rozszerzenie przez funkcję gamma Γ pozwala na inne wartości."
+            },
+            {
+              "question": "Czy ten kalkulator jest darmowy?",
+              "answer": "Tak. Kalkulator jest darmowy, bez rejestracji. Wpisz liczbę od 0 do 170, aby uzyskać n! i rozwinięcie."
+            }
           ]
         },
         "related": {
@@ -5457,11 +5434,26 @@
         "faq": {
           "heading": "Często zadawane pytania",
           "items": [
-            {"question": "Co to jest mnożenie pisemne?", "answer": "Mnożenie pisemne to metoda mnożenia dwóch liczb w krokach: mnożysz pierwszą liczbę przez każdą cyfrę drugiej, przesuwasz iloczyny częściowe według pozycji i dodajesz."},
-            {"question": "Co to są iloczyny częściowe?", "answer": "Iloczyny częściowe to wyniki mnożenia mnożnej przez każdą cyfrę mnożnika. Dla 123 × 45: 123 × 5 = 615 i 123 × 4 = 492 (przesunięte 4920)."},
-            {"question": "Czy działa dla liczb dziesiętnych?", "answer": "Kalkulator jest tylko dla liczb całkowitych. Dla dziesiętnych najpierw mnoż jak liczby całkowite, potem ustaw przecinek według liczby miejsc dziesiętnych w czynnikach."},
-            {"question": "Czy działa dla dużych liczb?", "answer": "Tak. Możesz wpisać bardzo duże liczby całkowite; kalkulator obliczy iloczyn i wszystkie iloczyny częściowe."},
-            {"question": "Czy kalkulator jest darmowy?", "answer": "Tak. Kalkulator mnożenia pisemnego jest darmowy, bez rejestracji. Wpisz dwie liczby całkowite, by zobaczyć iloczyn i kroki."}
+            {
+              "question": "Co to jest mnożenie pisemne?",
+              "answer": "Mnożenie pisemne to metoda mnożenia dwóch liczb w krokach: mnożysz pierwszą liczbę przez każdą cyfrę drugiej, przesuwasz iloczyny częściowe według pozycji i dodajesz."
+            },
+            {
+              "question": "Co to są iloczyny częściowe?",
+              "answer": "Iloczyny częściowe to wyniki mnożenia mnożnej przez każdą cyfrę mnożnika. Dla 123 × 45: 123 × 5 = 615 i 123 × 4 = 492 (przesunięte 4920)."
+            },
+            {
+              "question": "Czy działa dla liczb dziesiętnych?",
+              "answer": "Kalkulator jest tylko dla liczb całkowitych. Dla dziesiętnych najpierw mnoż jak liczby całkowite, potem ustaw przecinek według liczby miejsc dziesiętnych w czynnikach."
+            },
+            {
+              "question": "Czy działa dla dużych liczb?",
+              "answer": "Tak. Możesz wpisać bardzo duże liczby całkowite; kalkulator obliczy iloczyn i wszystkie iloczyny częściowe."
+            },
+            {
+              "question": "Czy kalkulator jest darmowy?",
+              "answer": "Tak. Kalkulator mnożenia pisemnego jest darmowy, bez rejestracji. Wpisz dwie liczby całkowite, by zobaczyć iloczyn i kroki."
+            }
           ]
         },
         "related": {

@@ -862,63 +862,62 @@
     },
     "arccos": {
       "title": "Arccos Számológép",
-      "description": "Arccos(x) számológép egy érték inverz koszinuszának megtalálásához és a szög megszerzéséhez fokban és radiánban.",
+      "description": "Arccos(x) számológép az érték arkuszkoszinuszának megtalálásához és a szög fokokban és radiánokban való megadásához általános megoldásokkal.",
       "x": "Érték (x, koszinusz érték)",
-      "calculate": "Számítás",
+      "calculate": "Számolás",
       "reset": "Visszaállítás",
       "result": "Eredmény",
       "angleDegrees": "Szög fokban",
       "angleRadians": "Szög radiánban",
       "calculationHeading": "Számítás",
-      "calculationIntro": "Az adott koszinusz értékhez",
-      "calculationStepRadians": "először kiszámítjuk a szöget radiánban az arccos(x) használatával. Az eredmény θ = arccos(x) ≈ {radians} rad.",
-      "calculationStepDegrees": "Ezután a radiánokat fokokká alakítjuk a θ° = θ × 180 / π képlet használatával, ami körülbelül {degrees}°-ot ad.",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
       "seo": {
         "title": "Arccos Számológép – Inverz Koszinusz (acos) Fokban és Radiánban",
-        "description": "Ingyenes arccos számológép egy érték inverz koszinuszának (acos) megtalálásához és a szög megszerzéséhez fokban és radiánban. Támogatja a [-1, 1] tartományban lévő értékeket lépésről lépésre magyarázattal. Ideális trigonometriához, geometriához és mérnöki számításokhoz.",
-        "keywords": "arccos számológép, inverz koszinusz számológép, acos számológép, koszinusz inverz számológép, arccos fokban, arccos radiánban, trigonometria számológép, szög koszinuszból",
+        "description": "Ingyenes arccos számológép az inverz koszinusz (acos) megtalálásához és a szög fokban és radiánban való megadásához általános megoldásokkal. Támogatja a [-1, 1] tartományban lévő értékeket lépésről lépésre történő magyarázattal. Ideális trigonometriához, geometriához és mérnöki számításokhoz.",
+        "keywords": "arccos számológép, inverz koszinusz számológép, acos számológép, cos inverz számológép, arccos fokban, arccos radiánban, trigonometriai számológép, szög koszinuszból",
         "content": {
           "heading": "Hogyan Használjuk az Arccos (Inverz Koszinusz) Számológépet",
-          "paragraph1": "Az arccos függvény (inverz koszinusz), amelyet arccos(x) vagy acos(x) formában írunk, megadja azt a szöget, amelynek koszinusza x. Más szavakkal, ha cos(θ) = x, akkor θ = arccos(x). Ez a számológép segít gyorsan megtalálni ezt a szöget fokban és radiánban bármely érvényes koszinusz értékhez -1 és 1 között.",
-          "paragraph2": "A számológép használatához adjon meg egy értéket x-re a [-1, 1] tartományban. Az eszköz ezután kiszámítja θ = arccos(x) értékét radiánban a beépített inverz koszinusz függvény használatával, és átalakítja ezt az eredményt fokokká a θ° = θ × 180 / π képlet segítségével. Mindkét érték nagy pontossággal jelenik meg, így trigonometriai, geometriai, fizikai vagy mérnöki problémákban használhatja őket.",
-          "paragraph3": "Az arccos függvény különösen hasznos, amikor ismeri egy szög koszinuszát, de magára a szögre van szüksége. A gyakori használati esetek közé tartozik a szögek megtalálása derékszögű háromszögekben, szögek számítása vektorok között a skaláris szorzat használatával, periodikus jelek elemzése és trigonometrikus egyenletek megoldása. Mivel a koszinusz nem injektív minden valós szám felett, az arccos főértéke a [0, π] radián intervallumban (0°-tól 180°-ig) van definiálva.",
-          "paragraph4": "Az arccos számológépünk ellenőrzi, hogy a bemenet a helyes [-1, 1] tartományon belül van-e, majd pontos eredményeket ad vissza radiánban és fokban is. Ez időt takarít meg a manuális számításokhoz képest és csökkenti a hibák kockázatát. Legyen Ön trigonometriát tanuló diák, példákat készítő tanár vagy szögekkel dolgozó szakember, ez az eszköz gyors, megbízható inverz koszinusz számításokat biztosít.",
+          "paragraph1": "Az arccos (inverz koszinusz) függvény, amelyet arccos(x) vagy acos(x) alakban írunk, megadja azt a szöget, amelynek koszinusza x. Más szóval, ha cos(θ) = x, akkor θ = arccos(x). Ez a számológép segít gyorsan megtalálni ezt a szöget fokban és radiánban bármilyen érvényes koszinusz értékhez -1 és 1 között, és általános megoldásokat biztosít, amelyek az összes lehetséges szöget mutatják.",
+          "paragraph2": "A számológép használatához adjon meg egy x értéket a [-1, 1] tartományban. Az eszköz kiszámítja a θ = arccos(x) értéket radiánban a beépített inverz koszinusz függvény használatával, és átváltja az eredményt fokra a θ° = θ × 180 / π képlet szerint. Mindkét érték nagy pontossággal jelenik meg. Mivel a koszinusz periodikus függvény, a számológép általános megoldásokat is mutat: θ + k×360° (fokban) és θ + k×2π (radiánban), ahol k tetszőleges egész szám.",
+          "paragraph3": "Az arccos függvény különösen hasznos, ha ismeri egy szög koszinuszát, de magára a szögre van szüksége. A gyakori használati esetek közé tartozik a szögek megkeresése derékszögű háromszögekben, trigonometriai egyenletek megoldása, vektorok közötti szögek kiszámítása, hullámfüggvények elemzése és forgó mozgással való munka. Mivel a koszinusz nem kölcsönösen egyértelmű az összes valós számon, az arccos főértéke a [0, π] radiánban (0° és 180° között) van definiálva, de az általános megoldás tartalmazza az összes olyan szöget, amelyek 360° (vagy 2π radián) többszöröseivel különböznek.",
+          "paragraph4": "Az arccos számológépünk ellenőrzi, hogy a bemenet a helyes [-1, 1] tartományban van-e, majd pontos eredményeket ad vissza radiánban és fokban az általános megoldási képletekkel együtt. Ez időt takarít meg a kézi számításokhoz képest, és segít megérteni a trigonometrikus függvények periodikus természetét. Akár diák, aki trigonometriát tanul, akár tanár, aki példákat készít, akár szakember, aki szögekkel dolgozik, ez az eszköz gyors, megbízható inverz koszinusz számításokat biztosít.",
           "exampleHeading": "Példa: Az Arccos Számológép Használata",
-          "exampleText": "Tegyük fel, hogy tudja, hogy cos(θ) = 0,5 és meg akarja találni θ-t. Adja meg x = 0,5 értéket a számológépbe. A számológép kiszámítja θ = arccos(0,5) ≈ 1,047198 rad értéket. A fokokká való átalakítás θ° ≈ 60°-ot ad. Ez azt jelenti, hogy egy 60°-os szög koszinusza 0,5. Hasonlóan, ha cos(θ) = -1, akkor θ = arccos(-1) = π rad = 180°, és ha cos(θ) = 1, akkor θ = arccos(1) = 0 rad = 0°."
+          "exampleText": "Tegyük fel, hogy tudja, hogy cos(θ) = 0,5, és meg akarja találni θ-t. Írja be x = 0,5-t a számológépbe. A számológép kiszámítja θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Fokra váltva θ° = 60°. Az általános megoldások: θ = 60° + k×360° és θ = π/3 + k×2π rad, ahol k tetszőleges egész szám. Ez azt jelenti, hogy a 60°, 420°, -300° stb. szögek mindegyikének koszinusza 0,5. Hasonlóképpen, ha cos(θ) = 1, akkor θ = arccos(1) = 0° (vagy 0 rad), általános megoldásokkal θ = 0° + k×360° és θ = 0 + k×2π rad."
         },
         "faq": {
           "heading": "Gyakran Ismételt Kérdések",
           "items": [
             {
               "question": "Mi az arccos?",
-              "answer": "Az arccos (inverz koszinusz) a koszinusz inverz függvénye. Ha cos(θ) = x, akkor θ = arccos(x). Visszaadja azt a szöget, amelynek koszinusza x, általában radiánban vagy fokban megadva."
+              "answer": "Az arccos (inverz koszinusz) a koszinusz függvény inverze. Ha cos(θ) = x, akkor θ = arccos(x). Visszaadja azt a szöget, amelynek koszinusza x, általában radiánban vagy fokban megadva. A főérték a [0°, 180°] vagy [0, π] radián tartományban van."
             },
             {
               "question": "Mi az arccos függvény értelmezési tartománya?",
-              "answer": "Az arccos(x) értelmezési tartománya minden valós x érték, amelyre -1 ≤ x ≤ 1. Ezen az intervallumon kívül a koszinusz függvény nem tud ilyen értékeket előállítani, ezért az arccos nincs definiálva számukra a valós számokban."
+              "answer": "Az arccos(x) értelmezési tartománya minden olyan valós x érték, amelyre -1 ≤ x ≤ 1. Ezen az intervallumon kívül a koszinusz függvény nem tud ilyen értékeket előállítani, ezért az arccos nincs definiálva számukra a valós számok körében."
             },
             {
               "question": "Mi az arccos értékkészlete?",
-              "answer": "Az arccos(x) fő értékkészlete [0, π] radiánban, ami [0°, 180°] fokban felel meg. Ez azt jelenti, hogy az arccos mindig egy 0 és π radián (0° és 180°) közötti szöget ad vissza."
+              "answer": "Az arccos(x) fő értékkészlete [0, π] radiánban, ami [0°, 180°]-nak felel meg fokban. Mivel azonban a koszinusz periodikus, az általános megoldás tartalmazza az összes θ + k×360° (vagy θ + k×2π rad) szöget, ahol k tetszőleges egész szám."
             },
             {
-              "question": "Hogyan alakíthatom át az arccos-t radiánból fokokká?",
-              "answer": "Ha θ radiánban van, akkor a θ° = θ × 180 / π képlet segítségével fokokká alakíthatja. Számológépünk automatikusan végrehajtja ezt az átalakítást és mind a radiánt, mind a fokokat megjeleníti."
+              "question": "Miért mutat a számológép általános megoldásokat?",
+              "answer": "A koszinusz periodikus függvény 360° (2π radián) periódussal. Ez azt jelenti, hogy ha cos(θ) = x, akkor cos(θ + k×360°) = x minden k egész számra. Az általános megoldás mutatja az összes lehetséges szöget, amely kielégíti az egyenletet, nem csak a főértéket."
             },
             {
               "question": "Ez az arccos számológép ingyenes?",
-              "answer": "Igen, az arccos számológépünk teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Egyszerűen adjon meg egy értéket x-re -1 és 1 között, hogy megkapja a szöget radiánban és fokban."
+              "answer": "Igen, az arccos számológépünk teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Egyszerűen adjon meg egy x értéket -1 és 1 között, hogy megkapja a szöget radiánban és fokban az általános megoldásokkal együtt."
             }
           ]
         },
         "related": {
           "heading": "Kapcsolódó Számológépek",
-          "addition": "Összeadás Számológép",
-          "additionDesc": "Adjon össze egész számokat és tizedeseket gyorsan és pontosan",
+          "arcsin": "Arcsin Számológép",
+          "arcsinDesc": "Keresse meg az érték inverz szinuszát és kapja meg a szöget fokban és radiánban",
+          "arctan": "Arctan Számológép",
+          "arctanDesc": "Keresse meg az érték inverz tangensét és kapja meg a szöget fokban és radiánban",
           "percentage": "Százalék Számológép",
-          "percentageDesc": "Számítsa ki a százalékértékeket, százalékos változást és százalékos kapcsolatokat",
-          "antilog": "Antilogaritmus Számológép",
-          "antilogDesc": "Számítsa ki egy szám antilogaritmusát (inverz logaritmusát) bármilyen alap esetén"
+          "percentageDesc": "Számoljon százalékértékeket, százalékos változásokat és százalékos viszonyokat"
         }
       }
     },
@@ -1046,67 +1045,6 @@
         }
       }
     },
-    "arccos": {
-      "title": "Arccos Számológép",
-      "description": "Arccos(x) számológép az érték arkuszkoszinuszának megtalálásához és a szög fokokban és radiánokban való megadásához általános megoldásokkal.",
-      "x": "Érték (x, koszinusz érték)",
-      "calculate": "Számolás",
-      "reset": "Visszaállítás",
-      "result": "Eredmény",
-      "angleDegrees": "Szög fokban",
-      "angleRadians": "Szög radiánban",
-      "calculationHeading": "Számítás",
-      "generalSolutionDegrees": "(k=..-1,0,1,..)",
-      "generalSolutionRadians": "(k=..-1,0,1,..)",
-      "seo": {
-        "title": "Arccos Számológép – Inverz Koszinusz (acos) Fokban és Radiánban",
-        "description": "Ingyenes arccos számológép az inverz koszinusz (acos) megtalálásához és a szög fokban és radiánban való megadásához általános megoldásokkal. Támogatja a [-1, 1] tartományban lévő értékeket lépésről lépésre történő magyarázattal. Ideális trigonometriához, geometriához és mérnöki számításokhoz.",
-        "keywords": "arccos számológép, inverz koszinusz számológép, acos számológép, cos inverz számológép, arccos fokban, arccos radiánban, trigonometriai számológép, szög koszinuszból",
-        "content": {
-          "heading": "Hogyan Használjuk az Arccos (Inverz Koszinusz) Számológépet",
-          "paragraph1": "Az arccos (inverz koszinusz) függvény, amelyet arccos(x) vagy acos(x) alakban írunk, megadja azt a szöget, amelynek koszinusza x. Más szóval, ha cos(θ) = x, akkor θ = arccos(x). Ez a számológép segít gyorsan megtalálni ezt a szöget fokban és radiánban bármilyen érvényes koszinusz értékhez -1 és 1 között, és általános megoldásokat biztosít, amelyek az összes lehetséges szöget mutatják.",
-          "paragraph2": "A számológép használatához adjon meg egy x értéket a [-1, 1] tartományban. Az eszköz kiszámítja a θ = arccos(x) értéket radiánban a beépített inverz koszinusz függvény használatával, és átváltja az eredményt fokra a θ° = θ × 180 / π képlet szerint. Mindkét érték nagy pontossággal jelenik meg. Mivel a koszinusz periodikus függvény, a számológép általános megoldásokat is mutat: θ + k×360° (fokban) és θ + k×2π (radiánban), ahol k tetszőleges egész szám.",
-          "paragraph3": "Az arccos függvény különösen hasznos, ha ismeri egy szög koszinuszát, de magára a szögre van szüksége. A gyakori használati esetek közé tartozik a szögek megkeresése derékszögű háromszögekben, trigonometriai egyenletek megoldása, vektorok közötti szögek kiszámítása, hullámfüggvények elemzése és forgó mozgással való munka. Mivel a koszinusz nem kölcsönösen egyértelmű az összes valós számon, az arccos főértéke a [0, π] radiánban (0° és 180° között) van definiálva, de az általános megoldás tartalmazza az összes olyan szöget, amelyek 360° (vagy 2π radián) többszöröseivel különböznek.",
-          "paragraph4": "Az arccos számológépünk ellenőrzi, hogy a bemenet a helyes [-1, 1] tartományban van-e, majd pontos eredményeket ad vissza radiánban és fokban az általános megoldási képletekkel együtt. Ez időt takarít meg a kézi számításokhoz képest, és segít megérteni a trigonometrikus függvények periodikus természetét. Akár diák, aki trigonometriát tanul, akár tanár, aki példákat készít, akár szakember, aki szögekkel dolgozik, ez az eszköz gyors, megbízható inverz koszinusz számításokat biztosít.",
-          "exampleHeading": "Példa: Az Arccos Számológép Használata",
-          "exampleText": "Tegyük fel, hogy tudja, hogy cos(θ) = 0,5, és meg akarja találni θ-t. Írja be x = 0,5-t a számológépbe. A számológép kiszámítja θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Fokra váltva θ° = 60°. Az általános megoldások: θ = 60° + k×360° és θ = π/3 + k×2π rad, ahol k tetszőleges egész szám. Ez azt jelenti, hogy a 60°, 420°, -300° stb. szögek mindegyikének koszinusza 0,5. Hasonlóképpen, ha cos(θ) = 1, akkor θ = arccos(1) = 0° (vagy 0 rad), általános megoldásokkal θ = 0° + k×360° és θ = 0 + k×2π rad."
-        },
-        "faq": {
-          "heading": "Gyakran Ismételt Kérdések",
-          "items": [
-            {
-              "question": "Mi az arccos?",
-              "answer": "Az arccos (inverz koszinusz) a koszinusz függvény inverze. Ha cos(θ) = x, akkor θ = arccos(x). Visszaadja azt a szöget, amelynek koszinusza x, általában radiánban vagy fokban megadva. A főérték a [0°, 180°] vagy [0, π] radián tartományban van."
-            },
-            {
-              "question": "Mi az arccos függvény értelmezési tartománya?",
-              "answer": "Az arccos(x) értelmezési tartománya minden olyan valós x érték, amelyre -1 ≤ x ≤ 1. Ezen az intervallumon kívül a koszinusz függvény nem tud ilyen értékeket előállítani, ezért az arccos nincs definiálva számukra a valós számok körében."
-            },
-            {
-              "question": "Mi az arccos értékkészlete?",
-              "answer": "Az arccos(x) fő értékkészlete [0, π] radiánban, ami [0°, 180°]-nak felel meg fokban. Mivel azonban a koszinusz periodikus, az általános megoldás tartalmazza az összes θ + k×360° (vagy θ + k×2π rad) szöget, ahol k tetszőleges egész szám."
-            },
-            {
-              "question": "Miért mutat a számológép általános megoldásokat?",
-              "answer": "A koszinusz periodikus függvény 360° (2π radián) periódussal. Ez azt jelenti, hogy ha cos(θ) = x, akkor cos(θ + k×360°) = x minden k egész számra. Az általános megoldás mutatja az összes lehetséges szöget, amely kielégíti az egyenletet, nem csak a főértéket."
-            },
-            {
-              "question": "Ez az arccos számológép ingyenes?",
-              "answer": "Igen, az arccos számológépünk teljesen ingyenes. Nincs szükség regisztrációra vagy fizetésre. Egyszerűen adjon meg egy x értéket -1 és 1 között, hogy megkapja a szöget radiánban és fokban az általános megoldásokkal együtt."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Kapcsolódó Számológépek",
-          "arcsin": "Arcsin Számológép",
-          "arcsinDesc": "Keresse meg az érték inverz szinuszát és kapja meg a szöget fokban és radiánban",
-          "arctan": "Arctan Számológép",
-          "arctanDesc": "Keresse meg az érték inverz tangensét és kapja meg a szöget fokban és radiánban",
-          "percentage": "Százalék Számológép",
-          "percentageDesc": "Számoljon százalékértékeket, százalékos változásokat és százalékos viszonyokat"
-        }
-      }
-    },
     "arcsin": {
       "title": "Arcsin Számológép",
       "description": "Arcsin(x) számológép egy érték inverz szinuszának megtalálásához és a szög megszerzéséhez fokban és radiánban általános megoldásokkal.",
@@ -1166,7 +1104,9 @@
           "antilog": "Antilogaritmus Számológép",
           "antilogDesc": "Számítsa ki egy szám antilogaritmusát (inverz logaritmusát) bármilyen alap esetén"
         }
-      }
+      },
+      "enterValue": "Írjon be egy értéket az eredmény megtekintéséhez",
+      "clickCalculate": "Kattintson a Számítás gombra az eredmény megtekintéséhez"
     },
     "arctan": {
       "title": "Arctan Számológép",
@@ -1227,7 +1167,9 @@
           "percentage": "Százalék Számológép",
           "percentageDesc": "Számítsa ki a százalékértékeket, százalékos változást és százalékos kapcsolatokat"
         }
-      }
+      },
+      "enterValue": "Írjon be egy értéket az eredmény megtekintéséhez",
+      "clickCalculate": "Kattintson a Számítás gombra az eredmény megtekintéséhez"
     },
     "average": {
       "title": "Átlag Számológép",
@@ -1291,7 +1233,9 @@
           "addingFractions": "Törtek Összeadása Számológép",
           "addingFractionsDesc": "Adjon hozzá és egyszerűsítsen törteket lépésről lépésre"
         }
-      }
+      },
+      "enterNumbers": "Írjon be számokat az eredmény megtekintéséhez",
+      "clickCalculate": "Kattintson a Számítás gombra az eredmény megtekintéséhez"
     },
     "commonFactors": {
       "title": "Közös Tényezők Kalkulátor",
@@ -4518,12 +4462,30 @@
         "faq": {
           "heading": "Gyakran ismételt kérdések",
           "items": [
-            {"question": "Mi a kinetikus energia képlete?", "answer": "Képlet: KE = ½ × m × v², m kg-ban, v m/s-ban. Eredmény joule (J). Pl. 2 kg 3 m/s-nál: KE = 9 J."},
-            {"question": "Miért van a sebesség a négyzeten?", "answer": "A munka, amellyel egy testet nyugalomból v sebességre gyorsítunk, v²-tel arányos. A sebesség duplázása négyszeresére növeli a KE-t – ezért fontosak a sebességkorlátok és a féktáv."},
-            {"question": "Milyen egységeket használ a számológép?", "answer": "Tömeg kilogramm (kg), sebesség m/s. Eredmény joule (J). Gramm: osszon 1000-rel. km/h: szorozzon 1000/3600 ≈ 0,278-cal m/s-ért."},
-            {"question": "Lehet negatív a kinetikus energia?", "answer": "Nem. A KE = ½mv²-ben a tömeg pozitív, v² mindig nem negatív, ezért a KE soha nem negatív. A skalár KE ½mv², ahol v a sebesség nagysága."},
-            {"question": "Hogyan kapcsolódik a KE a féktávhoz?", "answer": "A megállításhoz szükséges munka egyenlő a KE-val. A féktáv a KE-val, tehát v²-tel arányos. A sebesség duplázása négyszeresére növeli a féktávot ugyanazzal a fékerővel."},
-            {"question": "Ez a kinetikus energia számológép ingyenes?", "answer": "Igen. A számológép ingyenes, regisztráció és fizetés nélkül. Tömeg kg-ban és sebesség m/s-ban – KE joule-ban és a képlet. Diákoknak, tanároknak, szakembereknek."}
+            {
+              "question": "Mi a kinetikus energia képlete?",
+              "answer": "Képlet: KE = ½ × m × v², m kg-ban, v m/s-ban. Eredmény joule (J). Pl. 2 kg 3 m/s-nál: KE = 9 J."
+            },
+            {
+              "question": "Miért van a sebesség a négyzeten?",
+              "answer": "A munka, amellyel egy testet nyugalomból v sebességre gyorsítunk, v²-tel arányos. A sebesség duplázása négyszeresére növeli a KE-t – ezért fontosak a sebességkorlátok és a féktáv."
+            },
+            {
+              "question": "Milyen egységeket használ a számológép?",
+              "answer": "Tömeg kilogramm (kg), sebesség m/s. Eredmény joule (J). Gramm: osszon 1000-rel. km/h: szorozzon 1000/3600 ≈ 0,278-cal m/s-ért."
+            },
+            {
+              "question": "Lehet negatív a kinetikus energia?",
+              "answer": "Nem. A KE = ½mv²-ben a tömeg pozitív, v² mindig nem negatív, ezért a KE soha nem negatív. A skalár KE ½mv², ahol v a sebesség nagysága."
+            },
+            {
+              "question": "Hogyan kapcsolódik a KE a féktávhoz?",
+              "answer": "A megállításhoz szükséges munka egyenlő a KE-val. A féktáv a KE-val, tehát v²-tel arányos. A sebesség duplázása négyszeresére növeli a féktávot ugyanazzal a fékerővel."
+            },
+            {
+              "question": "Ez a kinetikus energia számológép ingyenes?",
+              "answer": "Igen. A számológép ingyenes, regisztráció és fizetés nélkül. Tömeg kg-ban és sebesség m/s-ban – KE joule-ban és a képlet. Diákoknak, tanároknak, szakembereknek."
+            }
           ]
         },
         "related": {
@@ -4694,11 +4656,26 @@
         "faq": {
           "heading": "Gyakran ismételt kérdések",
           "items": [
-            {"question": "Mennyi 0 faktoriálisa?", "answer": "Definíció szerint 0! = 1. Ez a megállapodás biztosítja, hogy sok képlet n = 0-ra is helyes legyen."},
-            {"question": "Miért van a bemenet 170-re korlátozva?", "answer": "A faktoriálisok rendkívül gyorsan nőnek. A 171! több mint 300 számjegyű, ami túlmutat a tipikus megjelenítésen. 0–170 között a számológép a pontos egész eredményt mutatja."},
-            {"question": "Mire használják a faktoriálist?", "answer": "A faktoriálisokat kombinatorikában (permutációk: n tárgy n! rendezése), kombinációkban (binomiális együtthatók), valószínűségben és analízisben (pl. e^x Taylor-sora) használják."},
-            {"question": "Lehet negatív vagy tizedes a faktoriális?", "answer": "A standard n! csak nemnegatív egész n-re van definiálva. A gammafüggvény, Γ(z), kiterjesztésként olyan, hogy Γ(n+1) = n! pozitív egész n-re, és nem egész értékeket is megenged."},
-            {"question": "Ez a faktoriális számológép ingyenes?", "answer": "Igen. A számológép ingyenes, regisztráció nélkül. Adjon meg 0 és 170 közötti számot az n! és a kifejtés megjelenítéséhez."}
+            {
+              "question": "Mennyi 0 faktoriálisa?",
+              "answer": "Definíció szerint 0! = 1. Ez a megállapodás biztosítja, hogy sok képlet n = 0-ra is helyes legyen."
+            },
+            {
+              "question": "Miért van a bemenet 170-re korlátozva?",
+              "answer": "A faktoriálisok rendkívül gyorsan nőnek. A 171! több mint 300 számjegyű, ami túlmutat a tipikus megjelenítésen. 0–170 között a számológép a pontos egész eredményt mutatja."
+            },
+            {
+              "question": "Mire használják a faktoriálist?",
+              "answer": "A faktoriálisokat kombinatorikában (permutációk: n tárgy n! rendezése), kombinációkban (binomiális együtthatók), valószínűségben és analízisben (pl. e^x Taylor-sora) használják."
+            },
+            {
+              "question": "Lehet negatív vagy tizedes a faktoriális?",
+              "answer": "A standard n! csak nemnegatív egész n-re van definiálva. A gammafüggvény, Γ(z), kiterjesztésként olyan, hogy Γ(n+1) = n! pozitív egész n-re, és nem egész értékeket is megenged."
+            },
+            {
+              "question": "Ez a faktoriális számológép ingyenes?",
+              "answer": "Igen. A számológép ingyenes, regisztráció nélkül. Adjon meg 0 és 170 közötti számot az n! és a kifejtés megjelenítéséhez."
+            }
           ]
         },
         "related": {
@@ -5457,11 +5434,26 @@
         "faq": {
           "heading": "Gyakori kérdések",
           "items": [
-            {"question": "Mi a hosszú szorzás?", "answer": "A hosszú szorzás lépésenkénti módszer: az első számot a második minden számjegyével megszorozzuk, a részletszorzatokat helyiérték szerint eltoljuk és összeadjuk."},
-            {"question": "Mik a részletszorzatok?", "answer": "A részletszorzatok a szorzandó és a szorzó minden számjegyének szorzatai. 123 × 45 esetén: 123 × 5 = 615 és 123 × 4 = 492 (eltolva 4920)."},
-            {"question": "Működik tizedesjegyekkel?", "answer": "Ez a kalkulátor csak egész számokra van. Tizedeseknél először szorozzon egészként, majd a tizedesjel helyét a tényezők tizedesjegyei alapján állítsa be."},
-            {"question": "Működik nagy számokkal?", "answer": "Igen. Nagyon nagy egész számokat is megadhat; a kalkulátor pontosan kiszámolja a szorzatot és az összes részletszorzatot."},
-            {"question": "A kalkulátor ingyenes?", "answer": "Igen. A hosszú szorzás kalkulátorunk ingyenes, regisztráció nélkül. Adjon meg két egész számot a szorzat és a lépések megjelenítéséhez."}
+            {
+              "question": "Mi a hosszú szorzás?",
+              "answer": "A hosszú szorzás lépésenkénti módszer: az első számot a második minden számjegyével megszorozzuk, a részletszorzatokat helyiérték szerint eltoljuk és összeadjuk."
+            },
+            {
+              "question": "Mik a részletszorzatok?",
+              "answer": "A részletszorzatok a szorzandó és a szorzó minden számjegyének szorzatai. 123 × 45 esetén: 123 × 5 = 615 és 123 × 4 = 492 (eltolva 4920)."
+            },
+            {
+              "question": "Működik tizedesjegyekkel?",
+              "answer": "Ez a kalkulátor csak egész számokra van. Tizedeseknél először szorozzon egészként, majd a tizedesjel helyét a tényezők tizedesjegyei alapján állítsa be."
+            },
+            {
+              "question": "Működik nagy számokkal?",
+              "answer": "Igen. Nagyon nagy egész számokat is megadhat; a kalkulátor pontosan kiszámolja a szorzatot és az összes részletszorzatot."
+            },
+            {
+              "question": "A kalkulátor ingyenes?",
+              "answer": "Igen. A hosszú szorzás kalkulátorunk ingyenes, regisztráció nélkül. Adjon meg két egész számot a szorzat és a lépések megjelenítéséhez."
+            }
           ]
         },
         "related": {

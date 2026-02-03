@@ -862,63 +862,62 @@
     },
     "arccos": {
       "title": "Kalkulator Arccos",
-      "description": "Kalkulator arccos(x) untuk menemukan kosinus invers dari suatu nilai dan mendapatkan sudut dalam derajat dan radian.",
+      "description": "Kalkulator arccos(x) untuk menemukan invers kosinus dari nilai dan mendapatkan sudut dalam derajat dan radian dengan solusi umum.",
       "x": "Nilai (x, nilai kosinus)",
       "calculate": "Hitung",
       "reset": "Reset",
       "result": "Hasil",
-      "angleDegrees": "Sudut dalam derajat",
-      "angleRadians": "Sudut dalam radian",
+      "angleDegrees": "Sudut dalam Derajat",
+      "angleRadians": "Sudut dalam Radian",
       "calculationHeading": "Perhitungan",
-      "calculationIntro": "Untuk nilai kosinus yang diberikan",
-      "calculationStepRadians": "kita pertama-tama menghitung sudut dalam radian menggunakan arccos(x). Hasilnya adalah θ = arccos(x) ≈ {radians} rad.",
-      "calculationStepDegrees": "Kemudian kita mengonversi radian ke derajat menggunakan θ° = θ × 180 / π, memberikan kira-kira {degrees}°.",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
       "seo": {
-        "title": "Kalkulator Arccos – Kosinus Invers (acos) dalam Derajat dan Radian",
-        "description": "Kalkulator arccos gratis untuk menemukan kosinus invers (acos) dari suatu nilai dan mendapatkan sudut baik dalam derajat maupun radian. Mendukung nilai dalam domain [-1, 1] dengan penjelasan langkah demi langkah. Ideal untuk trigonometri, geometri, dan perhitungan teknik.",
-        "keywords": "kalkulator arccos, kalkulator kosinus invers, kalkulator acos, kalkulator invers kosinus, arccos dalam derajat, arccos dalam radian, kalkulator trigonometri, sudut dari kosinus",
+        "title": "Kalkulator Arccos – Invers Kosinus (acos) dalam Derajat dan Radian",
+        "description": "Kalkulator arccos gratis untuk menemukan invers kosinus (acos) dari nilai dan mendapatkan sudut dalam derajat dan radian dengan solusi umum. Mendukung nilai dalam domain [-1, 1] dengan penjelasan langkah demi langkah. Ideal untuk trigonometri, geometri, dan perhitungan teknik.",
+        "keywords": "kalkulator arccos, kalkulator invers kosinus, kalkulator acos, kalkulator invers cos, arccos dalam derajat, arccos dalam radian, kalkulator trigonometri, sudut dari kosinus",
         "content": {
-          "heading": "Cara Menggunakan Kalkulator Arccos (Kosinus Invers)",
-          "paragraph1": "Fungsi arccos (kosinus invers), ditulis sebagai arccos(x) atau acos(x), memberi Anda sudut yang kosinusnya adalah x. Dengan kata lain, jika cos(θ) = x, maka θ = arccos(x). Kalkulator ini membantu Anda dengan cepat menemukan sudut tersebut baik dalam derajat maupun radian untuk setiap nilai kosinus yang valid antara -1 dan 1.",
-          "paragraph2": "Untuk menggunakan kalkulator, masukkan nilai untuk x dalam rentang [-1, 1]. Alat kemudian menghitung θ = arccos(x) dalam radian menggunakan fungsi kosinus invers bawaan dan mengonversi hasil tersebut ke derajat menggunakan rumus θ° = θ × 180 / π. Kedua nilai ditampilkan dengan presisi tinggi sehingga Anda dapat menggunakannya dalam masalah trigonometri, geometri, fisika, atau teknik.",
-          "paragraph3": "Fungsi arccos sangat berguna ketika Anda mengetahui kosinus suatu sudut tetapi membutuhkan sudut itu sendiri. Kasus penggunaan umum meliputi menemukan sudut dalam segitiga siku-siku, menghitung sudut antara vektor menggunakan produk titik, menganalisis sinyal periodik, dan menyelesaikan persamaan trigonometri. Karena kosinus tidak injektif pada semua bilangan real, nilai utama arccos didefinisikan dalam interval [0, π] radian (0° hingga 180°).",
-          "paragraph4": "Kalkulator arccos kami memvalidasi bahwa input Anda berada dalam domain yang benar [-1, 1] dan kemudian mengembalikan hasil yang akurat baik dalam radian maupun derajat. Ini menghemat waktu Anda dibandingkan dengan perhitungan manual dan mengurangi risiko kesalahan. Baik Anda seorang siswa yang belajar trigonometri, guru yang menyiapkan contoh, atau profesional yang bekerja dengan sudut, alat ini menyediakan perhitungan kosinus invers yang cepat dan andal.",
+          "heading": "Cara Menggunakan Kalkulator Arccos (Invers Kosinus)",
+          "paragraph1": "Fungsi arccos (invers kosinus), ditulis sebagai arccos(x) atau acos(x), memberi Anda sudut yang kosinusnya adalah x. Dengan kata lain, jika cos(θ) = x, maka θ = arccos(x). Kalkulator ini membantu Anda menemukan sudut tersebut dengan cepat dalam derajat dan radian untuk nilai kosinus yang valid antara -1 dan 1, dan menyediakan solusi umum yang menunjukkan semua sudut yang mungkin.",
+          "paragraph2": "Untuk menggunakan kalkulator, masukkan nilai untuk x dalam rentang [-1, 1]. Alat menghitung θ = arccos(x) dalam radian menggunakan fungsi invers kosinus bawaan, dan mengonversi hasil tersebut ke derajat menggunakan rumus θ° = θ × 180 / π. Kedua nilai ditampilkan dengan presisi tinggi. Karena kosinus adalah fungsi periodik, kalkulator juga menampilkan solusi umum: θ + k×360° (dalam derajat) dan θ + k×2π (dalam radian), di mana k adalah bilangan bulat apa pun.",
+          "paragraph3": "Fungsi arccos sangat berguna ketika Anda mengetahui kosinus sudut tetapi memerlukan sudut itu sendiri. Kasus penggunaan umum termasuk menemukan sudut dalam segitiga siku-siku, menyelesaikan persamaan trigonometri, menghitung sudut antara vektor, menganalisis fungsi gelombang, dan bekerja dengan gerakan rotasi. Karena kosinus tidak satu-ke-satu pada semua bilangan real, nilai utama arccos didefinisikan dalam interval [0, π] radian (0° hingga 180°), tetapi solusi umum mencakup semua sudut yang berbeda dengan kelipatan 360° (atau 2π radian).",
+          "paragraph4": "Kalkulator arccos kami memvalidasi bahwa input Anda berada dalam domain yang benar [-1, 1] dan kemudian mengembalikan hasil yang akurat untuk radian dan derajat bersama dengan rumus solusi umum. Ini menghemat waktu Anda dibandingkan dengan perhitungan manual dan membantu Anda memahami sifat periodik fungsi trigonometri. Baik Anda seorang siswa yang belajar trigonometri, guru yang mempersiapkan contoh, atau profesional yang bekerja dengan sudut, alat ini menyediakan perhitungan invers kosinus yang cepat dan andal.",
           "exampleHeading": "Contoh: Menggunakan Kalkulator Arccos",
-          "exampleText": "Misalkan Anda tahu bahwa cos(θ) = 0,5 dan Anda ingin menemukan θ. Masukkan x = 0,5 ke dalam kalkulator. Kalkulator menghitung θ = arccos(0,5) ≈ 1,047198 rad. Konversi ke derajat memberikan θ° ≈ 60°. Ini berarti bahwa sudut 60° memiliki kosinus 0,5. Demikian pula, jika cos(θ) = -1, maka θ = arccos(-1) = π rad = 180°, dan jika cos(θ) = 1, maka θ = arccos(1) = 0 rad = 0°."
+          "exampleText": "Misalkan Anda tahu bahwa cos(θ) = 0.5 dan ingin menemukan θ. Masukkan x = 0.5 ke dalam kalkulator. Kalkulator menghitung θ = arccos(0.5) = π/3 rad ≈ 1.04719755 rad. Mengonversi ke derajat memberikan θ° = 60°. Solusi umum adalah: θ = 60° + k×360° dan θ = π/3 + k×2π rad, di mana k adalah bilangan bulat apa pun. Ini berarti sudut 60°, 420°, -300°, dll. semuanya memiliki kosinus 0.5. Demikian pula, jika cos(θ) = 1, maka θ = arccos(1) = 0° (atau 0 rad), dengan solusi umum θ = 0° + k×360° dan θ = 0 + k×2π rad."
         },
         "faq": {
           "heading": "Pertanyaan yang Sering Diajukan",
           "items": [
             {
               "question": "Apa itu arccos?",
-              "answer": "Arccos (kosinus invers) adalah fungsi invers dari kosinus. Jika cos(θ) = x, maka θ = arccos(x). Ini mengembalikan sudut yang kosinusnya adalah x, biasanya diberikan dalam radian atau derajat."
+              "answer": "Arccos (invers kosinus) adalah invers dari fungsi kosinus. Jika cos(θ) = x, maka θ = arccos(x). Ini mengembalikan sudut yang kosinusnya adalah x, biasanya diberikan dalam radian atau derajat. Nilai utama berada dalam rentang [0°, 180°] atau [0, π] radian."
             },
             {
               "question": "Apa domain fungsi arccos?",
-              "answer": "Domain arccos(x) adalah semua nilai real x sedemikian rupa sehingga -1 ≤ x ≤ 1. Di luar interval ini, fungsi kosinus tidak dapat menghasilkan nilai seperti itu, jadi arccos tidak didefinisikan untuk mereka dalam bilangan real."
+              "answer": "Domain arccos(x) adalah semua nilai real x sehingga -1 ≤ x ≤ 1. Di luar interval ini, fungsi kosinus tidak dapat menghasilkan nilai tersebut, jadi arccos tidak didefinisikan untuk mereka dalam bilangan real."
             },
             {
-              "question": "Apa rentang arccos?",
-              "answer": "Rentang utama arccos(x) adalah [0, π] dalam radian, yang sesuai dengan [0°, 180°] dalam derajat. Ini berarti arccos selalu mengembalikan sudut antara 0 dan π radian (0° dan 180°)."
+              "question": "Apa range arccos?",
+              "answer": "Range utama arccos(x) adalah [0, π] dalam radian, yang sesuai dengan [0°, 180°] dalam derajat. Namun, karena kosinus bersifat periodik, solusi umum mencakup semua sudut θ + k×360° (atau θ + k×2π rad) di mana k adalah bilangan bulat apa pun."
             },
             {
-              "question": "Bagaimana cara mengonversi arccos dari radian ke derajat?",
-              "answer": "Jika θ dalam radian, Anda dapat mengonversinya ke derajat menggunakan rumus θ° = θ × 180 / π. Kalkulator kami melakukan konversi ini secara otomatis dan menampilkan baik radian maupun derajat."
+              "question": "Mengapa kalkulator menampilkan solusi umum?",
+              "answer": "Kosinus adalah fungsi periodik dengan periode 360° (2π radian). Ini berarti bahwa jika cos(θ) = x, maka cos(θ + k×360°) = x untuk bilangan bulat k apa pun. Solusi umum menunjukkan semua sudut yang mungkin yang memenuhi persamaan, bukan hanya nilai utama."
             },
             {
               "question": "Apakah kalkulator arccos ini gratis?",
-              "answer": "Ya, kalkulator arccos kami sepenuhnya gratis. Tidak diperlukan pendaftaran atau pembayaran. Cukup masukkan nilai untuk x antara -1 dan 1 untuk mendapatkan sudut dalam radian dan derajat."
+              "answer": "Ya, kalkulator arccos kami sepenuhnya gratis untuk digunakan. Tidak diperlukan pendaftaran atau pembayaran. Cukup masukkan nilai untuk x antara -1 dan 1 untuk mendapatkan sudut dalam radian dan derajat bersama dengan solusi umum."
             }
           ]
         },
         "related": {
           "heading": "Kalkulator Terkait",
-          "addition": "Kalkulator Penjumlahan",
-          "additionDesc": "Tambahkan bilangan bulat dan desimal dengan cepat dan akurat",
+          "arcsin": "Kalkulator Arcsin",
+          "arcsinDesc": "Temukan invers sinus dari nilai dan dapatkan sudut dalam derajat dan radian",
+          "arctan": "Kalkulator Arctan",
+          "arctanDesc": "Temukan invers tangen dari nilai dan dapatkan sudut dalam derajat dan radian",
           "percentage": "Kalkulator Persentase",
-          "percentageDesc": "Hitung nilai persentase, perubahan persentase, dan hubungan persentase",
-          "antilog": "Kalkulator Antilogaritma",
-          "antilogDesc": "Hitung antilogaritma (logaritma invers) dari suatu bilangan dengan basis apa pun"
+          "percentageDesc": "Hitung nilai persentase, perubahan persentase, dan hubungan persentase"
         }
       }
     },
@@ -1046,67 +1045,6 @@
         }
       }
     },
-    "arccos": {
-      "title": "Kalkulator Arccos",
-      "description": "Kalkulator arccos(x) untuk menemukan invers kosinus dari nilai dan mendapatkan sudut dalam derajat dan radian dengan solusi umum.",
-      "x": "Nilai (x, nilai kosinus)",
-      "calculate": "Hitung",
-      "reset": "Reset",
-      "result": "Hasil",
-      "angleDegrees": "Sudut dalam Derajat",
-      "angleRadians": "Sudut dalam Radian",
-      "calculationHeading": "Perhitungan",
-      "generalSolutionDegrees": "(k=..-1,0,1,..)",
-      "generalSolutionRadians": "(k=..-1,0,1,..)",
-      "seo": {
-        "title": "Kalkulator Arccos – Invers Kosinus (acos) dalam Derajat dan Radian",
-        "description": "Kalkulator arccos gratis untuk menemukan invers kosinus (acos) dari nilai dan mendapatkan sudut dalam derajat dan radian dengan solusi umum. Mendukung nilai dalam domain [-1, 1] dengan penjelasan langkah demi langkah. Ideal untuk trigonometri, geometri, dan perhitungan teknik.",
-        "keywords": "kalkulator arccos, kalkulator invers kosinus, kalkulator acos, kalkulator invers cos, arccos dalam derajat, arccos dalam radian, kalkulator trigonometri, sudut dari kosinus",
-        "content": {
-          "heading": "Cara Menggunakan Kalkulator Arccos (Invers Kosinus)",
-          "paragraph1": "Fungsi arccos (invers kosinus), ditulis sebagai arccos(x) atau acos(x), memberi Anda sudut yang kosinusnya adalah x. Dengan kata lain, jika cos(θ) = x, maka θ = arccos(x). Kalkulator ini membantu Anda menemukan sudut tersebut dengan cepat dalam derajat dan radian untuk nilai kosinus yang valid antara -1 dan 1, dan menyediakan solusi umum yang menunjukkan semua sudut yang mungkin.",
-          "paragraph2": "Untuk menggunakan kalkulator, masukkan nilai untuk x dalam rentang [-1, 1]. Alat menghitung θ = arccos(x) dalam radian menggunakan fungsi invers kosinus bawaan, dan mengonversi hasil tersebut ke derajat menggunakan rumus θ° = θ × 180 / π. Kedua nilai ditampilkan dengan presisi tinggi. Karena kosinus adalah fungsi periodik, kalkulator juga menampilkan solusi umum: θ + k×360° (dalam derajat) dan θ + k×2π (dalam radian), di mana k adalah bilangan bulat apa pun.",
-          "paragraph3": "Fungsi arccos sangat berguna ketika Anda mengetahui kosinus sudut tetapi memerlukan sudut itu sendiri. Kasus penggunaan umum termasuk menemukan sudut dalam segitiga siku-siku, menyelesaikan persamaan trigonometri, menghitung sudut antara vektor, menganalisis fungsi gelombang, dan bekerja dengan gerakan rotasi. Karena kosinus tidak satu-ke-satu pada semua bilangan real, nilai utama arccos didefinisikan dalam interval [0, π] radian (0° hingga 180°), tetapi solusi umum mencakup semua sudut yang berbeda dengan kelipatan 360° (atau 2π radian).",
-          "paragraph4": "Kalkulator arccos kami memvalidasi bahwa input Anda berada dalam domain yang benar [-1, 1] dan kemudian mengembalikan hasil yang akurat untuk radian dan derajat bersama dengan rumus solusi umum. Ini menghemat waktu Anda dibandingkan dengan perhitungan manual dan membantu Anda memahami sifat periodik fungsi trigonometri. Baik Anda seorang siswa yang belajar trigonometri, guru yang mempersiapkan contoh, atau profesional yang bekerja dengan sudut, alat ini menyediakan perhitungan invers kosinus yang cepat dan andal.",
-          "exampleHeading": "Contoh: Menggunakan Kalkulator Arccos",
-          "exampleText": "Misalkan Anda tahu bahwa cos(θ) = 0.5 dan ingin menemukan θ. Masukkan x = 0.5 ke dalam kalkulator. Kalkulator menghitung θ = arccos(0.5) = π/3 rad ≈ 1.04719755 rad. Mengonversi ke derajat memberikan θ° = 60°. Solusi umum adalah: θ = 60° + k×360° dan θ = π/3 + k×2π rad, di mana k adalah bilangan bulat apa pun. Ini berarti sudut 60°, 420°, -300°, dll. semuanya memiliki kosinus 0.5. Demikian pula, jika cos(θ) = 1, maka θ = arccos(1) = 0° (atau 0 rad), dengan solusi umum θ = 0° + k×360° dan θ = 0 + k×2π rad."
-        },
-        "faq": {
-          "heading": "Pertanyaan yang Sering Diajukan",
-          "items": [
-            {
-              "question": "Apa itu arccos?",
-              "answer": "Arccos (invers kosinus) adalah invers dari fungsi kosinus. Jika cos(θ) = x, maka θ = arccos(x). Ini mengembalikan sudut yang kosinusnya adalah x, biasanya diberikan dalam radian atau derajat. Nilai utama berada dalam rentang [0°, 180°] atau [0, π] radian."
-            },
-            {
-              "question": "Apa domain fungsi arccos?",
-              "answer": "Domain arccos(x) adalah semua nilai real x sehingga -1 ≤ x ≤ 1. Di luar interval ini, fungsi kosinus tidak dapat menghasilkan nilai tersebut, jadi arccos tidak didefinisikan untuk mereka dalam bilangan real."
-            },
-            {
-              "question": "Apa range arccos?",
-              "answer": "Range utama arccos(x) adalah [0, π] dalam radian, yang sesuai dengan [0°, 180°] dalam derajat. Namun, karena kosinus bersifat periodik, solusi umum mencakup semua sudut θ + k×360° (atau θ + k×2π rad) di mana k adalah bilangan bulat apa pun."
-            },
-            {
-              "question": "Mengapa kalkulator menampilkan solusi umum?",
-              "answer": "Kosinus adalah fungsi periodik dengan periode 360° (2π radian). Ini berarti bahwa jika cos(θ) = x, maka cos(θ + k×360°) = x untuk bilangan bulat k apa pun. Solusi umum menunjukkan semua sudut yang mungkin yang memenuhi persamaan, bukan hanya nilai utama."
-            },
-            {
-              "question": "Apakah kalkulator arccos ini gratis?",
-              "answer": "Ya, kalkulator arccos kami sepenuhnya gratis untuk digunakan. Tidak diperlukan pendaftaran atau pembayaran. Cukup masukkan nilai untuk x antara -1 dan 1 untuk mendapatkan sudut dalam radian dan derajat bersama dengan solusi umum."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Kalkulator Terkait",
-          "arcsin": "Kalkulator Arcsin",
-          "arcsinDesc": "Temukan invers sinus dari nilai dan dapatkan sudut dalam derajat dan radian",
-          "arctan": "Kalkulator Arctan",
-          "arctanDesc": "Temukan invers tangen dari nilai dan dapatkan sudut dalam derajat dan radian",
-          "percentage": "Kalkulator Persentase",
-          "percentageDesc": "Hitung nilai persentase, perubahan persentase, dan hubungan persentase"
-        }
-      }
-    },
     "arcsin": {
       "title": "Kalkulator Arcsin",
       "description": "Kalkulator arcsin(x) untuk menemukan sinus invers dari suatu nilai dan mendapatkan sudut dalam derajat dan radian dengan solusi umum.",
@@ -1166,7 +1104,9 @@
           "antilog": "Kalkulator Antilogaritma",
           "antilogDesc": "Hitung antilogaritma (logaritma invers) dari suatu bilangan dengan basis apa pun"
         }
-      }
+      },
+      "enterValue": "Masukkan nilai untuk melihat hasil",
+      "clickCalculate": "Klik Hitung untuk melihat hasil"
     },
     "arctan": {
       "title": "Kalkulator Arctan",
@@ -1227,7 +1167,9 @@
           "percentage": "Kalkulator Persentase",
           "percentageDesc": "Hitung nilai persentase, perubahan persentase, dan hubungan persentase"
         }
-      }
+      },
+      "enterValue": "Masukkan nilai untuk melihat hasil",
+      "clickCalculate": "Klik Hitung untuk melihat hasil"
     },
     "average": {
       "title": "Kalkulator Rata-rata",
@@ -1291,7 +1233,9 @@
           "addingFractions": "Kalkulator Penjumlahan Pecahan",
           "addingFractionsDesc": "Tambahkan dan sederhanakan pecahan langkah demi langkah"
         }
-      }
+      },
+      "enterNumbers": "Masukkan angka untuk melihat hasil",
+      "clickCalculate": "Klik Hitung untuk melihat hasil"
     },
     "commonFactors": {
       "title": "Kalkulator Faktor Persekutuan",
@@ -4518,12 +4462,30 @@
         "faq": {
           "heading": "Pertanyaan yang Sering Diajukan",
           "items": [
-            {"question": "Apa rumus energi kinetik?", "answer": "Rumus KE = ½ × m × v², m dalam kg, v dalam m/s. Hasil dalam joule (J). Mis. 2 kg pada 3 m/s: KE = 9 J."},
-            {"question": "Mengapa kecepatan dikuadratkan dalam energi kinetik?", "answer": "Kecepatan dikuadratkan karena usaha untuk mempercepat dari diam ke v sebanding dengan v². Menggandakan kecepatan mengempatkan KE – jadi batas kecepatan dan jarak pengereman penting."},
-            {"question": "Satuan apa yang digunakan kalkulator?", "answer": "Massa dalam kilogram (kg), kecepatan dalam m/s. Hasil dalam joule (J). Gram ÷ 1000 = kg. km/jam × 1000/3600 ≈ 0,278 = m/s."},
-            {"question": "Bisakah energi kinetik negatif?", "answer": "Tidak. Dalam KE = ½mv² massa positif dan v² ≥ 0, jadi KE tidak pernah negatif. KE skalar = ½mv² dengan v = besar kecepatan."},
-            {"question": "Bagaimana KE terkait jarak pemberhentian?", "answer": "Usaha untuk menghentikan benda sama dengan KE. Jarak pengereman ∝ KE ∝ v². Menggandakan kecepatan mengempatkan jarak pemberhentian untuk gaya rem yang sama."},
-            {"question": "Apakah kalkulator energi kinetik ini gratis?", "answer": "Ya. Kalkulator gratis tanpa pendaftaran. Masukkan massa dalam kg dan kecepatan dalam m/s untuk KE dalam joule dengan rumus. Untuk pelajar, guru, dan profesional."}
+            {
+              "question": "Apa rumus energi kinetik?",
+              "answer": "Rumus KE = ½ × m × v², m dalam kg, v dalam m/s. Hasil dalam joule (J). Mis. 2 kg pada 3 m/s: KE = 9 J."
+            },
+            {
+              "question": "Mengapa kecepatan dikuadratkan dalam energi kinetik?",
+              "answer": "Kecepatan dikuadratkan karena usaha untuk mempercepat dari diam ke v sebanding dengan v². Menggandakan kecepatan mengempatkan KE – jadi batas kecepatan dan jarak pengereman penting."
+            },
+            {
+              "question": "Satuan apa yang digunakan kalkulator?",
+              "answer": "Massa dalam kilogram (kg), kecepatan dalam m/s. Hasil dalam joule (J). Gram ÷ 1000 = kg. km/jam × 1000/3600 ≈ 0,278 = m/s."
+            },
+            {
+              "question": "Bisakah energi kinetik negatif?",
+              "answer": "Tidak. Dalam KE = ½mv² massa positif dan v² ≥ 0, jadi KE tidak pernah negatif. KE skalar = ½mv² dengan v = besar kecepatan."
+            },
+            {
+              "question": "Bagaimana KE terkait jarak pemberhentian?",
+              "answer": "Usaha untuk menghentikan benda sama dengan KE. Jarak pengereman ∝ KE ∝ v². Menggandakan kecepatan mengempatkan jarak pemberhentian untuk gaya rem yang sama."
+            },
+            {
+              "question": "Apakah kalkulator energi kinetik ini gratis?",
+              "answer": "Ya. Kalkulator gratis tanpa pendaftaran. Masukkan massa dalam kg dan kecepatan dalam m/s untuk KE dalam joule dengan rumus. Untuk pelajar, guru, dan profesional."
+            }
           ]
         },
         "related": {
@@ -4694,11 +4656,26 @@
         "faq": {
           "heading": "Pertanyaan yang Sering Diajukan",
           "items": [
-            {"question": "Berapa faktorial dari 0?", "answer": "0! = 1 menurut definisi. Konvensi ini membuat banyak rumus (mis. koefisien binomial, deret Taylor) bekerja benar untuk n = 0."},
-            {"question": "Mengapa input dibatasi hingga 170?", "answer": "Faktorial tumbuh sangat cepat. 171! adalah bilangan dengan lebih dari 300 digit, di luar tampilan biasa. Untuk n dari 0 hingga 170, kalkulator menampilkan hasil bilangan bulat eksak."},
-            {"question": "Untuk apa faktorial digunakan?", "answer": "Faktorial digunakan dalam kombinatorik (permutasi: n! cara mengatur n objek), kombinasi (koefisien binomial), probabilitas, dan kalkulus (mis. deret Taylor untuk e^x)."},
-            {"question": "Bisakah faktorial negatif atau desimal?", "answer": "Faktorial standar n! hanya didefinisikan untuk bilangan bulat non-negatif n. Fungsi gamma Γ(z) adalah perluasan sehingga Γ(n+1) = n! untuk bilangan bulat positif n dan mengizinkan nilai non-bulat."},
-            {"question": "Apakah kalkulator faktorial ini gratis?", "answer": "Ya. Kalkulator gratis digunakan tanpa pendaftaran. Masukkan angka dari 0 hingga 170 untuk mendapatkan n! dan perluasan bila berlaku."}
+            {
+              "question": "Berapa faktorial dari 0?",
+              "answer": "0! = 1 menurut definisi. Konvensi ini membuat banyak rumus (mis. koefisien binomial, deret Taylor) bekerja benar untuk n = 0."
+            },
+            {
+              "question": "Mengapa input dibatasi hingga 170?",
+              "answer": "Faktorial tumbuh sangat cepat. 171! adalah bilangan dengan lebih dari 300 digit, di luar tampilan biasa. Untuk n dari 0 hingga 170, kalkulator menampilkan hasil bilangan bulat eksak."
+            },
+            {
+              "question": "Untuk apa faktorial digunakan?",
+              "answer": "Faktorial digunakan dalam kombinatorik (permutasi: n! cara mengatur n objek), kombinasi (koefisien binomial), probabilitas, dan kalkulus (mis. deret Taylor untuk e^x)."
+            },
+            {
+              "question": "Bisakah faktorial negatif atau desimal?",
+              "answer": "Faktorial standar n! hanya didefinisikan untuk bilangan bulat non-negatif n. Fungsi gamma Γ(z) adalah perluasan sehingga Γ(n+1) = n! untuk bilangan bulat positif n dan mengizinkan nilai non-bulat."
+            },
+            {
+              "question": "Apakah kalkulator faktorial ini gratis?",
+              "answer": "Ya. Kalkulator gratis digunakan tanpa pendaftaran. Masukkan angka dari 0 hingga 170 untuk mendapatkan n! dan perluasan bila berlaku."
+            }
           ]
         },
         "related": {
@@ -5457,11 +5434,26 @@
         "faq": {
           "heading": "Pertanyaan yang sering diajukan",
           "items": [
-            {"question": "Apa itu perkalian panjang?", "answer": "Perkalian panjang adalah metode langkah demi langkah: kalikan bilangan pertama dengan setiap digit bilangan kedua, geser hasil kali sebagian menurut nilai tempat dan jumlahkan."},
-            {"question": "Apa itu hasil kali sebagian?", "answer": "Hasil kali sebagian adalah bilangan yang dikalikan dikalikan dengan setiap digit pengali. Untuk 123 × 45: 123 × 5 = 615 dan 123 × 4 = 492 (geser 4920)."},
-            {"question": "Apakah berfungsi untuk desimal?", "answer": "Kalkulator ini hanya untuk bilangan bulat. Untuk desimal, kalikan dulu sebagai bilangan bulat lalu tempatkan koma desimal menurut jumlah tempat desimal dalam faktor."},
-            {"question": "Apakah berfungsi untuk bilangan besar?", "answer": "Ya. Anda dapat memasukkan bilangan bulat sangat besar; kalkulator akan menghitung hasil kali dan semua hasil kali sebagian."},
-            {"question": "Apakah kalkulator ini gratis?", "answer": "Ya. Kalkulator perkalian panjang kami gratis, tanpa registrasi. Masukkan dua bilangan bulat untuk melihat hasil kali dan langkah."}
+            {
+              "question": "Apa itu perkalian panjang?",
+              "answer": "Perkalian panjang adalah metode langkah demi langkah: kalikan bilangan pertama dengan setiap digit bilangan kedua, geser hasil kali sebagian menurut nilai tempat dan jumlahkan."
+            },
+            {
+              "question": "Apa itu hasil kali sebagian?",
+              "answer": "Hasil kali sebagian adalah bilangan yang dikalikan dikalikan dengan setiap digit pengali. Untuk 123 × 45: 123 × 5 = 615 dan 123 × 4 = 492 (geser 4920)."
+            },
+            {
+              "question": "Apakah berfungsi untuk desimal?",
+              "answer": "Kalkulator ini hanya untuk bilangan bulat. Untuk desimal, kalikan dulu sebagai bilangan bulat lalu tempatkan koma desimal menurut jumlah tempat desimal dalam faktor."
+            },
+            {
+              "question": "Apakah berfungsi untuk bilangan besar?",
+              "answer": "Ya. Anda dapat memasukkan bilangan bulat sangat besar; kalkulator akan menghitung hasil kali dan semua hasil kali sebagian."
+            },
+            {
+              "question": "Apakah kalkulator ini gratis?",
+              "answer": "Ya. Kalkulator perkalian panjang kami gratis, tanpa registrasi. Masukkan dua bilangan bulat untuk melihat hasil kali dan langkah."
+            }
           ]
         },
         "related": {

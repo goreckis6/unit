@@ -862,63 +862,62 @@
     },
     "arccos": {
       "title": "Arccos Rekenmachine",
-      "description": "Arccos(x) rekenmachine om de inverse cosinus van een waarde te vinden en de hoek in graden en radialen te krijgen.",
+      "description": "Arccos(x) rekenmachine om de inverse cosinus van een waarde te vinden en de hoek in graden en radialen te krijgen met algemene oplossingen.",
       "x": "Waarde (x, cosinuswaarde)",
       "calculate": "Berekenen",
-      "reset": "Resetten",
+      "reset": "Reset",
       "result": "Resultaat",
       "angleDegrees": "Hoek in graden",
       "angleRadians": "Hoek in radialen",
       "calculationHeading": "Berekening",
-      "calculationIntro": "Voor de gegeven cosinuswaarde",
-      "calculationStepRadians": "berekenen we eerst de hoek in radialen met behulp van arccos(x). Het resultaat is θ = arccos(x) ≈ {radians} rad.",
-      "calculationStepDegrees": "Vervolgens converteren we radialen naar graden met behulp van θ° = θ × 180 / π, wat ongeveer {degrees}° geeft.",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
       "seo": {
-        "title": "Arccos Rekenmachine – Invers Cosinus (acos) in Graden en Radialen",
-        "description": "Gratis arccos rekenmachine om de inverse cosinus (acos) van een waarde te vinden en de hoek zowel in graden als in radialen te krijgen. Ondersteunt waarden in het domein [-1, 1] met stap-voor-stap uitleg. Ideaal voor trigonometrie, geometrie en technische berekeningen.",
-        "keywords": "arccos rekenmachine, invers cosinus rekenmachine, acos rekenmachine, cosinus invers rekenmachine, arccos in graden, arccos in radialen, trigonometrie rekenmachine, hoek uit cosinus",
+        "title": "Arccos Rekenmachine – Inverse Cosinus (acos) in Graden & Radialen",
+        "description": "Gratis arccos rekenmachine om de inverse cosinus (acos) van een waarde te vinden en de hoek in graden en radialen te krijgen met algemene oplossingen. Ondersteunt waarden in het domein [-1, 1] met stap-voor-stap uitleg. Ideaal voor trigonometrie, meetkunde en technische berekeningen.",
+        "keywords": "arccos rekenmachine, inverse cosinus rekenmachine, acos rekenmachine, cos inverse rekenmachine, arccos in graden, arccos in radialen, trigonometrie rekenmachine, hoek van cosinus",
         "content": {
-          "heading": "Hoe de Arccos (Invers Cosinus) Rekenmachine te Gebruiken",
-          "paragraph1": "De arccos-functie (invers cosinus), geschreven als arccos(x) of acos(x), geeft u de hoek waarvan de cosinus x is. Met andere woorden, als cos(θ) = x, dan θ = arccos(x). Deze rekenmachine helpt u snel die hoek te vinden zowel in graden als in radialen voor elke geldige cosinuswaarde tussen -1 en 1.",
-          "paragraph2": "Om de rekenmachine te gebruiken, voert u een waarde voor x in binnen het bereik [-1, 1]. Het hulpmiddel berekent dan θ = arccos(x) in radialen met behulp van de ingebouwde inverse cosinusfunctie en converteert dat resultaat naar graden met behulp van de formule θ° = θ × 180 / π. Beide waarden worden met hoge precisie weergegeven zodat u ze kunt gebruiken in trigonometrie-, geometrie-, natuurkunde- of technische problemen.",
-          "paragraph3": "De arccos-functie is vooral nuttig wanneer u de cosinus van een hoek kent maar de hoek zelf nodig heeft. Veelvoorkomende gebruikssituaties zijn het vinden van hoeken in rechthoekige driehoeken, het berekenen van hoeken tussen vectoren met behulp van het inwendig product, het analyseren van periodieke signalen en het oplossen van trigonometrische vergelijkingen. Omdat cosinus niet injectief is over alle reële getallen, is de hoofdwaarde van arccos gedefinieerd in het interval [0, π] radialen (0° tot 180°).",
-          "paragraph4": "Onze arccos rekenmachine valideert dat uw invoer binnen het juiste domein [-1, 1] ligt en retourneert dan nauwkeurige resultaten zowel in radialen als in graden. Dit bespaart u tijd in vergelijking met handmatige berekeningen en vermindert het risico op fouten. Of u nu een student bent die trigonometrie leert, een leraar die voorbeelden voorbereidt of een professional die met hoeken werkt, deze tool biedt snelle, betrouwbare inverse cosinusberekeningen.",
-          "exampleHeading": "Voorbeeld: Gebruik van de Arccos Rekenmachine",
-          "exampleText": "Stel dat u weet dat cos(θ) = 0,5 en u wilt θ vinden. Voer x = 0,5 in de rekenmachine in. De rekenmachine berekent θ = arccos(0,5) ≈ 1,047198 rad. Conversie naar graden geeft θ° ≈ 60°. Dit betekent dat een hoek van 60° een cosinus van 0,5 heeft. Evenzo, als cos(θ) = -1, dan θ = arccos(-1) = π rad = 180°, en als cos(θ) = 1, dan θ = arccos(1) = 0 rad = 0°."
+          "heading": "Hoe de Arccos (Inverse Cosinus) Rekenmachine te Gebruiken",
+          "paragraph1": "De arccos (inverse cosinus) functie, geschreven als arccos(x) of acos(x), geeft je de hoek waarvan de cosinus x is. Met andere woorden, als cos(θ) = x, dan is θ = arccos(x). Deze rekenmachine helpt je snel die hoek te vinden in graden en radialen voor elke geldige cosinuswaarde tussen -1 en 1, en biedt algemene oplossingen die alle mogelijke hoeken tonen.",
+          "paragraph2": "Om de rekenmachine te gebruiken, voer een waarde in voor x in het bereik [-1, 1]. De tool berekent θ = arccos(x) in radialen met behulp van de ingebouwde inverse cosinusfunctie en converteert dat resultaat naar graden met de formule θ° = θ × 180 / π. Beide waarden worden met hoge precisie weergegeven. Omdat cosinus een periodieke functie is, toont de rekenmachine ook algemene oplossingen: θ + k×360° (in graden) en θ + k×2π (in radialen), waarbij k elk geheel getal is.",
+          "paragraph3": "De arccos functie is vooral nuttig wanneer je de cosinus van een hoek kent maar de hoek zelf nodig hebt. Veelvoorkomende gebruikssituaties omvatten het vinden van hoeken in rechthoekige driehoeken, het oplossen van trigonometrische vergelijkingen, het berekenen van hoeken tussen vectoren, het analyseren van golffuncties en het werken met roterende beweging. Omdat cosinus niet één-op-één is over alle reële getallen, is de hoofdwaarde van arccos gedefinieerd in het interval [0, π] radialen (0° tot 180°), maar de algemene oplossing omvat alle hoeken die verschillen met veelvouden van 360° (of 2π radialen).",
+          "paragraph4": "Onze arccos rekenmachine valideert dat uw invoer binnen het juiste domein [-1, 1] ligt en retourneert vervolgens nauwkeurige resultaten voor radialen en graden, samen met de algemene oplossingsformules. Dit bespaart je tijd vergeleken met handmatige berekeningen en helpt je de periodieke aard van trigonometrische functies te begrijpen. Of je nu een student bent die trigonometrie leert, een leraar die voorbeelden voorbereidt, of een professional die met hoeken werkt, deze tool biedt snelle, betrouwbare inverse cosinusberekeningen.",
+          "exampleHeading": "Voorbeeld: De Arccos Rekenmachine Gebruiken",
+          "exampleText": "Stel dat je weet dat cos(θ) = 0,5 en je wilt θ vinden. Voer x = 0,5 in de rekenmachine in. De rekenmachine berekent θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Omrekenen naar graden geeft θ° = 60°. De algemene oplossingen zijn: θ = 60° + k×360° en θ = π/3 + k×2π rad, waarbij k elk geheel getal is. Dit betekent dat hoeken van 60°, 420°, -300°, enz., allemaal een cosinus van 0,5 hebben. Evenzo, als cos(θ) = 1, dan is θ = arccos(1) = 0° (of 0 rad), met algemene oplossingen θ = 0° + k×360° en θ = 0 + k×2π rad."
         },
         "faq": {
           "heading": "Veelgestelde Vragen",
           "items": [
             {
               "question": "Wat is arccos?",
-              "answer": "Arccos (invers cosinus) is de inverse functie van cosinus. Als cos(θ) = x, dan θ = arccos(x). Het retourneert de hoek waarvan de cosinus x is, meestal gegeven in radialen of graden."
+              "answer": "Arccos (inverse cosinus) is de inverse van de cosinusfunctie. Als cos(θ) = x, dan is θ = arccos(x). Het retourneert de hoek waarvan de cosinus x is, meestal gegeven in radialen of graden. De hoofdwaarde ligt in het bereik [0°, 180°] of [0, π] radialen."
             },
             {
-              "question": "Wat is het domein van de arccos-functie?",
-              "answer": "Het domein van arccos(x) is alle reële waarden x zodanig dat -1 ≤ x ≤ 1. Buiten dit interval kan de cosinusfunctie dergelijke waarden niet produceren, dus arccos is niet gedefinieerd voor hen in reële getallen."
+              "question": "Wat is het domein van de arccos functie?",
+              "answer": "Het domein van arccos(x) zijn alle reële waarden x zodanig dat -1 ≤ x ≤ 1. Buiten dit interval kan de cosinusfunctie geen dergelijke waarden produceren, dus arccos is voor hen niet gedefinieerd in reële getallen."
             },
             {
               "question": "Wat is het bereik van arccos?",
-              "answer": "Het hoofdbereik van arccos(x) is [0, π] in radialen, wat overeenkomt met [0°, 180°] in graden. Dit betekent dat arccos altijd een hoek tussen 0 en π radialen (0° en 180°) retourneert."
+              "answer": "Het hoofdbereik van arccos(x) is [0, π] in radialen, wat overeenkomt met [0°, 180°] in graden. Omdat cosinus echter periodiek is, omvat de algemene oplossing alle hoeken θ + k×360° (of θ + k×2π rad) waarbij k elk geheel getal is."
             },
             {
-              "question": "Hoe converteer ik arccos van radialen naar graden?",
-              "answer": "Als θ in radialen is, kunt u het converteren naar graden met behulp van de formule θ° = θ × 180 / π. Onze rekenmachine voert deze conversie automatisch uit en toont zowel radialen als graden."
+              "question": "Waarom toont de rekenmachine algemene oplossingen?",
+              "answer": "Cosinus is een periodieke functie met periode 360° (2π radialen). Dit betekent dat als cos(θ) = x, dan is cos(θ + k×360°) = x voor elk geheel getal k. De algemene oplossing toont alle mogelijke hoeken die de vergelijking voldoen, niet alleen de hoofdwaarde."
             },
             {
               "question": "Is deze arccos rekenmachine gratis?",
-              "answer": "Ja, onze arccos rekenmachine is volledig gratis. Geen registratie of betaling vereist. Voer eenvoudig een waarde voor x tussen -1 en 1 in om de hoek in radialen en graden te krijgen."
+              "answer": "Ja, onze arccos rekenmachine is volledig gratis te gebruiken. Geen registratie of betaling vereist. Voer eenvoudig een waarde in voor x tussen -1 en 1 om de hoek in radialen en graden te krijgen, samen met algemene oplossingen."
             }
           ]
         },
         "related": {
           "heading": "Gerelateerde Rekenmachines",
-          "addition": "Optelrekenmachine",
-          "additionDesc": "Tel gehele getallen en decimalen snel en nauwkeurig op",
-          "percentage": "Procentrekenmachine",
-          "percentageDesc": "Bereken procentwaarden, procentuele verandering en procentuele relaties",
-          "antilog": "Antilogaritme Rekenmachine",
-          "antilogDesc": "Bereken de antilogaritme (invers logaritme) van een getal met elke basis"
+          "arcsin": "Arcsin Rekenmachine",
+          "arcsinDesc": "Vind de inverse sinus van een waarde en krijg de hoek in graden en radialen",
+          "arctan": "Arctan Rekenmachine",
+          "arctanDesc": "Vind de inverse tangens van een waarde en krijg de hoek in graden en radialen",
+          "percentage": "Percentage Rekenmachine",
+          "percentageDesc": "Bereken percentagewaarden, percentageveranderingen en percentageverhoudingen"
         }
       }
     },
@@ -1046,67 +1045,6 @@
         }
       }
     },
-    "arccos": {
-      "title": "Arccos Rekenmachine",
-      "description": "Arccos(x) rekenmachine om de inverse cosinus van een waarde te vinden en de hoek in graden en radialen te krijgen met algemene oplossingen.",
-      "x": "Waarde (x, cosinuswaarde)",
-      "calculate": "Berekenen",
-      "reset": "Reset",
-      "result": "Resultaat",
-      "angleDegrees": "Hoek in graden",
-      "angleRadians": "Hoek in radialen",
-      "calculationHeading": "Berekening",
-      "generalSolutionDegrees": "(k=..-1,0,1,..)",
-      "generalSolutionRadians": "(k=..-1,0,1,..)",
-      "seo": {
-        "title": "Arccos Rekenmachine – Inverse Cosinus (acos) in Graden & Radialen",
-        "description": "Gratis arccos rekenmachine om de inverse cosinus (acos) van een waarde te vinden en de hoek in graden en radialen te krijgen met algemene oplossingen. Ondersteunt waarden in het domein [-1, 1] met stap-voor-stap uitleg. Ideaal voor trigonometrie, meetkunde en technische berekeningen.",
-        "keywords": "arccos rekenmachine, inverse cosinus rekenmachine, acos rekenmachine, cos inverse rekenmachine, arccos in graden, arccos in radialen, trigonometrie rekenmachine, hoek van cosinus",
-        "content": {
-          "heading": "Hoe de Arccos (Inverse Cosinus) Rekenmachine te Gebruiken",
-          "paragraph1": "De arccos (inverse cosinus) functie, geschreven als arccos(x) of acos(x), geeft je de hoek waarvan de cosinus x is. Met andere woorden, als cos(θ) = x, dan is θ = arccos(x). Deze rekenmachine helpt je snel die hoek te vinden in graden en radialen voor elke geldige cosinuswaarde tussen -1 en 1, en biedt algemene oplossingen die alle mogelijke hoeken tonen.",
-          "paragraph2": "Om de rekenmachine te gebruiken, voer een waarde in voor x in het bereik [-1, 1]. De tool berekent θ = arccos(x) in radialen met behulp van de ingebouwde inverse cosinusfunctie en converteert dat resultaat naar graden met de formule θ° = θ × 180 / π. Beide waarden worden met hoge precisie weergegeven. Omdat cosinus een periodieke functie is, toont de rekenmachine ook algemene oplossingen: θ + k×360° (in graden) en θ + k×2π (in radialen), waarbij k elk geheel getal is.",
-          "paragraph3": "De arccos functie is vooral nuttig wanneer je de cosinus van een hoek kent maar de hoek zelf nodig hebt. Veelvoorkomende gebruikssituaties omvatten het vinden van hoeken in rechthoekige driehoeken, het oplossen van trigonometrische vergelijkingen, het berekenen van hoeken tussen vectoren, het analyseren van golffuncties en het werken met roterende beweging. Omdat cosinus niet één-op-één is over alle reële getallen, is de hoofdwaarde van arccos gedefinieerd in het interval [0, π] radialen (0° tot 180°), maar de algemene oplossing omvat alle hoeken die verschillen met veelvouden van 360° (of 2π radialen).",
-          "paragraph4": "Onze arccos rekenmachine valideert dat uw invoer binnen het juiste domein [-1, 1] ligt en retourneert vervolgens nauwkeurige resultaten voor radialen en graden, samen met de algemene oplossingsformules. Dit bespaart je tijd vergeleken met handmatige berekeningen en helpt je de periodieke aard van trigonometrische functies te begrijpen. Of je nu een student bent die trigonometrie leert, een leraar die voorbeelden voorbereidt, of een professional die met hoeken werkt, deze tool biedt snelle, betrouwbare inverse cosinusberekeningen.",
-          "exampleHeading": "Voorbeeld: De Arccos Rekenmachine Gebruiken",
-          "exampleText": "Stel dat je weet dat cos(θ) = 0,5 en je wilt θ vinden. Voer x = 0,5 in de rekenmachine in. De rekenmachine berekent θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. Omrekenen naar graden geeft θ° = 60°. De algemene oplossingen zijn: θ = 60° + k×360° en θ = π/3 + k×2π rad, waarbij k elk geheel getal is. Dit betekent dat hoeken van 60°, 420°, -300°, enz., allemaal een cosinus van 0,5 hebben. Evenzo, als cos(θ) = 1, dan is θ = arccos(1) = 0° (of 0 rad), met algemene oplossingen θ = 0° + k×360° en θ = 0 + k×2π rad."
-        },
-        "faq": {
-          "heading": "Veelgestelde Vragen",
-          "items": [
-            {
-              "question": "Wat is arccos?",
-              "answer": "Arccos (inverse cosinus) is de inverse van de cosinusfunctie. Als cos(θ) = x, dan is θ = arccos(x). Het retourneert de hoek waarvan de cosinus x is, meestal gegeven in radialen of graden. De hoofdwaarde ligt in het bereik [0°, 180°] of [0, π] radialen."
-            },
-            {
-              "question": "Wat is het domein van de arccos functie?",
-              "answer": "Het domein van arccos(x) zijn alle reële waarden x zodanig dat -1 ≤ x ≤ 1. Buiten dit interval kan de cosinusfunctie geen dergelijke waarden produceren, dus arccos is voor hen niet gedefinieerd in reële getallen."
-            },
-            {
-              "question": "Wat is het bereik van arccos?",
-              "answer": "Het hoofdbereik van arccos(x) is [0, π] in radialen, wat overeenkomt met [0°, 180°] in graden. Omdat cosinus echter periodiek is, omvat de algemene oplossing alle hoeken θ + k×360° (of θ + k×2π rad) waarbij k elk geheel getal is."
-            },
-            {
-              "question": "Waarom toont de rekenmachine algemene oplossingen?",
-              "answer": "Cosinus is een periodieke functie met periode 360° (2π radialen). Dit betekent dat als cos(θ) = x, dan is cos(θ + k×360°) = x voor elk geheel getal k. De algemene oplossing toont alle mogelijke hoeken die de vergelijking voldoen, niet alleen de hoofdwaarde."
-            },
-            {
-              "question": "Is deze arccos rekenmachine gratis?",
-              "answer": "Ja, onze arccos rekenmachine is volledig gratis te gebruiken. Geen registratie of betaling vereist. Voer eenvoudig een waarde in voor x tussen -1 en 1 om de hoek in radialen en graden te krijgen, samen met algemene oplossingen."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Gerelateerde Rekenmachines",
-          "arcsin": "Arcsin Rekenmachine",
-          "arcsinDesc": "Vind de inverse sinus van een waarde en krijg de hoek in graden en radialen",
-          "arctan": "Arctan Rekenmachine",
-          "arctanDesc": "Vind de inverse tangens van een waarde en krijg de hoek in graden en radialen",
-          "percentage": "Percentage Rekenmachine",
-          "percentageDesc": "Bereken percentagewaarden, percentageveranderingen en percentageverhoudingen"
-        }
-      }
-    },
     "arcsin": {
       "title": "Arcsin Rekenmachine",
       "description": "Arcsin(x) rekenmachine om de inverse sinus van een waarde te vinden en de hoek in graden en radialen te krijgen met algemene oplossingen.",
@@ -1166,7 +1104,9 @@
           "antilog": "Antilogaritme Rekenmachine",
           "antilogDesc": "Bereken de antilogaritme (inverse logaritme) van een getal met elk grondtal"
         }
-      }
+      },
+      "enterValue": "Voer een waarde in om het resultaat te zien",
+      "clickCalculate": "Klik op Berekenen om het resultaat te zien"
     },
     "arctan": {
       "title": "Arctan Rekenmachine",
@@ -1227,7 +1167,9 @@
           "percentage": "Percentage Rekenmachine",
           "percentageDesc": "Bereken percentagewaarden, percentageverandering en percentageverhoudingen"
         }
-      }
+      },
+      "enterValue": "Voer een waarde in om het resultaat te zien",
+      "clickCalculate": "Klik op Berekenen om het resultaat te zien"
     },
     "average": {
       "title": "Gemiddelde Rekenmachine",
@@ -1291,7 +1233,9 @@
           "addingFractions": "Breuken Optellen Rekenmachine",
           "addingFractionsDesc": "Voeg breuken stap voor stap toe en vereenvoudig"
         }
-      }
+      },
+      "enterNumbers": "Voer getallen in om het resultaat te zien",
+      "clickCalculate": "Klik op Berekenen om het resultaat te zien"
     },
     "commonFactors": {
       "title": "Gemeenschappelijke Factoren Calculator",
@@ -4518,12 +4462,30 @@
         "faq": {
           "heading": "Veelgestelde vragen",
           "items": [
-            {"question": "Wat is de formule voor kinetische energie?", "answer": "Formule: KE = ½ × m × v², m in kg, v in m/s. Resultaat in joule (J). Bijv. 2 kg bij 3 m/s: KE = 9 J."},
-            {"question": "Waarom staat snelheid in het kwadraat?", "answer": "De arbeid om een voorwerp van rust tot snelheid v te brengen is evenredig met v². Verdubbeling van snelheid verviervoudigt KE – daarom zijn snelheidslimieten en remweg belangrijk."},
-            {"question": "Welke eenheden gebruikt de calculator?", "answer": "Massa in kilogram (kg), snelheid in m/s. Resultaat in joule (J). Gram: deel door 1000. km/h: vermenigvuldig met 1000/3600 ≈ 0,278 voor m/s."},
-            {"question": "Kan kinetische energie negatief zijn?", "answer": "Nee. In KE = ½mv² is massa positief en v² altijd niet-negatief, dus KE is nooit negatief. Scalair KE blijft ½mv² met v als grootte van de snelheid."},
-            {"question": "Hoe hangt KE samen met remweg?", "answer": "De arbeid om te stoppen is gelijk aan KE. Remweg is evenredig met KE, dus met v². Verdubbeling van snelheid verviervoudigt remweg bij dezelfde remkracht."},
-            {"question": "Is deze kinetische-energiecalculator gratis?", "answer": "Ja. De calculator is gratis, zonder registratie of betaling. Voer massa in kg en snelheid in m/s in voor KE in joule en de formule. Voor studenten, docenten en professionals."}
+            {
+              "question": "Wat is de formule voor kinetische energie?",
+              "answer": "Formule: KE = ½ × m × v², m in kg, v in m/s. Resultaat in joule (J). Bijv. 2 kg bij 3 m/s: KE = 9 J."
+            },
+            {
+              "question": "Waarom staat snelheid in het kwadraat?",
+              "answer": "De arbeid om een voorwerp van rust tot snelheid v te brengen is evenredig met v². Verdubbeling van snelheid verviervoudigt KE – daarom zijn snelheidslimieten en remweg belangrijk."
+            },
+            {
+              "question": "Welke eenheden gebruikt de calculator?",
+              "answer": "Massa in kilogram (kg), snelheid in m/s. Resultaat in joule (J). Gram: deel door 1000. km/h: vermenigvuldig met 1000/3600 ≈ 0,278 voor m/s."
+            },
+            {
+              "question": "Kan kinetische energie negatief zijn?",
+              "answer": "Nee. In KE = ½mv² is massa positief en v² altijd niet-negatief, dus KE is nooit negatief. Scalair KE blijft ½mv² met v als grootte van de snelheid."
+            },
+            {
+              "question": "Hoe hangt KE samen met remweg?",
+              "answer": "De arbeid om te stoppen is gelijk aan KE. Remweg is evenredig met KE, dus met v². Verdubbeling van snelheid verviervoudigt remweg bij dezelfde remkracht."
+            },
+            {
+              "question": "Is deze kinetische-energiecalculator gratis?",
+              "answer": "Ja. De calculator is gratis, zonder registratie of betaling. Voer massa in kg en snelheid in m/s in voor KE in joule en de formule. Voor studenten, docenten en professionals."
+            }
           ]
         },
         "related": {
@@ -4694,11 +4656,26 @@
         "faq": {
           "heading": "Veelgestelde vragen",
           "items": [
-            {"question": "Wat is de faculteit van 0?", "answer": "0! = 1 per definitie. Deze afspraak zorgt ervoor dat veel formules ook voor n = 0 kloppen."},
-            {"question": "Waarom is de invoer beperkt tot 170?", "answer": "Faculteiten groeien extreem snel. 171! heeft meer dan 300 cijfers. Voor n van 0 tot 170 toont de rekenmachine het exacte resultaat."},
-            {"question": "Waar wordt faculteit voor gebruikt?", "answer": "Faculteiten worden gebruikt in combinatoriek (permutaties: n! rangschikkingen van n objecten), combinaties en kansrekening."},
-            {"question": "Kunnen faculteiten negatief of decimaal zijn?", "answer": "De standaard faculteit n! is alleen gedefinieerd voor niet-negatieve gehele getallen n. De gammafunctie Γ breidt dit uit naar andere waarden."},
-            {"question": "Is deze rekenmachine gratis?", "answer": "Ja. De rekenmachine is gratis, zonder registratie. Voer een getal van 0 tot 170 in voor n! en de uitwerking."}
+            {
+              "question": "Wat is de faculteit van 0?",
+              "answer": "0! = 1 per definitie. Deze afspraak zorgt ervoor dat veel formules ook voor n = 0 kloppen."
+            },
+            {
+              "question": "Waarom is de invoer beperkt tot 170?",
+              "answer": "Faculteiten groeien extreem snel. 171! heeft meer dan 300 cijfers. Voor n van 0 tot 170 toont de rekenmachine het exacte resultaat."
+            },
+            {
+              "question": "Waar wordt faculteit voor gebruikt?",
+              "answer": "Faculteiten worden gebruikt in combinatoriek (permutaties: n! rangschikkingen van n objecten), combinaties en kansrekening."
+            },
+            {
+              "question": "Kunnen faculteiten negatief of decimaal zijn?",
+              "answer": "De standaard faculteit n! is alleen gedefinieerd voor niet-negatieve gehele getallen n. De gammafunctie Γ breidt dit uit naar andere waarden."
+            },
+            {
+              "question": "Is deze rekenmachine gratis?",
+              "answer": "Ja. De rekenmachine is gratis, zonder registratie. Voer een getal van 0 tot 170 in voor n! en de uitwerking."
+            }
           ]
         },
         "related": {
@@ -5457,11 +5434,26 @@
         "faq": {
           "heading": "Veelgestelde vragen",
           "items": [
-            {"question": "Wat is cijferend vermenigvuldigen?", "answer": "Cijferend vermenigvuldigen is een stapsgewijze methode: het eerste getal vermenigvuldigen met elk cijfer van het tweede, tussenresultaten verschuiven volgens positie en optellen."},
-            {"question": "Wat zijn tussenresultaten?", "answer": "Tussenresultaten zijn het vermenigvuldigtal maal elk cijfer van de vermenigvuldiger. Voor 123 × 45: 123 × 5 = 615 en 123 × 4 = 492 (verschoven 4920)."},
-            {"question": "Werkt het voor decimalen?", "answer": "Deze rekenmachine is alleen voor gehele getallen. Voor decimalen eerst als gehele getallen vermenigvuldigen en daarna de komma plaatsen op basis van het totaal aantal decimalen in de factoren."},
-            {"question": "Werkt het voor grote getallen?", "answer": "Ja. Je kunt zeer grote gehele getallen invoeren; de rekenmachine berekent het product en alle tussenresultaten."},
-            {"question": "Is deze rekenmachine gratis?", "answer": "Ja. Onze rekenmachine voor cijferend vermenigvuldigen is gratis, zonder registratie. Voer twee gehele getallen in voor product en stappen."}
+            {
+              "question": "Wat is cijferend vermenigvuldigen?",
+              "answer": "Cijferend vermenigvuldigen is een stapsgewijze methode: het eerste getal vermenigvuldigen met elk cijfer van het tweede, tussenresultaten verschuiven volgens positie en optellen."
+            },
+            {
+              "question": "Wat zijn tussenresultaten?",
+              "answer": "Tussenresultaten zijn het vermenigvuldigtal maal elk cijfer van de vermenigvuldiger. Voor 123 × 45: 123 × 5 = 615 en 123 × 4 = 492 (verschoven 4920)."
+            },
+            {
+              "question": "Werkt het voor decimalen?",
+              "answer": "Deze rekenmachine is alleen voor gehele getallen. Voor decimalen eerst als gehele getallen vermenigvuldigen en daarna de komma plaatsen op basis van het totaal aantal decimalen in de factoren."
+            },
+            {
+              "question": "Werkt het voor grote getallen?",
+              "answer": "Ja. Je kunt zeer grote gehele getallen invoeren; de rekenmachine berekent het product en alle tussenresultaten."
+            },
+            {
+              "question": "Is deze rekenmachine gratis?",
+              "answer": "Ja. Onze rekenmachine voor cijferend vermenigvuldigen is gratis, zonder registratie. Voer twee gehele getallen in voor product en stappen."
+            }
           ]
         },
         "related": {

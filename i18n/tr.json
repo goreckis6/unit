@@ -862,7 +862,7 @@
     },
     "arccos": {
       "title": "Arccos Hesaplayıcı",
-      "description": "Bir değerin ters kosinüsünü bulmak ve açıyı derece ve radyan cinsinden almak için Arccos(x) hesaplayıcı.",
+      "description": "Bir değerin arkkosinüsünü bulmak ve açıyı derece ve radyan cinsinden genel çözümlerle almak için arccos(x) hesaplayıcı.",
       "x": "Değer (x, kosinüs değeri)",
       "calculate": "Hesapla",
       "reset": "Sıfırla",
@@ -870,55 +870,54 @@
       "angleDegrees": "Derece cinsinden açı",
       "angleRadians": "Radyan cinsinden açı",
       "calculationHeading": "Hesaplama",
-      "calculationIntro": "Verilen kosinüs değeri için",
-      "calculationStepRadians": "önce arccos(x) kullanarak radyan cinsinden açıyı hesaplıyoruz. Sonuç θ = arccos(x) ≈ {radians} rad'dır.",
-      "calculationStepDegrees": "Sonra θ° = θ × 180 / π kullanarak radyanları dereceye dönüştürüyoruz, bu da yaklaşık {degrees}° verir.",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
       "seo": {
-        "title": "Arccos Hesaplayıcı – Derece ve Radyan Cinsinden Ters Kosinüs (acos)",
-        "description": "Bir değerin ters kosinüsünü (acos) bulmak ve açıyı hem derece hem de radyan cinsinden almak için ücretsiz arccos hesaplayıcı. [-1, 1] alanındaki değerleri adım adım açıklama ile destekler. Trigonometri, geometri ve mühendislik hesaplamaları için idealdir.",
-        "keywords": "arccos hesaplayıcı, ters kosinüs hesaplayıcı, acos hesaplayıcı, kosinüs ters hesaplayıcı, derece cinsinden arccos, radyan cinsinden arccos, trigonometri hesaplayıcı, kosinüsten açı",
+        "title": "Arccos Hesaplayıcı – Ters Kosinüs (acos) Derece ve Radyan Cinsinden",
+        "description": "Bir değerin ters kosinüsünü (acos) bulmak ve açıyı derece ve radyan cinsinden genel çözümlerle almak için ücretsiz arccos hesaplayıcı. [-1, 1] alanındaki değerleri adım adım açıklamayla destekler. Trigonometri, geometri ve mühendislik hesaplamaları için idealdir.",
+        "keywords": "arccos hesaplayıcı, ters kosinüs hesaplayıcı, acos hesaplayıcı, cos ters hesaplayıcı, derece cinsinden arccos, radyan cinsinden arccos, trigonometrik hesaplayıcı, kosinüsten açı",
         "content": {
           "heading": "Arccos (Ters Kosinüs) Hesaplayıcı Nasıl Kullanılır",
-          "paragraph1": "Arccos fonksiyonu (ters kosinüs), arccos(x) veya acos(x) olarak yazılır ve kosinüsü x olan açıyı verir. Başka bir deyişle, cos(θ) = x ise, θ = arccos(x)'tir. Bu hesaplayıcı, -1 ile 1 arasındaki herhangi bir geçerli kosinüs değeri için hem derece hem de radyan cinsinden bu açıyı hızlıca bulmanıza yardımcı olur.",
-          "paragraph2": "Hesaplayıcıyı kullanmak için [-1, 1] aralığında x için bir değer girin. Araç daha sonra yerleşik ters kosinüs fonksiyonunu kullanarak radyan cinsinden θ = arccos(x) hesaplar ve θ° = θ × 180 / π formülünü kullanarak bu sonucu dereceye dönüştürür. Her iki değer de trigonometri, geometri, fizik veya mühendislik problemlerinde kullanabileceğiniz şekilde yüksek hassasiyetle gösterilir.",
-          "paragraph3": "Arccos fonksiyonu, bir açının kosinüsünü bildiğiniz ancak açının kendisine ihtiyaç duyduğunuzda özellikle kullanışlıdır. Yaygın kullanım durumları arasında dik üçgenlerde açıları bulma, nokta çarpımı kullanarak vektörler arasındaki açıları hesaplama, periyodik sinyalleri analiz etme ve trigonometrik denklemleri çözme yer alır. Kosinüs tüm gerçek sayılar üzerinde birebir olmadığı için, arccos'un ana değeri [0, π] radyan (0° ile 180°) aralığında tanımlanır.",
-          "paragraph4": "Arccos hesaplayıcımız, girişinizin doğru [-1, 1] alanı içinde olduğunu doğrular ve ardından hem radyan hem de derece cinsinden doğru sonuçlar döndürür. Bu, manuel hesaplamalara kıyasla size zaman kazandırır ve hata riskini azaltır. İster trigonometri öğrenen bir öğrenci, ister örnekler hazırlayan bir öğretmen veya açılarla çalışan bir profesyonel olun, bu araç hızlı, güvenilir ters kosinüs hesaplamaları sağlar.",
-          "exampleHeading": "Örnek: Arccos Hesaplayıcının Kullanımı",
-          "exampleText": "cos(θ) = 0,5 olduğunu bildiğinizi ve θ'yi bulmak istediğinizi varsayalım. Hesaplayıcıya x = 0,5 girin. Hesaplayıcı θ = arccos(0,5) ≈ 1,047198 rad hesaplar. Dereceye dönüştürme θ° ≈ 60° verir. Bu, 60°'lik bir açının kosinüsünün 0,5 olduğu anlamına gelir. Benzer şekilde, cos(θ) = -1 ise, θ = arccos(-1) = π rad = 180° ve cos(θ) = 1 ise, θ = arccos(1) = 0 rad = 0°'dir."
+          "paragraph1": "Arccos (ters kosinüs) fonksiyonu, arccos(x) veya acos(x) olarak yazılır ve kosinüsü x olan açıyı verir. Başka bir deyişle, cos(θ) = x ise, o zaman θ = arccos(x)'tir. Bu hesaplayıcı, -1 ile 1 arasındaki herhangi bir geçerli kosinüs değeri için bu açıyı derece ve radyan cinsinden hızlı bir şekilde bulmanıza yardımcı olur ve tüm olası açıları gösteren genel çözümler sağlar.",
+          "paragraph2": "Hesaplayıcıyı kullanmak için, [-1, 1] aralığında bir x değeri girin. Araç, yerleşik ters kosinüs fonksiyonunu kullanarak θ = arccos(x)'i radyan cinsinden hesaplar ve θ° = θ × 180 / π formülünü kullanarak bu sonucu dereceye dönüştürür. Her iki değer de yüksek hassasiyetle gösterilir. Kosinüs periyodik bir fonksiyon olduğundan, hesaplayıcı ayrıca genel çözümleri gösterir: θ + k×360° (derece cinsinden) ve θ + k×2π (radyan cinsinden), burada k herhangi bir tam sayıdır.",
+          "paragraph3": "Arccos fonksiyonu, bir açının kosinüsünü bildiğinizde ancak açının kendisine ihtiyaç duyduğunuzda özellikle yararlıdır. Yaygın kullanım durumları arasında dik üçgenlerde açıları bulma, trigonometrik denklemleri çözme, vektörler arasındaki açıları hesaplama, dalga fonksiyonlarını analiz etme ve dönme hareketiyle çalışma bulunur. Kosinüs tüm gerçek sayılar üzerinde bire-bir olmadığından, arccos'un ana değeri [0, π] radyan aralığında (0° ile 180° arası) tanımlanmıştır, ancak genel çözüm 360°'nin (veya 2π radyanın) katları kadar farklılık gösteren tüm açıları içerir.",
+          "paragraph4": "Arccos hesaplayıcımız, girişinizin doğru [-1, 1] alanında olduğunu doğrular ve ardından genel çözüm formülleriyle birlikte radyan ve derece için kesin sonuçlar döndürür. Bu, manuel hesaplamalara kıyasla size zaman kazandırır ve trigonometrik fonksiyonların periyodik doğasını anlamanıza yardımcı olur. Trigonometri öğrenen bir öğrenci, örnek hazırlayan bir öğretmen veya açılarla çalışan bir profesyonel olun, bu araç hızlı, güvenilir ters kosinüs hesaplamaları sağlar.",
+          "exampleHeading": "Örnek: Arccos Hesaplayıcıyı Kullanma",
+          "exampleText": "Diyelim ki cos(θ) = 0,5 olduğunu biliyorsunuz ve θ'yı bulmak istiyorsunuz. Hesaplayıcıya x = 0,5 girin. Hesaplayıcı θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad hesaplar. Dereceye dönüştürmek θ° = 60° verir. Genel çözümler: θ = 60° + k×360° ve θ = π/3 + k×2π rad, burada k herhangi bir tam sayıdır. Bu, 60°, 420°, -300° vb. açıların hepsinin 0,5 kosinüsüne sahip olduğu anlamına gelir. Benzer şekilde, cos(θ) = 1 ise, o zaman θ = arccos(1) = 0° (veya 0 rad), genel çözümler θ = 0° + k×360° ve θ = 0 + k×2π rad ile."
         },
         "faq": {
-          "heading": "Sıkça Sorulan Sorular",
+          "heading": "Sık Sorulan Sorular",
           "items": [
             {
               "question": "Arccos nedir?",
-              "answer": "Arccos (ters kosinüs), kosinüsün ters fonksiyonudur. cos(θ) = x ise, θ = arccos(x)'tir. Kosinüsü x olan açıyı döndürür, genellikle radyan veya derece cinsinden verilir."
+              "answer": "Arccos (ters kosinüs), kosinüs fonksiyonunun tersidir. Cos(θ) = x ise, o zaman θ = arccos(x)'tir. Kosinüsü x olan açıyı döndürür, genellikle radyan veya derece cinsinden verilir. Ana değer [0°, 180°] veya [0, π] radyan aralığındadır."
             },
             {
               "question": "Arccos fonksiyonunun tanım kümesi nedir?",
-              "answer": "Arccos(x)'in tanım kümesi, -1 ≤ x ≤ 1 olan tüm gerçek x değerleridir. Bu aralığın dışında, kosinüs fonksiyonu bu tür değerler üretemez, bu nedenle arccos gerçek sayılarda bunlar için tanımlı değildir."
+              "answer": "Arccos(x)'in tanım kümesi, -1 ≤ x ≤ 1 olacak şekilde tüm gerçek x değerleridir. Bu aralığın dışında, kosinüs fonksiyonu böyle değerler üretemez, bu nedenle arccos gerçek sayılarda bunlar için tanımlı değildir."
             },
             {
               "question": "Arccos'un değer kümesi nedir?",
-              "answer": "Arccos(x)'in ana değer kümesi radyan cinsinden [0, π]'dir, bu da derece cinsinden [0°, 180°]'ye karşılık gelir. Bu, arccos'un her zaman 0 ile π radyan (0° ile 180°) arasında bir açı döndürdüğü anlamına gelir."
+              "answer": "Arccos(x)'in ana değer kümesi radyan cinsinden [0, π]'dir, bu da derece cinsinden [0°, 180°]'ye karşılık gelir. Ancak, kosinüs periyodik olduğundan, genel çözüm θ + k×360° (veya θ + k×2π rad) olan tüm açıları içerir, burada k herhangi bir tam sayıdır."
             },
             {
-              "question": "Arccos'u radyandan dereceye nasıl dönüştürürüm?",
-              "answer": "θ radyan cinsindeyse, θ° = θ × 180 / π formülünü kullanarak dereceye dönüştürebilirsiniz. Hesaplayıcımız bu dönüşümü otomatik olarak yapar ve hem radyanı hem de dereceyi gösterir."
+              "question": "Hesaplayıcı neden genel çözümler gösteriyor?",
+              "answer": "Kosinüs, 360° (2π radyan) periyotlu periyodik bir fonksiyondur. Bu, cos(θ) = x ise, herhangi bir k tam sayısı için cos(θ + k×360°) = x olduğu anlamına gelir. Genel çözüm, denklemi karşılayan tüm olası açıları gösterir, sadece ana değeri değil."
             },
             {
               "question": "Bu arccos hesaplayıcı ücretsiz mi?",
-              "answer": "Evet, arccos hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Radyan ve derece cinsinden açıyı almak için -1 ile 1 arasında x için bir değer girmeniz yeterlidir."
+              "answer": "Evet, arccos hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Radyan ve derece cinsinden açıyı genel çözümlerle birlikte almak için -1 ile 1 arasında bir x değeri girmeniz yeterlidir."
             }
           ]
         },
         "related": {
           "heading": "İlgili Hesaplayıcılar",
-          "addition": "Toplama Hesaplayıcı",
-          "additionDesc": "Tam sayıları ve ondalık sayıları hızlı ve doğru bir şekilde toplayın",
+          "arcsin": "Arcsin Hesaplayıcı",
+          "arcsinDesc": "Bir değerin ters sinüsünü bulun ve açıyı derece ve radyan cinsinden alın",
+          "arctan": "Arctan Hesaplayıcı",
+          "arctanDesc": "Bir değerin ters tanjantını bulun ve açıyı derece ve radyan cinsinden alın",
           "percentage": "Yüzde Hesaplayıcı",
-          "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın",
-          "antilog": "Antilogaritma Hesaplayıcı",
-          "antilogDesc": "Herhangi bir tabanla bir sayının antilogaritmasını (ters logaritma) hesaplayın"
+          "percentageDesc": "Yüzde değerlerini, yüzde değişimlerini ve yüzde ilişkilerini hesaplayın"
         }
       }
     },
@@ -1046,67 +1045,6 @@
         }
       }
     },
-    "arccos": {
-      "title": "Arccos Hesaplayıcı",
-      "description": "Bir değerin arkkosinüsünü bulmak ve açıyı derece ve radyan cinsinden genel çözümlerle almak için arccos(x) hesaplayıcı.",
-      "x": "Değer (x, kosinüs değeri)",
-      "calculate": "Hesapla",
-      "reset": "Sıfırla",
-      "result": "Sonuç",
-      "angleDegrees": "Derece cinsinden açı",
-      "angleRadians": "Radyan cinsinden açı",
-      "calculationHeading": "Hesaplama",
-      "generalSolutionDegrees": "(k=..-1,0,1,..)",
-      "generalSolutionRadians": "(k=..-1,0,1,..)",
-      "seo": {
-        "title": "Arccos Hesaplayıcı – Ters Kosinüs (acos) Derece ve Radyan Cinsinden",
-        "description": "Bir değerin ters kosinüsünü (acos) bulmak ve açıyı derece ve radyan cinsinden genel çözümlerle almak için ücretsiz arccos hesaplayıcı. [-1, 1] alanındaki değerleri adım adım açıklamayla destekler. Trigonometri, geometri ve mühendislik hesaplamaları için idealdir.",
-        "keywords": "arccos hesaplayıcı, ters kosinüs hesaplayıcı, acos hesaplayıcı, cos ters hesaplayıcı, derece cinsinden arccos, radyan cinsinden arccos, trigonometrik hesaplayıcı, kosinüsten açı",
-        "content": {
-          "heading": "Arccos (Ters Kosinüs) Hesaplayıcı Nasıl Kullanılır",
-          "paragraph1": "Arccos (ters kosinüs) fonksiyonu, arccos(x) veya acos(x) olarak yazılır ve kosinüsü x olan açıyı verir. Başka bir deyişle, cos(θ) = x ise, o zaman θ = arccos(x)'tir. Bu hesaplayıcı, -1 ile 1 arasındaki herhangi bir geçerli kosinüs değeri için bu açıyı derece ve radyan cinsinden hızlı bir şekilde bulmanıza yardımcı olur ve tüm olası açıları gösteren genel çözümler sağlar.",
-          "paragraph2": "Hesaplayıcıyı kullanmak için, [-1, 1] aralığında bir x değeri girin. Araç, yerleşik ters kosinüs fonksiyonunu kullanarak θ = arccos(x)'i radyan cinsinden hesaplar ve θ° = θ × 180 / π formülünü kullanarak bu sonucu dereceye dönüştürür. Her iki değer de yüksek hassasiyetle gösterilir. Kosinüs periyodik bir fonksiyon olduğundan, hesaplayıcı ayrıca genel çözümleri gösterir: θ + k×360° (derece cinsinden) ve θ + k×2π (radyan cinsinden), burada k herhangi bir tam sayıdır.",
-          "paragraph3": "Arccos fonksiyonu, bir açının kosinüsünü bildiğinizde ancak açının kendisine ihtiyaç duyduğunuzda özellikle yararlıdır. Yaygın kullanım durumları arasında dik üçgenlerde açıları bulma, trigonometrik denklemleri çözme, vektörler arasındaki açıları hesaplama, dalga fonksiyonlarını analiz etme ve dönme hareketiyle çalışma bulunur. Kosinüs tüm gerçek sayılar üzerinde bire-bir olmadığından, arccos'un ana değeri [0, π] radyan aralığında (0° ile 180° arası) tanımlanmıştır, ancak genel çözüm 360°'nin (veya 2π radyanın) katları kadar farklılık gösteren tüm açıları içerir.",
-          "paragraph4": "Arccos hesaplayıcımız, girişinizin doğru [-1, 1] alanında olduğunu doğrular ve ardından genel çözüm formülleriyle birlikte radyan ve derece için kesin sonuçlar döndürür. Bu, manuel hesaplamalara kıyasla size zaman kazandırır ve trigonometrik fonksiyonların periyodik doğasını anlamanıza yardımcı olur. Trigonometri öğrenen bir öğrenci, örnek hazırlayan bir öğretmen veya açılarla çalışan bir profesyonel olun, bu araç hızlı, güvenilir ters kosinüs hesaplamaları sağlar.",
-          "exampleHeading": "Örnek: Arccos Hesaplayıcıyı Kullanma",
-          "exampleText": "Diyelim ki cos(θ) = 0,5 olduğunu biliyorsunuz ve θ'yı bulmak istiyorsunuz. Hesaplayıcıya x = 0,5 girin. Hesaplayıcı θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad hesaplar. Dereceye dönüştürmek θ° = 60° verir. Genel çözümler: θ = 60° + k×360° ve θ = π/3 + k×2π rad, burada k herhangi bir tam sayıdır. Bu, 60°, 420°, -300° vb. açıların hepsinin 0,5 kosinüsüne sahip olduğu anlamına gelir. Benzer şekilde, cos(θ) = 1 ise, o zaman θ = arccos(1) = 0° (veya 0 rad), genel çözümler θ = 0° + k×360° ve θ = 0 + k×2π rad ile."
-        },
-        "faq": {
-          "heading": "Sık Sorulan Sorular",
-          "items": [
-            {
-              "question": "Arccos nedir?",
-              "answer": "Arccos (ters kosinüs), kosinüs fonksiyonunun tersidir. Cos(θ) = x ise, o zaman θ = arccos(x)'tir. Kosinüsü x olan açıyı döndürür, genellikle radyan veya derece cinsinden verilir. Ana değer [0°, 180°] veya [0, π] radyan aralığındadır."
-            },
-            {
-              "question": "Arccos fonksiyonunun tanım kümesi nedir?",
-              "answer": "Arccos(x)'in tanım kümesi, -1 ≤ x ≤ 1 olacak şekilde tüm gerçek x değerleridir. Bu aralığın dışında, kosinüs fonksiyonu böyle değerler üretemez, bu nedenle arccos gerçek sayılarda bunlar için tanımlı değildir."
-            },
-            {
-              "question": "Arccos'un değer kümesi nedir?",
-              "answer": "Arccos(x)'in ana değer kümesi radyan cinsinden [0, π]'dir, bu da derece cinsinden [0°, 180°]'ye karşılık gelir. Ancak, kosinüs periyodik olduğundan, genel çözüm θ + k×360° (veya θ + k×2π rad) olan tüm açıları içerir, burada k herhangi bir tam sayıdır."
-            },
-            {
-              "question": "Hesaplayıcı neden genel çözümler gösteriyor?",
-              "answer": "Kosinüs, 360° (2π radyan) periyotlu periyodik bir fonksiyondur. Bu, cos(θ) = x ise, herhangi bir k tam sayısı için cos(θ + k×360°) = x olduğu anlamına gelir. Genel çözüm, denklemi karşılayan tüm olası açıları gösterir, sadece ana değeri değil."
-            },
-            {
-              "question": "Bu arccos hesaplayıcı ücretsiz mi?",
-              "answer": "Evet, arccos hesaplayıcımız tamamen ücretsizdir. Kayıt veya ödeme gerekmez. Radyan ve derece cinsinden açıyı genel çözümlerle birlikte almak için -1 ile 1 arasında bir x değeri girmeniz yeterlidir."
-            }
-          ]
-        },
-        "related": {
-          "heading": "İlgili Hesaplayıcılar",
-          "arcsin": "Arcsin Hesaplayıcı",
-          "arcsinDesc": "Bir değerin ters sinüsünü bulun ve açıyı derece ve radyan cinsinden alın",
-          "arctan": "Arctan Hesaplayıcı",
-          "arctanDesc": "Bir değerin ters tanjantını bulun ve açıyı derece ve radyan cinsinden alın",
-          "percentage": "Yüzde Hesaplayıcı",
-          "percentageDesc": "Yüzde değerlerini, yüzde değişimlerini ve yüzde ilişkilerini hesaplayın"
-        }
-      }
-    },
     "arcsin": {
       "title": "Arcsin Hesaplayıcı",
       "description": "Bir değerin ters sinüsünü bulmak ve genel çözümlerle açıyı derece ve radyan cinsinden almak için Arcsin(x) hesaplayıcı.",
@@ -1166,7 +1104,9 @@
           "antilog": "Antilogaritma Hesaplayıcı",
           "antilogDesc": "Herhangi bir tabanla bir sayının antilogaritmasını (ters logaritma) hesaplayın"
         }
-      }
+      },
+      "enterValue": "Sonucu görmek için bir değer girin",
+      "clickCalculate": "Sonucu görmek için Hesapla'ya tıklayın"
     },
     "arctan": {
       "title": "Arctan Hesaplayıcı",
@@ -1227,7 +1167,9 @@
           "percentage": "Yüzde Hesaplayıcı",
           "percentageDesc": "Yüzde değerlerini, yüzde değişimini ve yüzde ilişkilerini hesaplayın"
         }
-      }
+      },
+      "enterValue": "Sonucu görmek için bir değer girin",
+      "clickCalculate": "Sonucu görmek için Hesapla'ya tıklayın"
     },
     "average": {
       "title": "Ortalama Hesaplayıcı",
@@ -1291,7 +1233,9 @@
           "addingFractions": "Kesir Ekleme Hesaplayıcı",
           "addingFractionsDesc": "Kesirleri adım adım ekleyin ve sadeleştirin"
         }
-      }
+      },
+      "enterNumbers": "Sonucu görmek için sayıları girin",
+      "clickCalculate": "Sonucu görmek için Hesapla'ya tıklayın"
     },
     "commonFactors": {
       "title": "Ortak Çarpanlar Hesaplayıcı",
@@ -4351,76 +4295,6 @@
     },
     "lcm": {
       "title": "EKOK Hesaplayıcı - En Küçük Ortak Kat",
-      "description": "İki veya daha fazla sayının En Küçük Ortak Katını (EKOK) anında hesaplayın. Tüm sayılarla bölünebilen en küçük pozitif tam sayıyı bulun. Adımlı ücretsiz çevrimiçi EKOK hesaplayıcı.",
-      "inputLabel": "Sayıları Girin",
-      "inputPlaceholder": "örn. 12, 18, 24",
-      "inputHint": "Virgül, boşluk veya noktalı virgülle ayrılmış iki veya daha fazla pozitif tam sayı girin",
-      "calculate": "Hesapla",
-      "reset": "Sıfırla",
-      "results": "Sonuçlar",
-      "numbers": "Sayılar",
-      "lcmResult": "En Küçük Ortak Kat (EKOK)",
-      "steps": "Hesaplama Adımları",
-      "formula": "Formül",
-      "enterNumbers": "Hesaplamak için en az iki sayı girin",
-      "errorInvalid": "Lütfen geçerli pozitif tam sayılar girin",
-      "errorZero": "Sıfır EKOK hesaplamasına dahil edilemez",
-      "errorMinTwo": "Lütfen en az iki sayı girin",
-      "seo": {
-        "title": "EKOK Hesaplayıcı – Çevrimiçi En Küçük Ortak Katı Bulun",
-        "description": "Ücretsiz En Küçük Ortak Kat (EKOK) hesaplayıcı. Adım adım çözümlerle iki veya daha fazla sayının EKOK'unu anında hesaplayın. Kesirler ve sayı teorisi ile çalışan öğrenciler, öğretmenler ve herkes için mükemmel.",
-        "keywords": "ekok hesaplayıcı, en küçük ortak kat, ekok bulucu, en düşük ortak kat, sayıların ekoku, ortak kat hesaplayıcı, adımlı ekok, sayı teorisi hesaplayıcı",
-        "content": {
-          "heading": "En Küçük Ortak Kat (EKOK) Nedir?",
-          "paragraph1": "En Küçük Ortak Kat (EKOK), en düşük ortak kat olarak da bilinir, kalan olmadan verilen tüm sayılara bölünebilen en küçük pozitif tam sayıdır. Örneğin, 4 ve 6'nın EKOK'u 12'dir, çünkü 12, hem 4'ün hem de 6'nın eşit olarak böldüğü en küçük sayıdır. Ücretsiz EKOK hesaplayıcımız, herhangi bir pozitif tam sayı kümesinin en küçük ortak katını adım adım çözümlerle hızlı ve doğru bir şekilde bulmanıza yardımcı olur.",
-          "paragraph2": "EKOK, En Büyük Ortak Bölen (EBOB) ile yakından ilişkilidir. Temel ilişki: EKOK(a, b) × EBOB(a, b) = a × b'dir. Bu, iki sayının EBOB'unu biliyorsanız, EKOK'larını kolayca hesaplayabileceğiniz anlamına gelir. Birden fazla sayı için EKOK sırayla hesaplanır: önce ilk iki sayının EKOK'unu bulun, sonra bu sonucun üçüncü sayı ile EKOK'unu bulun, ve böyle devam edin. EKOK'un özellikleri şunları içerir: EKOK(a, b) ≥ max(a, b), EKOK(a, 1) = a ve EKOK(a, a) = a.",
-          "paragraph3": "EKOK'un günlük yaşamda ve matematikte çok sayıda pratik uygulaması vardır: kesir aritmetiğinde (kesirleri toplarken veya çıkarırken ortak paydalar bulma), zamanlama problemlerinde (olayların aynı anda ne zaman gerçekleştiğini belirleme, örneğin aynı durağa gelen otobüsler), müzik teorisinde (ritmik desenler ve vuruşlar hesaplama), dişli oranları ve mekanik sistemlerde (dönen parçaları senkronize etme), eşzamanlı denklemleri çözmede ve kriptografi ve bilgisayar biliminde. EKOK'u anlamak, kesirler, oranlar veya periyodik olaylarla çalışan herkes için gereklidir.",
-          "paragraph4": "EKOK hesaplayıcımız herhangi bir sayıda pozitif tam sayıyı işler ve hesaplama adımlarını gösterir, bu da onu eğitim amaçları için mükemmel kılar. Hesaplayıcı, büyük sayılar için bile EKOK'u hızlı bir şekilde hesaplamak için EBOB'a bölmenin verimli yöntemini kullanır. İster faktörler ve katlar hakkında öğrenen bir öğrenci, matematik dersleri hazırlayan bir öğretmen, senkronizasyon problemleri üzerinde çalışan bir mühendis veya hızlı EKOK hesaplamalarına ihtiyaç duyan biri olun, aracımız anında ve ücretsiz olarak doğru sonuçlar sağlar.",
-          "exampleHeading": "Örnek: EKOK Hesaplamaları",
-          "exampleText": "Örnek 1: EKOK(12, 18) = 36. 12'nin katları: 12, 24, 36, 48... 18'in katları: 18, 36, 54... En küçük ortak kat 36'dır. Örnek 2: EKOK(4, 6, 8) = 24. Önce, EKOK(4, 6) = 12, sonra EKOK(12, 8) = 24. Örnek 3: EKOK(15, 25) = 75. Formülü kullanarak: EBOB(15, 25) = 5, bu yüzden EKOK = (15 × 25) / 5 = 75. Örnek 4: EKOK(7, 11) = 77. İki sayı aralarında asal olduğunda (EBOB = 1), EKOK'ları çarpımlarına eşittir."
-        },
-        "faq": {
-          "heading": "Sıkça Sorulan Sorular",
-          "items": [
-            {
-              "question": "EKOK ve EBOB arasındaki fark nedir?",
-              "answer": "EKOK (En Küçük Ortak Kat), verilen tüm sayılara bölünebilen en küçük sayıdır, EBOB (En Büyük Ortak Bölen) ise verilen tüm sayıları bölen en büyük sayıdır. EKOK ortak katları bulur; EBOB ortak çarpanları bulur. Formülle ilişkilidirler: EKOK(a, b) × EBOB(a, b) = a × b. Örneğin 12 ve 18 için: EKOK = 36, EBOB = 6 ve 36 × 6 = 12 × 18 = 216."
-            },
-            {
-              "question": "İki sayının EKOK'unu nasıl bulursunuz?",
-              "answer": "EKOK'u bulmanın birkaç yöntemi vardır: (1) Katları listeleme yöntemi: en küçük ortağı bulana kadar her sayının katlarını listeleyin. (2) Asal çarpanlara ayırma: her sayıyı asal çarpanlara ayırın, sonra her asal çarpanın en yüksek kuvvetini çarpın. (3) EBOB kullanma: EKOK(a, b) = |a × b| / EBOB(a, b) hesaplayın. (4) Bölme yöntemi: ortak çarpanlarla tekrar tekrar bölün. Hesaplayıcımız hızlı sonuçlar için verimli EBOB yöntemini kullanır."
-            },
-            {
-              "question": "EKOK orijinal sayılardan küçük olabilir mi?",
-              "answer": "Hayır, EKOK her zaman verilen sayıların en büyüğünden daha büyük veya ona eşittir. Tanım gereği, EKOK tüm giriş sayılarına bölünebilir olmalıdır, bu nedenle bunlardan herhangi birinden küçük olamaz. Tek istisna, tek bir sayının kendisiyle EKOK'unu bulurken olur, burada EKOK(n, n) = n'dir. Örneğin, EKOK(15, 25) = 75'tir ve bu hem 15'ten hem de 25'ten büyüktür."
-            },
-            {
-              "question": "Kesirleri toplarken neden EKOK'a ihtiyacımız var?",
-              "answer": "Farklı paydaları olan kesirleri toplarken veya çıkarırken ortak bir paydaya ihtiyacımız vardır. Paydaların EKOK'u bize En Küçük Ortak Paydayı (EKOP) verir, bu her iki paydanın da böldüğü en küçük sayıdır. Bu, ortaya çıkan kesrin boyutunu en aza indirir. Örneğin, 1/4 + 1/6'yı toplamak için EKOK(4, 6) = 12 buluruz, bu bize 3/12 + 2/12 = 5/12 verir."
-            },
-            {
-              "question": "Aralarında asal sayıların EKOK'u nedir?",
-              "answer": "İki sayı, EBOB'ları 1 ise aralarında asaldır, bu da 1 dışında ortak çarpan paylaşmadıkları anlamına gelir. Aralarında asal sayılar için EKOK, çarpımlarına eşittir: EKOK(a, b) = a × b. Örneğin, 7 ve 11 aralarında asaldır (EBOB = 1), bu yüzden EKOK(7, 11) = 7 × 11 = 77. Benzer şekilde, EKOK(9, 16) = 144'tür çünkü EBOB(9, 16) = 1."
-            },
-            {
-              "question": "Bu EKOK hesaplayıcı ücretsiz mi?",
-              "answer": "Evet, EKOK hesaplayıcımız kayıt, abonelik veya ödeme gerektirmeden tamamen ücretsizdir. Herhangi bir pozitif tam sayı kümesi girin ve adım adım hesaplamalarla anında, doğru sonuçlar alın. Hesaplayıcı aynı anda birden fazla sayıyı işleyebilir ve tam çözüm sürecini gösterir. Öğrenciler, eğitimciler, mühendisler ve hızlı EKOK hesaplamalarına ihtiyaç duyan herkes için mükemmel."
-            }
-          ]
-        },
-        "related": {
-          "heading": "İlgili Hesaplayıcılar",
-          "gcd": "EBOB Hesaplayıcı",
-          "gcdDesc": "Adım adım çözümlerle iki veya daha fazla sayının En Büyük Ortak Bölenini (EBOB) hesaplayın",
-          "fractions": "Kesir Hesaplayıcı",
-          "fractionsDesc": "EKOK kullanarak ortak paydalarla kesirleri toplayın, çıkarın, çarpın ve bölün",
-          "division": "Bölme Hesaplayıcı",
-          "divisionDesc": "Ayrıntılı bölüm ve kalan hesaplamalarıyla bölme işlemleri gerçekleştirin"
-        }
-      }
-    },
-    "lcm": {
-      "title": "EKOK Hesaplayıcı - En Küçük Ortak Kat",
       "description": "İki veya daha fazla sayının En Küçük Ortak Katını (EKOK) anında hesaplayın. Tüm sayılara bölünebilen en küçük pozitif tam sayıyı bulun. Adımlarla ücretsiz çevrimiçi EKOK hesaplayıcısı.",
       "inputLabel": "Sayıları Girin",
       "inputPlaceholder": "örn. 12, 18, 24",
@@ -4592,12 +4466,30 @@
         "faq": {
           "heading": "Sıkça Sorulan Sorular",
           "items": [
-            {"question": "Kinetik enerji formülü nedir?", "answer": "Formül KE = ½ × m × v², m kilogram, v m/s. Sonuç joule (J). Örn. 2 kg, 3 m/s: KE = 9 J."},
-            {"question": "Kinetik enerjide hız neden kare?", "answer": "Hız kare çünkü durgunluktan v hızına ivmelendirmek için yapılan iş v² ile orantılı. Hızı iki katına çıkarmak KE'yi dört katına çıkarır – bu yüzden hız limiti ve fren mesafesi önemli."},
-            {"question": "Hesaplayıcı hangi birimleri kullanır?", "answer": "Kütle kilogram (kg), hız m/s. Sonuç joule (J). Gram ÷ 1000 = kg. km/sa × 1000/3600 ≈ 0,278 = m/s."},
-            {"question": "Kinetik enerji negatif olabilir mi?", "answer": "Hayır. KE = ½mv²'de kütle pozitif ve v² ≥ 0, bu yüzden KE asla negatif değil. Skaler KE = ½mv², v = hızın büyüklüğü."},
-            {"question": "KE durma mesafesiyle nasıl ilişkili?", "answer": "Hareketli cismi durdurmak için gereken iş KE'ye eşittir. Fren mesafesi ∝ KE ∝ v². Aynı fren kuvveti için hızı iki katına çıkarmak durma mesafesini dört katına çıkarır."},
-            {"question": "Bu kinetik enerji hesaplayıcı ücretsiz mi?", "answer": "Evet. Hesaplayıcı ücretsiz, kayıt yok. Kütleyi kg, hızı m/s girin; joule cinsinden KE ve formül. Öğrenci, öğretmen ve profesyoneller için."}
+            {
+              "question": "Kinetik enerji formülü nedir?",
+              "answer": "Formül KE = ½ × m × v², m kilogram, v m/s. Sonuç joule (J). Örn. 2 kg, 3 m/s: KE = 9 J."
+            },
+            {
+              "question": "Kinetik enerjide hız neden kare?",
+              "answer": "Hız kare çünkü durgunluktan v hızına ivmelendirmek için yapılan iş v² ile orantılı. Hızı iki katına çıkarmak KE'yi dört katına çıkarır – bu yüzden hız limiti ve fren mesafesi önemli."
+            },
+            {
+              "question": "Hesaplayıcı hangi birimleri kullanır?",
+              "answer": "Kütle kilogram (kg), hız m/s. Sonuç joule (J). Gram ÷ 1000 = kg. km/sa × 1000/3600 ≈ 0,278 = m/s."
+            },
+            {
+              "question": "Kinetik enerji negatif olabilir mi?",
+              "answer": "Hayır. KE = ½mv²'de kütle pozitif ve v² ≥ 0, bu yüzden KE asla negatif değil. Skaler KE = ½mv², v = hızın büyüklüğü."
+            },
+            {
+              "question": "KE durma mesafesiyle nasıl ilişkili?",
+              "answer": "Hareketli cismi durdurmak için gereken iş KE'ye eşittir. Fren mesafesi ∝ KE ∝ v². Aynı fren kuvveti için hızı iki katına çıkarmak durma mesafesini dört katına çıkarır."
+            },
+            {
+              "question": "Bu kinetik enerji hesaplayıcı ücretsiz mi?",
+              "answer": "Evet. Hesaplayıcı ücretsiz, kayıt yok. Kütleyi kg, hızı m/s girin; joule cinsinden KE ve formül. Öğrenci, öğretmen ve profesyoneller için."
+            }
           ]
         },
         "related": {
@@ -4768,11 +4660,26 @@
         "faq": {
           "heading": "Sıkça Sorulan Sorular",
           "items": [
-            {"question": "0'ın faktöriyeli nedir?", "answer": "Tanım gereği 0! = 1. Bu kural, birçok formülün (örn. binomial katsayılar, Taylor serileri) n = 0 için doğru çalışmasını sağlar."},
-            {"question": "Neden girdi 170 ile sınırlı?", "answer": "Faktöriyeller aşırı hızlı büyür. 171! 300'den fazla basamağı olan bir sayıdır, tipik gösterimin ötesinde. 0 ile 170 arası n için hesaplayıcı tam tam sayı sonucunu gösterir."},
-            {"question": "Faktöriyel ne için kullanılır?", "answer": "Faktöriyeller kombinatorikte (permütasyonlar: n nesneyi düzenlemenin n! yolu), kombinasyonlarda (binomial katsayılar), olasılıkta ve analizde (örn. e^x için Taylor serisi) kullanılır."},
-            {"question": "Faktöriyeller negatif veya ondalık olabilir mi?", "answer": "Standart faktöriyel n! yalnızca negatif olmayan tam sayı n için tanımlanır. Gama fonksiyonu Γ(z), pozitif tam sayı n için Γ(n+1) = n! olacak şekilde bir genişlemedir ve tam sayı olmayan değerlere izin verir."},
-            {"question": "Bu faktöriyel hesaplayıcı ücretsiz mi?", "answer": "Evet. Hesaplayıcı kayıt olmadan ücretsiz kullanılır. n! ve uygulanabilirse açılım için 0 ile 170 arası bir sayı girin."}
+            {
+              "question": "0'ın faktöriyeli nedir?",
+              "answer": "Tanım gereği 0! = 1. Bu kural, birçok formülün (örn. binomial katsayılar, Taylor serileri) n = 0 için doğru çalışmasını sağlar."
+            },
+            {
+              "question": "Neden girdi 170 ile sınırlı?",
+              "answer": "Faktöriyeller aşırı hızlı büyür. 171! 300'den fazla basamağı olan bir sayıdır, tipik gösterimin ötesinde. 0 ile 170 arası n için hesaplayıcı tam tam sayı sonucunu gösterir."
+            },
+            {
+              "question": "Faktöriyel ne için kullanılır?",
+              "answer": "Faktöriyeller kombinatorikte (permütasyonlar: n nesneyi düzenlemenin n! yolu), kombinasyonlarda (binomial katsayılar), olasılıkta ve analizde (örn. e^x için Taylor serisi) kullanılır."
+            },
+            {
+              "question": "Faktöriyeller negatif veya ondalık olabilir mi?",
+              "answer": "Standart faktöriyel n! yalnızca negatif olmayan tam sayı n için tanımlanır. Gama fonksiyonu Γ(z), pozitif tam sayı n için Γ(n+1) = n! olacak şekilde bir genişlemedir ve tam sayı olmayan değerlere izin verir."
+            },
+            {
+              "question": "Bu faktöriyel hesaplayıcı ücretsiz mi?",
+              "answer": "Evet. Hesaplayıcı kayıt olmadan ücretsiz kullanılır. n! ve uygulanabilirse açılım için 0 ile 170 arası bir sayı girin."
+            }
           ]
         },
         "related": {
@@ -5531,11 +5438,26 @@
         "faq": {
           "heading": "Sıkça sorulan sorular",
           "items": [
-            {"question": "Uzun çarpma nedir?", "answer": "Uzun çarpma adım adım bir yöntemdir: ilk sayıyı ikincinin her basamağıyla çarparsınız, kısmi çarpımları basamak değerine göre kaydırıp toplarsınız."},
-            {"question": "Kısmi çarpımlar nedir?", "answer": "Kısmi çarpımlar çarpılanın çarpanın her basamağıyla çarpılması sonucudur. 123 × 45 için: 123 × 5 = 615 ve 123 × 4 = 492 (kaydırılmış 4920)."},
-            {"question": "Ondalıklar için çalışır mı?", "answer": "Bu hesaplayıcı yalnızca tam sayılar içindir. Ondalıklar için önce tam sayı gibi çarpın, sonra çarpanlardaki ondalık basamak sayısına göre ondalık işaretini yerleştirin."},
-            {"question": "Büyük sayılar için çalışır mı?", "answer": "Evet. Çok büyük tam sayılar girebilirsiniz; hesaplayıcı çarpımı ve tüm kısmi çarpımları hesaplar."},
-            {"question": "Hesaplayıcı ücretsiz mi?", "answer": "Evet. Uzun çarpma hesaplayıcımız ücretsizdir, kayıt gerekmez. Çarpım ve adımlar için iki tam sayı girin."}
+            {
+              "question": "Uzun çarpma nedir?",
+              "answer": "Uzun çarpma adım adım bir yöntemdir: ilk sayıyı ikincinin her basamağıyla çarparsınız, kısmi çarpımları basamak değerine göre kaydırıp toplarsınız."
+            },
+            {
+              "question": "Kısmi çarpımlar nedir?",
+              "answer": "Kısmi çarpımlar çarpılanın çarpanın her basamağıyla çarpılması sonucudur. 123 × 45 için: 123 × 5 = 615 ve 123 × 4 = 492 (kaydırılmış 4920)."
+            },
+            {
+              "question": "Ondalıklar için çalışır mı?",
+              "answer": "Bu hesaplayıcı yalnızca tam sayılar içindir. Ondalıklar için önce tam sayı gibi çarpın, sonra çarpanlardaki ondalık basamak sayısına göre ondalık işaretini yerleştirin."
+            },
+            {
+              "question": "Büyük sayılar için çalışır mı?",
+              "answer": "Evet. Çok büyük tam sayılar girebilirsiniz; hesaplayıcı çarpımı ve tüm kısmi çarpımları hesaplar."
+            },
+            {
+              "question": "Hesaplayıcı ücretsiz mi?",
+              "answer": "Evet. Uzun çarpma hesaplayıcımız ücretsizdir, kayıt gerekmez. Çarpım ve adımlar için iki tam sayı girin."
+            }
           ]
         },
         "related": {

@@ -54,84 +54,110 @@ export function ArcsinCalculator() {
 
   return (
     <>
-      <div className="input-section">
-        <div className="inputs-grid">
+      <div className="split-view-container">
+        {/* Left Column - Inputs */}
+        <div className="input-section" style={{ marginBottom: 0 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="input-card">
+              <label htmlFor="x" className="input-label">
+                {t('x')}
+              </label>
+              <div className="input-with-unit">
+                <input
+                  id="x"
+                  type="number"
+                  step="0.0001"
+                  min={-1}
+                  max={1}
+                  value={x}
+                  onChange={(e) => setX(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                  className="number-input"
+                  placeholder="0.5"
+                />
+              </div>
+            </div>
+
+            <div className="action-buttons" style={{ minHeight: '44px', minWidth: '140px', gap: '0.75rem' }}>
+              <button onClick={handleCalculate} className="btn btn-primary">
+                {t('calculate')}
+              </button>
+              <button onClick={handleReset} className="btn btn-secondary">
+                {t('reset')}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column - Result */}
+        <div
+          ref={resultRef}
+          className="result-section"
+          style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}
+        >
           <div className="input-card">
-            <label htmlFor="x" className="input-label">
-              {t('x')}
-            </label>
-            <div className="input-with-unit">
-              <input
-                id="x"
-                type="number"
-                step="0.0001"
-                min={-1}
-                max={1}
-                value={x}
-                onChange={(e) => setX(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+            <label className="input-label">{t('result')}</label>
+            {result === null && (
+              <div
                 className="number-input"
-                placeholder="0.5"
-              />
-            </div>
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minHeight: '52px',
+                  padding: '0.75rem 1rem',
+                }}
+              >
+                <span style={{ color: 'var(--text-secondary)' }}>
+                  {x ? t('clickCalculate') : t('enterValue')}
+                </span>
+              </div>
+            )}
+            {result !== null && (
+              <>
+                <div className="result-display">
+                  <div className="result-item">
+                    <div className="result-label">{t('angleDegrees')}</div>
+                    <div className="number-input result-value-box">
+                      <span className="result-value">{result.degrees.toFixed(4)}</span>
+                      <span className="result-unit">°</span>
+                      <CopyButton text={`${result.degrees.toFixed(4)} °`} />
+                    </div>
+                  </div>
+                  <div className="result-item">
+                    <div className="result-label">{t('angleRadians')}</div>
+                    <div className="number-input result-value-box">
+                      <span className="result-value">{result.radians.toFixed(6)}</span>
+                      <span className="result-unit">rad</span>
+                      <CopyButton text={`${result.radians.toFixed(6)} rad`} />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="seo-content-card" style={{ marginTop: '1.5rem' }}>
+                  <h3 className="example-heading">{t('calculationHeading')}</h3>
+                  <div className="example-text" style={{ lineHeight: '1.8' }}>
+                    <p>
+                      <strong>arcsin {xValue} = sin⁻¹ {xValue} = {formatDegreesMinutesSeconds(result.degrees)}</strong>
+                    </p>
+                    <p>
+                      = {result.degrees.toFixed(4)}° + k×360° {t('generalSolutionDegrees')}
+                    </p>
+                    <p>
+                      = {result.radians.toFixed(6)} rad + k×2π {t('generalSolutionRadians')}
+                    </p>
+                    {result.radians % (Math.PI / 2) < 0.0001 && (
+                      <p>
+                        = {(result.radians / Math.PI).toFixed(1)}π rad + k×2π {t('generalSolutionRadians')}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
-
-      <div className="action-buttons">
-        <button onClick={handleCalculate} className="btn btn-primary">
-          {t('calculate')}
-        </button>
-        <button onClick={handleReset} className="btn btn-secondary">
-          {t('reset')}
-        </button>
-      </div>
-
-      {result !== null && (
-        <div ref={resultRef} className="result-section">
-          <div className="result-header">
-            <div className="result-badge">{t('result')}</div>
-          </div>
-          <div className="result-display">
-            <div className="result-item">
-              <div className="result-label">{t('angleDegrees')}</div>
-              <div className="number-input result-value-box">
-                <span className="result-value">{result.degrees.toFixed(4)}</span>
-                <span className="result-unit">°</span>
-                <CopyButton text={`${result.degrees.toFixed(4)} °`} />
-              </div>
-            </div>
-            <div className="result-item">
-              <div className="result-label">{t('angleRadians')}</div>
-              <div className="number-input result-value-box">
-                <span className="result-value">{result.radians.toFixed(6)}</span>
-                <span className="result-unit">rad</span>
-                <CopyButton text={`${result.radians.toFixed(6)} rad`} />
-              </div>
-            </div>
-          </div>
-
-          <div className="seo-content-card" style={{ marginTop: '1.5rem' }}>
-            <h3 className="example-heading">{t('calculationHeading')}</h3>
-            <div className="example-text" style={{ lineHeight: '1.8' }}>
-              <p>
-                <strong>arcsin {xValue} = sin⁻¹ {xValue} = {formatDegreesMinutesSeconds(result.degrees)}</strong>
-              </p>
-              <p>
-                = {result.degrees.toFixed(4)}° + k×360° {t('generalSolutionDegrees')}
-              </p>
-              <p>
-                = {result.radians.toFixed(6)} rad + k×2π {t('generalSolutionRadians')}
-              </p>
-              {result.radians % (Math.PI / 2) < 0.0001 && (
-                <p>
-                  = {(result.radians / Math.PI).toFixed(1)}π rad + k×2π {t('generalSolutionRadians')}
-                </p>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

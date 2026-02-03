@@ -862,7 +862,7 @@
     },
     "arccos": {
       "title": "Calculateur d'Arccos",
-      "description": "Calculateur arccos(x) pour trouver le cosinus inverse d'une valeur et obtenir l'angle en degrés et radians.",
+      "description": "Calculateur arccos(x) pour trouver l'arc cosinus d'une valeur et obtenir l'angle en degrés et radians avec des solutions générales.",
       "x": "Valeur (x, valeur du cosinus)",
       "calculate": "Calculer",
       "reset": "Réinitialiser",
@@ -870,55 +870,54 @@
       "angleDegrees": "Angle en degrés",
       "angleRadians": "Angle en radians",
       "calculationHeading": "Calcul",
-      "calculationIntro": "Pour la valeur de cosinus donnée",
-      "calculationStepRadians": "nous calculons d'abord l'angle en radians en utilisant arccos(x). Le résultat est θ = arccos(x) ≈ {radians} rad.",
-      "calculationStepDegrees": "Ensuite, nous convertissons les radians en degrés en utilisant θ° = θ × 180 / π, ce qui donne environ {degrees}°.",
+      "generalSolutionDegrees": "(k=..-1,0,1,..)",
+      "generalSolutionRadians": "(k=..-1,0,1,..)",
       "seo": {
-        "title": "Calculateur d'Arccos – Cosinus Inverse (acos) en Degrés et Radians",
-        "description": "Calculateur d'arccos gratuit pour trouver le cosinus inverse (acos) d'une valeur et obtenir l'angle à la fois en degrés et en radians. Prend en charge les valeurs dans le domaine [-1, 1] avec explication étape par étape. Idéal pour la trigonométrie, la géométrie et les calculs d'ingénierie.",
-        "keywords": "calculateur arccos, calculateur cosinus inverse, calculateur acos, calculateur inverse du cosinus, arccos en degrés, arccos en radians, calculateur de trigonométrie, angle à partir du cosinus",
+        "title": "Calculateur Arccos – Arc Cosinus Inverse (acos) en Degrés & Radians",
+        "description": "Calculateur arccos gratuit pour trouver l'arc cosinus inverse (acos) d'une valeur et obtenir l'angle en degrés et radians avec des solutions générales. Prend en charge les valeurs du domaine [-1, 1] avec explication étape par étape. Idéal pour la trigonométrie, la géométrie et les calculs d'ingénierie.",
+        "keywords": "calculateur arccos, calculateur arc cosinus inverse, calculateur acos, calculateur cos inverse, arccos en degrés, arccos en radians, calculateur trigonométrique, angle du cosinus",
         "content": {
-          "heading": "Comment Utiliser le Calculateur d'Arccos (Cosinus Inverse)",
-          "paragraph1": "La fonction arccos (cosinus inverse), écrite comme arccos(x) ou acos(x), vous donne l'angle dont le cosinus est x. En d'autres termes, si cos(θ) = x, alors θ = arccos(x). Ce calculateur vous aide à trouver rapidement cet angle à la fois en degrés et en radians pour toute valeur de cosinus valide entre -1 et 1.",
-          "paragraph2": "Pour utiliser le calculateur, entrez une valeur pour x dans l'intervalle [-1, 1]. L'outil calcule ensuite θ = arccos(x) en radians en utilisant la fonction cosinus inverse intégrée et convertit ce résultat en degrés en utilisant la formule θ° = θ × 180 / π. Les deux valeurs sont affichées avec une haute précision afin que vous puissiez les utiliser dans des problèmes de trigonométrie, géométrie, physique ou ingénierie.",
-          "paragraph3": "La fonction arccos est particulièrement utile lorsque vous connaissez le cosinus d'un angle mais avez besoin de l'angle lui-même. Les cas d'usage courants incluent trouver des angles dans des triangles rectangles, calculer des angles entre vecteurs en utilisant le produit scalaire, analyser des signaux périodiques et résoudre des équations trigonométriques. Parce que le cosinus n'est pas injectif sur tous les nombres réels, la valeur principale d'arccos est définie dans l'intervalle [0, π] radians (0° à 180°).",
-          "paragraph4": "Notre calculateur d'arccos valide que votre entrée se trouve dans le domaine correct [-1, 1] et renvoie ensuite des résultats précis à la fois en radians et en degrés. Cela vous fait gagner du temps par rapport aux calculs manuels et réduit le risque d'erreurs. Que vous soyez un étudiant apprenant la trigonométrie, un enseignant préparant des exemples ou un professionnel travaillant avec des angles, cet outil fournit des calculs de cosinus inverse rapides et fiables.",
-          "exampleHeading": "Exemple : Utilisation du Calculateur d'Arccos",
-          "exampleText": "Supposons que vous sachiez que cos(θ) = 0,5 et que vous souhaitiez trouver θ. Entrez x = 0,5 dans le calculateur. Le calculateur calcule θ = arccos(0,5) ≈ 1,047198 rad. La conversion en degrés donne θ° ≈ 60°. Cela signifie qu'un angle de 60° a un cosinus de 0,5. De même, si cos(θ) = -1, alors θ = arccos(-1) = π rad = 180°, et si cos(θ) = 1, alors θ = arccos(1) = 0 rad = 0°."
+          "heading": "Comment Utiliser le Calculateur Arccos (Arc Cosinus Inverse)",
+          "paragraph1": "La fonction arccos (arc cosinus inverse), écrite arccos(x) ou acos(x), vous donne l'angle dont le cosinus est x. En d'autres termes, si cos(θ) = x, alors θ = arccos(x). Ce calculateur vous aide à trouver rapidement cet angle en degrés et en radians pour toute valeur de cosinus valide entre -1 et 1, et fournit des solutions générales montrant tous les angles possibles.",
+          "paragraph2": "Pour utiliser le calculateur, entrez une valeur pour x dans la plage [-1, 1]. L'outil calcule ensuite θ = arccos(x) en radians en utilisant la fonction arc cosinus inverse intégrée, et convertit ce résultat en degrés en utilisant la formule θ° = θ × 180 / π. Les deux valeurs sont affichées avec une haute précision. Puisque le cosinus est une fonction périodique, le calculateur montre également des solutions générales : θ + k×360° (en degrés) et θ + k×2π (en radians), où k est un entier quelconque.",
+          "paragraph3": "La fonction arccos est particulièrement utile lorsque vous connaissez le cosinus d'un angle mais avez besoin de l'angle lui-même. Les cas d'utilisation courants incluent la recherche d'angles dans les triangles rectangles, la résolution d'équations trigonométriques, le calcul d'angles entre vecteurs, l'analyse de fonctions d'onde et le travail avec les mouvements de rotation. Parce que le cosinus n'est pas bijectif sur tous les nombres réels, la valeur principale d'arccos est définie dans l'intervalle [0, π] radians (0° à 180°), mais la solution générale inclut tous les angles qui diffèrent de multiples de 360° (ou 2π radians).",
+          "paragraph4": "Notre calculateur arccos valide que votre entrée se trouve dans le domaine correct [-1, 1], puis renvoie des résultats précis pour les radians et les degrés, ainsi que les formules de solution générale. Cela vous fait gagner du temps par rapport aux calculs manuels et vous aide à comprendre la nature périodique des fonctions trigonométriques. Que vous soyez un étudiant apprenant la trigonométrie, un enseignant préparant des exemples ou un professionnel travaillant avec des angles, cet outil fournit des calculs d'arc cosinus inverse rapides et fiables.",
+          "exampleHeading": "Exemple : Utilisation du Calculateur Arccos",
+          "exampleText": "Supposons que vous savez que cos(θ) = 0,5 et que vous voulez trouver θ. Entrez x = 0,5 dans le calculateur. Le calculateur calcule θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. La conversion en degrés donne θ° = 60°. Les solutions générales sont : θ = 60° + k×360° et θ = π/3 + k×2π rad, où k est un entier quelconque. Cela signifie que les angles de 60°, 420°, -300°, etc., ont tous un cosinus de 0,5. De même, si cos(θ) = 1, alors θ = arccos(1) = 0° (ou 0 rad), avec des solutions générales θ = 0° + k×360° et θ = 0 + k×2π rad."
         },
         "faq": {
           "heading": "Questions Fréquemment Posées",
           "items": [
             {
-              "question": "Qu'est-ce que arccos ?",
-              "answer": "Arccos (cosinus inverse) est la fonction inverse du cosinus. Si cos(θ) = x, alors θ = arccos(x). Il renvoie l'angle dont le cosinus est x, généralement donné en radians ou en degrés."
+              "question": "Qu'est-ce qu'arccos ?",
+              "answer": "Arccos (arc cosinus inverse) est l'inverse de la fonction cosinus. Si cos(θ) = x, alors θ = arccos(x). Il renvoie l'angle dont le cosinus est x, généralement donné en radians ou en degrés. La valeur principale se trouve dans la plage [0°, 180°] ou [0, π] radians."
             },
             {
               "question": "Quel est le domaine de la fonction arccos ?",
               "answer": "Le domaine d'arccos(x) est toutes les valeurs réelles x telles que -1 ≤ x ≤ 1. En dehors de cet intervalle, la fonction cosinus ne peut pas produire de telles valeurs, donc arccos n'est pas défini pour elles dans les nombres réels."
             },
             {
-              "question": "Quel est l'intervalle d'arccos ?",
-              "answer": "L'intervalle principal d'arccos(x) est [0, π] en radians, ce qui correspond à [0°, 180°] en degrés. Cela signifie qu'arccos renvoie toujours un angle entre 0 et π radians (0° et 180°)."
+              "question": "Quelle est l'étendue d'arccos ?",
+              "answer": "L'étendue principale d'arccos(x) est [0, π] en radians, ce qui correspond à [0°, 180°] en degrés. Cependant, puisque le cosinus est périodique, la solution générale inclut tous les angles θ + k×360° (ou θ + k×2π rad) où k est un entier quelconque."
             },
             {
-              "question": "Comment convertir arccos de radians en degrés ?",
-              "answer": "Si θ est en radians, vous pouvez le convertir en degrés en utilisant la formule θ° = θ × 180 / π. Notre calculateur effectue cette conversion automatiquement et affiche à la fois les radians et les degrés."
+              "question": "Pourquoi le calculateur montre-t-il des solutions générales ?",
+              "answer": "Le cosinus est une fonction périodique avec une période de 360° (2π radians). Cela signifie que si cos(θ) = x, alors cos(θ + k×360°) = x pour tout entier k. La solution générale montre tous les angles possibles qui satisfont l'équation, pas seulement la valeur principale."
             },
             {
-              "question": "Ce calculateur d'arccos est-il gratuit ?",
-              "answer": "Oui, notre calculateur d'arccos est entièrement gratuit. Aucune inscription ni paiement n'est requis. Entrez simplement une valeur pour x entre -1 et 1 pour obtenir l'angle en radians et en degrés."
+              "question": "Ce calculateur arccos est-il gratuit ?",
+              "answer": "Oui, notre calculateur arccos est entièrement gratuit. Aucune inscription ou paiement n'est requis. Entrez simplement une valeur pour x entre -1 et 1 pour obtenir l'angle en radians et en degrés, avec des solutions générales."
             }
           ]
         },
         "related": {
-          "heading": "Calculateurs Connexes",
-          "addition": "Calculateur d'Addition",
-          "additionDesc": "Additionnez des nombres entiers et des décimales rapidement et précisément",
-          "percentage": "Calculateur de Pourcentages",
-          "percentageDesc": "Calculez les valeurs en pourcentage, le changement en pourcentage et les relations en pourcentage",
-          "antilog": "Calculateur d'Antilogarithme",
-          "antilogDesc": "Calculez l'antilogarithme (logarithme inverse) d'un nombre avec n'importe quelle base"
+          "heading": "Calculateurs Associés",
+          "arcsin": "Calculateur Arcsin",
+          "arcsinDesc": "Trouvez l'arc sinus inverse d'une valeur et obtenez l'angle en degrés et radians",
+          "arctan": "Calculateur Arctan",
+          "arctanDesc": "Trouvez l'arc tangente inverse d'une valeur et obtenez l'angle en degrés et radians",
+          "percentage": "Calculateur de Pourcentage",
+          "percentageDesc": "Calculez les valeurs de pourcentage, les changements de pourcentage et les relations de pourcentage"
         }
       }
     },
@@ -1046,67 +1045,6 @@
         }
       }
     },
-    "arccos": {
-      "title": "Calculateur d'Arccos",
-      "description": "Calculateur arccos(x) pour trouver l'arc cosinus d'une valeur et obtenir l'angle en degrés et radians avec des solutions générales.",
-      "x": "Valeur (x, valeur du cosinus)",
-      "calculate": "Calculer",
-      "reset": "Réinitialiser",
-      "result": "Résultat",
-      "angleDegrees": "Angle en degrés",
-      "angleRadians": "Angle en radians",
-      "calculationHeading": "Calcul",
-      "generalSolutionDegrees": "(k=..-1,0,1,..)",
-      "generalSolutionRadians": "(k=..-1,0,1,..)",
-      "seo": {
-        "title": "Calculateur Arccos – Arc Cosinus Inverse (acos) en Degrés & Radians",
-        "description": "Calculateur arccos gratuit pour trouver l'arc cosinus inverse (acos) d'une valeur et obtenir l'angle en degrés et radians avec des solutions générales. Prend en charge les valeurs du domaine [-1, 1] avec explication étape par étape. Idéal pour la trigonométrie, la géométrie et les calculs d'ingénierie.",
-        "keywords": "calculateur arccos, calculateur arc cosinus inverse, calculateur acos, calculateur cos inverse, arccos en degrés, arccos en radians, calculateur trigonométrique, angle du cosinus",
-        "content": {
-          "heading": "Comment Utiliser le Calculateur Arccos (Arc Cosinus Inverse)",
-          "paragraph1": "La fonction arccos (arc cosinus inverse), écrite arccos(x) ou acos(x), vous donne l'angle dont le cosinus est x. En d'autres termes, si cos(θ) = x, alors θ = arccos(x). Ce calculateur vous aide à trouver rapidement cet angle en degrés et en radians pour toute valeur de cosinus valide entre -1 et 1, et fournit des solutions générales montrant tous les angles possibles.",
-          "paragraph2": "Pour utiliser le calculateur, entrez une valeur pour x dans la plage [-1, 1]. L'outil calcule ensuite θ = arccos(x) en radians en utilisant la fonction arc cosinus inverse intégrée, et convertit ce résultat en degrés en utilisant la formule θ° = θ × 180 / π. Les deux valeurs sont affichées avec une haute précision. Puisque le cosinus est une fonction périodique, le calculateur montre également des solutions générales : θ + k×360° (en degrés) et θ + k×2π (en radians), où k est un entier quelconque.",
-          "paragraph3": "La fonction arccos est particulièrement utile lorsque vous connaissez le cosinus d'un angle mais avez besoin de l'angle lui-même. Les cas d'utilisation courants incluent la recherche d'angles dans les triangles rectangles, la résolution d'équations trigonométriques, le calcul d'angles entre vecteurs, l'analyse de fonctions d'onde et le travail avec les mouvements de rotation. Parce que le cosinus n'est pas bijectif sur tous les nombres réels, la valeur principale d'arccos est définie dans l'intervalle [0, π] radians (0° à 180°), mais la solution générale inclut tous les angles qui diffèrent de multiples de 360° (ou 2π radians).",
-          "paragraph4": "Notre calculateur arccos valide que votre entrée se trouve dans le domaine correct [-1, 1], puis renvoie des résultats précis pour les radians et les degrés, ainsi que les formules de solution générale. Cela vous fait gagner du temps par rapport aux calculs manuels et vous aide à comprendre la nature périodique des fonctions trigonométriques. Que vous soyez un étudiant apprenant la trigonométrie, un enseignant préparant des exemples ou un professionnel travaillant avec des angles, cet outil fournit des calculs d'arc cosinus inverse rapides et fiables.",
-          "exampleHeading": "Exemple : Utilisation du Calculateur Arccos",
-          "exampleText": "Supposons que vous savez que cos(θ) = 0,5 et que vous voulez trouver θ. Entrez x = 0,5 dans le calculateur. Le calculateur calcule θ = arccos(0,5) = π/3 rad ≈ 1,04719755 rad. La conversion en degrés donne θ° = 60°. Les solutions générales sont : θ = 60° + k×360° et θ = π/3 + k×2π rad, où k est un entier quelconque. Cela signifie que les angles de 60°, 420°, -300°, etc., ont tous un cosinus de 0,5. De même, si cos(θ) = 1, alors θ = arccos(1) = 0° (ou 0 rad), avec des solutions générales θ = 0° + k×360° et θ = 0 + k×2π rad."
-        },
-        "faq": {
-          "heading": "Questions Fréquemment Posées",
-          "items": [
-            {
-              "question": "Qu'est-ce qu'arccos ?",
-              "answer": "Arccos (arc cosinus inverse) est l'inverse de la fonction cosinus. Si cos(θ) = x, alors θ = arccos(x). Il renvoie l'angle dont le cosinus est x, généralement donné en radians ou en degrés. La valeur principale se trouve dans la plage [0°, 180°] ou [0, π] radians."
-            },
-            {
-              "question": "Quel est le domaine de la fonction arccos ?",
-              "answer": "Le domaine d'arccos(x) est toutes les valeurs réelles x telles que -1 ≤ x ≤ 1. En dehors de cet intervalle, la fonction cosinus ne peut pas produire de telles valeurs, donc arccos n'est pas défini pour elles dans les nombres réels."
-            },
-            {
-              "question": "Quelle est l'étendue d'arccos ?",
-              "answer": "L'étendue principale d'arccos(x) est [0, π] en radians, ce qui correspond à [0°, 180°] en degrés. Cependant, puisque le cosinus est périodique, la solution générale inclut tous les angles θ + k×360° (ou θ + k×2π rad) où k est un entier quelconque."
-            },
-            {
-              "question": "Pourquoi le calculateur montre-t-il des solutions générales ?",
-              "answer": "Le cosinus est une fonction périodique avec une période de 360° (2π radians). Cela signifie que si cos(θ) = x, alors cos(θ + k×360°) = x pour tout entier k. La solution générale montre tous les angles possibles qui satisfont l'équation, pas seulement la valeur principale."
-            },
-            {
-              "question": "Ce calculateur arccos est-il gratuit ?",
-              "answer": "Oui, notre calculateur arccos est entièrement gratuit. Aucune inscription ou paiement n'est requis. Entrez simplement une valeur pour x entre -1 et 1 pour obtenir l'angle en radians et en degrés, avec des solutions générales."
-            }
-          ]
-        },
-        "related": {
-          "heading": "Calculateurs Associés",
-          "arcsin": "Calculateur Arcsin",
-          "arcsinDesc": "Trouvez l'arc sinus inverse d'une valeur et obtenez l'angle en degrés et radians",
-          "arctan": "Calculateur Arctan",
-          "arctanDesc": "Trouvez l'arc tangente inverse d'une valeur et obtenez l'angle en degrés et radians",
-          "percentage": "Calculateur de Pourcentage",
-          "percentageDesc": "Calculez les valeurs de pourcentage, les changements de pourcentage et les relations de pourcentage"
-        }
-      }
-    },
     "arcsin": {
       "title": "Calculateur d'Arcsin",
       "description": "Calculateur arcsin(x) pour trouver le sinus inverse d'une valeur et obtenir l'angle en degrés et radians avec solutions générales.",
@@ -1166,7 +1104,9 @@
           "antilog": "Calculateur d'Antilogarithme",
           "antilogDesc": "Calculez l'antilogarithme (logarithme inverse) d'un nombre avec n'importe quelle base"
         }
-      }
+      },
+      "enterValue": "Entrez une valeur pour voir le résultat",
+      "clickCalculate": "Cliquez sur Calculer pour voir le résultat"
     },
     "arctan": {
       "title": "Calculateur d'Arctan",
@@ -1227,7 +1167,9 @@
           "percentage": "Calculateur de Pourcentages",
           "percentageDesc": "Calculez les valeurs en pourcentage, le changement en pourcentage et les relations en pourcentage"
         }
-      }
+      },
+      "enterValue": "Entrez une valeur pour voir le résultat",
+      "clickCalculate": "Cliquez sur Calculer pour voir le résultat"
     },
     "average": {
       "title": "Calculateur de Moyenne",
@@ -1291,7 +1233,9 @@
           "addingFractions": "Calculateur d'Addition de Fractions",
           "addingFractionsDesc": "Additionnez et simplifiez les fractions étape par étape"
         }
-      }
+      },
+      "enterNumbers": "Entrez des nombres pour voir le résultat",
+      "clickCalculate": "Cliquez sur Calculer pour voir le résultat"
     },
     "commonFactors": {
       "title": "Calculateur de Facteurs Communs",
@@ -4518,12 +4462,30 @@
         "faq": {
           "heading": "Questions fréquentes",
           "items": [
-            {"question": "Quelle est la formule de l'énergie cinétique ?", "answer": "KE = ½ × m × v², m en kg, v en m/s. Résultat en joules (J). Ex. 2 kg à 3 m/s : KE = 9 J."},
-            {"question": "Pourquoi la vitesse est-elle au carré ?", "answer": "Le travail pour accélérer depuis l'arrêt est proportionnel à v². Doubler la vitesse quadruple KE – d'où l'importance des limites de vitesse et de la distance de freinage."},
-            {"question": "Quelles unités utilise le calculateur ?", "answer": "Masse en kilogrammes (kg), vitesse en m/s. Résultat en joules (J). Grammes ÷ 1000 = kg. km/h × 1000/3600 ≈ 0,278 = m/s."},
-            {"question": "L'énergie cinétique peut-elle être négative ?", "answer": "Non. Dans KE = ½mv², la masse est positive et v² ≥ 0, donc KE n'est jamais négative. KE scalaire = ½mv² avec v = norme de la vitesse."},
-            {"question": "Comment KE est-elle liée à la distance de freinage ?", "answer": "Le travail de freinage égale KE. Distance de freinage ∝ KE ∝ v². Doubler la vitesse quadruple la distance de freinage à force de freinage égale."},
-            {"question": "Ce calculateur est-il gratuit ?", "answer": "Oui. Le calculateur est gratuit, sans inscription. Entrez la masse en kg et la vitesse en m/s pour obtenir KE en joules avec la formule. Pour élèves, enseignants et professionnels."}
+            {
+              "question": "Quelle est la formule de l'énergie cinétique ?",
+              "answer": "KE = ½ × m × v², m en kg, v en m/s. Résultat en joules (J). Ex. 2 kg à 3 m/s : KE = 9 J."
+            },
+            {
+              "question": "Pourquoi la vitesse est-elle au carré ?",
+              "answer": "Le travail pour accélérer depuis l'arrêt est proportionnel à v². Doubler la vitesse quadruple KE – d'où l'importance des limites de vitesse et de la distance de freinage."
+            },
+            {
+              "question": "Quelles unités utilise le calculateur ?",
+              "answer": "Masse en kilogrammes (kg), vitesse en m/s. Résultat en joules (J). Grammes ÷ 1000 = kg. km/h × 1000/3600 ≈ 0,278 = m/s."
+            },
+            {
+              "question": "L'énergie cinétique peut-elle être négative ?",
+              "answer": "Non. Dans KE = ½mv², la masse est positive et v² ≥ 0, donc KE n'est jamais négative. KE scalaire = ½mv² avec v = norme de la vitesse."
+            },
+            {
+              "question": "Comment KE est-elle liée à la distance de freinage ?",
+              "answer": "Le travail de freinage égale KE. Distance de freinage ∝ KE ∝ v². Doubler la vitesse quadruple la distance de freinage à force de freinage égale."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit ?",
+              "answer": "Oui. Le calculateur est gratuit, sans inscription. Entrez la masse en kg et la vitesse en m/s pour obtenir KE en joules avec la formule. Pour élèves, enseignants et professionnels."
+            }
           ]
         },
         "related": {
@@ -4694,11 +4656,26 @@
         "faq": {
           "heading": "Questions fréquentes",
           "items": [
-            {"question": "Combien vaut la factorielle de 0 ?", "answer": "0! = 1 par définition. Cette convention permet à de nombreuses formules de rester valides pour n = 0."},
-            {"question": "Pourquoi l'entrée est-elle limitée à 170 ?", "answer": "Les factorielles croissent très vite. 171! dépasse 300 chiffres. Pour n de 0 à 170, le calculateur affiche le résultat exact."},
-            {"question": "À quoi sert la factorielle ?", "answer": "Les factorielles servent en combinatoire (permutations : n! arrangements de n objets), en combinaisons et en probabilités."},
-            {"question": "Les factorielles peuvent-elles être négatives ou décimales ?", "answer": "La factorielle usuelle n! n'est définie que pour les entiers n ≥ 0. La fonction gamma Γ en donne un prolongement à d'autres valeurs."},
-            {"question": "Ce calculateur est-il gratuit ?", "answer": "Oui. Le calculateur est gratuit, sans inscription. Entrez un nombre de 0 à 170 pour obtenir n! et le développement."}
+            {
+              "question": "Combien vaut la factorielle de 0 ?",
+              "answer": "0! = 1 par définition. Cette convention permet à de nombreuses formules de rester valides pour n = 0."
+            },
+            {
+              "question": "Pourquoi l'entrée est-elle limitée à 170 ?",
+              "answer": "Les factorielles croissent très vite. 171! dépasse 300 chiffres. Pour n de 0 à 170, le calculateur affiche le résultat exact."
+            },
+            {
+              "question": "À quoi sert la factorielle ?",
+              "answer": "Les factorielles servent en combinatoire (permutations : n! arrangements de n objets), en combinaisons et en probabilités."
+            },
+            {
+              "question": "Les factorielles peuvent-elles être négatives ou décimales ?",
+              "answer": "La factorielle usuelle n! n'est définie que pour les entiers n ≥ 0. La fonction gamma Γ en donne un prolongement à d'autres valeurs."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit ?",
+              "answer": "Oui. Le calculateur est gratuit, sans inscription. Entrez un nombre de 0 à 170 pour obtenir n! et le développement."
+            }
           ]
         },
         "related": {
@@ -5457,11 +5434,26 @@
         "faq": {
           "heading": "Questions fréquentes",
           "items": [
-            {"question": "Qu'est-ce que la multiplication posée ?", "answer": "La multiplication posée est une méthode en étapes : multiplier le premier nombre par chaque chiffre du second, décaler les produits partiels selon la position et additionner."},
-            {"question": "Que sont les produits partiels ?", "answer": "Les produits partiels sont le multiplicande multiplié par chaque chiffre du multiplicateur. Pour 123 × 45 : 123 × 5 = 615 et 123 × 4 = 492 (décalé 4920)."},
-            {"question": "Cela fonctionne-t-il pour les décimaux ?", "answer": "Ce calculateur est pour les entiers uniquement. Pour les décimaux, multiplier d'abord comme des entiers, puis placer la virgule selon le nombre total de décimales des facteurs."},
-            {"question": "Cela fonctionne-t-il pour les grands nombres ?", "answer": "Oui. Vous pouvez entrer de très grands entiers ; le calculateur donnera le produit et tous les produits partiels."},
-            {"question": "Ce calculateur est-il gratuit ?", "answer": "Oui. Notre calculateur de multiplication posée est gratuit, sans inscription. Entrez deux entiers pour voir le produit et les étapes."}
+            {
+              "question": "Qu'est-ce que la multiplication posée ?",
+              "answer": "La multiplication posée est une méthode en étapes : multiplier le premier nombre par chaque chiffre du second, décaler les produits partiels selon la position et additionner."
+            },
+            {
+              "question": "Que sont les produits partiels ?",
+              "answer": "Les produits partiels sont le multiplicande multiplié par chaque chiffre du multiplicateur. Pour 123 × 45 : 123 × 5 = 615 et 123 × 4 = 492 (décalé 4920)."
+            },
+            {
+              "question": "Cela fonctionne-t-il pour les décimaux ?",
+              "answer": "Ce calculateur est pour les entiers uniquement. Pour les décimaux, multiplier d'abord comme des entiers, puis placer la virgule selon le nombre total de décimales des facteurs."
+            },
+            {
+              "question": "Cela fonctionne-t-il pour les grands nombres ?",
+              "answer": "Oui. Vous pouvez entrer de très grands entiers ; le calculateur donnera le produit et tous les produits partiels."
+            },
+            {
+              "question": "Ce calculateur est-il gratuit ?",
+              "answer": "Oui. Notre calculateur de multiplication posée est gratuit, sans inscription. Entrez deux entiers pour voir le produit et les étapes."
+            }
           ]
         },
         "related": {

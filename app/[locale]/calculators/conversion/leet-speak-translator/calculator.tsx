@@ -140,7 +140,7 @@ export function LeetSpeakTranslatorCalculator() {
           <div className="result-card">
             <div className="result-header">
               <h3 className="result-title">{t('resultLabel')}</h3>
-              {result && <CopyButton textToCopy={result} />}
+              {result && <CopyButton text={result} />}
             </div>
             
             {result ? (

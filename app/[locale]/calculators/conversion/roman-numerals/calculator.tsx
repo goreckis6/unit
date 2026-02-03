@@ -7,6 +7,14 @@ import { CopyButton } from '@/components/CopyButton';
 
 type ConversionMode = 'arabicToRoman' | 'romanToArabic';
 
+interface ConversionResult {
+  input: string;
+  output: string;
+  breakdown: string;
+  isValid: boolean;
+  error?: string;
+}
+
 // Roman numeral conversion mappings
 const romanNumeralMap: [number, string][] = [
   [1000, 'M'],
@@ -40,6 +48,24 @@ function arabicToRoman(num: number): string {
   }
 
   return result;
+}
+
+function getBreakdown(num: number): string {
+  const parts: string[] = [];
+  let remaining = num;
+
+  for (const [value, numeral] of romanNumeralMap) {
+    while (remaining >= value) {
+      if (numeral === 'CM' || numeral === 'CD' || numeral === 'XC' || numeral === 'XL' || numeral === 'IX' || numeral === 'IV') {
+        parts.push(`${numeral} (${value})`);
+      } else {
+        parts.push(`${numeral} (${value})`);
+      }
+      remaining -= value;
+    }
+  }
+
+  return parts.join(' + ');
 }
 
 function romanToArabic(roman: string): number | null {
@@ -83,56 +109,87 @@ export function RomanNumeralsCalculator() {
   const t = useTranslations('calculators.romanNumerals');
   const [mode, setMode] = useState<ConversionMode>('arabicToRoman');
   const [input, setInput] = useState<string>('');
-  const [result, setResult] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const resultRef = useScrollToResult(result);
+  const [results, setResults] = useState<ConversionResult[]>([]);
+  const resultRef = useScrollToResult(results.length > 0 ? 'has-results' : null);
 
   const handleCalculate = () => {
-    setError(null);
-    setResult(null);
-
     if (!input.trim()) {
       return;
     }
 
+    // Split input by comma, semicolon, space, or newline
+    const inputs = input
+      .split(/[,;\s\n]+/)
+      .map(s => s.trim())
+      .filter(s => s.length > 0);
+
+    const processedResults: ConversionResult[] = [];
+
     if (mode === 'arabicToRoman') {
-      const num = parseInt(input, 10);
-      
-      if (isNaN(num)) {
-        setError(t('errorInvalidNumber'));
-        return;
-      }
-      
-      if (num < 1 || num > 3999) {
-        setError(t('errorOutOfRange'));
-        return;
-      }
-
-      const roman = arabicToRoman(num);
-      setResult(roman);
+      inputs.forEach(numStr => {
+        const num = parseInt(numStr, 10);
+        
+        if (isNaN(num)) {
+          processedResults.push({
+            input: numStr,
+            output: '',
+            breakdown: '',
+            isValid: false,
+            error: t('errorInvalidNumber'),
+          });
+        } else if (num < 1 || num > 3999) {
+          processedResults.push({
+            input: numStr,
+            output: '',
+            breakdown: '',
+            isValid: false,
+            error: t('errorOutOfRange'),
+          });
+        } else {
+          const roman = arabicToRoman(num);
+          processedResults.push({
+            input: numStr,
+            output: roman,
+            breakdown: getBreakdown(num),
+            isValid: true,
+          });
+        }
+      });
     } else {
-      const arabic = romanToArabic(input);
-      
-      if (arabic === null) {
-        setError(t('errorInvalidRoman'));
-        return;
-      }
-
-      setResult(arabic.toString());
+      inputs.forEach(romanStr => {
+        const arabic = romanToArabic(romanStr);
+        
+        if (arabic === null) {
+          processedResults.push({
+            input: romanStr,
+            output: '',
+            breakdown: '',
+            isValid: false,
+            error: t('errorInvalidRoman'),
+          });
+        } else {
+          processedResults.push({
+            input: romanStr,
+            output: arabic.toString(),
+            breakdown: getBreakdown(arabic),
+            isValid: true,
+          });
+        }
+      });
     }
+
+    setResults(processedResults);
   };
 
   const handleReset = () => {
     setInput('');
-    setResult(null);
-    setError(null);
+    setResults([]);
   };
 
   const handleModeChange = (newMode: ConversionMode) => {
     setMode(newMode);
     setInput('');
-    setResult(null);
-    setError(null);
+    setResults([]);
   };
 
   return (
@@ -161,14 +218,19 @@ export function RomanNumeralsCalculator() {
               <label htmlFor="input" className="input-label">
                 {mode === 'arabicToRoman' ? t('arabicNumber') : t('romanNumeral')}
               </label>
-              <input
+              <textarea
                 id="input"
-                type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                onKeyDown={(e) => e.key === 'Enter' && e.ctrlKey && handleCalculate()}
                 className="number-input"
                 placeholder={mode === 'arabicToRoman' ? t('arabicPlaceholder') : t('romanPlaceholder')}
+                rows={3}
+                style={{
+                  resize: 'vertical',
+                  minHeight: '80px',
+                  fontFamily: 'inherit',
+                }}
               />
             </div>
 
@@ -191,22 +253,7 @@ export function RomanNumeralsCalculator() {
         >
           <div className="input-card">
             <label className="input-label">{t('result')}</label>
-            {error && (
-              <div
-                className="number-input"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  minHeight: '52px',
-                  padding: '0.75rem 1rem',
-                  color: 'var(--error-color, #ef4444)',
-                }}
-              >
-                <span>{error}</span>
-              </div>
-            )}
-            {!error && result === null && (
+            {results.length === 0 && (
               <div
                 className="number-input"
                 style={{
@@ -222,19 +269,98 @@ export function RomanNumeralsCalculator() {
                 </span>
               </div>
             )}
-            {!error && result !== null && (
-              <div className="result-display">
-                <div className="result-item">
-                  <div className="result-label">
-                    {mode === 'arabicToRoman' ? t('romanNumeral') : t('arabicNumber')}
+            {results.length > 0 && (
+              <div style={{ overflowX: 'auto' }}>
+                <table style={{
+                  width: '100%',
+                  borderCollapse: 'collapse',
+                  fontSize: '0.95rem',
+                }}>
+                  <thead>
+                    <tr style={{
+                      borderBottom: '2px solid var(--border-color, #e5e7eb)',
+                      backgroundColor: 'var(--table-header-bg, #f9fafb)',
+                    }}>
+                      <th style={{
+                        padding: '0.75rem',
+                        textAlign: 'left',
+                        fontWeight: '600',
+                        color: 'var(--text-primary)',
+                      }}>
+                        {mode === 'arabicToRoman' ? t('arabicNumber') : t('romanNumeral')}
+                      </th>
+                      <th style={{
+                        padding: '0.75rem',
+                        textAlign: 'left',
+                        fontWeight: '600',
+                        color: 'var(--text-primary)',
+                      }}>
+                        {mode === 'arabicToRoman' ? t('romanNumeral') : t('arabicNumber')}
+                      </th>
+                      <th style={{
+                        padding: '0.75rem',
+                        textAlign: 'left',
+                        fontWeight: '600',
+                        color: 'var(--text-primary)',
+                      }}>
+                        Breakdown
+                      </th>
+                      <th style={{
+                        padding: '0.75rem',
+                        textAlign: 'center',
+                        fontWeight: '600',
+                        width: '60px',
+                      }}></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {results.map((result, index) => (
+                      <tr
+                        key={index}
+                        style={{
+                          borderBottom: '1px solid var(--border-color, #e5e7eb)',
+                          backgroundColor: result.isValid ? 'transparent' : 'rgba(239, 68, 68, 0.05)',
+                        }}
+                      >
+                        <td style={{
+                          padding: '0.75rem',
+                          fontWeight: '500',
+                          color: result.isValid ? 'var(--text-primary)' : 'var(--error-color, #ef4444)',
+                        }}>
+                          {result.input}
+                        </td>
+                        <td style={{
+                          padding: '0.75rem',
+                          fontWeight: 'bold',
+                          fontSize: '1.1rem',
+                          color: result.isValid ? 'var(--text-primary)' : 'var(--error-color, #ef4444)',
+                        }}>
+                          {result.isValid ? result.output : result.error}
+                        </td>
+                        <td style={{
+                          padding: '0.75rem',
+                          fontSize: '0.85rem',
+                          color: 'var(--text-secondary)',
+                        }}>
+                          {result.isValid ? result.breakdown : '—'}
+                        </td>
+                        <td style={{
+                          padding: '0.75rem',
+                          textAlign: 'center',
+                        }}>
+                          {result.isValid && <CopyButton text={result.output} />}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                {results.length > 1 && results.every(r => r.isValid) && (
+                  <div style={{ marginTop: '1rem', textAlign: 'right' }}>
+                    <CopyButton
+                      text={results.map(r => `${r.input} = ${r.output}`).join('\n')}
+                    />
                   </div>
-                  <div className="number-input result-value-box">
-                    <span className="result-value" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
-                      {result}
-                    </span>
-                    <CopyButton text={result} />
-                  </div>
-                </div>
+                )}
               </div>
             )}
           </div>

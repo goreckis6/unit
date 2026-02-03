@@ -124,7 +124,7 @@ export function SubtractingFractionsCalculator() {
               value={formType}
               onChange={(e) => setFormType(e.target.value as 'simple' | 'mixed')}
               className="number-input select-dropdown"
-              style={{ cursor: 'pointer', width: '100%' }}
+              style={{ cursor: 'pointer', width: '50%' }}
             >
               <option value="simple">{t('simpleFractionForm')}</option>
               <option value="mixed">{t('mixedNumberForm')}</option>

@@ -106,12 +106,6 @@ export function DogRaisinToxicityCalculator() {
                 {t('reset')}
               </button>
             </div>
-
-            <div className="seo-content-card" style={{ marginTop: '0.5rem' }}>
-              <p className="example-text" style={{ fontSize: '0.9rem', lineHeight: 1.6 }}>
-                {t('warningText')}
-              </p>
-            </div>
           </div>
         </div>
 
@@ -166,13 +160,6 @@ export function DogRaisinToxicityCalculator() {
                     <p className="input-help-text" style={{ marginTop: '0.35rem' }}>
                       {t('toxicCountApproxNote')}
                     </p>
-                  </div>
-                </div>
-
-                <div className="seo-content-card" style={{ marginTop: '1.5rem' }}>
-                  <h3 className="example-heading">{t('calculationHeading')}</h3>
-                  <div className="example-text" style={{ lineHeight: '1.8' }}>
-                    <p>{t('calculationExplanation')}</p>
                   </div>
                 </div>
               </>

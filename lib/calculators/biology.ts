@@ -9,6 +9,13 @@ export const biologyCalculators: Calculator[] = [
     category: 'biology',
   },
   {
+    id: 'dog-raisin-toxicity',
+    titleKey: 'dogRaisinToxicity.title',
+    descKey: 'dogRaisinToxicity.description',
+    path: '/calculators/biology/dog-raisin-toxicity',
+    category: 'biology',
+  },
+  {
     id: 'cat-pregnancy-calculator',
     titleKey: 'catPregnancy.title',
     descKey: 'catPregnancy.description',

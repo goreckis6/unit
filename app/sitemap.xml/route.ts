@@ -51,6 +51,7 @@ export async function GET() {
     '/calculators/others/upside-down-text',
     '/calculators/biology/dna-to-mrna',
     '/calculators/biology/cat-pregnancy-calculator',
+    '/calculators/biology/dog-raisin-toxicity',
     '/calculators/electric',
     '/calculators/biology',
     '/calculators/conversion',

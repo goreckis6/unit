@@ -86,7 +86,6 @@ export function DaysToWeeksCalculator() {
                   className="number-input"
                   placeholder={t('daysPlaceholder')}
                 />
-                <span className="input-unit">d</span>
               </div>
               <p className="input-help-text">{t('daysHelp')}</p>
             </div>

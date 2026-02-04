@@ -9,6 +9,13 @@ export const conversionCalculators: Calculator[] = [
     category: 'conversion',
   },
   {
+    id: 'days-to-weeks',
+    titleKey: 'daysToWeeks.title',
+    descKey: 'daysToWeeks.description',
+    path: '/calculators/conversion/days-to-weeks',
+    category: 'conversion',
+  },
+  {
     id: 'uppercase-to-lowercase',
     titleKey: 'uppercaseToLowercase.title',
     descKey: 'uppercaseToLowercase.description',

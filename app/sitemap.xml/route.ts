@@ -36,6 +36,7 @@ export async function GET() {
     '/calculators/math/ratio',
     '/calculators/math/percentage-increase',
     '/calculators/others/text-to-binary',
+    '/calculators/conversion/days-to-weeks',
     '/calculators/others/ascii-converter',
     '/calculators/others/caesar-cipher',
     '/calculators/others/vigenere-cipher',

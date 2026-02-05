@@ -6144,6 +6144,56 @@
         }
       }
     },
+    "minecraftCircleGenerator": {
+      "title": "Gerador de Círculos Minecraft",
+      "description": "Calcule quantos blocos você precisa para construir um círculo ou anel no Minecraft. Insira o diâmetro e a espessura para obter o número de blocos.",
+      "categoryBadge": "Outros",
+      "diameter": "Diâmetro",
+      "thickness": "Espessura",
+      "blocks": "blocos",
+      "result": "Resultado",
+      "blocksNeeded": "Você precisará de {count} blocos para construir este círculo.",
+      "blocksLabel": "Blocos necessários",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "enterValue": "Insira diâmetro e espessura para ver o resultado",
+      "clickCalculate": "Clique em Calcular para ver o resultado",
+      "calculationHeading": "Cálculo",
+      "calculationSummary": "Para um círculo com diâmetro {diameter} blocos e espessura {thickness} bloco(s), você precisa de aproximadamente {count} blocos. Algoritmos diferentes podem dar resultados ligeiramente diferentes; esta ferramenta usa uma estimativa baseada no perímetro.",
+      "seo": {
+        "title": "Gerador de Círculos Minecraft – Calculadora de Blocos para Círculos e Anéis",
+        "description": "Gerador de círculos Minecraft gratuito. Insira diâmetro e espessura para o número de blocos. Rápido, preciso, sem registo.",
+        "keywords": "gerador círculos minecraft, calculadora círculos minecraft, blocos minecraft, círculo minecraft",
+        "content": {
+          "heading": "Como usar o gerador de círculos Minecraft",
+          "paragraph1": "Construir círculos no Minecraft pode ser difícil devido à grelha de blocos. O nosso gerador estima o número de blocos para um círculo ou anel. Insira o diâmetro e a espessura e clique em Calcular.",
+          "paragraph2": "A calculadora usa o perímetro: com espessura de 1 bloco o número de blocos é aproximadamente o perímetro (π × diâmetro). Para anéis mais grossos usa a média dos perímetros interior e exterior.",
+          "paragraph3": "Útil para construções redondas, torres, arenas, poços e anéis. Saber o número de blocos com antecedência poupa tempo. Diâmetro 1–500, espessura 1 até metade do diâmetro.",
+          "paragraph4": "Insira diâmetro e espessura em blocos, clique em Calcular. A ferramenta é gratuita e funciona no navegador.",
+          "exampleHeading": "Exemplo",
+          "exampleText": "Círculo diâmetro 22, espessura 1: cerca de 69 blocos (π × 22 ≈ 69). Anel diâmetro 20, espessura 2: diâmetro interior 16; o número de blocos baseia-se na média dos perímetros."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {"question": "Como o gerador calcula o número de blocos?", "answer": "Com espessura de 1 bloco: perímetro (π × diâmetro). Para anéis mais grossos: média dos perímetros interior e exterior. Métodos diferentes podem variar ligeiramente."},
+            {"question": "O que são diâmetro e espessura?", "answer": "O diâmetro é a largura do círculo em blocos. A espessura é a largura do contorno em blocos — 1 para uma linha, mais para um anel grosso."},
+            {"question": "Qual é o diâmetro e espessura máximos?", "answer": "Diâmetro de 1 a 500 blocos, espessura de 1 a metade do diâmetro. A espessura não pode exceder metade do diâmetro."},
+            {"question": "Por que o número de blocos no jogo é diferente?", "answer": "Algoritmos de círculo diferentes dão resultados ligeiramente diferentes. A nossa estimativa serve para planear; a construção real pode variar um pouco."},
+            {"question": "O gerador de círculos Minecraft é gratuito?", "answer": "Sim. O gerador é gratuito. Sem registo necessário. Insira diâmetro e espessura para obter o número de blocos."}
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "asciiConverter": "Conversor ASCII",
+          "asciiConverterDesc": "Ver e converter texto em códigos ASCII",
+          "textToBinary": "Conversor de texto para binário",
+          "textToBinaryDesc": "Converter texto para binário com várias codificações",
+          "percentage": "Calculadora de percentagens",
+          "percentageDesc": "Calcular percentagens e variações"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "Tradutor de Alfabeto Fonético NATO",
       "description": "Converta texto em alfabeto fonético NATO e vice-versa instantaneamente. Perfeito para comunicação, militar, aviação e aprender o alfabeto fonético internacional.",

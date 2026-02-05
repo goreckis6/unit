@@ -104,6 +104,13 @@ const otherCalculatorsList: Calculator[] = addCalculatorsSorted(
     path: '/calculators/others/vigenere-cipher',
     category: 'others',
   },
+  {
+    id: 'minecraft-circle-generator',
+    titleKey: 'minecraftCircleGenerator.title',
+    descKey: 'minecraftCircleGenerator.description',
+    path: '/calculators/others/minecraft-circle-generator',
+    category: 'others',
+  },
   // Add new others calculators here; list is sorted A–Z by id automatically.
   ],
 );

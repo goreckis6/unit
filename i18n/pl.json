@@ -6114,6 +6114,56 @@
         }
       }
     },
+    "minecraftCircleGenerator": {
+      "title": "Generator Kół Minecraft",
+      "description": "Oblicz, ile bloków potrzebujesz do zbudowania koła lub pierścienia w Minecraft. Wprowadź średnicę i grubość, aby uzyskać liczbę bloków.",
+      "categoryBadge": "Inne",
+      "diameter": "Średnica",
+      "thickness": "Grubość",
+      "blocks": "bloków",
+      "result": "Wynik",
+      "blocksNeeded": "Do zbudowania tego koła potrzebujesz {count} bloków.",
+      "blocksLabel": "Potrzebna liczba bloków",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "enterValue": "Wprowadź średnicę i grubość, aby zobaczyć wynik",
+      "clickCalculate": "Kliknij Oblicz, aby zobaczyć wynik",
+      "calculationHeading": "Obliczenie",
+      "calculationSummary": "Dla koła o średnicy {diameter} bloków i grubości {thickness} bloku(ów) potrzebujesz około {count} bloków na obwód (lub pierścień). Różne algorytmy mogą dać nieco inne wyniki; to narzędzie używa szacunku na podstawie obwodu.",
+      "seo": {
+        "title": "Generator Kół Minecraft – Kalkulator Liczby Bloków dla Kół i Pierścieni",
+        "description": "Darmowy generator kół Minecraft. Wprowadź średnicę i grubość, aby uzyskać liczbę bloków do budowy kół i pierścieni. Szybko, dokładnie, bez rejestracji.",
+        "keywords": "generator kół minecraft, kalkulator kół minecraft, liczba bloków minecraft, wykres kół minecraft, budowniczy pierścieni minecraft, bloki koła minecraft",
+        "content": {
+          "heading": "Jak używać generatora kół Minecraft",
+          "paragraph1": "Budowanie kół w Minecraft może być trudne ze względu na siatkę bloków. Nasz generator pomaga zaplanować budowę, szacując liczbę bloków dla koła lub pierścienia o danej średnicy i grubości. Wprowadź średnicę (szerokość koła w blokach) i grubość (szerokość obwodu w blokach), następnie kliknij Oblicz.",
+          "paragraph2": "Kalkulator używa metody obwodowej: dla obwodu o grubości 1 bloku liczba bloków to w przybliżeniu obwód (π × średnica). Dla grubszych pierścieni używa średniej obwodów wewnętrznego i zewnętrznego. Różne algorytmy rysowania kół mogą dać nieco inne wyniki.",
+          "paragraph3": "Użyj generatora do okrągłych budowli, wież, aren, studni i pierścieni. Znajomość liczby bloków z góry oszczędza czas i pomaga zebrać materiały. Narzędzie obsługuje średnicę od 1 do 500 bloków i grubość od 1 do połowy średnicy.",
+          "paragraph4": "Wprowadź średnicę i grubość w blokach, kliknij Oblicz. Wynik pokazuje liczbę potrzebnych bloków. Narzędzie jest darmowe i działa w przeglądarce.",
+          "exampleHeading": "Przykład",
+          "exampleText": "Dla koła o średnicy 22 bloków i grubości 1 blok potrzebujesz około 69 bloków (π × 22 ≈ 69). Dla pierścienia o średnicy 20 i grubości 2 wewnętrzna średnica to 16; liczba bloków jest oparta na średniej obwodów."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {"question": "Jak generator oblicza liczbę bloków?", "answer": "Dla koła o grubości 1 bloku liczba opiera się na obwodzie (π × średnica). Dla grubszych pierścieni używana jest średnia obwodów wewnętrznego i zewnętrznego. Różne metody w grze mogą dać nieco inne wyniki."},
+            {"question": "Co to jest średnica i grubość?", "answer": "Średnica to całkowita szerokość koła w blokach. Grubość to szerokość obwodu lub pierścienia w blokach — 1 dla pojedynczego obwodu, więcej dla grubszego pierścienia."},
+            {"question": "Jakie są maksymalne średnica i grubość?", "answer": "Średnica od 1 do 500 bloków, grubość od 1 do połowy średnicy. Grubość nie może przekraczać połowy średnicy."},
+            {"question": "Dlaczego w grze koło ma inną liczbę bloków?", "answer": "Różne generatory i algorytmy kół mogą dawać nieco inne wyniki. Nasz szacunek służy do planowania i zbierania materiałów; faktyczna budowla może wymagać kilku bloków więcej lub mniej."},
+            {"question": "Czy generator kół Minecraft jest darmowy?", "answer": "Tak. Generator jest darmowy. Bez rejestracji i płatności. Wprowadź średnicę i grubość, aby uzyskać liczbę bloków."}
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "asciiConverter": "Konwerter ASCII",
+          "asciiConverterDesc": "Przeglądaj i konwertuj tekst na kody ASCII",
+          "textToBinary": "Konwerter tekstu na binarny",
+          "textToBinaryDesc": "Konwertuj tekst na binarny z wieloma kodowaniami",
+          "percentage": "Kalkulator procentów",
+          "percentageDesc": "Obliczaj procenty i zmiany procentowe"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "Tłumacz Alfabetu Fonetycznego NATO",
       "description": "Konwertuj tekst na alfabet fonetyczny NATO i odwrotnie natychmiast. Idealny do komunikacji, wojskowości, lotnictwa i nauki międzynarodowego alfabetu fonetycznego.",

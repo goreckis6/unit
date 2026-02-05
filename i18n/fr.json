@@ -6144,6 +6144,56 @@
         }
       }
     },
+    "minecraftCircleGenerator": {
+      "title": "Générateur de Cercles Minecraft",
+      "description": "Calculez le nombre de blocs nécessaires pour construire un cercle ou un anneau dans Minecraft. Entrez le diamètre et l'épaisseur pour obtenir le nombre de blocs.",
+      "categoryBadge": "Autres",
+      "diameter": "Diamètre",
+      "thickness": "Épaisseur",
+      "blocks": "blocs",
+      "result": "Résultat",
+      "blocksNeeded": "Vous aurez besoin de {count} blocs pour construire ce cercle.",
+      "blocksLabel": "Blocs nécessaires",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "enterValue": "Entrez le diamètre et l'épaisseur pour voir le résultat",
+      "clickCalculate": "Cliquez sur Calculer pour voir le résultat",
+      "calculationHeading": "Calcul",
+      "calculationSummary": "Pour un cercle de diamètre {diameter} blocs et d'épaisseur {thickness} bloc(s), il faut environ {count} blocs. Différents algorithmes peuvent donner des résultats légèrement différents ; cet outil utilise une estimation basée sur le périmètre.",
+      "seo": {
+        "title": "Générateur de Cercles Minecraft – Calculateur de Blocs pour Cercles et Anneaux",
+        "description": "Générateur de cercles Minecraft gratuit. Entrez le diamètre et l'épaisseur pour obtenir le nombre de blocs. Rapide, précis, sans inscription.",
+        "keywords": "générateur cercle minecraft, calculateur cercle minecraft, nombre de blocs minecraft, cercle minecraft",
+        "content": {
+          "heading": "Comment utiliser le générateur de cercles Minecraft",
+          "paragraph1": "Construire des cercles dans Minecraft peut être délicat à cause de la grille de blocs. Notre générateur estime le nombre de blocs pour un cercle ou un anneau. Entrez le diamètre et l'épaisseur, puis cliquez sur Calculer.",
+          "paragraph2": "Le calculateur utilise le périmètre : pour une épaisseur d'un bloc, le nombre de blocs correspond environ au périmètre (π × diamètre). Pour des anneaux plus épais, il utilise la moyenne des périmètres intérieur et extérieur.",
+          "paragraph3": "Utile pour les constructions rondes, tours, arènes, puits et anneaux. Connaître le nombre de blocs à l'avance fait gagner du temps. Diamètre 1–500, épaisseur 1 à la moitié du diamètre.",
+          "paragraph4": "Entrez le diamètre et l'épaisseur en blocs, cliquez sur Calculer. L'outil est gratuit et fonctionne dans le navigateur.",
+          "exampleHeading": "Exemple",
+          "exampleText": "Cercle diamètre 22, épaisseur 1 : environ 69 blocs (π × 22 ≈ 69). Anneau diamètre 20, épaisseur 2 : diamètre intérieur 16 ; le nombre de blocs est basé sur la moyenne des périmètres."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {"question": "Comment le générateur calcule-t-il le nombre de blocs ?", "answer": "Pour une épaisseur d'un bloc : périmètre (π × diamètre). Pour des anneaux plus épais : moyenne des périmètres intérieur et extérieur. Différentes méthodes peuvent légèrement varier."},
+            {"question": "Qu'est-ce que le diamètre et l'épaisseur ?", "answer": "Le diamètre est la largeur du cercle en blocs. L'épaisseur est la largeur du contour en blocs — 1 pour une ligne, plus pour un anneau épais."},
+            {"question": "Quel est le diamètre et l'épaisseur maximum ?", "answer": "Diamètre de 1 à 500 blocs, épaisseur de 1 à la moitié du diamètre. L'épaisseur ne peut pas dépasser la moitié du diamètre."},
+            {"question": "Pourquoi le nombre de blocs en jeu diffère-t-il ?", "answer": "Différents algorithmes de cercles donnent des résultats légèrement différents. Notre estimation sert à la planification ; la construction réelle peut varier un peu."},
+            {"question": "Le générateur de cercles Minecraft est-il gratuit ?", "answer": "Oui. Le générateur est gratuit. Aucune inscription requise. Entrez le diamètre et l'épaisseur pour obtenir le nombre de blocs."}
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs associés",
+          "asciiConverter": "Convertisseur ASCII",
+          "asciiConverterDesc": "Voir et convertir le texte en codes ASCII",
+          "textToBinary": "Convertisseur Texte vers Binaire",
+          "textToBinaryDesc": "Convertir le texte en binaire avec plusieurs encodages",
+          "percentage": "Calculateur de pourcentages",
+          "percentageDesc": "Calculer les pourcentages et les variations"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "Traducteur d'Alphabet Phonétique NATO",
       "description": "Convertissez du texte en alphabet phonétique NATO et vice versa instantanément. Parfait pour la communication, le militaire, l'aviation et l'apprentissage de l'alphabet phonétique international.",

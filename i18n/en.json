@@ -6333,6 +6333,71 @@
         }
       }
     },
+    "minecraftCircleGenerator": {
+      "title": "Minecraft Circle Generator",
+      "description": "Calculate how many blocks you need to build a circle or ring in Minecraft. Enter diameter and thickness to get the block count instantly.",
+      "categoryBadge": "Other",
+      "diameter": "Diameter",
+      "thickness": "Thickness",
+      "blocks": "blocks",
+      "result": "Result",
+      "blocksNeeded": "You will need {count} blocks to build this circle.",
+      "blocksLabel": "Blocks needed",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "enterValue": "Enter diameter and thickness to see the result",
+      "clickCalculate": "Click Calculate to see the result",
+      "calculationHeading": "Calculation",
+      "calculationSummary": "For a circle with diameter {diameter} blocks and thickness {thickness} block(s), you need approximately {count} blocks to form the circle outline (or ring). Different circle algorithms may give slightly different counts; this tool uses a perimeter-based estimate.",
+      "seo": {
+        "title": "Minecraft Circle Generator – Block Count Calculator for Circles & Rings",
+        "description": "Free Minecraft circle generator. Enter diameter and thickness to get the exact block count for building circles and rings in Minecraft. Quick, accurate, and no registration required.",
+        "keywords": "minecraft circle generator, minecraft circle calculator, minecraft block count, minecraft circle chart, minecraft ring builder, circle blocks minecraft, minecraft circle guide",
+        "content": {
+          "heading": "How to Use the Minecraft Circle Generator",
+          "paragraph1": "Building circles in Minecraft can be tricky because the game uses block-based grids. Our Minecraft Circle Generator helps you plan builds by estimating how many blocks you need for a circle or ring of a given diameter and thickness. Enter the diameter (the width of the circle in blocks) and the thickness (how many blocks wide the ring or outline is), then click Calculate to get the block count.",
+          "paragraph2": "The calculator uses a perimeter-based method: for a 1-block-thick circle outline, the block count is approximately the circumference (π × diameter). For thicker rings, it uses the average of the inner and outer perimeters. This gives you a practical estimate for gathering materials and planning your build. Different circle-drawing algorithms (e.g. pixel circles) can yield slightly different counts, but the result is a good planning guide.",
+          "paragraph3": "Use the Minecraft Circle Generator for round buildings, towers, arenas, wells, domes, and decorative rings. Knowing the block count in advance saves time and helps you collect the right amount of materials. The tool works for any diameter from 1 to 500 blocks and thickness from 1 block up to half the diameter.",
+          "paragraph4": "Simply enter your desired diameter and thickness in blocks, then click Calculate. The result shows how many blocks you need. You can copy the number for your notes or building checklist. The calculator is free, runs in your browser, and requires no registration.",
+          "exampleHeading": "Example",
+          "exampleText": "For a circle with diameter 22 blocks and thickness 1 block, you need approximately 69 blocks to form the outline (π × 22 ≈ 69). For a ring with diameter 20 and thickness 2, the inner diameter is 16, so the block count is based on the average of the two perimeters, giving you a useful estimate for your build."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "How does the Minecraft Circle Generator calculate block count?",
+              "answer": "For a 1-block-thick circle, the block count is based on the circumference (π × diameter). For thicker rings, we use the average of the inner and outer perimeters. Different in-game circle methods (e.g. pixel-style circles) may give slightly different counts, but this estimate is useful for planning and gathering materials."
+            },
+            {
+              "question": "What is diameter and thickness?",
+              "answer": "Diameter is the total width of the circle in blocks (e.g. 22 means the circle spans 22 blocks across). Thickness is how many blocks wide the circle outline or ring is—1 for a single-block outline, more for a thick ring or filled border."
+            },
+            {
+              "question": "What is the maximum diameter and thickness?",
+              "answer": "You can enter a diameter from 1 to 500 blocks and a thickness from 1 up to half the diameter. Thickness cannot exceed half the diameter, or the inner circle would disappear."
+            },
+            {
+              "question": "Why does my in-game circle use a different number of blocks?",
+              "answer": "Minecraft circle generators and pixel-circle algorithms can use different rules (e.g. 8-way symmetry, midpoint circle), so the exact block count may vary. Our tool gives a perimeter-based estimate that is useful for planning and material counts; actual builds may need a few more or fewer blocks depending on the method you use."
+            },
+            {
+              "question": "Is the Minecraft Circle Generator free?",
+              "answer": "Yes. The Minecraft Circle Generator is free to use. No registration or payment is required. Enter diameter and thickness to get the block count instantly."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "asciiConverter": "ASCII Converter",
+          "asciiConverterDesc": "View and convert text to ASCII codes",
+          "textToBinary": "Text to Binary Converter",
+          "textToBinaryDesc": "Convert text to binary with multiple encodings",
+          "percentage": "Percentage Calculator",
+          "percentageDesc": "Calculate percentages and percentage change"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "NATO Phonetic Alphabet Translator",
       "description": "Convert text to NATO phonetic alphabet and vice versa instantly. Perfect for communication, military, aviation, and learning the international phonetic alphabet.",

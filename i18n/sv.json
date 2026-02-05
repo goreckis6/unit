@@ -6114,6 +6114,56 @@
         }
       }
     },
+    "minecraftCircleGenerator": {
+      "title": "Minecraft Cirkelgenerator",
+      "description": "Beräkna hur många block du behöver för att bygga en cirkel eller ring i Minecraft. Ange diameter och tjocklek för blockantalet.",
+      "categoryBadge": "Övrigt",
+      "diameter": "Diameter",
+      "thickness": "Tjocklek",
+      "blocks": "block",
+      "result": "Resultat",
+      "blocksNeeded": "Du behöver {count} block för att bygga denna cirkel.",
+      "blocksLabel": "Block som behövs",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "enterValue": "Ange diameter och tjocklek för resultat",
+      "clickCalculate": "Klicka på Beräkna för resultat",
+      "calculationHeading": "Beräkning",
+      "calculationSummary": "För en cirkel med diameter {diameter} block och tjocklek {thickness} block behöver du ungefär {count} block. Olika algoritmer kan något avvika; verktyget använder en omkretsbaserad uppskattning.",
+      "seo": {
+        "title": "Minecraft Cirkelgenerator – Blockräknare för Cirklar och Ringar",
+        "description": "Gratis Minecraft cirkelgenerator. Ange diameter och tjocklek för blockantal. Snabb, noggrann, ingen registrering.",
+        "keywords": "minecraft cirkel generator, minecraft cirkel kalkylator, minecraft block, cirkel minecraft",
+        "content": {
+          "heading": "Så använder du Minecraft cirkelgeneratorn",
+          "paragraph1": "Att bygga cirklar i Minecraft är knepigt på grund av blocknätet. Vår generator uppskattar antalet block för en cirkel eller ring. Ange diameter och tjocklek och klicka på Beräkna.",
+          "paragraph2": "Kalkylatorn använder omkrets: vid 1 blocks tjocklek är blockantalet ungefär omkretsen (π × diameter). För tjockare ringar används medelvärdet av inre och yttre omkrets.",
+          "paragraph3": "Användbart för runda byggnader, torn, arenor, brunnar och ringar. Att veta blockantalet i förväg sparar tid. Diameter 1–500, tjocklek 1 till halva diameter.",
+          "paragraph4": "Ange diameter och tjocklek i block, klicka Beräkna. Verktyget är gratis och körs i webbläsaren.",
+          "exampleHeading": "Exempel",
+          "exampleText": "Cirkel diameter 22, tjocklek 1: ungefär 69 block (π × 22 ≈ 69). Ring diameter 20, tjocklek 2: inre diameter 16; blockantal baserat på medelvärdet av omkretsarna."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {"question": "Hur beräknar generatorn antalet block?", "answer": "Vid 1 blocks tjocklek: omkrets (π × diameter). För tjockare ringar: medelvärdet av inre och yttre omkrets. Olika metoder kan något avvika."},
+            {"question": "Vad är diameter och tjocklek?", "answer": "Diameter är cirkelns bredd i block. Tjocklek är konturens bredd i block — 1 för en linje, mer för en tjock ring."},
+            {"question": "Vad är max diameter och tjocklek?", "answer": "Diameter 1–500 block, tjocklek 1 till halva diameter. Tjockleken får inte överstiga halva diameter."},
+            {"question": "Varför skiljer sig blockantalet i spelet?", "answer": "Olika cirkelalgoritmer ger något olika resultat. Vår uppskattning är för planering; den faktiska byggnationen kan något avvika."},
+            {"question": "Är Minecraft cirkelgeneratorn gratis?", "answer": "Ja. Generatorn är gratis. Ingen registrering krävs. Ange diameter och tjocklek för blockantal."}
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "asciiConverter": "ASCII-konverterare",
+          "asciiConverterDesc": "Visa och konvertera text till ASCII-koder",
+          "textToBinary": "Text till binär konverterare",
+          "textToBinaryDesc": "Konvertera text till binär med flera kodningar",
+          "percentage": "Procenträknare",
+          "percentageDesc": "Beräkna procent och procentuell förändring"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "NATO Fonetiskt Alfabet Översättare",
       "description": "Konvertera text till NATO-fonetiskt alfabet och vice versa direkt. Perfekt för kommunikation, militär, flyg och att lära sig det internationella fonetiska alfabetet.",

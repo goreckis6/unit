@@ -6129,6 +6129,56 @@
         }
       }
     },
+    "minecraftCircleGenerator": {
+      "title": "Minecraft Ympyrägeneraattori",
+      "description": "Laske kuinka monta lohkoa tarvitset ympyrän tai renkaan rakentamiseen Minecraftissa. Syötä halkaisija ja paksuus lohkojen määrää varten.",
+      "categoryBadge": "Muut",
+      "diameter": "Halkaisija",
+      "thickness": "Paksuus",
+      "blocks": "lohkoa",
+      "result": "Tulos",
+      "blocksNeeded": "Tarvitset {count} lohkoa tämän ympyrän rakentamiseen.",
+      "blocksLabel": "Tarvittavat lohkot",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "enterValue": "Syötä halkaisija ja paksuus nähdäksesi tuloksen",
+      "clickCalculate": "Napsauta Laske nähdäksesi tuloksen",
+      "calculationHeading": "Laskelma",
+      "calculationSummary": "Ympyrälle, jonka halkaisija on {diameter} lohkoa ja paksuus {thickness} lohko(a), tarvitaan noin {count} lohkoa. Eri algoritmit voivat hieman poiketa; työkalu käyttää piirin perusteella tehtyä arviota.",
+      "seo": {
+        "title": "Minecraft Ympyrägeneraattori – Lohkolaskuri ympyröille ja renkaille",
+        "description": "Ilmainen Minecraft ympyrägeneraattori. Syötä halkaisija ja paksuus lohkojen määrälle. Nopea, tarkka, ei rekisteröintiä.",
+        "keywords": "minecraft ympyrä generaattori, minecraft ympyrä laskuri, minecraft lohkot, ympyrä minecraft",
+        "content": {
+          "heading": "Minecraft ympyrägeneraattorin käyttö",
+          "paragraph1": "Ympyröiden rakentaminen Minecraftissa on hankalaa lohkoruudukon takia. Generaattorimme arvioi lohkojen määrän ympyrälle tai renkaalle. Syötä halkaisija ja paksuus ja napsauta Laske.",
+          "paragraph2": "Laskuri käyttää piiriä: 1 lohkon paksuudella lohkojen määrä on noin piiri (π × halkaisija). Paksemmille renkaille käytetään sisä- ja ulkopiirin keskiarvoa.",
+          "paragraph3": "Hyödyllinen pyöreisiin rakennelmiin, torneihin, areenoihin, kaivoihin ja renkaiin. Lohkojen määrän tietäminen etukäteen säästää aikaa. Halkaisija 1–500, paksuus 1 puoleen halkaisijaan.",
+          "paragraph4": "Syötä halkaisija ja paksuus lohkoina, napsauta Laske. Työkalu on ilmainen ja toimii selaimessa.",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "Ympyrä halkaisija 22, paksuus 1: noin 69 lohkoa (π × 22 ≈ 69). Rengas halkaisija 20, paksuus 2: sisähalkaisija 16; lohkojen määrä perustuu piirien keskiarvoon."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Miten generaattori laskee lohkojen määrän?", "answer": "1 lohkon paksuudella: piiri (π × halkaisija). Paksemmille renkaille: sisä- ja ulkopiirin keskiarvo. Eri menetelmät voivat hieman poiketa."},
+            {"question": "Mikä on halkaisija ja paksuus?", "answer": "Halkaisija on ympyrän leveys lohkoina. Paksuus on ääriviivan leveys lohkoina — 1 viivalle, enemmän paksulle renkaalle."},
+            {"question": "Mikä on enimmäishalkaisija ja -paksuus?", "answer": "Halkaisija 1–500 lohkoa, paksuus 1 puoleen halkaisijaan. Paksuus ei voi ylittää puolta halkaisijasta."},
+            {"question": "Miksi lohkojen määrä pelissä poikkeaa?", "answer": "Eri ympyräalgoritmit antavat hieman eri tuloksia. Arviomme on suunnittelua varten; todellinen rakentaminen voi hieman poiketa."},
+            {"question": "Onko Minecraft ympyrägeneraattori ilmainen?", "answer": "Kyllä. Generaattori on ilmainen. Ei rekisteröintiä. Syötä halkaisija ja paksuus lohkojen määrälle."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskurit",
+          "asciiConverter": "ASCII-muunnin",
+          "asciiConverterDesc": "Näytä ja muunna teksti ASCII-koodeiksi",
+          "textToBinary": "Teksti-binäärimuunnin",
+          "textToBinaryDesc": "Muunna teksti binääriksi useilla koodauksilla",
+          "percentage": "Prosenttilaskuri",
+          "percentageDesc": "Laske prosentit ja prosentuaalinen muutos"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "NATO Foneettinen Aakkosto Kääntäjä",
       "description": "Muunna teksti NATO-foneettiseen aakkostoon ja päinvastoin välittömästi. Täydellinen viestintään, sotilas-, ilmailu- ja kansainvälisen foneettisen aakkoston oppimiseen.",

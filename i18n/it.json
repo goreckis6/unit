@@ -6144,6 +6144,56 @@
         }
       }
     },
+    "minecraftCircleGenerator": {
+      "title": "Generatore di Cerchi Minecraft",
+      "description": "Calcola quanti blocchi ti servono per costruire un cerchio o anello in Minecraft. Inserisci diametro e spessore per ottenere il numero di blocchi.",
+      "categoryBadge": "Altri",
+      "diameter": "Diametro",
+      "thickness": "Spessore",
+      "blocks": "blocchi",
+      "result": "Risultato",
+      "blocksNeeded": "Ti serviranno {count} blocchi per costruire questo cerchio.",
+      "blocksLabel": "Blocchi necessari",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "enterValue": "Inserisci diametro e spessore per vedere il risultato",
+      "clickCalculate": "Clicca su Calcola per vedere il risultato",
+      "calculationHeading": "Calcolo",
+      "calculationSummary": "Per un cerchio di diametro {diameter} blocchi e spessore {thickness} blocco/i, servono circa {count} blocchi. Algoritmi diversi possono dare risultati leggermente diversi; questo strumento usa una stima basata sul perimetro.",
+      "seo": {
+        "title": "Generatore di Cerchi Minecraft – Calcolatore Blocchi per Cerchi e Anelli",
+        "description": "Generatore di cerchi Minecraft gratuito. Inserisci diametro e spessore per il numero di blocchi. Veloce, preciso, senza registrazione.",
+        "keywords": "generatore cerchi minecraft, calcolatrice cerchi minecraft, blocchi minecraft, cerchio minecraft",
+        "content": {
+          "heading": "Come usare il generatore di cerchi Minecraft",
+          "paragraph1": "Costruire cerchi in Minecraft può essere difficile per la griglia di blocchi. Il nostro generatore stima il numero di blocchi per un cerchio o anello. Inserisci diametro e spessore e clicca su Calcola.",
+          "paragraph2": "La calcolatrice usa il perimetro: con spessore 1 blocco il numero di blocchi è circa il perimetro (π × diametro). Per anelli più spessi usa la media dei perimetri interno ed esterno.",
+          "paragraph3": "Utile per costruzioni rotonde, torri, arene, pozzi e anelli. Conoscere i blocchi in anticipo fa risparmiare tempo. Diametro 1–500, spessore 1 fino a metà diametro.",
+          "paragraph4": "Inserisci diametro e spessore in blocchi, clicca Calcola. Lo strumento è gratuito e funziona nel browser.",
+          "exampleHeading": "Esempio",
+          "exampleText": "Cerchio diametro 22, spessore 1: circa 69 blocchi (π × 22 ≈ 69). Anello diametro 20, spessore 2: diametro interno 16; il numero di blocchi si basa sulla media dei perimetri."
+        },
+        "faq": {
+          "heading": "Domande frequenti",
+          "items": [
+            {"question": "Come calcola il generatore il numero di blocchi?", "answer": "Con spessore 1 blocco: perimetro (π × diametro). Per anelli più spessi: media dei perimetri interno ed esterno. Metodi diversi possono variare leggermente."},
+            {"question": "Cosa sono diametro e spessore?", "answer": "Il diametro è la larghezza del cerchio in blocchi. Lo spessore è la larghezza del contorno in blocchi — 1 per una linea, più per un anello spesso."},
+            {"question": "Qual è il diametro e spessore massimo?", "answer": "Diametro da 1 a 500 blocchi, spessore da 1 a metà diametro. Lo spessore non può superare la metà del diametro."},
+            {"question": "Perché il numero di blocchi in gioco è diverso?", "answer": "Algoritmi di cerchio diversi danno risultati leggermente diversi. La nostra stima serve per pianificare; la costruzione reale può variare un po'."},
+            {"question": "Il generatore di cerchi Minecraft è gratuito?", "answer": "Sì. Il generatore è gratuito. Nessuna registrazione richiesta. Inserisci diametro e spessore per ottenere il numero di blocchi."}
+          ]
+        },
+        "related": {
+          "heading": "Calcolatrici correlate",
+          "asciiConverter": "Convertitore ASCII",
+          "asciiConverterDesc": "Visualizza e converti testo in codici ASCII",
+          "textToBinary": "Convertitore testo in binario",
+          "textToBinaryDesc": "Converti testo in binario con più codifiche",
+          "percentage": "Calcolatrice percentuali",
+          "percentageDesc": "Calcola percentuali e variazioni"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "Traduttore Alfabeto Fonetico NATO",
       "description": "Converti testo in alfabeto fonetico NATO e viceversa istantaneamente. Perfetto per comunicazione, militare, aviazione e apprendimento dell'alfabeto fonetico internazionale.",

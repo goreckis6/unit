@@ -6144,6 +6144,56 @@
         }
       }
     },
+    "minecraftCircleGenerator": {
+      "title": "Minecraft-Kreis-Generator",
+      "description": "Berechnen Sie, wie viele Blöcke Sie für einen Kreis oder Ring in Minecraft benötigen. Geben Sie Durchmesser und Dicke ein, um die Blockanzahl zu erhalten.",
+      "categoryBadge": "Sonstige",
+      "diameter": "Durchmesser",
+      "thickness": "Dicke",
+      "blocks": "Blöcke",
+      "result": "Ergebnis",
+      "blocksNeeded": "Sie benötigen {count} Blöcke, um diesen Kreis zu bauen.",
+      "blocksLabel": "Benötigte Blöcke",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "enterValue": "Durchmesser und Dicke eingeben",
+      "clickCalculate": "Berechnen klicken für das Ergebnis",
+      "calculationHeading": "Berechnung",
+      "calculationSummary": "Für einen Kreis mit Durchmesser {diameter} Blöcke und Dicke {thickness} Block/Blöcke benötigen Sie etwa {count} Blöcke. Verschiedene Algorithmen können leicht abweichen; dieses Tool nutzt eine umfangsbasierte Schätzung.",
+      "seo": {
+        "title": "Minecraft-Kreis-Generator – Blockrechner für Kreise und Ringe",
+        "description": "Kostenloser Minecraft-Kreis-Generator. Durchmesser und Dicke eingeben, Blockanzahl für Kreise und Ringe erhalten. Schnell, genau, ohne Anmeldung.",
+        "keywords": "minecraft kreis generator, minecraft kreis rechner, minecraft blockanzahl, minecraft kreis chart, minecraft ring bauen",
+        "content": {
+          "heading": "So nutzen Sie den Minecraft-Kreis-Generator",
+          "paragraph1": "Kreise in Minecraft zu bauen ist wegen des Blockrasters knifflig. Unser Generator schätzt die Blockanzahl für einen Kreis oder Ring bei gegebener Dicke. Geben Sie Durchmesser und Dicke ein und klicken Sie auf Berechnen.",
+          "paragraph2": "Der Rechner nutzt den Umfang: Bei 1 Block Dicke entspricht die Blockanzahl etwa dem Umfang (π × Durchmesser). Bei dickeren Ringen wird der Mittelwert aus innerem und äußerem Umfang verwendet.",
+          "paragraph3": "Nützlich für runde Bauten, Türme, Arenen, Brunnen und Ringe. Die Blockanzahl hilft beim Material sammeln. Durchmesser 1–500, Dicke 1 bis halber Durchmesser.",
+          "paragraph4": "Durchmesser und Dicke in Blöcken eingeben, Berechnen klicken. Das Tool ist kostenlos und läuft im Browser.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "Kreis Durchmesser 22, Dicke 1: etwa 69 Blöcke (π × 22 ≈ 69). Ring Durchmesser 20, Dicke 2: innere Durchmesser 16; Blockanzahl basiert auf dem Mittelwert der Umfänge."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {"question": "Wie wird die Blockanzahl berechnet?", "answer": "Bei 1 Block Dicke: Umfang (π × Durchmesser). Bei dickeren Ringen: Mittelwert aus innerem und äußerem Umfang. Verschiedene Methoden können leicht abweichen."},
+            {"question": "Was sind Durchmesser und Dicke?", "answer": "Durchmesser ist die Breite des Kreises in Blöcken. Dicke ist die Breite des Kreisrands in Blöcken — 1 für eine Linie, mehr für einen dicken Ring."},
+            {"question": "Maximaler Durchmesser und Dicke?", "answer": "Durchmesser 1–500 Blöcke, Dicke 1 bis halber Durchmesser. Dicke darf nicht mehr als die Hälfte des Durchmessers sein."},
+            {"question": "Warum weicht die Blockanzahl im Spiel ab?", "answer": "Verschiedene Kreis-Algorithmen liefern leicht unterschiedliche Werte. Unsere Schätzung dient der Planung; die tatsächliche Bauweise kann etwas abweichen."},
+            {"question": "Ist der Minecraft-Kreis-Generator kostenlos?", "answer": "Ja. Der Generator ist kostenlos. Keine Anmeldung nötig. Durchmesser und Dicke eingeben, Blockanzahl erhalten."}
+          ]
+        },
+        "related": {
+          "heading": "Ähnliche Rechner",
+          "asciiConverter": "ASCII-Konverter",
+          "asciiConverterDesc": "Text in ASCII-Codes anzeigen und umwandeln",
+          "textToBinary": "Text-zu-Binär-Konverter",
+          "textToBinaryDesc": "Text mit mehreren Kodierungen in Binär umwandeln",
+          "percentage": "Prozentrechner",
+          "percentageDesc": "Prozente und prozentuale Änderung berechnen"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "NATO Phonetisches Alphabet Übersetzer",
       "description": "Konvertieren Sie Text sofort in das NATO-phonetische Alphabet und umgekehrt. Perfekt für Kommunikation, Militär, Luftfahrt und zum Lernen des internationalen phonetischen Alphabets.",

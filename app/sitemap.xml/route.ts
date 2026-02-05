@@ -40,6 +40,7 @@ export async function GET() {
     '/calculators/others/ascii-converter',
     '/calculators/others/caesar-cipher',
     '/calculators/others/vigenere-cipher',
+    '/calculators/others/minecraft-circle-generator',
     '/calculators/others/pig-latin',
     '/calculators/others/bold-text',
     '/calculators/others/small-caps',

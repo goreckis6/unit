@@ -6114,6 +6114,56 @@
         }
       }
     },
+    "minecraftCircleGenerator": {
+      "title": "Generátor Kruhů Minecraft",
+      "description": "Spočítejte, kolik bloků potřebujete na stavbu kruhu nebo prstence v Minecraftu. Zadejte průměr a tloušťku pro počet bloků.",
+      "categoryBadge": "Ostatní",
+      "diameter": "Průměr",
+      "thickness": "Tloušťka",
+      "blocks": "bloků",
+      "result": "Výsledek",
+      "blocksNeeded": "Na postavení tohoto kruhu budete potřebovat {count} bloků.",
+      "blocksLabel": "Potřebné bloky",
+      "calculate": "Spočítat",
+      "reset": "Reset",
+      "enterValue": "Zadejte průměr a tloušťku pro výsledek",
+      "clickCalculate": "Klikněte na Spočítat pro výsledek",
+      "calculationHeading": "Výpočet",
+      "calculationSummary": "Pro kruh o průměru {diameter} bloků a tloušťce {thickness} bloku(ů) potřebujete přibližně {count} bloků. Různé algoritmy mohou mírně lišit; nástroj používá odhad podle obvodu.",
+      "seo": {
+        "title": "Generátor Kruhů Minecraft – Kalkulačka Bloků pro Kruhy a Prstence",
+        "description": "Generátor kruhů Minecraft. Zadejte průměr a tloušťku pro počet bloků. Rychlé, přesné, bez registrace.",
+        "keywords": "minecraft generátor kruhů, minecraft kalkulačka kruhů, minecraft počet bloků, minecraft kruh",
+        "content": {
+          "heading": "Jak používat generátor kruhů Minecraft",
+          "paragraph1": "Stavba kruhů v Minecraftu je složitá kvůli blokové mřížce. Generátor odhadne počet bloků pro kruh nebo prstenec. Zadejte průměr a tloušťku a klikněte na Spočítat.",
+          "paragraph2": "Kalkulačka používá obvod: u tloušťky 1 blok je počet bloků přibližně obvod (π × průměr). U silnějších prstenců průměr vnitřního a vnějšího obvodu.",
+          "paragraph3": "Vhodné pro kulaté stavby, věže, arény, studny a prstence. Znalost počtu bloků šetří čas a materiál. Průměr 1–500, tloušťka 1 až polovina průměru.",
+          "paragraph4": "Zadejte průměr a tloušťku v blocích, klikněte Spočítat. Nástroj je zdarma a běží v prohlížeči.",
+          "exampleHeading": "Příklad",
+          "exampleText": "Kruh průměr 22, tloušťka 1: asi 69 bloků (π × 22 ≈ 69). Prstenec průměr 20, tloušťka 2: vnitřní průměr 16; počet bloků z průměru obvodů."
+        },
+        "faq": {
+          "heading": "Časté dotazy",
+          "items": [
+            {"question": "Jak se počítá počet bloků?", "answer": "U tloušťky 1 blok: obvod (π × průměr). U silnějších prstenců: průměr vnitřního a vnějšího obvodu. Různé metody mohou mírně lišit."},
+            {"question": "Co je průměr a tloušťka?", "answer": "Průměr je šířka kruhu v blocích. Tloušťka je šířka obvodu v blocích — 1 pro jednu linii, více pro silný prstenec."},
+            {"question": "Maximální průměr a tloušťka?", "answer": "Průměr 1–500 bloků, tloušťka 1 až polovina průměru. Tloušťka nesmí přesáhnout polovinu průměru."},
+            {"question": "Proč se počet bloků v grách liší?", "answer": "Různé algoritmy kruhů dávají mírně odlišné výsledky. Náš odhad slouží k plánování; skutečná stavba může mírně lišit."},
+            {"question": "Je generátor kruhů Minecraft zdarma?", "answer": "Ano. Generátor je zdarma. Bez registrace. Zadejte průměr a tloušťku pro počet bloků."}
+          ]
+        },
+        "related": {
+          "heading": "Související kalkulačky",
+          "asciiConverter": "ASCII konvertor",
+          "asciiConverterDesc": "Zobrazit a převést text na ASCII kódy",
+          "textToBinary": "Konvertor textu na binární",
+          "textToBinaryDesc": "Převést text na binární s více kódováními",
+          "percentage": "Kalkulačka procent",
+          "percentageDesc": "Vypočítat procenta a procentní změnu"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "Překladač Fonetické Abecedy NATO",
       "description": "Převeďte text na fonetickou abecedu NATO a naopak okamžitě. Perfektní pro komunikaci, vojenské účely, letectví a učení mezinárodní fonetické abecedy.",

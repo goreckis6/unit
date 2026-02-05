@@ -6114,6 +6114,56 @@
         }
       }
     },
+    "minecraftCircleGenerator": {
+      "title": "Minecraft 圆形生成器",
+      "description": "计算在 Minecraft 中建造圆形或圆环所需的方块数量。输入直径和厚度即可得到方块数。",
+      "categoryBadge": "其他",
+      "diameter": "直径",
+      "thickness": "厚度",
+      "blocks": "方块",
+      "result": "结果",
+      "blocksNeeded": "建造此圆需要 {count} 个方块。",
+      "blocksLabel": "所需方块数",
+      "calculate": "计算",
+      "reset": "重置",
+      "enterValue": "输入直径和厚度以查看结果",
+      "clickCalculate": "点击计算查看结果",
+      "calculationHeading": "计算",
+      "calculationSummary": "直径为 {diameter} 方块、厚度为 {thickness} 方块的圆大约需要 {count} 个方块。不同算法可能略有差异；本工具采用基于周长的估算。",
+      "seo": {
+        "title": "Minecraft 圆形生成器 - 圆形与圆环方块数计算",
+        "description": "免费 Minecraft 圆形生成器。输入直径和厚度即可得到方块数。快速、准确、无需注册。",
+        "keywords": "我的世界 圆形 生成器, 我的世界 圆形 计算, 我的世界 方块数, 圆形 我的世界",
+        "content": {
+          "heading": "如何使用 Minecraft 圆形生成器",
+          "paragraph1": "在 Minecraft 中建造圆形因方块网格而较难。本生成器可估算给定直径和厚度的圆或圆环所需方块数。输入直径和厚度后点击计算。",
+          "paragraph2": "计算基于周长：厚度为 1 方块时，方块数约等于周长（π×直径）。更厚的圆环则取内外周长平均值。",
+          "paragraph3": "适用于圆形建筑、塔、竞技场、井和圆环。事先知道方块数可节省时间。直径 1–500，厚度 1 至直径的一半。",
+          "paragraph4": "以方块为单位输入直径和厚度，点击计算。工具免费，在浏览器中运行。",
+          "exampleHeading": "示例",
+          "exampleText": "圆 直径 22、厚度 1：约 69 个方块（π×22≈69）。圆环 直径 20、厚度 2：内径 16；方块数基于周长平均值。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {"question": "生成器如何计算方块数？", "answer": "厚度 1 方块时：周长（π×直径）。更厚圆环：内外周长平均值。不同方法可能略有差异。"},
+            {"question": "直径和厚度是什么？", "answer": "直径是圆的宽度（方块数）。厚度是轮廓宽度（方块数）— 1 为单线，更大为厚圆环。"},
+            {"question": "最大直径和厚度是多少？", "answer": "直径 1–500 方块，厚度 1 至直径的一半。厚度不能超过直径的一半。"},
+            {"question": "为什么游戏内方块数不同？", "answer": "不同圆形算法会得到略有不同的结果。本估算供规划用；实际建造可能略有出入。"},
+            {"question": "Minecraft 圆形生成器免费吗？", "answer": "是的。生成器免费。无需注册。输入直径和厚度即可得到方块数。"}
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "asciiConverter": "ASCII 转换器",
+          "asciiConverterDesc": "查看并将文本转换为 ASCII 码",
+          "textToBinary": "文本转二进制",
+          "textToBinaryDesc": "以多种编码将文本转为二进制",
+          "percentage": "百分比计算器",
+          "percentageDesc": "计算百分比与变化率"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "NATO语音字母表翻译器",
       "description": "即时将文本转换为NATO语音字母表，反之亦然。适合通信、军事、航空和学习国际语音字母表。",

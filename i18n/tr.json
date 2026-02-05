@@ -6133,6 +6133,56 @@
         }
       }
     },
+    "minecraftCircleGenerator": {
+      "title": "Minecraft Daire Oluşturucu",
+      "description": "Minecraft'ta bir daire veya halka inşa etmek için kaç blok gerektiğini hesaplayın. Blok sayısı için çap ve kalınlık girin.",
+      "categoryBadge": "Diğer",
+      "diameter": "Çap",
+      "thickness": "Kalınlık",
+      "blocks": "blok",
+      "result": "Sonuç",
+      "blocksNeeded": "Bu daireyi inşa etmek için {count} bloka ihtiyacınız olacak.",
+      "blocksLabel": "Gerekli bloklar",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "enterValue": "Sonucu görmek için çap ve kalınlık girin",
+      "clickCalculate": "Sonucu görmek için Hesapla'ya tıklayın",
+      "calculationHeading": "Hesaplama",
+      "calculationSummary": "Çapı {diameter} blok ve kalınlığı {thickness} blok olan bir daire için yaklaşık {count} blok gerekir. Farklı algoritmalar biraz farklı sonuç verebilir; araç çevreye dayalı bir tahmin kullanır.",
+      "seo": {
+        "title": "Minecraft Daire Oluşturucu - Daireler ve Halkalar için Blok Hesaplayıcı",
+        "description": "Ücretsiz Minecraft daire oluşturucu. Blok sayısı için çap ve kalınlık girin. Hızlı, doğru, kayıt yok.",
+        "keywords": "minecraft daire oluşturucu, minecraft daire hesaplayıcı, minecraft blok, daire minecraft",
+        "content": {
+          "heading": "Minecraft Daire Oluşturucu nasıl kullanılır",
+          "paragraph1": "Minecraft'ta daire inşa etmek blok ızgarası nedeniyle zor olabilir. Oluşturucumuz belirli çap ve kalınlıkta bir daire veya halka için blok sayısını tahmin eder. Çap ve kalınlığı girin ve Hesapla'ya tıklayın.",
+          "paragraph2": "Hesaplayıcı çevreyi kullanır: 1 blok kalınlığında blok sayısı yaklaşık çevredir (π × çap). Daha kalın halkalar için iç ve dış çevrelerin ortalaması kullanılır.",
+          "paragraph3": "Yuvarlak yapılar, kuleler, arenalar, kuyular ve halkalar için kullanışlıdır. Blok sayısını önceden bilmek zaman kazandırır. Çap 1–500, kalınlık 1 ile çapın yarısı arası.",
+          "paragraph4": "Çap ve kalınlığı blok cinsinden girin, Hesapla'ya tıklayın. Araç ücretsizdir ve tarayıcıda çalışır.",
+          "exampleHeading": "Örnek",
+          "exampleText": "Daire çap 22, kalınlık 1: yaklaşık 69 blok (π × 22 ≈ 69). Halka çap 20, kalınlık 2: iç çap 16; blok sayısı çevrelerin ortalamasına dayanır."
+        },
+        "faq": {
+          "heading": "Sık sorulan sorular",
+          "items": [
+            {"question": "Oluşturucu blok sayısını nasıl hesaplar?", "answer": "1 blok kalınlığında: çevre (π × çap). Daha kalın halkalar: iç ve dış çevrelerin ortalaması. Farklı yöntemler biraz farklı olabilir."},
+            {"question": "Çap ve kalınlık nedir?", "answer": "Çap dairenin blok cinsinden genişliğidir. Kalınlık çizginin blok cinsinden genişliğidir — 1 çizgi, daha fazlası kalın halka için."},
+            {"question": "Maksimum çap ve kalınlık nedir?", "answer": "Çap 1–500 blok, kalınlık 1 ile çapın yarısı arası. Kalınlık çapın yarısını aşamaz."},
+            {"question": "Oyundaki blok sayısı neden farklı?", "answer": "Farklı daire algoritmaları biraz farklı sonuç verir. Tahminimiz planlama içindir; gerçek inşaat biraz farklı olabilir."},
+            {"question": "Minecraft Daire Oluşturucu ücretsiz mi?", "answer": "Evet. Oluşturucu ücretsizdir. Kayıt gerekmez. Blok sayısı için çap ve kalınlık girin."}
+          ]
+        },
+        "related": {
+          "heading": "İlgili hesaplayıcılar",
+          "asciiConverter": "ASCII dönüştürücü",
+          "asciiConverterDesc": "Metni ASCII kodlarına görüntüleyin ve dönüştürün",
+          "textToBinary": "Metin ikili dönüştürücü",
+          "textToBinaryDesc": "Metni birden fazla kodlamayla ikiliye dönüştürün",
+          "percentage": "Yüzde hesaplayıcı",
+          "percentageDesc": "Yüzde ve yüzde değişimini hesaplayın"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "NATO Fonetik Alfabe Çevirmeni",
       "description": "Metni NATO fonetik alfabesine ve tersine anında dönüştürün. İletişim, askeri, havacılık ve uluslararası fonetik alfabeyi öğrenmek için mükemmel.",

@@ -6129,6 +6129,56 @@
         }
       }
     },
+    "minecraftCircleGenerator": {
+      "title": "Minecraft Kör Generátor",
+      "description": "Számítsa ki, hány blokk kell egy kör vagy gyűrű építéséhez Minecraftban. Adja meg az átmérőt és a vastagságot a blokkszámhoz.",
+      "categoryBadge": "Egyéb",
+      "diameter": "Átmérő",
+      "thickness": "Vastagság",
+      "blocks": "blokk",
+      "result": "Eredmény",
+      "blocksNeeded": "Ehhez a körhöz {count} blokk kell.",
+      "blocksLabel": "Szükséges blokkok",
+      "calculate": "Számolás",
+      "reset": "Visszaállítás",
+      "enterValue": "Adja meg az átmérőt és vastagságot az eredményhez",
+      "clickCalculate": "Kattintson a Számolásra az eredményért",
+      "calculationHeading": "Számítás",
+      "calculationSummary": "Egy {diameter} blokk átmérőjű és {thickness} blokk vastagságú körhöz körülbelül {count} blokk kell. Különböző algoritmusok enyhén eltérhetnek; ez az eszköz a kerület alapján becsül.",
+      "seo": {
+        "title": "Minecraft Kör Generátor – Blokkszám Kalkulátor Körökhöz és Gyűrűkhöz",
+        "description": "Ingyenes Minecraft kör generátor. Adja meg az átmérőt és vastagságot a blokkszámhoz. Gyors, pontos, regisztráció nélkül.",
+        "keywords": "minecraft kör generátor, minecraft kör kalkulátor, minecraft blokkok, minecraft kör",
+        "content": {
+          "heading": "A Minecraft kör generátor használata",
+          "paragraph1": "Köröket építeni Minecraftban a blokkrács miatt nehéz. Generátorunk becsüli a blokkok számát egy körhöz vagy gyűrűhöz. Adja meg az átmérőt és vastagságot, majd kattintson a Számolásra.",
+          "paragraph2": "A kalkulátor a kerületet használja: 1 blokk vastagságnál a blokkszám megközelítőleg a kerület (π × átmérő). Vastagabb gyűrűknél a belső és külső kerület átlaga.",
+          "paragraph3": "Hasznos kerek építményekhez, tornyokhoz, arénákhoz, kútakhoz és gyűrűkhöz. Az előre ismert blokkszám időt takarít meg. Átmérő 1–500, vastagság 1-től az átmérő feléig.",
+          "paragraph4": "Adja meg az átmérőt és vastagságot blokkban, kattintson a Számolásra. Az eszköz ingyenes és a böngészőben fut.",
+          "exampleHeading": "Példa",
+          "exampleText": "Kör átmérő 22, vastagság 1: körülbelül 69 blokk (π × 22 ≈ 69). Gyűrű átmérő 20, vastagság 2: belső átmérő 16; a blokkszám a kerületek átlaga alapján."
+        },
+        "faq": {
+          "heading": "Gyakori kérdések",
+          "items": [
+            {"question": "Hogyan számolja a generátor a blokkokat?", "answer": "1 blokk vastagságnál: kerület (π × átmérő). Vastagabb gyűrűknél: belső és külső kerület átlaga. Különböző módszerek enyhén eltérhetnek."},
+            {"question": "Mi az átmérő és a vastagság?", "answer": "Az átmérő a kör szélessége blokkban. A vastagság a körvonal szélessége blokkban — 1 egy vonalhoz, több vastag gyűrűhöz."},
+            {"question": "Mi a maximális átmérő és vastagság?", "answer": "Átmérő 1–500 blokk, vastagság 1-től az átmérő feléig. A vastagság nem haladhatja meg az átmérő felét."},
+            {"question": "Miért tér el a blokkszám a játékban?", "answer": "Különböző kör algoritmusok enyhén eltérő eredményt adnak. Becslésünk a tervezéshez szolgál; a tényleges építés kissé eltérhet."},
+            {"question": "A Minecraft kör generátor ingyenes?", "answer": "Igen. A generátor ingyenes. Nincs regisztráció. Adja meg az átmérőt és vastagságot a blokkszámhoz."}
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó kalkulátorok",
+          "asciiConverter": "ASCII konvertor",
+          "asciiConverterDesc": "Szöveg megtekintése és ASCII kódokká alakítása",
+          "textToBinary": "Szöveg–bináris konvertor",
+          "textToBinaryDesc": "Szöveg konvertálása binárissá több kódolással",
+          "percentage": "Százalékkalkulátor",
+          "percentageDesc": "Százalékok és változás számítása"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "NATO Fonetikus Ábécé Fordító",
       "description": "Alakítsa át a szöveget NATO-fonetikus ábécévé és fordítva azonnal. Tökéletes kommunikációhoz, katonai célokhoz, repüléshez és a nemzetközi fonetikus ábécé tanulásához.",

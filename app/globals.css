@@ -1694,6 +1694,37 @@ select.number-input {
   line-height: 1.5;
 }
 
+.minecraft-preview {
+  --cell-size: 12px;
+  display: grid;
+  gap: 2px;
+  padding: 6px;
+  background: var(--border-color);
+  border-radius: 0.75rem;
+  width: fit-content;
+  max-width: 100%;
+  overflow: auto;
+  margin-bottom: 1.5rem;
+}
+
+.minecraft-preview-cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background: var(--bg-primary);
+}
+
+.minecraft-preview-cell--filled {
+  background: #4f6bdc;
+}
+
+.minecraft-preview-cell--axis {
+  background: #c7cbd4;
+}
+
+.minecraft-preview-cell--center {
+  background: #2f2f2f;
+}
+
 .result-display {
   margin-bottom: 3rem;
   display: grid;

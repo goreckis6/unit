@@ -1725,6 +1725,28 @@ select.number-input {
   background: #2f2f2f;
 }
 
+@media (max-width: 1024px) {
+  .minecraft-preview {
+    --cell-size: 10px !important;
+    gap: 1px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .minecraft-preview {
+    --cell-size: 8px !important;
+    padding: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .minecraft-preview {
+    --cell-size: 6px !important;
+    padding: 3px;
+  }
+}
+
 .result-display {
   margin-bottom: 3rem;
   display: grid;

@@ -5904,6 +5904,104 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Hardy-Weinberg Hesaplayıcı - Alel Frekansı Hesaplayıcısı",
+      "description": "Hardy-Weinberg denge frekanslarını hesaplayın. Genotip sayımları, fenotip verileri, alel frekansları, ki-kare testi ve biyoloji öğrencileri için adım adım çözümlerle profesyonel genetik hesaplayıcısı.",
+      "inputMethod": "Giriş Yöntemi",
+      "methodGenotype": "Genotip Sayımları",
+      "methodPhenotype": "Fenotip Verileri",
+      "methodAllele": "Alel Frekansları",
+      "aaCount": "Homozigot Dominant Sayı",
+      "aaHeterozygous": "Heterozigot Sayı",
+      "aaRecessive": "Homozigot Resesif Sayı",
+      "totalPopulation": "Toplam Popülasyon",
+      "recessiveIndividuals": "Resesif Bireyler",
+      "frequencyP": "p Frekansı",
+      "frequencyQ": "q Frekansı",
+      "pAutoCalculate": "q, boş bırakılırsa otomatik olarak (1 - p) olarak hesaplanacaktır",
+      "advancedOptions": "Gelişmiş Seçenekler",
+      "performChiSquare": "Ki-Kare Testi Gerçekleştir",
+      "criticalValue": "Kritik Değer",
+      "showMathSteps": "Matematik Adımlarını Göster",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "enterValue": "Hardy-Weinberg frekanslarını hesaplamak için verilerinizi girin",
+      "clickCalculate": "Hardy-Weinberg sonuçlarını görmek için Hesapla'ya tıklayın",
+      "hwVariables": "Hardy-Weinberg Değişkenleri",
+      "genotypeCounts": "Genotip Sayımları",
+      "chiSquareTest": "Ki-Kare Testi",
+      "chiSquareValue": "Ki-Kare Değeri (χ²)",
+      "inEquilibrium": "Popülasyon dengededir (p > 0,05)",
+      "notInEquilibrium": "Popülasyon dengede DEĞİLDİR (p ≤ 0,05) - Evrim gerçekleşiyor olabilir",
+      "calculationSteps": "Hesaplama Adımları",
+      "step1": "Adım 1",
+      "step2": "Adım 2",
+      "step3": "Adım 3",
+      "step4": "Adım 4",
+      "step5": "Adım 5",
+      "step6": "Adım 6",
+      "seo": {
+        "title": "Hardy-Weinberg Hesaplayıcı: Alel Frekansı ve Taşıyıcı Frekansı Hesaplayıcısı",
+        "description": "Adım adım çözümlerle ücretsiz Hardy-Weinberg denge hesaplayıcısı. Alel frekanslarını (p, q), genotip frekanslarını (p², 2pq, q²) hesaplayın ve ki-kare testleri gerçekleştirin. Biyoloji öğrencileri ve genetik ödevleri için mükemmel.",
+        "keywords": "hardy weinberg hesaplayıcı, alel frekansı hesaplayıcı, taşıyıcı frekansı hesaplayıcı, hardy weinberg dengesi, p q hesaplayıcı, genotip frekansı hesaplayıcı, ki kare hardy weinberg, adımlarla hardy weinberg, genetik hesaplayıcı, biyoloji hesaplayıcı",
+        "content": {
+          "heading": "Hardy-Weinberg Hesaplayıcı Nasıl Kullanılır",
+          "paragraph1": "Hardy-Weinberg Hesaplayıcı, popülasyon genetiği çalışan biyoloji öğrencileri için temel bir araçtır. Hardy-Weinberg prensibi, alel ve genotip frekanslarının nesilden nesile sabit kaldığı genetik dengede teorik bir popülasyonu tanımlar. Bu hesaplayıcı, üç farklı giriş yöntemi kullanarak Hardy-Weinberg problemlerini çözmenize yardımcı olur: genotip sayımları (AA, Aa, aa), fenotip verileri (toplam popülasyon ve resesif bireyler) veya bilinen alel frekansları (p ve q).",
+          "paragraph2": "Hardy-Weinberg denklemleri popülasyon genetiğini anlamak için temeldir: p + q = 1 (burada p dominant alelin frekansı ve q resesif alelin frekansıdır) ve p² + 2pq + q² = 1 (burada p² homozigot dominant bireylerin frekansı, 2pq heterozigot taşıyıcıların frekansı ve q² homozigot resesif bireylerin frekansıdır). Bu denklemler, diğerlerini bildiğinizde herhangi bir eksik değeri hesaplamanıza olanak tanır.",
+          "paragraph3": "Hesaplayıcımız, onu temel araçlardan ayıran gelişmiş özellikler içerir. Ki-kare testi seçeneği, bir popülasyonun gerçekten Hardy-Weinberg dengesinde olup olmadığını veya evrimin (seçilim, mutasyon, göç, genetik sürüklenme) gerçekleşip gerçekleşmediğini belirlemenizi sağlar. Kritik değerinizi girin (genellikle p=0,05 için 1 serbestlik derecesi ile 3,84), ve hesaplayıcı gözlemlenen genotip frekanslarınızı beklenen frekanslarla karşılaştıracak ve popülasyonun dengeden önemli ölçüde sapıp sapmadığını size söyleyecektir.",
+          "paragraph4": "Matematik adımları özelliği, her hesaplamanın tam olarak nasıl gerçekleştirildiğini gösterir, bu da bu hesaplayıcıyı ödevler ve sınav hazırlığı için mükemmel kılar. Genetik danışmanlık için taşıyıcı frekanslarını hesaplıyor, bir popülasyonun evrimleşip evrimleşmediğini belirliyor veya sadece Hardy-Weinberg alıştırma problemlerini çözüyor olun, bu araç eğitici açıklamalarla net, doğru sonuçlar sağlar.",
+          "exampleHeading": "Örnek Hesaplama",
+          "exampleText": "Örnek: 400 bireyli bir popülasyonda 100'ü resesif fenotipi gösterir (aa). Alel frekanslarını bulmak için: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Sonra p = 1 - q = 1 - 0,5 = 0,5. Genotip frekansları: p² = 0,25 (%25 AA), 2pq = 0,5 (%50 Aa taşıyıcıları), q² = 0,25 (%25 aa). Ki-kare testi, popülasyonun dengede olup olmadığını belirlemek için gözlemlenen ve beklenen frekansları karşılaştırır."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {
+              "question": "Hardy-Weinberg prensibi nedir?",
+              "answer": "Hardy-Weinberg prensibi, belirli koşullar sağlandığında bir popülasyondaki alel ve genotip frekanslarının nesilden nesile sabit kaldığını belirtir: mutasyon yok, göç yok, büyük popülasyon boyutu, rastgele çiftleşme ve doğal seçilim yok. Evrimin popülasyonları nasıl etkilediğini anlamak için bir temel model sağlar."
+            },
+            {
+              "question": "Genotip sayımlarından alel frekansları nasıl hesaplanır?",
+              "answer": "Genotip sayımlarından alel frekanslarını hesaplamak için: 1) Toplam popülasyonu bulun N = AA + Aa + aa, 2) q = √(aa/N) hesaplayın, burada aa homozigot resesif bireylerin sayısıdır, 3) p = 1 - q hesaplayın. Dominant alelin frekansı (p) artı resesif alelin frekansı (q) her zaman 1'e eşittir."
+            },
+            {
+              "question": "Taşıyıcı frekansı (2pq) nedir?",
+              "answer": "Taşıyıcı frekansı (2pq), resesif bir alelin bir kopyasını taşıyan ancak resesif fenotipi göstermeyen heterozigot bireylerin oranını temsil eder. Bu genetik danışmanlıkta kritiktir - örneğin, q² = 0,0001 ise (10.000'de 1'inin hastalığı vardır), o zaman 2pq ≈ 0,02 (yaklaşık %2 taşıyıcıdır). Taşıyıcı frekansı nadir resesif bozukluklar için her zaman hastalık frekansından daha yüksektir."
+            },
+            {
+              "question": "Hardy-Weinberg hesaplamalarında ki-kare testi nasıl kullanılır?",
+              "answer": "Ki-kare testi, gözlemlenen genotip frekanslarını Hardy-Weinberg dengesi altındaki beklenen frekanslarla karşılaştırır. Beklenen sayıları hesaplayın: Beklenen AA = p² × N, Beklenen Aa = 2pq × N, Beklenen aa = q² × N. Sonra χ² = Σ[(Gözlemlenen - Beklenen)² / Beklenen] hesaplayın. Eğer χ² ≤ kritik değer (genellikle p=0,05 için 3,84) ise, popülasyon dengededir. Eğer χ² > kritik değer ise, evrim gerçekleşiyor olabilir."
+            },
+            {
+              "question": "Bir popülasyon Hardy-Weinberg dengesinde DEĞİLSE ne anlama gelir?",
+              "answer": "Bir popülasyon Hardy-Weinberg dengesinden sapıyorsa (ki-kare testi önemli fark gösteriyorsa), bu bir veya daha fazla evrimsel gücün çalıştığı anlamına gelir: doğal seçilim (belirli genotipler daha yüksek uygunluğa sahiptir), mutasyon (yeni alleller tanıtılır), göç (diğer popülasyonlardan gen akışı), genetik sürüklenme (küçük popülasyonlarda rastgele değişiklikler) veya rastgele olmayan çiftleşme (seçici çiftleşme, akraba evliliği)."
+            },
+            {
+              "question": "Bu hesaplayıcıyı genetik danışmanlık için kullanabilir miyim?",
+              "answer": "Evet, bu hesaplayıcı popülasyonlardaki taşıyıcı frekanslarını anlamak için yararlıdır. Ancak gerçek genetik danışmanlık için her zaman sertifikalı bir genetik danışman veya tıbbi genetikçiye danışın. Hesaplayıcı Hardy-Weinberg varsayımlarına dayalı eğitici tahminler sağlar, ancak gerçek popülasyonlar genellikle bu varsayımlardan sapma gösterir ve bireysel aile geçmişleri doğru risk değerlendirmesi için kritiktir."
+            },
+            {
+              "question": "Sadece fenotip verilerini biliyorsam ne olur?",
+              "answer": "Sadece toplam popülasyonu (N) ve resesif bireylerin sayısını (aa) biliyorsanız, yine de her şeyi hesaplayabilirsiniz. Yöntem B'yi (Fenotip Verileri) kullanın: q = √(aa/N), sonra p = 1 - q. Oradan tüm genotip frekanslarını hesaplayın: p², 2pq ve q². Hesaplayıcı bu dönüşümü otomatik olarak işler."
+            },
+            {
+              "question": "Neden p + q her zaman 1'e eşittir?",
+              "answer": "İki alelli bir sistemde, her bireyin iki aleli vardır (her ebeveynden birer tane). Dominant alelin frekansı (p) artı resesif alelin frekansı (q) 1'e (veya %100'e) eşit olmalıdır çünkü bunlar mevcut tek iki alleldir. Bu popülasyon genetiğinin temel bir ilkesidir."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "dli": "DLI Hesaplayıcı",
+          "dliDesc": "Optimal bitki büyümesi için günlük ışık integralini hesaplayın",
+          "vpd": "VPD Hesaplayıcı",
+          "vpdDesc": "Bitki terleme için buhar basıncı açığını hesaplayın",
+          "c1v1": "C1V1 Seyreltme Hesaplayıcısı",
+          "c1v1Desc": "Çözeltiler için seyreltme hacimlerini ve konsantrasyonları hesaplayın"
+        }
+      }
+    },
     "italicText": {
       "title": "İtalik Metin Oluşturucu",
       "description": "Birden fazla Unicode stiliyle anında italik metin oluşturun: serif italik, kursif script ve sans-serif italik. Sosyal medya, tasarım ve yaratıcı yazım için mükemmel.",

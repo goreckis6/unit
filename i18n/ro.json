@@ -5900,6 +5900,104 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Calculator Hardy-Weinberg - Calculator Frecvență Alelică",
+      "description": "Calculați frecvențele de echilibru Hardy-Weinberg. Calculator genetic profesional cu numărări genotip, date fenotipice, frecvențe alelice, test chi-pătrat și soluții pas cu pas pentru studenții la biologie.",
+      "inputMethod": "Metodă de Introducere",
+      "methodGenotype": "Numărări Genotip",
+      "methodPhenotype": "Date Fenotipice",
+      "methodAllele": "Frecvențe Alelice",
+      "aaCount": "Număr Homozigot Dominant",
+      "aaHeterozygous": "Număr Heterozigot",
+      "aaRecessive": "Număr Homozigot Recesiv",
+      "totalPopulation": "Populație Totală",
+      "recessiveIndividuals": "Indivizi Recesivi",
+      "frequencyP": "Frecvența lui p",
+      "frequencyQ": "Frecvența lui q",
+      "pAutoCalculate": "q va fi calculat automat ca (1 - p) dacă este lăsat gol",
+      "advancedOptions": "Opțiuni Avansate",
+      "performChiSquare": "Efectuează Test Chi-Pătrat",
+      "criticalValue": "Valoare Critică",
+      "showMathSteps": "Arată Pașii Matematici",
+      "calculate": "Calculează",
+      "reset": "Resetează",
+      "result": "Rezultat",
+      "enterValue": "Introduceți datele dvs. pentru a calcula frecvențele Hardy-Weinberg",
+      "clickCalculate": "Faceți clic pe Calculează pentru a vedea rezultatele Hardy-Weinberg",
+      "hwVariables": "Variabile Hardy-Weinberg",
+      "genotypeCounts": "Numărări Genotip",
+      "chiSquareTest": "Test Chi-Pătrat",
+      "chiSquareValue": "Valoare Chi-Pătrat (χ²)",
+      "inEquilibrium": "Populația este în echilibru (p > 0,05)",
+      "notInEquilibrium": "Populația NU este în echilibru (p ≤ 0,05) - Evoluția poate avea loc",
+      "calculationSteps": "Pași de Calcul",
+      "step1": "Pasul 1",
+      "step2": "Pasul 2",
+      "step3": "Pasul 3",
+      "step4": "Pasul 4",
+      "step5": "Pasul 5",
+      "step6": "Pasul 6",
+      "seo": {
+        "title": "Calculator Hardy-Weinberg: Calculator Frecvență Alelică și Frecvență Purtători",
+        "description": "Calculator gratuit de echilibru Hardy-Weinberg cu soluții pas cu pas. Calculați frecvențele alelice (p, q), frecvențele genotipurilor (p², 2pq, q²) și efectuați teste chi-pătrat. Perfect pentru studenții la biologie și teme de genetică.",
+        "keywords": "calculator hardy weinberg, calculator frecvență alelică, calculator frecvență purtători, echilibru hardy weinberg, calculator p q, calculator frecvență genotip, chi pătrat hardy weinberg, hardy weinberg cu pași, calculator genetic, calculator biologie",
+        "content": {
+          "heading": "Cum să Utilizați Calculatorul Hardy-Weinberg",
+          "paragraph1": "Calculatorul Hardy-Weinberg este un instrument esențial pentru studenții la biologie care studiază genetica populațiilor. Principiul Hardy-Weinberg descrie o populație teoretică în echilibru genetic, unde frecvențele alelice și genotipice rămân constante din generație în generație. Acest calculator vă ajută să rezolvați probleme Hardy-Weinberg folosind trei metode diferite de introducere: numărări genotip (AA, Aa, aa), date fenotipice (populație totală și indivizi recesivi) sau frecvențe alelice cunoscute (p și q).",
+          "paragraph2": "Ecuațiile Hardy-Weinberg sunt fundamentale pentru înțelegerea geneticii populațiilor: p + q = 1 (unde p este frecvența alelei dominante și q este frecvența alelei recesive) și p² + 2pq + q² = 1 (unde p² este frecvența indivizilor homozigoti dominanți, 2pq este frecvența purtătorilor heterozigoti și q² este frecvența indivizilor homozigoti recesivi). Aceste ecuații vă permit să calculați orice valoare lipsă când cunoașteți celelalte.",
+          "paragraph3": "Calculatorul nostru include funcții avansate care îl deosebesc de instrumentele de bază. Opțiunea de test chi-pătrat vă permite să determinați dacă o populație este într-adevăr în echilibru Hardy-Weinberg sau dacă are loc evoluție (selecție, mutație, migrație, derivă genetică). Introduceți valoarea critică (de obicei 3,84 pentru p=0,05 cu 1 grad de libertate), iar calculatorul va compara frecvențele genotipurilor dvs. observate cu frecvențele așteptate și vă va spune dacă populația deviază semnificativ de la echilibru.",
+          "paragraph4": "Funcția pașilor matematici vă arată exact cum este efectuat fiecare calcul, făcând acest calculator perfect pentru teme și pregătirea pentru examene. Fie că calculați frecvențele purtătorilor pentru consiliere genetică, determinați dacă o populație evoluează sau pur și simplu rezolvați probleme de practică Hardy-Weinberg, acest instrument oferă rezultate clare, precise cu explicații educaționale.",
+          "exampleHeading": "Exemplu de Calcul",
+          "exampleText": "Exemplu: Într-o populație de 400 de indivizi, 100 prezintă fenotipul recesiv (aa). Pentru a găsi frecvențele alelice: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Apoi p = 1 - q = 1 - 0,5 = 0,5. Frecvențe genotipuri: p² = 0,25 (25% AA), 2pq = 0,5 (50% purtători Aa), q² = 0,25 (25% aa). Testul chi-pătrat compară frecvențele observate și așteptate pentru a determina dacă populația este în echilibru."
+        },
+        "faq": {
+          "heading": "Întrebări Frecvente",
+          "items": [
+            {
+              "question": "Ce este principiul Hardy-Weinberg?",
+              "answer": "Principiul Hardy-Weinberg afirmă că frecvențele alelice și genotipice într-o populație rămân constante din generație în generație dacă sunt îndeplinite anumite condiții: fără mutație, fără migrație, dimensiune mare a populației, împerechere aleatorie și fără selecție naturală. Oferă un model de bază pentru înțelegerea modului în care evoluția afectează populațiile."
+            },
+            {
+              "question": "Cum să calculez frecvențele alelice din numărările genotipurilor?",
+              "answer": "Pentru a calcula frecvențele alelice din numărările genotipurilor: 1) Găsiți populația totală N = AA + Aa + aa, 2) Calculați q = √(aa/N) unde aa este numărul de indivizi homozigoti recesivi, 3) Calculați p = 1 - q. Frecvența alelei dominante (p) plus frecvența alelei recesive (q) este întotdeauna egală cu 1."
+            },
+            {
+              "question": "Ce este frecvența purtătorilor (2pq)?",
+              "answer": "Frecvența purtătorilor (2pq) reprezintă proporția de indivizi heterozigoti care poartă o copie a unei alele recesive dar nu prezintă fenotipul recesiv. Acest lucru este crucial în consilierea genetică - de exemplu, dacă q² = 0,0001 (1 din 10.000 are boala), atunci 2pq ≈ 0,02 (aproximativ 2% sunt purtători). Frecvența purtătorilor este întotdeauna mai mare decât frecvența bolii pentru tulburări recesive rare."
+            },
+            {
+              "question": "Cum să folosesc testul chi-pătrat în calculele Hardy-Weinberg?",
+              "answer": "Testul chi-pătrat compară frecvențele genotipurilor observate cu frecvențele așteptate sub echilibrul Hardy-Weinberg. Calculați numerele așteptate: AA așteptat = p² × N, Aa așteptat = 2pq × N, aa așteptat = q² × N. Apoi calculați χ² = Σ[(Observat - Așteptat)² / Așteptat]. Dacă χ² ≤ valoare critică (de obicei 3,84 pentru p=0,05), populația este în echilibru. Dacă χ² > valoare critică, evoluția poate avea loc."
+            },
+            {
+              "question": "Ce înseamnă dacă o populație NU este în echilibru Hardy-Weinberg?",
+              "answer": "Dacă o populație deviază de la echilibrul Hardy-Weinberg (testul chi-pătrat arată diferență semnificativă), înseamnă că una sau mai multe forțe evolutive acționează: selecție naturală (anumite genotipuri au fitness mai mare), mutație (alele noi sunt introduse), migrație (flux de gene din alte populații), derivă genetică (schimbări aleatorii în populații mici) sau împerechere non-aleatorie (împerechere asortativă, consanguinitate)."
+            },
+            {
+              "question": "Pot folosi acest calculator pentru consiliere genetică?",
+              "answer": "Da, acest calculator este util pentru înțelegerea frecvențelor purtătorilor în populații. Cu toate acestea, pentru consiliere genetică reală, consultați întotdeauna un consilier genetic certificat sau un genetician medical. Calculatorul oferă estimări educaționale bazate pe presupunerile Hardy-Weinberg, dar populațiile reale deviază adesea de la aceste presupuneri, iar istoriile familiale individuale sunt cruciale pentru evaluarea precisă a riscului."
+            },
+            {
+              "question": "Ce se întâmplă dacă cunosc doar datele fenotipice?",
+              "answer": "Dacă cunoașteți doar populația totală (N) și numărul de indivizi recesivi (aa), puteți totuși calcula totul. Utilizați Metoda B (Date Fenotipice): q = √(aa/N), apoi p = 1 - q. De acolo, calculați toate frecvențele genotipurilor: p², 2pq și q². Calculatorul gestionează această conversie automat."
+            },
+            {
+              "question": "De ce p + q este întotdeauna egal cu 1?",
+              "answer": "Într-un sistem cu două alele, fiecare individ are două alele (câte una de la fiecare părinte). Frecvența alelei dominante (p) plus frecvența alelei recesive (q) trebuie să fie egală cu 1 (sau 100%) deoarece acestea sunt singurele două alele prezente. Acesta este un principiu fundamental al geneticii populațiilor."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculatoare Înrudite",
+          "dli": "Calculator DLI",
+          "dliDesc": "Calculați integralul luminos zilnic pentru creșterea optimă a plantelor",
+          "vpd": "Calculator VPD",
+          "vpdDesc": "Calculați deficitul de presiune a vaporilor pentru transpirația plantelor",
+          "c1v1": "Calculator de Diluare C1V1",
+          "c1v1Desc": "Calculați volumele de diluare și concentrațiile pentru soluții"
+        }
+      }
+    },
     "italicText": {
       "title": "Generator Text Cursiv",
       "description": "Generați text cursiv instantaneu cu mai multe stiluri Unicode: cursiv serif, script cursiv și cursiv sans-serif. Perfect pentru rețelele sociale, design și scriere creativă.",

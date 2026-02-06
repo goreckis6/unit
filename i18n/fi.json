@@ -5900,6 +5900,104 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Hardy-Weinberg Laskin - Alleelitaajuus Laskin",
+      "description": "Laske Hardy-Weinberg tasapainotaajuudet. Ammattimainen genetiikkalaskin genotyyppilaskurilla, fenotyyppitiedoilla, alleelitaajuuksilla, khiin neliö -testillä ja vaiheittaisilla ratkaisuilla biologian opiskelijoille.",
+      "inputMethod": "Syöttötapa",
+      "methodGenotype": "Genotyyppilaskuri",
+      "methodPhenotype": "Fenotyyppitiedot",
+      "methodAllele": "Alleelitaajuudet",
+      "aaCount": "Homotsygootti Dominantti Määrä",
+      "aaHeterozygous": "Heterotsygootti Määrä",
+      "aaRecessive": "Homotsygootti Resessiivinen Määrä",
+      "totalPopulation": "Kokonaispopulaatio",
+      "recessiveIndividuals": "Resessiiviset Yksilöt",
+      "frequencyP": "p:n Taajuus",
+      "frequencyQ": "q:n Taajuus",
+      "pAutoCalculate": "q lasketaan automaattisesti muodossa (1 - p), jos se jätetään tyhjäksi",
+      "advancedOptions": "Lisäasetukset",
+      "performChiSquare": "Suorita Khiin Neliö -testi",
+      "criticalValue": "Kriittinen Arvo",
+      "showMathSteps": "Näytä Matemaattiset Vaiheet",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "enterValue": "Syötä tietosi Hardy-Weinberg-taajuuksien laskemiseksi",
+      "clickCalculate": "Napsauta Laske nähdäksesi Hardy-Weinberg-tulokset",
+      "hwVariables": "Hardy-Weinberg Muuttujat",
+      "genotypeCounts": "Genotyyppilaskuri",
+      "chiSquareTest": "Khiin Neliö -testi",
+      "chiSquareValue": "Khiin Neliö -arvo (χ²)",
+      "inEquilibrium": "Populaatio on tasapainossa (p > 0,05)",
+      "notInEquilibrium": "Populaatio EI ole tasapainossa (p ≤ 0,05) - Evoluutio saattaa tapahtua",
+      "calculationSteps": "Laskentavaiheet",
+      "step1": "Vaihe 1",
+      "step2": "Vaihe 2",
+      "step3": "Vaihe 3",
+      "step4": "Vaihe 4",
+      "step5": "Vaihe 5",
+      "step6": "Vaihe 6",
+      "seo": {
+        "title": "Hardy-Weinberg Laskin: Alleelitaajuus & Kantajataajuus Laskin",
+        "description": "Ilmainen Hardy-Weinberg tasapainolaskin vaiheittaisilla ratkaisuilla. Laske alleelitaajuudet (p, q), genotyyppitaajuudet (p², 2pq, q²) ja suorita khiin neliö -testejä. Täydellinen biologian opiskelijoille ja genetiikan kotitehtäville.",
+        "keywords": "hardy weinberg laskin, alleelitaajuus laskin, kantajataajuus laskin, hardy weinberg tasapaino, p q laskin, genotyyppitaajuus laskin, khiin neliö hardy weinberg, hardy weinberg vaiheilla, genetiikkalaskin, biologialaskin",
+        "content": {
+          "heading": "Kuinka Käyttää Hardy-Weinberg Laskinta",
+          "paragraph1": "Hardy-Weinberg Laskin on olennainen työkalu biologian opiskelijoille, jotka opiskelevat populaatiogenetiikkaa. Hardy-Weinberg-periaate kuvaa teoreettista populaatiota geneettisessä tasapainossa, jossa alleeli- ja genotyyppitaajuudet pysyvät vakiona sukupolvesta toiseen. Tämä laskin auttaa sinua ratkaisemaan Hardy-Weinberg-ongelmia käyttämällä kolmea erilaista syöttötapaa: genotyyppilaskuri (AA, Aa, aa), fenotyyppitiedot (kokonaispopulaatio ja resessiiviset yksilöt) tai tunnetut alleelitaajuudet (p ja q).",
+          "paragraph2": "Hardy-Weinberg-yhtälöt ovat perustavanlaatuisia populaatiogenetiikan ymmärtämiseksi: p + q = 1 (jossa p on dominantin alleelin taajuus ja q on resessiivisen alleelin taajuus) ja p² + 2pq + q² = 1 (jossa p² on homotsygoottisten dominanttien yksilöiden taajuus, 2pq on heterotsygoottisten kantajien taajuus ja q² on homotsygoottisten resessiivisten yksilöiden taajuus). Nämä yhtälöt antavat sinun laskea minkä tahansa puuttuvan arvon, kun tiedät muut.",
+          "paragraph3": "Laskimemme sisältää edistyneitä ominaisuuksia, jotka erottavat sen perustyökaluista. Khiin neliö -testi -vaihtoehto antaa sinun määrittää, onko populaatio todella Hardy-Weinberg-tasapainossa vai tapahtuuko evoluutio (valinta, mutaatio, muuttoliike, geneettinen ajautuminen). Syötä kriittinen arvosi (tyypillisesti 3,84 p=0,05:lle 1 vapausasteella), ja laskin vertaa havaittuja genotyyppitaajuuksiasi odotettuihin taajuuksiin ja kertoo, poikkeaako populaatio merkittävästi tasapainosta.",
+          "paragraph4": "Matemaattisten vaiheiden ominaisuus näyttää sinulle tarkalleen, kuinka kukin laskenta suoritetaan, mikä tekee tästä laskimesta täydellisen kotitehtäville ja tenttiin valmistautumiselle. Lasketpa sitten kantajataajuuksia geneettistä neuvontaa varten, määrität onko populaatio kehittymässä tai ratkaiset vain Hardy-Weinberg-harjoitusongelmia, tämä työkalu tarjoaa selkeitä, tarkkoja tuloksia pedagogisilla selityksillä.",
+          "exampleHeading": "Esimerkkil ask enta",
+          "exampleText": "Esimerkki: 400 yksilön populaatiossa 100 osoittaa resessiivistä fenotyyppiä (aa). Alleelitaajuuksien löytämiseksi: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Sitten p = 1 - q = 1 - 0,5 = 0,5. Genotyyppitaajuudet: p² = 0,25 (25% AA), 2pq = 0,5 (50% Aa-kantajat), q² = 0,25 (25% aa). Khiin neliö -testi vertaa havaittuja ja odotettuja taajuuksia määrittääkseen, onko populaatio tasapainossa."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Mikä on Hardy-Weinberg-periaate?",
+              "answer": "Hardy-Weinberg-periaate sanoo, että alleeli- ja genotyyppitaajuudet populaatiossa pysyvät vakiona sukupolvesta toiseen, jos tietyt ehdot täyttyvät: ei mutaatiota, ei muuttoliikettä, suuri populaatiokoko, satunnainen parinmuodostus ja ei luonnonvalintaa. Se tarjoaa perusmallin ymmärtää, kuinka evoluutio vaikuttaa populaatioihin."
+            },
+            {
+              "question": "Kuinka lasketaan alleelitaajuudet genotyyppilaskurista?",
+              "answer": "Alleelitaajuuksien laskemiseksi genotyyppilaskurista: 1) Etsi kokonaispopulaatio N = AA + Aa + aa, 2) Laske q = √(aa/N), jossa aa on homotsygoottisten resessiivisten yksilöiden määrä, 3) Laske p = 1 - q. Dominantin alleelin taajuus (p) plus resessiivisen alleelin taajuus (q) on aina yhtä kuin 1."
+            },
+            {
+              "question": "Mikä on kantajataajuus (2pq)?",
+              "answer": "Kantajataajuus (2pq) edustaa heterotsygoottisten yksilöiden osuutta, jotka kantavat yhtä kopiota resessiivisestä alleelista mutta eivät osoita resessiivistä fenotyyppiä. Tämä on ratkaisevaa geneettisessä neuvonnassa - esimerkiksi, jos q² = 0,0001 (1 / 10 000:lla on tauti), niin 2pq ≈ 0,02 (noin 2% ovat kantajia). Kantajataajuus on aina korkeampi kuin tautitaajuus harvinaisissa resessiivisissä häiriöissä."
+            },
+            {
+              "question": "Kuinka käytetään khiin neliö -testiä Hardy-Weinberg-laskelmissa?",
+              "answer": "Khiin neliö -testi vertaa havaittuja genotyyppitaajuuksia odotettuihin taajuuksiin Hardy-Weinberg-tasapainossa. Laske odotetut määrät: Odotettu AA = p² × N, Odotettu Aa = 2pq × N, Odotettu aa = q² × N. Laske sitten χ² = Σ[(Havaittu - Odotettu)² / Odotettu]. Jos χ² ≤ kriittinen arvo (tyypillisesti 3,84 p=0,05:lle), populaatio on tasapainossa. Jos χ² > kriittinen arvo, evoluutio saattaa tapahtua."
+            },
+            {
+              "question": "Mitä se tarkoittaa, jos populaatio EI ole Hardy-Weinberg-tasapainossa?",
+              "answer": "Jos populaatio poikkeaa Hardy-Weinberg-tasapainosta (khiin neliö -testi osoittaa merkittävän eron), se tarkoittaa, että yksi tai useampi evoluutiovoima vaikuttaa: luonnonvalinta (tietyt genotypit ovat sopivampia), mutaatio (uusia alleeleja tulee), muuttoliike (geenivirta muista populaatioista), geneettinen ajautuminen (satunnaiset muutokset pienissä populaatioissa) tai ei-satunnainen parinmuodostus (assortatiivinen parinmuodostus, sisäsiitos)."
+            },
+            {
+              "question": "Voinko käyttää tätä laskinta geneettiseen neuvontaan?",
+              "answer": "Kyllä, tämä laskin on hyödyllinen kantajataajuuksien ymmärtämiseen populaatioissa. Todellista geneettistä neuvontaa varten kuule aina sertifioitua geneettistä neuvonantajaa tai lääketieteellistä genetiikkaa. Laskin tarjoaa koulutuksellisia arvioita Hardy-Weinberg-oletusten perusteella, mutta todelliset populaatiot poikkeavat usein näistä oletuksista, ja yksilölliset sukukertomukset ovat ratkaisevia tarkalle riskiarviolle."
+            },
+            {
+              "question": "Entä jos tiedän vain fenotyyppitiedot?",
+              "answer": "Jos tiedät vain kokonaispopulaation (N) ja resessiivisten yksilöiden määrän (aa), voit silti laskea kaiken. Käytä Menetelmää B (Fenotyyppitiedot): q = √(aa/N), sitten p = 1 - q. Laske sieltä kaikki genotyyppitaajuudet: p², 2pq ja q². Laskin käsittelee tämän muunnoksen automaattisesti."
+            },
+            {
+              "question": "Miksi p + q on aina yhtä kuin 1?",
+              "answer": "Kahden alleelin järjestelmässä jokaisella yksilöllä on kaksi alleelia (yksi kummastakin vanhemmasta). Dominantin alleelin taajuus (p) plus resessiivisen alleelin taajuus (q) on oltava yhtä kuin 1 (tai 100%), koska nämä ovat ainoat kaksi läsnä olevaa alleelia. Tämä on populaatiogenetiikan perusperiaate."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskinnet",
+          "dli": "DLI Laskin",
+          "dliDesc": "Laske päivittäinen valo-integraali optimaaliseen kasvien kasvuun",
+          "vpd": "VPD Laskin",
+          "vpdDesc": "Laske höyrynpainevajaus kasvien haihduttamiseen",
+          "c1v1": "C1V1 Laimennuslaskin",
+          "c1v1Desc": "Laske laimen nustilavuudet ja pitoisuudet liuoksille"
+        }
+      }
+    },
     "italicText": {
       "title": "Kursiivi Teksti Generaattori",
       "description": "Luo kursiivi tekstiä heti useilla Unicode-tyyleillä: serif kursiivi, kursiivi käsialakirjoitus ja sans-serif kursiivi. Täydellinen sosiaaliseen mediaan, suunnitteluun ja luovaan kirjoittamiseen.",

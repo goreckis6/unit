@@ -6027,6 +6027,202 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Hardy-Weinberg-Rechner - Allelfrequenz-Rechner",
+      "description": "Berechnen Sie Hardy-Weinberg-Gleichgewichts-Frequenzen. Professioneller Genetik-Rechner mit Genotyp-Zählungen, Phänotyp-Daten, Allelfrequenzen, Chi-Quadrat-Test und Schritt-für-Schritt-Lösungen für Biologiestudenten.",
+      "inputMethod": "Eingabemethode",
+      "methodGenotype": "Genotyp-Zählungen",
+      "methodPhenotype": "Phänotyp-Daten",
+      "methodAllele": "Allelfrequenzen",
+      "aaCount": "Homozygot Dominante Anzahl",
+      "aaHeterozygous": "Heterozygote Anzahl",
+      "aaRecessive": "Homozygot Rezessive Anzahl",
+      "totalPopulation": "Gesamtpopulation",
+      "recessiveIndividuals": "Rezessive Individuen",
+      "frequencyP": "Frequenz von p",
+      "frequencyQ": "Frequenz von q",
+      "pAutoCalculate": "q wird automatisch als (1 - p) berechnet, wenn leer gelassen",
+      "advancedOptions": "Erweiterte Optionen",
+      "performChiSquare": "Chi-Quadrat-Test durchführen",
+      "criticalValue": "Kritischer Wert",
+      "showMathSteps": "Rechenschritte anzeigen",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "enterValue": "Geben Sie Ihre Daten ein, um Hardy-Weinberg-Frequenzen zu berechnen",
+      "clickCalculate": "Klicken Sie auf Berechnen, um Hardy-Weinberg-Ergebnisse zu sehen",
+      "hwVariables": "Hardy-Weinberg-Variablen",
+      "genotypeCounts": "Genotyp-Zählungen",
+      "chiSquareTest": "Chi-Quadrat-Test",
+      "chiSquareValue": "Chi-Quadrat-Wert (χ²)",
+      "inEquilibrium": "Population ist im Gleichgewicht (p > 0,05)",
+      "notInEquilibrium": "Population ist NICHT im Gleichgewicht (p ≤ 0,05) - Evolution kann stattfinden",
+      "calculationSteps": "Rechenschritte",
+      "step1": "Schritt 1",
+      "step2": "Schritt 2",
+      "step3": "Schritt 3",
+      "step4": "Schritt 4",
+      "step5": "Schritt 5",
+      "step6": "Schritt 6",
+      "seo": {
+        "title": "Hardy-Weinberg-Rechner: Allelfrequenz & Trägerfrequenz-Rechner",
+        "description": "Kostenloser Hardy-Weinberg-Gleichgewichts-Rechner mit Schritt-für-Schritt-Lösungen. Berechnen Sie Allelfrequenzen (p, q), Genotypfrequenzen (p², 2pq, q²) und führen Sie Chi-Quadrat-Tests durch. Perfekt für Biologiestudenten und Genetik-Hausaufgaben.",
+        "keywords": "hardy weinberg rechner, allelfrequenz rechner, trägerfrequenz rechner, hardy weinberg gleichgewicht, p q rechner, genotypfrequenz rechner, chi quadrat hardy weinberg, hardy weinberg mit schritten, genetik rechner, biologie rechner",
+        "content": {
+          "heading": "Wie man den Hardy-Weinberg-Rechner verwendet",
+          "paragraph1": "Der Hardy-Weinberg-Rechner ist ein wesentliches Werkzeug für Biologiestudenten, die Populationsgenetik studieren. Das Hardy-Weinberg-Prinzip beschreibt eine theoretische Population im genetischen Gleichgewicht, bei der Allel- und Genotypfrequenzen von Generation zu Generation konstant bleiben. Dieser Rechner hilft Ihnen, Hardy-Weinberg-Probleme mit drei verschiedenen Eingabemethoden zu lösen: Genotyp-Zählungen (AA, Aa, aa), Phänotyp-Daten (Gesamtpopulation und rezessive Individuen) oder bekannte Allelfrequenzen (p und q).",
+          "paragraph2": "Die Hardy-Weinberg-Gleichungen sind grundlegend für das Verständnis der Populationsgenetik: p + q = 1 (wobei p die Frequenz des dominanten Allels und q die Frequenz des rezessiven Allels ist) und p² + 2pq + q² = 1 (wobei p² die Frequenz homozygot dominanter Individuen, 2pq die Frequenz heterozygoter Träger und q² die Frequenz homozygot rezessiver Individuen ist). Diese Gleichungen ermöglichen es Ihnen, jeden fehlenden Wert zu berechnen, wenn Sie die anderen kennen.",
+          "paragraph3": "Unser Rechner enthält erweiterte Funktionen, die ihn von grundlegenden Werkzeugen unterscheiden. Die Chi-Quadrat-Test-Option ermöglicht es Ihnen zu bestimmen, ob eine Population tatsächlich im Hardy-Weinberg-Gleichgewicht ist oder ob Evolution (Selektion, Mutation, Migration, genetische Drift) stattfindet. Geben Sie Ihren kritischen Wert ein (typischerweise 3,84 für p=0,05 mit 1 Freiheitsgrad), und der Rechner vergleicht Ihre beobachteten Genotypfrequenzen mit erwarteten Frequenzen und sagt Ihnen, ob die Population signifikant vom Gleichgewicht abweicht.",
+          "paragraph4": "Die Schritt-für-Schritt-Mathematik-Funktion zeigt Ihnen genau, wie jede Berechnung durchgeführt wird, was diesen Rechner perfekt für Hausaufgaben und Prüfungsvorbereitung macht. Ob Sie Trägerfrequenzen für genetische Beratung berechnen, bestimmen, ob eine Population sich entwickelt, oder einfach Hardy-Weinberg-Übungsprobleme lösen, dieses Werkzeug liefert klare, genaue Ergebnisse mit pädagogischen Erklärungen.",
+          "exampleHeading": "Beispielberechnung",
+          "exampleText": "Beispiel: In einer Population von 400 Individuen zeigen 100 den rezessiven Phänotyp (aa). Um Allelfrequenzen zu finden: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Dann p = 1 - q = 1 - 0,5 = 0,5. Genotypfrequenzen: p² = 0,25 (25% AA), 2pq = 0,5 (50% Aa-Träger), q² = 0,25 (25% aa). Der Chi-Quadrat-Test vergleicht beobachtete vs. erwartete Frequenzen, um zu bestimmen, ob die Population im Gleichgewicht ist."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist das Hardy-Weinberg-Prinzip?",
+              "answer": "Das Hardy-Weinberg-Prinzip besagt, dass Allel- und Genotypfrequenzen in einer Population von Generation zu Generation konstant bleiben, wenn bestimmte Bedingungen erfüllt sind: keine Mutation, keine Migration, große Populationsgröße, zufällige Paarung und keine natürliche Selektion. Es bietet ein Basismodell zum Verständnis, wie Evolution Populationen beeinflusst."
+            },
+            {
+              "question": "Wie berechne ich Allelfrequenzen aus Genotyp-Zählungen?",
+              "answer": "Um Allelfrequenzen aus Genotyp-Zählungen zu berechnen: 1) Finden Sie die Gesamtpopulation N = AA + Aa + aa, 2) Berechnen Sie q = √(aa/N), wobei aa die Anzahl homozygot rezessiver Individuen ist, 3) Berechnen Sie p = 1 - q. Die Frequenz des dominanten Allels (p) plus die Frequenz des rezessiven Allels (q) ergibt immer 1."
+            },
+            {
+              "question": "Was ist Trägerfrequenz (2pq)?",
+              "answer": "Trägerfrequenz (2pq) stellt den Anteil heterozygoter Individuen dar, die eine Kopie eines rezessiven Allels tragen, aber den rezessiven Phänotyp nicht zeigen. Dies ist entscheidend in der genetischen Beratung - zum Beispiel, wenn q² = 0,0001 (1 von 10.000 haben die Krankheit), dann 2pq ≈ 0,02 (etwa 2% sind Träger). Trägerfrequenz ist immer höher als Krankheitsfrequenz bei seltenen rezessiven Störungen."
+            },
+            {
+              "question": "Wie verwende ich den Chi-Quadrat-Test in Hardy-Weinberg-Berechnungen?",
+              "answer": "Der Chi-Quadrat-Test vergleicht beobachtete Genotypfrequenzen mit erwarteten Frequenzen unter Hardy-Weinberg-Gleichgewicht. Berechnen Sie erwartete Zählungen: Erwartetes AA = p² × N, Erwartetes Aa = 2pq × N, Erwartetes aa = q² × N. Dann berechnen Sie χ² = Σ[(Beobachtet - Erwartet)² / Erwartet]. Wenn χ² ≤ kritischer Wert (normalerweise 3,84 für p=0,05), ist die Population im Gleichgewicht. Wenn χ² > kritischer Wert, kann Evolution stattfinden."
+            },
+            {
+              "question": "Was bedeutet es, wenn eine Population NICHT im Hardy-Weinberg-Gleichgewicht ist?",
+              "answer": "Wenn eine Population vom Hardy-Weinberg-Gleichgewicht abweicht (Chi-Quadrat-Test zeigt signifikanten Unterschied), bedeutet dies, dass eine oder mehrere evolutionäre Kräfte wirken: natürliche Selektion (bestimmte Genotypen haben höhere Fitness), Mutation (neue Allele eingeführt), Migration (Genfluss von anderen Populationen), genetische Drift (zufällige Änderungen in kleinen Populationen) oder nicht-zufällige Paarung (assortative Paarung, Inzucht)."
+            },
+            {
+              "question": "Kann ich diesen Rechner für genetische Beratung verwenden?",
+              "answer": "Ja, dieser Rechner ist nützlich zum Verständnis von Trägerfrequenzen in Populationen. Für tatsächliche genetische Beratung sollten Sie jedoch immer einen zertifizierten genetischen Berater oder medizinischen Genetiker konsultieren. Der Rechner liefert pädagogische Schätzungen basierend auf Hardy-Weinberg-Annahmen, aber echte Populationen weichen oft von diesen Annahmen ab, und individuelle Familiengeschichten sind entscheidend für genaue Risikobewertung."
+            },
+            {
+              "question": "Was ist, wenn ich nur die Phänotyp-Daten kenne?",
+              "answer": "Wenn Sie nur die Gesamtpopulation (N) und die Anzahl rezessiver Individuen (aa) kennen, können Sie trotzdem alles berechnen. Verwenden Sie Methode B (Phänotyp-Daten): q = √(aa/N), dann p = 1 - q. Von dort aus berechnen Sie alle Genotypfrequenzen: p², 2pq und q². Der Rechner behandelt diese Umwandlung automatisch."
+            },
+            {
+              "question": "Warum ergibt p + q immer 1?",
+              "answer": "In einem Zwei-Allel-System hat jedes Individuum zwei Allele (eines von jedem Elternteil). Die Frequenz des dominanten Allels (p) plus die Frequenz des rezessiven Allels (q) muss 1 (oder 100%) ergeben, da dies die einzigen beiden vorhandenen Allele sind. Dies ist ein grundlegendes Prinzip der Populationsgenetik."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "dli": "DLI-Rechner",
+          "dliDesc": "Berechnen Sie das tägliche Lichtintegral für optimales Pflanzenwachstum",
+          "vpd": "VPD-Rechner",
+          "vpdDesc": "Berechnen Sie das Dampfdruckdefizit für Pflanzentranspiration",
+          "c1v1": "C1V1 Verdünnungsrechner",
+          "c1v1Desc": "Berechnen Sie Verdünnungsvolumina und Konzentrationen für Lösungen"
+        }
+      }
+    },
+    "hardyWeinberg": {
+      "title": "Hardy-Weinberg-Rechner - Allelfrequenz-Rechner",
+      "description": "Berechnen Sie Hardy-Weinberg-Gleichgewichtsfrequenzen. Professioneller Genetikrechner mit Genotypzählungen, Phänotypdaten, Allelfrequenzen, Chi-Quadrat-Test und schrittweisen Lösungen für Biologiestudenten.",
+      "inputMethod": "Eingabemethode",
+      "methodGenotype": "Genotypzählungen",
+      "methodPhenotype": "Phänotypdaten",
+      "methodAllele": "Allelfrequenzen",
+      "aaCount": "Homozygot dominante Anzahl",
+      "aaHeterozygous": "Heterozygote Anzahl",
+      "aaRecessive": "Homozygot rezessive Anzahl",
+      "totalPopulation": "Gesamtpopulation",
+      "recessiveIndividuals": "Rezessive Individuen",
+      "frequencyP": "Frequenz von p",
+      "frequencyQ": "Frequenz von q",
+      "pAutoCalculate": "q wird automatisch als (1 - p) berechnet, wenn leer gelassen",
+      "advancedOptions": "Erweiterte Optionen",
+      "performChiSquare": "Chi-Quadrat-Test durchführen",
+      "criticalValue": "Kritischer Wert",
+      "showMathSteps": "Rechenschritte anzeigen",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "enterValue": "Geben Sie Ihre Daten ein, um Hardy-Weinberg-Frequenzen zu berechnen",
+      "clickCalculate": "Klicken Sie auf Berechnen, um Hardy-Weinberg-Ergebnisse zu sehen",
+      "hwVariables": "Hardy-Weinberg-Variablen",
+      "genotypeCounts": "Genotypzählungen",
+      "chiSquareTest": "Chi-Quadrat-Test",
+      "chiSquareValue": "Chi-Quadrat-Wert (χ²)",
+      "inEquilibrium": "Population ist im Gleichgewicht (p > 0,05)",
+      "notInEquilibrium": "Population ist NICHT im Gleichgewicht (p ≤ 0,05) - Evolution könnte auftreten",
+      "calculationSteps": "Berechnungsschritte",
+      "step1": "Schritt 1",
+      "step2": "Schritt 2",
+      "step3": "Schritt 3",
+      "step4": "Schritt 4",
+      "step5": "Schritt 5",
+      "step6": "Schritt 6",
+      "seo": {
+        "title": "Hardy-Weinberg-Rechner: Allelfrequenz & Trägerfrequenz-Rechner",
+        "description": "Kostenloser Hardy-Weinberg-Gleichgewichtsrechner mit schrittweisen Lösungen. Berechnen Sie Allelfrequenzen (p, q), Genotypfrequenzen (p², 2pq, q²) und führen Sie Chi-Quadrat-Tests durch. Perfekt für Biologiestudenten und Genetik-Hausaufgaben.",
+        "keywords": "hardy weinberg rechner, allelfrequenz rechner, trägerfrequenz rechner, hardy weinberg gleichgewicht, p q rechner, genotypfrequenz rechner, chi quadrat hardy weinberg, hardy weinberg mit schritten, genetikrechner, biologierechner",
+        "content": {
+          "heading": "So verwenden Sie den Hardy-Weinberg-Rechner",
+          "paragraph1": "Der Hardy-Weinberg-Rechner ist ein unverzichtbares Werkzeug für Biologiestudenten, die Populationsgenetik studieren. Das Hardy-Weinberg-Prinzip beschreibt eine theoretische Population im genetischen Gleichgewicht, bei der Allel- und Genotypfrequenzen von Generation zu Generation konstant bleiben. Dieser Rechner hilft Ihnen, Hardy-Weinberg-Probleme mit drei verschiedenen Eingabemethoden zu lösen: Genotypzählungen (AA, Aa, aa), Phänotypdaten (Gesamtpopulation und rezessive Individuen) oder bekannte Allelfrequenzen (p und q).",
+          "paragraph2": "Die Hardy-Weinberg-Gleichungen sind grundlegend für das Verständnis der Populationsgenetik: p + q = 1 (wobei p die Frequenz des dominanten Allels und q die Frequenz des rezessiven Allels ist) und p² + 2pq + q² = 1 (wobei p² die Frequenz homozygot dominanter Individuen, 2pq die Frequenz heterozygoter Träger und q² die Frequenz homozygot rezessiver Individuen ist). Diese Gleichungen ermöglichen es Ihnen, jeden fehlenden Wert zu berechnen, wenn Sie die anderen kennen.",
+          "paragraph3": "Unser Rechner enthält erweiterte Funktionen, die ihn von einfachen Tools unterscheiden. Die Chi-Quadrat-Test-Option ermöglicht es Ihnen festzustellen, ob eine Population tatsächlich im Hardy-Weinberg-Gleichgewicht ist oder ob Evolution (Selektion, Mutation, Migration, genetische Drift) stattfindet. Geben Sie Ihren kritischen Wert ein (typischerweise 3,84 für p=0,05 mit 1 Freiheitsgrad), und der Rechner vergleicht Ihre beobachteten Genotypfrequenzen mit den erwarteten Frequenzen und sagt Ihnen, ob die Population signifikant vom Gleichgewicht abweicht.",
+          "paragraph4": "Die Schritt-für-Schritt-Mathematik-Funktion zeigt Ihnen genau, wie jede Berechnung durchgeführt wird, was diesen Rechner perfekt für Hausaufgaben und Prüfungsvorbereitung macht. Ob Sie Trägerfrequenzen für genetische Beratung berechnen, feststellen, ob eine Population sich entwickelt, oder einfach Hardy-Weinberg-Übungsaufgaben lösen – dieses Tool liefert klare, genaue Ergebnisse mit pädagogischen Erklärungen.",
+          "exampleHeading": "Beispielberechnung",
+          "exampleText": "Beispiel: In einer Population von 400 Individuen zeigen 100 den rezessiven Phänotyp (aa). Um Allelfrequenzen zu finden: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Dann p = 1 - q = 1 - 0,5 = 0,5. Genotypfrequenzen: p² = 0,25 (25% AA), 2pq = 0,5 (50% Aa-Träger), q² = 0,25 (25% aa). Der Chi-Quadrat-Test vergleicht beobachtete mit erwarteten Frequenzen, um festzustellen, ob die Population im Gleichgewicht ist."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist das Hardy-Weinberg-Prinzip?",
+              "answer": "Das Hardy-Weinberg-Prinzip besagt, dass Allel- und Genotypfrequenzen in einer Population von Generation zu Generation konstant bleiben, wenn bestimmte Bedingungen erfüllt sind: keine Mutation, keine Migration, große Populationsgröße, zufällige Paarung und keine natürliche Selektion. Es bietet ein Basismodell zum Verständnis, wie Evolution Populationen beeinflusst."
+            },
+            {
+              "question": "Wie berechne ich Allelfrequenzen aus Genotypzählungen?",
+              "answer": "Um Allelfrequenzen aus Genotypzählungen zu berechnen: 1) Finden Sie die Gesamtpopulation N = AA + Aa + aa, 2) Berechnen Sie q = √(aa/N), wobei aa die Anzahl homozygot rezessiver Individuen ist, 3) Berechnen Sie p = 1 - q. Die Frequenz des dominanten Allels (p) plus die Frequenz des rezessiven Allels (q) ergibt immer 1."
+            },
+            {
+              "question": "Was ist Trägerfrequenz (2pq)?",
+              "answer": "Die Trägerfrequenz (2pq) stellt den Anteil heterozygoter Individuen dar, die eine Kopie eines rezessiven Allels tragen, aber nicht den rezessiven Phänotyp zeigen. Dies ist entscheidend in der genetischen Beratung - zum Beispiel, wenn q² = 0,0001 (1 von 10.000 haben die Krankheit), dann ist 2pq ≈ 0,02 (etwa 2% sind Träger). Die Trägerfrequenz ist bei seltenen rezessiven Störungen immer höher als die Krankheitsfrequenz."
+            },
+            {
+              "question": "Wie verwende ich den Chi-Quadrat-Test in Hardy-Weinberg-Berechnungen?",
+              "answer": "Der Chi-Quadrat-Test vergleicht beobachtete Genotypfrequenzen mit erwarteten Frequenzen unter Hardy-Weinberg-Gleichgewicht. Berechnen Sie erwartete Zählungen: Erwartetes AA = p² × N, Erwartetes Aa = 2pq × N, Erwartetes aa = q² × N. Dann berechnen Sie χ² = Σ[(Beobachtet - Erwartet)² / Erwartet]. Wenn χ² ≤ kritischer Wert (normalerweise 3,84 für p=0,05), ist die Population im Gleichgewicht. Wenn χ² > kritischer Wert, könnte Evolution stattfinden."
+            },
+            {
+              "question": "Was bedeutet es, wenn eine Population NICHT im Hardy-Weinberg-Gleichgewicht ist?",
+              "answer": "Wenn eine Population vom Hardy-Weinberg-Gleichgewicht abweicht (Chi-Quadrat-Test zeigt signifikanten Unterschied), bedeutet dies, dass eine oder mehrere evolutionäre Kräfte wirken: natürliche Selektion (bestimmte Genotypen haben höhere Fitness), Mutation (neue Allele werden eingeführt), Migration (Genfluss von anderen Populationen), genetische Drift (zufällige Änderungen in kleinen Populationen) oder nicht-zufällige Paarung (assortative Paarung, Inzucht)."
+            },
+            {
+              "question": "Kann ich diesen Rechner für genetische Beratung verwenden?",
+              "answer": "Ja, dieser Rechner ist nützlich zum Verständnis von Trägerfrequenzen in Populationen. Für tatsächliche genetische Beratung konsultieren Sie jedoch immer einen zertifizierten genetischen Berater oder Humangenetiker. Der Rechner liefert Bildungsschätzungen basierend auf Hardy-Weinberg-Annahmen, aber reale Populationen weichen oft von diesen Annahmen ab, und individuelle Familiengeschichten sind entscheidend für eine genaue Risikobewertung."
+            },
+            {
+              "question": "Was ist, wenn ich nur die Phänotypdaten kenne?",
+              "answer": "Wenn Sie nur die Gesamtpopulation (N) und die Anzahl rezessiver Individuen (aa) kennen, können Sie trotzdem alles berechnen. Verwenden Sie Methode B (Phänotypdaten): q = √(aa/N), dann p = 1 - q. Berechnen Sie von dort aus alle Genotypfrequenzen: p², 2pq und q². Der Rechner verarbeitet diese Konvertierung automatisch."
+            },
+            {
+              "question": "Warum ergibt p + q immer 1?",
+              "answer": "In einem Zwei-Allel-System hat jedes Individuum zwei Allele (eines von jedem Elternteil). Die Frequenz des dominanten Allels (p) plus die Frequenz des rezessiven Allels (q) muss 1 (oder 100%) ergeben, da dies die einzigen beiden vorhandenen Allele sind. Dies ist ein grundlegendes Prinzip der Populationsgenetik."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "dli": "DLI-Rechner",
+          "dliDesc": "Berechnen Sie das tägliche Lichtintegral für optimales Pflanzenwachstum",
+          "vpd": "VPD-Rechner",
+          "vpdDesc": "Berechnen Sie das Dampfdruckdefizit für Pflanzentranspiration",
+          "c1v1": "C1V1 Verdünnungsrechner",
+          "c1v1Desc": "Berechnen Sie Verdünnungsvolumina und Konzentrationen für Lösungen"
+        }
+      }
+    },
     "italicText": {
       "title": "Kursivtext-Generator",
       "description": "Generieren Sie sofort kursiven Text mit mehreren Unicode-Stilen: Serif-Kursiv, Kursivschrift und Sans-Serif-Kursiv. Perfekt für soziale Medien, Design und kreatives Schreiben.",

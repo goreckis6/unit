@@ -5900,6 +5900,104 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Hardy-Weinberg Kalkulátor - Allélfrekvencia Kalkulátor",
+      "description": "Számítsa ki a Hardy-Weinberg egyensúlyi frekvenciákat. Professzionális genetikai kalkulátor genotípus-számlálással, fenotípus adatokkal, allélfrekvenciákkal, chi-négyzet teszttel és lépésről lépésre megoldásokkal biológia hallgatók számára.",
+      "inputMethod": "Beviteli Módszer",
+      "methodGenotype": "Genotípus Számlálás",
+      "methodPhenotype": "Fenotípus Adatok",
+      "methodAllele": "Allélfrekvenciák",
+      "aaCount": "Homozigóta Domináns Szám",
+      "aaHeterozygous": "Heterozigóta Szám",
+      "aaRecessive": "Homozigóta Recesszív Szám",
+      "totalPopulation": "Teljes Populáció",
+      "recessiveIndividuals": "Recesszív Egyedek",
+      "frequencyP": "p Frekvenciája",
+      "frequencyQ": "q Frekvenciája",
+      "pAutoCalculate": "q automatikusan kiszámításra kerül mint (1 - p), ha üresen hagyják",
+      "advancedOptions": "Speciális Beállítások",
+      "performChiSquare": "Chi-Négyzet Teszt Végrehajtása",
+      "criticalValue": "Kritikus Érték",
+      "showMathSteps": "Matematikai Lépések Mutatása",
+      "calculate": "Számítás",
+      "reset": "Visszaállítás",
+      "result": "Eredmény",
+      "enterValue": "Adja meg adatait a Hardy-Weinberg frekvenciák kiszámításához",
+      "clickCalculate": "Kattintson a Számítás gombra a Hardy-Weinberg eredmények megtekintéséhez",
+      "hwVariables": "Hardy-Weinberg Változók",
+      "genotypeCounts": "Genotípus Számlálás",
+      "chiSquareTest": "Chi-Négyzet Teszt",
+      "chiSquareValue": "Chi-Négyzet Érték (χ²)",
+      "inEquilibrium": "A populáció egyensúlyban van (p > 0,05)",
+      "notInEquilibrium": "A populáció NEM egyensúlyban van (p ≤ 0,05) - Evolúció fordulhat elő",
+      "calculationSteps": "Számítási Lépések",
+      "step1": "1. Lépés",
+      "step2": "2. Lépés",
+      "step3": "3. Lépés",
+      "step4": "4. Lépés",
+      "step5": "5. Lépés",
+      "step6": "6. Lépés",
+      "seo": {
+        "title": "Hardy-Weinberg Kalkulátor: Allélfrekvencia és Hordozó Frekvencia Kalkulátor",
+        "description": "Ingyenes Hardy-Weinberg egyensúly kalkulátor lépésről lépésre megoldásokkal. Számítsa ki az allélfrekvenciákat (p, q), genotípus frekvenciákat (p², 2pq, q²) és végezzen chi-négyzet teszteket. Tökéletes biológia hallgatók és genetika házi feladatok számára.",
+        "keywords": "hardy weinberg kalkulátor, allélfrekvencia kalkulátor, hordozó frekvencia kalkulátor, hardy weinberg egyensúly, p q kalkulátor, genotípus frekvencia kalkulátor, chi négyzet hardy weinberg, hardy weinberg lépésekkel, genetikai kalkulátor, biológiai kalkulátor",
+        "content": {
+          "heading": "Hogyan Használjuk a Hardy-Weinberg Kalkulátort",
+          "paragraph1": "A Hardy-Weinberg Kalkulátor elengedhetetlen eszköz a populációgenetikát tanuló biológia hallgatók számára. A Hardy-Weinberg elv egy elméleti populációt ír le genetikai egyensúlyban, ahol az allél és genotípus frekvenciák generációról generációra állandóak maradnak. Ez a kalkulátor segít megoldani Hardy-Weinberg problémákat három különböző beviteli módszerrel: genotípus számlálás (AA, Aa, aa), fenotípus adatok (teljes populáció és recesszív egyedek) vagy ismert allélfrekvenciák (p és q).",
+          "paragraph2": "A Hardy-Weinberg egyenletek alapvetőek a populációgenetika megértéséhez: p + q = 1 (ahol p a domináns allél frekvenciája és q a recesszív allél frekvenciája) és p² + 2pq + q² = 1 (ahol p² a homozigóta domináns egyedek frekvenciája, 2pq a heterozigóta hordozók frekvenciája, és q² a homozigóta recesszív egyedek frekvenciája). Ezek az egyenletek lehetővé teszik bármely hiányzó érték kiszámítását, ha ismeri a többit.",
+          "paragraph3": "Kalkulátorunk speciális funkciókat tartalmaz, amelyek megkülönböztetik az alapvető eszközöktől. A chi-négyzet teszt opció lehetővé teszi annak meghatározását, hogy egy populáció ténylegesen Hardy-Weinberg egyensúlyban van-e, vagy evolúció (szelekció, mutáció, migráció, genetikai sodródás) zajlik-e. Adja meg kritikus értékét (általában 3,84 p=0,05-nél 1 szabadságfokkal), és a kalkulátor összehasonlítja megfigyelt genotípus frekvenciáit a várt frekvenciákkal, és megmondja, hogy a populáció jelentősen eltér-e az egyensúlytól.",
+          "paragraph4": "A matematikai lépések funkció pontosan megmutatja, hogyan történik minden számítás, így ez a kalkulátor tökéletes házi feladatokhoz és vizsgafelkészüléshez. Akár hordozó frekvenciákat számol genetikai tanácsadáshoz, meghatározza, hogy egy populáció fejlődik-e, vagy egyszerűen Hardy-Weinberg gyakorlati problémákat old meg, ez az eszköz világos, pontos eredményeket nyújt oktatási magyarázatokkal.",
+          "exampleHeading": "Példa Számítás",
+          "exampleText": "Példa: Egy 400 egyedből álló populációban 100 mutatja a recesszív fenotípust (aa). Az allélfrekvenciák megtalálásához: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Akkor p = 1 - q = 1 - 0,5 = 0,5. Genotípus frekvenciák: p² = 0,25 (25% AA), 2pq = 0,5 (50% Aa hordozók), q² = 0,25 (25% aa). A chi-négyzet teszt összehasonlítja a megfigyelt és várt frekvenciákat annak meghatározásához, hogy a populáció egyensúlyban van-e."
+        },
+        "faq": {
+          "heading": "Gyakran Ismételt Kérdések",
+          "items": [
+            {
+              "question": "Mi a Hardy-Weinberg elv?",
+              "answer": "A Hardy-Weinberg elv kimondja, hogy az allél és genotípus frekvenciák egy populációban generációról generációra állandóak maradnak, ha bizonyos feltételek teljesülnek: nincs mutáció, nincs migráció, nagy populációméret, véletlen párosodás és nincs természetes szelekció. Alapmodellt biztosít annak megértéséhez, hogyan befolyásolja az evolúció a populációkat."
+            },
+            {
+              "question": "Hogyan számítsuk ki az allélfrekvenciákat genotípus számlálásból?",
+              "answer": "Az allélfrekvenciák genotípus számlálásból történő kiszámításához: 1) Keresse meg a teljes populációt N = AA + Aa + aa, 2) Számítsa ki q = √(aa/N), ahol aa a homozigóta recesszív egyedek száma, 3) Számítsa ki p = 1 - q. A domináns allél frekvenciája (p) plusz a recesszív allél frekvenciája (q) mindig 1-gyel egyenlő."
+            },
+            {
+              "question": "Mi a hordozó frekvencia (2pq)?",
+              "answer": "A hordozó frekvencia (2pq) a heterozigóta egyedek arányát jelenti, akik egy recesszív allél másolatát hordozzák, de nem mutatják a recesszív fenotípust. Ez kulcsfontosságú a genetikai tanácsadásban - például, ha q² = 0,0001 (10 000-ből 1-nek van betegsége), akkor 2pq ≈ 0,02 (körülbelül 2% hordozó). A hordozó frekvencia mindig magasabb, mint a betegség frekvenciája ritka recesszív rendellenességek esetén."
+            },
+            {
+              "question": "Hogyan használjuk a chi-négyzet tesztet Hardy-Weinberg számításokban?",
+              "answer": "A chi-négyzet teszt összehasonlítja a megfigyelt genotípus frekvenciákat a Hardy-Weinberg egyensúly alatti várt frekvenciákkal. Számítsa ki a várt számokat: Várt AA = p² × N, Várt Aa = 2pq × N, Várt aa = q² × N. Ezután számítsa ki χ² = Σ[(Megfigyelt - Várt)² / Várt]. Ha χ² ≤ kritikus érték (általában 3,84 p=0,05-nél), a populáció egyensúlyban van. Ha χ² > kritikus érték, evolúció fordulhat elő."
+            },
+            {
+              "question": "Mit jelent, ha egy populáció NEM Hardy-Weinberg egyensúlyban van?",
+              "answer": "Ha egy populáció eltér a Hardy-Weinberg egyensúlytól (a chi-négyzet teszt jelentős különbséget mutat), ez azt jelenti, hogy egy vagy több evolúciós erő működik: természetes szelekció (bizonyos genotípusok magasabb alkalmasságúak), mutáció (új allélek kerülnek bevezetésre), migráció (génáramlás más populációkból), genetikai sodródás (véletlen változások kis populációkban) vagy nem véletlen párosodás (asszortatív párosodás, beltenyésztés)."
+            },
+            {
+              "question": "Használhatom ezt a kalkulátort genetikai tanácsadáshoz?",
+              "answer": "Igen, ez a kalkulátor hasznos a hordozó frekvenciák megértéséhez a populációkban. Valódi genetikai tanácsadáshoz azonban mindig forduljon minősített genetikai tanácsadóhoz vagy orvosi genetikushoz. A kalkulátor oktatási becsléseket nyújt Hardy-Weinberg feltételezések alapján, de a valós populációk gyakran eltérnek ezektől a feltételezésektől, és az egyéni családtörténetek kulcsfontosságúak a pontos kockázatértékeléshez."
+            },
+            {
+              "question": "Mi van, ha csak a fenotípus adatokat ismerem?",
+              "answer": "Ha csak a teljes populációt (N) és a recesszív egyedek számát (aa) ismeri, még mindig kiszámíthat mindent. Használja a B módszert (Fenotípus Adatok): q = √(aa/N), majd p = 1 - q. Onnan számítsa ki az összes genotípus frekvenciát: p², 2pq és q². A kalkulátor automatikusan kezeli ezt az átalakítást."
+            },
+            {
+              "question": "Miért egyenlő p + q mindig 1-gyel?",
+              "answer": "Egy két-allél rendszerben minden egyed két allélel rendelkezik (egyet-egyet mindkét szülőtől). A domináns allél frekvenciája (p) plusz a recesszív allél frekvenciája (q) 1-gyel (vagy 100%-kal) kell egyenlő legyen, mert ez a két allél az egyetlen jelen lévő. Ez a populációgenetika alapelve."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kapcsolódó Kalkulátorok",
+          "dli": "DLI Kalkulátor",
+          "dliDesc": "Számítsa ki a napi fényintegrált az optimális növénynövekedéshez",
+          "vpd": "VPD Kalkulátor",
+          "vpdDesc": "Számítsa ki a gőznyomás deficitet a növényi párologtatáshoz",
+          "c1v1": "C1V1 Hígítási Kalkulátor",
+          "c1v1Desc": "Számítsa ki a hígítási térfogatokat és koncentrációkat oldatokhoz"
+        }
+      }
+    },
     "italicText": {
       "title": "Dőlt Szöveg Generátor",
       "description": "Generáljon dőlt szöveget azonnal több Unicode stílussal: serif dőlt, kurzív szkript és sans-serif dőlt. Tökéletes közösségi médiához, tervezéshez és kreatív íráshoz.",

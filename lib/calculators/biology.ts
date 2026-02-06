@@ -50,4 +50,11 @@ export const biologyCalculators: Calculator[] = [
     path: '/calculators/biology/dli-calculator',
     category: 'biology',
   },
+  {
+    id: 'hardy-weinberg-calculator',
+    titleKey: 'hardyWeinberg.title',
+    descKey: 'hardyWeinberg.description',
+    path: '/calculators/biology/hardy-weinberg-calculator',
+    category: 'biology',
+  },
 ];

@@ -6027,6 +6027,104 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Calcolatore Hardy-Weinberg - Calcolatore di Frequenza Allelica",
+      "description": "Calcola le frequenze di equilibrio di Hardy-Weinberg. Calcolatore di genetica professionale con conteggi di genotipi, dati fenotipici, frequenze alleliche, test chi-quadrato e soluzioni passo-passo per studenti di biologia.",
+      "inputMethod": "Metodo di Input",
+      "methodGenotype": "Conteggi di Genotipi",
+      "methodPhenotype": "Dati Fenotipici",
+      "methodAllele": "Frequenze Alleliche",
+      "aaCount": "Conteggio Omozigoti Dominanti",
+      "aaHeterozygous": "Conteggio Eterozigoti",
+      "aaRecessive": "Conteggio Omozigoti Recessivi",
+      "totalPopulation": "Popolazione Totale",
+      "recessiveIndividuals": "Individui Recessivi",
+      "frequencyP": "Frequenza di p",
+      "frequencyQ": "Frequenza di q",
+      "pAutoCalculate": "q sarà calcolato automaticamente come (1 - p) se lasciato vuoto",
+      "advancedOptions": "Opzioni Avanzate",
+      "performChiSquare": "Esegui Test Chi-Quadrato",
+      "criticalValue": "Valore Critico",
+      "showMathSteps": "Mostra Passaggi Matematici",
+      "calculate": "Calcola",
+      "reset": "Reimposta",
+      "result": "Risultato",
+      "enterValue": "Inserisci i tuoi dati per calcolare le frequenze di Hardy-Weinberg",
+      "clickCalculate": "Fai clic su Calcola per vedere i risultati di Hardy-Weinberg",
+      "hwVariables": "Variabili di Hardy-Weinberg",
+      "genotypeCounts": "Conteggi di Genotipi",
+      "chiSquareTest": "Test Chi-Quadrato",
+      "chiSquareValue": "Valore Chi-Quadrato (χ²)",
+      "inEquilibrium": "La popolazione è in equilibrio (p > 0,05)",
+      "notInEquilibrium": "La popolazione NON è in equilibrio (p ≤ 0,05) - L'evoluzione potrebbe verificarsi",
+      "calculationSteps": "Passaggi di Calcolo",
+      "step1": "Passo 1",
+      "step2": "Passo 2",
+      "step3": "Passo 3",
+      "step4": "Passo 4",
+      "step5": "Passo 5",
+      "step6": "Passo 6",
+      "seo": {
+        "title": "Calcolatore Hardy-Weinberg: Calcolatore di Frequenza Allelica e di Portatori",
+        "description": "Calcolatore di equilibrio Hardy-Weinberg gratuito con soluzioni passo-passo. Calcola frequenze alleliche (p, q), frequenze di genotipi (p², 2pq, q²) ed esegui test chi-quadrato. Perfetto per studenti di biologia e compiti di genetica.",
+        "keywords": "calcolatore hardy weinberg, calcolatore frequenza allelica, calcolatore frequenza portatori, equilibrio hardy weinberg, calcolatore p q, calcolatore frequenza genotipo, chi quadrato hardy weinberg, hardy weinberg con passaggi, calcolatore genetica, calcolatore biologia",
+        "content": {
+          "heading": "Come Usare il Calcolatore Hardy-Weinberg",
+          "paragraph1": "Il Calcolatore Hardy-Weinberg è uno strumento essenziale per gli studenti di biologia che studiano la genetica delle popolazioni. Il principio di Hardy-Weinberg descrive una popolazione teorica in equilibrio genetico, dove le frequenze alleliche e genotipiche rimangono costanti di generazione in generazione. Questo calcolatore ti aiuta a risolvere problemi di Hardy-Weinberg utilizzando tre diversi metodi di input: conteggi di genotipi (AA, Aa, aa), dati fenotipici (popolazione totale e individui recessivi) o frequenze alleliche note (p e q).",
+          "paragraph2": "Le equazioni di Hardy-Weinberg sono fondamentali per comprendere la genetica delle popolazioni: p + q = 1 (dove p è la frequenza dell'allele dominante e q è la frequenza dell'allele recessivo) e p² + 2pq + q² = 1 (dove p² è la frequenza degli individui omozigoti dominanti, 2pq è la frequenza dei portatori eterozigoti e q² è la frequenza degli individui omozigoti recessivi). Queste equazioni ti permettono di calcolare qualsiasi valore mancante quando conosci gli altri.",
+          "paragraph3": "Il nostro calcolatore include funzionalità avanzate che lo distinguono dagli strumenti di base. L'opzione del test chi-quadrato ti permette di determinare se una popolazione è effettivamente in equilibrio di Hardy-Weinberg o se sta avvenendo l'evoluzione (selezione, mutazione, migrazione, deriva genetica). Inserisci il tuo valore critico (tipicamente 3,84 per p=0,05 con 1 grado di libertà), e il calcolatore confronterà le tue frequenze di genotipi osservate con le frequenze attese e ti dirà se la popolazione si discosta significativamente dall'equilibrio.",
+          "paragraph4": "La funzione passaggi matematici ti mostra esattamente come viene eseguito ogni calcolo, rendendo questo calcolatore perfetto per i compiti e la preparazione agli esami. Che tu stia calcolando frequenze di portatori per la consulenza genetica, determinando se una popolazione sta evolvendo o semplicemente risolvendo problemi di pratica di Hardy-Weinberg, questo strumento fornisce risultati chiari e precisi con spiegazioni educative.",
+          "exampleHeading": "Esempio di Calcolo",
+          "exampleText": "Esempio: In una popolazione di 400 individui, 100 mostrano il fenotipo recessivo (aa). Per trovare le frequenze alleliche: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Poi p = 1 - q = 1 - 0,5 = 0,5. Frequenze di genotipi: p² = 0,25 (25% AA), 2pq = 0,5 (50% portatori Aa), q² = 0,25 (25% aa). Il test chi-quadrato confronta le frequenze osservate e attese per determinare se la popolazione è in equilibrio."
+        },
+        "faq": {
+          "heading": "Domande Frequenti",
+          "items": [
+            {
+              "question": "Cos'è il principio di Hardy-Weinberg?",
+              "answer": "Il principio di Hardy-Weinberg afferma che le frequenze alleliche e genotipiche in una popolazione rimangono costanti di generazione in generazione se sono soddisfatte determinate condizioni: nessuna mutazione, nessuna migrazione, grande dimensione della popolazione, accoppiamento casuale e nessuna selezione naturale. Fornisce un modello di riferimento per comprendere come l'evoluzione influisce sulle popolazioni."
+            },
+            {
+              "question": "Come calcolare le frequenze alleliche dai conteggi di genotipi?",
+              "answer": "Per calcolare le frequenze alleliche dai conteggi di genotipi: 1) Trova la popolazione totale N = AA + Aa + aa, 2) Calcola q = √(aa/N) dove aa è il numero di individui omozigoti recessivi, 3) Calcola p = 1 - q. La frequenza dell'allele dominante (p) più la frequenza dell'allele recessivo (q) è sempre uguale a 1."
+            },
+            {
+              "question": "Cos'è la frequenza dei portatori (2pq)?",
+              "answer": "La frequenza dei portatori (2pq) rappresenta la proporzione di individui eterozigoti che portano una copia di un allele recessivo ma non mostrano il fenotipo recessivo. Questo è cruciale nella consulenza genetica - ad esempio, se q² = 0,0001 (1 su 10.000 ha la malattia), allora 2pq ≈ 0,02 (circa il 2% sono portatori). La frequenza dei portatori è sempre più alta della frequenza della malattia per i disturbi recessivi rari."
+            },
+            {
+              "question": "Come usare il test chi-quadrato nei calcoli di Hardy-Weinberg?",
+              "answer": "Il test chi-quadrato confronta le frequenze di genotipi osservate con le frequenze attese sotto l'equilibrio di Hardy-Weinberg. Calcola i conteggi attesi: AA atteso = p² × N, Aa atteso = 2pq × N, aa atteso = q² × N. Poi calcola χ² = Σ[(Osservato - Atteso)² / Atteso]. Se χ² ≤ valore critico (tipicamente 3,84 per p=0,05), la popolazione è in equilibrio. Se χ² > valore critico, l'evoluzione potrebbe verificarsi."
+            },
+            {
+              "question": "Cosa significa se una popolazione NON è in equilibrio di Hardy-Weinberg?",
+              "answer": "Se una popolazione si discosta dall'equilibrio di Hardy-Weinberg (il test chi-quadrato mostra una differenza significativa), significa che una o più forze evolutive stanno agendo: selezione naturale (alcuni genotipi hanno maggiore fitness), mutazione (vengono introdotti nuovi alleli), migrazione (flusso genico da altre popolazioni), deriva genetica (cambiamenti casuali in popolazioni piccole) o accoppiamento non casuale (accoppiamento assortativo, consanguineità)."
+            },
+            {
+              "question": "Posso usare questo calcolatore per la consulenza genetica?",
+              "answer": "Sì, questo calcolatore è utile per comprendere le frequenze dei portatori nelle popolazioni. Tuttavia, per una vera consulenza genetica, consulta sempre un consulente genetico certificato o un genetista medico. Il calcolatore fornisce stime educative basate sulle ipotesi di Hardy-Weinberg, ma le popolazioni reali spesso si discostano da queste ipotesi, e le storie familiari individuali sono cruciali per una valutazione accurata del rischio."
+            },
+            {
+              "question": "Cosa succede se conosco solo i dati fenotipici?",
+              "answer": "Se conosci solo la popolazione totale (N) e il numero di individui recessivi (aa), puoi comunque calcolare tutto. Usa il Metodo B (Dati Fenotipici): q = √(aa/N), poi p = 1 - q. Da lì, calcola tutte le frequenze di genotipi: p², 2pq e q². Il calcolatore gestisce automaticamente questa conversione."
+            },
+            {
+              "question": "Perché p + q è sempre uguale a 1?",
+              "answer": "In un sistema a due alleli, ogni individuo ha due alleli (uno da ogni genitore). La frequenza dell'allele dominante (p) più la frequenza dell'allele recessivo (q) deve essere uguale a 1 (o 100%) perché questi sono gli unici due alleli presenti. Questo è un principio fondamentale della genetica delle popolazioni."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calcolatori Correlati",
+          "dli": "Calcolatore DLI",
+          "dliDesc": "Calcola l'integrale di luce giornaliera per una crescita ottimale delle piante",
+          "vpd": "Calcolatore VPD",
+          "vpdDesc": "Calcola il deficit di pressione di vapore per la traspirazione delle piante",
+          "c1v1": "Calcolatore di Diluizione C1V1",
+          "c1v1Desc": "Calcola volumi di diluizione e concentrazioni per soluzioni"
+        }
+      }
+    },
     "italicText": {
       "title": "Generatore di Testo in Corsivo",
       "description": "Genera testo in corsivo istantaneamente con più stili Unicode: corsivo serif, script corsivo e corsivo sans-serif. Perfetto per social media, design e scrittura creativa.",

@@ -5997,6 +5997,202 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Kalkulator Hardy-Weinberga - Kalkulator Częstotliwości Alleli",
+      "description": "Oblicz częstotliwości równowagi Hardy-Weinberga. Profesjonalny kalkulator genetyczny z liczeniem genotypów, danymi fenotypowymi, częstotliwościami alleli, testem chi-kwadrat i rozwiązaniami krok po kroku dla studentów biologii.",
+      "inputMethod": "Metoda wprowadzania",
+      "methodGenotype": "Liczba genotypów",
+      "methodPhenotype": "Dane fenotypowe",
+      "methodAllele": "Częstotliwości alleli",
+      "aaCount": "Liczba homozygot dominujących",
+      "aaHeterozygous": "Liczba heterozygot",
+      "aaRecessive": "Liczba homozygot recesywnych",
+      "totalPopulation": "Całkowita populacja",
+      "recessiveIndividuals": "Osobniki recesywne",
+      "frequencyP": "Częstotliwość p",
+      "frequencyQ": "Częstotliwość q",
+      "pAutoCalculate": "q zostanie automatycznie obliczone jako (1 - p), jeśli pozostawione puste",
+      "advancedOptions": "Opcje zaawansowane",
+      "performChiSquare": "Wykonaj test chi-kwadrat",
+      "criticalValue": "Wartość krytyczna",
+      "showMathSteps": "Pokaż kroki matematyczne",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "enterValue": "Wprowadź dane, aby obliczyć częstotliwości Hardy-Weinberga",
+      "clickCalculate": "Kliknij Oblicz, aby zobaczyć wyniki Hardy-Weinberga",
+      "hwVariables": "Zmienne Hardy-Weinberga",
+      "genotypeCounts": "Liczba genotypów",
+      "chiSquareTest": "Test chi-kwadrat",
+      "chiSquareValue": "Wartość chi-kwadrat (χ²)",
+      "inEquilibrium": "Populacja jest w równowadze (p > 0,05)",
+      "notInEquilibrium": "Populacja NIE jest w równowadze (p ≤ 0,05) - może zachodzić ewolucja",
+      "calculationSteps": "Kroki obliczeń",
+      "step1": "Krok 1",
+      "step2": "Krok 2",
+      "step3": "Krok 3",
+      "step4": "Krok 4",
+      "step5": "Krok 5",
+      "step6": "Krok 6",
+      "seo": {
+        "title": "Kalkulator Hardy-Weinberga: Kalkulator Częstotliwości Alleli i Częstotliwości Nosicieli",
+        "description": "Darmowy kalkulator równowagi Hardy-Weinberga z rozwiązaniami krok po kroku. Oblicz częstotliwości alleli (p, q), częstotliwości genotypów (p², 2pq, q²) i wykonaj testy chi-kwadrat. Idealny dla studentów biologii i zadań z genetyki.",
+        "keywords": "kalkulator hardy weinberg, kalkulator częstotliwości alleli, kalkulator częstotliwości nosicieli, równowaga hardy weinberg, kalkulator p q, kalkulator częstotliwości genotypów, chi kwadrat hardy weinberg, hardy weinberg ze krokami, kalkulator genetyki, kalkulator biologii",
+        "content": {
+          "heading": "Jak używać kalkulatora Hardy-Weinberga",
+          "paragraph1": "Kalkulator Hardy-Weinberga jest niezbędnym narzędziem dla studentów biologii studiujących genetykę populacji. Zasada Hardy-Weinberga opisuje teoretyczną populację w równowadze genetycznej, gdzie częstotliwości alleli i genotypów pozostają stałe z pokolenia na pokolenie. Ten kalkulator pomaga rozwiązywać problemy Hardy-Weinberga używając trzech różnych metod wprowadzania: liczenia genotypów (AA, Aa, aa), danych fenotypowych (całkowita populacja i osobniki recesywne) lub znanych częstotliwości alleli (p i q).",
+          "paragraph2": "Równania Hardy-Weinberga są fundamentalne dla zrozumienia genetyki populacji: p + q = 1 (gdzie p jest częstotliwością allelu dominującego, a q jest częstotliwością allelu recesywnego) oraz p² + 2pq + q² = 1 (gdzie p² jest częstotliwością homozygot dominujących, 2pq jest częstotliwością heterozygotycznych nosicieli, a q² jest częstotliwością homozygot recesywnych). Te równania pozwalają obliczyć każdą brakującą wartość, gdy znasz pozostałe.",
+          "paragraph3": "Nasz kalkulator zawiera zaawansowane funkcje, które wyróżniają go od podstawowych narzędzi. Opcja testu chi-kwadrat pozwala określić, czy populacja jest rzeczywiście w równowadze Hardy-Weinberga, czy zachodzi ewolucja (selekcja, mutacja, migracja, dryf genetyczny). Wprowadź wartość krytyczną (zwykle 3,84 dla p=0,05 z 1 stopniem swobody), a kalkulator porówna obserwowane częstotliwości genotypów z oczekiwanymi i powie, czy populacja odbiega znacząco od równowagi.",
+          "paragraph4": "Funkcja matematyki krok po kroku pokazuje dokładnie, jak każda kalkulacja jest wykonywana, co czyni ten kalkulator idealnym do zadań domowych i przygotowania do egzaminów. Niezależnie od tego, czy obliczasz częstotliwości nosicieli dla poradnictwa genetycznego, określasz, czy populacja ewoluuje, czy po prostu rozwiązujesz problemy praktyczne Hardy-Weinberga, to narzędzie zapewnia jasne, dokładne wyniki z wyjaśnieniami edukacyjnymi.",
+          "exampleHeading": "Przykład obliczeń",
+          "exampleText": "Przykład: W populacji 400 osobników, 100 wykazuje recesywny fenotyp (aa). Aby znaleźć częstotliwości alleli: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Następnie p = 1 - q = 1 - 0,5 = 0,5. Częstotliwości genotypów: p² = 0,25 (25% AA), 2pq = 0,5 (50% nosicieli Aa), q² = 0,25 (25% aa). Test chi-kwadrat porównuje obserwowane vs. oczekiwane częstotliwości, aby określić, czy populacja jest w równowadze."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {
+              "question": "Co to jest zasada Hardy-Weinberga?",
+              "answer": "Zasada Hardy-Weinberga stwierdza, że częstotliwości alleli i genotypów w populacji pozostają stałe z pokolenia na pokolenie, jeśli spełnione są określone warunki: brak mutacji, brak migracji, duża wielkość populacji, losowe kojarzenie i brak doboru naturalnego. Zapewnia model bazowy do zrozumienia, jak ewolucja wpływa na populacje."
+            },
+            {
+              "question": "Jak obliczyć częstotliwości alleli z liczenia genotypów?",
+              "answer": "Aby obliczyć częstotliwości alleli z liczenia genotypów: 1) Znajdź całkowitą populację N = AA + Aa + aa, 2) Oblicz q = √(aa/N), gdzie aa jest liczbą homozygot recesywnych, 3) Oblicz p = 1 - q. Częstotliwość allelu dominującego (p) plus częstotliwość allelu recesywnego (q) zawsze równa się 1."
+            },
+            {
+              "question": "Co to jest częstotliwość nosicieli (2pq)?",
+              "answer": "Częstotliwość nosicieli (2pq) reprezentuje proporcję heterozygotycznych osobników, którzy noszą jedną kopię allelu recesywnego, ale nie wykazują recesywnego fenotypu. To jest kluczowe w poradnictwie genetycznym - na przykład, jeśli q² = 0,0001 (1 na 10 000 ma chorobę), to 2pq ≈ 0,02 (około 2% to nosiciele). Częstotliwość nosicieli jest zawsze wyższa niż częstotliwość choroby dla rzadkich zaburzeń recesywnych."
+            },
+            {
+              "question": "Jak użyć testu chi-kwadrat w obliczeniach Hardy-Weinberga?",
+              "answer": "Test chi-kwadrat porównuje obserwowane częstotliwości genotypów z oczekiwanymi częstotliwościami pod równowagą Hardy-Weinberga. Oblicz oczekiwane liczby: Oczekiwane AA = p² × N, Oczekiwane Aa = 2pq × N, Oczekiwane aa = q² × N. Następnie oblicz χ² = Σ[(Obserwowane - Oczekiwane)² / Oczekiwane]. Jeśli χ² ≤ wartość krytyczna (zwykle 3,84 dla p=0,05), populacja jest w równowadze. Jeśli χ² > wartość krytyczna, może zachodzić ewolucja."
+            },
+            {
+              "question": "Co to oznacza, jeśli populacja NIE jest w równowadze Hardy-Weinberga?",
+              "answer": "Jeśli populacja odbiega od równowagi Hardy-Weinberga (test chi-kwadrat pokazuje znaczącą różnicę), oznacza to, że działają jedna lub więcej sił ewolucyjnych: dobór naturalny (pewne genotypy mają wyższą dostosowanie), mutacja (wprowadzone nowe allele), migracja (przepływ genów z innych populacji), dryf genetyczny (losowe zmiany w małych populacjach) lub nielosowe kojarzenie (kojarzenie asortytywne, chów wsobny)."
+            },
+            {
+              "question": "Czy mogę użyć tego kalkulatora do poradnictwa genetycznego?",
+              "answer": "Tak, ten kalkulator jest przydatny do zrozumienia częstotliwości nosicieli w populacjach. Jednak w przypadku rzeczywistego poradnictwa genetycznego zawsze skonsultuj się z certyfikowanym doradcą genetycznym lub genetykiem medycznym. Kalkulator zapewnia szacunki edukacyjne oparte na założeniach Hardy-Weinberga, ale prawdziwe populacje często odbiegają od tych założeń, a indywidualne historie rodzinne są kluczowe dla dokładnej oceny ryzyka."
+            },
+            {
+              "question": "Co jeśli znam tylko dane fenotypowe?",
+              "answer": "Jeśli znasz tylko całkowitą populację (N) i liczbę osobników recesywnych (aa), nadal możesz wszystko obliczyć. Użyj Metody B (Dane fenotypowe): q = √(aa/N), następnie p = 1 - q. Stamtąd oblicz wszystkie częstotliwości genotypów: p², 2pq i q². Kalkulator automatycznie obsługuje tę konwersję."
+            },
+            {
+              "question": "Dlaczego p + q zawsze równa się 1?",
+              "answer": "W systemie dwóch alleli każdy osobnik ma dwa allele (jeden od każdego rodzica). Częstotliwość allelu dominującego (p) plus częstotliwość allelu recesywnego (q) musi równać się 1 (lub 100%), ponieważ są to jedyne dwa obecne allele. To jest fundamentalna zasada genetyki populacji."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "dli": "Kalkulator DLI",
+          "dliDesc": "Oblicz całkowitą dzienną ilość światła dla optymalnego wzrostu roślin",
+          "vpd": "Kalkulator VPD",
+          "vpdDesc": "Oblicz deficyt ciśnienia pary dla transpiracji roślin",
+          "c1v1": "Kalkulator Rozcieńczenia C1V1",
+          "c1v1Desc": "Oblicz objętości rozcieńczenia i stężenia dla roztworów"
+        }
+      }
+    },
+    "hardyWeinberg": {
+      "title": "Kalkulator Hardy-Weinberga - Kalkulator Częstości Alleli",
+      "description": "Oblicz częstości równowagi Hardy-Weinberga. Profesjonalny kalkulator genetyczny z liczeniem genotypów, danymi fenotypowymi, częstościami alleli, testem chi-kwadrat i rozwiązaniami krok po kroku dla studentów biologii.",
+      "inputMethod": "Metoda Wprowadzania",
+      "methodGenotype": "Liczby Genotypów",
+      "methodPhenotype": "Dane Fenotypowe",
+      "methodAllele": "Częstości Alleli",
+      "aaCount": "Liczba Homozygot Dominujących",
+      "aaHeterozygous": "Liczba Heterozygot",
+      "aaRecessive": "Liczba Homozygot Recesywnych",
+      "totalPopulation": "Całkowita Populacja",
+      "recessiveIndividuals": "Osobniki Recesywne",
+      "frequencyP": "Częstość p",
+      "frequencyQ": "Częstość q",
+      "pAutoCalculate": "q zostanie automatycznie obliczone jako (1 - p), jeśli pozostanie puste",
+      "advancedOptions": "Opcje Zaawansowane",
+      "performChiSquare": "Przeprowadź Test Chi-Kwadrat",
+      "criticalValue": "Wartość Krytyczna",
+      "showMathSteps": "Pokaż Kroki Obliczeń",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "enterValue": "Wprowadź swoje dane, aby obliczyć częstości Hardy-Weinberga",
+      "clickCalculate": "Kliknij Oblicz, aby zobaczyć wyniki Hardy-Weinberga",
+      "hwVariables": "Zmienne Hardy-Weinberga",
+      "genotypeCounts": "Liczby Genotypów",
+      "chiSquareTest": "Test Chi-Kwadrat",
+      "chiSquareValue": "Wartość Chi-Kwadrat (χ²)",
+      "inEquilibrium": "Populacja jest w równowadze (p > 0,05)",
+      "notInEquilibrium": "Populacja NIE jest w równowadze (p ≤ 0,05) - Może zachodzić ewolucja",
+      "calculationSteps": "Kroki Obliczeń",
+      "step1": "Krok 1",
+      "step2": "Krok 2",
+      "step3": "Krok 3",
+      "step4": "Krok 4",
+      "step5": "Krok 5",
+      "step6": "Krok 6",
+      "seo": {
+        "title": "Kalkulator Hardy-Weinberga: Kalkulator Częstości Alleli i Nosicieli",
+        "description": "Darmowy kalkulator równowagi Hardy-Weinberga z rozwiązaniami krok po kroku. Oblicz częstości alleli (p, q), częstości genotypów (p², 2pq, q²) i przeprowadź testy chi-kwadrat. Idealny dla studentów biologii i zadań domowych z genetyki.",
+        "keywords": "kalkulator hardy weinberga, kalkulator częstości alleli, kalkulator częstości nosicieli, równowaga hardy weinberga, kalkulator p q, kalkulator częstości genotypów, chi kwadrat hardy weinberg, hardy weinberg z krokami, kalkulator genetyczny, kalkulator biologiczny",
+        "content": {
+          "heading": "Jak Używać Kalkulatora Hardy-Weinberga",
+          "paragraph1": "Kalkulator Hardy-Weinberga jest niezbędnym narzędziem dla studentów biologii studiujących genetykę populacyjną. Zasada Hardy-Weinberga opisuje teoretyczną populację w równowadze genetycznej, gdzie częstości alleli i genotypów pozostają stałe z pokolenia na pokolenie. Ten kalkulator pomaga rozwiązywać problemy Hardy-Weinberga za pomocą trzech różnych metod wprowadzania: liczby genotypów (AA, Aa, aa), dane fenotypowe (całkowita populacja i osobniki recesywne) lub znane częstości alleli (p i q).",
+          "paragraph2": "Równania Hardy-Weinberga są fundamentalne dla zrozumienia genetyki populacyjnej: p + q = 1 (gdzie p jest częstością allelu dominującego, a q jest częstością allelu recesywnego) oraz p² + 2pq + q² = 1 (gdzie p² jest częstością osobników homozygotycznych dominujących, 2pq jest częstością heterozygotycznych nosicieli, a q² jest częstością osobników homozygotycznych recesywnych). Te równania pozwalają obliczyć dowolną brakującą wartość, gdy znasz pozostałe.",
+          "paragraph3": "Nasz kalkulator zawiera zaawansowane funkcje, które wyróżniają go od podstawowych narzędzi. Opcja testu chi-kwadrat pozwala określić, czy populacja rzeczywiście znajduje się w równowadze Hardy-Weinberga, czy też zachodzi ewolucja (selekcja, mutacja, migracja, dryf genetyczny). Wprowadź swoją wartość krytyczną (zazwyczaj 3,84 dla p=0,05 z 1 stopniem swobody), a kalkulator porówna obserwowane częstości genotypów z oczekiwanymi i powie, czy populacja odbiega znacząco od równowagi.",
+          "paragraph4": "Funkcja kroków matematycznych pokazuje dokładnie, jak wykonywane jest każde obliczenie, co czyni ten kalkulator idealnym do pracy domowej i przygotowania do egzaminów. Niezależnie od tego, czy obliczasz częstości nosicieli do poradnictwa genetycznego, określasz, czy populacja ewoluuje, czy po prostu rozwiązujesz ćwiczenia Hardy-Weinberga, to narzędzie dostarcza jasne, dokładne wyniki z wyjaśnieniami edukacyjnymi.",
+          "exampleHeading": "Przykładowe Obliczenie",
+          "exampleText": "Przykład: W populacji 400 osobników 100 wykazuje fenotyp recesywny (aa). Aby znaleźć częstości alleli: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Następnie p = 1 - q = 1 - 0,5 = 0,5. Częstości genotypów: p² = 0,25 (25% AA), 2pq = 0,5 (50% nosicieli Aa), q² = 0,25 (25% aa). Test chi-kwadrat porównuje obserwowane i oczekiwane częstości, aby określić, czy populacja jest w równowadze."
+        },
+        "faq": {
+          "heading": "Często Zadawane Pytania",
+          "items": [
+            {
+              "question": "Co to jest zasada Hardy-Weinberga?",
+              "answer": "Zasada Hardy-Weinberga stwierdza, że częstości alleli i genotypów w populacji pozostają stałe z pokolenia na pokolenie, jeśli spełnione są określone warunki: brak mutacji, brak migracji, duża wielkość populacji, losowe kojarzenie się i brak doboru naturalnego. Zapewnia podstawowy model do zrozumienia, jak ewolucja wpływa na populacje."
+            },
+            {
+              "question": "Jak obliczyć częstości alleli z liczby genotypów?",
+              "answer": "Aby obliczyć częstości alleli z liczby genotypów: 1) Znajdź całkowitą populację N = AA + Aa + aa, 2) Oblicz q = √(aa/N), gdzie aa to liczba osobników homozygotycznych recesywnych, 3) Oblicz p = 1 - q. Częstość allelu dominującego (p) plus częstość allelu recesywnego (q) zawsze wynosi 1."
+            },
+            {
+              "question": "Co to jest częstość nosicieli (2pq)?",
+              "answer": "Częstość nosicieli (2pq) reprezentuje proporcję osobników heterozygotycznych, którzy niosą jedną kopię allelu recesywnego, ale nie wykazują fenotypu recesywnego. Jest to kluczowe w poradnictwie genetycznym - na przykład, jeśli q² = 0,0001 (1 na 10 000 ma chorobę), to 2pq ≈ 0,02 (około 2% to nosiciele). Częstość nosicieli jest zawsze wyższa niż częstość choroby w przypadku rzadkich zaburzeń recesywnych."
+            },
+            {
+              "question": "Jak używać testu chi-kwadrat w obliczeniach Hardy-Weinberga?",
+              "answer": "Test chi-kwadrat porównuje obserwowane częstości genotypów z oczekiwanymi częstościami w równowadze Hardy-Weinberga. Oblicz oczekiwane liczby: Oczekiwane AA = p² × N, Oczekiwane Aa = 2pq × N, Oczekiwane aa = q² × N. Następnie oblicz χ² = Σ[(Obserwowane - Oczekiwane)² / Oczekiwane]. Jeśli χ² ≤ wartość krytyczna (zazwyczaj 3,84 dla p=0,05), populacja jest w równowadze. Jeśli χ² > wartość krytyczna, może zachodzić ewolucja."
+            },
+            {
+              "question": "Co to znaczy, gdy populacja NIE jest w równowadze Hardy-Weinberga?",
+              "answer": "Jeśli populacja odbiega od równowagi Hardy-Weinberga (test chi-kwadrat pokazuje istotną różnicę), oznacza to, że działa jedna lub więcej sił ewolucyjnych: dobór naturalny (niektóre genotypy mają wyższą dostosowanie), mutacja (wprowadzane są nowe allele), migracja (przepływ genów z innych populacji), dryf genetyczny (losowe zmiany w małych populacjach) lub nielosowe kojarzenie się (dobór assortatywny, chów wsobny)."
+            },
+            {
+              "question": "Czy mogę używać tego kalkulatora do poradnictwa genetycznego?",
+              "answer": "Tak, ten kalkulator jest przydatny do zrozumienia częstości nosicieli w populacjach. Jednak w przypadku rzeczywistego poradnictwa genetycznego zawsze konsultuj się z certyfikowanym doradcą genetycznym lub genetykiem medycznym. Kalkulator dostarcza szacunków edukacyjnych opartych na założeniach Hardy-Weinberga, ale rzeczywiste populacje często odbiegają od tych założeń, a indywidualne historie rodzinne są kluczowe dla dokładnej oceny ryzyka."
+            },
+            {
+              "question": "Co jeśli znam tylko dane fenotypowe?",
+              "answer": "Jeśli znasz tylko całkowitą populację (N) i liczbę osobników recesywnych (aa), nadal możesz wszystko obliczyć. Użyj Metody B (Dane Fenotypowe): q = √(aa/N), następnie p = 1 - q. Stamtąd oblicz wszystkie częstości genotypów: p², 2pq i q². Kalkulator automatycznie obsługuje tę konwersję."
+            },
+            {
+              "question": "Dlaczego p + q zawsze równa się 1?",
+              "answer": "W systemie dwuallelowym każdy osobnik ma dwa allele (jeden od każdego rodzica). Częstość allelu dominującego (p) plus częstość allelu recesywnego (q) musi równać się 1 (lub 100%), ponieważ są to jedyne dwa obecne allele. To jest podstawowa zasada genetyki populacyjnej."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane Kalkulatory",
+          "dli": "Kalkulator DLI",
+          "dliDesc": "Oblicz dzienny integr światła dla optymalnego wzrostu roślin",
+          "vpd": "Kalkulator VPD",
+          "vpdDesc": "Oblicz deficyt ciśnienia pary dla transpiracji roślin",
+          "c1v1": "Kalkulator Rozcieńczeń C1V1",
+          "c1v1Desc": "Oblicz objętości rozcieńczeń i stężenia dla roztworów"
+        }
+      }
+    },
     "italicText": {
       "title": "Generator Tekstu Kursywą",
       "description": "Generuj tekst kursywą natychmiast z wieloma stylami Unicode: kursywa serif, skrypt kursywy i kursywa sans-serif. Idealny do mediów społecznościowych, projektowania i kreatywnego pisania.",

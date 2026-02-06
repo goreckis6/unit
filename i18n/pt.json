@@ -6027,6 +6027,104 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Calculadora Hardy-Weinberg - Calculadora de Frequência Alélica",
+      "description": "Calcule frequências de equilíbrio Hardy-Weinberg. Calculadora de genética profissional com contagens de genótipos, dados fenotípicos, frequências alélicas, teste qui-quadrado e soluções passo a passo para estudantes de biologia.",
+      "inputMethod": "Método de Entrada",
+      "methodGenotype": "Contagens de Genótipos",
+      "methodPhenotype": "Dados Fenotípicos",
+      "methodAllele": "Frequências Alélicas",
+      "aaCount": "Contagem Homozigoto Dominante",
+      "aaHeterozygous": "Contagem Heterozigoto",
+      "aaRecessive": "Contagem Homozigoto Recessivo",
+      "totalPopulation": "População Total",
+      "recessiveIndividuals": "Indivíduos Recessivos",
+      "frequencyP": "Frequência de p",
+      "frequencyQ": "Frequência de q",
+      "pAutoCalculate": "q será calculado automaticamente como (1 - p) se deixado em branco",
+      "advancedOptions": "Opções Avançadas",
+      "performChiSquare": "Executar Teste Qui-Quadrado",
+      "criticalValue": "Valor Crítico",
+      "showMathSteps": "Mostrar Passos Matemáticos",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "enterValue": "Insira seus dados para calcular frequências Hardy-Weinberg",
+      "clickCalculate": "Clique em Calcular para ver resultados Hardy-Weinberg",
+      "hwVariables": "Variáveis de Hardy-Weinberg",
+      "genotypeCounts": "Contagens de Genótipos",
+      "chiSquareTest": "Teste Qui-Quadrado",
+      "chiSquareValue": "Valor Qui-Quadrado (χ²)",
+      "inEquilibrium": "A população está em equilíbrio (p > 0,05)",
+      "notInEquilibrium": "A população NÃO está em equilíbrio (p ≤ 0,05) - A evolução pode estar ocorrendo",
+      "calculationSteps": "Passos de Cálculo",
+      "step1": "Passo 1",
+      "step2": "Passo 2",
+      "step3": "Passo 3",
+      "step4": "Passo 4",
+      "step5": "Passo 5",
+      "step6": "Passo 6",
+      "seo": {
+        "title": "Calculadora Hardy-Weinberg: Calculadora de Frequência Alélica e de Portadores",
+        "description": "Calculadora de equilíbrio Hardy-Weinberg gratuita com soluções passo a passo. Calcule frequências alélicas (p, q), frequências de genótipos (p², 2pq, q²) e execute testes qui-quadrado. Perfeito para estudantes de biologia e lições de genética.",
+        "keywords": "calculadora hardy weinberg, calculadora frequência alélica, calculadora frequência portadores, equilíbrio hardy weinberg, calculadora p q, calculadora frequência genótipo, qui quadrado hardy weinberg, hardy weinberg com passos, calculadora genética, calculadora biologia",
+        "content": {
+          "heading": "Como Usar a Calculadora Hardy-Weinberg",
+          "paragraph1": "A Calculadora Hardy-Weinberg é uma ferramenta essencial para estudantes de biologia que estudam genética de populações. O princípio de Hardy-Weinberg descreve uma população teórica em equilíbrio genético, onde as frequências alélicas e genotípicas permanecem constantes de geração em geração. Esta calculadora ajuda você a resolver problemas de Hardy-Weinberg usando três métodos de entrada diferentes: contagens de genótipos (AA, Aa, aa), dados fenotípicos (população total e indivíduos recessivos) ou frequências alélicas conhecidas (p e q).",
+          "paragraph2": "As equações de Hardy-Weinberg são fundamentais para entender a genética de populações: p + q = 1 (onde p é a frequência do alelo dominante e q é a frequência do alelo recessivo) e p² + 2pq + q² = 1 (onde p² é a frequência de indivíduos homozigotos dominantes, 2pq é a frequência de portadores heterozigotos e q² é a frequência de indivíduos homozigotos recessivos). Essas equações permitem calcular qualquer valor ausente quando você conhece os outros.",
+          "paragraph3": "Nossa calculadora inclui recursos avançados que a distinguem de ferramentas básicas. A opção de teste qui-quadrado permite determinar se uma população está realmente em equilíbrio Hardy-Weinberg ou se a evolução (seleção, mutação, migração, deriva genética) está ocorrendo. Insira seu valor crítico (tipicamente 3,84 para p=0,05 com 1 grau de liberdade), e a calculadora comparará suas frequências de genótipos observadas com as frequências esperadas e dirá se a população se desvia significativamente do equilíbrio.",
+          "paragraph4": "A função de passos matemáticos mostra exatamente como cada cálculo é realizado, tornando esta calculadora perfeita para lições de casa e preparação para exames. Seja você calculando frequências de portadores para aconselhamento genético, determinando se uma população está evoluindo ou simplesmente resolvendo problemas práticos de Hardy-Weinberg, esta ferramenta fornece resultados claros e precisos com explicações educacionais.",
+          "exampleHeading": "Exemplo de Cálculo",
+          "exampleText": "Exemplo: Em uma população de 400 indivíduos, 100 mostram o fenótipo recessivo (aa). Para encontrar as frequências alélicas: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Então p = 1 - q = 1 - 0,5 = 0,5. Frequências de genótipos: p² = 0,25 (25% AA), 2pq = 0,5 (50% portadores Aa), q² = 0,25 (25% aa). O teste qui-quadrado compara frequências observadas e esperadas para determinar se a população está em equilíbrio."
+        },
+        "faq": {
+          "heading": "Perguntas Frequentes",
+          "items": [
+            {
+              "question": "O que é o princípio de Hardy-Weinberg?",
+              "answer": "O princípio de Hardy-Weinberg afirma que as frequências alélicas e genotípicas em uma população permanecem constantes de geração em geração se certas condições forem atendidas: sem mutação, sem migração, grande tamanho de população, acasalamento aleatório e sem seleção natural. Fornece um modelo de referência para entender como a evolução afeta as populações."
+            },
+            {
+              "question": "Como calcular frequências alélicas a partir de contagens de genótipos?",
+              "answer": "Para calcular frequências alélicas a partir de contagens de genótipos: 1) Encontre a população total N = AA + Aa + aa, 2) Calcule q = √(aa/N) onde aa é o número de indivíduos homozigotos recessivos, 3) Calcule p = 1 - q. A frequência do alelo dominante (p) mais a frequência do alelo recessivo (q) sempre é igual a 1."
+            },
+            {
+              "question": "O que é frequência de portadores (2pq)?",
+              "answer": "A frequência de portadores (2pq) representa a proporção de indivíduos heterozigotos que carregam uma cópia de um alelo recessivo mas não mostram o fenótipo recessivo. Isso é crucial no aconselhamento genético - por exemplo, se q² = 0,0001 (1 em 10.000 tem a doença), então 2pq ≈ 0,02 (cerca de 2% são portadores). A frequência de portadores é sempre maior que a frequência da doença para distúrbios recessivos raros."
+            },
+            {
+              "question": "Como usar o teste qui-quadrado em cálculos de Hardy-Weinberg?",
+              "answer": "O teste qui-quadrado compara frequências de genótipos observadas com frequências esperadas sob o equilíbrio Hardy-Weinberg. Calcule as contagens esperadas: AA esperado = p² × N, Aa esperado = 2pq × N, aa esperado = q² × N. Então calcule χ² = Σ[(Observado - Esperado)² / Esperado]. Se χ² ≤ valor crítico (geralmente 3,84 para p=0,05), a população está em equilíbrio. Se χ² > valor crítico, a evolução pode estar ocorrendo."
+            },
+            {
+              "question": "O que significa se uma população NÃO está em equilíbrio Hardy-Weinberg?",
+              "answer": "Se uma população se desvia do equilíbrio Hardy-Weinberg (o teste qui-quadrado mostra diferença significativa), significa que uma ou mais forças evolutivas estão agindo: seleção natural (certos genótipos têm maior aptidão), mutação (novos alelos são introduzidos), migração (fluxo gênico de outras populações), deriva genética (mudanças aleatórias em populações pequenas) ou acasalamento não aleatório (acasalamento seletivo, endogamia)."
+            },
+            {
+              "question": "Posso usar esta calculadora para aconselhamento genético?",
+              "answer": "Sim, esta calculadora é útil para entender frequências de portadores em populações. No entanto, para aconselhamento genético real, sempre consulte um conselheiro genético certificado ou geneticista médico. A calculadora fornece estimativas educacionais baseadas em suposições de Hardy-Weinberg, mas populações reais frequentemente se desviam dessas suposições, e histórias familiares individuais são cruciais para avaliação precisa de risco."
+            },
+            {
+              "question": "E se eu conhecer apenas os dados fenotípicos?",
+              "answer": "Se você conhece apenas a população total (N) e o número de indivíduos recessivos (aa), ainda pode calcular tudo. Use o Método B (Dados Fenotípicos): q = √(aa/N), então p = 1 - q. A partir daí, calcule todas as frequências de genótipos: p², 2pq e q². A calculadora lida automaticamente com essa conversão."
+            },
+            {
+              "question": "Por que p + q sempre é igual a 1?",
+              "answer": "Em um sistema de dois alelos, cada indivíduo tem dois alelos (um de cada pai). A frequência do alelo dominante (p) mais a frequência do alelo recessivo (q) deve ser igual a 1 (ou 100%) porque estes são os únicos dois alelos presentes. Este é um princípio fundamental da genética de populações."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "dli": "Calculadora DLI",
+          "dliDesc": "Calcule a integral de luz diária para crescimento ideal de plantas",
+          "vpd": "Calculadora VPD",
+          "vpdDesc": "Calcule o déficit de pressão de vapor para transpiração de plantas",
+          "c1v1": "Calculadora de Diluição C1V1",
+          "c1v1Desc": "Calcule volumes de diluição e concentrações para soluções"
+        }
+      }
+    },
     "italicText": {
       "title": "Gerador de Texto em Itálico",
       "description": "Gere texto em itálico instantaneamente com múltiplos estilos Unicode: itálico serif, script cursivo e itálico sans-serif. Perfeito para redes sociais, design e escrita criativa.",

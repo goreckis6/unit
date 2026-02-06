@@ -6027,6 +6027,202 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Calculateur Hardy-Weinberg - Calculateur de Fréquence Allélique",
+      "description": "Calculez les fréquences d'équilibre de Hardy-Weinberg. Calculateur génétique professionnel avec comptages de génotypes, données phénotypiques, fréquences alléliques, test du chi-carré et solutions étape par étape pour les étudiants en biologie.",
+      "inputMethod": "Méthode de saisie",
+      "methodGenotype": "Comptages de Génotypes",
+      "methodPhenotype": "Données Phénotypiques",
+      "methodAllele": "Fréquences Alléliques",
+      "aaCount": "Nombre Homozygote Dominant",
+      "aaHeterozygous": "Nombre Hétérozygote",
+      "aaRecessive": "Nombre Homozygote Récessif",
+      "totalPopulation": "Population Totale",
+      "recessiveIndividuals": "Individus Récessifs",
+      "frequencyP": "Fréquence de p",
+      "frequencyQ": "Fréquence de q",
+      "pAutoCalculate": "q sera calculé automatiquement comme (1 - p) si laissé vide",
+      "advancedOptions": "Options Avancées",
+      "performChiSquare": "Effectuer le Test du Chi-Carré",
+      "criticalValue": "Valeur Critique",
+      "showMathSteps": "Afficher les Étapes Mathématiques",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "enterValue": "Entrez vos données pour calculer les fréquences de Hardy-Weinberg",
+      "clickCalculate": "Cliquez sur Calculer pour voir les résultats de Hardy-Weinberg",
+      "hwVariables": "Variables de Hardy-Weinberg",
+      "genotypeCounts": "Comptages de Génotypes",
+      "chiSquareTest": "Test du Chi-Carré",
+      "chiSquareValue": "Valeur du Chi-Carré (χ²)",
+      "inEquilibrium": "La population est en équilibre (p > 0,05)",
+      "notInEquilibrium": "La population N'EST PAS en équilibre (p ≤ 0,05) - L'évolution peut se produire",
+      "calculationSteps": "Étapes de Calcul",
+      "step1": "Étape 1",
+      "step2": "Étape 2",
+      "step3": "Étape 3",
+      "step4": "Étape 4",
+      "step5": "Étape 5",
+      "step6": "Étape 6",
+      "seo": {
+        "title": "Calculateur Hardy-Weinberg : Calculateur de Fréquence Allélique et de Fréquence des Porteurs",
+        "description": "Calculateur gratuit d'équilibre de Hardy-Weinberg avec solutions étape par étape. Calculez les fréquences alléliques (p, q), les fréquences génotypiques (p², 2pq, q²) et effectuez des tests du chi-carré. Parfait pour les étudiants en biologie et les devoirs de génétique.",
+        "keywords": "calculateur hardy weinberg, calculateur fréquence allèles, calculateur fréquence porteurs, équilibre hardy weinberg, calculateur p q, calculateur fréquence génotypes, chi carré hardy weinberg, hardy weinberg avec étapes, calculateur génétique, calculateur biologie",
+        "content": {
+          "heading": "Comment utiliser le Calculateur Hardy-Weinberg",
+          "paragraph1": "Le Calculateur Hardy-Weinberg est un outil essentiel pour les étudiants en biologie qui étudient la génétique des populations. Le principe de Hardy-Weinberg décrit une population théorique en équilibre génétique, où les fréquences alléliques et génotypiques restent constantes de génération en génération. Ce calculateur vous aide à résoudre les problèmes de Hardy-Weinberg en utilisant trois méthodes de saisie différentes : comptages de génotypes (AA, Aa, aa), données phénotypiques (population totale et individus récessifs) ou fréquences alléliques connues (p et q).",
+          "paragraph2": "Les équations de Hardy-Weinberg sont fondamentales pour comprendre la génétique des populations : p + q = 1 (où p est la fréquence de l'allèle dominant et q est la fréquence de l'allèle récessif) et p² + 2pq + q² = 1 (où p² est la fréquence des individus homozygotes dominants, 2pq est la fréquence des porteurs hétérozygotes et q² est la fréquence des individus homozygotes récessifs). Ces équations vous permettent de calculer toute valeur manquante lorsque vous connaissez les autres.",
+          "paragraph3": "Notre calculateur comprend des fonctionnalités avancées qui le distinguent des outils de base. L'option de test du chi-carré vous permet de déterminer si une population est réellement en équilibre de Hardy-Weinberg ou si l'évolution (sélection, mutation, migration, dérive génétique) se produit. Entrez votre valeur critique (généralement 3,84 pour p=0,05 avec 1 degré de liberté), et le calculateur comparera vos fréquences génotypiques observées aux fréquences attendues et vous dira si la population s'écarte significativement de l'équilibre.",
+          "paragraph4": "La fonction mathématique étape par étape vous montre exactement comment chaque calcul est effectué, ce qui rend ce calculateur parfait pour les devoirs et la préparation aux examens. Que vous calculiez les fréquences des porteurs pour le conseil génétique, déterminiez si une population évolue, ou résolviez simplement des problèmes pratiques de Hardy-Weinberg, cet outil fournit des résultats clairs et précis avec des explications éducatives.",
+          "exampleHeading": "Exemple de Calcul",
+          "exampleText": "Exemple : Dans une population de 400 individus, 100 présentent le phénotype récessif (aa). Pour trouver les fréquences alléliques : q = √(aa/N) = √(100/400) = √0,25 = 0,5. Ensuite p = 1 - q = 1 - 0,5 = 0,5. Fréquences génotypiques : p² = 0,25 (25% AA), 2pq = 0,5 (50% porteurs Aa), q² = 0,25 (25% aa). Le test du chi-carré compare les fréquences observées vs. attendues pour déterminer si la population est en équilibre."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Qu'est-ce que le principe de Hardy-Weinberg ?",
+              "answer": "Le principe de Hardy-Weinberg énonce que les fréquences alléliques et génotypiques dans une population restent constantes de génération en génération si certaines conditions sont remplies : pas de mutation, pas de migration, grande taille de population, accouplement aléatoire et pas de sélection naturelle. Il fournit un modèle de référence pour comprendre comment l'évolution affecte les populations."
+            },
+            {
+              "question": "Comment calculer les fréquences alléliques à partir des comptages de génotypes ?",
+              "answer": "Pour calculer les fréquences alléliques à partir des comptages de génotypes : 1) Trouvez la population totale N = AA + Aa + aa, 2) Calculez q = √(aa/N) où aa est le nombre d'individus homozygotes récessifs, 3) Calculez p = 1 - q. La fréquence de l'allèle dominant (p) plus la fréquence de l'allèle récessif (q) est toujours égale à 1."
+            },
+            {
+              "question": "Qu'est-ce que la fréquence des porteurs (2pq) ?",
+              "answer": "La fréquence des porteurs (2pq) représente la proportion d'individus hétérozygotes qui portent une copie d'un allèle récessif mais ne présentent pas le phénotype récessif. C'est crucial dans le conseil génétique - par exemple, si q² = 0,0001 (1 sur 10 000 ont la maladie), alors 2pq ≈ 0,02 (environ 2% sont porteurs). La fréquence des porteurs est toujours plus élevée que la fréquence de la maladie pour les troubles récessifs rares."
+            },
+            {
+              "question": "Comment utiliser le test du chi-carré dans les calculs de Hardy-Weinberg ?",
+              "answer": "Le test du chi-carré compare les fréquences génotypiques observées aux fréquences attendues sous équilibre de Hardy-Weinberg. Calculez les comptages attendus : AA Attendu = p² × N, Aa Attendu = 2pq × N, aa Attendu = q² × N. Ensuite, calculez χ² = Σ[(Observé - Attendu)² / Attendu]. Si χ² ≤ valeur critique (généralement 3,84 pour p=0,05), la population est en équilibre. Si χ² > valeur critique, l'évolution peut se produire."
+            },
+            {
+              "question": "Que signifie-t-il si une population N'EST PAS en équilibre de Hardy-Weinberg ?",
+              "answer": "Si une population s'écarte de l'équilibre de Hardy-Weinberg (le test du chi-carré montre une différence significative), cela signifie qu'une ou plusieurs forces évolutives agissent : sélection naturelle (certains génotypes ont une meilleure fitness), mutation (nouveaux allèles introduits), migration (flux génique d'autres populations), dérive génétique (changements aléatoires dans les petites populations) ou accouplement non aléatoire (accouplement assortatif, consanguinité)."
+            },
+            {
+              "question": "Puis-je utiliser ce calculateur pour le conseil génétique ?",
+              "answer": "Oui, ce calculateur est utile pour comprendre les fréquences des porteurs dans les populations. Cependant, pour le conseil génétique réel, consultez toujours un conseiller génétique certifié ou un généticien médical. Le calculateur fournit des estimations éducatives basées sur les hypothèses de Hardy-Weinberg, mais les populations réelles s'écartent souvent de ces hypothèses, et les antécédents familiaux individuels sont cruciaux pour une évaluation précise des risques."
+            },
+            {
+              "question": "Que faire si je ne connais que les données phénotypiques ?",
+              "answer": "Si vous ne connaissez que la population totale (N) et le nombre d'individus récessifs (aa), vous pouvez toujours tout calculer. Utilisez la Méthode B (Données Phénotypiques) : q = √(aa/N), puis p = 1 - q. À partir de là, calculez toutes les fréquences génotypiques : p², 2pq et q². Le calculateur gère automatiquement cette conversion."
+            },
+            {
+              "question": "Pourquoi p + q est toujours égal à 1 ?",
+              "answer": "Dans un système à deux allèles, chaque individu a deux allèles (un de chaque parent). La fréquence de l'allèle dominant (p) plus la fréquence de l'allèle récessif (q) doit être égale à 1 (ou 100%) car ce sont les deux seuls allèles présents. C'est un principe fondamental de la génétique des populations."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Associés",
+          "dli": "Calculateur DLI",
+          "dliDesc": "Calculez l'intégrale lumineuse quotidienne pour une croissance optimale des plantes",
+          "vpd": "Calculateur VPD",
+          "vpdDesc": "Calculez le déficit de pression de vapeur pour la transpiration des plantes",
+          "c1v1": "Calculateur de Dilution C1V1",
+          "c1v1Desc": "Calculez les volumes de dilution et les concentrations pour les solutions"
+        }
+      }
+    },
+    "hardyWeinberg": {
+      "title": "Calculateur Hardy-Weinberg - Calculateur de Fréquence Allélique",
+      "description": "Calculez les fréquences d'équilibre de Hardy-Weinberg. Calculateur de génétique professionnel avec comptages de génotypes, données phénotypiques, fréquences alléliques, test du chi-carré et solutions étape par étape pour les étudiants en biologie.",
+      "inputMethod": "Méthode de Saisie",
+      "methodGenotype": "Comptages de Génotypes",
+      "methodPhenotype": "Données Phénotypiques",
+      "methodAllele": "Fréquences Alléliques",
+      "aaCount": "Nombre d'Homozygotes Dominants",
+      "aaHeterozygous": "Nombre d'Hétérozygotes",
+      "aaRecessive": "Nombre d'Homozygotes Récessifs",
+      "totalPopulation": "Population Totale",
+      "recessiveIndividuals": "Individus Récessifs",
+      "frequencyP": "Fréquence de p",
+      "frequencyQ": "Fréquence de q",
+      "pAutoCalculate": "q sera calculé automatiquement comme (1 - p) si laissé vide",
+      "advancedOptions": "Options Avancées",
+      "performChiSquare": "Effectuer un Test du Chi-Carré",
+      "criticalValue": "Valeur Critique",
+      "showMathSteps": "Afficher les Étapes Mathématiques",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "enterValue": "Entrez vos données pour calculer les fréquences de Hardy-Weinberg",
+      "clickCalculate": "Cliquez sur Calculer pour voir les résultats de Hardy-Weinberg",
+      "hwVariables": "Variables de Hardy-Weinberg",
+      "genotypeCounts": "Comptages de Génotypes",
+      "chiSquareTest": "Test du Chi-Carré",
+      "chiSquareValue": "Valeur du Chi-Carré (χ²)",
+      "inEquilibrium": "La population est en équilibre (p > 0,05)",
+      "notInEquilibrium": "La population n'est PAS en équilibre (p ≤ 0,05) - L'évolution peut se produire",
+      "calculationSteps": "Étapes de Calcul",
+      "step1": "Étape 1",
+      "step2": "Étape 2",
+      "step3": "Étape 3",
+      "step4": "Étape 4",
+      "step5": "Étape 5",
+      "step6": "Étape 6",
+      "seo": {
+        "title": "Calculateur Hardy-Weinberg : Calculateur de Fréquence Allélique et de Porteurs",
+        "description": "Calculateur d'équilibre Hardy-Weinberg gratuit avec solutions étape par étape. Calculez les fréquences alléliques (p, q), les fréquences de génotypes (p², 2pq, q²) et effectuez des tests du chi-carré. Parfait pour les étudiants en biologie et les devoirs de génétique.",
+        "keywords": "calculateur hardy weinberg, calculateur fréquence allélique, calculateur fréquence porteurs, équilibre hardy weinberg, calculateur p q, calculateur fréquence génotype, chi carré hardy weinberg, hardy weinberg avec étapes, calculateur génétique, calculateur biologie",
+        "content": {
+          "heading": "Comment Utiliser le Calculateur Hardy-Weinberg",
+          "paragraph1": "Le calculateur Hardy-Weinberg est un outil essentiel pour les étudiants en biologie étudiant la génétique des populations. Le principe de Hardy-Weinberg décrit une population théorique en équilibre génétique, où les fréquences alléliques et génotypiques restent constantes de génération en génération. Ce calculateur vous aide à résoudre les problèmes de Hardy-Weinberg en utilisant trois méthodes de saisie différentes : comptages de génotypes (AA, Aa, aa), données phénotypiques (population totale et individus récessifs) ou fréquences alléliques connues (p et q).",
+          "paragraph2": "Les équations de Hardy-Weinberg sont fondamentales pour comprendre la génétique des populations : p + q = 1 (où p est la fréquence de l'allèle dominant et q est la fréquence de l'allèle récessif) et p² + 2pq + q² = 1 (où p² est la fréquence des individus homozygotes dominants, 2pq est la fréquence des porteurs hétérozygotes, et q² est la fréquence des individus homozygotes récessifs). Ces équations vous permettent de calculer n'importe quelle valeur manquante lorsque vous connaissez les autres.",
+          "paragraph3": "Notre calculateur inclut des fonctionnalités avancées qui le distinguent des outils de base. L'option de test du chi-carré vous permet de déterminer si une population est réellement en équilibre de Hardy-Weinberg ou si l'évolution (sélection, mutation, migration, dérive génétique) se produit. Entrez votre valeur critique (généralement 3,84 pour p=0,05 avec 1 degré de liberté), et le calculateur comparera vos fréquences de génotypes observées aux fréquences attendues et vous dira si la population s'écarte significativement de l'équilibre.",
+          "paragraph4": "La fonction étapes mathématiques vous montre exactement comment chaque calcul est effectué, ce qui rend ce calculateur parfait pour les devoirs et la préparation aux examens. Que vous calculiez des fréquences de porteurs pour le conseil génétique, déterminiez si une population évolue ou résolviez simplement des problèmes pratiques de Hardy-Weinberg, cet outil fournit des résultats clairs et précis avec des explications pédagogiques.",
+          "exampleHeading": "Exemple de Calcul",
+          "exampleText": "Exemple : Dans une population de 400 individus, 100 présentent le phénotype récessif (aa). Pour trouver les fréquences alléliques : q = √(aa/N) = √(100/400) = √0,25 = 0,5. Puis p = 1 - q = 1 - 0,5 = 0,5. Fréquences de génotypes : p² = 0,25 (25% AA), 2pq = 0,5 (50% porteurs Aa), q² = 0,25 (25% aa). Le test du chi-carré compare les fréquences observées et attendues pour déterminer si la population est en équilibre."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Qu'est-ce que le principe de Hardy-Weinberg ?",
+              "answer": "Le principe de Hardy-Weinberg stipule que les fréquences alléliques et génotypiques dans une population restent constantes de génération en génération si certaines conditions sont remplies : pas de mutation, pas de migration, grande taille de population, accouplement aléatoire et pas de sélection naturelle. Il fournit un modèle de référence pour comprendre comment l'évolution affecte les populations."
+            },
+            {
+              "question": "Comment calculer les fréquences alléliques à partir des comptages de génotypes ?",
+              "answer": "Pour calculer les fréquences alléliques à partir des comptages de génotypes : 1) Trouvez la population totale N = AA + Aa + aa, 2) Calculez q = √(aa/N) où aa est le nombre d'individus homozygotes récessifs, 3) Calculez p = 1 - q. La fréquence de l'allèle dominant (p) plus la fréquence de l'allèle récessif (q) égale toujours 1."
+            },
+            {
+              "question": "Qu'est-ce que la fréquence des porteurs (2pq) ?",
+              "answer": "La fréquence des porteurs (2pq) représente la proportion d'individus hétérozygotes qui portent une copie d'un allèle récessif mais ne présentent pas le phénotype récessif. Ceci est crucial dans le conseil génétique - par exemple, si q² = 0,0001 (1 sur 10 000 a la maladie), alors 2pq ≈ 0,02 (environ 2% sont des porteurs). La fréquence des porteurs est toujours plus élevée que la fréquence de la maladie pour les troubles récessifs rares."
+            },
+            {
+              "question": "Comment utiliser le test du chi-carré dans les calculs de Hardy-Weinberg ?",
+              "answer": "Le test du chi-carré compare les fréquences de génotypes observées aux fréquences attendues sous l'équilibre de Hardy-Weinberg. Calculez les comptages attendus : AA attendu = p² × N, Aa attendu = 2pq × N, aa attendu = q² × N. Ensuite, calculez χ² = Σ[(Observé - Attendu)² / Attendu]. Si χ² ≤ valeur critique (généralement 3,84 pour p=0,05), la population est en équilibre. Si χ² > valeur critique, l'évolution peut se produire."
+            },
+            {
+              "question": "Que signifie-t-il si une population n'est PAS en équilibre de Hardy-Weinberg ?",
+              "answer": "Si une population s'écarte de l'équilibre de Hardy-Weinberg (le test du chi-carré montre une différence significative), cela signifie qu'une ou plusieurs forces évolutives agissent : sélection naturelle (certains génotypes ont une aptitude plus élevée), mutation (de nouveaux allèles sont introduits), migration (flux de gènes d'autres populations), dérive génétique (changements aléatoires dans les petites populations) ou accouplement non aléatoire (appariement assortatif, consanguinité)."
+            },
+            {
+              "question": "Puis-je utiliser ce calculateur pour le conseil génétique ?",
+              "answer": "Oui, ce calculateur est utile pour comprendre les fréquences des porteurs dans les populations. Cependant, pour un véritable conseil génétique, consultez toujours un conseiller génétique certifié ou un généticien médical. Le calculateur fournit des estimations éducatives basées sur les hypothèses de Hardy-Weinberg, mais les populations réelles s'écartent souvent de ces hypothèses, et les antécédents familiaux individuels sont cruciaux pour une évaluation précise des risques."
+            },
+            {
+              "question": "Que faire si je ne connais que les données phénotypiques ?",
+              "answer": "Si vous ne connaissez que la population totale (N) et le nombre d'individus récessifs (aa), vous pouvez toujours tout calculer. Utilisez la Méthode B (Données Phénotypiques) : q = √(aa/N), puis p = 1 - q. De là, calculez toutes les fréquences de génotypes : p², 2pq et q². Le calculateur gère automatiquement cette conversion."
+            },
+            {
+              "question": "Pourquoi p + q égale-t-il toujours 1 ?",
+              "answer": "Dans un système à deux allèles, chaque individu a deux allèles (un de chaque parent). La fréquence de l'allèle dominant (p) plus la fréquence de l'allèle récessif (q) doit égaler 1 (ou 100%) car ce sont les deux seuls allèles présents. Ceci est un principe fondamental de la génétique des populations."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs Associés",
+          "dli": "Calculateur DLI",
+          "dliDesc": "Calculez l'intégrale lumineuse quotidienne pour une croissance optimale des plantes",
+          "vpd": "Calculateur VPD",
+          "vpdDesc": "Calculez le déficit de pression de vapeur pour la transpiration des plantes",
+          "c1v1": "Calculateur de Dilution C1V1",
+          "c1v1Desc": "Calculez les volumes de dilution et les concentrations pour les solutions"
+        }
+      }
+    },
     "italicText": {
       "title": "Générateur de Texte en Italique",
       "description": "Générez du texte en italique instantanément avec plusieurs styles Unicode : italique serif, script cursif et italique sans-serif. Parfait pour les réseaux sociaux, le design et l'écriture créative.",

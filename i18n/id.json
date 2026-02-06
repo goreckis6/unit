@@ -5885,6 +5885,102 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Kalkulator Hardy-Weinberg - Kalkulator Frekuensi Alel",
+      "description": "Hitung frekuensi keseimbangan Hardy-Weinberg. Kalkulator genetika profesional dengan perhitungan genotipe, data fenotipe, frekuensi alel, uji chi-square, dan solusi langkah demi langkah untuk mahasiswa biologi.",
+      "inputMethod": "Metode Input",
+      "methodGenotype": "Perhitungan Genotipe",
+      "methodPhenotype": "Data Fenotipe",
+      "methodAllele": "Frekuensi Alel",
+      "aaCount": "Jumlah Homozigot Dominan",
+      "aaHeterozygous": "Jumlah Heterozigot",
+      "aaRecessive": "Jumlah Homozigot Resesif",
+      "totalPopulation": "Total Populasi",
+      "recessiveIndividuals": "Individu Resesif",
+      "frequencyP": "Frekuensi p",
+      "frequencyQ": "Frekuensi q",
+      "pAutoCalculate": "q akan dihitung otomatis sebagai (1 - p) jika dibiarkan kosong",
+      "advancedOptions": "Opsi Lanjutan",
+      "performChiSquare": "Lakukan Uji Chi-Square",
+      "criticalValue": "Nilai Kritis",
+      "showMathSteps": "Tampilkan Langkah Matematika",
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "enterValue": "Masukkan data Anda untuk menghitung frekuensi Hardy-Weinberg",
+      "clickCalculate": "Klik Hitung untuk melihat hasil Hardy-Weinberg",
+      "hwVariables": "Variabel Hardy-Weinberg",
+      "genotypeCounts": "Perhitungan Genotipe",
+      "chiSquareTest": "Uji Chi-Square",
+      "chiSquareValue": "Nilai Chi-Square (χ²)",
+      "inEquilibrium": "Populasi dalam keseimbangan (p > 0,05)",
+      "notInEquilibrium": "Populasi TIDAK dalam keseimbangan (p ≤ 0,05) - Evolusi mungkin terjadi",
+      "calculationSteps": "Langkah Perhitungan",
+      "step1": "Langkah 1",
+      "step2": "Langkah 2",
+      "step3": "Langkah 3",
+      "step4": "Langkah 4",
+      "step5": "Langkah 5",
+      "step6": "Langkah 6",
+      "seo": {
+        "title": "Kalkulator Hardy-Weinberg: Kalkulator Frekuensi Alel & Pembawa",
+        "description": "Kalkulator keseimbangan Hardy-Weinberg gratis dengan solusi langkah demi langkah. Hitung frekuensi alel (p, q), frekuensi genotipe (p², 2pq, q²) dan lakukan uji chi-square. Sempurna untuk mahasiswa biologi dan tugas genetika.",
+        "keywords": "kalkulator hardy weinberg, kalkulator frekuensi alel, kalkulator frekuensi pembawa, keseimbangan hardy weinberg, kalkulator p q, kalkulator frekuensi genotipe, chi square hardy weinberg, hardy weinberg dengan langkah, kalkulator genetika, kalkulator biologi",
+        "content": {
+          "heading": "Cara Menggunakan Kalkulator Hardy-Weinberg",
+          "paragraph1": "Kalkulator Hardy-Weinberg adalah alat penting bagi mahasiswa biologi yang mempelajari genetika populasi. Prinsip Hardy-Weinberg menggambarkan populasi teoretis dalam keseimbangan genetik, di mana frekuensi alel dan genotipe tetap konstan dari generasi ke generasi. Kalkulator ini membantu Anda memecahkan masalah Hardy-Weinberg menggunakan tiga metode input yang berbeda: perhitungan genotipe (AA, Aa, aa), data fenotipe (total populasi dan individu resesif) atau frekuensi alel yang diketahui (p dan q).",
+          "paragraph2": "Persamaan Hardy-Weinberg adalah dasar untuk memahami genetika populasi: p + q = 1 (di mana p adalah frekuensi alel dominan dan q adalah frekuensi alel resesif) dan p² + 2pq + q² = 1 (di mana p² adalah frekuensi individu homozigot dominan, 2pq adalah frekuensi pembawa heterozigot, dan q² adalah frekuensi individu homozigot resesif). Persamaan ini memungkinkan Anda menghitung nilai yang hilang ketika Anda mengetahui yang lain.",
+          "paragraph3": "Kalkulator kami mencakup fitur lanjutan yang membedakannya dari alat dasar. Opsi uji chi-square memungkinkan Anda menentukan apakah populasi benar-benar dalam keseimbangan Hardy-Weinberg atau apakah evolusi (seleksi, mutasi, migrasi, drift genetik) terjadi. Masukkan nilai kritis Anda (biasanya 3,84 untuk p=0,05 dengan 1 derajat kebebasan), dan kalkulator akan membandingkan frekuensi genotipe yang diamati dengan frekuensi yang diharapkan dan memberi tahu Anda apakah populasi menyimpang secara signifikan dari keseimbangan.",
+          "paragraph4": "Fitur langkah matematika menunjukkan kepada Anda dengan tepat bagaimana setiap perhitungan dilakukan, membuat kalkulator ini sempurna untuk pekerjaan rumah dan persiapan ujian. Baik Anda menghitung frekuensi pembawa untuk konseling genetik, menentukan apakah populasi berevolusi atau hanya memecahkan masalah latihan Hardy-Weinberg, alat ini memberikan hasil yang jelas dan akurat dengan penjelasan edukatif."
+        },
+        "faq": {
+          "heading": "Pertanyaan yang Sering Diajukan",
+          "items": [
+            {
+              "question": "Apa itu prinsip Hardy-Weinberg?",
+              "answer": "Prinsip Hardy-Weinberg menyatakan bahwa frekuensi alel dan genotipe dalam populasi tetap konstan dari generasi ke generasi jika kondisi tertentu terpenuhi: tidak ada mutasi, tidak ada migrasi, ukuran populasi besar, perkawinan acak, dan tidak ada seleksi alam. Ini memberikan model dasar untuk memahami bagaimana evolusi mempengaruhi populasi."
+            },
+            {
+              "question": "Bagaimana cara menghitung frekuensi alel dari perhitungan genotipe?",
+              "answer": "Untuk menghitung frekuensi alel dari perhitungan genotipe: 1) Temukan total populasi N = AA + Aa + aa, 2) Hitung q = √(aa/N) di mana aa adalah jumlah individu homozigot resesif, 3) Hitung p = 1 - q. Frekuensi alel dominan (p) ditambah frekuensi alel resesif (q) selalu sama dengan 1."
+            },
+            {
+              "question": "Apa itu frekuensi pembawa (2pq)?",
+              "answer": "Frekuensi pembawa (2pq) mewakili proporsi individu heterozigot yang membawa satu salinan alel resesif tetapi tidak menunjukkan fenotipe resesif. Ini sangat penting dalam konseling genetik - misalnya, jika q² = 0,0001 (1 dari 10.000 memiliki penyakit), maka 2pq ≈ 0,02 (sekitar 2% adalah pembawa). Frekuensi pembawa selalu lebih tinggi dari frekuensi penyakit untuk gangguan resesif langka."
+            },
+            {
+              "question": "Bagaimana cara menggunakan uji chi-square dalam perhitungan Hardy-Weinberg?",
+              "answer": "Uji chi-square membandingkan frekuensi genotipe yang diamati dengan frekuensi yang diharapkan di bawah keseimbangan Hardy-Weinberg. Hitung jumlah yang diharapkan: AA yang diharapkan = p² × N, Aa yang diharapkan = 2pq × N, aa yang diharapkan = q² × N. Kemudian hitung χ² = Σ[(Diamati - Diharapkan)² / Diharapkan]. Jika χ² ≤ nilai kritis (biasanya 3,84 untuk p=0,05), populasi dalam keseimbangan. Jika χ² > nilai kritis, evolusi mungkin terjadi."
+            },
+            {
+              "question": "Apa artinya jika populasi TIDAK dalam keseimbangan Hardy-Weinberg?",
+              "answer": "Jika populasi menyimpang dari keseimbangan Hardy-Weinberg (uji chi-square menunjukkan perbedaan signifikan), ini berarti satu atau lebih kekuatan evolusioner bekerja: seleksi alam (genotipe tertentu memiliki kebugaran lebih tinggi), mutasi (alel baru diperkenalkan), migrasi (aliran gen dari populasi lain), drift genetik (perubahan acak dalam populasi kecil) atau perkawinan tidak acak (perkawinan assortatif, inbreeding)."
+            },
+            {
+              "question": "Bisakah saya menggunakan kalkulator ini untuk konseling genetik?",
+              "answer": "Ya, kalkulator ini berguna untuk memahami frekuensi pembawa dalam populasi. Namun, untuk konseling genetik yang sebenarnya, selalu konsultasikan dengan konselor genetik bersertifikat atau ahli genetika medis. Kalkulator memberikan perkiraan edukatif berdasarkan asumsi Hardy-Weinberg, tetapi populasi nyata sering menyimpang dari asumsi ini, dan riwayat keluarga individu sangat penting untuk penilaian risiko yang akurat."
+            },
+            {
+              "question": "Bagaimana jika saya hanya tahu data fenotipe?",
+              "answer": "Jika Anda hanya tahu total populasi (N) dan jumlah individu resesif (aa), Anda masih dapat menghitung semuanya. Gunakan Metode B (Data Fenotipe): q = √(aa/N), kemudian p = 1 - q. Dari sana, hitung semua frekuensi genotipe: p², 2pq dan q². Kalkulator menangani konversi ini secara otomatis."
+            },
+            {
+              "question": "Mengapa p + q selalu sama dengan 1?",
+              "answer": "Dalam sistem dua alel, setiap individu memiliki dua alel (satu dari setiap orang tua). Frekuensi alel dominan (p) ditambah frekuensi alel resesif (q) harus sama dengan 1 (atau 100%) karena ini adalah satu-satunya dua alel yang ada. Ini adalah prinsip dasar genetika populasi."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Kalkulator Terkait",
+          "dli": "Kalkulator DLI",
+          "dliDesc": "Hitung integral cahaya harian untuk pertumbuhan tanaman optimal",
+          "vpd": "Kalkulator VPD",
+          "vpdDesc": "Hitung defisit tekanan uap untuk transpirasi tanaman",
+          "c1v1": "Kalkulator Pengenceran C1V1",
+          "c1v1Desc": "Hitung volume pengenceran dan konsentrasi untuk solusi"
+        }
+      }
+    },
     "italicText": {
       "title": "Generator Teks Miring",
       "description": "Buat teks miring secara instan dengan beberapa gaya Unicode: miring serif, skrip kursif dan miring sans-serif. Sempurna untuk media sosial, desain, dan penulisan kreatif.",

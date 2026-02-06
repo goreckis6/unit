@@ -5885,6 +5885,104 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Hardy-Weinbergova Kalkulačka - Kalkulačka Frekvencie Alel",
+      "description": "Vypočítajte frekvencie Hardy-Weinbergovej rovnováhy. Profesionálna genetická kalkulačka s počtami genotypov, fenotypovými dátami, frekvenciami alel, chi-kvadrát testom a riešeniami krok za krokom pre študentov biológie.",
+      "inputMethod": "Metóda Zadania",
+      "methodGenotype": "Počty Genotypov",
+      "methodPhenotype": "Fenotypové Dáta",
+      "methodAllele": "Frekvencie Alel",
+      "aaCount": "Počet Homozygotov Dominantných",
+      "aaHeterozygous": "Počet Heterozygotov",
+      "aaRecessive": "Počet Homozygotov Recesívnych",
+      "totalPopulation": "Celková Populácia",
+      "recessiveIndividuals": "Recesívne Jedince",
+      "frequencyP": "Frekvencia p",
+      "frequencyQ": "Frekvencia q",
+      "pAutoCalculate": "q bude automaticky vypočítané ako (1 - p), pokiaľ zostane prázdne",
+      "advancedOptions": "Pokročilé Možnosti",
+      "performChiSquare": "Vykonať Chi-Kvadrát Test",
+      "criticalValue": "Kritická Hodnota",
+      "showMathSteps": "Zobraziť Matematické Kroky",
+      "calculate": "Vypočítať",
+      "reset": "Resetovať",
+      "result": "Výsledok",
+      "enterValue": "Zadajte svoje údaje pre výpočet Hardy-Weinbergových frekvencií",
+      "clickCalculate": "Kliknite na Vypočítať pre zobrazenie Hardy-Weinbergových výsledkov",
+      "hwVariables": "Hardy-Weinbergove Premenné",
+      "genotypeCounts": "Počty Genotypov",
+      "chiSquareTest": "Chi-Kvadrát Test",
+      "chiSquareValue": "Hodnota Chi-Kvadrát (χ²)",
+      "inEquilibrium": "Populácia je v rovnováhe (p > 0,05)",
+      "notInEquilibrium": "Populácia NIE JE v rovnováhe (p ≤ 0,05) - Môže prebiehať evolúcia",
+      "calculationSteps": "Kroky Výpočtu",
+      "step1": "Krok 1",
+      "step2": "Krok 2",
+      "step3": "Krok 3",
+      "step4": "Krok 4",
+      "step5": "Krok 5",
+      "step6": "Krok 6",
+      "seo": {
+        "title": "Hardy-Weinbergova Kalkulačka: Kalkulačka Frekvencie Alel a Nosičov",
+        "description": "Bezplatná kalkulačka Hardy-Weinbergovej rovnováhy s riešeniami krok za krokom. Vypočítajte frekvencie alel (p, q), frekvencie genotypov (p², 2pq, q²) a vykonajte chi-kvadrát testy. Perfektná pre študentov biológie a domáce úlohy z genetiky.",
+        "keywords": "hardy weinbergova kalkulačka, kalkulačka frekvencie alel, kalkulačka frekvencie nosičov, hardy weinbergova rovnováha, p q kalkulačka, kalkulačka frekvencie genotypov, chi kvadrát hardy weinberg, hardy weinberg s krokmi, genetická kalkulačka, biologická kalkulačka",
+        "content": {
+          "heading": "Ako Používať Hardy-Weinbergovu Kalkulačku",
+          "paragraph1": "Hardy-Weinbergova Kalkulačka je nevyhnutným nástrojom pre študentov biológie študujúcich populačnú genetiku. Hardy-Weinbergov princíp popisuje teoretickú populáciu v genetickej rovnováhe, kde frekvencie alel a genotypov zostávajú konštantné z generácie na generáciu. Táto kalkulačka vám pomáha riešiť Hardy-Weinbergove problémy pomocou troch rôznych metód zadania: počty genotypov (AA, Aa, aa), fenotypové dáta (celková populácia a recesívne jedince) alebo známe frekvencie alel (p a q).",
+          "paragraph2": "Hardy-Weinbergove rovnice sú základom pre pochopenie populačnej genetiky: p + q = 1 (kde p je frekvencia dominantnej alely a q je frekvencia recesívnej alely) a p² + 2pq + q² = 1 (kde p² je frekvencia homozygotných dominantných jedincov, 2pq je frekvencia heterozygotných nosičov a q² je frekvencia homozygotných recesívnych jedincov). Tieto rovnice vám umožňujú vypočítať akúkoľvek chýbajúcu hodnotu, keď poznáte ostatné.",
+          "paragraph3": "Naša kalkulačka zahŕňa pokročilé funkcie, ktoré ju odlišujú od základných nástrojov. Možnosť chi-kvadrát testu vám umožňuje určiť, či je populácia skutočne v Hardy-Weinbergovej rovnováhe, alebo či prebieha evolúcia (selekcia, mutácia, migrácia, genetický drift). Zadajte svoju kritickú hodnotu (obvykle 3,84 pre p=0,05 s 1 stupňom voľnosti) a kalkulačka porovná vaše pozorované frekvencie genotypov s očakávanými frekvenciami a povie vám, či sa populácia výrazne odchyľuje od rovnováhy.",
+          "paragraph4": "Funkcia matematických krokov vám presne ukazuje, ako je vykonaný každý výpočet, čo činí túto kalkulačku perfektnou pre domáce úlohy a prípravu na skúšky. Či už počítate frekvencie nosičov pre genetické poradenstvo, určujete, či populácia vyvíja, alebo proste riešite Hardy-Weinbergove cvičné problémy, tento nástroj poskytuje jasné, presné výsledky so vzdelávacími vysvetleniami.",
+          "exampleHeading": "Príklad Výpočtu",
+          "exampleText": "Príklad: V populácii 400 jedincov vykazuje 100 recesívny fenotyp (aa). Pre nájdenie frekvencií alel: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Potom p = 1 - q = 1 - 0,5 = 0,5. Frekvencie genotypov: p² = 0,25 (25% AA), 2pq = 0,5 (50% nosičov Aa), q² = 0,25 (25% aa). Chi-kvadrát test porovnáva pozorované a očakávané frekvencie pre určenie, či je populácia v rovnováhe."
+        },
+        "faq": {
+          "heading": "Často Kladené Otázky",
+          "items": [
+            {
+              "question": "Čo je Hardy-Weinbergov princíp?",
+              "answer": "Hardy-Weinbergov princíp uvádza, že frekvencie alel a genotypov v populácii zostávajú konštantné z generácie na generáciu, pokiaľ sú splnené určité podmienky: žiadna mutácia, žiadna migrácia, veľká veľkosť populácie, náhodné párenie a žiadna prírodná selekcia. Poskytuje referenčný model pre pochopenie, ako evolúcia ovplyvňuje populácie."
+            },
+            {
+              "question": "Ako vypočítať frekvencie alel z počtov genotypov?",
+              "answer": "Pre výpočet frekvencií alel z počtov genotypov: 1) Nájdite celkovú populáciu N = AA + Aa + aa, 2) Vypočítajte q = √(aa/N), kde aa je počet homozygotných recesívnych jedincov, 3) Vypočítajte p = 1 - q. Frekvencia dominantnej alely (p) plus frekvencia recesívnej alely (q) sa vždy rovná 1."
+            },
+            {
+              "question": "Čo je frekvencia nosičov (2pq)?",
+              "answer": "Frekvencia nosičov (2pq) predstavuje podiel heterozygotných jedincov, ktorí nesú jednu kópiu recesívnej alely, ale nevykazujú recesívny fenotyp. To je kľúčové v genetickom poradenstve - napríklad, ak q² = 0,0001 (1 z 10 000 má ochorenie), potom 2pq ≈ 0,02 (približne 2% sú nosiči). Frekvencia nosičov je vždy vyššia než frekvencia ochorenia u vzácnych recesívnych porúch."
+            },
+            {
+              "question": "Ako použiť chi-kvadrát test v Hardy-Weinbergových výpočtoch?",
+              "answer": "Chi-kvadrát test porovnáva pozorované frekvencie genotypov s očakávanými frekvenciami pri Hardy-Weinbergovej rovnováhe. Vypočítajte očakávané počty: Očakávaný AA = p² × N, Očakávaný Aa = 2pq × N, Očakávaný aa = q² × N. Potom vypočítajte χ² = Σ[(Pozorovaný - Očakávaný)² / Očakávaný]. Pokiaľ χ² ≤ kritická hodnota (obvykle 3,84 pre p=0,05), populácia je v rovnováhe. Pokiaľ χ² > kritická hodnota, môže prebiehať evolúcia."
+            },
+            {
+              "question": "Čo to znamená, keď populácia NIE JE v Hardy-Weinbergovej rovnováhe?",
+              "answer": "Pokiaľ sa populácia odchyľuje od Hardy-Weinbergovej rovnováhy (chi-kvadrát test ukazuje významný rozdiel), znamená to, že pôsobí jedna alebo viac evolučných síl: prírodná selekcia (určité genotypy majú vyššiu zdatnosť), mutácia (sú zavádzané nové alely), migrácia (génový tok z iných populácií), genetický drift (náhodné zmeny v malých populáciách) alebo nenáhodné párenie (asortativne párenie, príbuzenské kríženie)."
+            },
+            {
+              "question": "Môžem túto kalkulačku použiť pre genetické poradenstvo?",
+              "answer": "Áno, táto kalkulačka je užitočná pre pochopenie frekvencií nosičov v populáciách. Pre skutočné genetické poradenstvo však vždy konzultujte certifikovaného genetického poradcu alebo lekára genetiky. Kalkulačka poskytuje vzdelávacie odhady založené na Hardy-Weinbergových predpokladoch, ale skutočné populácie sa často od týchto predpokladov odchyľujú a individuálne rodinné histórie sú kľúčové pre presné hodnotenie rizika."
+            },
+            {
+              "question": "Čo ak poznám iba fenotypové dáta?",
+              "answer": "Pokiaľ poznáte iba celkovú populáciu (N) a počet recesívnych jedincov (aa), stále môžete vypočítať všetko. Použite Metódu B (Fenotypové Dáta): q = √(aa/N), potom p = 1 - q. Odtiaľ vypočítajte všetky frekvencie genotypov: p², 2pq a q². Kalkulačka túto konverziu spracováva automaticky."
+            },
+            {
+              "question": "Prečo sa p + q vždy rovná 1?",
+              "answer": "V systéme dvoch alel má každý jedinec dve alely (jednu od každého rodiča). Frekvencia dominantnej alely (p) plus frekvencia recesívnej alely (q) sa musí rovnať 1 (alebo 100%), pretože to sú jediné dve prítomné alely. To je základný princíp populačnej genetiky."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Súvisiace Kalkulačky",
+          "dli": "DLI Kalkulačka",
+          "dliDesc": "Vypočítajte denný svetelný integrál pre optimálny rast rastlín",
+          "vpd": "VPD Kalkulačka",
+          "vpdDesc": "Vypočítajte deficit tlaku pary pre transpiráciu rastlín",
+          "c1v1": "C1V1 Riedica Kalkulačka",
+          "c1v1Desc": "Vypočítajte objemy riedenia a koncentrácie pre roztoky"
+        }
+      }
+    },
     "italicText": {
       "title": "Generátor Kurzívneho Textu",
       "description": "Generujte kurzívny text okamžite s viacerými štýlmi Unicode: kurzíva serif, kurzívny skript a kurzíva sans-serif. Ideálne pre sociálne médiá, dizajn a kreatívne písanie.",

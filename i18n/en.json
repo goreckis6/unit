@@ -6388,6 +6388,104 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Hardy-Weinberg Calculator - Allele Frequency Calculator",
+      "description": "Calculate Hardy-Weinberg equilibrium frequencies. Professional genetics calculator with genotype counts, phenotype data, allele frequencies, chi-square test, and step-by-step solutions for biology students.",
+      "inputMethod": "Input Method",
+      "methodGenotype": "Genotype Counts",
+      "methodPhenotype": "Phenotype Data",
+      "methodAllele": "Allele Frequencies",
+      "aaCount": "Homozygous Dominant Count",
+      "aaHeterozygous": "Heterozygous Count",
+      "aaRecessive": "Homozygous Recessive Count",
+      "totalPopulation": "Total Population",
+      "recessiveIndividuals": "Recessive Individuals",
+      "frequencyP": "Frequency of p",
+      "frequencyQ": "Frequency of q",
+      "pAutoCalculate": "q will be auto-calculated as (1 - p) if left empty",
+      "advancedOptions": "Advanced Options",
+      "performChiSquare": "Perform Chi-Square Test",
+      "criticalValue": "Critical Value",
+      "showMathSteps": "Show Math Steps",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "enterValue": "Enter your data to calculate Hardy-Weinberg frequencies",
+      "clickCalculate": "Click Calculate to see Hardy-Weinberg results",
+      "hwVariables": "Hardy-Weinberg Variables",
+      "genotypeCounts": "Genotype Counts",
+      "chiSquareTest": "Chi-Square Test",
+      "chiSquareValue": "Chi-Square Value (χ²)",
+      "inEquilibrium": "Population is in equilibrium (p > 0.05)",
+      "notInEquilibrium": "Population is NOT in equilibrium (p ≤ 0.05) - Evolution may be occurring",
+      "calculationSteps": "Calculation Steps",
+      "step1": "Step 1",
+      "step2": "Step 2",
+      "step3": "Step 3",
+      "step4": "Step 4",
+      "step5": "Step 5",
+      "step6": "Step 6",
+      "seo": {
+        "title": "Hardy-Weinberg Calculator: Allele Frequency & Carrier Frequency Calculator",
+        "description": "Free Hardy-Weinberg equilibrium calculator with step-by-step solutions. Calculate allele frequencies (p, q), genotype frequencies (p², 2pq, q²), and perform chi-square tests. Perfect for biology students and genetics homework.",
+        "keywords": "hardy weinberg calculator, allele frequency calculator, carrier frequency calculator, hardy weinberg equilibrium, p q calculator, genotype frequency calculator, chi square hardy weinberg, hardy weinberg with steps, genetics calculator, biology calculator",
+        "content": {
+          "heading": "How to Use the Hardy-Weinberg Calculator",
+          "paragraph1": "The Hardy-Weinberg Calculator is an essential tool for biology students studying population genetics. The Hardy-Weinberg principle describes a theoretical population in genetic equilibrium, where allele and genotype frequencies remain constant from generation to generation. This calculator helps you solve Hardy-Weinberg problems using three different input methods: genotype counts (AA, Aa, aa), phenotype data (total population and recessive individuals), or known allele frequencies (p and q).",
+          "paragraph2": "The Hardy-Weinberg equations are fundamental to understanding population genetics: p + q = 1 (where p is the frequency of the dominant allele and q is the frequency of the recessive allele) and p² + 2pq + q² = 1 (where p² is the frequency of homozygous dominant individuals, 2pq is the frequency of heterozygous carriers, and q² is the frequency of homozygous recessive individuals). These equations allow you to calculate any missing value when you know the others.",
+          "paragraph3": "Our calculator includes advanced features that set it apart from basic tools. The chi-square test option lets you determine whether a population is actually in Hardy-Weinberg equilibrium or if evolution (selection, mutation, migration, genetic drift) is occurring. Enter your critical value (typically 3.84 for p=0.05 with 1 degree of freedom), and the calculator will compare your observed genotype frequencies to expected frequencies and tell you if the population deviates significantly from equilibrium.",
+          "paragraph4": "The step-by-step math feature shows you exactly how each calculation is performed, making this calculator perfect for homework and exam preparation. Whether you're calculating carrier frequencies for genetic counseling, determining if a population is evolving, or simply solving Hardy-Weinberg practice problems, this tool provides clear, accurate results with educational explanations.",
+          "exampleHeading": "Example Calculation",
+          "exampleText": "Example: In a population of 400 individuals, 100 show the recessive phenotype (aa). To find allele frequencies: q = √(aa/N) = √(100/400) = √0.25 = 0.5. Then p = 1 - q = 1 - 0.5 = 0.5. Genotype frequencies: p² = 0.25 (25% AA), 2pq = 0.5 (50% Aa carriers), q² = 0.25 (25% aa). The chi-square test compares observed vs. expected frequencies to determine if the population is in equilibrium."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the Hardy-Weinberg principle?",
+              "answer": "The Hardy-Weinberg principle states that allele and genotype frequencies in a population remain constant from generation to generation if certain conditions are met: no mutation, no migration, large population size, random mating, and no natural selection. It provides a baseline model for understanding how evolution affects populations."
+            },
+            {
+              "question": "How do I calculate allele frequencies from genotype counts?",
+              "answer": "To calculate allele frequencies from genotype counts: 1) Find total population N = AA + Aa + aa, 2) Calculate q = √(aa/N) where aa is the number of homozygous recessive individuals, 3) Calculate p = 1 - q. The frequency of the dominant allele (p) plus the frequency of the recessive allele (q) always equals 1."
+            },
+            {
+              "question": "What is carrier frequency (2pq)?",
+              "answer": "Carrier frequency (2pq) represents the proportion of heterozygous individuals who carry one copy of a recessive allele but don't show the recessive phenotype. This is crucial in genetic counseling - for example, if q² = 0.0001 (1 in 10,000 have the disease), then 2pq ≈ 0.02 (about 2% are carriers). Carrier frequency is always higher than disease frequency for rare recessive disorders."
+            },
+            {
+              "question": "How do I use the chi-square test in Hardy-Weinberg calculations?",
+              "answer": "The chi-square test compares observed genotype frequencies to expected frequencies under Hardy-Weinberg equilibrium. Calculate expected counts: Expected AA = p² × N, Expected Aa = 2pq × N, Expected aa = q² × N. Then calculate χ² = Σ[(Observed - Expected)² / Expected]. If χ² ≤ critical value (usually 3.84 for p=0.05), the population is in equilibrium. If χ² > critical value, evolution may be occurring."
+            },
+            {
+              "question": "What does it mean if a population is NOT in Hardy-Weinberg equilibrium?",
+              "answer": "If a population deviates from Hardy-Weinberg equilibrium (chi-square test shows significant difference), it means one or more evolutionary forces are acting: natural selection (certain genotypes have higher fitness), mutation (new alleles introduced), migration (gene flow from other populations), genetic drift (random changes in small populations), or non-random mating (assortative mating, inbreeding)."
+            },
+            {
+              "question": "Can I use this calculator for genetic counseling?",
+              "answer": "Yes, this calculator is useful for understanding carrier frequencies in populations. However, for actual genetic counseling, always consult a certified genetic counselor or medical geneticist. The calculator provides educational estimates based on Hardy-Weinberg assumptions, but real populations often deviate from these assumptions, and individual family histories are crucial for accurate risk assessment."
+            },
+            {
+              "question": "What if I only know the phenotype data?",
+              "answer": "If you only know total population (N) and number of recessive individuals (aa), you can still calculate everything. Use Method B (Phenotype Data): q = √(aa/N), then p = 1 - q. From there, calculate all genotype frequencies: p², 2pq, and q². The calculator automatically handles this conversion."
+            },
+            {
+              "question": "Why does p + q always equal 1?",
+              "answer": "In a two-allele system, every individual has two alleles (one from each parent). The frequency of the dominant allele (p) plus the frequency of the recessive allele (q) must equal 1 (or 100%) because these are the only two alleles present. This is a fundamental principle of population genetics."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "dli": "DLI Calculator",
+          "dliDesc": "Calculate daily light integral for optimal plant growth",
+          "vpd": "VPD Calculator",
+          "vpdDesc": "Calculate vapor pressure deficit for plant transpiration",
+          "c1v1": "C1V1 Dilution Calculator",
+          "c1v1Desc": "Calculate dilution volumes and concentrations for solutions"
+        }
+      }
+    },
     "italicText": {
       "title": "Italic Text Generator",
       "description": "Generate italic text instantly with multiple Unicode styles: serif italic, cursive script, and sans-serif italic. Perfect for social media, design, and creative writing.",

@@ -5885,6 +5885,104 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Hardy-Weinberg Kalkulator - Allelfrekvens Kalkulator",
+      "description": "Beregn Hardy-Weinberg likevektsfrekvenser. Profesjonell genetikkkalkulator med genotyp-telling, fenotype-data, allelfrekvenser, chi-kvadrat-test og trinn-for-trinn-løsninger for biologistudenter.",
+      "inputMethod": "Inndata Metode",
+      "methodGenotype": "Genotyp-telling",
+      "methodPhenotype": "Fenotype-data",
+      "methodAllele": "Allelfrekvenser",
+      "aaCount": "Homozygot Dominant Antall",
+      "aaHeterozygous": "Heterozygot Antall",
+      "aaRecessive": "Homozygot Recessiv Antall",
+      "totalPopulation": "Total Populasjon",
+      "recessiveIndividuals": "Recessive Individer",
+      "frequencyP": "Frekvens av p",
+      "frequencyQ": "Frekvens av q",
+      "pAutoCalculate": "q vil automatisk beregnes som (1 - p) hvis den er tom",
+      "advancedOptions": "Avanserte Alternativer",
+      "performChiSquare": "Utfør Chi-Kvadrat Test",
+      "criticalValue": "Kritisk Verdi",
+      "showMathSteps": "Vis Mattesteg",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "enterValue": "Angi dataene dine for å beregne Hardy-Weinberg-frekvenser",
+      "clickCalculate": "Klikk Beregn for å se Hardy-Weinberg-resultater",
+      "hwVariables": "Hardy-Weinberg Variabler",
+      "genotypeCounts": "Genotyp-telling",
+      "chiSquareTest": "Chi-Kvadrat Test",
+      "chiSquareValue": "Chi-Kvadrat Verdi (χ²)",
+      "inEquilibrium": "Populasjonen er i likevekt (p > 0,05)",
+      "notInEquilibrium": "Populasjonen er IKKE i likevekt (p ≤ 0,05) - Evolusjon kan forekomme",
+      "calculationSteps": "Beregningstrinn",
+      "step1": "Trinn 1",
+      "step2": "Trinn 2",
+      "step3": "Trinn 3",
+      "step4": "Trinn 4",
+      "step5": "Trinn 5",
+      "step6": "Trinn 6",
+      "seo": {
+        "title": "Hardy-Weinberg Kalkulator: Allelfrekvens & Bærerfrekvens Kalkulator",
+        "description": "Gratis Hardy-Weinberg likevektskalkulator med trinn-for-trinn-løsninger. Beregn allelfrekvenser (p, q), genotypfrekvenser (p², 2pq, q²) og utfør chi-kvadrat-tester. Perfekt for biologistudenter og genetikklekser.",
+        "keywords": "hardy weinberg kalkulator, allelfrekvens kalkulator, bærerfrekvens kalkulator, hardy weinberg likevekt, p q kalkulator, genotypfrekvens kalkulator, chi kvadrat hardy weinberg, hardy weinberg med trinn, genetikk kalkulator, biologi kalkulator",
+        "content": {
+          "heading": "Hvordan Bruke Hardy-Weinberg Kalkulatoren",
+          "paragraph1": "Hardy-Weinberg Kalkulatoren er et viktig verktøy for biologistudenter som studerer populasjonsgenetikk. Hardy-Weinberg-prinsippet beskriver en teoretisk populasjon i genetisk likevekt, hvor allel- og genotypfrekvenser forblir konstante fra generasjon til generasjon. Denne kalkulatoren hjelper deg med å løse Hardy-Weinberg-problemer ved å bruke tre forskjellige inndatametoder: genotyp-telling (AA, Aa, aa), fenotype-data (total populasjon og recessive individer) eller kjente allelfrekvenser (p og q).",
+          "paragraph2": "Hardy-Weinberg-ligningene er grunnleggende for å forstå populasjonsgenetikk: p + q = 1 (hvor p er frekvensen av den dominante allelen og q er frekvensen av den recessive allelen) og p² + 2pq + q² = 1 (hvor p² er frekvensen av homozygote dominante individer, 2pq er frekvensen av heterozygote bærere, og q² er frekvensen av homozygote recessive individer). Disse ligningene lar deg beregne en hvilken som helst manglende verdi når du kjenner de andre.",
+          "paragraph3": "Vår kalkulator inkluderer avanserte funksjoner som skiller den fra grunnleggende verktøy. Chi-kvadrat-test-alternativet lar deg bestemme om en populasjon faktisk er i Hardy-Weinberg-likevekt eller om evolusjon (seleksjon, mutasjon, migrasjon, genetisk drift) forekommer. Angi din kritiske verdi (typisk 3,84 for p=0,05 med 1 frihetsgrad), og kalkulatoren vil sammenligne dine observerte genotypfrekvenser med forventede frekvenser og fortelle deg om populasjonen avviker signifikant fra likevekten.",
+          "paragraph4": "Funksjonen for mattesteg viser deg nøyaktig hvordan hver beregning utføres, noe som gjør denne kalkulatoren perfekt for lekser og eksamensførberedelser. Enten du beregner bærerfrekvenser for genetisk rådgivning, bestemmer om en populasjon utvikler seg eller bare løser Hardy-Weinberg-øvingsproblemer, gir dette verktøyet klare, nøyaktige resultater med pedagogiske forklaringer.",
+          "exampleHeading": "Eksempelberegning",
+          "exampleText": "Eksempel: I en populasjon på 400 individer viser 100 den recessive fenotypen (aa). For å finne allelfrekvenser: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Da p = 1 - q = 1 - 0,5 = 0,5. Genotypfrekvenser: p² = 0,25 (25% AA), 2pq = 0,5 (50% Aa-bærere), q² = 0,25 (25% aa). Chi-kvadrat-testen sammenligner observerte og forventede frekvenser for å bestemme om populasjonen er i likevekt."
+        },
+        "faq": {
+          "heading": "Vanlige Spørsmål",
+          "items": [
+            {
+              "question": "Hva er Hardy-Weinberg-prinsippet?",
+              "answer": "Hardy-Weinberg-prinsippet sier at allel- og genotypfrekvenser i en populasjon forblir konstante fra generasjon til generasjon hvis visse betingelser er oppfylt: ingen mutasjon, ingen migrasjon, stor populasjonsstørrelse, tilfeldig paring og ingen naturlig seleksjon. Det gir en grunnleggende modell for å forstå hvordan evolusjon påvirker populasjoner."
+            },
+            {
+              "question": "Hvordan beregner man allelfrekvenser fra genotyp-telling?",
+              "answer": "For å beregne allelfrekvenser fra genotyp-telling: 1) Finn den totale populasjonen N = AA + Aa + aa, 2) Beregn q = √(aa/N) hvor aa er antallet homozygote recessive individer, 3) Beregn p = 1 - q. Frekvensen av den dominante allelen (p) pluss frekvensen av den recessive allelen (q) er alltid lik 1."
+            },
+            {
+              "question": "Hva er bærerfrekvens (2pq)?",
+              "answer": "Bærerfrekvens (2pq) representerer andelen heterozygote individer som bærer en kopi av en recessiv allel men ikke viser den recessive fenotypen. Dette er avgjørende i genetisk rådgivning - for eksempel, hvis q² = 0,0001 (1 av 10 000 har sykdommen), da er 2pq ≈ 0,02 (omtrent 2% er bærere). Bærerfrekvensen er alltid høyere enn sykdomsfrekvensen for sjeldne recessive lidelser."
+            },
+            {
+              "question": "Hvordan bruker man chi-kvadrat-testen i Hardy-Weinberg-beregninger?",
+              "answer": "Chi-kvadrat-testen sammenligner observerte genotypfrekvenser med forventede frekvenser under Hardy-Weinberg-likevekt. Beregn forventede antall: Forventet AA = p² × N, Forventet Aa = 2pq × N, Forventet aa = q² × N. Beregn deretter χ² = Σ[(Observert - Forventet)² / Forventet]. Hvis χ² ≤ kritisk verdi (typisk 3,84 for p=0,05), er populasjonen i likevekt. Hvis χ² > kritisk verdi, kan evolusjon forekomme."
+            },
+            {
+              "question": "Hva betyr det hvis en populasjon IKKE er i Hardy-Weinberg-likevekt?",
+              "answer": "Hvis en populasjon avviker fra Hardy-Weinberg-likevekten (chi-kvadrat-testen viser signifikant forskjell), betyr det at en eller flere evolusjonære krefter virker: naturlig seleksjon (visse genotyper har høyere fitness), mutasjon (nye alleler introduseres), migrasjon (genflyt fra andre populasjoner), genetisk drift (tilfeldige endringer i små populasjoner) eller ikke-tilfeldig paring (assortativ paring, innavl)."
+            },
+            {
+              "question": "Kan jeg bruke denne kalkulatoren for genetisk rådgivning?",
+              "answer": "Ja, denne kalkulatoren er nyttig for å forstå bærerfrekvenser i populasjoner. For faktisk genetisk rådgivning, konsulter imidlertid alltid en sertifisert genetisk rådgiver eller medisinsk genetiker. Kalkulatoren gir pedagogiske estimater basert på Hardy-Weinberg-forutsetninger, men virkelige populasjoner avviker ofte fra disse forutsetningene, og individuelle familiehistorier er avgjørende for nøyaktig risikovurdering."
+            },
+            {
+              "question": "Hva hvis jeg bare kjenner fenotype-dataene?",
+              "answer": "Hvis du bare kjenner den totale populasjonen (N) og antallet recessive individer (aa), kan du fortsatt beregne alt. Bruk Metode B (Fenotype-data): q = √(aa/N), deretter p = 1 - q. Beregn derfra alle genotypfrekvenser: p², 2pq og q². Kalkulatoren håndterer denne konverteringen automatisk."
+            },
+            {
+              "question": "Hvorfor er p + q alltid lik 1?",
+              "answer": "I et to-allel-system har hvert individ to alleler (en fra hver forelder). Frekvensen av den dominante allelen (p) pluss frekvensen av den recessive allelen (q) må være lik 1 (eller 100%) fordi disse er de eneste to tilstedeværende allelene. Dette er et grunnleggende prinsipp i populasjonsgenetikk."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte Kalkulatorer",
+          "dli": "DLI Kalkulator",
+          "dliDesc": "Beregn det daglige lysintegralet for optimal plantevekst",
+          "vpd": "VPD Kalkulator",
+          "vpdDesc": "Beregn damptrykk-underskudd for plantetranspirasjon",
+          "c1v1": "C1V1 Fortynnelseskalkulator",
+          "c1v1Desc": "Beregn fortynnelsesvolumer og konsentrasjoner for løsninger"
+        }
+      }
+    },
     "italicText": {
       "title": "Kursiv Tekst Generator",
       "description": "Generer kursiv tekst umiddelbart med flere Unicode-stiler: serif kursiv, kursiv skrift og sans-serif kursiv. Perfekt for sosiale medier, design og kreativ skriving.",

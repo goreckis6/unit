@@ -6027,6 +6027,202 @@
         }
       }
     },
+    "hardyWeinberg": {
+      "title": "Calculadora de Hardy-Weinberg - Calculadora de Frecuencia de Alelos",
+      "description": "Calcula las frecuencias de equilibrio de Hardy-Weinberg. Calculadora genética profesional con conteos de genotipos, datos fenotípicos, frecuencias alélicas, prueba de chi-cuadrado y soluciones paso a paso para estudiantes de biología.",
+      "inputMethod": "Método de entrada",
+      "methodGenotype": "Conteos de Genotipos",
+      "methodPhenotype": "Datos Fenotípicos",
+      "methodAllele": "Frecuencias Alélicas",
+      "aaCount": "Conteo Homocigoto Dominante",
+      "aaHeterozygous": "Conteo Heterocigoto",
+      "aaRecessive": "Conteo Homocigoto Recesivo",
+      "totalPopulation": "Población Total",
+      "recessiveIndividuals": "Individuos Recesivos",
+      "frequencyP": "Frecuencia de p",
+      "frequencyQ": "Frecuencia de q",
+      "pAutoCalculate": "q se calculará automáticamente como (1 - p) si se deja vacío",
+      "advancedOptions": "Opciones Avanzadas",
+      "performChiSquare": "Realizar Prueba de Chi-Cuadrado",
+      "criticalValue": "Valor Crítico",
+      "showMathSteps": "Mostrar Pasos Matemáticos",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "enterValue": "Ingrese sus datos para calcular las frecuencias de Hardy-Weinberg",
+      "clickCalculate": "Haga clic en Calcular para ver los resultados de Hardy-Weinberg",
+      "hwVariables": "Variables de Hardy-Weinberg",
+      "genotypeCounts": "Conteos de Genotipos",
+      "chiSquareTest": "Prueba de Chi-Cuadrado",
+      "chiSquareValue": "Valor de Chi-Cuadrado (χ²)",
+      "inEquilibrium": "La población está en equilibrio (p > 0,05)",
+      "notInEquilibrium": "La población NO está en equilibrio (p ≤ 0,05) - Puede estar ocurriendo evolución",
+      "calculationSteps": "Pasos de Cálculo",
+      "step1": "Paso 1",
+      "step2": "Paso 2",
+      "step3": "Paso 3",
+      "step4": "Paso 4",
+      "step5": "Paso 5",
+      "step6": "Paso 6",
+      "seo": {
+        "title": "Calculadora de Hardy-Weinberg: Calculadora de Frecuencia de Alelos y Frecuencia de Portadores",
+        "description": "Calculadora gratuita de equilibrio de Hardy-Weinberg con soluciones paso a paso. Calcula frecuencias alélicas (p, q), frecuencias genotípicas (p², 2pq, q²) y realiza pruebas de chi-cuadrado. Perfecta para estudiantes de biología y tareas de genética.",
+        "keywords": "calculadora hardy weinberg, calculadora frecuencia alelos, calculadora frecuencia portadores, equilibrio hardy weinberg, calculadora p q, calculadora frecuencia genotipos, chi cuadrado hardy weinberg, hardy weinberg con pasos, calculadora genética, calculadora biología",
+        "content": {
+          "heading": "Cómo usar la Calculadora de Hardy-Weinberg",
+          "paragraph1": "La Calculadora de Hardy-Weinberg es una herramienta esencial para estudiantes de biología que estudian genética de poblaciones. El principio de Hardy-Weinberg describe una población teórica en equilibrio genético, donde las frecuencias alélicas y genotípicas permanecen constantes de generación en generación. Esta calculadora te ayuda a resolver problemas de Hardy-Weinberg usando tres métodos de entrada diferentes: conteos de genotipos (AA, Aa, aa), datos fenotípicos (población total e individuos recesivos) o frecuencias alélicas conocidas (p y q).",
+          "paragraph2": "Las ecuaciones de Hardy-Weinberg son fundamentales para entender la genética de poblaciones: p + q = 1 (donde p es la frecuencia del alelo dominante y q es la frecuencia del alelo recesivo) y p² + 2pq + q² = 1 (donde p² es la frecuencia de individuos homocigotos dominantes, 2pq es la frecuencia de portadores heterocigotos y q² es la frecuencia de individuos homocigotos recesivos). Estas ecuaciones te permiten calcular cualquier valor faltante cuando conoces los demás.",
+          "paragraph3": "Nuestra calculadora incluye características avanzadas que la distinguen de las herramientas básicas. La opción de prueba de chi-cuadrado te permite determinar si una población está realmente en equilibrio de Hardy-Weinberg o si está ocurriendo evolución (selección, mutación, migración, deriva genética). Ingresa tu valor crítico (típicamente 3,84 para p=0,05 con 1 grado de libertad), y la calculadora comparará tus frecuencias genotípicas observadas con las esperadas y te dirá si la población se desvía significativamente del equilibrio.",
+          "paragraph4": "La función de matemáticas paso a paso te muestra exactamente cómo se realiza cada cálculo, lo que hace que esta calculadora sea perfecta para tareas y preparación de exámenes. Ya sea que estés calculando frecuencias de portadores para asesoramiento genético, determinando si una población está evolucionando, o simplemente resolviendo problemas de práctica de Hardy-Weinberg, esta herramienta proporciona resultados claros y precisos con explicaciones educativas.",
+          "exampleHeading": "Ejemplo de Cálculo",
+          "exampleText": "Ejemplo: En una población de 400 individuos, 100 muestran el fenotipo recesivo (aa). Para encontrar las frecuencias alélicas: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Luego p = 1 - q = 1 - 0,5 = 0,5. Frecuencias genotípicas: p² = 0,25 (25% AA), 2pq = 0,5 (50% portadores Aa), q² = 0,25 (25% aa). La prueba de chi-cuadrado compara las frecuencias observadas vs. esperadas para determinar si la población está en equilibrio."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es el principio de Hardy-Weinberg?",
+              "answer": "El principio de Hardy-Weinberg establece que las frecuencias alélicas y genotípicas en una población permanecen constantes de generación en generación si se cumplen ciertas condiciones: sin mutación, sin migración, tamaño de población grande, apareamiento aleatorio y sin selección natural. Proporciona un modelo de referencia para entender cómo la evolución afecta a las poblaciones."
+            },
+            {
+              "question": "¿Cómo calculo las frecuencias alélicas a partir de los conteos de genotipos?",
+              "answer": "Para calcular las frecuencias alélicas a partir de los conteos de genotipos: 1) Encuentra la población total N = AA + Aa + aa, 2) Calcula q = √(aa/N) donde aa es el número de individuos homocigotos recesivos, 3) Calcula p = 1 - q. La frecuencia del alelo dominante (p) más la frecuencia del alelo recesivo (q) siempre es igual a 1."
+            },
+            {
+              "question": "¿Qué es la frecuencia de portadores (2pq)?",
+              "answer": "La frecuencia de portadores (2pq) representa la proporción de individuos heterocigotos que portan una copia de un alelo recesivo pero no muestran el fenotipo recesivo. Esto es crucial en el asesoramiento genético - por ejemplo, si q² = 0,0001 (1 de cada 10,000 tienen la enfermedad), entonces 2pq ≈ 0,02 (aproximadamente 2% son portadores). La frecuencia de portadores siempre es mayor que la frecuencia de la enfermedad para trastornos recesivos raros."
+            },
+            {
+              "question": "¿Cómo uso la prueba de chi-cuadrado en los cálculos de Hardy-Weinberg?",
+              "answer": "La prueba de chi-cuadrado compara las frecuencias genotípicas observadas con las frecuencias esperadas bajo equilibrio de Hardy-Weinberg. Calcula los conteos esperados: AA Esperado = p² × N, Aa Esperado = 2pq × N, aa Esperado = q² × N. Luego calcula χ² = Σ[(Observado - Esperado)² / Esperado]. Si χ² ≤ valor crítico (usualmente 3,84 para p=0,05), la población está en equilibrio. Si χ² > valor crítico, puede estar ocurriendo evolución."
+            },
+            {
+              "question": "¿Qué significa si una población NO está en equilibrio de Hardy-Weinberg?",
+              "answer": "Si una población se desvía del equilibrio de Hardy-Weinberg (la prueba de chi-cuadrado muestra una diferencia significativa), significa que están actuando una o más fuerzas evolutivas: selección natural (ciertos genotipos tienen mayor aptitud), mutación (se introducen nuevos alelos), migración (flujo génico de otras poblaciones), deriva genética (cambios aleatorios en poblaciones pequeñas) o apareamiento no aleatorio (apareamiento selectivo, endogamia)."
+            },
+            {
+              "question": "¿Puedo usar esta calculadora para asesoramiento genético?",
+              "answer": "Sí, esta calculadora es útil para entender las frecuencias de portadores en poblaciones. Sin embargo, para asesoramiento genético real, siempre consulta con un asesor genético certificado o genetista médico. La calculadora proporciona estimaciones educativas basadas en los supuestos de Hardy-Weinberg, pero las poblaciones reales a menudo se desvían de estos supuestos, y las historias familiares individuales son cruciales para una evaluación precisa del riesgo."
+            },
+            {
+              "question": "¿Qué pasa si solo conozco los datos fenotípicos?",
+              "answer": "Si solo conoces la población total (N) y el número de individuos recesivos (aa), aún puedes calcular todo. Usa el Método B (Datos Fenotípicos): q = √(aa/N), luego p = 1 - q. A partir de ahí, calcula todas las frecuencias genotípicas: p², 2pq y q². La calculadora maneja automáticamente esta conversión."
+            },
+            {
+              "question": "¿Por qué p + q siempre es igual a 1?",
+              "answer": "En un sistema de dos alelos, cada individuo tiene dos alelos (uno de cada padre). La frecuencia del alelo dominante (p) más la frecuencia del alelo recesivo (q) debe ser igual a 1 (o 100%) porque estos son los únicos dos alelos presentes. Este es un principio fundamental de la genética de poblaciones."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "dli": "Calculadora DLI",
+          "dliDesc": "Calcula la integral diaria de luz para el crecimiento óptimo de plantas",
+          "vpd": "Calculadora VPD",
+          "vpdDesc": "Calcula el déficit de presión de vapor para la transpiración de plantas",
+          "c1v1": "Calculadora de Dilución C1V1",
+          "c1v1Desc": "Calcula volúmenes de dilución y concentraciones para soluciones"
+        }
+      }
+    },
+    "hardyWeinberg": {
+      "title": "Calculadora Hardy-Weinberg - Calculadora de Frecuencia Alélica",
+      "description": "Calcule las frecuencias de equilibrio de Hardy-Weinberg. Calculadora de genética profesional con recuentos de genotipos, datos fenotípicos, frecuencias alélicas, prueba de chi-cuadrado y soluciones paso a paso para estudiantes de biología.",
+      "inputMethod": "Método de Entrada",
+      "methodGenotype": "Recuentos de Genotipos",
+      "methodPhenotype": "Datos Fenotípicos",
+      "methodAllele": "Frecuencias Alélicas",
+      "aaCount": "Recuento Homocigoto Dominante",
+      "aaHeterozygous": "Recuento Heterocigoto",
+      "aaRecessive": "Recuento Homocigoto Recesivo",
+      "totalPopulation": "Población Total",
+      "recessiveIndividuals": "Individuos Recesivos",
+      "frequencyP": "Frecuencia de p",
+      "frequencyQ": "Frecuencia de q",
+      "pAutoCalculate": "q se calculará automáticamente como (1 - p) si se deja vacío",
+      "advancedOptions": "Opciones Avanzadas",
+      "performChiSquare": "Realizar Prueba de Chi-Cuadrado",
+      "criticalValue": "Valor Crítico",
+      "showMathSteps": "Mostrar Pasos Matemáticos",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "enterValue": "Ingrese sus datos para calcular las frecuencias de Hardy-Weinberg",
+      "clickCalculate": "Haga clic en Calcular para ver los resultados de Hardy-Weinberg",
+      "hwVariables": "Variables de Hardy-Weinberg",
+      "genotypeCounts": "Recuentos de Genotipos",
+      "chiSquareTest": "Prueba de Chi-Cuadrado",
+      "chiSquareValue": "Valor de Chi-Cuadrado (χ²)",
+      "inEquilibrium": "La población está en equilibrio (p > 0,05)",
+      "notInEquilibrium": "La población NO está en equilibrio (p ≤ 0,05) - Puede estar ocurriendo evolución",
+      "calculationSteps": "Pasos de Cálculo",
+      "step1": "Paso 1",
+      "step2": "Paso 2",
+      "step3": "Paso 3",
+      "step4": "Paso 4",
+      "step5": "Paso 5",
+      "step6": "Paso 6",
+      "seo": {
+        "title": "Calculadora Hardy-Weinberg: Calculadora de Frecuencia Alélica y de Portadores",
+        "description": "Calculadora de equilibrio Hardy-Weinberg gratuita con soluciones paso a paso. Calcule frecuencias alélicas (p, q), frecuencias de genotipos (p², 2pq, q²) y realice pruebas de chi-cuadrado. Perfecto para estudiantes de biología y tareas de genética.",
+        "keywords": "calculadora hardy weinberg, calculadora frecuencia alélica, calculadora frecuencia portadores, equilibrio hardy weinberg, calculadora p q, calculadora frecuencia genotipo, chi cuadrado hardy weinberg, hardy weinberg con pasos, calculadora genética, calculadora biología",
+        "content": {
+          "heading": "Cómo Usar la Calculadora Hardy-Weinberg",
+          "paragraph1": "La Calculadora Hardy-Weinberg es una herramienta esencial para estudiantes de biología que estudian genética de poblaciones. El principio de Hardy-Weinberg describe una población teórica en equilibrio genético, donde las frecuencias alélicas y genotípicas permanecen constantes de generación en generación. Esta calculadora le ayuda a resolver problemas de Hardy-Weinberg utilizando tres métodos de entrada diferentes: recuentos de genotipos (AA, Aa, aa), datos fenotípicos (población total e individuos recesivos) o frecuencias alélicas conocidas (p y q).",
+          "paragraph2": "Las ecuaciones de Hardy-Weinberg son fundamentales para comprender la genética de poblaciones: p + q = 1 (donde p es la frecuencia del alelo dominante y q es la frecuencia del alelo recesivo) y p² + 2pq + q² = 1 (donde p² es la frecuencia de individuos homocigotos dominantes, 2pq es la frecuencia de portadores heterocigotos y q² es la frecuencia de individuos homocigotos recesivos). Estas ecuaciones le permiten calcular cualquier valor faltante cuando conoce los demás.",
+          "paragraph3": "Nuestra calculadora incluye funciones avanzadas que la distinguen de las herramientas básicas. La opción de prueba de chi-cuadrado le permite determinar si una población está realmente en equilibrio de Hardy-Weinberg o si está ocurriendo evolución (selección, mutación, migración, deriva genética). Ingrese su valor crítico (típicamente 3,84 para p=0,05 con 1 grado de libertad), y la calculadora comparará sus frecuencias de genotipos observadas con las frecuencias esperadas y le dirá si la población se desvía significativamente del equilibrio.",
+          "paragraph4": "La función de pasos matemáticos le muestra exactamente cómo se realiza cada cálculo, haciendo que esta calculadora sea perfecta para tareas y preparación de exámenes. Ya sea que esté calculando frecuencias de portadores para asesoramiento genético, determinando si una población está evolucionando o simplemente resolviendo problemas de práctica de Hardy-Weinberg, esta herramienta proporciona resultados claros y precisos con explicaciones educativas.",
+          "exampleHeading": "Ejemplo de Cálculo",
+          "exampleText": "Ejemplo: En una población de 400 individuos, 100 muestran el fenotipo recesivo (aa). Para encontrar las frecuencias alélicas: q = √(aa/N) = √(100/400) = √0,25 = 0,5. Luego p = 1 - q = 1 - 0,5 = 0,5. Frecuencias de genotipos: p² = 0,25 (25% AA), 2pq = 0,5 (50% portadores Aa), q² = 0,25 (25% aa). La prueba de chi-cuadrado compara las frecuencias observadas y esperadas para determinar si la población está en equilibrio."
+        },
+        "faq": {
+          "heading": "Preguntas Frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es el principio de Hardy-Weinberg?",
+              "answer": "El principio de Hardy-Weinberg establece que las frecuencias alélicas y genotípicas en una población permanecen constantes de generación en generación si se cumplen ciertas condiciones: sin mutación, sin migración, gran tamaño de población, apareamiento aleatorio y sin selección natural. Proporciona un modelo de referencia para comprender cómo la evolución afecta a las poblaciones."
+            },
+            {
+              "question": "¿Cómo calcular las frecuencias alélicas a partir de los recuentos de genotipos?",
+              "answer": "Para calcular las frecuencias alélicas a partir de los recuentos de genotipos: 1) Encuentre la población total N = AA + Aa + aa, 2) Calcule q = √(aa/N) donde aa es el número de individuos homocigotos recesivos, 3) Calcule p = 1 - q. La frecuencia del alelo dominante (p) más la frecuencia del alelo recesivo (q) siempre es igual a 1."
+            },
+            {
+              "question": "¿Qué es la frecuencia de portadores (2pq)?",
+              "answer": "La frecuencia de portadores (2pq) representa la proporción de individuos heterocigotos que portan una copia de un alelo recesivo pero no muestran el fenotipo recesivo. Esto es crucial en el asesoramiento genético - por ejemplo, si q² = 0,0001 (1 de cada 10,000 tiene la enfermedad), entonces 2pq ≈ 0,02 (aproximadamente 2% son portadores). La frecuencia de portadores es siempre mayor que la frecuencia de la enfermedad para trastornos recesivos raros."
+            },
+            {
+              "question": "¿Cómo usar la prueba de chi-cuadrado en los cálculos de Hardy-Weinberg?",
+              "answer": "La prueba de chi-cuadrado compara las frecuencias de genotipos observadas con las frecuencias esperadas bajo el equilibrio de Hardy-Weinberg. Calcule los recuentos esperados: AA esperado = p² × N, Aa esperado = 2pq × N, aa esperado = q² × N. Luego calcule χ² = Σ[(Observado - Esperado)² / Esperado]. Si χ² ≤ valor crítico (generalmente 3,84 para p=0,05), la población está en equilibrio. Si χ² > valor crítico, puede estar ocurriendo evolución."
+            },
+            {
+              "question": "¿Qué significa si una población NO está en equilibrio de Hardy-Weinberg?",
+              "answer": "Si una población se desvía del equilibrio de Hardy-Weinberg (la prueba de chi-cuadrado muestra una diferencia significativa), significa que una o más fuerzas evolutivas están actuando: selección natural (ciertos genotipos tienen mayor aptitud), mutación (se introducen nuevos alelos), migración (flujo de genes de otras poblaciones), deriva genética (cambios aleatorios en poblaciones pequeñas) o apareamiento no aleatorio (apareamiento selectivo, endogamia)."
+            },
+            {
+              "question": "¿Puedo usar esta calculadora para asesoramiento genético?",
+              "answer": "Sí, esta calculadora es útil para comprender las frecuencias de portadores en poblaciones. Sin embargo, para asesoramiento genético real, siempre consulte a un consejero genético certificado o genetista médico. La calculadora proporciona estimaciones educativas basadas en las suposiciones de Hardy-Weinberg, pero las poblaciones reales a menudo se desvían de estas suposiciones, y los antecedentes familiares individuales son cruciales para una evaluación precisa del riesgo."
+            },
+            {
+              "question": "¿Qué pasa si solo conozco los datos fenotípicos?",
+              "answer": "Si solo conoce la población total (N) y el número de individuos recesivos (aa), aún puede calcular todo. Use el Método B (Datos Fenotípicos): q = √(aa/N), luego p = 1 - q. Desde allí, calcule todas las frecuencias de genotipos: p², 2pq y q². La calculadora maneja esta conversión automáticamente."
+            },
+            {
+              "question": "¿Por qué p + q siempre es igual a 1?",
+              "answer": "En un sistema de dos alelos, cada individuo tiene dos alelos (uno de cada padre). La frecuencia del alelo dominante (p) más la frecuencia del alelo recesivo (q) debe ser igual a 1 (o 100%) porque estos son los únicos dos alelos presentes. Este es un principio fundamental de la genética de poblaciones."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras Relacionadas",
+          "dli": "Calculadora DLI",
+          "dliDesc": "Calcule el integral de luz diaria para un crecimiento óptimo de las plantas",
+          "vpd": "Calculadora VPD",
+          "vpdDesc": "Calcule el déficit de presión de vapor para la transpiración de las plantas",
+          "c1v1": "Calculadora de Dilución C1V1",
+          "c1v1Desc": "Calcule volúmenes de dilución y concentraciones para soluciones"
+        }
+      }
+    },
     "italicText": {
       "title": "Generador de Texto en Cursiva",
       "description": "Genera texto en cursiva al instante con múltiples estilos Unicode: cursiva serif, script cursivo y cursiva sans-serif. Perfecto para redes sociales, diseño y escritura creativa.",

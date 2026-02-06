@@ -54,6 +54,8 @@ export async function GET() {
     '/calculators/biology/dna-to-mrna',
     '/calculators/biology/cat-pregnancy-calculator',
     '/calculators/biology/dog-raisin-toxicity',
+    '/calculators/biology/dog-size-calculator',
+    '/calculators/biology/dog-size-calculator',
     '/calculators/electric',
     '/calculators/biology',
     '/calculators/conversion',

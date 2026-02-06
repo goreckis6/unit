@@ -5813,6 +5813,97 @@
         }
       }
     },
+    "dogSize": {
+      "title": "Köpek Boyutu Hesaplayıcı",
+      "description": "Yavru köpeğin yaşından ve ağırlığından yetişkin köpeğin boyutunu tahmin edin. Tahmini yetişkin ağırlığı ve boyut kategorisini almak için yavrunuzun yaşını ve mevcut ağırlığını girin.",
+      "ageLabel": "Yavrunuzun yaşı",
+      "ageUnitLabel": "Yaş birimi",
+      "ageUnit_days": "günler",
+      "ageUnit_weeks": "haftalar (hafta)",
+      "ageUnit_months": "aylar (ay)",
+      "ageHelp": "En iyi sonuçlar için 8 ile 16 hafta arasında bir yaş kullanın. 12 ayın üzerindeki köpekler genellikle yetişkin olarak kabul edilir ve bu hesaplayıcı daha az doğru hale gelir.",
+      "ageWarning": "12 aylıktan büyük köpekler yetişkin olarak kabul edilir - büyüme yavaşlar veya durur ve bu hesaplayıcı daha az güvenilir hale gelir.",
+      "weightLabel": "Mevcut ağırlık",
+      "weightUnitLabel": "Ağırlık birimi",
+      "weightUnit_g": "gram (g)",
+      "weightUnit_dag": "dekagram (dag)",
+      "weightUnit_kg": "kilogram (kg)",
+      "weightUnit_oz": "ons (oz)",
+      "weightUnit_lb": "pound (lb)",
+      "weightUnit_st": "taş (st)",
+      "weightHelp": "Doğru, güncel bir ağırlık girin. Emin değilseniz, veterinerinizden yavrunuzu tartmasını isteyin.",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "enterValue": "Tahmini görmek için yavrunuzun yaşını ve ağırlığını girin",
+      "clickCalculate": "Köpeğinizin tahmini yetişkin ağırlığını görmek için Hesapla'ya tıklayın",
+      "adultWeightLabel": "Tahmini yetişkin ağırlığı",
+      "adultWeightRangeLabel": "Tahmini yetişkin ağırlık aralığı",
+      "adultWeightUnitLabel": "Yetişkin ağırlık birimi",
+      "adultWeightUnitHelp": "Yetişkin ağırlık sonucu için tercih ettiğiniz birimi seçin. Hesaplayıcı her zaman dahili olarak kilogram cinsinden hesaplar.",
+      "sizeToy": "çok küçük",
+      "sizeSmall": "küçük",
+      "sizeMedium": "orta",
+      "sizeLarge": "büyük",
+      "sizeGiant": "dev",
+      "summaryHeading": "Yavru büyüme özeti",
+      "summaryYourPuppyAge": "Yavrunuzun yaşı",
+      "summaryWeightNow": "Mevcut ağırlık",
+      "summaryWeightNowHelper": "Yukarıda belirtilen yaştaki yavrunuzun ağırlığı.",
+      "summaryAdultWeight": "Tahmini yetişkin ağırlığı",
+      "summaryAdultWeightRange": "Köpeğinizin yetişkin ağırlığı bu aralığa düşmelidir: {rangeLow}-{rangeHigh} {unit}.",
+      "summaryAdultAlready": "Girdiğiniz yaşa göre köpeğiniz muhtemelen zaten yetişkin. Bunu gerçek bir büyüme tahmini yerine kaba bir ağırlık kontrolü olarak düşünün.",
+      "summarySizeCategory": "Evcil hayvanınız {sizeCategory} köpek olacak 🐶",
+      "seo": {
+        "title": "Köpek Boyutu ve Yavru Ağırlığı Hesaplayıcı - Yavrunun Yaşından ve Ağırlığından Yetişkin Ağırlığı Tahmin Edin",
+        "description": "Ücretsiz köpek boyutu ve yavru ağırlığı hesaplayıcı. Basit bir büyüme formülü kullanarak yavrunun yaşından ve mevcut ağırlığından köpeğinizin yetişkin ağırlığını tahmin edin. Tahmini yetişkin boyut aralığı ve boyut kategorisi alın. Hızlı ve kolay.",
+        "keywords": "köpek boyutu hesaplayıcı, yavru ağırlık hesaplayıcı, yetişkin köpek ağırlığı tahmini, köpeğim ne kadar büyük olacak, yavru büyüme grafiği, köpek boyutu tahmin edici, yavru yetişkin ağırlık formülü, köpek büyüme hesaplayıcı",
+        "content": {
+          "heading": "Köpek Boyutu Hesaplayıcı Nasıl Kullanılır",
+          "paragraph1": "Köpek Boyutu Hesaplayıcımız, yavrunuzun mevcut yaşını ve ağırlığını kullanarak köpeğinizin yetişkin ağırlığını tahmin etmenize yardımcı olur. Araç, çoğu köpeğin yetişkin boyutuna ulaştığı 12 aylık (52 hafta) civarında köpeğinizin ne kadar büyük olabileceğini tahmin eden basit bir büyüme formülüne dayanmaktadır. Bu sadece bir tahmindir, ancak yavrunuzun muhtemelen küçük, orta, büyük veya dev bir köpeğe dönüşüp dönüşmeyeceği konusunda size yararlı bir fikir verebilir.",
+          "paragraph2": "\"Yavrum ne kadar büyük olacak\" hesaplayıcımız basit bir denklem kullanır: yetişkin ağırlığı ≈ (yavru ağırlığı ÷ yavrunun haftalık yaşı) × 52. 52 sayısı basitçe bir yıldaki hafta sayısıdır, bu nedenle formül yavrunuzun mevcut büyüme hızını bir yaşa kadar yansıtır. Bunu köpek boyutu tahmin edicisinde kullanıyoruz çünkü ortalama olarak köpekler yaklaşık 12 ay içinde yetişkin olurlar - genellikle daha küçük ırklar için yaklaşık 8 aydan daha büyük ırklar için yaklaşık 16 aya kadar.",
+          "paragraph3": "Temel fikir, yavrunuzun ortalama haftalık kilo alımını tahmin etmek ve ardından bir yaşa kadar ilerlemektir. Örneğin, yavrunuz 2 aylıkken (yaklaşık 8,7 hafta) 13 kg ise, tahmini yetişkin ağırlığı yaklaşık (13 ÷ 8,7) × 52 ≈ 77,7 kg'dır. Büyüme tam olarak doğrusal olmadığı için, hesaplayıcı sonucu tek bir kesin sayı yerine bir aralık (±%10) olarak sunar ve köpeğinizin muhtemelen ne kadar büyük olacağı konusunda size daha gerçekçi bir fikir verir.",
+          "paragraph4": "Hesaplayıcıyı kullanmak için yavrunuzun yaşını girin ve yaş birimini (gün, hafta veya ay) seçin. Ardından mevcut ağırlığı girin ve ağırlık birimini (gram, dekagram, kilogram, ons, pound veya taş) seçin. Hesaplayıcı her şeyi dahili olarak kilograma dönüştürür, büyüme formülüyle yetişkin ağırlığı tahmin eder ve ardından alt ve üst sınırla birlikte tercih ettiğiniz birimde tahmini yetişkin ağırlığını gösterir. Ayrıca köpeğinizi tahmini yetişkin ağırlığına göre beş geniş boyut grubundan birine yerleştirir: çok küçük (<12 lb / <5,4 kg), küçük (12-22 lb / 5,4-10 kg), orta (22-57 lb / 10-25,9 kg), büyük (57-99 lb / 25,9-44,9 kg) ve dev (>99 lb / >44,9 kg).",
+          "paragraph5": "Bu hesaplayıcının yalnızca kaba bir kılavuz sağladığını unutmayın. Büyüme ırklar ve bireysel köpekler arasında büyük ölçüde değişir ve genetik, beslenme ve sağlık gibi faktörler büyük rol oynar. Daha küçük köpekler daha uzun yaşama eğilimindedir; vücut ağırlığında yaklaşık 4,4 lb (2 kg) her artış için ortalama yaşam süresi yaklaşık bir ay azalabilir. Köpek ağırlığı tahmin edicisini yavrunuzun gelecekteki boyutunu görselleştirmek ve veterinerinizle sağlıklı ağırlık ve uzun ömürlülük hakkında tartışmak için yararlı bir araç olarak kullanın, ancak tıbbi kararlar için her zaman profesyonel veteriner tavsiyesine güvenin.",
+          "exampleHeading": "Örnek",
+          "exampleText": "Yavrunuzun 2 aylık (yaklaşık 8,7 hafta) ve 13 kg olduğunu varsayalım. Formülü kullanarak, yetişkin ağırlığı ≈ (13 ÷ 8,7) × 52 ≈ 77,7 kg. ±%10 aralıkla, yetişkin ağırlık bandı yaklaşık 70,0-85,5 kg'dır. Bu durumda, evcil hayvanınız muhtemelen dev bir köpeğe dönüşecektir."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "Köpek boyutu hesaplayıcı yetişkin ağırlığı nasıl tahmin eder?",
+              "answer": "Köpek boyutu hesaplayıcı, yavrunuzun mevcut yaşından ve ağırlığından yetişkin ağırlığı tahmin etmek için basit bir büyüme formülü kullanır. Önce yaşı haftalara ve ağırlığı kilograma dönüştürür, ardından formülü uygular: yetişkin ağırlığı ≈ (mevcut ağırlık ÷ haftalık yaş) × 52. Bu, yavrunuzun ortalama haftalık kilo alımını çoğu köpeğin yetişkin boyutuna ulaştığı 52 haftaya (1 yıl) kadar yansıtır. Büyüme tam olarak doğrusal olmadığı için, hesaplayıcı tahminin etrafında ±%10 aralığı da gösterir."
+            },
+            {
+              "question": "Bu köpek boyutu hesaplayıcı ne zaman en doğrudur?",
+              "answer": "Tahmin, yavrunuz büyümenin hızlı ve nispeten istikrarlı olduğu yaklaşık 8 ile 16 haftalık yaş arasındayken en yararlıdır. Çok genç yavrular (8 haftanın altında) veya daha yaşlı köpekler (12 ayın üzerinde) için formül daha az doğru hale gelir. Büyük ve dev ırklar da 12 aydan sonra büyümeye ve dolmaya devam edebilir, bu nedenle hesaplayıcı kesin bir tahmin yerine kaba bir kılavuz olarak görülmelidir."
+            },
+            {
+              "question": "Hesaplayıcı neden tek bir sayı yerine ağırlık aralığı gösteriyor?",
+              "answer": "Yavru büyümesi genetik, ırk, beslenme ve sağlık dahil birçok faktörden etkilenir. Hiçbir basit formül tüm bu değişkenliği yakalayamaz. Bu belirsizliği yansıtmak için köpek boyutu hesaplayıcı, tahmini yetişkin ağırlığın etrafında ±%10 aralığı gösterir. Alt ve üst değerler, tek bir kesin sayı önermek yerine köpeğinizin yetişkin ağırlığının muhtemelen nerede düşeceği konusunda size daha gerçekçi bir fikir verir."
+            },
+            {
+              "question": "Hesaplayıcı hangi boyut kategorilerini kullanır?",
+              "answer": "Hesaplayıcı, tahmini yetişkin ağırlığa göre köpekleri dört geniş boyut kategorisine gruplandırır: küçük (yaklaşık 10 kg'ın altında), orta (yaklaşık 10-25 kg), büyük (yaklaşık 25-45 kg) ve dev (yaklaşık 45 kg'ın üzerinde). Bu aralıklar yaklaşıktır ve her ırk standardıyla eşleşmeyebilir, ancak köpeğinizin nihai boyutu hakkında düşünmek için basit bir yol sağlarlar."
+            },
+            {
+              "question": "Bu köpek boyutu hesaplayıcı veteriner tavsiyesinin yerine geçer mi?",
+              "answer": "Hayır. Köpek boyutu hesaplayıcı yalnızca eğitim ve planlama amaçlıdır. Irka özgü özellikleri, sağlık durumlarını veya bireysel değişkenliği hesaba katamaz. Yavrunuzun büyümesi veya ağırlığı konusunda endişeleriniz varsa veya beslenme ve vücut kondisyonu konusunda rehberliğe ihtiyacınız varsa, her zaman veterinerinize danışın. Köpeğinizi kişisel olarak değerlendirebilir, büyüme eğrilerini yorumlayabilir ve özel tavsiyeler sunabilirler."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "dogRaisin": "Köpek Kuru Üzüm Toksisitesi Hesaplayıcı",
+          "dogRaisinDesc": "Ağırlık ve kuru üzüm boyutuna göre köpeğiniz için potansiyel olarak tehlikeli kuru üzüm miktarını tahmin edin",
+          "catPregnancy": "Kedi Hamilelik Hesaplayıcı",
+          "catPregnancyDesc": "Çiftleşme tarihinden kedinizin doğum tarihini ve doğum penceresini tahmin edin",
+          "ageInDays": "Gün Cinsinden Yaş Hesaplayıcı",
+          "ageInDaysDesc": "Doğum tarihinizden bu yana kaç gün yaşadığınızı öğrenin"
+        }
+      }
+    },
     "italicText": {
       "title": "İtalik Metin Oluşturucu",
       "description": "Birden fazla Unicode stiliyle anında italik metin oluşturun: serif italik, kursif script ve sans-serif italik. Sosyal medya, tasarım ve yaratıcı yazım için mükemmel.",

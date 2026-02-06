@@ -5824,6 +5824,97 @@
         }
       }
     },
+    "dogSize": {
+      "title": "Hundegrößen-Rechner",
+      "description": "Schätzen Sie die Erwachsenengröße Ihres Hundes anhand von Welpenalter und -gewicht. Geben Sie das Alter und aktuelle Gewicht Ihres Welpen ein, um ein prognostiziertes Erwachsenengewicht und eine Größenkategorie zu erhalten.",
+      "ageLabel": "Alter Ihres Welpen",
+      "ageUnitLabel": "Alterseinheit",
+      "ageUnit_days": "Tage",
+      "ageUnit_weeks": "Wochen (Wo.)",
+      "ageUnit_months": "Monate (Mo.)",
+      "ageHelp": "Für beste Ergebnisse verwenden Sie ein Alter zwischen 8 und 16 Wochen. Hunde über 12 Monaten gelten in der Regel als erwachsen, und dieser Rechner wird weniger genau.",
+      "ageWarning": "Hunde über 12 Monate werden als Erwachsene betrachtet – das Wachstum verlangsamt sich oder stoppt, und dieser Rechner wird weniger zuverlässig.",
+      "weightLabel": "Aktuelles Gewicht",
+      "weightUnitLabel": "Gewichtseinheit",
+      "weightUnit_g": "Gramm (g)",
+      "weightUnit_dag": "Dekagramm (dag)",
+      "weightUnit_kg": "Kilogramm (kg)",
+      "weightUnit_oz": "Unzen (oz)",
+      "weightUnit_lb": "Pfund (lb)",
+      "weightUnit_st": "Stones (st)",
+      "weightHelp": "Geben Sie ein genaues, aktuelles Gewicht ein. Wenn Sie unsicher sind, bitten Sie Ihren Tierarzt, Ihren Welpen zu wiegen.",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "enterValue": "Geben Sie Alter und Gewicht Ihres Welpen ein, um die Schätzung zu sehen",
+      "clickCalculate": "Klicken Sie auf Berechnen, um das prognostizierte Erwachsenengewicht Ihres Hundes zu sehen",
+      "adultWeightLabel": "Geschätztes Erwachsenengewicht",
+      "adultWeightRangeLabel": "Geschätzter Erwachsenengewichtsbereich",
+      "adultWeightUnitLabel": "Erwachsenengewicht Einheit",
+      "adultWeightUnitHelp": "Wählen Sie die Einheit, die Sie für das Erwachsenengewichtsergebnis bevorzugen. Der Rechner rechnet intern immer in Kilogramm.",
+      "sizeToy": "Zwergenhund",
+      "sizeSmall": "kleiner",
+      "sizeMedium": "mittelgroßer",
+      "sizeLarge": "großer",
+      "sizeGiant": "Riesenhund",
+      "summaryHeading": "Welpen-Wachstumszusammenfassung",
+      "summaryYourPuppyAge": "Alter Ihres Welpen",
+      "summaryWeightNow": "Aktuelles Gewicht",
+      "summaryWeightNowHelper": "Das Gewicht Ihres Welpen im oben angegebenen Alter.",
+      "summaryAdultWeight": "Geschätztes Erwachsenengewicht",
+      "summaryAdultWeightRange": "Das Erwachsenengewicht Ihres Hundes sollte in diesen Bereich fallen: {rangeLow}-{rangeHigh} {unit}.",
+      "summaryAdultAlready": "Basierend auf dem eingegebenen Alter ist Ihr Hund wahrscheinlich bereits erwachsen. Betrachten Sie dies als grobe Gewichtsprüfung und nicht als echte Wachstumsprognose.",
+      "summarySizeCategory": "Ihr Haustier wird ein {sizeCategory} Hund 🐶",
+      "seo": {
+        "title": "Hundegrößen- und Welpengewichtsrechner – Erwachsenengewicht aus Welpenalter und -gewicht schätzen",
+        "description": "Kostenloser Hundegrößen- und Welpengewichtsrechner. Schätzen Sie das Erwachsenengewicht Ihres Hundes aus Welpenalter und aktuellem Gewicht mit einer einfachen Wachstumsformel. Erhalten Sie einen projizierten Erwachsenengrößenbereich und Größenkategorie. Schnell und einfach.",
+        "keywords": "Hundegrößen-Rechner, Welpengewichts-Rechner, Erwachsenengewicht Hund schätzen, wie groß wird mein Hund, Welpen-Wachstumstabelle, Hundegrößen-Vorhersage, Welpen-Erwachsenengewicht Formel, Hunde-Wachstumsrechner",
+        "content": {
+          "heading": "So verwenden Sie den Hundegrößen-Rechner",
+          "paragraph1": "Unser Hundegrößen-Rechner hilft Ihnen, das Erwachsenengewicht Ihres Hundes anhand des aktuellen Alters und Gewichts Ihres Welpen zu schätzen. Das Tool basiert auf einer einfachen Wachstumsformel, die projiziert, wie groß Ihr Hund im Alter von etwa 12 Monaten (52 Wochen) sein könnte, wenn die meisten Hunde ihre Erwachsenengröße erreichen. Dies ist nur eine Schätzung, aber sie kann Ihnen eine nützliche Vorstellung davon geben, ob Ihr Welpe wahrscheinlich zu einem kleinen, mittelgroßen, großen oder riesigen Hund heranwächst.",
+          "paragraph2": "Unser „Wie groß wird mein Welpe"-Rechner verwendet eine einfache Gleichung: Erwachsenengewicht ≈ (Welpengewicht ÷ Welpenalter in Wochen) × 52. Die Zahl 52 ist einfach die Anzahl der Wochen in einem Jahr, daher projiziert die Formel die aktuelle Wachstumsrate Ihres Welpen auf ein Jahr. Wir verwenden dies im Hundegrößen-Prediktor, weil Hunde im Durchschnitt innerhalb von etwa 12 Monaten erwachsen werden – typischerweise von etwa 8 Monaten für kleinere Rassen bis zu etwa 16 Monaten für größere Rassen.",
+          "paragraph3": "Die Grundidee besteht darin, die durchschnittliche wöchentliche Gewichtszunahme Ihres Welpen zu schätzen und dann auf ein Jahr zu projizieren. Wenn Ihr Welpe beispielsweise mit 2 Monaten (etwa 8,7 Wochen) 13 kg wiegt, beträgt das projizierte Erwachsenengewicht ungefähr (13 ÷ 8,7) × 52 ≈ 77,7 kg. Da das Wachstum nicht perfekt linear ist, präsentiert der Rechner das Ergebnis als Bereich (±10%) und nicht als einzelne exakte Zahl, was Ihnen eine realistischere Vorstellung davon gibt, wie groß Ihr Hund wahrscheinlich wird.",
+          "paragraph4": "Um den Rechner zu verwenden, geben Sie das Alter Ihres Welpen ein und wählen Sie die Alterseinheit (Tage, Wochen oder Monate). Geben Sie dann das aktuelle Gewicht ein und wählen Sie die Gewichtseinheit (Gramm, Dekagramm, Kilogramm, Unzen, Pfund oder Stones). Der Rechner konvertiert alles intern in Kilogramm, schätzt das Erwachsenengewicht mit der Wachstumsformel und zeigt dann das projizierte Erwachsenengewicht in Ihrer bevorzugten Einheit zusammen mit einer unteren und oberen Grenze an. Er ordnet Ihren Hund auch einer von fünf breiten Größengruppen zu, basierend auf dem geschätzten Erwachsenengewicht: Zwergenhund (<12 lb / <5,4 kg), klein (12–22 lb / 5,4–10 kg), mittel (22–57 lb / 10–25,9 kg), groß (57–99 lb / 25,9–44,9 kg) und riesig (>99 lb / >44,9 kg).",
+          "paragraph5": "Denken Sie daran, dass dieser Rechner nur einen groben Leitfaden liefert. Das Wachstum variiert stark zwischen Rassen und einzelnen Hunden, und Faktoren wie Genetik, Ernährung und Gesundheit spielen eine große Rolle. Kleinere Hunde leben tendenziell länger; für jede Zunahme von etwa 4,4 lb (2 kg) Körpergewicht kann die durchschnittliche Lebensdauer um etwa einen Monat abnehmen. Verwenden Sie den Hundegewichts-Prediktor als hilfreiches Werkzeug, um die zukünftige Größe Ihres Welpen zu visualisieren und über gesundes Gewicht und Langlebigkeit mit Ihrem Tierarzt zu sprechen, aber verlassen Sie sich immer auf professionelle tierärztliche Beratung für medizinische Entscheidungen.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "Angenommen, Ihr Welpe ist 2 Monate alt (etwa 8,7 Wochen) und wiegt 13 kg. Mit der Formel beträgt das Erwachsenengewicht ≈ (13 ÷ 8,7) × 52 ≈ 77,7 kg. Mit einem ±10%-Bereich liegt das Erwachsenengewicht etwa zwischen 70,0–85,5 kg. In diesem Fall wird Ihr Haustier wahrscheinlich zu einem Riesenhund heranwachsen."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Wie schätzt der Hundegrößen-Rechner das Erwachsenengewicht?",
+              "answer": "Der Hundegrößen-Rechner verwendet eine einfache Wachstumsformel, um das Erwachsenengewicht aus dem aktuellen Alter und Gewicht Ihres Welpen zu schätzen. Er konvertiert zunächst das Alter in Wochen und das Gewicht in Kilogramm und wendet dann die Formel an: Erwachsenengewicht ≈ (aktuelles Gewicht ÷ Alter in Wochen) × 52. Dies projiziert die durchschnittliche wöchentliche Gewichtszunahme Ihres Welpen auf 52 Wochen (1 Jahr), wenn die meisten Hunde ihre Erwachsenengröße erreicht haben. Da das Wachstum nicht perfekt linear ist, zeigt der Rechner auch einen ±10%-Bereich um die Schätzung an."
+            },
+            {
+              "question": "Wann ist dieser Hundegrößen-Rechner am genauesten?",
+              "answer": "Die Schätzung ist am nützlichsten, wenn Ihr Welpe zwischen etwa 8 und 16 Wochen alt ist, wenn das Wachstum schnell und relativ stetig ist. Für sehr junge Welpen (unter 8 Wochen) oder ältere Hunde (über 12 Monate) wird die Formel weniger genau. Große und Riesenrassen können auch über 12 Monate hinaus weiter wachsen und sich füllen, daher sollte der Rechner als grober Leitfaden und nicht als präzise Vorhersage betrachtet werden."
+            },
+            {
+              "question": "Warum zeigt der Rechner einen Gewichtsbereich anstelle einer einzelnen Zahl?",
+              "answer": "Das Welpenwachstum wird von vielen Faktoren beeinflusst, einschließlich Genetik, Rasse, Ernährung und Gesundheit. Keine einfache Formel kann all diese Variation erfassen. Um diese Unsicherheit widerzuspiegeln, zeigt der Hundegrößen-Rechner einen ±10%-Bereich um das projizierte Erwachsenengewicht an. Die unteren und oberen Werte geben Ihnen eine realistischere Vorstellung davon, wo das Erwachsenengewicht Ihres Hundes wahrscheinlich liegen wird, anstatt eine einzelne exakte Zahl vorzuschlagen."
+            },
+            {
+              "question": "Welche Größenkategorien verwendet der Rechner?",
+              "answer": "Der Rechner gruppiert Hunde in vier breite Größenkategorien basierend auf dem geschätzten Erwachsenengewicht: klein (unter etwa 10 kg), mittel (etwa 10–25 kg), groß (etwa 25–45 kg) und riesig (über etwa 45 kg). Diese Bereiche sind ungefähr und stimmen möglicherweise nicht mit jedem Rassestandard überein, aber sie bieten eine einfache Möglichkeit, über die eventuelle Größe Ihres Hundes nachzudenken."
+            },
+            {
+              "question": "Ist dieser Hundegrößen-Rechner ein Ersatz für tierärztliche Beratung?",
+              "answer": "Nein. Der Hundegrößen-Rechner dient nur zu Bildungs- und Planungszwecken. Er kann keine rassenspezifischen Besonderheiten, Gesundheitszustände oder individuelle Variation berücksichtigen. Wenn Sie sich Sorgen über das Wachstum oder Gewicht Ihres Welpen machen oder Anleitung zur Fütterung und Körperkondition benötigen, konsultieren Sie immer Ihren Tierarzt. Sie können Ihren Hund persönlich beurteilen, Wachstumskurven interpretieren und maßgeschneiderte Beratung bieten."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "dogRaisin": "Hunde-Rosinen-Toxizitätsrechner",
+          "dogRaisinDesc": "Schätzen Sie eine potenziell gefährliche Menge an Rosinen für Ihren Hund basierend auf Gewicht und Rosinengröße",
+          "catPregnancy": "Katzen-Trächtigkeitsrechner",
+          "catPregnancyDesc": "Schätzen Sie den Geburtstermin und das Geburtsfenster Ihrer Katze ab dem Deckdatum",
+          "ageInDays": "Alter in Tagen Rechner",
+          "ageInDaysDesc": "Finden Sie heraus, wie viele Tage Sie seit Ihrem Geburtsdatum gelebt haben"
+        }
+      }
+    },
     "italicText": {
       "title": "Kursivtext-Generator",
       "description": "Generieren Sie sofort kursiven Text mit mehreren Unicode-Stilen: Serif-Kursiv, Kursivschrift und Sans-Serif-Kursiv. Perfekt für soziale Medien, Design und kreatives Schreiben.",

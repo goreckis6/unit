@@ -5794,6 +5794,97 @@
         }
       }
     },
+    "dogSize": {
+      "title": "Hundestørrelse Kalkulator",
+      "description": "Estimer hundens voksne størrelse fra valpens alder og vekt. Skriv inn valpens alder og nåværende vekt for å få en projisert voksen vekt og størrelseskategori.",
+      "ageLabel": "Valpens alder",
+      "ageUnitLabel": "Aldersenhet",
+      "ageUnit_days": "dager",
+      "ageUnit_weeks": "uker (u.)",
+      "ageUnit_months": "måneder (mnd.)",
+      "ageHelp": "For best resultat, bruk en alder mellom 8 og 16 uker. Hunder over 12 måneder anses vanligvis som voksne og denne kalkulatoren blir mindre nøyaktig.",
+      "ageWarning": "Hunder over 12 måneder gammel anses som voksne – veksten bremser eller stopper og denne kalkulatoren blir mindre pålitelig.",
+      "weightLabel": "Nåværende vekt",
+      "weightUnitLabel": "Vektenhet",
+      "weightUnit_g": "gram (g)",
+      "weightUnit_dag": "dekagram (dag)",
+      "weightUnit_kg": "kilogram (kg)",
+      "weightUnit_oz": "unser (oz)",
+      "weightUnit_lb": "pund (lb)",
+      "weightUnit_st": "steiner (st)",
+      "weightHelp": "Skriv inn en nøyaktig, nylig vekt. Hvis du er usikker, be veterinæren din om å veie valpen din.",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "enterValue": "Skriv inn valpens alder og vekt for å se estimatet",
+      "clickCalculate": "Klikk Beregn for å se hundens projiserte voksne vekt",
+      "adultWeightLabel": "Estimert voksen vekt",
+      "adultWeightRangeLabel": "Estimert voksen vektområde",
+      "adultWeightUnitLabel": "Voksen vektenhet",
+      "adultWeightUnitHelp": "Velg enheten du foretrekker for det voksne vektresultatet. Kalkulatoren beregner alltid internt i kilogram.",
+      "sizeToy": "miniatyr",
+      "sizeSmall": "liten",
+      "sizeMedium": "middels",
+      "sizeLarge": "stor",
+      "sizeGiant": "kjempe",
+      "summaryHeading": "Valpevekst sammendrag",
+      "summaryYourPuppyAge": "Valpens alder",
+      "summaryWeightNow": "Nåværende vekt",
+      "summaryWeightNowHelper": "Valpens vekt ved alderen spesifisert ovenfor.",
+      "summaryAdultWeight": "Estimert voksen vekt",
+      "summaryAdultWeightRange": "Hundens voksne vekt bør falle innenfor dette området: {rangeLow}-{rangeHigh} {unit}.",
+      "summaryAdultAlready": "Basert på alderen du skrev inn, er hunden din sannsynligvis allerede voksen. Behandle dette som en grov vektkontroll i stedet for en ekte vekstprediksjon.",
+      "summarySizeCategory": "Kjæledyret ditt blir en {sizeCategory} hund 🐶",
+      "seo": {
+        "title": "Hundestørrelse & Valpevekt Kalkulator – Estimer Voksen Vekt fra Valpens Alder og Vekt",
+        "description": "Gratis hundestørrelse og valpevekt kalkulator. Estimer hundens voksne vekt fra valpens alder og nåværende vekt ved bruk av en enkel vekstformel. Få et projisert voksent størrelsesområde og størrelseskategori. Raskt og enkelt.",
+        "keywords": "hundestørrelse kalkulator, valpevekt kalkulator, estimere voksen hundevekt, hvor stor blir hunden min, valpevekst diagram, hundestørrelse prediktor, valp voksen vekt formel, hundevekst kalkulator",
+        "content": {
+          "heading": "Hvordan Bruke Hundestørrelse Kalkulatoren",
+          "paragraph1": "Vår Hundestørrelse Kalkulator hjelper deg med å estimere hundens voksne vekt ved å bruke valpens nåværende alder og vekt. Verktøyet er basert på en enkel vekstformel som projiserer hvor stor hunden din kan være rundt 12 måneders alder (52 uker), når de fleste hunder når sin voksne størrelse. Dette er bare et estimat, men det kan gi deg en nyttig idé om hvorvidt valpen din sannsynligvis vil vokse til en liten, middels, stor eller kjempestor hund.",
+          "paragraph2": "Vår \"hvor stor blir valpen min\" kalkulator bruker en enkel likning: voksen vekt ≈ (valpevekt ÷ valpealder i uker) × 52. Tallet 52 er ganske enkelt antall uker i et år, så formelen projiserer valpens nåværende veksthastighet til ett års alder. Vi bruker dette i hundestørrelse prediktoren fordi hunder i gjennomsnitt modnes til voksne innen omtrent 12 måneder – typisk fra rundt 8 måneder for mindre raser opp til omtrent 16 måneder for større raser.",
+          "paragraph3": "Grunnideen er å estimere valpens gjennomsnittlige ukentlige vektøkning og deretter projisere fremover til ett års alder. For eksempel, hvis valpen din veier 13 kg ved 2 måneders alder (omtrent 8,7 uker), er den projiserte voksne vekten omtrent (13 ÷ 8,7) × 52 ≈ 77,7 kg. Siden veksten ikke er perfekt lineær, presenterer kalkulatoren resultatet som et område (±10%) i stedet for et enkelt nøyaktig tall, noe som gir deg en mer realistisk idé om hvor stor hunden din sannsynligvis blir.",
+          "paragraph4": "For å bruke kalkulatoren, skriv inn valpens alder og velg aldersenhet (dager, uker eller måneder). Skriv deretter inn nåværende vekt og velg vektenhet (gram, dekagram, kilogram, unser, pund eller steiner). Kalkulatoren konverterer alt til kilogram internt, estimerer voksen vekt med vekstformelen og viser deretter den projiserte voksne vekten i din foretrukne enhet sammen med en nedre og øvre grense. Den plasserer også hunden din i en av fem brede størrelsesgrupper basert på estimert voksen vekt: miniatyr (<12 lb / <5,4 kg), liten (12–22 lb / 5,4–10 kg), middels (22–57 lb / 10–25,9 kg), stor (57–99 lb / 25,9–44,9 kg) og kjempe (>99 lb / >44,9 kg).",
+          "paragraph5": "Husk at denne kalkulatoren bare gir en grov guide. Veksten varierer mye mellom raser og individuelle hunder, og faktorer som genetikk, ernæring og helse spiller en stor rolle. Mindre hunder har en tendens til å leve lenger; for hver økning på omtrent 4,4 lb (2 kg) kroppsvekt kan gjennomsnittlig levetid reduseres med omtrent en måned. Bruk hundevekt prediktoren som et nyttig verktøy for å visualisere valpens fremtidige størrelse og diskutere sunn vekt og levetid med veterinæren din, men stol alltid på profesjonell veterinær rådgivning for medisinske beslutninger.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "Anta at valpen din er 2 måneder gammel (omtrent 8,7 uker) og veier 13 kg. Ved bruk av formelen er voksen vekt ≈ (13 ÷ 8,7) × 52 ≈ 77,7 kg. Med et ±10% område er det voksne vektbåndet omtrent 70,0–85,5 kg. I dette tilfellet vil kjæledyret ditt sannsynligvis vokse til en kjempestor hund."
+        },
+        "faq": {
+          "heading": "Ofte Stilte Spørsmål",
+          "items": [
+            {
+              "question": "Hvordan estimerer hundestørrelse kalkulatoren voksen vekt?",
+              "answer": "Hundestørrelse kalkulatoren bruker en enkel vekstformel for å estimere voksen vekt fra valpens nåværende alder og vekt. Den konverterer først alderen til uker og vekten til kilogram, og bruker deretter formelen: voksen vekt ≈ (nåværende vekt ÷ alder i uker) × 52. Dette projiserer valpens gjennomsnittlige ukentlige vektøkning til 52 uker (1 år), når de fleste hunder har nådd sin voksne størrelse. Siden veksten ikke er perfekt lineær, viser kalkulatoren også et ±10% område rundt estimatet."
+            },
+            {
+              "question": "Når er denne hundestørrelse kalkulatoren mest nøyaktig?",
+              "answer": "Estimatet er mest nyttig når valpen din er mellom omtrent 8 og 16 ukers alder, når veksten er rask og relativt jevn. For svært unge valper (under 8 uker) eller eldre hunder (over 12 måneder) blir formelen mindre nøyaktig. Store og kjempestore raser kan også fortsette å vokse og fylle ut etter 12 måneder, så kalkulatoren bør sees som en grov guide i stedet for en presis prediksjon."
+            },
+            {
+              "question": "Hvorfor viser kalkulatoren et vektområde i stedet for et enkelt tall?",
+              "answer": "Valpevekst påvirkes av mange faktorer, inkludert genetikk, rase, ernæring og helse. Ingen enkel formel kan fange opp all denne variasjonen. For å gjenspeile denne usikkerheten viser hundestørrelse kalkulatoren et ±10% område rundt den projiserte voksne vekten. De nedre og øvre verdiene gir deg en mer realistisk idé om hvor hundens voksne vekt sannsynligvis vil falle, i stedet for å foreslå et enkelt nøyaktig tall."
+            },
+            {
+              "question": "Hvilke størrelseskategorier bruker kalkulatoren?",
+              "answer": "Kalkulatoren grupperer hunder i fire brede størrelseskategorier basert på estimert voksen vekt: liten (under omtrent 10 kg), middels (omtrent 10–25 kg), stor (omtrent 25–45 kg) og kjempe (over omtrent 45 kg). Disse områdene er omtrentlige og stemmer kanskje ikke med hver rasestandard, men de gir en enkel måte å tenke på hundens eventuelle størrelse."
+            },
+            {
+              "question": "Er denne hundestørrelse kalkulatoren en erstatning for veterinær rådgivning?",
+              "answer": "Nei. Hundestørrelse kalkulatoren er kun for utdannings- og planleggingsformål. Den kan ikke ta hensyn til rasespesifikke egenskaper, helsetilstander eller individuell variasjon. Hvis du er bekymret for valpens vekst eller vekt, eller trenger veiledning om fôring og kroppskondisjon, konsulter alltid veterinæren din. De kan vurdere hunden din personlig, tolke vekstkurver og gi skreddersydd rådgivning."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte Kalkulatorer",
+          "dogRaisin": "Hund Rosin Toksisitet Kalkulator",
+          "dogRaisinDesc": "Estimer en potensielt farlig mengde rosiner for hunden din basert på vekt og rosinstørrelse",
+          "catPregnancy": "Katt Graviditet Kalkulator",
+          "catPregnancyDesc": "Estimer kattens fødselsdato og fødselsvindu fra paringsdato",
+          "ageInDays": "Alder i Dager Kalkulator",
+          "ageInDaysDesc": "Finn ut hvor mange dager du har levd fra fødselsdatoen din"
+        }
+      }
+    },
     "italicText": {
       "title": "Kursiv Tekst Generator",
       "description": "Generer kursiv tekst umiddelbart med flere Unicode-stiler: serif kursiv, kursiv skrift og sans-serif kursiv. Perfekt for sosiale medier, design og kreativ skriving.",

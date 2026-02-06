@@ -6013,6 +6013,97 @@
         }
       }
     },
+    "dogSize": {
+      "title": "Dog Size Calculator",
+      "description": "Estimate your dog's adult size from puppy age and weight. Enter your puppy's age and current weight to get a projected adult weight and size category.",
+      "ageLabel": "Your puppy's age",
+      "ageUnitLabel": "Age unit",
+      "ageUnit_days": "days",
+      "ageUnit_weeks": "weeks (wks)",
+      "ageUnit_months": "months (mos)",
+      "ageHelp": "For best results, use an age between 8 and 16 weeks. Dogs above 12 months are usually considered adults and this calculator becomes less accurate.",
+      "ageWarning": "Dogs above 12 months of age are considered adults – growth slows or stops and this calculator becomes less reliable.",
+      "weightLabel": "Current weight",
+      "weightUnitLabel": "Weight unit",
+      "weightUnit_g": "grams (g)",
+      "weightUnit_dag": "decagrams (dag)",
+      "weightUnit_kg": "kilograms (kg)",
+      "weightUnit_oz": "ounces (oz)",
+      "weightUnit_lb": "pounds (lb)",
+      "weightUnit_st": "stones (st)",
+      "weightHelp": "Enter an accurate, recent weight. If you are not sure, ask your veterinarian to weigh your puppy.",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "enterValue": "Enter your puppy's age and weight to see the estimate",
+      "clickCalculate": "Click Calculate to see your dog's projected adult weight",
+      "adultWeightLabel": "Estimated adult weight",
+      "adultWeightRangeLabel": "Estimated adult weight range",
+      "adultWeightUnitLabel": "Adult weight unit",
+      "adultWeightUnitHelp": "Choose the unit you prefer for the adult weight result. The calculator always computes internally in kilograms.",
+      "sizeToy": "toy",
+      "sizeSmall": "small",
+      "sizeMedium": "medium",
+      "sizeLarge": "large",
+      "sizeGiant": "Giant",
+      "summaryHeading": "Puppy growth summary",
+      "summaryYourPuppyAge": "Your puppy's age",
+      "summaryWeightNow": "Current weight",
+      "summaryWeightNowHelper": "Your puppy's weight at the age specified above.",
+      "summaryAdultWeight": "Estimated adult weight",
+      "summaryAdultWeightRange": "Your dog's adult weight should fall into this range: {rangeLow}-{rangeHigh} {unit}.",
+      "summaryAdultAlready": "Based on the age you entered, your dog is likely already an adult. Treat this as a rough weight check rather than a true growth prediction.",
+      "summarySizeCategory": "Your pet's going to be a {sizeCategory} dog 🐶",
+      "seo": {
+        "title": "Dog Size & Puppy Weight Calculator – Estimate Adult Weight from Puppy Age and Weight",
+        "description": "Free dog size and puppy weight calculator. Estimate your dog's adult weight from puppy age and current weight using a simple growth formula. Get a projected adult size range and size category. Quick and easy.",
+        "keywords": "dog size calculator, puppy weight calculator, estimate adult dog weight, how big will my dog get, puppy growth chart, dog size predictor, puppy adult weight formula, dog growth calculator",
+        "content": {
+          "heading": "How to Use the Dog Size Calculator",
+          "paragraph1": "Our Dog Size Calculator helps you estimate your dog's adult weight using your puppy's current age and weight. The tool is based on a simple growth formula that projects how big your dog may be at around 12 months of age (52 weeks), when most dogs reach their adult size. This is only an estimate, but it can give you a useful idea of whether your puppy is likely to grow into a small, medium, large, or giant dog.",
+          "paragraph2": "Our \"how big will my puppy get\" calculator uses a straightforward equation: adult weight ≈ (puppy weight ÷ puppy age in weeks) × 52. The number 52 is simply the number of weeks in a year, so the formula projects your puppy's current growth rate out to one year of age. We use this in the dog size predictor because, on average, dogs mature into adults within about 12 months — typically from around 8 months for smaller breeds up to roughly 16 months for larger breeds.",
+          "paragraph3": "The basic idea is to estimate your puppy's average weekly weight gain and then project it forward to one year of age. For example, if your puppy weighs 13 kg at 2 months (about 8.7 weeks), the projected adult weight is roughly (13 ÷ 8.7) × 52 ≈ 77.7 kg. Because growth is not perfectly linear, the calculator presents the result as a range (±10%) rather than a single exact number, giving you a more realistic idea of how big your dog is likely to become.",
+          "paragraph4": "To use the calculator, enter your puppy's age and choose the age unit (days, weeks, or months). Then enter the current weight and pick the weight unit (grams, decagrams, kilograms, ounces, pounds, or stones). The calculator converts everything to kilograms internally, estimates the adult weight with the growth formula, and then shows the projected adult weight in your preferred unit along with a lower and upper bound. It also places your dog into one of five broad size groups based on estimated adult weight: toy (<12 lb / <5.4 kg), small (12–22 lb / 5.4–10 kg), medium (22–57 lb / 10–25.9 kg), large (57–99 lb / 25.9–44.9 kg), and giant (>99 lb / >44.9 kg).",
+          "paragraph5": "Remember that this calculator provides only a rough guide. Growth varies widely between breeds and individual dogs, and factors like genetics, nutrition, and health play a big role. Smaller dogs tend to live longer; for every increase of about 4.4 lb (2 kg) of body weight, average lifespan may decrease by roughly one month. Use the dog weight predictor as a helpful tool for visualizing your pup's future size and discussing healthy weight and longevity with your veterinarian, but always rely on professional veterinary advice for medical decisions.",
+          "exampleHeading": "Example",
+          "exampleText": "Suppose your puppy is 2 months old (about 8.7 weeks) and weighs 13 kg. Using the formula, adult weight ≈ (13 ÷ 8.7) × 52 ≈ 77.7 kg. With a ±10% range, the adult weight band is about 70.0–85.5 kg. In this case, your pet is likely to grow into a Giant dog."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "How does the dog size calculator estimate adult weight?",
+              "answer": "The dog size calculator uses a simple growth formula to estimate adult weight from your puppy's current age and weight. It first converts the age to weeks and the weight to kilograms, then applies the formula: adult weight ≈ (current weight ÷ age in weeks) × 52. This projects your puppy's average weekly weight gain out to 52 weeks (1 year), when most dogs have reached their adult size. Because growth is not perfectly linear, the calculator also shows a ±10% range around the estimate."
+            },
+            {
+              "question": "When is this dog size calculator most accurate?",
+              "answer": "The estimate is most useful when your puppy is between about 8 and 16 weeks of age, when growth is fast and relatively steady. For very young puppies (under 8 weeks) or older dogs (over 12 months), the formula becomes less accurate. Large and giant breeds may also continue to grow and fill out beyond 12 months, so the calculator should be viewed as a rough guide rather than a precise prediction."
+            },
+            {
+              "question": "Why does the calculator show a weight range instead of a single number?",
+              "answer": "Puppy growth is influenced by many factors, including genetics, breed, nutrition, and health. No simple formula can capture all of this variation. To reflect that uncertainty, the dog size calculator shows a ±10% range around the projected adult weight. The lower and upper values give you a more realistic idea of where your dog's adult weight is likely to fall, rather than suggesting a single exact number."
+            },
+            {
+              "question": "What size categories does the calculator use?",
+              "answer": "The calculator groups dogs into four broad size categories based on estimated adult weight: small (under about 10 kg), medium (around 10–25 kg), large (around 25–45 kg), and giant (above about 45 kg). These ranges are approximate and may not match every breed standard, but they provide a simple way to think about your dog's eventual size."
+            },
+            {
+              "question": "Is this dog size calculator a substitute for veterinary advice?",
+              "answer": "No. The dog size calculator is for educational and planning purposes only. It cannot account for breed specifics, health conditions, or individual variation. If you are worried about your puppy's growth or weight, or need guidance on feeding and body condition, always consult your veterinarian. They can assess your dog in person, interpret growth curves, and provide tailored advice."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "dogRaisin": "Dog Raisin Toxicity Calculator",
+          "dogRaisinDesc": "Estimate a potentially dangerous amount of raisins for your dog based on weight and raisin size",
+          "catPregnancy": "Cat Pregnancy Calculator",
+          "catPregnancyDesc": "Estimate your cat's due date and delivery window from the mating date",
+          "ageInDays": "Age in Days Calculator",
+          "ageInDaysDesc": "Find out how many days you have lived from your birth date"
+        }
+      }
+    },
     "italicText": {
       "title": "Italic Text Generator",
       "description": "Generate italic text instantly with multiple Unicode styles: serif italic, cursive script, and sans-serif italic. Perfect for social media, design, and creative writing.",

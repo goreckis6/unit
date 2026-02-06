@@ -16,6 +16,13 @@ export const biologyCalculators: Calculator[] = [
     category: 'biology',
   },
   {
+    id: 'dog-size-calculator',
+    titleKey: 'dogSize.title',
+    descKey: 'dogSize.description',
+    path: '/calculators/biology/dog-size-calculator',
+    category: 'biology',
+  },
+  {
     id: 'cat-pregnancy-calculator',
     titleKey: 'catPregnancy.title',
     descKey: 'catPregnancy.description',

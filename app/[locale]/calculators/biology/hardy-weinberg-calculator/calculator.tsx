@@ -295,11 +295,11 @@ export function HardyWeinbergCalculator() {
                   style={{ 
                     flex: 1, 
                     minWidth: '90px', 
-                    padding: '0.5rem 0.25rem', 
+                    padding: '0.75rem 0.5rem', 
                     fontSize: 'clamp(0.75rem, 2.5vw, 0.875rem)',
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis'
+                    lineHeight: '1.3',
+                    wordBreak: 'break-word',
+                    hyphens: 'auto'
                   }}
                 >
                   {t('methodGenotype')}
@@ -310,11 +310,11 @@ export function HardyWeinbergCalculator() {
                   style={{ 
                     flex: 1, 
                     minWidth: '90px', 
-                    padding: '0.5rem 0.25rem', 
+                    padding: '0.75rem 0.5rem', 
                     fontSize: 'clamp(0.75rem, 2.5vw, 0.875rem)',
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis'
+                    lineHeight: '1.3',
+                    wordBreak: 'break-word',
+                    hyphens: 'auto'
                   }}
                 >
                   {t('methodPhenotype')}
@@ -325,11 +325,11 @@ export function HardyWeinbergCalculator() {
                   style={{ 
                     flex: 1, 
                     minWidth: '90px', 
-                    padding: '0.5rem 0.25rem', 
+                    padding: '0.75rem 0.5rem', 
                     fontSize: 'clamp(0.75rem, 2.5vw, 0.875rem)',
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis'
+                    lineHeight: '1.3',
+                    wordBreak: 'break-word',
+                    hyphens: 'auto'
                   }}
                 >
                   {t('methodAllele')}

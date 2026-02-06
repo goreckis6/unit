@@ -55,7 +55,7 @@ export async function GET() {
     '/calculators/biology/cat-pregnancy-calculator',
     '/calculators/biology/dog-raisin-toxicity',
     '/calculators/biology/dog-size-calculator',
-    '/calculators/biology/dog-size-calculator',
+    '/calculators/biology/c1v1-calculator',
     '/calculators/electric',
     '/calculators/biology',
     '/calculators/conversion',

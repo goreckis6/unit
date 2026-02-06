@@ -6104,6 +6104,81 @@
         }
       }
     },
+    "c1v1": {
+      "title": "C1V1 Calculator",
+      "description": "Calculate dilution volumes and concentrations using the C1V1 = C2V2 formula. Enter any three values to find the missing one. Supports multiple concentration and volume units.",
+      "c1Label": "Initial concentration (C1)",
+      "v1Label": "Initial volume (V1)",
+      "c2Label": "Final concentration (C2)",
+      "v2Label": "Final volume (V2)",
+      "concentrationUnit_cells/ml": "cells/ml",
+      "concentrationUnit_cells/µl": "cells/µl",
+      "concentrationUnit_cells/cl": "cells/cl",
+      "concentrationUnit_cells/liter": "cells/liter",
+      "volumeUnit_ml": "ml",
+      "volumeUnit_µl": "µl",
+      "volumeUnit_cl": "cl",
+      "volumeUnit_liter": "liter",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "enterValue": "Enter at least 3 values to calculate the missing one",
+      "clickCalculate": "Click Calculate to see the result",
+      "calculationHeading": "Calculation",
+      "formulaExplanation": "The C1V1 = C2V2 formula states that the product of initial concentration and volume equals the product of final concentration and volume. This is the fundamental equation for dilution calculations in chemistry and biology.",
+      "seo": {
+        "title": "C1V1 Calculator – Dilution Calculator | C1V1 = C2V2 Formula",
+        "description": "Free C1V1 dilution calculator. Calculate any missing value (concentration or volume) using the C1V1 = C2V2 formula. Supports multiple units (cells/ml, µl, cl, liter). Perfect for lab work and biology calculations.",
+        "keywords": "c1v1 calculator, dilution calculator, c1v1 c2v2 formula, concentration calculator, volume calculator, dilution formula, c1v1 equation, biology calculator, chemistry calculator",
+        "content": {
+          "heading": "How to Use the C1V1 Calculator",
+          "paragraph1": "The C1V1 Calculator uses the fundamental dilution formula C1 × V1 = C2 × V2, where C1 is the initial concentration, V1 is the initial volume, C2 is the final concentration, and V2 is the final volume. This equation is essential in chemistry, biology, and laboratory work for preparing solutions of desired concentrations. Simply enter any three of the four values, and the calculator will automatically compute the missing value.",
+          "paragraph2": "The formula works because the total amount of solute (the substance being dissolved) remains constant during dilution. When you dilute a solution, you're adding solvent (usually water) to reduce the concentration, but the absolute amount of solute doesn't change. Therefore, the product of concentration and volume before dilution (C1 × V1) equals the product after dilution (C2 × V2).",
+          "paragraph3": "To use the calculator, select the appropriate units for each field. Concentration units include cells/ml (cells per milliliter), cells/µl (cells per microliter), cells/cl (cells per centiliter), and cells/liter. Volume units include milliliters (ml), microliters (µl), centiliters (cl), and liters. The calculator automatically handles unit conversions internally, so you can mix different units and still get accurate results.",
+          "paragraph4": "Common use cases include preparing cell suspensions for experiments, diluting stock solutions to working concentrations, calculating volumes needed for serial dilutions, and determining final concentrations after mixing solutions. The calculator is particularly useful in microbiology, cell culture, and molecular biology laboratories where precise dilutions are critical for experimental success.",
+          "exampleHeading": "Example",
+          "exampleText": "If you have a cell suspension with an initial concentration of 1,000,000 cells/ml (C1) and an initial volume of 10 ml (V1), and you want to achieve a final concentration of 100,000 cells/ml (C2), the calculator will determine that you need a final volume of 100 ml (V2). This means you would add 90 ml of diluent to your 10 ml sample to reach the desired concentration."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the C1V1 = C2V2 formula?",
+              "answer": "The C1V1 = C2V2 formula is the dilution equation used in chemistry and biology. It states that the product of initial concentration (C1) and initial volume (V1) equals the product of final concentration (C2) and final volume (V2). This formula is based on the principle that the total amount of solute remains constant during dilution."
+            },
+            {
+              "question": "How do I use the C1V1 calculator?",
+              "answer": "Enter any three of the four values (C1, V1, C2, or V2) along with their units. The calculator will automatically calculate the missing value. Make sure to select the correct units for each field - concentration units (cells/ml, cells/µl, etc.) for C1 and C2, and volume units (ml, µl, etc.) for V1 and V2."
+            },
+            {
+              "question": "Can I mix different units?",
+              "answer": "Yes! The calculator automatically converts all values to base units internally, so you can use different units for different fields. For example, you can enter C1 in cells/ml, V1 in µl, C2 in cells/liter, and V2 in ml, and the calculator will handle all conversions correctly."
+            },
+            {
+              "question": "What if I enter all four values?",
+              "answer": "If you enter all four values, the calculator will verify that they satisfy the C1V1 = C2V2 equation. If the values don't match (within a small tolerance), no result will be shown, indicating that the values are inconsistent."
+            },
+            {
+              "question": "What units are supported?",
+              "answer": "Concentration units: cells/ml, cells/µl, cells/cl, and cells/liter. Volume units: ml (milliliters), µl (microliters), cl (centiliters), and liter. The calculator handles conversions between all these units automatically."
+            },
+            {
+              "question": "Is this calculator accurate for all types of solutions?",
+              "answer": "The C1V1 = C2V2 formula is accurate for ideal dilutions where the solute amount remains constant and volume changes are additive. It works well for most aqueous solutions, cell suspensions, and standard laboratory dilutions. However, for solutions where volume changes are not perfectly additive (e.g., mixing ethanol and water), additional considerations may be needed."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "dogSize": "Dog Size Calculator",
+          "dogSizeDesc": "Estimate your dog's adult size from puppy age and weight",
+          "dogRaisin": "Dog Raisin Toxicity Calculator",
+          "dogRaisinDesc": "Estimate a potentially dangerous amount of raisins for your dog",
+          "catPregnancy": "Cat Pregnancy Calculator",
+          "catPregnancyDesc": "Estimate your cat's due date and delivery window"
+        }
+      }
+    },
     "italicText": {
       "title": "Italic Text Generator",
       "description": "Generate italic text instantly with multiple Unicode styles: serif italic, cursive script, and sans-serif italic. Perfect for social media, design, and creative writing.",

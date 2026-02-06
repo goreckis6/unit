@@ -29,4 +29,11 @@ export const biologyCalculators: Calculator[] = [
     path: '/calculators/biology/cat-pregnancy-calculator',
     category: 'biology',
   },
+  {
+    id: 'c1v1-calculator',
+    titleKey: 'c1v1.title',
+    descKey: 'c1v1.description',
+    path: '/calculators/biology/c1v1-calculator',
+    category: 'biology',
+  },
 ];

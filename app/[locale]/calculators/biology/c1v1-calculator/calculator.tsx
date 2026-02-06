@@ -48,7 +48,6 @@ export function C1V1Calculator() {
   const [v1Unit, setV1Unit] = useState<VolumeUnit>('ml');
   const [c2, setC2] = useState<string>('');
   const [c2Unit, setC2Unit] = useState<ConcentrationUnit>('cells/ml');
-  const [v2, setV2] = useState<string>('');
   const [v2Unit, setV2Unit] = useState<VolumeUnit>('ml');
   const [result, setResult] = useState<C1V1Result | null>(null);
 
@@ -58,115 +57,40 @@ export function C1V1Calculator() {
     const parsedC1 = parseFloat(c1.replace(',', '.'));
     const parsedV1 = parseFloat(v1.replace(',', '.'));
     const parsedC2 = parseFloat(c2.replace(',', '.'));
-    const parsedV2 = parseFloat(v2.replace(',', '.'));
 
-    // Count how many values are provided
-    const providedValues = [
-      { value: parsedC1, field: 'c1' as const },
-      { value: parsedV1, field: 'v1' as const },
-      { value: parsedC2, field: 'c2' as const },
-      { value: parsedV2, field: 'v2' as const },
-    ].filter((item) => Number.isFinite(item.value) && item.value > 0);
-
-    if (providedValues.length !== 3) {
+    // Validate all three inputs are provided and positive
+    if (!Number.isFinite(parsedC1) || parsedC1 <= 0 ||
+        !Number.isFinite(parsedV1) || parsedV1 <= 0 ||
+        !Number.isFinite(parsedC2) || parsedC2 <= 0) {
       setResult(null);
       return;
     }
 
-    // Convert all values to base units
-    const c1Base = Number.isFinite(parsedC1) && parsedC1 > 0
-      ? parsedC1 * CONCENTRATION_TO_BASE[c1Unit]
-      : null;
-    const v1Base = Number.isFinite(parsedV1) && parsedV1 > 0
-      ? parsedV1 * VOLUME_TO_BASE[v1Unit]
-      : null;
-    const c2Base = Number.isFinite(parsedC2) && parsedC2 > 0
-      ? parsedC2 * CONCENTRATION_TO_BASE[c2Unit]
-      : null;
-    const v2Base = Number.isFinite(parsedV2) && parsedV2 > 0
-      ? parsedV2 * VOLUME_TO_BASE[v2Unit]
-      : null;
+    // Convert to base units
+    const c1Base = parsedC1 * CONCENTRATION_TO_BASE[c1Unit];
+    const v1Base = parsedV1 * VOLUME_TO_BASE[v1Unit];
+    const c2Base = parsedC2 * CONCENTRATION_TO_BASE[c2Unit];
 
-    // Calculate the missing value using C1 × V1 = C2 × V2
-    let calculatedValue: number;
-    let calculatedField: 'c1' | 'v1' | 'c2' | 'v2';
-    let formula: string;
-
-    if (c1Base === null) {
-      // Calculate C1: C1 = (C2 × V2) / V1
-      if (c2Base === null || v2Base === null || v1Base === null || v1Base === 0) {
-        setResult(null);
-        return;
-      }
-      calculatedValue = (c2Base * v2Base) / v1Base;
-      calculatedField = 'c1';
-      formula = `C1 = (C2 × V2) / V1 = (${formatNumber(c2Base)} × ${formatNumber(v2Base)}) / ${formatNumber(v1Base)}`;
-    } else if (v1Base === null) {
-      // Calculate V1: V1 = (C2 × V2) / C1
-      if (c2Base === null || v2Base === null || c1Base === null || c1Base === 0) {
-        setResult(null);
-        return;
-      }
-      calculatedValue = (c2Base * v2Base) / c1Base;
-      calculatedField = 'v1';
-      formula = `V1 = (C2 × V2) / C1 = (${formatNumber(c2Base)} × ${formatNumber(v2Base)}) / ${formatNumber(c1Base)}`;
-    } else if (c2Base === null) {
-      // Calculate C2: C2 = (C1 × V1) / V2
-      if (c1Base === null || v1Base === null || v2Base === null || v2Base === 0) {
-        setResult(null);
-        return;
-      }
-      calculatedValue = (c1Base * v1Base) / v2Base;
-      calculatedField = 'c2';
-      formula = `C2 = (C1 × V1) / V2 = (${formatNumber(c1Base)} × ${formatNumber(v1Base)}) / ${formatNumber(v2Base)}`;
-    } else if (v2Base === null) {
-      // Calculate V2: V2 = (C1 × V1) / C2
-      if (c1Base === null || v1Base === null || c2Base === null || c2Base === 0) {
-        setResult(null);
-        return;
-      }
-      calculatedValue = (c1Base * v1Base) / c2Base;
-      calculatedField = 'v2';
-      formula = `V2 = (C1 × V1) / C2 = (${formatNumber(c1Base)} × ${formatNumber(v1Base)}) / ${formatNumber(c2Base)}`;
-    } else {
-      // All values provided - verify the equation
-      const leftSide = c1Base * v1Base;
-      const rightSide = c2Base * v2Base;
-      const difference = Math.abs(leftSide - rightSide);
-      const tolerance = Math.max(leftSide, rightSide) * 0.01; // 1% tolerance
-
-      if (difference > tolerance) {
-        setResult(null);
-        return;
-      }
-
-      // Equation is balanced, show verification
-      calculatedValue = v2Base;
-      calculatedField = 'v2';
-      formula = `C1 × V1 = C2 × V2 = ${formatNumber(leftSide)} (verified)`;
+    if (c2Base === 0) {
+      setResult(null);
+      return;
     }
 
-    // Convert back to the user's selected unit
-    let displayValue: number;
-    let displayUnit: string;
+    // Calculate V2: V2 = (C1 × V1) / C2
+    const v2Base = (c1Base * v1Base) / c2Base;
 
-    if (calculatedField === 'c1') {
-      displayValue = calculatedValue / CONCENTRATION_TO_BASE[c1Unit];
-      displayUnit = c1Unit;
-    } else if (calculatedField === 'v1') {
-      displayValue = calculatedValue / VOLUME_TO_BASE[v1Unit];
-      displayUnit = v1Unit;
-    } else if (calculatedField === 'c2') {
-      displayValue = calculatedValue / CONCENTRATION_TO_BASE[c2Unit];
-      displayUnit = c2Unit;
-    } else {
-      displayValue = calculatedValue / VOLUME_TO_BASE[v2Unit];
-      displayUnit = v2Unit;
+    if (!Number.isFinite(v2Base) || v2Base <= 0) {
+      setResult(null);
+      return;
     }
+
+    // Convert V2 back to display unit
+    const displayValue = v2Base / VOLUME_TO_BASE[v2Unit];
+    const formula = `V2 = (C1 × V1) / C2 = (${formatNumber(parsedC1, 2)} ${c1Unit} × ${formatNumber(parsedV1, 2)} ${v1Unit}) / ${formatNumber(parsedC2, 2)} ${c2Unit}`;
 
     setResult({
       calculatedValue: displayValue,
-      calculatedField,
+      calculatedField: 'v2',
       formula,
     });
   };
@@ -175,13 +99,11 @@ export function C1V1Calculator() {
     setC1('');
     setV1('');
     setC2('');
-    setV2('');
     setResult(null);
   };
 
   const hasEnoughInputs = () => {
-    const inputs = [c1, v1, c2, v2].filter((val) => val.trim() !== '');
-    return inputs.length >= 3;
+    return c1.trim() !== '' && v1.trim() !== '' && c2.trim() !== '';
   };
 
   return (
@@ -280,26 +202,18 @@ export function C1V1Calculator() {
               </div>
             </div>
 
-            {/* Final Volume */}
+            {/* Final Volume Unit Selector */}
             <div className="input-card">
-              <label htmlFor="v2" className="input-label">
-                {t('v2Label')}
+              <label htmlFor="v2Unit" className="input-label">
+                {t('v2UnitLabel')}
               </label>
               <div className="input-with-unit">
-                <input
-                  id="v2"
-                  type="number"
-                  step="0.0001"
-                  value={v2}
-                  onChange={(e) => setV2(e.target.value)}
-                  onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                  className="number-input"
-                  placeholder="100"
-                />
                 <select
+                  id="v2Unit"
                   value={v2Unit}
                   onChange={(e) => setV2Unit(e.target.value as VolumeUnit)}
                   className="unit-select"
+                  style={{ width: '100%' }}
                 >
                   {VOLUME_UNITS.map((unit) => (
                     <option key={unit} value={unit}>

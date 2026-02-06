@@ -7053,6 +7053,102 @@
           "catPregnancyDesc": "Estime a data prevista de parto e a janela de entrega do seu gato"
         }
       }
+    },
+    "vpd": {
+      "title": "Calculadora VPD - Calculadora de Défice de Pressão de Vapor",
+      "description": "Calcule o défice de pressão de vapor (VPD) para crescimento ótimo das plantas. Calculadora VPD profissional com compensação de temperatura das folhas, recomendações por estágio de crescimento e status em tempo real para cultivo indoor.",
+      "airTemp": "Temperatura do ar",
+      "relativeHumidity": "Umidade relativa (UR)",
+      "leafTempMethod": "Método de temperatura das folhas",
+      "useOffset": "Usar compensação",
+      "useActual": "Usar real",
+      "leafOffset": "Compensação de temperatura das folhas",
+      "actualLeafTemp": "Temperatura real das folhas",
+      "growthStage": "Estágio de crescimento",
+      "stagePropagation": "Propagação / Mudas (0,4-0,8 kPa)",
+      "stageVegetative": "Estágio vegetativo (0,8-1,2 kPa)",
+      "stageEarlyFlowering": "Floração precoce (1,0-1,3 kPa)",
+      "stageLateFlowering": "Floração tardia / Maturação (1,2-1,6 kPa)",
+      "fahrenheit": "°F",
+      "celsius": "°C",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "vpdValue": "Valor VPD",
+      "status": "Status",
+      "statusOptimal": "Ótimo",
+      "statusTooLow": "Muito baixo (Muito úmido)",
+      "statusTooHigh": "Muito alto (Muito seco)",
+      "calculatedLeafTemp": "Temperatura das folhas calculada",
+      "adviceHeading": "Recomendação",
+      "adviceTooLow": "Seu VPD está muito baixo, indicando umidade excessiva. Aumente a circulação de ar, reduza a umidade ou eleve ligeiramente a temperatura para prevenir problemas de mofo e fungos.",
+      "adviceOptimal": "Seu VPD está na faixa ótima para o estágio de crescimento selecionado. Mantenha essas condições para crescimento saudável das plantas e transpiração ótima.",
+      "adviceTooHigh": "Seu VPD está muito alto, indicando umidade insuficiente. Aumente a umidade, abaixe a temperatura ou melhore a circulação de ar para prevenir estresse das plantas e transpiração excessiva.",
+      "targetRange": "Faixa alvo para o estágio selecionado",
+      "calculationHeading": "Detalhes do cálculo",
+      "formulaLabel": "Fórmula VPD (Equação de Tetens)",
+      "enterValue": "Insira temperatura do ar, umidade e configurações de temperatura das folhas para calcular VPD",
+      "clickCalculate": "Clique em Calcular para ver seu VPD e recomendações",
+      "seo": {
+        "title": "Calculadora VPD - Calculadora de Défice de Pressão de Vapor para Cultivo | Ferramenta Gratuita",
+        "description": "Calculadora VPD (défice de pressão de vapor) profissional para cultivo indoor. Calcule o VPD ótimo para todos os estágios de crescimento com compensação de temperatura das folhas. Ferramenta gratuita com recomendações em tempo real para cannabis, vegetais e todas as plantas.",
+        "keywords": "calculadora vpd, calculadora défice pressão vapor, calculadora diagrama vpd, vpd estufa cultivo, vpd cannabis, vpd para cultivo, vpd temperatura folhas, vpd fase floração, vpd fase vegetativa, cultivo indoor vpd",
+        "content": {
+          "heading": "Como usar a Calculadora VPD",
+          "paragraph1": "A Calculadora VPD (Défice de Pressão de Vapor) é uma ferramenta essencial para cultivadores indoor sérios. O VPD mede a diferença entre a umidade no ar e a umidade no ar saturado à mesma temperatura. Este valor afeta diretamente a transpiração das plantas, a absorção de nutrientes e a saúde geral das plantas. Nossa calculadora usa a equação de Tetens cientificamente precisa para fornecer cálculos VPD precisos adaptados às suas condições específicas de cultivo.",
+          "paragraph2": "Entender o VPD é crucial porque afeta a eficiência com que as plantas transpiram e absorvem nutrientes. Quando o VPD é muito baixo (umidade alta), as plantas lutam para transpirar, levando a crescimento lento e risco aumentado de mofo e doenças fúngicas. Quando o VPD é muito alto (umidade baixa), as plantas transpiram muito rapidamente, causando estresse, deficiências nutricionais e crescimento atrofiado. A faixa VPD ótima varia por estágio de crescimento: mudas e clones preferem 0,4-0,8 kPa, plantas vegetativas prosperam a 0,8-1,2 kPa e plantas em floração performam melhor a 1,0-1,6 kPa.",
+          "paragraph3": "Esta calculadora inclui um recurso avançado de compensação de temperatura das folhas que a maioria das calculadoras VPD básicas ignora. As folhas das plantas são tipicamente 1-3°C mais frias que a temperatura do ar ambiente devido à transpiração. Esta diferença afeta significativamente os cálculos VPD. Você pode inserir uma compensação (padrão -1,1°C) ou medir sua temperatura real das folhas com um termômetro infravermelho para máxima precisão. Cultivadores profissionais sabem que este detalhe faz a diferença entre bons e excepcionais resultados de cultivo.",
+          "paragraph4": "Selecione seu estágio de crescimento para receber recomendações VPD personalizadas. Cada estágio tem faixas ótimas diferentes porque a fisiologia das plantas muda ao longo do ciclo de vida. Propagação e mudas precisam de condições suaves (0,4-0,8 kPa), crescimento vegetativo beneficia de transpiração moderada (0,8-1,2 kPa), floração precoce requer um VPD ligeiramente mais alto (1,0-1,3 kPa) e floração tardia/maturação pode lidar com o VPD mais alto (1,2-1,6 kPa) para impulsionar a produção de resina e o desenvolvimento de terpenos.",
+          "exampleHeading": "Exemplo de cálculo",
+          "exampleText": "Exemplo: Se sua estufa de cultivo tem uma temperatura do ar de 24°C com 60% de umidade relativa e você usa uma compensação de folhas de -1,1°C para crescimento vegetativo, seu VPD será aproximadamente 1,05 kPa. Isso cai dentro da faixa ótima para a fase vegetativa (0,8-1,2 kPa), indicando condições ideais para crescimento vigoroso. Se seu VPD estiver fora da faixa alvo, ajuste a temperatura ou a umidade para trazê-lo para a zona ótima para seu estágio de crescimento."
+        },
+        "faq": {
+          "heading": "Perguntas Frequentes",
+          "items": [
+            {
+              "question": "O que é VPD e por que é importante para o cultivo de plantas?",
+              "answer": "VPD (Défice de Pressão de Vapor) é a diferença entre a quantidade de umidade no ar e quanta umidade o ar pode conter quando saturado. É criticamente importante porque afeta diretamente a transpiração das plantas, que controla a absorção de nutrientes, taxa de crescimento e saúde geral das plantas. Gestão adequada do VPD pode aumentar os rendimentos em 20-30% comparado a monitorar temperatura e umidade separadamente."
+            },
+            {
+              "question": "Qual é o VPD ótimo para plantas de cannabis?",
+              "answer": "O VPD ótimo para cannabis varia por estágio de crescimento: Mudas/Clones: 0,4-0,8 kPa, Vegetativo: 0,8-1,2 kPa, Floração precoce: 1,0-1,3 kPa, Floração tardia: 1,2-1,6 kPa. Estas faixas promovem transpiração saudável, absorção ótima de nutrientes e maximizam rendimento e potência."
+            },
+            {
+              "question": "Como meço a temperatura das folhas para cálculos VPD?",
+              "answer": "Use um termômetro infravermelho (IR) para medir a temperatura real da superfície das folhas, ou use o método de compensação. As folhas são tipicamente 1-3°C mais frias que a temperatura do ar devido à transpiração. Uma compensação de -1,1°C é um bom ponto de partida, mas medições reais fornecem os cálculos VPD mais precisos. Aponte o termômetro IR para o topo do dossel para melhores resultados."
+            },
+            {
+              "question": "O que acontece se meu VPD estiver muito alto?",
+              "answer": "VPD alto (umidade baixa) causa transpiração excessiva, levando a estresse das plantas, deficiências nutricionais (especialmente cálcio), queimadura das bordas das folhas e crescimento atrofiado. As plantas fecham seus estômatos para conservar água, reduzindo a absorção de CO2 e desacelerando a fotossíntese. Solução: aumente a umidade com um umidificador, baixe ligeiramente a temperatura ou assegure rega adequada."
+            },
+            {
+              "question": "O que acontece se meu VPD estiver muito baixo?",
+              "answer": "VPD baixo (umidade alta) reduz a transpiração, causando crescimento lento, problemas de absorção de nutrientes e risco aumentado de mofo, oídio e doenças fúngicas. As plantas não conseguem extrair nutrientes eficientemente das raízes quando a transpiração é insuficiente. Solução: aumente a temperatura, adicione desumidificação ou melhore a circulação de ar com ventiladores."
+            },
+            {
+              "question": "Devo usar Fahrenheit ou Celsius para cálculos VPD?",
+              "answer": "Ambos funcionam igualmente bem - a calculadora converte automaticamente. Em Portugal, a maioria dos cultivadores usa Celsius. O resultado VPD é sempre exibido em kPa (kilopascal), que é a unidade padrão para défice de pressão de vapor independentemente da unidade de temperatura usada."
+            },
+            {
+              "question": "Com que frequência devo verificar e ajustar o VPD?",
+              "answer": "Verifique o VPD pelo menos diariamente e várias vezes ao dia durante fases de crescimento críticas. O VPD muda ao longo do dia conforme temperatura e umidade flutuam. Use um higrômetro com registro de dados para rastrear tendências. Ajuste controles ambientais (AC, aquecedor, umidificador, desumidificador) para manter o VPD na faixa alvo para seu estágio de crescimento atual."
+            },
+            {
+              "question": "O VPD se aplica a todos os tipos de plantas ou apenas cannabis?",
+              "answer": "Os princípios do VPD se aplicam a todas as plantas, embora as faixas ótimas variem por espécie. Esta calculadora funciona para cannabis, tomates, pimentões, alface, ervas e todas as culturas indoor. Vegetais folhosos preferem um VPD ligeiramente mais baixo (0,4-0,8 kPa), enquanto plantas frutíferas como tomates e pimentões prosperam a 0,8-1,2 kPa. Ajuste a seleção do estágio de crescimento para corresponder às necessidades da sua cultura."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "dogSize": "Calculadora de Tamanho de Cão",
+          "dogSizeDesc": "Estime o tamanho adulto do seu cão a partir da idade e peso do filhote",
+          "c1v1": "Calculadora de Diluição C1V1",
+          "c1v1Desc": "Calcule volumes e concentrações de diluição para soluções",
+          "catPregnancy": "Calculadora de Gravidez de Gato",
+          "catPregnancyDesc": "Estime a data prevista de parto e a janela de entrega do seu gato"
+        }
+      }
     }
   },
   "notFound": {

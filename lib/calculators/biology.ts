@@ -36,4 +36,11 @@ export const biologyCalculators: Calculator[] = [
     path: '/calculators/biology/c1v1-calculator',
     category: 'biology',
   },
+  {
+    id: 'vpd-calculator',
+    titleKey: 'vpd.title',
+    descKey: 'vpd.description',
+    path: '/calculators/biology/vpd-calculator',
+    category: 'biology',
+  },
 ];

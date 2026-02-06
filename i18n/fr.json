@@ -7053,6 +7053,102 @@
           "catPregnancyDesc": "Estimez la date d'accouchement et la fenêtre de livraison de votre chat"
         }
       }
+    },
+    "vpd": {
+      "title": "Calculateur VPD - Calculateur de Déficit de Pression de Vapeur",
+      "description": "Calculez le déficit de pression de vapeur (VPD) pour une croissance optimale des plantes. Calculateur VPD professionnel avec décalage de température des feuilles, recommandations par stade de croissance et statut en temps réel pour la culture en intérieur.",
+      "airTemp": "Température de l'air",
+      "relativeHumidity": "Humidité relative (HR)",
+      "leafTempMethod": "Méthode de température des feuilles",
+      "useOffset": "Utiliser le décalage",
+      "useActual": "Utiliser la valeur réelle",
+      "leafOffset": "Décalage de température des feuilles",
+      "actualLeafTemp": "Température réelle des feuilles",
+      "growthStage": "Stade de croissance",
+      "stagePropagation": "Propagation / Semis (0,4-0,8 kPa)",
+      "stageVegetative": "Phase végétative (0,8-1,2 kPa)",
+      "stageEarlyFlowering": "Floraison précoce (1,0-1,3 kPa)",
+      "stageLateFlowering": "Floraison tardive / Maturation (1,2-1,6 kPa)",
+      "fahrenheit": "°F",
+      "celsius": "°C",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "vpdValue": "Valeur VPD",
+      "status": "Statut",
+      "statusOptimal": "Optimal",
+      "statusTooLow": "Trop bas (Trop humide)",
+      "statusTooHigh": "Trop élevé (Trop sec)",
+      "calculatedLeafTemp": "Température calculée des feuilles",
+      "adviceHeading": "Recommandation",
+      "adviceTooLow": "Votre VPD est trop bas, indiquant une humidité excessive. Augmentez la circulation de l'air, réduisez l'humidité ou augmentez légèrement la température pour prévenir les problèmes de moisissure et de champignons.",
+      "adviceOptimal": "Votre VPD est dans la plage optimale pour votre stade de croissance sélectionné. Maintenez ces conditions pour une croissance saine des plantes et une transpiration optimale.",
+      "adviceTooHigh": "Votre VPD est trop élevé, indiquant une humidité insuffisante. Augmentez l'humidité, abaissez la température ou améliorez la circulation de l'air pour prévenir le stress des plantes et la transpiration excessive.",
+      "targetRange": "Plage cible pour le stade sélectionné",
+      "calculationHeading": "Détails du calcul",
+      "formulaLabel": "Formule VPD (Équation de Tetens)",
+      "enterValue": "Entrez la température de l'air, l'humidité et les paramètres de température des feuilles pour calculer le VPD",
+      "clickCalculate": "Cliquez sur Calculer pour voir votre VPD et les recommandations",
+      "seo": {
+        "title": "Calculateur VPD - Calculateur de Déficit de Pression de Vapeur pour la Culture | Outil Gratuit",
+        "description": "Calculateur VPD (déficit de pression de vapeur) professionnel pour la culture en intérieur. Calculez le VPD optimal pour tous les stades de croissance avec décalage de température des feuilles. Outil gratuit avec recommandations en temps réel pour le cannabis, les légumes et toutes les plantes.",
+        "keywords": "calculateur vpd, calculateur déficit pression vapeur, calculateur diagramme vpd, vpd salle de culture, vpd cannabis, vpd pour culture, vpd température feuilles, vpd phase floraison, vpd phase végétative, culture intérieur vpd",
+        "content": {
+          "heading": "Comment utiliser le Calculateur VPD",
+          "paragraph1": "Le Calculateur VPD (Déficit de Pression de Vapeur) est un outil essentiel pour les cultivateurs d'intérieur sérieux. Le VPD mesure la différence entre l'humidité dans l'air et l'humidité dans l'air saturé à la même température. Cette valeur affecte directement la transpiration des plantes, l'absorption des nutriments et la santé générale des plantes. Notre calculateur utilise l'équation de Tetens scientifiquement précise pour fournir des calculs VPD précis adaptés à vos conditions de culture spécifiques.",
+          "paragraph2": "Comprendre le VPD est crucial car il affecte l'efficacité avec laquelle les plantes transpirent et absorbent les nutriments. Lorsque le VPD est trop bas (humidité élevée), les plantes ont du mal à transpirer, ce qui entraîne une croissance lente et un risque accru de moisissure et de maladies fongiques. Lorsque le VPD est trop élevé (humidité faible), les plantes transpirent trop rapidement, causant du stress, des carences nutritionnelles et une croissance retardée. La plage VPD optimale varie selon le stade de croissance : les semis et clones préfèrent 0,4-0,8 kPa, les plantes végétatives prospèrent à 0,8-1,2 kPa et les plantes en floraison performent mieux à 1,0-1,6 kPa.",
+          "paragraph3": "Ce calculateur inclut une fonctionnalité avancée de décalage de température des feuilles que la plupart des calculateurs VPD de base ignorent. Les feuilles des plantes sont généralement 1-3°C plus froides que la température de l'air ambiant en raison de la transpiration. Cette différence affecte significativement les calculs VPD. Vous pouvez soit entrer un décalage (par défaut -1,1°C), soit mesurer votre température réelle des feuilles avec un thermomètre infrarouge pour une précision maximale. Les cultivateurs professionnels savent que ce détail fait la différence entre de bons et d'exceptionnels résultats de culture.",
+          "paragraph4": "Sélectionnez votre stade de croissance pour recevoir des recommandations VPD personnalisées. Chaque stade a des plages optimales différentes car la physiologie des plantes change tout au long du cycle de vie. La propagation et les semis nécessitent des conditions douces (0,4-0,8 kPa), la croissance végétative bénéficie d'une transpiration modérée (0,8-1,2 kPa), la floraison précoce nécessite un VPD légèrement plus élevé (1,0-1,3 kPa) et la floraison tardive/maturation peut supporter le VPD le plus élevé (1,2-1,6 kPa) pour stimuler la production de résine et le développement des terpènes.",
+          "exampleHeading": "Exemple de calcul",
+          "exampleText": "Exemple : Si votre salle de culture a une température de l'air de 24°C avec 60% d'humidité relative et que vous utilisez un décalage de feuilles de -1,1°C pour la croissance végétative, votre VPD sera d'environ 1,05 kPa. Cela tombe dans la plage optimale pour la phase végétative (0,8-1,2 kPa), indiquant des conditions idéales pour une croissance vigoureuse. Si votre VPD est en dehors de la plage cible, ajustez soit la température, soit l'humidité pour le ramener dans la zone optimale pour votre stade de croissance."
+        },
+        "faq": {
+          "heading": "Questions Fréquemment Posées",
+          "items": [
+            {
+              "question": "Qu'est-ce que le VPD et pourquoi est-il important pour la culture des plantes ?",
+              "answer": "Le VPD (Déficit de Pression de Vapeur) est la différence entre la quantité d'humidité dans l'air et la quantité d'humidité que l'air peut contenir lorsqu'il est saturé. C'est extrêmement important car il affecte directement la transpiration des plantes, qui contrôle l'absorption des nutriments, le taux de croissance et la santé générale des plantes. Une gestion appropriée du VPD peut augmenter les rendements de 20 à 30% par rapport à la surveillance séparée de la température et de l'humidité."
+            },
+            {
+              "question": "Quel est le VPD optimal pour les plants de cannabis ?",
+              "answer": "Le VPD optimal pour le cannabis varie selon le stade de croissance : Semis/Clones : 0,4-0,8 kPa, Végétatif : 0,8-1,2 kPa, Floraison précoce : 1,0-1,3 kPa, Floraison tardive : 1,2-1,6 kPa. Ces plages favorisent une transpiration saine, une absorption optimale des nutriments et maximisent le rendement et la puissance."
+            },
+            {
+              "question": "Comment mesurer la température des feuilles pour les calculs VPD ?",
+              "answer": "Utilisez un thermomètre infrarouge (IR) pour mesurer la température réelle de la surface des feuilles, ou utilisez la méthode du décalage. Les feuilles sont généralement 1-3°C plus froides que la température de l'air en raison de la transpiration. Un décalage de -1,1°C est un bon point de départ, mais les mesures réelles fournissent les calculs VPD les plus précis. Pointez le thermomètre IR vers le sommet de la canopée pour de meilleurs résultats."
+            },
+            {
+              "question": "Que se passe-t-il si mon VPD est trop élevé ?",
+              "answer": "Un VPD élevé (faible humidité) provoque une transpiration excessive, entraînant stress des plantes, carences nutritionnelles (en particulier calcium), brûlure des bords des feuilles et croissance retardée. Les plantes ferment leurs stomates pour économiser l'eau, réduisant l'absorption de CO2 et ralentissant la photosynthèse. Solution : augmentez l'humidité avec un humidificateur, abaissez légèrement la température ou assurez un arrosage adéquat."
+            },
+            {
+              "question": "Que se passe-t-il si mon VPD est trop bas ?",
+              "answer": "Un VPD bas (humidité élevée) réduit la transpiration, causant une croissance lente, des problèmes d'absorption des nutriments et un risque accru de moisissure, mildiou et maladies fongiques. Les plantes ne peuvent pas extraire efficacement les nutriments des racines lorsque la transpiration est insuffisante. Solution : augmentez la température, ajoutez une déshumidification ou améliorez la circulation de l'air avec des ventilateurs."
+            },
+            {
+              "question": "Dois-je utiliser Fahrenheit ou Celsius pour les calculs VPD ?",
+              "answer": "Les deux fonctionnent également bien - le calculateur convertit automatiquement. En France, la plupart des cultivateurs utilisent Celsius. Le résultat VPD est toujours affiché en kPa (kilopascal), qui est l'unité standard pour le déficit de pression de vapeur, quelle que soit l'unité de température utilisée."
+            },
+            {
+              "question": "À quelle fréquence dois-je vérifier et ajuster le VPD ?",
+              "answer": "Vérifiez le VPD au moins quotidiennement et plusieurs fois par jour pendant les phases de croissance critiques. Le VPD change tout au long de la journée lorsque la température et l'humidité fluctuent. Utilisez un hygromètre avec enregistrement de données pour suivre les tendances. Ajustez les contrôles environnementaux (climatisation, chauffage, humidificateur, déshumidificateur) pour maintenir le VPD dans la plage cible pour votre stade de croissance actuel."
+            },
+            {
+              "question": "Le VPD s'applique-t-il à tous les types de plantes ou seulement au cannabis ?",
+              "answer": "Les principes du VPD s'appliquent à toutes les plantes, bien que les plages optimales varient selon les espèces. Ce calculateur fonctionne pour le cannabis, les tomates, les poivrons, la laitue, les herbes et toutes les cultures d'intérieur. Les légumes à feuilles préfèrent un VPD légèrement plus bas (0,4-0,8 kPa), tandis que les plantes fruitières comme les tomates et les poivrons prospèrent à 0,8-1,2 kPa. Ajustez la sélection du stade de croissance pour correspondre aux besoins de votre culture."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs connexes",
+          "dogSize": "Calculateur de Taille de Chien",
+          "dogSizeDesc": "Estimez la taille adulte de votre chien à partir de l'âge et du poids du chiot",
+          "c1v1": "Calculateur de Dilution C1V1",
+          "c1v1Desc": "Calculez les volumes et concentrations de dilution pour les solutions",
+          "catPregnancy": "Calculateur de Grossesse de Chat",
+          "catPregnancyDesc": "Estimez la date d'accouchement et la fenêtre de livraison de votre chat"
+        }
+      }
     }
   },
   "notFound": {

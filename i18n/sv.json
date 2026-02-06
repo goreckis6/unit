@@ -7023,6 +7023,102 @@
           "catPregnancyDesc": "Uppskatta din katts förväntade födelsedatum och leveransfönster"
         }
       }
+    },
+    "vpd": {
+      "title": "VPD-kalkylator - Ångtrycksunderskott-kalkylator",
+      "description": "Beräkna ångtrycksunderskott (VPD) för optimal växtökning. Professionell VPD-kalkylator med bladtemperatur-offset, tillväxtstadierekommendationer och realtidsstatus för inomhusodling.",
+      "airTemp": "Lufttemperatur",
+      "relativeHumidity": "Relativ luftfuktighet (RH)",
+      "leafTempMethod": "Bladtemperaturmetod",
+      "useOffset": "Använd offset",
+      "useActual": "Använd faktisk",
+      "leafOffset": "Bladtemperatur-offset",
+      "actualLeafTemp": "Faktisk bladtemperatur",
+      "growthStage": "Tillväxtstadium",
+      "stagePropagation": "Förökning / Plantor (0,4-0,8 kPa)",
+      "stageVegetative": "Vegetativt stadium (0,8-1,2 kPa)",
+      "stageEarlyFlowering": "Tidig blomning (1,0-1,3 kPa)",
+      "stageLateFlowering": "Sen blomning / Mognad (1,2-1,6 kPa)",
+      "fahrenheit": "°F",
+      "celsius": "°C",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "vpdValue": "VPD-värde",
+      "status": "Status",
+      "statusOptimal": "Optimal",
+      "statusTooLow": "För låg (För fuktig)",
+      "statusTooHigh": "För hög (För torr)",
+      "calculatedLeafTemp": "Beräknad bladtemperatur",
+      "adviceHeading": "Rekommendation",
+      "adviceTooLow": "Din VPD är för låg, vilket indikerar överdriven fuktighet. Öka luftcirkulationen, minska fuktigheten eller höj temperaturen något för att förhindra mögel- och svampproblem.",
+      "adviceOptimal": "Din VPD är inom det optimala området för ditt valda tillväxtstadium. Bibehåll dessa förhållanden för hälsosam växttillväxt och optimal transpiration.",
+      "adviceTooHigh": "Din VPD är för hög, vilket indikerar otillräcklig fuktighet. Öka fuktigheten, sänk temperaturen eller förbättra luftcirkulationen för att förhindra växtström och överdriven transpiration.",
+      "targetRange": "Målområde för valt stadium",
+      "calculationHeading": "Beräkningsdetaljer",
+      "formulaLabel": "VPD-formel (Tetens ekvation)",
+      "enterValue": "Ange lufttemperatur, fuktighet och bladtemperaturinställningar för att beräkna VPD",
+      "clickCalculate": "Klicka på Beräkna för att se din VPD och rekommendationer",
+      "seo": {
+        "title": "VPD-kalkylator - Ångtrycksunderskott-kalkylator för odling | Gratis verktyg",
+        "description": "Professionell VPD (ångtrycksunderskott) kalkylator för inomhusodling. Beräkna optimal VPD för alla tillväxtstadier med bladtemperatur-offset. Gratis verktyg med realtidsrekommendationer för cannabis, grönsaker och alla växter.",
+        "keywords": "vpd kalkylator, ångtrycksunderskott kalkylator, vpd diagram kalkylator, odlingsrum vpd, cannabis vpd, vpd för odling, bladtemperatur vpd, vpd blomningsstadium, vpd vegetativt stadium, inomhusodling vpd",
+        "content": {
+          "heading": "Hur man använder VPD-kalkylatorn",
+          "paragraph1": "VPD (Ångtrycksunderskott) Kalkylatorn är ett viktigt verktyg för seriösa inomhusodlare. VPD mäter skillnaden mellan fukten i luften och fukten i mättad luft vid samma temperatur. Detta värde påverkar direkt växttranspiration, näringsupptag och allmän växthälsa. Vår kalkylator använder den vetenskapligt exakta Tetens ekvationen för att ge precisionsberäkningar av VPD anpassade till dina specifika odlingsförhållanden.",
+          "paragraph2": "Att förstå VPD är avgörande eftersom det påverkar hur effektivt växter transpirerar och tar upp näringsämnen. När VPD är för låg (hög luftfuktighet), kämpar växter med att transpirera, vilket leder till långsam tillväxt och ökad risk för mögel och svampsjukdomar. När VPD är för hög (låg luftfuktighet), transpirerar växter för snabbt, vilket orsakar stress, näringsbrist och hämmad tillväxt. Det optimala VPD-området varierar beroende på tillväxtstadium: plantor och kloner föredrar 0,4-0,8 kPa, vegetativa växter trivs vid 0,8-1,2 kPa och blommande växter presterar bäst vid 1,0-1,6 kPa.",
+          "paragraph3": "Denna kalkylator inkluderar en avancerad bladtemperatur-offset-funktion som de flesta grundläggande VPD-kalkylatorer ignorerar. Växtblad är vanligtvis 1-3°C kallare än omgivande lufttemperatur på grund av transpiration. Denna skillnad påverkar VPD-beräkningar avsevärt. Du kan antingen ange en offset (standard -1,1°C) eller mäta din faktiska bladtemperatur med en infraröd termometer för maximal noggrannhet. Professionella odlare vet att denna detalj gör skillnaden mellan bra och exceptionella odlingsresultat.",
+          "paragraph4": "Välj ditt tillväxtstadium för att få skräddarsydda VPD-rekommendationer. Varje stadium har olika optimala områden eftersom växtfysiologin förändras genom livscykeln. Förökning och plantor behöver milda förhållanden (0,4-0,8 kPa), vegetativ tillväxt drar nytta av måttlig transpiration (0,8-1,2 kPa), tidig blomning kräver något högre VPD (1,0-1,3 kPa) och sen blomning/mognad kan hantera högsta VPD (1,2-1,6 kPa) för att driva hartsproduktion och terpenutv eckling.",
+          "exampleHeading": "Exempelberäkning",
+          "exampleText": "Exempel: Om ditt odlingsrum har en lufttemperatur på 24°C med 60% relativ luftfuktighet och du använder en -1,1°C bladoffset för vegetativ tillväxt, kommer din VPD att vara cirka 1,05 kPa. Detta faller inom det optimala området för vegetativ fas (0,8-1,2 kPa), vilket indikerar ideala förhållanden för kraftig tillväxt. Om din VPD är utanför målområdet, justera antingen temperatur eller fuktighet för att få den i den optimala zonen för ditt tillväxtstadium."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {
+              "question": "Vad är VPD och varför är det viktigt för växtodling?",
+              "answer": "VPD (Ångtrycksunderskott) är skillnaden mellan mängden fukt i luften och hur mycket fukt luften kan hålla när den är mättad. Det är kritiskt viktigt eftersom det direkt påverkar växttranspiration, som kontrollerar näringsupptag, tillväxthastighet och allmän växthälsa. Korrekt VPD-hantering kan öka skördarna med 20-30% jämfört med att övervaka temperatur och fuktighet separat."
+            },
+            {
+              "question": "Vad är optimal VPD för cannabisväxter?",
+              "answer": "Optimal VPD för cannabis varierar beroende på tillväxtstadium: Plantor/Kloner: 0,4-0,8 kPa, Vegetativt: 0,8-1,2 kPa, Tidig blomning: 1,0-1,3 kPa, Sen blomning: 1,2-1,6 kPa. Dessa områden främjar hälsosam transpiration, optimalt näringsupptag och maximerar skörd och potens."
+            },
+            {
+              "question": "Hur mäter jag bladtemperatur för VPD-beräkningar?",
+              "answer": "Använd en infraröd (IR) termometer för att mäta faktisk bladyttemperatur, eller använd offset-metoden. Blad är vanligtvis 1-3°C kallare än lufttemperaturen på grund av transpiration. En offset på -1,1°C är en bra utgångspunkt, men faktiska mätningar ger de mest exakta VPD-beräkningarna. Rikta IR-termometern mot toppen av bladverket för bästa resultat."
+            },
+            {
+              "question": "Vad händer om min VPD är för hög?",
+              "answer": "Hög VPD (låg luftfuktighet) orsakar överdriven transpiration, vilket leder till växtstress, näringsbrist (särskilt kalcium), bladkantsbränning och hämmad tillväxt. Växter stänger sina klyvöppningar för att spara vatten, vilket minskar CO2-upptaget och saktar ner fotosyntesen. Lösning: öka fuktigheten med en luftfuktare, sänk temperaturen något eller säkerställ tillräcklig vattning."
+            },
+            {
+              "question": "Vad händer om min VPD är för låg?",
+              "answer": "Låg VPD (hög luftfuktighet) minskar transpirationen, vilket orsakar långsam tillväxt, problem med näringsupptag och ökad risk för mögel, mjöldagg och svampsjukdomar. Växter kan inte effektivt dra näringsämnen från rötterna när transpirationen är otillräcklig. Lösning: öka temperaturen, lägg till avfuktning eller förbättra luftcirkulationen med fläktar."
+            },
+            {
+              "question": "Ska jag använda Fahrenheit eller Celsius för VPD-beräkningar?",
+              "answer": "Båda fungerar lika bra - kalkylatorn konverterar automatiskt. I Sverige använder de flesta odlare Celsius. VPD-resultatet visas alltid i kPa (kilopascal), som är standardenheten för ångtrycksunderskott oavsett vilken temperaturenhet som används."
+            },
+            {
+              "question": "Hur ofta bör jag kontrollera och justera VPD?",
+              "answer": "Kontrollera VPD minst dagligen och flera gånger dagligen under kritiska tillväxtfaser. VPD ändras under dagen när temperatur och fuktighet fluktuerar. Använd en hygrometer med datalogning för att spåra trender. Justera miljökontroller (AC, värmare, luftfuktare, avfuktare) för att hålla VPD i målområdet för ditt nuvarande tillväxtstadium."
+            },
+            {
+              "question": "Gäller VPD för alla växttyper eller bara cannabis?",
+              "answer": "VPD-principerna gäller för alla växter, även om optimala områden varierar beroende på art. Denna kalkylator fungerar för cannabis, tomater, paprika, sallad, örter och alla inomhusgrödor. Bladgrönsaker föredrar något lägre VPD (0,4-0,8 kPa), medan fruktbärande växter som tomater och paprika trivs vid 0,8-1,2 kPa. Justera tillväxtstadieval för att matcha din grödas behov."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "dogSize": "Hundstorlekkalkylator",
+          "dogSizeDesc": "Uppskatta din hunds vuxenstorlek från valpålder och vikt",
+          "c1v1": "C1V1-utspädningskalkylator",
+          "c1v1Desc": "Beräkna utspädningsvolymer och koncentrationer för lösningar",
+          "catPregnancy": "Katt graviditetskalkylator",
+          "catPregnancyDesc": "Uppskatta din katts förväntade födelsedatum och leveransfönster"
+        }
+      }
     }
   },
   "notFound": {

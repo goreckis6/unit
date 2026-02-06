@@ -6180,6 +6180,102 @@
         }
       }
     },
+    "vpd": {
+      "title": "VPD Calculator - Vapor Pressure Deficit Calculator",
+      "description": "Calculate Vapor Pressure Deficit (VPD) for optimal plant growth. Professional VPD calculator with leaf temperature offset, growth stage recommendations, and real-time status for indoor growing.",
+      "airTemp": "Air Temperature",
+      "relativeHumidity": "Relative Humidity (RH)",
+      "leafTempMethod": "Leaf Temperature Method",
+      "useOffset": "Use Offset",
+      "useActual": "Use Actual",
+      "leafOffset": "Leaf Temperature Offset",
+      "actualLeafTemp": "Actual Leaf Temperature",
+      "growthStage": "Growth Stage",
+      "stagePropagation": "Propagation / Seedlings (0.4-0.8 kPa)",
+      "stageVegetative": "Vegetative Stage (0.8-1.2 kPa)",
+      "stageEarlyFlowering": "Early Flowering (1.0-1.3 kPa)",
+      "stageLateFlowering": "Late Flowering / Ripening (1.2-1.6 kPa)",
+      "fahrenheit": "°F",
+      "celsius": "°C",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "vpdValue": "VPD Value",
+      "status": "Status",
+      "statusOptimal": "Optimal",
+      "statusTooLow": "Too Low (Too Humid)",
+      "statusTooHigh": "Too High (Too Dry)",
+      "calculatedLeafTemp": "Calculated Leaf Temperature",
+      "adviceHeading": "Recommendation",
+      "adviceTooLow": "Your VPD is too low, indicating excessive humidity. Increase air circulation, reduce humidity, or slightly increase temperature to prevent mold and fungal issues.",
+      "adviceOptimal": "Your VPD is in the optimal range for your selected growth stage. Maintain these conditions for healthy plant growth and optimal transpiration.",
+      "adviceTooHigh": "Your VPD is too high, indicating insufficient humidity. Increase humidity, lower temperature, or improve air circulation to prevent plant stress and excessive transpiration.",
+      "targetRange": "Target range for selected stage",
+      "calculationHeading": "Calculation Details",
+      "formulaLabel": "VPD Formula (Tetens Equation)",
+      "enterValue": "Enter air temperature, humidity, and leaf temperature settings to calculate VPD",
+      "clickCalculate": "Click Calculate to see your VPD and recommendations",
+      "seo": {
+        "title": "VPD Calculator - Vapor Pressure Deficit Calculator for Growing | Free Tool",
+        "description": "Professional VPD (Vapor Pressure Deficit) calculator for indoor growing. Calculate optimal VPD for all growth stages with leaf temperature offset. Free tool with real-time recommendations for cannabis, vegetables, and all plants.",
+        "keywords": "vpd calculator, vapor pressure deficit calculator, vpd chart calculator, grow room vpd, cannabis vpd, vpd for growing, leaf temperature vpd, vpd flowering stage, vpd vegetative stage, indoor growing vpd",
+        "content": {
+          "heading": "How to Use the VPD Calculator",
+          "paragraph1": "The VPD (Vapor Pressure Deficit) Calculator is an essential tool for serious indoor growers. VPD measures the difference between the moisture in the air and the moisture in saturated air at the same temperature. This value directly impacts plant transpiration, nutrient uptake, and overall plant health. Our calculator uses the scientifically accurate Tetens equation to provide precise VPD calculations tailored to your specific growing conditions.",
+          "paragraph2": "Understanding VPD is crucial because it affects how efficiently plants transpire and uptake nutrients. When VPD is too low (high humidity), plants struggle to transpire, leading to slow growth and increased risk of mold and fungal diseases. When VPD is too high (low humidity), plants transpire too quickly, causing stress, nutrient deficiencies, and stunted growth. The optimal VPD range varies by growth stage: seedlings and clones prefer 0.4-0.8 kPa, vegetative plants thrive at 0.8-1.2 kPa, and flowering plants perform best at 1.0-1.6 kPa.",
+          "paragraph3": "This calculator includes an advanced leaf temperature offset feature that most basic VPD calculators ignore. Plant leaves are typically 2-5°F (1-3°C) cooler than ambient air temperature due to transpiration. This difference significantly affects VPD calculations. You can either enter an offset (default -2°F or -1.1°C) or measure your actual leaf temperature using an infrared thermometer for maximum accuracy. Professional growers know that this detail makes the difference between good and exceptional growing results.",
+          "paragraph4": "Select your growth stage to receive customized VPD recommendations. Each stage has different optimal ranges because plant physiology changes throughout the lifecycle. Propagation and seedlings need gentle conditions (0.4-0.8 kPa), vegetative growth benefits from moderate transpiration (0.8-1.2 kPa), early flowering requires slightly higher VPD (1.0-1.3 kPa), and late flowering/ripening can handle the highest VPD (1.2-1.6 kPa) to drive resin production and terpene development.",
+          "exampleHeading": "Example Calculation",
+          "exampleText": "Example: If your grow room has an air temperature of 75°F (24°C) with 60% relative humidity, and you're using a -2°F leaf offset for vegetative growth, your VPD would be approximately 1.05 kPa. This falls within the optimal range for vegetative stage (0.8-1.2 kPa), indicating ideal conditions for vigorous growth. If your VPD is outside the target range, adjust either temperature or humidity to bring it into the optimal zone for your growth stage."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is VPD and why is it important for growing plants?",
+              "answer": "VPD (Vapor Pressure Deficit) is the difference between the amount of moisture in the air and how much moisture the air can hold when saturated. It's critically important because it directly affects plant transpiration, which controls nutrient uptake, growth rate, and overall plant health. Proper VPD management can increase yields by 20-30% compared to just monitoring temperature and humidity separately."
+            },
+            {
+              "question": "What is the optimal VPD for cannabis plants?",
+              "answer": "Optimal VPD for cannabis varies by growth stage: Seedlings/Clones: 0.4-0.8 kPa, Vegetative: 0.8-1.2 kPa, Early Flowering: 1.0-1.3 kPa, Late Flowering: 1.2-1.6 kPa. These ranges promote healthy transpiration, optimal nutrient uptake, and maximize yield and potency."
+            },
+            {
+              "question": "How do I measure leaf temperature for VPD calculations?",
+              "answer": "Use an infrared (IR) thermometer to measure actual leaf surface temperature, or use the offset method. Leaves are typically 2-5°F (1-3°C) cooler than air temperature due to transpiration. A -2°F (-1.1°C) offset is a good starting point, but actual measurements provide the most accurate VPD calculations. Point the IR thermometer at the top of the canopy for best results."
+            },
+            {
+              "question": "What happens if my VPD is too high?",
+              "answer": "High VPD (low humidity) causes excessive transpiration, leading to plant stress, nutrient deficiencies (especially calcium), leaf edge burn, and stunted growth. Plants close their stomata to conserve water, reducing CO2 intake and slowing photosynthesis. To fix: increase humidity with a humidifier, lower temperature slightly, or ensure adequate watering."
+            },
+            {
+              "question": "What happens if my VPD is too low?",
+              "answer": "Low VPD (high humidity) reduces transpiration, causing slow growth, nutrient uptake issues, and increased risk of mold, mildew, and fungal diseases. Plants can't effectively pull nutrients from roots when transpiration is insufficient. To fix: increase temperature, add dehumidification, or improve air circulation with fans."
+            },
+            {
+              "question": "Should I use Fahrenheit or Celsius for VPD calculations?",
+              "answer": "Both work equally well - the calculator converts automatically. In the US, most growers use Fahrenheit, while international growers typically use Celsius. The VPD result is always displayed in kPa (kilopascals), which is the standard unit for vapor pressure deficit regardless of temperature unit used."
+            },
+            {
+              "question": "How often should I check and adjust VPD?",
+              "answer": "Check VPD at least daily, and multiple times per day during critical growth phases. VPD changes throughout the day as temperature and humidity fluctuate. Use a hygrometer with data logging to track trends. Adjust environmental controls (AC, heater, humidifier, dehumidifier) to maintain VPD in the target range for your current growth stage."
+            },
+            {
+              "question": "Does VPD apply to all types of plants or just cannabis?",
+              "answer": "VPD principles apply to all plants, though optimal ranges vary by species. This calculator works for cannabis, tomatoes, peppers, lettuce, herbs, and all indoor crops. Leafy greens prefer slightly lower VPD (0.4-0.8 kPa), while fruiting plants like tomatoes and peppers thrive at 0.8-1.2 kPa. Adjust the growth stage selection to match your crop's needs."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "dogSize": "Dog Size Calculator",
+          "dogSizeDesc": "Estimate your dog's adult size from puppy age and weight",
+          "c1v1": "C1V1 Dilution Calculator",
+          "c1v1Desc": "Calculate dilution volumes and concentrations for solutions",
+          "catPregnancy": "Cat Pregnancy Calculator",
+          "catPregnancyDesc": "Estimate your cat's due date and delivery window"
+        }
+      }
+    },
     "italicText": {
       "title": "Italic Text Generator",
       "description": "Generate italic text instantly with multiple Unicode styles: serif italic, cursive script, and sans-serif italic. Perfect for social media, design, and creative writing.",

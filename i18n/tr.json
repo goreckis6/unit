@@ -7042,6 +7042,102 @@
           "catPregnancyDesc": "Kedinizin doğum tarihini ve doğum penceresini tahmin edin"
         }
       }
+    },
+    "vpd": {
+      "title": "VPD Hesaplayıcı - Buhar Basıncı Açığı Hesaplayıcı",
+      "description": "Optimal bitki büyümesi için Buhar Basıncı Açığı (VPD) hesaplayın. Yaprak sıcaklığı ofseti, büyüme aşaması tavsiyeleri ve iç mekan yetiştirme için gerçek zamanlı durum içeren profesyonel VPD hesaplayıcı.",
+      "airTemp": "Hava Sıcaklığı",
+      "relativeHumidity": "Bağıl Nem (RH)",
+      "leafTempMethod": "Yaprak Sıcaklığı Yöntemi",
+      "useOffset": "Ofset Kullan",
+      "useActual": "Gerçek Kullan",
+      "leafOffset": "Yaprak Sıcaklığı Ofseti",
+      "actualLeafTemp": "Gerçek Yaprak Sıcaklığı",
+      "growthStage": "Büyüme Aşaması",
+      "stagePropagation": "Çoğaltma / Fideler (0,4-0,8 kPa)",
+      "stageVegetative": "Vejetatif Aşama (0,8-1,2 kPa)",
+      "stageEarlyFlowering": "Erken Çiçeklenme (1,0-1,3 kPa)",
+      "stageLateFlowering": "Geç Çiçeklenme / Olgunlaşma (1,2-1,6 kPa)",
+      "fahrenheit": "°F",
+      "celsius": "°C",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "vpdValue": "VPD Değeri",
+      "status": "Durum",
+      "statusOptimal": "Optimal",
+      "statusTooLow": "Çok Düşük (Çok Nemli)",
+      "statusTooHigh": "Çok Yüksek (Çok Kuru)",
+      "calculatedLeafTemp": "Hesaplanan Yaprak Sıcaklığı",
+      "adviceHeading": "Tavsiye",
+      "adviceTooLow": "VPD'niz çok düşük, bu aşırı nemi gösterir. Hava sirkülasyonunu artırın, nemi azaltın veya küf ve mantar sorunlarını önlemek için sıcaklığı hafifçe yükseltin.",
+      "adviceOptimal": "VPD'niz seçtiğiniz büyüme aşaması için optimal aralıktadır. Sağlıklı bitki büyümesi ve optimal terleme için bu koşulları koruyun.",
+      "adviceTooHigh": "VPD'niz çok yüksek, bu yetersiz nemi gösterir. Nemi artırın, sıcaklığı düşürün veya bitki stresi ve aşırı terlemeyi önlemek için hava sirkülasyonunu iyileştirin.",
+      "targetRange": "Seçilen aşama için hedef aralık",
+      "calculationHeading": "Hesaplama Detayları",
+      "formulaLabel": "VPD Formülü (Tetens Denklemi)",
+      "enterValue": "VPD'yi hesaplamak için hava sıcaklığı, nem ve yaprak sıcaklığı ayarlarını girin",
+      "clickCalculate": "VPD'nizi ve tavsiyelerinizi görmek için Hesapla'ya tıklayın",
+      "seo": {
+        "title": "VPD Hesaplayıcı - Yetiştirme için Buhar Basıncı Açığı Hesaplayıcı | Ücretsiz Araç",
+        "description": "İç mekan yetiştirme için profesyonel VPD (Buhar Basıncı Açığı) hesaplayıcı. Yaprak sıcaklığı ofseti ile tüm büyüme aşamaları için optimal VPD hesaplayın. Kenevir, sebze ve tüm bitkiler için gerçek zamanlı tavsiyeler içeren ücretsiz araç.",
+        "keywords": "vpd hesaplayıcı, buhar basıncı açığı hesaplayıcı, vpd grafik hesaplayıcı, grow room vpd, kenevir vpd, yetiştirme için vpd, yaprak sıcaklığı vpd, vpd çiçeklenme aşaması, vpd vejetatif aşama, iç mekan yetiştirme vpd",
+        "content": {
+          "heading": "VPD Hesaplayıcı Nasıl Kullanılır",
+          "paragraph1": "VPD (Buhar Basıncı Açığı) Hesaplayıcı, ciddi iç mekan yetiştiricileri için vazgeçilmez bir araçtır. VPD, havadaki nem ile aynı sıcaklıkta doymuş havadaki nem arasındaki farkı ölçer. Bu değer, bitki terlemesini, besin alımını ve genel bitki sağlığını doğrudan etkiler. Hesaplayıcımız, özel yetiştirme koşullarınıza göre uyarlanmış kesin VPD hesaplamaları sağlamak için bilimsel olarak doğru Tetens denklemini kullanır.",
+          "paragraph2": "VPD'yi anlamak çok önemlidir çünkü bitkilerin ne kadar verimli terlediğini ve besin aldığını etkiler. VPD çok düşük olduğunda (yüksek nem), bitkiler terlemekte zorlanır, bu da yavaş büyümeye ve küf ve mantar hastalıkları riskinin artmasına yol açar. VPD çok yüksek olduğunda (düşük nem), bitkiler çok hızlı terler, bu da strese, besin eksikliklerine ve bodur büyümeye neden olur. Optimal VPD aralığı büyüme aşamasına göre değişir: fideler ve klonlar 0,4-0,8 kPa'yı tercih eder, vejetatif bitkiler 0,8-1,2 kPa'da gelişir ve çiçeklenen bitkiler 1,0-1,6 kPa'da en iyi performansı gösterir.",
+          "paragraph3": "Bu hesaplayıcı, çoğu temel VPD hesaplayıcının görmezden geldiği gelişmiş bir yaprak sıcaklığı ofseti özelliği içerir. Bitki yaprakları, terleme nedeniyle genellikle ortam hava sıcaklığından 1-3°C daha soğuktur. Bu fark, VPD hesaplamalarını önemli ölçüde etkiler. Maksimum doğruluk için bir ofset (varsayılan -1,1°C) girebilir veya bir kızılötesi termometre ile gerçek yaprak sıcaklığınızı ölçebilirsiniz. Profesyonel yetiştiriciler, bu detayın iyi ve olağanüstü yetiştirme sonuçları arasındaki farkı yarattığını bilir.",
+          "paragraph4": "Özelleştirilmiş VPD tavsiyeleri almak için büyüme aşamanızı seçin. Her aşamanın farklı optimal aralıkları vardır çünkü bitki fizyolojisi yaşam döngüsü boyunca değişir. Çoğaltma ve fideler nazik koşullara ihtiyaç duyar (0,4-0,8 kPa), vejetatif büyüme ılımlı terlemeden faydalanır (0,8-1,2 kPa), erken çiçeklenme biraz daha yüksek VPD gerektirir (1,0-1,3 kPa) ve geç çiçeklenme/olgunlaşma reçine üretimi ve terpen gelişimini sağlamak için en yüksek VPD'yi (1,2-1,6 kPa) kaldırabilir.",
+          "exampleHeading": "Örnek Hesaplama",
+          "exampleText": "Örnek: Yetiştirme odanızın hava sıcaklığı %60 bağıl nem ile 24°C ise ve vejetatif büyüme için -1,1°C yaprak ofseti kullanıyorsanız, VPD'niz yaklaşık 1,05 kPa olacaktır. Bu, vejetatif aşama için optimal aralığa (0,8-1,2 kPa) düşer ve güçlü büyüme için ideal koşulları gösterir. VPD'niz hedef aralığın dışındaysa, büyüme aşamanız için optimal bölgeye getirmek için sıcaklığı veya nemi ayarlayın."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {
+              "question": "VPD nedir ve bitki yetiştirme için neden önemlidir?",
+              "answer": "VPD (Buhar Basıncı Açığı), havadaki nem miktarı ile doygunlukta havanın tutabileceği nem miktarı arasındaki farktır. Bitki terlemesini doğrudan etkilediği için kritik derecede önemlidir; bu da besin alımını, büyüme oranını ve genel bitki sağlığını kontrol eder. Uygun VPD yönetimi, sıcaklık ve nemi ayrı ayrı izlemeye kıyasla verimi %20-30 artırabilir."
+            },
+            {
+              "question": "Kenevir bitkileri için optimal VPD nedir?",
+              "answer": "Kenevir için optimal VPD büyüme aşamasına göre değişir: Fideler/Klonlar: 0,4-0,8 kPa, Vejetatif: 0,8-1,2 kPa, Erken Çiçeklenme: 1,0-1,3 kPa, Geç Çiçeklenme: 1,2-1,6 kPa. Bu aralıklar sağlıklı terlemeyi, optimal besin alımını teşvik eder ve verimi ve gücü maksimize eder."
+            },
+            {
+              "question": "VPD hesaplamaları için yaprak sıcaklığını nasıl ölçerim?",
+              "answer": "Gerçek yaprak yüzey sıcaklığını ölçmek için bir kızılötesi (IR) termometre kullanın veya ofset yöntemini kullanın. Yapraklar, terleme nedeniyle genellikle hava sıcaklığından 1-3°C daha soğuktur. -1,1°C ofset iyi bir başlangıç noktasıdır, ancak gerçek ölçümler en doğru VPD hesaplamalarını sağlar. En iyi sonuçlar için IR termometreyi kanopi tepesine doğrultun."
+            },
+            {
+              "question": "VPD'm çok yüksekse ne olur?",
+              "answer": "Yüksek VPD (düşük nem), aşırı terlemeye neden olur, bitki stresine, besin eksikliklerine (özellikle kalsiyum), yaprak kenarı yanmasına ve bodur büyümeye yol açar. Bitkiler, suyu korumak için stomatalarını kapatır, CO2 alımını azaltır ve fotosentezi yavaşlatır. Çözüm: nem artırıcı ile nemi artırın, sıcaklığı hafifçe düşürün veya yeterli sulama sağlayın."
+            },
+            {
+              "question": "VPD'm çok düşükse ne olur?",
+              "answer": "Düşük VPD (yüksek nem), terlemeyi azaltır, yavaş büyümeye, besin alım sorunlarına ve küf, mildiyö ve mantar hastalıkları riskinin artmasına neden olur. Terleme yetersiz olduğunda bitkiler köklerden etkili bir şekilde besin çekemez. Çözüm: sıcaklığı artırın, nem alma ekleyin veya fanlarla hava sirkülasyonunu iyileştirin."
+            },
+            {
+              "question": "VPD hesaplamaları için Fahrenheit mi yoksa Celsius mu kullanmalıyım?",
+              "answer": "Her ikisi de eşit derecede iyi çalışır - hesaplayıcı otomatik olarak dönüştürür. Türkiye'de çoğu yetiştiriciler Celsius kullanır. VPD sonucu her zaman kPa (kilopascal) olarak görüntülenir; bu, kullanılan sıcaklık biriminden bağımsız olarak buhar basıncı açığı için standart birimdir."
+            },
+            {
+              "question": "VPD'yi ne sıklıkla kontrol etmeli ve ayarlamalıyım?",
+              "answer": "VPD'yi en az günlük olarak ve kritik büyüme aşamalarında günde birkaç kez kontrol edin. Sıcaklık ve nem dalgalandıkça VPD gün boyunca değişir. Trendleri izlemek için veri kaydı olan bir higrometre kullanın. Mevcut büyüme aşamanız için VPD'yi hedef aralıkta tutmak için çevre kontrollerini (klima, ısıtıcı, nem artırıcı, nem alma) ayarlayın."
+            },
+            {
+              "question": "VPD tüm bitki türleri için mi geçerli yoksa sadece kenevir için mi?",
+              "answer": "VPD ilkeleri tüm bitkiler için geçerlidir, ancak optimal aralıklar türe göre değişir. Bu hesaplayıcı kenevir, domates, biber, marul, otlar ve tüm iç mekan ürünleri için çalışır. Yapraklı yeşillikler biraz daha düşük VPD'yi tercih eder (0,4-0,8 kPa), domates ve biber gibi meyve veren bitkiler ise 0,8-1,2 kPa'da gelişir. Ürününüzün ihtiyaçlarına uyacak şekilde büyüme aşaması seçimini ayarlayın."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "dogSize": "Köpek Boyutu Hesaplayıcı",
+          "dogSizeDesc": "Yavru yaşı ve ağırlığından köpeğinizin yetişkin boyutunu tahmin edin",
+          "c1v1": "C1V1 Seyreltme Hesaplayıcı",
+          "c1v1Desc": "Çözeltiler için seyreltme hacimlerini ve konsantrasyonlarını hesaplayın",
+          "catPregnancy": "Kedi Hamilelik Hesaplayıcı",
+          "catPregnancyDesc": "Kedinizin doğum tarihini ve doğum penceresini tahmin edin"
+        }
+      }
     }
   },
   "notFound": {

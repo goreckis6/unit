@@ -7023,6 +7023,102 @@
           "catPregnancyDesc": "Oszacuj termin porodu i okno dostawy kotki"
         }
       }
+    },
+    "vpd": {
+      "title": "Kalkulator VPD - Kalkulator Deficytu Ciśnienia Pary",
+      "description": "Oblicz deficyt ciśnienia pary (VPD) dla optymalnego wzrostu roślin. Profesjonalny kalkulator VPD z offsetem temperatury liści, rekomendacjami stadiów wzrostu i statusem w czasie rzeczywistym dla uprawy indoor.",
+      "airTemp": "Temperatura powietrza",
+      "relativeHumidity": "Wilgotność względna (RH)",
+      "leafTempMethod": "Metoda temperatury liści",
+      "useOffset": "Użyj offsetu",
+      "useActual": "Użyj rzeczywistej",
+      "leafOffset": "Offset temperatury liści",
+      "actualLeafTemp": "Rzeczywista temperatura liści",
+      "growthStage": "Stadium wzrostu",
+      "stagePropagation": "Propagacja / Sadzonki (0,4-0,8 kPa)",
+      "stageVegetative": "Faza wegetatywna (0,8-1,2 kPa)",
+      "stageEarlyFlowering": "Wczesne kwitnienie (1,0-1,3 kPa)",
+      "stageLateFlowering": "Późne kwitnienie / Dojrzewanie (1,2-1,6 kPa)",
+      "fahrenheit": "°F",
+      "celsius": "°C",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "vpdValue": "Wartość VPD",
+      "status": "Status",
+      "statusOptimal": "Optymalny",
+      "statusTooLow": "Za niski (Za wilgotno)",
+      "statusTooHigh": "Za wysoki (Za sucho)",
+      "calculatedLeafTemp": "Obliczona temperatura liści",
+      "adviceHeading": "Rekomendacja",
+      "adviceTooLow": "Twoje VPD jest za niskie, co wskazuje na nadmierną wilgotność. Zwiększ cyrkulację powietrza, zmniejsz wilgotność lub nieznacznie podnieś temperaturę, aby zapobiec problemom z pleśnią i grzybami.",
+      "adviceOptimal": "Twoje VPD jest w optymalnym zakresie dla wybranego stadium wzrostu. Utrzymuj te warunki dla zdrowego wzrostu roślin i optymalnej transpiracji.",
+      "adviceTooHigh": "Twoje VPD jest za wysokie, co wskazuje na niewystarczającą wilgotność. Zwiększ wilgotność, obniż temperaturę lub popraw cyrkulację powietrza, aby zapobiec stresowi roślin i nadmiernej transpiracji.",
+      "targetRange": "Zakres docelowy dla wybranego stadium",
+      "calculationHeading": "Szczegóły obliczenia",
+      "formulaLabel": "Formuła VPD (Równanie Tetensa)",
+      "enterValue": "Wprowadź temperaturę powietrza, wilgotność i ustawienia temperatury liści, aby obliczyć VPD",
+      "clickCalculate": "Kliknij Oblicz, aby zobaczyć swoje VPD i rekomendacje",
+      "seo": {
+        "title": "Kalkulator VPD - Kalkulator Deficytu Ciśnienia Pary dla Uprawy | Darmowe Narzędzie",
+        "description": "Profesjonalny kalkulator VPD (Deficytu Ciśnienia Pary) do uprawy indoor. Oblicz optymalne VPD dla wszystkich stadiów wzrostu z offsetem temperatury liści. Darmowe narzędzie z rekomendacjami w czasie rzeczywistym dla konopi, warzyw i wszystkich roślin.",
+        "keywords": "kalkulator vpd, kalkulator deficytu ciśnienia pary, kalkulator wykresu vpd, vpd w growroomie, vpd konopi, vpd do uprawy, vpd temperatury liści, vpd faza kwitnienia, vpd faza wegetatywna, vpd uprawy indoor",
+        "content": {
+          "heading": "Jak używać Kalkulatora VPD",
+          "paragraph1": "Kalkulator VPD (Deficytu Ciśnienia Pary) jest niezbędnym narzędziem dla poważnych hodowców indoor. VPD mierzy różnicę między wilgotnością w powietrzu a wilgotnością w nasyconym powietrzu przy tej samej temperaturze. Ta wartość bezpośrednio wpływa na transpirację roślin, pobieranie składników odżywczych i ogólne zdrowie roślin. Nasz kalkulator używa naukowo dokładnego równania Tetensa, aby zapewnić precyzyjne obliczenia VPD dostosowane do Twoich specyficznych warunków uprawy.",
+          "paragraph2": "Zrozumienie VPD jest kluczowe, ponieważ wpływa na to, jak efektywnie rośliny transpirują i pobierają składniki odżywcze. Gdy VPD jest za niskie (wysoka wilgotność), rośliny mają trudności z transpiracją, co prowadzi do wolnego wzrostu i zwiększonego ryzyka pleśni i chorób grzybiczych. Gdy VPD jest za wysokie (niska wilgotność), rośliny transpirują zbyt szybko, powodując stres, niedobory składników odżywczych i zahamowany wzrost. Optymalny zakres VPD różni się w zależności od stadium wzrostu: sadzonki i klony preferują 0,4-0,8 kPa, rośliny wegetatywne rozwijają się przy 0,8-1,2 kPa, a rośliny kwitnące osiągają najlepsze wyniki przy 1,0-1,6 kPa.",
+          "paragraph3": "Ten kalkulator zawiera zaawansowaną funkcję offsetu temperatury liści, którą ignoruje większość podstawowych kalkulatorów VPD. Liście roślin są zazwyczaj 1-3°C chłodniejsze niż temperatura otoczenia ze względu na transpirację. Ta różnica znacząco wpływa na obliczenia VPD. Możesz wprowadzić offset (domyślnie -1,1°C) lub zmierzyć rzeczywistą temperaturę liści termometrem podczerwonym dla maksymalnej dokładności. Profesjonalni hodowcy wiedzą, że ten szczegół robi różnicę między dobrymi a wyjątkowymi wynikami uprawy.",
+          "paragraph4": "Wybierz swoje stadium wzrostu, aby otrzymać spersonalizowane rekomendacje VPD. Każde stadium ma różne optymalne zakresy, ponieważ fizjologia roślin zmienia się w trakcie cyklu życiowego. Propagacja i sadzonki potrzebują łagodnych warunków (0,4-0,8 kPa), wzrost wegetatywny korzysta z umiarkowanej transpiracji (0,8-1,2 kPa), wczesne kwitnienie wymaga nieco wyższego VPD (1,0-1,3 kPa), a późne kwitnienie/dojrzewanie może wytrzymać najwyższe VPD (1,2-1,6 kPa), aby stymulować produkcję żywicy i rozwój terpenów.",
+          "exampleHeading": "Przykład obliczenia",
+          "exampleText": "Przykład: Jeśli Twój growroom ma temperaturę powietrza 24°C przy 60% wilgotności względnej i używasz offsetu -1,1°C dla wzrostu wegetatywnego, Twoje VPD wyniesie około 1,05 kPa. To mieści się w optymalnym zakresie dla fazy wegetatywnej (0,8-1,2 kPa), wskazując idealne warunki dla energicznego wzrostu. Jeśli Twoje VPD jest poza zakresem docelowym, dostosuj temperaturę lub wilgotność, aby przywrócić je do optymalnej strefy dla Twojego stadium wzrostu."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {
+              "question": "Czym jest VPD i dlaczego jest ważne dla uprawy roślin?",
+              "answer": "VPD (Deficyt Ciśnienia Pary) to różnica między ilością wilgoci w powietrzu a ilością wilgoci, którą powietrze może pomieścić po nasyceniu. Jest to krytycznie ważne, ponieważ bezpośrednio wpływa na transpirację roślin, która kontroluje pobieranie składników odżywczych, tempo wzrostu i ogólne zdrowie roślin. Właściwe zarządzanie VPD może zwiększyć plony o 20-30% w porównaniu do osobnego monitorowania temperatury i wilgotności."
+            },
+            {
+              "question": "Jakie jest optymalne VPD dla roślin konopi?",
+              "answer": "Optymalne VPD dla konopi różni się w zależności od stadium wzrostu: Sadzonki/Klony: 0,4-0,8 kPa, Wegetatywna: 0,8-1,2 kPa, Wczesne kwitnienie: 1,0-1,3 kPa, Późne kwitnienie: 1,2-1,6 kPa. Te zakresy promują zdrową transpirację, optymalne pobieranie składników odżywczych i maksymalizują plon i potencję."
+            },
+            {
+              "question": "Jak zmierzyć temperaturę liści do obliczeń VPD?",
+              "answer": "Użyj termometru podczerwieni (IR), aby zmierzyć rzeczywistą temperaturę powierzchni liści, lub użyj metody offsetu. Liście są zazwyczaj 1-3°C chłodniejsze niż temperatura powietrza ze względu na transpirację. Offset -1,1°C to dobry punkt wyjścia, ale rzeczywiste pomiary zapewniają najdokładniejsze obliczenia VPD. Skieruj termometr IR na górę baldachimu dla najlepszych wyników."
+            },
+            {
+              "question": "Co się dzieje, gdy moje VPD jest za wysokie?",
+              "answer": "Wysokie VPD (niska wilgotność) powoduje nadmierną transpirację, prowadząc do stresu roślin, niedoborów składników odżywczych (zwłaszcza wapnia), spalania brzegów liści i zahamowanego wzrostu. Rośliny zamykają swoje aparaty szparkowe, aby zachować wodę, redukując pobieranie CO2 i spowalniając fotosyntezę. Rozwiązanie: zwiększ wilgotność nawilżaczem, nieznacznie obniż temperaturę lub zapewnij odpowiednie podlewanie."
+            },
+            {
+              "question": "Co się dzieje, gdy moje VPD jest za niskie?",
+              "answer": "Niskie VPD (wysoka wilgotność) zmniejsza transpirację, powodując wolny wzrost, problemy z pobieraniem składników odżywczych i zwiększone ryzyko pleśni, mączniaka i chorób grzybiczych. Rośliny nie mogą skutecznie pobierać składników odżywczych z korzeni, gdy transpiracja jest niewystarczająca. Rozwiązanie: zwiększ temperaturę, dodaj osuszanie lub popraw cyrkulację powietrza wentylatorami."
+            },
+            {
+              "question": "Czy powinienem używać Fahrenheita czy Celsjusza do obliczeń VPD?",
+              "answer": "Obie działają równie dobrze - kalkulator konwertuje automatycznie. W Polsce większość hodowców używa Celsjusza. Wynik VPD jest zawsze wyświetlany w kPa (kilopaskalach), co jest standardową jednostką dla deficytu ciśnienia pary, niezależnie od używanej jednostki temperatury."
+            },
+            {
+              "question": "Jak często powinienem sprawdzać i dostosowywać VPD?",
+              "answer": "Sprawdzaj VPD przynajmniej codziennie i wielokrotnie dziennie podczas krytycznych faz wzrostu. VPD zmienia się w ciągu dnia, gdy temperatura i wilgotność wahają się. Użyj higrometru z rejestracją danych, aby śledzić trendy. Dostosuj kontrole środowiskowe (klimatyzacja, ogrzewanie, nawilżacz, osuszacz), aby utrzymać VPD w zakresie docelowym dla Twojego obecnego stadium wzrostu."
+            },
+            {
+              "question": "Czy VPD dotyczy wszystkich rodzajów roślin czy tylko konopi?",
+              "answer": "Zasady VPD dotyczą wszystkich roślin, chociaż optymalne zakresy różnią się w zależności od gatunku. Ten kalkulator działa dla konopi, pomidorów, papryki, sałaty, ziół i wszystkich upraw indoor. Warzywa liściaste preferują nieco niższe VPD (0,4-0,8 kPa), podczas gdy rośliny owocujące jak pomidory i papryka rozwijają się przy 0,8-1,2 kPa. Dostosuj wybór stadium wzrostu do potrzeb Twojej uprawy."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "dogSize": "Kalkulator Rozmiaru Psa",
+          "dogSizeDesc": "Oszacuj dorosły rozmiar psa na podstawie wieku i wagi szczeniaka",
+          "c1v1": "Kalkulator Rozcieńczenia C1V1",
+          "c1v1Desc": "Oblicz objętości i stężenia rozcieńczeń dla roztworów",
+          "catPregnancy": "Kalkulator Ciąży Kotki",
+          "catPregnancyDesc": "Oszacuj termin porodu i okno dostawy kotki"
+        }
+      }
     }
   },
   "notFound": {

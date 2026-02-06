@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
 import { CopyButton } from '@/components/CopyButton';
@@ -94,6 +94,14 @@ export function C1V1Calculator() {
       formula,
     });
   };
+
+  // Automatically recalculate when v2Unit changes (if we have enough inputs)
+  useEffect(() => {
+    if (c1.trim() !== '' && v1.trim() !== '' && c2.trim() !== '') {
+      handleCalculate();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [v2Unit]);
 
   const handleReset = () => {
     setC1('');

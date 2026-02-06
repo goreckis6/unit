@@ -5983,6 +5983,102 @@
         }
       }
     },
+    "petFoodCarb": {
+      "title": "Kulhydratberegner til Dyrefoder - Skjult Kulhydratdetektiv",
+      "description": "Beregn skjulte kulhydrater i dyrefoder. Professionel NFE (Kvælstoffri Ekstrakt) beregner med tørstofbasiskonvertering. Sammenlign våd- og tørfoder retfærdigt. Væsentligt værktøj for dyreernæringseksperter og sundhedsbevidste kæledyrsejere.",
+      "foodType": "Fodertype",
+      "foodTypeDry": "Tørfoder",
+      "foodTypeWet": "Dåse / Våd",
+      "foodTypeRaw": "Rå Mad",
+      "foodTypeFreezeDried": "Frysetørret",
+      "crudeProtein": "Råprotein",
+      "crudeFat": "Råfedt",
+      "crudeFiber": "Råfiber",
+      "moisture": "Fugtighed",
+      "ash": "Aske",
+      "ashHelper": "Automatisk justeret baseret på fodertype. Rediger hvis din etiket angiver aske.",
+      "enableCalories": "Beregn % kalorier fra kulhydrater (valgfrit)",
+      "caloricDensity": "Kaloritæthed",
+      "calculate": "Beregn",
+      "reset": "Nulstil",
+      "result": "Resultat",
+      "enterValue": "Indtast garanterede analyseværdier for at beregne kulhydrater",
+      "clickCalculate": "Klik Beregn for at se skjult kulhydratindhold",
+      "carbsDMB": "Kulhydrater (Tørstofbasis)",
+      "carbsAsFed": "Kulhydrater (Som Fodret)",
+      "dryMatter": "Tørstof %",
+      "caloriesFromCarbs": "% Kalorier fra Kulhydrater",
+      "ratingLow": "✓ Lave Kulhydrater (<20%) - Fremragende for kødædere",
+      "ratingMedium": "⚠ Moderate Kulhydrater (20-40%) - Acceptabelt for nogle kæledyr",
+      "ratingHigh": "✗ Høje Kulhydrater (>40%) - Ikke ideelt for obligate kødædere",
+      "allNutrientsDMB": "Alle Næringsstoffer (Tørstofbasis)",
+      "proteinDMB": "Protein (TSB)",
+      "fatDMB": "Fedt (TSB)",
+      "fiberDMB": "Fiber (TSB)",
+      "ashDMB": "Aske (TSB)",
+      "expertInsightHeading": "Ekspertindsigt",
+      "expertInsightText": "Hunde og katte har ingen biologiske krav til kulhydrater, men mange kommercielle tørfoder indeholder 40-60% kulhydrater på tørstofbasis. Selvom kulhydrater giver overkommelige kalorier, trives obligate kødædere som katte og endda hunde (fakultative kødædere) på højproteindiæter med moderat fedt og lave kulhydrater, der afspejler deres evolutionære diæt.",
+      "seo": {
+        "title": "Kulhydratberegner til Dyrefoder: NFE og Tørstofbasis",
+        "description": "Gratis kulhydratberegner til dyrefoder. Beregn skjulte kulhydrater (NFE) og konverter til tørstofbasis (TSB) for at sammenligne våd- og tørfoder. Inkluderer kalorieprocentberegner for diabetiske kæledyr.",
+        "keywords": "kulhydratberegner dyrefoder, nfe beregner dyrefoder, tørstofbasis beregner, kulhydratberegner hundefoder, kulhydratberegner kattefoder, dyrefoder sammenligning, skjulte kulhydrater dyrefoder, diabetisk dyrefoder beregner, garanteret analyse beregner, dyreernæring beregner",
+        "content": {
+          "heading": "Sådan Bruger Du Kulhydratberegner til Dyrefoder",
+          "paragraph1": "Kulhydratberegner til Dyrefoder er et væsentligt værktøj for kæledyrsejere, der vil forstå, hvad de virkelig fodrer deres hunde og katte. I modsætning til etiketter på menneskemad, angiver amerikanske dyrefoderetiketter ikke kulhydratindhold. I stedet skal du beregne kulhydrater ved hjælp af NFE-metoden (Kvælstoffri Ekstrakt): trække alle angivne næringsstoffer fra 100%. Vores beregner automatiserer denne proces og konverterer resultater til tørstofbasis (TSB), så du kan sammenligne vådfoder (80% fugtighed) med tørfoder (10% fugtighed) retfærdigt.",
+          "paragraph2": "Den garanterede analyse på hver dyrefoderetiket angiver fem nøglenæringsstoffer: Råprotein (% minimum), Råfedt (% minimum), Råfiber (% maksimum), Fugtighed (% maksimum) og nogle gange Aske (mineralindhold). Aske udelades ofte fra etiketter, så vores beregner giver intelligente standardværdier: 7-8% til tørfoder, 2-3% til våd/dåsemad, 2% til rå mad og 6% til frysetørret. Du kan tilsidesætte disse standardværdier, hvis din etiket angiver aske. NFE-formlen er: Kulhydrater = 100% - (Protein + Fedt + Fiber + Fugtighed + Aske).",
+          "paragraph3": "Konvertering til tørstofbasis (TSB) er afgørende, fordi 'som fodret' procenter på etiketter er vildledende. Et vådfoder med 8% protein lyder lavt, men når du fjerner 80% vandindhold, er det faktisk 40% protein på tørstofbasis. Beregneren viser både som fodret og TSB-procenter for alle næringsstoffer. Dette gør det muligt for dig at se, at mange 'kornfrie' tørfoder stadig indeholder 40-50% kulhydrater (fra kartofler, ærter og bælgfrugter), mens kvalitetsvådfoder ofte har 10-20% kulhydrater på TSB.",
+          "paragraph4": "For diabetiske kæledyr eller dem med specifikke helbredstilstande, kan beregneren også bestemme procentdelen af kalorier afledt fra kulhydrater. Dette bruger modificerede Atwater-faktorer (Protein = 3,5 kcal/g, Fedt = 8,5 kcal/g, Kulhydrater = 3,5 kcal/g) til at vise, hvilken procentdel af dit kæledyrs daglige kalorieindtag, der kommer fra kulhydrater. Veterinære ernæringseksperter anbefaler ofte, at diabetiske katte indtager <10-12% kalorier fra kulhydrater, hvilket gør denne funktion afgørende for at håndtere kattediabetes.",
+          "exampleHeading": "Eksempelberegning",
+          "exampleText": "Eksempel: Et tørfoder angiver Protein 28%, Fedt 15%, Fiber 4%, Fugtighed 10%. Ved brug af standard aske 7,5% til tørfoder: Kulhydrater (Som Fodret) = 100 - (28 + 15 + 4 + 10 + 7,5) = 35,5%. Tørstof % = 100 - 10 = 90%. Kulhydrater (TSB) = (35,5 / 90) × 100 = 39,4% TSB. Dette tørfoder er vurderet som 'Moderate Kulhydrater' (20-40%). Selvom det er acceptabelt for nogle hunde, ville katte have gavn af en lavere kulhydratmulighed, ideelt under 20% TSB."
+        },
+        "faq": {
+          "heading": "Ofte Stillede Spørgsmål",
+          "items": [
+            {
+              "question": "Hvorfor angiver dyrefoderetiketter ikke kulhydrater?",
+              "answer": "Amerikanske dyrefodermærkningsregler (AAFCO) kræver ikke, at kulhydratindhold angives. Den garanterede analyse kræver kun minimum for protein og fedt, og maksimum for fiber og fugtighed. Aske (mineraler) er valgfrit. Dette gør det svært for kæledyrsejere at vide, hvor mange kulhydrater de fodrer, derfor er beregnere som denne afgørende."
+            },
+            {
+              "question": "Hvad er NFE (Kvælstoffri Ekstrakt)?",
+              "answer": "NFE (Kvælstoffri Ekstrakt) er den videnskabelige betegnelse for at estimere kulhydratindhold i dyrefoder. Det beregnes ved at trække alle målte næringsstoffer fra 100%: NFE = 100 - (Protein + Fedt + Fiber + Fugtighed + Aske). NFE inkluderer stivelse, sukker og fordøjelige kulhydrater, i det væsentlige alt, der ikke er protein, fedt, fiber, vand eller mineraler."
+            },
+            {
+              "question": "Hvad er tørstofbasis (TSB), og hvorfor er det vigtigt?",
+              "answer": "Tørstofbasis (TSB) fjerner vandindhold fra ligningen, hvilket muliggør retfærdig sammenligning mellem foder med forskellige fugtighedsniveauer. Et vådfoder med 80% fugtighed og 8% protein er faktisk 40% protein TSB ((8/(100-80))×100). TSB-procenter afslører den sande ernæringssammensætning og gør det nemt at sammenligne tørfoder, dåser, rå og frysetørret mad på lige fod."
+            },
+            {
+              "question": "Hvor mange kulhydrater skal min hund eller kat spise?",
+              "answer": "Hunde og katte er kødædere uden biologiske krav til kulhydrater. Katte er obligate kødædere og trives på diæter med <20% kulhydrater (TSB), ideelt 10-15%. Hunde er fakultative kødædere og kan tolerere 20-30% kulhydrater (TSB), selvom mindre ofte er bedre for vægtstyring og sundhed. Mange kommercielle tørfoder indeholder 40-60% kulhydrater, hvilket overstiger evolutionære kostmæssige normer."
+            },
+            {
+              "question": "Hvad hvis min dyrefoderetiket ikke angiver aske?",
+              "answer": "De fleste amerikanske dyrefoderetiketter udelader aske (mineralindhold). Vores beregner giver intelligente standardværdier: 7-8% til tørfoder, 2-3% til våd/dåsemad, 2% til rå mad og 6% til frysetørret. Disse er branchegennemsnit. Hvis din etiket angiver aske (mere almindeligt på premium mærker), indtast den værdi for den mest præcise beregning."
+            },
+            {
+              "question": "Er kornfrit dyrefoder lavt i kulhydrater?",
+              "answer": "Ikke nødvendigvis. Mange kornfrie tørfoder erstatter korn med kartofler, ærter, linser og andre bælgfrugter for at binde foderet, hvilket resulterer i lignende eller endda højere kulhydratindhold (40-50% TSB). Ægte lavkulhydratdyrefoder er typisk våd/dåse, rå eller frysetørret. Beregn altid det faktiske kulhydratindhold ved hjælp af garanteret analyse i stedet for at stole på marketingtermer som 'kornfrit'."
+            },
+            {
+              "question": "Hvorfor er procentdelen af kalorier fra kulhydrater vigtig?",
+              "answer": "For diabetiske kæledyr påvirker procentdelen af kalorier (ikke kun vægtprocent) fra kulhydrater blodsukkerkontrol. Veterinære ernæringseksperter anbefaler ofte, at diabetiske katte indtager <10-12% kalorier fra kulhydrater. Kaloriberegningen bruger modificerede Atwater-faktorer til at vise, hvilken procentdel af dit kæledyrs daglige kalorieindtag, der kommer fra kulhydrater, hvilket er afgørende for at håndtere diabetes og fedme."
+            },
+            {
+              "question": "Hvordan bruger jeg denne beregner til at sammenligne dyrefoder?",
+              "answer": "Indtast den garanterede analyse fra hver foders etiket, og sørg for at vælge den korrekte fodertype (tør, våd, rå eller frysetørret). Beregneren viser tørstofbasisprocenter for alle næringsstoffer, hvilket muliggør direkte sammenligning. Led efter foder med lavere kulhydrater TSB (<20% til katte, <30% til hunde), højere protein TSB (>40% til katte, >30% til hunde) og moderat fedt TSB (15-25%). Den farvekodede vurdering hjælper med hurtigt at identificere lave, moderate eller høje kulhydratmuligheder."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterede Lommeregnere",
+          "dli": "DLI Beregner",
+          "dliDesc": "Beregn daglig lysintegral for optimal plantevækst",
+          "vpd": "VPD Beregner",
+          "vpdDesc": "Beregn damptryksunderskud for plantetranspiration",
+          "c1v1": "C1V1 Fortyndingsberegner",
+          "c1v1Desc": "Beregn fortyndingsvolumener og koncentrationer for opløsninger"
+        }
+      }
+    },
     "italicText": {
       "title": "Kursiv Tekst Generator",
       "description": "Generer kursiv tekst øjeblikkeligt med flere Unicode-stile: serif kursiv, kursiv skrift og sans-serif kursiv. Perfekt til sociale medier, design og kreativ skrivning.",

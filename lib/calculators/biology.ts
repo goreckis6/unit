@@ -57,4 +57,11 @@ export const biologyCalculators: Calculator[] = [
     path: '/calculators/biology/hardy-weinberg-calculator',
     category: 'biology',
   },
+  {
+    id: 'pet-food-carbohydrate-calculator',
+    titleKey: 'petFoodCarb.title',
+    descKey: 'petFoodCarb.description',
+    path: '/calculators/biology/pet-food-carbohydrate-calculator',
+    category: 'biology',
+  },
 ];

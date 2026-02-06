@@ -6486,6 +6486,102 @@
         }
       }
     },
+    "petFoodCarb": {
+      "title": "Pet Food Carbohydrate Calculator - Hidden Carb Detective",
+      "description": "Calculate hidden carbohydrates in pet food. Professional NFE (Nitrogen-Free Extract) calculator with Dry Matter Basis conversion. Compare wet and dry pet foods fairly. Essential tool for pet nutritionists and health-conscious pet owners.",
+      "foodType": "Food Type",
+      "foodTypeDry": "Dry Kibble",
+      "foodTypeWet": "Canned / Wet",
+      "foodTypeRaw": "Raw Food",
+      "foodTypeFreezeDried": "Freeze-Dried",
+      "crudeProtein": "Crude Protein",
+      "crudeFat": "Crude Fat",
+      "crudeFiber": "Crude Fiber",
+      "moisture": "Moisture",
+      "ash": "Ash",
+      "ashHelper": "Auto-adjusted based on food type. Edit if your label lists ash.",
+      "enableCalories": "Calculate % of Calories from Carbs (optional)",
+      "caloricDensity": "Caloric Density",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "enterValue": "Enter guaranteed analysis values to calculate carbohydrates",
+      "clickCalculate": "Click Calculate to see hidden carb content",
+      "carbsDMB": "Carbohydrates (Dry Matter Basis)",
+      "carbsAsFed": "Carbohydrates (As-Fed)",
+      "dryMatter": "Dry Matter %",
+      "caloriesFromCarbs": "% of Calories from Carbs",
+      "ratingLow": "✓ Low Carb (<20%) - Excellent for carnivores",
+      "ratingMedium": "⚠ Moderate Carb (20-40%) - Acceptable for some pets",
+      "ratingHigh": "✗ High Carb (>40%) - Not ideal for obligate carnivores",
+      "allNutrientsDMB": "All Nutrients (Dry Matter Basis)",
+      "proteinDMB": "Protein (DMB)",
+      "fatDMB": "Fat (DMB)",
+      "fiberDMB": "Fiber (DMB)",
+      "ashDMB": "Ash (DMB)",
+      "expertInsightHeading": "Expert Insight",
+      "expertInsightText": "Dogs and cats have no biological requirement for carbohydrates, yet many commercial kibbles contain 40-60% carbs on a dry matter basis. While carbohydrates provide affordable calories, obligate carnivores like cats and even dogs (facultative carnivores) thrive on high-protein, moderate-fat, low-carb diets that mirror their evolutionary diet.",
+      "seo": {
+        "title": "Pet Food Carbohydrate Calculator: NFE & Dry Matter Basis Calculator",
+        "description": "Free pet food carbohydrate calculator. Calculate hidden carbs (NFE) and convert to Dry Matter Basis (DMB) to compare wet and dry pet foods. Includes calorie percentage calculator for diabetic pets.",
+        "keywords": "pet food carbohydrate calculator, nfe calculator pet food, dry matter basis calculator, dog food carb calculator, cat food carb calculator, pet food comparison, hidden carbs pet food, diabetic pet food calculator, guaranteed analysis calculator, pet nutrition calculator",
+        "content": {
+          "heading": "How to Use the Pet Food Carbohydrate Calculator",
+          "paragraph1": "The Pet Food Carbohydrate Calculator is an essential tool for pet owners who want to understand what they're really feeding their dogs and cats. Unlike human food labels, US pet food labels don't list carbohydrate content. Instead, you must calculate carbohydrates using the Nitrogen-Free Extract (NFE) method: subtract all listed nutrients from 100%. Our calculator automates this process and converts results to Dry Matter Basis (DMB), allowing you to fairly compare wet food (80% moisture) with dry kibble (10% moisture).",
+          "paragraph2": "The guaranteed analysis on every pet food label lists five key nutrients: Crude Protein (minimum %), Crude Fat (minimum %), Crude Fiber (maximum %), Moisture (maximum %), and sometimes Ash (mineral content). Ash is often omitted from labels, so our calculator provides intelligent defaults: 7-8% for dry kibble, 2-3% for wet/canned food, 2% for raw food, and 6% for freeze-dried. You can override these defaults if your label lists ash. The NFE formula is: Carbs = 100% - (Protein + Fat + Fiber + Moisture + Ash).",
+          "paragraph3": "Dry Matter Basis (DMB) conversion is crucial because the 'as-fed' percentages on labels are misleading. A wet food listing 8% protein sounds low, but when you remove the 80% water content, it's actually 40% protein on a dry matter basis. The calculator shows both as-fed percentages and DMB percentages for all nutrients. This allows you to see that many 'grain-free' kibbles still contain 40-50% carbohydrates (from potatoes, peas, and legumes), while quality wet foods often have 10-20% carbs on a DMB.",
+          "paragraph4": "For diabetic pets or those with specific health conditions, the calculator can also determine the percentage of calories derived from carbohydrates. This uses modified Atwater factors (Protein = 3.5 kcal/g, Fat = 8.5 kcal/g, Carbs = 3.5 kcal/g) to show what percentage of your pet's daily calories come from carbs. Veterinary nutritionists often recommend diabetic cats consume fewer than 10-12% of calories from carbohydrates, making this feature essential for managing feline diabetes.",
+          "exampleHeading": "Example Calculation",
+          "exampleText": "Example: A dry kibble lists Protein 28%, Fat 15%, Fiber 4%, Moisture 10%. Using a default ash of 7.5% for dry food: Carbs (As-Fed) = 100 - (28 + 15 + 4 + 10 + 7.5) = 35.5%. Dry Matter % = 100 - 10 = 90%. Carbs (DMB) = (35.5 / 90) × 100 = 39.4% DMB. This kibble is rated 'Moderate Carb' (20-40%). While acceptable for some dogs, cats would benefit from a lower-carb option, ideally below 20% DMB."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "Why don't pet food labels list carbohydrates?",
+              "answer": "US pet food labeling regulations (AAFCO) don't require carbohydrate content to be listed. The guaranteed analysis only mandates minimums for protein and fat, and maximums for fiber and moisture. Ash (minerals) is optional. This makes it difficult for pet owners to know how much carbohydrate they're feeding, which is why calculators like this are essential."
+            },
+            {
+              "question": "What is NFE (Nitrogen-Free Extract)?",
+              "answer": "NFE (Nitrogen-Free Extract) is the scientific term for estimating carbohydrate content in pet food. It's calculated by subtracting all measured nutrients from 100%: NFE = 100 - (Protein + Fat + Fiber + Moisture + Ash). NFE includes starches, sugars, and digestible carbohydrates, essentially everything that isn't protein, fat, fiber, water, or minerals."
+            },
+            {
+              "question": "What is Dry Matter Basis (DMB) and why is it important?",
+              "answer": "Dry Matter Basis (DMB) removes water content from the equation, allowing fair comparison between foods with different moisture levels. A wet food with 80% moisture and 8% protein is actually 40% protein DMB ((8/(100-80))×100). DMB percentages reveal the true nutrient composition and make it easy to compare kibble, canned, raw, and freeze-dried foods on an equal footing."
+            },
+            {
+              "question": "How much carbohydrate should my dog or cat eat?",
+              "answer": "Dogs and cats are carnivores with no biological requirement for carbohydrates. Cats are obligate carnivores and thrive on diets with <20% carbs (DMB), ideally 10-15%. Dogs are facultative carnivores and can tolerate 20-30% carbs (DMB), though lower is often better for weight management and health. Many commercial kibbles contain 40-60% carbs, which exceeds evolutionary dietary norms."
+            },
+            {
+              "question": "What if my pet food label doesn't list ash?",
+              "answer": "Most US pet food labels omit ash (mineral content). Our calculator provides intelligent defaults: 7-8% for dry kibble, 2-3% for canned/wet food, 2% for raw food, and 6% for freeze-dried. These are industry averages. If your label lists ash (more common on premium brands), enter that value for the most accurate calculation."
+            },
+            {
+              "question": "Is grain-free pet food low in carbohydrates?",
+              "answer": "Not necessarily. Many grain-free kibbles replace grains with potatoes, peas, lentils, and other legumes to bind the kibble, resulting in similar or even higher carbohydrate content (40-50% DMB). True low-carb pet food is typically wet/canned, raw, or freeze-dried. Always calculate the actual carb content using the guaranteed analysis rather than relying on marketing terms like 'grain-free.'"
+            },
+            {
+              "question": "Why does the calorie percentage from carbs matter?",
+              "answer": "For diabetic pets, the percentage of calories (not just weight percentage) from carbohydrates affects blood sugar control. Veterinary nutritionists often recommend diabetic cats consume <10-12% of calories from carbs. The calorie calculation uses modified Atwater factors to show what percentage of your pet's daily caloric intake comes from carbohydrates, which is crucial for managing diabetes and obesity."
+            },
+            {
+              "question": "How do I use this calculator to compare pet foods?",
+              "answer": "Enter the guaranteed analysis from each food's label, ensuring you select the correct food type (dry, wet, raw, or freeze-dried). The calculator shows Dry Matter Basis percentages for all nutrients, allowing direct comparison. Look for foods with lower carb DMB (<20% for cats, <30% for dogs), higher protein DMB (>40% for cats, >30% for dogs), and moderate fat DMB (15-25%). The color-coded rating helps quickly identify low, moderate, or high-carb options."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "dli": "DLI Calculator",
+          "dliDesc": "Calculate daily light integral for optimal plant growth",
+          "vpd": "VPD Calculator",
+          "vpdDesc": "Calculate vapor pressure deficit for plant transpiration",
+          "c1v1": "C1V1 Dilution Calculator",
+          "c1v1Desc": "Calculate dilution volumes and concentrations for solutions"
+        }
+      }
+    },
     "italicText": {
       "title": "Italic Text Generator",
       "description": "Generate italic text instantly with multiple Unicode styles: serif italic, cursive script, and sans-serif italic. Perfect for social media, design, and creative writing.",

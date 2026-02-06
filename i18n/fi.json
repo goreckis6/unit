@@ -5998,6 +5998,102 @@
         }
       }
     },
+    "petFoodCarb": {
+      "title": "Lemmikkieläinruoan Hiilihydraattilaskin - Piilotettu Hiilihydraattien Etsijä",
+      "description": "Laske piilotetut hiilihydraatit lemmikkieläinruoassa. Ammattimainen NFE (Typetön Uute) laskin kuiva-ainepohjan muunnoksella. Vertaa märkä- ja kuivaruokaa oikeudenmukaisesti. Olennainen työkalu eläinravitsemusasiantuntijoille ja terveystietoisille lemmikkien omistajille.",
+      "foodType": "Ruokatyyppi",
+      "foodTypeDry": "Kuivaruoka",
+      "foodTypeWet": "Säilykepurkki / Märkä",
+      "foodTypeRaw": "Raaka Ruoka",
+      "foodTypeFreezeDried": "Pakastekuivattu",
+      "crudeProtein": "Raakaproteiini",
+      "crudeFat": "Raakarasva",
+      "crudeFiber": "Raakakuitu",
+      "moisture": "Kosteus",
+      "ash": "Tuhka",
+      "ashHelper": "Automaattisesti säädetty ruokatyypin perusteella. Muokkaa, jos etikettisi ilmoittaa tuhkan.",
+      "enableCalories": "Laske % kaloreista hiilihydraateista (valinnainen)",
+      "caloricDensity": "Kaloritiheys",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "enterValue": "Anna taatut analyysiarvot hiilihydraattien laskemiseksi",
+      "clickCalculate": "Napsauta Laske nähdäksesi piilotetun hiilihydraattisisällön",
+      "carbsDMB": "Hiilihydraatit (Kuiva-ainepohja)",
+      "carbsAsFed": "Hiilihydraatit (Ruokittuna)",
+      "dryMatter": "Kuiva-aine %",
+      "caloriesFromCarbs": "% Kaloreista Hiilihydraateista",
+      "ratingLow": "✓ Vähän Hiilihydraatteja (<20%) - Erinomainen lihansyöjille",
+      "ratingMedium": "⚠ Kohtalaiset Hiilihydraatit (20-40%) - Hyväksyttävä joillekin lemmikeille",
+      "ratingHigh": "✗ Paljon Hiilihydraatteja (>40%) - Ei ihanteellinen pakollisille lihansyöjille",
+      "allNutrientsDMB": "Kaikki Ravintoaineet (Kuiva-ainepohja)",
+      "proteinDMB": "Proteiini (KAP)",
+      "fatDMB": "Rasva (KAP)",
+      "fiberDMB": "Kuitu (KAP)",
+      "ashDMB": "Tuhka (KAP)",
+      "expertInsightHeading": "Asiantuntijanäkemys",
+      "expertInsightText": "Koirilla ja kissoilla ei ole biologisia vaatimuksia hiilihydraateille, silti monet kaupalliset kuivaruoat sisältävät 40-60% hiilihydraatteja kuiva-ainepohjalla. Vaikka hiilihydraatit tarjoavat edullisia kaloreita, pakolliset lihansyöjät kuten kissat ja jopa koirat (valinnaiset lihansyöjät) menestyvät korkean proteiinin, maltillisen rasvan ja vähän hiilihydraattien dieeteillä, jotka heijastavat niiden evoluutioruokavaliota.",
+      "seo": {
+        "title": "Lemmikkieläinruoan Hiilihydraattilaskin: NFE ja Kuiva-ainepohja",
+        "description": "Ilmainen lemmikkieläinruoan hiilihydraattilaskin. Laske piilotetut hiilihydraatit (NFE) ja muunna kuiva-ainepohjaan (KAP) märkä- ja kuivaruoan vertailemiseksi. Sisältää kaloriosuuslaskimen diabeettisille lemmikeille.",
+        "keywords": "hiilihydraattilaskin lemmikkieläinruoka, nfe laskin lemmikkieläinruoka, kuiva-ainepohja laskin, hiilihydraattilaskin koiranruoka, hiilihydraattilaskin kissanruoka, lemmikkieläinruoan vertailu, piilotetut hiilihydraatit lemmikkieläinruoka, diabeettinen lemmikkieläinruoka laskin, taattu analyysi laskin, eläinravitsemus laskin",
+        "content": {
+          "heading": "Kuinka Käyttää Lemmikkieläinruoan Hiilihydraattilaskinta",
+          "paragraph1": "Lemmikkieläinruoan Hiilihydraattilaskin on olennainen työkalu lemmikkien omistajille, jotka haluavat ymmärtää, mitä he todella ruokkivat koiriaan ja kissojaan. Toisin kuin ihmisruokaetiketeissä, amerikkalaiset lemmikkieläinruokaetikettit eivät listaa hiilihydraattisislältöä. Sen sijaan sinun on laskettava hiilihydraatit NFE-menetelmällä (Typetön Uute): vähentää kaikki listatut ravintoaineet 100%:sta. Laskimme automatisoi tämän prosessin ja muuntaa tulokset kuiva-ainepohjaan (KAP), jolloin voit verrata märkäruokaa (80% kosteutta) kuivaruokaan (10% kosteutta) oikeudenmukaisesti.",
+          "paragraph2": "Taattu analyysi jokaisessa lemmikkieläinruokaetiketti listaa viisi keskeistä ravintoainetta: Raakaproteiini (% minimi), Raakarasva (% minimi), Raakakuitu (% maksimi), Kosteus (% maksimi) ja joskus Tuhka (kivennäisaine sisältö). Tuhka jätetään usein pois etiketeistä, joten laskimme tarjoaa älykkäitä oletusarvoja: 7-8% kuivaruoalle, 2-3% märälle/säilykeruoalle, 2% raakalle ruoalle ja 6% pakastekuivatulle. Voit ohittaa nämä oletusarvot, jos etikettisi ilmoittaa tuhkan. NFE-kaava on: Hiilihydraatit = 100% - (Proteiini + Rasva + Kuitu + Kosteus + Tuhka).",
+          "paragraph3": "Muuntaminen kuiva-ainepohjaan (KAP) on ratkaisevan tärkeää, koska 'ruokittuna' prosentit etiketeissä ovat harhaanjohtavia. Märkäruoka, jossa on 8% proteiinia, kuulostaa alhaiselta, mutta kun poistat 80% vesipitoisuuden, se on itse asiassa 40% proteiinia kuiva-ainepohjalla. Laskin näyttää sekä ruokittuna että KAP-prosentit kaikille ravintoaineille. Tämä antaa sinun nähdä, että monet 'viljattomat' kuivaruoat sisältävät edelleen 40-50% hiilihydraatteja (perunoista, herneitä ja palkokasveja), kun taas laadukkaat märkäruoat sisältävät usein 10-20% hiilihydraatteja KAP:lla.",
+          "paragraph4": "Diabeettisille lemmikeille tai niille, joilla on erityisiä terveydentiloja, laskin voi myös määrittää hiilihydraateista peräisin olevien kalorien prosenttiosuuden. Tämä käyttää muokattuja Atwater-tekijöitä (Proteiini = 3,5 kcal/g, Rasva = 8,5 kcal/g, Hiilihydraatit = 3,5 kcal/g) näyttääkseen, mikä prosenttiosuus lemmikkisi päivittäisistä kaloreista tulee hiilihydraateista. Eläinlääkäriravitsemusasiantuntijat suosittelevat usein, että diabeettiset kissat kuluttavat <10-12% kaloreista hiilihydraateista, mikä tekee tästä ominaisuudesta välttämättömän kissojen diabeteksen hallintaan.",
+          "exampleHeading": "Esimerkkila skelma",
+          "exampleText": "Esimerkki: Kuivaruoka ilmoittaa Proteiini 28%, Rasva 15%, Kuitu 4%, Kosteus 10%. Käyttäen oletus tuhkaa 7,5% kuivaruoalle: Hiilihydraatit (Ruokittuna) = 100 - (28 + 15 + 4 + 10 + 7,5) = 35,5%. Kuiva-aine % = 100 - 10 = 90%. Hiilihydraatit (KAP) = (35,5 / 90) × 100 = 39,4% KAP. Tämä kuivaruoka on arvioitu 'Kohtalaiset Hiilihydraatit' (20-40%). Vaikka se on hyväksyttävää joillekin koirille, kissat hyötyisivät vähemmän hiilihydraatteja sisältävästä vaihtoehdosta, mieluiten alle 20% KAP."
+        },
+        "faq": {
+          "heading": "Usein Kysytyt Kysymykset",
+          "items": [
+            {
+              "question": "Miksi lemmikkieläinruokaetiketeissä ei listata hiilihydraatteja?",
+              "answer": "Amerikkalaiset lemmikkieläinruokamerkintäsäännöt (AAFCO) eivät vaadi hiilihydraattisisällön listaamista. Taattu analyysi vaatii vain vähimmäismäärät proteiinille ja rasvalle sekä enimmäismäärät kuidulle ja kosteudelle. Tuhka (kivennäisaineet) on valinnainen. Tämä vaikeuttaa lemmikkien omistajien tietoa siitä, kuinka paljon hiilihydraatteja he ruokkivat, minkä vuoksi tällaiset laskimet ovat välttämättömiä."
+            },
+            {
+              "question": "Mikä on NFE (Typetön Uute)?",
+              "answer": "NFE (Typetön Uute) on tieteellinen termi hiilihydraattisisällön arvioimiseen lemmikkieläinruoassa. Se lasketaan vähentämällä kaikki mitatut ravintoaineet 100%:sta: NFE = 100 - (Proteiini + Rasva + Kuitu + Kosteus + Tuhka). NFE sisältää tärkkelyksiä, sokereita ja sulavia hiilihydraatteja, pohjimmiltaan kaiken, mikä ei ole proteiinia, rasvaa, kuitua, vettä tai kivennäisaineita."
+            },
+            {
+              "question": "Mikä on kuiva-ainepohja (KAP) ja miksi se on tärkeä?",
+              "answer": "Kuiva-ainepohja (KAP) poistaa vesipitoisuuden yhtälöstä, mahdollistaen oikeudenmukaisen vertailun ruokien välillä, joilla on eri kosteustasot. Märkäruoka, jossa on 80% kosteutta ja 8% proteiinia, on itse asiassa 40% proteiinia KAP ((8/(100-80))×100). KAP-prosentit paljastavat todellisen ravitsemuksellisen koostumuksen ja tekevät helpoksi vertailla kuivaruokaa, säilykkeitä, raakaa ja pakastekuivattua ruokaa tasavertaisesti."
+            },
+            {
+              "question": "Kuinka paljon hiilihydraatteja koirani tai kissani pitäisi syödä?",
+              "answer": "Koirilla ja kissoilla ei ole biologisia vaatimuksia hiilihydraateille. Kissat ovat pakollisia lihansyöjiä ja menestyvät dieeteillä, joissa on <20% hiilihydraatteja (KAP), ihanteellisesti 10-15%. Koirat ovat valinnaisia lihansyöjiä ja voivat sietää 20-30% hiilihydraatteja (KAP), vaikka vähemmän on usein parempi painonhallintaan ja terveyteen. Monet kaupalliset kuivaruoat sisältävät 40-60% hiilihydraatteja, mikä ylittää evoluutioruokavalion normit."
+            },
+            {
+              "question": "Entä jos lemmikkieläinruokaetikettini ei ilmoita tuhkaa?",
+              "answer": "Useimmat amerikkalaiset lemmikkieläinruokaetikettit jättävät tuhkan (kivennäisainepitoisuuden) pois. Laskimme tarjoaa älykkäitä oletusarvoja: 7-8% kuivaruoalle, 2-3% märälle/säilykeruoalle, 2% raakalle ruoalle ja 6% pakastekuivatulle. Nämä ovat alan keskiarvoja. Jos etikettisi ilmoittaa tuhkan (yleisempää premium-merkeissä), syötä tämä arvo tarkimman laskelman saamiseksi."
+            },
+            {
+              "question": "Onko viljaton lemmikkieläinruoka vähän hiilihydraatteja?",
+              "answer": "Ei välttämättä. Monet vilj attomat kuivaruoat korvaavat viljat perunoilla, herneillä, linsseillä ja muilla palkokasvei lla ruoan sitomiseksi, mikä johtaa samanlaiseen tai jopa korkeampaan hiilihydraattipitoisuuteen (40-50% KAP). Todellinen vähähiilihydraattinen lemmikkieläinruoka on tyypillisesti märkä/säilykepurkki, raaka tai pakastekuivattu. Laske aina todellinen hiilihydraattipitoisuus käyttämällä taattua analyysiä sen sijaan, että luottaisit markkinointitermeihin kuten 'viljaton'."
+            },
+            {
+              "question": "Miksi hiilihydraateista peräisin olevien kalorien prosenttiosuus on tärkeä?",
+              "answer": "Diabeettisille lemmikeille hiilihydraateista peräisin olevien kalorien prosenttiosuus (ei vain painoprosentti) vaikuttaa verensokerin hallintaan. Eläinlääkäriravitsemusasiantuntijat suosittelevat usein, että diabeettiset kissat kuluttavat <10-12% kaloreista hiilihydraateista. Kalorilaskenta käyttää muokattuja Atwater-tekijöitä näyttääkseen, mikä prosenttiosuus lemmikkisi päivittäisestä kalorien saannista tulee hiilihydraateista, mikä on ratkaisevan tärkeää diabeteksen ja lihavuuden hallinnassa."
+            },
+            {
+              "question": "Kuinka käytän tätä laskinta lemmikkieläinruoan vertailemiseen?",
+              "answer": "Syötä taattu analyysi kunkin ruoan etikestä, varmistaen, että valitset oikean ruokatyypin (kuiva, märkä, raaka tai pakastekuivattu). Laskin näyttää kuiva-ainepohjan prosentit kaikille ravintoaineille, mahdollistaen suoran vertailun. Etsi ruokia, joissa on alhaisemmat hiilihydraatit KAP (<20% kissoille, <30% koirille), korkeampi proteiini KAP (>40% kissoille, >30% koirille) ja maltillinen rasva KAP (15-25%). Värikoodattu arviointi auttaa tunnistamaan nopeasti alhaiset, kohtalaiset tai korkeat hiilihydraattivaihtoehdot."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät Laskimet",
+          "dli": "DLI Laskin",
+          "dliDesc": "Laske päivittäinen valo-integraali optimaaliseen kasvien kasvuun",
+          "vpd": "VPD Laskin",
+          "vpdDesc": "Laske höyrynpaineen vajaus kasvin haihdutukseen",
+          "c1v1": "C1V1 Laimennuslaskin",
+          "c1v1Desc": "Laske laimennustilavuudet ja pitoisuudet liuoksille"
+        }
+      }
+    },
     "italicText": {
       "title": "Kursiivi Teksti Generaattori",
       "description": "Luo kursiivi tekstiä heti useilla Unicode-tyyleillä: serif kursiivi, kursiivi käsialakirjoitus ja sans-serif kursiivi. Täydellinen sosiaaliseen mediaan, suunnitteluun ja luovaan kirjoittamiseen.",

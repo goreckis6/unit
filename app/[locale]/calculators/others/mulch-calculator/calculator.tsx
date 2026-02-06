@@ -131,7 +131,7 @@ export function MulchCalculator() {
                 </label>
               </div>
               {areaMode === 'area' && (
-                <div className="input-with-unit">
+                <div className="mulch-calc-row">
                   <input
                     id="area"
                     type="number"
@@ -140,15 +140,15 @@ export function MulchCalculator() {
                     value={area}
                     onChange={(e) => setArea(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                    className="number-input"
+                    className="number-input mulch-calc-field"
                     placeholder="200"
                   />
-                  <span className="input-unit">{t('squareMeters')}</span>
+                  <span className="mulch-calc-unit">{t('squareMeters')}</span>
                 </div>
               )}
               {areaMode === 'dimensions' && (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', alignItems: 'center' }}>
+                <div className="mulch-calc-rows">
+                  <div className="mulch-calc-row">
                     <label htmlFor="length" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>{t('length')}</label>
                     <input
                       id="length"
@@ -158,12 +158,11 @@ export function MulchCalculator() {
                       value={length}
                       onChange={(e) => setLength(e.target.value)}
                       onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                      className="number-input"
+                      className="number-input mulch-calc-field"
                       placeholder={t('length')}
-                      style={{ width: '6rem' }}
                     />
-                    <span className="input-unit" style={{ whiteSpace: 'nowrap' }}>{t('length')}</span>
-                    <span style={{ opacity: 0.7 }}>×</span>
+                    <span className="mulch-calc-unit">{t('length')}</span>
+                    <span className="mulch-calc-times">×</span>
                     <label htmlFor="width" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>{t('width')}</label>
                     <input
                       id="width"
@@ -173,23 +172,23 @@ export function MulchCalculator() {
                       value={width}
                       onChange={(e) => setWidth(e.target.value)}
                       onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                      className="number-input"
+                      className="number-input mulch-calc-field"
                       placeholder={t('width')}
-                      style={{ width: '6rem' }}
                     />
-                    <span className="input-unit" style={{ whiteSpace: 'nowrap' }}>{t('width')}</span>
+                    <span className="mulch-calc-unit">{t('width')}</span>
                   </div>
-                  <select
-                    value={areaUnit}
-                    onChange={(e) => setAreaUnit(e.target.value)}
-                    className="number-input"
-                    style={{ width: '100%', maxWidth: '12rem' }}
-                    aria-label={t('areaUnitLabel')}
-                  >
-                    {AREA_UNITS.map((u) => (
-                      <option key={u} value={u}>{t(`areaUnit_${u}` as 'areaUnit_meters')}</option>
-                    ))}
-                  </select>
+                  <div className="mulch-calc-row">
+                    <select
+                      value={areaUnit}
+                      onChange={(e) => setAreaUnit(e.target.value)}
+                      className="number-input mulch-calc-field mulch-calc-select"
+                      aria-label={t('areaUnitLabel')}
+                    >
+                      {AREA_UNITS.map((u) => (
+                        <option key={u} value={u}>{t(`areaUnit_${u}` as 'areaUnit_meters')}</option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
               )}
             </div>
@@ -198,7 +197,7 @@ export function MulchCalculator() {
               <label htmlFor="depth" className="input-label">
                 {t('mulchDepth')}
               </label>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', alignItems: 'center' }}>
+              <div className="mulch-calc-row">
                 <input
                   id="depth"
                   type="number"
@@ -207,15 +206,13 @@ export function MulchCalculator() {
                   value={depth}
                   onChange={(e) => setDepth(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                  className="number-input"
+                  className="number-input mulch-calc-field"
                   placeholder="2"
-                  style={{ width: '6rem' }}
                 />
                 <select
                   value={depthUnit}
                   onChange={(e) => setDepthUnit(e.target.value)}
-                  className="number-input"
-                  style={{ width: '8rem' }}
+                  className="number-input mulch-calc-field mulch-calc-select"
                   aria-label={t('depthUnitLabel')}
                 >
                   {DEPTH_UNITS.map((u) => (
@@ -229,7 +226,7 @@ export function MulchCalculator() {
               <label htmlFor="price" className="input-label">
                 {t('priceOptional')}
               </label>
-              <div className="input-with-unit">
+              <div className="mulch-calc-row">
                 <input
                   id="price"
                   type="number"
@@ -238,10 +235,10 @@ export function MulchCalculator() {
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                  className="number-input"
+                  className="number-input mulch-calc-field"
                   placeholder={t('pricePlaceholder')}
                 />
-                <span className="input-unit">{t('pricePerCubicMeter')}</span>
+                <span className="mulch-calc-unit">{t('pricePerCubicMeter')}</span>
               </div>
             </div>
 

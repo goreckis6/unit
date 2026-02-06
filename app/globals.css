@@ -1540,6 +1540,52 @@ a {
   width: 100%;
 }
 
+/* Mulch calculator: same height for inputs and dropdowns */
+.mulch-calc-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.mulch-calc-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mulch-calc-row .mulch-calc-field {
+  min-height: 52px;
+  height: 52px;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 600;
+  flex: 1;
+  min-width: 0;
+}
+.mulch-calc-row .mulch-calc-field:first-of-type {
+  flex: 1;
+  min-width: 5rem;
+}
+.mulch-calc-row .mulch-calc-select {
+  min-width: 7rem;
+  flex: 0 1 auto;
+  padding-right: 2.25rem;
+}
+.mulch-calc-row .mulch-calc-unit {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+.mulch-calc-row .mulch-calc-times {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.7;
+  font-weight: 600;
+}
+
 .number-input {
   flex: 1;
   min-width: 0;

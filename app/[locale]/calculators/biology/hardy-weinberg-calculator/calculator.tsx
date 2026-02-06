@@ -292,21 +292,45 @@ export function HardyWeinbergCalculator() {
                 <button
                   onClick={() => setInputMethod('genotype')}
                   className={`btn ${inputMethod === 'genotype' ? 'btn-primary' : 'btn-secondary'}`}
-                  style={{ flex: 1, minWidth: '100px', padding: '0.5rem', fontSize: '0.875rem' }}
+                  style={{ 
+                    flex: 1, 
+                    minWidth: '90px', 
+                    padding: '0.5rem 0.25rem', 
+                    fontSize: 'clamp(0.75rem, 2.5vw, 0.875rem)',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis'
+                  }}
                 >
                   {t('methodGenotype')}
                 </button>
                 <button
                   onClick={() => setInputMethod('phenotype')}
                   className={`btn ${inputMethod === 'phenotype' ? 'btn-primary' : 'btn-secondary'}`}
-                  style={{ flex: 1, minWidth: '100px', padding: '0.5rem', fontSize: '0.875rem' }}
+                  style={{ 
+                    flex: 1, 
+                    minWidth: '90px', 
+                    padding: '0.5rem 0.25rem', 
+                    fontSize: 'clamp(0.75rem, 2.5vw, 0.875rem)',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis'
+                  }}
                 >
                   {t('methodPhenotype')}
                 </button>
                 <button
                   onClick={() => setInputMethod('allele')}
                   className={`btn ${inputMethod === 'allele' ? 'btn-primary' : 'btn-secondary'}`}
-                  style={{ flex: 1, minWidth: '100px', padding: '0.5rem', fontSize: '0.875rem' }}
+                  style={{ 
+                    flex: 1, 
+                    minWidth: '90px', 
+                    padding: '0.5rem 0.25rem', 
+                    fontSize: 'clamp(0.75rem, 2.5vw, 0.875rem)',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis'
+                  }}
                 >
                   {t('methodAllele')}
                 </button>
@@ -439,7 +463,13 @@ export function HardyWeinbergCalculator() {
                       placeholder="0.5"
                     />
                   </div>
-                  <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
+                  <p style={{ 
+                    fontSize: 'clamp(0.7rem, 2vw, 0.75rem)', 
+                    color: 'var(--text-secondary)', 
+                    marginTop: '0.25rem',
+                    lineHeight: '1.4',
+                    wordBreak: 'break-word'
+                  }}>
                     {t('pAutoCalculate')}
                   </p>
                 </div>
@@ -468,17 +498,36 @@ export function HardyWeinbergCalculator() {
 
             {/* Advanced Options */}
             <div className="input-card">
-              <label className="input-label" style={{ fontSize: '0.9rem' }}>{t('advancedOptions')}</label>
+              <label className="input-label" style={{ fontSize: 'clamp(0.85rem, 2.5vw, 0.9rem)' }}>
+                {t('advancedOptions')}
+              </label>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '0.5rem' }}>
-                <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
+                <label style={{ 
+                  display: 'flex', 
+                  alignItems: 'flex-start', 
+                  gap: '0.5rem', 
+                  cursor: 'pointer' 
+                }}>
                   <input
                     type="checkbox"
                     checked={showChiSquare}
                     onChange={(e) => setShowChiSquare(e.target.checked)}
-                    style={{ width: '18px', height: '18px', cursor: 'pointer' }}
+                    style={{ 
+                      width: '18px', 
+                      height: '18px', 
+                      cursor: 'pointer',
+                      marginTop: '2px',
+                      flexShrink: 0
+                    }}
                   />
-                  <span style={{ fontSize: '0.9rem' }}>{t('performChiSquare')}</span>
+                  <span style={{ 
+                    fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)',
+                    lineHeight: '1.4',
+                    wordBreak: 'break-word'
+                  }}>
+                    {t('performChiSquare')}
+                  </span>
                 </label>
                 
                 {showChiSquare && (
@@ -491,22 +540,45 @@ export function HardyWeinbergCalculator() {
                       onChange={(e) => setCriticalValue(e.target.value)}
                       className="number-input"
                       placeholder="3.84"
-                      style={{ fontSize: '0.875rem' }}
+                      style={{ fontSize: 'clamp(0.85rem, 2.5vw, 0.875rem)' }}
                     />
-                    <span className="unit-select" style={{ display: 'flex', alignItems: 'center', padding: '0 1rem', fontSize: '0.875rem' }}>
+                    <span className="unit-select" style={{ 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      padding: '0 1rem', 
+                      fontSize: 'clamp(0.8rem, 2.5vw, 0.875rem)',
+                      whiteSpace: 'nowrap'
+                    }}>
                       {t('criticalValue')}
                     </span>
                   </div>
                 )}
                 
-                <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
+                <label style={{ 
+                  display: 'flex', 
+                  alignItems: 'flex-start', 
+                  gap: '0.5rem', 
+                  cursor: 'pointer' 
+                }}>
                   <input
                     type="checkbox"
                     checked={showSteps}
                     onChange={(e) => setShowSteps(e.target.checked)}
-                    style={{ width: '18px', height: '18px', cursor: 'pointer' }}
+                    style={{ 
+                      width: '18px', 
+                      height: '18px', 
+                      cursor: 'pointer',
+                      marginTop: '2px',
+                      flexShrink: 0
+                    }}
                   />
-                  <span style={{ fontSize: '0.9rem' }}>{t('showMathSteps')}</span>
+                  <span style={{ 
+                    fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)',
+                    lineHeight: '1.4',
+                    wordBreak: 'break-word'
+                  }}>
+                    {t('showMathSteps')}
+                  </span>
                 </label>
               </div>
             </div>
@@ -551,40 +623,70 @@ export function HardyWeinbergCalculator() {
                 <div className="result-display">
                   {/* Hardy-Weinberg Variables Table */}
                   <div style={{ marginBottom: '1.5rem' }}>
-                    <h3 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '1rem' }}>{t('hwVariables')}</h3>
+                    <h3 style={{ 
+                      fontSize: 'clamp(0.9rem, 3vw, 1rem)', 
+                      fontWeight: '600', 
+                      marginBottom: '1rem' 
+                    }}>
+                      {t('hwVariables')}
+                    </h3>
                     <div style={{ display: 'grid', gap: '0.75rem' }}>
                       <div className="result-item">
-                        <div className="result-label">p (Dominant allele)</div>
+                        <div className="result-label" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)' }}>
+                          p (Dominant allele)
+                        </div>
                         <div className="number-input result-value-box">
-                          <span className="result-value">{result.p.toFixed(4)}</span>
+                          <span className="result-value" style={{ fontSize: 'clamp(0.9rem, 3vw, 1rem)' }}>
+                            {result.p.toFixed(4)}
+                          </span>
                           <CopyButton text={result.p.toFixed(4)} />
                         </div>
                       </div>
                       <div className="result-item">
-                        <div className="result-label">q (Recessive allele)</div>
+                        <div className="result-label" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)' }}>
+                          q (Recessive allele)
+                        </div>
                         <div className="number-input result-value-box">
-                          <span className="result-value">{result.q.toFixed(4)}</span>
+                          <span className="result-value" style={{ fontSize: 'clamp(0.9rem, 3vw, 1rem)' }}>
+                            {result.q.toFixed(4)}
+                          </span>
                           <CopyButton text={result.q.toFixed(4)} />
                         </div>
                       </div>
                       <div className="result-item">
-                        <div className="result-label">p² (Homozygous dominant)</div>
+                        <div className="result-label" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)' }}>
+                          p² (Homozygous dominant)
+                        </div>
                         <div className="number-input result-value-box">
-                          <span className="result-value">{result.p2.toFixed(4)}</span>
+                          <span className="result-value" style={{ fontSize: 'clamp(0.9rem, 3vw, 1rem)' }}>
+                            {result.p2.toFixed(4)}
+                          </span>
                           <CopyButton text={result.p2.toFixed(4)} />
                         </div>
                       </div>
                       <div className="result-item">
-                        <div className="result-label">2pq (Heterozygous/Carrier)</div>
+                        <div className="result-label" style={{ 
+                          fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)',
+                          wordBreak: 'break-word',
+                          lineHeight: '1.3'
+                        }}>
+                          2pq (Heterozygous/Carrier)
+                        </div>
                         <div className="number-input result-value-box">
-                          <span className="result-value">{result.pq2.toFixed(4)}</span>
+                          <span className="result-value" style={{ fontSize: 'clamp(0.9rem, 3vw, 1rem)' }}>
+                            {result.pq2.toFixed(4)}
+                          </span>
                           <CopyButton text={result.pq2.toFixed(4)} />
                         </div>
                       </div>
                       <div className="result-item">
-                        <div className="result-label">q² (Homozygous recessive)</div>
+                        <div className="result-label" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)' }}>
+                          q² (Homozygous recessive)
+                        </div>
                         <div className="number-input result-value-box">
-                          <span className="result-value">{result.q2.toFixed(4)}</span>
+                          <span className="result-value" style={{ fontSize: 'clamp(0.9rem, 3vw, 1rem)' }}>
+                            {result.q2.toFixed(4)}
+                          </span>
                           <CopyButton text={result.q2.toFixed(4)} />
                         </div>
                       </div>
@@ -594,33 +696,55 @@ export function HardyWeinbergCalculator() {
                   {/* Genotype Counts */}
                   {inputMethod !== 'allele' && (
                     <div style={{ marginBottom: '1.5rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)' }}>
-                      <h3 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '1rem' }}>{t('genotypeCounts')}</h3>
+                      <h3 style={{ 
+                        fontSize: 'clamp(0.9rem, 3vw, 1rem)', 
+                        fontWeight: '600', 
+                        marginBottom: '1rem' 
+                      }}>
+                        {t('genotypeCounts')}
+                      </h3>
                       <div style={{ display: 'grid', gap: '0.75rem' }}>
                         <div className="result-item">
-                          <div className="result-label">AA (Homozygous dominant)</div>
+                          <div className="result-label" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)' }}>
+                            AA (Homozygous dominant)
+                          </div>
                           <div className="number-input result-value-box">
-                            <span className="result-value">{result.AA}</span>
+                            <span className="result-value" style={{ fontSize: 'clamp(0.9rem, 3vw, 1rem)' }}>
+                              {result.AA}
+                            </span>
                             <CopyButton text={result.AA.toString()} />
                           </div>
                         </div>
                         <div className="result-item">
-                          <div className="result-label">Aa (Heterozygous)</div>
+                          <div className="result-label" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)' }}>
+                            Aa (Heterozygous)
+                          </div>
                           <div className="number-input result-value-box">
-                            <span className="result-value">{result.Aa}</span>
+                            <span className="result-value" style={{ fontSize: 'clamp(0.9rem, 3vw, 1rem)' }}>
+                              {result.Aa}
+                            </span>
                             <CopyButton text={result.Aa.toString()} />
                           </div>
                         </div>
                         <div className="result-item">
-                          <div className="result-label">aa (Homozygous recessive)</div>
+                          <div className="result-label" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)' }}>
+                            aa (Homozygous recessive)
+                          </div>
                           <div className="number-input result-value-box">
-                            <span className="result-value">{result.aa}</span>
+                            <span className="result-value" style={{ fontSize: 'clamp(0.9rem, 3vw, 1rem)' }}>
+                              {result.aa}
+                            </span>
                             <CopyButton text={result.aa.toString()} />
                           </div>
                         </div>
                         <div className="result-item">
-                          <div className="result-label">N (Total population)</div>
+                          <div className="result-label" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)' }}>
+                            N (Total population)
+                          </div>
                           <div className="number-input result-value-box">
-                            <span className="result-value">{result.n}</span>
+                            <span className="result-value" style={{ fontSize: 'clamp(0.9rem, 3vw, 1rem)' }}>
+                              {result.n}
+                            </span>
                             <CopyButton text={result.n.toString()} />
                           </div>
                         </div>
@@ -631,24 +755,39 @@ export function HardyWeinbergCalculator() {
                   {/* Chi-Square Result */}
                   {result.chiSquare !== undefined && (
                     <div style={{ marginBottom: '1.5rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)' }}>
-                      <h3 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '1rem' }}>{t('chiSquareTest')}</h3>
+                      <h3 style={{ 
+                        fontSize: 'clamp(0.9rem, 3vw, 1rem)', 
+                        fontWeight: '600', 
+                        marginBottom: '1rem' 
+                      }}>
+                        {t('chiSquareTest')}
+                      </h3>
                       <div className="result-item">
-                        <div className="result-label">{t('chiSquareValue')}</div>
+                        <div className="result-label" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)' }}>
+                          {t('chiSquareValue')}
+                        </div>
                         <div className="number-input result-value-box">
-                          <span className="result-value">{result.chiSquare.toFixed(4)}</span>
+                          <span className="result-value" style={{ fontSize: 'clamp(0.9rem, 3vw, 1rem)' }}>
+                            {result.chiSquare.toFixed(4)}
+                          </span>
                           <CopyButton text={result.chiSquare.toFixed(4)} />
                         </div>
                       </div>
                       <div className="result-item" style={{ marginTop: '0.75rem' }}>
-                        <div className="result-label">{t('criticalValue')}</div>
+                        <div className="result-label" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.9rem)' }}>
+                          {t('criticalValue')}
+                        </div>
                         <div className="number-input result-value-box">
-                          <span className="result-value">{criticalValue}</span>
+                          <span className="result-value" style={{ fontSize: 'clamp(0.9rem, 3vw, 1rem)' }}>
+                            {criticalValue}
+                          </span>
                         </div>
                       </div>
                       <div
                         className="number-input result-value-box"
                         style={{
                           marginTop: '0.75rem',
+                          padding: 'clamp(0.75rem, 2vw, 1rem)',
                           backgroundColor: result.chiSquareResult === 'equilibrium' 
                             ? 'rgba(34, 197, 94, 0.1)' 
                             : 'rgba(239, 68, 68, 0.1)',
@@ -664,6 +803,10 @@ export function HardyWeinbergCalculator() {
                               ? 'rgb(34, 197, 94)' 
                               : 'rgb(239, 68, 68)',
                             fontWeight: 'bold',
+                            fontSize: 'clamp(0.8rem, 2.5vw, 0.95rem)',
+                            lineHeight: '1.4',
+                            wordBreak: 'break-word',
+                            textAlign: 'center'
                           }}
                         >
                           {result.chiSquareResult === 'equilibrium' 
@@ -677,10 +820,21 @@ export function HardyWeinbergCalculator() {
                   {/* Step-by-Step Math */}
                   {result.steps && result.steps.length > 0 && (
                     <div className="seo-content-card" style={{ marginTop: '1.5rem' }}>
-                      <h3 className="example-heading">{t('calculationSteps')}</h3>
-                      <div className="example-text" style={{ lineHeight: '1.8' }}>
+                      <h3 className="example-heading" style={{ 
+                        fontSize: 'clamp(0.9rem, 3vw, 1rem)' 
+                      }}>
+                        {t('calculationSteps')}
+                      </h3>
+                      <div className="example-text" style={{ 
+                        lineHeight: '1.8',
+                        fontSize: 'clamp(0.85rem, 2.5vw, 0.95rem)'
+                      }}>
                         {result.steps.map((step, index) => (
-                          <p key={index} style={{ marginBottom: '0.5rem' }}>
+                          <p key={index} style={{ 
+                            marginBottom: '0.5rem',
+                            wordBreak: 'break-word',
+                            overflowWrap: 'break-word'
+                          }}>
                             {step}
                           </p>
                         ))}

@@ -5,20 +5,65 @@ import { useTranslations } from 'next-intl';
 import { useScrollToResult } from '@/hooks/useScrollToResult';
 import { CopyButton } from '@/components/CopyButton';
 
+// Area: length × width in given unit → m². Factor = (linear unit in m)².
+const AREA_TO_SQ_M: Record<string, number> = {
+  meters: 1,
+  feet: 0.3048 * 0.3048,
+  yards: 0.9144 * 0.9144,
+  inches: 0.0254 * 0.0254,
+  cm: 0.01 * 0.01,
+};
+
+// Depth: value in given unit → meters.
+const DEPTH_TO_M: Record<string, number> = {
+  cm: 0.01,
+  feet: 0.3048,
+  inches: 0.0254,
+  yards: 0.9144,
+  meters: 1,
+};
+
+const AREA_UNITS = ['meters', 'feet', 'cm', 'yards', 'inches'] as const;
+const DEPTH_UNITS = ['cm', 'feet', 'inches', 'yards', 'meters'] as const;
+
 export function MulchCalculator() {
   const t = useTranslations('calculators.mulchCalculator');
+  const [areaMode, setAreaMode] = useState<'area' | 'dimensions'>('area');
   const [area, setArea] = useState<string>('200');
+  const [length, setLength] = useState<string>('');
+  const [width, setWidth] = useState<string>('');
+  const [areaUnit, setAreaUnit] = useState<string>('meters');
   const [depth, setDepth] = useState<string>('2');
+  const [depthUnit, setDepthUnit] = useState<string>('cm');
   const [price, setPrice] = useState<string>('');
-  const [result, setResult] = useState<{ volume: number; cost: number | null } | null>(null);
+  const [result, setResult] = useState<{ volume: number; cost: number | null; areaM2: number } | null>(null);
   const resultRef = useScrollToResult(result);
 
-  const handleCalculate = () => {
-    const a = parseFloat(area);
+  const getAreaInSqM = (): number | null => {
+    if (areaMode === 'area') {
+      const a = parseFloat(area);
+      return Number.isNaN(a) || a <= 0 ? null : a;
+    }
+    const l = parseFloat(length);
+    const w = parseFloat(width);
+    if (Number.isNaN(l) || l <= 0 || Number.isNaN(w) || w <= 0) return null;
+    const factor = AREA_TO_SQ_M[areaUnit] ?? 1;
+    return l * w * factor;
+  };
+
+  const getDepthInM = (): number | null => {
     const d = parseFloat(depth);
+    if (Number.isNaN(d) || d <= 0) return null;
+    const factor = DEPTH_TO_M[depthUnit] ?? 0.01;
+    return d * factor;
+  };
+
+  const handleCalculate = () => {
+    const areaM2 = getAreaInSqM();
+    const depthM = getDepthInM();
     const p = price.trim() === '' ? null : parseFloat(price);
 
-    if (Number.isNaN(a) || a <= 0 || Number.isNaN(d) || d <= 0) {
+    if (areaM2 === null || depthM === null) {
       setResult(null);
       return;
     }
@@ -27,56 +72,133 @@ export function MulchCalculator() {
       return;
     }
 
-    const volume = a * (d / 100);
+    const volume = areaM2 * depthM;
     const cost = p !== null ? volume * p : null;
-    setResult({ volume, cost });
+    setResult({ volume, cost, areaM2 });
   };
 
   const handleReset = () => {
+    setAreaMode('area');
     setArea('200');
+    setLength('');
+    setWidth('');
+    setAreaUnit('meters');
     setDepth('2');
+    setDepthUnit('cm');
     setPrice('');
     setResult(null);
   };
 
-  const areaNum = parseFloat(area);
-  const depthNum = parseFloat(depth);
+  const areaM2 = getAreaInSqM();
+  const depthM = getDepthInM();
   const valid =
-    !Number.isNaN(areaNum) &&
-    areaNum > 0 &&
-    !Number.isNaN(depthNum) &&
-    depthNum > 0 &&
+    areaM2 !== null &&
+    areaM2 > 0 &&
+    depthM !== null &&
+    depthM > 0 &&
     (price.trim() === '' || (!Number.isNaN(parseFloat(price)) && parseFloat(price) >= 0));
+
+  const areaUnitLabel = t(`areaUnit_${areaUnit}` as 'areaUnit_meters');
+  const depthUnitLabel = t(`depthUnit_${depthUnit}` as 'depthUnit_cm');
 
   return (
     <>
       <div className="split-view-container">
         <div className="input-section" style={{ marginBottom: 0 }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            {/* Area: toggle Total Area vs Use dimensions */}
             <div className="input-card">
-              <label htmlFor="area" className="input-label">
-                {t('areaToCover')}
-              </label>
-              <div className="input-with-unit">
-                <input
-                  id="area"
-                  type="number"
-                  min="0"
-                  step="0.01"
-                  value={area}
-                  onChange={(e) => setArea(e.target.value)}
-                  onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
-                  className="number-input"
-                  placeholder="200"
-                />
-                <span className="input-unit">{t('squareMeters')}</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
+                <label className="input-label" style={{ marginBottom: 0 }}>
+                  <input
+                    type="radio"
+                    name="areaMode"
+                    checked={areaMode === 'area'}
+                    onChange={() => setAreaMode('area')}
+                    style={{ marginRight: '0.35rem' }}
+                  />
+                  {t('totalArea')}
+                </label>
+                <label className="input-label" style={{ marginBottom: 0 }}>
+                  <input
+                    type="radio"
+                    name="areaMode"
+                    checked={areaMode === 'dimensions'}
+                    onChange={() => setAreaMode('dimensions')}
+                    style={{ marginRight: '0.35rem' }}
+                  />
+                  {t('useDimensions')}
+                </label>
               </div>
+              {areaMode === 'area' && (
+                <div className="input-with-unit">
+                  <input
+                    id="area"
+                    type="number"
+                    min="0"
+                    step="0.01"
+                    value={area}
+                    onChange={(e) => setArea(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                    className="number-input"
+                    placeholder="200"
+                  />
+                  <span className="input-unit">{t('squareMeters')}</span>
+                </div>
+              )}
+              {areaMode === 'dimensions' && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', alignItems: 'center' }}>
+                    <label htmlFor="length" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>{t('length')}</label>
+                    <input
+                      id="length"
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value={length}
+                      onChange={(e) => setLength(e.target.value)}
+                      onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                      className="number-input"
+                      placeholder={t('length')}
+                      style={{ width: '6rem' }}
+                    />
+                    <span className="input-unit" style={{ whiteSpace: 'nowrap' }}>{t('length')}</span>
+                    <span style={{ opacity: 0.7 }}>×</span>
+                    <label htmlFor="width" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>{t('width')}</label>
+                    <input
+                      id="width"
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value={width}
+                      onChange={(e) => setWidth(e.target.value)}
+                      onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
+                      className="number-input"
+                      placeholder={t('width')}
+                      style={{ width: '6rem' }}
+                    />
+                    <span className="input-unit" style={{ whiteSpace: 'nowrap' }}>{t('width')}</span>
+                  </div>
+                  <select
+                    value={areaUnit}
+                    onChange={(e) => setAreaUnit(e.target.value)}
+                    className="number-input"
+                    style={{ width: '100%', maxWidth: '12rem' }}
+                    aria-label={t('areaUnitLabel')}
+                  >
+                    {AREA_UNITS.map((u) => (
+                      <option key={u} value={u}>{t(`areaUnit_${u}` as 'areaUnit_meters')}</option>
+                    ))}
+                  </select>
+                </div>
+              )}
             </div>
+
             <div className="input-card">
               <label htmlFor="depth" className="input-label">
                 {t('mulchDepth')}
               </label>
-              <div className="input-with-unit">
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', alignItems: 'center' }}>
                 <input
                   id="depth"
                   type="number"
@@ -87,10 +209,22 @@ export function MulchCalculator() {
                   onKeyDown={(e) => e.key === 'Enter' && handleCalculate()}
                   className="number-input"
                   placeholder="2"
+                  style={{ width: '6rem' }}
                 />
-                <span className="input-unit">{t('cm')}</span>
+                <select
+                  value={depthUnit}
+                  onChange={(e) => setDepthUnit(e.target.value)}
+                  className="number-input"
+                  style={{ width: '8rem' }}
+                  aria-label={t('depthUnitLabel')}
+                >
+                  {DEPTH_UNITS.map((u) => (
+                    <option key={u} value={u}>{t(`depthUnit_${u}` as 'depthUnit_cm')}</option>
+                  ))}
+                </select>
               </div>
             </div>
+
             <div className="input-card">
               <label htmlFor="price" className="input-label">
                 {t('priceOptional')}
@@ -107,9 +241,10 @@ export function MulchCalculator() {
                   className="number-input"
                   placeholder={t('pricePlaceholder')}
                 />
-                <span className="input-unit">{t('perCubicMeter')}</span>
+                <span className="input-unit">{t('pricePerCubicMeter')}</span>
               </div>
             </div>
+
             <div className="action-buttons" style={{ minHeight: '44px', minWidth: '140px', gap: '0.75rem' }}>
               <button onClick={handleCalculate} className="btn btn-primary">
                 {t('calculate')}
@@ -170,8 +305,8 @@ export function MulchCalculator() {
                   <div className="example-text" style={{ lineHeight: '1.8' }}>
                     <p>
                       {t('calculationSummary', {
-                        area: areaNum,
-                        depth: depthNum,
+                        area: result.areaM2.toFixed(2),
+                        depth: depthUnit === 'cm' ? depth : `${depth} ${depthUnitLabel}`,
                         volume: result.volume.toFixed(2),
                       })}
                     </p>

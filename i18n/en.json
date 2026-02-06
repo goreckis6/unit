@@ -6276,6 +6276,118 @@
         }
       }
     },
+    "dli": {
+      "title": "DLI Calculator - Daily Light Integral Calculator",
+      "description": "Calculate Daily Light Integral (DLI) for optimal plant growth. Professional DLI calculator with PPFD, photoperiod, plant type recommendations, and energy cost estimation for indoor growing.",
+      "calculationMode": "Calculation Mode",
+      "modeForward": "Calculate DLI",
+      "modeFindPPFD": "Find Required PPFD",
+      "modeFindHours": "Find Required Hours",
+      "lightIntensity": "Light Intensity (PPFD)",
+      "photoperiod": "Photoperiod",
+      "hoursPerDay": "hours/day",
+      "plantType": "Plant Type",
+      "plantMicrogreens": "Microgreens / Seedlings (Target: 6-12 mol)",
+      "plantLeafyGreens": "Leafy Greens / Herbs (Target: 12-17 mol)",
+      "plantFloweringLow": "Flowering Plants (Low Light) (Target: 15-20 mol)",
+      "plantFloweringHigh": "Flowering Plants (High Light / Tomatoes) (Target: 20-40+ mol)",
+      "plantCannabisVeg": "Cannabis (Vegetative) (Target: 20-30 mol)",
+      "plantCannabisFlower": "Cannabis (Flowering) (Target: 30-45+ mol)",
+      "lightSource": "Light Source",
+      "optional": "Optional",
+      "sourceLED": "LED",
+      "sourceHPS": "HPS (High Pressure Sodium)",
+      "sourceMetalHalide": "Metal Halide",
+      "sourceSunlight": "Sunlight",
+      "lightWattage": "Light Wattage",
+      "electricityRate": "Electricity Rate",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "dliValue": "Daily Light Integral (DLI)",
+      "targetDLI": "Target DLI",
+      "requiredPPFD": "Required PPFD",
+      "requiredHours": "Required Hours",
+      "status": "Status",
+      "statusOptimal": "Optimal",
+      "statusTooLow": "Too Low",
+      "statusExcessive": "Excessive",
+      "targetRange": "Target Range",
+      "currentDLI": "Current DLI",
+      "currentPPFD": "Current PPFD",
+      "hours": "hours",
+      "for": "for",
+      "monthlyCost": "Monthly Energy Cost",
+      "perMonth": "per month",
+      "adviceHeading": "Recommendation",
+      "adviceOptimal": "Your DLI is in the optimal range for your selected plant type. Maintain these lighting conditions for healthy growth and maximum yields.",
+      "adviceTooLow": "Your DLI is too low. Increase light intensity (PPFD), extend photoperiod, or upgrade to stronger lights to reach the target range for optimal growth.",
+      "adviceExcessive": "Your DLI is too high. Reduce light intensity, shorten photoperiod, or increase light distance to prevent light stress and bleaching.",
+      "calculationHeading": "Calculation Details",
+      "formulaLabel": "DLI Formula",
+      "enterValue": "Enter light intensity, photoperiod, and plant type to calculate DLI",
+      "clickCalculate": "Click Calculate to see your DLI and recommendations",
+      "seo": {
+        "title": "DLI Calculator: Daily Light Integral Calculator for Indoor Growing",
+        "description": "Professional DLI calculator with PPFD and photoperiod inputs. Calculate optimal daily light integral for all plant types including cannabis, tomatoes, and leafy greens. Includes reverse calculations and energy cost estimates.",
+        "keywords": "dli calculator, daily light integral calculator, ppfd calculator, dli for growing, cannabis dli, dli chart, photoperiod calculator, par meter calculator, grow light calculator, indoor growing dli",
+        "content": {
+          "heading": "How to Use the DLI Calculator",
+          "paragraph1": "The DLI (Daily Light Integral) Calculator is an essential tool for serious indoor growers who want to optimize their lighting setup. DLI measures the total amount of photosynthetically active radiation (PAR) that plants receive over a 24-hour period, expressed in moles per square meter per day (mol/m²/d). Unlike simple PPFD readings, DLI accounts for both light intensity and duration, giving you a complete picture of your lighting conditions.",
+          "paragraph2": "Understanding DLI is crucial because different plants have different light requirements. Too little light results in slow growth, leggy plants, and poor yields. Too much light can cause light stress, bleaching, and wasted electricity. Our calculator helps you find the sweet spot by comparing your current DLI against target ranges for your specific plant type. Whether you're growing microgreens (6-12 mol), leafy greens (12-17 mol), flowering plants (15-40+ mol), or cannabis (20-45+ mol), this tool provides instant recommendations.",
+          "paragraph3": "This calculator includes three powerful calculation modes: Forward calculation (find your DLI from PPFD and hours), Reverse PPFD calculation (find required PPFD for a target DLI), and Reverse Hours calculation (find required photoperiod for a target DLI). The reverse calculations are especially valuable when planning a new grow setup or optimizing an existing one. Simply enter your target DLI and either your available hours or current PPFD, and the calculator tells you exactly what you need to adjust.",
+          "paragraph4": "The calculator also includes an optional energy cost estimator. Enter your light wattage and local electricity rate to see how much your lighting schedule costs per month. This feature helps growers make informed decisions about whether to extend photoperiods or invest in more efficient LED lights. For US growers, this is particularly valuable as electricity costs can significantly impact profitability.",
+          "exampleHeading": "Example Calculation",
+          "exampleText": "Example: If you're running LED lights at 400 μmol/m²/s for 18 hours per day, your DLI would be: 400 × 18 × 0.0036 = 25.92 mol/m²/d. For cannabis in vegetative stage (target 20-30 mol), this is optimal. For leafy greens (target 12-17 mol), this would be excessive. The calculator shows a visual comparison bar and provides specific recommendations based on your plant type selection."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is DLI and why is it important for growing plants?",
+              "answer": "DLI (Daily Light Integral) measures the total amount of photosynthetically active radiation (PAR) that plants receive in a 24-hour period, expressed in mol/m²/d. It's more useful than PPFD alone because it accounts for both light intensity and duration. Proper DLI management ensures optimal photosynthesis, healthy growth, and maximum yields. Too little DLI causes slow growth, while too much wastes electricity and can cause light stress."
+            },
+            {
+              "question": "What is the optimal DLI for cannabis plants?",
+              "answer": "Optimal DLI for cannabis varies by growth stage: Vegetative: 20-30 mol/m²/d, Flowering: 30-45+ mol/m²/d. These ranges promote vigorous growth, optimal bud development, and maximum yields. Some high-intensity growers push flowering DLI to 50+ mol/m²/d with CO2 supplementation, but 30-45 mol is the standard range for most setups."
+            },
+            {
+              "question": "How do I measure PPFD for DLI calculations?",
+              "answer": "Use a PAR meter (photosynthetically active radiation meter) or a smartphone app like Photone to measure PPFD at your canopy level. Take multiple readings across your grow space and use the average. PPFD readings from PAR meters are in μmol/m²/s. Enter this value along with your photoperiod (hours per day) into the calculator to get your DLI."
+            },
+            {
+              "question": "What's the difference between PPFD and DLI?",
+              "answer": "PPFD (Photosynthetic Photon Flux Density) is an instantaneous measurement of light intensity at a specific moment, measured in μmol/m²/s. DLI (Daily Light Integral) is the cumulative total of PAR over 24 hours, measured in mol/m²/d. DLI = PPFD × Hours × 0.0036. PPFD tells you how bright your lights are; DLI tells you how much total light your plants receive per day."
+            },
+            {
+              "question": "How do I increase my DLI?",
+              "answer": "You can increase DLI by: 1) Increasing light intensity (PPFD) - move lights closer, add more lights, or upgrade to stronger fixtures, 2) Extending photoperiod - run lights longer each day (up to 24 hours for some plants), 3) Using more efficient lights - LED lights often provide higher PPFD per watt than HPS or metal halide. Use the reverse calculation modes to find exactly what adjustments you need."
+            },
+            {
+              "question": "What happens if my DLI is too high?",
+              "answer": "Excessive DLI causes light stress, bleaching (especially on upper leaves), reduced photosynthesis efficiency, and wasted electricity. Plants have a saturation point where additional light doesn't increase growth. Symptoms include yellowing or white leaves, stunted growth, and leaf curling. Reduce PPFD, shorten photoperiod, or increase light distance to bring DLI into optimal range."
+            },
+            {
+              "question": "What happens if my DLI is too low?",
+              "answer": "Insufficient DLI causes slow growth, leggy plants (excessive stem elongation), poor yields, weak stems, and reduced flowering/bud development. Plants stretch toward light sources, wasting energy on stem growth instead of leaves and flowers. Increase PPFD, extend photoperiod, or upgrade to stronger lights to reach target DLI for your plant type."
+            },
+            {
+              "question": "Can I use this calculator for outdoor growing?",
+              "answer": "Yes, but outdoor DLI varies significantly by season, weather, and location. Full sun can provide 30-60+ mol/m²/d depending on time of year and latitude. Use a PAR meter or smartphone app to measure outdoor PPFD, then multiply by hours of daylight to estimate outdoor DLI. The calculator works the same way - just enter your measured PPFD and daylight hours."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "vpd": "VPD Calculator",
+          "vpdDesc": "Calculate vapor pressure deficit for optimal plant transpiration and growth",
+          "c1v1": "C1V1 Dilution Calculator",
+          "c1v1Desc": "Calculate dilution volumes and concentrations for solutions",
+          "catPregnancy": "Cat Pregnancy Calculator",
+          "catPregnancyDesc": "Estimate your cat's due date and delivery window"
+        }
+      }
+    },
     "italicText": {
       "title": "Italic Text Generator",
       "description": "Generate italic text instantly with multiple Unicode styles: serif italic, cursive script, and sans-serif italic. Perfect for social media, design, and creative writing.",

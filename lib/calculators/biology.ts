@@ -43,4 +43,11 @@ export const biologyCalculators: Calculator[] = [
     path: '/calculators/biology/vpd-calculator',
     category: 'biology',
   },
+  {
+    id: 'dli-calculator',
+    titleKey: 'dli.title',
+    descKey: 'dli.description',
+    path: '/calculators/biology/dli-calculator',
+    category: 'biology',
+  },
 ];

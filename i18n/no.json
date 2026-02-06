@@ -7119,6 +7119,118 @@
           "catPregnancyDesc": "Estimer kattens forventede fødselsdato og leveringsvindu"
         }
       }
+    },
+    "dli": {
+      "title": "DLI-kalkulator - Daglig lysintegral-kalkulator",
+      "description": "Beregn daglig lysintegral (DLI) for optimal plantvekst. Profesjonell DLI-kalkulator med PPFD, fotoperiode, planttype-anbefalinger og energikostnadsestimering for innendørsdyrking.",
+      "calculationMode": "Beregningsmodus",
+      "modeForward": "Beregn DLI",
+      "modeFindPPFD": "Finn påkrevd PPFD",
+      "modeFindHours": "Finn påkrevde timer",
+      "lightIntensity": "Lysintensitet (PPFD)",
+      "photoperiod": "Fotoperiode",
+      "hoursPerDay": "timer/dag",
+      "plantType": "Planttype",
+      "plantMicrogreens": "Mikrogrønnsaker / Frøplanter (Mål: 6-12 mol)",
+      "plantLeafyGreens": "Bladgrønnsaker / Urter (Mål: 12-17 mol)",
+      "plantFloweringLow": "Blomstrende planter (Lavt lys) (Mål: 15-20 mol)",
+      "plantFloweringHigh": "Blomstrende planter (Høyt lys / Tomater) (Mål: 20-40+ mol)",
+      "plantCannabisVeg": "Cannabis (Vegetativ) (Mål: 20-30 mol)",
+      "plantCannabisFlower": "Cannabis (Blomstring) (Mål: 30-45+ mol)",
+      "lightSource": "Lyskilde",
+      "optional": "Valgfritt",
+      "sourceLED": "LED",
+      "sourceHPS": "HPS (Høytrykksnatrium)",
+      "sourceMetalHalide": "Metallhalogenid",
+      "sourceSunlight": "Sollys",
+      "lightWattage": "Lys wattage",
+      "electricityRate": "Strømpris",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "dliValue": "Daglig lysintegral (DLI)",
+      "targetDLI": "Mål DLI",
+      "requiredPPFD": "Påkrevd PPFD",
+      "requiredHours": "Påkrevde timer",
+      "status": "Status",
+      "statusOptimal": "Optimal",
+      "statusTooLow": "For lavt",
+      "statusExcessive": "Overdreven",
+      "targetRange": "Målområde",
+      "currentDLI": "Nåværende DLI",
+      "currentPPFD": "Nåværende PPFD",
+      "hours": "timer",
+      "for": "for",
+      "monthlyCost": "Månedlig energikostnad",
+      "perMonth": "per måned",
+      "adviceHeading": "Anbefaling",
+      "adviceOptimal": "Ditt DLI er i det optimale området for din valgte planttype. Oppretthold disse belysningsforholdene for sunn vekst og maksimal avling.",
+      "adviceTooLow": "Ditt DLI er for lavt. Øk lysintensiteten (PPFD), forleng fotoperioden eller oppgrader til sterkere lamper for å nå målområdet for optimal vekst.",
+      "adviceExcessive": "Ditt DLI er for høyt. Reduser lysintensiteten, forkort fotoperioden eller øk lysavstanden for å forhindre lysstress og bleking.",
+      "calculationHeading": "Beregningsdetaljer",
+      "formulaLabel": "DLI-formel",
+      "enterValue": "Skriv inn lysintensitet, fotoperiode og planttype for å beregne DLI",
+      "clickCalculate": "Klikk Beregn for å se ditt DLI og anbefalinger",
+      "seo": {
+        "title": "DLI-kalkulator: Daglig lysintegral-kalkulator for innendørsdyrking",
+        "description": "Profesjonell DLI-kalkulator med PPFD- og fotoperiode-inndata. Beregn optimalt daglig lysintegral for alle planttyper inkludert cannabis, tomater og bladgrønnsaker. Inkluderer omvendte beregninger og energikostnadsestimater.",
+        "keywords": "dli kalkulator, daglig lysintegral kalkulator, ppfd kalkulator, dli for dyrking, cannabis dli, dli diagram, fotoperiode kalkulator, par meter kalkulator, dyrkelys kalkulator, innendørsdyrking dli",
+        "content": {
+          "heading": "Hvordan bruke DLI-kalkulatoren",
+          "paragraph1": "DLI-kalkulatoren (Daglig lysintegral) er et viktig verktøy for seriøse innendørsdyrkere som ønsker å optimalisere belysningsoppsettet sitt. DLI måler den totale mengden fotosyntetisk aktiv stråling (PAR) som planter mottar over en 24-timers periode, uttrykt i mol per kvadratmeter per dag (mol/m²/d). I motsetning til enkle PPFD-avlesninger tar DLI hensyn til både lysintensitet og varighet, noe som gir deg et komplett bilde av belysningsforholdene dine.",
+          "paragraph2": "Å forstå DLI er avgjørende fordi ulike planter har ulike lyskrav. For lite lys resulterer i langsom vekst, langbente planter og dårlig avling. For mye lys kan forårsake lysstress, bleking og sløst strøm. Kalkulatoren vår hjelper deg med å finne det optimale punktet ved å sammenligne ditt nåværende DLI mot målområder for din spesifikke planttype. Enten du dyrker mikrogrønnsaker (6-12 mol), bladgrønnsaker (12-17 mol), blomstrende planter (15-40+ mol) eller cannabis (20-45+ mol), gir dette verktøyet umiddelbare anbefalinger.",
+          "paragraph3": "Denne kalkulatoren inkluderer tre kraftige beregningsmoduser: Fremoverberegning (finn ditt DLI fra PPFD og timer), Omvendt PPFD-beregning (finn påkrevd PPFD for et mål-DLI) og Omvendt timer-beregning (finn påkrevd fotoperiode for et mål-DLI). De omvendte beregningene er spesielt verdifulle når du planlegger et nytt dyrkeoppsett eller optimaliserer et eksisterende. Skriv ganske enkelt inn ditt mål-DLI og enten dine tilgjengelige timer eller nåværende PPFD, og kalkulatoren forteller deg nøyaktig hva du trenger å justere.",
+          "paragraph4": "Kalkulatoren inkluderer også en valgfri energikostnadsestimator. Skriv inn lys wattage og lokal strømpris for å se hvor mye belysningsplanen din koster per måned. Denne funksjonen hjelper dyrkere med å ta velinformerte beslutninger om å forlenge fotoperioder eller investere i mer effektive LED-lamper. For amerikanske dyrkere er dette spesielt verdifullt siden strømkostnader kan påvirke lønnsomheten betydelig.",
+          "exampleHeading": "Beregnings eksempel",
+          "exampleText": "Eksempel: Hvis du kjører LED-lamper på 400 μmol/m²/s i 18 timer per dag, ville ditt DLI være: 400 × 18 × 0.0036 = 25.92 mol/m²/d. For cannabis i vegetativt stadium (mål 20-30 mol) er dette optimalt. For bladgrønnsaker (mål 12-17 mol) ville dette være overdrevet. Kalkulatoren viser en visuell sammenligningsbar og gir spesifikke anbefalinger basert på ditt planttype-valg."
+        },
+        "faq": {
+          "heading": "Ofte stilte spørsmål",
+          "items": [
+            {
+              "question": "Hva er DLI og hvorfor er det viktig for å dyrke planter?",
+              "answer": "DLI (Daglig lysintegral) måler den totale mengden fotosyntetisk aktiv stråling (PAR) som planter mottar i en 24-timers periode, uttrykt i mol/m²/d. Det er mer nyttig enn PPFD alene fordi det tar hensyn til både lysintensitet og varighet. Riktig DLI-håndtering sikrer optimal fotosyntese, sunn vekst og maksimal avling. For lite DLI forårsaker langsom vekst, mens for mye sløser strøm og kan forårsake lysstress."
+            },
+            {
+              "question": "Hva er det optimale DLI for cannabisplanter?",
+              "answer": "Optimalt DLI for cannabis varierer etter vekststadium: Vegetativt: 20-30 mol/m²/d, Blomstring: 30-45+ mol/m²/d. Disse områdene fremmer kraftig vekst, optimal knopputvikling og maksimal avling. Noen høytintensive dyrkere presser blomstrings-DLI til 50+ mol/m²/d med CO2-tilskudd, men 30-45 mol er standardområdet for de fleste oppsett."
+            },
+            {
+              "question": "Hvordan måler jeg PPFD for DLI-beregninger?",
+              "answer": "Bruk en PAR-meter (fotosyntetisk aktiv strålingsmåler) eller en smarttelefon-app som Photone for å måle PPFD på kronnivået ditt. Ta flere avlesninger over dyrkerommet ditt og bruk gjennomsnittet. PPFD-avlesninger fra PAR-metere er i μmol/m²/s. Skriv inn denne verdien sammen med fotoperioden din (timer per dag) i kalkulatoren for å få ditt DLI."
+            },
+            {
+              "question": "Hva er forskjellen mellom PPFD og DLI?",
+              "answer": "PPFD (Fotosyntetisk fotonfluks tetthet) er en momentan måling av lysintensitet på et spesifikt tidspunkt, målt i μmol/m²/s. DLI (Daglig lysintegral) er den kumulative totalen av PAR over 24 timer, målt i mol/m²/d. DLI = PPFD × Timer × 0.0036. PPFD forteller deg hvor lyse lampene dine er; DLI forteller deg hvor mye totalt lys plantene dine mottar per dag."
+            },
+            {
+              "question": "Hvordan øker jeg mitt DLI?",
+              "answer": "Du kan øke DLI ved: 1) Øke lysintensiteten (PPFD) - flytte lamper nærmere, legge til flere lamper eller oppgradere til sterkere armaturer, 2) Forlenge fotoperioden - kjøre lamper lengre hver dag (opp til 24 timer for noen planter), 3) Bruke mer effektive lamper - LED-lamper gir ofte høyere PPFD per watt enn HPS eller metallhalogenid. Bruk de omvendte beregningsmodusene for å finne nøyaktig hvilke justeringer du trenger."
+            },
+            {
+              "question": "Hva skjer hvis mitt DLI er for høyt?",
+              "answer": "Overdreven DLI forårsaker lysstress, bleking (spesielt på øvre blad), redusert fotosynteseeffektivitet og sløst strøm. Planter har et metningspunkt der tilleggslys ikke øker veksten. Symptomer inkluderer gulning eller hvite blad, hemmet vekst og bladkrølling. Reduser PPFD, forkort fotoperioden eller øk lysavstanden for å få DLI i optimalt område."
+            },
+            {
+              "question": "Hva skjer hvis mitt DLI er for lavt?",
+              "answer": "Utilstrekkelig DLI forårsaker langsom vekst, langbente planter (overdreven stengelforlengelse), dårlig avling, svake stengler og redusert blomstring/knopputvikling. Planter strekker seg mot lyskilder, sløser energi på stengelvekst i stedet for blad og blomster. Øk PPFD, forleng fotoperioden eller oppgrader til sterkere lamper for å nå mål-DLI for din planttype."
+            },
+            {
+              "question": "Kan jeg bruke denne kalkulatoren for utendørsdyrking?",
+              "answer": "Ja, men utendørs-DLI varierer betydelig etter sesong, vær og plassering. Full sol kan gi 30-60+ mol/m²/d avhengig av årstid og breddegrad. Bruk en PAR-meter eller smarttelefon-app for å måle utendørs-PPFD, multipliser deretter med timer av dagslys for å estimere utendørs-DLI. Kalkulatoren fungerer på samme måte - skriv bare inn din målte PPFD og dagslystimer."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte kalkulatorer",
+          "vpd": "VPD-kalkulator",
+          "vpdDesc": "Beregn damptrykkunderskudd for optimal plantetranspirasjon og vekst",
+          "c1v1": "C1V1-fortygningskalkulator",
+          "c1v1Desc": "Beregn fortygningsvolumer og konsentrasjoner for løsninger",
+          "catPregnancy": "Kattgraviditetskalkulator",
+          "catPregnancyDesc": "Estimer din katts forfallsdato og leveringsvindu"
+        }
+      }
     }
   },
   "notFound": {

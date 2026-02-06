@@ -5885,6 +5885,118 @@
         }
       }
     },
+    "dli": {
+      "title": "DLI计算器 - 日累积光量计算器",
+      "description": "计算日累积光量(DLI)以实现最佳植物生长。专业的DLI计算器,包含PPFD、光周期、植物类型建议和室内种植的能源成本估算。",
+      "calculationMode": "计算模式",
+      "modeForward": "计算DLI",
+      "modeFindPPFD": "查找所需PPFD",
+      "modeFindHours": "查找所需小时数",
+      "lightIntensity": "光照强度(PPFD)",
+      "photoperiod": "光周期",
+      "hoursPerDay": "小时/天",
+      "plantType": "植物类型",
+      "plantMicrogreens": "微菜/幼苗(目标:6-12 mol)",
+      "plantLeafyGreens": "叶菜/香草(目标:12-17 mol)",
+      "plantFloweringLow": "开花植物(低光)(目标:15-20 mol)",
+      "plantFloweringHigh": "开花植物(高光/番茄)(目标:20-40+ mol)",
+      "plantCannabisVeg": "大麻(营养期)(目标:20-30 mol)",
+      "plantCannabisFlower": "大麻(开花期)(目标:30-45+ mol)",
+      "lightSource": "光源",
+      "optional": "可选",
+      "sourceLED": "LED",
+      "sourceHPS": "HPS(高压钠灯)",
+      "sourceMetalHalide": "金属卤化物",
+      "sourceSunlight": "阳光",
+      "lightWattage": "灯光功率",
+      "electricityRate": "电价",
+      "calculate": "计算",
+      "reset": "重置",
+      "result": "结果",
+      "dliValue": "日累积光量(DLI)",
+      "targetDLI": "目标DLI",
+      "requiredPPFD": "所需PPFD",
+      "requiredHours": "所需小时数",
+      "status": "状态",
+      "statusOptimal": "最佳",
+      "statusTooLow": "过低",
+      "statusExcessive": "过高",
+      "targetRange": "目标范围",
+      "currentDLI": "当前DLI",
+      "currentPPFD": "当前PPFD",
+      "hours": "小时",
+      "for": "用于",
+      "monthlyCost": "每月能源成本",
+      "perMonth": "每月",
+      "adviceHeading": "建议",
+      "adviceOptimal": "您的DLI在所选植物类型的最佳范围内。保持这些光照条件以实现健康生长和最大产量。",
+      "adviceTooLow": "您的DLI过低。增加光照强度(PPFD)、延长光周期或升级到更强的灯光以达到最佳生长的目标范围。",
+      "adviceExcessive": "您的DLI过高。降低光照强度、缩短光周期或增加灯光距离以防止光胁迫和漂白。",
+      "calculationHeading": "计算详情",
+      "formulaLabel": "DLI公式",
+      "enterValue": "输入光照强度、光周期和植物类型以计算DLI",
+      "clickCalculate": "点击计算以查看您的DLI和建议",
+      "seo": {
+        "title": "DLI计算器:室内种植日累积光量计算器",
+        "description": "专业的DLI计算器,包含PPFD和光周期输入。计算所有植物类型(包括大麻、番茄和叶菜)的最佳日累积光量。包含反向计算和能源成本估算。",
+        "keywords": "dli计算器,日累积光量计算器,ppfd计算器,种植dli,大麻dli,dli图表,光周期计算器,par表计算器,生长灯计算器,室内种植dli",
+        "content": {
+          "heading": "如何使用DLI计算器",
+          "paragraph1": "DLI(日累积光量)计算器是想要优化照明设置的严肃室内种植者的必备工具。DLI测量植物在24小时内接收的光合有效辐射(PAR)总量,以每平方米每天摩尔数(mol/m²/d)表示。与简单的PPFD读数不同,DLI同时考虑了光照强度和持续时间,为您提供照明条件的完整图景。",
+          "paragraph2": "理解DLI至关重要,因为不同植物有不同的光照需求。光照不足会导致生长缓慢、徒长和产量低下。光照过多会导致光胁迫、漂白和浪费电力。我们的计算器通过将您当前的DLI与特定植物类型的目标范围进行比较,帮助您找到最佳点。无论您种植微菜(6-12 mol)、叶菜(12-17 mol)、开花植物(15-40+ mol)还是大麻(20-45+ mol),此工具都提供即时建议。",
+          "paragraph3": "此计算器包含三种强大的计算模式:正向计算(从PPFD和小时数找到您的DLI)、反向PPFD计算(找到目标DLI所需的PPFD)和反向小时数计算(找到目标DLI所需的光周期)。反向计算在规划新的种植设置或优化现有设置时特别有价值。只需输入您的目标DLI以及可用小时数或当前PPFD,计算器就会告诉您需要调整什么。",
+          "paragraph4": "计算器还包含一个可选的能源成本估算器。输入您的灯光功率和当地电价,查看您的照明计划每月花费多少。此功能帮助种植者做出明智的决定,是延长光周期还是投资更高效的LED灯。对于美国种植者来说,这尤其有价值,因为电力成本可能显著影响盈利能力。",
+          "exampleHeading": "计算示例",
+          "exampleText": "示例:如果您每天运行18小时400 μmol/m²/s的LED灯,您的DLI将是:400 × 18 × 0.0036 = 25.92 mol/m²/d。对于营养期的大麻(目标20-30 mol),这是最佳的。对于叶菜(目标12-17 mol),这将是过高的。计算器显示可视化比较条,并根据您的植物类型选择提供具体建议。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {
+              "question": "什么是DLI,为什么它对植物种植很重要?",
+              "answer": "DLI(日累积光量)测量植物在24小时内接收的光合有效辐射(PAR)总量,以mol/m²/d表示。它比单独的PPFD更有用,因为它同时考虑了光照强度和持续时间。适当的DLI管理确保最佳光合作用、健康生长和最大产量。DLI过少会导致生长缓慢,而过多会浪费电力并可能导致光胁迫。"
+            },
+            {
+              "question": "大麻植物的最佳DLI是多少?",
+              "answer": "大麻的最佳DLI因生长阶段而异:营养期:20-30 mol/m²/d,开花期:30-45+ mol/m²/d。这些范围促进旺盛生长、最佳花蕾发育和最大产量。一些高强度种植者在CO2补充下将开花DLI推至50+ mol/m²/d,但30-45 mol是大多数设置的标准范围。"
+            },
+            {
+              "question": "如何测量PPFD用于DLI计算?",
+              "answer": "使用PAR表(光合有效辐射表)或智能手机应用程序(如Photone)在冠层水平测量PPFD。在您的种植空间进行多次读数并使用平均值。PAR表的PPFD读数以μmol/m²/s为单位。将此值连同您的光周期(每天小时数)输入计算器以获得您的DLI。"
+            },
+            {
+              "question": "PPFD和DLI有什么区别?",
+              "answer": "PPFD(光合光子通量密度)是在特定时刻的光照强度瞬时测量,以μmol/m²/s为单位。DLI(日累积光量)是24小时内PAR的累积总量,以mol/m²/d为单位。DLI = PPFD × 小时 × 0.0036。PPFD告诉您灯光的亮度;DLI告诉您植物每天接收的总光量。"
+            },
+            {
+              "question": "如何增加我的DLI?",
+              "answer": "您可以通过以下方式增加DLI:1)增加光照强度(PPFD)-将灯光移近、添加更多灯光或升级到更强的灯具,2)延长光周期-每天运行灯光更长时间(某些植物最多24小时),3)使用更高效的灯光-LED灯通常比HPS或金属卤化物提供更高的每瓦PPFD。使用反向计算模式准确找到所需的调整。"
+            },
+            {
+              "question": "如果我的DLI过高会发生什么?",
+              "answer": "过高的DLI会导致光胁迫、漂白(特别是上部叶片)、降低光合效率并浪费电力。植物有一个饱和点,超过该点额外的光照不会增加生长。症状包括叶片变黄或变白、生长受阻和叶片卷曲。降低PPFD、缩短光周期或增加灯光距离以使DLI进入最佳范围。"
+            },
+            {
+              "question": "如果我的DLI过低会发生什么?",
+              "answer": "DLI不足会导致生长缓慢、徒长(茎过度伸长)、产量低下、茎弱以及开花/花蕾发育减少。植物会向光源伸展,将能量浪费在茎生长而不是叶和花上。增加PPFD、延长光周期或升级到更强的灯光以达到您植物类型的目标DLI。"
+            },
+            {
+              "question": "我可以将此计算器用于户外种植吗?",
+              "answer": "可以,但户外DLI因季节、天气和位置而有很大差异。全日照可根据一年中的时间和纬度提供30-60+ mol/m²/d。使用PAR表或智能手机应用程序测量户外PPFD,然后乘以日照小时数以估算户外DLI。计算器的工作方式相同-只需输入您测量的PPFD和日照小时数。"
+            }
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "vpd": "VPD计算器",
+          "vpdDesc": "计算蒸汽压差以实现最佳植物蒸腾和生长",
+          "c1v1": "C1V1稀释计算器",
+          "c1v1Desc": "计算溶液的稀释体积和浓度",
+          "catPregnancy": "猫怀孕计算器",
+          "catPregnancyDesc": "从交配日期估算您猫的分娩日期和分娩窗口"
+        }
+      }
+    },
     "italicText": {
       "title": "斜体文本生成器",
       "description": "使用多种Unicode样式即时生成斜体文本：serif斜体、草书脚本和sans-serif斜体。非常适合社交媒体、设计和创意写作。",

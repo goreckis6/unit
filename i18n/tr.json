@@ -7138,6 +7138,118 @@
           "catPregnancyDesc": "Kedinizin doğum tarihini ve doğum penceresini tahmin edin"
         }
       }
+    },
+    "dli": {
+      "title": "DLI Hesaplayıcı - Günlük Işık İntegrali Hesaplayıcı",
+      "description": "Optimal bitki büyümesi için günlük ışık integralini (DLI) hesaplayın. PPFD, fotoperiyot, bitki türü önerileri ve iç mekan yetiştirme için enerji maliyeti tahmini ile profesyonel DLI hesaplayıcı.",
+      "calculationMode": "Hesaplama Modu",
+      "modeForward": "DLI Hesapla",
+      "modeFindPPFD": "Gerekli PPFD'yi Bul",
+      "modeFindHours": "Gerekli Saatleri Bul",
+      "lightIntensity": "Işık Yoğunluğu (PPFD)",
+      "photoperiod": "Fotoperiyot",
+      "hoursPerDay": "saat/gün",
+      "plantType": "Bitki Türü",
+      "plantMicrogreens": "Mikro yeşillikler / Fideler (Hedef: 6-12 mol)",
+      "plantLeafyGreens": "Yapraklı Yeşillikler / Otlar (Hedef: 12-17 mol)",
+      "plantFloweringLow": "Çiçekli Bitkiler (Düşük Işık) (Hedef: 15-20 mol)",
+      "plantFloweringHigh": "Çiçekli Bitkiler (Yüksek Işık / Domates) (Hedef: 20-40+ mol)",
+      "plantCannabisVeg": "Kenevir (Vejetatif) (Hedef: 20-30 mol)",
+      "plantCannabisFlower": "Kenevir (Çiçeklenme) (Hedef: 30-45+ mol)",
+      "lightSource": "Işık Kaynağı",
+      "optional": "İsteğe Bağlı",
+      "sourceLED": "LED",
+      "sourceHPS": "HPS (Yüksek Basınçlı Sodyum)",
+      "sourceMetalHalide": "Metal Halojenür",
+      "sourceSunlight": "Güneş Işığı",
+      "lightWattage": "Işık Gücü",
+      "electricityRate": "Elektrik Fiyatı",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "dliValue": "Günlük Işık İntegrali (DLI)",
+      "targetDLI": "Hedef DLI",
+      "requiredPPFD": "Gerekli PPFD",
+      "requiredHours": "Gerekli Saatler",
+      "status": "Durum",
+      "statusOptimal": "Optimal",
+      "statusTooLow": "Çok Düşük",
+      "statusExcessive": "Aşırı",
+      "targetRange": "Hedef Aralık",
+      "currentDLI": "Mevcut DLI",
+      "currentPPFD": "Mevcut PPFD",
+      "hours": "saat",
+      "for": "için",
+      "monthlyCost": "Aylık Enerji Maliyeti",
+      "perMonth": "aylık",
+      "adviceHeading": "Öneri",
+      "adviceOptimal": "DLI'niz seçtiğiniz bitki türü için optimal aralıkta. Sağlıklı büyüme ve maksimum verim için bu aydınlatma koşullarını koruyun.",
+      "adviceTooLow": "DLI'niz çok düşük. Optimal büyüme için hedef aralığa ulaşmak için ışık yoğunluğunu (PPFD) artırın, fotoperiyodu uzatın veya daha güçlü lambalara yükseltin.",
+      "adviceExcessive": "DLI'niz çok yüksek. Işık stresini ve ağarmayı önlemek için ışık yoğunluğunu azaltın, fotoperiyodu kısaltın veya ışık mesafesini artırın.",
+      "calculationHeading": "Hesaplama Detayları",
+      "formulaLabel": "DLI Formülü",
+      "enterValue": "DLI hesaplamak için ışık yoğunluğu, fotoperiyot ve bitki türünü girin",
+      "clickCalculate": "DLI'nizi ve önerileri görmek için Hesapla'ya tıklayın",
+      "seo": {
+        "title": "DLI Hesaplayıcı: İç Mekan Yetiştirme için Günlük Işık İntegrali Hesaplayıcı",
+        "description": "PPFD ve fotoperiyot girişleri ile profesyonel DLI hesaplayıcı. Kenevir, domates ve yapraklı yeşillikler dahil tüm bitki türleri için optimal günlük ışık integralini hesaplayın. Ters hesaplamalar ve enerji maliyeti tahminleri içerir.",
+        "keywords": "dli hesaplayıcı, günlük ışık integrali hesaplayıcı, ppfd hesaplayıcı, yetiştirme için dli, kenevir dli, dli grafik, fotoperiyot hesaplayıcı, par metre hesaplayıcı, yetiştirme ışığı hesaplayıcı, iç mekan yetiştirme dli",
+        "content": {
+          "heading": "DLI Hesaplayıcı Nasıl Kullanılır",
+          "paragraph1": "DLI (Günlük Işık İntegrali) Hesaplayıcı, aydınlatma kurulumlarını optimize etmek isteyen ciddi iç mekan yetiştiricileri için önemli bir araçtır. DLI, bitkilerin 24 saatlik bir süre boyunca aldığı fotosentetik olarak aktif radyasyon (PAR) miktarını ölçer, mol/m²/gün cinsinden ifade edilir. Basit PPFD okumalarının aksine, DLI hem ışık yoğunluğunu hem de süresini hesaba katarak aydınlatma koşullarınızın tam bir resmini verir.",
+          "paragraph2": "DLI'yi anlamak çok önemlidir çünkü farklı bitkilerin farklı ışık gereksinimleri vardır. Çok az ışık yavaş büyüme, uzun bacaklı bitkiler ve düşük verime yol açar. Çok fazla ışık ışık stresi, ağarma ve boşa harcanan elektriğe neden olabilir. Hesaplayıcımız, mevcut DLI'nizi belirli bitki türünüz için hedef aralıklarla karşılaştırarak optimal noktayı bulmanıza yardımcı olur. İster mikro yeşillik (6-12 mol), yapraklı yeşillik (12-17 mol), çiçekli bitkiler (15-40+ mol) veya kenevir (20-45+ mol) yetiştiriyor olun, bu araç anında öneriler sağlar.",
+          "paragraph3": "Bu hesaplayıcı üç güçlü hesaplama modu içerir: İleri hesaplama (PPFD ve saatlerden DLI'nizi bulun), Ters PPFD hesaplama (hedef DLI için gerekli PPFD'yi bulun) ve Ters Saat hesaplama (hedef DLI için gerekli fotoperiyodu bulun). Ters hesaplamalar, yeni bir yetiştirme kurulumu planlarken veya mevcut bir kurulumu optimize ederken özellikle değerlidir. Sadece hedef DLI'nizi ve mevcut saatlerinizi veya mevcut PPFD'nizi girin, hesaplayıcı tam olarak neyi ayarlamanız gerektiğini söyler.",
+          "paragraph4": "Hesaplayıcı ayrıca isteğe bağlı bir enerji maliyeti tahmincisi içerir. Aydınlatma programınızın aylık maliyetini görmek için ışık gücünüzü ve yerel elektrik fiyatınızı girin. Bu özellik, yetiştiricilerin fotoperiyotları uzatma veya daha verimli LED lambalara yatırım yapma konusunda bilinçli kararlar almasına yardımcı olur. ABD'li yetiştiriciler için bu özellikle değerlidir çünkü elektrik maliyetleri karlılığı önemli ölçüde etkileyebilir.",
+          "exampleHeading": "Hesaplama Örneği",
+          "exampleText": "Örnek: LED lambaları günde 18 saat boyunca 400 μmol/m²/s'de çalıştırıyorsanız, DLI'niz şöyle olur: 400 × 18 × 0.0036 = 25.92 mol/m²/gün. Vejetatif aşamadaki kenevir için (hedef 20-30 mol) bu optimaldir. Yapraklı yeşillikler için (hedef 12-17 mol) bu aşırı olurdu. Hesaplayıcı görsel bir karşılaştırma çubuğu gösterir ve bitki türü seçiminize göre spesifik öneriler sağlar."
+        },
+        "faq": {
+          "heading": "Sıkça Sorulan Sorular",
+          "items": [
+            {
+              "question": "DLI nedir ve bitki yetiştirmek için neden önemlidir?",
+              "answer": "DLI (Günlük Işık İntegrali), bitkilerin 24 saatlik bir süre boyunca aldığı fotosentetik olarak aktif radyasyon (PAR) miktarını ölçer, mol/m²/gün cinsinden ifade edilir. Tek başına PPFD'den daha kullanışlıdır çünkü hem ışık yoğunluğunu hem de süresini hesaba katar. Doğru DLI yönetimi optimal fotosentez, sağlıklı büyüme ve maksimum verim sağlar. Çok az DLI yavaş büyümeye neden olurken, çok fazlası elektrik israfına ve ışık stresine neden olabilir."
+            },
+            {
+              "question": "Kenevir bitkileri için optimal DLI nedir?",
+              "answer": "Kenevir için optimal DLI büyüme aşamasına göre değişir: Vejetatif: 20-30 mol/m²/gün, Çiçeklenme: 30-45+ mol/m²/gün. Bu aralıklar güçlü büyümeyi, optimal tomurcuk gelişimini ve maksimum verimi destekler. Bazı yüksek yoğunluklu yetiştiriciler CO2 takviyesi ile çiçeklenme DLI'sini 50+ mol/m²/gün'e çıkarır, ancak 30-45 mol çoğu kurulum için standart aralıktır."
+            },
+            {
+              "question": "DLI hesaplamaları için PPFD'yi nasıl ölçerim?",
+              "answer": "Kron seviyenizde PPFD'yi ölçmek için bir PAR metre (fotosentetik olarak aktif radyasyon ölçer) veya Photone gibi bir akıllı telefon uygulaması kullanın. Yetiştirme alanınızda birden fazla okuma yapın ve ortalamayı kullanın. PAR metrelerden PPFD okumaları μmol/m²/s cinsindendir. DLI'nizi almak için bu değeri fotoperiyodunuzla (günde saat) birlikte hesaplayıcıya girin."
+            },
+            {
+              "question": "PPFD ve DLI arasındaki fark nedir?",
+              "answer": "PPFD (Fotosentetik Foton Akı Yoğunluğu), belirli bir anda ışık yoğunluğunun anlık bir ölçümüdür, μmol/m²/s cinsinden ölçülür. DLI (Günlük Işık İntegrali), 24 saat boyunca PAR'ın kümülatif toplamıdır, mol/m²/gün cinsinden ölçülür. DLI = PPFD × Saat × 0.0036. PPFD lambalarınızın ne kadar parlak olduğunu söyler; DLI bitkilerinizin günde ne kadar toplam ışık aldığını söyler."
+            },
+            {
+              "question": "DLI'mi nasıl artırabilirim?",
+              "answer": "DLI'yi şu şekillerde artırabilirsiniz: 1) Işık yoğunluğunu (PPFD) artırma - lambaları yaklaştırma, daha fazla lamba ekleme veya daha güçlü armatürlere yükseltme, 2) Fotoperiyodu uzatma - lambaları her gün daha uzun süre çalıştırma (bazı bitkiler için 24 saate kadar), 3) Daha verimli lambalar kullanma - LED lambalar genellikle HPS veya metal halojenürden daha yüksek PPFD/watt sağlar. Tam olarak hangi ayarlamalara ihtiyacınız olduğunu bulmak için ters hesaplama modlarını kullanın."
+            },
+            {
+              "question": "DLI'm çok yüksekse ne olur?",
+              "answer": "Aşırı DLI ışık stresine, ağarmaya (özellikle üst yapraklarda), azalmış fotosentez verimliliğine ve boşa harcanan elektriğe neden olur. Bitkilerin ek ışığın büyümeyi artırmadığı bir doygunluk noktası vardır. Belirtiler arasında sararma veya beyaz yapraklar, büyüme geriliği ve yaprak kıvrılması bulunur. DLI'yi optimal aralığa getirmek için PPFD'yi azaltın, fotoperiyodu kısaltın veya ışık mesafesini artırın."
+            },
+            {
+              "question": "DLI'm çok düşükse ne olur?",
+              "answer": "Yetersiz DLI yavaş büyümeye, uzun bacaklı bitkilere (aşırı gövde uzaması), düşük verime, zayıf gövdeler ve azalmış çiçeklenme/tomurcuk gelişimine neden olur. Bitkiler ışık kaynaklarına doğru uzanır, yapraklar ve çiçekler yerine gövde büyümesine enerji harcar. Bitki türünüz için hedef DLI'ye ulaşmak için PPFD'yi artırın, fotoperiyodu uzatın veya daha güçlü lambalara yükseltin."
+            },
+            {
+              "question": "Bu hesaplayıcıyı açık hava yetiştirmesi için kullanabilir miyim?",
+              "answer": "Evet, ancak açık hava DLI'si mevsim, hava durumu ve konuma göre önemli ölçüde değişir. Tam güneş, yılın zamanına ve enleme bağlı olarak 30-60+ mol/m²/gün sağlayabilir. Açık hava PPFD'sini ölçmek için bir PAR metre veya akıllı telefon uygulaması kullanın, ardından açık hava DLI'sini tahmin etmek için gündüz saatleriyle çarpın. Hesaplayıcı aynı şekilde çalışır - sadece ölçülen PPFD'nizi ve gündüz saatlerinizi girin."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "vpd": "VPD Hesaplayıcı",
+          "vpdDesc": "Optimal bitki transpirasyonu ve büyümesi için buhar basıncı açığını hesaplayın",
+          "c1v1": "C1V1 Seyreltme Hesaplayıcı",
+          "c1v1Desc": "Çözeltiler için seyreltme hacimlerini ve konsantrasyonlarını hesaplayın",
+          "catPregnancy": "Kedi Gebelik Hesaplayıcı",
+          "catPregnancyDesc": "Kedinizin doğum tarihini ve doğum penceresini tahmin edin"
+        }
+      }
     }
   },
   "notFound": {

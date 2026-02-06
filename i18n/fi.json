@@ -7134,6 +7134,118 @@
           "catPregnancyDesc": "Arvioi kissasi laskettu aika ja toimitusikkuna"
         }
       }
+    },
+    "dli": {
+      "title": "DLI-laskuri - Päivittäinen valointegraali-laskuri",
+      "description": "Laske päivittäinen valointegraali (DLI) optimaaliseen kasvuvuokseen. Ammattimainen DLI-laskuri PPFD:llä, valojakso, kasvityyppi-suosituksilla ja energiakustannusarvioinnilla sisäviljelyyn.",
+      "calculationMode": "Laskentatila",
+      "modeForward": "Laske DLI",
+      "modeFindPPFD": "Etsi vaadittu PPFD",
+      "modeFindHours": "Etsi vaaditut tunnit",
+      "lightIntensity": "Valon intensiteetti (PPFD)",
+      "photoperiod": "Valojakso",
+      "hoursPerDay": "tuntia/päivä",
+      "plantType": "Kasvityyppi",
+      "plantMicrogreens": "Mikrovihannkset / Taimet (Tavoite: 6-12 mol)",
+      "plantLeafyGreens": "Lehtivihannkset / Yrtit (Tavoite: 12-17 mol)",
+      "plantFloweringLow": "Kukkivat kasvit (Heikko valo) (Tavoite: 15-20 mol)",
+      "plantFloweringHigh": "Kukkivat kasvit (Voimakas valo / Tomaatit) (Tavoite: 20-40+ mol)",
+      "plantCannabisVeg": "Kannabis (Kasvuvaihe) (Tavoite: 20-30 mol)",
+      "plantCannabisFlower": "Kannabis (Kukinta) (Tavoite: 30-45+ mol)",
+      "lightSource": "Valonlähde",
+      "optional": "Valinnainen",
+      "sourceLED": "LED",
+      "sourceHPS": "HPS (Korkeapaineinen natrium)",
+      "sourceMetalHalide": "Metallihalogenidi",
+      "sourceSunlight": "Aurinko",
+      "lightWattage": "Valon teho",
+      "electricityRate": "Sähkön hinta",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "dliValue": "Päivittäinen valointegraali (DLI)",
+      "targetDLI": "Tavoite DLI",
+      "requiredPPFD": "Vaadittu PPFD",
+      "requiredHours": "Vaaditut tunnit",
+      "status": "Tila",
+      "statusOptimal": "Optimaalinen",
+      "statusTooLow": "Liian matala",
+      "statusExcessive": "Liiallinen",
+      "targetRange": "Tavoitealue",
+      "currentDLI": "Nykyinen DLI",
+      "currentPPFD": "Nykyinen PPFD",
+      "hours": "tuntia",
+      "for": "varten",
+      "monthlyCost": "Kuukausittaiset energiakustannukset",
+      "perMonth": "kuukaudessa",
+      "adviceHeading": "Suositus",
+      "adviceOptimal": "DLI-si on optimaalisella alueella valitsemallesi kasvityypille. Ylläpidä näitä valaistusolosuhteita terveen kasvun ja maksimaalisen satojen saamiseksi.",
+      "adviceTooLow": "DLI-si on liian matala. Lisää valon intensiteettiä (PPFD), pidennä valojaksoa tai päivitä vahvempiin lamppuihin saavuttaaksesi tavoitealueen optimaaliseen kasvuun.",
+      "adviceExcessive": "DLI-si on liian korkea. Vähennä valon intensiteettiä, lyhennä valojaksoa tai lisää valon etäisyyttä estääksesi valostressin ja valkaisun.",
+      "calculationHeading": "Laskennan yksityiskohdat",
+      "formulaLabel": "DLI-kaava",
+      "enterValue": "Syötä valon intensiteetti, valojakso ja kasvityyppi laskeaksesi DLI:n",
+      "clickCalculate": "Klikkaa Laske nähdäksesi DLI:si ja suositukset",
+      "seo": {
+        "title": "DLI-laskuri: Päivittäinen valointegraali-laskuri sisäviljelyyn",
+        "description": "Ammattimainen DLI-laskuri PPFD- ja valojakso-syötteillä. Laske optimaalinen päivittäinen valointegraali kaikille kasvityypeille mukaan lukien kannabis, tomaatit ja lehtivihannkset. Sisältää käänteislaskelmia ja energiakustannusarvioita.",
+        "keywords": "dli laskuri, päivittäinen valointegraali laskuri, ppfd laskuri, dli viljelyyn, kannabis dli, dli kaavio, valojakso laskuri, par mittari laskuri, kasvulamppu laskuri, sisäviljely dli",
+        "content": {
+          "heading": "Kuinka käyttää DLI-laskuria",
+          "paragraph1": "DLI-laskuri (Päivittäinen valointegraali) on välttämätön työkalu vakaville sisäviljelijöille, jotka haluavat optimoida valaistusasetuksensa. DLI mittaa kasvien vastaanottaman fotosynteettisesti aktiivisen säteilyn (PAR) kokonaismäärän 24 tunnin aikana, ilmaistuna moolina neliömetriä kohti päivässä (mol/m²/d). Toisin kuin yksinkertaiset PPFD-lukemat, DLI ottaa huomioon sekä valon intensiteetin että keston, antaen täydellisen kuvan valaistusolosuhteistasi.",
+          "paragraph2": "DLI:n ymmärtäminen on ratkaisevan tärkeää, koska eri kasveilla on erilaiset valovaatimukset. Liian vähän valoa johtaa hitaaseen kasvuun, pitkävarteisiin kasveihin ja huonoihin satoihin. Liian paljon valoa voi aiheuttaa valostressiä, valkaisua ja tuhlattua sähköä. Laskurimme auttaa löytämään optimaalisen kohdan vertaamalla nykyistä DLI:äsi tavoitealueisiin valitsemallesi kasvityypille. Kasvatatpa sitten mikrovihannksia (6-12 mol), lehtivihannksia (12-17 mol), kukkivia kasveja (15-40+ mol) tai kannabista (20-45+ mol), tämä työkalu tarjoaa välittömiä suosituksia.",
+          "paragraph3": "Tämä laskuri sisältää kolme tehokasta laskentatilaa: Eteenpäin laskenta (löydä DLI:si PPFD:stä ja tunneista), Käänteinen PPFD-laskenta (löydä vaadittu PPFD tavoite-DLI:lle) ja Käänteinen tuntien laskenta (löydä vaadittu valojakso tavoite-DLI:lle). Käänteislaskelmat ovat erityisen arvokkaita suunniteltaessa uutta kasvatusasetusta tai optimoitaessa olemassa olevaa. Syötä yksinkertaisesti tavoite-DLI:si ja joko saatavilla olevat tunnit tai nykyinen PPFD:si, ja laskuri kertoo tarkalleen, mitä sinun täytyy säätää.",
+          "paragraph4": "Laskuri sisältää myös valinnaisen energiakustannusarvioijan. Syötä valon teho ja paikallinen sähkön hinta nähdäksesi, kuinka paljon valaistusaikataulusi maksaa kuukaudessa. Tämä ominaisuus auttaa viljelijöitä tekemään tietoon perustuvia päätöksiä valojaksojen pidentämisestä tai tehokkaampien LED-lamppujen hankinnasta. Yhdysvaltalaisille viljelijöille tämä on erityisen arvokasta, koska sähkökustannukset voivat vaikuttaa kannattavuuteen merkittävästi.",
+          "exampleHeading": "Laskentaesimerkki",
+          "exampleText": "Esimerkki: Jos ajat LED-lamppuja 400 μmol/m²/s:ssa 18 tuntia päivässä, DLI:si olisi: 400 × 18 × 0.0036 = 25.92 mol/m²/d. Kannabikselle kasvuvaiheessa (tavoite 20-30 mol) tämä on optimaalinen. Lehtivihannksille (tavoite 12-17 mol) tämä olisi liiallinen. Laskuri näyttää visuaalisen vertailupalkin ja tarjoaa erityisiä suosituksia kasvityyppivalintasi perusteella."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Mikä on DLI ja miksi se on tärkeää kasvien viljelyyn?",
+              "answer": "DLI (Päivittäinen valointegraali) mittaa kasvien vastaanottaman fotosynteettisesti aktiivisen säteilyn (PAR) kokonaismäärän 24 tunnin aikana, ilmaistuna mol/m²/d. Se on hyödyllisempi kuin pelkkä PPFD, koska se ottaa huomioon sekä valon intensiteetin että keston. Oikea DLI-hallinta varmistaa optimaalisen fotosynteesin, terveen kasvun ja maksimaaliset sadot. Liian vähän DLI:ä aiheuttaa hitaan kasvun, kun taas liian paljon tuhlaa sähköä ja voi aiheuttaa valostressiä."
+            },
+            {
+              "question": "Mikä on optimaalinen DLI kannabiskasveille?",
+              "answer": "Optimaalinen DLI kannabikselle vaihtelee kasvuvaiheen mukaan: Kasvuvaihe: 20-30 mol/m²/d, Kukinta: 30-45+ mol/m²/d. Nämä alueet edistävät voimakasta kasvua, optimaalista silmujen kehitystä ja maksimaalisia satoja. Jotkut korkean intensiteetin viljelijät työntävät kukinta-DLI:n 50+ mol/m²/d:hen CO2-täydennyksellä, mutta 30-45 mol on standardialue useimmille asetuksille."
+            },
+            {
+              "question": "Kuinka mittaan PPFD:n DLI-laskelmiin?",
+              "answer": "Käytä PAR-mittaria (fotosynteettisesti aktiivinen säteilymittari) tai älypuhelinsovellusta kuten Photone mitataksesi PPFD:n koronan tasolla. Ota useita lukemia kasvatusalueeltasi ja käytä keskiarvoa. PAR-mittareiden PPFD-lukemat ovat μmol/m²/s. Syötä tämä arvo yhdessä valojakson (tuntia päivässä) kanssa laskuriin saadaksesi DLI:si."
+            },
+            {
+              "question": "Mikä on ero PPFD:n ja DLI:n välillä?",
+              "answer": "PPFD (Fotosynteettinen fotoni-vuon tiheys) on hetkellinen mittaus valon intensiteetistä tiettynä hetkenä, mitattuna μmol/m²/s. DLI (Päivittäinen valointegraali) on PAR:n kumulatiivinen kokonaismäärä 24 tunnin aikana, mitattuna mol/m²/d. DLI = PPFD × Tunnit × 0.0036. PPFD kertoo, kuinka kirkkaat lamppusi ovat; DLI kertoo, kuinka paljon kokonaisvaloa kasvasi vastaanottavat päivässä."
+            },
+            {
+              "question": "Kuinka lisään DLI:ni?",
+              "answer": "Voit lisätä DLI:ä: 1) Lisäämällä valon intensiteettiä (PPFD) - siirrä lamppuja lähemmäs, lisää enemmän lamppuja tai päivitä vahvempiin valaisimiin, 2) Pidentämällä valojaksoa - aja lamppuja pidempään päivässä (jopa 24 tuntia joillekin kasveille), 3) Käyttämällä tehokkaampia lamppuja - LED-lamput tarjoavat usein korkeamman PPFD:n watttiä kohti kuin HPS tai metallihalogenidi. Käytä käänteislaskentatiloja löytääksesi tarkalleen, mitä säätöjä tarvitset."
+            },
+            {
+              "question": "Mitä tapahtuu, jos DLI:ni on liian korkea?",
+              "answer": "Liiallinen DLI aiheuttaa valostressiä, valkaisua (erityisesti ylemmillä lehdillä), vähentynyttä fotosynteesin tehokkuutta ja tuhlattua sähköä. Kasveilla on kyllästymispiste, jossa lisävalo ei lisää kasvua. Oireet sisältävät keltautumisen tai valkoiset lehdet, hidastunutta kasvua ja lehtien kiertymistä. Vähennä PPFD:ä, lyhennä valojaksoa tai lisää valon etäisyyttä saadaksesi DLI:n optimaaliseen alueeseen."
+            },
+            {
+              "question": "Mitä tapahtuu, jos DLI:ni on liian matala?",
+              "answer": "Riittämätön DLI aiheuttaa hitaan kasvun, pitkävarteisia kasveja (liiallinen varren piteneminen), huonoja satoja, heikkoja varsia ja vähentynyttä kukinnan/silmujen kehitystä. Kasvit venyvät valonlähteitä kohti, tuhlaavat energiaa varren kasvuun lehtien ja kukkien sijaan. Lisää PPFD:ä, pidennä valojaksoa tai päivitä vahvempiin lamppuihin saavuttaaksesi tavoite-DLI:n kasvityypillesi."
+            },
+            {
+              "question": "Voinko käyttää tätä laskuria ulkoviljelyyn?",
+              "answer": "Kyllä, mutta ulkoviljelyn DLI vaihtelee merkittävästi vuodenajan, sään ja sijainnin mukaan. Täysi aurinko voi tarjota 30-60+ mol/m²/d riippuen vuodenajasta ja leveysasteesta. Käytä PAR-mittaria tai älypuhelinsovellusta mitataksesi ulkoviljelyn PPFD:n, kerro sitten päivänvalon tunneilla arvioidaksesi ulkoviljelyn DLI:n. Laskuri toimii samalla tavalla - syötä vain mitattu PPFD:si ja päivänvalon tunnit."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Aiheeseen liittyvät laskurit",
+          "vpd": "VPD-laskuri",
+          "vpdDesc": "Laske höyrynpaineen vajaus optimaaliseen kasvien transpiratioon ja kasvuun",
+          "c1v1": "C1V1-laimentumislaskuri",
+          "c1v1Desc": "Laske laimentumistilavuudet ja pitoisuudet liuoksille",
+          "catPregnancy": "Kissan raskauslaskuri",
+          "catPregnancyDesc": "Arvioi kissasi synnytyspäivä ja synnytysikkuna"
+        }
+      }
     }
   },
   "notFound": {

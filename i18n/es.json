@@ -5915,6 +5915,118 @@
         }
       }
     },
+    "dli": {
+      "title": "Calculadora DLI - Calculadora de Integral Luminosa Diaria",
+      "description": "Calcula la integral luminosa diaria (DLI) para un crecimiento óptimo de plantas. Calculadora DLI profesional con PPFD, fotoperíodo, recomendaciones de tipo de planta y estimación de costos energéticos para cultivo interior.",
+      "calculationMode": "Modo de cálculo",
+      "modeForward": "Calcular DLI",
+      "modeFindPPFD": "Encontrar PPFD requerido",
+      "modeFindHours": "Encontrar horas requeridas",
+      "lightIntensity": "Intensidad de luz (PPFD)",
+      "photoperiod": "Fotoperíodo",
+      "hoursPerDay": "horas/día",
+      "plantType": "Tipo de planta",
+      "plantMicrogreens": "Microverdes / Plántulas (Objetivo: 6-12 mol)",
+      "plantLeafyGreens": "Verduras de hoja / Hierbas (Objetivo: 12-17 mol)",
+      "plantFloweringLow": "Plantas con flores (Luz baja) (Objetivo: 15-20 mol)",
+      "plantFloweringHigh": "Plantas con flores (Luz alta / Tomates) (Objetivo: 20-40+ mol)",
+      "plantCannabisVeg": "Cannabis (Vegetativo) (Objetivo: 20-30 mol)",
+      "plantCannabisFlower": "Cannabis (Floración) (Objetivo: 30-45+ mol)",
+      "lightSource": "Fuente de luz",
+      "optional": "Opcional",
+      "sourceLED": "LED",
+      "sourceHPS": "HPS (Sodio de alta presión)",
+      "sourceMetalHalide": "Halogenuro metálico",
+      "sourceSunlight": "Luz solar",
+      "lightWattage": "Potencia de luz",
+      "electricityRate": "Tarifa eléctrica",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "result": "Resultado",
+      "dliValue": "Integral luminosa diaria (DLI)",
+      "targetDLI": "DLI objetivo",
+      "requiredPPFD": "PPFD requerido",
+      "requiredHours": "Horas requeridas",
+      "status": "Estado",
+      "statusOptimal": "Óptimo",
+      "statusTooLow": "Demasiado bajo",
+      "statusExcessive": "Excesivo",
+      "targetRange": "Rango objetivo",
+      "currentDLI": "DLI actual",
+      "currentPPFD": "PPFD actual",
+      "hours": "horas",
+      "for": "para",
+      "monthlyCost": "Costo energético mensual",
+      "perMonth": "por mes",
+      "adviceHeading": "Recomendación",
+      "adviceOptimal": "Su DLI está en el rango óptimo para su tipo de planta seleccionado. Mantenga estas condiciones de iluminación para un crecimiento saludable y rendimientos máximos.",
+      "adviceTooLow": "Su DLI es demasiado bajo. Aumente la intensidad de luz (PPFD), extienda el fotoperíodo o actualice a luces más fuertes para alcanzar el rango objetivo para un crecimiento óptimo.",
+      "adviceExcessive": "Su DLI es demasiado alto. Reduzca la intensidad de luz, acorte el fotoperíodo o aumente la distancia de la luz para prevenir estrés lumínico y blanqueamiento.",
+      "calculationHeading": "Detalles del cálculo",
+      "formulaLabel": "Fórmula DLI",
+      "enterValue": "Ingrese intensidad de luz, fotoperíodo y tipo de planta para calcular DLI",
+      "clickCalculate": "Haga clic en Calcular para ver su DLI y recomendaciones",
+      "seo": {
+        "title": "Calculadora DLI: Calculadora de Integral Luminosa Diaria para Cultivo Interior",
+        "description": "Calculadora DLI profesional con entradas PPFD y fotoperíodo. Calcula la integral luminosa diaria óptima para todos los tipos de plantas, incluyendo cannabis, tomates y verduras de hoja. Incluye cálculos inversos y estimaciones de costos energéticos.",
+        "keywords": "calculadora dli, calculadora integral luminosa diaria, calculadora ppfd, dli para cultivo, dli cannabis, gráfico dli, calculadora fotoperíodo, calculadora par meter, calculadora luz de cultivo, dli cultivo interior",
+        "content": {
+          "heading": "Cómo usar la calculadora DLI",
+          "paragraph1": "La calculadora DLI (Integral Luminosa Diaria) es una herramienta esencial para cultivadores interiores serios que desean optimizar su configuración de iluminación. El DLI mide la cantidad total de radiación fotosintéticamente activa (PAR) que las plantas reciben en un período de 24 horas, expresada en moles por metro cuadrado por día (mol/m²/d). A diferencia de las simples lecturas PPFD, el DLI tiene en cuenta tanto la intensidad de luz como la duración, dándole una imagen completa de sus condiciones de iluminación.",
+          "paragraph2": "Entender el DLI es crucial porque diferentes plantas tienen diferentes requisitos de luz. Muy poca luz resulta en crecimiento lento, plantas larguiruchas y bajos rendimientos. Demasiada luz puede causar estrés lumínico, blanqueamiento y desperdicio de electricidad. Nuestra calculadora le ayuda a encontrar el punto óptimo comparando su DLI actual con los rangos objetivo para su tipo de planta específico. Ya sea que esté cultivando microverdes (6-12 mol), verduras de hoja (12-17 mol), plantas con flores (15-40+ mol) o cannabis (20-45+ mol), esta herramienta proporciona recomendaciones instantáneas.",
+          "paragraph3": "Esta calculadora incluye tres modos de cálculo poderosos: Cálculo directo (encuentre su DLI a partir de PPFD y horas), Cálculo PPFD inverso (encuentre el PPFD requerido para un DLI objetivo), y Cálculo de horas inverso (encuentre el fotoperíodo requerido para un DLI objetivo). Los cálculos inversos son especialmente valiosos al planificar una nueva configuración de cultivo o optimizar una existente. Simplemente ingrese su DLI objetivo y sus horas disponibles o su PPFD actual, y la calculadora le dice exactamente qué necesita ajustar.",
+          "paragraph4": "La calculadora también incluye un estimador de costo energético opcional. Ingrese la potencia de luz y la tarifa eléctrica local para ver cuánto cuesta su horario de iluminación por mes. Esta característica ayuda a los cultivadores a tomar decisiones informadas sobre extender fotoperíodos o invertir en luces LED más eficientes. Para cultivadores estadounidenses, esto es particularmente valioso ya que los costos de electricidad pueden afectar significativamente la rentabilidad.",
+          "exampleHeading": "Ejemplo de cálculo",
+          "exampleText": "Ejemplo: Si está ejecutando luces LED a 400 μmol/m²/s durante 18 horas por día, su DLI sería: 400 × 18 × 0.0036 = 25.92 mol/m²/d. Para cannabis en etapa vegetativa (objetivo 20-30 mol), esto es óptimo. Para verduras de hoja (objetivo 12-17 mol), esto sería excesivo. La calculadora muestra una barra de comparación visual y proporciona recomendaciones específicas basadas en su selección de tipo de planta."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            {
+              "question": "¿Qué es DLI y por qué es importante para cultivar plantas?",
+              "answer": "DLI (Integral Luminosa Diaria) mide la cantidad total de radiación fotosintéticamente activa (PAR) que las plantas reciben en un período de 24 horas, expresada en mol/m²/d. Es más útil que PPFD solo porque tiene en cuenta tanto la intensidad de luz como la duración. La gestión adecuada del DLI asegura fotosíntesis óptima, crecimiento saludable y rendimientos máximos. Muy poco DLI causa crecimiento lento, mientras que demasiado DLI desperdicia electricidad y puede causar estrés lumínico."
+            },
+            {
+              "question": "¿Cuál es el DLI óptimo para plantas de cannabis?",
+              "answer": "El DLI óptimo para cannabis varía según la etapa de crecimiento: Vegetativo: 20-30 mol/m²/d, Floración: 30-45+ mol/m²/d. Estos rangos promueven crecimiento vigoroso, desarrollo óptimo de cogollos y rendimientos máximos. Algunos cultivadores de alta intensidad empujan el DLI de floración a 50+ mol/m²/d con suplementación de CO2, pero 30-45 mol es el rango estándar para la mayoría de las configuraciones."
+            },
+            {
+              "question": "¿Cómo mido PPFD para cálculos DLI?",
+              "answer": "Use un medidor PAR (medidor de radiación fotosintéticamente activa) o una aplicación de smartphone como Photone para medir PPFD al nivel de su dosel. Tome múltiples lecturas en su espacio de cultivo y use el promedio. Las lecturas PPFD de los medidores PAR están en μmol/m²/s. Ingrese este valor junto con su fotoperíodo (horas por día) en la calculadora para obtener su DLI."
+            },
+            {
+              "question": "¿Cuál es la diferencia entre PPFD y DLI?",
+              "answer": "PPFD (Densidad de Flujo de Fotones Fotosintéticos) es una medición instantánea de la intensidad de luz en un momento específico, medida en μmol/m²/s. DLI (Integral Luminosa Diaria) es el total acumulativo de PAR durante 24 horas, medido en mol/m²/d. DLI = PPFD × Horas × 0.0036. PPFD le dice qué tan brillantes son sus luces; DLI le dice cuánta luz total reciben sus plantas por día."
+            },
+            {
+              "question": "¿Cómo aumento mi DLI?",
+              "answer": "Puede aumentar DLI mediante: 1) Aumentar la intensidad de luz (PPFD) - acerque las luces, agregue más luces o actualice a luminarias más fuertes, 2) Extender el fotoperíodo - ejecute las luces por más tiempo cada día (hasta 24 horas para algunas plantas), 3) Usar luces más eficientes - las luces LED a menudo proporcionan mayor PPFD por vatio que HPS o halogenuro metálico. Use los modos de cálculo inverso para encontrar exactamente qué ajustes necesita."
+            },
+            {
+              "question": "¿Qué sucede si mi DLI es demasiado alto?",
+              "answer": "DLI excesivo causa estrés lumínico, blanqueamiento (especialmente en hojas superiores), eficiencia fotosintética reducida y desperdicio de electricidad. Las plantas tienen un punto de saturación donde la luz adicional no aumenta el crecimiento. Los síntomas incluyen hojas amarillentas o blancas, crecimiento atrofiado y enrollamiento de hojas. Reduzca PPFD, acorte el fotoperíodo o aumente la distancia de la luz para llevar DLI al rango óptimo."
+            },
+            {
+              "question": "¿Qué sucede si mi DLI es demasiado bajo?",
+              "answer": "DLI insuficiente causa crecimiento lento, plantas larguiruchas (elongación excesiva del tallo), bajos rendimientos, tallos débiles y desarrollo reducido de flores/cogollos. Las plantas se estiran hacia las fuentes de luz, desperdiciando energía en crecimiento del tallo en lugar de hojas y flores. Aumente PPFD, extienda el fotoperíodo o actualice a luces más fuertes para alcanzar el DLI objetivo para su tipo de planta."
+            },
+            {
+              "question": "¿Puedo usar esta calculadora para cultivo exterior?",
+              "answer": "Sí, pero el DLI exterior varía significativamente según la temporada, el clima y la ubicación. El sol pleno puede proporcionar 30-60+ mol/m²/d dependiendo de la época del año y la latitud. Use un medidor PAR o una aplicación de smartphone para medir PPFD exterior, luego multiplique por horas de luz del día para estimar DLI exterior. La calculadora funciona de la misma manera: simplemente ingrese su PPFD medido y las horas de luz del día."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "vpd": "Calculadora VPD",
+          "vpdDesc": "Calcula el déficit de presión de vapor para transpiración y crecimiento óptimo de plantas",
+          "c1v1": "Calculadora de Dilución C1V1",
+          "c1v1Desc": "Calcula volúmenes de dilución y concentraciones para soluciones",
+          "catPregnancy": "Calculadora de Embarazo de Gato",
+          "catPregnancyDesc": "Estima la fecha de parto y ventana de parto de tu gato"
+        }
+      }
+    },
     "italicText": {
       "title": "Generador de Texto en Cursiva",
       "description": "Genera texto en cursiva al instante con múltiples estilos Unicode: cursiva serif, script cursivo y cursiva sans-serif. Perfecto para redes sociales, diseño y escritura creativa.",

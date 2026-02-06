@@ -6179,6 +6179,60 @@
         }
       }
     },
+    "mulchCalculator": {
+      "title": "Multa-alan laskuri",
+      "description": "Laske tarvittava multamäärä: pinta-ala m² ja kerrospaksuus cm. Valinnainen hinta per m³ kustannusarvioon.",
+      "categoryBadge": "Muut",
+      "areaToCover": "Peitettävä pinta-ala",
+      "mulchDepth": "Multakerroksen paksuus",
+      "priceOptional": "Hinta (valinnainen)",
+      "pricePlaceholder": "0",
+      "squareMeters": "m²",
+      "cm": "cm",
+      "perCubicMeter": "per m³",
+      "result": "Tulos",
+      "volumeNeeded": "Tarvittava tilavuus",
+      "cubicMeters": "m³",
+      "estimatedCost": "Arvioitu kustannus",
+      "calculate": "Laske",
+      "reset": "Tyhjennä",
+      "enterValue": "Syötä pinta-ala ja paksuus",
+      "clickCalculate": "Napsauta Laske tulokseen",
+      "calculationHeading": "Laskenta",
+      "calculationSummary": "Pinta-ala {area} m² × paksuus {depth} cm (0,01 m) = {volume} m³. Lisää hinta per m³ kustannusta varten.",
+      "seo": {
+        "title": "Multa-alan laskuri – Tilavuus ja Kustannus",
+        "description": "Ilmainen multa-alan laskuri. Pinta-ala m², paksuus cm: tilavuus m³. Valinnainen hinta per m³.",
+        "keywords": "multa laskuri, multan tilavuus, multan määrä, multan kustannus",
+        "content": {
+          "heading": "Multa-alan laskurin käyttö",
+          "paragraph1": "Multa pitää kosteuden ja rajoittaa rikkakasveja. Syötä pinta-ala (m²) ja kerrospaksuus (cm). Laskuri näyttää tilavuuden m³ ja valinnainen kustannus.",
+          "paragraph2": "Kaava: tilavuus (m³) = pinta-ala (m²) × paksuus (m). Muunna paksuus cm:stä m:ään jakamalla 100:lla. Esim. 200 m², 2 cm = 200 × 0,02 = 4 m³.",
+          "paragraph3": "Syötä pinta-ala m², paksuus cm ja valinnainen hinta per m³. Työkalu näyttää tarvittavan tilavuuden ja arvioidun kustannuksen.",
+          "paragraph4": "Laskuri on ilmainen ja toimii selaimessa.",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "200 m², 2 cm: tilavuus = 200 × 0,02 = 4 m³. Hinta 50 per m³: 4 × 50 = 200."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {"question": "Miten lasken multan tilavuuden?", "answer": "Tilavuus (m³) = pinta-ala (m²) × paksuus m. Muunna paksuus cm:stä m:ään (÷ 100). Esim. 200 m², 2 cm = 4 m³."},
+            {"question": "Mitä multan paksuutta käyttää?", "answer": "Usein 2–5 cm. Paksumpi kerros (5–10 cm) voimakkaaseen rikkakasvien torjuntaan tai koristekuoreen. Älä kasa multaa varsia vasten."},
+            {"question": "Voinko antaa hinnan toisessa valuutassa tai per säkki?", "answer": "Laskuri odottaa hintaa per m³. Säkihinnalla: jaa säkin hinta säkin tilavuudella (m³)."},
+            {"question": "Onko multa-alan laskuri ilmainen?", "answer": "Kyllä. Se on ilmainen. Syötä pinta-ala, paksuus ja valinnainen hinta."}
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskurit",
+          "minecraftCircle": "Minecraft ympyrägeneraattori",
+          "minecraftCircleDesc": "Lohkojen määrä ympyröille ja renkaille",
+          "percentage": "Prosenttilaskuri",
+          "percentageDesc": "Laske prosentit ja muutos",
+          "average": "Keskiarvolaskuri",
+          "averageDesc": "Keskiarvo, summa ja lukumäärä"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "NATO Foneettinen Aakkosto Kääntäjä",
       "description": "Muunna teksti NATO-foneettiseen aakkostoon ja päinvastoin välittömästi. Täydellinen viestintään, sotilas-, ilmailu- ja kansainvälisen foneettisen aakkoston oppimiseen.",

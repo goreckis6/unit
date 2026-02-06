@@ -6164,6 +6164,60 @@
         }
       }
     },
+    "mulchCalculator": {
+      "title": "멀치 계산기",
+      "description": "필요한 멀치량 계산: 면적(m²)과 층 두께(cm). 선택적으로 m³당 가격으로 비용 추정.",
+      "categoryBadge": "기타",
+      "areaToCover": "덮을 면적",
+      "mulchDepth": "멀치 층 두께",
+      "priceOptional": "가격 (선택)",
+      "pricePlaceholder": "0",
+      "squareMeters": "m²",
+      "cm": "cm",
+      "perCubicMeter": "m³당",
+      "result": "결과",
+      "volumeNeeded": "필요 부피",
+      "cubicMeters": "m³",
+      "estimatedCost": "예상 비용",
+      "calculate": "계산",
+      "reset": "재설정",
+      "enterValue": "면적과 두께 입력",
+      "clickCalculate": "결과는 계산 클릭",
+      "calculationHeading": "계산",
+      "calculationSummary": "면적 {area} m² × 두께 {depth} cm (0.01 m) = {volume} m³. 비용은 m³당 가격 입력.",
+      "seo": {
+        "title": "멀치 계산기 – 부피와 비용",
+        "description": "무료 멀치 계산기. 면적 m², 두께 cm: 부피 m³. 선택 m³당 가격.",
+        "keywords": "멀치 계산기, 멀치 부피, 멀치 양, 멀치 비용",
+        "content": {
+          "heading": "멀치 계산기 사용법",
+          "paragraph1": "멀치는 수분 유지와 잡초 억제에 씁니다. 면적(m²)과 두께(cm)를 입력하면 부피 m³와 선택적으로 비용을 표시합니다.",
+          "paragraph2": "공식: 부피(m³) = 면적(m²) × 두께(m). 두께는 cm를 100으로 나누어 m로. 예: 200 m², 2 cm = 200 × 0.02 = 4 m³.",
+          "paragraph3": "면적(m²), 두께(cm), 선택적으로 m³당 가격을 입력하세요. 필요 부피와 예상 비용을 표시합니다.",
+          "paragraph4": "계산기는 무료이며 브라우저에서 실행됩니다.",
+          "exampleHeading": "예시",
+          "exampleText": "200 m², 2 cm: 부피 = 200 × 0.02 = 4 m³. m³당 50: 4 × 50 = 200."
+        },
+        "faq": {
+          "heading": "자주 묻는 질문",
+          "items": [
+            {"question": "멀치 부피는 어떻게 계산하나요?", "answer": "부피(m³) = 면적(m²) × 두께(m). 두께를 cm에서 m로 (÷ 100). 예: 200 m², 2 cm = 4 m³."},
+            {"question": "멀치 두께는 얼마나 해야 하나요?", "answer": "보통 2–5 cm. 잡초·장식용 껍질은 5–10 cm. 줄기 쪽에 쌓지 마세요."},
+            {"question": "가격을 다른 통화나 봉지 단위로 넣을 수 있나요?", "answer": "계산기는 m³당 가격을 기준으로 합니다. 봉지 단위면 봉지 가격 ÷ 봉지 부피(m³)."},
+            {"question": "멀치 계산기는 무료인가요?", "answer": "네. 무료입니다. 면적, 두께, 선택적으로 가격을 입력하세요."}
+          ]
+        },
+        "related": {
+          "heading": "관련 계산기",
+          "minecraftCircle": "마인크래프트 원 생성기",
+          "minecraftCircleDesc": "원·링 블록 수",
+          "percentage": "백분율 계산기",
+          "percentageDesc": "백분율과 변화율 계산",
+          "average": "평균 계산기",
+          "averageDesc": "평균, 합계, 개수"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "NATO 음성 알파벳 번역기",
       "description": "텍스트를 NATO 음성 알파벳으로 또는 그 반대로 즉시 변환합니다. 통신, 군사, 항공 및 국제 음성 알파벳 학습에 완벽합니다.",

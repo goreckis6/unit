@@ -6164,6 +6164,60 @@
         }
       }
     },
+    "mulchCalculator": {
+      "title": "覆盖料计算器",
+      "description": "计算所需覆盖料：面积（m²）与厚度（cm）。可选每立方米价格以估算成本。",
+      "categoryBadge": "其他",
+      "areaToCover": "待覆盖面积",
+      "mulchDepth": "覆盖层厚度",
+      "priceOptional": "价格（可选）",
+      "pricePlaceholder": "0",
+      "squareMeters": "m²",
+      "cm": "cm",
+      "perCubicMeter": "每 m³",
+      "result": "结果",
+      "volumeNeeded": "所需体积",
+      "cubicMeters": "m³",
+      "estimatedCost": "预估成本",
+      "calculate": "计算",
+      "reset": "重置",
+      "enterValue": "输入面积与厚度",
+      "clickCalculate": "点击“计算”得到结果",
+      "calculationHeading": "计算",
+      "calculationSummary": "面积 {area} m² × 厚度 {depth} cm（0.01 m）= {volume} m³。输入每 m³ 价格可得成本。",
+      "seo": {
+        "title": "覆盖料计算器 – 体积与成本",
+        "description": "免费覆盖料计算器。面积 m²、厚度 cm 得出体积 m³。可选每 m³ 价格。",
+        "keywords": "覆盖料计算器, 覆盖料体积, 覆盖料用量, 覆盖料成本",
+        "content": {
+          "heading": "如何使用覆盖料计算器",
+          "paragraph1": "覆盖料用于保水和抑制杂草。输入面积（m²）和厚度（cm），计算器显示体积 m³ 及可选成本。",
+          "paragraph2": "公式：体积（m³）= 面积（m²）× 厚度（m）。厚度由 cm 换算为 m 除以 100。例：200 m²、2 cm = 200 × 0.02 = 4 m³。",
+          "paragraph3": "输入面积（m²）、厚度（cm）及可选每 m³ 价格，工具会显示所需体积和预估成本。",
+          "paragraph4": "计算器免费，在浏览器中运行。",
+          "exampleHeading": "示例",
+          "exampleText": "200 m²、2 cm：体积 = 200 × 0.02 = 4 m³。每 m³ 50：4 × 50 = 200。"
+        },
+        "faq": {
+          "heading": "常见问题",
+          "items": [
+            {"question": "如何计算覆盖料体积？", "answer": "体积（m³）= 面积（m²）× 厚度（m）。厚度由 cm 换算为 m（÷ 100）。例：200 m²、2 cm = 4 m³。"},
+            {"question": "覆盖层厚度用多少合适？", "answer": "常用 2–5 cm。杂草多或装饰树皮可用 5–10 cm。避免紧贴茎秆堆积。"},
+            {"question": "可以输入其他货币或按袋计价吗？", "answer": "计算器按每 m³ 计价。若按袋：用袋价除以袋体积（m³）得到每 m³ 价格。"},
+            {"question": "覆盖料计算器免费吗？", "answer": "是的，免费。输入面积、厚度及可选价格即可。"}
+          ]
+        },
+        "related": {
+          "heading": "相关计算器",
+          "minecraftCircle": "Minecraft 圆生成器",
+          "minecraftCircleDesc": "圆与圆环所需方块数",
+          "percentage": "百分比计算器",
+          "percentageDesc": "计算百分比与变化率",
+          "average": "平均值计算器",
+          "averageDesc": "平均值、总和与个数"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "NATO语音字母表翻译器",
       "description": "即时将文本转换为NATO语音字母表，反之亦然。适合通信、军事、航空和学习国际语音字母表。",

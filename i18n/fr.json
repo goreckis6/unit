@@ -6194,6 +6194,60 @@
         }
       }
     },
+    "mulchCalculator": {
+      "title": "Calculateur de Paillis",
+      "description": "Calculez la quantité de paillis nécessaire : surface en m² et épaisseur en cm. Optionnellement le prix au m³ pour une estimation du coût.",
+      "categoryBadge": "Autres",
+      "areaToCover": "Surface à couvrir",
+      "mulchDepth": "Épaisseur du paillis",
+      "priceOptional": "Prix (optionnel)",
+      "pricePlaceholder": "0",
+      "squareMeters": "m²",
+      "cm": "cm",
+      "perCubicMeter": "par m³",
+      "result": "Résultat",
+      "volumeNeeded": "Volume nécessaire",
+      "cubicMeters": "m³",
+      "estimatedCost": "Coût estimé",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "enterValue": "Entrez surface et épaisseur",
+      "clickCalculate": "Cliquez sur Calculer pour le résultat",
+      "calculationHeading": "Calcul",
+      "calculationSummary": "Surface {area} m² × épaisseur {depth} cm (0,01 m) = {volume} m³. Ajoutez le prix au m³ pour le coût.",
+      "seo": {
+        "title": "Calculateur de Paillis – Volume et Coût",
+        "description": "Calculateur de paillis gratuit. Surface en m², épaisseur en cm : volume en m³. Optionnel prix au m³.",
+        "keywords": "calculateur paillis, volume paillis, quantité paillis, coût paillis",
+        "content": {
+          "heading": "Comment utiliser le calculateur de paillis",
+          "paragraph1": "Le paillis sert à retenir l'humidité et limiter les mauvaises herbes. Indiquez la surface (m²) et l'épaisseur (cm). Le calculateur affiche le volume en m³ et optionnellement le coût.",
+          "paragraph2": "Formule : volume (m³) = surface (m²) × épaisseur (m). Convertissez l'épaisseur de cm en m en divisant par 100. Ex. 200 m², 2 cm = 200 × 0,02 = 4 m³.",
+          "paragraph3": "Entrez la surface en m², l'épaisseur en cm et optionnellement le prix au m³. L'outil affiche le volume nécessaire et le coût estimé si le prix est renseigné.",
+          "paragraph4": "Le calculateur est gratuit et fonctionne dans le navigateur.",
+          "exampleHeading": "Exemple",
+          "exampleText": "200 m², 2 cm : volume = 200 × 0,02 = 4 m³. Prix 50 par m³ : 4 × 50 = 200."
+        },
+        "faq": {
+          "heading": "Questions fréquentes",
+          "items": [
+            {"question": "Comment calculer le volume de paillis ?", "answer": "Volume (m³) = surface (m²) × épaisseur en m. Convertissez l'épaisseur de cm en m (÷ 100). Ex. 200 m², 2 cm = 4 m³."},
+            {"question": "Quelle épaisseur de paillis utiliser ?", "answer": "Souvent 2–5 cm. Des couches plus épaisses (5–10 cm) pour un fort désherbage ou écorce décorative. Évitez d'accumuler le paillis contre les tiges."},
+            {"question": "Puis-je indiquer le prix dans une autre devise ou au sac ?", "answer": "Le calculateur attend un prix au m³. Si le prix est au sac, divisez le prix du sac par le volume du sac (en m³) pour obtenir le prix au m³."},
+            {"question": "Le calculateur de paillis est-il gratuit ?", "answer": "Oui. Il est gratuit. Entrez surface, épaisseur et optionnellement le prix."}
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs associés",
+          "minecraftCircle": "Générateur de cercles Minecraft",
+          "minecraftCircleDesc": "Nombre de blocs pour cercles et anneaux",
+          "percentage": "Calculateur de pourcentages",
+          "percentageDesc": "Calculer pourcentages et variations",
+          "average": "Calculateur de moyenne",
+          "averageDesc": "Moyenne, somme et effectif"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "Traducteur d'Alphabet Phonétique NATO",
       "description": "Convertissez du texte en alphabet phonétique NATO et vice versa instantanément. Parfait pour la communication, le militaire, l'aviation et l'apprentissage de l'alphabet phonétique international.",

@@ -111,6 +111,13 @@ const otherCalculatorsList: Calculator[] = addCalculatorsSorted(
     path: '/calculators/others/minecraft-circle-generator',
     category: 'others',
   },
+  {
+    id: 'mulch-calculator',
+    titleKey: 'mulchCalculator.title',
+    descKey: 'mulchCalculator.description',
+    path: '/calculators/others/mulch-calculator',
+    category: 'others',
+  },
   // Add new others calculators here; list is sorted A–Z by id automatically.
   ],
 );

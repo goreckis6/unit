@@ -6194,6 +6194,60 @@
         }
       }
     },
+    "mulchCalculator": {
+      "title": "Calculadora de Mantillo",
+      "description": "Calcula la cantidad de mantillo necesaria: área en m² y profundidad en cm. Opcionalmente precio por m³ para estimar el coste.",
+      "categoryBadge": "Otros",
+      "areaToCover": "Área a cubrir",
+      "mulchDepth": "Profundidad del mantillo",
+      "priceOptional": "Precio (opcional)",
+      "pricePlaceholder": "0",
+      "squareMeters": "m²",
+      "cm": "cm",
+      "perCubicMeter": "por m³",
+      "result": "Resultado",
+      "volumeNeeded": "Volumen necesario",
+      "cubicMeters": "m³",
+      "estimatedCost": "Coste estimado",
+      "calculate": "Calcular",
+      "reset": "Restablecer",
+      "enterValue": "Introduce área y profundidad",
+      "clickCalculate": "Haz clic en Calcular para el resultado",
+      "calculationHeading": "Cálculo",
+      "calculationSummary": "Área {area} m² × profundidad {depth} cm (0,01 m) = {volume} m³. Añade precio por m³ para el coste.",
+      "seo": {
+        "title": "Calculadora de Mantillo – Volumen y Coste",
+        "description": "Calculadora de mantillo gratuita. Área en m², profundidad en cm: volumen en m³. Opcional precio por m³.",
+        "keywords": "calculadora mantillo, volumen mantillo, cantidad mantillo, coste mantillo",
+        "content": {
+          "heading": "Cómo usar la calculadora de mantillo",
+          "paragraph1": "El mantillo retiene humedad y reduce malas hierbas. Introduce el área (m²) y la profundidad (cm). La calculadora muestra el volumen en m³ y opcionalmente el coste.",
+          "paragraph2": "Fórmula: volumen (m³) = área (m²) × profundidad (m). Convierte la profundidad de cm a m dividiendo por 100. Ej. 200 m², 2 cm = 200 × 0,02 = 4 m³.",
+          "paragraph3": "Introduce el área en m², la profundidad en cm y opcionalmente el precio por m³. La herramienta muestra el volumen necesario y el coste estimado si indicas el precio.",
+          "paragraph4": "La calculadora es gratuita y funciona en el navegador.",
+          "exampleHeading": "Ejemplo",
+          "exampleText": "200 m², 2 cm: volumen = 200 × 0,02 = 4 m³. Precio 50 por m³: 4 × 50 = 200."
+        },
+        "faq": {
+          "heading": "Preguntas frecuentes",
+          "items": [
+            {"question": "¿Cómo calcular el volumen de mantillo?", "answer": "Volumen (m³) = área (m²) × profundidad en m. Convierte la profundidad de cm a m (÷ 100). Ej. 200 m², 2 cm = 4 m³."},
+            {"question": "¿Qué profundidad de mantillo usar?", "answer": "Suele ser 2–5 cm. Capas más gruesas (5–10 cm) para mucho control de malas hierbas o corteza decorativa. Evita apilar contra tallos."},
+            {"question": "¿Puedo indicar el precio en otra moneda o por saco?", "answer": "La calculadora espera precio por m³. Si el precio es por saco, divide el precio del saco entre el volumen del saco (m³) para obtener precio por m³."},
+            {"question": "¿La calculadora de mantillo es gratuita?", "answer": "Sí. Es gratuita. Introduce área, profundidad y opcionalmente el precio."}
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "minecraftCircle": "Generador de círculos Minecraft",
+          "minecraftCircleDesc": "Número de bloques para círculos y anillos",
+          "percentage": "Calculadora de porcentajes",
+          "percentageDesc": "Calcular porcentajes y variaciones",
+          "average": "Calculadora de media",
+          "averageDesc": "Media, suma y recuento"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "Traductor de Alfabeto Fonético NATO",
       "description": "Convierte texto a alfabeto fonético NATO y viceversa al instante. Perfecto para comunicación, militar, aviación y aprender el alfabeto fonético internacional.",

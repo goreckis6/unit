@@ -6168,6 +6168,60 @@
         }
       }
     },
+    "mulchCalculator": {
+      "title": "マルチ計算機",
+      "description": "必要なマルチ量を計算：面積（m²）と層の深さ（cm）。オプションでm³単価で費用概算。",
+      "categoryBadge": "その他",
+      "areaToCover": "覆う面積",
+      "mulchDepth": "マルチ層の深さ",
+      "priceOptional": "価格（任意）",
+      "pricePlaceholder": "0",
+      "squareMeters": "m²",
+      "cm": "cm",
+      "perCubicMeter": "m³あたり",
+      "result": "結果",
+      "volumeNeeded": "必要量",
+      "cubicMeters": "m³",
+      "estimatedCost": "概算費用",
+      "calculate": "計算",
+      "reset": "リセット",
+      "enterValue": "面積と深さを入力",
+      "clickCalculate": "結果は「計算」をクリック",
+      "calculationHeading": "計算",
+      "calculationSummary": "面積 {area} m² × 深さ {depth} cm（0.01 m）= {volume} m³。費用はm³単価を入力。",
+      "seo": {
+        "title": "マルチ計算機 – 体積と費用",
+        "description": "無料マルチ計算機。面積m²・深さcmで体積m³。オプションでm³単価。",
+        "keywords": "マルチ計算機, マルチ体積, マルチ量, マルチ費用",
+        "content": {
+          "heading": "マルチ計算機の使い方",
+          "paragraph1": "マルチは保湿と雑草抑制に使います。面積（m²）と深さ（cm）を入力すると、体積m³とオプションで費用を表示します。",
+          "paragraph2": "式：体積（m³）= 面積（m²）× 深さ（m）。深さはcmを100で割ってmに。例：200 m²、2 cm = 200 × 0.02 = 4 m³。",
+          "paragraph3": "面積（m²）、深さ（cm）、オプションでm³単価を入力。必要体積と概算費用を表示します。",
+          "paragraph4": "計算機は無料でブラウザで動作します。",
+          "exampleHeading": "例",
+          "exampleText": "200 m²、2 cm：体積 = 200 × 0.02 = 4 m³。m³単価50なら：4 × 50 = 200。"
+        },
+        "faq": {
+          "heading": "よくある質問",
+          "items": [
+            {"question": "マルチの体積はどう計算しますか？", "answer": "体積（m³）= 面積（m²）× 深さ（m）。深さをcmからmに（÷100）。例：200 m²、2 cm = 4 m³。"},
+            {"question": "マルチの深さはどのくらいにしますか？", "answer": "多くは2–5 cm。雑草対策や装飾用樹皮では厚め（5–10 cm）に。茎元に積みすぎないように。"},
+            {"question": "価格は別通貨や袋単位で入れられますか？", "answer": "計算機はm³単価を想定しています。袋単位の場合は袋価格÷袋の体積（m³）でm³単価を出してください。"},
+            {"question": "マルチ計算機は無料ですか？", "answer": "はい。無料です。面積・深さ・任意で価格を入力してください。"}
+          ]
+        },
+        "related": {
+          "heading": "関連計算ツール",
+          "minecraftCircle": "Minecraft円ジェネレーター",
+          "minecraftCircleDesc": "円・リングのブロック数",
+          "percentage": "パーセント計算",
+          "percentageDesc": "パーセントと変化率を計算",
+          "average": "平均計算",
+          "averageDesc": "平均・合計・件数"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "NATO音声アルファベット翻訳機",
       "description": "テキストをNATO音声アルファベットに、またはその逆に即座に変換します。通信、軍事、航空、国際音声アルファベットの学習に最適。",

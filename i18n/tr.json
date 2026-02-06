@@ -6183,6 +6183,60 @@
         }
       }
     },
+    "mulchCalculator": {
+      "title": "Malç Hesaplayıcı",
+      "description": "Gerekli malç miktarını hesaplayın: alan m² ve katman derinliği cm. İsteğe bağlı m³ fiyatı ile maliyet tahmini.",
+      "categoryBadge": "Diğer",
+      "areaToCover": "Kaplanacak alan",
+      "mulchDepth": "Malç katman derinliği",
+      "priceOptional": "Fiyat (isteğe bağlı)",
+      "pricePlaceholder": "0",
+      "squareMeters": "m²",
+      "cm": "cm",
+      "perCubicMeter": "m³ başına",
+      "result": "Sonuç",
+      "volumeNeeded": "Gerekli hacim",
+      "cubicMeters": "m³",
+      "estimatedCost": "Tahmini maliyet",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "enterValue": "Alan ve derinlik girin",
+      "clickCalculate": "Sonuç için Hesapla'ya tıklayın",
+      "calculationHeading": "Hesaplama",
+      "calculationSummary": "Alan {area} m² × derinlik {depth} cm (0,01 m) = {volume} m³. Maliyet için m³ fiyatı ekleyin.",
+      "seo": {
+        "title": "Malç Hesaplayıcı – Hacim ve Maliyet",
+        "description": "Ücretsiz malç hesaplayıcı. Alan m², derinlik cm: hacim m³. İsteğe bağlı m³ fiyatı.",
+        "keywords": "malç hesaplayıcı, malç hacmi, malç miktarı, malç maliyeti",
+        "content": {
+          "heading": "Malç hesaplayıcı nasıl kullanılır",
+          "paragraph1": "Malç nemi tutar ve yabani otu azaltır. Alan (m²) ve derinlik (cm) girin. Hesaplayıcı hacim m³ ve isteğe bağlı maliyeti gösterir.",
+          "paragraph2": "Formül: hacim (m³) = alan (m²) × derinlik (m). Derinliği cm'den m'ye 100'e bölerek çevirin. Örn. 200 m², 2 cm = 200 × 0,02 = 4 m³.",
+          "paragraph3": "Alan m², derinlik cm ve isteğe bağlı m³ fiyatı girin. Araç gerekli hacmi ve tahmini maliyeti gösterir.",
+          "paragraph4": "Hesaplayıcı ücretsizdir ve tarayıcıda çalışır.",
+          "exampleHeading": "Örnek",
+          "exampleText": "200 m², 2 cm: hacim = 200 × 0,02 = 4 m³. m³ başına 50: 4 × 50 = 200."
+        },
+        "faq": {
+          "heading": "Sık sorulan sorular",
+          "items": [
+            {"question": "Malç hacmi nasıl hesaplanır?", "answer": "Hacim (m³) = alan (m²) × derinlik m. Derinliği cm'den m'ye (÷ 100) çevirin. Örn. 200 m², 2 cm = 4 m³."},
+            {"question": "Ne kadar malç derinliği kullanılmalı?", "answer": "Genelde 2–5 cm. Daha kalın katman (5–10 cm) güçlü yabani ot veya dekoratif kabuk için. Gövdelere yığmayın."},
+            {"question": "Fiyatı başka para biriminde veya çuval başı girebilir miyim?", "answer": "Hesaplayıcı m³ fiyatı bekler. Çuval fiyatında: çuval fiyatını çuval hacmine (m³) bölün."},
+            {"question": "Malç hesaplayıcı ücretsiz mi?", "answer": "Evet. Ücretsizdir. Alan, derinlik ve isteğe bağlı fiyat girin."}
+          ]
+        },
+        "related": {
+          "heading": "İlgili hesaplayıcılar",
+          "minecraftCircle": "Minecraft daire oluşturucu",
+          "minecraftCircleDesc": "Daire ve halka için blok sayısı",
+          "percentage": "Yüzde hesaplayıcı",
+          "percentageDesc": "Yüzde ve değişim hesapla",
+          "average": "Ortalama hesaplayıcı",
+          "averageDesc": "Ortalama, toplam ve sayı"
+        }
+      }
+    },
     "natoPhonetic": {
       "title": "NATO Fonetik Alfabe Çevirmeni",
       "description": "Metni NATO fonetik alfabesine ve tersine anında dönüştürün. İletişim, askeri, havacılık ve uluslararası fonetik alfabeyi öğrenmek için mükemmel.",

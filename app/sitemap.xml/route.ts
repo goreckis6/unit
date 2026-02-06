@@ -41,6 +41,7 @@ export async function GET() {
     '/calculators/others/caesar-cipher',
     '/calculators/others/vigenere-cipher',
     '/calculators/others/minecraft-circle-generator',
+    '/calculators/others/mulch-calculator',
     '/calculators/others/pig-latin',
     '/calculators/others/bold-text',
     '/calculators/others/small-caps',

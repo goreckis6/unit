@@ -6977,6 +6977,82 @@
           "asciiConverterDesc": "Visualize e converta texto para códigos ASCII e vice-versa"
         }
       }
+    },
+    "c1v1": {
+      "title": "Calculadora C1V1",
+      "description": "Calcule volumes e concentrações de diluição usando a fórmula C1V1 = C2V2. Insira três valores para encontrar o que está faltando. Suporta várias unidades de concentração e volume.",
+      "c1Label": "Concentração inicial (C1)",
+      "v1Label": "Volume inicial (V1)",
+      "c2Label": "Concentração final (C2)",
+      "v2Label": "Volume final (V2)",
+      "v2UnitLabel": "Unidade de volume final",
+      "concentrationUnit_cells_ml": "células/ml",
+      "concentrationUnit_cells_µl": "células/µl",
+      "concentrationUnit_cells_cl": "células/cl",
+      "concentrationUnit_cells_liter": "células/litro",
+      "volumeUnit_ml": "ml",
+      "volumeUnit_µl": "µl",
+      "volumeUnit_cl": "cl",
+      "volumeUnit_liter": "litro",
+      "calculate": "Calcular",
+      "reset": "Redefinir",
+      "result": "Resultado",
+      "enterValue": "Insira C1, V1 e C2 para calcular o volume final (V2)",
+      "clickCalculate": "Clique em Calcular para ver o volume final",
+      "calculationHeading": "Cálculo",
+      "formulaExplanation": "A fórmula C1V1 = C2V2 afirma que o produto da concentração inicial e do volume é igual ao produto da concentração final e do volume. Esta é a equação fundamental para cálculos de diluição em química e biologia.",
+      "seo": {
+        "title": "Calculadora C1V1 – Calculadora de Diluição | Fórmula C1V1 = C2V2",
+        "description": "Calculadora de diluição C1V1 gratuita. Calcule qualquer valor ausente (concentração ou volume) usando a fórmula C1V1 = C2V2. Suporta várias unidades (células/ml, µl, cl, litro). Perfeito para trabalho de laboratório e cálculos biológicos.",
+        "keywords": "calculadora c1v1, calculadora diluição, fórmula c1v1 c2v2, calculadora concentração, calculadora volume, fórmula diluição, equação c1v1, calculadora biologia, calculadora química",
+        "content": {
+          "heading": "Como usar a Calculadora C1V1",
+          "paragraph1": "A calculadora C1V1 usa a fórmula fundamental de diluição C1 × V1 = C2 × V2, onde C1 é a concentração inicial, V1 é o volume inicial, C2 é a concentração final e V2 é o volume final. Esta equação é essencial em química, biologia e trabalho de laboratório para preparar soluções com concentrações desejadas. Basta inserir três dos quatro valores e a calculadora calculará automaticamente o valor ausente.",
+          "paragraph2": "A fórmula funciona porque a quantidade total de soluto (a substância que está sendo dissolvida) permanece constante durante a diluição. Quando você dilui uma solução, está adicionando solvente (geralmente água) para reduzir a concentração, mas a quantidade absoluta de soluto não muda. Portanto, o produto da concentração e volume antes da diluição (C1 × V1) é igual ao produto após a diluição (C2 × V2).",
+          "paragraph3": "Para usar a calculadora, selecione as unidades apropriadas para cada campo. As unidades de concentração incluem células/ml (células por mililitro), células/µl (células por microlitro), células/cl (células por centilitro) e células/litro. As unidades de volume incluem mililitros (ml), microlitros (µl), centilitros (cl) e litros. A calculadora lida automaticamente com conversões de unidades internamente, então você pode misturar diferentes unidades e ainda obter resultados precisos.",
+          "paragraph4": "Os casos de uso comuns incluem preparar suspensões celulares para experimentos, diluir soluções estoque para concentrações de trabalho, calcular volumes necessários para diluições em série e determinar concentrações finais após misturar soluções. A calculadora é particularmente útil em laboratórios de microbiologia, cultura celular e biologia molecular onde diluições precisas são críticas para o sucesso experimental.",
+          "exampleHeading": "Exemplo",
+          "exampleText": "Se você tem uma suspensão celular com uma concentração inicial de 1.000.000 células/ml (C1) e um volume inicial de 10 ml (V1), e deseja atingir uma concentração final de 100.000 células/ml (C2), a calculadora determinará que você precisa de um volume final de 100 ml (V2). Isso significa que você adicionaria 90 ml de diluente à sua amostra de 10 ml para atingir a concentração desejada."
+        },
+        "faq": {
+          "heading": "Perguntas frequentes",
+          "items": [
+            {
+              "question": "O que é a fórmula C1V1 = C2V2?",
+              "answer": "A fórmula C1V1 = C2V2 é a equação de diluição usada em química e biologia. Ela afirma que o produto da concentração inicial (C1) e do volume inicial (V1) é igual ao produto da concentração final (C2) e do volume final (V2). Esta fórmula é baseada no princípio de que a quantidade total de soluto permanece constante durante a diluição."
+            },
+            {
+              "question": "Como uso a calculadora C1V1?",
+              "answer": "Insira três dos quatro valores (C1, V1, C2 ou V2) junto com suas unidades. A calculadora calculará automaticamente o valor ausente. Certifique-se de selecionar as unidades corretas para cada campo - unidades de concentração (células/ml, células/µl, etc.) para C1 e C2, e unidades de volume (ml, µl, etc.) para V1 e V2."
+            },
+            {
+              "question": "Posso misturar diferentes unidades?",
+              "answer": "Sim! A calculadora converte automaticamente todos os valores para unidades base internamente, então você pode usar diferentes unidades para diferentes campos. Por exemplo, você pode inserir C1 em células/ml, V1 em µl, C2 em células/litro e V2 em ml, e a calculadora lidará com todas as conversões corretamente."
+            },
+            {
+              "question": "O que acontece se eu inserir todos os quatro valores?",
+              "answer": "Se você inserir todos os quatro valores, a calculadora verificará se eles satisfazem a equação C1V1 = C2V2. Se os valores não coincidirem (dentro de uma pequena tolerância), nenhum resultado será mostrado, indicando que os valores são inconsistentes."
+            },
+            {
+              "question": "Quais unidades são suportadas?",
+              "answer": "Unidades de concentração: células/ml, células/µl, células/cl e células/litro. Unidades de volume: ml (mililitros), µl (microlitros), cl (centilitros) e litro. A calculadora lida automaticamente com conversões entre todas essas unidades."
+            },
+            {
+              "question": "Esta calculadora é precisa para todos os tipos de soluções?",
+              "answer": "A fórmula C1V1 = C2V2 é precisa para diluições ideais onde a quantidade de soluto permanece constante e as mudanças de volume são aditivas. Funciona bem para a maioria das soluções aquosas, suspensões celulares e diluições de laboratório padrão. No entanto, para soluções onde as mudanças de volume não são perfeitamente aditivas (por exemplo, misturar etanol e água), considerações adicionais podem ser necessárias."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculadoras relacionadas",
+          "dogSize": "Calculadora de Tamanho de Cão",
+          "dogSizeDesc": "Estime o tamanho adulto do seu cão a partir da idade e peso do filhote",
+          "dogRaisin": "Calculadora de Toxicidade de Uvas Passas para Cães",
+          "dogRaisinDesc": "Estime uma quantidade potencialmente perigosa de uvas passas para o seu cão",
+          "catPregnancy": "Calculadora de Gravidez de Gato",
+          "catPregnancyDesc": "Estime a data prevista de parto e a janela de entrega do seu gato"
+        }
+      }
     }
   },
   "notFound": {

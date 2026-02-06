@@ -6947,6 +6947,82 @@
           "asciiConverterDesc": "View and convert text to ASCII codes and back"
         }
       }
+    },
+    "c1v1": {
+      "title": "C1V1-kalkulator",
+      "description": "Beregn fortynningsvolumer og -konsentrasjoner ved hjelp av formelen C1V1 = C2V2. Angi tre verdier for å finne den manglende. Støtter flere konsentrasjons- og volumenheter.",
+      "c1Label": "Startkonsentrasjon (C1)",
+      "v1Label": "Startvolum (V1)",
+      "c2Label": "Sluttkonsentrasjon (C2)",
+      "v2Label": "Sluttvolum (V2)",
+      "v2UnitLabel": "Sluttvolumenhet",
+      "concentrationUnit_cells_ml": "celler/ml",
+      "concentrationUnit_cells_µl": "celler/µl",
+      "concentrationUnit_cells_cl": "celler/cl",
+      "concentrationUnit_cells_liter": "celler/liter",
+      "volumeUnit_ml": "ml",
+      "volumeUnit_µl": "µl",
+      "volumeUnit_cl": "cl",
+      "volumeUnit_liter": "liter",
+      "calculate": "Beregn",
+      "reset": "Tilbakestill",
+      "result": "Resultat",
+      "enterValue": "Skriv inn C1, V1 og C2 for å beregne sluttvolumet (V2)",
+      "clickCalculate": "Klikk på Beregn for å se sluttvolumet",
+      "calculationHeading": "Beregning",
+      "formulaExplanation": "Formelen C1V1 = C2V2 sier at produktet av startkonsentrasjon og -volum er lik produktet av sluttkonsentrasjon og -volum. Dette er den grunnleggende ligningen for fortynningsberegninger i kjemi og biologi.",
+      "seo": {
+        "title": "C1V1-kalkulator – Fortynningskalkulator | C1V1 = C2V2-formel",
+        "description": "Gratis C1V1-fortynningskalkulator. Beregn enhver manglende verdi (konsentrasjon eller volum) ved hjelp av formelen C1V1 = C2V2. Støtter flere enheter (celler/ml, µl, cl, liter). Perfekt for laboratoriearbeid og biologiske beregninger.",
+        "keywords": "c1v1 kalkulator, fortynningskalkulator, c1v1 c2v2 formel, konsentrasjonskalkulator, volumkalkulator, fortynningsformel, c1v1 ligning, biologikalkulator, kjemikalkulator",
+        "content": {
+          "heading": "Hvordan bruke C1V1-kalkulatoren",
+          "paragraph1": "C1V1-kalkulatoren bruker den grunnleggende fortynningsformelen C1 × V1 = C2 × V2, der C1 er startkonsentrasjonen, V1 er startvolumet, C2 er sluttkonsentrasjonen, og V2 er sluttvolumet. Denne ligningen er essensiell i kjemi, biologi og laboratoriearbeid for å tilberede løsninger med ønskede konsentrasjoner. Bare skriv inn tre av de fire verdiene, så beregner kalkulatoren automatisk den manglende verdien.",
+          "paragraph2": "Formelen fungerer fordi den totale mengden av oppløst stoff (stoffet som løses) forblir konstant under fortynning. Når du fortynner en løsning, tilsetter du løsningsmiddel (vanligvis vann) for å redusere konsentrasjonen, men den absolutte mengden av oppløst stoff endres ikke. Derfor er produktet av konsentrasjon og volum før fortynning (C1 × V1) lik produktet etter fortynning (C2 × V2).",
+          "paragraph3": "For å bruke kalkulatoren velger du de passende enhetene for hvert felt. Konsentrasjonsenheter inkluderer celler/ml (celler per milliliter), celler/µl (celler per mikroliter), celler/cl (celler per centiliter) og celler/liter. Volumenheter inkluderer milliliter (ml), mikroliter (µl), centiliter (cl) og liter. Kalkulatoren håndterer automatisk enhetskonverteringer internt, slik at du kan blande forskjellige enheter og fortsatt få nøyaktige resultater.",
+          "paragraph4": "Vanlige brukstilfeller inkluderer tilberedning av cellesuspensjoner for eksperimenter, fortynning av stamløsninger til arbeidskonsentrasjoner, beregning av volumer som trengs for serielle fortynninger, og bestemmelse av sluttkonsentrasjoner etter blanding av løsninger. Kalkulatoren er spesielt nyttig i mikrobiologi-, cellekulturer- og molekylærbiologilaboratorier der presise fortynninger er kritiske for eksperimentell suksess.",
+          "exampleHeading": "Eksempel",
+          "exampleText": "Hvis du har en cellesuspensjon med en startkonsentrasjon på 1 000 000 celler/ml (C1) og et startvolum på 10 ml (V1), og du ønsker å oppnå en sluttkonsentrasjon på 100 000 celler/ml (C2), vil kalkulatoren bestemme at du trenger et sluttvolum på 100 ml (V2). Dette betyr at du ville tilsette 90 ml fortynningsmiddel til din 10 ml prøve for å oppnå den ønskede konsentrasjonen."
+        },
+        "faq": {
+          "heading": "Ofte stilte spørsmål",
+          "items": [
+            {
+              "question": "Hva er formelen C1V1 = C2V2?",
+              "answer": "Formelen C1V1 = C2V2 er fortynningsligningen som brukes i kjemi og biologi. Den sier at produktet av startkonsentrasjon (C1) og startvolum (V1) er lik produktet av sluttkonsentrasjon (C2) og sluttvolum (V2). Denne formelen er basert på prinsippet om at den totale mengden av oppløst stoff forblir konstant under fortynning."
+            },
+            {
+              "question": "Hvordan bruker jeg C1V1-kalkulatoren?",
+              "answer": "Skriv inn tre av de fire verdiene (C1, V1, C2 eller V2) sammen med deres enheter. Kalkulatoren vil automatisk beregne den manglende verdien. Pass på å velge riktige enheter for hvert felt - konsentrasjonsenheter (celler/ml, celler/µl osv.) for C1 og C2, og volumenheter (ml, µl osv.) for V1 og V2."
+            },
+            {
+              "question": "Kan jeg blande forskjellige enheter?",
+              "answer": "Ja! Kalkulatoren konverterer automatisk alle verdier til basisenheter internt, slik at du kan bruke forskjellige enheter for forskjellige felt. For eksempel kan du skrive inn C1 i celler/ml, V1 i µl, C2 i celler/liter, og V2 i ml, og kalkulatoren vil håndtere alle konverteringer korrekt."
+            },
+            {
+              "question": "Hva skjer hvis jeg skriver inn alle fire verdiene?",
+              "answer": "Hvis du skriver inn alle fire verdiene, vil kalkulatoren verifisere at de tilfredsstiller ligningen C1V1 = C2V2. Hvis verdiene ikke stemmer overens (innenfor en liten toleranse), vil ingen resultat vises, noe som indikerer at verdiene er inkonsistente."
+            },
+            {
+              "question": "Hvilke enheter støttes?",
+              "answer": "Konsentrasjonsenheter: celler/ml, celler/µl, celler/cl og celler/liter. Volumenheter: ml (milliliter), µl (mikroliter), cl (centiliter) og liter. Kalkulatoren håndterer automatisk konverteringer mellom alle disse enhetene."
+            },
+            {
+              "question": "Er denne kalkulatoren nøyaktig for alle typer løsninger?",
+              "answer": "Formelen C1V1 = C2V2 er nøyaktig for ideelle fortynninger der mengden av oppløst stoff forblir konstant og volumendringer er additive. Den fungerer godt for de fleste vandige løsninger, cellesuspensjoner og standard laboratoriefortynninger. For løsninger der volumendringer ikke er perfekt additive (f.eks. blanding av etanol og vann), kan imidlertid ytterligere hensyn være nødvendige."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterte kalkulatorer",
+          "dogSize": "Hundestørrelseskalkulator",
+          "dogSizeDesc": "Estimer hundens voksenstørrelse fra valpealder og vekt",
+          "dogRaisin": "Hund rosin toksisitetskalkulator",
+          "dogRaisinDesc": "Estimer en potensielt farlig mengde rosiner for hunden din",
+          "catPregnancy": "Kattgraviditetskalkulator",
+          "catPregnancyDesc": "Estimer kattens forventede fødselsdato og leveringsvindu"
+        }
+      }
     }
   },
   "notFound": {

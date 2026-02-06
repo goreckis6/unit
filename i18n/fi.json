@@ -6962,6 +6962,82 @@
           "asciiConverterDesc": "View and convert text to ASCII codes and back"
         }
       }
+    },
+    "c1v1": {
+      "title": "C1V1-laskuri",
+      "description": "Laske laimentumistilavuudet ja -pitoisuudet kaavalla C1V1 = C2V2. Syötä kolme arvoa puuttuvan löytämiseksi. Tukee useita pitoisuus- ja tilavuusyksiköitä.",
+      "c1Label": "Alkupitoisuus (C1)",
+      "v1Label": "Alkutilavuus (V1)",
+      "c2Label": "Loppupitoisuus (C2)",
+      "v2Label": "Lopputilavuus (V2)",
+      "v2UnitLabel": "Lopputilavuusyksikkö",
+      "concentrationUnit_cells_ml": "solua/ml",
+      "concentrationUnit_cells_µl": "solua/µl",
+      "concentrationUnit_cells_cl": "solua/cl",
+      "concentrationUnit_cells_liter": "solua/litra",
+      "volumeUnit_ml": "ml",
+      "volumeUnit_µl": "µl",
+      "volumeUnit_cl": "cl",
+      "volumeUnit_liter": "litra",
+      "calculate": "Laske",
+      "reset": "Nollaa",
+      "result": "Tulos",
+      "enterValue": "Syötä C1, V1 ja C2 laskeaksesi lopputilavuuden (V2)",
+      "clickCalculate": "Napsauta Laske nähdäksesi lopputilavuuden",
+      "calculationHeading": "Laskenta",
+      "formulaExplanation": "Kaava C1V1 = C2V2 toteaa, että alkupitoisuuden ja tilavuuden tulo on yhtä suuri kuin loppupitoisuuden ja tilavuuden tulo. Tämä on perustava yhtälö laimentumislaskelmille kemiassa ja biologiassa.",
+      "seo": {
+        "title": "C1V1-laskuri – Laimentumislaskuri | C1V1 = C2V2-kaava",
+        "description": "Ilmainen C1V1-laimentumislaskuri. Laske mikä tahansa puuttuva arvo (pitoisuus tai tilavuus) kaavalla C1V1 = C2V2. Tukee useita yksiköitä (solua/ml, µl, cl, litra). Täydellinen laboratoriotyöhön ja biologisiin laskelmiin.",
+        "keywords": "c1v1 laskuri, laimentumislaskuri, c1v1 c2v2 kaava, pitoisuuslaskuri, tilavuuslaskuri, laimentumiskaava, c1v1 yhtälö, biologialaskuri, kemialaskuri",
+        "content": {
+          "heading": "Kuinka käyttää C1V1-laskuria",
+          "paragraph1": "C1V1-laskuri käyttää perustavan laimentumiskaavaa C1 × V1 = C2 × V2, jossa C1 on alkupitoisuus, V1 on alkutilavuus, C2 on loppupitoisuus ja V2 on lopputilavuus. Tämä yhtälö on olennainen kemiassa, biologiassa ja laboratoriotyössä haluttujen pitoisuuksien liuosten valmistuksessa. Syötä vain kolme neljästä arvosta, ja laskuri laskee automaattisesti puuttuvan arvon.",
+          "paragraph2": "Kaava toimii, koska liuenneen aineen (liukenevän aineen) kokonaismäärä pysyy vakiona laimentamisen aikana. Kun laimennat liuosta, lisäät liuotinta (yleensä vettä) pitoisuuden vähentämiseksi, mutta liuenneen aineen absoluuttinen määrä ei muutu. Siksi pitoisuuden ja tilavuuden tulo ennen laimentamista (C1 × V1) on yhtä suuri kuin tulo laimentamisen jälkeen (C2 × V2).",
+          "paragraph3": "Laskurin käyttämiseksi valitse asianmukaiset yksiköt kullekin kentälle. Pitoisuusyksiköt sisältävät solua/ml (solua millilitraa kohti), solua/µl (solua mikrolitraa kohti), solua/cl (solua sentilitraa kohti) ja solua/litra. Tilavuusyksiköt sisältävät millilitrat (ml), mikrolitrat (µl), sentilitrat (cl) ja litrat. Laskuri käsittelee yksikkömuunnokset automaattisesti sisäisesti, joten voit sekoittaa eri yksiköitä ja silti saada tarkkoja tuloksia.",
+          "paragraph4": "Yleisiä käyttötapauksia ovat solususpensioiden valmistus kokeisiin, kantaliuosten laimentaminen työpitoisuuksiin, sarjalaimentamiseen tarvittavien tilavuuksien laskeminen ja lopullisten pitoisuuksien määrittäminen liuosten sekoittamisen jälkeen. Laskuri on erityisen hyödyllinen mikrobiologia-, soluviljelma- ja molekyylibiologialaboratorioissa, joissa tarkat laimentamiset ovat kriittisiä kokeelliselle menestykselle.",
+          "exampleHeading": "Esimerkki",
+          "exampleText": "Jos sinulla on solususpensio, jonka alkupitoisuus on 1 000 000 solua/ml (C1) ja alkutilavuus 10 ml (V1), ja haluat saavuttaa loppupitoisuuden 100 000 solua/ml (C2), laskuri määrittää, että tarvitset lopputilavuuden 100 ml (V2). Tämä tarkoittaa, että lisäisit 90 ml laimenninta 10 ml näytteeseesi saavuttaaksesi halutun pitoisuuden."
+        },
+        "faq": {
+          "heading": "Usein kysytyt kysymykset",
+          "items": [
+            {
+              "question": "Mikä on kaava C1V1 = C2V2?",
+              "answer": "Kaava C1V1 = C2V2 on laimentumisyhtälö, jota käytetään kemiassa ja biologiassa. Se toteaa, että alkupitoisuuden (C1) ja alkutilavuuden (V1) tulo on yhtä suuri kuin loppupitoisuuden (C2) ja lopputilavuuden (V2) tulo. Tämä kaava perustuu periaatteeseen, että liuenneen aineen kokonaismäärä pysyy vakiona laimentamisen aikana."
+            },
+            {
+              "question": "Kuinka käytän C1V1-laskuria?",
+              "answer": "Syötä kolme neljästä arvosta (C1, V1, C2 tai V2) niiden yksiköiden kanssa. Laskuri laskee automaattisesti puuttuvan arvon. Varmista, että valitset oikeat yksiköt kullekin kentälle - pitoisuusyksiköt (solua/ml, solua/µl jne.) C1:lle ja C2:lle sekä tilavuusyksiköt (ml, µl jne.) V1:lle ja V2:lle."
+            },
+            {
+              "question": "Voinko sekoittaa erilaisia yksiköitä?",
+              "answer": "Kyllä! Laskuri muuntaa automaattisesti kaikki arvot perusyksiköiksi sisäisesti, joten voit käyttää eri yksiköitä eri kentille. Voit esimerkiksi syöttää C1:n solua/ml, V1:n µl, C2:n solua/litra ja V2:n ml, ja laskuri käsittelee kaikki muunnokset oikein."
+            },
+            {
+              "question": "Mitä tapahtuu, jos syötän kaikki neljä arvoa?",
+              "answer": "Jos syötät kaikki neljä arvoa, laskuri tarkistaa, että ne täyttävät yhtälön C1V1 = C2V2. Jos arvot eivät täsmää (pienellä toleranssilla), tulosta ei näytetä, mikä osoittaa, että arvot ovat epäjohdonmukaisia."
+            },
+            {
+              "question": "Mitä yksiköitä tuetaan?",
+              "answer": "Pitoisuusyksiköt: solua/ml, solua/µl, solua/cl ja solua/litra. Tilavuusyksiköt: ml (millilitrat), µl (mikrolitrat), cl (sentilitrat) ja litra. Laskuri käsittelee automaattisesti muunnokset kaikkien näiden yksiköiden välillä."
+            },
+            {
+              "question": "Onko tämä laskuri tarkka kaikille liuostyypeille?",
+              "answer": "Kaava C1V1 = C2V2 on tarkka ihanteellisille laimentamisille, joissa liuenneen aineen määrä pysyy vakiona ja tilavuusmuutokset ovat additiivisia. Se toimii hyvin useimmille vesiliuoksille, solususpensioille ja tavallisille laboratoriolaimentamisille. Kuitenkin liuoksille, joissa tilavuusmuutokset eivät ole täydellisesti additiivisia (esim. etanolin ja veden sekoittaminen), saattaa olla tarpeen lisäharkintoja."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Liittyvät laskurit",
+          "dogSize": "Koiran koko -laskuri",
+          "dogSizeDesc": "Arvioi koirasi aikuiskoko pennun iän ja painon perusteella",
+          "dogRaisin": "Koiran rusina-myrkyllisyys -laskuri",
+          "dogRaisinDesc": "Arvioi mahdollisesti vaarallinen rusinoiden määrä koirallesi",
+          "catPregnancy": "Kissan raskaus -laskuri",
+          "catPregnancyDesc": "Arvioi kissasi laskettu aika ja toimitusikkuna"
+        }
+      }
     }
   },
   "notFound": {

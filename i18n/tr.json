@@ -6966,6 +6966,82 @@
           "asciiConverterDesc": "View and convert text to ASCII codes and back"
         }
       }
+    },
+    "c1v1": {
+      "title": "C1V1 Hesaplayıcı",
+      "description": "C1V1 = C2V2 formülünü kullanarak seyreltme hacimlerini ve konsantrasyonlarını hesaplayın. Eksik olanı bulmak için herhangi üç değeri girin. Birden fazla konsantrasyon ve hacim birimini destekler.",
+      "c1Label": "Başlangıç konsantrasyonu (C1)",
+      "v1Label": "Başlangıç hacmi (V1)",
+      "c2Label": "Son konsantrasyon (C2)",
+      "v2Label": "Son hacim (V2)",
+      "v2UnitLabel": "Son hacim birimi",
+      "concentrationUnit_cells_ml": "hücre/ml",
+      "concentrationUnit_cells_µl": "hücre/µl",
+      "concentrationUnit_cells_cl": "hücre/cl",
+      "concentrationUnit_cells_liter": "hücre/litre",
+      "volumeUnit_ml": "ml",
+      "volumeUnit_µl": "µl",
+      "volumeUnit_cl": "cl",
+      "volumeUnit_liter": "litre",
+      "calculate": "Hesapla",
+      "reset": "Sıfırla",
+      "result": "Sonuç",
+      "enterValue": "Son hacmi (V2) hesaplamak için C1, V1 ve C2 girin",
+      "clickCalculate": "Son hacmi görmek için Hesapla'ya tıklayın",
+      "calculationHeading": "Hesaplama",
+      "formulaExplanation": "C1V1 = C2V2 formülü, başlangıç konsantrasyonu ve hacminin çarpımının son konsantrasyon ve hacmin çarpımına eşit olduğunu belirtir. Bu, kimya ve biyolojide seyreltme hesaplamaları için temel denklemdir.",
+      "seo": {
+        "title": "C1V1 Hesaplayıcı – Seyreltme Hesaplayıcı | C1V1 = C2V2 Formülü",
+        "description": "Ücretsiz C1V1 seyreltme hesaplayıcı. C1V1 = C2V2 formülünü kullanarak eksik değeri (konsantrasyon veya hacim) hesaplayın. Birden fazla birimi destekler (hücre/ml, µl, cl, litre). Laboratuvar çalışması ve biyoloji hesaplamaları için mükemmel.",
+        "keywords": "c1v1 hesaplayıcı, seyreltme hesaplayıcı, c1v1 c2v2 formülü, konsantrasyon hesaplayıcı, hacim hesaplayıcı, seyreltme formülü, c1v1 denklemi, biyoloji hesaplayıcı, kimya hesaplayıcı",
+        "content": {
+          "heading": "C1V1 Hesaplayıcı Nasıl Kullanılır",
+          "paragraph1": "C1V1 Hesaplayıcı, temel seyreltme formülü C1 × V1 = C2 × V2'yi kullanır; burada C1 başlangıç konsantrasyonu, V1 başlangıç hacmi, C2 son konsantrasyon ve V2 son hacimdir. Bu denklem, istenen konsantrasyonlarda çözeltiler hazırlamak için kimya, biyoloji ve laboratuvar çalışmalarında gereklidir. Dört değerden herhangi üçünü girin ve hesaplayıcı eksik değeri otomatik olarak hesaplayacaktır.",
+          "paragraph2": "Formül, çözünen maddenin (çözülen madde) toplam miktarı seyreltme sırasında sabit kaldığı için çalışır. Bir çözeltiyi seyrelttiğinizde, konsantrasyonu azaltmak için çözücü (genellikle su) eklersiniz, ancak çözünen maddenin mutlak miktarı değişmez. Bu nedenle, seyreltme öncesi konsantrasyon ve hacim çarpımı (C1 × V1), seyreltme sonrası çarpıma (C2 × V2) eşittir.",
+          "paragraph3": "Hesaplayıcıyı kullanmak için her alan için uygun birimleri seçin. Konsantrasyon birimleri hücre/ml (mililitre başına hücre), hücre/µl (mikrolitre başına hücre), hücre/cl (santilitre başına hücre) ve hücre/litre içerir. Hacim birimleri mililitre (ml), mikrolitre (µl), santilitre (cl) ve litre içerir. Hesaplayıcı, birim dönüşümlerini dahili olarak otomatik olarak işler, böylece farklı birimleri karıştırabilir ve yine de doğru sonuçlar alabilirsiniz.",
+          "paragraph4": "Yaygın kullanım durumları, deneyler için hücre süspansiyonlarının hazırlanması, stok çözeltilerin çalışma konsantrasyonlarına seyreltilmesi, seri seyreltmeler için gereken hacimlerin hesaplanması ve çözeltiler karıştırıldıktan sonra son konsantrasyonların belirlenmesini içerir. Hesaplayıcı, deney başarısı için hassas seyreltmelerin kritik olduğu mikrobiyoloji, hücre kültürü ve moleküler biyoloji laboratuvarlarında özellikle kullanışlıdır.",
+          "exampleHeading": "Örnek",
+          "exampleText": "1.000.000 hücre/ml (C1) başlangıç konsantrasyonu ve 10 ml (V1) başlangıç hacmine sahip bir hücre süspansiyonunuz varsa ve 100.000 hücre/ml (C2) son konsantrasyona ulaşmak istiyorsanız, hesaplayıcı 100 ml (V2) son hacme ihtiyacınız olduğunu belirleyecektir. Bu, istenen konsantrasyona ulaşmak için 10 ml örneğinize 90 ml seyreltici eklemeniz gerektiği anlamına gelir."
+        },
+        "faq": {
+          "heading": "Sık Sorulan Sorular",
+          "items": [
+            {
+              "question": "C1V1 = C2V2 formülü nedir?",
+              "answer": "C1V1 = C2V2 formülü, kimya ve biyolojide kullanılan seyreltme denklemidir. Başlangıç konsantrasyonu (C1) ve başlangıç hacminin (V1) çarpımının son konsantrasyon (C2) ve son hacmin (V2) çarpımına eşit olduğunu belirtir. Bu formül, seyreltme sırasında çözünen maddenin toplam miktarının sabit kaldığı ilkesine dayanır."
+            },
+            {
+              "question": "C1V1 hesaplayıcıyı nasıl kullanırım?",
+              "answer": "Dört değerden herhangi üçünü (C1, V1, C2 veya V2) birimleriyle birlikte girin. Hesaplayıcı otomatik olarak eksik değeri hesaplayacaktır. Her alan için doğru birimleri seçtiğinizden emin olun - C1 ve C2 için konsantrasyon birimleri (hücre/ml, hücre/µl vb.) ve V1 ve V2 için hacim birimleri (ml, µl vb.)."
+            },
+            {
+              "question": "Farklı birimleri karıştırabilir miyim?",
+              "answer": "Evet! Hesaplayıcı, tüm değerleri dahili olarak temel birimlere otomatik olarak dönüştürür, böylece farklı alanlar için farklı birimler kullanabilirsiniz. Örneğin, C1'i hücre/ml, V1'i µl, C2'yi hücre/litre ve V2'yi ml olarak girebilirsiniz ve hesaplayıcı tüm dönüşümleri doğru şekilde işleyecektir."
+            },
+            {
+              "question": "Dört değerin tamamını girersem ne olur?",
+              "answer": "Dört değerin tamamını girerseniz, hesaplayıcı bunların C1V1 = C2V2 denklemini karşılayıp karşılamadığını doğrulayacaktır. Değerler eşleşmezse (küçük bir tolerans dahilinde), hiçbir sonuç gösterilmeyecektir, bu da değerlerin tutarsız olduğunu gösterir."
+            },
+            {
+              "question": "Hangi birimler destekleniyor?",
+              "answer": "Konsantrasyon birimleri: hücre/ml, hücre/µl, hücre/cl ve hücre/litre. Hacim birimleri: ml (mililitre), µl (mikrolitre), cl (santilitre) ve litre. Hesaplayıcı, tüm bu birimler arasında dönüşümleri otomatik olarak işler."
+            },
+            {
+              "question": "Bu hesaplayıcı tüm çözelti türleri için doğru mu?",
+              "answer": "C1V1 = C2V2 formülü, çözünen madde miktarının sabit kaldığı ve hacim değişikliklerinin toplamsal olduğu ideal seyreltmeler için doğrudur. Çoğu sulu çözelti, hücre süspansiyonu ve standart laboratuvar seyreltmeleri için iyi çalışır. Ancak, hacim değişikliklerinin mükemmel şekilde toplamsal olmadığı çözeltiler için (örn. etanol ve su karıştırma), ek hususlar gerekebilir."
+            }
+          ]
+        },
+        "related": {
+          "heading": "İlgili Hesaplayıcılar",
+          "dogSize": "Köpek Boyutu Hesaplayıcı",
+          "dogSizeDesc": "Yavru yaşı ve ağırlığından köpeğinizin yetişkin boyutunu tahmin edin",
+          "dogRaisin": "Köpek Kuru Üzüm Zehirlilik Hesaplayıcı",
+          "dogRaisinDesc": "Köpeğiniz için potansiyel olarak tehlikeli kuru üzüm miktarını tahmin edin",
+          "catPregnancy": "Kedi Hamilelik Hesaplayıcı",
+          "catPregnancyDesc": "Kedinizin doğum tarihini ve doğum penceresini tahmin edin"
+        }
+      }
     }
   },
   "notFound": {

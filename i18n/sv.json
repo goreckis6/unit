@@ -6947,6 +6947,82 @@
           "asciiConverterDesc": "View and convert text to ASCII codes and back"
         }
       }
+    },
+    "c1v1": {
+      "title": "C1V1-kalkylator",
+      "description": "Beräkna utspädningsvolymer och koncentrationer med formeln C1V1 = C2V2. Ange tre valfria värden för att hitta det saknade. Stöder flera koncentrations- och volymenheter.",
+      "c1Label": "Startkoncentration (C1)",
+      "v1Label": "Startvolym (V1)",
+      "c2Label": "Slutkoncentration (C2)",
+      "v2Label": "Slutvolym (V2)",
+      "v2UnitLabel": "Slutvolymenhet",
+      "concentrationUnit_cells_ml": "celler/ml",
+      "concentrationUnit_cells_µl": "celler/µl",
+      "concentrationUnit_cells_cl": "celler/cl",
+      "concentrationUnit_cells_liter": "celler/liter",
+      "volumeUnit_ml": "ml",
+      "volumeUnit_µl": "µl",
+      "volumeUnit_cl": "cl",
+      "volumeUnit_liter": "liter",
+      "calculate": "Beräkna",
+      "reset": "Återställ",
+      "result": "Resultat",
+      "enterValue": "Ange C1, V1 och C2 för att beräkna slutvolymen (V2)",
+      "clickCalculate": "Klicka på Beräkna för att se slutvolymen",
+      "calculationHeading": "Beräkning",
+      "formulaExplanation": "Formeln C1V1 = C2V2 anger att produkten av startkoncentration och volym är lika med produkten av slutkoncentration och volym. Detta är den grundläggande ekvationen för utspädningsberäkningar inom kemi och biologi.",
+      "seo": {
+        "title": "C1V1-kalkylator – Utspädningskalkylator | C1V1 = C2V2-formel",
+        "description": "Gratis C1V1-utspädningskalkylator. Beräkna vilket saknat värde som helst (koncentration eller volym) med formeln C1V1 = C2V2. Stöder flera enheter (celler/ml, µl, cl, liter). Perfekt för laboratoriearbete och biologiska beräkningar.",
+        "keywords": "c1v1 kalkylator, utspädningskalkylator, c1v1 c2v2 formel, koncentrationskalkylator, volymkalkylator, utspädningsformel, c1v1 ekvation, biologikalkylator, kemikalkylator",
+        "content": {
+          "heading": "Hur man använder C1V1-kalkylatorn",
+          "paragraph1": "C1V1-kalkylatorn använder den grundläggande utspädningsformeln C1 × V1 = C2 × V2, där C1 är startkoncentrationen, V1 är startvolymen, C2 är slutkoncentrationen och V2 är slutvolymen. Denna ekvation är väsentlig inom kemi, biologi och laboratoriearbete för att framställa lösningar med önskade koncentrationer. Ange helt enkelt tre av de fyra värdena så beräknar kalkylatorn automatiskt det saknade värdet.",
+          "paragraph2": "Formeln fungerar eftersom den totala mängden löst ämne (det ämne som löses) förblir konstant under utspädning. När du späder ut en lösning tillsätter du lösningsmedel (vanligtvis vatten) för att minska koncentrationen, men den absoluta mängden löst ämne förändras inte. Därför är produkten av koncentration och volym före utspädning (C1 × V1) lika med produkten efter utspädning (C2 × V2).",
+          "paragraph3": "För att använda kalkylatorn väljer du lämpliga enheter för varje fält. Koncentrationsenheter inkluderar celler/ml (celler per milliliter), celler/µl (celler per mikroliter), celler/cl (celler per centiliter) och celler/liter. Volymenheter inkluderar milliliter (ml), mikroliter (µl), centiliter (cl) och liter. Kalkylatorn hanterar automatiskt enhetskonverteringar internt, så du kan blanda olika enheter och ändå få korrekta resultat.",
+          "paragraph4": "Vanliga användningsfall inkluderar förberedelse av cellsuspensioner för experiment, utspädning av stammlösningar till arbetskoncentrationer, beräkning av volymer som behövs för seriella utspädningar och bestämning av slutkoncentrationer efter blandning av lösningar. Kalkylatorn är särskilt användbar i mikrobiologi-, cellodlings- och molekylärbiologilaboratorier där precisa utspädningar är kritiska för experimentell framgång.",
+          "exampleHeading": "Exempel",
+          "exampleText": "Om du har en cellsuspension med en startkoncentration på 1 000 000 celler/ml (C1) och en startvolym på 10 ml (V1), och du vill uppnå en slutkoncentration på 100 000 celler/ml (C2), kommer kalkylatorn att bestämma att du behöver en slutvolym på 100 ml (V2). Detta innebär att du skulle tillsätta 90 ml utspädningsmedel till ditt 10 ml prov för att uppnå den önskade koncentrationen."
+        },
+        "faq": {
+          "heading": "Vanliga frågor",
+          "items": [
+            {
+              "question": "Vad är formeln C1V1 = C2V2?",
+              "answer": "Formeln C1V1 = C2V2 är utspädningsekvationen som används inom kemi och biologi. Den anger att produkten av startkoncentration (C1) och startvolym (V1) är lika med produkten av slutkoncentration (C2) och slutvolym (V2). Denna formel är baserad på principen att den totala mängden löst ämne förblir konstant under utspädning."
+            },
+            {
+              "question": "Hur använder jag C1V1-kalkylatorn?",
+              "answer": "Ange tre av de fyra värdena (C1, V1, C2 eller V2) tillsammans med deras enheter. Kalkylatorn kommer automatiskt att beräkna det saknade värdet. Se till att välja rätt enheter för varje fält - koncentrationsenheter (celler/ml, celler/µl osv.) för C1 och C2, och volymenheter (ml, µl osv.) för V1 och V2."
+            },
+            {
+              "question": "Kan jag blanda olika enheter?",
+              "answer": "Ja! Kalkylatorn konverterar automatiskt alla värden till basenheter internt, så du kan använda olika enheter för olika fält. Till exempel kan du ange C1 i celler/ml, V1 i µl, C2 i celler/liter och V2 i ml, och kalkylatorn kommer att hantera alla konverteringar korrekt."
+            },
+            {
+              "question": "Vad händer om jag anger alla fyra värdena?",
+              "answer": "Om du anger alla fyra värdena kommer kalkylatorn att verifiera att de uppfyller ekvationen C1V1 = C2V2. Om värdena inte stämmer överens (inom en liten tolerans), kommer inget resultat att visas, vilket indikerar att värdena är inkonsekventa."
+            },
+            {
+              "question": "Vilka enheter stöds?",
+              "answer": "Koncentrationsenheter: celler/ml, celler/µl, celler/cl och celler/liter. Volymenheter: ml (milliliter), µl (mikroliter), cl (centiliter) och liter. Kalkylatorn hanterar automatiskt konverteringar mellan alla dessa enheter."
+            },
+            {
+              "question": "Är denna kalkylator korrekt för alla typer av lösningar?",
+              "answer": "Formeln C1V1 = C2V2 är korrekt för ideala utspädningar där mängden löst ämne förblir konstant och volymförändringar är additiva. Den fungerar bra för de flesta vattenbaserade lösningar, cellsuspensioner och standardlaboratorieutspädningar. För lösningar där volymförändringar inte är perfekt additiva (t.ex. blandning av etanol och vatten) kan dock ytterligare överväganden behövas."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Relaterade kalkylatorer",
+          "dogSize": "Hundstorlekkalkylator",
+          "dogSizeDesc": "Uppskatta din hunds vuxenstorlek från valpålder och vikt",
+          "dogRaisin": "Hund russin toxicitetskalkylator",
+          "dogRaisinDesc": "Uppskatta en potentiellt farlig mängd russin för din hund",
+          "catPregnancy": "Katt graviditetskalkylator",
+          "catPregnancyDesc": "Uppskatta din katts förväntade födelsedatum och leveransfönster"
+        }
+      }
     }
   },
   "notFound": {

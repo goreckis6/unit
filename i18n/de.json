@@ -6267,11 +6267,21 @@
         "faq": {
           "heading": "Häufig gestellte Fragen",
           "items": [
-            {"question": "Wie wird die Blockanzahl berechnet?\", \"answer\": \"Bei 1 Block Dicke: Umfang (π × Durchmesser). Bei dickeren Ringen: Mittelwert aus innerem und äußerem Umfang. Verschiedene Methoden können leicht abweichen."},
-            {"question": "Was sind Durchmesser und Dicke?\", \"answer\": \"Durchmesser ist die Breite des Kreises in Blöcken. Dicke ist die Breite des Kreisrands in Blöcken — 1 für eine Linie, mehr für einen dicken Ring."},
-            {"question": "Maximaler Durchmesser und Dicke?\", \"answer\": \"Durchmesser 1–500 Blöcke, Dicke 1 bis halber Durchmesser. Dicke darf nicht mehr als die Hälfte des Durchmessers sein."},
-            {"question": "Warum weicht die Blockanzahl im Spiel ab?\", \"answer\": \"Verschiedene Kreis-Algorithmen liefern leicht unterschiedliche Werte. Unsere Schätzung dient der Planung; die tatsächliche Bauweise kann etwas abweichen."},
-            {"question": "Ist der Minecraft-Kreis-Generator kostenlos?\", \"answer\": \"Ja. Der Generator ist kostenlos. Keine Anmeldung nötig. Durchmesser und Dicke eingeben, Blockanzahl erhalten."}
+            {
+              "question": "Wie wird die Blockanzahl berechnet?\", \"answer\": \"Bei 1 Block Dicke: Umfang (π × Durchmesser). Bei dickeren Ringen: Mittelwert aus innerem und äußerem Umfang. Verschiedene Methoden können leicht abweichen."
+            },
+            {
+              "question": "Was sind Durchmesser und Dicke?\", \"answer\": \"Durchmesser ist die Breite des Kreises in Blöcken. Dicke ist die Breite des Kreisrands in Blöcken — 1 für eine Linie, mehr für einen dicken Ring."
+            },
+            {
+              "question": "Maximaler Durchmesser und Dicke?\", \"answer\": \"Durchmesser 1–500 Blöcke, Dicke 1 bis halber Durchmesser. Dicke darf nicht mehr als die Hälfte des Durchmessers sein."
+            },
+            {
+              "question": "Warum weicht die Blockanzahl im Spiel ab?\", \"answer\": \"Verschiedene Kreis-Algorithmen liefern leicht unterschiedliche Werte. Unsere Schätzung dient der Planung; die tatsächliche Bauweise kann etwas abweichen."
+            },
+            {
+              "question": "Ist der Minecraft-Kreis-Generator kostenlos?\", \"answer\": \"Ja. Der Generator ist kostenlos. Keine Anmeldung nötig. Durchmesser und Dicke eingeben, Blockanzahl erhalten."
+            }
           ]
         },
         "related": {
@@ -6339,10 +6349,18 @@
         "faq": {
           "heading": "Häufig gestellte Fragen",
           "items": [
-            {"question": "Wie berechne ich das Mulchvolumen?\", \"answer\": \"Volumen (m³) = Fläche (m²) × Tiefe in m. Tiefe in cm durch 100 teilen. Beispiel: 200 m², 2 cm = 4 m³."},
-            {"question": "Welche Mulchstärke ist sinnvoll?\", \"answer\": \"Üblich sind 2–5 cm. Tiefere Schichten (5–10 cm) bei starkem Unkraut oder Zierrinde. Mulch nicht direkt an Stängel anhäufen."},
-            {"question": "Kann ich den Preis in anderer Währung oder pro Sack angeben?\", \"answer\": \"Der Rechner erwartet Preis pro m³. Bei Preis pro Sack: Preis pro m³ = Sackpreis geteilt durch Sackvolumen (m³)."},
-            {"question": "Ist der Mulch-Rechner kostenlos?\", \"answer\": \"Ja. Der Rechner ist kostenlos. Fläche, Tiefe und optional Preis eingeben."}
+            {
+              "question": "Wie berechne ich das Mulchvolumen?\", \"answer\": \"Volumen (m³) = Fläche (m²) × Tiefe in m. Tiefe in cm durch 100 teilen. Beispiel: 200 m², 2 cm = 4 m³."
+            },
+            {
+              "question": "Welche Mulchstärke ist sinnvoll?\", \"answer\": \"Üblich sind 2–5 cm. Tiefere Schichten (5–10 cm) bei starkem Unkraut oder Zierrinde. Mulch nicht direkt an Stängel anhäufen."
+            },
+            {
+              "question": "Kann ich den Preis in anderer Währung oder pro Sack angeben?\", \"answer\": \"Der Rechner erwartet Preis pro m³. Bei Preis pro Sack: Preis pro m³ = Sackpreis geteilt durch Sackvolumen (m³)."
+            },
+            {
+              "question": "Ist der Mulch-Rechner kostenlos?\", \"answer\": \"Ja. Der Rechner ist kostenlos. Fläche, Tiefe und optional Preis eingeben."
+            }
           ]
         },
         "related": {
@@ -6975,6 +6993,158 @@
           "textToBinaryDesc": "Text in binäre Darstellung mit mehreren Codierungen konvertieren",
           "asciiConverter": "ASCII-Konverter",
           "asciiConverterDesc": "Text in ASCII-Codes anzeigen und konvertieren und umgekehrt"
+        }
+      }
+    },
+    "c1v1": {
+      "title": "C1V1-Rechner",
+      "description": "Berechnen Sie Verdünnungsvolumina und Konzentrationen mit der Formel C1V1 = C2V2. Geben Sie drei Werte ein, um den fehlenden zu finden. Unterstützt mehrere Konzentrations- und Volumeneinheiten.",
+      "c1Label": "Anfangskonzentration (C1)",
+      "v1Label": "Anfangsvolumen (V1)",
+      "c2Label": "Endkonzentration (C2)",
+      "v2Label": "Endvolumen (V2)",
+      "v2UnitLabel": "Endvolumeneinheit",
+      "concentrationUnit_cells_ml": "Zellen/ml",
+      "concentrationUnit_cells_µl": "Zellen/µl",
+      "concentrationUnit_cells_cl": "Zellen/cl",
+      "concentrationUnit_cells_liter": "Zellen/Liter",
+      "volumeUnit_ml": "ml",
+      "volumeUnit_µl": "µl",
+      "volumeUnit_cl": "cl",
+      "volumeUnit_liter": "Liter",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "enterValue": "Geben Sie C1, V1 und C2 ein, um das Endvolumen (V2) zu berechnen",
+      "clickCalculate": "Klicken Sie auf Berechnen, um das Endvolumen zu sehen",
+      "calculationHeading": "Berechnung",
+      "formulaExplanation": "Die Formel C1V1 = C2V2 besagt, dass das Produkt aus Anfangskonzentration und Volumen gleich dem Produkt aus Endkonzentration und Volumen ist. Dies ist die grundlegende Gleichung für Verdünnungsberechnungen in Chemie und Biologie.",
+      "seo": {
+        "title": "C1V1-Rechner – Verdünnungsrechner | C1V1 = C2V2-Formel",
+        "description": "Kostenloser C1V1-Verdünnungsrechner. Berechnen Sie jeden fehlenden Wert (Konzentration oder Volumen) mit der Formel C1V1 = C2V2. Unterstützt mehrere Einheiten (Zellen/ml, µl, cl, Liter). Perfekt für Laborarbeit und Biologieberechnungen.",
+        "keywords": "c1v1-Rechner, Verdünnungsrechner, c1v1 c2v2 Formel, Konzentrationsrechner, Volumenrechner, Verdünnungsformel, c1v1-Gleichung, Biologierechner, Chemierechner",
+        "content": {
+          "heading": "So verwenden Sie den C1V1-Rechner",
+          "paragraph1": "Der C1V1-Rechner verwendet die grundlegende Verdünnungsformel C1 × V1 = C2 × V2, wobei C1 die Anfangskonzentration, V1 das Anfangsvolumen, C2 die Endkonzentration und V2 das Endvolumen ist. Diese Gleichung ist in Chemie, Biologie und Laborarbeit unerlässlich, um Lösungen mit gewünschten Konzentrationen herzustellen. Geben Sie einfach drei der vier Werte ein, und der Rechner berechnet automatisch den fehlenden Wert.",
+          "paragraph2": "Die Formel funktioniert, weil die Gesamtmenge des gelösten Stoffes während der Verdünnung konstant bleibt. Wenn Sie eine Lösung verdünnen, fügen Sie Lösungsmittel (normalerweise Wasser) hinzu, um die Konzentration zu verringern, aber die absolute Menge des gelösten Stoffes ändert sich nicht. Daher ist das Produkt aus Konzentration und Volumen vor der Verdünnung (C1 × V1) gleich dem Produkt nach der Verdünnung (C2 × V2).",
+          "paragraph3": "Um den Rechner zu verwenden, wählen Sie die entsprechenden Einheiten für jedes Feld. Konzentrationseinheiten umfassen Zellen/ml (Zellen pro Milliliter), Zellen/µl (Zellen pro Mikroliter), Zellen/cl (Zellen pro Zentiliter) und Zellen/Liter. Volumeneinheiten umfassen Milliliter (ml), Mikroliter (µl), Zentiliter (cl) und Liter. Der Rechner behandelt Einheitenumrechnungen intern automatisch, sodass Sie verschiedene Einheiten mischen und dennoch genaue Ergebnisse erhalten können.",
+          "paragraph4": "Häufige Anwendungsfälle umfassen die Herstellung von Zellsuspensionen für Experimente, das Verdünnen von Stammlösungen auf Arbeitskonzentrationen, die Berechnung der für serielle Verdünnungen benötigten Volumina und die Bestimmung der Endkonzentrationen nach dem Mischen von Lösungen. Der Rechner ist besonders nützlich in Mikrobiologie-, Zellkultur- und Molekularbiologielaboren, wo präzise Verdünnungen für den experimentellen Erfolg entscheidend sind.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "Wenn Sie eine Zellsuspension mit einer Anfangskonzentration von 1.000.000 Zellen/ml (C1) und einem Anfangsvolumen von 10 ml (V1) haben und eine Endkonzentration von 100.000 Zellen/ml (C2) erreichen möchten, bestimmt der Rechner, dass Sie ein Endvolumen von 100 ml (V2) benötigen. Dies bedeutet, dass Sie 90 ml Verdünnungsmittel zu Ihrer 10-ml-Probe hinzufügen würden, um die gewünschte Konzentration zu erreichen."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist die Formel C1V1 = C2V2?",
+              "answer": "Die Formel C1V1 = C2V2 ist die Verdünnungsgleichung, die in Chemie und Biologie verwendet wird. Sie besagt, dass das Produkt aus Anfangskonzentration (C1) und Anfangsvolumen (V1) gleich dem Produkt aus Endkonzentration (C2) und Endvolumen (V2) ist. Diese Formel basiert auf dem Prinzip, dass die Gesamtmenge des gelösten Stoffes während der Verdünnung konstant bleibt."
+            },
+            {
+              "question": "Wie verwende ich den C1V1-Rechner?",
+              "answer": "Geben Sie drei der vier Werte (C1, V1, C2 oder V2) zusammen mit ihren Einheiten ein. Der Rechner berechnet automatisch den fehlenden Wert. Stellen Sie sicher, dass Sie die richtigen Einheiten für jedes Feld auswählen – Konzentrationseinheiten (Zellen/ml, Zellen/µl usw.) für C1 und C2 und Volumeneinheiten (ml, µl usw.) für V1 und V2."
+            },
+            {
+              "question": "Kann ich verschiedene Einheiten mischen?",
+              "answer": "Ja! Der Rechner konvertiert alle Werte intern in Basiseinheiten, sodass Sie für verschiedene Felder unterschiedliche Einheiten verwenden können. Sie können beispielsweise C1 in Zellen/ml, V1 in µl, C2 in Zellen/Liter und V2 in ml eingeben, und der Rechner behandelt alle Umrechnungen korrekt."
+            },
+            {
+              "question": "Was ist, wenn ich alle vier Werte eingebe?",
+              "answer": "Wenn Sie alle vier Werte eingeben, überprüft der Rechner, ob sie die Gleichung C1V1 = C2V2 erfüllen. Wenn die Werte nicht übereinstimmen (innerhalb einer kleinen Toleranz), wird kein Ergebnis angezeigt, was darauf hinweist, dass die Werte inkonsistent sind."
+            },
+            {
+              "question": "Welche Einheiten werden unterstützt?",
+              "answer": "Konzentrationseinheiten: Zellen/ml, Zellen/µl, Zellen/cl und Zellen/Liter. Volumeneinheiten: ml (Milliliter), µl (Mikroliter), cl (Zentiliter) und Liter. Der Rechner behandelt Umrechnungen zwischen all diesen Einheiten automatisch."
+            },
+            {
+              "question": "Ist dieser Rechner für alle Arten von Lösungen genau?",
+              "answer": "Die Formel C1V1 = C2V2 ist genau für ideale Verdünnungen, bei denen die Menge des gelösten Stoffes konstant bleibt und Volumenänderungen additiv sind. Sie funktioniert gut für die meisten wässrigen Lösungen, Zellsuspensionen und Standard-Laborverdünnungen. Bei Lösungen, bei denen Volumenänderungen nicht perfekt additiv sind (z. B. Mischen von Ethanol und Wasser), können jedoch zusätzliche Überlegungen erforderlich sein."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "dogSize": "Hundegrößen-Rechner",
+          "dogSizeDesc": "Schätzen Sie die Erwachsenengröße Ihres Hundes aus Welpenalter und Gewicht",
+          "dogRaisin": "Hunde-Rosinen-Toxizitätsrechner",
+          "dogRaisinDesc": "Schätzen Sie eine potenziell gefährliche Menge Rosinen für Ihren Hund",
+          "catPregnancy": "Katzenschwangerschaftsrechner",
+          "catPregnancyDesc": "Schätzen Sie den Geburtstermin und das Lieferfenster Ihrer Katze"
+        }
+      }
+    },
+    "c1v1": {
+      "title": "C1V1-Rechner",
+      "description": "Berechnen Sie Verdünnungsvolumina und -konzentrationen mit der Formel C1V1 = C2V2. Geben Sie drei beliebige Werte ein, um den fehlenden zu finden. Unterstützt mehrere Konzentrations- und Volumeneinheiten.",
+      "c1Label": "Anfangskonzentration (C1)",
+      "v1Label": "Anfangsvolumen (V1)",
+      "c2Label": "Endkonzentration (C2)",
+      "v2Label": "Endvolumen (V2)",
+      "v2UnitLabel": "Endvolumeneinheit",
+      "concentrationUnit_cells_ml": "Zellen/ml",
+      "concentrationUnit_cells_µl": "Zellen/µl",
+      "concentrationUnit_cells_cl": "Zellen/cl",
+      "concentrationUnit_cells_liter": "Zellen/Liter",
+      "volumeUnit_ml": "ml",
+      "volumeUnit_µl": "µl",
+      "volumeUnit_cl": "cl",
+      "volumeUnit_liter": "Liter",
+      "calculate": "Berechnen",
+      "reset": "Zurücksetzen",
+      "result": "Ergebnis",
+      "enterValue": "Geben Sie C1, V1 und C2 ein, um das Endvolumen (V2) zu berechnen",
+      "clickCalculate": "Klicken Sie auf Berechnen, um das Endvolumen zu sehen",
+      "calculationHeading": "Berechnung",
+      "formulaExplanation": "Die Formel C1V1 = C2V2 besagt, dass das Produkt aus Anfangskonzentration und -volumen gleich dem Produkt aus Endkonzentration und -volumen ist. Dies ist die grundlegende Gleichung für Verdünnungsberechnungen in Chemie und Biologie.",
+      "seo": {
+        "title": "C1V1-Rechner – Verdünnungsrechner | C1V1 = C2V2 Formel",
+        "description": "Kostenloser C1V1-Verdünnungsrechner. Berechnen Sie jeden fehlenden Wert (Konzentration oder Volumen) mit der Formel C1V1 = C2V2. Unterstützt mehrere Einheiten (Zellen/ml, µl, cl, Liter). Perfekt für Laborarbeit und biologische Berechnungen.",
+        "keywords": "c1v1 rechner, verdünnungsrechner, c1v1 c2v2 formel, konzentrationsrechner, volumenrechner, verdünnungsformel, c1v1 gleichung, biologierechner, chemierechner",
+        "content": {
+          "heading": "So verwenden Sie den C1V1-Rechner",
+          "paragraph1": "Der C1V1-Rechner verwendet die grundlegende Verdünnungsformel C1 × V1 = C2 × V2, wobei C1 die Anfangskonzentration, V1 das Anfangsvolumen, C2 die Endkonzentration und V2 das Endvolumen ist. Diese Gleichung ist in Chemie, Biologie und Laborarbeit für die Herstellung von Lösungen mit gewünschten Konzentrationen unerlässlich. Geben Sie einfach drei der vier Werte ein, und der Rechner berechnet automatisch den fehlenden Wert.",
+          "paragraph2": "Die Formel funktioniert, weil die Gesamtmenge des gelösten Stoffes während der Verdünnung konstant bleibt. Wenn Sie eine Lösung verdünnen, fügen Sie Lösungsmittel (normalerweise Wasser) hinzu, um die Konzentration zu verringern, aber die absolute Menge des gelösten Stoffes ändert sich nicht. Daher ist das Produkt aus Konzentration und Volumen vor der Verdünnung (C1 × V1) gleich dem Produkt nach der Verdünnung (C2 × V2).",
+          "paragraph3": "Um den Rechner zu verwenden, wählen Sie die entsprechenden Einheiten für jedes Feld. Konzentrationseinheiten umfassen Zellen/ml (Zellen pro Milliliter), Zellen/µl (Zellen pro Mikroliter), Zellen/cl (Zellen pro Zentiliter) und Zellen/Liter. Volumeneinheiten umfassen Milliliter (ml), Mikroliter (µl), Zentiliter (cl) und Liter. Der Rechner verarbeitet Einheitenumrechnungen intern automatisch, sodass Sie verschiedene Einheiten mischen und dennoch genaue Ergebnisse erhalten können.",
+          "paragraph4": "Häufige Anwendungsfälle umfassen die Vorbereitung von Zellsuspensionen für Experimente, die Verdünnung von Stammlösungen auf Arbeitskonzentrationen, die Berechnung von Volumina für serielle Verdünnungen und die Bestimmung von Endkonzentrationen nach dem Mischen von Lösungen. Der Rechner ist besonders nützlich in Mikrobiologie-, Zellkultur- und molekularbiologischen Laboren, wo präzise Verdünnungen für den Experimenterfolg entscheidend sind.",
+          "exampleHeading": "Beispiel",
+          "exampleText": "Wenn Sie eine Zellsuspension mit einer Anfangskonzentration von 1.000.000 Zellen/ml (C1) und einem Anfangsvolumen von 10 ml (V1) haben und eine Endkonzentration von 100.000 Zellen/ml (C2) erreichen möchten, ermittelt der Rechner, dass Sie ein Endvolumen von 100 ml (V2) benötigen. Dies bedeutet, dass Sie 90 ml Verdünnungsmittel zu Ihrer 10-ml-Probe hinzufügen würden, um die gewünschte Konzentration zu erreichen."
+        },
+        "faq": {
+          "heading": "Häufig gestellte Fragen",
+          "items": [
+            {
+              "question": "Was ist die Formel C1V1 = C2V2?",
+              "answer": "Die Formel C1V1 = C2V2 ist die Verdünnungsgleichung, die in Chemie und Biologie verwendet wird. Sie besagt, dass das Produkt aus Anfangskonzentration (C1) und Anfangsvolumen (V1) gleich dem Produkt aus Endkonzentration (C2) und Endvolumen (V2) ist. Diese Formel basiert auf dem Prinzip, dass die Gesamtmenge des gelösten Stoffes während der Verdünnung konstant bleibt."
+            },
+            {
+              "question": "Wie verwende ich den C1V1-Rechner?",
+              "answer": "Geben Sie drei der vier Werte (C1, V1, C2 oder V2) zusammen mit ihren Einheiten ein. Der Rechner berechnet automatisch den fehlenden Wert. Achten Sie darauf, die richtigen Einheiten für jedes Feld auszuwählen - Konzentrationseinheiten (Zellen/ml, Zellen/µl usw.) für C1 und C2 sowie Volumeneinheiten (ml, µl usw.) für V1 und V2."
+            },
+            {
+              "question": "Kann ich verschiedene Einheiten mischen?",
+              "answer": "Ja! Der Rechner konvertiert alle Werte intern in Basiseinheiten, sodass Sie verschiedene Einheiten für verschiedene Felder verwenden können. Sie können beispielsweise C1 in Zellen/ml, V1 in µl, C2 in Zellen/Liter und V2 in ml eingeben, und der Rechner verarbeitet alle Umrechnungen korrekt."
+            },
+            {
+              "question": "Was passiert, wenn ich alle vier Werte eingebe?",
+              "answer": "Wenn Sie alle vier Werte eingeben, überprüft der Rechner, ob sie die Gleichung C1V1 = C2V2 erfüllen. Wenn die Werte nicht übereinstimmen (innerhalb einer kleinen Toleranz), wird kein Ergebnis angezeigt, was darauf hinweist, dass die Werte inkonsistent sind."
+            },
+            {
+              "question": "Welche Einheiten werden unterstützt?",
+              "answer": "Konzentrationseinheiten: Zellen/ml, Zellen/µl, Zellen/cl und Zellen/Liter. Volumeneinheiten: ml (Milliliter), µl (Mikroliter), cl (Zentiliter) und Liter. Der Rechner verarbeitet Umrechnungen zwischen all diesen Einheiten automatisch."
+            },
+            {
+              "question": "Ist dieser Rechner für alle Arten von Lösungen genau?",
+              "answer": "Die Formel C1V1 = C2V2 ist genau für ideale Verdünnungen, bei denen die Menge des gelösten Stoffes konstant bleibt und Volumenänderungen additiv sind. Sie funktioniert gut für die meisten wässrigen Lösungen, Zellsuspensionen und Standard-Labverdünnungen. Bei Lösungen, bei denen Volumenänderungen nicht perfekt additiv sind (z. B. beim Mischen von Ethanol und Wasser), können jedoch zusätzliche Überlegungen erforderlich sein."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Verwandte Rechner",
+          "dogSize": "Hundegrößen-Rechner",
+          "dogSizeDesc": "Schätzen Sie die Erwachsenengröße Ihres Hundes anhand von Welpenalter und -gewicht",
+          "dogRaisin": "Hunde-Rosinen-Toxizitätsrechner",
+          "dogRaisinDesc": "Schätzen Sie eine potenziell gefährliche Menge Rosinen für Ihren Hund",
+          "catPregnancy": "Katzenschwangerschaftsrechner",
+          "catPregnancyDesc": "Schätzen Sie den Geburtstermin und das Lieferfenster Ihrer Katze"
         }
       }
     }

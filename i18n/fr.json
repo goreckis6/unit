@@ -6977,6 +6977,82 @@
           "asciiConverterDesc": "Affichez et convertissez du texte en codes ASCII et vice versa"
         }
       }
+    },
+    "c1v1": {
+      "title": "Calculateur C1V1",
+      "description": "Calculez les volumes et concentrations de dilution en utilisant la formule C1V1 = C2V2. Entrez trois valeurs pour trouver la valeur manquante. Prend en charge plusieurs unités de concentration et de volume.",
+      "c1Label": "Concentration initiale (C1)",
+      "v1Label": "Volume initial (V1)",
+      "c2Label": "Concentration finale (C2)",
+      "v2Label": "Volume final (V2)",
+      "v2UnitLabel": "Unité de volume final",
+      "concentrationUnit_cells_ml": "cellules/ml",
+      "concentrationUnit_cells_µl": "cellules/µl",
+      "concentrationUnit_cells_cl": "cellules/cl",
+      "concentrationUnit_cells_liter": "cellules/litre",
+      "volumeUnit_ml": "ml",
+      "volumeUnit_µl": "µl",
+      "volumeUnit_cl": "cl",
+      "volumeUnit_liter": "litre",
+      "calculate": "Calculer",
+      "reset": "Réinitialiser",
+      "result": "Résultat",
+      "enterValue": "Entrez C1, V1 et C2 pour calculer le volume final (V2)",
+      "clickCalculate": "Cliquez sur Calculer pour voir le volume final",
+      "calculationHeading": "Calcul",
+      "formulaExplanation": "La formule C1V1 = C2V2 indique que le produit de la concentration initiale et du volume est égal au produit de la concentration finale et du volume. C'est l'équation fondamentale pour les calculs de dilution en chimie et en biologie.",
+      "seo": {
+        "title": "Calculateur C1V1 – Calculateur de Dilution | Formule C1V1 = C2V2",
+        "description": "Calculateur de dilution C1V1 gratuit. Calculez n'importe quelle valeur manquante (concentration ou volume) en utilisant la formule C1V1 = C2V2. Prend en charge plusieurs unités (cellules/ml, µl, cl, litre). Parfait pour le travail en laboratoire et les calculs biologiques.",
+        "keywords": "calculateur c1v1, calculateur dilution, formule c1v1 c2v2, calculateur concentration, calculateur volume, formule dilution, équation c1v1, calculateur biologie, calculateur chimie",
+        "content": {
+          "heading": "Comment utiliser le Calculateur C1V1",
+          "paragraph1": "Le calculateur C1V1 utilise la formule de dilution fondamentale C1 × V1 = C2 × V2, où C1 est la concentration initiale, V1 est le volume initial, C2 est la concentration finale et V2 est le volume final. Cette équation est essentielle en chimie, en biologie et dans le travail de laboratoire pour préparer des solutions avec des concentrations désirées. Entrez simplement trois des quatre valeurs, et le calculateur calculera automatiquement la valeur manquante.",
+          "paragraph2": "La formule fonctionne parce que la quantité totale de soluté (la substance dissoute) reste constante pendant la dilution. Lorsque vous diluez une solution, vous ajoutez du solvant (généralement de l'eau) pour réduire la concentration, mais la quantité absolue de soluté ne change pas. Par conséquent, le produit de la concentration et du volume avant dilution (C1 × V1) est égal au produit après dilution (C2 × V2).",
+          "paragraph3": "Pour utiliser le calculateur, sélectionnez les unités appropriées pour chaque champ. Les unités de concentration incluent cellules/ml (cellules par millilitre), cellules/µl (cellules par microlitre), cellules/cl (cellules par centilitre) et cellules/litre. Les unités de volume incluent millilitres (ml), microlitres (µl), centilitres (cl) et litres. Le calculateur gère automatiquement les conversions d'unités en interne, vous pouvez donc mélanger différentes unités et obtenir des résultats précis.",
+          "paragraph4": "Les cas d'utilisation courants incluent la préparation de suspensions cellulaires pour les expériences, la dilution de solutions mères aux concentrations de travail, le calcul des volumes nécessaires pour les dilutions en série et la détermination des concentrations finales après le mélange de solutions. Le calculateur est particulièrement utile dans les laboratoires de microbiologie, de culture cellulaire et de biologie moléculaire où les dilutions précises sont essentielles au succès expérimental.",
+          "exampleHeading": "Exemple",
+          "exampleText": "Si vous avez une suspension cellulaire avec une concentration initiale de 1 000 000 cellules/ml (C1) et un volume initial de 10 ml (V1), et que vous souhaitez atteindre une concentration finale de 100 000 cellules/ml (C2), le calculateur déterminera que vous avez besoin d'un volume final de 100 ml (V2). Cela signifie que vous ajouteriez 90 ml de diluant à votre échantillon de 10 ml pour atteindre la concentration désirée."
+        },
+        "faq": {
+          "heading": "Questions fréquemment posées",
+          "items": [
+            {
+              "question": "Qu'est-ce que la formule C1V1 = C2V2 ?",
+              "answer": "La formule C1V1 = C2V2 est l'équation de dilution utilisée en chimie et en biologie. Elle indique que le produit de la concentration initiale (C1) et du volume initial (V1) est égal au produit de la concentration finale (C2) et du volume final (V2). Cette formule est basée sur le principe que la quantité totale de soluté reste constante pendant la dilution."
+            },
+            {
+              "question": "Comment utiliser le calculateur C1V1 ?",
+              "answer": "Entrez trois des quatre valeurs (C1, V1, C2 ou V2) avec leurs unités. Le calculateur calculera automatiquement la valeur manquante. Assurez-vous de sélectionner les unités correctes pour chaque champ - unités de concentration (cellules/ml, cellules/µl, etc.) pour C1 et C2, et unités de volume (ml, µl, etc.) pour V1 et V2."
+            },
+            {
+              "question": "Puis-je mélanger différentes unités ?",
+              "answer": "Oui ! Le calculateur convertit automatiquement toutes les valeurs en unités de base en interne, vous pouvez donc utiliser différentes unités pour différents champs. Par exemple, vous pouvez entrer C1 en cellules/ml, V1 en µl, C2 en cellules/litre et V2 en ml, et le calculateur gérera toutes les conversions correctement."
+            },
+            {
+              "question": "Que se passe-t-il si j'entre les quatre valeurs ?",
+              "answer": "Si vous entrez les quatre valeurs, le calculateur vérifiera qu'elles satisfont l'équation C1V1 = C2V2. Si les valeurs ne correspondent pas (dans une petite tolérance), aucun résultat ne sera affiché, indiquant que les valeurs sont incohérentes."
+            },
+            {
+              "question": "Quelles unités sont prises en charge ?",
+              "answer": "Unités de concentration : cellules/ml, cellules/µl, cellules/cl et cellules/litre. Unités de volume : ml (millilitres), µl (microlitres), cl (centilitres) et litre. Le calculateur gère automatiquement les conversions entre toutes ces unités."
+            },
+            {
+              "question": "Ce calculateur est-il précis pour tous les types de solutions ?",
+              "answer": "La formule C1V1 = C2V2 est précise pour les dilutions idéales où la quantité de soluté reste constante et les changements de volume sont additifs. Elle fonctionne bien pour la plupart des solutions aqueuses, des suspensions cellulaires et des dilutions de laboratoire standard. Cependant, pour les solutions où les changements de volume ne sont pas parfaitement additifs (par exemple, le mélange d'éthanol et d'eau), des considérations supplémentaires peuvent être nécessaires."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Calculateurs connexes",
+          "dogSize": "Calculateur de Taille de Chien",
+          "dogSizeDesc": "Estimez la taille adulte de votre chien à partir de l'âge et du poids du chiot",
+          "dogRaisin": "Calculateur de Toxicité des Raisins pour Chiens",
+          "dogRaisinDesc": "Estimez une quantité potentiellement dangereuse de raisins secs pour votre chien",
+          "catPregnancy": "Calculateur de Grossesse de Chat",
+          "catPregnancyDesc": "Estimez la date d'accouchement et la fenêtre de livraison de votre chat"
+        }
+      }
     }
   },
   "notFound": {

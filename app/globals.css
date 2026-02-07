@@ -807,8 +807,9 @@ a {
   padding: 6.5rem 0 6rem;
   text-align: center;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   border-bottom: 4px solid #c084fc;
+  margin-bottom: 0;
 }
 
 .hero::before {
@@ -885,6 +886,8 @@ a {
 .categories-section,
 .features-section {
   padding: 5rem 0;
+  position: relative;
+  z-index: 1;
 }
 
 .section-title {

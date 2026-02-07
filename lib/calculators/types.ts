@@ -3,7 +3,7 @@ export interface Calculator {
   titleKey: string;
   descKey: string;
   path: string;
-  category: 'math' | 'electric' | 'biology' | 'conversion' | 'physics' | 'real-life' | 'finance' | 'others';
+  category: 'math' | 'electric' | 'biology' | 'conversion' | 'physics' | 'real-life' | 'finance' | 'others' | 'health' | 'chemistry' | 'construction' | 'ecology' | 'food' | 'statistics';
 }
 
 /** Sorts calculator array A–Z by id so newly added calcs appear in alphabetical order. */

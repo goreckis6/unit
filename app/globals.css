@@ -895,6 +895,7 @@ a {
   color: var(--text-primary);
   letter-spacing: -1px;
   position: relative;
+  z-index: 10;
 }
 
 .section-title::after {
@@ -907,6 +908,7 @@ a {
   height: 4px;
   background: var(--gradient-primary);
   border-radius: 2px;
+  z-index: 10;
 }
 
 .section-subtitle {
@@ -1107,6 +1109,7 @@ a {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .feature-card::before {

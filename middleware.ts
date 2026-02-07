@@ -1,17 +1,21 @@
 import createMiddleware from 'next-intl/middleware';
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { routing } from './i18n/routing';
 
 const handleI18nRouting = createMiddleware(routing);
 
 type Locale = (typeof routing.locales)[number];
 
-function hasLocalePrefix(pathname: string) {
-  return routing.locales.some((locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`));
-}
-
 function isSupportedLocale(value: string | undefined): value is Locale {
   return typeof value === 'string' && routing.locales.includes(value as Locale);
+}
+
+function getLocaleFromPathname(pathname: string): Locale | null {
+  // Extract locale from URL path (e.g., /fr/about -> fr)
+  const pathnameLocale = routing.locales.find(
+    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
+  );
+  return pathnameLocale || null;
 }
 
 function getBrowserLocale(acceptLanguage: string | null): Locale {
@@ -41,18 +45,49 @@ function getBrowserLocale(acceptLanguage: string | null): Locale {
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-
-  // If URL already has a locale prefix, just handle the routing
-  if (hasLocalePrefix(pathname)) {
-    return handleI18nRouting(request);
+  
+  // 1. Check if URL has an explicit locale (e.g., /fr/, /de/, /pl/)
+  const pathnameLocale = getLocaleFromPathname(pathname);
+  
+  // 2. If URL has a locale, "stick" it in a cookie for future visits
+  if (pathnameLocale) {
+    const response = handleI18nRouting(request);
+    
+    // Only update cookie if it's different from the current one
+    const currentCookie = request.cookies.get('NEXT_LOCALE')?.value;
+    if (currentCookie !== pathnameLocale) {
+      response.cookies.set('NEXT_LOCALE', pathnameLocale, {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 30, // 30 days
+        sameSite: 'lax'
+      });
+    }
+    
+    return response;
   }
-
-  // For root path or paths without locale, detect browser language
+  
+  // 3. For root path without locale: check cookie first, then browser language
+  const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
+  
+  // If user has a saved preference (cookie), redirect to that language
+  if (isSupportedLocale(cookieLocale) && cookieLocale !== 'en') {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = `/${cookieLocale}${pathname}`;
+    return NextResponse.redirect(redirectUrl);
+  }
+  
+  // 4. No cookie? Detect from browser language as fallback
   const acceptLanguage = request.headers.get('accept-language');
-  const detectedLocale = getBrowserLocale(acceptLanguage);
-
-  // Let next-intl handle the routing with detected locale
-  // It will redirect to the appropriate locale path
+  const browserLocale = getBrowserLocale(acceptLanguage);
+  
+  // If browser locale is not English, redirect to that language
+  if (browserLocale !== 'en') {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = `/${browserLocale}${pathname}`;
+    return NextResponse.redirect(redirectUrl);
+  }
+  
+  // 5. Default: let next-intl handle it (will use English)
   return handleI18nRouting(request);
 }
 

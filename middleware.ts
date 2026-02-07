@@ -46,11 +46,38 @@ function getBrowserLocale(acceptLanguage: string | null): Locale {
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-  // 1. Check if URL has an explicit locale (e.g., /fr/, /de/, /pl/)
+  // 1. Check if URL has an explicit locale (e.g., /fr/, /de/, /pl/, /en/)
   const pathnameLocale = getLocaleFromPathname(pathname);
   
   // 2. If URL has a locale, "stick" it in a cookie for future visits
   if (pathnameLocale) {
+    // Special handling for English: update cookie and redirect to unprefixed URL
+    if (pathnameLocale === 'en') {
+      const currentCookie = request.cookies.get('NEXT_LOCALE')?.value;
+      
+      // If cookie needs to be updated to 'en', clear it and redirect to unprefixed URL
+      if (currentCookie !== 'en') {
+        const pathWithoutLocale = pathname.replace(/^\/en(\/|$)/, '/');
+        const redirectUrl = request.nextUrl.clone();
+        redirectUrl.pathname = pathWithoutLocale || '/';
+        
+        const response = NextResponse.redirect(redirectUrl);
+        response.cookies.set('NEXT_LOCALE', 'en', {
+          path: '/',
+          maxAge: 60 * 60 * 24 * 30, // 30 days
+          sameSite: 'lax'
+        });
+        return response;
+      }
+      
+      // Cookie is already 'en', just redirect to unprefixed URL
+      const pathWithoutLocale = pathname.replace(/^\/en(\/|$)/, '/');
+      const redirectUrl = request.nextUrl.clone();
+      redirectUrl.pathname = pathWithoutLocale || '/';
+      return NextResponse.redirect(redirectUrl);
+    }
+    
+    // For other locales (non-English)
     const response = handleI18nRouting(request);
     
     // Only update cookie if it's different from the current one
@@ -69,11 +96,16 @@ export default function middleware(request: NextRequest) {
   // 3. For root path without locale: check cookie first, then browser language
   const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
   
-  // If user has a saved preference (cookie), redirect to that language
+  // If user has a saved preference (cookie) and it's NOT English, redirect to that language
   if (isSupportedLocale(cookieLocale) && cookieLocale !== 'en') {
     const redirectUrl = request.nextUrl.clone();
     redirectUrl.pathname = `/${cookieLocale}${pathname}`;
     return NextResponse.redirect(redirectUrl);
+  }
+  
+  // If cookie is explicitly 'en', just serve English (no redirect needed)
+  if (cookieLocale === 'en') {
+    return handleI18nRouting(request);
   }
   
   // 4. No cookie? Detect from browser language as fallback

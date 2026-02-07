@@ -1,0 +1,1396 @@
+<template>
+  <div class="calculator-page">
+    <Navbar />
+    
+    <div class="page-background">
+      <div class="bg-gradient"></div>
+    </div>
+
+    <div class="container">
+      <div class="calculator-header">
+        <router-link :to="getLocalePath(currentLocale, '/')" class="back-button">
+          <svg class="back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>{{ $t('common.back') }}</span>
+        </router-link>
+        <div class="header-content">
+          <div class="title-badge">{{ $t('calculators.ohmsLaw.badge') }}</div>
+          <h1 class="page-title">{{ $t('calculators.ohmsLaw.title') }}</h1>
+          <p class="page-description">{{ $t('calculators.ohmsLaw.description') }}</p>
+        </div>
+      </div>
+
+      <div class="calculator-container">
+        <div class="calculator-card">
+          <!-- Input Section -->
+          <div class="input-section">
+            <div class="inputs-grid">
+              <!-- Voltage Input -->
+              <div class="input-card">
+                <label class="input-label">{{ $t('calculators.ohmsLaw.voltageLabel') }}</label>
+                <div class="input-with-unit">
+                  <input
+                    v-model.number="voltageValue"
+                    type="number"
+                    class="number-input"
+                    :placeholder="$t('calculators.ohmsLaw.voltagePlaceholder')"
+                    @input="validateInput"
+                    @keyup.enter="calculate"
+                    step="any"
+                  />
+                  <select v-model="voltageUnit" class="unit-select">
+                    <option value="V">V (volt)</option>
+                    <option value="mV">mV (millivolt)</option>
+                    <option value="μV">μV (microvolt)</option>
+                    <option value="kV">kV (kilovolt)</option>
+                    <option value="MV">MV (megavolt)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Current Input -->
+              <div class="input-card">
+                <label class="input-label">{{ $t('calculators.ohmsLaw.currentLabel') }}</label>
+                <div class="input-with-unit">
+                  <input
+                    v-model.number="currentValue"
+                    type="number"
+                    class="number-input"
+                    :placeholder="$t('calculators.ohmsLaw.currentPlaceholder')"
+                    @input="validateInput"
+                    @keyup.enter="calculate"
+                    step="any"
+                  />
+                  <select v-model="currentUnit" class="unit-select">
+                    <option value="A">A (ampere)</option>
+                    <option value="mA">mA (milliampere)</option>
+                    <option value="μA">μA (microampere)</option>
+                    <option value="kA">kA (kiloampere)</option>
+                    <option value="MA">MA (megaampere)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Resistance Input -->
+              <div class="input-card">
+                <label class="input-label">{{ $t('calculators.ohmsLaw.resistanceLabel') }}</label>
+                <div class="input-with-unit">
+                  <input
+                    v-model.number="resistanceValue"
+                    type="number"
+                    class="number-input"
+                    :placeholder="$t('calculators.ohmsLaw.resistancePlaceholder')"
+                    @input="validateInput"
+                    @keyup.enter="calculate"
+                    step="any"
+                  />
+                  <select v-model="resistanceUnit" class="unit-select">
+                    <option value="Ω">Ω (ohm)</option>
+                    <option value="mΩ">mΩ (milliohm)</option>
+                    <option value="μΩ">μΩ (microohm)</option>
+                    <option value="kΩ">kΩ (kilohm)</option>
+                    <option value="MΩ">MΩ (megohm)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Power Input -->
+              <div class="input-card">
+                <label class="input-label">{{ $t('calculators.ohmsLaw.powerLabel') }}</label>
+                <div class="input-with-unit">
+                  <input
+                    v-model.number="powerValue"
+                    type="number"
+                    class="number-input"
+                    :placeholder="$t('calculators.ohmsLaw.powerPlaceholder')"
+                    @input="validateInput"
+                    @keyup.enter="calculate"
+                    step="any"
+                  />
+                  <select v-model="powerUnit" class="unit-select">
+                    <option value="W">W (watt)</option>
+                    <option value="mW">mW (milliwatt)</option>
+                    <option value="μW">μW (microwatt)</option>
+                    <option value="kW">kW (kilowatt)</option>
+                    <option value="MW">MW (megawatt)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+              <button @click="calculate" class="btn btn-primary" :disabled="!canCalculate">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>{{ $t('common.calculate') }}</span>
+              </button>
+              <button @click="clear" class="btn btn-secondary">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>{{ $t('common.clear') }}</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Error Message -->
+          <transition name="slide-down">
+            <div v-if="error" class="error-message">
+              <svg class="error-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 8V12M12 16H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>{{ error }}</span>
+            </div>
+          </transition>
+
+          <!-- Result Section -->
+          <transition name="slide-up">
+            <div v-if="results.length > 0" class="result-section">
+              <div class="result-header">
+                <div class="result-badge">
+                  <svg class="result-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  {{ $t('calculators.ohmsLaw.result') }}
+                </div>
+              </div>
+
+              <div class="result-display">
+                <div v-for="(result, index) in results" :key="index" class="result-item">
+                  <div class="result-label">{{ result.label }}:</div>
+                  <div class="result-value-box">
+                    <span class="result-value">{{ formatResult(result.value) }}</span>
+                    <span class="result-unit">{{ result.unit }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Additional Info -->
+              <div v-if="results.length > 0" class="info-section">
+                <div class="info-card">
+                  <div class="info-item">
+                    <span class="info-label">{{ $t('calculators.ohmsLaw.formula') }}:</span>
+                    <span class="info-value">{{ formulaUsed }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </transition>
+        </div>
+
+        <!-- SEO Content Section -->
+        <div class="seo-content-section">
+          <div class="seo-content-card">
+            <h2 class="seo-heading">{{ $t('calculators.ohmsLaw.seo.content.heading') }}</h2>
+            
+            <div class="seo-paragraphs">
+              <p class="seo-paragraph">
+                {{ $t('calculators.ohmsLaw.seo.content.paragraph1') }}
+              </p>
+              
+              <p class="seo-paragraph">
+                {{ $t('calculators.ohmsLaw.seo.content.paragraph2') }}
+              </p>
+              
+              <p class="seo-paragraph">
+                {{ $t('calculators.ohmsLaw.seo.content.paragraph3') }}
+              </p>
+              
+              <div class="seo-example">
+                <h3 class="example-heading">{{ $t('calculators.ohmsLaw.seo.content.exampleHeading') }}</h3>
+                <p class="example-text">{{ $t('calculators.ohmsLaw.seo.content.exampleText') }}</p>
+              </div>
+              
+              <p class="seo-paragraph">
+                {{ $t('calculators.ohmsLaw.seo.content.paragraph4') }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Navbar from '../../components/Navbar.vue'
+import { updateHreflangTags, updateCanonicalTag } from '../../utils/seo.js'
+import { supportedLocales, getLocalePath } from '../../router/index.js'
+
+export default {
+  name: 'OhmsLawCalculator',
+  components: {
+    Navbar
+  },
+  data() {
+    return {
+      voltageValue: null,
+      voltageUnit: 'V',
+      currentValue: null,
+      currentUnit: 'A',
+      resistanceValue: null,
+      resistanceUnit: 'Ω',
+      powerValue: null,
+      powerUnit: 'W',
+      results: [],
+      formulaUsed: '',
+      error: ''
+    }
+  },
+  computed: {
+    canCalculate() {
+      // Count valid number inputs
+      const values = [
+        this.voltageValue,
+        this.currentValue,
+        this.resistanceValue,
+        this.powerValue
+      ]
+      
+      // Filter out null, undefined, empty string, and NaN
+      const validValues = values.filter(val => {
+        // Explicitly exclude null, undefined, empty string
+        if (val === null || val === undefined || val === '') {
+          return false
+        }
+        // Check if it's a valid number
+        const num = Number(val)
+        return !isNaN(num) && isFinite(num)
+      })
+      
+      // Need exactly 2 valid values
+      return validValues.length === 2
+    },
+    currentLocale() {
+      return this.$i18n.locale;
+    }
+  },
+  mounted() {
+    this.updateMetaTags()
+    this.updateSEO()
+  },
+  watch: {
+    '$i18n.locale'() {
+      this.updateMetaTags()
+      this.updateSEO()
+    },
+    '$route'() {
+      this.updateMetaTags()
+      this.updateSEO()
+    }
+  },
+  methods: {
+    getLocalePath(locale, path) {
+      return getLocalePath(locale, path);
+    },
+    updateMetaTags() {
+      const locale = this.$i18n.locale
+      
+      document.title = this.$t('calculators.ohmsLaw.seo.title')
+      
+      let metaDescription = document.querySelector('meta[name="description"]')
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta')
+        metaDescription.setAttribute('name', 'description')
+        document.head.appendChild(metaDescription)
+      }
+      metaDescription.setAttribute('content', this.$t('calculators.ohmsLaw.seo.description'))
+      
+      let metaKeywords = document.querySelector('meta[name="keywords"]')
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta')
+        metaKeywords.setAttribute('name', 'keywords')
+        document.head.appendChild(metaKeywords)
+      }
+      metaKeywords.setAttribute('content', this.$t('calculators.ohmsLaw.seo.keywords'))
+      
+      document.documentElement.lang = locale
+      
+      this.updateOpenGraph()
+    },
+    updateOpenGraph() {
+      const ogTitle = document.querySelector('meta[property="og:title"]') || document.createElement('meta')
+      ogTitle.setAttribute('property', 'og:title')
+      ogTitle.setAttribute('content', this.$t('calculators.ohmsLaw.seo.title'))
+      if (!document.querySelector('meta[property="og:title"]')) {
+        document.head.appendChild(ogTitle)
+      }
+      
+      const ogDescription = document.querySelector('meta[property="og:description"]') || document.createElement('meta')
+      ogDescription.setAttribute('property', 'og:description')
+      ogDescription.setAttribute('content', this.$t('calculators.ohmsLaw.seo.description'))
+      if (!document.querySelector('meta[property="og:description"]')) {
+        document.head.appendChild(ogDescription)
+      }
+
+      const baseUrl = window.location.origin
+      const ogUrl = document.querySelector('meta[property="og:url"]') || document.createElement('meta')
+      ogUrl.setAttribute('property', 'og:url')
+      ogUrl.setAttribute('content', baseUrl + this.getLocalePath(this.$i18n.locale, this.$route.path))
+      if (!document.querySelector('meta[property="og:url"]')) {
+        document.head.appendChild(ogUrl)
+      }
+    },
+    updateSEO() {
+      updateHreflangTags(this.getLocalePath(this.$i18n.locale, this.$route.path), supportedLocales)
+      updateCanonicalTag(this.getLocalePath(this.$i18n.locale, this.$route.path))
+    },
+    validateInput() {
+      this.error = ''
+    },
+    convertToBase(value, unit, type) {
+      const multipliers = {
+        voltage: { 'V': 1, 'mV': 0.001, 'μV': 0.000001, 'kV': 1000, 'MV': 1000000 },
+        current: { 'A': 1, 'mA': 0.001, 'μA': 0.000001, 'kA': 1000, 'MA': 1000000 },
+        resistance: { 'Ω': 1, 'mΩ': 0.001, 'μΩ': 0.000001, 'kΩ': 1000, 'MΩ': 1000000 },
+        power: { 'W': 1, 'mW': 0.001, 'μW': 0.000001, 'kW': 1000, 'MW': 1000000 }
+      }
+      return value * (multipliers[type]?.[unit] || 1)
+    },
+    convertFromBase(value, unit, type) {
+      const divisors = {
+        voltage: { 'V': 1, 'mV': 0.001, 'μV': 0.000001, 'kV': 1000, 'MV': 1000000 },
+        current: { 'A': 1, 'mA': 0.001, 'μA': 0.000001, 'kA': 1000, 'MA': 1000000 },
+        resistance: { 'Ω': 1, 'mΩ': 0.001, 'μΩ': 0.000001, 'kΩ': 1000, 'MΩ': 1000000 },
+        power: { 'W': 1, 'mW': 0.001, 'μW': 0.000001, 'kW': 1000, 'MW': 1000000 }
+      }
+      return value / (divisors[type]?.[unit] || 1)
+    },
+    calculate() {
+      this.error = ''
+      this.results = []
+      
+      // Convert all values to base units
+      const v = this.voltageValue !== null && this.voltageValue !== '' 
+        ? this.convertToBase(this.voltageValue, this.voltageUnit, 'voltage') : null
+      const i = this.currentValue !== null && this.currentValue !== '' 
+        ? this.convertToBase(this.currentValue, this.currentUnit, 'current') : null
+      const r = this.resistanceValue !== null && this.resistanceValue !== '' 
+        ? this.convertToBase(this.resistanceValue, this.resistanceUnit, 'resistance') : null
+      const p = this.powerValue !== null && this.powerValue !== '' 
+        ? this.convertToBase(this.powerValue, this.powerUnit, 'power') : null
+
+      const filled = [
+        { name: 'voltage', value: v },
+        { name: 'current', value: i },
+        { name: 'resistance', value: r },
+        { name: 'power', value: p }
+      ].filter(item => item.value !== null && item.value !== '')
+
+      if (filled.length !== 2) {
+        this.error = this.$t('calculators.ohmsLaw.error.needTwoValues')
+        return
+      }
+
+      // Check for invalid values
+      if (filled.some(item => item.value === 0 && (item.name === 'resistance' || item.name === 'current'))) {
+        this.error = this.$t('calculators.ohmsLaw.error.invalidValues')
+        return
+      }
+
+      let calculatedV = v
+      let calculatedI = i
+      let calculatedR = r
+      let calculatedP = p
+
+      // Calculate missing values based on which 2 are provided
+      if (v !== null && i !== null) {
+        // V and I provided: R = V/I, P = V*I
+        calculatedR = v / i
+        calculatedP = v * i
+        this.formulaUsed = 'R = V / I, P = V × I'
+      } else if (v !== null && r !== null) {
+        // V and R provided: I = V/R, P = V²/R
+        calculatedI = v / r
+        calculatedP = (v * v) / r
+        this.formulaUsed = 'I = V / R, P = V² / R'
+      } else if (v !== null && p !== null) {
+        // V and P provided: I = P/V, R = V²/P
+        calculatedI = p / v
+        calculatedR = (v * v) / p
+        this.formulaUsed = 'I = P / V, R = V² / P'
+      } else if (i !== null && r !== null) {
+        // I and R provided: V = I*R, P = I²*R
+        calculatedV = i * r
+        calculatedP = i * i * r
+        this.formulaUsed = 'V = I × R, P = I² × R'
+      } else if (i !== null && p !== null) {
+        // I and P provided: V = P/I, R = P/I²
+        calculatedV = p / i
+        calculatedR = p / (i * i)
+        this.formulaUsed = 'V = P / I, R = P / I²'
+      } else if (r !== null && p !== null) {
+        // R and P provided: V = √(P*R), I = √(P/R)
+        calculatedV = Math.sqrt(p * r)
+        calculatedI = Math.sqrt(p / r)
+        this.formulaUsed = 'V = √(P × R), I = √(P / R)'
+      }
+
+      // Convert results back to selected units and build results array
+      this.results = []
+      
+      if (v === null) {
+        this.results.push({
+          label: this.$t('calculators.ohmsLaw.voltageLabel'),
+          value: this.convertFromBase(calculatedV, this.voltageUnit, 'voltage'),
+          unit: this.voltageUnit
+        })
+      }
+      
+      if (i === null) {
+        this.results.push({
+          label: this.$t('calculators.ohmsLaw.currentLabel'),
+          value: this.convertFromBase(calculatedI, this.currentUnit, 'current'),
+          unit: this.currentUnit
+        })
+      }
+      
+      if (r === null) {
+        this.results.push({
+          label: this.$t('calculators.ohmsLaw.resistanceLabel'),
+          value: this.convertFromBase(calculatedR, this.resistanceUnit, 'resistance'),
+          unit: this.resistanceUnit
+        })
+      }
+      
+      if (p === null) {
+        this.results.push({
+          label: this.$t('calculators.ohmsLaw.powerLabel'),
+          value: this.convertFromBase(calculatedP, this.powerUnit, 'power'),
+          unit: this.powerUnit
+        })
+      }
+    },
+    formatResult(value) {
+      if (isNaN(value) || !isFinite(value)) return 'N/A'
+      if (Math.abs(value) < 0.000001) return value.toExponential(2)
+      if (Math.abs(value) > 1000000) return value.toExponential(2)
+      return parseFloat(value.toFixed(6)).toString()
+    },
+    clear() {
+      this.voltageValue = null
+      this.currentValue = null
+      this.resistanceValue = null
+      this.powerValue = null
+      this.results = []
+      this.formulaUsed = ''
+      this.error = ''
+    }
+  }
+}
+</script>
+
+<style scoped>
+.calculator-page {
+  min-height: 100vh;
+  position: relative;
+  background: var(--bg-secondary);
+}
+
+.page-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-gradient {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+  animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(5%, 5%) rotate(180deg); }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.calculator-header {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  position: relative;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.back-button:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateX(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title-badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+.page-description {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.calculator-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.calculator-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: var(--shadow-xl);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.input-section {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.input-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.input-label {
+  display: block;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.3px;
+}
+
+.input-with-unit {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  width: 100%;
+}
+
+.number-input {
+  flex: 1;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.875rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  width: 100%;
+}
+
+.number-input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.number-input::placeholder {
+  color: var(--text-tertiary);
+  opacity: 0.4;
+}
+
+.unit-select {
+  padding: 1.25rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  max-width: 180px;
+  flex-shrink: 0;
+}
+
+.unit-select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.125rem 2.5rem;
+  border-radius: 0.875rem;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  min-width: 160px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.5);
+}
+
+.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-down-enter-from {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.slide-down-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: var(--error-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  border: 2px solid rgba(239, 68, 68, 0.2);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
+}
+
+.error-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.5s ease;
+}
+
+.slide-up-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.result-section {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 2px solid var(--border-light);
+}
+
+.result-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 2rem;
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: 2rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+}
+
+.result-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.result-display {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.result-item {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(139, 92, 246, 0.06) 100%);
+  border: 2px solid rgba(99, 102, 241, 0.15);
+  border-radius: 1rem;
+  min-width: 0;
+}
+
+@media (min-width: 1200px) {
+  .inputs-grid {
+    gap: 2.5rem;
+  }
+  
+  .input-card {
+    min-width: 0;
+  }
+  
+  .number-input {
+    font-size: 1.625rem;
+  }
+  
+  .unit-select {
+    font-size: 1.0625rem;
+    min-width: 150px;
+    max-width: 200px;
+  }
+  
+  .result-display {
+    gap: 2.5rem;
+  }
+  
+  .result-item {
+    padding: 2rem;
+  }
+  
+  .result-label {
+    font-size: 0.9375rem;
+    margin-bottom: 1rem;
+  }
+  
+  .result-value {
+    font-size: 2.25rem;
+  }
+  
+  .result-unit {
+    font-size: 1.375rem;
+  }
+  
+  .calculator-card {
+    padding: 3.5rem;
+  }
+  
+  .calculator-container {
+    max-width: 1200px;
+  }
+  
+  .input-label {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .number-input {
+    font-size: 1.625rem;
+    padding: 1.375rem;
+  }
+  
+  .unit-select {
+    font-size: 1.0625rem;
+    padding: 1.375rem 1.125rem;
+    min-width: 150px;
+    max-width: 200px;
+  }
+  
+  .action-buttons {
+    gap: 1.25rem;
+  }
+  
+  .btn {
+    padding: 1.25rem 3rem;
+    font-size: 1.125rem;
+  }
+  
+  .result-section {
+    margin-top: 3.5rem;
+    padding-top: 3.5rem;
+  }
+  
+  .result-header {
+    margin-bottom: 3rem;
+  }
+  
+  .result-badge {
+    font-size: 1.25rem;
+    padding: 1rem 2.5rem;
+  }
+  
+  .info-card {
+    padding: 2.5rem;
+  }
+  
+  .info-item {
+    gap: 0.75rem;
+  }
+  
+  .info-label {
+    font-size: 0.9375rem;
+  }
+  
+  .info-value {
+    font-size: 1.0625rem;
+  }
+}
+
+.result-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.result-value-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.result-value {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  line-height: 1;
+}
+
+.result-unit {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.info-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-light);
+}
+
+.info-card {
+  background: var(--bg-secondary);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.seo-content-section {
+  margin-top: 4rem;
+}
+
+.seo-content-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.seo-heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.seo-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.seo-paragraph {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.seo-example {
+  background: var(--bg-secondary);
+  border-left: 4px solid var(--primary-color);
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.example-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.example-text {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .calculator-header {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .page-title {
+    font-size: 2.75rem;
+    letter-spacing: -1.5px;
+  }
+
+  .page-description {
+    font-size: 1.125rem;
+  }
+
+  .calculator-card {
+    padding: 2rem;
+  }
+
+  .inputs-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .input-with-unit {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .number-input {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .unit-select {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .result-display {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .result-item {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculator-header {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .title-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .page-title {
+    font-size: 2.25rem;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .page-description {
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+
+  .calculator-card {
+    padding: 1.5rem;
+  }
+
+  .inputs-grid {
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .input-label {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .number-input {
+    width: 100%;
+    min-width: 100%;
+    font-size: 1.25rem;
+    padding: 1rem;
+  }
+
+  .unit-select {
+    width: 100%;
+    min-width: 100%;
+    font-size: 0.9375rem;
+    padding: 1rem 0.875rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: auto;
+    padding: 1rem 2rem;
+  }
+
+  .result-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+
+  .result-header {
+    margin-bottom: 2rem;
+  }
+
+  .result-badge {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .result-display {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .result-item {
+    padding: 1rem;
+  }
+
+  .result-value {
+    font-size: 1.5rem;
+  }
+
+  .result-unit {
+    font-size: 1rem;
+  }
+
+  .result-label {
+    font-size: 0.875rem;
+  }
+
+  .result-value-box {
+    flex-wrap: wrap;
+  }
+
+  .info-section {
+    margin-top: 2rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+
+  .seo-content-card {
+    padding: 2rem;
+  }
+
+  .seo-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-header {
+    padding: 1.5rem 0 1.25rem;
+  }
+
+  .title-badge {
+    font-size: 0.6875rem;
+    padding: 0.375rem 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .page-title {
+    font-size: 1.875rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 0.875rem;
+  }
+
+  .page-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .calculator-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .inputs-grid {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-label {
+    font-size: 0.9375rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .number-input {
+    width: 100%;
+    min-width: 100%;
+    font-size: 1.125rem;
+    padding: 0.875rem;
+  }
+
+  .unit-select {
+    width: 100%;
+    min-width: 100%;
+    font-size: 0.875rem;
+    padding: 0.875rem 0.75rem;
+  }
+
+  .btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .result-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .result-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .result-badge {
+    font-size: 0.9375rem;
+    padding: 0.625rem 1.25rem;
+  }
+
+  .result-display {
+    gap: 1rem;
+  }
+
+  .result-item {
+    padding: 0.875rem;
+  }
+
+  .result-display {
+    gap: 0.875rem;
+  }
+
+  .result-item {
+    padding: 0.875rem;
+  }
+
+  .result-value {
+    font-size: 1.375rem;
+  }
+
+  .result-unit {
+    font-size: 0.9375rem;
+  }
+
+  .result-label {
+    font-size: 0.8125rem;
+  }
+
+  .result-value-box {
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+
+  .info-card {
+    padding: 1.25rem;
+  }
+
+  .info-item {
+    padding: 0.875rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .info-label {
+    font-size: 0.75rem;
+  }
+
+  .info-value {
+    font-size: 0.875rem;
+    word-break: break-word;
+  }
+
+  .seo-content-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .seo-heading {
+    font-size: 1.75rem;
+  }
+
+  .seo-paragraph {
+    font-size: 0.9375rem;
+  }
+
+  .example-heading {
+    font-size: 1.25rem;
+  }
+
+  .example-text {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .page-title {
+    font-size: 1.75rem;
+  }
+
+  .page-description {
+    font-size: 0.9375rem;
+  }
+
+  .calculator-card {
+    padding: 1.25rem 0.875rem;
+  }
+
+  .number-input {
+    font-size: 1rem;
+  }
+
+  .result-value {
+    font-size: 1.25rem;
+  }
+}
+</style>
+

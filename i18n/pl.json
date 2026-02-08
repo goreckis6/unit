@@ -7289,6 +7289,109 @@
         }
       }
     },
+    "armyBodyFat": {
+      "title": "Kalkulator Tkanki Tłuszczowej Armii USA",
+      "description": "Oblicz procent tkanki tłuszczowej według oficjalnej metody US Army (AR 600-9). Obsługuje zwolnienie ACFT 2026 dla żołnierzy z wynikiem 540+.",
+      "gender": "Płeć",
+      "male": "Mężczyzna",
+      "female": "Kobieta",
+      "age": "Wiek",
+      "years": "lat",
+      "height": "Wzrost",
+      "inches": "cale",
+      "weight": "Waga",
+      "lbs": "funty",
+      "neckCircumference": "Obwód szyi",
+      "neckHint": "Zmierz tuż poniżej krtani (jabłko Adama), zaokrąglając do najbliższego 0,25\"",
+      "waistCircumference": "Obwód talii",
+      "waistHintMale": "Zmierz na wysokości pępka, zaokrąglając do najbliższego 0,25\"",
+      "waistHintFemale": "Zmierz w najwęższym miejscu, zaokrąglając do najbliższego 0,25\"",
+      "hipsCircumference": "Obwód bioder",
+      "hipsHint": "Zmierz w najszerszym miejscu pośladków, zaokrąglając do najbliższego 0,25\"",
+      "acftExemption": "Wynik ACFT 540+ (z 80+ w każdej próbie)",
+      "acftHint": "Żołnierze z wynikiem 540 lub wyższym w ACFT i minimum 80 punktami w każdej próbie są zwolnieni z testu tkanki tłuszczowej według AR 600-9",
+      "calculate": "Oblicz",
+      "reset": "Resetuj",
+      "result": "Wynik",
+      "bodyFatPercentage": "Procent tkanki tłuszczowej",
+      "maxAllowable": "Maksymalne dopuszczalne",
+      "status": "Status",
+      "pass": "ZALICZONY",
+      "fail": "NIEZALICZONY",
+      "exempt": "ZWOLNIONY",
+      "exemptMessage": "Jesteś zwolniony z testu tkanki tłuszczowej na podstawie wyniku ACFT 540+ z minimum 80 punktami w każdej próbie.",
+      "bmi": "BMI (Wskaźnik masy ciała)",
+      "poundsToLose": "Przybliżona liczba funtów do zrzucenia",
+      "calculationDetails": "Szczegóły obliczeń",
+      "formula": "Wzór tkanki tłuszczowej armii USA:",
+      "basedOnAR6009": "Na podstawie Army Regulation 600-9 (Program Składu Ciała)",
+      "enterValues": "Wprowadź wszystkie wymagane wartości, aby zobaczyć wynik",
+      "clickCalculate": "Kliknij Oblicz, aby zobaczyć wynik",
+      "seo": {
+        "title": "Kalkulator Tkanki Tłuszczowej Armii USA 2026 – Oficjalny test taśmowy AR 600-9 ze zwolnieniem ACFT",
+        "description": "Darmowy kalkulator tkanki tłuszczowej armii USA według oficjalnej metody tape test AR 600-9. Oblicz procent tkanki tłuszczowej dla mężczyzn i kobiet z pomiarami szyi, talii i bioder. Zawiera zwolnienie ACFT 2026 dla wyniku 540+ i maksymalne dopuszczalne normy według wieku. Natychmiastowe wyniki ze statusem zaliczone/niezaliczone.",
+        "keywords": "kalkulator tkanki tłuszczowej armii, kalkulator tape test armii, kalkulator ar 600-9, kalkulator tkanki tłuszczowej wojskowy, kalkulator składu ciała armii, zwolnienie acft tkanka tłuszczowa, kalkulator bf% armii, tkanka tłuszczowa us army, normy wagowe armii",
+        "content": {
+          "heading": "Jak używać kalkulatora tkanki tłuszczowej armii USA (AR 600-9)",
+          "paragraph1": "Kalkulator tkanki tłuszczowej US Army wykorzystuje oficjalną metodę opartą na obwodach ciała zgodnie z Army Regulation 600-9 (AR 600-9), znanym również jako Army Body Composition Program. To rozporządzenie określa standardy składu ciała, które wszyscy żołnierze muszą spełniać, aby pozostać w zgodności z wymaganiami fitness armii. Test taśmowy mierzy procent tkanki tłuszczowej przy użyciu wzrostu i określonych pomiarów obwodu ciała, zapewniając praktyczną alternatywę dla bardziej złożonych metod oceny składu ciała, takich jak ważenie hydrostatyczne czy skanowanie DEXA.",
+          "paragraph2": "Aby użyć kalkulatora tkanki tłuszczowej armii, najpierw wybierz płeć (mężczyzna lub kobieta), ponieważ wzory i punkty pomiarowe znacznie różnią się między nimi. Wprowadź swój wiek (wymagany do określenia maksymalnego dopuszczalnego procentu tkanki tłuszczowej), wzrost w calach (zaokrąglony do najbliższego 0,25 cala) i wagę w funtach. Następnie zmierz i wprowadź obwód szyi (mierzony tuż poniżej krtani/jabłka Adama) i obwód talii. U mężczyzn talia jest mierzona na wysokości pępka, podczas gdy u kobiet w najwęższym miejscu. Kobiety muszą również wprowadzić obwód bioder, mierzony w najszerszym miejscu pośladków. Wszystkie pomiary obwodu powinny być zaokrąglone do najbliższego 0,25 cala.",
+          "paragraph3": "Armia używa specyficznych dla płci wzorów logarytmicznych do obliczania procentu tkanki tłuszczowej z tych pomiarów. Dla mężczyzn: Tkanka tłuszczowa % = 86,010 × log₁₀(talia - szyja) - 70,041 × log₁₀(wzrost) + 36,76. Dla kobiet: Tkanka tłuszczowa % = 163,205 × log₁₀(talia + biodra - szyja) - 97,684 × log₁₀(wzrost) - 78,387. Te wzory zostały zatwierdzone przez armię i są oficjalnymi metodami używanymi podczas ocen Height and Weight (H&W) i kontroli ABCP.",
+          "paragraph4": "Po wprowadzeniu wszystkich wymaganych pomiarów i kliknięciu Oblicz, kalkulator wyświetla procent tkanki tłuszczowej, maksymalny dopuszczalny procent dla wieku i płci oraz wyraźny status zaliczony/niezaliczony. Jeśli przekraczasz normy, kalkulator szacuje również przybliżoną liczbę funtów, które musisz zrzucić, aby osiągnąć maksymalny dopuszczalny procent tkanki tłuszczowej. To pomaga żołnierzom ustalić realistyczne cele utraty wagi i śledzić postępy w kierunku spełnienia norm składu ciała armii.",
+          "exampleHeading": "Przykład: Obliczenie tkanki tłuszczowej dla żołnierza mężczyzny",
+          "exampleText": "25-letni żołnierz mężczyzna ma 70 cali wzrostu, waży 180 funtów, z obwodem szyi 15 cali i obwodem talii 32 cale. Używając wzoru dla mężczyzn: 86,010 × log₁₀(32 - 15) - 70,041 × log₁₀(70) + 36,76 = 86,010 × log₁₀(17) - 70,041 × log₁₀(70) + 36,76 ≈ 86,010 × 1,2304 - 70,041 × 1,8451 + 36,76 ≈ 105,85 - 129,22 + 36,76 ≈ 13,4% tkanki tłuszczowej. Ponieważ maksymalne dopuszczalne dla mężczyzn w wieku 21-27 lat wynosi 22%, ten żołnierz spełnia normy składu ciała.",
+          "standardsHeading": "Normy tkanki tłuszczowej armii USA według wieku i płci (AR 600-9)",
+          "standardsParagraph": "Armia ustala maksymalne dopuszczalne procenty tkanki tłuszczowej na podstawie wieku i płci. Dla mężczyzn: 17-20 lat = 20%, 21-27 lat = 22%, 28-39 lat = 24%, 40+ lat = 26%. Dla kobiet: 17-20 lat = 30%, 21-27 lat = 32%, 28-39 lat = 34%, 40+ lat = 36%. Te normy są częścią holistycznego podejścia armii do sprawności i gotowości żołnierzy. Żołnierze przekraczający te normy mogą zostać zapisani do Army Body Composition Program (ABCP) i muszą pracować nad spełnieniem norm lub stanąć w obliczu potencjalnej separacji ze służby.",
+          "acftHeading": "Zwolnienie z testu tkanki tłuszczowej ACFT 2026 (wynik 540+)",
+          "acftParagraph": "Od 2026 roku żołnierze, którzy osiągną wynik 540 lub wyższy w Army Combat Fitness Test (ACFT), z minimum 80 punktami w każdej z sześciu prób, są zwolnieni z testowania tkanki tłuszczowej według AR 600-9. To zwolnienie uznaje, że żołnierze wykazujący wyjątkową sprawność fizyczną we wszystkich domenach fitness bojowego (siła mięśniowa, wytrzymałość, moc, prędkość, zwinność i wydolność aerobowa) spełniają normy gotowości armii niezależnie od składu ciała. Aby ubiegać się o to zwolnienie w kalkulatorze, zaznacz pole \"Wynik ACFT 540+\". Kalkulator wyświetli wówczas status zwolnienia i BMI bez przeprowadzania obliczeń tape test."
+        },
+        "faq": {
+          "heading": "Często zadawane pytania",
+          "items": [
+            {
+              "question": "Co to jest kalkulator tkanki tłuszczowej armii?",
+              "answer": "Kalkulator tkanki tłuszczowej armii używa oficjalnej metody tape test opartej na obwodach z Army Regulation 600-9 (AR 600-9) do szacowania procentu tkanki tłuszczowej. Wykorzystuje wzrost, wagę i określone pomiary obwodu ciała (szyja, talia i biodra dla kobiet) do obliczania procentu tkanki tłuszczowej przy użyciu zatwierdzonych wzorów logarytmicznych. To ta sama metoda używana przez US Army podczas oficjalnych ocen Height and Weight."
+            },
+            {
+              "question": "Jak dokładny jest test taśmowy armii?",
+              "answer": "Test taśmowy armii jest dość dokładny dla większości żołnierzy, z błędem standardowym około ±3-4% w porównaniu z bardziej zaawansowanymi metodami, takimi jak skanowanie DEXA czy ważenie hydrostatyczne. Jednak dokładność może się różnić w zależności od indywidualnego składu ciała, techniki pomiaru i typu budowy ciała. Prawidłowa technika pomiaru jest kluczowa – pomiary powinny być wykonywane dokładnie w lokalizacjach określonych w AR 600-9 i zaokrąglone do najbliższego 0,25 cala."
+            },
+            {
+              "question": "Jakie są normy tkanki tłuszczowej armii na rok 2026?",
+              "answer": "Normy tkanki tłuszczowej armii różnią się według wieku i płci. Mężczyźni: 17-20 lat (20%), 21-27 lat (22%), 28-39 lat (24%), 40+ lat (26%). Kobiety: 17-20 lat (30%), 21-27 lat (32%), 28-39 lat (34%), 40+ lat (36%). To maksymalne dopuszczalne procenty według AR 600-9. Żołnierze przekraczający te normy mogą zostać zapisani do Army Body Composition Program (ABCP)."
+            },
+            {
+              "question": "Jak mierzyć talię do testu taśmowego armii?",
+              "answer": "Dla mężczyzn: Zmierz obwód talii na wysokości pępka, z taśmą równoległą do podłogi. Upewnij się, że taśma jest dopasowana, ale nie uciska skóry. Dla kobiet: Zmierz obwód talii w najwęższym miejscu tułowia, zwykle między klatką piersiową a pępkiem. Zaokrąglij wszystkie pomiary do najbliższego 0,25 cala. Wykonaj pomiar na końcu normalnego oddechu, nie wstrzymując oddechu ani nie wypuszczając go na siłę."
+            },
+            {
+              "question": "Co to jest zwolnienie z testu tkanki tłuszczowej ACFT 540+?",
+              "answer": "Od 2026 roku żołnierze z wynikiem 540 lub wyższym w Army Combat Fitness Test (ACFT), z minimum 80 punktami w każdej z sześciu prób, są zwolnieni z testowania tkanki tłuszczowej według AR 600-9. To zwolnienie uznaje, że wyjątkowa sprawność fizyczna we wszystkich domenach fitness bojowego spełnia normy gotowości armii niezależnie od składu ciała. Aby się zakwalifikować, musisz osiągnąć 80+ punktów w: Martwym ciągu 3-RM, Rzucie mocowym stojąc, Pompkach z uwolnieniem rąk, Sprincie-przeciąganiu-noszeniu, Desce i Biegu na 2 mile."
+            },
+            {
+              "question": "Co się dzieje, jeśli nie zdam testu tkanki tłuszczowej armii?",
+              "answer": "Jeśli przekroczysz maksymalny dopuszczalny procent tkanki tłuszczowej, zostaniesz oflagowany i zapisany do Army Body Composition Program (ABCP). Dostaniesz czas na spełnienie norm poprzez dietę, ćwiczenia i doradztwo. Jeśli nie poczynisz postępów lub nie spełnisz norm w wymaganym czasie (zazwyczaj 6 miesięcy), możesz stanąć w obliczu administracyjnej separacji z armii. Jednak żołnierze, którzy zdadzą ACFT z wynikiem 540+ (z 80+ w każdej próbie) są zwolnieni z norm tkanki tłuszczowej."
+            },
+            {
+              "question": "Czy mogę użyć urządzenia BIA (impedancja bioelektryczna) zamiast testu taśmowego?",
+              "answer": "Od 2026 roku, jeśli nie zdasz testu taśmowego, możesz otrzymać uzupełniającą ocenę przy użyciu urządzeń analizy impedancji bioelektrycznej (BIA), takich jak InBody lub BodPod, jako alternatywną metodę. To niedawna aktualizacja AR 600-9, która zapewnia żołnierzom, którzy nie zdali testu taśmowego, dodatkową możliwość wykazania zgodności przy użyciu bardziej zaawansowanej technologii składu ciała. Jednak test taśmowy pozostaje główną metodą, a BIA jest używane tylko jako ocena uzupełniająca."
+            },
+            {
+              "question": "Czy ten kalkulator tkanki tłuszczowej armii jest oficjalny?",
+              "answer": "Ten kalkulator używa oficjalnych wzorów z Army Regulation 600-9 i dostarcza dokładne szacunki na podstawie wprowadzonych pomiarów. Jednak dla oficjalnych celów armii musisz być zmierzony i oceniony przez wykwalifikowany personel zgodnie z procedurami określonymi w AR 600-9. Ten kalkulator jest przeznaczony do osobistego szacowania, śledzenia postępów i przygotowania do oficjalnych ocen, a nie jako oficjalny rekord armii."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Powiązane kalkulatory",
+          "bmi": "Kalkulator BMI",
+          "bmiDesc": "Oblicz wskaźnik masy ciała (BMI) i określ kategorię wagową",
+          "bodyFat": "Kalkulator tkanki tłuszczowej",
+          "bodyFatDesc": "Oszacuj procent tkanki tłuszczowej używając wielu metod (Navy, Jackson-Pollock)",
+          "calorie": "Kalkulator kalorii",
+          "calorieDesc": "Oblicz dzienne zapotrzebowanie kaloryczne na podstawie poziomu aktywności i celów wagowych"
+        }
+      }
+    },
     "pigLatin": {
       "title": "Tłumacz Pig Latin",
       "titleBadge": "Tekst i język",

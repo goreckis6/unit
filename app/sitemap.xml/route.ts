@@ -34,6 +34,8 @@ export async function GET() {
     '/calculators/math/long-division',
     '/calculators/math/ratio',
     '/calculators/math/percentage-increase',
+    '/calculators/health',
+    '/calculators/health/army-body-fat-calculator',
     '/calculators/others/text-to-binary',
     '/calculators/conversion/days-to-weeks',
     '/calculators/others/ascii-converter',

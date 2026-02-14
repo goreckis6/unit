@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const tSeo = await getTranslations({ locale, namespace: 'calculators.constructionCalculators.seoMeta' });
   const path = '/calculators/construction';
   const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
-  const title = `${tSeo('title')} | ${tCommon('siteName')}`;
+  const title = tSeo('title');
 
   return {
     title,

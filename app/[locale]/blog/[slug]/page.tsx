@@ -23,7 +23,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'common' });
   const path = `/blog/${slug}`;
   const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
-  const title = `${post.title} | ${t('siteName')}`;
+  const title = post.title;
   return {
     title,
     description: post.excerpt,

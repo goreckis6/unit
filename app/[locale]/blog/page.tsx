@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: 'common' });
   const path = '/blog';
   const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
-  const title = `${t('blog')} | ${t('siteName')}`;
+  const title = t('blog');
   return {
     title,
     description: t('blogDescription'),

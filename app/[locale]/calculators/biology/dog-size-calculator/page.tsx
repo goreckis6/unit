@@ -115,8 +115,8 @@ export default async function DogSizePage({ params }: { params: Promise<{ locale
           <h2 className="related-heading">{tRelated('heading')}</h2>
           <div className="related-grid">
             <Link href="/calculators/biology/dog-raisin-toxicity" className="related-card">
-              <h3 className="related-title">{tRelated('dogRaisinToxicity')}</h3>
-              <p className="related-desc">{tRelated('dogRaisinToxicityDesc')}</p>
+              <h3 className="related-title">{tRelated('dogRaisin')}</h3>
+              <p className="related-desc">{tRelated('dogRaisinDesc')}</p>
             </Link>
             <Link href="/calculators/biology/cat-pregnancy-calculator" className="related-card">
               <h3 className="related-title">{tRelated('catPregnancy')}</h3>

@@ -151,6 +151,10 @@ jobs:
               }
             fi
             
+            # Stop old app (unitconverterhub) to free port 3000
+            pm2 stop unitconverterhub 2>/dev/null || true
+            pm2 delete unitconverterhub 2>/dev/null || true
+            
             # Stop existing PM2 process if running
             pm2 stop "$SERVICE_NAME" 2>/dev/null || true
             pm2 delete "$SERVICE_NAME" 2>/dev/null || true
@@ -190,7 +194,7 @@ jobs:
             
             # Check if port 3000 is listening
             echo "📊 Checking if port 3000 is listening..."
-            sudo netstat -tlnp | grep :3000 || sudo ss -tlnp | grep :3000 || echo "⚠️  Port 3000 not found"
+            (sudo ss -tlnp 2>/dev/null || ss -tlnp 2>/dev/null) | grep -q :3000 && echo "✅ Port 3000 in use" || echo "⚠️  Port 3000 not found"
             
             # Test if app responds
             echo "📊 Testing app response..."

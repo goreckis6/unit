@@ -1,3 +1,8 @@
+# Redirect old domain to new domain (301 permanent)
+unitconverterhub.com www.unitconverterhub.com {
+  redir https://calculinohub.com{uri} permanent
+}
+
 calculinohub.com www.calculinohub.com {
   encode gzip zstd
 
@@ -12,3 +17,4 @@ calculinohub.com www.calculinohub.com {
     Referrer-Policy "strict-origin-when-cross-origin"
   }
 }
+

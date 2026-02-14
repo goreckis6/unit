@@ -293,7 +293,7 @@ export function Header() {
         <div className="header-content">
           <Link href="/" className="logo" onClick={closeMenu}>
             <span className="logo-icon">
-              <img src="/logo.png" alt={t('siteName')} className="logo-image" />
+              <img src="/logo_site.png" alt={t('siteName')} className="logo-image" />
             </span>
           </Link>
           
@@ -331,7 +331,7 @@ export function Header() {
           <div className="mobile-nav-header">
             <Link href="/" className="mobile-logo" onClick={closeMenu}>
               <span className="logo-icon">
-                <img src="/logo.png" alt={t('siteName')} className="logo-image" />
+                <img src="/logo_site.png" alt={t('siteName')} className="logo-image" />
               </span>
             </Link>
             <button

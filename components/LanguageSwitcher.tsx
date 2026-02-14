@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useLocale } from 'next-intl';
-import { usePathname } from '@/i18n/routing';
+import { usePathname, useRouter } from '@/i18n/routing';
 import { routing } from '@/i18n/routing';
 
 const FLAGS: Record<string, JSX.Element> = {
@@ -233,6 +233,7 @@ const LANGUAGE_NAMES: Record<string, string> = {
 export function LanguageSwitcher() {
   const locale = useLocale();
   const pathname = usePathname();
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -248,22 +249,23 @@ export function LanguageSwitcher() {
   }, []);
 
   const handleLanguageChange = (newLocale: string) => {
-    try {
-      // pathname from usePathname is always without locale prefix
-      const basePath = (pathname || '/').replace(/^\/+/, '/') || '/';
-      const pathWithLeadingSlash = basePath.startsWith('/') ? basePath : `/${basePath}`;
-      
-      // When switching TO default locale (en): use /en/ prefix first so middleware
-      // can update the locale cookie, then it redirects to unprefixed URL
-      // When switching to other locales: use /{locale}/ prefix
-      const newUrl = `/${newLocale}${pathWithLeadingSlash}`;
-      
-      window.location.href = newUrl;
-    } catch (error) {
-      console.error('Language switch error:', error);
-      window.location.reload();
+    if (newLocale === locale) {
+      setIsOpen(false);
+      return;
     }
     setIsOpen(false);
+    const basePath = (pathname || '/').replace(/^\/+/, '/') || '/';
+    const nextPath = basePath.startsWith('/') ? basePath : `/${basePath}`;
+    try {
+      // Client-side navigation for instant language switch (no full page reload)
+      router.replace(nextPath, { locale: newLocale });
+    } catch (error) {
+      console.error('Language switch error:', error);
+      const newUrl = routing.defaultLocale === newLocale
+        ? nextPath
+        : `/${newLocale}${nextPath}`;
+      window.location.href = newUrl;
+    }
   };
 
   const currentFlag = FLAGS[locale] || FLAGS.en;

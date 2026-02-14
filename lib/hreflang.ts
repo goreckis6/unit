@@ -1,6 +1,6 @@
 import { routing } from '@/i18n/routing';
 
-const BASE_URL = 'https://unitconverterhub.com';
+const BASE_URL = 'https://calculinohub.com';
 
 /**
  * Generates hreflang language alternates for a given path.
@@ -9,7 +9,7 @@ const BASE_URL = 'https://unitconverterhub.com';
  *
  * @param path - Path without locale prefix. Use '' for homepage; use a leading slash
  *   for all other pages (e.g. '/calculators/math'). Passing '/' for homepage would
- *   yield double slashes (e.g. https://unitconverterhub.com//).
+ *   yield double slashes (e.g. https://calculinohub.com//).
  * @returns Record<locale | 'x-default', absolute URL>
  */
 export function generateHreflangUrls(path: string): Record<string, string> {

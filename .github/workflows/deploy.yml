@@ -45,8 +45,8 @@ jobs:
           script: |
             set -eo pipefail
             
-            APP_DIR="/var/www/unitconverterhub"
-            SERVICE_NAME="unitconverterhub"
+            APP_DIR="/var/www/calculinohub"
+            SERVICE_NAME="calculinohub"
             
             # Create app directory if it doesn't exist
             sudo mkdir -p "$APP_DIR"
@@ -64,7 +64,7 @@ jobs:
           username: ${{ secrets.FRONTEND_VPS_USERNAME }}
           key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
           source: ".next/standalone,.next/static,public,ecosystem.config.js"
-          target: "/var/www/unitconverterhub"
+          target: "/var/www/calculinohub"
           strip_components: 0
 
       - name: Copy Caddyfile to server
@@ -86,8 +86,8 @@ jobs:
           script: |
             set -eo pipefail
             
-            APP_DIR="/var/www/unitconverterhub"
-            SERVICE_NAME="unitconverterhub"
+            APP_DIR="/var/www/calculinohub"
+            SERVICE_NAME="calculinohub"
             
             # Ensure proper permissions
             sudo chown -R ${{ secrets.FRONTEND_VPS_USERNAME }}:${{ secrets.FRONTEND_VPS_USERNAME }} "$APP_DIR"

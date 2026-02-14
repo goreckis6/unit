@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'unitconverterhub',
+      name: 'calculinohub',
       script: './.next/standalone/server.js',
       cwd: process.cwd(),
       instances: 1,

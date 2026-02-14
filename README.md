@@ -1,4 +1,4 @@
-# Unit Converter Hub
+# Calculino Hub
 
 Next.js application with blog and calculators, supporting 25 languages.
 
@@ -31,7 +31,7 @@ pnpm start
 ## Deployment
 
 1. **DNS Configuration**
-   - Point `unitconverterhub.com` and `www.unitconverterhub.com` to your VPS IP
+   - Point `calculinohub.com` and `www.calculinohub.com` to your VPS IP
 
 2. **Server Setup**
    - Install Node.js 20+
@@ -74,13 +74,13 @@ scripts/               # Build scripts
 pm2 status
 
 # View logs
-pm2 logs unitconverterhub
+pm2 logs calculinohub
 
 # Restart app
-pm2 restart unitconverterhub
+pm2 restart calculinohub
 
 # Stop app
-pm2 stop unitconverterhub
+pm2 stop calculinohub
 
 # Monitor
 pm2 monit

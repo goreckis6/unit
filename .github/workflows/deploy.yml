@@ -1,0 +1,211 @@
+name: Deploy Next.js to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to VPS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.15.0
+          run_install: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Clean Next.js cache
+        run: rm -rf .next
+
+      - name: Build Next.js
+        run: pnpm build
+        env:
+          NODE_ENV: production
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.FRONTEND_VPS_HOST }}
+          username: ${{ secrets.FRONTEND_VPS_USERNAME }}
+          key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          script: |
+            set -eo pipefail
+            
+            APP_DIR="/var/www/calculinohub"
+            SERVICE_NAME="calculinohub"
+            
+            # Create app directory if it doesn't exist
+            sudo mkdir -p "$APP_DIR"
+            sudo chown -R ${{ secrets.FRONTEND_VPS_USERNAME }}:${{ secrets.FRONTEND_VPS_USERNAME }} "$APP_DIR"
+            
+            # Stop existing service
+            sudo systemctl stop "$SERVICE_NAME" 2>/dev/null || true
+            
+            echo "📦 Preparing deployment..."
+            
+      - name: Copy standalone build to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.FRONTEND_VPS_HOST }}
+          username: ${{ secrets.FRONTEND_VPS_USERNAME }}
+          key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          source: ".next/standalone,.next/static,public,ecosystem.config.js"
+          target: "/var/www/calculinohub"
+          strip_components: 0
+
+      - name: Copy Caddyfile to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.FRONTEND_VPS_HOST }}
+          username: ${{ secrets.FRONTEND_VPS_USERNAME }}
+          key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          source: "Caddyfile"
+          target: "/tmp"
+          strip_components: 0
+
+      - name: Setup systemd service and restart
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.FRONTEND_VPS_HOST }}
+          username: ${{ secrets.FRONTEND_VPS_USERNAME }}
+          key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          script: |
+            set -eo pipefail
+            
+            APP_DIR="/var/www/calculinohub"
+            SERVICE_NAME="calculinohub"
+            
+            # Ensure proper permissions
+            sudo chown -R ${{ secrets.FRONTEND_VPS_USERNAME }}:${{ secrets.FRONTEND_VPS_USERNAME }} "$APP_DIR"
+            
+            # Verify files were copied
+            if [ ! -f "$APP_DIR/.next/standalone/server.js" ]; then
+              echo "❌ Error: server.js not found at $APP_DIR/.next/standalone/server.js"
+              echo "📁 Checking directory structure:"
+              ls -la "$APP_DIR/.next/standalone/" || true
+              exit 1
+            fi
+            
+            # Ensure .next/static symlink exists (created during build)
+            if [ ! -L "$APP_DIR/.next/standalone/.next/static" ] && [ -d "$APP_DIR/.next/static" ]; then
+              sudo ln -sf "$APP_DIR/.next/static" "$APP_DIR/.next/standalone/.next/static" || true
+            fi
+            
+            # Copy Caddyfile to /etc/caddy/Caddyfile
+            if [ -f /tmp/Caddyfile ]; then
+              # Ensure /etc/caddy directory exists
+              sudo mkdir -p /etc/caddy
+              sudo cp /tmp/Caddyfile /etc/caddy/Caddyfile
+              sudo chown root:root /etc/caddy/Caddyfile
+              sudo chmod 644 /etc/caddy/Caddyfile
+              
+              # Try to reload Caddy if available
+              if command -v caddy >/dev/null 2>&1; then
+                sudo caddy reload --config /etc/caddy/Caddyfile || sudo caddy reload || true
+                echo "✅ Caddyfile updated and Caddy reloaded"
+              elif [ -f /usr/bin/caddy ]; then
+                sudo /usr/bin/caddy reload --config /etc/caddy/Caddyfile || sudo /usr/bin/caddy reload || true
+                echo "✅ Caddyfile updated and Caddy reloaded"
+              elif [ -f /usr/local/bin/caddy ]; then
+                sudo /usr/local/bin/caddy reload --config /etc/caddy/Caddyfile || sudo /usr/local/bin/caddy reload || true
+                echo "✅ Caddyfile updated and Caddy reloaded"
+              else
+                echo "⚠️  Caddyfile copied but Caddy not found - please install Caddy or reload manually"
+              fi
+            fi
+            
+            # Copy ecosystem.config.js to server
+            if [ -f "$APP_DIR/ecosystem.config.js" ]; then
+              echo "✅ ecosystem.config.js found"
+            else
+              echo "⚠️  ecosystem.config.js not found in app directory"
+            fi
+            
+            # Create log directory in app folder
+            mkdir -p "$APP_DIR/logs"
+            chown -R ${{ secrets.FRONTEND_VPS_USERNAME }}:${{ secrets.FRONTEND_VPS_USERNAME }} "$APP_DIR/logs"
+            
+            # Install PM2 globally if not installed
+            if ! command -v pm2 >/dev/null 2>&1; then
+              echo "📦 Installing PM2..."
+              sudo npm install -g pm2 || {
+                echo "⚠️  Failed to install PM2 via npm, trying alternative method..."
+                curl -fsSL https://get.pm2.io/install.sh | sh - || {
+                  echo "⚠️  Alternative PM2 install failed, trying direct npm..."
+                  sudo npm install -g pm2@latest
+                }
+              }
+            fi
+            
+            # Stop old app (unitconverterhub) to free port 3000
+            pm2 stop unitconverterhub 2>/dev/null || true
+            pm2 delete unitconverterhub 2>/dev/null || true
+            
+            # Stop existing PM2 process if running
+            pm2 stop "$SERVICE_NAME" 2>/dev/null || true
+            pm2 delete "$SERVICE_NAME" 2>/dev/null || true
+            
+            # Start application with PM2
+            cd "$APP_DIR"
+            if [ -f ecosystem.config.js ]; then
+              pm2 start ecosystem.config.js
+            else
+              # Fallback: start without config file
+              pm2 start .next/standalone/server.js \
+                --name "$SERVICE_NAME" \
+                --cwd "$APP_DIR" \
+                --env NODE_ENV=production \
+                --env PORT=3000 \
+                --error "$APP_DIR/logs/error.log" \
+                --output "$APP_DIR/logs/out.log" \
+                --log-date-format "YYYY-MM-DD HH:mm:ss Z" \
+                --merge-logs \
+                --autorestart \
+                --max-restarts 10 \
+                --min-uptime 10s \
+                --max-memory-restart 1G
+            fi
+            
+            # Save PM2 process list
+            pm2 save
+            
+            # Setup PM2 to start on boot
+            pm2 startup systemd -u ${{ secrets.FRONTEND_VPS_USERNAME }} --hp /home/${{ secrets.FRONTEND_VPS_USERNAME }} || true
+            
+            # Verify PM2 process is running
+            sleep 3
+            echo "📊 Checking PM2 status..."
+            pm2 status || true
+            pm2 info "$SERVICE_NAME" || true
+            
+            # Check if port 3000 is listening
+            echo "📊 Checking if port 3000 is listening..."
+            (sudo ss -tlnp 2>/dev/null || ss -tlnp 2>/dev/null) | grep -q :3000 && echo "✅ Port 3000 in use" || echo "⚠️  Port 3000 not found"
+            
+            # Test if app responds
+            echo "📊 Testing app response..."
+            curl -f http://localhost:3000 >/dev/null 2>&1 && echo "✅ App responds on localhost:3000" || echo "❌ App does not respond on localhost:3000"
+            
+            # Check PM2 logs if failed
+            if ! pm2 list | grep -q "$SERVICE_NAME.*online"; then
+              echo "❌ PM2 process is not running. Last 20 lines of logs:"
+              pm2 logs "$SERVICE_NAME" --lines 20 --nostream || true
+              exit 1
+            fi
+            
+            echo "✅ Next.js app deployed and running with PM2!"
+            echo "✅ Caddy configuration updated"

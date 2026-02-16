@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { routing } from '@/i18n/routing';
-import { getBlogPosts } from '@/lib/blog';
 import { BASE_URL } from '@/lib/hreflang';
 
 export async function GET() {
@@ -108,11 +107,9 @@ export async function GET() {
     '/calculators/electric/kva-to-va',
     '/calculators/math/percentage',
     '/calculators/math/convolution',
-    '/blog',
   ];
 
   const urls: string[] = [];
-  const blogPosts = await getBlogPosts();
 
   const getUrlForLocale = (locale: string, route: string) => {
     const localePrefix = locale === 'en' ? '' : `/${locale}`;
@@ -146,9 +143,6 @@ export async function GET() {
       } else if (route.includes('/calculators/')) {
         priority = '0.9';
         changefreq = 'weekly';
-      } else if (route === '/blog') {
-        priority = '0.7';
-        changefreq = 'daily';
       }
 
       urls.push(`  <url>
@@ -157,20 +151,6 @@ ${getAlternateLinks(route)}
     <lastmod>${currentDate}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
-  </url>`);
-    });
-
-    // Add blog posts
-    blogPosts.forEach((post) => {
-      const route = `/blog/${post.slug}`;
-      const url = getUrlForLocale(locale, route);
-      const lastmod = post.date ? new Date(post.date).toISOString() : currentDate;
-      urls.push(`  <url>
-    <loc>${url}</loc>
-${getAlternateLinks(route)}
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>`);
     });
   });

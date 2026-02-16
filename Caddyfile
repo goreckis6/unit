@@ -1,1 +1,19 @@
-e
+# Redirect old domain to new domain (301 permanent)
+unitconverterhub.com www.unitconverterhub.com {
+  redir https://calculinohub.com{uri} permanent
+}
+
+calculinohub.com www.calculinohub.com {
+  encode gzip zstd
+
+  root * /var/www/calculinohub
+
+  reverse_proxy localhost:3000
+
+  header {
+    Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options "nosniff"
+    X-Frame-Options "DENY"
+    Referrer-Policy "strict-origin-when-cross-origin"
+  }
+}

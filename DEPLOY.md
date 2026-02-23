@@ -46,6 +46,8 @@ SSH into the server and run:
 ```bash
 cd /var/www/calculinohub
 export DATABASE_URL="file:/var/www/db-calculino/dev.db"
+npm install   # install prisma, tsx, bcryptjs (needed for seed)
+npx prisma generate
 npx prisma db seed
 ```
 

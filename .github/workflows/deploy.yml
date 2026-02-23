@@ -32,6 +32,12 @@ jobs:
         run: pnpm install
         working-directory: unit
 
+      - name: Generate Prisma client
+        run: npx prisma generate
+        working-directory: unit
+        env:
+          DATABASE_URL: "file:./prisma/dev.db"
+
       - name: Clean Next.js cache
         run: rm -rf .next
         working-directory: unit
@@ -71,7 +77,7 @@ jobs:
           host: ${{ secrets.FRONTEND_VPS_HOST }}
           username: ${{ secrets.FRONTEND_VPS_USERNAME }}
           key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
-          source: "unit/.next/standalone,unit/.next/static,unit/public,unit/ecosystem.config.cjs,unit/package.json,unit/prisma"
+          source: "unit/.next/standalone,unit/.next/static,unit/public,unit/ecosystem.config.cjs,unit/package.json,unit/package-lock.json,unit/prisma.config.ts,unit/prisma"
           target: "/var/www/calculinohub"
           strip_components: 1
 
@@ -130,8 +136,10 @@ jobs:
             cd "$APP_DIR"
             export DATABASE_URL="file:$DB_PATH"
             if [ -d prisma ]; then
-              npx prisma@5 migrate deploy
-              npx prisma@5 db seed 2>/dev/null || echo "⚠️ Seed skipped (run manually if needed)"
+              npm ci 2>/dev/null || npm install 2>/dev/null || true
+              npx prisma generate
+              npx prisma migrate deploy
+              npx prisma db seed 2>/dev/null || echo "⚠️ Seed skipped (run manually if needed)"
             fi
 
             # Caddy

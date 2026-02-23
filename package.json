@@ -15,11 +15,18 @@
     "migrate:qwik:single": "node scripts/migrate-to-qwik.js"
   },
   "dependencies": {
+    "@prisma/adapter-better-sqlite3": "^7.4.0",
+    "@prisma/client": "^7.4.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.0",
     "vue": "^3.4.0",
     "vue-i18n": "^9.8.0",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
+    "better-sqlite3": "^11.0.0",
+    "prisma": "^7.4.0",
+    "tsx": "^4.19.0",
     "@builder.io/qwik": "^1.18.0",
     "@builder.io/qwik-city": "^1.18.0",
     "@builder.io/qwik-react": "^0.5.8",

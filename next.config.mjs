@@ -9,6 +9,9 @@ const withNextIntl = createNextIntlPlugin(path.resolve(__dirname, 'i18n', 'reque
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
+  experimental: {
+    webpackMemoryOptimizations: true,
+  },
   outputFileTracingRoot: __dirname,
   outputFileTracingIncludes: {
     '/*': [

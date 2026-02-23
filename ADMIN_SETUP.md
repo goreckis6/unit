@@ -57,7 +57,10 @@ npm run dev:next
 | `/twojastara/pages/new` | Create new page with translations |
 | `/twojastara/pages/[id]/edit` | Edit page |
 
-## Public Pages
+## Public Pages & Sitemap
+
+- **Published checkbox must be checked** for a page to appear on the public site and in `sitemap.xml`.
+- Pages created **locally** (localhost) stay in your local database — they do not sync to production. Create pages on the **live site** (e.g. https://calculinohub.com/twojastara) to have them on production and in the sitemap.
 
 Pages created in the admin are published at:
 

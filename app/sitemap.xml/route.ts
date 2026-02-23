@@ -27,18 +27,20 @@ export async function GET() {
 
   const urls: string[] = [];
 
-  // DB pages (admin-created, published) - added dynamically
+  // DB pages (admin-created, published) - only published pages appear in sitemap
   let dbRoutes: string[] = [];
   try {
     const pages = await prisma.page.findMany({
-      where: { published: true, category: { not: null } },
+      where: { published: true },
       select: { slug: true, category: true },
     });
     dbRoutes = pages
-      .filter((p) => p.category)
-      .map((p) => `/calculators/${p.category}/${p.slug}`);
-  } catch {
-    // ignore DB errors (e.g. during build)
+      .filter((p) => p.category?.trim())
+      .map((p) => `/calculators/${p.category!.trim()}/${p.slug}`);
+  } catch (err) {
+    if (process.env.NODE_ENV === 'development') {
+      console.error('[sitemap] Failed to fetch DB pages:', err);
+    }
   }
 
   const getUrlForLocale = (locale: string, route: string) => {

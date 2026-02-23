@@ -909,6 +909,9 @@ export default function AdminEditPage() {
         <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <input type="checkbox" checked={published} onChange={(e) => setPublished(e.target.checked)} />
           <span>Published</span>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
+            (required for sitemap and public visibility)
+          </span>
         </label>
 
         <div>

@@ -1,0 +1,61 @@
+// Prisma schema for admin-managed pages with i18n support
+// https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// For SQLite use: file:./dev.db
+// For PostgreSQL use: postgresql://user:pass@localhost:5432/db
+
+// Admin-managed pages - URL: /calculators/[category]/[slug]
+model Page {
+  id                     String   @id @default(cuid())
+  slug                   String   // e.g. adding-fractions
+  category               String   // math, electric, biology, conversion, etc. - required
+  published              Boolean  @default(false)
+  calculatorCode         String?  // TSX/JS code for calculator subpage
+  linkedCalculatorPath   String?  // e.g. math/addition - link to existing calculator
+  relatedCalculatorsMode String   @default("manual")  // manual | random | both
+  relatedCalculatorsCount Int     @default(6)        // 1–12, how many to show
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+
+  translations PageTranslation[]
+
+  @@unique([category, slug])
+}
+
+// Admin users for login
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+// Per-locale translations for pages
+model PageTranslation {
+  id                 String   @id @default(cuid())
+  pageId             String
+  locale             String   // en, pl, de, fr, es, etc.
+  title              String   // SEO title (meta, <title>)
+  displayTitle       String?  // H1 on page (e.g. "Power Set Calculator | Find All Subsets")
+  description        String?  // Short meta description
+  content            String?  // Full content (markdown or HTML)
+  relatedCalculators String?  // JSON: [{ title, description, path }] - path e.g. math/addition
+  faqItems           String?  // JSON: [{ question, answer }]
+  calculatorLabels   String?  // JSON: { "calculate": "Oblicz", "reset": "Reset", ... } - labels for Sandpack calculator
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  page Page @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@unique([pageId, locale])
+  @@index([locale])
+}

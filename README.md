@@ -1,4 +1,4 @@
-# Calculino Hub
+# CalculinoHub
 
 Next.js application with blog and calculators, supporting 25 languages.
 

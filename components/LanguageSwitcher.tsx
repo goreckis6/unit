@@ -256,15 +256,20 @@ export function LanguageSwitcher() {
     setIsOpen(false);
     const basePath = (pathname || '/').replace(/^\/+/, '/') || '/';
     const nextPath = basePath.startsWith('/') ? basePath : `/${basePath}`;
+
+    // Switching to default locale (en) with as-needed: cookie must be updated first,
+    // otherwise middleware redirects back to the previous locale
+    if (newLocale === routing.defaultLocale) {
+      document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${60 * 60 * 24 * 30}; SameSite=Lax`;
+      window.location.href = nextPath || '/';
+      return;
+    }
+
     try {
-      // Client-side navigation for instant language switch (no full page reload)
       router.replace(nextPath, { locale: newLocale });
     } catch (error) {
       console.error('Language switch error:', error);
-      const newUrl = routing.defaultLocale === newLocale
-        ? nextPath
-        : `/${newLocale}${nextPath}`;
-      window.location.href = newUrl;
+      window.location.href = `/${newLocale}${nextPath}`;
     }
   };
 

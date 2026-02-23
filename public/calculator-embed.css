@@ -1,0 +1,33 @@
+/* Minimal calculator styles for Sandpack embed */
+:root {
+  --primary-color: #6366f1;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-tertiary: #94a3b8;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; color: var(--text-primary); background: var(--bg-secondary); }
+.split-view-container { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; width: 100%; }
+@media (max-width: 768px) { .split-view-container { grid-template-columns: 1fr; } }
+.input-section { margin-bottom: 2rem; width: 100%; }
+.input-card { display: flex; flex-direction: column; width: 100%; min-width: 0; }
+.input-legend { margin-bottom: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 0.5rem; }
+.legend-text { margin: 0; font-size: 0.875rem; color: var(--text-secondary); }
+.input-label { display: block; font-weight: 700; color: var(--text-primary); font-size: 1.125rem; margin-bottom: 0.5rem; }
+.number-input { flex: 1; min-width: 0; padding: 1rem; border: 2px solid var(--border-color); border-radius: 0.875rem; font-size: 1rem; background: var(--bg-primary); }
+.number-input:focus { border-color: var(--primary-color); outline: none; }
+.action-buttons { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.btn { padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 600; border-radius: 0.75rem; cursor: pointer; min-height: 44px; min-width: 44px; }
+.btn-primary { background: var(--gradient-primary); color: white; border: none; }
+.btn-secondary { background: var(--bg-secondary); color: var(--text-primary); border: 2px solid var(--border-color); }
+.result-section { margin-top: 0; padding-top: 0; border-top: none; }
+.result-item { margin-bottom: 1rem; }
+.result-label { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0.25rem; }
+.result-value-box { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.copy-result-btn { padding: 0.5rem 0.75rem; font-size: 0.875rem; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 0.5rem; cursor: pointer; }

@@ -4,29 +4,41 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run postbuild",
+    "build": "prisma generate && next build && npm run postbuild",
     "postbuild": "node scripts/postbuild.js",
     "start": "node .next/standalone/server.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "prisma:seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
-    "next": "^14.2.0",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
-    "@next/mdx": "^14.2.0",
+    "@codesandbox/sandpack-react": "^2.20.0",
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
-    "next-intl": "^3.10.0",
+    "@next/mdx": "^14.2.0",
+    "@prisma/client": "^5.22.0",
+    "bcryptjs": "^2.4.3",
     "gray-matter": "^4.0.3",
+    "next": "^14.2.0",
+    "next-intl": "^3.10.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.11.0",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
-    "typescript": "^5.3.0",
-    "tsx": "^4.7.0"
+    "prisma": "^5.22.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
   },
-  "packageManager": "pnpm@8.15.0"
+  "packageManager": "pnpm@8.15.0",
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
 }

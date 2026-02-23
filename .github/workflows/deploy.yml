@@ -71,7 +71,7 @@ jobs:
           host: ${{ secrets.FRONTEND_VPS_HOST }}
           username: ${{ secrets.FRONTEND_VPS_USERNAME }}
           key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
-          source: "unit/.next/standalone,unit/.next/static,unit/public,unit/ecosystem.config.js,unit/package.json,unit/prisma"
+          source: "unit/.next/standalone,unit/.next/static,unit/public,unit/ecosystem.config.cjs,unit/package.json,unit/prisma"
           target: "/var/www/calculinohub"
           strip_components: 1
 
@@ -149,7 +149,7 @@ jobs:
               sudo npm install -g pm2
             fi
             cd "$APP_DIR"
-            pm2 start ecosystem.config.js --update-env
+            pm2 start ecosystem.config.cjs --update-env
             pm2 save
             pm2 startup systemd -u ${{ secrets.FRONTEND_VPS_USERNAME }} --hp /home/${{ secrets.FRONTEND_VPS_USERNAME }} 2>/dev/null || true
 

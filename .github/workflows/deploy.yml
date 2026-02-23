@@ -84,8 +84,10 @@ jobs:
             export DATABASE_URL="file:$DB_PATH"
             if [ -f /tmp/deploy-env.bak ]; then
               cp /tmp/deploy-env.bak "$ENV_FILE"
-              grep -v '^DATABASE_URL=' "$ENV_FILE" > "${ENV_FILE}.tmp" 2>/dev/null || true
+              grep -v '^DATABASE_URL=\|^ADMIN_SESSION_SECRET=\|^OLLAMA_API_KEY=' "$ENV_FILE" > "${ENV_FILE}.tmp" 2>/dev/null || true
               echo 'DATABASE_URL="file:'"$DB_PATH"'"' >> "${ENV_FILE}.tmp"
+              [ -n "${{ secrets.ADMIN_SESSION_SECRET }}" ] && echo 'ADMIN_SESSION_SECRET='"${{ secrets.ADMIN_SESSION_SECRET }}" >> "${ENV_FILE}.tmp"
+              [ -n "${{ secrets.OLLAMA_API_KEY }}" ] && echo 'OLLAMA_API_KEY='"${{ secrets.OLLAMA_API_KEY }}" >> "${ENV_FILE}.tmp"
               mv "${ENV_FILE}.tmp" "$ENV_FILE"
               rm -f /tmp/deploy-env.bak
             else

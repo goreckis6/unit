@@ -105,6 +105,18 @@ jobs:
             rm -rf "$APP_DIR/.next/standalone/node_modules"
             ln -sfn "$APP_DIR/node_modules" "$APP_DIR/.next/standalone/node_modules"
 
+            # Prisma bundled code looks for better_sqlite3.node in @prisma/client - copy it there
+            NODE_ABI=$(node -e "console.log('node-v' + process.versions.modules + '-' + process.platform + '-' + process.arch)")
+            BINDING_DIR="$APP_DIR/node_modules/@prisma/client/lib/binding/$NODE_ABI"
+            mkdir -p "$BINDING_DIR"
+            BS3_NODE=$(find "$APP_DIR/node_modules" -path "*better-sqlite3*" -name "better_sqlite3.node" 2>/dev/null | head -1)
+            if [ -n "$BS3_NODE" ]; then
+              cp "$BS3_NODE" "$BINDING_DIR/"
+              echo "✓ Copied better_sqlite3.node to $BINDING_DIR"
+            else
+              echo "⚠ better_sqlite3.node not found - login may fail"
+            fi
+
             # Verify server.js
             if [ ! -f "$APP_DIR/.next/standalone/server.js" ]; then
               echo "❌ server.js not found"

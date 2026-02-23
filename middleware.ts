@@ -13,9 +13,9 @@ function isSupportedLocale(value: string | undefined): value is Locale {
 function getLocaleFromPathname(pathname: string): Locale | null {
   // Extract locale from URL path (e.g., /fr/about -> fr)
   const pathnameLocale = ROUTING_LOCALES.find(
-    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
+    (loc) => pathname === `/${loc}` || pathname.startsWith(`/${loc}/`)
   );
-  return pathnameLocale || null;
+  return (pathnameLocale ?? null) as Locale | null;
 }
 
 function getBrowserLocale(acceptLanguage: string | null): Locale {
@@ -81,7 +81,7 @@ export default function middleware(request: NextRequest) {
       }
       
       // Cookie is already 'en', just redirect to unprefixed URL
-      const pathWithoutLocale = safePath.replace(/^\/en(\/|$)/, '/');
+      const pathWithoutLocale = safePathname.replace(/^\/en(\/|$)/, '/');
       const redirectUrl = request.nextUrl.clone();
       redirectUrl.pathname = pathWithoutLocale || '/';
       return NextResponse.redirect(redirectUrl);

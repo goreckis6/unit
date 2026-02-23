@@ -36,6 +36,8 @@ Configure these in your repo: **Settings → Secrets and variables → Actions**
 | `/var/www/db-calculino` | SQLite database (`dev.db`) — **persistent, never overwritten** |
 | `/etc/caddy/Caddyfile` | Caddy reverse-proxy config |
 
+The deploy workflow automatically sets `DATABASE_URL="file:/var/www/db-calculino/dev.db"` in `.env` on each deploy.
+
 ---
 
 ## First-time manual steps (after first deploy)

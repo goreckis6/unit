@@ -37,10 +37,11 @@ pnpm install
 pnpm prisma:migrate
 ```
 
-3. **Start dev server**:
+3. **Start dev server** (Next.js admin):
 
 ```bash
-pnpm dev
+npm run dev:next
+# or: pnpm run dev:next
 ```
 
 4. **Open admin panel**:

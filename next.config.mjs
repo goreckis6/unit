@@ -10,6 +10,13 @@ const withNextIntl = createNextIntlPlugin(path.resolve(__dirname, 'i18n', 'reque
 const nextConfig = {
   output: 'standalone',
   outputFileTracingRoot: __dirname,
+  outputFileTracingIncludes: {
+    '/*': [
+      'node_modules/better-sqlite3/**/*',
+      'node_modules/@prisma/adapter-better-sqlite3/**/*',
+      'node_modules/.pnpm/**/node_modules/better-sqlite3/**/*',
+    ],
+  },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx'],
   reactStrictMode: true,
   poweredByHeader: false,

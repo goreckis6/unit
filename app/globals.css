@@ -617,6 +617,16 @@ a {
   transition: transform 0.2s ease;
 }
 
+.logo-text-fallback {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+}
+
 .logo:hover .logo-icon .logo-image {
   transform: scale(1.08);
 }

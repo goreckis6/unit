@@ -273,6 +273,9 @@ export function Header() {
     setIsMenuOpen(false);
   };
 
+  // Use favicon as logo (logo_site.png not in repo) - add logo_site.png to public/ when ready
+  const logoSrc = '/favicon.svg';
+
   const handleLanguageChange = (newLocale: string) => {
     const normalizedPath = pathname || '/';
     const matchedLocale = routing.locales.find((loc) => {
@@ -293,7 +296,7 @@ export function Header() {
         <div className="header-content">
           <Link href="/" className="logo" onClick={closeMenu}>
             <span className="logo-icon">
-              <img src="/logo_site.png" alt={t('siteName')} className="logo-image" />
+              <img src={logoSrc} alt={t('siteName')} className="logo-image" />
             </span>
           </Link>
           
@@ -331,7 +334,7 @@ export function Header() {
           <div className="mobile-nav-header">
             <Link href="/" className="mobile-logo" onClick={closeMenu}>
               <span className="logo-icon">
-                <img src="/logo_site.png" alt={t('siteName')} className="logo-image" />
+                <img src={logoSrc} alt={t('siteName')} className="logo-image" />
               </span>
             </Link>
             <button

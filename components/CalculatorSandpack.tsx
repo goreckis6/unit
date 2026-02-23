@@ -64,6 +64,7 @@ export default function App() {
         template="react-ts"
         files={files}
         options={{
+          bundlerURL: 'https://sandpack-bundler.codesandbox.io',
           externalResources: [cssUrl],
           initMode: 'user-visible',
           initModeObserverOptions: { rootMargin: '200px 0px' },

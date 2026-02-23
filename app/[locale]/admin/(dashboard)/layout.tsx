@@ -2,6 +2,8 @@ import { redirect } from 'next/navigation';
 import { getSession } from '@/lib/auth';
 import Link from 'next/link';
 import { TranslateProvider } from '../TranslateContext';
+import { GenerateProvider } from '../GenerateContext';
+import { AdminProgressBar } from './AdminProgressBar';
 
 export default async function AdminDashboardLayout({
   children,
@@ -15,6 +17,7 @@ export default async function AdminDashboardLayout({
 
   return (
     <TranslateProvider>
+    <GenerateProvider>
     <div className="admin-dashboard">
       <header className="admin-header">
         <div className="admin-header-inner">
@@ -41,8 +44,10 @@ export default async function AdminDashboardLayout({
       </header>
       <main className="admin-main">
         {children}
+        <AdminProgressBar />
       </main>
     </div>
+    </GenerateProvider>
     </TranslateProvider>
   );
 }

@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import { routing } from '@/i18n/routing';
 import { BASE_URL } from '@/lib/hreflang';
+import { prisma } from '@/lib/prisma';
+
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
   const currentDate = new Date().toISOString();
@@ -113,6 +116,20 @@ export async function GET() {
 
   const urls: string[] = [];
 
+  // DB pages (admin-created, published) - added dynamically, static routes above stay unchanged
+  let dbRoutes: string[] = [];
+  try {
+    const pages = await prisma.page.findMany({
+      where: { published: true, category: { not: null } },
+      select: { slug: true, category: true },
+    });
+    dbRoutes = pages
+      .filter((p) => p.category)
+      .map((p) => `/calculators/${p.category}/${p.slug}`);
+  } catch {
+    // ignore DB errors (e.g. during build)
+  }
+
   const getUrlForLocale = (locale: string, route: string) => {
     const localePrefix = locale === 'en' ? '' : `/${locale}`;
     return `${BASE_URL}${localePrefix}${route}`;
@@ -129,11 +146,13 @@ export async function GET() {
     return `${alternates}\n${xDefault}`;
   };
   
+  // Combine static routes with DB pages (avoid duplicates)
+  const staticSet = new Set(staticRoutes);
+  const allRoutes = [...staticRoutes, ...dbRoutes.filter((r) => !staticSet.has(r))];
+
   // Generate URLs for all locales
   routing.locales.forEach((locale) => {
-    
-    // Add static routes
-    staticRoutes.forEach((route) => {
+    allRoutes.forEach((route) => {
       const url = getUrlForLocale(locale, route);
       
       let priority = '0.8';

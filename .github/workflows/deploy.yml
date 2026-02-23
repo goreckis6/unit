@@ -130,8 +130,8 @@ jobs:
             cd "$APP_DIR"
             export DATABASE_URL="file:$DB_PATH"
             if [ -d prisma ]; then
-              npx prisma@5.22.0 migrate deploy
-              npx prisma@5.22.0 db seed 2>/dev/null || echo "⚠️ Seed skipped (run manually if needed)"
+              npx prisma@5 migrate deploy
+              npx prisma@5 db seed 2>/dev/null || echo "⚠️ Seed skipped (run manually if needed)"
             fi
 
             # Caddy

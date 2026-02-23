@@ -359,7 +359,7 @@ export default function AdminEditPage() {
         throw new Error(res.status === 401 ? 'Unauthorized — zaloguj się ponownie' : `Błąd serwera (${res.status}). Spróbuj ponownie.`);
       }
       if (!res.ok) throw new Error(data.error || `Błąd generowania (${res.status})`);
-      updateTranslation('en', 'content', data.content);
+      updateTranslation('en', 'content', data.content ?? '');
       if (Array.isArray(data.faqItems) && data.faqItems.length > 0) {
         updateTranslation('en', 'faqItems', data.faqItems);
       }

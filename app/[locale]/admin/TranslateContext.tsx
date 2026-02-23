@@ -52,6 +52,7 @@ type TranslateContextValue = {
   translateError: string;
   translateSuccess: string;
   autoResumeCountdown: number | null;
+  setAutoResumeCountdown: (v: number | null) => void;
   startTranslate: (params: {
     pages: Page[];
     selectedIds: Set<string>;
@@ -255,7 +256,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               content: data.content ?? '',
               title: data.title,
               displayTitle: data.displayTitle,
-              faqItems: Array.isArray(data.faqItems) ? data.faqItems : undefined,
+              faqItems: Array.isArray(data.faqItems) ? (data.faqItems as { question: string; answer: string }[]) : undefined,
             };
 
             const baseMap = new Map((fullPage.translations ?? []).map((t: { locale: string }) => [t.locale, t]));
@@ -367,6 +368,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     translateError,
     translateSuccess,
     autoResumeCountdown,
+    setAutoResumeCountdown,
     startTranslate,
     pauseTranslate,
     clearPaused,

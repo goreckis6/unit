@@ -10,14 +10,9 @@ import { FaqSection } from '@/components/FaqSection';
 import { FaqSchema } from '@/components/FaqSchema';
 import { renderMarkdown } from '@/lib/markdown';
 import { getRelatedCalculatorsForPage } from '@/lib/related-calculators';
-import dynamic from 'next/dynamic';
 import { hasCalculatorEmbed } from '@/lib/calculator-embeds';
 import { Link } from '@/i18n/routing';
-
-const CalculatorSandpack = dynamic(
-  () => import('@/components/CalculatorSandpack').then((m) => ({ default: m.CalculatorSandpack })),
-  { ssr: false, loading: () => <div className="calculator-sandpack-loading" style={{ minHeight: 420 }} /> }
-);
+import { CalculatorSandpackClient } from '@/components/CalculatorSandpackClient';
 
 type Props = {
   params: Promise<{ locale: string; category: string; slug: string }>;
@@ -185,7 +180,7 @@ export default async function CalculatorPage({ params, searchParams }: Props) {
                   />
                 )}
                 {!iframeSrc && page.calculatorCode && (
-                  <CalculatorSandpack code={page.calculatorCode} labels={calculatorLabels ?? undefined} />
+                  <CalculatorSandpackClient code={page.calculatorCode} labels={calculatorLabels ?? undefined} />
                 )}
               </>
             )}

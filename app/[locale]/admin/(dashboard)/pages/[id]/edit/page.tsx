@@ -361,7 +361,7 @@ export default function AdminEditPage() {
       if (!res.ok) throw new Error(data.error || `Błąd generowania (${res.status})`);
       updateTranslation('en', 'content', data.content ?? '');
       if (Array.isArray(data.faqItems) && data.faqItems.length > 0) {
-        updateTranslation('en', 'faqItems', data.faqItems);
+        updateTranslation('en', 'faqItems', data.faqItems as FaqItem[]);
       }
       setGenerateSuccess('Treść wygenerowana pomyślnie.');
       setTimeout(() => setGenerateSuccess(''), 5000);

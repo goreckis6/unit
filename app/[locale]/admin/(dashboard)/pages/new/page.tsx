@@ -356,7 +356,7 @@ export default function AdminNewPage() {
       if (!res.ok) throw new Error(data.error || `Błąd generowania (${res.status})`);
       updateTranslation('en', 'content', data.content ?? '');
       if (Array.isArray(data.faqItems) && data.faqItems.length > 0) {
-        updateTranslation('en', 'faqItems', data.faqItems);
+        updateTranslation('en', 'faqItems', data.faqItems as FaqItem[]);
       }
       setGenerateSuccess('Treść wygenerowana pomyślnie.');
       setTimeout(() => setGenerateSuccess(''), 5000);
@@ -445,7 +445,7 @@ export default function AdminNewPage() {
         if (data.title) updateTranslation(loc, 'title', data.title);
         if (data.displayTitle) updateTranslation(loc, 'displayTitle', data.displayTitle);
         if (Array.isArray(data.faqItems) && data.faqItems.length > 0) {
-          updateTranslation(loc, 'faqItems', data.faqItems);
+          updateTranslation(loc, 'faqItems', data.faqItems as FaqItem[]);
         }
         await new Promise((r) => setTimeout(r, 10_000));
       }

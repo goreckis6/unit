@@ -6,14 +6,9 @@ import { getTranslations } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import dynamic from 'next/dynamic';
 import { hasCalculatorEmbed } from '@/lib/calculator-embeds';
 import { Link } from '@/i18n/routing';
-
-const CalculatorSandpack = dynamic(
-  () => import('@/components/CalculatorSandpack').then((m) => ({ default: m.CalculatorSandpack })),
-  { ssr: false, loading: () => <div className="calculator-sandpack-loading" style={{ minHeight: 420 }} /> }
-);
+import { CalculatorSandpackClient } from '@/components/CalculatorSandpackClient';
 
 type Props = {
   params: Promise<{ locale: string; category: string; slug: string }>;
@@ -133,7 +128,7 @@ export default async function CalculatorSubpage({ params, searchParams }: Props)
             )}
 
             {page.calculatorCode && !iframeSrc && (
-              <CalculatorSandpack
+              <CalculatorSandpackClient
                 code={page.calculatorCode}
                 labels={(() => {
                   const t = page.translations.find((x) => x.locale === locale) ?? page.translations[0];

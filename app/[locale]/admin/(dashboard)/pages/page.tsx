@@ -47,6 +47,7 @@ export default function AdminPagesList() {
     translateError,
     translateSuccess,
     autoResumeCountdown,
+    setAutoResumeCountdown,
     startTranslate,
     pauseTranslate,
     clearPaused,

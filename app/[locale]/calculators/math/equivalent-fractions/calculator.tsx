@@ -237,7 +237,7 @@ export function EquivalentFractionsCalculator() {
             {calc && !calc.ok && (
               <div className="number-input" style={{ minHeight: '200px', padding: '1.25rem' }}>
                 <div style={{ fontWeight: 800, marginBottom: '0.5rem' }}>{t('errorTitle')}</div>
-                <div style={{ color: 'var(--text-secondary)', lineHeight: 1.7 }}>{calc.error}</div>
+                <div style={{ color: 'var(--text-secondary)', lineHeight: 1.7 }}>{'error' in calc ? calc.error : ''}</div>
               </div>
             )}
 

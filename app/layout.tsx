@@ -1,6 +1,5 @@
 import { getLocale } from 'next-intl/server';
 import './globals.css';
-import { ErrorDebug } from '@/components/ErrorDebug';
 
 export default async function RootLayout({
   children,
@@ -10,7 +9,7 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-scroll-behavior="smooth">
       <head>
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFVQRQ7GBD"></script>
@@ -36,7 +35,6 @@ export default async function RootLayout({
         />
       </head>
       <body>
-        <ErrorDebug />
         {children}
       </body>
     </html>

@@ -1017,7 +1017,7 @@ export default function AdminEditPage() {
                           );
                           const allNonEn = ADMIN_LOCALES.filter((l) => l !== 'en');
                           const targetForSelect = remaining.length > 0 ? remaining : allNonEn;
-                          const currentStart = translateStartFrom && (targetForSelect?.includes?.(translateStartFrom) ?? false)
+                          const currentStart = translateStartFrom && targetForSelect.includes(translateStartFrom)
                             ? translateStartFrom
                             : targetForSelect[0] ?? '';
                           return (

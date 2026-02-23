@@ -2,6 +2,7 @@
 
 import { SandpackProvider, SandpackLayout, SandpackPreview } from '@codesandbox/sandpack-react';
 import { transformCalculatorCodeForSandpack } from '@/lib/calculator-code-transform';
+import { CALCULATOR_EMBED_CSS } from '@/lib/calculator-embed-styles';
 
 const DEFAULT_LABELS: Record<string, string> = {
   calculate: 'Calculate',
@@ -45,18 +46,18 @@ export function CalculatorSandpack({ code, labels }: CalculatorSandpackProps) {
   const files = {
     '/stubs.tsx': stubsCode,
     '/Calculator.tsx': transformedCode,
-    '/App.tsx': `import Calculator from './Calculator';
+    '/styles.css': { code: CALCULATOR_EMBED_CSS },
+    '/App.tsx': `import './styles.css';
+import Calculator from './Calculator';
 
 export default function App() {
   return (
-    <div style={{ padding: '1rem', minHeight: 400 }}>
+    <div className="calc-embed-root">
       <Calculator />
     </div>
   );
 }`,
   };
-
-  const cssUrl = typeof window !== 'undefined' ? `${window.location.origin}/calculator-embed.css` : '/calculator-embed.css';
 
   return (
     <div style={{ borderRadius: 8, overflow: 'hidden', border: '1px solid var(--border-color)' }}>
@@ -65,7 +66,6 @@ export default function App() {
         files={files}
         options={{
           bundlerURL: 'https://sandpack-bundler.codesandbox.io',
-          externalResources: [cssUrl],
           initMode: 'user-visible',
           initModeObserverOptions: { rootMargin: '200px 0px' },
         }}

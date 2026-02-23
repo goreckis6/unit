@@ -1,14 +1,9 @@
-/* Calculator styles for Sandpack embed - matches main site calculator appearance */
+/** CSS for Sandpack calculator embed - embedded to ensure it loads reliably */
 
+export const CALCULATOR_EMBED_CSS = `/* Calculator styles - matches main site */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
 :root {
   --primary-color: #6366f1;
-  --primary-dark: #4f46e5;
-  --primary-light: #818cf8;
-  --secondary-color: #8b5cf6;
-  --accent-color: #ec4899;
-  --accent-light: #f472b6;
   --text-primary: #0f172a;
   --text-secondary: #64748b;
   --text-tertiary: #94a3b8;
@@ -16,25 +11,14 @@
   --bg-secondary: #f8fafc;
   --bg-tertiary: #f1f5f9;
   --border-color: #e2e8f0;
-  --border-light: #f1f5f9;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.08);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
 .calc-embed-root {
   padding: 2rem;
   min-height: 420px;
   background: var(--bg-secondary);
 }
-
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: var(--text-primary);
@@ -43,10 +27,6 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
-
-/* ============================================
-   LAYOUT
-   ============================================ */
 .split-view-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -55,29 +35,11 @@ body {
   width: 100%;
   padding: 1.5rem;
 }
-
 @media (min-width: 768px) {
-  .split-view-container {
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem;
-  }
+  .split-view-container { grid-template-columns: 1fr 1fr; padding: 2rem; }
 }
-
-/* ============================================
-   INPUT SECTION
-   ============================================ */
-.input-section {
-  margin-bottom: 2rem;
-  width: 100%;
-}
-
-.input-card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-width: 0;
-}
-
+.input-section { margin-bottom: 2rem; width: 100%; }
+.input-card { display: flex; flex-direction: column; width: 100%; min-width: 0; }
 .input-label {
   display: block;
   font-weight: 700;
@@ -86,7 +48,6 @@ body {
   margin-bottom: 1rem;
   letter-spacing: -0.3px;
 }
-
 .input-legend {
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -94,17 +55,7 @@ body {
   border-radius: 0.5rem;
   border-left: 3px solid var(--primary-color);
 }
-
-.legend-text {
-  margin: 0;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-/* ============================================
-   NUMBER INPUT
-   ============================================ */
+.legend-text { margin: 0; font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5; }
 .number-input {
   flex: 1;
   min-width: 0;
@@ -119,27 +70,13 @@ body {
   width: 100%;
   font-family: inherit;
 }
-
 .number-input:focus {
   border-color: var(--primary-color);
   outline: none;
   box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
 }
-
-.number-input::placeholder {
-  color: var(--text-tertiary);
-  opacity: 0.5;
-}
-
-/* ============================================
-   BUTTONS
-   ============================================ */
-.action-buttons {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
+.number-input::placeholder { color: var(--text-tertiary); opacity: 0.5; }
+.action-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
 .btn {
   padding: 1rem 2rem;
   border-radius: 0.875rem;
@@ -151,55 +88,29 @@ body {
   font-family: inherit;
   min-height: 48px;
 }
-
 .btn-primary {
   background: var(--gradient-primary);
   color: white;
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
 }
-
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(99, 102, 241, 0.45);
 }
-
 .btn-secondary {
   background: var(--bg-primary);
   color: var(--text-primary);
   border: 2px solid var(--border-color);
 }
-
 .btn-secondary:hover {
   background: var(--bg-tertiary);
   border-color: var(--primary-color);
 }
-
-/* ============================================
-   RESULT SECTION
-   ============================================ */
-.result-section {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none;
-}
-
-.result-item {
-  margin-bottom: 1rem;
-}
-
-.result-label {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.35rem;
-}
-
-.result-value-box {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
+.result-section { margin-top: 0; padding-top: 0; border-top: none; }
+.result-item { margin-bottom: 1rem; }
+.result-label { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0.35rem; }
+.result-value-box { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.result-value { font-weight: 700; font-size: 1.25rem; color: var(--primary-color); }
 .copy-result-btn {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
@@ -212,41 +123,13 @@ body {
   font-family: inherit;
   color: var(--text-primary);
 }
-
 .copy-result-btn:hover {
   background: var(--primary-color);
   color: white;
   border-color: var(--primary-color);
 }
-
-.result-value {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--primary-color);
-}
-
-.result-placeholder {
-  color: var(--text-tertiary);
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-/* Result value inline (e.g. fraction display) */
-.result-value-inline {
-  color: var(--primary-color);
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-/* Options grid for multi-option calculators */
-.options-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-@media (max-width: 480px) {
-  .options-grid {
-    grid-template-columns: 1fr;
-  }
-}
+.result-placeholder { color: var(--text-tertiary); font-size: 1rem; font-weight: 500; }
+.result-value-inline { color: var(--primary-color); font-size: 1.25rem; font-weight: 700; }
+.options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 480px) { .options-grid { grid-template-columns: 1fr; } }
+`;

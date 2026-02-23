@@ -16,6 +16,8 @@
     "readBlog": "Read Blog",
     "copy": "Copy",
     "copied": "Copied!",
+    "relatedHeading": "Related Calculators",
+    "faqHeading": "Frequently Asked Questions",
     "homePage": {
       "seoTitle": "CalculinoHub - Free Online Unit Converters & Calculators",
       "seoDescription": "Quickly convert units and solve complex math or electrical problems with our free online calculators. Fast, mobile-friendly, and no registration required.",
@@ -7750,6 +7752,109 @@
           "asciiConverterDesc": "Encode and decode text to ASCII hex, binary and decimal",
           "lettersToNumbers": "Letters to Numbers Converter",
           "lettersToNumbersDesc": "Convert letters to numbers (A=1, B=2, etc.)"
+        }
+      }
+    },
+    "armyBodyFat": {
+      "title": "Army Body Fat Calculator",
+      "description": "Calculate your body fat percentage using the official US Army tape test method per AR 600-9. Supports 2026 ACFT exemption for soldiers scoring 540+.",
+      "gender": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "age": "Age",
+      "years": "years",
+      "height": "Height",
+      "inches": "inches",
+      "weight": "Weight",
+      "lbs": "lbs",
+      "neckCircumference": "Neck Circumference",
+      "neckHint": "Measure just below the larynx (Adam's apple), rounded to nearest 0.25\"",
+      "waistCircumference": "Waist Circumference",
+      "waistHintMale": "Measure at the navel, rounded to nearest 0.25\"",
+      "waistHintFemale": "Measure at the narrowest point, rounded to nearest 0.25\"",
+      "hipsCircumference": "Hips Circumference",
+      "hipsHint": "Measure at the widest point of the buttocks, rounded to nearest 0.25\"",
+      "acftExemption": "ACFT Score 540+ (with 80+ in each event)",
+      "acftHint": "Soldiers who score 540 or higher on the ACFT with at least 80 points in each event are exempt from body fat testing per AR 600-9",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "bodyFatPercentage": "Body Fat Percentage",
+      "maxAllowable": "Maximum Allowable",
+      "status": "Status",
+      "pass": "PASS",
+      "fail": "FAIL",
+      "exempt": "EXEMPT",
+      "exemptMessage": "You are exempt from body fat testing based on your ACFT score of 540+ with at least 80 points in each event.",
+      "bmi": "BMI (Body Mass Index)",
+      "poundsToLose": "Approximate Pounds to Lose",
+      "calculationDetails": "Calculation Details",
+      "formula": "Army Body Fat Formula:",
+      "basedOnAR6009": "Based on Army Regulation 600-9 (Body Composition Program)",
+      "enterValues": "Enter all required values to see the result",
+      "clickCalculate": "Click Calculate to see the result",
+      "seo": {
+        "title": "Army Body Fat Calculator 2026 – Official AR 600-9 Tape Test with ACFT Exemption",
+        "description": "Free Army body fat calculator using the official US Army tape test method per AR 600-9. Calculate body fat percentage for males and females with neck, waist, and hip measurements. Includes 2026 ACFT 540+ exemption and maximum allowable body fat standards by age. Instant results with pass/fail status.",
+        "keywords": "army body fat calculator, army tape test calculator, ar 600-9 calculator, military body fat calculator, army body composition calculator, acft body fat exemption, army bf% calculator, us army body fat, army weight standards",
+        "content": {
+          "heading": "How to Use the Army Body Fat Calculator (AR 600-9)",
+          "paragraph1": "The US Army Body Fat Calculator uses the official circumference-based method outlined in Army Regulation 600-9 (AR 600-9), also known as the Army Body Composition Program. This regulation sets the standards for body composition that all soldiers must meet to remain in compliance with Army fitness requirements. The tape test measures body fat percentage using height and specific body circumference measurements, providing a practical alternative to more complex body composition assessment methods like hydrostatic weighing or DEXA scans.",
+          "paragraph2": "To use the Army body fat calculator, first select your gender (male or female), as the formulas and measurement points differ significantly between the two. Enter your age (required to determine your maximum allowable body fat percentage), height in inches (rounded to the nearest 0.25 inch), and weight in pounds. Next, measure and enter your neck circumference (measured just below the larynx/Adam's apple), and waist circumference. For males, the waist is measured at the navel (belly button), while for females it's measured at the narrowest point. Females must also enter hip circumference, measured at the widest point of the buttocks. All circumference measurements should be rounded to the nearest 0.25 inch.",
+          "paragraph3": "The Army uses gender-specific logarithmic formulas to calculate body fat percentage from these measurements. For males: Body Fat % = 86.010 × log₁₀(waist - neck) - 70.041 × log₁₀(height) + 36.76. For females: Body Fat % = 163.205 × log₁₀(waist + hips - neck) - 97.684 × log₁₀(height) - 78.387. These formulas have been validated by the Army and are the official methods used during Height and Weight (H&W) assessments and ABCP screenings.",
+          "paragraph4": "Once you enter all required measurements and click Calculate, the calculator displays your body fat percentage, the maximum allowable percentage for your age and gender, and a clear pass/fail status. If you exceed the standards, the calculator also estimates the approximate number of pounds you need to lose to reach the maximum allowable body fat percentage. This helps soldiers set realistic weight loss goals and track their progress toward meeting Army body composition standards.",
+          "exampleHeading": "Example: Male Soldier Body Fat Calculation",
+          "exampleText": "A 25-year-old male soldier is 70 inches tall, weighs 180 lbs, with a neck circumference of 15 inches and waist circumference of 32 inches. Using the male formula: 86.010 × log₁₀(32 - 15) - 70.041 × log₁₀(70) + 36.76 = 86.010 × log₁₀(17) - 70.041 × log₁₀(70) + 36.76 ≈ 86.010 × 1.2304 - 70.041 × 1.8451 + 36.76 ≈ 105.85 - 129.22 + 36.76 ≈ 13.4% body fat. Since the maximum allowable for males aged 21-27 is 22%, this soldier passes the body composition standards.",
+          "standardsHeading": "Army Body Fat Standards by Age and Gender (AR 600-9)",
+          "standardsParagraph": "The Army sets maximum allowable body fat percentages based on age and gender. For males: 17-20 years = 20%, 21-27 years = 22%, 28-39 years = 24%, 40+ years = 26%. For females: 17-20 years = 30%, 21-27 years = 32%, 28-39 years = 34%, 40+ years = 36%. These standards are part of the Army's holistic approach to soldier fitness and readiness. Soldiers who exceed these standards may be enrolled in the Army Body Composition Program (ABCP) and must work to meet the standards or face potential separation from service.",
+          "acftHeading": "2026 ACFT Body Fat Exemption (540+ Score)",
+          "acftParagraph": "As of 2026, soldiers who achieve a score of 540 or higher on the Army Combat Fitness Test (ACFT), with a minimum of 80 points in each of the six events, are exempt from body fat testing per AR 600-9. This exemption recognizes that soldiers who demonstrate exceptional physical fitness across all combat fitness domains (muscular strength, endurance, power, speed, agility, and aerobic capacity) meet the Army's readiness standards regardless of their body composition. To claim this exemption in the calculator, check the \"ACFT Score 540+\" box. The calculator will then display your exempt status and BMI without performing the tape test calculation."
+        },
+        "faq": {
+          "heading": "Frequently Asked Questions",
+          "items": [
+            {
+              "question": "What is the Army body fat calculator?",
+              "answer": "The Army body fat calculator uses the official circumference-based tape test method from Army Regulation 600-9 (AR 600-9) to estimate body fat percentage. It uses height, weight, and specific body circumference measurements (neck, waist, and hips for females) to calculate body fat percentage using validated logarithmic formulas. This is the same method used by the US Army during official Height and Weight assessments."
+            },
+            {
+              "question": "How accurate is the Army tape test?",
+              "answer": "The Army tape test is reasonably accurate for most soldiers, with a standard error of approximately ±3-4% when compared to more sophisticated methods like DEXA scans or hydrostatic weighing. However, accuracy can vary based on individual body composition, measurement technique, and body type. Proper measurement technique is critical – measurements should be taken at the exact locations specified in AR 600-9 and rounded to the nearest 0.25 inch."
+            },
+            {
+              "question": "What are the Army body fat standards for 2026?",
+              "answer": "Army body fat standards vary by age and gender. Males: 17-20 years (20%), 21-27 years (22%), 28-39 years (24%), 40+ years (26%). Females: 17-20 years (30%), 21-27 years (32%), 28-39 years (34%), 40+ years (36%). These are maximum allowable percentages per AR 600-9. Soldiers exceeding these standards may be enrolled in the Army Body Composition Program (ABCP)."
+            },
+            {
+              "question": "How do I measure my waist for the Army tape test?",
+              "answer": "For males: Measure waist circumference at the level of the navel (belly button), with the tape parallel to the floor. Ensure the tape is snug but not compressing the skin. For females: Measure waist circumference at the narrowest point of the torso, usually between the rib cage and the navel. Round all measurements to the nearest 0.25 inch. Take the measurement at the end of a normal breath, not holding your breath or forcing it out."
+            },
+            {
+              "question": "What is the ACFT 540+ body fat exemption?",
+              "answer": "As of 2026, soldiers who score 540 or higher on the Army Combat Fitness Test (ACFT), with at least 80 points in each of the six events, are exempt from body fat testing per AR 600-9. This exemption recognizes that exceptional physical fitness across all combat fitness domains meets Army readiness standards regardless of body composition. To qualify, you must achieve 80+ points in: 3-Rep Max Deadlift, Standing Power Throw, Hand-Release Push-ups, Sprint-Drag-Carry, Plank, and 2-Mile Run."
+            },
+            {
+              "question": "What happens if I fail the Army body fat test?",
+              "answer": "If you exceed the maximum allowable body fat percentage, you will be flagged and enrolled in the Army Body Composition Program (ABCP). You'll be given time to meet the standards through diet, exercise, and counseling. If you fail to make progress or meet standards within the required timeframe (typically 6 months), you may face administrative separation from the Army. However, soldiers who pass the ACFT with a score of 540+ (with 80+ in each event) are exempt from body fat standards."
+            },
+            {
+              "question": "Can I use a BIA (bioelectrical impedance) machine instead of the tape test?",
+              "answer": "As of 2026, if you fail the tape test, you may be allowed a supplemental assessment using bioelectrical impedance analysis (BIA) devices like InBody or BodPod as an alternative method. This is a recent update to AR 600-9 that provides soldiers who fail the tape test with an additional opportunity to demonstrate compliance using more sophisticated body composition technology. However, the tape test remains the primary method, and BIA is only used as a supplemental assessment."
+            },
+            {
+              "question": "Is this Army body fat calculator official?",
+              "answer": "This calculator uses the official formulas from Army Regulation 600-9 and provides accurate estimates based on the measurements you enter. However, for official Army purposes, you must be measured and assessed by qualified personnel following the procedures outlined in AR 600-9. This calculator is intended for personal estimation, tracking progress, and preparing for official assessments, not as an official Army record."
+            }
+          ]
+        },
+        "related": {
+          "heading": "Related Calculators",
+          "bmi": "BMI Calculator",
+          "bmiDesc": "Calculate your Body Mass Index (BMI) and determine your weight category",
+          "bodyFat": "Body Fat Calculator",
+          "bodyFatDesc": "Estimate body fat percentage using multiple methods (Navy, Jackson-Pollock)",
+          "calorie": "Calorie Calculator",
+          "calorieDesc": "Calculate daily calorie needs based on activity level and weight goals"
         }
       }
     },

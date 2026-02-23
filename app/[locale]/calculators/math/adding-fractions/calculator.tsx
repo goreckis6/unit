@@ -115,9 +115,6 @@ export function AddingFractionsCalculator() {
         <div className="input-section" style={{ marginBottom: 0 }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div className="input-card">
-              <div className="input-legend">
-                <p className="legend-text">{t('inputLegend')}</p>
-              </div>
               <label htmlFor="expression" className="input-label">
                 {t('title')}
               </label>

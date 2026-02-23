@@ -1,12 +1,14 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
+import { routing } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { BackButton } from '@/components/BackButton';
 import { GlobalSearch } from '@/components/GlobalSearch';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
+export async function generateMetadata({ params }: { params?: Promise<{ locale?: string }> }) {
+  const resolved = params ? await params : {};
+  const locale = resolved?.locale ?? routing.defaultLocale;
   let t;
   try {
     t = await getTranslations({ locale, namespace: 'notFound' });
@@ -19,8 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function NotFound({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
+export default async function NotFound({ params }: { params?: Promise<{ locale?: string }> }) {
+  const resolved = params ? await params : {};
+  const locale = resolved?.locale ?? routing.defaultLocale;
   let t;
   try {
     t = await getTranslations({ locale, namespace: 'notFound' });

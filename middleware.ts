@@ -45,6 +45,11 @@ function getBrowserLocale(acceptLanguage: string | null): Locale {
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // Skip i18n for twojastara panel - serve /twojastara routes directly
+  if (pathname.startsWith('/twojastara')) {
+    return NextResponse.next();
+  }
   
   // 1. Check if URL has an explicit locale (e.g., /fr/, /de/, /pl/, /en/)
   const pathnameLocale = getLocaleFromPathname(pathname);

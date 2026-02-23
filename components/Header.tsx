@@ -273,8 +273,7 @@ export function Header() {
     setIsMenuOpen(false);
   };
 
-  // Use favicon as logo (logo_site.png not in repo) - add logo_site.png to public/ when ready
-  const logoSrc = '/favicon.svg';
+  const logoSrc = '/logo_site.png';
 
   const handleLanguageChange = (newLocale: string) => {
     const normalizedPath = pathname || '/';

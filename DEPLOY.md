@@ -61,13 +61,12 @@ If you need more variables than those set by secrets, edit `/var/www/calculinohu
 
 ## What the deploy does
 
-1. Builds Next.js from `unit/`
-2. Creates `/var/www/db-calculino` if missing
-3. Copies app files to `/var/www/calculinohub`
-4. Updates `.env` with `DATABASE_URL="file:/var/www/db-calculino/dev.db"` and secrets (if set)
-5. Runs `prisma migrate deploy`
-6. Runs `prisma db seed` (can fail if `tsx` is missing — run manually if needed)
-7. Restarts app with PM2
+1. Creates source tarball (excludes `node_modules`, `.next`, `generated`)
+2. Copies tarball to server, extracts to `/var/www/calculinohub`
+3. **Builds Next.js on the VPS** (avoids OOM in GitHub Actions; VPS typically has more RAM)
+4. Preserves `.env` across deploys; creates it on first deploy with `DATABASE_URL` and secrets
+5. Runs `prisma migrate deploy`, then `prisma db seed` (can fail if `tsx` missing — run manually if needed)
+6. Restarts app with PM2
 
 ---
 

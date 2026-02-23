@@ -46,9 +46,12 @@ function getBrowserLocale(acceptLanguage: string | null): Locale {
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Skip i18n for twojastara panel - serve /twojastara routes directly
+  // Rewrite /twojastara to /admin (internal) so [locale] doesn't match "twojastara"
   if (pathname.startsWith('/twojastara')) {
-    return NextResponse.next();
+    const rewritePath = pathname.replace(/^\/twojastara/, '/admin') || '/admin';
+    const url = request.nextUrl.clone();
+    url.pathname = rewritePath;
+    return NextResponse.rewrite(url);
   }
   
   // 1. Check if URL has an explicit locale (e.g., /fr/, /de/, /pl/, /en/)

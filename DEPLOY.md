@@ -23,7 +23,7 @@ Configure these in your repo: **Settings → Secrets and variables → Actions**
 | `FRONTEND_VPS_USERNAME` | ✅ | SSH user for deploy |
 | `FRONTEND_VPS_SSH_KEY` | ✅ | Private SSH key (full content, including `-----BEGIN ...-----`) |
 | `ADMIN_SESSION_SECRET` | ✅ | Long random string (32+ chars) for admin session signing |
-| `OLLAMA_API_KEY` | Optional | For Generate content / Translate features (Ollama Cloud) |
+| `OLLAMA_API_KEY` | Optional | For Generate content / Translate features (Ollama Cloud). Use **Secrets**, not Variables. |
 
 ---
 

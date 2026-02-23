@@ -60,7 +60,7 @@ jobs:
           host: ${{ secrets.FRONTEND_VPS_HOST }}
           username: ${{ secrets.FRONTEND_VPS_USERNAME }}
           key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
-          script_timeout: 20m
+          command_timeout: 20m
           script: |
             set -eo pipefail
             APP_DIR="/var/www/calculinohub"

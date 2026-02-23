@@ -101,6 +101,11 @@ jobs:
             npx prisma generate
             NODE_OPTIONS="--max-old-space-size=4096" npm run build
 
+            # Copy better-sqlite3 native binding into standalone (Next output tracing misses it)
+            mkdir -p "$APP_DIR/.next/standalone/node_modules"
+            cp -r "$APP_DIR/node_modules/better-sqlite3" "$APP_DIR/.next/standalone/node_modules/" 2>/dev/null || true
+            cp -r "$APP_DIR/node_modules/@prisma" "$APP_DIR/.next/standalone/node_modules/" 2>/dev/null || true
+
             # Verify server.js
             if [ ! -f "$APP_DIR/.next/standalone/server.js" ]; then
               echo "❌ server.js not found"

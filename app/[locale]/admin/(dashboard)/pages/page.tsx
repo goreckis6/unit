@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ADMIN_LOCALES, LOCALE_NAMES } from '@/lib/admin-locales';
 import { useTranslate } from '../../TranslateContext';
-import { useGenerate } from '../../GenerateContext';
+import { useGenerate, type GenerateProviderType } from '../../GenerateContext';
 
 type PageTranslation = {
   id: string;
@@ -64,6 +64,7 @@ export default function AdminPagesList() {
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [translateOnlyOne, setTranslateOnlyOne] = useState(false);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
+  const [generateProvider, setGenerateProvider] = useState<GenerateProviderType>('ollama');
 
   useEffect(() => {
     fetch('/api/twojastara/pages')
@@ -96,6 +97,7 @@ export default function AdminPagesList() {
     startGenerate({
       pages,
       selectedIds,
+      provider: generateProvider,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
       onComplete: () => setSelectedIds(new Set()),
@@ -141,6 +143,16 @@ export default function AdminPagesList() {
               >
                 {selectedCount === pages.length ? 'Odznacz wszystko' : 'Zaznacz wszystko'}
               </button>
+              <select
+                value={generateProvider}
+                onChange={(e) => setGenerateProvider(e.target.value as GenerateProviderType)}
+                disabled={!!generateProgress || !!translateProgress}
+                className="admin-form-select"
+                style={{ padding: '0.35rem 0.5rem', fontSize: '0.8rem' }}
+              >
+                <option value="ollama">Ollama</option>
+                <option value="claude">Claude 4.6</option>
+              </select>
               <button
                 type="button"
                 onClick={handleBatchGenerate}

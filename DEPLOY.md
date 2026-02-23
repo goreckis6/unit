@@ -24,6 +24,7 @@ Configure these in your repo: **Settings → Secrets and variables → Actions**
 | `FRONTEND_VPS_SSH_KEY` | ✅ | Private SSH key (full content, including `-----BEGIN ...-----`) |
 | `ADMIN_SESSION_SECRET` | ✅ | Long random string (32+ chars) for admin session signing |
 | `OLLAMA_API_KEY` | Optional | For Generate content / Translate features (Ollama Cloud). Use **Secrets**, not Variables. |
+| `ANTHROPIC_API_KEY` | Optional | For Generate content with Claude 4.6. Get from [Anthropic Console](https://console.anthropic.com/). Use **Secrets**, not Variables. |
 
 ---
 
@@ -84,4 +85,4 @@ cp /var/www/db-calculino/dev.db /path/to/backup/dev-$(date +%Y%m%d).db
 
 - **App doesn’t start:** Check `pm2 logs calculinohub`
 - **Admin login fails:** Ensure `ADMIN_SESSION_SECRET` is set and run seed if needed
-- **Generate/Translate errors:** Ensure `OLLAMA_API_KEY` is set in GitHub Secrets
+- **Generate/Translate errors:** Ensure `OLLAMA_API_KEY` (Ollama) or `ANTHROPIC_API_KEY` (Claude) is set in GitHub Secrets

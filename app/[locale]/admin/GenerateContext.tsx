@@ -40,6 +40,8 @@ type GenerateProgress = {
   title: string;
 };
 
+export type GenerateProviderType = 'ollama' | 'claude';
+
 type GenerateContextValue = {
   generateProgress: GenerateProgress | null;
   generateError: string;
@@ -47,6 +49,7 @@ type GenerateContextValue = {
   startGenerate: (params: {
     pages: Page[];
     selectedIds: Set<string>;
+    provider?: GenerateProviderType;
     resumeFromPageSlug?: string;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
@@ -96,12 +99,13 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
     async (params: {
       pages: Page[];
       selectedIds: Set<string>;
+      provider?: GenerateProviderType;
       resumeFromPageSlug?: string;
       autoResumeOnError: boolean;
       onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
       onComplete?: () => void;
     }) => {
-      const { pages, selectedIds, resumeFromPageSlug, autoResumeOnError, onPagesUpdate, onComplete } = params;
+      const { pages, selectedIds, provider = 'ollama', resumeFromPageSlug, autoResumeOnError, onPagesUpdate, onComplete } = params;
       const ids = Array.from(selectedIds);
       if (ids.length === 0) {
         setGenerateError('Zaznacz co najmniej jedną stronę.');
@@ -127,15 +131,18 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
         setGenerateProgress({ current: i + 1, total: finalPages.length, title: topic });
 
         try {
+          const generateUrl = provider === 'claude'
+            ? '/api/twojastara/claude/generate-post'
+            : '/api/twojastara/ollama/generate-post';
           const genRes = await fetchWithTimeout(
-            '/api/twojastara/ollama/generate-post',
+            generateUrl,
             {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ topic }),
               credentials: 'include',
             },
-            900_000,
+            provider === 'claude' ? 120_000 : 900_000,
             abortRef.current?.signal ?? null
           );
           let genData: { error?: string; content?: string; faqItems?: unknown[] };

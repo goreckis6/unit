@@ -331,7 +331,7 @@ export default function AdminNewPage() {
     e.target.value = '';
   }
 
-  async function handleGeneratePost() {
+  async function handleGeneratePost(provider: 'ollama' | 'claude' = 'ollama') {
     const topic = (translations.en?.displayTitle || translations.en?.title || slug || 'calculator').trim();
     if (!topic) {
       setError('Ustaw tytuł (displayTitle) dla en lub slug, aby wygenerować post');
@@ -340,8 +340,9 @@ export default function AdminNewPage() {
     setGenerateLoading(true);
     setError('');
     setGenerateSuccess('');
+    const url = provider === 'claude' ? '/api/twojastara/claude/generate-post' : '/api/twojastara/ollama/generate-post';
     try {
-      const res = await fetch('/api/twojastara/ollama/generate-post', {
+      const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ topic }),
@@ -817,17 +818,26 @@ export default function AdminNewPage() {
                 </label>
                 {activeLocale === 'en' && (
                   <>
-                    <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }} title="Limit ~15 min. Przy timeout — spróbuj ponownie lub skróć treść.">
-                      ~15 min, retry 2×
+                    <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }} title="Ollama: ~15 min. Claude: ~2 min.">
+                      Generate:
                     </span>
                     <button
                       type="button"
-                      onClick={handleGeneratePost}
+                      onClick={() => handleGeneratePost('ollama')}
+                      disabled={generateLoading}
+                      className="btn btn-secondary btn-sm"
+                      style={{ padding: '0.35rem 0.75rem' }}
+                    >
+                      {generateLoading ? 'Generowanie…' : 'Ollama'}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleGeneratePost('claude')}
                       disabled={generateLoading}
                       className="btn btn-primary btn-sm"
                       style={{ padding: '0.35rem 0.75rem' }}
                     >
-                      {generateLoading ? 'Generowanie…' : 'Generate blog post'}
+                      {generateLoading ? 'Generowanie…' : 'Claude 4.6'}
                     </button>
                     {(translations.en?.content?.trim() ?? '').length > 0 && (
                       <>

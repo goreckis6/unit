@@ -131,6 +131,9 @@ jobs:
               ln -sf "$APP_DIR/.next/static" "$APP_DIR/.next/standalone/.next/static" 2>/dev/null || true
             fi
 
+            # Copy public folder (standalone mode skips it; needed for sitemap.xsl, favicon, etc.)
+            [ -d "$APP_DIR/public" ] && cp -r "$APP_DIR/public" "$APP_DIR/.next/standalone/"
+
             # Prisma migrate & seed
             cd "$APP_DIR"
             if [ -d prisma ]; then

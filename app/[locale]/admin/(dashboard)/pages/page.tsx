@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ADMIN_LOCALES, LOCALE_NAMES } from '@/lib/admin-locales';
-import { useTranslate } from '@/app/admin/TranslateContext';
+import { useTranslate } from '../../TranslateContext';
 
 type PageTranslation = {
   id: string;

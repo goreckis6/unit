@@ -46,9 +46,9 @@ function getBrowserLocale(acceptLanguage: string | null): Locale {
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Rewrite /twojastara to /admin (internal) so [locale] doesn't match "twojastara"
+  // Rewrite /twojastara to /en/admin so it matches [locale]/admin (locale=en)
   if (pathname.startsWith('/twojastara')) {
-    const rewritePath = pathname.replace(/^\/twojastara/, '/admin') || '/admin';
+    const rewritePath = pathname.replace(/^\/twojastara/, '/en/admin') || '/en/admin';
     const url = request.nextUrl.clone();
     url.pathname = rewritePath;
     return NextResponse.rewrite(url);

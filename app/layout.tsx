@@ -1,5 +1,6 @@
 import { getLocale } from 'next-intl/server';
 import './globals.css';
+import { ErrorDebug } from '@/components/ErrorDebug';
 
 export default async function RootLayout({
   children,
@@ -35,6 +36,7 @@ export default async function RootLayout({
         />
       </head>
       <body>
+        <ErrorDebug />
         {children}
       </body>
     </html>

@@ -10,9 +10,14 @@ export async function GET() {
     });
     return NextResponse.json(pages);
   } catch (error) {
+    const msg = error instanceof Error ? error.message : 'Unknown error';
+    const stack = error instanceof Error ? error.stack : undefined;
     console.error('GET /api/admin/pages:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch pages' },
+      {
+        error: 'Failed to fetch pages',
+        ...(process.env.NODE_ENV === 'development' && { detail: msg, stack }),
+      },
       { status: 500 }
     );
   }
@@ -76,9 +81,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(page);
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Failed to create page';
+    const stack = error instanceof Error ? error.stack : undefined;
     console.error('POST /api/admin/pages:', error);
     return NextResponse.json(
-      { error: message },
+      {
+        error: message,
+        ...(process.env.NODE_ENV === 'development' && { detail: message, stack }),
+      },
       { status: 500 }
     );
   }

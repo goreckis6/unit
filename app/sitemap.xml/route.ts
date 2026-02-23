@@ -73,7 +73,7 @@ export async function GET() {
       if (route === '') {
         priority = '1.0';
         changefreq = 'daily';
-      } else if (route.includes('/calculators/')) {
+      } else if ((route ?? '').includes('/calculators/')) {
         priority = '0.9';
         changefreq = 'weekly';
       }

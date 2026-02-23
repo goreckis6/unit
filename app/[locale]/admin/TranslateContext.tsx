@@ -163,7 +163,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       setTranslateError('Zaznacz co najmniej jedną stronę.');
       return;
     }
-    const allNonEn = ADMIN_LOCALES.filter((l) => l !== 'en');
+    const allNonEn = (ADMIN_LOCALES ?? []).filter((l) => l !== 'en');
+    console.log('[TranslateContext] ADMIN_LOCALES:', ADMIN_LOCALES, 'allNonEn:', allNonEn);
     const effectiveStart = (resumeOverride?.nextLocale ?? params.translateStartFrom) && allNonEn.includes(resumeOverride?.nextLocale ?? params.translateStartFrom)
       ? (resumeOverride?.nextLocale ?? params.translateStartFrom)
       : allNonEn[0];
@@ -207,20 +208,26 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
 
         const fullPageTrans = fullPage.translations ?? [];
         const hasContent = (loc: string) => (fullPageTrans.find((t: { locale: string }) => t.locale === loc)?.content?.trim() ?? '').length > 0;
-        let localesToTranslate = allNonEn.filter((loc) => !hasContent(loc));
+        let localesToTranslate = (allNonEn ?? []).filter((loc) => !hasContent(loc));
+        console.log('[TranslateContext] page:', page.slug, 'allNonEn:', allNonEn?.length, 'localesToTranslate:', localesToTranslate?.length);
         if (resumeOverride && page.slug === resumeFromSlug) {
           const startLoc = resumeOverride.nextLocale;
-          if (!localesToTranslate.includes(startLoc)) {
-            localesToTranslate = [startLoc, ...localesToTranslate.filter((l) => allNonEn.indexOf(l) > allNonEn.indexOf(startLoc))];
-          } else {
-            localesToTranslate = localesToTranslate.slice(localesToTranslate.indexOf(startLoc));
+          if (startLoc && allNonEn) {
+            if (!(localesToTranslate?.includes?.(startLoc) ?? false)) {
+              const ane = allNonEn ?? [];
+              localesToTranslate = [startLoc, ...localesToTranslate.filter((l) => ane.indexOf(l) > ane.indexOf(startLoc))];
+            } else {
+              const idx = (localesToTranslate ?? []).indexOf(startLoc);
+              localesToTranslate = (localesToTranslate ?? []).slice(idx >= 0 ? idx : 0);
+            }
           }
-        } else {
-          const startIdx = allNonEn.indexOf(effectiveStart);
-          localesToTranslate = localesToTranslate.filter((loc) => allNonEn.indexOf(loc) >= startIdx);
+        } else if (allNonEn && effectiveStart) {
+          const ane = allNonEn ?? [];
+          const startIdx = ane.indexOf(effectiveStart);
+          localesToTranslate = (localesToTranslate ?? []).filter((loc) => ane.indexOf(loc) >= startIdx);
         }
         if (translateOnlyOne) {
-          localesToTranslate = localesToTranslate.includes(effectiveStart) ? [effectiveStart] : [];
+          localesToTranslate = (localesToTranslate?.includes?.(effectiveStart) ?? false) ? [effectiveStart] : [];
         }
         if (localesToTranslate.length === 0) continue;
 
@@ -308,7 +315,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               })
             );
 
-            if (localesToTranslate.indexOf(loc) < localesToTranslate.length - 1 || page !== pagesWithEn[pagesWithEn.length - 1]) {
+            if ((localesToTranslate?.indexOf(loc) ?? -1) < (localesToTranslate?.length ?? 0) - 1 || page !== pagesWithEn[pagesWithEn.length - 1]) {
               setTranslatePauseCountdown(PAUSE_BETWEEN_LOCALES_SEC);
               for (let s = PAUSE_BETWEEN_LOCALES_SEC; s >= 1; s--) {
                 if (abortRef.current?.signal?.aborted) break;

@@ -37,7 +37,7 @@ function caesarShift(
 ): string {
   if (!text.trim()) return '';
   const set = alphabets[alphabetId];
-  if (!set) return text;
+  if (!set?.lower) return text;
   const lower = set.lower;
   const upper = set.upper;
   const len = lower.length;
@@ -45,8 +45,8 @@ function caesarShift(
 
   let result = '';
   for (const char of text) {
-    const lowerIndex = lower.indexOf(char);
-    const upperIndex = upper ? upper.indexOf(char) : -1;
+    const lowerIndex = (lower ?? []).indexOf(char);
+    const upperIndex = upper ? (upper ?? []).indexOf(char) : -1;
     if (lowerIndex !== -1) {
       const newIndex = (lowerIndex + s) % len;
       result += lower[newIndex];

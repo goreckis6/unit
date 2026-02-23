@@ -58,7 +58,7 @@ export default async function CalculatorSubpage({ params, searchParams }: Props)
   const { locale, category, slug } = await params;
   setRequestLocale(locale);
 
-  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
+  if (!(routing.locales ?? []).includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 

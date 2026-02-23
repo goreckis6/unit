@@ -42,7 +42,7 @@ function lettersToNumbers(
 ): string {
   if (!input.trim()) return '';
 
-  const alphabetArray = alphabets[alphabet] || alphabets.latin;
+  const alphabetArray = alphabets[alphabet] || alphabets.latin || [];
   const result: string[] = [];
 
   for (const char of input) {
@@ -68,7 +68,7 @@ function lettersToNumbers(
     } else {
       // Alphabet-based methods (A0Z25, A1Z26, Reversed)
       const lowerChar = char.toLowerCase();
-      const index = alphabetArray.indexOf(lowerChar);
+      const index = (alphabetArray ?? []).indexOf(lowerChar);
       
       if (index === -1) {
         // Character not in alphabet

@@ -1,18 +1,18 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
-import { routing } from './i18n/routing';
+import { routing, ROUTING_LOCALES } from './i18n/routing';
 
 const handleI18nRouting = createMiddleware(routing);
 
 type Locale = (typeof routing.locales)[number];
 
 function isSupportedLocale(value: string | undefined): value is Locale {
-  return typeof value === 'string' && routing.locales.includes(value as Locale);
+  return typeof value === 'string' && ROUTING_LOCALES.includes(value as Locale);
 }
 
 function getLocaleFromPathname(pathname: string): Locale | null {
   // Extract locale from URL path (e.g., /fr/about -> fr)
-  const pathnameLocale = routing.locales.find(
+  const pathnameLocale = ROUTING_LOCALES.find(
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
   );
   return pathnameLocale || null;
@@ -27,9 +27,10 @@ function getBrowserLocale(acceptLanguage: string | null): Locale {
   const languages = acceptLanguage
     .split(',')
     .map(lang => {
-      const [locale, qValue] = lang.trim().split(';');
+      const [localePart, qValue] = lang.trim().split(';');
       const q = qValue ? parseFloat(qValue.split('=')[1]) : 1.0;
-      return { locale: locale.split('-')[0].toLowerCase(), q };
+      const locale = (localePart ?? '').split('-')[0]?.toLowerCase() ?? '';
+      return { locale, q };
     })
     .sort((a, b) => b.q - a.q);
 
@@ -45,17 +46,18 @@ function getBrowserLocale(acceptLanguage: string | null): Locale {
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const safePathname = pathname ?? '';
 
   // Rewrite /twojastara to /en/admin so it matches [locale]/admin (locale=en)
-  if (pathname.startsWith('/twojastara')) {
-    const rewritePath = pathname.replace(/^\/twojastara/, '/en/admin') || '/en/admin';
+  if (safePathname.startsWith('/twojastara')) {
+    const rewritePath = safePathname.replace(/^\/twojastara/, '/en/admin') || '/en/admin';
     const url = request.nextUrl.clone();
     url.pathname = rewritePath;
     return NextResponse.rewrite(url);
   }
   
   // 1. Check if URL has an explicit locale (e.g., /fr/, /de/, /pl/, /en/)
-  const pathnameLocale = getLocaleFromPathname(pathname);
+  const pathnameLocale = getLocaleFromPathname(safePathname);
   
   // 2. If URL has a locale, "stick" it in a cookie for future visits
   if (pathnameLocale) {
@@ -65,7 +67,7 @@ export default function middleware(request: NextRequest) {
       
       // If cookie needs to be updated to 'en', clear it and redirect to unprefixed URL
       if (currentCookie !== 'en') {
-        const pathWithoutLocale = pathname.replace(/^\/en(\/|$)/, '/');
+        const pathWithoutLocale = safePathname.replace(/^\/en(\/|$)/, '/');
         const redirectUrl = request.nextUrl.clone();
         redirectUrl.pathname = pathWithoutLocale || '/';
         
@@ -79,7 +81,7 @@ export default function middleware(request: NextRequest) {
       }
       
       // Cookie is already 'en', just redirect to unprefixed URL
-      const pathWithoutLocale = pathname.replace(/^\/en(\/|$)/, '/');
+      const pathWithoutLocale = safePath.replace(/^\/en(\/|$)/, '/');
       const redirectUrl = request.nextUrl.clone();
       redirectUrl.pathname = pathWithoutLocale || '/';
       return NextResponse.redirect(redirectUrl);
@@ -107,7 +109,7 @@ export default function middleware(request: NextRequest) {
   // If user has a saved preference (cookie) and it's NOT English, redirect to that language
   if (isSupportedLocale(cookieLocale) && cookieLocale !== 'en') {
     const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = `/${cookieLocale}${pathname}`;
+    redirectUrl.pathname = `/${cookieLocale}${safePathname}`;
     return NextResponse.redirect(redirectUrl);
   }
   
@@ -123,7 +125,7 @@ export default function middleware(request: NextRequest) {
   // If browser locale is not English, redirect to that language
   if (browserLocale !== 'en') {
     const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = `/${browserLocale}${pathname}`;
+    redirectUrl.pathname = `/${browserLocale}${safePathname}`;
     return NextResponse.redirect(redirectUrl);
   }
   

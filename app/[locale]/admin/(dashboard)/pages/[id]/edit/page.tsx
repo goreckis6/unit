@@ -433,12 +433,15 @@ export default function AdminEditPage() {
       setError('Wszystkie języki są już przetłumaczone.');
       return;
     }
-    const effectiveStart = translateStartFrom && targetLocales.includes(translateStartFrom)
+    const effectiveStart = translateStartFrom && (targetLocales?.includes?.(translateStartFrom) ?? false)
       ? translateStartFrom
-      : targetLocales[0];
+      : targetLocales?.[0];
+    if (!effectiveStart || !targetLocales?.length) return;
+    const arr = Array.isArray(targetLocales) ? targetLocales : [];
+    const idx = (arr ?? []).indexOf(effectiveStart);
     const localesToTranslate = onlyOne
       ? [effectiveStart]
-      : targetLocales.slice(targetLocales.indexOf(effectiveStart));
+      : arr.slice(idx >= 0 ? idx : 0);
     if (localesToTranslate.length === 0) return;
     setTranslating(true);
     setError('');
@@ -1014,7 +1017,7 @@ export default function AdminEditPage() {
                           );
                           const allNonEn = ADMIN_LOCALES.filter((l) => l !== 'en');
                           const targetForSelect = remaining.length > 0 ? remaining : allNonEn;
-                          const currentStart = translateStartFrom && targetForSelect.includes(translateStartFrom)
+                          const currentStart = translateStartFrom && (targetForSelect?.includes?.(translateStartFrom) ?? false)
                             ? translateStartFrom
                             : targetForSelect[0] ?? '';
                           return (

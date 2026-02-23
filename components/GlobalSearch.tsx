@@ -34,7 +34,7 @@ export function GlobalSearch() {
       const title = t(calc.titleKey).toLowerCase();
       const description = t(calc.descKey).toLowerCase();
       
-      if (title.includes(query) || description.includes(query)) {
+      if ((title ?? '').includes(query) || (description ?? '').includes(query)) {
         let categoryLabel = '';
         if (calc.category === 'math') {
           categoryLabel = t('mathCalculators.badge') || 'Math';

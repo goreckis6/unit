@@ -235,7 +235,7 @@ export default function AdminNewPage() {
   const [activeLocale, setActiveLocale] = useState('en');
   const [translations, setTranslations] = useState<Record<string, TranslationForm>>(
     Object.fromEntries(
-      ADMIN_LOCALES.map((l) => [l, { locale: l, title: '', displayTitle: '', description: '', content: '', relatedCalculators: [], faqItems: [], calculatorLabels: {} }])
+      (ADMIN_LOCALES ?? []).map((l) => [l, { locale: l, title: '', displayTitle: '', description: '', content: '', relatedCalculators: [], faqItems: [], calculatorLabels: {} }])
     )
   );
   const [saving, setSaving] = useState(false);
@@ -402,19 +402,26 @@ export default function AdminNewPage() {
     const enFaqItems = translations.en?.faqItems ?? [];
     const enTitle = (translations.en?.title ?? '').trim();
     const enDisplayTitle = (translations.en?.displayTitle ?? '').trim();
+    const locales = Array.isArray(ADMIN_LOCALES) ? ADMIN_LOCALES : [];
+    console.log('[NewPage translate] ADMIN_LOCALES:', ADMIN_LOCALES, 'locales:', locales);
     const targetLocales = forceAll
-      ? ADMIN_LOCALES.filter((l) => l !== 'en')
-      : ADMIN_LOCALES.filter((l) => l !== 'en' && !(translations[l]?.content?.trim() ?? ''));
+      ? locales.filter((l) => l !== 'en')
+      : locales.filter((l) => l !== 'en' && !(translations[l]?.content?.trim() ?? ''));
+    console.log('[NewPage translate] targetLocales:', targetLocales);
     if (targetLocales.length === 0 && !forceAll) {
       setError('Wszystkie języki są już przetłumaczone.');
       return;
     }
-    const effectiveStart = translateStartFrom && targetLocales.includes(translateStartFrom)
+    const effectiveStart = translateStartFrom && (targetLocales?.includes?.(translateStartFrom) ?? false)
       ? translateStartFrom
-      : targetLocales[0];
+      : targetLocales?.[0];
+    console.log('[NewPage translate] effectiveStart:', effectiveStart, 'translateStartFrom:', translateStartFrom);
+    if (!effectiveStart || !targetLocales?.length) return;
+    const idx = (targetLocales ?? []).indexOf(effectiveStart);
+    console.log('[NewPage translate] idx:', idx);
     const localesToTranslate = onlyOne
       ? [effectiveStart]
-      : targetLocales.slice(targetLocales.indexOf(effectiveStart));
+      : targetLocales.slice(idx >= 0 ? idx : 0);
     if (localesToTranslate.length === 0) return;
     setTranslating(true);
     setError('');
@@ -475,7 +482,7 @@ export default function AdminNewPage() {
         note: 'BCP 47 / ISO 639-1 codes. _meta is documentation only, omitted on import.',
       },
       translations: Object.fromEntries(
-        ADMIN_LOCALES.map((l) => [
+        (ADMIN_LOCALES ?? []).map((l) => [
           l,
           {
             title: '',
@@ -507,7 +514,7 @@ export default function AdminNewPage() {
       relatedCalculatorsCount,
       _meta: { localeCodes: getLocaleMeta(), note: 'Documentation only.' },
       translations: Object.fromEntries(
-        ADMIN_LOCALES.filter((l) => translations[l]).map((l) => {
+        (ADMIN_LOCALES ?? []).filter((l) => translations[l]).map((l) => {
           const v = translations[l];
           return [
             l,
@@ -759,7 +766,7 @@ export default function AdminNewPage() {
             URL for [{activeLocale}]: {activeLocale === 'en' ? `/calculators/${category || 'category'}/${slug || 'slug'}` : `/${activeLocale}/calculators/${category || 'category'}/${slug || 'slug'}`}
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem', marginBottom: '0.75rem' }}>
-            {ADMIN_LOCALES.map((l) => (
+            {(ADMIN_LOCALES ?? []).map((l) => (
               <button
                 key={l}
                 type="button"
@@ -845,12 +852,14 @@ export default function AdminNewPage() {
                     {(translations.en?.content?.trim() ?? '').length > 0 && (
                       <>
                         {(() => {
-                          const remaining = ADMIN_LOCALES.filter(
+                          const locales = Array.isArray(ADMIN_LOCALES) ? ADMIN_LOCALES : [];
+                          if (typeof window !== 'undefined' && (!Array.isArray(ADMIN_LOCALES) || locales.length === 0)) console.warn('[NewPage render] ADMIN_LOCALES invalid:', ADMIN_LOCALES, 'locales len:', locales.length);
+                          const remaining = locales.filter(
                             (l) => l !== 'en' && !(translations[l]?.content?.trim() ?? '')
                           );
-                          const allNonEn = ADMIN_LOCALES.filter((l) => l !== 'en');
+                          const allNonEn = locales.filter((l) => l !== 'en');
                           const targetForSelect = remaining.length > 0 ? remaining : allNonEn;
-                          const currentStart = translateStartFrom && targetForSelect.includes(translateStartFrom)
+                          const currentStart = translateStartFrom && (targetForSelect?.includes?.(translateStartFrom) ?? false)
                             ? translateStartFrom
                             : targetForSelect[0] ?? '';
                           return (

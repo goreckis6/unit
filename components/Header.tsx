@@ -277,7 +277,7 @@ export function Header() {
 
   const handleLanguageChange = (newLocale: string) => {
     const normalizedPath = pathname || '/';
-    const matchedLocale = routing.locales.find((loc) => {
+    const matchedLocale = (routing.locales ?? []).find((loc) => {
       const prefix = `/${loc}`;
       return normalizedPath === prefix || normalizedPath.startsWith(`${prefix}/`);
     });
@@ -349,21 +349,21 @@ export function Header() {
           <div className="mobile-nav-links">
             <Link 
               href="/calculators/math" 
-              className={`mobile-nav-link ${pathname.includes('/calculators/math') ? 'active' : ''}`}
+              className={`mobile-nav-link ${(pathname ?? '').includes('/calculators/math') ? 'active' : ''}`}
               onClick={closeMenu}
             >
               {tHome('mathCalculators.title')}
             </Link>
             <Link 
               href="/calculators/electric" 
-              className={`mobile-nav-link ${pathname.includes('/calculators/electric') ? 'active' : ''}`}
+              className={`mobile-nav-link ${(pathname ?? '').includes('/calculators/electric') ? 'active' : ''}`}
               onClick={closeMenu}
             >
               {tHome('electricCalculators.title')}
             </Link>
             <Link 
               href="/calculators/others" 
-              className={`mobile-nav-link ${pathname.includes('/calculators/others') ? 'active' : ''}`}
+              className={`mobile-nav-link ${(pathname ?? '').includes('/calculators/others') ? 'active' : ''}`}
               onClick={closeMenu}
             >
               {tHome('otherCalculators.title')}
@@ -371,7 +371,7 @@ export function Header() {
             <div className="mobile-language-section">
               <div className="mobile-language-title">Language</div>
               <div className="mobile-language-list">
-                {routing.locales.map((loc) => (
+                {(routing.locales ?? []).map((loc) => (
                   <button
                     key={loc}
                     onClick={() => handleLanguageChange(loc)}

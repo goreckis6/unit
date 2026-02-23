@@ -1,11 +1,11 @@
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
-import { routing } from '@/i18n/routing';
+import { routing, ROUTING_LOCALES } from '@/i18n/routing';
 import { GlobalEnterToCalculate } from '@/components/GlobalEnterToCalculate';
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return ROUTING_LOCALES.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({
@@ -17,7 +17,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!ROUTING_LOCALES.includes(locale as any)) {
     notFound();
   }
 

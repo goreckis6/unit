@@ -9,6 +9,11 @@ const withNextIntl = createNextIntlPlugin(path.resolve(__dirname, 'i18n', 'reque
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
+  serverExternalPackages: [
+    'better-sqlite3',
+    '@prisma/adapter-better-sqlite3',
+    'bindings',
+  ],
   experimental: {
     webpackMemoryOptimizations: true,
   },

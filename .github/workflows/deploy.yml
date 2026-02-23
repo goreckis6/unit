@@ -47,6 +47,7 @@ jobs:
         working-directory: unit
         env:
           NODE_ENV: production
+          NODE_OPTIONS: "--max-old-space-size=8192"
 
       - name: Create DB directory and prepare deployment
         uses: appleboy/ssh-action@v1.0.3

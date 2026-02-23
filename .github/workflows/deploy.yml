@@ -13,8 +13,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          submodules: true
+
+      - name: Fetch unit submodule
+        run: git submodule sync && git submodule update --init unit
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2

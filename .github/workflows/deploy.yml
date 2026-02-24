@@ -13,14 +13,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
-      - name: Fetch unit submodule
+      - name: Fetch unit submodule (ensure populated)
         run: git submodule sync && git submodule update --init unit
 
       - name: Create tarball (exclude node_modules, .next, generated)
         run: |
           cd unit
           tar --exclude=node_modules --exclude=.next --exclude=dev.db --exclude=generated -czf ../unit-src.tar.gz .
+          ls -la ../unit-src.tar.gz
 
       - name: Create DB directory and prepare deployment
         uses: appleboy/ssh-action@v1.0.3
@@ -51,7 +54,7 @@ jobs:
           host: ${{ secrets.FRONTEND_VPS_HOST }}
           username: ${{ secrets.FRONTEND_VPS_USERNAME }}
           key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
-          source: "unit-src.tar.gz"
+          source: "${{ github.workspace }}/unit-src.tar.gz"
           target: "/tmp"
 
       - name: Extract, build on server, setup env, and start app
@@ -75,6 +78,11 @@ jobs:
             [ -f "$ENV_FILE" ] && cp "$ENV_FILE" /tmp/deploy-env.bak || true
 
             # Extract source tarball
+            if [ ! -f /tmp/unit-src.tar.gz ]; then
+              echo "❌ /tmp/unit-src.tar.gz not found. Contents of /tmp:"
+              ls -la /tmp
+              exit 1
+            fi
             cd "$APP_DIR"
             rm -rf * .[!.]* 2>/dev/null || true
             tar -xzf /tmp/unit-src.tar.gz

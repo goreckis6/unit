@@ -4,12 +4,11 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const withNextIntl = createNextIntlPlugin(path.resolve(__dirname, 'i18n', 'request.ts'));
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
-  transpilePackages: ['next-intl'],
   serverExternalPackages: [
     'better-sqlite3',
     '@prisma/adapter-better-sqlite3',

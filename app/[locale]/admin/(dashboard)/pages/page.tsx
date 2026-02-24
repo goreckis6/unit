@@ -92,6 +92,7 @@ export default function AdminPagesList() {
   const [bulkPublishLoading, setBulkPublishLoading] = useState(false);
   const [translateLabelsLoading, setTranslateLabelsLoading] = useState(false);
   const [translateLabelsProgress, setTranslateLabelsProgress] = useState<{ current: number; total: number; pageSlug: string; locale: string } | null>(null);
+  const [translateLabelsSuccess, setTranslateLabelsSuccess] = useState('');
   const [generatedIdsThisRun, setGeneratedIdsThisRun] = useState<Set<string>>(new Set());
   const [activeBookmark, setActiveBookmark] = useState<PageStage>('new');
 
@@ -254,8 +255,8 @@ export default function AdminPagesList() {
         );
       }
       setSelectedIds(new Set());
-      setTranslateSuccess(`Translated labels for ${withEnLabels.length} page(s)`);
-      setTimeout(() => setTranslateSuccess(''), 5000);
+      setTranslateLabelsSuccess(`Translated labels for ${withEnLabels.length} page(s)`);
+      setTimeout(() => setTranslateLabelsSuccess(''), 5000);
     } catch (e) {
       alert(e instanceof Error ? e.message : 'Translate labels failed');
     } finally {
@@ -777,7 +778,7 @@ export default function AdminPagesList() {
           Auto-resume za {autoResumeCountdown}s…
         </div>
       )}
-        {(generateSuccess || translateSuccess) && (
+        {(generateSuccess || translateSuccess || translateLabelsSuccess) && (
         <div
           role="status"
           style={{
@@ -791,7 +792,7 @@ export default function AdminPagesList() {
             fontWeight: 500,
           }}
         >
-          {generateSuccess || translateSuccess}
+          {generateSuccess || translateSuccess || translateLabelsSuccess}
         </div>
       )}
 

@@ -46,6 +46,7 @@ type GenerateContextValue = {
   generateProgress: GenerateProgress | null;
   generateError: string;
   generateSuccess: string;
+  pauseGenerate: () => void;
   startGenerate: (params: {
     pages: Page[];
     selectedIds: Set<string>;
@@ -95,6 +96,10 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
   const [generateError, setGenerateError] = useState('');
   const [generateSuccess, setGenerateSuccess] = useState('');
   const abortRef = useRef<AbortController | null>(null);
+
+  const pauseGenerate = useCallback(() => {
+    abortRef.current?.abort();
+  }, []);
 
   const startGenerate = useCallback(
     async (params: {
@@ -305,6 +310,7 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
         generateProgress,
         generateError,
         generateSuccess,
+        pauseGenerate,
         startGenerate,
       }}
     >

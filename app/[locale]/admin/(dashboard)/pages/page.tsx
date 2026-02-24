@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import { ADMIN_LOCALES, LOCALE_NAMES } from '@/lib/admin-locales';
 import { useTranslate } from '../../TranslateContext';
@@ -76,6 +76,7 @@ export default function AdminPagesList() {
     generateProgress,
     generateError,
     generateSuccess,
+    pauseGenerate,
     startGenerate,
   } = useGenerate();
   const [pages, setPages] = useState<Page[]>([]);
@@ -92,7 +93,10 @@ export default function AdminPagesList() {
   const [bulkPublishLoading, setBulkPublishLoading] = useState(false);
   const [translateLabelsLoading, setTranslateLabelsLoading] = useState(false);
   const [translateLabelsProgress, setTranslateLabelsProgress] = useState<{ current: number; total: number; pageSlug: string; locale: string } | null>(null);
+  const [translateLabelsPausedAt, setTranslateLabelsPausedAt] = useState<{ pageSlug: string; nextLocale: string } | null>(null);
   const [translateLabelsSuccess, setTranslateLabelsSuccess] = useState('');
+  const translateLabelsPausedRef = useRef(false);
+  const translateLabelsAbortRef = useRef<AbortController | null>(null);
   const [generatedIdsThisRun, setGeneratedIdsThisRun] = useState<Set<string>>(new Set());
   const [activeBookmark, setActiveBookmark] = useState<PageStage>('new');
 
@@ -180,10 +184,14 @@ export default function AdminPagesList() {
     const allNonEn = ADMIN_LOCALES.filter((l) => l !== 'en');
     setTranslateLabelsLoading(true);
     setTranslateLabelsProgress(null);
+    setTranslateLabelsPausedAt(null);
+    translateLabelsPausedRef.current = false;
+    translateLabelsAbortRef.current = new AbortController();
     let step = 0;
     let totalSteps = withEnLabels.length * allNonEn.length;
     try {
       for (const page of withEnLabels) {
+        if (translateLabelsAbortRef.current?.signal.aborted) break;
         const enTrans = page.translations.find((t) => t.locale === 'en');
         const enLabels = parseJson<Record<string, string>>(enTrans?.calculatorLabels, {});
         if (!Object.values(enLabels).some((v) => v?.trim())) continue;
@@ -203,6 +211,15 @@ export default function AdminPagesList() {
         }
 
         for (const loc of localesToTranslate) {
+          if (translateLabelsAbortRef.current?.signal.aborted) break;
+          if (translateLabelsPausedRef.current) {
+            setTranslateLabelsPausedAt({ pageSlug: page.slug, nextLocale: loc });
+            while (translateLabelsPausedRef.current && !translateLabelsAbortRef.current?.signal.aborted) {
+              await new Promise((r) => setTimeout(r, 300));
+            }
+            setTranslateLabelsPausedAt(null);
+            if (translateLabelsAbortRef.current?.signal.aborted) break;
+          }
           step++;
           setTranslateLabelsProgress({ current: step, total: totalSteps, pageSlug: page.slug, locale: loc });
           const res = await fetch('/api/twojastara/ollama/translate-labels', {
@@ -210,6 +227,7 @@ export default function AdminPagesList() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ labels: enLabels, targetLocale: loc }),
             credentials: 'include',
+            signal: translateLabelsAbortRef.current?.signal,
           });
           const data = await res.json();
           if (!res.ok) throw new Error(data.error || `Translate labels to ${loc} failed`);
@@ -258,11 +276,26 @@ export default function AdminPagesList() {
       setTranslateLabelsSuccess(`Translated labels for ${withEnLabels.length} page(s)`);
       setTimeout(() => setTranslateLabelsSuccess(''), 5000);
     } catch (e) {
-      alert(e instanceof Error ? e.message : 'Translate labels failed');
+      const isAbort = e instanceof Error && e.name === 'AbortError';
+      if (!isAbort) alert(e instanceof Error ? e.message : 'Translate labels failed');
     } finally {
       setTranslateLabelsLoading(false);
       setTranslateLabelsProgress(null);
+      setTranslateLabelsPausedAt(null);
+      translateLabelsAbortRef.current = null;
     }
+  }
+
+  function pauseTranslateLabels() {
+    translateLabelsPausedRef.current = true;
+  }
+
+  function resumeTranslateLabels() {
+    translateLabelsPausedRef.current = false;
+  }
+
+  function abortTranslateLabels() {
+    translateLabelsAbortRef.current?.abort();
   }
 
   function handleBatchGenerate() {
@@ -446,6 +479,16 @@ export default function AdminPagesList() {
                 <option value="ollama">Ollama</option>
                 <option value="claude">Claude 4.6</option>
               </select>
+              {generateProgress && (
+                <button
+                  type="button"
+                  onClick={pauseGenerate}
+                  className="btn btn-secondary btn-sm"
+                  style={{ padding: '0.35rem 0.75rem', borderColor: 'var(--error-color)', color: 'var(--error-color)' }}
+                >
+                  Pause
+                </button>
+              )}
               <button
                 type="button"
                 onClick={handleBatchGenerate}
@@ -538,6 +581,46 @@ export default function AdminPagesList() {
                       >
                         Pause
                       </button>
+                    )}
+                    {translateLabelsProgress && !translateLabelsPausedAt && (
+                      <>
+                        <button
+                          type="button"
+                          onClick={pauseTranslateLabels}
+                          className="btn btn-secondary btn-sm"
+                          style={{ padding: '0.35rem 0.75rem', borderColor: 'var(--error-color)', color: 'var(--error-color)' }}
+                        >
+                          Pause
+                        </button>
+                        <button
+                          type="button"
+                          onClick={abortTranslateLabels}
+                          className="btn btn-secondary btn-sm"
+                          style={{ padding: '0.35rem 0.75rem', color: 'var(--error-color)', borderColor: 'var(--error-color)' }}
+                        >
+                          Cancel
+                        </button>
+                      </>
+                    )}
+                    {translateLabelsPausedAt && (
+                      <>
+                        <button
+                          type="button"
+                          onClick={resumeTranslateLabels}
+                          className="btn btn-primary btn-sm"
+                          style={{ padding: '0.35rem 0.75rem' }}
+                        >
+                          Resume
+                        </button>
+                        <button
+                          type="button"
+                          onClick={abortTranslateLabels}
+                          className="btn btn-secondary btn-sm"
+                          style={{ padding: '0.35rem 0.75rem', color: 'var(--error-color)', borderColor: 'var(--error-color)' }}
+                        >
+                          Cancel
+                        </button>
+                      </>
                     )}
                     <button
                       type="button"
@@ -825,6 +908,7 @@ export default function AdminPagesList() {
         <div style={{ marginBottom: '1rem' }}>
           <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
             Translate Labels: {translateLabelsProgress.current} / {translateLabelsProgress.total} — {translateLabelsProgress.pageSlug} ({translateLabelsProgress.locale})
+            {translateLabelsPausedAt && <span style={{ marginLeft: '0.5rem', color: 'var(--warning-color, #f97316)' }}>• Paused</span>}
           </div>
           <div
             style={{
@@ -842,6 +926,9 @@ export default function AdminPagesList() {
                 transition: 'width 0.2s ease',
               }}
             />
+          </div>
+          <div style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)', marginTop: '0.25rem' }}>
+            Keep this tab open. You can switch to other tabs; don&apos;t close or navigate away.
           </div>
         </div>
       )}

@@ -13,10 +13,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
 
-      - name: Fetch unit submodule (ensure populated)
+      - name: Fetch unit submodule (non-recursive; unit points to same repo)
         run: git submodule sync && git submodule update --init unit
 
       - name: Create tarball (exclude node_modules, .next, generated)

@@ -244,14 +244,19 @@ export default function AdminPagesList() {
           }
           step++;
           setTranslateLabelsProgress({ current: step, total: totalSteps, pageSlug: page.slug, pageCategory: page.category ?? 'math', locale: loc });
-          const res = await fetch('/api/twojastara/ollama/translate-labels', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ labels: enLabels, targetLocale: loc }),
-            credentials: 'include',
-            signal: translateLabelsAbortRef.current?.signal,
-          });
-          const data = await res.json();
+          let res: Response;
+          for (let attempt = 0; attempt <= 2; attempt++) {
+            res = await fetch('/api/twojastara/ollama/translate-labels', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ labels: enLabels, targetLocale: loc }),
+              credentials: 'include',
+              signal: translateLabelsAbortRef.current?.signal,
+            });
+            if (res.ok || attempt >= 2) break;
+            await new Promise((r) => setTimeout(r, 2000)); // retry after 2s
+          }
+          const data = await res!.json();
           if (!res.ok) throw new Error(data.error || `Translate labels to ${loc} failed`);
           translatedLabelsByLocale[loc] = data.labels ?? {};
 
@@ -652,7 +657,7 @@ export default function AdminPagesList() {
                       disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
                       className="btn btn-secondary btn-sm"
                       style={{ padding: '0.35rem 0.75rem' }}
-                      title="Translate Calculator labels from EN to all other languages (Ollama)"
+                      title="Translate Calculator labels from EN to all other languages (Ollama). Limit: ~15 min na żądanie. Przy timeout — spróbuj ponownie lub skróć treść. Retry: 2x."
                     >
                       {translateLabelsLoading ? 'Translate Labels…' : 'Translate Labels'}
                     </button>

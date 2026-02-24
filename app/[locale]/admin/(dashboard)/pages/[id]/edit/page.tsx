@@ -397,13 +397,18 @@ export default function AdminEditPage() {
     setTranslateLabelsLoading(true);
     setError('');
     try {
-      const res = await fetch('/api/twojastara/ollama/translate-labels', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ labels: enLabels, targetLocale: activeLocale }),
-        credentials: 'include',
-      });
-      const data = await res.json();
+      let res: Response;
+      for (let attempt = 0; attempt <= 2; attempt++) {
+        res = await fetch('/api/twojastara/ollama/translate-labels', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ labels: enLabels, targetLocale: activeLocale }),
+          credentials: 'include',
+        });
+        if (res.ok || attempt >= 2) break;
+        await new Promise((r) => setTimeout(r, 2000));
+      }
+      const data = await res!.json();
       if (!res.ok) throw new Error(data.error || 'Translate labels failed');
       updateTranslation(activeLocale, 'calculatorLabels', data.labels ?? {});
       setTranslateSuccess(`Labels translated to ${LOCALE_NAMES[activeLocale] ?? activeLocale}`);
@@ -1303,7 +1308,7 @@ export default function AdminEditPage() {
                             onClick={handleTranslateLabels}
                             disabled={translateLabelsLoading || !Object.values(translations.en?.calculatorLabels ?? {}).some((v) => v?.trim())}
                             className="btn btn-secondary btn-sm"
-                            title="Translate labels from EN to this language (Ollama)"
+                            title="Translate labels from EN to this language (Ollama). Limit: ~15 min na żądanie. Przy timeout — spróbuj ponownie lub skróć treść. Retry: 2x."
                           >
                             {translateLabelsLoading ? 'Translating…' : 'Translate Labels'}
                           </button>

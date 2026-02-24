@@ -64,10 +64,10 @@ const ADDING_FRACTIONS_EXAMPLE = `'use client';
 
 /*
  * CALCULATOR CODE — Admin-created calculators run in Sandpack with these rules:
- * - Use useTranslations(), CopyButton, useScrollToResult from stubs (auto-injected)
- * - Use t('key') for labels; keys are auto-extracted and filled in Calculator labels [en] below
- * - Export one component (function or class) as default
- * - Supports split-view layout, number-input class, btn btn-primary/secondary
+ * - Import from next-intl, @/hooks/useScrollToResult, @/components/CopyButton (replaced by stubs in preview)
+ * - Use t('key') for labels; keys (e.g. resultFraction, resultDecimal) map to Calculator labels below
+ * - Add/override keys in Calculator labels [locale] — custom labels override defaults, empty falls back to English
+ * - Export one component as default; supports split-view layout, number-input, btn btn-primary/secondary
  */
 
 import { useState } from 'react';

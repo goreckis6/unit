@@ -20,10 +20,13 @@ const DEFAULT_LABELS: Record<string, string> = {
 function buildStubsCode(labels: Record<string, string> | null | undefined): string {
   const LABELS = { ...DEFAULT_LABELS, ...(labels || {}) };
   const labJson = JSON.stringify(LABELS);
+  const defaultsJson = JSON.stringify(DEFAULT_LABELS);
   return [
     "import React, { useRef } from 'react';",
     `const LABELS = ${labJson};`,
-    "export const useTranslations = () => (key: string) => LABELS[key] || key;",
+    `const DEFAULT_LABELS = ${defaultsJson};`,
+    // Prefer custom label if non-empty; else default; else key (so we never show raw key when default exists)
+    "export const useTranslations = () => (key: string) => { const v = LABELS[key]; return (v != null && String(v).trim() !== '') ? String(v).trim() : (DEFAULT_LABELS[key] ?? key); };",
     "export const useScrollToResult = () => useRef(null);",
     "export const CopyButton = ({ text }: { text: string }) => (",
     "  <button",

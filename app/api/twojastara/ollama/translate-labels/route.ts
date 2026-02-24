@@ -1,0 +1,108 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { getSession } from '@/lib/auth';
+import { LOCALE_NAMES } from '@/lib/admin-locales';
+
+const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
+const OLLAMA_TIMEOUT_MS = 120_000; // 2 min for short labels
+
+async function ollamaChat(messages: { role: string; content: string }[]) {
+  const apiKey = process.env.OLLAMA_API_KEY;
+  if (!apiKey) {
+    throw new Error('OLLAMA_API_KEY environment variable is not set');
+  }
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), OLLAMA_TIMEOUT_MS);
+  try {
+    const res = await fetch('https://ollama.com/api/chat', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({ model: MODEL, messages, stream: false }),
+      signal: controller.signal,
+    });
+    clearTimeout(timeoutId);
+    if (!res.ok) {
+      const err = await res.text();
+      throw new Error(err || `Ollama API error: ${res.status}`);
+    }
+    const data = (await res.json()) as { message?: { content?: string } };
+    return data?.message?.content ?? '';
+  } catch (e) {
+    clearTimeout(timeoutId);
+    if (e instanceof Error && e.name === 'AbortError') {
+      throw new Error('Ollama API timeout — try again');
+    }
+    throw e;
+  }
+}
+
+/**
+ * POST /api/twojastara/ollama/translate-labels
+ * Body: { labels: Record<string, string>, targetLocale: string }
+ * Translates label values from English to targetLocale. Keys stay the same.
+ */
+export async function POST(request: NextRequest) {
+  try {
+    const session = await getSession();
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const body = await request.json();
+    const { labels, targetLocale } = body;
+    if (!targetLocale || typeof targetLocale !== 'string') {
+      return NextResponse.json({ error: 'targetLocale is required (e.g. pl, de)' }, { status: 400 });
+    }
+    if (targetLocale === 'en') {
+      return NextResponse.json({ labels: labels ?? {} });
+    }
+
+    const enLabels =
+      labels && typeof labels === 'object' && !Array.isArray(labels)
+        ? (labels as Record<string, string>)
+        : {};
+    const entries = Object.entries(enLabels).filter(([, v]) => v != null && String(v).trim());
+
+    if (entries.length === 0) {
+      return NextResponse.json({ labels: enLabels });
+    }
+
+    const targetLanguage = LOCALE_NAMES[targetLocale] || targetLocale;
+    const systemPrompt = `Translate UI label values from English to ${targetLanguage}. Source is ALWAYS English.
+
+RULES:
+- Output ONLY valid JSON object: same keys as input, values translated to ${targetLanguage}
+- Keys stay unchanged (e.g. "calculate", "reset")
+- Values: short UI strings, translate naturally for native ${targetLanguage} speakers
+- No markdown, no extra text, just the JSON object`;
+
+    const userContent = `Translate these label values to ${targetLanguage}:\n${JSON.stringify(Object.fromEntries(entries), null, 2)}`;
+
+    const raw = await ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]);
+    const trimmed = (raw || '').trim();
+    const jsonMatch = trimmed.match(/\{[\s\S]*\}/);
+    const jsonStr = jsonMatch ? jsonMatch[0] : trimmed;
+    let parsed: Record<string, string>;
+    try {
+      parsed = JSON.parse(jsonStr) as Record<string, string>;
+    } catch {
+      throw new Error('Ollama returned invalid JSON. Try again.');
+    }
+
+    const result: Record<string, string> = { ...enLabels };
+    for (const [k, v] of entries) {
+      const translated = parsed[k];
+      if (translated != null && typeof translated === 'string' && translated.trim()) {
+        result[k] = translated.trim();
+      }
+    }
+
+    return NextResponse.json({ labels: result });
+  } catch (error) {
+    console.error('Ollama translate-labels error:', error);
+    const msg = error instanceof Error ? error.message : 'Failed to translate labels';
+    return NextResponse.json({ error: msg }, { status: 500 });
+  }
+}

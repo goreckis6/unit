@@ -294,6 +294,7 @@ export default function AdminNewPage() {
   const [translateSuccess, setTranslateSuccess] = useState('');
   const [translateStartFrom, setTranslateStartFrom] = useState('');
   const [translateOnlyOne, setTranslateOnlyOne] = useState(false);
+  const [translateLabelsLoading, setTranslateLabelsLoading] = useState(false);
 
   const t = translations[activeLocale] ?? { locale: activeLocale, title: '', displayTitle: '', description: '', content: '', relatedCalculators: [], faqItems: [], calculatorLabels: {} };
 
@@ -369,6 +370,35 @@ export default function AdminNewPage() {
     };
     reader.readAsText(file);
     e.target.value = '';
+  }
+
+  async function handleTranslateLabels() {
+    if (activeLocale === 'en') return;
+    const enLabels = translations.en?.calculatorLabels ?? {};
+    const hasValues = Object.values(enLabels).some((v) => v?.trim());
+    if (!hasValues) {
+      setError('Fill Calculator labels [en] first, then switch to another language and click Translate Labels');
+      return;
+    }
+    setTranslateLabelsLoading(true);
+    setError('');
+    try {
+      const res = await fetch('/api/twojastara/ollama/translate-labels', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ labels: enLabels, targetLocale: activeLocale }),
+        credentials: 'include',
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Translate labels failed');
+      updateTranslation(activeLocale, 'calculatorLabels', data.labels ?? {});
+      setTranslateSuccess(`Labels translated to ${LOCALE_NAMES[activeLocale] ?? activeLocale}`);
+      setTimeout(() => setTranslateSuccess(''), 4000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Translate labels failed');
+    } finally {
+      setTranslateLabelsLoading(false);
+    }
   }
 
   async function handleGeneratePost(provider: 'ollama' | 'claude' = 'ollama') {
@@ -1084,6 +1114,17 @@ export default function AdminNewPage() {
                         >
                           Use all defaults
                         </button>
+                        {activeLocale !== 'en' && (
+                          <button
+                            type="button"
+                            onClick={handleTranslateLabels}
+                            disabled={translateLabelsLoading || !Object.values(translations.en?.calculatorLabels ?? {}).some((v) => v?.trim())}
+                            className="btn btn-secondary btn-sm"
+                            title="Translate labels from EN to this language (Ollama)"
+                          >
+                            {translateLabelsLoading ? 'Translating…' : 'Translate Labels'}
+                          </button>
+                        )}
                         <button
                           type="button"
                           onClick={() => {

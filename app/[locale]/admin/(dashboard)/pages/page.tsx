@@ -41,6 +41,7 @@ type Page = {
   slug: string;
   category: string | null;
   published: boolean;
+  calculatorCode?: string | null;
   translations: PageTranslation[];
 };
 
@@ -89,6 +90,8 @@ export default function AdminPagesList() {
   const [bulkImportResult, setBulkImportResult] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
   const [bulkDeleteLoading, setBulkDeleteLoading] = useState(false);
   const [bulkPublishLoading, setBulkPublishLoading] = useState(false);
+  const [translateLabelsLoading, setTranslateLabelsLoading] = useState(false);
+  const [translateLabelsProgress, setTranslateLabelsProgress] = useState<{ current: number; total: number; pageSlug: string; locale: string } | null>(null);
   const [generatedIdsThisRun, setGeneratedIdsThisRun] = useState<Set<string>>(new Set());
   const [activeBookmark, setActiveBookmark] = useState<PageStage>('new');
 
@@ -157,6 +160,107 @@ export default function AdminPagesList() {
       alert(e instanceof Error ? e.message : 'Bulk publish failed');
     } finally {
       setBulkPublishLoading(false);
+    }
+  }
+
+  async function handleBulkTranslateLabels() {
+    const ids = Array.from(selectedIds);
+    if (ids.length === 0) return;
+    const toProcess = pages.filter((p) => ids.includes(p.id) && (p.calculatorCode ?? '').trim());
+    const withEnLabels = toProcess.filter((p) => {
+      const en = p.translations.find((t) => t.locale === 'en');
+      const lab = parseJson<Record<string, string>>(en?.calculatorLabels, {});
+      return Object.values(lab).some((v) => v?.trim());
+    });
+    if (withEnLabels.length === 0) {
+      alert('Select pages with Calculator code and EN labels filled. Edit a page, add labels for [en], then try again.');
+      return;
+    }
+    const allNonEn = ADMIN_LOCALES.filter((l) => l !== 'en');
+    setTranslateLabelsLoading(true);
+    setTranslateLabelsProgress(null);
+    let step = 0;
+    let totalSteps = withEnLabels.length * allNonEn.length;
+    try {
+      for (const page of withEnLabels) {
+        const enTrans = page.translations.find((t) => t.locale === 'en');
+        const enLabels = parseJson<Record<string, string>>(enTrans?.calculatorLabels, {});
+        if (!Object.values(enLabels).some((v) => v?.trim())) continue;
+
+        const pageRes = await fetch(`/api/twojastara/pages/${page.id}`);
+        const fullPage = await pageRes.json();
+        if (!pageRes.ok || !fullPage?.translations) continue;
+
+        const fullTrans = fullPage.translations ?? [];
+        const existingLocales = new Set(fullTrans.map((t: { locale: string }) => t.locale));
+        const localesToTranslate = allNonEn.filter((l) => existingLocales.has(l));
+        if (localesToTranslate.length === 0) continue;
+
+        const translatedLabelsByLocale: Record<string, Record<string, string>> = {};
+        for (const t of fullTrans) {
+          translatedLabelsByLocale[t.locale] = parseJson<Record<string, string>>(t.calculatorLabels, {});
+        }
+
+        for (const loc of localesToTranslate) {
+          step++;
+          setTranslateLabelsProgress({ current: step, total: totalSteps, pageSlug: page.slug, locale: loc });
+          const res = await fetch('/api/twojastara/ollama/translate-labels', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ labels: enLabels, targetLocale: loc }),
+            credentials: 'include',
+          });
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.error || `Translate labels to ${loc} failed`);
+          translatedLabelsByLocale[loc] = data.labels ?? {};
+        }
+
+        const translations = fullTrans.map((t: { locale: string; title: string; displayTitle?: string | null; description?: string | null; content?: string | null; relatedCalculators?: unknown; faqItems?: unknown; calculatorLabels?: unknown }) => ({
+          locale: t.locale,
+          title: t.title ?? '',
+          displayTitle: t.displayTitle ?? null,
+          description: t.description ?? null,
+          content: t.content ?? null,
+          relatedCalculators: parseJson<{ title: string; description: string; path: string }[]>(t.relatedCalculators, []),
+          faqItems: parseJson<{ question: string; answer: string }[]>(t.faqItems, []),
+          calculatorLabels: translatedLabelsByLocale[t.locale] ?? parseJson<Record<string, string>>(t.calculatorLabels, {}),
+        }));
+        const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            slug: fullPage.slug,
+            category: fullPage.category,
+            published: fullPage.published,
+            calculatorCode: fullPage.calculatorCode,
+            linkedCalculatorPath: fullPage.linkedCalculatorPath,
+            relatedCalculatorsMode: fullPage.relatedCalculatorsMode ?? 'manual',
+            relatedCalculatorsCount: fullPage.relatedCalculatorsCount ?? 6,
+            translations,
+          }),
+          credentials: 'include',
+        });
+        if (!patchRes.ok) throw new Error((await patchRes.json()).error || 'Failed to save page');
+
+        setPages((prev) =>
+          prev.map((p) => {
+            if (p.id !== page.id) return p;
+            const updated = p.translations.map((t) => {
+              const lab = translatedLabelsByLocale[t.locale];
+              return lab && Object.keys(lab).length ? { ...t, calculatorLabels: JSON.stringify(lab) } : t;
+            });
+            return { ...p, translations: updated };
+          })
+        );
+      }
+      setSelectedIds(new Set());
+      setTranslateSuccess(`Translated labels for ${withEnLabels.length} page(s)`);
+      setTimeout(() => setTranslateSuccess(''), 5000);
+    } catch (e) {
+      alert(e instanceof Error ? e.message : 'Translate labels failed');
+    } finally {
+      setTranslateLabelsLoading(false);
+      setTranslateLabelsProgress(null);
     }
   }
 
@@ -316,7 +420,7 @@ export default function AdminPagesList() {
                 onClick={toggleSelectAll}
                 className="btn btn-secondary btn-sm"
                 style={{ padding: '0.35rem 0.75rem' }}
-                disabled={!!generateProgress || !!translateProgress || filteredPages.length === 0}
+                disabled={!!generateProgress || !!translateProgress || !!translateLabelsLoading || filteredPages.length === 0}
               >
                 {filteredPages.every((p) => selectedIds.has(p.id)) && filteredPages.length > 0
                   ? 'Odznacz wszystko'
@@ -325,7 +429,7 @@ export default function AdminPagesList() {
               <button
                 type="button"
                 onClick={handleBulkDelete}
-                disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || bulkDeleteLoading}
+                disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading || bulkDeleteLoading}
                 className="btn btn-secondary btn-sm"
                 style={{ padding: '0.35rem 0.75rem', color: 'var(--error-color)', borderColor: 'var(--error-color)' }}
               >
@@ -334,7 +438,7 @@ export default function AdminPagesList() {
               <select
                 value={generateProvider}
                 onChange={(e) => setGenerateProvider(e.target.value as GenerateProviderType)}
-                disabled={!!generateProgress || !!translateProgress}
+                disabled={!!generateProgress || !!translateProgress || !!translateLabelsLoading}
                 className="admin-form-select"
                 style={{ padding: '0.35rem 0.5rem', fontSize: '0.8rem' }}
               >
@@ -344,7 +448,7 @@ export default function AdminPagesList() {
               <button
                 type="button"
                 onClick={handleBatchGenerate}
-                disabled={selectedCount === 0 || !!generateProgress || !!translateProgress}
+                disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
                 className="btn btn-primary btn-sm"
                 style={{ padding: '0.35rem 0.75rem' }}
               >
@@ -436,16 +540,27 @@ export default function AdminPagesList() {
                     )}
                     <button
                       type="button"
-                      onClick={handleBatchTranslate}
-                      disabled={
-                        selectedCount === 0 ||
-                        !!generateProgress ||
-                        !!translateProgress
-                      }
+                      onClick={handleBulkTranslateLabels}
+                      disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
                       className="btn btn-secondary btn-sm"
                       style={{ padding: '0.35rem 0.75rem' }}
+                      title="Translate Calculator labels from EN to all other languages (Ollama)"
                     >
-                      {translateProgress
+                      {translateLabelsLoading ? 'Translate Labels…' : 'Translate Labels'}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleBatchTranslate}
+                disabled={
+                  selectedCount === 0 ||
+                  !!generateProgress ||
+                  !!translateProgress ||
+                  !!translateLabelsLoading
+                }
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+              >
+                {translateProgress
                         ? `Tłumaczenie… (${translateProgress.current}/${translateProgress.total})`
                         : translatePausedAt
                           ? `Resume od (${effectiveStart})`
@@ -697,6 +812,31 @@ export default function AdminPagesList() {
               style={{
                 height: '100%',
                 width: `${(generateProgress.current / generateProgress.total) * 100}%`,
+                backgroundColor: 'var(--primary, #2563eb)',
+                transition: 'width 0.2s ease',
+              }}
+            />
+          </div>
+        </div>
+      )}
+
+      {translateLabelsProgress && (
+        <div style={{ marginBottom: '1rem' }}>
+          <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
+            Translate Labels: {translateLabelsProgress.current} / {translateLabelsProgress.total} — {translateLabelsProgress.pageSlug} ({translateLabelsProgress.locale})
+          </div>
+          <div
+            style={{
+              height: 8,
+              backgroundColor: 'var(--border-color)',
+              borderRadius: 4,
+              overflow: 'hidden',
+            }}
+          >
+            <div
+              style={{
+                height: '100%',
+                width: `${translateLabelsProgress.total > 0 ? (translateLabelsProgress.current / translateLabelsProgress.total) * 100 : 0}%`,
                 backgroundColor: 'var(--primary, #2563eb)',
                 transition: 'width 0.2s ease',
               }}

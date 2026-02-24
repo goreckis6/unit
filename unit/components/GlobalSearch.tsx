@@ -1,0 +1,169 @@
+'use client';
+
+import { useState, useMemo, useRef, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
+import { getAllCalculators, type Calculator } from '@/lib/all-calculators';
+
+interface SearchResult extends Calculator {
+  title: string;
+  description: string;
+  categoryLabel: string;
+}
+
+export function GlobalSearch() {
+  const t = useTranslations('calculators');
+  const tCommon = useTranslations('common');
+  const tHome = useTranslations('common.homePage');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const allCalculators = getAllCalculators();
+
+  const filteredResults = useMemo(() => {
+    if (!searchQuery.trim()) {
+      return [];
+    }
+
+    const query = searchQuery.toLowerCase().trim();
+    const results: SearchResult[] = [];
+
+    allCalculators.forEach((calc) => {
+      const title = t(calc.titleKey).toLowerCase();
+      const description = t(calc.descKey).toLowerCase();
+      
+      if ((title ?? '').includes(query) || (description ?? '').includes(query)) {
+        let categoryLabel = '';
+        if (calc.category === 'math') {
+          categoryLabel = t('mathCalculators.badge') || 'Math';
+        } else if (calc.category === 'electric') {
+          categoryLabel = t('electricCalculators.badge') || 'Electric';
+        } else if (calc.category === 'biology') {
+          categoryLabel = t('biologyCalculators.badge') || 'Biology';
+        } else if (calc.category === 'conversion') {
+          categoryLabel = t('conversionCalculators.badge') || 'Conversion';
+        } else if (calc.category === 'physics') {
+          categoryLabel = t('physicsCalculators.badge') || 'Physics';
+        } else if (calc.category === 'real-life') {
+          categoryLabel = t('realLifeCalculators.badge') || 'Real-life';
+        } else if (calc.category === 'finance') {
+          categoryLabel = t('financeCalculators.badge') || 'Finance';
+        } else if (calc.category === 'others') {
+          categoryLabel = t('otherCalculators.badge') || 'Others';
+        }
+
+        results.push({
+          ...calc,
+          title: t(calc.titleKey),
+          description: t(calc.descKey),
+          categoryLabel,
+        });
+      }
+    });
+
+    return results.slice(0, 10); // Limit to 10 results
+  }, [searchQuery, t]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
+
+  const handleInputFocus = () => {
+    if (searchQuery.trim()) {
+      setIsOpen(true);
+    }
+  };
+
+  const handleInputChange = (value: string) => {
+    setSearchQuery(value);
+    setIsOpen(value.trim().length > 0);
+  };
+
+  const handleResultClick = () => {
+    setSearchQuery('');
+    setIsOpen(false);
+    inputRef.current?.blur();
+  };
+
+  return (
+    <div className="global-search" ref={searchRef}>
+      <div className="global-search-wrapper">
+        <svg className="global-search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <input
+          ref={inputRef}
+          type="text"
+          value={searchQuery}
+          onChange={(e) => handleInputChange(e.target.value)}
+          onFocus={handleInputFocus}
+          placeholder={tHome('searchPlaceholder') || 'Search all calculators...'}
+          className="global-search-input"
+        />
+        {searchQuery && (
+          <button
+            onClick={() => handleInputChange('')}
+            className="global-search-clear"
+            aria-label="Clear search"
+          >
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        )}
+      </div>
+      
+      {isOpen && filteredResults.length > 0 && (
+        <div className="global-search-results">
+          <div className="global-search-results-header">
+            {filteredResults.length} {tHome('searchResultsFound') || 'results found'}
+          </div>
+          {filteredResults.map((result) => (
+            <Link
+              key={result.id}
+              href={result.path}
+              className="global-search-result-item"
+              onClick={handleResultClick}
+            >
+              <div className="global-search-result-content">
+                <div className="global-search-result-header">
+                  <h3 className="global-search-result-title">{result.title}</h3>
+                  <span className="global-search-result-badge">{result.categoryLabel}</span>
+                </div>
+              </div>
+              <div className="global-search-result-arrow">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+
+      {isOpen && searchQuery.trim() && filteredResults.length === 0 && (
+        <div className="global-search-no-results">
+          <svg className="global-search-no-results-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <p className="global-search-no-results-text">{tHome('searchNoResults') || 'No results found'}</p>
+          <p className="global-search-no-results-hint">{tHome('searchTryDifferent') || 'Try a different search term'}</p>
+        </div>
+      )}
+    </div>
+  );
+}

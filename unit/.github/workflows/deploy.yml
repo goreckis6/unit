@@ -1,0 +1,178 @@
+name: Deploy Next.js (Admin + API) to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to VPS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Fetch unit submodule (non-recursive; unit points to same repo)
+        run: git submodule sync && git submodule update --init unit
+
+      - name: Create tarball (exclude node_modules, .next, generated)
+        run: |
+          cd unit
+          tar --exclude=node_modules --exclude=.next --exclude=dev.db --exclude=generated -czf ../unit-src.tar.gz .
+          ls -la ../unit-src.tar.gz
+
+      - name: Create DB directory and prepare deployment
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.FRONTEND_VPS_HOST }}
+          username: ${{ secrets.FRONTEND_VPS_USERNAME }}
+          key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          script: |
+            set -eo pipefail
+            APP_DIR="/var/www/calculinohub"
+            DB_DIR="/var/www/db-calculino"
+            SERVICE_NAME="calculinohub"
+
+            sudo mkdir -p "$APP_DIR" "$DB_DIR"
+            sudo chown -R ${{ secrets.FRONTEND_VPS_USERNAME }}:${{ secrets.FRONTEND_VPS_USERNAME }} "$APP_DIR" "$DB_DIR"
+
+            pm2 stop "$SERVICE_NAME" 2>/dev/null || true
+            pm2 delete "$SERVICE_NAME" 2>/dev/null || true
+            pm2 stop unitconverterhub 2>/dev/null || true
+            pm2 delete unitconverterhub 2>/dev/null || true
+
+            echo "📦 DB directory ready at $DB_DIR"
+            echo "📦 App directory ready at $APP_DIR"
+
+      - name: Copy source tarball to server
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s' "$SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
+          scp -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no unit-src.tar.gz "$VPS_USER@$VPS_HOST:/tmp/"
+        env:
+          SSH_KEY: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          VPS_USER: ${{ secrets.FRONTEND_VPS_USERNAME }}
+          VPS_HOST: ${{ secrets.FRONTEND_VPS_HOST }}
+
+      - name: Extract, build on server, setup env, and start app
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.FRONTEND_VPS_HOST }}
+          username: ${{ secrets.FRONTEND_VPS_USERNAME }}
+          key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          command_timeout: 20m
+          script: |
+            set -eo pipefail
+            APP_DIR="/var/www/calculinohub"
+            DB_DIR="/var/www/db-calculino"
+            DB_PATH="$DB_DIR/dev.db"
+            SERVICE_NAME="calculinohub"
+
+            sudo chown -R ${{ secrets.FRONTEND_VPS_USERNAME }}:${{ secrets.FRONTEND_VPS_USERNAME }} "$APP_DIR"
+
+            # Preserve .env across deploys
+            ENV_FILE="$APP_DIR/.env"
+            [ -f "$ENV_FILE" ] && cp "$ENV_FILE" /tmp/deploy-env.bak || true
+
+            # Extract source tarball
+            if [ ! -f /tmp/unit-src.tar.gz ]; then
+              echo "❌ /tmp/unit-src.tar.gz not found. Contents of /tmp:"
+              ls -la /tmp
+              exit 1
+            fi
+            cd "$APP_DIR"
+            rm -rf * .[!.]* 2>/dev/null || true
+            tar -xzf /tmp/unit-src.tar.gz
+            rm -f /tmp/unit-src.tar.gz
+
+            # Restore or create .env (Prisma needs DATABASE_URL for generate/build)
+            export DATABASE_URL="file:$DB_PATH"
+            if [ -f /tmp/deploy-env.bak ]; then
+              cp /tmp/deploy-env.bak "$ENV_FILE"
+              grep -v '^DATABASE_URL=\|^ADMIN_SESSION_SECRET=\|^OLLAMA_API_KEY=\|^ANTHROPIC_API_KEY=' "$ENV_FILE" > "${ENV_FILE}.tmp" 2>/dev/null || true
+              echo 'DATABASE_URL="file:'"$DB_PATH"'"' >> "${ENV_FILE}.tmp"
+              [ -n "${{ secrets.ADMIN_SESSION_SECRET }}" ] && echo 'ADMIN_SESSION_SECRET='"${{ secrets.ADMIN_SESSION_SECRET }}" >> "${ENV_FILE}.tmp"
+              [ -n "${{ secrets.OLLAMA_API_KEY }}" ] && echo 'OLLAMA_API_KEY='"${{ secrets.OLLAMA_API_KEY }}" >> "${ENV_FILE}.tmp"
+              [ -n "${{ secrets.ANTHROPIC_API_KEY }}" ] && echo 'ANTHROPIC_API_KEY='"${{ secrets.ANTHROPIC_API_KEY }}" >> "${ENV_FILE}.tmp"
+              mv "${ENV_FILE}.tmp" "$ENV_FILE"
+              rm -f /tmp/deploy-env.bak
+            else
+              {
+                echo 'DATABASE_URL="file:'"$DB_PATH"'"'
+                [ -n "${{ secrets.ADMIN_SESSION_SECRET }}" ] && echo 'ADMIN_SESSION_SECRET='"${{ secrets.ADMIN_SESSION_SECRET }}"
+                [ -n "${{ secrets.OLLAMA_API_KEY }}" ] && echo 'OLLAMA_API_KEY='"${{ secrets.OLLAMA_API_KEY }}"
+                [ -n "${{ secrets.ANTHROPIC_API_KEY }}" ] && echo 'ANTHROPIC_API_KEY='"${{ secrets.ANTHROPIC_API_KEY }}"
+              } > "$ENV_FILE"
+            fi
+
+            # Install deps, generate Prisma, build on server (VPS has more RAM than GitHub runner)
+            npm ci 2>/dev/null || npm install
+            npx prisma generate
+            NODE_OPTIONS="--max-old-space-size=4096" npm run build
+
+            # Use project node_modules for runtime (standalone tracing misses better-sqlite3 native binding)
+            rm -rf "$APP_DIR/.next/standalone/node_modules"
+            ln -sfn "$APP_DIR/node_modules" "$APP_DIR/.next/standalone/node_modules"
+
+            # Prisma bundled code looks for better_sqlite3.node in @prisma/client - copy it there
+            NODE_ABI=$(node -e "console.log('node-v' + process.versions.modules + '-' + process.platform + '-' + process.arch)")
+            BINDING_DIR="$APP_DIR/node_modules/@prisma/client/lib/binding/$NODE_ABI"
+            mkdir -p "$BINDING_DIR"
+            BS3_NODE=$(find "$APP_DIR/node_modules" -path "*better-sqlite3*" -name "better_sqlite3.node" 2>/dev/null | head -1)
+            if [ -n "$BS3_NODE" ]; then
+              cp "$BS3_NODE" "$BINDING_DIR/"
+              echo "✓ Copied better_sqlite3.node to $BINDING_DIR"
+            else
+              echo "⚠ better_sqlite3.node not found - login may fail"
+            fi
+
+            # Verify server.js
+            if [ ! -f "$APP_DIR/.next/standalone/server.js" ]; then
+              echo "❌ server.js not found"
+              ls -la "$APP_DIR/.next/standalone/" || true
+              exit 1
+            fi
+
+            # Symlink .next/static if needed
+            if [ ! -L "$APP_DIR/.next/standalone/.next/static" ] && [ -d "$APP_DIR/.next/static" ]; then
+              ln -sf "$APP_DIR/.next/static" "$APP_DIR/.next/standalone/.next/static" 2>/dev/null || true
+            fi
+
+            # Copy public folder (standalone mode skips it; needed for sitemap.xsl, favicon, etc.)
+            [ -d "$APP_DIR/public" ] && cp -r "$APP_DIR/public" "$APP_DIR/.next/standalone/"
+
+            # Prisma migrate & seed
+            cd "$APP_DIR"
+            if [ -d prisma ]; then
+              npx prisma migrate deploy
+              npx prisma db seed 2>/dev/null || echo "⚠️ Seed skipped (run manually if needed)"
+            fi
+
+            # Caddy
+            if [ -f "$APP_DIR/Caddyfile" ]; then
+              sudo mkdir -p /etc/caddy
+              sudo cp "$APP_DIR/Caddyfile" /etc/caddy/Caddyfile
+              sudo chown root:root /etc/caddy/Caddyfile
+              command -v caddy >/dev/null 2>&1 && sudo caddy reload --config /etc/caddy/Caddyfile 2>/dev/null || true
+            fi
+
+            mkdir -p "$APP_DIR/logs"
+
+            # PM2
+            if ! command -v pm2 >/dev/null 2>&1; then
+              sudo npm install -g pm2
+            fi
+            cd "$APP_DIR"
+            pm2 start ecosystem.config.cjs --update-env
+            pm2 save
+            pm2 startup systemd -u ${{ secrets.FRONTEND_VPS_USERNAME }} --hp /home/${{ secrets.FRONTEND_VPS_USERNAME }} 2>/dev/null || true
+
+            sleep 3
+            pm2 status || true
+            curl -f http://localhost:3000 >/dev/null 2>&1 && echo "✅ App OK" || echo "⚠️ App not responding yet"
+
+            echo "✅ Deploy complete. DB: $DB_PATH"

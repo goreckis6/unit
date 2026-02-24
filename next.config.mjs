@@ -14,9 +14,7 @@ const nextConfig = {
     '@prisma/adapter-better-sqlite3',
     'bindings',
   ],
-  experimental: {
-    webpackMemoryOptimizations: true,
-  },
+  // webpackMemoryOptimizations disabled - can cause __webpack_modules__[moduleId] errors
   outputFileTracingRoot: __dirname,
   outputFileTracingIncludes: {
     '/*': [

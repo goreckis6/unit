@@ -65,6 +65,11 @@ export default function AdminPagesList() {
   const [translateOnlyOne, setTranslateOnlyOne] = useState(false);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
   const [generateProvider, setGenerateProvider] = useState<GenerateProviderType>('ollama');
+  const [showBulkImport, setShowBulkImport] = useState(false);
+  const [bulkImportJson, setBulkImportJson] = useState('');
+  const [bulkImportLoading, setBulkImportLoading] = useState(false);
+  const [bulkImportResult, setBulkImportResult] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
+  const [bulkDeleteLoading, setBulkDeleteLoading] = useState(false);
 
   useEffect(() => {
     fetch('/api/twojastara/pages')
@@ -123,6 +128,108 @@ export default function AdminPagesList() {
     if (res.ok) setPages((p) => p.filter((x) => x.id !== id));
   }
 
+  async function handleBulkDelete() {
+    if (selectedIds.size === 0) return;
+    if (!confirm(`Delete ${selectedIds.size} selected page(s)? This cannot be undone.`)) return;
+    setBulkDeleteLoading(true);
+    try {
+      const res = await fetch('/api/twojastara/pages/bulk-delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: Array.from(selectedIds) }),
+        credentials: 'include',
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        alert(data.error || 'Bulk delete failed');
+        return;
+      }
+      setPages((p) => p.filter((x) => !selectedIds.has(x.id)));
+      setSelectedIds(new Set());
+    } catch (e) {
+      alert(e instanceof Error ? e.message : 'Bulk delete failed');
+    } finally {
+      setBulkDeleteLoading(false);
+    }
+  }
+
+  async function handleBulkImport() {
+    setBulkImportResult(null);
+    let items: unknown[];
+    try {
+      const parsed = JSON.parse(bulkImportJson);
+      items = Array.isArray(parsed) ? parsed : Array.isArray(parsed?.items) ? parsed.items : [];
+    } catch {
+      setBulkImportResult({ type: 'error', msg: 'Invalid JSON' });
+      return;
+    }
+    if (items.length === 0) {
+      setBulkImportResult({ type: 'error', msg: 'No items. Use format: [{ "category": "math", "slug": "my-page", "title": "SEO Title", "displayTitle": "H1 Title", "description": "Meta description" }, ...]' });
+      return;
+    }
+    setBulkImportLoading(true);
+    try {
+      const res = await fetch('/api/twojastara/pages/bulk-import', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items }),
+        credentials: 'include',
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setBulkImportResult({ type: 'error', msg: data.error || 'Import failed' });
+        return;
+      }
+      setBulkImportResult({ type: 'success', msg: data.message || `Created ${data.created}, skipped ${data.skipped}` });
+      setBulkImportJson('');
+      const listRes = await fetch('/api/twojastara/pages');
+      const listData = await listRes.json();
+      if (Array.isArray(listData)) setPages(listData);
+    } catch (e) {
+      setBulkImportResult({ type: 'error', msg: e instanceof Error ? e.message : 'Import failed' });
+    } finally {
+      setBulkImportLoading(false);
+    }
+  }
+
+  function handleBulkImportFile(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      setBulkImportJson(String(reader.result ?? ''));
+      setBulkImportResult(null);
+    };
+    reader.readAsText(file);
+    e.target.value = '';
+  }
+
+  function handleDownloadTemplate() {
+    const template = [
+      {
+        category: 'math',
+        slug: 'fractions-averaging',
+        title: 'Fractions Averaging Calculator - Free Online Tool | Site Name',
+        displayTitle: 'Fractions Averaging Calculator',
+        description: 'Calculate the average of multiple fractions instantly. Free online tool.',
+      },
+      {
+        category: 'electric',
+        slug: 'amp-to-kw-converter',
+        title: 'Amps to kW Converter | Free Calculator',
+        displayTitle: 'Amps to kW Converter',
+        description: 'Convert amperes to kilowatts easily. Free online calculator.',
+      },
+    ];
+    const blob = new Blob([JSON.stringify(template, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'pages-bulk-import-template.json';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   if (loading) return <p style={{ color: 'var(--text-secondary)' }}>Loading pages...</p>;
 
   const selectedCount = selectedIds.size;
@@ -142,6 +249,15 @@ export default function AdminPagesList() {
                 disabled={!!generateProgress || !!translateProgress}
               >
                 {selectedCount === pages.length ? 'Odznacz wszystko' : 'Zaznacz wszystko'}
+              </button>
+              <button
+                type="button"
+                onClick={handleBulkDelete}
+                disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || bulkDeleteLoading}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem', color: 'var(--error-color)', borderColor: 'var(--error-color)' }}
+              >
+                {bulkDeleteLoading ? 'Deleting…' : `Delete (${selectedCount})`}
               </button>
               <select
                 value={generateProvider}
@@ -273,8 +389,89 @@ export default function AdminPagesList() {
           <Link href="/twojastara/pages/new" className="btn btn-primary">
             + New Page
           </Link>
+          <button
+            type="button"
+            onClick={() => setShowBulkImport(!showBulkImport)}
+            className="btn btn-secondary"
+            style={{ padding: '0.5rem 1rem' }}
+          >
+            {showBulkImport ? '−' : '+'} Bulk Import JSON
+          </button>
         </div>
       </div>
+
+      {showBulkImport && (
+        <div
+          style={{
+            marginBottom: '1.5rem',
+            padding: '1.25rem',
+            background: 'var(--bg-tertiary)',
+            borderRadius: '0.75rem',
+            border: '1px solid var(--border-color)',
+          }}
+        >
+          <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
+            Upload or paste JSON. Each item: <code>category</code>, <code>slug</code>, <code>title</code> (SEO), <code>displayTitle</code> (H1), <code>description</code> (meta).
+          </div>
+          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
+            <button
+              type="button"
+              onClick={handleDownloadTemplate}
+              className="btn btn-secondary btn-sm"
+            >
+              Download template
+            </button>
+            <label className="btn btn-secondary btn-sm" style={{ cursor: 'pointer', margin: 0 }}>
+              Choose JSON file
+              <input
+                type="file"
+                accept=".json,application/json"
+                onChange={handleBulkImportFile}
+                style={{ display: 'none' }}
+              />
+            </label>
+            <button
+              type="button"
+              onClick={handleBulkImport}
+              disabled={bulkImportLoading || !bulkImportJson.trim()}
+              className="btn btn-primary btn-sm"
+            >
+              {bulkImportLoading ? 'Importing…' : 'Import'}
+            </button>
+          </div>
+          <textarea
+            value={bulkImportJson}
+            onChange={(e) => { setBulkImportJson(e.target.value); setBulkImportResult(null); }}
+            placeholder={`[\n  { "category": "math", "slug": "my-calculator", "title": "SEO Title Here", "displayTitle": "H1 Title", "description": "Meta description" },\n  ...\n]`}
+            style={{
+              width: '100%',
+              minHeight: 120,
+              padding: '0.75rem',
+              fontFamily: 'monospace',
+              fontSize: '0.8rem',
+              border: '1px solid var(--border-color)',
+              borderRadius: '0.5rem',
+              background: 'var(--bg-primary)',
+              resize: 'vertical',
+            }}
+          />
+          {bulkImportResult && (
+            <div
+              style={{
+                marginTop: '0.75rem',
+                padding: '0.5rem 0.75rem',
+                borderRadius: 6,
+                background: bulkImportResult.type === 'success' ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.1)',
+                color: bulkImportResult.type === 'success' ? 'var(--success-color)' : 'var(--error-color)',
+                fontSize: '0.875rem',
+              }}
+            >
+              {bulkImportResult.msg}
+            </div>
+          )}
+        </div>
+      )}
+
       {pages.length > 0 && (
         <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem' }}>
           Limit: ~15 min na żądanie (Ollama). Przy timeout — spróbuj ponownie lub skróć treść. Retry: 2x.

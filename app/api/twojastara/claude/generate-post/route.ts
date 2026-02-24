@@ -59,7 +59,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const prompt = `Act as a Senior UX Copywriter and SEO Specialist. Create a comprehensive landing page description for an online tool on Calculinohub called: **${topic}**.
+    const prompt = `You are an expert SEO content writer. Your task is to create a comprehensive, high-quality article that outranks the competition. Provide more in-depth information, using a more logical and user-friendly structure.
+
+Act as a Senior UX Copywriter and SEO Specialist. Create a comprehensive landing page description for an online tool on Calculinohub called: **${topic}**.
 
 Infer the **Tool Core Function** (what it does in one sentence) and **Target Audience** (who benefits) from the calculator name.
 

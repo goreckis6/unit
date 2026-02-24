@@ -11,6 +11,7 @@ import { FaqSchema } from '@/components/FaqSchema';
 import { renderMarkdown } from '@/lib/markdown';
 import { getRelatedCalculatorsForPage } from '@/lib/related-calculators';
 import { hasCalculatorEmbed } from '@/lib/calculator-embeds';
+import { getDefaultCalculatorLabels } from '@/lib/calculator-default-labels';
 import { Link } from '@/i18n/routing';
 import { CalculatorSandpackClient } from '@/components/CalculatorSandpackClient';
 
@@ -180,7 +181,7 @@ export default async function CalculatorPage({ params, searchParams }: Props) {
                   />
                 )}
                 {!iframeSrc && page.calculatorCode && (
-                  <CalculatorSandpackClient code={page.calculatorCode} labels={calculatorLabels ?? undefined} />
+                  <CalculatorSandpackClient code={page.calculatorCode} labels={(calculatorLabels && Object.keys(calculatorLabels).length > 0) ? calculatorLabels : getDefaultCalculatorLabels(locale)} />
                 )}
               </>
             )}

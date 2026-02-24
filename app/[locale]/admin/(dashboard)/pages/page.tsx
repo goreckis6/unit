@@ -6,7 +6,7 @@ import { ADMIN_LOCALES, LOCALE_NAMES } from '@/lib/admin-locales';
 import { useTranslate } from '../../TranslateContext';
 import { useGenerate, type GenerateProviderType } from '../../GenerateContext';
 
-export type PageStage = 'new' | 'in-progress' | 'completed';
+export type PageStage = 'new' | 'in-progress' | 'translate-label' | 'completed';
 
 function hasEnContent(page: Page): boolean {
   const en = page.translations.find((t) => t.locale === 'en');
@@ -106,12 +106,19 @@ export default function AdminPagesList() {
   }
 
   const pagesByStage = useMemo(() => {
-    const byStage: Record<PageStage, Page[]> = { new: [], 'in-progress': [], completed: [] };
+    const byStage: Record<PageStage, Page[]> = { new: [], 'in-progress': [], 'translate-label': [], completed: [] };
+    const translateLabelSlugs = new Set<string>();
+    if (translateLabelsProgress?.pageSlug) translateLabelSlugs.add(translateLabelsProgress.pageSlug);
+    if (translateLabelsPausedAt?.pageSlug) translateLabelSlugs.add(translateLabelsPausedAt.pageSlug);
     for (const p of pages) {
-      byStage[getPageStage(p)].push(p);
+      if (translateLabelSlugs.has(p.slug)) {
+        byStage['translate-label'].push(p);
+      } else {
+        byStage[getPageStage(p)].push(p);
+      }
     }
     return byStage;
-  }, [pages]);
+  }, [pages, translateLabelsProgress?.pageSlug, translateLabelsPausedAt?.pageSlug]);
 
   const filteredPages = pagesByStage[activeBookmark];
 
@@ -124,6 +131,21 @@ export default function AdminPagesList() {
       })
       .catch(() => setLoading(false));
   }, []);
+
+  useEffect(() => {
+    if (translateLabelsProgress || translateLabelsPausedAt) {
+      setActiveBookmark('translate-label');
+    }
+  }, [translateLabelsProgress?.pageSlug, translateLabelsPausedAt?.pageSlug]);
+
+  const prevTranslateLabelsLoading = useRef(false);
+  useEffect(() => {
+    const wasLoading = prevTranslateLabelsLoading.current;
+    prevTranslateLabelsLoading.current = translateLabelsLoading;
+    if (wasLoading && !translateLabelsLoading) {
+      setActiveBookmark('completed');
+    }
+  }, [translateLabelsLoading]);
 
   function toggleSelect(id: string) {
     setSelectedIds((prev) => {
@@ -440,6 +462,7 @@ export default function AdminPagesList() {
   const bookmarkTabs: { stage: PageStage; label: string; count: number }[] = [
     { stage: 'new', label: 'New', count: pagesByStage.new.length },
     { stage: 'in-progress', label: 'In progress', count: pagesByStage['in-progress'].length },
+    { stage: 'translate-label', label: 'Translate labels', count: pagesByStage['translate-label'].length },
     { stage: 'completed', label: 'Completed', count: pagesByStage.completed.length },
   ];
 
@@ -946,7 +969,7 @@ export default function AdminPagesList() {
         <p style={{ color: 'var(--text-secondary)' }}>No pages yet. Create your first page.</p>
       ) : filteredPages.length === 0 ? (
         <p style={{ color: 'var(--text-secondary)' }}>
-          No pages in <strong>{activeBookmark === 'new' ? 'New' : activeBookmark === 'in-progress' ? 'In progress' : 'Completed'}</strong>. Switch tab or create a page.
+          No pages in <strong>{activeBookmark === 'new' ? 'New' : activeBookmark === 'in-progress' ? 'In progress' : activeBookmark === 'translate-label' ? 'Translate labels' : 'Completed'}</strong>. Switch tab or create a page.
         </p>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>

@@ -2,9 +2,15 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { ADMIN_LOCALES, getLocaleMeta, LOCALE_NAMES } from '@/lib/admin-locales';
 import { getDefaultCalculatorLabels } from '@/lib/calculator-default-labels';
 import { extractCalculatorLabelKeys } from '@/lib/extract-calculator-label-keys';
+
+const CalculatorSandpackClient = dynamic(
+  () => import('@/components/CalculatorSandpackClient').then((m) => ({ default: m.CalculatorSandpackClient })),
+  { ssr: false }
+);
 
 const PAGE_CATEGORIES = [
   { value: '', label: '— Select category —' },
@@ -1358,6 +1364,19 @@ export default function AdminEditPage() {
                     </div>
                   );
                 })()}
+                <div style={{ marginTop: '1rem', padding: '1rem', background: 'var(--bg-tertiary)', borderRadius: 8, border: '1px solid var(--border-color)' }}>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
+                    Live preview [{activeLocale}] — updates as you edit (no Save needed)
+                  </div>
+                  <div style={{ minHeight: 420 }}>
+                    <CalculatorSandpackClient
+                      code={calculatorCode}
+                      labels={(t.calculatorLabels && Object.keys(t.calculatorLabels).length > 0)
+                        ? t.calculatorLabels
+                        : getDefaultCalculatorLabels(activeLocale)}
+                    />
+                  </div>
+                </div>
               </div>
             )}
 

@@ -92,7 +92,7 @@ export default function AdminPagesList() {
   const [bulkDeleteLoading, setBulkDeleteLoading] = useState(false);
   const [bulkPublishLoading, setBulkPublishLoading] = useState(false);
   const [translateLabelsLoading, setTranslateLabelsLoading] = useState(false);
-  const [translateLabelsProgress, setTranslateLabelsProgress] = useState<{ current: number; total: number; pageSlug: string; locale: string } | null>(null);
+  const [translateLabelsProgress, setTranslateLabelsProgress] = useState<{ current: number; total: number; pageSlug: string; pageCategory: string; locale: string } | null>(null);
   const [translateLabelsPausedAt, setTranslateLabelsPausedAt] = useState<{ pageSlug: string; nextLocale: string } | null>(null);
   const [translateLabelsSuccess, setTranslateLabelsSuccess] = useState('');
   const translateLabelsPausedRef = useRef(false);
@@ -243,7 +243,7 @@ export default function AdminPagesList() {
             if (translateLabelsAbortRef.current?.signal.aborted) break;
           }
           step++;
-          setTranslateLabelsProgress({ current: step, total: totalSteps, pageSlug: page.slug, locale: loc });
+          setTranslateLabelsProgress({ current: step, total: totalSteps, pageSlug: page.slug, pageCategory: page.category ?? 'math', locale: loc });
           const res = await fetch('/api/twojastara/ollama/translate-labels', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -254,45 +254,46 @@ export default function AdminPagesList() {
           const data = await res.json();
           if (!res.ok) throw new Error(data.error || `Translate labels to ${loc} failed`);
           translatedLabelsByLocale[loc] = data.labels ?? {};
+
+          // Save immediately after each locale so user can preview right away
+          const translations = fullTrans.map((t: { locale: string; title: string; displayTitle?: string | null; description?: string | null; content?: string | null; relatedCalculators?: unknown; faqItems?: unknown; calculatorLabels?: unknown }) => ({
+            locale: t.locale,
+            title: t.title ?? '',
+            displayTitle: t.displayTitle ?? null,
+            description: t.description ?? null,
+            content: t.content ?? null,
+            relatedCalculators: parseJson<{ title: string; description: string; path: string }[]>(t.relatedCalculators, []),
+            faqItems: parseJson<{ question: string; answer: string }[]>(t.faqItems, []),
+            calculatorLabels: translatedLabelsByLocale[t.locale] ?? parseJson<Record<string, string>>(t.calculatorLabels, {}),
+          }));
+          const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              slug: fullPage.slug,
+              category: fullPage.category,
+              published: fullPage.published,
+              calculatorCode: fullPage.calculatorCode,
+              linkedCalculatorPath: fullPage.linkedCalculatorPath,
+              relatedCalculatorsMode: fullPage.relatedCalculatorsMode ?? 'manual',
+              relatedCalculatorsCount: fullPage.relatedCalculatorsCount ?? 6,
+              translations,
+            }),
+            credentials: 'include',
+          });
+          if (!patchRes.ok) throw new Error((await patchRes.json()).error || `Failed to save page after ${loc}`);
+
+          setPages((prev) =>
+            prev.map((p) => {
+              if (p.id !== page.id) return p;
+              const updated = p.translations.map((t) => {
+                const lab = translatedLabelsByLocale[t.locale];
+                return lab && Object.keys(lab).length ? { ...t, calculatorLabels: JSON.stringify(lab) } : t;
+              });
+              return { ...p, translations: updated };
+            })
+          );
         }
-
-        const translations = fullTrans.map((t: { locale: string; title: string; displayTitle?: string | null; description?: string | null; content?: string | null; relatedCalculators?: unknown; faqItems?: unknown; calculatorLabels?: unknown }) => ({
-          locale: t.locale,
-          title: t.title ?? '',
-          displayTitle: t.displayTitle ?? null,
-          description: t.description ?? null,
-          content: t.content ?? null,
-          relatedCalculators: parseJson<{ title: string; description: string; path: string }[]>(t.relatedCalculators, []),
-          faqItems: parseJson<{ question: string; answer: string }[]>(t.faqItems, []),
-          calculatorLabels: translatedLabelsByLocale[t.locale] ?? parseJson<Record<string, string>>(t.calculatorLabels, {}),
-        }));
-        const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
-          method: 'PATCH',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            slug: fullPage.slug,
-            category: fullPage.category,
-            published: fullPage.published,
-            calculatorCode: fullPage.calculatorCode,
-            linkedCalculatorPath: fullPage.linkedCalculatorPath,
-            relatedCalculatorsMode: fullPage.relatedCalculatorsMode ?? 'manual',
-            relatedCalculatorsCount: fullPage.relatedCalculatorsCount ?? 6,
-            translations,
-          }),
-          credentials: 'include',
-        });
-        if (!patchRes.ok) throw new Error((await patchRes.json()).error || 'Failed to save page');
-
-        setPages((prev) =>
-          prev.map((p) => {
-            if (p.id !== page.id) return p;
-            const updated = p.translations.map((t) => {
-              const lab = translatedLabelsByLocale[t.locale];
-              return lab && Object.keys(lab).length ? { ...t, calculatorLabels: JSON.stringify(lab) } : t;
-            });
-            return { ...p, translations: updated };
-          })
-        );
       }
       setSelectedIds(new Set());
       setTranslateLabelsSuccess(`Translated labels for ${withEnLabels.length} page(s)`);
@@ -929,9 +930,17 @@ export default function AdminPagesList() {
 
       {translateLabelsProgress && (
         <div style={{ marginBottom: '1rem' }}>
-          <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
-            Translate Labels: {translateLabelsProgress.current} / {translateLabelsProgress.total} — {translateLabelsProgress.pageSlug} ({translateLabelsProgress.locale})
-            {translateLabelsPausedAt && <span style={{ marginLeft: '0.5rem', color: 'var(--warning-color, #f97316)' }}>• Paused</span>}
+          <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+            <span>Translate Labels: {translateLabelsProgress.current} / {translateLabelsProgress.total} — {translateLabelsProgress.pageSlug} ({translateLabelsProgress.locale})</span>
+            {translateLabelsPausedAt && <span style={{ color: 'var(--warning-color, #f97316)' }}>• Paused</span>}
+            <a
+              href={translateLabelsProgress.locale === 'en' ? `/calculators/${translateLabelsProgress.pageCategory}/${translateLabelsProgress.pageSlug}?preview=1` : `/${translateLabelsProgress.locale}/calculators/${translateLabelsProgress.pageCategory}/${translateLabelsProgress.pageSlug}?preview=1`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginLeft: '0.25rem', fontSize: '0.8rem', color: 'var(--primary)' }}
+            >
+              Preview →
+            </a>
           </div>
           <div
             style={{

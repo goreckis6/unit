@@ -16,7 +16,9 @@ const nextConfig = {
     '@formatjs/icu-messageformat-parser',
     '@formatjs/icu-messageformat',
   ],
-  // webpackMemoryOptimizations disabled - can cause __webpack_modules__[moduleId] errors
+  experimental: {
+    webpackMemoryOptimizations: false, // avoids __webpack_modules__[moduleId] errors
+  },
   outputFileTracingRoot: __dirname,
   outputFileTracingIncludes: {
     '/*': [

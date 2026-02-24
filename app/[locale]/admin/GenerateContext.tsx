@@ -158,7 +158,21 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
           } catch {
             throw new Error(genRes.status === 401 ? 'Unauthorized — zaloguj się ponownie' : 'Błąd serwera');
           }
-          if (!genRes.ok) throw new Error(genData.error || 'Generate failed');
+          if (!genRes.ok) {
+            const errMsg = genData.error || 'Generate failed';
+            // Fatal API errors (billing, credits) — stop immediately, don't retry or continue
+            const isFatal =
+              genRes.status === 400 ||
+              /credit balance is too low|insufficient credits|billing|invalid_request_error/i.test(errMsg);
+            if (isFatal) {
+              setGenerateError(
+                `Strona: ${page.slug}. ${errMsg} — Zatrzymano (błąd API). Nie kontynuuj — doładowaj konto w Plans & Billing.`
+              );
+              setGenerateProgress(null);
+              return;
+            }
+            throw new Error(errMsg);
+          }
           const newContent = genData.content;
           const newFaqItems = Array.isArray(genData.faqItems) ? genData.faqItems : [];
 
@@ -274,10 +288,16 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
                 ? 'Przerwano'
                 : err.message
               : 'Błąd generowania';
+          // Fatal errors (billing, credits) — stop immediately, no retry
+          const isFatal = /credit balance is too low|insufficient credits|billing|invalid_request_error/i.test(msg);
           setGenerateError(
             `Strona: ${page.slug}. ${msg} — Zaznacz tę stronę (i ewentualnie następne) i kliknij Generate Content, aby spróbować od początku.`
           );
           hadError = true;
+          if (isFatal) {
+            setGenerateProgress(null);
+            return;
+          }
           if (autoResumeOnError) {
             const delaySec = 5;
             for (let s = delaySec; s >= 1; s--) {

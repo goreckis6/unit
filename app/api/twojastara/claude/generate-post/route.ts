@@ -3,7 +3,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import { getSession } from '@/lib/auth';
 
 const MODEL = process.env.CLAUDE_MODEL || 'claude-opus-4-6';
-const MAX_TOKENS = 4096;
+const MAX_TOKENS = 8192; // 800-1200 words + FAQ — 4096 can truncate
 const ANTHROPIC_TIMEOUT_MS = 120_000; // 2 min (Claude is typically faster than Ollama)
 
 async function claudeChat(prompt: string): Promise<string> {
@@ -106,25 +106,19 @@ Example: {"content":"# How to convert [X]\\n\\nIntro paragraph...\\n\\n## How to
       throw new Error('Empty response from Claude');
     }
 
-    // Parse JSON - Claude may wrap in markdown, add preamble, or use slight variations
+    // Parse JSON - Claude may wrap in markdown (```json ... ```). Content can contain ```, so
+    // don't use code-block regex (it truncates at first ```). Extract by brace-matching from raw.
     let parsed: { content?: string; faqItems?: { question: string; answer: string }[] };
-    let jsonStr = raw.trim();
-
-    // Strip markdown code blocks (```json ... ``` or ``` ... ```)
-    const codeBlockMatch = jsonStr.match(/```(?:json)?\s*([\s\S]*?)```/);
-    if (codeBlockMatch) {
-      jsonStr = codeBlockMatch[1].trim();
-    }
-
-    // Extract first complete JSON object (handles preamble like "Here is the JSON:")
-    const braceStart = jsonStr.indexOf('{');
+    const trimmed = raw.trim();
+    const braceStart = trimmed.indexOf('{');
+    let jsonStr = trimmed;
     if (braceStart >= 0) {
       let depth = 0;
       let inString = false;
       let escape = false;
       let quote = '';
-      for (let i = braceStart; i < jsonStr.length; i++) {
-        const c = jsonStr[i];
+      for (let i = braceStart; i < trimmed.length; i++) {
+        const c = trimmed[i];
         if (escape) {
           escape = false;
           continue;
@@ -143,7 +137,7 @@ Example: {"content":"# How to convert [X]\\n\\nIntro paragraph...\\n\\n## How to
         if (c === '}') {
           depth--;
           if (depth === 0) {
-            jsonStr = jsonStr.slice(braceStart, i + 1);
+            jsonStr = trimmed.slice(braceStart, i + 1);
             break;
           }
         }
@@ -173,6 +167,7 @@ Example: {"content":"# How to convert [X]\\n\\nIntro paragraph...\\n\\n## How to
   } catch (error) {
     console.error('Claude generate-post error:', error);
     const msg = error instanceof Error ? error.message : 'Failed to generate content';
-    return NextResponse.json({ error: msg }, { status: 500 });
+    const isBillingError = /credit balance is too low|insufficient credits|billing|invalid_request_error/i.test(msg);
+    return NextResponse.json({ error: msg }, { status: isBillingError ? 400 : 500 });
   }
 }

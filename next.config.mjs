@@ -14,6 +14,8 @@ const nextConfig = {
     'better-sqlite3',
     '@prisma/adapter-better-sqlite3',
     'bindings',
+    '@formatjs/icu-messageformat-parser',
+    '@formatjs/icu-messageformat',
   ],
   // webpackMemoryOptimizations disabled - can cause __webpack_modules__[moduleId] errors
   outputFileTracingRoot: __dirname,

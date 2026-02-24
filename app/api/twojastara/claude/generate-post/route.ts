@@ -106,14 +106,54 @@ Example: {"content":"# H1 Title\\n\\nIntro paragraph...\\n\\n## How to Use the C
       throw new Error('Empty response from Claude');
     }
 
-    // Parse JSON - handle potential markdown code block wrapper
+    // Parse JSON - Claude may wrap in markdown, add preamble, or use slight variations
     let parsed: { content?: string; faqItems?: { question: string; answer: string }[] };
-    const trimmed = raw.trim();
-    const jsonMatch = trimmed.match(/\{[\s\S]*\}/);
-    const jsonStr = jsonMatch ? jsonMatch[0] : trimmed;
+    let jsonStr = raw.trim();
+
+    // Strip markdown code blocks (```json ... ``` or ``` ... ```)
+    const codeBlockMatch = jsonStr.match(/```(?:json)?\s*([\s\S]*?)```/);
+    if (codeBlockMatch) {
+      jsonStr = codeBlockMatch[1].trim();
+    }
+
+    // Extract first complete JSON object (handles preamble like "Here is the JSON:")
+    const braceStart = jsonStr.indexOf('{');
+    if (braceStart >= 0) {
+      let depth = 0;
+      let inString = false;
+      let escape = false;
+      let quote = '';
+      for (let i = braceStart; i < jsonStr.length; i++) {
+        const c = jsonStr[i];
+        if (escape) {
+          escape = false;
+          continue;
+        }
+        if (inString) {
+          if (c === quote) inString = false;
+          else if (c === '\\') escape = true;
+          continue;
+        }
+        if (c === '"' || c === "'") {
+          inString = true;
+          quote = c;
+          continue;
+        }
+        if (c === '{') depth++;
+        if (c === '}') {
+          depth--;
+          if (depth === 0) {
+            jsonStr = jsonStr.slice(braceStart, i + 1);
+            break;
+          }
+        }
+      }
+    }
+
     try {
       parsed = JSON.parse(jsonStr) as { content?: string; faqItems?: { question: string; answer: string }[] };
-    } catch {
+    } catch (parseErr) {
+      console.error('Claude JSON parse failed. Raw (first 600 chars):', raw.slice(0, 600));
       throw new Error('Claude did not return valid JSON. Try again.');
     }
 

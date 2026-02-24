@@ -58,6 +58,49 @@ function parseCalculatorLabels(val: unknown): Record<string, string> {
   return {};
 }
 
+/** Parse labels JSON: supports flat { key: val } or nested { calculators: { calcId: { key: val } } } */
+function parseLabelsFromUpload(jsonStr: string, pageSlug: string): Record<string, string> {
+  try {
+    const data = JSON.parse(jsonStr) as Record<string, unknown>;
+    if (!data || typeof data !== 'object') return {};
+
+    // Nested format: { calculators: { fractionsComparing: { labelA: "val", ... } } }
+    if (data.calculators && typeof data.calculators === 'object' && !Array.isArray(data.calculators)) {
+      const calcs = data.calculators as Record<string, Record<string, unknown>>;
+      const keys = Object.keys(calcs);
+      if (keys.length === 0) return {};
+
+      // Build camelCase variants from slug for matching (e.g. "comparing-fractions" → ["comparingFractions", "fractionsComparing"])
+      const slugParts = pageSlug.split('-').filter(Boolean);
+      const candidates = [
+        slugParts.map((p, i) => (i === 0 ? p : p[0]?.toUpperCase() + p.slice(1))).join(''),
+        [...slugParts].reverse().map((p, i) => (i === 0 ? p : p[0]?.toUpperCase() + p.slice(1))).join(''),
+        pageSlug.replace(/-/g, '_'),
+        pageSlug.replace(/-/g, ''),
+      ].filter(Boolean);
+
+      let chosen = keys.find((k) => candidates.includes(k) || k.toLowerCase() === pageSlug.replace(/-/g, '').toLowerCase());
+      if (!chosen && keys.length === 1) chosen = keys[0];
+      if (!chosen) chosen = keys[0];
+
+      const inner = calcs[chosen];
+      if (inner && typeof inner === 'object' && !Array.isArray(inner)) {
+        const out: Record<string, string> = {};
+        for (const [k, v] of Object.entries(inner)) {
+          if (typeof k === 'string' && typeof v === 'string') out[k] = v;
+        }
+        return out;
+      }
+      return {};
+    }
+
+    // Flat format: { labelA: "val", labelB: "val2" }
+    return parseCalculatorLabels(data);
+  } catch {
+    return {};
+  }
+}
+
 type CalculatorOption = { value: string; label: string; title?: string; description?: string };
 
 const ADDING_FRACTIONS_EXAMPLE = `'use client';
@@ -1231,6 +1274,28 @@ export default function AdminEditPage() {
                         >
                           Add custom key
                         </button>
+                        <label className="btn btn-secondary btn-sm" style={{ cursor: 'pointer', margin: 0 }} title="Upload JSON file with labels. Formats: flat { key: val } or nested { calculators: { calcId: { key: val } } }">
+                          Upload labels JSON
+                          <input
+                            type="file"
+                            accept=".json,application/json"
+                            style={{ display: 'none' }}
+                            onChange={(e) => {
+                              const file = e.target.files?.[0];
+                              if (!file) return;
+                              const reader = new FileReader();
+                              reader.onload = () => {
+                                const parsed = parseLabelsFromUpload(String(reader.result ?? ''), slug);
+                                if (Object.keys(parsed).length > 0) {
+                                  const next = { ...(lab || {}), ...(Object.keys(lab).length ? {} : defaults), ...parsed };
+                                  updateTranslation(activeLocale, 'calculatorLabels', next);
+                                }
+                              };
+                              reader.readAsText(file);
+                              e.target.value = '';
+                            }}
+                          />
+                        </label>
                       </div>
                     </div>
                   );

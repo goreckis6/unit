@@ -53,6 +53,7 @@ type GenerateContextValue = {
     resumeFromPageSlug?: string;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
+    onPageGenerated?: (pageId: string) => void;
     onComplete?: () => void;
   }) => Promise<void>;
 };
@@ -103,9 +104,10 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
       resumeFromPageSlug?: string;
       autoResumeOnError: boolean;
       onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
+      onPageGenerated?: (pageId: string) => void;
       onComplete?: () => void;
     }) => {
-      const { pages, selectedIds, provider = 'ollama', resumeFromPageSlug, autoResumeOnError, onPagesUpdate, onComplete } = params;
+      const { pages, selectedIds, provider = 'ollama', resumeFromPageSlug, autoResumeOnError, onPagesUpdate, onPageGenerated, onComplete } = params;
       const ids = Array.from(selectedIds);
       if (ids.length === 0) {
         setGenerateError('Zaznacz co najmniej jedną stronę.');
@@ -230,6 +232,7 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
             throw new Error(errData.error || 'Failed to save');
           }
 
+          onPageGenerated?.(page.id);
           onPagesUpdate?.((prev) =>
             prev.map((p) => {
               if (p.id !== page.id) return p;

@@ -70,6 +70,7 @@ export default function AdminPagesList() {
   const [bulkImportLoading, setBulkImportLoading] = useState(false);
   const [bulkImportResult, setBulkImportResult] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
   const [bulkDeleteLoading, setBulkDeleteLoading] = useState(false);
+  const [generatedIdsThisRun, setGeneratedIdsThisRun] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     fetch('/api/twojastara/pages')
@@ -99,12 +100,14 @@ export default function AdminPagesList() {
   }
 
   function handleBatchGenerate() {
+    setGeneratedIdsThisRun(new Set());
     startGenerate({
       pages,
       selectedIds,
       provider: generateProvider,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
+      onPageGenerated: (id) => setGeneratedIdsThisRun((prev) => new Set([...prev, id])),
       onComplete: () => setSelectedIds(new Set()),
     });
   }
@@ -592,6 +595,7 @@ export default function AdminPagesList() {
           {pages.map((page) => {
             const enTitle = page.translations.find((t) => t.locale === 'en')?.title ?? page.slug;
             const isSelected = selectedIds.has(page.id);
+            const isGeneratedThisRun = generatedIdsThisRun.has(page.id);
             return (
               <div
                 key={page.id}
@@ -600,9 +604,9 @@ export default function AdminPagesList() {
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   padding: '1.25rem',
-                  background: 'var(--bg-primary)',
+                  background: isGeneratedThisRun ? 'rgba(16, 185, 129, 0.2)' : 'var(--bg-primary)',
                   borderRadius: '1rem',
-                  border: `2px solid ${isSelected ? 'var(--primary, #2563eb)' : 'var(--border-light)'}`,
+                  border: `2px solid ${isSelected ? 'var(--primary, #2563eb)' : isGeneratedThisRun ? 'var(--success-color, #10b981)' : 'var(--border-light)'}`,
                   flexWrap: 'wrap',
                   gap: '0.75rem',
                 }}

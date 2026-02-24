@@ -1338,7 +1338,7 @@ a {
   height: auto !important;
 }
 .calculator-sandpack-wrapper iframe {
-  min-height: 420px !important; /* Fallback; JS sets height dynamically from embed */
+  min-height: 800px !important; /* Fallback for prod when JS resizing delayed; JS overrides dynamically */
   display: block;
 }
 

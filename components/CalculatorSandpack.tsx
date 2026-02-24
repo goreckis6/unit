@@ -51,24 +51,41 @@ export function CalculatorSandpack({ code, labels }: CalculatorSandpackProps) {
   const stubsCode = buildStubsCode(labels);
 
   useEffect(() => {
-    const handler = (e: MessageEvent) => {
-      if (e?.data?.type !== EMBED_HEIGHT_MSG || typeof e.data.height !== 'number') return;
+    let lastHeight = 0;
+    const applyHeight = (heightPx: number) => {
+      if (heightPx <= 0) return;
+      const h = `${heightPx}px`;
       const iframe = wrapperRef.current?.querySelector?.('iframe') as HTMLIFrameElement | null;
       if (iframe) {
-        const h = `${e.data.height}px`;
         iframe.style.height = h;
         iframe.style.minHeight = h;
-        /* Ensure parent chain expands so no scrollbar in preview area */
         let p: HTMLElement | null = iframe.parentElement;
         for (let i = 0; i < 4 && p; i++) {
           p.style.overflow = 'visible';
           p.style.minHeight = h;
           p = p.parentElement;
         }
+      } else {
+        lastHeight = heightPx; /* store for when iframe appears */
       }
     };
+    const handler = (e: MessageEvent) => {
+      if (e?.data?.type !== EMBED_HEIGHT_MSG || typeof e.data.height !== 'number') return;
+      lastHeight = e.data.height;
+      applyHeight(e.data.height);
+    };
     window.addEventListener('message', handler);
-    return () => window.removeEventListener('message', handler);
+    /* Poll for iframe in case message arrives before it exists (prod hydration timing) */
+    const poll = setInterval(() => {
+      if (lastHeight > 0 && wrapperRef.current?.querySelector?.('iframe')) {
+        applyHeight(lastHeight);
+        lastHeight = 0;
+      }
+    }, 250);
+    return () => {
+      window.removeEventListener('message', handler);
+      clearInterval(poll);
+    };
   }, []);
 
   const files = {
@@ -91,7 +108,10 @@ function CalcEmbedRoot({ children }: { children: React.ReactNode }) {
     sendHeight();
     const ro = new ResizeObserver(sendHeight);
     ro.observe(el);
-    return () => ro.disconnect();
+    /* Retry send for first 4s (helps prod when parent listener mounts after embed) */
+    const retry = setInterval(sendHeight, 350);
+    const stop = setTimeout(() => clearInterval(retry), 4000);
+    return () => { ro.disconnect(); clearInterval(retry); clearTimeout(stop); };
   }, []);
   return (
     <div ref={ref} className="calc-embed-root">

@@ -9,6 +9,7 @@ const withNextIntl = createNextIntlPlugin(path.resolve(__dirname, 'i18n', 'reque
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
+  transpilePackages: ['next-intl'],
   serverExternalPackages: [
     'better-sqlite3',
     '@prisma/adapter-better-sqlite3',

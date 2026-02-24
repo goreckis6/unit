@@ -1097,6 +1097,23 @@ export default function AdminNewPage() {
                         >
                           Add custom key
                         </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const toExport: Record<string, string> = {};
+                            keys.forEach((k) => { toExport[k] = lab[k] ?? current[k] ?? defaults[k] ?? ''; });
+                            const blob = new Blob([JSON.stringify(toExport, null, 2)], { type: 'application/json' });
+                            const a = document.createElement('a');
+                            a.href = URL.createObjectURL(blob);
+                            a.download = `calculator-labels-${activeLocale}-${slug || 'new'}.json`;
+                            a.click();
+                            URL.revokeObjectURL(a.href);
+                          }}
+                          className="btn btn-secondary btn-sm"
+                          title="Download current labels as JSON to fill and re-upload"
+                        >
+                          Download labels JSON
+                        </button>
                         <label className="btn btn-secondary btn-sm" style={{ cursor: 'pointer', margin: 0 }} title="Upload JSON file with labels. Formats: flat { key: val } or nested { calculators: { calcId: { key: val } } }">
                           Upload labels JSON
                           <input

@@ -1,10 +1,28 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import Link from 'next/link';
 import { ADMIN_LOCALES, LOCALE_NAMES } from '@/lib/admin-locales';
 import { useTranslate } from '../../TranslateContext';
 import { useGenerate, type GenerateProviderType } from '../../GenerateContext';
+
+export type PageStage = 'new' | 'in-progress' | 'completed';
+
+function hasEnContent(page: Page): boolean {
+  const en = page.translations.find((t) => t.locale === 'en');
+  return !!(en?.content && en.content.trim().length > 0);
+}
+
+function hasAllTranslations(page: Page): boolean {
+  const localeSet = new Set(page.translations.filter((t) => t.content?.trim()).map((t) => t.locale));
+  return ADMIN_LOCALES.every((loc) => localeSet.has(loc));
+}
+
+function getPageStage(page: Page): PageStage {
+  if (!hasEnContent(page)) return 'new';
+  if (!hasAllTranslations(page)) return 'in-progress';
+  return 'completed';
+}
 
 type PageTranslation = {
   id: string;
@@ -70,7 +88,24 @@ export default function AdminPagesList() {
   const [bulkImportLoading, setBulkImportLoading] = useState(false);
   const [bulkImportResult, setBulkImportResult] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
   const [bulkDeleteLoading, setBulkDeleteLoading] = useState(false);
+  const [bulkPublishLoading, setBulkPublishLoading] = useState(false);
   const [generatedIdsThisRun, setGeneratedIdsThisRun] = useState<Set<string>>(new Set());
+  const [activeBookmark, setActiveBookmark] = useState<PageStage>('new');
+
+  function setBookmark(stage: PageStage) {
+    setActiveBookmark(stage);
+    setSelectedIds(new Set());
+  }
+
+  const pagesByStage = useMemo(() => {
+    const byStage: Record<PageStage, Page[]> = { new: [], 'in-progress': [], completed: [] };
+    for (const p of pages) {
+      byStage[getPageStage(p)].push(p);
+    }
+    return byStage;
+  }, [pages]);
+
+  const filteredPages = pagesByStage[activeBookmark];
 
   useEffect(() => {
     fetch('/api/twojastara/pages')
@@ -92,10 +127,36 @@ export default function AdminPagesList() {
   }
 
   function toggleSelectAll() {
-    if (selectedIds.size === pages.length) {
+    if (selectedIds.size === filteredPages.length && filteredPages.every((p) => selectedIds.has(p.id))) {
       setSelectedIds(new Set());
     } else {
-      setSelectedIds(new Set(pages.map((p) => p.id)));
+      setSelectedIds(new Set(filteredPages.map((p) => p.id)));
+    }
+  }
+
+  async function handleBulkPublish(published: boolean) {
+    if (selectedIds.size === 0) return;
+    setBulkPublishLoading(true);
+    try {
+      const res = await fetch('/api/twojastara/pages/bulk-publish', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: Array.from(selectedIds), published }),
+        credentials: 'include',
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        alert(data.error || 'Bulk publish failed');
+        return;
+      }
+      setPages((prev) =>
+        prev.map((p) => (selectedIds.has(p.id) ? { ...p, published } : p))
+      );
+      setSelectedIds(new Set());
+    } catch (e) {
+      alert(e instanceof Error ? e.message : 'Bulk publish failed');
+    } finally {
+      setBulkPublishLoading(false);
     }
   }
 
@@ -237,9 +298,15 @@ export default function AdminPagesList() {
 
   const selectedCount = selectedIds.size;
 
+  const bookmarkTabs: { stage: PageStage; label: string; count: number }[] = [
+    { stage: 'new', label: 'New', count: pagesByStage.new.length },
+    { stage: 'in-progress', label: 'In progress', count: pagesByStage['in-progress'].length },
+    { stage: 'completed', label: 'Completed', count: pagesByStage.completed.length },
+  ];
+
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', flexWrap: 'wrap', gap: '1rem' }}>
         <h1 style={{ fontSize: '1.75rem', color: 'var(--text-primary)' }}>Pages</h1>
         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
           {pages.length > 0 && (
@@ -249,9 +316,11 @@ export default function AdminPagesList() {
                 onClick={toggleSelectAll}
                 className="btn btn-secondary btn-sm"
                 style={{ padding: '0.35rem 0.75rem' }}
-                disabled={!!generateProgress || !!translateProgress}
+                disabled={!!generateProgress || !!translateProgress || filteredPages.length === 0}
               >
-                {selectedCount === pages.length ? 'Odznacz wszystko' : 'Zaznacz wszystko'}
+                {filteredPages.every((p) => selectedIds.has(p.id)) && filteredPages.length > 0
+                  ? 'Odznacz wszystko'
+                  : 'Zaznacz wszystko'}
               </button>
               <button
                 type="button"
@@ -402,6 +471,54 @@ export default function AdminPagesList() {
           </button>
         </div>
       </div>
+
+      {pages.length > 0 && (
+        <div style={{ display: 'flex', gap: '0.25rem', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-light)' }}>
+          {bookmarkTabs.map(({ stage, label, count }) => (
+            <button
+              key={stage}
+              type="button"
+              onClick={() => setBookmark(stage)}
+              style={{
+                padding: '0.6rem 1rem',
+                fontSize: '0.9rem',
+                fontWeight: 500,
+                border: 'none',
+                borderBottom: activeBookmark === stage ? '2px solid var(--primary, #2563eb)' : '2px solid transparent',
+                background: activeBookmark === stage ? 'rgba(37, 99, 235, 0.08)' : 'transparent',
+                color: activeBookmark === stage ? 'var(--primary)' : 'var(--text-secondary)',
+                cursor: 'pointer',
+                borderRadius: '0.5rem 0.5rem 0 0',
+              }}
+            >
+              {label} ({count})
+            </button>
+          ))}
+        </div>
+      )}
+
+      {activeBookmark === 'completed' && filteredPages.length > 0 && (
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
+          <button
+            type="button"
+            onClick={() => handleBulkPublish(true)}
+            disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
+            className="btn btn-primary btn-sm"
+            style={{ padding: '0.35rem 0.75rem' }}
+          >
+            {bulkPublishLoading ? 'Publishing…' : `Mark & Publish (${selectedIds.size})`}
+          </button>
+          <button
+            type="button"
+            onClick={() => handleBulkPublish(false)}
+            disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
+            className="btn btn-secondary btn-sm"
+            style={{ padding: '0.35rem 0.75rem' }}
+          >
+            Unpublish ({selectedIds.size})
+          </button>
+        </div>
+      )}
 
       {showBulkImport && (
         <div
@@ -590,9 +707,13 @@ export default function AdminPagesList() {
 
       {pages.length === 0 ? (
         <p style={{ color: 'var(--text-secondary)' }}>No pages yet. Create your first page.</p>
+      ) : filteredPages.length === 0 ? (
+        <p style={{ color: 'var(--text-secondary)' }}>
+          No pages in <strong>{activeBookmark === 'new' ? 'New' : activeBookmark === 'in-progress' ? 'In progress' : 'Completed'}</strong>. Switch tab or create a page.
+        </p>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-          {pages.map((page) => {
+          {filteredPages.map((page) => {
             const enTitle = page.translations.find((t) => t.locale === 'en')?.title ?? page.slug;
             const isSelected = selectedIds.has(page.id);
             const isGeneratedThisRun = generatedIdsThisRun.has(page.id);

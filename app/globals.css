@@ -1330,6 +1330,18 @@ a {
   font-size: 0.9rem;
 }
 
+/* Calculator Sandpack: auto-expand preview to fit content, no inner scrollbar */
+.calculator-sandpack-wrapper [class*='preview'],
+.calculator-sandpack-wrapper [class*='Preview'] {
+  min-height: 420px !important;
+  overflow: visible !important;
+  height: auto !important;
+}
+.calculator-sandpack-wrapper iframe {
+  min-height: 420px !important; /* Fallback; JS sets height dynamically from embed */
+  display: block;
+}
+
 /* ============================================
    CALCULATOR SECTIONS (for multi-section calculators)
    ============================================ */

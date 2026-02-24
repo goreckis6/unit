@@ -1,8 +1,11 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { SandpackProvider, SandpackLayout, SandpackPreview } from '@codesandbox/sandpack-react';
 import { transformCalculatorCodeForSandpack } from '@/lib/calculator-code-transform';
 import { CALCULATOR_EMBED_CSS } from '@/lib/calculator-embed-styles';
+
+const EMBED_HEIGHT_MSG = 'calculinohub-embed-height';
 
 const DEFAULT_LABELS: Record<string, string> = {
   calculate: 'Calculate',
@@ -40,27 +43,71 @@ type CalculatorSandpackProps = {
 };
 
 export function CalculatorSandpack({ code, labels }: CalculatorSandpackProps) {
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const transformedCode = transformCalculatorCodeForSandpack(code);
   const stubsCode = buildStubsCode(labels);
+
+  useEffect(() => {
+    const handler = (e: MessageEvent) => {
+      if (e?.data?.type !== EMBED_HEIGHT_MSG || typeof e.data.height !== 'number') return;
+      const iframe = wrapperRef.current?.querySelector?.('iframe') as HTMLIFrameElement | null;
+      if (iframe) {
+        const h = `${e.data.height}px`;
+        iframe.style.height = h;
+        iframe.style.minHeight = h;
+        /* Ensure parent chain expands so no scrollbar in preview area */
+        let p: HTMLElement | null = iframe.parentElement;
+        for (let i = 0; i < 4 && p; i++) {
+          p.style.overflow = 'visible';
+          p.style.minHeight = h;
+          p = p.parentElement;
+        }
+      }
+    };
+    window.addEventListener('message', handler);
+    return () => window.removeEventListener('message', handler);
+  }, []);
 
   const files = {
     '/stubs.tsx': stubsCode,
     '/Calculator.tsx': transformedCode,
     '/styles.css': { code: CALCULATOR_EMBED_CSS },
-    '/App.tsx': `import './styles.css';
+    '/App.tsx': `import React, { useEffect, useRef } from 'react';
+import './styles.css';
 import Calculator from './Calculator';
+
+function CalcEmbedRoot({ children }: { children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el?.parentElement) return;
+    const sendHeight = () => {
+      const h = Math.max(420, el.scrollHeight + 48);
+      try { window.parent?.postMessage({ type: '${EMBED_HEIGHT_MSG}', height: h }, '*'); } catch {}
+    };
+    sendHeight();
+    const ro = new ResizeObserver(sendHeight);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  return (
+    <div ref={ref} className="calc-embed-root">
+      {children}
+    </div>
+  );
+}
 
 export default function App() {
   return (
-    <div className="calc-embed-root">
+    <CalcEmbedRoot>
       <Calculator />
-    </div>
+    </CalcEmbedRoot>
   );
 }`,
   };
 
   return (
-    <div style={{ borderRadius: 8, overflow: 'hidden', border: '1px solid var(--border-color)' }}>
+    <div ref={wrapperRef} className="calculator-sandpack-wrapper" style={{ borderRadius: 8, overflow: 'visible', border: '1px solid var(--border-color)' }}>
       <SandpackProvider
         template="react-ts"
         files={files}

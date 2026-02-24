@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { content, faqItems, targetLocale, title, displayTitle } = body;
+    const { content, faqItems, targetLocale, title, displayTitle, description } = body;
     if (!content || typeof content !== 'string') {
       return NextResponse.json({ error: 'Content is required' }, { status: 400 });
     }
@@ -59,6 +59,7 @@ export async function POST(request: NextRequest) {
     const targetLanguage = LOCALE_NAMES[targetLocale] || targetLocale;
     const enTitle = typeof title === 'string' ? title.trim() : '';
     const enDisplayTitle = typeof displayTitle === 'string' ? displayTitle.trim() : '';
+    const enDescription = typeof description === 'string' ? description.trim() : '';
     const items = Array.isArray(faqItems)
       ? faqItems.filter(
           (f: unknown) =>
@@ -78,13 +79,14 @@ RULES:
 - Preserve Markdown: # H1, ## H2, **bold**, *italic*, code blocks, bullets
 - Translate naturally for native ${targetLanguage} speakers
 
-Output JSON with keys: "content" (required), "title" (if given), "displayTitle" (if given), "faqItems" (array of {"question","answer"} only if FAQ given).`;
+Output JSON with keys: "content" (required), "title" (if given), "displayTitle" (if given), "description" (if given; short SEO meta, 150–160 chars), "faqItems" (array of {"question","answer"} only if FAQ given). Do NOT add section headers like "## Markdown content" to the output.`;
 
     const userContent = [
       enTitle && `title: ${enTitle}`,
       enDisplayTitle && `displayTitle: ${enDisplayTitle}`,
+      enDescription && `description (SEO meta): ${enDescription}`,
       '---',
-      '## Markdown content',
+      'content:',
       content,
       faqBlock,
     ]
@@ -100,6 +102,7 @@ Output JSON with keys: "content" (required), "title" (if given), "displayTitle" 
       content?: string;
       title?: string;
       displayTitle?: string;
+      description?: string;
       faqItems?: { question?: string; answer?: string }[];
     };
     try {
@@ -108,13 +111,19 @@ Output JSON with keys: "content" (required), "title" (if given), "displayTitle" 
       throw new Error('Ollama returned invalid JSON. Spróbuj ponownie.');
     }
 
-    const resultContent = (parsed.content ?? '').trim();
+    // Strip accidental "## Markdown content" or similar that may leak from prompts
+    let resultContent = (parsed.content ?? '')
+      .replace(/^##\s*Markdown\s+content\s*\n*/gi, '')
+      .replace(/^content:\s*\n*/i, '')
+      .trim();
     if (!resultContent) {
       throw new Error('Empty content translation from Ollama Cloud');
     }
 
     const resultTitle = enTitle && parsed.title ? String(parsed.title).trim() : enTitle;
     const resultDisplayTitle = enDisplayTitle && parsed.displayTitle ? String(parsed.displayTitle).trim() : enDisplayTitle;
+    const resultDescription =
+      enDescription && parsed.description ? String(parsed.description).trim() : enDescription || undefined;
     const resultFaq =
       items.length > 0 && Array.isArray(parsed.faqItems)
         ? parsed.faqItems
@@ -132,6 +141,7 @@ Output JSON with keys: "content" (required), "title" (if given), "displayTitle" 
       content: resultContent,
       title: resultTitle || undefined,
       displayTitle: resultDisplayTitle || undefined,
+      description: resultDescription,
       faqItems: resultFaq,
       locale: targetLocale,
     });

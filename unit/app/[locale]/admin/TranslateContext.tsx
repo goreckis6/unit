@@ -234,9 +234,10 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
         totalSteps += localesToTranslate.length;
         pagesTranslatedCount++;
 
-        const enFromFull = fullPage.translations?.find((x: { locale: string }) => x.locale === 'en');
+        const enFromFull = fullPage.translations?.find((x: { locale: string }) => x.locale === 'en') as { title?: string; displayTitle?: string; description?: string } | undefined;
         const enTitleFallback = (enFromFull?.title ?? '').trim() || 'Untitled';
-        const translatedByLocale: Record<string, { content: string; title?: string; displayTitle?: string; faqItems?: { question: string; answer: string }[] }> = {};
+        const enDescription = (enFromFull?.description ?? enTrans?.description ?? '').trim();
+        const translatedByLocale: Record<string, { content: string; title?: string; displayTitle?: string; description?: string; faqItems?: { question: string; answer: string }[] }> = {};
 
         for (const loc of localesToTranslate) {
           step++;
@@ -247,14 +248,14 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined }),
+                body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined, description: enDescription || undefined }),
                 credentials: 'include',
               },
               900_000,
               2,
               abortRef.current?.signal ?? null
             );
-            let data: { error?: string; content?: string; title?: string; displayTitle?: string; faqItems?: unknown[] };
+            let data: { error?: string; content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[] };
             try { data = await res.json(); } catch {
               throw new Error(res.status === 401 ? 'Unauthorized' : `Błąd serwera (${res.status})`);
             }
@@ -263,6 +264,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               content: data.content ?? '',
               title: data.title,
               displayTitle: data.displayTitle,
+              description: data.description,
               faqItems: Array.isArray(data.faqItems) ? (data.faqItems as { question: string; answer: string }[]) : undefined,
             };
 
@@ -278,11 +280,12 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               const faqItems = tr?.faqItems && tr.faqItems.length > 0 ? tr.faqItems : existingFaq;
               const finalTitle = (tr?.title ?? t.title ?? '').trim() || enTitleFallback;
               const finalDisplayTitle = (tr?.displayTitle ?? t.displayTitle ?? '')?.trim() || null;
+              const finalDescription = (tr?.description ?? t.description ?? null)?.trim() || null;
               return {
                 locale: t.locale,
                 title: finalTitle,
                 displayTitle: finalDisplayTitle || (t.displayTitle?.trim() || null),
-                description: t.description ?? null,
+                description: finalDescription,
                 content: tr ? tr.content : (t.content ?? null),
                 relatedCalculators,
                 faqItems,
@@ -303,12 +306,12 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                 const updated = p.translations.map((t) => {
                   const tr = translatedByLocale[t.locale];
                   if (!tr) return t;
-                  return { ...t, title: tr.title ?? t.title, displayTitle: tr.displayTitle ?? t.displayTitle, content: tr.content, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : t.faqItems };
+                  return { ...t, title: tr.title ?? t.title, displayTitle: tr.displayTitle ?? t.displayTitle, description: tr.description ?? t.description ?? null, content: tr.content, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : t.faqItems };
                 });
                 for (const l of Object.keys(translatedByLocale)) {
                   if (!updated.some((x) => x.locale === l)) {
                     const tr = translatedByLocale[l]!;
-                    updated.push({ id: `${l}-${page.id}`, locale: l, title: tr.title ?? '', displayTitle: tr.displayTitle ?? null, description: null, content: tr.content, relatedCalculators: null, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : null, calculatorLabels: null });
+                    updated.push({ id: `${l}-${page.id}`, locale: l, title: tr.title ?? '', displayTitle: tr.displayTitle ?? null, description: tr.description ?? null, content: tr.content, relatedCalculators: null, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : null, calculatorLabels: null });
                   }
                 }
                 return { ...p, translations: updated };

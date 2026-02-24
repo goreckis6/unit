@@ -73,9 +73,7 @@ STRUCTURE OF THE RESPONSE (follow exactly):
 
 3. **"How to Use the Calculator"** (H2): A simple, numbered list of steps. Describe inputs, separator/format options, and the main action (e.g. "Click Generate"). Be concrete.
 
-4. **"Why Use This Tool?"** (H2): Bullet points highlighting why Calculinohub's calculator is better than doing it manually. Include: Error Prevention, Speed/Instant results, Study Aid or practical use case.
-
-5. **Technical/Educational Context** (H2): Brief section explaining the math or logic behind the tool. Include formulas if applicable. Use **bold** for key terms.
+4. **Technical/Educational Context** (H2): Brief section explaining the math or logic behind the tool. Include formulas if applicable. Use **bold** for key terms.
 
 **Math formulas – use one of these formats (preferred order):**
 - Unicode symbols: 2ⁿ, ∅, ⊆, ×, ÷, ∑, √, π (subscript: ₙ, superscript: ⁿ)

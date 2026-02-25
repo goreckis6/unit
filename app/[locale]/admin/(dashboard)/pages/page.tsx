@@ -352,6 +352,22 @@ export default function AdminPagesList() {
     });
   }
 
+  function handleTranslateMissingTranslations() {
+    const withMissing = filteredPages.filter((p) => hasEnContent(p) && !hasAllTranslations(p));
+    if (withMissing.length === 0) return;
+    setSelectedIds(new Set(withMissing.map((p) => p.id)));
+    startTranslate({
+      pages,
+      selectedIds: new Set(withMissing.map((p) => p.id)),
+      translateStartFrom,
+      translateOnlyOne: false,
+      resumeOverride: translatePausedAt ?? undefined,
+      autoResumeOnError,
+      onPagesUpdate: (updater) => setPages(updater),
+      onComplete: () => setSelectedIds(new Set()),
+    });
+  }
+
   async function handleDelete(id: string) {
     if (!confirm('Delete this page?')) return;
     const res = await fetch(`/api/twojastara/pages/${id}`, { method: 'DELETE' });
@@ -657,10 +673,22 @@ export default function AdminPagesList() {
                       disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
                       className="btn btn-secondary btn-sm"
                       style={{ padding: '0.35rem 0.75rem' }}
-                      title="Translate Calculator labels from EN to all other languages (Ollama). Limit: ~15 min na żądanie. Przy timeout — spróbuj ponownie lub skróć treść. Retry: 2x."
+                      title="Translate Calculator labels from EN to all other languages (Ollama). Limit: ~90 min. Przy timeout — spróbuj ponownie. Retry: 2x."
                     >
                       {translateLabelsLoading ? 'Translate Labels…' : 'Translate Labels'}
                     </button>
+                    {filteredPages.filter((p) => hasEnContent(p) && !hasAllTranslations(p)).length > 0 && (
+                      <button
+                        type="button"
+                        onClick={handleTranslateMissingTranslations}
+                        disabled={!!generateProgress || !!translateProgress || !!translateLabelsLoading}
+                        className="btn btn-primary btn-sm"
+                        style={{ padding: '0.35rem 0.75rem' }}
+                        title="Translate content to missing languages (24 locales). Saves after each language."
+                      >
+                        Translate missing translations
+                      </button>
+                    )}
                     <button
                       type="button"
                       onClick={handleBatchTranslate}
@@ -701,6 +729,19 @@ export default function AdminPagesList() {
       </div>
 
       {pages.length > 0 && (
+        <>
+        <div
+          style={{
+            fontSize: '0.8rem',
+            color: 'var(--text-secondary)',
+            marginBottom: '0.75rem',
+            padding: '0.5rem 0',
+            lineHeight: 1.5,
+          }}
+        >
+          <strong style={{ color: 'var(--text-primary)' }}>Workflow:</strong>{' '}
+          1) Upload JSON to create site/sites → 2) Generate content (Claude) → 3) Create calculator → 4) Translate labels → 5) Translate content to other languages
+        </div>
         <div style={{ display: 'flex', gap: '0.25rem', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-light)' }}>
           {bookmarkTabs.map(({ stage, label, count }) => (
             <button
@@ -723,6 +764,7 @@ export default function AdminPagesList() {
             </button>
           ))}
         </div>
+        </>
       )}
 
       {activeBookmark === 'completed' && filteredPages.length > 0 && (
@@ -744,6 +786,16 @@ export default function AdminPagesList() {
             style={{ padding: '0.35rem 0.75rem' }}
           >
             Unpublish ({selectedIds.size})
+          </button>
+          <button
+            type="button"
+            onClick={handleBulkTranslateLabels}
+            disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
+            className="btn btn-secondary btn-sm"
+            style={{ padding: '0.35rem 0.75rem' }}
+            title="Translate Calculator labels from EN to all other languages (Ollama)"
+          >
+            {translateLabelsLoading ? 'Translate Labels…' : 'Translate Labels'}
           </button>
         </div>
       )}
@@ -822,7 +874,7 @@ export default function AdminPagesList() {
 
       {pages.length > 0 && (
         <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem' }}>
-          Limit: ~15 min na żądanie (Ollama). Przy timeout — spróbuj ponownie lub skróć treść. Retry: 2x.
+          Limit: ~90 min (Ollama). Przy timeout — spróbuj ponownie. Retry: 2x.
         </p>
       )}
 

@@ -3,7 +3,7 @@ import { getSession } from '@/lib/auth';
 import { LOCALE_NAMES } from '@/lib/admin-locales';
 
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
-const OLLAMA_TIMEOUT_MS = 900_000; // 15 min (same as generate-post)
+const OLLAMA_TIMEOUT_MS = 5_400_000; // 90 min
 
 async function ollamaChat(messages: { role: string; content: string }[]) {
   const apiKey = process.env.OLLAMA_API_KEY;
@@ -32,7 +32,7 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
   } catch (e) {
     clearTimeout(timeoutId);
     if (e instanceof Error && e.name === 'AbortError') {
-      throw new Error('Ollama API timeout (limit ~15 min) — spróbuj ponownie lub skróć treść');
+      throw new Error('Ollama API timeout (limit ~90 min) — spróbuj ponownie lub skróć treść');
     }
     throw e;
   }

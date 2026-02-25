@@ -123,7 +123,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
   async function fetchWithTimeoutAndRetry(
     url: string,
     options: RequestInit,
-    timeoutMs = 900_000,
+    timeoutMs = 5_400_000,
     retries = 2,
     signal?: AbortSignal | null
   ): Promise<Response> {
@@ -251,7 +251,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                 body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined, description: enDescription || undefined }),
                 credentials: 'include',
               },
-              900_000,
+              5_400_000,
               2,
               abortRef.current?.signal ?? null
             );

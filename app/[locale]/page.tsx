@@ -5,6 +5,7 @@ import { Footer } from '@/components/Footer';
 import { SoftwareApplicationSchema } from '@/components/SoftwareApplicationSchema';
 import { GlobalSearch } from '@/components/GlobalSearch';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
+import { getSearchableCalculators } from '@/lib/get-searchable-calculators';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -34,6 +35,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: 'common' });
   const tHome = await getTranslations({ locale, namespace: 'common.homePage' });
   const siteUrl = BASE_URL;
+  const calculators = await getSearchableCalculators(locale);
 
   return (
     <div className="home">
@@ -52,7 +54,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <p className="hero-subtitle">{t('description')}</p>
             <p className="hero-description">{tHome('heroDescription')}</p>
             <div className="hero-search">
-              <GlobalSearch />
+              <GlobalSearch calculators={calculators} />
             </div>
           </div>
         </div>

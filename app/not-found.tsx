@@ -1,10 +1,11 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { BackButton } from '@/components/BackButton';
 import { GlobalSearch } from '@/components/GlobalSearch';
+import { getSearchableCalculators } from '@/lib/get-searchable-calculators';
 
 export async function generateMetadata() {
   const t = await getTranslations({ namespace: 'notFound' });
@@ -17,6 +18,8 @@ export async function generateMetadata() {
 export default async function NotFound() {
   const messages = await getMessages();
   const t = await getTranslations({ namespace: 'notFound' });
+  const locale = (await getLocale()) || 'en';
+  const calculators = await getSearchableCalculators(locale);
 
   return (
     <NextIntlClientProvider messages={messages}>
@@ -48,7 +51,7 @@ export default async function NotFound() {
 
               {/* Search Bar */}
               <div className="not-found-search">
-                <GlobalSearch />
+                <GlobalSearch calculators={calculators} />
               </div>
 
               {/* Suggestions */}

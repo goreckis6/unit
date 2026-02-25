@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { BackButton } from '@/components/BackButton';
 import { GlobalSearch } from '@/components/GlobalSearch';
+import { getSearchableCalculators } from '@/lib/get-searchable-calculators';
 
 export async function generateMetadata({ params }: { params?: Promise<{ locale?: string }> }) {
   const resolved = params ? await params : {};
@@ -30,6 +31,7 @@ export default async function NotFound({ params }: { params?: Promise<{ locale?:
   } catch {
     t = await getTranslations({ locale: 'en', namespace: 'notFound' });
   }
+  const calculators = await getSearchableCalculators(locale);
 
   return (
     <div className="not-found-page">
@@ -60,7 +62,7 @@ export default async function NotFound({ params }: { params?: Promise<{ locale?:
 
             {/* Search Bar */}
             <div className="not-found-search">
-              <GlobalSearch />
+              <GlobalSearch calculators={calculators} />
             </div>
 
             {/* Suggestions */}

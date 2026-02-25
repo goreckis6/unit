@@ -60,7 +60,7 @@ Infer the **Tool Core Function** (what it does in one sentence) and **Target Aud
 
 STRUCTURE OF THE RESPONSE (follow exactly):
 
-1. **H1 Header** (MANDATORY – first line, nothing before it): Must be exactly "How to convert [X]" where X describes the conversion/method from the topic. Examples: "How to convert kg to lbs", "How to convert meters to feet". Nothing else at the beginning.
+1. **H1 Header** (MANDATORY – first line, nothing before it): Must be exactly "How to convert [X]?" (question mark at the end) where X describes the conversion/method from the topic. Examples: "How to convert kg to lbs?", "How to convert meters to feet?". Nothing else at the beginning.
 
 2. **Intro (The "Hook")**: 2–3 engaging sentences explaining the problem it solves. E.g. "Are you struggling with [X]? The Calculinohub [topic] is designed to take the guesswork out of [Y]. Whether you are dealing with [scenarios], our tool [core value] in milliseconds."
 
@@ -90,7 +90,7 @@ OUTPUT FORMAT - Respond with a valid JSON object only, no other text. Two keys:
 - "content": the full markdown article (no FAQ)
 - "faqItems": array of 5–7 {"question":"...","answer":"..."} objects about the topic
 
-Example: {"content":"# How to convert [X]\\n\\nIntro paragraph...\\n\\n## How to Use the Calculator\\n\\n1. Step one...","faqItems":[{"question":"What is X?","answer":"X is..."}]}`;
+Example: {"content":"# How to convert [X]?\\n\\nIntro paragraph...\\n\\n## How to Use the Calculator\\n\\n1. Step one...","faqItems":[{"question":"What is X?","answer":"X is..."}]}`;
 
     const raw = await ollamaChat([{ role: 'user', content: prompt }]);
     if (!raw) {

@@ -69,24 +69,24 @@ export async function POST(request: NextRequest) {
 
     const faqBlock =
       items.length > 0
-        ? `\n\n## FAQ (translate each Q&A)\n${items.map((f: { question: string; answer: string }) => `Q: ${f.question}\nA: ${f.answer}`).join('\n\n')}`
+        ? `\n\n---\nFAQ (translate each Q&A into faqItems only — DO NOT put in content):\n${items.map((f: { question: string; answer: string }) => `Q: ${f.question}\nA: ${f.answer}`).join('\n\n')}`
         : '';
 
     const systemPrompt = `Translate from English to ${targetLanguage}. Source is ALWAYS English. Output ONLY valid JSON, no markdown or extra text.
 
-RULES:
-- 1:1 faithful translation, no omissions or additions
+CRITICAL RULES:
+- 1:1 faithful translation: translate exactly what is given, no omissions, no additions, no extra sections
+- "content" = ONLY the main article/body text. NEVER include FAQ, Q&A, "FAQ (translate...)", or any question-answer blocks in content. The page has a separate FAQ Schema below — FAQ goes ONLY in "faqItems"
 - Preserve Markdown: # H1, ## H2, **bold**, *italic*, code blocks, bullets
-- Translate naturally for native ${targetLanguage} speakers
-
-Output JSON with keys: "content" (required), "title" (if given), "displayTitle" (if given), "description" (if given; short SEO meta, 150–160 chars), "faqItems" (array of {"question","answer"} only if FAQ given). Do NOT add section headers like "## Markdown content" to the output.`;
+- "faqItems" = array of {"question","answer"} — only if FAQ was provided in the input. Put translated Q&A here, NOT in content
+- Do NOT add "## Markdown content", "## FAQ", or similar headers to content`;
 
     const userContent = [
       enTitle && `title: ${enTitle}`,
       enDisplayTitle && `displayTitle: ${enDisplayTitle}`,
       enDescription && `description (SEO meta): ${enDescription}`,
       '---',
-      'content:',
+      'MAIN CONTENT (translate 1:1; output in "content" — NEVER add FAQ here):',
       content,
       faqBlock,
     ]
@@ -111,10 +111,14 @@ Output JSON with keys: "content" (required), "title" (if given), "displayTitle" 
       throw new Error('Ollama returned invalid JSON. Spróbuj ponownie.');
     }
 
-    // Strip accidental "## Markdown content" or similar that may leak from prompts
+    // Strip accidental headers and FAQ block that may leak from model into content
     let resultContent = (parsed.content ?? '')
       .replace(/^##\s*Markdown\s+content\s*\n*/gi, '')
       .replace(/^content:\s*\n*/i, '')
+      .replace(/\n*---\s*\n*FAQ\s*\([^\n)]*\)[^\n]*\n*/gi, '\n')
+      .replace(/\n*FAQ\s*\([^\n)]*\)[^\n]*\n*/gi, '\n')
+      .replace(/(\n\n)Q:\s+[^\n]+\nA:\s+[^\n]+(?=\n\n|$)/g, '$1')
+      .replace(/\n{3,}/g, '\n\n')
       .trim();
     if (!resultContent) {
       throw new Error('Empty content translation from Ollama Cloud');

@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getSession } from '@/lib/auth';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -59,7 +60,10 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
   // Get FAQ items from translations
   const faqItems = await getFaqItems(locale);
 
-  const calculators = await getCalculatorsForCategory('math', locale, mathCalculators);
+  const [calculators, session] = await Promise.all([
+    getCalculatorsForCategory('math', locale, mathCalculators),
+    getSession(),
+  ]);
 
   return (
     <>
@@ -86,7 +90,7 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
           </div>
 
           <div className="calculators-container">
-            <CalculatorList calculators={calculators} />
+            <CalculatorList calculators={calculators} isAdmin={!!session} />
             
             {/* SEO Content Section */}
             <div className="seo-content-section">

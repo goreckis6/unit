@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getSession } from '@/lib/auth';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -57,7 +58,10 @@ export default async function ChemistryCalculatorsPage({ params }: { params: Pro
   const tSeo = await getTranslations({ locale, namespace: 'calculators.chemistryCalculators.seoContent' });
   
   const faqItems = await getFaqItems(locale);
-  const calculators = await getCalculatorsForCategory('chemistry', locale, chemistryCalculators);
+  const [calculators, session] = await Promise.all([
+    getCalculatorsForCategory('chemistry', locale, chemistryCalculators),
+    getSession(),
+  ]);
 
   return (
     <>
@@ -84,7 +88,7 @@ export default async function ChemistryCalculatorsPage({ params }: { params: Pro
           </div>
 
           <div className="calculators-container">
-            <CalculatorList calculators={calculators} />
+            <CalculatorList calculators={calculators} isAdmin={!!session} />
             
             <div className="seo-content-section">
               <div className="seo-content-card">

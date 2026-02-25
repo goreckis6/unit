@@ -10,13 +10,15 @@ interface Calculator {
   title: string;
   description: string;
   path: string;
+  pageId?: string;
 }
 
 interface CalculatorListProps {
   calculators: Calculator[];
+  isAdmin?: boolean;
 }
 
-export function CalculatorList({ calculators }: CalculatorListProps) {
+export function CalculatorList({ calculators, isAdmin }: CalculatorListProps) {
   const t = useTranslations('calculators');
   const tCommon = useTranslations('common');
   const [searchQuery, setSearchQuery] = useState('');
@@ -28,6 +30,7 @@ export function CalculatorList({ calculators }: CalculatorListProps) {
         title: calc.title,
         description: calc.description,
         path: calc.path,
+        pageId: calc.pageId,
       }));
     }
     const query = searchQuery.toLowerCase().trim();
@@ -42,6 +45,7 @@ export function CalculatorList({ calculators }: CalculatorListProps) {
         title: calc.title,
         description: calc.description,
         path: calc.path,
+        pageId: calc.pageId,
       }));
   }, [searchQuery, calculators]);
 
@@ -60,21 +64,29 @@ export function CalculatorList({ calculators }: CalculatorListProps) {
       {/* Calculators List */}
       <div className="calculators-list">
         {filteredCalculators.map((calc) => (
-          <Link 
-            key={calc.id}
-            href={calc.path} 
-            className="calculator-list-item"
-          >
-            <div className="calculator-content">
-              <h3 className="calculator-name">{calc.title}</h3>
-              <p className="calculator-description">{calc.description}</p>
-            </div>
-            <div className="calculator-arrow">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-          </Link>
+          <div key={calc.id} className="calculator-list-item" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <Link href={calc.path} style={{ flex: 1, display: 'contents' }}>
+              <div className="calculator-content" style={{ flex: 1 }}>
+                <h3 className="calculator-name">{calc.title}</h3>
+                <p className="calculator-description">{calc.description}</p>
+              </div>
+              <div className="calculator-arrow">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </Link>
+            {isAdmin && calc.pageId && (
+              <a
+                href={`/twojastara/pages/${calc.pageId}/edit`}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem', flexShrink: 0 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                Edit
+              </a>
+            )}
+          </div>
         ))}
 
         {filteredCalculators.length === 0 && (

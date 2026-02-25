@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { getSession } from '@/lib/auth';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -59,7 +60,10 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
   // Get FAQ items from translations
   const faqItems = await getFaqItems(locale);
 
-  const calculators = await getCalculatorsForCategory('electric', locale, electricCalculators);
+  const [calculators, session] = await Promise.all([
+    getCalculatorsForCategory('electric', locale, electricCalculators),
+    getSession(),
+  ]);
 
   return (
     <>
@@ -86,7 +90,7 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
           </div>
 
           <div className="calculators-container">
-            <CalculatorList calculators={calculators} />
+            <CalculatorList calculators={calculators} isAdmin={!!session} />
             
             {/* SEO Content Section */}
             <div className="seo-content-section">

@@ -76,7 +76,7 @@ export default async function CalculatorPage({ params, searchParams }: Props) {
   if (!page) notFound();
 
   const isPreview = (await searchParams)?.preview === '1';
-  const session = isPreview ? await getSession() : null;
+  const session = await getSession();
   const canView = page.published || (isPreview && session);
 
   if (!canView) notFound();
@@ -149,12 +149,23 @@ export default async function CalculatorPage({ params, searchParams }: Props) {
 
       <div className="calculator-header">
         <div className="container">
-          <Link href={`/calculators/${category}`} className="back-button">
-            <svg className="back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <span>{tCommon('calculators')}</span>
-          </Link>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
+            <Link href={`/calculators/${category}`} className="back-button">
+              <svg className="back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span>{tCommon('calculators')}</span>
+            </Link>
+            {session && (
+              <a
+                href={`/twojastara/pages/${page.id}/edit`}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.4rem 0.75rem', fontSize: '0.85rem' }}
+              >
+                Edit page
+              </a>
+            )}
+          </div>
           <div className="header-content">
             <div className="title-badge">{getCategoryBadge(category)}</div>
             <h1 className="page-title">{translation.displayTitle?.trim() || translation.title}</h1>

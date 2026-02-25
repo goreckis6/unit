@@ -6,6 +6,8 @@ export interface CalculatorListItem {
   title: string;
   description: string;
   path: string;
+  /** Present for CMS pages; used for Edit link in admin */
+  pageId?: string;
 }
 
 function getNested(obj: Record<string, unknown>, path: string): string {
@@ -55,6 +57,7 @@ export async function getCalculatorsForCategory(
       title: (t?.title ?? p.slug).trim() || p.slug,
       description: (t?.description ?? '').trim() || '',
       path: `/calculators/${p.category}/${p.slug}`,
+      pageId: p.id,
     };
   });
 

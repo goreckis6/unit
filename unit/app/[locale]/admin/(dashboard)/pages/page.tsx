@@ -18,9 +18,26 @@ function hasAllTranslations(page: Page): boolean {
   return ADMIN_LOCALES.every((loc) => localeSet.has(loc));
 }
 
+function hasAllLabelsTranslated(page: Page): boolean {
+  if (!(page.calculatorCode ?? '').trim()) return true;
+  const en = page.translations.find((t) => t.locale === 'en');
+  const enLab = parseJson<Record<string, string>>(en?.calculatorLabels, {});
+  const enKeys = Object.keys(enLab).filter((k) => enLab[k]?.trim());
+  if (enKeys.length === 0) return false;
+  for (const loc of ADMIN_LOCALES) {
+    const t = page.translations.find((tr) => tr.locale === loc);
+    const lab = parseJson<Record<string, string>>(t?.calculatorLabels, {});
+    for (const k of enKeys) {
+      if (!lab[k]?.trim()) return false;
+    }
+  }
+  return true;
+}
+
 function getPageStage(page: Page): PageStage {
   if (!hasEnContent(page)) return 'new';
   if (!hasAllTranslations(page)) return 'in-progress';
+  if (!hasAllLabelsTranslated(page)) return 'translate-label';
   return 'completed';
 }
 
@@ -483,8 +500,8 @@ export default function AdminPagesList() {
   const bookmarkTabs: { stage: PageStage; label: string; count: number }[] = [
     { stage: 'new', label: 'New', count: pagesByStage.new.length },
     { stage: 'in-progress', label: 'In progress', count: pagesByStage['in-progress'].length },
-    { stage: 'translate-label', label: 'Translate labels', count: pagesByStage['translate-label'].length },
-    { stage: 'completed', label: 'Completed', count: pagesByStage.completed.length },
+    { stage: 'translate-label', label: 'Translation Completed', count: pagesByStage['translate-label'].length },
+    { stage: 'completed', label: 'Completed Translation and Labels', count: pagesByStage.completed.length },
   ];
 
   return (
@@ -740,7 +757,7 @@ export default function AdminPagesList() {
           }}
         >
           <strong style={{ color: 'var(--text-primary)' }}>Workflow:</strong>{' '}
-          1) Upload JSON to create site/sites → 2) Generate content (Claude) → 3) Create calculator → 4) Translate labels → 5) Translate content to other languages
+          1) Upload JSON to create site/sites → 2) Generate content (Claude) → 3) Create calculator → 4) Translate content to other languages → 5) Translate labels
         </div>
         <div style={{ display: 'flex', gap: '0.25rem', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-light)' }}>
           {bookmarkTabs.map(({ stage, label, count }) => (
@@ -767,36 +784,42 @@ export default function AdminPagesList() {
         </>
       )}
 
-      {activeBookmark === 'completed' && filteredPages.length > 0 && (
+      {(activeBookmark === 'translate-label' || activeBookmark === 'completed') && filteredPages.length > 0 && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
-          <button
-            type="button"
-            onClick={() => handleBulkPublish(true)}
-            disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
-            className="btn btn-primary btn-sm"
-            style={{ padding: '0.35rem 0.75rem' }}
-          >
-            {bulkPublishLoading ? 'Publishing…' : `Mark & Publish (${selectedIds.size})`}
-          </button>
-          <button
-            type="button"
-            onClick={() => handleBulkPublish(false)}
-            disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
-            className="btn btn-secondary btn-sm"
-            style={{ padding: '0.35rem 0.75rem' }}
-          >
-            Unpublish ({selectedIds.size})
-          </button>
-          <button
-            type="button"
-            onClick={handleBulkTranslateLabels}
-            disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
-            className="btn btn-secondary btn-sm"
-            style={{ padding: '0.35rem 0.75rem' }}
-            title="Translate Calculator labels from EN to all other languages (Ollama)"
-          >
-            {translateLabelsLoading ? 'Translate Labels…' : 'Translate Labels'}
-          </button>
+          {activeBookmark === 'translate-label' && (
+            <button
+              type="button"
+              onClick={handleBulkTranslateLabels}
+              disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
+              className="btn btn-primary btn-sm"
+              style={{ padding: '0.35rem 0.75rem' }}
+              title="Translate Calculator labels from EN to all other languages (Ollama)"
+            >
+              {translateLabelsLoading ? 'Translate Labels…' : 'Translate Labels'}
+            </button>
+          )}
+          {activeBookmark === 'completed' && (
+            <>
+              <button
+                type="button"
+                onClick={() => handleBulkPublish(true)}
+                disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
+                className="btn btn-primary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+              >
+                {bulkPublishLoading ? 'Publishing…' : `Mark & Publish (${selectedIds.size})`}
+              </button>
+              <button
+                type="button"
+                onClick={() => handleBulkPublish(false)}
+                disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+              >
+                Unpublish ({selectedIds.size})
+              </button>
+            </>
+          )}
         </div>
       )}
 
@@ -1026,7 +1049,7 @@ export default function AdminPagesList() {
         <p style={{ color: 'var(--text-secondary)' }}>No pages yet. Create your first page.</p>
       ) : filteredPages.length === 0 ? (
         <p style={{ color: 'var(--text-secondary)' }}>
-          No pages in <strong>{activeBookmark === 'new' ? 'New' : activeBookmark === 'in-progress' ? 'In progress' : activeBookmark === 'translate-label' ? 'Translate labels' : 'Completed'}</strong>. Switch tab or create a page.
+          No pages in <strong>{activeBookmark === 'new' ? 'New' : activeBookmark === 'in-progress' ? 'In progress' : activeBookmark === 'translate-label' ? 'Translation Completed' : 'Completed Translation and Labels'}</strong>. Switch tab or create a page.
         </p>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>

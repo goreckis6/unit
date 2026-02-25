@@ -7,6 +7,7 @@ import { FaqSection } from '@/components/FaqSection';
 import { CalculatorList } from './list';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 import { electricCalculators } from '@/lib/calculators/electric';
+import { getCalculatorsForCategory } from '@/lib/get-calculators-for-category';
 
 interface FaqItem {
   question: string;
@@ -58,8 +59,7 @@ export default async function ElectricCalculatorsPage({ params }: { params: Prom
   // Get FAQ items from translations
   const faqItems = await getFaqItems(locale);
 
-  // Use centralized calculator data - automatically includes new calculators
-  const calculators = electricCalculators.map(({ category, ...calc }) => calc);
+  const calculators = await getCalculatorsForCategory('electric', locale, electricCalculators);
 
   return (
     <>

@@ -7,6 +7,7 @@ import { FaqSection } from '@/components/FaqSection';
 import { CalculatorList } from './list';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 import { mathCalculators } from '@/lib/calculators/math';
+import { getCalculatorsForCategory } from '@/lib/get-calculators-for-category';
 
 interface FaqItem {
   question: string;
@@ -58,8 +59,7 @@ export default async function MathCalculatorsPage({ params }: { params: Promise<
   // Get FAQ items from translations
   const faqItems = await getFaqItems(locale);
 
-  // Use centralized calculator data - automatically includes new calculators
-  const calculators = mathCalculators.map(({ category, ...calc }) => calc);
+  const calculators = await getCalculatorsForCategory('math', locale, mathCalculators);
 
   return (
     <>

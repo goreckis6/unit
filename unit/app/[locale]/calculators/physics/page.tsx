@@ -7,6 +7,7 @@ import { FaqSection } from '@/components/FaqSection';
 import { CalculatorList } from './list';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 import { physicsCalculators } from '@/lib/calculators/physics';
+import { getCalculatorsForCategory } from '@/lib/get-calculators-for-category';
 
 interface FaqItem {
   question: string;
@@ -56,7 +57,7 @@ export default async function PhysicsCalculatorsPage({ params }: { params: Promi
   const tSeo = await getTranslations({ locale, namespace: 'calculators.physicsCalculators.seoContent' });
   
   const faqItems = await getFaqItems(locale);
-  const calculators = physicsCalculators.map(({ category, ...calc }) => calc);
+  const calculators = await getCalculatorsForCategory('physics', locale, physicsCalculators);
 
   return (
     <>

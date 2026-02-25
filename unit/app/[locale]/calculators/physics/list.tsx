@@ -7,8 +7,8 @@ import { CalculatorSearch } from './search';
 
 interface Calculator {
   id: string;
-  titleKey: string;
-  descKey: string;
+  title: string;
+  description: string;
   path: string;
 }
 
@@ -24,25 +24,25 @@ export function CalculatorList({ calculators }: CalculatorListProps) {
     if (!searchQuery.trim()) {
       return calculators.map(calc => ({
         id: calc.id,
-        title: t(calc.titleKey),
-        description: t(calc.descKey),
+        title: calc.title,
+        description: calc.description,
         path: calc.path,
       }));
     }
     const query = searchQuery.toLowerCase().trim();
     return calculators
       .filter(calc => {
-        const title = t(calc.titleKey).toLowerCase();
-        const description = t(calc.descKey).toLowerCase();
+        const title = calc.title.toLowerCase();
+        const description = calc.description.toLowerCase();
         return title.includes(query) || description.includes(query);
       })
       .map(calc => ({
         id: calc.id,
-        title: t(calc.titleKey),
-        description: t(calc.descKey),
+        title: calc.title,
+        description: calc.description,
         path: calc.path,
       }));
-  }, [searchQuery, calculators, t]);
+  }, [searchQuery, calculators]);
 
   return (
     <>

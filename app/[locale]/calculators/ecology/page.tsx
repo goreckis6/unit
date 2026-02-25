@@ -7,6 +7,7 @@ import { FaqSection } from '@/components/FaqSection';
 import { CalculatorList } from './list';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 import { ecologyCalculators } from '@/lib/calculators/ecology';
+import { getCalculatorsForCategory } from '@/lib/get-calculators-for-category';
 
 interface FaqItem {
   question: string;
@@ -56,7 +57,7 @@ export default async function EcologyCalculatorsPage({ params }: { params: Promi
   const tSeo = await getTranslations({ locale, namespace: 'calculators.ecologyCalculators.seoContent' });
   
   const faqItems = await getFaqItems(locale);
-  const calculators = ecologyCalculators.map(({ category, ...calc }) => calc);
+  const calculators = await getCalculatorsForCategory('ecology', locale, ecologyCalculators);
 
   return (
     <>

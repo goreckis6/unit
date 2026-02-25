@@ -7,6 +7,7 @@ import { FaqSection } from '@/components/FaqSection';
 import { CalculatorList } from './list';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 import { foodCalculators } from '@/lib/calculators/food';
+import { getCalculatorsForCategory } from '@/lib/get-calculators-for-category';
 
 interface FaqItem {
   question: string;
@@ -56,7 +57,7 @@ export default async function FoodCalculatorsPage({ params }: { params: Promise<
   const tSeo = await getTranslations({ locale, namespace: 'calculators.foodCalculators.seoContent' });
   
   const faqItems = await getFaqItems(locale);
-  const calculators = foodCalculators.map(({ category, ...calc }) => calc);
+  const calculators = await getCalculatorsForCategory('food', locale, foodCalculators);
 
   return (
     <>

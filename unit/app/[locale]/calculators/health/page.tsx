@@ -7,6 +7,7 @@ import { FaqSection } from '@/components/FaqSection';
 import { CalculatorList } from './list';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 import { healthCalculators } from '@/lib/calculators/health';
+import { getCalculatorsForCategory } from '@/lib/get-calculators-for-category';
 
 interface FaqItem {
   question: string;
@@ -56,7 +57,7 @@ export default async function HealthCalculatorsPage({ params }: { params: Promis
   const tSeo = await getTranslations({ locale, namespace: 'calculators.healthCalculators.seoContent' });
   
   const faqItems = await getFaqItems(locale);
-  const calculators = healthCalculators.map(({ category, ...calc }) => calc);
+  const calculators = await getCalculatorsForCategory('health', locale, healthCalculators);
 
   return (
     <>

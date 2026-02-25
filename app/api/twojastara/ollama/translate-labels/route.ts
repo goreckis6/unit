@@ -1,28 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
 import { LOCALE_NAMES } from '@/lib/admin-locales';
+import { ollamaFetch } from '@/lib/ollama-fetch';
 
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
-const OLLAMA_TIMEOUT_MS = 5_400_000; // 90 min
 
 async function ollamaChat(messages: { role: string; content: string }[]) {
   const apiKey = process.env.OLLAMA_API_KEY;
   if (!apiKey) {
     throw new Error('OLLAMA_API_KEY environment variable is not set');
   }
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), OLLAMA_TIMEOUT_MS);
   try {
-    const res = await fetch('https://ollama.com/api/chat', {
+    const res = await ollamaFetch('https://ollama.com/api/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({ model: MODEL, messages, stream: false }),
-      signal: controller.signal,
     });
-    clearTimeout(timeoutId);
     if (!res.ok) {
       const err = await res.text();
       throw new Error(err || `Ollama API error: ${res.status}`);
@@ -30,7 +26,6 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
     const data = (await res.json()) as { message?: { content?: string } };
     return data?.message?.content ?? '';
   } catch (e) {
-    clearTimeout(timeoutId);
     if (e instanceof Error && e.name === 'AbortError') {
       throw new Error('Ollama API timeout (limit ~90 min) — spróbuj ponownie lub skróć treść');
     }

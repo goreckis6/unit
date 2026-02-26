@@ -3,68 +3,71 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { getAllCalculators, type Calculator } from '@/lib/all-calculators';
+import { getAllCalculators } from '@/lib/all-calculators';
+import type { SearchableCalculator } from '@/lib/get-searchable-calculators';
 
-interface SearchResult extends Calculator {
+interface SearchResult {
+  id: string;
   title: string;
   description: string;
+  path: string;
   categoryLabel: string;
 }
 
-export function GlobalSearch() {
+interface GlobalSearchProps {
+  /** Pre-fetched calculators (static + CMS). When provided, CMS calculators appear in search. */
+  calculators?: SearchableCalculator[];
+}
+
+export function GlobalSearch({ calculators: propCalculators }: GlobalSearchProps = {}) {
   const t = useTranslations('calculators');
-  const tCommon = useTranslations('common');
   const tHome = useTranslations('common.homePage');
   const [searchQuery, setSearchQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const allCalculators = getAllCalculators();
+  const allCalculators = useMemo((): SearchResult[] => {
+    if (propCalculators && propCalculators.length > 0) {
+      return propCalculators;
+    }
+    const staticCalcs = getAllCalculators();
+    const catBadge = (cat: string) => {
+      const map: Record<string, string> = {
+        math: t('mathCalculators.badge') || 'Math',
+        electric: t('electricCalculators.badge') || 'Electric',
+        biology: t('biologyCalculators.badge') || 'Biology',
+        conversion: t('conversionCalculators.badge') || 'Conversion',
+        physics: t('physicsCalculators.badge') || 'Physics',
+        'real-life': t('realLifeCalculators.badge') || 'Real-life',
+        finance: t('financeCalculators.badge') || 'Finance',
+        others: t('otherCalculators.badge') || 'Others',
+        health: t('healthCalculators.badge') || 'Health',
+        chemistry: t('chemistryCalculators.badge') || 'Chemistry',
+        construction: t('constructionCalculators.badge') || 'Construction',
+        ecology: t('ecologyCalculators.badge') || 'Ecology',
+        food: t('foodCalculators.badge') || 'Food',
+        statistics: t('statisticsCalculators.badge') || 'Statistics',
+      };
+      return map[cat] ?? cat;
+    };
+    return staticCalcs.map((c) => ({
+      id: c.id,
+      title: t(c.titleKey),
+      description: t(c.descKey),
+      path: c.path.startsWith('/') ? c.path : `/${c.path}`,
+      categoryLabel: catBadge(c.category),
+    }));
+  }, [propCalculators, t]);
 
   const filteredResults = useMemo(() => {
-    if (!searchQuery.trim()) {
-      return [];
-    }
+    if (!searchQuery.trim()) return [];
 
     const query = searchQuery.toLowerCase().trim();
-    const results: SearchResult[] = [];
-
-    allCalculators.forEach((calc) => {
-      const title = t(calc.titleKey).toLowerCase();
-      const description = t(calc.descKey).toLowerCase();
-      
-      if ((title ?? '').includes(query) || (description ?? '').includes(query)) {
-        let categoryLabel = '';
-        if (calc.category === 'math') {
-          categoryLabel = t('mathCalculators.badge') || 'Math';
-        } else if (calc.category === 'electric') {
-          categoryLabel = t('electricCalculators.badge') || 'Electric';
-        } else if (calc.category === 'biology') {
-          categoryLabel = t('biologyCalculators.badge') || 'Biology';
-        } else if (calc.category === 'conversion') {
-          categoryLabel = t('conversionCalculators.badge') || 'Conversion';
-        } else if (calc.category === 'physics') {
-          categoryLabel = t('physicsCalculators.badge') || 'Physics';
-        } else if (calc.category === 'real-life') {
-          categoryLabel = t('realLifeCalculators.badge') || 'Real-life';
-        } else if (calc.category === 'finance') {
-          categoryLabel = t('financeCalculators.badge') || 'Finance';
-        } else if (calc.category === 'others') {
-          categoryLabel = t('otherCalculators.badge') || 'Others';
-        }
-
-        results.push({
-          ...calc,
-          title: t(calc.titleKey),
-          description: t(calc.descKey),
-          categoryLabel,
-        });
-      }
-    });
-
-    return results.slice(0, 10); // Limit to 10 results
-  }, [searchQuery, t]);
+    return allCalculators
+      .filter((c) => (c.title ?? '').toLowerCase().includes(query) || (c.description ?? '').toLowerCase().includes(query))
+      .slice(0, 10);
+  }, [searchQuery, allCalculators]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

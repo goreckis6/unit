@@ -25,7 +25,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <IntlProvider messages={messages}>
+    <IntlProvider locale={locale} messages={messages}>
       <GlobalEnterToCalculate />
       {children}
     </IntlProvider>

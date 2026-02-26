@@ -6,7 +6,7 @@ import { ADMIN_LOCALES, LOCALE_NAMES } from '@/lib/admin-locales';
 import { useTranslate } from '../../TranslateContext';
 import { useGenerate, type GenerateProviderType } from '../../GenerateContext';
 
-export type PageStage = 'new' | 'in-progress' | 'translate-label' | 'completed';
+export type PageStage = 'new' | 'in-progress' | 'translate-label' | 'completed' | 'completed-alive';
 
 function hasEnContent(page: Page): boolean {
   const en = page.translations.find((t) => t.locale === 'en');
@@ -38,7 +38,7 @@ function getPageStage(page: Page): PageStage {
   if (!hasEnContent(page)) return 'new';
   if (!hasAllTranslations(page)) return 'in-progress';
   if (!hasAllLabelsTranslated(page)) return 'translate-label';
-  return 'completed';
+  return page.published ? 'completed-alive' : 'completed';
 }
 
 type PageTranslation = {
@@ -123,7 +123,7 @@ export default function AdminPagesList() {
   }
 
   const pagesByStage = useMemo(() => {
-    const byStage: Record<PageStage, Page[]> = { new: [], 'in-progress': [], 'translate-label': [], completed: [] };
+    const byStage: Record<PageStage, Page[]> = { new: [], 'in-progress': [], 'translate-label': [], completed: [], 'completed-alive': [] };
     const translateLabelSlugs = new Set<string>();
     if (translateLabelsProgress?.pageSlug) translateLabelSlugs.add(translateLabelsProgress.pageSlug);
     if (translateLabelsPausedAt?.pageSlug) translateLabelSlugs.add(translateLabelsPausedAt.pageSlug);
@@ -137,7 +137,37 @@ export default function AdminPagesList() {
     return byStage;
   }, [pages, translateLabelsProgress?.pageSlug, translateLabelsPausedAt?.pageSlug]);
 
-  const filteredPages = pagesByStage[activeBookmark];
+  const [searchQuery, setSearchQuery] = useState('');
+  const [pageNum, setPageNum] = useState(1);
+  const PAGE_SIZE = 50;
+
+  const filteredPages = useMemo(() => {
+    const stagePages = pagesByStage[activeBookmark];
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return stagePages;
+    return stagePages.filter((p) => {
+      const enTitle = p.translations.find((t) => t.locale === 'en')?.title ?? '';
+      const displayTitle = p.translations.find((t) => t.locale === 'en')?.displayTitle ?? '';
+      return (
+        enTitle.toLowerCase().includes(q) ||
+        displayTitle.toLowerCase().includes(q) ||
+        p.slug.toLowerCase().includes(q)
+      );
+    });
+  }, [pagesByStage, activeBookmark, searchQuery]);
+
+  const paginatedPages = useMemo(() => {
+    if (filteredPages.length <= PAGE_SIZE) return filteredPages;
+    const start = (pageNum - 1) * PAGE_SIZE;
+    return filteredPages.slice(start, start + PAGE_SIZE);
+  }, [filteredPages, pageNum]);
+
+  const totalPages = Math.ceil(filteredPages.length / PAGE_SIZE);
+  const showPagination = filteredPages.length > PAGE_SIZE;
+
+  useEffect(() => {
+    setPageNum(1);
+  }, [activeBookmark, searchQuery]);
 
   useEffect(() => {
     fetch('/api/twojastara/pages')
@@ -497,11 +527,12 @@ export default function AdminPagesList() {
 
   const selectedCount = selectedIds.size;
 
-  const bookmarkTabs: { stage: PageStage; label: string; count: number }[] = [
+  const bookmarkTabs: { stage: PageStage; label: string; count: number; green?: boolean }[] = [
     { stage: 'new', label: 'New', count: pagesByStage.new.length },
     { stage: 'in-progress', label: 'In progress', count: pagesByStage['in-progress'].length },
     { stage: 'translate-label', label: 'Translation Completed', count: pagesByStage['translate-label'].length },
     { stage: 'completed', label: 'Completed Translation and Labels', count: pagesByStage.completed.length },
+    { stage: 'completed-alive', label: 'Completed:Alvie', count: pagesByStage['completed-alive'].length, green: true },
   ];
 
   return (
@@ -760,31 +791,57 @@ export default function AdminPagesList() {
           1) Upload JSON to create site/sites → 2) Generate content (Claude) → 3) Create calculator → 4) Translate content to other languages → 5) Translate labels
         </div>
         <div style={{ display: 'flex', gap: '0.25rem', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-light)' }}>
-          {bookmarkTabs.map(({ stage, label, count }) => (
-            <button
-              key={stage}
-              type="button"
-              onClick={() => setBookmark(stage)}
-              style={{
-                padding: '0.6rem 1rem',
-                fontSize: '0.9rem',
-                fontWeight: 500,
-                border: 'none',
-                borderBottom: activeBookmark === stage ? '2px solid var(--primary, #2563eb)' : '2px solid transparent',
-                background: activeBookmark === stage ? 'rgba(37, 99, 235, 0.08)' : 'transparent',
-                color: activeBookmark === stage ? 'var(--primary)' : 'var(--text-secondary)',
-                cursor: 'pointer',
-                borderRadius: '0.5rem 0.5rem 0 0',
-              }}
-            >
-              {label} ({count})
-            </button>
-          ))}
+          {bookmarkTabs.map(({ stage, label, count, green }) => {
+            const isActive = activeBookmark === stage;
+            const accent = green && isActive ? 'var(--success-color, #10b981)' : 'var(--primary, #2563eb)';
+            return (
+              <button
+                key={stage}
+                type="button"
+                onClick={() => setBookmark(stage)}
+                style={{
+                  padding: '0.6rem 1rem',
+                  fontSize: '0.9rem',
+                  fontWeight: 500,
+                  border: 'none',
+                  borderBottom: isActive ? `2px solid ${accent}` : '2px solid transparent',
+                  background: isActive ? (green ? 'rgba(16, 185, 129, 0.12)' : 'rgba(37, 99, 235, 0.08)') : 'transparent',
+                  color: isActive ? accent : (green ? 'var(--success-color, #10b981)' : 'var(--text-secondary)'),
+                  cursor: 'pointer',
+                  borderRadius: '0.5rem 0.5rem 0 0',
+                }}
+              >
+                {label} ({count})
+              </button>
+            );
+          })}
         </div>
         </>
       )}
 
-      {(activeBookmark === 'translate-label' || activeBookmark === 'completed') && filteredPages.length > 0 && (
+      {pages.length > 0 && (
+        <div style={{ marginBottom: '1rem', display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
+          <input
+            type="search"
+            placeholder="Search by title..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            style={{
+              padding: '0.5rem 0.75rem',
+              fontSize: '0.9rem',
+              border: '1px solid var(--border-color)',
+              borderRadius: 6,
+              background: 'var(--bg-primary)',
+              color: 'var(--text-primary)',
+              minWidth: 200,
+              maxWidth: 320,
+            }}
+            aria-label="Search by page title"
+          />
+        </div>
+      )}
+
+      {(activeBookmark === 'translate-label' || activeBookmark === 'completed' || activeBookmark === 'completed-alive') && filteredPages.length > 0 && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
           {activeBookmark === 'translate-label' && (
             <button
@@ -799,26 +856,26 @@ export default function AdminPagesList() {
             </button>
           )}
           {activeBookmark === 'completed' && (
-            <>
-              <button
-                type="button"
-                onClick={() => handleBulkPublish(true)}
-                disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
-                className="btn btn-primary btn-sm"
-                style={{ padding: '0.35rem 0.75rem' }}
-              >
-                {bulkPublishLoading ? 'Publishing…' : `Mark & Publish (${selectedIds.size})`}
-              </button>
-              <button
-                type="button"
-                onClick={() => handleBulkPublish(false)}
-                disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
-                className="btn btn-secondary btn-sm"
-                style={{ padding: '0.35rem 0.75rem' }}
-              >
-                Unpublish ({selectedIds.size})
-              </button>
-            </>
+            <button
+              type="button"
+              onClick={() => handleBulkPublish(true)}
+              disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
+              className="btn btn-primary btn-sm"
+              style={{ padding: '0.35rem 0.75rem' }}
+            >
+              {bulkPublishLoading ? 'Publishing…' : `Mark & Publish (${selectedIds.size})`}
+            </button>
+          )}
+          {activeBookmark === 'completed-alive' && (
+            <button
+              type="button"
+              onClick={() => handleBulkPublish(false)}
+              disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
+              className="btn btn-secondary btn-sm"
+              style={{ padding: '0.35rem 0.75rem' }}
+            >
+              {bulkPublishLoading ? 'Unpublishing…' : `Unpublish (${selectedIds.size})`}
+            </button>
           )}
         </div>
       )}
@@ -1049,11 +1106,42 @@ export default function AdminPagesList() {
         <p style={{ color: 'var(--text-secondary)' }}>No pages yet. Create your first page.</p>
       ) : filteredPages.length === 0 ? (
         <p style={{ color: 'var(--text-secondary)' }}>
-          No pages in <strong>{activeBookmark === 'new' ? 'New' : activeBookmark === 'in-progress' ? 'In progress' : activeBookmark === 'translate-label' ? 'Translation Completed' : 'Completed Translation and Labels'}</strong>. Switch tab or create a page.
+          No pages in <strong>
+            {activeBookmark === 'new' ? 'New' : activeBookmark === 'in-progress' ? 'In progress' : activeBookmark === 'translate-label' ? 'Translation Completed' : activeBookmark === 'completed-alive' ? 'Completed:Alvie' : 'Completed Translation and Labels'}
+          </strong>
+          {searchQuery.trim() ? ' matching search' : ''}. Switch tab or create a page.
         </p>
       ) : (
+        <>
+        {showPagination && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>
+              Page {pageNum} of {totalPages} ({filteredPages.length} total)
+            </span>
+            <div style={{ display: 'flex', gap: '0.25rem' }}>
+              <button
+                type="button"
+                onClick={() => setPageNum((n) => Math.max(1, n - 1))}
+                disabled={pageNum <= 1}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.6rem' }}
+              >
+                ← Prev
+              </button>
+              <button
+                type="button"
+                onClick={() => setPageNum((n) => Math.min(totalPages, n + 1))}
+                disabled={pageNum >= totalPages}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.6rem' }}
+              >
+                Next →
+              </button>
+            </div>
+          </div>
+        )}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-          {filteredPages.map((page) => {
+          {paginatedPages.map((page) => {
             const enTitle = page.translations.find((t) => t.locale === 'en')?.title ?? page.slug;
             const isSelected = selectedIds.has(page.id);
             const isGeneratedThisRun = generatedIdsThisRun.has(page.id);
@@ -1135,6 +1223,7 @@ export default function AdminPagesList() {
             );
           })}
         </div>
+        </>
       )}
     </div>
   );

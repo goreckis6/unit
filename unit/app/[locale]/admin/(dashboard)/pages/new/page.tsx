@@ -380,6 +380,9 @@ export default function AdminNewPage() {
       setError('Fill Calculator labels [en] first, then switch to another language and click Translate Labels');
       return;
     }
+    const currLabels = translations[activeLocale]?.calculatorLabels ?? {};
+    const currHasValues = Object.values(currLabels).some((v) => v?.trim());
+    if (currHasValues && !confirm(`Etykiety dla [${activeLocale}] są już wypełnione. Przetłumaczyć ponownie?`)) return;
     setTranslateLabelsLoading(true);
     setError('');
     try {

@@ -464,6 +464,14 @@ export default function AdminPagesList() {
       alert('Select pages with Calculator code and EN labels filled. Edit a page, add labels for [en], then try again.');
       return;
     }
+    const alreadyTranslated = withEnLabels.filter((p) => hasAllLabelsTranslated(p));
+    if (alreadyTranslated.length > 0) {
+      const msg =
+        alreadyTranslated.length === withEnLabels.length
+          ? `Etykiety są już przetłumaczone dla wszystkich ${alreadyTranslated.length} zaznaczonych stron. Przetłumaczyć ponownie?`
+          : `${alreadyTranslated.length} z ${withEnLabels.length} stron ma już przetłumaczone etykiety. Przetłumaczyć ponownie (też te już gotowe)?`;
+      if (!confirm(msg)) return;
+    }
     const allNonEn = ADMIN_LOCALES.filter((l) => l !== 'en');
     setTranslateLabelsLoading(true);
     setTranslateLabelsProgress(null);

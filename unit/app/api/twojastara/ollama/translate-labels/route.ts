@@ -73,12 +73,13 @@ export async function POST(request: NextRequest) {
     const systemPrompt = `Translate UI label values from English to ${targetLanguage}. Source is ALWAYS English.
 
 RULES:
+- OUTPUT LANGUAGE: Every value MUST be written entirely in ${targetLanguage}. Never leave any value in English. For 中文, 日本語, 한국어, العربية, हिन्दी, etc., use ONLY the target language.
 - Output ONLY valid JSON object: same keys as input, values translated to ${targetLanguage}
 - Keys stay unchanged (e.g. "calculate", "reset")
 - Values: short UI strings, translate naturally for native ${targetLanguage} speakers
 - No markdown, no extra text, just the JSON object`;
 
-    const userContent = `Translate these label values to ${targetLanguage}:\n${JSON.stringify(Object.fromEntries(entries), null, 2)}`;
+    const userContent = `[Target: ${targetLocale} = ${targetLanguage}. All values MUST be in ${targetLanguage}, never English.]\n\nTranslate these label values:\n${JSON.stringify(Object.fromEntries(entries), null, 2)}`;
 
     const raw = await ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]);
     const trimmed = (raw || '').trim();

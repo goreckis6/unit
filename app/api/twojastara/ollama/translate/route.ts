@@ -69,6 +69,7 @@ export async function POST(request: NextRequest) {
     const systemPrompt = `Translate from English to ${targetLanguage}. Source is ALWAYS English. Output ONLY valid JSON, no markdown or extra text.
 
 CRITICAL RULES:
+- OUTPUT LANGUAGE: Every field (title, displayTitle, description, content, faqItems) MUST be written ENTIRELY in ${targetLanguage}. Never copy English into the output — translate every word. For 中文, 日本語, 한국어, العربية, हिन्दी, etc., use ONLY the target language.
 - 1:1 faithful translation: translate exactly what is given, no omissions, no additions, no extra sections
 - "content" = ONLY the main article/body text. NEVER include FAQ, Q&A, "FAQ (translate...)", or any question-answer blocks in content. The page has a separate FAQ Schema below — FAQ goes ONLY in "faqItems"
 - Preserve Markdown: # H1, ## H2, **bold**, *italic*, code blocks, bullets
@@ -76,6 +77,7 @@ CRITICAL RULES:
 - Do NOT add "## Markdown content", "## FAQ", or similar headers to content`;
 
     const userContent = [
+      `[Target: ${targetLocale} = ${targetLanguage}. All output MUST be in ${targetLanguage}, never English.]`,
       enTitle && `title: ${enTitle}`,
       enDisplayTitle && `displayTitle: ${enDisplayTitle}`,
       enDescription && `description (SEO meta): ${enDescription}`,

@@ -35,6 +35,33 @@ function hasAllLabelsTranslated(page: Page): boolean {
   return true;
 }
 
+function getMissingTranslations(page: Page): string[] {
+  const hasContent = new Set(page.translations.filter((t) => t.content?.trim()).map((t) => t.locale));
+  return ADMIN_LOCALES.filter((loc) => !hasContent.has(loc));
+}
+
+function getMissingLabels(page: Page): string[] {
+  if (!(page.calculatorCode ?? '').trim()) return [];
+  const en = page.translations.find((t) => t.locale === 'en');
+  const enLab = parseJson<Record<string, string>>(en?.calculatorLabels, {});
+  const enKeys = Object.keys(enLab).filter((k) => enLab[k]?.trim());
+  if (enKeys.length === 0) return [...ADMIN_LOCALES];
+  const missing: string[] = [];
+  for (const loc of ADMIN_LOCALES) {
+    const t = page.translations.find((tr) => tr.locale === loc);
+    const lab = parseJson<Record<string, string>>(t?.calculatorLabels, {});
+    let ok = true;
+    for (const k of enKeys) {
+      if (!lab[k]?.trim()) {
+        ok = false;
+        break;
+      }
+    }
+    if (!ok) missing.push(loc);
+  }
+  return missing;
+}
+
 function getPageStage(page: Page): PageStage {
   if (!hasEnContent(page)) return 'new';
   if (!hasAllTranslations(page)) return 'in-progress';
@@ -227,6 +254,106 @@ export default function AdminPagesList() {
     }
   }
 
+  const [checkResult, setCheckResult] = useState<string | null>(null);
+  const [checkFailedIds, setCheckFailedIds] = useState<Set<string>>(new Set());
+  const [checkFailedType, setCheckFailedType] = useState<'translations' | 'labels' | null>(null);
+
+  function handleCheckTranslations() {
+    const toCheck = selectedIds.size > 0
+      ? pages.filter((p) => selectedIds.has(p.id))
+      : filteredPages;
+    if (toCheck.length === 0) {
+      alert('Select pages or ensure the tab has pages.');
+      return;
+    }
+    const lines: string[] = [`Check translations (${ADMIN_LOCALES.length} locales expected):`];
+    const failedIds = new Set<string>();
+    let allOk = 0;
+    for (const p of toCheck) {
+      const missing = getMissingTranslations(p);
+      const enTitle = p.translations.find((t) => t.locale === 'en')?.title ?? p.slug;
+      if (missing.length === 0) {
+        allOk++;
+        lines.push(`✓ ${enTitle}: all ${ADMIN_LOCALES.length} translations OK`);
+      } else {
+        failedIds.add(p.id);
+        lines.push(`✗ ${enTitle}: missing ${missing.length} (${missing.join(', ')})`);
+      }
+    }
+    lines.push('');
+    lines.push(`${allOk}/${toCheck.length} pages have all translations`);
+    setCheckFailedIds(failedIds);
+    setCheckFailedType(failedIds.size > 0 ? 'translations' : null);
+    setCheckResult(lines.join('\n'));
+  }
+
+  function handleCheckLabels() {
+    const toCheck = selectedIds.size > 0
+      ? pages.filter((p) => selectedIds.has(p.id))
+      : filteredPages;
+    if (toCheck.length === 0) {
+      alert('Select pages or ensure the tab has pages.');
+      return;
+    }
+    const lines: string[] = [`Check labels (${ADMIN_LOCALES.length} locales expected):`];
+    const failedIds = new Set<string>();
+    let allOk = 0;
+    for (const p of toCheck) {
+      const enTitle = p.translations.find((t) => t.locale === 'en')?.title ?? p.slug;
+      if (!(p.calculatorCode ?? '').trim()) {
+        allOk++;
+        lines.push(`✓ ${enTitle}: no calculator (N/A)`);
+      } else {
+        const missing = getMissingLabels(p);
+        if (missing.length === 0) {
+          allOk++;
+          lines.push(`✓ ${enTitle}: all ${ADMIN_LOCALES.length} labels OK`);
+        } else {
+          failedIds.add(p.id);
+          lines.push(`✗ ${enTitle}: missing ${missing.length} (${missing.join(', ')})`);
+        }
+      }
+    }
+    lines.push('');
+    lines.push(`${allOk}/${toCheck.length} pages have all labels`);
+    setCheckFailedIds(failedIds);
+    setCheckFailedType(failedIds.size > 0 ? 'labels' : null);
+    setCheckResult(lines.join('\n'));
+  }
+
+  function handleCompleteTranslationsFromCheck() {
+    if (checkFailedIds.size === 0 || checkFailedType !== 'translations') return;
+    const failedPages = pages.filter((p) => checkFailedIds.has(p.id) && hasEnContent(p) && !hasAllTranslations(p));
+    if (failedPages.length === 0) return;
+    setSelectedIds(checkFailedIds);
+    startTranslate({
+      pages,
+      selectedIds: checkFailedIds,
+      translateStartFrom,
+      translateOnlyOne: false,
+      resumeOverride: translatePausedAt ?? undefined,
+      autoResumeOnError,
+      onPagesUpdate: (updater) => setPages(updater),
+      onComplete: () => {
+        setSelectedIds(new Set());
+        setCheckResult(null);
+        setCheckFailedIds(new Set());
+        setCheckFailedType(null);
+      },
+    });
+  }
+
+  function handleCompleteLabelsFromCheck() {
+    if (checkFailedIds.size === 0 || checkFailedType !== 'labels') return;
+    setSelectedIds(checkFailedIds);
+    const clearCheck = () => {
+      setCheckResult(null);
+      setCheckFailedIds(new Set());
+      setCheckFailedType(null);
+    };
+    handleBulkTranslateLabels(Array.from(checkFailedIds), clearCheck);
+  }
+
   async function handleBulkPublish(published: boolean) {
     if (selectedIds.size === 0) return;
     setBulkPublishLoading(true);
@@ -253,8 +380,8 @@ export default function AdminPagesList() {
     }
   }
 
-  async function handleBulkTranslateLabels() {
-    const ids = Array.from(selectedIds);
+  async function handleBulkTranslateLabels(overrideIds?: string[], onCompleteCallback?: () => void) {
+    const ids = overrideIds ?? Array.from(selectedIds);
     if (ids.length === 0) return;
     const toProcess = pages.filter((p) => ids.includes(p.id) && (p.calculatorCode ?? '').trim());
     const withEnLabels = toProcess.filter((p) => {
@@ -366,6 +493,7 @@ export default function AdminPagesList() {
       setSelectedIds(new Set());
       setTranslateLabelsSuccess(`Translated labels for ${withEnLabels.length} page(s)`);
       setTimeout(() => setTranslateLabelsSuccess(''), 5000);
+      onCompleteCallback?.();
     } catch (e) {
       const isAbort = e instanceof Error && e.name === 'AbortError';
       if (!isAbort) alert(e instanceof Error ? e.message : 'Translate labels failed');
@@ -733,7 +861,7 @@ export default function AdminPagesList() {
                     )}
                     <button
                       type="button"
-                      onClick={handleBulkTranslateLabels}
+                      onClick={() => handleBulkTranslateLabels()}
                       disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
                       className="btn btn-secondary btn-sm"
                       style={{ padding: '0.35rem 0.75rem' }}
@@ -862,7 +990,7 @@ export default function AdminPagesList() {
           {activeBookmark === 'translate-label' && (
             <button
               type="button"
-              onClick={handleBulkTranslateLabels}
+              onClick={() => handleBulkTranslateLabels()}
               disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
               className="btn btn-primary btn-sm"
               style={{ padding: '0.35rem 0.75rem' }}
@@ -872,15 +1000,37 @@ export default function AdminPagesList() {
             </button>
           )}
           {activeBookmark === 'completed' && (
-            <button
-              type="button"
-              onClick={() => handleBulkPublish(true)}
-              disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
-              className="btn btn-primary btn-sm"
-              style={{ padding: '0.35rem 0.75rem' }}
-            >
-              {bulkPublishLoading ? 'Publishing…' : `Mark & Publish (${selectedIds.size})`}
-            </button>
+            <>
+              <button
+                type="button"
+                onClick={handleCheckTranslations}
+                disabled={!!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title={`Check if selected pages have content for all ${ADMIN_LOCALES.length} locales`}
+              >
+                Check translations
+              </button>
+              <button
+                type="button"
+                onClick={handleCheckLabels}
+                disabled={!!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title={`Check if selected pages have calculator labels for all ${ADMIN_LOCALES.length} locales`}
+              >
+                Check labels
+              </button>
+              <button
+                type="button"
+                onClick={() => handleBulkPublish(true)}
+                disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
+                className="btn btn-primary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+              >
+                {bulkPublishLoading ? 'Publishing…' : `Mark & Publish (${selectedIds.size})`}
+              </button>
+            </>
           )}
           {activeBookmark === 'completed-alive' && (
             <button
@@ -1053,6 +1203,58 @@ export default function AdminPagesList() {
           }}
         >
           {generateSuccess || translateSuccess || translateLabelsSuccess}
+        </div>
+      )}
+      {checkResult && (
+        <div
+          role="status"
+          style={{
+            marginBottom: '1rem',
+            padding: '1rem 1.25rem',
+            background: 'var(--bg-tertiary)',
+            border: '1px solid var(--border-color)',
+            borderRadius: 8,
+            fontSize: '0.85rem',
+            whiteSpace: 'pre-wrap',
+            fontFamily: 'monospace',
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+            <strong style={{ color: 'var(--text-primary)' }}>Check result</strong>
+            <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              {checkFailedType === 'translations' && checkFailedIds.size > 0 && (
+                <button
+                  type="button"
+                  onClick={handleCompleteTranslationsFromCheck}
+                  disabled={!!translateProgress || !!translateLabelsLoading}
+                  className="btn btn-primary btn-sm"
+                  style={{ padding: '0.25rem 0.5rem' }}
+                >
+                  Complete translations
+                </button>
+              )}
+              {checkFailedType === 'labels' && checkFailedIds.size > 0 && (
+                <button
+                  type="button"
+                  onClick={handleCompleteLabelsFromCheck}
+                  disabled={!!translateProgress || !!translateLabelsLoading}
+                  className="btn btn-primary btn-sm"
+                  style={{ padding: '0.25rem 0.5rem' }}
+                >
+                  Complete labels
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={() => setCheckResult(null)}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.25rem 0.5rem' }}
+              >
+                Dismiss
+              </button>
+            </div>
+          </div>
+          <div style={{ color: 'var(--text-secondary)' }}>{checkResult}</div>
         </div>
       )}
 

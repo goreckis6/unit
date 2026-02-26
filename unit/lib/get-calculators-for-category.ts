@@ -69,5 +69,18 @@ export async function getCalculatorsForCategory(
     byPath.set(item.path, item);
   }
 
-  return [...byPath.values()].sort((a, b) => a.title.localeCompare(b.title, locale));
+  function safeLocaleCompare(a: string, b: string): number {
+    const sa = String(a ?? '');
+    const sb = String(b ?? '');
+    try {
+      return sa.localeCompare(sb, locale);
+    } catch {
+      try {
+        return sa.localeCompare(sb, 'en');
+      } catch {
+        return sa < sb ? -1 : sa > sb ? 1 : 0;
+      }
+    }
+  }
+  return [...byPath.values()].sort((a, b) => safeLocaleCompare(a.title, b.title));
 }

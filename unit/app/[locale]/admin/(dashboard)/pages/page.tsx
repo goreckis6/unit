@@ -522,33 +522,16 @@ export default function AdminPagesList() {
           if (!res.ok) throw new Error(data.error || `Translate labels to ${loc} failed`);
           translatedLabelsByLocale[loc] = data.labels ?? {};
 
-          // Save immediately after each locale so user can preview right away
-          const translations = fullTrans.map((t: { locale: string; title: string; displayTitle?: string | null; description?: string | null; content?: string | null; relatedCalculators?: unknown; faqItems?: unknown; calculatorLabels?: unknown }) => ({
-            locale: t.locale,
-            title: t.title ?? '',
-            displayTitle: t.displayTitle ?? null,
-            description: t.description ?? null,
-            content: t.content ?? null,
-            relatedCalculators: parseJson<{ title: string; description: string; path: string }[]>(t.relatedCalculators, []),
-            faqItems: parseJson<{ question: string; answer: string }[]>(t.faqItems, []),
-            calculatorLabels: translatedLabelsByLocale[t.locale] ?? parseJson<Record<string, string>>(t.calculatorLabels, {}),
-          }));
-          const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
+          // Save labels only (partial update) — allows parallel Translate content + Translate labels in separate windows
+          const patchRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              slug: fullPage.slug,
-              category: fullPage.category,
-              published: fullPage.published,
-              calculatorCode: fullPage.calculatorCode,
-              linkedCalculatorPath: fullPage.linkedCalculatorPath,
-              relatedCalculatorsMode: fullPage.relatedCalculatorsMode ?? 'manual',
-              relatedCalculatorsCount: fullPage.relatedCalculatorsCount ?? 6,
-              translations,
+              updates: [{ locale: loc, calculatorLabels: translatedLabelsByLocale[loc] ?? {} }],
             }),
             credentials: 'include',
           });
-          if (!patchRes.ok) throw new Error((await patchRes.json()).error || `Failed to save page after ${loc}`);
+          if (!patchRes.ok) throw new Error((await patchRes.json()).error || `Failed to save labels for ${loc}`);
 
           setPages((prev) =>
             prev.map((p) => {
@@ -747,7 +730,7 @@ export default function AdminPagesList() {
     { stage: 'new', label: 'New', count: pagesByStage.new.length },
     { stage: 'in-progress', label: 'In progress', count: pagesByStage['in-progress'].length },
     { stage: 'translate-label', label: 'Translation Completed', count: pagesByStage['translate-label'].length },
-    { stage: 'completed', label: 'Completed Translation and Labels', count: pagesByStage.completed.length },
+    { stage: 'completed', label: 'Translation Labels Completed', count: pagesByStage.completed.length },
     { stage: 'completed-alive', label: 'Completed:Alvie', count: pagesByStage['completed-alive'].length, green: true },
   ];
 
@@ -1407,7 +1390,7 @@ export default function AdminPagesList() {
       ) : filteredPages.length === 0 ? (
         <p style={{ color: 'var(--text-secondary)' }}>
           No pages in <strong>
-            {activeBookmark === 'new' ? 'New' : activeBookmark === 'in-progress' ? 'In progress' : activeBookmark === 'translate-label' ? 'Translation Completed' : activeBookmark === 'completed-alive' ? 'Completed:Alvie' : 'Completed Translation and Labels'}
+            {activeBookmark === 'new' ? 'New' : activeBookmark === 'in-progress' ? 'In progress' : activeBookmark === 'translate-label' ? 'Translation Completed' : activeBookmark === 'completed-alive' ? 'Completed:Alvie' : 'Translation Labels Completed'}
           </strong>
           {searchQuery.trim() ? ' matching search' : ''}. Switch tab or create a page.
         </p>

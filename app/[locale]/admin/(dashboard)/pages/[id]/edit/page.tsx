@@ -512,6 +512,7 @@ export default function AdminEditPage() {
     const enFaqItems = translations.en?.faqItems ?? [];
     const enTitle = (translations.en?.title ?? '').trim();
     const enDisplayTitle = (translations.en?.displayTitle ?? '').trim();
+    const enDescription = (translations.en?.description ?? '').trim();
     const targetLocales = forceAll
       ? ADMIN_LOCALES.filter((l) => l !== 'en')
       : ADMIN_LOCALES.filter((l) => l !== 'en' && !(translations[l]?.content?.trim() ?? ''));
@@ -547,14 +548,14 @@ export default function AdminEditPage() {
           {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined }),
+            body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined, description: enDescription || undefined }),
             credentials: 'include',
           },
           5_400_000,
           2,
           translateAbortRef.current?.signal ?? null
         );
-        let data: { error?: string; content?: string; title?: string; displayTitle?: string; faqItems?: unknown[] };
+        let data: { error?: string; content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[] };
         try {
           data = await res.json();
         } catch {
@@ -569,6 +570,7 @@ export default function AdminEditPage() {
             content: data.content ?? base.content,
             title: data.title ?? base.title,
             displayTitle: data.displayTitle ?? base.displayTitle,
+            description: data.description ?? base.description ?? '',
             faqItems: Array.isArray(data.faqItems) && data.faqItems.length > 0 ? (data.faqItems as FaqItem[]) : base.faqItems,
           },
         };
@@ -584,6 +586,7 @@ export default function AdminEditPage() {
           setTranslatePauseCountdown(null);
         }
       }
+      setActiveLocale(localesToTranslate[localesToTranslate.length - 1] ?? activeLocale);
       setTranslateSuccess(`Przetłumaczono na ${localesToTranslate.length} języków. Zapisano automatycznie.`);
       setTimeout(() => setTranslateSuccess(''), 6000);
     } catch (err) {

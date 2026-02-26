@@ -746,7 +746,7 @@ export default function AdminPagesList() {
     { stage: 'new', label: 'New', count: pagesByStage.new.length },
     { stage: 'in-progress', label: 'In progress', count: pagesByStage['in-progress'].length },
     { stage: 'translate-label', label: 'Translation Completed', count: pagesByStage['translate-label'].length },
-    { stage: 'completed', label: 'Completed Translation and Labels', count: pagesByStage.completed.length },
+    { stage: 'completed', label: 'Translation Labels Completed', count: pagesByStage.completed.length },
     { stage: 'completed-alive', label: 'Completed:Alvie', count: pagesByStage['completed-alive'].length, green: true },
   ];
 
@@ -1406,7 +1406,7 @@ export default function AdminPagesList() {
       ) : filteredPages.length === 0 ? (
         <p style={{ color: 'var(--text-secondary)' }}>
           No pages in <strong>
-            {activeBookmark === 'new' ? 'New' : activeBookmark === 'in-progress' ? 'In progress' : activeBookmark === 'translate-label' ? 'Translation Completed' : activeBookmark === 'completed-alive' ? 'Completed:Alvie' : 'Completed Translation and Labels'}
+            {activeBookmark === 'new' ? 'New' : activeBookmark === 'in-progress' ? 'In progress' : activeBookmark === 'translate-label' ? 'Translation Completed' : activeBookmark === 'completed-alive' ? 'Completed:Alvie' : 'Translation Labels Completed'}
           </strong>
           {searchQuery.trim() ? ' matching search' : ''}. Switch tab or create a page.
         </p>

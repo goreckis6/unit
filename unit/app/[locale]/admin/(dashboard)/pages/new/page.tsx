@@ -511,13 +511,13 @@ export default function AdminNewPage() {
           {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined }),
+            body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined, description: (translations.en?.description ?? '').trim() || undefined }),
             credentials: 'include',
           },
           5_400_000,
           2
         );
-        let data: { error?: string; content?: string; title?: string; displayTitle?: string; faqItems?: unknown[] };
+        let data: { error?: string; content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[] };
         try {
           data = await res.json();
         } catch {
@@ -530,8 +530,10 @@ export default function AdminNewPage() {
         if (Array.isArray(data.faqItems) && data.faqItems.length > 0) {
           updateTranslation(loc, 'faqItems', data.faqItems as FaqItem[]);
         }
+        if (data.description) updateTranslation(loc, 'description', data.description);
         await new Promise((r) => setTimeout(r, 10_000));
       }
+      setActiveLocale(localesToTranslate[localesToTranslate.length - 1] ?? activeLocale);
       setTranslateSuccess(`Przetłumaczono na ${localesToTranslate.length} języków. Pamiętaj o Create Page.`);
       setTimeout(() => setTranslateSuccess(''), 6000);
     } catch (err) {

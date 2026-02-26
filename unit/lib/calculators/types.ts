@@ -8,7 +8,13 @@ export interface Calculator {
 
 /** Sorts calculator array A–Z by id so newly added calcs appear in alphabetical order. */
 export function sortCalculatorsAlphabetically(calculators: Calculator[]): Calculator[] {
-  return [...calculators].sort((a, b) => a.id.localeCompare(b.id, 'en'));
+  return [...calculators].sort((a, b) => {
+    try {
+      return (a.id ?? '').localeCompare(b.id ?? '', 'en');
+    } catch {
+      return (a.id ?? '') < (b.id ?? '') ? -1 : (a.id ?? '') > (b.id ?? '') ? 1 : 0;
+    }
+  });
 }
 
 /**

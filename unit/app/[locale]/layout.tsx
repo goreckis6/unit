@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
-import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
-import { routing, ROUTING_LOCALES } from '@/i18n/routing';
+import { ROUTING_LOCALES } from '@/i18n/routing';
+import { IntlProvider } from '@/components/IntlProvider';
 import { GlobalEnterToCalculate } from '@/components/GlobalEnterToCalculate';
 
 export function generateStaticParams() {
@@ -25,9 +25,9 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
+    <IntlProvider messages={messages}>
       <GlobalEnterToCalculate />
       {children}
-    </NextIntlClientProvider>
+    </IntlProvider>
   );
 }

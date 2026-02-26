@@ -141,6 +141,20 @@ function parseJson<T>(val: unknown, fallback: T): T {
   return val as T;
 }
 
+/** Parse response as JSON; if HTML (e.g. 404 page), return {} to avoid "Unexpected token '<'" */
+async function safeResJson(res: Response): Promise<Record<string, unknown>> {
+  const text = await res.text();
+  const ct = res.headers.get('content-type') ?? '';
+  if (text.trimStart().startsWith('<') || !ct.includes('json')) {
+    return { error: `Server returned ${res.status} (expected JSON, got ${ct || 'HTML'})` };
+  }
+  try {
+    return (JSON.parse(text) as Record<string, unknown>) ?? {};
+  } catch {
+    return { error: `Invalid JSON response (${res.status})` };
+  }
+}
+
 export default function AdminPagesList() {
   const {
     translateProgress,
@@ -518,9 +532,10 @@ export default function AdminPagesList() {
             if (res.ok || attempt >= 2) break;
             await new Promise((r) => setTimeout(r, 2000)); // retry after 2s
           }
-          const data = await res!.json();
-          if (!res.ok) throw new Error(data.error || `Translate labels to ${loc} failed`);
-          translatedLabelsByLocale[loc] = data.labels ?? {};
+          const data = await safeResJson(res!);
+          if (!res!.ok) throw new Error(String(data?.error || `Translate labels to ${loc} failed`));
+          const lab = data?.labels;
+          translatedLabelsByLocale[loc] = (lab && typeof lab === 'object' && !Array.isArray(lab) ? lab : {}) as Record<string, string>;
 
           // Save labels only (partial update) — allows parallel Translate content + Translate labels in separate windows
           const patchRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
@@ -531,7 +546,10 @@ export default function AdminPagesList() {
             }),
             credentials: 'include',
           });
-          if (!patchRes.ok) throw new Error((await patchRes.json()).error || `Failed to save labels for ${loc}`);
+          if (!patchRes.ok) {
+            const errData = await safeResJson(patchRes);
+            throw new Error(errData?.error || `Failed to save labels for ${loc}. Is /api/twojastara/pages/[id]/labels deployed?`);
+          }
 
           setPages((prev) =>
             prev.map((p) => {

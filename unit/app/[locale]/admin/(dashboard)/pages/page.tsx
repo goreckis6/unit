@@ -35,9 +35,42 @@ function hasAllLabelsTranslated(page: Page): boolean {
   return true;
 }
 
+/** Unicode ranges for non-Latin scripts. If locale uses these, text must contain them to count as translated. */
+const SCRIPT_RANGES: Record<string, RegExp> = {
+  zh: /[\u4e00-\u9fff\u3400-\u4dbf]/,           // CJK (Chinese)
+  ja: /[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff]/, // Hiragana, Katakana, Kanji
+  ko: /[\uac00-\ud7af\u1100-\u11ff]/,            // Hangul
+  ar: /[\u0600-\u06ff]/,                         // Arabic
+  fa: /[\u0600-\u06ff]/,                         // Persian (Arabic script)
+  hi: /[\u0900-\u097f]/,                         // Devanagari (Hindi)
+  th: /[\u0e00-\u0e7f]/,                        // Thai
+  ru: /[\u0400-\u04ff]/,                        // Cyrillic (Russian)
+};
+
+function isLikelyTranslated(text: string, locale: string): boolean {
+  if (!text?.trim() || locale === 'en') return true;
+  const re = SCRIPT_RANGES[locale];
+  if (!re) return true; // Latin-script locales: cannot reliably detect, assume OK
+  return re.test(text);
+}
+
 function getMissingTranslations(page: Page): string[] {
-  const hasContent = new Set(page.translations.filter((t) => t.content?.trim()).map((t) => t.locale));
-  return ADMIN_LOCALES.filter((loc) => !hasContent.has(loc));
+  const enTrans = page.translations.find((t) => t.locale === 'en');
+  const missing: string[] = [];
+  for (const loc of ADMIN_LOCALES) {
+    if (loc === 'en') continue;
+    const t = page.translations.find((tr) => tr.locale === loc);
+    const content = t?.content?.trim();
+    if (!content) {
+      missing.push(loc);
+      continue;
+    }
+    const title = (t?.displayTitle?.trim() || t?.title?.trim()) ?? '';
+    const desc = (t?.description?.trim()) ?? '';
+    const sample = [title, desc, content.slice(0, 400)].filter(Boolean).join(' ');
+    if (!isLikelyTranslated(sample, loc)) missing.push(loc);
+  }
+  return missing;
 }
 
 function getMissingLabels(page: Page): string[] {
@@ -48,11 +81,17 @@ function getMissingLabels(page: Page): string[] {
   if (enKeys.length === 0) return [...ADMIN_LOCALES];
   const missing: string[] = [];
   for (const loc of ADMIN_LOCALES) {
+    if (loc === 'en') continue;
     const t = page.translations.find((tr) => tr.locale === loc);
     const lab = parseJson<Record<string, string>>(t?.calculatorLabels, {});
     let ok = true;
     for (const k of enKeys) {
-      if (!lab[k]?.trim()) {
+      const val = lab[k]?.trim();
+      if (!val) {
+        ok = false;
+        break;
+      }
+      if (!isLikelyTranslated(val, loc)) {
         ok = false;
         break;
       }
@@ -136,6 +175,7 @@ export default function AdminPagesList() {
   const [bulkImportResult, setBulkImportResult] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
   const [bulkDeleteLoading, setBulkDeleteLoading] = useState(false);
   const [bulkPublishLoading, setBulkPublishLoading] = useState(false);
+  const [cleanContentLoading, setCleanContentLoading] = useState(false);
   const [translateLabelsLoading, setTranslateLabelsLoading] = useState(false);
   const [translateLabelsProgress, setTranslateLabelsProgress] = useState<{ current: number; total: number; pageSlug: string; pageCategory: string; locale: string } | null>(null);
   const [translateLabelsPausedAt, setTranslateLabelsPausedAt] = useState<{ pageSlug: string; nextLocale: string } | null>(null);
@@ -377,6 +417,38 @@ export default function AdminPagesList() {
       alert(e instanceof Error ? e.message : 'Bulk publish failed');
     } finally {
       setBulkPublishLoading(false);
+    }
+  }
+
+  async function handleCleanContentAndLabels() {
+    if (selectedIds.size === 0) return;
+    if (!confirm(`Wyczyścić content i labels dla ${selectedIds.size} stron? Zostanie tylko oryginalny EN.`)) return;
+    setCleanContentLoading(true);
+    try {
+      const res = await fetch('/api/twojastara/pages/clean-translations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: Array.from(selectedIds) }),
+        credentials: 'include',
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        alert(data.error || 'Clean translations failed');
+        return;
+      }
+      const listRes = await fetch('/api/twojastara/pages');
+      const listData = await listRes.json();
+      if (Array.isArray(listData)) setPages(listData);
+      setSelectedIds(new Set());
+      setCheckResult(null);
+      setCheckFailedIds(new Set());
+      setCheckFailedType(null);
+      setTranslateLabelsSuccess(data.message ?? `Cleaned ${data.cleaned} page(s).`);
+      setTimeout(() => setTranslateLabelsSuccess(''), 4000);
+    } catch (e) {
+      alert(e instanceof Error ? e.message : 'Clean translations failed');
+    } finally {
+      setCleanContentLoading(false);
     }
   }
 
@@ -1020,6 +1092,16 @@ export default function AdminPagesList() {
                 title={`Check if selected pages have calculator labels for all ${ADMIN_LOCALES.length} locales`}
               >
                 Check labels
+              </button>
+              <button
+                type="button"
+                onClick={handleCleanContentAndLabels}
+                disabled={selectedIds.size === 0 || cleanContentLoading || !!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem', color: 'var(--warning-color, #f97316)', borderColor: 'var(--warning-color, #f97316)' }}
+                title="Wyczyść content i labels dla zaznaczonych stron. Zostanie tylko oryginalny EN."
+              >
+                {cleanContentLoading ? 'Cleaning…' : `Clean Content and Labels (${selectedIds.size})`}
               </button>
               <button
                 type="button"

@@ -1,10 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Agent, fetch } from 'undici';
 import { getSession } from '@/lib/auth';
 import { LOCALE_NAMES } from '@/lib/admin-locales';
 
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 
 const OLLAMA_TIMEOUT_MS = 5_400_000; // 90 min
+
+/** Dispatcher with high timeouts — undici's default headersTimeout is low and causes UND_ERR_HEADERS_TIMEOUT on slow Ollama Cloud */
+const ollamaDispatcher = new Agent({
+  headersTimeout: OLLAMA_TIMEOUT_MS,
+  bodyTimeout: OLLAMA_TIMEOUT_MS,
+});
 
 async function ollamaChat(messages: { role: string; content: string }[]) {
   const apiKey = process.env.OLLAMA_API_KEY;
@@ -22,6 +29,7 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
       },
       body: JSON.stringify({ model: MODEL, messages, stream: false }),
       signal: controller.signal,
+      dispatcher: ollamaDispatcher,
     });
     clearTimeout(timeoutId);
     if (!res.ok) {

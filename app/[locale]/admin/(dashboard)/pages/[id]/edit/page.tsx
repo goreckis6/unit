@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useRouter, useParams } from 'next/navigation';
+import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { ADMIN_LOCALES, getLocaleMeta, LOCALE_NAMES } from '@/lib/admin-locales';
 import { getDefaultCalculatorLabels } from '@/lib/calculator-default-labels';
@@ -273,6 +273,8 @@ export function AddingFractionsCalculator() {
 export default function AdminEditPage() {
   const router = useRouter();
   const params = useParams();
+  const searchParams = useSearchParams();
+  const returnTab = searchParams.get('tab');
   const id = params?.id as string;
   const [slug, setSlug] = useState('');
   const [category, setCategory] = useState('');
@@ -856,7 +858,8 @@ export default function AdminEditPage() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? 'Failed to update page');
-      router.push('/twojastara/pages');
+      const tabParam = returnTab ? `?tab=${encodeURIComponent(returnTab)}` : '';
+      router.push(`/twojastara/pages${tabParam}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong');
     } finally {

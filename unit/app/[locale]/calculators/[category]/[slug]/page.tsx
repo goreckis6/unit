@@ -1,6 +1,9 @@
 import { notFound } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { getSession } from '@/lib/auth';
+
+// Render at request time so newly published CMS pages work immediately
+export const dynamic = 'force-dynamic';
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { ROUTING_LOCALES } from '@/i18n/routing';

@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useMemo, useRef } from 'react';
 import Link from 'next/link';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { ADMIN_LOCALES, LOCALE_NAMES } from '@/lib/admin-locales';
 import { useTranslate } from '../../TranslateContext';
 import { useGenerate, type GenerateProviderType } from '../../GenerateContext';
@@ -115,11 +116,26 @@ export default function AdminPagesList() {
   const translateLabelsPausedRef = useRef(false);
   const translateLabelsAbortRef = useRef<AbortController | null>(null);
   const [generatedIdsThisRun, setGeneratedIdsThisRun] = useState<Set<string>>(new Set());
-  const [activeBookmark, setActiveBookmark] = useState<PageStage>('new');
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const tabParam = searchParams.get('tab');
+  const validStages: PageStage[] = ['new', 'in-progress', 'translate-label', 'completed', 'completed-alive'];
+  const [activeBookmark, setActiveBookmark] = useState<PageStage>(() =>
+    tabParam && validStages.includes(tabParam as PageStage) ? (tabParam as PageStage) : 'new'
+  );
+
+  useEffect(() => {
+    if (tabParam && validStages.includes(tabParam as PageStage) && tabParam !== activeBookmark) {
+      setActiveBookmark(tabParam as PageStage);
+    }
+  }, [tabParam]);
 
   function setBookmark(stage: PageStage) {
     setActiveBookmark(stage);
     setSelectedIds(new Set());
+    const params = new URLSearchParams(searchParams.toString());
+    params.set('tab', stage);
+    router.replace(`/twojastara/pages?${params.toString()}`, { scroll: false });
   }
 
   const pagesByStage = useMemo(() => {
@@ -1197,6 +1213,17 @@ export default function AdminPagesList() {
                   </div>
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
+                  {page.published && activeBookmark === 'completed-alive' && (
+                    <a
+                      href={`/calculators/${page.category}/${page.slug}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary btn-sm"
+                      style={{ background: 'var(--success-color, #10b981)', borderColor: 'var(--success-color)' }}
+                    >
+                      Show
+                    </a>
+                  )}
                   {page.translations.map((t) => {
                     const baseUrl = t.locale === 'en' ? `/en/calculators/${page.category}/${page.slug}` : `/${t.locale}/calculators/${page.category}/${page.slug}`;
                     const href = page.published ? baseUrl : `${baseUrl}?preview=1`;
@@ -1212,7 +1239,7 @@ export default function AdminPagesList() {
                       </Link>
                     );
                   })}
-                  <Link href={`/twojastara/pages/${page.id}/edit`} className="btn btn-primary btn-sm">
+                  <Link href={`/twojastara/pages/${page.id}/edit?tab=${activeBookmark}`} className="btn btn-primary btn-sm">
                     Edit
                   </Link>
                   <button onClick={() => handleDelete(page.id)} className="btn btn-secondary btn-sm" style={{ color: 'var(--error-color)', borderColor: 'var(--error-color)' }}>

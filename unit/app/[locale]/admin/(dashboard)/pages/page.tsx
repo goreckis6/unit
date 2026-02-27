@@ -101,6 +101,21 @@ function getMissingLabels(page: Page): string[] {
   return missing;
 }
 
+/** Keys from enLabels that are empty or not translated in target locale */
+function getMissingLabelKeysForLocale(
+  enLabels: Record<string, string>,
+  targetLabels: Record<string, string>,
+  targetLocale: string
+): string[] {
+  const missing: string[] = [];
+  for (const k of Object.keys(enLabels)) {
+    if (!enLabels[k]?.trim()) continue;
+    const val = targetLabels[k]?.trim();
+    if (!val || !isLikelyTranslated(val, targetLocale)) missing.push(k);
+  }
+  return missing;
+}
+
 function getPageStage(page: Page): PageStage {
   if (!hasEnContent(page)) return 'new';
   if (!hasAllTranslations(page)) return 'in-progress';
@@ -126,8 +141,17 @@ type Page = {
   category: string | null;
   published: boolean;
   calculatorCode?: string | null;
+  updatedAt?: string;
   translations: PageTranslation[];
 };
+
+function sortPagesLatestFirst(pages: Page[]): Page[] {
+  return [...pages].sort((a, b) => {
+    const aT = a.updatedAt ? new Date(a.updatedAt).getTime() : 0;
+    const bT = b.updatedAt ? new Date(b.updatedAt).getTime() : 0;
+    return bT - aT;
+  });
+}
 
 function parseJson<T>(val: unknown, fallback: T): T {
   if (!val) return fallback;
@@ -231,6 +255,9 @@ export default function AdminPagesList() {
         byStage[getPageStage(p)].push(p);
       }
     }
+    for (const stage of Object.keys(byStage) as PageStage[]) {
+      byStage[stage] = sortPagesLatestFirst(byStage[stage]);
+    }
     return byStage;
   }, [pages, translateLabelsProgress?.pageSlug, translateLabelsPausedAt?.pageSlug]);
 
@@ -270,7 +297,7 @@ export default function AdminPagesList() {
     fetch('/api/twojastara/pages')
       .then((res) => res.json())
       .then((data) => {
-        setPages(Array.isArray(data) ? data : []);
+        setPages(Array.isArray(data) ? sortPagesLatestFirst(data) : []);
         setLoading(false);
       })
       .catch(() => setLoading(false));
@@ -397,7 +424,7 @@ export default function AdminPagesList() {
     });
   }
 
-  function handleCompleteLabelsFromCheck() {
+  function handleCompleteLabelsFromCheck(fillMissingOnly = false) {
     if (checkFailedIds.size === 0 || checkFailedType !== 'labels') return;
     setSelectedIds(checkFailedIds);
     const clearCheck = () => {
@@ -405,7 +432,11 @@ export default function AdminPagesList() {
       setCheckFailedIds(new Set());
       setCheckFailedType(null);
     };
-    handleBulkTranslateLabels(Array.from(checkFailedIds), clearCheck);
+    if (fillMissingOnly) {
+      handleBulkTranslateMissingLabels(Array.from(checkFailedIds), clearCheck);
+    } else {
+      handleBulkTranslateLabels(Array.from(checkFailedIds), clearCheck);
+    }
   }
 
   async function handleBulkPublish(published: boolean) {
@@ -452,7 +483,7 @@ export default function AdminPagesList() {
       }
       const listRes = await fetch('/api/twojastara/pages');
       const listData = await listRes.json();
-      if (Array.isArray(listData)) setPages(listData);
+      if (Array.isArray(listData)) setPages(sortPagesLatestFirst(listData));
       setSelectedIds(new Set());
       setCheckResult(null);
       setCheckFailedIds(new Set());
@@ -470,11 +501,13 @@ export default function AdminPagesList() {
     const ids = overrideIds ?? Array.from(selectedIds);
     if (ids.length === 0) return;
     const toProcess = pages.filter((p) => ids.includes(p.id) && (p.calculatorCode ?? '').trim());
-    const withEnLabels = toProcess.filter((p) => {
-      const en = p.translations.find((t) => t.locale === 'en');
-      const lab = parseJson<Record<string, string>>(en?.calculatorLabels, {});
-      return Object.values(lab).some((v) => v?.trim());
-    });
+    const withEnLabels = sortPagesLatestFirst(
+      toProcess.filter((p) => {
+        const en = p.translations.find((t) => t.locale === 'en');
+        const lab = parseJson<Record<string, string>>(en?.calculatorLabels, {});
+        return Object.values(lab).some((v) => v?.trim());
+      })
+    );
     if (withEnLabels.length === 0) {
       alert('Select pages with Calculator code and EN labels filled. Edit a page, add labels for [en], then try again.');
       return;
@@ -487,7 +520,7 @@ export default function AdminPagesList() {
           : `${alreadyTranslated.length} z ${withEnLabels.length} stron ma już przetłumaczone etykiety. Przetłumaczyć ponownie (też te już gotowe)?`;
       if (!confirm(msg)) return;
     }
-    const allNonEn = ADMIN_LOCALES.filter((l) => l !== 'en');
+    const allNonEn = [...ADMIN_LOCALES.filter((l) => l !== 'en')].reverse();
     setTranslateLabelsLoading(true);
     setTranslateLabelsProgress(null);
     setTranslateLabelsPausedAt(null);
@@ -598,6 +631,118 @@ export default function AdminPagesList() {
     translateLabelsAbortRef.current?.abort();
   }
 
+  async function handleBulkTranslateMissingLabels(overrideIds?: string[], onCompleteCallback?: () => void) {
+    const ids = overrideIds ?? Array.from(selectedIds);
+    if (ids.length === 0) return;
+    const toProcess = pages.filter((p) => ids.includes(p.id) && (p.calculatorCode ?? '').trim());
+    const withEnLabels = sortPagesLatestFirst(
+      toProcess.filter((p) => {
+        const en = p.translations.find((t) => t.locale === 'en');
+        const lab = parseJson<Record<string, string>>(en?.calculatorLabels, {});
+        return Object.values(lab).some((v) => v?.trim());
+      })
+    );
+    if (withEnLabels.length === 0) {
+      alert('Select pages with Calculator code and EN labels filled.');
+      return;
+    }
+    const allNonEn = [...ADMIN_LOCALES.filter((l) => l !== 'en')].reverse();
+    setTranslateLabelsLoading(true);
+    setTranslateLabelsProgress(null);
+    setTranslateLabelsPausedAt(null);
+    translateLabelsPausedRef.current = false;
+    translateLabelsAbortRef.current = new AbortController();
+    let step = 0;
+    const steps: { page: Page; loc: string }[] = [];
+    for (const page of withEnLabels) {
+      const enTrans = page.translations.find((t) => t.locale === 'en');
+      const enLabels = parseJson<Record<string, string>>(enTrans?.calculatorLabels, {});
+      if (!Object.values(enLabels).some((v) => v?.trim())) continue;
+      for (const loc of allNonEn) {
+        const t = page.translations.find((tr) => tr.locale === loc);
+        const existing = parseJson<Record<string, string>>(t?.calculatorLabels, {});
+        const missingKeys = getMissingLabelKeysForLocale(enLabels, existing, loc);
+        if (missingKeys.length > 0) steps.push({ page, loc });
+      }
+    }
+    const totalSteps = steps.length;
+    if (totalSteps === 0) {
+      setTranslateLabelsLoading(false);
+      alert('No missing labels. All selected pages have full label translations.');
+      return;
+    }
+    try {
+      for (const { page, loc } of steps) {
+        if (translateLabelsAbortRef.current?.signal.aborted) break;
+        if (translateLabelsPausedRef.current) {
+          setTranslateLabelsPausedAt({ pageSlug: page.slug, nextLocale: loc });
+          while (translateLabelsPausedRef.current && !translateLabelsAbortRef.current?.signal.aborted) {
+            await new Promise((r) => setTimeout(r, 300));
+          }
+          setTranslateLabelsPausedAt(null);
+          if (translateLabelsAbortRef.current?.signal.aborted) break;
+        }
+        step++;
+        setTranslateLabelsProgress({ current: step, total: totalSteps, pageSlug: page.slug, pageCategory: page.category ?? 'math', locale: loc });
+        const enTrans = page.translations.find((t) => t.locale === 'en');
+        const enLabels = parseJson<Record<string, string>>(enTrans?.calculatorLabels, {});
+        const t = page.translations.find((tr) => tr.locale === loc);
+        const existing = parseJson<Record<string, string>>(t?.calculatorLabels, {});
+        const missingKeys = getMissingLabelKeysForLocale(enLabels, existing, loc);
+        if (missingKeys.length === 0) continue;
+        const labelsToTranslate = Object.fromEntries(missingKeys.map((k) => [k, enLabels[k]]));
+        let res: Response;
+        for (let attempt = 0; attempt <= 2; attempt++) {
+          res = await fetch('/api/twojastara/ollama/translate-labels', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ labels: labelsToTranslate, targetLocale: loc }),
+            credentials: 'include',
+            signal: translateLabelsAbortRef.current?.signal,
+          });
+          if (res.ok || attempt >= 2) break;
+          await new Promise((r) => setTimeout(r, 2000));
+        }
+        const data = await safeResJson(res!);
+        if (!res!.ok) throw new Error(String(data?.error || `Translate missing labels to ${loc} failed`));
+        const translated = data?.labels;
+        const merged = { ...existing, ...(translated && typeof translated === 'object' && !Array.isArray(translated) ? translated : {}) };
+        const patchRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ updates: [{ locale: loc, calculatorLabels: merged }] }),
+          credentials: 'include',
+        });
+        if (!patchRes.ok) {
+          const errData = await safeResJson(patchRes);
+          throw new Error(String(errData?.error || `Failed to save labels for ${loc}`));
+        }
+        setPages((prev) =>
+          prev.map((p) => {
+            if (p.id !== page.id) return p;
+            return {
+              ...p,
+              translations: p.translations.map((t) =>
+                t.locale === loc ? { ...t, calculatorLabels: JSON.stringify(merged) } : t
+              ),
+            };
+          })
+        );
+      }
+      setTranslateLabelsSuccess(`Translated missing labels for ${withEnLabels.length} page(s)`);
+      setTimeout(() => setTranslateLabelsSuccess(''), 5000);
+      onCompleteCallback?.();
+    } catch (e) {
+      const isAbort = e instanceof Error && e.name === 'AbortError';
+      if (!isAbort) alert(e instanceof Error ? e.message : 'Translate missing labels failed');
+    } finally {
+      setTranslateLabelsLoading(false);
+      setTranslateLabelsProgress(null);
+      setTranslateLabelsPausedAt(null);
+      translateLabelsAbortRef.current = null;
+    }
+  }
+
   function handleBatchGenerate() {
     setGeneratedIdsThisRun(new Set());
     startGenerate({
@@ -702,7 +847,7 @@ export default function AdminPagesList() {
       setBulkImportJson('');
       const listRes = await fetch('/api/twojastara/pages');
       const listData = await listRes.json();
-      if (Array.isArray(listData)) setPages(listData);
+      if (Array.isArray(listData)) setPages(sortPagesLatestFirst(listData));
     } catch (e) {
       setBulkImportResult({ type: 'error', msg: e instanceof Error ? e.message : 'Import failed' });
     } finally {
@@ -1069,16 +1214,28 @@ export default function AdminPagesList() {
       {(activeBookmark === 'translate-label' || activeBookmark === 'completed' || activeBookmark === 'completed-alive') && filteredPages.length > 0 && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
           {activeBookmark === 'translate-label' && (
-            <button
-              type="button"
-              onClick={() => handleBulkTranslateLabels()}
-              disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
-              className="btn btn-primary btn-sm"
-              style={{ padding: '0.35rem 0.75rem' }}
-              title="Translate Calculator labels from EN to all other languages (Ollama)"
-            >
-              {translateLabelsLoading ? 'Translate Labels…' : 'Translate Labels'}
-            </button>
+            <>
+              <button
+                type="button"
+                onClick={() => handleBulkTranslateLabels()}
+                disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
+                className="btn btn-primary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title="Translate Calculator labels from EN to all other languages (Ollama)"
+              >
+                {translateLabelsLoading ? 'Translate Labels…' : 'Translate Labels'}
+              </button>
+              <button
+                type="button"
+                onClick={() => handleBulkTranslateMissingLabels()}
+                disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title="Translate only empty/missing labels (for recovery after errors, timeouts, internet issues)"
+              >
+                {translateLabelsLoading ? 'Translating…' : 'Translate missing labels'}
+              </button>
+            </>
           )}
           {activeBookmark === 'completed' && (
             <>
@@ -1325,15 +1482,27 @@ export default function AdminPagesList() {
                 </button>
               )}
               {checkFailedType === 'labels' && checkFailedIds.size > 0 && (
-                <button
-                  type="button"
-                  onClick={handleCompleteLabelsFromCheck}
-                  disabled={!!translateProgress || !!translateLabelsLoading}
-                  className="btn btn-primary btn-sm"
-                  style={{ padding: '0.25rem 0.5rem' }}
-                >
-                  Complete labels
-                </button>
+                <>
+                  <button
+                    type="button"
+                    onClick={() => handleCompleteLabelsFromCheck(false)}
+                    disabled={!!translateProgress || !!translateLabelsLoading}
+                    className="btn btn-primary btn-sm"
+                    style={{ padding: '0.25rem 0.5rem' }}
+                  >
+                    Complete labels
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleCompleteLabelsFromCheck(true)}
+                    disabled={!!translateProgress || !!translateLabelsLoading}
+                    className="btn btn-secondary btn-sm"
+                    style={{ padding: '0.25rem 0.5rem' }}
+                    title="Translate only empty/missing labels"
+                  >
+                    Complete missing labels
+                  </button>
+                </>
               )}
               <button
                 type="button"

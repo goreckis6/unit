@@ -5,6 +5,7 @@ import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { ADMIN_LOCALES, getLocaleMeta, LOCALE_NAMES } from '@/lib/admin-locales';
 import { extractCalculatorLabelKeys } from '@/lib/extract-calculator-label-keys';
+import { SeoChecker } from '@/components/admin/SeoChecker';
 
 const CalculatorSandpackClient = dynamic(
   () => import('@/components/CalculatorSandpackClient').then((m) => ({ default: m.CalculatorSandpackClient })),
@@ -1063,6 +1064,14 @@ export default function AdminEditPage() {
                 className="admin-form-input"
               />
             </div>
+            <SeoChecker
+              title={t.title}
+              displayTitle={t.displayTitle ?? ''}
+              description={t.description ?? ''}
+              slug={slug}
+              category={category}
+              locale={activeLocale}
+            />
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem', flexWrap: 'wrap' }}>
                 <label style={{ fontSize: '0.8rem', flex: '1 1 auto' }}>

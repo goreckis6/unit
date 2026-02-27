@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { ADMIN_LOCALES, getLocaleMeta, LOCALE_NAMES } from '@/lib/admin-locales';
 import { extractCalculatorLabelKeys } from '@/lib/extract-calculator-label-keys';
+import { SeoChecker } from '@/components/admin/SeoChecker';
 
 const PAGE_CATEGORIES = [
   { value: '', label: '— Select category —' },
@@ -900,6 +901,14 @@ export default function AdminNewPage() {
                 className="admin-form-input"
               />
             </div>
+            <SeoChecker
+              title={t.title}
+              displayTitle={t.displayTitle ?? ''}
+              description={t.description ?? ''}
+              slug={slug}
+              category={category}
+              locale={activeLocale}
+            />
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem', flexWrap: 'wrap' }}>
                 <label style={{ fontSize: '0.8rem', flex: '1 1 auto' }}>

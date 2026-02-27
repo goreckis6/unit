@@ -17,6 +17,10 @@ export function IntlProvider({ locale, messages, children }: IntlProviderProps) 
       messages={messages}
       getMessageFallback={({ namespace, key }) => {
         const path = [namespace, key].filter(Boolean).join('.');
+        if (path.includes('armyBodyFat')) {
+          if (path.endsWith('.title') || key === 'title') return 'Army Body Fat Calculator';
+          if (path.endsWith('.description') || key === 'description') return 'Calculate your body fat percentage using the official US Army tape test method per AR 600-9. Supports 2026 ACFT exemption for soldiers scoring 540+.';
+        }
         return path || '?';
       }}
       onError={(err) => {

@@ -7,26 +7,14 @@ import { CALCULATOR_EMBED_CSS } from '@/lib/calculator-embed-styles';
 
 const EMBED_HEIGHT_MSG = 'calculinohub-embed-height';
 
-const DEFAULT_LABELS: Record<string, string> = {
-  calculate: 'Calculate',
-  reset: 'Reset',
-  result: 'Result',
-  resultFraction: 'Result (fraction)',
-  resultDecimal: 'Result (decimal)',
-  resultPlaceholder: 'Enter expression and click Calculate',
-  title: 'Calculator',
-};
-
 function buildStubsCode(labels: Record<string, string> | null | undefined): string {
-  const LABELS = { ...DEFAULT_LABELS, ...(labels || {}) };
+  const LABELS = labels && Object.keys(labels).length > 0 ? labels : {};
   const labJson = JSON.stringify(LABELS);
-  const defaultsJson = JSON.stringify(DEFAULT_LABELS);
+  // Only use uploaded/manual labels; empty = show key
   return [
     "import React, { useRef } from 'react';",
     `const LABELS = ${labJson};`,
-    `const DEFAULT_LABELS = ${defaultsJson};`,
-    // Prefer custom label if non-empty; else default; else key (so we never show raw key when default exists)
-    "export const useTranslations = () => (key: string) => { const v = LABELS[key]; return (v != null && String(v).trim() !== '') ? String(v).trim() : (DEFAULT_LABELS[key] ?? key); };",
+    "export const useTranslations = () => (key: string) => { const v = LABELS[key]; return (v != null && String(v).trim() !== '') ? String(v).trim() : key; };",
     "export const useScrollToResult = () => useRef(null);",
     "export const CopyButton = ({ text }: { text: string }) => (",
     "  <button",

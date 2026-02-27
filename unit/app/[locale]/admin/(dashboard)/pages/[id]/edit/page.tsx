@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from 'react';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { ADMIN_LOCALES, getLocaleMeta, LOCALE_NAMES } from '@/lib/admin-locales';
-import { getDefaultCalculatorLabels } from '@/lib/calculator-default-labels';
 import { extractCalculatorLabelKeys } from '@/lib/extract-calculator-label-keys';
 
 const CalculatorSandpackClient = dynamic(
@@ -1258,14 +1257,12 @@ export default function AdminEditPage() {
                   Calculator labels [{activeLocale}]
                 </label>
                 <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
-                  Keys from <code>t('key')</code> in your code are auto-detected. Edit values below or use defaults.
+                  Keys from <code>t('key')</code> in your code are auto-detected. Add labels manually or upload English JSON.
                 </p>
                 {(() => {
                   const lab = t.calculatorLabels ?? {};
-                  const defaults = getDefaultCalculatorLabels(activeLocale);
                   const extracted = extractCalculatorLabelKeys(calculatorCode);
-                  const keys = Array.from(new Set([...extracted, ...Object.keys(lab), ...Object.keys(defaults)])).filter(Boolean).sort();
-                  const current = Object.keys(lab).length ? lab : defaults;
+                  const keys = Array.from(new Set([...extracted, ...Object.keys(lab)])).filter(Boolean).sort();
                   return (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                       {keys.map((key) => (
@@ -1273,22 +1270,22 @@ export default function AdminEditPage() {
                           <code style={{ fontSize: '0.8rem', minWidth: 140 }}>{key}</code>
                           <input
                             type="text"
-                            value={lab[key] ?? current[key] ?? ''}
+                            value={lab[key] ?? ''}
                             onChange={(e) => {
                               const v = e.target.value.trim();
-                              const next = { ...(lab || {}), ...(Object.keys(lab).length ? {} : defaults) };
+                              const next = { ...(lab || {}) };
                               if (v) next[key] = v;
                               else delete next[key];
                               updateTranslation(activeLocale, 'calculatorLabels', next);
                             }}
-                            placeholder={defaults[key] ?? ''}
+                            placeholder=""
                             className="admin-form-input"
                             style={{ flex: 1, minWidth: 120 }}
                           />
                           <button
                             type="button"
                             onClick={() => {
-                              const next = { ...(lab || {}), ...(Object.keys(lab).length ? {} : defaults) };
+                              const next = { ...(lab || {}) };
                               delete next[key];
                               updateTranslation(activeLocale, 'calculatorLabels', next);
                             }}
@@ -1301,16 +1298,6 @@ export default function AdminEditPage() {
                         </div>
                       ))}
                       <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.25rem' }}>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            const def = getDefaultCalculatorLabels(activeLocale);
-                            updateTranslation(activeLocale, 'calculatorLabels', def);
-                          }}
-                          className="btn btn-secondary btn-sm"
-                        >
-                          Use all defaults
-                        </button>
                         {activeLocale !== 'en' && (
                           <button
                             type="button"
@@ -1327,7 +1314,7 @@ export default function AdminEditPage() {
                           onClick={() => {
                             const key = prompt('New key (e.g. myLabel):');
                             if (key && /^[a-zA-Z][a-zA-Z0-9_]*$/.test(key)) {
-                              const next = { ...(lab || {}), ...(Object.keys(lab).length ? {} : defaults), [key]: '' };
+                              const next = { ...(lab || {}), [key]: '' };
                               updateTranslation(activeLocale, 'calculatorLabels', next);
                             } else if (key) alert('Use letters and numbers only (e.g. myLabel)');
                           }}
@@ -1339,7 +1326,7 @@ export default function AdminEditPage() {
                           type="button"
                           onClick={() => {
                             const toExport: Record<string, string> = {};
-                            keys.forEach((k) => { toExport[k] = lab[k] ?? current[k] ?? defaults[k] ?? ''; });
+                            keys.forEach((k) => { toExport[k] = lab[k] ?? ''; });
                             const blob = new Blob([JSON.stringify(toExport, null, 2)], { type: 'application/json' });
                             const a = document.createElement('a');
                             a.href = URL.createObjectURL(blob);
@@ -1365,7 +1352,7 @@ export default function AdminEditPage() {
                               reader.onload = () => {
                                 const parsed = parseLabelsFromUpload(String(reader.result ?? ''), slug);
                                 if (Object.keys(parsed).length > 0) {
-                                  const next = { ...(lab || {}), ...(Object.keys(lab).length ? {} : defaults), ...parsed };
+                                  const next = { ...(lab || {}), ...parsed };
                                   updateTranslation(activeLocale, 'calculatorLabels', next);
                                 }
                               };
@@ -1385,9 +1372,7 @@ export default function AdminEditPage() {
                   <div style={{ minHeight: 420 }}>
                     <CalculatorSandpackClient
                       code={calculatorCode}
-                      labels={(t.calculatorLabels && Object.keys(t.calculatorLabels).length > 0)
-                        ? t.calculatorLabels
-                        : getDefaultCalculatorLabels(activeLocale)}
+                      labels={t.calculatorLabels && Object.keys(t.calculatorLabels).length > 0 ? t.calculatorLabels : undefined}
                     />
                   </div>
                 </div>

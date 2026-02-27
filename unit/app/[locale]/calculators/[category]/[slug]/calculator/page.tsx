@@ -7,7 +7,6 @@ import { ROUTING_LOCALES } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { hasCalculatorEmbed } from '@/lib/calculator-embeds';
-import { getDefaultCalculatorLabels } from '@/lib/calculator-default-labels';
 import { Link } from '@/i18n/routing';
 import { CalculatorSandpackClient } from '@/components/CalculatorSandpackClient';
 
@@ -133,7 +132,7 @@ export default async function CalculatorSubpage({ params, searchParams }: Props)
                 code={page.calculatorCode}
                 labels={(() => {
                   const t = page.translations.find((x) => x.locale === locale) ?? page.translations[0];
-                  if (!t?.calculatorLabels) return getDefaultCalculatorLabels(locale);
+                  if (!t?.calculatorLabels) return undefined;
                   try {
                     const p = JSON.parse(t.calculatorLabels) as Record<string, unknown>;
                     if (p && typeof p === 'object' && !Array.isArray(p)) {
@@ -141,10 +140,10 @@ export default async function CalculatorSubpage({ params, searchParams }: Props)
                       for (const [k, v] of Object.entries(p)) {
                         if (typeof k === 'string' && typeof v === 'string') out[k] = v;
                       }
-                      return Object.keys(out).length ? out : getDefaultCalculatorLabels(locale);
+                      return Object.keys(out).length ? out : undefined;
                     }
                   } catch {}
-                  return getDefaultCalculatorLabels(locale);
+                  return undefined;
                 })()}
               />
             )}

@@ -6,6 +6,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { ADMIN_LOCALES, LOCALE_NAMES } from '@/lib/admin-locales';
 import { useTranslate } from '../../TranslateContext';
 import { useGenerate, type GenerateProviderType } from '../../GenerateContext';
+import { SeoChecker } from '@/components/admin/SeoChecker';
 
 export type PageStage = 'new' | 'in-progress' | 'translate-label' | 'completed' | 'completed-alive';
 
@@ -338,6 +339,7 @@ export default function AdminPagesList() {
   const [checkResult, setCheckResult] = useState<string | null>(null);
   const [checkFailedIds, setCheckFailedIds] = useState<Set<string>>(new Set());
   const [checkFailedType, setCheckFailedType] = useState<'translations' | 'labels' | null>(null);
+  const [showSeoCheckModal, setShowSeoCheckModal] = useState(false);
 
   function handleCheckTranslations() {
     const toCheck = selectedIds.size > 0
@@ -1235,6 +1237,16 @@ export default function AdminPagesList() {
               >
                 {translateLabelsLoading ? 'Translating…' : 'Translate missing labels'}
               </button>
+              <button
+                type="button"
+                onClick={() => setShowSeoCheckModal(true)}
+                disabled={!!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title="Check SEO (title, meta, slug) for selected pages"
+              >
+                SEO Check
+              </button>
             </>
           )}
           {activeBookmark === 'completed' && (
@@ -1261,6 +1273,26 @@ export default function AdminPagesList() {
               </button>
               <button
                 type="button"
+                onClick={() => setShowSeoCheckModal(true)}
+                disabled={!!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title="Check SEO (title, meta, slug) for selected pages"
+              >
+                SEO Check
+              </button>
+              <button
+                type="button"
+                onClick={() => handleBulkTranslateMissingLabels()}
+                disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title="Translate only empty/missing labels"
+              >
+                {translateLabelsLoading ? 'Translating…' : 'Translate missing labels'}
+              </button>
+              <button
+                type="button"
                 onClick={handleCleanContentAndLabels}
                 disabled={selectedIds.size === 0 || cleanContentLoading || !!generateProgress || !!translateProgress}
                 className="btn btn-secondary btn-sm"
@@ -1281,15 +1313,57 @@ export default function AdminPagesList() {
             </>
           )}
           {activeBookmark === 'completed-alive' && (
-            <button
-              type="button"
-              onClick={() => handleBulkPublish(false)}
-              disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
-              className="btn btn-secondary btn-sm"
-              style={{ padding: '0.35rem 0.75rem' }}
-            >
-              {bulkPublishLoading ? 'Unpublishing…' : `Unpublish (${selectedIds.size})`}
-            </button>
+            <>
+              <button
+                type="button"
+                onClick={handleCheckTranslations}
+                disabled={!!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title={`Check if selected pages have content for all ${ADMIN_LOCALES.length} locales`}
+              >
+                Check translations
+              </button>
+              <button
+                type="button"
+                onClick={handleCheckLabels}
+                disabled={!!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title={`Check if selected pages have calculator labels for all ${ADMIN_LOCALES.length} locales`}
+              >
+                Check labels
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowSeoCheckModal(true)}
+                disabled={!!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title="Check SEO (title, meta, slug) for selected pages"
+              >
+                SEO Check
+              </button>
+              <button
+                type="button"
+                onClick={() => handleBulkTranslateMissingLabels()}
+                disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title="Translate only empty/missing labels"
+              >
+                {translateLabelsLoading ? 'Translating…' : 'Translate missing labels'}
+              </button>
+              <button
+                type="button"
+                onClick={() => handleBulkPublish(false)}
+                disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+              >
+                {bulkPublishLoading ? 'Unpublishing…' : `Unpublish (${selectedIds.size})`}
+              </button>
+            </>
           )}
         </div>
       )}
@@ -1515,6 +1589,74 @@ export default function AdminPagesList() {
             </div>
           </div>
           <div style={{ color: 'var(--text-secondary)' }}>{checkResult}</div>
+        </div>
+      )}
+
+      {showSeoCheckModal && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            background: 'rgba(0,0,0,0.5)',
+            display: 'flex',
+            alignItems: 'flex-start',
+            justifyContent: 'center',
+            padding: '2rem 1rem',
+            overflow: 'auto',
+          }}
+          onClick={() => setShowSeoCheckModal(false)}
+        >
+          <div
+            style={{
+              background: 'var(--bg-primary)',
+              borderRadius: 12,
+              border: '1px solid var(--border-color)',
+              maxWidth: 560,
+              width: '100%',
+              maxHeight: '90vh',
+              overflow: 'auto',
+              padding: '1.25rem',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+              <strong style={{ fontSize: '1.1rem' }}>SEO Check</strong>
+              <button
+                type="button"
+                onClick={() => setShowSeoCheckModal(false)}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+              >
+                Close
+              </button>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              {(selectedCount > 0 ? pages.filter((p) => selectedIds.has(p.id)) : filteredPages).map((p) => {
+                const en = p.translations.find((t) => t.locale === 'en');
+                const title = en?.title?.trim() ?? '';
+                const displayTitle = en?.displayTitle?.trim() ?? '';
+                const description = en?.description?.trim() ?? '';
+                return (
+                  <div key={p.id} style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
+                    <div style={{ fontWeight: 600, marginBottom: '0.5rem', fontSize: '0.9rem' }}>
+                      {p.slug} ({p.category ?? '—'})
+                    </div>
+                    <SeoChecker
+                      title={title}
+                      displayTitle={displayTitle}
+                      description={description}
+                      slug={p.slug}
+                      category={p.category ?? ''}
+                      locale="en"
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       )}
 

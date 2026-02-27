@@ -441,7 +441,7 @@ export default function AdminNewPage() {
       setTimeout(() => setGenerateSuccess(''), 5000);
     } catch (err) {
       const msg = err instanceof Error
-        ? (err.name === 'AbortError' ? 'Timeout — limit 90 min. Spróbuj ponownie.' : err.message)
+        ? (err.name === 'AbortError' ? 'Timeout — limit 600 min. Spróbuj ponownie.' : err.message)
         : 'Błąd generowania';
       setError(msg);
     } finally {
@@ -452,7 +452,7 @@ export default function AdminNewPage() {
   async function fetchWithTimeoutAndRetry(
     url: string,
     options: RequestInit,
-    timeoutMs = 5_400_000,
+    timeoutMs = 36_000_000,
     retries = 2
   ): Promise<Response> {
     for (let attempt = 0; attempt <= retries; attempt++) {
@@ -517,7 +517,7 @@ export default function AdminNewPage() {
             body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined, description: (translations.en?.description ?? '').trim() || undefined }),
             credentials: 'include',
           },
-          5_400_000,
+          36_000_000,
           2
         );
         let data: { error?: string; content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[] };
@@ -541,7 +541,7 @@ export default function AdminNewPage() {
       setTimeout(() => setTranslateSuccess(''), 6000);
     } catch (err) {
       const msg = err instanceof Error
-        ? (err.name === 'AbortError' ? 'Timeout — limit 90 min. Spróbuj ponownie.' : err.message)
+        ? (err.name === 'AbortError' ? 'Timeout — limit 600 min. Spróbuj ponownie.' : err.message)
         : 'Błąd tłumaczenia';
       setError(msg + ' — Kliknij ponownie, aby kontynuować od miejsca zatrzymania.');
     } finally {
@@ -908,7 +908,7 @@ export default function AdminNewPage() {
                 </label>
                 {activeLocale === 'en' && (
                   <>
-                    <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }} title="Ollama: ~90 min. Claude: ~2 min.">
+                    <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }} title="Ollama: ~600 min. Claude: ~2 min.">
                       Generate:
                     </span>
                     <button
@@ -1130,7 +1130,7 @@ export default function AdminNewPage() {
                             onClick={handleTranslateLabels}
                             disabled={translateLabelsLoading || !Object.values(translations.en?.calculatorLabels ?? {}).some((v) => v?.trim())}
                             className="btn btn-secondary btn-sm"
-                            title="Translate labels from EN to this language (Ollama). Limit: ~90 min. Retry: 2x."
+                            title="Translate labels from EN to this language (Ollama). Limit: ~600 min. Retry: 2x."
                           >
                             {translateLabelsLoading ? 'Translating…' : 'Translate Labels'}
                           </button>

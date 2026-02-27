@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
 
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
-const OLLAMA_TIMEOUT_MS = 5_400_000; // 90 min
+const OLLAMA_TIMEOUT_MS = 36_000_000; // 600 min (10 h)
 
 async function ollamaChat(messages: { role: string; content: string }[]) {
   const apiKey = process.env.OLLAMA_API_KEY;
@@ -31,7 +31,7 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
   } catch (e) {
     clearTimeout(timeoutId);
     if (e instanceof Error && e.name === 'AbortError') {
-      throw new Error(`Ollama API timeout (limit ~90 min) — spróbuj ponownie`);
+      throw new Error(`Ollama API timeout (limit ~600 min) — spróbuj ponownie`);
     }
     throw e;
   }

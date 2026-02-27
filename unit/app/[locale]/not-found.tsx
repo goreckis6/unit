@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { BackButton } from '@/components/BackButton';
 import { GlobalSearch } from '@/components/GlobalSearch';
+import { getSearchableCalculators } from '@/lib/get-searchable-calculators';
 
 export async function generateMetadata({ params }: { params?: Promise<{ locale?: string }> }) {
   const resolved = params ? await params : {};
@@ -23,12 +24,19 @@ export async function generateMetadata({ params }: { params?: Promise<{ locale?:
 
 export default async function NotFound({ params }: { params?: Promise<{ locale?: string }> }) {
   const resolved = params ? await params : {};
-  const locale = resolved?.locale ?? routing.defaultLocale;
+  const locale = (resolved?.locale ?? routing.defaultLocale) as string;
   let t;
   try {
     t = await getTranslations({ locale, namespace: 'notFound' });
   } catch {
     t = await getTranslations({ locale: 'en', namespace: 'notFound' });
+  }
+
+  let calculators: Awaited<ReturnType<typeof getSearchableCalculators>> = [];
+  try {
+    calculators = await getSearchableCalculators(locale);
+  } catch {
+    // Ignore - GlobalSearch will use fallback
   }
 
   return (
@@ -60,7 +68,7 @@ export default async function NotFound({ params }: { params?: Promise<{ locale?:
 
             {/* Search Bar */}
             <div className="not-found-search">
-              <GlobalSearch />
+              <GlobalSearch calculators={calculators} />
             </div>
 
             {/* Suggestions */}

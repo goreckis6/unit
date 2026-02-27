@@ -946,7 +946,7 @@ export default function AdminPagesList() {
                       disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
                       className="btn btn-secondary btn-sm"
                       style={{ padding: '0.35rem 0.75rem' }}
-                      title="Translate Calculator labels from EN to all other languages (Ollama). Limit: ~90 min. Przy timeout — spróbuj ponownie. Retry: 2x."
+                      title="Translate Calculator labels from EN to all other languages (Ollama). Limit: ~600 min. Przy timeout — spróbuj ponownie. Retry: 2x."
                     >
                       {translateLabelsLoading ? 'Translate Labels…' : 'Translate Labels'}
                     </button>
@@ -1211,7 +1211,7 @@ export default function AdminPagesList() {
 
       {pages.length > 0 && (
         <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem' }}>
-          Limit: ~90 min (Ollama). Przy timeout — spróbuj ponownie. Retry: 2x.
+          Limit: ~600 min (Ollama). Przy timeout — spróbuj ponownie. Retry: 2x.
         </p>
       )}
 

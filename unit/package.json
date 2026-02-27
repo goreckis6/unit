@@ -14,7 +14,8 @@
     "preview": "vite preview",
     "preview:qwik": "vite preview --config vite.config.qwik.ts",
     "migrate:qwik": "node scripts/migrate-to-qwik.js",
-    "migrate:qwik:single": "node scripts/migrate-to-qwik.js"
+    "migrate:qwik:single": "node scripts/migrate-to-qwik.js",
+    "validate:locales": "node scripts/validate-calculator-translations.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",

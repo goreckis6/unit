@@ -5,7 +5,7 @@ import { LOCALE_NAMES } from '@/lib/admin-locales';
 
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 
-const OLLAMA_TIMEOUT_MS = 5_400_000; // 90 min
+const OLLAMA_TIMEOUT_MS = 36_000_000; // 600 min (10 h)
 
 /** Dispatcher with high timeouts — undici's default headersTimeout is low and causes UND_ERR_HEADERS_TIMEOUT on slow Ollama Cloud */
 const ollamaDispatcher = new Agent({
@@ -41,7 +41,7 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
   } catch (e) {
     clearTimeout(timeoutId);
     if (e instanceof Error && e.name === 'AbortError') {
-      throw new Error(`Ollama API timeout (limit ~90 min) — spróbuj ponownie lub skróć treść`);
+      throw new Error(`Ollama API timeout (limit ~600 min) — spróbuj ponownie lub skróć treść`);
     }
     throw e;
   }
@@ -103,11 +103,8 @@ CRITICAL RULES:
       .filter(Boolean)
       .join('\n\n');
 
-    const raw = await ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]);
-    const trimmed = (raw || '').trim();
-
-    const jsonMatch = trimmed.match(/\{[\s\S]*\}/);
-    const jsonStr = jsonMatch ? jsonMatch[0] : trimmed;
+    let raw = await ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]);
+    let trimmed = (raw || '').trim();
     let parsed: {
       content?: string;
       title?: string;
@@ -115,10 +112,21 @@ CRITICAL RULES:
       description?: string;
       faqItems?: { question?: string; answer?: string }[];
     };
-    try {
-      parsed = JSON.parse(jsonStr) as typeof parsed;
-    } catch {
-      throw new Error('Ollama returned invalid JSON. Spróbuj ponownie.');
+
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const jsonMatch = trimmed.match(/\{[\s\S]*\}/);
+      const jsonStr = jsonMatch ? jsonMatch[0] : trimmed;
+      try {
+        parsed = JSON.parse(jsonStr) as typeof parsed;
+        break;
+      } catch {
+        if (attempt === 0) {
+          raw = await ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]);
+          trimmed = (raw || '').trim();
+        } else {
+          throw new Error('Ollama returned invalid JSON. Spróbuj ponownie.');
+        }
+      }
     }
 
     // Strip accidental headers and FAQ block that may leak from model into content

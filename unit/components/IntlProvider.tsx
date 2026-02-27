@@ -2,6 +2,7 @@
 
 import { NextIntlClientProvider } from 'next-intl';
 import type { AbstractIntlMessages } from 'next-intl';
+import { createGetMessageFallback } from '@/i18n/get-message-fallback';
 
 interface IntlProviderProps {
   locale: string;
@@ -9,22 +10,17 @@ interface IntlProviderProps {
   children: React.ReactNode;
 }
 
+const getMessageFallback = createGetMessageFallback();
+
 /** Client wrapper: suppresses MISSING_MESSAGE log spam, provides safe fallbacks */
 export function IntlProvider({ locale, messages, children }: IntlProviderProps) {
   return (
     <NextIntlClientProvider
       locale={locale}
       messages={messages}
-      getMessageFallback={({ namespace, key }) => {
-        const path = [namespace, key].filter(Boolean).join('.');
-        if (path.includes('armyBodyFat')) {
-          if (path.endsWith('.title') || key === 'title') return 'Army Body Fat Calculator';
-          if (path.endsWith('.description') || key === 'description') return 'Calculate your body fat percentage using the official US Army tape test method per AR 600-9. Supports 2026 ACFT exemption for soldiers scoring 540+.';
-        }
-        return path || '?';
-      }}
+      getMessageFallback={getMessageFallback}
       onError={(err) => {
-        if (err?.code === 'MISSING_MESSAGE') return;
+        if (err?.code === 'MISSING_MESSAGE' || err?.code === 'ENVIRONMENT_FALLBACK') return;
         console.error(err);
       }}
     >

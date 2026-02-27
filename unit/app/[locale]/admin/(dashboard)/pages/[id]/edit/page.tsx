@@ -457,7 +457,7 @@ export default function AdminEditPage() {
       setTimeout(() => setGenerateSuccess(''), 5000);
     } catch (err) {
       const msg = err instanceof Error
-        ? (err.name === 'AbortError' ? 'Timeout — limit 90 min.' : err.message)
+        ? (err.name === 'AbortError' ? 'Timeout — limit 600 min.' : err.message)
         : 'Błąd generowania';
       setError(`${msg} — Kliknij Generate Content ponownie, aby spróbować od początku.`);
       if (autoResumeOnErrorRef.current) {
@@ -479,7 +479,7 @@ export default function AdminEditPage() {
   async function fetchWithTimeoutAndRetry(
     url: string,
     options: RequestInit,
-    timeoutMs = 5_400_000,
+    timeoutMs = 36_000_000,
     retries = 2,
     externalSignal?: AbortSignal | null
   ): Promise<Response> {
@@ -554,7 +554,7 @@ export default function AdminEditPage() {
             body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined, description: enDescription || undefined }),
             credentials: 'include',
           },
-          5_400_000,
+          36_000_000,
           2,
           translateAbortRef.current?.signal ?? null
         );
@@ -1071,7 +1071,7 @@ export default function AdminEditPage() {
                 </label>
                 {activeLocale === 'en' && (
                   <>
-                    <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }} title="Ollama: ~90 min. Claude: ~2 min.">
+                    <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }} title="Ollama: ~600 min. Claude: ~2 min.">
                       Generate:
                     </span>
                     <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem', cursor: 'pointer' }}>
@@ -1317,7 +1317,7 @@ export default function AdminEditPage() {
                             onClick={handleTranslateLabels}
                             disabled={translateLabelsLoading || !Object.values(translations.en?.calculatorLabels ?? {}).some((v) => v?.trim())}
                             className="btn btn-secondary btn-sm"
-                            title="Translate labels from EN to this language (Ollama). Limit: ~90 min. Retry: 2x."
+                            title="Translate labels from EN to this language (Ollama). Limit: ~600 min. Retry: 2x."
                           >
                             {translateLabelsLoading ? 'Translating…' : 'Translate Labels'}
                           </button>

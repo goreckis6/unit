@@ -51,13 +51,23 @@ export function GlobalSearch({ calculators: propCalculators }: GlobalSearchProps
       };
       return map[cat] ?? cat;
     };
-    return staticCalcs.map((c) => ({
-      id: c.id,
-      title: t(c.titleKey),
-      description: t(c.descKey),
-      path: c.path.startsWith('/') ? c.path : `/${c.path}`,
-      categoryLabel: catBadge(c.category),
-    }));
+    return staticCalcs.map((c) => {
+      let title = c.id;
+      let description = '';
+      try {
+        title = t(c.titleKey) || c.id;
+        description = t(c.descKey) || '';
+      } catch {
+        // MISSING_MESSAGE fallback — use id if t() throws (e.g. armyBodyFat missing in locale)
+      }
+      return {
+        id: c.id,
+        title,
+        description,
+        path: c.path.startsWith('/') ? c.path : `/${c.path}`,
+        categoryLabel: catBadge(c.category),
+      };
+    });
   }, [propCalculators, t]);
 
   const filteredResults = useMemo(() => {

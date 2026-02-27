@@ -1,10 +1,11 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getLocale, getMessages, getTranslations } from 'next-intl/server';
+import { IntlProvider } from '@/components/IntlProvider';
 import { Link } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { BackButton } from '@/components/BackButton';
 import { GlobalSearch } from '@/components/GlobalSearch';
+import { getSearchableCalculators } from '@/lib/get-searchable-calculators';
 
 export async function generateMetadata() {
   const t = await getTranslations({ namespace: 'notFound' });
@@ -15,11 +16,24 @@ export async function generateMetadata() {
 }
 
 export default async function NotFound() {
+  let locale = 'en';
+  try {
+    locale = (await getLocale()) || 'en';
+  } catch {
+    locale = 'en';
+  }
   const messages = await getMessages();
   const t = await getTranslations({ namespace: 'notFound' });
 
+  let calculators: Awaited<ReturnType<typeof getSearchableCalculators>> = [];
+  try {
+    calculators = await getSearchableCalculators(locale);
+  } catch {
+    // Ignore - GlobalSearch will use fallback
+  }
+
   return (
-    <NextIntlClientProvider messages={messages}>
+    <IntlProvider locale={locale} messages={messages}>
       <div className="not-found-page">
         <Header />
 
@@ -48,7 +62,7 @@ export default async function NotFound() {
 
               {/* Search Bar */}
               <div className="not-found-search">
-                <GlobalSearch />
+                <GlobalSearch calculators={calculators} />
               </div>
 
               {/* Suggestions */}
@@ -109,6 +123,6 @@ export default async function NotFound() {
 
         <Footer />
       </div>
-    </NextIntlClientProvider>
+    </IntlProvider>
   );
 }

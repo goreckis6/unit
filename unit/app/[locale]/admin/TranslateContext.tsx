@@ -123,7 +123,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
   async function fetchWithTimeoutAndRetry(
     url: string,
     options: RequestInit,
-    timeoutMs = 5_400_000,
+    timeoutMs = 36_000_000,
     retries = 2,
     signal?: AbortSignal | null
   ): Promise<Response> {
@@ -182,6 +182,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     setTranslateError('');
     setTranslateSuccess('');
     setTranslatePausedAt(null);
+    if (!resumeOverride) setTranslateStartFrom(allNonEn[0] ?? '');
     abortRef.current = new AbortController();
     let step = 0;
     let totalSteps = 0;
@@ -221,7 +222,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               localesToTranslate = (localesToTranslate ?? []).slice(idx >= 0 ? idx : 0);
             }
           }
-        } else if (allNonEn && effectiveStart) {
+        } else if (allNonEn && effectiveStart && translateOnlyOne) {
+          // Only apply "Start from" filter when user chose "Only this language" — otherwise translate ALL missing locales (full run)
           const ane = allNonEn ?? [];
           const startIdx = ane.indexOf(effectiveStart);
           localesToTranslate = (localesToTranslate ?? []).filter((loc) => ane.indexOf(loc) >= startIdx);
@@ -251,7 +253,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                 body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined, description: enDescription || undefined }),
                 credentials: 'include',
               },
-              5_400_000,
+              36_000_000,
               2,
               abortRef.current?.signal ?? null
             );

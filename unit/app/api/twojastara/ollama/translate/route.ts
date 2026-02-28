@@ -5,7 +5,7 @@ import { LOCALE_NAMES } from '@/lib/admin-locales';
 
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 
-const OLLAMA_TIMEOUT_MS = 36_000_000; // 600 min (10 h)
+const OLLAMA_TIMEOUT_MS = 172_800_000; // 48 h
 
 /** Dispatcher with high timeouts — undici's default headersTimeout is low and causes UND_ERR_HEADERS_TIMEOUT on slow Ollama Cloud */
 const ollamaDispatcher = new Agent({
@@ -41,7 +41,7 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
   } catch (e) {
     clearTimeout(timeoutId);
     if (e instanceof Error && e.name === 'AbortError') {
-      throw new Error(`Ollama API timeout (limit ~600 min) — spróbuj ponownie lub skróć treść`);
+      throw new Error(`Ollama API timeout (limit 48 h) — spróbuj ponownie lub skróć treść`);
     }
     throw e;
   }

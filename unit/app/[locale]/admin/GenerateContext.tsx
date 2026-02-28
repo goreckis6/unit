@@ -70,7 +70,7 @@ export function useGenerate() {
 async function fetchWithTimeout(
   url: string,
   options: RequestInit,
-  timeoutMs = 36_000_000,
+  timeoutMs = 172_800_000, // 48 h
   signal?: AbortSignal | null
 ): Promise<Response> {
   const controller = signal ? undefined : new AbortController();
@@ -85,7 +85,7 @@ async function fetchWithTimeout(
   } catch (e) {
     clearTimeout(id);
     if (e instanceof Error && e.name === 'AbortError') {
-      throw new Error('Timeout (limit ~600 min) — spróbuj ponownie');
+      throw new Error('Timeout (limit 48 h) — spróbuj ponownie');
     }
     throw e;
   }
@@ -149,7 +149,7 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
               body: JSON.stringify({ topic }),
               credentials: 'include',
             },
-            provider === 'claude' ? 120_000 : 36_000_000,
+            provider === 'claude' ? 120_000 : 172_800_000,
             abortRef.current?.signal ?? null
           );
           let genData: { error?: string; content?: string; faqItems?: unknown[] };

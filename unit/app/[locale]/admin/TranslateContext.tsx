@@ -123,7 +123,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
   async function fetchWithTimeoutAndRetry(
     url: string,
     options: RequestInit,
-    timeoutMs = 36_000_000,
+    timeoutMs = 172_800_000, // 48 h
     retries = 2,
     signal?: AbortSignal | null
   ): Promise<Response> {
@@ -185,10 +185,52 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     if (!resumeOverride) setTranslateStartFrom(allNonEn[0] ?? '');
     abortRef.current = new AbortController();
     let step = 0;
-    let totalSteps = 0;
     let pagesTranslatedCount = 0;
-    setTranslateProgress({ current: 0, total: 1, pageTitle: '', locale: '' });
     let hadError = false;
+
+    // Pre-scan: count total translations (pages × locales) to show 0/N at start
+    let totalSteps = 0;
+    try {
+      for (const page of pagesWithEn) {
+        if (abortRef.current?.signal.aborted) break;
+        const enTrans = page.translations.find((t) => t.locale === 'en');
+        if (!(enTrans?.content ?? '').trim()) continue;
+        const pageRes = await fetch(`/api/twojastara/pages/${page.id}`);
+        const fullPage = await pageRes.json();
+        if (!pageRes.ok || !fullPage?.translations) continue;
+        const fullPageTrans = fullPage.translations ?? [];
+        const hasContent = (loc: string) => (fullPageTrans.find((t: { locale: string }) => t.locale === loc)?.content?.trim() ?? '').length > 0;
+        let localesToTranslate = (allNonEn ?? []).filter((loc) => !hasContent(loc));
+        if (resumeOverride && page.slug === resumeFromSlug) {
+          const startLoc = resumeOverride.nextLocale;
+          if (startLoc && allNonEn) {
+            if (!(localesToTranslate?.includes?.(startLoc) ?? false)) {
+              const ane = allNonEn ?? [];
+              localesToTranslate = [startLoc, ...localesToTranslate.filter((l) => ane.indexOf(l) > ane.indexOf(startLoc))];
+            } else {
+              const idx = (localesToTranslate ?? []).indexOf(startLoc);
+              localesToTranslate = (localesToTranslate ?? []).slice(idx >= 0 ? idx : 0);
+            }
+          }
+        } else if (allNonEn && effectiveStart && translateOnlyOne) {
+          const ane = allNonEn ?? [];
+          const startIdx = ane.indexOf(effectiveStart);
+          localesToTranslate = (localesToTranslate ?? []).filter((loc) => ane.indexOf(loc) >= startIdx);
+        }
+        if (translateOnlyOne) {
+          localesToTranslate = (localesToTranslate?.includes?.(effectiveStart) ?? false) ? [effectiveStart] : [];
+        }
+        totalSteps += localesToTranslate.length;
+      }
+    } catch (e) {
+      setTranslateError('Błąd przy zliczaniu: ' + (e instanceof Error ? e.message : ''));
+      return;
+    }
+    if (totalSteps === 0) {
+      setTranslateError('Wszystkie wybrane strony mają już przetłumaczone treści.');
+      return;
+    }
+    setTranslateProgress({ current: 0, total: totalSteps, pageTitle: '', locale: '' });
 
     try {
       for (const page of pagesWithEn) {
@@ -233,7 +275,6 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
         }
         if (localesToTranslate.length === 0) continue;
 
-        totalSteps += localesToTranslate.length;
         pagesTranslatedCount++;
 
         const enFromFull = fullPage.translations?.find((x: { locale: string }) => x.locale === 'en') as { title?: string; displayTitle?: string; description?: string } | undefined;
@@ -253,7 +294,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                 body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined, description: enDescription || undefined }),
                 credentials: 'include',
               },
-              36_000_000,
+              172_800_000,
               2,
               abortRef.current?.signal ?? null
             );
@@ -417,7 +458,7 @@ function TranslateProgressIndicator() {
       }}
     >
       <span style={{ fontSize: '0.875rem', color: 'var(--text-primary)', flex: 1 }}>
-        🔄 Tłumaczenie w tle: {translateProgress.pageTitle} ({translateProgress.locale}) — {translateProgress.current}/{translateProgress.total}
+        🔄 Tłumaczenie w tle: {translateProgress.current}/{translateProgress.total}{translateProgress.pageTitle ? ` — ${translateProgress.pageTitle} (${translateProgress.locale})` : ''}
         {translatePauseCountdown !== null && (
           <span style={{ marginLeft: '0.5rem', color: 'var(--text-secondary)' }}>• Pauza {translatePauseCountdown}s</span>
         )}
@@ -428,7 +469,7 @@ function TranslateProgressIndicator() {
         className="btn btn-secondary btn-sm"
         style={{ borderColor: 'var(--error-color)', color: 'var(--error-color)' }}
       >
-        Pause
+        Cancel
       </button>
     </div>
   );

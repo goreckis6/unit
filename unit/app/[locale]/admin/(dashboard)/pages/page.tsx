@@ -523,13 +523,13 @@ export default function AdminPagesList() {
       if (!confirm(msg)) return;
     }
     const allNonEn = [...ADMIN_LOCALES.filter((l) => l !== 'en')].reverse();
+    const totalSteps = withEnLabels.length * allNonEn.length;
     setTranslateLabelsLoading(true);
-    setTranslateLabelsProgress(null);
+    setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '' });
     setTranslateLabelsPausedAt(null);
     translateLabelsPausedRef.current = false;
     translateLabelsAbortRef.current = new AbortController();
     let step = 0;
-    let totalSteps = withEnLabels.length * allNonEn.length;
     try {
       for (const page of withEnLabels) {
         if (translateLabelsAbortRef.current?.signal.aborted) break;
@@ -673,6 +673,7 @@ export default function AdminPagesList() {
       alert('No missing labels. All selected pages have full label translations.');
       return;
     }
+    setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '' });
     try {
       for (const { page, loc } of steps) {
         if (translateLabelsAbortRef.current?.signal.aborted) break;
@@ -951,7 +952,7 @@ export default function AdminPagesList() {
                   className="btn btn-secondary btn-sm"
                   style={{ padding: '0.35rem 0.75rem', borderColor: 'var(--error-color)', color: 'var(--error-color)' }}
                 >
-                  Pause
+                  Cancel
                 </button>
               )}
               <button
@@ -1044,28 +1045,18 @@ export default function AdminPagesList() {
                         className="btn btn-secondary btn-sm"
                         style={{ padding: '0.35rem 0.75rem', borderColor: 'var(--error-color)', color: 'var(--error-color)' }}
                       >
-                        Pause
+                        Cancel
                       </button>
                     )}
                     {translateLabelsProgress && !translateLabelsPausedAt && (
-                      <>
-                        <button
-                          type="button"
-                          onClick={pauseTranslateLabels}
-                          className="btn btn-secondary btn-sm"
-                          style={{ padding: '0.35rem 0.75rem', borderColor: 'var(--error-color)', color: 'var(--error-color)' }}
-                        >
-                          Pause
-                        </button>
-                        <button
-                          type="button"
-                          onClick={abortTranslateLabels}
-                          className="btn btn-secondary btn-sm"
-                          style={{ padding: '0.35rem 0.75rem', color: 'var(--error-color)', borderColor: 'var(--error-color)' }}
-                        >
-                          Cancel
-                        </button>
-                      </>
+                      <button
+                        type="button"
+                        onClick={abortTranslateLabels}
+                        className="btn btn-secondary btn-sm"
+                        style={{ padding: '0.35rem 0.75rem', color: 'var(--error-color)', borderColor: 'var(--error-color)' }}
+                      >
+                        Cancel
+                      </button>
                     )}
                     {translateLabelsPausedAt && (
                       <>
@@ -1093,7 +1084,7 @@ export default function AdminPagesList() {
                       disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
                       className="btn btn-secondary btn-sm"
                       style={{ padding: '0.35rem 0.75rem' }}
-                      title="Translate Calculator labels from EN to all other languages (Ollama). Limit: ~600 min. Przy timeout — spróbuj ponownie. Retry: 2x."
+                      title="Translate Calculator labels from EN to all other languages (Ollama). Limit: 48 h. Przy timeout — spróbuj ponownie. Retry: 2x."
                     >
                       {translateLabelsLoading ? 'Translate Labels…' : 'Translate Labels'}
                     </button>
@@ -1442,7 +1433,7 @@ export default function AdminPagesList() {
 
       {pages.length > 0 && (
         <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '1rem', marginTop: '-0.5rem' }}>
-          Limit: ~600 min (Ollama). Przy timeout — spróbuj ponownie. Retry: 2x.
+          Limit: 48 h (Ollama). Przy timeout — spróbuj ponownie. Retry: 2x.
         </p>
       )}
 
@@ -1662,8 +1653,16 @@ export default function AdminPagesList() {
 
       {generateProgress && (
         <div style={{ marginBottom: '1rem' }}>
-          <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
-            {generateProgress.current} / {generateProgress.total} — {generateProgress.title || '…'}
+          <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', flexWrap: 'wrap' }}>
+            <span>{generateProgress.current} / {generateProgress.total} — {generateProgress.title || '…'}</span>
+            <button
+              type="button"
+              onClick={pauseGenerate}
+              className="btn btn-secondary btn-sm"
+              style={{ padding: '0.35rem 0.75rem', color: 'var(--error-color)', borderColor: 'var(--error-color)' }}
+            >
+              Cancel
+            </button>
           </div>
           <div
             style={{
@@ -1688,16 +1687,26 @@ export default function AdminPagesList() {
       {translateLabelsProgress && (
         <div style={{ marginBottom: '1rem' }}>
           <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-            <span>Translate Labels: {translateLabelsProgress.current} / {translateLabelsProgress.total} — {translateLabelsProgress.pageSlug} ({translateLabelsProgress.locale})</span>
+            <span style={{ flex: 1 }}>Translate Labels: {translateLabelsProgress.current} / {translateLabelsProgress.total}{translateLabelsProgress.pageSlug ? ` — ${translateLabelsProgress.pageSlug} (${translateLabelsProgress.locale})` : ''}</span>
             {translateLabelsPausedAt && <span style={{ color: 'var(--warning-color, #f97316)' }}>• Paused</span>}
-            <a
-              href={translateLabelsProgress.locale === 'en' ? `/calculators/${translateLabelsProgress.pageCategory}/${translateLabelsProgress.pageSlug}?preview=1` : `/${translateLabelsProgress.locale}/calculators/${translateLabelsProgress.pageCategory}/${translateLabelsProgress.pageSlug}?preview=1`}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ marginLeft: '0.25rem', fontSize: '0.8rem', color: 'var(--primary)' }}
+            <button
+              type="button"
+              onClick={abortTranslateLabels}
+              className="btn btn-secondary btn-sm"
+              style={{ padding: '0.35rem 0.75rem', color: 'var(--error-color)', borderColor: 'var(--error-color)' }}
             >
-              Preview →
-            </a>
+              Cancel
+            </button>
+            {translateLabelsProgress.pageSlug && (
+              <a
+                href={translateLabelsProgress.locale === 'en' ? `/calculators/${translateLabelsProgress.pageCategory}/${translateLabelsProgress.pageSlug}?preview=1` : `/${translateLabelsProgress.locale}/calculators/${translateLabelsProgress.pageCategory}/${translateLabelsProgress.pageSlug}?preview=1`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ marginLeft: '0.25rem', fontSize: '0.8rem', color: 'var(--primary)' }}
+              >
+                Preview →
+              </a>
+            )}
           </div>
           <div
             style={{

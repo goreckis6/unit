@@ -4,37 +4,67 @@ import { getSession } from '@/lib/auth';
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 const OLLAMA_TIMEOUT_MS = 172_800_000; // 48 h
 
+const SLOT_RETRY_DELAY_MS = 30_000;
+const SLOT_RETRY_MAX = 5;
+
+function isSlotError(err: string): boolean {
+  const s = err.toLowerCase();
+  return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy');
+}
+
 async function ollamaChat(messages: { role: string; content: string }[]) {
   const apiKey = process.env.OLLAMA_API_KEY;
   if (!apiKey) {
     throw new Error('OLLAMA_API_KEY environment variable is not set');
   }
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), OLLAMA_TIMEOUT_MS);
-  try {
-    const res = await fetch('https://ollama.com/api/chat', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({ model: MODEL, messages, stream: false }),
-      signal: controller.signal,
-    });
-    clearTimeout(timeoutId);
-    if (!res.ok) {
-      const err = await res.text();
-      throw new Error(err || `Ollama API error: ${res.status}`);
+  let lastErr: Error | null = null;
+  for (let attempt = 0; attempt <= SLOT_RETRY_MAX; attempt++) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), OLLAMA_TIMEOUT_MS);
+    try {
+      const res = await fetch('https://ollama.com/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({ model: MODEL, messages, stream: false }),
+        signal: controller.signal,
+      });
+      clearTimeout(timeoutId);
+      if (!res.ok) {
+        const errText = await res.text();
+        let errObj: { error?: string } = {};
+        try {
+          errObj = JSON.parse(errText) as { error?: string };
+        } catch {
+          errObj = { error: errText };
+        }
+        const errMsg = (errObj?.error ?? errText) || `Ollama API error: ${res.status}`;
+        if (isSlotError(errMsg) && attempt < SLOT_RETRY_MAX) {
+          await new Promise((r) => setTimeout(r, SLOT_RETRY_DELAY_MS));
+          continue;
+        }
+        throw new Error(errMsg);
+      }
+      const data = (await res.json()) as { message?: { content?: string } };
+      return data?.message?.content ?? '';
+    } catch (e) {
+      clearTimeout(timeoutId);
+      if (e instanceof Error) {
+        if (e.name === 'AbortError') {
+          throw new Error(`Ollama API timeout (limit 48 h) — spróbuj ponownie`);
+        }
+        if (isSlotError(e.message) && attempt < SLOT_RETRY_MAX) {
+          lastErr = e;
+          await new Promise((r) => setTimeout(r, SLOT_RETRY_DELAY_MS));
+          continue;
+        }
+      }
+      throw e;
     }
-    const data = (await res.json()) as { message?: { content?: string } };
-    return data?.message?.content ?? '';
-  } catch (e) {
-    clearTimeout(timeoutId);
-    if (e instanceof Error && e.name === 'AbortError') {
-      throw new Error(`Ollama API timeout (limit 48 h) — spróbuj ponownie`);
-    }
-    throw e;
   }
+  throw lastErr || new Error('Ollama slot error — reduce Parallel and try again.');
 }
 
 /** POST /api/twojastara/ollama/generate-post — generate blog content (no FAQ) + faqItems separately */

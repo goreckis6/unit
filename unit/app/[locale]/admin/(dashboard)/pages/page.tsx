@@ -206,8 +206,8 @@ export default function AdminPagesList() {
   const [loading, setLoading] = useState(true);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [translateOnlyOne, setTranslateOnlyOne] = useState(false);
-  const [translateConcurrency, setTranslateConcurrency] = useState(5);
-  const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(5);
+  const [translateConcurrency, setTranslateConcurrency] = useState(3);
+  const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
   const [generateProvider, setGenerateProvider] = useState<GenerateProviderType>('ollama');
   const [showBulkImport, setShowBulkImport] = useState(false);

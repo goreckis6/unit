@@ -206,6 +206,8 @@ export default function AdminPagesList() {
   const [loading, setLoading] = useState(true);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [translateOnlyOne, setTranslateOnlyOne] = useState(false);
+  const [translateConcurrency, setTranslateConcurrency] = useState(5);
+  const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(5);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
   const [generateProvider, setGenerateProvider] = useState<GenerateProviderType>('ollama');
   const [showBulkImport, setShowBulkImport] = useState(false);
@@ -414,6 +416,7 @@ export default function AdminPagesList() {
       selectedIds: checkFailedIds,
       translateStartFrom,
       translateOnlyOne: false,
+      translateConcurrency,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -523,35 +526,36 @@ export default function AdminPagesList() {
       if (!confirm(msg)) return;
     }
     const allNonEn = [...ADMIN_LOCALES.filter((l) => l !== 'en')].reverse();
-    const totalSteps = withEnLabels.length * allNonEn.length;
+    const labelTasks: { page: Page; loc: string; enLabels: Record<string, string> }[] = [];
+    for (const page of withEnLabels) {
+      const enTrans = page.translations.find((t) => t.locale === 'en');
+      const enLabels = parseJson<Record<string, string>>(enTrans?.calculatorLabels, {});
+      if (!Object.values(enLabels).some((v) => v?.trim())) continue;
+      const pageRes = await fetch(`/api/twojastara/pages/${page.id}`);
+      const fullPage = await pageRes.json();
+      if (!pageRes.ok || !fullPage?.translations) continue;
+      const fullTrans = fullPage.translations ?? [];
+      const existingLocales = new Set(fullTrans.map((t: { locale: string }) => t.locale));
+      const localesToTranslate = allNonEn.filter((l) => existingLocales.has(l));
+      for (const loc of localesToTranslate) {
+        labelTasks.push({ page, loc, enLabels });
+      }
+    }
+    const totalSteps = labelTasks.length;
+    if (totalSteps === 0) {
+      setTranslateLabelsLoading(false);
+      return;
+    }
     setTranslateLabelsLoading(true);
     setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '' });
     setTranslateLabelsPausedAt(null);
     translateLabelsPausedRef.current = false;
     translateLabelsAbortRef.current = new AbortController();
-    let step = 0;
+    const concurrency = Math.max(1, Math.min(20, translateLabelsConcurrency));
+    const stepRef = { current: 0 };
     try {
-      for (const page of withEnLabels) {
-        if (translateLabelsAbortRef.current?.signal.aborted) break;
-        const enTrans = page.translations.find((t) => t.locale === 'en');
-        const enLabels = parseJson<Record<string, string>>(enTrans?.calculatorLabels, {});
-        if (!Object.values(enLabels).some((v) => v?.trim())) continue;
-
-        const pageRes = await fetch(`/api/twojastara/pages/${page.id}`);
-        const fullPage = await pageRes.json();
-        if (!pageRes.ok || !fullPage?.translations) continue;
-
-        const fullTrans = fullPage.translations ?? [];
-        const existingLocales = new Set(fullTrans.map((t: { locale: string }) => t.locale));
-        const localesToTranslate = allNonEn.filter((l) => existingLocales.has(l));
-        if (localesToTranslate.length === 0) continue;
-
-        const translatedLabelsByLocale: Record<string, Record<string, string>> = {};
-        for (const t of fullTrans) {
-          translatedLabelsByLocale[t.locale] = parseJson<Record<string, string>>(t.calculatorLabels, {});
-        }
-
-        for (const loc of localesToTranslate) {
+      if (concurrency <= 1) {
+        for (const { page, loc, enLabels } of labelTasks) {
           if (translateLabelsAbortRef.current?.signal.aborted) break;
           if (translateLabelsPausedRef.current) {
             setTranslateLabelsPausedAt({ pageSlug: page.slug, nextLocale: loc });
@@ -561,8 +565,8 @@ export default function AdminPagesList() {
             setTranslateLabelsPausedAt(null);
             if (translateLabelsAbortRef.current?.signal.aborted) break;
           }
-          step++;
-          setTranslateLabelsProgress({ current: step, total: totalSteps, pageSlug: page.slug, pageCategory: page.category ?? 'math', locale: loc });
+          stepRef.current++;
+          setTranslateLabelsProgress({ current: stepRef.current, total: totalSteps, pageSlug: page.slug, pageCategory: page.category ?? 'math', locale: loc });
           let res: Response;
           for (let attempt = 0; attempt <= 2; attempt++) {
             res = await fetch('/api/twojastara/ollama/translate-labels', {
@@ -573,38 +577,74 @@ export default function AdminPagesList() {
               signal: translateLabelsAbortRef.current?.signal,
             });
             if (res.ok || attempt >= 2) break;
-            await new Promise((r) => setTimeout(r, 2000)); // retry after 2s
+            await new Promise((r) => setTimeout(r, 2000));
           }
           const data = await safeResJson(res!);
           if (!res!.ok) throw new Error(String(data?.error || `Translate labels to ${loc} failed`));
-          const lab = data?.labels;
-          translatedLabelsByLocale[loc] = (lab && typeof lab === 'object' && !Array.isArray(lab) ? lab : {}) as Record<string, string>;
-
-          // Save labels only (partial update) — allows parallel Translate content + Translate labels in separate windows
+          const lab = (data?.labels && typeof data.labels === 'object' && !Array.isArray(data.labels) ? data.labels : {}) as Record<string, string>;
           const patchRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              updates: [{ locale: loc, calculatorLabels: translatedLabelsByLocale[loc] ?? {} }],
-            }),
+            body: JSON.stringify({ updates: [{ locale: loc, calculatorLabels: lab }] }),
             credentials: 'include',
           });
-          if (!patchRes.ok) {
-            const errData = await safeResJson(patchRes);
-            throw new Error(String(errData?.error || `Failed to save labels for ${loc}. Is /api/twojastara/pages/[id]/labels deployed?`));
-          }
-
+          if (!patchRes.ok) throw new Error(String((await safeResJson(patchRes)).error || 'Failed to save'));
           setPages((prev) =>
-            prev.map((p) => {
-              if (p.id !== page.id) return p;
-              const updated = p.translations.map((t) => {
-                const lab = translatedLabelsByLocale[t.locale];
-                return lab && Object.keys(lab).length ? { ...t, calculatorLabels: JSON.stringify(lab) } : t;
-              });
-              return { ...p, translations: updated };
-            })
+            prev.map((p) => (p.id !== page.id ? p : {
+              ...p,
+              translations: p.translations.map((t) => (t.locale === loc ? { ...t, calculatorLabels: JSON.stringify(lab) } : t)),
+            }))
           );
         }
+      } else {
+        let taskIdx = 0;
+        const PROGRESS_THROTTLE_MS = 120;
+        let lastProgressTime = 0;
+        const throttledSetProgress = (cur: number, pageSlug: string, locale: string) => {
+          const now = Date.now();
+          if (now - lastProgressTime >= PROGRESS_THROTTLE_MS || cur >= totalSteps) {
+            lastProgressTime = now;
+            setTranslateLabelsProgress({ current: cur, total: totalSteps, pageSlug, pageCategory: 'math', locale });
+          }
+        };
+        const runTask = async () => {
+          while (!translateLabelsAbortRef.current?.signal.aborted) {
+            const i = taskIdx++;
+            if (i >= labelTasks.length) break;
+            const { page, loc, enLabels } = labelTasks[i];
+            stepRef.current++;
+            throttledSetProgress(stepRef.current, page.slug, loc);
+            let res: Response;
+            for (let attempt = 0; attempt <= 2; attempt++) {
+              res = await fetch('/api/twojastara/ollama/translate-labels', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ labels: enLabels, targetLocale: loc }),
+                credentials: 'include',
+                signal: translateLabelsAbortRef.current?.signal,
+              });
+              if (res.ok || attempt >= 2) break;
+              await new Promise((r) => setTimeout(r, 2000));
+            }
+            const data = await safeResJson(res!);
+            if (!res!.ok) throw new Error(String(data?.error || `Translate labels to ${loc} failed`));
+            const lab = (data?.labels && typeof data.labels === 'object' && !Array.isArray(data.labels) ? data.labels : {}) as Record<string, string>;
+            const patchRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
+              method: 'PATCH',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ updates: [{ locale: loc, calculatorLabels: lab }] }),
+              credentials: 'include',
+            });
+            if (!patchRes.ok) throw new Error(String((await safeResJson(patchRes)).error || 'Failed to save'));
+            setPages((prev) =>
+              prev.map((p) => (p.id !== page.id ? p : {
+                ...p,
+                translations: p.translations.map((t) => (t.locale === loc ? { ...t, calculatorLabels: JSON.stringify(lab) } : t)),
+              }))
+            );
+          }
+        };
+        await Promise.all(Array(Math.min(concurrency, labelTasks.length)).fill(0).map(() => runTask()));
       }
       setSelectedIds(new Set());
       setTranslateLabelsSuccess(`Translated labels for ${withEnLabels.length} page(s)`);
@@ -654,7 +694,6 @@ export default function AdminPagesList() {
     setTranslateLabelsPausedAt(null);
     translateLabelsPausedRef.current = false;
     translateLabelsAbortRef.current = new AbortController();
-    let step = 0;
     const steps: { page: Page; loc: string }[] = [];
     for (const page of withEnLabels) {
       const enTrans = page.translations.find((t) => t.locale === 'en');
@@ -674,25 +713,17 @@ export default function AdminPagesList() {
       return;
     }
     setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '' });
+    const concurrency = Math.max(1, Math.min(20, translateLabelsConcurrency));
+    const stepRef = { current: 0 };
     try {
-      for (const { page, loc } of steps) {
-        if (translateLabelsAbortRef.current?.signal.aborted) break;
-        if (translateLabelsPausedRef.current) {
-          setTranslateLabelsPausedAt({ pageSlug: page.slug, nextLocale: loc });
-          while (translateLabelsPausedRef.current && !translateLabelsAbortRef.current?.signal.aborted) {
-            await new Promise((r) => setTimeout(r, 300));
-          }
-          setTranslateLabelsPausedAt(null);
-          if (translateLabelsAbortRef.current?.signal.aborted) break;
-        }
-        step++;
-        setTranslateLabelsProgress({ current: step, total: totalSteps, pageSlug: page.slug, pageCategory: page.category ?? 'math', locale: loc });
+      const runTask = async (task: { page: Page; loc: string }) => {
+        const { page, loc } = task;
         const enTrans = page.translations.find((t) => t.locale === 'en');
         const enLabels = parseJson<Record<string, string>>(enTrans?.calculatorLabels, {});
         const t = page.translations.find((tr) => tr.locale === loc);
         const existing = parseJson<Record<string, string>>(t?.calculatorLabels, {});
         const missingKeys = getMissingLabelKeysForLocale(enLabels, existing, loc);
-        if (missingKeys.length === 0) continue;
+        if (missingKeys.length === 0) return;
         const labelsToTranslate = Object.fromEntries(missingKeys.map((k) => [k, enLabels[k]]));
         let res: Response;
         for (let attempt = 0; attempt <= 2; attempt++) {
@@ -716,21 +747,52 @@ export default function AdminPagesList() {
           body: JSON.stringify({ updates: [{ locale: loc, calculatorLabels: merged }] }),
           credentials: 'include',
         });
-        if (!patchRes.ok) {
-          const errData = await safeResJson(patchRes);
-          throw new Error(String(errData?.error || `Failed to save labels for ${loc}`));
-        }
+        if (!patchRes.ok) throw new Error(String((await safeResJson(patchRes)).error || 'Failed to save'));
         setPages((prev) =>
-          prev.map((p) => {
-            if (p.id !== page.id) return p;
-            return {
-              ...p,
-              translations: p.translations.map((t) =>
-                t.locale === loc ? { ...t, calculatorLabels: JSON.stringify(merged) } : t
-              ),
-            };
-          })
+          prev.map((p) => (p.id !== page.id ? p : {
+            ...p,
+            translations: p.translations.map((t) => (t.locale === loc ? { ...t, calculatorLabels: JSON.stringify(merged) } : t)),
+          }))
         );
+      };
+
+      if (concurrency <= 1) {
+        for (const task of steps) {
+          if (translateLabelsAbortRef.current?.signal.aborted) break;
+          if (translateLabelsPausedRef.current) {
+            setTranslateLabelsPausedAt({ pageSlug: task.page.slug, nextLocale: task.loc });
+            while (translateLabelsPausedRef.current && !translateLabelsAbortRef.current?.signal.aborted) {
+              await new Promise((r) => setTimeout(r, 300));
+            }
+            setTranslateLabelsPausedAt(null);
+            if (translateLabelsAbortRef.current?.signal.aborted) break;
+          }
+          stepRef.current++;
+          setTranslateLabelsProgress({ current: stepRef.current, total: totalSteps, pageSlug: task.page.slug, pageCategory: task.page.category ?? 'math', locale: task.loc });
+          await runTask(task);
+        }
+      } else {
+        let taskIdx = 0;
+        const PROGRESS_THROTTLE_MS = 120;
+        let lastProgressTime = 0;
+        const throttledSetProgress = (cur: number, pageSlug: string, locale: string) => {
+          const now = Date.now();
+          if (now - lastProgressTime >= PROGRESS_THROTTLE_MS || cur >= totalSteps) {
+            lastProgressTime = now;
+            setTranslateLabelsProgress({ current: cur, total: totalSteps, pageSlug, pageCategory: 'math', locale });
+          }
+        };
+        const worker = async () => {
+          while (!translateLabelsAbortRef.current?.signal.aborted) {
+            const i = taskIdx++;
+            if (i >= steps.length) break;
+            const task = steps[i];
+            stepRef.current++;
+            throttledSetProgress(stepRef.current, task.page.slug, task.loc);
+            await runTask(task);
+          }
+        };
+        await Promise.all(Array(Math.min(concurrency, steps.length)).fill(0).map(() => worker()));
       }
       setTranslateLabelsSuccess(`Translated missing labels for ${withEnLabels.length} page(s)`);
       setTimeout(() => setTranslateLabelsSuccess(''), 5000);
@@ -765,6 +827,7 @@ export default function AdminPagesList() {
       selectedIds,
       translateStartFrom,
       translateOnlyOne,
+      translateConcurrency,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -781,6 +844,7 @@ export default function AdminPagesList() {
       selectedIds: new Set(withMissing.map((p) => p.id)),
       translateStartFrom,
       translateOnlyOne: false,
+      translateConcurrency,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -1037,6 +1101,64 @@ export default function AdminPagesList() {
                         style={{ width: 14, height: 14 }}
                       />
                       Only this language
+                    </label>
+                    <label
+                      style={{
+                        fontSize: '0.75rem',
+                        color: 'var(--text-secondary)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                      }}
+                    >
+                      Parallel (content):
+                      <input
+                        type="number"
+                        min={1}
+                        max={20}
+                        value={String(translateConcurrency)}
+                        onChange={(e) => {
+                          const v = Math.min(20, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          setTranslateConcurrency(v);
+                        }}
+                        onBlur={(e) => {
+                          const v = Math.min(20, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          setTranslateConcurrency(v);
+                        }}
+                        disabled={!!translateProgress || !!translateLabelsLoading}
+                        className="admin-form-select"
+                        style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem', width: 48 }}
+                        title="Strony tłumaczonych równolegle (content). Zalecane: 3-8. Więcej = szybsze, może obciążyć API."
+                      />
+                    </label>
+                    <label
+                      style={{
+                        fontSize: '0.75rem',
+                        color: 'var(--text-secondary)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                      }}
+                    >
+                      Parallel (labels):
+                      <input
+                        type="number"
+                        min={1}
+                        max={20}
+                        value={String(translateLabelsConcurrency)}
+                        onChange={(e) => {
+                          const v = Math.min(20, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          setTranslateLabelsConcurrency(v);
+                        }}
+                        onBlur={(e) => {
+                          const v = Math.min(20, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          setTranslateLabelsConcurrency(v);
+                        }}
+                        disabled={!!translateProgress || !!translateLabelsLoading}
+                        className="admin-form-select"
+                        style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem', width: 48 }}
+                        title="Zadań (strona+locale) równolegle dla etykiet. Zalecane: 3-8. Więcej = szybsze, może powodować obciążenie."
+                      />
                     </label>
                     {translateProgress && (
                       <button

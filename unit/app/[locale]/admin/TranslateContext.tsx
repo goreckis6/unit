@@ -58,6 +58,7 @@ type TranslateContextValue = {
     selectedIds: Set<string>;
     translateStartFrom: string;
     translateOnlyOne: boolean;
+    translateConcurrency?: number;
     resumeOverride?: TranslatePausedAt;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
@@ -152,12 +153,14 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     selectedIds: Set<string>;
     translateStartFrom: string;
     translateOnlyOne: boolean;
+    translateConcurrency?: number;
     resumeOverride?: TranslatePausedAt;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
     onComplete?: () => void;
   }) => {
     const { pages, selectedIds, translateOnlyOne, resumeOverride, autoResumeOnError, onPagesUpdate, onComplete } = params;
+    const concurrency = Math.max(1, Math.min(20, params.translateConcurrency ?? 1));
     const ids = Array.from(selectedIds);
     if (ids.length === 0) {
       setTranslateError('Zaznacz co najmniej jedną stronę.');
@@ -184,8 +187,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     setTranslatePausedAt(null);
     if (!resumeOverride) setTranslateStartFrom(allNonEn[0] ?? '');
     abortRef.current = new AbortController();
-    let step = 0;
-    let pagesTranslatedCount = 0;
+    const pagesTranslatedCountRef = { current: 0 };
     let hadError = false;
 
     // Pre-scan: count total translations (pages × locales) to show 0/N at start
@@ -232,169 +234,195 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     }
     setTranslateProgress({ current: 0, total: totalSteps, pageTitle: '', locale: '' });
 
-    try {
-      for (const page of pagesWithEn) {
-        const enTrans = page.translations.find((t) => t.locale === 'en');
-        const enContent = (enTrans?.content ?? '').trim();
-        const enFaqItems = parseJson<{ question: string; answer: string }[]>(enTrans?.faqItems, []);
-        const enTitle = (enTrans?.title ?? '').trim();
-        const enDisplayTitle = (enTrans?.displayTitle ?? '').trim();
-        if (!enContent) continue;
+    const stepRef = { current: 0 };
+    const hadErrorRef = { current: false };
+    const pageQueue = [...pagesWithEn];
+    let pageIndex = 0;
 
-        const pageRes = await fetch(`/api/twojastara/pages/${page.id}`);
-        const fullPage = await pageRes.json();
-        if (!pageRes.ok || !fullPage?.translations) {
-          setTranslateError(`Nie udało się załadować strony: ${page.slug}`);
-          hadError = true;
-          break;
-        }
+    const processPage = async (page: Page): Promise<boolean> => {
+      if (hadErrorRef.current || abortRef.current?.signal?.aborted) return false;
+      const enTrans = page.translations.find((t) => t.locale === 'en');
+      const enContent = (enTrans?.content ?? '').trim();
+      const enFaqItems = parseJson<{ question: string; answer: string }[]>(enTrans?.faqItems, []);
+      const enTitle = (enTrans?.title ?? '').trim();
+      const enDisplayTitle = (enTrans?.displayTitle ?? '').trim();
+      if (!enContent) return true;
 
-        const fullPageTrans = fullPage.translations ?? [];
-        const hasContent = (loc: string) => (fullPageTrans.find((t: { locale: string }) => t.locale === loc)?.content?.trim() ?? '').length > 0;
-        let localesToTranslate = (allNonEn ?? []).filter((loc) => !hasContent(loc));
-        console.log('[TranslateContext] page:', page.slug, 'allNonEn:', allNonEn?.length, 'localesToTranslate:', localesToTranslate?.length);
-        if (resumeOverride && page.slug === resumeFromSlug) {
-          const startLoc = resumeOverride.nextLocale;
-          if (startLoc && allNonEn) {
-            if (!(localesToTranslate?.includes?.(startLoc) ?? false)) {
-              const ane = allNonEn ?? [];
-              localesToTranslate = [startLoc, ...localesToTranslate.filter((l) => ane.indexOf(l) > ane.indexOf(startLoc))];
-            } else {
-              const idx = (localesToTranslate ?? []).indexOf(startLoc);
-              localesToTranslate = (localesToTranslate ?? []).slice(idx >= 0 ? idx : 0);
-            }
-          }
-        } else if (allNonEn && effectiveStart && translateOnlyOne) {
-          // Only apply "Start from" filter when user chose "Only this language" — otherwise translate ALL missing locales (full run)
-          const ane = allNonEn ?? [];
-          const startIdx = ane.indexOf(effectiveStart);
-          localesToTranslate = (localesToTranslate ?? []).filter((loc) => ane.indexOf(loc) >= startIdx);
-        }
-        if (translateOnlyOne) {
-          localesToTranslate = (localesToTranslate?.includes?.(effectiveStart) ?? false) ? [effectiveStart] : [];
-        }
-        if (localesToTranslate.length === 0) continue;
-
-        pagesTranslatedCount++;
-
-        const enFromFull = fullPage.translations?.find((x: { locale: string }) => x.locale === 'en') as { title?: string; displayTitle?: string; description?: string } | undefined;
-        const enTitleFallback = (enFromFull?.title ?? '').trim() || 'Untitled';
-        const enDescription = (enFromFull?.description ?? enTrans?.description ?? '').trim();
-        const translatedByLocale: Record<string, { content: string; title?: string; displayTitle?: string; description?: string; faqItems?: { question: string; answer: string }[] }> = {};
-
-        for (const loc of localesToTranslate) {
-          step++;
-          setTranslateProgress({ current: step, total: totalSteps, pageTitle: page.slug, locale: loc });
-          try {
-            const res = await fetchWithTimeoutAndRetry(
-              '/api/twojastara/ollama/translate',
-              {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined, description: enDescription || undefined }),
-                credentials: 'include',
-              },
-              172_800_000,
-              2,
-              abortRef.current?.signal ?? null
-            );
-            let data: { error?: string; content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[] };
-            try { data = await res.json(); } catch {
-              throw new Error(res.status === 401 ? 'Unauthorized' : `Błąd serwera (${res.status})`);
-            }
-            if (!res.ok) throw new Error(data.error || `Failed to translate to ${loc}`);
-            translatedByLocale[loc] = {
-              content: data.content ?? '',
-              title: data.title,
-              displayTitle: data.displayTitle,
-              description: data.description,
-              faqItems: Array.isArray(data.faqItems) ? (data.faqItems as { question: string; answer: string }[]) : undefined,
-            };
-
-            const baseMap = new Map((fullPage.translations ?? []).map((t: { locale: string }) => [t.locale, t]));
-            for (const l of Object.keys(translatedByLocale)) {
-              if (!baseMap.has(l)) baseMap.set(l, { locale: l, title: '', displayTitle: null, description: null, content: null, relatedCalculators: [], faqItems: [], calculatorLabels: {} });
-            }
-            const translations = Array.from(baseMap.values()).map((t: { locale: string; title: string; displayTitle?: string | null; description?: string | null; content?: string | null; relatedCalculators?: unknown; faqItems?: unknown; calculatorLabels?: unknown }) => {
-              const relatedCalculators = parseJson<{ title: string; description: string; path: string }[]>(t.relatedCalculators, []);
-              const existingFaq = parseJson<{ question: string; answer: string }[]>(t.faqItems, []);
-              const calcLabels = parseJson<Record<string, string>>(t.calculatorLabels, {});
-              const tr = translatedByLocale[t.locale];
-              const faqItems = tr?.faqItems && tr.faqItems.length > 0 ? tr.faqItems : existingFaq;
-              const finalTitle = (tr?.title ?? t.title ?? '').trim() || enTitleFallback;
-              const finalDisplayTitle = (tr?.displayTitle ?? t.displayTitle ?? '')?.trim() || null;
-              const finalDescription = (tr?.description ?? t.description ?? null)?.trim() || null;
-              return {
-                locale: t.locale,
-                title: finalTitle,
-                displayTitle: finalDisplayTitle || (t.displayTitle?.trim() || null),
-                description: finalDescription,
-                content: tr ? tr.content : (t.content ?? null),
-                relatedCalculators,
-                faqItems,
-                calculatorLabels: calcLabels,
-              };
-            });
-
-            const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
-              method: 'PATCH',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ slug: fullPage.slug, category: fullPage.category, published: fullPage.published, translations }),
-            });
-            if (!patchRes.ok) throw new Error((await patchRes.json()).error || 'Failed to save');
-
-            onPagesUpdate?.((prev) =>
-              prev.map((p) => {
-                if (p.id !== page.id) return p;
-                const updated = p.translations.map((t) => {
-                  const tr = translatedByLocale[t.locale];
-                  if (!tr) return t;
-                  return { ...t, title: tr.title ?? t.title, displayTitle: tr.displayTitle ?? t.displayTitle, description: tr.description ?? t.description ?? null, content: tr.content, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : t.faqItems };
-                });
-                for (const l of Object.keys(translatedByLocale)) {
-                  if (!updated.some((x) => x.locale === l)) {
-                    const tr = translatedByLocale[l]!;
-                    updated.push({ id: `${l}-${page.id}`, locale: l, title: tr.title ?? '', displayTitle: tr.displayTitle ?? null, description: tr.description ?? null, content: tr.content, relatedCalculators: null, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : null, calculatorLabels: null });
-                  }
-                }
-                return { ...p, translations: updated };
-              })
-            );
-
-            if ((localesToTranslate?.indexOf(loc) ?? -1) < (localesToTranslate?.length ?? 0) - 1 || page !== pagesWithEn[pagesWithEn.length - 1]) {
-              setTranslatePauseCountdown(PAUSE_BETWEEN_LOCALES_SEC);
-              for (let s = PAUSE_BETWEEN_LOCALES_SEC; s >= 1; s--) {
-                if (abortRef.current?.signal?.aborted) break;
-                setTranslatePauseCountdown(s);
-                await new Promise((r) => setTimeout(r, 1000));
-              }
-              setTranslatePauseCountdown(null);
-              if (abortRef.current?.signal?.aborted) throw new DOMException('Aborted', 'AbortError');
-            }
-          } catch (err) {
-            const isAbort = err instanceof Error && err.name === 'AbortError';
-            const msg = err instanceof Error ? (isAbort ? 'Wstrzymano przez użytkownika' : err.message) : 'Błąd tłumaczenia';
-            const nextLocale = loc;
-            setTranslatePausedAt({ pageSlug: page.slug, nextLocale });
-            setTranslateStartFrom(nextLocale);
-            setTranslateError(`Strona: ${page.slug}, Język: ${loc}. ${msg} — Kliknij Resume.`);
-            hadError = true;
-            if (autoResumeOnError && !isAbort) {
-              setAutoResumeCountdown(5);
-              for (let s = 5; s >= 1; s--) {
-                setAutoResumeCountdown(s);
-                await new Promise((r) => setTimeout(r, 1000));
-              }
-              setAutoResumeCountdown(null);
-              setTranslateError('');
-              isResumingRef.current = true;
-              return startTranslate({ ...params, resumeOverride: { pageSlug: page.slug, nextLocale }, onComplete });
-            }
-            break;
-          }
-        }
-        if (hadError) break;
+      const pageRes = await fetch(`/api/twojastara/pages/${page.id}`);
+      const fullPage = await pageRes.json();
+      if (!pageRes.ok || !fullPage?.translations) {
+        setTranslateError(`Nie udało się załadować strony: ${page.slug}`);
+        hadErrorRef.current = true;
+        return false;
       }
+
+      const fullPageTrans = fullPage.translations ?? [];
+      const hasContent = (loc: string) => (fullPageTrans.find((t: { locale: string }) => t.locale === loc)?.content?.trim() ?? '').length > 0;
+      let localesToTranslate = (allNonEn ?? []).filter((loc) => !hasContent(loc));
+      if (resumeOverride && page.slug === resumeFromSlug && concurrency === 1) {
+        const startLoc = resumeOverride.nextLocale;
+        if (startLoc && allNonEn) {
+          if (!(localesToTranslate?.includes?.(startLoc) ?? false)) {
+            const ane = allNonEn ?? [];
+            localesToTranslate = [startLoc, ...localesToTranslate.filter((l) => ane.indexOf(l) > ane.indexOf(startLoc))];
+          } else {
+            const idx = (localesToTranslate ?? []).indexOf(startLoc);
+            localesToTranslate = (localesToTranslate ?? []).slice(idx >= 0 ? idx : 0);
+          }
+        }
+      } else if (allNonEn && effectiveStart && translateOnlyOne) {
+        const ane = allNonEn ?? [];
+        const startIdx = ane.indexOf(effectiveStart);
+        localesToTranslate = (localesToTranslate ?? []).filter((loc) => ane.indexOf(loc) >= startIdx);
+      }
+      if (translateOnlyOne) {
+        localesToTranslate = (localesToTranslate?.includes?.(effectiveStart) ?? false) ? [effectiveStart] : [];
+      }
+      if (localesToTranslate.length === 0) return true;
+
+      pagesTranslatedCountRef.current++;
+      const enFromFull = fullPage.translations?.find((x: { locale: string }) => x.locale === 'en') as { title?: string; displayTitle?: string; description?: string } | undefined;
+      const enTitleFallback = (enFromFull?.title ?? '').trim() || 'Untitled';
+      const enDescription = (enFromFull?.description ?? enTrans?.description ?? '').trim();
+      const translatedByLocale: Record<string, { content: string; title?: string; displayTitle?: string; description?: string; faqItems?: { question: string; answer: string }[] }> = {};
+
+      for (const loc of localesToTranslate) {
+        if (hadErrorRef.current || abortRef.current?.signal?.aborted) return false;
+        stepRef.current++;
+        setTranslateProgress({ current: stepRef.current, total: totalSteps, pageTitle: page.slug, locale: loc });
+        try {
+          const res = await fetchWithTimeoutAndRetry(
+            '/api/twojastara/ollama/translate',
+            {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined, description: enDescription || undefined }),
+              credentials: 'include',
+            },
+            172_800_000,
+            2,
+            abortRef.current?.signal ?? null
+          );
+          let data: { error?: string; content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[] };
+          try { data = await res.json(); } catch {
+            throw new Error(res.status === 401 ? 'Unauthorized' : `Błąd serwera (${res.status})`);
+          }
+          if (!res.ok) throw new Error(data.error || `Failed to translate to ${loc}`);
+          translatedByLocale[loc] = {
+            content: data.content ?? '',
+            title: data.title,
+            displayTitle: data.displayTitle,
+            description: data.description,
+            faqItems: Array.isArray(data.faqItems) ? (data.faqItems as { question: string; answer: string }[]) : undefined,
+          };
+
+          const baseMap = new Map((fullPage.translations ?? []).map((t: { locale: string }) => [t.locale, t]));
+          for (const l of Object.keys(translatedByLocale)) {
+            if (!baseMap.has(l)) baseMap.set(l, { locale: l, title: '', displayTitle: null, description: null, content: null, relatedCalculators: [], faqItems: [], calculatorLabels: {} });
+          }
+          const translations = Array.from(baseMap.values()).map((t: { locale: string; title: string; displayTitle?: string | null; description?: string | null; content?: string | null; relatedCalculators?: unknown; faqItems?: unknown; calculatorLabels?: unknown }) => {
+            const relatedCalculators = parseJson<{ title: string; description: string; path: string }[]>(t.relatedCalculators, []);
+            const existingFaq = parseJson<{ question: string; answer: string }[]>(t.faqItems, []);
+            const calcLabels = parseJson<Record<string, string>>(t.calculatorLabels, {});
+            const tr = translatedByLocale[t.locale];
+            const faqItems = tr?.faqItems && tr.faqItems.length > 0 ? tr.faqItems : existingFaq;
+            const finalTitle = (tr?.title ?? t.title ?? '').trim() || enTitleFallback;
+            const finalDisplayTitle = (tr?.displayTitle ?? t.displayTitle ?? '')?.trim() || null;
+            const finalDescription = (tr?.description ?? t.description ?? null)?.trim() || null;
+            return {
+              locale: t.locale,
+              title: finalTitle,
+              displayTitle: finalDisplayTitle || (t.displayTitle?.trim() || null),
+              description: finalDescription,
+              content: tr ? tr.content : (t.content ?? null),
+              relatedCalculators,
+              faqItems,
+              calculatorLabels: calcLabels,
+            };
+          });
+
+          const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ slug: fullPage.slug, category: fullPage.category, published: fullPage.published, translations }),
+          });
+          if (!patchRes.ok) throw new Error((await patchRes.json()).error || 'Failed to save');
+
+          onPagesUpdate?.((prev) =>
+            prev.map((p) => {
+              if (p.id !== page.id) return p;
+              const updated = p.translations.map((t) => {
+                const tr = translatedByLocale[t.locale];
+                if (!tr) return t;
+                return { ...t, title: tr.title ?? t.title, displayTitle: tr.displayTitle ?? t.displayTitle, description: tr.description ?? t.description ?? null, content: tr.content, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : t.faqItems };
+              });
+              for (const l of Object.keys(translatedByLocale)) {
+                if (!updated.some((x) => x.locale === l)) {
+                  const tr = translatedByLocale[l]!;
+                  updated.push({ id: `${l}-${page.id}`, locale: l, title: tr.title ?? '', displayTitle: tr.displayTitle ?? null, description: tr.description ?? null, content: tr.content, relatedCalculators: null, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : null, calculatorLabels: null });
+                }
+              }
+              return { ...p, translations: updated };
+            })
+          );
+
+          if (concurrency === 1 && ((localesToTranslate?.indexOf(loc) ?? -1) < (localesToTranslate?.length ?? 0) - 1 || pageIndex < pageQueue.length - 1)) {
+            setTranslatePauseCountdown(PAUSE_BETWEEN_LOCALES_SEC);
+            for (let s = PAUSE_BETWEEN_LOCALES_SEC; s >= 1; s--) {
+              if (abortRef.current?.signal?.aborted) break;
+              setTranslatePauseCountdown(s);
+              await new Promise((r) => setTimeout(r, 1000));
+            }
+            setTranslatePauseCountdown(null);
+            if (abortRef.current?.signal?.aborted) throw new DOMException('Aborted', 'AbortError');
+          }
+        } catch (err) {
+          const isAbort = err instanceof Error && err.name === 'AbortError';
+          const msg = err instanceof Error ? (isAbort ? 'Wstrzymano przez użytkownika' : err.message) : 'Błąd tłumaczenia';
+          const nextLocale = loc;
+          setTranslatePausedAt({ pageSlug: page.slug, nextLocale });
+          setTranslateStartFrom(nextLocale);
+          setTranslateError(`Strona: ${page.slug}, Język: ${loc}. ${msg} — Kliknij Resume.`);
+          hadErrorRef.current = true;
+          if (concurrency === 1 && autoResumeOnError && !isAbort) {
+            setAutoResumeCountdown(5);
+            for (let s = 5; s >= 1; s--) {
+              setAutoResumeCountdown(s);
+              await new Promise((r) => setTimeout(r, 1000));
+            }
+            setAutoResumeCountdown(null);
+            setTranslateError('');
+            isResumingRef.current = true;
+            void startTranslate({ ...params, resumeOverride: { pageSlug: page.slug, nextLocale }, onComplete });
+            return false;
+          }
+          return false;
+        }
+      }
+      return true;
+    };
+
+    try {
+      if (concurrency <= 1) {
+        for (let i = 0; i < pageQueue.length; i++) {
+          if (hadErrorRef.current) break;
+          pageIndex = i;
+          const ok = await processPage(pageQueue[i]);
+          if (!ok) break;
+        }
+      } else {
+        let nextPageIdx = 0;
+        const workers = Array(Math.min(concurrency, pageQueue.length)).fill(null).map(async () => {
+          while (!hadErrorRef.current && !abortRef.current?.signal?.aborted) {
+            const idx = nextPageIdx++;
+            if (idx >= pageQueue.length) break;
+            pageIndex = idx;
+            await processPage(pageQueue[idx]);
+          }
+        });
+        await Promise.all(workers);
+      }
+      hadError = hadErrorRef.current;
     } finally {
       if (!isResumingRef.current) {
         setTranslateProgress(null);
@@ -405,7 +433,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       if (!hadError) {
         setTranslatePausedAt(null);
         setTranslateStartFrom('');
-        setTranslateSuccess(`✓ Zakończono — przetłumaczono ${totalSteps} języków (${pagesTranslatedCount} stron).`);
+        setTranslateSuccess(`✓ Zakończono — przetłumaczono ${totalSteps} języków (${pagesTranslatedCountRef.current} stron).`);
         setTimeout(() => setTranslateSuccess(''), 8000);
         onComplete?.();
       }

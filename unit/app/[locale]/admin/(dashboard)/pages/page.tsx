@@ -836,8 +836,14 @@ export default function AdminPagesList() {
   }
 
   function handleTranslateMissingTranslations() {
-    const withMissing = filteredPages.filter((p) => hasEnContent(p) && !hasAllTranslations(p));
-    if (withMissing.length === 0) return;
+    const candidates = selectedIds.size > 0
+      ? filteredPages.filter((p) => selectedIds.has(p.id))
+      : filteredPages;
+    const withMissing = candidates.filter((p) => hasEnContent(p) && !hasAllTranslations(p));
+    if (withMissing.length === 0) {
+      if (selectedIds.size > 0) alert('Selected pages have no missing translations.');
+      return;
+    }
     setSelectedIds(new Set(withMissing.map((p) => p.id)));
     startTranslate({
       pages,

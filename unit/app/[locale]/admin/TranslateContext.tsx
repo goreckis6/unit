@@ -384,7 +384,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
           setTranslateStartFrom(nextLocale);
           setTranslateError(`Strona: ${page.slug}, Język: ${loc}. ${msg} — Kliknij Resume.`);
           hadErrorRef.current = true;
-          if (concurrency === 1 && autoResumeOnError && !isAbort) {
+          if (autoResumeOnError && !isAbort) {
             setAutoResumeCountdown(5);
             for (let s = 5; s >= 1; s--) {
               setAutoResumeCountdown(s);

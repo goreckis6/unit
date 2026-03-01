@@ -15,9 +15,9 @@ const ollamaDispatcher = new Agent({
 const SLOT_RETRY_DELAY_MS = 30_000;
 const SLOT_RETRY_MAX = 5;
 
-function isSlotError(err: string): boolean {
+function isRetryableError(err: string): boolean {
   const s = err.toLowerCase();
-  return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy');
+  return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy') || s.includes('upstream request timeout');
 }
 
 async function ollamaChat(messages: { role: string; content: string }[]) {
@@ -50,7 +50,7 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
           errObj = { error: errText };
         }
         const errMsg = (errObj?.error ?? errText) || `Ollama API error: ${res.status}`;
-        if (isSlotError(errMsg) && attempt < SLOT_RETRY_MAX) {
+        if (isRetryableError(errMsg) && attempt < SLOT_RETRY_MAX) {
           await new Promise((r) => setTimeout(r, SLOT_RETRY_DELAY_MS));
           continue;
         }
@@ -64,7 +64,7 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
         if (e.name === 'AbortError') {
           throw new Error('Ollama API timeout (limit 48 h) — spróbuj ponownie');
         }
-        if (isSlotError(e.message) && attempt < SLOT_RETRY_MAX) {
+        if (isRetryableError(e.message) && attempt < SLOT_RETRY_MAX) {
           lastErr = e;
           await new Promise((r) => setTimeout(r, SLOT_RETRY_DELAY_MS));
           continue;

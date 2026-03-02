@@ -595,6 +595,10 @@ export default function AdminPagesList() {
               credentials: 'include',
               signal: translateLabelsAbortRef.current?.signal,
             });
+            if (res.status === 401 && typeof window !== 'undefined') {
+              window.location.href = '/twojastara/login';
+              return;
+            }
             if (res.ok || attempt >= 2) break;
             await new Promise((r) => setTimeout(r, 2000));
           }
@@ -642,6 +646,10 @@ export default function AdminPagesList() {
                 credentials: 'include',
                 signal: translateLabelsAbortRef.current?.signal,
               });
+              if (res.status === 401 && typeof window !== 'undefined') {
+                window.location.href = '/twojastara/login';
+                return;
+              }
               if (res.ok || attempt >= 2) break;
               await new Promise((r) => setTimeout(r, 2000));
             }
@@ -754,6 +762,10 @@ export default function AdminPagesList() {
             credentials: 'include',
             signal: translateLabelsAbortRef.current?.signal,
           });
+          if (res.status === 401 && typeof window !== 'undefined') {
+            window.location.href = '/twojastara/login';
+            return;
+          }
           if (res.ok || attempt >= 2) break;
           await new Promise((r) => setTimeout(r, 2000));
         }

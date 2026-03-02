@@ -25,9 +25,10 @@ export default async function AdminDashboardLayout({
             Admin Panel
           </Link>
           <nav className="admin-nav">
-            <Link href="/twojastara">Dashboard</Link>
             <Link href="/twojastara/pages">Pages</Link>
-            <Link href="/twojastara/pages/new">New Page</Link>
+            <Link href="/twojastara/pages/new">Add New</Link>
+            <Link href="/twojastara">Dashboard</Link>
+            <Link href="/twojastara/stats">Stats</Link>
           </nav>
           <div className="admin-header-actions">
             <span className="admin-user">{session.email}</span>

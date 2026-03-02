@@ -379,11 +379,16 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
         } catch (err) {
           const isAbort = err instanceof Error && err.name === 'AbortError';
           const msg = err instanceof Error ? (isAbort ? 'Wstrzymano przez użytkownika' : err.message) : 'Błąd tłumaczenia';
+          const is401 = /unauthorized/i.test(msg);
           const nextLocale = loc;
           setTranslatePausedAt({ pageSlug: page.slug, nextLocale });
           setTranslateStartFrom(nextLocale);
-          setTranslateError(`Strona: ${page.slug}, Język: ${loc}. ${msg} — Kliknij Resume.`);
+          setTranslateError(is401 ? 'Sesja wygasła — zaloguj się ponownie.' : `Strona: ${page.slug}, Język: ${loc}. ${msg} — Kliknij Resume.`);
           hadErrorRef.current = true;
+          if (is401 && typeof window !== 'undefined') {
+            window.location.href = '/twojastara/login';
+            return false;
+          }
           if (autoResumeOnError && !isAbort) {
             setAutoResumeCountdown(5);
             for (let s = 5; s >= 1; s--) {

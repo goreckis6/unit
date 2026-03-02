@@ -288,14 +288,19 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
                 ? 'Przerwano'
                 : err.message
               : 'Błąd generowania';
-          // Fatal errors (billing, credits) — stop immediately, no retry
-          const isFatal = /credit balance is too low|insufficient credits|billing|invalid_request_error/i.test(msg);
+          // Fatal errors (billing, credits, 401) — stop immediately, no retry
+          const isFatal = /credit balance is too low|insufficient credits|billing|invalid_request_error|unauthorized/i.test(msg);
           setGenerateError(
-            `Strona: ${page.slug}. ${msg} — Zaznacz tę stronę (i ewentualnie następne) i kliknij Generate Content, aby spróbować od początku.`
+            isFatal && /unauthorized/i.test(msg)
+              ? 'Sesja wygasła — zaloguj się ponownie.'
+              : `Strona: ${page.slug}. ${msg} — Zaznacz tę stronę (i ewentualnie następne) i kliknij Generate Content, aby spróbować od początku.`
           );
           hadError = true;
           if (isFatal) {
             setGenerateProgress(null);
+            if (/unauthorized/i.test(msg) && typeof window !== 'undefined') {
+              window.location.href = '/twojastara/login';
+            }
             return;
           }
           if (autoResumeOnError) {

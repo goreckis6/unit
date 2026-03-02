@@ -227,13 +227,15 @@ export default function AdminPagesList() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const tabParam = searchParams.get('tab');
-  const validStages: PageStage[] = ['new', 'in-progress', 'translate-label', 'completed', 'completed-alive'];
+  const validStages: PageStage[] = ['in-progress', 'translate-label', 'completed', 'completed-alive'];
   const [activeBookmark, setActiveBookmark] = useState<PageStage>(() =>
-    tabParam && validStages.includes(tabParam as PageStage) ? (tabParam as PageStage) : 'new'
+    tabParam && validStages.includes(tabParam as PageStage) ? (tabParam as PageStage) : 'in-progress'
   );
 
   useEffect(() => {
-    if (tabParam && validStages.includes(tabParam as PageStage) && tabParam !== activeBookmark) {
+    if (tabParam === 'new') {
+      setActiveBookmark('in-progress');
+    } else if (tabParam && validStages.includes(tabParam as PageStage) && tabParam !== activeBookmark) {
       setActiveBookmark(tabParam as PageStage);
     }
   }, [tabParam]);
@@ -255,7 +257,8 @@ export default function AdminPagesList() {
       if (translateLabelSlugs.has(p.slug)) {
         byStage['translate-label'].push(p);
       } else {
-        byStage[getPageStage(p)].push(p);
+        const stage = getPageStage(p);
+        byStage[stage === 'new' ? 'in-progress' : stage].push(p);
       }
     }
     for (const stage of Object.keys(byStage) as PageStage[]) {
@@ -307,12 +310,27 @@ export default function AdminPagesList() {
   }, []);
 
   useEffect(() => {
+    if (translateProgress || translatePausedAt) {
+      setActiveBookmark('in-progress');
+    }
+  }, [translateProgress?.pageTitle, translatePausedAt?.pageSlug]);
+
+  useEffect(() => {
     if (translateLabelsProgress || translateLabelsPausedAt) {
       setActiveBookmark('translate-label');
     }
   }, [translateLabelsProgress?.pageSlug, translateLabelsPausedAt?.pageSlug]);
 
   const prevTranslateLabelsLoading = useRef(false);
+  const prevTranslateProgress = useRef<typeof translateProgress>(null);
+  useEffect(() => {
+    const hadProgress = !!prevTranslateProgress.current;
+    prevTranslateProgress.current = translateProgress;
+    if (hadProgress && !translateProgress && !translatePausedAt) {
+      setActiveBookmark('translate-label');
+    }
+  }, [translateProgress, translatePausedAt]);
+
   useEffect(() => {
     const wasLoading = prevTranslateLabelsLoading.current;
     prevTranslateLabelsLoading.current = translateLabelsLoading;
@@ -546,6 +564,7 @@ export default function AdminPagesList() {
       setTranslateLabelsLoading(false);
       return;
     }
+    setActiveBookmark('translate-label');
     setTranslateLabelsLoading(true);
     setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '' });
     setTranslateLabelsPausedAt(null);
@@ -712,6 +731,7 @@ export default function AdminPagesList() {
       alert('No missing labels. All selected pages have full label translations.');
       return;
     }
+    setActiveBookmark('translate-label');
     setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '' });
     const concurrency = Math.max(1, Math.min(20, translateLabelsConcurrency));
     const stepRef = { current: 0 };
@@ -822,6 +842,7 @@ export default function AdminPagesList() {
   }
 
   function handleBatchTranslate() {
+    setActiveBookmark('in-progress');
     startTranslate({
       pages,
       selectedIds,
@@ -845,6 +866,7 @@ export default function AdminPagesList() {
       return;
     }
     setSelectedIds(new Set(withMissing.map((p) => p.id)));
+    setActiveBookmark('in-progress');
     startTranslate({
       pages,
       selectedIds: new Set(withMissing.map((p) => p.id)),
@@ -971,10 +993,9 @@ export default function AdminPagesList() {
   const selectedCount = selectedIds.size;
 
   const bookmarkTabs: { stage: PageStage; label: string; count: number; green?: boolean }[] = [
-    { stage: 'new', label: 'New', count: pagesByStage.new.length },
-    { stage: 'in-progress', label: 'In progress', count: pagesByStage['in-progress'].length },
-    { stage: 'translate-label', label: 'Translation Completed', count: pagesByStage['translate-label'].length },
-    { stage: 'completed', label: 'Translation Labels Completed', count: pagesByStage.completed.length },
+    { stage: 'in-progress', label: 'Translation', count: pagesByStage['in-progress'].length, green: true },
+    { stage: 'translate-label', label: 'Translation Labels', count: pagesByStage['translate-label'].length, green: true },
+    { stage: 'completed', label: 'Translation Labels Completed', count: pagesByStage.completed.length, green: true },
     { stage: 'completed-alive', label: 'Completed:Alvie', count: pagesByStage['completed-alive'].length, green: true },
   ];
 
@@ -1332,8 +1353,54 @@ export default function AdminPagesList() {
         </div>
       )}
 
-      {(activeBookmark === 'translate-label' || activeBookmark === 'completed' || activeBookmark === 'completed-alive') && filteredPages.length > 0 && (
+      {(activeBookmark === 'in-progress' || activeBookmark === 'translate-label' || activeBookmark === 'completed' || activeBookmark === 'completed-alive') && filteredPages.length > 0 && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
+          {activeBookmark === 'in-progress' && (
+            <>
+              {filteredPages.filter((p) => hasEnContent(p) && !hasAllTranslations(p)).length > 0 && (
+                <button
+                  type="button"
+                  onClick={handleTranslateMissingTranslations}
+                  disabled={!!generateProgress || !!translateProgress || !!translateLabelsLoading}
+                  className="btn btn-primary btn-sm"
+                  style={{ padding: '0.35rem 0.75rem' }}
+                  title="Translate content to missing languages (24 locales)"
+                >
+                  Translate missing translations
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={handleBatchTranslate}
+                disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+              >
+                {translateProgress
+                  ? `Tłumaczenie… (${translateProgress.current}/${translateProgress.total})`
+                  : translatePausedAt
+                    ? `Resume od (${translateStartFrom || ''})`
+                    : translateOnlyOne
+                      ? `Translate only (${translateStartFrom || ''})`
+                      : 'Translate'}
+              </button>
+              {translateProgress && (
+                <>
+                  <button type="button" onClick={pauseTranslate} className="btn btn-secondary btn-sm" style={{ padding: '0.35rem 0.75rem' }}>
+                    Pause
+                  </button>
+                  <button type="button" onClick={clearPaused} className="btn btn-secondary btn-sm" style={{ padding: '0.35rem 0.75rem' }}>
+                    Wyczyść status
+                  </button>
+                </>
+              )}
+              {translatePausedAt && !translateProgress && (
+                <button type="button" onClick={() => handleBatchTranslate()} className="btn btn-primary btn-sm" style={{ padding: '0.35rem 0.75rem' }}>
+                  Resume
+                </button>
+              )}
+            </>
+          )}
           {activeBookmark === 'translate-label' && (
             <>
               <button
@@ -1864,7 +1931,7 @@ export default function AdminPagesList() {
       ) : filteredPages.length === 0 ? (
         <p style={{ color: 'var(--text-secondary)' }}>
           No pages in <strong>
-            {activeBookmark === 'new' ? 'New' : activeBookmark === 'in-progress' ? 'In progress' : activeBookmark === 'translate-label' ? 'Translation Completed' : activeBookmark === 'completed-alive' ? 'Completed:Alvie' : 'Translation Labels Completed'}
+            {activeBookmark === 'in-progress' ? 'Translation' : activeBookmark === 'translate-label' ? 'Translation Labels' : activeBookmark === 'completed-alive' ? 'Completed:Alvie' : 'Translation Labels Completed'}
           </strong>
           {searchQuery.trim() ? ' matching search' : ''}. Switch tab or create a page.
         </p>

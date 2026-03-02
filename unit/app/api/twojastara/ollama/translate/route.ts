@@ -18,7 +18,7 @@ const SLOT_RETRY_MAX = 5;
 
 function isRetryableError(err: string): boolean {
   const s = err.toLowerCase();
-  return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy') || s.includes('upstream request timeout');
+  return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy') || s.includes('upstream request timeout') || s.includes('429') || s.includes('too many requests');
 }
 
 async function ollamaChat(messages: { role: string; content: string }[]) {
@@ -52,7 +52,8 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
         }
         const errMsg = (errObj?.error ?? errText) || `Ollama API error: ${res.status}`;
         if (isRetryableError(errMsg) && attempt < SLOT_RETRY_MAX) {
-          await new Promise((r) => setTimeout(r, SLOT_RETRY_DELAY_MS));
+          const delayMs = res.status === 429 ? 60_000 : SLOT_RETRY_DELAY_MS; // 60 s for rate limit
+          await new Promise((r) => setTimeout(r, delayMs));
           continue;
         }
         throw new Error(errMsg);
@@ -67,14 +68,15 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
         }
         if (isRetryableError(e.message) && attempt < SLOT_RETRY_MAX) {
           lastErr = e;
-          await new Promise((r) => setTimeout(r, SLOT_RETRY_DELAY_MS));
+          const delayMs = e.message.includes('429') || e.message.toLowerCase().includes('too many requests') ? 60_000 : SLOT_RETRY_DELAY_MS;
+          await new Promise((r) => setTimeout(r, delayMs));
           continue;
         }
       }
       throw e;
     }
   }
-  throw lastErr || new Error('Ollama error (slot/timeout) — reduce Parallel to 2–3, kliknij Resume.');
+  throw lastErr || new Error('Ollama error (429/slot/timeout) — reduce Parallel to 2–3, kliknij Resume.');
 }
 
 /** POST /api/twojastara/ollama/translate — single API call for title, content, FAQ */

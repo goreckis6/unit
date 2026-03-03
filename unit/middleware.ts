@@ -1,6 +1,7 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
 import { routing, ROUTING_LOCALES } from './i18n/routing';
+import { SLUG_TO_PATH } from '@/lib/gsc-redirects';
 
 const handleI18nRouting = createMiddleware(routing);
 
@@ -44,9 +45,72 @@ function getBrowserLocale(acceptLanguage: string | null): Locale {
   return 'en';
 }
 
+// Known unsupported locales (were indexed by Google but site no longer supports them)
+const UNSUPPORTED_LOCALES = ['fa', 'th', 'vi'];
+
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const safePathname = pathname ?? '';
+
+  // Malformed URLs (e.g. /$) → redirect to home
+  if (safePathname === '/$') {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = '/';
+    return NextResponse.redirect(redirectUrl, 301);
+  }
+
+  // Blog redirect (no longer exists)
+  const blogMatch = safePathname.match(/^\/([a-z]{2})\/blog\/?$/);
+  if (safePathname === '/blog' || safePathname === '/blog/' || blogMatch) {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = blogMatch ? `/${blogMatch[1]}` : '/';
+    return NextResponse.redirect(redirectUrl, 301);
+  }
+
+  // GSC 404 redirects: old slugs / non-existent pages → correct paths (run before unsupported locale)
+  const calcMatch = safePathname.match(/^\/([a-z]{2})\/calculators\/([^/]+)\/?([^/]*)\/?$/);
+  const calcMatchEn = safePathname.match(/^\/calculators\/([^/]+)\/?([^/]*)\/?$/);
+  let localePrefix = '';
+  let localeCode = '';
+  let slugOrCategory = '';
+  let slug = '';
+  if (calcMatch) {
+    localeCode = calcMatch[1];
+    localePrefix = `/${localeCode}`;
+    slugOrCategory = calcMatch[2];
+    slug = calcMatch[3] || '';
+  } else if (calcMatchEn) {
+    slugOrCategory = calcMatchEn[1];
+    slug = calcMatchEn[2] || '';
+  }
+  if (slugOrCategory) {
+    const targetSlug = slug || slugOrCategory;
+    const dest = SLUG_TO_PATH[targetSlug] ?? (slug ? SLUG_TO_PATH[slugOrCategory] : null);
+    if (dest) {
+      const destPath = dest.startsWith('/') ? dest : `/${dest}`;
+      const redirectUrl = request.nextUrl.clone();
+      // Unsupported locale (fa, th, vi) → redirect to EN path (no locale prefix)
+      const usePrefix = localeCode && UNSUPPORTED_LOCALES.includes(localeCode) ? '' : localePrefix;
+      redirectUrl.pathname = usePrefix ? `${usePrefix}${destPath}` : destPath;
+      return NextResponse.redirect(redirectUrl, 301);
+    }
+    if (!slug && SLUG_TO_PATH[slugOrCategory]) {
+      const destPath = SLUG_TO_PATH[slugOrCategory].startsWith('/') ? SLUG_TO_PATH[slugOrCategory] : `/${SLUG_TO_PATH[slugOrCategory]}`;
+      const redirectUrl = request.nextUrl.clone();
+      const usePrefix = localeCode && UNSUPPORTED_LOCALES.includes(localeCode) ? '' : localePrefix;
+      redirectUrl.pathname = usePrefix ? `${usePrefix}${destPath}` : destPath;
+      return NextResponse.redirect(redirectUrl, 301);
+    }
+  }
+
+  // Redirect unsupported locales (fa, th, vi) to English equivalent — fixes GSC 404s
+  const firstSegment = safePathname.split('/').filter(Boolean)[0];
+  if (firstSegment && UNSUPPORTED_LOCALES.includes(firstSegment)) {
+    const pathWithoutLocale = safePathname.replace(new RegExp(`^/${firstSegment}(/|$)`), '$1') || '/';
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = pathWithoutLocale;
+    return NextResponse.redirect(redirectUrl, 301);
+  }
 
   // Rewrite /twojastara to /en/admin so it matches [locale]/admin (locale=en)
   if (safePathname.startsWith('/twojastara')) {

@@ -71,6 +71,7 @@ export const SLUG_TO_PATH: Record<string, string> = {
   'bmi-calculator': '/calculators/health',
   'calorie-calculator': '/calculators/health',
   'body-fat-calculator': '/calculators/health',
+  'army-body-fat-calculator': '/calculators/health',
   // others
   'blog': '/',
 };

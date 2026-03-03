@@ -1893,10 +1893,6 @@
         ]
       }
     },
-    "armyBodyFat": {
-      "title": "Army Body Fat Calculator",
-      "description": "Calculate your body fat percentage using the official US Army tape test method per AR 600-9. Supports 2026 ACFT exemption for soldiers scoring 540+."
-    },
     "healthCalculators": {
       "title": "Egészség Számológépek",
       "description": "Böngéssze egészségügyi számológépeink gyűjteményét BMI, kalória, táplálkozás és fitnesz igényekhez",
@@ -5371,11 +5367,26 @@
         "faq": {
           "heading": "Gyakran ismételt kérdések",
           "items": [
-            {"question": "Hogyan használjam az életkor napokban kalkulátort?", "answer": "Adja meg születési dátumát és a mai dátumot (vagy záró dátumot) HH/NN/ÉÉÉÉ formátumban. Kattintson a Számítás gombra. A záró dátumot megváltoztathatja egy adott nap életkorának megtekintéséhez."},
-            {"question": "Miért közelítő a hónapok és évek?", "answer": "A hónapok hossza különböző (28–31 nap), az év 365 vagy 366 nap (szökőév). A kalkulátor átlagosan 30,44 napot használ havonta és 365,25 napot évente. A másodperc, perc, óra, nap és hét pontos."},
-            {"question": "Milyen dátumformátumot használjak?", "answer": "Használja a HH/NN/ÉÉÉÉ formátumot: kétjegyű hónap, kétjegyű nap, négyjegyű év, perjellel elválasztva (pl. 01/15/1990 vagy 02/03/2026). A hónap és nap vezető nullái opcionálisak."},
-            {"question": "Használhatok jövőbeli dátumot mai dátumként?", "answer": "Igen. Adja meg születési dátumát és bármely záró dátumot (beleértve jövőbelit) HH/NN/ÉÉÉÉ formátumban. A kalkulátor megmutatja, hány éves (vagy lesz) születéstől az adott dátumig. A születési dátumnak a záró dátum előtt vagy azon kell lennie."},
-            {"question": "Ingyenes ez az életkor napokban kalkulátor?", "answer": "Igen. Nincs szükség regisztrációra vagy fizetésre. Minden számítás a böngészőben történik."}
+            {
+              "question": "Hogyan használjam az életkor napokban kalkulátort?",
+              "answer": "Adja meg születési dátumát és a mai dátumot (vagy záró dátumot) HH/NN/ÉÉÉÉ formátumban. Kattintson a Számítás gombra. A záró dátumot megváltoztathatja egy adott nap életkorának megtekintéséhez."
+            },
+            {
+              "question": "Miért közelítő a hónapok és évek?",
+              "answer": "A hónapok hossza különböző (28–31 nap), az év 365 vagy 366 nap (szökőév). A kalkulátor átlagosan 30,44 napot használ havonta és 365,25 napot évente. A másodperc, perc, óra, nap és hét pontos."
+            },
+            {
+              "question": "Milyen dátumformátumot használjak?",
+              "answer": "Használja a HH/NN/ÉÉÉÉ formátumot: kétjegyű hónap, kétjegyű nap, négyjegyű év, perjellel elválasztva (pl. 01/15/1990 vagy 02/03/2026). A hónap és nap vezető nullái opcionálisak."
+            },
+            {
+              "question": "Használhatok jövőbeli dátumot mai dátumként?",
+              "answer": "Igen. Adja meg születési dátumát és bármely záró dátumot (beleértve jövőbelit) HH/NN/ÉÉÉÉ formátumban. A kalkulátor megmutatja, hány éves (vagy lesz) születéstől az adott dátumig. A születési dátumnak a záró dátum előtt vagy azon kell lennie."
+            },
+            {
+              "question": "Ingyenes ez az életkor napokban kalkulátor?",
+              "answer": "Igen. Nincs szükség regisztrációra vagy fizetésre. Minden számítás a böngészőben történik."
+            }
           ]
         },
         "related": {
@@ -6722,11 +6733,26 @@
         "faq": {
           "heading": "Gyakori kérdések",
           "items": [
-            {"question": "Hogyan számolja a generátor a blokkokat?", "answer": "1 blokk vastagságnál: kerület (π × átmérő). Vastagabb gyűrűknél: belső és külső kerület átlaga. Különböző módszerek enyhén eltérhetnek."},
-            {"question": "Mi az átmérő és a vastagság?", "answer": "Az átmérő a kör szélessége blokkban. A vastagság a körvonal szélessége blokkban — 1 egy vonalhoz, több vastag gyűrűhöz."},
-            {"question": "Mi a maximális átmérő és vastagság?", "answer": "Átmérő 1–500 blokk, vastagság 1-től az átmérő feléig. A vastagság nem haladhatja meg az átmérő felét."},
-            {"question": "Miért tér el a blokkszám a játékban?", "answer": "Különböző kör algoritmusok enyhén eltérő eredményt adnak. Becslésünk a tervezéshez szolgál; a tényleges építés kissé eltérhet."},
-            {"question": "A Minecraft kör generátor ingyenes?", "answer": "Igen. A generátor ingyenes. Nincs regisztráció. Adja meg az átmérőt és vastagságot a blokkszámhoz."}
+            {
+              "question": "Hogyan számolja a generátor a blokkokat?",
+              "answer": "1 blokk vastagságnál: kerület (π × átmérő). Vastagabb gyűrűknél: belső és külső kerület átlaga. Különböző módszerek enyhén eltérhetnek."
+            },
+            {
+              "question": "Mi az átmérő és a vastagság?",
+              "answer": "Az átmérő a kör szélessége blokkban. A vastagság a körvonal szélessége blokkban — 1 egy vonalhoz, több vastag gyűrűhöz."
+            },
+            {
+              "question": "Mi a maximális átmérő és vastagság?",
+              "answer": "Átmérő 1–500 blokk, vastagság 1-től az átmérő feléig. A vastagság nem haladhatja meg az átmérő felét."
+            },
+            {
+              "question": "Miért tér el a blokkszám a játékban?",
+              "answer": "Különböző kör algoritmusok enyhén eltérő eredményt adnak. Becslésünk a tervezéshez szolgál; a tényleges építés kissé eltérhet."
+            },
+            {
+              "question": "A Minecraft kör generátor ingyenes?",
+              "answer": "Igen. A generátor ingyenes. Nincs regisztráció. Adja meg az átmérőt és vastagságot a blokkszámhoz."
+            }
           ]
         },
         "related": {
@@ -6794,10 +6820,22 @@
         "faq": {
           "heading": "Gyakori kérdések",
           "items": [
-            {"question": "Hogyan számítsuk a mulcs térfogatát?", "answer": "Térfogat (m³) = terület (m²) × vastagság m-ben. A vastagságot cm-ből m-re ossza 100-zal. Pl. 200 m², 2 cm = 4 m³."},
-            {"question": "Milyen mulcs vastagságot használjunk?", "answer": "Általában 2–5 cm. Vastagabb réteg (5–10 cm) erős gyomirtáshoz vagy dekoratív kérgekhez. Ne halmozza a szárak mellé."},
-            {"question": "Megadhatom az árat más pénznemben vagy zsákra?", "answer": "A kalkulátor m³-enkénti árat vár. Zsákárnál ossza a zsák árát a zsák térfogatával (m³)."},
-            {"question": "A mulcskalkulátor ingyenes?", "answer": "Igen. Ingyenes. Adja meg a területet, vastagságot és opcionálisan az árat."}
+            {
+              "question": "Hogyan számítsuk a mulcs térfogatát?",
+              "answer": "Térfogat (m³) = terület (m²) × vastagság m-ben. A vastagságot cm-ből m-re ossza 100-zal. Pl. 200 m², 2 cm = 4 m³."
+            },
+            {
+              "question": "Milyen mulcs vastagságot használjunk?",
+              "answer": "Általában 2–5 cm. Vastagabb réteg (5–10 cm) erős gyomirtáshoz vagy dekoratív kérgekhez. Ne halmozza a szárak mellé."
+            },
+            {
+              "question": "Megadhatom az árat más pénznemben vagy zsákra?",
+              "answer": "A kalkulátor m³-enkénti árat vár. Zsákárnál ossza a zsák árát a zsák térfogatával (m³)."
+            },
+            {
+              "question": "A mulcskalkulátor ingyenes?",
+              "answer": "Igen. Ingyenes. Adja meg a területet, vastagságot és opcionálisan az árat."
+            }
           ]
         },
         "related": {

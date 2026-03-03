@@ -58,7 +58,7 @@ export function GlobalSearch({ calculators: propCalculators }: GlobalSearchProps
         title = t(c.titleKey) || c.id;
         description = t(c.descKey) || '';
       } catch {
-        // MISSING_MESSAGE fallback — use id if t() throws (e.g. armyBodyFat missing in locale)
+        // MISSING_MESSAGE fallback — use id if t() throws (e.g. missing translation in locale)
       }
       return {
         id: c.id,

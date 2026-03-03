@@ -1893,10 +1893,6 @@
         ]
       }
     },
-    "armyBodyFat": {
-      "title": "Army Body Fat Calculator",
-      "description": "Calculate your body fat percentage using the official US Army tape test method per AR 600-9. Supports 2026 ACFT exemption for soldiers scoring 540+."
-    },
     "healthCalculators": {
       "title": "Zdravotní Kalkulačky",
       "description": "Procházejte naši sbírku zdravotních kalkulaček pro BMI, kalorie, výživu a fitness potřeby",
@@ -5371,11 +5367,26 @@
         "faq": {
           "heading": "Časté dotazy",
           "items": [
-            {"question": "Jak používat kalkulačku věku ve dnech?", "answer": "Zadejte datum narození a aktuální datum (nebo koncové datum) ve formátu MM/DD/RRRR. Klikněte na Vypočítat pro zobrazení věku v sekundách, minutách, hodinách, dnech, týdnech, měsících a letech. Koncové datum můžete změnit a zjistit, kolik vám bylo nebo bude v konkrétní datum."},
-            {"question": "Proč jsou měsíce a roky přibližné?", "answer": "Měsíce mají různou délku (28–31 dní) a roky mohou mít 365 nebo 366 dní (přestupné roky). Kalkulačka používá průměrné dny za měsíc (cca 30,44) a 365,25 dní za rok, aby byla celková doba konzistentní. „Měsíce“ a „roky“ jsou tedy přibližné celočíselné počty, zatímco sekundy, minuty, hodiny, dny a týdny jsou přesné počty."},
-            {"question": "Jaký formát data mám použít?", "answer": "Použijte MM/DD/RRRR: dvoumístný měsíc, dvoumístný den, čtyřmístný rok, oddělené lomítky (např. 01/15/1990 pro 15. leden 1990 nebo 02/03/2026 pro 3. únor 2026). Úvodní nuly u měsíce a dne jsou volitelné (např. 1/15/1990 také funguje)."},
-            {"question": "Mohu jako aktuální datum použít budoucí datum?", "answer": "Ano. Zadejte datum narození a libovolné koncové datum (včetně budoucího) ve formátu MM/DD/RRRR. Kalkulačka zobrazí, kolik vám je (nebo bude) od narození do tohoto data. Datum narození musí být stejné nebo před koncovým datem."},
-            {"question": "Je tato kalkulačka věku ve dnech zdarma?", "answer": "Ano. Kalkulačka je zdarma. Není vyžadována registrace ani platba. Zadejte datum narození a aktuální datum pro zobrazení věku v sekundách, minutách, hodinách, dnech, týdnech, měsících a letech. Všechny výpočty probíhají ve vašem prohlížeči."}
+            {
+              "question": "Jak používat kalkulačku věku ve dnech?",
+              "answer": "Zadejte datum narození a aktuální datum (nebo koncové datum) ve formátu MM/DD/RRRR. Klikněte na Vypočítat pro zobrazení věku v sekundách, minutách, hodinách, dnech, týdnech, měsících a letech. Koncové datum můžete změnit a zjistit, kolik vám bylo nebo bude v konkrétní datum."
+            },
+            {
+              "question": "Proč jsou měsíce a roky přibližné?",
+              "answer": "Měsíce mají různou délku (28–31 dní) a roky mohou mít 365 nebo 366 dní (přestupné roky). Kalkulačka používá průměrné dny za měsíc (cca 30,44) a 365,25 dní za rok, aby byla celková doba konzistentní. „Měsíce“ a „roky“ jsou tedy přibližné celočíselné počty, zatímco sekundy, minuty, hodiny, dny a týdny jsou přesné počty."
+            },
+            {
+              "question": "Jaký formát data mám použít?",
+              "answer": "Použijte MM/DD/RRRR: dvoumístný měsíc, dvoumístný den, čtyřmístný rok, oddělené lomítky (např. 01/15/1990 pro 15. leden 1990 nebo 02/03/2026 pro 3. únor 2026). Úvodní nuly u měsíce a dne jsou volitelné (např. 1/15/1990 také funguje)."
+            },
+            {
+              "question": "Mohu jako aktuální datum použít budoucí datum?",
+              "answer": "Ano. Zadejte datum narození a libovolné koncové datum (včetně budoucího) ve formátu MM/DD/RRRR. Kalkulačka zobrazí, kolik vám je (nebo bude) od narození do tohoto data. Datum narození musí být stejné nebo před koncovým datem."
+            },
+            {
+              "question": "Je tato kalkulačka věku ve dnech zdarma?",
+              "answer": "Ano. Kalkulačka je zdarma. Není vyžadována registrace ani platba. Zadejte datum narození a aktuální datum pro zobrazení věku v sekundách, minutách, hodinách, dnech, týdnech, měsících a letech. Všechny výpočty probíhají ve vašem prohlížeči."
+            }
           ]
         },
         "related": {
@@ -5688,11 +5699,26 @@
         "faq": {
           "heading": "Často Kladené Otázky",
           "items": [
-            {"question": "Jaká je 5% realitní provize pro prodejní cenu 10 000 $?", "answer": "Provize je 500 $. Výpočet: 10 000 × 0,05 = 500 $. Vlastník obdrží 10 000 − 500 = 9 500 $. Tuto kalkulačku můžete použít pro libovolnou prodejní cenu a procento provize."},
-            {"question": "Kdo platí realitní provizi při prodeji?", "answer": "Technicky provizi platí prodávající. Peníze však pocházejí od kupujícího a prodávající často zahrnují provizi do ceny. V praxi tedy provizi platí kupující, byť nepřímo."},
-            {"question": "Jak vypočítat realitní provizi?", "answer": "Ve třech krocích: (1) Určete procento provize (např. 5 %). (2) Zapište prodejní cenu. (3) Použijte vzorec: provize = (prodejní cena × sazba) / 100. Příklad: 500 000 × 5 / 100 = 25 000 $."},
-            {"question": "Jsou procenta provize makléřů vyjednatelná?", "answer": "Ano, procenta provize jsou často vyjednatelná a liší se podle lokality, trhu a makléře. Můžete porovnat sazby různých makléřů a využít to při vyjednávání."},
-            {"question": "Je tato kalkulačka skutečné ceny domu zdarma?", "answer": "Ano, tato kalkulačka je zcela zdarma. Není vyžadována registrace ani platba. Zadejte cenu domu a procento provize pro okamžité zobrazení provize a čisté částky vlastníka."}
+            {
+              "question": "Jaká je 5% realitní provize pro prodejní cenu 10 000 $?",
+              "answer": "Provize je 500 $. Výpočet: 10 000 × 0,05 = 500 $. Vlastník obdrží 10 000 − 500 = 9 500 $. Tuto kalkulačku můžete použít pro libovolnou prodejní cenu a procento provize."
+            },
+            {
+              "question": "Kdo platí realitní provizi při prodeji?",
+              "answer": "Technicky provizi platí prodávající. Peníze však pocházejí od kupujícího a prodávající často zahrnují provizi do ceny. V praxi tedy provizi platí kupující, byť nepřímo."
+            },
+            {
+              "question": "Jak vypočítat realitní provizi?",
+              "answer": "Ve třech krocích: (1) Určete procento provize (např. 5 %). (2) Zapište prodejní cenu. (3) Použijte vzorec: provize = (prodejní cena × sazba) / 100. Příklad: 500 000 × 5 / 100 = 25 000 $."
+            },
+            {
+              "question": "Jsou procenta provize makléřů vyjednatelná?",
+              "answer": "Ano, procenta provize jsou často vyjednatelná a liší se podle lokality, trhu a makléře. Můžete porovnat sazby různých makléřů a využít to při vyjednávání."
+            },
+            {
+              "question": "Je tato kalkulačka skutečné ceny domu zdarma?",
+              "answer": "Ano, tato kalkulačka je zcela zdarma. Není vyžadována registrace ani platba. Zadejte cenu domu a procento provize pro okamžité zobrazení provize a čisté částky vlastníka."
+            }
           ]
         },
         "related": {
@@ -6707,11 +6733,26 @@
         "faq": {
           "heading": "Časté dotazy",
           "items": [
-            {"question": "Jak se počítá počet bloků?", "answer": "U tloušťky 1 blok: obvod (π × průměr). U silnějších prstenců: průměr vnitřního a vnějšího obvodu. Různé metody mohou mírně lišit."},
-            {"question": "Co je průměr a tloušťka?", "answer": "Průměr je šířka kruhu v blocích. Tloušťka je šířka obvodu v blocích — 1 pro jednu linii, více pro silný prstenec."},
-            {"question": "Maximální průměr a tloušťka?", "answer": "Průměr 1–500 bloků, tloušťka 1 až polovina průměru. Tloušťka nesmí přesáhnout polovinu průměru."},
-            {"question": "Proč se počet bloků v grách liší?", "answer": "Různé algoritmy kruhů dávají mírně odlišné výsledky. Náš odhad slouží k plánování; skutečná stavba může mírně lišit."},
-            {"question": "Je generátor kruhů Minecraft zdarma?", "answer": "Ano. Generátor je zdarma. Bez registrace. Zadejte průměr a tloušťku pro počet bloků."}
+            {
+              "question": "Jak se počítá počet bloků?",
+              "answer": "U tloušťky 1 blok: obvod (π × průměr). U silnějších prstenců: průměr vnitřního a vnějšího obvodu. Různé metody mohou mírně lišit."
+            },
+            {
+              "question": "Co je průměr a tloušťka?",
+              "answer": "Průměr je šířka kruhu v blocích. Tloušťka je šířka obvodu v blocích — 1 pro jednu linii, více pro silný prstenec."
+            },
+            {
+              "question": "Maximální průměr a tloušťka?",
+              "answer": "Průměr 1–500 bloků, tloušťka 1 až polovina průměru. Tloušťka nesmí přesáhnout polovinu průměru."
+            },
+            {
+              "question": "Proč se počet bloků v grách liší?",
+              "answer": "Různé algoritmy kruhů dávají mírně odlišné výsledky. Náš odhad slouží k plánování; skutečná stavba může mírně lišit."
+            },
+            {
+              "question": "Je generátor kruhů Minecraft zdarma?",
+              "answer": "Ano. Generátor je zdarma. Bez registrace. Zadejte průměr a tloušťku pro počet bloků."
+            }
           ]
         },
         "related": {
@@ -6779,10 +6820,22 @@
         "faq": {
           "heading": "Časté dotazy",
           "items": [
-            {"question": "Jak spočítat objem mulče?", "answer": "Objem (m³) = plocha (m²) × hloubka v m. Hloubku v cm vydělte 100. Např. 200 m², 2 cm = 4 m³."},
-            {"question": "Jakou hloubku mulče použít?", "answer": "Běžně 2–5 cm. Hlubší vrstvy (5–10 cm) při silném plevelu nebo dekorativní kůře. Nepřihrňte mulč ke stonkům."},
-            {"question": "Mohu zadat cenu v jiné měně nebo za pytel?", "answer": "Kalkulačka očekává cenu za m³. U ceny za pytel vydělte cenu pytle objemem pytle (m³)."},
-            {"question": "Je kalkulačka mulčování zdarma?", "answer": "Ano. Je zdarma. Zadejte plochu, hloubku a volitelně cenu."}
+            {
+              "question": "Jak spočítat objem mulče?",
+              "answer": "Objem (m³) = plocha (m²) × hloubka v m. Hloubku v cm vydělte 100. Např. 200 m², 2 cm = 4 m³."
+            },
+            {
+              "question": "Jakou hloubku mulče použít?",
+              "answer": "Běžně 2–5 cm. Hlubší vrstvy (5–10 cm) při silném plevelu nebo dekorativní kůře. Nepřihrňte mulč ke stonkům."
+            },
+            {
+              "question": "Mohu zadat cenu v jiné měně nebo za pytel?",
+              "answer": "Kalkulačka očekává cenu za m³. U ceny za pytel vydělte cenu pytle objemem pytle (m³)."
+            },
+            {
+              "question": "Je kalkulačka mulčování zdarma?",
+              "answer": "Ano. Je zdarma. Zadejte plochu, hloubku a volitelně cenu."
+            }
           ]
         },
         "related": {

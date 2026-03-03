@@ -12,18 +12,14 @@ function humanizeCalcId(id: string): string {
 }
 
 /** Known calculator fallbacks when translation is missing (English defaults) */
-const KNOWN_FALLBACKS: Record<string, { title: string; description: string }> = {
-  armyBodyFat: {
-    title: 'Army Body Fat Calculator',
-    description: 'Calculate your body fat percentage using the official US Army tape test method per AR 600-9. Supports 2026 ACFT exemption for soldiers scoring 540+.',
-  },
-};
+const KNOWN_FALLBACKS: Record<string, { title: string; description: string }> = {};
 
 export function createGetMessageFallback() {
   return function getMessageFallback({ namespace, key }: { namespace?: string; key?: string }) {
     const path = [namespace, key].filter(Boolean).join('.');
     if (!path) return '?';
 
+    // Generic calculators.*.title / calculators.*.description
     if (namespace === 'calculators' && key) {
       const match = key.match(/^([^.]+)\.(title|description)$/);
       if (match) {

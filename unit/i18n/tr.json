@@ -1893,10 +1893,6 @@
         ]
       }
     },
-    "armyBodyFat": {
-      "title": "Ordu Vücut Yağı Hesaplayıcı",
-      "description": "Resmi US Army şerit test yöntemi (AR 600-9) ile vücut yağ yüzdenizi hesaplayın. 540+ puan alan askerler için 2026 ACFT muafiyetini destekler."
-    },
     "healthCalculators": {
       "title": "Sağlık Hesaplayıcıları",
       "description": "VKİ, kalori, beslenme ve fitness için sağlık hesaplayıcıları koleksiyonumuza göz atın",
@@ -5375,11 +5371,26 @@
         "faq": {
           "heading": "Sıkça Sorulan Sorular",
           "items": [
-            {"question": "Yaş gün hesaplayıcıyı nasıl kullanırım?", "answer": "Doğum tarihinizi ve bugünün tarihini (veya bitiş tarihini) AA/GG/YYYY biçiminde girin. Hesapla'ya tıklayın. Belirli bir tarihteki yaşınızı görmek için bitiş tarihini değiştirebilirsiniz."},
-            {"question": "Neden ay ve yıl yaklaşıktır?", "answer": "Aylar farklı uzunluktadır (28–31 gün), yıl 365 veya 366 gündür (artık yıl). Hesaplayıcı ayda ortalama 30,44 gün ve yılda 365,25 gün kullanır. Saniye, dakika, saat, gün ve hafta kesin sayılardır."},
-            {"question": "Hangi tarih biçimini kullanmalıyım?", "answer": "AA/GG/YYYY kullanın: iki haneli ay, iki haneli gün, dört haneli yıl, eğik çizgiyle ayrılmış (örn. 01/15/1990 veya 02/03/2026). Ay ve gün için baştaki sıfırlar isteğe bağlıdır."},
-            {"question": "Gelecekteki bir tarihi bugünün tarihi olarak kullanabilir miyim?", "answer": "Evet. Doğum tarihinizi ve herhangi bir bitiş tarihini (gelecek tarih dahil) AA/GG/YYYY biçiminde girin. Hesaplayıcı doğumdan o tarihe kadar kaç yaşında olduğunuzu (veya olacağınızı) gösterir. Doğum tarihi bitiş tarihinden önce veya o gün olmalıdır."},
-            {"question": "Bu yaş gün hesaplayıcı ücretsiz mi?", "answer": "Evet. Kayıt veya ödeme gerekmez. Tüm hesaplamalar tarayıcınızda yapılır."}
+            {
+              "question": "Yaş gün hesaplayıcıyı nasıl kullanırım?",
+              "answer": "Doğum tarihinizi ve bugünün tarihini (veya bitiş tarihini) AA/GG/YYYY biçiminde girin. Hesapla'ya tıklayın. Belirli bir tarihteki yaşınızı görmek için bitiş tarihini değiştirebilirsiniz."
+            },
+            {
+              "question": "Neden ay ve yıl yaklaşıktır?",
+              "answer": "Aylar farklı uzunluktadır (28–31 gün), yıl 365 veya 366 gündür (artık yıl). Hesaplayıcı ayda ortalama 30,44 gün ve yılda 365,25 gün kullanır. Saniye, dakika, saat, gün ve hafta kesin sayılardır."
+            },
+            {
+              "question": "Hangi tarih biçimini kullanmalıyım?",
+              "answer": "AA/GG/YYYY kullanın: iki haneli ay, iki haneli gün, dört haneli yıl, eğik çizgiyle ayrılmış (örn. 01/15/1990 veya 02/03/2026). Ay ve gün için baştaki sıfırlar isteğe bağlıdır."
+            },
+            {
+              "question": "Gelecekteki bir tarihi bugünün tarihi olarak kullanabilir miyim?",
+              "answer": "Evet. Doğum tarihinizi ve herhangi bir bitiş tarihini (gelecek tarih dahil) AA/GG/YYYY biçiminde girin. Hesaplayıcı doğumdan o tarihe kadar kaç yaşında olduğunuzu (veya olacağınızı) gösterir. Doğum tarihi bitiş tarihinden önce veya o gün olmalıdır."
+            },
+            {
+              "question": "Bu yaş gün hesaplayıcı ücretsiz mi?",
+              "answer": "Evet. Kayıt veya ödeme gerekmez. Tüm hesaplamalar tarayıcınızda yapılır."
+            }
           ]
         },
         "related": {
@@ -6726,11 +6737,26 @@
         "faq": {
           "heading": "Sık sorulan sorular",
           "items": [
-            {"question": "Oluşturucu blok sayısını nasıl hesaplar?", "answer": "1 blok kalınlığında: çevre (π × çap). Daha kalın halkalar: iç ve dış çevrelerin ortalaması. Farklı yöntemler biraz farklı olabilir."},
-            {"question": "Çap ve kalınlık nedir?", "answer": "Çap dairenin blok cinsinden genişliğidir. Kalınlık çizginin blok cinsinden genişliğidir — 1 çizgi, daha fazlası kalın halka için."},
-            {"question": "Maksimum çap ve kalınlık nedir?", "answer": "Çap 1–500 blok, kalınlık 1 ile çapın yarısı arası. Kalınlık çapın yarısını aşamaz."},
-            {"question": "Oyundaki blok sayısı neden farklı?", "answer": "Farklı daire algoritmaları biraz farklı sonuç verir. Tahminimiz planlama içindir; gerçek inşaat biraz farklı olabilir."},
-            {"question": "Minecraft Daire Oluşturucu ücretsiz mi?", "answer": "Evet. Oluşturucu ücretsizdir. Kayıt gerekmez. Blok sayısı için çap ve kalınlık girin."}
+            {
+              "question": "Oluşturucu blok sayısını nasıl hesaplar?",
+              "answer": "1 blok kalınlığında: çevre (π × çap). Daha kalın halkalar: iç ve dış çevrelerin ortalaması. Farklı yöntemler biraz farklı olabilir."
+            },
+            {
+              "question": "Çap ve kalınlık nedir?",
+              "answer": "Çap dairenin blok cinsinden genişliğidir. Kalınlık çizginin blok cinsinden genişliğidir — 1 çizgi, daha fazlası kalın halka için."
+            },
+            {
+              "question": "Maksimum çap ve kalınlık nedir?",
+              "answer": "Çap 1–500 blok, kalınlık 1 ile çapın yarısı arası. Kalınlık çapın yarısını aşamaz."
+            },
+            {
+              "question": "Oyundaki blok sayısı neden farklı?",
+              "answer": "Farklı daire algoritmaları biraz farklı sonuç verir. Tahminimiz planlama içindir; gerçek inşaat biraz farklı olabilir."
+            },
+            {
+              "question": "Minecraft Daire Oluşturucu ücretsiz mi?",
+              "answer": "Evet. Oluşturucu ücretsizdir. Kayıt gerekmez. Blok sayısı için çap ve kalınlık girin."
+            }
           ]
         },
         "related": {
@@ -6798,10 +6824,22 @@
         "faq": {
           "heading": "Sık sorulan sorular",
           "items": [
-            {"question": "Malç hacmi nasıl hesaplanır?", "answer": "Hacim (m³) = alan (m²) × derinlik m. Derinliği cm'den m'ye (÷ 100) çevirin. Örn. 200 m², 2 cm = 4 m³."},
-            {"question": "Ne kadar malç derinliği kullanılmalı?", "answer": "Genelde 2–5 cm. Daha kalın katman (5–10 cm) güçlü yabani ot veya dekoratif kabuk için. Gövdelere yığmayın."},
-            {"question": "Fiyatı başka para biriminde veya çuval başı girebilir miyim?", "answer": "Hesaplayıcı m³ fiyatı bekler. Çuval fiyatında: çuval fiyatını çuval hacmine (m³) bölün."},
-            {"question": "Malç hesaplayıcı ücretsiz mi?", "answer": "Evet. Ücretsizdir. Alan, derinlik ve isteğe bağlı fiyat girin."}
+            {
+              "question": "Malç hacmi nasıl hesaplanır?",
+              "answer": "Hacim (m³) = alan (m²) × derinlik m. Derinliği cm'den m'ye (÷ 100) çevirin. Örn. 200 m², 2 cm = 4 m³."
+            },
+            {
+              "question": "Ne kadar malç derinliği kullanılmalı?",
+              "answer": "Genelde 2–5 cm. Daha kalın katman (5–10 cm) güçlü yabani ot veya dekoratif kabuk için. Gövdelere yığmayın."
+            },
+            {
+              "question": "Fiyatı başka para biriminde veya çuval başı girebilir miyim?",
+              "answer": "Hesaplayıcı m³ fiyatı bekler. Çuval fiyatında: çuval fiyatını çuval hacmine (m³) bölün."
+            },
+            {
+              "question": "Malç hesaplayıcı ücretsiz mi?",
+              "answer": "Evet. Ücretsizdir. Alan, derinlik ve isteğe bağlı fiyat girin."
+            }
           ]
         },
         "related": {

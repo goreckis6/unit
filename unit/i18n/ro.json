@@ -1893,10 +1893,6 @@
         ]
       }
     },
-    "armyBodyFat": {
-      "title": "Army Body Fat Calculator",
-      "description": "Calculate your body fat percentage using the official US Army tape test method per AR 600-9. Supports 2026 ACFT exemption for soldiers scoring 540+."
-    },
     "healthCalculators": {
       "title": "Calculatoare de Sănătate",
       "description": "Răsfoiți colecția noastră de calculatoare de sănătate pentru IMC, calorii, nutriție și fitness",
@@ -5371,11 +5367,26 @@
         "faq": {
           "heading": "Întrebări frecvente",
           "items": [
-            {"question": "Cum folosesc calculatorul vârstă în zile?", "answer": "Introdu data nașterii și data curentă (sau o dată finală) în format LL/ZZ/AAAA. Apasă Calculează pentru a vedea vârsta în secunde, minute, ore, zile, săptămâni, luni și ani. Poți schimba data finală pentru a vedea vârsta la o anumită dată."},
-            {"question": "De ce lunile și anii sunt aproximativi?", "answer": "Lunile au lungimi diferite (28–31 zile), anul 365 sau 366 zile (an bisect). Calculatorul folosește în medie 30,44 zile pe lună și 365,25 zile pe an. Secunde, minute, ore, zile și săptămâni sunt numere exacte."},
-            {"question": "Ce format de dată să folosesc?", "answer": "Folosește LL/ZZ/AAAA: lună cu două cifre, zi cu două cifre, an cu patru cifre, separate prin slash (ex. 01/15/1990 sau 02/03/2026). Zerourile pentru lună și zi sunt opționale."},
-            {"question": "Pot folosi o dată viitoare ca dată curentă?", "answer": "Da. Introdu data nașterii și orice dată finală (inclusiv viitoare) în format LL/ZZ/AAAA. Calculatorul va arăta câți ani ai (sau vei avea) de la naștere până la acea dată. Data nașterii trebuie să fie înainte de sau la data finală."},
-            {"question": "Este gratuit acest calculator vârstă în zile?", "answer": "Da. Nu e nevoie de înregistrare sau plată. Toate calculele se fac în browser."}
+            {
+              "question": "Cum folosesc calculatorul vârstă în zile?",
+              "answer": "Introdu data nașterii și data curentă (sau o dată finală) în format LL/ZZ/AAAA. Apasă Calculează pentru a vedea vârsta în secunde, minute, ore, zile, săptămâni, luni și ani. Poți schimba data finală pentru a vedea vârsta la o anumită dată."
+            },
+            {
+              "question": "De ce lunile și anii sunt aproximativi?",
+              "answer": "Lunile au lungimi diferite (28–31 zile), anul 365 sau 366 zile (an bisect). Calculatorul folosește în medie 30,44 zile pe lună și 365,25 zile pe an. Secunde, minute, ore, zile și săptămâni sunt numere exacte."
+            },
+            {
+              "question": "Ce format de dată să folosesc?",
+              "answer": "Folosește LL/ZZ/AAAA: lună cu două cifre, zi cu două cifre, an cu patru cifre, separate prin slash (ex. 01/15/1990 sau 02/03/2026). Zerourile pentru lună și zi sunt opționale."
+            },
+            {
+              "question": "Pot folosi o dată viitoare ca dată curentă?",
+              "answer": "Da. Introdu data nașterii și orice dată finală (inclusiv viitoare) în format LL/ZZ/AAAA. Calculatorul va arăta câți ani ai (sau vei avea) de la naștere până la acea dată. Data nașterii trebuie să fie înainte de sau la data finală."
+            },
+            {
+              "question": "Este gratuit acest calculator vârstă în zile?",
+              "answer": "Da. Nu e nevoie de înregistrare sau plată. Toate calculele se fac în browser."
+            }
           ]
         },
         "related": {
@@ -6722,11 +6733,26 @@
         "faq": {
           "heading": "Întrebări frecvente",
           "items": [
-            {"question": "Cum calculează generatorul numărul de blocuri?", "answer": "La grosime de 1 bloc: perimetru (π × diametru). Pentru inele mai groase: media perimetrelor interior și exterior. Metodele diferite pot varia ușor."},
-            {"question": "Ce sunt diametrul și grosimea?", "answer": "Diametrul este lățimea cercului în blocuri. Grosimea este lățimea conturului în blocuri — 1 pentru o linie, mai mult pentru un inel gros."},
-            {"question": "Care este diametrul și grosimea maximă?", "answer": "Diametru 1–500 blocuri, grosime 1 până la jumătatea diametrului. Grosimea nu poate depăși jumătatea diametrului."},
-            {"question": "De ce diferă numărul de blocuri în joc?", "answer": "Algoritmii de cerc diferiți dau rezultate ușor diferite. Estimarea noastră este pentru planificare; construcția reală poate varia puțin."},
-            {"question": "Generatorul de cercuri Minecraft este gratuit?", "answer": "Da. Generatorul este gratuit. Nu este nevoie de înregistrare. Introduceți diametrul și grosimea pentru numărul de blocuri."}
+            {
+              "question": "Cum calculează generatorul numărul de blocuri?",
+              "answer": "La grosime de 1 bloc: perimetru (π × diametru). Pentru inele mai groase: media perimetrelor interior și exterior. Metodele diferite pot varia ușor."
+            },
+            {
+              "question": "Ce sunt diametrul și grosimea?",
+              "answer": "Diametrul este lățimea cercului în blocuri. Grosimea este lățimea conturului în blocuri — 1 pentru o linie, mai mult pentru un inel gros."
+            },
+            {
+              "question": "Care este diametrul și grosimea maximă?",
+              "answer": "Diametru 1–500 blocuri, grosime 1 până la jumătatea diametrului. Grosimea nu poate depăși jumătatea diametrului."
+            },
+            {
+              "question": "De ce diferă numărul de blocuri în joc?",
+              "answer": "Algoritmii de cerc diferiți dau rezultate ușor diferite. Estimarea noastră este pentru planificare; construcția reală poate varia puțin."
+            },
+            {
+              "question": "Generatorul de cercuri Minecraft este gratuit?",
+              "answer": "Da. Generatorul este gratuit. Nu este nevoie de înregistrare. Introduceți diametrul și grosimea pentru numărul de blocuri."
+            }
           ]
         },
         "related": {
@@ -6794,10 +6820,22 @@
         "faq": {
           "heading": "Întrebări frecvente",
           "items": [
-            {"question": "Cum calculez volumul de mulci?", "answer": "Volum (m³) = suprafață (m²) × adâncime în m. Convertiți adâncimea din cm în m (÷ 100). Ex. 200 m², 2 cm = 4 m³."},
-            {"question": "Ce adâncime de mulci să folosesc?", "answer": "Adesea 2–5 cm. Straturi mai groase (5–10 cm) pentru control puternic al buruienilor sau coajă decorativă. Evitați acumularea lângă tulpini."},
-            {"question": "Pot indica prețul în altă monedă sau per sac?", "answer": "Calculatorul așteaptă preț per m³. La preț per sac: împărțiți prețul sacului la volumul sacului (m³)."},
-            {"question": "Calculatorul de mulci este gratuit?", "answer": "Da. Este gratuit. Introduceți suprafața, adâncimea și opțional prețul."}
+            {
+              "question": "Cum calculez volumul de mulci?",
+              "answer": "Volum (m³) = suprafață (m²) × adâncime în m. Convertiți adâncimea din cm în m (÷ 100). Ex. 200 m², 2 cm = 4 m³."
+            },
+            {
+              "question": "Ce adâncime de mulci să folosesc?",
+              "answer": "Adesea 2–5 cm. Straturi mai groase (5–10 cm) pentru control puternic al buruienilor sau coajă decorativă. Evitați acumularea lângă tulpini."
+            },
+            {
+              "question": "Pot indica prețul în altă monedă sau per sac?",
+              "answer": "Calculatorul așteaptă preț per m³. La preț per sac: împărțiți prețul sacului la volumul sacului (m³)."
+            },
+            {
+              "question": "Calculatorul de mulci este gratuit?",
+              "answer": "Da. Este gratuit. Introduceți suprafața, adâncimea și opțional prețul."
+            }
           ]
         },
         "related": {

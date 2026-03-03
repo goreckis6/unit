@@ -1893,10 +1893,6 @@
         ]
       }
     },
-    "armyBodyFat": {
-      "title": "Calcolatore Grasso Corporeo Esercito",
-      "description": "Calcola la percentuale di grasso corporeo con il metodo ufficiale del nastro US Army (AR 600-9). Supporta l'esenzione ACFT 2026 per militari con punteggio 540+."
-    },
     "healthCalculators": {
       "title": "Calcolatrici per la Salute",
       "description": "Sfoglia la nostra raccolta di calcolatrici per la salute per IMC, calorie, nutrizione e fitness",
@@ -6849,11 +6845,26 @@
         "faq": {
           "heading": "Domande frequenti",
           "items": [
-            {"question": "Come calcola il generatore il numero di blocchi?", "answer": "Con spessore 1 blocco: perimetro (π × diametro). Per anelli più spessi: media dei perimetri interno ed esterno. Metodi diversi possono variare leggermente."},
-            {"question": "Cosa sono diametro e spessore?", "answer": "Il diametro è la larghezza del cerchio in blocchi. Lo spessore è la larghezza del contorno in blocchi — 1 per una linea, più per un anello spesso."},
-            {"question": "Qual è il diametro e spessore massimo?", "answer": "Diametro da 1 a 500 blocchi, spessore da 1 a metà diametro. Lo spessore non può superare la metà del diametro."},
-            {"question": "Perché il numero di blocchi in gioco è diverso?", "answer": "Algoritmi di cerchio diversi danno risultati leggermente diversi. La nostra stima serve per pianificare; la costruzione reale può variare un po'."},
-            {"question": "Il generatore di cerchi Minecraft è gratuito?", "answer": "Sì. Il generatore è gratuito. Nessuna registrazione richiesta. Inserisci diametro e spessore per ottenere il numero di blocchi."}
+            {
+              "question": "Come calcola il generatore il numero di blocchi?",
+              "answer": "Con spessore 1 blocco: perimetro (π × diametro). Per anelli più spessi: media dei perimetri interno ed esterno. Metodi diversi possono variare leggermente."
+            },
+            {
+              "question": "Cosa sono diametro e spessore?",
+              "answer": "Il diametro è la larghezza del cerchio in blocchi. Lo spessore è la larghezza del contorno in blocchi — 1 per una linea, più per un anello spesso."
+            },
+            {
+              "question": "Qual è il diametro e spessore massimo?",
+              "answer": "Diametro da 1 a 500 blocchi, spessore da 1 a metà diametro. Lo spessore non può superare la metà del diametro."
+            },
+            {
+              "question": "Perché il numero di blocchi in gioco è diverso?",
+              "answer": "Algoritmi di cerchio diversi danno risultati leggermente diversi. La nostra stima serve per pianificare; la costruzione reale può variare un po'."
+            },
+            {
+              "question": "Il generatore di cerchi Minecraft è gratuito?",
+              "answer": "Sì. Il generatore è gratuito. Nessuna registrazione richiesta. Inserisci diametro e spessore per ottenere il numero di blocchi."
+            }
           ]
         },
         "related": {
@@ -6921,10 +6932,22 @@
         "faq": {
           "heading": "Domande frequenti",
           "items": [
-            {"question": "Come si calcola il volume di pacciame?", "answer": "Volume (m³) = area (m²) × profondità in m. Converti la profondità da cm a m (÷ 100). Es. 200 m², 2 cm = 4 m³."},
-            {"question": "Che profondità di pacciame usare?", "answer": "Spesso 2–5 cm. Strati più spessi (5–10 cm) per forte controllo erbacce o corteccia decorativa. Evita di accumulare contro i fusti."},
-            {"question": "Posso indicare il prezzo in altra valuta o a sacco?", "answer": "La calcolatrice si aspetta il prezzo al m³. Se il prezzo è a sacco, dividi il prezzo del sacco per il volume del sacco (m³)."},
-            {"question": "La calcolatrice pacciame è gratuita?", "answer": "Sì. È gratuita. Inserisci area, profondità e opzionalmente il prezzo."}
+            {
+              "question": "Come si calcola il volume di pacciame?",
+              "answer": "Volume (m³) = area (m²) × profondità in m. Converti la profondità da cm a m (÷ 100). Es. 200 m², 2 cm = 4 m³."
+            },
+            {
+              "question": "Che profondità di pacciame usare?",
+              "answer": "Spesso 2–5 cm. Strati più spessi (5–10 cm) per forte controllo erbacce o corteccia decorativa. Evita di accumulare contro i fusti."
+            },
+            {
+              "question": "Posso indicare il prezzo in altra valuta o a sacco?",
+              "answer": "La calcolatrice si aspetta il prezzo al m³. Se il prezzo è a sacco, dividi il prezzo del sacco per il volume del sacco (m³)."
+            },
+            {
+              "question": "La calcolatrice pacciame è gratuita?",
+              "answer": "Sì. È gratuita. Inserisci area, profondità e opzionalmente il prezzo."
+            }
           ]
         },
         "related": {

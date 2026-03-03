@@ -1893,10 +1893,6 @@
         ]
       }
     },
-    "armyBodyFat": {
-      "title": "Army Body Fat Calculator",
-      "description": "Calculate your body fat percentage using the official US Army tape test method per AR 600-9. Supports 2026 ACFT exemption for soldiers scoring 540+."
-    },
     "healthCalculators": {
       "title": "Terveys Laskimet",
       "description": "Selaa kokoelmaamme terveys laskimia BMI:lle, kaloreille, ravinnon ja kunnon tarpeisiin",
@@ -5371,11 +5367,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            {"question": "Miten käytän ikä päivinä -laskuria?", "answer": "Syötä syntymäaika ja nykyinen päivämäärä (tai loppupäivämäärä) muodossa PP/KK/VVVV. Napsauta Laske nähdäksesi ikäsi sekunteina, minuutteina, tunteina, päivinä, viikkoina, kuukausina ja vuosina. Voit vaihtaa loppupäivämäärän nähdäksesi iän tietyllä päivämäärällä."},
-            {"question": "Miksi kuukaudet ja vuodet ovat likimääräisiä?", "answer": "Kuukaudet vaihtelevat pituudeltaan (28–31 päivää), vuodessa 365 tai 366 päivää (karkausvuosi). Laskuri käyttää keskimäärin 30,44 päivää kuukaudessa ja 365,25 päivää vuodessa. Sekunnit, minuutit, tunnit, päivät ja viikot ovat tarkkoja."},
-            {"question": "Mitä päivämäärämuotoa käytän?", "answer": "Käytä PP/KK/VVVV: kaksinumeroinen kuukausi, kaksinumeroinen päivä, nelinumeroinen vuosi, erotettuna kauttavilla (esim. 01/15/1990 tai 02/03/2026). Etunollat kuukaudelle ja päivälle ovat valinnaisia."},
-            {"question": "Voinko käyttää tulevaa päivämäärää nykyisenä?", "answer": "Kyllä. Syötä syntymäaika ja mikä tahansa loppupäivämäärä (mukaan lukien tuleva) muodossa PP/KK/VVVV. Laskuri näyttää, kuinka vanha olet (tai olet) syntymästä kyseiseen päivämäärään. Syntymäaika on oltava ennen tai loppupäivämääränä."},
-            {"question": "Onko tämä ikä päivinä -laskuri ilmainen?", "answer": "Kyllä. Rekisteröitymistä tai maksua ei tarvita. Kaikki laskelmat tehdään selaimessa."}
+            {
+              "question": "Miten käytän ikä päivinä -laskuria?",
+              "answer": "Syötä syntymäaika ja nykyinen päivämäärä (tai loppupäivämäärä) muodossa PP/KK/VVVV. Napsauta Laske nähdäksesi ikäsi sekunteina, minuutteina, tunteina, päivinä, viikkoina, kuukausina ja vuosina. Voit vaihtaa loppupäivämäärän nähdäksesi iän tietyllä päivämäärällä."
+            },
+            {
+              "question": "Miksi kuukaudet ja vuodet ovat likimääräisiä?",
+              "answer": "Kuukaudet vaihtelevat pituudeltaan (28–31 päivää), vuodessa 365 tai 366 päivää (karkausvuosi). Laskuri käyttää keskimäärin 30,44 päivää kuukaudessa ja 365,25 päivää vuodessa. Sekunnit, minuutit, tunnit, päivät ja viikot ovat tarkkoja."
+            },
+            {
+              "question": "Mitä päivämäärämuotoa käytän?",
+              "answer": "Käytä PP/KK/VVVV: kaksinumeroinen kuukausi, kaksinumeroinen päivä, nelinumeroinen vuosi, erotettuna kauttavilla (esim. 01/15/1990 tai 02/03/2026). Etunollat kuukaudelle ja päivälle ovat valinnaisia."
+            },
+            {
+              "question": "Voinko käyttää tulevaa päivämäärää nykyisenä?",
+              "answer": "Kyllä. Syötä syntymäaika ja mikä tahansa loppupäivämäärä (mukaan lukien tuleva) muodossa PP/KK/VVVV. Laskuri näyttää, kuinka vanha olet (tai olet) syntymästä kyseiseen päivämäärään. Syntymäaika on oltava ennen tai loppupäivämääränä."
+            },
+            {
+              "question": "Onko tämä ikä päivinä -laskuri ilmainen?",
+              "answer": "Kyllä. Rekisteröitymistä tai maksua ei tarvita. Kaikki laskelmat tehdään selaimessa."
+            }
           ]
         },
         "related": {
@@ -6722,11 +6733,26 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            {"question": "Miten generaattori laskee lohkojen määrän?", "answer": "1 lohkon paksuudella: piiri (π × halkaisija). Paksemmille renkaille: sisä- ja ulkopiirin keskiarvo. Eri menetelmät voivat hieman poiketa."},
-            {"question": "Mikä on halkaisija ja paksuus?", "answer": "Halkaisija on ympyrän leveys lohkoina. Paksuus on ääriviivan leveys lohkoina — 1 viivalle, enemmän paksulle renkaalle."},
-            {"question": "Mikä on enimmäishalkaisija ja -paksuus?", "answer": "Halkaisija 1–500 lohkoa, paksuus 1 puoleen halkaisijaan. Paksuus ei voi ylittää puolta halkaisijasta."},
-            {"question": "Miksi lohkojen määrä pelissä poikkeaa?", "answer": "Eri ympyräalgoritmit antavat hieman eri tuloksia. Arviomme on suunnittelua varten; todellinen rakentaminen voi hieman poiketa."},
-            {"question": "Onko Minecraft ympyrägeneraattori ilmainen?", "answer": "Kyllä. Generaattori on ilmainen. Ei rekisteröintiä. Syötä halkaisija ja paksuus lohkojen määrälle."}
+            {
+              "question": "Miten generaattori laskee lohkojen määrän?",
+              "answer": "1 lohkon paksuudella: piiri (π × halkaisija). Paksemmille renkaille: sisä- ja ulkopiirin keskiarvo. Eri menetelmät voivat hieman poiketa."
+            },
+            {
+              "question": "Mikä on halkaisija ja paksuus?",
+              "answer": "Halkaisija on ympyrän leveys lohkoina. Paksuus on ääriviivan leveys lohkoina — 1 viivalle, enemmän paksulle renkaalle."
+            },
+            {
+              "question": "Mikä on enimmäishalkaisija ja -paksuus?",
+              "answer": "Halkaisija 1–500 lohkoa, paksuus 1 puoleen halkaisijaan. Paksuus ei voi ylittää puolta halkaisijasta."
+            },
+            {
+              "question": "Miksi lohkojen määrä pelissä poikkeaa?",
+              "answer": "Eri ympyräalgoritmit antavat hieman eri tuloksia. Arviomme on suunnittelua varten; todellinen rakentaminen voi hieman poiketa."
+            },
+            {
+              "question": "Onko Minecraft ympyrägeneraattori ilmainen?",
+              "answer": "Kyllä. Generaattori on ilmainen. Ei rekisteröintiä. Syötä halkaisija ja paksuus lohkojen määrälle."
+            }
           ]
         },
         "related": {
@@ -6794,10 +6820,22 @@
         "faq": {
           "heading": "Usein kysytyt kysymykset",
           "items": [
-            {"question": "Miten lasken multan tilavuuden?", "answer": "Tilavuus (m³) = pinta-ala (m²) × paksuus m. Muunna paksuus cm:stä m:ään (÷ 100). Esim. 200 m², 2 cm = 4 m³."},
-            {"question": "Mitä multan paksuutta käyttää?", "answer": "Usein 2–5 cm. Paksumpi kerros (5–10 cm) voimakkaaseen rikkakasvien torjuntaan tai koristekuoreen. Älä kasa multaa varsia vasten."},
-            {"question": "Voinko antaa hinnan toisessa valuutassa tai per säkki?", "answer": "Laskuri odottaa hintaa per m³. Säkihinnalla: jaa säkin hinta säkin tilavuudella (m³)."},
-            {"question": "Onko multa-alan laskuri ilmainen?", "answer": "Kyllä. Se on ilmainen. Syötä pinta-ala, paksuus ja valinnainen hinta."}
+            {
+              "question": "Miten lasken multan tilavuuden?",
+              "answer": "Tilavuus (m³) = pinta-ala (m²) × paksuus m. Muunna paksuus cm:stä m:ään (÷ 100). Esim. 200 m², 2 cm = 4 m³."
+            },
+            {
+              "question": "Mitä multan paksuutta käyttää?",
+              "answer": "Usein 2–5 cm. Paksumpi kerros (5–10 cm) voimakkaaseen rikkakasvien torjuntaan tai koristekuoreen. Älä kasa multaa varsia vasten."
+            },
+            {
+              "question": "Voinko antaa hinnan toisessa valuutassa tai per säkki?",
+              "answer": "Laskuri odottaa hintaa per m³. Säkihinnalla: jaa säkin hinta säkin tilavuudella (m³)."
+            },
+            {
+              "question": "Onko multa-alan laskuri ilmainen?",
+              "answer": "Kyllä. Se on ilmainen. Syötä pinta-ala, paksuus ja valinnainen hinta."
+            }
           ]
         },
         "related": {

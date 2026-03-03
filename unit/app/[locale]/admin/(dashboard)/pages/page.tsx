@@ -7,6 +7,7 @@ import { ADMIN_LOCALES, LOCALE_NAMES } from '@/lib/admin-locales';
 import { useTranslate } from '../../TranslateContext';
 import { useGenerate, type GenerateProviderType } from '../../GenerateContext';
 import { SeoChecker } from '@/components/admin/SeoChecker';
+import { resolveCalculatorPath } from '@/lib/gsc-redirects';
 
 export type PageStage = 'new' | 'in-progress' | 'translate-label' | 'completed' | 'completed-alive';
 
@@ -1906,7 +1907,11 @@ export default function AdminPagesList() {
             </button>
             {translateLabelsProgress.pageSlug && (
               <a
-                href={translateLabelsProgress.locale === 'en' ? `/calculators/${translateLabelsProgress.pageCategory}/${translateLabelsProgress.pageSlug}?preview=1` : `/${translateLabelsProgress.locale}/calculators/${translateLabelsProgress.pageCategory}/${translateLabelsProgress.pageSlug}?preview=1`}
+                href={(() => {
+                  const r = resolveCalculatorPath(`/calculators/${translateLabelsProgress.pageCategory}/${translateLabelsProgress.pageSlug}`);
+                  const base = translateLabelsProgress.locale === 'en' ? `/en${r}` : `/${translateLabelsProgress.locale}${r}`;
+                  return `${base}?preview=1`;
+                })()}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ marginLeft: '0.25rem', fontSize: '0.8rem', color: 'var(--primary)' }}
@@ -2035,7 +2040,7 @@ export default function AdminPagesList() {
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
                   {page.published && activeBookmark === 'completed-alive' && (
                     <a
-                      href={`/calculators/${page.category}/${page.slug}`}
+                      href={resolveCalculatorPath(`/calculators/${page.category}/${page.slug}`)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-primary btn-sm"
@@ -2045,7 +2050,8 @@ export default function AdminPagesList() {
                     </a>
                   )}
                   {page.translations.map((t) => {
-                    const baseUrl = t.locale === 'en' ? `/en/calculators/${page.category}/${page.slug}` : `/${t.locale}/calculators/${page.category}/${page.slug}`;
+                    const resolvedPath = resolveCalculatorPath(`/calculators/${page.category}/${page.slug}`);
+                    const baseUrl = t.locale === 'en' ? `/en${resolvedPath}` : `/${t.locale}${resolvedPath}`;
                     const href = page.published ? baseUrl : `${baseUrl}?preview=1`;
                     return (
                       <Link

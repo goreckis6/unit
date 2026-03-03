@@ -201,7 +201,7 @@ export default async function AdminDashboard() {
           <ul className="dashboard-recent-list">
             {recentPages.map((p) => (
               <li key={p.id}>
-                <Link href={`/twojastara/pages/${p.id}`} className="dashboard-recent-link">
+                <Link href={`/twojastara/pages/${p.id}/edit`} className="dashboard-recent-link">
                   <span>{p.category}/{p.slug}</span>
                   <span className="dashboard-recent-stage" data-stage={getPageStage(p)}>
                     {getPageStage(p).replace('-', ' ')}

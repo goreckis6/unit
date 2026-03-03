@@ -570,7 +570,7 @@ export default function AdminPagesList() {
     setTranslateLabelsPausedAt(null);
     translateLabelsPausedRef.current = false;
     translateLabelsAbortRef.current = new AbortController();
-    const concurrency = Math.max(1, Math.min(20, translateLabelsConcurrency));
+    const concurrency = Math.max(1, Math.min(6, translateLabelsConcurrency));
     const stepRef = { current: 0 };
     try {
       if (concurrency <= 1) {
@@ -741,7 +741,7 @@ export default function AdminPagesList() {
     }
     setActiveBookmark('translate-label');
     setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '' });
-    const concurrency = Math.max(1, Math.min(20, translateLabelsConcurrency));
+    const concurrency = Math.max(1, Math.min(6, translateLabelsConcurrency));
     const stepRef = { current: 0 };
     try {
       const runTask = async (task: { page: Page; loc: string }) => {
@@ -1157,11 +1157,11 @@ export default function AdminPagesList() {
                         max={20}
                         value={String(translateConcurrency)}
                         onChange={(e) => {
-                          const v = Math.min(20, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          const v = Math.min(6, Math.max(1, parseInt(e.target.value, 10) || 1));
                           setTranslateConcurrency(v);
                         }}
                         onBlur={(e) => {
-                          const v = Math.min(20, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          const v = Math.min(6, Math.max(1, parseInt(e.target.value, 10) || 1));
                           setTranslateConcurrency(v);
                         }}
                         disabled={!!translateProgress || !!translateLabelsLoading}
@@ -1186,11 +1186,11 @@ export default function AdminPagesList() {
                         max={20}
                         value={String(translateLabelsConcurrency)}
                         onChange={(e) => {
-                          const v = Math.min(20, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          const v = Math.min(6, Math.max(1, parseInt(e.target.value, 10) || 1));
                           setTranslateLabelsConcurrency(v);
                         }}
                         onBlur={(e) => {
-                          const v = Math.min(20, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          const v = Math.min(6, Math.max(1, parseInt(e.target.value, 10) || 1));
                           setTranslateLabelsConcurrency(v);
                         }}
                         disabled={!!translateProgress || !!translateLabelsLoading}

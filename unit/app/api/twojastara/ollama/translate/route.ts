@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Agent, fetch } from 'undici';
 import { getSession } from '@/lib/auth';
 import { LOCALE_NAMES } from '@/lib/admin-locales';
+import { withOllamaSlot } from '@/lib/ollama-concurrency';
 
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 
@@ -18,7 +19,20 @@ const SLOT_RETRY_MAX = 5;
 
 function isRetryableError(err: string): boolean {
   const s = err.toLowerCase();
-  return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy') || s.includes('upstream request timeout') || s.includes('429') || s.includes('too many requests');
+  return (
+    s.includes('concurrent request slot') ||
+    s.includes('no slots available') ||
+    s.includes('llm busy') ||
+    s.includes('upstream request timeout') ||
+    s.includes('429') ||
+    s.includes('too many requests') ||
+    s.includes('too many concurrent') ||
+    s.includes('econnreset') ||
+    s.includes('connection reset') ||
+    s.includes('socket hang up') ||
+    s.includes('etimedout') ||
+    s.includes('und_err_headers_timeout')
+  );
 }
 
 async function ollamaChat(messages: { role: string; content: string }[]) {
@@ -81,18 +95,25 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
 
 /** POST /api/twojastara/ollama/translate — single API call for title, content, FAQ */
 export async function POST(request: NextRequest) {
+  let targetLocale = '';
   try {
     const session = await getSession();
     if (!session) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const body = await request.json();
-    const { content, faqItems, targetLocale, title, displayTitle, description } = body;
+    let body: { content?: unknown; faqItems?: unknown; targetLocale?: unknown; title?: unknown; displayTitle?: unknown; description?: unknown };
+    try {
+      body = await request.json();
+    } catch {
+      return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
+    }
+    const { content, faqItems, targetLocale: tl, title, displayTitle, description } = body;
+    targetLocale = typeof tl === 'string' ? tl : '';
     if (!content || typeof content !== 'string') {
       return NextResponse.json({ error: 'Content is required' }, { status: 400 });
     }
-    if (!targetLocale || typeof targetLocale !== 'string') {
+    if (!targetLocale) {
       return NextResponse.json({ error: 'targetLocale is required (e.g. pl, de, fr)' }, { status: 400 });
     }
 
@@ -135,7 +156,7 @@ CRITICAL RULES:
       .filter(Boolean)
       .join('\n\n');
 
-    let raw = await ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]);
+    let raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]));
     let trimmed = (raw || '').trim();
     let parsed: {
       content?: string;
@@ -153,7 +174,7 @@ CRITICAL RULES:
         break;
       } catch {
         if (attempt === 0) {
-          raw = await ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]);
+          raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]));
           trimmed = (raw || '').trim();
         } else {
           throw new Error('Ollama returned invalid JSON. Spróbuj ponownie.');
@@ -200,8 +221,9 @@ CRITICAL RULES:
       locale: targetLocale,
     });
   } catch (error) {
-    console.error('Ollama translate error:', error);
     const msg = error instanceof Error ? error.message : 'Failed to translate';
-    return NextResponse.json({ error: msg }, { status: 500 });
+    console.error(`[Ollama translate] ${targetLocale || '?'}:`, msg, error);
+    const status = isRetryableError(msg) ? 503 : 500;
+    return NextResponse.json({ error: msg }, { status });
   }
 }

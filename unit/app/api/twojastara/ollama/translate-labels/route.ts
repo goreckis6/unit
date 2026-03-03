@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Agent, fetch } from 'undici';
 import { getSession } from '@/lib/auth';
 import { LOCALE_NAMES } from '@/lib/admin-locales';
+import { withOllamaSlot } from '@/lib/ollama-concurrency';
 
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 const OLLAMA_TIMEOUT_MS = 172_800_000; // 48 h
@@ -17,7 +18,7 @@ const SLOT_RETRY_MAX = 5;
 
 function isRetryableError(err: string): boolean {
   const s = err.toLowerCase();
-  return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy') || s.includes('upstream request timeout') || s.includes('429') || s.includes('too many requests');
+  return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy') || s.includes('upstream request timeout') || s.includes('429') || s.includes('too many requests') || s.includes('too many concurrent') || s.includes('econnreset') || s.includes('connection reset') || s.includes('socket hang up') || s.includes('etimedout') || s.includes('und_err_headers_timeout');
 }
 
 async function ollamaChat(messages: { role: string; content: string }[]) {
@@ -121,7 +122,7 @@ RULES:
 
     const userContent = `[Target: ${targetLocale} = ${targetLanguage}. All values MUST be in ${targetLanguage}, never English.]\n\nTranslate these label values:\n${JSON.stringify(Object.fromEntries(entries), null, 2)}`;
 
-    const raw = await ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]);
+    const raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]));
     const trimmed = (raw || '').trim();
     const jsonMatch = trimmed.match(/\{[\s\S]*\}/);
     const jsonStr = jsonMatch ? jsonMatch[0] : trimmed;
@@ -142,8 +143,9 @@ RULES:
 
     return NextResponse.json({ labels: result });
   } catch (error) {
-    console.error('Ollama translate-labels error:', error);
     const msg = error instanceof Error ? error.message : 'Failed to translate labels';
-    return NextResponse.json({ error: msg }, { status: 500 });
+    console.error('[Ollama translate-labels]', msg, error);
+    const status = isRetryableError(msg) ? 503 : 500;
+    return NextResponse.json({ error: msg }, { status });
   }
 }

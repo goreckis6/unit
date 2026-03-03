@@ -88,18 +88,29 @@ export default function middleware(request: NextRequest) {
     const dest = SLUG_TO_PATH[targetSlug] ?? (slug ? SLUG_TO_PATH[slugOrCategory] : null);
     if (dest) {
       const destPath = dest.startsWith('/') ? dest : `/${dest}`;
-      const redirectUrl = request.nextUrl.clone();
       // Unsupported locale (fa, th, vi) → redirect to EN path (no locale prefix)
       const usePrefix = localeCode && UNSUPPORTED_LOCALES.includes(localeCode) ? '' : localePrefix;
-      redirectUrl.pathname = usePrefix ? `${usePrefix}${destPath}` : destPath;
-      return NextResponse.redirect(redirectUrl, 301);
+      const targetPathname = usePrefix ? `${usePrefix}${destPath}` : destPath;
+      // Avoid redirect loop: only redirect when target differs from current path
+      const currentNorm = safePathname.replace(/\/$/, '') || '/';
+      const targetNorm = targetPathname.replace(/\/$/, '') || '/';
+      if (currentNorm !== targetNorm) {
+        const redirectUrl = request.nextUrl.clone();
+        redirectUrl.pathname = targetPathname;
+        return NextResponse.redirect(redirectUrl, 301);
+      }
     }
     if (!slug && SLUG_TO_PATH[slugOrCategory]) {
       const destPath = SLUG_TO_PATH[slugOrCategory].startsWith('/') ? SLUG_TO_PATH[slugOrCategory] : `/${SLUG_TO_PATH[slugOrCategory]}`;
-      const redirectUrl = request.nextUrl.clone();
       const usePrefix = localeCode && UNSUPPORTED_LOCALES.includes(localeCode) ? '' : localePrefix;
-      redirectUrl.pathname = usePrefix ? `${usePrefix}${destPath}` : destPath;
-      return NextResponse.redirect(redirectUrl, 301);
+      const targetPathname = usePrefix ? `${usePrefix}${destPath}` : destPath;
+      const currentNorm = safePathname.replace(/\/$/, '') || '/';
+      const targetNorm = targetPathname.replace(/\/$/, '') || '/';
+      if (currentNorm !== targetNorm) {
+        const redirectUrl = request.nextUrl.clone();
+        redirectUrl.pathname = targetPathname;
+        return NextResponse.redirect(redirectUrl, 301);
+      }
     }
   }
 

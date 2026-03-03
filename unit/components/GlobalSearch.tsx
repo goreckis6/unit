@@ -4,6 +4,7 @@ import { useState, useMemo, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { getAllCalculators } from '@/lib/all-calculators';
+import { resolveCalculatorPath } from '@/lib/gsc-redirects';
 import type { SearchableCalculator } from '@/lib/get-searchable-calculators';
 
 interface SearchResult {
@@ -148,7 +149,7 @@ export function GlobalSearch({ calculators: propCalculators }: GlobalSearchProps
           {filteredResults.map((result) => (
             <Link
               key={result.id}
-              href={result.path}
+              href={resolveCalculatorPath(result.path)}
               className="global-search-result-item"
               onClick={handleResultClick}
             >

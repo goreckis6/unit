@@ -13,6 +13,7 @@ import { FaqSection } from '@/components/FaqSection';
 import { FaqSchema } from '@/components/FaqSchema';
 import { renderMarkdown } from '@/lib/markdown';
 import { getRelatedCalculatorsForPage } from '@/lib/related-calculators';
+import { resolveCalculatorPath } from '@/lib/gsc-redirects';
 import { hasCalculatorEmbed } from '@/lib/calculator-embeds';
 import { Link } from '@/i18n/routing';
 import { CalculatorSandpackClient } from '@/components/CalculatorSandpackClient';
@@ -221,7 +222,8 @@ export default async function CalculatorPage({ params, searchParams }: Props) {
             <h2 className="related-heading">{relatedHeading}</h2>
             <div className="related-grid">
               {relatedCalculators.map((rc, i) => {
-                const href = rc.path.startsWith('/') ? rc.path : `/calculators/${rc.path}`;
+                const rawHref = rc.path.startsWith('/') ? rc.path : `/calculators/${rc.path}`;
+                const href = resolveCalculatorPath(rawHref);
                 return (
                   <Link key={i} href={href} className="related-card">
                     <h3 className="related-title">{rc.title}</h3>

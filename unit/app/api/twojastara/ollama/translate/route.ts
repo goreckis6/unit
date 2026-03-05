@@ -93,7 +93,31 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
   throw lastErr || new Error('Ollama error (429/slot/timeout) — reduce Parallel to 2–3, kliknij Resume.');
 }
 
-/** POST /api/twojastara/ollama/translate — single API call for title, content, FAQ */
+type TranslatedItem = {
+  content?: string;
+  title?: string;
+  displayTitle?: string;
+  description?: string;
+  faqItems?: { question?: string; answer?: string }[];
+};
+
+function cleanContent(raw: string): string {
+  return (raw ?? '')
+    .replace(/^##\s*Markdown\s+content\s*\n*/gi, '')
+    .replace(/^content:\s*\n*/i, '')
+    .replace(/\n*---\s*\n*FAQ\s*\([^\n)]*\)[^\n]*\n*/gi, '\n')
+    .replace(/\n*FAQ\s*\([^\n)]*\)[^\n]*\n*/gi, '\n')
+    .replace(/(\n\n)Q:\s+[^\n]+\nA:\s+[^\n]+(?=\n\n|$)/g, '$1')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
+/**
+ * POST /api/twojastara/ollama/translate
+ * Body: { content, faqItems?, title?, displayTitle?, description?, targetLocale? | targetLocales? }
+ * Single: targetLocale → returns { content, title, ..., locale }
+ * Batch: targetLocales → returns { byLocale: { [loc]: { content, title, ... } } }
+ */
 export async function POST(request: NextRequest) {
   let targetLocale = '';
   try {
@@ -102,22 +126,27 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    let body: { content?: unknown; faqItems?: unknown; targetLocale?: unknown; title?: unknown; displayTitle?: unknown; description?: unknown };
+    let body: { content?: unknown; faqItems?: unknown; targetLocale?: unknown; targetLocales?: unknown; title?: unknown; displayTitle?: unknown; description?: unknown };
     try {
       body = await request.json();
     } catch {
       return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
     }
-    const { content, faqItems, targetLocale: tl, title, displayTitle, description } = body;
-    targetLocale = typeof tl === 'string' ? tl : '';
+    const { content, faqItems, targetLocale: tl, targetLocales: tls, title, displayTitle, description } = body;
+    const locales: string[] = Array.isArray(tls) && tls.length > 0
+      ? (tls as string[]).filter((l) => typeof l === 'string' && l !== 'en')
+      : typeof tl === 'string' && tl !== 'en'
+        ? [tl]
+        : [];
+    if (locales.length === 0) {
+      return NextResponse.json({ error: 'targetLocale or targetLocales (non-en) required' }, { status: 400 });
+    }
+    targetLocale = locales[0] ?? '';
+
     if (!content || typeof content !== 'string') {
       return NextResponse.json({ error: 'Content is required' }, { status: 400 });
     }
-    if (!targetLocale) {
-      return NextResponse.json({ error: 'targetLocale is required (e.g. pl, de, fr)' }, { status: 400 });
-    }
 
-    const targetLanguage = LOCALE_NAMES[targetLocale] || targetLocale;
     const enTitle = typeof title === 'string' ? title.trim() : '';
     const enDisplayTitle = typeof displayTitle === 'string' ? displayTitle.trim() : '';
     const enDescription = typeof description === 'string' ? description.trim() : '';
@@ -133,44 +162,68 @@ export async function POST(request: NextRequest) {
         ? `\n\n---\nFAQ (translate each Q&A into faqItems only — DO NOT put in content):\n${items.map((f: { question: string; answer: string }) => `Q: ${f.question}\nA: ${f.answer}`).join('\n\n')}`
         : '';
 
-    const systemPrompt = `Translate from English to ${targetLanguage}. Source is ALWAYS English. Output ONLY valid JSON, no markdown or extra text.
+    const langList = locales.map((l) => `${l} (${LOCALE_NAMES[l] || l})`).join(', ');
+    const isBatch = locales.length > 1;
+
+    const systemPrompt = isBatch
+      ? `Translate from English to multiple languages. Source is ALWAYS English. Output ONLY valid JSON, no markdown or extra text.
+
+TARGET LANGUAGES: ${langList}
+
+OUTPUT FORMAT: A JSON object with keys ${locales.join(', ')}. Each key maps to an object with: content, title (if provided), displayTitle (if provided), description (if provided), faqItems (if FAQ was provided).
 
 CRITICAL RULES:
-- OUTPUT LANGUAGE: Every field (title, displayTitle, description, content, faqItems) MUST be written ENTIRELY in ${targetLanguage}. Never copy English into the output — translate every word. For 中文, 日本語, 한국어, العربية, हिन्दी, etc., use ONLY the target language.
-- 1:1 faithful translation: translate exactly what is given, no omissions, no additions, no extra sections
-- "content" = ONLY the main article/body text. NEVER include FAQ, Q&A, "FAQ (translate...)", or any question-answer blocks in content. The page has a separate FAQ Schema below — FAQ goes ONLY in "faqItems"
+- Each locale's content/faqItems/title/description MUST be written ENTIRELY in that language. Never copy English.
+- 1:1 faithful translation: translate exactly what is given, no omissions, no additions
+- "content" = ONLY the main article/body text. NEVER include FAQ blocks in content
 - Preserve Markdown: # H1, ## H2, **bold**, *italic*, code blocks, bullets
-- "faqItems" = array of {"question","answer"} — only if FAQ was provided in the input. Put translated Q&A here, NOT in content
+- "faqItems" = array of {"question","answer"} — put translated Q&A here, NOT in content
+- Example: { "pl": { "content": "...", "title": "...", "faqItems": [...] }, "de": { ... } }`
+      : `Translate from English to ${LOCALE_NAMES[locales[0]] || locales[0]}. Source is ALWAYS English. Output ONLY valid JSON, no markdown or extra text.
+
+CRITICAL RULES:
+- OUTPUT LANGUAGE: Every field (title, displayTitle, description, content, faqItems) MUST be written ENTIRELY in the target language. Never copy English.
+- 1:1 faithful translation: translate exactly what is given, no omissions, no additions, no extra sections
+- "content" = ONLY the main article/body text. NEVER include FAQ, Q&A, or question-answer blocks in content. FAQ goes ONLY in "faqItems"
+- Preserve Markdown: # H1, ## H2, **bold**, *italic*, code blocks, bullets
+- "faqItems" = array of {"question","answer"} — only if FAQ was provided. Put translated Q&A here, NOT in content
 - Do NOT add "## Markdown content", "## FAQ", or similar headers to content`;
 
-    const userContent = [
-      `[Target: ${targetLocale} = ${targetLanguage}. All output MUST be in ${targetLanguage}, never English.]`,
-      enTitle && `title: ${enTitle}`,
-      enDisplayTitle && `displayTitle: ${enDisplayTitle}`,
-      enDescription && `description (SEO meta): ${enDescription}`,
-      '---',
-      'MAIN CONTENT (translate 1:1; output in "content" — NEVER add FAQ here):',
-      content,
-      faqBlock,
-    ]
-      .filter(Boolean)
-      .join('\n\n');
+    const userContent = isBatch
+      ? [
+          `[Translate to: ${langList}. Output object with keys: ${locales.join(', ')}. Each value: { content, title, displayTitle, description, faqItems }]`,
+          enTitle && `title: ${enTitle}`,
+          enDisplayTitle && `displayTitle: ${enDisplayTitle}`,
+          enDescription && `description (SEO meta): ${enDescription}`,
+          '---',
+          'MAIN CONTENT (translate 1:1 to each language; output in each locale\'s "content" — NEVER add FAQ here):',
+          content,
+          faqBlock,
+        ]
+          .filter(Boolean)
+          .join('\n\n')
+      : [
+          `[Target: ${locales[0]} = ${LOCALE_NAMES[locales[0]]}. All output MUST be in that language, never English.]`,
+          enTitle && `title: ${enTitle}`,
+          enDisplayTitle && `displayTitle: ${enDisplayTitle}`,
+          enDescription && `description (SEO meta): ${enDescription}`,
+          '---',
+          'MAIN CONTENT (translate 1:1; output in "content" — NEVER add FAQ here):',
+          content,
+          faqBlock,
+        ]
+          .filter(Boolean)
+          .join('\n\n');
 
     let raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]));
     let trimmed = (raw || '').trim();
-    let parsed: {
-      content?: string;
-      title?: string;
-      displayTitle?: string;
-      description?: string;
-      faqItems?: { question?: string; answer?: string }[];
-    };
+    let parsed: Record<string, unknown>;
 
     for (let attempt = 0; attempt < 2; attempt++) {
       const jsonMatch = trimmed.match(/\{[\s\S]*\}/);
       const jsonStr = jsonMatch ? jsonMatch[0] : trimmed;
       try {
-        parsed = JSON.parse(jsonStr) as typeof parsed;
+        parsed = JSON.parse(jsonStr) as Record<string, unknown>;
         break;
       } catch {
         if (attempt === 0) {
@@ -181,27 +234,52 @@ CRITICAL RULES:
         }
       }
     }
+    parsed = parsed!;
 
-    // Strip accidental headers and FAQ block that may leak from model into content
-    let resultContent = (parsed.content ?? '')
-      .replace(/^##\s*Markdown\s+content\s*\n*/gi, '')
-      .replace(/^content:\s*\n*/i, '')
-      .replace(/\n*---\s*\n*FAQ\s*\([^\n)]*\)[^\n]*\n*/gi, '\n')
-      .replace(/\n*FAQ\s*\([^\n)]*\)[^\n]*\n*/gi, '\n')
-      .replace(/(\n\n)Q:\s+[^\n]+\nA:\s+[^\n]+(?=\n\n|$)/g, '$1')
-      .replace(/\n{3,}/g, '\n\n')
-      .trim();
+    if (isBatch) {
+      const byLocale: Record<string, TranslatedItem> = {};
+      for (const loc of locales) {
+        const inner = parsed[loc];
+        const obj = (inner && typeof inner === 'object' && !Array.isArray(inner)) ? inner as Record<string, unknown> : {};
+        let resultContent = cleanContent(String(obj?.content ?? ''));
+        if (!resultContent) {
+          throw new Error(`Empty content translation for ${loc} from Ollama Cloud`);
+        }
+        const resultTitle = enTitle && obj.title ? String(obj.title).trim() : enTitle;
+        const resultDisplayTitle = enDisplayTitle && obj.displayTitle ? String(obj.displayTitle).trim() : enDisplayTitle;
+        const resultDescription = enDescription && obj.description ? String(obj.description).trim() : enDescription || undefined;
+        const rawFaq = obj.faqItems;
+        const resultFaq =
+          items.length > 0 && Array.isArray(rawFaq)
+            ? rawFaq
+                .filter((t: unknown, i: number) => t && items[i])
+                .map((t: unknown, i: number) => {
+                  const tt = t as { question?: string; answer?: string };
+                  return {
+                    question: String(tt?.question ?? items[i].question).trim(),
+                    answer: String(tt?.answer ?? items[i].answer).trim(),
+                  };
+                })
+                .filter((f) => f.question && f.answer)
+            : items.length > 0
+              ? items.map((f) => ({ question: f.question, answer: f.answer }))
+              : undefined;
+        byLocale[loc] = { content: resultContent, title: resultTitle, displayTitle: resultDisplayTitle, description: resultDescription, faqItems: resultFaq };
+      }
+      return NextResponse.json({ byLocale });
+    }
+
+    const single = parsed as TranslatedItem;
+    let resultContent = cleanContent(single.content ?? '');
     if (!resultContent) {
       throw new Error('Empty content translation from Ollama Cloud');
     }
-
-    const resultTitle = enTitle && parsed.title ? String(parsed.title).trim() : enTitle;
-    const resultDisplayTitle = enDisplayTitle && parsed.displayTitle ? String(parsed.displayTitle).trim() : enDisplayTitle;
-    const resultDescription =
-      enDescription && parsed.description ? String(parsed.description).trim() : enDescription || undefined;
+    const resultTitle = enTitle && single.title ? String(single.title).trim() : enTitle;
+    const resultDisplayTitle = enDisplayTitle && single.displayTitle ? String(single.displayTitle).trim() : enDisplayTitle;
+    const resultDescription = enDescription && single.description ? String(single.description).trim() : enDescription || undefined;
     const resultFaq =
-      items.length > 0 && Array.isArray(parsed.faqItems)
-        ? parsed.faqItems
+      items.length > 0 && Array.isArray(single.faqItems)
+        ? single.faqItems
             .filter((t, i) => t && items[i])
             .map((t, i) => ({
               question: String(t?.question ?? items[i].question).trim(),
@@ -209,7 +287,7 @@ CRITICAL RULES:
             }))
             .filter((f) => f.question && f.answer)
         : items.length > 0
-          ? items.map((f: { question: string; answer: string }) => ({ question: f.question, answer: f.answer }))
+          ? items.map((f) => ({ question: f.question, answer: f.answer }))
           : undefined;
 
     return NextResponse.json({

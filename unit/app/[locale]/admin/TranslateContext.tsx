@@ -300,20 +300,33 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       const enDescription = (enFromFull?.description ?? enTrans?.description ?? '').trim();
       const translatedByLocale: Record<string, { content: string; title?: string; displayTitle?: string; description?: string; faqItems?: { question: string; answer: string }[] }> = {};
 
-      for (const loc of localesToTranslate) {
+      const BATCH_SIZE = 2; // locales per API call (content can be long; 2 is safe)
+      const localeChunks: string[][] = [];
+      for (let i = 0; i < localesToTranslate.length; i += BATCH_SIZE) {
+        localeChunks.push(localesToTranslate.slice(i, i + BATCH_SIZE));
+      }
+
+      for (const chunk of localeChunks) {
         if (hadErrorRef.current || abortRef.current?.signal?.aborted) return false;
-        stepRef.current++;
-        setTranslateProgress({ current: stepRef.current, total: totalSteps, pageTitle: page.slug, locale: loc });
+        stepRef.current += chunk.length;
+        setTranslateProgress({ current: stepRef.current, total: totalSteps, pageTitle: page.slug, locale: chunk[chunk.length - 1] ?? '' });
         try {
           let res: Response;
-          let data: { error?: string; content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[] };
+          let data: { error?: string; content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[]; byLocale?: Record<string, { content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[] }> };
           for (let attempt = 0; attempt <= 2; attempt++) {
             res = await fetchWithTimeoutAndRetry(
               '/api/twojastara/ollama/translate',
               {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ content: enContent, faqItems: enFaqItems, targetLocale: loc, title: enTitle || undefined, displayTitle: enDisplayTitle || undefined, description: enDescription || undefined }),
+                body: JSON.stringify({
+                  content: enContent,
+                  faqItems: enFaqItems,
+                  targetLocales: chunk,
+                  title: enTitle || undefined,
+                  displayTitle: enDisplayTitle || undefined,
+                  description: enDescription || undefined,
+                }),
                 credentials: 'include',
               },
               172_800_000,
@@ -329,15 +342,33 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               await new Promise((r) => setTimeout(r, 10000));
               continue;
             }
-            throw new Error(data.error || `Failed to translate to ${loc}`);
+            throw new Error(data.error || `Failed to translate to ${chunk.join(',')}`);
           }
-          translatedByLocale[loc] = {
-            content: data.content ?? '',
-            title: data.title,
-            displayTitle: data.displayTitle,
-            description: data.description,
-            faqItems: Array.isArray(data.faqItems) ? (data.faqItems as { question: string; answer: string }[]) : undefined,
-          };
+          if (data.byLocale && typeof data.byLocale === 'object') {
+            for (const loc of chunk) {
+              const tr = data.byLocale[loc];
+              if (tr) {
+                translatedByLocale[loc] = {
+                  content: tr.content ?? '',
+                  title: tr.title,
+                  displayTitle: tr.displayTitle,
+                  description: tr.description,
+                  faqItems: Array.isArray(tr.faqItems) ? (tr.faqItems as { question: string; answer: string }[]) : undefined,
+                };
+              }
+            }
+          } else {
+            const singleLoc = chunk[0];
+            if (singleLoc) {
+              translatedByLocale[singleLoc] = {
+                content: data.content ?? '',
+                title: data.title,
+                displayTitle: data.displayTitle,
+                description: data.description,
+                faqItems: Array.isArray(data.faqItems) ? (data.faqItems as { question: string; answer: string }[]) : undefined,
+              };
+            }
+          }
 
           const baseMap = new Map((fullPage.translations ?? []).map((t: { locale: string }) => [t.locale, t]));
           for (const l of Object.keys(translatedByLocale)) {
@@ -389,7 +420,10 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             })
           );
 
-          if (concurrency === 1 && ((localesToTranslate?.indexOf(loc) ?? -1) < (localesToTranslate?.length ?? 0) - 1 || pageIndex < pageQueue.length - 1)) {
+          const lastLocInChunk = chunk[chunk.length - 1];
+          const isLastChunk = localeChunks.indexOf(chunk) >= localeChunks.length - 1;
+          const isLastPage = pageIndex >= pageQueue.length - 1;
+          if (concurrency === 1 && (!isLastChunk || !isLastPage) && (localesToTranslate?.indexOf(lastLocInChunk ?? '') ?? -1) >= 0) {
             setTranslatePauseCountdown(PAUSE_BETWEEN_LOCALES_SEC);
             for (let s = PAUSE_BETWEEN_LOCALES_SEC; s >= 1; s--) {
               if (abortRef.current?.signal?.aborted) break;
@@ -403,10 +437,10 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
           const isAbort = err instanceof Error && err.name === 'AbortError';
           const msg = err instanceof Error ? (isAbort ? 'Wstrzymano przez użytkownika' : err.message) : 'Błąd tłumaczenia';
           const is401 = /unauthorized/i.test(msg);
-          const nextLocale = loc;
+          const nextLocale = chunk[0] ?? '';
           setTranslatePausedAt({ pageSlug: page.slug, nextLocale });
           setTranslateStartFrom(nextLocale);
-          setTranslateError(is401 ? 'Sesja wygasła — zaloguj się ponownie.' : `Strona: ${page.slug}, Język: ${loc}. ${msg} — Kliknij Resume.`);
+          setTranslateError(is401 ? 'Sesja wygasła — zaloguj się ponownie.' : `Strona: ${page.slug}, Język: ${chunk.join(',')}. ${msg} — Kliknij Resume.`);
           hadErrorRef.current = true;
           if (is401 && typeof window !== 'undefined') {
             window.location.href = '/twojastara/login';

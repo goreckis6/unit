@@ -74,3 +74,20 @@ export const SLUG_TO_PATH: Record<string, string> = {
   // others
   'blog': '/',
 };
+
+/**
+ * Resolve a calculator path to its canonical URL.
+ * If the path uses an old slug that redirects, returns the destination path.
+ * Use this when building Link hrefs so prefetch hits the real page, not a redirect.
+ */
+export function resolveCalculatorPath(path: string): string {
+  const full = path.startsWith('/') ? path : `/${path}`;
+  const normalized = full.replace(/^\/calculators\//, '').replace(/\/$/, '');
+  const parts = normalized.split('/');
+  const slug = parts[parts.length - 1];
+  if (slug && slug in SLUG_TO_PATH) {
+    const dest = SLUG_TO_PATH[slug];
+    return dest.startsWith('/') ? dest : `/${dest}`;
+  }
+  return full.startsWith('/') ? full : `/${full}`;
+}

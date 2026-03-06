@@ -11,6 +11,34 @@ import { resolveCalculatorPath } from '@/lib/gsc-redirects';
 
 export type PageStage = 'new' | 'in-progress' | 'translate-label' | 'completed' | 'completed-alive';
 
+const LIST_FILTER_STORAGE_KEY = 'twojastara-pages-list-filter';
+
+type SortByVal = 'latest' | 'oldest' | 'category' | 'slug';
+
+function getInitialListFilter(searchParams: URLSearchParams): { searchQuery: string; categoryFilter: string; sortBy: SortByVal } {
+  if (typeof window === 'undefined') return { searchQuery: '', categoryFilter: '', sortBy: 'latest' };
+  const q = searchParams.get('q') ?? '';
+  const cat = searchParams.get('category') ?? '';
+  const sort = searchParams.get('sort') ?? '';
+  if (q || cat || sort) {
+    const validSort: SortByVal = ['latest', 'oldest', 'category', 'slug'].includes(sort) ? (sort as SortByVal) : 'latest';
+    return { searchQuery: q, categoryFilter: cat, sortBy: validSort };
+  }
+  try {
+    const s = localStorage.getItem(LIST_FILTER_STORAGE_KEY);
+    if (s) {
+      const v = JSON.parse(s) as Record<string, unknown>;
+      const sq = typeof v.searchQuery === 'string' ? v.searchQuery : '';
+      const cf = typeof v.categoryFilter === 'string' ? v.categoryFilter : '';
+      const sb: SortByVal = ['latest', 'oldest', 'category', 'slug'].includes(String(v.sortBy)) ? (v.sortBy as SortByVal) : 'latest';
+      return { searchQuery: sq, categoryFilter: cf, sortBy: sb };
+    }
+  } catch {
+    /* ignore */
+  }
+  return { searchQuery: '', categoryFilter: '', sortBy: 'latest' };
+}
+
 function hasEnContent(page: Page): boolean {
   const en = page.translations.find((t) => t.locale === 'en');
   return !!(en?.content && en.content.trim().length > 0);
@@ -268,24 +296,88 @@ export default function AdminPagesList() {
     return byStage;
   }, [pages, translateLabelsProgress?.pageSlug, translateLabelsPausedAt?.pageSlug]);
 
-  const [searchQuery, setSearchQuery] = useState('');
+  const initFilter = useMemo(() => getInitialListFilter(searchParams), [searchParams.toString()]);
+  const [searchQuery, setSearchQuery] = useState(initFilter.searchQuery);
+  const [categoryFilter, setCategoryFilter] = useState(initFilter.categoryFilter);
+  const [sortBy, setSortBy] = useState<SortByVal>(initFilter.sortBy);
   const [pageNum, setPageNum] = useState(1);
   const PAGE_SIZE = 50;
+
+  useEffect(() => {
+    const init = getInitialListFilter(searchParams);
+    setSearchQuery(init.searchQuery);
+    setCategoryFilter(init.categoryFilter);
+    setSortBy(init.sortBy);
+  }, [searchParams.toString()]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (searchQuery) params.set('q', searchQuery);
+    else params.delete('q');
+    if (categoryFilter) params.set('category', categoryFilter);
+    else params.delete('category');
+    if (sortBy !== 'latest') params.set('sort', sortBy);
+    else params.delete('sort');
+    router.replace(`/twojastara/pages?${params.toString()}`, { scroll: false });
+    try {
+      localStorage.setItem(LIST_FILTER_STORAGE_KEY, JSON.stringify({ searchQuery, categoryFilter, sortBy }));
+    } catch {
+      /* ignore */
+    }
+  }, [searchQuery, categoryFilter, sortBy]);
+
+  const categoryOptions = useMemo(() => {
+    const stagePages = pagesByStage[activeBookmark];
+    const cats = new Set<string>();
+    for (const p of stagePages) {
+      const c = (p.category ?? '').trim() || 'uncategorized';
+      cats.add(c);
+    }
+    return Array.from(cats).sort((a, b) => a.localeCompare(b, 'en'));
+  }, [pagesByStage, activeBookmark]);
 
   const filteredPages = useMemo(() => {
     const stagePages = pagesByStage[activeBookmark];
     const q = searchQuery.trim().toLowerCase();
-    if (!q) return stagePages;
-    return stagePages.filter((p) => {
-      const enTitle = p.translations.find((t) => t.locale === 'en')?.title ?? '';
-      const displayTitle = p.translations.find((t) => t.locale === 'en')?.displayTitle ?? '';
-      return (
-        enTitle.toLowerCase().includes(q) ||
-        displayTitle.toLowerCase().includes(q) ||
-        p.slug.toLowerCase().includes(q)
-      );
-    });
-  }, [pagesByStage, activeBookmark, searchQuery]);
+    let list = stagePages;
+    if (q) {
+      list = list.filter((p) => {
+        const enTitle = p.translations.find((t) => t.locale === 'en')?.title ?? '';
+        const displayTitle = p.translations.find((t) => t.locale === 'en')?.displayTitle ?? '';
+        return (
+          enTitle.toLowerCase().includes(q) ||
+          displayTitle.toLowerCase().includes(q) ||
+          p.slug.toLowerCase().includes(q)
+        );
+      });
+    }
+    if (categoryFilter) {
+      const cat = categoryFilter === 'uncategorized' ? '' : categoryFilter;
+      list = list.filter((p) => ((p.category ?? '').trim() || 'uncategorized') === (cat || 'uncategorized'));
+    }
+    if (sortBy === 'latest') {
+      list = [...list].sort((a, b) => {
+        const aT = a.updatedAt ? new Date(a.updatedAt).getTime() : 0;
+        const bT = b.updatedAt ? new Date(b.updatedAt).getTime() : 0;
+        return bT - aT;
+      });
+    } else if (sortBy === 'oldest') {
+      list = [...list].sort((a, b) => {
+        const aT = a.updatedAt ? new Date(a.updatedAt).getTime() : 0;
+        const bT = b.updatedAt ? new Date(b.updatedAt).getTime() : 0;
+        return aT - bT;
+      });
+    } else if (sortBy === 'category') {
+      list = [...list].sort((a, b) => {
+        const ca = (a.category ?? '').trim() || 'uncategorized';
+        const cb = (b.category ?? '').trim() || 'uncategorized';
+        return ca.localeCompare(cb, 'en') || a.slug.localeCompare(b.slug, 'en');
+      });
+    } else if (sortBy === 'slug') {
+      list = [...list].sort((a, b) => a.slug.localeCompare(b.slug, 'en'));
+    }
+    return list;
+  }, [pagesByStage, activeBookmark, searchQuery, categoryFilter, sortBy]);
 
   const paginatedPages = useMemo(() => {
     if (filteredPages.length <= PAGE_SIZE) return filteredPages;
@@ -298,7 +390,7 @@ export default function AdminPagesList() {
 
   useEffect(() => {
     setPageNum(1);
-  }, [activeBookmark, searchQuery]);
+  }, [activeBookmark, searchQuery, categoryFilter, sortBy]);
 
   useEffect(() => {
     fetch('/api/twojastara/pages')
@@ -1343,6 +1435,46 @@ export default function AdminPagesList() {
             }}
             aria-label="Search by page title"
           />
+          <select
+            value={categoryFilter}
+            onChange={(e) => setCategoryFilter(e.target.value)}
+            style={{
+              padding: '0.5rem 0.75rem',
+              fontSize: '0.9rem',
+              border: '1px solid var(--border-color)',
+              borderRadius: 6,
+              background: 'var(--bg-primary)',
+              color: 'var(--text-primary)',
+              minWidth: 140,
+            }}
+            aria-label="Filter by category"
+          >
+            <option value="">All categories</option>
+            {categoryOptions.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value as 'latest' | 'oldest' | 'category' | 'slug')}
+            style={{
+              padding: '0.5rem 0.75rem',
+              fontSize: '0.9rem',
+              border: '1px solid var(--border-color)',
+              borderRadius: 6,
+              background: 'var(--bg-primary)',
+              color: 'var(--text-primary)',
+              minWidth: 140,
+            }}
+            aria-label="Sort by"
+          >
+            <option value="latest">Latest → Older</option>
+            <option value="oldest">Oldest → Newer</option>
+            <option value="category">Category A–Z</option>
+            <option value="slug">Slug A–Z</option>
+          </select>
         </div>
       )}
 

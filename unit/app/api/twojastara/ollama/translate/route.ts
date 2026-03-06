@@ -215,13 +215,21 @@ CRITICAL RULES:
           .filter(Boolean)
           .join('\n\n');
 
+    function extractJson(text: string): string {
+      let s = (text || '').trim();
+      s = s.replace(/^```(?:json)?\s*\n?/i, '').replace(/\n?```\s*$/i, '');
+      const jsonMatch = s.match(/\{[\s\S]*\}/);
+      let jsonStr = jsonMatch ? jsonMatch[0] : s;
+      jsonStr = jsonStr.replace(/,(\s*[}\]])/g, '$1');
+      return jsonStr;
+    }
+
     let raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]));
     let trimmed = (raw || '').trim();
     let parsed: Record<string, unknown>;
 
     for (let attempt = 0; attempt < 2; attempt++) {
-      const jsonMatch = trimmed.match(/\{[\s\S]*\}/);
-      const jsonStr = jsonMatch ? jsonMatch[0] : trimmed;
+      const jsonStr = extractJson(trimmed);
       try {
         parsed = JSON.parse(jsonStr) as Record<string, unknown>;
         break;

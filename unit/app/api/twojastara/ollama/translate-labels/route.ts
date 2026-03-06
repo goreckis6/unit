@@ -146,9 +146,11 @@ Example format: { "pl": { "calculate": "Oblicz", "reset": "Resetuj" }, "de": { "
       : `[Translate to: ${langList}. Each locale's object must have keys: ${Object.keys(Object.fromEntries(entries)).join(', ')}]\n\nTranslate these label values to all ${locales.length} languages:\n${JSON.stringify(Object.fromEntries(entries), null, 2)}`;
 
     const raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]));
-    const trimmed = (raw || '').trim();
+    let trimmed = (raw || '').trim();
+    trimmed = trimmed.replace(/^```(?:json)?\s*\n?/i, '').replace(/\n?```\s*$/i, '');
     const jsonMatch = trimmed.match(/\{[\s\S]*\}/);
-    const jsonStr = jsonMatch ? jsonMatch[0] : trimmed;
+    let jsonStr = jsonMatch ? jsonMatch[0] : trimmed;
+    jsonStr = jsonStr.replace(/,(\s*[}\]])/g, '$1');
     let parsed: Record<string, unknown>;
     try {
       parsed = JSON.parse(jsonStr) as Record<string, unknown>;

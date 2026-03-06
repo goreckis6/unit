@@ -300,11 +300,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       const enDescription = (enFromFull?.description ?? enTrans?.description ?? '').trim();
       const translatedByLocale: Record<string, { content: string; title?: string; displayTitle?: string; description?: string; faqItems?: { question: string; answer: string }[] }> = {};
 
-      const BATCH_SIZE = 2; // locales per API call (content can be long; 2 is safe)
-      const localeChunks: string[][] = [];
-      for (let i = 0; i < localesToTranslate.length; i += BATCH_SIZE) {
-        localeChunks.push(localesToTranslate.slice(i, i + BATCH_SIZE));
-      }
+      const BATCH_SIZE = 1; // content is long; multi-locale causes invalid JSON — use 1 for reliability
+      const localeChunks: string[][] = localesToTranslate.map((l) => [l]);
 
       for (const chunk of localeChunks) {
         if (hadErrorRef.current || abortRef.current?.signal?.aborted) return false;

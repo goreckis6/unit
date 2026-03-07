@@ -639,25 +639,20 @@ export default function AdminPagesList() {
       if (!confirm(msg)) return;
     }
     const allNonEn = [...ADMIN_LOCALES.filter((l) => l !== 'en')].reverse();
-    const BATCH_SIZE = 4; // locales per API call (reduces calls ~4x)
-    const batchTasks: { page: Page; locales: string[]; enLabels: Record<string, string> }[] = [];
+    const labelTasks: { page: Page; loc: string; enLabels: Record<string, string> }[] = [];
     for (const page of withEnLabels) {
       const enTrans = page.translations.find((t) => t.locale === 'en');
       const enLabels = parseJson<Record<string, string>>(enTrans?.calculatorLabels, {});
       if (!Object.values(enLabels).some((v) => v?.trim())) continue;
-      const pageRes = await fetch(`/api/twojastara/pages/${page.id}`);
-      const fullPage = await pageRes.json();
-      if (!pageRes.ok || !fullPage?.translations) continue;
-      const fullTrans = fullPage.translations ?? [];
-      const existingLocales = new Set(fullTrans.map((t: { locale: string }) => t.locale));
+      const existingLocales = new Set(page.translations.map((t) => t.locale));
       const localesToTranslate = allNonEn.filter((l) => existingLocales.has(l));
-      for (let i = 0; i < localesToTranslate.length; i += BATCH_SIZE) {
-        batchTasks.push({ page, locales: localesToTranslate.slice(i, i + BATCH_SIZE), enLabels });
+      for (const loc of localesToTranslate) {
+        labelTasks.push({ page, loc, enLabels });
       }
     }
-    const totalSteps = batchTasks.reduce((sum, t) => sum + t.locales.length, 0);
+    const totalSteps = labelTasks.length;
     if (totalSteps === 0) {
-      setTranslateLabelsLoading(false);
+      alert('No labels to translate. Ensure pages have content translated to all locales first (run Translate), then Translate Labels.');
       return;
     }
     setActiveBookmark('translate-label');
@@ -668,62 +663,52 @@ export default function AdminPagesList() {
     translateLabelsAbortRef.current = new AbortController();
     const concurrency = Math.max(1, Math.min(6, translateLabelsConcurrency));
     const stepRef = { current: 0 };
-    const processBatch = async (batch: { page: Page; locales: string[]; enLabels: Record<string, string> }) => {
-      const { page, locales, enLabels } = batch;
-      if (locales.length === 0) return;
-      let res: Response;
-      for (let attempt = 0; attempt <= 2; attempt++) {
-        res = await fetch('/api/twojastara/ollama/translate-labels', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ labels: enLabels, targetLocales: locales }),
-          credentials: 'include',
-          signal: translateLabelsAbortRef.current?.signal,
-        });
-        if (res!.status === 401 && typeof window !== 'undefined') {
-          window.location.href = '/twojastara/login';
-          return;
-        }
-        if (res!.ok || attempt >= 2) break;
-        await new Promise((r) => setTimeout(r, 2000));
-      }
-      const data = await safeResJson(res!);
-      if (!res!.ok) throw new Error(String(data?.error || `Translate labels to ${locales.join(',')} failed`));
-      const labelsByLocale = (data?.labelsByLocale && typeof data.labelsByLocale === 'object') ? data.labelsByLocale as Record<string, Record<string, string>> : {};
-      const updates = locales.map((loc) => ({ locale: loc, calculatorLabels: labelsByLocale[loc] || enLabels }));
-      const patchRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ updates }),
-        credentials: 'include',
-      });
-      if (!patchRes.ok) throw new Error(String((await safeResJson(patchRes)).error || 'Failed to save'));
-      const locToLab = new Map(locales.map((loc) => [loc, labelsByLocale[loc] || {}]));
-      setPages((prev) =>
-        prev.map((p) => (p.id !== page.id ? p : {
-          ...p,
-          translations: p.translations.map((t) => {
-            const lab = locToLab.get(t.locale);
-            return lab ? { ...t, calculatorLabels: JSON.stringify(lab) } : t;
-          }),
-        }))
-      );
-      stepRef.current += locales.length;
-      setTranslateLabelsProgress({ current: stepRef.current, total: totalSteps, pageSlug: page.slug, pageCategory: page.category ?? 'math', locale: locales[locales.length - 1] });
-    };
     try {
       if (concurrency <= 1) {
-        for (const batch of batchTasks) {
+        for (const { page, loc, enLabels } of labelTasks) {
           if (translateLabelsAbortRef.current?.signal.aborted) break;
           if (translateLabelsPausedRef.current) {
-            setTranslateLabelsPausedAt({ pageSlug: batch.page.slug, nextLocale: batch.locales[0] });
+            setTranslateLabelsPausedAt({ pageSlug: page.slug, nextLocale: loc });
             while (translateLabelsPausedRef.current && !translateLabelsAbortRef.current?.signal.aborted) {
               await new Promise((r) => setTimeout(r, 300));
             }
             setTranslateLabelsPausedAt(null);
             if (translateLabelsAbortRef.current?.signal.aborted) break;
           }
-          await processBatch(batch);
+          stepRef.current++;
+          setTranslateLabelsProgress({ current: stepRef.current, total: totalSteps, pageSlug: page.slug, pageCategory: page.category ?? 'math', locale: loc });
+          let res: Response;
+          for (let attempt = 0; attempt <= 2; attempt++) {
+            res = await fetch('/api/twojastara/ollama/translate-labels', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ labels: enLabels, targetLocale: loc }),
+              credentials: 'include',
+              signal: translateLabelsAbortRef.current?.signal,
+            });
+            if (res!.status === 401 && typeof window !== 'undefined') {
+              window.location.href = '/twojastara/login';
+              return;
+            }
+            if (res!.ok || attempt >= 2) break;
+            await new Promise((r) => setTimeout(r, 2000));
+          }
+          const data = await safeResJson(res!);
+          if (!res!.ok) throw new Error(String(data?.error || `Translate labels to ${loc} failed`));
+          const lab = (data?.labels && typeof data.labels === 'object' && !Array.isArray(data.labels) ? data.labels : {}) as Record<string, string>;
+          const patchRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ updates: [{ locale: loc, calculatorLabels: lab }] }),
+            credentials: 'include',
+          });
+          if (!patchRes.ok) throw new Error(String((await safeResJson(patchRes)).error || 'Failed to save'));
+          setPages((prev) =>
+            prev.map((p) => (p.id !== page.id ? p : {
+              ...p,
+              translations: p.translations.map((t) => (t.locale === loc ? { ...t, calculatorLabels: JSON.stringify(lab) } : t)),
+            }))
+          );
         }
       } else {
         let taskIdx = 0;
@@ -739,14 +724,45 @@ export default function AdminPagesList() {
         const runTask = async () => {
           while (!translateLabelsAbortRef.current?.signal.aborted) {
             const i = taskIdx++;
-            if (i >= batchTasks.length) break;
-            const batch = batchTasks[i];
-            throttledSetProgress(stepRef.current + batch.locales.length, batch.page.slug, batch.locales[batch.locales.length - 1]);
-            await processBatch(batch);
-            throttledSetProgress(stepRef.current, batch.page.slug, batch.locales[batch.locales.length - 1]);
+            if (i >= labelTasks.length) break;
+            const { page, loc, enLabels } = labelTasks[i];
+            stepRef.current++;
+            throttledSetProgress(stepRef.current, page.slug, loc);
+            let res: Response;
+            for (let attempt = 0; attempt <= 2; attempt++) {
+              res = await fetch('/api/twojastara/ollama/translate-labels', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ labels: enLabels, targetLocale: loc }),
+                credentials: 'include',
+                signal: translateLabelsAbortRef.current?.signal,
+              });
+              if (res.status === 401 && typeof window !== 'undefined') {
+                window.location.href = '/twojastara/login';
+                return;
+              }
+              if (res.ok || attempt >= 2) break;
+              await new Promise((r) => setTimeout(r, 2000));
+            }
+            const data = await safeResJson(res!);
+            if (!res!.ok) throw new Error(String(data?.error || `Translate labels to ${loc} failed`));
+            const lab = (data?.labels && typeof data.labels === 'object' && !Array.isArray(data.labels) ? data.labels : {}) as Record<string, string>;
+            const patchRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
+              method: 'PATCH',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ updates: [{ locale: loc, calculatorLabels: lab }] }),
+              credentials: 'include',
+            });
+            if (!patchRes.ok) throw new Error(String((await safeResJson(patchRes)).error || 'Failed to save'));
+            setPages((prev) =>
+              prev.map((p) => (p.id !== page.id ? p : {
+                ...p,
+                translations: p.translations.map((t) => (t.locale === loc ? { ...t, calculatorLabels: JSON.stringify(lab) } : t)),
+              }))
+            );
           }
         };
-        await Promise.all(Array(Math.min(concurrency, batchTasks.length)).fill(0).map(() => runTask()));
+        await Promise.all(Array(Math.min(concurrency, labelTasks.length)).fill(0).map(() => runTask()));
       }
       setSelectedIds(new Set());
       setTranslateLabelsSuccess(`Translated labels for ${withEnLabels.length} page(s)`);

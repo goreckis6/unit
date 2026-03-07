@@ -4,7 +4,7 @@ import { createContext, useCallback, useContext, useEffect, useRef, useState, ty
 import { ADMIN_LOCALES } from '@/lib/admin-locales';
 
 const STORAGE_KEY = 'twojastara-translate-paused';
-const PAUSE_BETWEEN_LOCALES_SEC = 3;
+const PAUSE_BETWEEN_LOCALES_SEC = 1; // reduced from 3 — parallel batches make long pauses unnecessary
 
 function parseJson<T>(val: unknown, fallback: T): T {
   if (!val) return fallback;
@@ -59,6 +59,7 @@ type TranslateContextValue = {
     translateStartFrom: string;
     translateOnlyOne: boolean;
     translateConcurrency?: number;
+    contentParallel?: number;
     resumeOverride?: TranslatePausedAt;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
@@ -154,13 +155,15 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     translateStartFrom: string;
     translateOnlyOne: boolean;
     translateConcurrency?: number;
+    contentParallel?: number;
     resumeOverride?: TranslatePausedAt;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
     onComplete?: () => void;
   }) => {
     const { pages, selectedIds, translateOnlyOne, resumeOverride, autoResumeOnError, onPagesUpdate, onComplete } = params;
-    const concurrency = Math.max(1, Math.min(6, params.translateConcurrency ?? 1));
+    const concurrency = Math.max(1, Math.min(6, params.translateConcurrency ?? 4));
+    const contentParallel = Math.max(1, Math.min(8, params.contentParallel ?? 4));
     const ids = Array.from(selectedIds);
     if (ids.length === 0) {
       setTranslateError('Zaznacz co najmniej jedną stronę.');
@@ -300,70 +303,78 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       const enDescription = (enFromFull?.description ?? enTrans?.description ?? '').trim();
       const translatedByLocale: Record<string, { content: string; title?: string; displayTitle?: string; description?: string; faqItems?: { question: string; answer: string }[] }> = {};
 
-      const BATCH_SIZE = 1; // content is long; multi-locale causes invalid JSON — use 1 for reliability
       const localeChunks: string[][] = localesToTranslate.map((l) => [l]);
 
-      for (const chunk of localeChunks) {
+      for (let bi = 0; bi < localeChunks.length; bi += contentParallel) {
         if (hadErrorRef.current || abortRef.current?.signal?.aborted) return false;
-        stepRef.current += chunk.length;
-        setTranslateProgress({ current: stepRef.current, total: totalSteps, pageTitle: page.slug, locale: chunk[chunk.length - 1] ?? '' });
+        const batch = localeChunks.slice(bi, bi + contentParallel);
+        const batchLocs = batch.map((c) => c[0]).filter(Boolean);
+        stepRef.current += batch.length;
+        setTranslateProgress({ current: stepRef.current, total: totalSteps, pageTitle: page.slug, locale: batchLocs.join(', ') });
         try {
-          let res: Response;
-          let data: { error?: string; content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[]; byLocale?: Record<string, { content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[] }> };
-          for (let attempt = 0; attempt <= 2; attempt++) {
-            res = await fetchWithTimeoutAndRetry(
-              '/api/twojastara/ollama/translate',
-              {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  content: enContent,
-                  faqItems: enFaqItems,
-                  targetLocales: chunk,
-                  title: enTitle || undefined,
-                  displayTitle: enDisplayTitle || undefined,
-                  description: enDescription || undefined,
-                }),
-                credentials: 'include',
-              },
-              172_800_000,
-              2,
-              abortRef.current?.signal ?? null
-            );
-            try { data = await res.json(); } catch {
-              throw new Error(res.status === 401 ? 'Unauthorized' : `Błąd serwera (${res.status})`);
-            }
-            if (res.ok) break;
-            if (res.status === 401) throw new Error(data.error || 'Unauthorized');
-            if (res.status === 503 && attempt < 2) {
-              await new Promise((r) => setTimeout(r, 10000));
-              continue;
-            }
-            throw new Error(data.error || `Failed to translate to ${chunk.join(',')}`);
-          }
-          if (data.byLocale && typeof data.byLocale === 'object') {
-            for (const loc of chunk) {
-              const tr = data.byLocale[loc];
-              if (tr) {
-                translatedByLocale[loc] = {
-                  content: tr.content ?? '',
-                  title: tr.title,
-                  displayTitle: tr.displayTitle,
-                  description: tr.description,
-                  faqItems: Array.isArray(tr.faqItems) ? (tr.faqItems as { question: string; answer: string }[]) : undefined,
+          const results = await Promise.all(
+            batch.map(async (chunk) => {
+              let res: Response;
+              let data: { error?: string; content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[]; byLocale?: Record<string, { content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[] }> };
+              for (let attempt = 0; attempt <= 2; attempt++) {
+                res = await fetchWithTimeoutAndRetry(
+                  '/api/twojastara/ollama/translate',
+                  {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                      content: enContent,
+                      faqItems: enFaqItems,
+                      targetLocales: chunk,
+                      title: enTitle || undefined,
+                      displayTitle: enDisplayTitle || undefined,
+                      description: enDescription || undefined,
+                    }),
+                    credentials: 'include',
+                  },
+                  172_800_000,
+                  2,
+                  abortRef.current?.signal ?? null
+                );
+                try { data = await res.json(); } catch {
+                  throw new Error(res.status === 401 ? 'Unauthorized' : `Błąd serwera (${res.status})`);
+                }
+                if (res.ok) break;
+                if (res.status === 401) throw new Error(data.error || 'Unauthorized');
+                if (res.status === 503 && attempt < 2) {
+                  await new Promise((r) => setTimeout(r, 10000));
+                  continue;
+                }
+                throw new Error(data.error || `Failed to translate to ${chunk.join(',')}`);
+              }
+              return { chunk, data };
+            })
+          );
+          for (const { chunk, data } of results) {
+            if (data.byLocale && typeof data.byLocale === 'object') {
+              for (const loc of chunk) {
+                const tr = data.byLocale[loc];
+                if (tr) {
+                  translatedByLocale[loc] = {
+                    content: tr.content ?? '',
+                    title: tr.title,
+                    displayTitle: tr.displayTitle,
+                    description: tr.description,
+                    faqItems: Array.isArray(tr.faqItems) ? (tr.faqItems as { question: string; answer: string }[]) : undefined,
+                  };
+                }
+              }
+            } else {
+              const singleLoc = chunk[0];
+              if (singleLoc) {
+                translatedByLocale[singleLoc] = {
+                  content: data.content ?? '',
+                  title: data.title,
+                  displayTitle: data.displayTitle,
+                  description: data.description,
+                  faqItems: Array.isArray(data.faqItems) ? (data.faqItems as { question: string; answer: string }[]) : undefined,
                 };
               }
-            }
-          } else {
-            const singleLoc = chunk[0];
-            if (singleLoc) {
-              translatedByLocale[singleLoc] = {
-                content: data.content ?? '',
-                title: data.title,
-                displayTitle: data.displayTitle,
-                description: data.description,
-                faqItems: Array.isArray(data.faqItems) ? (data.faqItems as { question: string; answer: string }[]) : undefined,
-              };
             }
           }
 
@@ -417,10 +428,10 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             })
           );
 
-          const lastLocInChunk = chunk[chunk.length - 1];
-          const isLastChunk = localeChunks.indexOf(chunk) >= localeChunks.length - 1;
+          const lastLocInBatch = batchLocs[batchLocs.length - 1];
+          const isLastBatch = bi + contentParallel >= localeChunks.length;
           const isLastPage = pageIndex >= pageQueue.length - 1;
-          if (concurrency === 1 && (!isLastChunk || !isLastPage) && (localesToTranslate?.indexOf(lastLocInChunk ?? '') ?? -1) >= 0) {
+          if (concurrency === 1 && (!isLastBatch || !isLastPage) && (localesToTranslate?.indexOf(lastLocInBatch ?? '') ?? -1) >= 0) {
             setTranslatePauseCountdown(PAUSE_BETWEEN_LOCALES_SEC);
             for (let s = PAUSE_BETWEEN_LOCALES_SEC; s >= 1; s--) {
               if (abortRef.current?.signal?.aborted) break;
@@ -434,10 +445,10 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
           const isAbort = err instanceof Error && err.name === 'AbortError';
           const msg = err instanceof Error ? (isAbort ? 'Wstrzymano przez użytkownika' : err.message) : 'Błąd tłumaczenia';
           const is401 = /unauthorized/i.test(msg);
-          const nextLocale = chunk[0] ?? '';
+          const nextLocale = batchLocs[0] ?? '';
           setTranslatePausedAt({ pageSlug: page.slug, nextLocale });
           setTranslateStartFrom(nextLocale);
-          setTranslateError(is401 ? 'Sesja wygasła — zaloguj się ponownie.' : `Strona: ${page.slug}, Język: ${chunk.join(',')}. ${msg} — Kliknij Resume.`);
+          setTranslateError(is401 ? 'Sesja wygasła — zaloguj się ponownie.' : `Strona: ${page.slug}, Język: ${batchLocs.join(',')}. ${msg} — Kliknij Resume.`);
           hadErrorRef.current = true;
           if (is401 && typeof window !== 'undefined') {
             window.location.href = '/twojastara/login';

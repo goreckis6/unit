@@ -235,7 +235,8 @@ export default function AdminPagesList() {
   const [loading, setLoading] = useState(true);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [translateOnlyOne, setTranslateOnlyOne] = useState(false);
-  const [translateConcurrency, setTranslateConcurrency] = useState(3);
+  const [translateConcurrency, setTranslateConcurrency] = useState(4);
+  const [contentParallel, setContentParallel] = useState(4);
   const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
   const [generateProvider, setGenerateProvider] = useState<GenerateProviderType>('ollama');
@@ -528,6 +529,7 @@ export default function AdminPagesList() {
       translateStartFrom,
       translateOnlyOne: false,
       translateConcurrency,
+      contentParallel,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -934,6 +936,7 @@ export default function AdminPagesList() {
       translateStartFrom,
       translateOnlyOne,
       translateConcurrency,
+      contentParallel,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -958,6 +961,7 @@ export default function AdminPagesList() {
       translateStartFrom,
       translateOnlyOne: false,
       translateConcurrency,
+      contentParallel,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -1241,6 +1245,35 @@ export default function AdminPagesList() {
                         className="admin-form-select"
                         style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem', width: 48 }}
                         title="Strony tłumaczonych równolegle (content). Zalecane: 3-8. Więcej = szybsze, może obciążyć API."
+                      />
+                    </label>
+                    <label
+                      style={{
+                        fontSize: '0.75rem',
+                        color: 'var(--text-secondary)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                      }}
+                    >
+                      Locales/batch:
+                      <input
+                        type="number"
+                        min={1}
+                        max={12}
+                        value={String(contentParallel)}
+                        onChange={(e) => {
+                          const v = Math.min(8, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          setContentParallel(v);
+                        }}
+                        onBlur={(e) => {
+                          const v = Math.min(8, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          setContentParallel(v);
+                        }}
+                        disabled={!!translateProgress || !!translateLabelsLoading}
+                        className="admin-form-select"
+                        style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem', width: 48 }}
+                        title="Języków równolegle na stronę. 4 = ~4× szybsze. OLLAMA_MAX_CONCURRENT=4 na serwerze."
                       />
                     </label>
                     <label

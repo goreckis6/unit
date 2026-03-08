@@ -218,6 +218,7 @@ export default function AdminPagesList() {
     setTranslateStartFrom,
     translateError,
     translateSuccess,
+    setTranslateSuccess,
     autoResumeCountdown,
     setAutoResumeCountdown,
     startTranslate,
@@ -228,6 +229,7 @@ export default function AdminPagesList() {
     generateProgress,
     generateError,
     generateSuccess,
+    setGenerateSuccess,
     pauseGenerate,
     startGenerate,
   } = useGenerate();
@@ -311,6 +313,22 @@ export default function AdminPagesList() {
     setSortBy(init.sortBy);
   }, [searchParams.toString()]);
 
+  // Reset categoryFilter when it's invalid (e.g. from URL/localStorage, category no longer exists)
+  const categoryOptions = useMemo(() => {
+    const cats = new Set<string>();
+    for (const p of pages) {
+      const c = (p.category ?? '').trim() || 'uncategorized';
+      cats.add(c);
+    }
+    return Array.from(cats).sort((a, b) => a.localeCompare(b, 'en'));
+  }, [pages]);
+
+  useEffect(() => {
+    if (categoryFilter && !categoryOptions.includes(categoryFilter)) {
+      setCategoryFilter('');
+    }
+  }, [categoryFilter, categoryOptions]);
+
   useEffect(() => {
     const params = new URLSearchParams(searchParams.toString());
     if (searchQuery) params.set('q', searchQuery);
@@ -326,16 +344,6 @@ export default function AdminPagesList() {
       /* ignore */
     }
   }, [searchQuery, categoryFilter, sortBy]);
-
-  const categoryOptions = useMemo(() => {
-    const stagePages = pagesByStage[activeBookmark];
-    const cats = new Set<string>();
-    for (const p of stagePages) {
-      const c = (p.category ?? '').trim() || 'uncategorized';
-      cats.add(c);
-    }
-    return Array.from(cats).sort((a, b) => a.localeCompare(b, 'en'));
-  }, [pagesByStage, activeBookmark]);
 
   const filteredPages = useMemo(() => {
     const stagePages = pagesByStage[activeBookmark];
@@ -606,8 +614,7 @@ export default function AdminPagesList() {
       setCheckResult(null);
       setCheckFailedIds(new Set());
       setCheckFailedType(null);
-      setTranslateLabelsSuccess(data.message ?? `Cleaned ${data.cleaned} page(s).`);
-      setTimeout(() => setTranslateLabelsSuccess(''), 4000);
+      setTranslateLabelsSuccess(data.message ?? `Wyczyszczono content i labels dla ${data.cleaned ?? 0} stron(ach).`);
     } catch (e) {
       alert(e instanceof Error ? e.message : 'Clean translations failed');
     } finally {
@@ -765,8 +772,7 @@ export default function AdminPagesList() {
         await Promise.all(Array(Math.min(concurrency, labelTasks.length)).fill(0).map(() => runTask()));
       }
       setSelectedIds(new Set());
-      setTranslateLabelsSuccess(`Translated labels for ${withEnLabels.length} page(s)`);
-      setTimeout(() => setTranslateLabelsSuccess(''), 5000);
+      setTranslateLabelsSuccess(`Zakończono tłumaczenie etykiet kalkulatorów: ${withEnLabels.length} stron(ach).`);
       onCompleteCallback?.();
     } catch (e) {
       const isAbort = e instanceof Error && e.name === 'AbortError';
@@ -917,8 +923,7 @@ export default function AdminPagesList() {
         };
         await Promise.all(Array(Math.min(concurrency, steps.length)).fill(0).map(() => worker()));
       }
-      setTranslateLabelsSuccess(`Translated missing labels for ${withEnLabels.length} page(s)`);
-      setTimeout(() => setTranslateLabelsSuccess(''), 5000);
+      setTranslateLabelsSuccess(`Zakończono tłumaczenie brakujących etykiet: ${withEnLabels.length} stron(ach).`);
       onCompleteCallback?.();
     } catch (e) {
       const isAbort = e instanceof Error && e.name === 'AbortError';
@@ -1871,21 +1876,45 @@ export default function AdminPagesList() {
         </div>
       )}
         {(generateSuccess || translateSuccess || translateLabelsSuccess) && (
-        <div
-          role="status"
-          style={{
-            marginBottom: '1rem',
-            padding: '1rem 1.25rem',
-            background: 'rgba(16, 185, 129, 0.15)',
-            border: '1px solid var(--success-color, #10b981)',
-            borderRadius: 8,
-            color: 'var(--success-color, #10b981)',
-            fontSize: '0.95rem',
-            fontWeight: 500,
-          }}
-        >
-          {generateSuccess || translateSuccess || translateLabelsSuccess}
-        </div>
+        <>
+          <div
+            role="status"
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              zIndex: 9999,
+              margin: 0,
+              padding: '1rem 1.25rem',
+              background: 'rgba(16, 185, 129, 0.95)',
+              borderBottom: '2px solid var(--success-color, #10b981)',
+              color: '#fff',
+              fontSize: '1rem',
+              fontWeight: 600,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '1rem',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+            }}
+          >
+            <span>✓ {generateSuccess || translateSuccess || translateLabelsSuccess}</span>
+            <button
+              type="button"
+              onClick={() => {
+                setTranslateLabelsSuccess('');
+                setGenerateSuccess('');
+                setTranslateSuccess('');
+              }}
+              className="btn btn-secondary btn-sm"
+              style={{ padding: '0.4rem 0.75rem', background: 'rgba(255,255,255,0.2)', borderColor: 'rgba(255,255,255,0.5)', color: '#fff', flexShrink: 0 }}
+            >
+              Zamknij
+            </button>
+          </div>
+          <div style={{ height: 56 }} />
+        </>
       )}
       {checkResult && (
         <div

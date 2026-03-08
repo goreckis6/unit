@@ -46,6 +46,7 @@ type GenerateContextValue = {
   generateProgress: GenerateProgress | null;
   generateError: string;
   generateSuccess: string;
+  setGenerateSuccess: (v: string) => void;
   pauseGenerate: () => void;
   startGenerate: (params: {
     pages: Page[];
@@ -322,8 +323,7 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
       setGenerateProgress(null);
       if (!hadError) {
         onComplete?.();
-        setGenerateSuccess(`Wygenerowano treść dla ${finalPages.length} stron.`);
-        setTimeout(() => setGenerateSuccess(''), 5000);
+        setGenerateSuccess(`Zakończono generowanie treści: ${finalPages.length} stron(ach).`);
       }
     },
     []
@@ -335,6 +335,7 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
         generateProgress,
         generateError,
         generateSuccess,
+        setGenerateSuccess,
         pauseGenerate,
         startGenerate,
       }}

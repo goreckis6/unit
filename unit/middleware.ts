@@ -3,6 +3,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { routing, ROUTING_LOCALES } from './i18n/routing';
 import { SLUG_TO_PATH } from '@/lib/gsc-redirects';
 
+// Canonical domain (no www) — redirect www to avoid duplicate content in Google
+const CANONICAL_HOST = 'calculinohub.com';
+
 const handleI18nRouting = createMiddleware(routing);
 
 type Locale = (typeof routing.locales)[number];
@@ -51,6 +54,15 @@ const UNSUPPORTED_LOCALES = ['fa', 'th', 'vi'];
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const safePathname = pathname ?? '';
+
+  // www → non-www redirect (301) — applies to all current and future pages
+  const host = request.headers.get('host') ?? '';
+  if (host.toLowerCase().startsWith('www.')) {
+    const redirectUrl = new URL(request.url);
+    redirectUrl.host = CANONICAL_HOST;
+    redirectUrl.protocol = 'https:';
+    return NextResponse.redirect(redirectUrl, 301);
+  }
 
   // Malformed URLs (e.g. /$) → redirect to home
   if (safePathname === '/$') {

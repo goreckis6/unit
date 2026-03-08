@@ -51,6 +51,7 @@ type TranslateContextValue = {
   setTranslateStartFrom: (v: string) => void;
   translateError: string;
   translateSuccess: string;
+  setTranslateSuccess: (v: string) => void;
   autoResumeCountdown: number | null;
   setAutoResumeCountdown: (v: number | null) => void;
   startTranslate: (params: {
@@ -503,8 +504,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       if (!hadError) {
         setTranslatePausedAt(null);
         setTranslateStartFrom('');
-        setTranslateSuccess(`✓ Zakończono — przetłumaczono ${totalSteps} języków (${pagesTranslatedCountRef.current} stron).`);
-        setTimeout(() => setTranslateSuccess(''), 8000);
+        setTranslateSuccess(`Zakończono tłumaczenie treści: ${totalSteps} języków na ${pagesTranslatedCountRef.current} stron(ach).`);
         onComplete?.();
       }
     }
@@ -518,6 +518,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     setTranslateStartFrom,
     translateError,
     translateSuccess,
+    setTranslateSuccess,
     autoResumeCountdown,
     setAutoResumeCountdown,
     startTranslate,

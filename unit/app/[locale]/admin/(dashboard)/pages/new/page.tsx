@@ -267,7 +267,7 @@ export default function AdminNewPage() {
   const [slug, setSlug] = useState('');
   const [category, setCategory] = useState('');
   const [published, setPublished] = useState(false);
-  const [relatedCalculatorsMode, setRelatedCalculatorsMode] = useState<'manual' | 'random' | 'both'>('manual');
+  const [relatedCalculatorsMode, setRelatedCalculatorsMode] = useState<'manual' | 'random' | 'both'>('random');
   const [relatedCalculatorsCount, setRelatedCalculatorsCount] = useState(6);
   const [linkedCalculatorPath, setLinkedCalculatorPath] = useState('');
   const [calculatorCode, setCalculatorCode] = useState(ADDING_FRACTIONS_EXAMPLE);
@@ -280,7 +280,7 @@ export default function AdminNewPage() {
   );
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
-  const [showCalculatorSection, setShowCalculatorSection] = useState(false);
+  const [showCalculatorSection, setShowCalculatorSection] = useState(true);
   const [slugExists, setSlugExists] = useState(false);
   const [slugChecking, setSlugChecking] = useState(false);
   const [showJsonImport, setShowJsonImport] = useState(false);

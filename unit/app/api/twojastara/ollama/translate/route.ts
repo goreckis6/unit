@@ -178,6 +178,7 @@ CRITICAL RULES:
 - "content" = ONLY the main article/body text. NEVER include FAQ blocks in content
 - Preserve Markdown: # H1, ## H2, **bold**, *italic*, code blocks, bullets
 - "faqItems" = array of {"question","answer"} — put translated Q&A here, NOT in content
+- NEVER truncate. Output MUST be complete valid JSON with FULL content for each locale.
 - Example: { "pl": { "content": "...", "title": "...", "faqItems": [...] }, "de": { ... } }`
       : `Translate from English to ${LOCALE_NAMES[locales[0]] || locales[0]}. Source is ALWAYS English. Output ONLY valid JSON, no markdown or extra text.
 
@@ -187,7 +188,8 @@ CRITICAL RULES:
 - "content" = ONLY the main article/body text. NEVER include FAQ, Q&A, or question-answer blocks in content. FAQ goes ONLY in "faqItems"
 - Preserve Markdown: # H1, ## H2, **bold**, *italic*, code blocks, bullets
 - "faqItems" = array of {"question","answer"} — only if FAQ was provided. Put translated Q&A here, NOT in content
-- Do NOT add "## Markdown content", "## FAQ", or similar headers to content`;
+- Do NOT add "## Markdown content", "## FAQ", or similar headers to content
+- NEVER truncate. Output MUST be complete valid JSON. Return the ENTIRE translation including full content.`;
 
     const userContent = isBatch
       ? [
@@ -224,16 +226,42 @@ CRITICAL RULES:
       return jsonStr;
     }
 
+    /** Try to repair JSON truncated by Ollama (output token limit). Closes unclosed strings and braces. */
+    function tryRepairTruncated(jsonStr: string): string {
+      let s = jsonStr.trimEnd();
+      const openBraces = (s.match(/\{/g) || []).length;
+      const closeBraces = (s.match(/\}/g) || []).length;
+      if (openBraces <= closeBraces) return s;
+      const needed = openBraces - closeBraces;
+      const lastChar = s.slice(-1);
+      if (lastChar === '"' || lastChar === '}' || lastChar === ']') {
+        s += '}'.repeat(needed);
+      } else {
+        s += '"' + '}'.repeat(needed);
+      }
+      return s;
+    }
+
     let raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]));
     let trimmed = (raw || '').trim();
     let parsed: Record<string, unknown>;
 
     for (let attempt = 0; attempt < 3; attempt++) {
-      const jsonStr = extractJson(trimmed);
+      let jsonStr = extractJson(trimmed);
       try {
         parsed = JSON.parse(jsonStr) as Record<string, unknown>;
         break;
       } catch {
+        const repaired = tryRepairTruncated(jsonStr);
+        if (repaired !== jsonStr) {
+          try {
+            parsed = JSON.parse(repaired) as Record<string, unknown>;
+            console.warn('[Ollama translate] Used repaired truncated JSON');
+            break;
+          } catch {
+            /* fall through to retry */
+          }
+        }
         if (attempt < 2) {
           await new Promise((r) => setTimeout(r, 2000));
           raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]));

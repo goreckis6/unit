@@ -279,7 +279,7 @@ export default function AdminEditPage() {
   const [slug, setSlug] = useState('');
   const [category, setCategory] = useState('');
   const [published, setPublished] = useState(false);
-  const [relatedCalculatorsMode, setRelatedCalculatorsMode] = useState<'manual' | 'random' | 'both'>('manual');
+  const [relatedCalculatorsMode, setRelatedCalculatorsMode] = useState<'manual' | 'random' | 'both'>('random');
   const [relatedCalculatorsCount, setRelatedCalculatorsCount] = useState(6);
   const [linkedCalculatorPath, setLinkedCalculatorPath] = useState('');
   const [calculatorCode, setCalculatorCode] = useState('');
@@ -289,7 +289,7 @@ export default function AdminEditPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
-  const [showCalculatorSection, setShowCalculatorSection] = useState(false);
+  const [showCalculatorSection, setShowCalculatorSection] = useState(true);
   const [slugExists, setSlugExists] = useState(false);
   const [slugChecking, setSlugChecking] = useState(false);
   const [showJsonImport, setShowJsonImport] = useState(false);
@@ -1255,8 +1255,8 @@ export default function AdminEditPage() {
               <textarea
                 value={t.content}
                 onChange={(e) => updateTranslation(activeLocale, 'content', e.target.value)}
-                rows={8}
-                className="admin-form-textarea" style={{ resize: 'vertical' }}
+                className="admin-form-textarea"
+                style={{ minHeight: '500px', resize: 'vertical' }}
               />
             </div>
 

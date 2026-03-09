@@ -131,6 +131,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     signal?: AbortSignal | null
   ): Promise<Response> {
     for (let attempt = 0; attempt <= retries; attempt++) {
+      if (signal?.aborted) throw new DOMException('Aborted', 'AbortError');
       const controller = new AbortController();
       const id = setTimeout(() => controller.abort(), timeoutMs);
       const onAbort = () => { clearTimeout(id); controller.abort(); };
@@ -143,6 +144,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       } catch (e) {
         clearTimeout(id);
         signal?.removeEventListener('abort', onAbort);
+        const isAbort = e instanceof DOMException && e.name === 'AbortError';
+        if (isAbort) throw e;
         if (attempt < retries) await new Promise((r) => setTimeout(r, 2000));
         else throw e;
       }
@@ -266,7 +269,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       const enDisplayTitle = (enTrans?.displayTitle ?? '').trim();
       if (!enContent) return true;
 
-      const pageRes = await fetch(`/api/twojastara/pages/${page.id}`);
+      const pageRes = await fetch(`/api/twojastara/pages/${page.id}`, { credentials: 'include', signal: abortRef.current?.signal });
       const fullPage = await pageRes.json();
       if (!pageRes.ok || !fullPage?.translations) {
         setTranslateError(`Nie udało się załadować strony: ${page.slug}`);
@@ -408,6 +411,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ slug: fullPage.slug, category: fullPage.category, published: fullPage.published, translations }),
+            credentials: 'include',
+            signal: abortRef.current?.signal,
           });
           if (!patchRes.ok) throw new Error((await patchRes.json()).error || 'Failed to save');
 

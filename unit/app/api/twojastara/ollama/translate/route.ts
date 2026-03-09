@@ -228,16 +228,18 @@ CRITICAL RULES:
     let trimmed = (raw || '').trim();
     let parsed: Record<string, unknown>;
 
-    for (let attempt = 0; attempt < 2; attempt++) {
+    for (let attempt = 0; attempt < 3; attempt++) {
       const jsonStr = extractJson(trimmed);
       try {
         parsed = JSON.parse(jsonStr) as Record<string, unknown>;
         break;
       } catch {
-        if (attempt === 0) {
+        if (attempt < 2) {
+          await new Promise((r) => setTimeout(r, 2000));
           raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]));
           trimmed = (raw || '').trim();
         } else {
+          console.error('[Ollama translate] invalid JSON, raw snippet:', (trimmed || '').slice(0, 500));
           throw new Error('Ollama returned invalid JSON. Spróbuj ponownie.');
         }
       }

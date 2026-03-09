@@ -250,9 +250,10 @@ export default function AdminPagesList() {
   const [bulkPublishLoading, setBulkPublishLoading] = useState(false);
   const [cleanContentLoading, setCleanContentLoading] = useState(false);
   const [translateLabelsLoading, setTranslateLabelsLoading] = useState(false);
-  const [translateLabelsProgress, setTranslateLabelsProgress] = useState<{ current: number; total: number; pageSlug: string; pageCategory: string; locale: string } | null>(null);
+  const [translateLabelsProgress, setTranslateLabelsProgress] = useState<{ current: number; total: number; pageSlug: string; pageCategory: string; locale: string; startedAt?: number } | null>(null);
   const [translateLabelsPausedAt, setTranslateLabelsPausedAt] = useState<{ pageSlug: string; nextLocale: string } | null>(null);
   const [translateLabelsSuccess, setTranslateLabelsSuccess] = useState('');
+  const [elapsedTick, setElapsedTick] = useState(0);
   const translateLabelsPausedRef = useRef(false);
   const translateLabelsAbortRef = useRef<AbortController | null>(null);
   const [generatedIdsThisRun, setGeneratedIdsThisRun] = useState<Set<string>>(new Set());
@@ -271,6 +272,12 @@ export default function AdminPagesList() {
       setActiveBookmark(tabParam as PageStage);
     }
   }, [tabParam]);
+
+  useEffect(() => {
+    if (!translateLabelsProgress?.startedAt) return;
+    const id = setInterval(() => setElapsedTick((t) => t + 1), 10000);
+    return () => clearInterval(id);
+  }, [translateLabelsProgress?.startedAt]);
 
   function setBookmark(stage: PageStage) {
     setActiveBookmark(stage);
@@ -664,7 +671,7 @@ export default function AdminPagesList() {
     }
     setActiveBookmark('translate-label');
     setTranslateLabelsLoading(true);
-    setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '' });
+    setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '', startedAt: Date.now() });
     setTranslateLabelsPausedAt(null);
     translateLabelsPausedRef.current = false;
     translateLabelsAbortRef.current = new AbortController();
@@ -683,7 +690,7 @@ export default function AdminPagesList() {
             if (translateLabelsAbortRef.current?.signal.aborted) break;
           }
           stepRef.current++;
-          setTranslateLabelsProgress({ current: stepRef.current, total: totalSteps, pageSlug: page.slug, pageCategory: page.category ?? 'math', locale: loc });
+          setTranslateLabelsProgress((p) => ({ ...(p ?? {}), current: stepRef.current, total: totalSteps, pageSlug: page.slug, pageCategory: page.category ?? 'math', locale: loc }));
           let res: Response;
           for (let attempt = 0; attempt <= 2; attempt++) {
             res = await fetch('/api/twojastara/ollama/translate-labels', {
@@ -733,8 +740,7 @@ export default function AdminPagesList() {
             const i = taskIdx++;
             if (i >= labelTasks.length) break;
             const { page, loc, enLabels } = labelTasks[i];
-            stepRef.current++;
-            throttledSetProgress(stepRef.current, page.slug, loc);
+            throttledSetProgress(stepRef.current, page.slug, page.category ?? 'math', loc);
             let res: Response;
             for (let attempt = 0; attempt <= 2; attempt++) {
               res = await fetch('/api/twojastara/ollama/translate-labels', {
@@ -767,6 +773,8 @@ export default function AdminPagesList() {
                 translations: p.translations.map((t) => (t.locale === loc ? { ...t, calculatorLabels: JSON.stringify(lab) } : t)),
               }))
             );
+            stepRef.current++;
+            throttledSetProgress(stepRef.current, page.slug, page.category ?? 'math', loc);
           }
         };
         await Promise.all(Array(Math.min(concurrency, labelTasks.length)).fill(0).map(() => runTask()));
@@ -837,7 +845,7 @@ export default function AdminPagesList() {
       return;
     }
     setActiveBookmark('translate-label');
-    setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '' });
+    setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '', startedAt: Date.now() });
     const concurrency = Math.max(1, Math.min(6, translateLabelsConcurrency));
     const stepRef = { current: 0 };
     try {
@@ -2085,7 +2093,17 @@ export default function AdminPagesList() {
       {translateLabelsProgress && (
         <div style={{ marginBottom: '1rem' }}>
           <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-            <span style={{ flex: 1 }}>Translate Labels: {translateLabelsProgress.current} / {translateLabelsProgress.total}{translateLabelsProgress.pageSlug ? ` — ${translateLabelsProgress.pageSlug} (${translateLabelsProgress.locale})` : ''}</span>
+            <span style={{ flex: 1 }}>
+              Translate Labels: {translateLabelsProgress.current} / {translateLabelsProgress.total}
+              {translateLabelsProgress.pageSlug && translateLabelsProgress.locale && (
+                <> — <strong>Translating:</strong> {translateLabelsProgress.pageSlug} → {translateLabelsProgress.locale}</>
+              )}
+              {translateLabelsProgress.startedAt && (
+                <span style={{ marginLeft: '0.5rem', color: 'var(--text-tertiary)' }}>
+                  (running {Math.floor((Date.now() - translateLabelsProgress.startedAt) / 60000)}m {Math.floor(((Date.now() - translateLabelsProgress.startedAt) % 60000) / 1000)}s)
+                </span>
+              )}
+            </span>
             {translateLabelsPausedAt && <span style={{ color: 'var(--warning-color, #f97316)' }}>• Paused</span>}
             <button
               type="button"
@@ -2128,7 +2146,7 @@ export default function AdminPagesList() {
             />
           </div>
           <div style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)', marginTop: '0.25rem' }}>
-            Keep this tab open. You can switch to other tabs; don&apos;t close or navigate away.
+            Keep this tab open. Ollama may take 5–30+ min per locale. You can switch to other tabs; don&apos;t close or navigate away.
           </div>
         </div>
       )}

@@ -728,11 +728,11 @@ export default function AdminPagesList() {
         let taskIdx = 0;
         const PROGRESS_THROTTLE_MS = 120;
         let lastProgressTime = 0;
-        const throttledSetProgress = (cur: number, pageSlug: string, locale: string) => {
+        const throttledSetProgress = (cur: number, pageSlug: string, pageCategory: string, locale: string) => {
           const now = Date.now();
           if (now - lastProgressTime >= PROGRESS_THROTTLE_MS || cur >= totalSteps) {
             lastProgressTime = now;
-            setTranslateLabelsProgress({ current: cur, total: totalSteps, pageSlug, pageCategory: 'math', locale });
+            setTranslateLabelsProgress((p) => ({ ...(p ?? {}), current: cur, total: totalSteps, pageSlug, pageCategory: pageCategory ?? 'math', locale }));
           }
         };
         const runTask = async () => {

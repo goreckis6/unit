@@ -9,7 +9,7 @@ import { useGenerate, type GenerateProviderType } from '../../GenerateContext';
 import { SeoChecker } from '@/components/admin/SeoChecker';
 import { resolveCalculatorPath } from '@/lib/gsc-redirects';
 
-export type PageStage = 'new' | 'in-progress' | 'translate-label' | 'completed' | 'completed-alive';
+export type PageStage = 'new' | 'in-progress' | 'translate-label' | 'completed' | 'completed-alive' | 'done';
 
 const LIST_FILTER_STORAGE_KEY = 'twojastara-pages-list-filter';
 
@@ -146,11 +146,23 @@ function getMissingLabelKeysForLocale(
   return missing;
 }
 
+const VALID_MANUAL_BOOKMARKS: PageStage[] = ['in-progress', 'translate-label', 'completed', 'completed-alive', 'done'];
+
 function getPageStage(page: Page): PageStage {
   if (!hasEnContent(page)) return 'new';
   if (!hasAllTranslations(page)) return 'in-progress';
   if (!hasAllLabelsTranslated(page)) return 'translate-label';
   return page.published ? 'completed-alive' : 'completed';
+}
+
+/** Stage used for tab placement; manualBookmark overrides. Done = TR+LB complete (replaces completed/completed-alive). */
+function getEffectiveStage(page: Page): PageStage {
+  if (page.manualBookmark && VALID_MANUAL_BOOKMARKS.includes(page.manualBookmark as PageStage)) {
+    return page.manualBookmark as PageStage;
+  }
+  const computed = getPageStage(page);
+  if (computed === 'completed' || computed === 'completed-alive') return 'done';
+  return computed;
 }
 
 type PageTranslation = {
@@ -171,6 +183,7 @@ type Page = {
   category: string | null;
   published: boolean;
   calculatorCode?: string | null;
+  manualBookmark?: string | null;
   updatedAt?: string;
   translations: PageTranslation[];
 };
@@ -260,7 +273,7 @@ export default function AdminPagesList() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const tabParam = searchParams.get('tab');
-  const validStages: PageStage[] = ['in-progress', 'translate-label', 'completed', 'completed-alive'];
+  const validStages: PageStage[] = ['in-progress', 'translate-label', 'done'];
   const [activeBookmark, setActiveBookmark] = useState<PageStage>(() =>
     tabParam && validStages.includes(tabParam as PageStage) ? (tabParam as PageStage) : 'in-progress'
   );
@@ -268,6 +281,8 @@ export default function AdminPagesList() {
   useEffect(() => {
     if (tabParam === 'new') {
       setActiveBookmark('in-progress');
+    } else if (tabParam === 'completed' || tabParam === 'completed-alive') {
+      setActiveBookmark('done');
     } else if (tabParam && validStages.includes(tabParam as PageStage) && tabParam !== activeBookmark) {
       setActiveBookmark(tabParam as PageStage);
     }
@@ -288,17 +303,19 @@ export default function AdminPagesList() {
   }
 
   const pagesByStage = useMemo(() => {
-    const byStage: Record<PageStage, Page[]> = { new: [], 'in-progress': [], 'translate-label': [], completed: [], 'completed-alive': [] };
+    const byStage: Record<PageStage, Page[]> = { new: [], 'in-progress': [], 'translate-label': [], completed: [], 'completed-alive': [], done: [] };
     const translateLabelSlugs = new Set<string>();
     if (translateLabelsProgress?.pageSlug) translateLabelSlugs.add(translateLabelsProgress.pageSlug);
     if (translateLabelsPausedAt?.pageSlug) translateLabelSlugs.add(translateLabelsPausedAt.pageSlug);
     for (const p of pages) {
+      let stage: PageStage;
       if (translateLabelSlugs.has(p.slug)) {
-        byStage['translate-label'].push(p);
+        stage = 'translate-label';
       } else {
-        const stage = getPageStage(p);
-        byStage[stage === 'new' ? 'in-progress' : stage].push(p);
+        stage = getEffectiveStage(p);
       }
+      if (stage === 'new') stage = 'in-progress';
+      byStage[stage].push(p);
     }
     for (const stage of Object.keys(byStage) as PageStage[]) {
       byStage[stage] = sortPagesLatestFirst(byStage[stage]);
@@ -444,7 +461,7 @@ export default function AdminPagesList() {
     const wasLoading = prevTranslateLabelsLoading.current;
     prevTranslateLabelsLoading.current = translateLabelsLoading;
     if (wasLoading && !translateLabelsLoading) {
-      setActiveBookmark('completed');
+      setActiveBookmark('done');
     }
   }, [translateLabelsLoading]);
 
@@ -569,6 +586,39 @@ export default function AdminPagesList() {
       handleBulkTranslateMissingLabels(Array.from(checkFailedIds), clearCheck);
     } else {
       handleBulkTranslateLabels(Array.from(checkFailedIds), clearCheck);
+    }
+  }
+
+  const [bulkBookmarkLoading, setBulkBookmarkLoading] = useState(false);
+
+  async function handleBulkBookmark(manualBookmark: PageStage) {
+    if (selectedIds.size === 0) return;
+    if (!VALID_MANUAL_BOOKMARKS.includes(manualBookmark)) return;
+    setBulkBookmarkLoading(true);
+    try {
+      const res = await fetch('/api/twojastara/pages/bulk-bookmark', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: Array.from(selectedIds), manualBookmark }),
+        credentials: 'include',
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        alert(data.error || 'Move failed');
+        return;
+      }
+      const updated = Array.isArray(data) ? data : [];
+      setPages((prev) =>
+        prev.map((p) => {
+          const u = updated.find((x: { id: string }) => x.id === p.id);
+          return u ? { ...p, manualBookmark: (u as Page).manualBookmark ?? null } : p;
+        })
+      );
+      setActiveBookmark(manualBookmark);
+    } catch (e) {
+      alert(e instanceof Error ? e.message : 'Move failed');
+    } finally {
+      setBulkBookmarkLoading(false);
     }
   }
 
@@ -1113,8 +1163,7 @@ export default function AdminPagesList() {
   const bookmarkTabs: { stage: PageStage; label: string; count: number; green?: boolean }[] = [
     { stage: 'in-progress', label: 'Translation', count: pagesByStage['in-progress'].length, green: true },
     { stage: 'translate-label', label: 'Translation Labels', count: pagesByStage['translate-label'].length, green: true },
-    { stage: 'completed', label: 'Translation Labels Completed', count: pagesByStage.completed.length, green: true },
-    { stage: 'completed-alive', label: 'Completed:Alvie', count: pagesByStage['completed-alive'].length, green: true },
+    { stage: 'done', label: 'Done (TR+LB)', count: pagesByStage.done.length, green: true },
   ];
 
   return (
@@ -1540,8 +1589,27 @@ export default function AdminPagesList() {
         </div>
       )}
 
-      {(activeBookmark === 'in-progress' || activeBookmark === 'translate-label' || activeBookmark === 'completed' || activeBookmark === 'completed-alive') && filteredPages.length > 0 && (
+      {(activeBookmark === 'in-progress' || activeBookmark === 'translate-label' || activeBookmark === 'done') && filteredPages.length > 0 && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
+          <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            Move to:
+            <select
+              value=""
+              onChange={(e) => {
+                const v = e.target.value as PageStage;
+                if (v && VALID_MANUAL_BOOKMARKS.includes(v)) handleBulkBookmark(v);
+                e.target.value = '';
+              }}
+              disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || bulkBookmarkLoading}
+              className="admin-form-select"
+              style={{ padding: '0.35rem 0.5rem', fontSize: '0.8rem', minWidth: 140 }}
+            >
+              <option value="">—</option>
+              <option value="in-progress">Translation</option>
+              <option value="translate-label">Translation Labels</option>
+              <option value="done">Done (TR+LB)</option>
+            </select>
+          </label>
           {activeBookmark === 'in-progress' && (
             <>
               {filteredPages.filter((p) => hasEnContent(p) && !hasAllTranslations(p)).length > 0 && (
@@ -1622,7 +1690,7 @@ export default function AdminPagesList() {
               </button>
             </>
           )}
-          {activeBookmark === 'completed' && (
+          {activeBookmark === 'done' && (
             <>
               <button
                 type="button"
@@ -1682,50 +1750,6 @@ export default function AdminPagesList() {
                 style={{ padding: '0.35rem 0.75rem' }}
               >
                 {bulkPublishLoading ? 'Publishing…' : `Mark & Publish (${selectedIds.size})`}
-              </button>
-            </>
-          )}
-          {activeBookmark === 'completed-alive' && (
-            <>
-              <button
-                type="button"
-                onClick={handleCheckTranslations}
-                disabled={!!generateProgress || !!translateProgress}
-                className="btn btn-secondary btn-sm"
-                style={{ padding: '0.35rem 0.75rem' }}
-                title={`Check if selected pages have content for all ${ADMIN_LOCALES.length} locales`}
-              >
-                Check translations
-              </button>
-              <button
-                type="button"
-                onClick={handleCheckLabels}
-                disabled={!!generateProgress || !!translateProgress}
-                className="btn btn-secondary btn-sm"
-                style={{ padding: '0.35rem 0.75rem' }}
-                title={`Check if selected pages have calculator labels for all ${ADMIN_LOCALES.length} locales`}
-              >
-                Check labels
-              </button>
-              <button
-                type="button"
-                onClick={() => setShowSeoCheckModal(true)}
-                disabled={!!generateProgress || !!translateProgress}
-                className="btn btn-secondary btn-sm"
-                style={{ padding: '0.35rem 0.75rem' }}
-                title="Check SEO (title, meta, slug) for selected pages"
-              >
-                SEO Check
-              </button>
-              <button
-                type="button"
-                onClick={() => handleBulkTranslateMissingLabels()}
-                disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
-                className="btn btn-secondary btn-sm"
-                style={{ padding: '0.35rem 0.75rem' }}
-                title="Translate only empty/missing labels"
-              >
-                {translateLabelsLoading ? 'Translating…' : 'Translate missing labels'}
               </button>
               <button
                 type="button"
@@ -2218,7 +2242,7 @@ export default function AdminPagesList() {
       ) : filteredPages.length === 0 ? (
         <p style={{ color: 'var(--text-secondary)' }}>
           No pages in <strong>
-            {activeBookmark === 'in-progress' ? 'Translation' : activeBookmark === 'translate-label' ? 'Translation Labels' : activeBookmark === 'completed-alive' ? 'Completed:Alvie' : 'Translation Labels Completed'}
+            {activeBookmark === 'in-progress' ? 'Translation' : activeBookmark === 'translate-label' ? 'Translation Labels' : 'Done (TR+LB)'}
           </strong>
           {searchQuery.trim() ? ' matching search' : ''}. Switch tab or create a page.
         </p>
@@ -2308,7 +2332,7 @@ export default function AdminPagesList() {
                   </div>
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
-                  {page.published && activeBookmark === 'completed-alive' && (
+                  {page.published && activeBookmark === 'done' && (
                     <a
                       href={resolveCalculatorPath(`/calculators/${page.category}/${page.slug}`)}
                       target="_blank"
@@ -2335,6 +2359,48 @@ export default function AdminPagesList() {
                       </Link>
                     );
                   })}
+                  <label style={{ fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                    <span style={{ color: 'var(--text-secondary)' }}>→</span>
+                    <select
+                      value=""
+                      onChange={async (e) => {
+                        const v = e.target.value as PageStage;
+                        e.target.value = '';
+                        if (!v || !VALID_MANUAL_BOOKMARKS.includes(v)) return;
+                        setBulkBookmarkLoading(true);
+                        try {
+                          const res = await fetch('/api/twojastara/pages/bulk-bookmark', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ ids: [page.id], manualBookmark: v }),
+                            credentials: 'include',
+                          });
+                          const data = await res.json();
+                          if (!res.ok) throw new Error(data.error || 'Move failed');
+                          const updated = Array.isArray(data) ? data : [];
+                          const u = updated.find((x: { id: string }) => x.id === page.id);
+                          if (u) {
+                            setPages((prev) =>
+                              prev.map((p) => (p.id === page.id ? { ...p, manualBookmark: (u as Page).manualBookmark ?? null } : p))
+                            );
+                            setActiveBookmark(v);
+                          }
+                        } catch (err) {
+                          alert(err instanceof Error ? err.message : 'Move failed');
+                        } finally {
+                          setBulkBookmarkLoading(false);
+                        }
+                      }}
+                      disabled={!!generateProgress || !!translateProgress || bulkBookmarkLoading}
+                      className="admin-form-select"
+                      style={{ padding: '0.25rem 0.4rem', fontSize: '0.75rem' }}
+                    >
+                      <option value="">Move</option>
+                      <option value="in-progress">Translation</option>
+                      <option value="translate-label">Labels</option>
+                      <option value="done">Done</option>
+                    </select>
+                  </label>
                   <Link href={`/twojastara/pages/${page.id}/edit?tab=${activeBookmark}`} className="btn btn-primary btn-sm">
                     Edit
                   </Link>

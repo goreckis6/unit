@@ -33,7 +33,7 @@ export async function PATCH(
   try {
     const { id } = await params;
     const body = await request.json();
-    const { slug, category, published, translations, calculatorCode, linkedCalculatorPath, relatedCalculatorsMode, relatedCalculatorsCount } = body;
+    const { slug, category, published, translations, calculatorCode, linkedCalculatorPath, relatedCalculatorsMode, relatedCalculatorsCount, manualBookmark } = body;
 
     const updateData: Record<string, unknown> = {};
     if (slug !== undefined) updateData.slug = slug.trim().toLowerCase().replace(/\s+/g, '-');
@@ -41,6 +41,8 @@ export async function PATCH(
     if (published !== undefined) updateData.published = published;
     if (calculatorCode !== undefined) updateData.calculatorCode = calculatorCode || null;
     if (linkedCalculatorPath !== undefined) updateData.linkedCalculatorPath = linkedCalculatorPath || null;
+    const validBookmarks = ['in-progress', 'translate-label', 'completed', 'completed-alive', 'done'];
+    if (manualBookmark !== undefined) updateData.manualBookmark = validBookmarks.includes(manualBookmark) ? manualBookmark : null;
     if (relatedCalculatorsMode !== undefined && ['manual', 'random', 'both'].includes(relatedCalculatorsMode)) {
       updateData.relatedCalculatorsMode = relatedCalculatorsMode;
     }

@@ -38,7 +38,9 @@ type TranslateProgress = {
   current: number;
   total: number;
   pageTitle: string;
+  pageCategory: string;
   locale: string;
+  startedAt?: number;
 };
 
 type TranslatePausedAt = { pageSlug: string; nextLocale: string };
@@ -253,7 +255,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       setTranslateError('Wszystkie wybrane strony mają już przetłumaczone treści.');
       return;
     }
-    setTranslateProgress({ current: 0, total: totalSteps, pageTitle: '', locale: '' });
+    const startedAtMs = Date.now();
+    setTranslateProgress({ current: 0, total: totalSteps, pageTitle: '', pageCategory: '', locale: '', startedAt: startedAtMs });
 
     const stepRef = { current: 0 };
     const hadErrorRef = { current: false };
@@ -314,7 +317,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
         const batch = localeChunks.slice(bi, bi + contentParallel);
         const batchLocs = batch.map((c) => c[0]).filter(Boolean);
         stepRef.current += batch.length;
-        setTranslateProgress({ current: stepRef.current, total: totalSteps, pageTitle: page.slug, locale: batchLocs.join(', ') });
+        setTranslateProgress({ current: stepRef.current, total: totalSteps, pageTitle: page.slug, pageCategory: page.category ?? '', locale: batchLocs.join(', '), startedAt: startedAtMs });
         try {
           const results = await Promise.all(
             batch.map(async (chunk) => {
@@ -543,6 +546,12 @@ function TranslateProgressIndicator() {
   const ctx = useContext(TranslateContext);
   if (!ctx) return null;
   const { translateProgress, translatePauseCountdown, pauseTranslate } = ctx;
+  const [, setTick] = useState(0);
+  useEffect(() => {
+    if (!translateProgress?.startedAt) return;
+    const id = setInterval(() => setTick((t) => t + 1), 10000);
+    return () => clearInterval(id);
+  }, [translateProgress?.startedAt]);
   if (!translateProgress) return null;
   return (
     <div
@@ -556,25 +565,42 @@ function TranslateProgressIndicator() {
         borderBottom: '2px solid var(--primary, #2563eb)',
         padding: '0.5rem 1rem',
         display: 'flex',
-        alignItems: 'center',
-        gap: '1rem',
+        flexDirection: 'column',
+        gap: '0.5rem',
         boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
       }}
     >
-      <span style={{ fontSize: '0.875rem', color: 'var(--text-primary)', flex: 1 }}>
-        🔄 Tłumaczenie w tle: {translateProgress.current}/{translateProgress.total}{translateProgress.pageTitle ? ` — ${translateProgress.pageTitle} (${translateProgress.locale})` : ''}
-        {translatePauseCountdown !== null && (
-          <span style={{ marginLeft: '0.5rem', color: 'var(--text-secondary)' }}>• Pauza {translatePauseCountdown}s</span>
-        )}
-      </span>
-      <button
-        type="button"
-        onClick={pauseTranslate}
-        className="btn btn-secondary btn-sm"
-        style={{ borderColor: 'var(--error-color)', color: 'var(--error-color)' }}
-      >
-        Cancel
-      </button>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <span style={{ fontSize: '0.875rem', color: 'var(--text-primary)', flex: 1 }}>
+          🔄 Tłumaczenie w tle: {translateProgress.current}/{translateProgress.total}{translateProgress.pageTitle ? ` — ${translateProgress.pageTitle} (${translateProgress.locale})` : ''}
+          {translateProgress.startedAt && (
+            <span style={{ marginLeft: '0.5rem', color: 'var(--text-tertiary)' }}>
+              (running {Math.floor((Date.now() - translateProgress.startedAt) / 60000)}m {Math.floor(((Date.now() - translateProgress.startedAt) % 60000) / 1000)}s)
+            </span>
+          )}
+          {translatePauseCountdown !== null && (
+            <span style={{ marginLeft: '0.5rem', color: 'var(--text-secondary)' }}>• Pauza {translatePauseCountdown}s</span>
+          )}
+        </span>
+        <button
+          type="button"
+          onClick={pauseTranslate}
+          className="btn btn-secondary btn-sm"
+          style={{ borderColor: 'var(--error-color)', color: 'var(--error-color)' }}
+        >
+          Cancel
+        </button>
+      </div>
+      <div style={{ height: 6, backgroundColor: 'var(--border-color)', borderRadius: 3, overflow: 'hidden' }}>
+        <div
+          style={{
+            height: '100%',
+            width: `${translateProgress.total > 0 ? (translateProgress.current / translateProgress.total) * 100 : 0}%`,
+            backgroundColor: 'var(--primary, #2563eb)',
+            transition: 'width 0.2s ease',
+          }}
+        />
+      </div>
     </div>
   );
 }

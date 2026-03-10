@@ -274,10 +274,10 @@ export default function AdminPagesList() {
   }, [tabParam]);
 
   useEffect(() => {
-    if (!translateLabelsProgress?.startedAt) return;
+    if (!translateLabelsProgress?.startedAt && !translateProgress?.startedAt) return;
     const id = setInterval(() => setElapsedTick((t) => t + 1), 10000);
     return () => clearInterval(id);
-  }, [translateLabelsProgress?.startedAt]);
+  }, [translateLabelsProgress?.startedAt, translateProgress?.startedAt]);
 
   function setBookmark(stage: PageStage) {
     setActiveBookmark(stage);
@@ -2086,6 +2086,68 @@ export default function AdminPagesList() {
                 transition: 'width 0.2s ease',
               }}
             />
+          </div>
+        </div>
+      )}
+
+      {translateProgress && (
+        <div style={{ marginBottom: '1rem' }}>
+          <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+            <span style={{ flex: 1 }}>
+              Translate content: {translateProgress.current} / {translateProgress.total}
+              {translateProgress.pageTitle && translateProgress.locale && (
+                <> — <strong>Translating:</strong> {translateProgress.pageTitle} ({translateProgress.locale})</>
+              )}
+              {translateProgress.startedAt && (
+                <span style={{ marginLeft: '0.5rem', color: 'var(--text-tertiary)' }}>
+                  (running {Math.floor((Date.now() - translateProgress.startedAt) / 60000)}m {Math.floor(((Date.now() - translateProgress.startedAt) % 60000) / 1000)}s)
+                </span>
+              )}
+              {translatePauseCountdown !== null && <span style={{ marginLeft: '0.5rem', color: 'var(--warning-color, #f97316)' }}>• Pauza {translatePauseCountdown}s</span>}
+            </span>
+            <button
+              type="button"
+              onClick={pauseTranslate}
+              className="btn btn-secondary btn-sm"
+              style={{ padding: '0.35rem 0.75rem', color: 'var(--error-color)', borderColor: 'var(--error-color)' }}
+            >
+              Cancel
+            </button>
+            {translateProgress.pageTitle && translateProgress.pageCategory && (
+              <a
+                href={(() => {
+                  const r = resolveCalculatorPath(`/calculators/${translateProgress.pageCategory}/${translateProgress.pageTitle}`);
+                  const firstLoc = translateProgress.locale?.split(',')[0]?.trim() || 'en';
+                  const base = firstLoc === 'en' ? `/en${r}` : `/${firstLoc}${r}`;
+                  return `${base}?preview=1`;
+                })()}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ marginLeft: '0.25rem', fontSize: '0.8rem', color: 'var(--primary)' }}
+              >
+                Preview →
+              </a>
+            )}
+          </div>
+          <div
+            style={{
+              height: 8,
+              backgroundColor: 'var(--border-color)',
+              borderRadius: 4,
+              overflow: 'hidden',
+            }}
+          >
+            <div
+              style={{
+                height: '100%',
+                width: `${translateProgress.total > 0 ? (translateProgress.current / translateProgress.total) * 100 : 0}%`,
+                backgroundColor: 'var(--primary, #2563eb)',
+                transition: 'width 0.2s ease',
+              }}
+            />
+          </div>
+          <div style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)', marginTop: '0.25rem' }}>
+            Keep this tab open. Ollama may take 5–30+ min per locale.
           </div>
         </div>
       )}

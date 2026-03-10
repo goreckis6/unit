@@ -155,13 +155,14 @@ function getPageStage(page: Page): PageStage {
   return page.published ? 'completed-alive' : 'completed';
 }
 
-/** Stage used for tab placement; manualBookmark overrides. Done = TR+LB complete (replaces completed/completed-alive). */
+/** Stage used for tab placement; manualBookmark overrides. Done = TR+LB not published, Alive = TR+LB published. */
 function getEffectiveStage(page: Page): PageStage {
   if (page.manualBookmark && VALID_MANUAL_BOOKMARKS.includes(page.manualBookmark as PageStage)) {
     return page.manualBookmark as PageStage;
   }
   const computed = getPageStage(page);
-  if (computed === 'completed' || computed === 'completed-alive') return 'done';
+  if (computed === 'completed') return 'done';
+  if (computed === 'completed-alive') return 'completed-alive';
   return computed;
 }
 
@@ -273,7 +274,7 @@ export default function AdminPagesList() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const tabParam = searchParams.get('tab');
-  const validStages: PageStage[] = ['in-progress', 'translate-label', 'done'];
+  const validStages: PageStage[] = ['in-progress', 'translate-label', 'done', 'completed-alive'];
   const [activeBookmark, setActiveBookmark] = useState<PageStage>(() =>
     tabParam && validStages.includes(tabParam as PageStage) ? (tabParam as PageStage) : 'in-progress'
   );
@@ -1164,6 +1165,7 @@ export default function AdminPagesList() {
     { stage: 'in-progress', label: 'Translation', count: pagesByStage['in-progress'].length, green: true },
     { stage: 'translate-label', label: 'Translation Labels', count: pagesByStage['translate-label'].length, green: true },
     { stage: 'done', label: 'Done (TR+LB)', count: pagesByStage.done.length, green: true },
+    { stage: 'completed-alive', label: 'Alive', count: pagesByStage['completed-alive'].length, green: true },
   ];
 
   return (
@@ -1589,7 +1591,7 @@ export default function AdminPagesList() {
         </div>
       )}
 
-      {(activeBookmark === 'in-progress' || activeBookmark === 'translate-label' || activeBookmark === 'done') && filteredPages.length > 0 && (
+      {(activeBookmark === 'in-progress' || activeBookmark === 'translate-label' || activeBookmark === 'done' || activeBookmark === 'completed-alive') && filteredPages.length > 0 && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
           <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
             Move to:
@@ -1608,6 +1610,7 @@ export default function AdminPagesList() {
               <option value="in-progress">Translation</option>
               <option value="translate-label">Translation Labels</option>
               <option value="done">Done (TR+LB)</option>
+              <option value="completed-alive">Alive</option>
             </select>
           </label>
           {activeBookmark === 'in-progress' && (
@@ -1750,6 +1753,59 @@ export default function AdminPagesList() {
                 style={{ padding: '0.35rem 0.75rem' }}
               >
                 {bulkPublishLoading ? 'Publishing…' : `Mark & Publish (${selectedIds.size})`}
+              </button>
+              <button
+                type="button"
+                onClick={() => handleBulkPublish(false)}
+                disabled={selectedIds.size === 0 || bulkPublishLoading || !!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+              >
+                {bulkPublishLoading ? 'Unpublishing…' : `Unpublish (${selectedIds.size})`}
+              </button>
+            </>
+          )}
+          {activeBookmark === 'completed-alive' && (
+            <>
+              <button
+                type="button"
+                onClick={handleCheckTranslations}
+                disabled={!!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title={`Check if selected pages have content for all ${ADMIN_LOCALES.length} locales`}
+              >
+                Check translations
+              </button>
+              <button
+                type="button"
+                onClick={handleCheckLabels}
+                disabled={!!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title={`Check if selected pages have calculator labels for all ${ADMIN_LOCALES.length} locales`}
+              >
+                Check labels
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowSeoCheckModal(true)}
+                disabled={!!generateProgress || !!translateProgress}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title="Check SEO (title, meta, slug) for selected pages"
+              >
+                SEO Check
+              </button>
+              <button
+                type="button"
+                onClick={() => handleBulkTranslateMissingLabels()}
+                disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title="Translate only empty/missing labels"
+              >
+                {translateLabelsLoading ? 'Translating…' : 'Translate missing labels'}
               </button>
               <button
                 type="button"
@@ -2242,7 +2298,7 @@ export default function AdminPagesList() {
       ) : filteredPages.length === 0 ? (
         <p style={{ color: 'var(--text-secondary)' }}>
           No pages in <strong>
-            {activeBookmark === 'in-progress' ? 'Translation' : activeBookmark === 'translate-label' ? 'Translation Labels' : 'Done (TR+LB)'}
+            {activeBookmark === 'in-progress' ? 'Translation' : activeBookmark === 'translate-label' ? 'Translation Labels' : activeBookmark === 'completed-alive' ? 'Alive' : 'Done (TR+LB)'}
           </strong>
           {searchQuery.trim() ? ' matching search' : ''}. Switch tab or create a page.
         </p>
@@ -2399,6 +2455,7 @@ export default function AdminPagesList() {
                       <option value="in-progress">Translation</option>
                       <option value="translate-label">Labels</option>
                       <option value="done">Done</option>
+                      <option value="completed-alive">Alive</option>
                     </select>
                   </label>
                   <Link href={`/twojastara/pages/${page.id}/edit?tab=${activeBookmark}`} className="btn btn-primary btn-sm">

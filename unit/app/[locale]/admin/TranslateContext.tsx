@@ -14,6 +14,20 @@ function parseJson<T>(val: unknown, fallback: T): T {
   return val as T;
 }
 
+/** Safe response.json() — avoids "Unexpected end of JSON input" on empty/truncated responses. */
+async function safeResJson<T = unknown>(res: Response): Promise<T> {
+  const text = await res.text();
+  if (!text?.trim()) {
+    throw new Error(res.ok ? 'Empty response' : `Server returned ${res.status} (empty body)`);
+  }
+  try {
+    return JSON.parse(text) as T;
+  } catch (e) {
+    const snippet = text.slice(0, 80).replace(/\s+/g, ' ');
+    throw new Error(`Invalid JSON (${res.status}): ${snippet}${text.length > 80 ? '…' : ''}`);
+  }
+}
+
 type PageTranslation = {
   id: string;
   locale: string;
@@ -210,14 +224,23 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
           batch.map(async (page) => {
             const enTrans = page.translations.find((t) => t.locale === 'en');
             if (!(enTrans?.content ?? '').trim()) return 0;
-            const pageRes = await fetch(`/api/twojastara/pages/${page.id}`, {
-              credentials: 'include',
-              signal: abortRef.current?.signal,
-            });
-            const fullPage = await pageRes.json();
-            if (!pageRes.ok || !fullPage?.translations) return 0;
+            let fullPage: { translations?: unknown[] } | null = null;
+            for (let attempt = 0; attempt <= 2; attempt++) {
+              const pageRes = await fetch(`/api/twojastara/pages/${page.id}`, {
+                credentials: 'include',
+                signal: abortRef.current?.signal,
+              });
+              try {
+                fullPage = await safeResJson<{ translations?: unknown[] }>(pageRes);
+                break;
+              } catch (e) {
+                if (attempt < 2) await new Promise((r) => setTimeout(r, 1500));
+                else throw e;
+              }
+            }
+            if (!fullPage || !fullPage?.translations) return 0;
             const fullPageTrans = fullPage.translations ?? [];
-            const hasContent = (loc: string) => (fullPageTrans.find((t: { locale: string }) => t.locale === loc)?.content?.trim() ?? '').length > 0;
+            const hasContent = (loc: string) => ((fullPageTrans.find((t: { locale: string; content?: string }) => t.locale === loc) as { content?: string } | undefined)?.content?.trim() ?? '').length > 0;
             let localesToTranslate = (allNonEn ?? []).filter((loc) => !hasContent(loc));
             if (resumeOverride && page.slug === resumeFromSlug) {
               const startLoc = resumeOverride.nextLocale;
@@ -273,7 +296,14 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       if (!enContent) return true;
 
       const pageRes = await fetch(`/api/twojastara/pages/${page.id}`, { credentials: 'include', signal: abortRef.current?.signal });
-      const fullPage = await pageRes.json();
+      let fullPage: { translations?: { locale: string; content?: string }[]; slug?: string; category?: string; published?: boolean } | null = null;
+      try {
+        fullPage = await safeResJson(pageRes);
+      } catch (e) {
+        setTranslateError(`Nie udało się załadować strony (JSON): ${page.slug} — ${e instanceof Error ? e.message : String(e)}`);
+        hadErrorRef.current = true;
+        return false;
+      }
       if (!pageRes.ok || !fullPage?.translations) {
         setTranslateError(`Nie udało się załadować strony: ${page.slug}`);
         hadErrorRef.current = true;
@@ -281,7 +311,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       }
 
       const fullPageTrans = fullPage.translations ?? [];
-      const hasContent = (loc: string) => (fullPageTrans.find((t: { locale: string }) => t.locale === loc)?.content?.trim() ?? '').length > 0;
+      const hasContent = (loc: string) => ((fullPageTrans.find((t) => t.locale === loc) as { content?: string } | undefined)?.content?.trim() ?? '').length > 0;
       let localesToTranslate = (allNonEn ?? []).filter((loc) => !hasContent(loc));
       if (resumeOverride && page.slug === resumeFromSlug && concurrency === 1) {
         const startLoc = resumeOverride.nextLocale;
@@ -343,8 +373,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                   2,
                   abortRef.current?.signal ?? null
                 );
-                try { data = await res.json(); } catch {
-                  throw new Error(res.status === 401 ? 'Unauthorized' : `Błąd serwera (${res.status})`);
+                try { data = await safeResJson(res); } catch (e) {
+                  throw new Error(res.status === 401 ? 'Unauthorized' : (e instanceof Error ? e.message : `Błąd serwera (${res.status})`));
                 }
                 if (res.ok) break;
                 if (res.status === 401) throw new Error(data.error || 'Unauthorized');
@@ -385,11 +415,12 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             }
           }
 
-          const baseMap = new Map((fullPage.translations ?? []).map((t: { locale: string }) => [t.locale, t]));
+          type TransRow = { locale: string; title?: string; displayTitle?: string | null; description?: string | null; content?: string | null; relatedCalculators?: unknown; faqItems?: unknown; calculatorLabels?: unknown };
+          const baseMap = new Map<string, TransRow>((fullPage.translations ?? []).map((t: TransRow) => [t.locale, t]));
           for (const l of Object.keys(translatedByLocale)) {
             if (!baseMap.has(l)) baseMap.set(l, { locale: l, title: '', displayTitle: null, description: null, content: null, relatedCalculators: [], faqItems: [], calculatorLabels: {} });
           }
-          const translations = Array.from(baseMap.values()).map((t: { locale: string; title: string; displayTitle?: string | null; description?: string | null; content?: string | null; relatedCalculators?: unknown; faqItems?: unknown; calculatorLabels?: unknown }) => {
+          const translations = Array.from(baseMap.values()).map((t: TransRow) => {
             const relatedCalculators = parseJson<{ title: string; description: string; path: string }[]>(t.relatedCalculators, []);
             const existingFaq = parseJson<{ question: string; answer: string }[]>(t.faqItems, []);
             const calcLabels = parseJson<Record<string, string>>(t.calculatorLabels, {});
@@ -417,7 +448,10 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             credentials: 'include',
             signal: abortRef.current?.signal,
           });
-          if (!patchRes.ok) throw new Error((await patchRes.json()).error || 'Failed to save');
+          if (!patchRes.ok) {
+            const errData = await safeResJson<{ error?: string }>(patchRes).catch((): { error?: string } => ({}));
+            throw new Error((errData && 'error' in errData ? errData.error : null) || 'Failed to save');
+          }
 
           onPagesUpdate?.((prev) =>
             prev.map((p) => {

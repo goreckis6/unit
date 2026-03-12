@@ -3,7 +3,12 @@ unitconverterhub.com www.unitconverterhub.com {
   redir https://calculinohub.com{uri} permanent
 }
 
-calculinohub.com www.calculinohub.com {
+# Redirect www to non-www (301) — avoids duplicate content in Google
+www.calculinohub.com {
+  redir https://calculinohub.com{uri} permanent
+}
+
+calculinohub.com {
   encode gzip zstd
 
   root * /var/www/calculinohub

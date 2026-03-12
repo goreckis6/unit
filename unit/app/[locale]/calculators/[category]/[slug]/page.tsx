@@ -14,6 +14,7 @@ import { FaqSchema } from '@/components/FaqSchema';
 import { renderMarkdown } from '@/lib/markdown';
 import { getRelatedCalculatorsForPage } from '@/lib/related-calculators';
 import { resolveCalculatorPath } from '@/lib/gsc-redirects';
+import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 import { hasCalculatorEmbed } from '@/lib/calculator-embeds';
 import { Link } from '@/i18n/routing';
 import { CalculatorSandpackClient } from '@/components/CalculatorSandpackClient';
@@ -57,9 +58,18 @@ export async function generateMetadata({ params, searchParams }: Props) {
   const canView = page.published || (isPreview && session);
   if (!canView) return { title: 'Not Found' };
   const t = page.translations.find((x) => x.locale === locale) ?? page.translations[0];
+  const path = resolveCalculatorPath(`/calculators/${category}/${slug}`);
+  const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
   return {
     title: t?.title ?? 'Page',
     description: t?.description ?? undefined,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: generateHreflangUrls(path),
+    },
+    openGraph: {
+      url: canonicalUrl,
+    },
   };
 }
 
@@ -173,6 +183,11 @@ export default async function CalculatorPage({ params, searchParams }: Props) {
             <div className="title-badge">{getCategoryBadge(category)}</div>
             <h1 className="page-title">{translation.displayTitle?.trim() || translation.title}</h1>
             <p className="page-description">{translation.description ?? ''}</p>
+            <time dateTime={page.createdAt.toISOString()} className="page-published">
+              {tCommon('publishedOn', {
+                date: new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(page.createdAt),
+              })}
+            </time>
           </div>
         </div>
       </div>

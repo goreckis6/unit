@@ -51,6 +51,13 @@ function getBrowserLocale(acceptLanguage: string | null): Locale {
 // Known unsupported locales (were indexed by Google but site no longer supports them)
 const UNSUPPORTED_LOCALES = ['fa', 'th', 'vi'];
 
+/** Request with x-pathname header for layout's default canonical/hreflang */
+function requestWithPathname(req: NextRequest, pathname: string): NextRequest {
+  const h = new Headers(req.headers);
+  h.set('x-pathname', pathname);
+  return new NextRequest(req.url, { headers: h });
+}
+
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const safePathname = pathname ?? '';
@@ -140,7 +147,9 @@ export default function middleware(request: NextRequest) {
     const rewritePath = safePathname.replace(/^\/twojastara/, '/en/admin') || '/en/admin';
     const url = request.nextUrl.clone();
     url.pathname = rewritePath;
-    return NextResponse.rewrite(url);
+    const h = new Headers(request.headers);
+    h.set('x-pathname', rewritePath);
+    return NextResponse.rewrite(url, { request: { headers: h } });
   }
   
   // 1. Check if URL has an explicit locale (e.g., /fr/, /de/, /pl/, /en/)
@@ -175,7 +184,7 @@ export default function middleware(request: NextRequest) {
     }
     
     // For other locales (non-English)
-    const response = handleI18nRouting(request);
+    const response = handleI18nRouting(requestWithPathname(request, safePathname));
     
     // Only update cookie if it's different from the current one
     const currentCookie = request.cookies.get('NEXT_LOCALE')?.value;
@@ -190,34 +199,45 @@ export default function middleware(request: NextRequest) {
     return response;
   }
   
-  // 3. For root path without locale: check cookie first, then browser language
+  // 3. Path without locale = canonical English URL (e.g. /calculators/..., /about)
+  //    → Always serve English. localeDetection: false w routing = next-intl nie przekierowuje.
+  const isRootPath = safePathname === '/' || safePathname === '';
+  if (!isRootPath) {
+    const response = handleI18nRouting(requestWithPathname(request, safePathname));
+    const currentCookie = request.cookies.get('NEXT_LOCALE')?.value;
+    if (currentCookie !== 'en') {
+      response.cookies.set('NEXT_LOCALE', 'en', {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 30,
+        sameSite: 'lax'
+      });
+    }
+    return response;
+  }
+
+  // 4. Root path "/" only: check cookie first, then browser language (for homepage personalization)
   const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
-  
-  // If user has a saved preference (cookie) and it's NOT English, redirect to that language
+
   if (isSupportedLocale(cookieLocale) && cookieLocale !== 'en') {
     const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = `/${cookieLocale}${safePathname}`;
+    redirectUrl.pathname = `/${cookieLocale}`;
     return NextResponse.redirect(redirectUrl);
   }
-  
-  // If cookie is explicitly 'en', just serve English (no redirect needed)
+
   if (cookieLocale === 'en') {
-    return handleI18nRouting(request);
+    return handleI18nRouting(requestWithPathname(request, safePathname));
   }
-  
-  // 4. No cookie? Detect from browser language as fallback
+
   const acceptLanguage = request.headers.get('accept-language');
   const browserLocale = getBrowserLocale(acceptLanguage);
-  
-  // If browser locale is not English, redirect to that language
+
   if (browserLocale !== 'en') {
     const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = `/${browserLocale}${safePathname}`;
+    redirectUrl.pathname = `/${browserLocale}`;
     return NextResponse.redirect(redirectUrl);
   }
-  
-  // 5. Default: let next-intl handle it (will use English)
-  return handleI18nRouting(request);
+
+  return handleI18nRouting(requestWithPathname(request, safePathname));
 }
 
 export const config = {

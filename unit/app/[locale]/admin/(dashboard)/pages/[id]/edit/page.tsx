@@ -629,7 +629,7 @@ export default function AdminEditPage() {
       slug: 'my-calculator',
       category: 'math',
       published: false,
-      relatedCalculatorsMode: 'manual',
+      relatedCalculatorsMode: 'random',
       relatedCalculatorsCount: 6,
       _meta: {
         localeCodes: getLocaleMeta(),
@@ -733,7 +733,7 @@ export default function AdminEditPage() {
         setSlug(data.slug ?? '');
         setCategory(data.category ?? '');
         setPublished(data.published ?? false);
-        setRelatedCalculatorsMode(['manual', 'random', 'both'].includes(data.relatedCalculatorsMode) ? data.relatedCalculatorsMode : 'manual');
+        setRelatedCalculatorsMode(['manual', 'random', 'both'].includes(data.relatedCalculatorsMode) ? data.relatedCalculatorsMode : 'random');
         setRelatedCalculatorsCount(typeof data.relatedCalculatorsCount === 'number' && data.relatedCalculatorsCount >= 1 && data.relatedCalculatorsCount <= 12 ? data.relatedCalculatorsCount : 6);
         setLinkedCalculatorPath(data.linkedCalculatorPath ?? '');
         setCalculatorCode(data.calculatorCode ?? '');

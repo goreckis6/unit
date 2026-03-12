@@ -128,7 +128,7 @@ export default async function CalculatorPage({ params, searchParams }: Props) {
   if (!Array.isArray(manualRelated)) manualRelated = [];
   if (!Array.isArray(faqItems)) faqItems = [];
 
-  const mode = (page.relatedCalculatorsMode as 'manual' | 'random' | 'both') || 'manual';
+  const mode = (page.relatedCalculatorsMode as 'manual' | 'random' | 'both') || 'random';
   const count = Math.min(12, Math.max(1, page.relatedCalculatorsCount ?? 6));
   const relatedCalculators = await getRelatedCalculatorsForPage(
     category,

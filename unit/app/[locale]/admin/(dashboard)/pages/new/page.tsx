@@ -555,7 +555,7 @@ export default function AdminNewPage() {
       slug: 'my-calculator',
       category: 'math',
       published: false,
-      relatedCalculatorsMode: 'manual',
+      relatedCalculatorsMode: 'random',
       relatedCalculatorsCount: 6,
       _meta: {
         localeCodes: getLocaleMeta(),

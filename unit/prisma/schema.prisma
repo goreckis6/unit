@@ -22,7 +22,7 @@ model Page {
   published              Boolean  @default(false)
   calculatorCode         String?  // TSX/JS code for calculator subpage
   linkedCalculatorPath   String?  // e.g. math/addition - link to existing calculator
-  relatedCalculatorsMode String   @default("manual")  // manual | random | both
+  relatedCalculatorsMode String   @default("random")  // manual | random | both
   relatedCalculatorsCount Int     @default(6)        // 1–12, how many to show
   manualBookmark         String? // override stage for display: in-progress | translate-label | completed | completed-alive | done
   createdAt              DateTime @default(now())

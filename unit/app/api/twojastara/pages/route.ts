@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
         published: published ?? false,
         calculatorCode: calculatorCode ?? null,
         linkedCalculatorPath: linkedCalculatorPath ?? null,
-        relatedCalculatorsMode: ['manual', 'random', 'both'].includes(relatedCalculatorsMode) ? relatedCalculatorsMode : 'manual',
+        relatedCalculatorsMode: ['manual', 'random', 'both'].includes(relatedCalculatorsMode) ? relatedCalculatorsMode : 'random',
         relatedCalculatorsCount: typeof relatedCalculatorsCount === 'number' && relatedCalculatorsCount >= 1 && relatedCalculatorsCount <= 12 ? relatedCalculatorsCount : 6,
         translations: translations?.length
           ? {

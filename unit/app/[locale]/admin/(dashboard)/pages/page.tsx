@@ -196,6 +196,7 @@ type Page = {
   category: string | null;
   published: boolean;
   calculatorCode?: string | null;
+  linkedCalculatorPath?: string | null;
   manualBookmark?: string | null;
   updatedAt?: string;
   translations: PageTranslation[];

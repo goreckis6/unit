@@ -209,12 +209,13 @@ function parseJson<T>(val: unknown, fallback: T): T {
   return val as T;
 }
 
-/** Parse response as JSON; if HTML (e.g. 404 page), return {} to avoid "Unexpected token '<'" */
+/** Parse response as JSON; if HTML (e.g. 502/404), return { error } to avoid "Unexpected token '<'" */
 async function safeResJson(res: Response): Promise<Record<string, unknown>> {
   const text = await res.text();
   const ct = res.headers.get('content-type') ?? '';
   if (text.trimStart().startsWith('<') || !ct.includes('json')) {
-    return { error: `Server returned ${res.status} (expected JSON, got ${ct || 'HTML'})` };
+    const hint = res.status === 502 || res.status === 503 ? ' — Spróbuj ponownie za chwilę lub zmniejsz Parallel (labels).' : '';
+    return { error: `Server returned ${res.status} (expected JSON, got ${ct || 'HTML'})${hint}` };
   }
   try {
     return (JSON.parse(text) as Record<string, unknown>) ?? {};
@@ -743,7 +744,9 @@ export default function AdminPagesList() {
           stepRef.current++;
           setTranslateLabelsProgress((p) => ({ ...(p ?? {}), current: stepRef.current, total: totalSteps, pageSlug: page.slug, pageCategory: page.category ?? 'math', locale: loc }));
           let res: Response;
-          for (let attempt = 0; attempt <= 2; attempt++) {
+          let data: Record<string, unknown>;
+          const maxAttempts = 5;
+          for (let attempt = 0; attempt < maxAttempts; attempt++) {
             res = await fetch('/api/twojastara/ollama/translate-labels', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
@@ -751,14 +754,22 @@ export default function AdminPagesList() {
               credentials: 'include',
               signal: translateLabelsAbortRef.current?.signal,
             });
-            if (res!.status === 401 && typeof window !== 'undefined') {
+            if (res.status === 401 && typeof window !== 'undefined') {
               window.location.href = '/twojastara/login';
               return;
             }
-            if (res!.ok || attempt >= 2) break;
-            await new Promise((r) => setTimeout(r, 2000));
+            data = await safeResJson(res);
+            if (res.ok) break;
+            const is502or503 = res.status === 502 || res.status === 503;
+            const hint = is502or503 ? ' (Ollama/proxy overloaded — retry za chwilę)' : '';
+            if (attempt < maxAttempts - 1 && is502or503) {
+              await new Promise((r) => setTimeout(r, 5000));
+            } else if (attempt < maxAttempts - 1) {
+              await new Promise((r) => setTimeout(r, 2000));
+            } else {
+              throw new Error(String(data?.error || `Translate labels to ${loc} failed`) + hint);
+            }
           }
-          const data = await safeResJson(res!);
           if (!res!.ok) throw new Error(String(data?.error || `Translate labels to ${loc} failed`));
           const lab = (data?.labels && typeof data.labels === 'object' && !Array.isArray(data.labels) ? data.labels : {}) as Record<string, string>;
           const patchRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
@@ -793,7 +804,9 @@ export default function AdminPagesList() {
             const { page, loc, enLabels } = labelTasks[i];
             throttledSetProgress(stepRef.current, page.slug, page.category ?? 'math', loc);
             let res: Response;
-            for (let attempt = 0; attempt <= 2; attempt++) {
+            let data: Record<string, unknown>;
+            const maxAttempts = 5;
+            for (let attempt = 0; attempt < maxAttempts; attempt++) {
               res = await fetch('/api/twojastara/ollama/translate-labels', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -805,10 +818,18 @@ export default function AdminPagesList() {
                 window.location.href = '/twojastara/login';
                 return;
               }
-              if (res.ok || attempt >= 2) break;
-              await new Promise((r) => setTimeout(r, 2000));
+              data = await safeResJson(res);
+              if (res.ok) break;
+              const is502or503 = res.status === 502 || res.status === 503;
+              const hint = is502or503 ? ' (Ollama/proxy overloaded — retry za chwilę)' : '';
+              if (attempt < maxAttempts - 1 && is502or503) {
+                await new Promise((r) => setTimeout(r, 5000));
+              } else if (attempt < maxAttempts - 1) {
+                await new Promise((r) => setTimeout(r, 2000));
+              } else {
+                throw new Error(String(data?.error || `Translate labels to ${loc} failed`) + hint);
+              }
             }
-            const data = await safeResJson(res!);
             if (!res!.ok) throw new Error(String(data?.error || `Translate labels to ${loc} failed`));
             const lab = (data?.labels && typeof data.labels === 'object' && !Array.isArray(data.labels) ? data.labels : {}) as Record<string, string>;
             const patchRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
@@ -910,7 +931,9 @@ export default function AdminPagesList() {
         if (missingKeys.length === 0) return;
         const labelsToTranslate = Object.fromEntries(missingKeys.map((k) => [k, enLabels[k]]));
         let res: Response;
-        for (let attempt = 0; attempt <= 2; attempt++) {
+        let data: Record<string, unknown>;
+        const maxAttempts = 5;
+        for (let attempt = 0; attempt < maxAttempts; attempt++) {
           res = await fetch('/api/twojastara/ollama/translate-labels', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -922,10 +945,18 @@ export default function AdminPagesList() {
             window.location.href = '/twojastara/login';
             return;
           }
-          if (res.ok || attempt >= 2) break;
-          await new Promise((r) => setTimeout(r, 2000));
+          data = await safeResJson(res);
+          if (res.ok) break;
+          const is502or503 = res.status === 502 || res.status === 503;
+          const hint = is502or503 ? ' (Ollama/proxy overloaded — retry za chwilę)' : '';
+          if (attempt < maxAttempts - 1 && is502or503) {
+            await new Promise((r) => setTimeout(r, 5000));
+          } else if (attempt < maxAttempts - 1) {
+            await new Promise((r) => setTimeout(r, 2000));
+          } else {
+            throw new Error(String(data?.error || `Translate missing labels to ${loc} failed`) + hint);
+          }
         }
-        const data = await safeResJson(res!);
         if (!res!.ok) throw new Error(String(data?.error || `Translate missing labels to ${loc} failed`));
         const translated = data?.labels;
         const merged = { ...existing, ...(translated && typeof translated === 'object' && !Array.isArray(translated) ? translated : {}) };

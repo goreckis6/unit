@@ -9,7 +9,7 @@ import { useGenerate, type GenerateProviderType } from '../../GenerateContext';
 import { SeoChecker } from '@/components/admin/SeoChecker';
 import { resolveCalculatorPath } from '@/lib/gsc-redirects';
 
-export type PageStage = 'new' | 'in-progress' | 'translate-label' | 'completed' | 'completed-alive' | 'done';
+export type PageStage = 'new' | 'content-en-done' | 'translation-done' | 'calculator-done' | 'done' | 'completed-alive';
 
 const LIST_FILTER_STORAGE_KEY = 'twojastara-pages-list-filter';
 
@@ -146,24 +146,36 @@ function getMissingLabelKeysForLocale(
   return missing;
 }
 
-const VALID_MANUAL_BOOKMARKS: PageStage[] = ['in-progress', 'translate-label', 'completed', 'completed-alive', 'done'];
+const VALID_MANUAL_BOOKMARKS: PageStage[] = ['content-en-done', 'translation-done', 'calculator-done', 'done', 'completed-alive'];
+
+/** Page has calculator code/link and valid EN labels (at least one non-empty key). */
+function hasCalculatorWithEnLabels(page: Page): boolean {
+  const hasCalc = !!(page.calculatorCode ?? '').trim() || !!(page.linkedCalculatorPath ?? '').trim();
+  if (!hasCalc) return false;
+  const en = page.translations.find((t) => t.locale === 'en');
+  const enLab = parseJson<Record<string, string>>(en?.calculatorLabels, {});
+  const enKeys = Object.keys(enLab).filter((k) => enLab[k]?.trim());
+  return enKeys.length > 0;
+}
 
 function getPageStage(page: Page): PageStage {
   if (!hasEnContent(page)) return 'new';
-  if (!hasAllTranslations(page)) return 'in-progress';
-  if (!hasAllLabelsTranslated(page)) return 'translate-label';
-  return page.published ? 'completed-alive' : 'completed';
+  if (!hasAllTranslations(page)) return 'content-en-done';
+  const hasCalc = !!(page.calculatorCode ?? '').trim() || !!(page.linkedCalculatorPath ?? '').trim();
+  if (!hasCalc) return page.published ? 'completed-alive' : 'done';
+  if (!hasCalculatorWithEnLabels(page)) return 'translation-done';
+  if (!hasAllLabelsTranslated(page)) return 'calculator-done';
+  return page.published ? 'completed-alive' : 'done';
 }
 
-/** Stage used for tab placement; manualBookmark overrides. Done = TR+LB not published, Alive = TR+LB published. */
+/** Stage used for tab placement; manualBookmark overrides. */
 function getEffectiveStage(page: Page): PageStage {
-  if (page.manualBookmark && VALID_MANUAL_BOOKMARKS.includes(page.manualBookmark as PageStage)) {
-    return page.manualBookmark as PageStage;
+  const legacy = { 'in-progress': 'content-en-done', 'translate-label': 'calculator-done', completed: 'done' } as const;
+  const bookmark = page.manualBookmark;
+  if (bookmark && (VALID_MANUAL_BOOKMARKS.includes(bookmark as PageStage) || bookmark in legacy)) {
+    return (legacy[bookmark as keyof typeof legacy] ?? bookmark) as PageStage;
   }
-  const computed = getPageStage(page);
-  if (computed === 'completed') return 'done';
-  if (computed === 'completed-alive') return 'completed-alive';
-  return computed;
+  return getPageStage(page);
 }
 
 type PageTranslation = {
@@ -275,17 +287,13 @@ export default function AdminPagesList() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const tabParam = searchParams.get('tab');
-  const validStages: PageStage[] = ['in-progress', 'translate-label', 'done', 'completed-alive'];
+  const validStages: PageStage[] = ['new', 'content-en-done', 'translation-done', 'calculator-done', 'done', 'completed-alive'];
   const [activeBookmark, setActiveBookmark] = useState<PageStage>(() =>
-    tabParam && validStages.includes(tabParam as PageStage) ? (tabParam as PageStage) : 'in-progress'
+    tabParam && validStages.includes(tabParam as PageStage) ? (tabParam as PageStage) : 'new'
   );
 
   useEffect(() => {
-    if (tabParam === 'new') {
-      setActiveBookmark('in-progress');
-    } else if (tabParam === 'completed' || tabParam === 'completed-alive') {
-      setActiveBookmark('done');
-    } else if (tabParam && validStages.includes(tabParam as PageStage) && tabParam !== activeBookmark) {
+    if (tabParam && validStages.includes(tabParam as PageStage) && tabParam !== activeBookmark) {
       setActiveBookmark(tabParam as PageStage);
     }
   }, [tabParam]);
@@ -305,18 +313,17 @@ export default function AdminPagesList() {
   }
 
   const pagesByStage = useMemo(() => {
-    const byStage: Record<PageStage, Page[]> = { new: [], 'in-progress': [], 'translate-label': [], completed: [], 'completed-alive': [], done: [] };
+    const byStage: Record<PageStage, Page[]> = { new: [], 'content-en-done': [], 'translation-done': [], 'calculator-done': [], done: [], 'completed-alive': [] };
     const translateLabelSlugs = new Set<string>();
     if (translateLabelsProgress?.pageSlug) translateLabelSlugs.add(translateLabelsProgress.pageSlug);
     if (translateLabelsPausedAt?.pageSlug) translateLabelSlugs.add(translateLabelsPausedAt.pageSlug);
     for (const p of pages) {
       let stage: PageStage;
       if (translateLabelSlugs.has(p.slug)) {
-        stage = 'translate-label';
+        stage = 'calculator-done';
       } else {
         stage = getEffectiveStage(p);
       }
-      if (stage === 'new') stage = 'in-progress';
       byStage[stage].push(p);
     }
     for (const stage of Object.keys(byStage) as PageStage[]) {
@@ -439,13 +446,13 @@ export default function AdminPagesList() {
 
   useEffect(() => {
     if (translateProgress || translatePausedAt) {
-      setActiveBookmark('in-progress');
+      setActiveBookmark('content-en-done');
     }
   }, [translateProgress?.pageTitle, translatePausedAt?.pageSlug]);
 
   useEffect(() => {
     if (translateLabelsProgress || translateLabelsPausedAt) {
-      setActiveBookmark('translate-label');
+      setActiveBookmark('calculator-done');
     }
   }, [translateLabelsProgress?.pageSlug, translateLabelsPausedAt?.pageSlug]);
 
@@ -455,7 +462,7 @@ export default function AdminPagesList() {
     const hadProgress = !!prevTranslateProgress.current;
     prevTranslateProgress.current = translateProgress;
     if (hadProgress && !translateProgress && !translatePausedAt) {
-      setActiveBookmark('translate-label');
+      setActiveBookmark('translation-done');
     }
   }, [translateProgress, translatePausedAt]);
 
@@ -640,9 +647,15 @@ export default function AdminPagesList() {
         return;
       }
       setPages((prev) =>
-        prev.map((p) => (selectedIds.has(p.id) ? { ...p, published } : p))
+        prev.map((p) =>
+          selectedIds.has(p.id)
+            ? { ...p, published, manualBookmark: published ? 'completed-alive' : 'done' }
+            : p
+        )
       );
       setSelectedIds(new Set());
+      if (published && activeBookmark === 'done') setActiveBookmark('completed-alive');
+      if (!published && activeBookmark === 'completed-alive') setActiveBookmark('done');
     } catch (e) {
       alert(e instanceof Error ? e.message : 'Bulk publish failed');
     } finally {
@@ -721,7 +734,7 @@ export default function AdminPagesList() {
       alert('No labels to translate. Ensure pages have content translated to all locales first (run Translate), then Translate Labels.');
       return;
     }
-    setActiveBookmark('translate-label');
+    setActiveBookmark('calculator-done');
     setTranslateLabelsLoading(true);
     setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '', startedAt: Date.now() });
     setTranslateLabelsPausedAt(null);
@@ -916,7 +929,7 @@ export default function AdminPagesList() {
       alert('No missing labels. All selected pages have full label translations.');
       return;
     }
-    setActiveBookmark('translate-label');
+    setActiveBookmark('calculator-done');
     setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '', startedAt: Date.now() });
     const concurrency = Math.max(1, Math.min(6, translateLabelsConcurrency));
     const stepRef = { current: 0 };
@@ -1040,7 +1053,7 @@ export default function AdminPagesList() {
   }
 
   function handleBatchTranslate() {
-    setActiveBookmark('in-progress');
+    setActiveBookmark('content-en-done');
     startTranslate({
       pages,
       selectedIds,
@@ -1065,7 +1078,7 @@ export default function AdminPagesList() {
       return;
     }
     setSelectedIds(new Set(withMissing.map((p) => p.id)));
-    setActiveBookmark('in-progress');
+    setActiveBookmark('content-en-done');
     startTranslate({
       pages,
       selectedIds: new Set(withMissing.map((p) => p.id)),
@@ -1143,6 +1156,7 @@ export default function AdminPagesList() {
       const listRes = await fetch('/api/twojastara/pages');
       const listData = await listRes.json();
       if (Array.isArray(listData)) setPages(sortPagesLatestFirst(listData));
+      setActiveBookmark('new');
     } catch (e) {
       setBulkImportResult({ type: 'error', msg: e instanceof Error ? e.message : 'Import failed' });
     } finally {
@@ -1193,8 +1207,10 @@ export default function AdminPagesList() {
   const selectedCount = selectedIds.size;
 
   const bookmarkTabs: { stage: PageStage; label: string; count: number; green?: boolean }[] = [
-    { stage: 'in-progress', label: 'Translation', count: pagesByStage['in-progress'].length, green: true },
-    { stage: 'translate-label', label: 'Translation Labels', count: pagesByStage['translate-label'].length, green: true },
+    { stage: 'new', label: 'NEW', count: pagesByStage.new.length },
+    { stage: 'content-en-done', label: 'Content EN - Done', count: pagesByStage['content-en-done'].length, green: true },
+    { stage: 'translation-done', label: '24 Languages Translation done', count: pagesByStage['translation-done'].length, green: true },
+    { stage: 'calculator-done', label: 'Calculator done', count: pagesByStage['calculator-done'].length, green: true },
     { stage: 'done', label: 'Done (TR+LB)', count: pagesByStage.done.length, green: true },
     { stage: 'completed-alive', label: 'Alive', count: pagesByStage['completed-alive'].length, green: true },
   ];
@@ -1528,8 +1544,14 @@ export default function AdminPagesList() {
             lineHeight: 1.5,
           }}
         >
-          <strong style={{ color: 'var(--text-primary)' }}>Workflow:</strong>{' '}
-          1) Upload JSON to create site/sites → 2) Generate content (Claude) → 3) Create calculator → 4) Translate content to other languages → 5) Translate labels
+          <strong style={{ color: 'var(--text-primary)' }}>Workflow:</strong>
+          <ol style={{ margin: '0.25rem 0 0 1rem', paddingLeft: '0.5rem' }}>
+            <li>Upload JSON to create site/sites</li>
+            <li>Generate content (Claude)</li>
+            <li>Create calculator</li>
+            <li>Translate content to other languages</li>
+            <li>Translate labels</li>
+          </ol>
         </div>
         <div style={{ display: 'flex', gap: '0.25rem', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-light)' }}>
           {bookmarkTabs.map(({ stage, label, count, green }) => {
@@ -1622,7 +1644,7 @@ export default function AdminPagesList() {
         </div>
       )}
 
-      {(activeBookmark === 'in-progress' || activeBookmark === 'translate-label' || activeBookmark === 'done' || activeBookmark === 'completed-alive') && filteredPages.length > 0 && (
+      {(activeBookmark === 'new' || activeBookmark === 'content-en-done' || activeBookmark === 'translation-done' || activeBookmark === 'calculator-done' || activeBookmark === 'done' || activeBookmark === 'completed-alive') && filteredPages.length > 0 && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
           <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
             Move to:
@@ -1638,13 +1660,20 @@ export default function AdminPagesList() {
               style={{ padding: '0.35rem 0.5rem', fontSize: '0.8rem', minWidth: 140 }}
             >
               <option value="">—</option>
-              <option value="in-progress">Translation</option>
-              <option value="translate-label">Translation Labels</option>
+              <option value="content-en-done">Content EN - Done</option>
+              <option value="translation-done">24 Languages Translation done</option>
+              <option value="calculator-done">Calculator done</option>
               <option value="done">Done (TR+LB)</option>
               <option value="completed-alive">Alive</option>
             </select>
           </label>
-          {activeBookmark === 'in-progress' && (
+          {activeBookmark === 'new' && (
+            <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Generate Content to add EN → moves to Content EN - Done</span>
+          )}
+          {activeBookmark === 'translation-done' && (
+            <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Edit page: add calculator code + EN labels, save → moves to Calculator done</span>
+          )}
+          {activeBookmark === 'content-en-done' && (
             <>
               {filteredPages.filter((p) => hasEnContent(p) && !hasAllTranslations(p)).length > 0 && (
                 <button
@@ -1690,7 +1719,7 @@ export default function AdminPagesList() {
               )}
             </>
           )}
-          {activeBookmark === 'translate-label' && (
+          {activeBookmark === 'calculator-done' && (
             <>
               <button
                 type="button"
@@ -2329,7 +2358,7 @@ export default function AdminPagesList() {
       ) : filteredPages.length === 0 ? (
         <p style={{ color: 'var(--text-secondary)' }}>
           No pages in <strong>
-            {activeBookmark === 'in-progress' ? 'Translation' : activeBookmark === 'translate-label' ? 'Translation Labels' : activeBookmark === 'completed-alive' ? 'Alive' : 'Done (TR+LB)'}
+            {activeBookmark === 'new' ? 'NEW' : activeBookmark === 'content-en-done' ? 'Content EN - Done' : activeBookmark === 'translation-done' ? '24 Languages Translation done' : activeBookmark === 'calculator-done' ? 'Calculator done' : activeBookmark === 'completed-alive' ? 'Alive' : 'Done (TR+LB)'}
           </strong>
           {searchQuery.trim() ? ' matching search' : ''}. Switch tab or create a page.
         </p>
@@ -2419,7 +2448,7 @@ export default function AdminPagesList() {
                   </div>
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
-                  {page.published && activeBookmark === 'done' && (
+                  {page.published && (
                     <a
                       href={resolveCalculatorPath(`/calculators/${page.category}/${page.slug}`)}
                       target="_blank"
@@ -2483,9 +2512,10 @@ export default function AdminPagesList() {
                       style={{ padding: '0.25rem 0.4rem', fontSize: '0.75rem' }}
                     >
                       <option value="">Move</option>
-                      <option value="in-progress">Translation</option>
-                      <option value="translate-label">Labels</option>
-                      <option value="done">Done</option>
+                      <option value="content-en-done">Content EN</option>
+                      <option value="translation-done">Translation done</option>
+                      <option value="calculator-done">Calculator done</option>
+                      <option value="done">Done (TR+LB)</option>
                       <option value="completed-alive">Alive</option>
                     </select>
                   </label>

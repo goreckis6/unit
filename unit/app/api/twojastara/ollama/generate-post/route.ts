@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
 
-const MODEL = process.env.OLLAMA_MODEL || 'gemini-3-flash-preview:cloud';
+const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 const OLLAMA_TIMEOUT_MS = 172_800_000; // 48 h
 
 const SLOT_RETRY_DELAY_MS = 30_000;
@@ -13,7 +13,8 @@ function isRetryableError(err: string): boolean {
   return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy') || s.includes('upstream request timeout') || s.includes('429') || s.includes('too many requests') || s.includes('too many concurrent') || s.includes('econnreset') || s.includes('connection reset') || s.includes('socket hang up') || s.includes('etimedout') || s.includes('und_err_headers_timeout');
 }
 
-async function ollamaChat(messages: { role: string; content: string }[]) {
+async function ollamaChat(messages: { role: string; content: string }[], modelOverride?: string) {
+  const model = modelOverride && modelOverride.trim() ? modelOverride.trim() : MODEL;
   const apiKey = process.env.OLLAMA_API_KEY;
   if (!apiKey) {
     throw new Error('OLLAMA_API_KEY environment variable is not set');
@@ -29,7 +30,7 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${apiKey}`,
         },
-        body: JSON.stringify({ model: MODEL, messages, stream: false }),
+        body: JSON.stringify({ model, messages, stream: false }),
         signal: controller.signal,
       });
       clearTimeout(timeoutId);
@@ -79,7 +80,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { topic } = body;
+    const { topic, model: modelOverride } = body;
     if (!topic || typeof topic !== 'string') {
       return NextResponse.json(
         { error: 'Topic/title is required (e.g. display title of the calculator page)' },
@@ -125,7 +126,8 @@ OUTPUT FORMAT - Respond with a valid JSON object only, no other text. Two keys:
 
 Example: {"content":"# How to convert [X]?\\n\\nIntro paragraph...\\n\\n## How to Use the Calculator\\n\\n1. Step one...","faqItems":[{"question":"What is X?","answer":"X is..."}]}`;
 
-    const raw = await withOllamaSlot(() => ollamaChat([{ role: 'user', content: prompt }]));
+    const useModel = typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined;
+    const raw = await withOllamaSlot(() => ollamaChat([{ role: 'user', content: prompt }], useModel));
     if (!raw) {
       throw new Error('Empty response from Ollama Cloud');
     }

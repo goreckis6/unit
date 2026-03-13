@@ -823,6 +823,10 @@ export default function AdminEditPage() {
     setError('');
     setSaving(true);
     try {
+      const hasCalc = !!(calculatorCode.trim()) || !!(linkedCalculatorPath.trim());
+      const enLab = translations.en?.calculatorLabels ?? {};
+      const enLabelKeys = Object.keys(enLab).filter((k) => enLab[k]?.trim());
+      const hasValidEnLabels = hasCalc && enLabelKeys.length > 0;
       const payload = {
         slug: slug.trim() || undefined,
         category: category.trim() || undefined,
@@ -831,6 +835,7 @@ export default function AdminEditPage() {
         relatedCalculatorsCount,
         linkedCalculatorPath: linkedCalculatorPath.trim() || null,
         calculatorCode: calculatorCode.trim() || null,
+        ...(hasValidEnLabels ? { manualBookmark: 'calculator-done' } : {}),
         translations: Object.entries(translations)
           .filter(([, v]) => {
             const hasData = (v.title ?? '').trim() || (v.displayTitle ?? '').trim() || (v.content ?? '').trim();

@@ -4,7 +4,7 @@ import { getSession } from '@/lib/auth';
 import { LOCALE_NAMES } from '@/lib/admin-locales';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
 
-const MODEL = process.env.OLLAMA_MODEL || 'gemini-3-flash-preview:cloud';
+const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 
 const OLLAMA_TIMEOUT_MS = 172_800_000; // 48 h
 
@@ -35,7 +35,8 @@ function isRetryableError(err: string): boolean {
   );
 }
 
-async function ollamaChat(messages: { role: string; content: string }[]) {
+async function ollamaChat(messages: { role: string; content: string }[], modelOverride?: string) {
+  const model = modelOverride && modelOverride.trim() ? modelOverride.trim() : MODEL;
   const apiKey = process.env.OLLAMA_API_KEY;
   if (!apiKey) {
     throw new Error('OLLAMA_API_KEY environment variable is not set');
@@ -51,7 +52,7 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${apiKey}`,
         },
-        body: JSON.stringify({ model: MODEL, messages, stream: false }),
+        body: JSON.stringify({ model, messages, stream: false }),
         signal: controller.signal,
         dispatcher: ollamaDispatcher,
       });
@@ -126,13 +127,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    let body: { content?: unknown; faqItems?: unknown; targetLocale?: unknown; targetLocales?: unknown; title?: unknown; displayTitle?: unknown; description?: unknown };
+    let body: { content?: unknown; faqItems?: unknown; targetLocale?: unknown; targetLocales?: unknown; title?: unknown; displayTitle?: unknown; description?: unknown; model?: unknown };
     try {
       body = await request.json();
     } catch {
       return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
     }
-    const { content, faqItems, targetLocale: tl, targetLocales: tls, title, displayTitle, description } = body;
+    const { content, faqItems, targetLocale: tl, targetLocales: tls, title, displayTitle, description, model: modelOverride } = body;
     const locales: string[] = Array.isArray(tls) && tls.length > 0
       ? (tls as string[]).filter((l) => typeof l === 'string' && l !== 'en')
       : typeof tl === 'string' && tl !== 'en'
@@ -242,7 +243,8 @@ CRITICAL RULES:
       return s;
     }
 
-    let raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]));
+    const useModel = typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined;
+    let raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel));
     let trimmed = (raw || '').trim();
     let parsed: Record<string, unknown>;
 
@@ -264,7 +266,7 @@ CRITICAL RULES:
         }
         if (attempt < 2) {
           await new Promise((r) => setTimeout(r, 2000));
-          raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]));
+          raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel));
           trimmed = (raw || '').trim();
         } else {
           console.error('[Ollama translate] invalid JSON, raw snippet:', (trimmed || '').slice(0, 500));

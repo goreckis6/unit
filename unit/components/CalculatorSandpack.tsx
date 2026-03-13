@@ -118,7 +118,7 @@ export default function App() {
   };
 
   return (
-    <div ref={wrapperRef} className="calculator-sandpack-wrapper" style={{ borderRadius: 8, overflow: 'visible', border: '1px solid var(--border-color)' }}>
+    <div ref={wrapperRef} className="calculator-sandpack-wrapper" style={{ borderRadius: 8, overflow: 'visible', border: '1px solid var(--border-color)' }} translate="yes">
       <SandpackProvider
         template="react-ts"
         files={files}

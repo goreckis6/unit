@@ -77,6 +77,7 @@ type TranslateContextValue = {
     translateOnlyOne: boolean;
     translateConcurrency?: number;
     contentParallel?: number;
+    ollamaModel?: string;
     resumeOverride?: TranslatePausedAt;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
@@ -366,6 +367,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                       title: enTitle || undefined,
                       displayTitle: enDisplayTitle || undefined,
                       description: enDescription || undefined,
+                      model: ollamaModel || undefined,
                     }),
                     credentials: 'include',
                   },

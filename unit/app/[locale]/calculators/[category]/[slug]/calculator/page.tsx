@@ -7,6 +7,7 @@ import { ROUTING_LOCALES } from '@/i18n/routing';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { hasCalculatorEmbed } from '@/lib/calculator-embeds';
+import { resolveCalculatorPath } from '@/lib/gsc-redirects';
 import { Link } from '@/i18n/routing';
 import { CalculatorSandpackClient } from '@/components/CalculatorSandpackClient';
 
@@ -113,7 +114,7 @@ export default async function CalculatorSubpage({ params, searchParams }: Props)
 
       <div className="calculator-container">
         <div className="container">
-          <div className="calculator-card">
+          <div className="calculator-card" translate="yes">
             {iframeSrc && (
               <iframe
                 src={iframeSrc}
@@ -124,6 +125,7 @@ export default async function CalculatorSubpage({ params, searchParams }: Props)
                   border: 'none',
                   borderRadius: 8,
                 }}
+                translate="yes"
               />
             )}
 
@@ -148,6 +150,14 @@ export default async function CalculatorSubpage({ params, searchParams }: Props)
               />
             )}
           </div>
+          {locale !== 'en' && (iframeSrc || page.calculatorCode) && (
+            <p className="chrome-translate-tip" style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
+              {tCommon('chromeTranslateTip')}{' '}
+              <Link href={resolveCalculatorPath(`/calculators/${category}/${slug}/calculator`)} locale="en" className="link-accent">
+                View in English
+              </Link>
+            </p>
+          )}
         </div>
       </div>
 

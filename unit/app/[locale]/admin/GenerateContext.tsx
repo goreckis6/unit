@@ -52,6 +52,7 @@ type GenerateContextValue = {
     pages: Page[];
     selectedIds: Set<string>;
     provider?: GenerateProviderType;
+    ollamaModel?: string;
     resumeFromPageSlug?: string;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
@@ -107,13 +108,14 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
       pages: Page[];
       selectedIds: Set<string>;
       provider?: GenerateProviderType;
+      ollamaModel?: string;
       resumeFromPageSlug?: string;
       autoResumeOnError: boolean;
       onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
       onPageGenerated?: (pageId: string) => void;
       onComplete?: () => void;
     }) => {
-      const { pages, selectedIds, provider = 'ollama', resumeFromPageSlug, autoResumeOnError, onPagesUpdate, onPageGenerated, onComplete } = params;
+      const { pages, selectedIds, provider = 'ollama', ollamaModel, resumeFromPageSlug, autoResumeOnError, onPagesUpdate, onPageGenerated, onComplete } = params;
       const ids = Array.from(selectedIds);
       if (ids.length === 0) {
         setGenerateError('Zaznacz co najmniej jedną stronę.');
@@ -147,7 +149,7 @@ export function GenerateProvider({ children }: { children: ReactNode }) {
             {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ topic }),
+              body: JSON.stringify(provider === 'ollama' && ollamaModel ? { topic, model: ollamaModel } : { topic }),
               credentials: 'include',
             },
             provider === 'claude' ? 120_000 : 172_800_000,

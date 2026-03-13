@@ -17,7 +17,10 @@ export async function POST(request: NextRequest) {
 
     const result = await prisma.page.updateMany({
       where: { id: { in: ids } },
-      data: { published },
+      data: {
+        published,
+        manualBookmark: published ? 'completed-alive' : 'done',
+      },
     });
 
     return NextResponse.json({

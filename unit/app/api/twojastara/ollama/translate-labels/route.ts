@@ -4,7 +4,7 @@ import { getSession } from '@/lib/auth';
 import { LOCALE_NAMES } from '@/lib/admin-locales';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
 
-const MODEL = process.env.OLLAMA_MODEL || 'gemini-3-flash-preview:cloud';
+const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 const OLLAMA_TIMEOUT_MS = 172_800_000; // 48 h
 
 /** Dispatcher with high timeouts — undici's default headersTimeout causes UND_ERR_HEADERS_TIMEOUT on slow Ollama Cloud */
@@ -21,7 +21,8 @@ function isRetryableError(err: string): boolean {
   return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy') || s.includes('upstream request timeout') || s.includes('429') || s.includes('too many requests') || s.includes('too many concurrent') || s.includes('econnreset') || s.includes('connection reset') || s.includes('socket hang up') || s.includes('etimedout') || s.includes('und_err_headers_timeout');
 }
 
-async function ollamaChat(messages: { role: string; content: string }[]) {
+async function ollamaChat(messages: { role: string; content: string }[], modelOverride?: string) {
+  const model = modelOverride && modelOverride.trim() ? modelOverride.trim() : MODEL;
   const apiKey = process.env.OLLAMA_API_KEY;
   if (!apiKey) {
     throw new Error('OLLAMA_API_KEY environment variable is not set');
@@ -37,7 +38,7 @@ async function ollamaChat(messages: { role: string; content: string }[]) {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${apiKey}`,
         },
-        body: JSON.stringify({ model: MODEL, messages, stream: false }),
+        body: JSON.stringify({ model, messages, stream: false }),
         signal: controller.signal,
         dispatcher: ollamaDispatcher,
       });
@@ -92,7 +93,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { labels, targetLocale } = body;
+    const { labels, targetLocale, model: modelOverride } = body;
     if (!targetLocale || typeof targetLocale !== 'string') {
       return NextResponse.json({ error: 'targetLocale is required (e.g. pl, de)' }, { status: 400 });
     }
@@ -122,7 +123,8 @@ RULES:
 
     const userContent = `[Target: ${targetLocale} = ${targetLanguage}. All values MUST be in ${targetLanguage}, never English.]\n\nTranslate these label values:\n${JSON.stringify(Object.fromEntries(entries), null, 2)}`;
 
-    const raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }]));
+    const useModel = typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined;
+    const raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel));
     let trimmed = (raw || '').trim();
     trimmed = trimmed.replace(/^```(?:json)?\s*\n?/i, '').replace(/\n?```\s*$/i, '');
     const jsonMatch = trimmed.match(/\{[\s\S]*\}/);

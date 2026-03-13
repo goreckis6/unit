@@ -13,6 +13,15 @@ export type PageStage = 'new' | 'content-en-done' | 'translation-done' | 'calcul
 
 const LIST_FILTER_STORAGE_KEY = 'twojastara-pages-list-filter';
 
+const OLLAMA_MODELS: { id: string; label: string; desc: string }[] = [
+  { id: 'glm-4.6:cloud', label: 'GLM-4.6 (domyślny)', desc: 'Domyślny model. Stabilny, dobre wyniki.' },
+  { id: 'gemini-3-flash-preview:cloud', label: 'Gemini 3 Flash', desc: 'Najszybszy model od Google, zoptymalizowany pod kątem niskich opóźnień i ogromnego kontekstu (1 mln tokenów).' },
+  { id: 'gemini-3-pro-preview:cloud', label: 'Gemini 3 Pro', desc: 'Potężniejsza wersja Gemini, lepsza w logice i analizie wideo.' },
+  { id: 'deepseek-v3.2:671b-cloud', label: 'DeepSeek V3.2 671B', desc: 'Jeden z najpotężniejszych modeli open-weights, dostępny w chmurze ze względu na ogromny rozmiar.' },
+  { id: 'qwen3.5:122b-cloud', label: 'Qwen3.5 122B', desc: 'Bardzo szybki model od Alibaby, świetny do kodowania i zadań agenturalnych.' },
+  { id: 'glm-5:cloud', label: 'GLM-5', desc: 'Najnowszy model od Z.ai, zoptymalizowany pod kątem inżynierii systemowej i długich zadań.' },
+];
+
 type SortByVal = 'latest' | 'oldest' | 'category' | 'slug';
 
 function getInitialListFilter(searchParams: URLSearchParams): { searchQuery: string; categoryFilter: string; sortBy: SortByVal } {
@@ -270,6 +279,7 @@ export default function AdminPagesList() {
   const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
   const [generateProvider, setGenerateProvider] = useState<GenerateProviderType>('ollama');
+  const [ollamaModel, setOllamaModel] = useState('glm-4.6:cloud');
   const [showBulkImport, setShowBulkImport] = useState(false);
   const [bulkImportJson, setBulkImportJson] = useState('');
   const [bulkImportLoading, setBulkImportLoading] = useState(false);
@@ -281,6 +291,7 @@ export default function AdminPagesList() {
   const [translateLabelsProgress, setTranslateLabelsProgress] = useState<{ current: number; total: number; pageSlug: string; pageCategory: string; locale: string; startedAt?: number } | null>(null);
   const [translateLabelsPausedAt, setTranslateLabelsPausedAt] = useState<{ pageSlug: string; nextLocale: string } | null>(null);
   const [translateLabelsSuccess, setTranslateLabelsSuccess] = useState('');
+  const [translateLabelsError, setTranslateLabelsError] = useState('');
   const [elapsedTick, setElapsedTick] = useState(0);
   const translateLabelsPausedRef = useRef(false);
   const translateLabelsAbortRef = useRef<AbortController | null>(null);
@@ -737,6 +748,7 @@ export default function AdminPagesList() {
     }
     setActiveBookmark('calculator-done');
     setTranslateLabelsLoading(true);
+    setTranslateLabelsError('');
     setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '', startedAt: Date.now() });
     setTranslateLabelsPausedAt(null);
     translateLabelsPausedRef.current = false;
@@ -764,7 +776,7 @@ export default function AdminPagesList() {
             res = await fetch('/api/twojastara/ollama/translate-labels', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ labels: enLabels, targetLocale: loc }),
+              body: JSON.stringify({ labels: enLabels, targetLocale: loc, model: ollamaModel }),
               credentials: 'include',
               signal: translateLabelsAbortRef.current?.signal,
             });
@@ -824,7 +836,7 @@ export default function AdminPagesList() {
               res = await fetch('/api/twojastara/ollama/translate-labels', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ labels: enLabels, targetLocale: loc }),
+                body: JSON.stringify({ labels: enLabels, targetLocale: loc, model: ollamaModel }),
                 credentials: 'include',
                 signal: translateLabelsAbortRef.current?.signal,
               });
@@ -868,9 +880,35 @@ export default function AdminPagesList() {
       setSelectedIds(new Set());
       setTranslateLabelsSuccess(`Zakończono tłumaczenie etykiet kalkulatorów: ${withEnLabels.length} stron(ach).`);
       onCompleteCallback?.();
+      const completedIds = withEnLabels.map((p) => p.id);
+      if (completedIds.length > 0) {
+        try {
+          const br = await fetch('/api/twojastara/pages/bulk-bookmark', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ids: completedIds, manualBookmark: 'done' }),
+            credentials: 'include',
+          });
+          const bd = await br.json();
+          if (br.ok && Array.isArray(bd)) {
+            setPages((prev) =>
+              prev.map((p) => {
+                const u = bd.find((x: { id: string }) => x.id === p.id);
+                return u ? { ...p, manualBookmark: (u as Page).manualBookmark ?? 'done' } : p;
+              })
+            );
+            setActiveBookmark('done');
+          }
+        } catch {
+          /* ignore */
+        }
+      }
     } catch (e) {
       const isAbort = e instanceof Error && e.name === 'AbortError';
-      if (!isAbort) alert(e instanceof Error ? e.message : 'Translate labels failed');
+      if (!isAbort) {
+        const msg = e instanceof Error ? e.message : 'Translate labels failed';
+        setTranslateLabelsError(msg);
+      }
     } finally {
       setTranslateLabelsLoading(false);
       setTranslateLabelsProgress(null);
@@ -908,6 +946,7 @@ export default function AdminPagesList() {
     }
     const allNonEn = [...ADMIN_LOCALES.filter((l) => l !== 'en')].reverse();
     setTranslateLabelsLoading(true);
+    setTranslateLabelsError('');
     setTranslateLabelsProgress(null);
     setTranslateLabelsPausedAt(null);
     translateLabelsPausedRef.current = false;
@@ -948,13 +987,13 @@ export default function AdminPagesList() {
         let data: Record<string, unknown>;
         const maxAttempts = 5;
         for (let attempt = 0; attempt < maxAttempts; attempt++) {
-          res = await fetch('/api/twojastara/ollama/translate-labels', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ labels: labelsToTranslate, targetLocale: loc }),
-            credentials: 'include',
-            signal: translateLabelsAbortRef.current?.signal,
-          });
+res = await fetch('/api/twojastara/ollama/translate-labels', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ labels: labelsToTranslate, targetLocale: loc, model: ollamaModel }),
+          credentials: 'include',
+          signal: translateLabelsAbortRef.current?.signal,
+        });
           if (res.status === 401 && typeof window !== 'undefined') {
             window.location.href = '/twojastara/login';
             return;
@@ -1031,7 +1070,9 @@ export default function AdminPagesList() {
       onCompleteCallback?.();
     } catch (e) {
       const isAbort = e instanceof Error && e.name === 'AbortError';
-      if (!isAbort) alert(e instanceof Error ? e.message : 'Translate missing labels failed');
+      if (!isAbort) {
+        setTranslateLabelsError(e instanceof Error ? e.message : 'Translate missing labels failed');
+      }
     } finally {
       setTranslateLabelsLoading(false);
       setTranslateLabelsProgress(null);
@@ -1046,6 +1087,7 @@ export default function AdminPagesList() {
       pages,
       selectedIds,
       provider: generateProvider,
+      ollamaModel,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
       onPageGenerated: (id) => setGeneratedIdsThisRun((prev) => new Set([...prev, id])),
@@ -1062,6 +1104,7 @@ export default function AdminPagesList() {
       translateOnlyOne,
       translateConcurrency,
       contentParallel,
+      ollamaModel,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -1087,6 +1130,7 @@ export default function AdminPagesList() {
       translateOnlyOne: false,
       translateConcurrency,
       contentParallel,
+      ollamaModel,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -1253,6 +1297,25 @@ export default function AdminPagesList() {
                 <option value="ollama">Ollama</option>
                 <option value="claude">Claude 4.6</option>
               </select>
+              <label
+                style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}
+                title="Model Ollama dla Generate, Translate i Translate Labels"
+              >
+                Ollama model:
+                <select
+                  value={ollamaModel}
+                  onChange={(e) => setOllamaModel(e.target.value)}
+                  disabled={!!generateProgress || !!translateProgress || !!translateLabelsLoading}
+                  className="admin-form-select"
+                  style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem', minWidth: 160 }}
+                >
+                  {OLLAMA_MODELS.map((m) => (
+                    <option key={m.id} value={m.id} title={m.desc}>
+                      {m.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
               {generateProgress && (
                 <button
                   type="button"
@@ -1993,7 +2056,7 @@ export default function AdminPagesList() {
           </button>
         </div>
       )}
-      {(generateError || translateError) && !autoResumeCountdown && (
+      {(generateError || translateError || translateLabelsError) && !autoResumeCountdown && (
         <div
           role="alert"
           style={{
@@ -2004,9 +2067,24 @@ export default function AdminPagesList() {
             borderRadius: 8,
             color: 'var(--error-color)',
             fontSize: '0.875rem',
+            display: 'flex',
+            alignItems: 'flex-start',
+            justifyContent: 'space-between',
+            gap: '0.5rem',
           }}
         >
-          {[generateError, translateError].filter(Boolean).join(' ')}
+          <span style={{ flex: 1 }}>
+            {[generateError, translateError, translateLabelsError].filter(Boolean).join(' ')}
+          </span>
+          <button
+            type="button"
+            onClick={() => setTranslateLabelsError('')}
+            className="btn btn-secondary btn-sm"
+            style={{ padding: '0.2rem 0.5rem', flexShrink: 0 }}
+            title="Zamknij"
+          >
+            ×
+          </button>
         </div>
       )}
       {autoResumeCountdown !== null && (

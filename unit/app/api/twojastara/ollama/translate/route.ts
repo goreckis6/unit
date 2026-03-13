@@ -4,7 +4,7 @@ import { getSession } from '@/lib/auth';
 import { LOCALE_NAMES } from '@/lib/admin-locales';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
 
-const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
+const MODEL = process.env.OLLAMA_MODEL || 'gemini-3-flash-preview:cloud';
 
 const OLLAMA_TIMEOUT_MS = 172_800_000; // 48 h
 

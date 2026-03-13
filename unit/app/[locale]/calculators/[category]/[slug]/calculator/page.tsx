@@ -150,14 +150,6 @@ export default async function CalculatorSubpage({ params, searchParams }: Props)
               />
             )}
           </div>
-          {locale !== 'en' && (iframeSrc || page.calculatorCode) && (
-            <p className="chrome-translate-tip" style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-              {tCommon('chromeTranslateTip')}{' '}
-              <Link href={resolveCalculatorPath(`/calculators/${category}/${slug}/calculator`)} locale="en" className="link-accent">
-                {tCommon('viewInEnglish')}
-              </Link>
-            </p>
-          )}
         </div>
       </div>
 

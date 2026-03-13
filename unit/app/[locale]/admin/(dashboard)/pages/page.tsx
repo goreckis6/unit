@@ -162,10 +162,10 @@ function getPageStage(page: Page): PageStage {
   if (!hasEnContent(page)) return 'new';
   if (!hasAllTranslations(page)) return 'content-en-done';
   const hasCalc = !!(page.calculatorCode ?? '').trim() || !!(page.linkedCalculatorPath ?? '').trim();
-  if (!hasCalc) return page.published ? 'completed-alive' : 'done';
+  if (!hasCalc) return 'translation-done'; // 24 langs done, waiting for calculator
   if (!hasCalculatorWithEnLabels(page)) return 'translation-done';
   if (!hasAllLabelsTranslated(page)) return 'calculator-done';
-  return page.published ? 'completed-alive' : 'done';
+  return page.published ? 'completed-alive' : 'done'; // Done (TR+LB)
 }
 
 /** Stage used for tab placement; manualBookmark overrides. */

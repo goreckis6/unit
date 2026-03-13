@@ -16,6 +16,14 @@ function hasAllTranslations(page: PageWithTranslations): boolean {
   return ADMIN_LOCALES.every((loc) => localeSet.has(loc));
 }
 
+function hasCalculatorWithEnLabels(page: PageWithTranslations): boolean {
+  const hasCalc = !!(page.calculatorCode ?? '').trim() || !!(page.linkedCalculatorPath ?? '').trim();
+  if (!hasCalc) return false;
+  const en = page.translations.find((t) => t.locale === 'en');
+  const enLab = parseJson<Record<string, string>>(en?.calculatorLabels, {});
+  return Object.keys(enLab).filter((k) => enLab[k]?.trim()).length > 0;
+}
+
 function hasAllLabelsTranslated(page: PageWithTranslations): boolean {
   if (!(page.calculatorCode ?? '').trim()) return true;
   const en = page.translations.find((t) => t.locale === 'en');
@@ -41,13 +49,16 @@ function parseJson<T>(raw: string | null, fallback: T): T {
   }
 }
 
-type Stage = 'new' | 'in-progress' | 'translate-label' | 'completed' | 'completed-alive';
+type Stage = 'new' | 'content-en-done' | 'translation-done' | 'calculator-done' | 'done' | 'completed-alive';
 
 function getPageStage(page: PageWithTranslations): Stage {
   if (!hasEnContent(page)) return 'new';
-  if (!hasAllTranslations(page)) return 'in-progress';
-  if (!hasAllLabelsTranslated(page)) return 'translate-label';
-  return page.published ? 'completed-alive' : 'completed';
+  if (!hasAllTranslations(page)) return 'content-en-done';
+  const hasCalc = !!(page.calculatorCode ?? '').trim() || !!(page.linkedCalculatorPath ?? '').trim();
+  if (!hasCalc) return 'translation-done'; // 24 langs done, waiting for calculator
+  if (!hasCalculatorWithEnLabels(page)) return 'translation-done';
+  if (!hasAllLabelsTranslated(page)) return 'calculator-done';
+  return page.published ? 'completed-alive' : 'done'; // Done (TR+LB)
 }
 
 async function getStats() {
@@ -58,9 +69,10 @@ async function getStats() {
 
   const byStage: Record<Stage, number> = {
     new: 0,
-    'in-progress': 0,
-    'translate-label': 0,
-    completed: 0,
+    'content-en-done': 0,
+    'translation-done': 0,
+    'calculator-done': 0,
+    done: 0,
     'completed-alive': 0,
   };
 
@@ -109,16 +121,16 @@ export default async function AdminDashboard() {
           <span className="dashboard-stat-label">Published</span>
         </div>
         <div className="dashboard-stat-card dashboard-stat-info">
-          <span className="dashboard-stat-value">{byStage['in-progress']}</span>
-          <span className="dashboard-stat-label">In Translation</span>
+          <span className="dashboard-stat-value">{byStage['content-en-done'] + byStage['translation-done']}</span>
+          <span className="dashboard-stat-label">In Progress</span>
         </div>
         <div className="dashboard-stat-card dashboard-stat-warning">
-          <span className="dashboard-stat-value">{byStage['translate-label']}</span>
-          <span className="dashboard-stat-label">Labels Pending</span>
+          <span className="dashboard-stat-value">{byStage['calculator-done']}</span>
+          <span className="dashboard-stat-label">Calculator Pending</span>
         </div>
         <div className="dashboard-stat-card dashboard-stat-muted">
           <span className="dashboard-stat-value">{byStage.new}</span>
-          <span className="dashboard-stat-label">New / No EN</span>
+          <span className="dashboard-stat-label">New</span>
         </div>
       </div>
 
@@ -136,35 +148,45 @@ export default async function AdminDashboard() {
             </div>
             <span className="dashboard-funnel-count">{byStage.new}</span>
           </div>
-          <div className="dashboard-funnel-row" data-stage="in-progress">
-            <span className="dashboard-funnel-label">Translation</span>
+          <div className="dashboard-funnel-row" data-stage="content-en-done">
+            <span className="dashboard-funnel-label">Content EN</span>
             <div className="dashboard-funnel-bar-wrap">
               <div
                 className="dashboard-funnel-bar"
-                style={{ width: total ? `${(byStage['in-progress'] / total) * 100}%` : 0 }}
+                style={{ width: total ? `${(byStage['content-en-done'] / total) * 100}%` : 0 }}
               />
             </div>
-            <span className="dashboard-funnel-count">{byStage['in-progress']}</span>
+            <span className="dashboard-funnel-count">{byStage['content-en-done']}</span>
           </div>
-          <div className="dashboard-funnel-row" data-stage="translate-label">
-            <span className="dashboard-funnel-label">Labels</span>
+          <div className="dashboard-funnel-row" data-stage="translation-done">
+            <span className="dashboard-funnel-label">24 Languages</span>
             <div className="dashboard-funnel-bar-wrap">
               <div
                 className="dashboard-funnel-bar"
-                style={{ width: total ? `${(byStage['translate-label'] / total) * 100}%` : 0 }}
+                style={{ width: total ? `${(byStage['translation-done'] / total) * 100}%` : 0 }}
               />
             </div>
-            <span className="dashboard-funnel-count">{byStage['translate-label']}</span>
+            <span className="dashboard-funnel-count">{byStage['translation-done']}</span>
           </div>
-          <div className="dashboard-funnel-row" data-stage="completed">
-            <span className="dashboard-funnel-label">Completed</span>
+          <div className="dashboard-funnel-row" data-stage="calculator-done">
+            <span className="dashboard-funnel-label">Calculator</span>
             <div className="dashboard-funnel-bar-wrap">
               <div
                 className="dashboard-funnel-bar"
-                style={{ width: total ? `${(byStage.completed / total) * 100}%` : 0 }}
+                style={{ width: total ? `${(byStage['calculator-done'] / total) * 100}%` : 0 }}
               />
             </div>
-            <span className="dashboard-funnel-count">{byStage.completed}</span>
+            <span className="dashboard-funnel-count">{byStage['calculator-done']}</span>
+          </div>
+          <div className="dashboard-funnel-row" data-stage="done">
+            <span className="dashboard-funnel-label">Done (TR+LB)</span>
+            <div className="dashboard-funnel-bar-wrap">
+              <div
+                className="dashboard-funnel-bar"
+                style={{ width: total ? `${(byStage.done / total) * 100}%` : 0 }}
+              />
+            </div>
+            <span className="dashboard-funnel-count">{byStage.done}</span>
           </div>
           <div className="dashboard-funnel-row" data-stage="completed-alive">
             <span className="dashboard-funnel-label">Live</span>

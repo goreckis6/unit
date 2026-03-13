@@ -177,12 +177,13 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     translateOnlyOne: boolean;
     translateConcurrency?: number;
     contentParallel?: number;
+    ollamaModel?: string;
     resumeOverride?: TranslatePausedAt;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
     onComplete?: () => void;
   }) => {
-    const { pages, selectedIds, translateOnlyOne, resumeOverride, autoResumeOnError, onPagesUpdate, onComplete } = params;
+    const { pages, selectedIds, translateOnlyOne, resumeOverride, autoResumeOnError, ollamaModel, onPagesUpdate, onComplete } = params;
     const concurrency = Math.max(1, Math.min(6, params.translateConcurrency ?? 4));
     const contentParallel = Math.max(1, Math.min(8, params.contentParallel ?? 4));
     const ids = Array.from(selectedIds);

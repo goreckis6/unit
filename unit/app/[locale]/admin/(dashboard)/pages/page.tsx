@@ -171,7 +171,7 @@ function getPageStage(page: Page): PageStage {
   if (!hasEnContent(page)) return 'new';
   if (!hasAllTranslations(page)) return 'content-en-done';
   const hasCalc = !!(page.calculatorCode ?? '').trim() || !!(page.linkedCalculatorPath ?? '').trim();
-  if (!hasCalc) return 'calculator-done'; // 24 langs done, next: add calculator
+  if (!hasCalc) return 'translation-done'; // 24 langs done, next: add calculator + EN labels
   if (!hasCalculatorWithEnLabels(page)) return 'calculator-done';
   if (!hasAllLabelsTranslated(page)) return 'calculator-done';
   return page.published ? 'completed-alive' : 'done'; // Done (TR+LB)
@@ -1108,7 +1108,10 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
-      onComplete: () => setSelectedIds(new Set()),
+      onComplete: () => {
+        setSelectedIds(new Set());
+        setActiveBookmark('translation-done');
+      },
     });
   }
 
@@ -1134,7 +1137,10 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
-      onComplete: () => setSelectedIds(new Set()),
+      onComplete: () => {
+        setSelectedIds(new Set());
+        setActiveBookmark('translation-done');
+      },
     });
   }
 

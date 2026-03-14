@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
+import { transformCalculatorCodeForSandpack } from '@/lib/calculator-code-transform';
 
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 const OLLAMA_TIMEOUT_MS = 172_800_000;
@@ -78,6 +79,38 @@ function toNamespace(slug: string): string {
   return slug.replace(/[^a-zA-Z0-9]/g, '') || 'calc';
 }
 
+/** Normalize imports to canonical form (transform-compatible). Fixes LLM output variations. */
+function normalizeImports(code: string): string {
+  let out = code;
+  // CopyButton - force canonical named import
+  out = out.replace(
+    /import\s+(?:\{\s*CopyButton\s*\}|\w+\s+as\s+CopyButton|CopyButton)\s+from\s*['"`][^'"`]+['"`]\s*;?\s*/g,
+    "import { CopyButton } from '@/components/CopyButton';\n"
+  );
+  // useScrollToResult
+  out = out.replace(
+    /import\s+(?:\{\s*useScrollToResult\s*\}|\w+\s+as\s+useScrollToResult|useScrollToResult)\s+from\s*['"`][^'"`]+['"`]\s*;?\s*/g,
+    "import { useScrollToResult } from '@/hooks/useScrollToResult';\n"
+  );
+  // useTranslations from next-intl
+  out = out.replace(
+    /import\s+(?:\{\s*useTranslations\s*\}|\w+\s+as\s+useTranslations|useTranslations)\s+from\s*['"`]next-intl['"`]\s*;?\s*/g,
+    "import { useTranslations } from 'next-intl';\n"
+  );
+  return out;
+}
+
+/** Validate code transforms cleanly for Sandpack. Returns transformed code or throws. */
+function validateForSandpack(code: string): { transformed: string; valid: boolean } {
+  const normalized = normalizeImports(code);
+  const transformed = transformCalculatorCodeForSandpack(normalized);
+  const badImports = transformed.match(/import\s+.*from\s+['"`]@\/|from\s+['"`]next-intl['"`]/g);
+  if (badImports?.length) {
+    throw new Error(`Sandpack transform left unresolved imports: ${badImports.join(', ')}`);
+  }
+  return { transformed: normalized, valid: true };
+}
+
 /**
  * POST /api/twojastara/ollama/generate-calculator-code
  * Body: { pageId, title, slug, content, model? }
@@ -118,7 +151,11 @@ REQUIREMENTS (follow exactly):
 4. Use CSS classes: btn btn-primary, btn btn-secondary, number-input, result-value-box, result-item, result-label, result-value
 5. Add onKeyDown={(e) => e.key === 'Enter' && handleCalculate()} to every input so Enter triggers calculation
 6. Placeholder values: add realistic example values in placeholder attributes (e.g. "5 mg", "200 mcg/mL") based on the How to Use section
-7. Import: useState from react, useTranslations from next-intl, useScrollToResult from @/hooks/useScrollToResult, CopyButton from @/components/CopyButton
+7. Use EXACTLY these imports (named imports, single line each):
+   import { useState } from 'react';
+   import { useTranslations } from 'next-intl';
+   import { useScrollToResult } from '@/hooks/useScrollToResult';
+   import { CopyButton } from '@/components/CopyButton';
 8. Export the component as default: export default ${componentName};
 9. Add 'use client'; at top
 10. Use t('calculate'), t('reset'), t('result'), t('resultPlaceholder') and other keys as needed — extract keys from the How to Use steps
@@ -142,6 +179,19 @@ REQUIREMENTS (follow exactly):
     // Ensure 'use client' at top
     if (!code.startsWith("'use client'") && !code.startsWith('"use client"')) {
       code = "'use client';\n\n" + code;
+    }
+
+    // Normalize imports and validate transform works before returning
+    try {
+      const { transformed } = validateForSandpack(code);
+      code = transformed;
+    } catch (validateErr) {
+      const msg = validateErr instanceof Error ? validateErr.message : 'Code validation failed';
+      console.error('[generate-calculator-code] validation:', msg);
+      return NextResponse.json(
+        { error: `Generated code has import issues. ${msg} Try generating again.` },
+        { status: 422 }
+      );
     }
 
     return NextResponse.json({ code, componentName });

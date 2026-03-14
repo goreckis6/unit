@@ -116,7 +116,10 @@ const LABEL_DEFAULTS: Record<string, string> = {
 
 function humanizeLabelKey(key: string): string {
   if (LABEL_DEFAULTS[key]) return LABEL_DEFAULTS[key];
-  return key
+  // Strip trailing "Label" / "ResultLabel" — avoid "X Result Label" or "X Label" in display
+  let k = key.replace(/(ResultLabel|Label)$/i, '');
+  if (!k) return key; // fallback if key was just "label"
+  return k
     .replace(/([A-Z])/g, ' $1')
     .replace(/^./, (s) => s.toUpperCase())
     .trim();

@@ -746,6 +746,7 @@ export default function AdminPagesList() {
         }
         const code = data.code as string;
         if (!code?.trim()) throw new Error('Empty code from API');
+        const labels = (data.labels as Record<string, string> | undefined) ?? {};
         const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
@@ -756,7 +757,19 @@ export default function AdminPagesList() {
           const patchData = await patchRes.json();
           throw new Error(patchData.error || 'Failed to save calculator code');
         }
-        const updated = await patchRes.json();
+        let updated = await patchRes.json();
+        if (Object.keys(labels).length > 0) {
+          const labelsRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ updates: [{ locale: 'en', calculatorLabels: labels }] }),
+            credentials: 'include',
+          });
+          if (labelsRes.ok) {
+            const labelsData = await labelsRes.json();
+            updated = labelsData;
+          }
+        }
         const idx = updatedPages.findIndex((p) => p.id === page.id);
         if (idx >= 0) updatedPages[idx] = updated;
         done++;

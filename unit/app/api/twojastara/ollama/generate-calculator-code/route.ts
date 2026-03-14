@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
 import { transformCalculatorCodeForSandpack } from '@/lib/calculator-code-transform';
+import { extractCalculatorLabelKeys } from '@/lib/extract-calculator-label-keys';
 
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 const OLLAMA_TIMEOUT_MS = 172_800_000;
@@ -100,6 +101,36 @@ function normalizeImports(code: string): string {
   return out;
 }
 
+/** Humanize label key to readable English, e.g. resultPlaceholder -> Enter values and click Calculate */
+const LABEL_DEFAULTS: Record<string, string> = {
+  calculate: 'Calculate',
+  reset: 'Reset',
+  result: 'Result',
+  resultPlaceholder: 'Enter values and click Calculate',
+  resultFraction: 'Result (fraction)',
+  resultDecimal: 'Result (decimal)',
+  title: 'Expression / Input',
+  expression: 'Expression',
+};
+
+function humanizeLabelKey(key: string): string {
+  if (LABEL_DEFAULTS[key]) return LABEL_DEFAULTS[key];
+  return key
+    .replace(/([A-Z])/g, ' $1')
+    .replace(/^./, (s) => s.toUpperCase())
+    .trim();
+}
+
+/** Extract keys from code and build EN labels (humanized). */
+function buildEnLabelsFromCode(code: string): Record<string, string> {
+  const keys = extractCalculatorLabelKeys(code);
+  const labels: Record<string, string> = {};
+  for (const k of keys) {
+    labels[k] = humanizeLabelKey(k);
+  }
+  return labels;
+}
+
 /** Validate code transforms cleanly for Sandpack. Returns transformed code or throws. */
 function validateForSandpack(code: string): { transformed: string; valid: boolean } {
   const normalized = normalizeImports(code);
@@ -194,7 +225,8 @@ REQUIREMENTS (follow exactly):
       );
     }
 
-    return NextResponse.json({ code, componentName });
+    const labels = buildEnLabelsFromCode(code);
+    return NextResponse.json({ code, componentName, labels });
   } catch (error) {
     const msg = error instanceof Error ? error.message : 'Failed to generate calculator code';
     console.error('[generate-calculator-code]', msg, error);

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 
-const VALID_BOOKMARKS = ['content-en-done', 'translation-done', 'calculator-done', 'done', 'completed-alive'];
+const VALID_BOOKMARKS = ['content-en-done', 'translation-done', 'calc-code-generator', 'calculator-done', 'done', 'completed-alive'];
 
 /**
  * POST /api/twojastara/pages/bulk-bookmark

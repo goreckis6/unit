@@ -41,7 +41,7 @@ export async function PATCH(
     if (published !== undefined) updateData.published = published;
     if (calculatorCode !== undefined) updateData.calculatorCode = calculatorCode || null;
     if (linkedCalculatorPath !== undefined) updateData.linkedCalculatorPath = linkedCalculatorPath || null;
-    const validBookmarks = ['content-en-done', 'translation-done', 'calculator-done', 'done', 'completed-alive'];
+    const validBookmarks = ['content-en-done', 'translation-done', 'calc-code-generator', 'calculator-done', 'done', 'completed-alive'];
     if (manualBookmark !== undefined) updateData.manualBookmark = validBookmarks.includes(manualBookmark) ? manualBookmark : null;
     if (relatedCalculatorsMode !== undefined && ['manual', 'random', 'both'].includes(relatedCalculatorsMode)) {
       updateData.relatedCalculatorsMode = relatedCalculatorsMode;

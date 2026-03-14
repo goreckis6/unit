@@ -9,7 +9,7 @@ import { useGenerate, type GenerateProviderType } from '../../GenerateContext';
 import { SeoChecker } from '@/components/admin/SeoChecker';
 import { resolveCalculatorPath } from '@/lib/gsc-redirects';
 
-export type PageStage = 'new' | 'content-en-done' | 'translation-done' | 'calculator-done' | 'done' | 'completed-alive';
+export type PageStage = 'new' | 'content-en-done' | 'translation-done' | 'calc-code-generator' | 'calculator-done' | 'done' | 'completed-alive';
 
 const LIST_FILTER_STORAGE_KEY = 'twojastara-pages-list-filter';
 
@@ -155,7 +155,7 @@ function getMissingLabelKeysForLocale(
   return missing;
 }
 
-const VALID_MANUAL_BOOKMARKS: PageStage[] = ['content-en-done', 'translation-done', 'calculator-done', 'done', 'completed-alive'];
+const VALID_MANUAL_BOOKMARKS: PageStage[] = ['content-en-done', 'translation-done', 'calc-code-generator', 'calculator-done', 'done', 'completed-alive'];
 
 /** Page has calculator code/link and valid EN labels (at least one non-empty key). */
 function hasCalculatorWithEnLabels(page: Page): boolean {
@@ -296,10 +296,13 @@ export default function AdminPagesList() {
   const translateLabelsPausedRef = useRef(false);
   const translateLabelsAbortRef = useRef<AbortController | null>(null);
   const [generatedIdsThisRun, setGeneratedIdsThisRun] = useState<Set<string>>(new Set());
+  const [calcCodeGenLoading, setCalcCodeGenLoading] = useState(false);
+  const [calcCodeGenError, setCalcCodeGenError] = useState('');
+  const [calcCodeGenProgress, setCalcCodeGenProgress] = useState<{ current: number; total: number; pageTitle: string } | null>(null);
   const searchParams = useSearchParams();
   const router = useRouter();
   const tabParam = searchParams.get('tab');
-  const validStages: PageStage[] = ['new', 'content-en-done', 'translation-done', 'calculator-done', 'done', 'completed-alive'];
+  const validStages: PageStage[] = ['new', 'content-en-done', 'translation-done', 'calc-code-generator', 'calculator-done', 'done', 'completed-alive'];
   const [activeBookmark, setActiveBookmark] = useState<PageStage>(() =>
     tabParam && validStages.includes(tabParam as PageStage) ? (tabParam as PageStage) : 'new'
   );
@@ -325,7 +328,7 @@ export default function AdminPagesList() {
   }
 
   const pagesByStage = useMemo(() => {
-    const byStage: Record<PageStage, Page[]> = { new: [], 'content-en-done': [], 'translation-done': [], 'calculator-done': [], done: [], 'completed-alive': [] };
+    const byStage: Record<PageStage, Page[]> = { new: [], 'content-en-done': [], 'translation-done': [], 'calc-code-generator': [], 'calculator-done': [], done: [], 'completed-alive': [] };
     const translateLabelSlugs = new Set<string>();
     if (translateLabelsProgress?.pageSlug) translateLabelSlugs.add(translateLabelsProgress.pageSlug);
     if (translateLabelsPausedAt?.pageSlug) translateLabelSlugs.add(translateLabelsPausedAt.pageSlug);
@@ -391,7 +394,7 @@ export default function AdminPagesList() {
   }, [searchQuery, categoryFilter, sortBy]);
 
   const filteredPages = useMemo(() => {
-    const stagePages = pagesByStage[activeBookmark];
+    const stagePages = activeBookmark === 'calc-code-generator' ? pagesByStage['translation-done'] : pagesByStage[activeBookmark];
     const q = searchQuery.trim().toLowerCase();
     let list = stagePages;
     if (q) {
@@ -703,6 +706,69 @@ export default function AdminPagesList() {
       alert(e instanceof Error ? e.message : 'Clean translations failed');
     } finally {
       setCleanContentLoading(false);
+    }
+  }
+
+  async function handleBulkGenerateCalcCode() {
+    const toProcess = selectedIds.size > 0
+      ? pages.filter((p) => selectedIds.has(p.id) && !(p.calculatorCode ?? '').trim())
+      : filteredPages.filter((p) => !(p.calculatorCode ?? '').trim());
+    if (toProcess.length === 0) {
+      alert('Select pages without calculator code, or ensure the tab has such pages.');
+      return;
+    }
+    setCalcCodeGenLoading(true);
+    setCalcCodeGenError('');
+    const total = toProcess.length;
+    let done = 0;
+    const updatedPages: Page[] = [...pages];
+    try {
+      for (const page of toProcess) {
+        setCalcCodeGenProgress({ current: done, total, pageTitle: page.translations.find((t) => t.locale === 'en')?.displayTitle ?? page.slug });
+        const en = page.translations.find((t) => t.locale === 'en');
+        const title = en?.displayTitle?.trim() || en?.title?.trim() || page.slug;
+        const content = en?.content?.trim() || '';
+        const res = await fetch('/api/twojastara/ollama/generate-calculator-code', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            pageId: page.id,
+            title,
+            slug: page.slug,
+            content,
+            model: ollamaModel,
+          }),
+          credentials: 'include',
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.error || 'Generate calculator code failed');
+        }
+        const code = data.code as string;
+        if (!code?.trim()) throw new Error('Empty code from API');
+        const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ calculatorCode: code }),
+          credentials: 'include',
+        });
+        if (!patchRes.ok) {
+          const patchData = await patchRes.json();
+          throw new Error(patchData.error || 'Failed to save calculator code');
+        }
+        const updated = await patchRes.json();
+        const idx = updatedPages.findIndex((p) => p.id === page.id);
+        if (idx >= 0) updatedPages[idx] = updated;
+        done++;
+      }
+      setPages(sortPagesLatestFirst(updatedPages));
+      setActiveBookmark('calculator-done');
+      setSelectedIds(new Set());
+    } catch (e) {
+      setCalcCodeGenError(e instanceof Error ? e.message : 'Generate calculator code failed');
+    } finally {
+      setCalcCodeGenLoading(false);
+      setCalcCodeGenProgress(null);
     }
   }
 
@@ -1257,10 +1323,12 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
 
   const selectedCount = selectedIds.size;
 
+  const calcCodeGenCount = pagesByStage['translation-done'].length; // same pages as translation-done (no calc)
   const bookmarkTabs: { stage: PageStage; label: string; count: number; green?: boolean }[] = [
     { stage: 'new', label: 'NEW', count: pagesByStage.new.length },
     { stage: 'content-en-done', label: 'Content EN - Done', count: pagesByStage['content-en-done'].length, green: true },
     { stage: 'translation-done', label: '24 Languages Translation done', count: pagesByStage['translation-done'].length, green: true },
+    { stage: 'calc-code-generator', label: 'Calc Code Generator', count: calcCodeGenCount, green: true },
     { stage: 'calculator-done', label: 'Calculator done', count: pagesByStage['calculator-done'].length, green: true },
     { stage: 'done', label: 'Done (TR+LB)', count: pagesByStage.done.length, green: true },
     { stage: 'completed-alive', label: 'Alive', count: pagesByStage['completed-alive'].length, green: true },
@@ -1714,7 +1782,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
         </div>
       )}
 
-      {(activeBookmark === 'new' || activeBookmark === 'content-en-done' || activeBookmark === 'translation-done' || activeBookmark === 'calculator-done' || activeBookmark === 'done' || activeBookmark === 'completed-alive') && filteredPages.length > 0 && (
+      {(activeBookmark === 'new' || activeBookmark === 'content-en-done' || activeBookmark === 'translation-done' || activeBookmark === 'calc-code-generator' || activeBookmark === 'calculator-done' || activeBookmark === 'done' || activeBookmark === 'completed-alive') && filteredPages.length > 0 && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
           <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
             Move to:
@@ -1732,6 +1800,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
               <option value="">—</option>
               <option value="content-en-done">Content EN - Done</option>
               <option value="translation-done">24 Languages Translation done</option>
+              <option value="calc-code-generator">Calc Code Generator</option>
               <option value="calculator-done">Calculator done</option>
               <option value="done">Done (TR+LB)</option>
               <option value="completed-alive">Alive</option>
@@ -1742,6 +1811,36 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
           )}
           {activeBookmark === 'translation-done' && (
             <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Edit page: add calculator code + EN labels, save → moves to Calculator done</span>
+          )}
+          {activeBookmark === 'calc-code-generator' && (
+            <>
+              <button
+                type="button"
+                onClick={handleBulkGenerateCalcCode}
+                disabled={calcCodeGenLoading || !!generateProgress || !!translateProgress || !!translateLabelsLoading || (() => {
+                  const toProcess = selectedCount > 0
+                    ? pages.filter((p) => selectedIds.has(p.id) && !(p.calculatorCode ?? '').trim())
+                    : filteredPages.filter((p) => !(p.calculatorCode ?? '').trim());
+                  return toProcess.length === 0;
+                })()}
+                className="btn btn-primary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title="Generate calculator TSX code from page title + How to Use content (Ollama). Uses selected Ollama model."
+              >
+                {calcCodeGenLoading
+                  ? (calcCodeGenProgress ? `Generating… (${calcCodeGenProgress.current}/${calcCodeGenProgress.total}) ${calcCodeGenProgress.pageTitle}` : 'Generating…')
+                  : (() => {
+                      const n = selectedCount > 0
+                        ? pages.filter((p) => selectedIds.has(p.id) && !(p.calculatorCode ?? '').trim()).length
+                        : filteredPages.filter((p) => !(p.calculatorCode ?? '').trim()).length;
+                      return `Create calculator code${n > 0 ? ` (${n})` : ''}`;
+                    })()}
+              </button>
+              {calcCodeGenError && (
+                <span style={{ fontSize: '0.85rem', color: 'var(--error-color)' }}>{calcCodeGenError}</span>
+              )}
+              <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Uses Ollama model dropdown above. Select pages, then click.</span>
+            </>
           )}
           {activeBookmark === 'content-en-done' && (
             <>
@@ -2443,7 +2542,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       ) : filteredPages.length === 0 ? (
         <p style={{ color: 'var(--text-secondary)' }}>
           No pages in <strong>
-            {activeBookmark === 'new' ? 'NEW' : activeBookmark === 'content-en-done' ? 'Content EN - Done' : activeBookmark === 'translation-done' ? '24 Languages Translation done' : activeBookmark === 'calculator-done' ? 'Calculator done' : activeBookmark === 'completed-alive' ? 'Alive' : 'Done (TR+LB)'}
+            {activeBookmark === 'new' ? 'NEW' : activeBookmark === 'content-en-done' ? 'Content EN - Done' : activeBookmark === 'translation-done' ? '24 Languages Translation done' : activeBookmark === 'calc-code-generator' ? 'Calc Code Generator' : activeBookmark === 'calculator-done' ? 'Calculator done' : activeBookmark === 'completed-alive' ? 'Alive' : 'Done (TR+LB)'}
           </strong>
           {searchQuery.trim() ? ' matching search' : ''}. Switch tab or create a page.
         </p>
@@ -2599,6 +2698,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                       <option value="">Move</option>
                       <option value="content-en-done">Content EN</option>
                       <option value="translation-done">Translation done</option>
+                      <option value="calc-code-generator">Calc Code Gen</option>
                       <option value="calculator-done">Calculator done</option>
                       <option value="done">Done (TR+LB)</option>
                       <option value="completed-alive">Alive</option>

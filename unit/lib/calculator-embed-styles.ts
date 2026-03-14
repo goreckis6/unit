@@ -82,7 +82,7 @@ body {
   outline: none;
   box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
 }
-.number-input::placeholder { color: var(--text-tertiary); opacity: 0.5; }
+.number-input::placeholder { color: var(--text-tertiary); opacity: 0.35; }
 .action-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
 .btn {
   padding: 1rem 2rem;

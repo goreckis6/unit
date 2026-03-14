@@ -111,6 +111,7 @@ const LABEL_DEFAULTS: Record<string, string> = {
   resultDecimal: 'Result (decimal)',
   title: 'Expression / Input',
   expression: 'Expression',
+  fillRequiredFields: 'Please fill in all required fields.',
 };
 
 function humanizeLabelKey(key: string): string {
@@ -133,8 +134,14 @@ function buildEnLabelsFromCode(code: string): Record<string, string> {
 
 /** Fix common LLM layout mistakes for correct Sandpack styling */
 function fixGeneratedLayout(code: string): string {
-  // result-value-box must include number-input for padding/background (LLM often omits it)
-  return code.replace(/className=["']result-value-box["']/g, 'className="number-input result-value-box"');
+  let out = code;
+  // result-value-box must include number-input for padding/background
+  out = out.replace(/className=["']result-value-box["']/g, 'className="number-input result-value-box"');
+  // Add onKeyDown for Enter to select elements that lack it
+  out = out.replace(/<select(\s+)(?![^>]*onKeyDown)([^>]*)>/g, (_, s1, rest) =>
+    `<select${s1}onKeyDown={(e) => e.key === 'Enter' && handleCalculate()} ${rest}>`
+  );
+  return out;
 }
 
 /** Validate code transforms cleanly for Sandpack. Returns transformed code or throws. */
@@ -181,18 +188,22 @@ PAGE TITLE: ${displayTitle}
 HOW TO USE THE CALCULATOR (from page content):
 ${howToUse || '(No specific instructions — infer inputs and logic from the title.)'}
 
-LAYOUT AND STYLING (follow this structure exactly — these CSS classes and structure produce correct styling):
+LAYOUT AND STYLING (follow exactly — ENTER key + validation required):
 \`\`\`
+<form onSubmit={(e) => { e.preventDefault(); handleCalculate(); }} style={{ display: 'contents' }}>
 <div className="split-view-container">
   <div className="input-section" style={{ marginBottom: 0 }}>
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+      {validationMessage && (
+        <div className="validation-message warning" role="alert">{validationMessage}</div>
+      )}
       <div className="input-card">
         <label htmlFor="input1" className="input-label">{t('inputLabel')}</label>
         <input id="input1" type="text" value={value} onChange={...} onKeyDown={(e) => e.key === 'Enter' && handleCalculate()} className="number-input" placeholder="e.g. 5" />
       </div>
       <div className="action-buttons" style={{ marginTop: '0.5rem', display: 'flex', gap: '0.75rem' }}>
-        <button onClick={handleCalculate} className="btn btn-primary" style={{ minHeight: '44px', minWidth: '44px' }}>{t('calculate')}</button>
-        <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>{t('reset')}</button>
+        <button type="submit" className="btn btn-primary" style={{ minHeight: '44px', minWidth: '44px' }}>{t('calculate')}</button>
+        <button type="button" onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>{t('reset')}</button>
       </div>
     </div>
   </div>
@@ -218,7 +229,10 @@ LAYOUT AND STYLING (follow this structure exactly — these CSS classes and stru
     </div>
   </div>
 </div>
+</form>
 \`\`\`
+
+VALIDATION (mandatory): At the start of handleCalculate, check if required fields are empty. If so: setValidationMessage(t('fillRequiredFields')); setResults(null); return;. Otherwise: setValidationMessage(null); and proceed. Add state: const [validationMessage, setValidationMessage] = useState<string | null>(null);
 
 REQUIREMENTS (follow exactly):
 1. Component name: ${componentName}
@@ -226,8 +240,8 @@ REQUIREMENTS (follow exactly):
 3. Use ONLY these CSS classes: split-view-container, input-section, input-card, input-label, number-input, action-buttons, btn btn-primary, btn btn-secondary, result-section, result-item, result-label, result-value-box, result-value. Optionally form-group for label+input groups.
 4. Result area: Each output line MUST be: <div className="result-item"><div className="result-label">{t('key')}</div><div className="number-input result-value-box"><span className="result-value">{value}</span><CopyButton text={...} /></div></div>. CopyButton MUST be inside the result-value-box div, next to the value. The result-value-box MUST have both "number-input" and "result-value-box" classes.
 5. For inputs with unit selector: wrap in <div style={{ display: 'flex', gap: '8px' }}><input className="number-input" ... /><select className="number-input" style={{ width: '100px' }}>...</select></div>
-6. Buttons: btn btn-primary, btn btn-secondary, style={{ minHeight: '44px', minWidth: '44px' }}
-7. Add onKeyDown={(e) => e.key === 'Enter' && handleCalculate()} to every input
+6. Buttons: Calculate must be type="submit" (so Enter triggers it). Reset type="button". Wrap everything in <form onSubmit={(e) => { e.preventDefault(); handleCalculate(); }} style={{ display: 'contents' }}>.
+7. Add onKeyDown={(e) => e.key === 'Enter' && handleCalculate()} to every input AND select (Enter = Calculate)
 8. Placeholder: realistic example values (e.g. "5", "10", "200 mcg/mL")
 9. Imports (exactly):
    import { useState } from 'react';

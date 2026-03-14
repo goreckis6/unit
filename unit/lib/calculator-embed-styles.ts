@@ -147,6 +147,25 @@ select.number-input { cursor: pointer; min-width: 80px; }
   border-color: var(--primary-color);
 }
 .result-placeholder { color: var(--text-tertiary); font-size: 1rem; font-weight: 500; }
+.validation-message {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.validation-message.warning {
+  background: rgba(251, 191, 36, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.5);
+  color: #b45309;
+}
+.validation-message.info {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #1d4ed8;
+}
 .result-value-inline { color: var(--primary-color); font-size: 1.25rem; font-weight: 700; }
 .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 @media (max-width: 480px) { .options-grid { grid-template-columns: 1fr; } }

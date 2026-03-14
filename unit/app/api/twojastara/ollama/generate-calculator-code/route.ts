@@ -168,30 +168,69 @@ export async function POST(request: NextRequest) {
     const componentName = toComponentName(displayTitle);
     const ns = toNamespace(pageSlug);
 
-    const prompt = `You are a senior React/TypeScript developer. Generate a complete calculator component for Calculinohub.
+    const prompt = `You are a senior React/TypeScript developer. Generate a complete calculator component for Calculinohub. The styling and layout MUST match the reference below exactly.
 
 PAGE TITLE: ${displayTitle}
 
 HOW TO USE THE CALCULATOR (from page content):
 ${howToUse || '(No specific instructions — infer inputs and logic from the title.)'}
 
+LAYOUT AND STYLING (follow this structure exactly — these CSS classes and structure produce correct styling):
+\`\`\`
+<div className="split-view-container">
+  <div className="input-section" style={{ marginBottom: 0 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+      <div className="input-card">
+        <label htmlFor="input1" className="input-label">{t('inputLabel')}</label>
+        <input id="input1" type="text" value={value} onChange={...} onKeyDown={(e) => e.key === 'Enter' && handleCalculate()} className="number-input" placeholder="e.g. 5" />
+      </div>
+      <div className="action-buttons" style={{ marginTop: '0.5rem', display: 'flex', gap: '0.75rem' }}>
+        <button onClick={handleCalculate} className="btn btn-primary" style={{ minHeight: '44px', minWidth: '44px' }}>{t('calculate')}</button>
+        <button onClick={handleReset} className="btn btn-secondary" style={{ minHeight: '44px', minWidth: '44px' }}>{t('reset')}</button>
+      </div>
+    </div>
+  </div>
+  <div ref={resultRef} className="result-section" style={{ marginTop: 0, paddingTop: 0, borderTop: 'none' }}>
+    <div className="input-card">
+      <label className="input-label">{t('result')}</label>
+      {!result && (
+        <div className="number-input" style={{ minHeight: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.6 }}>
+          <span style={{ color: 'var(--text-secondary)' }}>{t('resultPlaceholder') || 'Enter values and click Calculate'}</span>
+        </div>
+      )}
+      {result && (
+        <div className="number-input" style={{ minHeight: '220px', padding: '1.25rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div className="result-item">
+            <div className="result-label">{t('resultLabel')}</div>
+            <div className="number-input result-value-box">
+              <span className="result-value">{displayValue}</span>
+              <CopyButton text={copyText} />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</div>
+\`\`\`
+
 REQUIREMENTS (follow exactly):
 1. Component name: ${componentName}
-2. Namespace for labels: calculators.${ns} — use t('key') for all user-facing strings
-3. Use split-view layout: split-view-container, input-section, result-section, input-card, number-input
-4. Use CSS classes: btn btn-primary, btn btn-secondary, number-input, result-value-box, result-item, result-label, result-value
-5. Add onKeyDown={(e) => e.key === 'Enter' && handleCalculate()} to every input so Enter triggers calculation
-6. Placeholder values: add realistic example values in placeholder attributes (e.g. "5 mg", "200 mcg/mL") based on the How to Use section
-7. Use EXACTLY these imports (named imports, single line each):
+2. Namespace: calculators.${ns} — use t('key') for all strings
+3. Use the EXACT structure above: split-view-container, input-section, result-section, input-card, input-label, number-input
+4. Result area: use number-input for the empty state container (minHeight 220px) and for the filled results box. Each output row: result-item > result-label + (number-input result-value-box containing span.result-value + CopyButton). For multiple outputs (e.g. fraction + decimal), repeat result-item for each.
+5. Buttons: btn btn-primary (Calculate), btn btn-secondary (Reset), with style={{ minHeight: '44px', minWidth: '44px' }}
+6. Add onKeyDown={(e) => e.key === 'Enter' && handleCalculate()} to every input
+7. Placeholder: realistic example values based on How to Use (e.g. "5 mg", "200 mcg/mL")
+8. Imports (exactly):
    import { useState } from 'react';
    import { useTranslations } from 'next-intl';
    import { useScrollToResult } from '@/hooks/useScrollToResult';
    import { CopyButton } from '@/components/CopyButton';
-8. Export the component as default: export default ${componentName};
-9. Add 'use client'; at top
-10. Use t('calculate'), t('reset'), t('result'), t('resultPlaceholder') and other keys as needed — extract keys from the How to Use steps
-11. Include the full calculation logic based on the description; handle unit conversions if mentioned (mcg, mg, g, mL, etc.)
-12. Output ONLY the raw TSX/JS code, no markdown fences, no explanation`
+9. Add 'use client'; at top. Export default ${componentName};
+10. Use resultRef = useScrollToResult(resultOrMainState) for the result section div
+11. Include full calculation logic. Handle unit conversions (mcg, mg, g, mL) if mentioned.
+12. Output ONLY raw TSX code, no markdown fences, no explanation.`
 
     const useModel = typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined;
     const raw = await withOllamaSlot(() => ollamaChat([{ role: 'user', content: prompt }], useModel));

@@ -48,6 +48,13 @@ body {
   margin-bottom: 1rem;
   letter-spacing: -0.3px;
 }
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.form-group:last-of-type { margin-bottom: 0; }
 .input-legend {
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -109,7 +116,18 @@ body {
 .result-section { margin-top: 0; padding-top: 0; border-top: none; }
 .result-item { margin-bottom: 1rem; }
 .result-label { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0.35rem; }
-.result-value-box { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.result-value-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  border-radius: 0.875rem;
+  background: var(--bg-primary);
+  border: 2px solid var(--border-color);
+}
+.number-input.result-value-box { padding: 0.75rem 1rem; }
+select.number-input { cursor: pointer; min-width: 80px; }
 .result-value { font-weight: 700; font-size: 1.25rem; color: var(--primary-color); }
 .copy-result-btn {
   padding: 0.5rem 1rem;

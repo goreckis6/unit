@@ -131,6 +131,12 @@ function buildEnLabelsFromCode(code: string): Record<string, string> {
   return labels;
 }
 
+/** Fix common LLM layout mistakes for correct Sandpack styling */
+function fixGeneratedLayout(code: string): string {
+  // result-value-box must include number-input for padding/background (LLM often omits it)
+  return code.replace(/className=["']result-value-box["']/g, 'className="number-input result-value-box"');
+}
+
 /** Validate code transforms cleanly for Sandpack. Returns transformed code or throws. */
 function validateForSandpack(code: string): { transformed: string; valid: boolean } {
   const normalized = normalizeImports(code);
@@ -217,20 +223,21 @@ LAYOUT AND STYLING (follow this structure exactly — these CSS classes and stru
 REQUIREMENTS (follow exactly):
 1. Component name: ${componentName}
 2. Namespace: calculators.${ns} — use t('key') for all strings
-3. Use the EXACT structure above: split-view-container, input-section, result-section, input-card, input-label, number-input
-4. Result area: use number-input for the empty state container (minHeight 220px) and for the filled results box. Each output row: result-item > result-label + (number-input result-value-box containing span.result-value + CopyButton). For multiple outputs (e.g. fraction + decimal), repeat result-item for each.
-5. Buttons: btn btn-primary (Calculate), btn btn-secondary (Reset), with style={{ minHeight: '44px', minWidth: '44px' }}
-6. Add onKeyDown={(e) => e.key === 'Enter' && handleCalculate()} to every input
-7. Placeholder: realistic example values based on How to Use (e.g. "5 mg", "200 mcg/mL")
-8. Imports (exactly):
+3. Use ONLY these CSS classes: split-view-container, input-section, input-card, input-label, number-input, action-buttons, btn btn-primary, btn btn-secondary, result-section, result-item, result-label, result-value-box, result-value. Optionally form-group for label+input groups.
+4. Result area: Each output line MUST be: <div className="result-item"><div className="result-label">{t('key')}</div><div className="number-input result-value-box"><span className="result-value">{value}</span><CopyButton text={...} /></div></div>. CopyButton MUST be inside the result-value-box div, next to the value. The result-value-box MUST have both "number-input" and "result-value-box" classes.
+5. For inputs with unit selector: wrap in <div style={{ display: 'flex', gap: '8px' }}><input className="number-input" ... /><select className="number-input" style={{ width: '100px' }}>...</select></div>
+6. Buttons: btn btn-primary, btn btn-secondary, style={{ minHeight: '44px', minWidth: '44px' }}
+7. Add onKeyDown={(e) => e.key === 'Enter' && handleCalculate()} to every input
+8. Placeholder: realistic example values (e.g. "5", "10", "200 mcg/mL")
+9. Imports (exactly):
    import { useState } from 'react';
    import { useTranslations } from 'next-intl';
    import { useScrollToResult } from '@/hooks/useScrollToResult';
    import { CopyButton } from '@/components/CopyButton';
-9. Add 'use client'; at top. Export default ${componentName};
-10. Use resultRef = useScrollToResult(resultOrMainState) for the result section div
-11. Include full calculation logic. Handle unit conversions (mcg, mg, g, mL) if mentioned.
-12. Output ONLY raw TSX code, no markdown fences, no explanation.`
+10. Add 'use client'; at top. Export default ${componentName};
+11. Use resultRef = useScrollToResult(resultOrMainState) for the result section div
+12. Include full calculation logic. Handle unit conversions if mentioned.
+13. Output ONLY raw TSX code, no markdown fences, no explanation.`
 
     const useModel = typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined;
     const raw = await withOllamaSlot(() => ollamaChat([{ role: 'user', content: prompt }], useModel));
@@ -250,6 +257,8 @@ REQUIREMENTS (follow exactly):
     if (!code.startsWith("'use client'") && !code.startsWith('"use client"')) {
       code = "'use client';\n\n" + code;
     }
+
+    code = fixGeneratedLayout(code);
 
     // Normalize imports and validate transform works before returning
     try {

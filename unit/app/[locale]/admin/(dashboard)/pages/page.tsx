@@ -766,11 +766,15 @@ export default function AdminPagesList() {
           if (!res.ok) throw new Error(data.error || 'Generate failed');
           const code = (data.code as string)?.trim();
           if (!code) throw new Error('Empty code from API');
+          const looksLikeTsx = /(?:use client|import\s+|export\s+)/.test(code);
           const labels = (data.labels as Record<string, string> | undefined) ?? {};
           const patchRes = await fetchWithRetry(`/api/twojastara/pages/${page.id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ calculatorCode: code }),
+            body: JSON.stringify({
+              calculatorCode: code,
+              ...(looksLikeTsx ? { manualBookmark: 'calculator-done' } : {}),
+            }),
             credentials: 'include',
           });
           if (!patchRes.ok) {

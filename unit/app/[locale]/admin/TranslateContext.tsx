@@ -182,6 +182,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     resumeOverride?: TranslatePausedAt;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
+    onPageTranslated?: (pageId: string) => void | Promise<void>;
     onComplete?: () => void;
   }) => {
     const { pages, selectedIds, translateOnlyOne, resumeOverride, autoResumeOnError, ollamaModel, onPagesUpdate, onPageTranslated, onComplete } = params;

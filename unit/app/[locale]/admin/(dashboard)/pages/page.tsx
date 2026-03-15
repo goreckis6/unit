@@ -499,10 +499,12 @@ export default function AdminPagesList() {
   }
 
   function toggleSelectAll() {
-    if (selectedIds.size === filteredPages.length && filteredPages.every((p) => selectedIds.has(p.id))) {
+    const pageIds = paginatedPages.map((p) => p.id);
+    const allOnPageSelected = pageIds.length > 0 && pageIds.every((id) => selectedIds.has(id));
+    if (allOnPageSelected) {
       setSelectedIds(new Set());
     } else {
-      setSelectedIds(new Set(filteredPages.map((p) => p.id)));
+      setSelectedIds(new Set(pageIds));
     }
   }
 
@@ -709,18 +711,43 @@ export default function AdminPagesList() {
     }
   }
 
+  async function fetchWithRetry(url: string, opts: RequestInit, maxAttempts = 4): Promise<Response> {
+    const timeoutMs = 300_000; // 5 min for long Ollama responses
+    let lastErr: Error | null = null;
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+      const ctrl = new AbortController();
+      const tid = setTimeout(() => ctrl.abort(), timeoutMs);
+      try {
+        const res = await fetch(url, { ...opts, signal: ctrl.signal });
+        clearTimeout(tid);
+        return res;
+      } catch (e) {
+        clearTimeout(tid);
+        lastErr = e instanceof Error ? e : new Error(String(e));
+        const isRetryable = /failed to fetch|load failed|fetch|timeout|econnreset|network|abort/i.test(lastErr.message);
+        if (attempt < maxAttempts - 1 && isRetryable) {
+          await new Promise((r) => setTimeout(r, 3000 + attempt * 5000));
+        } else {
+          throw lastErr;
+        }
+      }
+    }
+    throw lastErr || new Error('Request failed');
+  }
+
   async function handleBulkGenerateCalcCode() {
     const toProcess = selectedIds.size > 0
-      ? pages.filter((p) => selectedIds.has(p.id) && !(p.calculatorCode ?? '').trim())
-      : filteredPages.filter((p) => !(p.calculatorCode ?? '').trim());
+      ? pages.filter((p) => selectedIds.has(p.id))
+      : filteredPages;
     if (toProcess.length === 0) {
-      alert('Select pages without calculator code, or ensure the tab has such pages.');
+      alert('Select pages or ensure the tab has pages.');
       return;
     }
     setCalcCodeGenLoading(true);
     setCalcCodeGenError('');
     const total = toProcess.length;
     let done = 0;
+    const failedSlugs: string[] = [];
     const updatedPages: Page[] = [...pages];
     try {
       for (const page of toProcess) {
@@ -728,55 +755,54 @@ export default function AdminPagesList() {
         const en = page.translations.find((t) => t.locale === 'en');
         const title = en?.displayTitle?.trim() || en?.title?.trim() || page.slug;
         const content = en?.content?.trim() || '';
-        const res = await fetch('/api/twojastara/ollama/generate-calculator-code', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            pageId: page.id,
-            title,
-            slug: page.slug,
-            content,
-            model: ollamaModel,
-          }),
-          credentials: 'include',
-        });
-        const data = await res.json();
-        if (!res.ok) {
-          throw new Error(data.error || 'Generate calculator code failed');
-        }
-        const code = data.code as string;
-        if (!code?.trim()) throw new Error('Empty code from API');
-        const labels = (data.labels as Record<string, string> | undefined) ?? {};
-        const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
-          method: 'PATCH',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ calculatorCode: code }),
-          credentials: 'include',
-        });
-        if (!patchRes.ok) {
-          const patchData = await patchRes.json();
-          throw new Error(patchData.error || 'Failed to save calculator code');
-        }
-        let updated = await patchRes.json();
-        if (Object.keys(labels).length > 0) {
-          const labelsRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
-            method: 'PATCH',
+        try {
+          const res = await fetchWithRetry('/api/twojastara/ollama/generate-calculator-code', {
+            method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ updates: [{ locale: 'en', calculatorLabels: labels }] }),
+            body: JSON.stringify({ pageId: page.id, title, slug: page.slug, content, model: ollamaModel }),
             credentials: 'include',
           });
-          if (labelsRes.ok) {
-            const labelsData = await labelsRes.json();
-            updated = labelsData;
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.error || 'Generate failed');
+          const code = (data.code as string)?.trim();
+          if (!code) throw new Error('Empty code from API');
+          const labels = (data.labels as Record<string, string> | undefined) ?? {};
+          const patchRes = await fetchWithRetry(`/api/twojastara/pages/${page.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ calculatorCode: code }),
+            credentials: 'include',
+          });
+          if (!patchRes.ok) {
+            const pd = await patchRes.json();
+            throw new Error(pd.error || 'Save failed');
           }
+          let updated = await patchRes.json();
+          if (Object.keys(labels).length > 0) {
+            const labelsRes = await fetchWithRetry(`/api/twojastara/pages/${page.id}/labels`, {
+              method: 'PATCH',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ updates: [{ locale: 'en', calculatorLabels: labels }] }),
+              credentials: 'include',
+            });
+            if (labelsRes.ok) updated = await labelsRes.json();
+          }
+          const idx = updatedPages.findIndex((p) => p.id === page.id);
+          if (idx >= 0) updatedPages[idx] = updated;
+        } catch (pageErr) {
+          failedSlugs.push(page.slug);
+          setCalcCodeGenError(`${done}/${total} done. Failed: ${page.slug} — ${pageErr instanceof Error ? pageErr.message : 'unknown'}. Continuing…`);
         }
-        const idx = updatedPages.findIndex((p) => p.id === page.id);
-        if (idx >= 0) updatedPages[idx] = updated;
         done++;
       }
       setPages(sortPagesLatestFirst(updatedPages));
-      setActiveBookmark('calculator-done');
-      setSelectedIds(new Set());
+      if (failedSlugs.length > 0) {
+        setCalcCodeGenError(`Done. Failed (${failedSlugs.length}/${total}): ${failedSlugs.slice(0, 5).join(', ')}${failedSlugs.length > 5 ? '…' : ''}`);
+      } else {
+        setCalcCodeGenError('');
+        setActiveBookmark('calculator-done');
+        setSelectedIds(new Set());
+      }
     } catch (e) {
       setCalcCodeGenError(e instanceof Error ? e.message : 'Generate calculator code failed');
     } finally {
@@ -1359,7 +1385,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                 style={{ padding: '0.35rem 0.75rem' }}
                 disabled={!!generateProgress || !!translateProgress || !!translateLabelsLoading || filteredPages.length === 0}
               >
-                {filteredPages.every((p) => selectedIds.has(p.id)) && filteredPages.length > 0
+                {paginatedPages.length > 0 && paginatedPages.every((p) => selectedIds.has(p.id))
                   ? 'Odznacz wszystko'
                   : 'Zaznacz wszystko'}
               </button>
@@ -1824,29 +1850,22 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
               <button
                 type="button"
                 onClick={handleBulkGenerateCalcCode}
-                disabled={calcCodeGenLoading || !!generateProgress || !!translateProgress || !!translateLabelsLoading || (() => {
-                  const toProcess = selectedCount > 0
-                    ? pages.filter((p) => selectedIds.has(p.id) && !(p.calculatorCode ?? '').trim())
-                    : filteredPages.filter((p) => !(p.calculatorCode ?? '').trim());
-                  return toProcess.length === 0;
-                })()}
+                disabled={calcCodeGenLoading || !!generateProgress || !!translateProgress || !!translateLabelsLoading || (selectedCount === 0 && filteredPages.length === 0)}
                 className="btn btn-primary btn-sm"
                 style={{ padding: '0.35rem 0.75rem' }}
-                title="Generate calculator TSX code from page title + How to Use content (Ollama). Uses selected Ollama model."
+                title="Generate calculator TSX code from page title + How to Use content (Ollama). Overwrites existing code."
               >
                 {calcCodeGenLoading
                   ? (calcCodeGenProgress ? `Generating… (${calcCodeGenProgress.current}/${calcCodeGenProgress.total}) ${calcCodeGenProgress.pageTitle}` : 'Generating…')
-                  : (() => {
-                      const n = selectedCount > 0
-                        ? pages.filter((p) => selectedIds.has(p.id) && !(p.calculatorCode ?? '').trim()).length
-                        : filteredPages.filter((p) => !(p.calculatorCode ?? '').trim()).length;
-                      return `Generate calc script${n > 0 ? ` (${n})` : ''}`;
-                    })()}
+                  : `Generate calc script${(() => {
+                      const n = selectedCount > 0 ? selectedCount : filteredPages.length;
+                      return n > 0 ? ` (${n})` : '';
+                    })()}`}
               </button>
               {calcCodeGenError && (
                 <span style={{ fontSize: '0.85rem', color: 'var(--error-color)' }}>{calcCodeGenError}</span>
               )}
-              <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Uses Ollama model dropdown. After generation → Calc Code Generator Done.</span>
+              <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Uses Ollama model dropdown. Overwrites existing code if present. After generation → Calc Code Generator Done.</span>
             </>
           )}
           {activeBookmark === 'content-en-done' && (
@@ -1897,6 +1916,19 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
           )}
           {activeBookmark === 'calculator-done' && (
             <>
+              <button
+                type="button"
+                onClick={handleBulkGenerateCalcCode}
+                disabled={calcCodeGenLoading || !!generateProgress || !!translateProgress || !!translateLabelsLoading || (selectedCount === 0 && filteredPages.length === 0)}
+                className="btn btn-secondary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title="Regenerate calculator code (overwrites existing). Use after interrupted generation."
+              >
+                {calcCodeGenLoading ? `Generating… (${calcCodeGenProgress?.current ?? 0}/${calcCodeGenProgress?.total ?? 0})` : `Regenerate calc script${selectedCount > 0 || filteredPages.length > 0 ? ` (${selectedCount > 0 ? selectedCount : filteredPages.length})` : ''}`}
+              </button>
+              {calcCodeGenError && (
+                <span style={{ fontSize: '0.85rem', color: 'var(--error-color)' }}>{calcCodeGenError}</span>
+              )}
               <button
                 type="button"
                 onClick={() => handleBulkTranslateLabels()}

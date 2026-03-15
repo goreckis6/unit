@@ -81,6 +81,7 @@ type TranslateContextValue = {
     resumeOverride?: TranslatePausedAt;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
+    onPageTranslated?: (pageId: string) => void | Promise<void>;
     onComplete?: () => void;
   }) => Promise<void>;
   pauseTranslate: () => void;
@@ -183,7 +184,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
     onComplete?: () => void;
   }) => {
-    const { pages, selectedIds, translateOnlyOne, resumeOverride, autoResumeOnError, ollamaModel, onPagesUpdate, onComplete } = params;
+    const { pages, selectedIds, translateOnlyOne, resumeOverride, autoResumeOnError, ollamaModel, onPagesUpdate, onPageTranslated, onComplete } = params;
     const concurrency = Math.max(1, Math.min(6, params.translateConcurrency ?? 4));
     const contentParallel = Math.max(1, Math.min(8, params.contentParallel ?? 4));
     const ids = Array.from(selectedIds);
@@ -515,6 +516,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
           return false;
         }
       }
+      onPageTranslated?.(page.id);
       return true;
     };
 

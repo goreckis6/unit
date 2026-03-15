@@ -855,6 +855,40 @@ export default function AdminPagesList() {
       alert('No labels to translate. Ensure pages have content translated to all locales first (run Translate), then Translate Labels.');
       return;
     }
+    const tasksPerPage = new Map<string, number>();
+    for (const { page } of labelTasks) {
+      tasksPerPage.set(page.id, (tasksPerPage.get(page.id) ?? 0) + 1);
+    }
+    const tasksLeftPerPage = new Map(tasksPerPage);
+    const movePageToDoneIfComplete = async (pageId: string) => {
+      const left = (tasksLeftPerPage.get(pageId) ?? 0) - 1;
+      tasksLeftPerPage.set(pageId, left);
+      if (left !== 0) return;
+      try {
+        const pageRes = await fetch(`/api/twojastara/pages/${pageId}`, { credentials: 'include' });
+        if (!pageRes.ok) return;
+        const freshPage = (await pageRes.json()) as Page;
+        if (!hasAllLabelsTranslated(freshPage)) return;
+        const br = await fetch('/api/twojastara/pages/bulk-bookmark', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ids: [pageId], manualBookmark: 'done' }),
+          credentials: 'include',
+        });
+        const bd = await br.json();
+        if (br.ok && Array.isArray(bd)) {
+          const u = bd.find((x: { id: string }) => x.id === pageId);
+          if (u) {
+            setPages((prev) =>
+              prev.map((p) => (p.id !== pageId ? p : { ...p, manualBookmark: (u as Page).manualBookmark ?? 'done' }))
+            );
+            setActiveBookmark('done');
+          }
+        }
+      } catch {
+        /* ignore */
+      }
+    };
     setActiveBookmark('calculator-done');
     setTranslateLabelsLoading(true);
     setTranslateLabelsError('');
@@ -920,6 +954,7 @@ export default function AdminPagesList() {
               translations: p.translations.map((t) => (t.locale === loc ? { ...t, calculatorLabels: JSON.stringify(lab) } : t)),
             }))
           );
+          await movePageToDoneIfComplete(page.id);
         }
       } else {
         let taskIdx = 0;
@@ -982,6 +1017,7 @@ export default function AdminPagesList() {
             );
             stepRef.current++;
             throttledSetProgress(stepRef.current, page.slug, page.category ?? 'math', loc);
+            await movePageToDoneIfComplete(page.id);
           }
         };
         await Promise.all(Array(Math.min(concurrency, labelTasks.length)).fill(0).map(() => runTask()));
@@ -1204,6 +1240,29 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
     });
   }
 
+  async function movePageToTranslationDone(pageId: string) {
+    try {
+      const br = await fetch('/api/twojastara/pages/bulk-bookmark', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: [pageId], manualBookmark: 'translation-done' }),
+        credentials: 'include',
+      });
+      const bd = await br.json();
+      if (br.ok && Array.isArray(bd)) {
+        const u = bd.find((x: { id: string }) => x.id === pageId);
+        if (u) {
+          setPages((prev) =>
+            prev.map((p) => (p.id !== pageId ? p : { ...p, manualBookmark: (u as Page).manualBookmark ?? 'translation-done' }))
+          );
+          setActiveBookmark('translation-done');
+        }
+      }
+    } catch {
+      /* ignore */
+    }
+  }
+
   function handleBatchTranslate() {
     setActiveBookmark('content-en-done');
     startTranslate({
@@ -1217,6 +1276,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
+      onPageTranslated: movePageToTranslationDone,
       onComplete: () => {
         setSelectedIds(new Set());
         setActiveBookmark('translation-done');
@@ -1246,6 +1306,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
+      onPageTranslated: movePageToTranslationDone,
       onComplete: () => {
         setSelectedIds(new Set());
         setActiveBookmark('translation-done');

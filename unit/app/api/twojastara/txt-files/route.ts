@@ -40,20 +40,28 @@ export async function POST(request: NextRequest) {
     const displayName = typeof body.displayName === 'string' ? body.displayName.trim() : '';
     const content = typeof body.content === 'string' ? body.content : '';
     if (!displayName) {
-      return NextResponse.json({ error: 'displayName is required (e.g. site.txt)' }, { status: 400 });
+      return NextResponse.json({ error: 'displayName is required (e.g. site.txt or 64-char hex)' }, { status: 400 });
     }
-    if (!displayName.endsWith('.txt')) {
-      return NextResponse.json({ error: 'displayName must end with .txt' }, { status: 400 });
+    const hashOnlyMatch = displayName.match(/^([a-f0-9]{64})$/i);
+    const hashWithTxtMatch = displayName.match(/^([a-f0-9]{64})\.txt$/i);
+    const customHash = hashOnlyMatch ? hashOnlyMatch[1] : hashWithTxtMatch ? hashWithTxtMatch[1] : null;
+    if (!customHash && !displayName.endsWith('.txt')) {
+      return NextResponse.json({ error: 'displayName must end with .txt or be 64 hex chars (hash)' }, { status: 400 });
     }
-    const hash = createHash('sha256')
-      .update(content + displayName + randomBytes(16).toString('hex'))
-      .digest('hex');
-    const created = await prisma.txtFile.create({
-      data: { hash, displayName, content },
+    const hash = customHash
+      ? customHash.toLowerCase()
+      : createHash('sha256')
+          .update(content + displayName + randomBytes(16).toString('hex'))
+          .digest('hex');
+    const effectiveDisplayName = customHash ? `${hash}.txt` : displayName;
+    const created = await prisma.txtFile.upsert({
+      where: { hash },
+      create: { hash, displayName: effectiveDisplayName, content },
+      update: { displayName: effectiveDisplayName, content },
       select: { id: true },
     });
     const url = `${BASE_URL}/${hash}.txt`;
-    return NextResponse.json({ id: created.id, hash, url, displayName });
+    return NextResponse.json({ id: created.id, hash, url, displayName: effectiveDisplayName });
   } catch (error) {
     console.error('POST /api/twojastara/txt-files:', error);
     return NextResponse.json({ error: 'Failed to create file' }, { status: 500 });

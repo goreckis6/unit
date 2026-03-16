@@ -36,11 +36,12 @@ export default function TxtFilesPage() {
     setSuccessUrl('');
     const name = displayName.trim();
     if (!name) {
-      setError('Enter a filename (e.g. site.txt)');
+      setError('Enter a filename (e.g. site.txt or 64 hex)');
       return;
     }
-    if (!name.endsWith('.txt')) {
-      setError('Filename must end with .txt');
+    const is64Hex = /^[a-f0-9]{64}$/i.test(name);
+    if (!is64Hex && !name.endsWith('.txt')) {
+      setError('Filename must end with .txt or be 64 hex chars');
       return;
     }
     setSaving(true);
@@ -91,8 +92,7 @@ export default function TxtFilesPage() {
         TXT Files
       </h1>
       <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-        Create TXT files. When saved, each file is available at{' '}
-        <code style={{ fontSize: '0.85rem' }}>{BASE_URL}/&#123;hash&#125;.txt</code>
+        Create TXT files. Filename: <code>site.txt</code> (auto-hash) or 64 hex (e.g. <code>e7bbdaef...</code>) for exact URL. Content can be arbitrary.
       </p>
 
       <form onSubmit={handleSave} style={{ maxWidth: 600, marginBottom: '2rem' }}>
@@ -105,7 +105,7 @@ export default function TxtFilesPage() {
             type="text"
             value={displayName}
             onChange={(e) => setDisplayName(e.target.value)}
-            placeholder="site.txt"
+            placeholder="site.txt or 64-char hex (e.g. e7bbdaef...) — content arbitrary"
             className="admin-form-input"
             style={{ width: '100%' }}
           />

@@ -16,6 +16,7 @@ export default function TxtFilesPage() {
   const [files, setFiles] = useState<TxtFile[]>([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
   const [error, setError] = useState('');
   const [successUrl, setSuccessUrl] = useState('');
 
@@ -53,13 +54,34 @@ export default function TxtFilesPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to save');
       setSuccessUrl(data.url);
-      setFiles((prev) => [{ id: data.hash, hash: data.hash, displayName: name, createdAt: new Date().toISOString() }, ...prev]);
+      setFiles((prev) => [{ id: data.id, hash: data.hash, displayName: name, createdAt: new Date().toISOString() }, ...prev]);
       setDisplayName('');
       setContent('');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to save');
     } finally {
       setSaving(false);
+    }
+  }
+
+  async function handleDelete(fileId: string) {
+    if (!confirm('Delete this file? The URL will stop working.')) return;
+    setDeletingId(fileId);
+    setError('');
+    try {
+      const res = await fetch(`/api/twojastara/txt-files/${fileId}`, {
+        method: 'DELETE',
+        credentials: 'include',
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || 'Failed to delete');
+      }
+      setFiles((prev) => prev.filter((f) => f.id !== fileId && f.hash !== fileId));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to delete');
+    } finally {
+      setDeletingId(null);
     }
   }
 
@@ -166,13 +188,25 @@ export default function TxtFilesPage() {
                   <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.85rem', wordBreak: 'break-all' }}>
                     {url}
                   </a>
-                  <button
-                    type="button"
-                    onClick={() => navigator.clipboard.writeText(url)}
-                    className="btn btn-secondary btn-sm"
-                  >
-                    Copy URL
-                  </button>
+                  <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                    <button
+                      type="button"
+                      onClick={() => navigator.clipboard.writeText(url)}
+                      className="btn btn-secondary btn-sm"
+                    >
+                      Copy URL
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleDelete(f.id)}
+                      disabled={deletingId === f.id}
+                      className="btn btn-secondary btn-sm"
+                      style={{ color: 'var(--error-color)', borderColor: 'var(--error-color)' }}
+                      title="Delete file"
+                    >
+                      {deletingId === f.id ? 'Deleting…' : 'Delete'}
+                    </button>
+                  </div>
                 </li>
               );
             })}

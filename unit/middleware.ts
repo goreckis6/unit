@@ -62,7 +62,16 @@ export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const safePathname = pathname ?? '';
 
-  // www → non-www redirect (301) — applies to all current and future pages
+  // TXT files: /{64hex}.txt -> /api/txt/{hash} (serves admin-created TXT files)
+  const txtMatch = safePathname.match(/^\/([a-f0-9]{64})\.txt$/);
+  if (txtMatch) {
+    const hash = txtMatch[1];
+    const url = request.nextUrl.clone();
+    url.pathname = `/api/txt/${hash}`;
+    return NextResponse.rewrite(url);
+  }
+
+  // www -> non-www redirect (301) - applies to all current and future pages
   const host = request.headers.get('host') ?? '';
   if (host.toLowerCase().startsWith('www.')) {
     const redirectUrl = new URL(request.url);
@@ -241,5 +250,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/((?!api|_next|_vercel|.*\\..*).*)']
+  matcher: ['/', '/((?!api|_next|_vercel|.*\\..*).*)', '/:hash([a-f0-9]{64}).txt']
 };

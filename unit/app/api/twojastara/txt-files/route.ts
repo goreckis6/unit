@@ -48,11 +48,12 @@ export async function POST(request: NextRequest) {
     const hash = createHash('sha256')
       .update(content + displayName + randomBytes(16).toString('hex'))
       .digest('hex');
-    await prisma.txtFile.create({
+    const created = await prisma.txtFile.create({
       data: { hash, displayName, content },
+      select: { id: true },
     });
     const url = `${BASE_URL}/${hash}.txt`;
-    return NextResponse.json({ hash, url, displayName });
+    return NextResponse.json({ id: created.id, hash, url, displayName });
   } catch (error) {
     console.error('POST /api/twojastara/txt-files:', error);
     return NextResponse.json({ error: 'Failed to create file' }, { status: 500 });

@@ -8,6 +8,11 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async rewrites() {
+    return [
+      { source: '/:hash([a-f0-9]{64}).txt', destination: '/api/txt/:hash' },
+    ];
+  },
   output: 'standalone',
   serverExternalPackages: [
     'better-sqlite3',

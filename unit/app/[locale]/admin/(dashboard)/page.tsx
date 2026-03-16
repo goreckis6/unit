@@ -259,6 +259,14 @@ export default async function AdminDashboard() {
           </p>
           <span className="admin-card-cta">Create</span>
         </Link>
+
+        <Link href="/twojastara/txt-files" className="admin-card">
+          <h2>TXT Files</h2>
+          <p>
+            Create TXT files and get URLs like calculinohub.com/&#123;hash&#125;.txt
+          </p>
+          <span className="admin-card-cta">Create</span>
+        </Link>
       </div>
     </div>
   );

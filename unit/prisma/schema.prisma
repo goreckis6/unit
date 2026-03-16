@@ -33,6 +33,15 @@ model Page {
   @@unique([category, slug])
 }
 
+// Admin-created TXT files served at /{hash}.txt (e.g. /e7bbdaef...txt)
+model TxtFile {
+  id         String   @id @default(cuid())
+  hash       String   @unique // 64-char hex, used in URL
+  displayName String  // e.g. site.txt
+  content    String   // full file content
+  createdAt  DateTime @default(now())
+}
+
 // Admin users for login
 model AdminUser {
   id           String   @id @default(cuid())

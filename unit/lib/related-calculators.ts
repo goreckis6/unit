@@ -1,3 +1,4 @@
+import { unstable_cache } from 'next/cache';
 import { prisma } from '@/lib/prisma';
 import { getAllCalculators } from '@/lib/all-calculators';
 
@@ -25,8 +26,8 @@ function getNested(obj: Record<string, unknown>, path: string): string {
   return typeof cur === 'string' ? cur : '';
 }
 
-/** Get all available calculators (static + Prisma pages) as RelatedCalculator for a locale. */
-async function getAllAvailableCalculators(locale: string): Promise<RelatedCalculator[]> {
+/** Internal: fetch all calculators. Cached to avoid repeated heavy queries. */
+async function fetchAllAvailableCalculatorsInner(locale: string): Promise<RelatedCalculator[]> {
   let messages: Record<string, unknown> = {};
   try {
     messages = (await import(`@/i18n/${locale}.json`)).default ?? {};
@@ -47,7 +48,11 @@ async function getAllAvailableCalculators(locale: string): Promise<RelatedCalcul
 
   const pages = await prisma.page.findMany({
     where: { published: true },
-    include: { translations: true },
+    select: {
+      slug: true,
+      category: true,
+      translations: { select: { locale: true, title: true, description: true } },
+    },
   });
 
   const prismaItems: RelatedCalculator[] = pages.map((p) => {
@@ -60,13 +65,18 @@ async function getAllAvailableCalculators(locale: string): Promise<RelatedCalcul
   });
 
   const byPath = new Map<string, RelatedCalculator>();
-  for (const item of staticItems) {
-    byPath.set(item.path, item);
-  }
-  for (const item of prismaItems) {
-    byPath.set(item.path, item);
-  }
+  for (const item of staticItems) byPath.set(item.path, item);
+  for (const item of prismaItems) byPath.set(item.path, item);
   return Array.from(byPath.values());
+}
+
+/** Get all available calculators (static + Prisma). Cached 5 min per locale. */
+function getAllAvailableCalculators(locale: string): Promise<RelatedCalculator[]> {
+  return unstable_cache(
+    () => fetchAllAvailableCalculatorsInner(locale),
+    ['all-available-calculators', locale],
+    { revalidate: 300 }
+  )();
 }
 
 /**

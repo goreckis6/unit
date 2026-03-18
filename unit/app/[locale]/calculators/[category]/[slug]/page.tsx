@@ -2,8 +2,8 @@ import { notFound } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { getSession } from '@/lib/auth';
 
-// Render at request time so newly published CMS pages work immediately
-export const dynamic = 'force-dynamic';
+// ISR: cache 5 min so newly published CMS pages work within 5 min
+export const revalidate = 300;
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { ROUTING_LOCALES } from '@/i18n/routing';

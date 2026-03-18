@@ -4,7 +4,8 @@ import { BASE_URL } from '@/lib/hreflang';
 import { getAllCalculators } from '@/lib/all-calculators';
 import { prisma } from '@/lib/prisma';
 
-export const dynamic = 'force-dynamic';
+// ISR: sitemap changes rarely, cache 1 hour
+export const revalidate = 3600;
 
 export async function GET() {
   const currentDate = new Date().toISOString();

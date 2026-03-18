@@ -240,6 +240,24 @@ export function Header() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isCategoryOpen, setIsCategoryOpen] = useState(false);
+
+  const CATEGORIES = [
+    { slug: 'math', key: 'mathCalculators' },
+    { slug: 'electric', key: 'electricCalculators' },
+    { slug: 'biology', key: 'biologyCalculators' },
+    { slug: 'conversion', key: 'conversionCalculators' },
+    { slug: 'physics', key: 'physicsCalculators' },
+    { slug: 'real-life', key: 'realLifeCalculators' },
+    { slug: 'finance', key: 'financeCalculators' },
+    { slug: 'health', key: 'healthCalculators' },
+    { slug: 'chemistry', key: 'chemistryCalculators' },
+    { slug: 'construction', key: 'constructionCalculators' },
+    { slug: 'ecology', key: 'ecologyCalculators' },
+    { slug: 'food', key: 'foodCalculators' },
+    { slug: 'statistics', key: 'statisticsCalculators' },
+    { slug: 'others', key: 'otherCalculators' },
+  ] as const;
 
   useEffect(() => {
     const checkMobile = () => {
@@ -301,15 +319,35 @@ export function Header() {
           
           {/* Desktop Navigation */}
           <nav className="nav desktop-nav">
-            <Link href="/calculators/math" className="nav-link">
-              {tHome('mathCalculators.title')}
-            </Link>
-            <Link href="/calculators/electric" className="nav-link">
-              {tHome('electricCalculators.title')}
-            </Link>
-            <Link href="/calculators/others" className="nav-link">
-              {tHome('otherCalculators.title')}
-            </Link>
+            <div
+              className={`nav-dropdown ${isCategoryOpen ? 'open' : ''}`}
+              onMouseEnter={() => setIsCategoryOpen(true)}
+              onMouseLeave={() => setIsCategoryOpen(false)}
+            >
+              <button
+                type="button"
+                className="nav-dropdown-trigger"
+                aria-expanded={isCategoryOpen}
+                aria-haspopup="true"
+              >
+                {t('category')}
+                <svg className="nav-dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+              <div className={`nav-dropdown-menu ${isCategoryOpen ? 'open' : ''}`} role="menu">
+                {CATEGORIES.map(({ slug, key }) => (
+                  <Link
+                    key={slug}
+                    href={`/calculators/${slug}`}
+                    className={`nav-dropdown-item ${(pathname ?? '').includes(`/calculators/${slug}`) ? 'active' : ''}`}
+                    role="menuitem"
+                  >
+                    {tHome(`${key}.title`)}
+                  </Link>
+                ))}
+              </div>
+            </div>
             <LanguageSwitcher />
           </nav>
 
@@ -347,27 +385,16 @@ export function Header() {
             </button>
           </div>
           <div className="mobile-nav-links">
-            <Link 
-              href="/calculators/math" 
-              className={`mobile-nav-link ${(pathname ?? '').includes('/calculators/math') ? 'active' : ''}`}
-              onClick={closeMenu}
-            >
-              {tHome('mathCalculators.title')}
-            </Link>
-            <Link 
-              href="/calculators/electric" 
-              className={`mobile-nav-link ${(pathname ?? '').includes('/calculators/electric') ? 'active' : ''}`}
-              onClick={closeMenu}
-            >
-              {tHome('electricCalculators.title')}
-            </Link>
-            <Link 
-              href="/calculators/others" 
-              className={`mobile-nav-link ${(pathname ?? '').includes('/calculators/others') ? 'active' : ''}`}
-              onClick={closeMenu}
-            >
-              {tHome('otherCalculators.title')}
-            </Link>
+            {CATEGORIES.map(({ slug, key }) => (
+              <Link
+                key={slug}
+                href={`/calculators/${slug}`}
+                className={`mobile-nav-link ${(pathname ?? '').includes(`/calculators/${slug}`) ? 'active' : ''}`}
+                onClick={closeMenu}
+              >
+                {tHome(`${key}.title`)}
+              </Link>
+            ))}
             <div className="mobile-language-section">
               <div className="mobile-language-title">Language</div>
               <div className="mobile-language-list">

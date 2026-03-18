@@ -7,8 +7,8 @@ import { GlobalSearch } from '@/components/GlobalSearch';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 import { getSearchableCalculators } from '@/lib/get-searchable-calculators';
 
-// Fetch calculators at request time so newly published CMS pages appear in search
-export const dynamic = 'force-dynamic';
+// ISR: cache 5 min so newly published CMS pages appear within 5 min
+export const revalidate = 300;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

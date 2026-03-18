@@ -47,7 +47,12 @@ export async function getCalculatorsForCategory(
 
   const pages = await prisma.page.findMany({
     where: { category, published: true },
-    include: { translations: true },
+    select: {
+      id: true,
+      slug: true,
+      category: true,
+      translations: { select: { locale: true, title: true, description: true } },
+    },
   });
 
   const prismaItems: CalculatorListItem[] = pages.map((p) => {

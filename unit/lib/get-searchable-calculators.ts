@@ -1,3 +1,4 @@
+import { unstable_cache } from 'next/cache';
 import { prisma } from '@/lib/prisma';
 import { getAllCalculators } from '@/lib/all-calculators';
 
@@ -41,11 +42,8 @@ function getCategoryLabel(category: string, calcMessages: Record<string, unknown
   return category;
 }
 
-/**
- * Get all calculators for global search: static + published Prisma pages.
- * Returns pre-translated title, description, path, categoryLabel.
- */
-export async function getSearchableCalculators(locale: string): Promise<SearchableCalculator[]> {
+/** Internal: fetch from DB + merge. Cached to avoid repeated heavy queries. */
+async function fetchSearchableCalculatorsInner(locale: string): Promise<SearchableCalculator[]> {
   let messages: Record<string, unknown> = {};
   try {
     messages = (await import(`@/i18n/${locale}.json`)).default ?? {};
@@ -69,7 +67,11 @@ export async function getSearchableCalculators(locale: string): Promise<Searchab
   try {
     const pages = await prisma.page.findMany({
       where: { published: true },
-      include: { translations: true },
+      select: {
+        slug: true,
+        category: true,
+        translations: { select: { locale: true, title: true, description: true } },
+      },
     });
     prismaItems = pages.map((p) => {
       const t = p.translations.find((x) => x.locale === locale) ?? p.translations.find((x) => x.locale === 'en') ?? p.translations[0];
@@ -106,4 +108,16 @@ export async function getSearchableCalculators(locale: string): Promise<Searchab
     }
   }
   return [...byPath.values()].sort((a, b) => safeLocaleCompare(a.title, b.title));
+}
+
+/**
+ * Get all calculators for global search: static + published Prisma pages.
+ * Cached 5 min per locale to reduce DB load.
+ */
+export async function getSearchableCalculators(locale: string): Promise<SearchableCalculator[]> {
+  return unstable_cache(
+    () => fetchSearchableCalculatorsInner(locale),
+    ['searchable-calculators', locale],
+    { revalidate: 300 }
+  )();
 }

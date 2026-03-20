@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { prisma } from '@/lib/prisma';
 
 // GET /api/admin/pages/[id]
@@ -81,6 +82,11 @@ export async function PATCH(
       include: { translations: true },
     });
 
+    // Invalidate sitemap when published state changes
+    if (published !== undefined) {
+      revalidatePath('/sitemap.xml');
+    }
+
     return NextResponse.json(page);
   } catch (error: unknown) {
     console.error('PATCH /api/admin/pages/[id]:', error);
@@ -107,6 +113,7 @@ export async function DELETE(
   try {
     const { id } = await params;
     await prisma.page.delete({ where: { id } });
+    revalidatePath('/sitemap.xml');
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('DELETE /api/admin/pages/[id]:', error);

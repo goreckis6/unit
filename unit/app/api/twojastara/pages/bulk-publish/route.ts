@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { prisma } from '@/lib/prisma';
 
 /**
@@ -22,6 +23,11 @@ export async function POST(request: NextRequest) {
         manualBookmark: published ? 'completed-alive' : 'done',
       },
     });
+
+    // Invalidate sitemap cache so newly published pages appear immediately
+    if (published && result.count > 0) {
+      revalidatePath('/sitemap.xml');
+    }
 
     return NextResponse.json({
       ok: true,

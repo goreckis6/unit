@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { prisma } from '@/lib/prisma';
 
 // GET /api/admin/pages - List all pages
@@ -77,6 +78,8 @@ export async function POST(request: NextRequest) {
       },
       include: { translations: true },
     });
+
+    if (page.published) revalidatePath('/sitemap.xml');
 
     return NextResponse.json(page);
   } catch (error) {

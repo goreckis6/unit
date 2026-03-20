@@ -28,6 +28,7 @@ export default async function AdminDashboardLayout({
             <Link href="/twojastara/pages">Pages</Link>
             <Link href="/twojastara/pages/new">Add New</Link>
             <Link href="/twojastara/txt-files">TXT Files</Link>
+            <Link href="/twojastara/api-keys">API Keys</Link>
             <Link href="/twojastara">Dashboard</Link>
             <Link href="/twojastara/stats">Stats</Link>
           </nav>

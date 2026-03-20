@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
+import { getOllamaApiKey } from '@/lib/admin-api-keys';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
 import { transformCalculatorCodeForSandpack } from '@/lib/calculator-code-transform';
 import { extractCalculatorLabelKeys } from '@/lib/extract-calculator-label-keys';
@@ -15,10 +16,8 @@ function isRetryableError(err: string): boolean {
   return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy') || s.includes('upstream request timeout') || s.includes('429') || s.includes('too many requests') || s.includes('econnreset') || s.includes('connection reset') || s.includes('etimedout');
 }
 
-async function ollamaChat(messages: { role: string; content: string }[], modelOverride?: string) {
+async function ollamaChat(apiKey: string, messages: { role: string; content: string }[], modelOverride?: string) {
   const model = modelOverride?.trim() || MODEL;
-  const apiKey = process.env.OLLAMA_API_KEY;
-  if (!apiKey) throw new Error('OLLAMA_API_KEY environment variable is not set');
 
   for (let attempt = 0; attempt <= SLOT_RETRY_MAX; attempt++) {
     const controller = new AbortController();
@@ -180,6 +179,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Title is required' }, { status: 400 });
     }
 
+    const apiKey = await getOllamaApiKey();
+    if (!apiKey) {
+      return NextResponse.json(
+        {
+          error:
+            'Ollama API key is not configured. Set OLLAMA_API_KEY in the environment or save a key under Admin → API Keys.',
+        },
+        { status: 400 }
+      );
+    }
+
     const howToUse = extractHowToUse(pageContent);
     const componentName = toComponentName(displayTitle);
     const ns = toNamespace(pageSlug);
@@ -257,7 +267,7 @@ REQUIREMENTS (follow exactly):
 13. Output ONLY raw TSX code, no markdown fences, no explanation.`
 
     const useModel = typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined;
-    const raw = await withOllamaSlot(() => ollamaChat([{ role: 'user', content: prompt }], useModel));
+    const raw = await withOllamaSlot(() => ollamaChat(apiKey, [{ role: 'user', content: prompt }], useModel));
 
     if (!raw?.trim()) {
       throw new Error('Empty response from Ollama');

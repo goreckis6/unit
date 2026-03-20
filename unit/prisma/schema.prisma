@@ -51,6 +51,14 @@ model AdminUser {
   createdAt    DateTime @default(now())
 }
 
+// Single-row API key overrides (optional). If set, used instead of OLLAMA_API_KEY / ANTHROPIC_API_KEY env.
+model AdminSettings {
+  id                String   @id @default("default")
+  ollamaApiKey      String?
+  anthropicApiKey   String?
+  updatedAt         DateTime @updatedAt
+}
+
 // Per-locale translations for pages
 model PageTranslation {
   id                 String   @id @default(cuid())

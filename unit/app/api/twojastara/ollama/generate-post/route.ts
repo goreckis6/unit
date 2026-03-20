@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
+import { getOllamaApiKey } from '@/lib/admin-api-keys';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
 
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
@@ -13,12 +14,8 @@ function isRetryableError(err: string): boolean {
   return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy') || s.includes('upstream request timeout') || s.includes('429') || s.includes('too many requests') || s.includes('too many concurrent') || s.includes('econnreset') || s.includes('connection reset') || s.includes('socket hang up') || s.includes('etimedout') || s.includes('und_err_headers_timeout');
 }
 
-async function ollamaChat(messages: { role: string; content: string }[], modelOverride?: string) {
+async function ollamaChat(apiKey: string, messages: { role: string; content: string }[], modelOverride?: string) {
   const model = modelOverride && modelOverride.trim() ? modelOverride.trim() : MODEL;
-  const apiKey = process.env.OLLAMA_API_KEY;
-  if (!apiKey) {
-    throw new Error('OLLAMA_API_KEY environment variable is not set');
-  }
   let lastErr: Error | null = null;
   for (let attempt = 0; attempt <= SLOT_RETRY_MAX; attempt++) {
     const controller = new AbortController();
@@ -88,6 +85,17 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const apiKey = await getOllamaApiKey();
+    if (!apiKey) {
+      return NextResponse.json(
+        {
+          error:
+            'Ollama API key is not configured. Set OLLAMA_API_KEY in the environment or save a key under Admin → API Keys.',
+        },
+        { status: 400 }
+      );
+    }
+
     const prompt = `Act as a Senior UX Copywriter and SEO Specialist. Create a comprehensive landing page description for an online tool on Calculinohub called: **${topic}**.
 
 Infer the **Tool Core Function** (what it does in one sentence) and **Target Audience** (who benefits) from the calculator name.
@@ -127,7 +135,7 @@ OUTPUT FORMAT - Respond with a valid JSON object only, no other text. Two keys:
 Example: {"content":"# How to convert [X]?\\n\\nIntro paragraph...\\n\\n## How to Use the Calculator\\n\\n1. Step one...","faqItems":[{"question":"What is X?","answer":"X is..."}]}`;
 
     const useModel = typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined;
-    const raw = await withOllamaSlot(() => ollamaChat([{ role: 'user', content: prompt }], useModel));
+    const raw = await withOllamaSlot(() => ollamaChat(apiKey, [{ role: 'user', content: prompt }], useModel));
     if (!raw) {
       throw new Error('Empty response from Ollama Cloud');
     }

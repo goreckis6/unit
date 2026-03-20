@@ -56,6 +56,7 @@ npm run dev:next
 | `/twojastara/pages` | List all pages |
 | `/twojastara/pages/new` | Create new page with translations |
 | `/twojastara/pages/[id]/edit` | Edit page |
+| `/twojastara/api-keys` | Ollama / Anthropic keys (DB overrides `OLLAMA_API_KEY` / `ANTHROPIC_API_KEY` when set) |
 
 ## Public Pages & Sitemap
 

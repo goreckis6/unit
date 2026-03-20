@@ -1,17 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Anthropic from '@anthropic-ai/sdk';
 import { getSession } from '@/lib/auth';
+import { getAnthropicApiKey } from '@/lib/admin-api-keys';
 
 const MODEL = process.env.CLAUDE_MODEL || 'claude-opus-4-6';
 const MAX_TOKENS = 8192; // 800-1200 words + FAQ — 4096 can truncate
 const ANTHROPIC_TIMEOUT_MS = 120_000; // 2 min (Claude is typically faster than Ollama)
 
-async function claudeChat(prompt: string): Promise<string> {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) {
-    throw new Error('ANTHROPIC_API_KEY environment variable is not set');
-  }
-
+async function claudeChat(apiKey: string, prompt: string): Promise<string> {
   const client = new Anthropic({ apiKey });
 
   const controller = new AbortController();
@@ -59,6 +55,17 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const apiKey = await getAnthropicApiKey();
+    if (!apiKey) {
+      return NextResponse.json(
+        {
+          error:
+            'Anthropic API key is not configured. Set ANTHROPIC_API_KEY in the environment or save a key under Admin → API Keys.',
+        },
+        { status: 400 }
+      );
+    }
+
     const prompt = `You are an expert SEO content writer. Your task is to create a comprehensive, high-quality article that outranks the competition. Provide more in-depth information, using a more logical and user-friendly structure.
 
 Act as a Senior UX Copywriter and SEO Specialist. Create a comprehensive landing page description for an online tool on Calculinohub called: **${topic}**.
@@ -99,7 +106,7 @@ OUTPUT FORMAT - Respond with a valid JSON object only, no other text. Two keys:
 
 Example: {"content":"# How to convert [X]?\\n\\nIntro paragraph...\\n\\n## How to Use the Calculator\\n\\n1. Step one...","faqItems":[{"question":"What is X?","answer":"X is..."}]}`;
 
-    const raw = await claudeChat(prompt);
+    const raw = await claudeChat(apiKey, prompt);
     if (!raw) {
       throw new Error('Empty response from Claude');
     }

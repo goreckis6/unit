@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Agent, fetch } from 'undici';
 import { getSession } from '@/lib/auth';
+import { getOllamaApiKey } from '@/lib/admin-api-keys';
 import { LOCALE_NAMES } from '@/lib/admin-locales';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
 
@@ -21,12 +22,8 @@ function isRetryableError(err: string): boolean {
   return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy') || s.includes('upstream request timeout') || s.includes('429') || s.includes('too many requests') || s.includes('too many concurrent') || s.includes('econnreset') || s.includes('connection reset') || s.includes('socket hang up') || s.includes('etimedout') || s.includes('und_err_headers_timeout');
 }
 
-async function ollamaChat(messages: { role: string; content: string }[], modelOverride?: string) {
+async function ollamaChat(apiKey: string, messages: { role: string; content: string }[], modelOverride?: string) {
   const model = modelOverride && modelOverride.trim() ? modelOverride.trim() : MODEL;
-  const apiKey = process.env.OLLAMA_API_KEY;
-  if (!apiKey) {
-    throw new Error('OLLAMA_API_KEY environment variable is not set');
-  }
   let lastErr: Error | null = null;
   for (let attempt = 0; attempt <= SLOT_RETRY_MAX; attempt++) {
     const controller = new AbortController();
@@ -92,6 +89,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
+    const apiKey = await getOllamaApiKey();
+    if (!apiKey) {
+      return NextResponse.json(
+        {
+          error:
+            'Ollama API key is not configured. Set OLLAMA_API_KEY in the environment or save a key under Admin → API Keys.',
+        },
+        { status: 400 }
+      );
+    }
+
     const body = await request.json();
     const { labels, targetLocale, model: modelOverride } = body;
     if (!targetLocale || typeof targetLocale !== 'string') {
@@ -124,7 +132,9 @@ RULES:
     const userContent = `[Target: ${targetLocale} = ${targetLanguage}. All values MUST be in ${targetLanguage}, never English.]\n\nTranslate these label values:\n${JSON.stringify(Object.fromEntries(entries), null, 2)}`;
 
     const useModel = typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined;
-    const raw = await withOllamaSlot(() => ollamaChat([{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel));
+    const raw = await withOllamaSlot(() =>
+      ollamaChat(apiKey, [{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel)
+    );
     let trimmed = (raw || '').trim();
     trimmed = trimmed.replace(/^```(?:json)?\s*\n?/i, '').replace(/\n?```\s*$/i, '');
     const jsonMatch = trimmed.match(/\{[\s\S]*\}/);

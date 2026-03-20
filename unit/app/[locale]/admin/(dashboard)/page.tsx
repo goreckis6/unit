@@ -267,6 +267,14 @@ export default async function AdminDashboard() {
           </p>
           <span className="admin-card-cta">Create</span>
         </Link>
+
+        <Link href="/twojastara/api-keys" className="admin-card">
+          <h2>API Keys</h2>
+          <p>
+            Store Ollama Cloud and Anthropic keys in the database (overrides env when set)
+          </p>
+          <span className="admin-card-cta">Manage</span>
+        </Link>
       </div>
     </div>
   );

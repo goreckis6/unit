@@ -14,7 +14,26 @@ const SLOT_RETRY_MAX = 5;
 
 function isRetryableError(err: string): boolean {
   const s = err.toLowerCase();
-  return s.includes('concurrent request slot') || s.includes('no slots available') || s.includes('llm busy') || s.includes('upstream request timeout') || s.includes('429') || s.includes('too many requests') || s.includes('econnreset') || s.includes('connection reset') || s.includes('etimedout');
+  return (
+    s.includes('concurrent request slot') ||
+    s.includes('no slots available') ||
+    s.includes('llm busy') ||
+    s.includes('upstream request timeout') ||
+    s.includes('429') ||
+    s.includes('too many requests') ||
+    s.includes('econnreset') ||
+    s.includes('connection reset') ||
+    s.includes('etimedout') ||
+    /* Ollama Cloud sometimes returns generic 500 bodies — safe to retry with backoff */
+    s.includes('internal server error') ||
+    s.includes('bad gateway') ||
+    s.includes('service unavailable') ||
+    s.includes('gateway timeout')
+  );
+}
+
+function isRetryableOllamaHttpStatus(status: number): boolean {
+  return status === 429 || status === 500 || status === 502 || status === 503 || status === 504;
 }
 
 async function ollamaChat(apiKey: string, messages: { role: string; content: string }[], modelOverride?: string) {
@@ -41,11 +60,22 @@ async function ollamaChat(apiKey: string, messages: { role: string; content: str
           const errObj = JSON.parse(errText) as { error?: string };
           errMsg = errObj?.error ?? errText;
         } catch {}
-        if (isRetryableError(errMsg) && attempt < SLOT_RETRY_MAX) {
-          await new Promise((r) => setTimeout(r, res.status === 429 ? 60_000 : SLOT_RETRY_DELAY_MS));
+        const combinedMsg = errMsg?.trim()
+          ? `${errMsg.trim()} (HTTP ${res.status})`
+          : `Ollama HTTP ${res.status}`;
+        const retry =
+          attempt < SLOT_RETRY_MAX &&
+          (isRetryableError(errMsg) || isRetryableOllamaHttpStatus(res.status));
+        if (retry) {
+          const delayMs = res.status === 429 ? 60_000 : res.status >= 500 ? 45_000 : SLOT_RETRY_DELAY_MS;
+          console.warn(
+            `[generate-calculator-code] Ollama retry ${attempt + 1}/${SLOT_RETRY_MAX} after ${delayMs}ms:`,
+            combinedMsg
+          );
+          await new Promise((r) => setTimeout(r, delayMs));
           continue;
         }
-        throw new Error(errMsg);
+        throw new Error(combinedMsg);
       }
       const data = (await res.json()) as { message?: { content?: string } };
       return data?.message?.content ?? '';

@@ -18,7 +18,7 @@ const OLLAMA_MODELS: { id: string; label: string; desc: string }[] = [
   { id: 'gemini-3-flash-preview:cloud', label: 'Gemini 3 Flash', desc: 'Najszybszy model od Google, zoptymalizowany pod kątem niskich opóźnień i ogromnego kontekstu (1 mln tokenów).' },
   { id: 'gemini-3-pro-preview:cloud', label: 'Gemini 3 Pro', desc: 'Potężniejsza wersja Gemini, lepsza w logice i analizie wideo.' },
   { id: 'deepseek-v3.2:671b-cloud', label: 'DeepSeek V3.2 671B', desc: 'Jeden z najpotężniejszych modeli open-weights, dostępny w chmurze ze względu na ogromny rozmiar.' },
-  { id: 'qwen3.5:122b-cloud', label: 'Qwen3.5 122B', desc: 'Bardzo szybki model od Alibaby, świetny do kodowania i zadań agenturalnych.' },
+  { id: 'qwen3.5:cloud', label: 'Qwen3.5 (cloud)', desc: 'Model Qwen3.5 w chmurze Ollama (ogólny tag :cloud). Dobry do kodowania i zadań agenturalnych.' },
   { id: 'glm-5:cloud', label: 'GLM-5', desc: 'Najnowszy model od Z.ai, zoptymalizowany pod kątem inżynierii systemowej i długich zadań.' },
 ];
 

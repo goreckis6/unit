@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Agent, fetch } from 'undici';
 import { getSession } from '@/lib/auth';
 import { getOllamaApiKey } from '@/lib/admin-api-keys';
+import { normalizeOllamaCloudModel } from '@/lib/ollama-cloud-models';
 import { LOCALE_NAMES } from '@/lib/admin-locales';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
 
@@ -251,7 +252,9 @@ CRITICAL RULES:
       return s;
     }
 
-    const useModel = typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined;
+    const useModel = normalizeOllamaCloudModel(
+      typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined
+    );
     let raw = await withOllamaSlot(() =>
       ollamaChat(ollamaApiKey, [{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel)
     );

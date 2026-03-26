@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Agent, fetch } from 'undici';
 import { getSession } from '@/lib/auth';
 import { getOllamaApiKey } from '@/lib/admin-api-keys';
+import { normalizeOllamaCloudModel } from '@/lib/ollama-cloud-models';
 import { LOCALE_NAMES } from '@/lib/admin-locales';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
 
@@ -131,7 +132,9 @@ RULES:
 
     const userContent = `[Target: ${targetLocale} = ${targetLanguage}. All values MUST be in ${targetLanguage}, never English.]\n\nTranslate these label values:\n${JSON.stringify(Object.fromEntries(entries), null, 2)}`;
 
-    const useModel = typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined;
+    const useModel = normalizeOllamaCloudModel(
+      typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined
+    );
     const raw = await withOllamaSlot(() =>
       ollamaChat(apiKey, [{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel)
     );

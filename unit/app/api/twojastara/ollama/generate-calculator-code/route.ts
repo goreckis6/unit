@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
 import { getOllamaApiKey } from '@/lib/admin-api-keys';
+import { normalizeOllamaCloudModel } from '@/lib/ollama-cloud-models';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
 import { transformCalculatorCodeForSandpack } from '@/lib/calculator-code-transform';
 import { extractCalculatorLabelKeys } from '@/lib/extract-calculator-label-keys';
@@ -305,6 +306,15 @@ REQUIREMENTS (follow exactly):
   } catch (error) {
     const msg = error instanceof Error ? error.message : 'Failed to generate calculator code';
     console.error('[generate-calculator-code]', msg, error);
+    const modelMissing = /model\s+['"][^'"]+['"]\s+not\s+found/i.test(msg);
+    if (modelMissing) {
+      return NextResponse.json(
+        {
+          error: `${msg} Choose another model in the Ollama dropdown (e.g. glm-4.6:cloud or gemini-3-flash-preview:cloud).`,
+        },
+        { status: 422 }
+      );
+    }
     const status = isRetryableError(msg) ? 503 : 500;
     return NextResponse.json({ error: msg }, { status });
   }

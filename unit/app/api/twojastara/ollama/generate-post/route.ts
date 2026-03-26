@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
 import { getOllamaApiKey } from '@/lib/admin-api-keys';
+import { normalizeOllamaCloudModel } from '@/lib/ollama-cloud-models';
 import { withOllamaSlot } from '@/lib/ollama-concurrency';
 
 const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
@@ -134,7 +135,9 @@ OUTPUT FORMAT - Respond with a valid JSON object only, no other text. Two keys:
 
 Example: {"content":"# How to convert [X]?\\n\\nIntro paragraph...\\n\\n## How to Use the Calculator\\n\\n1. Step one...","faqItems":[{"question":"What is X?","answer":"X is..."}]}`;
 
-    const useModel = typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined;
+    const useModel = normalizeOllamaCloudModel(
+      typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined
+    );
     const raw = await withOllamaSlot(() => ollamaChat(apiKey, [{ role: 'user', content: prompt }], useModel));
     if (!raw) {
       throw new Error('Empty response from Ollama Cloud');

@@ -80,18 +80,23 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect(redirectUrl, 301);
   }
 
-  // Malformed URLs (e.g. /$) → redirect to home
-  if (safePathname === '/$') {
+  // Malformed URLs (e.g. /$, /&) → redirect to home
+  if (safePathname === '/$' || safePathname === '/&') {
     const redirectUrl = request.nextUrl.clone();
     redirectUrl.pathname = '/';
     return NextResponse.redirect(redirectUrl, 301);
   }
 
-  // Blog redirect (no longer exists)
-  const blogMatch = safePathname.match(/^\/([a-z]{2})\/blog\/?$/);
-  if (safePathname === '/blog' || safePathname === '/blog/' || blogMatch) {
+  // Blog redirect (no longer exists) — /blog, /blog/post, /{locale}/blog, /{locale}/blog/post
+  const blogLocaleDeep = safePathname.match(/^\/([a-z]{2})\/blog(?:\/.*)?$/);
+  if (blogLocaleDeep) {
     const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = blogMatch ? `/${blogMatch[1]}` : '/';
+    redirectUrl.pathname = `/${blogLocaleDeep[1]}`;
+    return NextResponse.redirect(redirectUrl, 301);
+  }
+  if (safePathname === '/blog' || safePathname === '/blog/' || /^\/blog\//.test(safePathname)) {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = '/';
     return NextResponse.redirect(redirectUrl, 301);
   }
 

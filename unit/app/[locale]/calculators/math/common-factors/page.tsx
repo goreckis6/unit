@@ -145,7 +145,7 @@ export default async function CommonFactorsPage({ params }: PageProps) {
               <h3 className="related-calculator-title">{t('seo.related.percentageIncrease')}</h3>
               <p className="related-calculator-description">{t('seo.related.percentageIncreaseDesc')}</p>
             </Link>
-            <Link href="/calculators/math/multiplication" className="related-calculator-card">
+            <Link href="/calculators/math/long-multiplication" className="related-calculator-card">
               <h3 className="related-calculator-title">{t('seo.related.multiplication')}</h3>
               <p className="related-calculator-description">{t('seo.related.multiplicationDesc')}</p>
             </Link>

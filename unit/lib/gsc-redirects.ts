@@ -51,6 +51,14 @@ export const SLUG_TO_PATH: Record<string, string> = {
   'fraction': '/calculators/math/fraction-to-decimal',
   'simplifying-fractions': '/calculators/math/equivalent-fractions',
   'long-multiplication-calculator': '/calculators/math/long-multiplication',
+  // Old slugs / bad internal links → real pages (GSC 404)
+  multiplication: '/calculators/math/long-multiplication',
+  exponential: '/calculators/math/roots',
+  scientific: '/calculators/math/long-multiplication',
+  'percent-to-decimal': '/calculators/math/fraction-to-decimal',
+  // e.g. /{locale}/calculators/percentage (missing /math/)
+  percentage: '/calculators/math/percentage',
+  'multiplication-calculator': '/calculators/math/long-multiplication',
   'multiplying-fractions': '/calculators/math/multiplying-fractions',
   'adding-fractions-calculator': '/calculators/math/adding-fractions',
   'adding-fractions': '/calculators/math/adding-fractions',

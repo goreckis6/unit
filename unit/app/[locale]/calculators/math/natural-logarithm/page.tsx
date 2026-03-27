@@ -127,11 +127,11 @@ export default async function NaturalLogarithmPage({ params }: { params: Promise
               <h3 className="related-title">{tRelated('antilog')}</h3>
               <p className="related-desc">{tRelated('antilogDesc')}</p>
             </Link>
-            <Link href="/calculators/math/exponential" className="related-card">
+            <Link href="/calculators/math/roots" className="related-card">
               <h3 className="related-title">{tRelated('exponential')}</h3>
               <p className="related-desc">{tRelated('exponentialDesc')}</p>
             </Link>
-            <Link href="/calculators/math/scientific" className="related-card">
+            <Link href="/calculators/math/long-multiplication" className="related-card">
               <h3 className="related-title">{tRelated('scientific')}</h3>
               <p className="related-desc">{tRelated('scientificDesc')}</p>
             </Link>

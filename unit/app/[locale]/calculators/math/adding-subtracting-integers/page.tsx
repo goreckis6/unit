@@ -125,7 +125,7 @@ export default async function AddingSubtractingIntegersPage({ params }: { params
               <h3 className="related-title">{tRelated('percentageIncrease')}</h3>
               <p className="related-desc">{tRelated('percentageIncreaseDesc')}</p>
             </Link>
-            <Link href="/calculators/math/multiplication" className="related-card">
+            <Link href="/calculators/math/long-multiplication" className="related-card">
               <h3 className="related-title">{tRelated('multiplication')}</h3>
               <p className="related-desc">{tRelated('multiplicationDesc')}</p>
             </Link>

@@ -16,7 +16,8 @@
     "preview": "vite preview",
     "preview:qwik": "vite preview --config vite.config.qwik.ts",
     "migrate:qwik": "node scripts/migrate-to-qwik.js",
-    "migrate:qwik:single": "node scripts/migrate-to-qwik.js"
+    "migrate:qwik:single": "node scripts/migrate-to-qwik.js",
+    "indexnow:resubmit-published": "tsx scripts/indexnow-resubmit-published.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",

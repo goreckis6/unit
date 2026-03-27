@@ -92,7 +92,7 @@ export default function TxtFilesPage() {
         TXT Files
       </h1>
       <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-        Create TXT files. Filename: <code>site.txt</code> (auto-hash) or 64 hex (e.g. <code>e7bbdaef...</code>) for exact URL. Content can be arbitrary.
+        <strong>Exact URL:</strong> paste <code>e7bbdaef…247b.txt</code> (64 hex + <code>.txt</code>) or bare 64 hex — the file is served at <code>https://…/that-hex.txt</code>. <strong>Named file:</strong> <code>klucz.txt</code> → stable URL from a hash of the name (not the literal <code>klucz.txt</code> path). Content is arbitrary.
       </p>
 
       <form onSubmit={handleSave} style={{ maxWidth: 600, marginBottom: '2rem' }}>
@@ -105,7 +105,7 @@ export default function TxtFilesPage() {
             type="text"
             value={displayName}
             onChange={(e) => setDisplayName(e.target.value)}
-            placeholder="site.txt or 64-char hex (e.g. e7bbdaef...) — content arbitrary"
+            placeholder="e.g. klucz.txt (stable hash URL) or full 64 hex for exact path"
             className="admin-form-input"
             style={{ width: '100%' }}
           />

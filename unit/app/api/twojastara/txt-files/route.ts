@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { BASE_URL } from '@/lib/hreflang';
-import { createHash, randomBytes } from 'crypto';
+import { hashForDisplayName } from '@/lib/txt-file-hash';
 
 /**
  * GET /api/twojastara/txt-files
@@ -29,6 +29,7 @@ export async function GET() {
  * POST /api/twojastara/txt-files
  * Body: { displayName: string, content: string }
  * Create a new TXT file. Returns { hash, url }.
+ * Named *.txt (not 64 hex): hash = SHA256("txt:"+lower(displayName)) — stable URL per filename, content updates keep same hash.
  */
 export async function POST(request: NextRequest) {
   try {
@@ -42,18 +43,19 @@ export async function POST(request: NextRequest) {
     if (!displayName) {
       return NextResponse.json({ error: 'displayName is required (e.g. site.txt or 64-char hex)' }, { status: 400 });
     }
+    // 64 hex alone, or 64 hex + ".txt" → hash is that hex (URL = /{hash}.txt exactly; e.g. IndexNow key file)
     const hashOnlyMatch = displayName.match(/^([a-f0-9]{64})$/i);
     const hashWithTxtMatch = displayName.match(/^([a-f0-9]{64})\.txt$/i);
     const customHash = hashOnlyMatch ? hashOnlyMatch[1] : hashWithTxtMatch ? hashWithTxtMatch[1] : null;
     if (!customHash && !displayName.endsWith('.txt')) {
       return NextResponse.json({ error: 'displayName must end with .txt or be 64 hex chars (hash)' }, { status: 400 });
     }
-    const hash = customHash
-      ? customHash.toLowerCase()
-      : createHash('sha256')
-          .update(content + displayName + randomBytes(16).toString('hex'))
-          .digest('hex');
+    const hash = customHash ? customHash.toLowerCase() : hashForDisplayName(displayName);
     const effectiveDisplayName = customHash ? `${hash}.txt` : displayName;
+    // Remove outdated rows for this filename (e.g. old random-hash URL); keep row if hash already matches
+    await prisma.txtFile.deleteMany({
+      where: { displayName: effectiveDisplayName, hash: { not: hash } },
+    });
     const created = await prisma.txtFile.upsert({
       where: { hash },
       create: { hash, displayName: effectiveDisplayName, content },

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
 import { prisma } from '@/lib/prisma';
+import { submitIndexNowForUrls, urlsForCalculatorPage } from '@/lib/indexnow';
 
 /**
  * POST /api/twojastara/pages/bulk-publish
@@ -27,6 +28,16 @@ export async function POST(request: NextRequest) {
     // Invalidate sitemap cache so newly published pages appear immediately
     if (published && result.count > 0) {
       revalidatePath('/sitemap.xml');
+      const pages = await prisma.page.findMany({
+        where: { id: { in: ids } },
+        select: { category: true, slug: true },
+      });
+      const urls = pages.flatMap((p) =>
+        p.category?.trim() ? urlsForCalculatorPage(p.category, p.slug) : []
+      );
+      if (urls.length > 0) {
+        void submitIndexNowForUrls(urls).catch((err) => console.error('[IndexNow] bulk-publish:', err));
+      }
     }
 
     return NextResponse.json({

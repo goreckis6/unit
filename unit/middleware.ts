@@ -10,6 +10,15 @@ const handleI18nRouting = createMiddleware(routing);
 
 type Locale = (typeof routing.locales)[number];
 
+/** Edge-safe SHA-256 hex; must match `hashForDisplayName` in `lib/txt-file-hash.ts` for `txt:${lower(name)}`. */
+async function sha256HexUtf8(text: string): Promise<string> {
+  const data = new TextEncoder().encode(text);
+  const buf = await crypto.subtle.digest('SHA-256', data);
+  return Array.from(new Uint8Array(buf))
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
 function isSupportedLocale(value: string | undefined): value is Locale {
   return typeof value === 'string' && ROUTING_LOCALES.includes(value as Locale);
 }
@@ -58,7 +67,7 @@ function requestWithPathname(req: NextRequest, pathname: string): NextRequest {
   return new NextRequest(req.url, { headers: h });
 }
 
-export default function middleware(request: NextRequest) {
+export default async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const safePathname = pathname ?? '';
 
@@ -66,6 +75,16 @@ export default function middleware(request: NextRequest) {
   const txtMatch = safePathname.match(/^\/([a-f0-9]{64})\.txt$/);
   if (txtMatch) {
     const hash = txtMatch[1];
+    const url = request.nextUrl.clone();
+    url.pathname = `/api/txt/${hash}`;
+    return NextResponse.rewrite(url);
+  }
+
+  // Named TXT at site root: /klucz.txt -> same hash as admin "klucz.txt" -> /api/txt/{hash}
+  const namedTxt = safePathname.match(/^\/([^/]+\.txt)$/i);
+  if (namedTxt && !/^\/[a-f0-9]{64}\.txt$/i.test(safePathname)) {
+    const displayName = namedTxt[1].toLowerCase();
+    const hash = await sha256HexUtf8(`txt:${displayName}`);
     const url = request.nextUrl.clone();
     url.pathname = `/api/txt/${hash}`;
     return NextResponse.rewrite(url);
@@ -255,5 +274,10 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/((?!api|_next|_vercel|.*\\..*).*)', '/:hash([a-f0-9]{64}).txt']
+  matcher: [
+    '/',
+    '/((?!api|_next|_vercel|.*\\..*).*)',
+    '/:hash([a-f0-9]{64}).txt',
+    '/:file((?:[a-zA-Z0-9._-])+\\.txt)',
+  ],
 };

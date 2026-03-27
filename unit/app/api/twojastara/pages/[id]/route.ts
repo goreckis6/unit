@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
 import { prisma } from '@/lib/prisma';
+import { submitIndexNowForUrls, urlsForCalculatorPage } from '@/lib/indexnow';
 
 // GET /api/admin/pages/[id]
 export async function GET(
@@ -85,6 +86,12 @@ export async function PATCH(
     // Invalidate sitemap when published state changes
     if (published !== undefined) {
       revalidatePath('/sitemap.xml');
+    }
+
+    if (page.published && page.category?.trim()) {
+      void submitIndexNowForUrls(urlsForCalculatorPage(page.category, page.slug)).catch((err) =>
+        console.error('[IndexNow] PATCH page:', err)
+      );
     }
 
     return NextResponse.json(page);

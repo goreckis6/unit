@@ -1,15 +1,59 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
+import { Prisma } from '@/generated/prisma/client';
 import { prisma } from '@/lib/prisma';
 import { submitIndexNowForUrls, urlsForCalculatorPage } from '@/lib/indexnow';
+
+/** List view only needs a short prefix of `content` (stage tabs + translation heuristics use ≤400 chars). Omitting full body keeps JSON small and avoids proxy timeouts/502 on large sites. */
+const LIST_CONTENT_PREFIX_LEN = 500;
 
 // GET /api/admin/pages - List all pages
 export async function GET() {
   try {
     const pages = await prisma.page.findMany({
-      include: { translations: true },
+      include: {
+        translations: {
+          select: {
+            id: true,
+            locale: true,
+            title: true,
+            displayTitle: true,
+            description: true,
+            relatedCalculators: true,
+            faqItems: true,
+            calculatorLabels: true,
+            createdAt: true,
+            updatedAt: true,
+          },
+        },
+      },
       orderBy: { updatedAt: 'desc' },
     });
+
+    const pageIds = pages.map((p) => p.id);
+    if (pageIds.length > 0) {
+      const rows = await prisma.$queryRaw<
+        { pageId: string; locale: string; hc: bigint | number; pref: string | null }[]
+      >(Prisma.sql`
+        SELECT "pageId", "locale",
+          CASE WHEN "content" IS NOT NULL AND TRIM("content") != '' THEN 1 ELSE 0 END AS hc,
+          SUBSTR(TRIM("content"), 1, ${LIST_CONTENT_PREFIX_LEN}) AS pref
+        FROM "PageTranslation"
+        WHERE "pageId" IN (${Prisma.join(pageIds)})
+      `);
+      const contentByPageLocale = new Map<string, string | null>();
+      for (const r of rows) {
+        const n = typeof r.hc === 'bigint' ? Number(r.hc) : r.hc;
+        const text = n ? (r.pref ?? '') : null;
+        contentByPageLocale.set(`${r.pageId}\0${r.locale}`, text);
+      }
+      for (const page of pages) {
+        for (const t of page.translations) {
+          Object.assign(t, { content: contentByPageLocale.get(`${page.id}\0${t.locale}`) ?? null });
+        }
+      }
+    }
+
     return NextResponse.json(pages);
   } catch (error) {
     const msg = error instanceof Error ? error.message : 'Unknown error';

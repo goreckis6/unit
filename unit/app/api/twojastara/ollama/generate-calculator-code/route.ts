@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { prisma } from '@/lib/prisma';
 import { getSession } from '@/lib/auth';
 import { getOllamaApiKey } from '@/lib/admin-api-keys';
 import { normalizeOllamaCloudModel } from '@/lib/ollama-cloud-models';
@@ -204,7 +205,16 @@ export async function POST(request: NextRequest) {
     const { pageId, title, slug, content, model: modelOverride } = body;
     const displayTitle = typeof title === 'string' ? title.trim() : '';
     const pageSlug = typeof slug === 'string' ? slug.trim().toLowerCase().replace(/\s+/g, '-') : 'calc';
-    const pageContent = typeof content === 'string' ? content : '';
+
+    let pageContent = typeof content === 'string' ? content.trim() : '';
+    if (typeof pageId === 'string' && pageId.trim()) {
+      const en = await prisma.pageTranslation.findFirst({
+        where: { pageId: pageId.trim(), locale: 'en' },
+        select: { content: true },
+      });
+      const fromDb = en?.content?.trim() ?? '';
+      if (fromDb) pageContent = fromDb;
+    }
 
     if (!displayTitle) {
       return NextResponse.json({ error: 'Title is required' }, { status: 400 });

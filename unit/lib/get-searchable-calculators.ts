@@ -1,6 +1,7 @@
 import { unstable_cache } from 'next/cache';
 import { prisma } from '@/lib/prisma';
 import { getAllCalculators } from '@/lib/all-calculators';
+import { resolveCalculatorPath } from '@/lib/gsc-redirects';
 
 export interface SearchableCalculator {
   id: string;
@@ -90,9 +91,20 @@ async function fetchSearchableCalculatorsInner(locale: string): Promise<Searchab
     }
   }
 
-  const byPath = new Map<string, SearchableCalculator>();
-  for (const item of staticItems) byPath.set(item.path, item);
-  for (const item of prismaItems) byPath.set(item.path, item);
+  // Deduplicate by canonical calculator URL (same as Link href). CMS pages may use
+  // alternate slugs (e.g. percent-error-calculator) that redirect to the static route;
+  // raw paths differ so Map by path would show duplicate titles in search.
+  const byCanonicalPath = new Map<string, SearchableCalculator>();
+  for (const item of staticItems) {
+    const canon = resolveCalculatorPath(item.path);
+    byCanonicalPath.set(canon, { ...item, path: canon });
+  }
+  for (const item of prismaItems) {
+    const canon = resolveCalculatorPath(item.path);
+    if (!byCanonicalPath.has(canon)) {
+      byCanonicalPath.set(canon, { ...item, path: canon });
+    }
+  }
 
   function safeLocaleCompare(a: string, b: string): number {
     const sa = String(a ?? '');
@@ -107,7 +119,7 @@ async function fetchSearchableCalculatorsInner(locale: string): Promise<Searchab
       }
     }
   }
-  return [...byPath.values()].sort((a, b) => safeLocaleCompare(a.title, b.title));
+  return [...byCanonicalPath.values()].sort((a, b) => safeLocaleCompare(a.title, b.title));
 }
 
 /**

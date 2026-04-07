@@ -207,6 +207,8 @@ type Page = {
   calculatorCode?: string | null;
   linkedCalculatorPath?: string | null;
   manualBookmark?: string | null;
+  relatedCalculatorsMode?: string | null;
+  relatedCalculatorsCount?: number | null;
   updatedAt?: string;
   translations: PageTranslation[];
 };
@@ -286,6 +288,9 @@ export default function AdminPagesList() {
   const [bulkImportResult, setBulkImportResult] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
   const [bulkDeleteLoading, setBulkDeleteLoading] = useState(false);
   const [bulkPublishLoading, setBulkPublishLoading] = useState(false);
+  const [bulkRelatedLoading, setBulkRelatedLoading] = useState(false);
+  const [bulkRelatedMode, setBulkRelatedMode] = useState<'manual' | 'random' | 'both'>('random');
+  const [bulkRelatedCount, setBulkRelatedCount] = useState(6);
   const [cleanContentLoading, setCleanContentLoading] = useState(false);
   const [translateLabelsLoading, setTranslateLabelsLoading] = useState(false);
   const [translateLabelsProgress, setTranslateLabelsProgress] = useState<{ current: number; total: number; pageSlug: string; pageCategory: string; locale: string; startedAt?: number } | null>(null);
@@ -645,6 +650,53 @@ export default function AdminPagesList() {
       alert(e instanceof Error ? e.message : 'Move failed');
     } finally {
       setBulkBookmarkLoading(false);
+    }
+  }
+
+  async function handleBulkRelatedSettings() {
+    const ids =
+      selectedIds.size > 0 ? Array.from(selectedIds) : filteredPages.map((p) => p.id);
+    if (ids.length === 0) {
+      alert('No pages in this tab.');
+      return;
+    }
+    if (selectedIds.size === 0) {
+      if (
+        !confirm(
+          `Set related calculators to "${bulkRelatedMode}", count ${bulkRelatedCount} for ALL ${ids.length} page(s) in this tab?`
+        )
+      ) {
+        return;
+      }
+    }
+    setBulkRelatedLoading(true);
+    try {
+      const res = await fetch('/api/twojastara/pages/bulk-related-settings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ids,
+          relatedCalculatorsMode: bulkRelatedMode,
+          relatedCalculatorsCount: bulkRelatedCount,
+        }),
+        credentials: 'include',
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        alert(data.error || 'Bulk related settings failed');
+        return;
+      }
+      setPages((prev) =>
+        prev.map((p) =>
+          ids.includes(p.id)
+            ? { ...p, relatedCalculatorsMode: bulkRelatedMode, relatedCalculatorsCount: bulkRelatedCount }
+            : p
+        )
+      );
+    } catch (e) {
+      alert(e instanceof Error ? e.message : 'Bulk related settings failed');
+    } finally {
+      setBulkRelatedLoading(false);
     }
   }
 
@@ -1907,6 +1959,70 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
               <option value="completed-alive">Alive</option>
             </select>
           </label>
+          {(activeBookmark === 'done' || activeBookmark === 'completed-alive') && (
+            <label
+              style={{
+                fontSize: '0.75rem',
+                color: 'var(--text-secondary)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.35rem',
+                flexWrap: 'wrap',
+              }}
+            >
+              Related calc:
+              <select
+                value={bulkRelatedMode}
+                onChange={(e) => setBulkRelatedMode(e.target.value as 'manual' | 'random' | 'both')}
+                disabled={bulkRelatedLoading || !!generateProgress || !!translateProgress}
+                className="admin-form-select"
+                style={{ padding: '0.35rem 0.5rem', fontSize: '0.8rem', minWidth: 100 }}
+                aria-label="Related calculators mode"
+              >
+                <option value="random">Random</option>
+                <option value="manual">Manual</option>
+                <option value="both">Both</option>
+              </select>
+              <span style={{ whiteSpace: 'nowrap' }}>count</span>
+              <select
+                value={String(bulkRelatedCount)}
+                onChange={(e) => setBulkRelatedCount(Number(e.target.value))}
+                disabled={bulkRelatedLoading || !!generateProgress || !!translateProgress}
+                className="admin-form-select"
+                style={{ padding: '0.35rem 0.5rem', fontSize: '0.8rem', width: 56 }}
+                aria-label="Related calculators count"
+              >
+                {Array.from({ length: 12 }, (_, i) => i + 1).map((n) => (
+                  <option key={n} value={n}>
+                    {n}
+                  </option>
+                ))}
+              </select>
+              <button
+                type="button"
+                onClick={() => void handleBulkRelatedSettings()}
+                disabled={
+                  bulkRelatedLoading ||
+                  filteredPages.length === 0 ||
+                  !!generateProgress ||
+                  !!translateProgress
+                }
+                className="btn btn-primary btn-sm"
+                style={{ padding: '0.35rem 0.75rem' }}
+                title={
+                  selectedCount > 0
+                    ? `Apply to ${selectedCount} selected page(s)`
+                    : `Apply to all ${filteredPages.length} page(s) in this tab (nothing selected)`
+                }
+              >
+                {bulkRelatedLoading
+                  ? 'Saving…'
+                  : selectedCount > 0
+                    ? `Apply related (${selectedCount})`
+                    : `Apply to all in tab (${filteredPages.length})`}
+              </button>
+            </label>
+          )}
           {activeBookmark === 'new' && (
             <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Generate Content to add EN → moves to Content EN - Done</span>
           )}

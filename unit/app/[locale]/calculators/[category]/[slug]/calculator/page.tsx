@@ -8,6 +8,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { hasCalculatorEmbed } from '@/lib/calculator-embeds';
 import { resolveCalculatorPath } from '@/lib/gsc-redirects';
+import { isPublicCalculatorPage } from '@/lib/calculator-page-public';
 import { Link } from '@/i18n/routing';
 import { CalculatorSandpackClient } from '@/components/CalculatorSandpackClient';
 
@@ -71,7 +72,7 @@ export default async function CalculatorSubpage({ params, searchParams }: Props)
   if (!page) notFound();
   const isPreview = (await searchParams)?.preview === '1';
   const session = isPreview ? await getSession() : null;
-  const canView = page.published || (isPreview && session);
+  const canView = isPublicCalculatorPage(page) || (isPreview && session);
   if (!canView) notFound();
 
   const hasCalculator = !!(page.calculatorCode || page.linkedCalculatorPath);

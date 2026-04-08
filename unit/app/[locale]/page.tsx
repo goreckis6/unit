@@ -4,15 +4,15 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SoftwareApplicationSchema } from '@/components/SoftwareApplicationSchema';
 import { GlobalSearch } from '@/components/GlobalSearch';
+import { HeroAnimatedCountLine } from '@/components/HeroAnimatedCountLine';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
-import { getSearchableCalculators } from '@/lib/get-searchable-calculators';
+import { getSearchableCalculators, getSearchableCalculatorCount } from '@/lib/get-searchable-calculators';
 
 // ISR: cache 5 min so newly published CMS pages appear within 5 min
 export const revalidate = 300;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'common' });
   const tHome = await getTranslations({ locale, namespace: 'common.homePage' });
   const path = '';
   const canonicalUrl = locale === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${locale}${path}`;
@@ -39,6 +39,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const tHome = await getTranslations({ locale, namespace: 'common.homePage' });
   const siteUrl = BASE_URL;
   const calculators = await getSearchableCalculators(locale);
+  const enCalculatorCount = await getSearchableCalculatorCount('en');
+  const heroHeadlineSuffix = tHome('heroHeadlineSuffix');
+  const heroHeadlineFreeWord = tHome('heroHeadlineFreeWord');
 
   return (
     <div className="home">
@@ -53,7 +56,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="hero">
         <div className="container">
           <div className="hero-content">
-            <h1 className="hero-title">{t('siteName')}</h1>
+            <HeroAnimatedCountLine
+              targetCount={enCalculatorCount}
+              locale={locale}
+              freeWord={heroHeadlineFreeWord}
+              suffix={heroHeadlineSuffix}
+            />
+            <h1 className="sr-only">{t('siteName')}</h1>
             <p className="hero-subtitle">{t('description')}</p>
             <p className="hero-description">{tHome('heroDescription')}</p>
             <div className="hero-search">

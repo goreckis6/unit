@@ -19,6 +19,14 @@ export function createGetMessageFallback() {
     const path = [namespace, key].filter(Boolean).join('.');
     if (!path) return '?';
 
+    // Homepage hero suffix after animated count (English; override per locale in JSON)
+    if (path === 'common.homePage.heroHeadlineFreeWord') {
+      return ' Free';
+    }
+    if (path === 'common.homePage.heroHeadlineSuffix') {
+      return ' Specialized Calculators.';
+    }
+
     // Generic calculators.*.title / calculators.*.description
     if (namespace === 'calculators' && key) {
       const match = key.match(/^([^.]+)\.(title|description)$/);

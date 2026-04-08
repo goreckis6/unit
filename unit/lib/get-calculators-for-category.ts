@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma';
+import { prismaPublicCalculatorWhere } from '@/lib/calculator-page-public';
 import type { Calculator } from '@/lib/calculators/types';
 
 export interface CalculatorListItem {
@@ -46,7 +47,7 @@ export async function getCalculatorsForCategory(
   }));
 
   const pages = await prisma.page.findMany({
-    where: { category, published: true },
+    where: { AND: [{ category }, prismaPublicCalculatorWhere()] },
     select: {
       id: true,
       slug: true,

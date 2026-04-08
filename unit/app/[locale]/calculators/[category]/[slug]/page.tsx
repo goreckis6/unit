@@ -14,6 +14,7 @@ import { FaqSchema } from '@/components/FaqSchema';
 import { renderMarkdown } from '@/lib/markdown';
 import { getRelatedCalculatorsForPage } from '@/lib/related-calculators';
 import { resolveCalculatorPath } from '@/lib/gsc-redirects';
+import { isPublicCalculatorPage } from '@/lib/calculator-page-public';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 import { hasCalculatorEmbed } from '@/lib/calculator-embeds';
 import { Link } from '@/i18n/routing';
@@ -55,7 +56,7 @@ export async function generateMetadata({ params, searchParams }: Props) {
   if (!page) return { title: 'Not Found' };
   const isPreview = (await searchParams)?.preview === '1';
   const session = isPreview ? await getSession() : null;
-  const canView = page.published || (isPreview && session);
+  const canView = isPublicCalculatorPage(page) || (isPreview && session);
   if (!canView) return { title: 'Not Found' };
   const t = page.translations.find((x) => x.locale === locale) ?? page.translations[0];
   const path = resolveCalculatorPath(`/calculators/${category}/${slug}`);
@@ -90,7 +91,7 @@ export default async function CalculatorPage({ params, searchParams }: Props) {
 
   const isPreview = (await searchParams)?.preview === '1';
   const session = await getSession();
-  const canView = page.published || (isPreview && session);
+  const canView = isPublicCalculatorPage(page) || (isPreview && session);
 
   if (!canView) notFound();
 

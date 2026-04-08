@@ -3,6 +3,7 @@ import { routing } from '@/i18n/routing';
 import { BASE_URL } from '@/lib/hreflang';
 import { getAllCalculators } from '@/lib/all-calculators';
 import { prisma } from '@/lib/prisma';
+import { prismaPublicCalculatorWhere } from '@/lib/calculator-page-public';
 
 // ISR: sitemap changes rarely, cache 1 hour
 export const revalidate = 3600;
@@ -28,11 +29,11 @@ export async function GET() {
 
   const urls: string[] = [];
 
-  // DB pages (admin-created, published) - only published pages appear in sitemap
+  // DB pages (admin) — publiczne jak na /calculators/... (published lub Alive)
   let dbRoutes: string[] = [];
   try {
     const pages = await prisma.page.findMany({
-      where: { published: true },
+      where: prismaPublicCalculatorWhere(),
       select: { slug: true, category: true },
     });
     dbRoutes = pages

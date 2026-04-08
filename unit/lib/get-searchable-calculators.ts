@@ -2,6 +2,7 @@ import { unstable_cache } from 'next/cache';
 import { prisma } from '@/lib/prisma';
 import { getAllCalculators } from '@/lib/all-calculators';
 import { resolveCalculatorPath } from '@/lib/gsc-redirects';
+import { prismaPublicCalculatorWhere } from '@/lib/calculator-page-public';
 
 export interface SearchableCalculator {
   id: string;
@@ -67,7 +68,7 @@ async function fetchSearchableCalculatorsInner(locale: string): Promise<Searchab
   let prismaItems: SearchableCalculator[] = [];
   try {
     const pages = await prisma.page.findMany({
-      where: { published: true },
+      where: prismaPublicCalculatorWhere(),
       select: {
         slug: true,
         category: true,
@@ -130,6 +131,18 @@ export async function getSearchableCalculators(locale: string): Promise<Searchab
   return unstable_cache(
     () => fetchSearchableCalculatorsInner(locale),
     ['searchable-calculators', locale],
+    { revalidate: 300 }
+  )();
+}
+
+/**
+ * Distinct calculator count for a locale (static + published CMS, canonical URLs).
+ * Use `en` for the English catalog size on the homepage; cached 5 min with search index.
+ */
+export async function getSearchableCalculatorCount(locale: string): Promise<number> {
+  return unstable_cache(
+    () => fetchSearchableCalculatorsInner(locale).then((list) => list.length),
+    ['searchable-calculator-count', locale],
     { revalidate: 300 }
   )();
 }

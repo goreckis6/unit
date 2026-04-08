@@ -1,6 +1,7 @@
 import { unstable_cache } from 'next/cache';
 import { prisma } from '@/lib/prisma';
 import { getAllCalculators } from '@/lib/all-calculators';
+import { prismaPublicCalculatorWhere } from '@/lib/calculator-page-public';
 
 export type RelatedCalculator = { title: string; description: string; path: string };
 
@@ -47,7 +48,7 @@ async function fetchAllAvailableCalculatorsInner(locale: string): Promise<Relate
   });
 
   const pages = await prisma.page.findMany({
-    where: { published: true },
+    where: prismaPublicCalculatorWhere(),
     select: {
       slug: true,
       category: true,

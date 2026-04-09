@@ -3,18 +3,20 @@ import { getSitemapUrlXmlFragments, SITEMAP_URLS_PER_CHUNK } from '@/lib/sitemap
 
 export const revalidate = 3600;
 
-type Props = { params: Promise<{ index: string }> };
+type Props = { params: Promise<{ number: string }> };
 
+/** Served via rewrite: /sitemap1.xml → /api/sitemap-chunk/1 (1-based chunk index) */
 export async function GET(_request: Request, { params }: Props) {
-  const { index: indexRaw } = await params;
-  if (!/^\d+$/.test(indexRaw)) {
+  const { number: numberRaw } = await params;
+  if (!/^\d+$/.test(numberRaw)) {
     return new NextResponse('Not Found', { status: 404 });
   }
-  const index = parseInt(indexRaw, 10);
-  if (index < 0) {
+  const page = parseInt(numberRaw, 10);
+  if (page < 1) {
     return new NextResponse('Not Found', { status: 404 });
   }
 
+  const index = page - 1;
   const fragments = await getSitemapUrlXmlFragments();
   const chunkCount = Math.max(1, Math.ceil(fragments.length / SITEMAP_URLS_PER_CHUNK));
   if (index >= chunkCount) {

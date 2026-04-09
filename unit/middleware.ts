@@ -100,7 +100,7 @@ export default async function middleware(request: NextRequest) {
   }
 
   // Sitemap index + numbered chunk feeds (no locale prefix / cookie redirects)
-  if (safePathname === '/sitemap.xml' || /^\/sitemap\/\d+$/.test(safePathname)) {
+  if (safePathname === '/sitemap.xml') {
     return NextResponse.next();
   }
 

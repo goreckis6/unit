@@ -5,7 +5,7 @@ import { SITEMAP_CHUNK_REVALIDATE_CAP } from '@/lib/sitemap-entries';
 export function revalidateSitemapAll(): void {
   revalidateTag('sitemap');
   revalidatePath('/sitemap.xml');
-  for (let i = 0; i < SITEMAP_CHUNK_REVALIDATE_CAP; i++) {
-    revalidatePath(`/sitemap/${i}`);
+  for (let n = 1; n <= SITEMAP_CHUNK_REVALIDATE_CAP; n++) {
+    revalidatePath(`/sitemap${n}.xml`);
   }
 }

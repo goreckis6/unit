@@ -5,11 +5,11 @@ import { getAllCalculators } from '@/lib/all-calculators';
 import { prisma } from '@/lib/prisma';
 import { prismaPublicCalculatorWhere } from '@/lib/calculator-page-public';
 
-/** Google recommends ≤50k URLs per file; 10k keeps XML well under size limits */
-export const SITEMAP_URLS_PER_CHUNK = 10_000;
+/** Google allows ≤50k URLs per file; smaller chunks keep each XML file light for crawlers */
+export const SITEMAP_URLS_PER_CHUNK = 1_000;
 
-/** Upper bound for revalidatePath on chunk routes (10k × 200 = 2M URLs) */
-export const SITEMAP_CHUNK_REVALIDATE_CAP = 200;
+/** revalidatePath upper bound for /sitemapN.xml (1k × 500 = 500k URLs); raise if needed */
+export const SITEMAP_CHUNK_REVALIDATE_CAP = 500;
 
 const categoryIndexes = [
   'calculators/math', 'calculators/electric', 'calculators/biology', 'calculators/conversion',
@@ -96,7 +96,7 @@ ${getAlternateLinks(route)}
   return fragments;
 }
 
-export const getSitemapUrlXmlFragments = unstable_cache(buildSitemapUrlXmlFragments, ['sitemap-xml-fragments-v1'], {
+export const getSitemapUrlXmlFragments = unstable_cache(buildSitemapUrlXmlFragments, ['sitemap-xml-fragments-v2'], {
   revalidate: 3600,
   tags: ['sitemap'],
 });

@@ -11,6 +11,7 @@ const nextConfig = {
   async rewrites() {
     return [
       { source: '/:hash([a-f0-9]{64}).txt', destination: '/api/txt/:hash' },
+      { source: '/sitemap:number(\\d+).xml', destination: '/api/sitemap-chunk/:number' },
     ];
   },
   output: 'standalone',

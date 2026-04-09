@@ -9,7 +9,8 @@ export async function GET() {
   const chunkCount = await getSitemapChunkCount();
 
   const indexEntries = Array.from({ length: chunkCount }, (_, i) => {
-    const loc = `${BASE_URL}/sitemap/${i}`;
+    const n = i + 1;
+    const loc = `${BASE_URL}/sitemap${n}.xml`;
     return `  <sitemap>
     <loc>${loc}</loc>
     <lastmod>${currentDate}</lastmod>

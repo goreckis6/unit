@@ -99,6 +99,11 @@ export default async function middleware(request: NextRequest) {
     return NextResponse.redirect(redirectUrl, 301);
   }
 
+  // Sitemap index + numbered chunk feeds (no locale prefix / cookie redirects)
+  if (safePathname === '/sitemap.xml' || /^\/sitemap\/\d+$/.test(safePathname)) {
+    return NextResponse.next();
+  }
+
   // Malformed URLs (e.g. /$, /&) → redirect to home
   if (safePathname === '/$' || safePathname === '/&') {
     const redirectUrl = request.nextUrl.clone();

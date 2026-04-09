@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
+import { revalidateSitemapAll } from '@/lib/sitemap-revalidate';
 import { prisma } from '@/lib/prisma';
 import { submitIndexNowForUrls, urlsForCalculatorPage } from '@/lib/indexnow';
 
@@ -27,7 +28,7 @@ export async function POST(request: NextRequest) {
 
     // Invalidate sitemap cache so newly published pages appear immediately
     if (published && result.count > 0) {
-      revalidatePath('/sitemap.xml');
+      revalidateSitemapAll();
       const pages = await prisma.page.findMany({
         where: { id: { in: ids } },
         select: { category: true, slug: true },

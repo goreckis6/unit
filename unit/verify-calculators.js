@@ -6,8 +6,8 @@
  * 2. All calculators have i18n translation keys
  * 
  * IMPORTANT: The sitemapRoutes array below must be kept in sync with
- * app/sitemap.xml/route.ts staticRoutes array. When adding a new calculator:
- * 1. Add the route to app/sitemap.xml/route.ts
+ * lib/sitemap-entries.ts staticRoutes (categoryIndexes + getAllCalculators). When adding a new calculator:
+ * 1. Add the route via all-calculators (included in sitemap-entries)
  * 2. Add the route to sitemapRoutes in this file
  * 3. Run this script to verify
  * 
@@ -29,7 +29,7 @@ const mathDirs = fs.readdirSync(mathDir)
   .filter(f => fs.statSync(path.join(mathDir, f)).isDirectory())
   .sort();
 
-// Sitemap routes from route.ts - must match app/sitemap.xml/route.ts
+// Sitemap static routes — must match lib/sitemap-entries.ts (categoryIndexes + calculator paths)
 const sitemapRoutes = [
   '/calculators/math/addition',
   '/calculators/math/adding-fractions',

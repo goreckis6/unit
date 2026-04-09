@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
+import { revalidateSitemapAll } from '@/lib/sitemap-revalidate';
 import { Prisma } from '@/generated/prisma/client';
 import { prisma } from '@/lib/prisma';
 import { submitIndexNowForUrls, urlsForCalculatorPage } from '@/lib/indexnow';
@@ -125,7 +126,7 @@ export async function POST(request: NextRequest) {
     });
 
     if (page.published) {
-      revalidatePath('/sitemap.xml');
+      revalidateSitemapAll();
       if (page.category?.trim()) {
         void submitIndexNowForUrls(urlsForCalculatorPage(page.category, page.slug)).catch((err) =>
           console.error('[IndexNow] POST page:', err)

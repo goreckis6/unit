@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { revalidatePath } from 'next/cache';
+import { revalidateSitemapAll } from '@/lib/sitemap-revalidate';
 import { prisma } from '@/lib/prisma';
 
 /**
@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
       where: { id: { in: ids } },
     });
 
-    if (result.count > 0) revalidatePath('/sitemap.xml');
+    if (result.count > 0) revalidateSitemapAll();
 
     return NextResponse.json({
       ok: true,

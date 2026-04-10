@@ -80,6 +80,11 @@ export default async function middleware(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
+  // Crawlers expect real robots.txt from public/ — do not rewrite to /api/txt like other *.txt names
+  if (safePathname === '/robots.txt') {
+    return NextResponse.next();
+  }
+
   // Named TXT at site root: /klucz.txt -> same hash as admin "klucz.txt" -> /api/txt/{hash}
   const namedTxt = safePathname.match(/^\/([^/]+\.txt)$/i);
   if (namedTxt && !/^\/[a-f0-9]{64}\.txt$/i.test(safePathname)) {

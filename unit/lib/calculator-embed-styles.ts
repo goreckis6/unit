@@ -35,8 +35,12 @@ body {
   width: 100%;
   padding: 1.5rem;
 }
-@media (min-width: 768px) {
+/* Two columns only from ~900px — portrait tablets stay single column (less cramped) */
+@media (min-width: 900px) {
   .split-view-container { grid-template-columns: 1fr 1fr; padding: 2rem; }
+}
+@media (min-width: 768px) and (max-width: 899px) {
+  .split-view-container { grid-template-columns: 1fr; padding: 1.5rem; gap: 1.5rem; }
 }
 .input-section { margin-bottom: 2rem; width: 100%; }
 .input-card { display: flex; flex-direction: column; width: 100%; min-width: 0; }
@@ -94,6 +98,7 @@ body {
   cursor: pointer;
   font-family: inherit;
   min-height: 48px;
+  touch-action: manipulation;
 }
 .btn-primary {
   background: var(--gradient-primary);
@@ -168,5 +173,21 @@ select.number-input { cursor: pointer; min-width: 80px; }
 }
 .result-value-inline { color: var(--primary-color); font-size: 1.25rem; font-weight: 700; }
 .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-@media (max-width: 480px) { .options-grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .options-grid { grid-template-columns: 1fr; gap: 0.75rem; } }
+@media (max-width: 1024px) {
+  .calc-embed-root { padding: 1.5rem; min-height: 380px; }
+}
+@media (max-width: 640px) {
+  .calc-embed-root { padding: 1rem 0.75rem; min-height: 320px; }
+  .split-view-container { padding: 1rem; gap: 1.25rem; }
+  .input-label { font-size: 1rem; margin-bottom: 0.75rem; }
+  .number-input, select.number-input {
+    font-size: 16px;
+    padding: 0.875rem 1rem;
+  }
+  .form-group { gap: 0.5rem; }
+  .action-buttons { flex-direction: column; gap: 0.625rem; }
+  .action-buttons .btn { width: 100%; justify-content: center; }
+  .copy-result-btn { min-height: 44px; min-width: 44px; padding: 0.625rem 1rem; }
+}
 `;

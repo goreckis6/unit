@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 
 const CalculatorSandpack = dynamic(
   () => import('@/components/CalculatorSandpack').then((m) => ({ default: m.CalculatorSandpack })),
-  { ssr: false, loading: () => <div className="calculator-sandpack-loading" style={{ minHeight: 420 }} /> }
+  { ssr: false, loading: () => <div className="calculator-sandpack-loading" style={{ minHeight: 'min(420px, 65vh)' }} /> }
 );
 
 type Props = {

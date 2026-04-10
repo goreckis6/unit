@@ -1471,7 +1471,20 @@ a {
   font-size: 0.9rem;
 }
 
+@media (max-width: 768px) {
+  .calculator-sandpack-loading {
+    min-height: 300px !important;
+  }
+}
+
 /* Calculator Sandpack: auto-expand preview to fit content, no inner scrollbar */
+.calculator-sandpack-wrapper {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .calculator-sandpack-wrapper [class*='preview'],
 .calculator-sandpack-wrapper [class*='Preview'] {
   min-height: 420px !important;
@@ -1479,8 +1492,36 @@ a {
   height: auto !important;
 }
 .calculator-sandpack-wrapper iframe {
-  min-height: 800px !important; /* Fallback for prod when JS resizing delayed; JS overrides dynamically */
+  min-height: 800px !important; /* Fallback when height postMessage is delayed; JS sets final height */
   display: block;
+  width: 100% !important;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .calculator-sandpack-wrapper iframe {
+    min-height: 560px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculator-sandpack-wrapper {
+    border-radius: 14px !important;
+  }
+  .calculator-sandpack-wrapper [class*='preview'],
+  .calculator-sandpack-wrapper [class*='Preview'] {
+    min-height: 360px !important;
+  }
+  .calculator-sandpack-wrapper iframe {
+    min-height: 400px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-sandpack-wrapper iframe {
+    min-height: 320px !important;
+  }
 }
 
 /* ============================================
@@ -2267,6 +2308,11 @@ select.number-input {
 
   .calculator-card {
     padding: 2rem;
+    border-radius: 1.5rem;
+  }
+
+  .calculator-container {
+    padding-bottom: 3rem;
   }
 
   .split-view-container {
@@ -2665,6 +2711,12 @@ select.number-input {
 
   .calculator-card {
     padding: 1.5rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.08);
+  }
+
+  .calculator-container {
+    padding-bottom: 3rem;
   }
 
   .calculator-section {
@@ -2827,7 +2879,13 @@ select.number-input {
   }
 
   .calculator-card {
-    padding: 1.5rem 1rem;
+    padding: 1.25rem 1rem;
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+    border-radius: 1rem;
+  }
+
+  .calculator-container {
+    padding-bottom: calc(2.5rem + env(safe-area-inset-bottom, 0px));
   }
 
   .split-view-container {

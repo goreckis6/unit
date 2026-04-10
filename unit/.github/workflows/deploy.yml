@@ -23,7 +23,7 @@ jobs:
           tar --exclude=node_modules --exclude=.next --exclude=dev.db --exclude=generated -czf ../unit-src.tar.gz .
           ls -la ../unit-src.tar.gz
 
-      - name: Create DB directory and prepare deployment
+      - name: Create DB directory (app keeps running — no PM2 stop here)
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.FRONTEND_VPS_HOST }}
@@ -33,15 +33,9 @@ jobs:
             set -eo pipefail
             APP_DIR="/var/www/calculinohub"
             DB_DIR="/var/www/db-calculino"
-            SERVICE_NAME="calculinohub"
 
             sudo mkdir -p "$APP_DIR" "$DB_DIR"
             sudo chown -R ${{ secrets.FRONTEND_VPS_USERNAME }}:${{ secrets.FRONTEND_VPS_USERNAME }} "$APP_DIR" "$DB_DIR"
-
-            pm2 stop "$SERVICE_NAME" 2>/dev/null || true
-            pm2 delete "$SERVICE_NAME" 2>/dev/null || true
-            pm2 stop unitconverterhub 2>/dev/null || true
-            pm2 delete unitconverterhub 2>/dev/null || true
 
             echo "📦 DB directory ready at $DB_DIR"
             echo "📦 App directory ready at $APP_DIR"
@@ -58,7 +52,7 @@ jobs:
           VPS_USER: ${{ secrets.FRONTEND_VPS_USERNAME }}
           VPS_HOST: ${{ secrets.FRONTEND_VPS_HOST }}
 
-      - name: Extract, build on server, setup env, and start app
+      - name: Build in temp dir, then quick swap (minimal 502 / maintenance window)
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.FRONTEND_VPS_HOST }}
@@ -74,22 +68,22 @@ jobs:
 
             sudo chown -R ${{ secrets.FRONTEND_VPS_USERNAME }}:${{ secrets.FRONTEND_VPS_USERNAME }} "$APP_DIR"
 
-            # Preserve .env across deploys
-            ENV_FILE="$APP_DIR/.env"
-            [ -f "$ENV_FILE" ] && cp "$ENV_FILE" /tmp/deploy-env.bak || true
+            BUILD_DIR=$(mktemp -d /tmp/calculinohub-build.XXXXXX)
+            cleanup_build() { rm -rf "$BUILD_DIR" 2>/dev/null || true; }
+            trap cleanup_build EXIT
 
-            # Extract source tarball
+            [ -f "$APP_DIR/.env" ] && cp "$APP_DIR/.env" /tmp/deploy-env.bak || true
+
             if [ ! -f /tmp/unit-src.tar.gz ]; then
               echo "❌ /tmp/unit-src.tar.gz not found. Contents of /tmp:"
               ls -la /tmp
               exit 1
             fi
-            cd "$APP_DIR"
-            rm -rf * .[!.]* 2>/dev/null || true
+            cd "$BUILD_DIR"
             tar -xzf /tmp/unit-src.tar.gz
             rm -f /tmp/unit-src.tar.gz
 
-            # Restore or create .env (Prisma needs DATABASE_URL for generate/build)
+            ENV_FILE="$BUILD_DIR/.env"
             export DATABASE_URL="file:$DB_PATH"
             if [ -f /tmp/deploy-env.bak ]; then
               cp /tmp/deploy-env.bak "$ENV_FILE"
@@ -109,16 +103,49 @@ jobs:
               } > "$ENV_FILE"
             fi
 
-            # Install deps, generate Prisma, build on server (VPS has more RAM than GitHub runner)
+            cd "$BUILD_DIR"
             npm ci 2>/dev/null || npm install
             npx prisma generate
             NODE_OPTIONS="--max-old-space-size=4096" npm run build
 
-            # Use project node_modules for runtime (standalone tracing misses better-sqlite3 native binding)
+            if [ ! -f "$BUILD_DIR/.next/standalone/server.js" ]; then
+              echo "❌ server.js not found after build"
+              ls -la "$BUILD_DIR/.next/standalone/" || true
+              exit 1
+            fi
+
+            cd "$BUILD_DIR"
+            if [ -d prisma ]; then
+              npx prisma migrate deploy
+              npx prisma db seed 2>/dev/null || echo "⚠️ Seed skipped (run manually if needed)"
+            fi
+
+            mkdir -p /tmp/deploy-logs-preserve
+            if [ -d "$APP_DIR/logs" ]; then
+              cp -a "$APP_DIR/logs/." /tmp/deploy-logs-preserve/ 2>/dev/null || true
+            fi
+
+            echo "🔄 Stopping PM2 and syncing new build (short window; old app served until now)…"
+            pm2 stop "$SERVICE_NAME" 2>/dev/null || true
+            pm2 delete "$SERVICE_NAME" 2>/dev/null || true
+            pm2 stop unitconverterhub 2>/dev/null || true
+            pm2 delete unitconverterhub 2>/dev/null || true
+
+            rsync -a --delete "$BUILD_DIR"/ "$APP_DIR"/
+
+            mkdir -p "$APP_DIR/logs"
+            if [ -n "$(ls -A /tmp/deploy-logs-preserve 2>/dev/null)" ]; then
+              cp -a /tmp/deploy-logs-preserve/. "$APP_DIR/logs/" 2>/dev/null || true
+            fi
+            rm -rf /tmp/deploy-logs-preserve
+
+            trap - EXIT
+            rm -rf "$BUILD_DIR"
+
+            cd "$APP_DIR"
             rm -rf "$APP_DIR/.next/standalone/node_modules"
             ln -sfn "$APP_DIR/node_modules" "$APP_DIR/.next/standalone/node_modules"
 
-            # Prisma bundled code looks for better_sqlite3.node in @prisma/client - copy it there
             NODE_ABI=$(node -e "console.log('node-v' + process.versions.modules + '-' + process.platform + '-' + process.arch)")
             BINDING_DIR="$APP_DIR/node_modules/@prisma/client/lib/binding/$NODE_ABI"
             mkdir -p "$BINDING_DIR"
@@ -130,29 +157,12 @@ jobs:
               echo "⚠ better_sqlite3.node not found - login may fail"
             fi
 
-            # Verify server.js
-            if [ ! -f "$APP_DIR/.next/standalone/server.js" ]; then
-              echo "❌ server.js not found"
-              ls -la "$APP_DIR/.next/standalone/" || true
-              exit 1
-            fi
-
-            # Symlink .next/static if needed
             if [ ! -L "$APP_DIR/.next/standalone/.next/static" ] && [ -d "$APP_DIR/.next/static" ]; then
               ln -sf "$APP_DIR/.next/static" "$APP_DIR/.next/standalone/.next/static" 2>/dev/null || true
             fi
 
-            # Copy public folder (standalone mode skips it; needed for sitemap.xsl, favicon, etc.)
             [ -d "$APP_DIR/public" ] && cp -r "$APP_DIR/public" "$APP_DIR/.next/standalone/"
 
-            # Prisma migrate & seed
-            cd "$APP_DIR"
-            if [ -d prisma ]; then
-              npx prisma migrate deploy
-              npx prisma db seed 2>/dev/null || echo "⚠️ Seed skipped (run manually if needed)"
-            fi
-
-            # Caddy
             if [ -f "$APP_DIR/Caddyfile" ]; then
               sudo mkdir -p /etc/caddy
               sudo cp "$APP_DIR/Caddyfile" /etc/caddy/Caddyfile
@@ -162,7 +172,6 @@ jobs:
 
             mkdir -p "$APP_DIR/logs"
 
-            # PM2
             if ! command -v pm2 >/dev/null 2>&1; then
               sudo npm install -g pm2
             fi

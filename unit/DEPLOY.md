@@ -65,11 +65,13 @@ If you need more variables than those set by secrets, edit `/var/www/calculinohu
 ## What the deploy does
 
 1. Creates source tarball (excludes `node_modules`, `.next`, `generated`)
-2. Copies tarball to server, extracts to `/var/www/calculinohub`
+2. Copies tarball to the server and **extracts + builds in a temp directory** under `/tmp` (the live app in `/var/www/calculinohub` keeps running during `npm run build`)
 3. **Builds Next.js on the VPS** (avoids OOM in GitHub Actions; VPS typically has more RAM)
 4. Preserves `.env` across deploys; creates it on first deploy with `DATABASE_URL` and secrets
 5. Runs `prisma migrate deploy`, then `prisma db seed` (can fail if `tsx` missing — run manually if needed)
-6. Restarts app with PM2
+6. **Stops PM2 only after a successful build**, then `rsync`s the new tree into `/var/www/calculinohub` and starts PM2 again — **short** 502 window (seconds) instead of the whole build time. Caddy still shows `maintenance.html` only if upstream returns **502**; true zero-downtime would need a second port / blue-green.
+
+**Requirement on the VPS:** `rsync` must be installed (`apt install rsync` / `apk add rsync`).
 
 ---
 

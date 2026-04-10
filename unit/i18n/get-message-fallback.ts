@@ -21,10 +21,10 @@ export function createGetMessageFallback() {
 
     // Homepage hero suffix after animated count (English; override per locale in JSON)
     if (path === 'common.homePage.heroHeadlineFreeWord') {
-      return ' Free';
+      return '';
     }
     if (path === 'common.homePage.heroHeadlineSuffix') {
-      return ' Specialized Calculators.';
+      return ' Free Calculators. One Powerful Hub.';
     }
 
     // Generic calculators.*.title / calculators.*.description

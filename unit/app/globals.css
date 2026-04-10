@@ -972,10 +972,10 @@ a {
   margin: 0 0 1.75rem;
   padding: 0;
   font-size: clamp(2rem, 6.5vw, 3.75rem);
-  font-weight: 200;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.04em;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.14);
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
   opacity: 1;
 }
 
@@ -983,30 +983,49 @@ a {
   display: inline;
 }
 
-/* Reserve width of final number; align digits to the right so the count “grows” toward Free */
+/* Counter: digits + “+” share slot width (sizer); row flex-end so growth goes left toward “Free …” */
 .hero-count-line .hero-count-value-wrap {
-  display: inline-block;
-  position: relative;
-  vertical-align: baseline;
+  display: inline-grid;
+  vertical-align: -0.04em;
+  font-size: 1.28em;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  grid-template-columns: minmax(0, max-content);
+  align-items: baseline;
 }
 
 .hero-count-line .hero-count-sizer {
+  grid-area: 1 / 1;
   visibility: hidden;
-  font-weight: 200;
+  font-weight: inherit;
   font-variant-numeric: tabular-nums;
-  letter-spacing: -0.05em;
+  letter-spacing: inherit;
   pointer-events: none;
+  white-space: nowrap;
+}
+
+.hero-count-line .hero-count-value-row {
+  grid-area: 1 / 1;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 0;
+  white-space: nowrap;
 }
 
 .hero-count-line .hero-count-value {
-  position: absolute;
-  right: 0;
-  top: 0;
-  left: auto;
-  font-weight: 200;
+  font-weight: inherit;
   font-variant-numeric: tabular-nums;
-  letter-spacing: -0.05em;
-  white-space: nowrap;
+  letter-spacing: inherit;
+}
+
+.hero-count-line .hero-count-plus {
+  font-weight: inherit;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  margin-left: 0.02em;
 }
 
 .hero-subtitle {

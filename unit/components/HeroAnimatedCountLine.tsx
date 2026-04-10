@@ -22,7 +22,7 @@ export function HeroAnimatedCountLine({
   const [display, setDisplay] = useState(0);
   const rafRef = useRef(0);
   const nf = new Intl.NumberFormat(locale);
-  const finalText = `${nf.format(targetCount)}${freeWord}${suffix}`;
+  const finalText = `${nf.format(targetCount)}+${freeWord}${suffix}`;
 
   useEffect(() => {
     setDisplay(0);
@@ -47,8 +47,13 @@ export function HeroAnimatedCountLine({
     <p className="hero-count-line">
       <span aria-hidden="true" className="hero-count-run">
         <span className="hero-count-value-wrap">
-          <span className="hero-count-sizer">{nf.format(targetCount)}</span>
-          <span className="hero-count-value">{nf.format(display)}</span>
+          <span className="hero-count-sizer">{`${nf.format(targetCount)}+`}</span>
+          <span className="hero-count-value-row">
+            <span className="hero-count-value">{nf.format(display)}</span>
+            <span className="hero-count-plus" aria-hidden="true">
+              +
+            </span>
+          </span>
         </span>
         {freeWord}
         {suffix}

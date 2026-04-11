@@ -13,6 +13,33 @@ export type PageStage = 'new' | 'content-en-done' | 'translation-done' | 'calcul
 
 const LIST_FILTER_STORAGE_KEY = 'twojastara-pages-list-filter';
 
+const PAGE_SIZE_OPTIONS = [50, 100, 200, 300, 400, 500] as const;
+type PageSizeOption = (typeof PAGE_SIZE_OPTIONS)[number];
+
+function parsePerPageParam(raw: string | null): PageSizeOption | null {
+  if (raw === null || raw === '') return null;
+  const n = Number(raw);
+  return PAGE_SIZE_OPTIONS.includes(n as PageSizeOption) ? (n as PageSizeOption) : null;
+}
+
+/** URL `perPage` first, then localStorage, default 50. */
+function getPageSizeFromSearchParams(searchParams: URLSearchParams): PageSizeOption {
+  const fromUrl = parsePerPageParam(searchParams.get('perPage'));
+  if (fromUrl !== null) return fromUrl;
+  if (typeof window === 'undefined') return 50;
+  try {
+    const s = localStorage.getItem(LIST_FILTER_STORAGE_KEY);
+    if (s) {
+      const v = JSON.parse(s) as Record<string, unknown>;
+      const n = Number(v.perPage);
+      if (PAGE_SIZE_OPTIONS.includes(n as PageSizeOption)) return n as PageSizeOption;
+    }
+  } catch {
+    /* ignore */
+  }
+  return 50;
+}
+
 const OLLAMA_MODELS: { id: string; label: string; desc: string }[] = [
   { id: 'glm-4.6:cloud', label: 'GLM-4.6 (domyślny)', desc: 'Domyślny model. Stabilny, dobre wyniki.' },
   { id: 'gemini-3-flash-preview:cloud', label: 'Gemini 3 Flash', desc: 'Najszybszy model od Google, zoptymalizowany pod kątem niskich opóźnień i ogromnego kontekstu (1 mln tokenów).' },
@@ -357,7 +384,7 @@ export default function AdminPagesList() {
   const [categoryFilter, setCategoryFilter] = useState(initFilter.categoryFilter);
   const [sortBy, setSortBy] = useState<SortByVal>(initFilter.sortBy);
   const [pageNum, setPageNum] = useState(1);
-  const PAGE_SIZE = 50;
+  const pageSize = useMemo(() => getPageSizeFromSearchParams(searchParams), [searchParams.toString()]);
 
   useEffect(() => {
     const init = getInitialListFilter(searchParams);
@@ -390,13 +417,18 @@ export default function AdminPagesList() {
     else params.delete('category');
     if (sortBy !== 'latest') params.set('sort', sortBy);
     else params.delete('sort');
+    if (pageSize !== 50) params.set('perPage', String(pageSize));
+    else params.delete('perPage');
     router.replace(`/twojastara/pages?${params.toString()}`, { scroll: false });
     try {
-      localStorage.setItem(LIST_FILTER_STORAGE_KEY, JSON.stringify({ searchQuery, categoryFilter, sortBy }));
+      localStorage.setItem(
+        LIST_FILTER_STORAGE_KEY,
+        JSON.stringify({ searchQuery, categoryFilter, sortBy, perPage: pageSize })
+      );
     } catch {
       /* ignore */
     }
-  }, [searchQuery, categoryFilter, sortBy]);
+  }, [searchQuery, categoryFilter, sortBy, pageSize]);
 
   const filteredPages = useMemo(() => {
     const stagePages = pagesByStage[activeBookmark];
@@ -442,17 +474,17 @@ export default function AdminPagesList() {
   }, [pagesByStage, activeBookmark, searchQuery, categoryFilter, sortBy]);
 
   const paginatedPages = useMemo(() => {
-    if (filteredPages.length <= PAGE_SIZE) return filteredPages;
-    const start = (pageNum - 1) * PAGE_SIZE;
-    return filteredPages.slice(start, start + PAGE_SIZE);
-  }, [filteredPages, pageNum]);
+    if (filteredPages.length <= pageSize) return filteredPages;
+    const start = (pageNum - 1) * pageSize;
+    return filteredPages.slice(start, start + pageSize);
+  }, [filteredPages, pageNum, pageSize]);
 
-  const totalPages = Math.ceil(filteredPages.length / PAGE_SIZE);
-  const showPagination = filteredPages.length > PAGE_SIZE;
+  const totalPages = Math.ceil(filteredPages.length / pageSize);
+  const showPagination = filteredPages.length > pageSize;
 
   useEffect(() => {
     setPageNum(1);
-  }, [activeBookmark, searchQuery, categoryFilter, sortBy]);
+  }, [activeBookmark, searchQuery, categoryFilter, sortBy, pageSize]);
 
   useEffect(() => {
     fetch('/api/twojastara/pages')
@@ -1933,6 +1965,44 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
             <option value="category">Category A–Z</option>
             <option value="slug">Slug A–Z</option>
           </select>
+          <label
+            style={{
+              fontSize: '0.9rem',
+              color: 'var(--text-secondary)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.35rem',
+            }}
+          >
+            Per page
+            <select
+              value={pageSize}
+              onChange={(e) => {
+                const next = Number(e.target.value) as PageSizeOption;
+                setPageNum(1);
+                const params = new URLSearchParams(searchParams.toString());
+                if (next === 50) params.delete('perPage');
+                else params.set('perPage', String(next));
+                router.replace(`/twojastara/pages?${params.toString()}`, { scroll: false });
+              }}
+              style={{
+                padding: '0.5rem 0.75rem',
+                fontSize: '0.9rem',
+                border: '1px solid var(--border-color)',
+                borderRadius: 6,
+                background: 'var(--bg-primary)',
+                color: 'var(--text-primary)',
+                minWidth: 88,
+              }}
+              aria-label="Rows per page"
+            >
+              {PAGE_SIZE_OPTIONS.map((n) => (
+                <option key={n} value={n}>
+                  {n}
+                </option>
+              ))}
+            </select>
+          </label>
         </div>
       )}
 

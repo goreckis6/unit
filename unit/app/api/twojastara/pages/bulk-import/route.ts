@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
+import { analyzeBulkImportItems } from '@/lib/bulk-import-shared';
 
 /**
  * POST /api/twojastara/pages/bulk-import
@@ -7,10 +8,12 @@ import { prisma } from '@/lib/prisma';
  *
  * JSON template format:
  * - category: required (e.g. math, electric)
- * - slug: required (url slug, e.g. fractions-averaging)
+ * - slug: required (url slug; normalized: lower, spaces→-, colons stripped, etc.)
  * - title: SEO title (meta, <title>)
  * - displayTitle: H1 on page (optional, falls back to title)
  * - description: meta description
+ *
+ * Skips: built-in static calculator (repo), already in DB, duplicate rows in the same JSON.
  */
 export async function POST(request: NextRequest) {
   try {
@@ -24,53 +27,88 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const results: { slug: string; category: string; status: 'created' | 'skipped' | 'error'; message?: string }[] = [];
+    const analyzed = await analyzeBulkImportItems(prisma, items);
 
-    for (const item of items) {
-      const category = typeof item.category === 'string' ? item.category.trim().toLowerCase() : '';
-      const slugRaw = typeof item.slug === 'string' ? item.slug.trim() : '';
-      const slug = slugRaw.toLowerCase().replace(/\s+/g, '-');
-      const title = typeof item.title === 'string' ? item.title.trim() : (typeof item.seoTitle === 'string' ? item.seoTitle.trim() : slug);
-      const displayTitle = typeof item.displayTitle === 'string' ? item.displayTitle.trim() : (typeof item.h1 === 'string' ? item.h1.trim() : null) || title;
-      const description = typeof item.description === 'string' ? item.description.trim() : (typeof item.metaDescription === 'string' ? item.metaDescription.trim() : null);
+    const results: {
+      slug: string;
+      category: string;
+      status: 'created' | 'skipped' | 'error';
+      message?: string;
+    }[] = [];
 
-      if (!slug) {
-        results.push({ slug: slugRaw || '?', category, status: 'error', message: 'Slug is required' });
+    for (const row of analyzed) {
+      const slugLabel = row.slugNormalized || row.slugInput || '?';
+
+      if (row.status === 'error') {
+        results.push({
+          slug: slugLabel,
+          category: row.category || '?',
+          status: 'error',
+          message: row.message,
+        });
         continue;
       }
-      if (!category) {
-        results.push({ slug, category: '?', status: 'error', message: 'Category is required' });
+
+      if (row.status === 'skipped_exists') {
+        results.push({
+          slug: slugLabel,
+          category: row.category,
+          status: 'skipped',
+          message: row.message ?? 'Already exists',
+        });
+        continue;
+      }
+
+      if (row.status === 'skipped_duplicate_in_file') {
+        results.push({
+          slug: slugLabel,
+          category: row.category,
+          status: 'skipped',
+          message: row.message ?? 'Duplicate in file',
+        });
+        continue;
+      }
+
+      if (row.status === 'skipped_static_calculator') {
+        results.push({
+          slug: slugLabel,
+          category: row.category,
+          status: 'skipped',
+          message: row.message ?? 'Static calculator in repo',
+        });
+        continue;
+      }
+
+      if (row.status !== 'import') {
+        results.push({
+          slug: slugLabel,
+          category: row.category || '?',
+          status: 'error',
+          message: `Unexpected row status: ${row.status}`,
+        });
         continue;
       }
 
       try {
-        const existing = await prisma.page.findUnique({
-          where: { category_slug: { category, slug } },
-        });
-        if (existing) {
-          results.push({ slug, category, status: 'skipped', message: 'Already exists' });
-          continue;
-        }
-
         await prisma.page.create({
           data: {
-            slug,
-            category,
+            slug: row.slugNormalized,
+            category: row.category,
             published: false,
             translations: {
               create: {
                 locale: 'en',
-                title: title || slug,
-                displayTitle: displayTitle || title || slug,
-                description: description || null,
+                title: row.title || row.slugNormalized,
+                displayTitle: row.displayTitle || row.title || row.slugNormalized,
+                description: row.description || null,
               },
             },
           },
         });
-        results.push({ slug, category, status: 'created' });
+        results.push({ slug: row.slugNormalized, category: row.category, status: 'created' });
       } catch (e) {
         const msg = e instanceof Error ? e.message : 'Unknown error';
-        results.push({ slug, category, status: 'error', message: msg });
+        results.push({ slug: row.slugNormalized, category: row.category, status: 'error', message: msg });
       }
     }
 

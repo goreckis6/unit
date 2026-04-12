@@ -312,6 +312,24 @@ export default function AdminPagesList() {
   const [showBulkImport, setShowBulkImport] = useState(false);
   const [bulkImportJson, setBulkImportJson] = useState('');
   const [bulkImportLoading, setBulkImportLoading] = useState(false);
+  const [bulkImportValidateLoading, setBulkImportValidateLoading] = useState(false);
+  const [bulkImportValidate, setBulkImportValidate] = useState<{
+    summary: {
+      total: number;
+      toImport: number;
+      skippedExists: number;
+      skippedStaticCalculator: number;
+      skippedDuplicateInFile: number;
+      errors: number;
+    };
+    rows: Array<{
+      category: string;
+      slugInput: string;
+      slugNormalized: string;
+      status: string;
+      message?: string;
+    }>;
+  } | null>(null);
   const [bulkImportResult, setBulkImportResult] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
   const [bulkDeleteLoading, setBulkDeleteLoading] = useState(false);
   const [bulkPublishLoading, setBulkPublishLoading] = useState(false);
@@ -1429,8 +1447,45 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
     }
   }
 
+  async function handleBulkImportValidate() {
+    setBulkImportResult(null);
+    setBulkImportValidate(null);
+    let items: unknown[];
+    try {
+      const parsed = JSON.parse(bulkImportJson);
+      items = Array.isArray(parsed) ? parsed : Array.isArray(parsed?.items) ? parsed.items : [];
+    } catch {
+      setBulkImportResult({ type: 'error', msg: 'Invalid JSON' });
+      return;
+    }
+    if (items.length === 0) {
+      setBulkImportResult({ type: 'error', msg: 'No items. Use format: [{ "category": "math", "slug": "my-page", ... }, ...]' });
+      return;
+    }
+    setBulkImportValidateLoading(true);
+    try {
+      const res = await fetch('/api/twojastara/pages/bulk-import/validate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items }),
+        credentials: 'include',
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setBulkImportResult({ type: 'error', msg: data.error || 'Validation failed' });
+        return;
+      }
+      setBulkImportValidate({ summary: data.summary, rows: data.rows });
+    } catch (e) {
+      setBulkImportResult({ type: 'error', msg: e instanceof Error ? e.message : 'Validation failed' });
+    } finally {
+      setBulkImportValidateLoading(false);
+    }
+  }
+
   async function handleBulkImport() {
     setBulkImportResult(null);
+    setBulkImportValidate(null);
     let items: unknown[];
     try {
       const parsed = JSON.parse(bulkImportJson);
@@ -1456,7 +1511,23 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
         setBulkImportResult({ type: 'error', msg: data.error || 'Import failed' });
         return;
       }
-      setBulkImportResult({ type: 'success', msg: data.message || `Created ${data.created}, skipped ${data.skipped}` });
+      const results = Array.isArray(data.results) ? data.results : [];
+      const skippedList = results.filter((r: { status: string }) => r.status === 'skipped');
+      const errList = results.filter((r: { status: string }) => r.status === 'error');
+      let detail = data.message || `Created ${data.created}, skipped ${data.skipped}`;
+      if (errList.length > 0) {
+        detail += `\nErrors: ${errList
+          .slice(0, 8)
+          .map((r: { category?: string; slug?: string; message?: string }) => `${r.category}/${r.slug}: ${r.message || '?'}`)
+          .join(' | ')}${errList.length > 8 ? '…' : ''}`;
+      } else if (skippedList.length > 0 && skippedList.length <= 12) {
+        detail += `\nSkipped: ${skippedList
+          .map((r: { category?: string; slug?: string; message?: string }) => `${r.category}/${r.slug} (${r.message || 'skipped'})`)
+          .join('; ')}`;
+      } else if (skippedList.length > 12) {
+        detail += `\nSkipped ${skippedList.length} rows — use “Check JSON (no import)” for the full list.`;
+      }
+      setBulkImportResult({ type: 'success', msg: detail });
       setBulkImportJson('');
       const listRes = await fetch('/api/twojastara/pages');
       const listData = await listRes.json();
@@ -1476,6 +1547,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
     reader.onload = () => {
       setBulkImportJson(String(reader.result ?? ''));
       setBulkImportResult(null);
+      setBulkImportValidate(null);
     };
     reader.readAsText(file);
     e.target.value = '';
@@ -2352,6 +2424,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
         >
           <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
             Upload or paste JSON. Each item: <code>category</code>, <code>slug</code>, <code>title</code> (SEO), <code>displayTitle</code> (H1), <code>description</code> (meta).
+            Slugs are <strong>normalized</strong> for duplicate checks (e.g. <code>cycle-time:</code> and <code>cycle-time</code> are the same). Conflicts include: <strong>CMS (SQLite)</strong>, <strong>built-in calculators</strong> from <code>getAllCalculators()</code> (same category + slug as a static route), and duplicate rows in one JSON file.
           </div>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
             <button
@@ -2372,8 +2445,17 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
             </label>
             <button
               type="button"
+              onClick={handleBulkImportValidate}
+              disabled={bulkImportValidateLoading || bulkImportLoading || !bulkImportJson.trim()}
+              className="btn btn-secondary btn-sm"
+              title="Compare JSON to the database: duplicates in file, already existing pages (by normalized slug)"
+            >
+              {bulkImportValidateLoading ? 'Checking…' : 'Check JSON (no import)'}
+            </button>
+            <button
+              type="button"
               onClick={handleBulkImport}
-              disabled={bulkImportLoading || !bulkImportJson.trim()}
+              disabled={bulkImportLoading || bulkImportValidateLoading || !bulkImportJson.trim()}
               className="btn btn-primary btn-sm"
             >
               {bulkImportLoading ? 'Importing…' : 'Import'}
@@ -2381,7 +2463,11 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
           </div>
           <textarea
             value={bulkImportJson}
-            onChange={(e) => { setBulkImportJson(e.target.value); setBulkImportResult(null); }}
+            onChange={(e) => {
+              setBulkImportJson(e.target.value);
+              setBulkImportResult(null);
+              setBulkImportValidate(null);
+            }}
             placeholder={`[\n  { "category": "math", "slug": "my-calculator", "title": "SEO Title Here", "displayTitle": "H1 Title", "description": "Meta description" },\n  ...\n]`}
             style={{
               width: '100%',
@@ -2395,6 +2481,59 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
               resize: 'vertical',
             }}
           />
+          {bulkImportValidate && (
+            <div
+              style={{
+                marginTop: '0.75rem',
+                padding: '0.75rem',
+                borderRadius: 6,
+                border: '1px solid var(--border-color)',
+                background: 'var(--bg-primary)',
+                fontSize: '0.8rem',
+              }}
+            >
+              <div style={{ fontWeight: 600, marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
+                Validation (no rows created)
+              </div>
+              <div style={{ color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
+                Total {bulkImportValidate.summary.total}: would import{' '}
+                <strong style={{ color: 'var(--text-primary)' }}>{bulkImportValidate.summary.toImport}</strong>, already in
+                CMS <strong>{bulkImportValidate.summary.skippedExists}</strong>, static calculator in repo{' '}
+                <strong>{bulkImportValidate.summary.skippedStaticCalculator ?? 0}</strong>, duplicate in file{' '}
+                <strong>{bulkImportValidate.summary.skippedDuplicateInFile}</strong>, invalid{' '}
+                <strong>{bulkImportValidate.summary.errors}</strong>
+              </div>
+              {bulkImportValidate.rows.some((r) => r.status !== 'import') && (
+                <div style={{ maxHeight: 220, overflow: 'auto', borderTop: '1px solid var(--border-light)', paddingTop: '0.5rem' }}>
+                  <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.75rem' }}>
+                    <thead>
+                      <tr style={{ textAlign: 'left', color: 'var(--text-secondary)' }}>
+                        <th style={{ padding: '0.25rem' }}>Category</th>
+                        <th style={{ padding: '0.25rem' }}>Slug (raw)</th>
+                        <th style={{ padding: '0.25rem' }}>Normalized</th>
+                        <th style={{ padding: '0.25rem' }}>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {bulkImportValidate.rows
+                        .filter((r) => r.status !== 'import')
+                        .map((r, i) => (
+                          <tr key={i} style={{ borderTop: '1px solid var(--border-light)' }}>
+                            <td style={{ padding: '0.25rem', verticalAlign: 'top' }}>{r.category || '—'}</td>
+                            <td style={{ padding: '0.25rem', verticalAlign: 'top', wordBreak: 'break-all' }}>{r.slugInput || '—'}</td>
+                            <td style={{ padding: '0.25rem', verticalAlign: 'top', wordBreak: 'break-all' }}>{r.slugNormalized || '—'}</td>
+                            <td style={{ padding: '0.25rem', verticalAlign: 'top', color: 'var(--text-primary)' }}>
+                              {r.status}
+                              {r.message ? <div style={{ color: 'var(--text-secondary)', marginTop: 2 }}>{r.message}</div> : null}
+                            </td>
+                          </tr>
+                        ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          )}
           {bulkImportResult && (
             <div
               style={{
@@ -2404,6 +2543,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                 background: bulkImportResult.type === 'success' ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.1)',
                 color: bulkImportResult.type === 'success' ? 'var(--success-color)' : 'var(--error-color)',
                 fontSize: '0.875rem',
+                whiteSpace: 'pre-wrap',
               }}
             >
               {bulkImportResult.msg}

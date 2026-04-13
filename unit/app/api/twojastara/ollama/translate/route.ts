@@ -189,6 +189,9 @@ const CJK_LOCALE_PREFIX = /^(ja|zh|ko|tw|cn|hk|th)(-|$)/i;
 const TRUNCATED_BODY_RATIO_MESSAGE =
   'Tłumaczenie treści wygląda na ucięte (wynik znacznie krótszy niż angielski fragment). Model zamknął JSON, ale nie przetłumaczył całości — ponów Translate lub ustaw OLLAMA_TRANSLATE_NUM_PREDICT=131072.';
 
+const TRUNCATED_SENTENCE_COVERAGE_MESSAGE =
+  'Tłumaczenie treści wygląda na streszczenie lub urwanie (wynik ma wyraźnie mniej zdań niż angielski fragment). Model nie zachował pokrycia 1:1 — ponów Translate lub użyj mocniejszego modelu.';
+
 const ENGLISH_COPY_MESSAGE =
   'Tłumaczenie wygląda na skopiowany angielski oryginał zamiast docelowego języka. Model nie przetłumaczył treści 1:1 — ponów Translate lub użyj mocniejszego modelu.';
 
@@ -198,6 +201,7 @@ const ENGLISH_COPY_MESSAGE =
  */
 /** Per-chunk: output much shorter than source usually means summarization / drop (not strict: PL can be zwięzły). */
 const CHUNK_MIN_LENGTH_RATIO = 0.52;
+const SENTENCE_COVERAGE_MIN_RATIO = 0.72;
 
 function looksTruncatedBodyChunk(en: string, out: string, targetLocale: string): boolean {
   if (CJK_LOCALE_PREFIX.test(targetLocale.trim())) return false;
@@ -205,6 +209,32 @@ function looksTruncatedBodyChunk(en: string, out: string, targetLocale: string):
   const outLen = out.trim().length;
   if (enLen < 320) return false;
   return outLen < enLen * CHUNK_MIN_LENGTH_RATIO;
+}
+
+function countSentenceMarkers(text: string): number {
+  const matches = (text ?? '').match(/[.!?]+(?=(?:["')\]]|\s|$))/gu);
+  return matches?.length ?? 0;
+}
+
+function hasSuspiciousEllipsisEnding(en: string, out: string): boolean {
+  const enNorm = normalizeForLocaleComparison(en);
+  const outNorm = normalizeForLocaleComparison(out);
+  if (enNorm.length < 250 || outNorm.length < 120) return false;
+  const outTail = out.trim().slice(-40);
+  const enTail = en.trim().slice(-40);
+  const outHasEllipsis = /(?:\.\.\.|…)\s*$/.test(outTail);
+  const enHasEllipsis = /(?:\.\.\.|…)\s*$/.test(enTail);
+  return outHasEllipsis && !enHasEllipsis;
+}
+
+function looksLowSentenceCoverage(en: string, out: string, targetLocale: string): boolean {
+  if (CJK_LOCALE_PREFIX.test(targetLocale.trim())) return false;
+  const enCount = countSentenceMarkers(en);
+  const outCount = countSentenceMarkers(out);
+  if (enCount < 3 || outCount === 0) return false;
+  const coverage = outCount / enCount;
+  if (coverage < SENTENCE_COVERAGE_MIN_RATIO) return true;
+  return hasSuspiciousEllipsisEnding(en, out) && coverage < 0.9;
 }
 
 function normalizeForLocaleComparison(text: string): string {
@@ -400,6 +430,9 @@ Output ONLY valid JSON: one object with key "content" (string). Preserve Markdow
         if (looksLikeEnglishCopy(enChunk, c, targetLocale)) {
           throw new Error(ENGLISH_COPY_MESSAGE);
         }
+        if (looksLowSentenceCoverage(enChunk, c, targetLocale)) {
+          throw new Error(TRUNCATED_SENTENCE_COVERAGE_MESSAGE);
+        }
         if (looksTruncatedBodyChunk(enChunk, c, targetLocale)) {
           throw new Error(TRUNCATED_BODY_RATIO_MESSAGE);
         }
@@ -418,6 +451,9 @@ Output ONLY valid JSON: one object with key "content" (string). Preserve Markdow
   }
   const merged = parts.join('\n\n').trim();
   const enTrim = enBody.trim();
+  if (looksLowSentenceCoverage(enTrim, merged, targetLocale)) {
+    throw new Error(TRUNCATED_SENTENCE_COVERAGE_MESSAGE);
+  }
   if (!CJK_LOCALE_PREFIX.test(targetLocale.trim()) && enTrim.length > 1_200) {
     const r = merged.length / enTrim.length;
     if (r < 0.48) {
@@ -790,6 +826,9 @@ export async function POST(request: NextRequest) {
     }
     if (looksLikeEnglishCopy(content, resultContent, locales[0] ?? '')) {
       throw new Error(ENGLISH_COPY_MESSAGE);
+    }
+    if (looksLowSentenceCoverage(content, resultContent, locales[0] ?? '')) {
+      throw new Error(TRUNCATED_SENTENCE_COVERAGE_MESSAGE);
     }
     if (
       !isBatch &&

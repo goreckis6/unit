@@ -107,6 +107,29 @@ function parseLabelsFromUpload(jsonStr: string, pageSlug: string): Record<string
   }
 }
 
+function shouldAutoResumeTranslateError(message: string): boolean {
+  const s = (message ?? '').toLowerCase();
+  return (
+    s.includes('503') ||
+    s.includes('429') ||
+    s.includes('concurrent request slot') ||
+    s.includes('no slots available') ||
+    s.includes('llm busy') ||
+    s.includes('too many requests') ||
+    s.includes('too many concurrent') ||
+    s.includes('timeout') ||
+    s.includes('und_err_headers_timeout') ||
+    s.includes('econnreset') ||
+    s.includes('connection reset') ||
+    s.includes('socket hang up') ||
+    s.includes('etimedout') ||
+    s.includes('failed to fetch') ||
+    s.includes('networkerror') ||
+    s.includes('load failed') ||
+    s.includes('server returned 5')
+  );
+}
+
 type CalculatorOption = { value: string; label: string; title?: string; description?: string };
 
 const ADDING_FRACTIONS_EXAMPLE = `'use client';
@@ -601,7 +624,7 @@ export default function AdminEditPage() {
       setTranslatePausedAt({ nextLocale, doneCount: lastIndex });
       setTranslateStartFrom(nextLocale);
       setError(`Zatrzymano na języku (${nextLocale}). ${msg} — Kliknij Resume: ten język zostanie przetłumaczony od nowa.`);
-      if (autoResumeOnErrorRef.current && !isAbort) {
+      if (autoResumeOnErrorRef.current && !isAbort && shouldAutoResumeTranslateError(msg)) {
         const delaySec = 5;
         setAutoResumeCountdown(delaySec);
         for (let s = delaySec; s >= 1; s--) {

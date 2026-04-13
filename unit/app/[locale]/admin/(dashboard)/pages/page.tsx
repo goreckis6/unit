@@ -8,6 +8,7 @@ import { useTranslate } from '../../TranslateContext';
 import { useGenerate, type GenerateProviderType } from '../../GenerateContext';
 import { SeoChecker } from '@/components/admin/SeoChecker';
 import { resolveCalculatorPath } from '@/lib/gsc-redirects';
+import { getTranslationAnchorWarnings } from '@/lib/translation-keyword-check';
 
 export type PageStage = 'new' | 'content-en-done' | 'translation-done' | 'calculator-done' | 'done' | 'completed-alive';
 
@@ -578,12 +579,18 @@ export default function AdminPagesList() {
       alert('Select pages or ensure the tab has pages.');
       return;
     }
-    const lines: string[] = [`Check translations (${ADMIN_LOCALES.length} locales expected):`];
+    const lines: string[] = [
+      `Check translations (${ADMIN_LOCALES.length} locales expected):`,
+      'Anchor check: compares EN-derived terms (slug parts, numbers/units, acronyms) to each locale text — warns if too few appear (often means copy was too shallow or numbers dropped).',
+      '',
+    ];
     const failedIds = new Set<string>();
     let allOk = 0;
+    let anchorWarnCount = 0;
     for (const p of toCheck) {
       const missing = getMissingTranslations(p);
       const enTitle = p.translations.find((t) => t.locale === 'en')?.title ?? p.slug;
+      const anchorWarnings = getTranslationAnchorWarnings(p);
       if (missing.length === 0) {
         allOk++;
         lines.push(`✓ ${enTitle}: all ${ADMIN_LOCALES.length} translations OK`);
@@ -591,9 +598,23 @@ export default function AdminPagesList() {
         failedIds.add(p.id);
         lines.push(`✗ ${enTitle}: missing ${missing.length} (${missing.join(', ')})`);
       }
+      for (const aw of anchorWarnings) {
+        anchorWarnCount++;
+        const parts: string[] = [];
+        if (aw.missingStrict.length) parts.push(`required (numbers/units/acronyms): ${aw.missingStrict.join(', ')}`);
+        if (aw.missingSoft.length) {
+          parts.push(
+            `slug/terms (expect >50% of EN anchors in text): ${aw.missingSoft.slice(0, 12).join(', ')}${aw.missingSoft.length > 12 ? '…' : ''}`
+          );
+        }
+        lines.push(`   ⚠ ${enTitle} — [${aw.locale}] ${parts.join(' | ')}`);
+      }
     }
     lines.push('');
     lines.push(`${allOk}/${toCheck.length} pages have all translations`);
+    if (anchorWarnCount > 0) {
+      lines.push(`${anchorWarnCount} locale row(s) with anchor warnings (see ⚠ above).`);
+    }
     setCheckFailedIds(failedIds);
     setCheckFailedType(failedIds.size > 0 ? 'translations' : null);
     setCheckResult(lines.join('\n'));

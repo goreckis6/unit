@@ -2,7 +2,7 @@
  * Limits concurrent Ollama API calls to avoid "too many concurrent requests" from Ollama Cloud.
  * Shared across translate, translate-labels, and generate-post routes.
  */
-const MAX_CONCURRENT = parseInt(process.env.OLLAMA_MAX_CONCURRENT || '4', 10) || 2;
+const MAX_CONCURRENT = parseInt(process.env.OLLAMA_MAX_CONCURRENT || '2', 10) || 2;
 let active = 0;
 const queue: Array<() => void> = [];
 

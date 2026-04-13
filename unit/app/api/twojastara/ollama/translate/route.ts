@@ -66,6 +66,10 @@ const SLOT_RETRY_MAX = 5;
 function isRetryableError(err: string): boolean {
   const s = err.toLowerCase();
   return (
+    s.includes('internal server error') ||
+    s.includes('bad gateway') ||
+    s.includes('gateway timeout') ||
+    s.includes('service unavailable') ||
     s.includes('concurrent request slot') ||
     s.includes('no slots available') ||
     s.includes('llm busy') ||
@@ -113,8 +117,8 @@ async function ollamaChat(apiKey: string, messages: { role: string; content: str
           errObj = { error: errText };
         }
         const errMsg = (errObj?.error ?? errText) || `Ollama API error: ${res.status}`;
-        if (isRetryableError(errMsg) && attempt < SLOT_RETRY_MAX) {
-          const delayMs = res.status === 429 ? 60_000 : SLOT_RETRY_DELAY_MS; // 60 s for rate limit
+        if ((res.status >= 500 || isRetryableError(errMsg)) && attempt < SLOT_RETRY_MAX) {
+          const delayMs = res.status === 429 ? 60_000 : (res.status >= 500 ? 20_000 : SLOT_RETRY_DELAY_MS);
           await new Promise((r) => setTimeout(r, delayMs));
           continue;
         }

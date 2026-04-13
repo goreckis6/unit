@@ -31,6 +31,10 @@ async function safeResJson<T = unknown>(res: Response): Promise<T> {
 function shouldAutoResumeTranslateError(message: string): boolean {
   const s = (message ?? '').toLowerCase();
   return (
+    s.includes('internal server error') ||
+    s.includes('bad gateway') ||
+    s.includes('gateway timeout') ||
+    s.includes('service unavailable') ||
     s.includes('503') ||
     s.includes('429') ||
     s.includes('concurrent request slot') ||
@@ -223,7 +227,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       forceRetranslateContent = false,
     } = params;
     const concurrency = Math.max(1, Math.min(6, params.translateConcurrency ?? 4));
-    const contentParallel = Math.max(1, Math.min(8, params.contentParallel ?? 4));
+    const contentParallel = Math.max(1, Math.min(8, params.contentParallel ?? 2));
     const ids = Array.from(selectedIds);
     if (ids.length === 0) {
       setTranslateError('Zaznacz co najmniej jedną stronę.');

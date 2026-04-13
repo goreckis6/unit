@@ -110,6 +110,10 @@ function parseLabelsFromUpload(jsonStr: string, pageSlug: string): Record<string
 function shouldAutoResumeTranslateError(message: string): boolean {
   const s = (message ?? '').toLowerCase();
   return (
+    s.includes('internal server error') ||
+    s.includes('bad gateway') ||
+    s.includes('gateway timeout') ||
+    s.includes('service unavailable') ||
     s.includes('503') ||
     s.includes('429') ||
     s.includes('concurrent request slot') ||

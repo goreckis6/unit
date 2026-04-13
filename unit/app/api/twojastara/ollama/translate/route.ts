@@ -128,8 +128,26 @@ function cleanContent(raw: string): string {
 }
 
 /** Long EN articles exceed model output in one JSON blob; split body into several translate calls. */
-const CONTENT_AUTO_CHUNK_CHARS = 4_200;
-const CONTENT_CHUNK_TARGET = 3_200;
+const CONTENT_AUTO_CHUNK_CHARS = 1_800;
+const CONTENT_CHUNK_TARGET = 1_200;
+
+/** Appended to each LLM body request; must be copied verbatim to end of JSON "content" so we detect mid-string stops. */
+const CHUNK_END_MARKER = '<<<CHUNK_EOC_UCH_a1b2c3>>>';
+
+const TRUNCATED_MARKER_MESSAGE =
+  `Brak wymaganego znacznika końca (${CHUNK_END_MARKER}) w odpowiedzi — model prawdopodobnie uciął treść przed końcem fragmentu. Ponów Translate lub ustaw OLLAMA_TRANSLATE_NUM_PREDICT=131072.`;
+
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function contentEndsWithChunkMarker(text: string): boolean {
+  return new RegExp(`${escapeRegExp(CHUNK_END_MARKER)}\\s*$`).test((text ?? '').trim());
+}
+
+function stripChunkEndMarker(text: string): string {
+  return (text ?? '').replace(new RegExp(`\\n*${escapeRegExp(CHUNK_END_MARKER)}\\s*$`), '').trimEnd();
+}
 
 /** Locales where character-count ratio vs English is unreliable (skip length heuristic). */
 const CJK_LOCALE_PREFIX = /^(ja|zh|ko|tw|cn|hk|th)(-|$)/i;
@@ -175,7 +193,7 @@ function tryRepairTruncated(jsonStr: string): string {
 }
 
 const TRUNCATED_JSON_MESSAGE =
-  'Odpowiedź modelu została ucięta (niepełny JSON). Ustaw na serwerze OLLAMA_TRANSLATE_NUM_PREDICT=131072 i ponów tłumaczenie. Długie artykuły są dzielone na kilka żądań (treść EN > ~4200 znaków).';
+  'Odpowiedź modelu została ucięta (niepełny JSON). Ustaw na serwerze OLLAMA_TRANSLATE_NUM_PREDICT=131072 i ponów tłumaczenie. Długie artykuły są dzielone na kilka żądań (treść EN > ~1800 znaków).';
 
 /**
  * Parse model JSON; if we only succeed by "repairing" truncated output, throw — never save partial body.
@@ -231,19 +249,24 @@ async function translateBodyInChunks(
   const parts: string[] = [];
   for (let i = 0; i < chunks.length; i++) {
     const enChunk = chunks[i]!;
+    const userPayload = `${enChunk}\n\n${CHUNK_END_MARKER}`;
     const sys = `Translate from English to ${langName}. Source is ALWAYS English.
-This is MARKDOWN body part ${i + 1} of ${chunks.length} of one page. You must translate EVERY sentence and line of the fragment — same meaning and scope as English, no summarizing, no stopping early.
-The JSON value for "content" must be the COMPLETE translation of the user message (entire fragment). If you run out of space, you failed the task — keep going until the fragment is fully translated.
-Output ONLY valid JSON: one object with key "content" (string) = the full translated markdown for this part only.
-Preserve Markdown (# ## lists **bold** \`code\`). No markdown code fences around the JSON.`;
+This is MARKDOWN body part ${i + 1} of ${chunks.length} of one page. Translate every line of the user message EXCEPT the final line ${CHUNK_END_MARKER} — that final line is a machine footer: copy it EXACTLY (same ASCII characters) as the very last line inside JSON "content" after all translated markdown. Do not translate ${CHUNK_END_MARKER}.
+You must translate ALL markdown above the footer — no omissions, no summarizing, no stopping early.
+Output ONLY valid JSON: one object with key "content" (string). Preserve Markdown (# ## lists **bold** \`code\`). No markdown code fences around the JSON.`;
     let lastErr: Error | null = null;
-    for (let attempt = 0; attempt < 3; attempt++) {
+    for (let attempt = 0; attempt < 4; attempt++) {
       try {
         const raw = await withOllamaSlot(() =>
-          ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: enChunk }], useModel)
+          ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: userPayload }], useModel)
         );
         const parsed = parseTranslatedJsonStrict((raw || '').trim());
-        const c = cleanContent(String((parsed as TranslatedItem).content ?? ''));
+        let rawContent = String((parsed as TranslatedItem).content ?? '');
+        if (!contentEndsWithChunkMarker(rawContent)) {
+          throw new Error(TRUNCATED_MARKER_MESSAGE);
+        }
+        rawContent = stripChunkEndMarker(rawContent);
+        const c = cleanContent(rawContent);
         if (!c.trim()) {
           throw new Error(`Pusta treść — część ${i + 1}/${chunks.length}`);
         }
@@ -257,7 +280,7 @@ Preserve Markdown (# ## lists **bold** \`code\`). No markdown code fences around
         lastErr = e instanceof Error ? e : new Error(String(e));
         const msg = lastErr.message;
         if (msg === TRUNCATED_JSON_MESSAGE) throw lastErr;
-        if (attempt < 2) await new Promise((r) => setTimeout(r, 2000));
+        if (attempt < 3) await new Promise((r) => setTimeout(r, 2000));
       }
     }
     if (lastErr) throw lastErr;
@@ -365,6 +388,12 @@ export async function POST(request: NextRequest) {
 
     const langList = locales.map((l) => `${l} (${LOCALE_NAMES[l] || l})`).join(', ');
     const isBatch = locales.length > 1;
+    /** End marker only for one-shot translate (chunked path adds its own per fragment). */
+    const useChunkEndMarker =
+      !isBatch &&
+      content.trim().length >= 600 &&
+      content.length <= CONTENT_AUTO_CHUNK_CHARS;
+    const contentForLlm = useChunkEndMarker ? `${content}\n\n${CHUNK_END_MARKER}` : content;
 
     const systemPrompt = isBatch
       ? `Translate from English to multiple languages. Source is ALWAYS English. Output ONLY valid JSON, no markdown or extra text.
@@ -391,7 +420,12 @@ CRITICAL RULES:
 - "faqItems" = array of {"question","answer"} — only if FAQ was provided. Put translated Q&A here, NOT in content
 - Do NOT add "## Markdown content", "## FAQ", or similar headers to content
 - NEVER truncate or summarize. The "content" string must include the full English article body translated end-to-end (every section and list item).
-- Output MUST be complete valid JSON. Return the ENTIRE translation including full content.`;
+- Output MUST be complete valid JSON. Return the ENTIRE translation including full content.${
+        useChunkEndMarker
+          ? `
+- The MAIN CONTENT ends with line ${CHUNK_END_MARKER} (machine footer). Copy that line exactly as the last line of JSON "content" after translated markdown — same ASCII; do not translate it.`
+          : ''
+      }`;
 
     const userContent = isBatch
       ? [
@@ -413,7 +447,7 @@ CRITICAL RULES:
           enDescription && `description (SEO meta): ${enDescription}`,
           '---',
           'MAIN CONTENT (translate 1:1; output in "content" — NEVER add FAQ here):',
-          content,
+          contentForLlm,
           faqBlock,
         ]
           .filter(Boolean)
@@ -536,7 +570,14 @@ CRITICAL RULES:
     }
 
     const single = parsed as TranslatedItem;
-    let resultContent = cleanContent(single.content ?? '');
+    let rawSingle = String(single.content ?? '');
+    if (useChunkEndMarker) {
+      if (!contentEndsWithChunkMarker(rawSingle)) {
+        throw new Error(TRUNCATED_MARKER_MESSAGE);
+      }
+      rawSingle = stripChunkEndMarker(rawSingle);
+    }
+    let resultContent = cleanContent(rawSingle);
     if (!resultContent) {
       throw new Error('Empty content translation from Ollama Cloud');
     }

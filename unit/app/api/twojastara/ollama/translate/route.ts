@@ -11,18 +11,29 @@ const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 const OLLAMA_TIMEOUT_MS = 172_800_000; // 48 h
 
 /**
- * Max completion tokens for translate. JSON + long markdown needs a large budget; if `num_predict`
- * is too low, models often shorten the inner string then still close `}` — looks valid but content is cut.
- * Default = Ollama cap. Override with OLLAMA_TRANSLATE_NUM_PREDICT (ignored below MIN — use default).
+ * Max completion tokens for translate (`num_predict`). JSON + long markdown needs headroom; if too low,
+ * models may shorten `content` but still close `}`. Cloud models often cap below 131072 (e.g. Gemini Flash 65536).
+ * Override with OLLAMA_TRANSLATE_NUM_PREDICT (clamped to per-model cap; ignored below MIN — use default).
  */
 const TRANSLATE_NUM_PREDICT_MAX = 131_072;
+/** Safe default for Ollama Cloud models that reject num_predict > 65536 (e.g. gemini-*-flash-*:cloud). */
+const TRANSLATE_NUM_PREDICT_DEFAULT = 65_536;
 const TRANSLATE_NUM_PREDICT_MIN_ENV = 16_384;
 
-function translateNumPredict(): number {
+/** Upper bound Ollama accepts for this model id (cloud backends differ). */
+function translateNumPredictCeilingForModel(model: string): number {
+  const m = model.toLowerCase();
+  if (/gemini.*flash/i.test(m) || /flash.*gemini/i.test(m)) return 65_536;
+  return TRANSLATE_NUM_PREDICT_MAX;
+}
+
+function translateNumPredict(model: string): number {
+  const ceiling = translateNumPredictCeilingForModel(model);
   const raw = process.env.OLLAMA_TRANSLATE_NUM_PREDICT;
   const n = raw ? Number.parseInt(raw, 10) : NaN;
-  if (Number.isFinite(n) && n >= TRANSLATE_NUM_PREDICT_MIN_ENV) return Math.min(n, TRANSLATE_NUM_PREDICT_MAX);
-  return TRANSLATE_NUM_PREDICT_MAX;
+  const hardMax = Math.min(TRANSLATE_NUM_PREDICT_MAX, ceiling);
+  if (Number.isFinite(n) && n >= TRANSLATE_NUM_PREDICT_MIN_ENV) return Math.min(n, hardMax);
+  return Math.min(TRANSLATE_NUM_PREDICT_DEFAULT, hardMax);
 }
 
 /** 0 = deterministic, less paraphrase/summarizing. Override with OLLAMA_TRANSLATE_TEMPERATURE (e.g. 0.1). */
@@ -35,9 +46,9 @@ function translateTemperature(): number {
 }
 
 /** Passed to every Ollama /api/chat translate call. */
-function translateOllamaOptions(): Record<string, number> {
+function translateOllamaOptions(model: string): Record<string, number> {
   return {
-    num_predict: translateNumPredict(),
+    num_predict: translateNumPredict(model),
     temperature: translateTemperature(),
     top_p: 0.9,
   };
@@ -87,7 +98,7 @@ async function ollamaChat(apiKey: string, messages: { role: string; content: str
           model,
           messages,
           stream: false,
-          options: translateOllamaOptions(),
+          options: translateOllamaOptions(model),
         }),
         signal: controller.signal,
         dispatcher: ollamaDispatcher,

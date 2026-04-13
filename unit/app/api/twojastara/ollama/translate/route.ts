@@ -11,14 +11,36 @@ const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 const OLLAMA_TIMEOUT_MS = 172_800_000; // 48 h
 
 /**
- * Max completion tokens for translate (JSON can be huge). Ollama defaults are low
- * and truncate mid-sentence (e.g. Gemini 3 Flash). Override with OLLAMA_TRANSLATE_NUM_PREDICT.
+ * Max completion tokens for translate. JSON + long markdown needs a large budget; if `num_predict`
+ * is too low, models often shorten the inner string then still close `}` — looks valid but content is cut.
+ * Default = Ollama cap. Override with OLLAMA_TRANSLATE_NUM_PREDICT (ignored below MIN — use default).
  */
+const TRANSLATE_NUM_PREDICT_MAX = 131_072;
+const TRANSLATE_NUM_PREDICT_MIN_ENV = 16_384;
+
 function translateNumPredict(): number {
   const raw = process.env.OLLAMA_TRANSLATE_NUM_PREDICT;
   const n = raw ? Number.parseInt(raw, 10) : NaN;
-  if (Number.isFinite(n) && n >= 4096) return Math.min(n, 131_072);
-  return 65_536;
+  if (Number.isFinite(n) && n >= TRANSLATE_NUM_PREDICT_MIN_ENV) return Math.min(n, TRANSLATE_NUM_PREDICT_MAX);
+  return TRANSLATE_NUM_PREDICT_MAX;
+}
+
+/** 0 = deterministic, less paraphrase/summarizing. Override with OLLAMA_TRANSLATE_TEMPERATURE (e.g. 0.1). */
+function translateTemperature(): number {
+  const raw = process.env.OLLAMA_TRANSLATE_TEMPERATURE;
+  if (raw === undefined || raw === '') return 0;
+  const n = Number.parseFloat(raw);
+  if (!Number.isFinite(n) || n < 0 || n > 2) return 0;
+  return n;
+}
+
+/** Passed to every Ollama /api/chat translate call. */
+function translateOllamaOptions(): Record<string, number> {
+  return {
+    num_predict: translateNumPredict(),
+    temperature: translateTemperature(),
+    top_p: 0.9,
+  };
 }
 
 /** Dispatcher with high timeouts — undici's default headersTimeout is low and causes UND_ERR_HEADERS_TIMEOUT on slow Ollama Cloud */
@@ -65,7 +87,7 @@ async function ollamaChat(apiKey: string, messages: { role: string; content: str
           model,
           messages,
           stream: false,
-          options: { num_predict: translateNumPredict() },
+          options: translateOllamaOptions(),
         }),
         signal: controller.signal,
         dispatcher: ollamaDispatcher,
@@ -129,14 +151,14 @@ function cleanContent(raw: string): string {
 
 /** Long EN articles exceed model output in one JSON blob; split body into several translate calls. */
 const CONTENT_AUTO_CHUNK_CHARS = 1_200;
-/** Smaller pieces → less summarizing inside one `num_predict` window (was 1200; PL still got cut mid-article). */
-const CONTENT_CHUNK_TARGET = 750;
+/** Small chunks + sentence/paragraph boundaries → fewer mid-paragraph cuts and less “lazy” summarizing. */
+const CONTENT_CHUNK_TARGET = 520;
 
 /** Appended to each LLM body request; must be copied verbatim to end of JSON "content" so we detect mid-string stops. */
 const CHUNK_END_MARKER = '<<<CHUNK_EOC_UCH_a1b2c3>>>';
 
 const TRUNCATED_MARKER_MESSAGE =
-  `Brak wymaganego znacznika końca (${CHUNK_END_MARKER}) w odpowiedzi — model prawdopodobnie uciął treść przed końcem fragmentu. Ponów Translate lub ustaw OLLAMA_TRANSLATE_NUM_PREDICT=131072.`;
+  `Brak wymaganego znacznika końca (${CHUNK_END_MARKER}) w odpowiedzi — model prawdopodobnie uciął treść przed końcem fragmentu. Ponów Translate; ustaw OLLAMA_TRANSLATE_NUM_PREDICT=131072; sprawdź reverse proxy (nginx proxy_read_timeout / client_max_body_size) i logi 504.`;
 
 function escapeRegExp(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -161,7 +183,7 @@ const TRUNCATED_BODY_RATIO_MESSAGE =
  * Skipped for CJK where shorter character counts are normal.
  */
 /** Per-chunk: output much shorter than source usually means summarization / drop (not strict: PL can be zwięzły). */
-const CHUNK_MIN_LENGTH_RATIO = 0.5;
+const CHUNK_MIN_LENGTH_RATIO = 0.52;
 
 function looksTruncatedBodyChunk(en: string, out: string, targetLocale: string): boolean {
   if (CJK_LOCALE_PREFIX.test(targetLocale.trim())) return false;
@@ -199,6 +221,11 @@ function tryRepairTruncated(jsonStr: string): string {
 const TRUNCATED_JSON_MESSAGE =
   'Odpowiedź modelu została ucięta (niepełny JSON). Ustaw na serwerze OLLAMA_TRANSLATE_NUM_PREDICT=131072 i ponów tłumaczenie. Długie artykuły są dzielone na kilka żądań (treść EN > ~1200 znaków).';
 
+/** Appended to system prompts so small/local models do not summarize or drop sections. */
+const STRICT_COVERAGE_BLOCK = `STRICT COVERAGE: You are a professional translator. Full 1:1 translation — every English paragraph, heading, list item, table row, and sentence MUST appear in the target text. NO summarizing, NO skipping sections, NO condensed version. Preserve ALL Markdown structure (# ## ** lists code blocks).`;
+
+const STRICT_COVERAGE_BATCH = `STRICT COVERAGE: For EACH target locale, full 1:1 — every English paragraph, heading, and list item MUST appear in that locale's strings. NO summarizing, NO skipping. Preserve Markdown in every locale.`;
+
 /**
  * Parse model JSON; if we only succeed by "repairing" truncated output, throw — never save partial body.
  */
@@ -220,7 +247,29 @@ function parseTranslatedJsonStrict(trimmed: string): Record<string, unknown> {
   }
 }
 
-/** Split markdown body so each piece stays under ~maxChars when possible (heading / paragraph boundaries). */
+/**
+ * Prefer cutting after ". " / "? " / "! " within the first maxChars so the next chunk does not start mid-clause.
+ * Returns exclusive end index for rest.slice(0, cut), or -1 if no good boundary.
+ */
+function sentenceBoundaryCut(rest: string, maxChars: number): number {
+  const minPos = Math.floor(maxChars * 0.33);
+  const head = rest.slice(0, maxChars);
+  const seps = ['. ', '.\n', '? ', '?\n', '! ', '!\n'] as const;
+  let best = -1;
+  for (const sep of seps) {
+    let idx = head.length;
+    for (;;) {
+      const i = head.lastIndexOf(sep, idx);
+      if (i < minPos) break;
+      best = Math.max(best, i + sep.length);
+      idx = i - 1;
+      if (idx < minPos) break;
+    }
+  }
+  return best;
+}
+
+/** Split markdown body so each piece stays under ~maxChars when possible (heading / paragraph / sentence boundaries). */
 function splitContentAtBoundaries(text: string, maxChars: number): string[] {
   const t = text.trim();
   if (t.length <= maxChars) return [t];
@@ -235,6 +284,10 @@ function splitContentAtBoundaries(text: string, maxChars: number): string[] {
     if (cut < maxChars * 0.25) cut = rest.lastIndexOf('\n# ', maxChars);
     if (cut < maxChars * 0.25) cut = rest.lastIndexOf('\n\n', maxChars);
     if (cut < maxChars * 0.25) cut = rest.lastIndexOf('\n', maxChars);
+    if (cut < maxChars * 0.25) {
+      const sc = sentenceBoundaryCut(rest, maxChars);
+      if (sc >= 80 && sc <= maxChars) cut = sc;
+    }
     if (cut < 80) cut = maxChars;
     chunks.push(rest.slice(0, cut).trimEnd());
     rest = rest.slice(cut).trimStart();
@@ -255,6 +308,7 @@ async function translateBodyInChunks(
     const enChunk = chunks[i]!;
     const userPayload = `${enChunk}\n\n${CHUNK_END_MARKER}`;
     const sys = `Translate from English to ${langName}. Source is ALWAYS English.
+${STRICT_COVERAGE_BLOCK}
 This is MARKDOWN body part ${i + 1} of ${chunks.length} of one page. Translate every line of the user message EXCEPT the final line ${CHUNK_END_MARKER} — that final line is a machine footer: copy it EXACTLY (same ASCII characters) as the very last line inside JSON "content" after all translated markdown. Do not translate ${CHUNK_END_MARKER}.
 You must translate ALL markdown above the footer — no omissions, no summarizing, no stopping early.
 Output ONLY valid JSON: one object with key "content" (string). Preserve Markdown (# ## lists **bold** \`code\`). No markdown code fences around the JSON.`;
@@ -293,7 +347,7 @@ Output ONLY valid JSON: one object with key "content" (string). Preserve Markdow
   const enTrim = enBody.trim();
   if (!CJK_LOCALE_PREFIX.test(targetLocale.trim()) && enTrim.length > 1_200) {
     const r = merged.length / enTrim.length;
-    if (r < 0.45) {
+    if (r < 0.48) {
       throw new Error(
         `${TRUNCATED_BODY_RATIO_MESSAGE} (Łącznie ${merged.length} vs EN ${enTrim.length} znaków — stosunek ${(r * 100).toFixed(0)}%.)`
       );
@@ -313,6 +367,7 @@ async function translateMetaAndFaqOnly(
   faqBlock: string
 ): Promise<TranslatedItem> {
   const sys = `Translate from English to ${langName}. Source is ALWAYS English.
+${STRICT_COVERAGE_BLOCK}
 Output ONLY valid JSON with these keys when English source is provided: "title", "displayTitle", "description" (strings), "faqItems" (array of {"question","answer"}).
 Translate every string to ${langName}. Same number of faqItems as English pairs. No markdown fences. Do not truncate.`;
   const userParts = [
@@ -416,6 +471,8 @@ TARGET LANGUAGES: ${langList}
 
 OUTPUT FORMAT: A JSON object with keys ${locales.join(', ')}. Each key maps to an object with: content, title (if provided), displayTitle (if provided), description (if provided), faqItems (if FAQ was provided).
 
+${STRICT_COVERAGE_BATCH}
+
 CRITICAL RULES:
 - Each locale's content/faqItems/title/description MUST be written ENTIRELY in that language. Never copy English.
 - 1:1 faithful translation: translate exactly what is given, no omissions, no additions
@@ -425,6 +482,8 @@ CRITICAL RULES:
 - NEVER truncate. Output MUST be complete valid JSON with FULL content for each locale.
 - Example: { "pl": { "content": "...", "title": "...", "faqItems": [...] }, "de": { ... } }`
       : `Translate from English to ${LOCALE_NAMES[locales[0]] || locales[0]}. Source is ALWAYS English. Output ONLY valid JSON, no markdown or extra text.
+
+${STRICT_COVERAGE_BLOCK}
 
 CRITICAL RULES:
 - OUTPUT LANGUAGE: Every field (title, displayTitle, description, content, faqItems) MUST be written ENTIRELY in the target language. Never copy English.

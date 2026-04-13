@@ -189,6 +189,9 @@ const CJK_LOCALE_PREFIX = /^(ja|zh|ko|tw|cn|hk|th)(-|$)/i;
 const TRUNCATED_BODY_RATIO_MESSAGE =
   'Tłumaczenie treści wygląda na ucięte (wynik znacznie krótszy niż angielski fragment). Model zamknął JSON, ale nie przetłumaczył całości — ponów Translate lub ustaw OLLAMA_TRANSLATE_NUM_PREDICT=131072.';
 
+const ENGLISH_COPY_MESSAGE =
+  'Tłumaczenie wygląda na skopiowany angielski oryginał zamiast docelowego języka. Model nie przetłumaczył treści 1:1 — ponów Translate lub użyj mocniejszego modelu.';
+
 /**
  * Heuristic: valid JSON but `content` stopped early (token limit / model stopped inside the string).
  * Skipped for CJK where shorter character counts are normal.
@@ -202,6 +205,51 @@ function looksTruncatedBodyChunk(en: string, out: string, targetLocale: string):
   const outLen = out.trim().length;
   if (enLen < 320) return false;
   return outLen < enLen * CHUNK_MIN_LENGTH_RATIO;
+}
+
+function normalizeForLocaleComparison(text: string): string {
+  return (text ?? '')
+    .toLowerCase()
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/[`*_>#~\-]+/g, ' ')
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function phraseShingles(text: string, size = 3): Set<string> {
+  const words = normalizeForLocaleComparison(text).split(' ').filter((w) => w.length > 1);
+  const out = new Set<string>();
+  if (words.length < size) return out;
+  const limit = Math.min(words.length - size + 1, 180);
+  for (let i = 0; i < limit; i++) {
+    out.add(words.slice(i, i + size).join(' '));
+  }
+  return out;
+}
+
+function looksLikeEnglishCopy(en: string, out: string, targetLocale: string): boolean {
+  if (!targetLocale || targetLocale.trim().toLowerCase() === 'en') return false;
+  if (CJK_LOCALE_PREFIX.test(targetLocale.trim())) return false;
+  const enNorm = normalizeForLocaleComparison(en);
+  const outNorm = normalizeForLocaleComparison(out);
+  if (enNorm.length < 250 || outNorm.length < 250) return false;
+  if (enNorm === outNorm) return true;
+
+  const prefixLen = Math.min(500, enNorm.length, outNorm.length);
+  if (prefixLen >= 250 && enNorm.slice(0, prefixLen) === outNorm.slice(0, prefixLen)) {
+    return true;
+  }
+
+  const enShingles = phraseShingles(enNorm);
+  const outShingles = phraseShingles(outNorm);
+  if (enShingles.size < 16 || outShingles.size < 16) return false;
+  let overlap = 0;
+  for (const s of outShingles) {
+    if (enShingles.has(s)) overlap++;
+  }
+  const union = enShingles.size + outShingles.size - overlap;
+  return union > 0 && overlap / union >= 0.88;
 }
 
 function extractJson(text: string): string {
@@ -233,9 +281,17 @@ const TRUNCATED_JSON_MESSAGE =
   'Odpowiedź modelu została ucięta (niepełny JSON). Ustaw na serwerze OLLAMA_TRANSLATE_NUM_PREDICT=131072 i ponów tłumaczenie. Długie artykuły są dzielone na kilka żądań (treść EN > ~1200 znaków).';
 
 /** Appended to system prompts so small/local models do not summarize or drop sections. */
-const STRICT_COVERAGE_BLOCK = `STRICT COVERAGE: You are a professional translator. Full 1:1 translation — every English paragraph, heading, list item, table row, and sentence MUST appear in the target text. NO summarizing, NO skipping sections, NO condensed version. Preserve ALL Markdown structure (# ## ** lists code blocks).`;
+const STRICT_COVERAGE_BLOCK = `STRICT COVERAGE: You are a professional translator. Full 1:1 translation — every English paragraph, heading, list item, table row, and sentence MUST appear in the target text. DO NOT summarize. DO NOT omit any paragraphs. Your output must have the same number of sentences as the input whenever the target language naturally allows it. If the input ends mid-sentence, translate it exactly as it is. NO skipping sections. NO condensed version. If the output stays mostly English or copies source sentences unchanged, that is a failure. Preserve ALL Markdown structure (# ## ** lists code blocks).`;
 
-const STRICT_COVERAGE_BATCH = `STRICT COVERAGE: For EACH target locale, full 1:1 — every English paragraph, heading, and list item MUST appear in that locale's strings. NO summarizing, NO skipping. Preserve Markdown in every locale.`;
+const STRICT_COVERAGE_BATCH = `STRICT COVERAGE: For EACH target locale, full 1:1 — every English paragraph, heading, list item, and sentence MUST appear in that locale's strings. DO NOT summarize. DO NOT omit any paragraphs. Each locale output must keep the same sentence coverage as the input whenever the target language naturally allows it. If the input ends mid-sentence, translate it exactly as it is. NO skipping. If any locale stays mostly English or copies source sentences unchanged, that locale is invalid. Preserve Markdown in every locale.`;
+
+function localeLabel(locale: string): string {
+  return LOCALE_NAMES[locale] || locale;
+}
+
+function englishCopyRetryNote(label: string): string {
+  return `PREVIOUS OUTPUT FAILED QUALITY CHECK: it remained in English instead of ${label}. Retry now and translate EVERY sentence into ${label}. Returning English text again is invalid.`;
+}
 
 /**
  * Parse model JSON; if we only succeed by "repairing" truncated output, throw — never save partial body.
@@ -318,13 +374,15 @@ async function translateBodyInChunks(
   for (let i = 0; i < chunks.length; i++) {
     const enChunk = chunks[i]!;
     const userPayload = `${enChunk}\n\n${CHUNK_END_MARKER}`;
-    const sys = `Translate from English to ${langName}. Source is ALWAYS English.
+    let retryForEnglishCopy = false;
+    let lastErr: Error | null = null;
+    for (let attempt = 0; attempt < 4; attempt++) {
+      const sys = `Translate from English to ${langName}. Source is ALWAYS English.
 ${STRICT_COVERAGE_BLOCK}
+${retryForEnglishCopy ? englishCopyRetryNote(langName) : ''}
 This is MARKDOWN body part ${i + 1} of ${chunks.length} of one page. Translate every line of the user message EXCEPT the final line ${CHUNK_END_MARKER} — that final line is a machine footer: copy it EXACTLY (same ASCII characters) as the very last line inside JSON "content" after all translated markdown. Do not translate ${CHUNK_END_MARKER}.
 You must translate ALL markdown above the footer — no omissions, no summarizing, no stopping early.
 Output ONLY valid JSON: one object with key "content" (string). Preserve Markdown (# ## lists **bold** \`code\`). No markdown code fences around the JSON.`;
-    let lastErr: Error | null = null;
-    for (let attempt = 0; attempt < 4; attempt++) {
       try {
         const raw = await withOllamaSlot(() =>
           ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: userPayload }], useModel)
@@ -339,6 +397,9 @@ Output ONLY valid JSON: one object with key "content" (string). Preserve Markdow
         if (!c.trim()) {
           throw new Error(`Pusta treść — część ${i + 1}/${chunks.length}`);
         }
+        if (looksLikeEnglishCopy(enChunk, c, targetLocale)) {
+          throw new Error(ENGLISH_COPY_MESSAGE);
+        }
         if (looksTruncatedBodyChunk(enChunk, c, targetLocale)) {
           throw new Error(TRUNCATED_BODY_RATIO_MESSAGE);
         }
@@ -348,6 +409,7 @@ Output ONLY valid JSON: one object with key "content" (string). Preserve Markdow
       } catch (e) {
         lastErr = e instanceof Error ? e : new Error(String(e));
         const msg = lastErr.message;
+        if (msg === ENGLISH_COPY_MESSAGE) retryForEnglishCopy = true;
         if (msg === TRUNCATED_JSON_MESSAGE) throw lastErr;
         if (attempt < 3) await new Promise((r) => setTimeout(r, 2000));
       }
@@ -377,10 +439,6 @@ async function translateMetaAndFaqOnly(
   items: { question: string; answer: string }[],
   faqBlock: string
 ): Promise<TranslatedItem> {
-  const sys = `Translate from English to ${langName}. Source is ALWAYS English.
-${STRICT_COVERAGE_BLOCK}
-Output ONLY valid JSON with these keys when English source is provided: "title", "displayTitle", "description" (strings), "faqItems" (array of {"question","answer"}).
-Translate every string to ${langName}. Same number of faqItems as English pairs. No markdown fences. Do not truncate.`;
   const userParts = [
     enTitle && `title: ${enTitle}`,
     enDisplayTitle && `displayTitle: ${enDisplayTitle}`,
@@ -389,8 +447,14 @@ Translate every string to ${langName}. Same number of faqItems as English pairs.
   ].filter(Boolean);
   const userContent = userParts.join('\n\n');
   let lastErr: Error | null = null;
+  let retryForEnglishCopy = false;
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
+      const sys = `Translate from English to ${langName}. Source is ALWAYS English.
+${STRICT_COVERAGE_BLOCK}
+${retryForEnglishCopy ? englishCopyRetryNote(langName) : ''}
+Output ONLY valid JSON with these keys when English source is provided: "title", "displayTitle", "description" (strings), "faqItems" (array of {"question","answer"}).
+Translate every string to ${langName}. Same number of faqItems as English pairs. No markdown fences. Do not truncate.`;
       const raw = await withOllamaSlot(() =>
         ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: userContent }], useModel)
       );
@@ -398,11 +462,63 @@ Translate every string to ${langName}. Same number of faqItems as English pairs.
       return parsed;
     } catch (e) {
       lastErr = e instanceof Error ? e : new Error(String(e));
+      if (lastErr.message === ENGLISH_COPY_MESSAGE) retryForEnglishCopy = true;
       if (lastErr.message === TRUNCATED_JSON_MESSAGE) throw lastErr;
       if (attempt < 2) await new Promise((r) => setTimeout(r, 2000));
     }
   }
   throw lastErr || new Error('Meta/FAQ translation failed');
+}
+
+function buildTranslateSystemPrompt(
+  locales: string[],
+  useChunkEndMarker: boolean,
+  retryLocales: string[]
+): string {
+  const isBatch = locales.length > 1;
+  const langList = locales.map((l) => `${l} (${localeLabel(l)})`).join(', ');
+  const retryLabels = retryLocales.map((l) => `${l} (${localeLabel(l)})`).join(', ');
+  const retryBlock = retryLocales.length > 0
+    ? `PREVIOUS OUTPUT FAILED QUALITY CHECK for these locale(s): ${retryLabels}. Those locale(s) remained in English instead of the target language. Retry now: every sentence must be translated into the requested locale, and returning English again is invalid.`
+    : '';
+
+  return isBatch
+    ? `Translate from English to multiple languages. Source is ALWAYS English. Output ONLY valid JSON, no markdown or extra text.
+
+TARGET LANGUAGES: ${langList}
+
+OUTPUT FORMAT: A JSON object with keys ${locales.join(', ')}. Each key maps to an object with: content, title (if provided), displayTitle (if provided), description (if provided), faqItems (if FAQ was provided).
+
+${STRICT_COVERAGE_BATCH}
+${retryBlock}
+
+CRITICAL RULES:
+- Each locale's content/faqItems/title/description MUST be written ENTIRELY in that language. Never copy English.
+- 1:1 faithful translation: translate exactly what is given, no omissions, no additions
+- "content" = ONLY the main article/body text. NEVER include FAQ blocks in content
+- Preserve Markdown: # H1, ## H2, **bold**, *italic*, code blocks, bullets
+- "faqItems" = array of {"question","answer"} — put translated Q&A here, NOT in content
+- NEVER truncate. Output MUST be complete valid JSON with FULL content for each locale.
+- Example: { "pl": { "content": "...", "title": "...", "faqItems": [...] }, "de": { ... } }`
+    : `Translate from English to ${localeLabel(locales[0] || '')}. Source is ALWAYS English. Output ONLY valid JSON, no markdown or extra text.
+
+${STRICT_COVERAGE_BLOCK}
+${retryBlock}
+
+CRITICAL RULES:
+- OUTPUT LANGUAGE: Every field (title, displayTitle, description, content, faqItems) MUST be written ENTIRELY in the target language. Never copy English.
+- 1:1 faithful translation: translate exactly what is given, no omissions, no additions, no extra sections
+- "content" = ONLY the main article/body text. NEVER include FAQ, Q&A, or question-answer blocks in content. FAQ goes ONLY in "faqItems"
+- Preserve Markdown: # H1, ## H2, **bold**, *italic*, code blocks, bullets
+- "faqItems" = array of {"question","answer"} — only if FAQ was provided. Put translated Q&A here, NOT in content
+- Do NOT add "## Markdown content", "## FAQ", or similar headers to content
+- NEVER truncate or summarize. The "content" string must include the full English article body translated end-to-end (every section and list item).
+- Output MUST be complete valid JSON. Return the ENTIRE translation including full content.${
+        useChunkEndMarker
+          ? `
+- The MAIN CONTENT ends with line ${CHUNK_END_MARKER} (machine footer). Copy that line exactly as the last line of JSON "content" after translated markdown — same ASCII; do not translate it.`
+          : ''
+      }`;
 }
 
 /**
@@ -466,7 +582,6 @@ export async function POST(request: NextRequest) {
         ? `\n\n---\nFAQ (translate each Q&A into faqItems only — DO NOT put in content):\n${items.map((f: { question: string; answer: string }) => `Q: ${f.question}\nA: ${f.answer}`).join('\n\n')}`
         : '';
 
-    const langList = locales.map((l) => `${l} (${LOCALE_NAMES[l] || l})`).join(', ');
     const isBatch = locales.length > 1;
     /** End marker only for one-shot translate (chunked path adds its own per fragment). */
     const useChunkEndMarker =
@@ -475,45 +590,9 @@ export async function POST(request: NextRequest) {
       content.length <= CONTENT_AUTO_CHUNK_CHARS;
     const contentForLlm = useChunkEndMarker ? `${content}\n\n${CHUNK_END_MARKER}` : content;
 
-    const systemPrompt = isBatch
-      ? `Translate from English to multiple languages. Source is ALWAYS English. Output ONLY valid JSON, no markdown or extra text.
-
-TARGET LANGUAGES: ${langList}
-
-OUTPUT FORMAT: A JSON object with keys ${locales.join(', ')}. Each key maps to an object with: content, title (if provided), displayTitle (if provided), description (if provided), faqItems (if FAQ was provided).
-
-${STRICT_COVERAGE_BATCH}
-
-CRITICAL RULES:
-- Each locale's content/faqItems/title/description MUST be written ENTIRELY in that language. Never copy English.
-- 1:1 faithful translation: translate exactly what is given, no omissions, no additions
-- "content" = ONLY the main article/body text. NEVER include FAQ blocks in content
-- Preserve Markdown: # H1, ## H2, **bold**, *italic*, code blocks, bullets
-- "faqItems" = array of {"question","answer"} — put translated Q&A here, NOT in content
-- NEVER truncate. Output MUST be complete valid JSON with FULL content for each locale.
-- Example: { "pl": { "content": "...", "title": "...", "faqItems": [...] }, "de": { ... } }`
-      : `Translate from English to ${LOCALE_NAMES[locales[0]] || locales[0]}. Source is ALWAYS English. Output ONLY valid JSON, no markdown or extra text.
-
-${STRICT_COVERAGE_BLOCK}
-
-CRITICAL RULES:
-- OUTPUT LANGUAGE: Every field (title, displayTitle, description, content, faqItems) MUST be written ENTIRELY in the target language. Never copy English.
-- 1:1 faithful translation: translate exactly what is given, no omissions, no additions, no extra sections
-- "content" = ONLY the main article/body text. NEVER include FAQ, Q&A, or question-answer blocks in content. FAQ goes ONLY in "faqItems"
-- Preserve Markdown: # H1, ## H2, **bold**, *italic*, code blocks, bullets
-- "faqItems" = array of {"question","answer"} — only if FAQ was provided. Put translated Q&A here, NOT in content
-- Do NOT add "## Markdown content", "## FAQ", or similar headers to content
-- NEVER truncate or summarize. The "content" string must include the full English article body translated end-to-end (every section and list item).
-- Output MUST be complete valid JSON. Return the ENTIRE translation including full content.${
-        useChunkEndMarker
-          ? `
-- The MAIN CONTENT ends with line ${CHUNK_END_MARKER} (machine footer). Copy that line exactly as the last line of JSON "content" after translated markdown — same ASCII; do not translate it.`
-          : ''
-      }`;
-
     const userContent = isBatch
       ? [
-          `[Translate to: ${langList}. Output object with keys: ${locales.join(', ')}. Each value: { content, title, displayTitle, description, faqItems }]`,
+          `[Translate to: ${locales.map((l) => `${l} (${localeLabel(l)})`).join(', ')}. Output object with keys: ${locales.join(', ')}. Each value: { content, title, displayTitle, description, faqItems }]`,
           enTitle && `title: ${enTitle}`,
           enDisplayTitle && `displayTitle: ${enDisplayTitle}`,
           enDescription && `description (SEO meta): ${enDescription}`,
@@ -593,30 +672,71 @@ CRITICAL RULES:
       });
     }
 
-    let raw = await withOllamaSlot(() =>
-      ollamaChat(ollamaApiKey, [{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel)
-    );
-    let trimmed = (raw || '').trim();
-    let parsed: Record<string, unknown>;
+    const detectEnglishCopyLocales = (candidate: Record<string, unknown>): string[] => {
+      if (isBatch) {
+        return locales.filter((loc) => {
+          const inner = candidate[loc];
+          const obj = (inner && typeof inner === 'object' && !Array.isArray(inner)) ? inner as Record<string, unknown> : {};
+          const resultContent = cleanContent(String(obj?.content ?? ''));
+          return resultContent ? looksLikeEnglishCopy(content, resultContent, loc) : false;
+        });
+      }
 
-    for (let attempt = 0; attempt < 3; attempt++) {
-      try {
-        parsed = parseTranslatedJsonStrict(trimmed);
-        break;
-      } catch (e) {
-        const msg = e instanceof Error ? e.message : '';
-        if (msg === TRUNCATED_JSON_MESSAGE) throw e;
-        if (attempt < 2) {
-          await new Promise((r) => setTimeout(r, 2000));
-          raw = await withOllamaSlot(() =>
-            ollamaChat(ollamaApiKey, [{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel)
-          );
-          trimmed = (raw || '').trim();
-        } else {
-          console.error('[Ollama translate] invalid JSON, raw snippet:', (trimmed || '').slice(0, 500));
-          throw e instanceof Error ? e : new Error('Ollama returned invalid JSON. Spróbuj ponownie.');
+      const single = candidate as TranslatedItem;
+      let rawSingle = String(single.content ?? '');
+      if (useChunkEndMarker && contentEndsWithChunkMarker(rawSingle)) {
+        rawSingle = stripChunkEndMarker(rawSingle);
+      }
+      const resultContent = cleanContent(rawSingle);
+      const loc0 = locales[0] ?? '';
+      return resultContent && looksLikeEnglishCopy(content, resultContent, loc0) ? [loc0] : [];
+    };
+
+    let parsed: Record<string, unknown> | null = null;
+    let retryLocales: string[] = [];
+    for (let outerAttempt = 0; outerAttempt < 3; outerAttempt++) {
+      const systemPrompt = buildTranslateSystemPrompt(locales, useChunkEndMarker, retryLocales);
+      let raw = await withOllamaSlot(() =>
+        ollamaChat(ollamaApiKey, [{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel)
+      );
+      let trimmed = (raw || '').trim();
+      let parsedCandidate: Record<string, unknown> | null = null;
+
+      for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+          parsedCandidate = parseTranslatedJsonStrict(trimmed);
+          break;
+        } catch (e) {
+          const msg = e instanceof Error ? e.message : '';
+          if (msg === TRUNCATED_JSON_MESSAGE) throw e;
+          if (attempt < 2) {
+            await new Promise((r) => setTimeout(r, 2000));
+            raw = await withOllamaSlot(() =>
+              ollamaChat(ollamaApiKey, [{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel)
+            );
+            trimmed = (raw || '').trim();
+          } else {
+            console.error('[Ollama translate] invalid JSON, raw snippet:', (trimmed || '').slice(0, 500));
+            throw e instanceof Error ? e : new Error('Ollama returned invalid JSON. Spróbuj ponownie.');
+          }
         }
       }
+
+      parsedCandidate = parsedCandidate!;
+      const badLocales = detectEnglishCopyLocales(parsedCandidate);
+      if (badLocales.length === 0) {
+        parsed = parsedCandidate;
+        break;
+      }
+      if (outerAttempt >= 2) {
+        throw new Error(
+          badLocales.length > 1
+            ? `${ENGLISH_COPY_MESSAGE} (${badLocales.join(', ')})`
+            : ENGLISH_COPY_MESSAGE
+        );
+      }
+      retryLocales = badLocales;
+      await new Promise((r) => setTimeout(r, 2000));
     }
     parsed = parsed!;
 
@@ -628,6 +748,9 @@ CRITICAL RULES:
         let resultContent = cleanContent(String(obj?.content ?? ''));
         if (!resultContent) {
           throw new Error(`Empty content translation for ${loc} from Ollama Cloud`);
+        }
+        if (looksLikeEnglishCopy(content, resultContent, loc)) {
+          throw new Error(`${ENGLISH_COPY_MESSAGE} (${loc})`);
         }
         const resultTitle = enTitle && obj.title ? String(obj.title).trim() : enTitle;
         const resultDisplayTitle = enDisplayTitle && obj.displayTitle ? String(obj.displayTitle).trim() : enDisplayTitle;
@@ -664,6 +787,9 @@ CRITICAL RULES:
     let resultContent = cleanContent(rawSingle);
     if (!resultContent) {
       throw new Error('Empty content translation from Ollama Cloud');
+    }
+    if (looksLikeEnglishCopy(content, resultContent, locales[0] ?? '')) {
+      throw new Error(ENGLISH_COPY_MESSAGE);
     }
     if (
       !isBatch &&

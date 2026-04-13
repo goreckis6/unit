@@ -28,6 +28,29 @@ async function safeResJson<T = unknown>(res: Response): Promise<T> {
   }
 }
 
+function shouldAutoResumeTranslateError(message: string): boolean {
+  const s = (message ?? '').toLowerCase();
+  return (
+    s.includes('503') ||
+    s.includes('429') ||
+    s.includes('concurrent request slot') ||
+    s.includes('no slots available') ||
+    s.includes('llm busy') ||
+    s.includes('too many requests') ||
+    s.includes('too many concurrent') ||
+    s.includes('timeout') ||
+    s.includes('und_err_headers_timeout') ||
+    s.includes('econnreset') ||
+    s.includes('connection reset') ||
+    s.includes('socket hang up') ||
+    s.includes('etimedout') ||
+    s.includes('failed to fetch') ||
+    s.includes('networkerror') ||
+    s.includes('load failed') ||
+    s.includes('server returned 5')
+  );
+}
+
 type PageTranslation = {
   id: string;
   locale: string;
@@ -532,7 +555,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             window.location.href = '/twojastara/login';
             return false;
           }
-          if (autoResumeOnError && !isAbort) {
+          if (autoResumeOnError && !isAbort && shouldAutoResumeTranslateError(msg)) {
             setAutoResumeCountdown(5);
             for (let s = 5; s >= 1; s--) {
               setAutoResumeCountdown(s);

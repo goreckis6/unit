@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getSitemapUrlXmlFragments, SITEMAP_URLS_PER_CHUNK } from '@/lib/sitemap-entries';
+import { getSitemapChunkCount, getSitemapChunkFullXml } from '@/lib/sitemap-entries';
 
 export const revalidate = 3600;
 
@@ -17,20 +17,15 @@ export async function GET(_request: Request, { params }: Props) {
   }
 
   const index = page - 1;
-  const fragments = await getSitemapUrlXmlFragments();
-  const chunkCount = Math.max(1, Math.ceil(fragments.length / SITEMAP_URLS_PER_CHUNK));
+  const chunkCount = await getSitemapChunkCount();
   if (index >= chunkCount) {
     return new NextResponse('Not Found', { status: 404 });
   }
 
-  const start = index * SITEMAP_URLS_PER_CHUNK;
-  const slice = fragments.slice(start, start + SITEMAP_URLS_PER_CHUNK);
-
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${slice.join('\n')}
-</urlset>`;
+  const xml = await getSitemapChunkFullXml(index);
+  if (!xml.trim()) {
+    return new NextResponse('Not Found', { status: 404 });
+  }
 
   return new NextResponse(xml, {
     headers: {

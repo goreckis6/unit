@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { BASE_URL } from '@/lib/hreflang';
-import { getSitemapUrlXmlFragments, getSitemapChunkCount } from '@/lib/sitemap-entries';
+import { getSitemapChunkCount } from '@/lib/sitemap-entries';
 
 export const revalidate = 3600;
 

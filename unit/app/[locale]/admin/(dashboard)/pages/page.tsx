@@ -307,6 +307,8 @@ export default function AdminPagesList() {
   const [translateOnlyOne, setTranslateOnlyOne] = useState(false);
   /** Re-run content translation for all non-EN locales and overwrite existing Content. */
   const [translateForceOverwrite, setTranslateForceOverwrite] = useState(false);
+  /** On Alive tab: if checked, Translate (content) does not set manualBookmark to translation-done or switch tabs. */
+  const [translateStayInAlive, setTranslateStayInAlive] = useState(false);
   const [translateConcurrency, setTranslateConcurrency] = useState(4);
   const [contentParallel, setContentParallel] = useState(4);
   const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
@@ -1391,7 +1393,8 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
   }
 
   function handleBatchTranslate() {
-    setActiveBookmark('content-en-done');
+    const stayInAlive = translateStayInAlive && activeBookmark === 'completed-alive';
+    if (!stayInAlive) setActiveBookmark('content-en-done');
     startTranslate({
       pages,
       selectedIds,
@@ -1404,10 +1407,10 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
-      onPageTranslated: movePageToTranslationDone,
+      onPageTranslated: stayInAlive ? undefined : movePageToTranslationDone,
       onComplete: () => {
         setSelectedIds(new Set());
-        setActiveBookmark('translation-done');
+        if (!stayInAlive) setActiveBookmark('translation-done');
       },
     });
   }
@@ -1422,7 +1425,8 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       return;
     }
     setSelectedIds(new Set(withMissing.map((p) => p.id)));
-    setActiveBookmark('content-en-done');
+    const stayInAlive = translateStayInAlive && activeBookmark === 'completed-alive';
+    if (!stayInAlive) setActiveBookmark('content-en-done');
     startTranslate({
       pages,
       selectedIds: new Set(withMissing.map((p) => p.id)),
@@ -1435,10 +1439,10 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
-      onPageTranslated: movePageToTranslationDone,
+      onPageTranslated: stayInAlive ? undefined : movePageToTranslationDone,
       onComplete: () => {
         setSelectedIds(new Set());
-        setActiveBookmark('translation-done');
+        if (!stayInAlive) setActiveBookmark('translation-done');
       },
     });
   }
@@ -1789,6 +1793,29 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                       />
                       Przetłumacz jeszcze raz (nadpisuje aktualne tłumaczenia)
                     </label>
+                    {activeBookmark === 'completed-alive' && (
+                      <label
+                        style={{
+                          fontSize: '0.75rem',
+                          color: 'var(--text-secondary)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '0.35rem',
+                          cursor: 'pointer',
+                          maxWidth: 420,
+                        }}
+                        title="Gdy zaznaczone: Translate (treść) nie ustawia bookmarka na „Translation done” i nie przełącza zakładki — strony zostają w Alive."
+                      >
+                        <input
+                          type="checkbox"
+                          checked={translateStayInAlive}
+                          onChange={(e) => setTranslateStayInAlive(e.target.checked)}
+                          disabled={!!translateProgress}
+                          style={{ width: 14, height: 14, flexShrink: 0 }}
+                        />
+                        Zostaw w Alive (Translate bez zmiany bookmarka / zakładki)
+                      </label>
+                    )}
                     <label
                       style={{
                         fontSize: '0.75rem',

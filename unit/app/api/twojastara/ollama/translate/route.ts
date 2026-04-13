@@ -10,6 +10,17 @@ const MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 
 const OLLAMA_TIMEOUT_MS = 172_800_000; // 48 h
 
+/**
+ * Max completion tokens for translate (JSON can be huge). Ollama defaults are low
+ * and truncate mid-sentence (e.g. Gemini 3 Flash). Override with OLLAMA_TRANSLATE_NUM_PREDICT.
+ */
+function translateNumPredict(): number {
+  const raw = process.env.OLLAMA_TRANSLATE_NUM_PREDICT;
+  const n = raw ? Number.parseInt(raw, 10) : NaN;
+  if (Number.isFinite(n) && n >= 4096) return Math.min(n, 131_072);
+  return 65_536;
+}
+
 /** Dispatcher with high timeouts — undici's default headersTimeout is low and causes UND_ERR_HEADERS_TIMEOUT on slow Ollama Cloud */
 const ollamaDispatcher = new Agent({
   headersTimeout: OLLAMA_TIMEOUT_MS,
@@ -50,7 +61,12 @@ async function ollamaChat(apiKey: string, messages: { role: string; content: str
           'Content-Type': 'application/json',
           Authorization: `Bearer ${apiKey}`,
         },
-        body: JSON.stringify({ model, messages, stream: false }),
+        body: JSON.stringify({
+          model,
+          messages,
+          stream: false,
+          options: { num_predict: translateNumPredict() },
+        }),
         signal: controller.signal,
         dispatcher: ollamaDispatcher,
       });
@@ -109,6 +125,157 @@ function cleanContent(raw: string): string {
     .replace(/(\n\n)Q:\s+[^\n]+\nA:\s+[^\n]+(?=\n\n|$)/g, '$1')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
+}
+
+/** Long EN articles exceed model output in one JSON blob; split body into several translate calls. */
+const CONTENT_AUTO_CHUNK_CHARS = 8_000;
+const CONTENT_CHUNK_TARGET = 7_000;
+
+function extractJson(text: string): string {
+  let s = (text || '').trim();
+  s = s.replace(/^```(?:json)?\s*\n?/i, '').replace(/\n?```\s*$/i, '');
+  const jsonMatch = s.match(/\{[\s\S]*\}/);
+  let jsonStr = jsonMatch ? jsonMatch[0] : s;
+  jsonStr = jsonStr.replace(/,(\s*[}\]])/g, '$1');
+  return jsonStr;
+}
+
+/** Try to repair JSON truncated by Ollama (output token limit). Closes unclosed strings and braces. */
+function tryRepairTruncated(jsonStr: string): string {
+  let s = jsonStr.trimEnd();
+  const openBraces = (s.match(/\{/g) || []).length;
+  const closeBraces = (s.match(/\}/g) || []).length;
+  if (openBraces <= closeBraces) return s;
+  const needed = openBraces - closeBraces;
+  const lastChar = s.slice(-1);
+  if (lastChar === '"' || lastChar === '}' || lastChar === ']') {
+    s += '}'.repeat(needed);
+  } else {
+    s += '"' + '}'.repeat(needed);
+  }
+  return s;
+}
+
+const TRUNCATED_JSON_MESSAGE =
+  'Odpowiedź modelu została ucięta (niepełny JSON). Ustaw na serwerze OLLAMA_TRANSLATE_NUM_PREDICT=131072 i ponów tłumaczenie. Długie artykuły są też automatycznie dzielone na kilka żądań (treść >8k znaków).';
+
+/**
+ * Parse model JSON; if we only succeed by "repairing" truncated output, throw — never save partial body.
+ */
+function parseTranslatedJsonStrict(trimmed: string): Record<string, unknown> {
+  const jsonStr = extractJson(trimmed);
+  try {
+    return JSON.parse(jsonStr) as Record<string, unknown>;
+  } catch {
+    const repaired = tryRepairTruncated(jsonStr);
+    if (repaired !== jsonStr) {
+      try {
+        JSON.parse(repaired) as Record<string, unknown>;
+        throw new Error(TRUNCATED_JSON_MESSAGE);
+      } catch (e) {
+        if (e instanceof Error && e.message === TRUNCATED_JSON_MESSAGE) throw e;
+      }
+    }
+    throw new Error('Ollama returned invalid JSON. Spróbuj ponownie.');
+  }
+}
+
+/** Split markdown body so each piece stays under ~maxChars when possible (heading / paragraph boundaries). */
+function splitContentAtBoundaries(text: string, maxChars: number): string[] {
+  const t = text.trim();
+  if (t.length <= maxChars) return [t];
+  const chunks: string[] = [];
+  let rest = t;
+  while (rest.length > 0) {
+    if (rest.length <= maxChars) {
+      chunks.push(rest);
+      break;
+    }
+    let cut = rest.lastIndexOf('\n## ', maxChars);
+    if (cut < maxChars * 0.25) cut = rest.lastIndexOf('\n# ', maxChars);
+    if (cut < maxChars * 0.25) cut = rest.lastIndexOf('\n\n', maxChars);
+    if (cut < maxChars * 0.25) cut = rest.lastIndexOf('\n', maxChars);
+    if (cut < 80) cut = maxChars;
+    chunks.push(rest.slice(0, cut).trimEnd());
+    rest = rest.slice(cut).trimStart();
+  }
+  return chunks.filter(Boolean);
+}
+
+async function translateBodyInChunks(
+  apiKey: string,
+  useModel: string | undefined,
+  enBody: string,
+  langName: string
+): Promise<string> {
+  const chunks = splitContentAtBoundaries(enBody, CONTENT_CHUNK_TARGET);
+  const parts: string[] = [];
+  for (let i = 0; i < chunks.length; i++) {
+    const sys = `Translate from English to ${langName}. Source is ALWAYS English.
+This is MARKDOWN body part ${i + 1} of ${chunks.length} of one page. Translate the ENTIRE part below — no omissions, no summarizing.
+Output ONLY valid JSON: one object with key "content" (string) = the full translated markdown for this part only.
+Preserve Markdown (# ## lists **bold** \`code\`). No markdown code fences around the JSON. Do not truncate.`;
+    let lastErr: Error | null = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        const raw = await withOllamaSlot(() =>
+          ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: chunks[i]! }], useModel)
+        );
+        const parsed = parseTranslatedJsonStrict((raw || '').trim());
+        const c = cleanContent(String((parsed as TranslatedItem).content ?? ''));
+        if (!c.trim()) {
+          throw new Error(`Pusta treść — część ${i + 1}/${chunks.length}`);
+        }
+        parts.push(c);
+        lastErr = null;
+        break;
+      } catch (e) {
+        lastErr = e instanceof Error ? e : new Error(String(e));
+        const msg = lastErr.message;
+        if (msg === TRUNCATED_JSON_MESSAGE) throw lastErr;
+        if (attempt < 2) await new Promise((r) => setTimeout(r, 2000));
+      }
+    }
+    if (lastErr) throw lastErr;
+  }
+  return parts.join('\n\n');
+}
+
+async function translateMetaAndFaqOnly(
+  apiKey: string,
+  useModel: string | undefined,
+  langName: string,
+  enTitle: string,
+  enDisplayTitle: string,
+  enDescription: string,
+  items: { question: string; answer: string }[],
+  faqBlock: string
+): Promise<TranslatedItem> {
+  const sys = `Translate from English to ${langName}. Source is ALWAYS English.
+Output ONLY valid JSON with these keys when English source is provided: "title", "displayTitle", "description" (strings), "faqItems" (array of {"question","answer"}).
+Translate every string to ${langName}. Same number of faqItems as English pairs. No markdown fences. Do not truncate.`;
+  const userParts = [
+    enTitle && `title: ${enTitle}`,
+    enDisplayTitle && `displayTitle: ${enDisplayTitle}`,
+    enDescription && `description (SEO meta): ${enDescription}`,
+    items.length > 0 && faqBlock,
+  ].filter(Boolean);
+  const userContent = userParts.join('\n\n');
+  let lastErr: Error | null = null;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const raw = await withOllamaSlot(() =>
+        ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: userContent }], useModel)
+      );
+      const parsed = parseTranslatedJsonStrict((raw || '').trim()) as TranslatedItem;
+      return parsed;
+    } catch (e) {
+      lastErr = e instanceof Error ? e : new Error(String(e));
+      if (lastErr.message === TRUNCATED_JSON_MESSAGE) throw lastErr;
+      if (attempt < 2) await new Promise((r) => setTimeout(r, 2000));
+    }
+  }
+  throw lastErr || new Error('Meta/FAQ translation failed');
 }
 
 /**
@@ -227,34 +394,62 @@ CRITICAL RULES:
           .filter(Boolean)
           .join('\n\n');
 
-    function extractJson(text: string): string {
-      let s = (text || '').trim();
-      s = s.replace(/^```(?:json)?\s*\n?/i, '').replace(/\n?```\s*$/i, '');
-      const jsonMatch = s.match(/\{[\s\S]*\}/);
-      let jsonStr = jsonMatch ? jsonMatch[0] : s;
-      jsonStr = jsonStr.replace(/,(\s*[}\]])/g, '$1');
-      return jsonStr;
-    }
-
-    /** Try to repair JSON truncated by Ollama (output token limit). Closes unclosed strings and braces. */
-    function tryRepairTruncated(jsonStr: string): string {
-      let s = jsonStr.trimEnd();
-      const openBraces = (s.match(/\{/g) || []).length;
-      const closeBraces = (s.match(/\}/g) || []).length;
-      if (openBraces <= closeBraces) return s;
-      const needed = openBraces - closeBraces;
-      const lastChar = s.slice(-1);
-      if (lastChar === '"' || lastChar === '}' || lastChar === ']') {
-        s += '}'.repeat(needed);
-      } else {
-        s += '"' + '}'.repeat(needed);
-      }
-      return s;
-    }
-
     const useModel = normalizeOllamaCloudModel(
       typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined
     );
+
+    const longSingleLocale = !isBatch && content.length > CONTENT_AUTO_CHUNK_CHARS;
+    const hasMeta = Boolean(enTitle || enDisplayTitle || enDescription || items.length > 0);
+
+    if (longSingleLocale) {
+      const loc0 = locales[0]!;
+      const langName = LOCALE_NAMES[loc0] || loc0;
+      const mergedBody = await translateBodyInChunks(ollamaApiKey, useModel, content, langName);
+      let resultTitle = enTitle;
+      let resultDisplayTitle = enDisplayTitle;
+      let resultDescription = enDescription || undefined;
+      let resultFaq: { question: string; answer: string }[] | undefined =
+        items.length > 0 ? items.map((f) => ({ question: f.question, answer: f.answer })) : undefined;
+      if (hasMeta) {
+        const meta = await translateMetaAndFaqOnly(
+          ollamaApiKey,
+          useModel,
+          langName,
+          enTitle,
+          enDisplayTitle,
+          enDescription,
+          items,
+          faqBlock
+        );
+        if (enTitle && meta.title) resultTitle = String(meta.title).trim();
+        if (enDisplayTitle && meta.displayTitle) resultDisplayTitle = String(meta.displayTitle).trim();
+        if (enDescription && meta.description) resultDescription = String(meta.description).trim();
+        const rawFaq = meta.faqItems;
+        if (items.length > 0 && Array.isArray(rawFaq)) {
+          resultFaq = rawFaq
+            .filter((t: unknown, i: number) => t && items[i])
+            .map((t: unknown, i: number) => {
+              const tt = t as { question?: string; answer?: string };
+              return {
+                question: String(tt?.question ?? items[i]!.question).trim(),
+                answer: String(tt?.answer ?? items[i]!.answer).trim(),
+              };
+            })
+            .filter((f) => f.question && f.answer);
+        } else if (items.length > 0) {
+          resultFaq = items.map((f) => ({ question: f.question, answer: f.answer }));
+        }
+      }
+      return NextResponse.json({
+        content: mergedBody,
+        title: resultTitle || undefined,
+        displayTitle: resultDisplayTitle || undefined,
+        description: resultDescription,
+        faqItems: resultFaq,
+        locale: targetLocale,
+      });
+    }
+
     let raw = await withOllamaSlot(() =>
       ollamaChat(ollamaApiKey, [{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel)
     );
@@ -262,21 +457,12 @@ CRITICAL RULES:
     let parsed: Record<string, unknown>;
 
     for (let attempt = 0; attempt < 3; attempt++) {
-      let jsonStr = extractJson(trimmed);
       try {
-        parsed = JSON.parse(jsonStr) as Record<string, unknown>;
+        parsed = parseTranslatedJsonStrict(trimmed);
         break;
-      } catch {
-        const repaired = tryRepairTruncated(jsonStr);
-        if (repaired !== jsonStr) {
-          try {
-            parsed = JSON.parse(repaired) as Record<string, unknown>;
-            console.warn('[Ollama translate] Used repaired truncated JSON');
-            break;
-          } catch {
-            /* fall through to retry */
-          }
-        }
+      } catch (e) {
+        const msg = e instanceof Error ? e.message : '';
+        if (msg === TRUNCATED_JSON_MESSAGE) throw e;
         if (attempt < 2) {
           await new Promise((r) => setTimeout(r, 2000));
           raw = await withOllamaSlot(() =>
@@ -285,7 +471,7 @@ CRITICAL RULES:
           trimmed = (raw || '').trim();
         } else {
           console.error('[Ollama translate] invalid JSON, raw snippet:', (trimmed || '').slice(0, 500));
-          throw new Error('Ollama returned invalid JSON. Spróbuj ponownie.');
+          throw e instanceof Error ? e : new Error('Ollama returned invalid JSON. Spróbuj ponownie.');
         }
       }
     }

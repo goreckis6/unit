@@ -1,6 +1,6 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
-import { routing } from './i18n/routing';
+import { routing } from './i18n/routing-config';
 import { ROUTING_LOCALES, isAppLocale } from './i18n/locales';
 import { SLUG_TO_PATH } from '@/lib/gsc-redirects';
 

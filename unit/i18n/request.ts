@@ -1,5 +1,5 @@
 import { getRequestConfig } from 'next-intl/server';
-import { routing } from './routing';
+import { routing } from './routing-config';
 import { isAppLocale } from './locales';
 import { createGetMessageFallback } from './get-message-fallback';
 

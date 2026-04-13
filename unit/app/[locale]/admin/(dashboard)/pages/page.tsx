@@ -303,6 +303,8 @@ export default function AdminPagesList() {
   const [loading, setLoading] = useState(true);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [translateOnlyOne, setTranslateOnlyOne] = useState(false);
+  /** Re-run content translation for all non-EN locales and overwrite existing Content. */
+  const [translateForceOverwrite, setTranslateForceOverwrite] = useState(false);
   const [translateConcurrency, setTranslateConcurrency] = useState(4);
   const [contentParallel, setContentParallel] = useState(4);
   const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
@@ -641,6 +643,7 @@ export default function AdminPagesList() {
       selectedIds: checkFailedIds,
       translateStartFrom,
       translateOnlyOne: false,
+      forceRetranslateContent: translateForceOverwrite,
       translateConcurrency,
       contentParallel,
       resumeOverride: translatePausedAt ?? undefined,
@@ -1372,6 +1375,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       selectedIds,
       translateStartFrom,
       translateOnlyOne,
+      forceRetranslateContent: translateForceOverwrite,
       translateConcurrency,
       contentParallel,
       ollamaModel,
@@ -1402,6 +1406,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       selectedIds: new Set(withMissing.map((p) => p.id)),
       translateStartFrom,
       translateOnlyOne: false,
+      forceRetranslateContent: translateForceOverwrite,
       translateConcurrency,
       contentParallel,
       ollamaModel,
@@ -1740,6 +1745,27 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                         style={{ width: 14, height: 14 }}
                       />
                       Only this language
+                    </label>
+                    <label
+                      style={{
+                        fontSize: '0.75rem',
+                        color: 'var(--text-secondary)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                        cursor: 'pointer',
+                        maxWidth: 340,
+                      }}
+                      title="Dla każdego języka (poza EN) wygeneruje tłumaczenie od nowa i zapisze je zamiast obecnej treści w polu Content — np. po urwanym lub złym tłumaczeniu."
+                    >
+                      <input
+                        type="checkbox"
+                        checked={translateForceOverwrite}
+                        onChange={(e) => setTranslateForceOverwrite(e.target.checked)}
+                        disabled={!!translateProgress}
+                        style={{ width: 14, height: 14, flexShrink: 0 }}
+                      />
+                      Przetłumacz jeszcze raz (nadpisuje aktualne tłumaczenia)
                     </label>
                     <label
                       style={{

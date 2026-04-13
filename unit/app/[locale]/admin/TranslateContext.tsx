@@ -79,6 +79,7 @@ type TranslateContextValue = {
     contentParallel?: number;
     ollamaModel?: string;
     resumeOverride?: TranslatePausedAt;
+    forceRetranslateContent?: boolean;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
     onPageTranslated?: (pageId: string) => void | Promise<void>;
@@ -180,12 +181,24 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     contentParallel?: number;
     ollamaModel?: string;
     resumeOverride?: TranslatePausedAt;
+    forceRetranslateContent?: boolean;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
     onPageTranslated?: (pageId: string) => void | Promise<void>;
     onComplete?: () => void;
   }) => {
-    const { pages, selectedIds, translateOnlyOne, resumeOverride, autoResumeOnError, ollamaModel, onPagesUpdate, onPageTranslated, onComplete } = params;
+    const {
+      pages,
+      selectedIds,
+      translateOnlyOne,
+      resumeOverride,
+      autoResumeOnError,
+      ollamaModel,
+      onPagesUpdate,
+      onPageTranslated,
+      onComplete,
+      forceRetranslateContent = false,
+    } = params;
     const concurrency = Math.max(1, Math.min(6, params.translateConcurrency ?? 4));
     const contentParallel = Math.max(1, Math.min(8, params.contentParallel ?? 4));
     const ids = Array.from(selectedIds);
@@ -194,7 +207,6 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       return;
     }
     const allNonEn = (ADMIN_LOCALES ?? []).filter((l) => l !== 'en');
-    console.log('[TranslateContext] ADMIN_LOCALES:', ADMIN_LOCALES, 'allNonEn:', allNonEn);
     const effectiveStart = (resumeOverride?.nextLocale ?? params.translateStartFrom) && allNonEn.includes(resumeOverride?.nextLocale ?? params.translateStartFrom)
       ? (resumeOverride?.nextLocale ?? params.translateStartFrom)
       : allNonEn[0];
@@ -245,7 +257,9 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             if (!fullPage || !fullPage?.translations) return 0;
             const fullPageTrans = fullPage.translations ?? [];
             const hasContent = (loc: string) => ((fullPageTrans.find((t: { locale: string; content?: string }) => t.locale === loc) as { content?: string } | undefined)?.content?.trim() ?? '').length > 0;
-            let localesToTranslate = (allNonEn ?? []).filter((loc) => !hasContent(loc));
+            let localesToTranslate = forceRetranslateContent
+              ? [...(allNonEn ?? [])]
+              : (allNonEn ?? []).filter((loc) => !hasContent(loc));
             if (resumeOverride && page.slug === resumeFromSlug) {
               const startLoc = resumeOverride.nextLocale;
               if (startLoc && allNonEn) {
@@ -279,7 +293,11 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       return;
     }
     if (totalSteps === 0) {
-      setTranslateError('Wszystkie wybrane strony mają już przetłumaczone treści.');
+      setTranslateError(
+        forceRetranslateContent
+          ? 'Brak języków do tłumaczenia (sprawdź listę locale).'
+          : 'Wszystkie wybrane strony mają już przetłumaczone treści. Włącz „Przetłumacz jeszcze raz (nadpisuje aktualne tłumaczenia)”, aby wymusić ponowne tłumaczenie.'
+      );
       return;
     }
     const startedAtMs = Date.now();
@@ -316,7 +334,9 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
 
       const fullPageTrans = fullPage.translations ?? [];
       const hasContent = (loc: string) => ((fullPageTrans.find((t) => t.locale === loc) as { content?: string } | undefined)?.content?.trim() ?? '').length > 0;
-      let localesToTranslate = (allNonEn ?? []).filter((loc) => !hasContent(loc));
+      let localesToTranslate = forceRetranslateContent
+        ? [...(allNonEn ?? [])]
+        : (allNonEn ?? []).filter((loc) => !hasContent(loc));
       if (resumeOverride && page.slug === resumeFromSlug && concurrency === 1) {
         const startLoc = resumeOverride.nextLocale;
         if (startLoc && allNonEn) {

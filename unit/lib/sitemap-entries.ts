@@ -1,5 +1,5 @@
 import { unstable_cache } from 'next/cache';
-import { routing } from '@/i18n/routing';
+import { ROUTING_LOCALES } from '@/i18n/locales';
 import { BASE_URL } from '@/lib/hreflang';
 import { getAllCalculators } from '@/lib/all-calculators';
 import { prisma } from '@/lib/prisma';
@@ -64,7 +64,7 @@ function getUrlForLocale(locale: string, route: string): string {
 }
 
 function getAlternateLinks(route: string): string {
-  const alternates = routing.locales
+  const alternates = ROUTING_LOCALES
     .map(
       (locale) =>
         `    <xhtml:link rel="alternate" hreflang="${locale}" href="${getUrlForLocale(locale, route)}" />`
@@ -78,7 +78,7 @@ function getAlternateLinks(route: string): string {
 
 async function buildSitemapChunkFullXmlUncached(chunkIndex0Based: number): Promise<string> {
   const allRoutes = await getAllRoutesCached();
-  const locales = routing.locales;
+  const locales = ROUTING_LOCALES;
   const perChunk = SITEMAP_URLS_PER_CHUNK;
   const total = locales.length * allRoutes.length;
   const start = chunkIndex0Based * perChunk;
@@ -148,7 +148,7 @@ export async function getSitemapChunkFullXml(chunkIndex0Based: number): Promise<
 
 export async function getSitemapChunkCount(): Promise<number> {
   const routes = await getAllRoutesCached();
-  const n = routing.locales.length * routes.length;
+  const n = ROUTING_LOCALES.length * routes.length;
   if (n === 0) return 1;
   return Math.ceil(n / SITEMAP_URLS_PER_CHUNK);
 }

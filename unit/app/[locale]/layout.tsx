@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { headers } from 'next/headers';
 import type { Metadata } from 'next';
 import { getMessages, setRequestLocale } from 'next-intl/server';
-import { ROUTING_LOCALES } from '@/i18n/routing';
+import { ROUTING_LOCALES, isAppLocale } from '@/i18n/locales';
 import { generateHreflangUrls, BASE_URL } from '@/lib/hreflang';
 import { IntlProvider } from '@/components/IntlProvider';
 import { GlobalEnterToCalculate } from '@/components/GlobalEnterToCalculate';
@@ -24,7 +24,7 @@ export async function generateMetadata({
   // Strip locale prefix to get logical path
   const firstSeg = pathname.split('/').filter(Boolean)[0];
   const logicalPath =
-    firstSeg && ROUTING_LOCALES.includes(firstSeg as any)
+    firstSeg && isAppLocale(firstSeg)
       ? pathname.replace(new RegExp(`^/${firstSeg}(/|$)`), '$1') || '/'
       : pathname || '/';
 
@@ -53,7 +53,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!ROUTING_LOCALES.includes(locale as any)) {
+  if (!isAppLocale(locale)) {
     notFound();
   }
 

@@ -1,5 +1,6 @@
 import { getRequestConfig } from 'next-intl/server';
-import { routing, ROUTING_LOCALES } from './routing';
+import { routing } from './routing';
+import { isAppLocale } from './locales';
 import { createGetMessageFallback } from './get-message-fallback';
 
 const getMessageFallback = createGetMessageFallback();
@@ -7,7 +8,7 @@ const getMessageFallback = createGetMessageFallback();
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;
 
-  if (!locale || typeof locale !== 'string' || !ROUTING_LOCALES.includes(locale)) {
+  if (!locale || typeof locale !== 'string' || !isAppLocale(locale)) {
     locale = routing.defaultLocale ?? 'en';
   }
 

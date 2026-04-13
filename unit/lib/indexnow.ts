@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import { BASE_URL } from '@/lib/hreflang';
-import { ROUTING_LOCALES } from '@/i18n/routing';
+import { ROUTING_LOCALES } from '@/i18n/locales';
 import { hashForDisplayName } from '@/lib/txt-file-hash';
 
 /** Admin TXT file name whose content is the IndexNow key (Bing/Web). */

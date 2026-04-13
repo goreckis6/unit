@@ -6,7 +6,7 @@ import { getSession } from '@/lib/auth';
 export const revalidate = 300;
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
-import { ROUTING_LOCALES } from '@/i18n/routing';
+import { isAppLocale } from '@/i18n/locales';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { FaqSection } from '@/components/FaqSection';
@@ -78,7 +78,7 @@ export default async function CalculatorPage({ params, searchParams }: Props) {
   const { locale, category, slug } = await params;
   setRequestLocale(locale);
 
-  if (!ROUTING_LOCALES.includes(locale)) {
+  if (!isAppLocale(locale)) {
     notFound();
   }
 

@@ -2,7 +2,7 @@
  * Shared locale list and names for admin (new/edit page forms).
  * Uses BCP 47 / ISO 639-1 codes. Single source of truth aligned with routing.
  */
-import { ROUTING_LOCALES } from '@/i18n/routing';
+import { ROUTING_LOCALES } from '@/i18n/locales';
 
 const FALLBACK_LOCALES = ['en', 'pl', 'de', 'fr', 'es', 'it', 'nl', 'pt', 'cs', 'sk', 'hu', 'sv', 'no', 'da', 'fi', 'ro', 'ru', 'ja', 'zh', 'ko', 'ar', 'hi', 'id', 'tr'];
 export const ADMIN_LOCALES: readonly string[] = Array.isArray(ROUTING_LOCALES) && ROUTING_LOCALES.length > 0

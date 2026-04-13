@@ -1,4 +1,4 @@
-import { routing } from '@/i18n/routing';
+import { DEFAULT_LOCALE, ROUTING_LOCALES } from '@/i18n/locales';
 
 const BASE_URL = 'https://calculinohub.com';
 
@@ -16,9 +16,9 @@ export function generateHreflangUrls(path: string): Record<string, string> {
   const normalized =
     path === '/' ? '' : path !== '' && !path.startsWith('/') ? `/${path}` : path;
   const languages: Record<string, string> = {};
-  const defaultLocale = routing.defaultLocale;
+  const defaultLocale = DEFAULT_LOCALE;
 
-  for (const loc of routing.locales) {
+  for (const loc of ROUTING_LOCALES) {
     const url =
       loc === defaultLocale ? `${BASE_URL}${normalized}` : `${BASE_URL}/${loc}${normalized}`;
     languages[loc] = url;

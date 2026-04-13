@@ -1,6 +1,7 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
-import { routing, ROUTING_LOCALES } from './i18n/routing';
+import { routing } from './i18n/routing';
+import { ROUTING_LOCALES, isAppLocale } from './i18n/locales';
 import { SLUG_TO_PATH } from '@/lib/gsc-redirects';
 
 // Canonical domain (no www) — redirect www to avoid duplicate content in Google
@@ -20,7 +21,7 @@ async function sha256HexUtf8(text: string): Promise<string> {
 }
 
 function isSupportedLocale(value: string | undefined): value is Locale {
-  return typeof value === 'string' && ROUTING_LOCALES.includes(value as Locale);
+  return typeof value === 'string' && isAppLocale(value);
 }
 
 function getLocaleFromPathname(pathname: string): Locale | null {

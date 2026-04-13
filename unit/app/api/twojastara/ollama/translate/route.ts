@@ -128,8 +128,26 @@ function cleanContent(raw: string): string {
 }
 
 /** Long EN articles exceed model output in one JSON blob; split body into several translate calls. */
-const CONTENT_AUTO_CHUNK_CHARS = 8_000;
-const CONTENT_CHUNK_TARGET = 7_000;
+const CONTENT_AUTO_CHUNK_CHARS = 4_200;
+const CONTENT_CHUNK_TARGET = 3_200;
+
+/** Locales where character-count ratio vs English is unreliable (skip length heuristic). */
+const CJK_LOCALE_PREFIX = /^(ja|zh|ko|tw|cn|hk|th)(-|$)/i;
+
+const TRUNCATED_BODY_RATIO_MESSAGE =
+  'Tłumaczenie treści wygląda na ucięte (wynik znacznie krótszy niż angielski fragment). Model zamknął JSON, ale nie przetłumaczył całości — ponów Translate lub ustaw OLLAMA_TRANSLATE_NUM_PREDICT=131072.';
+
+/**
+ * Heuristic: valid JSON but `content` stopped early (token limit / model stopped inside the string).
+ * Skipped for CJK where shorter character counts are normal.
+ */
+function looksTruncatedBodyChunk(en: string, out: string, targetLocale: string): boolean {
+  if (CJK_LOCALE_PREFIX.test(targetLocale.trim())) return false;
+  const enLen = en.trim().length;
+  const outLen = out.trim().length;
+  if (enLen < 550) return false;
+  return outLen < enLen * 0.44;
+}
 
 function extractJson(text: string): string {
   let s = (text || '').trim();
@@ -157,7 +175,7 @@ function tryRepairTruncated(jsonStr: string): string {
 }
 
 const TRUNCATED_JSON_MESSAGE =
-  'Odpowiedź modelu została ucięta (niepełny JSON). Ustaw na serwerze OLLAMA_TRANSLATE_NUM_PREDICT=131072 i ponów tłumaczenie. Długie artykuły są też automatycznie dzielone na kilka żądań (treść >8k znaków).';
+  'Odpowiedź modelu została ucięta (niepełny JSON). Ustaw na serwerze OLLAMA_TRANSLATE_NUM_PREDICT=131072 i ponów tłumaczenie. Długie artykuły są dzielone na kilka żądań (treść EN > ~4200 znaków).';
 
 /**
  * Parse model JSON; if we only succeed by "repairing" truncated output, throw — never save partial body.
@@ -206,25 +224,31 @@ async function translateBodyInChunks(
   apiKey: string,
   useModel: string | undefined,
   enBody: string,
-  langName: string
+  langName: string,
+  targetLocale: string
 ): Promise<string> {
   const chunks = splitContentAtBoundaries(enBody, CONTENT_CHUNK_TARGET);
   const parts: string[] = [];
   for (let i = 0; i < chunks.length; i++) {
+    const enChunk = chunks[i]!;
     const sys = `Translate from English to ${langName}. Source is ALWAYS English.
-This is MARKDOWN body part ${i + 1} of ${chunks.length} of one page. Translate the ENTIRE part below — no omissions, no summarizing.
+This is MARKDOWN body part ${i + 1} of ${chunks.length} of one page. You must translate EVERY sentence and line of the fragment — same meaning and scope as English, no summarizing, no stopping early.
+The JSON value for "content" must be the COMPLETE translation of the user message (entire fragment). If you run out of space, you failed the task — keep going until the fragment is fully translated.
 Output ONLY valid JSON: one object with key "content" (string) = the full translated markdown for this part only.
-Preserve Markdown (# ## lists **bold** \`code\`). No markdown code fences around the JSON. Do not truncate.`;
+Preserve Markdown (# ## lists **bold** \`code\`). No markdown code fences around the JSON.`;
     let lastErr: Error | null = null;
     for (let attempt = 0; attempt < 3; attempt++) {
       try {
         const raw = await withOllamaSlot(() =>
-          ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: chunks[i]! }], useModel)
+          ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: enChunk }], useModel)
         );
         const parsed = parseTranslatedJsonStrict((raw || '').trim());
         const c = cleanContent(String((parsed as TranslatedItem).content ?? ''));
         if (!c.trim()) {
           throw new Error(`Pusta treść — część ${i + 1}/${chunks.length}`);
+        }
+        if (looksTruncatedBodyChunk(enChunk, c, targetLocale)) {
+          throw new Error(TRUNCATED_BODY_RATIO_MESSAGE);
         }
         parts.push(c);
         lastErr = null;
@@ -366,7 +390,8 @@ CRITICAL RULES:
 - Preserve Markdown: # H1, ## H2, **bold**, *italic*, code blocks, bullets
 - "faqItems" = array of {"question","answer"} — only if FAQ was provided. Put translated Q&A here, NOT in content
 - Do NOT add "## Markdown content", "## FAQ", or similar headers to content
-- NEVER truncate. Output MUST be complete valid JSON. Return the ENTIRE translation including full content.`;
+- NEVER truncate or summarize. The "content" string must include the full English article body translated end-to-end (every section and list item).
+- Output MUST be complete valid JSON. Return the ENTIRE translation including full content.`;
 
     const userContent = isBatch
       ? [
@@ -404,7 +429,7 @@ CRITICAL RULES:
     if (longSingleLocale) {
       const loc0 = locales[0]!;
       const langName = LOCALE_NAMES[loc0] || loc0;
-      const mergedBody = await translateBodyInChunks(ollamaApiKey, useModel, content, langName);
+      const mergedBody = await translateBodyInChunks(ollamaApiKey, useModel, content, langName, loc0);
       let resultTitle = enTitle;
       let resultDisplayTitle = enDisplayTitle;
       let resultDescription = enDescription || undefined;
@@ -514,6 +539,14 @@ CRITICAL RULES:
     let resultContent = cleanContent(single.content ?? '');
     if (!resultContent) {
       throw new Error('Empty content translation from Ollama Cloud');
+    }
+    if (
+      !isBatch &&
+      typeof content === 'string' &&
+      content.trim().length >= 2_000 &&
+      looksTruncatedBodyChunk(content, resultContent, locales[0] ?? '')
+    ) {
+      throw new Error(`${TRUNCATED_BODY_RATIO_MESSAGE} Ponów Translate.`);
     }
     const resultTitle = enTitle && single.title ? String(single.title).trim() : enTitle;
     const resultDisplayTitle = enDisplayTitle && single.displayTitle ? String(single.displayTitle).trim() : enDisplayTitle;

@@ -37,7 +37,18 @@ export async function PATCH(
   try {
     const { id } = await params;
     const body = await request.json();
-    const { slug, category, published, translations, calculatorCode, linkedCalculatorPath, relatedCalculatorsMode, relatedCalculatorsCount, manualBookmark } = body;
+    const {
+      slug,
+      category,
+      published,
+      translations,
+      translationUpdates,
+      calculatorCode,
+      linkedCalculatorPath,
+      relatedCalculatorsMode,
+      relatedCalculatorsCount,
+      manualBookmark,
+    } = body;
 
     const updateData: Record<string, unknown> = {};
     if (slug !== undefined) updateData.slug = slug.trim().toLowerCase().replace(/\s+/g, '-');
@@ -54,28 +65,45 @@ export async function PATCH(
       updateData.relatedCalculatorsCount = relatedCalculatorsCount;
     }
 
-    if (translations?.length) {
+    type TranslationPayload = {
+      locale: string;
+      title: string;
+      displayTitle?: string | null;
+      description?: string | null;
+      content?: string | null;
+      relatedCalculators?: { title: string; description: string; path: string }[];
+      faqItems?: { question: string; answer: string }[];
+      calculatorLabels?: Record<string, string>;
+    };
+
+    function prismaTranslationCreateInput(t: TranslationPayload) {
+      return {
+        locale: t.locale,
+        title: t.title,
+        displayTitle: t.displayTitle?.trim() || null,
+        description: t.description ?? null,
+        content: t.content ?? null,
+        relatedCalculators: t.relatedCalculators?.length ? JSON.stringify(t.relatedCalculators) : null,
+        faqItems: t.faqItems?.length ? JSON.stringify(t.faqItems) : null,
+        calculatorLabels: t.calculatorLabels && Object.keys(t.calculatorLabels).length ? JSON.stringify(t.calculatorLabels) : null,
+      };
+    }
+
+    /** Partial upserts — small JSON bodies (e.g. bulk translate) avoid proxy 1MB limits on full replace. */
+    if (Array.isArray(translationUpdates) && translationUpdates.length > 0) {
+      for (const raw of translationUpdates as TranslationPayload[]) {
+        if (!raw?.locale || typeof raw.locale !== 'string') continue;
+        const row = prismaTranslationCreateInput(raw);
+        await prisma.pageTranslation.upsert({
+          where: { pageId_locale: { pageId: id, locale: raw.locale } },
+          create: { pageId: id, ...row },
+          update: row,
+        });
+      }
+    } else if (translations?.length) {
       await prisma.pageTranslation.deleteMany({ where: { pageId: id } });
       updateData.translations = {
-        create: translations.map((t: {
-          locale: string;
-          title: string;
-          displayTitle?: string;
-          description?: string;
-          content?: string;
-          relatedCalculators?: { title: string; description: string; path: string }[];
-          faqItems?: { question: string; answer: string }[];
-          calculatorLabels?: Record<string, string>;
-        }) => ({
-          locale: t.locale,
-          title: t.title,
-          displayTitle: t.displayTitle?.trim() || null,
-          description: t.description ?? null,
-          content: t.content ?? null,
-          relatedCalculators: t.relatedCalculators?.length ? JSON.stringify(t.relatedCalculators) : null,
-          faqItems: t.faqItems?.length ? JSON.stringify(t.faqItems) : null,
-          calculatorLabels: t.calculatorLabels && Object.keys(t.calculatorLabels).length ? JSON.stringify(t.calculatorLabels) : null,
-        })),
+        create: (translations as TranslationPayload[]).map((t) => prismaTranslationCreateInput(t)),
       };
     }
 

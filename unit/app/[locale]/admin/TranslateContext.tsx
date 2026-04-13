@@ -445,11 +445,14 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
           for (const l of Object.keys(translatedByLocale)) {
             if (!baseMap.has(l)) baseMap.set(l, { locale: l, title: '', displayTitle: null, description: null, content: null, relatedCalculators: [], faqItems: [], calculatorLabels: {} });
           }
-          const translations = Array.from(baseMap.values()).map((t: TransRow) => {
+          const buildMergedRow = (loc: string) => {
+            const t = baseMap.get(loc);
+            if (!t) throw new Error(`Missing translation row for ${loc}`);
             const relatedCalculators = parseJson<{ title: string; description: string; path: string }[]>(t.relatedCalculators, []);
             const existingFaq = parseJson<{ question: string; answer: string }[]>(t.faqItems, []);
             const calcLabels = parseJson<Record<string, string>>(t.calculatorLabels, {});
-            const tr = translatedByLocale[t.locale];
+            const tr = translatedByLocale[loc];
+            if (!tr) throw new Error(`Missing new translation for ${loc}`);
             const faqItems = tr?.faqItems && tr.faqItems.length > 0 ? tr.faqItems : existingFaq;
             const finalTitle = (tr?.title ?? t.title ?? '').trim() || enTitleFallback;
             const finalDisplayTitle = (tr?.displayTitle ?? t.displayTitle ?? '')?.trim() || null;
@@ -459,17 +462,24 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               title: finalTitle,
               displayTitle: finalDisplayTitle || (t.displayTitle?.trim() || null),
               description: finalDescription,
-              content: tr ? tr.content : (t.content ?? null),
+              content: tr.content,
               relatedCalculators,
               faqItems,
               calculatorLabels: calcLabels,
             };
-          });
+          };
+
+          const translationUpdates = batchLocs.map((loc) => buildMergedRow(loc));
 
           const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ slug: fullPage.slug, category: fullPage.category, published: fullPage.published, translations }),
+            body: JSON.stringify({
+              slug: fullPage.slug,
+              category: fullPage.category,
+              published: fullPage.published,
+              translationUpdates,
+            }),
             credentials: 'include',
             signal: abortRef.current?.signal,
           });

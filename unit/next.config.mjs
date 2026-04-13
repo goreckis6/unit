@@ -24,6 +24,8 @@ const nextConfig = {
   ],
   experimental: {
     webpackMemoryOptimizations: false, // avoids __webpack_modules__[moduleId] errors
+    /** Server Actions + large admin payloads; reverse proxy may still need client_max_body_size (e.g. nginx). */
+    serverActions: { bodySizeLimit: '12mb' },
   },
   outputFileTracingRoot: __dirname,
   outputFileTracingIncludes: {
@@ -38,7 +40,14 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   webpack: (config, { isServer }) => {
-    config.resolve.alias = { ...config.resolve.alias, '@': path.resolve(__dirname) };
+    const root = path.resolve(__dirname);
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': root,
+      // One physical copy — avoids "react" / "react-dom" version string mismatch when deps pull different builds
+      react: path.join(root, 'node_modules/react'),
+      'react-dom': path.join(root, 'node_modules/react-dom'),
+    };
     return config;
   },
 };

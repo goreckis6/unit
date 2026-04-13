@@ -39,14 +39,13 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
-  webpack: (config, { isServer }) => {
+  webpack: (config) => {
     const root = path.resolve(__dirname);
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': root,
-      // One physical copy — avoids "react" / "react-dom" version string mismatch when deps pull different builds
-      react: path.join(root, 'node_modules/react'),
-      'react-dom': path.join(root, 'node_modules/react-dom'),
+      // Do not alias `react` / `react-dom` here: forced resolution breaks RSC flight
+      // serialization in production (`Cannot read properties of null (reading 'use')`).
     };
     return config;
   },

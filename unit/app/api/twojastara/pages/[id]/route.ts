@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
 import { revalidateSitemapAll } from '@/lib/sitemap-revalidate';
 import { prisma } from '@/lib/prisma';
+import { ADMIN_MANUAL_BOOKMARK_VALUES } from '@/lib/admin-page-bookmarks';
 import { submitIndexNowForUrls, urlsForCalculatorPage } from '@/lib/indexnow';
 
 // GET /api/admin/pages/[id]
@@ -44,7 +45,7 @@ export async function PATCH(
     if (published !== undefined) updateData.published = published;
     if (calculatorCode !== undefined) updateData.calculatorCode = calculatorCode || null;
     if (linkedCalculatorPath !== undefined) updateData.linkedCalculatorPath = linkedCalculatorPath || null;
-    const validBookmarks = ['content-en-done', 'translation-done', 'calculator-done', 'done', 'completed-alive'];
+    const validBookmarks = [...ADMIN_MANUAL_BOOKMARK_VALUES];
     if (manualBookmark !== undefined) updateData.manualBookmark = validBookmarks.includes(manualBookmark) ? manualBookmark : null;
     if (relatedCalculatorsMode !== undefined && ['manual', 'random', 'both'].includes(relatedCalculatorsMode)) {
       updateData.relatedCalculatorsMode = relatedCalculatorsMode;

@@ -8,6 +8,7 @@ import { useTranslate } from '../../TranslateContext';
 import { useGenerate, type GenerateProviderType } from '../../GenerateContext';
 import { SeoChecker } from '@/components/admin/SeoChecker';
 import { resolveCalculatorPath } from '@/lib/gsc-redirects';
+import { ADMIN_MANUAL_BOOKMARK_VALUES } from '@/lib/admin-page-bookmarks';
 import { getTranslationAnchorWarnings } from '@/lib/translation-keyword-check';
 
 export type PageStage = 'new' | 'content-en-done' | 'translation-done' | 'calculator-done' | 'done' | 'completed-alive';
@@ -183,7 +184,7 @@ function getMissingLabelKeysForLocale(
   return missing;
 }
 
-const VALID_MANUAL_BOOKMARKS: PageStage[] = ['content-en-done', 'translation-done', 'calculator-done', 'done', 'completed-alive'];
+const VALID_MANUAL_BOOKMARKS: PageStage[] = [...ADMIN_MANUAL_BOOKMARK_VALUES];
 
 /** Page has calculator code/link and valid EN labels (at least one non-empty key). */
 function hasCalculatorWithEnLabels(page: Page): boolean {
@@ -2141,6 +2142,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
               style={{ padding: '0.35rem 0.5rem', fontSize: '0.8rem', minWidth: 140 }}
             >
               <option value="">—</option>
+              <option value="new">NEW (pipeline start)</option>
               <option value="content-en-done">Content EN - Done</option>
               <option value="translation-done">24 Languages Translation done</option>
               <option value="calculator-done">Calc Code Generator Done</option>
@@ -3173,6 +3175,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                       style={{ padding: '0.25rem 0.4rem', fontSize: '0.75rem' }}
                     >
                       <option value="">Move</option>
+                      <option value="new">NEW</option>
                       <option value="content-en-done">Content EN</option>
                       <option value="translation-done">Translation done</option>
                       <option value="calculator-done">Calc Code Gen Done</option>

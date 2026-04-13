@@ -128,8 +128,9 @@ function cleanContent(raw: string): string {
 }
 
 /** Long EN articles exceed model output in one JSON blob; split body into several translate calls. */
-const CONTENT_AUTO_CHUNK_CHARS = 1_800;
-const CONTENT_CHUNK_TARGET = 1_200;
+const CONTENT_AUTO_CHUNK_CHARS = 1_200;
+/** Smaller pieces → less summarizing inside one `num_predict` window (was 1200; PL still got cut mid-article). */
+const CONTENT_CHUNK_TARGET = 750;
 
 /** Appended to each LLM body request; must be copied verbatim to end of JSON "content" so we detect mid-string stops. */
 const CHUNK_END_MARKER = '<<<CHUNK_EOC_UCH_a1b2c3>>>';
@@ -159,12 +160,15 @@ const TRUNCATED_BODY_RATIO_MESSAGE =
  * Heuristic: valid JSON but `content` stopped early (token limit / model stopped inside the string).
  * Skipped for CJK where shorter character counts are normal.
  */
+/** Per-chunk: output much shorter than source usually means summarization / drop (not strict: PL can be zwięzły). */
+const CHUNK_MIN_LENGTH_RATIO = 0.5;
+
 function looksTruncatedBodyChunk(en: string, out: string, targetLocale: string): boolean {
   if (CJK_LOCALE_PREFIX.test(targetLocale.trim())) return false;
   const enLen = en.trim().length;
   const outLen = out.trim().length;
-  if (enLen < 550) return false;
-  return outLen < enLen * 0.44;
+  if (enLen < 320) return false;
+  return outLen < enLen * CHUNK_MIN_LENGTH_RATIO;
 }
 
 function extractJson(text: string): string {
@@ -193,7 +197,7 @@ function tryRepairTruncated(jsonStr: string): string {
 }
 
 const TRUNCATED_JSON_MESSAGE =
-  'Odpowiedź modelu została ucięta (niepełny JSON). Ustaw na serwerze OLLAMA_TRANSLATE_NUM_PREDICT=131072 i ponów tłumaczenie. Długie artykuły są dzielone na kilka żądań (treść EN > ~1800 znaków).';
+  'Odpowiedź modelu została ucięta (niepełny JSON). Ustaw na serwerze OLLAMA_TRANSLATE_NUM_PREDICT=131072 i ponów tłumaczenie. Długie artykuły są dzielone na kilka żądań (treść EN > ~1200 znaków).';
 
 /**
  * Parse model JSON; if we only succeed by "repairing" truncated output, throw — never save partial body.
@@ -285,7 +289,17 @@ Output ONLY valid JSON: one object with key "content" (string). Preserve Markdow
     }
     if (lastErr) throw lastErr;
   }
-  return parts.join('\n\n');
+  const merged = parts.join('\n\n').trim();
+  const enTrim = enBody.trim();
+  if (!CJK_LOCALE_PREFIX.test(targetLocale.trim()) && enTrim.length > 1_200) {
+    const r = merged.length / enTrim.length;
+    if (r < 0.45) {
+      throw new Error(
+        `${TRUNCATED_BODY_RATIO_MESSAGE} (Łącznie ${merged.length} vs EN ${enTrim.length} znaków — stosunek ${(r * 100).toFixed(0)}%.)`
+      );
+    }
+  }
+  return merged;
 }
 
 async function translateMetaAndFaqOnly(
@@ -584,7 +598,7 @@ CRITICAL RULES:
     if (
       !isBatch &&
       typeof content === 'string' &&
-      content.trim().length >= 2_000 &&
+      content.trim().length >= 900 &&
       looksTruncatedBodyChunk(content, resultContent, locales[0] ?? '')
     ) {
       throw new Error(`${TRUNCATED_BODY_RATIO_MESSAGE} Ponów Translate.`);

@@ -49,6 +49,10 @@ function translateTemperature(): number {
 function translateOllamaOptions(model: string): Record<string, number> {
   return {
     num_predict: translateNumPredict(model),
+    // num_ctx: total context window (input tokens + output tokens). Default in Ollama is often
+    // 2048 which is insufficient for long articles. 16384 covers even large chunks + system prompt.
+    // Cloud models (Gemini, Claude via Ollama) ignore this or use their own limits, so it's safe to set.
+    num_ctx: 16_384,
     temperature: translateTemperature(),
     top_p: 0.9,
   };

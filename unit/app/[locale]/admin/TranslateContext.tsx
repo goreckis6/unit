@@ -341,14 +341,15 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     const processPage = async (page: Page): Promise<boolean> => {
       if (hadErrorRef.current || abortRef.current?.signal?.aborted) return false;
       const enTrans = page.translations.find((t) => t.locale === 'en');
-      const enContent = (enTrans?.content ?? '').trim();
-      const enFaqItems = parseJson<{ question: string; answer: string }[]>(enTrans?.faqItems, []);
+      // List API returns only a 500-char prefix of content (for performance). Use it only for
+      // the quick existence check — actual translation uses the full content from the page fetch below.
+      const enContentPrefix = (enTrans?.content ?? '').trim();
       const enTitle = (enTrans?.title ?? '').trim();
       const enDisplayTitle = (enTrans?.displayTitle ?? '').trim();
-      if (!enContent) return true;
+      if (!enContentPrefix) return true;
 
       const pageRes = await fetch(`/api/twojastara/pages/${page.id}`, { credentials: 'include', signal: abortRef.current?.signal });
-      let fullPage: { translations?: { locale: string; content?: string }[]; slug?: string; category?: string; published?: boolean } | null = null;
+      let fullPage: { translations?: { locale: string; content?: string; faqItems?: string }[]; slug?: string; category?: string; published?: boolean } | null = null;
       try {
         fullPage = await safeResJson(pageRes);
       } catch (e) {
@@ -363,6 +364,11 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       }
 
       const fullPageTrans = fullPage.translations ?? [];
+      // Full content from the individual page endpoint (list endpoint only had a 500-char prefix).
+      const fullEnTrans = fullPageTrans.find((t) => t.locale === 'en') as { content?: string; faqItems?: string } | undefined;
+      const enContent = (fullEnTrans?.content ?? enContentPrefix).trim();
+      const enFaqItems = parseJson<{ question: string; answer: string }[]>(fullEnTrans?.faqItems ?? enTrans?.faqItems, []);
+
       const hasContent = (loc: string) => ((fullPageTrans.find((t) => t.locale === loc) as { content?: string } | undefined)?.content?.trim() ?? '').length > 0;
       let localesToTranslate = forceRetranslateContent
         ? [...(allNonEn ?? [])]

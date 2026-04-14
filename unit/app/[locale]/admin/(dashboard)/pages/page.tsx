@@ -24,21 +24,10 @@ function parsePerPageParam(raw: string | null): PageSizeOption | null {
   return PAGE_SIZE_OPTIONS.includes(n as PageSizeOption) ? (n as PageSizeOption) : null;
 }
 
-/** URL `perPage` first, then localStorage, default 50. */
+/** URL `perPage` first, then default 50. */
 function getPageSizeFromSearchParams(searchParams: URLSearchParams): PageSizeOption {
   const fromUrl = parsePerPageParam(searchParams.get('perPage'));
   if (fromUrl !== null) return fromUrl;
-  if (typeof window === 'undefined') return 50;
-  try {
-    const s = localStorage.getItem(LIST_FILTER_STORAGE_KEY);
-    if (s) {
-      const v = JSON.parse(s) as Record<string, unknown>;
-      const n = Number(v.perPage);
-      if (PAGE_SIZE_OPTIONS.includes(n as PageSizeOption)) return n as PageSizeOption;
-    }
-  } catch {
-    /* ignore */
-  }
   return 50;
 }
 
@@ -314,7 +303,6 @@ export default function AdminPagesList() {
   const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
   const [generateProvider, setGenerateProvider] = useState<GenerateProviderType>('ollama');
-  const [translateProvider, setTranslateProvider] = useState<'ollama' | 'deepl'>('ollama');
   const [ollamaModel, setOllamaModel] = useState('glm-4.6:cloud');
   const [showBulkImport, setShowBulkImport] = useState(false);
   const [bulkImportJson, setBulkImportJson] = useState('');
@@ -1192,6 +1180,188 @@ export default function AdminPagesList() {
     }
   }
 
+  /** DeepL locales — mirrors DEEPL_LANG_MAP in the translate-labels route (all except hi) */
+  const DEEPL_SUPPORTED_LOCALES = new Set([
+    'pl','de','fr','es','it','nl','pt','cs','sk','hu','sv','no','da','fi','ro',
+    'ru','ja','zh','ko','ar','id','tr',
+  ]);
+
+  async function handleBulkTranslateLabelsDeepL(overrideIds?: string[]) {
+    const ids = overrideIds ?? Array.from(selectedIds);
+    if (ids.length === 0) return;
+    const toProcess = pages.filter((p) => ids.includes(p.id) && (p.calculatorCode ?? '').trim());
+    const withEnLabels = sortPagesLatestFirst(
+      toProcess.filter((p) => {
+        const en = p.translations.find((t) => t.locale === 'en');
+        const lab = parseJson<Record<string, string>>(en?.calculatorLabels, {});
+        return Object.values(lab).some((v) => v?.trim());
+      })
+    );
+    if (withEnLabels.length === 0) {
+      alert('Select pages with Calculator code and EN labels filled. Edit a page, add labels for [en], then try again.');
+      return;
+    }
+
+    const allNonEn = [...ADMIN_LOCALES.filter((l) => l !== 'en' && DEEPL_SUPPORTED_LOCALES.has(l))].reverse();
+    const labelTasks: { page: Page; loc: string; enLabels: Record<string, string> }[] = [];
+    for (const page of withEnLabels) {
+      const enTrans = page.translations.find((t) => t.locale === 'en');
+      const enLabels = parseJson<Record<string, string>>(enTrans?.calculatorLabels, {});
+      if (!Object.values(enLabels).some((v) => v?.trim())) continue;
+      const existingLocales = new Set(page.translations.map((t) => t.locale));
+      const localesToTranslate = allNonEn.filter((l) => existingLocales.has(l));
+      for (const loc of localesToTranslate) {
+        labelTasks.push({ page, loc, enLabels });
+      }
+    }
+    const totalSteps = labelTasks.length;
+    if (totalSteps === 0) {
+      alert('No DeepL-supported labels to translate.');
+      return;
+    }
+
+    const tasksPerPage = new Map<string, number>();
+    for (const { page } of labelTasks) {
+      tasksPerPage.set(page.id, (tasksPerPage.get(page.id) ?? 0) + 1);
+    }
+    const tasksLeftPerPage = new Map(tasksPerPage);
+    const movePageToDoneIfComplete = async (pageId: string) => {
+      const left = (tasksLeftPerPage.get(pageId) ?? 0) - 1;
+      tasksLeftPerPage.set(pageId, left);
+      if (left !== 0) return;
+      try {
+        const pageRes = await fetch(`/api/twojastara/pages/${pageId}`, { credentials: 'include' });
+        if (!pageRes.ok) return;
+        const freshPage = (await pageRes.json()) as Page;
+        if (!hasAllLabelsTranslated(freshPage)) return;
+        const br = await fetch('/api/twojastara/pages/bulk-bookmark', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ids: [pageId], manualBookmark: 'done' }),
+          credentials: 'include',
+        });
+        const bd = await br.json();
+        if (br.ok && Array.isArray(bd)) {
+          const u = bd.find((x: { id: string }) => x.id === pageId);
+          if (u) {
+            setPages((prev) =>
+              prev.map((p) => (p.id !== pageId ? p : { ...p, manualBookmark: (u as Page).manualBookmark ?? 'done' }))
+            );
+            setActiveBookmark('done');
+          }
+        }
+      } catch { /* ignore */ }
+    };
+
+    setActiveBookmark('calculator-done');
+    setTranslateLabelsLoading(true);
+    setTranslateLabelsError('');
+    setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '', startedAt: Date.now() });
+    setTranslateLabelsPausedAt(null);
+    translateLabelsPausedRef.current = false;
+    translateLabelsAbortRef.current = new AbortController();
+    const concurrency = Math.max(1, Math.min(10, translateLabelsConcurrency));
+    const stepRef = { current: 0 };
+
+    try {
+      let taskIdx = 0;
+      const PROGRESS_THROTTLE_MS = 120;
+      let lastProgressTime = 0;
+      const throttledSetProgress = (cur: number, pageSlug: string, pageCategory: string, locale: string) => {
+        const now = Date.now();
+        if (now - lastProgressTime >= PROGRESS_THROTTLE_MS || cur >= totalSteps) {
+          lastProgressTime = now;
+          setTranslateLabelsProgress((p) => ({ ...(p ?? {}), current: cur, total: totalSteps, pageSlug, pageCategory: pageCategory ?? 'math', locale }));
+        }
+      };
+      const runTask = async () => {
+        while (!translateLabelsAbortRef.current?.signal.aborted) {
+          const i = taskIdx++;
+          if (i >= labelTasks.length) break;
+          const { page, loc, enLabels } = labelTasks[i];
+          throttledSetProgress(stepRef.current, page.slug, page.category ?? 'math', loc);
+          let res: Response;
+          let data: Record<string, unknown>;
+          const maxAttempts = 3;
+          for (let attempt = 0; attempt < maxAttempts; attempt++) {
+            res = await fetch('/api/twojastara/deepl/translate-labels', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ labels: enLabels, targetLocale: loc }),
+              credentials: 'include',
+              signal: translateLabelsAbortRef.current?.signal,
+            });
+            if (res.status === 401 && typeof window !== 'undefined') {
+              window.location.href = '/twojastara/login';
+              return;
+            }
+            data = await safeResJson(res);
+            if (res.ok) break;
+            if (attempt < maxAttempts - 1) {
+              await new Promise((r) => setTimeout(r, 2000));
+            } else {
+              throw new Error(String(data?.error || `DeepL translate labels to ${loc} failed`));
+            }
+          }
+          if (!res!.ok) throw new Error(String(data?.error || `DeepL translate labels to ${loc} failed`));
+          const lab = (data?.labels && typeof data.labels === 'object' && !Array.isArray(data.labels) ? data.labels : {}) as Record<string, string>;
+          const patchRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ updates: [{ locale: loc, calculatorLabels: lab }] }),
+            credentials: 'include',
+          });
+          if (!patchRes.ok) throw new Error(String((await safeResJson(patchRes)).error || 'Failed to save'));
+          setPages((prev) =>
+            prev.map((p) => (p.id !== page.id ? p : {
+              ...p,
+              translations: p.translations.map((t) => (t.locale === loc ? { ...t, calculatorLabels: JSON.stringify(lab) } : t)),
+            }))
+          );
+          stepRef.current++;
+          throttledSetProgress(stepRef.current, page.slug, page.category ?? 'math', loc);
+          await movePageToDoneIfComplete(page.id);
+        }
+      };
+      await Promise.all(Array(Math.min(concurrency, labelTasks.length)).fill(0).map(() => runTask()));
+
+      setSelectedIds(new Set());
+      setTranslateLabelsSuccess(`DeepL: Zakończono tłumaczenie etykiet: ${withEnLabels.length} stron(ach).`);
+      const completedIds = withEnLabels.map((p) => p.id);
+      if (completedIds.length > 0) {
+        try {
+          const br = await fetch('/api/twojastara/pages/bulk-bookmark', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ids: completedIds, manualBookmark: 'done' }),
+            credentials: 'include',
+          });
+          const bd = await br.json();
+          if (br.ok && Array.isArray(bd)) {
+            setPages((prev) =>
+              prev.map((p) => {
+                const u = bd.find((x: { id: string }) => x.id === p.id);
+                return u ? { ...p, manualBookmark: (u as Page).manualBookmark ?? 'done' } : p;
+              })
+            );
+            setActiveBookmark('done');
+          }
+        } catch { /* ignore */ }
+      }
+    } catch (e) {
+      const isAbort = e instanceof Error && e.name === 'AbortError';
+      if (!isAbort) {
+        const msg = e instanceof Error ? e.message : 'DeepL translate labels failed';
+        setTranslateLabelsError(msg);
+      }
+    } finally {
+      setTranslateLabelsLoading(false);
+      setTranslateLabelsProgress(null);
+      setTranslateLabelsPausedAt(null);
+      translateLabelsAbortRef.current = null;
+    }
+  }
+
   function pauseTranslateLabels() {
     translateLabelsPausedRef.current = true;
   }
@@ -1393,7 +1563,8 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
     }
   }
 
-  function handleBatchTranslate() {
+  function handleBatchTranslate(providerOverride?: 'ollama' | 'deepl') {
+    const provider = providerOverride ?? 'ollama';
     const stayInAlive = translateStayInAlive && activeBookmark === 'completed-alive';
     if (!stayInAlive) setActiveBookmark('content-en-done');
     startTranslate({
@@ -1401,11 +1572,11 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       selectedIds,
       translateStartFrom,
       translateOnlyOne,
-      forceRetranslateContent: translateForceOverwrite,
+      forceRetranslateContent: translateForceOverwrite || provider === 'deepl',
       translateConcurrency,
       contentParallel,
       ollamaModel,
-      translateProvider,
+      translateProvider: provider,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -1417,7 +1588,8 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
     });
   }
 
-  function handleTranslateMissingTranslations() {
+  function handleTranslateMissingTranslations(providerOverride?: 'ollama' | 'deepl') {
+    const provider = providerOverride ?? 'ollama';
     const candidates = selectedIds.size > 0
       ? filteredPages.filter((p) => selectedIds.has(p.id))
       : filteredPages;
@@ -1434,11 +1606,11 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       selectedIds: new Set(withMissing.map((p) => p.id)),
       translateStartFrom,
       translateOnlyOne: false,
-      forceRetranslateContent: translateForceOverwrite,
+      forceRetranslateContent: translateForceOverwrite || provider === 'deepl',
       translateConcurrency,
       contentParallel,
       ollamaModel,
-      translateProvider,
+      translateProvider: provider,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -1663,22 +1835,6 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                 <option value="ollama">Ollama</option>
                 <option value="claude">Claude 4.6</option>
               </select>
-              <label
-                style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}
-                title="Provider tłumaczenia: Ollama (LLM) lub DeepL (szybki, wymaga klucza API)"
-              >
-                Translate:
-                <select
-                  value={translateProvider}
-                  onChange={(e) => setTranslateProvider(e.target.value as 'ollama' | 'deepl')}
-                  disabled={!!translateProgress}
-                  className="admin-form-select"
-                  style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem' }}
-                >
-                  <option value="ollama">Ollama</option>
-                  <option value="deepl">DeepL</option>
-                </select>
-              </label>
               <label
                 style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}
                 title="Model Ollama dla Generate, Translate i Translate Labels"
@@ -1986,7 +2142,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                     )}
                     <button
                       type="button"
-                      onClick={handleBatchTranslate}
+                      onClick={() => handleBatchTranslate()}
                 disabled={
                   selectedCount === 0 ||
                   !!generateProgress ||
@@ -1995,6 +2151,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                 }
                 className="btn btn-secondary btn-sm"
                 style={{ padding: '0.35rem 0.75rem' }}
+                title="Translate content (Ollama LLM)"
               >
                 {translateProgress
                         ? `Tłumaczenie… (${translateProgress.current}/${translateProgress.total})`
@@ -2003,6 +2160,33 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                           : translateOnlyOne
                             ? `Translate only (${effectiveStart})`
                             : 'Translate'}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleBulkTranslateLabelsDeepL()}
+                      disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
+                      className="btn btn-secondary btn-sm"
+                      style={{ padding: '0.35rem 0.75rem', borderColor: '#0071e3', color: '#0071e3' }}
+                      title="Translate Calculator labels from EN to all DeepL-supported languages. Fast &amp; accurate."
+                    >
+                      {translateLabelsLoading ? 'DeepL Labels…' : 'DeepL Labels Translate'}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleBatchTranslate('deepl')}
+                      disabled={
+                        selectedCount === 0 ||
+                        !!generateProgress ||
+                        !!translateProgress ||
+                        !!translateLabelsLoading
+                      }
+                      className="btn btn-secondary btn-sm"
+                      style={{ padding: '0.35rem 0.75rem', borderColor: '#0071e3', color: '#0071e3' }}
+                      title="Translate content via DeepL (fast, requires DeepL API key, always overwrites)"
+                    >
+                      {translateProgress
+                        ? `DeepL… (${translateProgress.current}/${translateProgress.total})`
+                        : 'DeepL Translate'}
                     </button>
                   </>
                 );

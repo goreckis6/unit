@@ -64,7 +64,7 @@ const ollamaDispatcher = new Agent({
   bodyTimeout: OLLAMA_TIMEOUT_MS,
 });
 
-const SLOT_RETRY_DELAY_MS = 30_000; // 30 s — Ollama Cloud "concurrent request slot" often clears
+const SLOT_RETRY_DELAY_MS = 8_000; // 30 s — Ollama Cloud "concurrent request slot" often clears
 const SLOT_RETRY_MAX = 5;
 
 function isRetryableError(err: string): boolean {
@@ -169,9 +169,9 @@ function cleanContent(raw: string): string {
 }
 
 /** Long EN articles exceed model output in one JSON blob; split body into several translate calls. */
-const CONTENT_AUTO_CHUNK_CHARS = 500;
+const CONTENT_AUTO_CHUNK_CHARS = 900;
 /** Small chunks + sentence/paragraph boundaries → fewer mid-paragraph cuts and less “lazy” summarizing. */
-const CONTENT_CHUNK_TARGET = 280;
+const CONTENT_CHUNK_TARGET = 420;
 
 /** Appended to each LLM body request; must be copied verbatim to end of JSON "content" so we detect mid-string stops. */
 const CHUNK_END_MARKER = '<<<CHUNK_EOC_UCH_a1b2c3>>>';

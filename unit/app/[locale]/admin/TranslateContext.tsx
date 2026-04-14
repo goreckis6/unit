@@ -230,7 +230,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       forceRetranslateContent = false,
     } = params;
     const concurrency = Math.max(1, Math.min(6, params.translateConcurrency ?? 4));
-    const contentParallel = Math.max(1, Math.min(8, params.contentParallel ?? 2));
+    const contentParallel = Math.max(1, Math.min(8, params.contentParallel ?? 5));
     const ids = Array.from(selectedIds);
     if (ids.length === 0) {
       setTranslateError('Zaznacz co najmniej jedną stronę.');

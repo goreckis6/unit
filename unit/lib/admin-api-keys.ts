@@ -58,3 +58,20 @@ export async function getDeeplApiKey(): Promise<string | null> {
 export function deeplBaseUrl(apiKey: string): string {
   return apiKey.endsWith(':fx') ? 'https://api-free.deepl.com' : 'https://api.deepl.com';
 }
+
+/**
+ * ModernMT API key: DB override if set, else env MODERNMT_API_KEY.
+ */
+export async function getModernMtApiKey(): Promise<string | null> {
+  try {
+    const row = await prisma.adminSettings.findUnique({
+      where: { id: SETTINGS_ID },
+      select: { modernmtApiKey: true },
+    });
+    const fromDb = row?.modernmtApiKey?.trim();
+    if (fromDb) return fromDb;
+  } catch {
+    /* table missing during migrate, etc. */
+  }
+  return process.env.MODERNMT_API_KEY?.trim() || null;
+}

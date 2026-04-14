@@ -16,15 +16,17 @@ export async function GET() {
 
     const row = await prisma.adminSettings.findUnique({
       where: { id: SETTINGS_ID },
-      select: { ollamaApiKey: true, anthropicApiKey: true, deeplApiKey: true, updatedAt: true },
+      select: { ollamaApiKey: true, anthropicApiKey: true, deeplApiKey: true, modernmtApiKey: true, updatedAt: true },
     });
 
     const ollamaDb = !!row?.ollamaApiKey?.trim();
     const anthropicDb = !!row?.anthropicApiKey?.trim();
     const deeplDb = !!row?.deeplApiKey?.trim();
+    const modernmtDb = !!row?.modernmtApiKey?.trim();
     const ollamaEnv = !!process.env.OLLAMA_API_KEY?.trim();
     const anthropicEnv = !!process.env.ANTHROPIC_API_KEY?.trim();
     const deeplEnv = !!process.env.DEEPL_API_KEY?.trim();
+    const modernmtEnv = !!process.env.MODERNMT_API_KEY?.trim();
 
     return NextResponse.json({
       ollama: {
@@ -42,6 +44,11 @@ export async function GET() {
         environmentFallbackAvailable: deeplEnv,
         effectiveConfigured: deeplDb || deeplEnv,
       },
+      modernmt: {
+        storedInDatabase: modernmtDb,
+        environmentFallbackAvailable: modernmtEnv,
+        effectiveConfigured: modernmtDb || modernmtEnv,
+      },
       updatedAt: row?.updatedAt?.toISOString() ?? null,
     });
   } catch (error) {
@@ -54,9 +61,11 @@ type PutBody = {
   ollamaApiKey?: string;
   anthropicApiKey?: string;
   deeplApiKey?: string;
+  modernmtApiKey?: string;
   clearOllama?: boolean;
   clearAnthropic?: boolean;
   clearDeepl?: boolean;
+  clearModernmt?: boolean;
 };
 
 /**
@@ -72,7 +81,7 @@ export async function PUT(request: NextRequest) {
 
     const body = (await request.json()) as PutBody;
 
-    const patch: { ollamaApiKey?: string | null; anthropicApiKey?: string | null; deeplApiKey?: string | null } = {};
+    const patch: { ollamaApiKey?: string | null; anthropicApiKey?: string | null; deeplApiKey?: string | null; modernmtApiKey?: string | null } = {};
 
     if (body.clearOllama === true) {
       patch.ollamaApiKey = null;
@@ -90,6 +99,12 @@ export async function PUT(request: NextRequest) {
       patch.deeplApiKey = null;
     } else if (typeof body.deeplApiKey === 'string' && body.deeplApiKey.trim()) {
       patch.deeplApiKey = body.deeplApiKey.trim();
+    }
+
+    if (body.clearModernmt === true) {
+      patch.modernmtApiKey = null;
+    } else if (typeof body.modernmtApiKey === 'string' && body.modernmtApiKey.trim()) {
+      patch.modernmtApiKey = body.modernmtApiKey.trim();
     }
 
     if (Object.keys(patch).length === 0) {

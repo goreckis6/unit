@@ -12,6 +12,7 @@ type ApiKeysStatus = {
   ollama: KeyStatus;
   anthropic: KeyStatus;
   deepl: KeyStatus;
+  modernmt: KeyStatus;
   updatedAt: string | null;
 };
 
@@ -24,15 +25,18 @@ export default function ApiKeysPage() {
   const [ollamaInput, setOllamaInput] = useState('');
   const [anthropicInput, setAnthropicInput] = useState('');
   const [deeplInput, setDeeplInput] = useState('');
+  const [modernmtInput, setModernmtInput] = useState('');
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
   const [testingOllama, setTestingOllama] = useState(false);
   const [testingAnthropic, setTestingAnthropic] = useState(false);
   const [testingDeepl, setTestingDeepl] = useState(false);
+  const [testingModernmt, setTestingModernmt] = useState(false);
   const [testOllamaNote, setTestOllamaNote] = useState('');
   const [testAnthropicNote, setTestAnthropicNote] = useState('');
   const [testDeeplNote, setTestDeeplNote] = useState('');
+  const [testModernmtNote, setTestModernmtNote] = useState('');
 
   const load = useCallback(() => {
     setLoading(true);
@@ -51,7 +55,7 @@ export default function ApiKeysPage() {
     load();
   }, [load]);
 
-  async function saveSection(which: 'ollama' | 'anthropic' | 'deepl') {
+  async function saveSection(which: 'ollama' | 'anthropic' | 'deepl' | 'modernmt') {
     setError('');
     setMessage('');
     setSaving(true);
@@ -60,6 +64,7 @@ export default function ApiKeysPage() {
       if (which === 'ollama' && ollamaInput.trim()) body.ollamaApiKey = ollamaInput.trim();
       if (which === 'anthropic' && anthropicInput.trim()) body.anthropicApiKey = anthropicInput.trim();
       if (which === 'deepl' && deeplInput.trim()) body.deeplApiKey = deeplInput.trim();
+      if (which === 'modernmt' && modernmtInput.trim()) body.modernmtApiKey = modernmtInput.trim();
       if (Object.keys(body).length === 0) {
         setMessage('Enter a new key or use Clear to remove the database value.');
         return;
@@ -76,6 +81,7 @@ export default function ApiKeysPage() {
       if (which === 'ollama') setOllamaInput('');
       if (which === 'anthropic') setAnthropicInput('');
       if (which === 'deepl') setDeeplInput('');
+      if (which === 'modernmt') setModernmtInput('');
       load();
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Save failed');
@@ -241,6 +247,57 @@ export default function ApiKeysPage() {
     }
   }
 
+  async function clearModernmt() {
+    if (!confirm('Remove ModernMT key from database? The app will use MODERNMT_API_KEY from the environment if set.')) return;
+    setError('');
+    setMessage('');
+    setSaving(true);
+    try {
+      const res = await fetch('/api/twojastara/settings/api-keys', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ clearModernmt: true }),
+        credentials: 'include',
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Clear failed');
+      setMessage('ModernMT DB key cleared');
+      load();
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Clear failed');
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function testModernmtApi() {
+    setError('');
+    setTestModernmtNote('');
+    setTestingModernmt(true);
+    try {
+      const body: Record<string, unknown> = { provider: 'modernmt' };
+      if (modernmtInput.trim()) body.modernmtApiKey = modernmtInput.trim();
+      const res = await fetch('/api/twojastara/settings/api-keys/test', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        credentials: 'include',
+      });
+      const data = await res.json();
+      if (data.ok) {
+        setTestModernmtNote(
+          [data.message, data.responsePreview && `Preview: ${data.responsePreview}`].filter(Boolean).join(' · ')
+        );
+      } else {
+        setError(data.error || 'ModernMT test failed');
+      }
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'ModernMT test failed');
+    } finally {
+      setTestingModernmt(false);
+    }
+  }
+
   function badge(ok: boolean, label: string) {
     return (
       <span
@@ -287,9 +344,17 @@ export default function ApiKeysPage() {
             <strong>DeepL</strong>
             {badge(status.deepl?.effectiveConfigured, status.deepl?.effectiveConfigured ? 'ready' : 'not configured')}
           </p>
-          <ul style={{ margin: '0 0 0 1.25rem' }}>
+          <ul style={{ margin: '0 0 1rem 1.25rem' }}>
             <li>Key in database: {status.deepl?.storedInDatabase ? 'yes (hidden)' : 'no'}</li>
             <li>Env fallback (DEEPL_API_KEY): {status.deepl?.environmentFallbackAvailable ? 'set' : 'not set'}</li>
+          </ul>
+          <p style={{ marginBottom: '0.5rem' }}>
+            <strong>ModernMT</strong>
+            {badge(status.modernmt?.effectiveConfigured, status.modernmt?.effectiveConfigured ? 'ready' : 'not configured')}
+          </p>
+          <ul style={{ margin: '0 0 0 1.25rem' }}>
+            <li>Key in database: {status.modernmt?.storedInDatabase ? 'yes (hidden)' : 'no'}</li>
+            <li>Env fallback (MODERNMT_API_KEY): {status.modernmt?.environmentFallbackAvailable ? 'set' : 'not set'}</li>
           </ul>
           {status.updatedAt && (
             <p style={{ marginTop: '1rem' }}>Last settings update: {new Date(status.updatedAt).toLocaleString()}</p>
@@ -419,6 +484,45 @@ export default function ApiKeysPage() {
           {testDeeplNote && (
             <p style={{ marginTop: '0.75rem', color: 'var(--accent-success, #22c55e)', fontSize: '0.9rem' }}>
               {testDeeplNote}
+            </p>
+          )}
+        </section>
+
+        <section>
+          <h2 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>ModernMT API key</h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginBottom: '0.75rem' }}>
+            Supports 200+ languages including all app locales. Fast neural MT with context adaptation.
+            Get your key at <a href="https://www.modernmt.com" target="_blank" rel="noopener noreferrer">modernmt.com</a>.
+          </p>
+          <input
+            type="password"
+            autoComplete="off"
+            value={modernmtInput}
+            onChange={(e) => setModernmtInput(e.target.value)}
+            placeholder="Paste new key to store in DB…"
+            className="admin-form-input"
+            style={{ width: '100%', marginBottom: '0.75rem' }}
+          />
+          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
+            <button type="button" className="btn btn-primary" disabled={saving} onClick={() => saveSection('modernmt')}>
+              Save ModernMT key
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              disabled={saving || testingModernmt}
+              onClick={testModernmtApi}
+              title={modernmtInput.trim() ? 'Test the key in the field above (not saved yet)' : 'Test the key from database or MODERNMT_API_KEY'}
+            >
+              {testingModernmt ? 'Testing…' : 'Test API'}
+            </button>
+            <button type="button" className="btn btn-secondary" disabled={saving} onClick={clearModernmt}>
+              Clear DB key (use env)
+            </button>
+          </div>
+          {testModernmtNote && (
+            <p style={{ marginTop: '0.75rem', color: 'var(--accent-success, #22c55e)', fontSize: '0.9rem' }}>
+              {testModernmtNote}
             </p>
           )}
         </section>

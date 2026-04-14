@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Anthropic from '@anthropic-ai/sdk';
 import { getSession } from '@/lib/auth';
-import { getAnthropicApiKey, getDeeplApiKey, getOllamaApiKey, deeplBaseUrl } from '@/lib/admin-api-keys';
+import { getAnthropicApiKey, getDeeplApiKey, getModernMtApiKey, getOllamaApiKey, deeplBaseUrl } from '@/lib/admin-api-keys';
 
 const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'glm-4.6:cloud';
 const CLAUDE_MODEL = process.env.CLAUDE_MODEL || 'claude-opus-4-6';
@@ -13,6 +13,7 @@ type Body = {
   ollamaApiKey?: string | null;
   anthropicApiKey?: string | null;
   deeplApiKey?: string | null;
+  modernmtApiKey?: string | null;
 };
 
 /**
@@ -34,9 +35,9 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
     }
 
-    const provider = body.provider === 'anthropic' ? 'anthropic' : body.provider === 'ollama' ? 'ollama' : body.provider === 'deepl' ? 'deepl' : null;
+    const provider = body.provider === 'anthropic' ? 'anthropic' : body.provider === 'ollama' ? 'ollama' : body.provider === 'deepl' ? 'deepl' : body.provider === 'modernmt' ? 'modernmt' : null;
     if (!provider) {
-      return NextResponse.json({ error: 'provider must be "ollama", "anthropic", or "deepl"' }, { status: 400 });
+      return NextResponse.json({ error: 'provider must be "ollama", "anthropic", "deepl", or "modernmt"' }, { status: 400 });
     }
 
     if (provider === 'ollama') {
@@ -132,6 +133,45 @@ export async function POST(request: NextRequest) {
           return NextResponse.json({ ok: false, error: `Request timed out after ${TEST_TIMEOUT_MS / 1000}s` }, { status: 504 });
         }
         return NextResponse.json({ ok: false, error: e instanceof Error ? e.message : 'DeepL request failed' }, { status: 502 });
+      }
+    }
+
+    if (provider === 'modernmt') {
+      const override = typeof body.modernmtApiKey === 'string' && body.modernmtApiKey.trim() ? body.modernmtApiKey.trim() : null;
+      const apiKey = override ?? (await getModernMtApiKey());
+      if (!apiKey) {
+        return NextResponse.json({ ok: false, error: 'No ModernMT API key configured. Paste a key or set MODERNMT_API_KEY.' }, { status: 400 });
+      }
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), TEST_TIMEOUT_MS);
+      try {
+        const res = await fetch('https://api.modernmt.com/translate', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'MMT-ApiKey': apiKey,
+            'X-HTTP-Method-Override': 'GET',
+          },
+          body: JSON.stringify({ source: 'en', target: 'de', q: 'Hello' }),
+          signal: controller.signal,
+        });
+        clearTimeout(timeoutId);
+        if (!res.ok) {
+          const t = await res.text();
+          return NextResponse.json({ ok: false, error: t || `ModernMT HTTP ${res.status}`, status: res.status });
+        }
+        const data = (await res.json()) as { status: number; data: { translation: string }; error?: { message: string } };
+        if (data.status !== 200) {
+          return NextResponse.json({ ok: false, error: data.error?.message ?? 'ModernMT error' });
+        }
+        const preview = data.data?.translation ?? '';
+        return NextResponse.json({ ok: true, message: 'ModernMT API key is valid.', model: 'modernmt', responsePreview: preview });
+      } catch (e) {
+        clearTimeout(timeoutId);
+        if (e instanceof Error && e.name === 'AbortError') {
+          return NextResponse.json({ ok: false, error: `Request timed out after ${TEST_TIMEOUT_MS / 1000}s` }, { status: 504 });
+        }
+        return NextResponse.json({ ok: false, error: e instanceof Error ? e.message : 'ModernMT request failed' }, { status: 502 });
       }
     }
 

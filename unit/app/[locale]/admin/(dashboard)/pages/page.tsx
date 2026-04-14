@@ -1379,6 +1379,188 @@ export default function AdminPagesList() {
     }
   }
 
+  /** ModernMT locales — all 24 app locales are supported */
+  const MMT_SUPPORTED_LOCALES = new Set([
+    'pl','de','fr','es','it','nl','pt','cs','sk','hu','sv','no','da','fi','ro',
+    'ru','ja','zh','ko','ar','id','tr','hi',
+  ]);
+
+  async function handleBulkTranslateLabelsMMT(overrideIds?: string[]) {
+    const ids = overrideIds ?? Array.from(selectedIds);
+    if (ids.length === 0) return;
+    const toProcess = pages.filter((p) => ids.includes(p.id) && (p.calculatorCode ?? '').trim());
+    const withEnLabels = sortPagesLatestFirst(
+      toProcess.filter((p) => {
+        const en = p.translations.find((t) => t.locale === 'en');
+        const lab = parseJson<Record<string, string>>(en?.calculatorLabels, {});
+        return Object.values(lab).some((v) => v?.trim());
+      })
+    );
+    if (withEnLabels.length === 0) {
+      alert('Select pages with Calculator code and EN labels filled. Edit a page, add labels for [en], then try again.');
+      return;
+    }
+
+    const allNonEn = [...ADMIN_LOCALES.filter((l) => l !== 'en' && MMT_SUPPORTED_LOCALES.has(l))].reverse();
+    const labelTasks: { page: Page; loc: string; enLabels: Record<string, string> }[] = [];
+    for (const page of withEnLabels) {
+      const enTrans = page.translations.find((t) => t.locale === 'en');
+      const enLabels = parseJson<Record<string, string>>(enTrans?.calculatorLabels, {});
+      if (!Object.values(enLabels).some((v) => v?.trim())) continue;
+      const existingLocales = new Set(page.translations.map((t) => t.locale));
+      const localesToTranslate = allNonEn.filter((l) => existingLocales.has(l));
+      for (const loc of localesToTranslate) {
+        labelTasks.push({ page, loc, enLabels });
+      }
+    }
+    if (labelTasks.length === 0) {
+      alert('No ModernMT-supported labels to translate.');
+      return;
+    }
+
+    const tasksPerPage = new Map<string, number>();
+    for (const { page } of labelTasks) {
+      tasksPerPage.set(page.id, (tasksPerPage.get(page.id) ?? 0) + 1);
+    }
+    const tasksLeftPerPage = new Map(tasksPerPage);
+    const movePageToDoneIfComplete = async (pageId: string) => {
+      const left = (tasksLeftPerPage.get(pageId) ?? 0) - 1;
+      tasksLeftPerPage.set(pageId, left);
+      if (left !== 0) return;
+      try {
+        const pageRes = await fetch(`/api/twojastara/pages/${pageId}`, { credentials: 'include' });
+        if (!pageRes.ok) return;
+        const freshPage = (await pageRes.json()) as Page;
+        if (!hasAllLabelsTranslated(freshPage)) return;
+        const br = await fetch('/api/twojastara/pages/bulk-bookmark', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ids: [pageId], manualBookmark: 'done' }),
+          credentials: 'include',
+        });
+        const bd = await br.json();
+        if (br.ok && Array.isArray(bd)) {
+          const u = bd.find((x: { id: string }) => x.id === pageId);
+          if (u) {
+            setPages((prev) =>
+              prev.map((p) => (p.id !== pageId ? p : { ...p, manualBookmark: (u as Page).manualBookmark ?? 'done' }))
+            );
+            setActiveBookmark('done');
+          }
+        }
+      } catch { /* ignore */ }
+    };
+
+    const totalSteps = labelTasks.length;
+    setActiveBookmark('calculator-done');
+    setTranslateLabelsLoading(true);
+    setTranslateLabelsError('');
+    setTranslateLabelsProgress({ current: 0, total: totalSteps, pageSlug: '', pageCategory: 'math', locale: '', startedAt: Date.now() });
+    setTranslateLabelsPausedAt(null);
+    translateLabelsPausedRef.current = false;
+    translateLabelsAbortRef.current = new AbortController();
+    const concurrency = Math.max(1, Math.min(10, translateLabelsConcurrency));
+    const stepRef = { current: 0 };
+
+    try {
+      let taskIdx = 0;
+      const PROGRESS_THROTTLE_MS = 120;
+      let lastProgressTime = 0;
+      const throttledSetProgress = (cur: number, pageSlug: string, pageCategory: string, locale: string) => {
+        const now = Date.now();
+        if (now - lastProgressTime >= PROGRESS_THROTTLE_MS || cur >= totalSteps) {
+          lastProgressTime = now;
+          setTranslateLabelsProgress((p) => ({ ...(p ?? {}), current: cur, total: totalSteps, pageSlug, pageCategory: pageCategory ?? 'math', locale }));
+        }
+      };
+      const runTask = async () => {
+        while (!translateLabelsAbortRef.current?.signal.aborted) {
+          const i = taskIdx++;
+          if (i >= labelTasks.length) break;
+          const { page, loc, enLabels } = labelTasks[i];
+          throttledSetProgress(stepRef.current, page.slug, page.category ?? 'math', loc);
+          let res: Response;
+          let data: Record<string, unknown>;
+          const maxAttempts = 3;
+          for (let attempt = 0; attempt < maxAttempts; attempt++) {
+            res = await fetch('/api/twojastara/modernmt/translate-labels', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ labels: enLabels, targetLocale: loc }),
+              credentials: 'include',
+              signal: translateLabelsAbortRef.current?.signal,
+            });
+            if (res.status === 401 && typeof window !== 'undefined') {
+              window.location.href = '/twojastara/login';
+              return;
+            }
+            data = await safeResJson(res);
+            if (res.ok) break;
+            if (attempt < maxAttempts - 1) {
+              await new Promise((r) => setTimeout(r, 2000));
+            } else {
+              throw new Error(String(data?.error || `ModernMT translate labels to ${loc} failed`));
+            }
+          }
+          if (!res!.ok) throw new Error(String(data?.error || `ModernMT translate labels to ${loc} failed`));
+          const lab = (data?.labels && typeof data.labels === 'object' && !Array.isArray(data.labels) ? data.labels : {}) as Record<string, string>;
+          const patchRes = await fetch(`/api/twojastara/pages/${page.id}/labels`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ updates: [{ locale: loc, calculatorLabels: lab }] }),
+            credentials: 'include',
+          });
+          if (!patchRes.ok) throw new Error(String((await safeResJson(patchRes)).error || 'Failed to save'));
+          setPages((prev) =>
+            prev.map((p) => (p.id !== page.id ? p : {
+              ...p,
+              translations: p.translations.map((t) => (t.locale === loc ? { ...t, calculatorLabels: JSON.stringify(lab) } : t)),
+            }))
+          );
+          stepRef.current++;
+          throttledSetProgress(stepRef.current, page.slug, page.category ?? 'math', loc);
+          await movePageToDoneIfComplete(page.id);
+        }
+      };
+      await Promise.all(Array(Math.min(concurrency, labelTasks.length)).fill(0).map(() => runTask()));
+
+      setSelectedIds(new Set());
+      setTranslateLabelsSuccess(`ModernMT: Zakończono tłumaczenie etykiet: ${withEnLabels.length} stron(ach).`);
+      const completedIds = withEnLabels.map((p) => p.id);
+      if (completedIds.length > 0) {
+        try {
+          const br = await fetch('/api/twojastara/pages/bulk-bookmark', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ids: completedIds, manualBookmark: 'done' }),
+            credentials: 'include',
+          });
+          const bd = await br.json();
+          if (br.ok && Array.isArray(bd)) {
+            setPages((prev) =>
+              prev.map((p) => {
+                const u = bd.find((x: { id: string }) => x.id === p.id);
+                return u ? { ...p, manualBookmark: (u as Page).manualBookmark ?? 'done' } : p;
+              })
+            );
+            setActiveBookmark('done');
+          }
+        } catch { /* ignore */ }
+      }
+    } catch (e) {
+      const isAbort = e instanceof Error && e.name === 'AbortError';
+      if (!isAbort) {
+        const msg = e instanceof Error ? e.message : 'ModernMT translate labels failed';
+        setTranslateLabelsError(msg);
+      }
+    } finally {
+      setTranslateLabelsLoading(false);
+      setTranslateLabelsProgress(null);
+      setTranslateLabelsPausedAt(null);
+      translateLabelsAbortRef.current = null;
+    }
+  }
+
   function pauseTranslateLabels() {
     translateLabelsPausedRef.current = true;
   }
@@ -1580,7 +1762,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
     }
   }
 
-  function handleBatchTranslate(providerOverride?: 'ollama' | 'deepl') {
+  function handleBatchTranslate(providerOverride?: 'ollama' | 'deepl' | 'modernmt') {
     const provider = providerOverride ?? 'ollama';
     const stayInAlive = translateStayInAlive && activeBookmark === 'completed-alive';
     if (!stayInAlive) setActiveBookmark('content-en-done');
@@ -1589,7 +1771,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       selectedIds,
       translateStartFrom,
       translateOnlyOne,
-      forceRetranslateContent: translateForceOverwrite || provider === 'deepl',
+      forceRetranslateContent: translateForceOverwrite || provider === 'deepl' || provider === 'modernmt',
       translateConcurrency,
       contentParallel,
       ollamaModel,
@@ -1605,7 +1787,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
     });
   }
 
-  function handleTranslateMissingTranslations(providerOverride?: 'ollama' | 'deepl') {
+  function handleTranslateMissingTranslations(providerOverride?: 'ollama' | 'deepl' | 'modernmt') {
     const provider = providerOverride ?? 'ollama';
     const candidates = selectedIds.size > 0
       ? filteredPages.filter((p) => selectedIds.has(p.id))
@@ -1623,7 +1805,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       selectedIds: new Set(withMissing.map((p) => p.id)),
       translateStartFrom,
       translateOnlyOne: false,
-      forceRetranslateContent: translateForceOverwrite || provider === 'deepl',
+      forceRetranslateContent: translateForceOverwrite || provider === 'deepl' || provider === 'modernmt',
       translateConcurrency,
       contentParallel,
       ollamaModel,
@@ -2204,6 +2386,33 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                       {translateProgress
                         ? `DeepL… (${translateProgress.current}/${translateProgress.total})`
                         : 'DeepL Translate'}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleBulkTranslateLabelsMMT()}
+                      disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
+                      className="btn btn-secondary btn-sm"
+                      style={{ padding: '0.35rem 0.75rem', borderColor: '#e05c00', color: '#e05c00' }}
+                      title="Translate Calculator labels from EN to all languages via ModernMT (200+ langs). Fast &amp; accurate."
+                    >
+                      {translateLabelsLoading ? 'MMT Labels…' : 'MMT Labels Translate'}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleBatchTranslate('modernmt')}
+                      disabled={
+                        selectedCount === 0 ||
+                        !!generateProgress ||
+                        !!translateProgress ||
+                        !!translateLabelsLoading
+                      }
+                      className="btn btn-secondary btn-sm"
+                      style={{ padding: '0.35rem 0.75rem', borderColor: '#e05c00', color: '#e05c00' }}
+                      title="Translate content via ModernMT (200+ languages, requires ModernMT API key, always overwrites)"
+                    >
+                      {translateProgress
+                        ? `MMT… (${translateProgress.current}/${translateProgress.total})`
+                        : 'MMT Translate'}
                     </button>
                     <span
                       style={{

@@ -108,7 +108,7 @@ type TranslateContextValue = {
     translateConcurrency?: number;
     contentParallel?: number;
     ollamaModel?: string;
-    translateProvider?: 'ollama' | 'deepl';
+    translateProvider?: 'ollama' | 'deepl' | 'modernmt';
     resumeOverride?: TranslatePausedAt;
     forceRetranslateContent?: boolean;
     autoResumeOnError: boolean;
@@ -211,7 +211,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     translateConcurrency?: number;
     contentParallel?: number;
     ollamaModel?: string;
-    translateProvider?: 'ollama' | 'deepl';
+    translateProvider?: 'ollama' | 'deepl' | 'modernmt';
     resumeOverride?: TranslatePausedAt;
     forceRetranslateContent?: boolean;
     autoResumeOnError: boolean;
@@ -419,7 +419,9 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               let data: { error?: string; content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[]; byLocale?: Record<string, { content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[] }> };
               const translateUrl = translateProvider === 'deepl'
                 ? '/api/twojastara/deepl/translate'
-                : '/api/twojastara/ollama/translate';
+                : translateProvider === 'modernmt'
+                  ? '/api/twojastara/modernmt/translate'
+                  : '/api/twojastara/ollama/translate';
               for (let attempt = 0; attempt <= 2; attempt++) {
                 res = await fetchWithTimeoutAndRetry(
                   translateUrl,
@@ -433,7 +435,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                       title: enTitle || undefined,
                       displayTitle: enDisplayTitle || undefined,
                       description: enDescription || undefined,
-                      ...(translateProvider !== 'deepl' && { model: ollamaModel || undefined }),
+                      ...(translateProvider === 'ollama' && { model: ollamaModel || undefined }),
                     }),
                     credentials: 'include',
                   },

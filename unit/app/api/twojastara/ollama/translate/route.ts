@@ -208,8 +208,8 @@ const ENGLISH_COPY_MESSAGE =
  * Heuristic: valid JSON but `content` stopped early (token limit / model stopped inside the string).
  * Skipped for CJK where shorter character counts are normal.
  */
-/** Per-chunk: output much shorter than source usually means summarization / drop (not strict: PL can be zwięzły). */
-const CHUNK_MIN_LENGTH_RATIO = 0.52;
+/** Per-chunk: output much shorter than source usually means summarization / drop. */
+const CHUNK_MIN_LENGTH_RATIO = 0.60;
 
 /**
  * Terminal punctuation characters that signal a properly finished sentence or block.
@@ -227,7 +227,7 @@ const SENTENCE_TERMINAL_RE = /[.!?。！？؟\u0964\u104A\u104B…»\]}"')\n]$/;
 function looksLikeMidSentenceCut(en: string, out: string): boolean {
   const enTail = en.trimEnd();
   const outTail = out.trimEnd();
-  if (enTail.length < 80 || outTail.length < 40) return false;
+  if (enTail.length < 40 || outTail.length < 20) return false;
   const enEndsClean = SENTENCE_TERMINAL_RE.test(enTail);
   const outEndsClean = SENTENCE_TERMINAL_RE.test(outTail);
   return enEndsClean && !outEndsClean;
@@ -237,7 +237,7 @@ function looksTruncatedBodyChunk(en: string, out: string, targetLocale: string):
   if (CJK_LOCALE_PREFIX.test(targetLocale.trim())) return false;
   const enLen = en.trim().length;
   const outLen = out.trim().length;
-  if (enLen < 320) return false;
+  if (enLen < 80) return false; // very short chunks — skip
   if (outLen < enLen * CHUNK_MIN_LENGTH_RATIO) return true;
   // Catch near-complete but mid-sentence truncation (ratio looks fine but output stops mid-word)
   if (looksLikeMidSentenceCut(en, out)) return true;
@@ -400,6 +400,19 @@ function splitContentAtBoundaries(text: string, maxChars: number): string[] {
   return chunks.filter(Boolean);
 }
 
+/**
+ * Strip common model preamble from plain-text chunk output.
+ * Models sometimes add "Here is the translation:" or "Translation (PL):" etc.
+ */
+function stripChunkPreamble(text: string): string {
+  return text
+    .replace(/^(here is the translation[^:\n]*:|translation[^:\n]*:|translated text[^:\n]*:)\s*/i, '')
+    .replace(/^(oto tłumaczenie[^:\n]*:|tłumaczenie[^:\n]*:)\s*/i, '')
+    .replace(/^## Markdown content\s*/i, '')
+    .replace(/^content:\s*/i, '')
+    .trim();
+}
+
 async function translateOneChunk(
   apiKey: string,
   useModel: string | undefined,
@@ -409,34 +422,40 @@ async function translateOneChunk(
   chunkIndex: number,
   totalChunks: number
 ): Promise<string> {
-  const userPayload = `${enChunk}\n\n${CHUNK_END_MARKER}`;
+  // Plain text output — no JSON wrapper.
+  // The model cannot "escape" truncation by closing a JSON object early.
+  // The only valid completion is: full translation + marker on the last line.
   let retryForEnglishCopy = false;
   let lastErr: Error | null = null;
   for (let attempt = 0; attempt < 4; attempt++) {
     const chunkLen = enChunk.length;
-    const sys = `You are a professional translator. Translate the following short English text fragment into ${langName}.
-Rules:
-1. Translate EVERY word and sentence — no omissions, no summarizing, no paraphrasing. Full 1:1 translation.
-2. Output ONLY valid JSON: {"content": "<translated text>"}. No markdown fences around the JSON.
-3. Preserve Markdown formatting (# ## ** lists \`code\`). Keep URLs and code blocks unchanged.
-4. Do NOT translate the machine marker ${CHUNK_END_MARKER} — copy it verbatim as the very last line inside "content".
-5. The source is ${chunkLen} characters. Your translation should be complete before the marker.${retryForEnglishCopy ? `\n6. IMPORTANT: Previous attempt was rejected because output was in English. Output MUST be in ${langName}, NOT English.` : ''}
-This is fragment ${chunkIndex + 1} of ${totalChunks}.`;
+    const sys = [
+      `You are a professional translator. Translate the following English text into ${langName} (fragment ${chunkIndex + 1}/${totalChunks}).`,
+      `Rules:`,
+      `1. Output ONLY the translated text. No JSON, no code fences, no "Translation:", no preamble.`,
+      `2. Full 1:1 translation — every sentence, heading, list item. No omissions, no summarizing.`,
+      `3. Preserve ALL Markdown (# ## **bold** *italic* \`code\` bullets tables). Keep URLs unchanged.`,
+      `4. Source is ${chunkLen} characters — translate ALL of it completely.`,
+      `5. After the translated text, put this exact marker as the very last line: ${CHUNK_END_MARKER}`,
+      retryForEnglishCopy
+        ? `6. CRITICAL: previous attempt was rejected — it was in English. Output MUST be in ${langName}, NOT English.`
+        : '',
+    ].filter(Boolean).join('\n');
+
     try {
       const raw = await withOllamaSlot(() =>
-        ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: userPayload }], useModel)
+        ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: enChunk }], useModel)
       );
-      const parsed = parseTranslatedJsonStrict((raw || '').trim());
-      let rawContent = String((parsed as TranslatedItem).content ?? '');
-      if (!contentEndsWithChunkMarker(rawContent)) {
+      const trimmed = (raw || '').trim();
+      if (!contentEndsWithChunkMarker(trimmed)) {
         throw new Error(TRUNCATED_MARKER_MESSAGE);
       }
-      rawContent = stripChunkEndMarker(rawContent);
-      const c = cleanContent(rawContent);
-      if (!c.trim()) {
+      const c = stripChunkPreamble(stripChunkEndMarker(trimmed));
+      if (!c) {
         throw new Error(`Pusta treść — część ${chunkIndex + 1}/${totalChunks}`);
       }
       if (looksLikeEnglishCopy(enChunk, c, targetLocale)) {
+        retryForEnglishCopy = true;
         throw new Error(ENGLISH_COPY_MESSAGE);
       }
       if (looksTruncatedBodyChunk(enChunk, c, targetLocale)) {
@@ -447,7 +466,6 @@ This is fragment ${chunkIndex + 1} of ${totalChunks}.`;
       lastErr = e instanceof Error ? e : new Error(String(e));
       const msg = lastErr.message;
       if (msg === ENGLISH_COPY_MESSAGE) retryForEnglishCopy = true;
-      if (msg === TRUNCATED_JSON_MESSAGE) throw lastErr;
       if (attempt < 3) await new Promise((r) => setTimeout(r, 2000));
     }
   }
@@ -471,14 +489,15 @@ async function translateBodyInChunks(
   );
   const merged = parts.join('\n\n').trim();
   const enTrim = enBody.trim();
-  if (!CJK_LOCALE_PREFIX.test(targetLocale.trim()) && enTrim.length > 1_200) {
+  // Always validate merged result for non-CJK content regardless of length.
+  if (!CJK_LOCALE_PREFIX.test(targetLocale.trim()) && enTrim.length > 200) {
     const r = merged.length / enTrim.length;
     if (r < 0.48) {
       throw new Error(
         `${TRUNCATED_BODY_RATIO_MESSAGE} (Łącznie ${merged.length} vs EN ${enTrim.length} znaków — stosunek ${(r * 100).toFixed(0)}%.)`
       );
     }
-    // The merged body should end where the source ends (last sentence complete).
+    // The merged body must end where the source ends (last sentence complete).
     if (looksLikeMidSentenceCut(enTrim, merged)) {
       throw new Error(`${TRUNCATED_BODY_RATIO_MESSAGE} (Scalona treść urywa się w środku zdania.)`);
     }

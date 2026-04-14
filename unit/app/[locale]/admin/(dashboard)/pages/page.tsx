@@ -338,6 +338,8 @@ export default function AdminPagesList() {
   const [translateLabelsSuccess, setTranslateLabelsSuccess] = useState('');
   const [translateLabelsError, setTranslateLabelsError] = useState('');
   const [elapsedTick, setElapsedTick] = useState(0);
+  const [deeplUsage, setDeeplUsage] = useState<{ used: number; limit: number } | null>(null);
+  const [deeplUsageLoading, setDeeplUsageLoading] = useState(false);
   const translateLabelsPausedRef = useRef(false);
   const translateLabelsAbortRef = useRef<AbortController | null>(null);
   const [generatedIdsThisRun, setGeneratedIdsThisRun] = useState<Set<string>>(new Set());
@@ -528,6 +530,7 @@ export default function AdminPagesList() {
     prevTranslateProgress.current = translateProgress;
     if (hadProgress && !translateProgress && !translatePausedAt) {
       setActiveBookmark('translation-done');
+      void fetchDeeplUsage();
     }
   }, [translateProgress, translatePausedAt]);
 
@@ -1180,7 +1183,20 @@ export default function AdminPagesList() {
     }
   }
 
-  /** DeepL locales — mirrors DEEPL_LANG_MAP in the translate-labels route (all except hi) */
+  async function fetchDeeplUsage() {
+    setDeeplUsageLoading(true);
+    try {
+      const res = await fetch('/api/twojastara/deepl/usage', { credentials: 'include' });
+      if (res.ok) {
+        const data = (await res.json()) as { used: number; limit: number };
+        setDeeplUsage(data);
+      }
+    } catch { /* ignore */ } finally {
+      setDeeplUsageLoading(false);
+    }
+  }
+
+  /** DeepL locales — mirrors DEEPL_LANG_MAP in the translate-labels route */
   const DEEPL_SUPPORTED_LOCALES = new Set([
     'pl','de','fr','es','it','nl','pt','cs','sk','hu','sv','no','da','fi','ro',
     'ru','ja','zh','ko','ar','id','tr','hi',
@@ -1327,6 +1343,7 @@ export default function AdminPagesList() {
 
       setSelectedIds(new Set());
       setTranslateLabelsSuccess(`DeepL: Zakończono tłumaczenie etykiet: ${withEnLabels.length} stron(ach).`);
+      void fetchDeeplUsage();
       const completedIds = withEnLabels.map((p) => p.id);
       if (completedIds.length > 0) {
         try {
@@ -2188,6 +2205,45 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                         ? `DeepL… (${translateProgress.current}/${translateProgress.total})`
                         : 'DeepL Translate'}
                     </button>
+                    <span
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.3rem',
+                        fontSize: '0.72rem',
+                        color: deeplUsage && deeplUsage.limit > 0 && deeplUsage.used / deeplUsage.limit > 0.9
+                          ? 'var(--error-color)'
+                          : 'var(--text-secondary)',
+                        background: 'var(--bg-secondary)',
+                        border: '1px solid var(--border-color)',
+                        borderRadius: 6,
+                        padding: '0.2rem 0.5rem',
+                        cursor: 'pointer',
+                        userSelect: 'none',
+                        minWidth: 80,
+                        justifyContent: 'center',
+                      }}
+                      title="DeepL quota usage (click to refresh)"
+                      onClick={() => void fetchDeeplUsage()}
+                    >
+                      {deeplUsageLoading
+                        ? '…'
+                        : deeplUsage
+                          ? (() => {
+                              const pct = deeplUsage.limit > 0
+                                ? Math.round((deeplUsage.used / deeplUsage.limit) * 100)
+                                : 0;
+                              const usedK = deeplUsage.used >= 1000
+                                ? `${(deeplUsage.used / 1000).toFixed(0)}k`
+                                : String(deeplUsage.used);
+                              const limitK = deeplUsage.limit >= 1000
+                                ? `${(deeplUsage.limit / 1000).toFixed(0)}k`
+                                : String(deeplUsage.limit);
+                              return `DeepL: ${usedK}/${limitK} (${pct}%)`;
+                            })()
+                          : <span style={{ cursor: 'pointer' }} onClick={() => void fetchDeeplUsage()}>DeepL quota ↻</span>
+                      }
+                    </span>
                   </>
                 );
               })()}

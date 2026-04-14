@@ -165,9 +165,9 @@ function cleanContent(raw: string): string {
 }
 
 /** Long EN articles exceed model output in one JSON blob; split body into several translate calls. */
-const CONTENT_AUTO_CHUNK_CHARS = 1_200;
+const CONTENT_AUTO_CHUNK_CHARS = 500;
 /** Small chunks + sentence/paragraph boundaries → fewer mid-paragraph cuts and less “lazy” summarizing. */
-const CONTENT_CHUNK_TARGET = 520;
+const CONTENT_CHUNK_TARGET = 280;
 
 /** Appended to each LLM body request; must be copied verbatim to end of JSON "content" so we detect mid-string stops. */
 const CHUNK_END_MARKER = '<<<CHUNK_EOC_UCH_a1b2c3>>>';
@@ -411,12 +411,15 @@ async function translateBodyInChunks(
     let retryForEnglishCopy = false;
     let lastErr: Error | null = null;
     for (let attempt = 0; attempt < 4; attempt++) {
-      const sys = `Translate from English to ${langName}. Source is ALWAYS English.
-${STRICT_COVERAGE_BLOCK}
-${retryForEnglishCopy ? englishCopyRetryNote(langName) : ''}
-This is MARKDOWN body part ${i + 1} of ${chunks.length} of one page. Translate every line of the user message EXCEPT the final line ${CHUNK_END_MARKER} — that final line is a machine footer: copy it EXACTLY (same ASCII characters) as the very last line inside JSON "content" after all translated markdown. Do not translate ${CHUNK_END_MARKER}.
-You must translate ALL markdown above the footer — no omissions, no summarizing, no stopping early.
-Output ONLY valid JSON: one object with key "content" (string). Preserve Markdown (# ## lists **bold** \`code\`). No markdown code fences around the JSON.`;
+      const chunkLen = enChunk.length;
+      const sys = `You are a professional translator. Translate the following short English text fragment into ${langName}.
+Rules:
+1. Translate EVERY word and sentence — no omissions, no summarizing, no paraphrasing. Full 1:1 translation.
+2. Output ONLY valid JSON: {"content": "<translated text>"}. No markdown fences around the JSON.
+3. Preserve Markdown formatting (# ## ** lists \`code\`). Keep URLs and code blocks unchanged.
+4. Do NOT translate the machine marker ${CHUNK_END_MARKER} — copy it verbatim as the very last line inside "content".
+5. The source is ${chunkLen} characters. Your translation should be complete before the marker.${retryForEnglishCopy ? `\n6. IMPORTANT: Previous attempt was rejected because output was in English. Output MUST be in ${langName}, NOT English.` : ''}
+This is fragment ${i + 1} of ${chunks.length}.`;
       try {
         const raw = await withOllamaSlot(() =>
           ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: userPayload }], useModel)

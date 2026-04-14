@@ -338,6 +338,7 @@ export default function AdminEditPage() {
   const [translatePauseCountdown, setTranslatePauseCountdown] = useState<number | null>(null);
   const [translateLabelsLoading, setTranslateLabelsLoading] = useState(false);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
+  const [translateProvider, setTranslateProvider] = useState<'ollama' | 'deepl'>('ollama');
   const [autoResumeCountdown, setAutoResumeCountdown] = useState<number | null>(null);
   const autoResumeOnErrorRef = useRef(autoResumeOnError);
   autoResumeOnErrorRef.current = autoResumeOnError;
@@ -576,8 +577,11 @@ export default function AdminEditPage() {
         lastIndex = i;
         const loc = localesToTranslate[i];
         setTranslateProgress({ current: i + 1, total: localesToTranslate.length, locale: loc });
+        const translateUrl = translateProvider === 'deepl'
+          ? '/api/twojastara/deepl/translate'
+          : '/api/twojastara/ollama/translate';
         const res = await fetchWithTimeoutAndRetry(
-          '/api/twojastara/ollama/translate',
+          translateUrl,
           {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -1158,6 +1162,19 @@ export default function AdminEditPage() {
                             : targetForSelect[0] ?? '';
                           return (
                             <>
+                              <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                                Provider:
+                                <select
+                                  value={translateProvider}
+                                  onChange={(e) => setTranslateProvider(e.target.value as 'ollama' | 'deepl')}
+                                  disabled={translating}
+                                  className="admin-form-select"
+                                  style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem' }}
+                                >
+                                  <option value="ollama">Ollama</option>
+                                  <option value="deepl">DeepL</option>
+                                </select>
+                              </label>
                               <label style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
                                 Start from:
                                 <select

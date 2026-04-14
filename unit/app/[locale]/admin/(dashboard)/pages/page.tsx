@@ -314,6 +314,7 @@ export default function AdminPagesList() {
   const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
   const [generateProvider, setGenerateProvider] = useState<GenerateProviderType>('ollama');
+  const [translateProvider, setTranslateProvider] = useState<'ollama' | 'deepl'>('ollama');
   const [ollamaModel, setOllamaModel] = useState('glm-4.6:cloud');
   const [showBulkImport, setShowBulkImport] = useState(false);
   const [bulkImportJson, setBulkImportJson] = useState('');
@@ -1404,6 +1405,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       translateConcurrency,
       contentParallel,
       ollamaModel,
+      translateProvider,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -1436,6 +1438,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       translateConcurrency,
       contentParallel,
       ollamaModel,
+      translateProvider,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -1660,6 +1663,22 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                 <option value="ollama">Ollama</option>
                 <option value="claude">Claude 4.6</option>
               </select>
+              <label
+                style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}
+                title="Provider tłumaczenia: Ollama (LLM) lub DeepL (szybki, wymaga klucza API)"
+              >
+                Translate:
+                <select
+                  value={translateProvider}
+                  onChange={(e) => setTranslateProvider(e.target.value as 'ollama' | 'deepl')}
+                  disabled={!!translateProgress}
+                  className="admin-form-select"
+                  style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem' }}
+                >
+                  <option value="ollama">Ollama</option>
+                  <option value="deepl">DeepL</option>
+                </select>
+              </label>
               <label
                 style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}
                 title="Model Ollama dla Generate, Translate i Translate Labels"

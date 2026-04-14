@@ -11,6 +11,7 @@ type KeyStatus = {
 type ApiKeysStatus = {
   ollama: KeyStatus;
   anthropic: KeyStatus;
+  deepl: KeyStatus;
   updatedAt: string | null;
 };
 
@@ -22,13 +23,16 @@ export default function ApiKeysPage() {
   const [loading, setLoading] = useState(true);
   const [ollamaInput, setOllamaInput] = useState('');
   const [anthropicInput, setAnthropicInput] = useState('');
+  const [deeplInput, setDeeplInput] = useState('');
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
   const [testingOllama, setTestingOllama] = useState(false);
   const [testingAnthropic, setTestingAnthropic] = useState(false);
+  const [testingDeepl, setTestingDeepl] = useState(false);
   const [testOllamaNote, setTestOllamaNote] = useState('');
   const [testAnthropicNote, setTestAnthropicNote] = useState('');
+  const [testDeeplNote, setTestDeeplNote] = useState('');
 
   const load = useCallback(() => {
     setLoading(true);
@@ -47,18 +51,15 @@ export default function ApiKeysPage() {
     load();
   }, [load]);
 
-  async function saveSection(which: 'ollama' | 'anthropic' | 'both') {
+  async function saveSection(which: 'ollama' | 'anthropic' | 'deepl') {
     setError('');
     setMessage('');
     setSaving(true);
     try {
       const body: Record<string, unknown> = {};
-      if (which === 'ollama' || which === 'both') {
-        if (ollamaInput.trim()) body.ollamaApiKey = ollamaInput.trim();
-      }
-      if (which === 'anthropic' || which === 'both') {
-        if (anthropicInput.trim()) body.anthropicApiKey = anthropicInput.trim();
-      }
+      if (which === 'ollama' && ollamaInput.trim()) body.ollamaApiKey = ollamaInput.trim();
+      if (which === 'anthropic' && anthropicInput.trim()) body.anthropicApiKey = anthropicInput.trim();
+      if (which === 'deepl' && deeplInput.trim()) body.deeplApiKey = deeplInput.trim();
       if (Object.keys(body).length === 0) {
         setMessage('Enter a new key or use Clear to remove the database value.');
         return;
@@ -72,8 +73,9 @@ export default function ApiKeysPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Save failed');
       setMessage(data.message || 'Saved');
-      if (which === 'ollama' || which === 'both') setOllamaInput('');
-      if (which === 'anthropic' || which === 'both') setAnthropicInput('');
+      if (which === 'ollama') setOllamaInput('');
+      if (which === 'anthropic') setAnthropicInput('');
+      if (which === 'deepl') setDeeplInput('');
       load();
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Save failed');
@@ -188,6 +190,57 @@ export default function ApiKeysPage() {
     }
   }
 
+  async function clearDeepl() {
+    if (!confirm('Remove DeepL key from database? The app will use DEEPL_API_KEY from the environment if set.')) return;
+    setError('');
+    setMessage('');
+    setSaving(true);
+    try {
+      const res = await fetch('/api/twojastara/settings/api-keys', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ clearDeepl: true }),
+        credentials: 'include',
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Clear failed');
+      setMessage('DeepL DB key cleared');
+      load();
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Clear failed');
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function testDeeplApi() {
+    setError('');
+    setTestDeeplNote('');
+    setTestingDeepl(true);
+    try {
+      const body: Record<string, unknown> = { provider: 'deepl' };
+      if (deeplInput.trim()) body.deeplApiKey = deeplInput.trim();
+      const res = await fetch('/api/twojastara/settings/api-keys/test', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        credentials: 'include',
+      });
+      const data = await res.json();
+      if (data.ok) {
+        setTestDeeplNote(
+          [data.message, data.responsePreview && `Preview: ${data.responsePreview}`].filter(Boolean).join(' · ')
+        );
+      } else {
+        setError(data.error || 'DeepL test failed');
+      }
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'DeepL test failed');
+    } finally {
+      setTestingDeepl(false);
+    }
+  }
+
   function badge(ok: boolean, label: string) {
     return (
       <span
@@ -226,9 +279,17 @@ export default function ApiKeysPage() {
             <strong>Anthropic (Claude)</strong>
             {badge(status.anthropic.effectiveConfigured, status.anthropic.effectiveConfigured ? 'ready' : 'not configured')}
           </p>
-          <ul style={{ margin: '0 0 0 1.25rem' }}>
+          <ul style={{ margin: '0 0 1rem 1.25rem' }}>
             <li>Key in database: {status.anthropic.storedInDatabase ? 'yes (hidden)' : 'no'}</li>
             <li>Env fallback (ANTHROPIC_API_KEY): {status.anthropic.environmentFallbackAvailable ? 'set' : 'not set'}</li>
+          </ul>
+          <p style={{ marginBottom: '0.5rem' }}>
+            <strong>DeepL</strong>
+            {badge(status.deepl?.effectiveConfigured, status.deepl?.effectiveConfigured ? 'ready' : 'not configured')}
+          </p>
+          <ul style={{ margin: '0 0 0 1.25rem' }}>
+            <li>Key in database: {status.deepl?.storedInDatabase ? 'yes (hidden)' : 'no'}</li>
+            <li>Env fallback (DEEPL_API_KEY): {status.deepl?.environmentFallbackAvailable ? 'set' : 'not set'}</li>
           </ul>
           {status.updatedAt && (
             <p style={{ marginTop: '1rem' }}>Last settings update: {new Date(status.updatedAt).toLocaleString()}</p>
@@ -320,6 +381,44 @@ export default function ApiKeysPage() {
           {testAnthropicNote && (
             <p style={{ marginTop: '0.75rem', color: 'var(--accent-success, #22c55e)', fontSize: '0.9rem' }}>
               {testAnthropicNote}
+            </p>
+          )}
+        </section>
+
+        <section>
+          <h2 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>DeepL API key</h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginBottom: '0.75rem' }}>
+            Free-plan keys end with <code>:fx</code> (uses api-free.deepl.com). Supports ~30 languages — fast, no chunking needed.
+          </p>
+          <input
+            type="password"
+            autoComplete="off"
+            value={deeplInput}
+            onChange={(e) => setDeeplInput(e.target.value)}
+            placeholder="Paste new key to store in DB…"
+            className="admin-form-input"
+            style={{ width: '100%', marginBottom: '0.75rem' }}
+          />
+          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
+            <button type="button" className="btn btn-primary" disabled={saving} onClick={() => saveSection('deepl')}>
+              Save DeepL key
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              disabled={saving || testingDeepl}
+              onClick={testDeeplApi}
+              title={deeplInput.trim() ? 'Test the key in the field above (not saved yet)' : 'Test the key from database or DEEPL_API_KEY'}
+            >
+              {testingDeepl ? 'Testing…' : 'Test API'}
+            </button>
+            <button type="button" className="btn btn-secondary" disabled={saving} onClick={clearDeepl}>
+              Clear DB key (use env)
+            </button>
+          </div>
+          {testDeeplNote && (
+            <p style={{ marginTop: '0.75rem', color: 'var(--accent-success, #22c55e)', fontSize: '0.9rem' }}>
+              {testDeeplNote}
             </p>
           )}
         </section>

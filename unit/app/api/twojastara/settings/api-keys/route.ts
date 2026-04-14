@@ -16,13 +16,15 @@ export async function GET() {
 
     const row = await prisma.adminSettings.findUnique({
       where: { id: SETTINGS_ID },
-      select: { ollamaApiKey: true, anthropicApiKey: true, updatedAt: true },
+      select: { ollamaApiKey: true, anthropicApiKey: true, deeplApiKey: true, updatedAt: true },
     });
 
     const ollamaDb = !!row?.ollamaApiKey?.trim();
     const anthropicDb = !!row?.anthropicApiKey?.trim();
+    const deeplDb = !!row?.deeplApiKey?.trim();
     const ollamaEnv = !!process.env.OLLAMA_API_KEY?.trim();
     const anthropicEnv = !!process.env.ANTHROPIC_API_KEY?.trim();
+    const deeplEnv = !!process.env.DEEPL_API_KEY?.trim();
 
     return NextResponse.json({
       ollama: {
@@ -35,6 +37,11 @@ export async function GET() {
         environmentFallbackAvailable: anthropicEnv,
         effectiveConfigured: anthropicDb || anthropicEnv,
       },
+      deepl: {
+        storedInDatabase: deeplDb,
+        environmentFallbackAvailable: deeplEnv,
+        effectiveConfigured: deeplDb || deeplEnv,
+      },
       updatedAt: row?.updatedAt?.toISOString() ?? null,
     });
   } catch (error) {
@@ -46,8 +53,10 @@ export async function GET() {
 type PutBody = {
   ollamaApiKey?: string;
   anthropicApiKey?: string;
+  deeplApiKey?: string;
   clearOllama?: boolean;
   clearAnthropic?: boolean;
+  clearDeepl?: boolean;
 };
 
 /**
@@ -63,7 +72,7 @@ export async function PUT(request: NextRequest) {
 
     const body = (await request.json()) as PutBody;
 
-    const patch: { ollamaApiKey?: string | null; anthropicApiKey?: string | null } = {};
+    const patch: { ollamaApiKey?: string | null; anthropicApiKey?: string | null; deeplApiKey?: string | null } = {};
 
     if (body.clearOllama === true) {
       patch.ollamaApiKey = null;
@@ -77,6 +86,12 @@ export async function PUT(request: NextRequest) {
       patch.anthropicApiKey = body.anthropicApiKey.trim();
     }
 
+    if (body.clearDeepl === true) {
+      patch.deeplApiKey = null;
+    } else if (typeof body.deeplApiKey === 'string' && body.deeplApiKey.trim()) {
+      patch.deeplApiKey = body.deeplApiKey.trim();
+    }
+
     if (Object.keys(patch).length === 0) {
       return NextResponse.json({ ok: true, message: 'No changes submitted' });
     }
@@ -87,6 +102,7 @@ export async function PUT(request: NextRequest) {
         id: SETTINGS_ID,
         ollamaApiKey: patch.ollamaApiKey !== undefined ? patch.ollamaApiKey : null,
         anthropicApiKey: patch.anthropicApiKey !== undefined ? patch.anthropicApiKey : null,
+        deeplApiKey: patch.deeplApiKey !== undefined ? patch.deeplApiKey : null,
       },
       update: patch,
     });

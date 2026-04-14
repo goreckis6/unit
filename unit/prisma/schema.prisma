@@ -56,6 +56,7 @@ model AdminSettings {
   id                String   @id @default("default")
   ollamaApiKey      String?
   anthropicApiKey   String?
+  deeplApiKey       String?
   updatedAt         DateTime @updatedAt
 }
 

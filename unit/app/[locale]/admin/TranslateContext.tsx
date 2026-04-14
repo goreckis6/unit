@@ -108,6 +108,7 @@ type TranslateContextValue = {
     translateConcurrency?: number;
     contentParallel?: number;
     ollamaModel?: string;
+    translateProvider?: 'ollama' | 'deepl';
     resumeOverride?: TranslatePausedAt;
     forceRetranslateContent?: boolean;
     autoResumeOnError: boolean;
@@ -210,6 +211,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     translateConcurrency?: number;
     contentParallel?: number;
     ollamaModel?: string;
+    translateProvider?: 'ollama' | 'deepl';
     resumeOverride?: TranslatePausedAt;
     forceRetranslateContent?: boolean;
     autoResumeOnError: boolean;
@@ -224,6 +226,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       resumeOverride,
       autoResumeOnError,
       ollamaModel,
+      translateProvider = 'ollama',
       onPagesUpdate,
       onPageTranslated,
       onComplete,
@@ -392,6 +395,12 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       if (translateOnlyOne) {
         localesToTranslate = (localesToTranslate?.includes?.(effectiveStart) ?? false) ? [effectiveStart] : [];
       }
+      // DeepL does not support all app locales — skip unsupported ones instead of failing.
+      if (translateProvider === 'deepl') {
+        const DEEPL_UNSUPPORTED = new Set(['hi']);
+        localesToTranslate = (localesToTranslate ?? []).filter((l) => !DEEPL_UNSUPPORTED.has(l));
+      }
+
       if (localesToTranslate.length === 0) return true;
 
       pagesTranslatedCountRef.current++;
@@ -413,9 +422,12 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             batch.map(async (chunk) => {
               let res: Response;
               let data: { error?: string; content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[]; byLocale?: Record<string, { content?: string; title?: string; displayTitle?: string; description?: string; faqItems?: unknown[] }> };
+              const translateUrl = translateProvider === 'deepl'
+                ? '/api/twojastara/deepl/translate'
+                : '/api/twojastara/ollama/translate';
               for (let attempt = 0; attempt <= 2; attempt++) {
                 res = await fetchWithTimeoutAndRetry(
-                  '/api/twojastara/ollama/translate',
+                  translateUrl,
                   {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -426,7 +438,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                       title: enTitle || undefined,
                       displayTitle: enDisplayTitle || undefined,
                       description: enDescription || undefined,
-                      model: ollamaModel || undefined,
+                      ...(translateProvider !== 'deepl' && { model: ollamaModel || undefined }),
                     }),
                     credentials: 'include',
                   },

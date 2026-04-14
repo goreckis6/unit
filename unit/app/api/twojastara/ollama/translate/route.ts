@@ -207,12 +207,37 @@ const ENGLISH_COPY_MESSAGE =
 /** Per-chunk: output much shorter than source usually means summarization / drop (not strict: PL can be zwięzły). */
 const CHUNK_MIN_LENGTH_RATIO = 0.52;
 
+/**
+ * Terminal punctuation characters that signal a properly finished sentence or block.
+ * Covers Latin, Arabic (؟ .), Hebrew, CJK, Devanagari (।), Myanmar (၊ ။), etc.
+ */
+const SENTENCE_TERMINAL_RE = /[.!?。！？؟\u0964\u104A\u104B…»\]}"')\n]$/;
+
+/**
+ * Detects a mid-word or mid-sentence cut: the English source ends cleanly
+ * but the translated output does not.  Catches e.g. German "Online-" (compound
+ * word split by token limit) or any output that stops without closing its last
+ * sentence while the source does close it.
+ * Skipped when source is too short to be reliable.
+ */
+function looksLikeMidSentenceCut(en: string, out: string): boolean {
+  const enTail = en.trimEnd();
+  const outTail = out.trimEnd();
+  if (enTail.length < 80 || outTail.length < 40) return false;
+  const enEndsClean = SENTENCE_TERMINAL_RE.test(enTail);
+  const outEndsClean = SENTENCE_TERMINAL_RE.test(outTail);
+  return enEndsClean && !outEndsClean;
+}
+
 function looksTruncatedBodyChunk(en: string, out: string, targetLocale: string): boolean {
   if (CJK_LOCALE_PREFIX.test(targetLocale.trim())) return false;
   const enLen = en.trim().length;
   const outLen = out.trim().length;
   if (enLen < 320) return false;
-  return outLen < enLen * CHUNK_MIN_LENGTH_RATIO;
+  if (outLen < enLen * CHUNK_MIN_LENGTH_RATIO) return true;
+  // Catch near-complete but mid-sentence truncation (ratio looks fine but output stops mid-word)
+  if (looksLikeMidSentenceCut(en, out)) return true;
+  return false;
 }
 
 
@@ -433,6 +458,10 @@ Output ONLY valid JSON: one object with key "content" (string). Preserve Markdow
       throw new Error(
         `${TRUNCATED_BODY_RATIO_MESSAGE} (Łącznie ${merged.length} vs EN ${enTrim.length} znaków — stosunek ${(r * 100).toFixed(0)}%.)`
       );
+    }
+    // The merged body should end where the source ends (last sentence complete).
+    if (looksLikeMidSentenceCut(enTrim, merged)) {
+      throw new Error(`${TRUNCATED_BODY_RATIO_MESSAGE} (Scalona treść urywa się w środku zdania.)`);
     }
   }
   return merged;
@@ -800,13 +829,14 @@ export async function POST(request: NextRequest) {
     if (looksLikeEnglishCopy(content, resultContent, locales[0] ?? '')) {
       throw new Error(ENGLISH_COPY_MESSAGE);
     }
-    if (
-      !isBatch &&
-      typeof content === 'string' &&
-      content.trim().length >= 900 &&
-      looksTruncatedBodyChunk(content, resultContent, locales[0] ?? '')
-    ) {
-      throw new Error(`${TRUNCATED_BODY_RATIO_MESSAGE} Ponów Translate.`);
+    if (!isBatch && typeof content === 'string' && content.trim().length >= 320) {
+      if (looksTruncatedBodyChunk(content, resultContent, locales[0] ?? '')) {
+        throw new Error(`${TRUNCATED_BODY_RATIO_MESSAGE} Ponów Translate.`);
+      }
+      // Mid-sentence cut check regardless of length (catches near-complete truncation)
+      if (!CJK_LOCALE_PREFIX.test((locales[0] ?? '').trim()) && looksLikeMidSentenceCut(content, resultContent)) {
+        throw new Error(`${TRUNCATED_BODY_RATIO_MESSAGE} (Treść urywa się w środku zdania.) Ponów Translate.`);
+      }
     }
     const resultTitle = enTitle && single.title ? String(single.title).trim() : enTitle;
     const resultDisplayTitle = enDisplayTitle && single.displayTitle ? String(single.displayTitle).trim() : enDisplayTitle;

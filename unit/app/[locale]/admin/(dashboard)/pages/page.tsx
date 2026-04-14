@@ -2131,7 +2131,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                     {filteredPages.filter((p) => hasEnContent(p) && !hasAllTranslations(p)).length > 0 && (
                       <button
                         type="button"
-                        onClick={handleTranslateMissingTranslations}
+                        onClick={() => handleTranslateMissingTranslations()}
                         disabled={!!generateProgress || !!translateProgress || !!translateLabelsLoading}
                         className="btn btn-primary btn-sm"
                         style={{ padding: '0.35rem 0.75rem' }}
@@ -2475,7 +2475,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
               {filteredPages.filter((p) => hasEnContent(p) && !hasAllTranslations(p)).length > 0 && (
                 <button
                   type="button"
-                  onClick={handleTranslateMissingTranslations}
+                  onClick={() => handleTranslateMissingTranslations()}
                   disabled={!!generateProgress || !!translateProgress || !!translateLabelsLoading}
                   className="btn btn-primary btn-sm"
                   style={{ padding: '0.35rem 0.75rem' }}
@@ -2486,7 +2486,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
               )}
               <button
                 type="button"
-                onClick={handleBatchTranslate}
+                onClick={() => handleBatchTranslate()}
                 disabled={selectedCount === 0 || !!generateProgress || !!translateProgress || !!translateLabelsLoading}
                 className="btn btn-secondary btn-sm"
                 style={{ padding: '0.35rem 0.75rem' }}

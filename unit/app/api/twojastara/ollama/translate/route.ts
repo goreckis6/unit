@@ -187,8 +187,11 @@ function stripChunkEndMarker(text: string): string {
   return (text ?? '').replace(new RegExp(`\\n*${escapeRegExp(CHUNK_END_MARKER)}\\s*$`), '').trimEnd();
 }
 
-/** Locales where character-count ratio vs English is unreliable (skip length heuristic). */
-const CJK_LOCALE_PREFIX = /^(ja|zh|ko|tw|cn|hk|th)(-|$)/i;
+/**
+ * Locales where character-count / sentence-count heuristics vs English are unreliable:
+ * CJK (different script, no Western sentence terminators), Arabic, Hebrew, Hindi, Thai, etc.
+ */
+const CJK_LOCALE_PREFIX = /^(ja|zh|ko|tw|cn|hk|th|ar|he|fa|hi|ur|bn|ta|te|ml|si|km|lo|my|ka|am)(-|$)/i;
 
 const TRUNCATED_BODY_RATIO_MESSAGE =
   'Tłumaczenie treści wygląda na ucięte (wynik znacznie krótszy niż angielski fragment). Model zamknął JSON, ale nie przetłumaczył całości — ponów Translate lub ustaw OLLAMA_TRANSLATE_NUM_PREDICT=131072.';
@@ -205,7 +208,8 @@ const ENGLISH_COPY_MESSAGE =
  */
 /** Per-chunk: output much shorter than source usually means summarization / drop (not strict: PL can be zwięzły). */
 const CHUNK_MIN_LENGTH_RATIO = 0.52;
-const SENTENCE_COVERAGE_MIN_RATIO = 0.72;
+/** Loose enough to allow shorter target languages (e.g. Finnish, Hungarian compound words). */
+const SENTENCE_COVERAGE_MIN_RATIO = 0.55;
 
 function looksTruncatedBodyChunk(en: string, out: string, targetLocale: string): boolean {
   if (CJK_LOCALE_PREFIX.test(targetLocale.trim())) return false;
@@ -235,10 +239,12 @@ function looksLowSentenceCoverage(en: string, out: string, targetLocale: string)
   if (CJK_LOCALE_PREFIX.test(targetLocale.trim())) return false;
   const enCount = countSentenceMarkers(en);
   const outCount = countSentenceMarkers(out);
-  if (enCount < 3 || outCount === 0) return false;
+  // Need enough sentences in source to make ratio meaningful; also output may use
+  // fewer terminators if model wraps sentences differently → require at least 5 in source.
+  if (enCount < 5 || outCount === 0) return false;
   const coverage = outCount / enCount;
   if (coverage < SENTENCE_COVERAGE_MIN_RATIO) return true;
-  return hasSuspiciousEllipsisEnding(en, out) && coverage < 0.9;
+  return hasSuspiciousEllipsisEnding(en, out) && coverage < 0.85;
 }
 
 function normalizeForLocaleComparison(text: string): string {

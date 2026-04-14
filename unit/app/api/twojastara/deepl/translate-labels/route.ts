@@ -26,7 +26,7 @@ const DEEPL_LANG_MAP: Record<string, string> = {
   ar: 'AR',
   id: 'ID',
   tr: 'TR',
-  // hi is not supported by DeepL
+  hi: 'HI',
 };
 
 function toDeeplLang(locale: string): string | null {

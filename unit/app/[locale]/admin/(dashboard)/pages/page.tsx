@@ -1183,7 +1183,7 @@ export default function AdminPagesList() {
   /** DeepL locales — mirrors DEEPL_LANG_MAP in the translate-labels route (all except hi) */
   const DEEPL_SUPPORTED_LOCALES = new Set([
     'pl','de','fr','es','it','nl','pt','cs','sk','hu','sv','no','da','fi','ro',
-    'ru','ja','zh','ko','ar','id','tr',
+    'ru','ja','zh','ko','ar','id','tr','hi',
   ]);
 
   async function handleBulkTranslateLabelsDeepL(overrideIds?: string[]) {

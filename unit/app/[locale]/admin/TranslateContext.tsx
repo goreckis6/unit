@@ -395,11 +395,6 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       if (translateOnlyOne) {
         localesToTranslate = (localesToTranslate?.includes?.(effectiveStart) ?? false) ? [effectiveStart] : [];
       }
-      // DeepL does not support all app locales — skip unsupported ones instead of failing.
-      if (translateProvider === 'deepl') {
-        const DEEPL_UNSUPPORTED = new Set(['hi']);
-        localesToTranslate = (localesToTranslate ?? []).filter((l) => !DEEPL_UNSUPPORTED.has(l));
-      }
 
       if (localesToTranslate.length === 0) return true;
 

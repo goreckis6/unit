@@ -400,6 +400,60 @@ function splitContentAtBoundaries(text: string, maxChars: number): string[] {
   return chunks.filter(Boolean);
 }
 
+async function translateOneChunk(
+  apiKey: string,
+  useModel: string | undefined,
+  enChunk: string,
+  langName: string,
+  targetLocale: string,
+  chunkIndex: number,
+  totalChunks: number
+): Promise<string> {
+  const userPayload = `${enChunk}\n\n${CHUNK_END_MARKER}`;
+  let retryForEnglishCopy = false;
+  let lastErr: Error | null = null;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const chunkLen = enChunk.length;
+    const sys = `You are a professional translator. Translate the following short English text fragment into ${langName}.
+Rules:
+1. Translate EVERY word and sentence — no omissions, no summarizing, no paraphrasing. Full 1:1 translation.
+2. Output ONLY valid JSON: {"content": "<translated text>"}. No markdown fences around the JSON.
+3. Preserve Markdown formatting (# ## ** lists \`code\`). Keep URLs and code blocks unchanged.
+4. Do NOT translate the machine marker ${CHUNK_END_MARKER} — copy it verbatim as the very last line inside "content".
+5. The source is ${chunkLen} characters. Your translation should be complete before the marker.${retryForEnglishCopy ? `\n6. IMPORTANT: Previous attempt was rejected because output was in English. Output MUST be in ${langName}, NOT English.` : ''}
+This is fragment ${chunkIndex + 1} of ${totalChunks}.`;
+    try {
+      const raw = await withOllamaSlot(() =>
+        ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: userPayload }], useModel)
+      );
+      const parsed = parseTranslatedJsonStrict((raw || '').trim());
+      let rawContent = String((parsed as TranslatedItem).content ?? '');
+      if (!contentEndsWithChunkMarker(rawContent)) {
+        throw new Error(TRUNCATED_MARKER_MESSAGE);
+      }
+      rawContent = stripChunkEndMarker(rawContent);
+      const c = cleanContent(rawContent);
+      if (!c.trim()) {
+        throw new Error(`Pusta treść — część ${chunkIndex + 1}/${totalChunks}`);
+      }
+      if (looksLikeEnglishCopy(enChunk, c, targetLocale)) {
+        throw new Error(ENGLISH_COPY_MESSAGE);
+      }
+      if (looksTruncatedBodyChunk(enChunk, c, targetLocale)) {
+        throw new Error(TRUNCATED_BODY_RATIO_MESSAGE);
+      }
+      return c;
+    } catch (e) {
+      lastErr = e instanceof Error ? e : new Error(String(e));
+      const msg = lastErr.message;
+      if (msg === ENGLISH_COPY_MESSAGE) retryForEnglishCopy = true;
+      if (msg === TRUNCATED_JSON_MESSAGE) throw lastErr;
+      if (attempt < 3) await new Promise((r) => setTimeout(r, 2000));
+    }
+  }
+  throw lastErr!;
+}
+
 async function translateBodyInChunks(
   apiKey: string,
   useModel: string | undefined,
@@ -408,55 +462,13 @@ async function translateBodyInChunks(
   targetLocale: string
 ): Promise<string> {
   const chunks = splitContentAtBoundaries(enBody, CONTENT_CHUNK_TARGET);
-  const parts: string[] = [];
-  for (let i = 0; i < chunks.length; i++) {
-    const enChunk = chunks[i]!;
-    const userPayload = `${enChunk}\n\n${CHUNK_END_MARKER}`;
-    let retryForEnglishCopy = false;
-    let lastErr: Error | null = null;
-    for (let attempt = 0; attempt < 4; attempt++) {
-      const chunkLen = enChunk.length;
-      const sys = `You are a professional translator. Translate the following short English text fragment into ${langName}.
-Rules:
-1. Translate EVERY word and sentence — no omissions, no summarizing, no paraphrasing. Full 1:1 translation.
-2. Output ONLY valid JSON: {"content": "<translated text>"}. No markdown fences around the JSON.
-3. Preserve Markdown formatting (# ## ** lists \`code\`). Keep URLs and code blocks unchanged.
-4. Do NOT translate the machine marker ${CHUNK_END_MARKER} — copy it verbatim as the very last line inside "content".
-5. The source is ${chunkLen} characters. Your translation should be complete before the marker.${retryForEnglishCopy ? `\n6. IMPORTANT: Previous attempt was rejected because output was in English. Output MUST be in ${langName}, NOT English.` : ''}
-This is fragment ${i + 1} of ${chunks.length}.`;
-      try {
-        const raw = await withOllamaSlot(() =>
-          ollamaChat(apiKey, [{ role: 'system', content: sys }, { role: 'user', content: userPayload }], useModel)
-        );
-        const parsed = parseTranslatedJsonStrict((raw || '').trim());
-        let rawContent = String((parsed as TranslatedItem).content ?? '');
-        if (!contentEndsWithChunkMarker(rawContent)) {
-          throw new Error(TRUNCATED_MARKER_MESSAGE);
-        }
-        rawContent = stripChunkEndMarker(rawContent);
-        const c = cleanContent(rawContent);
-        if (!c.trim()) {
-          throw new Error(`Pusta treść — część ${i + 1}/${chunks.length}`);
-        }
-        if (looksLikeEnglishCopy(enChunk, c, targetLocale)) {
-          throw new Error(ENGLISH_COPY_MESSAGE);
-        }
-        if (looksTruncatedBodyChunk(enChunk, c, targetLocale)) {
-          throw new Error(TRUNCATED_BODY_RATIO_MESSAGE);
-        }
-        parts.push(c);
-        lastErr = null;
-        break;
-      } catch (e) {
-        lastErr = e instanceof Error ? e : new Error(String(e));
-        const msg = lastErr.message;
-        if (msg === ENGLISH_COPY_MESSAGE) retryForEnglishCopy = true;
-        if (msg === TRUNCATED_JSON_MESSAGE) throw lastErr;
-        if (attempt < 3) await new Promise((r) => setTimeout(r, 2000));
-      }
-    }
-    if (lastErr) throw lastErr;
-  }
+  // Translate all chunks in parallel — order is preserved via Promise.all index.
+  // Actual concurrency is capped by withOllamaSlot (MAX_CONCURRENT).
+  const parts = await Promise.all(
+    chunks.map((enChunk, i) =>
+      translateOneChunk(apiKey, useModel, enChunk, langName, targetLocale, i, chunks.length)
+    )
+  );
   const merged = parts.join('\n\n').trim();
   const enTrim = enBody.trim();
   if (!CJK_LOCALE_PREFIX.test(targetLocale.trim()) && enTrim.length > 1_200) {

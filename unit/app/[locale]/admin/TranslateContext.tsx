@@ -35,6 +35,7 @@ function shouldAutoResumeTranslateError(message: string): boolean {
     s.includes('bad gateway') ||
     s.includes('gateway timeout') ||
     s.includes('service unavailable') ||
+    s.includes('502') ||
     s.includes('503') ||
     s.includes('429') ||
     s.includes('concurrent request slot') ||
@@ -51,7 +52,9 @@ function shouldAutoResumeTranslateError(message: string): boolean {
     s.includes('failed to fetch') ||
     s.includes('networkerror') ||
     s.includes('load failed') ||
-    s.includes('server returned 5')
+    s.includes('server returned 5') ||
+    s.includes('invalid json') ||
+    s.includes('błąd serwera')
   );
 }
 

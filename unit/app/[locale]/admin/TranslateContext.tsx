@@ -232,8 +232,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       onComplete,
       forceRetranslateContent = false,
     } = params;
-    const concurrency = Math.max(1, Math.min(6, params.translateConcurrency ?? 4));
-    const contentParallel = Math.max(1, Math.min(8, params.contentParallel ?? 5));
+    const concurrency = Math.max(1, Math.min(10, params.translateConcurrency ?? 5));
+    const contentParallel = Math.max(1, Math.min(12, params.contentParallel ?? 6));
     const ids = Array.from(selectedIds);
     if (ids.length === 0) {
       setTranslateError('Zaznacz co najmniej jedną stronę.');
@@ -404,13 +404,20 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       const enDescription = (enFromFull?.description ?? enTrans?.description ?? '').trim();
       const translatedByLocale: Record<string, { content: string; title?: string; displayTitle?: string; description?: string; faqItems?: { question: string; answer: string }[] }> = {};
 
-      const localeChunks: string[][] = localesToTranslate.map((l) => [l]);
+      // For short content, batch multiple target locales into one LLM request to reduce API calls.
+      // For long content the server uses chunked single-locale translation, so keep batch size = 1.
+      const LOCALE_BATCH_SIZE = (translateProvider === 'ollama' && enContent.length > 1_400) ? 1 : 3;
+      const localeChunks: string[][] = [];
+      for (let i = 0; i < localesToTranslate.length; i += LOCALE_BATCH_SIZE) {
+        localeChunks.push(localesToTranslate.slice(i, i + LOCALE_BATCH_SIZE));
+      }
 
       for (let bi = 0; bi < localeChunks.length; bi += contentParallel) {
         if (hadErrorRef.current || abortRef.current?.signal?.aborted) return false;
         const batch = localeChunks.slice(bi, bi + contentParallel);
-        const batchLocs = batch.map((c) => c[0]).filter(Boolean);
-        stepRef.current += batch.length;
+        // All locales across all chunks in this parallel batch (for display + save)
+        const batchLocs = batch.flatMap((c) => c).filter(Boolean);
+        stepRef.current += batchLocs.length;
         setTranslateProgress({ current: stepRef.current, total: totalSteps, pageTitle: page.slug, pageCategory: page.category ?? '', locale: batchLocs.join(', '), startedAt: startedAtMs });
         try {
           const results = await Promise.all(
@@ -514,7 +521,9 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             };
           };
 
-          const translationUpdates = batchLocs.map((loc) => buildMergedRow(loc));
+          // Save all locales that were actually translated in this batch (handles multi-locale chunks)
+          const localesWithResults = batchLocs.filter((loc) => !!translatedByLocale[loc]);
+          const translationUpdates = localesWithResults.map((loc) => buildMergedRow(loc));
 
           const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
             method: 'PATCH',

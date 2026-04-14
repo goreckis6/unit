@@ -298,8 +298,8 @@ export default function AdminPagesList() {
   const [translateForceOverwrite, setTranslateForceOverwrite] = useState(false);
   /** On Alive tab: if checked, Translate (content) does not set manualBookmark to translation-done or switch tabs. */
   const [translateStayInAlive, setTranslateStayInAlive] = useState(false);
-  const [translateConcurrency, setTranslateConcurrency] = useState(4);
-  const [contentParallel, setContentParallel] = useState(4);
+  const [translateConcurrency, setTranslateConcurrency] = useState(5);
+  const [contentParallel, setContentParallel] = useState(6);
   const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
   const [generateProvider, setGenerateProvider] = useState<GenerateProviderType>('ollama');
@@ -2203,20 +2203,20 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                       <input
                         type="number"
                         min={1}
-                        max={20}
+                        max={10}
                         value={String(translateConcurrency)}
                         onChange={(e) => {
-                          const v = Math.min(6, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          const v = Math.min(10, Math.max(1, parseInt(e.target.value, 10) || 1));
                           setTranslateConcurrency(v);
                         }}
                         onBlur={(e) => {
-                          const v = Math.min(6, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          const v = Math.min(10, Math.max(1, parseInt(e.target.value, 10) || 1));
                           setTranslateConcurrency(v);
                         }}
                         disabled={!!translateProgress || !!translateLabelsLoading}
                         className="admin-form-select"
                         style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem', width: 48 }}
-                        title="Strony tłumaczonych równolegle (content). Zalecane: 3-8. Więcej = szybsze, może obciążyć API."
+                        title="Stron tłumaczonych równolegle. Zalecane: 5-10. Więcej = szybsze, może obciążyć API."
                       />
                     </label>
                     <label
@@ -2235,17 +2235,17 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                         max={12}
                         value={String(contentParallel)}
                         onChange={(e) => {
-                          const v = Math.min(8, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          const v = Math.min(12, Math.max(1, parseInt(e.target.value, 10) || 1));
                           setContentParallel(v);
                         }}
                         onBlur={(e) => {
-                          const v = Math.min(8, Math.max(1, parseInt(e.target.value, 10) || 1));
+                          const v = Math.min(12, Math.max(1, parseInt(e.target.value, 10) || 1));
                           setContentParallel(v);
                         }}
                         disabled={!!translateProgress || !!translateLabelsLoading}
                         className="admin-form-select"
                         style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem', width: 48 }}
-                        title="Języków równolegle na stronę. 4 = ~4× szybsze. OLLAMA_MAX_CONCURRENT=4 na serwerze."
+                        title="Języków równolegle na stronę. Zalecane: 6-12. OLLAMA_MAX_CONCURRENT=12 na serwerze."
                       />
                     </label>
                     <label

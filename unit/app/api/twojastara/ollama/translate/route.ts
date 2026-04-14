@@ -169,9 +169,9 @@ function cleanContent(raw: string): string {
 }
 
 /** Long EN articles exceed model output in one JSON blob; split body into several translate calls. */
-const CONTENT_AUTO_CHUNK_CHARS = 900;
-/** Small chunks + sentence/paragraph boundaries → fewer mid-paragraph cuts and less “lazy” summarizing. */
-const CONTENT_CHUNK_TARGET = 420;
+const CONTENT_AUTO_CHUNK_CHARS = 1_400;
+/** Plain-text output allows larger chunks; fewer calls = faster throughput. */
+const CONTENT_CHUNK_TARGET = 800;
 
 /** Appended to each LLM body request; must be copied verbatim to end of JSON "content" so we detect mid-string stops. */
 const CHUNK_END_MARKER = '<<<CHUNK_EOC_UCH_a1b2c3>>>';

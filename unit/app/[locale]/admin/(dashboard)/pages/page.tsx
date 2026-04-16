@@ -599,45 +599,32 @@ export default function AdminPagesList() {
     const countHeadings = (content: string) =>
       (content.match(/^#{1,3}\s+.+/gm) ?? []).length;
 
-    const lines: string[] = [
-      `Check translations (${ADMIN_LOCALES.length} locales expected):`,
-      `Heading check: each translation must have at least ${MIN_HEADINGS} headings (##).`,
-      '',
-    ];
+    const lines: string[] = [];
     const failedIds = new Set<string>();
     let allOk = 0;
-    let headingWarnCount = 0;
     for (const p of toCheck) {
       const missing = getMissingTranslations(p);
       const enTitle = p.translations.find((t) => t.locale === 'en')?.title ?? p.slug;
       if (missing.length > 0) {
         failedIds.add(p.id);
-        lines.push(`✗ ${enTitle}: missing content for ${missing.length} locale(s) (${missing.join(', ')})`);
+        lines.push(`✗ ${enTitle} — brak contentu: ${missing.join(', ')}`);
         continue;
       }
-      // Check heading count in each non-EN translation
-      const headingFails: string[] = [];
-      for (const loc of ADMIN_LOCALES) {
-        if (loc === 'en') continue;
+      const localesLowHeadings = ADMIN_LOCALES.filter((loc) => {
+        if (loc === 'en') return false;
         const t = p.translations.find((tr) => tr.locale === loc);
         const content = t?.content?.trim() ?? '';
-        if (!content) continue;
-        const n = countHeadings(content);
-        if (n < MIN_HEADINGS) headingFails.push(`${loc}(${n})`);
-      }
-      if (headingFails.length > 0) {
-        headingWarnCount += headingFails.length;
-        lines.push(`⚠ ${enTitle}: <${MIN_HEADINGS} headings in: ${headingFails.join(', ')}`);
+        return content && countHeadings(content) < MIN_HEADINGS;
+      });
+      if (localesLowHeadings.length > 0) {
+        lines.push(`⚠ ${enTitle} — za mało nagłówków (${localesLowHeadings.length} locale): ${localesLowHeadings.join(', ')}`);
       } else {
         allOk++;
-        lines.push(`✓ ${enTitle}: all ${ADMIN_LOCALES.length} translations OK`);
+        lines.push(`✓ ${enTitle}`);
       }
     }
     lines.push('');
-    lines.push(`${allOk}/${toCheck.length} pages OK`);
-    if (headingWarnCount > 0) {
-      lines.push(`${headingWarnCount} locale(s) with fewer than ${MIN_HEADINGS} headings.`);
-    }
+    lines.push(`${allOk}/${toCheck.length} OK`);
     setCheckFailedIds(failedIds);
     setCheckFailedType(failedIds.size > 0 ? 'translations' : null);
     setCheckResult(lines.join('\n'));

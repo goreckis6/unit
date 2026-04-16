@@ -298,6 +298,7 @@ export default function AdminPagesList() {
   /** On Alive tab: if checked, Translate (content) does not set manualBookmark to translation-done or switch tabs. */
   const [translateStayInAlive, setTranslateStayInAlive] = useState(false);
   const [translateConcurrency, setTranslateConcurrency] = useState(5);
+  const [translateConcurrency, setTranslateConcurrency] = useState(5);
   const [contentParallel, setContentParallel] = useState(6);
   const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
@@ -638,27 +639,27 @@ export default function AdminPagesList() {
       alert('Select pages or ensure the tab has pages.');
       return;
     }
-    const lines: string[] = [`Check labels (${ADMIN_LOCALES.length} locales expected):`];
+    const lines: string[] = [];
     const failedIds = new Set<string>();
     let allOk = 0;
     for (const p of toCheck) {
       const enTitle = p.translations.find((t) => t.locale === 'en')?.title ?? p.slug;
       if (!(p.calculatorCode ?? '').trim()) {
         allOk++;
-        lines.push(`✓ ${enTitle}: no calculator (N/A)`);
+        lines.push(`✓ ${enTitle} (N/A)`);
       } else {
         const missing = getMissingLabels(p);
         if (missing.length === 0) {
           allOk++;
-          lines.push(`✓ ${enTitle}: all ${ADMIN_LOCALES.length} labels OK`);
+          lines.push(`✓ ${enTitle}`);
         } else {
           failedIds.add(p.id);
-          lines.push(`✗ ${enTitle}: missing ${missing.length} (${missing.join(', ')})`);
+          lines.push(`✗ ${enTitle} — brak: ${missing.join(', ')}`);
         }
       }
     }
     lines.push('');
-    lines.push(`${allOk}/${toCheck.length} pages have all labels`);
+    lines.push(`${allOk}/${toCheck.length} OK`);
     setCheckFailedIds(failedIds);
     setCheckFailedType(failedIds.size > 0 ? 'labels' : null);
     setCheckResult(lines.join('\n'));

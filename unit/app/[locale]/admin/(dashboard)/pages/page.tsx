@@ -298,7 +298,6 @@ export default function AdminPagesList() {
   /** On Alive tab: if checked, Translate (content) does not set manualBookmark to translation-done or switch tabs. */
   const [translateStayInAlive, setTranslateStayInAlive] = useState(false);
   const [translateConcurrency, setTranslateConcurrency] = useState(5);
-  const [translateConcurrency, setTranslateConcurrency] = useState(5);
   const [contentParallel, setContentParallel] = useState(6);
   const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);

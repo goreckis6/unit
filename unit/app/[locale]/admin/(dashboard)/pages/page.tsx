@@ -664,15 +664,35 @@ export default function AdminPagesList() {
     setCheckResult(lines.join('\n'));
   }
 
-  /** Resume from translatePausedAt — auto-selects all pages starting from the paused slug. */
+  /**
+   * Resume from translatePausedAt.
+   * Selects pages starting from the paused slug within the currently selected set
+   * (or filteredPages if nothing was selected). Does NOT select all pages.
+   */
   function handleResumeFromPaused(providerOverride?: 'ollama' | 'deepl' | 'modernmt') {
     if (!translatePausedAt) return;
     const pausedSlug = translatePausedAt.pageSlug;
-    const pausedIdx = pages.findIndex((p) => p.slug === pausedSlug);
-    const fromIndex = pausedIdx >= 0 ? pausedIdx : 0;
-    const resumeIds = new Set(pages.slice(fromIndex).map((p) => p.id));
-    setSelectedIds(resumeIds);
     const provider = providerOverride ?? 'ollama';
+
+    // Source: previously selected pages, or current tab's filtered list
+    const sourcePages = selectedIds.size > 0
+      ? pages.filter((p) => selectedIds.has(p.id))
+      : filteredPages;
+
+    // Find the paused page in source, fall back to full pages list
+    let pausedIdx = sourcePages.findIndex((p) => p.slug === pausedSlug);
+    let resumeSource = sourcePages;
+    if (pausedIdx < 0) {
+      // Paused page not in current selection/filter — search all pages
+      const allIdx = pages.findIndex((p) => p.slug === pausedSlug);
+      pausedIdx = allIdx >= 0 ? allIdx : 0;
+      resumeSource = pages;
+    }
+
+    // Only pages from the paused one onwards
+    const resumeIds = new Set(resumeSource.slice(pausedIdx).map((p) => p.id));
+    setSelectedIds(resumeIds);
+
     startTranslate({
       pages,
       selectedIds: resumeIds,

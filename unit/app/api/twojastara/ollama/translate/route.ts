@@ -64,7 +64,7 @@ const ollamaDispatcher = new Agent({
   bodyTimeout: OLLAMA_TIMEOUT_MS,
 });
 
-const SLOT_RETRY_DELAY_MS = 8_000; // 30 s — Ollama Cloud "concurrent request slot" often clears
+const SLOT_RETRY_DELAY_MS = 3_000; // retry delay for slot/concurrency errors
 const SLOT_RETRY_MAX = 5;
 
 function isRetryableError(err: string): boolean {
@@ -122,7 +122,7 @@ async function ollamaChat(apiKey: string, messages: { role: string; content: str
         }
         const errMsg = (errObj?.error ?? errText) || `Ollama API error: ${res.status}`;
         if ((res.status >= 500 || isRetryableError(errMsg)) && attempt < SLOT_RETRY_MAX) {
-          const delayMs = res.status === 429 ? 60_000 : (res.status >= 500 ? 20_000 : SLOT_RETRY_DELAY_MS);
+          const delayMs = res.status === 429 ? 30_000 : (res.status >= 500 ? 5_000 : SLOT_RETRY_DELAY_MS);
           await new Promise((r) => setTimeout(r, delayMs));
           continue;
         }
@@ -466,7 +466,7 @@ async function translateOneChunk(
       lastErr = e instanceof Error ? e : new Error(String(e));
       const msg = lastErr.message;
       if (msg === ENGLISH_COPY_MESSAGE) retryForEnglishCopy = true;
-      if (attempt < 3) await new Promise((r) => setTimeout(r, 2000));
+      if (attempt < 3) await new Promise((r) => setTimeout(r, 1000));
     }
   }
   throw lastErr!;
@@ -540,7 +540,7 @@ Translate every string to ${langName}. Same number of faqItems as English pairs.
       lastErr = e instanceof Error ? e : new Error(String(e));
       if (lastErr.message === ENGLISH_COPY_MESSAGE) retryForEnglishCopy = true;
       if (lastErr.message === TRUNCATED_JSON_MESSAGE) throw lastErr;
-      if (attempt < 2) await new Promise((r) => setTimeout(r, 2000));
+      if (attempt < 2) await new Promise((r) => setTimeout(r, 1000));
     }
   }
   throw lastErr || new Error('Meta/FAQ translation failed');
@@ -786,7 +786,7 @@ export async function POST(request: NextRequest) {
           const msg = e instanceof Error ? e.message : '';
           if (msg === TRUNCATED_JSON_MESSAGE) throw e;
           if (attempt < 2) {
-            await new Promise((r) => setTimeout(r, 2000));
+            await new Promise((r) => setTimeout(r, 1000));
             raw = await withOllamaSlot(() =>
               ollamaChat(ollamaApiKey, [{ role: 'system', content: systemPrompt }, { role: 'user', content: userContent }], useModel)
             );
@@ -812,7 +812,7 @@ export async function POST(request: NextRequest) {
         );
       }
       retryLocales = badLocales;
-      await new Promise((r) => setTimeout(r, 2000));
+      await new Promise((r) => setTimeout(r, 1000));
     }
     parsed = parsed!;
 

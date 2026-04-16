@@ -30,6 +30,8 @@ async function safeResJson<T = unknown>(res: Response): Promise<T> {
 
 function shouldAutoResumeTranslateError(message: string): boolean {
   const s = (message ?? '').toLowerCase();
+  // Hard limits — do NOT auto-resume, user must switch provider
+  if (s.includes('weekly usage limit') || s.includes('monthly usage limit') || s.includes('quota exceeded')) return false;
   return (
     s.includes('internal server error') ||
     s.includes('bad gateway') ||
@@ -262,68 +264,72 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     const pagesTranslatedCountRef = { current: 0 };
     let hadError = false;
 
-    // Pre-scan: count total translations (pages × locales). Batch fetches (max 3 concurrent) to avoid ERR_INSUFFICIENT_RESOURCES
-    const PRE_SCAN_BATCH = 3;
+    // Pre-scan: count total translations (pages × locales).
+    // For force retranslate we know ALL locales will be translated — skip fetches entirely.
+    const PRE_SCAN_BATCH = 8; // increased from 3 for faster scan
     let totalSteps = 0;
-    try {
-      for (let i = 0; i < pagesWithEn.length; i += PRE_SCAN_BATCH) {
-        if (abortRef.current?.signal.aborted) break;
-        const batch = pagesWithEn.slice(i, i + PRE_SCAN_BATCH);
-        const counts = await Promise.all(
-          batch.map(async (page) => {
-            const enTrans = page.translations.find((t) => t.locale === 'en');
-            if (!(enTrans?.content ?? '').trim()) return 0;
-            let fullPage: { translations?: unknown[] } | null = null;
-            for (let attempt = 0; attempt <= 2; attempt++) {
-              const pageRes = await fetch(`/api/twojastara/pages/${page.id}`, {
-                credentials: 'include',
-                signal: abortRef.current?.signal,
-              });
-              try {
-                fullPage = await safeResJson<{ translations?: unknown[] }>(pageRes);
-                break;
-              } catch (e) {
-                if (attempt < 2) await new Promise((r) => setTimeout(r, 1500));
-                else throw e;
-              }
-            }
-            if (!fullPage || !fullPage?.translations) return 0;
-            const fullPageTrans = fullPage.translations ?? [];
-            const hasContent = (loc: string) => ((fullPageTrans.find((t: { locale: string; content?: string }) => t.locale === loc) as { content?: string } | undefined)?.content?.trim() ?? '').length > 0;
-            let localesToTranslate = forceRetranslateContent
-              ? [...(allNonEn ?? [])]
-              : (allNonEn ?? []).filter((loc) => !hasContent(loc));
-            if (resumeOverride && page.slug === resumeFromSlug) {
-              const startLoc = resumeOverride.nextLocale;
-              if (startLoc && allNonEn) {
-                if (!(localesToTranslate?.includes?.(startLoc) ?? false)) {
-                  const ane = allNonEn ?? [];
-                  localesToTranslate = [startLoc, ...localesToTranslate.filter((l) => ane.indexOf(l) > ane.indexOf(startLoc))];
-                } else {
-                  const idx = (localesToTranslate ?? []).indexOf(startLoc);
-                  localesToTranslate = (localesToTranslate ?? []).slice(idx >= 0 ? idx : 0);
+    if (forceRetranslateContent) {
+      const nonEnCount = translateOnlyOne ? 1 : (allNonEn?.length ?? 0);
+      totalSteps = pagesWithEn.filter((p) => (p.translations.find((t) => t.locale === 'en')?.content ?? '').trim()).length * nonEnCount;
+    } else {
+      try {
+        for (let i = 0; i < pagesWithEn.length; i += PRE_SCAN_BATCH) {
+          if (abortRef.current?.signal.aborted) break;
+          const batch = pagesWithEn.slice(i, i + PRE_SCAN_BATCH);
+          const counts = await Promise.all(
+            batch.map(async (page) => {
+              const enTrans = page.translations.find((t) => t.locale === 'en');
+              if (!(enTrans?.content ?? '').trim()) return 0;
+              let fullPage: { translations?: unknown[] } | null = null;
+              for (let attempt = 0; attempt <= 2; attempt++) {
+                const pageRes = await fetch(`/api/twojastara/pages/${page.id}`, {
+                  credentials: 'include',
+                  signal: abortRef.current?.signal,
+                });
+                try {
+                  fullPage = await safeResJson<{ translations?: unknown[] }>(pageRes);
+                  break;
+                } catch (e) {
+                  if (attempt < 2) await new Promise((r) => setTimeout(r, 1000));
+                  else throw e;
                 }
               }
-            } else if (allNonEn && effectiveStart && translateOnlyOne) {
-              const ane = allNonEn ?? [];
-              const startIdx = ane.indexOf(effectiveStart);
-              localesToTranslate = (localesToTranslate ?? []).filter((loc) => ane.indexOf(loc) >= startIdx);
-            }
-            if (translateOnlyOne) {
-              localesToTranslate = (localesToTranslate?.includes?.(effectiveStart) ?? false) ? [effectiveStart] : [];
-            }
-            return localesToTranslate.length;
-          })
-        );
-        totalSteps += counts.reduce((a, b) => a + b, 0);
+              if (!fullPage || !fullPage?.translations) return 0;
+              const fullPageTrans = fullPage.translations ?? [];
+              const hasContent = (loc: string) => ((fullPageTrans.find((t: { locale: string; content?: string }) => t.locale === loc) as { content?: string } | undefined)?.content?.trim() ?? '').length > 0;
+              let localesToTranslate = (allNonEn ?? []).filter((loc) => !hasContent(loc));
+              if (resumeOverride && page.slug === resumeFromSlug) {
+                const startLoc = resumeOverride.nextLocale;
+                if (startLoc && allNonEn) {
+                  if (!(localesToTranslate?.includes?.(startLoc) ?? false)) {
+                    const ane = allNonEn ?? [];
+                    localesToTranslate = [startLoc, ...localesToTranslate.filter((l) => ane.indexOf(l) > ane.indexOf(startLoc))];
+                  } else {
+                    const idx = (localesToTranslate ?? []).indexOf(startLoc);
+                    localesToTranslate = (localesToTranslate ?? []).slice(idx >= 0 ? idx : 0);
+                  }
+                }
+              } else if (allNonEn && effectiveStart && translateOnlyOne) {
+                const ane = allNonEn ?? [];
+                const startIdx = ane.indexOf(effectiveStart);
+                localesToTranslate = (localesToTranslate ?? []).filter((loc) => ane.indexOf(loc) >= startIdx);
+              }
+              if (translateOnlyOne) {
+                localesToTranslate = (localesToTranslate?.includes?.(effectiveStart) ?? false) ? [effectiveStart] : [];
+              }
+              return localesToTranslate.length;
+            })
+          );
+          totalSteps += counts.reduce((a, b) => a + b, 0);
+        }
+      } catch (e) {
+        const msg = e instanceof Error ? e.message : String(e);
+        const hint = /failed to fetch|networkerror|load failed/i.test(msg)
+          ? ' — Sprawdź połączenie lub odśwież stronę i zaloguj się ponownie.'
+          : '';
+        setTranslateError('Błąd przy zliczaniu: ' + msg + hint);
+        return;
       }
-    } catch (e) {
-      const msg = e instanceof Error ? e.message : String(e);
-      const hint = /failed to fetch|networkerror|load failed/i.test(msg)
-        ? ' — Sprawdź połączenie lub odśwież stronę i zaloguj się ponownie.'
-        : '';
-      setTranslateError('Błąd przy zliczaniu: ' + msg + hint);
-      return;
     }
     if (totalSteps === 0) {
       setTranslateError(
@@ -456,7 +462,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                 if (res.ok) break;
                 if (res.status === 401) throw new Error(data.error || 'Unauthorized');
                 if (res.status === 503 && attempt < 2) {
-                  await new Promise((r) => setTimeout(r, 10000));
+                  await new Promise((r) => setTimeout(r, 3000));
                   continue;
                 }
                 throw new Error(data.error || `Failed to translate to ${chunk.join(',')}`);

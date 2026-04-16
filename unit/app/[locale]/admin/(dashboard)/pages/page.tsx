@@ -2058,6 +2058,39 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
   return (
     <div>
       <style>{`@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}`}</style>
+
+      {/* ── Global Resume banner — visible on ALL bookmarks ── */}
+      {translatePausedAt && !translateProgress && (
+        <div
+          role="status"
+          style={{
+            marginBottom: '1rem',
+            padding: '0.75rem 1.25rem',
+            background: 'rgba(249, 115, 22, 0.08)',
+            border: '1px solid var(--warning-color, #f97316)',
+            borderRadius: 8,
+            fontSize: '0.875rem',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.6rem' }}>
+            <span style={{ color: 'var(--warning-color, #ea580c)', fontWeight: 600 }}>
+              ⏸ Zatrzymano — strona: <code>{translatePausedAt.pageSlug}</code> → {translatePausedAt.nextLocale}
+            </span>
+            <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
+              <button type="button" onClick={() => handleResumeFromPaused('ollama')} disabled={!!translateProgress} className="btn btn-primary btn-sm" style={{ padding: '0.3rem 0.75rem' }}>▶ Resume (Ollama)</button>
+              <button type="button" onClick={() => handleResumeFromPaused('deepl')} disabled={!!translateProgress} className="btn btn-secondary btn-sm" style={{ padding: '0.3rem 0.75rem', borderColor: '#0071e3', color: '#0071e3' }}>▶ Resume (DeepL)</button>
+              <button type="button" onClick={() => handleResumeFromPaused('modernmt')} disabled={!!translateProgress} className="btn btn-secondary btn-sm" style={{ padding: '0.3rem 0.75rem', borderColor: '#e05c00', color: '#e05c00' }}>▶ Resume (MMT)</button>
+              <button type="button" onClick={clearPaused} className="btn btn-secondary btn-sm" style={{ padding: '0.3rem 0.75rem' }}>Wyczyść</button>
+            </div>
+          </div>
+          {translateError && /weekly usage limit/i.test(translateError) && (
+            <div style={{ marginTop: '0.4rem', fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
+              ⚠ Limit tygodniowy Ollama wyczerpany — użyj <strong>Resume (DeepL)</strong> lub <strong>Resume (MMT)</strong>.
+            </div>
+          )}
+        </div>
+      )}
+
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', flexWrap: 'wrap', gap: '1rem' }}>
         <h1 style={{ fontSize: '1.75rem', color: 'var(--text-primary)' }}>Pages</h1>
         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -3161,67 +3194,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
         </p>
       )}
 
-      {translatePausedAt && !translateProgress && (
-        <div
-          role="status"
-          style={{
-            marginBottom: '1rem',
-            padding: '1rem 1.25rem',
-            background: 'rgba(249, 115, 22, 0.08)',
-            border: '1px solid var(--warning-color, #f97316)',
-            borderRadius: 8,
-            fontSize: '0.9rem',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.75rem' }}>
-            <span style={{ color: 'var(--warning-color, #ea580c)', fontWeight: 600 }}>
-              ⏸ Zatrzymano na stronie <code>{translatePausedAt.pageSlug}</code> → {translatePausedAt.nextLocale}
-            </span>
-            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-              <button
-                type="button"
-                onClick={() => handleResumeFromPaused('ollama')}
-                disabled={!!translateProgress}
-                className="btn btn-primary btn-sm"
-                style={{ padding: '0.35rem 0.9rem' }}
-              >
-                ▶ Resume (Ollama)
-              </button>
-              <button
-                type="button"
-                onClick={() => handleResumeFromPaused('deepl')}
-                disabled={!!translateProgress}
-                className="btn btn-secondary btn-sm"
-                style={{ padding: '0.35rem 0.75rem', borderColor: '#0071e3', color: '#0071e3' }}
-              >
-                ▶ Resume (DeepL)
-              </button>
-              <button
-                type="button"
-                onClick={() => handleResumeFromPaused('modernmt')}
-                disabled={!!translateProgress}
-                className="btn btn-secondary btn-sm"
-                style={{ padding: '0.35rem 0.75rem', borderColor: '#e05c00', color: '#e05c00' }}
-              >
-                ▶ Resume (MMT)
-              </button>
-              <button
-                type="button"
-                onClick={clearPaused}
-                className="btn btn-secondary btn-sm"
-                style={{ padding: '0.35rem 0.75rem' }}
-              >
-                Wyczyść status
-              </button>
-            </div>
-          </div>
-          {translateError && /weekly usage limit/i.test(translateError) && (
-            <div style={{ marginTop: '0.5rem', fontSize: '0.82rem', color: 'var(--text-secondary)' }}>
-              ⚠ Limit tygodniowy Ollama wyczerpany — użyj <strong>Resume (DeepL)</strong> lub <strong>Resume (MMT)</strong> żeby kontynuować bez Ollama.
-            </div>
-          )}
-        </div>
-      )}
+      {/* Resume banner moved to top of page — see above */}
       {(generateError || translateError || translateLabelsError) && !autoResumeCountdown && (
         <div
           role="alert"

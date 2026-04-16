@@ -198,7 +198,7 @@ function stripChunkEndMarker(text: string): string {
 const CJK_LOCALE_PREFIX = /^(ja|zh|ko|tw|cn|hk|th|ar|he|fa|hi|ur|bn|ta|te|ml|si|km|lo|my|ka|am)(-|$)/i;
 
 const TRUNCATED_BODY_RATIO_MESSAGE =
-  'Tłumaczenie treści wygląda na ucięte (wynik znacznie krótszy niż angielski fragment). Model zamknął JSON, ale nie przetłumaczył całości — ponów Translate lub ustaw OLLAMA_TRANSLATE_NUM_PREDICT=131072.';
+  'Tłumaczenie treści wygląda na ucięte (wynik znacznie krótszy niż angielski fragment lub urywa się w środku zdania). Model nie przetłumaczył całości — ponów Translate lub użyj innego modelu.';
 
 
 const ENGLISH_COPY_MESSAGE =

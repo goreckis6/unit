@@ -339,6 +339,10 @@ export default function AdminPagesList() {
   const [elapsedTick, setElapsedTick] = useState(0);
   const [deeplUsage, setDeeplUsage] = useState<{ used: number; limit: number } | null>(null);
   const [deeplUsageLoading, setDeeplUsageLoading] = useState(false);
+  const [limitAutoRetry, setLimitAutoRetry] = useState(false);
+  const [limitRetryIntervalMin, setLimitRetryIntervalMin] = useState(30);
+  const [limitRetrySecondsLeft, setLimitRetrySecondsLeft] = useState<number | null>(null);
+  const limitRetryProviderRef = useRef<'ollama' | 'deepl' | 'modernmt'>('ollama');
   const translateLabelsPausedRef = useRef(false);
   const translateLabelsAbortRef = useRef<AbortController | null>(null);
   const [generatedIdsThisRun, setGeneratedIdsThisRun] = useState<Set<string>>(new Set());
@@ -365,6 +369,30 @@ export default function AdminPagesList() {
     const id = setInterval(() => setElapsedTick((t) => t + 1), 1000);
     return () => clearInterval(id);
   }, [translateLabelsProgress?.startedAt, translateProgress?.startedAt]);
+
+  // Start auto-retry countdown when Ollama hits weekly/monthly limit
+  useEffect(() => {
+    const isLimitError = !!translateError && /weekly usage limit|monthly usage limit/i.test(translateError);
+    if (limitAutoRetry && isLimitError && translatePausedAt && !translateProgress) {
+      setLimitRetrySecondsLeft(limitRetryIntervalMin * 60);
+    } else if (!limitAutoRetry || !isLimitError || translateProgress) {
+      setLimitRetrySecondsLeft(null);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [limitAutoRetry, translateError, translatePausedAt, translateProgress]);
+
+  // Countdown ticker — fires Resume when it reaches 0
+  useEffect(() => {
+    if (limitRetrySecondsLeft === null) return;
+    if (limitRetrySecondsLeft <= 0) {
+      setLimitRetrySecondsLeft(null);
+      handleResumeFromPaused(limitRetryProviderRef.current);
+      return;
+    }
+    const id = setTimeout(() => setLimitRetrySecondsLeft((s) => (s !== null ? s - 1 : null)), 1000);
+    return () => clearTimeout(id);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [limitRetrySecondsLeft]);
 
   function setBookmark(stage: PageStage) {
     setActiveBookmark(stage);
@@ -2090,9 +2118,43 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
               <button type="button" onClick={clearPaused} className="btn btn-secondary btn-sm" style={{ padding: '0.3rem 0.75rem' }}>Wyczyść</button>
             </div>
           </div>
-          {translateError && /weekly usage limit/i.test(translateError) && (
-            <div style={{ marginTop: '0.4rem', fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-              ⚠ Limit tygodniowy Ollama wyczerpany — użyj <strong>Resume (DeepL)</strong> lub <strong>Resume (MMT)</strong>.
+          {translateError && /weekly usage limit|monthly usage limit/i.test(translateError) && (
+            <div style={{ marginTop: '0.5rem', fontSize: '0.82rem' }}>
+              <div style={{ color: 'var(--text-secondary)', marginBottom: '0.4rem' }}>
+                ⚠ Limit Ollama wyczerpany — możesz użyć <strong>Resume (DeepL)</strong> / <strong>Resume (MMT)</strong> lub poczekać na reset i wznowić automatycznie.
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', cursor: 'pointer', fontWeight: 500 }}>
+                  <input
+                    type="checkbox"
+                    checked={limitAutoRetry}
+                    onChange={(e) => {
+                      setLimitAutoRetry(e.target.checked);
+                      if (!e.target.checked) setLimitRetrySecondsLeft(null);
+                    }}
+                  />
+                  Auto-retry co
+                </label>
+                <input
+                  type="number"
+                  min={5}
+                  max={120}
+                  value={limitRetryIntervalMin}
+                  onChange={(e) => setLimitRetryIntervalMin(Math.max(5, Math.min(120, Number(e.target.value))))}
+                  style={{ width: 56, padding: '0.2rem 0.4rem', fontSize: '0.82rem', borderRadius: 4, border: '1px solid var(--border-color)' }}
+                />
+                <span>min (Ollama)</span>
+                {limitRetrySecondsLeft !== null && (
+                  <span style={{ color: '#16a34a', fontWeight: 600, minWidth: 120 }}>
+                    🕐 Ponowi za {Math.floor(limitRetrySecondsLeft / 60)}m {limitRetrySecondsLeft % 60}s
+                    <button
+                      type="button"
+                      onClick={() => { setLimitAutoRetry(false); setLimitRetrySecondsLeft(null); }}
+                      style={{ marginLeft: '0.5rem', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--error-color)', fontWeight: 700, fontSize: '0.8rem' }}
+                    >✕ Anuluj</button>
+                  </span>
+                )}
+              </div>
             </div>
           )}
         </div>

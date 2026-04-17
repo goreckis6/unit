@@ -211,6 +211,8 @@ type PageTranslation = {
   displayTitle?: string | null;
   description: string | null;
   content: string | null;
+  /** Full content length in characters (from DB), returned by list API. 0 = no content. */
+  contentLen?: number;
   relatedCalculators?: string | null;
   faqItems?: string | null;
   calculatorLabels?: string | null;
@@ -656,34 +658,62 @@ export default function AdminPagesList() {
       alert('Select pages or ensure the tab has pages.');
       return;
     }
-    const MIN_HEADINGS = 3;
-    const countHeadings = (content: string) =>
-      (content.match(/^#{1,3}\s+.+/gm) ?? []).length;
+
+    const MIN_CONTENT_LEN = 150;   // chars — below this is considered near-empty
+    const RATIO_WARN     = 0.25;   // translated content < 25% of EN → likely truncated
 
     const lines: string[] = [];
     const failedIds = new Set<string>();
     let allOk = 0;
+
     for (const p of toCheck) {
-      const missing = getMissingTranslations(p);
       const enTitle = p.translations.find((t) => t.locale === 'en')?.title ?? p.slug;
-      if (missing.length > 0) {
-        failedIds.add(p.id);
-        lines.push(`✗ ${enTitle} — brak contentu: ${missing.join(', ')}`);
-        continue;
-      }
-      const localesLowHeadings = ADMIN_LOCALES.filter((loc) => {
-        if (loc === 'en') return false;
+      const enTrans = p.translations.find((t) => t.locale === 'en');
+      const enLen = enTrans?.contentLen ?? (enTrans?.content?.length ?? 0);
+
+      const missing: string[]   = [];
+      const tooShort: string[]  = [];
+      const truncated: string[] = [];
+      const badScript: string[] = [];
+
+      for (const loc of ADMIN_LOCALES) {
+        if (loc === 'en') continue;
         const t = p.translations.find((tr) => tr.locale === loc);
-        const content = t?.content?.trim() ?? '';
-        return content && countHeadings(content) < MIN_HEADINGS;
-      });
-      if (localesLowHeadings.length > 0) {
-        lines.push(`⚠ ${enTitle} — za mało nagłówków (${localesLowHeadings.length} locale): ${localesLowHeadings.join(', ')}`);
+        const locLen = t?.contentLen ?? (t?.content?.length ?? 0);
+        const prefix = t?.content?.trim() ?? '';
+
+        if (!prefix || locLen === 0) {
+          missing.push(loc);
+          continue;
+        }
+        if (locLen < MIN_CONTENT_LEN) {
+          tooShort.push(loc);
+          continue;
+        }
+        if (enLen > 0 && locLen < enLen * RATIO_WARN) {
+          truncated.push(loc);
+          continue;
+        }
+        if (!isLikelyTranslated(prefix, loc)) {
+          badScript.push(loc);
+        }
+      }
+
+      const hasProblem = missing.length + tooShort.length + truncated.length + badScript.length > 0;
+      if (hasProblem) {
+        failedIds.add(p.id);
+        const parts: string[] = [];
+        if (missing.length)   parts.push(`brak: ${missing.join(',')}`);
+        if (tooShort.length)  parts.push(`za krótkie: ${tooShort.join(',')}`);
+        if (truncated.length) parts.push(`ucięte?: ${truncated.join(',')}`);
+        if (badScript.length) parts.push(`zły skrypt: ${badScript.join(',')}`);
+        lines.push(`✗ ${enTitle} — ${parts.join(' | ')}`);
       } else {
         allOk++;
         lines.push(`✓ ${enTitle}`);
       }
     }
+
     lines.push('');
     lines.push(`${allOk}/${toCheck.length} OK`);
     setCheckFailedIds(failedIds);

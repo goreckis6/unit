@@ -34,23 +34,30 @@ export async function GET() {
     const pageIds = pages.map((p) => p.id);
     if (pageIds.length > 0) {
       const rows = await prisma.$queryRaw<
-        { pageId: string; locale: string; hc: bigint | number; pref: string | null }[]
+        { pageId: string; locale: string; hc: bigint | number; pref: string | null; contentLen: bigint | number }[]
       >(Prisma.sql`
         SELECT "pageId", "locale",
           CASE WHEN "content" IS NOT NULL AND TRIM("content") != '' THEN 1 ELSE 0 END AS hc,
-          SUBSTR(TRIM("content"), 1, ${LIST_CONTENT_PREFIX_LEN}) AS pref
+          SUBSTR(TRIM("content"), 1, ${LIST_CONTENT_PREFIX_LEN}) AS pref,
+          LENGTH(TRIM(COALESCE("content", ''))) AS contentLen
         FROM "PageTranslation"
         WHERE "pageId" IN (${Prisma.join(pageIds)})
       `);
       const contentByPageLocale = new Map<string, string | null>();
+      const contentLenByPageLocale = new Map<string, number>();
       for (const r of rows) {
         const n = typeof r.hc === 'bigint' ? Number(r.hc) : r.hc;
         const text = n ? (r.pref ?? '') : null;
         contentByPageLocale.set(`${r.pageId}\0${r.locale}`, text);
+        contentLenByPageLocale.set(`${r.pageId}\0${r.locale}`, typeof r.contentLen === 'bigint' ? Number(r.contentLen) : (r.contentLen ?? 0));
       }
       for (const page of pages) {
         for (const t of page.translations) {
-          Object.assign(t, { content: contentByPageLocale.get(`${page.id}\0${t.locale}`) ?? null });
+          const key = `${page.id}\0${t.locale}`;
+          Object.assign(t, {
+            content: contentByPageLocale.get(key) ?? null,
+            contentLen: contentLenByPageLocale.get(key) ?? 0,
+          });
         }
       }
     }

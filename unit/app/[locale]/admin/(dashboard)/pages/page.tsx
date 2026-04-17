@@ -374,7 +374,7 @@ export default function AdminPagesList() {
 
   // Start auto-retry countdown when Ollama hits weekly/monthly limit
   useEffect(() => {
-    const isLimitError = !!translateError && /weekly usage limit|monthly usage limit|hourly usage limit/i.test(translateError);
+    const isLimitError = !!translateError && /usage limit|quota exceeded/i.test(translateError);
     if (limitAutoRetry && isLimitError && translatePausedAt && !translateProgress) {
       setLimitRetrySecondsLeft(limitRetryIntervalMin * 60);
     } else if (!limitAutoRetry || !isLimitError || translateProgress) {
@@ -2128,7 +2128,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
               <button type="button" onClick={clearPaused} className="btn btn-secondary btn-sm" style={{ padding: '0.3rem 0.75rem' }}>Wyczyść</button>
             </div>
           </div>
-          {translateError && /weekly usage limit|monthly usage limit|hourly usage limit/i.test(translateError) && (
+          {translateError && /usage limit|quota exceeded/i.test(translateError) && (
             <div style={{ marginTop: '0.5rem', fontSize: '0.82rem' }}>
               <div style={{ color: 'var(--text-secondary)', marginBottom: '0.4rem' }}>
                 ⚠ Limit Ollama wyczerpany (hourly/weekly/monthly) — możesz użyć <strong>Resume (DeepL)</strong> / <strong>Resume (MMT)</strong> lub poczekać na reset i wznowić automatycznie.

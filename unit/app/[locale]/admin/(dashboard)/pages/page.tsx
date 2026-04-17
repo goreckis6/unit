@@ -3066,26 +3066,6 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
             <>
               <button
                 type="button"
-                onClick={handleCheckTranslations}
-                disabled={!!generateProgress || !!translateProgress}
-                className="btn btn-secondary btn-sm"
-                style={{ padding: '0.35rem 0.75rem' }}
-                title={`Check if selected pages have content for all ${ADMIN_LOCALES.length} locales`}
-              >
-                Check translations
-              </button>
-              <button
-                type="button"
-                onClick={handleCheckLabels}
-                disabled={!!generateProgress || !!translateProgress}
-                className="btn btn-secondary btn-sm"
-                style={{ padding: '0.35rem 0.75rem' }}
-                title={`Check if selected pages have calculator labels for all ${ADMIN_LOCALES.length} locales`}
-              >
-                Check labels
-              </button>
-              <button
-                type="button"
                 onClick={() => setShowSeoCheckModal(true)}
                 disabled={!!generateProgress || !!translateProgress}
                 className="btn btn-secondary btn-sm"
@@ -3138,26 +3118,6 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
             <>
               <button
                 type="button"
-                onClick={handleCheckTranslations}
-                disabled={!!generateProgress || !!translateProgress}
-                className="btn btn-secondary btn-sm"
-                style={{ padding: '0.35rem 0.75rem' }}
-                title={`Check if selected pages have content for all ${ADMIN_LOCALES.length} locales`}
-              >
-                Check translations
-              </button>
-              <button
-                type="button"
-                onClick={handleCheckLabels}
-                disabled={!!generateProgress || !!translateProgress}
-                className="btn btn-secondary btn-sm"
-                style={{ padding: '0.35rem 0.75rem' }}
-                title={`Check if selected pages have calculator labels for all ${ADMIN_LOCALES.length} locales`}
-              >
-                Check labels
-              </button>
-              <button
-                type="button"
                 onClick={() => setShowSeoCheckModal(true)}
                 disabled={!!generateProgress || !!translateProgress}
                 className="btn btn-secondary btn-sm"
@@ -3187,6 +3147,27 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
               </button>
             </>
           )}
+          {/* Check buttons — visible on every bookmark */}
+          <button
+            type="button"
+            onClick={handleCheckTranslations}
+            disabled={!!generateProgress || !!translateProgress}
+            className="btn btn-secondary btn-sm"
+            style={{ padding: '0.35rem 0.75rem' }}
+            title={`Check if selected pages have content for all ${ADMIN_LOCALES.length} locales`}
+          >
+            Check translations
+          </button>
+          <button
+            type="button"
+            onClick={handleCheckLabels}
+            disabled={!!generateProgress || !!translateProgress}
+            className="btn btn-secondary btn-sm"
+            style={{ padding: '0.35rem 0.75rem' }}
+            title={`Check if selected pages have calculator labels for all ${ADMIN_LOCALES.length} locales`}
+          >
+            Check labels
+          </button>
         </div>
       )}
 

@@ -345,6 +345,7 @@ export default function AdminPagesList() {
   const limitRetryProviderRef = useRef<'ollama' | 'deepl' | 'modernmt'>('ollama');
   /** Ordered page IDs from the last Translate button click — used by Resume to stay within original selection. */
   const originalTranslatePageIdsRef = useRef<string[]>([]);
+  const ORIG_SELECTION_KEY = 'translateOrigSelection';
   const translateLabelsPausedRef = useRef(false);
   const translateLabelsAbortRef = useRef<AbortController | null>(null);
   const [generatedIdsThisRun, setGeneratedIdsThisRun] = useState<Set<string>>(new Set());
@@ -395,6 +396,36 @@ export default function AdminPagesList() {
     return () => clearTimeout(id);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [limitRetrySecondsLeft]);
+
+  // Clear persisted original selection when pause is cleared
+  useEffect(() => {
+    if (!translatePausedAt) {
+      localStorage.removeItem(ORIG_SELECTION_KEY);
+      originalTranslatePageIdsRef.current = [];
+    }
+  }, [translatePausedAt]);
+
+  // After pages load: restore original selection from localStorage and pre-check remaining pages
+  useEffect(() => {
+    if (!translatePausedAt || pages.length === 0) return;
+    if (originalTranslatePageIdsRef.current.length > 0) return; // already set this session
+    try {
+      const stored = localStorage.getItem(ORIG_SELECTION_KEY);
+      if (!stored) return;
+      const ids = JSON.parse(stored) as string[];
+      if (!Array.isArray(ids) || ids.length === 0) return;
+      originalTranslatePageIdsRef.current = ids;
+      const origIdSet = new Set(ids);
+      const pausedIdx = pages.findIndex((p) => p.slug === translatePausedAt.pageSlug);
+      const remaining = pages
+        .slice(pausedIdx >= 0 ? pausedIdx : 0)
+        .filter((p) => origIdSet.has(p.id));
+      if (remaining.length > 0) {
+        setSelectedIds(new Set(remaining.map((p) => p.id)));
+      }
+    } catch { /* ignore */ }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [translatePausedAt, pages]);
 
   function setBookmark(stage: PageStage) {
     setActiveBookmark(stage);
@@ -1866,6 +1897,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
     originalTranslatePageIdsRef.current = pages
       .filter((p) => selectedIds.size === 0 || selectedIds.has(p.id))
       .map((p) => p.id);
+    localStorage.setItem(ORIG_SELECTION_KEY, JSON.stringify(originalTranslatePageIdsRef.current));
     if (!stayInAlive) setActiveBookmark('content-en-done');
     startTranslate({
       pages,
@@ -1900,6 +1932,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
     }
     const missingIds = new Set(withMissing.map((p) => p.id));
     originalTranslatePageIdsRef.current = withMissing.map((p) => p.id);
+    localStorage.setItem(ORIG_SELECTION_KEY, JSON.stringify(originalTranslatePageIdsRef.current));
     setSelectedIds(missingIds);
     const stayInAlive = translateStayInAlive && activeBookmark === 'completed-alive';
     if (!stayInAlive) setActiveBookmark('content-en-done');

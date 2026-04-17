@@ -339,10 +339,12 @@ export default function AdminPagesList() {
   const [elapsedTick, setElapsedTick] = useState(0);
   const [deeplUsage, setDeeplUsage] = useState<{ used: number; limit: number } | null>(null);
   const [deeplUsageLoading, setDeeplUsageLoading] = useState(false);
-  const [limitAutoRetry, setLimitAutoRetry] = useState(false);
-  const [limitRetryIntervalMin, setLimitRetryIntervalMin] = useState(30);
+  const [limitAutoRetry, setLimitAutoRetry] = useState(true);
+  const [limitRetryIntervalMin, setLimitRetryIntervalMin] = useState(20);
   const [limitRetrySecondsLeft, setLimitRetrySecondsLeft] = useState<number | null>(null);
   const limitRetryProviderRef = useRef<'ollama' | 'deepl' | 'modernmt'>('ollama');
+  /** Ordered page IDs from the last Translate button click — used by Resume to stay within original selection. */
+  const originalTranslatePageIdsRef = useRef<string[]>([]);
   const translateLabelsPausedRef = useRef(false);
   const translateLabelsAbortRef = useRef<AbortController | null>(null);
   const [generatedIdsThisRun, setGeneratedIdsThisRun] = useState<Set<string>>(new Set());
@@ -372,7 +374,7 @@ export default function AdminPagesList() {
 
   // Start auto-retry countdown when Ollama hits weekly/monthly limit
   useEffect(() => {
-    const isLimitError = !!translateError && /weekly usage limit|monthly usage limit/i.test(translateError);
+    const isLimitError = !!translateError && /weekly usage limit|monthly usage limit|hourly usage limit/i.test(translateError);
     if (limitAutoRetry && isLimitError && translatePausedAt && !translateProgress) {
       setLimitRetrySecondsLeft(limitRetryIntervalMin * 60);
     } else if (!limitAutoRetry || !isLimitError || translateProgress) {
@@ -702,23 +704,25 @@ export default function AdminPagesList() {
     const pausedSlug = translatePausedAt.pageSlug;
     const provider = providerOverride ?? 'ollama';
 
-    // Source: previously selected pages, or current tab's filtered list
-    const sourcePages = selectedIds.size > 0
-      ? pages.filter((p) => selectedIds.has(p.id))
-      : filteredPages;
+    // Original ordered page IDs from the initial Translate click
+    const origIds = originalTranslatePageIdsRef.current;
+    const origIdSet = new Set(origIds);
 
-    // Find the paused page in source, fall back to full pages list
-    let pausedIdx = sourcePages.findIndex((p) => p.slug === pausedSlug);
-    let resumeSource = sourcePages;
-    if (pausedIdx < 0) {
-      // Paused page not in current selection/filter — search all pages
-      const allIdx = pages.findIndex((p) => p.slug === pausedSlug);
-      pausedIdx = allIdx >= 0 ? allIdx : 0;
-      resumeSource = pages;
-    }
+    // Find paused page position in the full pages array (stable order)
+    const pausedGlobalIdx = pages.findIndex((p) => p.slug === pausedSlug);
+    const pausedGlobalIdxSafe = pausedGlobalIdx >= 0 ? pausedGlobalIdx : 0;
 
-    // Only pages from the paused one onwards
-    const resumeIds = new Set(resumeSource.slice(pausedIdx).map((p) => p.id));
+    // Pages from paused onwards, restricted to original selection if we have one
+    const remaining = pages
+      .slice(pausedGlobalIdxSafe)
+      .filter((p) => origIdSet.size === 0 || origIdSet.has(p.id));
+
+    // If nothing left in original selection, fall back to all pages from paused
+    const resumeSource = remaining.length > 0 ? remaining : pages.slice(pausedGlobalIdxSafe);
+    const resumeIds = new Set(resumeSource.map((p) => p.id));
+
+    // Update the ref so future Resumes within this run stay within the same shrinking window
+    originalTranslatePageIdsRef.current = resumeSource.map((p) => p.id);
     setSelectedIds(resumeIds);
 
     startTranslate({
@@ -1858,6 +1862,10 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
   function handleBatchTranslate(providerOverride?: 'ollama' | 'deepl' | 'modernmt') {
     const provider = providerOverride ?? 'ollama';
     const stayInAlive = translateStayInAlive && activeBookmark === 'completed-alive';
+    // Save ordered page list for Resume (uses pages array order, filtered to selection)
+    originalTranslatePageIdsRef.current = pages
+      .filter((p) => selectedIds.size === 0 || selectedIds.has(p.id))
+      .map((p) => p.id);
     if (!stayInAlive) setActiveBookmark('content-en-done');
     startTranslate({
       pages,
@@ -1890,12 +1898,14 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       if (selectedIds.size > 0) alert('Selected pages have no missing translations.');
       return;
     }
-    setSelectedIds(new Set(withMissing.map((p) => p.id)));
+    const missingIds = new Set(withMissing.map((p) => p.id));
+    originalTranslatePageIdsRef.current = withMissing.map((p) => p.id);
+    setSelectedIds(missingIds);
     const stayInAlive = translateStayInAlive && activeBookmark === 'completed-alive';
     if (!stayInAlive) setActiveBookmark('content-en-done');
     startTranslate({
       pages,
-      selectedIds: new Set(withMissing.map((p) => p.id)),
+      selectedIds: missingIds,
       translateStartFrom,
       translateOnlyOne: false,
       forceRetranslateContent: translateForceOverwrite || provider === 'deepl' || provider === 'modernmt',
@@ -2118,10 +2128,10 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
               <button type="button" onClick={clearPaused} className="btn btn-secondary btn-sm" style={{ padding: '0.3rem 0.75rem' }}>Wyczyść</button>
             </div>
           </div>
-          {translateError && /weekly usage limit|monthly usage limit/i.test(translateError) && (
+          {translateError && /weekly usage limit|monthly usage limit|hourly usage limit/i.test(translateError) && (
             <div style={{ marginTop: '0.5rem', fontSize: '0.82rem' }}>
               <div style={{ color: 'var(--text-secondary)', marginBottom: '0.4rem' }}>
-                ⚠ Limit Ollama wyczerpany — możesz użyć <strong>Resume (DeepL)</strong> / <strong>Resume (MMT)</strong> lub poczekać na reset i wznowić automatycznie.
+                ⚠ Limit Ollama wyczerpany (hourly/weekly/monthly) — możesz użyć <strong>Resume (DeepL)</strong> / <strong>Resume (MMT)</strong> lub poczekać na reset i wznowić automatycznie.
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
                 <label style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', cursor: 'pointer', fontWeight: 500 }}>

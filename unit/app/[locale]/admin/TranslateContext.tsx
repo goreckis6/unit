@@ -31,7 +31,7 @@ async function safeResJson<T = unknown>(res: Response): Promise<T> {
 function shouldAutoResumeTranslateError(message: string): boolean {
   const s = (message ?? '').toLowerCase();
   // Hard limits — do NOT auto-resume, user must switch provider
-  if (s.includes('weekly usage limit') || s.includes('monthly usage limit') || s.includes('quota exceeded')) return false;
+  if (s.includes('weekly usage limit') || s.includes('monthly usage limit') || s.includes('hourly usage limit') || s.includes('quota exceeded')) return false;
   return (
     s.includes('internal server error') ||
     s.includes('bad gateway') ||

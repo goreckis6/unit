@@ -302,7 +302,7 @@ export default function AdminPagesList() {
   const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
   const [generateProvider, setGenerateProvider] = useState<GenerateProviderType>('ollama');
-  const [ollamaModel, setOllamaModel] = useState('glm-4.6:cloud');
+  const [ollamaModel, setOllamaModel] = useState('gemini-3-flash-preview:cloud');
   const [showBulkImport, setShowBulkImport] = useState(false);
   const [bulkImportJson, setBulkImportJson] = useState('');
   const [bulkImportLoading, setBulkImportLoading] = useState(false);
@@ -3283,26 +3283,31 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
             background: 'rgba(239, 68, 68, 0.1)',
             border: '1px solid var(--error-color)',
             borderRadius: 8,
-            color: 'var(--error-color)',
             fontSize: '0.875rem',
-            display: 'flex',
-            alignItems: 'flex-start',
-            justifyContent: 'space-between',
-            gap: '0.5rem',
           }}
         >
-          <span style={{ flex: 1 }}>
-            {[generateError, translateError, translateLabelsError].filter(Boolean).join(' ')}
-          </span>
-          <button
-            type="button"
-            onClick={() => setTranslateLabelsError('')}
-            className="btn btn-secondary btn-sm"
-            style={{ padding: '0.2rem 0.5rem', flexShrink: 0 }}
-            title="Zamknij"
-          >
-            ×
-          </button>
+          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '0.5rem' }}>
+            <span style={{ flex: 1, color: 'var(--error-color)' }}>
+              {[generateError, translateError, translateLabelsError].filter(Boolean).join(' ')}
+            </span>
+            <button
+              type="button"
+              onClick={() => { setTranslateLabelsError(''); }}
+              className="btn btn-secondary btn-sm"
+              style={{ padding: '0.2rem 0.5rem', flexShrink: 0 }}
+              title="Zamknij"
+            >
+              ×
+            </button>
+          </div>
+          {translatePausedAt && !translateProgress && translateError && (
+            <div style={{ marginTop: '0.6rem', display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
+              <button type="button" onClick={() => handleResumeFromPaused('ollama')} className="btn btn-primary btn-sm" style={{ padding: '0.3rem 0.75rem' }}>▶ Resume (Ollama)</button>
+              <button type="button" onClick={() => handleResumeFromPaused('deepl')} className="btn btn-secondary btn-sm" style={{ padding: '0.3rem 0.75rem', borderColor: '#0071e3', color: '#0071e3' }}>▶ Resume (DeepL)</button>
+              <button type="button" onClick={() => handleResumeFromPaused('modernmt')} className="btn btn-secondary btn-sm" style={{ padding: '0.3rem 0.75rem', borderColor: '#e05c00', color: '#e05c00' }}>▶ Resume (MMT)</button>
+              <button type="button" onClick={clearPaused} className="btn btn-secondary btn-sm" style={{ padding: '0.3rem 0.75rem' }}>Wyczyść status</button>
+            </div>
+          )}
         </div>
       )}
       {autoResumeCountdown !== null && (

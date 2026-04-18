@@ -412,7 +412,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
 
       // For short content, batch multiple target locales into one LLM request to reduce API calls.
       // For long content the server uses chunked single-locale translation, so keep batch size = 1.
-      const LOCALE_BATCH_SIZE = (translateProvider === 'ollama' && enContent.length > 1_400) ? 1 : 3;
+      const LOCALE_BATCH_SIZE = 1; // 1 locale per request — saves output tokens; batching consumed ~3× more quota
       const localeChunks: string[][] = [];
       for (let i = 0; i < localesToTranslate.length; i += LOCALE_BATCH_SIZE) {
         localeChunks.push(localesToTranslate.slice(i, i + LOCALE_BATCH_SIZE));

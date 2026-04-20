@@ -5,6 +5,7 @@ import { ADMIN_LOCALES } from '@/lib/admin-locales';
 
 const STORAGE_KEY = 'twojastara-translate-paused';
 const PAUSE_BETWEEN_LOCALES_SEC = 1; // reduced from 3 — parallel batches make long pauses unnecessary
+const TRANSLATE_REQUEST_TIMEOUT_MS = 10 * 60 * 1000; // 10 min per translation request
 
 function parseJson<T>(val: unknown, fallback: T): T {
   if (!val) return fallback;
@@ -113,6 +114,7 @@ type TranslateContextValue = {
     translateProvider?: 'ollama' | 'deepl' | 'modernmt';
     resumeOverride?: TranslatePausedAt;
     forceRetranslateContent?: boolean;
+    fastMode?: boolean;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
     onPageTranslated?: (pageId: string) => void | Promise<void>;
@@ -178,14 +180,18 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
   async function fetchWithTimeoutAndRetry(
     url: string,
     options: RequestInit,
-    timeoutMs = 172_800_000, // 48 h
+    timeoutMs = TRANSLATE_REQUEST_TIMEOUT_MS,
     retries = 2,
     signal?: AbortSignal | null
   ): Promise<Response> {
     for (let attempt = 0; attempt <= retries; attempt++) {
       if (signal?.aborted) throw new DOMException('Aborted', 'AbortError');
       const controller = new AbortController();
-      const id = setTimeout(() => controller.abort(), timeoutMs);
+      let didTimeout = false;
+      const id = setTimeout(() => {
+        didTimeout = true;
+        controller.abort();
+      }, timeoutMs);
       const onAbort = () => { clearTimeout(id); controller.abort(); };
       signal?.addEventListener('abort', onAbort);
       try {
@@ -197,7 +203,14 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
         clearTimeout(id);
         signal?.removeEventListener('abort', onAbort);
         const isAbort = e instanceof DOMException && e.name === 'AbortError';
-        if (isAbort) throw e;
+        if (isAbort && signal?.aborted) throw e; // user canceled
+        if (isAbort && didTimeout) {
+          if (attempt < retries) {
+            await new Promise((r) => setTimeout(r, 2000));
+            continue;
+          }
+          throw new Error(`Timeout po ${Math.round(timeoutMs / 60000)} min — request tłumaczenia nie odpowiedział`);
+        }
         if (attempt < retries) await new Promise((r) => setTimeout(r, 2000));
         else throw e;
       }
@@ -216,6 +229,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     translateProvider?: 'ollama' | 'deepl' | 'modernmt';
     resumeOverride?: TranslatePausedAt;
     forceRetranslateContent?: boolean;
+    fastMode?: boolean;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
     onPageTranslated?: (pageId: string) => void | Promise<void>;
@@ -226,14 +240,16 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       selectedIds,
       translateOnlyOne,
       resumeOverride,
-      autoResumeOnError,
       ollamaModel,
       translateProvider = 'ollama',
       onPagesUpdate,
       onPageTranslated,
       onComplete,
       forceRetranslateContent = false,
+      fastMode = false,
     } = params;
+    // Keep auto-retry always enabled for transient errors so the user does not need to click Resume manually.
+    const autoResumeEnabled = true;
     const concurrency = Math.max(1, Math.min(10, params.translateConcurrency ?? 5));
     const contentParallel = Math.max(1, Math.min(12, params.contentParallel ?? 6));
     const ids = Array.from(selectedIds);
@@ -412,7 +428,9 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
 
       // For short content, batch multiple target locales into one LLM request to reduce API calls.
       // For long content the server uses chunked single-locale translation, so keep batch size = 1.
-      const LOCALE_BATCH_SIZE = 1; // 1 locale per request — saves output tokens; batching consumed ~3× more quota
+      // Fast mode: batch 2 locales per request for short content to increase throughput.
+      // Normal mode keeps 1 locale per request to save quota/tokens.
+      const LOCALE_BATCH_SIZE = fastMode ? ((translateProvider === 'ollama' && enContent.length > 1_400) ? 1 : 2) : 1;
       const localeChunks: string[][] = [];
       for (let i = 0; i < localesToTranslate.length; i += LOCALE_BATCH_SIZE) {
         localeChunks.push(localesToTranslate.slice(i, i + LOCALE_BATCH_SIZE));
@@ -452,7 +470,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                     }),
                     credentials: 'include',
                   },
-                  172_800_000,
+                  TRANSLATE_REQUEST_TIMEOUT_MS,
                   2,
                   abortRef.current?.signal ?? null
                 );
@@ -462,7 +480,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                 if (res.ok) break;
                 if (res.status === 401) throw new Error(data.error || 'Unauthorized');
                 if (res.status === 503 && attempt < 2) {
-                  await new Promise((r) => setTimeout(r, 3000));
+                  await new Promise((r) => setTimeout(r, fastMode ? 1000 : 3000));
                   continue;
                 }
                 throw new Error(data.error || `Failed to translate to ${chunk.join(',')}`);
@@ -592,7 +610,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             window.location.href = '/twojastara/login';
             return false;
           }
-          if (autoResumeOnError && !isAbort && shouldAutoResumeTranslateError(msg)) {
+          if (autoResumeEnabled && !isAbort && shouldAutoResumeTranslateError(msg)) {
             setAutoResumeCountdown(5);
             for (let s = 5; s >= 1; s--) {
               setAutoResumeCountdown(s);

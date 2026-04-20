@@ -301,6 +301,7 @@ export default function AdminPagesList() {
   const [translateStayInAlive, setTranslateStayInAlive] = useState(false);
   const [translateConcurrency, setTranslateConcurrency] = useState(3);
   const [contentParallel, setContentParallel] = useState(3);
+  const [translateFastMode, setTranslateFastMode] = useState(false);
   const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
   const [generateProvider, setGenerateProvider] = useState<GenerateProviderType>('ollama');
@@ -361,6 +362,12 @@ export default function AdminPagesList() {
   const [activeBookmark, setActiveBookmark] = useState<PageStage>(() =>
     tabParam && validStages.includes(tabParam as PageStage) ? (tabParam as PageStage) : 'new'
   );
+  const effectiveTranslateConcurrency = translateFastMode
+    ? Math.min(10, Math.max(translateConcurrency, 5))
+    : translateConcurrency;
+  const effectiveContentParallel = translateFastMode
+    ? Math.min(12, Math.max(contentParallel, 5))
+    : contentParallel;
 
   useEffect(() => {
     if (tabParam && validStages.includes(tabParam as PageStage) && tabParam !== activeBookmark) {
@@ -792,8 +799,9 @@ export default function AdminPagesList() {
       translateStartFrom: translatePausedAt.nextLocale,
       translateOnlyOne,
       forceRetranslateContent: translateForceOverwrite || provider === 'deepl' || provider === 'modernmt',
-      translateConcurrency,
-      contentParallel,
+      translateConcurrency: effectiveTranslateConcurrency,
+      contentParallel: effectiveContentParallel,
+      fastMode: translateFastMode,
       ollamaModel,
       translateProvider: provider,
       resumeOverride: translatePausedAt,
@@ -818,8 +826,9 @@ export default function AdminPagesList() {
       translateStartFrom,
       translateOnlyOne: false,
       forceRetranslateContent: translateForceOverwrite,
-      translateConcurrency,
-      contentParallel,
+      translateConcurrency: effectiveTranslateConcurrency,
+      contentParallel: effectiveContentParallel,
+      fastMode: translateFastMode,
       resumeOverride: translatePausedAt ?? undefined,
       autoResumeOnError,
       onPagesUpdate: (updater) => setPages(updater),
@@ -1935,8 +1944,9 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       translateStartFrom,
       translateOnlyOne,
       forceRetranslateContent: translateForceOverwrite || provider === 'deepl' || provider === 'modernmt',
-      translateConcurrency,
-      contentParallel,
+      translateConcurrency: effectiveTranslateConcurrency,
+      contentParallel: effectiveContentParallel,
+      fastMode: translateFastMode,
       ollamaModel,
       translateProvider: provider,
       resumeOverride: translatePausedAt ?? undefined,
@@ -1972,8 +1982,9 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
       translateStartFrom,
       translateOnlyOne: false,
       forceRetranslateContent: translateForceOverwrite || provider === 'deepl' || provider === 'modernmt',
-      translateConcurrency,
-      contentParallel,
+      translateConcurrency: effectiveTranslateConcurrency,
+      contentParallel: effectiveContentParallel,
+      fastMode: translateFastMode,
       ollamaModel,
       translateProvider: provider,
       resumeOverride: translatePausedAt ?? undefined,
@@ -2401,6 +2412,26 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                       />
                       Przetłumacz jeszcze raz (nadpisuje aktualne tłumaczenia)
                     </label>
+                    <label
+                      style={{
+                        fontSize: '0.75rem',
+                        color: 'var(--text-secondary)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                        cursor: 'pointer',
+                      }}
+                      title="Fast mode podnosi równoległość i batch locale dla szybszego tłumaczenia (większe zużycie limitu)."
+                    >
+                      <input
+                        type="checkbox"
+                        checked={translateFastMode}
+                        onChange={(e) => setTranslateFastMode(e.target.checked)}
+                        disabled={!!translateProgress}
+                        style={{ width: 14, height: 14, flexShrink: 0 }}
+                      />
+                      Fast mode (szybciej, większe zużycie limitu)
+                    </label>
                     {activeBookmark === 'completed-alive' && (
                       <label
                         style={{
@@ -2450,7 +2481,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                         disabled={!!translateProgress || !!translateLabelsLoading}
                         className="admin-form-select"
                         style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem', width: 48 }}
-                        title="Stron tłumaczonych równolegle. Zalecane: 5-10. Więcej = szybsze, może obciążyć API."
+                        title={`Stron tłumaczonych równolegle. Fast mode wymusza min 5. Teraz efektywnie: ${effectiveTranslateConcurrency}.`}
                       />
                     </label>
                     <label
@@ -2479,7 +2510,7 @@ res = await fetch('/api/twojastara/ollama/translate-labels', {
                         disabled={!!translateProgress || !!translateLabelsLoading}
                         className="admin-form-select"
                         style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem', width: 48 }}
-                        title="Języków równolegle na stronę. Zalecane: 6-12. OLLAMA_MAX_CONCURRENT=12 na serwerze."
+                        title={`Języków równolegle na stronę. Fast mode wymusza min 5. Teraz efektywnie: ${effectiveContentParallel}.`}
                       />
                     </label>
                     <label

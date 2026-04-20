@@ -430,9 +430,9 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       // For long content the server uses chunked single-locale translation, so keep batch size = 1.
       // Fast mode: batch 2 locales per request for short content to increase throughput.
       // Normal mode keeps 1 locale per request to save quota/tokens.
-      // Normal+ and Fast mode both batch 2 locales for shorter content.
-      // Long Ollama content stays single-locale so chunked translation remains stable.
-      const LOCALE_BATCH_SIZE = (translateProvider === 'ollama' && enContent.length > 1_400) ? 1 : 2;
+      // Keep frontend batching threshold aligned with backend chunking threshold.
+      // Backend treats >2600 chars as long content in normal mode.
+      const LOCALE_BATCH_SIZE = (translateProvider === 'ollama' && enContent.length > 2_600) ? 1 : 2;
       const localeChunks: string[][] = [];
       for (let i = 0; i < localesToTranslate.length; i += LOCALE_BATCH_SIZE) {
         localeChunks.push(localesToTranslate.slice(i, i + LOCALE_BATCH_SIZE));

@@ -299,9 +299,9 @@ export default function AdminPagesList() {
   const [translateForceOverwrite, setTranslateForceOverwrite] = useState(false);
   /** On Alive tab: if checked, Translate (content) does not set manualBookmark to translation-done or switch tabs. */
   const [translateStayInAlive, setTranslateStayInAlive] = useState(false);
-  const [translateConcurrency, setTranslateConcurrency] = useState(3);
-  const [contentParallel, setContentParallel] = useState(5);
-  const [translateFastMode, setTranslateFastMode] = useState(false);
+  const [translateConcurrency, setTranslateConcurrency] = useState(5);
+  const [contentParallel, setContentParallel] = useState(8);
+  const [translateFastMode, setTranslateFastMode] = useState(true);
   const [translateLabelsConcurrency, setTranslateLabelsConcurrency] = useState(3);
   const [autoResumeOnError, setAutoResumeOnError] = useState(true);
   const [generateProvider, setGenerateProvider] = useState<GenerateProviderType>('ollama');

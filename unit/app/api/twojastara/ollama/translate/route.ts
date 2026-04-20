@@ -169,12 +169,12 @@ function cleanContent(raw: string): string {
 }
 
 /** Long EN articles exceed model output in one JSON blob; split body into several translate calls. */
-const CONTENT_AUTO_CHUNK_CHARS = 1_400;
+const CONTENT_AUTO_CHUNK_CHARS = 2_600;
 /** Plain-text output allows larger chunks; fewer calls = faster throughput. */
-const CONTENT_CHUNK_TARGET = 800;
-/** Fast mode: larger thresholds/chunks to reduce request count for long pages. */
-const CONTENT_AUTO_CHUNK_CHARS_FAST = 2_600;
-const CONTENT_CHUNK_TARGET_FAST = 1_400;
+const CONTENT_CHUNK_TARGET = 1_400;
+/** Fast mode: very aggressive chunk sizing to reduce request count for long pages. */
+const CONTENT_AUTO_CHUNK_CHARS_FAST = 4_800;
+const CONTENT_CHUNK_TARGET_FAST = 2_600;
 
 /** Appended to each LLM body request; must be copied verbatim to end of JSON "content" so we detect mid-string stops. */
 const CHUNK_END_MARKER = '<<<CHUNK_EOC_UCH_a1b2c3>>>';

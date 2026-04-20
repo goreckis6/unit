@@ -466,7 +466,10 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                       title: enTitle || undefined,
                       displayTitle: enDisplayTitle || undefined,
                       description: enDescription || undefined,
-                      ...(translateProvider === 'ollama' && { model: ollamaModel || undefined }),
+                      ...(translateProvider === 'ollama' && {
+                        model: ollamaModel || undefined,
+                        fastMode: !!fastMode,
+                      }),
                     }),
                     credentials: 'include',
                   },

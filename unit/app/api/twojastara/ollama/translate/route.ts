@@ -172,6 +172,9 @@ function cleanContent(raw: string): string {
 const CONTENT_AUTO_CHUNK_CHARS = 1_400;
 /** Plain-text output allows larger chunks; fewer calls = faster throughput. */
 const CONTENT_CHUNK_TARGET = 800;
+/** Fast mode: larger thresholds/chunks to reduce request count for long pages. */
+const CONTENT_AUTO_CHUNK_CHARS_FAST = 2_600;
+const CONTENT_CHUNK_TARGET_FAST = 1_400;
 
 /** Appended to each LLM body request; must be copied verbatim to end of JSON "content" so we detect mid-string stops. */
 const CHUNK_END_MARKER = '<<<CHUNK_EOC_UCH_a1b2c3>>>';
@@ -477,9 +480,10 @@ async function translateBodyInChunks(
   useModel: string | undefined,
   enBody: string,
   langName: string,
-  targetLocale: string
+  targetLocale: string,
+  chunkTarget: number
 ): Promise<string> {
-  const chunks = splitContentAtBoundaries(enBody, CONTENT_CHUNK_TARGET);
+  const chunks = splitContentAtBoundaries(enBody, chunkTarget);
   // Translate all chunks in parallel — order is preserved via Promise.all index.
   // Actual concurrency is capped by withOllamaSlot (MAX_CONCURRENT).
   const parts = await Promise.all(
@@ -611,13 +615,16 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    let body: { content?: unknown; faqItems?: unknown; targetLocale?: unknown; targetLocales?: unknown; title?: unknown; displayTitle?: unknown; description?: unknown; model?: unknown };
+    let body: { content?: unknown; faqItems?: unknown; targetLocale?: unknown; targetLocales?: unknown; title?: unknown; displayTitle?: unknown; description?: unknown; model?: unknown; fastMode?: unknown };
     try {
       body = await request.json();
     } catch {
       return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
     }
-    const { content, faqItems, targetLocale: tl, targetLocales: tls, title, displayTitle, description, model: modelOverride } = body;
+    const { content, faqItems, targetLocale: tl, targetLocales: tls, title, displayTitle, description, model: modelOverride, fastMode: fastModeRaw } = body;
+    const fastMode = fastModeRaw === true;
+    const autoChunkChars = fastMode ? CONTENT_AUTO_CHUNK_CHARS_FAST : CONTENT_AUTO_CHUNK_CHARS;
+    const chunkTarget = fastMode ? CONTENT_CHUNK_TARGET_FAST : CONTENT_CHUNK_TARGET;
     const locales: string[] = Array.isArray(tls) && tls.length > 0
       ? (tls as string[]).filter((l) => typeof l === 'string' && l !== 'en')
       : typeof tl === 'string' && tl !== 'en'
@@ -663,7 +670,7 @@ export async function POST(request: NextRequest) {
     const useChunkEndMarker =
       !isBatch &&
       content.trim().length >= 600 &&
-      content.length <= CONTENT_AUTO_CHUNK_CHARS;
+      content.length <= autoChunkChars;
     const contentForLlm = useChunkEndMarker ? `${content}\n\n${CHUNK_END_MARKER}` : content;
 
     const userContent = isBatch
@@ -696,13 +703,13 @@ export async function POST(request: NextRequest) {
       typeof modelOverride === 'string' && modelOverride.trim() ? modelOverride.trim() : undefined
     );
 
-    const longSingleLocale = !isBatch && content.length > CONTENT_AUTO_CHUNK_CHARS;
+    const longSingleLocale = !isBatch && content.length > autoChunkChars;
     const hasMeta = Boolean(enTitle || enDisplayTitle || enDescription || items.length > 0);
 
     if (longSingleLocale) {
       const loc0 = locales[0]!;
       const langName = LOCALE_NAMES[loc0] || loc0;
-      const mergedBody = await translateBodyInChunks(ollamaApiKey, useModel, content, langName, loc0);
+      const mergedBody = await translateBodyInChunks(ollamaApiKey, useModel, content, langName, loc0, chunkTarget);
       let resultTitle = enTitle;
       let resultDisplayTitle = enDisplayTitle;
       let resultDescription = enDescription || undefined;

@@ -115,6 +115,8 @@ type TranslateContextValue = {
     resumeOverride?: TranslatePausedAt;
     forceRetranslateContent?: boolean;
     fastMode?: boolean;
+    progressBaseCurrent?: number;
+    progressBaseTotal?: number;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
     onPageTranslated?: (pageId: string) => void | Promise<void>;
@@ -230,6 +232,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     resumeOverride?: TranslatePausedAt;
     forceRetranslateContent?: boolean;
     fastMode?: boolean;
+    progressBaseCurrent?: number;
+    progressBaseTotal?: number;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
     onPageTranslated?: (pageId: string) => void | Promise<void>;
@@ -247,6 +251,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       onComplete,
       forceRetranslateContent = false,
       fastMode = false,
+      progressBaseCurrent = 0,
+      progressBaseTotal = 0,
     } = params;
     // Keep auto-retry always enabled for transient errors so the user does not need to click Resume manually.
     const autoResumeEnabled = true;
@@ -356,7 +362,9 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       return;
     }
     const startedAtMs = Date.now();
-    setTranslateProgress({ current: 0, total: totalSteps, pageTitle: '', pageCategory: '', locale: '', startedAt: startedAtMs });
+    const initialCurrent = Math.max(0, progressBaseCurrent);
+    const initialTotal = Math.max(totalSteps + initialCurrent, progressBaseTotal);
+    setTranslateProgress({ current: initialCurrent, total: initialTotal, pageTitle: '', pageCategory: '', locale: '', startedAt: startedAtMs });
 
     const stepRef = { current: 0 };
     const hadErrorRef = { current: false };
@@ -428,9 +436,9 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
 
       // Keep frontend batching aligned with backend long-content threshold.
       // Long Ollama content remains single-locale (stable chunked path).
-      // Shorter content: normal mode batches 2 locales, fast mode batches 3 locales.
+      // Shorter content: normal mode batches 2 locales, fast mode batches 2 locales.
       const isLongOllamaContent = translateProvider === 'ollama' && enContent.length > 2_600;
-      const LOCALE_BATCH_SIZE = isLongOllamaContent ? 1 : (fastMode ? 3 : 2);
+      const LOCALE_BATCH_SIZE = isLongOllamaContent ? 1 : 2;
       const localeChunks: string[][] = [];
       for (let i = 0; i < localesToTranslate.length; i += LOCALE_BATCH_SIZE) {
         localeChunks.push(localesToTranslate.slice(i, i + LOCALE_BATCH_SIZE));
@@ -442,7 +450,14 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
         // All locales across all chunks in this parallel batch (for display + save)
         const batchLocs = batch.flatMap((c) => c).filter(Boolean);
         stepRef.current += batchLocs.length;
-        setTranslateProgress({ current: stepRef.current, total: totalSteps, pageTitle: page.slug, pageCategory: page.category ?? '', locale: batchLocs.join(', '), startedAt: startedAtMs });
+        setTranslateProgress({
+          current: initialCurrent + stepRef.current,
+          total: initialTotal,
+          pageTitle: page.slug,
+          pageCategory: page.category ?? '',
+          locale: batchLocs.join(', '),
+          startedAt: startedAtMs,
+        });
         try {
           const results = await Promise.all(
             batch.map(async (chunk) => {
@@ -622,7 +637,13 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             setAutoResumeCountdown(null);
             setTranslateError('');
             isResumingRef.current = true;
-            void startTranslate({ ...params, resumeOverride: { pageSlug: page.slug, nextLocale }, onComplete });
+            void startTranslate({
+              ...params,
+              resumeOverride: { pageSlug: page.slug, nextLocale },
+              progressBaseCurrent: initialCurrent + stepRef.current,
+              progressBaseTotal: initialTotal,
+              onComplete,
+            });
             return false;
           }
           return false;

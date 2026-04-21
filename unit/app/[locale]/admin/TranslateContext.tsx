@@ -117,6 +117,7 @@ type TranslateContextValue = {
     fastMode?: boolean;
     progressBaseCurrent?: number;
     progressBaseTotal?: number;
+    pagesBaseTranslated?: number;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
     onPageTranslated?: (pageId: string) => void | Promise<void>;
@@ -234,6 +235,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     fastMode?: boolean;
     progressBaseCurrent?: number;
     progressBaseTotal?: number;
+    pagesBaseTranslated?: number;
     autoResumeOnError: boolean;
     onPagesUpdate?: (updater: (prev: Page[]) => Page[]) => void;
     onPageTranslated?: (pageId: string) => void | Promise<void>;
@@ -253,6 +255,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       fastMode = false,
       progressBaseCurrent = 0,
       progressBaseTotal = 0,
+      pagesBaseTranslated = 0,
     } = params;
     // Keep auto-retry always enabled for transient errors so the user does not need to click Resume manually.
     const autoResumeEnabled = true;
@@ -642,6 +645,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               resumeOverride: { pageSlug: page.slug, nextLocale },
               progressBaseCurrent: initialCurrent + stepRef.current,
               progressBaseTotal: initialTotal,
+              pagesBaseTranslated: pagesBaseTranslated + pagesTranslatedCountRef.current,
               onComplete,
             });
             return false;
@@ -684,7 +688,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       if (!hadError) {
         setTranslatePausedAt(null);
         setTranslateStartFrom('');
-        setTranslateSuccess(`Zakończono tłumaczenie treści: ${totalSteps} języków na ${pagesTranslatedCountRef.current} stron(ach).`);
+        const translatedPagesTotal = pagesBaseTranslated + pagesTranslatedCountRef.current;
+        setTranslateSuccess(`Zakończono tłumaczenie treści: ${totalSteps} języków na ${translatedPagesTotal} stron(ach).`);
         onComplete?.();
       }
     }

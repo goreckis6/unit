@@ -452,8 +452,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
         const batch = localeChunks.slice(bi, bi + contentParallel);
         // All locales across all chunks in this parallel batch (for display + save)
         const batchLocs = batch.flatMap((c) => c).filter(Boolean);
-        // Progress must reflect completed work only. Incrementing before await made the bar jump
-        // to ~95% while the last requests/PATCH could still hang for hours (misleading ETA).
+        // stepRef counts PATCHed locales; interimTranslateLocales adds in-flight translate API progress.
         setTranslateProgress({
           current: initialCurrent + stepRef.current,
           total: initialTotal,
@@ -463,6 +462,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
           startedAt: startedAtMs,
         });
         let resumeLocaleHint = batchLocs[0] ?? '';
+        /** Locales finished translate API but not yet PATCHed — keeps UI moving during long Promise.all. */
+        let interimTranslateLocales = 0;
         try {
           const results = await Promise.all(
             batch.map(async (chunk) => {
@@ -508,6 +509,15 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
                 }
                 throw new Error(data.error || `Failed to translate to ${chunk.join(',')}`);
               }
+              interimTranslateLocales += chunk.length;
+              setTranslateProgress({
+                current: initialCurrent + stepRef.current + interimTranslateLocales,
+                total: initialTotal,
+                pageTitle: page.slug,
+                pageCategory: page.category ?? '',
+                locale: chunk.join(', '),
+                startedAt: startedAtMs,
+              });
               return { chunk, data };
             })
           );
@@ -607,9 +617,10 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               })
             );
 
+            interimTranslateLocales -= 1;
             stepRef.current += 1;
             setTranslateProgress({
-              current: initialCurrent + stepRef.current,
+              current: initialCurrent + stepRef.current + interimTranslateLocales,
               total: initialTotal,
               pageTitle: page.slug,
               pageCategory: page.category ?? '',

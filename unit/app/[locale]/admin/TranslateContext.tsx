@@ -6,6 +6,10 @@ import { ADMIN_LOCALES } from '@/lib/admin-locales';
 const STORAGE_KEY = 'twojastara-translate-paused';
 const PAUSE_BETWEEN_LOCALES_SEC = 1; // reduced from 3 — parallel batches make long pauses unnecessary
 const TRANSLATE_REQUEST_TIMEOUT_MS = 10 * 60 * 1000; // 10 min per translation request
+/** PATCH can hang on large HTML / DB; without timeout the whole job looks frozen at one progress value. */
+const PATCH_PAGE_TIMEOUT_MS = 4 * 60 * 1000; // 4 min per save
+/** Full page JSON can hang on huge content / DB; same symptom as “stuck translate”. */
+const PAGE_LOAD_TIMEOUT_MS = 2 * 60 * 1000; // 2 min per GET /pages/[id]
 
 function parseJson<T>(val: unknown, fallback: T): T {
   if (!val) return fallback;
@@ -185,7 +189,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     options: RequestInit,
     timeoutMs = TRANSLATE_REQUEST_TIMEOUT_MS,
     retries = 2,
-    signal?: AbortSignal | null
+    signal?: AbortSignal | null,
+    operationLabel = 'request tłumaczenia',
   ): Promise<Response> {
     for (let attempt = 0; attempt <= retries; attempt++) {
       if (signal?.aborted) throw new DOMException('Aborted', 'AbortError');
@@ -212,7 +217,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             await new Promise((r) => setTimeout(r, 2000));
             continue;
           }
-          throw new Error(`Timeout po ${Math.round(timeoutMs / 60000)} min — request tłumaczenia nie odpowiedział`);
+          throw new Error(`Timeout po ${Math.round(timeoutMs / 60000)} min — ${operationLabel} nie odpowiedział`);
         }
         if (attempt < retries) await new Promise((r) => setTimeout(r, 2000));
         else throw e;
@@ -307,10 +312,14 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               if (!(enTrans?.content ?? '').trim()) return 0;
               let fullPage: { translations?: unknown[] } | null = null;
               for (let attempt = 0; attempt <= 2; attempt++) {
-                const pageRes = await fetch(`/api/twojastara/pages/${page.id}`, {
-                  credentials: 'include',
-                  signal: abortRef.current?.signal,
-                });
+                const pageRes = await fetchWithTimeoutAndRetry(
+                  `/api/twojastara/pages/${page.id}`,
+                  { credentials: 'include' },
+                  PAGE_LOAD_TIMEOUT_MS,
+                  2,
+                  abortRef.current?.signal ?? null,
+                  'pobieranie pełnej strony (GET, pre-scan)',
+                );
                 try {
                   fullPage = await safeResJson<{ translations?: unknown[] }>(pageRes);
                   break;
@@ -384,7 +393,14 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       const enDisplayTitle = (enTrans?.displayTitle ?? '').trim();
       if (!enContentPrefix) return true;
 
-      const pageRes = await fetch(`/api/twojastara/pages/${page.id}`, { credentials: 'include', signal: abortRef.current?.signal });
+      const pageRes = await fetchWithTimeoutAndRetry(
+        `/api/twojastara/pages/${page.id}`,
+        { credentials: 'include' },
+        PAGE_LOAD_TIMEOUT_MS,
+        2,
+        abortRef.current?.signal ?? null,
+        'pobieranie pełnej strony (GET)',
+      );
       let fullPage: { translations?: { locale: string; content?: string; faqItems?: string }[]; slug?: string; category?: string; published?: boolean } | null = null;
       try {
         fullPage = await safeResJson(pageRes);
@@ -458,7 +474,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
           total: initialTotal,
           pageTitle: page.slug,
           pageCategory: page.category ?? '',
-          locale: batchLocs.join(', '),
+          locale: `${batchLocs.join(', ')} · tłumaczenie…`,
           startedAt: startedAtMs,
         });
         let resumeLocaleHint = batchLocs[0] ?? '';
@@ -585,18 +601,32 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               throw new Error(`Brak odpowiedzi tłumaczenia dla locale: ${loc} (${page.slug})`);
             }
             const translationUpdates = [buildMergedRow(loc)];
-            const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
-              method: 'PATCH',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                slug: fullPage.slug,
-                category: fullPage.category,
-                published: fullPage.published,
-                translationUpdates,
-              }),
-              credentials: 'include',
-              signal: abortRef.current?.signal,
+            setTranslateProgress({
+              current: initialCurrent + stepRef.current + interimTranslateLocales,
+              total: initialTotal,
+              pageTitle: page.slug,
+              pageCategory: page.category ?? '',
+              locale: `${loc} · zapis…`,
+              startedAt: startedAtMs,
             });
+            const patchRes = await fetchWithTimeoutAndRetry(
+              `/api/twojastara/pages/${page.id}`,
+              {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  slug: fullPage.slug,
+                  category: fullPage.category,
+                  published: fullPage.published,
+                  translationUpdates,
+                }),
+                credentials: 'include',
+              },
+              PATCH_PAGE_TIMEOUT_MS,
+              2,
+              abortRef.current?.signal ?? null,
+              'zapis strony (PATCH)',
+            );
             if (!patchRes.ok) {
               const errData = await safeResJson<{ error?: string }>(patchRes).catch((): { error?: string } => ({}));
               throw new Error((errData && 'error' in errData ? errData.error : null) || 'Failed to save');
@@ -750,7 +780,7 @@ function TranslateProgressIndicator() {
   const [, setTick] = useState(0);
   useEffect(() => {
     if (!translateProgress?.startedAt) return;
-    const id = setInterval(() => setTick((t) => t + 1), 10000);
+    const id = setInterval(() => setTick((t) => t + 1), 1000);
     return () => clearInterval(id);
   }, [translateProgress?.startedAt]);
   if (!translateProgress) return null;

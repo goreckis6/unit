@@ -635,7 +635,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
           const isAbort = err instanceof Error && err.name === 'AbortError';
           const msg = err instanceof Error ? (isAbort ? 'Wstrzymano przez użytkownika' : err.message) : 'Błąd tłumaczenia';
           const is401 = /unauthorized/i.test(msg);
-          const nextLocale = resumeLocaleHint || batchLocs[0] ?? '';
+          const nextLocale = (resumeLocaleHint || batchLocs[0]) ?? '';
           setTranslatePausedAt({ pageSlug: page.slug, nextLocale });
           setTranslateStartFrom(nextLocale);
           setTranslateError(is401 ? 'Sesja wygasła — zaloguj się ponownie.' : `Strona: ${page.slug}, Język: ${batchLocs.join(',')}. ${msg} — Kliknij Resume.`);

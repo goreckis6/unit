@@ -462,6 +462,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
           locale: batchLocs.join(', '),
           startedAt: startedAtMs,
         });
+        let resumeLocaleHint = batchLocs[0] ?? '';
         try {
           const results = await Promise.all(
             batch.map(async (chunk) => {
@@ -567,54 +568,55 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             };
           };
 
-          // Save all locales that were actually translated in this batch (handles multi-locale chunks)
-          const localesWithResults = batchLocs.filter((loc) => !!translatedByLocale[loc]);
-          const translationUpdates = localesWithResults.map((loc) => buildMergedRow(loc));
+          // Persist each locale immediately after translate (survives refresh / fewer lost locales on crash).
+          for (const loc of batchLocs) {
+            resumeLocaleHint = loc;
+            if (!translatedByLocale[loc]) {
+              throw new Error(`Brak odpowiedzi tłumaczenia dla locale: ${loc} (${page.slug})`);
+            }
+            const translationUpdates = [buildMergedRow(loc)];
+            const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
+              method: 'PATCH',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                slug: fullPage.slug,
+                category: fullPage.category,
+                published: fullPage.published,
+                translationUpdates,
+              }),
+              credentials: 'include',
+              signal: abortRef.current?.signal,
+            });
+            if (!patchRes.ok) {
+              const errData = await safeResJson<{ error?: string }>(patchRes).catch((): { error?: string } => ({}));
+              throw new Error((errData && 'error' in errData ? errData.error : null) || 'Failed to save');
+            }
 
-          const patchRes = await fetch(`/api/twojastara/pages/${page.id}`, {
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              slug: fullPage.slug,
-              category: fullPage.category,
-              published: fullPage.published,
-              translationUpdates,
-            }),
-            credentials: 'include',
-            signal: abortRef.current?.signal,
-          });
-          if (!patchRes.ok) {
-            const errData = await safeResJson<{ error?: string }>(patchRes).catch((): { error?: string } => ({}));
-            throw new Error((errData && 'error' in errData ? errData.error : null) || 'Failed to save');
-          }
-
-          onPagesUpdate?.((prev) =>
-            prev.map((p) => {
-              if (p.id !== page.id) return p;
-              const updated = p.translations.map((t) => {
-                const tr = translatedByLocale[t.locale];
-                if (!tr) return t;
-                return { ...t, title: tr.title ?? t.title, displayTitle: tr.displayTitle ?? t.displayTitle, description: tr.description ?? t.description ?? null, content: tr.content, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : t.faqItems };
-              });
-              for (const l of Object.keys(translatedByLocale)) {
-                if (!updated.some((x) => x.locale === l)) {
-                  const tr = translatedByLocale[l]!;
-                  updated.push({ id: `${l}-${page.id}`, locale: l, title: tr.title ?? '', displayTitle: tr.displayTitle ?? null, description: tr.description ?? null, content: tr.content, relatedCalculators: null, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : null, calculatorLabels: null });
+            onPagesUpdate?.((prev) =>
+              prev.map((p) => {
+                if (p.id !== page.id) return p;
+                const tr = translatedByLocale[loc]!;
+                const updated = p.translations.map((t) => {
+                  if (t.locale !== loc) return t;
+                  return { ...t, title: tr.title ?? t.title, displayTitle: tr.displayTitle ?? t.displayTitle, description: tr.description ?? t.description ?? null, content: tr.content, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : t.faqItems };
+                });
+                if (!updated.some((x) => x.locale === loc)) {
+                  updated.push({ id: `${loc}-${page.id}`, locale: loc, title: tr.title ?? '', displayTitle: tr.displayTitle ?? null, description: tr.description ?? null, content: tr.content, relatedCalculators: null, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : null, calculatorLabels: null });
                 }
-              }
-              return { ...p, translations: updated };
-            })
-          );
+                return { ...p, translations: updated };
+              })
+            );
 
-          stepRef.current += batchLocs.length;
-          setTranslateProgress({
-            current: initialCurrent + stepRef.current,
-            total: initialTotal,
-            pageTitle: page.slug,
-            pageCategory: page.category ?? '',
-            locale: batchLocs.join(', '),
-            startedAt: startedAtMs,
-          });
+            stepRef.current += 1;
+            setTranslateProgress({
+              current: initialCurrent + stepRef.current,
+              total: initialTotal,
+              pageTitle: page.slug,
+              pageCategory: page.category ?? '',
+              locale: loc,
+              startedAt: startedAtMs,
+            });
+          }
 
           const lastLocInBatch = batchLocs[batchLocs.length - 1];
           const isLastBatch = bi + contentParallel >= localeChunks.length;
@@ -633,7 +635,7 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
           const isAbort = err instanceof Error && err.name === 'AbortError';
           const msg = err instanceof Error ? (isAbort ? 'Wstrzymano przez użytkownika' : err.message) : 'Błąd tłumaczenia';
           const is401 = /unauthorized/i.test(msg);
-          const nextLocale = batchLocs[0] ?? '';
+          const nextLocale = resumeLocaleHint || batchLocs[0] ?? '';
           setTranslatePausedAt({ pageSlug: page.slug, nextLocale });
           setTranslateStartFrom(nextLocale);
           setTranslateError(is401 ? 'Sesja wygasła — zaloguj się ponownie.' : `Strona: ${page.slug}, Język: ${batchLocs.join(',')}. ${msg} — Kliknij Resume.`);

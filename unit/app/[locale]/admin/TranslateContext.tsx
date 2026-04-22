@@ -294,9 +294,28 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
     const pagesTranslatedCountRef = { current: 0 };
     let hadError = false;
 
+    // Cache full-page responses so processPage reuses pre-scan GETs instead of fetching again.
+    type FullPageData = { translations?: { locale: string; content?: string; faqItems?: string }[]; slug?: string; category?: string; published?: boolean };
+    const fullPageCache = new Map<string, FullPageData>();
+
+    async function fetchFullPage(pageId: string, label: string): Promise<FullPageData | null> {
+      if (fullPageCache.has(pageId)) return fullPageCache.get(pageId)!;
+      const pageRes = await fetchWithTimeoutAndRetry(
+        `/api/twojastara/pages/${pageId}`,
+        { credentials: 'include' },
+        PAGE_LOAD_TIMEOUT_MS,
+        2,
+        abortRef.current?.signal ?? null,
+        label,
+      );
+      const data = await safeResJson<FullPageData>(pageRes);
+      if (pageRes.ok && data?.translations) fullPageCache.set(pageId, data);
+      return data;
+    }
+
     // Pre-scan: count total translations (pages × locales).
     // For force retranslate we know ALL locales will be translated — skip fetches entirely.
-    const PRE_SCAN_BATCH = 8; // increased from 3 for faster scan
+    const PRE_SCAN_BATCH = 8;
     let totalSteps = 0;
     if (forceRetranslateContent) {
       const nonEnCount = translateOnlyOne ? 1 : (allNonEn?.length ?? 0);
@@ -311,24 +330,13 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               const enTrans = page.translations.find((t) => t.locale === 'en');
               if (!(enTrans?.content ?? '').trim()) return 0;
               let fullPage: { translations?: unknown[] } | null = null;
-              for (let attempt = 0; attempt <= 2; attempt++) {
-                const pageRes = await fetchWithTimeoutAndRetry(
-                  `/api/twojastara/pages/${page.id}`,
-                  { credentials: 'include' },
-                  PAGE_LOAD_TIMEOUT_MS,
-                  2,
-                  abortRef.current?.signal ?? null,
-                  'pobieranie pełnej strony (GET, pre-scan)',
-                );
-                try {
-                  fullPage = await safeResJson<{ translations?: unknown[] }>(pageRes);
-                  break;
-                } catch (e) {
-                  if (attempt < 2) await new Promise((r) => setTimeout(r, 1000));
-                  else throw e;
-                }
+              try {
+                fullPage = await fetchFullPage(page.id, 'pobieranie pełnej strony (GET, pre-scan)');
+              } catch (e) {
+                if (e instanceof Error && e.name === 'AbortError') throw e;
+                return 0;
               }
-              if (!fullPage || !fullPage?.translations) return 0;
+              if (!fullPage?.translations) return 0;
               const fullPageTrans = fullPage.translations ?? [];
               const hasContent = (loc: string) => ((fullPageTrans.find((t: { locale: string; content?: string }) => t.locale === loc) as { content?: string } | undefined)?.content?.trim() ?? '').length > 0;
               let localesToTranslate = (allNonEn ?? []).filter((loc) => !hasContent(loc));
@@ -393,23 +401,15 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
       const enDisplayTitle = (enTrans?.displayTitle ?? '').trim();
       if (!enContentPrefix) return true;
 
-      const pageRes = await fetchWithTimeoutAndRetry(
-        `/api/twojastara/pages/${page.id}`,
-        { credentials: 'include' },
-        PAGE_LOAD_TIMEOUT_MS,
-        2,
-        abortRef.current?.signal ?? null,
-        'pobieranie pełnej strony (GET)',
-      );
-      let fullPage: { translations?: { locale: string; content?: string; faqItems?: string }[]; slug?: string; category?: string; published?: boolean } | null = null;
+      let fullPage: FullPageData | null = null;
       try {
-        fullPage = await safeResJson(pageRes);
+        fullPage = await fetchFullPage(page.id, 'pobieranie pełnej strony (GET)');
       } catch (e) {
         setTranslateError(`Nie udało się załadować strony (JSON): ${page.slug} — ${e instanceof Error ? e.message : String(e)}`);
         hadErrorRef.current = true;
         return false;
       }
-      if (!pageRes.ok || !fullPage?.translations) {
+      if (!fullPage?.translations) {
         setTranslateError(`Nie udało się załadować strony: ${page.slug}`);
         hadErrorRef.current = true;
         return false;
@@ -455,9 +455,9 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
 
       // Keep frontend batching aligned with backend long-content threshold.
       // Long Ollama content remains single-locale (stable chunked path).
-      // Shorter content: normal mode batches 2 locales, fast mode batches 2 locales.
+      // Shorter content: batch 3 locales per request to reduce API call count.
       const isLongOllamaContent = translateProvider === 'ollama' && enContent.length > 2_600;
-      const LOCALE_BATCH_SIZE = isLongOllamaContent ? 1 : 2;
+      const LOCALE_BATCH_SIZE = isLongOllamaContent ? 1 : 3;
       const localeChunks: string[][] = [];
       for (let i = 0; i < localesToTranslate.length; i += LOCALE_BATCH_SIZE) {
         localeChunks.push(localesToTranslate.slice(i, i + LOCALE_BATCH_SIZE));
@@ -594,70 +594,73 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
             };
           };
 
-          // Persist each locale immediately after translate (survives refresh / fewer lost locales on crash).
-          for (const loc of batchLocs) {
-            resumeLocaleHint = loc;
-            if (!translatedByLocale[loc]) {
-              throw new Error(`Brak odpowiedzi tłumaczenia dla locale: ${loc} (${page.slug})`);
-            }
-            const translationUpdates = [buildMergedRow(loc)];
-            setTranslateProgress({
-              current: initialCurrent + stepRef.current + interimTranslateLocales,
-              total: initialTotal,
-              pageTitle: page.slug,
-              pageCategory: page.category ?? '',
-              locale: `${loc} · zapis…`,
-              startedAt: startedAtMs,
-            });
-            const patchRes = await fetchWithTimeoutAndRetry(
-              `/api/twojastara/pages/${page.id}`,
-              {
-                method: 'PATCH',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  slug: fullPage.slug,
-                  category: fullPage.category,
-                  published: fullPage.published,
-                  translationUpdates,
-                }),
-                credentials: 'include',
-              },
-              PATCH_PAGE_TIMEOUT_MS,
-              2,
-              abortRef.current?.signal ?? null,
-              'zapis strony (PATCH)',
-            );
-            if (!patchRes.ok) {
-              const errData = await safeResJson<{ error?: string }>(patchRes).catch((): { error?: string } => ({}));
-              throw new Error((errData && 'error' in errData ? errData.error : null) || 'Failed to save');
-            }
+          // Persist all locales from this batch in a single PATCH — fastest path.
+          // Sequential per-locale PATCHes were the main throughput bottleneck (12 serial HTTP calls).
+          const localesWithResults = batchLocs.filter((loc) => !!translatedByLocale[loc]);
+          if (localesWithResults.length === 0) {
+            throw new Error(`Brak odpowiedzi tłumaczenia dla batch: ${batchLocs.join(',')} (${page.slug})`);
+          }
+          resumeLocaleHint = localesWithResults[localesWithResults.length - 1] ?? batchLocs[0] ?? '';
+          setTranslateProgress({
+            current: initialCurrent + stepRef.current + interimTranslateLocales,
+            total: initialTotal,
+            pageTitle: page.slug,
+            pageCategory: page.category ?? '',
+            locale: `${localesWithResults.join(', ')} · zapis…`,
+            startedAt: startedAtMs,
+          });
+          const translationUpdates = localesWithResults.map((loc) => buildMergedRow(loc));
+          const patchRes = await fetchWithTimeoutAndRetry(
+            `/api/twojastara/pages/${page.id}`,
+            {
+              method: 'PATCH',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                slug: fullPage.slug,
+                category: fullPage.category,
+                published: fullPage.published,
+                translationUpdates,
+              }),
+              credentials: 'include',
+            },
+            PATCH_PAGE_TIMEOUT_MS,
+            2,
+            abortRef.current?.signal ?? null,
+            'zapis strony (PATCH)',
+          );
+          if (!patchRes.ok) {
+            const errData = await safeResJson<{ error?: string }>(patchRes).catch((): { error?: string } => ({}));
+            throw new Error((errData && 'error' in errData ? errData.error : null) || 'Failed to save');
+          }
 
-            onPagesUpdate?.((prev) =>
-              prev.map((p) => {
-                if (p.id !== page.id) return p;
-                const tr = translatedByLocale[loc]!;
-                const updated = p.translations.map((t) => {
-                  if (t.locale !== loc) return t;
-                  return { ...t, title: tr.title ?? t.title, displayTitle: tr.displayTitle ?? t.displayTitle, description: tr.description ?? t.description ?? null, content: tr.content, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : t.faqItems };
-                });
+          onPagesUpdate?.((prev) =>
+            prev.map((p) => {
+              if (p.id !== page.id) return p;
+              const updated = p.translations.map((t) => {
+                const tr = translatedByLocale[t.locale];
+                if (!tr) return t;
+                return { ...t, title: tr.title ?? t.title, displayTitle: tr.displayTitle ?? t.displayTitle, description: tr.description ?? t.description ?? null, content: tr.content, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : t.faqItems };
+              });
+              for (const loc of localesWithResults) {
                 if (!updated.some((x) => x.locale === loc)) {
+                  const tr = translatedByLocale[loc]!;
                   updated.push({ id: `${loc}-${page.id}`, locale: loc, title: tr.title ?? '', displayTitle: tr.displayTitle ?? null, description: tr.description ?? null, content: tr.content, relatedCalculators: null, faqItems: tr.faqItems ? JSON.stringify(tr.faqItems) : null, calculatorLabels: null });
                 }
-                return { ...p, translations: updated };
-              })
-            );
+              }
+              return { ...p, translations: updated };
+            })
+          );
 
-            interimTranslateLocales -= 1;
-            stepRef.current += 1;
-            setTranslateProgress({
-              current: initialCurrent + stepRef.current + interimTranslateLocales,
-              total: initialTotal,
-              pageTitle: page.slug,
-              pageCategory: page.category ?? '',
-              locale: loc,
-              startedAt: startedAtMs,
-            });
-          }
+          interimTranslateLocales -= localesWithResults.length;
+          stepRef.current += localesWithResults.length;
+          setTranslateProgress({
+            current: initialCurrent + stepRef.current + Math.max(0, interimTranslateLocales),
+            total: initialTotal,
+            pageTitle: page.slug,
+            pageCategory: page.category ?? '',
+            locale: localesWithResults.join(', '),
+            startedAt: startedAtMs,
+          });
 
           const lastLocInBatch = batchLocs[batchLocs.length - 1];
           const isLastBatch = bi + contentParallel >= localeChunks.length;

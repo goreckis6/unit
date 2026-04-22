@@ -452,7 +452,8 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
         const batch = localeChunks.slice(bi, bi + contentParallel);
         // All locales across all chunks in this parallel batch (for display + save)
         const batchLocs = batch.flatMap((c) => c).filter(Boolean);
-        stepRef.current += batchLocs.length;
+        // Progress must reflect completed work only. Incrementing before await made the bar jump
+        // to ~95% while the last requests/PATCH could still hang for hours (misleading ETA).
         setTranslateProgress({
           current: initialCurrent + stepRef.current,
           total: initialTotal,
@@ -604,6 +605,16 @@ export function TranslateProvider({ children }: { children: ReactNode }) {
               return { ...p, translations: updated };
             })
           );
+
+          stepRef.current += batchLocs.length;
+          setTranslateProgress({
+            current: initialCurrent + stepRef.current,
+            total: initialTotal,
+            pageTitle: page.slug,
+            pageCategory: page.category ?? '',
+            locale: batchLocs.join(', '),
+            startedAt: startedAtMs,
+          });
 
           const lastLocInBatch = batchLocs[batchLocs.length - 1];
           const isLastBatch = bi + contentParallel >= localeChunks.length;
